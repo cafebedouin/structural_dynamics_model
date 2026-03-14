@@ -1,0 +1,239 @@
+{
+  "header": {
+    "constraint_id": "social_credit_scoring_logic",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "scs"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Social Credit Scoring Logic Systems",
+    "topic_domain": "governance/digital_surveillance/behavioral_control",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_apparatus",
+      "surveillance_infrastructure_operators"
+    ],
+    "victims": [
+      "scored_populations",
+      "low_score_cohorts"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Scored Individual",
+      "comment": "PERSPECTIVE 1: SCORED INDIVIDUAL (SNARE) \u2014 Subject to opaque algorithmic scoring with no meaningful exit or appeal. Trapped by national identity and economic integration into state systems. Bears extraction (travel bans, lending denial, job disqualification, social stigma) with no capacity to exit the constraint. Suppression is maximal: the scoring logic is proprietary, appeal mechanisms are theatrical, and alternatives are unavailable."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Generational Low-Score Cohort",
+      "comment": "PERSPECTIVE 2: GENERATIONAL LOW-SCORE COHORT (SNARE) \u2014 Intergenerational extraction via inherited disadvantage and reputational stigma. Children of low-score individuals face pre-built discrimination. The constraint operates across generations with no mechanism for rehabilitation or escape. Maximum suppression at generational scale."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Tier Score Cohort",
+      "comment": "PERSPECTIVE 3: MID-TIER SCORE COHORT (TANGLED ROPE) \u2014 Experiences mixed extraction and coordination. The scoring system does provide some coordination function (monitoring fraud, identifying bad-faith actors, incentivizing prosocial behavior). However, this coordination coexists with asymmetric extraction: the mid-tier experiences constant compliance pressure and marginal risk of score degradation. Exit is theoretically possible but highly constrained by economic integration and family obligations."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State Apparatus",
+      "comment": "PERSPECTIVE 4: STATE APPARATUS (ROPE) \u2014 Perceives the scoring system as a pure coordination mechanism: monitoring compliance, identifying risks, allocating resources efficiently. Experiences no extraction cost \u2014 the system subsidizes state capacity. The state has full arbitrage: it can modify, abandon, or weaponize the system at will. Extraction flows toward the state, not away."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Civil Society Monitors",
+      "comment": "PERSPECTIVE 5: CIVIL SOCIETY MONITORS (TANGLED ROPE) \u2014 Organized critics and watchdog groups experience the constraint as both a threat (chilled speech, surveillance of activism) and an opportunity (documentation and exposure of injustice creates evidence for reform). They have constrained exit \u2014 they can criticize but face reputational and economic penalties. They also benefit from having concrete, measurable targets for accountability advocacy."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The International Observer",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL OBSERVER (PITON) \u2014 Social credit systems are often presented as sophisticated governance innovations that reduce corruption and fraud. From an international perspective, the theater ratio reveals this framing as largely performative: the coordination benefits (fraud reduction) could be achieved through transparent, auditable mechanisms; instead, the opaque algorithmic logic serves primarily to concentrate power and control dissent. The innovation theater persists because it appears modern and scientific."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FALSE SUMMIT RISK (MOUNTAIN) \u2014 From a civilizational perspective, one might argue that population monitoring is inherent to large-scale coordination: you cannot allocate resources, enforce contracts, or prevent fraud without surveillance. This perspective risks naturalizing the social credit system as an immutable law of governance. However, this is a false summit: many large-scale societies coordinate without comprehensive algorithmic scoring. The mountain classification wrongly treats a contingent institutional choice (comprehensive surveillance scoring) as a structural necessity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "algorithmic_opacity_mechanism",
+      "question": "Is the opacity of scoring algorithms a fundamental technical necessity or a deliberate design choice to prevent accountability?",
+      "resolution_mechanism": "Comparison with transparent scoring systems in other domains (credit scores, insurance ratings); analysis of whether proprietary claims are justified by genuine trade secrets or by suppression intent",
+      "impact": "If technical necessity: suppression rating reduces to 0.50-0.55, classification shifts toward Tangled Rope. If deliberate design: suppression remains at 0.72, Snare classification is confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether algorithmic opacity is technical necessity or suppression mechanism"
+    },
+    {
+      "id": "appeal_mechanism_functionality",
+      "question": "Do formal appeal processes for score disputes constitute meaningful exit opportunities or are they theatrical with predetermined outcomes?",
+      "resolution_mechanism": "Longitudinal tracking of appeal success rates, analysis of appeal outcomes vs. initial scores, interviews with appeal decision-makers, structural analysis of appeals process design",
+      "impact": "If appeals are effective: exit_options for powerless agents upgrade from 'trapped' to 'constrained', extractiveness drops to 0.50-0.55. If theatrical: trapped status confirmed, extractiveness remains at 0.68.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether appeal mechanisms provide genuine exit or are theatrical"
+    },
+    {
+      "id": "coordination_vs_extraction_ratio",
+      "question": "What proportion of the system's function is legitimate fraud prevention/coordination vs. illegitimate behavioral control/extraction?",
+      "resolution_mechanism": "Empirical measurement of fraud cases prevented by scoring vs. cases of incorrect penalization; analysis of score degradation patterns (are they correlated with documented violations or with political/demographic targeting?)",
+      "impact": "If coordination-dominant (70%+): system reclassifies as Tangled Rope with extractiveness ~0.35. If extraction-dominant (70%+): Snare classification confirmed at 0.68+.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ratio of legitimate coordination to illegitimate extraction function"
+    },
+    {
+      "id": "intergenerational_transmission_mechanism",
+      "question": "Do children of low-score individuals face actual formal disadvantage from inherited scores, or does the harm operate solely through internalized stigma and social discrimination?",
+      "resolution_mechanism": "Analysis of official policy (does the system formally penalize children?) vs. de facto implementation (do schools, employers, lenders treat children differently based on parent scores?)",
+      "impact": "If formal: generational snare classification is structurally correct. If de facto only: harm is real but classification should reflect social rather than systemic mechanism \u2014 modify commentary but not metrics.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether intergenerational harm is formal policy or social implementation"
+    },
+    {
+      "id": "state_capacity_dependency",
+      "question": "Is the state's reliance on comprehensive social credit systems so deep that removing the system would create genuine governance collapse, or is the system fundamentally substitutable?",
+      "resolution_mechanism": "Analysis of state coordination mechanisms in pre-social-credit era and in systems without comprehensive scoring; stress-testing of core state functions (tax collection, fraud prevention, resource allocation) under scenarios of score system removal",
+      "impact": "If dependent: state's arbitrage exit options are overestimated, institutional perspective shifts toward constrained. If substitutable: arbitrage characterization is confirmed \u2014 state can exit costlessly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether state capacity is dependent on social credit system"
+    },
+    {
+      "id": "behavioral_compliance_coercion",
+      "question": "Does the scoring system achieve behavioral change through internalized norm adoption (light coercion) or through material penalty threat (heavy coercion)?",
+      "resolution_mechanism": "Measurement of behavioral compliance patterns pre- and post-score change; analysis of whether compliance correlates with score knowledge; interviews with compliers on motivations",
+      "impact": "If norm-internalized: suppression rating drops to 0.55-0.60 (agents perceive constraint as natural). If penalty-threatened: suppression remains at 0.72 (agents perceive constraint as coercive).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether compliance is norm-internalized or penalty-threatened"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Social credit scoring systems rank individuals and entities by behavioral compliance, financial reliability, and social trustworthiness using algorithmic assessment of digital traces, financial records, legal violations, and behavioral reports. These systems exist in multiple institutional contexts \u2014 from state-mandated national scoring (China's Sesame Credit) to corporate reputation scoring (online marketplaces, ride-sharing platforms) to financial credit assessment (traditional credit bureaus). The constraint story focuses on state-mandated comprehensive social credit as the primary form, which exhibits the fullest extraction mechanism and highest suppression. The core structural tension is between the genuine coordination function (identifying fraud, monitoring compliance, allocating scarce resources) and the asymmetric extraction mechanism (concentration of power, opaque penalties, behavioral control). The system's extractiveness has increased over time (0.35 \u2192 0.68) as algorithmic precision has improved and integration across domains has deepened. The theater ratio (0.65) reflects that the system is presented as rational, scientific, and meritocratic, while operating largely as a tool of behavioral compliance and dissent suppression. The system classifies as Snare from the perspective of powerless, trapped individuals; as Tangled Rope from moderate cohorts and organized critics; as Rope from the state apparatus; and as a false summit from civilizational analytical perspectives that risk naturalizing contingent surveillance architecture as inherent governance.",
+    "key_agents": [
+      "Scored Population: Primary victims (powerless/trapped) \u2014 bears extraction through social and economic penalties with no meaningful exit or appeal",
+      "Low-Score Cohorts: Victims (powerless/trapped) \u2014 face cascading penalties, employment discrimination, travel restrictions, educational barriers, child disadvantage",
+      "Mid-Tier Score Population: Mixed (moderate/constrained) \u2014 experiences coordination benefit (fraud reduction, fraud prevention incentives) alongside asymmetric compliance pressure",
+      "State Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 captures behavioral compliance, governance efficiency, and dissent monitoring; can exit system costlessly",
+      "Surveillance Infrastructure Operators: Beneficiaries (institutional/arbitrage) \u2014 profit from data collection, algorithmic processing, and system expansion",
+      "Civil Society Monitors: Organized critics (organized/constrained) \u2014 face reputational penalties for public criticism but also benefit from concrete accountability targets",
+      "International Community: Observer (analytical/analytical) \u2014 risks treating social credit as inevitable governance evolution rather than contingent institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The system extracts significant behavioral compliance and social control benefits from scored populations. The extraction is concentrated: benefits flow to the state and surveillance operators, costs flow to low-score cohorts. The 0.68 value reflects that genuine coordination benefit (fraud reduction) coexists with significant illegitimate extraction (political control, dissent suppression, social segregation). The measurement trajectory (0.35 \u2192 0.68) reflects historical evolution from limited fraud-prevention tool to comprehensive behavioral control system. Suppression (0.72): Very high. Multiple suppression mechanisms operate: algorithmic opacity prevents understanding or challenging scores, appeal processes are theatrical and rarely successful, economic integration makes exit functionally impossible, spatial monopoly (national scope) eliminates geographic alternatives. The constraint exhibits structural suppression (external barriers) that is not internalized \u2014 agents perceive the system as coercive, not natural. Theater ratio (0.65): Moderate-high. The system is presented as scientific, meritocratic, and necessary for governance. This theater masks the core extraction mechanism: behavioral control masquerades as fraud prevention, political suppression masquerades as rule enforcement, and power concentration masquerades as coordination. The theater has increased over time (0.40 \u2192 0.65) as systems have become more sophisticated and integrated.",
+    "perspectival_gap": "The snare classification from the powerless perspective differs sharply from the rope classification from the state perspective. The gap reveals asymmetric information and power. The state genuinely experiences coordination benefit \u2014 the system works as intended for governance efficiency. The powerless individual experiences pure extraction \u2014 the system produces costs with no visible benefit. Both descriptions are accurate from their respective positions. The mandatrophy is resolved by recognizing that the indexical position determines the constraint's apparent function.",
+    "directionality_logic": "Directionality (d) values are determined by structural position: who benefits and who bears costs. The state apparatus and surveillance operators are beneficiaries with arbitrage exit \u2014 they can modify or abandon the system at will, costs flow away from them, benefits flow toward them. Directionality for this group derives to ~0.05-0.15 (full beneficiary). Low-score individuals are victims with no exit \u2014 they bear costs and receive no coordination benefit, directionality derives to ~0.95 (full target). Mid-tier individuals are both beneficiaries (of fraud prevention) and victims (of compliance pressure), with constrained exit \u2014 their directionality derives to ~0.55 (balanced). Civil society monitors are victims (of surveillance) with constrained exit, but also positioned to benefit from advocacy success \u2014 their directionality derives to ~0.65-0.70 (net victim but with agency). The engine computes effective extractiveness (\u03c7) from base extractiveness (\u03b5=0.68) scaled by f(d) for each agent. For the powerless trapped victim, f(d\u22480.95) produces maximum effective extraction. For the state, f(d\u22480.10) produces negative effective extraction (the system subsidizes state capacity).",
+    "mandatrophy_analysis": "RESOLVED: The social credit system's mandatrophy is fully resolved through indexical analysis. From the state's perspective, the system is Rope \u2014 it solves genuine coordination problems (fraud detection, compliance monitoring, resource allocation). From the powerless individual's perspective, the system is Snare \u2014 it extracts behavioral compliance and social control with no coordination benefit to them. Both perspectives are structurally correct. The apparent contradiction (is it coordination or extraction?) is not resolved by choosing one perspective over another, but by recognizing that the system IS both coordination and extraction, and which appears dominant depends on the observer's structural position within it. The analytical falsely-summit risk is that civilizational perspectives might naturalize the system as 'inherent to large-scale governance' when in fact it is a contingent institutional choice. Transparent, auditable alternatives exist \u2014 traditional credit scoring, fraud investigation, compliance monitoring without comprehensive behavioral tracking. The social credit system is not inevitable; it is chosen because it concentrates power. This choice appears as necessity only from perspectives that benefit from the concentration."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "behavioral_compliance_coercion",
+      "algorithmic_decision_opacity",
+      "dissent_suppression_infrastructure",
+      "financial_surveillance_integration",
+      "reputational_commons_contamination"
+    ],
+    "dual_formulation_note": "Social credit scoring can be decomposed into structurally distinct constraints: (1) fraud_detection (\u03b5\u22480.15, Rope) \u2014 genuine coordination to identify non-compliant actors; (2) behavioral_compliance_enforcement (\u03b5\u22480.72, Snare) \u2014 extraction mechanism for behavioral control; (3) political_dissent_suppression (\u03b5\u22480.85, Snare) \u2014 pure extraction for suppression of organized opposition. The aggregate system story treats these as unified, but they have different \u03b5 values and different perspectives. This story focuses on the aggregate; decomposed stories handle specific mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

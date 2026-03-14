@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "eu_regulatory_capture_by_individual_states",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "eurc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Regulatory Capture by Individual Member States",
+    "topic_domain": "political_economy/regulatory_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "capturing_member_state",
+      "protected_domestic_industry"
+    ],
+    "victims": [
+      "eu_regulatory_integrity",
+      "non_capturing_member_states",
+      "eu_citizens"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "EU Regulatory Integrity and Non-Capturing States",
+      "comment": "PERSPECTIVE 1: EU REGULATORY INTEGRITY (SNARE) \u2014 The supranational regulatory system and member states without sufficient capture leverage face extraction with no exit. They bear the cost of weakened enforcement, contradictory standards, and loss of competitive neutrality. The common regulatory framework has no mechanism to escape individual member state vetoes or informal capture. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Non-Capturing Member States",
+      "comment": "PERSPECTIVE 2: NON-CAPTURING MEMBER STATES (TANGLED ROPE) \u2014 These states benefit from the EU's regulatory coordination and market access but face significant costs from being unable to capture regulations in their favor. They have some agency through Council voting and coalition-building but face high exit costs (exit from EU) relative to the coordination benefits. Asymmetric extraction: capturing states benefit, non-capturing states subsidize."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "Capturing Member State Government",
+      "comment": "PERSPECTIVE 3: CAPTURING MEMBER STATE (ROPE) \u2014 Benefits from regulatory arbitrage: can shield domestic champions from competition while appearing to comply with EU rules through informal channels or procedural loopholes. Experiences the constraint as coordination \u2014 the EU framework enables them to solve the problem of 'how to protect national interests within international rules.' Net beneficiary with high exit options (can threaten veto, subsidiarity claims, opt-outs)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "Protected Domestic Industry",
+      "comment": "PERSPECTIVE 4: PROTECTED DOMESTIC INDUSTRY (TANGLED ROPE) \u2014 Benefits from informal regulatory barriers that exclude competitors, but faces real costs: isolation from EU market integration, slower innovation from reduced competition, reputational risk if capture is exposed. Some agency through lobby groups and trade associations; some mobility (can invest elsewhere in EU, or seek to expand capture to other member states). Mixed extraction and coordination."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "EU Commission and Formal Oversight Structures",
+      "comment": "PERSPECTIVE 5: EU COMMISSION (PITON) \u2014 The formal EU regulatory apparatus has increasingly become performative theater. The Commission maintains compliance procedures, infringement actions, and regulatory review mechanisms, but enforcement capacity and political will to challenge member states have atrophied. The Commission sees its own process as degraded \u2014 maintaining formal oversight while informal capture proceeds unchecked. High theater ratio: extensive documentation and procedure with limited functional verification."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a global and generational perspective, the EU's regulatory capture by individual states reveals a hybrid mechanism: genuine coordination function (harmonized standards enable trade and integration) exists alongside systematic extraction (member states capture that coordination to benefit domestic firms). The constraint is not pure extraction (it performs real coordination) nor pure coordination (it systematically advantages some at others' cost). The engine should classify this as Tangled Rope, not as natural or inherent fragmentation."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "capture_mechanism_formality",
+      "question": "Is regulatory capture operating through formal Council procedures and legal mechanisms, or through informal channels and procedural obstruction?",
+      "resolution_mechanism": "Documentary analysis of Council voting patterns, infringement procedures, and impact assessments; comparison of formal positions vs actual enforcement outcomes",
+      "impact": "If formal: capture is more visible and potentially reversible through voting rule reform. If informal: capture is more durable and requires cultural/institutional change to address. Classification shifts from high-suppression Snare toward more distributed Tangled Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Formality of capture mechanism (procedural vs informal)"
+    },
+    {
+      "id": "regulatory_coordination_necessity",
+      "question": "How much of the EU regulatory framework's value is genuine coordination benefit vs regulatory arbitrage opportunity?",
+      "resolution_mechanism": "Economic analysis comparing transaction costs under unified standards vs costs of capture loopholes; measured policy divergence despite single market rules",
+      "impact": "If coordination >> arbitrage opportunity: constraint is closer to Rope (coordination with extraction overhead). If arbitrage >> coordination value: constraint approaches pure extraction (Snare). Determines whether the beneficiary genuinely needs the shared framework or merely exploits it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of regulatory value that is genuine coordination vs capture opportunity"
+    },
+    {
+      "id": "member_state_coalition_dynamics",
+      "question": "Can non-capturing member states effectively form counter-coalitions to resist capture by larger states, or is individual state capture a stable equilibrium?",
+      "resolution_mechanism": "Historical analysis of Council coalition patterns; presence/absence of persistent blocking coalitions; vulnerability of counter-coalitions to defection by smaller states receiving bilateral capture benefits",
+      "impact": "If coalitions are stable: capture is constrainable and organized states have genuine agency. If equilibrium is individual capture: suppression is higher and organized perspectives should shift toward constrained/trapped. Affects whether non-capturing state classifications are Tangled Rope vs Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Stability of anti-capture coalitions among member states"
+    },
+    {
+      "id": "commission_enforcement_capacity_trend",
+      "question": "Has EU Commission enforcement capacity against member state regulatory violations increased, remained stable, or declined over the 2010-2025 period?",
+      "resolution_mechanism": "Temporal analysis of infringement proceedings launched, sustained, resolved; staffing levels in DG COMP and relevant regulatory directorates; average time to resolution",
+      "impact": "If declining: supports Piton classification (degraded institutional function). If stable/increasing: Piton classification is aspirational and Commission retains functional capacity. Affects theater_ratio trend and measurement trajectory.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Trend in EU Commission enforcement capacity over time"
+    },
+    {
+      "id": "identity_locked_member_state_dynamics",
+      "question": "Are smaller member states that have not captured regulations locked into compliance by identity fusion with 'EU member' status, even when exit would benefit them economically?",
+      "resolution_mechanism": "Comparative political economy of exit rhetoric vs exit feasibility for small states; analysis of nationalist movements vs EU-integrationist identity in non-capturing states",
+      "impact": "If identity_locked is dominant: exit options should be re-classified from constrained to identity_locked, which produces different mandatrophy analysis and classification patterns. If economic constraints dominate: trapped or constrained classification is appropriate. Reveals psychological vs material binding mechanisms.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether non-capturing states are bound by institutional identity rather than material constraints"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 16
+  },
+  "commentary": {
+    "narrative_context": "The European Union's regulatory framework creates a structural opportunity for individual member states to capture supranational rules in favor of their domestic industries while maintaining the appearance of compliance with common standards. This constraint combines genuine coordination benefits (single market harmonization enables trade and integration) with systematic extraction (member states with sufficient political leverage \u2014 population, economic power, Council voting weight \u2014 can informally weaken or selectively enforce regulations to protect national champions). The constraint has intensified from 2010-2025 as larger member states (Germany, France, Italy) have increasingly used regulatory discretion, delayed implementation, and selective enforcement to shield domestic firms from competition while smaller states lack equivalent leverage. The EU Commission's formal oversight machinery (infringement procedures, regulatory review) has become increasingly performative \u2014 procedures are maintained but enforcement against powerful member states has atrophied. The theater ratio (0.62) reflects that compliance monitoring generates extensive documentation and procedural activity while functional verification of actual market access and competition remains weak. The constraint's core extraction mechanism: capturing state governments receive regulatory favors from the Commission or can delay/obstruct unfavorable regulations through Council procedures, protected domestic industries gain market shelter, while non-capturing states and EU regulatory integrity bear the costs of weakened competition, policy divergence, and loss of single-market benefits.",
+    "key_agents": [
+      "Capturing Member State Government: Primary beneficiary (institutional/arbitrage) \u2014 shields domestic industry from competition, maintains EU market access, can threaten veto or subsidiarity claims to extract favorable terms",
+      "Protected Domestic Industry: Secondary beneficiary (powerful/mobile) \u2014 gains regulatory barriers excluding competitors; faces innovation costs and reputational risk from exposure of capture",
+      "Non-Capturing Member States: Primary victim (organized/constrained) \u2014 benefits from EU coordination but cannot leverage equivalent capture, faces higher competition from shielded foreign firms, subsidizes capturing states' industrial policy",
+      "EU Regulatory Integrity: Abstract victim (powerless/trapped) \u2014 the supranational framework has no mechanism to resist individual state capture, enforcement mechanisms are weakened",
+      "EU Citizens: Distributed victim (powerless/trapped) \u2014 as consumers and competitors face reduced choice, higher prices, and slower innovation from weakened competition",
+      "EU Commission: Institutional actor (institutional/arbitrage) \u2014 maintains formal oversight authority but lacks political will to enforce against powerful member states; benefits from maintaining the appearance of regulatory control",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 reveals the hybrid coordination-extraction structure that institutional actors naturalize as either 'necessary national policy' or 'inherent complexity of multi-level governance'"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Member states can extract measurable regulatory favors through multiple channels: delayed implementation of directives, selective enforcement of competition rules, exemptions justified as 'national particularity,' and informal influence over Commission enforcement priorities. However, extraction is not total \u2014 the single market framework does enforce some common rules, smaller member states can sometimes block or amend proposals, and public pressure occasionally forces reversal. The extractiveness has increased over the interval (0.35 in 2010 to 0.58 in 2025) as political will for supranational enforcement has declined and member states' confidence in using regulatory discretion has grown. Suppression (0.65): High. Non-capturing states face significant barriers to exit \u2014 the EU provides too much coordination benefit relative to the cost of staying, but exit (withdrawal under Article 50) carries enormous political and economic costs. Smaller states cannot easily form blocking coalitions because larger states can offer bilateral extraction benefits (exemptions from specific rules, exemptions from specific rules, favorable treatment in merger review) as side payments to defect. The suppression mechanism is not physical constraint but institutional structure: the rules that would enable resistance (Council voting procedures, Commission enforcement) are controlled by those doing the extracting. Theater ratio (0.62): Moderate-high. The EU maintains extensive regulatory machinery (impact assessments, stakeholder consultations, infringement proceedings, regulatory reviews) that generates visible compliance activity. However, functional verification of actual market access and competition remains weak \u2014 Commission investigations of member state violations are lengthy, politically sensitive, and often resolved through negotiations that leave underlying capture mechanisms intact. The theater has increased as the Commission maintains procedure (to preserve its authority and legitimacy) while enforcement capacity has atrophied.",
+    "perspectival_gap": "The capturing state's institutional perspective (Rope) fundamentally diverges from non-capturing states' perspective (Tangled Rope/Snare) because they sit opposite sides of the extraction flow. Both experience the same formal regulatory structure, but directionality (d) inverts: beneficiaries see coordination, victims see extraction. The Commission's piton perspective reveals why institutional reform is difficult \u2014 the formal machinery (infringement procedures, regulatory review) is maintained not because it works but because the Commission preserves its own authority through the appearance of enforcement. The analytical observer's generational and global perspective shows that EU regulatory capture is not inherent to supranational governance (not a Mountain) nor a simple coordination problem (not pure Rope), but a hybrid that naturalizes asymmetry as either 'necessary national policy' or 'unavoidable complexity.'",
+    "directionality_logic": "Directionality (d) varies sharply across institutional perspectives. The capturing member state has low d (0.15-0.25): it is a beneficiary with arbitrage exit options (can threaten withdrawal or veto). The non-capturing member state has high d (0.70-0.80): it is a victim with constrained exit (can leave the EU but at catastrophic cost). The EU Commission has d around 0.40 (mixed): it benefits from maintaining regulatory authority but loses enforcement leverage against powerful member states. The protected domestic industry has moderate d (0.55-0.65): benefits from capture but faces asymmetric exposure if the constraint weakens. These directionality values derive from the structural relationship: beneficiaries with exit options experience low effective extraction chi; victims with constrained exit experience high chi; mixed beneficiary-victim institutions experience moderate chi. The engine's chi formula (\u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S)) captures these differentials automatically from the declared beneficiary/victim structure and exit options. Scope modifier \u03c3(continental) = 1.1 amplifies chi slightly \u2014 EU-wide capture affects more actors and hides behind complexity.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that this is genuinely a Tangled Rope (not a misclassified Snare or Rope). The constraint has a real coordination function: harmonized standards do reduce transaction costs and enable trade. But it also has a genuine asymmetric extraction component: member states with capture leverage extract regulatory favors at the cost of those without. The classification requires both components \u2014 the coordination function is not theater (it is real), and the extraction is not an unfortunate side effect (it is structural). The challenge for policy resolution is that any attempt to strengthen coordination (more supranational enforcement) collides with member state sovereignty, while any attempt to weaken extraction (redistribute Council power) weakens the coordination benefits that legitimate the whole system. The mandatrophy shows why EU regulatory reform cycles between tightening supranational control (increasing coordination, revealing extraction) and loosening it (reducing enforcement friction, accelerating capture). The resolution mechanism is not to eliminate capture (it is inherent to the hybrid structure) but to make it visible and impose costs on capturing states (reputational, electoral, reciprocal). The theater ratio (0.62) offers a policy lever: increasing functional verification (independent audits of market access, real-time data on regulatory divergence) would reduce theater and make capture visible, potentially imposing the reputational costs that formal enforcement cannot."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "european_single_market_competition",
+      "member_state_industrial_policy_coordination",
+      "eu_commission_enforcement_authority"
+    ],
+    "dual_formulation_note": "EU regulatory capture is structurally downstream of the single market coordination framework (affects_constraints) but represents a distinct constraint with its own extractiveness and suppression metrics. The capture mechanism depends on the coordination framework existing, but the coordination framework does not require capture to occur \u2014 the capture is a contingent institutional failure, not a necessary feature."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    }
+  ]
+}

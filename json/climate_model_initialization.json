@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "climate_model_initialization",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "clim_init"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Climate Model Initialization Dependency and Parameterization Lock-In",
+    "topic_domain": "climate_science/computational_modeling",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "established_modeling_centers",
+      "computational_infrastructure_operators"
+    ],
+    "victims": [
+      "emerging_research_groups",
+      "model_diversity",
+      "initialization_innovation"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Emerging Climate Research Group",
+      "comment": "PERSPECTIVE 1: EMERGING RESEARCH GROUP (SNARE) \u2014 New modeling groups cannot produce credible climate projections without access to established initialization datasets and coupled model infrastructure. Barriers include: computational cost of generating independent initial conditions (~10M core-hours), lack of institutional funding for initialization work, and impossibility of publication without using standardized datasets for comparison. Maximum extraction with minimal coordination benefit \u2014 the constraint forces dependency rather than enabling collaboration."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regional Climate Modeling Community",
+      "comment": "PERSPECTIVE 2: REGIONAL MODELING COMMUNITY (TANGLED ROPE) \u2014 Regional downscaling models genuinely benefit from standardized global initialization (coordination function) but are constrained by the parameterization choices embedded in those initializations. They can develop alternative schemes at significant cost (~2-3 year research program per major parameter) or adapt existing ones (lower cost, high constraint). Both paths show mixed coordination and asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Established Modeling Centers",
+      "comment": "PERSPECTIVE 3: ESTABLISHED MODELING CENTERS (ROPE) \u2014 IPCC-participating centers (GFDL, ECMWF, MPI, NCAR) experience initialization as pure coordination: their datasets enable rapid model intercomparison, their parameterization choices become scientific standards, their computational dominance creates network effects that benefit all users. They have arbitrage options (can always run independent initialization streams) but find the standard pathway more efficient. Net institutional benefit \u2014 extraction runs toward them, not away."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Climate Modeling Initiative",
+      "comment": "PERSPECTIVE 4: OPEN CLIMATE MODELING INITIATIVE (SCAFFOLD) \u2014 Organized coalitions (ESMValTool, PyESMValTool, CLIVAR data standardization efforts) are building alternative initialization pathways with lower parameterization lock-in. Open-source initialization schemes reduce dependency on proprietary modeling center datasets. Sunset logic applies: as distributed initialization frameworks mature (estimated 10-15 years), the bottleneck's extraction mechanism loses force. Current suppression is moderate because alternative pathways exist but are underfunded relative to established center infrastructure."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The CMIP Standardization Ritual",
+      "comment": "PERSPECTIVE 5: CMIP STANDARDIZATION RITUAL (PITON) \u2014 Coupled Model Intercomparison Project (CMIP) protocols prescribe specific initialization methods, parameter ranges, and output standards. These were functionally necessary in CMIP5 (enabling comparison across heterogeneous models) but have become largely performative in CMIP6+. Model groups invest effort in CMIP compliance that is decoupled from scientific validity \u2014 parameterization choices are constrained by CMIP protocols rather than by climate physics. Theater ratio is high because the ritual persists (inertia) despite availability of more sophisticated alternatives. The standardization mechanism maintains itself through publication pressure: non-CMIP models have limited visibility even if scientifically superior."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, initialization constraints appear inevitable: climate models require initial atmospheric state, that state must come from observations, and observations have systematic errors. Any initialization method must make choices about how to handle model-observation mismatch. This perspective sees the bottleneck as inherent to coupled Earth system modeling. However, the structural data contradicts mountain classification \u2014 the extraction is not from physical limits (accessibility_collapse would need to exceed 0.85) but from institutional choices about which initialization methods are 'standard.'"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "parameterization_versus_initialization",
+      "question": "Is the binding constraint the initialization dataset itself, or the parameterization choices embedded in how that dataset was generated?",
+      "resolution_mechanism": "Sensitivity analysis: decompose model sensitivity to (a) initial conditions uncertainty vs (b) parameterization uncertainty. If (a) dominates, initialization is the constraint; if (b) dominates, parameterization lock-in is the constraint.",
+      "impact": "If initialization dominates: constraint type shifts toward Rope (coordination of initial state). If parameterization dominates: Snare/Tangled Rope classification confirmed \u2014 the extraction mechanism is forcing adoption of specific modeling choices, not just initial conditions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether constraint is initialization dependency or parameterization lock-in"
+    },
+    {
+      "id": "observational_uncertainty_floor",
+      "question": "What fraction of initialization uncertainty is irreducible observational error versus institutional choice in how errors are handled?",
+      "resolution_mechanism": "Ensemble uncertainty quantification: compare confidence intervals from initialization-alone vs initialization-plus-parameterization. Compare error budgets across modeling centers using identical observational data.",
+      "impact": "High irreducible uncertainty (>70%): initialization becomes mountain-like \u2014 all choices converge to natural error limits. Low irreducible uncertainty (<30%): parameterization choices dominate, and institutional capture is clear.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Observational uncertainty floor versus institutional choice"
+    },
+    {
+      "id": "open_initialization_maturity",
+      "question": "Are open-source initialization frameworks (e.g., ESMValTool-based schemes) scientifically equivalent to proprietary center methods, or do they produce systematically degraded climate projections?",
+      "resolution_mechanism": "Blind intercomparison: regional downscaling models using open vs proprietary initialization; comparison of skill metrics for hindcasts and present-day simulation statistics.",
+      "impact": "If equivalent: scaffold sunset is real, constraint can decay as open alternatives mature. If degraded: open pathways are not true alternatives, and emerging groups face real structural barriers regardless of institutional reform.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scientific equivalence of open initialization frameworks"
+    },
+    {
+      "id": "publication_bias_against_alternatives",
+      "question": "Do journals and funding agencies systematically penalize climate models that deviate from CMIP-standard initialization, independent of scientific quality?",
+      "resolution_mechanism": "Bibliometric analysis: publication success rates and citation patterns for non-standard vs standard initialization approaches, controlling for model skill metrics.",
+      "impact": "If penalty is significant (>30% lower publication/funding success): suppression is structural and institutional. If penalty is absent: constraints are mostly scientific/technical, not extractive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Publication bias against non-standard initialization"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Climate model initialization \u2014 the process of setting up the atmospheric, oceanic, and cryospheric state from which a climate simulation begins \u2014 creates a structural constraint that exhibits both genuine coordination function and significant extraction. The established modeling centers (GFDL, ECMWF, MPI, NCAR) generate initialization datasets and coupled model frameworks that become de facto standards through IPCC participation and publication norms. New research groups cannot credibly produce climate projections without these datasets due to computational cost (~10 million core-hours to generate independent initialization), lack of funding for initialization work, and the impossibility of publication without standardized comparisons. This creates a mixed constraint: the standardized initialization genuinely enables rapid model intercomparison and scientific progress (rope function), but it also locks in specific parameterization choices and constrains methodological innovation (extraction mechanism). The theater ratio measures how much climate modeling effort goes into CMIP compliance rituals versus advancing climate physics \u2014 this ratio has increased from ~0.40 in the 2000s to ~0.68 today as CMIP protocols have become increasingly prescriptive while computational sophistication has made some standardization choices obsolete.",
+    "key_agents": [
+      "Established Modeling Centers (GFDL, ECMWF, MPI, NCAR, IPSL): Primary beneficiary (institutional/arbitrage) \u2014 generate standard datasets, control parameterization choices, accumulate citation advantage and funding concentration",
+      "Emerging Research Groups (universities, research institutes, developing-world climate centers): Primary victim (powerless/trapped) \u2014 face computational barriers to independent initialization; forced to adopt standard parameterizations; cannot innovate without massive research investment",
+      "Regional Downscaling Community: Secondary victim (moderate/constrained) \u2014 depends on global initialization but needs flexibility to develop regional parameterizations; constrained by global model choices",
+      "Model Diversity (as collective): Victim (powerless/trapped) \u2014 structural bias toward established modeling frameworks; alternative approaches face publication and funding barriers",
+      "Open Climate Modeling Initiative (ESMValTool developers, open-source frameworks): Organized actor (organized/constrained) \u2014 building alternative pathways with sunset logic; currently underfunded relative to established center infrastructure",
+      "CMIP Standardization Protocol: Institutional mechanism (institutional/arbitrage) \u2014 prescribes initialization methods and parameter ranges; maintains itself through publication pressure and historical precedent",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing institutional arrangements as physical necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Emerging groups must invest 2-5 years and significant funding to develop alternative initialization schemes, or accept parameterization lock-in from established centers. The extraction is not total (alternatives exist, some funding is available) but the path of least resistance requires adoption of standard initializations, which imposes costs on innovation. The measurement trajectory shows extractiveness increasing over time as CMIP protocols have become more prescriptive (driven by model complexity rather than scientific necessity). Suppression (0.58): Moderate-high. Structural barriers include: computational cost of independence (~10M core-hours = $5-10M USD), funding agency bias toward CMIP-compliant projects, publication bias against non-standard methods, and tacit knowledge concentration in established centers. These barriers are not absolute (some groups have overcome them, e.g., MIROC, GFDL) but they are significant and systematic. Theater ratio (0.68): High and increasing. CMIP5\u2192CMIP6\u2192CMIP7 protocols have become increasingly prescriptive about initialization procedures, output formatting, and metadata standards. Much of this is performative \u2014 the protocols ensure intercomparability but constrain experimentation. Open-source alternatives (ESMValTool) are reducing theater but remain underfunded relative to established center infrastructure.",
+    "directionality_logic": "Established centers derive low directionality (d \u2248 0.15-0.20): institutional power + arbitrage exit options + beneficiary status = effective institutional actors who experience the constraint as enabling coordination. They can always run independent initialization streams if needed but find standardization more efficient. Emerging groups derive high directionality (d \u2248 0.85-0.90): powerless agents + trapped exit options + victim status = maximum experienced extraction. They cannot easily leave the standard pathway and must pay costs to innovate. Regional modeling community derives moderate directionality (d \u2248 0.55-0.65): moderate power + constrained exit options + mixed victim/beneficiary status = mixed experienced extraction. They benefit from global initialization but are constrained by parameterization choices. Open climate initiatives derive moderate directionality (d \u2248 0.45-0.55): organized power + constrained exit options + agent of change = moderate extraction with exit pathway visible.",
+    "perspectival_gap": "This constraint shows a dramatic perspectival gap between established centers and emerging groups. Established centers (institutional/arbitrage) classify the constraint as Rope \u2014 pure coordination that enables scientific progress and rapid model intercomparison. Emerging groups (powerless/trapped) classify it as Snare \u2014 the same standardization mechanism that enables intercomparison also forces adoption of specific parameterizations and blocks innovation. Regional modeling communities (moderate/constrained) see Tangled Rope \u2014 genuine coordination benefit from global initialization plus asymmetric constraint on parameterization flexibility. The analytical observer at civilizational scope risks seeing Mountain (initialization constraints are inherent to climate modeling) but the structural data contradicts this: the extraction mechanism is not from physical necessity but from institutional choice about which initialization methods are standard. The theater ratio (0.68) reveals that institutional choice dominates \u2014 much climate modeling effort goes into CMIP compliance rituals that could be redesigned if institutional lock-in were not present.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by distinguishing institutional coordination (Rope function \u2014 standardization enables intercomparison) from parameterization lock-in (Snare extraction mechanism \u2014 specific choices are forced on non-beneficiary groups). The tension is real: standardization is necessary for climate science progress, but standardization can also lock in suboptimal choices. The Tangled Rope classification captures both functions: yes, standardization coordinates model intercomparison; yes, standardization also constrains innovation and concentrates power. The Scaffold perspective points toward resolution: open-source initialization frameworks are building alternative pathways with lower parameterization lock-in. The sunset is real \u2014 as distributed initialization and parameter sharing improve, the extraction mechanism loses force. The Piton perspective documents that CMIP protocols maintain themselves through institutional inertia: the ritual persists (theater_ratio = 0.68) despite availability of more flexible alternatives. The false mountain perspective (analytical/civilizational) reveals naturalization: institutional choice appears as physical necessity. The structural data shows this is naturalization \u2014 observational uncertainty is significant but does not dominate parameterization uncertainty, meaning institutional choices about how to handle that uncertainty are the binding constraint, not the uncertainty itself."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_model_parameterization_space",
+      "climate_projection_skill_ceiling",
+      "developing_world_climate_capacity"
+    ],
+    "dual_formulation_note": "Climate model initialization decomposes into two structurally distinct constraints: (1) initial condition availability (genuine coordination problem \u2014 all models need initial state from observations), (2) parameterization standardization (institutional choice \u2014 could allow more flexibility). This story covers both; more detailed analysis would decompose into separate constraint families per the \u03b5-invariance principle. The theater ratio (0.68) indicates high performative content, suggesting the parameterization standardization component dominates the institutional lock-in observed."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "header": {
+    "constraint_id": "humanitarian_access_mechanisms",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "humac"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Humanitarian Access Mechanisms in Conflict Zones",
+    "topic_domain": "international_humanitarian_law/conflict_operations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "host_state_sovereignty",
+      "armed_groups",
+      "humanitarian_organizations"
+    ],
+    "victims": [
+      "affected_civilian_populations",
+      "independent_verification_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Civilian Population",
+      "comment": "PERSPECTIVE 1: CIVILIAN POPULATION (SNARE) \u2014 Trapped in conflict zones with no exit capacity. Humanitarian access is controlled by state actors and armed groups who extract concessions (intelligence, political alignment, territorial recognition) in exchange for aid delivery. Civilians bear full suppression: geographic confinement, information control, weaponization of aid access. Minimal coordination benefit \u2014 aid is conditional on political compliance. High experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Humanitarian Organizations",
+      "comment": "PERSPECTIVE 2: HUMANITARIAN ORGANIZATIONS (TANGLED ROPE) \u2014 Constrained by dependence on state/armed group permission and by reputational risk of perceived partiality. Experience genuine coordination (negotiating access, distributing aid efficiently) alongside asymmetric extraction (forced consent to political conditions, neutrality violations, staff placement surveillance). Suppression operates through access denial threat and operational restrictions. Can exit at cost (abandoning beneficiaries, losing operational presence), but not without significant harm to mission and organization."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Donor States and International Community",
+      "comment": "PERSPECTIVE 3: DONOR STATES AND INTERNATIONAL COMMUNITY (ROPE) \u2014 See humanitarian access as a coordination mechanism for burden-sharing and legitimacy. Benefit from humanitarian operations that reduce refugee flows, stabilize regions, and provide post-conflict reconstruction opportunities. Can arbitrage between multiple conflict theaters and redirect funding if access deteriorates. Low experienced extraction \u2014 benefits flow toward this actor through geopolitical stability gains and soft power."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Host State Authority",
+      "comment": "PERSPECTIVE 4: HOST STATE AUTHORITY (SNARE) \u2014 Extracts political concessions and territorial legitimacy through access control. Humanitarian organizations must implicitly recognize state authority, provide intelligence on populations, and avoid supporting opposition groups. High suppression maintained through regulatory authority and denial capacity. From the state's perspective, this is rational political extraction \u2014 humanitarian access is weaponized to consolidate control. Low theater ratio for the state itself (straightforward political conditionality), but the extraction mechanism is coercive and asymmetric."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Armed Opposition Groups",
+      "comment": "PERSPECTIVE 5: ARMED OPPOSITION GROUPS (TANGLED ROPE) \u2014 Seek legitimacy and resources through controlling humanitarian access in areas under their de facto authority. Genuine coordination function (distributing aid, establishing civilian services) mixed with extraction (taking supplies, recruiting logistics support, demanding political recognition). Constrained by donor pressure and international monitoring. Both beneficiary and victim of the humanitarian access system \u2014 extract from it while being constrained by external pressure on humanitarian organizations to maintain impartiality."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Humanitarian Neutrality Principle",
+      "comment": "PERSPECTIVE 6: HUMANITARIAN NEUTRALITY PRINCIPLE (PITON) \u2014 The doctrine of humanitarian neutrality (impartiality, independence from political agendas) is largely theatrical. Organizations declare neutrality while implicitly legitimizing state authority through operational recognition, provide intelligence that states use against civilians, and face intense pressure to align with donor state interests. The neutrality ritual persists through institutional momentum (UN mandates, Red Cross doctrine) despite systematic violation in practice. Theater ratio is high because the actual function (aid delivery conditioned on political compliance) is obscured by the neutrality narrative."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a global/civilizational view, humanitarian access mechanisms coordinate response to mass suffering while simultaneously enabling political actors to extract legitimacy, intelligence, and control through aid conditionality. The constraint exhibits genuine coordination (connecting donors to beneficiaries, distributing resources) alongside structural extraction (weaponization of access, intelligence extraction, coercive legitimacy). The perspectival analysis reveals that 'humanitarian' framing obscures the political extraction that accompanies aid delivery. No agent escapes the hybrid: donors, states, organizations, and opposition all coordinate and extract simultaneously."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "conditionality_threshold",
+      "question": "At what level of access conditionality does coordination become pure extraction? Where is the boundary between legitimate state security concerns and illegitimate political leverage?",
+      "resolution_mechanism": "Comparative analysis of access agreements across conflicts; measurement of aid diversion rates vs political compliance correlations; donor pressure effectiveness on conditionality reduction",
+      "impact": "If threshold is low (minimal state conditions acceptable): current mechanisms are extractive snares. If threshold is high (significant political conditions tolerable): mechanisms are legitimate tangled ropes. Current uncertainty drives classification gap.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Boundary between legitimate conditionality and extractive leverage"
+    },
+    {
+      "id": "neutrality_fiction_persistence",
+      "question": "Is humanitarian neutrality maintained as a fiction to enable continued access, or do organizations genuinely believe in impartiality despite systematic evidence of politicization?",
+      "resolution_mechanism": "Internal communications analysis; comparison of stated vs. reported operational decisions; interviews with humanitarian leadership on access-vs-principle trade-offs; measurement of policy changes following donor pressure vs. operational evidence",
+      "impact": "If fiction: humanitarian system is deliberately complicit in political extraction, theater_ratio should be higher. If genuine belief: organizations are identity-locked into a doctrine that prevents recognizing their own capture, requiring identity-lock mechanisms in analysis.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether humanitarian neutrality is maintained as operational fiction or genuine belief"
+    },
+    {
+      "id": "civilian_survival_alternative_pathways",
+      "question": "Do humanitarian access mechanisms represent the only viable pathway for civilian survival in conflict zones, or are alternative survival strategies (local reciprocity, black markets, kinship networks) sufficient substitutes?",
+      "resolution_mechanism": "Economic anthropology of conflict-zone survival; measurement of dependency on formal humanitarian aid vs. informal economy; longitudinal tracking of civilian populations during access disruptions",
+      "impact": "If mechanisms are only viable pathway: civilians are trapped by necessity, not suppression, and snare classification is correct. If alternatives exist: suppression is lower than measured, suggesting civilian mobility is higher than currently modeled.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Availability of alternative survival pathways in conflict zones"
+    },
+    {
+      "id": "organized_beneficiary_coalition_threshold",
+      "question": "Do humanitarian organizations collectively constitute an organized coalition capable of coordinated leverage against state/group conditioning, or are they sufficiently fragmented and dependent that collective action is infeasible?",
+      "resolution_mechanism": "Network analysis of coordination among humanitarian organizations; measurement of joint action on access principles; comparison of leverage when organizations act individually vs. collectively; analysis of fragmentation incentives (competition for donor funding, specialization by geography/sector)",
+      "impact": "If coalition capacity exists but unused: exit_options should be upgraded to mobile for organizations, lowering experienced extraction. If fragmentation is structural: constrained classification and high extraction are accurate, and the system depends on coordination failure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Capacity for humanitarian organizations to form coordinated leverage coalition"
+    },
+    {
+      "id": "donor_state_interest_alignment",
+      "question": "Do donor states genuinely align with humanitarian principles, or do they instrumentalize humanitarian access for geopolitical advantage while maintaining plausible deniability through organizational intermediaries?",
+      "resolution_mechanism": "Correlation analysis between humanitarian access approvals and donor state strategic interests; measurement of conditionality divergence when humanitarian goals conflict with state interests; leaked communications and documentary evidence of donor pressure; analysis of funding patterns favoring access in strategically important regions",
+      "impact": "If aligned: donor state perspective as rope is accurate, and the system achieves coordination. If instrumental: donor states are co-extractors, and humanitarian organizations are strategic proxies, elevating tangled_rope to snare at the analytical level.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Alignment between donor state interests and humanitarian principles"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Humanitarian access mechanisms in conflict zones present a fundamental structural tension: providing aid requires negotiating with actors (states and armed groups) who have incentives to weaponize access conditionality for political extraction, while humanitarian organizations depend on maintained access to serve beneficiary populations. The constraint exhibits the full spectrum of DR types, making it a diagnostic exemplar for how the same institutional arrangement can simultaneously coordinate and extract. From the civilian population's perspective, access mechanisms are snares \u2014 they are trapped and cannot exit the zone, while aid conditionality enforces political compliance. From humanitarian organizations' perspective, the mechanisms are tangled ropes \u2014 genuine coordination of aid distribution mixed with enforced neutrality violations and surveillance. From donor states' perspective, they are ropes \u2014 humanitarian operations coordinate international burden-sharing and geopolitical stabilization while maintaining plausible deniability. From host states and armed groups' perspective, they are snares in the sense of extracting political concessions, but tangled ropes in the sense of coordinating service delivery under their de facto authority. The humanitarian neutrality principle itself has become a piton \u2014 maintained through institutional inertia despite systematic politicization in practice. The extractiveness has risen over the interval (0.42 \u2192 0.58) as conflict actors have learned to weaponize access more effectively, while theater_ratio has increased (0.55 \u2192 0.68) as organizations have intensified the neutrality narrative to obscure politicization. The analytical observer classifies the constraint as tangled_rope because both coordination and extraction are structurally necessary: aid must be coordinated across hostile jurisdictions, AND political actors extract concessions as the price of access. No actor can escape the hybrid.",
+    "key_agents": [
+      "Affected Civilian Populations: Primary victim (powerless/trapped) \u2014 geographically confined, information-controlled, aid access weaponized for political compliance",
+      "Humanitarian Organizations: Secondary actor (organized/constrained) \u2014 depend on access permission, experience genuine coordination and asymmetric extraction simultaneously",
+      "Host State Authority: Extractor beneficiary (powerful/arbitrage) \u2014 controls access, extracts political legitimacy and intelligence",
+      "Armed Opposition Groups: Mixed actor (organized/constrained) \u2014 provide de facto services while extracting resources and recognition from access negotiations",
+      "Donor States and International Community: Beneficiary (institutional/arbitrage) \u2014 benefit from geopolitical stabilization and burden-sharing while maintaining plausible deniability",
+      "The Humanitarian Neutrality Principle: Institutional narrative (piton) \u2014 maintains performative impartiality narrative despite systematic violation in practice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Political actors extract legitimacy, intelligence, territorial recognition, and compliance concessions through access control. However, the constraint is not pure extraction (which would require \u03b5 \u2265 0.70) because genuine coordination functions exist \u2014 aid actually does flow to populations, organizations do genuinely distribute resources efficiently within constraints, and donors do coordinate burden-sharing. The extraction is embedded within coordination rather than replacing it. Suppression (0.72): High. Multiple suppression mechanisms operate simultaneously: geographic confinement of civilians, information control, weaponization of access (denial as coercion), regulatory authority of host states, and safety risks for humanitarian staff. Suppression is not total (some access always exists, some populations can access alternative resources), but it is severe and multivalent. Theater ratio (0.68): Moderate-high. The humanitarian neutrality narrative is substantially theatrical \u2014 organizations declare impartiality while implicitly recognizing state authority, provide intelligence used against civilians, and adjust operations based on donor pressure. However, the theater is not complete (some genuine impartiality exists, some organizations do refuse compromising conditions), and the actual coordination function (aid distribution) is real.",
+    "perspectival_gap": "The gap between snare (civilian) and rope (donor) is maximal \u2014 a full 180\u00b0 rotation. This reveals the complete asymmetry in how the mechanism functions: donors experience it as a coordination benefit, benefiting from stability and reduced refugee flows; civilians experience it as an extraction mechanism, bearing costs of aid conditionality and access denial. The humanitarian organization's tangled_rope position is the bridge \u2014 it both coordinates (genuine aid distribution) and extracts (compliance with politicization). The analytical observer at the civilizational level must see the tangled_rope structure because the mechanism itself is designed to coordinate international response to mass suffering, which requires both genuine aid flow AND enforcement of state/group authority to maintain access. The piton perspective (the neutrality doctrine itself) reveals that organizations cope with the perspectival gap by maintaining a narrative of impartiality that masks their complicity in political extraction.",
+    "directionality_logic": "Directionality values vary dramatically across agents. Civilian populations are full targets (d \u2192 1.0): trapped, no exit options, victims of extraction. Humanitarian organizations are partial targets (d \u2192 0.55-0.65): constrained exit (can abandon populations but at mission cost), beneficiaries of legitimacy and resources but also victims of compliance pressure. Host states are beneficiaries (d \u2192 0.15-0.25): control access, extract concessions, experience low or negative extraction because the mechanism subsidizes their political goals. Donor states are beneficiaries (d \u2192 0.10-0.20): arbitrage exit (can redirect to different conflicts), geopolitical benefits, low extraction. The engine derives d from power \u00d7 exit \u00d7 beneficiary/victim declarations. Civilians with trapped exit and victim status produce high d \u2192 high f(d) \u2192 high \u03c7. Host states with institutional power, arbitrage access (they can always deny access), and beneficiary status produce low d \u2192 negative f(d) \u2192 low/negative \u03c7. Organizations with organized power, constrained exit, and mixed beneficiary/victim status produce mid-range d \u2192 moderate f(d) \u2192 moderate \u03c7.",
+    "mandatrophy_analysis": "DIAGNOSTIC EXEMPLAR: This constraint resolves the mandatrophy by demonstrating that the six types are not competing answers but perspectival positions within a structurally unified hybrid system. The question 'Is this a Rope or a Snare?' is malformed \u2014 it is both, simultaneously, from different structural positions. The civilian sees snare (pure extraction). The organization sees tangled_rope (mixed). The state sees its own snare (but from the extractor side, not the victim side). The donor sees rope (coordination without extraction). The piton perspective reveals that the neutrality doctrine masks rather than enables the coordination/extraction hybrid. The mandatrophy is resolved when the analyst recognizes that the classification multiplicity is not measurement error but structural truth \u2014 humanitarian access mechanisms are designed to coordinate response while enabling political actors to extract concessions, and no agent can exit this hybrid because aid genuinely is needed AND political conditions are genuinely enforced. The tension is not resolvable by better measurement; it is intrinsic to the mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "international_humanitarian_law_compliance",
+      "refugee_movement_control",
+      "armed_group_legitimacy_through_service_provision"
+    ],
+    "dual_formulation_note": "Humanitarian access mechanisms decompose into three linked constraints: (1) the basic access negotiation (this story, \u03b5=0.58), (2) compliance with IHL norms that govern access conditions (\u03b5=0.35, rope), and (3) the armed group service provision function that mimics state legitimacy through humanitarian coordination (\u03b5=0.48, tangled_rope). Each story has different base properties but shares common beneficiaries/victims. The access mechanism story is the upstream constraint that enables extraction in the other two."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.22
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "proof_of_work_energy_cost",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pow_energy"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Proof of Work Energy Cost Constraint",
+    "topic_domain": "cryptography/blockchain/environmental",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mining_hardware_manufacturers",
+      "miners_with_cheap_energy_access",
+      "blockchain_security_beneficiaries"
+    ],
+    "victims": [
+      "energy_grid_operators",
+      "carbon_budget_bearing_populations",
+      "competing_electricity_consumers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Energy-Bearing Populations",
+      "comment": "PERSPECTIVE 1: ENERGY-BEARING POPULATIONS (SNARE) \u2014 Climate and grid capacity costs are socialized; mining operations externalize environmental damage. Trapped populations bear the full cost of grid strain and carbon emissions without exit or compensation mechanism. Maximum extraction with minimal coordination benefit \u2014 the security of cryptocurrency networks accrues to participants; the energy burden accrues to non-participants."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Grid Operators and Electricity Markets",
+      "comment": "PERSPECTIVE 2: GRID OPERATORS (TANGLED ROPE) \u2014 Coordinate electricity distribution and peak-load management (genuine coordination function). But PoW mining creates inflexible demand spikes that subordinate grid operators to mining profitability. Constrained by physics (cannot simply deny power without system instability) and by mining capital mobility. Extraction and coordination coexist: grid operators solve real coordination problems but mining extraction undermines their resource management."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Mining Operations",
+      "comment": "PERSPECTIVE 3: MINING OPERATIONS (ROPE) \u2014 Experience PoW energy cost as a coordination mechanism: energy expenditure certifies transaction validation, enabling trustless network operation. Beneficiary perspective \u2014 energy cost is the lever by which mining operations claim block rewards. Exit options are high (arbitrage to alternative chains, hardware, locations) \u2014 this is a participation choice, not an imposed constraint."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Hardware Manufacturers",
+      "comment": "PERSPECTIVE 4: HARDWARE MANUFACTURERS (ROPE) \u2014 Pure beneficiary. Mining hardware R&D is driven entirely by PoW energy cost \u2014 more efficient ASIC chips capture arbitrage. No exit cost: manufacturing follows demand. Coordination benefit is genuine (industry standards, energy efficiency innovation) but comes downstream of extraction from other agents."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Blockchain Security Beneficiaries (Consensus Participants)",
+      "comment": "PERSPECTIVE 5: BLOCKCHAIN SECURITY BENEFICIARIES (TANGLED ROPE) \u2014 Depend on PoW energy expenditure for network security (genuine coordination benefit). But organized agents (node operators, exchange protocols, institutional holders) are partly insulated from energy cost externalities. Constrained exit: switching to PoS requires protocol consensus, not unilateral action. Asymmetric: security benefits accrue to participants; energy costs accrue to populations outside the blockchain."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The PoW Security Paradigm",
+      "comment": "PERSPECTIVE 6: THE POW SECURITY PARADIGM (PITON) \u2014 PoW as security mechanism is being replaced by PoS and alternative consensus (Ethereum transition, emerging chains). The PoW paradigm persists in Bitcoin and residual chains through inertia and consensus lock-in. Theater ratio reflects: energy expenditure is *performative* as security after PoS viability is proven \u2014 it continues because the network cannot easily exit, not because it is functionally superior. Piton: the mechanism is degraded relative to known alternatives but maintained through institutional lock-in."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Thermodynamic View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / THERMODYNAMIC VIEW (MOUNTAIN) \u2014 From a universal perspective, trustless consensus over a distributed network necessarily requires some energy expenditure as a scarce resource that cannot be spoofed. Energy cost is inherent to solving the Byzantine generals problem without central authority. However, the structural data contradicts this classification \u2014 PoS demonstrates that equivalent security can be achieved with dramatically lower energy expenditure. The 'mountain' framing naturalizes PoW's specific high-energy implementation as if it were the only possible solution, masking that the constraint is technological choice, not thermodynamic law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "pow_vs_pos_security_equivalence",
+      "question": "Do PoS and PoW provide genuinely equivalent security guarantees, or does PoW's energy expenditure provide asymptotic security advantages that PoS cannot achieve?",
+      "resolution_mechanism": "Comparative analysis of consensus attack costs, nothing-at-stake problem resolution, economic finality guarantees across PoW and PoS implementations; empirical security incident data for PoS chains vs PoW chains across equivalent time horizons",
+      "impact": "If equivalent: PoW energy cost is pure waste (snare reclassification across more perspectives, mountain reclassified as false summit). If PoW-asymptotic: constraint becomes mountain from analytical perspective; PoS architectures are not true alternatives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether PoW and PoS provide equivalent security"
+    },
+    {
+      "id": "externality_internalization_path",
+      "question": "Can energy cost externalities be internalized through carbon pricing, grid fees, or energy-backed currencies without fundamentally altering mining economics?",
+      "resolution_mechanism": "Economic modeling of mining profitability under varying carbon price scenarios; empirical observation of mining relocation patterns when electricity costs change; comparison of mining concentration in carbon-heavy vs renewable energy regions",
+      "impact": "If internalization is possible: constraint becomes rope (coordination with distributed cost). If not: extraction is structural, snare reclassification. If mining becomes unprofitable: PoW security collapses.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether externalities can be internalized"
+    },
+    {
+      "id": "consensus_protocol_path_lock_in",
+      "question": "Is Bitcoin's commitment to PoW a genuine technological lock-in (requires 51% consensus to change), or is the energy expenditure level contingent on economic incentives that could be altered without protocol change?",
+      "resolution_mechanism": "Analysis of mining participation in hypothetical reduced-reward scenarios; game theory modeling of mining economics under carbon tax; observation of whether miners can credibly shift to PoS-equivalent energy consumption without protocol fork",
+      "impact": "If genuine lock-in: PoW persists as piton indefinitely. If economic contingency: constraint could shift to rope if mining incentives change.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether PoW consensus is locked in or contingent on economics"
+    },
+    {
+      "id": "energy_source_carbon_intensity_variability",
+      "question": "Does mining concentration in renewable-energy-rich regions (Iceland, Norway, stranded hydroelectric) actually avoid carbon emissions, or does it displace emissions by preempting renewable energy that would otherwise replace fossil baseload?",
+      "resolution_mechanism": "Marginal carbon accounting: grid carbon intensity at the margin of mining electricity addition; analysis of renewable energy development patterns in mining-intensive regions; counterfactual grid composition if mining demand were removed",
+      "impact": "If truly low-carbon: snare classification weakens (less genuine victimhood of carbon-bearing populations). If displacement: extraction from non-mining populations remains high.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether mining in renewables actually avoids carbon emissions"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "Proof of Work (PoW) energy consumption creates a structural constraint that bridges cryptographic necessity and environmental externality. Bitcoin and residual PoW chains require continuous energy expenditure to secure distributed consensus \u2014 this energy cost is simultaneously the mechanism by which mining operations prove work, the beneficiary of block rewards, and a socialized cost borne by electricity grid operators and carbon-budget-bearing populations. The constraint exhibits high tangled-rope characteristics: genuine coordination function (trustless consensus without central authority) coexists with asymmetric extraction (mining economics externalize grid strain and environmental costs onto non-participants). The extractiveness has increased over the measurement interval (0.35 \u2192 0.62) as mining scale has grown and energy cost per transaction has risen. Theater ratio remains relatively low (0.35), indicating the constraint is functionally coherent rather than performative \u2014 energy expenditure genuinely secures the network, not merely signals commitment. However, the emergence of Proof of Stake (Ethereum, modern chains) and the intellectual credibility of PoS consensus protocols have created a competing pathway, introducing piton dynamics: PoW persists in Bitcoin through consensus lock-in and network effects despite known alternatives of lower energy intensity.",
+    "key_agents": [
+      "Energy-Bearing Populations: Primary victim (powerless/trapped) \u2014 bear socialized costs of grid strain, carbon emissions, and opportunity cost of electricity diverted from other uses. No exit mechanism or compensation.",
+      "Grid Operators: Secondary victim (moderate/constrained) \u2014 manage peak-load coordination; subordinated to mining demand inflexibility. Constrained by physics of grid management and mining capital mobility.",
+      "Mining Operations: Primary beneficiary (institutional/arbitrage) \u2014 capture block rewards; experience energy cost as coordination mechanism. High exit options (relocate, switch chains, retire).",
+      "Hardware Manufacturers: Secondary beneficiary (institutional/arbitrage) \u2014 drive ASIC efficiency innovation; profit from mining R&D without bearing energy externalities.",
+      "Blockchain Participants: Mixed (organized/constrained) \u2014 benefit from network security; partly insulated from energy cost externalities through participation benefit.",
+      "PoW Protocol (Bitcoin): Institutional actor (institutional/constrained) \u2014 locked into PoW through consensus; cannot unilaterally exit despite alternatives."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint exhibits genuine coordination function (trustless consensus requires energy scaricity that cannot be spoofed) alongside significant extraction (environmental and grid costs externalized to non-participants). The value reflects that PoW solves a real problem but at higher energy cost than proven alternatives. The trajectory from 0.35 to 0.62 reflects mining scale growth without corresponding efficiency gains \u2014 block reward levels stabilize, but network hash rate increases, driving total energy expenditure upward. Suppression (0.62): Moderate-high. Barriers to exit from PoW networks include: (1) consensus lock-in \u2014 Bitcoin holders cannot unilaterally switch protocols; (2) network effects \u2014 PoW chain value depends on hash rate and perceived immutability; (3) mining capital sunk costs \u2014 ASIC hardware is chain-specific; (4) political economy \u2014 miners have veto power over protocol change. These barriers are structural, not universal \u2014 holders can sell and move capital, miners can relocate, but the PoW commitment is highly path-dependent. Theater ratio (0.35): Low, with increasing trend. PoW energy expenditure is functionally coherent as a security mechanism, not primarily performative. The rising trend reflects that as PoS alternatives mature and prove viable, the continued energy expenditure in Bitcoin becomes increasingly performative \u2014 it continues not because it is the most efficient solution but because protocol exit is collectively difficult. The theater increase signals piton dynamics emerging.",
+    "perspectival_gap": "The core perspectival gap opposes beneficiaries and victims. Mining operations see PoW as a legitimate market mechanism (rope) \u2014 participants choose to mine or hold cryptocurrency, accepting energy costs as the price of participation and security. Energy-bearing populations see PoW as extraction (snare) \u2014 they bear costs of grid strain and carbon emissions without choice, benefit, or compensation. Grid operators see mixed coordination and extraction (tangled rope) \u2014 they solve genuine load-balancing problems but are subordinated to mining demand. This gap reflects structural power: beneficiaries control exit and profit; victims are locked into electricity consumption and climate bearing. The false summit appears when observers naturalize PoW's high energy as thermodynamic necessity rather than recognizing it as a design choice with known lower-energy alternatives (PoS).",
+    "directionality_logic": "Directionality derives from beneficiary/victim declarations and exit options. Mining operations are beneficiaries with arbitrage-level exit options (can relocate, exit chain, retire) \u2014 they derive d from structured data as approximately 0.15-0.25 (low extraction experienced). Energy-bearing populations are victims with trapped exit options \u2014 d \u2248 0.95 (high extraction experienced). Grid operators are moderate victims with constrained exit \u2014 d \u2248 0.65. The asymmetry between mining operations' d (beneficiary, arbitrage) and populations' d (victim, trapped) generates the tangled-rope classification: coordinating at low cost for beneficiaries, extracting at high cost from victims, in a single constraint. Scope modifier \u03c3(global) = 1.2 scales extractiveness upward, reflecting that energy cost externalities affect planetary climate and grid infrastructure globally.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy through structural decomposition. The mandatrophy asks: is PoW energy cost a fundamental coordination problem (mountain) that blockchains must solve, or an extractive mechanism (snare) that externalizes costs onto non-participants? The resolution: it is BOTH, structured differently across perspectives. From a physics/cryptography view (mountain perspective), trustless consensus requires some energy-based scaricity to prevent Sybil attacks \u2014 this is a genuine coordination requirement. From an implementation view (tangled rope perspective), PoW achieves this coordination at far higher energy cost than necessary because of Bitcoin's specific consensus rules and economic incentives. From a climate/grid view (snare perspective), the energy costs are externalized to non-participants and socialized as environmental damage. The mandatrophy is resolved by recognizing that PoW is a valid but expensive solution to a real problem. The existence of PoS as a lower-cost alternative proves that the current energy expenditure in Bitcoin is not minimally necessary \u2014 it reflects path-dependence and institutional lock-in rather than thermodynamic law. The theater ratio's increase (0.20 \u2192 0.35) confirms piton emergence: as alternatives prove viable, the continued energy expenditure becomes increasingly performative."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.25
+  },
+  "network": {
+    "affects_constraints": [
+      "blockchain_consensus_mechanism_choice",
+      "cryptocurrency_volatility_external_costs",
+      "renewable_energy_grid_displacement"
+    ],
+    "dual_formulation_note": "PoW energy cost is downstream of the consensus mechanism choice (PoW vs PoS). Separate constraint story: blockchain_consensus_mechanism_choice (\u03b5=0.72, Tangled Rope) describes the institutional lock-in and path-dependence that maintains PoW in Bitcoin despite PoS viability. PoW energy cost (\u03b5=0.58) is the downstream extractive consequence of that lock-in."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    }
+  ]
+}

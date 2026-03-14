@@ -1,0 +1,217 @@
+{
+  "header": {
+    "constraint_id": "medical_labor_market_monopsony",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "medlab"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Medical Labor Market Monopsony",
+    "topic_domain": "healthcare_economics/labor",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "hospital_systems",
+      "insurance_companies"
+    ],
+    "victims": [
+      "physician_workforce",
+      "patient_access_to_care"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Physician in a Single-Buyer Market",
+      "comment": "PERSPECTIVE 1: PHYSICIAN IN MONOPSONY (SNARE) \u2014 A physician in a region with one dominant employer (hospital system) faces genuine entrapment. Exit requires geographic relocation, retraining, or accepting severe income loss. Suppression mechanisms are structural: capital requirements for independent practice, licensing locality specificity, student debt burden, and family relocation costs. The physician perceives maximal extraction \u2014 wage suppression relative to productivity, mandatory call requirements, and loss of clinical autonomy packaged as 'integration' and 'patient coordination.'"
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Specialist in Multi-Market System",
+      "comment": "PERSPECTIVE 2: SPECIALIST WITH GEOGRAPHIC OPTIONS (TANGLED ROPE) \u2014 A cardiologist with national reputation faces high but surmountable relocation costs. Multiple hospital systems compete for specialists, but the labor market still exhibits monopsony characteristics at the specialty/region intersection. Coordination function exists: physicians benefit from employment benefits (malpractice insurance, EMR infrastructure), but extraction persists through enforced productivity targets, RVU-based compensation pressure, and mobility constraints (non-competes, credential transfers). Experiences both genuine coordination and asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Hospital System Administrator",
+      "comment": "PERSPECTIVE 3: HOSPITAL SYSTEM (ROPE) \u2014 Experiences the constraint as coordination: employing physicians enables service integration, centralized administrative overhead, and coordinated capital investment. The monopsony position is a side effect of legitimate coordination needs (scheduling, billing, compliance). The hospital system has high exit optionality: can adjust staffing, recruit from out-of-region, or shift to mid-level provider models. Experiences the constraint as coordination with minimal extraction burden."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Patient Access to Care (Abstract Collective)",
+      "comment": "PERSPECTIVE 4: PATIENT ACCESS (SNARE) \u2014 Physician labor monopsony depresses wages relative to medical school training costs, reducing workforce supply. This constrains patient access, particularly in rural and underserved regions where monopsony is most severe. The patient population cannot organize, has no advocate, and bears the cost through longer wait times, geographic gaps in specialty access, and physician burnout-driven exits from practice. Pure extraction with no capacity to exit or negotiate."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Insurance Company",
+      "comment": "PERSPECTIVE 5: INSURANCE COMPANY (TANGLED ROPE) \u2014 Insurance companies benefit from physician wage suppression (lower labor costs reduce provider reimbursement claims). They also benefit from hospital consolidation (fewer, larger negotiating partners reduce administrative overhead). Insurance companies maintain coordination with hospitals through selective contracting and quality metrics. But they face extraction pressure from hospital systems as consolidation increases provider market power in hospital-insurer negotiations. Bidirectional: they extract from physicians but are extracted from by consolidated hospital systems."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Organized Medicine and Regulatory Reform",
+      "comment": "PERSPECTIVE 6: ORGANIZED MEDICINE & REFORM (SCAFFOLD) \u2014 Medical associations, labor organizing (physicians' unions), and regulatory interventions (anti-trust enforcement, non-compete restrictions) represent organized agents attempting to reduce monopsony extraction. These movements have sunset logic: enforcement of non-competes, telemedicine mobility, and workforce diversification (nurse practitioners, physician assistants) are gradually lowering geographic and credential barriers. Organized medicine experiences the constraint as a temporary coordination failure with structural pathways to exit through policy reform and market fragmentation."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Professional Medical Guild (Vestigial Function)",
+      "comment": "PERSPECTIVE 7: MEDICAL GUILD (PITON) \u2014 Medical boards, state licensing, and the professional credentialing system serve genuine coordination functions (quality assurance, public safety) but have become largely performative. Licensing requirements are set at state level and protect against credential portability across state lines, formally justified as quality assurance but functionally reducing labor supply elasticity and supporting monopsony. The guild system persists through institutional inertia despite being undermined by telemedicine and mid-level provider expansion. Theater ratio high (0.65): substantial performative licensing requirements relative to safety benefit."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 From a civilizational view, physician labor monopsony might appear immutable: hospitals require integrated infrastructure, training is geographically concentrated, and capital requirements for practice create natural barriers. This perspective risks naturalizing contingent institutional arrangements (state licensure, credential non-portability, hospital consolidation incentives) as structural inevitabilities. The engine's false summit detector will identify this as misattribution of institutional design choices to natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "monopsony_vs_market_efficiency",
+      "question": "Is the physician labor market concentrated due to structural coordination requirements or due to regulatory barriers and consolidation incentives that could be reformed?",
+      "resolution_mechanism": "Comparative analysis of physician markets with different regulatory regimes (US state variation, international comparison); natural experiment analysis of non-compete enforcement changes and telemedicine policy shifts",
+      "impact": "If structural: monopsony is inherent and physician wages reflect coordination costs (higher acceptable suppression). If regulatory: monopsony is extractive and policy reform could reduce it (higher mandatrophy risk).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether physician labor concentration is structural or regulatory"
+    },
+    {
+      "id": "wage_suppression_magnitude",
+      "question": "How much of observed physician wage suppression reflects monopsony extraction vs. legitimate coordination costs (integration, EMR infrastructure, malpractice insurance pooling)?",
+      "resolution_mechanism": "Comparison of employed vs. independent physician earnings, controlling for practice overhead; analysis of hospital profit margins and wage-setting behavior; econometric decomposition of wage equations",
+      "impact": "If extraction-driven (>60%): more physicians exit to independent practice, reducing supply. If coordination-driven (<40%): monopsony persists as stable coordination. Critical for extractiveness threshold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of wage suppression attributable to extraction vs. coordination"
+    },
+    {
+      "id": "patient_outcome_causation",
+      "question": "Does physician wage suppression and monopsony-driven burnout causally reduce patient access and quality outcomes, or are these decoupled?",
+      "resolution_mechanism": "Regional analysis of monopsony severity (Herfindahl index) vs. patient access metrics (wait times, specialist availability); physician burnout rates vs. patient outcome data; time-series before/after hospital consolidation events",
+      "impact": "If causal: patient harm is direct consequence of monopsony (victim status legitimate). If decoupled: monopsony is primarily physician extraction (smaller victim population). Classification of patient access as victim changes if decoupled.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether monopsony causally harms patient access and outcomes"
+    },
+    {
+      "id": "non_compete_enforceability",
+      "question": "What is the true enforcement rate and financial severity of non-compete agreements in physician employment contracts, and how much do they suppress physician mobility?",
+      "resolution_mechanism": "Survey data on non-compete terms; analysis of physician exit rates conditional on non-compete presence; state-level variation in non-compete enforceability vs. physician migration patterns",
+      "impact": "If high enforcement: non-competes are a primary suppression mechanism (support monopsony classification). If low enforcement: physicians have more exit optionality (reclassify from trapped to constrained).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Enforcement and mobility impact of non-compete agreements"
+    },
+    {
+      "id": "telemedicine_market_opening",
+      "question": "Will telemedicine and remote work normalize in physician practice, reducing geographic lock-in and supporting labor market fragmentation?",
+      "resolution_mechanism": "Post-COVID longitudinal data on telemedicine adoption rates; employer restrictions on remote practice; regulatory barriers to cross-state telemedicine (licensing); patient demand for remote options vs. in-person care",
+      "impact": "If telemedicine scales: sunset mechanism activates (scaffold becomes real). If regulatory barriers persist: geographic lock-in remains (monopsony stable). Critical for scaffold classification credibility.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether telemedicine will fragment physician labor markets geographically"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The medical labor market in the United States exhibits monopsony characteristics \u2014 concentrated employer power over physician wages and employment terms \u2014 particularly acute in rural regions and specialty markets with single dominant employers. This constraint combines genuine coordination requirements (integrated healthcare systems require physician staffing, capital infrastructure, administrative overhead) with extractive mechanisms (wage suppression, non-competes, geographic lock-in). The monopsony is not total (many physicians have multi-employer options, and some can practice independently), but it is structural enough to significantly suppress wages relative to medical training costs and productivity. The constraint affects three distinct populations: (1) physicians in single-buyer regions who face true entrapment; (2) specialists with some geographic mobility facing constrained exit options; and (3) patients in underserved regions experiencing supply constraints driven by workforce discouragement. The extractiveness has increased over the 20-year interval (0.38 \u2192 0.58) as hospital consolidation has accelerated. Theater ratio remains moderate (0.48) because hospital justifications for consolidation have legitimate coordination components; the performance is not purely theatrical, but increasingly functional consolidation is being justified through and channeled via administratively intensive processes rather than market mechanisms.",
+    "key_agents": [
+      "Physicians in monopsony regions: Primary victims (powerless/trapped) \u2014 face geographic and credential lock-in; cannot exit without severe relocation costs",
+      "Specialist physicians with multi-market access: Secondary victims (moderate/constrained) \u2014 face high relocation costs and non-compete barriers but retain some optionality",
+      "Hospital systems: Primary beneficiaries (institutional/arbitrage) \u2014 consolidate to achieve coordination gains but capture monopsony rents through wage suppression",
+      "Insurance companies: Secondary beneficiaries (powerful/arbitrage) \u2014 benefit from wage suppression through lower provider reimbursement but face extraction from consolidated hospitals",
+      "Patients in underserved regions: Tertiary victims (powerless/trapped) \u2014 cannot exit healthcare market; experience access constraints driven by physician supply discouragement",
+      "Medical associations and organized labor: Organized agents (organized/constrained) \u2014 attempting to reduce monopsony through policy reform, union organizing, and regulatory change",
+      "State medical boards and licensing system: Institutional actors (institutional/arbitrage) \u2014 maintain credential non-portability justified as quality assurance but functionally supporting monopsony",
+      "Analytical observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing institutional arrangements (state licensure, consolidation incentives) as structural inevitabilities"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Hospital consolidation and regional monopsony create genuine wage suppression relative to physician productivity and training costs. The extractiveness is not at snare levels (0.66+) because: (1) some physicians have exit options through geographic mobility, independent practice, or career changes; (2) hospital systems provide genuine coordination value (integrated EMRs, malpractice insurance pooling, administrative overhead reduction); and (3) workforce supply has not collapsed despite suppression (indicating suppression is within the 'bargaining range' of a non-catastrophic extraction). The 20-year trend shows increasing extractiveness (0.38 \u2192 0.58) correlating with hospital consolidation waves, suggesting extractive mechanisms are accumulating faster than countervailing reforms. Suppression (0.65): High. Physicians face multiple structural barriers to exit: (1) student debt (average $200k+) creates financial lock-in; (2) geographic credential non-portability (state licensure) reduces outside options; (3) non-compete agreements restrict independent practice; (4) capital requirements for solo practice are prohibitive; (5) family considerations (spouse employment, children's schooling) create relocation costs. Suppression is enforced by institutional structures rather than physical coercion, but the effect is real. Theater ratio (0.48): Moderate. Hospital justifications for consolidation invoke legitimate coordination benefits (integrated care, reduced administrative overhead, unified compliance systems), and these benefits are partially real. However, the framing increasingly emphasizes administrative integration and IT standardization over genuine care coordination, suggesting theater is rising. The theater_ratio increase from 0.35 to 0.48 reflects the shift toward justifying consolidation through administrative efficiency claims rather than care quality claims.",
+    "directionality_logic": "The monopsony is a multi-agent extraction network. Physicians experience high d (0.85+) as trapped or constrained victims; hospital systems experience low d (0.10-0.20) as beneficiaries with arbitrage options; insurance companies experience intermediate d (0.45-0.55) as partial beneficiaries who are themselves extracted from by hospital consolidation; patients experience maximum d (0.95) as abstract powerless populations with no exit options. The derived directionality values produce perspectival divergence: powerless/trapped physicians classify the constraint as snare (high \u03c7), moderate/constrained specialists classify as tangled_rope (moderate \u03c7), institutional/arbitrage hospitals classify as rope (low/negative \u03c7), and organized reform movements classify as scaffold (low \u03c7 with sunset logic). The insurance company perspective is particularly instructive: they appear as beneficiaries at the physician level (monopsony suppresses wages, reducing reimbursement pressure) but as victims at the hospital level (consolidation gives hospitals pricing power). This two-level extraction is captured through separate perspectives with different directionality values.",
+    "perspectival_gap": "This constraint demonstrates perspectival divergence across four distinct structural positions. Physicians in trapped monopsony regions see pure extraction (Snare). Specialists with geographic mobility see mixed coordination and extraction (Tangled Rope) \u2014 they genuinely benefit from hospital infrastructure while also experiencing wage suppression. Hospital systems see coordination (Rope) \u2014 the monopsony position is incidental to legitimate service integration. Organized medicine and reform movements see a temporary problem with structural pathways to resolution (Scaffold) \u2014 telemedicine, non-compete restrictions, and workforce diversification (NP/PA expansion) are reducing geographic lock-in. Patients and the general public might see a natural law of healthcare (Mountain) \u2014 integrated systems require physician employment, and efficiency requires consolidation \u2014 but this is a false summit: the institutional design choices (state licensure, consolidation tax incentives, funding models) are contingent, not inevitable. The perspectival gap reveals that different stakeholders experience the same structural phenomenon (hospital consolidation + physician employment) as coordination (hospital perspective), mixed (specialist perspective), extraction (trapped physician perspective), and reform opportunity (organized medicine perspective).",
+    "mandatrophy_analysis": "MONOPSONY CLASSIFICATION TRAP: The primary mandatrophy risk is misclassifying the constraint as Rope (pure coordination) because hospital consolidation has legitimate coordination functions. Many hospital administrators and health policy analysts describe consolidation as necessary for integrated care, reduced administrative overhead, and unified compliance. This framing is partially true \u2014 there are real coordination gains \u2014 but it obscures the monopsony extraction layer. The tangled_rope classification resolves this by asserting that both the coordination function AND the asymmetric extraction are structurally real. Suppression \u2265 0.65 and beneficiary/victim differentiation confirm this is not pure coordination. The engine's mandatrophy detector will flag the false mountain perspective (analytical observer naturalizing consolidation as inevitable coordination) as a false summit: institutional design choices (regulatory incentives for consolidation, state licensure non-portability, consolidation tax benefits) create the monopsony, and are therefore changeable. The constraint is tangled_rope, not mountain and not rope. SECONDARY RISK: Misclassifying as snare at all perspectives because of the high suppression score (0.65). The snare classification is accurate ONLY for trapped physicians in single-buyer regions; it fails for specialists with multi-market access (tangled_rope), hospital systems (rope), and organized reform movements (scaffold). The perspectival differentiation is essential to prevent monolithic snare classification that would miss the coordination dimensions."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "physician_workforce_supply",
+      "healthcare_access_rural_regions",
+      "hospital_consolidation_incentives"
+    ],
+    "dual_formulation_note": "Medical labor monopsony is upstream of physician workforce supply constraints and rural healthcare access gaps. Separate constraint stories address the downstream effects (workforce discouragement, access constraints) which have different \u03b5 values reflecting the cumulative impact of wage suppression on supply-side decisions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

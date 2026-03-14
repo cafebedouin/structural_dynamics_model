@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "regulatory_capture_logistics_sector",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rcls"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Regulatory Capture in the Logistics Sector",
+    "topic_domain": "economic_policy/regulatory_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_carriers",
+      "freight_forwarding_oligopoly"
+    ],
+    "victims": [
+      "new_market_entrants",
+      "small_operators",
+      "consumer_welfare"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Small Logistics Operator",
+      "comment": "PERSPECTIVE 1: SMALL LOGISTICS OPERATOR (SNARE) \u2014 Trapped by licensing barriers, insurance requirements, and fuel surcharge regulations written by incumbent carriers through regulatory capture. No viable exit without abandoning the industry. Bears maximum extraction via compliance costs and market-exclusion mechanisms embedded in regulations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Regional Competitor",
+      "comment": "PERSPECTIVE 2: REGIONAL COMPETITOR (TANGLED ROPE) \u2014 Structurally mobile but constrained by regulatory compliance costs and coordination requirements (fuel reporting, safety certifications, cross-border permits). Benefits from coordination mechanisms (safety standards, interoperability agreements) but bears extraction through asymmetric regulatory overhead that favors incumbents with compliance infrastructure."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Incumbent Carrier",
+      "comment": "PERSPECTIVE 3: INCUMBENT CARRIER (ROPE) \u2014 Experiences regulations as coordination mechanism: fuel surcharge protocols, intermodal standards, capacity allocation rules enable predictable market operations. Benefits from high-barrier entry regulations written collaboratively with transport ministry. Net beneficiary position \u2014 extraction runs toward this actor."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Agency (Captured Perspective)",
+      "comment": "PERSPECTIVE 4: REGULATORY AGENCY (TANGLED ROPE, IDENTITY_LOCKED) \u2014 The regulator is structurally mobile (could in principle rewrite regulations to lower barriers) but identity-locked: its professional identity is constituted through the regulatory framework it inherited and maintains. Agency staff career paths are embedded in the incumbent-carrier relationship. Sees itself as implementing stable, predictable rules rather than protecting incumbents. Genuine coordination function exists (safety, intermodal coordination) alongside extractive asymmetry imposed on entrants."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The National Logistics Framework",
+      "comment": "PERSPECTIVE 5: NATIONAL LOGISTICS FRAMEWORK (PITON) \u2014 The regulatory structure (multi-generational licensing regimes, permit allocation, safety certification requirements) is substantially performative at the civilizational horizon. Original coordination purpose (preventing predatory pricing, ensuring safety standards) has been displaced by rent-seeking theater. The framework persists through institutional inertia despite alternatives (dynamic pricing, digital credentials, decentralized compliance verification) existing outside the formal system. Theater ratio reflects that much regulatory overhead is symbolic compliance rather than safety-functional."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Gig-Economy Disruptors",
+      "comment": "PERSPECTIVE 6: GIG-ECONOMY DISRUPTORS (SCAFFOLD) \u2014 Organized alternative service providers (Uber Freight, digital logistics platforms, autonomous routing systems) see regulatory capture as a temporary coordination failure with structural sunset. These platforms are building parallel verification and coordination systems (GPS tracking, automated insurance, algorithmic dispatch) that bypass traditional permit regimes. As digital platforms mature, traditional licensing loses functional value. Sunset clause is real: within 10-15 years, digital supply chain verification may make traditional licensing bureaus structurally obsolete."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The False Natural Law View",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (FALSE MOUNTAIN) \u2014 From the analytical/civilizational perspective, the constraint risks appearing as natural law: 'Complex logistics systems require coordination, which inevitably creates incumbent advantage.' This perspective naturalizes what is actually a contingent regulatory choice. The false summit will be detected by the engine's structure-checking gates: the beneficiary/victim declarations reveal the asymmetry is institutional, not inherent."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "regulatory_capture_definition_boundary",
+      "question": "Where is the line between legitimate incumbent knowledge-advantage and extractive regulatory capture?",
+      "resolution_mechanism": "Comparative analysis of entry barriers across jurisdictions with different regulatory models (EU digital transport licensing vs. US trucking deregulation vs. China central allocation); measurement of compliance cost ratios (incumbent vs. entrant)",
+      "impact": "If entry barriers are largely knowledge/infrastructure capital: capture is moderate (Rope with extraction overlay = Tangled Rope). If entry barriers are primarily regulatory/artificial: capture is severe (Snare from entrant perspective). Classification hinges on this resolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Definition boundary between legitimate incumbent advantage and regulatory capture"
+    },
+    {
+      "id": "safety_coordination_vs_rent_extraction",
+      "question": "How much of the regulatory overhead (licensing, certifications, permits) serves genuine safety coordination vs. rent extraction?",
+      "resolution_mechanism": "Safety incident analysis comparing jurisdictions with high vs. low regulatory density; identification of regulations with safety correlation vs. regulations with only incumbent-protection correlation",
+      "impact": "If safety function dominates: classification shifts toward Rope (coordination-primary). If rent extraction dominates: classification shifts toward Snare (extraction-primary). Current assumption is mixed (Tangled Rope = both present); resolution determines the weighting.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Safety function vs. rent extraction in regulatory overhead"
+    },
+    {
+      "id": "digital_disruption_timeline_credibility",
+      "question": "Is the scaffold perspective's sunset timeline (10-15 years for digital platforms to obsolete traditional licensing) empirically grounded or aspirational?",
+      "resolution_mechanism": "Tracking digital logistics market penetration rates, regulatory response speed to digital innovations, and whether traditional licensing bodies are actually losing functional authority or adapting to co-govern digital platforms",
+      "impact": "If timeline is real: scaffold perspective is structural, not wishful. Extractiveness will decline as platforms mature. If timeline is extended or regulatory bodies adapt to capture platforms too: scaffold is aspirational, and the constraint may persist or mutate.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Credibility of digital platform sunset timeline for regulatory capture"
+    },
+    {
+      "id": "agency_identity_lock_mechanism",
+      "question": "Is the regulatory agency's constraint-maintenance truly driven by identity-locked professionalization, or is it driven by explicit political capture (corrupt incentives, revolving-door lobbying)?",
+      "resolution_mechanism": "Analysis of agency staff career trajectories, post-employment industry positions, lobbying expenditure patterns, and internal agency culture documentation (leaked emails, interviews); distinction between structural incentive-lock vs. corruption",
+      "impact": "If identity-locked: the constraint is maintainable through internal cultural shift (new training paradigm, new career incentives). If corruption-driven: requires external enforcement or political intervention. Classification type may shift from Tangled Rope to Snare if corruption predominates.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether agency constraint is identity-locked or corruption-driven"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Regulatory capture in the logistics sector creates a structural constraint where incumbent carriers have systematically shaped transportation regulations to raise barriers against new market entrants while claiming to pursue safety and coordination. The constraint exhibits genuine coordination mechanisms (fuel surcharge transparency, cross-border permit standards, intermodal safety certifications) that are authentic public goods, layered with extractive mechanisms (selective licensing, compliance-cost asymmetries, market-allocation quotas) that primarily protect incumbent profit margins. The regulatory agency itself is captured not primarily through corruption but through professional identity-lock: transport ministry staff have built entire careers within the regulatory framework, creating a feedback loop where preserving the framework becomes an organizational survival instinct. The constraint's extractiveness has increased over the measurement interval (0.42 to 0.58) as regulatory complexity has accumulated, while theater ratio has also increased (0.55 to 0.68) indicating that many regulations have drifted toward pure compliance theater rather than functional coordination. The gig-economy disruptors (Uber Freight, digital logistics platforms) represent a structural sunset mechanism: digital platforms are building alternative coordination (GPS tracking, algorithmic dispatch, automated insurance underwriting) that bypasses traditional regulatory infrastructure. If these platforms mature and achieve regulatory legitimacy, traditional licensing regimes may become functionally obsolete within 10-15 years.",
+    "key_agents": [
+      "Incumbent Carriers (FedEx, DHL, UPS regional divisions): Primary beneficiary (institutional/arbitrage) \u2014 capture regulatory benefits directly through influence over fuel surcharge rules, capacity allocation, and licensing thresholds; experience regulations as coordination tools that serve their interests",
+      "Small Logistics Operators: Primary victim (powerless/trapped) \u2014 face prohibitive licensing costs, insurance requirements written to favor large operators, and permit allocation that de facto excludes new entrants; no viable exit from the industry without abandonment",
+      "Regional Competitors: Secondary victim (moderate/constrained) \u2014 can operate but at high regulatory compliance cost; benefit from some coordination (safety standards) but bear extraction through asymmetric overhead",
+      "Transport Ministry / Regulatory Agency: Institutional actor (institutional/constrained, identity_locked) \u2014 gatekeepers of the regulatory system; structurally mobile (could rewrite regulations) but identity-locked through professional culture and career path embeddedness; see themselves as neutral coordinators rather than capture instruments",
+      "Gig-Economy Platforms: Organized agents (organized/mobile) \u2014 building alternative coordination pathways outside traditional regulatory regime; represent structural sunset to incumbent regulatory capture as platforms mature and prove alternative coordination methods work",
+      "Consumer Welfare / Logistics Market: Victim (powerless/trapped) \u2014 abstract collective good bearing cost of reduced competition, innovation suppression, and higher shipping costs; no organized voice in regulatory process"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The incumbent carriers extract through regulatory barriers that maintain high margins in a market that would otherwise be competitive. The extractiveness is not as severe as a pure snare (0.75+) because genuine coordination functions exist \u2014 safety standards, intermodal compatibility, fuel efficiency reporting. But the coordination is substantially exceeded by rent extraction: licenses are rationed beyond safety requirements, compliance costs are designed to be fixed (burdening small operators disproportionately), and permit allocation mechanisms preserve market share for incumbents. The extractiveness trajectory (0.42\u21920.58) reflects regulatory accumulation: each new regulation adds compliance overhead; few are ever removed. Suppression (0.62): Moderate-high. Barriers to entry are substantial: licensing costs ($10k-$50k per vehicle depending on jurisdiction), insurance ($5k-$15k annually), and compliance labor. But suppression is not absolute: some new entrants do emerge, primarily through scale (regional operations that amortize overhead) or evasion (informal sectors). Gig platforms are structurally reducing suppression through alternative coordination (digital insurance, algorithmic dispatch). Theater ratio (0.68): High and rising. Much regulatory overhead is performative: safety certifications that repeat information already present in vehicle registries, fuel surcharge reporting that mirrors market prices, permit allocation that follows predictable administrative rules rather than dynamic need assessment. The theater has increased as regulations have accumulated without consolidation \u2014 regulatory bodies maintain legacy rules even after their functional purpose expires. Digital platforms operate at theater ratio ~0.20 (automated compliance, no ritual gatekeepers), creating pressure for traditional framework to either reform or be bypassed.",
+    "perspectival_gap": "The perspectival gap between incumbent carrier (Rope) and small operator (Snare) is maximal \u2014 the same constraint classifies as pure coordination from one perspective and pure extraction from the other. This gap is not measurement error; it is structural truth. The constraint genuinely coordinates (ensures safety standards, enables intermodal efficiency) for actors with the scale to participate in the coordinating system, while simultaneously extracting from actors that lack that scale. The captured regulator's identity-lock is critical to understanding persistence: the regulator is not malicious but is captured through professional culture. The agency staff have organized their careers around the regulatory framework; they see regulatory complexity as job-security and regulatory reform as organizational threat. Shifting their classification from Tangled Rope to Rope (if regulations were simplified) would require internal cultural revolution, not just new rules. The gig-platform perspective reveals a structural exit: once alternative coordination systems prove reliable (which they are doing), the traditional regulatory regime's claim to necessity collapses. This is why the scaffold classification is credible \u2014 the sunset is not dependent on regulatory reform but on technological displacement.",
+    "directionality_logic": "Directionality (d) for each perspective derives from the agent's structural position relative to the constraint. Incumbent carriers (institutional/arbitrage) have low d (\u22480.15) because they are beneficiaries with mobile exit options \u2014 they could operate in unregulated markets but choose not to because the regulatory regime protects their margins. Small operators (powerless/trapped) have high d (\u22480.92) because they are victims with no exit \u2014 they cannot leave logistics without career abandonment. Regional competitors (moderate/constrained) have intermediate d (\u22480.65) because they are partially trapped by compliance costs but have some scale to absorb overhead. The captured regulator (institutional/identity_locked) has intermediate d (\u22480.58) because identity-lock makes exit costly psychologically even if structurally possible \u2014 leaving would require reconstructing professional identity. The analytical perspective has d\u22480.72 (observer of the asymmetry). The sigmoid function f(d) translates these d values into experienced extractiveness \u03c7: low-d beneficiaries experience negative or weak extraction (the constraint subsidizes them); high-d victims experience maximum extraction (the constraint extracts from them). The directionality derivation reveals why beneficiaries and victims classify differently: they occupy opposite positions in the extraction flow.",
+    "mandatrophy_analysis": "The mandatrophy in this constraint is NOT resolved. The classification claim is Tangled Rope: the constraint has both genuine coordination function (safety, intermodal standards) and asymmetric extraction (barrier maintenance, rent collection). The risk is mis-classification as pure Rope (pure coordination) by regulators who see only the coordination machinery, or as pure Snare (pure extraction) by entrants who see only the barriers. The indexical framework prevents this by requiring multiple perspectives and explicit beneficiary/victim declarations. The mandatrophy is managed by declaring both beneficiaries (incumbent carriers benefit from coordination + protection) and victims (new entrants bear extraction without coordination benefit). The analytics derive directionality from this declaration, producing perspectival disagreement (carrier sees Rope, entrant sees Snare, analyst sees Tangled Rope). This is the correct analytical outcome: the same constraint is both coordination and extraction depending on your structural position. Full mandatrophy resolution would require either: (a) demonstrating that the coordination could be achieved with lower extraction (moving toward Rope), or (b) demonstrating that the extraction is not necessary for coordination (moving toward Snare). The current evidence suggests a genuine hybrid: some extraction is necessary to fund regulatory infrastructure; much is excess rent protection. The tangled rope classification captures this ambiguity appropriately."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "supply_chain_resilience_externality",
+      "last_mile_delivery_labor_extraction"
+    ],
+    "dual_formulation_note": "Regulatory capture in logistics is upstream of both supply-chain vulnerability (reliance on incumbent carriers creates bottlenecks) and labor extraction in last-mile delivery (regulatory barriers protect incumbent employment models against competition that might improve worker conditions). The network links show contamination: capture in the regulatory domain propagates to reduced competition and innovation in service delivery."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.58
+    }
+  ]
+}

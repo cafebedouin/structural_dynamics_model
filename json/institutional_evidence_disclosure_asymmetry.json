@@ -1,0 +1,206 @@
+{
+  "header": {
+    "constraint_id": "institutional_evidence_disclosure_asymmetry",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ieda"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Institutional Evidence Disclosure Asymmetry",
+    "topic_domain": "governance/institutional_accountability",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_gatekeepers",
+      "information_monopolists"
+    ],
+    "victims": [
+      "external_stakeholders",
+      "field_epistemic_reliability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Powerless Stakeholder",
+      "comment": "PERSPECTIVE 1: POWERLESS EXTERNAL STAKEHOLDER (SNARE) \u2014 Trapped by institutional opacity. No access to evidence withheld by the controlling institution. Cannot verify claims, cannot exit the information dependency. Experiences maximum extraction: forced reliance on institutionally-filtered narratives without independent verification capacity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Investigative Researcher",
+      "comment": "PERSPECTIVE 2: INVESTIGATIVE RESEARCHER (TANGLED ROPE) \u2014 Constrained by selective disclosure and archive access restrictions. Also benefits from institution's credibility, methodology, and data availability (when disclosed). Mixed coordination-extraction: genuine need for institutional coordination with asymmetric information asymmetry that enables extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Gatekeeper",
+      "comment": "PERSPECTIVE 3: INSTITUTIONAL GATEKEEPER (ROPE) \u2014 Experiences selective disclosure as pure coordination mechanism. Controls information flow to manage narrative, timing, and interpretation. Net beneficiary with full exit optionality: can choose what to reveal and when. Extraction flows toward this agent."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Transparency Advocacy Coalition",
+      "comment": "PERSPECTIVE 4: TRANSPARENCY ADVOCACY COALITION (SCAFFOLD) \u2014 Organized agents (FOIA advocates, open-government networks, civil society watchdogs) see disclosure asymmetry as a solvable coordination failure with a sunset: transparency mandates, mandatory disclosure timelines, and open-data standards are incrementally replacing selective disclosure. Temporal constraint with declining suppression over generational timescale."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Oversight Institution",
+      "comment": "PERSPECTIVE 5: OVERSIGHT INSTITUTION (TANGLED ROPE) \u2014 Theoretically mandated to verify institutional claims, but constrained by resource limitations, political pressure, and dependence on the target institution's cooperation for evidence access. Coordinating function (accountability) exists alongside extraction vulnerability: the oversight body's effectiveness depends on disclosure by the very institution it oversees, creating asymmetric power relation."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Performative Disclosure Ritual",
+      "comment": "PERSPECTIVE 6: PERFORMATIVE DISCLOSURE RITUAL (PITON) \u2014 Institutional disclosure statements, compliance reports, and transparency theater persist through inertia despite minimal functional verification. Disclosure rituals create appearance of accountability without substantive evidence access. Theater ratio high because compliance documentation is largely performative: checkboxes and redactions replace actual evidence sharing. The mechanism degrades but persists because formal processes avoid accountability."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some informational asymmetry appears inherent to institutional coordination: institutions cannot disclose everything without compromising operational security, privacy, or legitimate confidentiality. This perspective naturalizes what is actually a contingent institutional choice to maximize gatekeeping power. The engine will flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legitimacy_threshold_ambiguity",
+      "question": "What proportion of withheld evidence represents legitimate confidentiality needs versus strategic gatekeeping?",
+      "resolution_mechanism": "Comparative analysis of disclosure patterns across institutions with different transparency mandates; post-disclosure review of originally withheld materials to assess whether secrecy was justified",
+      "impact": "If legitimacy_ratio > 0.70: constraint reclassifies toward Rope (more coordination, less extraction). If legitimacy_ratio < 0.30: constraint reclassifies toward Snare (pure extraction with opacity cover).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Proportion of withheld evidence that is legitimately confidential versus strategically gatekept"
+    },
+    {
+      "id": "asymmetry_extraction_coupling",
+      "question": "Does the disclosure asymmetry actively extract value (asymmetric benefit to gatekeeper) or merely protect existing benefits from scrutiny?",
+      "resolution_mechanism": "Timeline analysis: does the institution gain advantage from delayed disclosure? Do timing patterns correlate with institutional interests? Analysis of what decisions are made before vs after disclosure.",
+      "impact": "If actively extractive: higher chi, validates Snare perspective. If protective: lower chi, reclassifies toward Piton (performative rather than extractive).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether disclosure asymmetry actively extracts value or protects existing benefits"
+    },
+    {
+      "id": "multi_stakeholder_benefit_distribution",
+      "question": "Do some external stakeholders benefit from selective disclosure (e.g., preferred partners get early access), or is the asymmetry purely unilateral extraction?",
+      "resolution_mechanism": "Pattern analysis of who gains access to withheld information and when; identification of preferential disclosure to allied stakeholders",
+      "impact": "If multi-stakeholder benefits: constraint fragments into multiple stories (preferred partners experience Rope, excluded stakeholders experience Snare). If purely unilateral: Snare/Tangled Rope classification confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether selective disclosure distributes benefits to some external stakeholders or is purely unilateral extraction"
+    },
+    {
+      "id": "disclosure_mandate_enforceability",
+      "question": "Can transparency mandates be effectively enforced against institutional resistance, or do institutions maintain gatekeeping despite formal disclosure requirements?",
+      "resolution_mechanism": "Measurement of compliance with mandatory disclosure timelines; analysis of redaction rates and scope across different regulatory regimes",
+      "impact": "If enforceability strong: Scaffold perspective is realistic (sunset exists). If weak: Scaffold is aspirational and disclosure asymmetry persists despite formal mandates.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether transparency mandates can enforce actual disclosure or institutions maintain gatekeeping despite requirements"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.56
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Institutional evidence disclosure asymmetry describes the structural constraint where controlling institutions can selectively withhold, time-delay, or filter evidence from external stakeholders while retaining full epistemic access to complete information. This creates a durable extraction mechanism: the institution benefits from information monopoly (narrative control, timing advantage, interpretation dominance), while external stakeholders bear the cost of opacity (forced reliance on filtered narratives, inability to independently verify claims, suppressed accountability). The constraint combines genuine coordination functions\u2014institutions may legitimately need some confidentiality for operational security, privacy protection, or classified information\u2014with asymmetric extraction. The theater ratio (0.68) reflects that formal disclosure processes often produce performative compliance: redacted documents, delayed releases, selective declassification, and compliance rituals that create appearance of transparency without substantive evidence access. The rising theater ratio over time indicates increasing sophistication of institutional opacity mechanisms even as transparency mandates formally strengthen.",
+    "key_agents": [
+      "Institutional Gatekeepers: Primary beneficiary (institutional/arbitrage) \u2014 controls information flow, narrative timing, evidence interpretation. Maximum exit optionality.",
+      "External Stakeholders: Primary victim (powerless/trapped) \u2014 forced reliance on institutionally-filtered evidence. No independent verification capacity. No exit options.",
+      "Oversight Institutions: Secondary institutional actor (institutional/constrained) \u2014 mandated to verify but dependent on target institution for evidence access. Asymmetric power relation.",
+      "Investigative Researchers: Secondary victim (moderate/constrained) \u2014 need institutional cooperation for evidence access; also benefit from institutional credibility and methodology.",
+      "Transparency Advocacy Coalition: Organized agent (organized/constrained) \u2014 building alternative pathways through mandatory disclosure timelines, open-data standards, FOIA strengthening.",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing institutional opacity as necessary confidentiality requirement."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The institutional gatekeeper captures significant benefits from information monopoly\u2014narrative control, timing advantage, ability to frame evidence interpretation\u2014but the constraint is not maximally extractive because some legitimate confidentiality needs exist and some disclosure does occur. The value reflects that a substantial portion of the asymmetry is strategic gatekeeping rather than necessary secrecy. Suppression (0.65): High. Significant barriers to independent verification include: formalized access restrictions, classification systems, redaction authority, archive control, and institutional culture of opacity. Stakeholders face high costs to obtain competing evidence and face institutional resistance to transparency. Theater ratio (0.68): High and rising. Formal disclosure processes produce theater: compliance reports with redactions, selective declassification on institutional timelines, and accountability rituals that create appearance of transparency. The ratio rises over time because institutions have become more sophisticated at performative compliance\u2014they now can point to disclosure mechanisms while maintaining effective gatekeeping. This is classic Piton dynamics: the mechanism degrades (actual disclosure doesn't increase) but the ritual elaborates.",
+    "perspectival_gap": "This constraint demonstrates how the same institutional mechanism appears as coordination to the gatekeeper (Rope\u2014managing information flow is a legitimate coordination function), as mixed coordination and extraction to moderate actors who need institutional cooperation (Tangled Rope\u2014they benefit from institutional resources but suffer from asymmetric information), as a temporary problem with a sunset to organized advocates (Scaffold\u2014mandatory disclosure timelines and open-data standards are reducing asymmetry), as pure extraction to powerless stakeholders locked out of information (Snare\u2014trapped reliance on filtered narratives), and as degraded ritual to the institution itself (Piton\u2014performance of transparency without substantive function). The false summit at the analytical/civilizational level naturalizes institutional opacity as inherent to security and privacy, missing that the asymmetry is a contingent choice to maximize gatekeeping.",
+    "directionality_logic": "Directionality values are derived from structural position within the disclosure asymmetry. Institutional gatekeepers with arbitrage options (can choose what to disclose when) experience low d values (0.05-0.15) because disclosure is discretionary\u2014they benefit from withholding. External stakeholders with no alternative information sources experience high d values (0.85-0.95) because they are forced to depend on institutional disclosure. Moderate agents like investigators occupy intermediate positions (d \u2248 0.55-0.65) because they have some alternative research methods but substantial dependence on institutional cooperation. Oversight institutions with constrained exit options (d \u2248 0.60-0.70) because they face political pressure and resource limitations that constrain their independent verification capacity. The asymmetry in d values across perspectives is the diagnostic signature of extraction: some agents have discretion while others have none."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture",
+      "epistemic_closure",
+      "accountability_theater"
+    ],
+    "dual_formulation_note": "Institutional evidence disclosure asymmetry is upstream of regulatory capture (gatekeeping enables capture) and epistemic closure (asymmetry allows institutions to curate what counts as evidence). Downstream constraint accountability_theater depends on disclosure asymmetry for its performative mechanism. These constraints share a family structure: selective disclosure is the extraction mechanism that enables other institutional asymmetries."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.75
+    }
+  ]
+}

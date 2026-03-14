@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "maghreb_economic_integration",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "maghreb"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Maghreb Economic Integration Constraint",
+    "topic_domain": "economic_policy/regional_integration",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "import_competing_domestic_firms",
+      "state_revenue_protectionists",
+      "incumbent_industrial_sectors"
+    ],
+    "victims": [
+      "regional_labor_mobility",
+      "cross_border_trade_actors",
+      "consumer_access_efficiency",
+      "smes_regional_competitiveness"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Cross-Border Worker",
+      "comment": "PERSPECTIVE 1: CROSS-BORDER WORKER (SNARE) \u2014 Trapped by national immigration restrictions, visa requirements, and work permit barriers that fragment the labor market. No exit options; bears full cost of wage suppression and employment scarcity within single national labor market. Maximum extraction without coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Small-to-Medium Enterprise (Cross-Border)",
+      "comment": "PERSPECTIVE 2: SME IN CROSS-BORDER TRADE (TANGLED ROPE) \u2014 Constrained by tariff barriers, customs procedures, and regulatory compliance costs, but also benefits from preferential access under partial integration agreements and market expansion opportunities. High extraction relative to benefits; constrained exit due to capital sunk in regional operations."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Incumbent Domestic Firm (Protected Sector)",
+      "comment": "PERSPECTIVE 3: INCUMBENT FIRM IN PROTECTED SECTOR (ROPE) \u2014 Institutional beneficiary with arbitrage options. Benefits from tariff protection and non-tariff barriers that exclude regional competitors. Experiences constraint as coordination mechanism for maintaining market stability and predictable profit flows. Net positive extraction flow."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "Regional Integration Coalition",
+      "comment": "PERSPECTIVE 4: REGIONAL INTEGRATION COALITION (SCAFFOLD) \u2014 Organized actors (UEMOA framework, AU protocols, civil society organizations) pushing toward deeper integration with sunset logic: tariff schedules have planned reduction pathways, visa protocols are incrementally liberalizing, and trade harmonization is building toward full integration over 10-15 years. Agents see the protectionist barriers as temporary obstacles to be overcome through graduated phasing."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "State Revenue Collection",
+      "comment": "PERSPECTIVE 5: STATE REVENUE COLLECTION (PITON) \u2014 National governments maintain tariff barriers and customs procedures that generate revenue and employment in customs administration, but the primary function has degraded over time as informal trade routes have grown to 40-60% of cross-border commerce. The formal tariff system is maintained through institutional inertia \u2014 governments continue collecting formal duties on formal trade while informal networks bypass the constraint entirely. Theater ratio high because the formal system persists despite losing functional significance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "National Government (Integrationist)",
+      "comment": "PERSPECTIVE 6: NATIONAL GOVERNMENT COMMITTED TO INTEGRATION (TANGLED ROPE) \u2014 State actors nominally committed to regional integration (signatories to UEMOA, Arab Maghreb Union protocols) face constraints from domestic protectionist lobbies and revenue dependency, but also benefit from integration through diversified export markets and GDP growth correlations. Active enforcement of integration requires managing domestic political opposition; constrained by political economy of reform."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Geographic Distance View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, geographic distance, transportation costs, and linguistic/cultural variation create inherent friction to economic integration. This perspective naturalizes the barrier as immutable geography. However, structural data contradicts the mountain classification: the constraint is primarily institutional (tariffs, visas, regulatory divergence) not geographic \u2014 the engine will flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "informal_trade_displacement",
+      "question": "Does increased formal integration reduce informal trade or merely redirect it without efficiency gain?",
+      "resolution_mechanism": "Empirical measurement of total trade flows (formal + estimated informal) pre- and post-integration phases; tracking of cross-border informal employment relative to formal integration depth",
+      "impact": "If informal trade absorbs displaced formal actors: integration may be zero-sum redistribution, not growth-generating. If informal trade declines with formal integration: constraint truly coordinates access expansion.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether formal integration reduces or redirects informal cross-border trade"
+    },
+    {
+      "id": "domestic_political_sustainability",
+      "question": "Can integrationist governments sustain liberalization commitment against cyclical protectionist pressure during downturns?",
+      "resolution_mechanism": "Historical pattern analysis of integration rollback during recessions; correlation between GDP contraction and tariff increases; timeline of policy reversal relative to external shocks",
+      "impact": "If governments repeatedly reverse: scaffold sunset clause is not credible, and agents will not invest in integration-dependent activities. Constraint remains tangled rope with high uncertainty.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Political sustainability of integrationist commitments during economic downturns"
+    },
+    {
+      "id": "labor_mobility_wage_convergence",
+      "question": "Does liberalized labor mobility drive wage convergence across the region or merely capture low-wage labor flows into high-wage economies?",
+      "resolution_mechanism": "Wage level tracking in source and destination countries for comparable occupational categories; analysis of whether remittance flows and return migration generate local wage pressure in origin economies",
+      "impact": "If convergence occurs: labor mobility is genuine coordination mechanism. If divergence amplifies: constraint becomes extraction mechanism (snare from analytical perspective), not rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether labor mobility drives wage convergence or labor extraction"
+    },
+    {
+      "id": "institutional_capacity_mismatch",
+      "question": "Do national regulatory and customs institutions have capacity to implement harmonized standards, or will implementation gaps create new extraction opportunities?",
+      "resolution_mechanism": "Assessment of bureaucratic capacity, training infrastructure, and equipment modernization in customs authorities; measurement of implementation compliance rates for harmonized protocols",
+      "impact": "If capacity gaps persist: formal integration rules become theater, and informal workarounds continue. Piton classification expands to cover formal integration machinery itself.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Institutional capacity to implement harmonized integration standards"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Maghreb economic integration represents a constraint on cross-border economic activity nominally designed to coordinate regional growth but functionally operating as an asymmetric extraction mechanism protecting incumbent domestic firms and state revenue collection from regional competition. The constraint exhibits characteristics of all six DR types depending on perspective: for cross-border workers and SMEs it is a snare; for incumbent firms it is rope coordination; for integrationist coalitions it is a temporary scaffold with planned sunset; for state revenue systems it is a degraded piton; for integrationist governments it is a tangled rope requiring active political management; for the analytical observer it risks naturalizing institutional barriers as geographic immutability. The extractiveness has increased over the measurement interval (0.42 \u2192 0.58) as informal trade has grown to 40-60% of cross-border commerce while formal tariff systems persist, suggesting the constraint's primary function has shifted from coordination to revenue protection and domestic firm shielding. Theater ratio (0.65) reflects that formal integration agreements (UEMOA protocols, Arab Maghreb Union commitments) exist and are repeatedly invoked rhetorically while actual liberalization lags substantially behind announced timelines and informal trade networks handle most regional commerce.",
+    "key_agents": [
+      "Cross-Border Workers: Primary victim (powerless/trapped) \u2014 face visa restrictions and work permit barriers fragmenting the regional labor market",
+      "SMEs in Cross-Border Trade: Secondary victim (moderate/constrained) \u2014 bear tariff and customs costs while having some market access through integration agreements",
+      "Incumbent Domestic Firms in Protected Sectors: Primary beneficiary (institutional/arbitrage) \u2014 protected from regional competition and benefit from tariff barriers that raise input costs for export-oriented competitors",
+      "State Revenue Systems: Institutional beneficiary (institutional/arbitrage) \u2014 maintain tariff and customs revenue; also structurally dependent on these revenue streams for government financing",
+      "Regional Integration Coalition: Organized actors (organized/mobile) \u2014 UEMOA secretariat, Arab Maghreb Union, civil society organizations, NGOs pushing toward deeper integration with planned timelines",
+      "Integrationist National Governments: Multi-level agents (organized/constrained) \u2014 nominally committed to integration but constrained by domestic protectionist lobbies and revenue dependency",
+      "Informal Trade Networks: Unmodeled beneficiary \u2014 operate outside formal constraint structure; handle 40-60% of cross-border commerce but lack representation in formal integration negotiations"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts substantially from cross-border workers and SMEs through tariff barriers, visa restrictions, and customs procedures that enforce national market segmentation. However, it is not as severe as pure extraction (snare) because integration agreements provide partial market access for some actors and create growth opportunities for integrating firms. The measurement trajectory (0.42 \u2192 0.58) reflects increasing extraction as informal trade has filled the gap between formal integration commitments and actual liberalization, leaving formal trade with higher effective barriers. Suppression (0.68): High. Barriers to regional trade and labor mobility include tariff structures, non-tariff barriers (standards divergence, certification requirements), visa and work permit restrictions, bureaucratic delays in customs procedures, and currency controls. Exit costs are substantial: firms must invest in separate supply chains for each national market; workers face legal barriers rather than just economic costs. Theater ratio (0.65): Moderate-high. Formal integration agreements and protocols are invoked repeatedly in diplomatic contexts and development rhetoric, but actual implementation lags significantly. Tariff reduction schedules are repeatedly delayed; visa liberalization protocols are signed but enforcement remains restrictive; customs harmonization commitments exist in legal documents but face institutional implementation gaps.",
+    "directionality_logic": "Directionality values (d) are derived from the agent's structural position relative to the constraint. Cross-border workers face trapped exit (no legal alternative to national market fragmentation) and are victims \u2192 high d \u2192 high f(d) \u2192 maximum experienced extraction. SMEs have constrained exit (can operate within single market or invest heavily to multiply operations) and are partial victims \u2192 moderate-high d \u2192 high f(d) \u2192 significant extraction. Incumbent firms are beneficiaries with arbitrage options (can exit to other markets if regional integration threatens) \u2192 low d \u2192 negative f(d) \u2192 negative extraction (benefit). State revenue systems are institutional beneficiaries with arbitrage (can maintain barriers indefinitely or seek alternative revenue) \u2192 very low d \u2192 most negative f(d). Integrationist governments are constrained by political economy but have some mobility \u2192 moderate d. The gap between beneficiary and victim directionalities reveals the asymmetric extraction structure: those who benefit can exit the constraint easily; those who suffer from it cannot.",
+    "perspectival_gap": "The constraint demonstrates the full range of DR classification from a single set of base properties. Incumbent firms protected by the constraint see rope \u2014 a coordination mechanism for stable markets and predictable returns. Integration coalitions see scaffold \u2014 temporary barriers being systematically reduced through planned timelines. State revenue systems see piton \u2014 a degraded ritual maintained by inertia despite loss of primary function. Cross-border workers see snare \u2014 no exit, full cost bearing, no coordination benefit. SMEs see tangled rope \u2014 mixed benefits (market access) and costs (barriers). Integrationist governments see tangled rope \u2014 genuine coordination function (market expansion, growth) alongside extraction (political costs of managing domestic opposition). The analytical observer risks seeing a mountain \u2014 naturalizing institutional barriers as geographic immutability \u2014 but the structural data reveals this as a false summit: the barriers are contingent institutional arrangements (tariff schedules, visa requirements, customs procedures) that could be rapidly dismantled through political will.",
+    "mandatrophy_analysis": "PARTIALLY RESOLVED: This constraint resolves some mandatrophy through its tangled rope primary classification, which acknowledges both the genuine coordination function (market expansion, growth generation for integrating economies) and the asymmetric extraction (protection of incumbents, suppression of cross-border mobility). However, unresolved tension remains: is the constraint primarily failing as a coordination mechanism (in which case reform should focus on implementation), or primarily functioning as an extraction mechanism (in which case reform should focus on redistribution)? The measurement trajectory (extractiveness increasing over time despite formal integration deepening) suggests the primary function is shifting from coordination to extraction: formal integration agreements are being signed and invoked rhetorically while informal trade networks absorb the actual cross-border flows, leaving formal trade with enforced barriers. This would make the constraint increasingly snare-like from the perspective of formal trade actors and increasingly piton-like from the state perspective (formal system persists despite losing function). Resolution requires empirical determination of whether informal trade is absorbing or replacing formal flows, and whether integrationist governments can sustain liberalization against cyclical protectionist pressure."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "maghreb_customs_harmonization",
+      "maghreb_labor_mobility_restrictions",
+      "maghreb_currency_alignment"
+    ],
+    "dual_formulation_note": "Economic integration constraint operates as three structurally distinct mechanisms: tariff barriers (trade extraction), labor mobility restrictions (labor market segmentation), and customs/regulatory divergence (administrative extraction). This story captures the aggregate constraint; decomposition into three separate stories would isolate each mechanism with distinct \u03b5 values and beneficiary/victim structures."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

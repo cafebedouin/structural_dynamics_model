@@ -1,0 +1,217 @@
+{
+  "header": {
+    "constraint_id": "organizational_assessment_validity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "oav"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Organizational Assessment Validity Constraint",
+    "topic_domain": "organizational_management/human_resources",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "assessment_administrators",
+      "senior_leadership"
+    ],
+    "victims": [
+      "assessed_employees",
+      "organizational_learning_systems"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Assessed Employee",
+      "comment": "PERSPECTIVE 1: ASSESSED EMPLOYEE (SNARE) \u2014 Career outcomes directly depend on assessment scores; cannot refuse participation without jeopardizing employment. Trapped between providing authentic self-assessment (which reveals vulnerabilities used against them) and strategic self-presentation (which corrupts validity). Maximum extraction: assessment mechanism exists ostensibly to develop the employee but actually determines compensation, promotion, and termination decisions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Peer Rater",
+      "comment": "PERSPECTIVE 2: PEER RATER (TANGLED ROPE) \u2014 Provides coordination function (peer feedback genuinely improves self-awareness and performance) but faces social and career consequences for honest assessment. Constrained by fear of retaliation, workplace cohesion concerns, and the knowledge that ratings may be used against peers. Experiences both genuine learning coordination and extracted labor (unpaid evaluation work whose output is weaponized)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Assessment Administration System",
+      "comment": "PERSPECTIVE 3: ASSESSMENT ADMINISTRATION (ROPE) \u2014 Experiences the constraint as coordination mechanism: documenting performance justifies HR decisions, enables succession planning, and creates defensible records. Net beneficiary with exit options (can adjust assessment design, frequency, stakes). Sees genuine coordination benefit: rigorous evaluation improves organizational capability."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Senior Leadership",
+      "comment": "PERSPECTIVE 4: SENIOR LEADERSHIP (TANGLED ROPE) \u2014 Benefits from assessment data for talent decisions and performance management (coordination function); also extracts by using assessment mechanism to identify and remove dissidents or low-performers without firing costs. Mobile exit option (can switch to different assessment design) but benefits from current system's information asymmetry. Mixed coordination-extraction with asymmetric benefit."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Organizational Assessment Legacy Ritual",
+      "comment": "PERSPECTIVE 5: LEGACY ASSESSMENT RITUAL (PITON) \u2014 Annual performance review cycles persist through institutional inertia despite well-documented inefficacy: studies show minimal correlation between annual ratings and subsequent performance, high rater bias, and theater-heavy preparation. Ritual continues because 'this is how we do talent management' and because exit would require admitting the prior decades of ritualized assessment were performative. Theater ratio dominates: preparation time, calibration meetings, and documentation consume resources without improving decision quality."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Continuous Feedback Movement",
+      "comment": "PERSPECTIVE 6: CONTINUOUS FEEDBACK MOVEMENT (SCAFFOLD) \u2014 Organized advocates (consulting firms, tech companies, worker advocates) are building alternative assessment pathways: real-time feedback systems, skill-based rather than person-based evaluation, and continuous data collection replacing annual reviews. These alternatives have sunset logic: as continuous feedback systems mature and prove more predictive, the annual assessment mechanism's extraction function declines. Constrained by incumbent institutional resistance but sees clear exit path through technological and cultural norm change."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational scale, some form of performance assessment is arguably necessary for any organization above minimal size: without mechanisms to differentiate capability, resource allocation defaults to political capture or nepotism. This perspective treats organizational assessment as a natural law: any system of work requires evaluation. However, the structural data (high theater, documented bias, extraction-driven design) contradicts the mountain classification \u2014 the engine flags this as a false summit naturalizing contingent institutional arrangements."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "validity_criterion_ambiguity",
+      "question": "What constitutes valid organizational assessment \u2014 predictive validity (does rating predict future performance), construct validity (does it measure what it claims), or convergent validity (do multiple assessors agree)?",
+      "resolution_mechanism": "Longitudinal empirical analysis comparing assessment scores to subsequent performance metrics, independent of the assessment mechanism; meta-analysis of validity coefficients across assessment methods",
+      "impact": "If predictive validity criterion is used: most current assessments fail (correlations ~0.3), validating snare classification. If convergent validity criterion is used: assessments can meet threshold despite poor prediction, validating piton classification. If construct validity is criterion: requires examination of whether organization is measuring actual job requirements or performative criteria.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Which validity criterion defines assessment success"
+    },
+    {
+      "id": "extraction_vs_coordination_boundary",
+      "question": "Is the assessment mechanism's primary function coordination (legitimate performance feedback enabling development) or extraction (identifying targets for termination or wage suppression)?",
+      "resolution_mechanism": "Structural analysis of assessment outcomes: correlation between low assessments and subsequent terminations; comparison of wage growth trajectories for high vs low assessed employees; analysis of assessment stakes (does assessment drive compensation, promotion, or termination decisions?)",
+      "impact": "If primarily coordination: classification shifts toward Rope/Tangled Rope with lower extractiveness. If primarily extraction: classification shifts toward Snare with higher extractiveness and stronger suppression.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether assessment serves coordination or extraction function"
+    },
+    {
+      "id": "strategic_gaming_prevalence",
+      "question": "To what extent does knowledge of assessment criteria cause strategic behavior that corrupts the assessment's own validity?",
+      "resolution_mechanism": "Comparison of assessment results pre- and post-transparency of rating criteria; analysis of behavior change after employees learn how they are being evaluated; experimental manipulation of assessment knowledge and measurement of gaming intensity",
+      "impact": "If gaming is pervasive: assessment provides no valid signal (reliability approaches zero), validating snare perspective (extraction with no coordination benefit). If gaming is minimal: assessment retains some validity, supporting tangled rope classification with genuine coordination component.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of strategic gaming in assessment responses"
+    },
+    {
+      "id": "rater_capture_mechanism",
+      "question": "Are peer raters captured by the assessment system (induced to provide strategic rather than honest ratings) or do they maintain independence?",
+      "resolution_mechanism": "Analysis of peer rating patterns before and after implementation of rating consequences for raters; comparison of peer ratings to independent behavioral data; structural analysis of whether raters face consequences for their ratings",
+      "impact": "If raters are captured: peer ratings provide no valid signal and become pure extraction mechanism (assessment scores become arbitrary assignment of status rather than valid feedback). If raters maintain independence: genuine peer feedback coordination occurs despite systemic extraction at other levels.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether rater independence is maintained or captured"
+    },
+    {
+      "id": "unconscious_bias_vs_structural_extraction",
+      "question": "Do assessment biases (demographic disparities, implicit associations, halo effects) represent inherent human limitations (approaching mountain), or deliberate (if implicit) extraction mechanisms targeting specific groups?",
+      "resolution_mechanism": "Comparison of bias patterns across assessment types; analysis of whether training reduces bias or merely redistributes it; examination of correlation between bias patterns and demographic groups targeted by organizational changes (layoffs, reassignments)",
+      "impact": "If bias is inherent human limitation: extractiveness decreases but approaches the mountain boundary. If bias is systematic targeting: extractiveness increases and demonstrates asymmetric impact validating snare classification for affected groups.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether bias represents inherent limitation or structural targeting"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Organizational assessment validity describes the structural constraint created when performance evaluation systems must simultaneously serve coordination (genuine feedback enabling development) and extraction (identifying termination and wage-suppression targets) without transparent acknowledgment of the dual function. This constraint generates a perspectival cascade: employees experience snare (career consequences without control over evaluation criteria), peers experience tangled rope (genuine feedback coordination mixed with implicit threats), administrators experience rope (legitimate information function with exit options), leadership experiences tangled rope (coordination benefit plus weaponizable data advantage), the legacy ritual persists as piton (institutional inertia despite documented inefficacy), and organized alternatives (continuous feedback, skill-based evaluation) approach scaffold status (alternative pathways with sunset logic). The constraint exhibits high theater ratio (68%) reflecting that assessment cycles are substantially performative: preparation, calibration meetings, documentation, and rating appeal processes consume organizational energy without proportionate improvement in decision quality. The growing divergence between actual business decisions and assessment recommendations suggests the ritual has become decoupled from genuine function.",
+    "key_agents": [
+      "Assessed Employees: Primary victims (powerless/trapped) \u2014 career outcomes depend on assessment scores; cannot refuse participation without employment risk",
+      "Peer Raters: Secondary victims (moderate/constrained) \u2014 provide genuine feedback value but face career consequences for honest assessment",
+      "Assessment Administration: Primary beneficiary (institutional/arbitrage) \u2014 maintains documentation justifying HR decisions; coordinates succession planning",
+      "Senior Leadership: Extractive beneficiary (powerful/mobile) \u2014 uses assessment data to identify and remove dissidents; benefits from information asymmetry about assessment use",
+      "Assessment Legacy Ritual: Institutional actor (institutional/arbitrage) \u2014 persists through inertia; maintained because alternative systems require acknowledging assessment's past inefficacy",
+      "Continuous Feedback Movement: Organized coalition (organized/constrained) \u2014 building alternative assessment pathways with lower theater and genuine validity focus",
+      "Analytical Observer: Civilizational context (analytical/analytical) \u2014 risks treating assessment necessity as natural law rather than contingent institutional arrangement"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Assessment mechanisms genuinely extract by creating information asymmetry (what assessors know about assessment use), by creating career consequences without transparent rationale, and by converting employee vulnerability (willingness to accept feedback) into weaponized data. But extractiveness is not maximal because some organizations do use assessments for legitimate development purposes, and the constraint's effects are modulated by whether assessment data actually drives promotion/termination decisions. Suppression (0.62): High. Multiple suppression mechanisms operate simultaneously: (1) career consequences prevent honest self-assessment, (2) social punishment suppresses honest peer feedback, (3) institutional opacity about assessment use suppresses challenge to validity, (4) lack of independent verification of assessment accuracy suppresses correction mechanisms. Theater ratio (0.68): High and increasing. Annual review cycles allocate substantial calendar time, preparation energy, and organizational attention to documentation and calibration meetings with minimal correlation to actual performance outcomes. The ratio has grown as organizations have added 360-degree feedback, mid-year check-ins, and continuous feedback systems without removing the performative annual review, creating layered theater.",
+    "perspectival_gap": "The key perspectival gap exists between the assessed employee (who sees pure extraction justified as necessary assessment) and the administrator (who sees pure coordination justified as development). The contradiction is resolved by recognizing that assessment IS both simultaneously: a genuine coordination mechanism (feedback does improve self-awareness and organizational capability when applied constructively) AND an extraction mechanism (career consequences without transparent criteria create asymmetric power that enables termination and wage suppression without explicit cost). The gap reveals that extractiveness increases when assessment stakes are high (assessment drives compensation and termination decisions) and decreases when stakes are low (assessment informs development without career consequences). Current trajectory shows stakes rising (extraction increasing) while the ritual's actual predictive validity declines (suggesting theater is increasing relative to function).",
+    "directionality_logic": "Directionality values derive from the structural position of each agent relative to the extraction flow. Assessed employees face high d (close to 1.0, pure targets) because they bear career consequences without control over evaluation. Peer raters face moderate d (~0.55) because they both provide genuine coordination value and face suppression if they rate honestly. Administrators face low d (~0.15) because the assessment mechanism coordinates their legitimate function. Leaders face low-moderate d (~0.35) because they benefit from assessment data but are not fully captured by the constraint (they have exit options through assessment redesign). The assessment ritual itself faces moderate-high d (~0.70) as its function has atrophied despite institutional persistence. The continuous feedback coalition faces moderate d (~0.50) because they experience the constraint as solvable rather than inherent. These directionality values produce the observed chi distribution: powerless victims experience maximum \u03c7, institutional beneficiaries experience minimum or negative \u03c7, and moderate agents experience intermediate \u03c7 that permits both their genuine coordination benefits and their experienced extraction.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: This constraint resolves through the observation that 'organizational assessment' is not a single constraint but a family of constraints with different extractiveness values depending on whether assessment outcomes drive: (1) Developmental feedback only (\u03b5 \u2248 0.15, Rope), (2) Promotion decisions (\u03b5 \u2248 0.40, Tangled Rope), (3) Compensation (\u03b5 \u2248 0.55, Tangled Rope), or (4) Termination (\u03b5 \u2248 0.72, Snare). The current story measures organizational assessment as typically implemented in large firms with high-stakes consequences (\u03b5 = 0.58, Tangled Rope boundary). The false natural law (mountain perspective) assumes assessment is inherently necessary \u2014 but the necessity is only for some form of feedback, not for this specific high-theater, high-extraction implementation. The scaffold perspective (continuous feedback alternatives) is structurally sound: organizations can achieve the coordination benefits (genuine feedback, succession planning, capability improvement) through low-theater mechanisms without the high-suppression, high-theater extraction apparatus of annual reviews. The theater ratio trajectory (increasing from 0.42 to 0.68) indicates progressive decoupling: ritual has expanded while actual decision-relevance has declined, suggesting the constraint is degrading toward piton status even as extractiveness remains high."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "organizational_learning_systems",
+      "psychological_safety_emergence",
+      "wage_compression_mechanisms"
+    ],
+    "dual_formulation_note": "Organizational assessment validity decomposes into two structurally distinct constraints: (1) assessment_as_feedback_mechanism (\u03b5 \u2248 0.15, Rope when stakes are low) and (2) assessment_as_career_gatekeeping (\u03b5 \u2248 0.68, Snare when high stakes). They are networked because gatekeeping assessments suppress honest feedback (affecting feedback validity upstream). Assessment reform that shifts from high-stakes career gatekeeping to low-stakes development feedback resolves the tangled rope by decomposing it into pure rope + separate gatekeeping constraint with transparent criteria."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

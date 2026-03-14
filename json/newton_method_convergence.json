@@ -1,0 +1,135 @@
+{
+  "header": {
+    "constraint_id": "newton_method_convergence",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "newton"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.08,
+    "claimed_type": "mountain",
+    "human_readable": "Newton Method Convergence Guarantee",
+    "topic_domain": "mathematics/numerical_analysis",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Numerical Solver",
+      "comment": "PERSPECTIVE 1: NUMERICAL SOLVER (MOUNTAIN) \u2014 Any agent attempting to apply Newton's method to a smooth function near a simple root cannot escape the quadratic convergence guarantee. The mathematical structure is immutable: convergence holds or it does not, independent of the solver's preferences or resources. The solver is trapped in the constraint \u2014 they cannot violate it through effort, innovation, or institutional power."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "universal",
+      "label": "The Algorithm Designer",
+      "comment": "PERSPECTIVE 2: ALGORITHM DESIGNER (MOUNTAIN) \u2014 Even with institutional resources, computational power, or innovative problem-solving approaches, the algorithm designer cannot alter the fundamental convergence properties of Newton's method without changing the constraint itself (switching to a different method, modifying the problem formulation, or relaxing the smoothness assumptions). The mathematical structure is invariant across all practical modifications. Power and mobility do not purchase exemption from mathematical law."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From the vantage of mathematical logic and formal analysis, Newton's method convergence is an immutable consequence of the Mean Value Theorem and the smoothness of the objective function. The constraint emerges naturally from deeper structural properties of real analysis. No measurement methodology, observational choice, or framing changes this classification \u2014 it is a true summit of mathematical necessity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "simple_vs_multiple_root_distinction",
+      "question": "Does the convergence guarantee apply uniformly to simple roots and multiple roots, or is the distinction fundamental?",
+      "resolution_mechanism": "Formal proof inspection: the convergence proof explicitly uses invertibility of the Jacobian, which fails at multiple roots. This is not an empirical question but a logical one \u2014 the guarantee is conditional.",
+      "impact": "The convergence constraint is more precisely stated as: 'Newton's method converges quadratically near a simple root of a smooth function.' For multiple roots, convergence is linear or fails. The conditional framing does not reduce the constraint to a snare \u2014 it refines where the mountain applies.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Applicability scope: simple vs multiple roots"
+    },
+    {
+      "id": "basin_of_attraction_non_locality",
+      "question": "Is the requirement for 'sufficiently close' initial guess a limitation of the theorem or of the method's structure?",
+      "resolution_mechanism": "Counterexamples: Newton's method diverges from some initial points even for smooth functions with simple roots (e.g., f(x) = x^3 - 1 near x=0 in complex analysis). The basin of attraction is the method's intrinsic property, not a measurement artifact.",
+      "impact": "The convergence guarantee is local (near the root), not global. This does not make it a snare \u2014 it makes it a precise mathematical statement with known scope limits. The constraint is: 'sufficiently close initial guesses converge quadratically.' Not all initial guesses are 'sufficiently close,' and this is not extraction \u2014 it is the structure of nonlinear problems.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Local nature of convergence guarantee"
+    },
+    {
+      "id": "computational_versus_mathematical_convergence",
+      "question": "Does finite-precision arithmetic alter the mathematical convergence guarantee?",
+      "resolution_mechanism": "Analysis of floating-point rounding error propagation; comparison of mathematical convergence rate with observed computational convergence; identification of phase transition where rounding dominates quadratic rate.",
+      "impact": "Mathematically, Newton's method converges quadratically. Computationally, finite precision creates a floor on achievable accuracy (machine epsilon), beyond which iterates no longer improve. This is not a violation of the mathematical constraint but an illustration of its applicability limit. The mountain remains a mountain; the computational implementation has its own distinct constraints.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Mathematical vs computational convergence under finite precision"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "Newton's method convergence is a mathematical guarantee: under sufficient smoothness conditions (the function is twice continuously differentiable near a simple root), iterating x_{n+1} = x_n - f(x_n) / f'(x_n) converges to the root at a quadratic rate from sufficiently close initial guesses. This is not a contingent institutional arrangement or a coordination problem that could be solved differently \u2014 it is an immutable consequence of real analysis. The constraint emerges naturally from the Mean Value Theorem and cannot be violated without changing the problem's mathematical structure. All agents (numerical solvers, algorithm designers, practitioners) are trapped in this guarantee: they cannot escape it through power, resources, or innovation. The constraint exhibits zero degrees of freedom for all indices.",
+    "key_agents": [
+      "Numerical Solver: Powerless agent (trapped) \u2014 must accept the convergence rate as-is; cannot negotiate faster convergence without changing methods or problem structure",
+      "Algorithm Designer: Powerful agent (mobile) \u2014 has resources and institutional capacity but cannot purchase exemption from the mathematical constraint; mobility does not apply to invariant mathematical structure",
+      "Mathematician: Analytical observer (analytical/analytical) \u2014 proves the convergence guarantee from first principles; sees the constraint as a logical consequence, not a social arrangement"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Very low. Newton's method convergence is not an extractive mechanism in any meaningful sense. The 'extraction' here is purely formal: the constraint requires agents to accept a specific convergence rate (quadratic, not exponential or superquadratic). But this is not extraction from anyone \u2014 it is the objective property of the algorithm. The minimal non-zero value reflects that the constraint is still a constraint: it does limit what is possible. Suppression (0.03): Minimal. There is no mechanism of coercion, alternative-denial, or cognitive capture. The constraint is purely logical. Agents are 'trapped' only in the sense that logical necessity is inescapable \u2014 this is not suppression but tautology. Theater ratio (0.08): Minimal. The convergence proof is substantive and formal, with no performative components. The mathematical argument directly establishes the rate; there is no ritual or proxy goal substitution.",
+    "perspectival_gap": "This constraint classifies as Mountain from all three perspectives with no meaningfully differentiated gap. The powerless agent and the powerful agent both experience the same mathematical guarantee. This uniform classification is a hallmark of true natural law constraints \u2014 the mathematical structure is invariant across observational position. The minor variations in time horizon reflect that the constraint's meaning is scale-invariant: it applies equally at immediate (iterative step), biographical (lifetime computation), and civilizational (century of mathematical practice) time horizons.",
+    "directionality_logic": "Newton's method convergence has no beneficiaries or victims because it is not an extraction or coordination mechanism. The constraint has no directionality parameter d \u2014 the sigmoid f(d) does not apply. All agents experience the same mathematical invariant. This absence of beneficiary/victim structure is diagnostic of a true mountain: the constraint does not distribute costs and benefits asymmetrically. The convergence rate is the same for all agents given the same conditions. No institutional power can alter this; no exit option makes it negotiable. The agent_power values in perspectives (powerless, powerful, analytical) indicate different contexts from which agents might encounter the constraint, but all contexts produce the same mathematical classification."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "gradient_descent_convergence",
+      "quasi_newton_approximation_error"
+    ]
+  },
+  "directionality_overrides": []
+}

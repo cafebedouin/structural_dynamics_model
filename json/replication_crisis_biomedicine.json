@@ -1,0 +1,220 @@
+{
+  "header": {
+    "constraint_id": "replication_crisis_biomedicine",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "repbio"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.81,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Replication Crisis in Biomedical Research",
+    "topic_domain": "biomedical_research/institutional_science",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "early_career_claim_makers",
+      "pharmaceutical_marketing",
+      "research_funding_institutions"
+    ],
+    "victims": [
+      "clinical_practice_reliability",
+      "patient_populations",
+      "independent_replication_groups"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Patient Populations",
+      "comment": "PERSPECTIVE 1: PATIENT POPULATIONS (SNARE) \u2014 Clinical practice relies on biomedical literature that is systematically inflated and unreplicated. Patients cannot exit this constraint; they bear the cost through ineffective treatments, adverse outcomes, and wasted health resources. No exit option and maximum experienced extraction from a trapped position."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Clinical Practice Reliability",
+      "comment": "PERSPECTIVE 2: CLINICAL PRACTICE RELIABILITY (SNARE) \u2014 Abstract epistemic commons that cannot organize or exit. Systematic publication bias and p-hacking contaminate the clinical knowledge base. The field's reliability infrastructure bears cost without capacity to defend itself. Pure extraction with no coordination function from this perspective."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Independent Replication Groups",
+      "comment": "PERSPECTIVE 3: INDEPENDENT REPLICATION GROUPS (TANGLED ROPE) \u2014 Constrained by funding scarcity, publication bias against negative results, and career risk. Provides genuine coordination function through attempted verification. Benefits from legitimacy as rigorous researchers but bears extraction through replication burden and publication friction. Mixed experience with both coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Early-Career Researchers and Pharmaceutical Firms",
+      "comment": "PERSPECTIVE 4: EARLY-CAREER RESEARCHERS AND PHARMACEUTICAL MARKETING (ROPE) \u2014 Net beneficiaries during claim-staking window. Early-career researchers capture citations, grants, and career advancement through novel findings regardless of replicability. Pharmaceutical marketing leverages unreplicated claims for product positioning. Experience the constraint as pure coordination: literature production is their coordination mechanism. Low chi from beneficiary + arbitrage exit position."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Funding Agencies and Journal Editors",
+      "comment": "PERSPECTIVE 5: FUNDING AGENCIES AND JOURNAL EDITORS (TANGLED ROPE) \u2014 Powerful institutional actors with constrained exit options. Benefit from publishing novel findings and allocating research funds. Face pressure from peer review infrastructure limitations. Experience mixed signals: genuine coordination role (allocating resources) alongside extraction (gaming metrics, theater maintenance). Institutional power is constrained by stakeholder expectations."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Peer Review and Statistical Testing Apparatus",
+      "comment": "PERSPECTIVE 6: PEER REVIEW AND STATISTICAL TESTING APPARATUS (PITON) \u2014 Performative verification infrastructure. Peer review cannot detect p-hacking, data dredging, or selective outcome reporting. Statistical significance testing (p < 0.05) is a ritualized gate that generates false positives when applied to exploratory analysis. The apparatus persists through institutional inertia despite known failure modes. Theater ratio reflects that the review ritual is largely performative \u2014 it does not verify the claims it gates."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (False Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational perspective, some irreproducibility is inherent to exploratory science: multiple hypothesis testing, noise, and researcher degrees of freedom create false positives inherently. The mountain classification naturalizes what is actually a contingent institutional arrangement \u2014 the problem is not inherent to biology but to the publication and funding incentives that reward novel findings over replication."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "replicability_threshold_ambiguity",
+      "question": "What replication rate threshold distinguishes legitimate statistical noise from systemic extraction through irreproducible claims?",
+      "resolution_mechanism": "Large-scale replication studies (e.g., OSF Reproducibility Project); meta-analyses comparing effect sizes across original and replication studies; Bayesian assessment of false discovery rate across biomedical domains",
+      "impact": "If true replication rate is >70%: constraint is primarily coordination problem (Rope from more perspectives). If true rate is <40%: constraint is primarily extraction mechanism (Snare from field perspective). Current estimates (30-50%) suggest tangled extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Threshold for distinguishing noise from systemic extraction"
+    },
+    {
+      "id": "incentive_structure_malignity",
+      "question": "How much of the replication crisis is caused by rational self-interested behavior within the current incentive structure versus fraud, incompetence, or negligence?",
+      "resolution_mechanism": "Comparison of replication failure rates across domains with different incentive structures (high-impact journals vs preprint culture); analysis of researchers' p-curve patterns and data availability practices; interviews with replication task force members",
+      "impact": "If primarily rational incentive response: constraint classification remains tangled_rope (coordination + extraction hybrid). If primarily fraud/negligence: reclassify as snare (pure predatory extraction). Affects whether reform pathway is structural redesign or enforcement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether crisis reflects rational incentives or systemic misbehavior"
+    },
+    {
+      "id": "preregistration_effectiveness",
+      "question": "Do preregistration and open science reforms (OSF preregistration, registered reports, data sharing mandates) actually reduce false positive rates or merely displace gaming to new metrics?",
+      "resolution_mechanism": "Longitudinal comparison of effect sizes and replication rates pre- and post-preregistration adoption; analysis of P-curve compliance among preregistered studies; monitoring for shifting to alternative metrics (confidence intervals, Bayes factors, prior specification gaming)",
+      "impact": "If effective: scaffold sunset is real \u2014 open science reforms are structural exit pathway. If ineffective: extraction mechanism persists despite formal transparency, suggesting enforcement failure or deeper incentive capture.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether preregistration reforms effectively reduce false positives"
+    },
+    {
+      "id": "publisher_capture_extent",
+      "question": "To what degree are high-impact journal editors and publishers captured by the extraction mechanism (benefiting from sensational unreplicated findings) versus acting as naive gatekeepers?",
+      "resolution_mechanism": "Analysis of editorial decisions: rejection patterns for null results and replications; comparison of impact factors before/after editorial policy changes; interviews with editors about awareness of replication issues and incentive pressures",
+      "impact": "If captured: journal system is structural beneficiary of extraction (snare from field perspective). If naive: classification may shift toward scaffold as editors can be educated to select preregistered and replicable studies.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of publisher capture in replication crisis"
+    },
+    {
+      "id": "biological_complexity_vs_methodological_failure",
+      "question": "What proportion of replication failures reflects genuine biological complexity and noise versus methodological failures, poor experimental technique, and insufficient statistical power?",
+      "resolution_mechanism": "Meta-analysis of replication studies identifying failure modes (underpowered design, poor technique, conditions not reproduced, effect modification); interviews with replicating researchers on source of divergence; comparison of failure rates across biological domains (molecular vs organismal)",
+      "impact": "If primarily complexity: constraint is natural law with coordination gap (mountain with rope coordination function). If primarily method: constraint is institutional (tangled_rope or snare with extractive gate).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether failures reflect biological complexity or methodological issues"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.79
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The replication crisis in biomedical research represents a structural constraint where the incentive architecture of academic science \u2014 publish-or-perish competition, novelty premium, impact factor obsession, and career advancement tied to citations \u2014 creates systematic pressure toward false positive publication while suppressing negative results and replication studies. This constraint exhibits multiple structurally distinct mechanisms: (1) the rational response of early-career researchers to career incentives (coordination problem: how to allocate limited academic positions), (2) the extraction mechanism where novel but unreplicated findings generate career and financial benefits for claimants while imposing costs on clinical practice and the reliability commons, (3) the performative peer review apparatus that maintains theatrical legitimacy without detecting methodological failures, and (4) the false natural law framing that irreproducibility is inherent to exploratory biology rather than a contingent institutional arrangement. The theater ratio (0.81) reflects that peer review for complex biological claims is substantially ritualistic: reviewers assess novelty and plausibility but cannot verify experimental technique, detect p-hacking, or assess selective outcome reporting from manuscript alone. The extractiveness value (0.58) reflects moderate-to-high extraction with some genuine coordination functions (journal editors do allocate resources, peer review does screen some false positives) embedded alongside the extraction mechanism. The suppression value (0.68) reflects significant barriers to exit: publication bias against negative results, replication studies are unfunded and undervalued, career risk for researchers who publish replication failures, and structural inability of clinical practice to audit the literature it relies on.",
+    "key_agents": [
+      "Patient Populations: Primary victim (powerless/trapped) \u2014 bear health costs of unreplicated clinical claims with no exit option",
+      "Clinical Practice Reliability: Primary victim (powerless/trapped) \u2014 abstract epistemic commons that cannot exit or organize; contaminated by systematic false positives",
+      "Independent Replication Groups: Secondary victim (moderate/constrained) \u2014 face funding barriers, publication bias, and career risk despite providing verification function",
+      "Early-Career Researchers: Primary beneficiary (institutional/arbitrage) \u2014 capture citations, grants, and career advancement through novel findings regardless of replicability",
+      "Pharmaceutical Marketing: Beneficiary (institutional/arbitrage) \u2014 leverages unreplicated biomedical claims for product positioning and market advantage",
+      "Funding Agencies and Journal Editors: Institutional actors (powerful/constrained) \u2014 benefit from novelty and citation metrics while facing pressure from infrastructure limitations; constrained by stakeholder expectations",
+      "Peer Review Apparatus: Performative institutional mechanism (institutional/arbitrage) \u2014 maintains theatrical legitimacy without functional verification capacity; persists through inertia",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as inherent biological limits"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-to-high, reflecting that the constraint systematically favors novel claimants over replicators. Early-career researchers rationally respond to incentives; the extraction is not from fraud but from structural asymmetry in how the scientific system rewards and distributes reputation. The value increased from 0.38 to 0.58 over the measurement interval as awareness of the crisis heightened without corresponding structural reform. Suppression (0.68): Moderate-high, reflecting multiple barriers to exit: publication bias against negative results is structural (editors perceive negative studies as lower novelty), replication studies receive minimal funding, replication failure carries career risk (appears as cautious or unable to confirm others' work), and clinical practitioners cannot easily audit the literature they rely on. Theater ratio (0.81): High and increasing, indicating that peer review has become increasingly performative. Reviewers cannot detect selective outcome reporting, p-hacking, or insufficient statistical power from manuscript text alone. The ritual persists because alternatives (preprint scrutiny, preregistration) are still maturing. The slight decrease from 0.81 to 0.79 at endpoint reflects early adoption of open science practices (OSF preregistration, data sharing), which lower theater by moving verification mechanisms outside the peer review gate.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence: beneficiaries see coordination (Rope), victims see pure extraction (Snare), intermediate actors see mixed (Tangled Rope), the institutional gate-keeping apparatus sees itself as degraded theater (Piton), and the civilizational view risks naturalizing institutional arrangements as biological law (Mountain). This presheaf of perspectives is diagnostic: if all perspectives produced the same classification, the constraint would be simpler; the perspectival gap is the constraint's signature.",
+    "directionality_logic": "Directionality (d) is derived from the agent's structural position: power level, exit options, and relationship to extraction flow. Early-career researchers and pharma firms occupy d \u2248 0.10 (beneficiaries with arbitrage exit) \u2014 they experience negative effective extraction (the system subsidizes their career advancement). Replication groups occupy d \u2248 0.60 (moderate power, constrained exit, victim-adjacent) \u2014 they experience moderate positive extraction despite providing coordination function. Patients and clinical practice occupy d \u2248 0.95 (powerless, trapped) \u2014 they experience maximum extraction with no exit capacity. Funding agencies occupy d \u2248 0.45 (powerful but constrained by stakeholder expectations; benefit from novelty but bear reputational cost of crisis). The analytical observer occupies d \u2248 0.72 (can see full structure but cannot unilaterally reform incentives). These derive from beneficiary/victim declarations and exit options without override.",
+    "mandatrophy_analysis": "The mandatrophy is resolved through perspectival multiplicity: there is no single 'correct' type, only the set of legitimate readings from different structural positions. The beneficiary's Rope is their genuine experience (literature production does solve coordination). The victim's Snare is equally real (patients bear extraction with no exit). The false mountain (natural law view) is revealed as naturalization: replication rates vary by domain, showing the crisis is institutional not biological. The piton classification (degraded review apparatus) is corroborated by the high theater ratio and reviewers' own recognition that peer review cannot detect p-hacking. The tangled rope (intermediate actors) captures mixed experience accurately. The mandatrophy resolves not by finding the 'true' type but by understanding that the constraint is fundamentally a presheaf over the observer position landscape \u2014 each agent's experience is structurally determined by their role in the extraction flow."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "pharmaceutical_efficacy_claims",
+      "clinical_guideline_reliability",
+      "academic_career_incentive_structure"
+    ],
+    "dual_formulation_note": "The replication crisis decomposes into multiple structurally distinct constraints: (1) resource_allocation_coordination \u2014 how should scarce academic positions and funding be distributed among researchers (Rope); (2) false_positive_extraction \u2014 asymmetric incentive structure that rewards novel claims over replications (Snare); (3) peer_review_degradation \u2014 performative verification apparatus (Piton); (4) publication_bias_mechanism \u2014 structural suppression of negative results (Tangled Rope). This story treats the family as a single constraint with multiple perspectives rather than decomposing into separate JSON files, because the core structural property (extractiveness from misaligned incentives) is stable across the decomposition."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ]
+}

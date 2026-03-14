@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "quantum_cryptography_key_distribution",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "qckd"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Quantum Key Distribution Infrastructure Coordination and Extraction",
+    "topic_domain": "cryptography/quantum_information/infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "qkd_technology_vendors",
+      "national_security_agencies",
+      "early_adopter_institutions"
+    ],
+    "victims": [
+      "non_quantum_secure_users",
+      "legacy_infrastructure_administrators",
+      "developing_economies"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Non-Quantum-Secure User",
+      "comment": "PERSPECTIVE 1: NON-QUANTUM-SECURE USER (SNARE) \u2014 Faces mandatory migration pressure without meaningful choice. As quantum computing threat timeline accelerates and policy mandates QKD deployment, users dependent on legacy infrastructure face escalating costs and incompatibility. No exit option: continue using deprecated systems (increasing risk) or pay for costly replacement infrastructure. Maximum suppression through regulatory harmonization pushing toward QKD as the only 'secure' path forward."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Legacy Infrastructure Administrator",
+      "comment": "PERSPECTIVE 2: LEGACY INFRASTRUCTURE ADMINISTRATOR (TANGLED ROPE) \u2014 Experiences both genuine coordination benefit (QKD solves real cryptographic vulnerability) and extraction (high replacement costs, operational complexity, vendor lock-in). Can transition but at significant resource cost and operational disruption. Coordination function is real \u2014 QKD addresses post-quantum cryptographic threat \u2014 but extraction is embedded in the transition pathway."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "QKD Technology Vendor",
+      "comment": "PERSPECTIVE 3: QKD TECHNOLOGY VENDOR (ROPE) \u2014 Primary beneficiary experiencing the constraint as pure coordination. Vendors solve the key distribution problem while capturing market share and revenue during deployment window. Arbitrage exit option: can pivot to other quantum technologies if QKD adoption slows. Net experience is coordination with favorable position \u2014 extraction runs toward this agent through vendor selection and ecosystem lock-in."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "National Security Agency",
+      "comment": "PERSPECTIVE 4: NATIONAL SECURITY AGENCY (TANGLED ROPE) \u2014 Coordination function: genuinely addresses post-quantum cryptographic threat to classified communications. Extraction function: uses cryptographic mandate to consolidate surveillance infrastructure, standardize telecommunications architecture under security rubric, and create vendor dependencies. High enforcement capability creates coordination-through-coercion dynamic. Constrained exit due to security mandates \u2014 cannot simply abandon QKD deployment once committed."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Developing Economy Telecommunications Sector",
+      "comment": "PERSPECTIVE 5: DEVELOPING ECONOMY TELECOMMUNICATIONS SECTOR (SNARE) \u2014 Faces dual extraction: must adopt QKD infrastructure (high capital cost) to maintain interoperability with developed-economy networks, but lacks resources for independent technology development. Technology procurement forces dependency on vendors from developed economies. Constrained exit: can delay but cannot opt out without network isolation. Theater ratio high \u2014 security rhetoric masks infrastructure control and vendor lock-in."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Post-Quantum Cryptography Standards Body",
+      "comment": "PERSPECTIVE 6: POST-QUANTUM CRYPTOGRAPHY STANDARDS BODY (SCAFFOLD) \u2014 Organized agents (NIST, ETSI, ISO working groups) see QKD as temporary coordination solution: quantum-resistant classical cryptography standards are advancing as alternative to quantum-dependent key distribution. Sunset logic: as post-quantum classical algorithms mature and deployment accelerates, QKD's monopoly on 'quantum-safe' framing decays. Constrained by NIST post-quantum standardization timeline (2022-2024 algorithm selection). Theater ratio declining as alternatives become visible."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Quantum Information Science Funding Apparatus",
+      "comment": "PERSPECTIVE 7: QUANTUM INFORMATION SCIENCE FUNDING APPARATUS (PITON) \u2014 Maintains QKD as flagship quantum technology through substantial research funding, conference prioritization, and narrative framing, despite competing quantum communication approaches (entanglement swapping, measurement-device-independent QKD) showing comparable security at lower cost. Theater ratio high: QKD deployment metrics (kilometers of fiber, government contracts) substitute for genuine security outcome measurement. Institutional inertia maintains funding momentum; functional verification increasingly performative."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Physical Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / PHYSICAL LAW VIEW (MOUNTAIN) \u2014 From universalizable perspective, quantum key distribution solves a fundamental cryptographic problem: key distribution without pre-shared secrets or trusted channels. The Bell inequality violation enables unconditional security guarantee impossible in classical cryptography. This appears as immutable natural law. However, empirical reality contradicts: implementation vulnerabilities (side-channel attacks, detector loopholes), practical complexity, and cost make QKD less secure in real deployment than simpler post-quantum classical methods. The mountain classification reveals false summit \u2014 physics naturalizes what is contingent engineering practice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "post_quantum_classical_equivalence",
+      "question": "Do post-quantum classical cryptographic algorithms provide equivalent or superior security to QKD at lower implementation complexity and cost?",
+      "resolution_mechanism": "Comparative security analysis of NIST post-quantum finalists vs deployed QKD systems; real-world vulnerability discovery rates; implementation-weighted security metrics accounting for side-channel risks",
+      "impact": "If classical superior: QKD extraction mechanism becomes apparent, scaffold sunset accelerates, snare classification strengthens for forced adopters. If QKD genuinely superior: coordination function dominates, tangled rope becomes more rope-like, extraction burden justified by security gain.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether post-quantum classical cryptography provides equivalent security to QKD"
+    },
+    {
+      "id": "practical_implementation_vulnerability",
+      "question": "What proportion of QKD security claims rely on theoretical unconditional security versus practical implementation details (detector efficiency, environmental noise, channel calibration)?",
+      "resolution_mechanism": "Systematic audit of deployed QKD systems for side-channel attacks, detector vulnerabilities, and implementation gaps; comparison of theory-to-practice security margin for QKD vs classical post-quantum methods",
+      "impact": "If implementation vulnerabilities significant: theater ratio should be higher, mountain perspective becomes false summit. If theoretical guarantees reliably translate to practice: security extraction becomes legitimate coordination, tangled rope shifts toward rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Vulnerability gap between theoretical QKD security and practical implementation"
+    },
+    {
+      "id": "network_interoperability_lock_in",
+      "question": "Is QKD infrastructure lock-in primarily driven by genuine network effects (interoperability standards) or by vendor ecosystem capture and switching costs?",
+      "resolution_mechanism": "Historical analysis of QKD standard-setting (China dominance in fibers, Europe in networks, US in algorithms); comparative cost of deploying alternative quantum communication approaches; network effect strength vs proprietary lock-in quantification",
+      "impact": "If network effects dominant: constraints on developing economies are coordination-driven (justified extraction). If vendor lock-in dominant: snare classification strengthens, developing-economy perspective becomes more severe, mandatrophy analysis shifts toward asymmetric extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether QKD lock-in is driven by network effects or vendor capture"
+    },
+    {
+      "id": "quantum_computing_threat_timeline",
+      "question": "What is the credible timeline for fault-tolerant quantum computers capable of breaking RSA-2048? How does this timeline compare to QKD deployment timescales?",
+      "resolution_mechanism": "Consensus estimation from quantum computing roadmaps (IBM, Google, IonQ, others); sensitivity analysis on error correction requirements; correlation between threat timeline and current QKD deployment urgency messaging",
+      "impact": "If threat timeline > 20 years: current QKD deployment urgency is overblown, extraction mechanism becomes apparent, snare classification strengthened. If threat timeline < 10 years: deployment urgency justified, coordination function genuine, tangled rope reflects real security need.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for cryptographically relevant quantum computing threat"
+    },
+    {
+      "id": "measurement_device_independent_qkd_viability",
+      "question": "Can measurement-device-independent QKD or other alternative quantum communication approaches achieve comparable unconditional security guarantees with simpler infrastructure and lower cost than standard QKD?",
+      "resolution_mechanism": "Comparative deployment cost analysis; security proof equivalence for MDI-QKD; practical infrastructure requirements (fiber distance, repeaters, detector complexity)",
+      "impact": "If MDI-QKD viable: current QKD dominance appears contingent, scaffold sunset becomes plausible, theater ratio reflects technology choice rather than necessity. If MDI-QKD inferior: current approach justified, extraction becomes embedded in natural limitation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of measurement-device-independent alternatives to standard QKD"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Quantum key distribution represents a structural constraint combining genuine cryptographic innovation with infrastructure lock-in, vendor capture, and developing-economy dependency. The constraint exhibits the full tension between coordination function (solving post-quantum cryptographic vulnerability) and extraction function (forcing costly migration, centralizing network architecture, creating vendor monopolies). QKD's theoretical unconditional security guarantee creates a powerful legitimacy narrative ('quantum-level' security), but practical implementations exhibit vulnerabilities (side-channel attacks, detector loopholes) that undermine claimed advantage over simpler post-quantum classical cryptography. The constraint's extractiveness has increased over the measurement interval as deployment mandates have propagated and alternative quantum communication approaches have been systematically deprioritized in funding and standards-setting. The theater ratio (0.62) reflects substantial performative content: security metrics emphasize deployment kilometers and government contracts rather than demonstrable security improvement; NIST post-quantum cryptography standardization has advanced competing classical approaches with equivalent security at lower complexity, yet QKD dominates policy framing.",
+    "key_agents": [
+      "QKD Technology Vendors: Primary beneficiaries (institutional/arbitrage) \u2014 capture market dominance and revenue during infrastructure transition; include Chinese, European, and US vendors with different regional lock-in strategies",
+      "Non-Quantum-Secure Users: Primary victims (powerless/trapped) \u2014 face mandatory migration costs without meaningful choice as policy mandates QKD adoption",
+      "National Security Agencies: Secondary beneficiary (institutional/constrained) \u2014 gain cryptographic mandate (genuine coordination) plus surveillance infrastructure consolidation and vendor control (extraction)",
+      "Developing Economy Telecommunications Sector: Secondary victim (moderate/constrained) \u2014 forced to adopt expensive foreign technology without capacity for independent development; dual extraction from cost and dependency",
+      "Legacy Infrastructure Administrators: Moderate victim (moderate/constrained) \u2014 experience real coordination benefit (post-quantum security) plus significant transition costs and vendor lock-in",
+      "Post-Quantum Cryptography Standards Body: Organized actor (organized/constrained) \u2014 developing classical alternatives with sunset logic; provide countervailing force to QKD monopoly",
+      "Quantum Information Science Funding Apparatus: Institutional maintainer (institutional/arbitrage) \u2014 sustains QKD through research funding momentum and narrative framing despite advancing alternatives"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. QKD deployment extracts value through vendor pricing, infrastructure switching costs, and network lock-in, but the extraction is legitimated by genuine post-quantum cryptographic threat. The revised assessment (down from initial 0.45) reflects that the coordination function is structurally real \u2014 quantum computing threat requires cryptographic remediation \u2014 and post-quantum classical alternatives, while viable, require their own transition costs. The extraction premium over classical approaches is moderate because both paths involve cost; QKD's additional cost is partly justified by security gain, partly by infrastructure control. Suppression (0.48): Moderate-high. Significant barriers to alternative approaches include narrative dominance (QKD framed as 'quantum-safe,' classical as 'transitional'), funding concentration favoring QKD research, and standards-setting bodies prioritizing QKD deployment. But suppression is not total \u2014 NIST post-quantum standardization is advancing, alternative quantum communication approaches exist, and some institutions deploy classical post-quantum algorithms. Theater ratio (0.62): Moderate-high. QKD deployment emphasizes security narrative and kilometer-of-fiber metrics while downplaying practical implementation vulnerabilities (side-channel attacks, detector loopholes) and cost comparisons to post-quantum classical methods. The theater has increased as deployment has accelerated \u2014 performance claims have become more absolutist while empirical evidence remains contested.",
+    "directionality_logic": "Directionality derivation differs significantly across perspectives. QKD vendors (beneficiary + arbitrage) derive low d \u2192 negative \u03c7 (they experience the constraint as beneficial coordination). Non-quantum-secure users (victim + trapped) derive high d \u2192 high \u03c7 (maximum extraction experienced). National security agencies derive moderate d (beneficiary via security mandate + constrained exit via deployment commitment) \u2192 moderate \u03c7 reflecting coordination-with-control. Developing economies derive high d (victim + constrained exit) \u2192 high \u03c7 reflecting dual extraction from cost and dependency lock-in. Post-quantum standards body derives lower d (organized agents with exit paths through classical alternatives) \u2192 moderate \u03c7 reflecting agency and sunset mechanism. The analytical observer at civilizational scope risks deriving natural-law classification (quantum physics guarantees unconditional security) but structural data shows false summit: practical vulnerabilities, cost disadvantage vs alternatives, and deployment urgency disconnected from actual threat timeline.",
+    "perspectival_gap": "The constraint demonstrates maximum perspectival divergence. QKD vendors see pure coordination (Rope) with market opportunity \u2014 they are solving a real problem while capturing value. National security agencies see mixed coordination-extraction (Tangled Rope) \u2014 genuine cryptographic mandate plus infrastructure control. Developing economies see pure extraction (Snare) \u2014 forced adoption without resources or alternatives. Post-quantum standards bodies see temporary coordination with sunset (Scaffold) \u2014 classical alternatives are maturing, QKD dominance is contingent on policy choices, not technical necessity. The quantum funding apparatus sees its own infrastructure as essential (Piton) \u2014 maintains deployment momentum through research prioritization despite advancing alternatives. The civilizational analytical observer risks seeing physical necessity (Mountain) \u2014 quantum mechanics guarantees unconditional security \u2014 but empirical reality reveals this as false summit: practical vulnerabilities, classical alternatives providing equivalent real-world security, and deployment urgency disconnected from threat timeline. The perspectival gap reveals that QKD's mandatory framing relies on naturalizing policy choices as physical necessity.",
+    "mandatrophy_analysis": "The mandatrophy in QKD constraints arises from confusion between theoretical unconditional security (valid) and practical implementation security (contested). The theoretical guarantee suggests mountain \u2014 QKD solves a fundamental cryptographic problem quantum mechanics makes impossible classically. But implementation vulnerabilities (detector loopholes, side-channel attacks, environmental noise) undermine practical superiority. Post-quantum classical cryptography provides comparable real-world security at lower complexity, yet QKD dominates policy and funding narratives. The mandatrophy resolves by decomposing: (1) Cryptographic threat from quantum computing: genuine coordination problem, justified urgency. (2) QKD as specific solution: contingent choice among viable alternatives, subject to extraction through vendor lock-in and network effects. The first requires policy response; the second enables extraction. Conflating them ('quantum-safe = QKD') naturalizes what is a contingent technology choice. The scaffold perspective (post-quantum standards body) provides exit path \u2014 as classical alternatives mature and deployment accelerates, QKD's monopoly on 'quantum-safe' framing erodes. The snare perspective reveals who bears extraction costs (powerless users, developing economies) while vendors (institutional beneficiaries) capture value. The constraint's true structure is not immutable law but policy choice with asymmetric cost distribution."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "post_quantum_cryptography_deployment",
+      "telecommunications_infrastructure_standardization",
+      "national_cryptographic_mandate_systems"
+    ],
+    "dual_formulation_note": "QKD deployment constraint is downstream of quantum computing threat assessment but represents structurally distinct constraint. Upstream: cryptographic vulnerability from quantum computing \u2014 genuine coordination problem. Downstream: QKD as specific technological solution \u2014 subject to vendor lock-in and developing-economy extraction. These decompose into separate stories: quantum_threat_cryptography_gap (\u03b5=0.12, coordination problem) influences qkd_infrastructure_extraction (\u03b5=0.38, technology-specific constraint). Post-quantum classical alternatives provide parallel pathway with different extraction profile."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

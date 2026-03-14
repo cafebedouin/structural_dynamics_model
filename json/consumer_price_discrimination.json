@@ -1,0 +1,186 @@
+{
+  "header": {
+    "constraint_id": "consumer_price_discrimination",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cpd"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Consumer Price Discrimination through Data-Driven Targeting",
+    "topic_domain": "economic/digital_markets",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "data_brokers",
+      "targeted_sellers"
+    ],
+    "victims": [
+      "price_sensitive_consumers",
+      "behavioral_targeting_targets",
+      "market_transparency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Price-Sensitive Consumer",
+      "comment": "PERSPECTIVE 1: PRICE-SENSITIVE CONSUMER (SNARE) \u2014 Digitally trapped in price discrimination without exit capacity. Behavioral tracking via cookies, device fingerprints, and purchase history enables personalized price extraction. No meaningful alternative (all major platforms employ similar targeting). High suppression: consumer cannot see the discrimination mechanism; comparison shopping is defeated by dynamic pricing. Zero coordination benefit \u2014 pure extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Price-Aware Shopper (Multi-Platform)",
+      "comment": "PERSPECTIVE 2: PRICE-AWARE SHOPPER (TANGLED ROPE) \u2014 Moderate power through platform switching and price comparison tools (Honey, CamelCamelCamel), but constrained by switching costs, data re-collection, and incomplete price visibility. Coordination benefit exists: dynamic pricing allocates inventory to high-demand periods. Extraction exists: browsers' shopping history is monetized; comparison tool data feeds back to platforms. Mixed experience \u2014 some agency but significant asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATOR (ROPE) \u2014 Experiences price discrimination as pure coordination: allocating limited inventory across price-sensitive and price-insensitive consumers, matching demand to supply dynamically, reducing deadweight loss from fixed pricing. Net beneficiary of the extraction flow. Arbitrage capacity is maximal \u2014 can enter/exit pricing strategies, adjust algorithms, move to new markets. Sees no suppression; the mechanism is opaque only to consumers, not to the platform."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Consumer Protection Regulator",
+      "comment": "PERSPECTIVE 4: CONSUMER PROTECTION REGULATOR (TANGLED ROPE) \u2014 Organized state actors (FTC, EU DPA) experience price discrimination as both coordination and extraction problem. Coordination benefit: dynamic pricing can improve allocative efficiency IF algorithmic transparency and consumer consent exist. Extraction problem: platforms use opacity and behavioral targeting to suppress consumer welfare gains. Constrained by jurisdictional limits, technical complexity, and regulatory capture risk. Active enforcement (algorithmic audits, consent mechanisms) required to shift toward coordination and away from extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The MFN Clause (Most Favored Nation)",
+      "comment": "PERSPECTIVE 5: MFN CLAUSE INSTITUTIONAL ARTIFACT (PITON) \u2014 Price parity clauses (MFN: 'you shall not charge less elsewhere') were designed to prevent arbitrage and maintain price coordination across channels. Modern MFN is largely theater \u2014 dynamic pricing and personalization have made strict price parity impossible to enforce and verify. The institutional commitment persists (Amazon, Airbnb still claim price parity) while the functional mechanism has atrophied. Theater ratio high because MFN invocation has become a legitimation ritual rather than an enforcement mechanism. No longer coordinates effectively; persists through institutional inertia."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational view, price discrimination is inherently hybrid. Perfect price discrimination would be pure coordination (optimal allocation); opacity-driven discrimination is pure extraction. Empirically, the mechanism operates between these poles: platforms extract significant rents through behavioral targeting (suppression via opacity) while also providing coordination services (dynamic inventory allocation). The constraint requires active enforcement to shift the balance from extraction toward coordination. Current equilibrium favors extraction because suppression mechanisms (behavioral targeting, data opacity, switching costs) are stronger than coordination benefits."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "transparency_vs_extraction_tradeoff",
+      "question": "Can algorithmic transparency (revealing discrimination to consumers) be implemented without destroying the coordination benefits of dynamic pricing?",
+      "resolution_mechanism": "Natural experiments from transparency mandates (EU Platform-to-Business Regulation, algorithmic auditing pilots); measurement of price variance and allocation efficiency before/after disclosure",
+      "impact": "If transparency preserves efficiency: constraint shifts toward Rope/Scaffold (coordination dominant). If transparency degrades efficiency: constraint remains Tangled Rope or Snare (extraction remains necessary for performance).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether algorithmic transparency can preserve coordination benefits"
+    },
+    {
+      "id": "behavioral_targeting_necessity",
+      "question": "Is behavioral targeting (purchase history, browsing data, device fingerprinting) necessary for dynamic pricing's coordination function, or is it parasitic extraction layered onto price optimization?",
+      "resolution_mechanism": "Comparative analysis: platforms using behavior-neutral dynamic pricing (time/inventory-based only) vs behavior-targeted pricing; measurement of price variance, allocative efficiency, and consumer surplus",
+      "impact": "If necessary: suppression value is coordination cost, not pure extraction overhead. If parasitic: suppression component (0.62) could be reduced to ~0.15 without losing efficiency, collapsing the extraction mechanism.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether behavioral targeting is necessary for dynamic pricing function"
+    },
+    {
+      "id": "switching_cost_equilibrium",
+      "question": "What switching cost threshold converts constrained exit into trapped exit? At what platform concentration does the moderate consumer's constrained status degrade into powerless trapped status?",
+      "resolution_mechanism": "Market concentration index (HHI) correlated with switching rate measurements; estimation of willingness-to-pay to switch platforms as function of HHI",
+      "impact": "If threshold is low (HHI > 2000): current market structure has collapsed moderate/constrained into powerless/trapped for most consumers. If threshold is high: constrained status is accurate and coalition power (organized multiple consumers) remains viable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Switching cost threshold for trapped vs constrained status"
+    },
+    {
+      "id": "regulator_capture_risk",
+      "question": "To what extent has algorithmic complexity enabled regulatory capture? Do regulators lack technical capacity to audit price discrimination, allowing platforms to appear compliant while extraction continues?",
+      "resolution_mechanism": "Historical analysis of FTC/DPA enforcement actions; comparison of disclosed algorithms vs actual price discrimination measured by mystery shopping and data analysis; regulatory hiring and budget trends for algorithmic auditing",
+      "impact": "If high capture: the organized/constrained regulator (Perspective 4) is misclassified \u2014 effectively organized/arbitrage (benefits from opacity). Constraint would remain Snare even with enforcement attempted. If low capture: Tangled Rope classification holds and enforcement can shift balance.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Extent of regulatory capture via algorithmic complexity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Consumer price discrimination through data-driven targeting represents a hybrid coordination-extraction constraint operating across digital platforms. Platforms collect behavioral data (purchase history, browsing patterns, device identifiers, location) to implement dynamic pricing that allocates limited inventory across heterogeneous consumer demand. This mechanism produces genuine coordination benefits: reduced deadweight loss from rigid pricing, improved inventory turnover, and allocative efficiency matching supply to demand elasticity. Simultaneously, the opacity of behavioral targeting and the suppression of consumer price comparison enable systematic extraction: platforms charge price-sensitive consumers more based on inferred willingness-to-pay derived from behavioral data. The constraint exhibits all hallmarks of Tangled Rope: genuine coordination function (dynamic allocation), asymmetric extraction (behavioral targeting), and high suppression (consumers cannot see or compare prices). The theater ratio (0.48) reflects that price discrimination operates with relatively low performative overhead \u2014 the extraction mechanism is structural (data collection and algorithmic optimization) rather than ritual (unlike formal price parity clauses, which are increasingly theatrical). The extractiveness trajectory (0.32\u21920.58 over the interval) shows accumulation: as data collection has become more granular and behavioral targeting more sophisticated, the extraction component has grown relative to the coordination component. Suppression (0.62) is high because the discrimination mechanism is intentionally opaque \u2014 consumers cannot see that they are being discriminated against, and algorithmic opacity prevents market-level price comparison.",
+    "key_agents": [
+      "Price-Sensitive Consumers: Primary victims (powerless/trapped) \u2014 lack behavioral data arbitrage capacity, face platform concentration, unable to comparison shop across dynamic prices",
+      "Price-Aware Shoppers: Secondary victims (moderate/constrained) \u2014 retain some agency via multi-platform access and comparison tools, but data collection and switching costs significantly constrain exit",
+      "Platform Operators: Primary beneficiaries (institutional/arbitrage) \u2014 design and operate discrimination mechanism; see pricing as pure coordination with optional extraction upside",
+      "Data Brokers: Secondary beneficiaries (institutional/arbitrage) \u2014 monetize behavioral data; feed targeting signals back to platforms",
+      "Consumer Protection Regulators: Organized actors (organized/constrained) \u2014 possess enforcement authority but face technical complexity, capture risk, and jurisdictional limits",
+      "MFN Clause Framework: Institutional artifact (institutional/arbitrage) \u2014 designed to prevent price arbitrage but now largely theater as dynamic pricing makes enforcement impossible",
+      "Analytical Observer: Structural perspective (analytical/analytical) \u2014 sees constraint as existing on spectrum between pure coordination and pure extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Elevated moderate. Price discrimination extracts meaningful consumer surplus through behavioral targeting and opacity. The value reflects that extraction is significant but not maximal \u2014 platforms retain coordination incentives (inventory efficiency matters for their operations) and some consumer welfare is improved by demand-responsive pricing. If discrimination were pure extraction with no coordination benefit, extractiveness would be \u22650.70. Suppression (0.62): Moderate-high. Behavioral targeting is intentionally opaque; consumers cannot see discrimination occurring. Switching costs (app-based habits, data collection friction, platform ecosystem lock-in) raise the barriers to exit. Legal and technical complexity (algorithmic decision-making) further suppress consumer understanding. However, suppression is not absolute: price comparison tools exist (Honey browser extension, CamelCamelCamel), educated consumers can observe price variance, and some platforms have begun transparency initiatives. Theater ratio (0.48): Moderate-low. Price discrimination operates with relatively little performative activity. The MFN clause (Perspective 5) is increasingly theatrical \u2014 invoked for legitimacy but not enforced. The core discrimination mechanism is structural: data feeds optimization algorithms with minimal ritual overlay. The value reflects that extraction here is primarily structural (data asymmetry, algorithmic optimization) rather than theatrical (formal compliance rituals).",
+    "perspectival_gap": "The constraint demonstrates fundamental disagreement about classification across structural positions. The price-sensitive consumer (powerless/trapped) experiences pure extraction (Snare) \u2014 they pay more without understanding why or having alternatives. The price-aware shopper (moderate/constrained) experiences mixed coordination and extraction (Tangled Rope) \u2014 they benefit from dynamic allocation but also bear extraction through data collection and switching costs. The platform (institutional/arbitrage) experiences coordination (Rope) \u2014 they see dynamic pricing as inventory allocation and consumer surplus exists in equilibrium. The regulator (organized/constrained) also sees Tangled Rope but emphasizes the enforcement challenge: the coordination benefits are achievable only if behavioral targeting is bounded and consumer transparency is mandated. The MFN institutional framework (piton) shows how coordination mechanisms degrade over time \u2014 the price parity clause was designed to coordinate pricing across channels but has become theater as dynamic pricing renders it unenforceable. The analytical observer (Tangled Rope) sees the constraint as fundamentally hybrid with an empirical question: what combination of transparency, switching cost reduction, and enforcement would shift the balance from extraction-dominant to coordination-dominant? The perspectival gap reveals that 'price discrimination' is not a single phenomenon but a coordination mechanism with embedded extraction that is visible only from certain positions.",
+    "directionality_logic": "Directionality (d) maps structural position to experienced extraction via power level, exit options, and beneficiary/victim status. Price-sensitive consumers are victims with trapped exit \u2014 derived d approaches 0.95 (maximum target status), producing f(d) \u2248 1.42 and high experienced extraction chi. Price-aware shoppers are partial victims with constrained exit \u2014 derived d \u2248 0.65, producing f(d) \u2248 1.00 and moderate extraction. Platform operators are beneficiaries with arbitrage exit \u2014 derived d \u2248 0.15, producing f(d) \u2248 -0.01 and negative chi (they experience the constraint as beneficial). Regulators are organized partial victims with constrained exit (authority without full enforcement capacity) \u2014 derived d \u2248 0.60, producing moderate f(d). The directionality pipeline reveals why the same mechanism produces such different classifications: the structural positions (beneficiary vs victim, trapped vs arbitrage) determine d, which determines f(d), which scales base extraction into experienced extraction chi. No override is necessary \u2014 the structural data is sufficient.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by recognizing that price discrimination is genuinely both coordination AND extraction, not one mislabeled as the other. The resolution hinges on answering the omegas: (1) Is behavioral targeting necessary for coordination benefits, or is it parasitic? If parasitic, extraction can be reduced without losing efficiency. (2) Can transparency be implemented without destroying coordination? If yes, the constraint can shift toward Scaffold (temporary enforcement + sunset into transparent dynamic pricing). (3) What is the capture risk? If regulators lack auditing capacity, the Tangled Rope classification is unstable \u2014 the enforcement required to maintain balance cannot occur, and the constraint drifts toward Snare. The mandatrophy is resolved not by choosing between Rope/Snare but by specifying the conditions under which the hybrid nature can be sustained versus the conditions under which it collapses toward pure extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_opacity",
+      "platform_data_concentration",
+      "consumer_switching_costs"
+    ],
+    "dual_formulation_note": "Price discrimination decomposes into multiple constraint stories: (1) consumer_price_discrimination (this story) \u2014 the hybrid coordination-extraction mechanism; (2) algorithmic_opacity \u2014 the information asymmetry enabling discrimination; (3) platform_data_concentration \u2014 the data accumulation enabling behavioral targeting. Each has distinct \u03b5 values and structural properties. This story links upstream to data concentration (data is input to discrimination algorithm) and downstream to opacity (opacity is output mechanism that suppresses consumer awareness)."
+  },
+  "directionality_overrides": []
+}

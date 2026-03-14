@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "energy_transition_mineral_constraints",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "etmc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Energy Transition Mineral Supply Constraints",
+    "topic_domain": "energy_policy/resource_management/geopolitics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mining_companies",
+      "resource_exporting_nations"
+    ],
+    "victims": [
+      "energy_transition_dependent_economies",
+      "renewable_energy_sector"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Energy-Dependent Importing Nation",
+      "comment": "PERSPECTIVE 1: ENERGY-DEPENDENT IMPORTING NATION (SNARE) \u2014 Structurally locked into mineral dependency for renewable energy deployment. No alternatives exist at scale; supply chains are geographically concentrated (lithium, cobalt, rare earths). Faces price extraction, supply disruption risk, and long-term contractual lock-in. Cannot negotiate meaningfully given climate urgency and technological path dependence. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Mining Company",
+      "comment": "PERSPECTIVE 2: MINING COMPANY (ROPE) \u2014 Experiences the constraint as a coordination mechanism solving a market failure: demand for minerals far exceeds current supply, and production is risky and capital-intensive. The constraint (supply bottleneck) creates value for mining companies through scarcity premiums and long-term contract negotiation power. Genuine coordination function (matching supply to demand) alongside asymmetric benefit extraction. Net beneficiary with arbitrage optionality."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Renewable Energy Developer",
+      "comment": "PERSPECTIVE 3: RENEWABLE ENERGY DEVELOPER (TANGLED ROPE) \u2014 Faces mineral supply constraints (must compete for limited lithium, copper, rare earths) but also benefits from the renewable ecosystem being built to address climate urgency. Constrained by mineral availability and price volatility; can substitute between technologies or delay projects but at significant cost. Experiences mixed coordination (supply matching) and extraction (price markup, supply security premium)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Climate and Materials Policy Coalition",
+      "comment": "PERSPECTIVE 4: CLIMATE AND MATERIALS POLICY COALITION (SCAFFOLD) \u2014 Organized actors (governments, environmental NGOs, clean tech associations) perceive mineral constraints as a temporary coordination problem with a sunset: circular economy policies, mining efficiency standards, alternative materials research, and strategic reserves are building exit pathways. The constraint has a genuine coordination function (allocating scarce minerals to highest-value uses) with enforcement (export restrictions, procurement standards) that is explicitly designed to sunset as alternatives mature and circular supply chains mature. Sunset horizon: 15-25 years as recycling infrastructure and alternative battery chemistries mature."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Resource-Exporting Nation",
+      "comment": "PERSPECTIVE 5: RESOURCE-EXPORTING NATION (TANGLED ROPE) \u2014 Coordinates domestic mineral production and global supply (genuine function) while extracting rent through monopoly/cartel power and supply leverage. Benefits from scarcity-driven price premiums but also faces coordination challenges (managing production, environmental costs, revenue stability). Experiences the constraint as both enabling (scarcity = high prices) and binding (climate pressure reduces long-term demand predictability, creates stranded asset risk). Active enforcement required to maintain supply agreements and price controls."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Extractive Institutional Legacy",
+      "comment": "PERSPECTIVE 6: EXTRACTIVE INSTITUTIONAL LEGACY (PITON) \u2014 Colonial-era resource concession agreements, multinational mining contracts, and opaque procurement processes persist despite their degraded function. These institutional arrangements maintain scarcity-based extraction while their original coordination rationale (capital mobilization for mining infrastructure) has largely been superseded by alternative financing. Theater ratio rises as states rhetorically commit to sustainable mining while preserving extraction-enabling contracts. Institutional inertia sustains arrangements that no longer serve stated coordination goals."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Physical Scarcity View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / PHYSICAL SCARCITY VIEW (MOUNTAIN) \u2014 From a geological/physical perspective, certain minerals (lithium, cobalt, rare earths) exist in limited crustal abundance with concentrated geographic distribution as a brute fact of Earth's geochemistry. This perspective sees the constraint as emerging naturally from planetary mineralogy \u2014 an immutable resource limit. However, this misses the structurally contingent elements: recycling rates, mining efficiency, alternative chemistries, and demand management are all policy-dependent variables. The mountain classification is a false summit naturalizing what are partly institutional and technological choices."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "recycling_viability_threshold",
+      "question": "At what recycling efficiency threshold do mineral constraints shift from structural scarcity to logistics-coordination problem?",
+      "resolution_mechanism": "Empirical measurement of battery recycling recovery rates and economics at scale; tracking of actual vs theoretical recycling potential for each critical mineral over 5-year interval",
+      "impact": "If recycling achieves > 90% recovery: constraint reclassifies from tangled_rope to rope (coordination dominates extraction). If recycling stalls below 60%: constraint becomes snare for importers (extraction dominates). Currently estimated 40-60% for lithium, 80-90% for cobalt \u2014 mixed signal.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Recycling efficiency threshold for constraint reclassification"
+    },
+    {
+      "id": "alternative_chemistry_breakthrough_probability",
+      "question": "What is the realistic probability and timeline for sodium-ion, solid-state, or other alternative battery chemistries to achieve cost and performance parity with lithium-ion?",
+      "resolution_mechanism": "Patent analysis, lab-to-market timelines, venture capital deployment, manufacturing pilot projects; tracking of cost curves and energy density improvements for leading alternative candidates",
+      "impact": "If breakthrough occurs within 5 years: scaffold sunset is real and imminent, constraint reclassifies to temporary coordination. If timeline extends beyond 15 years: scaffold classification becomes aspirational rather than structural \u2014 constraint remains extractive for longer horizon.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for alternative battery chemistry viability"
+    },
+    {
+      "id": "supply_cartel_durability",
+      "question": "Can resource-exporting nations maintain production coordination and price leverage as renewable energy deployment accelerates and recycling increases, or does growing supply create competitive pressure that breaks coordination?",
+      "resolution_mechanism": "Analysis of cartel behavior under demand growth vs saturation; comparison to historical commodity cartel collapse patterns; tracking of mining production levels, price volatility, and export agreement stability",
+      "impact": "If cartel sustains: constraint remains tangled_rope with high extraction for 15+ years. If competition emerges: constraint weakens, reclassifies toward rope, and scaffold sunset accelerates as supply abundance reduces scarcity premium.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Durability of resource-exporting nation supply coordination"
+    },
+    {
+      "id": "environmental_extraction_cost_internalization",
+      "question": "Do environmental and social costs of mining (water depletion, habitat destruction, labor exploitation, geopolitical leverage from resource dependence) get structurally internalized into mineral pricing, or do they remain externalized across borders and time horizons?",
+      "resolution_mechanism": "Tracking of environmental remediation costs, water scarcity premiums, labor standards compliance, and true social cost accounting; comparison of mineral prices under externality scenarios",
+      "impact": "If externalities internalized: effective cost of minerals increases substantially, reducing snare extraction severity for importing nations through economic mechanisms. If externalities remain externalized: extraction perpetuates across supply chain, constraint remains snare despite official 'fair trade' narratives.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether environmental and social costs of mining are internalized in pricing"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The energy transition requires deployment of renewable generation, storage, and electrified transport at scale \u2014 all of which depend on minerals with concentrated geographic supply: lithium (batteries), cobalt (battery cathodes), rare earths (wind turbines, permanent magnets), copper (grid infrastructure), and others. This creates a structural constraint where energy-transition-dependent nations must secure supplies from geographically concentrated sources, often controlled by state monopolies or oligopolies. The constraint exhibits a genuine coordination function (matching scarce mineral supply to global demand for energy transition) alongside asymmetric extraction (suppliers capture scarcity rents, lock in price premiums, and leverage geopolitical dependence). Unlike pure coordination, the constraint cannot be solved by information sharing or better matching algorithms \u2014 it requires actual mineral expansion, recycling infrastructure, or demand-side substitution. The theater ratio is moderate and rising: governments increasingly represent mineral constraints as a temporary logistics problem requiring coordination mechanisms (strategic stockpiles, procurement standards, circular economy mandates) while the underlying extraction mechanisms (supply concentration, long-term contracts, monopoly pricing) remain structurally intact.",
+    "key_agents": [
+      "Energy-Transition-Dependent Importing Nations: Primary victims (powerless/trapped) \u2014 locked into mineral dependency by technological path and climate urgency; face price extraction and supply disruption risk",
+      "Mining Companies: Primary beneficiaries (institutional/arbitrage) \u2014 capture scarcity premiums and long-term contract negotiation power; coordinate supply matching to demand",
+      "Renewable Energy Developers: Secondary victims/mixed (moderate/constrained) \u2014 compete for limited minerals and face price volatility; also benefit from renewable energy ecosystem growth",
+      "Climate and Materials Policy Coalition: Organized actors (organized/constrained) \u2014 perceive constraint as temporary problem with sunset via circular economy, alternative materials, and efficiency standards",
+      "Resource-Exporting Nations: Secondary beneficiaries with embedded extraction (institutional/constrained) \u2014 coordinate domestic production and global supply; benefit from scarcity premiums; face long-term demand uncertainty",
+      "Extractive Institutional Legacy: Institutional persistence mechanism (institutional/arbitrage) \u2014 colonial-era concessions and opaque contracts maintain scarcity-based extraction through inertia",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing policy-contingent scarcity as geological immutability"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Importing nations face genuine price extraction through monopoly/oligopoly control of supply and long-term contracting that locks in asymmetric terms. The extractiveness is not absolute (alternatives exist but require investment or time) and is partly justified as compensation for mining capital risk. The trajectory shows extractiveness rising from 0.42 to 0.58 over the interval as renewable deployment accelerates and supply expansion lags demand growth. Suppression (0.65): High. Barriers to alternatives are substantial: recycling infrastructure doesn't yet exist at scale; alternative battery chemistries are 5-15 years from commercial viability; demand-side substitution (smaller vehicles, slower transition) conflicts with climate goals; geographic supply concentration creates inelastic demand. Policy options exist (circular economy mandates, alternative chemistry R&D) but implementation is constrained by capital requirements and institutional inertia. Theater ratio (0.48, rising): Moderate. Initial theater is low because the constraint is still genuinely based on supply-demand mismatch (real scarcity). As recycling infrastructure and alternative chemistries mature, theater will rise \u2014 policy focus on 'sustainable mining' and 'responsible sourcing' will increase while actual material constraints decline. The rising trajectory reflects increasing performative content as the constraint's functional core weakens.",
+    "perspectival_gap": "The gap between importing nations (snare) and mining companies (rope) is maximal because they occupy opposite structural positions relative to the same constraint. Importing nation sees: supply lock-in, price extraction, leverage asymmetry (mining company can withhold supply, importing nation cannot withhold demand). Mining company sees: market failure (high-risk capital investment cannot be funded at competitive rates given price volatility), coordination value (long-term contracts reduce both parties' uncertainty), asymmetric benefit (premium for bearing supply risk). Neither perspective is false \u2014 they describe real, opposite experiences of the same constraint. The scaffold perspective (policy coalition) projects beyond both: as recycling scales and alternatives mature, the constraint's extraction mechanism weakens and coordination dominates. The piton perspective (institutional legacy) sees the constraint as already degraded \u2014 the colonial-era contracts and opaque procurement are performing governance functions they no longer exist to serve, sustained by institutional momentum rather than active necessity.",
+    "directionality_logic": "Directionality varies sharply across agents. Trapped importing nations (powerless/trapped) have maximum d \u2192 maximum f(d) \u2192 maximum experienced extraction. Mining companies (institutional/arbitrage) have minimum d (beneficiaries with exit) \u2192 minimum f(d) \u2192 negative experienced extraction (they benefit). Policy coalitions (organized/constrained) have moderate d (they can exit through policy change but at cost) \u2192 moderate f(d) \u2192 moderate experienced extraction. Resource exporters have mixed directionality: they are beneficiaries (d \u2248 0.20) via pricing power but also structurally locked (trapped exporting nation reclassified as constrained due to long-term demand risk) into mineral-dependent economy (d \u2248 0.65). The average across all positions produces d \u2248 0.48, which feeds \u03c7 computation. The sigmoid f(d) scales this to intermediate extracted value \u2014 not maximum snare extraction, not pure rope coordination, but mixed tangled rope.",
+    "mandatrophy_analysis": "The constraint avoids mandatrophy by clearly separating genuine coordination (supply-demand matching, risk allocation, capital mobilization) from extractive layering (monopoly pricing, supply lock-in, geopolitical leverage). The tangled_rope type correctly identifies that both are present: minerals do need to be produced and distributed (genuine coordination), and producers do extract monopoly rents above competitive return (genuine extraction). The constraint's extractiveness (0.58) is moderately high but not extreme (snare-level 0.66+) because alternatives do exist in principle \u2014 recycling can substitute for mining, alternative chemistries can reduce lithium dependency, efficiency can reduce total material requirements. The suppression is high (0.65) because barriers to these alternatives are substantial in the near term. The scaffold perspective's sunset clause is the mandatrophy resolution: the constraint is explicitly designed with an exit path (circular economy + alternative materials + efficiency) that should reduce extraction if realized. If recycling achieves >90% efficiency and alternative chemistries reach cost parity within the 15-year interval, the constraint reclassifies from tangled_rope toward rope; if recycling stalls and alternatives are delayed, it drifts toward snare. The omega variables address the key uncertainties that determine which trajectory occurs."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "grid_scale_energy_storage_bottleneck",
+      "renewable_geopolitical_supply_chain",
+      "circular_economy_maturity_lag"
+    ],
+    "dual_formulation_note": "Energy transition mineral constraints decompose into three structurally distinct constraints: (1) supply-demand coordination in mining (resource_allocation, \u03b5\u22480.30, rope), (2) geopolitical leverage in supply concentration (\u03b5\u22480.65, snare for importers), (3) circular economy infrastructure maturity (\u03b5\u22480.40, scaffold with sunset). This story integrates all three; the decomposition enables per-constraint policy analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.62
+    }
+  ]
+}

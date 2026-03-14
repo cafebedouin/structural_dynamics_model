@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "tls_version_fragmentation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tlsfrag"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "TLS Version Fragmentation and Protocol Ossification",
+    "topic_domain": "cybersecurity/internet_infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "legacy_client_operators",
+      "deployed_server_infrastructure"
+    ],
+    "victims": [
+      "security_standards_advancement",
+      "interoperability_innovation",
+      "new_client_deployments"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Security Standards Body",
+      "comment": "PERSPECTIVE 1: SECURITY STANDARDS ADVANCEMENT (SNARE) \u2014 Cannot exit the fragmentation trap. New security improvements (post-quantum cryptography, modern cipher suites) are blocked by the need to maintain compatibility with legacy TLS 1.0/1.1 clients. The standards body bears full cost of delayed modernization with no ability to coordinate a forced upgrade. Zero degrees of freedom: backwards compatibility is mandatory, forward progress is not."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Enterprise IT Operator",
+      "comment": "PERSPECTIVE 2: ENTERPRISE IT OPERATOR (TANGLED ROPE) \u2014 Constrained by installed base of legacy systems; upgrading all clients is expensive and carries downtime risk. Benefits from coordinated standards (TLS enables secure communication across heterogeneous networks). Mixed position: genuine coordination function (TLS solves a real problem) plus asymmetric extraction (must maintain compatibility with unpatched legacy systems owned by other organizations)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Infrastructure Owner",
+      "comment": "PERSPECTIVE 3: LEGACY INFRASTRUCTURE OWNER (ROPE) \u2014 Benefits from the fragmentation constraint: their unpatched TLS 1.0/1.1 systems continue to function despite security vulnerabilities. The constraint actively subsidizes their non-compliance. They experience TLS fragmentation as pure coordination benefit \u2014 their outdated clients remain functional without costly replacement. Arbitrage option: can delay modernization indefinitely while others bear upgrade costs."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Browser Vendor Coalition",
+      "comment": "PERSPECTIVE 4: BROWSER VENDOR COALITION (SCAFFOLD) \u2014 Organized actors (Chrome, Firefox, Safari, Edge) are actively sunsetting old TLS versions through client-side deprecation. See the fragmentation as a temporary coordination failure with a clear exit path: progressive client rollout removes support for TLS 1.0/1.1, forcing server-side modernization. Theater low because vendors openly communicate deprecation timelines. Sunset mechanism: when critical mass of clients drop old TLS support, servers must upgrade or lose connectivity. Estimated sunset: 5-10 years for global deployment."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The TLS 1.2 Maintenance Committee",
+      "comment": "PERSPECTIVE 5: TLS 1.2 MAINTENANCE COMMITTEE (PITON) \u2014 TLS 1.2 (released 2008) remains the institutional standard deployed at massive scale despite TLS 1.3 (2018) offering superior security and performance. The maintenance committee invests effort in bugfixes and clarifications to TLS 1.2, but the primary function has atrophied \u2014 modern deployments should be on 1.3. The constraint persists through institutional inertia: organizations have optimized around TLS 1.2, regulatory compliance is built around it, and wholesale replacement carries perceived risk despite 1.3 being superior. High theater ratio reflects performative maintenance of a degraded standard."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Backward Compatibility Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal perspective, backwards compatibility in network protocols is an immutable constraint: any protocol change risks breaking existing implementations, so compatibility layers must be maintained indefinitely. This perspective sees fragmentation as a law of distributed systems rather than a contingent institutional choice. However, the structural data contradicts this natural law framing \u2014 the constraint is fundamentally a coordination failure and social choice about upgrade incentives, not a physical law. The engine's false summit detector will identify this as naturalization of a contingent institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "critical_mass_threshold",
+      "question": "What percentage of global TLS traffic must shift to TLS 1.3+ to create irreversible pressure on remaining TLS 1.0/1.1 servers?",
+      "resolution_mechanism": "Measurement of global TLS version distribution over time; correlation with server deprecation events; analysis of when holdout servers begin failing at scale",
+      "impact": "If threshold < 40%: browsers/CDNs can force migration unilaterally. If threshold > 70%: long tail of legacy deployments persist indefinitely, keeping fragmentation active. If threshold = critical mass point, scaffold sunset becomes rope or snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Critical mass threshold for forcing legacy server upgrades"
+    },
+    {
+      "id": "ossification_mechanism",
+      "question": "Is TLS version fragmentation a temporary coordination problem or evidence of network protocol ossification \u2014 an irreversible hardening of deployed infrastructure?",
+      "resolution_mechanism": "Historical comparison with IPv4/IPv6 transition timelines; analysis of whether TLS 1.3 adoption trajectory matches or diverges from predicted replacement rate; post-mortem analysis of other protocol transitions (HTTP/2, QUIC adoption)",
+      "impact": "If temporary: scaffold sunset is real. If ossification: fragmentation becomes structural piton or snare indefinitely. Classification would shift from tangled_rope to snare as agent_power redistributes toward powerless.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether fragmentation is temporary coordination failure or irreversible protocol ossification"
+    },
+    {
+      "id": "client_vendor_coordination",
+      "question": "Can browser vendors maintain coordinated TLS version deprecation without collusion concerns, or do antitrust constraints prevent the coalition that would enforce the scaffold sunset?",
+      "resolution_mechanism": "Legal analysis of browser vendor coordination; analysis of past failures (e.g., HTTP/2 adoption delays); measurement of deprecation timeline consistency across vendors",
+      "impact": "If coordinated: scaffold sunset mechanism works as designed. If fragmented by antitrust: each vendor deprecates at different rates, replication groups fragment, and the constraint becomes harder to enforce. Scaffold classification becomes rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether browser vendor coalition can coordinate TLS deprecation without legal constraints"
+    },
+    {
+      "id": "embedded_system_exceptions",
+      "question": "Will IoT and embedded systems (routers, cameras, industrial controllers) running outdated TLS indefinitely create a structural exception that prevents full protocol migration?",
+      "resolution_mechanism": "Inventory of deployed embedded systems with fixed TLS versions; analysis of whether mission-critical embedded systems can be remotely updated; measurement of embedded system TLS version distribution",
+      "impact": "If exceptions are <5% of global traffic: can be isolated. If >20%: creates permanent fragmentation floor. Classification would shift: the snare would become a mountain (irreducible embedded legacy constraint).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether embedded systems create structural exception to TLS migration"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "TLS version fragmentation refers to the structural inability to deprecate legacy versions (TLS 1.0, 1.1, 1.2) despite security vulnerabilities and the availability of superior alternatives (TLS 1.3). This constraint emerges from a genuine coordination problem \u2014 ensuring secure communication across heterogeneous client/server populations \u2014 that has transformed into an extraction mechanism where legacy infrastructure operators avoid upgrade costs while modern deployments bear the overhead of maintaining compatibility. The constraint exhibits all six classification types depending on perspective, making it a diagnostic exemplar for how network ossification emerges from rational individual incentives. The theater ratio (0.58) reflects that much of the fragmentation maintenance is performative: security fixes are applied to TLS 1.2, but the primary function (secure communication) is better served by TLS 1.3. The increasing theater over time indicates the ritual is becoming more detached from function as TLS 1.3 adoption accelerates.",
+    "key_agents": [
+      "Security Standards Body (IETF): Victim (powerless/trapped) \u2014 cannot advance security standards due to mandatory backwards compatibility",
+      "Enterprise IT Operators: Mixed (moderate/constrained) \u2014 benefit from TLS coordination but constrained by legacy deployed base they don't fully control",
+      "Legacy Infrastructure Owners: Primary beneficiary (institutional/arbitrage) \u2014 capture value by avoiding upgrade costs; experience the constraint as pure coordination benefit",
+      "Browser Vendors (Chrome, Firefox, Safari, Edge): Organized actors (organized/constrained) \u2014 building exit pathway through coordinated deprecation; have partial agency but constrained by network effects",
+      "TLS 1.2 Maintenance Committees: Institutional actor (institutional/arbitrage) \u2014 maintain degraded standard through inertia; see their own process as performative",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing a contingent social choice as an immutable law of distributed systems"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high and rising. The constraint began as a genuine coordination mechanism (base 0.35) but has accumulated extractive overhead as it has aged. Modern deployments must maintain compatibility with TLS 1.0/1.1 despite having no legitimate security function \u2014 they are museum pieces kept alive by backwards compatibility requirements. The increasing trajectory (0.35 \u2192 0.52 over 15 years) reflects ossification: each new feature added to maintain 1.2/1.3 compatibility costs more, while the legacy versions become proportionally more extractive. Suppression (0.48): Moderate. Barriers to deprecation exist (deployed systems can't upgrade remotely, regulatory compliance is built around TLS 1.2, perceived risk in forced upgrades) but are not total. Browser vendors demonstrably have agency to deprecate versions; the suppression is sustained by coordination failure and organizational risk aversion rather than absolute technical barriers. Theater ratio (0.58, rising): Significant performative content. The TLS maintenance committees spend effort on TLS 1.2 bugfixes, but these are largely safety theater \u2014 the ecosystem should be on TLS 1.3. The rising trajectory reflects increasing mismatch between what the constraint ostensibly does (enable secure communication across versions) and what it actually does (subsidize non-compliance).",
+    "directionality_logic": "Each perspective's directionality is determined by whether the agent benefits from or bears costs of the fragmentation. Legacy infrastructure owners benefit from mandatory backwards compatibility (d \u2248 0.15, beneficiary + arbitrage exit \u2192 negative f(d) \u2192 they experience low extraction, actually subsidization). Enterprise IT operators bear mixed costs and benefits (d \u2248 0.50, constrained exit means moderate experienced extraction). The security standards body bears all costs with no exit (d \u2248 0.95, trapped victim \u2192 high f(d) \u2192 maximum experienced extraction). Browser vendors have partial agency to force migration (d \u2248 0.55, organized but constrained \u2192 moderate extraction). The analytical observer risks collapsing onto d \u2248 0.72 (canonical analytical), treating fragmentation as an observer-independent property rather than a contingent institutional choice.",
+    "perspectival_gap": "The constraint demonstrates maximal perspectival divergence. The legacy infrastructure owner sees pure coordination benefit (Rope) \u2014 their TLS 1.0 server continues to work without replacement cost. The browser vendor coalition sees a temporary problem being solved by active deprecation (Scaffold) \u2014 they have agency and a sunset mechanism. The TLS committee sees its own degraded ritual (Piton) \u2014 bugfixes on an aging standard. The enterprise operator sees mixed coordination and extraction (Tangled Rope) \u2014 the system both enables and constrains their operations. The security standards body sees pure extraction (Snare) \u2014 forced to maintain compatibility with insecure legacy versions that lock out security innovations. The analytical observer risks seeing an immutable natural law (Mountain) \u2014 backwards compatibility is inherent to distributed systems \u2014 but the structural data reveals this as a false summit: the fragmentation is a social choice about upgrade incentives and risk aversion, not a physical law.",
+    "mandatrophy_analysis": "The constraint resolves the mandatrophy by demonstrating that fragmentation is neither pure coordination (that would be Rope classification from all perspectives) nor pure extraction (that would be Snare from all perspectives). It is genuinely hybrid: the coordination function (enabling heterogeneous client/server communication) is real and necessary, but the extraction mechanism (subsidizing non-compliance) is also real and growing. The scaffold perspective shows that the constraint can be sunset through coordinated client-side deprecation, revealing that the 'inevitable' fragmentation is actually contingent on institutional choices (browser vendors coordinating vs. not coordinating). The piton perspective shows that maintenance effort persists despite functional degradation, revealing theatrical elements. No single type captures the full structure \u2014 the presheaf of perspectives (snare + rope + scaffold + piton + mountain) together reveal the constraint's true character: an aging coordination mechanism becoming extractive as it ossifies."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "http2_adoption_barriers",
+      "certificate_authority_coupling",
+      "internet_routing_path_dependencies"
+    ],
+    "dual_formulation_note": "TLS version fragmentation can be decomposed into two structurally distinct constraints: (1) the genuine coordination problem of heterogeneous client/server populations (\u03b5 \u2248 0.15, Rope), and (2) the institutional decision to maintain backwards compatibility indefinitely (\u03b5 \u2248 0.52, Tangled Rope). This story represents the combined effect. See affected_constraints for related network dependencies."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

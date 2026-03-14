@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "stepfamily_servitude_authority",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "stepfam"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Stepfamily Servitude Authority and Blended Household Labor Asymmetry",
+    "topic_domain": "interpersonal/family_dynamics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "biological_parent_in_blended_unit",
+      "stepparent_authority_position"
+    ],
+    "victims": [
+      "stepchild_labor_extraction",
+      "household_emotional_labor_asymmetry"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Stepchild in Early Adolescence",
+      "comment": "PERSPECTIVE 1: STEPCHILD IN EARLY ADOLESCENCE (SNARE) \u2014 Faces full extraction with minimal coordination benefit. Trapped by dependency on household, legal guardianship, and emotional bonds to biological parent. Suppression is severe: exit means abandoning primary attachment figure, loss of housing, school disruption, social isolation. Experiences systematic labor extraction (chores, childcare, emotional regulation) with no reciprocal care or voice in household decisions. The stepparent authority is legitimized through marriage to biological parent, creating structural coercion. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Biological Parent Balancing Role",
+      "comment": "PERSPECTIVE 2: BIOLOGICAL PARENT MEDIATING (TANGLED ROPE) \u2014 Genuinely coordinates household function (finances, caregiving, conflict management between stepparent and stepchild) while also extracting from stepchild through enforcing stepparent authority. High constraint costs (relationship tension, loyalty conflicts, guilt) alongside genuine benefit from household stability and partner support. Exit is constrained by marriage commitment, fear of losing custody, financial interdependence, and desire to create functional family unit. Experiences mixed coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Stepparent in Authority Position",
+      "comment": "PERSPECTIVE 3: STEPPARENT IN AUTHORITY POSITION (ROPE) \u2014 Experiences the constraint as coordination: organizing household labor, establishing boundaries, creating family cohesion. Benefits from legitimacy through marriage to biological parent and cultural norms treating stepparent authority as natural. Can exit (remarriage dissolution, relocation) at moderate cost compared to biological child. Extracted value (labor from stepchild, authority recognition) appears to them as coordinated household function, not extraction. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Older Stepchild or Adolescent Organizing Self",
+      "comment": "PERSPECTIVE 4: OLDER STEPCHILD/ADOLESCENT WITH AGENCY (TANGLED ROPE) \u2014 As stepchild approaches adulthood, develops capacity to organize (negotiate boundaries, threaten exit, seek external support). Constraint becomes mixed: still experiences extraction but develops partial escape pathways (after-school employment, selective compliance, peer refuge, institutional mediation through schools). Constrained exit (leaving creates relational rupture, college funding loss, loss of identity investment in family), but exit is possible at higher cost. Organized agency enters the picture, lowering effective extraction from snare toward tangled rope range."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Cultural Authority Narrative (Degraded Parental Role)",
+      "comment": "PERSPECTIVE 5: CULTURAL AUTHORITY NARRATIVE (PITON) \u2014 The stepfamily structure inherits Puritan/Victorian parental authority (stepparent as full authority figure, obedience obligation, labor contribution as moral duty) while actual institutional support for that authority has degraded. Family courts now recognize stepchild autonomy, schools track welfare, child abuse norms have shifted. The stepparent authority is maintained through institutional inertia and theater (calling labor assignments 'chores' and 'responsibilities' rather than 'unpaid work'; framing authority as 'love' and 'structure'). The theater ratio (0.65) reflects the gap between the performed role (concerned stepparent maintaining household) and actual mechanism (labor extraction justified by inherited authority narrative). Functional verification has declined \u2014 the parental authority once enforced through total institutional support (church, law, social isolation) now relies on family-internal enforcement."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law Risk)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW RISK (MOUNTAIN) \u2014 From a civilizational/universal perspective, stepfamily authority appears to be an immutable feature of human kinship and household organization: blended families always require some hierarchy, authority differentials are inherent to adult-child relationships, labor distribution is a natural problem of multi-generational cohabitation. This perspective risks naturalizing what is actually a contingent institutional arrangement inherited from parental authority systems designed for biological families. However, structural data reveals this as a false summit: the extraction flows from power asymmetries and legitimacy deficits specific to stepfamily structures, not from immutable kinship logic. The analytical observer must recognize its own risk of naturalizing institutional arrangements."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the measured suppression primarily structural (dependency on household, housing insecurity, school disruption from exit) or primarily internalized (stepchild's identity fusion with family unit, internalized obligation narratives, identity lock preventing perception of exit as legitimate)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: interview stepchildren 2-5 years after leaving household regarding ease of boundary-setting, shame/guilt persistence, autonomy development. If suppression persists after structural barriers are removed, classification as partially internalized. If suppression drops immediately upon exit, classification as primarily structural.",
+      "impact": "If primarily structural: suppression (0.68) is accurate to actual barrier height; snare classification stands. If primarily internalized: effective suppression is higher than measured (target carries internalization with them); constraint boundary extends beyond household (identity_locked exit captures the mechanism better than trapped).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs internalized suppression mechanism in stepfamily authority"
+    },
+    {
+      "id": "stepparent_authority_legitimacy_source",
+      "question": "Does the stepparent's authority derive primarily from the biological parent's delegation (conditional legitimacy, revocable, relationally dependent) or from culturally inherited parental authority narratives (treated as intrinsic to the stepparent role, independent of biological parent's active delegation)?",
+      "resolution_mechanism": "Ethnographic interviews with stepparent-stepchild dyads regarding source of obedience (fear of consequences vs respect/love vs internalized duty vs deference to biological parent's wishes). Analysis of household negotiation patterns when biological parent is absent vs present. Cultural discourse analysis on stepparent authority narratives in parenting media.",
+      "impact": "If delegated (conditional): authority is contingent on biological parent's active endorsement; removing that endorsement rapidly degrades stepparent power. If inherited (intrinsic): authority feels naturalized and self-justifying; stepchild obedience persists even without biological parent enforcement. Classification shifts from snare (extractive authority) toward tangled_rope if legitimacy is conditional.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Source of stepparent authority legitimacy (delegated vs inherited)"
+    },
+    {
+      "id": "coordination_function_household_stability",
+      "question": "How much of the extracted labor (chores, emotional regulation, secondary childcare) actually contributes to genuine household coordination vs serving as proxy control mechanism (obedience extraction disconnected from functional need)?",
+      "resolution_mechanism": "Comparative household function analysis: stepfamilies with high labor extraction vs stepfamilies with low extraction on dimensions of financial stability, meal preparation, child supervision, household maintenance quality, emotional atmosphere. Identify whether extraction level correlates with actual need or with stepparent authority enforcement.",
+      "impact": "If extraction matches functional need (high-extraction households are more complex, require more labor): constraint is tangled_rope at base level. If extraction is decoupled from need (low-complexity households still demand high extraction): constraint is snare at base level; tangled_rope is false classification masking pure extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether extracted labor serves coordination or control"
+    },
+    {
+      "id": "biological_parent_exit_capacity_myth",
+      "question": "Is the biological parent's perceived constraint (inability to leave stepparent relationship without losing stepchild cooperation/stability) real or performative? Can biological parents actually exit stepparent relationships without proportional loss of household function or stepchild wellbeing?",
+      "resolution_mechanism": "Longitudinal outcome tracking: biological parents who leave stepparent relationships on dimensions of household function, stepchild grades/behavior, co-parenting stability, child reports of wellbeing. Separate genuine functional dependence on stepparent from fear-based or identity-based perceived dependence.",
+      "impact": "If exit truly degrades outcomes: biological parent's constraint is real; tangled_rope classification for biological parent stands. If outcomes remain stable: biological parent's constraint is identity-locked or performative; classification shifts to constrained or mobile (revealing that they enforced extraction partly to maintain perceived household stability that didn't actually require that enforcement).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether biological parent actually needs stepparent extraction for household function"
+    },
+    {
+      "id": "stepchild_identity_fusion_threshold",
+      "question": "At what age/stage does stepchild identity fusion with blended family unit peak, and does it prevent perception of exit as legitimate beyond structural barriers?",
+      "resolution_mechanism": "Longitudinal identity interviews with stepchildren age 8-25 on self-concept development, family identity centrality, perception of exit legitimacy. Identify age at which identity_locked exit becomes observable (identity fusion makes exit psychologically unavailable even when structurally mobile).",
+      "impact": "If identity fusion is strong (early adolescence through late teens): stepchild experiences identity_locked exit in addition to trapped/constrained structural barriers; suppression is compounded. If identity fusion is weak (childhood stages, or post-18 stages): exit is primarily constrained/trapped by material barriers, not psychological; classification adjusts downward on internalization dimension.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Stepchild identity fusion with blended family and exit perception"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.67
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "Stepfamily servitude authority represents a structural constraint operating at the intersection of kinship, household organization, and power asymmetries inherent to blended families. The constraint exhibits a complex perspectival landscape where the same structural phenomenon \u2014 the stepchild's position in a household with limited exit options and asymmetric authority \u2014 appears as pure extraction (snare) from the stepchild's perspective, as mixed coordination and extraction (tangled rope) from the biological parent's perspective, as straightforward coordination (rope) from the stepparent's perspective, and risks being naturalized as an immutable feature of family structure (mountain) from the analytical observer's perspective. The constraint is distinct from biological parent-child authority because the legitimacy of stepparent authority is structurally fragile: it depends entirely on the biological parent's active delegation and could be revoked through that parent's exit or redirection. This conditional legitimacy differentiates it from inherited parental authority but also creates the primary extraction mechanism \u2014 enforcement of authority without corresponding duty of care or institutional backing. The measurements show increasing extractiveness and theater ratio over the interval (0-9 years, roughly the early-to-mid adolescence period of a stepchild), reflecting accumulation of labor demands and increasing divergence between performed parental care and actual authority enforcement as the stepchild develops cognitive capacity to recognize the asymmetry.",
+    "key_agents": [
+      "Stepchild (early-to-mid adolescence): Primary victim (powerless/trapped) \u2014 bears extraction without reciprocal care; lacks exit options; subject to stepparent authority that lacks independent institutional legitimacy",
+      "Biological Parent (adult): Secondary victim and coordinator (moderate/constrained) \u2014 genuinely coordinates household while enforcing stepparent authority on stepchild; trapped by marriage commitment, custody concerns, and guilt dynamics",
+      "Stepparent (adult, authority position): Primary beneficiary (institutional/arbitrage) \u2014 derives authority from marriage to biological parent; benefits from household labor and compliance; can exit at moderate cost relative to stepchild",
+      "Older Stepchild/Adolescent (age 14+): Emerging organized agent (organized/constrained) \u2014 develops capacity to negotiate, threaten exit, seek external support; constraint morphs from snare toward tangled rope as agency emerges",
+      "Cultural Authority Narrative (civilizational): Piton perspective (institutional/arbitrage) \u2014 inherited parental authority frameworks applied to stepfamily context; maintains legitimacy through theater and inertia despite institutional degradation of actual authority support",
+      "Analytical Observer (universal scope): Risks false summit (analytical/analytical) \u2014 temptation to naturalize contingent institutional arrangements as immutable kinship logic"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The stepchild faces systematic labor extraction (household chores, secondary childcare, emotional regulation) alongside suppression of voice in household decisions. However, extractiveness is not maximal (0.70+) because some genuine coordination occurs: household stability does require labor distribution, some stepparent-stepchild relationships develop affection alongside authority, and the stepchild's labor does contribute to household functioning (not pure parasitic extraction). The measurement trajectory shows increasing extractiveness from 0.35 to 0.60 as the stepchild enters adolescence and becomes capable of more complex labor (emotional regulation, adolescent management, household planning) and more clearly perceives the asymmetry. Suppression (0.68): Moderate-high. Multiple barriers to exit exist: housing insecurity (stepchild cannot independently afford housing), school disruption (exit means changing schools, social networks), emotional bonds to biological parent and possibly stepsiblings, legal guardianship, and cultural/family shame around rejecting family unit. However, suppression is not total (0.90+) \u2014 stepchildren do have partial exit pathways: negotiation with biological parent, school counselor intervention, extended family support, employment (older adolescents), and eventual aging-out of household. Theater ratio (0.65): Moderate-high. The stepparent performs the role of concerned authority figure organizing household, setting rules, maintaining structure \u2014 framing labor demands as 'chores' and 'responsibilities' (child development language) and authority as 'love' and 'boundaries' (parental care language). The performed narrative is genuine parenting, but actual mechanism is authority enforcement without corresponding institutional duty of care (stepparent has no legal obligation of care, inheritance rights, or decision-making authority if biological parent exits the relationship). The gap between performed role and actual institutional position creates theater. The theater increases over time (0.55 to 0.65) as the stepchild's cognitive capacity increases and the gap between performance and reality becomes more apparent.",
+    "perspectival_gap": "The gap between the stepchild's snare classification and the stepparent's rope classification is the diagnostic signal. Both agents interact with the same constraint, but their structural positions (beneficiary vs victim, arbitrage exit vs trapped exit) produce incompatible classifications. The gap reveals that the constraint's classification is observer-dependent \u2014 the same authority system that solves a genuine coordination problem (household organization) for the beneficiary functions as pure extraction for the victim. This is the mandatrophy mechanism: the beneficiary genuinely solves coordination, so rope classification is structurally honest; the victim genuinely experiences extraction, so snare classification is structurally honest; but both cannot be 'the' classification of the constraint. The resolution is that the constraint IS tangled rope at the base level (has both coordination and asymmetric extraction) \u2014 the snare and rope perspectives are partial views of a hybrid system. The biological parent, positioned between beneficiary and victim, perceives the tangled rope directly.",
+    "directionality_logic": "Each agent's directionality value (d) is computed from their beneficiary/victim status and exit options. The stepchild-as-victim-with-trapped-exit derives d \u2248 0.95 (maximum target), producing f(d) \u2248 1.42 (maximum experienced extraction multiplier). The stepparent-as-beneficiary-with-arbitrage-exit derives d \u2248 0.05 (near-full beneficiary), producing f(d) \u2248 -0.12 (extraction runs toward them). The biological parent-as-mixed-coordinator-and-enforcer-with-constrained-exit derives d \u2248 0.55 (symmetric), producing f(d) \u2248 0.75 (moderate experienced extraction). The older adolescent-as-victim-with-increasing-exit-capacity derives d \u2248 0.70 (moderating from the stepchild's 0.95 as agency develops), producing f(d) \u2248 1.00 (moderate extraction). These flows explain the perspectival classifications: high d agents (victims) perceive snare; low d agents (beneficiaries) perceive rope; medium d agents (mixed roles) perceive tangled rope. The biological parent's constraint derives from enforcer role (benefits from stepparent partnership) and enforced role (bears cost of stepchild resentment, relationship tension); this dual position produces mixed classification.",
+    "mandatrophy_analysis": "This constraint demonstrates the mandatrophy resolution mechanism through the biological parent's perspective. The biological parent genuinely experiences coordination (household stability, financial interdependence, partnership support) alongside genuine extraction (enforcing asymmetric authority on stepchild, bearing conflict costs, managing loyalty triangulation). Neither rope nor snare alone captures this experience \u2014 both are present. The classification cannot collapse to snare (which would deny the real coordination benefit) or rope (which would deny the real extraction cost on stepchild). The base classification is tangled_rope: it has both a genuine coordination function (household organization, resource allocation, collective childcare) and asymmetric extraction (stepchild bears labor and authority without reciprocal voice or care obligation). The stepchild perceives snare because they bear extraction without perceiving coordination benefit (household stability feels imposed, not jointly created). The stepparent perceives rope because they perceive coordination benefit without bearing the extraction cost (authority feels like functional role, not enforced asymmetry). The biological parent perceives the actual structure: tangled rope. The mandatrophy is resolved by recognizing that indexical classification is structurally honest \u2014 different observers genuinely experience different classification types based on their structural position, and the base constraint is the hybrid that all their positions depend on."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "blended_family_loyalty_triangulation",
+      "stepchild_identity_development_institutional_capture"
+    ],
+    "dual_formulation_note": "Stepfamily servitude authority decomposes into two structurally distinct constraints: (1) household labor extraction (this story, \u03b5\u22480.58), focusing on material labor asymmetry and authority mechanisms; (2) emotional loyalty triangulation (linked story, \u03b5\u22480.42), focusing on identity formation and affective entanglement. Each has distinct measurement trajectories and resolution pathways. This story addresses the extraction mechanism; the linked story addresses the psychological lock mechanism. Both operate simultaneously but have different dominant mechanisms (power asymmetry vs identity fusion) and different exit pathways (renegotiating authority delegation vs identity frame disruption)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.22
+    }
+  ]
+}

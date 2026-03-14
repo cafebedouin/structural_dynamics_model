@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "network_effects_concentration",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "neteff"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Network Effects Concentration in Digital Platforms",
+    "topic_domain": "economics/technology/digital_platforms",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operator",
+      "early_adopters"
+    ],
+    "victims": [
+      "new_entrant_competitors",
+      "consumer_choice_diversity",
+      "open_protocol_development"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Consumer Lock-In Victim",
+      "comment": "PERSPECTIVE 1: CONSUMER LOCK-IN (SNARE) \u2014 Individual users cannot exit despite degrading service because network effects create switching costs that exceed individual utility. All friends, colleagues, and professional contacts are on the dominant platform. Exit requires coordinating millions of users simultaneously \u2014 impossible. Maximum extraction from this structural position: platform captures attention, data, and behavioral surplus while suppressing alternatives."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The New Entrant Competitor",
+      "comment": "PERSPECTIVE 2: NEW ENTRANT COMPETITOR (SNARE) \u2014 Cannot compete despite better product design because network effects create winner-take-most dynamics. Users will not switch to superior alternative without network presence. Entrant faces cold-start problem with no path to critical mass. Extraction mechanism: network effects act as a moat that suppresses competitive entry regardless of relative merit. Suppression is structural \u2014 the entrant's exit option (pivot to different market) is always available but the market they actually want is sealed."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Complementary Service Provider",
+      "comment": "PERSPECTIVE 3: COMPLEMENTARY SERVICE PROVIDER (TANGLED ROPE) \u2014 Depends on platform access for user acquisition (genuine coordination function: the platform aggregates users at scale). But platform operator can extract terms unilaterally: API restrictions, revenue share changes, sudden deplatforming. High switching costs within each region; moderate mobility across geographic markets. Extraction is real but the relationship also enables services that could not exist without platform scale. This is coordination with asymmetric control."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 4: PLATFORM OPERATOR (ROPE) \u2014 Experiences network effects as a coordination mechanism: connecting more users creates value for all existing users (and for the operator). The operator can arbitrage across jurisdictions, switch between monetization models, and exit individual markets without losing core business. The constraint itself (network effects) is the operator's primary economic asset. Experiences the constraint as pure coordination with externally captured value."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Interoperability Coalition",
+      "comment": "PERSPECTIVE 5: INTEROPERABILITY COALITION (TANGLED ROPE) \u2014 Organized agents (regulators, open-source communities, protocol advocates) see network effects as a coordination problem with an extractive overlay. Genuine coordination benefit exists: users want network density. But platform operator has extracted exclusionary control through API lock-in, data portability restrictions, and litigation against interoperability. Coalition has power to negotiate but faces suppression from network effects themselves (if we interoperate, does the network become less dense?). Constrained rather than trapped because coalition has agency and exit paths (regulation, forking, protocol development)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From first principles, network effects are a mathematical property of communication networks: value scales with user count. This creates unavoidable winner-take-most dynamics \u2014 a fundamental constraint of network topology, not institutional choice. However, this mountain classification is REJECTED by the structural data: network effects alone do not determine concentration. OpenStandards (SMTP, HTTP, DNS) have universal network effects but remain open and competitive. The difference is architecture: closed platform vs open protocol. The constraint is not network effects per se but PROPRIETARY network effects. This is institutional, not natural."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "closed_vs_open_network_distinction",
+      "question": "Is the extraction driven by network effects themselves or by proprietary architecture that prevents interoperability?",
+      "resolution_mechanism": "Comparative analysis: SMTP/email (network effects + open protocol) vs Facebook (network effects + closed platform). If open protocols with equivalent scale show lower extraction, the mountain view is false. Network effects alone are not sufficient to cause concentration.",
+      "impact": "If proprietary architecture is the differentiator: the constraint is institutional/economic (Tangled Rope), not natural (Mountain). Classification shifts from immutable to contestable. Policy interventions (interoperability requirements, data portability) become structurally meaningful.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether extraction is inherent to network effects or contingent on proprietary architecture"
+    },
+    {
+      "id": "switching_cost_decomposition",
+      "question": "What fraction of switching costs are inherent network coordination costs vs. platform-imposed lock-in mechanisms?",
+      "resolution_mechanism": "Behavioral analysis: measure user attrition when switching costs are artificially reduced (data export tools, interoperability, bridge protocols). Track whether users exit when friction is removed or whether genuine network lock-in persists.",
+      "impact": "If majority of switching costs are platform-imposed (API restrictions, data silos, social graph lock-in): suppression metric should increase, reclassifying from Tangled Rope toward Snare. If majority are genuine network coordination costs: suppression metric is appropriate, classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Decomposition of switching costs: network effects vs. platform lock-in"
+    },
+    {
+      "id": "early_adopter_extraction_fairness",
+      "question": "Are early adopters justified in capturing network value, or does this constitute extractive privileging?",
+      "resolution_mechanism": "Normative framework: compare with other coordination mechanisms (e.g., open-source projects with equal contributor reward). Establish whether network-value capture creates Pareto-suboptimal outcomes (some users have lower utility than in competitive equilibrium despite network effects).",
+      "impact": "If early adopters capturing disproportionate value is fair: beneficiary classification is correct, extraction is justified compensation for risk. If it constitutes unjustified rent extraction: victims list should include 'later users' or 'consumer surplus', and suppression metric should account for this.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Fairness of early adopter value capture under network effects"
+    },
+    {
+      "id": "regulatory_intervention_effectiveness",
+      "question": "Can interoperability requirements (DMA, DSA) reduce network effects concentration without destroying the network's coordination function?",
+      "resolution_mechanism": "Post-regulation empirical analysis: measure user growth on interoperable competitors, data portability uptake, protocol bridge effectiveness. Track whether open protocols achieve critical mass under regulatory pressure.",
+      "impact": "If regulatory intervention succeeds: Scaffold classification becomes viable (sunset: network effects concentration is temporary, solvable through interoperability). If it fails or reduces overall network value: Snare or Mountain classification is correct \u2014 the extraction mechanism is structurally unresolvable.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Effectiveness of interoperability mandates in reducing concentration"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Network effects create a structural coordination problem: users benefit from joining larger networks, and platforms benefit from network density. This genuine coordination function coexists with an extractive overlay: proprietary architecture prevents interoperability, converting coordination benefits into platform-operator rents. The constraint exemplifies Tangled Rope classification because both elements are real. The platform provides genuine value through network coordination (users do want larger networks), but this value is captured asymmetrically because the platform has suppressed alternative architectures. The measurement trajectory shows extractiveness increasing over time (0.25 \u2192 0.58) as the network matures and lock-in strengthens, while theater_ratio remains relatively stable and low. This contrasts with other Tangled Rope constraints (verification bottleneck) where theater rises as functional value declines. Here, theater stays low because the platform maintains a genuinely functional coordination service \u2014 the extraction is not hidden behind performative theater but explicit in terms changes and API restrictions.",
+    "key_agents": [
+      "Platform Operator: Primary beneficiary (institutional/arbitrage) \u2014 captures network value through scale, user data, and vendor lock-in; can exit individual markets while retaining core business",
+      "New Entrant Competitors: Primary victim (powerless/trapped) \u2014 face insurmountable network effects barrier; cannot compete despite product superiority; trapped at global scope",
+      "Consumers: Primary victim (powerless/trapped) \u2014 locked into platform despite network effects becoming less valuable; cannot coordinate exit without others exiting simultaneously",
+      "Complementary Service Providers: Secondary victim (moderate/constrained) \u2014 depend on platform for user access but face unilateral extraction of terms through API changes and revenue share modifications",
+      "Interoperability Coalition: Organized agent (organized/constrained) \u2014 regulators, open-source communities, and protocol advocates with power to negotiate but facing suppression from both network effects and platform control",
+      "Early Adopters: Secondary beneficiary (moderate/mobile) \u2014 captured early network value but increasingly constrained as platform extracts from later cohorts"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Network effects create genuine coordination value, but proprietary architecture extracts a substantial rent on top of legitimate network externalities. The platform operator can demand unilateral terms changes because users cannot coordinate a switch. The 0.58 value reflects that the extraction is significant but not absolute \u2014 the platform still provides real coordination service. Suppression (0.68): High. Multiple overlapping suppression mechanisms: (1) cold-start problem makes entry mathematically impossible for competitors, (2) switching costs are deliberately engineered through API lock-in and data silos, (3) litigation against interoperability attempts, (4) acquisition of potential competitors. Theater ratio (0.45): Low-moderate. The platform maintains genuine functional coordination service, so theater is not high. But increasing amounts of platform activity are extractive (data monetization, attention capture, algorithmic manipulation) rather than coordinative. Theater rises slowly as functional value plateaus and extractive mechanisms intensify. Claimed type (Tangled Rope): Requires both genuine coordination function AND asymmetric extraction. Network effects provide the coordination; proprietary architecture provides the extraction. Both are structural and real.",
+    "perspectival_gap": "The gap between platform operator (Rope) and new entrant (Snare) is maximum \u2014 the same constraint appears as coordination to one and extraction to the other. This gap is diagnostic of Tangled Rope at the analytical level: the constraint genuinely coordinates (network effects are real) AND genuinely extracts (proprietary lock-in is real). The gap reveals that the platform's 'this is just how networks work' framing naturalizes what is actually a choice. The interoperability coalition's Tangled Rope classification uses constrained exit rather than trapped, which is correct \u2014 they have institutional power and exit paths (regulation, forking, protocol development) that consumers and new entrants lack. This differentiation is why the coalition sees the constraint as resolvable (Scaffold thinking) rather than absolute (Snare thinking).",
+    "directionality_logic": "Directionality for each agent is derived from their position relative to extraction flow and their exit capacity. Platform operators are beneficiaries with arbitrage-level exit (can exit individual markets, can pivot to other services) \u2192 low d \u2192 negative effective extraction. New entrants are victims with trapped-level exit (network effects are mathematically insurmountable) \u2192 high d \u2192 high \u03c7. Consumers are victims with trapped-level exit (cannot exit without coordinating millions) \u2192 high d \u2192 high \u03c7. Complementary providers are partially victims with constrained-level exit (can exit the specific platform but not the category) \u2192 moderate-high d \u2192 moderate \u03c7. Interoperability coalition is organized with constrained exit (has power to negotiate but faces suppression) \u2192 moderate d \u2192 moderate \u03c7. The engine derives these d values from the beneficiary/victim declarations and exit options; the commentary reconstructs the logic chain for transparency.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by distinguishing network effects (natural/mathematical) from proprietary architecture (institutional/choice). Network effects alone do NOT require extraction (SMTP/email prove this). Proprietary architecture PLUS network effects create Tangled Rope. The analytical observer's Mountain classification (network effects are immutable natural law) is a FALSE SUMMIT \u2014 it naturalizes an institutional choice. The resolution mechanism: if interoperability removes proprietary barriers while preserving network effects, the Snare and Tangled Rope classifications are reclassified as Rope or Scaffold, and the Mountain is exposed as false naturalization. The constraint is NOT immutable; it is institutional and contestable. Current classification (Tangled Rope) reflects the actual state: both coordination and extraction are present, real, and structurally interdependent in the current institutional design."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_monopoly_gatekeeping",
+      "algorithmic_attention_extraction",
+      "data_portability_restriction"
+    ],
+    "dual_formulation_note": "Network effects concentration is upstream of several specific platform extraction mechanisms (gatekeeping, attention capture, data restriction). The upstream constraint (network effects) has \u03b5=0.58 (Tangled Rope: coordination + extraction coexist). Downstream constraints decompose the extraction mechanism into specific vectors. All three downstream constraints have higher \u03b5 values and stricter Snare/Piton classifications because they represent pure extraction layers atop the network effects coordination base."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

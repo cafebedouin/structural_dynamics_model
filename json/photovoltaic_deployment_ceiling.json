@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "photovoltaic_deployment_ceiling",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pv_deploy"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Photovoltaic Deployment Ceiling: Grid Integration and Market Extraction",
+    "topic_domain": "energy_infrastructure/renewable_transition",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_utilities",
+      "grid_operators",
+      "interconnection_gatekeepers"
+    ],
+    "victims": [
+      "distributed_solar_developers",
+      "grid_resilience",
+      "decentralization_potential"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Distributed Solar Developer",
+      "comment": "PERSPECTIVE 1: DISTRIBUTED SOLAR DEVELOPER (SNARE) \u2014 Faces interconnection queues lasting 5-10 years, upfront study costs ($5k-$50k), and arbitrary technical requirement escalation. Cannot exit: investment is stranded without grid connection. Maximum extraction from powerless position with no alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Regional Grid Operator",
+      "comment": "PERSPECTIVE 2: REGIONAL GRID OPERATOR (TANGLED ROPE) \u2014 Faces genuine coordination problem (managing variable renewable inflows) and also benefits from bottleneck enforcement (extended power purchase agreements, ratepayer cost recovery). Constrained by technical feasibility and regulatory mandates; some agency but significant extraction asymmetry."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Incumbent Utility",
+      "comment": "PERSPECTIVE 3: INCUMBENT UTILITY (ROPE) \u2014 Experiences the constraint as coordination of their own essential function: maintaining grid stability. Captures extraction through extended cost-recovery periods and avoided stranded asset write-downs. Net beneficiary with full arbitrage options (can lobby, restructure rates, acquire distributed capacity)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Grid Modernization Coalition",
+      "comment": "PERSPECTIVE 4: GRID MODERNIZATION COALITION (SCAFFOLD) \u2014 Organized agents (battery manufacturers, smart-inverter vendors, distribution companies) see the bottleneck as a temporary coordination failure solvable via technical standards (IEEE 1547, UL 4703) and distributed intelligence. Sunset visible in 10-15 years as hardware and software commoditize; extraction is tolerated because the constraint is perceived as diminishing."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Large Solar Developer (Utility-Scale)",
+      "comment": "PERSPECTIVE 5: LARGE SOLAR DEVELOPER (TANGLED ROPE) \u2014 Powerful actors with resources for extended queue navigation and transmission-level interconnection. Still faces extraction (higher upfront costs, delayed revenue) but also benefits from barrier to distributed competition. Mixed experience: extraction is present but navigable for well-capitalized actors."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Interconnection Study Process",
+      "comment": "PERSPECTIVE 6: INTERCONNECTION STUDY PROCESS (PITON) \u2014 The formal process (impact studies, upgrade requirements, cluster studies) performs a legitimizing ritual: appears to ensure grid safety but has degraded in function as solar deployment accelerated beyond the process's designed capacity. Theater ratio high (0.64) because most queue delays are administrative batching and cost allocation theater rather than actual technical analysis. Maintained through institutional inertia despite low correlation between study rigor and actual interconnection success."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Physical Limits View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / PHYSICAL LIMITS VIEW (MOUNTAIN) \u2014 From a long-horizon universal perspective, inertial grids have fundamental physical limits on non-synchronous power penetration: dynamic stability, harmonic distortion, and frequency response cannot be overcome by administrative process. This view naturalizes the constraint as immutable physics. However, structural data reveals this as a false summit: the 'physical limit' is actually a contingent design choice (AC synchronous grids). Alternative grid architectures (DC microgrids, hybrid AC/DC, synchronverters) exist but are excluded by incumbent technology lock-in, not by physics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technical_vs_regulatory_bottleneck",
+      "question": "Is the deployment ceiling driven by genuine technical grid stability limits or by regulatory/administrative barriers masquerading as technical requirements?",
+      "resolution_mechanism": "Comparative analysis: interconnection success rates in deregulated vs regulated markets; grid simulation studies showing actual stability limits vs actual utility upgrade requirements; pilot programs with streamlined interconnection procedures",
+      "impact": "If technical: mountain classification is correct and ceiling reflects unavoidable physics. If regulatory: constraint is tangled_rope with artificially suppressed extraction (utilities maintain overhead as policy choice). Current evidence suggests 60-70% regulatory, 30-40% technical.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical vs regulatory bottleneck composition"
+    },
+    {
+      "id": "alternative_grid_architecture_viability",
+      "question": "Are synchronous AC grid requirements (driving the current deployment ceiling) fundamentally necessary or a technology lock-in choice?",
+      "resolution_mechanism": "Technical analysis of DC microgrids, hybrid AC/DC architectures, and synchronverter solutions; cost comparison to traditional grid upgrade; deployment success in demonstration projects",
+      "impact": "If lock-in: the mountain perspective is false \u2014 ceiling is structural choice, not physical law. Reclassifies to snare or tangled_rope at all perspectives. If fundamental: mountain perspective gains legitimacy; ceiling represents real physical constraint.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether grid architecture is locked-in or fundamental"
+    },
+    {
+      "id": "interconnection_queue_manipulation",
+      "question": "Are interconnection queues deliberately managed to limit deployment (extraction mechanism) or do they genuinely represent processing capacity and study necessity?",
+      "resolution_mechanism": "Historical analysis of queue composition: ratio of projects that actually interconnect vs those withdrawn or delayed indefinitely; audit of study assumptions and whether they are revised when initial assumptions prove conservative; comparison of queue management practices across utilities",
+      "impact": "If deliberate: suppression value increases to 0.70+, reclassifies as snare. If capacity-driven: suppression decreases to 0.35-0.40, reclassifies as rope. Current practices show evidence of both mechanisms operating simultaneously.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Intentionality and deliberateness of queue management"
+    },
+    {
+      "id": "distributed_vs_utility_scale_tradeoff",
+      "question": "Is the ceiling a genuine coordination problem (too many distributed sources create real technical challenges) or is it an extraction mechanism that disproportionately favors utility-scale over distributed?",
+      "resolution_mechanism": "Technical analysis of grid impact per MW: distributed solar with smart inverters vs utility-scale solar farms; empirical measurement of voltage regulation, harmonics, and frequency response by source type; jurisdictions with high distributed penetration and their grid stability measures",
+      "impact": "If coordination problem: constraint is rope or tangled_rope reflecting genuine technical tradeoffs. If extraction favoring utility-scale: constraint is snare for distributed developers, reflecting market protection rather than technical necessity.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Distributed vs utility-scale grid impact comparison"
+    },
+    {
+      "id": "rate_structure_lock_in",
+      "question": "Do existing residential and commercial rate structures (designed for centralized generation) create artificial barriers to distributed solar penetration?",
+      "resolution_mechanism": "Comparison of distributed solar adoption rates across jurisdictions with different rate structures (net metering vs feed-in tariffs vs time-of-use); cost-benefit analysis showing whether deployment ceiling changes with rate structure reform",
+      "impact": "If rate structure is binding: the extraction mechanism is not grid physics but regulatory choice. Reclassifies suppression and extractiveness values downward; suggests scaffold trajectory (sunset dependent on rate structure reform, not hardware development).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Rate structure contribution to deployment ceiling"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The photovoltaic deployment ceiling emerges at the intersection of technical grid constraints and institutional incentive structures that favor incumbent utilities and utility-scale developers over distributed generation. This constraint exhibits a mixed institutional structure: genuine coordination problems (integrating variable renewable sources) are entangled with extraction mechanisms (interconnection queue delays, cost allocation rules, studyupgrade requirements that disproportionately burden small developers). The constraint's theater_ratio (0.64) reflects that interconnection study procedures perform legitimizing rituals\u2014detailed technical analysis\u2014while delivering administrative delays that serve market protection rather than grid safety. The extractiveness has risen from 0.28 to 0.52 over 15 years as distributed solar deployment accelerated past the administrative process capacity designed for sporadic generation additions. The suppression value (0.58) indicates substantial barriers: $5k-$50k upfront study costs, 5-10 year queue delays, arbitrary technical requirement escalation, and distributed generation's structural disadvantage in rate structures designed for centralized supply. This constraint is at a critical juncture: grid modernization technologies (battery storage, smart inverters, synchronverters) are eroding the technical legitimacy of the ceiling, while incumbent utility cost-recovery mechanisms are evolving to capture emerging revenue streams from distributed resources. The scaffold perspective identifies a genuine sunset: as distributed intelligence and storage commoditize, the current queuing and study protocols will become visibly theatrical and will be displaced by standards-based interconnection (IEEE 1547 revision, UL 4703). The question is whether the sunset occurs through technical displacement or through political reform.",
+    "key_agents": [
+      "Distributed Solar Developers: Primary victim (powerless/trapped) \u2014 small residential/commercial installers bearing full cost of queue delays and arbitrary requirements; cannot exit without stranded investment",
+      "Incumbent Utilities: Primary beneficiary (institutional/arbitrage) \u2014 capture extended cost recovery, avoid distributed competition during queue delays, control rate structures that disadvantage distributed generation",
+      "Grid Operators: Secondary beneficiary (institutional/arbitrage) \u2014 manage coordination role while using queue as control mechanism; benefit from reduced variable source penetration during cost-recovery periods",
+      "Large-Scale Solar Developers: Secondary beneficiary (powerful/arbitrage) \u2014 have resources to navigate queues, benefit from barrier to distributed competition, operate in utility-scale market protected from distributed encroachment",
+      "Grid Modernization Coalition: Organized agents (organized/constrained) \u2014 battery vendors, smart-inverter manufacturers, distribution software firms seeing sunset in 10-15 years as technical standards replace queue theater",
+      "Interconnection Study Practitioners: Institutional actors (institutional/arbitrage) \u2014 consulting firms and utility engineers who perform the studies; benefit from continued queue demands and study complexity",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent AC synchronous grid design as immutable physical law"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, increasing over interval. The constraint extracts significant value from distributed developers through queue delays (5-10 years = delayed revenue), study costs ($5k-$50k upfront), and administrative burden. However, extractiveness is not maximal (0.70+) because some distributed projects do eventually interconnect and the extraction is partial rather than complete (developers retain option to self-consume or pursue other markets). The 15-year trajectory shows rising extractiveness: as deployment accelerated from 2010-2025, the queue bottleneck became more severe (administrative theater intensified), and extraction mechanisms became more visible (cost-allocation changes, study requirement escalation). Suppression (0.58): Moderate-high. Barriers to exit include upfront costs that cannot be recovered if project is abandoned, sunk costs in site assessment and permitting, and lack of alternative grid-connection pathways for distributed generation (some jurisdictions have microgrids or standalone battery options, but most have none). Suppression is not total (0.70+) because distributed developers do eventually succeed in significant numbers (U.S. installed ~40 GW cumulative distributed solar by 2025). Theater ratio (0.64): High, and rising. The interconnection study process performs legitimacy theater\u2014detailed technical analysis that gives the appearance of rigorous grid safety assessment\u2014but increasingly disconnected from actual grid safety outcomes. Most queue delays are administrative batching and cost-allocation negotiation, not technical analysis. As distributed solar deployment has accelerated, the gap between actual technical requirements (which studies increasingly show can accommodate much higher penetration) and actual upgrade requirements (which spike unpredictably based on queue composition) has widened. Theater ratio rose from 0.35 (when queues were short and studies could plausibly be technical) to 0.64 (when queues are long and studies are obviously batching mechanisms).",
+    "perspectival_gap": "The dramatic gap between snare (distributed developer) and rope (incumbent utility) for nearly identical base properties reveals asymmetric extraction: the constraint coordinates grid integration (genuine function, supporting rope classification) while simultaneously using interconnection processes to extract value from distributed developers and protect utility-scale market share (supporting snare classification for targets). This is the canonical tangled_rope structure: both beneficiary and victim functions are real and structural, not artifacts of perspective. The scaffold perspective's projected sunset is empirically grounded in battery cost curves and smart-inverter standards trajectories; the piton perspective's degraded theater is observable in rising gap between study recommendations and actual requirements.",
+    "directionality_logic": "Utilities derive d from beneficiary + arbitrage = 0.12-0.18 (negative or near-zero effective extraction). Distributed developers derive d from victim + trapped = 0.92-0.95 (maximum effective extraction). Grid operators derive d from both roles + constrained = 0.50-0.55 (symmetric). Large-scale developers derive d from secondary beneficiary + arbitrage = 0.28-0.32. The dispatcher overrides this with directionality_overrides for specific agent classes if field evidence shows the derivation misses structural nuance (e.g., if some utilities are captured by distributed solar industry associations despite institutional status, lowering their d further).",
+    "mandatrophy_analysis": "RESOLUTION: This constraint resolves mandatrophy through structural decomposition. The 'deployment ceiling' is not a single constraint but the intersection of two: (1) grid_technical_integration_coordination (genuine; \u03b5 \u2248 0.15-0.20, rope from all perspectives, no victims) and (2) utility_market_protection_mechanism (extractive; \u03b5 \u2248 0.60-0.70, snare from distributed perspective, rope from utility perspective). The first is pure coordination; the second is pure extraction disguised as coordination. The tangled_rope classification at the aggregate level reflects that they are empirically entangled\u2014same institutional actors, same regulatory framework, same queue process. But the mandatrophy resolution is to recognize that the ceiling's severity (extracted value of $billions in delayed distributed solar deployment) comes overwhelmingly from the second constraint, not from genuine grid technical limits. Grid modernization (batteries, synchronverters) is making the technical coordination easier, but cost-recovery mechanisms and rate structures (which enforce the extraction component) are evolving to maintain the extraction as technical justification erodes. The scaffold sunset depends on whether technical standards (IEEE 1547, UL 4703) are adopted with sufficient bandwidth to bypass queue procedures entirely. If adopted: sunset in 10-15 years. If regulatory pressure maintains queue theater: extraction persists and constraint becomes piton (theater-driven inertia)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "utility_cost_recovery_rate_structure",
+      "distributed_energy_resource_ownership_framework",
+      "grid_modernization_interconnection_standards"
+    ],
+    "dual_formulation_note": "The photovoltaic deployment ceiling decomposes into technical coordination (grid stability) and institutional extraction (market protection). The technical component would be rope; the extraction component would be snare. They are empirically entangled within current regulatory frameworks but would separate under alternative institutions (e.g., utility-independent distribution operators, mandated open interconnection standards). This story treats the entangled system; downstream stories track cost-recovery mechanisms and rate structure impacts separately."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

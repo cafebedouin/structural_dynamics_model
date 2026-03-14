@@ -1,0 +1,227 @@
+{
+  "header": {
+    "constraint_id": "open_source_ai_accessibility",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "osai"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Open Source AI Accessibility: Coordination vs. Extraction in Democratization",
+    "topic_domain": "technology/artificial_intelligence/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_cloud_providers",
+      "research_institutions",
+      "ai_developers"
+    ],
+    "victims": [
+      "resource_constrained_developers",
+      "developing_economies",
+      "computational_commons"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Resource-Constrained Developer",
+      "comment": "PERSPECTIVE 1: RESOURCE-CONSTRAINED DEVELOPER (SNARE) \u2014 Trapped by computational cost barriers. Open-source models require GPU infrastructure, bandwidth, and storage beyond affordable reach. No alternative pathway. Maximum extraction: must use proprietary APIs or abandon AI development entirely. Cannot organize to change the constraint."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Developing Economy Institutions",
+      "comment": "PERSPECTIVE 2: DEVELOPING ECONOMY INSTITUTIONS (SNARE) \u2014 National research centers, universities, and startups in low-income regions trapped by infrastructure cost and currency barriers. Open-source models nominally 'free' but inaccessible without capital expenditure. Dependency on cloud providers in wealthy nations. Trapped by structural economics, not legal barriers."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "AI Developer Communities",
+      "comment": "PERSPECTIVE 3: AI DEVELOPER COMMUNITIES (TANGLED ROPE) \u2014 Organized actors (research labs, open-source maintainers) experience both coordination and extraction. Open-source models enable distributed innovation and faster iteration. Genuine coordination function: contributors share code, reduce duplication, accelerate research. BUT also constrained by asymmetric resource control: model weights are 'open' but training infrastructure remains concentrated. Must rely on proprietary clouds for large-scale work, or maintain models with volunteer labor at sub-industrial quality. Mixed experience: access benefits plus resource subordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Large Cloud and AI Corporations",
+      "comment": "PERSPECTIVE 4: LARGE CLOUD AND AI CORPORATIONS (ROPE) \u2014 Net beneficiaries (institutional/arbitrage). Releasing open-source models solves genuine coordination problem: reducing replication of basic capabilities, leveraging community contributions, capturing ecosystem data. Extractive outcome: models released at end-of-life (after serving proprietary deployment), constraining developer choices to downstream services. Have arbitrage options \u2014 can always close-source if open-source becomes uncompetitive. Experience the constraint as pure coordination with positive spillover."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Mid-Tier Technology Companies",
+      "comment": "PERSPECTIVE 5: MID-TIER TECHNOLOGY COMPANIES (TANGLED ROPE) \u2014 Can access open-source models but face constrained deployment options: fine-tuning requires capital investment, serving models at scale requires cloud partnerships with large providers. Genuine coordination benefit: build products on shared foundations. Also extraction: dependence on large-provider infrastructure, API pricing models, data gravitational pull toward proprietary platforms. Cannot easily exit to fully independent stack."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Open-Source Governance Theater",
+      "comment": "PERSPECTIVE 6: OPEN-SOURCE GOVERNANCE THEATER (PITON) \u2014 Performative commitment to democratization. Foundation oversight, community governance structures, ethical guidelines \u2014 largely theatrical. Real allocation decisions (which models to fund, what capabilities to release, what safety constraints to impose) remain concentrated in corporations. The governance ritual maintains legitimacy narrative while decision power flows toward corporations. Theater ratio: high. Functional content: low. Maintained through institutional inertia and PR value, not substantive coordination."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Open Compute and Hardware Coalitions",
+      "comment": "PERSPECTIVE 7: OPEN COMPUTE AND HARDWARE COALITIONS (SCAFFOLD) \u2014 Emerging organized actors (OpenCompute Initiative, open-hardware manufacturers, public-compute initiatives) building alternative infrastructure pathways with sunset logic. Genuine coordination: shared infrastructure designs reduce duplication. Constrained but see exit path: distributed inference, open-source accelerators, public GPU clusters promise to reduce cloud provider lock-in. Extraction temporary \u2014 as alternative infrastructure matures, dependency on proprietary clouds declines. Sunset estimated 5-15 years as public compute infrastructure develops."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer: Natural Law View",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational perspective, computational cost and expertise barriers are inherent to advanced AI. Training large models fundamentally requires capital and specialized knowledge. Open-source democratizes access compared to proprietary lock-in, but cannot eliminate the underlying scarcity. This perspective risks naturalizing what are contingent economic and regulatory choices (hardware cost, software IP protections, capital concentration) as immutable properties of AI systems."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "computational_cost_trajectory",
+      "question": "Will Moore's Law or alternative scaling laws reduce computational cost per inference sufficiently to eliminate the hardware access barrier within the next decade?",
+      "resolution_mechanism": "Empirical tracking of inference cost per token, hardware efficiency gains, and distributed inference feasibility; comparison of historical cost curves with near-future projections",
+      "impact": "If cost drops dramatically: snare classification weakens, barriers transform from trapped to constrained or mobile. If cost stagnates: snare persists, resource-constrained developers remain trapped indefinitely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether computational cost reduction will eliminate hardware access barriers"
+    },
+    {
+      "id": "coordination_authenticity",
+      "question": "Is the open-source AI governance framework a genuine coordination mechanism or primarily a legitimacy theater masking concentrated control?",
+      "resolution_mechanism": "Analysis of decision-making authority, funding flows, model selection criteria; measurement of how often community input changes corporate decisions; tracking of divergence between stated governance principles and actual resource allocation",
+      "impact": "If genuine coordination: piton classification is incorrect, governance is functional (Rope). If theatrical: piton classification confirmed, governance is performative, extraction is hidden. Classification gap determines whether 'open' AI is actually democratizing or merely distributed surveillance.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether governance structures represent authentic coordination or theater"
+    },
+    {
+      "id": "hardware_monopoly_irreversibility",
+      "question": "Are current patterns of hardware chip manufacturing and design so concentrated that public-compute alternatives face fundamental scaling obstacles that private cloud providers do not?",
+      "resolution_mechanism": "Analysis of supply chain constraints, fab capacity, design talent concentration, and capital requirements for competitive chip development; comparison of public-compute scaling with private infrastructure; identification of whether the gap is technical or economic",
+      "impact": "If irreversible: scaffold sunset clause is aspirational \u2014 private-cloud dependency is structural, not temporary. Snare classification hardens. If reversible: scaffold is real \u2014 alternative infrastructure can mature, supporting the constrained exit option.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether hardware concentration creates irreversible cloud provider advantage"
+    },
+    {
+      "id": "data_extraction_asymmetry",
+      "question": "How much of the 'open-source' value derives from proprietary data collection from users of open models via cloud services? Is the extractiveness of the computational cost barrier offset by data extraction that cloud providers capture?",
+      "resolution_mechanism": "Transparency reports on data collection practices; analysis of how user interactions with open models deployed on proprietary platforms flow back to model operators; measurement of data asymmetry between users and platform operators",
+      "impact": "If data extraction is substantial: the constraint is structurally a two-layer snare \u2014 computational access for data extraction trade-off. Suppressiveness increases. If minimal: computat. Cost barrier is the primary extraction mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether data extraction is embedded in open-source deployment"
+    },
+    {
+      "id": "regulatory_path_dependency",
+      "question": "Will future AI regulation (safety, capability control, export restrictions) further concentrate control in large platforms that can afford compliance infrastructure, or will it enable smaller actors to certify safety independently?",
+      "resolution_mechanism": "Analysis of emerging regulatory frameworks; tracking of compliance cost structures; identification of whether regulations create barriers to entry (concentrating power) or enable distributed verification (decentralizing power)",
+      "impact": "If concentrating: regulation layers additional extraction mechanisms onto the computational cost barrier. Snare hardens. If enabling: regulation could reduce asymmetry, supporting constrained-to-mobile transitions for smaller actors.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether AI regulation will concentrate or distribute control"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Open-source AI democratization is structurally a tangled rope: it solves genuine coordination problems (avoiding duplicative model training, leveraging community contributions, accelerating research) while creating asymmetric resource extraction (computational cost barriers, infrastructure dependence, governance theater). The constraint exhibits a perspectival gap that reveals its hybrid nature: beneficiaries (large cloud providers, well-resourced research institutions) experience coordination; resource-constrained developers and developing economies experience snare extraction; intermediate actors experience tangled ropes with constrained agency. The theater ratio (0.68) reflects that open-source governance frameworks perform legitimacy while real decisions remain concentrated: community input shapes marginal features, but model selection, training data curation, safety constraints, and deployment incentives flow from corporate strategy. Over the interval, extractiveness has increased (0.35 \u2192 0.58) as the gap between nominal access (models released as weights) and functional access (cost of deployment) has widened with increasing model scale. Theater has also increased as governance structures have become more elaborate while decision concentration has persisted.",
+    "key_agents": [
+      "Large Cloud Providers (AWS, Google Cloud, Azure): Primary beneficiaries (institutional/arbitrage) \u2014 release open-source models at end-of-life, capture ecosystem contributions, lock users into cloud infrastructure for deployment",
+      "Resource-Constrained Developers (Global South, indie researchers, startups): Primary victims (powerless/trapped) \u2014 cannot afford GPU infrastructure or cloud-based deployment; cannot access AI development at competitive scale",
+      "Developing Economy Institutions (Universities, research centers, government labs): Secondary victims (powerless/trapped) \u2014 structurally locked out by capital and currency barriers; dependent on wealthy-nation infrastructure for any AI research",
+      "AI Developer Communities (Researchers, open-source maintainers): Mixed (organized/constrained) \u2014 benefit from shared code and reduced duplication; constrained by infrastructure dependencies and resource asymmetries",
+      "Mid-Tier Technology Companies (Startups, regional tech firms): Mixed (moderate/constrained) \u2014 can access models but face constrained deployment options and cost barriers relative to large platforms",
+      "Open-Source Governance Structures (Linux Foundation, open-compute initiatives, model governance boards): Theatrical (institutional/arbitrage) \u2014 perform community oversight while real allocation decisions remain concentrated in corporations",
+      "Emerging Public-Compute Infrastructure (OpenCompute, public GPU clusters, open-hardware initiatives): Organized (organized/constrained) \u2014 building alternative pathways with sunset logic; constrained but see exit path as alternatives mature",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent economic choices (hardware cost, capital concentration, IP protections) as immutable properties of AI systems"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts from resource-constrained agents through computational cost barriers and infrastructure dependence. Not maximal (0.70+) because open-source models genuinely reduce costs compared to proprietary-only alternatives and enable some development without cloud dependency. The extraction is real but comparative \u2014 less severe than pure proprietary lock-in, more severe than fully distributed infrastructure. Suppression (0.62): Moderate-high. Barriers to independent AI development include: GPU scarcity and cost, cloud provider pricing power, expertise concentration, regulatory uncertainty, capital requirements for fine-tuning. Suppression is not absolute \u2014 some development happens in communities with volunteer compute \u2014 but it is substantial and rising as model scale increases. Theater ratio (0.68): High and rising. Open-source governance (community councils, ethical guidelines, foundation oversight) is substantially performative. Real decisions (which models to release, what safety constraints to impose, which capabilities to prioritize, how to allocate compute resources) remain concentrated in corporations. Governance ritual provides legitimacy cover for centralized decision-making. Over the interval (0-6 time units), theater has increased as governance structures have become more elaborate (foundation boards, community meetings, published principles) while power concentration has persisted or increased.",
+    "perspectival_gap": "This constraint demonstrates stark perspectival divergence. Large cloud providers see pure coordination (Rope): open-source solves the problem of duplicative training, enables ecosystem contributions, and provides strategic optionality. Resource-constrained developers see pure extraction (Snare): the models are nominally free but inaccessible without capital expenditure, and all deployment pathways funnel through proprietary clouds. AI developer communities see mixed dynamics (Tangled Rope): genuine coordination of code and research, constrained by infrastructure dependence. Emerging public-compute coalitions see a temporary bottleneck with a clear sunset path (Scaffold): alternative infrastructure is maturing, constrained but viable. The governance structures see themselves as coordinating (Rope) while victims see them as theater (Piton) masking concentrated control. The civilizational analytical observer risks the false summit (Mountain) \u2014 treating computational cost as an immutable property of AI rather than a contingent design choice. The perspectival gap reveals that 'open-source AI accessibility' is not a solved problem but a site of active asymmetric resource extraction masked by legitimacy theater.",
+    "directionality_logic": "Directionality (d) reflects each agent's structural position in the extraction flow. Large cloud providers have d \u2248 0.10 (beneficiaries with arbitrage options): they capture benefits without bearing costs; they can exit by closing source if competition threatens. Resource-constrained developers have d \u2248 0.95 (victims trapped): they bear full cost of access barriers with no exit option. Developer communities have d \u2248 0.65 (mixed victims with some agency): they benefit from shared code but are constrained by infrastructure dependence; they can organize and exit is costly but possible. Mid-tier companies have d \u2248 0.55 (victims with moderate constrained options): they can deploy models but only at cost and with platform dependence; exits are possible but expensive. The derived effective extractiveness (\u03c7) scales these raw d values by the sigmoid f(d) and scope modifier \u03c3(S). At global scope (\u03c3 = 1.2), the extraction experienced by powerless trapped agents is amplified; for institutional arbitrage agents, it is dampened. The result: resource-constrained developers experience \u03c7 \u2248 1.35 (above the raw \u03b5 of 0.58), while cloud providers experience \u03c7 \u2248 0.02 (near zero). The perspectival gap in \u03c7 (1.35 vs 0.02) reflects that the same structural constraint produces radically different extraction experiences based on structural position.",
+    "mandatrophy_analysis": "UNRESOLVED MANDATROPHY: The constraint's claimed type (tangled_rope) is empirically justified but conceptually contested. Large cloud providers claim the constraint is a Rope: it coordinates the solution to duplicative training and enables ecosystem value creation. Resource-constrained developers claim it is a Snare: it extracts through computational cost barriers with no coordination benefit for them. The constraint is genuinely both \u2014 it solves coordination problems for some agents while extracting from others. The mandatrophy is not which classification is correct but whether the asymmetry is justified. Is the extraction a fair price for coordination benefits that the beneficiaries pass downstream? Or is the extraction structural rent-seeking? The divergence between perspectives answers this: if the coordination truly benefited all parties proportionally, resource-constrained developers would perceive Rope rather than Snare. The fact that they experience Snare while beneficiaries experience Rope reveals that the distribution of coordination gains is asymmetric. The constraint's theater ratio (0.68) suggests that some of the legitimacy masking this asymmetry is performative \u2014 governance structures provide narrative cover for concentrated resource control. Resolving the mandatrophy would require either: (1) redistributing extraction (subsidizing compute access for resource-constrained agents, which would weaken the snare), or (2) making the coordination genuinely symmetric (transparent shared governance with real power-sharing, which would transform the Piton governance perspective into actual Rope). Currently unresolved; mandatrophy_resolved set to false."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_compute_concentration",
+      "developing_economy_digital_exclusion",
+      "open_source_sustainability_crisis"
+    ],
+    "dual_formulation_note": "Open-source AI accessibility is downstream of hardware concentration and capital requirements (constraint: ai_compute_concentration), which in turn affect broader digital exclusion patterns (constraint: developing_economy_digital_exclusion). The sustainability of volunteer-maintained open-source infrastructure is also constrained by economic dynamics (constraint: open_source_sustainability_crisis). These three constraints form a family: the accessibility bottleneck cannot be resolved without addressing upstream compute monopolies and downstream sustainability pressure on maintainers."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "ai_compute_concentration"
+    ]
+  }
+}

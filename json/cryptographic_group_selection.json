@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "cryptographic_group_selection",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cgs"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Cryptographic Group Selection Standards",
+    "topic_domain": "cryptography/standardization/infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_cryptographic_standards_bodies",
+      "cryptographic_software_vendors",
+      "surveillance_capable_actors"
+    ],
+    "victims": [
+      "cryptographic_alternative_proponents",
+      "resource_constrained_implementations",
+      "users_requiring_quantum_resistance"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Post-Quantum Alternative Proponent",
+      "comment": "PERSPECTIVE 1: POST-QUANTUM ALTERNATIVE PROPONENT (SNARE) \u2014 Trapped by standardization bodies' slow adoption cycles. Cannot exit from the constraint: deployment of new cryptographic groups requires standards consensus. Bears full cost of selection delays while incumbent groups remain embedded in infrastructure. No organizational power to accelerate selection. Maximum extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Academic Cryptographic Research Community",
+      "comment": "PERSPECTIVE 2: ACADEMIC RESEARCH COMMUNITY (TANGLED ROPE) \u2014 Constrained by the requirement to participate in standards processes to gain influence, yet benefits from standardization (legitimacy for their algorithms, funding for standards work). Significant extraction in time investment and patent licensing terms; genuine coordination benefit in collective validation. Organized but not free to exit \u2014 abandoning standardization processes means losing voice."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Incumbent Cryptographic Standards Bodies",
+      "comment": "PERSPECTIVE 3: INCUMBENT STANDARDS BODIES (ROPE) \u2014 NIST, IETF, and similar bodies benefit from coordinating algorithm selection and deployment. The constraint solves a genuine coordination problem: without standards, software cannot reliably interoperate. Experiences the constraint as enablement rather than extraction. Has arbitrage options (can maintain legacy standards indefinitely while new groups emerge elsewhere). Net beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Quantum-Ready Enterprise Adopters",
+      "comment": "PERSPECTIVE 4: QUANTUM-READY ENTERPRISES (SCAFFOLD) \u2014 Powerful actors (major tech firms, financial infrastructure) have the resources to implement cryptographic agility \u2014 supporting multiple group types simultaneously during migration. See the constraint as a temporary coordination failure with a visible sunset: post-quantum standards will eventually achieve consensus, and the agile infrastructure built during transition becomes the new normal. Moderate extraction during the transition; low extraction once standards solidify."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Legacy Cryptographic Infrastructure",
+      "comment": "PERSPECTIVE 5: LEGACY INFRASTRUCTURE (PITON) \u2014 RSA, ECC, and SHA families remain deployed despite known quantum vulnerability. Persistence is driven by institutional inertia: transition costs are enormous, and the quantum threat is temporally distant for most systems. Theater ratio is high \u2014 many security assessments and compliance audits ritualize legacy algorithm use without addressing quantum risk. The infrastructure sees its own continuation as degraded maintenance of outdated standards."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Computational Complexity View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / COMPLEXITY VIEW (MOUNTAIN) \u2014 From a theoretical perspective, some cryptographic group selection burden is inevitable: any cryptographic system must choose concrete instantiations of algebraic structures, and the transition from one family to another is computationally and logistically constrained. The perceived mountain classification derives from the theoretical immutability of computational complexity limits. However, the structural data reveals this as false naturalization \u2014 the selection burden is largely institutional, not mathematical. True quantum resistance thresholds and standardization timelines are contingent choices."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "quantum_threat_timeline_ambiguity",
+      "question": "What is the actual timeline for cryptographically relevant quantum computers (CRQCs) capable of breaking current public-key cryptography?",
+      "resolution_mechanism": "Hardware progress tracking; gate fidelity benchmarks; logical qubit demonstrations; extrapolation from current error rates and scaling projections",
+      "impact": "If timeline < 10 years: standardization delays become extractive (victims face imminent risk while standards linger). If timeline > 50 years: post-quantum migration becomes a coordination burden without corresponding risk mitigation. If timeline permanently recedes as hardware improves: perpetual transition state masquerades as urgency.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Timeline for cryptographically relevant quantum computer emergence"
+    },
+    {
+      "id": "harvest_now_decrypt_later_threat_materiality",
+      "question": "How significant is the 'Harvest Now, Decrypt Later' threat \u2014 the practice of recording encrypted traffic today for decryption once quantum computers arrive?",
+      "resolution_mechanism": "Empirical assessment of adversary storage and computational capacity; analysis of high-value encrypted data with retrospective utility; timeline for adversary quantum capacity relative to data sensitivity half-life",
+      "impact": "If materially significant: urgent migration justified for high-value historic data. If low risk: transition timeline becomes negotiable, reducing selection pressure and extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Significance of Harvest Now Decrypt Later threat"
+    },
+    {
+      "id": "standardization_process_capture_risk",
+      "question": "Do incumbent standards bodies (NIST, IETF) systematically bias selection toward cryptographic groups that entrench existing infrastructure or vendor positioning rather than selecting the mathematically most robust options?",
+      "resolution_mechanism": "Historical analysis of NIST algorithm competition outcomes; comparison of selected algorithms' robustness profiles against rejected candidates; vendor influence tracking in standards committee participation",
+      "impact": "If systematic capture confirmed: standardization is an extraction mechanism (Snare from alternatives' perspective; Tangled Rope from body's perspective). If capture is absent or corrected: standardization is genuine coordination (Rope from all perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Capture risk in cryptographic standardization bodies"
+    },
+    {
+      "id": "implementation_agility_feasibility",
+      "question": "Can practical cryptographic implementations achieve genuine algorithmic agility \u2014 the ability to switch between multiple group types at runtime without severe performance penalties or security side-channel exposure?",
+      "resolution_mechanism": "Benchmarking of cryptographic agility in production systems; analysis of performance/security trade-offs; empirical testing of side-channel attacks under algorithm switching",
+      "impact": "If agility is feasible: scaffold perspective is correct (powerful actors can survive transition at low cost). If agility is infeasible: extraction increases for all actors except standards bodies (transition becomes an all-or-nothing replacement).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Feasibility of cryptographic algorithmic agility"
+    },
+    {
+      "id": "alternative_pathway_viability",
+      "question": "Could decentralized, non-standards-body-endorsed cryptographic adoption (via open-source projects, blockchain systems, or alternative protocol stacks) achieve sufficient network effects to bypass standardization altogether?",
+      "resolution_mechanism": "Analysis of adoption curves for non-standard cryptographic groups; interoperability rates between standard and alternative implementations; economic incentives for deviation from standards",
+      "impact": "If viable: the constraint's suppression decreases (exit options improve). If non-viable: standardization remains the only path, and extraction persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of alternative non-standardized cryptographic pathways"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Cryptographic group selection \u2014 the process of choosing which mathematical structures (ECC, lattice-based, multivariate, hash-based systems) and specific parameters become standardized for deployment \u2014 exhibits the structural features of a tangled rope constraint. The selection process coordinates a genuine collective action problem: without standards, cryptographic software cannot reliably interoperate, and security decisions become unilaterally fragmented. Simultaneously, the standardization process extracts value from those who must migrate away from incumbent algorithms, lengthens adoption timelines for alternative approaches, and concentrates decision-making power in specialized standards bodies. The theater ratio (0.65) reflects that significant portions of the standardization process are performative: security audits of legacy algorithms despite known quantum vulnerability, compliance frameworks that document rather than mitigate risk, and competitive position maintenance disguised as technical evaluation. The constraint's evolution over the 10-year interval shows rising theater (as legacy systems accumulate compliance theater) and rising extractiveness (as the cost of delayed migration becomes clearer). The core tension is that standardization is both necessary (coordination of interoperability) and extractive (gatekeeping by incumbent bodies, delays for alternatives, implicit bias toward established vendors).",
+    "key_agents": [
+      "Post-Quantum Alternative Proponents: Primary victims (powerless/trapped) \u2014 lattice-based, multivariate, hash-based cryptographers whose algorithms compete for standardization; trapped by slow NIST and IETF cycles",
+      "Incumbent Standards Bodies: Primary beneficiaries (institutional/arbitrage) \u2014 NIST, IETF, ISO; coordinate standardization and maintain control over algorithm selection with option to maintain legacy standards indefinitely",
+      "Cryptographic Software Vendors: Secondary beneficiaries (institutional/mobile) \u2014 maintain revenue streams from existing implementations; benefit from standardization delays that extend legacy product lifecycles",
+      "Academic Cryptographic Community: Secondary victims (organized/constrained) \u2014 must participate in standards processes to gain algorithm legitimacy; constrained by standards timeline and patent licensing requirements",
+      "Quantum-Ready Enterprises: Powerful actors (powerful/mobile) \u2014 can implement cryptographic agility during transition; have resources to absorb dual-algorithm costs temporarily",
+      "Resource-Constrained Implementations: Tertiary victims (powerless/constrained) \u2014 IoT devices, embedded systems that cannot support multiple cryptographic groups simultaneously; forced to wait for standardization or accept compatibility costs",
+      "Legacy Infrastructure Systems: Institutional actors (institutional/constrained) \u2014 maintain RSA/ECC despite quantum vulnerability; trapped by transition costs and institutional inertia"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The standardization process delays migration to quantum-resistant algorithms while incumbent groups remain embedded. Alternative proponents bear opportunity costs and time-to-deployment barriers. However, extractiveness is not extreme because: (1) standards bodies operate with public processes and documented criteria, reducing opacity; (2) incumbent cryptographers have genuine technical legitimacy (RSA/ECC are well-studied), not pure gatekeeping; (3) quantum threat is temporally distant, reducing urgency and making transition timing negotiable. The value reflects that extraction exists alongside coordination benefit. Suppression (0.52): Moderate-high. Significant barriers include: (1) standardization gatekeeping (only NIST-endorsed algorithms become widely deployed); (2) network effects (existing infrastructure creates switching costs); (3) vendor coordination problems (cryptographic libraries move slowly even after standardization); (4) patent licensing uncertainty for alternative algorithms. But suppression is not total \u2014 some alternative pathways exist (open-source adoption, blockchain systems without standards bodies). Theater ratio (0.65): Moderate-high. Rising over the interval because: (1) security audits of legacy algorithms create performative compliance without addressing quantum risk; (2) standardization committees produce documentation theater (threat assessments, migration recommendations) without enforcement; (3) vendor migration timelines are announced repeatedly with limited follow-through. The theater rises as the constraint persists \u2014 initial standardization work is substantive; later years emphasize compliance narratives rather than actual transition.",
+    "directionality_logic": "Each perspective's directionality derives from the agent's structural position relative to the selection constraint. Incumbent standards bodies (institutional/arbitrage) have minimal extraction directed at them \u2014 they control the process and can delay indefinitely. Their d \u2248 0.1 (weak beneficiary position). Post-quantum alternatives (powerless/trapped) experience maximal extraction \u2014 they cannot access deployment pathways without standardization approval. Their d \u2248 0.95 (strong target position). Academic researchers (organized/constrained) experience moderate extraction \u2014 they must participate in standards processes to gain legitimacy but can exit by pursuing alternative pathways (open-source, blockchain). Their d \u2248 0.55. Enterprises with agility (powerful/mobile) experience low extraction \u2014 they have resources to implement dual stacks and can arbitrage between standards and alternatives. Their d \u2248 0.35. Resource-constrained implementations (powerless/constrained) experience high extraction but with less permanence than trapped alternatives \u2014 they must eventually migrate once standards solidify. Their d \u2248 0.75. The pipeline applies f(d) to these values, producing experienced extractiveness chi that varies by perspective while \u03b5 and suppression remain fixed.",
+    "perspectival_gap": "The constraint exhibits a pronounced perspectival gap between beneficiaries and victims. Incumbent standards bodies and vendors experience the constraint as pure coordination (Rope) \u2014 they solve the genuine problem of algorithm interoperability and benefit from standardization delays that extend legacy product lifecycles. Their perspective is transparent: standardization is coordination, extraction is minimal. Post-quantum alternatives experience the constraint as pure extraction (Snare) \u2014 they are locked out of deployment pathways by gatekeeping and face indefinite delays for algorithm legitimacy. The open science coalition (powerful enterprises) experiences it as a temporary problem with a sunset (Scaffold) \u2014 cryptographic agility and decentralization are reducing standardization's necessity over time. The academic community experiences it as mixed coordination and extraction (Tangled Rope) \u2014 standardization legitimizes research but extracts time and patent liability. The civilizational observer risks seeing immutable constraints (Mountain) \u2014 that cryptographic interoperability necessarily requires centralized standardization \u2014 but the structural data reveals this as false naturalization. Alternative pathways (open-source, blockchain, industry consortia) are feasible but suppressed by incumbent preference for centralization.",
+    "mandatrophy_analysis": "RESOLUTION: The mandatrophy is resolved by recognizing that standardization performs genuine coordination (multiple stakeholders need to agree on algorithms) while also enforcing extraction (incumbent bodies and vendors benefit from slow migration timelines). The constraint is not mislabeled \u2014 it is legitimately Tangled Rope. The beneficiary/victim structure is clear: standards bodies + vendors benefit (lower d, negative \u03c7); post-quantum alternatives suffer (higher d, positive \u03c7); researchers and enterprises occupy intermediate positions. The classification as Tangled Rope is stable across metrics: base extractiveness (0.38) sits between pure coordination (\u03b5 \u2264 0.05) and pure extraction (\u03b5 \u2265 0.46); suppression (0.52) indicates coercive gatekeeping; theater ratio (0.65) reflects performative compliance. The false summit risk (mountain classification) exists only at the analytical/civilizational level, where centralised standardization appears immutable. The structural data contradicts this: decentralized alternatives and cryptographic agility are reducing standardization's necessity. The mountain perspective is accurate about asymptotic constraints (interoperability across billions of devices requires some coordination mechanism) but inaccurate about the necessity of centralized standards bodies specifically. The constraint persists through institutional inertia and vendor preference, not mathematical immutability."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "quantum_computing_threat_materiality",
+      "cryptographic_software_vendor_lock_in",
+      "post_quantum_algorithm_selection_bias"
+    ],
+    "dual_formulation_note": "Cryptographic group selection is upstream of algorithm-specific constraints. The selection process affects which algorithms become standardized and available for deployment. Downstream constraints (quantum threat materiality, vendor lock-in) depend on which groups are selected and how rapidly migration occurs."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "warehouse_productivity_tracking",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "wpt"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Warehouse Productivity Tracking Systems",
+    "topic_domain": "labor/logistics/surveillance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "warehouse_operators",
+      "logistics_management"
+    ],
+    "victims": [
+      "warehouse_workers",
+      "worker_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Warehouse Worker",
+      "comment": "PERSPECTIVE 1: WAREHOUSE WORKER (SNARE) \u2014 Faces pervasive surveillance with minimal exit options. Employment requires acceptance of constant monitoring via wearable devices, handheld scanners, and algorithmic productivity algorithms. Economic dependency creates structural trap; competing warehouses impose identical systems. Experiences pure extraction with high suppression and no meaningful coordination benefit to the worker."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Worker Coalition",
+      "comment": "PERSPECTIVE 2: WORKER COALITION (TANGLED ROPE) \u2014 Organized workers perceive both genuine coordination (optimizing fulfillment rates benefits shared logistics ecosystem) and asymmetric extraction (productivity quotas designed to exceed sustainable human capacity). Constrained by industry-wide adoption of same systems; coalition has partial exit through collective action but faces significant collective-action barriers. Benefits exist (reliable work, shared standards) alongside extraction (burnout, arbitrary metrics)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Warehouse Operations Management",
+      "comment": "PERSPECTIVE 3: WAREHOUSE OPERATIONS MANAGEMENT (ROPE) \u2014 Perceives tracking systems as pure coordination mechanism solving the collective-action problem of real-time inventory management and fulfillment optimization. Management has arbitrage options: can switch vendors, adjust tracking intensity, or modify algorithms. Net beneficiary position with genuine coordination benefits. Suppression appears minimal from this view because the constraint aligns with management objectives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Logistics Platform Operator",
+      "comment": "PERSPECTIVE 4: LOGISTICS PLATFORM OPERATOR (TANGLED ROPE) \u2014 Coordinates real-time fulfillment across distributed warehouses (genuine coordination function) while extracting worker productivity data to optimize their own algorithms and lock in vendor-customer relationships. Powerful position with exit options; extracts asymmetrically but maintains coordination ecosystem. Extraction runs through surveillance infrastructure that platform controls."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Labor Regulation Framework",
+      "comment": "PERSPECTIVE 5: LABOR REGULATION FRAMEWORK (PITON) \u2014 Warehousing regulations and labor protections (wage-and-hour laws, safety standards, ergonomic requirements) exist but enforcement against productivity tracking is minimal and performative. Regulatory structure persists through institutional inertia while actual worker protections have degraded as surveillance intensity has increased. Theater ratio high because compliance theater (monitoring 'safety metrics') substitutes for substantive protection."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a civilizational scale, real-time inventory tracking and fulfillment coordination are presented as natural requirements of modern logistics efficiency. The framing naturalizes contingent institutional arrangements (rate structures, quota levels, surveillance intensity) as inherent to e-commerce. This perspective risks false summit classification, as the 'immutable' constraints are largely policy choices and vendor lock-in, not physical or logical limits."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "surveillance_intensity_threshold",
+      "question": "At what surveillance intensity level does the coordination benefit cease and pure extraction mechanism dominate?",
+      "resolution_mechanism": "Comparative analysis across warehouses with different tracking densities; correlation between surveillance intensity and worker satisfaction, error rates, and actual fulfillment efficiency; meta-analysis of productivity gains vs worker health outcomes",
+      "impact": "If threshold is exceeded (likely true in current systems): many current tracking systems are misclassified as Rope or Tangled Rope coordination when they are actually Snares. If threshold is not yet reached: current intensity is still within legitimate optimization range.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Surveillance intensity threshold where coordination benefit becomes marginal"
+    },
+    {
+      "id": "worker_productivity_optimum",
+      "question": "Do productivity quotas reflect genuine human capacity or have they drifted above sustainable levels as a result of algorithmic optimization absent human constraints?",
+      "resolution_mechanism": "Longitudinal tracking of quota levels relative to measured worker capacity; correlation analysis between quota increases and injury rates, turnover, and long-term worker health; comparison of algorithmic quota suggestions with ergonomic recommendations",
+      "impact": "If quotas exceed sustainable capacity: the extraction metric is systematically underestimated in current base_properties (0.58 may be conservative). If quotas track actual capacity: the system is more coordinative than Snare classification suggests.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether productivity quotas exceed sustainable human capacity"
+    },
+    {
+      "id": "algorithmic_auditing_gap",
+      "question": "Can workers or regulators meaningfully audit the algorithmic productivity calculations, or is the black-box nature of the algorithm itself a suppression mechanism?",
+      "resolution_mechanism": "Document analysis of algorithm transparency; worker surveys on perceived algorithmic fairness and understandability; regulatory audit attempts and their success/failure modes",
+      "impact": "If algorithms are opaque: suppression metric should be elevated (currently 0.65; likely 0.75+), and workers cannot challenge unjust metrics. If algorithms are auditable: exit option could upgrade from trapped to constrained, changing classifications across multiple perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether warehouse productivity algorithms are auditable or opaque"
+    },
+    {
+      "id": "inter_warehouse_competition_dynamics",
+      "question": "Does inter-warehouse competition for fulfillment contracts drive coordination or does it drive a race-to-the-bottom in worker conditions through shared surveillance systems?",
+      "resolution_mechanism": "Analysis of market structure: does warehousing remain competitive or has consolidation occurred? Do contract terms favor operators who can demonstrate lowest tracking costs? Comparison of worker conditions across warehouses in competitive vs consolidated markets.",
+      "impact": "If competition drives coordination: current system is sustainable Rope or legitimate Tangled Rope. If competition drives bottom-racing: the system's extractive pressure is institutionally locked in by market structure, and Snare classification is appropriate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether warehouse competition drives coordination or extraction race-to-bottom"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Warehouse productivity tracking systems have evolved from manual performance records to comprehensive algorithmic surveillance integrating wearable devices, handheld scanners, motion sensors, and real-time productivity dashboards. These systems coordinate legitimate logistics functions (inventory accuracy, fulfillment velocity, resource allocation) while simultaneously extracting worker productivity data to lock in performance improvements that exceed human sustainable capacity. The constraint exhibits a classic bifurcation: operators and platform companies perceive coordination (Rope); workers perceive extraction (Snare); intermediate actors perceive mixed dynamics (Tangled Rope). The theater ratio has increased over the measured interval as compliance reporting (safety metrics, quality tracking) has substituted for substantive worker protection, and as algorithmic opacity has increased, making worker contestation of metrics more difficult.",
+    "key_agents": [
+      "Warehouse Workers: Primary victims (powerless/trapped) \u2014 economic dependency and industry-wide system adoption create structural trap; surveillance intensity continues to increase",
+      "Warehouse Operations Management: Primary beneficiary (institutional/arbitrage) \u2014 captures productivity gains and can adjust system parameters; perceives constraint as pure coordination",
+      "Logistics Platform Operators: Secondary beneficiary (powerful/arbitrage) \u2014 extracts worker data for algorithm optimization while coordinating multi-warehouse fulfillment networks",
+      "Worker Coalitions: Intermediate actor (moderate/constrained) \u2014 recognize both genuine coordination and extractive mechanisms; face collective-action barriers to contestation",
+      "Labor Regulatory Framework: Institutional observer (institutional/mobile) \u2014 maintains performative compliance structure while substantive protections have degraded (piton characteristics)",
+      "Analytical Observer: Civilizational position (analytical/analytical) \u2014 risks naturalizing surveillance intensity and quota levels as inevitable requirements of logistics efficiency"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint involves genuine coordination (real-time inventory optimization, fulfillment accuracy) valued at approximately \u03b5 \u2248 0.25-0.30, but layered with extraction mechanisms (productivity quotas designed to exceed sustainable human capacity, worker data appropriation) adding approximately \u03b5 \u2248 0.30-0.35. The measured 0.58 reflects this hybrid structure. Over the interval, extractiveness has risen from 0.28 to 0.58 as algorithmic optimization has progressively tightened quotas independent of worker feedback. Suppression (0.65): Moderate-high. Workers face multiple barriers to exit and contestation: (1) economic dependency on warehouse employment; (2) industry-wide adoption of similar systems (competing warehouses impose identical surveillance); (3) algorithmic opacity preventing meaningful challenge to metrics; (4) regulatory framework enforcement gaps. Some residual mobility exists (workers can switch warehouses or sectors, though at cost) preventing classification as total suppression. Theater ratio (0.62): Moderate-high. Compliance reporting on safety metrics and productivity targets has increasingly substituted for substantive worker protection. The system produces extensive performance data but minimal transparency about how quotas are set or algorithm adjustments justified. Regulatory audits are performative rather than substantive.",
+    "perspectival_gap": "The constraint exhibits maximal perspectival divergence. Warehouse management perceives Rope (pure coordination with minimal extraction) because the constraint solves their aggregate logistics problem and they benefit from the productivity gains. Workers perceive Snare (pure extraction with minimal coordination benefit to them personally) because the surveillance intensity exceeds the coordination requirements for legitimate fulfillment work. Logistics platform operators perceive Tangled Rope (genuine coordination of multi-warehouse networks combined with data extraction that locks in their control). Worker coalitions perceive Tangled Rope differently: they recognize both the legitimate coordination function and the unjust extraction but have constrained capacity to exit the system. The regulatory framework perceives its own classification as piton: the institutions intended to protect workers have become performative (monitoring safety theater) while actual protections have eroded. The analytical observer at civilizational scale risks perceiving Mountain (e-commerce requires real-time tracking, thus surveillance is inevitable) but the structural data reveals this as naturalization of policy choices (quota levels, surveillance intensity, vendor lock-in mechanisms are not physical laws).",
+    "directionality_logic": "Each agent's directionality value (d) derives from their power level, exit options, and structural position relative to the extraction flow. Workers (powerless/trapped) occupy maximum d \u2248 0.95: they are full targets of extraction with no alternative. Worker coalitions (moderate/constrained) occupy intermediate d \u2248 0.60-0.70: they face real exit costs but some organizational capacity. Warehouse management (institutional/arbitrage) occupies low d \u2248 0.10-0.15: they are beneficiaries with exit options; d is driven down by their ability to switch vendors or adjust tracking intensity. Logistics platform operators (powerful/arbitrage) occupy d \u2248 0.20-0.30: they benefit from extraction but face some stakeholder pressure. The regulatory framework (institutional/mobile) occupies d \u2248 0.35: it perceives itself as somewhat trapped by deference to management efficiency claims while lacking enforcement capacity. These d values, when mapped through the sigmoid f(d), produce the perspectival gaps: high d (workers) yields high f(d) \u2248 1.40, amplifying extracted chi; low d (management) yields low f(d) \u2248 -0.05, producing negative or minimal chi from their perspective.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy through the recognition that the same institutional arrangement simultaneously coordinates and extracts, with the balance differing dramatically across perspectives. Management's rope classification is not 'wrong' \u2014 genuine coordination of fulfillment logistics is happening. Workers' snare classification is not 'wrong' \u2014 genuine extraction of labor beyond sustainable capacity is also happening. The mandatrophy is resolved by observing that the system is Tangled Rope at the structural level, with perspectival disagreement about the proportions. Management experiences the rope component and minimizes the tangling. Workers experience the rope component as a coordination requirement imposed upon them while bearing the extraction component asymmetrically. The piton classification of the regulatory framework reveals the mechanism that preserves the Tangled Rope: regulation has become performative theater (compliance metrics about surveillance, not substantive protection), allowing the extraction mechanism to persist unchallenged. The false mountain classification (at analytical/civilizational scale) is the core mandatrophy risk: if the constraint is naturalized as inevitable requirement of logistics, then none of the indexical disagreement matters \u2014 all perspectives are simply adapting to physical law rather than negotiating a policy choice."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_labor_quota_drift",
+      "worker_health_surveillance_creep",
+      "gig_economy_control_mechanisms"
+    ],
+    "dual_formulation_note": "Warehouse productivity tracking decomposes into three structurally distinct constraints. This story focuses on the real-time surveillance and quota system (\u03b5=0.58, Tangled Rope). Upstream constraint: algorithmic_labor_quota_drift (\u03b5=0.45) focuses on how quotas exceed sustainable capacity. Downstream constraints: worker_health_surveillance_creep (\u03b5=0.72, Snare) focuses on secondary health monitoring and control; gig_economy_control_mechanisms (\u03b5=0.65) focuses on how similar tracking systems are deployed in gig work ecosystems. All three stories are linked because tightening algorithmic quotas increase extraction in all downstream constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.4
+    }
+  ]
+}

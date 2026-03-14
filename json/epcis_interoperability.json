@@ -1,0 +1,216 @@
+{
+  "header": {
+    "constraint_id": "epcis_interoperability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "epcis"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EPCIS Interoperability Standard Lock-In",
+    "topic_domain": "supply_chain/standards/technology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "epc_global_standards_body",
+      "early_adopter_enterprises"
+    ],
+    "victims": [
+      "supply_chain_participants",
+      "competing_standard_proponents"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dependent Supply Chain Participant",
+      "comment": "PERSPECTIVE 1: DEPENDENT SUPPLY CHAIN PARTICIPANT (SNARE) \u2014 Small suppliers and logistics operators face mandatory EPCIS compliance to participate in global supply chains. Exit is structurally impossible: non-compliance means exclusion from major retailers' networks. Maximum extraction with minimal coordination benefit for this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Market Implementer",
+      "comment": "PERSPECTIVE 2: MID-MARKET IMPLEMENTER (TANGLED ROPE) \u2014 Medium-sized enterprises benefit from supply chain visibility and coordination with partners but face significant compliance costs and switching barriers. Exit is possible at high cost (retooling systems, losing market access). Hybrid: both genuine coordination gains and asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Standards Body and Early Adopters",
+      "comment": "PERSPECTIVE 3: STANDARDS BODY AND EARLY ADOPTERS (ROPE) \u2014 EPC Global and early-adopting enterprises (Walmart, Amazon, Coca-Cola) designed the standard to solve genuine multi-party coordination: shared visibility across supply chains requires common language. These agents experience the constraint as enabling their coordination goals. Net beneficiaries with full exit options (can modify standard or exit to proprietary systems)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Competing Standards Coalition",
+      "comment": "PERSPECTIVE 4: COMPETING STANDARDS COALITION (TANGLED ROPE) \u2014 ISO, industry-specific standards bodies, and proprietary alternative protocols (GS1, EDIFACT variants) face lock-in effects. They can theoretically build alternatives, but EPCIS network effects create switching costs. Organized agents with partial agency: can coordinate alternatives but face extraction from incumbent advantage."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy EDI Infrastructure",
+      "comment": "PERSPECTIVE 5: LEGACY EDI INFRASTRUCTURE (PITON) \u2014 Traditional Electronic Data Interchange (EDI) and proprietary integration protocols persist despite EPCIS standardization efforts. They continue through institutional inertia: enterprises maintain dual systems rather than full migration. Theater ratio high because many firms maintain parallel EDI and EPCIS stacks simultaneously, creating performative compliance rather than true interoperability."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Emerging Blockchain Interoperability Layer",
+      "comment": "PERSPECTIVE 6: EMERGING BLOCKCHAIN INTEROPERABILITY LAYER (SCAFFOLD) \u2014 Distributed ledger technologies (blockchain, DLT) and decentralized identity frameworks (W3C Verifiable Credentials) are building alternative verification and coordination pathways that could reduce EPCIS centralization over 10-15 years. Organized agents see sunset logic: blockchain enables peer-to-peer provenance without EPCIS gatekeeping. Scaffold classification reflects temporary coordination role with visible exit path."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, supply chain interoperability is presented as an immutable requirement: complex global logistics cannot function without standardized tracking. This perspective naturalizes EPCIS as inevitable. However, the structural data contradicts this: multiple competing standards exist (GS1, ISO 9735, blockchain), and 'need for coordination' does not entail 'only EPCIS coordination possible.' The mountain classification is a false summit \u2014 institutionalized as natural when it is contingent."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "network_effects_reversibility",
+      "question": "Are EPCIS network effects irreversible, or could alternative standards achieve critical mass if first-mover advantage were overcome?",
+      "resolution_mechanism": "Historical analysis of standard transitions (EDI\u2192XML, IPv4\u2192IPv6); cost-benefit analysis of migration to alternative standards with equivalent functionality",
+      "impact": "If reversible: extractiveness should be lower (constrained exit), classification shifts toward Rope. If irreversible: current high extractiveness justified, lock-in is real structural feature.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether EPCIS network effects are reversible or path-dependent"
+    },
+    {
+      "id": "genuine_coordination_vs_incumbency",
+      "question": "Does EPCIS solve supply chain coordination problems better than available alternatives, or does its dominance derive primarily from incumbency and network lock-in?",
+      "resolution_mechanism": "Comparative performance analysis: EPCIS latency/cost vs GS1/ISO alternatives; counterfactual analysis of supply chain efficiency if alternative standards had achieved critical mass",
+      "impact": "If genuine technical superiority: Tangled Rope classification correct (coordination function + extraction). If incumbency-driven: reclassify toward Snare (extraction with minimal coordination benefit).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether EPCIS dominance reflects technical superiority or incumbency advantage"
+    },
+    {
+      "id": "interoperability_bridge_feasibility",
+      "question": "Can transparent interoperability bridges (cross-standard translators, blockchain-based proxies) reduce EPCIS lock-in without requiring wholesale migration?",
+      "resolution_mechanism": "Technical evaluation of bridge protocol feasibility; case studies of successful multi-standard environments (financial settlement systems, healthcare data standards)",
+      "impact": "If feasible: scaffold sunset becomes realistic (10-15 year path to multi-standard interoperability). If infeasible: lock-in deepens, extraction increases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether cross-standard interoperability bridges can reduce lock-in"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression (0.48) primarily structural (technical switching costs, network effects) or behavioral (internalized legitimacy of 'industry standards')?",
+      "resolution_mechanism": "Post-standard-choice analysis: survey enterprises that migrated away from EPCIS to measure whether suppression persists; longitudinal tracking of 'standards education' as normalization mechanism",
+      "impact": "If structural: suppression persists even if alternatives become viable. If behavioral: suppression declines rapidly once legitimate alternatives achieve scale.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs behavioral mechanisms of suppression in EPCIS lock-in"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "EPCIS (Electronic Product Code Information Services) standardization creates a structural tension between genuine multi-party supply chain coordination needs and extractive lock-in by the standard-setting authority and early adopters. The constraint exhibits characteristics of all six classification types depending on observational position. For dependent suppliers, EPCIS is an inescapable snare that mandates compliance with no exit option. For mid-market implementers, it is tangled rope \u2014 enabling supply chain visibility while extracting switching costs and compliance overhead. For the standards body and first movers, it is pure coordination rope \u2014 solving the genuine problem of heterogeneous supply chain partners needing shared language. For competing standards bodies, EPCIS creates extraction through incumbency lock-in and first-mover advantage. The traditional EDI infrastructure persists as degraded piton \u2014 maintained through institutional inertia despite EPCIS standardization. Emerging blockchain and decentralized identity frameworks represent scaffold structures with sunset logic: alternative protocols could displace EPCIS within 10-15 years if network effects reverse. The extractiveness metric (0.52) reflects that EPCIS lock-in has deepened over the past decade as enterprise adoption increased adoption barriers for switching. The theater ratio (0.55) indicates moderate performative compliance \u2014 many enterprises maintain parallel EPCIS and legacy EDI stacks rather than full migration, creating the appearance of standardization without true interoperability.",
+    "key_agents": [
+      "EPC Global Standards Body: Primary beneficiary (institutional/arbitrage) \u2014 controls standard evolution, captures value from vendor ecosystem built on EPCIS",
+      "Early Adopter Enterprises (Walmart, Amazon, Coca-Cola): Co-beneficiaries (institutional/arbitrage) \u2014 designed standard to suit their infrastructure, first-mover advantage in supply chain optimization",
+      "Dependent Supply Chain Participants (small suppliers, 3PLs): Primary victims (powerless/trapped) \u2014 mandatory EPCIS compliance with no exit option; absorb compliance costs",
+      "Mid-Market Implementers: Secondary victims (moderate/constrained) \u2014 face significant switching costs and retooling expenses; some coordination benefits but asymmetric extraction",
+      "Competing Standards Bodies (ISO, GS1, industry-specific consortia): Secondary victims (organized/constrained) \u2014 market share erosion due to EPCIS incumbent advantage; constrained ability to promote alternatives",
+      "Legacy EDI Infrastructure Operators: Institutional actors maintaining dual systems (institutional/arbitrage) \u2014 persist through inertia; extract value from enterprises maintaining parallel stacks",
+      "Blockchain/DLT Innovation Communities: Emerging organized agents (organized/mobile) \u2014 building alternative interoperability pathways with escape velocity; positioned to erode EPCIS lock-in"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, increasing. Initial EPCIS adoption (0.28) was genuinely coordinating \u2014 solving heterogeneous EDI integration problems for early adopters. As adoption becomes mandatory for supply chain participation, extractiveness increased as lock-in deepened and switching costs accumulated. Current value reflects that EPCIS controls now extract through incumbent advantage, not just coordination function. The trend line upward (0.28 \u2192 0.40 \u2192 0.52 over 15 years) shows rent-seeking accumulation: early coordination function is preserved while extraction layered on top. Suppression (0.48): Moderate. Network effects create high switching costs (technical retraining, system replacement, supply chain partner coordination). But suppression is not total \u2014 viable alternatives exist (GS1, ISO standards, blockchain), and coordinated industry migration is theoretically possible at high cost. Theater ratio (0.55): Moderate, increasing. Increasing proportion of EPCIS activity is performative: dual EDI/EPCIS stacks, compliance theater without deep interoperability, standardization that masks underlying heterogeneity. Theater rise suggests constraint is degrading from genuine coordination toward piton-like institutional inertia.",
+    "perspectival_gap": "The gap between beneficiary and victim perspectives is maximal because EPCIS creates genuine coordination benefits while simultaneously extracting through lock-in. The standards body genuinely solved the problem of heterogeneous EDI integration \u2014 this is not naturalized extraction but real coordination function. However, that coordination function is now 'covered' by extraction: switching to GS1 or blockchain would solve the same coordination problem, but network effects and incumbent advantage make switching prohibitively expensive. The analytical observer's false summit is the claim that 'supply chains need standards' entails 'all supply chains must use EPCIS.' The first is coordination (Rope), the second is incumbency (Snare for non-beneficiaries). The perspectival gap reveals this distinction.",
+    "directionality_logic": "Each agent's experienced extractiveness (chi) combines their base structural relationship (d) with the constraint's measured properties (\u03b5, f(d), scope). Standards body beneficiaries with arbitrage exit: d \u2248 0.15, f(d) \u2248 -0.01, scope=global (\u03c3=1.2) \u2192 \u03c7 \u2248 -0.006 (negative, enabling). Dependent suppliers with trapped exit: d \u2248 0.92, f(d) \u2248 1.40, scope=global \u2192 \u03c7 \u2248 0.72 (high extraction). Mid-market with constrained exit: d \u2248 0.62, f(d) \u2248 0.92, scope=national (\u03c3=1.0) \u2192 \u03c7 \u2248 0.48 (moderate extraction). The tuples correctly differentiate structural positions.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that 'coordination function' and 'extractive lock-in' are not mutually exclusive \u2014 the same mechanism can coordinate for some agents (early adopters, standards body) while extracting from others (dependent suppliers, competing standards). The classical mandatrophy asks: 'Is this coordination (Rope) or extraction (Snare)?' The answer is Tangled Rope \u2014 genuine coordination with asymmetric extraction. The constraint earns Tangled Rope classification because (1) it solves a real multi-party coordination problem (supply chain visibility), (2) it requires active enforcement (standards compliance, network effects), (3) it produces asymmetric extraction (lock-in favors early adopters), and (4) it has identifiable beneficiaries and victims. The false summit risk is naturalizing EPCIS as the only possible solution \u2014 the 'need for coordination' is real, but 'EPCIS dominance' is contingent on network effects, not necessity."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "supply_chain_visibility_coupling",
+      "iot_device_interoperability",
+      "blockchain_supply_chain_proofs"
+    ],
+    "dual_formulation_note": "EPCIS interoperability is downstream of the genuine supply chain coordination problem (which has \u03b5\u22480.15, pure Rope) but represents the specific institutional arrangement that solves it. The upstream constraint is 'supply chain visibility coordination' (\u03b5=0.15, Rope); EPCIS is the incumbent solution that adds extraction through lock-in. Decomposition: supply_chain_visibility_coordination (upstream, low \u03b5) \u2192 epcis_interoperability (incumbent solution, moderate \u03b5) \u2192 blockchain_supply_chain_proofs (emerging alternative, moderate \u03b5). All three are linked because competing solutions address the same coordination need."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.68
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "medium-high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "supply_chain_coordination_requirement"
+    ]
+  }
+}

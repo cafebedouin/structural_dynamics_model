@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "victorian_class_stratification",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Victorian Class Stratification and Social Mobility Control",
+    "topic_domain": "social/economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "aristocracy_and_landed_gentry",
+      "industrial_capitalists",
+      "professional_middle_class"
+    ],
+    "victims": [
+      "working_class",
+      "agricultural_laborers",
+      "urban_poor"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Working Class Laborer",
+      "comment": "PERSPECTIVE 1: WORKING CLASS LABORER (SNARE) \u2014 Trapped by economic dependency, legal restrictions on movement, lack of education access, and social enforcement mechanisms. Exit from class position is nearly impossible within a biographical horizon. Maximum extraction: forced labor at subsistence wages, no representation in governance, no meaningful access to justice or property rights."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Aspiring Middle Class",
+      "comment": "PERSPECTIVE 2: ASPIRING MIDDLE CLASS (TANGLED ROPE) \u2014 Faces significant barriers to upward mobility (education costs, social gatekeeping through clubs and credentials), yet the system does provide coordination benefits through standardized professions (law, medicine, commerce) and some genuine social advancement through demonstrated capability. Extraction exists (artificial scarcity of professional positions, social policing), but coordination function is real (credentialing systems do select for competence)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Aristocratic Beneficiary",
+      "comment": "PERSPECTIVE 3: ARISTOCRATIC BENEFICIARY (ROPE) \u2014 Experiences the constraint as pure coordination: the class system organizes society, enables property transfer, coordinates military and administrative hierarchies, and secures wealth accumulation. Extraction runs entirely toward this agent. The system solves their coordination problem (maintaining estates, securing heirs, managing the social order) with minimal coercive overhead from their perspective \u2014 the subordinate classes bear suppression; the beneficiary experiences coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Industrial Capitalist",
+      "comment": "PERSPECTIVE 4: INDUSTRIAL CAPITALIST (TANGLED ROPE) \u2014 Benefits from class stratification (stable labor supply, suppressed wages, no union power). Also constrained by the system: must maintain social propriety, marry within acceptable circles, follow mercantilist regulations, navigate aristocratic gatekeeping of political power. High extractiveness relative to workers, but also trapped in a set of social expectations and legal constraints. Genuine coordination function: the class system enables factory labor organization and property rights enforcement."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Imperial Administration System",
+      "comment": "PERSPECTIVE 5: IMPERIAL ADMINISTRATION SYSTEM (PITON) \u2014 By late Victoria, the formal class system is increasingly performative. Actual power has shifted to industrial capital and bureaucratic institutions, but the theater of class hierarchy (titled nobility, debutante balls, honor systems) persists through institutional inertia. The system maintains itself through ceremonial validation rather than structural necessity. Theater ratio reflects the growing gap between formal class distinctions and actual wealth/power distribution."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Naturalization View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURALIZATION VIEW (MOUNTAIN) \u2014 Risk of misclassifying the constraint as a natural law ('human societies naturally stratify,' 'hierarchy is inevitable'). The analytical observer from a distance may see class stratification as an inherent feature of human social organization rather than a contingent institutional mechanism that could be reformed or dismantled. The engine will flag this as a false summit, revealing that naturalization of the constraint serves the beneficiaries' interests."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "genetic_vs_institutional_hierarchy",
+      "question": "To what extent does Victorian class stratification reflect genuine differences in ability/merit versus institutional barriers that create the appearance of merit-based hierarchy?",
+      "resolution_mechanism": "Empirical comparison of mobility rates within same socioeconomic cohort; analysis of educational access and achievement gaps; cross-generational outcome tracking controlling for family advantage",
+      "impact": "If institutional barriers dominate: constraint is pure Snare (extraction without coordination). If genuine ability sorting exists: constraint shifts toward Tangled Rope (extraction + coordination). Current assumption: heavily institutional.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Genetic vs institutional determinants of hierarchy"
+    },
+    {
+      "id": "coordination_function_necessity",
+      "question": "Do the coordination functions attributed to class stratification (labor organization, property rights, administrative hierarchy) actually require class suppression, or could they be achieved through alternative mechanisms?",
+      "resolution_mechanism": "Comparative analysis of non-stratified or lower-stratification societies achieving similar coordination outcomes; examination of alternative coordination mechanisms (cooperative labor, collective property, meritocratic administration)",
+      "impact": "If alternative coordination exists: current Tangled Rope classifications shift toward Snare (coordination function was spurious). If stratification is necessary: Tangled Rope classifications confirmed.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether class hierarchy is necessary for coordination"
+    },
+    {
+      "id": "suppression_internalization_mechanism",
+      "question": "Is the measured suppression (0.72) primarily structural (legal/economic barriers to exit) or internalized (working class accepts class ideology as natural/deserved)?",
+      "resolution_mechanism": "Historical analysis of working class consciousness; examination of strike/rebellion patterns; analysis of ideological narratives in labor vs elite media; post-constraint suppression trajectory (do barriers persist if ideology is challenged?)",
+      "impact": "If primarily internalized: effective suppression is higher than structural measure suggests \u2014 constraint persists through cognitive capture. If structural: removing legal barriers would enable exit. Current assumption: substantial internalization (identity_locked dynamics at generational time).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs internalized suppression mechanisms"
+    },
+    {
+      "id": "theater_ratio_acceleration",
+      "question": "Why does theater ratio increase from 0.55 (early Victorian) to 0.65 (late Victorian)? Does this reflect degradation of class function or intensification of performative gatekeeping?",
+      "resolution_mechanism": "Analysis of ceremonial elaboration (growth of debutante balls, honors system, social clubs); comparison of formal class barriers vs actual wealth/power distribution over the period; examination of who benefits from performative maintenance",
+      "impact": "If degradation: constraint is shifting toward Piton (inertial maintenance). If intensification: constraint is evolving defensive theater to maintain control against rising challenges (labor movement, suffrage demands). Affects piton classification confidence.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Driver of increasing theater ratio in late Victorian period"
+    },
+    {
+      "id": "identity_lock_escape_mechanisms",
+      "question": "What percentage of working-class individuals who achieve educational/professional advancement experience liberation from class identity versus internalized internalization that persists as 'imposter syndrome'?",
+      "resolution_mechanism": "Autobiographical analysis of upward mobility narratives; comparison of psychological integration versus persistent identity bifurcation; examination of whether mobility is followed by ideological shift or maintained working-class consciousness",
+      "impact": "If most experience persistent identity lock: exit is psychological barrier not structural. If identity shifts freely: exit barriers are primarily structural. Affects classification of middle-class perspectives at longer time horizons.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Identity lock persistence through social mobility"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 64,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 64,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 64
+  },
+  "commentary": {
+    "narrative_context": "Victorian class stratification represents one of history's most comprehensive constraint systems, embedding extraction across legal, economic, social, and ideological domains. The constraint operates through multiple reinforcing mechanisms: legal restrictions on property ownership, political representation, and movement; economic barriers (education costs, wage suppression, lack of capital access); social enforcement (marriage markets, club membership, honor systems); and ideological naturalization (claims that class difference is genetic, moral, or inevitable). This constraint exhibits all six DR types from different structural positions, making it a diagnostic exemplar for how stratification systems achieve legitimacy while maintaining severe extraction. The theater ratio (0.65) reflects the elaborate ceremonial apparatus (debutante balls, honors system, titled nobility) that increasingly performs class distinction in late Victorian period even as actual power distribution shifts toward industrial capital and professional bureaucracy. The extractiveness (0.58) is moderate rather than maximal because the system does provide genuine coordination functions (property rights, administrative hierarchy, professional credentialing) alongside extraction, though the proportion of coordination to extraction is contested (omega variable).",
+    "key_agents": [
+      "Working Class and Agricultural Laborers: Primary victims (powerless/trapped) \u2014 face economic dependency, legal restrictions, education barriers, and systematic suppression. No meaningful exit options within biographical time horizon.",
+      "Urban Poor: Primary victims (powerless/trapped) \u2014 lack property rights, face criminalization of poverty, dependent on parish relief, subjected to poorhouse system.",
+      "Aspiring Middle Class: Secondary victims (moderate/constrained) \u2014 face gatekeeping through education access and social club membership; some genuine advancement possible at generational time scale.",
+      "Aristocracy and Landed Gentry: Primary beneficiaries (institutional/arbitrage) \u2014 extract wealth through agricultural rent, land value, inherited privilege. Coordination function: maintain estates and property systems.",
+      "Industrial Capitalists: Secondary beneficiaries (powerful/constrained) \u2014 benefit from suppressed wages and stable labor supply; constrained by mercantilist regulations and social gatekeeping from direct political power.",
+      "Professional Middle Class (Law, Medicine, Civil Service): Secondary beneficiaries (institutional/constrained) \u2014 benefit from credentialing gatekeeping and social distinction; constrained by aristocratic priority in highest offices.",
+      "Imperial Administration System: Institutional actor (institutional/arbitrage) \u2014 maintains the formal apparatus of class hierarchy; increasingly performative in late Victorian period.",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as inherent human nature or biological inevitability."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts significant value from working classes through wage suppression, property restriction, education denial, and legal disadvantage. However, the measurement reflects declining extractiveness from 0.62 to 0.58 over the Victorian period, suggesting that rising challenges (labor organization, suffrage demands, alternative ideologies) are eroding the system's extraction efficiency. This is consistent with a constraint in transition. If extractiveness had remained stable or increased, a Snare classification would be more appropriate. The decline suggests the system is beginning to lose structural grip. Suppression (0.72): High. Multiple reinforcing suppression mechanisms: economic (wages insufficient for capital accumulation), legal (vagrancy laws, property restrictions, no political voice), social (marriage market gatekeeping, club exclusion, reputational damage for upward mobility), and ideological (education system teaches class inferiority, religious doctrines naturalize hierarchy). Suppression does not decline materially over the interval \u2014 if anything, it intensifies as challenges grow (police expansion, workhouse reform that increases confinement, educational segregation). Theater ratio (0.65): Moderate-high and increasing. Early Victorian period sees more functional class system (genuine need for rural hierarchy, factory labor organization, administrative structure). Late Victorian period shows increasing ceremonial elaboration (debutante balls become more elaborate, honors system expands, titled nobility becomes less economically powerful but more socially conspicuous) even as underlying power distribution shifts to industrial capital. The theater represents defensive maintenance of legitimacy against rising challenges.",
+    "perspectival_gap": "The constraint demonstrates near-maximal perspectival divergence. This reveals the core structural truth of stratification: the same mechanism produces radically different experienced constraints depending on structural position. The working class cannot see the 'coordination' function that the aristocracy experiences \u2014 they see pure suppression. The aristocracy cannot see their own extraction mechanism because they experience only the coordination benefits. The analytical observer risks collapsing this gap by naturalizing the system as inevitable. The Tangled Rope classification (claimed type) is justified because the constraint genuinely has both a coordination function (organizing labor, securing property rights, managing succession) AND asymmetric extraction (suppressing wages, restricting access, concentrating wealth). But which dominates depends entirely on where the observer sits.",
+    "directionality_logic": "Directionality is derived from beneficiary/victim status and exit options. Working class (victim + trapped) derives d \u2248 0.95 \u2192 high f(d) \u2192 high \u03c7. Aristocracy (beneficiary + arbitrage) derives d \u2248 0.05 \u2192 low f(d) \u2192 negative \u03c7. Middle class aspiring upward (both + constrained) derives d \u2248 0.50 \u2192 moderate f(d). Industrial capitalist (beneficiary + constrained) derives d \u2248 0.40 \u2192 low-moderate f(d). The directionality values reflect actual power flow in the system: extraction runs from powerless-trapped toward institutional-arbitrage. Scope modifier \u03c3(national) = 1.0, so no additional scaling beyond the core f(d) calculation.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that the six classifications are not competing theories but perspectival readings of a stratified system. The mandatrophy is not 'which type is correct?' but 'which position are you measuring from?' The analytical observer's mountain (class hierarchy is natural law) is a false summit \u2014 the empirical data show it is maintained through active enforcement (requires_active_enforcement: true). The aristocracy's rope is their genuine experience \u2014 they solve coordination problems with the system. The working class's snare is their structural reality \u2014 they are trapped with extraction and no exit. The tangled rope perspectives (middle class, industrial capitalist) capture the hybrid experience of those positioned ambiguously. The piton reflects the system's degradation in late Victoria \u2014 theater increasing even as functional necessity declines. The mandatrophy is resolved by recognizing that all six readings coexist in the same historical moment, revealing different aspects of a complex constraint. Mislabeling the system as purely 'natural law' (mountain) would naturalize what is actually enforced extraction. Mislabeling it as pure coordination (rope) would erase the suppression and victimization. The Tangled Rope classification forces recognition of both functions simultaneously, preventing ideological collapse into either pure naturalization or pure victimhood narrative."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "victorian_marriage_market_gatekeeping",
+      "industrial_labor_extraction",
+      "imperial_governance_hierarchy"
+    ],
+    "dual_formulation_note": "Victorian class stratification decomposes into multiple structurally distinct constraints with different \u03b5 values: agricultural rent extraction (\u03b5\u22480.65, Snare), industrial wage suppression (\u03b5\u22480.58, Tangled Rope), educational gatekeeping (\u03b5\u22480.50, Tangled Rope), marriage market control (\u03b5\u22480.55, Tangled Rope), and imperial administration hierarchy (\u03b5\u22480.40, Rope). These are linked via network.affects_constraints because they share the same ideological legitimation (naturalization of hierarchy) and reinforce each other's suppression mechanisms. The base story models the unified system; the network decomposition tracks specific extraction mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

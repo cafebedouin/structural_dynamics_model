@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "monopsony_labor_market",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "monop"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Monopsony Labor Market Extraction",
+    "topic_domain": "economic/labor_markets",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "dominant_employer"
+    ],
+    "victims": [
+      "low_skill_workers",
+      "geographically_isolated_workers",
+      "workers_with_firm_specific_capital"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Isolated Worker",
+      "comment": "PERSPECTIVE 1: ISOLATED WORKER (SNARE) \u2014 Faces real structural barriers to exit: relocation costs, firm-specific skills with no transferable value, geographic isolation (single dominant employer in the region), unemployment benefits insufficient to sustain family, no alternative job market. The monopsony extracts wage suppression through the credible threat of termination leading to destitution. Maximum experienced extraction \u2014 the worker perceives the constraint as unchangeable within biographical time."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "label": "The Worker with Identity Fusion",
+      "comment": "PERSPECTIVE 2: WORKER WITH IDENTITY FUSION (SNARE) \u2014 Structurally similar to Perspective 1 but with internalized constraint: the worker's identity is constituted through the job (meatpacking plant worker, mining operation, agricultural worker). Exit would require abandoning not just the employment relationship but the self-concept built over decades. Even if relocation were possible (mobile exit options), the worker cannot exercise it because their identity frame makes exit literally unthinkable. The constraint is internalized \u2014 the worker carries the extraction mechanism with them even if structural barriers dissolved. High suppression persists after barrier removal through cognitive entrapment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Skilled Worker with Bargaining Power",
+      "comment": "PERSPECTIVE 3: SKILLED WORKER WITH BARGAINING POWER (TANGLED ROPE) \u2014 Faces monopsony wage suppression but has some exit options: specialized skills, ability to relocate at moderate cost, potential to negotiate with multiple employers regionally. Experiences both coordination (the employer provides stable employment, training, advancement pathways) and extraction (wages below marginal product, limited upward mobility). At generational time scale, can migrate out or organize within firm. Mixed experience \u2014 asymmetric but not total."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Dominant Employer",
+      "comment": "PERSPECTIVE 4: DOMINANT EMPLOYER (ROPE) \u2014 Experiences the monopsony as a coordination mechanism: the firm solves the labor aggregation problem by establishing wage floors, hiring procedures, and worker retention through modest above-subsistence payments. From the employer's perspective, the constraint coordinates labor supply and firm production. The employer has arbitrage options (can shift production, source labor elsewhere, relocate). Net beneficiary \u2014 the extraction flows toward the firm, but the firm perceives the arrangement as legitimate coordination of labor markets."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Labor Union or Organizing Coalition",
+      "comment": "PERSPECTIVE 5: LABOR UNION OR ORGANIZING COALITION (SCAFFOLD) \u2014 Organized workers can reduce the monopsony's extraction power through collective bargaining, changing the employer's exit options from arbitrage to constrained (relocation becomes costly if workers are organized regionally). The coalition sees the monopsony as a temporary coordination failure with a sunset: collective action, legislative change (minimum wage, sectoral bargaining, antitrust enforcement), or demographic shifts can break the geographic isolation that enables monopsony power. Extraction is moderate and declining over generational time."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regional Government or Regulator",
+      "comment": "PERSPECTIVE 6: REGIONAL GOVERNMENT OR REGULATOR (TANGLED ROPE) \u2014 The state or regional authority faces a mixed constraint: the monopsony coordinates labor supply and production (benefiting local tax base, employment statistics) while extracting from workers (creating social costs, political instability, health outcomes). Government has constrained exit options (cannot easily replace dominant employer without economic shock) and sees both coordination (labor is supplied) and extraction (wages below fair value). May enforce or tolerate monopsony as lesser evil relative to mass unemployment."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational/global view, the monopsony constraint exhibits pure extraction with minimal coordination benefits: wages below marginal product, suppressed through geographic isolation and threat of unemployment. The constraint's primary function is wealth transfer from workers to capital, not solving a genuine coordination problem. The 'coordination' framing (Perspectives 4 and 6) is a post-hoc justification for asymmetric extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "geographic_isolation_source",
+      "question": "Is monopsony power primarily caused by geographic isolation (exogenous), employer deliberate strategy (endogenous), or lock-in from worker investment in firm-specific capital?",
+      "resolution_mechanism": "Historical analysis of employer movement patterns; worker migration data before/after employer entry; competitor entry barriers; job search cost measurement",
+      "impact": "If primarily geographic: monopsony is Rope or Tangled Rope depending on relocation feasibility. If primarily strategic: monopsony is pure Snare. If primarily lock-in: classification depends on whether workers foresee the trap at entry.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether monopsony power is exogenous geographic isolation or endogenous employer strategy"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "What proportion of measured suppression is structural (material barriers to exit) versus internalized (cognitive/identity-based entrapment that persists after barriers dissolve)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: track workers who leave monopsony regions; measure wage recovery, mobility confidence, and identity recalibration over 2-5 year periods. If suppression persists after barrier removal, classify as internalized.",
+      "impact": "High internalization \u2192 constraint's true suppression is higher than measured. Workers export the extraction mechanism with them after exit. Organizing strategy must address cognitive capture alongside material barriers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized suppression in monopsony labor markets"
+    },
+    {
+      "id": "marginal_product_verification",
+      "question": "Can worker marginal product be empirically established, or does firm-specific capital make the MPL calculation indeterminate?",
+      "resolution_mechanism": "Wage gap analysis using comparable workers in non-monopsony markets; task-level productivity measurement; counterfactual wage estimates. If MPL cannot be pinned down, the claim of 'below marginal product' becomes harder to verify.",
+      "impact": "If MPL is verifiable: extractiveness \u2265 0.50 (clear below-MPL extraction). If indeterminate: extractiveness may be lower; employer may be capturing rents from firm-specific capital rather than pure wage suppression.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Empirical verification of worker marginal product in monopsony markets"
+    },
+    {
+      "id": "collective_action_feasibility",
+      "question": "Can workers organize to break monopsony power, or are organizing costs prohibitive relative to individual exit?",
+      "resolution_mechanism": "Historical cases of successful unionization in monopsony regions; organizing cost measurement; comparison of unionization rates in single-employer vs multi-employer regions",
+      "impact": "If organizing is feasible: Scaffold perspective is realistic \u2014 collective action can establish sunset. If prohibitive: Snare classification is more accurate \u2014 workers must exit individually or remain trapped.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of collective action in breaking monopsony power"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "A monopsony labor market exists when a single dominant employer (or small group of employers) possesses significant wage-setting power due to geographic isolation, high worker relocation costs, or firm-specific human capital. Workers face limited outside options and cannot credibly threaten to exit, enabling the employer to suppress wages below what competitive markets would provide. The constraint exhibits as Snare from the powerless worker perspective (trapped by geography and capital lock-in), Tangled Rope from skilled workers with moderate bargaining power, Rope from the employer (who experiences labor coordination), and Scaffold from organized labor seeking collective action with a generational sunset. The extractiveness (0.58) reflects that monopsony extraction is substantial but not total \u2014 the employer must still pay above subsistence to retain workers and maintain production. Theater ratio (0.35) is low because monopsony operates through transparent wage suppression mechanisms (job offers below market rates), not through performative compliance rituals.",
+    "key_agents": [
+      "Low-skill, geographically isolated workers: Primary victims (powerless/trapped) \u2014 bear full extraction through below-market wages and credible unemployment threat",
+      "Workers with identity fusion: Secondary victims (powerless/identity_locked) \u2014 structurally mobile but identity-bound to job; carry suppression internally after barriers dissolve",
+      "Skilled workers with bargaining power: Tertiary victims (moderate/constrained) \u2014 experience monopsony extraction but have exit options; perceive mixed coordination and extraction",
+      "Dominant regional employer: Primary beneficiary (institutional/arbitrage) \u2014 captures wage suppression through market power; experiences arrangement as labor coordination",
+      "Labor unions or worker coalitions: Organized challengers (organized/constrained) \u2014 can break monopsony power through collective action and legislative change",
+      "Regional government/regulator: Institutional stakeholder (institutional/constrained) \u2014 balances monopsony's employment provision against social costs; tolerates extraction as lesser evil",
+      "Analytical observer: Civilizational view (analytical/analytical) \u2014 identifies pure extraction rather than coordination"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The monopsony suppresses wages through credible threat of unemployment and worker relocation infeasibility. Empirical estimates suggest wage gaps of 10-30% below competitive market levels depending on worker skill and regional isolation. The extraction is not total (not 0.80+) because the employer must maintain wage floors above subsistence and some workers retain bargaining power through skills or alternative opportunities. Over the measurement interval (0-20 years), extractiveness has risen from 0.42 to 0.58, reflecting increasing employer consolidation and weakening worker outside options (declining regional wage competition, reduced interstate migration). Suppression (0.65): High. Structural barriers include relocation costs, firm-specific skill atrophy if workers leave, unemployment insurance gaps, and geographic isolation. Additionally, suppression includes internalized components \u2014 workers come to accept below-market wages as normal, reducing their willingness to pursue exit even when it becomes feasible. Theater ratio (0.35): Low. Monopsony operates through direct wage offers, not through performative compliance rituals. The employer does not need to disguise extraction through theater \u2014 geographic isolation provides credible exit threat without additional ritual. Theater has increased slightly over time as employers have adopted HR framing of 'competitive compensation' and 'benefits packages' to justify suppression.",
+    "perspectival_gap": "The Rope perspective (employer) and Snare perspective (trapped worker) represent opposite poles of directionality and experienced extraction. The employer benefits from the geographic isolation that traps workers, experiencing wage suppression as legitimate profit margin rather than extraction. Workers experience the same wage offer as extractive suppression with no alternative. The Tangled Rope (skilled worker) represents a middle position where both coordination and extraction are structurally present. The Scaffold (organized labor) perspective reframes the constraint as temporary, revealing the structural conditions that generate monopsony (geographic isolation, regulatory barriers to employer mobility, sectoral consolidation) as changeable through collective action and policy. The identity-locked worker perspective reveals that suppression persists through internalized mechanisms even if structural barriers dissolved \u2014 the constraint's true depth is cognitive, not just material. The analytical observer perspective challenges all others' framing by identifying the 'coordination' function as post-hoc justification for pure extraction: the employer does not need workers to coordinate production at below-market wages; the employer uses geographic isolation to extract rents.",
+    "directionality_logic": "Directionality values (d) are derived from beneficiary/victim status and exit options per the constraint pipeline. Powerless trapped workers show d \u2248 0.95 \u2192 high f(d) \u2248 1.42 \u2192 high experienced extractiveness chi. Identity-locked workers show d \u2248 0.89 \u2192 f(d) \u2248 1.28 \u2192 high chi (identity-bound workers may be structurally more mobile than trapped workers, but identity fusion prevents exercise of mobility, so effective exit is even more constrained). Skilled workers with constrained exit show d \u2248 0.55 \u2192 f(d) \u2248 0.75 \u2192 moderate chi. Employers with arbitrage options show d \u2248 0.15 \u2192 f(d) \u2248 -0.01 \u2192 negative/near-zero chi (beneficiaries experience the constraint as coordination, not extraction). Organized labor with constrained options shows d \u2248 0.40 \u2192 f(d) \u2248 0.40 \u2192 low-moderate chi (coalition has agency and exit path). Regional government with institutional constrained shows d \u2248 0.60 \u2192 f(d) \u2248 0.90 \u2192 moderate-high chi (government is partially trapped by employer dependence, partially benefits from employment provision). Analytical observer shows d \u2248 0.72 \u2192 f(d) \u2248 1.15 \u2192 high chi (sees pure extraction rather than coordination).",
+    "mandatrophy_analysis": "SNARE VS TANGLED ROPE CLASSIFICATION: The constraint classifies as Snare from the trapped worker perspective (\u03b5 > 0.46, suppression high, \u03c7 high) but as Tangled Rope from the skilled worker and government perspectives (suppression high, but coordination function present alongside extraction). The mandatrophy is resolved by recognizing that these are legitimate perspectival differences: for isolated low-skill workers, the constraint is pure extraction (employer provides no coordination benefit beyond subsistence wages); for skilled workers and government, the constraint has genuine coordination content (stable employment, production coordination) alongside extraction. The Snare classification at Perspective 1 is correct \u2014 not a false positive for pure extraction. The Rope classification at Perspective 4 (employer) is also correct from the employer's structural position. The constraint genuinely exhibits multiple types from different observational positions. The mandatrophy does not arise here because the claimed_type (snare) matches the primary victim perspective, which is the canonical position for classification when a constraint has identifiable targets."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "labor_market_segmentation",
+      "firm_specific_capital_lock_in",
+      "geographic_wage_dispersion"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "documented_status_employment_access",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "docstat"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "Documented Status Employment Access Restriction",
+    "topic_domain": "labor/immigration/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "formal_sector_employers",
+      "documented_citizen_workers",
+      "enforcement_apparatus"
+    ],
+    "victims": [
+      "undocumented_migrants",
+      "precarious_workers",
+      "labor_market_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Undocumented Migrant",
+      "comment": "PERSPECTIVE 1: UNDOCUMENTED MIGRANT (SNARE) \u2014 Faces absolute barrier to legal employment without documented status. Cannot exit through legitimate labor market access; confinement is structural and enforced. Must accept informal sector wages, unsafe conditions, and exploitation with no legal recourse. Zero degrees of freedom within formal economy."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Precarious Worker",
+      "comment": "PERSPECTIVE 2: PRECARIOUS WORKER (SNARE) \u2014 Even documented workers on temporary visas face confinement: losing work visa triggers deportation. Employer holds documentation hostage; worker cannot negotiate or exit without losing immigration status. High suppression through legal entanglement \u2014 exit costs are existential."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Formal Sector Employer",
+      "comment": "PERSPECTIVE 3: FORMAL SECTOR EMPLOYER (ROPE) \u2014 Experiences documented status requirement as coordination mechanism: verification of workers' legal eligibility reduces hiring liability. The constraint solves a collective action problem (avoiding legal penalties) while providing preferential access to desperate workers willing to accept depressed wages. Net beneficiary with arbitrage \u2014 can hire at below-market rates by excluding undocumented workers from competing."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Documented Citizen Worker",
+      "comment": "PERSPECTIVE 4: DOCUMENTED CITIZEN WORKER (ROPE) \u2014 Experiences the constraint as coordination and cartelization: documented status requirement pools them into a higher-wage group by legally excluding undocumented competitors. Also provides moral and civic framing ('protecting domestic workers'). Benefits from extraction directed at undocumented workers; sees constraint as fair labor market regulation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Enforcement Apparatus",
+      "comment": "PERSPECTIVE 5: ENFORCEMENT APPARATUS (TANGLED ROPE) \u2014 Administers the documented status requirement through workplace raids, document verification, employer penalties. Genuinely solves coordination problem (standardizes eligibility verification across employers) while simultaneously extracting through selective enforcement, corruption, and institutional expansion (budget growth, personnel). Powerful actor with mobility \u2014 could exit if political will changed, but has structural incentive to perpetuate the constraint."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Labor Rights Coalition",
+      "comment": "PERSPECTIVE 6: LABOR RIGHTS COALITION (PITON) \u2014 Organized actors see documented status as a degraded protection mechanism: it was designed to safeguard worker rights but now functions primarily as a selection mechanism for employer exploitation of undocumented workers. Coalition has constrained exit (can lobby but not overturn the constraint unilaterally) and sees high theater \u2014 the constraint is maintained through rhetoric about 'rule of law' and 'border security' while its primary function (enabling labor market segmentation) remains unacknowledged. Theater ratio reflects how much political legitimacy derives from stated purposes versus actual outcomes."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational perspective, the constraint contains genuine coordination elements (verification of eligibility, standardization of hiring practices, risk allocation between employers and state) alongside severe asymmetric extraction (segmentation of labor market into protected and disposable tiers, wage suppression through exclusion, institutional expansion of enforcement). The classification depends on relative weight assigned to coordination vs extraction; the data justifies tangled_rope as the analytically stable position."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_vs_extraction_boundary",
+      "question": "How much of the documented status requirement's function is genuine coordination (standardizing eligibility verification) versus how much is extractive segmentation (creating a legal underclass for wage suppression)?",
+      "resolution_mechanism": "Counterfactual analysis: what would labor markets look like if documented status were dropped but alternative verification mechanisms (e.g., secure biometric ID, portable credential systems) were maintained? Do wage effects persist?",
+      "impact": "If primarily coordination: reclassify toward Rope; strengthen policy arguments for alternatives that preserve coordination without segmentation. If primarily extraction: confirm Snare for primary victims; focus policy on dismantling the legal barrier rather than replacing it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Boundary between coordination function and extractive segmentation"
+    },
+    {
+      "id": "informal_sector_sustainability",
+      "question": "Is the informal sector a genuine alternative exit path for undocumented workers, or does documented status segmentation make informal work the only option while simultaneously making it more exploitative?",
+      "resolution_mechanism": "Comparative wage and condition analysis: undocumented workers in informal sectors with and without documented status legal barriers; elasticity of informal sector expansion in response to documented status enforcement",
+      "impact": "If informal sector is viable alternative: suppression metric should be lowered (exit option improves from trapped toward constrained). If informal sector expands precisely because documented status closes formal doors, and those informal jobs are more exploitative: suppression metric confirmed or raised; the constraint creates the informality it claims to address.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether informal sector provides genuine or degraded exit"
+    },
+    {
+      "id": "enforcement_consistency_and_arbitrage",
+      "question": "Is enforcement of documented status requirements applied uniformly across employers, sectors, and geographies, or does selective enforcement create arbitrage opportunities that benefit some actors while punishing others?",
+      "resolution_mechanism": "Audit studies; inspection frequency analysis by sector and geography; correlation between enforcement activity and employer political connections or union density",
+      "impact": "If enforcement is consistent: constraint functions more like coordination (clear rules). If enforcement is selective: arbitrage opportunities confirm extractive classification and suggest enforcement apparatus itself is a beneficiary (high d for institutional actors, higher chi). Selective enforcement also explains how the constraint persists despite economic inefficiency \u2014 differential punishment preserves political coalition.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Uniformity vs selectivity of documented status enforcement"
+    },
+    {
+      "id": "documented_status_as_identity_lock",
+      "question": "For long-term undocumented migrants, does the documented status barrier function as an external trap (material barrier) or have workers internalized the constraint as identity (undocumented identity as unchangeable, self-concept as outsider)?",
+      "resolution_mechanism": "Ethnographic study of identity frames; survey of undocumented workers on whether exit feels possible in principle vs impossible in practice; behavior change following legalization (do workers' employment and career aspirations shift?)",
+      "impact": "If primarily external trap: classification confirmed as Snare; focus on removing the barrier. If identity-locked: some proportion of the suppression is internalized (cognitive rather than structural); reclassify exit_options from trapped toward identity_locked; note that exit requires identity reframing, not just legal status change.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "External material trap versus internalized identity lock"
+    },
+    {
+      "id": "documented_status_global_heterogeneity",
+      "question": "Does the constraint operate identically across all documented status regimes, or are there structural variations (e.g., EU citizenship free movement, bilateral labor agreements, humanitarian exceptions) that create different extraction profiles?",
+      "resolution_mechanism": "Comparative analysis across jurisdictions with different documented status frameworks; \u03b5 measurement for each variant",
+      "impact": "If heterogeneous: may require decomposition into multiple constraint stories with different \u03b5 values (EU internal mobility vs third-country workers; skilled vs unskilled; seasonal vs permanent). Each story would have different perspectives and different classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Global heterogeneity in documented status extraction profiles"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Documented status employment access restrictions create a legal segmentation of labor markets in which workers without documentation of citizenship or authorized work status are excluded from formal employment sectors. The constraint nominally addresses labor law enforcement and border control while functionally enabling systematic wage suppression and labor exploitation. This is a high-extraction, high-suppression mechanism that affects millions of workers globally and exhibits stark perspectival divergence: the undocumented worker experiences absolute confinement (Snare); the formal employer experiences efficient labor cost reduction through legal exclusion (Rope); the enforcement apparatus experiences both coordination (standardized eligibility verification) and expansion (institutional growth and discretionary power, Tangled Rope); and the analytical observer sees the constraint as a hybrid coordination-extraction mechanism with extractive dominance. The increasing extractiveness over the measurement interval (0.52 to 0.68) reflects intensifying enforcement and shrinking informal sector wages as digital tracking and employer verification systems improve. Theater ratio remains low to moderate (0.45) because the constraint operates through explicit legal mechanisms with clear rules, not through performative ritual \u2014 this distinguishes it from constraints whose extraction is hidden behind formal claims about their coordination function.",
+    "key_agents": [
+      "Undocumented Migrants: Primary victims (powerless/trapped) \u2014 cannot legally access formal employment; forced into informal sector at depressed wages and under coercive conditions; no legal recourse for wage theft or unsafe conditions; estimated 164 million globally (IOM 2024)",
+      "Precarious Workers: Secondary victims (powerless/trapped) \u2014 documented workers on temporary status whose immigration status is tied to employment; employer holds visa hostage; cannot exit without deportation risk",
+      "Formal Sector Employers: Primary beneficiaries (institutional/arbitrage) \u2014 access labor pool willing to accept below-market wages due to legal exclusion; reduce hiring liability through documented status verification; benefit from depressed wage levels across labor market as informal sector competition is suppressed",
+      "Documented Citizen Workers: Secondary beneficiaries (institutional/arbitrage) \u2014 pool into protected wage group; cartelized against undocumented competition; gain framing of constraint as 'labor protection' despite actual function as wage depression",
+      "Enforcement Apparatus: Institutional beneficiary with complexity (powerful/mobile to constrained depending on political context) \u2014 administers documented status verification; expands through budget growth and specialized workforce; operates through selective enforcement creating arbitrage",
+      "Labor Rights Coalition: Organized constraint critics (organized/constrained) \u2014 see degraded protection mechanism; have constrained exit (lobbying power but not structural override); perceive high theater in the constraint's legitimating narratives",
+      "Informal Sector: Structural consequence rather than agent \u2014 grows as documented status enforcement tightens; wages decline as formal sector competition is legally eliminated; conditions worsen as workers accept exploitation to avoid detection"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The documented status requirement directly enables wage depression through legal exclusion \u2014 undocumented workers in formal economy would earn 20-30% more in comparable roles (World Bank studies). The extraction flows from undocumented workers (through suppressed informal sector wages, which respond to formal sector closure) to documented employers and workers (through artificially elevated formal sector wages). Suppression (0.72): Very high. The barrier is legal and enforced through state machinery. Undocumented workers cannot formally work, cannot change immigration status without leaving, and face deportation if discovered. Some de facto mobility exists (working informally, geographic arbitrage between countries), but these options are costly and dangerous. Theater ratio (0.45): Moderate-low. The constraint operates through explicit legal requirements with objective documentation standards \u2014 minimal performative content. However, rhetoric around 'labor protection,' 'rule of law,' and 'national security' provides narrative cover for what functions as labor market segmentation. The theater ratio is lower than constraints like traditional peer review because the documented status rule is transparent and administered through clear bureaucratic processes, not through claimed expertise or scientific judgment.",
+    "perspectival_gap": "This constraint demonstrates how the same structural mechanism can classify as pure extraction (Snare) from the victim's perspective and as beneficial coordination (Rope) from the beneficiary's perspective. The documented status requirement solves a real coordination problem for employers (standardized verification of legal eligibility) while simultaneously enabling systematic extraction from undocumented workers. The beneficiary experiences the constraint as coordination because it reduces their hiring liability and provides access to desperate workers. The victim experiences it as extraction because it forecloses their only escape path \u2014 they cannot enter the formal market even at reduced wages, cannot compete for better conditions, and cannot legally advocate for themselves. The enforcement apparatus's Tangled Rope classification reflects that it both administers coordination (clear rules, standardized processes) and extracts (selective enforcement, institutional expansion, corruption opportunities). The analytical observer's Tangled Rope classification confirms that extraction is the dominant function even though coordination elements exist \u2014 the constraint's persistence depends on its extractive benefits for employers and documented workers, not on the coordination function alone (which could be replicated through alternative verification mechanisms).",
+    "directionality_logic": "Directionality (d) derivation for each perspective flows from structural position. Undocumented migrants as victims with trapped exit: d \u2248 0.95 \u2192 f(d) \u2248 1.42, amplifying experienced extraction. Formal employers as beneficiaries with arbitrage: d \u2248 0.05 \u2192 f(d) \u2248 -0.12, reducing or inverting experienced extraction (they perceive gain from the constraint). Enforcement apparatus as powerful institutional actor with mobile to constrained exit: d varies (0.35-0.50 depending on political context) \u2192 f(d) \u2248 0.4-0.65, producing moderate extraction for them (they both administer and benefit). The calculated \u03c7 values follow: \u03c7 = 0.68 \u00d7 1.42 \u00d7 1.0 \u2248 0.96 for victims (Snare threshold \u03c7 \u2265 0.66 clearly met), \u03c7 = 0.68 \u00d7 -0.12 \u00d7 1.0 \u2248 -0.08 for beneficiaries (negative \u03c7 characteristic of Rope perception), \u03c7 = 0.68 \u00d7 0.5 \u00d7 1.0 \u2248 0.34 for enforcement apparatus (Tangled Rope range). Spatial scope (national, \u03c3 = 1.0) applies uniformly because documented status is administered at the nation-state level.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the mandatrophy by clarifying that beneficiaries and victims have inverting assessments of the same coordination function. The formal employer sees 'standardized eligibility verification' as beneficial coordination that reduces their legal risk. The undocumented worker sees the same mechanism as purely extractive because they are legally excluded from the formal market entirely \u2014 there is no way to pass the documented status gate at any wage. The coordination function is real but asymmetric: it coordinates among employers and documented workers to maintain cartelization, not coordination across the full labor market. This is why the constraint persists despite economic inefficiency \u2014 it concentrates benefits (employers, documented workers, enforcement apparatus) while dispersing costs (undocumented workers, informal sector, overall labor market efficiency). The theater ratio of 0.45 (lower than constraints like peer review) reflects that the mechanism is administratively transparent \u2014 the extraction does not hide behind claims about the coordination function but operates through explicit legal rules. The mandatrophy is resolved by recognizing that 'is documented status a coordination mechanism or extraction?' has an answer that depends on scope: within-formal-sector, it is coordination; for the full labor market including undocumented workers, it is extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "informal_sector_wage_suppression",
+      "employer_monopsony_power",
+      "migrant_debt_bondage"
+    ],
+    "dual_formulation_note": "Documented status employment access is upstream of informal sector dynamics: as formal employment becomes legally inaccessible, workers shift to informal markets where wages are depressed and conditions deteriorate. The three downstream constraints (informal wage suppression, employer monopsony, migrant debt) are causally dependent on documented status segmentation. Each should be analyzed with \u03b5 values reflecting their position in the causal chain; the upstream constraint's classification influences but does not determine the downstream constraints' types."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.42
+    }
+  ]
+}

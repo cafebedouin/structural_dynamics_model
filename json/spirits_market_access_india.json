@@ -1,0 +1,214 @@
+{
+  "header": {
+    "constraint_id": "spirits_market_access_india",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "spirits"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Spirits Market Access Constraint in India",
+    "topic_domain": "economic/regulatory/trade",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_governments",
+      "incumbent_domestic_producers",
+      "excise_revenue_collectors"
+    ],
+    "victims": [
+      "foreign_spirits_importers",
+      "consumer_choice",
+      "market_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Foreign Spirits Importer (Trapped Entrant)",
+      "comment": "Foreign spirits importers face state-level regulatory barriers (license monopolies, prohibitive excise rates 150-200%), no meaningful domestic representation, and systematic exclusion via discriminatory taxation. Exit options are limited to cessation of market participation. Maximum extraction \u2014 the constraint exists specifically to prevent this agent's entry."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Domestic Spirits Producer (Incumbent)",
+      "comment": "Incumbent domestic producers benefit from protected market access (tariffs, licensing barriers) and price insulation from foreign competition. They also depend on the same regulatory infrastructure for their own licensing and distribution. They experience the constraint as coordination (organizing supply chains, managing licensing) plus extraction (protecting rents from competition). Moderate power with constrained exit \u2014 abandoning the protected framework would expose them to international competition but they are organizationally entrenched."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "State Government Excise Authority",
+      "comment": "State governments benefit from the licensing monopoly structure (excise revenue, administrative control) and experience the constraint primarily as coordination: managing license allocation, collecting taxes, organizing state-level monopoly spirits shops. Excise revenue from spirits contributes significantly to state coffers. They have arbitrage options (could liberalize but choose not to for revenue reasons). Net beneficiary experiencing coordination function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "Prohibition-Aligned Indian Consumer (Identity-Locked)",
+      "comment": "Indian consumers in regions with strong Gandhian/temperance identity narratives experience spirits access through identity-locked framing rather than material barriers. Many can structurally access spirits but their identity as abstinent/culturally traditional makes exit from the prohibition identity unthinkable. The constraint locks through internalized cultural values, not legal barriers. The state's restrictive framework reinforces identity-locked suppression by making purchase socially visible and morally coded."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Trade Coalition (WTO Framework)",
+      "comment": "International trade bodies and foreign governments (especially EU, US) see India's spirits market restrictions as TRIPS/tariff-code violations and protectionist extraction. They experience the constraint as hybrid: genuine coordination (harmonizing trade regimes) plus asymmetric extraction (India's monopoly rents extracted from foreign producers). Organized power with constrained exit from the multilateral framework. Classification remains tangled_rope because they both benefit from and are harmed by trade coordination mechanisms."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Licensing Monopoly Theater",
+      "comment": "The institutional apparatus of state spirits licensing (monopoly shops, license issuance, regulatory oversight) is substantially performative. Regulatory categories are opaque, administrative procedures are deliberately slow, and the ostensible purpose (social control, revenue collection) persists while actual regulatory function (quality control, safety verification) is minimal. The licensing theater persists through inertia despite widespread informal spirits markets (country liquor, illicit distillation) that completely bypass the formal regulatory apparatus. Theater ratio reflects that compliance theater is maintained for revenue and control narrative purposes despite low actual functional verification."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Naturalization Risk)",
+      "comment": "From a civilizational perspective, state control over spirits markets can appear as an immutable expression of Indian cultural values (Gandhian sobriety), constitutional police powers, and public health authority. This perspective risks naturalizing a contingent institutional arrangement (licensing monopoly for revenue + protectionism) as a natural law of Indian governance. However, structural data reveals this as a false summit: the constraint's extraction and suppression are produced by institutional choices (monopoly licensing, discriminatory excise), not by inherent cultural or legal necessity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cultural_vs_protectionist_motivation",
+      "question": "Is the spirits market constraint primarily driven by genuine temperance/public health values or by state revenue maximization and producer protection?",
+      "resolution_mechanism": "Analysis of excise revenue trends, license allocation patterns, state budget dependency on spirits revenue, and comparative enforcement of import restrictions vs domestic informal markets",
+      "impact": "If primarily cultural: constraint may have lower extractiveness and higher legitimacy. If primarily protectionist: constraint is pure extraction justified through cultural framing.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cultural values vs protectionist revenue motivation"
+    },
+    {
+      "id": "identity_lock_scope_and_durability",
+      "question": "What proportion of spirits market suppression is structural (legal barriers) vs identity-locked (internalized cultural identity preventing demand expression)?",
+      "resolution_mechanism": "Regional comparison of spirits consumption patterns in prohibition vs non-prohibition states; consumer surveys on willingness-to-pay vs internalized abstinence norms; post-liberalization consumption elasticity",
+      "impact": "If mostly structural barriers: suppress via removing legal restrictions. If mostly identity-locked: removing legal barriers alone will not increase consumption; requires cultural frame shift or generational change.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of suppression that is identity-locked vs structural"
+    },
+    {
+      "id": "informal_market_displacement",
+      "question": "Does the formal licensing monopoly actually control spirits distribution or is it displaced by country liquor, illicit distillation, and smuggling?",
+      "resolution_mechanism": "Volume comparison of formal vs informal spirits consumption; seizure data on illicit distillation raids; cross-border smuggling volume estimates",
+      "impact": "If formal system controls >80% of market: monopoly is functionally effective (coordination + extraction). If formal system controls <50%: monopoly is performative theater, extraction occurs via licensing rents while actual regulation is absent.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether formal licensing monopoly controls actual spirits distribution"
+    },
+    {
+      "id": "wto_compliance_pressure_trajectory",
+      "question": "Will international trade pressure (WTO dispute panel rulings, retaliatory tariffs) force India to liberalize spirits market access, and if so, what is the timeline?",
+      "resolution_mechanism": "Tracking of WTO dispute status; trade negotiation progress; government statements on market liberalization; tariff retaliation timelines",
+      "impact": "If liberalization occurs within 5 years: scaffold sunset logic applies (constraint is temporary institutional arrangement being replaced). If sustained >10 years: constraint has deeper structural roots than trade compliance alone.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "WTO compliance pressure and liberalization trajectory"
+    },
+    {
+      "id": "domestic_producer_import_exposure",
+      "question": "Would domestic spirits producers actually be uncompetitive under open market conditions, or are they protected because of political economy rather than genuine competitive disadvantage?",
+      "resolution_mechanism": "Comparative cost analysis of Indian producers vs imported spirits (manufacturing cost + transport + tariff); consumer preference testing in liberalized contexts; market share analysis if regional restrictions are temporarily lifted",
+      "impact": "If genuinely uncompetitive: protectionism is temporary support during development (scaffold logic). If actually competitive: protectionism is pure extraction masking as market protection.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether domestic producers are genuinely uncompetitive or protected for political economy reasons"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "India's spirits market operates under state-level licensing monopolies with excise taxation rates of 150-200%, creating a hybrid coordination-extraction constraint. The system ostensibly serves public health and temperance objectives aligned with Gandhian values, but structurally functions as protected rent-capture for state governments and incumbent domestic producers. Foreign spirits importers face systematic exclusion; consumers experience restricted access codified through state licensing; informal markets (country liquor, illicit distillation) operate entirely outside the formal regulatory apparatus. The constraint exhibits tangled rope characteristics: genuine coordination of tax collection and supply chain management coexists with asymmetric extraction of monopoly rents and protectionist barriers against foreign competition. WTO pressure to liberalize market access introduces sunset logic, making this a potential scaffold constraint with a generational time horizon.",
+    "key_agents": [
+      "Foreign Spirits Importers: Primary victims (powerless/trapped) \u2014 face state-level license monopolies, prohibitive tariffs, and systematic exclusion with no exit except market abandonment",
+      "State Governments (Excise Authorities): Primary beneficiaries (institutional/arbitrage) \u2014 benefit from licensing monopoly structure, excise revenue (spirits contribute 10-15% of state excise revenue in major states), and administrative control",
+      "Incumbent Domestic Spirits Producers: Secondary beneficiary (moderate/constrained) \u2014 protected from foreign competition but dependent on regulatory framework; entrenched but constrained within it",
+      "Prohibition-Aligned Indian Consumers: Secondary victim (moderate/identity_locked) \u2014 structurally mobile (can purchase in other states or from informal markets) but identity-locked through Gandhian/temperance cultural narratives making formal purchase socially and morally visible",
+      "International Trade Bodies (WTO/EU/US): Organized challenger (organized/constrained) \u2014 view restriction as protectionist extraction and TRIPS violation; constrained by multilateral framework",
+      "Informal Spirits Market (Country Liquor/Illicit Distillation): Underground beneficiary/victim complex \u2014 completely unregulated, captures consumer demand that formal system excludes but exposed to quality/health risks"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts monopoly rents from foreign importers (complete market exclusion, 150-200% tariff equivalent) and consumer surplus from domestic consumers (restricted choice, elevated prices through state markup). However, extractiveness is not maximal (0.72+) because: (a) informal markets capture significant consumer demand, reducing formal monopoly power, (b) state governments share extraction rents with bureaucratic apparatus rather than concentrating them, and (c) domestic producers face their own licensing constraints (not pure beneficiaries). The trend from 0.42 to 0.58 reflects increasing rent-extraction as state governments escalate tariff rates and tighten licensing in response to WTO pressure (counter-liberalization). Suppression (0.65): Moderate-high. Multiple barriers prevent market entry: state-level licensing monopolies with opaque issuance criteria, prohibitive excise taxation, regulatory category ambiguity, slow administrative processing, lack of dispute mechanisms. But suppression is not absolute (0.90+) because: (a) informal markets provide complete supply-side exit (though with quality/legal risk), (b) consumer demand exists in non-prohibition states, and (c) technological barriers are low (spirits production is globally commodified). Theater ratio (0.48): Moderate. Regulatory licensing and compliance procedures are somewhat performative \u2014 the stated goal (social control, public health) persists while actual enforcement (quality standards, safety verification, age-gating) is minimal and widely violated through informal markets. But theater is not dominant (0.70+) because: (a) excise revenue collection is functionally real, and (b) licensing monopoly structure does maintain control of formal distribution channels (even if informal channels escape).",
+    "perspectival_gap": "This constraint demonstrates wide perspectival disagreement. The importer sees a snare designed to prevent their entry. The state sees coordination. The incumbent producer sees beneficial protection. The culturally-aligned consumer sees identity-based abstinence (not extraction). The trade body sees protectionist violation. The licensing apparatus sees its own theater. The civilizational observer risks seeing natural law. The gap reveals that the constraint's function (monopoly rent extraction + cultural framing + revenue collection + producer protection) is NOT equally visible from all positions. Beneficiaries experience it as coordination or protection. Victims experience it as snare or suppression. The constraint works precisely because this perspectival fragmentation prevents unified opposition.",
+    "directionality_logic": "Directionality flows from beneficiary/victim declarations and exit options. Foreign importers have zero derived benefit and trapped exit, producing maximum d (0.95+) and maximum experienced extraction chi. State governments are structural beneficiaries with arbitrage options (could liberalize but choose not to for revenue), producing low d (0.10-0.20) and negative chi (they extract more than they bear). Domestic producers benefit from protection but face constrained exit (abandoning regulatory protection means international competition), producing moderate d (0.45-0.55). Prohibition-aligned consumers are structurally mobile (can access informal channels or travel to non-prohibition states) but identity-locked, producing high d (0.85-0.90) despite structural mobility \u2014 they cannot psychologically exercise their exit options. International trade bodies are organized challengers with constrained exit from multilateral commitments, producing moderate-high d (0.60-0.70). The piton classification does not derive from high chi (because theater_ratio is moderate, not dominant) but from the observation that licensing apparatus itself is performative while real market activity occurs outside it.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint is genuinely tangled: it coordinates excise revenue collection and supply chain management (rope function) while simultaneously extracting monopoly rents and excluding foreign competitors (snare function). The constraint cannot be classified as pure coordination because of the asymmetric extraction; it cannot be classified as pure extraction because genuine coordination of tax collection occurs. The snare perspectives (importer, consumer demand) are real structural readings of exclusion. The rope perspective (state government) is a real structural reading of coordination. The scaffold perspective would emerge if liberalization timelines become credible (WTO deadline enforcement). The piton perspective reflects that the formal regulatory apparatus is largely theater while informal markets provide the actual supply function. The mandatrophy confirms that this is NOT a case of mislabeled coordination-as-extraction or vice versa \u2014 it is genuinely both. The resolution requires declaring all perspectives simultaneously true from their structural positions."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "indian_alcohol_excise_revenue_dependency",
+      "country_liquor_informal_market_expansion"
+    ],
+    "dual_formulation_note": "Spirits market access constraint is downstream of state excise revenue structures. Upstream constraint (excise_revenue_dependency) has \u03b5 \u2248 0.35 (rope: genuine coordination of tax collection). Downstream constraint (country_liquor_expansion) has \u03b5 \u2248 0.72 (snare: informal market excludes regulation entirely). Current constraint (spirits_market_access) sits between them at \u03b5 \u2248 0.58, showing how upstream revenue logic justifies extraction that drives downstream informal market growth."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "indian_alcohol_excise_revenue_dependency"
+    ]
+  }
+}

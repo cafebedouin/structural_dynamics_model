@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "algorithmic_curation_lock_in",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "algcur"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Algorithmic Curation Lock-In in Content Distribution",
+    "topic_domain": "digital_platforms/information_architecture",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "high_ranking_content_producers"
+    ],
+    "victims": [
+      "low_ranking_content_creators",
+      "user_discovery_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Emerging Creator",
+      "comment": "PERSPECTIVE 1: EMERGING CREATOR (SNARE) \u2014 Small creators with no algorithmic visibility have no mechanism to build audience outside the algorithm's recommendations. Trapped: cannot reach users, cannot build reputation, cannot exit the platform without abandoning their work entirely. The algorithm's opacity means they cannot understand why they are invisible or how to improve position. Maximum extraction \u2014 the constraint consumes their effort while distributing rewards to established creators."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Tier Creator",
+      "comment": "PERSPECTIVE 2: MID-TIER CREATOR (TANGLED ROPE) \u2014 Constrained by high switching costs (audience lock-in, platform-specific tools) but benefits from algorithmic amplification for their content. Experiences both coordination (algorithm distributes their work to interested audiences) and extraction (must game metrics to maintain visibility, algorithm captures derivative value). Can theoretically exit to other platforms but faces audience loss and retraining costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATOR (ROPE) \u2014 Operates the curation algorithm as a coordination mechanism: routes content to interested users, solves the discovery problem, enables creators to reach audiences at scale. Experiences the constraint as pure coordination with benefits to all parties. Arbitrage available: can switch algorithms, update models, change ranking criteria. The extraction is invisible from this perspective because it is structurally downstream \u2014 the platform captures user attention and advertiser value, which is experienced as the service's core function, not as extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Decentralized Protocol Coalition",
+      "comment": "PERSPECTIVE 4: DECENTRALIZED PROTOCOL COALITION (TANGLED ROPE) \u2014 Organized advocates (interoperability standards, federation protocols, open-source algorithms) see the lock-in as solvable through protocol alternatives. Constrained: building alternative infrastructure requires ecosystem coordination and faces network effect headwinds. Benefits from genuine coordination benefits of algorithmic curation itself (the problem of discovery is real). The extraction is the platform's monopoly on the curation mechanism; solving it requires both coordination (building standards) and fighting extraction (overcoming network lock-in)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Framework",
+      "comment": "PERSPECTIVE 5: REGULATORY FRAMEWORK (PITON) \u2014 Platform regulation (DSA, DMA, content moderation requirements) adds mandatory algorithmic transparency and appeals processes. Theater_ratio high: much of regulatory compliance is performative auditing and checkbox transparency. The underlying curation mechanism remains opaque because true algorithmic transparency would expose the platform's extraction logic to competitors and creators alike. Regulators maintain the framework through institutional obligation despite knowing the actual effect is limited. The constraint persists through inertia and political performance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From the long view, algorithmic curation solves the genuine discovery problem in a high-dimensionality information space (too much content, too many creators, users cannot survey all options). The coordination function is real and valuable. But the implementation locks users and creators into a single algorithm, concentrating power over attention distribution in a single actor. The lock-in is not inherent to curation \u2014 it is a choice to use proprietary algorithms with closed training data and opaque ranking. Alternative implementations (federated curation, open-source ranking, user-customizable algorithms) would preserve the coordination benefit while reducing extraction. The constraint is extractive only because of the architectural choice to centralize and privatize the curation mechanism."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "algorithmic_transparency_paradox",
+      "question": "Can true algorithmic transparency coexist with platform competitiveness, or does exposing the ranking mechanism enable gaming that degrades curation quality?",
+      "resolution_mechanism": "Comparative study of platform transparency levels (YouTube's ranking factors vs TikTok's opacity) and resulting creator gaming behaviors; analysis of open-source recommendation systems and their resistance to manipulation",
+      "impact": "If transparency enables gaming: lock-in is a necessary cost of curation integrity (Rope/Scaffold from more perspectives). If gaming is contained: lock-in is a choice to extract rather than coordinate (Snare/Tangled Rope from more perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether algorithmic transparency enables gaming that degrades quality"
+    },
+    {
+      "id": "federation_feasibility_threshold",
+      "question": "What scale of user base is required before federated/decentralized curation becomes functionally equivalent to centralized algorithms in discovery quality?",
+      "resolution_mechanism": "Pilot studies of Mastodon, Bluesky, or Nostr discovery mechanisms; measurement of user satisfaction and content diversity metrics compared to centralized platforms at equivalent scale",
+      "impact": "If threshold < current alternative platform scale: lock-in is not inevitable (Scaffold perspective gains strength). If threshold >> current alternatives: lock-in is a persistent network effect (Snare perspective for emerging creators is structural).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Minimum scale for federated curation to match centralized performance"
+    },
+    {
+      "id": "attention_utility_misalignment",
+      "question": "How much of the platform's algorithmic objective (engagement/time-on-platform) diverges from user utility (finding content the user actually wants)?",
+      "resolution_mechanism": "User preference studies comparing recommended content quality (user satisfaction, usefulness) to algorithmic ranking; analysis of engagement-optimized vs discovery-optimized ranking on satisfaction metrics",
+      "impact": "If divergence is small: curation is largely beneficial (Rope/Tangled Rope). If divergence is large: curation mechanism extracts user attention for platform value (Snare/Tangled Rope with high suppression).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Divergence between engagement optimization and user utility"
+    },
+    {
+      "id": "creator_skill_barrier_internalization",
+      "question": "Do creators internalize the algorithmic barrier as a natural limitation of 'content quality' and 'audience taste,' or do they perceive it as an extractive lock-in mechanism?",
+      "resolution_mechanism": "Qualitative interviews with emerging and mid-tier creators; analysis of creator forums, migration patterns when alternative platforms emerge, and expressed barriers to exit",
+      "impact": "If internalized: suppression is higher (creators stop trying if they believe the barrier is permanent). If perceived as extraction: organizing potential increases (creators may coordinate on alternatives).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether algorithmic barriers are internalized as inevitable or perceived as extractive"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Algorithmic curation lock-in describes the structural constraint where platforms use proprietary recommendation algorithms to route content to users, creating dependencies for both content creators and users on a single actor's ranking mechanism. Creators cannot reach audiences without algorithmic visibility; users cannot discover content outside the algorithm's filtered view; competitors cannot build viable alternatives without achieving the same scale that the incumbent provides. The constraint exhibits genuine coordination benefits (solving the discovery problem in high-dimensional content spaces) alongside extractive mechanisms (concentration of attention distribution power, opaque ranking that prevents creator agency, lock-in that prevents exit). Theater has increased over time as platforms added regulatory transparency features while keeping ranking mechanisms proprietary. Extractiveness has grown as algorithmic sophistication increased, making it harder for emerging creators to achieve visibility through quality alone \u2014 the algorithm now requires understanding engagement metrics, audience psychology, and platform-specific affordances. This is a tangled rope at the analytical level: the coordination function (discovery) is real and valuable, but the implementation locks all parties into a centralized mechanism that extracts value by controlling information distribution.",
+    "key_agents": [
+      "Emerging Creators: Primary victims (powerless/trapped) \u2014 invisible to users without algorithmic ranking; cannot build audience or exit without abandoning their work",
+      "Mid-Tier Creators: Secondary victims (moderate/constrained) \u2014 benefit from algorithmic amplification but constrained by high switching costs and must optimize for metrics rather than audience preferences",
+      "Platform Operators: Primary beneficiaries (institutional/arbitrage) \u2014 control attention distribution and advertiser access; can change algorithms or policies at will",
+      "Decentralized Coalition: Organized challengers (organized/constrained) \u2014 building protocol-based alternatives but face network effects and lack incumbent infrastructure",
+      "Regulatory Agencies: Institutional actors (institutional/arbitrage) \u2014 enforce transparency requirements and appeals processes; see compliance as checkbox exercise rather than structural change",
+      "Users: Secondary victims (moderate/constrained) \u2014 discover content only through curated feeds; experience filter bubble effects and algorithmic manipulation of preferences"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, and increasing. The platform captures value by controlling attention distribution \u2014 creators must compete within the algorithm's criteria, users see filtered views that optimize for engagement rather than utility, and the platform captures advertiser surplus. Early internet curation (0.28) was less extractive because it relied on human editors and discovery mechanisms that were less powerful at predicting user engagement. As machine learning improved (0.42 at midpoint), algorithms became better at predicting and manipulating behavior, increasing extraction. Current extractiveness (0.58) reflects the sophisticated engagement optimization that treats users as attention sources and creators as content suppliers. Suppression (0.65): High. Creators lack transparency into ranking mechanisms, users lack alternatives to curated discovery, and switching costs lock both parties in. The opacity is not accidental \u2014 it protects the algorithm's competitive advantage and prevents gaming. This high suppression distinguishes the constraint from pure coordination. Theater ratio (0.68): High. Regulatory compliance (algorithm transparency statements, appeals processes, audit trails) is largely performative \u2014 the actual ranking mechanism remains opaque, and transparency statements often reveal little about how content is weighted or scored. The theater has increased as regulators have required disclosure, yet the underlying curation mechanism remains unchanged.",
+    "directionality_logic": "Directionality values flow from structural position: platform operators benefit from the constraint (low d ~0.10, negative chi), mid-tier creators experience mixed coordination and extraction (d ~0.55), emerging creators experience pure extraction (d ~0.92, high chi). The divergence across perspectives is not driven by different views of the same fact but by genuinely different structural positions. The platform operator's d is low because they control the curation mechanism \u2014 the constraint flows extraction toward them. Emerging creators' d is high because they are subject to algorithmic judgment with no transparency or appeal. Users' d would be moderate-high (~0.75) because they are targets of engagement optimization. The organized coalition's d is moderate-high (~0.70) because they are victims of lock-in effects but retain some exit capacity through protocol development. Regulatory actors' d is low (~0.20) because they are nominally external arbiters with institutional power, though captured by incumbent platforms through lobbying and operational complexity.",
+    "perspectival_gap": "The gap between the platform operator (rope) and emerging creators (snare) is maximal. Both observe the same algorithmic curation mechanism. The platform sees it as solving the discovery problem \u2014 matching content to interested users at massive scale. Creators see it as an opaque barrier to visibility with no mechanism for improvement. The mid-tier creator (tangled rope) experiences both: they benefit from algorithmic amplification when the algorithm favors their content, but are suppressed if the algorithm deprioritizes their category. The regulatory framework (piton) sees the constraint as degraded \u2014 transparency requirements and appeals processes are maintained through political obligation despite limited effect on actual curation. The analytical observer (tangled rope) sees the real tension: the coordination benefit is genuine (curation is hard at scale), but the implementation extracts by locking all parties into proprietary systems rather than using open, federated mechanisms that would preserve the coordination benefit while reducing extraction.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by distinguishing the curation problem (genuine coordination) from the platform's solution (extractive lock-in). The coordination benefit is real: without algorithmic curation, users cannot survey billions of content items, and creators cannot reach audiences at scale. But the implementation is extractive: proprietary algorithms, opaque ranking, high switching costs, and engagement optimization over user utility. A tangled rope classification is correct because both functions exist. The extraction is not inherent to curation \u2014 alternative implementations (federated ranking, user-customizable algorithms, open-source systems) would preserve the coordination benefit while reducing extraction. The constraint is extractive only because the platform chooses to centralize and privatize the curation mechanism. The theater ratio (0.68) reveals that regulatory approaches (transparency mandates) have not addressed the underlying architecture \u2014 they have added performative compliance without enabling creator agency. The analytical perspective correctly identifies this as a choice point: curation + coordination is possible without lock-in, but the incumbent platform benefits from lock-in, so regulatory pressure must be sufficient to overcome the business incentive to maintain opacity."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "recommendation_system_filter_bubble",
+      "creator_income_concentration"
+    ],
+    "dual_formulation_note": "Algorithmic curation lock-in is upstream of both filter bubble dynamics (which assumption of algorithmic ranking creates) and creator income concentration (which emerges from algorithmic visibility inequality). Each downstream constraint has its own extractiveness reflecting specific mechanisms; this story captures the structural lock-in that enables both."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "ai_model_capability_stratification",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aimc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AI Model Capability Stratification and Access Asymmetry",
+    "topic_domain": "artificial_intelligence/technology_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "frontier_model_developers",
+      "wealthy_institutions",
+      "capital_intensive_labs"
+    ],
+    "victims": [
+      "research_groups_without_capital",
+      "global_south_researchers",
+      "open_source_community",
+      "ai_capability_parity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Excluded Research Group",
+      "comment": "PERSPECTIVE 1: EXCLUDED RESEARCH GROUP (SNARE) \u2014 Small labs and researchers in global south face exponential compute barriers. Cannot access frontier models; open alternatives are 1-2 generations behind; no realistic exit from capability gap. Maximum extraction experienced \u2014 trapped by resource asymmetry with no recourse."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Tier Research Institution",
+      "comment": "PERSPECTIVE 2: MID-TIER RESEARCH INSTITUTION (TANGLED ROPE) \u2014 Benefits from published model weights, API access tiers, but constrained by cost and rate limits. Genuine coordination function exists (labs sharing knowledge of frontier models through research), but extraction is real (frontier access creates publication advantage, funding concentration). Mixed experience of constraint as both enabling and limiting."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Frontier Model Developer",
+      "comment": "PERSPECTIVE 3: FRONTIER MODEL DEVELOPER (ROPE) \u2014 Experiences the constraint as coordination mechanism: publishing capabilities drives adoption, sets industry standards, creates network effects. Benefits from information asymmetry around training data and methods. Net beneficiary \u2014 extraction runs toward this agent; constraint enables their market position."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Source Coalition",
+      "comment": "PERSPECTIVE 4: OPEN SOURCE COALITION (TANGLED ROPE) \u2014 Organized agents (Meta/Llama, Mistral, Hugging Face) coordinating to reduce stratification. Benefits from network effects, collaborative development, and avoiding frontier-model dependency. But faces extraction in form of slower convergence to frontier, cannot access proprietary fine-tuning techniques, rate-limited by compute resource availability. Sees constraint as solvable through collective action but currently experiencing asymmetric extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Framework",
+      "comment": "PERSPECTIVE 5: REGULATORY FRAMEWORK (PITON) \u2014 AI governance discussions frequently invoke 'capability stratification' as justification for access restrictions, export controls, and safety gates. But these frameworks persist partly through institutional inertia \u2014 the stated purpose (preventing capability misuse) does not clearly require the stratification level observed. Theater ratio high: regulatory theater obscures whether restrictions truly correlate with safety or simply entrench incumbent advantage. Regulation maintains performance of capability control while actual function is unclear."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Scaling Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / SCALING LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, AI capability stratification appears inherent to scaling laws: frontier models require exponential compute to achieve marginal capability improvements. This suggests the stratification is a natural law of deep learning. However, this naturalizes what is partly contingent institutional practice (choice to concentrate training compute, choice to restrict API access, choice to withhold training data). The engine will compute this as a false summit, revealing naturalization of economic/policy decisions."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "compute_cost_threshold_ambiguity",
+      "question": "Below what compute cost threshold would stratification disappear, and is that threshold technologically achievable or only economically distant?",
+      "resolution_mechanism": "Hardware roadmap analysis; compute cost trajectory modeling; identification of whether stratification persists due to physical scaling limits or institutional control choices",
+      "impact": "If threshold is achievable within 5 years: stratification is temporary (scaffold perspective validated). If threshold requires fundamental physics breakthroughs: stratification approaches mountain status. If threshold exists but is avoided through institutional control: confirms snare classification for trapped agents.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Compute cost threshold for stratification elimination"
+    },
+    {
+      "id": "training_data_replicability",
+      "question": "Can frontier capability be replicated using openly available training data plus open-source compute, or does proprietary data create irreplaceable capability advantages?",
+      "resolution_mechanism": "Empirical reproduction attempts; comparison of frontier models trained on public data vs proprietary data; analysis of whether remaining gaps are knowledge vs compute",
+      "impact": "If public data suffices: stratification is enforcement mechanism (snare classification confirmed). If proprietary data is irreplaceable: stratification reflects genuine knowledge asymmetry (rope classification validated).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether proprietary training data provides irreplaceable advantages"
+    },
+    {
+      "id": "capability_measurement_standardization",
+      "question": "Is stratification stratification a real capability gap or partly a measurement artifact created by frontier-biased benchmarks?",
+      "resolution_mechanism": "Cross-benchmark analysis; development of capability metrics that don't favor frontier models; assessment of whether stratification persists under alternative measurement schemes",
+      "impact": "If measurement artifact: stratification is partly theater (piton perspective validated; theater ratio should increase). If genuine gap: stratification is real across multiple measurement frames.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether stratification reflects real capability gaps or measurement bias"
+    },
+    {
+      "id": "regulatory_capture_mechanism",
+      "question": "Do AI safety regulations reducing access actually improve safety, or do they primarily entrench frontier-developer advantages while claiming safety justification?",
+      "resolution_mechanism": "Correlation analysis between access restrictions and harm reduction; comparison of safety outcomes between restricted-access vs open-access communities; identification of whether safety claims align with actual implementation patterns",
+      "impact": "If safety correlated: regulations are genuine coordination (rope perspective for regulators). If uncorrelated: regulations are capture mechanism disguised as safety (snare perspective confirmed, piton theater validated).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether safety regulations achieve stated safety goals"
+    },
+    {
+      "id": "open_source_asymptotic_convergence",
+      "question": "Will open-source models eventually match frontier capability, or is frontier advantage structural and permanent?",
+      "resolution_mechanism": "Long-term modeling of open-source capability trajectory; identification of whether gap grows, shrinks, or stabilizes; analysis of whether frontier-developer innovations can be rapidly replicated in open models",
+      "impact": "If convergence occurs: scaffold perspective validated (temporary stratification with sunset). If gap persists: snare perspective validated (permanent extraction mechanism).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Long-term convergence of open-source and frontier capabilities"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "AI model capability stratification refers to the structured asymmetry in access to frontier AI capabilities, with exponential compute requirements creating barriers that concentrate capability and knowledge in a small number of well-capitalized developers. This constraint exhibits the hallmark structure of tangled rope: genuine coordination benefits (frontier models publish findings that accelerate the field) coexist with asymmetric extraction (frontier developers capture disproportionate attention, funding, and influence). The constraint operates through multiple enforcement mechanisms: compute cost barriers (structural), API rate-limiting and pricing (institutional), withholding of training data and fine-tuning techniques (informational), and regulatory framing that uses safety concerns to justify access restrictions (theater). The extractiveness value (0.58) reflects that the primary extraction mechanism is not coercive force but rather structural accumulation of advantage through control of compute resources and knowledge asymmetries. Suppression is high (0.68) because excluded agents face exponential barriers to exit \u2014 open-source models lag 1-2 generations behind frontier, cannot match frontier compute, and cannot access the knowledge embedded in proprietary training data. Theater ratio (0.55) indicates that roughly half of the observed stratification maintenance is performative regulation justified by safety concerns that do not clearly correlate with actual implementation patterns.",
+    "key_agents": [
+      "Frontier Model Developers (Anthropic, OpenAI, Google DeepMind, Meta): Primary beneficiaries (institutional/arbitrage) \u2014 capture attention, funding concentration, and standard-setting power during capability transition windows",
+      "Excluded Research Groups: Primary victims (powerless/trapped) \u2014 researchers without billion-dollar compute access face exponential barriers to frontier-capability research; cannot exit stratification without institutional capital infusion",
+      "Mid-Tier Research Institutions: Secondary victims (moderate/constrained) \u2014 have some API access and published weights but face rate limits, cost barriers, and knowledge asymmetries; benefit from published research but constrained by frontier advantage",
+      "Open Source Coalition: Organized victims (organized/constrained) \u2014 arXiv, Hugging Face, Mistral, Llama coordinating to reduce stratification through open development; benefit from network effects but face structural capability lag",
+      "Regulatory Bodies and AI Safety Frameworks: Theater maintainers (institutional/arbitrage) \u2014 enforce and justify stratification through safety narratives; benefit from appearing to govern while stratification persists",
+      "Analytical Observer: Sees naturalizing tendency (analytical/analytical) \u2014 risks treating scaling-law constraints as inevitable rather than contingent on choices to concentrate compute and withhold knowledge"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The frontier-developer advantage is significant but not maximal. Open-source models exist and are improving; API access is available to most researchers at some price point; published model weights enable broad participation. But the asymmetry is real: frontier access enables publication advantages, funding concentration, and standard-setting power. The extractiveness has increased from 0.35 to 0.58 over the interval as compute requirements have grown exponentially and frontier-developer compute budgets have concentrated further. Suppression (0.68): High. Barriers include exponential compute costs, API rate-limiting, training data restrictions, and fine-tuning knowledge locked in proprietary systems. Excluded agents cannot realistically exit by building frontier-equivalent models \u2014 the cost barrier is not a price they could pay but a structural threshold they cannot cross without institutional backing. Theater ratio (0.55): Moderate. Safety-based justifications for capability restrictions are real concerns (preventing malicious deployment), but implementation patterns do not clearly correlate with stated safety goals. Restrictions concentrate capability in actors least subject to international oversight (frontier labs). Theater has increased from 0.40 to 0.55 as regulatory discourse has expanded relative to actual safety-mechanism implementation.",
+    "perspectival_gap": "The gap between beneficiary and victim perspectives is maximal in this constraint. From the frontier developer's position, stratification is a natural outcome of scaling laws and investment efficiency \u2014 they invested billions in compute and knowledge, and the result is legitimate advantage. They perceive the constraint as enabling their market position and see open-source alternatives as healthy competition. From the trapped researcher's position, stratification is a barrier to participation in contemporary AI research \u2014 they cannot afford frontier access, cannot build frontier-equivalent models, and are forced to use 2-year-old open models while the field advances. The gap reveals that the labeling ('stratification is natural') depends entirely on position: the frontier developer calls it 'scaling advantage'; the trapped researcher calls it 'access apartheid.' The open-source coalition occupies a middle ground: they see stratification as temporary (scaffold perspective), justifiable as market outcome, but unfair as allocation of research opportunity. The regulatory perspective introduces theater: safety-based restrictions justify stratification while appearing to govern it. The analytical observer risks collapsing the gap by naturalizing it (mountain view), but structural analysis reveals that compute concentration and knowledge withholding are choices, not laws.",
+    "directionality_logic": "Directionality for each perspective flows from structural relationship to the extraction mechanism. Frontier developers are net beneficiaries: their arbitrage exit options (can take their capabilities and models elsewhere, can form new companies) combined with beneficiary status produces low d and negative effective extraction \u2014 the constraint enables their position. Trapped researchers have maximal d: no exit options and victim status (cannot access frontier) produces high d and high f(d), maximizing experienced extraction. Organized open-source agents have intermediate d: constrained exit (can improve open models but cannot match frontier) plus victim status (excluded from frontier capabilities) produces moderate d and moderate chi. The regulatory framework is a beneficiary of the constraint (maintains appearance of governance while stratification persists) with arbitrage options (can change policy framework at any time), producing low d. The measurement shows that directionality has not changed qualitatively over the interval \u2014 frontier developers remain beneficiaries, excluded researchers remain trapped \u2014 but the magnitude has increased as frontier advantage has accumulated.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that all six types are legitimate readings from different structural positions. The frontier developer's rope (genuine coordination and standard-setting benefit) is not wrong \u2014 they do coordinate the field. The trapped researcher's snare (exponential barriers, no exit, pure extraction) is not wrong \u2014 they do face impossible barriers. The open-source coalition's tangled rope (mixed coordination and extraction) is not wrong \u2014 they do both. The regulatory framework's piton (degraded theater) is not wrong \u2014 safety discourse persists while actual outcomes remain unclear. The analytical observer's mountain (scaling laws are inevitable) is partially wrong \u2014 it naturalizes choices as laws. The mandatrophy resolution shows that 'which type is correct?' has no single answer; the constraint exists in multiple configurations depending on position. The engine should not choose one type but rather report the presheaf: snare from powerless position, tangled rope from moderate and organized positions, rope from institutional-beneficiary position, piton from institutional theater-maintainer position, false-summit mountain from civilizational-analytical position."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.2
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_safety_regulation_capture",
+      "knowledge_concentration_in_ai_research",
+      "training_data_access_asymmetry",
+      "compute_infrastructure_dependency"
+    ],
+    "dual_formulation_note": "AI model capability stratification is downstream of compute-infrastructure dependency (physical barrier) and training-data access asymmetry (knowledge barrier) but represents a distinct structural constraint with its own enforcement mechanisms. The network links stratification to capture dynamics in AI safety regulation, where safety justifications are used to reinforce stratification."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

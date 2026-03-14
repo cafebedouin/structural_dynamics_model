@@ -1,0 +1,207 @@
+{
+  "header": {
+    "constraint_id": "executive_information_control",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "exec_info"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Executive Information Control in Organizations",
+    "topic_domain": "organizational_governance/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "executive_leadership",
+      "board_gatekeepers"
+    ],
+    "victims": [
+      "rank_and_file_employees",
+      "organizational_accountability",
+      "strategic_decision_quality"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Frontline Employee",
+      "comment": "PERSPECTIVE 1: FRONTLINE EMPLOYEE (SNARE) \u2014 Structurally locked into information asymmetry. Cannot access strategic data needed to evaluate organizational direction, assess personal career risk, or exit intelligently. Information barriers are reinforced by employment dependency, NDA agreements, and hierarchical norms. High suppression through legal contract and cultural enforcement. No genuine exit option \u2014 changing jobs means repeating the same informational lock in another firm."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Middle Management Layer",
+      "comment": "PERSPECTIVE 2: MIDDLE MANAGEMENT (TANGLED ROPE) \u2014 Partially trapped, partially beneficiary. Must coordinate implementation of executive strategy (genuine coordination function) while being denied information needed to do the job well. Information gaps forced upward as questions; information asymmetry enables control. Benefits through job security and insider status relative to frontline, but bears extraction costs through being blamed for execution failures caused by information starvation. Constrained exit: promotions depend on information gatekeepers' approval."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Executive Leadership",
+      "comment": "PERSPECTIVE 3: EXECUTIVE LEADERSHIP (ROPE) \u2014 Primary beneficiary. Controls information flow as a coordination mechanism: directing which groups see which data enables resource allocation, strategic focus, and organizational alignment. From the executive view, information control IS the coordination function. Can arbitrage between organizations \u2014 executives move laterally at same or higher status, taking information monopolies with them. Low experienced extraction because benefits flow toward this agent."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Compliance and Audit Function",
+      "comment": "PERSPECTIVE 4: COMPLIANCE AND AUDIT (PITON) \u2014 Maintains theatrical oversight. Auditors and compliance staff conduct formal reviews of information controls but lack authority to change them or to access information outside executive-approved scope. The function persists through regulatory requirement and institutional inertia but has degraded real control power \u2014 executives can and do conceal material facts from auditors. Theater ratio high: formal compliance reviews create appearance of information governance without changing actual control structure."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Whistleblower and Transparency Coalition",
+      "comment": "PERSPECTIVE 5: TRANSPARENCY COALITION (SCAFFOLD) \u2014 Organized actors (SEC enforcement, investigative journalists, transparency NGOs, stock exchange listing rules) are building alternative information pathways: mandatory disclosures, insider trading enforcement, shareholder litigation discovery. These mechanisms create a sunset for pure information monopolies \u2014 executives can control internal communication but cannot entirely control external revelation of material facts. The coalition has agency and sees exit paths (regulatory enforcement, litigation, public exposure). Suppression declines as mechanisms mature."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Board of Directors",
+      "comment": "PERSPECTIVE 6: BOARD OF DIRECTORS (TANGLED ROPE) \u2014 Nominally oversee executives; actually depend on executives for information. Board members receive curated data, attend executive-controlled meetings, see executive-selected documents. Information asymmetry enables executives to control board decisions while maintaining coordination appearance (board still nominally approves strategy). Board members have constrained exit \u2014 removing a CEO requires information proving failure, which executives control. Extraction runs from board to executives, despite board's nominal authority."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, information asymmetry in hierarchies appears immutable: all organizations with scale have more information at the top than the bottom; full transparency is incompatible with organizational agility. This perspective naturalizes information control as inherent to complex organizations. However, the structural data contradicts mountain classification \u2014 measured suppression (0.68), measurable beneficiary/victim gap, and evidence of alternative information models (federated, distributed organizations) reveal this as false natural law. The constraint is contingent institutional design, not immutable structure."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "information_asymmetry_necessity",
+      "question": "How much information asymmetry is genuinely necessary for organizational coordination, and how much is extractive rent-seeking?",
+      "resolution_mechanism": "Comparative analysis of organizations with different information architectures (flat vs hierarchical, transparent vs closed); correlation between information asymmetry levels and organizational performance/innovation metrics; measurement of decision quality at different information access levels",
+      "impact": "If necessary asymmetry is low (< 0.20): information control is primarily extractive (snare classification strengthens). If necessary asymmetry is high (> 0.50): more constraints reclassify as rope (pure coordination). Current estimate: ~0.30 necessary, remainder is extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold between necessary information asymmetry and extractive control"
+    },
+    {
+      "id": "exit_option_alternative_models",
+      "question": "Do alternative organizational models (cooperative ownership, federated governance, open-source hierarchies) actually reduce information control or merely shift it?",
+      "resolution_mechanism": "Longitudinal study of organizations that transitioned from hierarchical to federated/distributed information models; measurement of suppression, theater ratio, and extraction before/after transition; tracking of power concentration in 'alternative' models",
+      "impact": "If alternatives genuinely lower suppression: exit option for trapped agents improves (mobile becomes viable option). If alternatives merely shift control: exit options remain constrained, and information control is more deeply structural than organizational form.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative models provide genuine exit from information control"
+    },
+    {
+      "id": "regulatory_sunset_credibility",
+      "question": "Are regulatory mechanisms (SEC disclosure rules, insider trading enforcement, shareholders' derivative suits) actually closing the executive information monopoly or creating symbolic compliance theater?",
+      "resolution_mechanism": "Analysis of enforcement action rates and outcomes; comparison of material fact concealment in regulated vs unregulated information flows; measurement of information asymmetry before/after regulatory tightening; tracking of executive compensation correlation with regulatory changes",
+      "impact": "If mechanisms are effective: scaffold perspective is valid, suppression should be declining over time. If mechanisms are theater: suppression persists despite regulatory apparatus, and scaffold classification is aspirational rather than structural.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regulatory mechanisms provide real constraint on executive information control"
+    },
+    {
+      "id": "subordinate_identity_lock_extent",
+      "question": "To what degree do employees internalize information asymmetry as legitimate hierarchy (identity-locked exit option) vs perceiving it as external barrier (constrained/trapped exit)?",
+      "resolution_mechanism": "Survey-based measurement of employee belief in 'need to know' legitimacy; correlation between identity-lock intensity and measured suppression of information requests; longitudinal tracking of exit framing after organizational transparency initiatives",
+      "impact": "If identity lock is high: suppression metric undercounts true constraint (agents self-suppress). If identity lock is low: measured suppression is closer to structural reality. This affects directionality computation for powerless/moderate perspectives.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Extent of identity-lock in employee perception of information control"
+    },
+    {
+      "id": "board_capture_mechanism",
+      "question": "Is board information dependence on executives a necessary coordination feature or an extractive capture mechanism?",
+      "resolution_mechanism": "Analysis of boards that hire independent information officers, mandate third-party audits, or create independent investigative committees; measurement of board-executive conflict rates and board override frequency before/after information independence measures; correlation between board information access and CEO removal rates",
+      "impact": "If boards can improve information independence without harming coordination: board perspective reclassifies from tangled rope to rope/scaffold. If information control persists despite independence measures: board capture is deeper (possibly requiring legal/governance reform rather than information architecture change).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether board information asymmetry is necessary or extractive"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Executive information control is a ubiquitous structural constraint in large organizations. It operates through formal access restrictions (data classification, compartmentalization, hierarchical approval gatekeeping), informal cultural norms ('need to know' ideology, deference to executive judgment), and legal mechanisms (employment contracts, NDAs, whistleblower retaliation statutes). The constraint exhibits all characteristics of a tangled rope: genuine coordination function (directing information to decision-makers) layered with asymmetric extraction (executives monopolize material facts to prevent challenges to their authority). Information asymmetry increases extractiveness (0.42 \u2192 0.58) and theater ratio (0.48 \u2192 0.64) over 20-year interval, indicating that the constraint accumulates extractive overhead while maintaining its coordination appearance. Different stakeholders perceive radically different constraint types: executives see pure coordination (Rope), trapped employees see pure extraction (Snare), the board experiences mixed dynamics (Tangled Rope), and organized actors building transparency mechanisms see a temporary problem with a sunset (Scaffold). The constraint's false mountain perspective (analytical/civilizational) reveals how 'organizational necessity' narratives naturalize contingent institutional designs.",
+    "key_agents": [
+      "Executive Leadership: Primary beneficiary (institutional/arbitrage) \u2014 controls information flow, captures decision-making authority, can move laterally across organizations",
+      "Rank-and-File Employees: Primary victim (powerless/trapped) \u2014 denied information needed to assess job security, career trajectory, organizational direction; locked into employment dependency",
+      "Middle Management: Secondary victim and partial beneficiary (moderate/constrained) \u2014 must coordinate without sufficient information; benefits through job security and insider status relative to frontline; constrained by information gatekeepers",
+      "Board of Directors: Nominal supervisors (powerful/constrained) \u2014 depend on executives for material information; information asymmetry enables executives to control board decisions; constrained exit requiring proof of executive failure",
+      "Compliance and Audit Functions: Institutional oversight (institutional/arbitrage) \u2014 maintain formal controls that lack real enforcement authority; function degraded through executive control of audit scope",
+      "Transparency Coalition: Organized challengers (organized/mobile) \u2014 SEC enforcement, investigative journalists, shareholder litigation, regulatory bodies building alternative information pathways with sunset logic",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent information architecture as immutable organizational law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Executives capture benefits of information monopoly (decision authority, strategic options, prestige from exclusive knowledge) while subordinates bear costs (limited agency, inability to exit intelligently, restricted career options). The trajectory from 0.42 to 0.58 reflects increasing sophistication in information gatekeeping as organizations scale \u2014 data abundance paradoxically increases asymmetry through curated access and algorithmic filtering. Not maximum extraction (0.58 not 0.75+) because some information flow is genuine necessity for organizational function, and some organizations have reduced asymmetry through transparency initiatives. Suppression (0.68): High. Multiple mechanisms reinforce information barriers: legal (NDAs, employment contracts), cultural (need-to-know ideology, hierarchy deference), technical (access control systems), and political (executives punish information sharing). However, suppression is not total (0.68 not 0.90+) \u2014 whistleblowers exist, regulatory enforcement reaches some facts, alternative information sources partially bypass executive control. Theater ratio (0.64): Moderate-high. Formal governance structures (board meetings, annual disclosures, audit committees) create appearance of information oversight while executives retain actual control. Theater has increased over interval as regulatory requirements have grown \u2014 more compliance theater with less substantive change in power distribution. The theater is not maximal (0.64 not 0.85+) because some information does flow despite asymmetry.",
+    "perspectival_gap": "This constraint exhibits maximum perspectival divergence. The executive sees a coordination mechanism (Rope) \u2014 distributing information to appropriate decision-makers. The trapped employee sees pure extraction (Snare) \u2014 information barriers prevent escape. The board sees mixed dynamics (Tangled Rope) \u2014 nominal oversight while being controlled. The middle manager sees partial extraction with coordination (Tangled Rope) \u2014 must implement without sufficient information. The transparency coalition sees a temporary problem (Scaffold) \u2014 regulatory mechanisms are building exit pathways. The compliance function sees degraded ritual (Piton) \u2014 formal controls persist without real constraint. The civilizational analytical view sees natural law (Mountain) \u2014 information asymmetry inherent to hierarchy. The perspectival gap reveals structural reality: information control is not a unified phenomenon but a bundle of conflicting interests that different actors resolve through different classifications. The gap between executive's rope and employee's snare is the fundamental structural feature of the constraint.",
+    "directionality_logic": "Directionality derives from beneficiary/victim status and exit options. Executives (institutional/arbitrage) occupy the beneficiary position with high exit mobility \u2014 they can move to competitor firms, take information monopolies with them, experience negative or zero effective extraction (low d). Trapped employees (powerless/trapped) occupy the victim position with no exit \u2014 they bear maximum extraction, high d. Middle managers (moderate/constrained) occupy mixed position: partial victim (constrained by information starvation) and partial beneficiary (insider status relative to frontline), with constrained (not mobile/trapped) exit \u2014 moderate d. The board (powerful/constrained) has nominal authority but information dependence \u2014 the constraint's peculiarity is that structural power (board authority) is negated by information asymmetry, creating a constrained-exit situation despite powerful nominal status. This demonstrates that agent_power is constraint-relative: nominally powerful actors can occupy victim positions if the constraint controls their information."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture",
+      "board_entrenchment",
+      "insider_trading_information_asymmetry"
+    ],
+    "dual_formulation_note": "Executive information control decomposes into multiple structurally distinct constraints. The information asymmetry within organizations (this story) has different dynamics than information asymmetry between organizations and regulators (regulatory_capture), or between insiders and outside shareholders (insider_trading). Each has its own \u03b5 value and beneficiary/victim structure. They are linked through network effects: executive control of internal information enables regulatory capture; information asymmetry to shareholders enables insider trading."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.62
+    }
+  ]
+}

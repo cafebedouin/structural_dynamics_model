@@ -1,0 +1,216 @@
+{
+  "header": {
+    "constraint_id": "consumption_visibility_display",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cvd"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Consumption Visibility Display Norm",
+    "topic_domain": "social/behavioral/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "status_signaling_beneficiaries",
+      "luxury_goods_producers",
+      "advertising_industry"
+    ],
+    "victims": [
+      "resource_conservationists",
+      "lower_income_consumers",
+      "environmental_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Lower-Income Consumer",
+      "comment": "PERSPECTIVE 1: LOWER-INCOME CONSUMER (SNARE) \u2014 Trapped in a consumption visibility hierarchy where not displaying consumption marks them as poor/unsuccessful. Exit would require either (a) abandoning social participation or (b) achieving higher income. No intermediate option: private consumption is not socially legible. Bears full cost of visibility norm enforcement through social sanction. Zero degrees of freedom within the constraint."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Environmental Commons",
+      "comment": "PERSPECTIVE 2: ENVIRONMENTAL COMMONS (SNARE) \u2014 Bears extraction through unsustainable consumption driven by visibility norms. No exit option; no voice in coordination. Abstract victim with no agency. Extraction manifests as resource depletion, emissions, and waste concentrated in status-competition goods with minimal functional differentiation from lower-visibility alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Conscious Consumer",
+      "comment": "PERSPECTIVE 3: CONSCIOUS CONSUMER (TANGLED ROPE) \u2014 Faces significant costs to exit (social penalty, reputational damage, identity friction) but retains agency. Can choose less-visible consumption at career/relationship risk. Benefits from social coordination function: consumption visibility enables mutual recognition and community bonding. Mixed extraction and genuine coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Luxury Goods Producers",
+      "comment": "PERSPECTIVE 4: LUXURY GOODS PRODUCERS (ROPE) \u2014 Primary beneficiary. Experiences the constraint as pure coordination: visibility norms solve the problem of distinguishing their products in a crowded market. Exit is costless (could market to function rather than status, but have no incentive to). Net beneficiary with arbitrage freedom."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Advertising and Media Industries",
+      "comment": "PERSPECTIVE 5: ADVERTISING/MEDIA (ROPE) \u2014 Beneficiary. Visibility norms create demand for advertising platforms that enable status signaling. Pure coordination from their perspective: advertising solves the matching problem between consumers seeking visibility and status-differentiated products. Net beneficiary with exit freedom."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "High-Income Consumer",
+      "comment": "PERSPECTIVE 6: HIGH-INCOME CONSUMER (TANGLED ROPE) \u2014 Mixed experience. Benefits from visibility norms (can afford visible consumption and reaps status gains). Also bears extraction through consumption treadmill: must continuously upgrade visibility markers to maintain relative status as others increase consumption. Has exit option (geographic arbitrage to lower-visibility communities) but mobile enough to arbitrage between visibility regimes. Net beneficiary with agency."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Sumptuary Law Legacy System",
+      "comment": "PERSPECTIVE 7: SUMPTUARY LAW LEGACY (PITON) \u2014 Historical sumptuary laws (legal restrictions on consumption display) have been abolished in most jurisdictions but the functional constraint persists through social enforcement. Theater ratio high: the normative mechanism (social judgment, peer pressure) performs the regulation that formal law once did. The institution carries forward its historical form despite changed context. Degraded from pure coordination (community mutual recognition) into status maintenance ritual."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Costly Signaling View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (FALSE SUMMIT) \u2014 From a civilizational view, the constraint might appear to be a natural law of human signaling: costly display is inherent to reputation mechanisms, observed across all human societies. However, this naturalizes contingent institutional arrangements (luxury goods markets, advertising media, income inequality enabling visible differentiation) as immutable. The base metrics contradict mountain classification: extractiveness 0.58, suppression 0.62, theater 0.58. The engine will identify this as a false summit \u2014 naturalization of a tangled rope."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "visibility_necessity_threshold",
+      "question": "What proportion of social coordination genuinely requires consumption visibility vs. what portion is rent-seeking layered onto coordination?",
+      "resolution_mechanism": "Comparative analysis of societies/communities with low consumption visibility norms; measurement of coordination quality (social cohesion, mutual recognition) independent of visible consumption markers",
+      "impact": "If low necessity (<30%): extractiveness increases (the constraint is primarily status competition, not coordination). If high necessity (>70%): extractiveness decreases (the constraint solves a genuine coordination problem). Classification may shift toward rope if coordination necessity is high.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Necessity of consumption visibility for social coordination"
+    },
+    {
+      "id": "income_inequality_coupling",
+      "question": "Is the extraction mechanism fundamentally tied to income inequality, or would consumption visibility norms persist in egalitarian contexts?",
+      "resolution_mechanism": "Analysis of consumption visibility dynamics in low-inequality societies (Nordic countries, intentional communities); historical analysis of visibility norms in pre-industrial egalitarian contexts",
+      "impact": "If coupled to inequality: reducing inequality would degrade the constraint structure (victims gain arbitrage options). If independent: the constraint is robust to equality changes. Current measurement assumes inequality coupling.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether visibility norms depend on income inequality"
+    },
+    {
+      "id": "digital_transparency_feedback",
+      "question": "Do digital consumption tracking platforms (social media, purchase visibility, spending apps) increase or decrease the total extractiveness of the visibility norm?",
+      "resolution_mechanism": "Longitudinal measurement of consumption visibility behavior pre/post social media adoption; survey data on perceived visibility pressure in high-digital-adoption cohorts vs low-adoption cohorts",
+      "impact": "If digital amplification: extractiveness rising over time (theater ratio increasing, measurements should show upward trajectory). If transparency saturation: extractiveness plateauing or declining (norms may be inverting toward privacy/minimalism). Critical for measurement trajectory interpretation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effect of digital consumption tracking on visibility norm extractiveness"
+    },
+    {
+      "id": "suppression_internalization_ratio",
+      "question": "What proportion of the measured suppression (0.62) is external (social sanctions, career/relationship damage) vs. internalized (shame, identity fusion with consumption markers)?",
+      "resolution_mechanism": "Post-exit suppression analysis: measure continued consumption anxiety in agents who have physically left visibility-intense communities; cognitive reframing studies showing persistence of internalized visibility pressure after external sanctions removed",
+      "impact": "If highly internalized (>60%): suppression is partly cognitive capture, classified as identity_locked component. If primarily external (>60%): suppression is material barrier, constraining exit cost but not making exit unthinkable. Affects interpersonal decomposition strategy.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Internalization vs. external suppression mechanism ratio"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Consumption visibility displays \u2014 the social norm that consumption should be publicly legible as a marker of status, taste, and identity \u2014 create a structural tension between genuine coordination (mutual recognition, community bonding, aesthetic communication) and extractive status competition. The constraint operates across all modern consumer societies but with varying intensity based on income inequality and digital platform penetration. What began as sumptuary laws (legal restrictions on who could display consumption markers, used to maintain class hierarchies) has evolved into decentralized social enforcement through visibility norms. The constraint now lacks formal authority but functions through peer pressure, career effects, and identity fusion. The extractiveness has increased over the interval (0.38 to 0.58) as digital platforms have made consumption visibility technically easier and socially normalized, while the theater ratio has increased (0.42 to 0.58) as the performative component has grown relative to genuine coordination.",
+    "key_agents": [
+      "Lower-Income Consumers: Primary victims (powerless/trapped) \u2014 bear full cost of invisibility through social sanction; no exit option without abandoning communities",
+      "Environmental Commons: Abstract victim (powerless/trapped) \u2014 bears extraction through resource depletion driven by visibility-status competition",
+      "Conscious Consumers: Secondary victims (moderate/constrained) \u2014 face significant cost to exit but retain agency to reduce consumption visibility",
+      "Luxury Goods Producers: Primary beneficiaries (institutional/arbitrage) \u2014 capture profit from status-differentiated products; experience constraint as pure coordination",
+      "Advertising/Media Industries: Beneficiaries (institutional/arbitrage) \u2014 profit from visibility platforms enabling status signaling",
+      "High-Income Consumers: Mixed (powerful/mobile) \u2014 benefit from visibility but also face consumption treadmill extraction; have exit options",
+      "Historical Sumptuary System: Degraded institution (institutional/constrained) \u2014 maintained through social inertia rather than function",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing status signaling as immutable human law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint generates significant extraction through status competition (luxury spending driven by visibility rather than function, environmental cost concentration in status-goods, income-based social sanction). However, extraction is not total because genuine coordination functions persist: consumption visibility does enable mutual recognition, aesthetic communication, and community bonding. The measure reflects mixed extraction and coordination. Suppression (0.62): Moderate-high. Significant barriers to exit include social sanction (reputation damage, peer exclusion), career effects (promoters/hiring weighted toward visible status markers), and psychological costs (shame, identity friction). However, suppression is not total: agents with sufficient income can afford visibility costs, and some communities have lower visibility norms. Theater ratio (0.58): Moderate. The constraint operates partly through genuine coordination (aesthetic communication, mutual recognition) and partly through performative status ritual. The ratio has increased over time as digital platforms have enabled easier visibility performance and social media has standardized status display formats. The theater ratio increase mirrors extractiveness increase, suggesting Goodhart drift: as visibility becomes easier to perform, the functional signaling value decays and the performative component dominates.",
+    "perspectival_gap": "This constraint demonstrates how indexical position determines perceived type. The beneficiary's rope reflects their genuine experience of efficient status signaling. The trapped victim's snare reflects their genuine experience of unescapable social pressure. The conscious consumer's tangled rope reflects mixed coordination/extraction. The high-income consumer's tangled rope with agency reflects mixed experience with exit options. The institutional historian's piton reflects degradation of functional mechanisms. The civilizational analytical view risks false summitry (naturalizing status signaling as immutable) despite structural evidence of contingency (inequality-coupling, media-dependence, social enforcement). The perspectival gap is diagnostic: if all perspectives converged on the same type, the constraint would be mischaracterized. The divergence shows that the constraint genuinely operates across multiple structural levels (coordination, extraction, degradation) simultaneously.",
+    "directionality_logic": "Each agent's directionality value derives from (a) beneficiary/victim status, (b) exit options, and (c) power level. Lower-income consumers are victims with trapped exit \u2192 high d \u2192 high f(d) \u2192 high experienced \u03c7. Luxury producers are beneficiaries with arbitrage exit \u2192 low d \u2192 low f(d) \u2192 negative or near-zero experienced \u03c7. Conscious consumers are victims with constrained exit \u2192 moderate d \u2192 moderate f(d) \u2192 moderate \u03c7. High-income consumers are mixed (both beneficiary and victim) with mobile exit \u2192 balanced d \u2192 moderate f(d). The overrides are not needed: the derivation chain captures the structural relationships accurately through beneficiary/victim declarations and exit options.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that tangled rope is the correct canonical type: the constraint has both genuine coordination (mutual recognition, aesthetic communication, status differentiation enabling market function) AND asymmetric extraction (status competition driving consumption above functional need, environmental burden, income-based social sanction). The coordination function cannot be separated from the extraction mechanism \u2014 they are operationally entangled. The beneficiary's rope is a perspectival artifact (they see only the coordination benefit). The victim's snare is also perspectival (they see only the extraction). The analytical tangled rope at organizational level is the structural truth: both functions exist, both are enforced, both contribute to the constraint's persistence. The mandatrophy is resolved by recognizing that perspectival gap is not a classification error \u2014 it is diagnostic data showing that different agents genuinely experience the constraint differently because they occupy different structural positions."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "luxury_goods_production",
+      "advertising_market_structure",
+      "social_status_hierarchy",
+      "environmental_resource_extraction"
+    ],
+    "dual_formulation_note": "Consumption visibility display is upstream of multiple domain-specific constraints: it drives structure in luxury goods markets (which goods get produced), advertising markets (which platforms commodify visibility), social hierarchies (which markers signal status), and environmental extraction (resource intensity of status goods). Each downstream constraint has its own \u03b5 value reflecting domain-specific mechanisms. The visibility display itself is the coordination mechanism that couples these domains."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 1.0
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    }
+  ]
+}

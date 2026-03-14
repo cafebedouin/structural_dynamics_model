@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "neuroimaging_technology_accessibility",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "neuro"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Neuroimaging Technology Accessibility and Research Equity",
+    "topic_domain": "neuroscience/research_infrastructure/global_health",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "well_funded_research_institutions",
+      "imaging_equipment_manufacturers",
+      "wealthy_nations_neuroscience_communities"
+    ],
+    "victims": [
+      "underfunded_researchers",
+      "lower_income_countries",
+      "patient_populations_in_low_resource_settings"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Underfunded Researcher in Low-Resource Settings",
+      "comment": "PERSPECTIVE 1: UNDERFUNDED RESEARCHER (SNARE) \u2014 Trapped by capital and infrastructure barriers. Cannot conduct cutting-edge neuroimaging research without access to multi-million-dollar equipment. No alternative pathways for individual researchers. Bears extraction cost (cannot advance career without institutional resources they cannot obtain) with minimal coordination benefit. Maximum perceived extractiveness."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Middle-Income Research Institution",
+      "comment": "PERSPECTIVE 2: MIDDLE-INCOME INSTITUTION (TANGLED ROPE) \u2014 Faces high capital costs and maintenance barriers but can pursue access through consortium partnerships and shared facility models. Benefits from coordination mechanisms (multi-site research networks, equipment sharing protocols) while bearing disproportionate labor and infrastructure costs. Constrained exit due to career/funding pressure. Mixed experience of coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Well-Funded Research Institution",
+      "comment": "PERSPECTIVE 3: WELL-FUNDED INSTITUTION (ROPE) \u2014 Benefits from exclusive access to state-of-the-art equipment. Experiences the constraint as coordination mechanism: their data collection enables global research networks, and they capture first-mover scientific advantage. Net beneficiary. Can exit through private equipment investment if desired. Experiences constraint as manageable coordination challenge with clear benefits."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Equipment Manufacturer",
+      "comment": "PERSPECTIVE 4: EQUIPMENT MANUFACTURER (ROPE) \u2014 Benefits from capital scarcity and high replacement costs. High-cost equipment creates stable revenue streams and reduces competition. Experiences the constraint as coordination mechanism: standardization of protocols, user training networks, and maintenance contracts. Net beneficiary with low extraction cost."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Neuroscience Movement",
+      "comment": "PERSPECTIVE 5: OPEN NEUROSCIENCE COALITION (SCAFFOLD) \u2014 Organized agents (open-source neuroimaging software initiatives, equipment consortia, shared data repositories, federated computing networks) are building alternative pathways that bypass exclusive institutional access. These approaches have sunset logic: as open-source tools mature (SPM, FSL, AFNI, MNE-Python alternatives) and distributed computing models scale, the extraction mechanism of exclusive equipment access loses force. Estimated sunset: 15-20 years as cloud-based neuroimaging and open-source pipelines mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Traditional NIH-Centric Funding System",
+      "comment": "PERSPECTIVE 6: TRADITIONAL FUNDING GATEKEEPING (PITON) \u2014 The NIH peer review system for neuroimaging access is largely performative: reviewers assess novelty and feasibility on paper but cannot verify access feasibility for researchers from under-resourced institutions. The system produces the theater of 'equal opportunity' while maintaining structural barriers. Increasingly seen by its operators as degraded \u2014 access equity calls and alternative funding models proliferate because the traditional system is acknowledged as insufficient. Maintains itself through institutional inertia despite recognized inadequacy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, neuroimaging technology creates genuine coordination benefits (standardized protocols enable multi-site research, shared data repositories accelerate discovery) alongside asymmetric extraction (capital access determines research opportunity, marginalizing under-resourced researchers). The constraint has real coordination function AND real extraction mechanism. Neither can be eliminated without eliminating the other. Tangled rope from the full structural view."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "open_source_viability_threshold",
+      "question": "At what computational capability threshold do open-source neuroimaging tools become genuine functional substitutes for commercial equipment software, versus remaining limited-use approximations?",
+      "resolution_mechanism": "Comparative analysis of research outcomes using open-source vs commercial pipelines; replication studies using same datasets through both pathways; adoption rates among resource-constrained institutions",
+      "impact": "If threshold crossed in next 5 years: scaffold perspective confirmed, sunset accelerates. If threshold remains > 10 years: open-source alternatives remain niche, extraction mechanism persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability threshold for open-source neuroimaging as functional alternative"
+    },
+    {
+      "id": "distributed_computing_model_scalability",
+      "question": "Can federated learning and distributed neuroimaging analysis on cloud infrastructure achieve the statistical power and validation standards of centralized equipment-based approaches?",
+      "resolution_mechanism": "Multi-site federated studies comparing statistical power and artifact detection; validation against gold-standard centralized protocols; cost analysis of distributed vs centralized approaches",
+      "impact": "If scalable to equivalent standards: alternative pathway matures (Scaffold), equipment access monopoly weakens. If persistent limitations: distributed model remains supplementary, equipment access remains gating constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scalability of distributed computing models for neuroimaging analysis"
+    },
+    {
+      "id": "mobile_neuroimaging_technical_readiness",
+      "question": "Can portable neuroimaging technologies (mobile EEG, accessible fMRI devices, wearable sensors) achieve sufficient resolution and standardization to democratize brain research access?",
+      "resolution_mechanism": "Technical capability assessment of mobile devices relative to clinical standards; validation studies comparing mobile vs fixed neuroimaging outcomes; adoption and sustainability in low-resource settings",
+      "impact": "If mobile systems achieve 80%+ capability parity: access bottleneck loosens significantly (transforms from snare to constrained for underfunded researchers). If mobile systems remain limited to niche applications: centralized equipment remains gating constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical readiness of mobile and accessible neuroimaging technologies"
+    },
+    {
+      "id": "institutional_equity_commitment_persistence",
+      "question": "Are institutional commitments to neuroimaging access equity (shared facility partnerships, equipment consortia, cross-border collaborations) sustained commitments with genuine resource allocation, or performative compliance theater?",
+      "resolution_mechanism": "Longitudinal funding analysis for equity initiatives; comparison of stated access targets vs actual utilization by under-resourced researchers; tracking of consortium sustainability vs dissolution rates",
+      "impact": "If genuine commitment: barrier reduction mechanisms strengthen (Scaffold strengthens). If performative: theater increases while barriers persist (Piton classification strengthens).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Authenticity of institutional equity commitment to neuroimaging access"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 16
+  },
+  "commentary": {
+    "narrative_context": "Neuroimaging technology accessibility creates a structural constraint between the capital requirements of cutting-edge brain imaging equipment and the global distribution of research capacity. The constraint operates through infrastructure gatekeeping: multi-million-dollar scanners (fMRI, MEG, high-field MRI) are concentrated in wealthy institutions and nations, creating asymmetric access to research capability. Well-funded institutions benefit from exclusive access and scientific priority; underfunded researchers face career barriers due to equipment inaccessibility. The constraint exhibits genuine coordination functions (multi-site data sharing enables larger studies, standardized protocols improve reproducibility) alongside asymmetric extraction (capital access determines research opportunity). Over the interval (2010-2026), extractiveness has increased as research has become more data-intensive and equipment more expensive, while theater has increased as institutional equity commitments have proliferated as performative responses without proportional resource allocation. Open-source neuroimaging tools and distributed computing models represent genuine technological alternatives maturing under scaffold logic \u2014 as these alternatives reach functional parity with commercial systems, the equipment access monopoly weakens.",
+    "key_agents": [
+      "Well-funded research institutions (e.g., MIT, Harvard, Max Planck): Institutional/arbitrage \u2014 primary beneficiary, captures scientific priority and first-author advantages",
+      "Underfunded researchers in low-resource settings: Powerless/trapped \u2014 primary victim, lacks capital access, cannot advance neuroimaging research career",
+      "Middle-income institutional research groups: Moderate/constrained \u2014 secondary victim with some agency, can access through consortia partnerships but faces disproportionate burden",
+      "Equipment manufacturers (Siemens, Philips, GE, OMEGA): Institutional/arbitrage \u2014 secondary beneficiary, maintains revenue from capital scarcity and replacement cycles",
+      "Open Neuroscience Coalition (INCF, software developers, federated computing projects): Organized/constrained \u2014 builds alternative pathways with sunset logic",
+      "Traditional funding gatekeepers (NIH review systems): Institutional/arbitrage \u2014 maintains structural barriers while performing equity commitment (Piton perspective)",
+      "Analytical observer: Analytical/analytical \u2014 recognizes constraint as genuine tangled rope with real coordination and real extraction mechanisms"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Elevated-high. The capital barrier creates genuine extraction: researchers without equipment access cannot conduct frontier neuroimaging research regardless of scientific merit. The extraction is not total (alternative pathways exist, consortium access is possible) but substantial enough to shape career trajectories. The value has increased over the interval as equipment has become more expensive and data requirements more stringent. Suppression (0.62): Moderate-high. Barriers include capital costs ($2-10M per scanner), facility maintenance, technical expertise requirements, and institutional access protocols. But these are not absolute \u2014 some barriers are surmountable through consortium partnerships, cloud computing, and mobile neuroimaging. Suppression persists but with some permeability. Theater ratio (0.55): Moderate. Institutional commitments to access equity (shared facilities, partnership programs, open data initiatives) are partially genuine but also contain performative elements. The theater has increased over the interval as equity rhetoric has grown while structural barriers persist. The constraint requires active enforcement through access policies and consortia maintenance, confirming Tangled Rope classification.",
+    "perspectival_gap": "The perspectival gap between beneficiary (Rope) and victim (Snare) perspectives reveals the constraint's hybrid nature. Beneficiaries experience it as manageable coordination with clear research benefits. Victims experience it as insurmountable capital barrier. The gap width indicates that real extraction is occurring \u2014 if the constraint were pure coordination (Rope from all views), all perspectives would converge. If it were pure extraction (Snare from all views), beneficiaries would also perceive extraction (organized resistance). Instead, beneficiaries see benefits while victims see barriers \u2014 diagnostic of Tangled Rope.",
+    "directionality_logic": "Directionality (d) is derived from structural position: power level, exit options, and beneficiary/victim status. Well-funded institutions (institutional/arbitrage/beneficiary) derive low d \u2192 experienced extraction runs toward them (negative chi). Underfunded researchers (powerless/trapped/victim) derive high d \u2192 maximum experienced extraction runs away from them (high chi). Middle-income institutions (moderate/constrained/victim) derive mid-range d \u2192 moderate experienced extraction. The open science coalition (organized/constrained/victim-to-beneficiary-in-future) derives mid-range d with sunset trajectory. The sigmoid f(d) amplifies experienced extractiveness for high-d agents (trapped powerless) and dampens it for low-d agents (arbitrage institutional). Scope modifier \u03c3(S) scales extractiveness globally (\u03c3=1.2) \u2014 the barrier affects global research equity, not just local access.",
+    "mandatrophy_analysis": "RESOLUTION: This constraint is neither pure extraction nor pure coordination. It is Tangled Rope because: (1) Genuine coordination functions exist \u2014 multi-site research networks require standardization, data sharing enables larger studies, open-source tools reduce barriers. (2) Asymmetric extraction exists in parallel \u2014 capital access determines who can participate in frontier research, well-funded institutions capture scientific priority, equipment monopolies persist despite open-access rhetoric. (3) Active enforcement maintains the hybrid \u2014 consortium policies, access agreements, funding decisions all actively maintain both the coordination function and the extraction asymmetry. The mandatrophy resolves by recognizing that scaffold alternatives (open-source, distributed computing, mobile devices) are genuinely maturing and could eventually decouple the coordination from the extraction \u2014 if those alternatives reach sufficient technical parity, the equipment monopoly weakens. Until that threshold is crossed, the constraint remains Tangled Rope with a real sunset mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "research_publication_access",
+      "global_neuroscience_workforce_equity"
+    ],
+    "dual_formulation_note": "Neuroimaging accessibility is downstream of both research infrastructure investment decisions and equipment manufacturing economics. It is upstream of research publication access and workforce development in neuroscience. The constraint family includes separate stories for equipment monopoly dynamics (pure extraction mechanics) vs. data-sharing coordination (pure coordination mechanics), linked by network decomposition."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

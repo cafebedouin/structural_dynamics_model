@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "renewable_energy_supply_chain_extraction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "renew_supply"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Renewable Energy Supply Chain Extraction",
+    "topic_domain": "energy_economics/labor_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "equipment_manufacturers",
+      "rare_earth_mining_operators",
+      "developed_nation_energy_firms"
+    ],
+    "victims": [
+      "artisanal_mining_workers",
+      "resource_extraction_communities",
+      "developing_nation_grid_operators"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Artisanal Miner",
+      "comment": "Artisanal miners in rare earth extraction regions face no exit options: local economies depend entirely on mining revenue, labor law enforcement is minimal, and geographic isolation prevents access to alternative work. The constraint extracts labor value while suppressing alternative livelihood pathways. Maximum experienced extraction with zero agency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Developing Nation Grid Operator",
+      "comment": "Grid operators in energy-importing nations are constrained by dependency on imported equipment and minerals; they cannot build renewable infrastructure without engaging the supply chain. The constraint provides genuine coordination (standardized components enable interoperability) but extracts through markup, supply control, and tied purchasing. Significant costs alongside real benefits."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Equipment Manufacturer",
+      "comment": "Equipment manufacturers (turbine makers, solar panel producers) experience the supply chain as pure coordination: access to standardized rare earth inputs enables production scaling and efficiency gains. They are net beneficiaries with arbitrage options\u2014they can source from multiple suppliers, negotiate pricing, and relocate production. Net positive relationship with the constraint."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Developed Nation Energy Firm",
+      "comment": "Developed nation renewable energy firms benefit from the constraint through cost externalization (labor and environmental costs borne in the supply chain) while maintaining public green credentials. They have exit options but limited incentive to use them; the constraint enables profitable renewable transition. Mixed coordination (supply reliability) and extraction (cost shifting)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Sustainability Certification System",
+      "comment": "Sustainability certifications (conflict minerals, labor standards, environmental compliance) claim to regulate the constraint but are largely performative: audits are infrequent, penalties are weak, and enforcement is theater. The certification system persists through institutional inertia\u2014it satisfies demand for accountability without imposing real costs on beneficiaries. Certification maintains the constraint by substituting symbolic compliance for structural change."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Circular Economy Coalition",
+      "comment": "Organized actors (recycling infrastructure initiatives, material scientists, policy coalitions) are building alternative supply pathways through recycled rare earth recovery and substitution chemistry. These pathways have sunset logic: as recycling scales and substitutes mature, dependency on virgin mining extraction declines. Current extraction persists, but structured alternatives are reducing its future necessity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "virgin_versus_recycled_cost_parity",
+      "question": "At what point do recycled rare earth extraction and substitution chemistry become cost-competitive with virgin mining extraction?",
+      "resolution_mechanism": "Longitudinal tracking of recycled rare earth yields, material science advances in substitutes, and production cost curves for both pathways; market price data for virgin vs recycled inputs",
+      "impact": "If parity achieved by 2032: scaffold sunset is real, circular economy provides genuine exit pathway. If cost advantage remains with virgin extraction: supply chain dependency persists, cycling extraction continues indefinitely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cost competitiveness of recycled versus virgin rare earth extraction"
+    },
+    {
+      "id": "labor_law_enforcement_capacity",
+      "question": "Can resource extraction labor standards be enforced in diffuse artisanal mining contexts, or is suppression structurally irreducible given the enforcement topology?",
+      "resolution_mechanism": "Comparative analysis of labor standards enforcement in artisanal vs industrial mining; correlation between enforcement investment and outcome improvements; assessment of whether technology (GPS, digital documentation) can meaningfully improve monitoring",
+      "impact": "If enforceable: suppression is policy-choice dependent (medium confidence in reform). If structurally irreducible: artisanal mining remains trapped by enforcement topology, not just poverty.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Enforceability of labor standards in artisanal mining contexts"
+    },
+    {
+      "id": "extraction_visibility_asymmetry",
+      "question": "Does the supply chain's geographic and institutional distance between consumers and extraction sites constitute a structural information barrier that sustains the constraint, or is opacity contingent on market design?",
+      "resolution_mechanism": "Controlled transparency experiments (blockchain tracking, supply-chain labeling, third-party audits with real consequences); measurement of consumer willingness-to-pay for verified non-extractive sourcing; tracking of market shift following transparency interventions",
+      "impact": "If structural: transparency alone will not resolve extraction. If contingent: market design reforms (full-cost pricing, supply-chain accountability) could shift extraction to developed-nation contexts where it would become politically intolerable.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether supply chain opacity is structural or contingent on market design"
+    },
+    {
+      "id": "developed_nation_renewable_dependency",
+      "question": "What fraction of developed-nation renewable energy transition genuinely depends on rare earth extraction versus being contingent on specific engineering choices and cost optimization?",
+      "resolution_mechanism": "Techno-economic analysis of alternative renewable configurations (permanent magnet vs induction generators, neodymium-free battery chemistries, alternative grid architectures); comparison of cost and performance across pathways",
+      "impact": "If high dependency: developed nations cannot exit the constraint without abandoning renewable transition. If contingent: extraction can be reduced through engineering choices that cost less than currently invested in supply chain control.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Technical dependency of renewable energy on rare earth minerals"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The renewable energy supply chain exhibits a structural paradox: accelerating global deployment of wind, solar, and battery technologies drives exponential demand for rare earth minerals and critical metals whose extraction imposes severe labor and environmental costs concentrated in developing nations. The constraint combines genuine coordination (standardized rare earth inputs enable manufacturing efficiency and supply reliability) with asymmetric extraction (labor and environmental costs are externalized to powerless populations while profits flow to developed-nation firms and equipment manufacturers). The constraint is not incidental to renewable energy\u2014it is structurally embedded in the current engineering and supply chain architecture. Theater is moderate (0.55) because sustainability certification systems create symbolic compliance without enforcing structural reform, yet the constraint retains real functional components (supply standardization). Extractiveness has increased from 0.42 to 0.58 over the interval as renewable deployment has accelerated, concentrating extraction pressure on fixed artisanal mining communities whose labor productivity and regulatory environment have not improved. The circular economy coalition (recycled rare earth recovery, material substitution) represents the primary structural exit pathway, but its timeline to cost parity is uncertain.",
+    "key_agents": [
+      "Artisanal Mining Workers: Primary victims (powerless/trapped) \u2014 no exit options; bear labor and health costs; localized in resource-extraction regions with minimal governance",
+      "Resource Extraction Communities: Primary victims (powerless/trapped) \u2014 environmental degradation without compensation; economic dependency on mining; no agency in supply chain decisions",
+      "Equipment Manufacturers: Primary beneficiaries (institutional/arbitrage) \u2014 access to standardized inputs enables production scaling; negotiate terms with suppliers; capture efficiency gains",
+      "Developed Nation Energy Firms: Primary beneficiaries (powerful/mobile) \u2014 externalize costs while capturing green transition profits; have exit options but limited incentive to use them",
+      "Rare Earth Mining Operators: Secondary beneficiaries (institutional/arbitrage) \u2014 control supply bottleneck; profit from price premiums; consolidate production in low-governance regions",
+      "Developing Nation Grid Operators: Secondary victims (moderate/constrained) \u2014 forced to purchase imported equipment; cannot build alternative supply chains; constrained by capital and technology access",
+      "Sustainability Certification Systems: Institutional theater maintainers (institutional/arbitrage) \u2014 perpetuate perception of managed constraint; perform audits with weak enforcement; reduce pressure for structural reform",
+      "Circular Economy Coalition: Organized agents (organized/constrained) \u2014 building alternative recycled supply pathways; constrained by current cost structures but see generational sunset trajectory"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The renewable energy supply chain extracts significant value through labor suppression, environmental cost externalization, and supply control, but extraction is not total because genuine coordination benefits exist (standardized inputs enable manufacturing efficiency and supply reliability). The value reflects that the constraint does solve a real coordination problem while simultaneously imposing asymmetric extraction. Suppression (0.68): High. Artisanal miners face multiple suppression mechanisms: geographic isolation limits alternative livelihoods, weak labor law enforcement reduces exit costs for employers, low educational access restricts occupational mobility, and supply chain opacity prevents consumer-side pressure. Developing nation governments have limited capacity to enforce standards given capital and technical dependencies. Theater ratio (0.55): Moderate. Sustainability certifications create symbolic compliance that substitutes for structural reform. Audits are infrequent and penalties are weak. However, the constraint retains functional components\u2014supply standardization is real, not purely performative. Theater has increased over the interval as firms have invested more in certification infrastructure without corresponding improvements in labor conditions.",
+    "perspectival_gap": "The primary perspectival gap lies between beneficiaries (equipment manufacturers, developed-nation firms) and victims (artisanal miners, extraction communities). Beneficiaries perceive coordination that enables renewable transition and cost efficiency. Victims perceive extraction with suppressed alternatives. This gap is not a measurement disagreement\u2014it is a structural asymmetry in how the same constraint affects different positions. A secondary gap exists between the developed-nation energy transition narrative (renewable energy as green transition) and the supply-chain reality (extraction and environmental cost externalization). The certification system bridges this gap symbolically without bridging it structurally.",
+    "directionality_logic": "Beneficiaries (equipment manufacturers, developed-nation firms, mining operators) derive d values near 0.0-0.25 through arbitrage exit options and beneficiary status, producing low or negative effective extraction from their perspective. They see the constraint as coordination. Artisanal miners derive d values near 0.95 through trapped exit and victim status, producing high f(d) and maximum experienced extractiveness. The powerless miner cannot negotiate or exit; the institutional manufacturer can do both. Developing nation grid operators derive intermediate d around 0.55-0.65 through constrained exit and mixed victim/beneficiary status\u2014they bear extraction costs through supply chain dependency while gaining access to renewable energy technology. The organized circular economy coalition derives d around 0.50-0.60 through constrained exit and beneficiary-toward-victim orientation; they have agency (can invest in recycling infrastructure) but are currently disadvantaged by cost structures. Directionality overrides are not needed; the derivation chain captures the structural relationships accurately.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint is genuinely tangled: it combines real coordination (standardized supply, manufacturing efficiency, renewable energy access) with asymmetric extraction (labor suppression, environmental externality, supply dependency). The constraint cannot be decomposed into pure coordination (Rope) because extraction and suppression are structural features, not policy choices. The mineral standardization does enable manufacturing efficiency\u2014that is real. But the supply chain's architecture channels rents toward beneficiaries while suppressing victim agency\u2014that is also real and structural. The six-perspective analysis resolves the ambiguity: beneficiaries classify as Rope (they experience coordination), victims classify as Snare (they experience pure extraction), and moderate actors classify as Tangled Rope (they experience both). The analytical observer at civilizational scale risks misclassifying the constraint as natural (Mountain: minerals are rare, extraction takes labor, cost allocation reflects scarcity) or as inevitable (Scaffold: green energy transition requires some extraction cost). The structural data contradicts these naturalizations: the extraction magnitude and distribution are contingent on supply chain architecture, governance enforcement, and technology choices, not immutable. The constraint is changeable through recycled supply development, labor standard enforcement, and cost-internalization policy. The piton classification of the certification system reveals the mandatrophy's resolution mechanism: institutions create the appearance of managed extraction to sustain the constraint by suppressing pressure for structural change."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "battery_lithium_extraction",
+      "semiconductor_supply_chain",
+      "cobalt_mining_labor_standards"
+    ],
+    "dual_formulation_note": "The renewable energy supply chain extraction represents a constraint family with three decomposed stories: (1) rare earth mineral extraction (rare earth supply chain, \u03b5\u22480.58), (2) lithium and cobalt battery supply (battery mining, \u03b5\u22480.65), and (3) semiconductor material extraction (silicon and rare earth electronics supply, \u03b5\u22480.52). Each story has distinct \u03b5 values reflecting different extraction mechanisms and victim populations. This story focuses on rare earth supply chain; linked stories address lithium/cobalt and semiconductor components. All three are downstream of the renewable energy deployment constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

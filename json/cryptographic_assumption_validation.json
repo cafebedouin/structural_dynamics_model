@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "cryptographic_assumption_validation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "crypto"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Cryptographic Assumption Validation as Asymmetric Extraction",
+    "topic_domain": "cryptography/security/mathematics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "established_cryptography_community",
+      "government_security_agencies"
+    ],
+    "victims": [
+      "cryptographic_system_users",
+      "emerging_researchers",
+      "alternative_approaches"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dependent User Population",
+      "comment": "PERSPECTIVE 1: DEPENDENT USERS (SNARE) \u2014 Cryptographic systems users are trapped by dependency on validations they cannot independently verify. Must accept RSA, ECC, or SHA-256 security claims without recourse. Cannot audit the mathematical proofs or independent verification infrastructure. Maximum suppression: no alternative implementations credible if they contradict established consensus. Full extraction experienced."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Emerging Researcher",
+      "comment": "PERSPECTIVE 2: EMERGING RESEARCHER (SNARE) \u2014 Career barriers prevent fundamental questioning of established assumptions. Publishing negative results ('RSA hardness unproven') triggers rejection or reputational damage. Can exit only at high cost: abandoning specialization, relocating research program, enduring skepticism. High suppression from institutional gatekeeping and peer review bias."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Established Cryptography Community",
+      "comment": "PERSPECTIVE 3: ESTABLISHED CRYPTOGRAPHY COMMUNITY (TANGLED ROPE) \u2014 Genuine coordination function: shared RSA/ECC standards enable interoperable secure communication. But also benefits from assumption monopoly \u2014 alternative hardness claims are suppressed; consensus validation process concentrates authority. Net beneficiary with genuine coordination overlay. Experiences extraction running toward this agent."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Government Security Agencies",
+      "comment": "PERSPECTIVE 4: GOVERNMENT SECURITY AGENCIES (ROPE) \u2014 Pure coordination function from this view: centralized validation authority (NIST, NSA) enables policy enforcement and standardization. Agencies benefit from consensus authority but also provide genuine public good of validated standards. Exit costs are low (they control the validation process). Theater ratio decreases from this perspective \u2014 regulatory function is genuine."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Validation Infrastructure",
+      "comment": "PERSPECTIVE 5: VALIDATION INFRASTRUCTURE (PITON) \u2014 Peer review and mathematical scrutiny processes persist through institutional inertia despite degraded function. Theater ratio (0.65) reflects: most cryptographic papers assume hardness without proving it; review committees rubber-stamp consensus claims; alternative hardness models face rejection not on mathematical grounds but on novelty/disruption grounds. The validation ritual maintains its form through prestige and gatekeeping, not through actual verification capability."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Post-Quantum Cryptography Coalition",
+      "comment": "PERSPECTIVE 6: POST-QUANTUM CRYPTOGRAPHY COALITION (TANGLED ROPE) \u2014 Organized agents (NIST PQC standardization, lattice-based researchers, quantum computing labs) are building alternative assumption frameworks. Coordinating around CRYSTALS, Kyber, Dilithium represents genuine coordination function \u2014 preparing infrastructure for quantum threat. But this is constrained by RSA/ECC assumption lock-in and resource asymmetry. The coalition experiences both coordination benefits and extraction from the incumbent validation monopoly."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Mathematical Naturalization)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / MATHEMATICAL NATURALIZATION (MOUNTAIN) \u2014 From a universal mathematical standpoint, cryptographic security ultimately rests on unproven assumptions: P\u2260NP, RSA hardness, discrete log hardness. These are conjectured facts about computation that cannot be definitively validated from within mathematics. The validation bottleneck appears as a natural limit \u2014 we cannot prove these assumptions true. However, the structural data contradicts the mountain classification: the gatekeeping behavior, career barriers, and consensus enforcement are contingent institutional arrangements, not mathematical necessities. This perspective risks false summit classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "hardness_conjecture_epistemology",
+      "question": "Is the inability to prove RSA/ECC hardness a mathematical limit (natural law) or an artifact of current proof techniques and institutional gatekeeping against alternative approaches?",
+      "resolution_mechanism": "Historical analysis of proof technique progress; comparison with other conjectured-hard problems that were later resolved; sociological analysis of barriers to alternative hardness frameworks",
+      "impact": "If mathematical limit: mountain classification holds (unproven assumptions are inherent to cryptography). If institutional artifact: snare/tangled_rope classification holds (validation lock-in prevents exploration of alternative proofs).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether hardness unprovability is a mathematical or institutional phenomenon"
+    },
+    {
+      "id": "assumption_validation_alternatives",
+      "question": "Could cryptographic assumptions be validated through mechanisms other than peer consensus (formal verification, adversarial testing, market mechanisms, distributed cryptanalysis)?",
+      "resolution_mechanism": "Implementation experiments: can formal verification catch assumption violations? Do adversarial cryptanalysis competitions out-perform peer review? Can distributed proof-of-work style validation replace peer consensus?",
+      "impact": "If viable alternatives exist: suppression gate drops significantly, classification shifts toward rope. If consensus is optimal: suppression remains high, current classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative validation mechanisms could replace peer consensus"
+    },
+    {
+      "id": "post_quantum_transition_bottleneck",
+      "question": "Does the post-quantum cryptography migration (RSA\u2192lattice-based) represent genuine scientific progress or consensus replacement under threat of quantum computers?",
+      "resolution_mechanism": "Comparative hardness analysis: are lattice assumptions actually more robust than RSA, or better defended? Historical comparison with previous cryptographic migrations (DES\u2192AES). Analysis of peer review patterns for PQC proposals vs novel RSA variants.",
+      "impact": "If genuine progress: validates assumption validation process (scaffolding new standard). If consensus replacement: reveals assumption validation as consensus-driven rather than truth-driven, strengthens snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether PQC migration is progress or consensus replacement"
+    },
+    {
+      "id": "adversarial_discovery_suppression",
+      "question": "How many potential attacks on RSA/ECC exist but remain unpublished due to responsible disclosure norms, NSA classification, or peer review rejection of 'disruptive' findings?",
+      "resolution_mechanism": "FOIA requests for classified cryptanalysis; interviews with security researchers on unpublished findings; analysis of rejection patterns in peer review for papers claiming RSA/ECC weaknesses; study of responsible disclosure pipeline inefficiencies",
+      "impact": "If significant suppression: assumption validation is actively hiding contradictory evidence (strengthens snare). If minimal: validation process is working as intended (rope).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Volume of suppressed adversarial discoveries against standard assumptions"
+    },
+    {
+      "id": "market_validation_feasibility",
+      "question": "Could cryptographic assumption validation be effectively replaced by market mechanisms (e.g., cryptocurrency security bonds, insurance products, algorithmic trading on cryptanalysis risk)?",
+      "resolution_mechanism": "Design and pilot market-based validation mechanisms; compare market-derived confidence intervals with peer consensus confidence; measure correlation between market risk assessments and actual attacks",
+      "impact": "If feasible: alternative to consensus emerges, suppression can decrease, classification shifts. If infeasible: consensus monopoly persists, extraction mechanism remains stable.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Feasibility of market-based cryptographic assumption validation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Cryptographic assumption validation operates through peer consensus and institutional gatekeeping rather than direct mathematical proof. No one has proven that RSA factorization is hard, that discrete logarithm is hard, or that elliptic curve discrete log is hard \u2014 these are conjectures treated as mathematical facts. The constraint emerges when this validation process becomes extractive: the established cryptography community controls which assumptions are acceptable, which hardness claims are publishable, and which researchers have credibility to propose alternatives. Users are trapped by dependency on these unproven assumptions with no mechanism for independent verification. Emerging researchers face career barriers if they question consensus. Post-quantum migration is coordinated but constrained by incumbent assumption lock-in. The validation infrastructure shows increasing theater (peer review processes become more performative as complexity outpaces reviewer capacity). This creates a tangled rope structure: genuine coordination function (standardized cryptography enables secure communication) combined with asymmetric extraction (control over assumption validation concentrates with institutional gatekeepers, suppressing alternatives).",
+    "key_agents": [
+      "Cryptographic System Users: Primary victims (powerless/trapped) \u2014 must accept unproven assumptions without independent verification",
+      "Emerging Researchers: Secondary victims (moderate/constrained) \u2014 face publication barriers and reputation damage for questioning established assumptions",
+      "Established Cryptography Community: Primary beneficiaries (institutional/arbitrage) \u2014 controls validation authority and consensus formation",
+      "Government Security Agencies (NIST, NSA): Institutional gatekeepers (institutional/arbitrage) \u2014 regulatory validation authority, coordinate standards",
+      "Post-Quantum Cryptography Coalition: Organized agents (organized/constrained) \u2014 building alternative frameworks but constrained by incumbent lock-in",
+      "Validation Infrastructure (Peer Review, Conferences): Performative system (analytical/analytical) \u2014 theater ratio increasing as complexity outpaces verification capacity",
+      "Alternative Hardness Researchers: Suppressed agents (analytical/trapped) \u2014 mathematical challenges to standard assumptions face systematic rejection"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts from dependent users (cannot exit reliance on unproven assumptions) and emerging researchers (career barriers to dissent). But extraction is not total (0.72+) because: (1) legitimate standardization benefits exist, (2) some alternative research does proceed, (3) cryptanalysis community has some organizational capacity. Increased from 0.38 (period 0) to 0.52 (period 30) as the field matured and consensus hardened. Suppression (0.68): High. Multiple suppression mechanisms operate: peer review gatekeeping against 'disruptive' RSA/ECC critiques; publication bias against negative results; responsible disclosure norms that keep attacks private; career risk for researchers questioning consensus; institutional authority concentration (NIST/NSA control standardization). Theater ratio (0.65): Moderate-high. Peer review for cryptographic papers assumes hardness without proving it; review committees validate novelty/rigor but cannot validate security claims independently; mathematical rigor becomes theater when proofs rest on unproven assumptions. Increased from 0.42 to 0.65 as the field standardized around RSA/ECC and alternatives became harder to propose. Peak theater would be higher (0.72+) but post-quantum migration is creating alternative validation pathways (market signals, computational benchmarking, NIST formal process) that increase actual verification content.",
+    "perspectival_gap": "This constraint generates three distinct perspectives despite the same base properties. Users and emerging researchers both experience high extraction but from different angles: users are trapped by technical dependency; researchers are trapped by institutional gatekeeping. The established community and government agencies experience coordination (Rope/Tangled Rope) \u2014 standardization is genuinely valuable. Post-quantum researchers experience constrained coordination (Tangled Rope) \u2014 building alternative assumptions while embedded in incumbent infrastructure. The validation infrastructure (peer review) sees itself as degraded (Piton) \u2014 the ritual persists but verification capacity has diminished. The analytical observer risks naturalizing contingent lock-in as mathematical necessity (false summit Mountain). The perspectival gap reveals: institutional actors with arbitrage options see coordination, trapped agents see extraction, organized alternatives see both simultaneously.",
+    "directionality_logic": "Directionality derives from structural position relative to assumption validation control. Institutional gatekeepers (NIST, established community) have arbitrage exit options \u2014 they can change standards, define new assumptions, control consensus. Derivation: d \u2248 0.05 \u2192 f(d) \u2248 -0.12 \u2192 negative \u03c7 (beneficiary experienced extraction). Users are powerless and trapped \u2014 no exit from reliance on assumptions, no alternative frameworks credible without consensus approval. Derivation: d \u2248 0.95 \u2192 f(d) \u2248 1.42 \u2192 high \u03c7 (maximum victim experienced extraction). Emerging researchers are moderate power and constrained \u2014 they could exit by abandoning cryptography specialization or accepting career damage. Derivation: d \u2248 0.70 \u2192 f(d) \u2248 1.00 \u2192 moderate \u03c7. Post-quantum coalition is organized and constrained \u2014 they have collective capacity to build alternatives but face resource and credibility barriers from incumbent lock-in. Derivation: d \u2248 0.55 \u2192 f(d) \u2248 0.75 \u2192 moderate \u03c7. The beneficiary/victim declarations anchor the directionality chain: beneficiaries are established community and government agencies; victims are users, emerging researchers, and suppressed alternatives.",
+    "mandatrophy_analysis": "RESOLVED MANDATROPHY: This constraint is clearly tangled rope (not pure extraction) because: (1) genuine coordination function exists (standardized cryptography enables secure communication and interoperability); (2) institutional enforcement is active (peer review, standardization bodies); (3) both beneficiaries and victims are declared. The mandatrophy trap \u2014 distinguishing extraction disguised as coordination from genuine coordination with asymmetric benefits \u2014 is resolved by acknowledging that both are true: the constraint IS coordination AND it extracts asymmetrically. Users benefit from standardization (interoperable secure communication) while bearing the cost of dependency on unproven assumptions. Researchers benefit from standardization (validated foundations for publication and practice) while bearing career barriers if they question consensus. The established community benefits from authority concentration. This is not a false coordination \u2014 standardization is genuinely valuable. But it is hybrid: coordination + extraction. The extraction component is: (1) suppression of alternative hardness frameworks, (2) user dependency on unproven assumptions with no verification mechanism, (3) career barriers for dissenting researchers, (4) institutional gatekeeping. The theater ratio (0.65) indicates that validation processes are increasingly performative \u2014 review rituals assume hardness rather than validating it. Post-quantum migration creates an exit pathway (Scaffold perspective) as market forces and quantum threat create alternative validation credibility. If PQC adoption fully matures, the constraint could degrade to Piton (incumbent RSA/ECC validation becomes performative theater). Mandatrophy resolved: tangled rope is correct because coordination and extraction are genuinely intertwined, not mistaken."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "quantum_threat_timeline",
+      "cryptanalysis_publication_bias",
+      "post_quantum_standardization_lock_in"
+    ],
+    "dual_formulation_note": "Cryptographic assumption validation decomposes into three related constraints: (1) the general validation bottleneck (this story, \u03b5=0.52), (2) the quantum threat asymmetry (whether quantum computing timeline creates artificial urgency that suppresses alternative approaches), (3) standardization lock-in preventing PQC transition. Each has distinct \u03b5 and distinct extraction mechanisms. This story addresses the assumption validation constraint; downstream stories address threat modeling and migration dynamics."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

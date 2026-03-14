@@ -1,0 +1,205 @@
+{
+  "header": {
+    "constraint_id": "large_language_model_training_data_provenance",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "llm_prov"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "LLM Training Data Provenance and Attribution Asymmetry",
+    "topic_domain": "artificial_intelligence/intellectual_property",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "model_developers",
+      "commercial_llm_providers"
+    ],
+    "victims": [
+      "original_content_creators",
+      "training_data_epistemic_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Original Content Creator",
+      "comment": "PERSPECTIVE 1: ORIGINAL CONTENT CREATOR (SNARE) \u2014 Writers, artists, researchers whose work was used without consent or attribution cannot exit. Their content has been incorporated into weights of systems generating billions in value. No recourse, no negotiation power, no alternative to having their work extracted. The extraction is maximal from this position: career harm through plagiarism, attribution theft, market displacement, and zero compensation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Independent AI Researcher",
+      "comment": "PERSPECTIVE 2: INDEPENDENT AI RESEARCHER (TANGLED ROPE) \u2014 Benefits from access to powerful models and pretraining infrastructure (coordination). But also trapped by the necessity of using these models for career advancement while simultaneously being unable to access or verify training data composition. Constrained by the dominance of closed training regimes. Extraction is high but not maximal \u2014 they have some agency through academic independence and can theoretically train alternative models, but the resource and opportunity costs are severe."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Model Developer / Commercial Provider",
+      "comment": "PERSPECTIVE 3: MODEL DEVELOPER / COMMERCIAL PROVIDER (ROPE) \u2014 Experiences the constraint as pure coordination: standardizing on web-scale training data enables reproducible scaling laws, benchmark comparison, and ecosystem development. From this position, the constraint solves a collective action problem (who decides what training data is acceptable?) while generating tremendous value capture. Net beneficiary \u2014 the extraction runs toward this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Body / Policymaker",
+      "comment": "PERSPECTIVE 4: REGULATORY BODY / POLICYMAKER (TANGLED ROPE) \u2014 Organized agents (copyright offices, data protection authorities, legislatures) have agency to regulate but face genuine coordination challenges: training data requirements are global, enforcement is expensive, and regulatory burden could concentrate AI development in countries with weakest enforcement. Coordinating verification would solve a real problem. But the constraint also extracts: regulators are captured by the economic importance of model developers, creating enforcement theater (token compliance, hollow transparency reports) without structural change."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Copyright Regime",
+      "comment": "PERSPECTIVE 5: COPYRIGHT REGIME (PITON) \u2014 Traditional copyright enforcement mechanisms (takedown notices, licensing agreements, individual rights holders) are performative theater with respect to LLM training. The regime persists through institutional inertia and legal tradition, but its actual function is degraded: copying billions of works at scale with computational aggregation defeats the individualized attribution model copyright assumes. The regime cannot verify compliance, cannot track uses, cannot enforce remedies. Yet it continues as ritual compliance, not actual protection."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Sees both genuine coordination (the need for standardized training data to enable scaling research) and genuine extraction (asymmetric value capture, suppressed attribution, concentrated benefits). The constraint combines both functions in an inseparable way \u2014 you cannot have reproducible LLM development without large-scale data aggregation, and you cannot do that at scale while maintaining individual attribution. This is the diagnostic perspective for tangled rope classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "consent_aggregation_impossibility",
+      "question": "Is individual consent for training data aggregation at billion-scale technically feasible, or is it a coordination problem inherent to large-scale machine learning?",
+      "resolution_mechanism": "Design analysis of consent frameworks (federated data governance, opt-in registries, granular licensing); cost-benefit analysis of consent infrastructure vs training efficiency; comparison to biological precedents (tissue banks, longitudinal studies) that solved similar problems",
+      "impact": "If feasible: the current suppression of consent is pure policy choice (Snare strengthens). If infeasible: the constraint contains genuine coordination difficulty (Tangled Rope is correct). If partially feasible: hybrid models exist that current regimes are not deploying (reveals extraction hidden behind false technical necessity).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether consent aggregation at scale is technically feasible"
+    },
+    {
+      "id": "attribution_reconstruction_cost",
+      "question": "Can the contribution of specific training documents to LLM outputs be computationally reconstructed after training, or is training irreversibly aggregates data into weights?",
+      "resolution_mechanism": "Empirical testing of attribution reconstruction methods (influence functions, mechanistic interpretation, attention probing); cost analysis of reconstruction vs training efficiency; comparison to other large-scale systems that track provenance after aggregation",
+      "impact": "If reconstructible: post-hoc attribution is possible, shifting extraction mechanism from erasure to delayed compensation (reduces suppression, clarifies tangled rope structure). If irreversible: attribution loss is inherent, and transparency claims are theater (increases suppression, strengthens snare view).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether training data attribution can be reconstructed post-hoc"
+    },
+    {
+      "id": "value_realization_timeline",
+      "question": "What is the actual timeline from model release to market value realization, and does it create a window for just-in-time data attribution and compensation?",
+      "resolution_mechanism": "Empirical tracking of model release \u2192 commercialization \u2192 revenue realization for major LLM systems; analysis of whether interim stages (beta period, pretraining sharing, initial deployment) provide enforcement points for retroactive consent or compensation",
+      "impact": "If timeline is long (>2 years): compensation mechanisms can reach creators before major value extraction (softens snare). If immediate (<6 months): value extraction happens before attribution is possible (hardens snare classification).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Timeline from model release to market value realization"
+    },
+    {
+      "id": "open_vs_closed_training_parity",
+      "question": "Do open-source models trained on documented, consensual data (books, academic papers, licensed datasets) reach performance parity with closed models trained on web-scale undisclosed data, or does the web-scale advantage remain insurmountable?",
+      "resolution_mechanism": "Longitudinal performance comparison: benchmark scores (MMLU, MATH, coding tasks) for open-source vs closed models controlling for compute budget; analysis of performance trajectories and convergence",
+      "impact": "If parity achievable: the suppression argument ('web scale is necessary') is false, and the constraint is pure extraction theater (Snare strengthens). If web-scale necessary: genuine coordination challenge exists (Tangled Rope holds). If parity emerging: scaffold sunset is real (transitory nature of the constraint becomes clear).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Performance parity of open-source vs closed LLMs"
+    },
+    {
+      "id": "multi_national_regulatory_capture",
+      "question": "Can the EU's AI Act, China's algorithm governance, and emerging US regulation create enforceable training data transparency standards, or does regulatory arbitrage allow concentration in jurisdictions with weakest enforcement?",
+      "resolution_mechanism": "Empirical tracking of model developer locations; analysis of investment and development location choices post-regulation; measurement of regulatory capture intensity (lobbying spend, advisory board composition) in each jurisdiction",
+      "impact": "If enforceable global standard achieved: regulatory bottleneck becomes real coordination (Tangled Rope softens toward Scaffold). If regulatory arbitrage prevents coordination: the constraint persists as extractive with global scope (Snare perspective strengthens).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of multi-national training data transparency enforcement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Large language models are trained on billions of documents sourced from the internet, academic repositories, books, and other public and private sources. The constraint governing this data pipeline creates a fundamental asymmetry: model developers extract and concentrate immense value from aggregated content, while original creators receive no attribution, compensation, or even disclosure of their contribution. The constraint exhibits tangled rope structure because it combines genuine coordination (large-scale reproducible ML requires standardized training data) with genuine extraction (the asymmetric value capture, suppressed attribution, and concentrated benefits). The theater ratio (0.65) reflects the performative compliance theater: model cards that claim diversity without documenting sources, ethics statements without verifying consent, transparency reports that obscure training composition. The extractiveness (0.58) reflects moderate but significant value asymmetry: creators are displaced in career value and market opportunity, while developers capture the value of billions of human-created documents in proprietary weights. The suppression (0.68) reflects high structural barriers to exit or negotiation: creators cannot prevent use, cannot track use, cannot condition use, and have weak legal standing in many jurisdictions.",
+    "key_agents": [
+      "Original Content Creators: Primary victims (powerless/trapped) \u2014 writers, artists, researchers, code authors whose work was used without consent; suffer career harm, attribution theft, and market displacement",
+      "Model Developers / Commercial LLM Providers: Primary beneficiaries (institutional/arbitrage) \u2014 capture immense value from aggregated content; benefit from standardized training data enabling reproducible scaling",
+      "Independent AI Researchers: Secondary victims (moderate/constrained) \u2014 benefit from access to trained models but constrained by closed training regimes, unable to access or audit training data",
+      "Regulatory Bodies / Policymakers: Organized actors (organized/constrained) \u2014 have potential enforcement power but captured by economic importance of model developers; face genuine multi-jurisdictional coordination challenges",
+      "Copyright Regime / IP Enforcement: Institutional actor (institutional/arbitrage) \u2014 persists through legal inertia but functionally degraded; cannot enforce individual attribution or licensing at scale (piton perspective)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees inseparable combination of coordination need and extraction mechanism; tangled rope classification is diagnostic"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, reflecting asymmetric value capture. Creators are displaced from potential licensing revenue, market access, and attribution benefits. Model developers capture the value of billions of documents in proprietary systems generating billions in market value. However, the extraction is not maximal (0.85+) because some creators benefit indirectly (increased reach, training signal for their own work, participation in model improvement), and because attribution mechanisms could theoretically be retrofitted. The trajectory over time (0.32\u21920.58) shows increasing extractiveness as the market matures and suppression becomes more entrenched. Suppression (0.68): High. Multiple barriers prevent creators from negotiating, opting out, or receiving compensation: (1) Technical: training data is aggregated irreversibly into weights, making post-hoc identification difficult. (2) Legal: copyright enforcement is weak for computational uses in most jurisdictions; fair use covers most training scenarios. (3) Economic: creators lack bargaining power against dominant model providers. (4) Epistemic: creators often don't know their work was used. Theater ratio (0.65): Elevated. Substantial performative compliance includes model cards (claim diversity without documenting sources), transparency reports (publish aggregate statistics while obscuring composition), ethics statements (appeal to values without enforcing consent). The theater increased over the interval as regulatory pressure mounted and developers adopted compliance theater to deflect enforcement. Claimed type (Tangled Rope): Required because the constraint combines both coordination and extraction inseparably. You cannot do large-scale LLM development at current efficiency without aggregating diverse training data. That aggregation inherently obscures individual contribution. The constraint is genuinely functional (enables reproducible scaling research) and genuinely extractive (concentrates value, suppresses attribution).",
+    "directionality_logic": "Directionality (d) is derived from each agent's structural position. Original creators are trapped (no exit options) and victims of extraction, producing high d (\u22480.95) and maximum experienced extractiveness. Model developers are beneficiaries with arbitrage options (they can choose training data sources, licensing models, jurisdictions), producing low d (\u22480.05) and negative or minimal experienced extractiveness. Independent researchers are moderate-power constrained agents who are both beneficiaries (model access) and victims (limited access to training data), producing mid d (\u22480.60) and moderate experienced extractiveness. Regulatory bodies are organized actors with constrained exit (cannot abandon regulation of AI) but real agency, producing mid-high d (\u22480.55). The copyright regime is institutional with arbitrage options (can adapt enforcement mechanisms) but functionally degraded, producing moderate d (\u22480.50). The analytical observer sees the full structural picture, producing d of approximately 0.72 (observer seeing extraction from multiple victim perspectives). The sigmoid f(d) produces experienced extractiveness \u03c7 for each perspective, driving classification differences.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. The original creator sees pure extraction (Snare): their work has been taken without consent or compensation, with no possible exit. The model developer sees pure coordination (Rope): standardized training data solves the scaling problem and enables reproducible research. The independent researcher sees hybrid constraint (Tangled Rope): they benefit from model access and scaling research but are blocked from accessing training data sources. The regulator sees a coordination problem with capture (Tangled Rope): enforcement is genuinely hard at global scale, but also sees that dominant providers are suppressing transparency. The copyright regime sees its own degradation (Piton): traditional enforcement mechanisms (individual licensing, takedown notices) cannot function at scale; the ritual persists but the function is lost. The analytical observer (civilizational scope) sees the tangled rope clearly: this constraint cannot be solved by improving attribution mechanisms alone, because the coordination requirement (large-scale data) and the extraction requirement (concentrated benefits) are structurally inseparable at current technology and business models. The gap reveals how the same constraint can appear as pure extraction, pure coordination, hybrid, and degraded theater depending on structural position.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by recognizing that the coordination and extraction functions are genuinely entangled. The question 'Is this coordination or extraction?' has no single answer because both are true. The coordination function (standardizing on web-scale training data) is real and valuable \u2014 it enables reproducible scaling research that would be impossible with balkanized training datasets. The extraction function (concentrating value, suppressing attribution) is also real and severe \u2014 it displaces creators and concentrates market power. The mandatrophy is resolved by accepting both as irreducible features of the current implementation. The resolution path is not to classify correctly (it's both) but to identify where the separation could occur. Technically, a training regime with documented, licensed, or consensual data could maintain the coordination benefit while reducing extraction (Open vs Closed parity omega tests this). Legally, a rights-clearing framework could verify consent before aggregation (Consent Aggregation omega tests this). Economically, a value-sharing mechanism could compensate creators post-hoc (Value Realization Timeline omega tests this). The tangled rope classification is diagnostic: it tells you that the current constraint is not a natural law (not a mountain) and not pure coordination (not a rope), but a specific institutional arrangement that could be restructured. The extractiveness (0.58) and suppression (0.68) are high enough to warrant policy intervention; the theater (0.65) is high enough to flag compliance mechanisms as potentially hollow; the coordination function is genuine enough that prohibition is not optimal. Restructuring is the indicated path."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "copyright_enforcement_digital_scale",
+      "ai_model_bias_provenance",
+      "creator_compensation_labor_extraction"
+    ],
+    "dual_formulation_note": "LLM training data provenance decomposes into three related constraints: (1) Copyright Enforcement at Digital Scale (\u03b5\u22480.35, Piton) \u2014 traditional IP enforcement theater that cannot function at training data volumes. (2) AI Model Bias Originating in Training Data (\u03b5\u22480.42, Tangled Rope) \u2014 coordination benefit (understanding bias sources) entangled with extraction (using bias knowledge to refine suppression). (3) Creator Compensation as Labor Extraction (\u03b5\u22480.62, Snare) \u2014 pure extraction of creative labor value with suppressed compensation. The current story models the aggregate constraint at the provider/creator interface. Decomposition enables finer analysis of specific mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "copyright_enforcement_digital_scale"
+    ]
+  }
+}

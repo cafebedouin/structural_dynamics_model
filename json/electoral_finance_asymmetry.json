@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "electoral_finance_asymmetry",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "elec_fin"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Electoral Finance Asymmetry and Campaign Extraction",
+    "topic_domain": "political_economy/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "wealthy_donors",
+      "incumbent_politicians",
+      "corporate_interests"
+    ],
+    "victims": [
+      "nonwealthy_candidates",
+      "electoral_competitiveness",
+      "democratic_participation"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Nonwealthy Candidate",
+      "comment": "PERSPECTIVE 1: NONWEALTHY CANDIDATE (SNARE) \u2014 Faces near-total exclusion from competitive races without access to donor networks or personal wealth. Cannot exit electoral system without abandoning political voice. Suppression is structural: campaign financing requirements create material barriers to candidacy. Maximum experienced extraction \u2014 the constraint extracts political opportunity from this agent with minimal coordination function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Grassroots Movement",
+      "comment": "PERSPECTIVE 2: GRASSROOTS MOVEMENT (TANGLED ROPE) \u2014 Experiences both genuine coordination function (campaign finance systems enable message amplification, organization at scale) and significant extraction (cost asymmetries favor wealthy messages, small-donor fatigue). Exit is costly but possible: movements can build outside electoral channels (direct action, mutual aid, community organizing) but face barriers of legitimacy and resource allocation. Mixed experience reflects real coordination benefit alongside real asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Incumbent Politician",
+      "comment": "PERSPECTIVE 3: INCUMBENT POLITICIAN (ROPE) \u2014 Experiences campaign finance as pure coordination: funds enable message delivery, staff recruitment, voter contact infrastructure. Incumbent advantage (fundraising incumbent vs challenger asymmetry) is viewed as normal political reality. Can arbitrage between electoral and post-electoral leverage (corporate board positions, lobbying). Net beneficiary \u2014 extraction flows toward this agent, but they perceive the mechanism as legitimate coordination of electoral competition."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Campaign Finance Reform Movement",
+      "comment": "PERSPECTIVE 4: CAMPAIGN FINANCE REFORM MOVEMENT (SCAFFOLD) \u2014 Organized agents (Common Cause, Fix Our Senate, public financing advocates) perceive the finance asymmetry as a temporary coordination failure with a clear sunset: publicly funded elections, contribution limits, disclosure requirements, and small-donor matching systems are structured as temporary experiments that would replace the asymmetric extraction mechanism. Low experienced extraction because the movement has agency and clear exit pathways (legislative reform, constitutional amendment, state-level experiments). Constraint has built-in sunset logic: if public financing reaches critical adoption, private donor asymmetry loses force."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Campaign Finance Enforcement System",
+      "comment": "PERSPECTIVE 5: CAMPAIGN FINANCE ENFORCEMENT SYSTEM (PITON) \u2014 Federal Election Commission and state finance disclosure systems are substantially degraded: enforcement is underfunded, penalties are nominal relative to benefit of violation, and dark money structures (501c4 organizations, super PACs, shell donation chains) render formal regulations performative. The system persists through institutional inertia and the narrative that 'money is speech' (constitutional protection) rather than because enforcement actually constrains extraction. Theater ratio reflects that regulatory compliance is largely theatrical \u2014 agents calculate violation benefit against weak penalties rather than viewing rules as binding constraints."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, campaign finance asymmetry appears as an immutable property of democratic systems: wealth always correlates with political influence, information asymmetries always advantage the organized, and coordination costs always scale with electorate size. This perspective sees the constraint as reflecting fundamental laws of political economy rather than contingent institutional arrangements. However, the structural data contradicts mountain classification \u2014 empirical variation across democracies in finance structures, effectiveness of public financing systems, and donor diversity suggests the asymmetry is contingent, not universal."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "donor_influence_causality",
+      "question": "Does campaign finance asymmetry CAUSE political responsiveness asymmetry, or does it merely correlate with pre-existing wealth-based political interest?",
+      "resolution_mechanism": "Natural experiments from campaign finance reform; comparison of policy responsiveness before/after contribution limits; analysis of politician behavior when facing donors vs non-donors after controlling for constituent preferences",
+      "impact": "If causality high: constraint is extractive (donors extract policy responsiveness). If causality low: constraint is primarily informational (donors amplify voices they already agree with). Classification shifts from Snare to Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether finance asymmetry causes or merely correlates with policy responsiveness asymmetry"
+    },
+    {
+      "id": "small_donor_scalability",
+      "question": "Can small-donor fundraising (used successfully in some campaigns) scale to replace large-donor dependence system-wide, or does it remain a niche strategy dependent on candidate charisma and pre-existing visibility?",
+      "resolution_mechanism": "Longitudinal analysis of small-donor campaign success rates across candidate types (charismatic vs organizational, celebrity vs local); cost-per-dollar comparison of small-donor vs large-donor fundraising at scale; replication studies of successful small-donor models across different electoral contexts",
+      "impact": "If scalable: scaffold perspective is accurate \u2014 alternative pathways are structurally viable. If niche: scaffold is aspirational rather than structural, and the constraint persists as tangled rope or snare from more perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether small-donor models can scale to replace large-donor dependence"
+    },
+    {
+      "id": "public_financing_effectiveness",
+      "question": "Do public financing systems (Maine, Arizona, New York models) actually equalize candidate competitiveness and reduce donor influence, or do they shift extraction mechanisms rather than eliminate them (bundled grassroots organizing substitutes for bundled donations)?",
+      "resolution_mechanism": "Comparison of candidate competitiveness metrics (win margin distributions, challenger funding ratios) before/after public financing adoption; analysis of whether non-monetary barriers to entry (name recognition, endorsement networks, volunteer mobilization) replace monetary barriers; tracking of post-campaign career leveraging by publicly-financed winners",
+      "impact": "If effective: public financing removes extraction mechanism, and constraint disappears at state level. If mechanism-shifting: constraint persists with different extraction vector, suggesting deeper structural inequality not addressable through finance rules alone.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether public financing systems actually reduce donor influence or shift extraction mechanisms"
+    },
+    {
+      "id": "suppression_internalization",
+      "question": "Is the suppression in the nonwealthy candidate perspective primarily structural (material barriers to fundraising) or internalized (candidates believe they cannot compete and self-select out before facing actual barriers)?",
+      "resolution_mechanism": "Analysis of candidate entry patterns: do nonwealthy candidates avoid races before or after attempting fundraising? Survey data on candidate perceptions of fundraising barriers vs actual fundraising success rates. Comparison of entry rates when fundraising barriers are reduced (public financing, contribution limits) to test whether perception or material barriers drive exclusion.",
+      "impact": "If primarily structural: constraint classification remains snare with high actual cost. If primarily internalized: constraint operates through cognitive capture, and identity_locked exit option may be more accurate; classification may shift toward rope from nonwealthy candidate perspective if psychological barriers are removed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression in candidate exclusion is structural or internalized"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Electoral finance asymmetry creates a structural constraint on democratic competition: wealth and access to donor networks determine electoral viability in ways that correlate weakly with constituent preference or policy competence. The constraint generates six distinct classifications depending on observer position, each capturing real structural facts about how campaign finance asymmetry operates. Nonwealthy candidates experience it as a snare (trapped exclusion), grassroots movements experience it as tangled rope (coordination + extraction), incumbents experience it as rope (pure coordination), reform movements experience it as scaffold (temporary with sunset), enforcement systems as piton (degraded ritual), and civilizational analysis risks naturalizing it as mountain (immutable law). The constraint's theater ratio (0.55) reflects that campaign finance disclosure and regulation are moderately performative: formal compliance is maintained while dark money, bundling, and post-election quid pro quo operate around regulatory edges. The extractiveness has risen from 0.35 to 0.58 over the measurement interval as campaign costs have increased and small-donor scalability remains unproven.",
+    "key_agents": [
+      "Nonwealthy Candidates: Primary victim (powerless/trapped) \u2014 face structural exclusion from competitive races; no exit option without abandoning political voice",
+      "Wealthy Donors and Corporate Interests: Primary beneficiaries (institutional/arbitrage) \u2014 gain asymmetric political influence through contribution leverage and post-election access",
+      "Incumbent Politicians: Secondary beneficiary (institutional/arbitrage) \u2014 fundraising advantage compounds reelection advantage; can arbitrage to lobbying or corporate board positions",
+      "Grassroots Movements: Secondary victim (moderate/constrained) \u2014 benefit from campaign finance infrastructure for message amplification but face cost asymmetries and donor fatigue",
+      "Campaign Finance Reform Movement: Organized agents (organized/constrained) \u2014 perceive finance asymmetry as solvable through public financing, contribution limits, and disclosure; building sunset pathways",
+      "Federal Election Commission and State Finance Systems: Institutional actor (institutional/arbitrage) \u2014 maintain performative enforcement; inadequate resources and weak penalties allow extraction mechanisms to persist",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangement as universal law of politics"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Campaign finance asymmetry extracts political opportunity from nonwealthy candidates and reduces electoral competitiveness, but the extraction is not total \u2014 candidates can still compete through organizational advantage, volunteer mobilization, and small-donor campaigns (though at higher cost and lower success rates). The 0.58 value reflects genuine asymmetric extraction alongside partial coordination function (campaign finance systems do enable message delivery at scale). The upward trend from 0.35 to 0.58 across the measurement interval reflects rising campaign costs, declining small-donor scalability, and increasing donor concentration. Suppression (0.65): High. Structural barriers include candidate personal fundraising requirements, minimum viable campaign budgets that scale with electorate size, donor network access concentrated among wealthy/connected agents, and implicit career gating (working capital in finance/law/consulting provides donor network access). These barriers are material and difficult to circumvent, though not insurmountable. Theater ratio (0.55): Moderate-high. Campaign finance disclosure rules, contribution limits, and FEC reporting are substantively maintained, but dark money structures (501c4 nonprofits, shell donation chains, post-election quid pro quo arrangements) operate in regulatory gaps. Enforcement is underfunded relative to violation benefit, making nominal compliance compatible with actual circumvention. Theater has increased from 0.42 to 0.55 as sophisticated workarounds have proliferated.",
+    "perspectival_gap": "Six distinct constraint types emerge from the same structural data because observers occupy different positions relative to extraction flow. The nonwealthy candidate's perspective (Snare) is the maximal extraction view: trapped agent, high cost, no exit. The incumbent's perspective (Rope) is the minimal extraction view: beneficiary, low cost, pure coordination benefit. The grassroots movement (Tangled Rope) and reform movement (Scaffold) perspectives reveal that extraction mechanisms are not monolithic \u2014 some agents experience genuine coordination function alongside extraction, and some perceive viable exit pathways. The FEC perspective (Piton) reveals that formal regulatory systems can become degraded rituals. The analytical perspective risks (Mountain) naturalizes what is actually a contingent institutional arrangement. The perspectival gap shows that campaign finance asymmetry is not a single unified constraint but a family of structural inequalities operating at different timescales and through different mechanisms.",
+    "directionality_logic": "Each agent's experienced extraction (chi) flows from their structural position: beneficiaries (wealthy donors, incumbents) have low d (full benefit) \u2192 low/negative chi; victims (nonwealthy candidates) have high d (full target) \u2192 high chi; mixed agents (grassroots movements) have moderate d \u2192 moderate chi. The constraint's directionality is asymmetric: it concentrates extraction toward powerless agents with trapped/constrained exit, while benefiting institutional agents with arbitrage options. Wealthy donors can exit electoral funding markets and maintain political influence through other channels (corporate boards, lobbying, think tanks); nonwealthy candidates cannot exit electoral competition without losing political voice. This asymmetry is the core structural fact driving Snare classification from the victim perspective.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that campaign finance asymmetry genuinely exhibits coordination function (infrastructure for message amplification, voter contact, campaign organization) while simultaneously extracting political opportunity asymmetrically. The Tangled Rope classification captures both: beneficiaries (wealthy donors, incumbents) gain political influence through legitimate coordination of electoral competition, while victims (nonwealthy candidates, electoral competitiveness itself) bear extraction costs with limited coordination benefit. The mandatrophy arises from confusing 'campaign finance enables coordination' (true) with 'campaign finance asymmetry is pure coordination with no extraction' (false). The constraint coordinates electoral messaging while extracting differential political power \u2014 the coordination function does not eliminate the extraction, it hides it behind legitimate organizational necessity."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "political_incumbent_advantage",
+      "dark_money_opacity",
+      "corporate_political_capture"
+    ],
+    "dual_formulation_note": "Electoral finance asymmetry is upstream of specific mechanisms of political influence extraction (lobbying effectiveness, corporate campaign leverage, incumbent reelection advantage). The finance asymmetry creates the structural condition enabling downstream constraints; decomposition would separate finance access (this story) from influence conversion (downstream stories with different epsilon values reflecting empirical specificity of influence mechanisms)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

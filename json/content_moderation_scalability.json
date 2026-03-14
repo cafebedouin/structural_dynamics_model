@@ -1,0 +1,212 @@
+{
+  "header": {
+    "constraint_id": "content_moderation_scalability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "modscale"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Content Moderation Scalability Dilemma",
+    "topic_domain": "platform_governance/information_infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "advertisers",
+      "mainstream_users"
+    ],
+    "victims": [
+      "content_creators",
+      "marginalized_communities",
+      "platform_reliability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Content Creator Under Algorithmic Moderation",
+      "comment": "PERSPECTIVE 1: POWERLESS CONTENT CREATOR (SNARE) \u2014 Faces algorithmic moderation with no meaningful appeal mechanism. Career depends on platform distribution; cannot exit without economic consequences. Subject to suppression and inconsistent enforcement with no transparency. Maximum extraction \u2014 bears all costs of platform safety theater while generating revenue captured by platform."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Marginalized Communities and Vulnerable Speech",
+      "comment": "PERSPECTIVE 2: MARGINALIZED COMMUNITIES (SNARE) \u2014 Moderation algorithms exhibit documented bias against marginalized voices; removal rates and false positives are disproportionate. Cannot organize effective appeals (organizational capacity barrier). Language diversity exacerbates algorithmic failure. Trapped by platform dependence but simultaneously suppressed by moderation systems that treat minority expression as higher risk."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Platform Operators and Advertisers",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATORS & ADVERTISERS (ROPE) \u2014 Experience moderation as coordination mechanism: removing extreme content enables advertiser trust and reduces regulatory risk. Scale challenges are real but manageable through distributed enforcement. Primary beneficiaries. Effective extraction flows toward this actor. Arbitrage option exists (can switch to different moderation architectures or alternative platforms without existential risk)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Mainstream Users and Community Safety",
+      "comment": "PERSPECTIVE 4: MAINSTREAM USERS (TANGLED ROPE) \u2014 Benefit from moderation (reduced harassment, cleaner feeds). But costs are real: false positives suppress legitimate speech, moderation creates filter bubbles, outsourcing safety burden to private algorithms. Cannot fully exit (network effects) but face high switching costs. Genuine coordination benefit exists alongside asymmetric extraction toward platform operators."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regulatory Oversight Bodies and Transparency Mandates",
+      "comment": "PERSPECTIVE 5: REGULATORY BODIES (SCAFFOLD) \u2014 Organized oversight (EU DSA, transparency requirements, appeal mechanisms) represents temporary scaffolding toward decentralized or community-based moderation. Sunset logic: as transparency mandates force algorithm disclosure and appeals processes become mandatory, the opacity that enables current extraction mechanisms decays. Suppression remains high during transition but declining trajectory visible."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Moderation Ritual and Content Removal Theater",
+      "comment": "PERSPECTIVE 6: MODERATION THEATER (PITON) \u2014 The removal/reinstatement cycle, appeals processes, and transparency reports are substantially performative. High theater_ratio reflects that moderation claims (systematic, fair, transparent) are undermined by scale realities (automated decisions, impossible appeals at 500M+ daily uploads). The ritual persists through regulatory pressure and user expectation, but actual verification of moderation quality is minimal. Theater is increasing as regulations force more reporting without improving actual fairness."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer: The Scalability Trilemma",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / SCALABILITY MOUNTAIN (MOUNTAIN) \u2014 From analytical distance, the constraint appears as natural law: you cannot simultaneously achieve (1) scale (billions of users), (2) accuracy (high-fidelity moderation decisions), and (3) transparency (explainable reasoning for each decision). At least one must be sacrificed. This perspective risks naturalizing what is actually a contingent choice: platforms have optimized for scale and profit margin at the cost of accuracy and transparency. The mountain framing masks the institutional choices embedded in the trilemma."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "algorithmic_bias_mechanistic_or_political",
+      "question": "Is documented algorithmic bias against marginalized content a result of training data bias (mechanistic), or a deliberate underinvestment in fairness for low-revenue user segments (political extraction)?",
+      "resolution_mechanism": "Comparative analysis of moderation error rates across user segments when controlling for training data composition; audit of investment in minority-language and minority-community moderation systems vs mainstream language investment",
+      "impact": "If mechanistic: moderation bias is solvable through better training data and fairness constraints. If political: bias is a feature of extraction architecture, not a bug. Affects classification severity and what remediation looks like.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether algorithmic bias is mechanistic or political"
+    },
+    {
+      "id": "appeal_mechanism_sufficiency",
+      "question": "Do human review appeals constitute genuine recourse or performative ritual? What fraction of appeals are actually overturned due to reviewer judgment rather than procedural error?",
+      "resolution_mechanism": "Audit of appeal outcomes: true reversal rate vs procedural reversals; tracking of appeal rejection justifications; comparison to independent fairness reviews of removed content",
+      "impact": "If appeals are genuine recourse: moderation is Tangled Rope for appellants. If appeals are ritual: moderation is Snare for all but the most persistent. Affects powerless agent classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether appeals constitute genuine recourse or theater"
+    },
+    {
+      "id": "decentralized_moderation_viability",
+      "question": "Can decentralized community moderation (federated, user-controlled, algorithmic filter bubbles) actually achieve better accuracy and fairness than centralized platform moderation at scale?",
+      "resolution_mechanism": "Empirical comparison: Mastodon/federated moderation outcomes vs Twitter/centralized moderation on identical content sets; distributed moderation error rates across consensus mechanisms",
+      "impact": "If viable: scaffold sunset is real \u2014 decentralized alternatives will compete and extract moderation authority. If not viable: platforms cannot exit the moderation extraction problem; current architecture is locked in. Affects whether scaffold sunset is structural or aspirational.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether decentralized moderation can match centralized scale"
+    },
+    {
+      "id": "profit_margin_dependency_on_extraction",
+      "question": "How much of platform profitability depends on cheap automated moderation vs. profitable content (engagement-maximizing, ad-friendly, low-moderation-cost)? Could human-scale moderation or better fairness systems be implemented at profitability parity?",
+      "resolution_mechanism": "Financial modeling: cost structure of current moderation vs human-review alternatives; correlation between moderation cost reduction and profit margin expansion; analysis of advertiser willingness to pay premium for verified fair moderation",
+      "impact": "If moderation-cost reduction is marginal to profit: platforms have freedom to improve fairness without existential risk. If central: moderation extraction is locked into business model. Affects whether remediation is Scaffold (temporary policy fix) or requires fundamental restructuring.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Dependency of platform profit margins on moderation cost reduction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Content moderation at platform scale presents a fundamental coordination problem disguised as a scalability challenge. Platforms must simultaneously: (1) prevent harm and illegal content, (2) preserve legitimate speech and due process, (3) maintain economic viability, and (4) operate transparently. The constraint exhibits all six DR types from different structural positions. For powerless content creators and marginalized communities, moderation is a snare \u2014 extraction of speech rights with no meaningful appeal. For platform operators and advertisers, moderation is a coordination mechanism \u2014 removing extreme content that would reduce advertiser trust and regulatory compliance. For mainstream users, it is tangled rope \u2014 genuine safety benefit alongside suppression costs. For regulatory bodies, it is temporary scaffolding \u2014 transparency mandates and appeals processes building toward decentralized alternatives. For the moderation apparatus itself, it is piton \u2014 performative ritual disconnected from actual fairness. For the analytical observer, it risks appearing as a scalability law of nature \u2014 you cannot have scale, accuracy, and transparency simultaneously. But this 'law' is actually the product of deliberate architectural choices: optimizing for scale and profit margin at the cost of precision and fairness.",
+    "key_agents": [
+      "Platform Operators: Primary beneficiary (institutional/arbitrage) \u2014 extract economic value and regulatory compliance through low-cost automated moderation; capture network effects",
+      "Advertisers: Secondary beneficiary (powerful/arbitrage) \u2014 benefit from brand-safe content environments; moderation enables their participation",
+      "Content Creators: Primary victim (powerless/trapped) \u2014 economically dependent on platform distribution; subject to arbitrary algorithmic decisions with opaque appeals",
+      "Marginalized Communities: Secondary victim (powerless/trapped) \u2014 disproportionately suppressed by biased moderation; lack organizational capacity to appeal or coordinate",
+      "Mainstream Users: Mixed (moderate/constrained) \u2014 benefit from safety but pay costs in false positives, filter bubbles, suppressed legitimate speech",
+      "Regulatory Bodies: Organized intervener (organized/constrained) \u2014 building transparency mandates and appeals mechanisms as sunset clauses toward decentralized alternatives",
+      "Moderation Apparatus: Institutional actor (institutional/arbitrage) \u2014 maintains performative ritual; benefits from continued opacity and scale pressure"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts from powerless content creators and marginalized communities (who bear suppression costs with no compensation) toward platform operators (who benefit from engagement-maximizing algorithms and regulatory compliance without moderation cost). The extraction is not absolute \u2014 platforms do invest in some moderation infrastructure \u2014 but the architecture systematically underinvests in fairness for low-revenue user segments while over-optimizing for scale and profitability. The measurement trajectory from 0.38 to 0.58 reflects accumulating extraction: as platforms scaled and competition intensified, moderation-cost-cutting accelerated, shifting more burden onto creators and marginalized voices. Suppression (0.68): High. Multiple suppression mechanisms: (1) algorithmic bias that treats minority expression as higher risk, (2) appeal processes that are too burdensome for individuals to navigate at scale, (3) opacity that prevents understanding why decisions were made, (4) network effects lock content creators into platform dependence despite extraction. Theater ratio (0.64): Moderate-high. The moderation ritual \u2014 published removal statistics, transparency reports, appeals processes, content restoration \u2014 is substantially performative. Platforms claim systematic fairness while operating opaque algorithms at scales where fairness verification is impossible. Transparency reports show removal statistics but not error rates or bias audit results. Appeals processes exist but overturn rates are low and justifications are generic. Theater has increased over the interval as regulatory pressure forced more reporting without improving actual decision quality.",
+    "directionality_logic": "Beneficiaries (platform operators, advertisers, mainstream users during normal conditions) experience low effective extraction \u2014 the constraint solves genuine coordination problems for them (removing illegal content, preventing harassment, maintaining advertiser trust). Their directionality d values are low (0.1-0.3 range): they benefit from the constraint more than they bear its costs. Victims (content creators, marginalized communities) experience high effective extraction \u2014 they bear suppression costs (algorithmic bias, opaque decisions, expensive appeals) with no benefit. Their d values are high (0.85-0.95 range): they are fully targeted by the extraction mechanism. The key insight is that platforms have architected moderation to minimize their own costs while maximizing extraction from those least able to appeal (powerless creators, marginalized voices). The extraction is not accidental byproduct of scale \u2014 it is deliberate design choice to achieve profitability thresholds.",
+    "perspectival_gap": "The perspectival gap reveals the constraint's fundamental asymmetry. Beneficiaries see coordination (Rope) \u2014 genuine problem-solving through moderation. Victims see extraction (Snare) \u2014 arbitrary suppression with no recourse. Organized regulatory bodies see temporary scaffolding (Scaffold) \u2014 sunset built into transparency mandates and appeals requirements that will eventually decentralize moderation authority. The moderation apparatus sees its own degradation (Piton) \u2014 once-legitimate verification process now mostly theatrical performance disconnected from actual fairness. The analytical observer risks naturalizing the trilemma (Mountain) \u2014 'you cannot have scale, accuracy, and transparency' \u2014 but this risks masking the institutional choice: platforms have traded fairness for profitability. The gap is not about different facts; it is about different structural positions in the extraction flow.",
+    "mandatrophy_analysis": "Mandatrophy is resolved by recognizing that moderation is neither pure coordination (Rope) nor pure extraction (Snare), but a hybrid that depends entirely on which agent you are. For beneficiaries, it is genuinely coordinating \u2014 preventing harm, enabling advertiser trust, maintaining platform viability. For victims, it is genuinely extractive \u2014 suppression without recourse or compensation. The 'mandatrophy' \u2014 is this coordination or extraction? \u2014 is dissolved by the perspectival classification showing both are true simultaneously. The ethical problem is not that moderation is inherently extractive, but that platforms have optimized the architecture to maximize extraction from those least able to resist (powerless creators, marginalized voices) while minimizing it for those with economic power (advertisers, platform operators). Mandatrophy resolution requires acknowledging this asymmetry is not accidental but designed."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_bias_in_recommendation",
+      "platform_speech_concentration",
+      "advertiser_content_control"
+    ],
+    "dual_formulation_note": "Content moderation scalability decomposes into: (1) moderation_decision_accuracy (\u03b5\u22480.25, Mountain \u2014 inherent difficulty of classification at scale), (2) moderation_fairness_equity (\u03b5\u22480.52, Tangled Rope \u2014 coordination function for safety, extraction function for marginalized communities), (3) moderation_appeals_theater (\u03b5\u22480.42, Piton \u2014 performative appeal ritual). This story integrates all three; downstream constraints inherit the extraction mechanisms from moderation architecture."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.35
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.52
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "platform_governance_architecture"
+    ]
+  }
+}

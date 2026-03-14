@@ -1,0 +1,193 @@
+{
+  "header": {
+    "constraint_id": "supplement_marketing_claims_verification",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "suppl"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.81,
+    "claimed_type": "snare",
+    "human_readable": "Supplement Marketing Claims Verification Bottleneck",
+    "topic_domain": "health_commerce/regulatory_enforcement",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "supplement_manufacturers",
+      "marketing_intermediaries"
+    ],
+    "victims": [
+      "consumer_health_outcomes",
+      "regulatory_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Uninformed Consumer",
+      "comment": "PERSPECTIVE 1: UNINFORMED CONSUMER (SNARE) \u2014 Consumers cannot exit the marketplace; verification barriers are completely opaque to them. Asymmetric information about product safety and efficacy creates pure extraction: manufacturers benefit from unverified claims while consumers bear health and financial costs with no mechanism to assess veracity."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Health-Conscious Consumer",
+      "comment": "PERSPECTIVE 2: HEALTH-CONSCIOUS CONSUMER (SNARE) \u2014 Even informed consumers cannot fully exit: supplement use is often motivated by health conditions or gaps in conventional medicine. Exit costs are high (loss of perceived health benefit, switching to expensive pharmaceuticals). Verification capacity is constrained by lack of access to clinical data, funding for independent testing, and literacy barriers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Supplement Manufacturer",
+      "comment": "PERSPECTIVE 3: SUPPLEMENT MANUFACTURER (ROPE) \u2014 Benefits from weak verification requirements. Experiences the constraint as coordination: able to claim efficacy without expensive clinical trials, benefiting from the regulatory gap. Has full arbitrage exit (can operate in multiple jurisdictions with varying standards)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Agency (FDA)",
+      "comment": "PERSPECTIVE 4: REGULATORY AGENCY (TANGLED ROPE) \u2014 FDA coordinates legitimate supplement oversight (preventing adulteration, tracking adverse events) but cannot enforce full pre-market verification due to resource constraints and statutory limitations (DSHEA 1994). Agency simultaneously benefits from extractive enforcement (budget justification through catch-and-punish cycles) while bearing costs of inadequate verification capacity."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Third-Party Testing Ritual",
+      "comment": "PERSPECTIVE 5: THIRD-PARTY TESTING SYSTEM (PITON) \u2014 USP, NSF, and ConsumerLabs perform verification rituals (testing for label accuracy, adulterants) but these are largely performative and optional. Theater ratio (0.81) reflects that third-party seals create appearance of verification without preventing misleading efficacy claims. The ritual persists through consumer trust in logos, not through demonstrated verification effectiveness."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational view, supplement verification contains genuine coordination (adverse event reporting, shared standards) nested within extractive asymmetry (unverified efficacy claims). The constraint is not immutable: regulatory frameworks (pre-market efficacy requirements) could exist, as do comparable systems in other jurisdictions. The barrier is institutional choice, not natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "burden_of_proof_allocation",
+      "question": "Should manufacturers bear burden of proving efficacy (FDA drug model) or should consumers bear burden of proving harm (current DSHEA model)?",
+      "resolution_mechanism": "Policy analysis comparing regulatory outcomes across jurisdictions with different burden allocations (EU, Canada, US); health outcome tracking before/after framework changes",
+      "impact": "If manufacturer burden imposed: suppression and extractiveness drop significantly (\u2192 Rope or Scaffold). If consumer burden maintained: extractiveness remains high (\u2192 Snare or Tangled Rope). This is a choice variable, not an empirical discovery.",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "Allocation of proof burden between manufacturers and consumers"
+    },
+    {
+      "id": "efficacy_verification_cost_ceiling",
+      "question": "Below what product price threshold does clinical trial verification become economically infeasible for manufacturers?",
+      "resolution_mechanism": "Cost analysis of clinical trials vs product price point; market data on supplement pricing; development cost data from natural products industry",
+      "impact": "If ceiling < $20: most supplement market becomes unfeasible under efficacy requirements (\u2192 Scaffold with sunset to pharmaceutical model). If ceiling > $50: efficacy verification becomes viable for broad market (\u2192 Rope or Tangled Rope shift toward coordination).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Economic viability threshold for efficacy verification by product price"
+    },
+    {
+      "id": "placebo_response_attribution",
+      "question": "How much measured efficacy in supplement users reflects actual bioactivity vs placebo response + health behavior changes (belief-driven lifestyle shifts)?",
+      "resolution_mechanism": "Meta-analysis of supplement RCTs controlling for placebo; comparison of observed effect sizes with theoretical placebo response bounds; cohort tracking of lifestyle changes in supplement users",
+      "impact": "If > 60% attributable to placebo + behavior: efficacy claims are largely theater (increases theater_ratio \u2192 Piton classification). If < 40%: genuine bioactivity is being suppressed by verification barriers (supports Snare classification).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of measured efficacy to bioactivity vs placebo response and behavior change"
+    },
+    {
+      "id": "consumer_exit_cost_magnitude",
+      "question": "What is the actual health and financial cost for consumers to exit supplement reliance and transition to conventional medicine or lifestyle interventions?",
+      "resolution_mechanism": "Prospective cohort study tracking cost and health outcomes for consumers discontinuing supplements; survey of switching costs (time, medical appointments, pharmaceutical costs); analysis of conditions where supplement reliance reflects genuine market gap vs perceived need",
+      "impact": "If exit costs are very high (> $2000/year + significant health risk): consumers are genuinely trapped (\u2192 Snare confirmed). If exit costs are moderate (< $500/year): consumers face constraint but have exit option (\u2192 reclassify powerless agents to moderate or constrained).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Actual exit cost for consumers transitioning away from supplement reliance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.43
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The supplement marketing claims verification bottleneck creates a structural asymmetry between manufacturers' ability to make efficacy claims and consumers' ability to verify them. The U.S. regulatory framework (Dietary Supplement Health and Education Act, 1994) exempts supplements from pre-market efficacy requirements, creating a verification gap: manufacturers can claim health benefits based on weak evidence while consumers lack systematic access to comparative efficacy data. Theater has increased over the measurement interval as supplement marketing has become more sophisticated (celebrity endorsements, medical mimicry) while verification capacity has remained static or declined. The constraint exhibits different characters depending on observer position: pure extraction for trapped consumers, institutional coordination for manufacturers, regulatory compromise for agencies, and degraded ritual for third-party testing systems.",
+    "key_agents": [
+      "Uninformed Consumer: Primary victim (powerless/trapped) \u2014 lacks expertise and access to verify claims; cannot exit marketplace",
+      "Health-Conscious Consumer: Secondary victim (moderate/constrained) \u2014 informed but structurally constrained by health conditions and perceived gaps in conventional medicine",
+      "Supplement Manufacturer: Primary beneficiary (institutional/arbitrage) \u2014 captures market value from unverified claims; can operate across jurisdictions with varying standards",
+      "Marketing Intermediaries: Secondary beneficiary (institutional/arbitrage) \u2014 influencers, retailers, distributors benefit from claim asymmetry",
+      "Regulatory Agency (FDA): Institutional actor caught in hybrid role (organized/constrained) \u2014 coordinates legitimate oversight while constrained by statutory limits and resource scarcity",
+      "Third-Party Testing System: Institutional performer (institutional/arbitrage) \u2014 conducts ritualistic testing that creates appearance of verification without preventing efficacy claims",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 recognizes the constraint as institutional choice, not natural limit"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Manufacturers extract significant consumer surplus through unverified efficacy claims, but the extraction is not maximal because (1) some products deliver perceived benefits (placebo + behavior change), (2) health conditions create genuine market gap, and (3) some consumers are informed enough to partially compensate. The value increased from 0.38 to 0.58 over the interval as claim sophistication and marketing spend grew while verification mechanisms stagnated. Suppression (0.68): High. Multiple barriers prevent verification: (1) consumers lack resources for independent clinical testing ($5-15M per efficacy claim), (2) asymmetric information makes harm detection slow (adverse events accumulate over years), (3) regulatory capacity is structurally inadequate (FDA has ~100 investigators for ~80,000 supplement products), (4) publication bias in supplement research inflates perceived efficacy, (5) consumers internalize belief in supplement necessity through repeated messaging. Theater ratio (0.81): Very high and increasing. Third-party testing seals (USP, NSF, ConsumerLabs) verify label accuracy and absence of adulterants but do NOT verify efficacy claims \u2014 the seals create appearance of comprehensive verification while claims remain unvetted. Marketing increasingly exploits this distinction: products display third-party logos while efficacy claims remain speculative.",
+    "directionality_logic": "Trapped consumers (powerless/trapped) experience maximum extractiveness: they cannot verify claims, cannot afford comprehensive testing, and exit costs are high (health risk + financial loss + inconvenience). Institutional manufacturers (institutional/arbitrage) experience low extractiveness: they benefit from the asymmetry and can exit at low cost (relocate to different regulatory jurisdiction). The FDA (organized/constrained) experiences mixed extractiveness: coordinating legitimate oversight (adverse event tracking, adulterant prevention) requires resources, but extractive asymmetry in claims justifies budget expansion\u2014creating perverse incentive alignment. Directionality is straightforward: beneficiaries have arbitrage exit and low d; victims have trapped or constrained exit and high d. No overrides needed.",
+    "perspectival_gap": "The consumer and manufacturer perspectives are maximally separated. Consumers see a pure snare (no coordination function, only extraction). Manufacturers see rope (legitimate coordination of information, standards, distribution). The FDA sees tangled rope (genuine coordination of safety monitoring mixed with extractive asymmetry in claims). The third-party testing system sees its own role as rope (coordinating quality standards) while external observers see piton (performing ritualistic seals without preventing false claims). The analytical observer sees tangled rope (coordination exists but is nested in extraction) and recognizes the constraint as policy choice rather than natural law.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: This constraint resolves the coordination/extraction tension by showing that verification bottleneck genuinely contains both functions. The FDA's adverse event reporting (coordination function) is real and valuable. The pre-market efficacy gap (extractive function) is also real and asymmetric. The constraint is NOT a snare disguised as rope, nor rope disguised as snare \u2014 it is a tangled rope where both functions are present. From the consumer's perspective, the coordination function is invisible (they cannot access adverse event data) and only extraction is visible \u2192 Snare. From the manufacturer's perspective, coordination (standards, distribution infrastructure) is salient \u2192 Rope. From the FDA's perspective, both are visible \u2192 Tangled Rope. The mandatrophy does not collapse to a single type because the constraint genuinely has different structural meanings for different agents. The resolution is NOT to claim all types are 'equally valid,' but to recognize that the perspectival gaps are diagnostically meaningful: they reveal that the constraint contains hidden extraction (the coordination function is real but asymmetrically distributed)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "drug_efficacy_verification",
+      "advertising_health_claims_regulation"
+    ],
+    "dual_formulation_note": "This constraint is downstream of the DSHEA statutory framework and upstream of specific product category claims (probiotics, joint health, cognitive enhancement). The statutory framework creates the verification gap; individual product categories exhibit different extraction rates depending on evidentiary base and marketing intensity. See linked constraints for domain-specific variants."
+  },
+  "directionality_overrides": []
+}

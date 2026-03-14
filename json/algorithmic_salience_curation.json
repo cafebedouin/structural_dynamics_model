@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "algorithmic_salience_curation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "alg_sal"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Algorithmic Salience Curation in Digital Platforms",
+    "topic_domain": "digital_platforms/information_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "high_engagement_content_creators"
+    ],
+    "victims": [
+      "attention_commons",
+      "marginalized_information_seekers",
+      "low_engagement_creators"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Attention Commons",
+      "comment": "PERSPECTIVE 1: THE ATTENTION COMMONS (SNARE) \u2014 The shared informational environment has no advocate and no exit option. Cannot reorganize its own salience structure. Bears full cost of algorithmic extraction: distorted information distribution, amplified polarization, suppressed marginal voices. Maximum experienced extraction from a structural position with zero agency."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Low-Engagement Content Creators",
+      "comment": "PERSPECTIVE 2: LOW-ENGAGEMENT CREATORS (SNARE) \u2014 Creators whose content is algorithmically deprioritized face suppressed reach despite identical utility to high-engagement alternatives. Exit options exist but require platform switching with network effects penalty \u2014 high cost, not impossible. Experience asymmetric visibility distribution as extraction: algorithmic suppression of reach."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Marginalized Information Seekers",
+      "comment": "PERSPECTIVE 3: MARGINALIZED INFO SEEKERS (TANGLED ROPE) \u2014 Face algorithmic suppression of information relevant to their communities: medical information in non-dominant languages, local news in peripheral regions, niche expertise that lacks mass engagement signals. Simultaneously benefit from algorithmic curation reducing information overload. Moderate agency \u2014 can use search, follow specific creators, but discovery mechanisms extract value from the marginalized."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Platform Operators",
+      "comment": "PERSPECTIVE 4: PLATFORM OPERATORS (ROPE) \u2014 Experience the algorithm as a coordination mechanism solving the aggregate problem: matching billions of users with relevant content from millions of creators. Extractive benefits flow toward platforms through engagement optimization and advertising rate maximization, but the platforms frame and experience this as system coordination: 'helping people find what they want.' Net beneficiary with structural mobility."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "High-Engagement Content Creators",
+      "comment": "PERSPECTIVE 5: HIGH-ENGAGEMENT CREATORS (ROPE) \u2014 Benefit from algorithmic amplification; their content reaches audiences at scale through positive engagement feedback. Experience the algorithm as coordination: transparent rules (maximize engagement, satisfy viewer retention) that reward their participation. High agency \u2014 can adjust content to optimize, experiment with formats, arbitrage between platforms."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regulatory and Institutional Reformers",
+      "comment": "PERSPECTIVE 6: REGULATORY REFORMERS (SCAFFOLD) \u2014 Digital Services Act, Online Safety Bill, algorithmic transparency mandates, and decentralized alternative platforms represent organized agents viewing the bottleneck as a temporary institutional failure with a sunset. Low effective extraction from this perspective because the coalition has agency and a visible exit path: regulatory override of proprietary algorithms, interoperability requirements, data portability. Sunset mechanism: once regulation matures, algorithmic suppression becomes legally costly."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Algorithmic Legitimacy Ritual",
+      "comment": "PERSPECTIVE 7: LEGITIMACY RITUAL (PITON) \u2014 'The algorithm is neutral and objective' is a sustained performative claim despite documented bias and intentional steering. Platforms publish opacity reports and launch fairness audits as institutional theater: maintaining the appearance of rational curation while suppressing visibility of intentional ranking. Theater persists through institutional inertia (investor expectations, regulatory evasion) rather than functional necessity. Algorithm design could be transparent; the secrecy is enforced."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Attention Allocation Naturalizes)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / FALSE SUMMIT VIEW (MOUNTAIN) \u2014 From a sufficiently abstract perspective, some salience curation is inherent to information systems: perfect equality of visibility is impossible; scarcity of human attention forces allocation. This perspective risks naturalizing what are contingent design choices (engagement optimization, advertiser maximization) as unavoidable laws of information flow. Engine will detect this as a false summit \u2014 the structural data contradicts mountain classification, revealing naturalization of institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "engagement_metric_causality",
+      "question": "Does algorithmic amplification of high-engagement content serve user preferences, or does it create and reinforce engagement patterns through feedback loops?",
+      "resolution_mechanism": "Longitudinal A/B testing: randomized chronological vs algorithmic feeds over months; measurement of content distribution divergence; user preference elicitation independent of algorithmic exposure",
+      "impact": "If user-preference-driven: engagement optimization is primarily coordination (Rope classification stable). If feedback-loop-driven: engagement is extraction mechanism (Snare/Tangled Rope from marginalized perspectives). Determines whether extraction vs coordination framing is defensible.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether algorithmic amplification follows or creates user engagement preferences"
+    },
+    {
+      "id": "marginalization_intentionality",
+      "question": "Is algorithmic suppression of marginal-language and peripheral-region content a side effect of engagement optimization or an intentional design feature?",
+      "resolution_mechanism": "Analysis of algorithm design documentation; comparison of engagement-equivalent content in dominant vs marginal languages; deliberate reweighting tests with language/region coefficients removed",
+      "impact": "If side effect: suppression is unintended extraction (high theater, structural fix possible). If intentional: extraction is designed and defended (high suppression, political choice). Changes framing of victim status.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether algorithmic marginalization is intentional design or unintended side effect"
+    },
+    {
+      "id": "interoperability_feasibility",
+      "question": "Can distributed or interoperable algorithm architectures maintain coordination benefits (matching users to content) while reducing extraction (suppression of marginalized voices)?",
+      "resolution_mechanism": "Technical feasibility studies of federation, algorithmic portability, and decentralized recommendation systems; comparison of coordination function between centralized and distributed systems in testbeds",
+      "impact": "If feasible: scaffold perspective is structural (regulatory sunset is real, alternative architecture works). If infeasible: scaffold is aspirational (no real exit path), and platform concentration remains inevitable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether interoperable algorithm architectures can maintain coordination benefits"
+    },
+    {
+      "id": "transparency_paradox",
+      "question": "Does algorithmic transparency (revealing ranking criteria to users and creators) increase user agency and reduce extraction, or does it enable new forms of gaming and manipulation?",
+      "resolution_mechanism": "Comparison of user and creator behavior before/after transparency interventions; measurement of SEO-gaming intensity in transparent vs opaque recommendation systems; user satisfaction and content diversity metrics",
+      "impact": "If transparency increases agency: opacity is extractive mechanism (suppression gate driven by information asymmetry). If transparency enables gaming: transparency-as-solution is false (extraction persists through different mechanism). Affects regulatory reform viability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether algorithmic transparency reduces extraction or enables new gaming"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "Algorithmic salience curation in digital platforms creates a structural tension between the coordination problem (connecting billions of users with millions of creators) and the extraction mechanism (optimizing engagement and advertising revenue through asymmetric visibility allocation). The constraint exhibits a five-perspective perspectival spread: from the trapped powerless (attention commons with no exit), through constrained moderates (marginalized information seekers), to institutional beneficiaries (platform operators and high-engagement creators) who experience the algorithm as neutral coordination, to organized reformers (regulatory coalitions) who see a sunset on the extraction mechanism, to the piton performance of algorithmic neutrality. The increasing theater_ratio over the measurement interval (0.45 \u2192 0.75) reflects the growing gap between the platforms' legitimacy claims (objective, neutral, user-preference-driven curation) and the documented reality (intentional ranking for engagement and advertising, systematic suppression of marginal voices, feedback loops that create rather than respond to preferences). The extractiveness trajectory (0.32 \u2192 0.62) shows how the extraction mechanism has intensified as engagement optimization became the dominant platform business model. At time 0 (early recommendation systems, 2010-2014), algorithms were genuinely closer to coordination \u2014 they solved real information overload problems with modest engagement optimization. By time 6 (2020-2022), extractiveness had reached tangled_rope thresholds as engagement became the primary objective. The analytical observer risks seeing salience curation as an immutable law of information flow, but the structural data reveals it as a contingent institutional design.",
+    "key_agents": [
+      "Platform Operators: Primary beneficiary (institutional/arbitrage) \u2014 capture advertising value and user lock-in through engagement optimization; frame as coordination",
+      "Attention Commons: Primary victim (powerless/trapped) \u2014 shared informational environment distorted by extraction; no exit option or voice",
+      "Low-Engagement Creators: Secondary victim (powerless/constrained) \u2014 algorithmically suppressed reach; high cost to exit through platform switching",
+      "Marginalized Information Seekers: Secondary victim (moderate/constrained) \u2014 information relevant to their communities suppressed by engagement optimization; trapped by network effects",
+      "High-Engagement Content Creators: Beneficiary (powerful/arbitrage) \u2014 amplified by algorithm; experience as coordination mechanism rewarding their participation",
+      "Regulatory Reformers: Organized agents (organized/constrained) \u2014 DSA, OSB, transparency mandates building alternative regulatory pathway with sunset logic",
+      "Algorithmic Legitimacy Ritual: Institutional actor (institutional/arbitrage) \u2014 maintains performance of neutrality through opacity reports, fairness audits; persists through inertia",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent design as law of information physics"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Platform operators capture significant value through engagement optimization (higher advertising rates, increased user lock-in) at the cost of distorted information distribution. The extraction is not as severe as a pure snare (0.72+) because platforms do solve a real coordination problem \u2014 matching users to content at scale \u2014 and high-engagement creators genuinely benefit from the mechanism. But the primary objective function (engagement, not information quality or user welfare) drives asymmetric extraction from low-engagement creators and information-seekers. The extractiveness trajectory rising from 0.32 to 0.62 reflects the intensification of engagement optimization as platforms moved from information-matching to attention-capture business models. Suppression (0.62): High. Multiple suppression mechanisms: (1) algorithmic ranking against marginal content, (2) language and region bias in engagement signals, (3) information asymmetry about ranking criteria, (4) network effects creating switching costs for exit, (5) opacity reports performing neutrality while suppressing algorithm details. Suppression is not total (users can still search, follow creators directly) but substantial. Theater ratio (0.68): High. The gap between legitimacy claims and mechanism is large: platforms present algorithms as objective, neutral, user-preference-responsive while systematically optimizing for engagement and advertising. Opacity reports and fairness audits are institutional theater \u2014 they maintain the performance of accountability without constraining the extraction mechanism. Theater has increased over time as extraction intensified, creating need for stronger legitimacy performance.",
+    "directionality_logic": "Directionality (d) for each perspective derives from the agent's power level, exit options, and position in the extraction flow. Platform operators with institutional power and arbitrage options have low d (~0.15) \u2014 they are net beneficiaries and experience the constraint as coordination. High-engagement creators with powerful status and arbitrage options also have low d (~0.25) \u2014 they benefit from amplification. Low-engagement creators and marginalized information seekers have high d (0.75-0.90) \u2014 they are trapped or heavily constrained by network effects and algorithmic suppression. The powerless agents (attention commons, trapped creators) have maximum d (0.95) \u2014 they bear extraction without exit or benefit. The regulatory reformers with organized power and constrained exit have moderate d (0.55-0.65) \u2014 they see extraction clearly and have built coalition power to address it, but are not trapped. The analytical observer at civilizational scope has canonical d (0.72) \u2014 risks naturalizing contingent design as inevitable law.",
+    "perspectival_gap": "This constraint demonstrates stark perspectival divergence: platform operators genuinely experience coordination (Rope) \u2014 they are solving the matching problem with apparent elegance. High-engagement creators experience coordination (Rope) \u2014 the algorithm rewards them transparently. But trapped low-engagement creators and the powerless attention commons experience pure extraction (Snare) \u2014 the algorithm suppresses them with no exit. Marginalized information seekers experience mixed extraction and coordination (Tangled Rope) \u2014 they benefit from information filtering but are systematically deprived of relevant information about their own communities. The regulatory coalition sees a temporary problem with a sunset (Scaffold) \u2014 regulatory override will make algorithmic suppression costly. The piton perspective reveals algorithmic legitimacy as theater persisting through inertia. The analytical observer risks seeing salience curation as inevitable, which would naturalize the design choice as law and shield extraction from scrutiny. The perspectival gap reveals that the same algorithmic mechanism is experienced as coordination by beneficiaries and extraction by victims \u2014 the structural data confirms extraction is happening (high suppression, asymmetric visibility allocation, increasing theater), not that it's an artifact of perspective.",
+    "mandatrophy_analysis": "TANGLED ROPE CONFIRMED: The constraint possesses both genuine coordination (matching users to content solves real information problem) and asymmetric extraction (engagement optimization suppresses marginal voices and extracts attention value toward advertising). Active enforcement is required \u2014 platforms maintain algorithmic opacity and actively suppress alternative curation mechanisms. The beneficiaries (platforms, high-engagement creators) benefit from the coordination function AND the extraction asymmetry. The victims (low-engagement creators, marginalized seekers, attention commons) bear both coordination costs AND extraction. The mandatrophy is resolved by recognizing that platforms have intentionally designed their coordination mechanism to maximize extraction: engagement optimization is not a neutral response to user preferences but a deliberate choice to optimize platform revenue. The choice could be different (chronological feeds, user-controlled ranking, diverse-exposure mandates) without losing coordination benefits. This is why the piton perspective (algorithmic neutrality ritual) is correct \u2014 platforms perform neutrality to justify what are actually extractive design choices. Regulatory reform (scaffold) targets exactly this point: mandate transparency and interoperability, and the same coordination benefits can be achieved with reduced extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "attention_extraction_business_model",
+      "information_asymmetry_platform_design",
+      "engagement_feedback_loops"
+    ],
+    "dual_formulation_note": "Algorithmic salience curation should be decomposed into three distinct constraints per \u03b5-invariance principle: (1) information matching (pure coordination, \u03b5~0.15, Rope), (2) engagement optimization (extraction mechanism, \u03b5~0.65, Snare), (3) algorithmic opacity theater (performative legitimacy, \u03b5~0.50, Piton). This story represents the aggregate institutional practice, but empirical analysis should evaluate each mechanism separately."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

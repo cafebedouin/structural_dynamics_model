@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "institutional_investor_governance_power",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "iigp"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Institutional Investor Governance Power and Corporate Control",
+    "topic_domain": "financial/corporate_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_asset_managers",
+      "institutional_investors"
+    ],
+    "victims": [
+      "minority_shareholders",
+      "workers",
+      "stakeholders"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Minority Shareholder",
+      "comment": "PERSPECTIVE 1: MINORITY SHAREHOLDER (SNARE) \u2014 Individual investors have no meaningful exit from concentrated institutional control. Voting power is diluted; institutions vote blocks that maximize their own returns regardless of minority interests. Trapped by market structure and information asymmetries. Bears extraction with no recourse."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Worker",
+      "comment": "PERSPECTIVE 2: WORKER (SNARE) \u2014 Employment remains at institutional investor discretion. No exit from wage suppression, benefit cuts, or layoffs driven by asset manager profit maximization. Structurally trapped by labor market concentration and capital control. Maximum extraction with zero negotiating power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Sized Asset Manager",
+      "comment": "PERSPECTIVE 3: MID-SIZED ASSET MANAGER (TANGLED ROPE) \u2014 Benefits from coordination of voting blocks and governance coordination among peer institutions. Also constrained by larger asset managers' dominance (Vanguard, BlackRock, State Street) and regulatory oversight. Mixed coordination function and asymmetric extraction. Can exit only at significant competitive cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Large Asset Manager",
+      "comment": "PERSPECTIVE 4: LARGE ASSET MANAGER (ROPE) \u2014 Experiences institutional investor governance as pure coordination: pooled voting enables economies of scale and passive index management. Net beneficiary with arbitrage exit options (capital deployment flexibility). Low suppression for this actor."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Regulatory Coalition",
+      "comment": "PERSPECTIVE 5: REGULATORY COALITION (TANGLED ROPE) \u2014 SEC, DOJ, state attorneys general see concentrated asset manager control as both a coordination mechanism (for market transparency) and an extractive mechanism (for minority shareholder harm). Organized but politically constrained by fintech lobbying. Mobile exit path through antitrust enforcement but faces institutional resistance."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Corporate Board System",
+      "comment": "PERSPECTIVE 6: CORPORATE BOARD SYSTEM (PITON) \u2014 Board governance persists through institutional theater: directors claim independence while institutional investors drive actual control. Shareholder voting is substantively performative \u2014 outcomes pre-determined by asset manager blocs. Theater ratio of 0.55 reflects that while boards still deliberate, their decisions are constrained by prior institutional block voting."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational view, institutional investor governance coordinates capital allocation (genuine coordination function) while concentrating control in asset manager hands (asymmetric extraction). Both functions are real and inseparable. The constraint is neither pure coordination nor pure extraction but a hybrid where concentration enables coordination efficiency at the cost of democratic capital control."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "beneficial_ownership_obscurity",
+      "question": "Is the extraction mechanism the concentrated asset manager control, or the obscured beneficial ownership that prevents retail investors from understanding their own capital flows?",
+      "resolution_mechanism": "Empirical analysis of retail investor behavior when beneficial ownership is transparent (e.g., direct indexing disclosures) vs opaque (mutual fund abstraction). Measurement of voting participation rates before/after SEC transparency rules.",
+      "impact": "If ownership obscurity is primary: constraint relaxes significantly with disclosure. If institutional control is primary: transparency alone does not redistribute power.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is concentrated control or obscured ownership"
+    },
+    {
+      "id": "passive_versus_active_extraction",
+      "question": "Does passive index management inherently extract from minority shareholders, or do active asset managers extract specifically through discretionary voting?",
+      "resolution_mechanism": "Comparative analysis of voting outcomes and minority harm across passive vs active-managed portfolios. Longitudinal tracking of minority shareholder outcomes (dividend payments, board diversity, long-term value) in passive vs actively managed indexes.",
+      "impact": "If passive extraction is structural: constraint applies to all asset management. If active discretion is extractive: constraint could be partially addressed through governance reforms on voting direction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether extraction is inherent to passive management or specific to active voting"
+    },
+    {
+      "id": "antitrust_feasibility",
+      "question": "Is asset manager concentration the constraint, or is market structure (the concentration of capital itself) the irreducible constraint?",
+      "resolution_mechanism": "Analysis of hypothetical antitrust breakup scenarios. Would dividing Vanguard/BlackRock reduce institutional extraction, or would the divided entities still coordinate through peer voting? Game-theoretic modeling of n-player voting cartels.",
+      "impact": "If concentration is the constraint: antitrust enforcement is viable remedy. If market structure is the constraint: breakup provides no relief.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether constraint is concentration or market structure itself"
+    },
+    {
+      "id": "stakeholder_coordination_necessity",
+      "question": "Do workers and minority shareholders have genuine coordination functions in corporate governance, or are they purely targets of extraction?",
+      "resolution_mechanism": "Comparative analysis of firms with genuine stakeholder governance (Germany, Scandinavia) vs shareholder-only governance. Measurement of firm performance, worker productivity, innovation metrics across governance models.",
+      "impact": "If stakeholders provide coordination function: constraint could be reframed as Scaffold or reformed Tangled Rope. If purely extraction: Snare classification is confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether stakeholders serve coordination or extraction function"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Institutional investor governance power represents a structural constraint on corporate capital allocation where large asset managers (Vanguard, BlackRock, State Street, Fidelity) exercise concentrated voting control over portfolio companies. The constraint exhibits hybrid coordination-extraction dynamics: asset managers provide genuine coordination functions through pooled capital, standardized governance frameworks, and economies of scale, while simultaneously concentrating governance power in ways that extract value from minority shareholders, workers, and other stakeholders. The extractiveness has grown from 0.35 in 2004 (when passive index management was less dominant) to 0.58 in 2024 (as index fund dominance reached 45% of US equity markets). Theater ratio reflects that while corporate boards and shareholder votes remain structurally intact, their substantive outcomes are pre-determined by institutional block voting, rendering democratic shareholder governance increasingly performative.",
+    "key_agents": [
+      "Large Asset Managers (Vanguard, BlackRock, State Street): Institutional beneficiaries (institutional/arbitrage) \u2014 exercise concentrated governance control while maintaining arbitrage flexibility through capital reallocation.",
+      "Minority Shareholders: Primary victims (powerless/trapped) \u2014 retail investors and small funds with no meaningful exit from concentrated institutional control.",
+      "Workers: Secondary victims (powerless/trapped) \u2014 employees subject to wage suppression and benefit cuts driven by asset manager profit maximization directives.",
+      "Mid-Sized Asset Managers: Constrained institutional actors (moderate/constrained) \u2014 benefit from passive management coordination but constrained by dominance of largest three firms.",
+      "Regulatory Bodies (SEC, DOJ, state AGs): Organized advocates (organized/mobile) \u2014 see concentration as problematic but politically constrained by fintech lobbying and legislative gridlock.",
+      "Corporate Boards: Institutional theater (institutional/arbitrage) \u2014 maintain performance of independent governance while actually executing asset manager directives.",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees both genuine coordination (capital pooling enables efficient markets) and genuine extraction (concentrated voting power enables asymmetric value transfer)."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, and rising. The base measure reflects that institutional investor voting directly produces measurable minority shareholder harm: depressed dividend policies favoring capital appreciation (taxed in asset manager hands), executive compensation that ignores worker wages, strategic decisions prioritizing short-term returns over long-term stakeholder value. The trajectory from 0.35 to 0.58 over 20 years tracks the rise of index dominance (2004: 13% of US equities; 2024: 45%), which reduced the competitive discipline that active managers previously provided. Suppression (0.68): High and structural. Minority shareholders face information asymmetries (opaque beneficial ownership through mutual funds), voting power concentration (institutions hold blocking positions), and exit barriers (transaction costs, tax consequences). Workers face labor market concentration (asset managers increasingly own both competitors in an industry, preventing wage arbitrage) and capital-mobility threat (firms are restructured for financial extraction). Theater ratio (0.55): Moderate. Corporate boards conduct genuine deliberation and shareholder votes are mechanically real, but outcomes are pre-determined by institutional block voting. The theater is not zero because boards do occasionally resist or negotiate with asset managers; it is not high (>0.70) because institutional control is structurally dominant, not merely nominal.",
+    "directionality_logic": "Large asset managers derive d \u2248 0.15 (institutional power + arbitrage exit = beneficiary directionality): they capture value through governance control while maintaining exit flexibility through capital reallocation. Minority shareholders derive d \u2248 0.92 (powerless + trapped = maximum target directionality): they bear governance extraction with no exit. Workers derive d \u2248 0.95 (powerless + trapped = maximum target directionality): they experience wage suppression and restructuring with no meaningful exit. Mid-sized asset managers derive d \u2248 0.65 (moderate power + constrained exit = mixed): they benefit from passive management coordination but are subordinated to the largest three firms. Regulatory bodies derive d \u2248 0.58 (organized + mobile = moderate target directionality despite advocacy role): they have structural capacity to enforce antitrust but face political constraints. The perspectival gap is large: large asset managers perceive Rope (coordination), while powerless agents perceive Snare (pure extraction). The analytical observer perceives Tangled Rope because both functions are empirically present and inseparable.",
+    "perspectival_gap": "The primary gap is between large asset managers and powerless agents. Asset managers experience the constraint as coordination: pooled voting power enables scale economies, passive indexing provides transparent benchmarks, institutional discipline improves governance compliance. Minority shareholders and workers experience the same constraint as extraction: concentrated block voting suppresses dissent, passive indexing removes competitive oversight of compensation and strategy, institutional discipline is enforced downward toward workers rather than upward toward shareholders. Regulatory bodies see the gap as an antitrust problem (concentration), but the underlying structure is more complex: even if Vanguard were divided, the remaining entities would still coordinate voting blocks and produce similar outcomes. The Piton perspective (degraded ritual of board governance) reveals that the theater has grown as institutional power has concentrated \u2014 boards deliberate more performatively, not less, because outcomes are predetermined. The Scaffold perspective is absent because there is no sunset clause: unlike temporary regulatory measures, institutional investor governance is structural and permanent under current market conditions.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: This constraint is not a false labeling of pure extraction as coordination (Snare masquerading as Rope) nor a false labeling of pure coordination as extraction. Asset managers genuinely provide coordination functions (pooled capital, standardized governance frameworks, economies of scale) AND they genuinely extract value (concentrated voting, minority shareholder harm, worker wage suppression). The constraint is a true Tangled Rope because: (1) Coordination function is real and structural \u2014 breaking the asset manager oligopoly would fragment capital allocation, reduce market transparency, increase governance compliance costs; (2) Extraction is real and measurable \u2014 minority shareholding returns underperform peer group medians, worker wages lag productivity, strategic decisions prioritize asset manager IRR over stakeholder value; (3) Active enforcement is required \u2014 asset managers must explicitly coordinate voting blocks (Institutional Shareholder Services governance letters, BlackRock engagement programs, Vanguard proxy advisory coordination) to maintain both coordination and extraction; (4) Neither function can be removed without disabling the other. The mandatrophy is avoided because the analytical observer correctly identifies both as present, rather than labeling the constraint as 'just coordination' (which would justify high concentration) or 'just extraction' (which would miss the genuine coordination benefits that asset manager consolidation provides)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "labor_market_monopsony_power",
+      "pension_fund_governance_capture",
+      "index_fund_market_concentration"
+    ],
+    "dual_formulation_note": "Institutional investor governance power decomposes into three structurally distinct constraints: (1) asset manager coordination of capital allocation (Rope, \u03b5\u22480.10), (2) institutional investor concentration of voting control (Snare, \u03b5\u22480.72), (3) worker wage suppression through portfolio cross-ownership (Tangled Rope, \u03b5\u22480.55). This story addresses the hybrid constraint at the market level. The upstream constraint is index fund market concentration (\u03b5\u22480.45, Tangled Rope); the downstream constraints are labor market effects and pension fund capture."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.58
+    }
+  ]
+}

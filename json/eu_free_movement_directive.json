@@ -1,0 +1,212 @@
+{
+  "header": {
+    "constraint_id": "eu_free_movement_directive",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "eufmd"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Free Movement Directive: Labor Mobility and Welfare State Extraction",
+    "topic_domain": "political_economy/immigration_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_skill_workers",
+      "multinational_employers",
+      "service_sector_capitals",
+      "destination_state_economies"
+    ],
+    "victims": [
+      "low_skill_native_workers",
+      "destination_state_welfare_systems",
+      "origin_state_labor_markets",
+      "local_housing_markets"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Low-Skill Native Worker",
+      "comment": "PERSPECTIVE 1: LOW-SKILL NATIVE WORKER (SNARE) \u2014 Faces wage compression and employment displacement with no exit. Cannot relocate to higher-wage zones (immigration restrictions elsewhere), cannot acquire high-skill credentials (education access), cannot exit labor market entirely (welfare supports are below-subsistence). Experiences maximum extraction \u2014 suppression manifests as structural economic immobility despite formal labor market access."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Destination State Welfare System",
+      "comment": "PERSPECTIVE 2: DESTINATION STATE WELFARE SYSTEM (TANGLED ROPE) \u2014 Coordinates labor market integration and social provision for diverse populations (genuine coordination function), but faces asymmetric costs when low-skill migration exceeds fiscal capacity. The system must service migrants' healthcare, education, and income support while receiving tax contributions below the per-capita cost. Constrained by treaty obligation to provide equal treatment; can exit only through political rupture (Brexit, Orban refusals). Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The High-Skill Professional",
+      "comment": "PERSPECTIVE 3: HIGH-SKILL PROFESSIONAL (ROPE) \u2014 Experiences free movement as pure coordination: reduced transaction costs for finding employers across borders, standardized credential recognition, portable pension and benefits. Arbitrage options are abundant (can exit to higher-wage jurisdictions, can return home, can negotiate remote work). Net beneficiary \u2014 experiences constraint as enabling mechanism rather than extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Multinational Employer",
+      "comment": "PERSPECTIVE 4: MULTINATIONAL EMPLOYER (ROPE) \u2014 Free movement solves coordination problem of accessing specialized talent across jurisdictions. Labor arbitrage (hiring low-cost workers from lower-wage member states) is the intended benefit, not hidden extraction. Can exit by relocating operations, by hiring from outside EU, by investing in automation. Net beneficiary experiencing constraint as coordination mechanism for talent distribution."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Origin State Labor Market",
+      "comment": "PERSPECTIVE 5: ORIGIN STATE LABOR MARKET (TANGLED ROPE) \u2014 Coordinates skilled worker mobility and remittance flows (genuine coordination function), but faces extraction through brain drain: highest-earning workers depart, reducing tax base and human capital stock. Constrained by supranational treaty; can exit only through EU withdrawal. Experiences both coordination (remittances, reverse migration) and extraction (permanent skill loss, younger cohorts departing)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Supranational EU Bureaucracy",
+      "comment": "PERSPECTIVE 6: SUPRANATIONAL EU BUREAUCRACY (PITON) \u2014 Free movement directive persists as a core EU identity marker and procedural requirement despite degraded function: the policy's original purpose (reducing transaction costs for skilled mobility in the 1990s) has been achieved; continued enforcement now maintains a performative commitment to 'freedom' while the real labor market coordination happens through multinational employer matching and housing market gatekeeping. Theater ratio reflects that 'free movement' legally exists but is heavily constrained by host-country welfare access rules, housing availability, and credential recognition friction. The directive survives through institutional inertia and symbolic attachment, not because it efficiently solves contemporary labor mobility problems."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Structural Immobility View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / STRUCTURAL IMMOBILITY VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, free movement operates within immutable structural constraints: language barriers, credential non-recognition, housing markets with local network effects, and welfare systems designed around native citizenship. These constraints are features of how human societies organize social provision and belonging \u2014 not contingent policy choices. No directive can overcome them. However, this perspective risks naturalizing what is actually a contingent institutional arrangement: language barriers are permanent only if policy does not invest in multilingual education; credential recognition is blocked only if professional guilds maintain gatekeeping; housing markets constrain only if zoning and speculation are permitted. The mountain classification is diagnostically suspicious \u2014 likely a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "skill_selectivity_mechanism",
+      "question": "Does free movement produce wage depression through low-skill labor supply increase, or does skill selectivity dominate, making the constraint primarily high-skill-favoring coordination?",
+      "resolution_mechanism": "Econometric decomposition of wage effects by skill quintile and migrant skill distribution; comparison of predicted vs observed wage impacts; cross-country variation in migrant skill composition relative to host-country skill demand",
+      "impact": "If low-skill migration dominates: snare classification for low-skill natives justified, extractiveness rises to 0.52+. If high-skill selection dominates: rope classification correct, extractiveness falls to 0.22.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether migration selectivity is high-skill or low-skill"
+    },
+    {
+      "id": "welfare_magnet_causality",
+      "question": "Do migrants disproportionately target high-welfare member states because welfare policies attract them, or do they target any accessible labor market and subsequently discover welfare access constraints?",
+      "resolution_mechanism": "Analysis of pre-migration destination selection patterns vs post-migration welfare receipt; comparison of migrant concentration in high-welfare vs high-wage regions; lagged policy variation to establish causality direction",
+      "impact": "If welfare acts as attractor: suppression and extraction are intentional policy effects. If migrants are rationally responding to labor demand: welfare impact is incidental, and suppression is higher (migrants are trapped despite benefit access). Affects moral framing and classification stability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Welfare as attractor vs incidental impact mechanism"
+    },
+    {
+      "id": "language_credential_barrier_reducibility",
+      "question": "Are language and credential recognition barriers to mobility structural (inherent to how professional knowledge transfers across contexts) or institutional (contingent policy choices that could be reversed)?",
+      "resolution_mechanism": "Comparative analysis of credential recognition frameworks; investment costs for multilingual service provision; pilot programs with streamlined credential recognition; labor market outcomes in jurisdictions with vs without reciprocal credential frameworks",
+      "impact": "If structural: mountain perspective has merit; free movement is inherently limited. If institutional: barriers are contingent policy choices; mountain is false summit. Reshapes whether constraint is immutable or policy-contingent.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Language/credential barriers as structural vs institutional"
+    },
+    {
+      "id": "remittance_extraction_direction",
+      "question": "Do remittance flows from destination to origin states compensate origin states for brain drain, or do they represent insufficient compensation (net extraction from origin)?",
+      "resolution_mechanism": "Human capital accounting: compare remittance flows to estimated lifetime fiscal contribution of departed worker; analyze whether remaining cohorts experience wage increases (benefiting from departure) or labor market deterioration (suffering from skill loss); cross-sectional comparison of origin states with high vs low remittance-to-brain-drain ratios",
+      "impact": "If remittances fully compensate: tangled rope classification correct (coordination + extraction mixed, net ambiguous). If remittances insufficient: origin states are snare victims, extractiveness rises.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Remittance compensation for brain drain adequacy"
+    },
+    {
+      "id": "housing_market_gatekeeping_attribution",
+      "question": "Does immigration pressure on housing markets materially reduce native access to affordable housing, or are housing costs driven by speculation, zoning restrictions, and investment flows independent of migration?",
+      "resolution_mechanism": "Decompose housing price dynamics: isolate migration-driven demand from financial speculation, regulatory changes, and investment flows; cross-country variation in migration and housing inflation; temporal analysis of housing prices relative to migration inflows",
+      "impact": "If migration is primary driver: suppression for low-skill natives includes housing barrier; extractiveness for welfare system includes housing externality. If speculation/zoning dominate: housing barrier is institutional and separable from free movement constraint. Affects whether free movement is root cause or convenient scapegoat.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of housing cost pressure to migration vs other factors"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The EU Free Movement Directive (Directive 2004/38/EC and predecessors) formally guarantees EU citizens the right to reside, work, and access services across member states. It is a cornerstone of the EU's legitimating narrative: the freedom to move is presented as both a coordination mechanism (enabling efficient labor market matching) and a human right. However, the constraint exhibits a complex tangled structure: it genuinely coordinates high-skill professional mobility and multinational employer access to talent, but simultaneously extracts from low-skill native workers through wage compression, from origin-state labor markets through brain drain, and from destination-state welfare systems through fiscal burden. The directive's theater ratio has increased over its 20-year operational lifespan as the performative rhetoric ('freedom of movement') has increasingly diverged from the material reality: movement is formally free, but constrained by language barriers, credential non-recognition, housing market gatekeeping, and welfare access restrictions that the directive does not address. This gap between the formal right and the material barrier is the hallmark of a degraded constraint approaching piton status.",
+    "key_agents": [
+      "Low-skill native workers: Primary victims (powerless/trapped) \u2014 wage compression, employment displacement, no exit options",
+      "High-skill professionals: Primary beneficiaries (institutional/arbitrage) \u2014 reduced labor market transaction costs, credential portability, arbitrage options",
+      "Multinational employers: Beneficiary (institutional/arbitrage) \u2014 labor arbitrage across wage differentials, talent access, exit options abundant",
+      "Destination-state welfare systems: Secondary victim (moderate/constrained) \u2014 fiscal burden of service provision without proportional tax contribution, constrained by treaty",
+      "Origin-state labor markets: Mixed victim-beneficiary (organized/constrained) \u2014 brain drain extraction offset by remittance coordination",
+      "EU supranational bureaucracy: Institutional maintainer (institutional/constrained) \u2014 enforcement through procedural persistence; constrained by political economy of deepening EU integration",
+      "Analytical observer: Risk of false summit (analytical/analytical) \u2014 naturalizing institutional barriers as structural immutability"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate, increasing over time. The directive's initial function (reducing transaction costs for skilled labor mobility) was achieved and contributed real coordination gains in the 1990s-2000s. However, as access has broadened and income migration has become more common, the constraint has accumulated extractive overlay. Low-skill migration creates wage competition effects not present when the directive targeted skilled professionals. The trajectory from 0.18 to 0.38 reflects this accumulation. Suppression (0.42): Moderate-high. Significant barriers to effective free movement exist: language requirements (undocumented but enforced through labor market), credential recognition gatekeeping by professional guilds, housing market exclusion through price and network effects, and welfare access restrictions (right to reside conditional on non-dependency). These barriers are not formally part of the directive but operate as suppression mechanisms in practice. Theater ratio (0.35): Moderate. The directive is substantively functional (not yet piton status) but increasingly performative: the formal right to move exceeds the material ability to move. The trajectory shows theater increasing as real barriers accumulate faster than the directive responds. Claimed type (Tangled Rope): Justified by the presence of genuine coordination (high-skill mobility, multinational hiring efficiency) alongside asymmetric extraction (wage effects on low-skill natives, welfare system burden, brain drain). The constraint requires active enforcement (supranational legal authority) and produces heterogeneous outcomes across agent positions.",
+    "directionality_logic": "Directionality for each perspective is determined by the agent's structural position within the extraction flow. High-skill professionals derive d \u2248 0.15 (beneficiary + arbitrage exit \u2192 negative f(d) \u2192 effective extraction flows toward them). Low-skill natives derive d \u2248 0.85 (victim + trapped exit \u2192 high f(d) \u2192 they experience maximum \u03c7). Destination-state welfare systems derive d \u2248 0.65 (victim + constrained exit \u2192 moderate-high f(d) \u2192 significant extraction). Multinational employers derive d \u2248 0.20 (beneficiary + arbitrage \u2192 low f(d)). Origin states derive d \u2248 0.60 (mixed victim-beneficiary through brain drain offset by remittance \u2192 moderate f(d)). The directionality decomposition reveals that the directive is not neutrally 'free' \u2014 it is structurally biased toward actors with arbitrage options (exit capacity) and against actors with trapped or constrained exits. The coordination function (high-skill labor matching) is real, but the asymmetric extraction is equally real for agents without exit options.",
+    "perspectival_gap": "The constraint demonstrates a perspectival chasm characteristic of asymmetric institutional arrangements. The beneficiary (high-skill professional, multinational employer) experiences Rope: their coordination problem is solved, their exit options abundant. The victim (low-skill native, welfare system) experiences Snare or Tangled Rope: mixing genuine access (the coordination achieved by the directive) with extraction (wage pressure, fiscal burden). The origin state experiences Tangled Rope: genuine benefit from remittance and return migration coordination, but extraction through permanent skill loss. The supranational bureaucracy experiences Piton: the directive persists through institutional attachment to the 'freedom of movement' identity, but the performative content (theater ratio) has increased as real barriers diverge from formal rights. The analytical observer risks seeing Mountain: language and cultural barriers appear immutable, making free movement structurally limited. But this naturalizes what is institutional: language barriers exist only if education policy does not require multilingualism; credential gatekeeping exists only if professional guilds maintain non-recognition; housing access is restricted only if zoning and speculation are permitted. The mountain perspective is a false summit \u2014 it mistakes contingent institutional barriers for structural immutability.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by disaggregating the 'freedom of movement' label into its structural components. The label conflates six distinct claims: (1) low-skill labor mobility (empirically limited by wage effects, credential barriers, and welfare restrictions); (2) high-skill professional mobility (empirically enabled, coordination problem solved); (3) multinational employer labor arbitrage (empirically enabled, major benefit flow); (4) origin-state brain drain (empirically significant extraction); (5) destination-state welfare system fiscal burden (empirically significant, depending on skill composition); (6) supranational institutional legitimation (performative, increasing theater). No single type captures all six. The constraint IS tangled rope from the vantage of the destination-state welfare system: it coordinates labor market integration while extracting fiscal resources from native taxpayers. The constraint IS rope from the vantage of high-skill professionals: pure coordination. The constraint IS snare from the vantage of low-skill natives: extraction with suppressed exit. The constraint IS piton from the vantage of the EU bureaucracy: performative persistence despite degraded function. The mandatrophy is resolved by recognizing that 'free movement' is not a single constraint but a constraint family that the directive treats as unified. Decomposing into separate stories per agent perspective (high-skill labor mobility story \u2248 Rope; low-skill labor story \u2248 Snare; welfare system fiscal story \u2248 Tangled Rope) would yield sharper analysis, but the lived institutional reality is a single undecomposed directive that agents at different positions experience as different types. This is the diagnostic signature of a constraint approaching degradation: the institution persists as one unit while the structural reality has fragmented into multiple incompatible effects."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_welfare_state_fiscal_limits",
+      "eu_credential_recognition_gatekeeping",
+      "origin_state_brain_drain",
+      "housing_market_exclusion_dynamics"
+    ],
+    "dual_formulation_note": "The Free Movement Directive decomposes into a family of structurally distinct constraints when examined through the \u03b5-invariance principle. The high-skill labor mobility function (\u03b5\u22480.08, Rope) is empirically stable and well-established. The low-skill labor dynamics (\u03b5\u22480.52, Snare) represent the extractive mechanism on wage-earning natives. The welfare system fiscal impact (\u03b5\u22480.45, Tangled Rope) is contingent on destination-state welfare generosity and migrant skill composition. These three stories share the upstream EU formal law framework but have different observable mechanisms, different \u03b5 values, and different classification types. The directive unifies them institutionally; structural analysis decomposes them."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.65
+    }
+  ]
+}

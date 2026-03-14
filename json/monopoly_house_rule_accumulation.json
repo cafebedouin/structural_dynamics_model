@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "monopoly_house_rule_accumulation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Monopoly House Rule Accumulation and Game Dynamics Distortion",
+    "topic_domain": "social/recreational_games",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "rule_innovators",
+      "experienced_players"
+    ],
+    "victims": [
+      "new_players",
+      "game_balance",
+      "universal_gameplay"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The New Player",
+      "comment": "PERSPECTIVE 1: NEW PLAYER (SNARE) \u2014 Enters the game with standard published rules but faces accumulated house rules enforced by experienced players. Cannot exit without social cost (refusing to play, being labeled a poor sport). Suppression is high: deviation from house rules faces immediate correction and social pressure. No coordination benefit perceived \u2014 the new player sees only constraint extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Occasional Player",
+      "comment": "PERSPECTIVE 2: OCCASIONAL PLAYER (TANGLED ROPE) \u2014 Participates irregularly enough to question some house rules but committed enough to the social group to enforce them. Constrained by desire to maintain group cohesion. Experiences genuine coordination (shared understanding accelerates play) alongside extraction (house rules often favor established players). Mixed experience \u2014 benefits from rule clarity when playing with the group but bears cost when rules disadvantage them."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Tournament Organizer",
+      "comment": "PERSPECTIVE 3: TOURNAMENT ORGANIZER (ROPE) \u2014 Standardized tournaments use only published rules, explicitly rejecting house rules. Sees house rule accumulation as a coordination problem that threatens inter-group comparability. Can exit the unregulated play context and create new venues with standard rules. Organized agents can collectively enforce rule standardization. Classification reflects genuine coordination function without asymmetric extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Rule Standardizer",
+      "comment": "PERSPECTIVE 4: RULE STANDARDIZER (SCAFFOLD) \u2014 Individual player introduces a written house rule sheet at game start with sunset clause: 'We'll use these house rules for tonight; next week we can revise or return to published rules.' Temporary enforcement framework. Low theater because the rule constraints are explicit and revisable. Suppression is moderate because the sunset is agreed-upon in advance. Coordination benefit is clear (everyone knows what rules apply). Sunset clause is the diagnostic feature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Family Game Night Tradition",
+      "comment": "PERSPECTIVE 5: FAMILY GAME NIGHT TRADITION (PITON) \u2014 Multi-generational family game night has accumulated layers of house rules ('house money doesn't earn interest', 'Free Parking is a card draw', 'you can trade properties mid-mortgage'). Original function (family bonding and skill development) is now subordinated to enforcing the rule tradition itself. Theater ratio is high: much of the interaction is maintaining consistency with past games rather than optimizing gameplay. Rules persist through institutional inertia \u2014 family members enforce them because 'that's how we've always played,' not because the rules serve a current coordination need. Piton classification derives from theater_ratio \u2265 0.70 despite low extractiveness."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Game Mechanics View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / GAME MECHANICS VIEW (MOUNTAIN) \u2014 From a civilizational perspective analyzing game design principles, Monopoly's extraction dynamics are inherent to the ruleset itself: the game is explicitly designed for early leader advantage (rapid capital accumulation) and late-game elimination (players dropping out). This is not a house rule accumulation problem but a fundamental property of the game system. The constraint is unchangeable without redesigning the game entirely. However, this perspective risks naturalizing what is actually a contingent design choice \u2014 the engine will flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intentional_vs_accidental_accumulation",
+      "question": "Are house rules accumulated deliberately to create strategic advantage or incidentally through tolerance of player suggestions?",
+      "resolution_mechanism": "Historical analysis of rule proposal origins; tracking which player groups introduced which rules; comparison of rule benefit distribution to original proposers vs established players",
+      "impact": "If intentional: constraint is Snare (deliberate extraction mechanism). If accidental: constraint is Piton (degradation through drift). Different mechanisms require different interventions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether house rule accumulation is deliberate strategy or institutional drift"
+    },
+    {
+      "id": "coordination_benefit_reality",
+      "question": "Do accumulated house rules actually improve gameplay coordination and enjoyment or do they primarily serve to exclude new players and lock in established player advantages?",
+      "resolution_mechanism": "Survey of new vs experienced players on rule comprehension and gameplay satisfaction; analysis of game duration and elimination timing under house rules vs standard rules; measurement of new player retention across sessions",
+      "impact": "If genuine coordination: classification should weight Rope more heavily. If primarily exclusionary: classification should weight Snare more heavily. Determines whether the constraint is justified or exploitative.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether house rules provide genuine coordination benefits or serve primarily as exclusion mechanism"
+    },
+    {
+      "id": "published_rule_accessibility",
+      "question": "Do new players have easy access to and understanding of published Monopoly rules before joining, and is this information offered proactively by experienced players?",
+      "resolution_mechanism": "Observation of rule explanation protocols; tracking whether published rules are referenced or mentioned; measurement of time and complexity difference between explaining published rules vs accumulated house rules",
+      "impact": "If published rules are accessible and explained: suppression metric should be lower (players could theoretically reference standard rules). If deliberately obscured: suppression metric should be higher (players are systematically denied the baseline). Affects the scale of the extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Accessibility and proactive disclosure of published rules to new players"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Monopoly house rule accumulation creates a structural constraint on gameplay equity and accessibility that exhibits classic tangled-rope dynamics: genuine coordination functions (shared rule understanding, accelerated gameplay setup) coexist with asymmetric extraction (accumulated rules favor experienced players, exclude newcomers, lock in early advantage). The constraint emerges through incremental rule additions over time, with each addition justified as clarification or enhancement. The accumulated effect is a rule corpus that bears little resemblance to published rules, functions as an in-group barrier, and systematically disadvantages players unfamiliar with the group's specific history. Theater ratio rises significantly over time as groups spend increasing effort enforcing consistency with prior games rather than playing the game itself. The constraint demonstrates how coordination mechanisms can degrade into pure extraction through institutional drift.",
+    "key_agents": [
+      "New Players: Primary victims (powerless/trapped) \u2014 face accumulated rules with no prior context; cannot exit without social cost",
+      "Experienced Players: Primary beneficiaries (organized/arbitrage) \u2014 benefit from early advantage locks; can navigate rule complexity without cognitive load",
+      "Rule Innovators: Secondary beneficiaries (moderate/constrained) \u2014 propose new rules; often benefit from the rule they introduce even if subsequent players do not",
+      "Casual/Occasional Players: Mixed position (moderate/constrained) \u2014 participate regularly enough to enforce rules but not frequently enough to optimize play; experience both coordination benefit and extraction cost",
+      "Tournament Organizers: Exit architects (organized/mobile) \u2014 create standardized rule venues; demonstrate that rule standardization does not eliminate coordination",
+      "Game Balance System: Primary victim (powerless/trapped) \u2014 abstract property bearing extractive load; the game's designed dynamics are progressively obscured by accumulated modifications"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The house rules systematically favor players with prior game experience. New players begin from disadvantage through rule unfamiliarity alone; the asymmetric information creates effective extraction that persists across games until the new player internalizes the group's specific rules. The extractiveness is not as high as a pure snare (0.66+) because rules are eventually learnable and some rules may genuinely improve gameplay clarity. Suppression (0.58): Moderate-high. Barriers to exit include social pressure (refusing to play is seen as obstruction), normalization of the rules (they are presented as 'how we play' rather than 'a version of Monopoly'), and the cognitive burden of simultaneously learning published rules and the group's modifications. Newcomers cannot easily distinguish core gameplay from local variants. Theater ratio (0.68): High. Significant portions of game interaction are devoted to rule clarification, dispute resolution, and consistency maintenance rather than strategic play. Experienced players spend cognitive effort tracking rule state; new players spend cognitive effort learning rules rather than playing strategically. As rule complexity increases, theater ratio rises because the overhead of tracking divergence from standard rules increases.",
+    "directionality_logic": "Beneficiaries (experienced players, rule innovators) derive clear benefit from house rule accumulation: they play from a position of advantage and relative information symmetry. Their d value is low (~0.15-0.25) reflecting beneficiary status and arbitrage exit options (they can always play under standard rules elsewhere or create new groups). Victims (new players, game balance) derive extraction: they bear the cost of asymmetric information and locked-in disadvantage. Their d value is high (~0.85-0.95) reflecting trapped exit options and no ability to reverse accumulated rules mid-session. Occasional players occupy the middle: they enforce rules (beneficiary behavior, low d) but are also subject to them (victim behavior, high d). The Tangled Rope classification emerges from the coexistence of genuine coordination (rules being known collectively accelerates setup and play) with asymmetric extraction (the rules chosen favor established players). The engine derives d from beneficiary/victim declarations: experienced players as beneficiaries with arbitrage exit produce negative \u03c7 (they benefit); new players as victims with trapped exit produce high \u03c7 (they extract costs).",
+    "perspectival_gap": "The perspectival gap is substantial. Experienced players see coordination (Rope) \u2014 they perceive house rules as clarifications that make games run smoothly. New players see extraction (Snare) \u2014 they perceive rules as barriers. Occasional players see mixed dynamics (Tangled Rope) \u2014 they experience both coordination (rule stability across sessions) and extraction (rules sometimes disadvantage them). The tournament organizer sees the accumulation as a coordination failure solvable by standardization (Rope or Scaffold). The family tradition sees the rules as identity markers (Piton) \u2014 maintaining consistency with past games is more important than optimizing gameplay. The analytical observer risks seeing immutable game design (Mountain) but this false summit misses the contingent human choices that produced the rule divergence. The gap reveals that what appears as coordination from one position appears as exclusion from another.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that house rule accumulation contains a genuine coordination function (players knowing the rules in advance accelerates play, reduces mid-game disputes) which is authentic and valuable. However, the rule accumulation mechanism systematically biases the rule corpus toward complexity and toward rules that favor early/experienced players. The constraint avoids mislabeling by preserving both dimensions: it is Tangled Rope not Snare because coordination genuinely occurs; it is not pure Rope because the extraction asymmetry is structural and systematic. The theater ratio rising over time (0.35 \u2192 0.68) indicates that the coordination function is degrading \u2014 as rules accumulate, groups spend more effort maintaining rule consistency and less effort playing strategically. This lifecycle suggests the constraint could be addressed through periodic rule resets (Scaffold logic) or explicit rule standardization (returning to published rules as the coordinating mechanism)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "game_mechanic_power_scaling",
+      "social_norm_enforcement_dynamics"
+    ]
+  },
+  "directionality_overrides": []
+}

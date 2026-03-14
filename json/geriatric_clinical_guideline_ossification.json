@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "geriatric_clinical_guideline_ossification",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gcgo"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Geriatric Clinical Guideline Ossification",
+    "topic_domain": "healthcare_policy/geriatric_medicine",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "guideline_maintaining_institutions",
+      "liability_risk_minimizers"
+    ],
+    "victims": [
+      "elderly_patients_with_comorbidities",
+      "front_line_clinicians",
+      "individualized_treatment_innovation"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Elderly Patient with Complex Comorbidities",
+      "comment": "PERSPECTIVE 1: ELDERLY PATIENT (SNARE) \u2014 Trapped by rigid protocols that were designed for simpler cases. A patient with hypertension, mild cognitive impairment, atrial fibrillation, and renal disease receives guideline-mandated polypharmacy that guidelines themselves acknowledge may be inappropriate for this exact combination. Exit is impossible: refusing treatment violates care standards; questioning guidelines is framed as rejecting evidence-based medicine. Maximum extraction \u2014 receives medically suboptimal treatment justified by institutional need to follow protocols."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Bedside Clinician",
+      "comment": "PERSPECTIVE 2: BEDSIDE CLINICIAN (TANGLED ROPE) \u2014 Constrained by malpractice liability and institutional credentialing: deviation from guidelines creates documentation burden, peer review risk, and potential legal exposure. But guidelines also provide genuine coordination benefit: standardized approaches enable care continuity, reduce decision fatigue, and provide defensive documentation. The constraint is both coordination (guidelines work for typical patients) and extraction (guidelines force suboptimal care for atypical patients)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Guideline-Maintaining Institution",
+      "comment": "PERSPECTIVE 3: GUIDELINE-MAINTAINING INSTITUTION (ROPE) \u2014 Hospital systems, professional societies, and accreditation bodies benefit from standardized protocols: they reduce liability exposure, simplify training, enable efficiency metrics, and create institutional identity around 'evidence-based practice.' Experiences guidelines primarily as coordination tool. Can exit whenever they choose (updating guidelines is technically feasible); they choose not to because the status quo generates institutional value."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Geriatric Medicine Reform Movement",
+      "comment": "PERSPECTIVE 4: GERIATRIC MEDICINE REFORM (SCAFFOLD) \u2014 Organized agents (geriatricians, patient advocacy groups, health services researchers) see guideline ossification as a temporary institutional coordination failure with a sunset: deprescribing protocols, shared decision-making frameworks, and individualized care models are building alternative approaches. These alternatives explicitly permit guideline deviation with documented patient preference. This is structured as a scaffold \u2014 organizing new coordination mechanisms while constraining the old ones to sunset."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Guideline-Deviation Ritual",
+      "comment": "PERSPECTIVE 5: GUIDELINE-DEVIATION RITUAL (PITON) \u2014 When clinicians must deviate from guidelines, institutions require explicit documentation, ethics committee review, or special exemption processes. This ritual is largely performative: it verifies the deviation was deliberate, not negligent, but does not actually improve decision-making. The ritual persists through inertia \u2014 guideline-following theater maintains institutional legitimacy while the underlying coordination function has atrophied. Theater ratio (0.68) reflects that much institutional activity around guidelines is defensive documentation rather than clinical improvement."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalization View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURALIZATION VIEW (MOUNTAIN) \u2014 From a civilizational perspective, this view naturalizes guideline rigidity as inherent to medicine: standardization is necessary for population health, individual variation creates chaos, and rigorous evidence-based medicine requires defined protocols. This perspective risks treating the constraint as immutable law. However, the structural data reveals this as a false summit \u2014 geriatric complexity is not new, deprescribing evidence is accumulating, and alternative coordination mechanisms exist. The 'inherent to medicine' framing naturalizes what is actually a contingent institutional choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "guideline_update_frequency_threshold",
+      "question": "What guideline update frequency would convert ossified protocols into adaptive coordination?",
+      "resolution_mechanism": "Compare clinical outcomes and deprescribing rates in systems with annual vs triennial vs decennial guideline review cycles; track lag between research publication and guideline incorporation",
+      "impact": "If threshold < 2 years: ossification is primarily institutional inertia (Scaffold is real). If threshold > 5 years: ossification is structural feature of guideline systems (constraint more severe than measured).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Guideline update frequency threshold for adaptive coordination"
+    },
+    {
+      "id": "deprescribing_evidence_threshold",
+      "question": "At what level of evidence does deprescribing become guideline-endorsed rather than guideline-deviant?",
+      "resolution_mechanism": "Historical analysis of deprescribing research publication rates and citation by guideline committees; comparison with thresholds used for prescribing recommendations",
+      "impact": "If asymmetric (higher threshold for deprescribing): institutional bias toward status quo extraction is confirmed. If symmetric: deprescribing is genuinely constrained by evidence quality, not institutional gatekeeping.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Evidence threshold for deprescribing endorsement vs prescribing endorsement"
+    },
+    {
+      "id": "shared_decision_making_implementation_feasibility",
+      "question": "Can shared decision-making frameworks be operationalized in bedside practice without generating unsustainable documentation burden or liability risk for clinicians?",
+      "resolution_mechanism": "Pilot implementation studies tracking clinician time burden, liability insurance outcomes, and patient satisfaction in guideline-flexible care models; comparison with traditional protocol-driven care",
+      "impact": "If feasible: scaffold sunset is structurally plausible and constraint will degrade. If infeasible: bedside clinicians remain constrained regardless of institutional policy shifts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of shared decision-making as guideline alternative"
+    },
+    {
+      "id": "guideline_committee_composition_bias",
+      "question": "Does guideline committee composition systematically exclude geriatricians, elderly patient advocates, or complexity specialists, creating groupthink toward simple protocols?",
+      "resolution_mechanism": "Analysis of guideline authorship; comparison of comorbidity-adjusted recommendations with single-disease recommendations; qualitative interviews with excluded specialists",
+      "impact": "If confirmed: guideline ossification is partly a selection bias problem (fixable through committee reform). If absent: ossification is genuine coordination constraint, not institutional capture.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Guideline committee composition and complexity representation bias"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Geriatric clinical guideline ossification represents a constraint where coordination mechanisms designed for population-level disease management become extractive when applied rigidly to complex elderly patients with multiple comorbidities, cognitive limitations, and competing care goals. Guidelines originally emerged as genuine coordination solutions: they standardized care, reduced variation, enabled training, and aligned incentives toward evidence-based treatment. However, over time, the theatrical elements (defensive documentation, institutional gatekeeping of deviation, malpractice liability systems) have accumulated while the genuine coordination function has ossified. Bedside clinicians increasingly follow guidelines not because they optimize patient outcomes but because deviating creates documentation burden and liability risk. Elderly patients receive medically inappropriate combinations of medications justified by protocol adherence. Guideline-maintaining institutions benefit from simplified liability exposure and standardized operations. Reform movements are building alternative coordination mechanisms (shared decision-making, deprescribing protocols, individualized care frameworks) with explicit permission for guideline deviation. The constraint exhibits all six DR types from different structural positions, making it a diagnostic exemplar for how institutional inertia converts coordination into extraction.",
+    "key_agents": [
+      "Elderly Patients with Comorbidities: Primary victims (powerless/trapped) \u2014 receive guideline-mandated polypharmacy and protocols designed for simpler cases; cannot exit or refuse without violating care standards",
+      "Bedside Clinicians: Secondary victims/mixed (moderate/constrained) \u2014 genuinely enabled by guidelines but also constrained by liability and documentation requirements; can deviate but at cost",
+      "Guideline-Maintaining Institutions: Primary beneficiaries (institutional/arbitrage) \u2014 hospitals, professional societies, accreditation bodies that benefit from standardized protocols and simplified liability exposure",
+      "Malpractice Liability System: Enforcer (institutional/arbitrage) \u2014 creates defensive documentation incentives that ossify guideline adherence; can exit whenever insurance/legal regimes change",
+      "Geriatric Medicine Reform Movement: Organized challengers (organized/constrained) \u2014 geriatricians, patient advocates, health services researchers building alternative coordination mechanisms with scaffold logic",
+      "Guideline Committees: Institutional gatekeepers (institutional/arbitrage) \u2014 control what counts as evidence for guideline updates; benefit from slow update cycles"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts substantial value from elderly patients (inappropriate polypharmacy, cognitive burden, medication side effects) and from clinicians (documentation burden, moral stress from suboptimal care). However, extraction is not maximal \u2014 guidelines do provide real coordination benefits for typical patients, and the asymmetry is partly justified by genuine first-mover coordination problems. The increased measurement from 0.35 to 0.58 reflects theater accumulation: defensive documentation, malpractice gatekeeping, and guideline committee inertia have grown. Suppression (0.65): High. Significant barriers to individualized care include malpractice liability (guideline deviation is high-risk), institutional credentialing (deviation triggers peer review), social norms (evidence-based medicine is culturally mandatory), and information asymmetry (patients often don't know alternatives exist). Barriers are partially material (legal liability) and partially internalized (clinicians internalize 'evidence-based' as moral imperative). Theater ratio (0.68): High. Increasing proportion of guideline activity is defensive: documentation of guideline adherence as liability protection, review rituals that verify deviation was deliberate rather than negligent, institutional gatekeeping of what counts as evidence. Theater has grown over the interval as liability systems have tightened.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. The elderly patient with comorbidities experiences pure extraction (Snare) \u2014 receives medically inappropriate treatment justified by protocol. The bedside clinician experiences mixed coordination and extraction (Tangled Rope) \u2014 genuinely helped by guidelines for typical patients but harmed by rigidity for complex patients. The guideline-maintaining institution experiences pure coordination (Rope) \u2014 protocols work as intended to standardize care and manage liability. The reform movement experiences a solvable coordination problem with a sunset (Scaffold) \u2014 alternative mechanisms are being built. The guideline-deviation ritual appears degraded (Piton) \u2014 defensive documentation persists through inertia. The civilizational analytical observer risks naturalizing the constraint as inherent to medicine (false summit Mountain). The perspectival gap reveals that 'evidence-based medicine' is genuinely coordinating at population level while extractively constraining at individual level, and that institutional inertia (theater accumulation, committee gatekeeping) has widened the gap between coordination and extraction.",
+    "directionality_logic": "Directionality values flow from structural position and exit options. Elderly patients with comorbidities face trapped exit (high d \u2192 high f(d) \u2192 high \u03c7 experienced extraction) because they cannot refuse treatment or exit the healthcare system without bearing catastrophic risk. Bedside clinicians face constrained exit: they can deviate from guidelines, but at cost of documentation burden and liability risk (moderate d \u2192 moderate f(d)). Guideline-maintaining institutions face arbitrage exit: they can update guidelines whenever they choose; they persist in ossified protocols because status quo generates institutional value (low d \u2192 low or negative f(d)). The reform movement faces constrained exit: building alternative coordination mechanisms requires organizing against institutional inertia (moderate d). The directionality computation automatically derives these from beneficiary/victim declarations and exit options.",
+    "mandatrophy_analysis": "DIAGNOSTIC EXEMPLAR: This constraint resolves the mandatrophy by revealing that institutional coordination mechanisms can generate genuine two-sided value (guidelines improve care for typical patients) while simultaneously extracting from patients with atypical complexity. The constraint is NOT 'guidelines are bad' but 'one-size-fits-all coordination extracts from the margin.' The analytical observer's false summit (naturalizing guidelines as inherent to medicine) masks the contingent institutional choices (committee composition, update frequency, deprescribing evidence thresholds) that convert coordination into extraction. The mandatrophy is resolved by showing: (1) the coordination function is real (Rope perspective is accurate), (2) the extraction is real (Snare perspective is accurate), (3) both occur in the same institutional mechanism, (4) the extraction is not inherent but contingent on institutional design choices (theater accumulation, guideline committee gatekeeping, malpractice liability systems), and (5) alternative coordination mechanisms exist that reduce extraction while preserving coordination (scaffold perspective is structurally plausible). The constraint persists not because one-size-fits-all coordination is necessary, but because the current mechanism distributes power in ways that benefit institutions while harming complex patients."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "polypharmacy_induced_iatrogenesis",
+      "deprescribing_evidence_asymmetry",
+      "malpractice_liability_defensive_medicine"
+    ],
+    "dual_formulation_note": "Guideline ossification decomposes into three related constraints: (1) guideline_clinical_guideline_ossification (this story, \u03b5=0.58, Tangled Rope) captures the institutional coordination-extraction hybrid; (2) polypharmacy_induced_iatrogenesis (\u03b5=0.72, Snare) captures the medical harm specifically from guideline-mandated polypharmacy in elderly patients; (3) deprescribing_evidence_asymmetry (\u03b5=0.42, Tangled Rope) captures the structural asymmetry in evidence thresholds for prescribing vs deprescribing, which enables guideline ossification. Each has distinct base_properties and perspectives. They are linked via network.affects_constraints because guideline ossification enables polypharmacy-induced harm and is enabled by deprescribing evidence asymmetry."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

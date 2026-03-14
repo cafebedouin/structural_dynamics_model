@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "halting_problem_incomputability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "halt"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Halting Problem Incomputability",
+    "topic_domain": "theoretical_computer_science/computability",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.04
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Programmer Seeking Universal Verification",
+      "comment": "PERSPECTIVE 1: PROGRAMMER SEEKING UNIVERSAL VERIFICATION (MOUNTAIN) \u2014 No algorithm can determine whether an arbitrary program halts. This constraint is binding across all computational systems and all programming contexts. The programmer cannot exit this limit; it is a structural property of computability itself, not a policy choice or institutional arrangement."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "label": "The Automated Verification System Designer",
+      "comment": "PERSPECTIVE 2: VERIFICATION SYSTEM DESIGNER (MOUNTAIN) \u2014 Any attempt to build a general-purpose halting detector necessarily fails. The constraint is not imposed externally but emerges from the logical structure of computation. Trade-offs exist (time limits, heuristic analysis, restricted domains), but these are workarounds, not escapes. The designer faces an unchangeable computational reality."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "label": "The Software Verification Industry",
+      "comment": "PERSPECTIVE 3: SOFTWARE VERIFICATION INDUSTRY (MOUNTAIN) \u2014 The industry cannot sell a universal halting detector because none can exist. This is not a market failure or opportunity \u2014 it is a logical impossibility. Companies may profit from bounded heuristics (static analysis, model checking), but these are domain-specific solutions to the constraint, not solutions to the constraint itself. The incomputability remains."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a logical and mathematical perspective, the halting problem is provably uncomputable via the reduction from the Entscheidungsproblem and diagonalization arguments. The constraint is invariant across all observables and measurement methodologies. No reframing can eliminate the incomputability; it is a fundamental limit on what computation can express."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "oracle_machine_exceptionality",
+      "question": "Do oracle machines (hypothetical computational devices with access to an external halting oracle) represent a genuine escape from the constraint or merely a definitional reframing?",
+      "resolution_mechanism": "Philosophical and formal analysis: oracle machines can solve the halting problem by definition, but they violate the Church-Turing thesis (they are not Turing-computable). The question is whether this is a meaningful distinction or a semantic game.",
+      "impact": "If oracle machines are genuine: the constraint applies only to standard Turing computation, not to all possible computation. If definitional reframing: the constraint is universal and inescapable within any constructive framework.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether oracle machines represent genuine escape or definitional reframing"
+    },
+    {
+      "id": "practical_bounded_halting_sufficiency",
+      "question": "Are bounded halting-detection methods (time limits, resource caps, heuristic analysis) sufficient for all practical software verification needs, such that the theoretical incomputability becomes irrelevant?",
+      "resolution_mechanism": "Empirical survey of real-world verification scenarios: what fraction of actual software bugs can be caught by bounded analysis without requiring universal halting detection? Cost-benefit analysis of heuristic methods vs the theoretical limit.",
+      "impact": "If sufficient: the constraint is theoretically absolute but practically circumvented. If insufficient: the theoretical incomputability remains an operational problem for critical systems (medical devices, financial infrastructure).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether bounded halting detection suffices for practical needs"
+    },
+    {
+      "id": "alternative_computational_models_universality",
+      "question": "Do alternative computational models (lambda calculus, rewriting systems, cellular automata) face the same halting incomputability, or are there models where halting is decidable?",
+      "resolution_mechanism": "Formal proof that all Turing-complete systems face halting undecidability; identification of whether any useful computational model escapes this limit.",
+      "impact": "If universal: the constraint holds across all sufficiently powerful computational formalisms. If escapable: halting decidability is possible in restricted models, and the constraint's scope can be narrowed.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether halting incomputability holds across all Turing-complete models"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The halting problem is the classical incomputability result in theoretical computer science: no general algorithm can determine whether an arbitrary Turing machine (or equivalent computational system) will eventually terminate or run forever. Turing proved this via reduction from the Entscheidungsproblem using a diagonalization argument. The constraint is that this incomputability is not a limitation of current algorithms or computing technology \u2014 it is a logical necessity inherent to computation itself. No amount of engineering, optimization, or alternative design can produce a universal halting detector. This is a canonical example of a Mountain constraint: it emerges naturally from mathematical structure, exhibits complete resistance to circumvention, and applies universally across all Turing-complete computational systems.",
+    "key_agents": [
+      "Programmers and Software Developers: Powerless/trapped \u2014 cannot escape the constraint; must work within or around it",
+      "Verification System Designers: Moderate/constrained \u2014 can build bounded methods but cannot achieve universality",
+      "Software Verification Industry: Institutional/arbitrage \u2014 profits from domain-specific solutions but cannot escape the underlying limit",
+      "Theoretical Computer Science Community: Analytical/analytical \u2014 documents and reasons about the constraint's necessity and universality"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Extremely low. The halting problem does not extract from agents \u2014 it is a pure mathematical limit. No actor benefits from the incomputability; it constrains all parties symmetrically. It does not favor one agent over another or redistribute resources. Suppression (0.02): Minimal. The constraint does not require active enforcement or suppression of alternatives. The incomputability is self-evident from formal proof, not sustained by coercion or institutional maintenance. Workarounds (bounded checking, heuristic analysis) remain available; they simply do not solve the universal problem. Theater ratio (0.05): Negligible. The halting problem is not maintained through performative activity. Its truth is established through pure mathematical argument (Turing's diagonalization), not through repeated ritual or institutional theater. Accessibility collapse (0.92): Extremely high. No one can access a universal halting detector \u2014 the mathematical proof demonstrates that it cannot exist. Resistance (0.04): Negligible. There is no resistance to the constraint because there is no alternative pathway. Agents do not resist the halting problem; they work around it through bounded methods.",
+    "perspectival_gap": "This constraint shows zero perspectival gap \u2014 all agents classify it identically as Mountain. The programmer, the system designer, the industry executive, and the theoretical analyst all perceive the same unalterable limit. This uniformity is diagnostic of a true natural law constraint. No agent experiences the halting problem as extractive (Snare), as coordination (Rope), or as temporary (Scaffold). The absence of perspectival disagreement indicates that the constraint is not a social arrangement or institutional artifact; it is a feature of the mathematical structure of computation itself.",
+    "directionality_logic": "This constraint has no beneficiaries and no victims because it does not extract or coordinate. Directionality is not applicable \u2014 all agents face the same logical boundary. The constraint emerges naturally and applies symmetrically: everyone (programmers, systems, industries, theorists) encounters the same incomputability. This is a rare case where the base properties fully determine the classification without need for beneficiary/victim analysis or directionality computation.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy trivially: all perspectives produce Mountain, confirming that the classification is not observer-dependent or framing-sensitive. The theorem that no universal halting detector exists is true from all observational positions. There is no mandatrophy \u2014 the constraint's type is invariant. This exemplifies how Mountain constraints behave in the Deferential Realism framework: they are logically and mathematically immutable, independent of political framing or institutional power. The halting problem proves this not through institutional weight but through formal proof."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "godel_incompleteness_undecidability",
+      "entscheidungsproblem_undecidability"
+    ],
+    "dual_formulation_note": "The halting problem is a specific instantiation of the broader undecidability family in mathematical logic. G\u00f6del's Incompleteness Theorem and Church's Entscheidungsproblem result are logically related \u2014 all three establish limits on what can be computed or proven. The halting problem can be derived from or mapped to the Entscheidungsproblem; it also has connections to computational universality. These are distinct constraints with different formulations but overlapping mathematical structure."
+  }
+}

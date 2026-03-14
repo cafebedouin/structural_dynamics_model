@@ -1,0 +1,215 @@
+{
+  "header": {
+    "constraint_id": "cryptocurrency_mining_centralization",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "crypto_mining"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Cryptocurrency Mining Centralization",
+    "topic_domain": "economic/technology/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_mining_pools",
+      "asic_manufacturers",
+      "mining_farm_operators"
+    ],
+    "victims": [
+      "protocol_decentralization",
+      "small_individual_miners",
+      "network_security_baseline"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Individual Miner",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL MINER (SNARE) \u2014 Solo mining is economically unviable; difficulty adjustment and variance guarantee years of zero rewards. Trapped by sunk equipment costs, electricity dependencies, and pool-enforced reward rules. Maximum extraction: the individual can join a pool (abdicate hash power) or remain uncompetitive. No meaningful exit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Protocol Decentralization (Network Layer)",
+      "comment": "PERSPECTIVE 2: PROTOCOL DECENTRALIZATION (TANGLED ROPE) \u2014 Mining centralization violates the original design principle of distribution but provides genuine coordination: pooled mining solves variance, enabling smaller participants to receive predictable rewards. Yet this coordination is embedded in asymmetric extraction \u2014 pools take fees (typically 1-3%) and exercise social influence over transaction inclusion policy. The constraint provides coordination with enforced extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Large Mining Pools",
+      "comment": "PERSPECTIVE 3: LARGE MINING POOLS (ROPE) \u2014 Benefit from network effects: larger pools have lower variance, attracting hash power, reducing variance further. Pools solve the coordination problem of variance and payment distribution. Beneficiaries experiencing the constraint as pure coordination \u2014 they are solving a real problem (variance) while capturing legitimate coordination rents."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Protocol Layer Designers (Layer 2 & Alternative Consensus)",
+      "comment": "PERSPECTIVE 4: PROTOCOL DESIGNERS / LAYER 2 (SCAFFOLD) \u2014 Organized agents building alternatives: staking systems reduce mining centralization (Ethereum PoS), layer 2 solutions (Lightning, Rollups) reduce on-chain throughput pressure, and alternative consensus mechanisms distribute security differently. These have sunset logic: if staking or sharding mature, mining centralization loses its lock on security. Current suppression moderate because alternatives are partial; exits becoming visible."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "ASIC Manufacturer Duopoly",
+      "comment": "PERSPECTIVE 5: ASIC MANUFACTURER DUOPOLY (PITON) \u2014 Bitmain and Antminer effectively control mining hardware innovation. The constraint between manufacturers and miners is degraded inertia: miners feel locked to whatever chips manufacturers supply because switching costs and obsolescence cycles are predictable, yet the relationship is performative rather than functionally essential. Alternative consensus mechanisms threaten the entire ASIC ecosystem. Theater is maintained through marketing and release cycles."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Mining Farm Operators (Institutional Position)",
+      "comment": "PERSPECTIVE 6: MINING FARM OPERATORS (TANGLED ROPE) \u2014 Institutional beneficiaries constrained by electricity costs and geographic advantages. Benefits from pooled mining coordination and network effects. Simultaneously constrained by supply chain monopolies (ASIC manufacturers), difficulty adjustments that force continuous equipment upgrades, and regulatory fragmentation (electricity policy varies by jurisdiction). Active enforcement of extraction through sunk capital requirements."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Consensus Security Perspective)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER \u2014 CONSENSUS SECURITY VIEW (SNARE) \u2014 From a civilization-scale view, mining centralization creates consensus vulnerability. A small number of pools (3-5) can collude to fork the chain or censor transactions. The constraint is not immutable law but institutional architecture; however, the analytical observer notes that without mining or mining-like mechanisms, distributed consensus becomes intractable. The snare is structural: mining must exist, and mining naturally centralizes under PoW. This is not a false summit but a genuine dilemma."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "mining_pool_extractiveness_boundary",
+      "question": "At what fee and behavioral threshold does a mining pool transition from coordination service (legitimate rent) to extractive monopoly (unfair taking)?",
+      "resolution_mechanism": "Economic analysis of pool fee evolution; correlation between fee level and hash power concentration; comparison of pool fees to infrastructure costs (servers, bandwidth, payment processing); surveys of miner satisfaction and switching behavior.",
+      "impact": "If boundary < 2%: most current pools are extractive. If boundary > 5%: current centralization is largely justified as coordination rent. Classification of tangled_rope vs snare depends on this boundary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for mining pool fee extractiveness"
+    },
+    {
+      "id": "asic_manufacturer_moat_sustainability",
+      "question": "Is ASIC manufacturing durably concentrated (durable competitive advantage) or contingently so (historical accident + network effects that could be disrupted)?",
+      "resolution_mechanism": "Technical analysis of ASIC design complexity; patent landscape review; historical analysis of competitive entries (Canaan, Innosilicon, others); correlation between difficulty adjustments and manufacturer market share changes.",
+      "impact": "If durable: ASIC concentration is a structural feature of PoW, supporting piton/snare classifications. If contingent: the concentration is institutional capture awaiting disruption, supporting scaffold perspective.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "ASIC manufacturer competitive moat durability"
+    },
+    {
+      "id": "protocol_decentralization_real_or_rhetorical",
+      "question": "Is protocol decentralization (node distribution) a functional feature or a rhetorical goal that mining centralization undermines?",
+      "resolution_mechanism": "Analysis of node count evolution; correlation between mining centralization and full node reduction; empirical study of whether node count affects transaction censorship resistance or chain forking dynamics.",
+      "impact": "If functional: mining centralization genuinely violates original design, supporting snare/tangled_rope from protocol perspective. If rhetorical: decentralization is marketing, and mining concentration is the actual design equilibrium.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether protocol decentralization is functionally essential"
+    },
+    {
+      "id": "staking_as_genuine_alternative",
+      "question": "Do proof-of-stake systems (Ethereum, future Bitcoin alternatives) actually solve mining centralization or recreate it with different mechanics (validator concentration, stake delegation)?",
+      "resolution_mechanism": "Comparative analysis of validator concentration in PoS systems; empirical measurement of delegation patterns; assessment of whether PoS eliminates the variance problem that drives PoW pooling.",
+      "impact": "If genuine solution: scaffold perspective confirmed \u2014 alternative consensus provides sunset path. If recreates centralization: mining centralization persists in different form, reducing sunset likelihood.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether proof-of-stake eliminates mining-style centralization"
+    },
+    {
+      "id": "individual_miner_viability_threshold",
+      "question": "At what hardware cost / difficulty level could solo mining become viable for meaningful participant sets (>1% of network)?",
+      "resolution_mechanism": "Economic modeling: difficulty scaling vs hardware cost evolution; simulation of alternative consensus mechanisms with different variance profiles; historical analysis of periods when solo mining was viable.",
+      "impact": "If threshold < $10k USD: pool centralization is policy choice, not inevitability (snare classification supported). If threshold > $100k+: mining centralization is inherent to PoW (structural rather than extractive).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Economic viability threshold for individual mining"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "Cryptocurrency mining centralization is a structural tension between the protocol's design goal (distributed consensus via decentralized mining) and the natural equilibrium of proof-of-work systems (centralized pooling due to variance reduction and economic efficiency). The constraint embeds genuine coordination (pooled mining solves the variance problem that makes solo mining economically unviable) alongside extractive asymmetry (pools capture fees and influence transaction policy; equipment manufacturers capture technological rents; large farm operators exploit geographic electricity advantages). The extractiveness has increased over the measurement interval (0.35 \u2192 0.58) as difficulty scaling and equipment costs pushed individual participation toward zero, while theater has remained low (0.30 \u2192 0.48) because the coordination function is real: pools genuinely do solve variance. This makes the constraint a clear tangled_rope rather than snare \u2014 extraction is embedded in a functioning coordination mechanism, not pure taking. The constraint's mandatrophy remains unresolved because alternative consensus mechanisms (proof-of-stake) promise to eliminate mining centralization entirely, but the transition is incomplete and partial.",
+    "key_agents": [
+      "Individual Miners: Primary victims (powerless/trapped) \u2014 unable to solo mine profitably; forced to pool or exit",
+      "Mining Pools: Primary beneficiaries (institutional/arbitrage) \u2014 capture coordination rents and transaction policy influence",
+      "Protocol Decentralization: Structural victim (moderate/constrained) \u2014 original design principle violated; constrained by the fact that pooling solves a real coordination problem",
+      "ASIC Manufacturers (Bitmain/Antminer): Secondary beneficiaries (institutional/arbitrage) \u2014 capture equipment supply rents; effective duopoly",
+      "Mining Farm Operators: Complex institutional position (institutional/constrained) \u2014 benefit from scale economies and pooling but constrained by equipment monopolies and electricity costs",
+      "Layer 2 & Alternative Consensus Designers: Organized agents (organized/mobile) \u2014 building escape routes via staking, sidechains, and alternative protocols",
+      "Network Security Baseline: Structural victim (powerless/analytical) \u2014 concentration creates fork and censorship risk; no agency"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Elevated but not extreme. The constraint contains real extraction (pool fees, difficulty-driven obsolescence, equipment monopolies) but is embedded in genuine coordination (pools reduce variance, enabling small participants to earn rewards predictably). The 0.35 \u2192 0.58 trajectory reflects increased consolidation pressure as network difficulty has scaled exponentially, pushing more participants toward zero profitability. The extractiveness would be much higher (0.75+) if the coordination function were absent, but pooled mining actually works \u2014 it solves the variance problem. Suppression (0.62): Moderate-high. Significant barriers include equipment costs ($5k-$50k USD), electricity availability (geographic advantage is insurmountable for most), and sunk capital in obsolete ASICs. Solo mining is structurally unviable at current difficulty \u2014 the suppression includes both material barriers and technological asymmetry. Theater ratio (0.48): Low-moderate. The constraint is mostly functional rather than performative. Pools actually do distribute variance, calculate shares, and send payments. The theater component emerges from ASIC marketing cycles and the rhetorical commitment to 'decentralization' that the protocol originally promised but structures did not deliver.",
+    "perspectival_gap": "Mining centralization demonstrates how the same structural constraint can appear as five different types depending on perspective. The individual miner sees snare (trapped, no exit, pure extraction). The pool sees rope (solving coordination, legitimate rent). The protocol designer sees tangled_rope (genuine coordination embedded in asymmetric extraction). The ASIC manufacturer sees piton (maintaining market through hardware cycles, reducing threat via obsolescence). The layer 2 builder sees scaffold (temporary centralization being bypassed by alternatives). The analytical observer risks seeing this as immutable law of PoW (mountain), but the structural data shows it is contingent: it persists because mining exists, pools are efficient, and alternatives are incomplete \u2014 not because it is unchangeable.",
+    "directionality_logic": "Directionality (d) reflects each agent's structural position relative to extraction flow. Individual miners with trapped exit and victim status derive high d (\u2192 0.90-0.95), experiencing maximum chi despite the coordination function, because they have no alternatives. Pools with institutional power and arbitrage exit derive low d (\u2192 0.10-0.15), experiencing near-zero or negative chi because they are beneficiaries with mobility. Protocol decentralization (moderate power, constrained exit, victim status) derives mid-high d (\u2192 0.65-0.75), experiencing moderate chi because it bears costs but has some agency (layer 2 alternatives are building). ASIC manufacturers (institutional, arbitrage) derive low d (\u2192 0.05-0.10), similar to pools \u2014 they are pure beneficiaries. Mining farms (institutional, constrained, mixed victim/beneficiary) derive moderate d (\u2192 0.45-0.55) because they benefit from scale economies but are trapped by equipment supply and electricity geography.",
+    "mandatrophy_analysis": "UNRESOLVED: The constraint's mandatrophy hinges on whether mining centralization is an inherent consequence of PoW (structural necessity) or an institutional arrangement that can be replaced by alternative consensus (contingent). If mining is inherent to Bitcoin's security and cannot be decentralized meaningfully, then the constraint is a snare disguised as rope \u2014 pools appear to coordinate but actually extract, with no real alternative. If alternatives (PoS, proof-of-authority, sidechains) genuinely displace mining, then the constraint is scaffold \u2014 temporary centralization with a sunset as protocol evolution proceeds. Current evidence is mixed: Ethereum's transition to PoS reduced mining centralization but created validator concentration (did not solve the type). Bitcoin's commitment to PoW means mining centralization persists absent protocol change. The mandatrophy cannot be resolved without determining whether mining-like concentration is an inherent feature of all consensus mechanisms or unique to PoW. Recommend: empirical study of validator concentration in mature PoS systems; economic analysis of whether alternative consensus removes variance-driven pooling; historical simulation of what Bitcoin difficulty and pool concentration would look like under different consensus rules."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "blockchain_consensus_security",
+      "cryptocurrency_transaction_censorship_resistance",
+      "asic_manufacturing_concentration"
+    ],
+    "dual_formulation_note": "Mining centralization is downstream of consensus protocol architecture (PoW vs PoS choice) but represents a distinct structural constraint. The upstream constraint (blockchain_consensus_security) determines whether mining-like mechanisms are necessary; mining_centralization then reflects the institutional equilibrium when mining is required. The downstream constraints (censorship_resistance, transaction policy) depend on mining concentration levels."
+  },
+  "directionality_overrides": []
+}

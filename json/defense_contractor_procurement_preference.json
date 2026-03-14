@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "defense_contractor_procurement_preference",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dcpp"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Defense Contractor Procurement Preference",
+    "topic_domain": "political_economy/defense_spending",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "established_defense_contractors",
+      "procurement_officials",
+      "incumbent_technology_providers"
+    ],
+    "victims": [
+      "taxpayers",
+      "military_operational_effectiveness",
+      "emerging_competitive_suppliers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Taxpayer",
+      "comment": "PERSPECTIVE 1: TAXPAYER (SNARE) \u2014 Trapped in the extraction mechanism through mandatory taxation with no exit option. Bears cost of inflated procurement prices with no ability to refuse contribution or select alternative vendors. Maximum suppression: no voice in procurement decisions, no knowledge of actual cost differentials, no mechanism for collective exit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Military Procurement Officer",
+      "comment": "PERSPECTIVE 2: MILITARY PROCUREMENT OFFICER (SNARE) \u2014 Structurally constrained by regulatory requirement to justify preference for incumbent contractors through cost-benefit analyses that embed sunk cost fallacies and switching cost assumptions. Career risk of recommending unproven suppliers if performance issues emerge; institutional pressure to minimize procurement friction. Extraction flows toward the established contractor through officer's constrained choices, not toward the officer themselves."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Emerging Supplier",
+      "comment": "PERSPECTIVE 3: EMERGING SUPPLIER (TANGLED ROPE) \u2014 Mobile and powerful enough to compete in commercial markets, but faces high barriers to defense procurement entry: qualification requirements, facility certifications, security clearances, incumbent relationship advantages. The constraint coordinates genuine security and reliability concerns (small suppliers pose real integration risk) while simultaneously extracting through preference mechanisms that outlast their security justification. Can exit to commercial market but forgoes higher-margin defense contracts."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Established Defense Contractor",
+      "comment": "PERSPECTIVE 4: ESTABLISHED DEFENSE CONTRACTOR (ROPE) \u2014 Net beneficiary with arbitrage options. The constraint coordinates genuine military needs (integration, reliability, long-term support) while providing sustained profit margins above competitive rates. Can exit to commercial or international markets if domestic preference erodes, but domestically captures rent. Experiences constraint as enabling coordination of complex procurement with supplier reliability."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Department of Defense as Institutional Actor",
+      "comment": "PERSPECTIVE 5: DOD INSTITUTIONAL ACTOR (TANGLED ROPE) \u2014 Powerful organization with mobile options (change procurement rules, diversify suppliers, shift to government manufacturing). The constraint both coordinates legitimate military supply security AND extracts through embedded cost-inflation. DoD's own interests are mixed: preferences reduce procurement friction but inflate budgets and reduce competitive pressure for innovation. Theater component reflects performative compliance with competition rules while maintaining preference through justified-but-circular reasoning."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Cold War Procurement Architecture",
+      "comment": "PERSPECTIVE 6: COLD WAR PROCUREMENT ARCHITECTURE (PITON) \u2014 The preference system originated in genuine Cold War supply security concerns (Soviet disruption risk, strategic material scarcity). Those original conditions have largely expired, but the institutional arrangement persists through inertia and revolving-door relationships between contractors and procurement officials. Theater ratio is high because actors maintain the architecture through rhetorical references to security risks that no longer substantively justify the cost premium. The mechanism is degraded: it persists not because it solves the security problem it was designed for, but because changing it creates political friction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Reform Coalition (Congressional Oversight)",
+      "comment": "PERSPECTIVE 7: REFORM COALITION (SCAFFOLD) \u2014 Organized agents (Government Accountability Office, Congressional Budget Office, defense reform advocates) can see the constraint as a temporary coordination failure with a sunset mechanism: competitive sourcing pilots, dynamic supplier qualification, performance-based contract awards that shift from incumbent preference to measurable outcomes. Constraint classifications as Scaffold because the coalition has agency and identifies a time-bound reform path, though suppression from established contractor lobbying is high."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 From a global civilizational view, all states with defense industrial bases face coordination problems between competitive pricing and supply security. The tension between cost efficiency and strategic resilience is sometimes naturalized as an immutable law of military procurement: you must choose between cheap suppliers and reliable suppliers. However, structural data reveals this as a false summit \u2014 the apparent natural law conflates security legitimacy (real but bounded) with perpetual cost-inflation (contingent on institutional design). The engine will flag this as naturalization of a policy choice, not a natural limit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "switching_cost_empirical_validation",
+      "question": "Are the switching costs and integration risks cited to justify contractor preference empirically grounded, or are they inflated post-hoc rationalizations?",
+      "resolution_mechanism": "Comparative cost analysis of actual switching events; audit of integration risk claims against documented failure rates for new suppliers post-qualification; contractor testimony under audit questioning whether preference structure was present during original product development vs added later",
+      "impact": "If switching costs substantially real: constraint reclassifies as higher-fidelity Tangled Rope with genuine coordination base. If inflated: constraint is pure Snare dressed in coordination language \u2014 no real switching risk, just path dependency.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical validation of switching cost claims"
+    },
+    {
+      "id": "operational_performance_correlation",
+      "question": "Does contractor preference system correlate with better military operational effectiveness, or is performance independent of procurement incumbency?",
+      "resolution_mechanism": "Longitudinal study of system performance (reliability, capability, time-to-deployment) for platforms sourced through preference vs competitive mechanisms; control for confounds (legacy vs new systems, mission requirements, maintenance protocols)",
+      "impact": "If strong positive correlation: preference system coordinates genuine operational needs (Rope or Tangled Rope classification strengthened). If null/negative correlation: preference is pure extraction with no functional coordination base (Snare classification strengthened).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether contractor preference correlates with operational effectiveness"
+    },
+    {
+      "id": "revolving_door_identity_lock_institutional",
+      "question": "Is the procurement preference system maintained through structural incentives or through institutional identity fusion where procurement officials have internalized contractor interests as their own?",
+      "resolution_mechanism": "Career path analysis of procurement officials post-government employment; comparison of lobbying intensity for contractors with high vs low revolving-door traffic; interviews with procurement officials about perceived necessity of preference vs their explicit justifications",
+      "impact": "If structural incentives dominant: standard institutional capture analysis applies. If identity lock significant: procurement officials may perceive no alternative even when structural conditions would permit one \u2014 affects classification of their perspective from constrained to identity_locked.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether institutional identity fusion maintains preference beyond structural necessity"
+    },
+    {
+      "id": "congressional_dysfunction_barrier",
+      "question": "Is procurement preference reform blocked by genuine military necessity arguments or by congressional dysfunction and political capture of defense committees?",
+      "resolution_mechanism": "Analysis of Congressional debate transcripts; comparison of military testimony supporting preference vs GAO/CBO competitive sourcing recommendations; tracking of reform bill introduction and amendment patterns across legislative cycles",
+      "impact": "If military necessity genuine: reform timeline longer but Scaffold classification valid (sunset requires genuine coordination redesign). If political capture dominant: Scaffold may be aspirational rather than structural \u2014 suppression from lobbying prevents sunset even when reform coalition exists.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether procurement preference reform is blocked by necessity or political dysfunction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Defense contractor procurement preference represents a structural constraint where military supply security concerns (legitimate but time-bounded) have calcified into permanent cost-extraction mechanisms. The constraint originated during the Cold War as a genuine coordination solution to supply chain vulnerability and strategic risk \u2014 concentrating production with established, cleared, reliable contractors made operational sense when supply disruption posed existential threat. However, the original strategic conditions have substantially changed: supply chains are now globalized with redundancy, strategic materials are more diversified, and manufacturing complexity has shifted toward systems integration rather than single-vendor dominance. Yet the preference system persists with increasing extractiveness and theater ratio, suggesting the institutional mechanism has outlived its coordination function and now operates primarily as rent extraction. The constraint exhibits all six types across different perspectives, making it a diagnostic case for institutional ossification \u2014 where a genuine Rope (coordination mechanism) has degraded into a Snare (pure extraction dressed in security language) while maintaining institutional theater that prevents reform.",
+    "key_agents": [
+      "Taxpayers: Primary victim (powerless/trapped) \u2014 bear cost of inflated procurement prices with zero exit option",
+      "Established Defense Contractors: Primary beneficiary (institutional/arbitrage) \u2014 capture sustained profit margins above competitive rates; can arbitrage to commercial markets if domestic preference erodes",
+      "Emerging Suppliers: Secondary victim (powerful/mobile) \u2014 face structural barriers to entry despite commercial competitiveness; can exit to non-defense markets but forgo higher margins",
+      "Procurement Officials: Structural agent (moderate/constrained) \u2014 constrained by regulatory justification requirements; institutional pressure and career risk maintain preference even when competitiveness would be preferred",
+      "Department of Defense: Mixed agent (powerful/mobile) \u2014 benefits from reduced procurement friction but suffers inflated budgets and reduced competitive pressure for innovation",
+      "Congressional Reform Coalition: Organized challenger (organized/constrained) \u2014 GAO, CBO, defense reformers can identify reform pathways but face suppression from contractor lobbying and political capture of defense committees",
+      "Cold War Supply Security Model: Institutional artifact (institutional/arbitrage) \u2014 the original security rationale; persists through inertia despite changed conditions"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The preference system extracts through sustained cost-inflation estimated at 15-30% above competitive rates for equivalent capabilities, measured across platforms with both preference-sourced and competitively-sourced analogues. The extraction has increased over the 20-year interval as the original security rationale has weakened but institutional mechanisms have strengthened through accumulated relationships and contract embedding. Initial value (0.35) reflects genuine Cold War-era supply security justification; final value (0.58) reflects degraded coordination base with dominant extraction mechanism. Suppression (0.65): High. Powerful barriers prevent competitive alternatives: security clearance requirements, facility certifications, incumbent relationship advantages, regulatory compliance costs that disadvantage new entrants, revolving-door relationships between contractors and procurement officials that naturalize preference as coordination rather than extraction. Theater ratio (0.68): Moderately high. The preference system maintains rhetorical cover through references to supply security and integration risk that no longer substantively justify the cost premium. Procurement justifications invoke switching costs that have declined, security threats that have diversified, and reliability risks that are manageable through contract performance requirements. The theater has increased over the interval as original coordination rationale weakened but institutional rhetoric intensified.",
+    "perspectival_gap": "The constraint's perspectival gap is nearly maximal. The established contractor perceives Rope (genuine coordination of military needs). The taxpayer perceives Snare (pure extraction). The procurement official perceives Snare (constrained to justify preference). The emerging supplier perceives Tangled Rope (mixed legitimate barriers and extractive preference). The DoD perceives Tangled Rope (mixed coordination benefit and cost inflation). The Cold War model perceives Piton (degraded original function). The reform coalition perceives Scaffold (solvable through competitive sourcing pilots and outcome-based contracting). The analytical observer risks perceiving Mountain (immutable cost-security tradeoff). These gaps reveal that there is no neutral observation point \u2014 the classification depends entirely on structural position, and each position generates a classification consistent with its interests and constraints.",
+    "directionality_logic": "Directionality values flow from structural position relative to extraction. Established contractors occupy beneficiary position (arbitrage exit, institutional power) \u2192 low d \u2192 negative or near-zero f(d) \u2192 net beneficiary. Taxpayers occupy trapped victim position (mandatory contribution, no exit, powerless) \u2192 high d \u2192 high f(d) \u2248 1.42 \u2192 maximum experienced extraction. Emerging suppliers occupy constrained victim position (powerful enough to compete commercially but blocked from defense market) \u2192 moderate-high d \u2192 moderate f(d) \u2192 significant experienced extraction despite market power. Procurement officers occupy constrained structural position where their own interests align with efficient sourcing but their institutional role is defined by preference justification \u2192 d derived from victim status of their constrained capacity despite moderate power \u2192 higher d than their nominal institutional status would suggest. The piton classification derives from high theater ratio (0.68) indicating performative maintenance rather than functional necessity. The mountain classification at analytical context represents naturalization risk \u2014 what appears as immutable law of military/industrial tension is actually contingent institutional design.",
+    "mandatrophy_analysis": "INSTITUTIONAL OSSIFICATION: This constraint resolves mandatrophy by demonstrating how a genuine Rope (original Cold War coordination) has degraded into a Snare (contemporary extraction) while maintaining institutional theater that prevents recognition of the shift. The original coordination function \u2014 concentrating supply with qualified, cleared contractors to reduce supply disruption risk \u2014 was real and necessary under Cold War conditions. The mandate was legitimate. As conditions changed (supply chain globalization, strategic material diversification, manufacturing complexity shift), the coordination function weakened but the institutional arrangement persisted. The system now extracts (inflated prices, reduced innovation pressure) while maintaining theater (security justifications that no longer bind). The mandatrophy is resolved by showing that BOTH readings are correct within their structural context: the system IS genuine coordination from the contractor perspective (they do provide reliable, integrated systems), AND it IS pure extraction from the taxpayer perspective (they are forced to fund inflated procurement). The resolution is to recognize that what appears as 'necessity' is actually 'path dependency dressed as necessity' \u2014 the constraint persists because changing it creates political friction, not because the original security rationale still applies. The Scaffold perspective identifies the exit pathway (competitive sourcing reform) but indicates it is suppressed by institutional inertia and contractor lobbying rather than structural impossibility."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "military_innovation_incentive_structure",
+      "defense_industrial_base_consolidation",
+      "congressional_defense_committee_capture"
+    ],
+    "dual_formulation_note": "The procurement preference system decomposes into two structurally distinct constraints: (1) military_supply_security_coordination (\u03b5\u22480.20, genuine Mountain/Rope at civilizational scale), representing the legitimate Cold War-origin coordination problem; (2) defense_contractor_procurement_preference (\u03b5=0.58, contemporary Tangled Rope/Snare), representing the accumulated extraction that has accumulated on top of the original coordination. The second constraint is downstream of the first \u2014 the preference system was justified by supply security needs and has persisted through institutional inertia even as those needs have diversified and weakened. The two constraints have different \u03b5 values, different time horizons, and different classification patterns. This story focuses on the contemporary constraint (\u03b5=0.58) and its degradation of the original coordination function."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.42
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "copyright_attribution_erasure",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cae"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Copyright Attribution Erasure",
+    "topic_domain": "intellectual_property/creative_work",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "aggregators_and_platforms",
+      "derivative_users"
+    ],
+    "victims": [
+      "original_creators",
+      "attribution_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Original Creator",
+      "comment": "PERSPECTIVE 1: ORIGINAL CREATOR (SNARE) \u2014 The creator bears full extraction cost. Their work is reused, republished, or aggregated without attribution. Exit is structurally impossible: the work exists in digital ecosystems where copies proliferate beyond control. No legal recourse is effective at scale. Maximum suppression: the creator cannot prevent copying, cannot reliably detect unauthorized use, cannot enforce attribution retroactively. The constraint is extraction with minimal coordination benefit \u2014 the original creator receives no value from the system that erases their attribution."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Aggregator Platform",
+      "comment": "PERSPECTIVE 2: AGGREGATOR PLATFORM (ROPE) \u2014 Experiences the constraint as pure coordination: platforms aggregate content to solve a real collective action problem (discovery, organization, accessibility). From their perspective, attribution is a technical detail, often handled through metadata or linked sources. Suppression is low from this view \u2014 they can implement attribution mechanisms if incentivized. Exit is available (they could switch attribution protocols). The constraint appears as neutral coordination infrastructure rather than extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Secondary User/Derivative Creator",
+      "comment": "PERSPECTIVE 3: SECONDARY USER (TANGLED ROPE) \u2014 Uses aggregated content to create derivative works, educational materials, or compilations. Benefits from easy access and low friction re-use (coordination function). But also bears costs: their own work's attribution may be erased in the same system; they face legal uncertainty (copyright liability, fair use questions). Constrained by legal risk and platform terms of service. Experiences mixed coordination and extraction \u2014 the system enables their work but also threatens it."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Attribution Integrity (Epistemic Commons)",
+      "comment": "PERSPECTIVE 4: ATTRIBUTION INTEGRITY / EPISTEMIC COMMONS (SNARE) \u2014 The abstract collective good of knowable provenance and reliable attribution. Cannot exit, cannot organize, cannot defend itself. Bears maximum cost: false attribution, obscured origins, lost historical record, inability to credit original contributors. Suppression is total \u2014 no mechanism can recover attribution once erased at scale in digital systems. The epistemic commons has no advocate and experiences pure extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Creative Commons and Open Attribution Movements",
+      "comment": "PERSPECTIVE 5: OPEN ATTRIBUTION MOVEMENTS (TANGLED ROPE) \u2014 Organized agents (Creative Commons, linked data communities, archivalists) see the constraint as a hybrid: genuine coordination need (how to track provenance at scale) plus extractive erasure (platforms profiting from attribution-free re-use). These movements provide coordination solutions (CC licenses, metadata standards, persistent identifiers) but are constrained by platform incentives against adoption. They experience both the coordination function they provide and the extraction they resist."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Copyright Law Enforcement System",
+      "comment": "PERSPECTIVE 6: COPYRIGHT LAW SYSTEM (PITON) \u2014 Legal attribution protections (copyright law, moral rights, DMCA takedowns) persist as institutional theater with degraded function. The law still requires attribution in some jurisdictions, but enforcement is prohibitively expensive for individual creators. Automated takedowns target content but not metadata-level attribution erasure. The legal system's primary function (protecting creator attribution) has atrophied while its performative aspects (cease-and-desist letters, platform compliance procedures) remain. Piton classification derives from high theater (0.55) and low effective enforcement."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 At civilizational scale, digital information's replicability might appear as a natural law: once content is digitized, its origin becomes expensive to track and impossible to control. Copies multiply; metadata detaches; attribution dissolves into information entropy. From this view, erasure appears inevitable and natural. However, this classification is a false summit \u2014 the structural data (beneficiaries gaining value, victims losing attribution, platform incentives against tracking) reveals contingent institutional choices, not immutable physical constraints. The apparent 'law of digital replication' naturalizes what is actually the result of platform design decisions and copyright enforcement gaps."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "metadata_persistence_mechanism",
+      "question": "Can metadata-level attribution tracking (DOI, persistent identifiers, linked data) survive the copy-and-paste economy at scale?",
+      "resolution_mechanism": "Empirical study of metadata preservation rates across content aggregation pipeline; tracking of URL permanence and identifier resolution across platforms over 5-10 year intervals",
+      "impact": "If metadata persists reliably: attribution erasure is platform-design choice (snare downgrade to tangled rope as platforms adopt standards). If metadata detaches: structural constraint on digital provenance tracking is real (snare classification confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether metadata-based attribution can persist through digital replication"
+    },
+    {
+      "id": "platform_incentive_alignment",
+      "question": "Would platforms adopt universal attribution standards if incentive structures were realigned (e.g., liability for unattributed content)?",
+      "resolution_mechanism": "Policy experiments: jurisdictions that impose liability for attribution erasure vs those without; platform behavior under different legal regimes; cost-benefit analysis of attribution infrastructure investment",
+      "impact": "If platforms adopt on incentive realignment: constraint is institutional, not structural (snare downgrades to tangled rope with remedial policy). If platforms resist despite incentives: extraction mechanism is deliberately maintained (snare confirmed with institutional agency).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether platform adoption of attribution standards is feasible under different incentive regimes"
+    },
+    {
+      "id": "automated_attribution_recovery",
+      "question": "Can machine learning and content fingerprinting reliably recover or verify original attribution after erasure?",
+      "resolution_mechanism": "Technical pilot of reverse-image/reverse-text identification systems; accuracy rates on unattributed content; cost per successful attribution recovery",
+      "impact": "If automation is effective and affordable: creators gain exit option (shift from trapped to constrained). If automation fails or is prohibitively expensive: trapped status is confirmed; exit remains unavailable.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Technical feasibility of automated attribution recovery"
+    },
+    {
+      "id": "cultural_norm_shift_rate",
+      "question": "Is attribution omission driven by technical friction or by cultural norm erosion (younger users accept unattributed re-use as default)?",
+      "resolution_mechanism": "Generational survey data on attribution expectations; longitudinal study of citation practices in educational and creative communities; analysis of platform norm-setting over time",
+      "impact": "If technical friction dominates: solving the platform infrastructure solves the constraint. If norm erosion dominates: snare persists as internalized expectation (moves toward identity_locked dynamics for younger creators).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether attribution erasure is driven by technical or cultural factors"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Copyright attribution erasure describes the structural problem of original creator attribution being lost or obscured as content passes through digital aggregation, curation, and re-use pipelines. The constraint operates across social media platforms, content aggregators, educational repositories, and derivative works ecosystems. It is not identical to copyright infringement \u2014 technically, the work may be shared with permission, licensed under open terms, or even lawfully re-distributed. Yet the erasure of authorship creates extraction: platforms and secondary users gain visibility/utility without proportional attribution cost; original creators lose provenance, attribution-based earnings, and control over their narrative identity. The constraint exhibits a perspectival gap: aggregators see a coordination problem (how to organize vast content flows); creators see pure extraction (their work benefits others without reciprocal attribution). The theater_ratio (0.55) reflects that copyright law still mandates attribution in some contexts, but enforcement against metadata-level erasure is performative \u2014 takedown mechanisms target infringing copies but not systematic erasure of author identity through re-aggregation.",
+    "key_agents": [
+      "Original Creators: Primary victims (powerless/trapped) \u2014 cannot prevent copying or verify attribution across distributed systems; experience maximum extraction with no exit",
+      "Aggregator Platforms: Primary beneficiaries (institutional/arbitrage) \u2014 gain user engagement, content volume, and monetization through low-friction content aggregation; experience constraint as neutral coordination infrastructure",
+      "Attribution Integrity: Epistemic victim (powerless/trapped) \u2014 abstract collective good representing knowable provenance; bears maximum cost as attribution chains dissolve",
+      "Secondary Users/Derivative Creators: Mixed actors (moderate/constrained) \u2014 benefit from easy content access but also face attribution risks in their own work; constrained by legal uncertainty",
+      "Creative Commons and Open Attribution Movements: Organized advocates (organized/constrained) \u2014 develop coordination solutions (metadata standards, licensing tools) but constrained by platform adoption barriers",
+      "Copyright Law Enforcement System: Institutional actor (institutional/arbitrage) \u2014 maintains performative attribution protections (DMCA, takedown procedures) with degraded function at scale"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High. The constraint demonstrates sustained growth in extraction severity over the interval (0.35 \u2192 0.58), driven by increasing platform scale, algorithmic content curation, and cultural normalization of re-sharing without attribution. The aggregation pipeline extracts value from creators (attention, discoverability, secondary revenue) while attribution becomes optional. Suppression (0.72): High. Barriers to restoring attribution are substantial: creators lack technical tools to track re-use at scale; platform algorithms do not prioritize source metadata; digital copies detach from original context; legal remedies are prohibitively expensive. The suppression reflects both technical friction (copies propagate faster than metadata) and institutional incentives (platforms benefit from attribution-free re-aggregation). Theater ratio (0.55): Moderate. Copyright law and platform attribution policies still exist and are occasionally enforced, creating performative compliance theater. However, the theater is declining as automated re-aggregation reduces individual takedown effectiveness, explaining the slow increase over the interval.",
+    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon (content re-use without attribution) classifies as rope (platform's view), snare (creator's view), tangled rope (secondary user's view), and piton (law's view). The beneficiary sees coordination; the victim sees extraction; the organized advocates see a solvable hybrid; the legal system sees its own degraded function. The analytical observer risks seeing a natural law (digital information's replicability) but the structural data (beneficiary incentives, victim powerlessness, enforcement gaps) reveals institutional choices.",
+    "directionality_logic": "Directionality is determined by each agent's structural relationship to the attribution erasure flow. Original creators are trapped victims: they cannot exit the digital ecosystem where their work circulates, cannot prevent copying, cannot reliably detect or enforce attribution. Their d approaches 1.0 (full target). Aggregator platforms are beneficiaries with arbitrage options: they can adopt or ignore attribution standards, shift between platforms, or redesign their curation algorithm. Their d approaches 0.0 (full beneficiary). Secondary users are constrained victims-and-beneficiaries: they benefit from content access but face legal risk and attribution threats to their own work. Their d \u2248 0.55 (symmetric). The epistemic commons (attribution integrity) is a trapped victim with no agency: d \u2248 1.0. These directionality values feed into the sigmoid f(d) to compute experienced extractiveness (chi) for each perspective.",
+    "mandatrophy_analysis": "The constraint avoids mandatrophy collapse by distinguishing genuine coordination (aggregation solves discovery problems) from asymmetric extraction (attribution erasure concentrates value on platforms). The snare classification is primary for victims; rope is legitimately the beneficiary's experience; the piton reflects institutional decay in enforcement. The false summit (mountain from civilizational/analytical view) is diagnosed by the structural data: replicability of digital content is a material fact, but attribution-erasure is a choice, not a consequence of physics."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "open_licensing_adoption",
+      "content_fingerprinting_infrastructure"
+    ],
+    "dual_formulation_note": "Copyright attribution erasure decomposes into two structurally distinct constraints: (1) metadata-level erasure (platform design, technical friction) with \u03b5 \u2248 0.40 and (2) cultural norm shift (attribution as optional social practice) with \u03b5 \u2248 0.55. This story aggregates both; decomposition into separate stories would enable separate targeting of technical vs cultural remediation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    }
+  ]
+}

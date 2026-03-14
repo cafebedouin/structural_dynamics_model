@@ -1,0 +1,194 @@
+{
+  "header": {
+    "constraint_id": "labor_market_information_asymmetry",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lmia"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Labor Market Information Asymmetry",
+    "topic_domain": "economic/labor_markets",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "employers",
+      "recruiters",
+      "hiring_gatekeepers"
+    ],
+    "victims": [
+      "job_seekers",
+      "workers_transitioning_industries",
+      "labor_market_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Job Seeker Without Networks",
+      "comment": "PERSPECTIVE 1: JOB SEEKER WITHOUT NETWORKS (SNARE) \u2014 Trapped in information scarcity. Without access to informal networks, industry contacts, or privileged salary/role information, the job seeker faces maximum extraction: employers extract information asymmetrically about role requirements, compensation bands, career trajectory, and workplace culture. The seeker's only exit option is accepting unfavorable terms or prolonged unemployment. No alternatives exist without overcoming the information barrier itself."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Career-Switching Worker",
+      "comment": "PERSPECTIVE 2: CAREER-SWITCHING WORKER (TANGLED ROPE) \u2014 Constrained by industry transition costs and skill translation uncertainty. The constraint provides genuine coordination: job boards and industry intermediaries help match skills across domains. But asymmetric extraction occurs because industry insiders capture information premiums \u2014 they know credential requirements that switchers don't, hidden compensation bands, and which skills transfer. The worker benefits from matching infrastructure but pays a stability penalty for the information gap."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Large Employer",
+      "comment": "PERSPECTIVE 3: LARGE EMPLOYER (ROPE) \u2014 Experiences the constraint as pure coordination. The information asymmetry enables the employer to broadcast job requirements widely and attract candidate flow for screening. Employers benefit from centralized job posting platforms and candidate database systems. The constraint solves a genuine matching problem: employers and workers are distributed across geography and skill spaces. The employer has arbitrage options (they can source from multiple markets, access internal talent pools, use recruitment agencies) and experiences low extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Connected Senior Professional",
+      "comment": "PERSPECTIVE 4: CONNECTED SENIOR PROFESSIONAL (TANGLED ROPE) \u2014 Mobile across industries and geographies, with strong networks. The constraint provides coordination benefit (job boards, recruiters enable access to broader opportunities). But extraction still occurs because professional networks concentrate information \u2014 the connected agent benefits from knowing salaries, hidden roles, and advancement paths that junior workers don't. The agent is mobile enough to exercise optionality but participates in a system where information rents flow to the well-connected."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Recruitment Industry Intermediaries",
+      "comment": "PERSPECTIVE 5: RECRUITMENT INDUSTRY (ROPE) \u2014 Experiences the constraint as creating the coordination function they provide. Recruitment agencies, job boards, LinkedIn, resume databases, and salary transparency platforms all exist to reduce information asymmetry. The intermediaries profit from the constraint (matching fees, listings, data access) but also genuinely reduce it through information aggregation and distribution. The constraint enables their business model without creating meaningful extraction beyond the transaction fee \u2014 which is a legitimate coordination cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Labor Market Efficiency and Workers' Bargaining Power",
+      "comment": "PERSPECTIVE 6: LABOR MARKET EFFICIENCY (ORGANIZED) \u2014 Organized agents (unions, policy advocates, labor economists) perceive the constraint as creating both coordination and extraction. Information asymmetry enables matching but also enables wage suppression through information rents captured by employers and gatekeepers. Collective action to increase transparency (wage transparency laws, union salary surveys, industrywide standards) faces resistance from beneficiaries. The organized perspective sees this as a solvable constraint with non-zero suppression of alternatives \u2014 transparency regulations are actively resisted by employers."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some information asymmetry is inherent to any decentralized labor market: job seekers are distributed, employers have heterogeneous demands, and no single agent has complete knowledge of all opportunities. This perspective sees the constraint as immutable \u2014 an inevitable cost of large-scale labor matching. However, this reading risks naturalizing what is actually a contingent institutional choice: the level of asymmetry is variable (it is lower in Scandinavian transparent-salary regimes, higher in US opaque regimes)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "natural_vs_institutional_asymmetry",
+      "question": "How much information asymmetry is inherent to decentralized labor matching versus how much is produced by institutional choices (secrecy norms, gatekeeping, asymmetric access to data)?",
+      "resolution_mechanism": "Cross-national comparative analysis: measure asymmetry levels in high-transparency regimes (Scandinavian salary transparency laws, EU transparency requirements) versus low-transparency regimes (US salary secrecy, equity clawback norms). If transparency regimes show significantly lower measured asymmetry (searchable salary bands, clear advancement paths, open internal mobility), the 'natural law' reading is falsified.",
+      "impact": "If institutional: the mountain classification is a false summit. The constraint is a tangled_rope at all perspectives, and policy can reduce extraction through transparency mandates. If inherent: the constraint approaches mountain universally, but organized labor can still reduce suppression through collective information aggregation (union surveys, industry standards).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Natural versus institutional sources of labor market information asymmetry"
+    },
+    {
+      "id": "information_reduction_extraction_tradeoff",
+      "question": "Does reducing information asymmetry through transparency (salary bands, skill inventories, advancement criteria) reduce extraction or enable new forms of extraction (algorithmic filtering, discrimination proxying)?",
+      "resolution_mechanism": "Longitudinal study of wage gaps, job access, and advancement rates before/after transparency interventions. Measure whether publicized salary bands reduce gender/race wage gaps or enable employers to compress wages more efficiently. Track whether algorithmic hiring systems trained on transparent data perpetuate or amplify previous disparities.",
+      "impact": "If transparency reduces extraction: policy should mandate information access. If it enables new extraction: need coordinated reforms (transparency + discrimination monitoring + collective bargaining power). If neutral: information asymmetry is a false target for labor market reform.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether transparency reduces or redirects extraction"
+    },
+    {
+      "id": "network_substitution_dynamics",
+      "question": "Can informal networks ever be fully replaced by transparent platforms, or does information asymmetry inevitably regenerate through network privilege (some workers know people, others don't)?",
+      "resolution_mechanism": "Network analysis of job acquisition: track proportion of jobs filled through referral versus application versus recruiter across time and demographic groups. Measure whether job board adoption reduces referral-based hiring or merely adds a parallel channel that referral-advantaged candidates can also exploit.",
+      "impact": "If networks cannot be eliminated: information asymmetry is structural to labor markets (quasi-mountain property). Policy should focus on reducing the extraction powered by asymmetry (wage transparency, advancement transparency) rather than eliminating asymmetry itself. If networks can be displaced: market adoption of platforms with algorithmic matching could reduce extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether network-based information advantages are eliminable or structural"
+    },
+    {
+      "id": "employer_information_asymmetry",
+      "question": "Is the dominant asymmetry employer-to-worker (employers know more about roles/compensation/culture) or worker-to-employer (employers cannot assess candidate quality, commitment, or actual productivity)?",
+      "resolution_mechanism": "Measure asymmetry bidirectionality: survey workers and employers separately on what information gaps most constrain hiring/job acceptance decisions. Compare measurement error rates in worker self-assessment versus employer job description accuracy. Track post-hire surprise rates (worker disappointed with role, employer disappointed with hire) as proxy for asymmetry impact.",
+      "impact": "If asymmetry is primarily employer-to-worker: transparency and disclosure mandates reduce extraction. If bidirectional: both sides perceive extraction; information platforms provide mutual value (rope). If primarily worker-to-employer: asymmetry benefits workers (they exploit employers' uncertainty); extraction framing is reversed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Directionality of dominant information asymmetry"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Labor market information asymmetry \u2014 the structural gap between what employers know about jobs, compensation, and career prospects versus what workers know \u2014 creates a constraint system that appears simultaneously as pure coordination, mixed coordination with extraction, and pure extraction depending on the agent's structural position and exit options. The constraint has intensified over the interval as job complexity has increased, geographic mobility has accelerated, and compensation opacity has been actively maintained through institutional practices (non-compete agreements, salary secrecy norms, opaque promotion criteria). Job seekers without networks or industry knowledge face maximum information extraction through unfavorable job offers, below-market compensation, and hidden expectations. Connected professionals experience the same constraint as enabling access to broader opportunities through information flow. Employers and recruiters experience the constraint as providing the coordination function that matches distributed workers to distributed opportunities. The constraint exhibits suppression through institutional norms (salary secrecy, non-disclosure agreements), information gatekeeping (credential requirements that signal beyond actual role needs), and asymmetric access to data (employers run salary surveys workers cannot access). Theater has remained low-to-moderate because the coordination function (job matching) is substantive \u2014 it is not purely performative \u2014 but it has increased slightly as resume screening and algorithmic filtering have become less transparent.",
+    "key_agents": [
+      "Job Seekers Without Networks: Primary victims (powerless/trapped) \u2014 bear maximum extraction from asymmetric information about compensation, role requirements, and career trajectory",
+      "Career-Switching Workers: Secondary victims (moderate/constrained) \u2014 benefit from job boards but pay premium for credential translation and industry entry uncertainty",
+      "Senior Connected Professionals: Moderate beneficiary/victim (powerful/mobile) \u2014 benefit from network information access while participating in system that excludes others",
+      "Large Employers: Primary beneficiaries (institutional/arbitrage) \u2014 use asymmetry to attract candidate pools, compress wages, reduce bargaining power; experience the constraint as pure coordination",
+      "Recruitment Industry: Institutional beneficiary (institutional/arbitrage) \u2014 profit from information aggregation and intermediation; reduce asymmetry while maintaining information rents",
+      "Organized Labor / Labor Economists: Organized victim (organized/constrained) \u2014 perceive asymmetry as enabling wage suppression; face active resistance to transparency initiatives",
+      "Analytical Observer: Civilizational context (analytical/analytical) \u2014 risks naturalizing institutional information suppression as inherent to labor markets"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. Employers extract information rents through wage suppression, hidden advancement criteria, and asymmetric knowledge of market compensation. The extraction is not at maximum (0.85+) because coordination gains are real \u2014 job boards, recruiters, and platforms do match workers to opportunities. But extractiveness has increased over the interval as job complexity has outpaced transparency (specialized roles have fewer comparable positions, making wage benchmarking harder) and employer information collection (resume databases, reference networks, background checks) has expanded. Suppression (0.65): High. Institutional norms actively maintain asymmetry through salary secrecy agreements, non-compete clauses, opaque promotion criteria, and gatekeeping through credential requirements. Exit barriers include geographic constraints (jobs are location-specific), skill specificity (retraining for new fields is costly), and network dependence (without connections, information becomes even scarcer). Theater ratio (0.48): Low-to-moderate. The coordination function is substantive \u2014 job matching does solve a real problem \u2014 but theater has increased as algorithmic resume screening has become less transparent and employer screening criteria have become more arcane. Some theater appears in resume/credential inflation requirements that exceed actual job demands.",
+    "perspectival_gap": "The gap between the powerless job seeker (Snare) and the institutional employer (Rope) is maximal: they perceive the same constraint as pure extraction versus pure coordination respectively. This gap reveals that the constraint's classification is not observer-independent \u2014 it depends critically on structural position. A policy implication emerges: the gap itself indicates the asymmetry is extractive. If the constraint were genuinely pure coordination, both beneficiaries and targets would perceive low extraction. The large gap between Snare and Rope indicates that one party's coordination benefit comes at another's extraction cost \u2014 the hallmark of Tangled Rope, not Rope.",
+    "directionality_logic": "Each agent's experienced extraction (\u03c7) derives from base extractiveness (\u03b5 = 0.58), directionality (d), and scope (\u03c3 = 1.0 for national labor markets). Job seekers without networks: d = 0.95 (trapped victim), f(d) \u2248 1.42, \u03c7 \u2248 0.82. Career switchers: d = 0.70 (constrained victim), f(d) \u2248 0.92, \u03c7 \u2248 0.53. Connected professionals: d = 0.45 (mobile, mixed beneficiary/victim), f(d) \u2248 0.55, \u03c7 \u2248 0.32. Employers: d = 0.08 (arbitrage beneficiary), f(d) \u2248 -0.12, \u03c7 \u2248 -0.07 (negative \u2014 the constraint subsidizes them). The spread from \u03c7 = -0.07 to \u03c7 = 0.82 across the spectrum confirms the tangled_rope classification: asymmetric extraction powered by coordination function.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by decomposing the apparent contradiction between 'information asymmetry as natural law' and 'information asymmetry as extractive institutional design.' The natural law reading (mountain) is a false summit because the level of asymmetry is variable and historically contingent: Scandinavian countries with salary transparency laws have demonstrably lower information asymmetry than US labor markets with salary secrecy norms. The constraint is not immutable; it is maintained by active institutional choices (non-compete enforcement, salary confidentiality norms, gatekeeping through credential inflation). The analytical observer who naturalizes it risks serving as an accomplice to the extraction itself \u2014 'this is just how labor markets work' makes it less likely that solutions (transparency mandates, collective bargaining, skill-based credential reform) will be pursued. The classification is correctly Tangled Rope, not Mountain: the constraint solves a genuine matching problem (coordination function) while enabling information-rent extraction (asymmetric power). Policy can reduce extraction without destroying coordination by increasing transparency (wage bands, advancement criteria, skill translation paths) while maintaining job matching platforms."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wage_gap_persistence",
+      "credential_inflation_signaling",
+      "occupational_licensing_gatekeeping"
+    ]
+  },
+  "directionality_overrides": []
+}

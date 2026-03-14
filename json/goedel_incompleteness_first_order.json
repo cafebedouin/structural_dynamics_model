@@ -1,0 +1,138 @@
+{
+  "header": {
+    "constraint_id": "goedel_incompleteness_first_order",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "godel"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "G\u00f6del's Incompleteness Theorem (First-Order Logic)",
+    "topic_domain": "mathematical_logic/foundations",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "beneficiaries": [],
+    "victims": [],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Formal System Under Self-Reference",
+      "comment": "PERSPECTIVE 1: FORMAL SYSTEM UNDERGOING SELF-REFERENCE (MOUNTAIN) \u2014 A consistent first-order formal system with sufficient expressive power (Peano arithmetic or richer) cannot prove all truths about itself. This is not a limitation of the system's designers or implementers; it is a structural inevitability. The system cannot 'exit' self-reference or gain the meta-logical resources needed to close the gap without becoming inconsistent. Zero degrees of freedom."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Mathematician Working Within the System",
+      "comment": "PERSPECTIVE 2: MATHEMATICIAN WORKING WITHIN THE SYSTEM (MOUNTAIN) \u2014 From inside a consistent formal system, there exist true statements (the G\u00f6del sentence itself, constructed specifically to assert its own unprovability) that cannot be derived from the system's axioms. No amount of effort, cleverness, or additional search changes this structural fact. The mathematician is trapped in the system \u2014 they cannot appeal to resources outside without abandoning the formal framework itself."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Meta-Logical Perspective)",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER / META-LOGICAL PERSPECTIVE (MOUNTAIN) \u2014 From a position outside and above the formal system, the incompleteness is a provable mathematical fact: for any consistent recursively axiomatizable first-order theory T containing Peano arithmetic, there exists a sentence G(T) that is true in the standard model but not provable from T. This is a theorem, not a limitation of observation. The constraint is immutable and universal."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "truth_vs_provability_definition",
+      "question": "What exactly is meant by 'true' in the context of G\u00f6del's theorem?",
+      "resolution_mechanism": "Formal semantics review: does 'true' mean true-in-the-standard-model, true-in-all-models, or something else? Different formulations may affect which claims are actually unprovable.",
+      "impact": "If 'true' is model-dependent: the incompleteness may be less absolute than it appears (though it still holds for standard model). If 'true' requires external justification: the gap between truth and provability is definitional, not empirical.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether truth is defined as standard-model truth or all-models truth"
+    },
+    {
+      "id": "first_order_vs_higher_order_escape",
+      "question": "Does the incompleteness theorem establish an absolute gap or one specific to first-order logic?",
+      "resolution_mechanism": "Analysis of the theorem's scope: first-order languages have fundamental expressive limitations that second-order or higher-order logic may transcend. Can moving to richer logical systems escape incompleteness, or does a generalized version apply?",
+      "impact": "If escape is possible in higher-order logic: incompleteness is a feature of first-order syntax, not a universal mathematical reality. If generalized incompleteness applies: the gap is more fundamental.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Scope of incompleteness relative to logical framework choice"
+    },
+    {
+      "id": "constructive_vs_classical_semantics",
+      "question": "Does the incompleteness theorem hold under constructive/intuitionistic logic or only classical logic?",
+      "resolution_mechanism": "Proof theory comparison: examine whether the G\u00f6del construction requires classical reasoning (excluded middle) or holds constructively. Different logical foundations may allow different completeness results.",
+      "impact": "If constructive escape exists: incompleteness is tied to classical logic assumptions, not universal structure. If it holds constructively too: the constraint is more robust.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether incompleteness holds under constructive logical frameworks"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 2
+  },
+  "commentary": {
+    "narrative_context": "G\u00f6del's First Incompleteness Theorem establishes that any consistent first-order formal system with sufficient expressive power to represent arithmetic is incomplete: there exist true statements about the natural numbers that cannot be proved from the system's axioms. This is a mountain constraint \u2014 an immutable structural fact about the relationship between logical provability and mathematical truth. The constraint admits no beneficiaries or victims; it is not extractive. Rather, it represents a boundary condition on what any formal system can accomplish. The theorem reveals not a flaw in specific axiomatizations but a fundamental limit on first-order logic itself.",
+    "key_agents": [
+      "First-Order Formal Systems (System Under Self-Reference): Trapped position (powerless/trapped) \u2014 structural necessity, not policy failure",
+      "Mathematicians Working in Formal Systems: Moderate power (moderate/trapped) \u2014 confined by the system's logical boundaries",
+      "Analytical Observer: External perspective (analytical/analytical) \u2014 sees the theorem as proven mathematical fact"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Minimal, reflecting that incompleteness is not extractive. No agent benefits at another's cost. The 'cost' of incompleteness (unprovable truths remain true) is not borne by any identifiable actor \u2014 it is a structural fact. The small non-zero value reflects the minimal theater required to formalize and teach the theorem, not substantive extraction. Suppression (0.02): Negligible. There are no barriers to exiting or rejecting the theorem \u2014 it is a logical truth that requires no enforcement, suppression, or coercion. Agents can adopt non-classical logical frameworks or work in higher-order logics where different completeness properties may obtain. Theater ratio (0.05): Very low. G\u00f6del's proof is direct mathematical proof, not performative. The theorem's formalization and teaching involve some pedagogical theater, but the underlying logical structure is transparent and mathematically rigorous.",
+    "perspectival_gap": "Unlike extractive constraints, G\u00f6del incompleteness produces zero perspectival gap. All observers, from all structural positions, converge on the same classification: mountain. This uniformity is diagnostic of a true natural law. A system trapped in incompleteness cannot escape to a more powerful framework from within; an analyst outside sees the same immutable structure; a mathematician struggling against the constraint experiences the same unchangeable boundary. No vantage point reveals a hidden Rope or Snare \u2014 the theorem's universality is precisely what makes it a mountain.",
+    "directionality_logic": "Mountain constraints do not require directionality analysis. There is no extraction flow, no beneficiary-victim relationship, and no asymmetric power dynamics. The constraint applies uniformly to all formal systems of sufficient complexity. The d-value is undefined because the concept of directionality (beneficiary vs victim) is meaningless for natural law constraints.",
+    "mandatrophy_analysis": "MOUNTAIN-ONLY CONSTRAINT: G\u00f6del's incompleteness is a pure mountain type. All three perspectives produce the same classification across all (P,T,E,S) dimensions. This uniformity definitionally excludes mandatrophy (the potential mislabeling of coordination as extraction). The constraint is not a mixed mechanism \u2014 it has no coordination function, no extraction asymmetry, no enforced suppression. The theorem's status as a natural law is certified by: (1) accessibility_collapse \u2265 0.85 (the mathematical barrier is absolute, not contingent); (2) resistance \u2264 0.15 (the theorem cannot be rejected or worked around within its domain); (3) emerges_naturally = true (it is a provable consequence of first-order logic, not a designed or imposed constraint)."
+  },
+  "boltzmann": {},
+  "network": {
+    "affects_constraints": [
+      "church_turing_halting_incomputable",
+      "tarski_undefinability_truth"
+    ],
+    "dual_formulation_note": "G\u00f6del's First Incompleteness Theorem is part of a constraint family in mathematical logic: G\u00f6del (first-order incompleteness), Church-Turing (halting problem, uncomputable functions), and Tarski (undefinability of truth). Each is a distinct mountain-type constraint. G\u00f6del focuses on provability gaps in formal systems; Church-Turing focuses on computational uncomputable ness; Tarski focuses on the undefinability of truth within a language. They are logically related (consequences of similar mathematical structures) but are separate constraints with different expressive domains."
+  },
+  "directionality_overrides": []
+}

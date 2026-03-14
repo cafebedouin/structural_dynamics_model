@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "legislative_gridlock_snare",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "legis"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "Legislative Gridlock as Extractive Constraint",
+    "topic_domain": "political/institutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [],
+    "victims": [
+      "legislative_majorities",
+      "public_good_provision",
+      "policy_responsiveness"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Frustrated Legislative Majority",
+      "comment": "PERSPECTIVE 1: FRUSTRATED LEGISLATIVE MAJORITY (SNARE) \u2014 A coalition commanding a majority of seats cannot pass legislation reflecting their policy mandate due to supermajority requirements, procedural holds, or veto-proof thresholds. The majority is structurally trapped: they hold the formal authority to govern but are blocked by rules that require consensus beyond majority will. Exit options are minimal \u2014 leaving the legislature means abandoning representation; changing rules requires the same supermajority that is blocking them. Experiences maximum extraction as their electoral mandate is rendered non-functional."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Obstinate Minority Coalition",
+      "comment": "PERSPECTIVE 2: OBSTINATE MINORITY COALITION (SNARE) \u2014 A minority faction holds blocking power through procedural rules (filibuster, supermajority gates, committee gatekeeping). They can prevent legislation they oppose but cannot pass their own agenda. This appears as veto power but functions as a mutual extraction mechanism: both majority and minority are locked in gridlock, unable to advance substantive goals. The minority benefits from the ability to block but is trapped by their inability to govern. High suppression: the minority's own veto power suppresses their capacity to legislate."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "The Analytical Observer (Institutional Dysfunction View)",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (SNARE) \u2014 From a generational perspective, gridlock functions as a pure extraction mechanism. The constraint extracts value from public goods provision: infrastructure, healthcare, education, climate policy, and economic regulation all require legislative action that gridlock prevents. The public bears the cost of inaction (foregone benefits, policy obsolescence, crisis accumulation). Neither majority nor minority benefits in aggregate \u2014 both pay the cost of gridlock while gaining only the narrow satisfaction of blocking opponents. The engine classifies this as snare: high extraction from the victims (the public and governance capacity), high suppression (procedural rules prevent normal legislative function), no compensating coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Local Collective Action Alternative",
+      "comment": "PERSPECTIVE 4: LOCAL COLLECTIVE ACTION ALTERNATIVE (TANGLED ROPE) \u2014 At local/state level with more fluid coalition dynamics, gridlock appears as mixed coordination and extraction. Sub-national legislatures can often pass budgets and legislation through compromise, supermajority coalitions, and procedural flexibility. The coordination function (compromise-driven agenda-setting) coexists with extraction (supermajority requirements extract overrepresentation from minorities). This perspective shows that gridlock is not inherent to representative democracy but rather to specific procedural architectures. Exit is more viable at local level: voters can migrate, politicians can change parties or form new coalitions."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Procedural Ritual System",
+      "comment": "PERSPECTIVE 5: PROCEDURAL RITUAL SYSTEM (PITON) \u2014 The legislative process maintains theatrical legitimacy through floor debates, committee hearings, and voting rituals even when outcomes are predetermined by gridlock. The theater ratio (0.68) reflects that much legislative activity is performative: debates that change no minds, committee meetings that produce no substantive results, floor votes that are forestalled by procedural blocks. The procedural system persists through institutional inertia \u2014 it confers legitimacy (voters see their representatives 'working') despite low functional capacity. The engine classifies this as piton: degraded institution maintained by theatrical performance rather than substantive function."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law View (False Summit)",
+      "comment": "PERSPECTIVE 6: NATURAL LAW VIEW / FALSE SUMMIT (MOUNTAIN) \u2014 The naturalized frame claims gridlock is inherent to democratic checks and balances, an immutable structural feature of separated powers and minority protection. This perspective claims accessibility_collapse (\u22650.85) \u2014 'there is no way to escape gridlock within a democratic framework' \u2014 and low resistance (\u22640.15) to the constraint as a natural law. However, the structural data contradicts this: gridlock is a specific feature of certain procedural architectures (supermajority thresholds, filibuster rules, veto points), not inherent to democracy. Comparative evidence (parliamentary systems, unicameral legislatures, simple-majority rules) shows gridlock is contingent, not immutable. The engine detects this as a false summit: naturalization of institutional choice as natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "gridlock_cause_attribution",
+      "question": "Is legislative gridlock primarily a consequence of procedural rules (filibuster, supermajority thresholds, veto points) or of deep political polarization that would produce gridlock even under majoritarian procedures?",
+      "resolution_mechanism": "Comparative analysis across parliamentary systems with majoritarian procedures vs presidential systems with multiple veto points; historical correlation between rule changes and gridlock severity; electoral realignment data correlating polarization with gridlock timing",
+      "impact": "If procedural: gridlock is contingent and changeable (snare classification stable). If polarization-driven: gridlock reflects underlying conflict and rule change is insufficient (classification depends on whether polarization itself is constrainable). Mixed: both are true, and the snare is nested within a deeper structural conflict.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether gridlock is caused by procedural rules or underlying polarization"
+    },
+    {
+      "id": "supermajority_coordination_function",
+      "question": "Do supermajority requirements serve a coordination function (ensuring broad consensus, protecting minorities) or primarily function as extraction tools that enable minorities to block majorities?",
+      "resolution_mechanism": "Historical analysis of supermajority outcomes: do they produce more durable/consensual policy or simply enable obstruction? Comparison of legislative satisfaction/performance metrics in supermajority vs simple-majority regimes; analysis of whether supermajority requirements actually protect minority interests or merely entrench minority veto power",
+      "impact": "If coordination function: classification shifts toward tangled_rope (mixed coordination + extraction). If purely extractive: snare classification is correct. Determines whether rule reform would resolve or merely relocate the constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether supermajority requirements serve coordination or pure veto"
+    },
+    {
+      "id": "procedural_exit_feasibility",
+      "question": "Can legislatures reform their procedural rules to reduce gridlock, or do those rules entrench themselves such that reform is procedurally impossible (the very supermajority that blocks legislation prevents rule change)?",
+      "resolution_mechanism": "Historical precedent: cases where legislative procedures were changed (filibuster reform, committee reform, budget process reform); analysis of whether rule-making procedures themselves have changed over time; counterfactual: what fraction of attempted procedural reforms failed due to gridlock on procedural rules?",
+      "impact": "If procedural exit is feasible: classification implies agents have agency (exit_options could be upgraded from trapped to constrained). If procedural rules entrench themselves: gridlock is self-reinforcing and the snare classification is reinforced (trapped with no exit even to the rule-making process).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether procedural reform is possible or self-entrenchingly blocked"
+    },
+    {
+      "id": "public_extraction_mechanism",
+      "question": "Does gridlock directly extract resources from the public (through inaction that harms welfare) or does it harm through opportunity cost (legislation that would have benefited the public is prevented)?",
+      "resolution_mechanism": "Welfare analysis comparing enacted legislation in high-gridlock vs low-gridlock periods; measurement of foregone benefits from blocked legislation; analysis of crisis accumulation and delayed response as gridlock costs",
+      "impact": "Direct extraction: victims include taxpayers and beneficiary classes. Opportunity cost: victims are abstract (future benefits foregone). Affects severity assessment and determines whether gridlock is optimizable (reducing costs) vs eliminable (removing the constraint entirely).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether gridlock extracts directly or through opportunity cost"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Legislative gridlock functions as a pure extraction mechanism in which supermajority requirements, procedural holds, and multiple veto points prevent legislative action reflecting electoral mandates or addressing public problems. Unlike coordination mechanisms that require consensus and distribute benefits broadly, gridlock concentrates blocking power in minority factions whose veto imposes costs on majorities and the public without generating compensating collective benefits. The constraint's severity has increased over the measurement interval (2004-2024) as political polarization has deepened and supermajority thresholds have become binding constraints rather than rare gates. The extractiveness trajectory (0.42 \u2192 0.68) reflects accumulating policy inaction and crisis deferral; the theater ratio trajectory (0.45 \u2192 0.68) reflects increasing performativity of legislative debate as substantive passage becomes unlikely. The constraint exhibits all six DR types depending on perspective, but the analytical classification at national scale is unambiguously snare: high extraction from victims (the legislative majority, the public, policy responsiveness), high suppression (rules prevent normal legislative function), no compensating coordination benefit, and existence that depends on suppressing alternatives (the constraint would collapse immediately if supermajority thresholds were lowered or procedural holds eliminated).",
+    "key_agents": [
+      "Legislative Majority: Primary victim (powerless/trapped) \u2014 holds formal authority but cannot translate it into legislation; no exit option except abandoning representation",
+      "Minority Blocking Coalition: Secondary victim (moderate/constrained) \u2014 holds veto power but is trapped by inability to govern or advance own agenda; suppression is self-inflicted through use of blocking power",
+      "The Public / Policy Responsiveness: Primary victim (powerless/trapped) \u2014 abstract collective unable to organize or exit; bears cost of foregone legislation and deferred crises",
+      "Procedural Rules System: Institutional actor (institutional/arbitrage) \u2014 maintains theatrical legitimacy while enabling gridlock; benefits from inertia and the appearance of orderly process",
+      "Local/State Legislatures: Alternative actor (organized/mobile) \u2014 show that gridlock is not inherent to representative democracy; procedural flexibility enables coordination and legislative function",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees gridlock as contingent institutional architecture, not natural law"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and rising. The constraint prevents legislation that would address public problems (climate change, infrastructure, healthcare, taxation). The extraction is the opportunity cost of blocked action \u2014 resources and welfare foregone. The rising trajectory reflects accumulating gridlock: as polarization increases and coalitions become more rigid, even previously-routine legislative functions (budget passage, debt ceiling raises) become paralyzed. Initial extractiveness (0.42) reflects some legislative capacity in earlier period; final extractiveness (0.68) reflects near-total blockade in recent cycles. Suppression (0.72): High. Procedural rules (60-vote filibuster threshold, committee gatekeeping, veto points) explicitly suppress the legislative capacity of majorities. The suppression is structural and intentional \u2014 the rules are designed to require supermajority consensus, not simple majority rule. Theater ratio (0.68): High and rising. Much legislative activity is performative: floor debate on bills that will not pass, committee work on legislation that will be filibustered, compromise proposals that are dead-on-arrival. The rising trajectory reflects that as gridlock has deepened, the gap between legislative process and legislative outcome has widened. The procedural system maintains legitimacy (voters see their representatives debating and voting) while actual policy passage becomes increasingly unlikely.",
+    "perspectival_gap": "The frustrated legislative majority sees the constraint as a snare: they have the votes to pass legislation reflecting their mandate, but procedural rules prevent them from translating authority into action. The minority coalition sees a different snare: they can block legislation they oppose, but the same blocking power traps them in gridlock \u2014 they cannot advance their own agenda. The public sees the extraction most clearly: foregone legislation, deferred crises, policy obsolescence, and unresponsive government. The procedural system (through its defenders) sees the constraint as coordination: supermajority requirements ensure broad consensus and protect minorities. The local legislature sees this claim and disproves it: legislatures without supermajority thresholds coordinate effectively and pass legislation. The naturalizing view claims gridlock is inherent to democracy and separated powers, but comparative analysis shows it is contingent on specific procedural choices. The perspectival gap reveals that gridlock is not a coordination problem pretending to be extraction \u2014 it is pure extraction masked by coordination rhetoric.",
+    "directionality_logic": "The majority has high d (near 1.0) \u2014 they are trapped victims of the constraint, experiencing maximum extraction relative to their structural position and formal authority. The minority has elevated d (0.70-0.80) \u2014 they are also victims of gridlock despite holding veto power, because veto power that prevents all legislation (including their own) is extraction, not benefit. The public has maximum d (1.0) \u2014 they are fully targeted by foregone legislation and bear the cost of inaction with no compensating benefit. The procedural system appears as beneficiary (low d) only in a narrow sense: it preserves institutional legitimacy and continuity. But because the constraint produces no substantive coordination benefit, no actor experiences negative or low d values that would offset the victims' high d. There are no true beneficiaries of gridlock \u2014 only agents with different costs.",
+    "mandatrophy_analysis": "MANDATROPHY FULLY RESOLVED: This constraint demonstrates that pure extraction masquerading as coordination is the defining pathology of high-suppression mechanisms. The coordination rhetoric ('supermajority requirements ensure consensus,' 'veto points protect minorities,' 'separation of powers prevents tyranny') accurately describes the theoretical function but obscures the practical outcome: gridlock that blocks beneficial legislation and harms the public. The mandatrophy is resolved by measuring: Does the supermajority requirement produce consensus on substantive legislation, or does it produce veto deadlock? Evidence shows the latter. Comparative analysis (parliamentary systems, unicameral legislatures, simple-majority rules) shows consensus can be achieved without supermajority suppression \u2014 consensus reflects culture and coalition dynamics, not procedural thresholds. The mandatrophy resolution: gridlock is snare, not rope. The coordination function (ensuring broad consensus) is never realized; only the extraction function (enabling veto) operates."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "two_party_duopoly_snare",
+      "regulatory_capture_via_gridlock",
+      "crisis_deferred_as_extraction"
+    ],
+    "dual_formulation_note": "Legislative gridlock is downstream of several structural constraints including partisan polarization, primary election dynamics, and campaign finance concentration. Each upstream constraint affects how rigid coalitions become and how binding supermajority thresholds are. Gridlock also feeds forward to regulatory capture: when legislatures cannot update rules, regulators and courts fill the gap, creating a secondary extraction mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.75
+    }
+  ]
+}

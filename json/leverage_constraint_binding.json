@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "leverage_constraint_binding",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lcb"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Leverage Constraint Binding in Financial Systems",
+    "topic_domain": "financial/economic_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "financial_intermediaries",
+      "leverage_providers"
+    ],
+    "victims": [
+      "debt_obligated_agents",
+      "systemic_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Debt-Obligated Borrower",
+      "comment": "PERSPECTIVE 1: DEBT-OBLIGATED BORROWER (SNARE) \u2014 Structurally trapped by leverage commitment. Exit options are severely constrained: default carries severe penalties (asset seizure, credit destruction, legal consequences), refinancing locks in higher rates, and bankruptcy destroys social/professional identity. The borrower experiences maximum extraction with no viable exit path."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Small Business Using Leverage",
+      "comment": "PERSPECTIVE 2: SMALL BUSINESS (TANGLED ROPE) \u2014 Constrained but not trapped. Leverage enables growth (genuine coordination function) but creates asymmetric extraction: debt service obligates cash flows regardless of business performance. Exit is possible at high cost (asset sales, operational contraction, loss of independence). Mixed experience: benefit from expansion capital + extraction through fixed obligations."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Financial Intermediary",
+      "comment": "PERSPECTIVE 3: FINANCIAL INTERMEDIARY (ROPE) \u2014 Experiences leverage constraint as pure coordination. Arbitrage options allow exit: can securitize debt, hedge, or transfer risk. Primary beneficiary. Extraction flows toward this agent (interest, fees, collateral), but the intermediary frames the constraint as solving a genuine coordination problem: matching borrowers seeking capital with lenders seeking returns. Net positive position with full agency."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Authority",
+      "comment": "PERSPECTIVE 4: REGULATORY AUTHORITY (SCAFFOLD) \u2014 Organized agents (central banks, prudential regulators, bankruptcy courts) deploy leverage constraints as temporary coordination mechanisms with sunset logic. Capital requirements, stress tests, and debt-to-income limits reduce systemic fragility during normalization cycles. Suppression is enforced (regulatory oversight) but temporary: during low-rate environments, enforcement relaxes; during crises, it tightens. The constraint has built-in renewal cycles."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Accounting/Legal Formalism",
+      "comment": "PERSPECTIVE 5: ACCOUNTING AND LEGAL FORMALISM (PITON) \u2014 Debt classification, collateral valuation, and bankruptcy law are substantially performative. Accounting standards (mark-to-market, loss provisioning) create theater around asset quality; legal foreclosure processes are ritualized and often inefficient. The formalism persists through institutional inertia despite low functional verification. Hidden leverage and shadow banking grow around the formal constraints."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, leverage constraint binding is framed as an immutable law of capital allocation: debt creates obligation, obligation creates binding, and binding creates systemic risk. The constraint appears as natural law (thermodynamic-like properties of financial systems). However, this perspective risks naturalizing what is actually a contingent institutional arrangement: leverage binding depends on legal enforcement, property rights definitions, and behavioral assumptions about default."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "enforcement_credibility_mechanism",
+      "question": "What percentage of leverage constraint binding force derives from actual enforcement capacity vs. credibility/belief in enforcement?",
+      "resolution_mechanism": "Cross-jurisdictional comparison: enforcement outcomes in high-corruption vs low-corruption environments; historical analysis of periods where enforcement capacity collapsed (failed states, civil wars, hyperinflation)",
+      "impact": "If enforcement < 40% of binding force: constraint is more cooperative/belief-based than structural. If enforcement > 70%: constraint depends on state capacity. If enforcement capacity collapses (conflict, state failure), the binding disappears rapidly despite legal form persisting.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative contribution of enforcement vs credibility to binding force"
+    },
+    {
+      "id": "identity_locked_debt_spiral",
+      "question": "For borrowers in high-extraction debt relationships, is suppression primarily structural (legal/economic barriers) or internalized (identity-fused with debt-bearer role)?",
+      "resolution_mechanism": "Post-default behavioral analysis: do agents with legal discharge (bankruptcy, jubilee) maintain debt-like behaviors? Do debt holders internalize creditor narratives about personal responsibility? Cross-cultural comparison of debt vs honor societies.",
+      "impact": "If primarily structural: debt-obligated remains trapped at biological timescale. If partially internalized: identity-locked classification appropriate; breaking psychological binding may enable escape despite legal constraints remaining. If heavily internalized: continued extraction persists post-legal-discharge through shame/guilt.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of identity fusion in debt obligation internalization"
+    },
+    {
+      "id": "alternative_coordination_sufficiency",
+      "question": "Can leverage-free coordination mechanisms (equity, partnerships, cooperative ownership) achieve equivalent capital allocation efficiency as debt-based leverage?",
+      "resolution_mechanism": "Historical analysis of equity-only firms vs leveraged peers (return on capital, innovation rates, failure rates); comparative institutional analysis (German Mittelstand, Japanese zaibatsu vs US leveraged firms); economic simulations of alternative capital allocation mechanisms",
+      "impact": "If alternatives are sufficient: leverage constraint is not natural law but institutional choice, potentially susceptible to sunset. If alternatives underperform: leverage constraint may reflect genuine coordination necessity (Rope or Tangled Rope rather than Snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether non-leveraged coordination mechanisms can substitute for debt-based capital allocation"
+    },
+    {
+      "id": "systemic_cascade_mechanism",
+      "question": "Does leverage constraint binding create genuinely coordinated systemic stability or does it merely concentrate fragility at critical nodes?",
+      "resolution_mechanism": "Network analysis of debt dependency structures; comparison of cascade patterns in leverage-heavy vs leverage-light financial systems; stress-test scenarios showing whether constraints propagate contagion",
+      "impact": "If coordinates stability: Tangled Rope from systemic perspective. If concentrates fragility: Snare from systemic perspective. Determines whether regulatory scaffold perspective is accurate or aspirational.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether leverage constraints promote or concentrate systemic fragility"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Leverage constraint binding is a financial mechanism where debt obligations create structural constraints on borrowers' behavior, exit options, and resource allocation. The constraint operates across institutional scales \u2014 from individual mortgages and small business loans to sovereign debt and systemic financial risk. The binding force derives from three mechanisms: (1) legal enforcement (collateral seizure, foreclosure, bankruptcy), (2) credibility in enforcement (expectations of legal consequence), and (3) identity-fusion with debt-bearer role (shame, internalized responsibility). The constraint exhibits all six DR types from different perspectives. To the debt-obligated borrower with no exit, it is a Snare (extraction with suppression). To the financial intermediary with arbitrage options, it is Rope (pure coordination). To regulatory authorities deploying it as temporary systemic risk management, it is Scaffold (with sunset logic during normalization cycles). The increasing theater_ratio (0.38 \u2192 0.68 over 15 periods) reflects how accounting formalism, debt classification rituals, and foreclosure procedures have become increasingly performative relative to their actual verification function. The rising extractiveness (0.42 \u2192 0.62) reflects how debt-obligation terms have become more onerous over the measurement interval, with tighter collateral requirements and reduced forbearance.",
+    "key_agents": [
+      "Debt-Obligated Borrowers: Primary victims (powerless/trapped) \u2014 structural inability to exit leverage commitments; face asset seizure, credit destruction, legal consequences on default",
+      "Financial Intermediaries: Primary beneficiaries (institutional/arbitrage) \u2014 extract interest, fees, and collateral value; maintain exit optionality through securitization and hedging",
+      "Small Businesses Using Leverage: Secondary agents (moderate/constrained) \u2014 experience mixed coordination (access to growth capital) and extraction (fixed obligations regardless of performance)",
+      "Regulatory Authorities: Organized enforcers (organized/constrained) \u2014 deploy leverage constraints as temporary coordination mechanisms with crisis-response cycles",
+      "Accounting and Legal Systems: Institutional framework (institutional/mobile) \u2014 maintain performative debt formalism; create theater around asset quality and enforcement",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as thermodynamic laws of capital"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts significantly from trapped and constrained agents through interest, fees, collateral haircuts, and opportunity costs. But extraction is not maximal (which would be closer to 0.85) because some leverage genuinely enables coordination \u2014 small businesses do grow through debt, mortgages do enable housing access, sovereign borrowing does fund productive investment. The moderate-high value reflects that extraction coexists with coordination function. Suppression (0.72): High. Multiple barriers prevent exit: legal (foreclosure/bankruptcy costs), economic (default penalties outweigh alternatives), reputational (credit destruction), and psychological (internalized debt-bearer identity). Barriers compound \u2014 an agent trapped by one becomes less able to escape the others. Theater ratio (0.55): Moderate. Debt-obligation formalism involves significant theater: loan classification systems, collateral valuation models, default probability assessments, and bankruptcy procedures are ritualized and often decoupled from actual borrower capacity or asset quality. But theater is not dominant (which would be >0.70) because enforcement has real consequences \u2014 defaults do result in asset seizure and credit consequences. The theater increases over the measurement interval as accounting standards become more complex.",
+    "perspectival_gap": "The maximum perspectival gap exists between the trapped borrower and the institutional beneficiary. The borrower experiences snare (pure extraction, chi \u2248 0.85-1.0). The intermediary experiences rope (pure coordination, chi \u2248 0.1-0.2). Same constraint; opposite experiences. The moderate business with constrained exit sees this as tangled rope \u2014 genuine coordination function (access to capital) coexisting with extraction (fixed obligations). The regulatory authority sees it as scaffold because they have organized exit options (can adjust capital requirements, can implement debt jubilees, can regulate interest rates) and perceive the binding as temporary and revisable. The accounting system sees itself as degraded (piton) because debt formalism has become increasingly ritualized without corresponding verification improvements.",
+    "directionality_logic": "Each perspective's directionality (d) is derived from the agent's structural relationship to extraction flow and exit capacity. Trapped borrowers with no exit (d \u2248 0.95) experience maximum f(d) \u2248 1.42, amplifying extractiveness. Constrained small businesses with partial exit (d \u2248 0.60) experience moderate f(d) \u2248 0.95. Institutional intermediaries who benefit and have arbitrage options (d \u2248 0.10) experience negative or minimal f(d) \u2248 -0.05, suppressing extraction from their perspective. The piton perspective's d is derived from theater rather than extraction asymmetry: the accounting/legal system benefits from formalism (d \u2248 0.20) and has mobile exit options (can change standards), so it classifies as piton based on theater_ratio \u2265 0.70, not based on high chi.",
+    "mandatrophy_analysis": "Leverage constraint binding demonstrates how the same structural mechanism can legitimately classify as six different types depending on observational context. The mandatrophy is resolved by recognizing that this is not a flaw in the classification system but a feature: the constraint genuinely is a snare (for trapped borrowers), a tangled rope (for constrained agents), a rope (for beneficiaries), a scaffold (for regulators), and a piton (for formalism). The false summit occurs when the analytical observer naturalizes this as immutable law (mountain) \u2014 claiming that debt obligation is inherent to capital markets, like gravity is inherent to physics. The structural data reveals this is contingent: enforcement depends on state capacity, credibility depends on precedent, and internalization depends on cultural narratives. All three can change. The constraint would shift dramatically in a jurisdiction where debt enforcement failed, or where debt jubilees became normalized, or where cultural attitudes toward debt obligation shifted. The mountain classification is a false summit generated by naturalizing institutional arrangements as natural laws."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "collateral_valuation_opacity",
+      "bankruptcy_procedure_formalism",
+      "interest_rate_asymmetry_information"
+    ],
+    "dual_formulation_note": "Leverage constraint binding decomposes into three structurally distinct constraints: (1) collateral_valuation_opacity (\u03b5 \u2248 0.35, Tangled Rope) \u2014 agents cannot verify actual collateral quality, enabling extraction through information asymmetry; (2) bankruptcy_procedure_formalism (\u03b5 \u2248 0.48, Piton) \u2014 foreclosure rituals persist with declining functional verification; (3) interest_rate_asymmetry_information (\u03b5 \u2248 0.42, Tangled Rope) \u2014 borrowers cannot assess true cost of credit relative to creditor's cost of capital. Each has different beneficiaries, victims, and temporal dynamics. The parent story (leverage_constraint_binding) represents the integrated mechanism; the child stories represent empirically decomposable components with distinct \u03b5 values."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "header": {
+    "constraint_id": "living_donor_coercion_risk",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "donor"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.75,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Living Donor Coercion Risk in Organ Transplantation",
+    "topic_domain": "medical/bioethics/healthcare_access",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "transplant_recipients",
+      "transplant_surgeons",
+      "organ_procurement_organizations"
+    ],
+    "victims": [
+      "living_donors",
+      "economically_vulnerable_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Economically Vulnerable Donor",
+      "comment": "PERSPECTIVE 1: ECONOMICALLY VULNERABLE DONOR (SNARE) \u2014 Faces material desperation (debt, medical costs, family survival needs) that makes organ donation appear as coerced choice. Legally 'voluntary' but structurally trapped by economic circumstances. No real exit: refusing donation means abandoning family member or losing critical income. Experiences maximum extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "label": "The Family-Obligated Donor",
+      "comment": "PERSPECTIVE 2: FAMILY-OBLIGATED DONOR (SNARE) \u2014 Structurally mobile (could refuse donation) but identity-locked through familial bonds and caregiving norms. Self-concept constituted as 'the one who saves the family member.' Exit would require abandoning identity as responsible family member. Experiences extraction through internalized obligation rather than external coercion alone."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Transplant Program",
+      "comment": "PERSPECTIVE 3: TRANSPLANT PROGRAM (ROPE) \u2014 Experiences constraint as coordination mechanism: living donor transplantation solves organ scarcity problem, enables patient survival, creates medical success narratives. Benefits from expansion of living donor pool. Sees donation as consensual arrangement that benefits both parties."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Paid/Altruistic Donor",
+      "comment": "PERSPECTIVE 4: MIXED MOTIVE DONOR (TANGLED ROPE) \u2014 Motivated by both genuine altruism and financial compensation or cost-recovery. Experiences constraint as mixed: genuine benefit from helping recipient AND extraction through payment asymmetry or pressure to assist relative. Has some agency (could donate to stranger, could refuse) but faces significant social and economic constraints."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Informed Consent Protocol",
+      "comment": "PERSPECTIVE 5: INFORMED CONSENT PROTOCOL (PITON) \u2014 Regulatory requirement for living donor transplantation. Performs cognitive function (donors do receive information) but largely theater: donors under family/economic pressure cannot exercise real choice even when fully informed. Protocol persists through institutional inertia and legal requirement despite limited effectiveness in preventing coerced donation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Advocacy Coalition",
+      "comment": "PERSPECTIVE 6: ADVOCACY COALITION (TANGLED ROPE) \u2014 Patient advocacy groups, transplant networks, and disability organizations see living donation as both coordinating solution (increases organ availability for patients in organ-scarce nations) and extractive (exploits economically vulnerable donors). Face constraints in reforming system without reducing transplant access."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Organ Scarcity View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / ORGAN SCARCITY NATURAL LAW (MOUNTAIN) \u2014 From civilizational scope, organ scarcity is presented as immutable biological constraint: insufficient cadaver organs to meet medical need. Living donation appears as natural solution to fixed shortage. However, the structural data reveals this as false summit: organ scarcity is partly contingent on procurement system design (opt-in vs opt-out), allocation criteria, and transplant rates. The constraint naturalizes an institutional choice as immutable law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coercion_detectability",
+      "question": "Can informed consent protocols reliably distinguish voluntary living donation from coerced donation when economic desperation and familial obligation are both present?",
+      "resolution_mechanism": "Longitudinal outcomes analysis: comparing post-donation psychological outcomes, regret rates, and outcome trajectories between economically motivated vs altruistic donors; comparison of informed consent effectiveness across countries with different economic contexts",
+      "impact": "If protocols cannot distinguish: current classification stands, constraint is snare. If protocols can reliably identify coercion and prevent it: reclassify as tangled_rope or scaffold with sunset through improved screening.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether informed consent protocols can detect and prevent coerced donation"
+    },
+    {
+      "id": "economic_desperation_threshold",
+      "question": "At what point does economic motivation transform 'altruistic choice' into coerced extraction?",
+      "resolution_mechanism": "Comparative analysis of donation motivations across income quartiles; survey data on donors' perceived alternatives; assessment of whether donors would donate if economic circumstances improved",
+      "impact": "If threshold is low (any significant financial benefit = coercion): snare classification strengthens, suppression increases. If threshold is high (only explicit payment or explicit threats = coercion): rope or tangled_rope classification more appropriate.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Threshold for economic motivation to constitute coercion"
+    },
+    {
+      "id": "family_obligation_vs_authentic_choice",
+      "question": "Is familial obligation to donate an authentic expression of the donor's values or a structural coercion mechanism?",
+      "resolution_mechanism": "Counterfactual analysis: tracking donors who refused to donate to relatives and their long-term outcomes and family relationships; comparison of choice satisfaction across cultures with different kinship obligation norms",
+      "impact": "If authentic: identity_locked exit appropriately captures the structural dynamic. If coerced: reclassify as trapped exit, increasing chi and confirming snare. Identity lock vs trap distinction determines whether the binding is cognitive or structural.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether family obligation to donate reflects authentic values or coercion"
+    },
+    {
+      "id": "supply_side_alternatives",
+      "question": "How much does living donation extraction depend on scarcity created by institutional choices vs immutable biological limits?",
+      "resolution_mechanism": "Comparative study of transplant systems: countries with different procurement policies (opt-in/opt-out), allocation criteria, and deceased donor rates; analysis of whether living donation rates correlate with organ scarcity or with payment/family norm policies",
+      "impact": "If high dependence on institutional design: constraint is snare but potentially reformable through system change. If high dependence on biological scarcity: mountain classification for underlying organ shortage is appropriate (though coercion snare remains distinct constraint).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether living donation extraction is driven by scarcity or by institutional design"
+    },
+    {
+      "id": "paid_donation_harm_equivalence",
+      "question": "Does compensated living donation (paid for organs) increase coercion risk compared to uncompensated donation?",
+      "resolution_mechanism": "Cross-national comparison: donation outcomes, regret rates, and donor health outcomes in countries with explicit payment (Iran, compensation models) vs altruistic-only systems; analysis of whether payment increases or decreases selection into economically vulnerable populations",
+      "impact": "If payment increases coercion: supports snare classification, extraction explicitly visible. If payment reduces coercion by enabling ethical accounting: reframes as tangled_rope with transparent extraction rather than hidden coercion.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether paid donation increases coercion risk vs uncompensated donation"
+    },
+    {
+      "id": "post_donation_disability_accountability",
+      "question": "Are donors whose health is permanently damaged by donation systematically denied accountability or compensation by transplant systems?",
+      "resolution_mechanism": "Longitudinal health tracking and disability outcomes for living donors; analysis of liability frameworks and successful compensation claims for donation-related injuries; comparison across countries and institutions",
+      "impact": "If accountability is systematically avoided: suppression and extraction increase, snare classification strengthens. If accountability structures exist and function: constrains suppression metric and may reclassify as tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether transplant systems systematically avoid accountability for donor disability"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Living donor organ transplantation exemplifies extraction through medical and family normalization. The constraint operates at the intersection of organ scarcity (legitimate medical problem), economic vulnerability (structural feature of healthcare access in many societies), and familial obligation (internalized cultural norm). Legally framed as 'informed voluntary choice,' living donation structurally extracts from economically desperate individuals and family members under obligation pressure. The system's theater (informed consent protocols, medical evaluation, psychological screening) appears to protect autonomy but functions primarily to legitimize donation regardless of actual donor coercion context. The constraint's extractiveness has increased over the measurement interval as living donation has become normalized and systematized \u2014 transplant centers now actively recruit living donors, and donation is increasingly presented as a moral solution to organ scarcity rather than as a problematic extraction mechanism. The theater ratio reflects the gap between formal consent procedures (which donors undergo) and actual autonomy (which is constrained by desperation or obligation).",
+    "key_agents": [
+      "Living Donor (economically vulnerable): Primary victim (powerless/trapped or identity_locked) \u2014 structurally coerced by economic desperation or family obligation; bears full risk of health complications",
+      "Living Donor (family member): Primary victim (powerless/identity_locked) \u2014 identity-locked through familial caregiving norms; structurally mobile but cannot exercise exit without becoming different person",
+      "Transplant Recipient: Beneficiary (institutional/arbitrage) \u2014 gains access to functioning organ and life extension; typically institutional position within healthcare system",
+      "Transplant Program / Medical Institution: Beneficiary (institutional/arbitrage) \u2014 benefits from living donor expansion (reduces wait times, improves outcomes metrics, increases patient volume); experiences constraint as coordination solution",
+      "Organ Procurement Organization: Beneficiary (institutional/arbitrage) \u2014 incentivized to expand living donor recruitment; benefits from donation rate increases",
+      "Informed Consent Protocol / Regulatory System: Piton actor (institutional/arbitrage) \u2014 maintains performative function; persists through legal requirement despite limited coercion prevention",
+      "Patient Advocacy Coalition: Organized victim/beneficiary (organized/constrained) \u2014 benefits from organ availability but constrained by ethical concerns about donor exploitation; conflicted perspective"
+    ],
+    "logic_rationale": "Extractiveness (0.62): High. Living donation extracts from economically vulnerable and obligated donors through structural desperation and social pressure. The extraction has grown over time as donation has become systematized and normalized. The value reflects that the extraction is not total (some donors do have genuine choice), but is substantial and concentrated on powerless agents. Suppression (0.75): High. Multiple barriers prevent exit: economic desperation removes material alternatives; family obligation removes psychological alternatives; medical framing of donation as 'gift' and 'moral choice' removes cognitive alternatives; liability structures and stigma against refusing donation suppress acknowledgment of coercion. Theater ratio (0.58): Moderate-high. Informed consent protocols perform cognitive function (donors do receive information) but largely theater: the protocols cannot and do not prevent coerced donation when coercion stems from economic desperation or family obligation. Psychological screening and medical evaluation serve to legitimate the system rather than protect autonomy. Theater has increased as systems have professionalized consent procedures while extraction mechanisms remain unchanged.",
+    "perspectival_gap": "The perspectival gap reveals the constraint operates through normalizing extraction as medical coordination. Beneficiaries (transplant programs, recipients) experience genuine problem-solving (coordination). Victims experience structural coercion masked by consent theater. The informed consent protocol creates the gap by appearing to protect autonomy while actually legitimizing extraction. The analytical mountain view (organ scarcity as immutable) naturalizes what is partly a contingent institutional choice (procurement policies, allocation criteria, transplant culture development). The gap between powerless victim's snare and institutional beneficiary's rope is widest on this constraint because the system explicitly frames extraction as voluntary gift.",
+    "directionality_logic": "Each agent's directionality is derived from their structural benefit/harm relationship to the constraint. Economically vulnerable donors: beneficiary status = none (bear full cost), exit options = trapped (no material alternatives), power = powerless \u2192 d \u2192 0.95 (near maximum target). Family-obligated donors: beneficiary status = none (bear full cost), exit options = identity_locked (structurally mobile but identity-fused), power = powerless \u2192 d \u2192 0.89 (high target, lower than trapped because cognitive escape is theoretically possible if identity frame broke). Transplant programs: beneficiary status = yes (benefit from donor expansion), exit options = arbitrage (can source organs via multiple mechanisms), power = institutional \u2192 d \u2192 0.05 (near full beneficiary). The directionality derivation explains why the beneficiary sees Rope and the victim sees Snare: their d values are opposite poles of the sigmoid function.",
+    "mandatrophy_analysis": "This constraint has strong mandatrophy resolution signatures. The beneficiary's Rope classification is genuine \u2014 transplant programs do solve the legitimate coordination problem of organ allocation. But the victim's Snare is equally genuine \u2014 economically desperate individuals are structurally coerced into donation. The mandatrophy resolves by showing these are not contradictory classifications but perspectival reads from opposite structural positions. The 'volunteerness' framing is coherent only from the beneficiary's vantage (this solves my coordination problem, the donor chose to help). From the victim's vantage, the system is a snare (I had no real choice, coercion was structural). The false summit risk is the analytical view that organ scarcity is immutable \u2014 but the empirical fact is that procurement policy, deceased donor registration systems, and transplant culture are all contingent choices. The mandatrophy prevents the system from claiming to be a natural law while exploiting economically vulnerable agents; it forces the recognition that living donation extraction is a policy choice, not a biological necessity."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "organ_scarcity_procurement_policy",
+      "healthcare_access_economic_coercion"
+    ],
+    "dual_formulation_note": "Living donor coercion is downstream of organ scarcity constraints and healthcare access constraints. The upstream organ scarcity constraint (\u03b5 \u2248 0.15, Mountain or Tangled Rope depending on procurement system design) determines the structural pressure for living donation. The upstream healthcare access constraint (\u03b5 \u2248 0.55, Tangled Rope) determines economic vulnerability of donor population. Living donor coercion risk has its own extractiveness (0.62) reflecting the specific mechanism by which donor vulnerability is exploited. Each constraint in the family has distinct \u03b5 and should be evaluated separately, linked through network dependencies."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ]
+}

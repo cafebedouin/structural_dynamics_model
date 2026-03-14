@@ -1,0 +1,220 @@
+{
+  "header": {
+    "constraint_id": "regional_economic_inequality",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "regecon"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Regional Economic Inequality and Capital Concentration",
+    "topic_domain": "economic_geography/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "core_financial_centers",
+      "multinational_corporations",
+      "real_estate_investors"
+    ],
+    "victims": [
+      "peripheral_regions",
+      "rural_labor_force",
+      "resource_extraction_communities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Peripheral Region Worker",
+      "comment": "PERSPECTIVE 1: PERIPHERAL REGION WORKER (SNARE) \u2014 Trapped by geography, lack of skill-match for urban jobs, and costs of relocation. Educational opportunities are concentrated in core cities; migrating requires capital and social networks the worker lacks. Suppression is structural: deteriorating local services create push factors, but exit barriers remain insurmountable. Bears full extraction cost with no exit capacity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Secondary City Middle Class",
+      "comment": "PERSPECTIVE 2: SECONDARY CITY MIDDLE CLASS (TANGLED ROPE) \u2014 Constrained by regional employment concentration and housing costs that absorb local wage premium. Benefits from coordination of educational institutions and professional networks within the region, which provides genuine coordination service. However, faces systematic extraction through tax base drain (wealthier residents migrate), infrastructure underinvestment, and wage suppression from capital's ability to shift operations."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Core Financial Center",
+      "comment": "PERSPECTIVE 3: CORE FINANCIAL CENTER (ROPE) \u2014 Experiences inequality constraint as coordination mechanism: labor concentration, supply chain efficiency, and network effects are genuine benefits. Arbitrage option exists \u2014 capital can move anywhere (and threatens to move as leverage). Net beneficiary of the constraint; extracts through wage differentials and property values, but also genuinely solves coordination problems of complex financial operations."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regional Development Coalition",
+      "comment": "PERSPECTIVE 4: REGIONAL DEVELOPMENT COALITION (SCAFFOLD) \u2014 Organized actors (local government, NGOs, regional universities, cooperative enterprises) see inequality as a temporary problem solvable through targeted intervention: remote work, broadband infrastructure, skill-matching programs, anchor institution strategies. Sunset clause implicit in digital infrastructure buildout and labor market decentralization. Coalition has agency and sees exit path, constraining extraction through coordination alternatives."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Regional Policy Apparatus",
+      "comment": "PERSPECTIVE 5: REGIONAL POLICY APPARATUS (PITON) \u2014 Regional development policy (development zones, tax incentives, infrastructure investment) is largely performative ritual: policy announcements create theater of action without addressing core extraction mechanisms (capital's exit option and labor immobility). Theater ratio 0.62 reflects that much policy activity is symbolic gesture rather than effective restructuring. The apparatus persists through institutional inertia and political face-saving despite limited track record of equalization."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Organized Labor Movement",
+      "comment": "PERSPECTIVE 6: ORGANIZED LABOR MOVEMENT (TANGLED ROPE) \u2014 Coordinating function: unions provide genuine collective voice that negotiates both within and across regions, pooling risk and knowledge. Extraction: labor movement is systematically weaker in peripheral regions where density is lower, and capital uses regional bifurcation as leverage to suppress wages nationally. Constrained exit \u2014 deunionization creates new extraction layer on top of coordination."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, agglomeration effects and increasing returns to scale in complex economies are inherent properties of modern production. Regional inequality is a natural law of economic development \u2014 core accumulation is structural. However, this perspective risks naturalizing what are actually contingent institutional arrangements (patent systems, infrastructure investment patterns, migration barriers). The engine's false summit detector will flag this as misidentification of contingent structures as natural laws."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "agglomeration_vs_extraction_boundary",
+      "question": "Are observed wage and development differentials between regions due to genuine agglomeration efficiency gains or to extractive rent-capture by core capitals?",
+      "resolution_mechanism": "Comparative analysis of regional wage premiums vs productivity differentials; cross-country comparison of inequality in different institutional regimes (federal transfer systems, union density, labor mobility); decomposition of wage gaps into human capital, job mix, and residual extraction.",
+      "impact": "If 70%+ differential is agglomeration: core regions have genuine coordination advantage and constraint is primarily Rope. If 70%+ is extraction: constraint is primarily Snare with theatrical efficiency claims.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of regional wage differentials attributable to agglomeration gains vs extractive rents"
+    },
+    {
+      "id": "labor_mobility_structural_vs_choice",
+      "question": "Do peripheral region residents face structural barriers to migration (cost, skills mismatch, credential non-recognition) or is immobility a preference revealed through cost-benefit analysis?",
+      "resolution_mechanism": "Comparative study of migration patterns when barriers are explicitly reduced (visa liberalization, relocation subsidies, credential mutual recognition); survey of non-migrants about counterfactual scenarios; analysis of return migration rates and success outcomes.",
+      "impact": "If structural: suppression classification is correct and exit_options are trapped/constrained. If choice-based: exit_options shift toward mobile/arbitrage and constraint appears less extractive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether labor immobility reflects structural barriers or revealed preferences"
+    },
+    {
+      "id": "remote_work_sunset_credibility",
+      "question": "Will remote work infrastructure and digital labor markets actually decentralize capital and employment, or will they preserve and amplify core-periphery dynamics through different mechanisms?",
+      "resolution_mechanism": "Longitudinal tracking of employment distribution and wages in jurisdictions with high remote work adoption; analysis of whether remote work reduces wage suppression for peripheral workers or merely substitutes location-independent low-wage labor.",
+      "impact": "If genuine decentralization: scaffold sunset is real and constraint will degrade. If mechanism substitution: apparent decentralization masks continued extraction, and scaffold classification is aspirational rather than structural.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether remote work infrastructure will actually decentralize capital and employment"
+    },
+    {
+      "id": "federal_transfer_effectiveness",
+      "question": "Do equalization transfers and regional development funds actually reduce underlying extraction mechanisms or merely compensate victims while preserving core-periphery capital flows?",
+      "resolution_mechanism": "Analysis of regional inequality trends before/after major transfer system reforms; comparison of transfer-recipient regions that succeeded in diversification vs those that remained dependent; examination of whether transfers reduce or entench capital dependency.",
+      "impact": "If effective: transfers reduce extraction and constraint moves toward Rope. If compensatory: transfers maintain suppression and mask extraction, and constraint remains Snare at base level.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether federal transfers reduce extraction or merely compensate victims"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Regional economic inequality operates as a structural constraint where core financial and industrial centers extract from peripheral regions through differential wage capture, infrastructure investment concentration, and labor mobility barriers. The constraint exhibits all six DR types from different perspectives. From the perspective of trapped peripheral workers, it is a snare \u2014 immobility is enforced by cost, skill mismatch, and credential non-recognition. From the perspective of secondary city professionals, it is tangled rope \u2014 genuine regional coordination (universities, professional networks) coexists with systematic extraction through tax base drain and capital flight. From core financial centers, it appears as rope \u2014 a coordination mechanism solving complex operational and financial network requirements. From organized labor and regional development actors, it appears as a scaffold \u2014 a temporary problem being solved through union coordination and digital infrastructure. From the policy apparatus, it appears as piton \u2014 regional development policy is largely performative ritual. The constraint's theater ratio (0.62) reflects that policy announcements and development programs create an appearance of action while core extraction mechanisms (capital's mobility and labor's immobility) remain unchanged. The extractiveness has increased over the measurement interval (0.42 \u2192 0.58) as agglomeration dynamics have intensified and remote work promises have not yet materially decentralized capital. The suppression level (0.68) reflects multiple, overlapping barriers to exit: geographic cost, educational concentration in cores, credential non-recognition across jurisdictions, and informal network dependencies that disadvantage outsiders.",
+    "key_agents": [
+      "Peripheral Region Workers: Primary victims (powerless/trapped) \u2014 face insurmountable barriers to migration and constrained local job markets",
+      "Core Financial Centers: Primary beneficiaries (institutional/arbitrage) \u2014 capture efficiency gains from concentration and can credibly threaten relocation",
+      "Secondary City Professionals: Mixed agents (moderate/constrained) \u2014 benefit from regional coordination but systematically extract from through brain drain and capital flight",
+      "Real Estate Investors: Structural beneficiaries (institutional/arbitrage) \u2014 profit from core appreciation and peripheral disinvestment",
+      "Organized Labor: Organized victims (organized/constrained) \u2014 coordinating function is systematically weaker in periphery, enabling wage suppression",
+      "Regional Development Coalitions: Organized reformers (organized/constrained) \u2014 see temporary problem solvable through intervention",
+      "Policy Apparatus: Institutional maintainers (institutional/arbitrage) \u2014 performs regional development ritual without addressing core mechanisms"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Core regions capture wage and asset value premiums through multiple mechanisms: agglomeration efficiency (genuine coordination gain ~0.15-0.20 of differential), labor market power (capital's mobility enabling wage suppression ~0.20-0.25), and rent extraction through property and financial assets (~0.15-0.18). The measurement progression shows extractiveness increasing as agglomeration deepens and remote work promises fail to materialize. Suppression (0.68): Moderate-high. Barriers to exit are multiple: (1) structural \u2014 relocation costs, skill mismatch with core jobs, credential non-recognition; (2) social \u2014 network effects that disadvantage outsiders in core labor markets; (3) institutional \u2014 infrastructure and educational investment concentrated in cores. Suppression is not total \u2014 some mobility occurs through internal migration and some core-periphery integration happens \u2014 but is substantial enough to trap the majority. Theater ratio (0.62): Moderate-high. Regional development policy creates appearance of action (development zones, tax incentives, subsidy programs) without addressing core mechanisms. Policy announcements and ribbon-cuttings are performative; actual capital reallocation remains negligible. Theater has increased over the interval as policy became more elaborate while inequality worsened, indicating growing gap between policy activity and real effect.",
+    "perspectival_gap": "The constraint shows dramatic perspectival divergence. The same structural mechanism (agglomeration + labor immobility + capital mobility) classifies as Snare from the trapped worker perspective, Rope from the core beneficiary perspective, Tangled Rope from the moderate and organized perspectives, Scaffold from the reform coalition perspective, and Piton from the policy perspective. The mountain perspective\u2014'regional inequality is inherent to modern economies'\u2014is a false summit that naturalizes contingent institutional arrangements (patent systems, credential non-portability, infrastructure investment patterns, labor mobility barriers). These gaps are not conflicting reports of the same thing \u2014 they are legitimate readings of how different agents structurally experience the constraint.",
+    "directionality_logic": "Each agent's directionality (d) value is derived from their structural position relative to the extraction flow. Trapped workers with no exit capacity experience high d (0.85+) \u2014 maximum vulnerability, maximum f(d), maximum experienced extraction (chi). Constrained secondary city professionals experience moderate-high d (0.55-0.70) \u2014 they have costs to exit but not absolute barriers, enabling them to capture some coordination rent. Core financial center beneficiaries experience very low d (0.10-0.20) \u2014 they benefit from the constraint and have arbitrage option to exit, so extraction flows toward them rather than from them. Organized labor experiences d around 0.50-0.65 depending on regional union density \u2014 coordinating across inequality regimes while being systematically weakened by periphery dynamics. The derived directionality values feed into the chi formula (\u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S)) and produce the observed classification spread: snare for high d + global scope, rope for low d + institutional power, tangled rope for moderate d + organized/moderate power, scaffold for moderate d + organized power with sunset.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that regional inequality is genuinely both a coordination mechanism and an extraction mechanism. The coordination function (agglomeration efficiency, network effects, labor market matching) is real but modest (~20-30% of observed wage differentials). The extraction function (wage suppression, capital flight, rent capture, barrier enforcement) dominates (~50-60% of observed differentials). The Tangled Rope classification captures this hybrid: genuine coordination coexists with asymmetric extraction, and the asymmetry is actively maintained through institutional enforcement (credential non-recognition, infrastructure underinvestment, labor migration restriction). The constraint is not mislabeled extraction-as-coordination (which would be Snare) or mislabeled coordination-as-extraction (which would be Rope). Rather, it is correctly identified as both, with the extraction component dominant and enforced."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "labor_market_sorting_by_credential",
+      "housing_affordability_crisis",
+      "infrastructure_investment_concentration"
+    ],
+    "dual_formulation_note": "Regional inequality decomposes into distinct structural claims: (1) labor_market_sorting_by_credential \u2014 wage gaps due to educational mismatch and credential concentration (\u03b5~0.35, primarily Rope with Tangled Rope undertones); (2) housing_affordability_crisis \u2014 property values as extraction mechanism independent of job market (\u03b5~0.50, Tangled Rope); (3) infrastructure_investment_concentration \u2014 differential public investment as reinforcement mechanism (\u03b5~0.40, Tangled Rope with Piton theater). The master constraint (regional_economic_inequality) represents the systemic integration of these three. Decomposition enables precise measurement of which mechanism dominates in specific regions and time periods."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.12
+    }
+  ]
+}

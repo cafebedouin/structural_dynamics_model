@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "interview_bias_and_assessment_opacity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "intview"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Interview Bias and Assessment Opacity in Hiring",
+    "topic_domain": "labor_market/human_resources",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "hiring_gatekeepers",
+      "dominant_demographic_groups"
+    ],
+    "victims": [
+      "underrepresented_candidates",
+      "merit_discovery"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Structurally Disadvantaged Candidate",
+      "comment": "PERSPECTIVE 1: STRUCTURALLY DISADVANTAGED CANDIDATE (SNARE) \u2014 Candidate from underrepresented group faces compounded barriers: unconscious bias in interview assessment, lack of social capital to signal unmeasurable qualities interviewers reward, inability to exit the hiring process without abandoning career aspirations. Maximum suppression \u2014 no alternative recruitment pathways for majority of entry-level positions. Extraction is severe: candidate must outperform peers on measurable dimensions yet receives lower subjective ratings."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Privileged Candidate",
+      "comment": "PERSPECTIVE 2: PRIVILEGED CANDIDATE (TANGLED ROPE) \u2014 Benefits from implicit bias (cultural alignment, network signaling, interpretation of gaps as 'thoughtfulness' rather than unemployment). Also benefits from coordination function: interview process does identify some skill mismatches and role fit. Constrained because candidates cannot skip interviews, but face lower barrier to success \u2014 cultural capital provides buffer. Mixed experience: real coordination benefit alongside asymmetric advantage from bias."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Hiring Organization",
+      "comment": "PERSPECTIVE 3: HIRING ORGANIZATION (ROPE) \u2014 Views interview process as pure coordination mechanism solving the legitimate problem of assessing cultural fit, interpersonal skills, and motivation \u2014 dimensions that cannot be evaluated from resume alone. Organization experiences the process as beneficial: selects candidates who integrate well, articulate reasoning clearly in real time. Experiences low extraction because the process does provide genuine signal even if systematically biased."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Diversity and Inclusion Movement",
+      "comment": "PERSPECTIVE 4: DIVERSITY AND INCLUSION MOVEMENT (SCAFFOLD) \u2014 Organized actors (compliance officers, DEI programs, standardized interview protocols, blind resume reviews) are implementing sunset-based interventions: structured interviews reduce subjective bias, rubric-based assessment limits interpretation, algorithmic screening removes demographic signals. These are explicitly temporary supports with measurable endpoints \u2014 when bias is reduced below threshold X, the intervention succeeds and phases out. Current implementation shows mixed success (theater_ratio rising as performative compliance spreads without underlying cultural change)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Unstructured Interview Ritual",
+      "comment": "PERSPECTIVE 5: THE UNSTRUCTURED INTERVIEW RITUAL (PITON) \u2014 The traditional 'have a coffee and chat' interview persists despite well-documented bias and poor predictive validity for job performance. Organizations maintain this ritual through institutional inertia \u2014 'this is how we've always done it' \u2014 and through performative justification ('we need to see personality'). Theater ratio is high: the ritual is maintained largely for theatrical reasons (signaling organizational investment in candidates, performing meritocracy) rather than functional reasons (the interview does not reliably predict performance). Structured alternatives exist but have not displaced the ritual."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some assessment uncertainty is inherent to hiring: no evaluation can perfectly predict job performance, and subjective judgment is unavoidable when assessing motivation and fit. This perspective sees interview bias as an immutable property of human decision-making. However, the structural data contradicts the mountain classification \u2014 the engine will detect this as a false summit, revealing that what is naturalized as 'human limitations' is actually a contingent institutional arrangement (the choice to rely on synchronous interviews rather than work samples, trials, or peer review)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "bias_vs_legitimate_signal",
+      "question": "How much of the observed performance gap between demographic groups in interviews reflects genuine differences in interpersonal skills vs. systematic bias in assessment?",
+      "resolution_mechanism": "Longitudinal hiring study: compare interview ratings with job performance outcomes; separate ratings from actual performance using randomized interview structures; analyze rater calibration across demographically similar candidates with varying backgrounds",
+      "impact": "If legitimate signal dominates: interview process is coordination mechanism (Rope/Tangled Rope). If bias dominates: process is pure extraction (Snare). Affects whether assessments correlate with job performance or merely reproduce demographic hierarchy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of performance gap attributable to bias vs. genuine skill differences"
+    },
+    {
+      "id": "structured_interview_adoption_ceiling",
+      "question": "Why do structured interview protocols (rubrics, standardized questions, scoring) not achieve wider adoption despite consistent evidence of reduced bias and improved predictive validity?",
+      "resolution_mechanism": "Organizational adoption analysis: survey hiring managers on barriers to structure adoption; analyze organizations that have implemented structure and measure persistence of adoption; identify whether abandonment correlates with hiring outcomes or with cultural factors",
+      "impact": "If barrier is information (lack of awareness): scaffold sunset is achievable through dissemination. If barrier is cultural (preference for 'gut feel'): structured approaches hit institutional ceiling, and performance gap persists despite technical solutions.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Adoption barriers for structured interview methodologies"
+    },
+    {
+      "id": "alternative_assessment_validity",
+      "question": "Do work sample tests, peer review, or trial project assessments predict job performance as well or better than interviews for roles where feasible?",
+      "resolution_mechanism": "Meta-analysis of hiring study outcomes; randomized trials comparing interview-based selection with work sample or trial-based selection for specific role categories; longitudinal performance tracking of hired candidates across methodologies",
+      "impact": "If alternatives are equally or more valid: interview process is maintained through performative ritual (Piton) rather than functional necessity; mountain classification is false summit. If interviews have unique predictive value: legitimate coordination function exists despite bias.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Comparative validity of alternative assessment methodologies"
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the measured suppression (0.68) primarily structural (external barriers to alternative pathways, economic dependence on employment) or internalized (candidates accept bias frames as legitimate or inevitable)?",
+      "resolution_mechanism": "Post-hiring trajectory analysis: survey candidates on perception of interview fairness; analyze whether bias acceptance persists after hiring; qualitative interviews on whether candidates view bias as legitimate constraint or extractive mechanism",
+      "impact": "If structural: suppression persists; candidates must navigate barrier regardless of beliefs. If internalized: suppression is partially self-inflicted; identity frame shift could increase exit perception (raises biological timeframe exit_options from trapped toward constrained or mobile).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in hiring bias"
+    },
+    {
+      "id": "identity_lock_in_meritocracy_narrative",
+      "question": "To what extent are hiring managers identity-locked into the meritocracy narrative ('the best candidate won') such that they cannot perceive systematic bias in their own assessments?",
+      "resolution_mechanism": "Cognitive capture measurement: present hiring managers with identical application materials attributed to different demographic groups; measure consistency of assessment; assess whether managers can recognize bias in hypothetical scenarios vs. their own historical decisions",
+      "impact": "If high identity lock: hiring managers require frame-shift interventions rather than data/training; structured protocols succeed only if they bypass subjective judgment. If low identity lock: training and transparency are sufficient; managers can recognize and correct for bias.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Identity lock in meritocracy narrative among hiring gatekeepers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Interview bias and assessment opacity create a structural constraint that coordinates legitimate hiring functions (evaluating interpersonal fit, assessing motivation) while simultaneously enabling and concealing demographic extraction. The constraint exhibits core properties of Tangled Rope: a genuine coordination function (interviews do provide signal about job-relevant interpersonal dimensions that resumes cannot capture) is layered with systematic, asymmetric extraction (underrepresented candidates face compounded bias requiring higher performance for equivalent evaluation). The opacity of assessment criteria\u2014the fact that candidates and hiring managers cannot articulate precise decision rules\u2014amplifies both the coordination function (ambiguity leaves room for nuanced judgment) and the extraction mechanism (bias hides behind subjective interpretation). The constraint's theater_ratio (0.65) reflects that contemporary hiring processes increasingly perform compliance with diversity values while maintaining underlying bias mechanisms: rubrics are adopted but applied inconsistently; structured interviews are announced but implementation drifts; demographic monitoring produces metrics without behavior change. The extractiveness trajectory (0.35\u21920.58 over interval) shows accumulation as organizations respond to diversity pressure by adding performative layers rather than addressing underlying bias in assessment.",
+    "key_agents": [
+      "Structurally Disadvantaged Candidates: Primary victim (powerless/trapped) \u2014 face compounded bias, no alternative recruitment pathways for most roles, cannot exit without abandoning career",
+      "Privileged Candidates: Secondary beneficiary (moderate/constrained) \u2014 benefit from implicit bias and cultural alignment signals; also genuinely coordinate through interview",
+      "Hiring Organizations: Institutional beneficiary (institutional/arbitrage) \u2014 view process as legitimate coordination mechanism; experience low extraction because bias aligns with their recruitment preferences",
+      "Diversity and Inclusion Professionals: Organized agents (organized/constrained) \u2014 implement structured interviews, rubrics, blind resume reviews as sunset-based interventions; face organizational resistance limiting intervention depth",
+      "Hiring Managers: Institutional actors (institutional/arbitrage) \u2014 maintain unstructured interview ritual through institutional inertia; identity-locked in meritocracy narrative preventing perception of bias in own assessments",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent choice (synchronous interviews) as inherent hiring necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate, reflecting genuine coordination layered with significant asymmetric extraction. The interview does solve the legitimate problem of assessing dimensions resumes cannot capture. However, the opacity of criteria and documented bias in subjective assessment mean that underrepresented candidates must outperform peers on measurable dimensions while receiving systematically lower subjective ratings. Extractiveness has increased (0.35\u21920.58) as organizations respond to diversity scrutiny with performative protocols (rubrics, standardized questions) that are adopted but applied inconsistently\u2014adding theater without reducing bias. Suppression (0.68): High. Structurally disadvantaged candidates face multiple suppression layers: (1) practical\u2014most career pathways route through interviews with no viable alternatives; (2) informational\u2014assessment criteria are opaque, making it impossible to optimize preparation; (3) identity-based\u2014internalized acceptance of bias as inevitable or even legitimate ('maybe I'm just not culture fit'). Theater ratio (0.65): Moderate-high. The traditional unstructured interview ('have a coffee and chat') persists despite documented poor predictive validity and well-known bias, maintained through institutional inertia (Piton perspective). Simultaneous adoption of performative compliance measures (rubrics that are announced but applied inconsistently, diversity monitoring that produces metrics without behavior change) increases theater as organizations perform meritocracy while maintaining bias mechanisms.",
+    "perspectival_gap": "Fundamental disagreement on constraint type reflects disagreement on whether assessment uncertainty is inherent or constructed. Hiring organizations and privileged candidates perceive genuine coordination function\u2014the interview does assess job-relevant dimensions. Disadvantaged candidates and merit advocates perceive pure extraction\u2014the process penalizes them without functional justification. The diversity movement perceives a temporary coordination failure (Scaffold) with technical solutions (structured interviews). The hiring manager perceives a ritual with performative function (Piton)\u2014they maintain the interview process not because it works but because 'this is how we do things.' The analytical observer perceives an immutable human limitation (Mountain)\u2014assessment always involves subjective judgment. The framework reveals this as false summit: the choice to rely on synchronous interviews is contingent. Work samples and peer review exist as alternatives; synchronous interviews are maintained through institutional inertia and alignment with organizational hiring preferences, not through structural necessity.",
+    "directionality_logic": "Directionality derives from structural position within the constraint. Disadvantaged candidates occupy the victim position (high d, trapped exit): they experience maximum extraction because they cannot avoid interviews and face systematic assessment bias. Privileged candidates occupy the mixed position (moderate d, constrained exit): they benefit from bias (lower assessment bar) but also genuinely benefit from coordination function; derived d reflects both beneficiary and some victim status. Hiring organizations occupy the clear beneficiary position (low d, arbitrage exit): they benefit from interview-based selection that preserves their hiring preferences while maintaining plausible meritocratic narrative; they could adopt alternative assessment methods with modest cost but choose not to. The derived directionality for disadvantaged candidates (d\u22480.88) applies the sigmoid f(d)\u22481.25, producing high experienced extraction chi. For privileged candidates (d\u22480.42) f(d)\u22480.40, substantially lower experienced extraction. For hiring organizations (d\u22480.05) f(d)\u2248-0.12, negative experienced extraction (extraction flows toward them). Scope (national, \u03c3=1.0) does not amplify or dampen: this is a national-scale labor market constraint.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: This constraint is neither pure coordination nor pure extraction\u2014it is genuinely mixed. The interview process does solve the legitimate problem of assessing interpersonal fit and motivation (coordination function is real). The process also systematically advantages privileged candidates through implicit bias while maintaining a meritocratic narrative that obscures the asymmetry (extraction function is real). The mandatrophy resolves by acknowledging both functions and measuring their relative weight. The extractiveness (0.58) reflects the decomposition: genuine coordination might justify \u03b5\u22480.15-0.20 if applied equally; documented bias and opacity increase the value to 0.58, capturing the extraction component. The theater ratio (0.65) captures performative compliance: organizations announce commitment to meritocracy and adopt diversity measures, increasing theater as gap widens between stated values and actual practice. The constraint cannot be classified as pure Rope (no victims) or pure Snare (genuine coordination function exists) without losing diagnostic precision. Tangled Rope is the accurate classification because both the coordination and extraction functions are necessary to explain the structural data and the perspectival gap."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "demographic_representation_disparities",
+      "career_trajectory_inequality"
+    ],
+    "dual_formulation_note": "Interview bias is downstream of organizational hiring preferences and upstream of demographic representation disparities. The constraint operates at the individual assessment level but produces systemic effects in demographic composition and career trajectories. Decomposition into structured vs. unstructured interview mechanisms would yield separate constraints with different \u03b5 values (structured interviews show lower bias, \u03b5\u22480.35; unstructured interviews show higher bias, \u03b5\u22480.72), but this story treats the composite institutional practice as a single constraint reflecting mixed adoption."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

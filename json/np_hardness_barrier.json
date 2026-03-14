@@ -1,0 +1,133 @@
+{
+  "header": {
+    "constraint_id": "np_hardness_barrier",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "np_hard"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "NP Hardness Barrier in Computational Complexity",
+    "topic_domain": "theoretical_computer_science/computational_complexity",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Computational Theorist",
+      "comment": "PERSPECTIVE 1: COMPUTATIONAL THEORIST (MOUNTAIN) \u2014 No known polynomial-time algorithm for NP-complete problems exists despite 50+ years of intensive effort. The barrier appears as a fundamental structural limit of computational expressiveness. Accessibility collapse: the search space grows exponentially; no shortcut is known. Resistance to proof: the P vs NP problem remains open, but empirical evidence across all known algorithms and theoretical frameworks converges on immutability."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Algorithm Designer (Practical Constraint)",
+      "comment": "PERSPECTIVE 2: ALGORITHM DESIGNER (MOUNTAIN) \u2014 For any practical instance of an NP-complete problem at scale, the computational barrier is insurmountable within available time and resources. No exit path exists: approximation algorithms have their own hardness barriers, quantum speedups are unproven, and brute force remains exponential. The constraint appears as an immutable physical and logical law."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "label": "The Cryptographic System",
+      "comment": "PERSPECTIVE 3: CRYPTOGRAPHIC SYSTEM (MOUNTAIN) \u2014 RSA, discrete log, and lattice-based cryptography derive security guarantees from the assumption that factorization and related NP-hard problems have no polynomial-time solutions. Even institutional actors with substantial resources cannot bypass the barrier \u2014 the constraint is structural to the mathematics itself, not a policy that can be arbitraged."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "p_vs_np_resolution",
+      "question": "Is P = NP, or does the hardness barrier represent a fundamental asymmetry in computational complexity?",
+      "resolution_mechanism": "Proof or disproof of the P vs NP conjecture; discovery of a polynomial-time algorithm for an NP-complete problem or a proof that no such algorithm exists",
+      "impact": "If P = NP: the mountain classification is falsified \u2014 the barrier collapses and becomes accessible (snare for those who exploit it, rope for coordination). If P \u2260 NP: the mountain classification is confirmed. If undecidable within standard axioms: the barrier is contingent on foundational assumptions, not absolute.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether P equals NP"
+    },
+    {
+      "id": "quantum_speedup_sufficiency",
+      "question": "Can quantum algorithms (Grover's algorithm, quantum annealing, hybrid approaches) achieve polynomial-time solutions for NP-complete problems?",
+      "resolution_mechanism": "Theoretical proof of quantum polynomial-time algorithm for NP-complete problem; demonstration of quantum advantage on large instances; proof that quantum speedups are fundamentally limited by the same barriers",
+      "impact": "If quantum achieves polynomial time: barrier remains structural (still a mountain, but for classical systems specifically). If quantum speedup is limited to quadratic: barrier persists. If quantum faces the same exponential wall: mountain classification is strengthened across computational paradigms.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether quantum algorithms can solve NP-complete problems in polynomial time"
+    },
+    {
+      "id": "average_case_hardness",
+      "question": "Is NP hardness a worst-case phenomenon, or does average-case hardness hold for typical instances?",
+      "resolution_mechanism": "Construction of polynomial-time algorithms for average-case NP-complete problem instances; proof that worst-case hardness does not imply average-case hardness for natural distributions",
+      "impact": "If average case is tractable: practical extraction of NP-hard problems becomes possible, reducing suppression. If average case is equally hard: mountain classification is strengthened for realistic scenarios. If hardness depends on instance distribution: barrier becomes conditional (rope-like under some distributions, mountain under others).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether NP hardness applies to average-case instances"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.18
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The NP hardness barrier is a structural limit on computational tractability. Problems in the NP class can be verified in polynomial time, but no known polynomial-time algorithm solves them (with high probability). The barrier emerges from the mathematical definition of computational complexity classes and appears invariant across 50+ years of algorithmic research, attempted proofs, and theoretical frameworks. From all observable positions \u2014 the theoretical computer scientist, the practical algorithm designer, the cryptographic system architect \u2014 the barrier appears as an immutable physical and logical law. This constraint exemplifies a pure mountain: fixed \u03b5 (0.18 represents the fundamental gap between P and NP spaces), minimal suppression (the barrier is structural, not enforced), negligible theater (the mathematical structure is transparent; the verification is direct proof, not performative ritual).",
+    "key_agents": [
+      "Theoretical Computer Scientist: Analytical observer (analytical/analytical) \u2014 studies the barrier directly; measures accessibility and resistance",
+      "Algorithm Designer: Practical victim (powerless/trapped) \u2014 faces insurmountable barriers for NP-complete instances at scale; no exit options",
+      "Cryptographic System: Institutional beneficiary (institutional/arbitrage) \u2014 derives security from the assumption that the barrier is real; would face catastrophic extraction if P = NP, but assumes arbitrage into other hardness assumptions",
+      "Quantum Computing Researcher: Analytical observer with alternative hypothesis \u2014 tests whether quantum paradigm bypasses the barrier"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Represents the gap between the accessible space (verifiable in polynomial time) and the solvable space (no known polynomial algorithm). This gap is intrinsic to the computational model, not enforced by any external agent. The value reflects the fundamental asymmetry in computational complexity, not a policy-driven extraction. Suppression (0.02): Minimal. The barrier is not suppressed through coercion or alternative denial \u2014 it is transparent in the mathematical structure. Every algorithm designer knows why NP-complete problems are hard; there is no informational asymmetry. Theater ratio (0.15): Very low. The verification is direct mathematical proof, not performative ritual. The P vs NP problem is an open question, but the empirical evidence (the universal hardness across all attempted approaches) supports the barrier's existence without requiring performative validation.",
+    "perspectival_gap": "This constraint exhibits perspective invariance, not perspectival gap. All perspectives classify as mountain because the barrier is genuinely universal and immutable from every computational position. This is the defining characteristic of a true natural law: no observer position produces a different classification. The cryptographer sees the barrier as enabling security (a beneficiary position), but still perceives it as an immutable natural law \u2014 they benefit because the law is stable, not because they have escaped it.",
+    "directionality_logic": "The NP hardness barrier has no beneficiary/victim structure in the traditional sense. It is not an extraction mechanism maintained by an agent against others. Instead, it is a structural property of the computational universe itself. All agents \u2014 theorists, designers, cryptographers \u2014 face the same barrier. The barrier does not privilege one agent over another; it constrains all agents equally (up to constant factors). This is why the mountain classification holds across all perspectives: there is no asymmetric extraction, no enforcement, no agent group that could exit by paying a cost."
+  },
+  "network": {
+    "affects_constraints": [
+      "cryptographic_security_assumption",
+      "approximation_algorithm_barrier",
+      "quantum_advantage_limits"
+    ]
+  }
+}

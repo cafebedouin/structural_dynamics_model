@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "creator_labor_classification",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "creator"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Creator Labor Classification and Extraction",
+    "topic_domain": "labor/platform_economics/cultural_production",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "aggregators_and_distributors"
+    ],
+    "victims": [
+      "content_creators",
+      "creative_workers",
+      "alternative_labor_markets"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Individual Creator",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL CREATOR (SNARE) \u2014 Structurally trapped by platform dependency and algorithmic gatekeeping. Career visibility depends entirely on platform classification decisions; no alternative distribution channels with comparable reach. Suppression mechanisms include algorithmic demotion, sudden classification reclassifications that devastate income, and terms-of-service unilateral modification. Zero degrees of freedom for the creator \u2014 classification changes the platform imposes are irreversible and affect livelihood immediately. Maximum experienced extraction with no exit option."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Creator Collective or Union",
+      "comment": "PERSPECTIVE 2: CREATOR COLLECTIVE/UNION (TANGLED ROPE) \u2014 Organized creators benefit from coordination of labor standards, revenue sharing, and classification transparency \u2014 genuine coordination function exists. But also face significant suppression: platforms can deactivate, demonetize, or reclassify entire collectives. Exit is possible (creators can attempt platform migration or exclusive contracts) but high-cost and uncertain. Mixed coordination and extraction with constrained options for collective action."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Platform Operator (Primary Beneficiary)",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATOR (ROPE) \u2014 Benefits from creator classification as a coordination mechanism: enables algorithmic curation, recommendation, monetization routing, and content quality thresholds. Experiences the constraint as pure coordination problem \u2014 without classification, platform function degrades. No meaningful exit costs \u2014 classification is essential to platform operation. Net beneficiary with arbitrage optionality."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Premium Creator or Celebrity",
+      "comment": "PERSPECTIVE 4: PREMIUM/CELEBRITY CREATOR (TANGLED ROPE) \u2014 Experiences mixed coordination and extraction. Platform classification enables reaching global audiences (coordination benefit). But also subject to algorithmic governance, content moderation, and revenue-share changes (extraction). Mobile exit option exists \u2014 these creators can negotiate exclusive contracts or migrate to competing platforms \u2014 but negotiating power is significant without being absolute. Moderate experienced extraction with partial agency."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Alternative Platform Coalition",
+      "comment": "PERSPECTIVE 5: ALTERNATIVE PLATFORMS / OPEN CREATOR NETWORKS (SCAFFOLD) \u2014 Organized agents (creator co-ops, open-source platforms, blockchain-based networks) see creator classification as a temporary institutional failure with a sunset clause. These alternatives offer decentralized classification, direct revenue sharing, and algorithmic transparency. As decentralized infrastructure matures and network effects shift toward creators, the centralized platform monopoly on classification loses extractive force. Theater ratio is high (alternative platforms often promise utopian governance) but the exit pathway is real \u2014 creators can migrate costs are falling as alternatives develop network effects. Estimated sunset: 7-15 years for alternatives to gain sufficient liquidity and network reach."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Labor Classification Systems",
+      "comment": "PERSPECTIVE 6: LEGACY LABOR CLASSIFICATION SYSTEMS (PITON) \u2014 Traditional employment law, union frameworks, and labor protections are increasingly performative when applied to platform creators. Contractors vs employees, gig worker protections, minimum wage \u2014 these categories persist through institutional inertia despite being structurally inapplicable to algorithmic labor allocation. The system maintains itself through regulatory theater (labor boards grapple with classification) while real power dynamics operate through platform algorithms, not legal categories. Theater ratio is high because the regulatory system appears to govern the relationship but actually operates at a remove from where extraction happens."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (False Summit View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURALIZING VIEW (MOUNTAIN) \u2014 From an analytical/civilizational perspective, platform classification might appear immutable: 'algorithms must categorize content to function,' 'scale requires gatekeeping,' 'classification is inherent to digital infrastructure.' This perspective risks naturalizing what is actually a contingent institutional choice about who controls classification authority and how the surplus generated by classification accrues. The engine's false summit detector should flag this as naturalization of extractive architecture, not discovery of inherent constraint."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "classification_authority_locus",
+      "question": "Is creator classification authority necessarily centralized with platform operators, or is decentralization technologically feasible and economically viable?",
+      "resolution_mechanism": "Empirical testing of decentralized classification systems (blockchain platforms, creator DAOs, federated protocols); measurement of transaction costs, network effects, and capital requirements for alternative architectures",
+      "impact": "If decentralization is technologically and economically viable: extractiveness drops to ~0.15-0.25 (rope), and scaffold sunset becomes structural. If centralization is inherent to scale: extractiveness remains ~0.55-0.70 (snare/tangled rope), and alternatives remain aspirational.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether decentralized classification authority is technologically and economically feasible"
+    },
+    {
+      "id": "creator_coalition_critical_mass",
+      "question": "What is the critical mass of creators required to make platform migration collectively viable? Does it vary by content category?",
+      "resolution_mechanism": "Historical analysis of successful platform migrations (Twitch vs YouTube for streamers, Substack vs Medium for writers); identification of creator concentration thresholds and category-specific dependencies; measurement of network effects by content type",
+      "impact": "If critical mass threshold is achievable: coordination escape becomes real (scaffold), and exit transitions from trapped to constrained. If threshold is impossibly high: creators remain trapped, and snare classification dominates.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Critical mass threshold for viable creator platform migration"
+    },
+    {
+      "id": "algorithmic_classification_transparency",
+      "question": "Can classification algorithms be made sufficiently transparent and contestable that creators have real agency in how they are categorized? Or is opacity inherent to algorithmic governance at scale?",
+      "resolution_mechanism": "Audit of transparency claims in platforms offering 'explainable AI' classification; measurement of creator ability to contest classifications; comparison of appeals outcomes before/after transparency interventions",
+      "impact": "If transparency enables contestation: suppression drops below 0.50, and classification becomes rope rather than snare. If opacity is inherent to scale: suppression persists, and snare classification is accurate.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether algorithmic classification can be made transparent and contestable"
+    },
+    {
+      "id": "creator_surplus_value_attribution",
+      "question": "What proportion of platform revenue is generated directly by creator content labor versus platform infrastructure, curation algorithms, and network effects? How does attribution methodology affect classification?",
+      "resolution_mechanism": "Economic decomposition models (activity-based costing applied to platform revenue); comparison of creator revenue share across platforms with varying service levels; measurement of counterfactual platform value without creator content",
+      "impact": "If creators generate >60% of value: extraction becomes unambiguous (snare classification strengthens). If creators generate <40% of value: platform coordination role appears more significant (tangled rope is more defensible). Attribution method itself becomes politically contested.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Attribution of platform revenue to creator labor vs. platform infrastructure"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Creator labor classification systems used by content platforms (YouTube, TikTok, Twitch, Instagram, Substack) to categorize creators into employee/contractor/amateur/professional tiers determine access to monetization, algorithmic promotion, labor protections, and revenue shares. These classification systems exhibit the classic pattern of extraction disguised as coordination: platforms genuinely need classification to function at scale, but the classification architecture is designed to route surplus extraction toward platform operators and away from creators. The constraint demonstrates how institutional power over category definitions becomes extraction mechanism. Classification decisions are unilateral (platform chooses category), opaque (algorithms are proprietary), irreversible (reclassification can destroy creator income), and asymmetric (creators cannot reclassify platforms). Extractiveness has risen from 0.32 to 0.58 over the measurement interval as platforms have tightened classification criteria to exclude marginal creators from monetization. Theater ratio has risen correspondingly (from 0.35 to 0.68) as platforms add performative classification requirements (community guidelines, brand safety, engagement metrics) that appear to govern classification but actually operate as screens for economic exclusion.",
+    "key_agents": [
+      "Individual Creator: Primary victim (powerless/trapped) \u2014 dependent on platform classification for visibility and income; no exit option; bears full extraction cost",
+      "Creator Collective/Union: Secondary organized victim (moderate/constrained) \u2014 negotiates with platforms over classification standards; faces suppression but has some agency",
+      "Platform Operator: Primary beneficiary (institutional/arbitrage) \u2014 controls classification authority; benefits from both coordination function and extraction surplus; genuinely needs classification but captures all surplus",
+      "Premium/Celebrity Creator: Secondary beneficiary (powerful/mobile) \u2014 has negotiating power and mobility options; experiences mixed coordination/extraction; can extract concessions from platforms",
+      "Alternative Platforms/Creator Networks: Organized challengers (organized/constrained) \u2014 building decentralized classification systems; sunset clause exists if alternatives reach critical mass",
+      "Legacy Labor Classification Systems: Institutional observer (institutional/arbitrage) \u2014 employment law, union frameworks increasingly performative; maintain themselves through theater while missing real power dynamics"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Platforms extract surplus through unilateral classification authority, but creators retain some agency (can produce content, can move platforms at high cost, some creators negotiate successfully). This is higher than pure coordination (\u03b5 \u2264 0.35) but lower than pure extraction (\u03b5 \u2265 0.70). The rising trajectory (0.32 \u2192 0.58) reflects accumulation of classification criteria and monetization gatekeeping over time. Suppression (0.65): High. Barriers to exit include network effects (losing platform audience), switching costs (rebuilding followings elsewhere), algorithmic retaliation (demotion for attempting migration), and lack of alternative distribution channels with comparable reach. The suppression is both structural (built into platform economics) and internalized (creators have internalized platform dependence as inevitable). Theater ratio (0.68): High and rising. Platforms impose performative classification requirements (community guidelines adherence, brand safety compliance, engagement metrics, content moderation appeals) that appear to govern categorization but actually operate as rationalization for algorithmic exclusion decisions already made. The theater has increased as platforms tighten monetization gatekeeping while maintaining surface appearance of meritocratic classification.",
+    "perspectival_gap": "The gap between beneficiary and victim perspectives is maximal: platform sees rope, creator sees snare, analytical observer is tempted toward mountain. This perspectival divergence is the diagnostic signal that the constraint is genuinely hybrid (tangled rope) \u2014 the coordination function is real (creators do benefit from platform distribution), but the extraction asymmetry is also real (platforms capture all of the surplus generated by classification authority). The gap is not resolvable by claiming both perspectives are equally true \u2014 instead, the resolution is to recognize that the classification authority itself is the extraction mechanism. Platforms use coordination ('we allocate resources efficiently through classification') as cover for extraction ('we unilaterally decide which creators earn income').",
+    "directionality_logic": "Directionality values reflect each agent's structural position relative to the classification extraction flow. Platform operators derive d \u2248 0.05 (full beneficiary with arbitrage exit \u2014 they control the mechanism and can adapt classification schema without cost). Individual creators derive d \u2248 0.95 (full victim with trapped exit \u2014 classification decisions are imposed unilaterally and inescapably). Creator collectives derive d \u2248 0.65 (mixed victim/beneficiary with constrained exit \u2014 they benefit from platform reach but face suppression and limited renegotiating power). Premium creators derive d \u2248 0.45 (moderately affected victim/beneficiary with mobile exit \u2014 they have negotiating power and can threaten platform migration). The sigmoid function applies to these d values, producing effective extractiveness (\u03c7) modified by agent power and scope. For the individual creator (powerless/trapped/global scope), \u03c7 is amplified upward by f(d) \u2248 1.42. For the platform (institutional/arbitrage/global scope), \u03c7 is dampened downward by f(d) \u2248 -0.12. The scope modifier \u03c3(global) \u2248 1.2 further amplifies extraction at global scale relative to local classification systems.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: This constraint resolves the mandatrophy by identifying classification authority as the extractive mechanism. Platforms cannot claim pure coordination because creators have no voice in how classification categories are defined or applied. Creators cannot claim the constraint is purely extractive because they genuinely benefit from platform distribution reach and algorithmic amplification \u2014 the coordination function exists. The tangled rope classification is accurate: the constraint must possess both genuine coordination (asymmetric audience access through algorithmic curation) AND asymmetric extraction (unilateral classification authority and surplus extraction). The rising theater ratio (from 0.35 to 0.68) indicates that performative classification requirements are accumulating \u2014 community guidelines, brand safety, engagement metrics, appeals processes \u2014 all creating the appearance of meritocratic classification while protecting the underlying extraction mechanism. As theater increases, platforms are manufacturing consent for classification authority through procedural legitimacy theater rather than through demonstrated fairness outcomes. The scaffold perspective's sunset clause depends on whether alternative platforms can achieve sufficient critical mass and network effects to make creator migration viable at scale. This is currently uncertain (omega variable: critical_mass_threshold) but structurally possible \u2014 if alternative platforms succeed, the centralized platform monopoly on classification authority dissolves, and extractiveness drops."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_recommendation_bias",
+      "content_moderation_authority",
+      "platform_labor_law_misclassification"
+    ],
+    "dual_formulation_note": "Creator labor classification is downstream of platform algorithmic architecture and recommendation systems (which determine who benefits from classification authority). It is upstream of labor law misclassification (platforms use creator classification categories to avoid employment law obligations). The three constraints form a family with distinct \u03b5 values but causal dependencies: algorithmic systems enable classification authority; classification authority creates labor misclassification."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

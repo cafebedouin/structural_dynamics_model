@@ -1,0 +1,207 @@
+{
+  "header": {
+    "constraint_id": "probabilistic_ai_legitimacy",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pail"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Probabilistic AI Legitimacy Gap",
+    "topic_domain": "artificial_intelligence/epistemology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ai_deploying_institutions",
+      "vendors_system_integrators"
+    ],
+    "victims": [
+      "system_subjects",
+      "epistemic_reliability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The System Subject",
+      "comment": "PERSPECTIVE 1: SYSTEM SUBJECT (SNARE) \u2014 Individuals subject to AI decisions (credit scoring, hiring, benefit allocation, content moderation) cannot exit the constraint. No alternative pathways for essential services. Bears full extraction: decisions opaque, appeal mechanisms performative, no recourse for erroneous probabilistic outputs. Maximum suppression \u2014 systemic dependence on AI-mediated access."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Affected Community",
+      "comment": "PERSPECTIVE 2: AFFECTED COMMUNITY (TANGLED ROPE) \u2014 Constrained by resource barriers and collective action problems. Experiences both coordination benefits (standardized processes, consistency) and asymmetric extraction (error margins systematized, accountability diffused). Some agency through regulatory pressure and litigation, but high suppression from technical opacity."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Deploying Institution",
+      "comment": "PERSPECTIVE 3: DEPLOYING INSTITUTION (ROPE) \u2014 Benefits from coordination: standardized, scalable decision-making; reduced labor costs; liability diffusion through 'algorithmic objectivity.' Experiences constraint as enabling rather than extractive. Net beneficiary \u2014 extraction flows toward this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regulatory and Advocacy Actors",
+      "comment": "PERSPECTIVE 4: REGULATORY AND ADVOCACY ACTORS (TANGLED ROPE) \u2014 Organized but constrained by epistemic uncertainty and regulatory capture. Developing accountability mechanisms (explainability requirements, fairness audits) represents genuine coordination function, but enforcement mechanisms have gaps. Extraction: vendors can exploit technical complexity to evade accountability. Mixed experience \u2014 some agency, significant constraints."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Transparency Ritual",
+      "comment": "PERSPECTIVE 5: TRANSPARENCY RITUAL (PITON) \u2014 Explainability requirements, fairness metrics, and audit procedures persist as performative infrastructure despite limited functional verification. LIME explanations, feature importance plots, and fairness dashboards perform legitimacy rather than ensure it. Theater ratio high (0.68) \u2014 the apparatus of accountability is maintained through institutional momentum while subjects remain substantially unable to challenge decisions."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalizing View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURALIZING VIEW (MOUNTAIN) \u2014 Risk perspective that treats probabilistic uncertainty as inherent to decision-making rather than contingent institutional choice. 'AI systems are probabilistic; decisions have error margins; this is a law of information theory, not extraction.' This naturalizes what is actually a choice to deploy probabilistic systems at scale without accountability proportional to impact. Engine false summit detection applies."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "probabilistic_versus_structural_opacity",
+      "question": "Is the opacity inherent to probabilistic AI systems or contingent on deployment choices (model architecture, training data curation, vendor disclosure)?",
+      "resolution_mechanism": "Compare high-transparency model architectures (decision trees, linear models) to black-box systems (neural networks, ensemble methods) on identical tasks; measure explainability cost/benefit tradeoff; analyze whether opacity serves deploying institutions more than subjects",
+      "impact": "If inherent: constraint is structural (higher extractiveness justified). If contingent: opacity is a choice by deploying institutions (higher suppression as institutional choice to maintain asymmetry).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether opacity is inherent to probabilistic systems or a deployment choice"
+    },
+    {
+      "id": "accountability_mechanism_effectiveness",
+      "question": "Do explainability and fairness frameworks (LIME, SHAP, fairness metrics) actually enable meaningful challenge of AI decisions, or do they primarily perform legitimacy?",
+      "resolution_mechanism": "Track appeal success rates before/after explainability implementation; measure whether explanations change decisions or only justify them; analyze whether subjects can use explanations to identify and correct errors",
+      "impact": "If effective: constraint is Rope (coordination function real). If performative: constraint is Piton or Snare (theater or pure extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether accountability mechanisms enable meaningful challenge or perform legitimacy"
+    },
+    {
+      "id": "distributive_versus_procedural_legitimacy",
+      "question": "Can probabilistic AI systems achieve procedural legitimacy (transparent, auditable process) sufficient to compensate for distributive illegitimacy (systematized errors that concentrate on marginalized populations)?",
+      "resolution_mechanism": "Measure whether procedural transparency affects subject acceptance when outcomes are harmful; track whether regulatory approval of 'fair' systems actually reduces disparate impact; analyze whether explainability is used by subjects or only by institutions",
+      "impact": "If yes: legitimacy gap is largely perception (constraint manageable through communication). If no: legitimacy gap is structural (extractive asymmetry inherent to systems design).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether procedural legitimacy can compensate for distributive outcomes"
+    },
+    {
+      "id": "epistemic_reliability_degradation_trajectory",
+      "question": "As AI systems make increasingly critical decisions, does the field's epistemic reliability degrade faster than correction mechanisms improve? At what scale/scope does the system become unsalvageable?",
+      "resolution_mechanism": "Measure error accumulation in AI-mediated systems; track rate of discovery of systematic biases; compare speed of bias correction to speed of deployment expansion; model tipping point where correction lags deployment sufficiently that field epistemic reliability collapses",
+      "impact": "If degradation outpaces correction: constraint evolves from Snare/Tangled Rope to system-level epistemic crisis (new constraint family). If manageable: constraint remains local/institutional.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether epistemic reliability degrades faster than correction mechanisms improve"
+    },
+    {
+      "id": "identity_lock_in_deploying_institutions",
+      "question": "Do deploying institutions become identity-locked to probabilistic AI systems as the core of their operational identity, making exit from deployment structurally possible but identity-unthinkable?",
+      "resolution_mechanism": "Analyze institutional history of AI adoption; identify whether removing AI system would require redefining organizational purpose, professional identity, or operational legitimacy; track how institutions describe themselves relative to their AI systems",
+      "impact": "If identity-locked: constraint persistence is driven by cognitive capture of deployers (new vector for extraction). If structurally dependent: persistence is driven by economic lock-in (existing analysis).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether deploying institutions are identity-locked to AI systems"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The probabilistic AI legitimacy gap emerges from a structural mismatch between the institutional demand for scalable decision-making and the epistemic limits of probabilistic systems deployed at population scale. Deploying institutions (banks, employers, governments, platforms) gain efficiency and liability diffusion by replacing human judgment with statistical inference. But the legitimacy cost is borne by system subjects who cannot exit and face systematized error margins without proportional accountability. The constraint exhibits genuine coordination function (standardized, consistent decision processes) alongside genuine extraction (opaque decisions, diffused accountability, suppression of alternative pathways). Theater ratio rising from 0.38 to 0.71 reflects the proliferation of legitimacy-performing infrastructure (explainability tools, fairness frameworks, audit procedures) that creates appearance of accountability without substantive change in subject agency. Extractiveness rising from 0.35 to 0.58 reflects that as AI systems expand into higher-stakes domains (criminal justice, medical access, benefit allocation), the extraction mechanism becomes more severe while the coordination function remains constant. The constraint is genuinely tangled: the coordination gains are real, the extraction is real, and the institutional enforcement mechanisms are active. Whether it trends toward sustainable hybrid or degraded into pure extraction depends on whether accountability mechanisms become functional rather than performative.",
+    "key_agents": [
+      "System Subjects: Primary victims (powerless/trapped) \u2014 individuals subject to AI decisions with no exit and minimal recourse",
+      "Affected Communities: Secondary victims (moderate/constrained) \u2014 populations experiencing concentrated error margins and disparate impact",
+      "Deploying Institutions: Primary beneficiaries (institutional/arbitrage) \u2014 gain efficiency, consistency, and liability diffusion through AI systems",
+      "Vendors and System Integrators: Secondary beneficiaries (institutional/arbitrage) \u2014 profit from deployment expansion and technical complexity",
+      "Regulatory and Advocacy Actors: Organized intermediaries (organized/constrained) \u2014 developing accountability frameworks but limited enforcement capacity",
+      "The Transparency Ritual: Institutional inertia (institutional/arbitrage) \u2014 explainability and fairness apparatus maintains legitimacy performance despite functional limitations"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Elevated. The constraint systematizes decision-making in ways that benefit deploying institutions (reduced labor, liability diffusion) while imposing costs on subjects through opaque processes and error margins treated as inevitable rather than contestable. The measurement trajectory shows increasing extractiveness as systems expand into higher-stakes domains. Extractiveness is not at the 0.72+ snare level because genuine coordination benefits exist \u2014 standardization and consistency do solve real coordination problems. The value reflects mixed extraction and coordination. Suppression (0.62): Moderate-high. Barriers to meaningful challenge of AI decisions include technical opacity, vendor control of models, resource asymmetries (subjects cannot afford expert audit, institutions can), informational asymmetries (subjects don't know how systems work), and institutional power to define 'fairness' unilaterally. Suppression is not maximal because regulatory pressure is producing some transparency mechanisms and appeal pathways, but these are constrained by technical complexity. Theater ratio (0.68): High and rising. The apparatus of accountability \u2014 LIME explanations, fairness dashboards, third-party audits, transparency reports \u2014 performs legitimacy while leaving substantive subject agency largely unchanged. Explanations justify decisions more than enable challenge. The trajectory reflects that as deployment expands and scrutiny increases, institutions invest in legitimacy performance (higher theater) while extractive structures remain.",
+    "perspectival_gap": "The constraint exhibits sharp perspectival divergence. The deploying institution sees primarily coordination (Rope) \u2014 standardized, scalable decision-making solves real organizational problems. The subject sees primarily extraction (Snare) \u2014 decisions imposed without comprehensibility or recourse. The organized regulatory actor sees mixed coordination and extraction (Tangled Rope) \u2014 developing accountability mechanisms that are real but constrained by technical and institutional barriers. The piton perspective captures that the transparency apparatus is substantially performative \u2014 audit procedures, explainability tools, and fairness metrics create legitimacy appearance without substantive subject empowerment. The mountain/analytical perspective risks naturalizing the opacity and error margins as inherent to probabilistic systems rather than seeing them as institutional choices (use black-box models vs transparent ones, deploy at scale vs constrain scope, diffuse accountability vs centralize responsibility). The perspectival gap is not merely perspectival \u2014 it reflects genuine structural asymmetry in who gains and bears costs.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from structural position: beneficiaries with exit options (deploying institutions with arbitrage exit) derive low d \u2192 negative or near-zero \u03c7; victims with no exit (subjects with trapped status) derive high d \u2192 high \u03c7. Organized actors with constrained exit derive moderate d \u2192 moderate \u03c7. The piton classification derives from theater ratio exceeding 0.70, indicating that performative activity exceeds functional verification. The false summit mountain perspective reflects the risk of naturalizing contingent institutional choices (deployment of opaque systems at scale) as inevitable features of probabilistic decision-making.",
+    "mandatrophy_analysis": "The mandatrophy resolves via perspectival completeness: no single type captures the constraint structure; the heterarchy of perspectives does. The beneficiary's rope (genuine coordination benefits) and the victim's snare (genuine extraction) are both true from their positions. The regulatory actor's tangled rope (mixed coordination and asymmetric extraction) and the institutional actor's piton (performative legitimacy) are both accurate observations. The mountain perspective (probabilistic uncertainty is inherent) is a false summit \u2014 it naturalizes institutional choices. The constraint's evolution depends on whether the tangled rope's coordination function remains genuine as deployment expands, or whether extractive mechanisms eventually colonize the entire structure, leaving only theater."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_bias_propagation",
+      "accountability_diffusion",
+      "epistemic_reliability_degradation"
+    ],
+    "dual_formulation_note": "Probabilistic AI legitimacy gap is downstream of specific technical choices (black-box models, training data quality, deployment scope) and upstream of systemic outcomes (epistemic reliability, institutional legitimacy, subject agency). The constraint family includes: (1) technical opacity decision (whether to deploy interpretable vs black-box architectures); (2) accountability dispersal (how responsibility is diffused across vendors, deployers, regulators); (3) epistemic reliability impact (how errors propagate through systems making subsequent decisions). Each has distinct extractiveness and requires separate analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "header": {
+    "constraint_id": "statistical_consistency_estimators",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "statcons"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Statistical Consistency of Estimators Under Increasing Sample Size",
+    "topic_domain": "mathematical_statistics/estimation_theory",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Mathematical Proof)",
+      "comment": "PERSPECTIVE 1: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 Statistical consistency is a mathematical theorem: an estimator \u03b8\u0302\u2099 is consistent if lim(n\u2192\u221e) P(|\u03b8\u0302\u2099 - \u03b8| > \u03b5) = 0 for all \u03b5 > 0. This is a logical consequence of the Law of Large Numbers and convergence in probability. The constraint is not enforced by any agent or policy; it emerges from the axioms of probability and measure theory. No agent can violate it; no agent can exit it. It applies regardless of experimental context, measurement methodology, or observer position."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "label": "The Applied Statistician",
+      "comment": "PERSPECTIVE 2: APPLIED STATISTICIAN (MOUNTAIN) \u2014 The practitioner who works with finite samples knows that consistency is an asymptotic property: as n increases, the estimator converges to the true parameter. This constraint holds across all domains \u2014 finance, medicine, engineering, social science. No applied statistician can escape the requirement that their estimator must be consistent, nor can they violate it through choice of method. The constraint is perceivable as invariant across all contexts and measurement regimes."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Data Analyst Under Misspecification",
+      "comment": "PERSPECTIVE 3: DATA ANALYST UNDER MISSPECIFICATION (MOUNTAIN) \u2014 Even when the model is misspecified, consistency remains a constraint. If the true data-generating process differs from the assumed model, the estimator converges to a well-defined limit (the pseudo-true value), not to the assumed parameter. The analyst cannot escape this: the estimator's asymptotic behavior is determined by the mathematical structure, regardless of intent or awareness. Misspecification changes where consistency converges, not whether the constraint applies."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "finite_sample_vs_asymptotic",
+      "question": "Is the constraint the mathematical theorem (lim n\u2192\u221e) or the practical utility at finite n?",
+      "resolution_mechanism": "Formal distinction: if evaluating consistency as a mathematical property, it is a pure logical consequence (mountain). If evaluating it as a practical design principle for estimators (does this method work well in practice at n=100 or n=1000?), that is a different constraint subject to empirical measurement.",
+      "impact": "If the constraint is understood as the asymptotic theorem: mountain classification confirmed. If understood as finite-sample performance: a separate practical constraint emerges with potentially higher extractiveness (depends on application domain and data availability).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity between asymptotic mathematical property and finite-sample practical utility"
+    },
+    {
+      "id": "measurability_under_model_misspecification",
+      "question": "When the data-generating process is unknown, how is 'consistency' verified empirically?",
+      "resolution_mechanism": "In practice, consistency is validated via bootstrap resampling, cross-validation, or comparison to known reference estimators. These empirical checks can be gamed or manipulated (publication bias toward consistent results, selective reporting of consistency metrics). The mathematical property is invariant; its empirical demonstration is not.",
+      "impact": "If the constraint is the mathematical property: mountain. If the constraint is 'demonstrating consistency in scientific practice': introduces a layer of institutional extraction through measurement choice and reporting bias, potentially degrading to snare or tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Verification of consistency under model misspecification requires empirical demonstration subject to bias"
+    },
+    {
+      "id": "consistency_as_convergence_rate",
+      "question": "Does 'consistency' include the rate of convergence, or only the asymptotic limit?",
+      "resolution_mechanism": "Formal definition distinguishes consistency (lim n\u2192\u221e) from rate of consistency (how fast the convergence occurs, e.g., \u221an or log(n)). These are mathematically distinct properties. Rate matters for finite-sample utility; limit matters for long-run behavior.",
+      "impact": "Affects which estimators are considered practically useful. Two consistent estimators with different rates may produce opposite practical recommendations (fast-converging is preferred for small samples; slow-converging violates practical utility despite mathematical consistency).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Distinction between consistency (asymptotic limit) and rate of convergence"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 2
+  },
+  "commentary": {
+    "narrative_context": "Statistical consistency of estimators is a foundational theorem in mathematical statistics asserting that, as sample size increases, an estimator converges in probability to the true parameter being estimated. This constraint emerges from the axioms of probability theory and measure theory and is not enforced by any institutional actor, incentive structure, or policy mechanism. It is invariant across observational contexts, measurement methodologies, and application domains. No agent benefits from violating it, and no agent is victimized by it \u2014 it is a structural property of how learning from data works at asymptotic limits. The constraint exhibits all hallmarks of a mountain: zero degrees of freedom for all indices, emergence from logical necessity rather than institutional design, and universal applicability. Unlike empirical constraints subject to gaming or manipulation, the mathematical property of consistency is immune to extraction or suppression \u2014 agents cannot benefit from others' inability to verify consistency, because the property is mathematically transparent.",
+    "key_agents": [
+      "Mathematical Theory: Source of the constraint (analytical/analytical) \u2014 consistency emerges from probability axioms, not from any actor's decision",
+      "Applied Statistician: Observer (moderate/constrained) \u2014 works within the constraint; depends on consistency for estimators to be usable, but cannot modify the constraint itself",
+      "Empirical Data Analyst: Observer (powerless/trapped) \u2014 must accept that their estimator's asymptotic behavior is determined by the data-generating process, regardless of model assumptions or intent"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Minimal. The constraint is mathematical, not institutional. There is no extraction flow \u2014 no agent gains advantage over another by restricting access to or knowledge of statistical consistency. The small non-zero value reflects that the property is asymptotic (applies at n\u2192\u221e, not at finite n), so practical utility at finite samples requires additional results about convergence rates. Suppression (0.02): Negligible. The constraint is not suppressed by design or institutional force. Some practitioners may be unaware of consistency theory or may misapply it, but this is ignorance, not suppression \u2014 the constraint itself remains invariant. Theater ratio (0.05): Near-zero. The mathematical proof of consistency has no performative content; it either holds or does not. Applied researchers may perform unnecessary verification procedures (simulation studies confirming a known result), introducing mild theater, but the underlying constraint has no theatrical component. Accessibility collapse (0.92): Very high. The consistency requirement is accessible to any analyst with basic probability theory knowledge \u2014 it is not hidden behind complexity or gatekeeping. Resistance to circumvention (0.08): Very low. No valid statistical method can evade the consistency constraint; any attempt to do so either violates probability axioms or is not a valid estimator.",
+    "perspectival_gap": "All three perspectives perceive the constraint identically as a mountain because the constraint is truly universal and agent-independent. There is no perspectival gap. The applied statistician and data analyst perceive the same mathematical necessity as the analytical observer \u2014 they are not in different structural positions relative to the constraint. This uniformity is diagnostic of a genuine mountain: no matter where the observer stands, the constraint appears invariant and unbypassed.",
+    "directionality_logic": "The constraint has no directionality because there are no beneficiaries or victims. Statistical consistency does not extract value from any agent or distribute value to any agent \u2014 it is a logical property of estimators that apply universally. No agent's d-value is defined because there is no extraction flow. The constraint does not require beneficiary/victim declarations because it is not an extractive or coordinative mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "law_of_large_numbers",
+      "convergence_in_probability",
+      "asymptotic_normality_estimators"
+    ]
+  }
+}

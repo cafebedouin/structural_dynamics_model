@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "control_system_robustness",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "csr"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Control System Robustness Requirements and Implementation Trade-offs",
+    "topic_domain": "systems_engineering/control_theory/industrial_safety",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "system_designers",
+      "safety_certifying_authorities"
+    ],
+    "victims": [
+      "system_operators",
+      "end_users",
+      "deployment_flexibility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Operator Under Constraint",
+      "comment": "PERSPECTIVE 1: SYSTEM OPERATOR (SNARE) \u2014 Operators cannot deviate from prescribed control protocols without triggering safety interlocks or certification violations. They are trapped by regulation and equipment design. The constraint extracts behavioral compliance (reduced autonomy, situational judgment suppressed) in exchange for theoretical safety guarantees they cannot verify independently. High suppression: alternative control approaches are locked out by firmware or legal prohibition."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Maintenance Technician",
+      "comment": "PERSPECTIVE 2: MAINTENANCE TECHNICIAN (TANGLED ROPE) \u2014 Constrained by certification requirements and liability structures, but also benefits from the robustness framework through reduced on-call emergencies and clearer troubleshooting protocols. Extraction occurs through mandatory training burdens and liability indemnification favoring equipment manufacturers. Coordination benefit exists: the robustness standard does reduce failure modes they must diagnose."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Equipment Manufacturer",
+      "comment": "PERSPECTIVE 3: EQUIPMENT MANUFACTURER (ROPE) \u2014 Benefits from robustness standards as market differentiator and liability protection. Experiences the constraint as coordination: standardized robustness requirements enable economies of scale, cross-customer deployment, and reduced per-unit certification costs. Arbitrage exit: can license designs across jurisdictions, modulate implementation costs, leverage certification as market barrier against competitors."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Standards Body",
+      "comment": "PERSPECTIVE 4: REGULATORY STANDARDS BODY (SCAFFOLD) \u2014 Organized agents (standards committees, safety authorities) see robustness requirements as temporary scaffolding for operational safety until operator training and system understanding mature enough to support adaptive control. The sunset clause is implicit: as AI-enabled adaptive systems mature and operator skill levels rise, prescriptive robustness constraints can relax toward principles-based safety. Low effective extraction: the body has agency to modify standards and sees a defined exit path."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Formal Verification Ritual",
+      "comment": "PERSPECTIVE 5: FORMAL VERIFICATION RITUAL (PITON) \u2014 The requirement to prove robustness properties via formal methods (Lyapunov stability, invariant set membership) persists largely as performative certification ritual. The theater is high (0.55+) because formal proofs of robustness often apply to idealized models that diverge significantly from actual deployed systems (parameter uncertainty, unmodeled dynamics, sensor noise). The constraint maintains itself through institutional inertia: certification bodies demand proofs because alternative verification methods lack comparable legitimacy, not because the proofs are sufficient."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Control Theory View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / CONTROL THEORY VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some degree of robustness constraint is inherent to closed-loop control systems: the conflict between performance (tight control) and robustness (wide uncertainty tolerance) is a fundamental mathematical trade-off. Bode's integral inequality and gain-bandwidth limits are natural laws of feedback. However, the structural data contradicts the mountain classification \u2014 the actual robustness requirements deployed in industry are contingent institutional arrangements layered on top of this fundamental trade-off, not expressions of it."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "robustness_uncertainty_model_mismatch",
+      "question": "How much of deployed robustness margin is consumed by unmodeled dynamics versus how much serves as genuine buffer against true parameter uncertainty?",
+      "resolution_mechanism": "Post-deployment failure analysis: compare actual failure modes against predicted robustness envelope. Measure gap between formal model assumptions and operational reality.",
+      "impact": "If unmodeled dynamics consume > 60% of margin: robustness requirements are theater (formal proofs provide false confidence). If < 40%: robustness is genuine coordination mechanism. Boundary determines whether piton or rope classification is accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of robustness margin consumed by unmodeled dynamics"
+    },
+    {
+      "id": "operator_adaptive_capacity_suppression",
+      "question": "Are operators genuinely safer under prescriptive robustness constraints, or do the constraints suppress the adaptive situational judgment that prevents actual failures?",
+      "resolution_mechanism": "Comparative incident analysis: systems with adaptive-operator control vs prescriptive-constraint control. Track near-miss events where operator judgment overrode formal protocol.",
+      "impact": "If prescriptive constraints reduce incidents: snare classification is correct (suppression serves safety). If adaptive judgment prevents more incidents: snare is a false positive (suppression is extractive, not protective). Determines whether victim classification is accurate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether prescriptive constraints improve or degrade safety outcomes versus adaptive operator control"
+    },
+    {
+      "id": "formal_verification_sufficiency_gap",
+      "question": "Do formal robustness proofs (Lyapunov, sum-of-squares, reachability) actually predict real-world failure modes, or are they ceremonial validation of idealized models?",
+      "resolution_mechanism": "Correlation analysis: compare systems that passed formal verification against actual failure patterns post-deployment. Identify whether formal violations preceded actual failures.",
+      "impact": "If strong correlation: formal verification is genuine coordination (rope classification justified). If weak: formal verification is piton (theater \u2265 0.70 confirmed). Determines whether certification ritual is functional or degraded.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether formal robustness proofs correlate with real-world failure prevention"
+    },
+    {
+      "id": "manufacturing_cost_extraction_asymmetry",
+      "question": "How much of the equipment cost premium for robustness-certified systems flows to genuine increased manufacturing complexity versus to certification overhead and market capture?",
+      "resolution_mechanism": "Bill-of-materials analysis: compare robust vs non-robust equivalent systems. Measure redundancy costs, control architecture costs, certification labor costs separately.",
+      "impact": "If genuine complexity > 70% of premium: manufacturer benefits are coordination (rope). If certification overhead > 50% of premium: manufacturer captures certification as market barrier (tangled rope confirmed, extractive component justified).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of robustness cost premium attributable to genuine engineering complexity versus certification overhead"
+    },
+    {
+      "id": "adaptive_system_transition_sunset_feasibility",
+      "question": "Can AI-enabled adaptive control systems (model predictive control, reinforcement learning) actually replace prescriptive robustness constraints, or is the transition intractable?",
+      "resolution_mechanism": "Proof-of-concept deployment and safety case construction: deploy adaptive systems in high-consequence domains and measure formal safety verification difficulty, operator acceptance, and incident rates.",
+      "impact": "If sunset is feasible: scaffold classification is correct (temporary constraints with real exit). If sunset is intractable: scaffold is aspirational (constraints become piton \u2014 theatrical pretense of temporary status). Determines whether generational time horizon is realistic.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Feasibility of replacing prescriptive robustness constraints with adaptive control in high-consequence systems"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Control system robustness requirements create a structural tension between safety assurance through prescriptive constraints and operational flexibility through adaptive judgment. Modern industrial control systems face requirements to prove robustness against parameter uncertainty, unmodeled dynamics, and adversarial perturbations. This creates a hybrid coordination-extraction constraint: genuine safety coordination (uncertainty cannot be ignored) is layered with extractive elements (prescriptive requirements suppress operator judgment, certification overhead captures market barriers, formal verification rituals persist despite limited predictive power). The constraint exhibits all six classification types from different perspectives, illustrating how the same structural phenomenon \u2014 the gap between idealized control models and operational reality \u2014 appears as immutable mathematical law (mountain), coordination mechanism (rope), temporary scaffolding (scaffold), degraded ritual (piton), mixed coordination-extraction (tangled rope), or pure suppression (snare), depending on the observer's structural position. Theater ratio (0.55) reflects the significant performative component in formal robustness verification: proofs of Lyapunov stability or invariant set membership apply to idealized models and often diverge substantially from actual deployment conditions including sensor noise, parameter drift, and unmodeled dynamics. The extractiveness measurement (0.35 \u2192 0.52 over the interval) shows accumulation of robustness requirements without corresponding sunset, supporting the piton observation that scaffold constraints are becoming permanent institutional features.",
+    "key_agents": [
+      "System Operators: Primary victim (powerless/trapped) \u2014 suppressed in behavioral autonomy; cannot deviate from prescribed protocols without legal/safety consequence",
+      "Equipment Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 capture certification as market differentiator and liability protection; economies of scale from standardized robustness requirements",
+      "Maintenance Technicians: Secondary victim (moderate/constrained) \u2014 constrained by certification requirements; also benefit from reduced emergency responses and clearer protocols",
+      "Regulatory Standards Bodies: Organized actors (organized/constrained) \u2014 maintain and evolve robustness standards; see constraints as temporary scaffolding pending adaptive system maturity",
+      "Formal Verification Ritual: Institutional actor (institutional/arbitrage) \u2014 performs certification function; benefits from lack of alternative legitimacy; theater increases as complexity outpaces verification power",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent robustness requirements as expressions of fundamental control theory trade-offs"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, and increasing. Initial value (0.35) reflects genuine safety coordination \u2014 uncertainty in control systems is real and requires response. The progression to 0.52 reflects accumulation of prescriptive requirements that serve institutional inertia rather than safety innovation. Modern systems add robustness margins for unmodeled dynamics that compound across layers (model uncertainty, sensor noise, actuator lag, communication delay), creating overly conservative total constraints. Suppression (0.48): Moderate. Operators cannot trivially override robustness constraints due to firmware locks, legal liability, and certification requirements. But suppression is not total \u2014 emergency overrides exist, and operators can petition for constraint modification. Theater ratio (0.55): Moderate-high. Formal robustness proofs apply to idealized continuous-time models; actual systems operate in discrete time with quantization, saturation, and delays not captured in the formal model. The gap between proof and practice has widened as control requirements have grown more stringent. The theater ratio increase (0.38 \u2192 0.55) reflects growing divergence between formal verification scope and operational reality.",
+    "directionality_logic": "Each perspective's directionality value (d) derives from the agent's power level, exit options, and structural relationship to the constraint. Operators with no exit options and no beneficiary status experience maximum extraction (d \u2248 0.95, trapped victims). Equipment manufacturers with arbitrage exit and beneficiary status experience minimal extraction (d \u2248 0.10, institutional arbitrage). Technicians with constrained exit and mixed victim/beneficiary status experience moderate extraction (d \u2248 0.60). Standards bodies with organized power and constrained exit experience lower extraction (d \u2248 0.40). The piton classification derives from theater gate (ratio \u2265 0.70 would confirm piton fully; current 0.55 shows piton tendencies but not yet confirmed). The mountain classification at analytical perspective is perspectival risk \u2014 the engine's false summit detector identifies it as naturalization.",
+    "perspectival_gap": "This constraint demonstrates the full DR range from a single base property set. Operators see pure extraction (Snare) \u2014 constraints suppress their adaptive judgment in exchange for safety guarantees they cannot verify independently. Standards bodies see temporary scaffolding (Scaffold) \u2014 robustness requirements are stepping stones to AI-enabled adaptive systems with implicit sunset. Manufacturers see coordination benefit (Rope) \u2014 standardized requirements enable scale economies and liability protection. Maintenance technicians see mixed coordination-extraction (Tangled Rope) \u2014 the system enables clearer diagnostics but constrains flexibility. The formal verification ritual sees its own degradation (Piton) \u2014 proofs persist through institutional legitimacy, not through predictive power. The analytical observer risks seeing immutable natural law (Mountain) \u2014 performance-robustness trade-offs are mathematical laws \u2014 but the structural data reveals this as a false summit: the actual constraints deployed are contingent policy choices layered atop the fundamental trade-off.",
+    "mandatrophy_analysis": "This constraint partially resolves mandatrophy by distinguishing between fundamental control-theoretic limits (genuine mountain: Bode integral bounds are laws of physics) and institutional robustness requirements (contingent arrangements shaped by liability law, certification practice, and manufacturing economics). The analytical observer's mountain is a false summit \u2014 it naturalizes a policy choice as a natural law. The genuine mandatrophy resolution requires decomposing the constraint family: (1) the fundamental performance-robustness trade-off (mountain), (2) institutional robustness certification requirements (tangled rope), and (3) formal verification ritual (piton). Each has different \u03b5 and different perspectives. The current single story conflates them, which explains why theater ratio is non-zero for a purported coordination mechanism (rope classification from beneficiary) but extractiveness is increasing (snare signature). Decomposition would separate the genuine coordination problem from the institutional extraction layer."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "adaptive_control_system_verification",
+      "formal_methods_certification_overhead",
+      "operator_skill_requirements_escalation"
+    ],
+    "dual_formulation_note": "Control system robustness operates at the intersection of mathematical constraint (performance-robustness trade-off in feedback systems) and institutional constraint (prescriptive certification requirements). The mathematical constraint is invariant (mountain); the institutional constraint is contingent (tangled rope). These should be decomposed into separate stories: control_theory_performance_robustness_tradeoff (mountain, \u03b5=0.10) and robustness_certification_requirements (tangled rope, \u03b5=0.52). The certification story is downstream of the mathematical story but represents a distinct structural phenomenon with different beneficiaries, victims, and exit options."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

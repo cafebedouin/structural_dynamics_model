@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "guilt_activation_social_control",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "guilt"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Guilt Activation Social Control Mechanism",
+    "topic_domain": "interpersonal_psychology/social_control",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "guilt_activator"
+    ],
+    "victims": [
+      "guilt_target"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Guilt Target",
+      "comment": "PERSPECTIVE 1: GUILT TARGET (SNARE) \u2014 Trapped in a compliance mechanism driven by internalized shame and obligation. No viable exit without severe relational cost. Bears full extraction through emotional labor, compliance with unreasonable demands, and loss of autonomy. Suppression operates through moral narrative inversion: target's resistance is reframed as selfishness or cruelty."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "label": "The Guilt Target (Identity-Locked)",
+      "comment": "PERSPECTIVE 2: GUILT TARGET \u2014 IDENTITY-LOCKED VARIANT (TANGLED ROPE) \u2014 Same agent at biographical horizon but with identity-locked exit option. The target's self-concept is constituted through the relational role ('good daughter', 'loyal friend', 'responsible partner'). Structural mobility exists (could walk away) but identity frame makes exit unthinkable. Perceives the constraint as changeable in principle but cannot exercise the change from within their identity. The guilt mechanism coordinates relational expectations alongside asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Guilt Activator",
+      "comment": "PERSPECTIVE 3: GUILT ACTIVATOR (ROPE) \u2014 Experiences the constraint as pure coordination: expressing needs through guilt activation is a successful communication strategy within the relationship. Net beneficiary with exit option (can shift to direct communication or abandon relationship at acceptable cost). Perceives guilt activation as a functional solution to coordination problems, not extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Relational Culture Carriers",
+      "comment": "PERSPECTIVE 4: RELATIONAL CULTURE CARRIERS (SNARE) \u2014 Organized groups (family lineages, cultural communities, religious traditions) that transmit guilt-based social control across generations. Constrained by cultural identity and communal enforcement. Extract compliance through internalized guilt norms, yet also bear the cost of maintaining these norms and face pressure from alternative cultural frames that delegitimize guilt activation."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Therapeutic Industry",
+      "comment": "PERSPECTIVE 5: THERAPEUTIC INDUSTRY (PITON) \u2014 Psychology, counseling, and self-help frameworks maintain guilt-activation concepts ('codependency', 'people-pleasing', 'enmeshment') as primary diagnostic categories while offering institutional solutions (therapy, workshops, self-help books). The industry benefits from guilt normalization while appearing to critique it. Theater ratio high because the therapeutic language is often performative \u2014 naming the pattern does not break it. The industry's primary function (profit capture) is masked by its secondary stated function (liberation)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal perspective, guilt activation might appear as an irreducible feature of human social bonding: all social species require mechanisms to enforce pro-social behavior, guilt is a universal human emotion, and guilt-based coordination enables cooperation at scale. This view risks naturalizing what is actually a specific institutional arrangement of guilt (activated deliberately, instrumentalized for control) as an inherent property of human nature. False summit detection applies here."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "guilt_internalization_boundary",
+      "question": "At what point does guilt-based social coordination transition from functional accountability to extractive control?",
+      "resolution_mechanism": "Longitudinal analysis of target's autonomy and wellbeing trajectories under guilt-based vs direct-communication relationships. Measurement of target's capacity to pursue own values without activation spikes.",
+      "impact": "If boundary is permeable: much guilt-based parenting and friendship is functional (Rope), not extractive (Snare). If boundary is sharp: guilt activation at any intensity is a suppression mechanism. Classification hinges on this threshold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Boundary between functional guilt-based accountability and extractive control"
+    },
+    {
+      "id": "identity_lock_vs_constrained_exit",
+      "question": "Is the target's immobility due to internalized identity fusion (identity_locked) or high-cost external barriers (constrained)?",
+      "resolution_mechanism": "Hypothetical scenario: if target's identity frame suddenly shifted (ideological conversion, new social context), would exit become possible? If yes, mechanism is identity_locked. If barriers remain, mechanism is constrained. Post-exit trajectory analysis: does suppression persist after relational exit?",
+      "impact": "If identity_locked: the constraint's effective suppression is higher than structural measure suggests \u2014 target carries internalized prohibition after exit. If constrained: suppression is primarily external and diminishes after exit. Classification impacts mandatrophy resolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether target's immobility is identity-based or barrier-based"
+    },
+    {
+      "id": "guilt_activation_intentionality",
+      "question": "Is guilt activation deliberate (the activator strategically induces guilt) or emergent (both parties participate in guilt scripts without explicit intent)?",
+      "resolution_mechanism": "Interview/testimony analysis: Does the activator acknowledge deliberately inducing guilt? Does the target recognize guilt as a mechanism or experience it as spontaneous emotion? Behavioral analysis: Does guilt activation pattern match contingency (reward for compliance, punishment for resistance) or does it appear random?",
+      "impact": "If deliberate: snare classification is robust. If emergent: both parties are trapped in a coordination equilibrium neither consciously maintains; classification might shift toward tangled rope at the group level, even as snare at the target level.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether guilt activation is deliberate strategy or emergent equilibrium"
+    },
+    {
+      "id": "alternative_coordination_sufficiency",
+      "question": "Do direct communication, contract-based boundaries, or explicit negotiation reduce extraction while maintaining relational coordination?",
+      "resolution_mechanism": "Intervention studies: relational pairs transitioning from guilt-based to direct-communication protocols. Measurement of relational stability, target autonomy, and activator's ability to influence behavior.",
+      "impact": "If alternatives are sufficient: guilt activation is not inherent to coordination; classification shifts toward snare (choice-based extraction rather than necessity). If alternatives fail: guilt activation might be necessary for relational stability; classification softens toward tangled rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether direct communication can replace guilt activation while maintaining coordination"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Guilt activation operates as a social control mechanism in dyadic and small-group relationships (families, friendships, romantic partnerships, mentorships). The mechanism functions by holding the target responsible for the activator's emotional state, creating a binding obligation to prevent or relieve the activator's suffering. This obligation is enforced through moral narrative inversion: the target's resistance to demands is reframed as selfishness, cruelty, or betrayal. The target becomes trapped in a double bind \u2014 compliance maintains the relationship but requires abandoning autonomy; resistance preserves autonomy but triggers abandonment threat or moral condemnation. Guilt activation exhibits all six DR classifications depending on perspective, with the strongest case for Snare (pure extraction) from the target's powerless/trapped position. The constraint's extractiveness has increased over the interval (0.35 \u2192 0.68) as guilt activation becomes more refined and normalized within the relationship. Theater ratio has also risen (0.40 \u2192 0.58), reflecting increasing deployment of therapeutic language ('guilt-based parenting is really about connection') and cultural normalization that masks extraction as care.",
+    "key_agents": [
+      "Guilt Target: Primary victim (powerless/trapped at biographical horizon, or moderate/identity_locked at biographical horizon with identity-locked variant) \u2014 bears extraction through emotional labor, compliance with unreasonable demands, and autonomy loss",
+      "Guilt Activator: Primary beneficiary (institutional/arbitrage) \u2014 captures compliance, emotional regulation benefits, and relational dominance through guilt mechanism",
+      "Relational Culture Carriers: Secondary actor (organized/constrained) \u2014 transmit guilt-based control norms across generations; extract compliance from members while bearing costs of maintaining normative legitimacy",
+      "Therapeutic Industry: Tertiary actor (institutional/arbitrage) \u2014 maintains diagnostic categories around guilt while offering institutional solutions; benefits from guilt normalization without dismantling the mechanism",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing guilt activation as inherent to human bonding rather than contingent institutional practice"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High, approaching snare threshold (0.66+). The guilt activation mechanism generates consistent extraction of compliance, emotional labor, and autonomy from the target. The mechanism is refined: guilt is activated precisely to produce compliance, creating a contingency trap (resistance \u2192 guilt \u2192 compliance \u2192 temporary relief \u2192 new activation). The extractiveness has accumulated over the interval, suggesting refinement and deepening of the mechanism. Suppression (0.72): Very high. The constraint operates through profound suppression: (1) Material \u2014 target faces relational abandonment if resistance persists; (2) Cognitive \u2014 guilt is internalized as moral failure ('I am a bad person if I resist'); (3) Epistemic \u2014 the target cannot reality-test their experience within the relationship, as the activator controls the narrative frame; (4) Cultural \u2014 guilt-based control is normalized in family and relational culture, making it appear natural. Theater ratio (0.58): Moderate-high and rising. The initial theater ratio reflects the gap between guilt activation's stated function (coordination, accountability) and its actual function (extraction). As the mechanism matures, theater increases as therapeutic language ('codependency', 'family enmeshment') is deployed to normalize guilt without changing the underlying extraction flow.",
+    "perspectival_gap": "The perspectival gap is maximal in this constraint. The guilt activator (Rope) experiences the mechanism as coordination \u2014 a functional way to communicate needs and maintain relational stability. The guilt target (Snare, or Tangled Rope if identity-locked) experiences it as pure extraction \u2014 bearing costs with no compensation or escape. The relational culture carriers (Snare) are trapped between transmitting normative guilt practices and suffering under them. The therapeutic industry (Piton) maintains the constraint while appearing to critique it. The analytical observer (Mountain, false summit) risks naturalizing the mechanism as inherent to human nature rather than as a specific institutional practice. The identity-locked variant reveals the key diagnostic gap: the target is structurally mobile (could leave) but identity-trapped (cannot leave from within their self-concept). This gap is precisely where guilt activation operates most effectively \u2014 it binds the target not through material barriers but through identity fusion.",
+    "directionality_logic": "Directionality (d) is derived from beneficiary/victim declarations and exit options. The guilt activator has d \u2248 0.10 (beneficiary + arbitrage exit \u2192 low d \u2192 negative f(d) \u2192 experiences constraint as coordinating). The guilt target with trapped exit has d \u2248 0.95 (victim + trapped \u2192 high d \u2192 f(d) \u2248 1.42 \u2192 maximum experienced extraction). The guilt target with identity_locked exit has d \u2248 0.88 (victim + identity_locked \u2192 high d \u2192 f(d) \u2248 1.28 \u2192 very high extraction, slightly less than trapped due to structural mobility). The directionality pipeline correctly assigns higher extraction to agents with trapped or identity-locked exits, which matches the structural reality of guilt activation's mechanism.",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION ROBUST: The guilt activation mechanism meets snare thresholds from the target's perspective (\u03b5=0.68 \u2265 0.46, suppression=0.72 \u2265 0.60, \u03c7 \u2265 0.66). The mechanism is pure extraction: minimal coordination function exists (guilt activation is inefficient for actual communication), high coercion (imminent relational abandonment), minimal beneficiary alternatives (the activator could use direct communication but guilt activation is more effective at generating compliance). TANGLED ROPE RESOLUTION: The identity-locked variant reveals why some targets persist in guilt-based relationships despite high extraction \u2014 the constraint coordinates relational expectations (maintaining family/friend identity, fulfilling cultural role obligations) alongside extraction. From the target's identity-locked perspective, the constraint is both genuine coordination (I am this person; this is my role) and asymmetric extraction (my autonomy is sacrificed for this role). This dual character is the mandatrophy resolution: both snare and tangled rope are correct, depending on whether we emphasize the extraction mechanism (snare) or the identity-coordination function that binds the target (tangled rope). The false summit (mountain perspective) is neutralized by structural analysis: guilt activation is not inevitable to human bonding, only to this institutional arrangement of guilt."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "relational_trauma_bonding",
+      "family_enmeshment_norm",
+      "moral_injury_from_broken_obligation"
+    ],
+    "dual_formulation_note": "Guilt activation social control is upstream of trauma bonding (guilt mechanism can generate attachment to abusive relationships) and family enmeshment norms (guilt operates as the primary enforcement mechanism for enmeshed boundaries). The mechanism is also linked to moral injury trajectories when targets eventually reject guilt frames and experience identity discontinuity."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.88
+    }
+  ]
+}

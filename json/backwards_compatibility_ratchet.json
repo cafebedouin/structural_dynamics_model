@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "backwards_compatibility_ratchet",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bcr"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.52,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Backwards Compatibility Ratchet",
+    "topic_domain": "technology/software_architecture",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "legacy_system_operators",
+      "incumbent_vendors"
+    ],
+    "victims": [
+      "system_innovators",
+      "downstream_platform_users"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Platform Innovator",
+      "comment": "PERSPECTIVE 1: PLATFORM INNOVATORS (SNARE) \u2014 Trapped by installed base lock-in. Cannot remove legacy APIs, protocols, or data formats without fragmenting the ecosystem. Architectural improvements are impossible without maintaining full backward compatibility debt. Maximum extraction: innovation cycles slow by orders of magnitude; architectural redesign is economically impossible. The innovator bears the suppression cost indefinitely."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Downstream Ecosystem",
+      "comment": "PERSPECTIVE 2: DOWNSTREAM ECOSYSTEM (TANGLED ROPE) \u2014 Benefits from stability and API continuity (genuine coordination function: predictability for third-party developers). But constrained by inability to adopt breaking changes \u2014 forced to maintain defensive coding against deprecated pathways. Moderate extraction because the ecosystem both benefits (coordination) and bears costs (architectural burden)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Vendor",
+      "comment": "PERSPECTIVE 3: INCUMBENT VENDOR (ROPE) \u2014 Benefits from control of the compatibility ratchet. New competitors must implement full legacy support; switching costs for users increase as legacy depth accumulates. The vendor experiences the constraint as coordination \u2014 maintaining stable interfaces for customers. Net beneficiary through arbitrage: can fork the standard when beneficial while maintaining backward-compat facade."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Standards Body",
+      "comment": "PERSPECTIVE 4: STANDARDS BODY (SCAFFOLD) \u2014 Organized agents (IETF, W3C, language evolution committees) implement staged deprecation policies: v1 backward-compat mandatory, v2+ allows breaking changes after 5-10 year sunset clause. Creates migration pathways that reduce extraction over time. Low effective extraction because the organized actors have agency and explicit sunset logic."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Compatibility Layer",
+      "comment": "PERSPECTIVE 5: LEGACY COMPATIBILITY LAYER (PITON) \u2014 Maintains deprecated APIs that no longer serve coordination: the original use case has moved to new interfaces, but the old paths persist through institutional inertia. Theater ratio 0.35 reflects that compatibility maintenance is increasingly performative: most traffic uses new pathways, but compatibility must be maintained for the tiny installed base on outdated clients. The system sees its own compatibility theater as necessary but degraded."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Network Effect View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NETWORK EFFECT VIEW (MOUNTAIN) \u2014 From a civilizational perspective, backward compatibility is a natural consequence of network effects: once an interface gains adopters, the cost of change (coordination problem) is immutable across all parties. This perspective sees the ratchet as inherent to networked systems. However, the structural data contradicts this \u2014 breaking changes ARE possible (Windows 11 dropped support, Python 3 broke 2.x code); the immutability is contingent on institutional choice, not physical law. The engine will flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "network_effect_threshold",
+      "question": "At what installed base size does backward compatibility become actually immutable rather than merely institutionally enforced?",
+      "resolution_mechanism": "Historical analysis of successful vs failed breaking-change migrations (Python 2\u21923, Windows versions, Java versions). Measurement of correlation between installed base percentage and migration failure rate.",
+      "impact": "If threshold is high (>80% adoption required): network effects are genuinely immutable, mountain classification is justified. If threshold is low (<20%): immutability is institutional choice, not natural law; constraint is tangled rope with ratchet mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Installed base threshold for immutable compatibility"
+    },
+    {
+      "id": "deprecation_cost_visibility",
+      "question": "Do organizations genuinely internalize the long-term cost of backward compatibility debt, or is the cost externalized and invisible in accounting?",
+      "resolution_mechanism": "Internal cost accounting at major platforms: separation of feature-development costs from compatibility-maintenance costs. Analysis of budget reallocation when compatibility sunset policies are enforced.",
+      "impact": "If costs are invisible: organizations perpetuate the ratchet through rational ignorance rather than deliberate choice; suppression increases because decision-makers don't see the constraint. If costs are visible: ratchet represents deliberate choice; tangled rope classification is reinforced.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Visibility and internalization of backward compatibility costs"
+    },
+    {
+      "id": "alternative_versioning_model",
+      "question": "Would parallel major versions (v1 and v2 fully separate) actually reduce innovation friction more than staged deprecation?",
+      "resolution_mechanism": "Counterfactual modeling of dual-stack platforms; analysis of Go (single major version, strict backward compat) vs Rust (multiple edition system) vs JavaScript (Web Platform vs Node versions) innovation rates.",
+      "impact": "If parallel versioning reduces friction: current ratchet is suboptimal institutional choice, not natural law. If parallel versioning increases costs: ratchet reflects genuine coordination constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether parallel versioning reduces backward compatibility friction"
+    },
+    {
+      "id": "extraction_rent_vs_coordination_cost",
+      "question": "What fraction of the measured extractiveness (0.58) is genuine coordination cost (preventing users from facing broken code) vs extractive rent (incumbent lock-in advantage)?",
+      "resolution_mechanism": "Comparative analysis: platforms with strict sunset policies vs perpetual backward compat. Measurement of user switching costs correlated to compatibility-debt depth.",
+      "impact": "If >50% is coordination: tangled rope classification is justified. If <30% is coordination: constraint is primarily snare, and the 'coordination' framing is cover story.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ratio of coordination cost to extractive rent in backward compatibility"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The backwards compatibility ratchet is a structural constraint that accumulates over the lifecycle of networked platforms and protocols. Once a system gains an installed base, the compatibility debt becomes a one-way ratchet: adding new features and APIs is cheap; removing old ones creates coordination problems for downstream users. This constraint exhibits the full taxonomy of DR types depending on perspective. From the view of platform innovators attempting architectural redesign, it appears as a Snare: the installed base lock-in is immutable and extraction is maximal. From the view of incumbent vendors, it appears as Rope: backward compatibility is experienced as a coordination mechanism that benefits all parties and maintains a stable platform. From the view of standards bodies with explicit sunset policies, it appears as Scaffold: a temporary constraint with an engineered exit. The theater ratio (0.35) reflects that much backward compatibility maintenance is increasingly performative: the system maintains deprecated APIs that serve tiny populations while the majority of traffic flows through new pathways. The extractiveness (0.58) reflects the asymmetry between the cost of maintaining old pathways and the benefit of network stability.",
+    "key_agents": [
+      "Platform Innovators: Primary victim (powerless/trapped) \u2014 cannot redesign architecture without maintaining indefinite legacy support; architectural debt compounds over time",
+      "Incumbent Vendors: Primary beneficiary (institutional/arbitrage) \u2014 control the compatibility ratchet; new competitors face massive onboarding costs to support legacy APIs",
+      "Downstream Ecosystem: Secondary victim (moderate/constrained) \u2014 benefits from stability but forced to maintain defensive coding patterns and cannot adopt breaking improvements",
+      "Standards Bodies: Organized actors (organized/mobile) \u2014 implement staged deprecation and sunset policies; have agency through versioning and migration pathways",
+      "Legacy Compatibility Layer: Institutional actor (institutional/arbitrage) \u2014 maintains deprecated APIs through inertia; sees own maintenance as degraded (piton perspective)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional choice (network effects) as immutable physical law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The ratchet mechanism creates genuine lock-in: moving to a new platform or version requires rewriting downstream code, creating friction that accumulates over platform generations. The extractiveness is not total (0.90+) because breaking changes ARE technically possible and ARE sometimes executed (Python 3, Windows breaking changes, major JavaScript frameworks). The institution chooses perpetual compatibility; the cost is not immutable. Suppression (0.52): Moderate. Significant barriers to exit include ecosystem lock-in, switching costs, and the coordination problem of simultaneous migration. But suppression is not total \u2014 organizations CAN migrate when sufficiently motivated (proven by successful breaking changes). Theater ratio (0.35): Low-moderate. Backward compatibility maintenance is increasingly performative \u2014 the system maintains deprecated APIs that serve tiny installed bases while the majority of traffic flows through new interfaces. As platforms mature, the theater ratio rises because old pathways accumulate without corresponding traffic. Claimed type (Tangled Rope): The constraint has both a genuine coordination function (API stability enables third-party development) and asymmetric extraction (incumbent vendors benefit from high switching costs). The coordination is real; the extraction is real. The tangled rope classification is justified by both mechanisms operating simultaneously.",
+    "directionality_logic": "Each perspective's directionality derives from its structural relationship to the compatibility ratchet. Platform innovators are victims (powerless/trapped) \u2014 they must maintain all legacy pathways regardless of cost, giving them high d (maximum experienced extraction). Incumbent vendors are beneficiaries with arbitrage options (institutional/arbitrage) \u2014 they can fork the standard when beneficial while maintaining the facade of backward compatibility, giving them low d (negative experienced extraction, i.e., net benefit). Downstream ecosystem operators have constrained exit (moderate/constrained, split beneficiary-victim) \u2014 they benefit from API stability but are constrained by inability to adopt breaking improvements, giving them moderate d around 0.50. Standards bodies are organized with mobile exit (organized/mobile) \u2014 they can create sunset policies and migration pathways, reducing effective extraction to the scaffold level. The legacy compatibility layer is institutional arbitrage (institutional/arbitrage) \u2014 it maintains deprecated APIs for tiny populations through inertia, experiencing low effective extraction because it carries out the incumbent vendor's strategy without direct cost.",
+    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon produces radically different classifications depending on the observer's position. The platform innovator sees pure extraction (Snare) \u2014 the ratchet locks them into perpetual maintenance. The incumbent vendor sees coordination (Rope) \u2014 backward compatibility is experienced as a customer-satisfaction mechanism. The standards body sees a temporary problem with engineering solutions (Scaffold) \u2014 deprecation policies and sunset windows are real mechanisms for reducing extraction over time. The legacy layer sees its own degraded function (Piton) \u2014 maintaining deprecated APIs that no longer serve their original purpose. The civilizational observer risks seeing immutable natural law (Mountain) \u2014 'network effects make breaking changes impossible' \u2014 but the structural data reveals this as false naturalization: breaking changes DO happen and ARE chosen by institutions; the immutability is contingent on institutional preference for backward compatibility, not an inherent property of networks.",
+    "mandatrophy_analysis": "RATCHET MECHANISM: The mandatrophy resolves by recognizing that backward compatibility is a one-way institutional choice. The 'ratchet' metaphor is precise: forward direction (adding new APIs) is cheap; reverse direction (removing old APIs) is catastrophically expensive. This asymmetry is not inherent to networks \u2014 it is engineered into the institutional constraint. The constraint prevents mislabeling by requiring separate analysis of: (1) genuine coordination cost (API stability DOES solve the problem of ecosystem fragmentation), and (2) extractive rent (incumbent control over the compatibility ratchet DOES create lock-in advantage). Both are present. The tangled rope classification captures this duality: real coordination function + asymmetric extraction mechanism. The mountain perspective is a false summit: 'network effects make it immutable' confuses institutional choice with physical necessity. Standards bodies prove the ratchet is reversible \u2014 Python 3, Java versions, Go editions all executed breaking changes despite massive installed bases."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "technical_debt_accumulation",
+      "platform_lock_in",
+      "ecosystem_fragmentation"
+    ],
+    "dual_formulation_note": "The backwards compatibility ratchet operates at the intersection of three structurally distinct constraints: (1) platform governance (who decides when to break compatibility), (2) ecosystem coordination (how downstream users coordinate migration), and (3) technical architecture (which deprecated pathways persist). This story treats the ratchet as a unified institutional constraint; each component could be decomposed separately with different \u03b5 values if more granular analysis is required."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.65
+    }
+  ]
+}

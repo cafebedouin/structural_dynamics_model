@@ -1,0 +1,235 @@
+{
+  "header": {
+    "constraint_id": "ml_research_resource_concentration",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mlrc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "ML Research Resource Concentration",
+    "topic_domain": "artificial_intelligence/research_infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "well_resourced_institutions",
+      "compute_capital_holders"
+    ],
+    "victims": [
+      "resource_poor_researchers",
+      "field_epistemic_diversity",
+      "alternative_research_directions"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Resource-Poor Researcher",
+      "comment": "PERSPECTIVE 1: RESOURCE-POOR RESEARCHER (SNARE) \u2014 Structurally locked out of high-compute ML research. Cannot access GPU clusters or training infrastructure without affiliation to well-resourced institutions. Career trajectory in ML increasingly requires demonstration of scale \u2014 but scale requires resources only concentrated actors control. No meaningful exit option."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Tier Research Institution",
+      "comment": "PERSPECTIVE 2: MID-TIER RESEARCH INSTITUTION (TANGLED ROPE) \u2014 Experiences both genuine coordination and extraction. Benefits from shared benchmarks, open models, and collaborative infrastructure. Simultaneously faces extraction: must contribute computing resources to consortia, train students on tools designed for scale, participate in arms-race dynamics around model size. Constrained: could exit but at significant cost to competitiveness and graduate recruitment."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Well-Resourced Laboratory",
+      "comment": "PERSPECTIVE 3: WELL-RESOURCED LABORATORY (ROPE) \u2014 Net beneficiary. Experiences the constraint as pure coordination: resource concentration enables scale, which generates data and insights for the field. Can exit anytime without penalty \u2014 has alternatives (consulting, industry, closed-source development). Sees research coordination as advantageous."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Compute Capital Holder (Cloud Provider/Semiconductor Manufacturer)",
+      "comment": "PERSPECTIVE 4: COMPUTE CAPITAL HOLDER (TANGLED ROPE) \u2014 Genuine coordination function: provisioning compute infrastructure enables research at scale. Asymmetric extraction: capture value through pricing tiers, usage data, training-on-user-workloads, and lock-in to proprietary frameworks. Constrained: cannot exit without ceding market leadership, but also benefits from ecosystem lock-in. Different institutional position than well-resourced lab \u2014 benefits from concentration but through market power rather than epistemic merit."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open-Source ML Movement",
+      "comment": "PERSPECTIVE 5: OPEN-SOURCE ML MOVEMENT (SCAFFOLD) \u2014 Organized response to concentration. Hugging Face, PyTorch, open weights models (Llama, Mistral), reduced-scale training techniques. Building alternative pathways with sunset logic: as training efficiency improves and open models mature, resource concentration becomes less extractive. Agents see temporary constraint with technological sunset \u2014 efficiency gains reduce compute barrier. Suppression is real but declining."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Scientific Merit Evaluation System",
+      "comment": "PERSPECTIVE 6: SCIENTIFIC MERIT EVALUATION SYSTEM (PITON) \u2014 Conference and journal review claims to evaluate ideas on merit independent of resources. Theater is high: peer review reads papers, assesses novelty and rigor, but the evaluation system implicitly privileges findings achievable only at scale. Reviewers cannot run 7-billion-parameter models to verify claims. The system persists through institutional inertia \u2014 academic reputation, citation prestige \u2014 but its function (evaluation independent of resource asymmetry) has largely atrophied. Alternative: preprints and community scrutiny."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "label": "The Field's Epistemic Diversity",
+      "comment": "PERSPECTIVE 7: FIELD EPISTEMIC DIVERSITY (SNARE / IDENTITY-LOCKED) \u2014 Research directions that require small models, sparse data, interpretability over scale, or resource-efficient methods are structurally deprioritized. The field's identity has become fused with 'bigger is better.' Researchers pursuing alternative paradigms (mechanistic interpretability, sparse training, efficient architectures) face identity lock: being 'inefficient' or 'not scalable' becomes a professional liability even when their research directions are epistemically valuable. No exit option that preserves professional identity in ML."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Recognizes genuine coordination function: scaling laws are real, large models reveal emergent capabilities that inform research. Simultaneously recognizes asymmetric extraction: resource concentration filters which questions get answered, which researchers can participate, which failure modes get studied. Civilization-scale perspective shows that concentration is neither immutable (open-source movement, efficiency improvements) nor pure coordination (epistemic diversity cost)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "scaling_law_necessity",
+      "question": "Are large-scale experiments epistemically necessary for fundamental ML insights, or is scale a sufficient-but-not-necessary condition that dominates the field through resource concentration?",
+      "resolution_mechanism": "Comparative historical analysis: high-impact insights produced without massive resources (attention mechanisms, layer normalization, prompt engineering); vs insights requiring scale (emergent abilities in language models). Decomposition of causality: does scale reveal phenomena or does it merely enable demonstration?",
+      "impact": "If necessary: resource concentration is a legitimate structural feature (Rope dominates). If sufficient-but-not-necessary: concentration is extractive (Snare/Tangled Rope dominates), and field is missing alternative research paths.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether large scale is epistemically necessary or contingently dominant"
+    },
+    {
+      "id": "open_weights_threshold",
+      "question": "At what point does open-weights model maturity (Llama, Mistral, etc.) reduce the effective extraction from resource concentration? What capability gap remains closed?",
+      "resolution_mechanism": "Temporal tracking of open-weights model capabilities vs proprietary SOTA; resource requirements for fine-tuning vs pretraining; publication lag for insights achievable on open models vs proprietary frontier.",
+      "impact": "If gap narrows to zero: scaffold sunset is real, concentration becomes temporary (Scaffold classification strengthens). If gap persists: open-weights are substitute goods with limits (Scaffold is aspirational, concentration persists).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Maturity gap between open-weights and proprietary frontier models"
+    },
+    {
+      "id": "identity_lock_persistence",
+      "question": "If resource barriers to efficient-model research were removed, would the field's identity fusion with 'scale' persist as an internalized suppression mechanism?",
+      "resolution_mechanism": "Longitudinal study of researcher career outcomes in resource-efficient subfields (mechanistic interpretability, sparse training, small-model research) before and after major efficiency breakthroughs. Do barriers persist after removal of material constraints?",
+      "impact": "If identity lock persists: even with resource access, alternative research directions face cognitive capture and institutional gatekeeping (Snare/identity_locked classification stands). If identity lock dissolves: suppression was primarily structural, concentration is Tangled Rope (mixed coordination and extraction).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether field identity fusion with scale persists after resource barriers decline"
+    },
+    {
+      "id": "compute_price_elasticity",
+      "question": "How sensitive is research accessibility to compute pricing? Would 10x efficiency gain or 50% price reduction substantially alter the distribution of who can run large-scale experiments?",
+      "resolution_mechanism": "Price-sensitivity analysis from survey data; simulation of research participation with different compute costs; historical precedent from GPU cost evolution.",
+      "impact": "If highly elastic: price/efficiency improvements rapidly enable broader participation (scaffold sunset accelerates). If inelastic: other barriers (expertise, time, integration costs) persist independent of price (suppression remains high).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Price elasticity of research participation with respect to compute cost"
+    },
+    {
+      "id": "proprietary_moat_permanence",
+      "question": "Are the competitive advantages held by well-resourced institutions (proprietary training techniques, dataset advantages, accumulated engineering) sustainable moats, or do they erode as techniques become open and optimized?",
+      "resolution_mechanism": "Historical analysis of technical advantages: how quickly do closed techniques get replicated once published? Timeline for open-source alternatives. Comparison with historical IT industry concentration patterns.",
+      "impact": "If moats are permanent: concentration persists indefinitely (Snare classification stands, no sunset). If moats erode: concentration is temporary, open-source movement will succeed (Scaffold sunset is real).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Durability of competitive moats from resource concentration"
+    },
+    {
+      "id": "funding_bottleneck_circularity",
+      "question": "Does funding concentration (NSF, DARPA, corporate research labs control compute budgets) reinforce research concentration, or would decentralized funding structures create alternative research directions at lower budgets?",
+      "resolution_mechanism": "Analysis of funding source correlation with research direction and resource intensity. Comparison of research agendas in publicly-funded vs corporate-funded vs bootstrapped ML work. Historical precedent from other fields (biology, physics).",
+      "impact": "If reinforcing: two-level extraction (resource + funding concentration). If decoupled: funding diversification could create epistemic diversity even without compute access (Tangled Rope structure becomes clearer).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether funding concentration reinforces or decouples from research resource concentration"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "ML research has undergone rapid resource concentration in the past decade. Access to compute infrastructure (GPUs, TPUs, large training clusters) is increasingly concentrated in a small number of well-resourced institutions: major tech companies (OpenAI, DeepMind, Meta, Google), wealthy academic labs, and national AI initiatives. This concentration creates a structural constraint with contradictory properties: it enables genuine scientific advances (coordinated research on large models), simultaneously enables asymmetric extraction (resource holders capture epistemic priority and field direction), and produces identity-fusion effects (the field's values become aligned with 'scale' as a proxy for progress). The constraint exhibits high extractiveness (0.58) driven by career incentives asymmetry and suppression of resource-efficient research paths. It is being partially contested by the open-source ML movement (Hugging Face, community-driven models, efficiency improvements), which represents a scaffold structure with a civilizational-scale sunset \u2014 as training efficiency improves and open-weights models mature, the extraction mechanism weakens. Theater is moderate (0.55): research evaluation systems claim to assess merit independently of resources, but implicitly privilege findings achievable only at scale, creating performative review layers that do not verify computational claims.",
+    "key_agents": [
+      "Resource-Poor Researchers: Primary victim (powerless/trapped) \u2014 locked out of large-scale experiment participation; career advancement requires scale access",
+      "Mid-Tier Research Institutions: Secondary victim (moderate/constrained) \u2014 benefit from benchmarks and collaboration but forced into arms-race dynamics; resource contributions extract value",
+      "Well-Resourced Laboratories: Primary beneficiary (institutional/arbitrage) \u2014 enjoy scale advantages, publication prestige, talent recruitment; see constraint as pure coordination",
+      "Compute Capital Holders (Cloud/Semiconductor): Extractive beneficiary (institutional/constrained) \u2014 capture value through pricing, lock-in, usage data; genuinely coordinate resource provisioning but asymmetrically",
+      "Open-Source ML Movement: Organized challenger (organized/constrained) \u2014 building alternative pathways with sunset logic; see concentration as temporary",
+      "Field's Epistemic Diversity: Primary victim (powerless/identity_locked) \u2014 research directions requiring efficiency, interpretability, or sparse data are deprioritized; professional identity fused with 'bigger is better'",
+      "Scientific Merit Evaluation System: Institutional actor (institutional/arbitrage) \u2014 maintains performative review; sees own function as degraded (Piton perspective)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High and increasing. The constraint extracts career opportunities, epistemic priority, and research agenda-setting from resource-poor actors toward resource-rich ones. Extraction is growing (0.32 \u2192 0.58 across interval) because: (a) scaling laws have proven empirically real, making scale increasingly valuable for capability gains; (b) training costs for frontier models have risen exponentially; (c) compute capacity is concentrated in fewer hands. The metric is not at snare-level (\u22650.66) because genuine coordination benefits exist (benchmarks, open models, shared techniques) and some mobility remains for well-executed research at lower resource levels. Suppression (0.62): High. Barriers to participation include: access to compute clusters (technical barrier), expertise requirements for scale optimization (skills barrier), career risk of negative results in resource-intensive work (social barrier), and identity lock (cognitive barrier). These are multiple, compound, and enforced by institutional structures. Theater (0.55): Moderate. Peer review claims resource-independence; conference committees evaluate 'ideas' not 'compute'. But the system implicitly privileges work demonstrating scale because larger models have generated most high-impact findings in recent years. Reviewers cannot run models to verify claims. The theater is not as high as traditional peer review (which claims complete independence from resource constraints), but higher than direct outcome observation.",
+    "perspectival_gap": "This constraint demonstrates the full range of classification from beneficiary-to-victim gradient. The well-resourced lab (institutional/arbitrage) sees Rope because they have genuine coordination benefits and exit options. The resource-poor researcher (powerless/trapped) sees Snare because they face extraction without exit. The scaffold perspective (organized/constrained) is crucial: it shows that the constraint is not immutable. Open-source models, efficiency improvements, and community infrastructure are building alternatives with declining extraction. The piton perspective reveals that the scientific merit system's capacity to evaluate resource-independent merit has largely disappeared \u2014 replaced by performative review. The identity-locked perspective (field epistemic diversity) is the most subtle: even if resource barriers were removed, the field's self-concept ('bigger is better') would suppress alternative research. This suggests the constraint operates at multiple levels: material (compute access), epistemic (agenda-setting), and psychological (identity fusion).",
+    "directionality_logic": "Each agent's experienced extractiveness (\u03c7) is computed from base extractiveness (0.58) \u00d7 f(d) \u00d7 \u03c3(global=1.2). The resource-poor researcher with d \u2248 0.95 (full target) experiences \u03c7 \u2248 0.58 \u00d7 1.42 \u00d7 1.2 \u2248 0.99 (nearly maximal extraction). The well-resourced lab with d \u2248 0.10 (full beneficiary) experiences \u03c7 \u2248 0.58 \u00d7 -0.10 \u00d7 1.2 \u2248 -0.07 (subsidy). The mid-tier institution with d \u2248 0.55 (symmetric) experiences \u03c7 \u2248 0.58 \u00d7 0.65 \u00d7 1.2 \u2248 0.45 (moderate extraction). This explains why perspectives diverge so dramatically: the same constraint produces near-total extraction for one agent and near-zero extraction for another, and the difference is entirely structural (d), not perspective error.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy through structural clarity of the mixed coordination-extraction hybrid. Genuine coordination exists: scaling laws are real, large-scale experiments generate insights, shared infrastructure enables research that would be impossible in isolation. Asymmetric extraction simultaneously exists: resource concentration filters research agendas, excludes participants, and embeds career incentives that reward scale-chasing even when scientifically suboptimal. Neither can be decomposed away. The constraint is Tangled Rope, not pure extraction (Snare) because the coordination function is real, not pure coordination (Rope) because the extraction is asymmetric and the field has identity-locked with scale as a value proxy. The scaffold perspective resolves temporal mandatrophy: at biographical horizons, resource concentration appears permanent (Snare from powerless view, Rope from beneficiary view). At generational horizons, open-source and efficiency improvements are building alternatives \u2014 the constraint is being reshaped. At civilizational horizons, the mechanism becomes visible: the field's identity-fusion with scale is contingent, and epistemic diversity may be recoverable if identity frames shift."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "large_model_capability_convergence",
+      "ml_research_agenda_concentration"
+    ],
+    "dual_formulation_note": "ML research resource concentration decomposes into three structurally distinct constraints with different \u03b5 values: (1) compute_access_inequality (\u03b5=0.72, Snare) \u2014 material barriers to participation; (2) research_agenda_concentration (\u03b5=0.48, Tangled Rope) \u2014 filtering of which questions get prioritized; (3) field_identity_fusion_with_scale (\u03b5=0.42, Tangled Rope / identity_locked) \u2014 cognitive lock-in with 'bigger as better'. Each has different beneficiaries, different suppression mechanisms, and different sunset dynamics. This story represents the aggregate constraint across all three decompositions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.4
+    }
+  ]
+}

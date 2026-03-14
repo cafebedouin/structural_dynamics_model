@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "roman_debt_bondage",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.82,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Roman Debt Bondage and Nexum",
+    "topic_domain": "economic/legal/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "creditors",
+      "patrician_landowning_class"
+    ],
+    "victims": [
+      "debtors",
+      "plebeian_smallholders"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Bound Debtor",
+      "comment": "PERSPECTIVE 1: THE BOUND DEBTOR (SNARE) \u2014 A debtor who enters nexum has no structural exit. Legal prohibition on breach, no alternative credit sources, economic dependency on creditor for subsistence. Debt accrues through interest and penalties, lifetime servitude common. Maximum suppression through legal enforcement and social prohibition. The constraint extracts labor value while stripping legal personhood."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Debtor's Household",
+      "comment": "PERSPECTIVE 2: THE DEBTOR'S HOUSEHOLD (SNARE) \u2014 Intergenerational bondage: children of nexum debtors inherit debt status. No generational escape clause. Household labor becomes collateral. Suppression operates through legal status degradation \u2014 nexal persons lose protection under early Roman law."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Creditor Class",
+      "comment": "PERSPECTIVE 3: THE CREDITOR CLASS (ROPE) \u2014 Benefits from debt-collection enforcement and labor extraction. Experiences the constraint as pure coordination: nexum solves the creditor's verification problem (how to ensure repayment) and labor-availability problem (securing workers for estates). The system is coordination from the beneficiary's position \u2014 it solves real problems of credit distribution and labor supply."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Reform Coalition (Lex Poetelia)",
+      "comment": "PERSPECTIVE 4: THE REFORM COALITION / LEX POETELIA (SCAFFOLD) \u2014 Organized plebeian resistance and patrician reformers (260s BCE onwards) gradually restricted nexum: debt bondage prohibited, debt-servitude limited, personal guarantee replaced with property seizure. The constraint had a sunset clause: Lex Poetelia (circa 326 BCE) and subsequent legislation gradually dismantled nexum as a mechanism. Suppression declining over time as legal alternatives (property foreclosure, bankruptcy proceedings) replaced personal servitude."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Transition-Phase Debtor (Post-Lex Poetelia)",
+      "comment": "PERSPECTIVE 5: TRANSITION-PHASE DEBTOR / POST-LEX POETELIA (TANGLED ROPE) \u2014 After legal reform, a debtor faces high but surmountable costs to exit (property seizure, debt sale, manumission purchase). The constraint coordinates credit access (debtors can still obtain loans because creditors have recovery mechanisms) while extracting asymmetrically (property loss, extended repayment terms, social penalty). Both genuine coordination function and asymmetric extraction coexist."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Degraded Imperial System",
+      "comment": "PERSPECTIVE 6: DEGRADED IMPERIAL SYSTEM / LATE ANTIQUITY (PITON) \u2014 By late Empire, nexum had become largely theatrical \u2014 its legal form persisted but its functional mechanism (debt enforcement via personal bondage) was superseded by property law, slave markets (a parallel coercive institution), and estate-based labor systems. The institutional structure remained through inertia but was no longer the primary extraction mechanism. Theater ratio high: the form of nexal obligation persisted while substance migrated to slavery and feudal-precursor arrangements."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Structural View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE AT STRUCTURAL LEVEL) \u2014 From a civilizational perspective, Roman debt bondage was a mechanism for converting liquidity crises into permanent labor extraction. The constraint existed because creditors could extract value through time-binding: converting a temporary debt into lifetime servitude. The analytical observer sees the snare as the core structure \u2014 all other perspectives (rope, scaffold, piton) are variations in how the extraction mechanism operated or degraded over time."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "debt_accrual_mechanism",
+      "question": "Did compound interest and penalties on debt operate as interest-rate escalation or as deliberate debt-extension mechanism?",
+      "resolution_mechanism": "Historical analysis of nexum contracts, interest rates recorded in legal texts, and empirical modeling of debt repayment capacity vs. interest accrual",
+      "impact": "If compound interest was explicit: extraction mechanism was structural (creditors designed unpayability). If rates were standard/low: debt accrual was side effect of default, reducing extraction classification severity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Role of compound interest in debt extension"
+    },
+    {
+      "id": "alternative_credit_availability",
+      "question": "What proportion of Roman debtors had access to non-nexum credit sources (patronage loans, family credit, collective lending)?",
+      "resolution_mechanism": "Historical survey of credit access patterns; analysis of debt contracts vs. informal agreements in archaeological and legal records",
+      "impact": "If nexum was the only credit source for plebeians: suppression maximal, snare classification solid. If alternatives existed but were blocked by status or cost: suppression moderate, shifts to tangled_rope perspective.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Availability of alternative credit mechanisms"
+    },
+    {
+      "id": "plebeian_coalition_efficacy",
+      "question": "Did organized plebeian resistance (secession, political coalition) directly cause nexum restrictions, or were reforms driven by elite conflict and pragma?",
+      "resolution_mechanism": "Historical chronology of plebeian secessions vs. nexum legislation; analysis of patrician reformer motivations (political appeasement vs. structural innovation)",
+      "impact": "If plebeian pressure was decisive: scaffold perspective confirmed (organized exit threats enabled reform). If elite pragmatism drove reform: scaffold is less structural, reform follows from beneficiary loss-aversion rather than victim organizing.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Role of plebeian organizing in nexum reform"
+    },
+    {
+      "id": "extraction_vs_coordination_boundary",
+      "question": "At what point does debt-collection enforcement become labor extraction rather than legitimate credit recovery?",
+      "resolution_mechanism": "Comparative analysis: nexum suppression mechanisms vs. other Roman legal debt procedures; social outcomes (lifetime servitude vs. property loss) across mechanisms",
+      "impact": "If debt recovery requires personal servitude: extraction classification is correct. If alternative mechanisms could recover debt without bondage: nexum's snare character is choice, not necessity.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Boundary between debt enforcement and labor extraction"
+    },
+    {
+      "id": "identity_lock_mechanism",
+      "question": "Did nexal persons internalize subordinate status, or was compliance purely forced through legal coercion?",
+      "resolution_mechanism": "Analysis of legal status terminology, social role descriptions, and narrative framing of nexal debt in Roman historical sources",
+      "impact": "If identity-locked: suppression contains internalized component, increases actual behavioral compliance beyond legal enforcement. If purely coerced: suppression is structural, psychological resistance remains latent.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Role of identity internalization in nexal compliance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 300,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 300,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 450,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 450,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 450
+  },
+  "commentary": {
+    "narrative_context": "Roman debt bondage (nexum) represents one of the earliest documented systems of formalized labor extraction through financial obligation. From approximately the 5th century BCE (traditional founding of the Republic) through the 4th century CE (late Empire), nexum created a legal mechanism by which a debtor's default on a loan could result in permanent servitude to the creditor \u2014 a form of debt slavery distinct from chattel slavery but functionally similar. The constraint exhibits the full spectrum of DR classifications: snare from the debtor's position (permanent extraction, no exit), rope from the creditor's position (coordination mechanism for credit distribution), scaffold from the perspective of reformers (sunset clause via Lex Poetelia and subsequent legislation), tangled rope in post-reform periods (mixed coordination and extraction), and piton in late antiquity (theatrical persistence after functional mechanism declined). The extractiveness declined over 450 years as legal reforms gradually replaced personal bondage with property foreclosure and other mechanisms, but the institutional structure persisted through inertia even after its primary function was displaced by slavery and feudal-precursor arrangements.",
+    "key_agents": [
+      "Debtors: Primary victims (powerless/trapped) \u2014 plebeian smallholders and urban poor facing no alternative credit; bear full extraction cost through lifetime servitude",
+      "Creditor Class: Primary beneficiaries (institutional/arbitrage) \u2014 patrician landowners and moneylenders; extract labor value and interest premium during debt servitude",
+      "Plebeian Resistance Coalition: Organized agents (organized/constrained) \u2014 political factions, secessions, and reform advocates pushing for nexum restrictions; represent organized exit threat",
+      "Patrician Reformers: Institutional actors (institutional/constrained) \u2014 elite factions supporting nexum restrictions for pragmatic reasons (political stability, labor system alternatives)",
+      "Imperial State: Institutional actor (institutional/arbitrage) \u2014 initially enforces nexum through legal machinery; later subsumes it under property law and slave law",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees nexum as structural solution to debtors' liquidity crises that became permanent extraction mechanism"
+    ],
+    "logic_rationale": "Extractiveness (0.78): High. Nexum extracts the maximum value a debtor can produce over their lifetime. Interest accruals and penalties make repayment structurally difficult; creditors benefit from protracted servitude. The 0.78 value (not maximal 1.0) reflects that nexum required explicit legal contract \u2014 some debtors could avoid it by refusing the formal nexum procedure, though alternatives were scarce. Over 450 years, extractiveness declines to 0.45 as legal reform and alternative labor systems (slavery, estate labor) reduce nexum's utility. Suppression (0.82): Very high. Multiple enforcement layers: legal prohibition on breach, social stigma, loss of legal personhood, no legitimate exit routes, creditor control over subsistence. Suppression is enforced through state legal machinery and social hierarchy. Theater ratio (0.35): Low. Nexum was functionally direct extraction \u2014 the legal form matched the operational mechanism. By late antiquity, theater increases (0.35 by 450 CE) as the form persists while substance migrates to slavery and property law, indicating piton degradation.",
+    "perspectival_gap": "Between the creditor's rope (coordination) and the debtor's snare (extraction), the gap is irreducible to measurement error. From the creditor's structural position, the nexum mechanism solves a genuine coordination problem: how to distribute credit to those without collateral or reputation. From the debtor's position, the same mechanism is pure extraction: it transforms temporary borrowing into permanent servitude. Both perspectives are accurate from their positions. The snare perspective (from analytical/powerless observer) is the structural truth: nexum exists because creditors can extract value by time-binding temporary debts into lifetime obligations. The rope perspective (from creditor/institutional observer) is their legitimate experience: they are coordinating credit distribution. The scaffold perspective (from organized reformers) adds temporal dimension: legal reform gradually weakens the extraction mechanism, creating a real sunset. The piton perspective (from late empire) reveals institutional decay: when slavery and estate labor systems displaced nexum as primary extraction mechanisms, the legal form persisted through inertia even though substance had migrated elsewhere.",
+    "directionality_logic": "Beneficiary (creditor, institutional power, arbitrage exit): d \u2248 0.10. Creditors can always exit the nexum relationship (by freeing the debtor, by shifting to property-based debt collection); they benefit from the mechanism. Derived chi scales low or negative \u2014 they experience the constraint as advantageous. Victim (debtor, powerless, trapped exit): d \u2248 0.95. Debtors have no exit, no alternatives, and bear maximum extraction cost. Derived chi scales high \u2014 maximum effective extractiveness from this perspective. Organized reformers (moderate power, constrained exit): d \u2248 0.55. They are neither pure victims nor beneficiaries; they can exit the system through political action or geographic relocation, but face high costs (political opposition, loss of social standing). Their classification (scaffold) reflects that they can envision and partially actualize an exit path (legal reform). Transition-phase debtors (post-reform, moderate power, constrained exit): d \u2248 0.58. They face high but surmountable costs (property loss, extended repayment); the constraint now coordinates credit access while extracting asymmetrically.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy through temporal and perspectival analysis. At any single time point, the classification depends entirely on the observer's structural position. The debtor sees a snare; the creditor sees coordination; the reformer sees a temporary system with a sunset. All three perspectives are structurally correct \u2014 they describe the same mechanism from different positions. The mandatrophy resolves by recognizing that nexum's core function (extracting labor value through time-binding debt) makes the snare classification the structural truth, while rope and scaffold are valid perspectival readings that obscure the extraction. By late antiquity (450 CE), extractiveness has declined enough that nexum is functionally degraded (piton) \u2014 slavery and property law have taken over its extraction role. The institutional form persists (still called nexum in law codes) but the substance has migrated, indicating that the constraint's primary mechanism is no longer operable. This temporal degradation is diagnostic: constraints that classify differently over time are revealing how institutional forms persist after their functional mechanisms are displaced \u2014 classic piton dynamics."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "roman_chattel_slavery",
+      "feudal_debt_servitude"
+    ],
+    "dual_formulation_note": "Nexum is part of a constraint family spanning Roman labor extraction mechanisms. Chattel slavery (\u03b5 \u2248 0.95) is a distinct constraint with direct ownership and no legal sunset. Feudal debt servitude (\u03b5 \u2248 0.65) is downstream: it inherits debt-bondage mechanisms from nexum but embeds them in land-holding relationships. Nexum's extractiveness (0.78) is intermediate: higher extraction than generalized resource-allocation coordination, lower than pure slavery, and with a genuine historical sunset clause."
+  },
+  "directionality_overrides": []
+}

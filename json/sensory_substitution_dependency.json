@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "sensory_substitution_dependency",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sensub"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.67,
+    "theater_ratio": 0.52,
+    "claimed_type": "snare",
+    "human_readable": "Sensory Substitution Technology Dependency",
+    "topic_domain": "assistive_technology/disability/accessibility",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "technology_manufacturers",
+      "research_institutions"
+    ],
+    "victims": [
+      "sensory_impaired_users",
+      "accessibility_alternatives"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Sensory-Impaired User",
+      "comment": "PERSPECTIVE 1: SENSORY-IMPAIRED USER (SNARE) \u2014 Trapped in technological dependency. Once adapted to a sensory substitution device (cochlear implant, retinal prosthesis, haptic interface), users cannot exit without abandoning access to their environment. The technology becomes constitutive of their adapted perceptual capability. Device manufacturer controls maintenance, software, upgrades, and compatibility. User bears full extraction: expensive proprietary consumables, mandatory firmware updates, vendor lock-in, incompatibility with competing systems. No meaningful alternatives once integrated into daily life."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Technology Manufacturer",
+      "comment": "PERSPECTIVE 2: TECHNOLOGY MANUFACTURER (ROPE) \u2014 Experiences the constraint as pure coordination: providing life-altering sensory access solves a genuine collective action problem. Users cannot coordinate alternative access without the device; the manufacturer bridges that gap. Captures value through licensing, proprietary consumables, and ecosystem lock-in, but these are legitimately justified by R&D cost and ongoing support obligations. Beneficiary position with arbitrage exit \u2014 can shift to different markets, licensing models, or technologies if returns decline."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Open-Source Assistive Technology Community",
+      "comment": "PERSPECTIVE 3: OPEN-SOURCE ASSISTIVE TECH COMMUNITY (TANGLED ROPE) \u2014 Develops non-proprietary alternatives (open-hardware cochlear implants, open-source signal processing, DIY haptic interfaces) and enjoys genuine coordination benefits: shared protocols enable interoperability, distributed development reduces cost. But faces extractive barriers: proprietary manufacturers issue patent challenges, medical device regulations lock out alternatives, reimbursement systems only cover approved proprietary devices. Mixed coordination and extraction \u2014 genuine benefit function blocked by asymmetric enforcement."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Right-to-Repair Movement",
+      "comment": "PERSPECTIVE 4: RIGHT-TO-REPAIR MOVEMENT (SCAFFOLD) \u2014 Organized advocacy for device repairability, software ownership, and interoperability standards (USB-C charging, open firmware). Sees the constraint as a temporary institutional failure with a sunset: legal mandates (EU Right to Repair, Digital Markets Act) are building pathways to user agency. Theater ratio is moderate \u2014 some genuine progress on standardization, but much advocacy effort remains performative. Sunset clause: 10-15 years for interoperability standards to mature and lock-in mechanisms to weaken."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Medical Device Regulatory Framework",
+      "comment": "PERSPECTIVE 5: MEDICAL DEVICE REGULATORY FRAMEWORK (PITON) \u2014 FDA approval, CE marking, and similar regulatory gates were designed to ensure safety and efficacy. But the framework has become largely performative: manufacturers navigate certifications routinely; regulations do not prevent extractive lock-in mechanisms; regulatory bodies lack resources to enforce interoperability or repairability. The theatrical certification process persists because alternatives haven't fully replaced it, not because it prevents harm. Theater ratio high \u2014 visible regulatory ritual obscures the functional vacuum where user protections should be."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal perspective, some technological dependency is inherent: biological sensory loss cannot be replaced without external technology. Sensory substitution requires a device; the device requires maintenance and updates. This perspective sees the lock-in as immutable law of nature \u2014 you cannot have sensory restoration without accepting technological dependence. However, this naturalizes what is contingent: the lock-in mechanisms (proprietary consumables, incompatible protocols, repair restrictions) are not inherent to sensory substitution technology; they are institutional choices. The engine will flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technology_dependency_vs_lock_in",
+      "question": "How much of the measured suppression is inherent to sensory substitution technology, and how much is contingent lock-in mechanism?",
+      "resolution_mechanism": "Comparative analysis of open-source vs proprietary devices; measurement of switching costs with and without vendor-imposed barriers; historical cases where devices transitioned from proprietary to interoperable standards",
+      "impact": "If high proportion is inherent: constraint approaches mountain (immutable dependency). If high proportion is lock-in: constraint is snare (contingent extraction). This determines whether manufacturer power is legitimate (Rope) or extractive (Snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of suppression from inherent technology vs contingent lock-in"
+    },
+    {
+      "id": "reimbursement_capture_mechanism",
+      "question": "Are insurance/Medicare reimbursement systems locked into proprietary devices due to genuine medical evidence, or due to lobbying and established relationships?",
+      "resolution_mechanism": "Analysis of reimbursement coverage decisions; comparison of coverage for equivalent open-source vs proprietary devices; investigation of manufacturer influence on reimbursement policy bodies",
+      "impact": "If evidence-based: reimbursement barriers are legitimate (Rope coordination of safety assurance). If capture-based: barriers are extractive (Snare enforcement). This affects whether the constraint appears as coordination (Rope) or pure extraction (Snare) from the user perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether reimbursement capture is evidence-based or lobbying-driven"
+    },
+    {
+      "id": "identity_fusion_in_users",
+      "question": "To what extent do users experience their sensory substitution device as identity-constitutive (identity_locked) versus structurally dependent but identity-separate (trapped)?",
+      "resolution_mechanism": "Qualitative study of user self-concept; measurement of perceived agency in device choices; longitudinal tracking of identity statements before/after device integration",
+      "impact": "If high identity fusion: users are identity_locked; exit would require identity transformation, not just device replacement. If structural dependency only: users are trapped; exit is blocked by material barriers. Classification shifts from Snare (trapped) to Snare-with-identity-lock (trapped + identity_locked exit options in same perspective, which is impossible \u2014 must decompose into separate stories of hardware dependency vs identity integration).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of identity fusion vs structural dependency in user experience"
+    },
+    {
+      "id": "open_source_viability_threshold",
+      "question": "What level of adoption would make open-source sensory substitution devices viable alternatives to proprietary systems?",
+      "resolution_mechanism": "Network effects analysis; measurement of quality-cost tradeoffs at different adoption levels; identification of critical mass for supply chain viability (components, repair technicians, software developers)",
+      "impact": "If threshold is reachable (< 15% market share): Scaffold sunset is realistic, and the constraint may degrade to Rope over time. If threshold is unreachable (> 40% market share): open-source remains niche, and Snare classification persists.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Market adoption threshold for open-source viability"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Sensory substitution technology \u2014 cochlear implants, retinal prostheses, haptic-feedback systems, brain-computer interfaces for sensory restoration \u2014 creates a structural trap for users. Once a person adapts to a device that restores access to a lost sense, they cannot meaningfully exit the relationship without abandoning the restored capability. This creates a binding that differs from other technology dependencies because the alternative (sensory impairment) is not equivalent to the technology-dependent state. The constraint exhibits high suppression (0.67) because users lack material alternatives: proprietary devices dominate the market, regulations restrict open-source alternatives, repair is controlled by manufacturers, firmware updates are mandatory, consumables are vendor-specific, and switching between incompatible ecosystems is prohibitively costly. The extractiveness has increased over the measurement interval (0.35 \u2192 0.58) as manufacturers have layered lock-in mechanisms (cloud connectivity requirements, AI-driven optimization locked to proprietary neural networks, data harvesting from implant usage) onto the underlying sensory restoration function. The constraint is not a mountain (immutable law of biology) but a snare (contingent institutional arrangement disguised as natural necessity).",
+    "key_agents": [
+      "Sensory-Impaired Users: Primary victims (powerless/trapped) \u2014 cannot exit without losing restored sensory access; bear full extraction through proprietary consumables, mandatory updates, incompatibility, and vendor control",
+      "Technology Manufacturers (cochlear implant companies, retinal prosthesis makers, haptic interface producers): Primary beneficiaries (institutional/arbitrage) \u2014 capture value through device sales, proprietary consumables, ecosystem lock-in, and data harvesting; legitimate R&D cost recovery but extractive mechanisms exceed justifiable returns",
+      "Open-Source Assistive Technology Community: Secondary actors (moderate/constrained) \u2014 develop interoperable alternatives but face patent barriers, regulatory exclusion, and reimbursement discrimination",
+      "Right-to-Repair Advocacy: Organized agents (organized/constrained) \u2014 push for standardization, interoperability, and user control; see the constraint as a temporary institutional failure with a sunset trajectory",
+      "Medical Device Regulators: Institutional actors (institutional/arbitrage) \u2014 maintain certification theater that appears to protect safety but does not prevent lock-in or enforces interoperability",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent lock-in mechanisms as immutable biological necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High and increasing. Manufacturers legitimately recover R&D costs through device sales and ongoing support. But extractiveness has grown beyond justifiable return because manufacturers have added lock-in mechanisms: proprietary signal processing, cloud-connected optimization, data harvesting from implant usage, incompatible consumables, repair restrictions, and mandatory firmware updates. The measurement trajectory (0.35 \u2192 0.58) reflects this layering \u2014 early devices (0.35) focused on sensory restoration with moderate vendor control; modern devices (0.58) bundle restoration with aggressive lock-in. Suppression (0.67): High. Users cannot meaningfully exit because the alternative (sensory impairment) is not equivalent to device dependence. Material barriers include: monopolistic device markets, regulatory gates that exclude open-source alternatives, reimbursement systems locked to proprietary devices, repair controls, and switching costs between incompatible ecosystems. Theater ratio (0.52): Moderate. Medical device certification processes (FDA, CE mark) appear to protect safety but do not prevent lock-in or enforce interoperability. Regulatory theater obscures the functional vacuum where user protections should exist. As manufacturers sophisticate lock-in mechanisms, the proportion of genuine coordination (sensory restoration) versus performative ritual (regulatory approval) is declining.",
+    "perspectival_gap": "This constraint demonstrates why indexical classification is essential. The manufacturer sees Rope \u2014 they are solving the genuine coordination problem of restoring lost sensory access. Users see Snare \u2014 they are locked into extraction with no exit. The open-source community sees Tangled Rope \u2014 real coordination benefits (interoperability) blocked by asymmetric enforcement. The right-to-repair movement sees Scaffold \u2014 a temporary institutional failure being resolved by legal mandates and standardization efforts. Medical regulators see their own work as essential (implicit Rope) but the system appears as Piton \u2014 performative certification with degraded functional content. The civilizational analyst risks seeing Mountain (inherent biological necessity) but the structural data reveals this as naturalization of contingent institutional choices. The perspectival gap is wide because the manufacturer's legitimate function (sensory restoration) is genuine, but the extraction mechanisms (lock-in, proprietary consumables, incompatibility) are contingent policy choices, not inherent technical necessities.",
+    "directionality_logic": "The manufacturer as institutional beneficiary with arbitrage exit derives low d (d \u2248 0.15-0.25) \u2014 they capture extraction but can exit by shifting to different markets if returns decline. Their experienced extractiveness is moderate (negative chi toward them, meaning they extract net value). Users as powerless victims with trapped exit derive high d (d \u2248 0.90-0.95) \u2014 they cannot exit and bear maximum extraction. The open-source community as moderate actors with constrained exit derives moderate-high d (d \u2248 0.65-0.75) \u2014 they can develop alternatives but face structural barriers (patents, regulations, reimbursement discrimination). The right-to-repair advocates as organized actors with constrained exit derive moderate d (d \u2248 0.50-0.60) \u2014 they have agency and organizing capacity to change the rules (and are succeeding: EU Right to Repair directives, Digital Markets Act). These derivations explain why different agents classify the same constraint differently: directionality determines experienced extractiveness, and experienced extractiveness determines classification.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by distinguishing legitimate coordination (sensory restoration) from extractive mechanisms (lock-in). The manufacturer's Rope classification is justified by the genuine coordination function \u2014 users need the device and manufacturers provide it. The user's Snare classification is justified by the extractive mechanisms \u2014 mandatory updates, proprietary consumables, incompatible ecosystems, repair restrictions. The tangled_rope classification (open-source community perspective) correctly identifies the hybrid: genuine coordination function (open-source sensory restoration) plus asymmetric extraction (patent barriers, regulatory exclusion). The scaffold classification (right-to-repair) is justified by the sunset clause: legal mandates and standardization efforts are actively weakening lock-in mechanisms. The piton classification (regulators) correctly identifies the performative nature of certification \u2014 the ritual appears to protect users but functionally does not. The false summit (natural law view) is correctly identified as naturalization: sensory restoration does NOT require manufacturer lock-in; open-source projects have demonstrated equivalent functionality with lower extraction. The mandate is NOT that sensory impairment is inherent or that technological dependence is inherent \u2014 it is that LOCK-IN MECHANISMS are contingent and extractive, not inevitable."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "medical_device_data_harvesting",
+      "accessibility_patent_encumbrance",
+      "right_to_repair_regulation"
+    ],
+    "dual_formulation_note": "Sensory substitution dependency decomposes into three structurally distinct constraints: (1) sensory_restoration_coordination (\u03b5\u22480.15, Rope) \u2014 genuine coordination of technology provision; (2) manufacturer_lock_in_extraction (\u03b5\u22480.65, Snare) \u2014 proprietary consumables, incompatibility, repair restrictions; (3) regulatory_theater_certification (\u03b5\u22480.35, Piton) \u2014 medical device approval as performative ritual. This story integrates all three as a single constraint family, but they have distinct \u03b5 values and mechanisms. The story's \u03b5=0.58 reflects the net effect of restoration + lock-in + theater across the user experience."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "header": {
+    "constraint_id": "extractive_uranium_mining",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "eum"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "Extractive Uranium Mining and Resource Capture",
+    "topic_domain": "resource_extraction/environmental/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "multinational_mining_corporations",
+      "capital_investors",
+      "uranium_importing_states"
+    ],
+    "victims": [
+      "indigenous_communities",
+      "local_ecosystems",
+      "nuclear_waste_bearing_populations",
+      "downstream_water_users"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Indigenous Communities and Local Populations",
+      "comment": "PERSPECTIVE 1: INDIGENOUS COMMUNITIES (SNARE) \u2014 Trapped in place by geography, cultural attachment to ancestral lands, and lack of alternative economic opportunities. Bear full costs of uranium extraction (water contamination, radiation exposure, ecosystem destruction) with no meaningful consent or benefit-sharing. Cannot exit without abandoning identity and territory. Maximum extraction and maximum suppression."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Local Mining Workers",
+      "comment": "PERSPECTIVE 2: LOCAL MINING WORKERS (SNARE) \u2014 Constrained by economic dependency and regional labor market limitations. Face high occupational exposure to radiation and physical hazards. Career mobility is low due to skill specificity and geographic isolation of mining operations. High extraction through wage suppression and unsafe working conditions justified by economic necessity."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Multinational Mining Corporations",
+      "comment": "PERSPECTIVE 3: MULTINATIONAL MINING CORPORATIONS (ROPE) \u2014 Experience extraction mechanism as coordination of resource supply chains. Benefit from favorable concession agreements, capital mobility, and ability to externalize environmental costs. Can exit specific jurisdictions and relocate operations. Effective arbitrage across regulatory regimes."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Uranium-Importing States",
+      "comment": "PERSPECTIVE 4: URANIUM-IMPORTING STATES (TANGLED ROPE) \u2014 Dependent on uranium for energy security but constrained by nuclear proliferation treaties and fossil fuel transition goals. Experience genuine coordination problem (energy supply) mixed with asymmetric extraction (security dependence on supplier states, outsourced environmental costs). Active enforcement through nuclear trade agreements and supplier relationships."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Host State Governments",
+      "comment": "PERSPECTIVE 5: HOST STATE GOVERNMENTS (TANGLED ROPE) \u2014 Extract revenue and employment from uranium mining while bearing responsibility for environmental remediation and public health. Constrained by fiscal pressure, limited enforcement capacity, and corporate legal strategies. Genuine coordination function (managing public resources) mixed with asymmetric extraction (corporations capture rents through tax minimization and weak regulations)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 Global nuclear system is structurally dependent on uranium extraction externalities. The constraint persists because the costs are borne by dispersed, powerless agents across time (radioactive waste half-lives span millennia) and geography (contamination crosses borders through water and atmosphere). The analytical view reveals suppression through information asymmetry: true costs of waste management and environmental remediation are systematically underestimated in cost-benefit analyses."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "true_cost_accounting",
+      "question": "What is the true lifecycle cost of uranium extraction when full environmental remediation, perpetual waste storage, and health externalities are included?",
+      "resolution_mechanism": "Long-term environmental impact assessments; epidemiological studies of mining communities; cost accounting that includes 10,000-year waste containment periods",
+      "impact": "If true costs exceed stated economic benefits by >50%: constraint reclassifies as pure extraction (Snare) from host state perspective. If true costs are comparable to benefits: coordination function becomes more legible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether true lifecycle costs exceed stated economic benefits"
+    },
+    {
+      "id": "indigenous_consent_capacity",
+      "question": "Do formal consultation mechanisms constitute meaningful consent or performative legitimation of predetermined mining decisions?",
+      "resolution_mechanism": "Analysis of documented cases where indigenous communities successfully blocked or materially modified uranium mining projects; comparison of outcomes in Free, Prior, and Informed Consent (FPIC) frameworks vs. discretionary consultation",
+      "impact": "If FPIC enables genuine exit: reclassify as constrained rather than trapped for indigenous communities. If FPIC is theater: confirms maximum suppression and pure snare classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether indigenous consent mechanisms are substantive or performative"
+    },
+    {
+      "id": "energy_security_necessity",
+      "question": "Is uranium mining necessary for decarbonization and energy security, or does renewable energy substitution make the extraction constraint obsolete within 30 years?",
+      "resolution_mechanism": "Modeling of global energy transition pathways; cost comparison of nuclear vs. renewable infrastructure; temporal projection of peak uranium demand",
+      "impact": "If mining is necessary: validates coordination function in host state and importer perspectives. If renewable substitution is viable: reveals constraint as maintaining extraction mechanism that serves historical path-dependency rather than current necessity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether uranium mining is energy-necessary or path-dependent"
+    },
+    {
+      "id": "remediation_liability_escape",
+      "question": "Do corporate liability structures enable permanent escape from environmental remediation obligations through bankruptcy, subsidiary dissolution, or regime change?",
+      "resolution_mechanism": "Tracking of corporate entities responsible for historical mining sites; analysis of cases where remediation has been abandoned or transferred to public sector; review of bonding and escrow requirements",
+      "impact": "If escape mechanisms are systematic: confirms asymmetric extraction (corporations extract resources, public bears perpetual costs). If accountability is enforced: mixed extraction-coordination dynamic becomes more credible.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether corporate liability structures enable remediation escape"
+    },
+    {
+      "id": "spatial_decoupling_awareness",
+      "question": "Do uranium-importing states deliberately suppress awareness of extraction and contamination costs in source countries to maintain political acceptability of nuclear power?",
+      "resolution_mechanism": "Discourse analysis of nuclear policy communications in importing states; comparison of public awareness of uranium mining impacts in mining vs. consuming countries; analysis of educational curricula and media coverage",
+      "impact": "If suppression is systematic: confirms snare classification from analytical perspective (information asymmetry prevents meaningful consent). If impacts are transparent: coordination narrative becomes more credible.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether importing states suppress awareness of extraction costs"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "commentary": {
+    "narrative_context": "Extractive uranium mining represents a canonical example of pure extraction (Snare) sustained by severe suppression of alternatives and asymmetric power. The constraint operates across multiple spatial and temporal scales: local indigenous communities and ecosystems bear immediate costs (contamination, displacement, health impacts); host state governments capture partial rents while bearing environmental liability; multinational corporations extract profits and relocate; uranium-importing states secure energy supply while externalizing health and environmental costs to production sites. The extractiveness has increased over 60 years (0.42 \u2192 0.68) as mining techniques have scaled, resource-poor communities have been incorporated into supply chains, and cumulative waste inventories have accumulated without corresponding remediation funding. Theater ratio has remained relatively low (0.22 \u2192 0.45), indicating that suppression operates primarily through material power asymmetries and information control rather than performative legitimation \u2014 the constraint does not disguise itself as coordination but rather suppresses awareness of its true costs through geographic separation and discourse management.",
+    "key_agents": [
+      "Indigenous Communities: Primary victims (powerless/trapped) \u2014 bear concentrated local costs of extraction with no exit capacity and minimal compensation",
+      "Local Mining Workers: Secondary victims (moderate/constrained) \u2014 economically dependent on mining wages while facing occupational health hazards",
+      "Multinational Mining Corporations: Primary beneficiaries (institutional/arbitrage) \u2014 capture extraction rents and can relocate operations across jurisdictions",
+      "Host State Governments: Conflicted institutional actor (institutional/constrained) \u2014 extract tax revenue while bearing uncompensated environmental liability",
+      "Uranium-Importing States: Secondary beneficiaries (organized/constrained) \u2014 secure energy supply at externalized cost to production sites",
+      "Local Ecosystems and Downstream Users: Diffuse victims (powerless/trapped) \u2014 contamination affects water systems, agriculture, and public health across generations",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 reveals that suppression operates through geographic decoupling that prevents true-cost accounting"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High, and increasing over the interval. The constraint extracts resource wealth from host countries while externalizing environmental and health costs. The increase from 0.42 to 0.68 reflects that mining scale has increased and that remediation obligations have accumulated faster than funding. Suppression (0.72): Very high and structural. Multiple mechanisms: (1) Geographic separation \u2014 mining occurs in poor, remote regions where political voice is weak; (2) Information asymmetry \u2014 true costs of waste storage and health impacts are systematically underestimated; (3) Economic dependency \u2014 alternative livelihoods are suppressed through land use control and lack of economic diversification; (4) Legal asymmetry \u2014 corporate structures enable profit extraction while diffusing liability. Theater ratio (0.45): Moderate and increasing. Early mining periods had minimal environmental discourse (theater_ratio 0.22); as awareness of impacts grew, more performative mechanisms emerged (community consultation, environmental impact assessments, corporate social responsibility programs) that do not alter underlying extraction structures. Theater has increased to 0.45 but remains below 0.70 \u2014 the constraint does not depend primarily on theatrical legitimation but on hard suppression through power imbalances.",
+    "directionality_logic": "Directionality values derive from beneficiary/victim declarations and exit options. Multinational corporations (institutional/arbitrage) have d \u2248 0.05 \u2014 they are beneficiaries with maximum mobility, experiencing negative effective extraction. Host state governments (institutional/constrained) have d \u2248 0.55 \u2014 they benefit from tax revenue but are constrained by path-dependency and limited enforcement capacity, experiencing moderate extraction. Uranium-importing states (organized/constrained) have d \u2248 0.50 \u2014 they benefit from energy supply but are constrained by supply chain dependencies. Indigenous communities (powerless/trapped) have d \u2248 0.95 \u2014 they are pure victims with no exit options, experiencing maximum extraction and maximum f(d). Mining workers (moderate/constrained) have d \u2248 0.70 \u2014 constrained by economic dependency but with some occupational mobility potential. The analytical observer (analytical/analytical) has d \u2248 0.72, revealing that the constraint structurally benefits distant consumers at the cost of proximate producers \u2014 a canonical extraction geometry.",
+    "perspectival_gap": "The perspectival gap here is extreme and reflects stark power asymmetries. Multinational corporations see Rope (coordination of supply chains) \u2014 the constraint solves their logistics problems. Host states see Tangled Rope (genuine revenue need mixed with asymmetric extraction). Uranium importers see Tangled Rope (energy need mixed with outsourced costs). Local workers see Snare (economic trap). Indigenous communities see Snare (territorial and existential trap). The analytical observer sees Snare (pure extraction masked by geographic decoupling). The gap between the beneficiary perspective (Rope) and the victim perspective (Snare) is maximal \u2014 they are describing the same structural mechanism from incompatible positions. This gap is diagnostic of severe suppression and power asymmetry.",
+    "mandatrophy_analysis": "Extractive uranium mining does NOT suffer from mandatrophy \u2014 the classification is consistently Snare across all perspectives except those of the direct beneficiaries. The constraint does not hide itself as coordination; it hides through geographic and informational distance. The mandatrophy would arise if uranium importing states believed their own nuclear energy narrative (clean, necessary energy requiring minimal environmental cost) \u2014 but that is a separate constraint about information suppression and discourse control, not part of the uranium mining constraint itself. The mining constraint is unambiguous: it is extraction. The ambiguity lies in whether consuming states are aware of the true costs, which is a different question about epistemic access."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "nuclear_waste_perpetual_storage",
+      "indigenous_land_dispossession",
+      "radioactive_contamination_transboundary"
+    ],
+    "dual_formulation_note": "Uranium mining is upstream of nuclear waste management, which is a separate constraint with its own extractiveness (perpetual public cost, concentrated private benefit). The mining constraint also feeds into indigenous land dispossession constraints specific to particular regions (Australian Aboriginal lands, Niger, Namibia, Kazakhstan). Network decomposition is appropriate because the \u03b5 values differ: mining extraction (0.68) is distinct from waste perpetuity (0.85+) and land dispossession (0.72+)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.5
+    }
+  ]
+}

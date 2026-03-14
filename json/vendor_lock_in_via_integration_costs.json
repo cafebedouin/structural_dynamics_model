@@ -1,0 +1,186 @@
+{
+  "header": {
+    "constraint_id": "vendor_lock_in_via_integration_costs",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "vlk"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Vendor Lock-In via Integration Costs",
+    "topic_domain": "economic/technology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_vendor"
+    ],
+    "victims": [
+      "customer_organizations",
+      "downstream_integrators"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Locked-In Customer",
+      "comment": "PERSPECTIVE 1: LOCKED-IN CUSTOMER (SNARE) \u2014 Customer organization has sunk substantial capital into integration: custom API adaptors, data migration pipelines, staff training, process redesign around vendor's specific interfaces. Exit cost (switching to competitor, rebuilding integrations, staff retraining, data re-extraction) exceeds the annual value delivered by the vendor's platform. No meaningful alternatives exist with comparable feature depth. Maximum extraction \u2014 the customer experiences the constraint as pure capture with no coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Mid-Market Evaluator",
+      "comment": "PERSPECTIVE 2: MID-MARKET EVALUATOR (TANGLED ROPE) \u2014 Organization considering vendor adoption faces genuine coordination benefit (standardized integrations, managed API evolution, vendor support ecosystem) alongside extraction risk (proprietary data formats, API versioning lock-in, deprecation cycles designed to force upgrades). Can exit at moderate cost (18-36 months to migrate, some feature loss), but the integration coordination value is real. Mixed experience: true coordination plus asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Vendor",
+      "comment": "PERSPECTIVE 3: INCUMBENT VENDOR (ROPE) \u2014 Vendor benefits from ecosystem lock-in through integration coordination: standardized APIs enable third-party developers to build complementary tools, creating positive feedback. Vendor experiences the constraint as pure coordination \u2014 it solves the real problem of how to connect diverse systems. High arbitrage: vendor can switch strategies (pricing, feature deprecation, API restrictions) with minimal cost."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Standards Coalition",
+      "comment": "PERSPECTIVE 4: OPEN STANDARDS COALITION (SCAFFOLD) \u2014 Open-source projects (Docker containers, Kubernetes APIs, GraphQL, protocol buffers) provide standardized integration mechanisms that bypass proprietary vendor APIs. This perspective sees vendor lock-in as a temporary coordination failure being resolved through open standards adoption. Sunset clause: as container orchestration and open APIs mature, the cost of switching vendors declines sharply. Estimated horizon: 10-15 years for standardization to reduce integration switching costs by 70%."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Integration Layer",
+      "comment": "PERSPECTIVE 5: LEGACY INTEGRATION LAYER (PITON) \u2014 Many organizations maintain decades-old custom integrations (SOAP wrappers around REST APIs, FTP-based ETL pipelines, custom parsing for semi-structured data exports) that were built before standardization matured. These integrations persist through institutional inertia rather than actual function \u2014 they work but are labor-intensive to maintain. Theater ratio is high: substantial overhead devoted to keeping obsolete integration methods operational. The constraint degrades but persists because replacement requires coordinated migration."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal analytical perspective, the integration cost asymmetry appears as an immutable feature of software architectures: any system boundary has switching costs, and vendors who own those boundaries can extract rents. This perspective naturalizes what is actually a contingent design choice (proprietary APIs vs open standards). The engine will flag this as a false summit \u2014 the structural data (moderate theater, genuine coordination, strong beneficiary/victim asymmetry) indicates the constraint is contingent, not fundamental."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "integration_cost_magnitude_threshold",
+      "question": "At what integration cost level does a vendor platform transition from coordination mechanism to extraction mechanism?",
+      "resolution_mechanism": "Empirical analysis: compare customer switching rates at different integration cost tiers; identify cost threshold where switching probability drops sharply",
+      "impact": "If threshold < 10% annual platform cost: most integrations remain mobile (Rope from more perspectives). If threshold > 50% annual cost: many legitimate coordinations misclassified as extraction (Snare from customer perspective).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Integration cost threshold for lock-in onset"
+    },
+    {
+      "id": "open_standards_adoption_speed",
+      "question": "Will container orchestration and open APIs mature fast enough to reduce switching costs before vendor lock-in becomes entrenched in mission-critical systems?",
+      "resolution_mechanism": "Longitudinal tracking of enterprise API standardization adoption; measurement of switching costs for containerized vs legacy monolithic systems; correlation between standards maturity and actual customer switching behavior",
+      "impact": "If standards mature within 10 years: scaffold sunset is real, lock-in is temporary. If adoption stalls beyond 15 years: lock-in becomes structural, classification shifts toward persistent snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Speed of open standards adoption reducing switching costs"
+    },
+    {
+      "id": "switching_cost_opacity",
+      "question": "Are integration switching costs genuinely opaque to customers at the time of vendor selection, or do sophisticated buyers accurately anticipate lock-in?",
+      "resolution_mechanism": "Analysis of RFP evaluation practices; customer interviews on switching cost expectations; comparison of anticipated vs realized exit costs across vendor transitions",
+      "impact": "If genuinely opaque: customers are deceived, classifies as snare (victim trapped through information asymmetry). If transparent: customers choose lock-in knowingly, classifies as tangled rope (coordination + extraction both understood).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether integration switching costs are transparent to customers"
+    },
+    {
+      "id": "proprietary_api_necessity",
+      "question": "Do vendor-specific API features provide material functional advantages over open standards, or is proprietary lock-in maintained purely for rent extraction?",
+      "resolution_mechanism": "Feature parity analysis: compare capability gaps between proprietary vendor APIs and open-standard equivalents; track which proprietary features customers actually use vs maintain for historical reasons",
+      "impact": "If genuine advantage: lock-in reflects real coordination value, tangled rope classification justified. If purely extractive: classification shifts toward snare, integration coordination is theater.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether proprietary APIs provide functional advantages over open standards"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Vendor lock-in via integration costs represents a hybrid constraint combining genuine coordination benefits with asymmetric extraction. When a customer adopts an enterprise platform, they invest in integrations: custom API adapters, data migration pipelines, staff training, and process redesign around the vendor's specific interfaces. These integrations produce real coordination value \u2014 standardized APIs, managed evolution, vendor support. However, the vendor controls the boundary: proprietary API design, versioning choices, deprecation cycles, and feature bundling all make switching to competitors substantially more expensive than initially anticipated. The constraint accumulates over time: as more business logic depends on the vendor's platform, exit costs rise until customers experience the lock-in as entrapment. Theater ratio rises as vendors maintain performative complexity in their APIs (over-parameterization, deprecation theater, version-upgrade churn) that obscures simpler open-standard alternatives. Open-source standards (containers, Kubernetes, GraphQL) are gradually reducing switching costs, but adoption lags for mature legacy systems, creating a multi-decade window of extraction potential.",
+    "key_agents": [
+      "Incumbent Vendor: Primary beneficiary (institutional/arbitrage) \u2014 controls API boundary, captures switching cost rents, can adjust pricing and features with minimal customer exit risk",
+      "Locked-In Customer: Primary victim (powerless/trapped) \u2014 has sunk capital into proprietary integrations, faces exit costs exceeding annual platform value",
+      "Mid-Market Evaluator: Secondary agent (moderate/constrained) \u2014 evaluates lock-in risk but sees genuine coordination benefits; faces genuine trade-off",
+      "Open Standards Coalition: Organized agent (organized/constrained) \u2014 Docker, Kubernetes, GraphQL provide alternative standards-based pathways; building sunset for proprietary lock-in",
+      "Legacy Integration Layer: Institutional artifact (institutional/arbitrage) \u2014 obsolete custom integrations (SOAP, FTP-based ETL) persist through inertia despite high maintenance cost",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing switching cost asymmetry as an inherent feature of software architecture"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The vendor captures substantial rents through switching cost asymmetry, but the constraint is not as severe as pure extraction because customers do derive genuine coordination value. The initial extractiveness (0.35) was low because early adoption had no lock-in history. As the platform matures and switching costs accumulate, extractiveness rises to 0.58 \u2014 the vendor's ability to increase prices, restrict features, or force upgrades depends on customer lock-in. Suppression (0.65): High. Customers face material barriers to exit: redevelopment costs (12-36 months for large deployments), data re-extraction complexity, staff retraining, business continuity risk during migration. These barriers are high but not total \u2014 some customers do switch, particularly when new competitors offer compelling feature advantages. Theater ratio (0.48): Moderate, rising. Early integration work (0.30) is mostly functional \u2014 genuine API design, real feature development. As the platform matures, vendors introduce performative complexity: API versioning churns, deprecation cycles designed to force upgrades, feature bundling that obscures simpler alternatives. Theater ratio rises to 0.48 as legacy maintenance consumes increasing effort.",
+    "directionality_logic": "Directionality (d) varies sharply across perspectives based on exit options and power level. The locked-in customer (powerless/trapped) experiences maximum d (\u22480.95): they are the target, they have no escape path, all extraction flows toward them. The incumbent vendor (institutional/arbitrage) experiences minimum d (\u22480.05): they are the beneficiary, they control exit costs, they can walk away from any customer relationship without material damage. The mid-market evaluator (moderate/constrained) experiences intermediate d (\u22480.55): they see genuine coordination benefits (lower d) but face real exit costs (higher d). The open standards coalition (organized/constrained) experiences lower d (\u22480.40) because they see a clear exit path \u2014 open standards reduce switching costs sharply within their time horizon. The directionality pipeline (beneficiary/victim + exit \u2192 d) produces the chi values that differentiate perspectives despite identical base properties.",
+    "perspectival_gap": "This constraint demonstrates asymmetric experience across the observation site. The incumbent vendor (Rope) genuinely sees pure coordination \u2014 standardized APIs enable ecosystem development, vendor support solves real integration problems. The open standards coalition (Scaffold) sees coordination with a sunset \u2014 Kubernetes and GraphQL will eventually make switching cheaper, creating an exit path within 10-15 years. The legacy integration layer (Piton) sees degraded ritual \u2014 maintaining old SOAP wrappers and FTP pipelines consumes resources but is increasingly unnecessary (theater ratio 0.48 reflects this). The mid-market evaluator (Tangled Rope) sees genuine tradeoff \u2014 real coordination benefits alongside real extraction risk. The locked-in customer (Snare) experiences pure capture \u2014 the coordination benefit is no longer salient because exit costs dominate. The analytical observer (Mountain) risks naturalizing the extraction as inherent to software architecture \u2014 'every system has switching costs' \u2014 but the structural data reveals this as contingent on API design choices, not fundamental physics.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that lock-in is neither pure coordination (Rope) nor pure extraction (Snare) but a genuine hybrid (Tangled Rope). The vendor's platform provides real coordination value \u2014 standardized APIs, ecosystem development, managed evolution. But this coordination function co-exists with asymmetric extraction: the vendor controls the boundary, can raise prices by leveraging switching costs, and can force upgrades through deprecation cycles. The mandatrophy is avoided by acknowledging both functions are structurally real. The beneficiary/victim declarations are critical: without identifying locked-in customers as victims, the constraint appears as pure coordination (Rope). Without identifying genuine API coordination benefits, it appears as pure extraction (Snare). The tangled rope classification requires both beneficiaries and victims. The temporal measurement (extractiveness rising from 0.35 to 0.58) shows the hybrid mechanism: early coordination value (0.35) is real, but as lock-in accumulates, extraction dominates (0.58). Theater ratio rising to 0.48 indicates that performative complexity (API versioning, deprecation theater) is increasingly layered onto the genuine coordination function."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "enterprise_software_ecosystem_dependency",
+      "open_standards_adoption"
+    ],
+    "dual_formulation_note": "Vendor lock-in via integration costs represents a decomposition of the broader concept of 'platform dependency.' Integration lock-in (this story) focuses on API switching costs and has \u03b5=0.58 (Tangled Rope). Feature lock-in (pricing models, complementary services) would constitute a separate story with different \u03b5. Data lock-in (proprietary formats, export restrictions) is a third story. Together they form the platform dependency family, linked via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

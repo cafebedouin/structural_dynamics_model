@@ -1,0 +1,206 @@
+{
+  "header": {
+    "constraint_id": "regulatory_capture_via_narrative_speed",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "regcap"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Regulatory Capture Via Narrative Speed",
+    "topic_domain": "regulatory_governance/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "regulated_industry"
+    ],
+    "victims": [
+      "public_interest_constituencies",
+      "regulatory_legitimacy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Public Interest Constituency",
+      "comment": "PERSPECTIVE 1: PUBLIC INTEREST CONSTITUENCY (SNARE) \u2014 Powerless, trapped in the regulatory system with no exit. Cannot match the industry's narrative production speed or resource investment in policy framing. Experiences maximum extraction: regulations drift toward industry preference while public stakeholders remain trapped in a system that no longer represents their interests. No meaningful coordination benefit; pure asymmetric cost-bearing."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Regulatory Staff",
+      "comment": "PERSPECTIVE 2: REGULATORY STAFF (TANGLED ROPE) \u2014 Moderate power constrained by career incentives and information asymmetries. Experiences genuine coordination function (must integrate industry expertise to craft coherent rules) alongside extraction (industry narrative speed and resource concentration influence what staff perceive as 'legitimate' regulatory domains). Staff benefit from the industry's policy research infrastructure and technical input, but remain dependent on it for crucial information. Mixed experience of both coordination and asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Regulated Industry",
+      "comment": "PERSPECTIVE 3: REGULATED INDUSTRY (ROPE) \u2014 Institutional actor with arbitrage options (exit to favorable jurisdictions, regulatory arbitrage across state lines). Experiences the constraint as pure coordination: their narrative investment solves the legitimate problem of translating technical complexity into regulatory policy. They have agency, resources, and exit options. Net beneficiary\u2014extraction runs decisively toward them, but they perceive only coordination benefit."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Civil Society Coalition",
+      "comment": "PERSPECTIVE 4: CIVIL SOCIETY COALITION (SCAFFOLD) \u2014 Organized agents (NGOs, advocacy networks, civic tech) building counter-narrative infrastructure (policy briefs, fact-check networks, rapid-response research platforms) that aim to close the narrative speed gap. See the bottleneck as a temporary coordination failure with a sunset: distributed research capacity and open-policy documentation create alternative narrative pathways. Constrained but organized; perceive exit via institutional design change. Sunset clause implicit: as civic tech and open-data practices mature, the narrative monopoly decays."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Theater",
+      "comment": "PERSPECTIVE 5: REGULATORY THEATER (PITON) \u2014 The formal comment period, environmental review, stakeholder hearing, and interagency coordination process persists through institutional inertia despite low functional control over outcomes. Theater ratio 0.58 reflects that these rituals are substantially performative\u2014industry has already shaped the narrative frame before public comment opens. The regulatory apparatus sees its own process as degraded: maintains the democratic legitimacy fiction while industry captures policy in real time through narrative speed advantage. Piton derives from theater gate and degraded primary function (public deliberation has atrophied)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Information Asymmetry View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / INFORMATION ASYMMETRY VIEW (MOUNTAIN) \u2014 From civilizational/universal perspective, information asymmetry between regulated parties (who specialize in policy-relevant knowledge) and public interest advocates (who generalize across domains) is an inherent structural property of regulatory systems. No amount of procedural reform can eliminate the cognitive gap. This perspective naturalizes the capture mechanism as inevitable. However, the structural data contradicts the mountain classification\u2014the engine will flag this as a false summit, revealing that narrative speed asymmetry is a contingent institutional choice (funding distribution, civic tech capacity, public information infrastructure) rather than a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "narrative_speed_measurement",
+      "question": "What constitutes 'narrative speed' in regulatory contexts\u2014publication latency, concept-to-policy-brief timeline, or something else? Is speed advantage real or does it proxy for quality/credibility gap?",
+      "resolution_mechanism": "Comparative timeline analysis of industry policy briefs vs public interest research from policy question to regulatory uptake; citation/influence tracking in regulatory documents; qualitative interviews with regulatory staff about what sources they actually consult during policy development",
+      "impact": "If speed is primary mechanism: constraint is a Tangled Rope (extraction through timing advantage). If speed proxies for credibility/technical depth: constraint is a Snare (extraction through asymmetric expertise, timing is symptom not cause). Changes classification landscape materially.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "What constitutes narrative speed advantage and whether it's primary mechanism"
+    },
+    {
+      "id": "regulatory_staff_identity_lock",
+      "question": "Do regulatory staff experience the industry narrative advantage as an external constraint (constrained exit) or as part of their professional identity (identity_locked exit)?",
+      "resolution_mechanism": "Longitudinal career tracking of regulatory professionals post-departure; interviews about whether they continue industry-aligned framing after leaving agency; assessment of whether regulatory identity is constituted through industry engagement vs merely dependent on it for resources",
+      "impact": "If constrained: staff experience real but surmountable costs to resisting industry frame\u2014perspective remains Tangled Rope. If identity_locked: staff cannot cognitively access counter-narratives because professional identity is fused with industry expertise\u2014perspective shifts to identity_locked constraint, revealing the binding mechanism is cognitive capture rather than resource dependency. Changes therapeutic implications materially.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory staff are constrained or identity-locked to industry narratives"
+    },
+    {
+      "id": "civic_tech_sufficiency",
+      "question": "Can distributed civil society narrative capacity (policy briefs, fact-check networks, open-source analysis platforms) actually close the narrative speed gap, or does industry narrative advantage persist through sources-of-capital asymmetry even as publication latency equalizes?",
+      "resolution_mechanism": "Comparison of regulatory uptake rates for civil society briefs vs industry briefs controlling for publication timing; assessment of whether regulatory attention follows fastest brief or follows credibility signal (which may correlate with funding level); longitudinal tracking of civic tech platforms' influence on policy outcomes",
+      "impact": "If civic tech sufficient: scaffold perspective confirmed\u2014genuine sunset via distributed capacity. If insufficient: scaffold is aspirational rather than structural\u2014civil society remains trapped in slower-credibility cycle even as speed improves. Changes sunset timeline estimates and constraint trajectory.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether civic tech can close narrative speed gap or industry advantage persists through credibility asymmetry"
+    },
+    {
+      "id": "public_interest_coalition_formation",
+      "question": "Can public interest constituencies overcome their collective action barriers to form counter-narrative coalitions, or does the dispersion of beneficiaries across diffuse regulatory domains prevent coalition coherence?",
+      "resolution_mechanism": "Historical analysis of successful vs failed public interest coalition formation in regulatory domains; social network analysis of advocacy organization connectivity; assessment of whether coalitions persist across multiple regulatory issues or dissolve between battles",
+      "impact": "If coalitions form reliably: public interest power shifts from 'powerless' to at least 'moderate'\u2014classification landscape changes (snare softens to tangled rope). If coalitions fail: public interest remains powerless\u2014snare classification persists. Affects therapeutic prognosis and exit pathway credibility.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether public interest constituencies can form durable counter-narrative coalitions"
+    },
+    {
+      "id": "false_summit_detection",
+      "question": "Is narrative speed asymmetry a law-like inevitable feature of specialization (mountain) or a contingent institutional arrangement that could be redesigned (snare/tangled rope)?",
+      "resolution_mechanism": "Comparative institutional analysis across regulatory regimes with different public funding for policy research, different civic tech infrastructure, different narrative-speed-equalizing policies (mandatory open comment periods, public policy research institutes); test whether regimes with higher public investment show lower capture, or whether all converge to industry advantage regardless of institutional design",
+      "impact": "If law-like: accept mountain classification and focus on adaptation. If contingent: false summit exposed\u2014constraint is extraction mechanism, not natural law. Changes entire therapeutic/policy design approach. Mountain claims require proving that alternative institutional designs cannot escape the capture mechanism.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether narrative speed asymmetry is inevitable or contingent institutional choice"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Regulatory capture via narrative speed describes the structural asymmetry in how policy narratives are produced, disseminated, and incorporated into regulatory decision-making. The regulated industry possesses concentrated resources, specialized expertise, and rapid-deployment policy research infrastructure (in-house economists, policy teams, think tank networks). Public interest constituencies are dispersed across multiple issues, resource-constrained, and rely on volunteer or nonprofit research capacity. The result is not a conspiracy but a structural imbalance: when regulatory agencies must rapidly synthesize complex technical information to craft coherent policy, they default to the most readily available, professionally packaged narrative\u2014which is inevitably the industry's. The industry benefits from career advantages (early framing advantages, citations as authorities), legitimacy (their expertise is seen as objective), and regulatory capture (their preferred policies come to look like inevitable technical conclusions rather than political choices). Public interest constituencies bear the cost: their preferred policies are invisible in regulatory deliberation, their research is treated as advocacy rather than expertise, and they remain trapped in a system that no longer represents their interests. The constraint exhibits all six classifications from different structural positions, making it diagnostic for how narrative speed functions as an extraction mechanism disguised as technical expertise integration.",
+    "key_agents": [
+      "Regulated Industry: Primary beneficiary (institutional/arbitrage) \u2014 concentrated resources enable rapid narrative deployment; captures early-framing advantage and regulatory authority status",
+      "Public Interest Constituencies: Primary victim (powerless/trapped) \u2014 dispersed across domains, resource-constrained, cannot match industry narrative speed; trapped in regulatory system with no exit",
+      "Regulatory Staff: Secondary actor (moderate/constrained) \u2014 integrate industry expertise into coherent rules; dependent on industry for technical information; experience both coordination and extraction",
+      "Civil Society Coalition: Organized counter-narrative builders (organized/constrained) \u2014 NGOs, advocacy networks, civic tech platforms building alternative policy research infrastructure with implicit sunset logic",
+      "Regulatory Theater: Institutional performer (institutional/arbitrage) \u2014 formal comment periods, environmental reviews, stakeholder hearings persist as degraded ritual; maintain democratic legitimacy fiction while industry captures policy in real time",
+      "Analytical Observer: Civilizational/universal view (analytical/analytical) \u2014 risks naturalizing contingent institutional narrative-speed asymmetry as inevitable property of specialization (false summit)"
+    ],
+    "logic_rationale": "Extractiveness 0.58: Moderate-high. Industry narrative advantage produces measurable policy drift\u2014regulations increasingly reflect industry preferences while public interest preferences are systematically underrepresented. The extraction is real but not absolute: some regulations still reflect public interest victories (environmental standards, labor protections, consumer safeguards), and public constituencies do occasionally win policy battles. The intermediate value reflects that the extraction is systematic but not total. Suppression 0.62: Moderate-high. Significant barriers to public interest narrative penetration include expertise requirements (technical complexity of regulatory domains), resource asymmetries (industry funding vs nonprofit budgets), credibility gaps (industry researchers seen as objective vs advocates seen as biased), and structural time compression (comment periods too short for dispersed coalitions to mobilize). The suppression is not absolute\u2014there are exit pathways\u2014but formidable. Theater ratio 0.58: Moderate-high. Regulatory procedures (comment periods, hearings, interagency coordination) are substantially performative. Industry has already shaped the narrative frame before public comment opens; staff already reads industry position papers as technical truth; the formal process confirms rather than determines outcomes. Theater has increased measurably over the interval as regulatory complexity has outpaced public capacity to respond substantively. The increase from 0.42 to 0.58 reflects the growing gap between formal deliberation procedures and actual policy determination mechanisms.",
+    "perspectival_gap": "Each structural position experiences the same constraint differently. The industry sees coordination; public interest sees extraction; staff see mixing; organizers see a solvable temporary problem; the system sees its own degradation; the analyst risks seeing natural law. The perspectival gaps reveal that 'what is narrative speed'\u2014is it expertise translation, is it extraction, is it both?\u2014depends entirely on structural position. No single perspective sees the whole constraint. The full picture emerges only in the presheaf over observation sites.",
+    "directionality_logic": "Directionality values (d) map each agent's structural position relative to the narrative-speed extraction flow. The industry benefits from the mechanism (low d toward 0.05-0.15: full beneficiary); their exit options (arbitrage) amplify this. Public constituencies bear the cost (high d toward 0.85-0.95: full victim); their trapped exit options maximize experienced extraction. Regulatory staff occupy the middle (d around 0.55-0.65: mixed beneficiary and victim); they depend on industry expertise (benefit) but are also captured by industry framing (harm). Civil society organizers have organized power and exit pathways (d around 0.45-0.55: balanced cost-benefit); they experience constraint as solvable rather than structural. The piton perspective's directionality reflects institutional identity with the capture mechanism\u2014the regulatory system maintains itself through narrative-speed asymmetry, so as institution it benefits from the mechanism even as it experiences its own function as degraded. The false summit (mountain perspective) has directionality around 0.72-0.73 (analytical observer), high but not maximal, reflecting the analyst's outside position relative to the extraction mechanism.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that Tangled Rope is the correct analytical classification (\u03b5=0.58, suppression=0.62, requires_active_enforcement=true, genuine coordination function alongside asymmetric extraction). The mandatrophy risk would be mislabeling this as pure coordination (Rope) because regulatory expertise integration is genuinely necessary, OR as pure extraction (Snare) because the industry narrative advantage is genuinely destructive. The tangled rope classification captures BOTH truths: the industry is solving a real problem (regulatory complexity requires expert input) AND extracting value through the mechanism (their preferred solutions come to look inevitable). The regulatory theater's Piton classification prevents false summit collapse\u2014it identifies that the formal procedures have atrophied in function while persisting through inertia, which is diagnostically distinct from the Tangled Rope mechanism. The public interest Snare perspective is not the 'true' classification but a real agent's actual experience: from their position, the constraint appears as pure extraction because they are powerless and trapped. The analytical observer's false mountain exposes the naturalizing move: treating contingent institutional narrative-speed asymmetry as inevitable specialization gap."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "environmental_regulatory_capture",
+      "labor_standard_policy_drift",
+      "financial_regulation_expertise_capture"
+    ],
+    "dual_formulation_note": "Narrative speed in regulatory capture is downstream of specific regulatory domains (environmental, labor, financial) but represents a distinct structural mechanism applicable across all regulatory systems. The domain-specific constraints have their own extractiveness values reflecting particular policy drifts (e.g., weakened environmental standards); the narrative speed constraint has its own extractiveness reflecting the mechanism by which drift occurs\u2014the systematic advantage in policy narrative production and deployment."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.62
+    }
+  ]
+}

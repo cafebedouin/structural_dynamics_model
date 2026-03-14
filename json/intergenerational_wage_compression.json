@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "intergenerational_wage_compression",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "iwc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Intergenerational Wage Compression",
+    "topic_domain": "labor_economics/demographic_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_workforce",
+      "employers_wage_restraint",
+      "capital_asset_holders"
+    ],
+    "victims": [
+      "younger_labor_cohorts",
+      "future_wage_earners"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Young Worker (Entry-Level Wage Lock)",
+      "comment": "PERSPECTIVE 1: YOUNG WORKER TRAPPED (SNARE) \u2014 Faces flattened wage progression and suppressed entry-level wages despite equal or superior education. Cannot exit labor market; bears full extraction. Career earnings permanently compressed by cohort entry timing. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Career Worker (Constrained Mobility)",
+      "comment": "PERSPECTIVE 2: MID-CAREER WORKER CONSTRAINED (TANGLED ROPE) \u2014 Some wage growth through experience but significantly dampened by compressed floor. Benefits from seniority-based wage structures but extraction occurs through wage ceiling suppression relative to pre-1980s cohorts. Constrained by sector-specific skills and relocation costs. Moderate experienced extraction with some coordination benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Incumbent Union/Seniority Structure",
+      "comment": "PERSPECTIVE 3: INCUMBENT SENIORITY STRUCTURE (ROPE) \u2014 Benefits from wage floor protection and defined benefit pension structures locked in before compression began. Experiences the constraint as coordination: protecting acquired wages requires enforcing seniority-based layoff protections and wage step progression. Net beneficiary through institutional arbitrage \u2014 can maintain current compensation while younger cohorts absorb compression."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Employer (Wage Cost Control)",
+      "comment": "PERSPECTIVE 4: EMPLOYER INSTITUTIONS (ROPE) \u2014 Benefit from flat wage structures and compressed entry-level wages as coordination mechanism for labor cost control. Flattening reduces wage variation and negotiation friction while suppressing total labor costs. Exit through outsourcing/automation creates arbitrage advantage. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Movement (Institutional Capture)",
+      "comment": "PERSPECTIVE 5: LABOR MOVEMENT ORGANIZED (TANGLED ROPE) \u2014 Union leadership coordinates seniority protection and wage floors for current members (genuine coordination function) while simultaneously blocking wage growth for new entrants through restrictive hiring practices and apprenticeship limitations. Active enforcement of two-tier wage systems. Organized power but constrained by declining membership and political legitimacy loss from generational division."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Human Capital Framework (Institutional Narrative)",
+      "comment": "PERSPECTIVE 6: HUMAN CAPITAL NARRATIVE (PITON) \u2014 Policy and corporate rhetoric frames compressed wages as investment in 'talent development' and 'market efficiency.' The narrative persists despite decoupling from actual skill-building or productivity gains. Theater ratio high (0.48 reflects performative investment language while actual wage growth flattens). The human capital mythology maintains institutional legitimacy for wage compression while its functional purpose has degraded."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Demographic-Economic Coupling)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 The constraint exhibits genuine coordination (protecting wage levels during inflation/productivity shifts) coupled with asymmetric extraction (intergenerational transfer of costs from older to younger cohorts). Effective extraction chi=0.58 represents coordination value offset by distributional harm. From civilizational scope, the constraint reveals structural coupling between demographic pyramids, pension liabilities, and labor market institutions."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "seniority_vs_productivity_mechanism",
+      "question": "Are wages compressed because seniority-based pay reflects true productivity differences, or because institutional structures enforce seniority independent of productivity?",
+      "resolution_mechanism": "Wage-productivity correlation analysis within firms; comparison of wage growth profiles across seniority-based vs productivity-based compensation models; examination of wage-skill mismatch metrics over time",
+      "impact": "If seniority correlates with productivity: compression is partly coordination (returning value to skilled workers). If seniority decouples from productivity: compression is pure extraction with institutional cover story.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether seniority-based wages reflect true productivity differences"
+    },
+    {
+      "id": "generational_pension_transfer",
+      "question": "What proportion of compressed young-cohort wages funds unfunded or underfunded pension liabilities of older cohorts?",
+      "resolution_mechanism": "Actuarial analysis of pension asset-liability gaps; wage suppression benefit redistribution accounting; demographic simulation of pension solvency under alternative wage structures",
+      "impact": "If high proportion: constraint is primarily intergenerational transfer mechanism (extraction classification strengthens). If low proportion: wage suppression is independent of pension dynamics (extraction mechanism is labor market structure, not demographic transfer).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of wage compression funding unfunded pension liabilities"
+    },
+    {
+      "id": "exit_option_availability_for_younger_cohorts",
+      "question": "Do younger workers have meaningful exit options (international migration, alternative labor markets, education retraining) or is the 'trapped' classification too severe?",
+      "resolution_mechanism": "International wage comparison; analysis of emigration flows by age cohort; cost-benefit analysis of education/retraining pathways vs. accepting compressed wages; measurement of actual mobility rates",
+      "impact": "If exit options are real and used: reclassify young worker exit_options to 'constrained' or 'mobile' rather than 'trapped' \u2014 extraction decreases. If exit is blocked by debt/credential requirements: 'trapped' confirmed \u2014 extraction confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether younger cohorts have meaningful exit options from wage compression"
+    },
+    {
+      "id": "technology_vs_institutional_causation",
+      "question": "Is wage compression driven by technological displacement and skill-biased change (structural, hard to reverse) or by institutional choices in labor markets, wage setting, and trade policy (contingent, reversible)?",
+      "resolution_mechanism": "Comparative analysis of wage compression across countries with different institutional/policy regimes; decomposition of wage growth into productivity, bargaining power, and institutional components; historical counterfactual analysis of wage outcomes under alternative policy sets",
+      "impact": "If technology-driven (structural): mountain perspective gains credibility \u2014 compression is immutable. If institution-driven: snare/tangled_rope confirmed \u2014 constraint is contingent and reversible through policy change.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether wage compression is driven by technology or institutional choices"
+    },
+    {
+      "id": "political_economy_of_generational_silence",
+      "question": "Why do young workers not organize politically to reverse wage compression despite measurable lifetime earnings loss?",
+      "resolution_mechanism": "Analysis of age-cohort political participation and collective action; examination of narrative framing in media and policy discourse; identification of institutional barriers to intergenerational political coordination",
+      "impact": "If silence reflects powerlessness: suppression=0.65 confirmed. If silence reflects identity capture (young workers internalize 'paying dues' narrative): identity_locked classification warranted despite structural mobility.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Political economy of low organizing activity among compressed cohorts"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Intergenerational wage compression describes the structural flattening of wage progression across age cohorts in advanced labor markets since approximately 1980. Young workers entering the labor force after this period face suppressed entry-level wages and dampened wage-age slopes compared to their predecessors. This constraint exhibits the Tangled Rope structure: genuine coordination functions (wage floor protection for incumbent workers, predictable cost structures for employers) coupled with asymmetric extraction (permanent lifetime earnings loss for younger cohorts). The suppression (0.65) reflects multiple barriers: seniority-based hiring practices, credential inflation that delays labor market entry, geographic immobility costs, and lack of intergenerational political organizing. The theater ratio (0.48, rising to 0.48) reflects increasing rhetorical cover: 'human capital investment,' 'market efficiency,' and 'earning your stripes' narratives legitimize what is structurally an intergenerational transfer of pension and wage-floor costs from older to younger cohorts. The extractiveness trajectory (0.28 \u2192 0.58) shows accumulation: as cohorts age in place without wage catch-up, the lifetime extraction becomes visible; when viewed at entry, extractiveness appears moderate; when viewed across working life, it becomes severe.",
+    "key_agents": [
+      "Young Labor Cohort: Primary victim (powerless/trapped) \u2014 faces locked-in lower wage trajectory from market entry; cannot exit labor market without extreme cost; bears permanent extraction",
+      "Incumbent Workforce: Primary beneficiary (institutional/arbitrage) \u2014 protected by seniority structures and defined-benefit pensions funded partly by compressed young-cohort wages; experiences constraint as coordination mechanism defending acquired compensation",
+      "Employers: Secondary beneficiary (institutional/arbitrage) \u2014 benefit from flat wage structures reducing labor costs and negotiation complexity; arbitrage through outsourcing and automation",
+      "Labor Movement Institutions: Institutional actor (organized/constrained) \u2014 union leadership coordinates seniority protection (genuine coordination) while blocking intergenerational mobility and apprenticeship access (extraction mechanism); constrained by declining power and internal legitimacy loss",
+      "Capital Asset Holders: Tertiary beneficiary (institutional/arbitrage) \u2014 compressed wages divert income away from wage earners toward returns on capital and financial assets",
+      "Policy/Narrative Institutions: Institutional actor (institutional/arbitrage) \u2014 propagate 'human capital' framing that naturalizes compression as investment; maintain performative language about 'entry-level development' while structural compression persists",
+      "Analytical Observer: Civilizational analyst (analytical/analytical) \u2014 identifies the constraint as a demographic-economic coupling where pension liabilities of aging cohorts are structurally transferred to younger cohorts through labor market institutions"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, rising over the period. Initial value (0.28) reflects the emergence of compression in 1980s as a discrete phenomenon; intermediate value (0.42) reflects accumulation as compressed cohorts age; final value (0.58) reflects full lifetime extraction visibility. The metric measures the wage differential between compressed cohorts and pre-compression career wage profiles, adjusted for productivity growth. Suppression (0.65): Moderate-high and structural. Multiple barriers reinforce wage floor: seniority-based hiring locks out competition from outside; credential inflation delays market entry; geographic immobility costs suppress inter-regional wage arbitrage; skill-specificity (sector-specific credentials) increases switching costs; generational political division prevents collective action for wage policy reform. Theater ratio (0.48): Moderate and rising. Initial narratives emphasize 'entry-level development' (0.22); mid-period adds 'market efficiency' and 'skill-biased technical change' (0.35); current period saturates with 'human capital investment,' 'flexibility,' and 'gig economy opportunity' language (0.48) while wages remain compressed. Theater has not reached piton levels (\u22650.70) because genuine wage differentiation still exists (seniority steps, sector variation), but performative language is increasing faster than structural change.",
+    "perspectival_gap": "This constraint demonstrates the power of indexical classification to reveal distributional conflicts hidden by institutional framing. All parties experience the same structural phenomenon (flattened wage progression) but perceive radically different types: beneficiaries see Rope (coordination), victims see Snare (extraction), organized actors see mixed Tangled Rope with institutional leverage. The gap reveals that 'intergenerational wage compression' is not a single constraint but a distributional conflict structured by power asymmetries. Young workers cannot exit (trapped), cannot coordinate (political silence), and cannot reframe (narratives are set by institutional actors with more power). This is the signature of suppression \u2265 0.60: the target cannot contest the frame or organize against it. The labor movement's Tangled Rope perspective is diagnostically revealing: leadership genuinely coordinates for current members (authentic rope function) while simultaneously blocking intergenerational mobility (extraction mechanism). This is how Tangled Ropes hide \u2014 by performing coordination for one subgroup while extracting from another.",
+    "directionality_logic": "Each agent's directionality value (d) derives from their power level, exit options, and structural relationship to the extraction flow. Young workers with trapped exit options and victim status experience d \u2248 0.95, yielding high f(d) \u2248 1.42 \u2014 maximum experienced extractiveness chi. Mid-career workers with constrained exit and partial victim/beneficiary status experience d \u2248 0.68, yielding moderate f(d) \u2248 1.05. Incumbent unions with organized power but constrained options and beneficiary status experience d \u2248 0.45, yielding moderate f(d) \u2248 0.58. Employers with institutional power, arbitrage options, and clear beneficiary status experience d \u2248 0.15, yielding f(d) \u2248 -0.01 (negative effective extraction \u2014 they gain coordination value). The analytical observer at civilizational scope with analytical exit experiences d \u2248 0.72, yielding f(d) \u2248 1.15, which combined with global scope modifier \u03c3(S)=1.2 produces chi \u2248 0.83 at the analytical context \u2014 high but not maximum, because the analytical view captures both coordination and extraction functions.",
+    "mandatrophy_analysis": "CONSTRAINT FAMILY DECOMPOSITION NEEDED: Intergenerational wage compression decomposes into structurally distinct claims with different \u03b5 values: (1) Seniority-wage coupling (\u03b5 \u2248 0.35, Rope or Tangled Rope depending on productivity correlation) \u2014 whether seniority-based pay reflects skill differences or institutional lock. (2) Pension-wage transfer (\u03b5 \u2248 0.62, Snare) \u2014 the intergenerational transfer mechanism whereby young cohort wages fund older cohort pensions. (3) Credential inflation (\u03b5 \u2248 0.48, Tangled Rope) \u2014 education requirements inflating faster than wage returns, delaying labor market entry. (4) Narrative capture (\u03b5 \u2248 0.40, Piton) \u2014 'human capital' framing naturalizing compression. The current story aggregates these into a single \u03b5 \u2248 0.58 (Tangled Rope at civilizational/analytical scale). Mandatrophy is resolved by recognizing that each component has different \u03b5 and different resolution pathways: seniority can be decoupled from pay (policy intervention); pensions can be restructured (political economy problem); credential inflation can be reversed (education reform); narrative capture requires institutional legitimacy loss. The constraint appears unified at the aggregate level but decomposes into separable mechanisms at lower scope. Future work should decompose into constraint family and track each \u03b5 separately."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "pension_funding_crisis",
+      "credential_inflation_spiral",
+      "labor_movement_generational_fragmentation"
+    ],
+    "dual_formulation_note": "Intergenerational wage compression is downstream of structural demographic and policy shifts (aging population, pension underfunding, globalization of labor supply, credential inflation) and upstream of political economy outcomes (generational resentment, reduced fertility, intergenerational mobility collapse, pension system viability). Linked constraints reflect decomposition per \u03b5-invariance principle: seniority-wage coupling has distinct empirical status from pension transfer mechanism; both couple through labor market institutions but have different structural origins and resolution pathways."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.52
+    }
+  ]
+}

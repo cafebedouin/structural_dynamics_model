@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "workforce_burnout_and_exodus",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "burnout"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.62,
+    "claimed_type": "snare",
+    "human_readable": "Workforce Burnout and Exodus",
+    "topic_domain": "labor/organizational/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "capital_owners_and_senior_management"
+    ],
+    "victims": [
+      "frontline_workers",
+      "middle_management",
+      "organizational_knowledge_base"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Frontline Worker",
+      "comment": "PERSPECTIVE 1: FRONTLINE WORKER (SNARE) \u2014 Trapped by economic dependency and lack of alternatives. Bears full extraction: unsustainable workload, wage stagnation, healthcare tied to employment. No meaningful exit; economic survival requires enduring escalating demands. Experiences maximum suppression through financial vulnerability and depleted negotiating capacity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Middle Management",
+      "comment": "PERSPECTIVE 2: MIDDLE MANAGEMENT (TANGLED ROPE) \u2014 Constrained by sunk career investment and mortgage/family obligations, but possesses some marketable skills and education. Experiences mixed extraction: pressured to drive worker productivity (beneficiary of subordinate extraction) while bearing extraction from above (compressed margins, performance metrics, impossible KPIs). High suppression through conflicting loyalties and no clear exit path without significant cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Capital Owners and Senior Management",
+      "comment": "PERSPECTIVE 3: CAPITAL OWNERS AND SENIOR MANAGEMENT (ROPE) \u2014 Net beneficiaries experiencing the constraint as coordination of resource extraction. Extract surplus from worker exhaustion while maintaining operational continuity. Low effective extraction because exit options are abundant \u2014 can relocate operations, automate, reduce headcount, or shift to contract labor. The constraint coordinates their interests: keep wages low, push productivity high, replace workers as they burn out."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Human Resources Department",
+      "comment": "PERSPECTIVE 4: HUMAN RESOURCES DEPARTMENT (PITON) \u2014 Maintains extensive theater: wellness programs, culture initiatives, retention bonuses, and engagement surveys, all performative. The functional core (preventing burnout, building sustainable capacity) has atrophied \u2014 resources go to appearance rather than structural change. The HR apparatus persists through institutional inertia because organizations expect it to exist, not because it solves burnout."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Labor Organizing and Regulatory Pressure",
+      "comment": "PERSPECTIVE 5: LABOR ORGANIZING AND REGULATORY PRESSURE (SCAFFOLD) \u2014 Organized actors (unions, labor advocates, progressive legislators, worker co-ops) are building alternative institutional structures and sunset mechanisms. Minimum-wage increases, mandatory rest periods, worker-owned models, remote-work flexibility, and sectoral bargaining reduce the burnout constraint's extractive force. This is temporary coordination support with a genuine sunset \u2014 as worker organizing and labor protections mature, the extraction mechanism loses leverage."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Naturalized View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURALIZED VIEW (MOUNTAIN) \u2014 From a civilizational perspective, worker burnout can be framed as an immutable consequence of competitive pressures, technological acceleration, or human biological limits: 'people have always burned out under stress,' 'modern work is inherently demanding,' 'some churn is inevitable.' This naturalization masks contingent institutional choices (understaffing, metric obsession, zero-slack scheduling) as natural laws. The engine will identify this as a false summit \u2014 the constraint's base extractiveness (0.58) and measured suppression (0.65) indicate institutional arrangements, not natural limits."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "burnout_vs_normal_stress_threshold",
+      "question": "What threshold distinguishes sustainable work intensity from extractive burnout requiring suppression to maintain?",
+      "resolution_mechanism": "Longitudinal health outcomes data: burnout workers show persistent physiological stress markers, cognitive decline, depression, and health incidents at rates significantly above control groups. Correlation with organizational metrics (headcount ratios, overtime hours, metric density).",
+      "impact": "If threshold is low (current work is already extractive): Snare classification confirmed across more perspectives. If threshold is high (current work is normal): constraint is coordination (Rope) with some overhead. Current research indicates threshold is well below current industry norms, confirming extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Burnout threshold relative to organizational work intensity"
+    },
+    {
+      "id": "exit_barrier_primacy",
+      "question": "Are workers primarily trapped by material economic dependency, or by identity fusion with work, or by internalized powerlessness despite structural mobility?",
+      "resolution_mechanism": "Post-exit survey methodology: workers who leave organizations report (1) financial anxiety and uncertainty about next role (material barrier), (2) identity loss and status anxiety (identity lock), or (3) realization that outside options were available all along (cognitive lock). Proportions indicate whether 'trapped' or 'identity_locked' is the dominant mechanism.",
+      "impact": "If material barriers dominate: workers are genuinely trapped \u2014 exit costs are high and real. If identity lock dominates: workers are identity-locked (especially professional identity, status anxiety) \u2014 the real barrier is cognitive, meaning interventions like identity reframing or community support could unlock exit. Mixed: both mechanisms bind.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether exit barriers are material or cognitive"
+    },
+    {
+      "id": "knowledge_loss_externality_magnitude",
+      "question": "How much organizational knowledge and institutional memory is permanently lost when experienced workers burn out and depart?",
+      "resolution_mechanism": "Knowledge audit post-exodus: document tacit knowledge in departed workers (client relationships, workaround expertise, tribal knowledge), measure recovery time for successors, quantify retraining cost, estimate productivity gap during knowledge transfer. Compare organizations with high churn vs low churn on this dimension.",
+      "impact": "If loss is severe: burnout constraint has large negative externality on organizational function, which contradicts the beneficiary group's rational self-interest \u2014 management appears to be extracting in ways that damage their own operations. If loss is minor: institutional knowledge is easily replaceable, and the extraction mechanism is more sustainable (less self-destructive). High loss suggests burnout is a coordination failure with poor information, not pure snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude of knowledge loss from worker exodus"
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_psychological",
+      "question": "Is worker suppression primarily structural (legal constraints on organizing, wage theft, benefit tying) or psychological (internalized failure narratives, identity fusion with employer)?",
+      "resolution_mechanism": "Comparative analysis: organizations with strong legal/structural suppression (union busting, non-competes, benefits hostage-taking) show different exit patterns than organizations with weak structural suppression but strong psychological/identity capture. Measure: worker perception of exit cost vs actual market cost for equivalent role.",
+      "impact": "If structural dominates: removing legal barriers through labor regulation could unlock exit. If psychological dominates: workers need cognitive reframing and community support to recognize their own agency. Mixed: both mechanisms reinforce each other, making exit even harder.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs psychological mechanisms of suppression"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.59
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Workforce burnout and exodus represents a structural snare in which workers bear escalating extraction through unsustainable workload, wage stagnation, and eroding social safety nets, while exit is suppressed through economic dependency and psychological identity capture. The constraint has intensified over the past decade as organizational complexity metrics (SKU count, customer segments, cross-functional dependencies) have increased without proportional headcount expansion. Management captures surplus through compressed labor costs while workers absorb the gap through unpaid overtime, stress-related health costs, and cognitive load. The theater ratio (0.62) reflects the elaborate apparatus of wellness initiatives, engagement surveys, flexible-work policies, and cultural messaging \u2014 all performative \u2014 that creates the appearance of solving burnout without addressing the structural drivers. The constraint manifests differently across organizational hierarchies: frontline workers are trapped by economic necessity; middle management experience conflicting pressure from above and below; senior management benefit from the extraction while maintaining plausible deniability; HR maintains the theater; labor organizing provides the only visible exit pathway.",
+    "key_agents": [
+      "Frontline Workers: Primary victims (powerless/trapped) \u2014 bear full extraction through unsustainable workload, wage stagnation, benefit tying; no exit due to economic dependency",
+      "Middle Management: Secondary victims (moderate/constrained) \u2014 pressured to enforce productivity demands on subordinates while bearing compression from above; sunk career investment constrains exit",
+      "Capital Owners and Senior Management: Primary beneficiaries (institutional/arbitrage) \u2014 extract surplus from worker exhaustion while maintaining exit optionality through automation, relocation, outsourcing",
+      "Human Resources Department: Theater maintainers (institutional/arbitrage) \u2014 preserve appearance of solving burnout through programs that address symptoms but not structural drivers",
+      "Labor Organizers and Regulatory Advocates: Organized agents (organized/constrained) \u2014 building alternative pathways (sectoral bargaining, minimum standards, worker co-ops) with generational sunset logic",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional choices (understaffing, metric obsession) as inevitable facts of modern work"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate, reflecting significant but not maximal extraction. Management captures surplus through compressed labor costs, but the extraction is bounded by labor market dynamics (workers can eventually exit), legal constraints (some jurisdictions enforce minimum protections), and organizational self-damage (excessive churn erodes capability). The trajectory (0.35\u21920.58 over ten years) shows escalating extraction correlated with organizational complexity growth and staffing underinvestment. Suppression (0.65): High. Workers face material barriers (economic dependency, healthcare tying, geographic constraints) and psychological barriers (identity fusion with professional role, internalized failure narratives, status anxiety about downward mobility). Exit is costly in both material and psychological dimensions. Theater ratio (0.62): Moderate-high. Organizational responses to burnout are substantially performative: wellness programs, mental health days, and culture initiatives address symptoms while metrics, headcount ratios, and performance expectations (the true drivers) remain unchanged. Theater has increased over the interval as organizations have added more visible support mechanisms without reducing workload intensity.",
+    "perspectival_gap": "The constraint demonstrates why a single 'management' perspective fails. Senior management see coordination (Rope) \u2014 they are solving the legitimate problem of maintaining competitiveness. They experience low extraction because they have abundant exit options (outsource, relocate, hire contractors, automate). Frontline workers see extraction (Snare) \u2014 unsustainable demands with no exit. Middle management experience the hybrid (Tangled Rope) \u2014 pressured to extract from subordinates while bearing extraction from above, with only constrained exit. HR maintains the theater (Piton) \u2014 the apparatus persists through inertia, not function. Labor organizers see a temporary problem with a sunset (Scaffold) \u2014 sectoral bargaining, minimum standards, and worker co-ops represent a generational transition that could transform the extraction mechanism. The analytical observer risks naturalizing the arrangement as inevitable (Mountain) \u2014 'competitive pressure forces this,' 'people have always burned out,' 'some churn is necessary' \u2014 but the measurement trajectory and structural data reveal these as choices, not laws.",
+    "directionality_logic": "Each agent's directionality (d) is determined by their structural relationship to the extraction flow. Capital owners and senior management are beneficiaries with arbitrage options (abundant exit pathways) \u2014 they derive d \u2248 0.10, producing negative or minimal effective extraction f(d) \u2248 -0.01 to 0.02. Frontline workers are victims with no exit (trapped by economic dependency) \u2014 they derive d \u2248 0.95, producing maximum experienced extraction f(d) \u2248 1.42. Middle management are mixed: victims of compression from above, beneficiaries of subordinate extraction \u2014 d \u2248 0.55, producing moderate extraction f(d) \u2248 0.75. The identity_locked exit option appears relevant for some middle management (professional identity fused with organizational role, status anxiety about lateral moves) and potentially for workers with decades of organizational tenure (identity constituted through the role). The scope modifier \u03c3(S) scales extractiveness upward: at global scope (\u03c3=1.2), the constraint affects worldwide labor markets; at national scope (\u03c3=1.0), effects are more localized. The engine derives chi = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) for each perspective, producing the perspectival gap: senior management experience \u03c7 \u2248 0.58 \u00d7 (-0.01) \u00d7 1.2 \u2248 near zero; frontline workers experience \u03c7 \u2248 0.58 \u00d7 1.42 \u00d7 1.0 \u2248 0.82.",
+    "mandatrophy_analysis": "The constraint satisfies the Snare gate (extractiveness 0.58 \u2265 0.46, suppression 0.65 \u2265 0.60, \u03c7 from powerless perspective \u2265 0.66) at the powerless/trapped perspective. However, the mandatrophy analysis reveals that from other perspectives, the constraint classifies as Tangled Rope (middle management), Rope (senior management), Piton (HR), and Scaffold (organizing movements). This perspectival pluralism does not resolve the mandatrophy \u2014 it instantiates it. The 'correct' classification depends on the observer's structural position. From the powerless agent's view, this is pure extraction (Snare). From the beneficiary's view, this is coordination (Rope). The analytical observer who claims the constraint is a 'natural law of competitive markets' (Mountain) is naturalizing what is actually institutional choice (staffing ratios, metric design, benefit tying). The scaffold perspective (organizing movements) is not aspirational \u2014 it is a real structural feature: labor protections and sectoral bargaining are actively building alternative pathways that would reduce the extraction mechanism's force. The mandatrophy resolution is to recognize that all six types are simultaneously true from different structural positions, and that the presheaf of perspectives reveals the constraint's architecture better than any single type. The goal is not to choose which type is 'correct' but to understand how the same structural arrangement appears different to agents with different power, time horizons, exit options, and scope."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "healthcare_system_employment_tying",
+      "wage_stagnation_productivity_divergence",
+      "organizational_metric_obsession"
+    ],
+    "dual_formulation_note": "Workforce burnout and exodus is a constraint family that encompasses multiple structurally distinct mechanisms: (1) unsustainable workload (scheduling/staffing constraint), (2) wage stagnation (economic extraction), (3) identity fusion with role (psychological lock-in), (4) benefits tying (systemic dependency). Each mechanism has its own extractiveness value and classification. The integrated story treats burnout as a composite snare where multiple mechanisms reinforce each other. Decomposition into separate stories (workload_intensity_constraint, wage_compression_constraint, professional_identity_lock_in, healthcare_employment_tying) would reveal different \u03b5 values and time horizons. The network links show how burnout is downstream of organizational complexity growth and upstream of labor organizing responses."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.55
+    }
+  ]
+}

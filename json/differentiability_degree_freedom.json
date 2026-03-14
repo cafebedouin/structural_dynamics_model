@@ -1,0 +1,143 @@
+{
+  "header": {
+    "constraint_id": "differentiability_degree_freedom",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ddf"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.08,
+    "claimed_type": "mountain",
+    "human_readable": "Differentiability and Degree of Freedom in Constraint Systems",
+    "topic_domain": "mathematical_logic/systems_theory",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Logical Necessity View",
+      "comment": "PERSPECTIVE 1: LOGICAL NECESSITY (MOUNTAIN) \u2014 Differentiability constraints are intrinsic to mathematical structure. Any system with M constraints reduces the degrees of freedom by at least M dimensions (generically). This is not an institutional choice or a policy decision \u2014 it follows from the definition of constraint and dimension. The relationship \u0394doF = N - M emerges necessarily from the geometry of configuration spaces."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "universal",
+      "label": "The Applied Engineer",
+      "comment": "PERSPECTIVE 2: APPLIED ENGINEER (MOUNTAIN) \u2014 Regardless of what the engineer wants or values, adding a constraint removes degrees of freedom. This is invariant across all engineering domains: structural mechanics, thermodynamics, robotics, electrical networks. The engineer can choose to add more constraints, fewer constraints, or constraints of different type, but cannot add a constraint and have degrees of freedom increase. The constraint is mathematical fact, not design choice."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Pure Mathematician",
+      "comment": "PERSPECTIVE 3: PURE MATHEMATICIAN (MOUNTAIN) \u2014 Differentiability is a property of manifolds and differentiable maps. The dimension of the solution space of a system of equations is determined by the rank of the constraint Jacobian. Smoothness (differentiability) is necessary for rank calculations to be well-defined and for the implicit function theorem to apply. This is not negotiable or observer-dependent \u2014 it follows from differential geometry."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Dynamical Systems Analyst",
+      "comment": "PERSPECTIVE 4: DYNAMICAL SYSTEMS (MOUNTAIN) \u2014 A differentiable constraint on a phase space reduces the attractor dimension and solution space dimension. This holds for dissipative systems, Hamiltonian systems, and stochastic systems (where it applies to stationary measure support). The reduction is not approximate or contingent \u2014 it is exact for generic constraint configurations. Differentiability is required for Lyapunov exponents and stability analysis to be well-defined."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "holonomic_vs_nonholonomic_generalization",
+      "question": "Does the differentiability-degree-freedom relationship generalize identically to non-holonomic constraints (constraints on velocities rather than positions)?",
+      "resolution_mechanism": "Comparison of dimension reduction formulas: holonomic constraints reduce dimension M for rank-M constraint Jacobian; non-holonomic constraints reduce dimension but not in simple rank formula. Analysis of Pfaffian constraint systems.",
+      "impact": "If generalization fails: the mountain classification may be local to holonomic systems only. If it generalizes: the mountain extends to broader constraint classes.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether non-holonomic constraints exhibit identical differentiability-dimension relationship"
+    },
+    {
+      "id": "singular_point_behavior",
+      "question": "At points where the constraint Jacobian is singular (rank < M), does the degree-of-freedom reduction fail, remain constant, or exhibit unpredictable behavior?",
+      "resolution_mechanism": "Study of constraint singularities (e.g., gimbal lock in rotational systems, configuration space singularities); analysis of solution set topology near singular points.",
+      "impact": "If unpredictable: the mountain classification is challenged at singular configurations. If the reduction persists via generalization: the mountain extends to singular regions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Behavior of degree-of-freedom reduction at constraint singularities"
+    },
+    {
+      "id": "approximation_vs_exact_constraint",
+      "question": "Is there a regime in which approximate or weak constraints behave qualitatively differently from exact constraints in their degree-of-freedom reduction effect?",
+      "resolution_mechanism": "Perturbation analysis: study how small constraint violations affect dimension reduction; examine transition from weakly-enforced to strongly-enforced constraints.",
+      "impact": "If yes: the mountain classification applies only to exact constraints; approximate constraints may decompose into distinct constraint stories. If no: the mountain is robust to enforcement regimes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether approximate constraints exhibit different dimension-reduction dynamics"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "Differentiability degree of freedom is a constraint intrinsic to the mathematical structure of systems with constraints. In any system with N degrees of freedom and M independent differentiable constraints, the accessible configuration space has dimension N - M (generically). This relationship is not a policy, institution, or social arrangement \u2014 it is a structural feature of manifolds and constraint geometry. The constraint is universal across all applications: mechanical systems, field theories, optimization problems, information geometry, and dynamical systems all exhibit the same reduction. The differentiability requirement (rather than mere constraint existence) ensures that the implicit function theorem applies and that the dimension formula holds without exception. This is a natural law constraint: it has zero institutional content, zero coercion, and zero alternatives.",
+    "key_agents": [
+      "Mathematical Structure: The constraint itself \u2014 no agent, no beneficiary, no victim",
+      "Analytical Observer (Universal): Views the constraint as a necessary consequence of differential geometry",
+      "Applied Engineer (Powerful/Mobile): Must respect the constraint but has full freedom to choose how many constraints to impose",
+      "Pure Mathematician (Analytical): Recognizes the constraint as a theorem derived from axioms",
+      "Dynamical Systems Analyst (Analytical): Uses the constraint as a foundation for stability and attractor analysis"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Very low. The constraint imposes no asymmetric extraction \u2014 it applies universally and equally to all agents and systems. The small residual value (0.12, above theoretical zero) accounts for the minimal cost of understanding and applying differentiability requirements (documentation, formal education in differential geometry). This is not extraction but necessity cost. Suppression (0.03): Minimal. There are no alternatives to differentiability in classical differential geometry \u2014 you cannot construct a valid smooth manifold while violating this constraint. The suppression is not coercive suppression but logical necessity. Suppression value reflects that the constraint cannot be avoided or negotiated; it can only be accepted or worked outside the differentiable framework. Theater ratio (0.08): Minimal. There is no performative aspect to differentiability constraints \u2014 their function is entirely structural. No institutional ritual or symbolic display is needed to maintain the constraint; the mathematics itself enforces it.",
+    "perspectival_gap": "This constraint exhibits NO perspectival gap. All observers \u2014 powerless, moderate, powerful, organized, institutional, analytical \u2014 classify it identically as Mountain across all time horizons and exit options. The uniformity is diagnostic of a genuine natural law constraint. There is no social or power dimension to the constraint; it applies with equal force to a student solving a homework problem and to a civilization-scale optimization problem. This uniformity is the gold-standard signature of a mountain constraint in the DR system.",
+    "directionality_logic": "Directionality derivation is not applicable to mountain constraints. There are no beneficiaries or victims \u2014 the constraint is impersonal. The directional function f(d) is not computed because the constraint's extractiveness value (0.12) is determined entirely by intrinsic mathematical structure, not by power asymmetry or exit options. The low extractiveness value is invariant across all possible d values. No agent can negotiate or escape the constraint through power, organizational capacity, time horizon manipulation, or spatial scope changes."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "directionality_overrides": []
+}

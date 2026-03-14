@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "institutional_resource_scarcity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "irs"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Institutional Resource Scarcity as Coordination Constraint",
+    "topic_domain": "organizational_governance/institutional_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "resource_allocating_authority",
+      "priority_setting_coalition"
+    ],
+    "victims": [
+      "excluded_claimants",
+      "service_access_inequality"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Excluded Claimant",
+      "comment": "PERSPECTIVE 1: EXCLUDED CLAIMANT (SNARE) \u2014 Faces material barriers to accessing institutional resources. Cannot exit the institutional framework (legal dependency, geographic isolation, lack of alternatives). Bears full extraction cost without benefit. Suppression is structural \u2014 the claimant has no negotiating power and no path to voice preferences within allocation mechanisms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Secondary Stakeholder",
+      "comment": "PERSPECTIVE 2: SECONDARY STAKEHOLDER (TANGLED ROPE) \u2014 Participates in allocation negotiations but with limited power. Experiences both coordination benefits (shared institutional infrastructure enables collective action) and extraction (priority system systematically favors other claimants). Can exit at significant cost (relocation, alternative institutions) but not easily. Mixed experience of the constraint."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Resource Allocating Authority",
+      "comment": "PERSPECTIVE 3: RESOURCE ALLOCATING AUTHORITY (ROPE) \u2014 Experiences the constraint primarily as coordination mechanism: scarcity enables prioritization, which solves the collective action problem of deciding which needs are most urgent. Benefits from first-mover advantage in setting criteria. Can arbitrage resources across multiple institutional contexts. Sees scarcity as enabling rather than constraining."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Formal Allocation Procedure",
+      "comment": "PERSPECTIVE 4: FORMAL ALLOCATION PROCEDURE (PITON) \u2014 The documented process for resource allocation persists through institutional inertia even when its actual function has degraded. Theater_ratio is high (0.64) because much of the allocation process is performative: requests are submitted through formal channels, reviewed in committees, and approved/denied according to criteria that may not reflect actual scarcity or actual need. The procedure maintains legitimacy through ritual rather than effectiveness."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Reform Coalition",
+      "comment": "PERSPECTIVE 5: REFORM COALITION (SCAFFOLD) \u2014 Organized agents (advocacy groups, policy reformers, resource-sharing initiatives) perceive the scarcity constraint as temporary and solvable. They are building alternative allocation mechanisms (participatory budgeting, transparent resource pools, mutual aid networks) with sunset logic: as these alternatives mature and norms shift toward distributed allocation, the hierarchical scarcity-based model loses force. Low effective extraction because the coalition has agency and sees an exit path."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some scarcity is inherent to finite resources and complex institutions: bounded rationality means no allocation system can perfectly distribute resources, and coordination always carries overhead costs. This perspective sees institutional scarcity as a natural law \u2014 inevitable given resource finitude and decision costs. However, the structural data reveals this as a false summit: the 'inherent' scarcity often reflects policy choices (funding levels, priority criteria, access rules) rather than physical limits."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "scarcity_constructed_vs_inherent",
+      "question": "Is the measured resource scarcity inherent to physical limits or constructed by institutional allocation choices?",
+      "resolution_mechanism": "Historical comparison of resource availability vs. institutional access; analysis of allocation criteria changes; counterfactual scenarios with different priority systems",
+      "impact": "If constructed: scarcity is a policy choice amenable to reform (scaffold perspective validated, mountain is false summit). If inherent: some hierarchy is unavoidable (mountain partially validated, extraction flows from resource limits not institutional design).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether resource scarcity is structural or policy-constructed"
+    },
+    {
+      "id": "allocation_transparency_mechanism",
+      "question": "Do transparent allocation criteria actually reduce extraction or merely relocate resistance to the criteria-setting process itself?",
+      "resolution_mechanism": "Comparison of satisfaction and compliance rates pre/post transparency implementation; tracking of lobbying intensity; analysis of appeal frequency",
+      "impact": "If transparency reduces extraction: theater_ratio should decline (piton not diagnosed). If it relocates resistance: theater_ratio may persist (piton diagnosis confirmed, showing how ritual formality masks underlying power asymmetry).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether transparency reduces extraction or relocates it"
+    },
+    {
+      "id": "coalition_exit_path_viability",
+      "question": "Are alternative allocation mechanisms (participatory budgeting, mutual aid networks, resource-sharing pools) actually reaching viability as replacements for hierarchical scarcity-based systems, or are they aspirational supplements?",
+      "resolution_mechanism": "Longitudinal tracking of adoption rates, resource flows through alternative mechanisms, sustainability metrics; comparison of outcomes (fairness, efficiency, resilience) between systems",
+      "impact": "If viable: scaffold sunset logic is real, constraint will degrade as alternatives mature. If aspirational: scaffold is optimistic classification, constraint may persist indefinitely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative allocation mechanisms are becoming viable replacements"
+    },
+    {
+      "id": "powerless_agent_coalition_potential",
+      "question": "Can excluded claimants organize into a coalition sufficient to shift the constraint from powerless/trapped to organized/constrained?",
+      "resolution_mechanism": "Analysis of existing mutual aid networks, collective action successes, coalition threshold estimates, barriers to organizing",
+      "impact": "If yes: powerless agent classification is temporary; collective action could re-index the constraint and shift it toward tangled_rope or scaffold from snare. If no: powerless/trapped classification is stable.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether excluded claimants can achieve organized coalition power"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Institutional resource scarcity creates a structural coordination problem: finite resources require prioritization, but the prioritization mechanism becomes an extraction device when control over allocation criteria is asymmetrically distributed. This constraint exhibits the full range of DR classification depending on the observer's structural position within the institutional hierarchy. The same scarcity that enables coordination (rope perspective: priorities create focus and efficient resource use) simultaneously enables extraction (snare perspective: powerless agents are systematically excluded). The theater_ratio (0.64) reflects that formal allocation procedures often perform legitimation functions alongside their functional coordination role \u2014 committees review requests, criteria are applied, and decisions are made through documented processes, but these rituals often obscure the underlying power asymmetries that determine who gets prioritized. The extractiveness has increased over the measurement interval (0.38 \u2192 0.52) as allocation pressure intensifies and informal workarounds become formalized into policy barriers.",
+    "key_agents": [
+      "Excluded Claimants: Primary victims (powerless/trapped) \u2014 systematically denied access to resources through allocation criteria; bear extraction cost without institutional voice",
+      "Resource Allocating Authority: Primary beneficiary (institutional/arbitrage) \u2014 controls priority-setting and can shift allocation criteria; captures efficiency gains and political credit",
+      "Priority-Setting Coalition: Secondary beneficiary (organized/arbitrage) \u2014 insider groups whose preferences are built into allocation criteria; benefit from alignment with authority",
+      "Secondary Stakeholders: Mixed agent (moderate/constrained) \u2014 participate in allocation negotiations with limited power; experience both coordination benefits and extraction",
+      "Formal Allocation Procedure: Institutional actor (institutional/constrained) \u2014 maintains legitimacy through ritual adherence even as functional coordination capacity declines",
+      "Reform Coalition: Organized agents (organized/constrained) \u2014 building alternative mechanisms (participatory budgeting, mutual aid, transparent resource-sharing) with sunset logic",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing policy-constructed scarcity as inherent resource limits"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts from excluded claimants (denied access) while benefiting the allocating authority (control over criteria, political credit). The value reflects that some extraction is genuine coordination cost (decision-making infrastructure has real overhead), but a significant portion flows asymmetrically to the authority and its coalition. The measurement trajectory (0.38 \u2192 0.52) reflects intensifying pressure as institutional demands exceed explicit resource levels, forcing harsher criteria. Suppression (0.58): Moderate-high. Excluded claimants face multiple barriers: they lack voting power in allocation decisions, often lack information about criteria, face costs of appealing rejections, and have few exit options (institutional dependency is structural). Secondary stakeholders face lower suppression (can negotiate, can appeal, can relocate at cost). Theater ratio (0.64): Moderate-high. Allocation procedures perform legitimate-appearance functions alongside decision-making \u2014 formal criteria are applied, committees review requests, decisions are documented \u2014 but these rituals often obscure the power asymmetries that determine real priorities. The ratio has increased over the interval as procedures have become more formalized and elaborate, possibly to manage legitimacy as pressure intensifies.",
+    "directionality_logic": "Directionality (d) flows from each agent's structural position relative to the resource flow. Excluded claimants (powerless/trapped) derive d \u2248 0.95: they bear extraction, have no exit, and cannot negotiate. The allocating authority (institutional/arbitrage) derives d \u2248 0.10: they benefit from the constraint, have high exit mobility (can shift to other institutions), and control criteria. Secondary stakeholders (moderate/constrained) derive d \u2248 0.60: mixed position \u2014 they participate and benefit from coordination but face constraints. The reform coalition (organized/constrained) derives d \u2248 0.45: they see the constraint as temporary and solvable, reducing experienced extraction. These directionality values feed the sigmoid f(d) to produce effective extractiveness chi for each perspective, explaining the perspectival gap: the excluded claimant experiences high chi (snare), the authority experiences low chi (rope), and the analytical observer risks naturalizing the constraint as invariant (false summit).",
+    "perspectival_gap": "The excluded claimant and resource authority experience the same constraint with inverted extractiveness. The claimant sees pure extraction (snare) \u2014 denied access, no voice, no exit \u2014 because d \u2248 0.95 produces high f(d) \u2248 1.42. The authority sees coordination (rope) \u2014 priorities enable focus, shared infrastructure, efficient decision-making \u2014 because d \u2248 0.10 produces low f(d) \u2248 -0.01. Neither perspective is wrong; they are measuring from structurally different positions. The piton classification reveals that the formal allocation procedure persists through legitimation ritual even as its functional coordination capacity degrades \u2014 committees continue to meet, criteria continue to be applied, decisions continue to be documented, but the actual decisions are increasingly determined by power asymmetries rather than the stated criteria. The scaffold perspective shows that organized reform efforts (participatory budgeting, transparent resource-sharing, mutual aid networks) are building alternative exit paths with sunset logic \u2014 as these alternatives mature and norms shift, the hierarchical scarcity-based model loses force. The mountain perspective risks naturalizing policy-constructed scarcity as inherent resource limits, concealing that the 'inevitable' nature of the constraint reflects institutional choices (funding levels, priority criteria, access rules) rather than physical finitude.",
+    "mandatrophy_analysis": "DIAGNOSTIC EXEMPLAR: This constraint resolves the mandatrophy by demonstrating how the same structural phenomenon (resource scarcity) appears as pure coordination (rope), mixed coordination-extraction (tangled_rope), pure extraction (snare), degraded ritual (piton), temporary problem with exit path (scaffold), or natural law (mountain), depending on the observer's position. The mandatrophy is not 'which type is correct?' but 'which structural relationship are you embedded in?' The allocating authority's rope is their genuine experience (scarcity enables coordination and gives them decision power). The excluded claimant's snare is their structural reality (systematic exclusion, no voice, no exit). The piton is a real observation (formal procedures persist through ritual even as functional capacity declines). The scaffold is real structure (alternative mechanisms are emerging with genuine viability). The mountain is a false summit (constructed scarcity masquerading as natural limit). All six readings are locally correct \u2014 the challenge is determining which structural features are primary and which are secondary, and whether the constraint is degrading (piton trajectory), being replaced (scaffold trajectory), or persisting (snare trajectory)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "bureaucratic_allocation_capture",
+      "access_inequality_reproduction"
+    ],
+    "dual_formulation_note": "Institutional resource scarcity is upstream of specific sectoral constraints (education funding scarcity, healthcare resource rationing, housing allocation). The upstream constraint structures how scarcity manifests in downstream domains. Separate stories should be written for domain-specific scarcity constraints (e.g., educational_resource_scarcity, healthcare_resource_rationing) with their own \u03b5 values reflecting how scarcity plays out in specialized contexts."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.45
+    }
+  ]
+}

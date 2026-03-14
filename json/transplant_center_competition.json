@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "transplant_center_competition",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "txplant"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Transplant Center Competition and Organ Allocation",
+    "topic_domain": "healthcare/transplantation/resource_allocation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_volume_transplant_centers",
+      "wealthy_geographic_regions"
+    ],
+    "victims": [
+      "low_volume_transplant_centers",
+      "rural_patients",
+      "organ_donation_quality"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Rural Patient",
+      "comment": "PERSPECTIVE 1: RURAL PATIENT (SNARE) \u2014 Trapped by geography and organ scarcity. Competition between centers for organs creates incentives to concentrate transplants at high-volume centers in urban areas. Rural patients face longer waitlist times and lower transplant rates. No exit option: cannot reasonably relocate or choose alternative healthcare system. Bears full cost of competition-driven concentration."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Low-Volume Transplant Center",
+      "comment": "PERSPECTIVE 2: LOW-VOLUME CENTER (TANGLED ROPE) \u2014 Constrained by organ allocation rules and economic pressure. Competition creates genuine coordination of expertise (centers specialize, maintain high skill levels) but also asymmetric extraction: high-volume centers attract better surgeons, more referrals, better survival outcomes, attracting further referrals in a positive feedback loop. Low-volume centers struggle with case volume, staff retention, and program viability. Some coordination benefit (specialization drives quality) mixed with extractive mechanism (winner-take-most dynamics)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The High-Volume Transplant Center",
+      "comment": "PERSPECTIVE 3: HIGH-VOLUME CENTER (ROPE) \u2014 Institutional actor with arbitrage capacity (can accept or refuse organ offers, can recruit surgeons and staff from competitors, can invest in infrastructure). Experiences competition as coordination: the system allocates organs to centers with demonstrated capacity and outcomes. Better outcomes attract referrals, which maintains case volume, which sustains expertise and outcomes. Net beneficiary. For this actor, the competition is pure coordination with minimal experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Organ Procurement Organization Network",
+      "comment": "PERSPECTIVE 4: OPO NETWORK (TANGLED ROPE) \u2014 Organized actors (OPOs) coordinate organ procurement and allocation while also competing for performance metrics. Genuine coordination function: OPOs must distribute organs to centers that will use them effectively. But also extractive mechanism: OPOs optimize for their own metrics (procurement rate, utilization rate), creating incentive misalignment. Center competition drives pressure on OPOs to concentrate organs at high-success centers, potentially bypassing lower-volume centers that could serve underserved populations. Constrained by regulatory oversight but also by implicit performance incentives."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Regulatory Oversight Framework",
+      "comment": "PERSPECTIVE 5: REGULATORY OVERSIGHT (PITON) \u2014 UNOS (United Network for Organ Sharing) maintains historical allocation rules and oversight protocols that persist despite functional degradation. Theater ratio reflects the gap between stated allocation principles (equity, medical urgency, utility) and actual allocation mechanisms (concentrated at high-volume centers). Regulatory framework designed to coordinate allocation but increasingly performative: maintains appearance of impartial organ distribution while actual allocation follows concentration logic. Persists through institutional inertia rather than functional success."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational view, transplant center competition coordinates specialization and maintains quality incentives (high-volume centers achieve better outcomes, which is coordinative benefit) while simultaneously extracting value from rural and disadvantaged populations through concentration effects. The constraint exhibits genuine dual nature: coordination of expertise paired with asymmetric extraction of access. Classification reflects both functions are real and both are structural."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "concentration_causation",
+      "question": "Does high-volume center success drive patient referral concentration, or does patient concentration create high-volume centers?",
+      "resolution_mechanism": "Historical analysis of organ allocation patterns before/after regionalization; causal inference from exogenous policy changes affecting allocation rules",
+      "impact": "If causation is volume\u2192success: concentration is efficiency coordination. If causation is referral\u2192volume: concentration is extractive redistribution. If bidirectional: positive feedback mechanism confirms tangled_rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal direction between center volume and outcome quality"
+    },
+    {
+      "id": "rural_center_viability",
+      "question": "Can low-volume transplant programs maintain acceptable clinical outcomes with current allocation mechanisms, or is concentration necessary for quality?",
+      "resolution_mechanism": "Comparative outcome analysis: low-volume centers with concentrated organ access vs high-volume centers; identification of minimum volume threshold for acceptable outcomes",
+      "impact": "If low-volume viability is possible: concentration is extraction that could be reduced. If minimum volume is high: concentration is necessary coordination, reducing snare classification of rural patients.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Minimum viable volume for acceptable transplant center outcomes"
+    },
+    {
+      "id": "allocation_rule_effectiveness",
+      "question": "Do current UNOS allocation policies actually prevent concentration or merely regulate its speed?",
+      "resolution_mechanism": "Policy simulation and empirical data on organ allocation flows; comparison of actual allocation to stated principles; impact analysis of allocation policy changes",
+      "impact": "If policies prevent concentration: regulatory framework is effective coordination. If policies regulate but not prevent: framework is theater (piton classification confirmed). If policies amplify concentration: framework is complicit extraction mechanism.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Effectiveness of current organ allocation policies"
+    },
+    {
+      "id": "rural_demand_elasticity",
+      "question": "Would rural patients accept transplant at lower-volume local centers, or do they prefer travel to high-volume centers even with increased transplant delay?",
+      "resolution_mechanism": "Patient survey data on transplant center preferences; analysis of patient choice behavior when offered local vs distant center options; longitudinal tracking of patient outcomes by choice",
+      "impact": "If patients prefer travel: concentration reflects patient preference (reduces snare classification). If patients prefer local: concentration overrides patient preference (confirms snare classification). Ambiguity suggests identity_locked mechanism (patients internalize center hierarchy).",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Patient preferences for local vs high-volume transplant centers"
+    },
+    {
+      "id": "surgeon_expertise_path_dependency",
+      "question": "Is surgeon expertise concentrated at high-volume centers because volume drives expertise, or because expertise was historically concentrated and volume followed?",
+      "resolution_mechanism": "Career trajectory analysis; surgeon mobility patterns; retraining programs and their success at redistributing expertise",
+      "impact": "If volume\u2192expertise: concentration is efficiency mechanism. If expertise\u2192volume: concentration reflects historical path dependency (could be altered by investment). If both: positive feedback is real but possibly interventable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causation between surgeon expertise and center volume"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Transplant center competition creates a structural tension between specialization incentives (concentrating organs at high-volume centers improves outcomes) and equity concerns (concentration leaves rural and disadvantaged populations with worse access). The United States transplant system allocates organs through UNOS regional and national allocation policies that attempt to balance utility (organs go to centers with best outcomes) against equity (organs distributed to serve all populations). In practice, high-volume centers in urban areas with strong surgical programs, robust referral networks, and better patient selection accumulate a disproportionate share of organs. Low-volume rural centers struggle to maintain program viability, lose surgical staff to urban competitors, and deteriorate. Rural patients face longer waitlist times and lower transplant rates. The constraint exhibits tangled_rope structure from the analytical view: genuine coordination of expertise (specialization and outcome improvement are real benefits) paired with asymmetric extraction (access redistribution from rural to urban, from disadvantaged to advantaged populations). Theater increases over time as regulatory frameworks become more elaborate (UNOS policies, allocation algorithms, performance metrics) while actual allocation patterns increasingly diverge from stated principles of geographic equity.",
+    "key_agents": [
+      "High-Volume Transplant Centers: Primary beneficiary (institutional/arbitrage) \u2014 concentrate organ referrals, maintain superior outcomes, attract surgeon talent and referrals in positive feedback loop",
+      "Low-Volume Transplant Centers: Primary victim (moderate/constrained) \u2014 struggle to maintain case volume, lose staff to competitors, face program viability challenges while constrained by allocation rules",
+      "Rural Patients: Secondary victim (powerless/trapped) \u2014 face geographic barriers to high-volume centers, experience longer waitlist times, lower transplant rates; cannot exit system",
+      "Organ Procurement Organizations: Organized actors (organized/constrained) \u2014 coordinate organ procurement and allocation while optimizing for their own performance metrics; constrained by regulatory oversight but incentivized toward concentration",
+      "UNOS Regulatory Framework: Institutional actor (institutional/arbitrage) \u2014 maintains allocation policies and oversight; has arbitrage capacity through policy design; framework increasingly performs coordination function rather than executing it",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees dual nature of constraint: genuine specialization coordination paired with extractive access redistribution"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts access from rural and low-volume populations through concentration mechanisms, but the extraction is not total (some organs do reach rural centers) and is partly justified by outcome quality. The trajectory shows increasing extractiveness over 20 years as urban centers accumulate advantages and regulatory frameworks struggle to counteract concentration. Suppression (0.65): High. Significant barriers prevent low-volume centers from competing: geographic patient bases, surgery learning curves, surgeon recruitment costs, infrastructure requirements, regulatory compliance costs. Rural patients face barriers including transportation distance, social ties to local providers, and limited awareness of distant center options. These barriers are not total (patients can relocate, centers can invest) but are substantial. Theater ratio (0.48): Moderate. UNOS allocation policies create theatrical elements (stated equity principles, performance metrics, allocation algorithms) that exceed the actual coordination function. However, theater is not dominant \u2014 the allocation system does coordinate real matching of organs to centers, though not according to stated principles. Theater has increased over time as policies have become more elaborate while actual allocation logic has become more concentrated.",
+    "directionality_logic": "High-volume centers experience low d (beneficiary status + arbitrage exit options \u2192 negative effective extraction). Rural patients experience high d (victim status + trapped exit options \u2192 high effective extraction). Low-volume centers experience moderate-high d (victim status + constrained exit options \u2192 high-moderate effective extraction). OPOs experience moderate d (organized actors with constrained exit but also with internal incentive misalignment \u2192 mixed extraction). The analytical observer experiences moderate d (analytical position on extraction/coordination duality). Directionality values reflect structural position within the concentration mechanism: those who benefit from concentration have low d; those trapped by geography or capacity constraints have high d.",
+    "perspectival_gap": "High-volume centers perceive this constraint as pure coordination (Rope): organs flow to centers with best outcomes, which makes medical sense. Low-volume centers perceive extraction (Tangled Rope leaning toward Snare): they are losing organs and staff to competitors while constrained by allocation rules. Rural patients perceive extraction (Snare): they face barriers to access that seem arbitrary and uncontrollable. OPOs perceive mixed extraction and coordination (Tangled Rope): they are meant to coordinate allocation but are incentivized to concentrate organs. UNOS perceives its own allocation framework as coordinating equity and utility (Rope/Piton hybrid), but empirical allocation increasingly contradicts stated principles. The perspectival gaps reveal that 'specialization improves outcomes' (coordination narrative from beneficiary centers) and 'concentration denies access' (extraction narrative from rural patients) are both structurally true \u2014 the constraint is genuinely dual.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy through dual classification: the analytical observer correctly identifies tangled_rope because the constraint exhibits both genuine coordination (specialization, outcome improvement) and genuine extraction (access redistribution, barrier creation). The high-volume center's rope classification is their sincere experience from within the coordination function. The rural patient's snare classification is their sincere experience of extraction without exit. Both are correct within their structural position. The tension between them is not resolved by choosing one type \u2014 it is resolved by recognizing that the constraint coordinates specialization while extracting access. The regulatory framework's piton classification reflects that UNOS policies maintain theater (elaborate allocation rules) while actual allocation has shifted toward concentration. The mandatrophy is not resolved by picking a single type but by mapping the presheaf: each position sees a real aspect of the constraint structure, and the full picture requires all perspectives together."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "organ_donation_supply_scarcity",
+      "transplant_surgery_training_pipeline",
+      "healthcare_geographic_equity"
+    ],
+    "dual_formulation_note": "Transplant center competition is downstream of organ supply scarcity but represents a distinct structural constraint. It creates secondary coordination problems (specialization, outcome improvement) while creating secondary extraction mechanisms (geographic concentration). Linked upstream to donation supply constraints and downstream to healthcare equity patterns."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.58
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "header": {
+    "constraint_id": "coverture_legal_disability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cov"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Coverture Legal Disability in Anglo-American Common Law",
+    "topic_domain": "legal/property_rights/family_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "married_husbands"
+    ],
+    "victims": [
+      "married_women"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Coverture Wife",
+      "comment": "PERSPECTIVE 1: MARRIED WOMAN UNDER COVERTURE (SNARE) \u2014 Legally ceases to exist as an independent person upon marriage. Trapped by law, social expectation, economic dependency, and lack of legal recourse. Cannot own property, sign contracts, sue or be sued independently, or control her own earnings. Bears full extraction cost with no structural exit option. Suppression is maximal: the legal disability prevents escape through alternative institutional arrangements."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Coverture Husband",
+      "comment": "PERSPECTIVE 2: MARRIED MAN UNDER COVERTURE (ROPE) \u2014 Gains exclusive control over wife's property, earnings, and legal agency. Experiences the constraint as legitimate marital governance and family coordination. Net beneficiary with maximal arbitrage options \u2014 can exit marriage and retain all accumulated property. Interprets the constraint as natural marital order, not extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Coverture Widow or Separate Trader",
+      "comment": "PERSPECTIVE 3: WIDOW OR SEPARATE TRADER (TANGLED ROPE) \u2014 Women outside the direct coverture marriage (widows with dower rights, or feme soles with merchant licenses) experience the constraint as both coordination and extraction. Legal framework provides some property protections (dower, widow's portion) while simultaneously extracting via limited scope and complicated procedure. Constrained by legal complexity and limited alternative channels, but with some genuine agency and some coordination benefit (inheritance predictability, widow support norms)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Common Law Legal System",
+      "comment": "PERSPECTIVE 4: COMMON LAW LEGAL SYSTEM (PITON) \u2014 By the 19th century, coverture persists as institutional inertia despite growing recognition of its injustice. The legal machinery (courts, judges, property registries) maintains the disability through routine enforcement, but the system's own elite (judges, legal scholars, married men with professional ambitions) increasingly acknowledge its dysfunction for economic coordination. The constraint is maintained performatively \u2014 judges enforce it as written law while privately supporting reform. Theater ratio high: the system expends energy on legal fictions (a man representing his wife's interests 'as her agent') rather than direct enforcement."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a deep historical or biological perspective, some coverture structure (male headship, female economic dependency during child-rearing years) could be naturalized as inherent to human family biology and reproduction. This perspective risks seeing the constraint as emerging naturally from reproductive asymmetry. However, the structural data falsifies this: the legal disability is a contingent Anglo-American common law innovation (not present in civil law systems or earlier Germanic law), requires active enforcement through contract and property law, and suppression is entirely institutional\u2014not biological. This is a false summit: naturalization of legal invention."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "identity_lock_mechanism",
+      "question": "To what extent is the married woman's acceptance of coverture rooted in identity fusion ('I am a wife, that is my complete identity') versus external legal barriers?",
+      "resolution_mechanism": "Analysis of women's testimonies, resistance patterns, and identity-work in legal records. Observation of women's behavior after coverture is removed or avoided: do they immediately exercise independent agency, or does internalized subordination persist?",
+      "impact": "If primarily identity-locked: reclassify exit_options from 'trapped' to 'identity_locked' at biographical time horizon, which changes the classification to 'rope' (agent sees changeable constraint). If primarily trapped: snare classification confirmed (agent sees unchangeable constraint). Identity lock explains why legal reform alone (removing the law) does not immediately liberate women's agency.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of identity fusion in married women's acceptance of coverture"
+    },
+    {
+      "id": "male_coalition_consciousness",
+      "question": "Did male beneficiaries of coverture perceive themselves as a coherent extractive coalition, or was the constraint maintained through distributed individual preference and institutional inertia?",
+      "resolution_mechanism": "Analysis of legislative debates, legal arguments, and male political organizing around coverture reform. If men organized explicitly to oppose reform, the snare was actively maintained; if reform was resisted passively through institutional weight, the classification leans toward piton.",
+      "impact": "If active coalition: snare classification confirmed (extraction requires suppression of alternatives, which requires active enforcement by beneficiaries). If passive institutional weight: reclassify as piton-leaning (constraint maintained by inertia, not conscious extraction mechanism).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether male beneficiaries organized as conscious extractive coalition"
+    },
+    {
+      "id": "coverture_suppression_mechanism",
+      "question": "Is the high suppression (0.78) structural (legal barriers + economic dependency + lack of alternative institutions) or partly internalized (women's socialization into acceptance of subordination)?",
+      "resolution_mechanism": "Post-coverture reform analysis: suppression should drop sharply if legal and economic barriers are removed. Persistence of internalized suppression after barrier removal indicates cognitive/identity mechanism was significant. Comparison with cross-cultural data: do societies without legal coverture show similar female economic subordination if socialization is identical?",
+      "impact": "If primarily structural: suppression accurately measured at 0.78, and removal of legal disability alone suffices for liberation. If partly internalized: measured suppression (0.78) includes institutional cost + internalized cost, and liberation requires both legal reform and identity-work. This affects interpretation of the snare mechanism: is it purely extractive institution, or does it succeed partly through cognitive capture?",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Structural versus internalized components of coverture suppression"
+    },
+    {
+      "id": "coverture_coordination_function",
+      "question": "Did coverture solve any genuine coordination problem in household resource management, or was any 'coordination function' purely post-hoc rationalization for the extraction?",
+      "resolution_mechanism": "Historical comparison: did common-law countries with coverture show superior household economic outcomes vs. civil-law countries without it? Analysis of legal alternatives (marriage contracts, property trusts) that achieved coordination without legal disability. If coordination benefits are separable from extraction, a tangled rope classification might be more accurate than snare.",
+      "impact": "If coordination function is real and separable: reclassify from snare to tangled_rope (genuine coordination + asymmetric extraction). If coordination function is illusory or achieved by alternative means without disability: snare classification confirmed (pure extraction masked by coordination narrative).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether coverture provided genuine coordination benefits beyond extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "Coverture (or 'coverture by marriage') was the legal doctrine in Anglo-American common law that rendered a married woman a legal nonentity upon marriage, her legal existence 'covered' by the husband's. Under coverture, a wife could not own property in her own name, sign contracts independently, sue or be sued, claim her own earnings, or exercise independent legal agency. The constraint exhibits stark perspectival variation: married women experience it as a pure snare (trapped by law with no exit); married men experience it as legitimate family coordination (rope); the common law legal system maintains it performatively as institutional inertia (piton); and an analytical observer might risk naturalizing it as law-of-nature family structure (false summit mountain). The constraint's theater_ratio increases over the measurement interval (0.42 to 0.55) as the legal system becomes increasingly required to perform justifications for coverture that its own doctrine no longer permits\u2014a diagnostic sign of institutional decline. Extractiveness decreases slightly (0.72 to 0.68) as alternative legal mechanisms (marriage contracts, women's property acts, equity courts) begin carving out exceptions, reducing the constraint's scope. The constraint is not a mountain: it is entirely institutional, contingent to Anglo-American common law (absent in civil law systems), and actively enforced through property law and contract doctrine\u2014not a natural necessity.",
+    "key_agents": [
+      "Married Women: Primary victims (powerless/trapped) \u2014 legally ceases to exist; cannot own property, control earnings, or exercise independent legal agency; bears full cost of legal disability with no structural exit option",
+      "Married Men: Primary beneficiaries (institutional/arbitrage) \u2014 gain exclusive control over wife's property and earnings; experience constraint as family governance rather than extraction; can exit marriage and retain all assets",
+      "Widows and Separate Traders: Secondary agents (moderate/constrained) \u2014 experience constraint as tangled rope; legal framework provides some protections (dower, widow's portion, merchant licenses) alongside extraction (limited scope, complex procedure)",
+      "Common Law Legal System: Institutional actor (institutional/arbitrage) \u2014 maintains constraint through routine enforcement; increasingly recognizes dysfunction; maintains through institutional inertia rather than active policy",
+      "Parliament and Legal Reformers: Organized agents (organized/constrained) \u2014 by 19th century, push for married women's property acts; face resistance from beneficiary interests; constrained by political power of male property owners but with growing agency to change law"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The husband gains exclusive control over the wife's property, earnings, and legal agency. This is direct, unambiguous extraction of economic value and legal personhood. The value is not higher (e.g., 0.85) because the constraint exists within a framework of family obligation\u2014husbands are legally required to provide for wives' maintenance, and courts recognize some equitable interests (equity courts begin creating exceptions). Extractiveness declines slightly over the interval as alternative legal mechanisms (marriage contracts, women's property exceptions) reduce coverture's effective scope. Suppression (0.78): Very high. Legal barriers (a woman cannot contract or sue independently), economic dependency (she cannot earn her own living through law), and social barriers (no legitimate alternative to marriage; reputation destroyed if she leaves) combine to create near-total suppression of exit options. Suppression is structural, not merely internalized\u2014the law itself prevents escape. Theater ratio (0.55): Moderate and increasing. Early in the period, coverture is enforced straightforwardly as written law\u2014no performance needed, simply denial of legal standing. By the 19th century, as critiques mount, the legal system must increasingly perform justifications: judges write decisions explaining how a man represents his wife's interests 'as her agent,' develop legal fictions to accommodate women's actual economic participation (trusts, marriage contracts), and create equity court exceptions. The rising theater ratio (0.42\u21920.55) reflects the constraint becoming harder to justify directly\u2014it is maintained through institutional ritual and legal fictions rather than straightforward application.",
+    "directionality_logic": "Married women's directionality is near d=1.0 (full target): they are victims of the constraint with trapped exit options and powerless structural position. They derive d from victim status + trapped exit, yielding maximum f(d)\u22481.42. Married men's directionality is near d=0.0 (full beneficiary): they gain exclusive control with arbitrage options (can exit marriage and retain property) and institutional power. They derive d from beneficiary status + arbitrage exit, yielding negative or near-zero f(d)\u2248-0.12. Widows and separate traders occupy a middle position: they are partly victims (constrained by legal disability) and partly beneficiaries (dower protections, merchant licenses provide some agency). Their directionality d\u22480.50\u20130.65 reflects this mixed position. The common law system as institutional beneficiary has d\u22480.15 (institutional + arbitrage, like the married man's structural position but with the power atom shifted). The analysis confirms: high d for trapped victims \u2192 high f(d) \u2192 high effective extraction; low d for beneficiaries with exit \u2192 low/negative f(d) \u2192 little felt extraction.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. The married woman sees a snare: the constraint is unchangeable from within her position, extraction is maximal, suppression is total. The married man sees rope: the constraint solves the coordination problem of family property and enables him to act as a unified legal entity representing household interests. The widow or merchant woman sees tangled rope: she benefits from some legal protections while suffering legal disability. The common law system sees piton: it maintains the constraint through performative justification (legal fictions, equity court exceptions) even as its own doctrine becomes indefensible. The analytical observer risks seeing mountain: naturalizing the constraint as an inherent feature of family structure. The perspectival gaps expose the constraint's nature: what is 'natural family order' from the beneficiary's position is 'extractive legal disability' from the victim's position. The gap is not epistemic disagreement\u2014it is structural asymmetry in who benefits and who pays.",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION CONFIRMED: Coverture is a pure-extraction constraint, not a coordination mechanism or temporary scaffold. The mandatrophy is resolved by showing that any 'coordination function' (family property management, unified legal representation) is subordinate to and masks the primary extraction mechanism (appropriation of the wife's legal personhood and economic agency). The constraint requires active enforcement (through property law, contract law, court decisions denying women legal standing). It persists despite alternative mechanisms that could coordinate family property without legal disability (marriage contracts, trusts, civil law approaches without coverture). The constraint's theater_ratio increase reveals institutional decline: as coverture becomes harder to justify directly, the legal system invests energy in fictions and exceptions rather than admitting straightforward extraction. The snare classification explains why legal reform faced such resistance from beneficiaries (married men, property-owning interests) even as the constraint's functional necessity disappeared. By the 19th century, coverture was maintaining itself through institutional inertia and beneficiary resistance, not through any surviving coordination need\u2014a diagnostic signature of snare."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "married_womens_property_disability",
+      "coverture_debt_liability",
+      "womens_contractual_incapacity"
+    ],
+    "dual_formulation_note": "Coverture is a legal doctrine that encompasses multiple distinct constraints: property disability, contractual incapacity, and debt liability each have separate extractive mechanisms. The present story models coverture as a unified snare; decomposition into separate stories by mechanism would yield different \u03b5 values for each mechanism (property disability \u03b5\u22480.72, contractual incapacity \u03b5\u22480.65, debt liability \u03b5\u22480.55) reflecting different degrees of structural necessity vs. pure extraction. The unified story captures the systemic integration of these mechanisms into a single legal disability."
+  },
+  "directionality_overrides": []
+}

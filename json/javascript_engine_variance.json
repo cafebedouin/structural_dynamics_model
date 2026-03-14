@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "javascript_engine_variance",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "jsev"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "JavaScript Engine Variance and the ECMAScript Standard",
+    "topic_domain": "software/standards/web_infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "browser_vendors",
+      "platform_maintainers"
+    ],
+    "victims": [
+      "web_developers",
+      "javascript_ecosystem_reliability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Web Developer",
+      "comment": "PERSPECTIVE 1: WEB DEVELOPER (SNARE) \u2014 Trapped by the browser monoculture and universal reach requirement. Cannot exit: must target all engines due to market distribution. Must test across engines at high cost. Suppression is severe: legacy browser support, performance variance, and undocumented behavior lock developers into costly compatibility work. No exit option exists in a globally-networked web."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Framework Author",
+      "comment": "PERSPECTIVE 2: FRAMEWORK AUTHOR (TANGLED ROPE) \u2014 Constrained by the need to abstract engine variance for downstream developers. Benefits from the variance because framework abstraction creates lock-in and market opportunity. Extraction is real: must maintain engine-specific polyfills, feature detection, and compatibility layers. But genuine coordination function exists: frameworks reduce developer burden by providing unified APIs across engines."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Browser Vendor",
+      "comment": "PERSPECTIVE 3: BROWSER VENDOR (ROPE) \u2014 Benefits from engine variance through competitive differentiation (V8 performance, SpiderMonkey features, JavaScriptCore optimizations). Experiences the constraint as coordination: ECMAScript compatibility enables the common web while engine-specific optimizations drive adoption. Can exit: no vendor is forced to maintain an engine; competition is built-in. Net beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Standards Committee (TC39)",
+      "comment": "PERSPECTIVE 4: TC39 STANDARDS COMMITTEE (PITON) \u2014 Maintains the appearance of centralized standardization while the actual variance-reduction function has degraded. The committee meets regularly, publishes specifications, and follows procedure \u2014 but real JavaScript behavior is driven by engine implementation details, de facto standards (frameworks, library conventions), and historical accident. Theater ratio is high: the standardization ritual persists but does not prevent variance. Enforcement mechanism is purely coordinative (social pressure), not binding."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Testing and Tooling Coalition",
+      "comment": "PERSPECTIVE 5: TESTING AND TOOLING COALITION (SCAFFOLD) \u2014 Organized agents (Jest, Vitest, Web Platform Tests, Node.js) are building parallel verification and standardization infrastructure that bypasses engine-native compatibility testing. These tools create a sunset clause: as test suites mature and tooling coverage increases, developers can rely less on manual engine testing. Theater is moderate: tools reduce ritual but don't eliminate it. Exit path is visible: developers increasingly run comprehensive test suites instead of manual browser testing."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a civilizational perspective, engine variance may appear inherent to any dynamically-typed, JIT-compiled language with multiple independent implementations. The technical complexity of optimizing JavaScript across diverse hardware creates 'natural' variance in edge-case behavior, numeric precision, and performance characteristics. This perspective risks naturalizing what is actually a contingent institutional arrangement: engine variance is partly technical inevitability, partly market incentive structure, and partly historical accident."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technical_vs_market_variance",
+      "question": "How much observed engine variance is technical inevitability versus market-driven differentiation strategy?",
+      "resolution_mechanism": "Historical analysis of variance sources: numeric precision differences (technical), performance optimization divergence (mixed), feature adoption timing (market). Correlation between competitive pressure and variance magnitude across engine pairs.",
+      "impact": "If primarily technical: mountain classification gains support. If primarily market-driven: snare/tangled_rope classification confirmed. If mixed: ratio determination affects suppression estimate and exit option characterization.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical inevitability versus market-driven engine differentiation"
+    },
+    {
+      "id": "standards_enforcement_capacity",
+      "question": "Can TC39 standardization process actually constrain engine behavior, or does it merely codify post-hoc rationalization of existing implementations?",
+      "resolution_mechanism": "Analysis of proposal cycle: instances where spec changes led to engine re-implementation vs instances where engines forced spec revisions. Lag time between spec finalization and engine conformance.",
+      "impact": "If TC39 has real enforcement: suppression is moderate (standards create coordination). If enforcement is weak: suppression is high (de facto standards emerge from engines, not from committee). Theater ratio rises if enforcement is weak.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether TC39 standardization process enforces engine conformance"
+    },
+    {
+      "id": "developer_coalition_threshold",
+      "question": "At what point do testing frameworks and platform abstraction tools become sufficient to eliminate engine variance as a binding constraint?",
+      "resolution_mechanism": "Measurement of developer reliance on manual engine testing over time; correlation with test framework adoption; framework market share progression; budget allocation shifts from manual testing to automated tooling.",
+      "impact": "If threshold is near: scaffold perspective is confirmed and sunset timing becomes measurable. If threshold is distant or unreachable: scaffold is aspirational and constraint persists as snare/tangled_rope. Affects mandatrophy resolution for this constraint's lifecycle.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Developer coalition threshold for engine variance irrelevance"
+    },
+    {
+      "id": "webassembly_constraint_replacement",
+      "question": "Does WebAssembly bypass JavaScript engine variance entirely, creating an exit path for developers requiring deterministic execution?",
+      "resolution_mechanism": "Analysis of WebAssembly adoption patterns; performance stability across WASM runtimes vs JavaScript engines; developer preference for WASM in variance-sensitive domains (financial software, scientific computing, game engines).",
+      "impact": "If WASM provides genuine exit: snare perspective is partially invalidated for developers who can abstract to WASM. Exit options upgrade from trapped to constrained or mobile. If WASM adoption remains limited: snare persists as dominant perspective for variance-sensitive applications.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether WebAssembly provides exit from JavaScript engine variance"
+    },
+    {
+      "id": "identity_locked_framework_capture",
+      "question": "Are web developers identity-locked to JavaScript/browser ecosystem through professional identity and career path dependence, making them unable to exit even if structural barriers fell?",
+      "resolution_mechanism": "Analysis of developer career trajectory: mobility between JavaScript and alternative technology stacks; frequency and career cost of technology transition. Survey of developer identity fusion with JavaScript ecosystem.",
+      "impact": "If identity-locked is primary binding: exit_options should be identity_locked rather than trapped for moderate/organized developers. Perspectival gap widens: institutional/arbitrage agents (vendors/frameworks) perceive rope while identity-locked/moderate agents perceive different constraint type at biographical horizon.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether developer identity is fused with JavaScript ecosystem"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "JavaScript engine variance \u2014 the differences in behavior, performance characteristics, and feature implementation across V8 (Chrome, Node.js), SpiderMonkey (Firefox), JavaScriptCore (Safari), and historically other engines \u2014 creates a structural constraint that developers cannot escape in a globally-networked web. The constraint exhibits tangled rope structure: genuine coordination function exists (browsers coordinate on ECMAScript standard, preventing total incompatibility) alongside significant asymmetric extraction (developers bear testing and compatibility costs while vendors benefit from engine-specific optimizations and platform lock-in). The extractiveness has increased over the interval as JavaScript's scope expanded to server-side, embedded, and real-time systems where performance variance and edge-case behavior create binding constraints. Theater ratio has risen as the TC39 standards committee maintains elaborate procedural legitimacy (yearly release cycles, stage proposals, test suites) while the actual variance-reduction function has degraded: vendors implement specs selectively, developers rely on testing frameworks to abstract variance rather than on standardization, and de facto standards emerge from framework conventions rather than from formal committee decisions.",
+    "key_agents": [
+      "Web Developers: Primary victim (powerless/trapped) \u2014 must target all engines due to market distribution; test across variants at high cost; locked into ecosystem by career path",
+      "Framework Authors: Secondary beneficiary/victim (moderate/constrained) \u2014 benefit from abstraction lock-in but must maintain compatibility layers; experience tangled coordination and extraction",
+      "Browser Vendors: Primary beneficiary (institutional/arbitrage) \u2014 drive adoption through engine-specific optimizations; use variance as competitive differentiation; experience constraint as pure coordination",
+      "JavaScript Ecosystem Reliability: Victim (powerless/analytical) \u2014 abstract collective good; cannot organize; bears cost of accumulated technical debt and variance-induced bugs",
+      "TC39 Standards Committee: Institutional actor (institutional/arbitrage) \u2014 maintains procedural legitimacy; enforcement capacity is weak; sees standardization process as degraded (piton perspective)",
+      "Testing and Tooling Coalition: Organized agents (organized/constrained) \u2014 Jest, Vitest, Web Platform Tests create alternative variance-reduction infrastructure with sunset logic"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High and rising. Initial value (0.32) reflects 1990s-2000s era when JavaScript was primarily browser-scripting and variance costs were absorbed as expected friction. Current value (0.58) reflects scope expansion to server-side, IoT, and real-time systems where engine variance creates measurable costs: performance cliffs on specific engine implementations, numerical precision errors causing business-logic failures, feature-detection overhead. The rising trajectory (0.32 \u2192 0.45 \u2192 0.58) indicates extraction accumulation as complexity and scope increase. Suppression (0.62): Moderate-high and persistent. Barriers include: (1) technical: genuine differences in optimization strategies, garbage collection, and numeric implementations; (2) market: vendors benefit from variance so have limited incentive to eliminate it; (3) social: developers internalize manual testing as normal practice. Suppression is not total (tooling partially mitigates) but high enough to lock developers into costly adaptation. Theater ratio (0.68): High and rising. TC39 maintains elaborate procedural theater: formal proposal stages, committee meetings, test suite governance. But the actual variance-reduction function has degraded: vendors cherry-pick specs, developers ignore spec-level details in favor of library abstractions, and real standardization happens through de facto conventions (async/await patterns, framework APIs) rather than through formal process. Theater ratio increase (0.48 \u2192 0.60 \u2192 0.68) reflects growing gap between procedural legitimacy and functional variance-reduction.",
+    "perspectival_gap": "The gap between the vendor's rope perspective and the developer's snare perspective reflects a genuine structural asymmetry: the same variance mechanism benefits one party (vendor competitive differentiation) and harms the other (developer compatibility costs). This is precisely what tangled rope captures: real coordination function (ECMAScript standard prevents total incompatibility) coexists with asymmetric extraction (variance benefits vendors more than developers). The framework author's tangled rope classification bridges the gap: they perceive both the coordination challenge (must abstract across engines) and the extraction opportunity (this abstraction creates lock-in). The piton classification for TC39 indicates that the committee's power to constrain engine behavior has eroded over time: the standardization ritual persists for procedural legitimacy, but actual variance-reduction is driven by de facto standards (framework conventions, testing frameworks) rather than by committee decisions. The analytical mountain perspective risks treating variance as inherent technical property when it is partly market-driven choice.",
+    "directionality_logic": "Directionality values are derived from beneficiary/victim status and exit options. Browser vendors (institutional/arbitrage) achieve low d: they benefit from variance, have arbitrage options (can exit engine business, though costly), and experience the constraint as enabling. Web developers (powerless/trapped) achieve high d: they bear costs, have trapped exit (cannot exit web development without career disruption), and experience the constraint as extractive. Framework authors (moderate/constrained) achieve intermediate d: they both benefit (through lock-in) and bear costs (through compatibility maintenance). The schema's f(d) sigmoid maps these d values to effective extraction chi. High d produces high chi (developers experience maximum extractiveness); low d produces near-zero or negative chi (vendors experience beneficial coordination). The piton and mountain perspectives have intermediate d values reflecting analytical positions that risk naturalizing the constraint rather than perceiving its contingency.",
+    "mandatrophy_analysis": "MANDATROPHY CHECKPOINT: This constraint resolves the false summit trap (mountain vs tangled_rope) through structural analysis. The analytical observer's mountain perspective claims that JavaScript engine variance is inherent to any multi-implementation language with JIT compilation and dynamic typing. However, the beneficiary/victim declarations reveal that variance is partly market-driven: vendors actively maintain variance through optimization strategies (performance differentiation) because variance benefits them competitively. If vendors coordinated to minimize variance (as they could in principle), extractiveness would drop significantly. Therefore, the mountain classification is a false summit \u2014 a naturalization of a contingent institutional arrangement. The tangled rope classification is confirmed: real coordination function (ECMAScript compatibility) coexists with real asymmetric extraction (variance-driven costs to developers). The piton classification for TC39 indicates that institutional legitimacy (standards committee) has decoupled from functional power (variance-reduction capacity), which is characteristic of institutions in maintenance mode. The scaffold perspective captures the real exit mechanism: testing frameworks and tooling infrastructure are systematically reducing developer dependence on engine-level compatibility testing, creating a sunset clause. The constraint's lifecycle follows snare \u2192 tangled rope \u2192 scaffold as tooling infrastructure matures, though the underlying variance mechanism (vendor optimization strategies) remains persistent."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "typescript_type_system_overhead",
+      "polyfill_maintenance_burden"
+    ],
+    "dual_formulation_note": "JavaScript engine variance decomposes into multiple structurally distinct constraints: (1) numeric precision variance (low \u03b5, mountain-like, inherent to IEEE 754 implementation details); (2) optimization variance and performance cliffs (medium \u03b5, tangled rope, market-driven competitive differentiation); (3) feature adoption timing and deprecation variance (high \u03b5, snare for developers relying on bleeding-edge features). This story models the general constraint as experienced by full-stack developers. Numeric variance is upstream and technical; optimization variance is the primary extraction mechanism; feature variance is downstream and often handled by frameworks/tooling."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.55
+    }
+  ]
+}

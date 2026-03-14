@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "international_development_inequality",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "International Development Inequality Constraint",
+    "topic_domain": "political_economy/international_development",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "capital_rich_nations",
+      "multinational_corporations",
+      "financial_institutions"
+    ],
+    "victims": [
+      "low_income_countries",
+      "local_workers",
+      "extractive_resource_communities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Resource-Dependent Nation",
+      "comment": "PERSPECTIVE 1: RESOURCE-DEPENDENT NATION (SNARE) \u2014 Low-income countries with concentrated export economies (mineral, agricultural) face structural entrapment: debt obligations to multilateral institutions, terms-of-trade volatility, and colonial-era infrastructure dependencies create insurmountable barriers to exit. Maximum extraction; minimal coordination benefit. The constraint operates through capital account control and conditional lending."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Emerging Market Middle Class",
+      "comment": "PERSPECTIVE 2: EMERGING MARKET MIDDLE CLASS (TANGLED ROPE) \u2014 Constrained by currency exposure, skill-export dependence, and brain drain incentives, but also benefits from integration into global supply chains, access to capital, and professional networks. Mixed extraction and coordination: the constraint coordinates their productivity but asymmetrically extracts through exchange-rate exposure and remittance obligations."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Capital-Rich Nation Treasury",
+      "comment": "PERSPECTIVE 3: CAPITAL-RICH NATION TREASURY (ROPE) \u2014 Benefits from comparative advantage, remittance inflows, market access for exports, and low-cost capital flows. Experiences the constraint as coordination: reserve-currency status enables surplus recycling that funds development projects. Net beneficiary with exit optionality through arbitrage (currency diversification, capital flight)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Multilateral Development Bank",
+      "comment": "PERSPECTIVE 4: MULTILATERAL DEVELOPMENT BANK (TANGLED ROPE) \u2014 Genuinely coordinates development finance (reduces information asymmetry, enables knowledge transfer), but simultaneously operates as an extraction mechanism through conditionality regimes, structural adjustment requirements, and sovereignty constraint. Institutional actor constrained by governance rules and donor accountability, not by exit barriers \u2014 experiences the constraint as dual coordination and asymmetric extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regional Integration Coalitions",
+      "comment": "PERSPECTIVE 5: REGIONAL INTEGRATION COALITIONS (SCAFFOLD) \u2014 ASEAN, MERCOSUR, African Union initiatives represent organized attempts to restructure the inequality constraint through reduced trade barriers within regions, joint infrastructure investment, and negotiated commodity agreements. These coalitions see the global inequality structure as a temporary coordination failure with a generational sunset: regional bloc power can gradually shift terms of trade and access. Extraction declines as coalition bargaining power grows."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Development Aid Theater",
+      "comment": "PERSPECTIVE 6: DEVELOPMENT AID THEATER (PITON) \u2014 Official development assistance (ODA), NGO programs, and capacity-building initiatives are substantially performative: aid flows average ~0.3% of donor GDP with visibility/domestic political value far exceeding impact; conditionality serves donor interests more than recipient development; measured outcomes (MDG/SDG attainment) decouple from structural inequality reduction. The theater persists through institutional inertia despite low functional change in core extractive dynamics \u2014 replaced by neither donor countries nor recipients because it serves symbolic functions for both."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal scale, some inequality is inherent to initial capital accumulation and comparative advantage: countries with natural resources, geographic location, or early industrialization have structural advantages that compound. This perspective sees international development inequality as an immutable feature of how economies develop. However, this classification is vulnerable to false summit detection: historical contingency (colonial extraction, post-war institutional design, currency regimes) reveals the apparent 'law' as path-dependent institutional arrangement, not natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "extraction_vs_development_lag",
+      "question": "How much measured inequality reflects legitimate development lag (poor countries catching up) versus structural extraction (institutional mechanisms that prevent catch-up)?",
+      "resolution_mechanism": "Historical convergence analysis: rates of per-capita income growth controlling for initial capital stock, human capital, and institutional stability. If convergence clubs emerge (persistent stratification), extraction dominates; if conditional convergence holds globally, development lag dominates.",
+      "impact": "If extraction dominates: snare classification correct for resource-dependent nations; scaffold perspective overly optimistic about regional coalitions. If lag dominates: rope classification more accurate; inequality constraint is temporary coordination problem with automatic sunset.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether measured inequality reflects catch-up dynamics or structural extraction"
+    },
+    {
+      "id": "conditionality_internalization",
+      "question": "Do low-income country elites internalize development bank conditionality as necessary discipline (identity lock) or experience it as external extraction (trapped)?",
+      "resolution_mechanism": "Elite narrative analysis, policy adoption timing relative to conditionality imposition, coefficient on policy uptake for carrots vs sticks. If elites adopt conditionality ahead of/independent of funding pressure, internalization is real; if adoption correlates tightly with disbursement schedules, externally-imposed constraint dominates.",
+      "impact": "If internalized: the constraint operates through identity fusion (developing country ministers have fused with IMF orthodoxy), making escape require identity reconstruction; classify as identity_locked. If external: constraint operates through material coercion (funding withdrawal), classify as trapped/constrained.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether conditionality is internalized or experienced as external coercion"
+    },
+    {
+      "id": "capital_flight_volition",
+      "question": "Do capital flows from poor to rich countries represent voluntary arbitrage by wealthy elites or structural extraction through financial market operations?",
+      "resolution_mechanism": "Flow decomposition analysis: separating FDI, portfolio investment, illicit capital flight, remittances, and debt service; correlation with political risk changes and currency volatility; elite preference revelation through capital location decisions and safe-haven holdings.",
+      "impact": "If voluntary arbitrage: beneficiary status (capital-rich nations) is self-reinforcing through elite choice; institutional constraint is rope-type coordination of capital markets. If structural extraction: capital flight is predatory (extractive institutions drain resources); constraint is snare for source countries.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether capital flows reflect elite arbitrage or structural extraction"
+    },
+    {
+      "id": "regional_bloc_coalition_sustainability",
+      "question": "Can regional integration coalitions (ASEAN, MERCOSUR, AU) sustain sufficient bargaining power to reduce global inequality structure, or do they fragment under internal competitive pressures?",
+      "resolution_mechanism": "Coalition stability analysis: tracking member compliance with internal agreements, exit threats, and defection patterns; measuring coalition negotiating strength in WTO and bilateral trade talks; correlation with commodity price cycles.",
+      "impact": "If sustainable: scaffold classification valid \u2014 generational sunset is real structural feature; organized agents can reshape constraint. If fragmentation: scaffold is aspirational; organized perspective is overly optimistic; real constraint persists as snare/tangled rope from powerless/moderate agent views.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regional coalition power can sustain against fragmentation"
+    },
+    {
+      "id": "aid_effectiveness_threshold",
+      "question": "Is the low measured impact of ODA and development programs due to implementation failure (fixable through better design) or structural constraints (theater is all that can be delivered given extraction mechanism)?",
+      "resolution_mechanism": "Experimental variation in aid conditionality, recipient country institutional quality, and donor coordination. If high-quality implementation produces outsized gains: theater is organizational pathology. If gains remain modest even with best practices: theater reflects structural constraint.",
+      "impact": "If implementation failure: piton classification correct (degraded function persists through inertia). If structural constraint: aid theater is functional adaptation (donors and recipients both benefit from visibility without requiring real structural change); classify constraint as snare/tangled rope with aid as pressure relief valve.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether aid ineffectiveness reflects implementation failure or structural constraint"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "International development inequality represents a structural constraint where capital-rich nations, multinational corporations, and financial institutions extract economic value from low-income countries through mechanisms that superficially appear as coordination (trade, finance, aid) but operate asymmetrically. The constraint exhibits all six DR types depending on the observer's structural position. From the perspective of resource-dependent nations with no alternative export markets and debt-service obligations, the constraint appears as a snare: insurmountable barriers to exit and maximum extraction. From the perspective of capital-rich nations with reserve-currency privileges and investment portfolio diversification, the same constraint appears as rope: pure coordination enabling efficient capital allocation and trade. The constraint's theater_ratio (0.58) reflects that development aid, capacity building, and institutional reform programs are substantially performative \u2014 visible outputs (projects completed, institutions built, targets met) decouple from structural inequality reduction. The extractiveness has drifted upward (0.42 \u2192 0.58) over the 40-year interval as conditionality regimes have intensified, commodity-price volatility has increased pressure on poor countries, and capital markets have enabled more sophisticated extraction through currency arbitrage and debt-trap lending.",
+    "key_agents": [
+      "Low-income countries (resource-dependent): Primary victims (powerless/trapped) \u2014 face structural entrapment through debt obligations, export concentration, and institutional dependencies",
+      "Multinational corporations and financial institutions: Primary beneficiaries (institutional/arbitrage) \u2014 extract through terms-of-trade advantage, capital flight optionality, and conditionality enforcement",
+      "Capital-rich nations: Secondary beneficiaries (institutional/arbitrage) \u2014 benefit from reserve-currency seigniorage, investment returns, and market access",
+      "Emerging market middle class: Secondary victim (moderate/constrained) \u2014 face currency exposure and skill-export dependence; also benefit from supply-chain integration",
+      "Multilateral development banks: Dual-role institutional actor (institutional/constrained) \u2014 coordinate development finance but simultaneously enforce extraction through conditionality",
+      "Regional integration coalitions (ASEAN, MERCOSUR, AU): Organized agents (organized/constrained) \u2014 attempting to restructure inequality through collective bargaining and internal integration",
+      "Development aid apparatus: Institutional actors (institutional/arbitrage) \u2014 maintain theatrical performance of development support with low structural impact"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint operates through multiple channels: terms-of-trade deterioration for primary-commodity exporters, debt-service obligations that consume government revenue, capital flight conduits that drain resources, conditional lending that constrains fiscal autonomy, and profit repatriation mechanisms. The 0.58 value reflects that extraction is substantial but not total \u2014 poor countries still accumulate capital, some development occurs, and elite cooperation with the constraint system suggests some benefit flows to collaborating groups. The upward drift (0.42 \u2192 0.58) indicates that extraction mechanisms have intensified as commodity volatility increased, capital markets globalized, and conditionality regimes expanded. Suppression (0.62): High. Multiple barriers prevent exit: capital controls and currency depreciation make alternative economic models costly; debt-service obligations create fiscal constraints; institutional dependencies (trained bureaucrats, imported technology, currency regimes) embed extraction mechanisms; and global supply-chain integration creates path-dependent specialization. But suppression is not total (some countries maintain alternative institutions, some exit attempts succeed) \u2014 value reflects strong barriers rather than impossibility. Theater ratio (0.58): Moderate-high. Development aid apparatus (ODA, NGO programs, capacity building) produces visible outputs that decouple from structural change: projects completed without institutional innovation; targets met (MDGs/SDGs) while inequality persists; knowledge transfer without power redistribution. The theater has increased over time as aid programs proliferated while extraction mechanisms deepened. Aid serves signaling functions for both donors (demonstrating commitment to development) and recipients (providing legitimacy for elite collaboration with external institutions) without requiring structural change.",
+    "perspectival_gap": "Resource-dependent nation sees snare (trapped, no exit). Capital-rich nation sees rope (arbitrage, net beneficiary). Emerging market sees tangled rope (constrained, mixed). Development bank sees tangled rope from within (constrained by governance, coordinating and extracting simultaneously). Regional coalitions see scaffold with sunset (organized, generational restructuring possible). Aid apparatus sees piton (degraded function, theater persists). Analytical observer risks mountain (inequality inherent to capital accumulation). The gap reveals that agent power and exit options are the primary drivers of perspectival divergence \u2014 not disagreement about facts, but about what barriers are surmountable and what directions value flows.",
+    "directionality_logic": "The directionality pipeline computes d (beneficiary vs victim status) from declared structural relationships and exit options. Resource-dependent nations are victims with trapped exit \u2192 d \u2248 0.95 \u2192 maximum f(d) \u2248 1.42. Capital-rich nations are beneficiaries with arbitrage exit \u2192 d \u2248 0.05 \u2192 f(d) \u2248 -0.12 (negative, meaning extraction flows toward them). Emerging market actors are mixed (some victim status, constrained exit) \u2192 d \u2248 0.65 \u2192 f(d) \u2248 1.00 (moderate). The global scope multiplier \u03c3(global) = 1.2 amplifies \u03c7 for all perspectives, reflecting that inequality constraint operates at planetary scale. The perspectival gap shows agents with different power and exit positions experiencing radically different constraint types despite identical base \u03b5 and suppression values \u2014 the gap itself is diagnostic of an extraction constraint (if all perspectives produced the same type, the constraint would be more uniform/less politically contested).",
+    "mandatrophy_analysis": "TANGLED ROPE DIAGNOSTIC: The constraint qualifies as tangled rope (not pure snare) because it exhibits genuine coordination alongside asymmetric extraction. The coordination function: development finance reduces information asymmetry, enables capital flows to high-return uses, transfers knowledge and technology, and coordinates cross-border supply chains. These are real coordination services. The extraction function: conditionality constrains fiscal autonomy, terms-of-trade deterioration transfers wealth to capital-rich nations, capital flight drains resources, and commodity dependence limits alternatives. Both functions coexist. The snare perspective (resource-dependent nations) sees maximum extraction with minimal coordination benefit \u2014 accurate from their structural position. The rope perspective (capital-rich nations) sees pure coordination \u2014 also accurate, because capital flows toward them and coordinated supply chains serve their interests. The mandatrophy is resolved by recognizing that BOTH are correct from their respective positions; the constraint is tangled rope in objective structure but appears differently across the presheaf of observations. The piton perspective (aid apparatus) reveals that theater has increased over time \u2014 aid programs produce visible outputs while extraction mechanisms deepen, suggesting the constraint's functional basis (genuine development coordination) is degrading into theater (visibility without impact) \u2014 classic piton signature."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "commodity_price_volatility",
+      "debt_trap_lending",
+      "capital_flight_mechanisms",
+      "conditional_lending_regimes"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.28
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "airport_capacity_constraint",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "airpt"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Airport Capacity Constraint and Slot Allocation",
+    "topic_domain": "transportation/infrastructure/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "legacy_carriers",
+      "airport_operators",
+      "incumbent_airlines"
+    ],
+    "victims": [
+      "new_entrant_airlines",
+      "air_travelers_denied_choice",
+      "underserved_markets"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Air Traveler in Underserved Market",
+      "comment": "PERSPECTIVE 1: UNDERSERVED AIR TRAVELER (SNARE) \u2014 Cannot exit the constraint. Limited routing options, high prices, no alternative transportation for long distances. Slot scarcity concentrated at hub airports means routes to secondary cities are subsidized only when convenient for legacy carriers. Experiences maximum extraction with minimal alternative."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "New Entrant Airline",
+      "comment": "PERSPECTIVE 2: NEW ENTRANT AIRLINE (SNARE) \u2014 Structurally trapped by slot allocation rules that grandfather incumbents. Cannot acquire meaningful capacity at congested hub airports without multi-year waitlists or purchasing from existing carriers at inflated secondary market prices. Exit would require abandonment of market; presence requires accepting subordinate position indefinitely."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Regional Airline Operator",
+      "comment": "PERSPECTIVE 3: REGIONAL AIRLINE OPERATOR (TANGLED ROPE) \u2014 Experiences mixed constraint. Genuine coordination function: slot allocation system prevents total chaos and runway collisions; enables route planning and scheduling. Simultaneously extracted from through priority schemes favoring majors and maintenance fees. High cost to exit (abandonment of developed routes) but some agency through feed partnerships and regional exemptions."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Carrier",
+      "comment": "PERSPECTIVE 4: LEGACY CARRIER (ROPE) \u2014 Primary beneficiary experiencing the constraint as pure coordination mechanism. Slot grandfathering (historical priority rights) provides stable, predictable capacity allocation. Coordinates network planning with minimal competition for premium slots. Experiences constraint as enabling efficient operations, not as extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Airport Authority",
+      "comment": "PERSPECTIVE 5: AIRPORT AUTHORITY (TANGLED ROPE) \u2014 Genuine coordination benefit: slot allocation prevents gridlock and unsafe overcrowding. Simultaneously extracted as enforcer \u2014 FAA mandates compliance, airlines game system through false declarations of operational requirements, airport absorbs coordination costs. Has agency through slot redesign but faces political pressure from legacy carrier coalition."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Liberalization Coalition",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL LIBERALIZATION COALITION (SCAFFOLD) \u2014 EU sky liberalization and ICAO open skies protocols represent sunset mechanisms: capacity constraints are framed as temporary coordination problems to be solved through infrastructure investment, dynamic pricing, and demand management rather than permanent slot grandfathering. Sunset logic: as capacity grows and pricing mechanisms mature, slot scarcity extraction declines. Current suppression high but declining as alternatives mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Slot Grandfather Rights Institution",
+      "comment": "PERSPECTIVE 7: SLOT GRANDFATHER RIGHTS (PITON) \u2014 Theater ratio 0.38 reflects that grandfathered slot rights are largely performative allocation mechanism where the real function (preventing runway collisions) could be served by more efficient methods (dynamic pricing, market-clearing auctions, real-time traffic management). The ritual persists through institutional path dependency \u2014 legacy carriers fought deregulation and won regulatory entrenchment. Slot allocation ceremony maintains political legitimacy while actual allocation increasingly reflects informal power, not rules."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Scarcity View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL SCARCITY VIEW (MOUNTAIN) \u2014 From civilizational scale, runway capacity is a genuine physical limit: only so many aircraft can use a runway safely per hour. Queuing theory shows bottleneck formation is inevitable when demand exceeds capacity. Constraint appears immutable by nature. Engine will identify this as potential false summit \u2014 the constraint's extractive properties derive from allocation rules, not physical law. Scarcity is real; extraction through grandfathering is contingent."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "physical_vs_regulatory_scarcity",
+      "question": "Is the constraint-experienced scarcity fundamentally physical (runway capacity is an immutable floor) or primarily regulatory (slot grandfathering artificially constrains available capacity)?",
+      "resolution_mechanism": "Empirical comparison of actual runway utilization at constrained airports vs theoretical maximum utilization under dynamic pricing or market-clearing allocation. Analysis of capacity expansion history and slot creation feasibility.",
+      "impact": "If physical: Mountain classification justified. If regulatory: Snare/Tangled Rope extraction mechanism is engineered choice, not natural limit. Could reduce extractiveness 0.52 \u2192 0.28 through reallocation.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether scarcity is physical or regulatory"
+    },
+    {
+      "id": "secondary_slot_market_efficiency",
+      "question": "Does the secondary slot market (leasing, sales among carriers) function as an efficient price discovery mechanism or as a rent-extraction vehicle for incumbents?",
+      "resolution_mechanism": "Analysis of secondary market pricing vs marginal cost of operations, correlation between slot prices and route profitability, impact on new entrant participation rates.",
+      "impact": "If efficient: secondary market legitimizes grandfathering as price-discovery mechanism. If rent-extractive: secondary market amplifies extraction by commodifying access, raising barrier for new entrants from grandfathered rights to grandfathered rights + market premium.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Efficiency of secondary slot market"
+    },
+    {
+      "id": "infrastructure_investment_counterfactual",
+      "question": "Would additional runway/terminal capacity be economically justified if the benefits of expanded choice and new-entrant competition were internalized?",
+      "resolution_mechanism": "Cost-benefit analysis of expansion: compare capital cost against benefits to new entrants, reduced fares from competition, improved connectivity to underserved markets, aviation demand elasticity.",
+      "impact": "If expansion justified: current allocation of finite capacity reflects political choices favoring incumbents over infrastructure investment. Constraint is then partially artificial. If expansion not justified: physical scarcity is binding and grandfathering is second-best allocation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Economic justification for infrastructure expansion"
+    },
+    {
+      "id": "international_liberalization_sunset_pace",
+      "question": "Will EU-style open skies and dynamic slot allocation expand globally fast enough to obsolete grandfathering before incumbent lock-in becomes permanently embedded?",
+      "resolution_mechanism": "Tracking of regulatory reforms: ICAO recommendations adoption rates, bilateral air service agreements, domestic deregulation timelines in major aviation markets, technology deployment (dynamic air traffic management) readiness.",
+      "impact": "If fast (5-10 year horizon): Scaffold perspective is descriptively accurate, extractiveness will decline. If slow (20+ years): extractiveness persists, scaffold is aspirational, constraint mutates toward Piton rather than Rope.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Pace of international open skies liberalization"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Airport capacity constraints at major hub airports create a structural tension between physical scarcity (runways can only handle so many operations per hour) and regulatory allocation (slot grandfathering systems that privilege incumbent carriers over new entrants and underserved routes). The constraint exhibits characteristics of multiple DR types depending on observer position: a snare for new airlines and travelers denied choice, a tangled rope mixing genuine coordination (preventing runway gridlock) with extraction (incumbent protection), a rope for legacy carriers experiencing it as pure coordination, a scaffold for liberalization movements seeking to replace grandfathering with dynamic pricing, a piton reflecting institutional inertia in slot allocation rules, and a potential false summit from the natural scarcity perspective. The actual enforcement mechanism (FAA slot rules, EU slot regulation, bilateral air service agreements) layered atop physical bottlenecks creates measurable extraction. Base extractiveness has risen from 0.38 (when hub consolidation was less severe) to 0.52 (current state) over 30 years as network effects concentrate traffic at major hubs and incumbent market share compounds through slot accumulation. Theater ratio remains moderate (0.38) because slot allocation serves genuine safety/coordination functions, but the ratio has increased slightly as the performative aspects of grandfathering (justifying inherited rights through operational necessity claims) have become more prominent relative to actual safety coordination.",
+    "key_agents": [
+      "Legacy Carriers (institutional/arbitrage): Primary beneficiaries \u2014 own grandfathered slots, use them as competitive moat, extract rent through secondary market sales to new entrants",
+      "New Entrant Airlines (powerless/trapped): Primary victims \u2014 face multi-year slot acquisition timelines, pay premium prices in secondary markets, effectively excluded from major hubs",
+      "Airport Authorities (institutional/constrained): Enforcer role \u2014 coordinate actual ground operations, absorb pressure from all sides, have nominal authority over slot allocation but limited real power against FAA mandates and bilateral agreements",
+      "Air Travelers in Underserved Markets (powerless/trapped): Victims of indirect extraction \u2014 limited route options, higher fares, poor connectivity because resources concentrated on profitable hub-to-hub routes served by incumbents",
+      "Regional Carriers (moderate/constrained): Mixed position \u2014 some benefit from feed agreements with legacy carriers, some trapped by inability to compete for hub slots",
+      "EU/ICAO Liberalization Movement (organized/constrained): Working to sunset the constraint through open skies protocols, dynamic capacity management, and pricing mechanisms",
+      "Regulatory Bodies (institutional/arbitrage): FAA, EU Commission, bilateral aviation negotiators \u2014 maintain the system despite internal recognition of its extractive properties"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts measurable benefits to incumbents through slot value (estimated at $2M-$5M per daily slot pair at major US hubs). New entrants pay this premium; travelers bear it through higher fares. The extraction is sustained through regulatory enforcement (FAA mandatory slot compliance) and through secondary market mechanisms that commodify grandfathered rights. Extractiveness is NOT at snare levels (0.66+) because: (a) some coordination value is genuine (runway safety, schedule predictability), and (b) infrastructure alternatives exist in principle (though politically blocked). Suppression (0.65): High. Barriers to entry are substantial: slot acquisition costs measured in hundreds of millions, regulatory timelines of 2-5 years per slot pair, network effects that make single-route entry unviable. However, suppression is not absolute \u2014 new entrants do enter (Southwest, regional carriers), but only through feed partnerships or secondary market purchases. Barriers have INCREASED over the measurement interval as hub consolidation has concentrated slot value. Theater ratio (0.38): Moderate. The constraint performs genuine coordination function (runway utilization optimization, collision prevention through coordinated scheduling). But performance is increasingly performative: actual runway capacity utilization at major US hubs is 70-85%, suggesting slack exists; sophisticated air traffic management could support dynamic allocation. The grandfathering ritual persists partly through political inertia rather than functional necessity.",
+    "directionality_logic": "Directionality values derive from each actor's structural position. Legacy carriers with arbitrage exit options (can reallocate slots to more profitable routes, sell excess capacity) experience low d (d~0.15) \u2192 low \u03c7. New entrants with trapped exit (must acquire slots or exit market entirely) experience high d (d~0.85) \u2192 high \u03c7. The airport authority with constrained exit (must comply with FAA mandates, cannot simply opt out) experiences moderate d (d~0.60). Regional carriers with constrained exit but some partnership options experience moderate d (d~0.55). The new liberalization coalition with constrained exit (organizational but not individual agent level) experiences moderate d (d~0.58). Directionality shifts over the measurement interval: as hub consolidation deepens, incumbent exit options improve (flexibility to shift slots, market depth to sell), while new entrant exit options worsen (fewer alternative hubs with available capacity). This creates increasing d-spread and rising \u03c7.",
+    "perspectival_gap": "The constraint demonstrates maximum perspectival divergence. Legacy carriers (Rope) see pure coordination and stability. New entrants (Snare) see pure extraction and imprisonment. Airport operators (Tangled Rope) see mixed function \u2014 coordination burden they must enforce alongside extraction occurring through their system. Liberalization movements (Scaffold) see temporary problem with sunset mechanism (open skies adoption). The slot grandfathering institution itself (Piton) sees its own process as degraded \u2014 slot allocation ceremonies (IATA conferences, FAA meetings) have increasingly performative character. The natural scarcity framing (Mountain) risks naturalizing what is actually a political-regulatory choice: US hubs could expand capacity, EU hubs deploy dynamic allocation, but incumbent lobbying blocks both. The perspectival gap reveals the structural question: how much of experienced scarcity is physical (runway throughput floor) vs. regulatory (slot grandfathering choice) vs. political-economic (incumbent collective action blocking expansion)?",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by showing that all classifications describe real structural features from their respective observer positions. The mandatrophy question is NOT 'which type is right?' but 'whose constraint is it?' The answer differs by position: it is a Snare for trapped agents, a Rope for beneficiaries, a Tangled Rope for enforcers, a Scaffold for liberalization movements, and a false summit from the natural scarcity view. The analytical edge case is whether the system should be re-engineered (open skies sunset) or maintained (natural scarcity acceptance). Current regulatory framework chooses maintenance despite rising social costs. The false summit detector will flag the Mountain perspective as naturalization of a contingent choice: runway capacity is physical, but the extraction mechanism is regulatory. Resolving mandatrophy requires distinguishing between: (1) Real coordination value (preventing gridlock): ~25% of suppression justified, (2) Legitimate temporary scarcity pending expansion: ~15% justified, (3) Political incumbency protection via grandfathering: ~60% extractive, not justified by coordination or natural scarcity. The high-extractiveness measurement (0.52) reflects that category 3 dominates \u2014 the constraint's primary function has shifted from coordination to incumbent rent protection."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.2
+  },
+  "network": {
+    "affects_constraints": [
+      "airline_consolidation_lock_in",
+      "hub_and_spoke_network_dependency"
+    ],
+    "dual_formulation_note": "Airport capacity constraint is upstream of airline market consolidation \u2014 grandfathered slots enable hub control, which enables consolidation, which reinforces need for hub capacity. Decomposed into separate stories for physical scarcity (Mountain), regulatory allocation (Tangled Rope), and secondary market dynamics (Snare for new entrants). See network linkage documentation for interaction effects."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.65
+    }
+  ]
+}

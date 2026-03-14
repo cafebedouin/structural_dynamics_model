@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "platform_operator_lock_in",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "plat_lock"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Platform Operator Lock-In Constraint",
+    "topic_domain": "digital_economy/platform_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operator",
+      "platform_ecosystem_coordination"
+    ],
+    "victims": [
+      "dependent_service_providers",
+      "end_users",
+      "market_competition"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dependent Service Provider",
+      "comment": "PERSPECTIVE 1: DEPENDENT SERVICE PROVIDER (SNARE) \u2014 Small businesses, creators, and merchants built operations on platform infrastructure with no viable exit. Data portability is theoretical; network effects make alternative platforms economically inaccessible. Policy changes unilaterally alter revenue terms, algorithmic visibility, or operational rules. Trapped by sunk investment, customer lock-in to platform identity, and lack of interoperable alternatives. Maximum extraction experienced."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The End User (Mobile)",
+      "comment": "PERSPECTIVE 2: END USER MOBILE (TANGLED ROPE) \u2014 Users benefit from coordination: platform aggregates services, enables discovery, provides payment infrastructure. But also experience extraction: algorithmic ranking, data collection, reduced privacy, monopolistic terms of service. Exit is constrained by network effects and switching costs, but possible through multi-platform adoption or reduced usage. Mixed benefit and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATOR (ROPE) \u2014 Genuine coordination function: platform solves collective action problem of matching supply to demand, enabling discovery, providing trust mechanisms. Beneficiary experiences the constraint as coordination infrastructure. High exit capacity through control over rules, capacity to migrate services, ability to compete across markets. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Regulatory Authority",
+      "comment": "PERSPECTIVE 4: REGULATORY AUTHORITY (TANGLED ROPE) \u2014 Organized actors (competition authorities, data protection regulators) see both coordination function (legitimate market infrastructure) and extraction (monopolistic pricing, data abuse, unfair terms). Constrained by need to maintain platform ecosystem viability while enforcing consumer protection and competition law. Active enforcement creates regulatory capture risk: regulators depend on platform data and operational cooperation, reducing independence."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Alternative Platform (Competitor)",
+      "comment": "PERSPECTIVE 5: ALTERNATIVE PLATFORM COMPETITOR (TANGLED ROPE) \u2014 Large competitors (e.g., different platform ecosystems, adjacent markets) have mobile exit options and capacity to build competing infrastructure. But network effects create Snare-like extraction even for powerful agents: achieving critical mass on alternative requires reaching threshold density of users and service providers. Constrained by coordination problem rather than operational barriers."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Network Effects)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NETWORK EFFECTS (MOUNTAIN) \u2014 From civilizational scope, some lock-in is inherent to network-effect-driven platforms: the coordination function REQUIRES asymmetry (one operator managing rules). The two-sided market structure creates inherent extraction because the operator captures surplus from both sides. However, this risks naturalizing what is contingent on property-rights and interoperability design choices. The classification will trigger false summit detection."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Legacy Regulatory Framework",
+      "comment": "PERSPECTIVE 7: LEGACY REGULATORY FRAMEWORK (PITON) \u2014 Traditional utility regulation, common carrier concepts, and antitrust frameworks still frame policy responses to platforms, but their functional role has largely atrophied as digital regulation has developed. Legacy concepts persist through institutional inertia and legal citation despite reduced explanatory power. Theater ratio: high \u2014 regulatory apparatus maintains forms (licensing requirements, rate hearings) that were designed for different infrastructure (telecommunications, railroads) and have limited relevance to algorithm-driven platforms."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "network_effects_threshold",
+      "question": "At what operator size do network effects become genuinely irreversible vs. merely costly to exit?",
+      "resolution_mechanism": "Historical analysis of platform switching (e.g., social network migration, payments system transitions); measurement of minimum viable ecosystem size for alternative platforms to achieve critical mass",
+      "impact": "If threshold is low (<10% of original user base): exit is contingent, not locked-in. Snare classifications may be misdiagnosed as Tangled Rope or worse. If threshold is high (>50%): lock-in is structural even for powerful agents.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Network effects irreversibility threshold"
+    },
+    {
+      "id": "coordination_function_necessity",
+      "question": "Is single-operator control inherent to the coordination function, or is it a design choice?",
+      "resolution_mechanism": "Comparison with alternative architectures: decentralized protocols (blockchain platforms), federation models (open social networks), multi-operator markets (traditional marketplaces). Identify which coordination functions require centralized authority and which can operate on distributed rules.",
+      "impact": "If single-operator is necessary: Mountain classification may be correct \u2014 some extraction is inherent. If contingent: extraction is institutional choice, not natural law, and classifications shift toward Snare/Tangled Rope.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether single-operator control is inherent or contingent to coordination"
+    },
+    {
+      "id": "data_portability_effectiveness",
+      "question": "Does technical data portability enable exit, or do behavioral lock-in and network effects create trap even with portable data?",
+      "resolution_mechanism": "Controlled comparison of user behavior and service provider viability when data portability is mandated vs. voluntary; measurement of switching costs before and after data portability interventions",
+      "impact": "If portable data enables viable exit: lock-in is suppression-based (barriers are operational). If not: lock-in is network-effect-based (inherent to market structure). Different treatment under antitrust law and regulatory design.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Data portability as exit enabler vs. behavioral lock-in persistence"
+    },
+    {
+      "id": "revenue_substitution_possibility",
+      "question": "Can platforms derive sustainable revenue from alternative models (not extraction-dependent) \u2014 e.g., subscriptions, B2B services, public infrastructure subsidy?",
+      "resolution_mechanism": "Comparative analysis of platform business models; identification of platforms with non-extraction revenue streams and their market viability; cost modeling for public infrastructure operation",
+      "impact": "If alternatives are viable: extraction is not inherent, and regulatory intervention to mandate alternative models is feasible. Snare/Tangled Rope classifications are correct. If not viable: platform requires extraction to fund coordination infrastructure \u2014 Rope or mild Tangled Rope may be correct.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of non-extraction-dependent platform revenue models"
+    },
+    {
+      "id": "identity_lock_operator_side",
+      "question": "Is platform operator behavior constrained by internalized identity (corporate mission, public service framing, ecosystem stewardship) or by material incentives and competitive pressure?",
+      "resolution_mechanism": "Historical analysis of policy decisions in operators facing regulatory pressure, competitive threat, or profit decline; measurement of decisions aligning with stated mission vs. shareholder/commercial interests",
+      "impact": "If identity-locked: operator behavior may be more rigid than material analysis suggests \u2014 cultural/mission capture could be more durable than reputational incentives. If material-driven: regulatory interventions on financial incentives are more likely to shift behavior.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Operator identity-lock vs. material incentive determination"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Platform operator lock-in represents a structural constraint where single-operator control of digital infrastructure creates asymmetric extraction from dependent service providers and end users, despite genuine coordination functions. The constraint exhibits the full range of DR types across different structural positions: service providers experience Snare (trapped by network effects and sunk investment), users experience Tangled Rope (genuine service benefits alongside extraction), the platform operator experiences Rope (coordination benefits, arbitrage exit), regulators experience Tangled Rope (forced to maintain ecosystem viability while enforcing fairness), competing platforms experience Tangled Rope (powerful but constrained by network effects), and analytical observers risk seeing Mountain (naturalizing what is contingent). The extractiveness has increased over the interval (0.35 \u2192 0.58) as platforms have matured and consolidated, suggesting accumulation rather than equilibrium. The theater ratio remains moderate (0.42\u20130.48), indicating that the coordination function is genuine but not yet severely degraded by performative compliance.",
+    "key_agents": [
+      "Platform Operator: Primary beneficiary (institutional/arbitrage) \u2014 captures network externality rents, controls algorithmic ranking and recommendation, sets terms unilaterally, has exit capacity through rule changes and market expansion",
+      "Dependent Service Providers: Primary victim (powerless/trapped) \u2014 small merchants, content creators, service providers with no viable exit; built operations on platform with sunk costs; subject to algorithmic demotion, policy changes, revenue share alterations",
+      "End Users: Secondary victim/beneficiary (moderate/constrained) \u2014 benefit from aggregation, discovery, trust mechanisms but experience extraction through data collection, algorithmic manipulation, reduced privacy, monopolistic terms",
+      "Market Competition: Tertiary victim (powerless/constrained) \u2014 new entrants face network effects barrier to scale; existing competitors face Lock-in constraint on their own service providers and users",
+      "Regulatory Authorities: Organized agent (organized/constrained) \u2014 see both coordination function and extraction; dependent on platform cooperation for enforcement; constrained by need to maintain ecosystem viability",
+      "Alternative Platforms: Powerful competitor (powerful/mobile) \u2014 can build alternative infrastructure but constrained by network effects coordination problem",
+      "Analytical Observer: Civilizational analyst (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as inherent to network-effect markets"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The platform operator captures surplus from network effects, enjoys control over algorithmic ranking (reducing organic visibility), captures data value, and imposes unilateral terms. However, extractiveness is not at Snare-maximum because genuine coordination function exists \u2014 users receive real aggregation services and discovery benefits. The constraint is not extraction masquerading as coordination, but authentic coordination with embedded asymmetry. Suppression (0.65): High. Barriers to exit include network effects (critical mass required for alternative to be viable), sunk investment in platform-specific operations, data lock-in (even with portability, behavioral patterns are platform-specific), and lack of regulatory support for interoperability. However, not total \u2014 some service providers maintain multi-platform presence, users can reduce usage, and alternative platforms exist (though with lower liquidity). Theater ratio (0.48): Moderate. Coordination mechanisms are largely functional (matching algorithms, trust systems, payment infrastructure) rather than performative, but policy compliance theater is rising (data transparency reports, fairness audits, algorithmic explainability statements that serve more to manage optics than to enable user control). The theater ratio has remained stable because functional necessity outweighs performative drift so far, but shows upward trend.",
+    "perspectival_gap": "This constraint demonstrates structural perspectival divergence rather than disagreement about facts. The powerless service provider and institutional operator are looking at the same constraint from fundamentally different structural positions. The operator sees coordination (their d is low, f(d) is negative); the provider sees extraction (their d is high, f(d) is high). Neither is wrong \u2014 they are both computing chi correctly from their structural position. The gap reveals that the constraint IS extractive in structure (it transfers surplus from dependent providers to the operator) even though it IS genuinely coordinating (it enables market matching that both sides benefit from in the presence of the platform). Tangled Rope diagnosis is structurally sound: authentic coordination WITH asymmetric extraction, not one masquerading as the other.",
+    "directionality_logic": "The chi formula \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) explains perspectival gaps. Base extractiveness is fixed (\u03b5 = 0.58). But f(d) varies by agent position: operators have d \u2248 0.08 (beneficiary with arbitrage exit) producing f(d) \u2248 -0.12; service providers have d \u2248 0.95 (victim with trapped exit) producing f(d) \u2248 1.42; users have d \u2248 0.52 (mixed) producing f(d) \u2248 0.65. At scope global (\u03c3 = 1.2), this yields: operators experience \u03c7 \u2248 0.58 \u00d7 -0.12 \u00d7 1.2 \u2248 -0.08 (negative, net benefit); service providers experience \u03c7 \u2248 0.58 \u00d7 1.42 \u00d7 1.2 \u2248 0.99 (near-maximum extraction); users experience \u03c7 \u2248 0.58 \u00d7 0.65 \u00d7 1.2 \u2248 0.45 (moderate extraction). The same base constraint produces negative effective extraction for beneficiaries and maximum for trapped victims. This explains why the operator genuinely sees Rope (low chi) while providers see Snare (high chi). No directionality override needed \u2014 the derivation chain captures the structural divergence correctly.",
+    "mandatrophy_analysis": "Tangled Rope classification resolves potential mandatrophy by declaring BOTH a genuine coordination function AND asymmetric extraction as structural properties. The constraint is not a Snare that calls itself Rope, nor a Rope that extracts like a Snare. It is fundamentally hybrid: it solves a coordination problem (matching supply to demand, trust infrastructure, payment systems) that both operator and users need, AND it asymmetrically extracts surplus toward the operator via network effects and control over rules. The tangled rope gate requires beneficiaries (platform operator + coordination ecosystem) and victims (service providers + market competition) \u2014 both are present. The requires_active_enforcement flag is true: the lock-in is maintained by continuous policy decisions (algorithmic ranking, term of service changes, enforcement against interoperability) rather than passive network effects alone. The mandatrophy is resolved by showing that this is not pure coordination masquerading as extraction, but coordination with embedded extraction \u2014 the two functions are genuinely intertwined in the platform's structure, not one hidden beneath the other."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_governance_opacity",
+      "data_portability_interoperability",
+      "platform_monopoly_network_effects"
+    ],
+    "dual_formulation_note": "Platform lock-in comprises three distinct structural constraints: (1) network effects barrier to exit (affects competing platforms more than dependent service providers), (2) algorithmic governance opacity (affects end users and regulators more than operator), and (3) data lock-in via proprietary format and behavioral patterns (affects service providers most). Each has distinct \u03b5 value. The present story models the bundled constraint; decomposition into three stories follows the \u03b5-invariance principle: network effects \u03b5 \u2248 0.45 (Rope for some, Snare for others), opacity \u03b5 \u2248 0.40 (Piton/Tangled Rope), data lock-in \u03b5 \u2248 0.55 (Snare/Tangled Rope). All three are linked as downstream of platform_operator_lock_in, which bundles their effects."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.58
+    }
+  ]
+}

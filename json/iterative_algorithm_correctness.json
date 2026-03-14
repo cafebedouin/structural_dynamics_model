@@ -1,0 +1,158 @@
+{
+  "header": {
+    "constraint_id": "iterative_algorithm_correctness",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "iter_algo"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.28,
+    "theater_ratio": 0.55,
+    "claimed_type": "rope",
+    "human_readable": "Iterative Algorithm Correctness Verification",
+    "topic_domain": "computational_mathematics/software_verification",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "algorithm_implementers",
+      "user_community"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Algorithm Publisher",
+      "comment": "PERSPECTIVE 1: ALGORITHM PUBLISHER (ROPE) \u2014 Institutional actor with arbitrage options. Benefits from distributed correctness verification: multiple independent implementations, test suites, and community scrutiny validate the algorithm and enhance reputation. Experiences the constraint as pure coordination mechanism for establishing reliability. Can exit by publishing proprietary closed-source variants or moving to domains with lower verification burden."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Specialist Implementation Group",
+      "comment": "PERSPECTIVE 2: SPECIALIST IMPLEMENTATION GROUP (ROPE) \u2014 Powerful agents with mobile exit options. Possess deep domain knowledge and can redirect effort to alternative algorithms or problem formulations. Experience the verification constraint as solving a genuine coordination problem: multiple attempts to implement teach which edge cases exist and what optimizations work. Net benefit from shared knowledge across implementations."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Downstream User Without Verification Capacity",
+      "comment": "PERSPECTIVE 3: DOWNSTREAM USER WITHOUT VERIFICATION CAPACITY (SNARE) \u2014 Powerless actors trapped by dependency on published algorithms. Cannot verify correctness independently, lack resources to test against comprehensive benchmarks, and have no path to exit the constraint. Must trust that prior verification actually occurred. Silent failures in iterative algorithms (convergence to local optima, numerical instabilities) may persist undetected in their applications."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Numerical Analysis Research Community",
+      "comment": "PERSPECTIVE 4: NUMERICAL ANALYSIS RESEARCH COMMUNITY (TANGLED ROPE) \u2014 Moderate power with constrained exit options. Benefits from collective knowledge of convergence proofs, failure modes, and stability conditions (coordination function). Also bears asymmetric extraction: most theoretical advances benefit a small set of high-citation researchers while the broader community performs unpaid verification labor (reproducing results, testing edge cases, writing bug reports). Suppression derives from career incentives that reward novel algorithms over reliability work."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Computational Limits View)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / COMPUTATIONAL LIMITS (MOUNTAIN) \u2014 From a civilizational/universal view, verification of iterative algorithm correctness appears as an immutable computational constraint: correctness of convergence behavior is formally undecidable for the general case (Rice's theorem applies); full verification requires either formal proof (high cost, limited scalability) or empirical testing (never complete). The gap between claimed and verified correctness is an inherent limit of computation, not a contingent institutional arrangement. However, this perspective risks false summit \u2014 naturalizing what is actually a constraint on verification methods."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "empirical_vs_formal_verification_adequacy",
+      "question": "For practical iterative algorithms, does empirical testing on benchmark suites provide sufficient correctness assurance, or does the absence of formal proof leave structural vulnerability?",
+      "resolution_mechanism": "Historical analysis of deployed algorithms with formal proofs vs those with empirical-only validation; correlation between verification method and subsequent bug discovery or failure in production systems",
+      "impact": "If empirical sufficient: classification remains Rope (coordination via distributed testing). If formal required: classification shifts to Tangled Rope or Snare (suppression of verification methods creates hidden extraction risk).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Adequacy of empirical vs formal verification methods for correctness"
+    },
+    {
+      "id": "convergence_proof_expressiveness_limit",
+      "question": "Can convergence proofs formally verify that an algorithm will not converge to pathological local minima in the parameter space (e.g., spurious solutions in optimization landscapes), or do proofs necessarily remain agnostic about solution quality?",
+      "resolution_mechanism": "Analysis of expressiveness of formal convergence frameworks; identification of gap between what proofs verify (asymptotic behavior, stability conditions) and what users need (guarantee of acceptable solution quality)",
+      "impact": "If expressiveness gap is fundamental: verification is necessarily incomplete, creating suppression barrier (users cannot verify what matters most). If gap is technical: better proof frameworks could shift classification toward Rope.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Expressiveness limit of formal convergence proofs"
+    },
+    {
+      "id": "hidden_failure_latency_in_powerless_agents",
+      "question": "What proportion of silent failures (incorrect convergence in production systems) go undetected indefinitely because powerless users lack diagnostic capacity?",
+      "resolution_mechanism": "Post-mortem analysis of deployed algorithms with hidden bugs; study of how long algorithms operated before failure detection; identification of detection mechanisms (user complaints, downstream failure cascade, chance discovery)",
+      "impact": "If latency is long (years-to-never): snare classification confirmed \u2014 suppression creates sustained asymmetric extraction (users pay costs of failures they cannot diagnose). If latency is short: extraction is lower than snare model suggests.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Detection latency for silent failures in deployed algorithms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Iterative algorithm correctness verification represents a coordination mechanism for establishing shared confidence in convergence properties, stability, and correctness of algorithms used across scientific computing, machine learning, and numerical analysis. The constraint spans the tension between the cost of rigorous verification (formal proof, extensive testing) and the practical impossibility of complete verification (undecidability of convergence in the general case, incompleteness of empirical testing). Different agents experience this constraint radically differently: institutional publishers and specialist implementers see coordination (Rope); powerless downstream users trapped by dependency see extraction (Snare); researchers see mixed coordination with asymmetric labor distribution (Tangled Rope); analytical observers risk naturalizing computational undecidability as an immutable law rather than recognizing it as a constraint on verification methods.",
+    "key_agents": [
+      "Algorithm Publishers: Institutional beneficiary (institutional/arbitrage) \u2014 captures reputation and adoption benefits from distributed verification; can exit by moving to proprietary or closed-source models",
+      "Specialist Implementation Groups: Powerful beneficiary (powerful/mobile) \u2014 have expertise and resources to implement alternatives; benefit from shared convergence analysis and edge-case discovery across implementations",
+      "Numerical Analysis Research Community: Moderate asymmetric agent (moderate/constrained) \u2014 benefits from collective knowledge (coordination function) but performs unpaid verification labor (asymmetric extraction); career incentives suppress reliability work in favor of novel algorithms",
+      "Downstream Users Without Verification Capacity: Primary victim (powerless/trapped) \u2014 depend on algorithms without ability to verify correctness; vulnerable to silent failures; cannot exit without abandoning computational methods entirely",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks treating computational undecidability as a natural law rather than a contingent constraint on verification methods"
+    ],
+    "logic_rationale": "Extractiveness (0.32): Moderate. The constraint enforces a verification tax that benefits publishers and specialists while imposing unequal burdens on powerless users. However, the overall extraction is not severe because (a) many algorithms are genuinely open-source with community contributions reducing suppression, (b) benchmark suites are often freely available, and (c) specialist communities do contribute verification labor. The measurement trajectory shows increasing extractiveness over time (0.18 \u2192 0.32) reflecting that as algorithms become more complex (especially in deep learning), the verification burden concentrates on a smaller expert class while users increasingly depend on black-box implementations. Suppression (0.28): Moderate. Barriers to verification include high technical knowledge requirements, lack of formal proof frameworks, publishing bias against negative results or 'failure case' analyses, and limited access to computing resources for extensive testing. Suppression is not total because open benchmarks, testing frameworks, and academic papers do provide some verification infrastructure. Theater ratio (0.55): Moderate. Publication ritual includes peer review that assesses algorithmic novelty and theoretical soundness, but this theater does not actually verify correctness for practical implementations. Conference presentations and papers provide partial transparency, but the actual behavior of deployed algorithms in users' systems remains opaque. Theater has increased over the interval as the gap between theoretical proof and practical implementation has widened.",
+    "perspectival_gap": "The publisher and specialist researcher see Rope \u2014 a coordination mechanism where distributed implementation and testing solve the collective action problem of establishing reliability. The powerless user sees Snare \u2014 they have no exit and no way to verify the algorithm works in their application domain. The research community sees Tangled Rope \u2014 genuine coordination through shared knowledge, but with hidden asymmetric extraction in who performs verification labor and whose reputations benefit. The mountain perspective risks false summit by treating computational undecidability as an immutable law, when the actual constraint is on verification methods, not on algorithm correctness itself. The perspectival gap reveals that the 'correctness verification problem' is not the same constraint when viewed from different positions \u2014 for specialists it is a solved coordination problem (algorithms have proven convergence properties); for powerless users it is an unsolved extraction problem (they must trust black-box implementations).",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by identifying the perspectival divergence and structural asymmetry. The constraint is NOT 'whether iterative algorithms are verifiable' (mountain view, false summit) but rather 'who bears the cost of verification?' Publishers and specialists coordinate through distributed implementation and can arbitrage solutions (Rope). Powerless users cannot arbitrage and bear the cost of potential failures they cannot diagnose (Snare). The research community performs asymmetric labor distribution (Tangled Rope). The mountain perspective naturalizes an undecidable computational problem in formal verification \u2014 but this is misclassification through category error. The actual constraint operates at the institutional/incentive level (who verifies, how do they benefit), not at the mathematical level (what is theoretically provable). Separation of these concerns is the mandatrophy resolution: the mathematical limit (undecidability of convergence) is a background fact; the constraint is the institutional asymmetry in how that mathematical limit translates into verification burden and risk exposure."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "numerical_stability_convergence",
+      "machine_learning_model_verification"
+    ]
+  },
+  "directionality_overrides": []
+}

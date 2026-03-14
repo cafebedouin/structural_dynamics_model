@@ -1,0 +1,195 @@
+{
+  "header": {
+    "constraint_id": "entertainment_industry_access_inequality",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "entaccess"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Entertainment Industry Access Inequality",
+    "topic_domain": "media/entertainment/economics",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "established_industry_gatekeepers",
+      "legacy_talent_agents",
+      "family_connected_aspirants"
+    ],
+    "victims": [
+      "marginalized_aspiring_workers",
+      "economically_disadvantaged_creatives",
+      "geographic_outsiders"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Economically Marginalized Aspirant",
+      "comment": "PERSPECTIVE 1: ECONOMICALLY MARGINALIZED ASPIRANT (SNARE) \u2014 Cannot afford unpaid internships, relocation to industry hubs, professional headshots, or networking. Structural barriers to entry are absolute; exit from the constraint requires abandoning creative ambitions entirely. Maximum extraction \u2014 the aspiring worker bears full cost of access inequality without benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Middle-Class Aspirant with Some Resources",
+      "comment": "PERSPECTIVE 2: MIDDLE-CLASS ASPIRANT WITH RESOURCES (TANGLED ROPE) \u2014 Can afford some unpaid work and relocation but faces significant financial and career risk. Benefits from industry coordination mechanisms (standardized audition formats, agent networks) that do solve real matching problems. Extraction is real but surmountable with family support or personal savings \u2014 constrained, not trapped."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Industry Gatekeeper Institution",
+      "comment": "PERSPECTIVE 3: INDUSTRY GATEKEEPER INSTITUTION (ROPE) \u2014 Experiences the access system as coordination: agents match talent to roles, scouts evaluate potential, networks identify capable creatives. The gatekeeper benefits from information asymmetry but also from functioning talent discovery. Exit options are abundant \u2014 can switch platforms, models, or geographic markets. Institutional arbitrage removes extraction from their perspective."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Union and Advocacy Organization",
+      "comment": "PERSPECTIVE 4: UNION AND ADVOCACY ORGANIZATION (PITON) \u2014 Organized groups (SAG-AFTRA, unions, access-focused nonprofits) see the barrier system as degraded and performatively maintained. Theater ratio is high because the industry performs 'diversity initiatives' and 'open casting' while actual hiring remains nepotistic. Mobile \u2014 can exit to alternative industry models or political organizing. The constraint persists through institutional inertia despite advocacy pressure."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Streaming Platform Disruptor",
+      "comment": "PERSPECTIVE 5: STREAMING PLATFORM DISRUPTOR (SCAFFOLD) \u2014 Tech platforms (YouTube, TikTok, Discord communities) are building alternative pathways with lower barriers and distributed discovery. These platforms have sunset logic relative to traditional gatekeeping \u2014 as digital-native audiences grow and creators build careers through direct fan relationships, the traditional studio-agent-audition pipeline loses relevance. Powerful actors with mobile exit options see the constraint as temporary."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, information asymmetry in talent evaluation is structurally inherent to entertainment: subjective judgment cannot be fully mechanized, and network effects create natural concentration of discovery power. This perspective sees access inequality as an unavoidable feature of any talent identification system. However, the structural data contradicts mountain classification \u2014 the base metrics show suppression and extraction driven by institutional gatekeeping, not by immutable natural limits."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "talent_evaluation_mechanization",
+      "question": "Is talent evaluation in entertainment inherently subjective, or does this claim naturalize gatekeeping convenience?",
+      "resolution_mechanism": "Comparison of alt-platform discovery (TikTok, YouTube) with studio-gate discovery on same metrics: time-to-earning, career sustainability, creative control, diversity of outcomes",
+      "impact": "If mechanization is possible: access inequality is contingent institutional choice (Snare confirmed). If evaluation is inherently subjective: natural information asymmetry justifies some gating (Mountain partially correct).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether subjective talent evaluation is mechanizable or inherently gatekeeping-resistant"
+    },
+    {
+      "id": "family_advantage_magnitude",
+      "question": "What proportion of industry entry is explained by family connection vs. genuine merit discovery?",
+      "resolution_mechanism": "Demographic analysis of hired workers by family connection status; comparison of career trajectories from family-connected vs. independent entry; audit studies of hiring gatekeepers",
+      "impact": "If family advantage > 40%: snare classification is understated (extractiveness > 0.62). If family advantage < 15%: moderate permeability, tangled_rope from many perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of industry entry attributable to family connection"
+    },
+    {
+      "id": "platform_sunset_credibility",
+      "question": "Are streaming platforms and social media genuinely replacing traditional gatekeeping, or are they creating new parallel tiers of exclusion?",
+      "resolution_mechanism": "Longitudinal tracking of TikTok/YouTube creators: what proportion reach traditional studio deals; what proportion sustain living income without studio backing; whether social-media-native careers have comparable earnings/stability to studio-path careers",
+      "impact": "If platforms are truly replacing gatekeeping: scaffold sunset is real, constraint is temporalizing. If new gatekeeping forms: constraint is morphing, not sunsetting (tangled_rope from platform perspective).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether streaming platforms are genuinely replacing traditional gatekeeping"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "How much of the measured suppression (0.68) is structural (financial barriers, relocation costs) vs. internalized (aspirants believe they lack talent or don't belong)?",
+      "resolution_mechanism": "Pre/post-intervention surveys; tracking outcome differences between aspirants given financial support vs. aspirants given confidence/mentorship; analysis of rejection response patterns",
+      "impact": "If suppression is >50% internalized: constraint's effective suppression persists after barrier removal; identity-lock mechanisms are operative. If <30% internalized: financial barrier removal would dramatically alter classification.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Ratio of structural vs. internalized suppression in access barriers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The entertainment industry's access inequality creates a structural extraction mechanism where career entry is gatekept through information asymmetry, financial barriers, and network concentration. The constraint operates across talent discovery, audition systems, agent representation, and industry casting \u2014 all nominally open but functionally requiring economic privilege, geographic proximity to hubs, or family connections. The base extractiveness (0.62) reflects substantial asymmetric benefit capture by gatekeeping institutions during the critical career-building phase, while suppression (0.68) measures the material and epistemic barriers that prevent alternatives from functioning. Theater ratio (0.58) captures the industry's performance of 'open auditions' and 'diversity initiatives' while actual hiring remains concentrated. The constraint exhibits all six classification types from different perspectives, revealing how institutional gatekeeping naturalizes itself across multiple actor positions.",
+    "key_agents": [
+      "Economically Marginalized Aspirants: Primary victims (powerless/trapped) \u2014 cannot afford unpaid internships, relocation, headshots, or networking; absolute structural barriers",
+      "Middle-Class Aspirants with Resources: Secondary victims (moderate/constrained) \u2014 can afford some access but face significant financial risk; benefit from coordination mechanisms",
+      "Industry Gatekeeper Institutions: Primary beneficiaries (institutional/arbitrage) \u2014 agents, studios, networks benefit from information asymmetry and network control; abundant exit options",
+      "Union and Advocacy Organizations: Organized pressure (organized/mobile) \u2014 see the system as performatively maintained; advocate for barrier reduction",
+      "Streaming Platform Disruptors: Powerful alternative pathways (powerful/mobile) \u2014 YouTube, TikTok, Discord building parallel discovery with lower barriers; potential sunset mechanism",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing gatekeeping as inherent to subjective talent evaluation"
+    ],
+    "logic_rationale": "Extractiveness (0.62): High-moderate. The original research framing suggested this was pure nepotism (\u03b5 > 0.75), but the constraint has genuine coordination components: agent networks do match talent to roles, audition systems do provide information flow, industry infrastructure does solve real problems of scale. However, the coordination function is thoroughly captured by gatekeeping \u2014 benefits flow disproportionately to privileged aspirants. The 0.62 value reflects that the system has real coordination work alongside asymmetric extraction. Suppression (0.68): High. Multiple reinforcing barriers: (1) Structural \u2014 unpaid internships (economic filter), relocation requirements (geographic filter), professional development costs (capital filter). (2) Epistemic \u2014 gatekeepers claim talent evaluation is subjective art, not mechanizable (naturalizes discretionary gatekeeping). (3) Institutional \u2014 careers depend on gatekeeper approval, creating risk aversion and normative compliance. (4) Internalized \u2014 aspiring workers often internalize the gatekeeper's skepticism about their own viability. Theater ratio (0.58): Moderate-high. The industry performs open-casting rituals, diversity initiatives, merit-based selection; actual hiring concentrates on connected and privileged candidates. The performance has increased over the measurement interval as pressure for visible diversity has grown, while actual access barriers have stiffened (internship unpaid-ness, relocation costs, networking requirements).",
+    "perspectival_gap": "This constraint produces a full perspectival spectrum. The marginalized aspirant experiences pure Snare \u2014 absolute barriers, zero net benefit, no exit. The middle-class aspirant experiences Tangled Rope \u2014 can navigate barriers with family support, benefits from coordination mechanisms. The gatekeeper institution experiences Rope \u2014 their dominant frame is coordination and talent matching. The union/advocacy sees Piton \u2014 performative diversity initiatives masking persistent nepotism. The streaming platform sees Scaffold \u2014 alternative pathways with sunset logic reducing traditional gatekeeping's relevance. The civilizational analyst risks Mountain \u2014 assuming subjective evaluation is inherently gatekeeping-resistant. The perspectival gap is not about disagreement but about structural position: the gatekeeper benefits from information asymmetry while the outsider bears its cost.",
+    "directionality_logic": "Directionality derivation: Marginalized aspirants are victims with trapped exit \u2014 d \u2248 0.92, f(d) \u2248 1.38 \u2014 maximum experienced extraction. Middle-class aspirants are victims with constrained exit (can pay but costs are high) \u2014 d \u2248 0.75, f(d) \u2248 1.08 \u2014 high but surmountable extraction. Industry gatekeepers are beneficiaries with arbitrage exit (can switch platforms, models, regions) \u2014 d \u2248 0.12, f(d) \u2248 -0.01 \u2014 negative effective extraction (they benefit, not bear cost). Scope modifier \u03c3(national) = 1.0 does not scale suppression. The chi formula produces: for powerless/trapped, \u03c7 \u2248 0.62 \u00d7 1.38 \u00d7 1.0 \u2248 0.86 (snare threshold); for institutional/arbitrage, \u03c7 \u2248 0.62 \u00d7 (-0.01) \u00d7 1.0 \u2248 -0.006 (rope). The structural data does not require directionality overrides \u2014 the derived d values correctly reflect the actual extraction flow.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that the six types represent legitimate readings from different structural positions. The snare perspective (powerless/trapped) is the primary structural reality. The rope perspective (institutional/arbitrage) is the gatekeeper's genuine experience \u2014 they are solving a real coordination problem (talent matching at scale), and their benefits are not, from their position, obviously parasitic. The tangled rope perspective (moderate/constrained) identifies the hybrid function for middle-class actors who both benefit from coordination and bear extraction costs. The piton perspective (organized/mobile) identifies the theater dimension \u2014 that performative diversity initiatives have increased while actual access has not. The scaffold perspective (powerful/mobile) identifies the sunset mechanism \u2014 that platform alternatives are genuinely reducing traditional gatekeeping's relevance. The mountain perspective is a false summit \u2014 the claim that subjective talent evaluation is inherently gatekeeping-resistant naturalizes what is actually a contingent institutional choice (gatekeepers could publish rankings, crowdsource evaluation, mechanize filters, etc., but do not because opacity serves their interests). The analytical observer's classification should be snare or tangled_rope, not mountain."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "cultural_representation_bias",
+      "creative_labor_precarity",
+      "geographic_cultural_concentration"
+    ],
+    "dual_formulation_note": "Entertainment access inequality decomposes into multiple structurally distinct constraints: talent evaluation gatekeeping (this story), labor precarity in unpaid internships (downstream), cultural representation (downstream), and geographic hub concentration (adjacent). This story focuses on information asymmetry and access barriers; labor precarity and representation bias have their own \u03b5 values and should be modeled separately."
+  },
+  "directionality_overrides": []
+}

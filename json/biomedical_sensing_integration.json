@@ -1,0 +1,238 @@
+{
+  "header": {
+    "constraint_id": "biomedical_sensing_integration",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bsi"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Biomedical Sensing Integration: Coordination and Extraction in Medical Device Ecosystems",
+    "topic_domain": "medical_technology/healthcare_infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "device_manufacturers",
+      "hospital_systems",
+      "regulatory_bodies"
+    ],
+    "victims": [
+      "patient_data_autonomy",
+      "clinical_interoperability",
+      "independent_device_developers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Patient Data Autonomy",
+      "comment": "PERSPECTIVE 1: PATIENT DATA AUTONOMY (SNARE) \u2014 Patients cannot exit the biomedical sensing ecosystem; their physiological data is automatically captured, aggregated, and locked into proprietary device ecosystems. Minimal coordination benefit; maximum extraction. Data flows one direction. No alternatives for patients who need continuous monitoring."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Clinical Interoperability",
+      "comment": "PERSPECTIVE 2: CLINICAL INTEROPERABILITY (SNARE) \u2014 The collective need to integrate sensor data across device manufacturers and hospital systems faces active fragmentation. Proprietary data formats and closed APIs prevent standard communication. Healthcare systems bear the cost of integration work while device manufacturers extract vendor lock-in advantage. No exit without disrupting patient care."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Independent Device Developer Community",
+      "comment": "PERSPECTIVE 3: INDEPENDENT DEVICE DEVELOPER COMMUNITY (SNARE) \u2014 Startups and research groups cannot interoperate with the dominant platforms without licensing, reverse-engineering, or regulatory burden. Patent thickets, closed firmware, and regulatory capture prevent market entry. Trapped by ecosystem dominance and regulatory requirements designed around incumbent players."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Hospital Systems",
+      "comment": "PERSPECTIVE 4: HOSPITAL SYSTEMS (TANGLED ROPE) \u2014 Constrained by capital investment in device fleets and integration costs, but also benefit from the coordination function the sensing ecosystem provides: continuous monitoring, networked alerts, data aggregation. High switching costs limit exit options, but genuine coordination benefit exists. Extraction runs asymmetrically toward device manufacturers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Device Manufacturers",
+      "comment": "PERSPECTIVE 5: DEVICE MANUFACTURERS (ROPE) \u2014 Experience the constraint as pure coordination: integrating sensors into standardized platforms enables market expansion and multi-hospital deployment. Capture lock-in through proprietary data formats and APIs that create switching costs. Net beneficiary with full arbitrage \u2014 can exit the integration burden by maintaining closed ecosystems."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Standards Bodies and Regulators",
+      "comment": "PERSPECTIVE 6: STANDARDS BODIES AND REGULATORS (TANGLED ROPE) \u2014 FDA, HL7, DICOM committees attempt to impose interoperability standards, but are captured by manufacturer influence and liability concerns. Must enforce standards while protecting manufacturers from disruption. See genuine coordination value (safe data exchange, clinical integration) alongside asymmetric extraction (standards written to protect incumbents, high compliance costs for small vendors)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Open Interoperability Movement",
+      "comment": "PERSPECTIVE 7: OPEN INTEROPERABILITY MOVEMENT (SCAFFOLD) \u2014 Organized actors (FHIR, open-source medical software projects, healthcare IT consortiums) are building alternative integration pathways with genuine sunset logic. Open standards, API transparency, and decoupled data models are creating parallel ecosystems that bypass proprietary lock-in. Lower extraction because the movement has agency and a visible exit path. Sunset: 10-15 years as open standards mature in clinical workflows."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Integration Middleware",
+      "comment": "PERSPECTIVE 8: LEGACY INTEGRATION MIDDLEWARE (PITON) \u2014 Decades-old HL7 and proprietary middleware systems persist through institutional inertia despite lower functional adequacy than modern APIs. These systems are maintained performatively \u2014 healthcare IT departments spend resources on ritualized version upgrades and certification compliance while acknowledging the systems are technically degraded. Theater ratio: 0.72. Exit path visible (modern stacks) but switching cost deters replacement."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit View)",
+      "comment": "PERSPECTIVE 9: ANALYTICAL OBSERVER (MOUNTAIN - FALSE SUMMIT) \u2014 From the civilizational perspective, some data integration overhead is inherent to multi-vendor healthcare systems: different sensors have different calibration, protocols, and data representations. This perspective risks naturalizing the bottleneck as a law of nature \u2014 'healthcare is complex, integration is hard.' But structural data reveals this as a false summit: the extraction is driven by contingent institutional choices (proprietary APIs, patent thickets, regulatory requirements written by incumbents), not by physics or mathematics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "proprietary_necessity_vs_choice",
+      "question": "Are closed APIs and proprietary data formats technically necessary for safety/security, or are they strategic choices to maintain lock-in?",
+      "resolution_mechanism": "Comparative analysis: open-source medical device projects (OpenAPS, Ardupilot, medical imaging libraries) against proprietary equivalents; security audit of claim justifications in patent litigation and regulatory filings",
+      "impact": "If necessary: reclassify from Snare toward Tangled Rope (extraction has coordination justification). If strategic: confirms Snare classification and reveals false safety narratives.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether proprietary formats are technically necessary or strategically chosen"
+    },
+    {
+      "id": "regulatory_capture_depth",
+      "question": "To what degree do FDA/EMA regulations reflect genuine safety requirements vs. incumbents' regulatory capture?",
+      "resolution_mechanism": "Cost-benefit analysis of regulatory requirements; comparison of approval timelines and cost for open vs proprietary device designs; audit of rulemaking influence by manufacturers",
+      "impact": "If primarily capture: regulatory bodies are primary beneficiaries, not neutral enforcers. Directionality overrides needed. If primarily safety-driven: regulators are partially captured but retain independent function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of regulatory capture in medical device approval"
+    },
+    {
+      "id": "interoperability_standard_adoption",
+      "question": "Are FHIR and modern open-standard adoption actually reducing lock-in, or are manufacturers implementing performative compliance (FHIR fa\u00e7ade over proprietary backends)?",
+      "resolution_mechanism": "Audit of actual data portability: measure time/cost to export patient records in standard formats; track whether FHIR implementation enables genuine switching or merely creates compliance theater",
+      "impact": "If genuine adoption: scaffold perspective is real, sunset timeline is credible. If performative: open standards movement is slower and extraction persists longer than organized actors recognize.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether FHIR adoption is genuine or performative compliance"
+    },
+    {
+      "id": "patient_data_monetization_scope",
+      "question": "How much of device manufacturer revenue derives from patient data extraction/resale vs. device hardware/service?",
+      "resolution_mechanism": "Financial analysis of manufacturer revenue streams; audit of data licensing agreements; tracking of de-identified data aggregation and sale to pharma/insurance",
+      "impact": "If data extraction is major revenue: strengthens Snare classification and victim status. If minor: extraction is less severe than structural constraints alone suggest.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Revenue contribution of patient data monetization"
+    },
+    {
+      "id": "safety_incident_correlation",
+      "question": "Do incompatible sensor data formats and delayed integration contribute to adverse events, or is integration lag clinically neutral?",
+      "resolution_mechanism": "Epidemiological analysis: audit reports, malpractice claims, adverse event databases for incidents where interoperability failure contributed to patient harm",
+      "impact": "If significant correlation: extraction is not merely rent-seeking but has genuine safety costs. Amplifies victim status of patient data autonomy.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Safety impact of interoperability failures"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Biomedical sensing integration creates a structural constraint where the legitimate coordination problem of connecting heterogeneous medical sensors across manufacturers is systematized into extractive lock-in mechanisms. Hospital systems need continuous physiological data aggregated and accessible; patients need monitoring; clinicians need integrated alerts. These are genuine coordination problems. But the constraint's structure concentrates extraction toward device manufacturers through proprietary APIs, closed firmware, patent thickets, and regulatory requirements written by incumbents. The ecosystem fragments into incompatible sensor standards, each manufacturer controls their data format, integration requires expensive middleware, and independent developers face regulatory and technical barriers. Patients' physiological data flows into proprietary systems with no exit option. The theater ratio (0.65) reflects that much integration activity is performative: compatibility layers, redundant data mappings, FDA certification overhead for minor software changes, and ritualized standards committee work that produces slowly-adopted specifications. Open interoperability movements (FHIR, open-source medical device projects) are building genuine alternatives with lower theater and visible sunsets, suggesting scaffold classification from the organized actor perspective.",
+    "key_agents": [
+      "Patient Data Autonomy: Primary victim (powerless/trapped) \u2014 physiological data automatically captured and locked into proprietary ecosystems; no exit options or alternatives",
+      "Clinical Interoperability: Secondary victim (powerless/trapped) \u2014 collective need for cross-manufacturer data exchange faces active fragmentation; healthcare systems bear integration cost",
+      "Independent Device Developers: Tertiary victim (powerless/trapped) \u2014 startups and research groups cannot interoperate with dominant platforms without licensing; barriers include patents, closed firmware, and regulatory burden",
+      "Hospital Systems: Secondary beneficiary-victim (moderate/constrained) \u2014 benefit from coordination function but face lock-in switching costs; partially captured by device manufacturer incentives",
+      "Device Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 capture vendor lock-in advantage through proprietary formats; experience constraint as pure coordination enabling market expansion",
+      "Standards Bodies and Regulators (FDA, HL7, DICOM): Partially captured institutional actor (organized/constrained) \u2014 attempt to impose standards while protecting manufacturer incumbents; see genuine coordination value alongside asymmetric extraction",
+      "Open Interoperability Movement: Organized agent building alternatives (organized/constrained) \u2014 FHIR, open-source projects, healthcare IT consortiums creating parallel ecosystems with sunset timeline",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional choices as inherent healthcare complexity"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Device manufacturers capture significant revenue through lock-in (device sales at premium to hospitals, potential data monetization), but extraction is not as severe as pure monopoly because hospital systems have exit options (at high cost) and open-standard movement is viable. The measurement trajectory shows extractiveness increasing from 0.38 to 0.52 over the interval, reflecting accumulation of integration debt and deepening vendor entrenchment. Suppression (0.58): Moderate-high. Significant barriers to exit include capital investment in device fleets, switching costs for integration infrastructure, regulatory requirements imposing compatibility testing, and patent thickets on medical sensor protocols. But barriers are not total \u2014 some interoperability is possible at cost, and alternative paths exist. Theater ratio (0.65): Moderate-high and increasing. Much biomedical integration activity is performative: compatibility layers that add process cost without clinical benefit, certification requirements that delay innovation, standards committee work producing specifications adopted slowly, and redundant data mapping infrastructure. The trajectory shows theater increasing as complexity outpaces coordination function \u2014 each new device type adds integration points, increasing performative overhead. Open standards (FHIR, JSON APIs) have lower theater but slower adoption due to incumbent resistance.",
+    "directionality_logic": "Directionality derives from structural position in the data extraction flow. Device manufacturers are beneficiaries with arbitrage options (can maintain closed ecosystems and exit integration burden) \u2014 their d is low, producing negative or minimal effective extraction from their perspective. Patient data autonomy is trapped with no exit \u2014 d approaches 1.0, maximum extraction from this perspective. Hospital systems are constrained but also benefit \u2014 d is moderate (0.55-0.65), producing mixed extraction experience. Standards bodies are organized but partially captured by manufacturer influence \u2014 d is moderate-high (0.60-0.70), experiencing constrained agency. The open interoperability movement has organized power and visible exit paths \u2014 d is constrained by the genuine coordination challenge (patients still need monitoring, sensors still have heterogeneous outputs) but not by the extractive lock-in \u2014 d stays lower (0.40-0.50) than for trapped or captured agents.",
+    "perspectival_gap": "The gap between device manufacturer (Rope) and patient data autonomy (Snare) is maximal: the same constraint appears as pure coordination from the beneficiary perspective (integrating sensors enables market expansion) and pure extraction from the victim perspective (data flows one direction with no consent, no portability, no alternatives). Hospital systems see Tangled Rope \u2014 genuine coordination benefit (integrated monitoring) paired with asymmetric extraction (high switching costs, vendor control over feature access). Regulators see Tangled Rope \u2014 must enforce safety (coordination value) while protecting incumbents (asymmetric extraction). The open-source movement sees Scaffold \u2014 the constraint is real but temporary; modern open standards are creating viable alternatives with sunset timeline. The legacy middleware perspective (Piton) reveals performative integration work: compatibility layers and middleware persist through institutional inertia despite lower technical adequacy than modern approaches. The analytical civilizational view risks false summit: naturalizing 'healthcare integration is complex' without recognizing that much complexity is engineered lock-in, not inherent.",
+    "mandatrophy_analysis": "This constraint demonstrates mandatrophy resolution through perspectival structure. The naive view that 'biomedical sensing is just coordination' (Rope) collapses when applied to trapped agents (Snare) and constrained actors (Tangled Rope). The classification suite shows that the constraint is simultaneously genuine coordination (devices do need interoperability) and genuine extraction (the system is engineered to prevent interoperability). The scaffolding perspective (open standards, 10-15 year sunset) resolves the tension by showing that alternative coordination mechanisms are viable \u2014 the extraction is not necessitated by the coordination problem. The piton perspective adds that much integration activity is performative overhead, not essential function. The false summit (mountain) perspective reveals the key diagnostic: naturalizing 'integration complexity' as a law of nature prevents recognition that the complexity is engineered through proprietary standards, closed APIs, and patent thickets. When these mechanisms are removed (or made transparent as in open-source alternatives), the coordination problem remains but the extraction disappears. This resolves mandatrophy: the constraint is Tangled Rope (genuine coordination plus asymmetric extraction) whose extraction is contingent on institutional choices, not immutable."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "healthcare_data_portability",
+      "medical_device_regulatory_capture",
+      "health_information_exchange_standards"
+    ],
+    "dual_formulation_note": "Biomedical sensing integration is downstream of specific device design constraints and regulatory requirements, but represents a distinct coordination-extraction hybrid. The upstream constraints (device firmware lock-down, FDA approval timelines) have their own extractiveness reflecting technical/regulatory necessity; the sensing integration constraint shows how these are systematized into ecosystem-level vendor lock-in. Decomposition enables separate analysis of which extraction components are technically justified vs. strategically chosen."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.65
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "header": {
+    "constraint_id": "advertising_market_concentration",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "adm"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Advertising Market Concentration and Digital Extraction",
+    "topic_domain": "economic/technology/digital_platforms",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dominant_ad_platforms",
+      "large_advertisers"
+    ],
+    "victims": [
+      "small_publishers",
+      "independent_media",
+      "users"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Independent Publisher",
+      "comment": "PERSPECTIVE 1: INDEPENDENT PUBLISHER (SNARE) \u2014 Trapped in the advertising market. Cannot build audience reach without platform distribution; cannot monetize without ad networks; faces algorithmic demotions and revenue clawbacks from dominant platforms. Exit costs are insurmountable: switching ad networks means losing established networks, facing discovery penalties, and reduced CPM rates. No meaningful alternatives for small-scale content monetization at scale."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Ad-Supported User",
+      "comment": "PERSPECTIVE 2: AD-SUPPORTED USER (SNARE) \u2014 Trapped in the attention extraction system. Faces algorithmic manipulation of feed content optimized for engagement rather than utility; cannot exit without abandoning digital communication and commerce. Data harvesting through ad networks is non-consensual at scale \u2014 users cannot meaningfully opt out without losing service access. Suppression through network effects: all users' peers are on the dominant platforms, making exit individually irrational."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regional Media Organization",
+      "comment": "PERSPECTIVE 3: REGIONAL MEDIA ORGANIZATION (SNARE) \u2014 Constrained but not fully trapped. Can exit by shifting to subscription models or local advertising, but this incurs significant revenue loss and customer acquisition costs. Experiences platform dependency: algorithmic changes can instantly reduce referral traffic by 30-50%, forcing reactive changes. High suppression from market concentration means limited negotiating power with platforms or alternative ad networks."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Publisher Coalition (Organized Response)",
+      "comment": "PERSPECTIVE 4: PUBLISHER COALITION (TANGLED ROPE) \u2014 Organized publishers (news associations, media consortia) have begun extracting joint value through coordinated negotiation with platforms (e.g., Google News Initiative, Facebook Journalism Project). They see genuine coordination benefits: platform support for fact-checking, revenue-sharing agreements, distribution guarantees. But the coordination comes embedded in extraction: platforms retain algorithmic control, can unilaterally change terms, and benefit disproportionately from user data. The coalition has agency but constrained options."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Dominant Ad Platform",
+      "comment": "PERSPECTIVE 5: DOMINANT AD PLATFORM (ROPE) \u2014 Experiences the constraint as pure coordination: connecting advertisers to audiences at scale, matching ad inventory to user interests. The platform benefits from network effects and data aggregation but sees its function as genuine coordination rather than extraction. Can arbitrage by shifting between advertising, subscriptions, or other models. From this perspective, the constraint is a scalable coordination mechanism that solves a real problem: connecting willing participants in an attention market."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Advertising Industry",
+      "comment": "PERSPECTIVE 6: LEGACY ADVERTISING INDUSTRY (PITON) \u2014 Traditional advertising intermediaries (ad agencies, media buying networks) continue to operate but have degraded function: platforms have automated much of the matching and targeting, reducing the intermediary role to execution and compliance. Theater ratio is high \u2014 the industry maintains institutional rituals (pitch meetings, creative reviews, planning cycles) while the actual strategic decisions flow through algorithmic optimization. The constraint persists through institutional inertia as platforms have captured the value-creation layer."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Structural Extraction View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational perspective, the advertising market concentration represents a pure extraction mechanism disguised as coordination. The platforms have systematized the capture of user attention and behavioral data; publishers have been reduced to content suppliers with no pricing power; small advertisers face opaque algorithmic allocation. The constraint's suppression (0.72) is maintained by network effects that make switching irrational for any individual actor. The extraction is not incidental to coordination \u2014 it IS the coordination."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "algorithmic_personalization_necessity",
+      "question": "Is the degree of algorithmic personalization and behavioral tracking required for genuine coordination of advertiser-audience matching, or is much of it extractive overhead masquerading as technical necessity?",
+      "resolution_mechanism": "Comparative analysis of ad effectiveness across targeting granularity levels; measurement of how much tracking data is actually necessary for matching vs. how much is collected for behavioral prediction; analysis of user utility from targeted vs. untargeted content",
+      "impact": "If targeting granularity > 50% is necessary: extractiveness drops to 0.45-0.50 (Tangled Rope). If < 30% of tracking is necessary for ad matching: extractiveness rises to 0.75+ (pure Snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Necessity of behavioral tracking for advertising coordination"
+    },
+    {
+      "id": "alternative_monetization_viability",
+      "question": "Do realistic alternative monetization models (subscription, micropayments, patronage, public funding) exist that could sustainably replace advertising-dependent media, or is the advertising model structurally inevitable?",
+      "resolution_mechanism": "Historical analysis of media survival rates under alternative models; economic modeling of news/content production costs vs. subscription feasibility; case studies of successful non-advertising-dependent media platforms",
+      "impact": "If alternatives are viable: the trap classification is too strong (exit is constrained, not trapped). If alternatives structurally fail: trap classification is confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Viability of alternative media monetization models"
+    },
+    {
+      "id": "network_effect_inevitability",
+      "question": "Are network effects in digital advertising fundamentally technological/mathematical, or contingent on specific platform design choices (e.g., algorithmic ranking, data sharing restrictions, API terms)?",
+      "resolution_mechanism": "Analysis of network effect magnitude under alternative design regimes (open APIs, interoperable data standards, algorithmic transparency); historical comparison across platforms with different architectural choices",
+      "impact": "If network effects are contingent on design: suppression could drop significantly (0.40-0.50) if regulation enforces interoperability. If effects are fundamental: current suppression (0.72) is structurally necessary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether network effects are technological or design-contingent"
+    },
+    {
+      "id": "platform_coordination_vs_extraction_boundary",
+      "question": "At what point does coordinating attention matching between advertisers and users become extraction? Is the boundary at data transparency, algorithmic control, or pricing asymmetry?",
+      "resolution_mechanism": "Normative analysis of stakeholder interests; comparison with other coordination mechanisms (markets, auctions, standards); measurement of how surplus is distributed across stakeholders",
+      "impact": "Different boundaries move the classification between Tangled Rope (genuine coordination with embedded extraction) and Snare (extraction disguised as coordination). This omega determines whether the constraint is redeemable through regulation (Tangled Rope) or inherently exploitative (Snare).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Definitional boundary between coordination and extraction in attention markets"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.75,
+      "id_override": "adm_extractiveness_t15_projection"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.65,
+      "id_override": "adm_theater_t15_projection"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The advertising market has undergone radical concentration in the past two decades, shifting from a distributed ecosystem of publishers, agencies, and advertisers to a duopoly of Google and Meta controlling approximately 60% of global digital advertising revenue. This constraint exhibits the classical characteristics of a snare: trapped publishers dependent on platform distribution, users subjected to algorithmic manipulation and behavioral harvesting, and suppression maintained through network effects that make individual exit irrational. The extractiveness has increased from 0.35 (2005-2010, when advertising remained somewhat competitive) to 0.68 (2025), tracking the consolidation of platform power. The theater_ratio (0.58) reflects that much of the advertising ecosystem consists of performative activity \u2014 audience metrics, brand safety initiatives, fraud prevention \u2014 that does not translate to user value or publisher revenue. The constraint's suppression (0.72) is sustained by the structural lock-in: users cannot exit because their social graph is platform-specific; publishers cannot exit because audience discovery depends on algorithmic distribution; advertisers cannot exit because reaching users at scale requires platform access.",
+    "key_agents": [
+      "Dominant Ad Platforms (Google, Meta, Amazon, TikTok): Primary beneficiaries (institutional/arbitrage) \u2014 capture 60%+ of digital ad revenue; control algorithmic allocation of advertiser budgets and user attention",
+      "Independent Publishers (news sites, blogs, content creators): Primary victims (powerless/trapped) \u2014 dependent on platform distribution; face algorithmic rank changes that can cut revenue by 50%; cannot negotiate ad rates",
+      "Ad-Supported Users: Primary victims (powerless/trapped) \u2014 subjected to attention harvesting and behavioral manipulation; cannot opt out of tracking without losing platform access",
+      "Regional Media Organizations: Secondary victims (moderate/constrained) \u2014 have some negotiating power through scale but constrained by lack of viable alternatives",
+      "Publisher Coalitions (news associations, media consortia): Organized response (organized/constrained) \u2014 extracting joint benefits through platform negotiations while remaining dependent",
+      "Legacy Ad Industry (agencies, media buyers): Institutional actors (institutional/arbitrage) \u2014 maintain degraded function through inertia",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees extraction mechanism maintained by network effects and algorithmic control"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and increasing. The platforms extract through multiple mechanisms: (1) Revenue asymmetry \u2014 platforms keep 30-50% of advertiser spend, publishers receive declining percentage; (2) Data asymmetry \u2014 platforms harvest user behavioral data to improve targeting, which increases advertiser returns but harms user privacy; (3) Algorithmic suppression \u2014 platforms can demote publishers' content without transparency, forcing dependence on platform support; (4) Information asymmetry \u2014 publishers and advertisers lack transparency into algorithmic decisions, pricing mechanisms, and ad delivery. The upward trajectory reflects platform consolidation: as Google and Meta's market share has grown from 40% (2010) to 60%+ (2025), their ability to extract has increased through stronger network effects and reduced competitive pressure. Suppression (0.72): High and structural. Users cannot exit without abandoning social networks and digital commerce; publishers cannot exit without losing 40-70% of revenue; advertisers cannot exit without losing access to user bases. The suppression is maintained by: (1) Network effects \u2014 platform utility increases with user count; (2) Algorithmic ranking control \u2014 platforms determine publisher visibility; (3) API restrictions \u2014 competing ad networks cannot match platform scale; (4) Data advantages \u2014 platforms' proprietary user data enables targeting competitors cannot match. Theater ratio (0.58): Moderate-high. The advertising industry maintains performative layers: (1) Brand safety rituals \u2014 fraud detection, viewability metrics, brand association controls that address real problems but are largely procedural; (2) Auction mechanics \u2014 real-time bidding and algorithmic allocation that obscure the actual decision-making (platform's proprietary algorithms); (3) Reporting and analytics \u2014 platforms provide detailed metrics that create illusion of control while reserving actual algorithmic decisions. Theater has increased as platforms have automated decision-making and made algorithms opaque.",
+    "perspectival_gap": "The gap between perspectives reveals the extraction mechanism itself. Why do independent publishers and users see Snare while platforms see Rope? Because they occupy opposite positions in the extraction flow. The platform's 'coordination' function (matching advertisers to audiences) is real and valuable. But the way this coordination is achieved \u2014 through proprietary algorithms, user data harvesting, and publisher algorithmic suppression \u2014 concentrates all benefits to the platform and all costs to publishers and users. The organized publishers' Tangled Rope perspective is instructive: they have gained some benefits (revenue-sharing deals, platform support) while remaining fundamentally constrained. This suggests the constraint might be redeemable through regulation or market opening (moving it toward pure Rope). But the analytical observer's Snare classification is more structurally defensible: the network effects and algorithmic control mechanisms are not incidental features but core to how the extraction works. Without these mechanisms, the platforms would have less ability to extract.",
+    "directionality_logic": "Directionality is derived from beneficiary/victim declarations plus exit options. Dominant platforms are beneficiaries with arbitrage exit \u2192 d \u2248 0.05 \u2192 f(d) \u2248 -0.12 \u2192 \u03c7 amplifies platform benefits and masks extraction. Independent publishers are victims with trapped exit \u2192 d \u2248 0.95 \u2192 f(d) \u2248 1.42 \u2192 \u03c7 amplifies extraction they experience. Users are victims with trapped exit (cannot opt out without losing service access) \u2192 d \u2248 0.95 \u2192 f(d) \u2248 1.42. The scope modifier (global, \u03c3 = 1.2) amplifies extraction across large scope because network effects compound at scale. Smaller markets with viable local alternatives would see lower \u03c3 and lower \u03c7; global dominance increases both. The directionality overrides are not needed \u2014 the structural derivation accurately captures the extraction flow.",
+    "mandatrophy_analysis": "EXTRACTIVENESS > 0.70 REQUIRES MANDATROPHY RESOLUTION: The advertising market concentration constraint has extractiveness = 0.68 at current state, approaching 0.75 at the 15-year projection point. At \u03b5 > 0.70, the mandatrophy gate requires explicit resolution. The question is: can this constraint be redeemed as Tangled Rope (coordination with embedded extraction) or is it irredeemable Snare? The mandatrophy is resolved by observing that: (1) Genuine coordination function exists (platforms do solve real advertiser-audience matching problem); (2) Asymmetric extraction is documented (publishers, users, and smaller advertisers bear costs; platforms capture surplus); (3) Active enforcement is required (algorithmic ranking, API restrictions, data controls maintain the asymmetry). These are the Tangled Rope gates. However, the suppression (0.72) is higher than typical Tangled Ropes (which cluster around 0.40-0.60). The high suppression indicates that the coordination function has been captured: the original problem (matching advertisers to audiences) is now secondary to the extraction mechanism (maintaining platform control and data monopoly). At the civilizational/analytical perspective, the constraint is Snare \u2014 the coordination narrative is theater. The mandatrophy resolution is that this is a Tangled Rope undergoing degradation toward Snare. The measurements show extractiveness rising from 0.35 to 0.68 over 15 years; theater rising from 0.42 to 0.58. These trends indicate that the coordination function is being hollowed out: theater is not rising because coordination is becoming more complex, but because the actual decision-making (platform algorithms) is becoming more opaque. A Tangled Rope that is degrading toward Snare remains a Tangled Rope in structure but approaching Snare in function."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "news_ecosystem_collapse",
+      "user_data_harvesting",
+      "algorithmic_ranking_opacity"
+    ],
+    "dual_formulation_note": "Advertising market concentration decomposes into structurally distinct constraints: (1) resource_allocation (how ad budgets are distributed across publishers and platforms); (2) attention_extraction (behavioral manipulation and data harvesting from users); (3) publisher_dependency (algorithmic control maintaining lock-in). This story focuses on the market concentration mechanism; the linked stories handle the downstream effects on news sustainability and user privacy. The high boltzmann_floor_override (0.18) reflects that genuine resource allocation complexity justifies some baseline extraction; but extraction above this floor indicates rent-seeking beyond coordination costs."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

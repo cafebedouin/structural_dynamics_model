@@ -1,0 +1,230 @@
+{
+  "header": {
+    "constraint_id": "lithium_battery_dependency",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lithium"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Global Lithium Battery Supply Chain Dependency",
+    "topic_domain": "economic_infrastructure/energy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "lithium_extracting_nations",
+      "battery_manufacturers",
+      "electric_vehicle_producers"
+    ],
+    "victims": [
+      "energy_transition_dependent_economies",
+      "cobalt_nickel_mining_communities",
+      "competing_battery_technologies"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Energy Transition Dependent Nations",
+      "comment": "PERSPECTIVE 1: ENERGY TRANSITION DEPENDENT NATIONS (SNARE) \u2014 Nations committed to decarbonization have no structural exit from lithium dependency. Commitment to net-zero mandates requires battery electric vehicles; manufacturing capacity requires lithium-ion batteries; no alternative chemistry has achieved cost/energy density parity. Suppression is total: geological concentration of lithium reserves (60% in Argentina, Bolivia, Chile), political control by mining interests, and technical lock-in via decades of optimization around lithium-ion chemistry. Maximum experienced extraction with no exit path."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Mining-Dependent Communities",
+      "comment": "PERSPECTIVE 2: MINING-DEPENDENT COMMUNITIES (TANGLED ROPE) \u2014 Communities in lithium-producing regions experience genuine coordination through employment and infrastructure investment, alongside asymmetric extraction via water depletion, environmental degradation, and resource curse dynamics. They cannot easily exit (economic dependency) but also receive benefits (wages, services). Suppression is high (few alternative economic pathways) but not total (some exit through migration or economic diversification)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Battery Manufacturers",
+      "comment": "PERSPECTIVE 3: BATTERY MANUFACTURERS (ROPE) \u2014 Experience the constraint as a pure coordination problem: securing lithium supply requires investment in processing capacity, refining relationships with mining entities, and standardizing battery specifications. They have arbitrage options (alternative suppliers, strategic reserves, vertical integration). The constraint solves a genuine collective action problem \u2014 without lithium supply coordination, battery production would collapse. Net beneficiary with real agency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Lithium-Producing Nations",
+      "comment": "PERSPECTIVE 4: LITHIUM-PRODUCING NATIONS (ROPE) \u2014 See the constraint as coordination that benefits them: organizing extraction, controlling supply, negotiating pricing power. High arbitrage options (can diversify markets, create processing capacity, invest in value-added production). The constraint creates rents they can capture. Not extraction FROM them, but a mechanism through which they extract FROM others."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Alternative Battery Technology Developers",
+      "comment": "PERSPECTIVE 5: ALTERNATIVE BATTERY TECHNOLOGY DEVELOPERS (SCAFFOLD) \u2014 Sodium-ion, solid-state, and lithium-iron-phosphate alternatives are emerging as genuine exit paths from lithium dependency. These technologies have sunset logic: as they mature and cost curves decline, lithium's dominance weakens. Developers face significant suppression (incumbent advantages, switching costs, capital requirements) but see a clear technological pathway with a defined horizon (10-20 years). The constraint is temporary from this view."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Battery Chemistry Standardization Regime",
+      "comment": "PERSPECTIVE 6: STANDARDIZATION INSTITUTIONS (PITON) \u2014 Battery standards bodies (IEC, ASTM) have optimized extensively around lithium-ion chemistry over 20+ years. The standards are now so entrenched that they function largely performatively \u2014 testing protocols, safety requirements, and compatibility measures are designed for and assume lithium-ion. Alternative chemistries must prove themselves within a testing framework built for the incumbent. The standards persist through institutional inertia despite lower actual verification function for emerging chemistries. Theater ratio is high; extractiveness modest but supported by structural lock-in."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Geological/Physical Constraints",
+      "comment": "PERSPECTIVE 7: GEOLOGICAL/ANALYTICAL VIEW (MOUNTAIN) \u2014 Energy density requirements for portable energy storage encounter hard physical limits on battery chemistry diversity. Lithium's unique combination of low density, high electrochemical potential, and stability is not easily replicated. From a sufficiently abstract view, some dependence on concentrated-source battery chemistry is inherent to portable energy density physics. However, this naturalizes what is actually a choice: we could distribute energy production and storage differently, use alternative energy carriers, or invest in genuinely diverse battery chemistry pathways. The mountain classification is a false summit \u2014 the geological constraint explains why lithium is useful, not why we must be dependent on it."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "alternative_chemistry_timeline",
+      "question": "What is the realistic timeline for sodium-ion, solid-state, or other alternative chemistries to achieve cost/energy density parity with lithium-ion?",
+      "resolution_mechanism": "Tracking manufacturing cost curves, energy density improvements, and production scale-up rates for alternative technologies; market penetration analysis in non-automotive and automotive segments",
+      "impact": "If timeline < 5 years: scaffold perspective dominates and sunset clause is imminent, classification shifts to temporary constraint. If timeline > 20 years: lithium dependency becomes effectively permanent for multiple human lifespans.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for technological alternatives to reach parity"
+    },
+    {
+      "id": "supply_concentration_mechanism",
+      "question": "Is lithium supply concentration (Argentina, Bolivia, Chile) a geological accident or the result of deliberate coordination and political economy?",
+      "resolution_mechanism": "Historical analysis of mining investment patterns, trade agreements, and supply chain consolidation; identification of points where alternative sources were deprioritized or abandoned",
+      "impact": "If geological: dependency is partially natural law (mountain). If political economy: dependency is structurally constructed (snare). Most likely: combination, but the proportion determines how much extraction is inherent vs contingent.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether lithium concentration is geological or political"
+    },
+    {
+      "id": "water_depletion_feedback",
+      "question": "At what rate of lithium extraction does water depletion in mining regions cause economic collapse of surrounding communities, triggering forced reduction in supply?",
+      "resolution_mechanism": "Hydrological monitoring in mining regions (Atacama, Argentina salt flats); economic modeling of agriculture and community viability under water stress; historical precedent analysis from other extractive industries",
+      "impact": "If feedback occurs within 10 years: suppression mechanism becomes self-limiting and constraint may shift from snare to tangled_rope. If > 20 years: extraction can continue unchecked, snare classification stable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Rate of water depletion feedback in mining regions"
+    },
+    {
+      "id": "strategic_reserve_effectiveness",
+      "question": "Can government strategic reserves (lithium stockpiles, refining capacity) actually reduce dependency, or do they merely delay extraction without changing its fundamental structure?",
+      "resolution_mechanism": "Simulation and historical analysis of reserve depletion rates under various demand scenarios; assessment of whether reserves reduce supply concentration or merely shift when extraction occurs",
+      "impact": "If effective: suppression can be reduced via policy, and tangled_rope classification is appropriate. If ineffective: structural dependency remains snare-level regardless of reserve policy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether strategic reserves reduce dependency or delay extraction"
+    },
+    {
+      "id": "recycling_viability",
+      "question": "Can lithium recycling from spent batteries achieve sufficient recovery rates and cost curves to materially reduce primary mining dependency within a 20-year horizon?",
+      "resolution_mechanism": "Tracking recycling technology development, cost curves, and recovery rates; modeling closed-loop battery supply under high recycling penetration; assessment of scaling barriers",
+      "impact": "If yes: secondary sources can reduce primary extraction pressure, shifting from snare toward tangled_rope. If no: primary mining dependency persists as structural constraint.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Viability of recycling-based supply alternatives"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.53
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.44
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Global energy transition has created a structural dependency on lithium-ion batteries for electric vehicles, grid storage, and renewable energy integration. This dependency exhibits the classic characteristics of a tangled rope constraint: it solves a genuine coordination problem (securing stable supply of the energy storage medium for global electrification) while simultaneously extracting from nations and communities that depend on energy transition but lack alternatives. Lithium's geographic concentration (60% of proven reserves in the 'Lithium Triangle' of Argentina, Bolivia, and Chile) creates supply chokepoints. Water depletion from mining operations threatens agriculture and community viability in arid regions. Yet alternative battery chemistries (sodium-ion, solid-state, lithium-iron-phosphate) are mattering as genuine exit paths, giving the constraint scaffold properties on a 10-20 year horizon. The constraint's theater ratio remains moderate (0.48) because the technical coordination function is genuine \u2014 battery supply chains require real logistical integration \u2014 but standardization regimes and incumbent advantages add performative overhead. Extractiveness has risen from 0.35 to 0.58 over the decade as demand has concentrated supply bottlenecks and mining regions have faced intensifying water stress.",
+    "key_agents": [
+      "Energy Transition Dependent Economies: Primary victim (powerless/trapped) \u2014 committed to net-zero targets; cannot exit lithium dependency without abandoning decarbonization or waiting for alternative technologies",
+      "Lithium Extracting Nations (Argentina, Bolivia, Chile): Primary beneficiary (institutional/arbitrage) \u2014 control geographic bottleneck; capture significant rents through supply coordination and pricing power",
+      "Battery Manufacturers: Secondary beneficiary (institutional/arbitrage) \u2014 benefit from stable supply coordination; have arbitrage options through vertical integration or alternative sourcing",
+      "Mining-Dependent Communities: Secondary victim (moderate/constrained) \u2014 experience genuine employment and infrastructure benefits alongside water depletion and environmental degradation",
+      "Alternative Chemistry Developers: Organized agents (organized/constrained) \u2014 see clear technological sunset pathway; building exit alternatives over generational timescale",
+      "Standardization Bodies: Institutional actors (institutional/arbitrage) \u2014 maintain battery standards optimized for lithium-ion; function partly performatively for emerging alternatives",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 can identify both genuine physical constraints and contingent political-economic structures"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. At t=0, lithium dependency was a genuine coordination mechanism with modest extraction (0.35) \u2014 a novel energy storage technology connecting willing suppliers and buyers. As demand concentrated (electric vehicle deployment accelerated globally), supply constraints tightened and extractiveness rose. By t=10, the constraint shows clear asymmetric extraction: energy transition dependent nations must pay increasing prices, bear supply volatility, and accept environmental costs of mining, while having no structural exit. But extractiveness is not snare-level (0.66+) because: (a) alternative technologies are genuinely emerging, (b) recycling pathways exist, and (c) producers have some strategic options (reserves, efficiency improvements, demand management). Suppression (0.62): High. Multiple barriers prevent exit: technical lock-in (lithium-ion optimization is deeply embedded in automotive and grid platforms), capital requirements for alternative chemistries, political control of supply by mining-exporting nations, and the absence of rapid substitutes at comparable cost/performance. Environmental costs of mining (water depletion, toxic tailings) are borne by mining communities with limited agency. Theater ratio (0.48): Moderate. The coordination function is genuine \u2014 battery supply chains require real logistical integration, standardization, and quality control. Theater is not high because technical requirements are substantive, not performative. However, standardization for alternative chemistries adds performative overhead, and 'securing reliable supply' rhetoric sometimes masks rent-extraction dynamics.",
+    "perspectival_gap": "Energy-transition dependent nations experience maximum extraction (snare-level) because they have no exit from electrification commitment and face rising supply costs with concentrated suppliers. Lithium-producing nations experience rope-level coordination benefits because they control a chokepoint and can capture rents. Battery manufacturers occupy intermediate ground (tangled rope to rope) depending on their supply diversification and backward integration. Mining communities occupy tangled rope precisely because they receive genuine economic benefits from employment and infrastructure while bearing environmental and water stress costs. The gap between the powerless/trapped perspective (snare) and the institutional/arbitrage perspective (rope) is the diagnostic signature of extraction: the same structural constraint appears as pure coordination to the beneficiary and pure coercion to the victim.",
+    "directionality_logic": "Directionality derives from structural position within the constraint. Lithium-producing nations have arbitrage options (can choose extraction rates, invest in processing, diversify markets) and receive benefits, yielding low d (near 0.1-0.2) and negative or minimal \u03c7. Battery manufacturers have mobile options (multiple suppliers, backward integration) and receive genuine coordination benefits, yielding moderate d (near 0.4-0.5) and moderate \u03c7. Energy-transition dependent economies are trapped by commitment to electrification targets and face rising prices with no exit, yielding high d (near 0.85-0.90) and high \u03c7. Mining-dependent communities are constrained (have some exit options through migration or economic diversification) but have few alternatives, yielding moderately high d (near 0.65-0.75) and moderately high \u03c7. The piton institutional perspective (standardization bodies) receives arbitrage-level options and modest benefits, yielding low d similar to beneficiaries, but theater ratio is what drives the piton classification, not \u03c7.",
+    "mandatrophy_analysis": "TANGLED ROPE VALIDATION: The constraint satisfies all three tangled rope gates. (1) Genuine coordination function: battery supply integration is a real collective action problem \u2014 without coordinating lithium sourcing, refining, and distribution, global battery production cannot scale. (2) Asymmetric extraction: energy-transition dependent economies bear disproportionate costs (volatile supply, rising prices, environmental externalities of mining) relative to supply-controlling nations and manufacturers. (3) Active enforcement: requires ongoing mining investment, supply contracts, trade agreements, and standardization regimes. SCAFFOLD COMPONENT: The constraint has secondary scaffold properties because alternative battery chemistries (sodium-ion, solid-state) represent genuine technological exits with sunset logic on a 10-20 year horizon. As these mature, lithium's dependency mechanism weakens. The classification is Tangled Rope at the current temporal scale, but Scaffold is embedded in the forward trajectory. PITON RISK: Standardization regimes and incumbent advantage create risk that lithium optimization becomes inertial \u2014 the constraint persists not because it solves problems but because alternatives are delayed by the friction of switching costs. The theater ratio (0.48) is moderate; if it rises above 0.70, the classification shifts toward piton."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "electric_vehicle_supply_chain",
+      "renewable_energy_grid_storage",
+      "mining_water_depletion",
+      "battery_standardization_regime"
+    ],
+    "dual_formulation_note": "Lithium battery dependency decomposes structurally into three distinct constraints with different \u03b5 values: (1) lithium_supply_bottleneck (\u03b5=0.58, this story) addresses the asymmetric access to proven reserves; (2) battery_chemistry_lock_in (\u03b5=0.42, separate story) addresses incumbent advantage in standardization and optimization; (3) mining_environmental_externalities (\u03b5=0.65, separate story) addresses the transfer of extraction costs to mining communities. The upstream constraint is supply bottleneck; downstream constraints are technology lock-in and environmental debt. All three link via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

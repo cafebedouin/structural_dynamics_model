@@ -1,0 +1,191 @@
+{
+  "header": {
+    "constraint_id": "film_festival_prestige_hierarchy",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ffph"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Film Festival Prestige Hierarchy",
+    "topic_domain": "cultural/entertainment/institutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "tier_one_festivals",
+      "established_filmmakers",
+      "festival_gatekeepers"
+    ],
+    "victims": [
+      "emerging_filmmakers",
+      "independent_producers",
+      "non_canonical_cinema"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Emerging Filmmaker",
+      "comment": "PERSPECTIVE 1: EMERGING FILMMAKER (SNARE) \u2014 Career progression requires festival validation at recognized tiers. Cannot exit the prestige system without abandoning conventional career pathways. Suppressed by publication bias (rejection rarely explained), resource barriers (submission fees, travel costs), and nepotistic selection (established directors' films get preferential slots). The trap is structural: the career reward mechanism depends on the festival validation mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Tier Filmmaker",
+      "comment": "PERSPECTIVE 2: MID-TIER FILMMAKER (TANGLED ROPE) \u2014 Experiences both coordination and extraction. Festival selections genuinely enable networking, distribution deals, and audience access \u2014 coordination benefits are real. But the hierarchy extracts through winnowing: only a small percentage receive premium slots, and tier placement determines career trajectory. Exit is theoretically possible (direct-to-streaming, film co-ops) but costly \u2014 requires abandoning conventional legitimacy pathways and accepting reduced prestige."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Tier-One Festival",
+      "comment": "PERSPECTIVE 3: TIER-ONE FESTIVAL (ROPE) \u2014 Benefits from prestige hierarchy through curation authority and brand maintenance. Experiences the constraint as coordination: selecting from high-quality submissions and creating discoverable venues for quality cinema. Net beneficiary with low coercion overhead \u2014 the festival maintains prestige through genuine curation, not through suppression of alternatives. Can arbitrage their selection authority across funding, partnerships, and institutional support."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Curator Establishment",
+      "comment": "PERSPECTIVE 4: LEGACY CURATOR ESTABLISHMENT (PITON) \u2014 The prestige hierarchy is maintained through institutional inertia and theatrical ritual. Canonicity (Cannes, Venice, Berlin) persists not because the festivals uniquely identify quality cinema but because 50+ years of institutional endorsement created a self-fulfilling prophecy. The theater is high: festival selections are justified through mystified curation rhetoric while actual selection reflects industry gatekeeping. Film scholarship and industry practice treat the hierarchy as natural and inevitable, despite mounting evidence that distributed discovery (social media, algorithmic curation, regional festivals) identifies quality cinema at comparable or better rates. The constraint is degraded \u2014 it functionally sorts films but no longer performs its original role (discovering new talent, maintaining cinema's artistic boundary)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Decentralized Film Coalition",
+      "comment": "PERSPECTIVE 5: DECENTRALIZED FILM COALITION (SCAFFOLD) \u2014 Organized alternative pathways (film co-ops, regional festivals, online platforms, artist-led curations) are building parallel prestige mechanisms that bypass the tier-one hierarchy. These mechanisms have genuine sunset logic: as algorithmic discovery, social media, and distributed platforms mature, the traditional festival hierarchy's gatekeeping function becomes increasingly redundant. Exit path is visible: filmmakers can build audiences and distribute directly, using decentralized validation. The constraint persists but is structurally temporary \u2014 its suppression mechanisms (fee structures, gatekeeping rhetoric) are declining in effectiveness as alternatives mature."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational view, some prestige hierarchy is inherent to cultural institutions: every artistic tradition must have mechanisms for canonical status and quality differentiation. No way to have 'cinema' without some films being more recognized than others. This perspective naturalizes the constraint as an immutable feature of how cultural value gets distributed. However, the structural data contradicts the mountain classification: the specific tier-one festival hierarchy is contingent institutional arrangement (Cannes gained primacy through WWII positioning, not through inherent quality superiority). The 'immutability' claim is false naturalization of a particular historical instantiation of prestige mechanisms."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "algorithmic_discovery_sufficiency",
+      "question": "Do algorithmic curation systems and social media discovery identify cinema quality and importance at rates comparable to or better than traditional festivals?",
+      "resolution_mechanism": "Longitudinal analysis of films identified by algorithmic platforms vs festival selections; tracking of audience engagement, critical reception, and industry impact; comparison of discovery rates for diverse cinema traditions across both systems",
+      "impact": "If comparable/better: scaffold sunset is real \u2014 decentralized discovery is functionally replacing festival gatekeeping. If inferior: festival hierarchy has genuine curation function, and suppression of alternatives is coordination cost rather than extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether algorithmic discovery provides equivalent prestige/quality identification"
+    },
+    {
+      "id": "canonical_cinema_definition_instability",
+      "question": "Is the tier-one festival hierarchy's definition of 'quality cinema' stable over time, or does it drift to maintain gatekeeping authority?",
+      "resolution_mechanism": "Historical analysis of selection criteria changes; comparison of films rejected by tier-one festivals vs those selected by second-tier festivals over 20-year windows; tracking of retrospective reassessments (films dismissed at time of release but canonized later)",
+      "impact": "If definition drifts: piton classification confirmed \u2014 hierarchy is performative ritual degrading over time. If stable: mountain or rope classification more supported \u2014 hierarchy genuinely identifies quality.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Stability of festival curation criteria over time"
+    },
+    {
+      "id": "suppression_mechanism_efficacy",
+      "question": "How much of the emerging filmmaker's suppression is structural (resource barriers, publication bias) vs cognitive (internalized belief in festival legitimacy)?",
+      "resolution_mechanism": "Post-exit trajectory analysis: filmmakers who bypass festivals through streaming/direct distribution \u2014 do they report internalized suppression persisting after external barriers removed? Surveys of decision-making about festival submissions vs alternative distribution.",
+      "impact": "If substantially internalized: constraint's effective suppression is higher than metrics suggest \u2014 the cognitive capture is part of the extraction mechanism. If mostly structural: removing barriers (fee waivers, algorithmic curation) would enable rapid exit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of suppression that is structural vs internalized"
+    },
+    {
+      "id": "regional_festival_independence",
+      "question": "Do second-tier and regional festivals function as genuine alternatives or as de facto satellites of the tier-one hierarchy?",
+      "resolution_mechanism": "Network analysis of film circulation: do selected films flow upward from regional to tier-one festivals, or do tier-one selections exclude regional discoveries? Measurement of institutional independence in curation authority.",
+      "impact": "If satellites: no genuine exit path exists (scaffold fails). If independent: emerging filmmakers can build careers through alternative hierarchies (scaffold confirmed, exit options improved).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regional festivals function as independent alternatives or satellites"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.64
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The film festival prestige hierarchy functions as a gating mechanism that coordinates genuine artistic curation while simultaneously extracting career rents from filmmakers dependent on its validation. The constraint exhibits classic tangled rope structure: tier-one festivals (Cannes, Venice, Berlin) provide real coordination value through curation and discovery, yet the hierarchy's tiered structure suppresses emerging filmmakers and independent producers who lack conventional credentials. The hierarchy is enforced through theatrical ritual (mysterious selection committees, prestige rhetoric) and structural suppression (submission fees, gatekeeping asymmetries, publication bias in rejections). Over the past 30 years, theater ratio has risen from 0.52 to 0.68 as the curation authority has become increasingly performative: festival selections are justified through mystified taste rhetoric while actual selection reflects industry gatekeeping and filmmaker networks. Simultaneously, algorithmic discovery and streaming platforms have created alternative prestige mechanisms that function with lower theatrical overhead. The constraint operates at global scope but with particularly high suppression in non-canonical cinema traditions (non-English films, radical cinema, non-narrative forms) and for filmmakers without institutional backing.",
+    "key_agents": [
+      "Tier-One Festivals (Cannes, Venice, Berlin): Institutional beneficiaries (institutional/arbitrage) \u2014 capture curation authority and prestige brand maintenance; experience constraint as coordination",
+      "Established Filmmakers: Secondary beneficiaries (powerful/arbitrage) \u2014 already have conventional credentials; festivals provide network amplification and distribution deals without gatekeeping suppression",
+      "Festival Gatekeepers (curators, programmers): Institutional agents (institutional/arbitrage) \u2014 maintain authority through hierarchy; beneficiaries of mystified selection rhetoric that justifies their judgment",
+      "Emerging Filmmakers: Primary victims (powerless/trapped) \u2014 career progression entirely dependent on festival validation; face resource barriers and insider nepotism; cannot exit without abandoning conventional legitimacy",
+      "Independent Producers: Secondary victims (moderate/constrained) \u2014 can theoretically bypass festivals but face prestige loss and distribution disadvantages; high cost to exit conventional pathway",
+      "Non-Canonical Cinema Traditions: Tertiary victims (powerless/identity_locked) \u2014 suppressed not just by resource barriers but by curation criteria that treat Western institutional cinema as canonical; internalized belief in festival legitimacy as legitimate artistic judgment prevents recognition of gatekeeping",
+      "Decentralized Film Coalition: Organized agents (organized/constrained) \u2014 building alternative prestige mechanisms (film co-ops, algorithmic curation, regional festivals); creating visible exit pathways"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The prestige hierarchy extracts through career rent concentration: a small percentage of submissions receive premium slots and career acceleration, while the vast majority are winnowed without explanation. The extraction is not maximal because the coordination function is genuine \u2014 tier-one festivals do identify quality cinema at rates better than random selection, and the curation has real artistic value. But the extraction component is substantial because the hierarchy is artificially concentrated (four festivals dominate global cinema prestige) and because alternative discovery mechanisms are suppressed through prestige rhetoric rather than enabled. Suppression (0.65): High. Emerging filmmakers face multiple suppression mechanisms: submission fees ($75-150 per festival \u00d7 hundreds of submissions), resource barriers (travel, residency requirements), publication bias (rejections unexplained), and insider nepotism (established filmmakers' films fast-tracked through selection committees). These barriers are not insurmountable individually but collectively create high suppression. Theater ratio (0.68): High and rising. Festival selections are justified through mystified curation rhetoric ('the committee's artistic vision,' 'international recognition of talent') while actual selection reflects industry gatekeeping, filmmaker networks, and prestige accumulation. The theatrical component has increased as streaming platforms (Netflix, Amazon) have begun producing 'festival selections,' inverting the discovery mechanism \u2014 instead of festivals discovering films, funded platforms now use festival selections for legitimacy. The rise in theater ratio from 0.52 to 0.68 reflects increasing performative content: the curation authority is maintained rhetorically while functional discovery increasingly happens elsewhere.",
+    "directionality_logic": "The prestige hierarchy's directionality is determined by structural position relative to the gating mechanism. Beneficiaries with strong exit options (established filmmakers, tier-one festivals) experience the constraint as largely beneficial coordination \u2014 they can use festival prestige strategically without depending on it. Victims with trapped options (emerging filmmakers) experience maximum extraction \u2014 their entire career viability depends on acceptance into the hierarchy, and rejection carries no explanation. Victims with constrained options (mid-tier filmmakers, independent producers) experience mixed extraction and coordination \u2014 they benefit from networking and distribution but face prestige penalties for alternative pathways. The identity-locked component is specific: filmmakers from non-canonical traditions often cannot perceive the prestige hierarchy as contingent even when they intellectually recognize it as gatekeeping, because their identity as filmmakers has been constituted through the prestige system's judgments. Exit would require not just changing distribution mechanisms but reimagining what legitimizes cinema as art.",
+    "perspectival_gap": "The prestige hierarchy demonstrates extreme perspectival divergence. Tier-one festivals see coordination (Rope) \u2014 they genuinely curate quality cinema and provide discovery function. Established filmmakers see prestige amplification (Rope) \u2014 festivals enhance their already-strong position. Emerging filmmakers see pure extraction (Snare) \u2014 the hierarchy depends on their suppression for prestige differentiation and career winnowing. Mid-tier filmmakers see mixed coordination and extraction (Tangled Rope) \u2014 the festivals enable networking but suppress mobility through prestige tiering. The decentralized coalition sees a temporary mechanism with visible sunset (Scaffold) \u2014 algorithmic discovery and streaming platforms are building alternatives. The legacy establishment sees degraded ritual (Piton) \u2014 they maintain the hierarchy through institutional inertia despite mounting evidence of functional decline. The analytical observer risks naturalizing the hierarchy as an immutable feature of culture (Mountain) \u2014 but the structural data reveals that specific tier-one dominance is contingent (Cannes' primacy derived from WWII positioning, not from superior curation) and that alternative prestige mechanisms function equivalently.",
+    "mandatrophy_analysis": "The prestige hierarchy resolves mandatrophy by showing that all six types are legitimate readings of the same constraint from different structural positions. The tangled rope classification at the analytical level (moderate power, constrained exit, biographical time) captures the hybrid nature: genuine curation coordination exists alongside genuine suppressive extraction. The mountain classification from the civilizational perspective is a false summit \u2014 the claim that 'prestige hierarchies are inherent to culture' naturalizes what is actually a contingent institutional arrangement (Cannes' prominence derives from specific historical positioning, not from superior artistic judgment). The piton classification correctly identifies that the hierarchy is increasingly performative: its functional role (identifying quality cinema) is being performed by algorithms and platforms, yet it persists through institutional inertia and prestige rhetoric. The scaffold classification shows that the constraint is structurally temporary \u2014 decentralized discovery is creating genuine exit paths. No single type fully captures the constraint; the presheaf over the observation site contains all six types as legitimate perspectives. The mandata resolution is that the hierarchy's type-ambiguity reveals its character as a contestable institutional arrangement, not a natural or inevitable feature of cinema."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "film_criticism_gatekeeping",
+      "cinema_canon_definition",
+      "independent_film_distribution"
+    ],
+    "dual_formulation_note": "The prestige hierarchy decomposes into at least three structurally distinct constraints: (1) festival curation as information standard (low \u03b5, coordination type information_standard), (2) prestige tiering as career rent extraction (higher \u03b5, tangled_rope), and (3) theatrical legitimation through selection mystification (high theater_ratio, piton). This story focuses on the tangled rope core; related stories should address curation mechanics and legitimation rhetoric separately."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

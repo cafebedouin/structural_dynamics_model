@@ -1,0 +1,203 @@
+{
+  "header": {
+    "constraint_id": "platform_worker_income_volatility",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pwiv"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Platform Worker Income Volatility",
+    "topic_domain": "economic/labor",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "capital_markets"
+    ],
+    "victims": [
+      "platform_workers",
+      "worker_household_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Platform Worker (Income Trapped)",
+      "comment": "PERSPECTIVE 1: PLATFORM WORKER (SNARE) \u2014 Trapped by economic dependency with no material exit options. Income volatility is structurally designed: algorithms suppress wages during high-demand periods, suppress opportunities during low-demand periods. Workers bear full suppression cost without coordination benefit. No alternative employment pathways available; household budget cannot absorb volatility. Effective extraction maximized."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Worker Household (Constrained)",
+      "comment": "PERSPECTIVE 2: WORKER HOUSEHOLD (TANGLED ROPE) \u2014 Constrained by dependent care obligations and geographic immobility but perceives some genuine coordination function: platform access solves childcare-compatible scheduling. Mixed extraction: income volatility creates planning barriers, but scheduling flexibility provides real coordination benefit. Exit available only at high cost (career reset, relocation)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Platform Operator (Beneficiary)",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATOR (ROPE) \u2014 Experiences the constraint as coordination: matching supply and demand, managing pricing, optimizing driver utilization. From operator perspective, volatility is efficient price discovery and worker sorting. No perception of extraction \u2014 the system coordinates and generates value. Arbitrage exit enables institutional actor to shift markets or redesign algorithm if preferred."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Worker Organizing Coalition (Sunset Path)",
+      "comment": "PERSPECTIVE 4: WORKER ORGANIZING COALITION (SCAFFOLD) \u2014 Organized collective (unions, worker advocacy groups, cooperative platforms) perceives the volatility constraint as temporary and solvable through policy intervention: minimum income guarantees, algorithmic transparency regulation, portable benefits. See clear sunset pathway: regulatory mandates establishing income floors and scheduling predictability. High suppression justified only if policy window remains open; supports classification as transitional coordination problem."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Traditional Labor Regulation (Degraded Ritual)",
+      "comment": "PERSPECTIVE 5: TRADITIONAL LABOR REGULATION (PITON) \u2014 Wage floors, scheduling protections, and benefits mandates are largely theatrical when applied to platform work: workers classified as independent contractors bypass coverage; regulations designed for W-2 employment structure don't fit platform models; agencies lack enforcement capacity at scale. Theater ratio reflects that traditional regulatory apparatus is maintained (agencies still exist, laws still written) but no longer functionally controls platform labor. Enforcement has atrophied; ritual persists."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Sees genuine coordination function (supply-demand matching, flexible scheduling, zero-friction access) AND genuine extraction (wage suppression, information asymmetry, externalizing risk onto workers). The constraint cannot be reduced to pure extraction or pure coordination. The platform architecture itself enables both \u2014 the same algorithm that matches requests also suppresses wages during peak demand. Classification as tangled_rope from all structural data: beneficiaries present (platform operators, investors), victims present (workers), active enforcement required (algorithmic control), bases for both coordination and extraction exist."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "algorithmic_wage_suppression_intentionality",
+      "question": "Is wage volatility a necessary side effect of efficient supply-demand matching, or an intentionally designed extraction mechanism?",
+      "resolution_mechanism": "Comparative analysis of platform algorithms: do platforms use different algorithmic regimes that decouple supply matching from wage suppression? Does regulatory requirement to publish algorithmic transparency reveal design choices that maximize volatility independent of matching efficiency?",
+      "impact": "If necessary side effect: extractiveness drops to ~0.35 (rope classification becomes dominant). If intentional design: extractiveness confirmed at ~0.58+ (tangled_rope/snare confirmed). Classification consequence directly depends on resolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether wage suppression is algorithmic design choice or matching necessity"
+    },
+    {
+      "id": "worker_exit_option_elasticity",
+      "question": "How elastic is the 'trapped' exit classification? What percentage of platform workers have material alternative employment available, and at what wage/stability cost?",
+      "resolution_mechanism": "Survey data on worker exit pathways: availability of comparable W-2 employment, feasibility of skill transition, geographic labor market conditions. Comparison of platform workers who have exited to alternative employment vs those who remain.",
+      "impact": "If > 40% have viable alternatives at modest cost: reclassify as 'constrained' (not 'trapped') for powerless perspective \u2192 classification shifts toward tangled_rope/moderate snare. If < 20% have alternatives: 'trapped' confirmed \u2192 snare classification solidified.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Worker exit elasticity and availability of alternative employment"
+    },
+    {
+      "id": "coordination_benefit_versus_volatility_cost",
+      "question": "For workers with dependent care obligations and geographic constraints, does scheduling flexibility coordination benefit outweigh or fail to offset income volatility cost?",
+      "resolution_mechanism": "Longitudinal household budget data: comparison of workers' ability to handle childcare coordination and financial stress with vs without platform flexibility. Threshold analysis: at what volatility threshold does coordination benefit flip to net negative?",
+      "impact": "If coordination benefit > volatility cost: tangled_rope classification dominates across more perspectives; constraint is genuine hybrid. If volatility cost >> benefit: snare classification dominates; coordination function is marginal theater. Classification hinges on empirical balance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Coordination benefit magnitude relative to volatility harm"
+    },
+    {
+      "id": "regulatory_closure_timeline",
+      "question": "How long is the viable policy window for the scaffold sunset? When does regulatory capture or market consolidation close exit pathway?",
+      "resolution_mechanism": "Political economy analysis: track regulatory momentum (state legislation, federal proposed changes, platform counter-lobbying). Monitor platform market consolidation trends. Identify trigger points where exit pathway becomes implausibly costly.",
+      "impact": "If window > 10 years: scaffold classification legitimate. If window < 3 years already closing: scaffold is aspirational piton (performative sunset), reclassify toward piton. High confidence resolution would transform expectations about generational change timeline.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Viability and timeline of regulatory sunset pathway"
+    },
+    {
+      "id": "identity_lock_versus_economic_trap",
+      "question": "For workers with long tenure on platforms, is the binding mechanism structural economic dependency (trapped) or identity fusion with platform identity/brand (identity_locked)?",
+      "resolution_mechanism": "Qualitative research: worker self-narratives about exit barriers. Distinguish between 'I cannot leave due to financial necessity' (structural trap) vs 'I am a [platform brand] driver/seller/creator and cannot imagine myself outside that identity' (identity lock). Test via counterfactual: if household income could be guaranteed elsewhere, would worker exit?",
+      "impact": "If identity_locked: different classification regime applies (rope at biographical time from identity_locked perspective per the immutability matrix). Exit mechanism is cognitive reframing, not material change. If trapped: snare classification confirmed. Strategic intervention depends entirely on mechanism.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Identity fusion versus economic structural dependency as binding mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "Platform-mediated work (ride-sharing, delivery, gig labor) has created a novel labor market structure where income volatility is structurally embedded into the work itself. Rather than traditional employment with stable wages and scheduled hours, platform workers experience earnings that fluctuate daily based on algorithmic allocation, demand patterns, and dynamic pricing. This constraint exhibits characteristics of both coordination (the platform solves the matching problem of connecting workers to tasks flexibly) and extraction (the same system suppresses wages, externalizes scheduling risk, and creates information asymmetry). The constraint's evolution over the past decade shows increasing extractiveness as platforms consolidated market power and refined algorithmic wage suppression. The theater ratio reflects growing institutional attention to platform work (regulatory hearings, litigation, union organizing) that has not yet produced material change in worker income stability, suggesting theatrical commitment without functional reform. From different structural positions \u2014 workers, households, platform operators, organizing coalitions, traditional regulators, and analytical observers \u2014 this single constraint appears as pure extraction (snare), mixed coordination-extraction (tangled rope), pure coordination (rope), a solvable temporary problem (scaffold), a degraded regulatory system (piton), and a complex hybrid requiring structural analysis.",
+    "key_agents": [
+      "Platform Workers: Primary victims (powerless/trapped) \u2014 bear income volatility without exit options; structural dependency on platform access for livelihood",
+      "Worker Households: Secondary victims (moderate/constrained) \u2014 depend on platform income for family stability; face planning barriers from volatility but benefit from scheduling flexibility for dependent care",
+      "Platform Operators: Primary beneficiaries (institutional/arbitrage) \u2014 capture value from matching efficiency and wage suppression; can exit/redesign systems if preferred",
+      "Capital Markets/Investors: Secondary beneficiaries (institutional/arbitrage) \u2014 benefit from suppressed labor costs and platform valuation; incentivize volatility as feature",
+      "Worker Organizing Coalition: Organized collective (organized/constrained) \u2014 unions, advocacy groups, cooperative platform experiments; see regulatory sunset pathway; pushing for income guarantees and algorithmic transparency",
+      "Traditional Labor Regulators: Degraded institutional system (institutional/arbitrage) \u2014 wage floors and scheduling protections formally exist but are bypassed via contractor classification; enforcement capacity has atrophied; system persists through inertia",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees genuine hybrid coordination-extraction without reduction to either pole"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Platform operators extract value through wage suppression (dynamic pricing that reduces worker share during peak demand), information asymmetry (algorithms opaque to workers), and risk externalization (workers absorb scheduling and income volatility). But coordination function is genuine \u2014 platforms do solve matching problems and provide scheduling flexibility that workers value. The extractiveness value reflects that extraction is significant and structural but not maximal (workers retain some choice, some platforms compete on wages, some income upside exists during surges). The measurement trajectory shows extractiveness increasing over the interval as algorithmic sophistication increased and market consolidation reduced worker bargaining power. Suppression (0.68): Moderately high. Workers face significant barriers to exit: economic dependency (household relies on income), geographic constraint (local labor markets often dominated by 1-2 platforms), skill non-transferability (platform-specific reputation capital), and information asymmetry (algorithm design prevents accurate wage expectations). Barriers are not absolute (some workers do exit, some have fallback employment) but are substantial. Theater ratio (0.55): Moderate. Reflects that traditional labor regulation (wage floors, scheduling protections, benefits mandates) is formally maintained but not functionally controlling platform labor \u2014 workers are classified as independent contractors outside regulatory coverage. Simultaneously, there is genuine organizing activity, regulatory proposals, and public attention (not pure degradation). The ratio reflects mixed state: some performative theater (regulations written but not enforced), but also some real coordination work (organizing, platform design alternatives). As scaffolding efforts (regulatory proposals, cooperative platforms) mature, theater ratio may decrease if real alternatives materialize.",
+    "perspectival_gap": "Platform operator perceives coordination (rope); worker perceives extraction (snare); household perceives mixed (tangled rope); coalition perceives solvable temporary problem (scaffold); regulator perceives degraded ritual (piton); observer perceives genuine hybrid (tangled rope). The gap is maximal because these agents experience structurally different constraints \u2014 the beneficiary experiences a functioning coordination system; the trapped victim experiences pure extraction. Same structural system; incompatible phenomenologies.",
+    "directionality_logic": "Beneficiaries with arbitrage exit (platform operators, investors) have low directionality values (d \u2248 0.10) derived from their capacity to exit and modify the system. Victims with trapped exit (workers) have high directionality values (d \u2248 0.95) derived from their structural inability to exit. Constrained actors (households, organizing coalition) occupy middle ground (d \u2248 0.40-0.65) reflecting real costs to exit but also some agency and alternatives. The chi formula \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) produces different effective extractiveness for each actor based on their position: operators experience low chi (beneficiaries benefit from the system); workers experience high chi (maximum extraction from their perspective); households and coalition experience moderate chi (mixed costs and benefits). The scope modifier \u03c3(global=1.2) amplifies chi across all perspectives because this constraint operates at global scale with high verification difficulty.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating that both coordination and extraction are genuinely present. The platform operator's rope classification reflects real coordination value (matching, flexibility). The worker's snare classification reflects real extraction (wage suppression, risk externalization). The tangled rope classification is not a compromise \u2014 it is the structural truth: the same platform architecture that solves matching simultaneously implements wage suppression. The constraint cannot be dissolved by claiming one function is 'really' primary; both are primary. Mandatrophy resolution requires accepting that the constraint has dual function and cannot be reclassified to pure type without losing essential structure. The scaffold perspective shows one resolution pathway: policy intervention to separate coordination function from extraction mechanism (create matching function + protect wage floors separately). The piton perspective shows the degraded state: traditional regulation attempted the separation but failed through contractor classification. The organizing coalition perspective shows the structural possibility: cooperative platforms, portable benefits, algorithmic transparency could achieve coordination without extraction at lower scope but higher legitimacy cost."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_labor_market_power",
+      "contractor_classification_loophole",
+      "income_based_household_risk"
+    ],
+    "dual_formulation_note": "Platform worker income volatility decomposes into three structurally distinct constraints: (1) algorithmic labor market power concentration (\u03b5\u22480.52, how platforms suppress wages through information asymmetry), (2) contractor classification loophole (\u03b5\u22480.48, how legal classification bypasses labor regulation), (3) household risk externalization (\u03b5\u22480.35, how volatility propagates to family stability). All three are linked by network affects; this story captures the integrated experience. Upstream constraints have higher specificity; this story shows the aggregate volatility outcome."
+  },
+  "directionality_overrides": []
+}

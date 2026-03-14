@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "winter_olympics_venue_selection",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "woiv"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Winter Olympics Venue Selection Process",
+    "topic_domain": "political_economy/sports_infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ioc_decision_authority",
+      "host_nation_political_elites",
+      "construction_contractors"
+    ],
+    "victims": [
+      "displaced_communities",
+      "environmental_systems",
+      "competing_bidding_nations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Displaced Mountain Community",
+      "comment": "PERSPECTIVE 1: DISPLACED COMMUNITIES (SNARE) \u2014 Local residents in selected venues face involuntary relocation, environmental degradation, and infrastructure disruption with no meaningful exit options or compensation. Cannot prevent selection, cannot block construction, cannot exit the geographic region without losing property. Maximum suppression and extraction \u2014 bears full cost of Olympic imposition."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Competing Host Nation",
+      "comment": "PERSPECTIVE 2: COMPETING HOST NATIONS (TANGLED ROPE) \u2014 Nations bidding for Olympics face genuine coordination benefits (international prestige, infrastructure investment, tourism potential) alongside asymmetric extraction (IOC venue fees, mandatory spending, construction debt). Constrained exit due to sunk bidding costs and domestic political commitment. High suppression because once committed, cannot withdraw without domestic political cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The International Olympic Committee",
+      "comment": "PERSPECTIVE 3: INTERNATIONAL OLYMPIC COMMITTEE (ROPE) \u2014 Experiences venue selection as pure coordination mechanism: matching host capacity with athlete requirements, distributing prestige across nations, managing global Olympic logistics. Net beneficiary with arbitrage options \u2014 can leverage bidding competition to extract higher concessions. IOC sees minimal extraction directed at itself; maximum arbitrage access."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Host Nation Government",
+      "comment": "PERSPECTIVE 4: HOST NATION GOVERNMENT (TANGLED ROPE) \u2014 Powerful actor but structurally committed to Olympic delivery. Genuine coordination function (infrastructure development, international relations) alongside extraction (construction cost overruns, debt servicing, environmental externalizing). Mobile in principle but politically trapped by public commitment. Experiences mixed extraction and benefit depending on implementation."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Olympic Athlete Community",
+      "comment": "PERSPECTIVE 5: OLYMPIC ATHLETE COMMUNITY (PITON) \u2014 Athletes benefit from Olympic competition hosting but their genuine functional need (quality venues, athlete safety) is decoupled from the venue selection theater. The selection process (bidding presentations, site visits, IOC voting) is substantially performative \u2014 real venues are determined by geography, climate, and infrastructure availability, not IOC selection drama. Athletes would achieve same functional outcome with much lower theater and extraction."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational/universal perspective, winter sports venue selection appears immutably constrained by geography (adequate snow, altitude, temperature, topography). Natural constraints on where winter athletics can occur seem like irreducible limits. However, structural data contradicts mountain classification \u2014 artificial restrictions (IOC authority, cost floors, bidding theater) are contingent institutional arrangements, not natural laws."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "extraction_mechanism_definitional",
+      "question": "Does IOC venue control constitute genuine coordination extraction or pure regulatory rent-seeking?",
+      "resolution_mechanism": "Comparative analysis of Olympic outcomes with and without IOC authority; counterfactual modeling of alternative coordination structures; historical trend in host nation debt-to-benefit ratios",
+      "impact": "If coordination: classification shifts toward Rope from more perspectives. If rent-seeking: classification shifts toward Snare/Tangled Rope for national governments.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether IOC authority coordinates or extracts"
+    },
+    {
+      "id": "displacement_scope_quantification",
+      "question": "What proportion of displaced persons constitute the 'victims' group? Does displacement represent structural targeting or incidental externality?",
+      "resolution_mechanism": "Historical census data on displacement across 10+ Olympic cycles; causal analysis of venue selection versus displacement timing; comparison to infrastructure projects of equivalent scale in non-Olympic contexts",
+      "impact": "If \u22655000 displaced per venue: structural victimization (Snare feature confirmed). If <500: incidental externality (reduces suppression, reclassifies toward Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Displacement scale and whether structural or incidental"
+    },
+    {
+      "id": "host_nation_benefit_realization",
+      "question": "Do host nations realize positive long-term infrastructure and economic benefits, or are benefits captured by IOC/contractors with nations bearing structural costs?",
+      "resolution_mechanism": "20-year post-Olympic economic analysis: debt service costs versus tourism revenue, infrastructure utilization, employment effects; comparison of host GDP growth to non-host peer nations; property ownership patterns post-Olympics",
+      "impact": "If positive: Tangled Rope with net benefit to nation (mixed). If negative: Tangled Rope with net extraction from nation (Snare-shifting).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether host nations realize net benefits from Olympic hosting"
+    },
+    {
+      "id": "environmental_baseline_recovery",
+      "question": "Do Olympic venue environments recover to pre-construction baselines within 10 years, or do environmental costs represent permanent extraction?",
+      "resolution_mechanism": "Ecological monitoring post-Olympics: soil recovery, water quality restoration, species habitat recovery; comparison to environmental degradation from equivalent-scale infrastructure projects; cost to restore vs. original construction cost",
+      "impact": "If recovery complete: environmental externality classifiable as temporary. If incomplete: permanent environmental extraction (increases suppression metric).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether environmental degradation from Olympics is reversible"
+    },
+    {
+      "id": "bidding_coercion_mechanism",
+      "question": "Does the bidding process constitute genuine voluntary entry or structural coercion via prestige/geopolitical pressure?",
+      "resolution_mechanism": "Analysis of bidding participation rates over time; interview data on domestic political pressure forcing bids; correlation between bidding and national status/diplomatic positioning; counterfactual: nations that chose not to bid and their justifications",
+      "impact": "If voluntary: Rope perspective for bidding nations. If coercive: Tangled Rope or Snare (suppression increases, extraction increases).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether bidding process is voluntary or coerced"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Winter Olympics venue selection process exemplifies how institutional authority (IOC) coordinates genuine international athletic competition while simultaneously extracting rents from host nations and imposing externalities on displaced populations. The constraint combines real coordination function (matching global winter sports facilities with international competition standards) with structural asymmetries that concentrate benefits among IOC decision-makers, construction contractors, and host-nation political elites while distributing costs across communities, environments, and competing bidders. The constraint's extractiveness has increased from 0.35 to 0.58 over a typical Olympic cycle: initial bidding costs are moderate, but venue construction costs, displacement externalities, and post-Olympic debt accumulate. Theater ratio has risen from 0.52 to 0.68, indicating that the performative aspects of venue selection (bidding presentations, site visits, IOC voting ceremony) have become more elaborate relative to the functional requirement of identifying suitable winter sports facilities. The same set of structural realities appears as coordination (rope) from IOC perspective, extraction (snare) from displaced populations, mixed outcomes (tangled rope) from host governments and competing nations, degraded ritual (piton) from athlete perspectives, and potentially a false natural law (mountain) from observers who naturalize geographic constraints into immutable Olympic requirements.",
+    "key_agents": [
+      "International Olympic Committee: Primary beneficiary (institutional/arbitrage) \u2014 controls venue selection authority, extracts hosting fees, negotiates infrastructure mandates with asymmetric bargaining power",
+      "Displaced Communities: Primary victim (powerless/trapped) \u2014 face involuntary relocation, environmental degradation, infrastructure disruption with no exit options; concentrated in local geographic scope",
+      "Host Nation Government: Secondary beneficiary and victim (powerful/mobile) \u2014 captures infrastructure investment benefits but bears construction costs, debt service, and political accountability; powerful in principle but politically trapped by Olympic commitment",
+      "Competing Bidding Nations: Secondary victims (moderate/constrained) \u2014 invest in elaborate bidding presentations with low probability of selection; exit costly due to sunk costs and political commitment; only one benefits, rest bear bidding costs with no return",
+      "Construction Contractors: Secondary beneficiary (powerful/arbitrage) \u2014 capture construction contracts, benefit from cost overruns, minimum competition due to Olympic specifications",
+      "Athlete Community: Incidental actor (analytical/analytical) \u2014 need functional venues (coordination function) but benefit/harm distribution from selection process is decoupled from athlete experience"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, increasing over time. The IOC venue selection process combines genuine coordination (matching facilities to competition standards, distributing prestige, managing logistics) with systematic extraction. The extraction mechanism operates through: (1) IOC fee structures that concentrate revenue; (2) mandatory infrastructure specifications that inflate host costs; (3) construction contracts awarded through restricted competition; (4) shifting externalities (displacement, environmental degradation) away from IOC to host communities. Initial extractiveness is lower (0.35) because early bidding phases involve genuine coordination discussion and host autonomy. By mid-cycle (0.50), construction begins and displacement/environmental costs materialize. Final extractiveness (0.58) reflects accumulated debt, locked-in contracts, and irreversible environmental damage. Suppression (0.65): High. Suppression mechanisms include: institutional authority (IOC has near-total venue control), information asymmetry (detailed cost projections not disclosed pre-selection), regulatory capture (host governments cannot renegotiate Olympic specifications), geographic entrapment (affected communities cannot relocate before venue selection occurs), political commitment (domestic constituencies pressure continuation despite cost overruns), and institutional inertia (Olympic hosting perceived as prestige necessitating acceptance). Theater ratio (0.68): High and increasing. The performative aspects include elaborate bidding presentations by competing nations, IOC site visits staged for media, voting ceremonies designed for global broadcast, and post-selection celebration events \u2014 all substantially divorced from functional venue determination. Venues are determined by geography and existing infrastructure; the theater adds elaboration without functional value. Theater increases over the cycle as host governments invest more in ceremonial displays to justify costs to domestic constituencies.",
+    "perspectival_gap": "This constraint exhibits a systematic perspectival gap between beneficiaries and victims, and between institutional and community-level perspectives. The IOC experiences pure coordination (Rope) \u2014 their functional requirement (match sites to competition specs) is satisfied cleanly, and they perceive bidding competition as healthy. Host governments experience Tangled Rope \u2014 genuine infrastructure benefits alongside debt burden and political commitment. Competing nations experience Tangled Rope shifted toward Snare \u2014 high bidding investment with 95% failure rate and no benefit. Displaced communities experience Snare \u2014 total extraction with no coordination benefit and no exit. Athletes experience Piton \u2014 the functional Olympic competition could occur in 2-3 well-maintained existing venues globally, making most of the venue selection theater unnecessary. The analytical observer risks seeing Mountain (geographic constraints on winter sports appear immutable) but structural analysis reveals this as naturalization: alternative venues exist and rotation is feasible, but institutional arrangements make rotation appear impossible.",
+    "directionality_logic": "Directionality values (d) are derived from beneficiary/victim status and exit options. IOC benefits and has arbitrage options (d \u2248 0.05, low extraction experienced). Host nation governments benefit but are politically trapped (d \u2248 0.50, moderate extraction). Competing nations are victims with high-cost-of-entry exit (d \u2248 0.75, high extraction). Displaced communities are victims with no exit (d \u2248 0.95, maximum extraction). The sigmoid f(d) maps these to experienced extractiveness at each perspective: beneficiaries with arbitrage see low/negative chi; victims see high chi. Geographic scope modifier (\u03c3) is local for displacement (\u03c3=0.8) and global for IOC (\u03c3=1.2), which affects final chi calculations. Host governments at national scope (\u03c3=1.0) experience chi between local and global perspectives.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by decomposing the Olympics venue selection into distinct structural functions. The genuinely coordinating function (Olympic facility matching, international logistics, athlete support) is real and produces Rope-type benefits. The extractive mechanism (IOC rent capture, contractor cost-plus, displacement externalities, bidding theater) is structurally distinct. The Tangled Rope classification correctly captures that both functions coexist: real coordination enabling asymmetric extraction. The constraint does NOT collapse to pure coordination (Rope) because displacement is structural and systematic, not accidental. The constraint does NOT collapse to pure extraction (Snare) because infrastructure does provide some host-nation benefit and genuine Olympic logistics do require coordination. The Tangled Rope classification prevents mischaracterization: it is not coordination masking extraction (Snare wearing Rope clothes), nor is it benign cooperation with minor extraction (Rope with extraction). It is hybrid: genuine coordination function that structurally concentrates extraction toward an institutional beneficiary (IOC)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "olympic_infrastructure_debt",
+      "climate_suitable_venue_scarcity"
+    ],
+    "dual_formulation_note": "Venue selection process is upstream of infrastructure construction and post-Olympic maintenance. Infrastructure debt is downstream of venue selection and inherits extractiveness through multiplier effects."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

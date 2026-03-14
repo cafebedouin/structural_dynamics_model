@@ -1,0 +1,217 @@
+{
+  "header": {
+    "constraint_id": "employer_liability_aversion",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "emplia"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Employer Liability Aversion in Worker Protection",
+    "topic_domain": "labor/employment/legal_risk",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "employers",
+      "liability_insurance_industry"
+    ],
+    "victims": [
+      "workers",
+      "workplace_safety_culture"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Injured Worker",
+      "comment": "PERSPECTIVE 1: INJURED WORKER (SNARE) \u2014 Worker bears full cost of injury while employer avoids liability through defensive documentation, arbitration clauses, and contingent-fee legal barriers. Worker has no exit from the employment-dependency structure and faces maximum suppression: medical costs, job loss risk, retaliation fear, and lengthy litigation. Experiences pure extraction with no coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Compliance Officer",
+      "comment": "PERSPECTIVE 2: COMPLIANCE OFFICER (TANGLED ROPE) \u2014 Experiences both genuine coordination (workplace safety genuinely requires incident reporting and hazard management) and asymmetric extraction (liability concerns drive documentation burden that protects employers more than workers; the compliance officer's own liability exposure is asymmetrically distributed). Has constrained exit \u2014 can find different employment but faces reputational and credential penalties for whistle-blowing."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Employer",
+      "comment": "PERSPECTIVE 3: EMPLOYER (ROPE) \u2014 Experiences the constraint as coordination: liability management, incident documentation, and insurance protocols create shared standards that enable predictable risk assessment and contract formation. Employer has arbitrage options (can shift operations, self-insure, or exit high-risk sectors). Extraction runs toward this agent \u2014 they are the primary beneficiary of the constraint's structure."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Insurance Industry",
+      "comment": "PERSPECTIVE 4: LIABILITY INSURANCE INDUSTRY (ROPE) \u2014 Experiences the constraint as pure coordination: systematic risk quantification, underwriting standards, and documented hazard disclosure reduce informational asymmetries and enable profitable risk pooling. The industry sees itself as solving a coordination problem (unknown risk), not extracting. Has high arbitrage options \u2014 can exit sectors, adjust premiums, or redefine coverage. Benefits from both the constraint structure and the employer's liability aversion."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Labor Organizing and Safety Advocates",
+      "comment": "PERSPECTIVE 5: LABOR ORGANIZING / SAFETY ADVOCATES (TANGLED ROPE) \u2014 Organized agents (unions, OSHA, workplace safety NGOs) see both genuine coordination (hazard documentation, incident reporting, safety standards) and extraction (liability aversion suppresses transparent risk communication; employers use documentation as litigation defense rather than safety improvement). Have constrained exit \u2014 can pressure for legislative change but face employer resistance and political headwinds. Measured extraction reflects that advocacy has agency but is blocked by suppression."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Tort Liability System",
+      "comment": "PERSPECTIVE 6: TORT LIABILITY SYSTEM (PITON) \u2014 The legal framework theoretically aligns employer incentives with worker protection (liability creates incentive to prevent injury), but this mechanism has atrophied. Theater ratio (0.64) reflects that the system now primarily functions as a barrier to worker recovery and a document production mill: lengthy discovery, expert gatekeeping, settlement leverage imbalances, and contingent-fee structures make the system increasingly performative. The original coordination function (liability creates safety incentive) persists rhetorically but is largely theatrical \u2014 employers invest in litigation defense and documentation rather than hazard elimination."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Risk Asymmetry View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (FALSE MOUNTAIN) \u2014 From a civilizational view, employer liability aversion might appear immutable: employers inevitably face legal risk for workplace injury; risk aversion is inherent to rational economic behavior. However, the base properties reveal this as a false summit \u2014 the constraint is not inherent to employment, but contingent on specific legal structures, insurance mechanisms, and documentation requirements. The 'mountain' framing naturalizes what are actually mutable institutional arrangements (no-fault insurance systems, different liability regimes, alternative safety accountability mechanisms). Engine will correctly flag this as a false natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "liability_prevention_hypothesis",
+      "question": "Does employer liability exposure actually create stronger safety incentives than alternative mechanisms (outcome-based safety standards, no-fault insurance with experience rating, direct regulatory inspection)?",
+      "resolution_mechanism": "Comparative analysis of injury rates and safety investment under different liability regimes (US tort-based vs European no-fault vs strict outcome-based standards). Measurement of employer hazard elimination spending vs litigation defense spending.",
+      "impact": "If liability creates stronger safety incentives: constraint is primarily coordinating incentives (Rope classification higher). If alternative mechanisms are equally or more effective: constraint's safety function is weaker than its extraction function, supporting Snare/Tangled Rope classification. Changes classification for institutional perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether liability exposure creates superior safety incentives"
+    },
+    {
+      "id": "documentation_gaming_threshold",
+      "question": "At what point does employer investment in defensive documentation (incident records, litigation files, expert reports) become a primary focus rather than an incidental byproduct of genuine safety management?",
+      "resolution_mechanism": "Time allocation analysis: proportion of compliance officer and legal team time spent on hazard elimination vs document production and litigation response. Correlation between documentation intensity and actual injury reduction.",
+      "impact": "If significant portion of defensive infrastructure is about litigation rather than prevention: extractiveness is higher than stated (0.58). If documentation genuinely drives hazard reduction: tangled_rope classification is accurate. Affects measurement trajectory and mandatrophy analysis.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold at which documentation becomes gaming rather than safety management"
+    },
+    {
+      "id": "worker_information_suppression",
+      "question": "Does liability aversion create structural incentives for employers to suppress or obscure information about workplace hazards that might be discoverable in litigation?",
+      "resolution_mechanism": "Comparison of hazard disclosure (MSDS, incident rates, exposure data) across high-litigation-risk vs low-litigation-risk industries. Analysis of confidentiality clauses and settlement terms that restrict worker communication about hazards.",
+      "impact": "If suppression is significant: base suppression (0.68) is understated; theater_ratio higher; extractiveness increases toward snare range. If minimal: suppression reflects only normal information asymmetries and suppression value is appropriate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether liability aversion suppresses hazard information disclosure"
+    },
+    {
+      "id": "exit_cost_underestimation",
+      "question": "Is the 'constrained' exit classification for workers understating the true barriers to exit (trapped vs constrained)?",
+      "resolution_mechanism": "Analysis of job-switching costs for injured workers: wage penalties, credential recognition, insurance rating changes, retaliation prevalence. Measurement of actual exit rates post-injury across industry and injury severity.",
+      "impact": "If exit is actually trapped-level: workers' experienced extractiveness (chi) is higher; snare classification becomes stronger. If constrained is accurate: tangled_rope classification for moderate agents is appropriate. Changes directionality derivation for powerless and moderate perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether worker exit barriers are trapped-level or constrained-level"
+    },
+    {
+      "id": "insurance_moral_hazard_gap",
+      "question": "Does liability insurance reduce moral hazard (employer safety investment) or simply spread risk, making hazard reduction less valuable to individual employers?",
+      "resolution_mechanism": "Comparison of safety investment rates in fully-insured vs self-insured employers. Analysis of insurance premium structures: do experience-rated premiums create stronger safety incentives than flat-rate or market-average premiums?",
+      "impact": "If insurance creates moral hazard: extraction is amplified (employers have less incentive to prevent injury if insured). If experience-rating maintains incentives: rope coordination mechanism is stronger than snare extraction. Changes insurance_industry perspective classification and beneficiary status.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether liability insurance reduces or maintains safety incentives"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Employer liability aversion creates a structural constraint where the legal mechanism intended to align employer incentives with worker safety has evolved into an extraction system. The constraint operates through three coordinated mechanisms: (1) documented incident reporting that creates discoverable evidence in litigation, (2) insurance pooling that enables employers to transfer risk while minimizing individual hazard reduction incentives, and (3) asymmetric litigation barriers that make worker recovery difficult while protecting employer assets. The constraint exhibits Tangled Rope characteristics: genuine coordination exists (hazard management, safety standardization, risk quantification) alongside asymmetric extraction (workers bear injury costs; employers control documentation; insurance industry profits from risk quantification without bearing individual injury costs). The theater ratio has increased over the interval as litigation risk has grown relative to actual safety function \u2014 employers increasingly invest in defensive documentation and litigation preparation rather than hazard elimination. The constraint is not immutable law but a contingent institutional arrangement that could be replaced by alternative systems (no-fault insurance, outcome-based safety standards, direct regulatory accountability).",
+    "key_agents": [
+      "Workers/Injured Employees: Primary victim (powerless/trapped) \u2014 bear full cost of injury including medical, income loss, and litigation barriers; face retaliation risk and employment dependency; no meaningful exit from employment-liability structure",
+      "Employers: Primary beneficiary (institutional/arbitrage) \u2014 benefit from liability protection, insurance pooling, and documentation leverage; can exit high-risk sectors or relocate; have arbitrage options for managing risk exposure",
+      "Liability Insurance Industry: Secondary beneficiary (powerful/arbitrage) \u2014 profits from systematic risk quantification and premium collection; has exit options (can adjust underwriting, exit sectors, or redefine coverage); sees constraint as pure coordination mechanism",
+      "Compliance/HR Officers: Moderate victim (moderate/constrained) \u2014 experience mixed coordination (genuine safety management) and extraction (litigation-driven documentation burden); face liability exposure asymmetrically distributed; have constrained exit (whistle-blowing risk, credential penalties)",
+      "Labor Unions and Safety Advocates: Organized agents (organized/constrained) \u2014 see genuine coordination function but blocked by suppression and litigation barriers; have constrained exit (can pressure for legislative change but face employer resistance); moderate extractiveness reflects both agency and structural blockage",
+      "Legal/Tort System: Institutional actor experiencing degradation (institutional/arbitrage) \u2014 original coordination mechanism (liability creates safety incentive) has atrophied; system now primarily functions as litigation theater; maintains itself through inertia rather than functional necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, reflecting that the constraint genuinely extracts from workers and moderate agents (higher than pure coordination but not maximum extraction). The value reflects: (1) workers bear full injury costs while employers transfer risk via insurance, (2) litigation barriers suppress worker recovery, (3) documentation practices favor employer defense over hazard elimination. But extraction is not total \u2014 some safety coordination occurs; some worker recovery happens; some employers do invest in hazard reduction. Suppression (0.68): High, reflecting significant barriers to worker exit and information access: employment dependency, medical cost burden, litigation complexity, confidentiality clauses, retaliation risk, and job-market penalties for injured workers. Suppression is structural (external barriers) not internalized. Theater ratio (0.64): Moderate-high, reflecting that employer documentation and litigation preparation have become substantial compared to actual hazard elimination. The 35-year increase in theater ratio (0.35 \u2192 0.64) reflects rising litigation intensity relative to safety function. However, theater is not total \u2014 genuine hazard documentation and safety practices still occur; the constraint serves dual functions rather than being purely performative.",
+    "directionality_logic": "The constraint's directionality differs across agents based on their structural relationship. Injured workers (powerless/trapped) have d \u2248 0.95: they are full targets bearing all costs with no exit, producing maximum f(d) \u2248 1.42 and highest experienced extractiveness. Employers (institutional/arbitrage) have d \u2248 0.10: they are beneficiaries with exit options, producing low f(d) \u2248 -0.05 and negative/zero experienced extractiveness. Insurance industry (powerful/arbitrage) has d \u2248 0.08: similar beneficiary status with escape options. Compliance officers (moderate/constrained) have d \u2248 0.58: mixed beneficiary/victim status with constrained exit, producing moderate f(d) \u2248 0.70 and moderate extractiveness. This divergence across agents with different power and exit parameters produces perspectival gap: the powerless worker experiences Snare (pure extraction), the moderate officer experiences Tangled Rope (mixed), the institutional beneficiary experiences Rope (coordination). The analytical observer risks seeing Mountain (naturalizing risk aversion as law of nature) but the structural data shows contingency.",
+    "perspectival_gap": "The constraint demonstrates core perspectival disagreement despite identical base properties. The injured worker sees pure extraction (Snare) \u2014 liability aversion reduces their protection while increasing employer defense. The employer sees pure coordination (Rope) \u2014 liability management enables predictable risk assessment and contract formation. The insurance industry agrees with the employer (Rope) \u2014 systematic risk quantification is a coordination function they perform. The compliance officer sees mixed coordination and extraction (Tangled Rope) \u2014 genuine safety management alongside litigation-driven documentation burden. Unions and advocates see extraction with suppression (Tangled Rope) \u2014 the coordination function is real but blocked by litigation barriers and information suppression. The tort system itself sees degradation (Piton) \u2014 the original safety incentive mechanism has atrophied into documentation theater. The civilizational analyst risks seeing immutable risk aversion (Mountain) but engine will flag this as false natural law. The gap reveals that the constraint's classification depends entirely on whether you benefit from or bear costs from liability aversion.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: This constraint demonstrates how liability aversion prevents the very thing it claims to enable. The intended coordination mechanism is: employer liability \u2192 employer has incentive to prevent injury \u2192 safer workplace \u2192 worker protection. The mandatrophy emerges because this chain is broken: (1) liability creates incentive to suppress information and manage litigation rather than eliminate hazards, (2) insurance enables risk transfer without matching incentive to reduce risk, (3) workers bear injury costs regardless of employer liability, creating extraction rather than protection. The tangled_rope classification resolves the mandatrophy by showing that the constraint genuinely coordinates some activities (risk quantification, incident documentation, safety standardization) while asymmetrically extracting from workers (who pay in injury and litigation costs while employers pay in insurance and legal defense). The constraint is neither pure coordination (which would reduce injury through safety investment) nor pure extraction (which would have no safety function). It is hybrid: coordination function persists but is weaker than extraction function, and extraction is masked as coordination. Mandatrophy resolved by recognizing that liability aversion's dual nature \u2014 real coordination component alongside asymmetric extraction \u2014 is the accurate classification, not a failure to choose between Rope and Snare."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "worker_contingent_status",
+      "occupational_safety_standards_compliance",
+      "litigation_bias_against_workers"
+    ],
+    "dual_formulation_note": "Employer liability aversion is the institutional mechanism linking worker status (contingent employment increases risk exposure) to safety standard compliance (documentation-heavy vs outcome-heavy). Downstream constraints inherit extractiveness via this network: contingent workers face higher injury rates under liability aversion; safety compliance becomes documentation performance rather than hazard elimination; litigation barriers concentrate on low-power workers."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

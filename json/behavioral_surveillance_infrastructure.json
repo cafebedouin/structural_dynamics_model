@@ -1,0 +1,222 @@
+{
+  "header": {
+    "constraint_id": "behavioral_surveillance_infrastructure",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bsi"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Behavioral Surveillance Infrastructure as Extractive Constraint",
+    "topic_domain": "digital_control/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "surveillance_platform_operators",
+      "data_monetization_firms",
+      "behavioral_targeting_advertisers",
+      "state_security_apparatus"
+    ],
+    "victims": [
+      "surveilled_population",
+      "behavioral_autonomy",
+      "informational_privacy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Surveilled Individual",
+      "comment": "PERSPECTIVE 1: THE SURVEILLED INDIVIDUAL (SNARE) \u2014 Trapped by ubiquitous digital infrastructure. Exit from surveillance requires abandoning participation in digital communication, financial systems, transportation, employment, and social coordination. The cost of exit is social death. Suppression is maximal: every device, every platform, every transaction is a surveillance point. No legitimate coordination function benefits this agent. Pure extraction of behavioral data, attention, and conformity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Platform User with Alternative Options",
+      "comment": "PERSPECTIVE 2: THE PLATFORM USER WITH EXIT CAPACITY (TANGLED ROPE) \u2014 Technically mobile but constrained by network effects and coordination value. Can switch platforms, use privacy tools, limit data sharing \u2014 but at high cost to social connectivity and economic participation. Genuine coordination function exists: platforms do enable communication and community. But surveillance enables extraction of behavioral data worth far more to operators than service value provided to users. Mixed: significant coordination benefit with asymmetric extraction layered on top."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Surveillance Platform Operator",
+      "comment": "PERSPECTIVE 3: THE SURVEILLANCE PLATFORM OPERATOR (ROPE) \u2014 Experiences the surveillance infrastructure as pure coordination. The platform solves the collective action problem of how to connect billions of people and monetize attention. From this perspective, behavioral data extraction is the payment mechanism that makes the service possible \u2014 without it, the platform cannot fund itself. Operator has full arbitrage optionality: can exit to different business models, regulatory regimes, or markets. Extraction runs toward this agent as beneficiary."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Organized Resistance Movement",
+      "comment": "PERSPECTIVE 4: THE ORGANIZED RESISTANCE (SNARE) \u2014 Privacy activists, encryption advocates, and decentralization movements are organized but face suppression. Their exit path (build decentralized alternatives, enforce strong privacy) is constrained by network effects and resource asymmetries. Even successful alternatives (Signal, Tor, Matrix) operate in the shadow of the dominant centralized platforms. The constraint on this agent is not just surveillance but the structural inability to build competing infrastructure at scale."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The State Security Apparatus",
+      "comment": "PERSPECTIVE 5: STATE SECURITY APPARATUS (ROPE) \u2014 Experiences surveillance infrastructure as essential coordination mechanism for security, public health, and law enforcement. From this perspective, behavioral data enables coordination at scale: identifying threats, tracking disease vectors, enforcing law. The state has arbitrage options and can shape regulatory frameworks to its benefit. For the state, extraction is experienced as legitimate authority, not coercive overhead."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Privacy Regulator",
+      "comment": "PERSPECTIVE 6: THE PRIVACY REGULATOR (PITON) \u2014 Institutional actor created to solve the surveillance problem but increasingly captures by the platforms it regulates. GDPR, CCPA, and similar frameworks create the *appearance* of control without substantive constraint on extraction. Theater_ratio is high: privacy policies, consent mechanisms, and data breach notifications are performative \u2014 they create the illusion of user agency while data flows continue unabated. Regulator has become inert machinery maintaining the fiction of privacy protection while surveillance scales."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: THE ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational scale, behavioral surveillance infrastructure exhibits genuine coordination function (connection, information access, emergency response coordination) alongside severe extraction (behavioral manipulation, autonomy erosion, inequality amplification). The engine classifies this as Tangled Rope: \u03c7 is high, but the constraint serves both coordination and extraction simultaneously. This is the structurally honest classification \u2014 acknowledging that the infrastructure is neither pure evil nor pure good, but a hybrid mechanism where extraction is enabled by coordination."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "consent_fiction_vs_structural_inevitability",
+      "question": "Is surveillance extraction avoidable through user consent and choice, or is it structurally inevitable given the economics of digital platforms?",
+      "resolution_mechanism": "Empirical: test whether users with maximal privacy settings (opt-outs enabled, data deletion requested, encryption used) achieve materially lower extraction rates. Conceptual: whether any digital coordination at scale can function without behavioral data collection.",
+      "impact": "If avoidable: regulation focusing on consent and transparency is appropriate. If inevitable: the constraint cannot be negotiated away \u2014 only structural alternatives (decentralization, public infrastructure, non-profit platforms) can escape it.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether surveillance is avoidable through consent or structurally inevitable"
+    },
+    {
+      "id": "alternative_coordination_viability",
+      "question": "Can decentralized, privacy-preserving alternatives (Signal, Matrix, Mastodon, blockchain social graphs) scale to coordinate billions of users with equivalent functionality to centralized surveillance platforms?",
+      "resolution_mechanism": "Empirical: comparative analysis of decentralized platform adoption rates, network effects, feature parity, and resource costs. Historical: analysis of past platform shifts (MySpace to Facebook, Slack to Teams).",
+      "impact": "If viable: scaffold perspective applies \u2014 exit pathway exists and sunset is real. If not viable: surveilled population remains trapped; alternative is purely aspirational.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether privacy-preserving alternatives can scale to replace surveillance platforms"
+    },
+    {
+      "id": "identity_locked_vs_trapped_bindings",
+      "question": "To what extent is the surveilled population's immobility due to trapped structural conditions (no viable alternatives, economic dependency) versus identity-locked psychological bindings (social identity fused with platform participation, internalized inevitability)?",
+      "resolution_mechanism": "Qualitative: interview studies of exit intentions vs. actual behavior. Behavioral: sudden availability of truly equivalent alternative platform, tracking adoption rates and churn from dominant platforms.",
+      "impact": "If trapped: material policy (breaking network effects, funding alternatives) is necessary. If identity-locked: information and norm-shifting campaigns may shift perception and enable exit. Most likely: both mechanisms bind simultaneously.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether immobility is structural or internalized"
+    },
+    {
+      "id": "state_vs_corporate_extraction_asymmetry",
+      "question": "Does state surveillance extraction differ structurally from corporate behavioral extraction, or are they convergent mechanisms with different administrative systems?",
+      "resolution_mechanism": "Comparative: analyze state surveillance regimes (China, Russia) and corporate platforms (Meta, Google) for behavioral control mechanisms. Examine whether corporate platforms voluntarily adopt state-like extraction or resist.",
+      "impact": "If different: regulation can separate corporate and state surveillance. If convergent: surveillance infrastructure itself is the constraint, regardless of administrator.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether state and corporate extraction are structurally distinct"
+    },
+    {
+      "id": "extraction_quantification_uncertainty",
+      "question": "What is the true economic value of extracted behavioral data, and how does it compare to the service value provided to users?",
+      "resolution_mechanism": "Empirical: market analysis of data broker pricing, advertising effectiveness studies, user willingness-to-pay for privacy. Accounting: full-cost analysis including externalities (psychological harm, polarization, autonomy erosion).",
+      "impact": "If extraction value >> service value: justifies snare classification. If comparable: tangled rope with genuine coordination function is more accurate.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Quantifying true extraction value versus service provision"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Behavioral surveillance infrastructure represents one of the largest extractive constraints operating at global scale. The constraint encompasses the technological systems, economic incentives, regulatory frameworks, and cultural norms that enable continuous monitoring of human behavior across digital, financial, physical, and social domains. The extractiveness has accelerated over the past decade as mobile devices, internet-of-things networks, and algorithmic processing have made behavioral data collection ubiquitous and valuable. Early digitization (2010-2015) operated with lower extractiveness because data monetization was immature and users were less aware of tracking. Subsequent consolidation (2015-2020) increased extraction as platforms perfected behavioral profiling and targeting. Recent developments (2020-2025) have driven extractiveness further as surveillance integrated with state apparatus, health monitoring, and financial systems. The theater_ratio has also risen: privacy regulations, data protection laws, and consent frameworks create the appearance of user control while actual behavioral extraction continues at scale. The constraint exhibits all six classification types from different perspectives, with the analytical view converging on Tangled Rope \u2014 the infrastructure genuinely coordinates digital communication and enables services, but the extraction is severe enough that the coordination function no longer justifies the overhead.",
+    "key_agents": [
+      "Surveilled Population: Primary victim (powerless/trapped) \u2014 inhabitants of digital infrastructure with no viable exit. Behavioral autonomy, attention, and conformity are extracted continuously. No coordination benefit compensates.",
+      "Surveillance Platform Operators: Primary beneficiary (institutional/arbitrage) \u2014 Meta, Google, TikTok, Amazon. Monetize behavioral data at scale; can shift business models or regulatory regimes; experience the constraint as essential coordination mechanism.",
+      "Data Monetization Firms: Beneficiary (institutional/arbitrage) \u2014 data brokers, ad networks, hedge funds using behavioral data for market advantage. Arbitrage options to different markets and regulatory regimes.",
+      "State Security Apparatus: Beneficiary (institutional/arbitrage) \u2014 national security, law enforcement, public health systems using surveillance for coordination. Can shape regulatory frameworks; experiences extraction as legitimate authority.",
+      "Behavioral Autonomy (abstract collective): Victim (powerless/trapped) \u2014 abstract collective good of human agency, dignity, and freedom. Cannot organize or exit. Bears full cost of behavioral manipulation, conformity pressure, and psychological harm.",
+      "Privacy Regulators: Institutional actor (institutional/constrained) \u2014 GDPR, CCPA, data protection authorities. Created to constrain surveillance but increasingly captured by platforms through lobbying and revolving-door employment. Theater-maintaining actors.",
+      "Organized Privacy Advocates: Secondary victim (organized/constrained) \u2014 encryption advocates, decentralization movements, privacy-first technologists. Technically skilled and ideologically committed but constrained by network effects and resource asymmetries. Building alternatives (Signal, Tor, Matrix) that operate in the shadow of dominant platforms.",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees the constraint as Tangled Rope: genuine coordination function alongside severe extraction. Acknowledges that surveillance infrastructure cannot be simply eliminated without losing coordination benefits, but also cannot continue at current extraction rates without eroding human agency."
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts behavioral data with economic value to operators far exceeding the service value provided to users. The extraction is measured in multiple currencies \u2014 attention (advertising engagement), behavioral conformity (algorithmic optimization), financial value (data sales), and political influence (state cooperation). Over the measurement interval, extractiveness has nearly doubled as platforms perfected behavioral profiling and data monetization. Suppression (0.72): Very high. The mechanisms preventing exit are overwhelming. Digital infrastructure is unavoidable for employment, financial participation, social coordination, and public services. Every interaction leaves behavioral traces. Data collection is largely invisible (hidden in terms of service, executed in background processes). Alternative platforms lack network effects and market power. Privacy tools are technically complex and commercially disadvantaged. Legal protections are inadequate and regulatory enforcement is weak. Suppression is not violent coercion but structural inevitability \u2014 escape requires abandoning modern life. Theater ratio (0.58): Moderate-high and increasing. Privacy regulations create the appearance of user control (consent mechanisms, privacy policies, data deletion rights) without substantive constraint on extraction. GDPR transparency and CCPA choice provisions have increased regulatory theater without meaningfully reducing data flows. The performative layer (privacy policies reach 400+ pages; consent dialogs are cognitive dark patterns; data breach notifications are routine and consequence-free) has grown faster than actual protection. Theater has increased from 0.25 to 0.58 over the measurement interval as regulatory theater scaled.",
+    "perspectival_gap": "The maximum perspectival gap appears between the surveilled individual (powerless/trapped \u2192 Snare) and the platform operator (institutional/arbitrage \u2192 Rope). The individual sees constraint; the operator sees coordination. This gap is not a measurement error or interpretive ambiguity \u2014 it reflects genuine structural asymmetry. Both perspectives are analytically accurate from their respective positions. The gap reveals the core mandate-trophy: the constraint is simultaneously a valid coordination mechanism (connection, information access, emergency response) AND a severe extraction mechanism (behavioral data theft, attention mining, autonomy erosion). The tension cannot be resolved by choosing one perspective as correct \u2014 both are structurally true. Resolution requires either (a) restructuring the coordination function to eliminate the extraction (decentralized alternatives), (b) accepting the extraction as the price of coordination (regulatory acceptance), or (c) rejecting the coordination and its extraction simultaneously (technological defection). Current policy attempts (a) without success because decentralized alternatives lack network effects, maintains the fiction of (b) through regulatory theater, and does not seriously pursue (c) because coordination benefits are real.",
+    "directionality_logic": "Directionality values (d) flow from structural position relative to the extraction mechanism. The surveilled individual occupies d \u2248 0.95 \u2014 nearly full target. They are heavily victim-designated, trapped with no exit, and experience maximal extraction. Platform operators occupy d \u2248 0.05 \u2014 nearly full beneficiary. They are heavily beneficiary-designated, have arbitrage options, and extract from the system. Moderate users with exit capacity occupy d \u2248 0.60 \u2014 mixed. They benefit from platform coordination but bear surveillance costs and face high-cost exit. Regulatory actors face d \u2248 0.50 \u2014 symmetric. They are neither beneficiary nor target but captured by beneficiaries, experiencing mixed incentives. Privacy advocates face d \u2248 0.70 \u2014 moderately high. They are nominally part of the surveilled population but have specialized knowledge (exit options) and ideological commitment. The state apparatus occupies d \u2248 0.20 \u2014 beneficiary-skewed. It experiences surveillance as legitimate coordination authority and has exit options (can change regulatory regimes). These d values are not fixed \u2014 they vary by agent and time. As surveillance consolidates, constrained agents shift toward trapped (d increases). As privacy-preserving alternatives scale, exit costs decline (d decreases).",
+    "mandatrophy_analysis": "The behavioral surveillance constraint exhibits mandatrophy at high severity (extractiveness 0.68). The mandatrophy is not 'is this extraction or coordination?' but 'how do we restructure coordination to eliminate the extraction?' The constraint serves genuine coordination functions: connecting people, enabling emergency response, funding digital services. But it extracts far more value than coordination requires. Current regulatory attempts resolve mandatrophy through theater (GDPR creates consent fiction, CCPA creates choice fiction) without addressing the underlying extraction. The analytical perspective (Tangled Rope) is the honest assessment: the infrastructure coordinates AND extracts. The mandatrophy resolves by acknowledging that the current operational form is indefensible \u2014 either the infrastructure must be restructured to separate coordination from extraction (decentralization, public ownership, non-profit models) or the extraction must be bounded through structural limits (data minimization, federated architectures, transparency with teeth). Theater-based regulation cannot resolve mandatrophy because it does not address the economic incentive structure driving extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_filter_bubbles",
+      "attention_market_monopolies",
+      "behavioral_manipulation_at_scale",
+      "digital_identity_asymmetry"
+    ],
+    "dual_formulation_note": "Behavioral surveillance infrastructure is upstream of multiple extractive constraints in digital domains. Algorithmic filter bubbles depend on behavioral data; attention market monopolies depend on surveillance-enabled targeting; behavioral manipulation depends on behavioral profiles; digital identity asymmetry depends on centralized control of identity data. Each downstream constraint has its own \u03b5 value reflecting domain-specific extraction rates."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

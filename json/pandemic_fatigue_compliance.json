@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "pandemic_fatigue_compliance",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "panfat"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "Pandemic Fatigue Compliance Constraint",
+    "topic_domain": "public_health/behavioral_dynamics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_authority",
+      "compliance_theater_actors"
+    ],
+    "victims": [
+      "general_population",
+      "public_health_outcomes"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Compliant Citizen",
+      "comment": "PERSPECTIVE 1: COMPLIANT CITIZEN (SNARE) \u2014 Faces maximum suppression through institutional mandates, peer pressure, and internalized guilt. Cannot exit compliance without social/professional cost. Trapped between pandemic threat perception and compliance fatigue. Extraction runs toward institutional authority; citizen experiences high chi through f(d) multiplication of trapped exit + victim status."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Non-Compliant Holdout",
+      "comment": "PERSPECTIVE 2: NON-COMPLIANT HOLDOUT (TANGLED ROPE) \u2014 Bears extraction (social stigma, potential employment/housing discrimination) but also benefits from genuine coordination (when others comply, ambient risk environment changes). Constrained by costs of defection but can exercise some agency. Asymmetric extraction with embedded coordination function."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Public Health Authority",
+      "comment": "PERSPECTIVE 3: PUBLIC HEALTH AUTHORITY (ROPE) \u2014 Experiences constraint as pure coordination problem: communicating clear guidance, establishing norms, ensuring population compliance with evidence-based measures. Net beneficiary with arbitrage exit (can pivot policy without loss). Extraction runs toward this agent; they perceive genuine coordination function."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Scientific/Medical Consensus",
+      "comment": "PERSPECTIVE 4: SCIENTIFIC MEDICAL CONSENSUS (SCAFFOLD) \u2014 Organized epistemic community sees compliance as temporary coordination with explicit sunset: vaccine effectiveness, variant evolution, population immunity threshold, and transition to endemic phase provide exit criteria. Declining suppression as population gains immunity and behavioral alternatives emerge. Chi compressed by mobile exit options and sunset framing."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Compliance Theater Apparatus",
+      "comment": "PERSPECTIVE 5: COMPLIANCE THEATER APPARATUS (PITON) \u2014 Performative rituals (mask mandates when baseline population immunity is sufficient, quarantine protocols with minimal epidemiological benefit, vaccine passports after widespread natural immunity) persist through institutional inertia despite degraded functional justification. Theater ratio elevated by mismatch between maintained protocols and changed epidemiological context. Benefits some institutional actors but no longer solves the original coordination problem."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Natural Law View (Biological Reality)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational view, some epidemiological reality is immutable: respiratory pathogens spread through human contact, vaccination confers protection, immunity accumulates over time. These are structural facts. However, this perspective risks naturalizing contingent policy choices (duration of mandates, stringency levels, compliance enforcement mechanisms) as biological inevitabilities. The engine will flag this as a false summit \u2014 the extractive constraint is social, not biological."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fatigue_accumulation_mechanism",
+      "question": "Is pandemic fatigue a discrete behavioral threshold (compliance suddenly collapses) or a continuous decay process (adherence monotonically declines)?",
+      "resolution_mechanism": "Longitudinal compliance data at weekly granularity; statistical testing for change-point detection vs linear decline; behavioral economic experiments on fatigue accumulation",
+      "impact": "If threshold-based: compliance enforcement can be strategically timed to prevent cliff. If continuous decay: extraction mechanisms must adapt or face inevitable mass non-compliance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fatigue as threshold vs continuous decay process"
+    },
+    {
+      "id": "suppression_internalization_ambiguity",
+      "question": "What proportion of measured suppression is structural (external barriers to non-compliance) vs internalized (agent has accepted compliance frame)?",
+      "resolution_mechanism": "Post-mandate compliance tracking (do compliant agents maintain behavior after institutional enforcement ends?); attitudinal surveys controlling for social desirability bias; longitudinal identity-fusion measures",
+      "impact": "If mostly structural: suppression will drop sharply when mandates end. If mostly internalized: compliance persists and becomes identity-locked even after external pressure ceases.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Structural vs internalized suppression balance"
+    },
+    {
+      "id": "endemic_transition_criteria_ambiguity",
+      "question": "What epidemiological/immunological thresholds justify end of mandate-based compliance enforcement?",
+      "resolution_mechanism": "Expert panel consensus on threshold values; international comparative analysis of different transition timelines; post-transition outcome tracking (did healthcare capacity remain adequate, did mortality surge)",
+      "impact": "If thresholds are objective: scaffold sunset is real and compliance extraction declines predictably. If subjective/political: sunset is arbitrary and extraction persists as pure coercion.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Definition of endemic phase completion criteria"
+    },
+    {
+      "id": "identity_lock_vs_constrained_distinction",
+      "question": "For agents maintaining compliance post-pandemic: Is continued adherence identity-locked (self-concept fused with compliance role) or constrained (external costs of defection remain)?",
+      "resolution_mechanism": "Qualitative interviews: can agents articulate reasons for compliance independent of identity? Do they see themselves differently post-pandemic? Behavioral switching tests (do they maintain compliance in contexts with zero social observation)?",
+      "impact": "If identity-locked: compliance becomes intergenerational norm even when suppression evaporates. If constrained: compliance collapses when external enforcement ends.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Identity lock vs constrained compliance in post-pandemic period"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "Pandemic fatigue compliance represents a structural constraint where institutional authority maintains behavioral mandates (mask-wearing, vaccination, isolation, testing protocols) beyond the point where the epidemiological justification has degraded. The constraint operates through suppression mechanisms (legal enforcement, employment discrimination, social stigma, internalized guilt) that sustain compliance even as the target population's willingness to comply has diminished. Over the pandemic's lifecycle, the extractiveness increased from moderate (0.35, where genuine coordination with public health existed) to high (0.62, where behavioral compliance serves institutional authority interests rather than population health). Theater ratio similarly rose from 0.42 (protocols had clear epidemiological function) to 0.75 (performative maintenance of rituals disconnected from outcome). The constraint exhibits all six classification types depending on observational position: powerless citizens experience snare (trapped in compliance loop), non-compliant holdouts experience tangled rope (mixed extraction and coordination), authorities experience rope (pure coordination benefit), the scientific consensus experiences scaffold (temporary with sunset), the compliance apparatus itself experiences piton (degraded ritual), and the analytical observer risks mountain classification (naturalizing social choices as biological inevitabilities).",
+    "key_agents": [
+      "General Population: Primary victim (powerless/trapped) \u2014 faces suppression through legal/social enforcement; cannot exit without cost; bears extraction through behavioral compliance with declining epidemiological justification",
+      "Non-Compliant Minority: Secondary victim (moderate/constrained) \u2014 faces discrimination, social stigma, employment barriers; also benefits from coordination when others comply; asymmetric extraction with embedded coordination",
+      "Public Health Authority: Primary beneficiary (institutional/arbitrage) \u2014 maintains institutional legitimacy and control through mandate enforcement; can pivot policy without loss; experiences constraint as coordination function",
+      "Scientific/Medical Consensus: Organized actor (organized/mobile) \u2014 sees compliance as temporary with explicit sunset criteria; has exit pathway as population immunity accumulates; provides rationale for scaffold classification",
+      "Compliance Apparatus (employers, public venues, enforcement agencies): Secondary beneficiary (institutional/arbitrage) \u2014 benefits from simple compliance rules that don't require real-time epidemiological judgment; maintains institutional routines",
+      "Analytical Observer: Civilizational analyst (analytical/analytical) \u2014 risks confusing biological constraints with social policy choices; sees apparent immutability that is actually institutional inertia"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. Initial phase (0.35) involved genuine coordination \u2014 population and authorities aligned on disease control. Mid-phase (0.48) showed extraction mounting as fatigue accumulated but mandates persisted. Final measurement (0.62) reflects high asymmetry: compliance required despite weakened epidemiological justification. Suppression (0.65): Moderately high and durable. Structural barriers include employment discrimination, educational/travel restrictions, and legal penalties. Internalized suppression (guilt, identity fusion with compliance role) may constitute 30-40% of measured suppression. Theater ratio (0.75 at endpoint): Elevated. Early protocols (masking in high-transmission contexts) had clear function. Late protocols (masking in low-transmission settings, vaccine passports after widespread natural immunity, quarantines with minimal epidemiological impact) are substantially performative \u2014 maintained through institutional inertia and risk-aversion rather than epidemiological evidence. The rise from 0.42 to 0.75 tracks the decoupling of policy from epidemiological conditions.",
+    "directionality_logic": "Directionality d values derive from structural position and exit capacity. Powerless citizens with trapped exit (d \u2248 0.95) experience maximum f(d) \u2248 1.42, generating high chi. They are victims with no exit pathway. Non-compliant holdouts with constrained exit (d \u2248 0.65) experience f(d) \u2248 1.00, moderate chi \u2014 they have some agency but face penalties. Public health authorities with arbitrage exit (d \u2248 0.15) experience f(d) \u2248 -0.01, negative chi \u2014 they are net beneficiaries with complete policy flexibility. The scientific consensus with mobile exit options (d \u2248 0.50) experiences f(d) \u2248 0.65, compressed chi \u2014 they can exit via changed criteria. The directionality pipeline automatically computes these from beneficiary/victim declarations plus power and exit values; no override necessary.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. The compliant citizen sees a snare (high suppression, no exit, extraction clear). The non-compliant sees tangled rope (extraction real but coordination benefit exists for them when others comply). Authorities see rope (pure coordination value, they are not extracting \u2014 in their framing). The scientific community sees scaffold (temporary, with sunset criteria like herd immunity or variant evolution). The compliance apparatus sees piton (the ritual persists even though its function has degraded). The analytical observer risks mountain (confusing 'respiratory viruses exist' with 'these specific mandates are natural law'). The perspectival gaps reveal structural asymmetries: citizens and authorities have radically different access to mandate reversal options, victims and beneficiaries have inverted directionality, and the transition from coordination to extraction is measurable but denied by those who benefit from the constraint.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that all six types coexist in temporal progression. EARLY PHASE (T=0-4): Rope-dominant \u2014 genuine coordination between population and authorities around disease control, low extraction, high function. MID PHASE (T=4-12): Tangled Rope-dominant \u2014 coordination function persists (reducing baseline population risk) but extraction rises as fatigue accumulates and mandates continue despite declining threat. LATE PHASE (T=12-24): Snare-dominant for powerless agents \u2014 extraction maximizes as suppression mechanisms lock in despite epidemiological justification having degraded. Scaffold describes the theoretical endpoint \u2014 authorities and scientific consensus frame mandates as temporary with clear exit criteria (endemic phase, herd immunity threshold, vaccine effectiveness validation). Piton describes the institutional reality \u2014 compliance apparatus maintains rituals even after functional justification has degraded, suggesting the sunset is aspirational rather than real. Mountain describes the false summit \u2014 the analytical observer risks naturalizing social choices as biological necessity. No single type is 'correct' \u2014 the constraint's type changes as conditions change and power asymmetries shift. This is a diagnostic exemplar of mandatrophy resolution through temporal decomposition."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "vaccine_mandate_compliance",
+      "institutional_authority_legitimacy_erosion",
+      "population_trust_in_public_health"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ]
+}

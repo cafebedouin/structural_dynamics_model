@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "colonial_economic_extraction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "colext"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.82,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Colonial Economic Extraction Mechanism",
+    "topic_domain": "economic/political/historical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "metropolitan_core",
+      "colonial_trading_monopolies"
+    ],
+    "victims": [
+      "colonized_populations",
+      "local_production_capacity",
+      "indigenous_institutions"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Colonized Population",
+      "comment": "PERSPECTIVE 1: COLONIZED POPULATION (SNARE) \u2014 Trapped within colonial economic structure with no viable exit. Faces military enforcement, legal prohibition of alternative trade routes, confiscation of land and productive assets, and coerced labor extraction. Maximum suppression and maximum extraction from the agent's experience. The constraint is total \u2014 cannot emigrate, cannot trade independently, cannot accumulate capital."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Local Colonial Elites",
+      "comment": "PERSPECTIVE 2: LOCAL COLONIAL ELITES (TANGLED ROPE) \u2014 Constrained but not trapped. Receive administrative positions and commercial privileges in exchange for enforcing the extraction system. Experience the constraint as mixed: genuine coordination of trade infrastructure and administrative efficiency coexists with asymmetric extraction \u2014 their privileges depend on suppressing lower-tier colonized groups. Exit is costly (loss of status, retaliation) but theoretically possible. The constraint provides real benefits alongside real extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Metropolitan Core Administration",
+      "comment": "PERSPECTIVE 3: METROPOLITAN CORE (ROPE) \u2014 Experiences the constraint as pure coordination with strong efficiency benefits. The colonial economic system solves the problem of acquiring raw materials, accessing new markets, and expanding geopolitical influence at minimal administrative cost (delegated to local elites). The extraction runs toward this agent exclusively; they experience coordination benefits without paying suppression costs. The constraint appears to the metropole as a well-functioning trade network."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "label": "Indigenous Production Institutions",
+      "comment": "PERSPECTIVE 4: INDIGENOUS PRODUCTION INSTITUTIONS (SNARE) \u2014 Traditional craft guilds, agricultural cooperatives, and trade networks are systematically dismantled or subordinated. Cannot exit because the alternative institutions (colonial monopolies) are legally protected and militarily enforced. The suppression is structural: craft knowledge is devalued, land is confiscated, trade is redirected through colonial channels. This agent (collective institutional capacity) bears maximum extraction with no compensatory benefit."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Colonial Justification Apparatus",
+      "comment": "PERSPECTIVE 5: COLONIAL JUSTIFICATION APPARATUS (PITON) \u2014 The ideological and legal frameworks (civilizing mission, racial hierarchy, scientific racism, Christian duty) that rationalize the extraction are substantially performative. As actual colonial extraction mechanisms weaken, the justification apparatus persists through institutional inertia long after its functional role has atrophied \u2014 documented in legal codes, academic curricula, and cultural narratives that outlive the economic system they once legitimized. Theater ratio is high because the moral and legal arguments are maintained even as enforcement and extraction decline."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Power Asymmetry View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / POWER ASYMMETRY VIEW (MOUNTAIN) \u2014 From the civilizational perspective, colonial extraction reflects a fundamental asymmetry in military-organizational capacity: any society with superior naval technology and organizational scaling can extract from any society without these capabilities. This appears as an immutable law of geopolitical physics. However, the structural data contradicts the mountain classification \u2014 the constraint depends on continuous enforcement, is not irreducible, and has been partially reversed through independence movements. The engine will flag this as a false summit, revealing naturalization of contingent power asymmetries."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "enforcement_dependency",
+      "question": "Is colonial economic extraction fundamentally dependent on continuous military enforcement, or does it persist through institutional inertia and internalized subordination?",
+      "resolution_mechanism": "Comparative analysis of extraction mechanisms before and after military withdrawal; measurement of extraction rates when enforcement capacity declines (armed resistance, independence movements, reduced garrison capacity)",
+      "impact": "If military-dependent: the constraint is a snare contingent on force. If internalized: post-colonial extraction persists through identity-locked and institutional mechanisms, requiring analysis of cognitive and institutional capture. If both: the constraint transforms from snare to tangled_rope during decolonization.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether extraction depends on military enforcement or internalized mechanisms"
+    },
+    {
+      "id": "local_elite_capture",
+      "question": "Do local colonial elites constitute a genuine intermediate layer with mixed incentives (tangled_rope), or are they fully captured subordinates whose interests are identical to the metropole (rope from their perspective)?",
+      "resolution_mechanism": "Analysis of elite behavior during independence crises; measurement of whether elites defect, negotiate independently, or remain loyal; examination of post-colonial elite trajectories and institutional inheritance",
+      "impact": "If genuine intermediaries: tangled_rope classification is correct, and decolonization requires negotiation with local elites. If fully captured: elites are not a structural layer, the system is snare + rope (no tangled_rope), and decolonization requires bypassing elite channels.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether local elites have independent agency or are fully captured"
+    },
+    {
+      "id": "institutional_reversal_cost",
+      "question": "What is the cost of reversing colonial institutional arrangements (land restitution, trade route reopening, capacity reconstruction) relative to maintaining extraction mechanisms?",
+      "resolution_mechanism": "Empirical measurement of institutional reconstruction costs in post-colonial states; comparative analysis of extraction cessation costs vs reversal costs; measurement of whether reversal was politically feasible given the cost asymmetry",
+      "impact": "If reversal cost >> extraction benefit: the metropole will resist decolonization even if military enforcement becomes costly \u2014 the constraint persists as neocolonial economic dependence. If reversal cost < extraction benefit: independence becomes structurally possible, and the constraint downgrades to tangled_rope or scaffold during transition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cost asymmetry between maintaining and reversing extraction"
+    },
+    {
+      "id": "psychological_internalization",
+      "question": "To what extent has the colonized population internalized the constraint as natural or deserved (identity_locked), vs. perceiving it as external oppression (trapped)?",
+      "resolution_mechanism": "Analysis of resistance movements, slave revolts, and independence rhetoric; examination of how quickly psychological internalization reverses after enforcement withdrawal; measurement of internalization persistence in post-colonial societies",
+      "impact": "If fully internalized: the constraint persists as identity-locked even after formal independence, requiring decolonization of the mind. If primarily structural: removal of enforcement mechanisms produces rapid mental reorientation. Mixed: indicates the constraint is partially self-reproducing through psychology.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of psychological internalization vs structural entrapment"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.82,
+      "id_override": "colext_initial_peak"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.78,
+      "id_override": "colext_mid_sustained"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.71,
+      "id_override": "colext_late_decline"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "colext_theater_initial"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.58,
+      "id_override": "colext_theater_mid"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.65,
+      "id_override": "colext_theater_late"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "Colonial economic extraction represents a structural constraint that persisted across centuries through military enforcement, institutional monopolization, legal prohibition, and psychological internalization. The constraint exhibits the full DR typology from different structural positions: the colonized population experiences pure extraction (snare); local elites experience mixed coordination and extraction (tangled rope); the metropolitan core experiences pure coordination (rope); indigenous institutions experience systematic subordination (snare); the justification apparatus persists performatively as enforcement declines (piton); and the analytical observer risks naturalizing contingent power asymmetries as immutable law (false summit mountain). The constraint's extractiveness (0.78) reflects sustained asymmetric resource transfer with high suppression (0.82) \u2014 colonized populations face military coercion, legal restriction of trade, confiscation of land, and coerced labor. The theater ratio (0.65) indicates that significant justificatory effort (civilizing mission, racial hierarchy, religious conversion) accompanied the extraction, and this justification persisted and evolved even as the economic system weakened. The constraint shows partial degradation over the measurement interval: extractiveness declines from 0.82 to 0.71 as resistance movements, trade competition from other empires, and industrial shifts in the metropole reduce extraction capacity. Simultaneously, theater ratio increases from 0.42 to 0.65 as the constraint becomes increasingly dependent on ideological justification rather than pure military enforcement \u2014 the functional role atrophies while the narrative persists.",
+    "key_agents": [
+      "Colonized Populations: Primary victim (powerless/trapped) \u2014 face coerced labor, land confiscation, trade prohibition, military enforcement with no legal or structural exit",
+      "Metropolitan Core: Primary beneficiary (institutional/arbitrage) \u2014 extracts raw materials, raw labor, and market access with minimal administrative cost through delegation to local elites",
+      "Local Colonial Elites: Intermediate layer (moderate/constrained) \u2014 receive administrative power and commercial privilege in exchange for enforcing suppression on lower tiers; their exit is costly but theoretically possible",
+      "Colonial Trading Monopolies: Secondary beneficiary (institutional/arbitrage) \u2014 profit from legally protected trade routes and access to colonized resources without competition",
+      "Indigenous Production Institutions: Secondary victim (powerless/trapped) \u2014 traditional craft and trade networks are dismantled or subordinated; cannot exit because alternatives are legally prohibited",
+      "Colonial Justification Apparatus: Institutional actor (institutional/arbitrage) \u2014 maintains ideological and legal framework (civilizing mission, racial hierarchy) that legitimizes extraction; persists through inertia as economic function declines",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks treating power asymmetry as an immutable law rather than recognizing it as contingent on military capacity and institutional scaling"
+    ],
+    "logic_rationale": "Extractiveness (0.78): High. The constraint extracts substantial wealth, labor, and resources from colonized populations to the metropolitan core. The measure reflects the asymmetry: the colonized population loses production capacity, land, and future economic potential; the metropole gains raw materials, labor surplus, and market access. The extraction is not total (0.85+) because some coordination functions are genuine \u2014 colonial infrastructure, trade systems, and administrative efficiency do provide goods and services, albeit at highly asymmetric terms of exchange. Suppression (0.82): Very high. Colonized populations face multiple overlapping suppression mechanisms: military garrison and threat of violence; legal prohibition of independent trade; confiscation of land and productive assets; coerced labor (slavery, indentured servitude, corv\u00e9e); educational exclusion from positions of authority; cultural denigration and psychological demoralization. These are structural (external, material barriers) rather than primarily internalized \u2014 the suppression persists even when resistance emerges. Theater ratio (0.65): Moderate-high. The constraint requires continuous ideological justification: civilizing mission narratives, racial hierarchy pseudo-science, religious conversion imperatives, and claims of beneficial development. This theatrical component becomes more prominent over time as military enforcement alone proves inadequate and as metropolitan publics require moral narratives to justify extraction. The theater is neither minimal (\u22640.25, pure function) nor maximal (\u22650.85, pure performance) \u2014 it accompanies genuine extraction mechanisms while becoming progressively more important relative to pure force.",
+    "perspectival_gap": "Fundamental gap between how the metropole and colonized population perceive the constraint. The metropole experiences rope \u2014 a coordination mechanism that solves resource acquisition and market access problems. The colonized population experiences snare \u2014 pure extraction with total suppression and no compensatory coordination benefits. This gap is not a measurement error; it reflects genuine structural asymmetry: what the metropole calls 'trade coordination' is extraction from the colonized perspective because the terms of exchange are asymmetric and coerced. Local elites occupy an intermediate position that captures both perspectives \u2014 they experience genuine coordination benefits relative to the baseline (pre-colonial economic organization) but massive extraction relative to the metropole's position. The analytical observer risks naturalizing this gap as an immutable law (mountain \u2014 'power always flows to the more capable') rather than recognizing it as contingent on enforcement capacity and institutional scaling. Historical resistance movements demonstrate the gap is not permanent: when enforcement capacity declines, the constraint downgrades from snare to tangled_rope (with greater agency) and eventually to piton (vestigial).",
+    "directionality_logic": "Directionality (d) is computed from each agent's power level, exit options, and relationship to the extraction flow. The colonized population (powerless/trapped) derives d \u2248 0.95 (near-total victim): no structural mobility, full extraction target. The metropole (institutional/arbitrage) derives d \u2248 0.05 (near-total beneficiary): high mobility, extraction source. Local elites (moderate/constrained) derive d \u2248 0.55 (mixed): constrained mobility, benefits and costs balanced. Indigenous institutions (powerless/trapped) derive d \u2248 0.98 (near-total victim): institutional capacity is systematically subordinated. The directionality overrides are unnecessary here because the power atoms and exit options accurately reflect structural position. The constraint's effective extractiveness \u03c7 is scaled by f(d) \u00d7 \u03c3(S) for each perspective: the colonized population at local scope with d=0.95 experiences maximum \u03c7; the metropole at global scope with d=0.05 experiences \u03c7 amplified by scope but diminished by near-total beneficiary status (f(d) \u2248 -0.12). This produces the perspectival pattern: the extraction feels overwhelming from the target's view (high d \u2192 high f(d) \u2192 high \u03c7) and coordinating from the beneficiary's view (low d \u2192 low f(d) \u2192 low \u03c7).",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED via perspectival multiplicity: The constraint cannot be classified as a single type because it is genuinely different constraints from different structural positions. From the colonized perspective, it is a snare (\u03b5=0.78, \u03c7 \u2265 0.66, pure extraction). From the metropolitan perspective, it is rope (low \u03c7, pure coordination benefit). From the local elite perspective, it is tangled rope (mixed benefits and costs). This is not classification failure; it is the framework working correctly \u2014 the constraint manifests differently across the observation site. The falsity of the mountain classification (from the analytical observer perspective) reveals that the 'immutable law' framing is a naturalization of contingent power asymmetries. Colonial extraction persists only through continuous enforcement; its eventual reversal (via independence movements) proves it is not an irreducible limit. The mandatrophy is resolved by recognizing that multiple types are simultaneously valid from their respective structural positions, and that the perspectival gap is itself the diagnostic signal \u2014 constraints that appear as rope to beneficiaries and snare to victims are the definition of asymmetric extraction requiring active justification."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "neocolonial_economic_dependence",
+      "institutional_postcolonial_inheritance",
+      "trade_asymmetry_persistence"
+    ],
+    "dual_formulation_note": "Colonial economic extraction exists as a structural constraint distinct from its justification apparatus (colonial_justification_apparatus is a separate story with higher theater_ratio). The extraction constraint also upstream-affects neocolonial dependence \u2014 as formal colonialism ended, the economic extraction mechanisms persisted through institutional lock-in and debt dependence, creating a transformed but continuous constraint."
+  },
+  "directionality_overrides": []
+}

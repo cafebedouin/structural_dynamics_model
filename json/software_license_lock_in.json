@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "software_license_lock_in",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "swlic"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Software License Lock-In: Proprietary Vendor Control via Licensing Terms",
+    "topic_domain": "technology/business/intellectual_property",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "proprietary_software_vendors"
+    ],
+    "victims": [
+      "enterprise_customers",
+      "small_business_users",
+      "open_source_ecosystem"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Locked-In Enterprise Customer",
+      "comment": "PERSPECTIVE 1: LOCKED-IN ENTERPRISE CUSTOMER (SNARE) \u2014 An organization that has deployed mission-critical software across its infrastructure faces insurmountable barriers to switching. License terms restrict redistribution, modification, and concurrent installation; switching costs (retraining, system redesign, data migration) are prohibitive; and contractual terms impose penalties for early termination. The customer is trapped by both material barriers (technical integration, data lock-in) and legal/financial terms. Bears full extraction cost with no meaningful exit option."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Small Business User",
+      "comment": "PERSPECTIVE 2: SMALL BUSINESS USER (TANGLED ROPE) \u2014 Smaller organizations face constraints but retain some agency through partial migration or negotiation. The license term (per-seat, per-instance, usage-based) creates coordination benefit: licensing enables access to professional tools without massive upfront capital. But asymmetric extraction exists: pricing discriminates against small users; compliance audits impose disproportionate burden; and contractual terms prevent resale or secondhand market. High suppression (legal enforcement of terms) with genuine but constrained exit options."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Proprietary Software Vendor",
+      "comment": "PERSPECTIVE 3: PROPRIETARY SOFTWARE VENDOR (ROPE) \u2014 The vendor experiences licensing as a coordination mechanism: license terms enable software distribution, manage support burden, and signal professional legitimacy. The vendor benefits from enforcement (audits, legal action against unauthorized use) but also provides genuine coordination value: maintenance, updates, support, and protection of intellectual property investment. Arbitrage exit option: vendor can adjust terms, migrate customer base, or pivot to new market segments."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Source Movement",
+      "comment": "PERSPECTIVE 4: OPEN SOURCE MOVEMENT (SCAFFOLD) \u2014 Organized development communities (Linux, Apache, open-source alternatives) represent a temporary coordination solution with sunset logic. These projects build parallel capabilities to proprietary software; they provide exit pathways (migration to open-source equivalents) that reduce extraction's effectiveness over time. The constraint has a sunset clause: as open-source tools mature (estimated 5-15 years depending on software category), proprietary lock-in's extractive power diminishes. Organized agents can coordinate around alternative pathways."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy License Compliance Theater",
+      "comment": "PERSPECTIVE 5: LEGACY LICENSE COMPLIANCE THEATER (PITON) \u2014 Corporate compliance departments enforce license terms (audit clauses, usage monitoring, contractual penalties) with substantial performative content. Much of the enforcement is procedural theater: license audits verify contract compliance but do not substantially improve product security, functionality, or performance. The compliance ritual persists through institutional inertia despite degraded enforcement (increasingly difficult to monitor all usage; open-source alternatives provide escape). Theater ratio is high; effective extraction via compliance is declining as vendors shift to subscription models that reduce enforcement burden."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Intellectual Property as Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / INTELLECTUAL PROPERTY NATURALIZATION (MOUNTAIN) \u2014 From a civilizational perspective, some might argue that intellectual property licensing is a natural law: software code is a creative good; protecting the creator's investment through licensing is inherent to innovation incentives; therefore lock-in is an inevitable cost of software production. However, this classification is a false summit. The structural data contradicts the mountain classification: significant extraction (0.58), high suppression (0.65), and contingent institutional mechanisms (enforceable contracts, vendor lock-in strategies) are not unchangeable natural laws \u2014 they are policy choices. The mountain perspective naturalizes what is actually a tangled arrangement of extraction and coordination."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "vendor_switching_cost_threshold",
+      "question": "At what absolute switching cost does a customer transition from trapped to constrained exit status?",
+      "resolution_mechanism": "Empirical analysis of actual migration costs (system redesign, data conversion, retraining, downtime) versus customer revenue; comparison across software categories (ERP, database, development tools)",
+      "impact": "If threshold < 10% annual software spend: many customers classified as constrained could exit \u2192 reduces Snare prevalence. If threshold > 40% annual spend: most enterprise customers are trapped \u2192 increases Snare prevalence and extraction effectiveness.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Switching cost threshold determining exit status"
+    },
+    {
+      "id": "open_source_capability_parity",
+      "question": "Do open-source alternatives provide feature parity with proprietary tools in sufficient software categories to constitute a genuine mass-market exit pathway?",
+      "resolution_mechanism": "Feature matrix comparison (functionality, performance, user experience, ecosystem support) across software categories; adoption rates of open-source substitutes by locked-in customer segments",
+      "impact": "If parity achieved in > 50% of software market: scaffold perspective is structural, sunset is real \u2192 tangled_rope classification is stable. If parity < 30%: open-source alternative is aspirational, not practical exit \u2192 snare prevalence increases.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether open-source provides practical alternatives to proprietary software"
+    },
+    {
+      "id": "contractual_enforcement_effectiveness",
+      "question": "How effectively do vendors actually enforce license terms against customers at different scales, and does enforcement cost exceed the rent extracted?",
+      "resolution_mechanism": "Analysis of vendor audit frequency, enforcement rates, penalty revenue versus audit execution cost; customer compliance survey data",
+      "impact": "If enforcement is economically viable (revenue > cost): suppression rating 0.65 is justified. If enforcement is net-negative (cost > revenue): suppression is theater-sustained rather than enforcement-sustained \u2192 reclassify piton component upward, overall theater_ratio increases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cost-effectiveness of license term enforcement"
+    },
+    {
+      "id": "subscription_model_exit_effect",
+      "question": "Does the shift from perpetual licensing to subscription models (SaaS, recurring payments) increase or decrease lock-in extractiveness?",
+      "resolution_mechanism": "Historical comparison of switching rates and costs: perpetual license era vs subscription era for same software categories; vendor pricing strategies and revenue concentration in subscription models",
+      "impact": "If subscriptions increase lock-in: \u03c7 would increase (higher effective extraction) \u2192 Snare becomes dominant classification. If subscriptions decrease lock-in (lower switching costs, simpler contract exit): \u03c7 would decrease \u2192 Rope becomes more prevalent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "How licensing models affect lock-in extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Software license lock-in is a structural constraint where proprietary vendors use licensing terms, contractual restrictions, and technical integration to create switching costs that exceed customers' feasible alternatives. The constraint operates across enterprise computing, professional tools, and development platforms. It exhibits all six classification types from different perspectives because it combines a genuine coordination function (enabling software distribution, maintenance, and support) with substantial asymmetric extraction (vendor capture of user surplus via pricing power, contract terms, and enforcement). The constraint's evolution shows increasing extractiveness (0.42 \u2192 0.58 over the interval) as vendors consolidate market position, offset partly by declining theater ratio (0.55 \u2192 0.48) as subscription models reduce performative enforcement and replace it with technical constraints (account-based access, usage metering). The open-source movement represents a generational exit pathway: as open-source software matures in capability and adoption, proprietary lock-in's extractive power decreases through sustained competitive pressure rather than dramatic replacement.",
+    "key_agents": [
+      "Proprietary Software Vendors: Primary beneficiary (institutional/arbitrage) \u2014 capture rent through licensing terms, enforcement, and switching cost asymmetry; can pivot pricing, licensing models, or market segments",
+      "Enterprise Customers: Primary victim (powerless/trapped) \u2014 bear full extraction via high switching costs; mission-critical deployment prevents exit despite high extraction",
+      "Small Business Users: Secondary victim (moderate/constrained) \u2014 face constraints on exit but retain negotiating leverage and partial migration options",
+      "Open Source Development Communities: Organized actors (organized/constrained) \u2014 building exit pathways that gradually erode proprietary lock-in; constrained by volunteer coordination and feature parity challenges",
+      "Corporate Compliance Departments: Institutional actors (institutional/arbitrage) \u2014 enforce license terms through audits and contractual monitoring; maintain procedural theater with declining real enforcement effectiveness",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing intellectual property lock-in as inherent to software innovation rather than a contingent institutional arrangement"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, increasing. The vendor captures surplus through per-seat pricing, usage restrictions, and switching cost creation. The value has increased over the interval as vendors consolidate market share and implement more sophisticated licensing metering. However, extractiveness is not maximal (not 0.72+) because customers do retain some agency through negotiation (enterprise customers can negotiate volume licensing), partial migration (moving some workloads to open-source), or accepting high switching costs to exit. The upward trend reflects vendors' increasing market power and refinement of extraction mechanisms (from simple per-license to usage-based metering). Suppression (0.65): Moderate-high. Legal mechanisms (contract enforcement, copyright claims, license audits) create barriers, but suppression is not total because open-source alternatives exist and enforcement costs are rising. Customers are suppressed by contractual terms and switching cost, not by absolute technical prevention. Theater ratio (0.48): Moderate, declining. License compliance audits and enforcement procedures contain substantial performative content (demonstrating corporate diligence to auditors) but also genuine rent extraction (detected unlicensed use triggers penalties). The declining trend reflects the shift from perpetual licensing (which required ongoing enforcement to prevent unauthorized use) to subscription models (which rely on technical access control rather than legal enforcement theater).",
+    "perspectival_gap": "The perspectival gap is maximum across the constraint: from the vendor's view (rope: coordination of legitimate software distribution) to the trapped customer's view (snare: pure extraction with no exit). This gap reveals the fundamental structural asymmetry: one agent (vendor) experiences the constraint as solving a coordination problem (software distribution, support, IP protection); the other (locked-in customer) experiences it as extraction with no coordination benefit. The middle perspectives (small business experiencing tangled rope, open-source coalition experiencing scaffold) show intermediate positions where coordination and extraction are genuinely mixed. The piton perspective (compliance theater) demonstrates how institutional inertia maintains enforcement procedures (license audits, penalty structures) that persist despite declining real enforcement effectiveness. The analytical observer's mountain classification is a false summit: it naturalizes a contingent policy arrangement (enforceable intellectual property licenses with vendor lock-in) as an unchangeable law of innovation. The structural data contradicts this naturalization.",
+    "directionality_logic": "Directionality values (d) are derived from each agent's structural position. Enterprise customers classified as trapped experience d \u2248 0.95 (maximum victim status) because they bear extraction with no material exit capacity. Small business users classified as constrained experience d \u2248 0.60-0.75 (high victim status) because exit is possible at significant cost. Proprietary vendors classified as institutional beneficiaries with arbitrage exit experience d \u2248 0.10-0.20 (beneficiary status) because they extract surplus and can adjust terms or markets. Open-source coalition classified as organized agents with constrained exit (they can develop alternatives but face coordination challenges) experience d \u2248 0.45-0.55 (moderate victim/beneficiary hybrid) because they both bear costs (volunteer coordination burden) and benefit (building alternatives that reduce lock-in). The sigmoid f(d) transforms these d values into experienced extractiveness \u03c7: trapped customers experience maximum \u03c7 (high f(d)); beneficiary vendors experience low or negative \u03c7 (low f(d)).",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by demonstrating that all six types are legitimate perspectival readings. The classification is not 'which type is correct?' but 'which structural position are you measuring from?' The vendor genuinely experiences coordination function (rope). The trapped customer genuinely experiences pure extraction (snare). The open-source coalition genuinely experiences a temporary problem with sunset logic (scaffold). The compliance department genuinely experiences institutional ritual (piton). The small business genuinely experiences mixed coordination and extraction (tangled rope). The analytical observer naturalizes what is actually a policy choice (mountain). No single type is the 'true' classification \u2014 the presheaf over observation sites (vendor, customer, coalition, compliance, analyst) is the answer. Mandatrophy is resolved by rejecting the monism that seeks one true type and accepting the perspectival realism that different structural positions yield different legitimate classifications from identical base properties."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "software_interoperability_standards",
+      "open_source_adoption_barriers",
+      "intellectual_property_enforcement"
+    ],
+    "dual_formulation_note": "Software license lock-in decomposes into multiple structurally distinct constraints depending on observable: (1) vendor pricing power and margin extraction (\u03b5 \u2248 0.58, this story); (2) technical data lock-in and format incompatibility (\u03b5 varies by data type, separate story); (3) intellectual property enforcement mechanisms (\u03b5 \u2248 0.35, licensing-as-coordination story). The shared label 'lock-in' conflates these distinct mechanisms. This story focuses on licensing terms and contractual lock-in (observable: price discrimination, contract enforcement, switching cost asymmetry). Related stories address technical lock-in (data format, API dependence) and IP enforcement (copyright, patent mechanisms)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

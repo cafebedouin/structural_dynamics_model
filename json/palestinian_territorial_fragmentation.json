@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "palestinian_territorial_fragmentation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Palestinian Territorial Fragmentation",
+    "topic_domain": "political_geography/territorial_control",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "israeli_settlement_expansion",
+      "israeli_security_framework"
+    ],
+    "victims": [
+      "palestinian_population",
+      "palestinian_state_viability",
+      "territorial_sovereignty"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Palestinian Population (Fragmented)",
+      "comment": "PERSPECTIVE 1: PALESTINIAN POPULATION (SNARE) \u2014 Trapped within fragmented enclaves (West Bank Areas A/B/C, Gaza, Jerusalem) with severe mobility restrictions, checkpoints, and permit systems. No unified territorial control; no exit option from the fragmentation system. Extraction occurs through resource constraints, land dispossession, and institutional barriers to economic development. Maximum suppression via security apparatus and administrative fragmentation."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Palestinian State Viability (Institutional)",
+      "comment": "PERSPECTIVE 2: PALESTINIAN STATE VIABILITY (SNARE) \u2014 The institutional capacity for sovereign state formation is structurally undermined by territorial fragmentation. Contiguous territory, unified governance, and resource control are prerequisites for statehood that the constraint prevents. No escape path; bears full cost of the constraint's maintenance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Palestinian Authority / Governance Structure",
+      "comment": "PERSPECTIVE 3: PALESTINIAN AUTHORITY (TANGLED ROPE) \u2014 Coordinates public services and governance across fragmented territories while simultaneously depending on the fragmentation system for its administrative jurisdictions (Areas A/B). Experiences both coordination function (governing within assigned areas) and extraction (constrained by fragmentation, dependent on permits and Israeli security coordination). Constrained exit \u2014 administrative dissolution would abandon constituencies."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Israeli Security Framework",
+      "comment": "PERSPECTIVE 4: ISRAELI SECURITY FRAMEWORK (ROPE) \u2014 Experiences territorial fragmentation as a coordination mechanism for security perimeter control and early-warning infrastructure. Fragmentation enables graduated security zones, checkpoint verification, and intelligence presence without requiring full territorial occupation. Arbitrage option \u2014 security goals could theoretically be met through alternative mechanisms. Net beneficiary of the fragmentation system."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Israeli Settlement Expansion",
+      "comment": "PERSPECTIVE 5: ISRAELI SETTLEMENT EXPANSION (ROPE) \u2014 Benefits from fragmentation as it reduces Palestinian territorial control and increases land availability for settlements within fragmented Palestinian areas. Experiences fragmentation as enabling coordination of settlement placement within security-controlled zones. Arbitrage option \u2014 expansion could be redirected through other mechanisms. Primary beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Territorial Governance Norms",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL NORMS (PITON) \u2014 UN resolutions and international law nominally prohibit territorial fragmentation as a governance mechanism and demand Palestinian self-determination. These norms persist despite decades of violation and non-enforcement. Theater ratio high \u2014 the normative framework is performative (extensively cited, symbolically powerful) but lacks enforcement mechanisms. Piton structure: maintained through institutional inertia and symbolic value despite functional failure."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 Risk perspective: territorial fragmentation appears as an immutable geographic/political fact \u2014 'this is simply how the region is organized.' From civilizational/universal scale, the structural mechanics are naturalized as products of conflict dynamics or security necessity rather than contingent institutional choices. However, this is a false summit: fragmentation is actively maintained through administrative systems (permit regimes, settlement policy, checkpoint infrastructure), not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fragmentation_maintenance_mechanisms",
+      "question": "Is territorial fragmentation maintained primarily through active Israeli policy, Palestinian institutional weakness, international inaction, or structural interdependency?",
+      "resolution_mechanism": "Historical analysis of policy decisions vs. institutional constraints; counterfactual analysis of unified Palestinian territory scenarios under different governance assumptions; identification of reversibility thresholds",
+      "impact": "If primarily active policy: snare classification is robust. If primarily institutional/structural: may upgrade to tangled_rope (both sides depend on fragmented structure). If primarily international inaction: may upgrade to scaffold (reversible with political commitment). Classification confidence directly dependent on mechanism identification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether fragmentation is active extraction or structural interdependency"
+    },
+    {
+      "id": "palestinian_mobility_trap_vs_economic",
+      "question": "Does Palestinian territorial fragmentation function primarily as a security control mechanism (mobility suppression) or an economic extraction mechanism (resource/land capture)?",
+      "resolution_mechanism": "Decompose into separate constraint stories for security-mobility and economic-extraction functions; measure extractiveness independently for each; compare \u03b5 values",
+      "impact": "If primarily security: suppression dominates, classification remains snare. If primarily economic: extractiveness may be lower, classification may shift to tangled_rope. Different omega variables apply to each mechanism. This is an \u03b5-invariance candidate \u2014 may require story decomposition.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Security control vs. economic extraction as dominant mechanism"
+    },
+    {
+      "id": "settlement_expansion_inevitable_logic",
+      "question": "Does Israeli settlement expansion follow inevitably from security/ideological framework, or is it contingently chosen policy that could be reversed within fragmentation constraint?",
+      "resolution_mechanism": "Policy analysis of settlement decisions; examination of periods of expansion vs. freezes; counterfactual analysis of fragmentation without settlement growth",
+      "impact": "If inevitable: fragmentation supports settlement as coordination outcome (rope from settler perspective). If contingent: fragmentation enables settlement as a choice (snare from Palestinian perspective). This determines whether beneficiary status is structural or chosen.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether settlement expansion is necessary outcome of fragmentation"
+    },
+    {
+      "id": "palestinian_state_viability_alternative_models",
+      "question": "Would non-contiguous federalist or cantonized Palestinian state structures constitute escape from the snare, or would they perpetuate fragmentation logic under different framing?",
+      "resolution_mechanism": "Comparative analysis of non-contiguous state models (Cyprus, Bosnia, Lebanon); assessment of whether cantonization reduces or redistributes suppression; evaluation of whether mobility and economic barriers would persist under federal arrangement",
+      "impact": "If alternatives constitute genuine escape: snare may be bounded (civilizational-scale exit exists even if biographical-scale does not). If alternatives perpetuate fragmentation logic: snare is more robust (exit paths are mirages). This affects long-term classification stability.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether alternative state models escape fragmentation constraint"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Palestinian territorial fragmentation represents a structural constraint that divides Palestinian-controlled territory into non-contiguous enclaves (West Bank Areas A, B, C; Gaza Strip; East Jerusalem) with restricted inter-zone mobility and unified governance. This fragmentation operates simultaneously as a security control mechanism (Israeli perspective), a resource/land extraction system (Palestinian victim perspective), a governance coordination challenge (Palestinian Authority perspective), and an international legal violation (global norms perspective). The constraint exhibits characteristics of pure extraction (snare) from the Palestinian population's structural position, mixed coordination-extraction (tangled rope) from the Palestinian Authority's administrative position, coordination benefit (rope) from the Israeli security and settlement frameworks, and performative violation (piton) from the international legal system. The theater ratio (0.58) reflects that extensive verbal commitments to Palestinian territorial sovereignty exist in UN resolutions, peace agreements, and international law, yet these norms lack enforcement mechanisms and do not constrain the actual fragmentation system. The extractiveness (0.68) indicates high asymmetric benefit to Israeli institutional actors and high asymmetric cost to Palestinian population and state-viability, with suppression (0.75) reflecting severe mobility restrictions, administrative barriers, and permit-dependent access.",
+    "key_agents": [
+      "Palestinian Population: Primary victim (powerless/trapped) \u2014 subject to territorial fragmentation, mobility restrictions, permit systems, and economic constraints; cannot exit or reform the system",
+      "Palestinian State Viability: Institutional victim (powerless/trapped) \u2014 capacity for sovereign statehood undermined by non-contiguous territory; cannot achieve state prerequisites within constraint",
+      "Israeli Settlement Expansion: Primary beneficiary (institutional/arbitrage) \u2014 gains land availability, security perimeter, and reduced Palestinian territorial control; benefits from fragmentation as enabling mechanism",
+      "Israeli Security Framework: Secondary beneficiary (institutional/arbitrage) \u2014 uses fragmentation for checkpoint networks, graduated security zones, and early-warning infrastructure; experiences fragmentation as coordination mechanism",
+      "Palestinian Authority: Intermediate actor (organized/constrained) \u2014 depends on fragmented territorial jurisdictions for governance capacity; coordinates services within constraint; cannot unilaterally exit without abandoning constituencies",
+      "International Legal Norms: Institutional observer (institutional/constrained) \u2014 nominally prohibits fragmentation but lacks enforcement capacity; maintains symbolic authority while functionally degraded",
+      "Analytical Observer: External position (analytical/analytical) \u2014 risks naturalizing contingent fragmentation as inevitable geographic/political fact rather than maintained institutional system"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and increasing. The fragmentation system creates asymmetric benefits (settlement expansion, security perimeter, Israeli state expansion) and asymmetric costs (Palestinian land loss, mobility restrictions, economic constraint). The trajectory from 0.42 to 0.68 over 30 years reflects the cumulative extraction through settlement expansion and administrative densification \u2014 each additional layer of fragmentation (checkpoint expansion, Area C restrictions, settlement growth) increases the extractiveness rate. Suppression (0.75): High. The constraint operates through multiple suppression mechanisms: physical barriers (walls, checkpoints), administrative systems (permit regimes, residency restrictions), military control (Area C), and institutional dependence (Palestinian Authority's governance authority in fragmented zones). Agents cannot exit or reform the system without external intervention. Theater ratio (0.58): Moderate-high. International law and peace agreements create extensive performative framework (Oslo Accords, UN resolutions, Two-State Solution rhetoric) that symbolically commits to Palestinian territorial reunification, yet these norms are systematically violated and not enforced. The gap between normative commitment and structural reality creates theater \u2014 the international system performs commitment to Palestinian sovereignty while the actual constraint persists. The trajectory from 0.35 to 0.58 reflects increasing theater as the gap between Two-State Solution rhetoric and actual fragmentation deepens.",
+    "directionality_logic": "Directionality is determined by structural position within the fragmentation system. Palestinian population and Palestinian state viability face maximum directionality (d \u2248 0.95, trapped powerless victims) \u2014 they are targets of extraction with no exit options and cannot mobilize. Palestinian Authority faces moderate directionality (d \u2248 0.55, organized constrained) \u2014 they coordinate within fragmented zones but depend on the fragmentation system for their administrative legitimacy. Israeli security framework and settlement expansion face low directionality (d \u2248 0.10\u20130.20, institutional arbitrage) \u2014 they are beneficiaries with exit options (security could be achieved through other mechanisms, settlements could be located elsewhere) but benefit from fragmentation-enabled coordination. International norms face high directionality but constrained power (d \u2248 0.80, institutional constrained) \u2014 they are formally opposed to the constraint but lack enforcement capacity. The perspectival gap between powerless trapped Palestinians (maximum extraction experienced) and institutional arbitrage Israelis (coordination benefit experienced) is structural and unbridgeable within the constraint system.",
+    "perspectival_gap": "This constraint demonstrates maximal perspectival divergence across positions. The Palestinian population perceives pure extraction (snare) \u2014 the system extracts resources, land, and mobility with no coordination benefit. The Palestinian Authority perceives mixed coordination-extraction (tangled rope) \u2014 fragmentation creates administrative jurisdictions they govern but also constrains their capacity. The Israeli security framework perceives coordination (rope) \u2014 fragmentation creates security architecture that solves legitimate security-control problems. The Israeli settlement expansion perceives coordination (rope) \u2014 fragmentation creates land availability and settlement placement optimization. International norms perceive themselves as prohibitive (mountain-like, universal law) but function as piton \u2014 performative but unenforced. The analytical observer risks the false summit (mountain) by naturalizing fragmentation as immutable fact. These perspectives cannot be reconciled within the constraint's frame \u2014 no shared understanding exists of what fragmentation 'is' or 'does.' The classification must track this perspectival incompatibility.",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION RESOLUTION: This constraint avoids mandatrophy confusion by distinguishing between (1) the beneficiary's experience (rope/coordination), (2) the victim's experience (snare/pure extraction), and (3) the naturalized false summit (mountain/law of nature). The snare classification from the victim perspective is robust: high extractiveness, high suppression, minimal coordination function experienced by victims, and structural dependence on the constraint for both Israeli and Palestinian institutional actors. The tangled rope perspective from the Palestinian Authority is analytically distinct \u2014 they are simultaneously victims (constrained by fragmentation) and coordinators (governing fragmented zones). The rope perspectives from Israeli actors show that fragmentation provides genuine coordination value (security perimeters, settlement placement) alongside extraction. The false summit (mountain) is correctly identified as false because fragmentation is contingently maintained through policy and institutions, not naturally inevitable. The piton classification of international norms is correct \u2014 extensive symbolic commitment without enforcement creates performative rather than functional violation. No mislabeling of coordination as extraction occurs; all types follow legitimately from structural analysis."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "palestinian_economic_dependence",
+      "israeli_settlement_expansion_logic",
+      "international_norm_enforcement_failure"
+    ],
+    "dual_formulation_note": "Palestinian territorial fragmentation may decompose into separate constraint stories: (1) security-mobility fragmentation (checkpoint systems, Area C control) with \u03b5 \u2248 0.55, primarily suppression-based; (2) economic-land fragmentation (settlement expansion, Area C resource control) with \u03b5 \u2248 0.72, primarily extraction-based; (3) administrative fragmentation (PA jurisdictional dependence) with \u03b5 \u2248 0.45, mixed coordination-extraction. These share structural mechanisms but have different temporal trajectories and beneficiary groups. The unified story presented here treats fragmentation as a single integrated constraint; decomposition would enable more precise \u03b5 values per mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.75
+    }
+  ]
+}

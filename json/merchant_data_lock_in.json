@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "merchant_data_lock_in",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mdli"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Merchant Data Lock-In in Payment Processing Ecosystems",
+    "topic_domain": "financial_services/digital_commerce",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "payment_processors",
+      "platform_operators"
+    ],
+    "victims": [
+      "small_merchants",
+      "competitive_innovation",
+      "market_contestability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Small Merchant",
+      "comment": "PERSPECTIVE 1: SMALL MERCHANT (SNARE) \u2014 Trapped by data portability barriers and switching costs. Transaction history, customer relationships, inventory records, and reconciliation data are held hostage by platform lock-in. Exit requires abandoning accumulated customer data and operational continuity. No effective alternatives \u2014 cannot migrate without accepting substantial friction and business disruption. Maximum extraction from agents with zero bargaining power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Mid-Market Merchant",
+      "comment": "PERSPECTIVE 2: MID-MARKET MERCHANT (TANGLED ROPE) \u2014 Constrained but not trapped. Can migrate data at significant cost (IT integration, staff retraining, operational disruption). Benefits from coordination features: payment reconciliation, fraud detection, inventory management. Extraction is asymmetric \u2014 benefits are real but gains from lock-in accrue to platform. Exit is possible but expensive."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Payment Processor",
+      "comment": "PERSPECTIVE 3: PAYMENT PROCESSOR (ROPE) \u2014 Net beneficiary. Extracts value from merchant switching costs and data accumulation. But must maintain genuine coordination functions (settlement, fraud prevention, customer service) to retain merchants. Experiences the constraint as coordination \u2014 solving merchant-acquirer problems while capturing asymmetric value. Can arbitrage merchant data across customers."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Platform Ecosystem Builder",
+      "comment": "PERSPECTIVE 4: PLATFORM ECOSYSTEM BUILDER (TANGLED ROPE) \u2014 Powerful agents (Shopify, Square, Toast) coordinate merchant ecosystems (payment, inventory, analytics, loyalty). Generate genuine value through integrated tools. Also lock merchants in through data and API dependencies. Can migrate but face substantial ecosystem friction. Extract through both coordination (ecosystem services) and lock-in (switching costs). Powerful exit options keep extraction below snare threshold."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Banking Infrastructure",
+      "comment": "PERSPECTIVE 5: LEGACY BANKING INFRASTRUCTURE (PITON) \u2014 Incumbent payment systems (ACH, wire transfer, traditional acquiring) offer minimal lock-in value. Merchants use them due to regulatory requirements and institutional inertia, not because alternatives have failed. The theater ratio is high \u2014 compliance and reconciliation processes are largely performative, maintained through regulation rather than function. The constraint persists through institutional path-dependence."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Finance Movement",
+      "comment": "PERSPECTIVE 6: OPEN FINANCE MOVEMENT (SCAFFOLD) \u2014 Organized agents (regulators, open-source projects, interoperability standards) are building data portability mechanisms with sunset logic. PSD2, Open Banking, FHIR-like standards in commerce, and open-source payment APIs reduce lock-in by enabling merchant data migration. Suppression is declining as regulation mandates data access. Extraction mechanism loses force as portability becomes standard."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (FALSE MOUNTAIN) \u2014 From the civilizational level, data lock-in can appear to be an inevitable feature of digital commerce ('networks create lock-in naturally'). But the structural data contradicts this: lock-in is contingent on regulatory choices (data portability standards vs restrictions), API architecture decisions (proprietary vs interoperable), and market concentration. The mountain classification is a false summit \u2014 a naturalization of what is actually institutional lock-in."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "data_portability_technical_feasibility",
+      "question": "Can merchant transaction data be ported between payment systems without loss of integrity or analytical capacity?",
+      "resolution_mechanism": "Technical audit of data schema portability; testing merchant migration workflows with full data transfer; comparison of analytics capabilities pre- and post-migration",
+      "impact": "If feasible: lock-in is primarily regulatory/market choice (suppression < 0.50). If infeasible: lock-in has genuine technical foundations (suppression justifies snare classification).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Technical feasibility of merchant data portability"
+    },
+    {
+      "id": "switching_cost_ratio_to_revenue",
+      "question": "What proportion of small merchant revenue is consumed by switching costs to alternative payment platforms?",
+      "resolution_mechanism": "Survey of actual migration costs (integration labor, downtime, staff retraining, customer communication); comparison to merchant gross profit margins",
+      "impact": "If > 20% of annual profit: trapped classification appropriate. If < 5%: constrained classification more accurate. Affects whether snare or tangled_rope is structural reality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ratio of switching costs to merchant profitability"
+    },
+    {
+      "id": "data_lock_in_vs_service_lock_in_disentanglement",
+      "question": "Is merchant lock-in driven primarily by inability to port data, or by inability to replicate integrated services (fraud detection, inventory management, reconciliation)?",
+      "resolution_mechanism": "Controlled comparison: merchants with full data portability but service integration friction vs merchants with service portability but data restrictions. Measure switching rates by friction type.",
+      "impact": "If data-driven: open-source data standards and APIs solve the problem. If service-driven: data portability alone does not reduce lock-in; ecosystem maturity matters more.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Decomposition of data lock-in vs integrated service lock-in"
+    },
+    {
+      "id": "platform_consolidation_feedback_loop",
+      "question": "Does merchant lock-in concentration reinforce platform market power, creating a feedback loop where dominant platforms can raise extraction without losing volume?",
+      "resolution_mechanism": "Time-series analysis of payment processor fee increases correlated with merchant switching rates and data portability restrictions; comparison of competitive markets with/without portability mandates",
+      "impact": "If confirmed: lock-in is structurally extractive (snare). If refuted: platforms can extract only as much as competitive alternatives permit (constrains to tangled_rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether lock-in reinforces extractive market power"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Merchant data lock-in in payment processing creates structural extraction through the concentration of transactional, customer, and operational data in proprietary platforms. Small merchants (retail, restaurants, e-commerce) accumulate years of transaction history, customer relationship data, and reconciliation records within payment processor ecosystems. Switching to alternative processors requires abandoning this accumulated data or paying substantial integration costs to migrate. Payment processors and platform operators (Stripe, Square, Shopify, PayPal) benefit from lock-in through sustained fee extraction, reduced price competition, and ability to cross-sell ancillary services. The constraint exhibits all six DR types depending on merchant size and market position. For powerless small merchants, it appears as a snare \u2014 exit is economically impossible. For mid-market merchants, it is tangled rope \u2014 genuine coordination services bundled with extraction. For payment processors, it is rope \u2014 they genuinely solve merchant problems (fraud, settlement, reconciliation) while capturing asymmetric value. For the open finance movement, it is a temporary problem with a sunset \u2014 data portability regulations and interoperability standards are reducing lock-in through policy intervention. For legacy banking infrastructure, it is a piton \u2014 regulatory requirements maintain the connection despite functional obsolescence. The analytical observer risks treating data lock-in as an inevitable feature of digital platforms (mountain), naturalizing what is actually a contingent regulatory and architectural choice.",
+    "key_agents": [
+      "Small Merchants: Primary victims (powerless/trapped) \u2014 accumulate data within proprietary ecosystems; face switching costs exceeding available alternatives",
+      "Mid-Market Merchants: Secondary victims (moderate/constrained) \u2014 can migrate at significant operational cost; benefit from integrated payment services",
+      "Payment Processors: Primary beneficiaries (institutional/arbitrage) \u2014 extract value through sustained customer lock-in and data accumulation; maintain genuine coordination functions",
+      "Platform Ecosystem Builders: Mixed (powerful/mobile) \u2014 coordinate merchant ecosystems while locking in through integrated services; can migrate but face ecosystem friction",
+      "Legacy Banking Infrastructure: Institutional inertia (institutional/arbitrage) \u2014 maintained through regulation despite low functional contribution",
+      "Open Finance Movement: Organized agents (organized/constrained) \u2014 regulators and standards bodies building data portability mechanisms with sunset logic",
+      "Analytical Observer: Risk of naturalizing contingent arrangements (analytical/analytical) \u2014 treats data lock-in as inevitable feature of platforms"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Payment processors capture sustained extraction through data lock-in, fee structure asymmetry, and ability to deny merchant exit. Trajectory shows growth from 0.35 to 0.58 over the interval as platforms have consolidated market share and increased data dependencies. Not as severe as pure snare (0.72+) because some merchants can exit at a cost, and integrated services provide genuine coordination benefits. Suppression (0.65): High. Barriers to merchant exit include accumulated customer data inaccessibility, incompatible data schemas, lack of open-source alternatives, technical integration friction, switching downtime risk, and career risk (small merchants lack IT expertise for platform migration). Regulation mandating data portability (PSD2, Open Banking) is beginning to reduce suppression, but merchant awareness and technical capacity remain barriers. Theater ratio (0.48): Moderate. Data lock-in is structurally real \u2014 it creates genuine switching friction \u2014 but some performance is theatrical: marketing narratives of proprietary 'intelligence' and 'security' obscure relatively standard payment processing. As interoperability standards mature, some of the claimed uniqueness becomes increasingly theatrical.",
+    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon (data lock-in) produces divergent classifications across different observer positions. A powerless small merchant sees snare because exit is impossible and extraction is maximal. A powerful platform builder sees tangled rope because they coordinate valuable services while also locking merchants in through data dependencies \u2014 and they can exit this particular constraint if competitive pressure increases. A regulatory agent sees scaffold \u2014 the constraint is temporary because policy interventions (data portability standards) are building exit pathways. The gap reveals that lock-in's character (snare vs tangled rope vs scaffold) is contingent on market structure (concentration), regulatory environment (data portability mandates), and technological maturity (open-source alternatives), not inherent to payment processing.",
+    "directionality_logic": "Directionality (d) is derived from each agent's structural position: power level, exit capacity, and relationship to the extraction flow. Small merchants are trapped (high d \u2192 high f(d) \u2192 high \u03c7 experienced extraction) and are victims of the constraint (concentrated extraction on powerless agents). Payment processors are beneficiaries (low d \u2192 low f(d) \u2192 negative \u03c7, i.e., they receive extraction). Mid-market merchants are constrained (moderate d), experiencing moderate extraction because some exit capacity exists. Platform builders are powerful and mobile (lower d despite being partial beneficiaries), which keeps their experienced extraction below snare threshold. The analytical observer is positioned outside the extraction flow (d \u2248 0.72 canonical for analytical) and observes the structure rather than experiencing extraction directly.",
+    "mandatrophy_analysis": "The mandatrophy resolution in this constraint requires distinguishing genuine coordination (payment processing, fraud detection, customer service) from extractive lock-in (data portability barriers, switching costs, vendor lock). The tangled_rope classification captures this: payment processors genuinely solve merchant coordination problems (settlement, reconciliation, fraud prevention are valuable services) while also capturing extraction through data lock-in. The extracted value exists alongside real coordination value. The snare classification from the small merchant perspective reveals that for agents with zero bargaining power, the coordination value becomes irrelevant \u2014 they experience only the extraction. The scaffold classification from the regulatory perspective reveals that the extraction mechanism (data lock-in) is policy-contingent and has a sunset: as data portability regulations mandate open APIs and data transfer rights, the lock-in mechanism degrades. The false summit classification at the analytical level identifies that treating data lock-in as inevitable ('networks create lock-in') naturalizes a contingent regulatory choice. The mandatrophy resolves by acknowledging that all six classifications are legitimate perspectival readings \u2014 the constraint genuinely is tangled rope, snare, rope, scaffold, piton, and false mountain depending on observer position and structural relationship."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "payment_processing_fee_extraction",
+      "api_dependency_lock",
+      "data_portability_standards"
+    ],
+    "dual_formulation_note": "Merchant data lock-in is downstream of platform ecosystem consolidation but represents a distinct structural constraint. The upstream consolidation constraint has its own dynamics; this story focuses on the data lock-in mechanism specifically. Network linkage to data portability standards reflects that regulatory interventions directly reduce this constraint's extraction mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.42
+    }
+  ]
+}

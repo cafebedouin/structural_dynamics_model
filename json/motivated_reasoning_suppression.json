@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "motivated_reasoning_suppression",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mrs"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Motivated Reasoning Suppression of Uncomfortable Truths",
+    "topic_domain": "cognitive/epistemic",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "identity_preserving_narratives",
+      "comfortable_existing_beliefs"
+    ],
+    "victims": [
+      "epistemic_accuracy",
+      "reality_tracking_agents"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "universal",
+      "label": "The Reality-Tracking Agent",
+      "comment": "PERSPECTIVE 1: REALITY-TRACKING AGENT (SNARE) \u2014 An agent whose identity is constituted through commitment to a belief system, ideology, or self-concept faces extraction through motivated reasoning that suppresses contradictory evidence. The binding is cognitive rather than external: the agent is structurally mobile (could encounter new information, could change views) but identity-locked into a frame that makes seeing the suppressed truth unthinkable. The snare extracts through forced internal conflict \u2014 facing evidence that would invalidate identity costs psychological disruption and group belonging simultaneously. No external barrier prevents exit; the internal frame makes exit unimaginable."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Institutional Narrative Keeper",
+      "comment": "PERSPECTIVE 2: INSTITUTIONAL NARRATIVE KEEPER (ROPE) \u2014 Organizations, movements, and identity communities benefit from motivated reasoning that suppresses inconvenient truths. The constraint functions as coordination: members coordinate around shared narratives, establishing group boundaries and shared meaning. From the beneficiary's perspective, the suppression is protective \u2014 it keeps the community cohesive and shields members from demoralizing facts. The institutional actor has high mobility (can update narratives, can exit the suppression mechanism) but experiences it as essential coordination. Effective extraction is low because the beneficiary perceives genuine coordination value."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Caught-In-The-Middle Member",
+      "comment": "PERSPECTIVE 3: CAUGHT-IN-THE-MIDDLE MEMBER (TANGLED ROPE) \u2014 An agent at moderate power who benefits from group membership (access to narratives, social belonging, epistemic authority within the group) but also bears the cost of suppression (internal cognitive dissonance when encountering suppressed evidence, career or social penalties for raising contradictions, reduced reality-tracking capacity). This agent experiences the constraint as both coordination and extraction simultaneously. Exit is costly (losing group membership, reputational damage) but possible. Suppression is maintained through mixed mechanisms: genuine group cohesion AND asymmetric extraction of cognitive conformity."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Meta-Cognitive Observer",
+      "comment": "PERSPECTIVE 4: META-COGNITIVE OBSERVER (PITON) \u2014 An agent capable of recognizing their own motivated reasoning and identity locks while remaining unable to fully escape them. This represents institutional inertia at the cognitive level: the agent can name the suppression mechanism (theater_ratio = 0.65 indicates performative cognition \u2014 the agent performs dispassionate rationality while suppressing awareness of their own suppression). The analytical perspective instantiates the oracle gap (Theorem 4): meta-cognitive awareness does not equal freedom from the frame. The piton classification reflects that the analytical observer's own instruments cannot detect the structure preventing them from seeing. This perspective is itself identity-locked, demonstrating that the framework's own position is captured."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Civilizational-Scale Natural Law View",
+      "comment": "PERSPECTIVE 5: CIVILIZATIONAL NATURAL LAW (MOUNTAIN) \u2014 From a sufficiently abstract position, motivated reasoning may appear as an irreducible feature of bounded rationality: agents with limited cognitive resources inevitably filter information through identity-protective heuristics. The suppression of uncomfortable truths becomes a law of cognition analogous to physical constraints. However, this perspective risks naturalizing what is structurally a snare: confusing the universal presence of cognitive biases (an immutable feature) with the particular institutional amplification of those biases (a contingent extractive mechanism). The mountain classification is almost certainly false \u2014 a false summit that mistakes the invariant human capacity for motivated reasoning with the structural weaponization of that capacity through institutional suppression."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Truth-Seeking Institution",
+      "comment": "PERSPECTIVE 6: TRUTH-SEEKING INSTITUTION (SCAFFOLD) \u2014 Science, journalism, fact-checking organizations, and reality-testing communities are organized agents experiencing motivated reasoning suppression as a temporary challenge with a sunset clause. These institutions are explicitly designed to counteract motivated reasoning through adversarial testing, publication bias correction, and incentive alignment with accuracy. From this perspective, the suppression mechanism is not inevitable \u2014 it can be engineered away through institutional design (pre-registration, open data, replication incentives, blind review). The scaffold classification reflects that the constraint persists despite clear exit pathways and dedicated organizational effort to build alternatives. Theater ratio is moderate because institutions publicly perform commitment to accuracy while suppression mechanics persist beneath the performative layer."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "identity_fusion_mechanism",
+      "question": "Is the suppression mechanism primarily identity-fusion (the agent's self-concept is constituted through the belief) or primarily group-conformity (the agent suppresses truth to maintain group belonging)?",
+      "resolution_mechanism": "Longitudinal observation of isolated vs socially-embedded agents holding the same belief; comparison of suppression intensity when group pressure is removed vs when identity stakes are maximized",
+      "impact": "If identity-fusion dominant: classification remains snare with identity_locked exit. If group-conformity dominant: classification may shift toward tangled_rope where agent can exit by changing social context. If both equally: snare classification confirmed but with dual binding mechanisms.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is identity-fusion or group-conformity driven"
+    },
+    {
+      "id": "extractiveness_attribution",
+      "question": "Is the measured extractiveness (0.58) a property of the motivated reasoning mechanism itself or a property of institutional architecture that weaponizes motivated reasoning?",
+      "resolution_mechanism": "Comparison of motivated reasoning suppression in contexts with different institutional incentive structures; testing whether the same cognitive bias produces extraction in non-institutional contexts vs institutional ones",
+      "impact": "If mechanism-intrinsic: suppression is unavoidable and close to natural law (mountain). If architecture-dependent: suppression is contingent and engineerable (scaffold). Current taxonomy assumes architecture-dependent \u2014 the high extractiveness reflects institutional amplification, not cognitive inevitability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether extractiveness is intrinsic to motivated reasoning or amplified by institutional context"
+    },
+    {
+      "id": "suppression_internalization_depth",
+      "question": "At what point does externally-imposed narrative control become internalized self-suppression? Can the suppression persist after removal of institutional incentives?",
+      "resolution_mechanism": "Post-exit behavioral tracking: measurement of suppression intensity and identity-lock persistence in agents who have left identity-constituting communities; comparison with agents still embedded",
+      "impact": "If suppression is primarily internalized: exit from institutional context does not resolve the constraint. If primarily externally-maintained: exit enables rapid recovery of reality-tracking capacity. Current assumption: mixed, with internalization building over biographical timescales.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Internalization depth of identity-protective suppression mechanisms"
+    },
+    {
+      "id": "collective_action_boundary",
+      "question": "Can powerless agents (identity_locked individuals) achieve collective action to resist motivated reasoning suppression? What threshold of mutual recognition is required?",
+      "resolution_mechanism": "Historical analysis of movements challenging established narratives; identification of conditions under which identity-locked agents organize despite high intra-group suppression",
+      "impact": "If collective action is possible: dynamic coalition extension could reclassify powerless agents to organized, shifting snare toward tangled_rope from multiple perspectives. If collective action is impossible: snare classification is stable and institutionally enforced.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether identity-locked agents can achieve collective resistance to suppression"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Motivated reasoning suppression represents a structural constraint on epistemic accuracy that operates at multiple scales simultaneously: individual cognition, group dynamics, institutional narrative maintenance, and civilizational knowledge production. The constraint extracts through a mechanism of identity-protective suppression: agents suppress awareness of truths that would invalidate core identity commitments or group membership, bearing costs in reality-tracking capacity, internal cognitive dissonance, and reduced collective intelligence. The extractiveness has increased over the measured interval (0.35 \u2192 0.58) as institutional amplification of motivated reasoning has intensified through information architecture that creates filter bubbles, algorithmic content curation, and identity-polarized media ecosystems. The theater ratio (0.65) reflects that significant institutional and cognitive effort is devoted to performing objectivity and rationality while suppression mechanisms operate beneath the performative layer. This constraint exhibits all six DR types from different structural positions, making it diagnostic of how indexical classification captures different experienced realities of the same phenomenon.",
+    "key_agents": [
+      "Reality-Tracking Agents: Primary victims (powerless/identity_locked) \u2014 face suppression through identity-protective biases that make confronting uncomfortable truths psychologically costly",
+      "Identity-Preserving Narratives: Primary beneficiary (institutional/arbitrage) \u2014 organizations, movements, ideologies benefit from suppression that maintains group cohesion and narrative integrity",
+      "Institutional Narrative Keepers: Secondary beneficiary (institutional/arbitrage) \u2014 organizations maintain suppression mechanisms through incentive structures that reward narrative conformity",
+      "Caught-In-The-Middle Members: Secondary victim (moderate/constrained) \u2014 experience simultaneous coordination (group belonging) and extraction (cognitive conformity costs)",
+      "Meta-Cognitive Observers: Institutional actor (analytical/analytical) \u2014 capable of naming suppression mechanisms but unable to escape them, instantiating the oracle gap",
+      "Truth-Seeking Institutions: Organized agents (organized/constrained) \u2014 science, journalism, reality-testing communities experience suppression as engineerable rather than inevitable"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate, increasing over interval. The constraint extracts through cognitive conformity costs and reality-tracking reduction. The trajectory shows institutional amplification: motivated reasoning is a universal feature of bounded cognition, but institutional architectures (social media algorithmic curation, identity-polarized media, incentive structures rewarding narrative loyalty) have weaponized it. Initial extractiveness (0.35) reflects baseline motivated reasoning; final extractiveness (0.58) reflects institutional amplification. Suppression (0.72): High. Barriers to escaping the suppression include identity fusion (exiting requires becoming a different person), group membership costs (raising contradictions threatens belonging), institutional punishment (professional penalties for challenging narratives), and epistemic isolation (suppression mechanisms prevent exposure to unsuppressed information). These barriers are cognitive/social rather than purely material, enabling identity_locked classification. Theater ratio (0.65): Moderate-high and increasing. Institutional and individual performance of objectivity is widespread while suppression mechanics operate beneath the surface. Agents engage in performative rationality while suppressing awareness of their suppression \u2014 the performance is partly sincere (genuine commitment to reasoning) and partly theatrical (unconscious suppression of suppression awareness).",
+    "perspectival_gap": "Maximum perspectival divergence occurs between snare (reality-tracking agent) and rope (institutional narrative keeper) perspectives. The agent bearing extraction (powerless/trapped via identity_lock) sees a snare; the agent benefiting from extraction (institutional/arbitrage) sees a rope with genuine coordination function. This gap reveals that the constraint's primary mechanism is identity-protective suppression: what the beneficiary experiences as group cohesion, the victim experiences as forced cognitive conformity. The scaffold perspective introduces a crucial analytical move \u2014 it reframes suppression as engineerable rather than inevitable, identifying institutional design solutions (pre-registration, open data, adversarial testing) that could create exits for identity-locked agents. The piton perspective reveals that meta-cognitive awareness of suppression does not enable escape \u2014 the analytical observer can name the mechanism while remaining bound by it, instantiating the oracle gap (Theorem 4). The false mountain perspective (civilizational natural law) is the most dangerous: it naturalizes contingent institutional suppression as inherent to cognition, collapsing the distinctions between universal human bias and institutional weaponization of that bias. The perspectival structure itself becomes diagnostic: when powerless agents see snare and institutions see rope from identical base properties, the gap reveals that the 'coordination' is actually extraction dressed in coordination language.",
+    "directionality_logic": "Directionality derives from structural position relative to the extraction flow. Reality-tracking agents are positioned as victims \u2014 they bear suppression costs while institutions benefit from narrative control. Their identity_locked exit (unable to escape without becoming different persons) yields high d (\u22480.89), amplifying experienced extraction through the sigmoid f(d). Institutional narrative keepers are positioned as beneficiaries with arbitrage exits \u2014 they can update narratives or abandon suppression strategies if needed, yielding low d (\u22480.15), producing negative or low \u03c7 (extraction flows toward them). The caught-in-the-middle member experiences asymmetric position: structurally mobile (could leave the group) but socially constrained by belonging needs. Their d (\u22480.55) reflects mixed position. The engine applies scope multiplier \u03c3(S): universal scope (\u03c3=1.0) means no amplification; local scope (\u03c3=0.8) dampens extraction detection. Motivated reasoning suppression is a universal phenomenon (all scales show similar mechanisms), so \u03c3(universal) = 1.0 is appropriate. The combination \u03b5=0.58, f(d=0.89)\u22481.28, \u03c3(universal)=1.0 yields \u03c7\u22480.74 for the powerless agent \u2014 high effective extraction consistent with snare classification.",
+    "mandatrophy_analysis": "PARTIAL RESOLUTION: The mandatrophy is partially resolved through perspectival decomposition but reveals deep structural ambiguity. The snare classification (from powerless agent perspective) is correct for agents whose identity is constituted through suppressed beliefs. The rope classification (from beneficiary perspective) is correct for institutions whose coordination function is genuine, even if extraction is embedded. The tangled rope classification (from moderate perspective) correctly identifies mixed coordination-extraction. The scaffold classification (from organized perspective) is correct IF institutional design solutions actually work \u2014 if they don't, scaffold becomes piton (performative commitment to accuracy without functional improvement). The piton classification (from meta-cognitive observer) reveals the oracle gap paradox: awareness of suppression does not enable escape. The false mountain classification (civilizational view) is the key diagnostic failure: if one collapses the institutional amplification with the baseline human capacity for motivated reasoning, the constraint appears inevitable rather than engineerable. The mandatrophy is resolved by maintaining the perspectival structure: the constraint IS all six types simultaneously, depending on agent position and structural capacity to exit. The dominant classification from the primary victim's perspective is snare. The empirical test: does removing institutional suppression architecture (algorithmic curation, identity-polarized media, incentive structures) measurably reduce suppression? If yes, the constraint is engineerable and scaffold is correct. If no, suppression persists at baseline and mountain is closer to correct. Current corpus assumption: suppression is partially engineerable (scaffold is real but incomplete), making tangled rope the most accurate ground-truth classification, with snare and rope as legitimate perspectival specializations."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "narrative_capture_institutional",
+      "epistemic_closure_group_dynamics",
+      "belief_perseverance_confirmation_bias"
+    ],
+    "dual_formulation_note": "Motivated reasoning suppression decomposes into three structurally distinct constraints: (1) individual cognitive bias (baseline motivated reasoning, \u03b5\u22480.20, rope-like) (2) group-amplified suppression (intra-group conformity enforcement, \u03b5\u22480.50, tangled_rope) (3) institutional weaponization (algorithmic curation, identity-polarized media, \u03b5\u22480.65, snare). This story models the institutional amplification. The upstream story (individual bias) is lower-extraction; the downstream stories (specific institutional implementations of suppression) are higher-extraction and more tractable to engineering solutions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.72
+    }
+  ]
+}

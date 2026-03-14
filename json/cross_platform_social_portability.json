@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "cross_platform_social_portability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "csport"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Cross-Platform Social Portability Lock-In",
+    "topic_domain": "digital_infrastructure/social_media",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_platforms"
+    ],
+    "victims": [
+      "user_base",
+      "alternative_platforms",
+      "social_capital_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Network-Trapped User",
+      "comment": "PERSPECTIVE 1: NETWORK-TRAPPED USER (SNARE) \u2014 User cannot port follower relationships, conversation history, or social graph to alternative platforms. Exit imposes total loss of accumulated social capital. Powerless to change platform economics. Bears full extraction cost with no coordination benefit \u2014 the platform's network effects are a pure constraint on this agent's mobility."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Creator with Platform Dependence",
+      "comment": "PERSPECTIVE 2: CREATOR WITH PLATFORM DEPENDENCE (TANGLED ROPE) \u2014 Content creators benefit from distribution, analytics, and monetization infrastructure while simultaneously bearing extraction through algorithmic opacity, revenue share asymmetry, and content control. High cost to exit (audience loss, income disruption) but not total (can migrate followers gradually through multi-platform presence). Genuine coordination (the platform aggregates distribution) alongside asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Platform",
+      "comment": "PERSPECTIVE 3: INCUMBENT PLATFORM (ROPE) \u2014 Experiences network lock-in as a coordination mechanism: the platform solves the genuine problem of aggregating attention and enabling connection. The platform benefits from user immobility but genuinely provides coordination value. Net beneficiary with arbitrage options \u2014 can migrate to adjacent markets, capture new user segments, or leverage existing graph."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Alternative Platform Provider",
+      "comment": "PERSPECTIVE 4: ALTERNATIVE PLATFORM PROVIDER (TANGLED ROPE) \u2014 Structurally locked out: cannot access the incumbent's social graph to offer portability as a competitive advantage. Must rebuild user bases from zero. Simultaneously benefits from interoperability standards and open protocols where they exist (ActivityPub, open graph formats), but coordination benefit is weak compared to extraction burden. High fixed costs for infrastructure they cannot differentiate with."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Digital Rights Coalition",
+      "comment": "PERSPECTIVE 5: DIGITAL RIGHTS COALITION (SCAFFOLD) \u2014 Regulatory and advocacy organizations (EU Digital Markets Act, data portability directives, interoperability requirements) are implementing sunset logic: forced data portability, API access, and graph export create alternative paths for mobility. Low effective extraction because organized agents see real agency and a policy-driven exit path. Theater is moderate \u2014 compliance appears performative (dark exports, minimal usability) until interoperability standards mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Network Effect Narrative",
+      "comment": "PERSPECTIVE 6: NETWORK EFFECT NARRATIVE (PITON) \u2014 The 'network effects make portability impossible' framing has become institutional inertia. Technical constraints (API compatibility, social graph ownership, identity federation) are presented as natural laws, but many are policy choices. Theater ratio is moderate because genuine technical coordination barriers exist alongside contingent architectural decisions. The narrative persists despite degrading technical basis \u2014 containerized microservices and federated protocols prove partial portability is technically feasible, but the story of inevitability persists through institutional inertia."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FALSE SUMMIT VIEW (MOUNTAIN) \u2014 From a civilizational scale, network effects create immutable lock-in: larger networks always have economic advantage, users rationally cluster on dominant platforms, and this creates an inevitable winner-take-most dynamic. This perspective risks naturalizing what is actually a contingent architectural and policy choice. The engine's false summit detector will identify this as misclassification \u2014 the 'immutable' network effect rests on technical decisions (proprietary APIs, opaque graph ownership, identity siloing) that are policy-reversible."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technical_feasibility_portability",
+      "question": "What fraction of social graph portability constraints are genuinely technical vs. policy/architectural choices?",
+      "resolution_mechanism": "Comparative analysis of portability across platforms with different API openness levels; assessment of interoperability success in email, messaging (Signal/Matrix), and federated social (Mastodon/ActivityPub) ecosystems",
+      "impact": "If mostly technical: constraint is closer to Mountain (immutable network physics). If mostly policy: constraint is Snare/Tangled Rope (policy-reversible extraction). Current evidence suggests 30-40% technical, 60-70% policy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ratio of technical to policy-driven portability barriers"
+    },
+    {
+      "id": "user_switching_cost_distribution",
+      "question": "How are switching costs distributed: primarily loss of social capital (network effect) or loss of content, identity, interaction history, and monetization?",
+      "resolution_mechanism": "User surveys on switching barriers; comparative cost analysis across platforms; measurement of re-activation friction after portability options are available",
+      "impact": "If primarily social capital: network effects are the binding mechanism (constraint is immutable given network dynamics). If distributed across multiple costs: portability of one dimension (graph, identity, content) reduces total switching cost significantly (constraint becomes negotiable).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distribution of user switching costs across network effect, content, identity, and monetization dimensions"
+    },
+    {
+      "id": "regulatory_portability_effectiveness",
+      "question": "Do mandated data export and API access requirements (EU GDPR, DMA) actually reduce switching costs or merely provide performative compliance?",
+      "resolution_mechanism": "Longitudinal tracking of platform switching rates post-GDPR and post-DMA implementation; measurement of export usability (automated re-import vs manual migration) and adoption rates",
+      "impact": "If effective: scaffold sunset is real and constraint degradation is underway. If performative: regulation creates compliance theater without reducing extraction; constraint remains Snare for powerless agents.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regulatory portability mandates reduce actual switching friction"
+    },
+    {
+      "id": "identity_locked_user_commitment",
+      "question": "For users trapped on platforms, is immobility driven by high structural switching costs (trapped) or by identity fusion with the platform/social graph (identity_locked)?",
+      "resolution_mechanism": "Qualitative analysis of user narratives about platform attachment; measurement of switching intention vs actual switching when barriers are lowered; assessment of identity-reconstructing rhetoric ('I am my Twitter presence')",
+      "impact": "If mostly trapped: removing technical barriers substantially increases mobility. If mostly identity_locked: even with portability, users remain bound by cognitive frame; psychological or community-based interventions needed alongside technical portability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ratio of structural switching costs to identity fusion in user platform lock-in"
+    },
+    {
+      "id": "alternative_coordination_feasibility",
+      "question": "Can federated, open-protocol social networks (ActivityPub, nostr, Bluesky's AT Protocol) actually coordinate at scale comparable to incumbent platforms, or do they face inherent coordination costs?",
+      "resolution_mechanism": "Comparative analysis of federation latency, consistency, moderation scalability, and discovery mechanisms; measurement of engagement and retention on federated platforms vs incumbents at equivalent user cohort sizes",
+      "impact": "If feasible: alternative platforms offer genuine coordination (constraint becomes pure extraction via market power, not technical inevitability). If unfeasible: network topology itself creates unavoidable coordination costs that justify incumbent scale.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether federated social protocols can achieve coordination efficiency comparable to centralized platforms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Cross-platform social portability represents a structural constraint where users' social capital \u2014 their followers, conversation history, connections, and accumulated identity across years of platform use \u2014 becomes economically locked to a single platform provider. The constraint exhibits genuine coordination function (the platform aggregates billions of users into connected graphs) alongside asymmetric extraction (users cannot move without abandoning their social capital). Extractiveness has risen from 0.35 to 0.58 over the measurement interval as platforms have progressively monetized user graph data, implemented algorithmic opacity, and closed APIs. Theater has increased as well as regulatory compliance creates performative data export features that provide minimal portability benefit. The constraint's mandatrophy manifests in the false summit risk: network effects are often presented as immutable laws of physics ('larger networks always win'), but comparative analysis of email, SMS, and emerging federated protocols (ActivityPub, Bluesky AT) reveals that many technical barriers to portability are policy choices rather than physical impossibilities. The EU Digital Markets Act and GDPR data portability rights represent a scaffold perspective \u2014 regulatory mandates introducing sunset logic where forced interoperability and API access create alternative exit paths.",
+    "key_agents": [
+      "User Base: Primary victim (powerless/trapped) \u2014 cannot exit without losing accumulated social capital; structurally immobilized by network effects",
+      "Content Creators: Secondary victim (moderate/constrained) \u2014 benefit from platform distribution but bear extraction through opaque algorithms, revenue share asymmetry, and content moderation power; face high cost to migrate audience",
+      "Incumbent Platforms (Meta, X, TikTok, etc.): Primary beneficiary (institutional/arbitrage) \u2014 extract monopoly rent from user immobility while providing genuine aggregation and coordination service",
+      "Alternative Platform Providers: Structural competitor (moderate/constrained) \u2014 locked out from accessing incumbent graphs; cannot differentiate on portability; high infrastructure costs for features incumbents provide at scale",
+      "Digital Rights Coalition (EU DMA, civil society, regulators): Organized intervener (organized/constrained) \u2014 implementing regulatory portability mandates creating policy-driven sunset logic; constrained by incumbent political influence",
+      "Technology Community (protocol developers, open standards orgs): Infrastructure layer (organized/constrained) \u2014 building federated alternatives (ActivityPub, AT Protocol) but face adoption barriers from incumbent network effects",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing policy-contingent network effects as immutable physics"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Users lose access to their social graph upon exit \u2014 an irreversible cost equivalent to capital extraction. The 0.58 value reflects that platforms do provide coordination benefits (aggregation, connection infrastructure, discovery mechanisms) alongside the lock-in extraction. Pure extraction would exceed 0.70; this hybrid allows for meaningful coordination. The rising trajectory (0.35\u21920.58) reflects increasing monetization of graph data and algorithmic amplification control. Suppression (0.68): High. Barriers to exit include: (1) informational \u2014 users often unaware of portability options or data export usability; (2) technical \u2014 API incompatibility, identity federation fragmentation; (3) economic \u2014 creator income dependent on platform; (4) social \u2014 friends remain on incumbent platform. Suppression is not total because some users do switch and regulatory mandates create limited export/access options. Theater ratio (0.55): Moderate. Genuine coordination function (aggregation of billions into connected graph) is substantial and real. But theater has increased as platforms introduce GDPR exports and data APIs that comply with regulations while providing minimal portability usability \u2014 users can export data but cannot easily re-import to alternatives. Theater reflects the gap between compliance appearance and actual switching friction reduction.",
+    "perspectival_gap": "This constraint exhibits maximum perspectival divergence across all six types. No dominant classification emerges because the structure genuinely supports multiple valid readings. The key tension: Is network lock-in a coordination mechanism (Rope) or an extraction mechanism (Snare)? The answer is: both, from different structural positions. For the platform, it coordinates supply and demand. For the user, it extracts immobility cost. For regulators, it is a temporary coordination failure with a policy sunset (Scaffold). For the platform's narrative about inevitability, it naturalizes as Mountain \u2014 but the false summit detector catches this as policy misrepresented as physics. The perspectival gap is not a measurement error; it is the constraint's defining feature.",
+    "directionality_logic": "Beneficiary (incumbent platform): institutional power, arbitrage exit, benefits from network size. Derives d=0.05 (full beneficiary), f(d) \u2248 -0.12 (experiences negative extraction \u2014 the constraint subsidizes them). Victims (user base, alternative platforms): powerless/moderate power, trapped/constrained exit, bear costs of immobility. Derive d=0.85-0.95 (full target), f(d) \u2248 1.15-1.42 (high experienced extraction). The directionality spread is structural \u2014 it reflects genuine asymmetry in who bears costs and who captures benefits. Regulatory organizations occupy middle ground: organized power, constrained exit (limited political leverage against incumbent lobbying), but clear beneficiary (digital rights, user agency). Derive d=0.40 (partial victim position), f(d) \u2248 0.40 (lower extracted extraction due to organizational capacity and policy agency). No overrides needed \u2014 the automatic derivation captures the structural reality.",
+    "mandatrophy_analysis": "DIAGNOSIS: The constraint's mandatrophy is resolved through perspectival pluralism, not type convergence. The false summit risk is the 'network effects are physics' narrative. From the analytical observer's civilizational position, the constraint appears as Mountain: larger networks always economically dominate, winner-take-most dynamics are inevitable, users rationally cluster on dominant platforms. This framing naturalizes contingent architectural and policy choices (proprietary APIs, opaque graph ownership, identity siloing) as immutable laws. The mandatrophy resolver: comparative analysis across communication technologies shows that portability IS technically feasible. Email is portable (open protocols, federated delivery, decentralized identity). SMS is portable (intercarrier agreements, number portability regulations). ActivityPub-based social networks demonstrate federated coordination at meaningful scale. The constraint is not Mountain (immutable network physics) but Tangled Rope (coordination + policy-enforced extraction). The false summit dissolves when observing from the regulatory/technical community perspective: portability is blocked by policy choices, not physics. This resolves the mandatrophy by showing that type divergence reflects genuine structural differences in how agents experience the constraint, not measurement ambiguity or analyst error."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "attention_monopoly_platform_markets",
+      "data_portability_rights",
+      "federated_identity_protocols"
+    ],
+    "dual_formulation_note": "Cross-platform social portability decomposes into three distinct constraints: (1) attention_monopoly_platform_markets (\u03b5\u22480.65, Snare) \u2014 the incumbent's monopoly extraction from network effects; (2) data_portability_rights (\u03b5\u22480.30, Scaffold) \u2014 regulatory interventions with sunset logic; (3) federated_identity_protocols (\u03b5\u22480.25, Rope) \u2014 alternative coordination mechanisms. The combined story captures the systemic interaction; decomposed stories model specific mechanisms."
+  },
+  "directionality_overrides": []
+}

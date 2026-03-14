@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "market_entry_barriers",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "meb"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Market Entry Barriers and Incumbent Extraction",
+    "topic_domain": "economic/competitive_dynamics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_firms"
+    ],
+    "victims": [
+      "potential_entrants",
+      "consumer_choice_diversity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Aspiring Entrepreneur",
+      "comment": "PERSPECTIVE 1: ASPIRING ENTREPRENEUR (SNARE) \u2014 Cannot enter without capital, regulatory approval, or established distribution channels. Trapped by structural barriers: capital requirements, licensing costs, first-mover advantage, and network effects that the incumbent controls. No viable exit from the market structure without abandoning entry entirely."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regional Competitor",
+      "comment": "PERSPECTIVE 2: REGIONAL COMPETITOR (TANGLED ROPE) \u2014 Can enter a niche segment but faces sustained suppression via predatory pricing, exclusive distribution deals, and IP litigation. Genuinely coordinates some market functions (localized production, price competition in segments) while bearing extraction through barriers that increase costs and limit scalability."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Firm",
+      "comment": "PERSPECTIVE 3: INCUMBENT FIRM (ROPE) \u2014 Controls barriers as coordination mechanism: capital requirements ensure quality standards, licensing ensures safety compliance, network effects ensure system reliability. Experiences the constraint as coordination. High extraction flows toward incumbent; exits costless (can exit by divestment or redeployment)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Regulatory Authority",
+      "comment": "PERSPECTIVE 4: REGULATORY AUTHORITY (SCAFFOLD) \u2014 Antitrust enforcement, patent reform, and open-access mandates create temporary mechanisms that lower barriers. These have sunset logic: as markets mature and competition increases, formal barriers can be reduced. Moderate effective extraction because enforcement bodies have mobility and can redesign the rule set."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Professional Licensing System",
+      "comment": "PERSPECTIVE 5: PROFESSIONAL LICENSING (PITON) \u2014 Licensing ostensibly ensures competence but often functions as an occupational cartels maintained through inertia. The barrier persists though its original function has attenuated. Theater ratio remains high as the system performs legitimacy (boards, continuing education, ethics codes) while primary function is rent protection."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal analytical view, ALL markets require SOME barriers to entry to function: capital requirements fund production, licensing ensures quality/safety, intellectual property creates incentives for innovation. From this view, barriers are not extraction but necessary coordination costs inherent to functional markets. This perspective risks naturalizing what are actually contingent institutional choices (how high should capital requirements be? how long should patents last?)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "barrier_necessity_threshold",
+      "question": "What level of capital requirement, licensing restriction, or IP protection represents legitimate coordination cost versus extractive rent-seeking?",
+      "resolution_mechanism": "Comparative institutional analysis: track entry rates and innovation output across markets with varying barrier heights; identify correlation between barrier level and consumer welfare outcomes",
+      "impact": "If barriers below threshold: insufficient coordination, market failures (quality collapse, inadequate investment). If barriers above threshold: extractive rent capture, reduced competition, consumer harm. The threshold varies by industry.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold distinguishing legitimate coordination barriers from extractive rents"
+    },
+    {
+      "id": "incumbent_predation_measurement",
+      "question": "Do observed incumbent behaviors (exclusive dealing, predatory pricing, IP litigation) constitute legitimate competitive response or illegal predation?",
+      "resolution_mechanism": "Longitudinal cost analysis; comparison of incumbent behavior toward entrants versus toward each other; assessment of profit sustainability post-entry",
+      "impact": "If competitive response: moderate suppression, some entry possible. If predation: high suppression, extraction mechanism is intact.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether incumbent behaviors are competitive or predatory"
+    },
+    {
+      "id": "network_effects_lock_in",
+      "question": "Are network effects creating legitimate coordination value or extractive lock-in where switching costs exceed replacement value?",
+      "resolution_mechanism": "Measurement of switching costs versus alternative provider quality; tracking of user satisfaction pre/post-entry attempts; analysis of interoperability adoption",
+      "impact": "If coordination value: justified barriers, moderate extraction. If lock-in: barriers sustain extraction despite superior alternatives, high extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Network effects as coordination versus lock-in mechanism"
+    },
+    {
+      "id": "regulatory_capture_in_licensing",
+      "question": "To what extent have professional licensing boards been captured by incumbent practitioners to maintain barrier heights above what public safety requires?",
+      "resolution_mechanism": "Analysis of licensing board composition; correlation between board recommendations and actual entry effects; measurement of public safety outcomes across high/low-barrier jurisdictions",
+      "impact": "If high capture: piton classification confirmed, barriers are theatrical. If low capture: barriers are functional coordination, moderate extraction justified.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Regulatory capture in professional licensing systems"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.46
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "Market entry barriers represent a fundamental tension in competitive economies: some barriers are necessary to coordinate production, ensure quality, and create incentives for innovation; others serve primarily to extract rents from potential entrants and consumers. This constraint manifests differently depending on the observer's structural position. An incumbent firm experiences barriers as legitimate coordination mechanisms that solve real problems (capital mobilization, quality assurance, network reliability). An aspiring entrepreneur experiences them as extraction traps that foreclose opportunity. A regulatory authority sees them as contingent policy choices amenable to modification through antitrust enforcement and patent reform. A professional licensing board performs the legitimacy of its barriers while the actual function has atrophied. The analytical observer risks mistaking contingent institutional choices (patent duration, capital requirements, licensing standards) for natural laws inherent to markets. The constraint's extractiveness has risen over the measurement interval (0.38 \u2192 0.52) as incumbent firms have developed increasingly sophisticated barrier-maintenance strategies (network effects leveraged through software updates, intellectual property enforcement, exclusive distribution agreements, and regulatory capture of licensing boards). Theater ratio has also risen (0.35 \u2192 0.48) as barriers accumulate organizational legitimacy narratives disconnected from their functional necessity.",
+    "key_agents": [
+      "Incumbent Firms: Primary beneficiary (institutional/arbitrage) \u2014 capture rents through controlled barriers; experience barriers as coordination mechanisms; lowest-cost exit via divestment or geographic redeployment",
+      "Potential Entrants: Primary victim (powerless/trapped) \u2014 face capital requirements, licensing costs, established networks, and predatory response; trapped by structural barriers without viable entry paths",
+      "Consumer Choice Diversity: Secondary victim (powerless/trapped) \u2014 limited to incumbent offerings due to suppressed competition; cannot organize exit from market structure",
+      "Regional Competitors: Mixed agent (moderate/constrained) \u2014 can enter niches but face sustained extraction through targeted barriers and litigation; constrained by cost asymmetry",
+      "Regulatory Authorities: Organized agent (organized/mobile) \u2014 can redesign barrier heights through antitrust enforcement, patent reform, and deregulation; mobile exit through policy resets",
+      "Professional Licensing Boards: Institutional actor (institutional/arbitrage) \u2014 maintain barriers through performative legitimacy; captured by incumbent practitioners; arbitrage exit via board composition changes",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional choices as inherent market necessities"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts significant rents from potential entrants and consumers: entry costs are elevated by legitimate coordination needs (capital, licensing) plus incumbent-maintained barriers (exclusive distribution, IP litigation, predatory pricing). The measured value reflects that some barriers serve coordination (justified extraction) while others serve rent capture (unjustified). The increase over the interval reflects accumulation of barrier strategies. Suppression (0.58): High. Multiple mechanisms suppress entry: capital requirements ($1M\u2013$100M+ depending on industry), regulatory approval timelines (1\u20135 years), IP licensing costs, first-mover advantage in network effects, and incumbent predatory response. These barriers are sufficiently comprehensive that most potential entrants cannot overcome them even with effort. Theater ratio (0.48): Moderate. Professional licensing performs legitimacy narrative (competence assurance, ethics codes, continuing education) but significant portion of the barrier serves incumbent rent protection rather than public safety. The rise from 0.35 to 0.48 reflects increasing narrative complexity as barriers accumulate competing justifications. Claimed type (Tangled Rope): The constraint coordinates legitimate market functions (capital mobilization ensures productive capacity, licensing ensures quality standards, IP protects innovation incentives) while simultaneously extracting rents from entrants and consumers (barriers elevated above necessary levels, predatory pricing maintains exclusion, regulatory capture maintains sub-functional licensing standards).",
+    "directionality_logic": "Each perspective's experienced extraction (chi) is computed from base extractiveness (0.52) scaled by directionality (d) and spatial scope (\u03c3). Incumbents with arbitrage options and net-beneficiary status have d \u2248 0.15 \u2192 f(d) \u2248 -0.01 \u2192 chi \u2248 -0.005 (experienced as subsidy). Regional competitors with constrained options and mixed victim status have d \u2248 0.60 \u2192 f(d) \u2248 0.88 \u2192 chi \u2248 0.46 (experienced as moderate extraction). Potential entrants with trapped status and victim classification have d \u2248 0.95 \u2192 f(d) \u2248 1.42 \u2192 chi \u2248 0.74 (experienced as severe extraction). Regulatory authorities with mobile options have d \u2248 0.50 \u2192 f(d) \u2248 0.65 \u2192 chi \u2248 0.34 (experienced as negotiable). The perspectival gap is maximal: the same base barrier height is experienced as non-existent (incumbent), negotiable (regulator), constraining (competitor), and insurmountable (entrant).",
+    "perspectival_gap": "This constraint demonstrates how market barriers are constructed as either coordination or extraction depending on structural position. The incumbent firm sees barriers as solving legitimate problems: capital requirements ensure productive capacity, licensing ensures quality, IP creates innovation incentives, network effects create system reliability. From this perspective, barriers are Rope (coordination) \u2014 the constraint solves a real collective action problem. The aspiring entrepreneur sees the same barriers as extraction traps: high capital costs exclude the resourceful-but-underfunded, licensing creates gatekeeping, IP litigation weaponizes legal systems, network effects create winner-take-all capture. From this perspective, barriers are Snare (pure extraction) \u2014 the same mechanisms that coordinate from above discoordinate from below. The regulatory authority sees barriers as contingent policy choices: capital requirements can be lowered via venture capital intermediation, licensing can be streamlined via equivalency assessment, IP can be balanced via patent reform, network effects can be disrupted via interoperability mandates. From this perspective, barriers are Scaffold (temporary) \u2014 the constraint has sunset logic via policy redesign. The licensing board sees barriers as legitimate professional standards, but structural data reveals performative content: boards are captured by incumbents, standards exceed public safety requirements, and renewal cycles are extractive (fees) rather than functional (competence verification). The analytical observer risks seeing barriers as natural \u2014 ALL functional markets require some entry barriers to coordinate capital investment, ensure quality, and incentivize innovation \u2014 and therefore sees the constraint as Mountain (immutable natural law). But the structural data reveals this as false summit: the HEIGHT of barriers (capital requirements, licensing standards, IP term length) is a contingent institutional choice, not a law of nature.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: Market entry barriers resolve the mandatrophy by revealing that the 'is this coordination or extraction?' question is insufficiently precise. The answer is: BOTH, asymmetrically distributed. Barriers coordinate production at the incumbent level (capital mobilization works, quality standards function, IP incentivizes innovation). They extract from entrants and consumers (barriers set higher than necessary, predatory strategies exclude viable competitors, licensing captures regulatory authority). The Tangled Rope classification holds: genuine coordination function (barriers do solve real problems) coexists with asymmetric extraction (barriers distributed to concentrate benefits toward incumbents). The mandatrophy is resolved NOT by choosing between pure coordination and pure extraction, but by recognizing that the same institutional mechanism serves both functions with different distributions. The perspectival gap is the analytic tool: incumbents see coordination (Rope experience), entrants see extraction (Snare experience), regulatory authority sees contingency (Scaffold perspective). None of these are 'wrong' \u2014 they are different structural truths from different positions."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture",
+      "intellectual_property_duration",
+      "network_effects_winner_take_all"
+    ],
+    "dual_formulation_note": "Market entry barriers decompose into three structurally distinct constraints: (1) capital_allocation_requirements (\u03b5=0.25, Rope) \u2014 legitimate coordination of productive capacity; (2) regulatory_licensing_gatekeeping (\u03b5=0.48, Tangled Rope) \u2014 mixed coordination and capture; (3) incumbent_predatory_behavior (\u03b5=0.58, Snare) \u2014 pure extraction. This story models the aggregate effect; disaggregation reveals which barrier mechanisms are functional versus extractive."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

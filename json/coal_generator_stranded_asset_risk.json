@@ -1,0 +1,211 @@
+{
+  "header": {
+    "constraint_id": "coal_generator_stranded_asset_risk",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "coal_stranded"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Coal Generator Stranded Asset Risk and Energy Transition Lock-In",
+    "topic_domain": "energy_economics/regulatory_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "coal_plant_operators",
+      "incumbent_utilities",
+      "finance_backstop_regulators"
+    ],
+    "victims": [
+      "renewable_energy_investors",
+      "grid_modernization_capacity",
+      "climate_mitigation_capacity",
+      "electricity_ratepayers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Coal-Dependent Community",
+      "comment": "PERSPECTIVE 1: COAL-DEPENDENT COMMUNITY (SNARE) \u2014 Trapped by economic dependency on coal employment and local tax base. Cannot exit without catastrophic local economic shock. Extraction is maximal: the constraint locks the community into subsidizing stranded assets through continued coal consumption while barring alternative economic development paths."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Climate System and Future Generations",
+      "comment": "PERSPECTIVE 2: CLIMATE AND FUTURE GENERATIONS (SNARE) \u2014 Cannot exit fossil fuel lock-in. Bears the full cost of stranded asset risk dynamics that delay energy transition. Maximum extraction: deferred decarbonization concentrated on agents without voice in present decisions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Renewable Energy Investors",
+      "comment": "PERSPECTIVE 3: RENEWABLE ENERGY INVESTORS (TANGLED ROPE) \u2014 Constrained by regulatory barriers, grid access limitations, and rate-setting that favors incumbent utilities. Experience both extraction (access barriers, higher capital costs due to grid bottlenecks) and coordination benefits (renewable integration driving grid modernization). Significant but not maximal extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Coal Utility Company Management",
+      "comment": "PERSPECTIVE 4: COAL UTILITY COMPANY (ROPE) \u2014 Experiences the constraint as pure coordination of asset recovery. Deployed capital for coal plants during rational prior regulatory environment. Extraction flows toward this agent: cost-of-service regulation ensures recovery of stranded costs through ratepayer payment. Primary beneficiary with full exit arbitrage (can lobby for regulatory protection, securitize assets, request rate increases)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Public Utility Commission and State Energy Board",
+      "comment": "PERSPECTIVE 5: REGULATORY AUTHORITY (TANGLED ROPE) \u2014 Organized institutional actor facing genuine coordination problem (grid reliability during transition) but subject to extractive capture by incumbent utilities. Cost-of-service regulation genuinely coordinates reliable power supply, but the mechanism's structure systematically privileges capital-intensive coal infrastructure over flexible renewable sources. Active enforcement of stranded asset recovery mechanisms against taxpayer exit."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Coal Industry Trade Association Advocacy",
+      "comment": "PERSPECTIVE 6: COAL INDUSTRY ADVOCACY (PITON) \u2014 Institutional structures (trade associations, state coal councils, research institutions funded by coal revenue) maintain high theater: 'clean coal,' 'carbon capture ready,' 'baseload reliability' narratives persist despite technology stalling and market obsolescence. Primary function (representing industry interests) has largely degraded to preventing exit rather than advancing viable business models. Theater ratio 0.85 \u2014 most activity is narrative maintenance rather than operational problem-solving."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Physical Decarbonization Constraint",
+      "comment": "PERSPECTIVE 7: PHYSICAL DECARBONIZATION CONSTRAINT (MOUNTAIN) \u2014 From the analytical perspective, the physical carbon budget available for remaining energy infrastructure is mathematically fixed by climate physics. Stranded asset risk is a consequence of deploying capital into assets that cannot operate within this budget. The constraint appears as immutable natural law \u2014 you cannot construct an energy system that burns coal and meets climate targets. However, the structural data reveals this as false summit: the constraint is implemented through contingent regulatory arrangements (cost-of-service recovery, captive ratepayers, bailout mechanisms) rather than physics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coal_plant_lifetime_economics",
+      "question": "Do coal plants become economically uncompetitive before physical end-of-life, or does subsidized cost-of-service recovery extend operational lifespans beyond economic viability?",
+      "resolution_mechanism": "Comparative analysis of plants operating under cost-of-service vs competitive market structures; correlation between regulatory regime and plant retirement timing vs levelized cost of new renewable capacity",
+      "impact": "If suppression extends lifespans artificially: stranded asset risk is manufactured by regulatory structure (extraction mechanism stronger). If plants retire naturally before subsidy requirements: extraction is lower than measured.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regulatory recovery mechanisms artificially extend coal plant operation"
+    },
+    {
+      "id": "ratepayer_exit_capacity",
+      "question": "Can electricity ratepayers exit the stranded asset recovery mechanism through retail choice, distributed solar, or relocation, or are exit costs prohibitive?",
+      "resolution_mechanism": "Analysis of retail choice penetration rates; cost differential between rooftop solar + battery vs grid electricity in regulated vs deregulated regions; relocation data for households exiting coal-dependent utility service territories",
+      "impact": "If exit is mobile (retail choice available, solar affordable): ratepayers are constrained not trapped, classification shifts toward lower extraction. If exit is prohibitively expensive (rooftop solar blocked, relocation economically unfeasible): ratepayers approach trapped status, extraction increases.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether ratepayers can exit coal stranded asset cost-sharing"
+    },
+    {
+      "id": "regulatory_capture_persistence",
+      "question": "Are incumbent utilities capturing regulatory processes through structural advantages (revolving door staffing, information asymmetry) or through legitimate policy preferences among elected and appointed regulators?",
+      "resolution_mechanism": "Analysis of regulatory decision patterns; tracking of staff flows between utilities and PUCs; comparison of regulatory outcomes in jurisdictions with strong vs weak lobbying disclosure and cooling-off periods",
+      "impact": "If capture is structural (asymmetric information, revolving door): extraction mechanism is robust and persists. If capture is preference-based: regulatory change (new administration, rate case outcome) could shift extraction significantly.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether regulatory capture is structural or preference-based"
+    },
+    {
+      "id": "stranded_cost_magnitude_bounds",
+      "question": "What is the true economic value of coal plant assets under climate policy scenarios, and how much of stranded cost is genuine economic loss vs regulatory rent transfer?",
+      "resolution_mechanism": "Portfolio analysis of coal plants under 2\u00b0C carbon budget constraints; comparison of shutdown costs vs renewable replacement costs; accounting for avoided fuel, O&M, and environmental costs",
+      "impact": "If stranded costs are genuine (assets truly worthless under climate policy): cost allocation across stakeholders is distributive not extractive. If stranded costs are inflated (regulatory recovery exceeds genuine loss): extraction component is larger than measured.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "True economic magnitude of coal stranded assets vs regulatory cost-shifting"
+    },
+    {
+      "id": "renewable_grid_integration_barriers",
+      "question": "Are grid integration barriers (transmission congestion, frequency regulation, ramping capacity) genuine technical coordination problems or regulatory artifacts maintained to justify coal retention?",
+      "resolution_mechanism": "Technical analysis of grid stability requirements under high renewable penetration; cost comparison of battery storage vs coal plants for frequency regulation; examination of jurisdictions with >70% renewable penetration (e.g., Uruguay, Denmark)",
+      "impact": "If barriers are technical: coal extraction of grid reliability coordination is justified. If barriers are regulatory artifacts: coal plant justifications are theater masking rent extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether grid integration barriers justify coal plant retention"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Coal generator stranded asset risk creates a structural lock-in between incumbent utility companies, regulatory authorities, coal-dependent communities, and ratepayers that delays energy transition while concentrating costs on powerless agents. The constraint exhibits hybrid coordination-extraction dynamics: cost-of-service regulation genuinely solves the coordination problem of capital recovery and grid reliability investment, but the mechanism's structure systematically privileges capital-intensive coal infrastructure over flexible renewable alternatives. Stranded asset cost-sharing through ratepayer charges suppresses renewable deployment investment and extends coal plant operational lifespans beyond economic viability, delaying decarbonization while concentrating extraction on agents (climate system, future generations, renewable investors, low-income ratepayers) who cannot exit. The constraint's theater ratio (0.68) reflects that much institutional activity is narrative justification\u2014'clean coal,' 'grid stability requirements,' 'baseload reliability'\u2014rather than operational problem-solving. The extractiveness trajectory shows increasing extraction over the measurement interval (0.32 \u2192 0.58) as renewable cost curves drop faster than regulatory frameworks adjust, widening the gap between competitive reality and protected coal economics.",
+    "key_agents": [
+      "Coal Utility Company: Primary beneficiary (institutional/arbitrage) \u2014 cost-of-service regulation ensures full asset recovery through ratepayer charges; can lobby for regulatory protection and cost allocation",
+      "Coal-Dependent Community: Primary victim (powerless/trapped) \u2014 economically locked into coal consumption; local tax base and employment dependent on plant continued operation; cannot exit without severe local economic shock",
+      "Electricity Ratepayers: Secondary victim (moderate/constrained) \u2014 bear stranded cost recovery charges; exit paths limited (retail choice unavailable in most US jurisdictions, rooftop solar blocked by regulations, relocation economically unfeasible)",
+      "Renewable Energy Investors: Secondary victim (moderate/constrained) \u2014 face grid access barriers, transmission congestion, rate-setting that favors incumbent utilities; constrained but not trapped entry into market",
+      "Public Utility Commission: Institutional actor (organized/constrained) \u2014 subject to regulatory capture by incumbents while managing genuine coordination problems (grid reliability, capital recovery, rate stability); active enforcer of stranded asset recovery",
+      "Climate System and Future Generations: Victim (powerless/trapped) \u2014 cannot exit fossil fuel lock-in; bear concentrated costs of deferred decarbonization",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 distinguishes physical decarbonization constraint (genuine mountain) from regulatory stranded asset mechanism (contingent institutional arrangement)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts from multiple victims (ratepayers, renewable investors, climate system) to benefit incumbents. However, extraction is not maximal (snare-level \u22650.66) because regulatory mechanisms must maintain legitimacy by funding grid improvements and ensuring reliable service \u2014 extraction cannot reach snare levels without triggering political backlash. The extractiveness trajectory shows increasing values (0.32 \u2192 0.58) as market dynamics create tension with regulatory protections, widening the gap between renewable competitiveness and protected coal economics. Suppression (0.62): High. Significant barriers to exit include: cost-of-service regulation preventing retail choice, regulatory barriers to distributed solar deployment, transmission access denial for renewable generators, rate structures that don't reflect time-of-use value, and stranded cost charges that make alternative energy sources artificially expensive. Suppression operates through regulatory rather than physical means \u2014 ratepayers are trapped not by geography but by regulatory structure. Theater ratio (0.68): High. 'Clean coal,' 'carbon capture ready,' 'baseload reliability,' and 'grid stability' narratives consume significant institutional resources despite technical stagnation. Trade associations, utility PR, and friendly think tanks generate continuous narrative justification for coal plant retention despite economic obsolescence. Theater has increased over the interval as reality diverged from narrative.",
+    "perspectival_gap": "Coal utility company sees rope (coordination of capital recovery and grid reliability funding); coal community sees snare (economic lock-in with no realistic exit); electricity ratepayers see tangled rope (receive grid reliability benefits but pay stranded costs); renewable investors see tangled rope (mixed access/barrier coordination); regulators see tangled rope (genuine coordination challenges plus utility capture); climate/future generations see snare (pure extraction through deferred decarbonization); analytical observer risks false summit (naturalizing contingent regulatory lock-in as immutable physics). The gap between utility and community perspectives is maximum: the same regulatory structure appears as legitimate coordination to the beneficiary and as pure extraction trap to the victim.",
+    "directionality_logic": "Coal utilities: beneficiaries with full arbitrage (can lobby, securitize, relocate) \u2192 low d \u2192 negative \u03c7. Coal communities: trapped victims \u2192 high d \u2192 high \u03c7 (maximum extraction). Ratepayers: constrained victims (exit blocked by regulation but possible at cost) \u2192 intermediate-high d \u2192 moderate-high \u03c7. Renewable investors: constrained victims with organized potential \u2192 intermediate d \u2192 moderate \u03c7. Regulators: organized actors with constrained exit (political accountability) as both enforcers and subject to capture \u2192 mixed d depending on directionality override. Climate system: trapped victim \u2192 maximum d \u2192 maximum \u03c7. The suppression mechanism operates through regulatory structure: cost-of-service recovery, retail access restrictions, transmission congestion pricing, distributed solar permitting barriers. Suppression could be reduced through regulatory change (retail choice expansion, renewable grid priority, true cost accounting for carbon) but is currently 0.62 due to incumbent institutional lock-in.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that stranded asset risk is genuinely hybrid: coal-dependent communities DO receive coordination benefits (grid stability, reliable electricity supply), and regulators DO face genuine coordination problems (capital recovery, rate stability, load balancing). The tangled rope classification is correct. However, the constraint also exhibits clear asymmetric extraction: benefits accrue to utilities and investors with exit options, while costs concentrate on trapped agents (coal communities, ratepayers, climate system) with no exit path. The mandatrophy resolution is that stranded asset risk is not a 'is this coordination or extraction?' question but 'who bears the coordination costs?' The constraint is coordination-FOR-UTILITIES-AND-INVESTORS, extraction-FROM-RATEPAYERS-AND-CLIMATE. The energy transition would more accurately be classified as scaffold (temporary support for transition period) if regulatory structures changed to: (1) limit cost-of-service recovery to actual transition period, (2) enable retail choice to allow ratepayer exit, (3) prioritize grid access for renewables, (4) accelerate plant retirement timelines. Currently, the constraint blocks this sunset through incumbent capture of regulatory process."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "renewable_grid_integration_barriers",
+      "electricity_rate_design_lock_in",
+      "utility_regulatory_capture_mechanism"
+    ],
+    "dual_formulation_note": "Coal stranded asset risk decomposes into three structurally distinct constraints: (1) physical decarbonization requirement (mountain), (2) regulatory cost-recovery mechanism protecting incumbents (tangled rope / snare depending on perspective), (3) grid modernization coordination problem (rope with extraction overlay). Stranded asset risk as commonly discussed conflates these three; the decomposition reveals that the extraction mechanism is not decarbonization itself but the regulatory architecture that decouples decarbonization from incumbent cost-bearing."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

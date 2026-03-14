@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "behavioral_epidemiology_funding",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "behav_epi"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Behavioral Epidemiology Funding Constraint",
+    "topic_domain": "public_health/epidemiology/behavioral_science",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharmaceutical_industry",
+      "behavioral_intervention_researchers",
+      "public_health_institutions_promoting_interventions"
+    ],
+    "victims": [
+      "population_level_epidemiological_evidence",
+      "low_income_populations",
+      "prevention_focused_researchers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Underserved Population",
+      "comment": "PERSPECTIVE 1: UNDERSERVED POPULATION (SNARE) \u2014 Trapped within systems designed to measure and modify behavior rather than address root causes. Population-level epidemiological evidence indicates structural determinants (poverty, housing, discrimination) drive health outcomes, but funding flows toward individual behavioral interventions. No exit mechanism exists for populations caught in perpetual intervention pilot programs; their behavioral data is extracted for research publication while structural conditions remain unchanged."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Prevention-Focused Epidemiologists",
+      "comment": "PERSPECTIVE 2: PREVENTION-FOCUSED EPIDEMIOLOGISTS (TANGLED ROPE) \u2014 Constrained by funding allocation that prioritizes intervention trials over structural analysis. These researchers benefit from the epidemiological infrastructure and peer network but experience extraction as their prevention-focused work struggles for resources. The constraint enforces a particular model of evidence (RCTs of behavioral interventions) while suppressing alternative models (population surveillance, structural analysis). Moderate experienced extraction due to career barriers but some agency through alternative publication venues."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Behavioral Intervention Researchers",
+      "comment": "PERSPECTIVE 3: BEHAVIORAL INTERVENTION RESEARCHERS (ROPE) \u2014 Net beneficiaries with arbitrage options. Funding flows toward their research designs; their work defines what counts as valid epidemiological evidence; they can exit to pharmaceutical partnerships or consulting. They experience the constraint as pure coordination: establishing rigorous standards for behavioral interventions enables knowledge accumulation and funding multiplier effects. This perspective sees genuine coordination function without apparent asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Pharmaceutical and Biotech Industry",
+      "comment": "PERSPECTIVE 4: PHARMACEUTICAL INDUSTRY (ROPE) \u2014 Primary beneficiary. Behavioral epidemiology funding generates markets for behavioral interventions (medication adherence apps, digital therapeutics, incentive-based compliance programs). Industry arbitrage options are high \u2014 they can shift between epidemiological evidence and marketing claims with minimal friction. Experience the constraint as coordination of market demand, not extraction. Funding allocation toward behavioral interventions expands their addressable market."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Public Health Advocacy Coalition",
+      "comment": "PERSPECTIVE 5: PUBLIC HEALTH ADVOCACY COALITION (SCAFFOLD) \u2014 Organized actors (community health organizations, environmental health advocates, social determinants researchers) perceive this constraint as a temporary funding allocation problem solvable through institutional reform. They see the bottleneck as scaffolding: the current behavioral epidemiology emphasis is a transitional stage before structural epidemiology frameworks gain institutional recognition. Sunset logic applies if funding mechanisms shift toward root-cause analysis and health equity frameworks. Suppression is significant but sunset is visible \u2014 advocacy has built alternative evidence pathways (DHHS health equity initiatives, structural racism research funding)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Individual Behavior Change Paradigm",
+      "comment": "PERSPECTIVE 6: INDIVIDUAL BEHAVIOR CHANGE PARADIGM (PITON) \u2014 At the civilizational timescale, the individual behavior change model that dominates epidemiological funding has become substantially theatrical. Decades of evidence show behavior change interventions have minimal population-level impact on major health disparities without structural changes. Yet funding mechanisms, grant review criteria, and publication standards continue to enforce the paradigm through institutional inertia rather than empirical support. The constraint is maintained by the perception that 'we must at least try behavioral approaches' despite declining real-world impact."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Public Health Agencies",
+      "comment": "PERSPECTIVE 7: PUBLIC HEALTH AGENCIES (TANGLED ROPE) \u2014 Institutional beneficiaries and victims simultaneously. They benefit from federal funding directed toward behavioral intervention implementation and evaluation, which provides resources and legitimacy. Simultaneously, they are trapped implementing programs they know have limited population-level impact because alternative funding pathways (structural interventions, housing, economic development) require political capital they lack. Constrained exit options \u2014 agencies cannot easily shift to structural work without losing behavioral funding streams. Active enforcement through grant mechanisms and performance metrics."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (False Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / FALSE NATURAL LAW VIEW (MOUNTAIN) \u2014 Risk of classifying the constraint as a natural law of public health: 'behavior change is inherent to disease prevention.' This naturalizes what is actually a contingent funding allocation driven by historical (tobacco control success), pharmaceutical industry interests, and methodological preferences (RCTs favor interventions over structural analysis). The engine's false summit detector will identify this as naturalization of an institutional arrangement rather than a law of epidemiology."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "behavioral_vs_structural_causality",
+      "question": "To what extent are documented health disparities driven by individual behavioral choices versus structural determinants (housing, discrimination, economic opportunity)?",
+      "resolution_mechanism": "Longitudinal comparison of health outcomes: populations with behavior change interventions vs. populations with structural interventions (housing-first programs, anti-discrimination enforcement, wage increases); cross-country analysis controlling for structural variables; decomposition analysis isolating behavioral vs. structural variance",
+      "impact": "If structural \u2265 80% of variance: behavioral epidemiology funding is extractive mislabeling (reclassify toward snare). If behavioral \u2265 60% of variance: funding allocation is justified (reclassify toward rope). Most epidemiological literature suggests structural \u2265 70%, but funding allocation assumes behavioral \u2265 50%.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Relative contribution of behavioral vs. structural determinants to health disparities"
+    },
+    {
+      "id": "intervention_effectiveness_decline",
+      "question": "Is the observed declining population-level impact of behavior change interventions over time evidence of natural limits or evidence of implementation failure masking structural problems?",
+      "resolution_mechanism": "Mechanism analysis of failed interventions: qualitative research identifying implementation barriers (supply-side constraints, patient non-engagement due to untreated structural barriers); cost-effectiveness analysis comparing intervention costs to structural approaches; nested trials with and without structural supports",
+      "impact": "If natural limits: funding allocation toward behavioral approaches is appropriate (theater_ratio lower). If implementation barriers: funding is treating the intervention as the problem rather than addressing structural constraints preventing effectiveness (theater_ratio higher, snare component stronger).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether declining intervention effectiveness reflects natural limits or structural barriers"
+    },
+    {
+      "id": "funding_mechanism_alternative_pathways",
+      "question": "Are alternative research funding mechanisms (structural epidemiology, health equity research, environmental health) genuinely available to prevention-focused researchers or are they marginalized by peer review and grant evaluation?",
+      "resolution_mechanism": "Funding database analysis: market share trends for structural vs. behavioral epidemiology research, 2010-2030; acceptance rates and review scores for structurally-focused grant applications; citation patterns and journal prestige comparison; career outcome analysis comparing structural researchers to behavioral researchers",
+      "impact": "If alternatives are funded at comparable rates: constrained exit option is accurate, snare perspective overstated. If alternatives are systematically disadvantaged (lower acceptance rates, lower funding per application): snare and suppression assessment confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Availability of alternative epidemiological research funding pathways"
+    },
+    {
+      "id": "pharmaceutical_industry_coupling",
+      "question": "How tightly coupled is behavioral epidemiology funding to pharmaceutical industry interests? Does funding flow preferentially toward interventions with commercial applications?",
+      "resolution_mechanism": "Network analysis of funding sources: tracking NIH, NSF, and foundation grants to behavioral epidemiology with cross-reference to pharmaceutical-funded research and clinical trial capacity; analysis of industry presence in grant review panels; market size analysis correlating between funded research areas and commercial opportunity",
+      "impact": "If coupling is tight (industry correlates with 60%+ of funded research): beneficiary analysis confirms pharmaceutical benefit (directionally supports snare/tangled rope perspectives). If coupling is weak: industry is incidental rather than driving beneficiary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Coupling between behavioral epidemiology funding and pharmaceutical industry interests"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Behavioral epidemiology funding represents a structural constraint where research funding allocation, peer review standards, and evidence hierarchies systematically privilege individual behavior change interventions over population-level structural approaches to disease prevention. This constraint exhibits a tangled hybrid of genuine coordination function (establishing rigorous standards for behavioral trials) and asymmetric extraction (funding patterns that marginalize prevention and structural epidemiologists while concentrating resources toward interventions that benefit pharmaceutical industry and behavioral researchers). The constraint operates through active enforcement mechanisms: grant review criteria that reward RCT methodology, publication bias against null results for structural interventions, and career incentive structures that direct ambitious researchers toward behavioral work. Over the past decade (interval 0-10), the theater ratio has increased from 0.48 to 0.68 as intervention effectiveness has declined at the population level while funding has continued to flow toward behavioral approaches, suggesting performative maintenance of the funding allocation by institutional inertia rather than empirical support. The suppression mechanism operates asymmetrically: underserved populations are trapped in perpetual intervention pilots with no exit option, while pharmaceutical industry and behavioral researchers have arbitrage options (consulting, partnerships, alternative funding).",
+    "key_agents": [
+      "Underserved Populations: Primary victim (powerless/trapped) \u2014 subject of behavioral interventions with no exit option; provides behavioral data extracted for research publication while structural conditions remain unchanged",
+      "Prevention-Focused Epidemiologists: Secondary victim (moderate/constrained) \u2014 career-constraining barriers to structural research; benefit from epidemiological infrastructure but experience extraction through funding disadvantage",
+      "Behavioral Intervention Researchers: Primary beneficiary (institutional/arbitrage) \u2014 funding flows toward their designs; they can exit to pharmaceutical partnerships; they define valid epidemiological evidence",
+      "Pharmaceutical Industry: Primary beneficiary (institutional/arbitrage) \u2014 behavioral epidemiology funding generates markets for behavioral interventions; high arbitrage options",
+      "Public Health Agencies: Mixed (organized/constrained) \u2014 benefit from federal behavioral intervention funding but trapped implementing programs with limited population impact; constrained exit to structural work",
+      "Public Health Advocacy Coalition: Organized actor (organized/constrained) \u2014 perceive scaffold dynamics; building alternative evidence pathways; constrained but with sunset visibility",
+      "Individual Behavior Change Paradigm: Institutional frame (institutional/arbitrage) \u2014 maintained by inertia despite declining empirical support; shows piton characteristics at civilizational scale"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts from underserved populations (no exit, provide behavioral data) and from prevention-focused researchers (funding barriers), while benefiting pharmaceutical industry and behavioral researchers. The extraction is not maximal because some coordination function is genuine (establishing rigorous standards for behavioral trials), but the asymmetry is pronounced. The extractiveness value increased over the interval (0.35 \u2192 0.58) as evidence accumulated that behavior change interventions have limited population impact, yet funding continued to flow toward them. Suppression (0.65): High. Multiple suppression mechanisms: underserved populations lack alternatives to behavioral intervention participation; prevention researchers lack funding for structural work; alternative evidence models (population surveillance, structural analysis) are marginalized by peer review; publication bias against null results for behavioral interventions suppresses negative evidence. Theater ratio (0.68): High. Individual behavior change as a primary lever for disease prevention shows declining real-world effectiveness at the population level, yet funding mechanisms continue to enforce the paradigm through grant criteria, publication standards, and career incentives. The theater has increased over the decade as the gap between empirical support and funding allocation has widened. Claimed type (Tangled Rope): The constraint exhibits both genuine coordination (establishing evidence standards for behavioral trials) and extraction (funding asymmetry, marginalizing alternatives, trapped populations). Active enforcement through grant mechanisms and peer review standards.",
+    "perspectival_gap": "The deepest gap is between the beneficiary perspective (rope \u2014 pure coordination) and the trapped victim perspective (snare \u2014 pure extraction). Behavioral researchers see the constraint as establishing necessary standards for rigorous intervention science. Underserved populations see the same constraint as a mechanism for extracting behavioral data while structural barriers remain unchanged. These are not merely different evaluations of the same phenomenon; they reflect incompatible structural positions \u2014 one group's benefit flows are the other group's cost flows. The scaffold and piton perspectives reveal that even within the institutional order, there is doubt about whether the behavioral epidemiology paradigm is functional (piton suggests it's maintained by inertia) or temporary (scaffold suggests it's a transitional stage before structural epidemiology gains recognition). The analytical observer's mountain perspective risks naturalizing funding allocation as an immutable feature of epidemiological science when the base properties reveal it as a contingent institutional arrangement.",
+    "directionality_logic": "Each perspective's directionality is determined by benefit/cost flow and exit options. Underserved populations: trapped exit + victim status \u2192 high d (1.0). Prevention researchers: constrained exit + victim status \u2192 high d (0.75-0.85). Behavioral researchers: arbitrage exit + beneficiary status \u2192 low d (0.10-0.20). Pharmaceutical industry: arbitrage exit + beneficiary status \u2192 low d (0.05-0.15). Public health agencies: constrained exit + mixed beneficiary/victim \u2192 moderate d (0.45-0.55). Public health advocacy: constrained exit + victim (population health) but organized \u2192 moderate d (0.35-0.45). The derived d values feed the sigmoid f(d) to compute effective extractiveness chi. Low d agents (beneficiaries) experience negative \u03c7 (extraction flows toward them); high d agents (victims) experience amplified \u03c7 through the sigmoid. The organizer coalition's moderate d reflects their organized power dampening the raw extraction signal they would experience if powerless.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The constraint resolves the mandatrophy by showing that apparent 'behavior change is good and necessary' framing (mountain/rope perspective) obscures structural asymmetry in benefit flow and exit options. The beneficiary perspective (institutional researchers and industry) experiences pure coordination and arbitrage. The victim perspectives (underserved populations, prevention researchers) experience snare and tangled rope. The scaffold perspective (advocacy coalition) sees a solvable institutional problem. The piton perspective (individual behavior paradigm) identifies the constraint as performatively maintained despite declining empirical support. The mandatrophy is resolved not by choosing which classification is 'correct' but by recognizing that the beneficiary class has defined what counts as valid epidemiological evidence in ways that privilege their own position. The extraction operates through epistemic enforcement (RCT methodology, behavior-change outcome measures) not through direct coercion. This is a classic case of how institutional power operates through defining frames and evidence standards rather than through explicit force."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "structural_determinants_of_health_marginalization",
+      "pharmaceutical_industry_funding_capture",
+      "public_health_research_methodology_constraints"
+    ],
+    "dual_formulation_note": "Behavioral epidemiology funding is downstream of broader public health research methodology constraints and pharmaceutical industry influence. The constraint family includes structural health determinants marginalization (higher \u03b5, more clearly snare-like) as the upstream force, and specific funding bottlenecks as downstream manifestations."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

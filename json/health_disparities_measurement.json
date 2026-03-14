@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "health_disparities_measurement",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hdm"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Health Disparities Measurement Infrastructure",
+    "topic_domain": "public_health/health_equity/data_infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dominant_demographic_groups",
+      "healthcare_institutions",
+      "data_stewards"
+    ],
+    "victims": [
+      "underrepresented_populations",
+      "health_equity_research"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Underrepresented Populations",
+      "comment": "PERSPECTIVE 1: UNDERREPRESENTED POPULATIONS (SNARE) \u2014 Lack structural power to exit or challenge measurement schemes that obscure their health needs. Data gaps and measurement blindness make their disparities invisible in official health metrics. Trapped by institutional definitions of 'what counts' as health. Maximum experienced extraction with no agency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Health Equity Researchers",
+      "comment": "PERSPECTIVE 2: HEALTH EQUITY RESEARCHERS (TANGLED ROPE) \u2014 Benefit from the measurement infrastructure (access to datasets, funding streams dedicated to disparity research) while simultaneously constrained by its limitations. High cost to exit (loss of access, lost career investment in existing frameworks). Extract coordination value from the infrastructure while bearing the cost of its blind spots."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Healthcare Institutions and Regulators",
+      "comment": "PERSPECTIVE 3: HEALTHCARE INSTITUTIONS (ROPE) \u2014 Benefit from standardized measurement schemas that simplify compliance reporting and aggregate statistics. Experience the constraint as coordination: uniform measurement enables benchmarking, funding allocation, and comparative effectiveness research. Net beneficiary with arbitrage optionality."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Health Data Equity Movement",
+      "comment": "PERSPECTIVE 4: HEALTH DATA EQUITY MOVEMENT (SCAFFOLD) \u2014 Organized coalition (SDOH data standards, disaggregation mandates, patient-led research networks) building alternative measurement frameworks with sunset clause. Lower effective extraction because organized agents have agency and perceive exit path through data democratization, participatory measurement design, and decentralized data governance. Theater ratio declining as alternative pathways mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Legacy Clinical Classification Systems",
+      "comment": "PERSPECTIVE 5: LEGACY CLINICAL CLASSIFICATION SYSTEMS (PITON) \u2014 ICD-10, EHR data fields, and race-based clinical algorithms persist through institutional inertia despite documented harms and measurement inadequacy. The classification systems themselves acknowledge the theater (e.g., race as proxy for ancestry, documented bias in pain assessment algorithms). Maintained because alternatives haven't fully replaced them and switching costs are high, not because they function well."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Measurement Invariance View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / MEASUREMENT INVARIANCE VIEW (MOUNTAIN) \u2014 From a universal perspective, some measurement gap between health constructs and observables is inherent: health is multidimensional, cultural contexts shape what counts as 'health,' and no single metric captures lived experience. This perspective risks naturalizing what are actually choice-laden institutional arrangements (whose dimensions to measure, whose populations to include) as unavoidable scientific limits. Engine will detect false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "demographic_classification_sufficiency",
+      "question": "Do current demographic categories (race, ethnicity, gender, SES) adequately capture the social determinants that actually produce health disparities, or do they function primarily as proxies that obscure causal mechanisms?",
+      "resolution_mechanism": "Comparison of variance explained: standard demographic-based disparity estimates vs. social determinants-based estimates (housing, food security, pollution exposure, social capital); analysis of misclassification rates when demographic proxies substitute for direct SDOH measurement",
+      "impact": "If adequate: measurement framework is a coordination problem (Rope from more perspectives). If inadequate: framework is an extraction mechanism that naturalizes causes while measuring consequences (Snare from more perspectives).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether demographic categories adequately capture causal mechanisms of health disparities"
+    },
+    {
+      "id": "invisibility_versus_noise",
+      "question": "Are data gaps for underrepresented populations caused by insufficient sample size (noise \u2014 solvable with more data) or structural exclusion from measurement systems (invisibility \u2014 requires reconceptualization)?",
+      "resolution_mechanism": "Analysis of sampling schemas: are underrepresented groups proportionally represented in source datasets but analytically disaggregated? Or are they absent from collection entirely? Comparison of missing-data mechanisms across populations.",
+      "impact": "If noise: increasing sample size and standardization resolves disparities (Rope). If invisibility: requires radical reconstruction of measurement systems (Snare becomes visible, demanding Tangled Rope or Scaffold responses).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether measurement gaps are sample size issues or structural exclusion"
+    },
+    {
+      "id": "algorithm_bias_versus_underlying_disparity",
+      "question": "When clinical algorithms show differential accuracy by race/ethnicity (e.g., kidney function estimators, pain severity scales), does this reflect real biological or social differences (measurement should capture these) or algorithmic bias projecting population labels onto individual outcomes?",
+      "resolution_mechanism": "Causal decomposition analysis: what portion of differential performance is explained by unmeasured confounding vs. algorithm design choices? Prospective validation in settings where causal confounders are controlled or measured directly.",
+      "impact": "If biological/social differences: algorithms should incorporate demographic terms (current practice justified). If algorithmic bias: demographic terms amplify rather than capture disparity (Snare extraction of inferential authority).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether differential algorithm performance reflects true differences or algorithmic bias"
+    },
+    {
+      "id": "measurement_standardization_tradeoff",
+      "question": "Does standardization of health measurement (uniform metrics, comparable data) inherently require suppressing cultural and contextual variation in what health means, or can cultural validity and statistical comparability coexist?",
+      "resolution_mechanism": "Comparison of measurement outcomes: systems with cultural adaptation and local control (participatory measurement) vs. centralized standardization; assessment of whether either sacrifices equity or validity.",
+      "impact": "If incompatible: measurement and equity are in tension (Snare/Tangled Rope extraction is unavoidable, though mitigatable). If compatible: measurement can be redesigned as Scaffold toward participatory systems.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether measurement standardization and cultural validity are compatible"
+    },
+    {
+      "id": "benefit_capture_by_dominant_groups",
+      "question": "Do investments in health disparity measurement primarily benefit underrepresented populations through improved targeting and advocacy, or primarily benefit dominant groups and institutions through demonstrating 'we're measuring the problem' while perpetuating structural causes?",
+      "resolution_mechanism": "Longitudinal outcome analysis: correlation between disparity measurement infrastructure expansion and actual reduction in health gaps for underrepresented populations vs. increase in research funding, publications, and institutional prestige for measurement entities.",
+      "impact": "If populations benefit: measurement is genuine coordination (Rope with equity function). If institutions benefit more: measurement is extraction mechanism (Tangled Rope or Snare, with measurement itself as extraction theater).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Who benefits from health disparity measurement infrastructure"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The health disparities measurement infrastructure constitutes a foundational constraint in public health and health equity research. It defines which populations are 'visible' in health statistics, which health differences are recognized as 'disparities' requiring action, and which causal factors are measurable and hence discussable in policy. This constraint exhibits all six DR types from different perspectives: underrepresented populations experience it as a Snare (invisible in data), equity researchers see mixed coordination and extraction (Tangled Rope), healthcare institutions see coordination value (Rope), the equity movement sees a temporary measurement problem being solved (Scaffold), legacy classification systems persist through inertia (Piton), and the analytical view risks naturalizing measurement limitations as inherent scientific constraints (false Mountain). The theater ratio (0.64) reflects that much official disparity reporting is performative: disaggregated statistics that document inequities without causal analysis or targeted intervention; metrics that measure outcomes rather than mechanisms; compliance activities by dominant institutions that document 'awareness' of disparities while preserving the institutional arrangements that produce them. Theater has increased over the 20-year interval as disparity measurement has proliferated while outcome gaps have persisted or widened in some populations.",
+    "key_agents": [
+      "Underrepresented Populations: Primary victim (powerless/trapped) \u2014 invisible in data systems that lack collection mechanisms; subject to proxies (demographic categories) that obscure causal mechanisms; no structural power to demand measurement redesign",
+      "Health Equity Researchers: Secondary victim and beneficiary (moderate/constrained) \u2014 benefit from funding, data access, and career opportunities in disparity research; constrained by existing measurement infrastructure that shapes what questions are answerable; high switching cost to alternative frameworks",
+      "Healthcare Institutions and Regulators: Primary beneficiary (institutional/arbitrage) \u2014 benefit from standardized measurement enabling compliance, benchmarking, and operational efficiency; arbitrage optionality enables adaptation to new measurement standards without fundamental restructuring",
+      "Data Stewards and EHR Vendors: Primary beneficiary (institutional/arbitrage) \u2014 benefit from standardized data schemas; have arbitrage optionality to update systems when standards change",
+      "Health Data Equity Movement: Organized coalition (organized/mobile) \u2014 SDOH measurement advocates, participatory data platforms, patient-led research networks; building alternative measurement frameworks (decentralized data governance, cultural adaptation); perceive sunset path through data democratization",
+      "Legacy Classification Systems: Institutional actors (institutional/arbitrage) \u2014 ICD-10, EHR fields, validated scales; persist through switching costs and inertia despite acknowledged harms; maintain arbitrage optionality to 'update' while preserving core structure",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent measurement choices (whose dimensions, whose populations) as inherent scientific limits"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, reflecting that the measurement infrastructure allocates visibility (and hence resources, research attention, policy focus) asymmetrically. Dominant demographic groups are well-measured, so health differences within these groups are documented and acted upon. Underrepresented populations are poorly measured, so gaps in health for these groups are statistically invisible or attributed to demographic 'groupness' rather than structural causes. The extraction is not total \u2014 some health disparity measurement infrastructure genuinely supports equity research and advocacy \u2014 but a significant portion is theater (documentation without action, metrics without mechanisms, compliance without change). Suppression (0.58): Moderate-high. Barriers to alternative measurement include: switching costs (existing EHR systems, validated instruments, established research pipelines), institutional inertia (classification systems embedded in regulatory and clinical practice), epistemic authority (established measurement frameworks have legitimacy; alternatives face burden of proof), and concentration of measurement authority (standardization bodies, funding agencies, institutional data governance committees are dominated by established players). But suppression is not total \u2014 participatory measurement, SDOH data standards, and patient-led research networks are gaining traction, indicating incomplete suppression. Theater ratio (0.64): Moderate-high, reflecting that disparity reporting is substantially performative. Many institutions report disparities in marketing and compliance documentation without changing clinical algorithms, resource allocation, or research priorities. The theater has increased over time as disparity metrics have proliferated while outcome gaps persist, indicating that measurement theater is substituting for structural change. Institutions are visibly 'measuring the problem' as a substitute for solving it.",
+    "directionality_logic": "Each perspective's directionality is derived from the agent's structural position and their relationship to the extraction flow. Underrepresented populations have zero arbitrage optionality \u2014 they cannot exit the measurement system or demand to be measured differently without institutional sanction. Trapped status produces maximum d and high f(d). Health equity researchers have constrained optionality \u2014 they can work within the existing framework with high career reward or exit to alternative measurement frameworks with low resource access. Constrained status produces moderate d. Healthcare institutions have arbitrage optionality \u2014 they can adopt new measurement standards, update EHRs, and maintain operational compliance under multiple frameworks. Arbitrage status produces low d. The Data Equity Movement has mobile optionality \u2014 they can build alternative systems (decentralized platforms, cultural measurement variants) and gradually shift authority away from legacy systems. Mobile status produces moderate d. Legacy classification systems maintain arbitrage optionality despite their acknowledged harms because switching costs are distributed across the ecosystem and institutional benefits are concentrated. The analytical observer's d is derived from the canonical analytical fallback (0.73) because no specific beneficiary/victim relationship applies \u2014 the observer is outside the constraint's extraction flow but sees the full structure.",
+    "perspectival_gap": "This constraint demonstrates perspectival divergence across three dimensions: (1) Visibility: dominant groups experience measurement as coordination and efficiency; underrepresented groups experience it as invisibility and erasure. (2) Exit optionality: institutional actors have arbitrage optionality enabling adaptation; underrepresented populations are trapped in measurement systems designed without their input. (3) Causality: equity researchers experience the framework as constraining explanation (forced to use demographic proxies); data stewards experience it as enabling operationalization (standardized fields and comparability). The powerless perspective (Snare) is the population most harmed but least heard in measurement design. The institutional perspectives (Rope, Piton) dominate actual measurement governance and can absorb new standards without fundamental change. The organized coalition perspective (Scaffold) perceives a real exit path through participatory design and data democratization but faces institutional resistance. The analytical view risks Romanticizing measurement limitations as inherent, when they are actually contingent on who designs systems and whose needs are centered.",
+    "mandatrophy_analysis": "CLASSIFICATION AMBIGUITY: The constraint could be classified as pure Snare (measurement is extractive theater that victimizes underrepresented populations and prevents structural change) or as Tangled Rope (measurement provides genuine coordination value for health research infrastructure while embedding asymmetric extraction). The mandatrophy is resolved by indexing to structural position: for trapped populations, it is Snare. For institutions and researchers, it is Tangled Rope or Rope. For organized equity movements, it is Scaffold. No single type collapses to the correct answer; the presheaf over observation sites captures the true structure. The false Mountain perspective (measurement limitations are inherent to science) is revealed as naturalization when the analytical observer's structural data are examined: measurement choices (whose populations to include, which dimensions to measure, whether to measure mechanisms or just outcomes) are contingent on institutional authority and incentives, not laws of science."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "clinical_algorithm_bias",
+      "health_equity_funding_allocation",
+      "population_representation_in_research"
+    ],
+    "dual_formulation_note": "Health disparities measurement is upstream of specific algorithmic bias constraints (kidney function estimators, pain scales) and institutional allocation constraints (research funding, resource distribution). This constraint defines what counts as a disparity and hence what can be acted upon. Decomposition: measurement_framework (\u03b5\u22480.52, Tangled Rope, focus on infrastructure and standards) vs. demographic_classification (\u03b5\u22480.65, Snare, focus on epistemic violence of racial/ethnic categorization). Both share beneficiaries/victims but differ in scope and resolution pathways."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

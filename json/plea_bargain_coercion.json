@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "plea_bargain_coercion",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "plbg"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Plea Bargain Coercion in Criminal Justice Systems",
+    "topic_domain": "legal/criminal_justice",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "prosecution",
+      "courts",
+      "criminal_justice_administration"
+    ],
+    "victims": [
+      "defendants",
+      "systemic_justice"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Defendant",
+      "comment": "PERSPECTIVE 1: DEFENDANT (SNARE) \u2014 Structurally trapped with no meaningful exit. Faces severe extraction: accepting a plea deal with guaranteed punishment vs. trial with risk of harsher sentence creates asymmetric risk. Suppression is extreme: pretrial detention, inadequate public defense, limited resources to mount defense, and the crushing weight of potential sentences (mandatory minimums, habitual offender enhancements). The system's architecture coerces confession regardless of guilt. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Prosecution",
+      "comment": "PERSPECTIVE 2: PROSECUTION (ROPE) \u2014 Benefits from the plea bargain constraint as a coordination mechanism. Resources are scarce; trials consume vastly more time and expense than plea processing. The constraint solves a genuine collective action problem: without plea incentives, the court system would collapse under caseload. From the prosecution's structural position, the plea bargain is experienced as efficient coordination \u2014 burden-sharing, workload management, predictable outcomes. The extraction toward prosecution is net positive due to arbitrage (discretion over charging and sentencing recommendations)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Public Defense Counsel",
+      "comment": "PERSPECTIVE 3: PUBLIC DEFENSE COUNSEL (TANGLED ROPE) \u2014 Constrained by caseload, time, and funding. The plea bargain system both enables and extracts from this actor: enables by reducing the burden of preparing for trial (genuine coordination function), but extracts by forcing impossible choices between adequate representation and systemic capacity limits. Counsel benefits from plea efficiency but victimized by systemic underfunding. Mixed experience: genuine coordination with asymmetric extraction layered beneath."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Criminal Justice Reform Movement",
+      "comment": "PERSPECTIVE 4: REFORM MOVEMENT (SCAFFOLD) \u2014 Organized actors (innocence projects, bail reform coalitions, sentencing reform advocates) perceive the plea bargain constraint as a temporary problem with structural sunset: conviction based on actual guilt (not coerced confession), speedy trial guarantees, resource adequacy, and transparent discovery would reduce reliance on plea coercion. Low effective extraction because organized agents see an exit path and are building alternative verification (post-conviction exoneration data showing plea coercion harms). Theater low relative to snare perspectives because reform logic is explicit about the dysfunction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Judicial Administration System",
+      "comment": "PERSPECTIVE 5: JUDICIAL ADMINISTRATION (PITON) \u2014 The system that emerged to solve the trial bottleneck has become largely performative. Plea bargains are supposed to be voluntary and knowing, but the theater of the advisement (reading constitutional rights, asking about coercion) is ritual that does not prevent structural coercion. The system sees its own process as degraded \u2014 maintaining the ritual despite knowing the voluntary consent fiction is necessary because alternatives haven't fully replaced it. Theater ratio high (0.58 measured at system level) reflects that much of the 'choice' presented is performative."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, the argument is made that some form of plea accommodation is inherent to any legal system: finite resources mean not all cases can go to trial; efficiency pressures are universal; hence plea incentives are immutable features of justice administration. However, this perspective naturalizes what is actually a contingent institutional choice: plea coercion is not inherent to justice but rather to a specific architecture (adversarial, resource-constrained, case-volume-driven). The engine's false summit detector will identify this as naturalization of policy choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "voluntary_consent_fiction",
+      "question": "At what point does risk-asymmetry in trial vs. plea outcome become so severe that 'knowing and voluntary' consent is a legal fiction?",
+      "resolution_mechanism": "Empirical comparison of actual sentences received via plea vs. trial outcomes; controls for offense severity, prior record, and defendant characteristics; measurement of threshold where trial premium becomes coercive",
+      "impact": "If threshold < 5 years sentence differential: majority of pleas are coerced by definition. If threshold > 15 years: many legitimate efficiency-based pleas are misclassified as coercion.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Threshold at which trial risk premium becomes unconstitutional coercion"
+    },
+    {
+      "id": "adequacy_of_counsel_definition",
+      "question": "What level of public defense resources constitutes 'adequate' counsel sufficient to make plea decision truly informed vs. coerced by inadequacy?",
+      "resolution_mechanism": "Controlled comparison of outcomes in well-resourced vs. under-resourced defense jurisdictions; measurement of time counsel spends on case investigation, discovery review, and plea negotiation; post-conviction audit of whether counsel adequately explained alternatives",
+      "impact": "If threshold is high: most current plea decisions are coerced by inadequate counsel. If threshold is low: under-resourcing is normalized as inherent limit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Resource threshold for adequate counsel in plea negotiation context"
+    },
+    {
+      "id": "pretrial_detention_mechanism",
+      "question": "How much of the plea coercion is attributable specifically to pretrial detention vs. sentence risk differential vs. other systemic factors?",
+      "resolution_mechanism": "Quasi-experimental comparison of plea rates before/after bail reform; stratified analysis of plea decision timing (plea at detention hearing vs. later); measurement of sentence reduction per day of pretrial detention avoided",
+      "impact": "If pretrial detention drives majority of coercion: bail reform alone could substantially reduce snare classification. If distributed across multiple factors: multifaceted reform needed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Causal attribution of plea coercion to pretrial detention mechanism"
+    },
+    {
+      "id": "system_collapse_necessity",
+      "question": "Would elimination of plea coercion mechanisms actually require trial system collapse, or could adequate resourcing sustain higher trial rates?",
+      "resolution_mechanism": "Historical analysis of trial rates in different resource regimes; hypothetical modeling based on other countries' trial rates; measurement of what conviction-by-trial rate is achievable with different funding levels",
+      "impact": "If system would not collapse: plea coercion is unnecessary extraction, not coordination. If collapse is real: snare is constrained by genuine systemic limits and reform requires major resource investment.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether adequate trial access would require system resource expansion beyond current levels"
+    },
+    {
+      "id": "innocence_risk_in_pleas",
+      "question": "What proportion of plea bargain acceptances involve actually innocent defendants?",
+      "resolution_mechanism": "DNA exoneration data; innocence project case analysis; studies of false confession patterns; measurement of innocent plea rate vs. guilty plea rate for same offense",
+      "impact": "If innocence rate > 5%: coercion is extracting false confessions at scale, degrading systemic justice (victim in base_properties). If < 1%: pleas may be mostly accurate despite coercive structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Rate of innocent defendants accepting plea bargains"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Plea bargaining in modern criminal justice systems creates a structural coercion mechanism where defendants face asymmetric choice: accept a guaranteed reduced sentence via guilty plea or face trial with risk of far harsher penalty, often while detained pretrial without resources for adequate defense. This constraint exhibits characteristics of a snare (pure extraction with high suppression) from the defendant's perspective but appears as coordination (efficient case management) from the prosecution's perspective and as a degraded but necessary system (piton) from judicial administration. The extractiveness has increased over the measurement interval as sentence severity has increased, making the trial penalty more extreme relative to plea offers. Theater ratio has risen as the performative aspects of 'voluntary and knowing' plea advisements have become more ritualistic despite known systemic coercion. The constraint is a diagnostic case for how institutional efficiency requirements can generate extraction mechanisms that appear coordinated but are fundamentally asymmetric.",
+    "key_agents": [
+      "Defendants: Primary victim (powerless/trapped) \u2014 structurally coerced into confession; bear maximum extraction",
+      "Prosecution: Primary beneficiary (institutional/arbitrage) \u2014 discretion over charging, discovery, and sentencing recommendations; case resolution efficiency",
+      "Public Defense Counsel: Secondary victim (moderate/constrained) \u2014 caseload pressures and underfunding force inadequate representation; constrained by systemic limits",
+      "Criminal Justice Administration: Institutional actor (institutional/arbitrage) \u2014 maintains system for case-volume management; benefits from plea rate predictability",
+      "Criminal Justice Reform Movement: Organized agents (organized/mobile) \u2014 innocence projects, bail reform coalitions, sentencing reform advocates building alternative mechanisms",
+      "Systemic Justice: Abstract victim (powerless/trapped) \u2014 false convictions, inadequate fact-finding, erosion of trial rights"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and increasing. The baseline extraction arises from the sentence differential between plea and trial outcomes (trial penalty averages 15-25 years longer in federal system depending on offense). This differential is not proportional to case complexity or prosecution cost-savings \u2014 it is designed to incentivize plea acceptance. Over the measurement interval (30-year period covering expansion of mandatory minimums and habitual offender enhancements), the trial penalty has grown, making the coercion more severe. Theater ratio (0.58): Moderate-high. The 'knowing and voluntary' ritual is performative \u2014 judges ask standardized questions, defendants answer scripted responses, but the structural coercion remains invisible. Theater has increased as reform rhetoric has created more elaborate advisements (discussing trial rights, explaining consequences) while the underlying asymmetry has worsened. Suppression (0.75): Very high. Multiple suppression mechanisms operate simultaneously: pretrial detention, inadequate counsel, discovery limitations, bail bondsmen leverage, and mandatory minimum penalties. Suppression is not a single barrier but a system of cascading barriers that make exit (defending at trial) extremely costly.",
+    "directionality_logic": "Directionality derives from the structural relationship to extraction flow. Defendants are pure targets: trapped with no exit, bearing maximum extraction through coerced confession. Prosecution is pure beneficiary: arbitrage exit (can dismiss charges, negotiate, recommend sentences) and institutional power mean they experience negative effective extraction \u2014 the system subsidizes their workload. Public defense counsel is intermediate: constrained exit (cannot refuse overloaded caseload), mixed victim/beneficiary status (harmed by underfunding, benefited by plea efficiency reducing preparation burden). Reform movement is organized with mobile exit \u2014 they are not embedded in the coercive mechanism, they are external organizers building alternatives. The directional asymmetry is stark: the constraint extracts from defendants to benefit prosecutors, with judicial administration maintaining the structure and public defense trapped in the middle.",
+    "perspectival_gap": "The perspectival gap is extreme and structural. The defendant sees pure extraction (Snare) \u2014 a system designed to coerce confession. The prosecution sees coordination (Rope) \u2014 efficient case management solving a genuine collective action problem (trial backlogs would destroy the system if all cases went to trial). The public defense counsel sees mixed coordination and extraction (Tangled Rope) \u2014 the plea system reduces their workload (genuine coordination) while constraining them to inadequate representation (extraction). The reform movement sees a temporary problem with sunset logic (Scaffold) \u2014 bail reform, speedy trial guarantees, discovery rules, and resource adequacy could reduce reliance on coercion. The judicial administration sees its own degraded ritual (Piton) \u2014 performing the role of neutral arbiter while managing a system that is fundamentally coercive. The civilizational observer risks seeing immutable constraints (Mountain) \u2014 'all legal systems need plea mechanisms' \u2014 but structural data reveals this as false naturalization. The snare perspective is not perceptual bias; it is the accurate reading of the constraint's structural asymmetry.",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION RESOLUTION: The mandatrophy here is the tension between 'this is just how the justice system works' (coordination framing, mountain view) and 'this is systemic coercion of the innocent' (snare view). The data resolves the mandatrophy toward Snare: (1) extractiveness is high (0.68) and increasing; (2) suppression is very high (0.75) with multiple mechanisms; (3) beneficiary/victim asymmetry is stark (prosecution benefits, defendants victimized); (4) innocent plea rate is non-trivial (innocence omega variable documents this); (5) the trial penalty is designed to coerce, not to fairly price trial risk. The coordination framing (prosecution side) is genuine but does not negate the extraction framing (defendant side) \u2014 this is exactly the structure of Snare: high extractiveness with coordination framing as cover. The 'immutable to all legal systems' argument is false naturalization: other countries with adequate resources sustain higher trial rates without systemic collapse, showing the coercion is a policy choice, not a law of nature. Mandatrophy resolved: this is a Snare."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "mandatory_minimum_sentencing",
+      "bail_system_pretrial_detention",
+      "public_defense_underfunding"
+    ],
+    "dual_formulation_note": "Plea bargain coercion is downstream of and structurally coupled to three upstream constraints: mandatory minimums (which increase the trial penalty), pretrial detention (which suppresses the defendant's negotiating position), and public defense underfunding (which limits the defendant's capacity to prepare for trial). Each constraint has its own extractiveness; together they create the coercion cascade. The plea bargain story models the integrated effect; upstream stories model the individual mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

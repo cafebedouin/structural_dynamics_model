@@ -1,0 +1,229 @@
+{
+  "header": {
+    "constraint_id": "consumer_data_aggregation_oligopoly",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cdao"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Consumer Data Aggregation Oligopoly",
+    "topic_domain": "digital_economy/platform_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "data_aggregation_platforms",
+      "advertisers",
+      "financial_institutions"
+    ],
+    "victims": [
+      "consumers",
+      "small_competitors",
+      "data_privacy_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Consumer",
+      "comment": "PERSPECTIVE 1: CONSUMER (SNARE) \u2014 Consumers face total data extraction with minimal exit options. Participation in digital services requires data surrender. Privacy policies are incomprehensible cover for data sales. Withdrawal from digital platforms incurs catastrophic life costs (banking, employment, social access). Trapped at maximum structural extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "label": "The Identity-Locked Consumer",
+      "comment": "PERSPECTIVE 2: IDENTITY-LOCKED CONSUMER (SNARE) \u2014 Younger cohorts whose identity formation occurs within the platforms. The constraint is not just material extraction but epistemic \u2014 consent is fused with identity. The consumer cannot imagine privacy as a category or alternatives to surveillance as normal. Data surrender is identity-constituted, not just economically coerced."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Data Aggregation Platform",
+      "comment": "PERSPECTIVE 3: DATA AGGREGATION PLATFORM (ROPE) \u2014 Experiences the constraint as pure coordination: collecting and distributing consumer signals enables matching between advertisers, lenders, and consumers. The platform sees genuine collective action benefit. Extraction is reframed as 'connecting consumers with relevant offers.' Net beneficiary with exit optionality."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Small Competitor",
+      "comment": "PERSPECTIVE 4: SMALL COMPETITOR (TANGLED ROPE) \u2014 Cannot compete without access to aggregated consumer data. The oligopoly constrains market entry but also enables coordination (cannot do business outside the data platforms). High extraction cost, some access benefit, exit is theoretically mobile but practically constrained by network effects and switching costs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Regulatory Coalition",
+      "comment": "PERSPECTIVE 5: REGULATORY COALITION (TANGLED ROPE) \u2014 Data protection regulators (GDPR authorities, FTC, national privacy commissioners) simultaneously benefit from data aggregation infrastructure (monitoring compliance, tax enforcement, security) and bear costs (defending privacy rights against platform extraction). Enforcement is active; exit from coordination is structurally possible but politically costly."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Consent Theater System",
+      "comment": "PERSPECTIVE 6: CONSENT THEATER SYSTEM (PITON) \u2014 Privacy policies, cookie consents, and data-use disclosures are degraded institutional ritual. The theater persists despite dysfunction: consumers do not read or understand policies, meaningful consent is impossible, regulatory compliance occurs through checkbox theatre rather than genuine protection. Primary function (informed consent) has atrophied; constraint remains through institutional inertia and legal theater."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Data Cooperatives and Decentralization Movement",
+      "comment": "PERSPECTIVE 7: DATA COOPERATIVES / DECENTRALIZATION (SCAFFOLD) \u2014 Emerging alternatives (data cooperatives, personal data stores, federation protocols, self-sovereign identity) represent temporary support structures that could enable exit from platform oligopoly. These mechanisms have explicit sunset logic: as they mature and scale, centralized data aggregation's extractive advantage declines. Current constraints are high (bootstrap phase); sunset timeframe is 15-30 years for sufficient maturity and adoption."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Data Physics View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / DATA PHYSICS (MOUNTAIN) \u2014 From a civilizational/universal perspective, information asymmetry about consumer behavior is inherent: aggregators necessarily know more about aggregate patterns than individuals know about themselves. This perspective naturalizes data oligopoly as an immutable law of information physics. However, the structural data contradicts the mountain classification \u2014 the engine will detect this as a false summit, revealing that 'information asymmetry is natural' masks a contingent institutional choice to concentrate data extraction rather than distribute it."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "consent_authenticity_threshold",
+      "question": "At what point does privacy policy complexity become a suppression mechanism rather than a disclosure mechanism?",
+      "resolution_mechanism": "Readability analysis of actual policies; eye-tracking studies of user engagement with consent interfaces; comparison of policy complexity trends against regulatory requirements",
+      "impact": "If suppression is intentional: classification stands as snare. If policies approach authentic disclosure: classification shifts toward tangled_rope with lower suppression component.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether privacy policies function as disclosure or suppression"
+    },
+    {
+      "id": "identity_lock_penetration",
+      "question": "What fraction of consumer base is identity-locked (unable to imagine alternatives) versus materially trapped (unable to afford exit)?",
+      "resolution_mechanism": "Qualitative research on consumer perception of data sharing necessity; generational cohort analysis; correlation between age/digital nativity and exit perception",
+      "impact": "If high identity-lock: constraint's intergenerational persistence is stronger; may require identity frame disruption rather than just policy change. If low identity-lock: most consumers are materially trapped; removal of material barriers could enable exit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative contribution of identity-lock versus material entrapment"
+    },
+    {
+      "id": "network_effect_irreversibility",
+      "question": "How much of the oligopoly's moat derives from genuine network effects (more users = more valuable) versus switching costs and coordination failure (could disperse but doesn't)?",
+      "resolution_mechanism": "Analysis of alternative platforms (Mastodon, Signal, DuckDuckGo adoption curves); historical platform shifts (MySpace\u2192Facebook); cost-benefit models of consumer switching in scenarios with coordinated migration",
+      "impact": "If network effects are weak: constraint is coordination failure (Rope), not structural oligopoly (Snare). If network effects are strong: moat is deep; cooperative/federated alternatives face structural disadvantage.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether oligopoly moat is genuine network effects or coordination failure"
+    },
+    {
+      "id": "regulatory_capture_depth",
+      "question": "Does data regulation (GDPR, CCPA) serve to domesticate oligopoly extraction rather than meaningfully constrain it?",
+      "resolution_mechanism": "Comparative analysis of enforcement intensity; correlation between regulation passage and actual consumer data control; assessment of whether regulations set compliance baseline that oligopolies internalize",
+      "impact": "If regulation is captured: coalface perspective is false \u2014 regulatory enforcement perpetuates snare. If regulation is genuine constraint: coalface perspective is accurate \u2014 exit options exist at regulatory level.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regulation constrains oligopoly or captures regulation"
+    },
+    {
+      "id": "alternative_platform_viability",
+      "question": "Can federation protocols, data cooperatives, and personal data stores provide sufficient functionality and adoption to displace centralized aggregation within the scaffold timeframe?",
+      "resolution_mechanism": "Technical feasibility studies of federated identity and data infrastructure; adoption curve modeling for decentralized alternatives; user experience parity assessment against centralized incumbents",
+      "impact": "If viable: scaffold perspective is structural \u2014 sunset is real and timeline is realistic. If unviable: scaffold is aspirational; constraint persists as snare with no exit mechanism.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether decentralized alternatives are technically and economically viable"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The consumer data aggregation oligopoly represents a structurally pure extraction mechanism masked by coordination framing. A small number of platforms (Google, Meta, Amazon, Apple, and regional equivalents) have consolidated control over consumer behavioral data through network effects, switching costs, and lack of viable alternatives. This constraint exhibits multiple DR types across perspectives, revealing the diagnosis: it is a snare from the consumer's position, a rope from the platform's position, a piton from the regulatory ritual position, and a scaffold from the decentralization movement's position. The constraint's extractiveness has increased over 15 years as data collection depth has expanded (from behavioral to locational to biometric to social graph), regulatory theater has proliferated without material enforcement impact, and consumers have shifted from active opt-in to passive acceptance. The theater ratio reflects that privacy policies, cookie consents, and GDPR compliance mechanisms create a performative appearance of consumer control while actual data extraction accelerates.",
+    "key_agents": [
+      "Consumers: Primary victims (powerless/trapped \u2192 identity_locked) \u2014 face total data extraction with no material exit; younger cohorts are identity-locked to platform participation",
+      "Data Aggregation Platforms: Primary beneficiaries (institutional/arbitrage) \u2014 capture extraction through network effects and switching costs; reframe extraction as coordination benefit",
+      "Small Competitors: Secondary victims (powerful/constrained) \u2014 cannot compete without platform data access; extraction is coordination cost with limited benefit",
+      "Advertisers and Financial Institutions: Secondary beneficiaries (organized/mobile) \u2014 benefit from targeting and risk assessment powered by aggregated data; have exit optionality but prefer aggregation",
+      "Regulators: Organized actors (organized/mobile) \u2014 simultaneously benefit from infrastructure and bear costs of rights protection; enforcement constrained by lobbying and cross-border coordination failures",
+      "Consent Theater System: Institutional inertia (institutional/arbitrage) \u2014 privacy policies, cookie banners, and compliance checkboxes persist despite non-functionality; primary function (informed consent) has atrophied",
+      "Data Cooperatives and Federation Advocates: Organized actors (organized/constrained) \u2192 analytical observer (analytical/analytical) \u2014 building scaffold structures with sunset logic; currently low market share but structurally viable alternatives",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional choices as information physics"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High. Platforms extract significant behavioral, locational, and inferential data from consumers with minimal compensation. The measurement progression (0.35\u21920.48\u21920.58 over 15 years) reflects deepening data collection (from click behavior to biometric inference to social graph) and expanding monetization vectors (advertising\u2192credit\u2192health predictions). Early-period extraction was lower because data collection was narrower and consumers had more plausible deniability about data use. Suppression (0.68): High. Consumers face multiple suppression mechanisms: structural (no viable digital alternative platforms), epistemic (incomprehensible privacy policies), and identity-based (younger cohorts don't know non-surveillance digital world exists). Switching costs are astronomical for consumers deeply embedded in platform ecosystems. Theater ratio (0.55): Moderate-high. Regulatory theater (GDPR compliance, cookie consent, data subject access requests) creates performative control mechanisms while actual extraction continues. However, theater is not maximal (0.72+) because some real friction exists \u2014 GDPR enforcement is selective but real, some consumers do exercise rights, some alternatives are emerging. The theater has increased over the interval as regulatory compliance mechanisms proliferated without corresponding enforcement intensity.",
+    "perspectival_gap": "The perspectival divergence is driven entirely by beneficiary/victim status and exit options. The platform perspective (institutional/arbitrage/beneficiary) sees coordination; the consumer perspective (powerless/trapped/victim) sees extraction. These are not measurement differences \u2014 they reflect genuine structural asymmetry in how costs and benefits distribute. The identity-locked consumer's perspective (powerless/identity_locked/victim) is critical: it shows that even at biographical time horizon, constraints on identity-constituted agents may appear as ropes (the agent perceives changeability) while trapped agents perceive mountains (immutability). Here, the identity-locked consumer still classifies as snare because the constraint is so severe that even identity-fused agents recognize extraction, but their pathway to exit is cognitive frame-breaking, not structural barrier removal. The scaffold perspective (organized/constrained) reveals that the snare is not immutable \u2014 organized actors with some mobility can build alternatives \u2014 but the bootstrap phase is long (15-30 years) and current extraction is high.",
+    "directionality_logic": "Directionality is derived from the beneficiary/victim declarations and exit options. Data aggregation platforms are beneficiaries with arbitrage exit \u2192 low d \u2192 negative experienced extraction. Consumers are victims with trapped/identity_locked exit \u2192 high d \u2192 high f(d) \u2192 high \u03c7. Regulators are both beneficiaries (from data infrastructure) and victims (of pressure to permit extraction) \u2192 moderate d. Small competitors are victims with constrained exit \u2192 high d but with some coordination benefit \u2192 moderate-high \u03c7. The identity-locked consumer's directionality differs from the trapped consumer: trapped exit + victim status drives d\u22480.95, while identity_locked exit + victim status with some structural mobility drives d\u22480.85. The sigmoid f(d) transforms these into experienced extractiveness values, accounting for the agent's power level and temporal horizon. Institutional beneficiaries (platforms, advertisers) have canonical d values that produce negative \u03c7 (they experience subsidization). Powerless victims at global scope experience maximum \u03c7 (0.66-1.42 range).",
+    "mandatrophy_analysis": "SNARE RESOLUTION: This constraint avoids mandatrophy (false labeling of extraction as coordination) through the victim/beneficiary asymmetry. The platform's coordination narrative (connecting consumers with ads) is genuine as inter-platform coordination \u2014 the extraction occurs in the asymmetry between platform benefit and consumer cost. The GDPR and privacy regulation create the appearance of mandatrophy resolution (are we regulating extraction or coordinating data use?) but actually perpetuate it \u2014 regulatory compliance becomes a performance that domesticates extraction rather than eliminates it. The constraint resolves as pure snare because: (1) genuine coordination is available only to beneficiary-side agents (platforms and advertisers), (2) consumers have no real coordination role \u2014 they do not consensually provide data, they are prevented from opting out, (3) regulatory theater masks extraction without preventing it. The analytical observer who sees this as immutable information physics (mountain perspective) is committing false naturalization \u2014 the constraint is snare from the powerless perspective, which means it is imposed rather than inevitable."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_surveillance_infrastructure",
+      "algorithmic_credit_scoring",
+      "behavioral_advertising_targeting"
+    ],
+    "dual_formulation_note": "Consumer data aggregation is the upstream constraint enabling downstream extraction in credit scoring, advertising targeting, and behavioral prediction markets. The oligopoly structure (high concentration, network effects, switching costs) creates the data concentration. The measurement progression shows both deepening extraction (extractiveness rising) and increasing theater (consent mechanisms proliferating without impact). This constraint family spans economic extraction (pricing/targeting), epistemic extraction (behavioral inference), and identity extraction (social graph commodification)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.52
+    }
+  ]
+}

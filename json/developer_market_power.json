@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "developer_market_power",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "devmp"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Developer Market Power and Platform Lock-In",
+    "topic_domain": "technology/economics/labor",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "established_developers"
+    ],
+    "victims": [
+      "emerging_developers",
+      "developer_workforce",
+      "platform_users"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Emerging Developer",
+      "comment": "PERSPECTIVE 1: EMERGING DEVELOPER (SNARE) \u2014 New developers face near-total platform dependency. Ecosystem lock-in through specialized tooling, SDK requirements, and platform-specific languages creates structural confinement. Career advancement requires platform adoption; alternatives exist but carry high switching costs. No genuine exit option."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Mid-Career Developer",
+      "comment": "PERSPECTIVE 2: MID-CAREER DEVELOPER (TANGLED ROPE) \u2014 Moderate power through specialized skills and portability, but constrained by ecosystem switching costs and network effects. Benefits from platform's coordination function (standardized APIs, distribution channels, community). Extraction flows asymmetrically: platform captures developer data, attention, and productivity gains while controlling feature access and revenue terms."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Enterprise Developer Organization",
+      "comment": "PERSPECTIVE 3: ENTERPRISE DEVELOPER ORGANIZATION (ROPE) \u2014 Organized through internal governance and cross-platform deployment strategies. Mobile: can invest in multi-platform presence, build abstraction layers, negotiate directly with platforms. Experiences the constraint primarily as coordination: standardized APIs enable large-scale development. Extraction is minimal because organization has structural exit capacity and negotiating power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 4: PLATFORM OPERATOR (TANGLED ROPE) \u2014 Institutional beneficiary with arbitrage options. Coordinates ecosystem through APIs, SDKs, and governance structures. Extracts through platform control: rent collection on transactions, data harvesting, behavioral control through algorithm and feature gating. Genuine coordination function (enables distributed development) coexists with asymmetric extraction (captures surplus value, controls feature access)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Regulatory Framework",
+      "comment": "PERSPECTIVE 5: REGULATORY FRAMEWORK (PITON) \u2014 Competition policy and labor frameworks designed for industrial-era markets increasingly theatrical in application to platform ecosystems. Antitrust actions and labor regulations exist but enforcement is fragmented, slow, and vulnerable to regulatory capture. Theater ratio high: apparatus persists through institutional inertia while actual gatekeeping mechanisms evolve to evade traditional regulatory levers."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal perspective, network effects and economies of scale in software platforms create inevitable consolidation: the coordination benefit of a single dominant platform outweighs the costs of switching. This perspective naturalizes market concentration as an immutable economic law. However, historical data (IBM, Microsoft, Android fragmentation) contradict the false summit \u2014 dominant platforms have lost power; the constraint is contingent on specific institutional choices, not inevitable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "network_effects_magnitude",
+      "question": "How much of the measured lock-in derives from genuine network effects vs. artificial barrier creation and switching cost engineering?",
+      "resolution_mechanism": "Comparative analysis of platforms with genuine vs. engineered switching costs; measurement of developer churn and migration when switching costs are reduced",
+      "impact": "If primarily network effects: constraint is closer to rope (coordination with natural scalability premium). If primarily engineered barriers: constraint is closer to snare (extraction masquerading as coordination).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether lock-in is driven by network effects or engineered barriers"
+    },
+    {
+      "id": "developer_exit_capacity",
+      "question": "Is the high suppression score (0.65) structural (developers genuinely cannot exit) or identity-locked (developers cannot imagine themselves outside the platform ecosystem)?",
+      "resolution_mechanism": "Post-exit trajectory studies: when developers leave platforms, do new barriers emerge or does career mobility persist? Identity-fusion analysis: do developers resist exit options due to material costs or cognitive framing?",
+      "impact": "If structural suppression: snare classification is correct. If identity-locked: the constraint binds cognitive rather than material barriers; reclassify trapped perspective as identity_locked and shift from snare to rope at biographical horizon.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether developer suppression is structural or identity-based"
+    },
+    {
+      "id": "coalition_emergence_threshold",
+      "question": "Under what conditions do powerless emerging developers achieve organized power through coalition formation (unions, collective negotiation, open-source movements)?",
+      "resolution_mechanism": "Historical case analysis: Linux kernel, Apache Foundation, open-source governance transitions. Measurement of developer sentiment and collective action readiness.",
+      "impact": "If threshold is low and frequently breached: powerless perspective could shift to organized. Classification would shift from snare to tangled_rope or even rope. If threshold is high and rarely breached: suppression is effective and snare classification is sustained.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Coalition formation threshold for developer organizing"
+    },
+    {
+      "id": "platform_succession_mechanism",
+      "question": "What structural conditions enable or prevent new platforms from displacing incumbents? Is the constraint a feature of current platform architecture or an inevitable consequence of network effects?",
+      "resolution_mechanism": "Historical analysis of platform transitions (MySpace\u2192Facebook, Yahoo\u2192Google, desktop\u2192mobile). Identification of institutional vs. technical factors enabling succession.",
+      "impact": "If succession is mechanically possible: the constraint is contingent and potentially scaffoldable (temporary, with sunset). If succession is structurally blocked: the constraint is a snare or mountain. The civilizational mountain perspective is false if succession is historically attainable.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether platform succession is mechanically possible"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Developer market power reflects the structural asymmetry between platforms controlling the computational substrate and developers who depend on those platforms to reach users. The constraint operates at multiple levels: economic (platform rent extraction through transaction fees, data monetization, and feature gating), technical (SDK lock-in, platform-specific languages, proprietary tooling), and behavioral (algorithmic control over developer visibility, preference ranking, and feature access). The constraint exhibits genuine coordination functions \u2014 standardized APIs, distribution infrastructure, community resources \u2014 that create real value. Simultaneously, these coordination mechanisms serve as lock-in levers: the same infrastructure that enables development also controls developer access, visibility, and revenue. The extractiveness has increased monotonically over the measurement interval (0.35\u21920.58), reflecting increasing platform power and developer dependency. Theater ratio growth (0.22\u21920.48) indicates platform legitimation narratives (developer-friendly SDKs, 'we're building community') increasingly obscuring extraction mechanisms.",
+    "key_agents": [
+      "Emerging Developers: Primary victims (powerless/trapped) \u2014 new entrants with minimal platform exit options, bearing full dependency on platform governance, feature access, and algorithmic visibility",
+      "Mid-Career Developers: Secondary victims (moderate/constrained) \u2014 portable skills but constrained by ecosystem switching costs and network effects; benefits from coordination but bears asymmetric extraction",
+      "Enterprise Developer Organizations: Secondary beneficiaries (organized/mobile) \u2014 multi-platform presence and negotiating power, experience primarily coordination benefits",
+      "Platform Operators: Primary beneficiaries (institutional/arbitrage) \u2014 capture rent through transaction fees, data harvesting, feature control, and ecosystem gatekeeping",
+      "Regulatory Frameworks: Institutional observer (powerful/mobile) \u2014 labor law and competition policy increasingly theatrical in addressing platform control; enforcement fragmented and slow",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing platform dominance as inevitable network effect outcome rather than contingent institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Platform operators extract through multiple channels: transaction fees (15-30% typical), data harvesting (user behavior analytics, traffic patterns), and behavioral control (algorithmic ranking, feature gating). The extraction is not total because platforms do provide genuine coordination value and some developers capture surplus (top 1% earn substantial revenue). The 0.58 value reflects persistent but not maximal extraction \u2014 platforms cannot extract 100% without killing the ecosystem, and some developers have exit optionality. Suppression (0.65): High. Barriers to exit include: specialized ecosystem knowledge (platform-specific APIs, languages, tooling), network effects (users concentrated on dominant platforms), career path dependency (platform experience valued in hiring), and data lock-in (platform controls developer analytics and access data). Suppression is not total because multi-platform development is feasible at scale and open-source alternatives exist, but the costs are material. Theater ratio (0.48): Moderate-low. Platform discourse emphasizes community-building, developer support, and ecosystem value-add. These claims are partially true but obscure the extraction mechanisms. Theater has grown from 0.22 (early platforms, more clearly extraction-focused) to 0.48 (mature platforms, sophisticated legitimation narratives). Not fully theatrical (0.70+) because technical coordination value is genuine; not minimal (0.20) because legitimation narratives are substantial. Tangled Rope classification is correct: genuine coordination (APIs, distribution, tooling) coexists with asymmetric extraction (rent capture, data harvesting, feature control).",
+    "directionality_logic": "Emerging developers with trapped exit experience maximum directionality toward the target (d \u2248 0.95): they cannot leave, must absorb extraction, and have no negotiating power. The sigmoid f(d) produces f(0.95) \u2248 1.42, amplifying their experienced extractiveness. Mid-career developers with constrained exit experience moderate directionality (d \u2248 0.70): they can exit at cost, but the costs are material enough that they remain. Enterprise organizations with arbitrage options experience low directionality (d \u2248 0.20): they can deploy across platforms, negotiate terms, and build abstraction layers; they benefit from standardized coordination mechanisms without bearing primary extraction. Platform operators as beneficiaries with arbitrage (d \u2248 0.05) experience negative effective extractiveness (they are the extractors, not the targets). The perspectival gap is driven by this directionality variance: the same constraint structure (platform control + API coordination) produces snare experience (trapped), tangled rope (constrained), rope (mobile, organized), and tangled rope from the operator (beneficiary).",
+    "perspectival_gap": "The constraint manifests as extraction (snare) to powerless new developers with no exit capacity, as hybrid coordination-extraction (tangled rope) to mid-career developers who can exit at cost, as pure coordination (rope) to enterprise organizations with cross-platform strategies and negotiating power, as beneficial coordination (tangled rope) to the platform operator, as degraded regulation (piton) to policy frameworks, and as natural law (false summit mountain) to analysts who naturalize network effects. This perspectival range is not ambiguity \u2014 it is precision measurement showing how structural asymmetry manifests differently depending on position. The snare\u2192rope shift depends entirely on exit capacity, not on changing the constraint itself.",
+    "mandatrophy_analysis": "The mandatrophy resolves through recognizing that platform market power is neither pure coordination (rope) nor pure extraction (snare), but a tangled hybrid where coordination mechanisms serve dual purposes: they genuinely solve collective action problems (standardized APIs enable distributed development) AND they serve as lock-in levers (the same APIs that enable development also control access and visibility). The platform benefits from conflating these functions \u2014 describing extraction levers as coordination benefits. The classification as tangled rope captures this precisely: the constraint must be analyzed as two simultaneous mechanisms, not as one phenomenon mislabeled. The perspectival gap (snare\u2192rope by exit options) shows that the question 'is this extraction or coordination?' is answered differently by agents with different exit capacities. For trapped agents, coordination mechanisms are experienced as extraction levers; for mobile agents, they are experienced as genuine coordination. Both are correct structural readings of the same constraint."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "app_store_gatekeeping",
+      "venture_capital_concentration",
+      "technical_debt_accumulation"
+    ],
+    "dual_formulation_note": "Developer market power decomposes into distinct constraints by measurement basis: API standardization lock-in (\u03b5\u22480.42, tangled rope) is separable from rent extraction mechanisms (\u03b5\u22480.68, snare) and regulatory theater (\u03b5\u22480.35, piton). These stories are linked through platform operator behavior but represent distinct structural phenomena with different extractiveness profiles and causal mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

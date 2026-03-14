@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "welfare_bureaucracy_efficiency",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "welfeff"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Welfare Bureaucracy Efficiency Constraint",
+    "topic_domain": "social_policy/administrative_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "administrative_agencies",
+      "political_gatekeepers",
+      "cost_control_interests"
+    ],
+    "victims": [
+      "welfare_recipients",
+      "program_accessibility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Welfare Recipient",
+      "comment": "PERSPECTIVE 1: WELFARE RECIPIENT (SNARE) \u2014 Trapped by economic dependency and geographic immobility; cannot exit the system despite high extraction costs through bureaucratic friction. Faces supplication requirements, documentation burdens, means testing surveillance, and benefit clawback penalties. The system extracts compliance time and dignity without meaningful coordination function for the recipient."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Caseworker",
+      "comment": "PERSPECTIVE 2: CASEWORKER (TANGLED ROPE) \u2014 Constrained by caseload mandates and career incentives tied to fraud prevention metrics rather than service delivery. Genuinely coordinates recipient needs with available resources, but this coordination function is subordinated to compliance enforcement. Experiences extraction through workload intensification and responsibility without authority."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Administrative Agency",
+      "comment": "PERSPECTIVE 3: ADMINISTRATIVE AGENCY (ROPE) \u2014 Experiences the constraint as coordination: managing benefit distribution at scale requires verification procedures, documentation standards, and consistency rules. Net beneficiary through cost control, fraud mitigation framing, and institutional legitimacy through demonstrated procedural rigor. Can arbitrage between benefit levels and administrative investment."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Social Justice Coalition",
+      "comment": "PERSPECTIVE 4: SOCIAL JUSTICE COALITION (SCAFFOLD) \u2014 Organized advocates see welfare bureaucracy complexity as a solvable coordination problem with a sunset clause. Universal Basic Income, direct cash transfers, and simplified eligibility pathways represent alternative coordination mechanisms. Theater high (means testing performance) but organizing groups have exit paths and policy influence. Sees the current system as temporary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Fraud Prevention Apparatus",
+      "comment": "PERSPECTIVE 5: FRAUD PREVENTION APPARATUS (PITON) \u2014 Institutional machinery that has become substantially performative. Fraud detection consumes significant resources relative to actual fraud detected; the apparatus persists through institutional inertia and political theater around 'welfare queen' narratives rather than through demonstrated efficiency. Theater ratio high \u2014 the surveillance and verification rituals are maintained to demonstrate toughness, not because they optimize benefit delivery."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a formal economics perspective, administrative overhead is an immutable cost of any transfer system: verification is logically necessary to prevent arbitrary claiming, and verification inherently requires documentation, proof of eligibility, and review mechanisms. However, the structural data reveals this as a false summit \u2014 the 'inherent to administration' framing naturalizes what are actually contingent institutional design choices about how much verification to demand."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fraud_rate_threshold_ambiguity",
+      "question": "What fraud rate would justify the current verification burden, and is that burden calibrated to the actual fraud risk or to political theater?",
+      "resolution_mechanism": "Comparative analysis of welfare fraud rates across OECD systems with different verification regimes; cost-benefit analysis of fraud prevention spending relative to prevented losses",
+      "impact": "If actual fraud < 5%: current verification burden is uncalibrated extraction (reclassify snare confirmation). If fraud > 15%: verification regimes justified (downgrade extraction severity). Most evidence suggests 2-4% actual fraud, indicating significant over-verification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Calibration of verification burden to actual fraud risk"
+    },
+    {
+      "id": "simplification_political_feasibility",
+      "question": "Can welfare systems be simplified to universal cash transfers without political collapse of the benefit coalition?",
+      "resolution_mechanism": "Longitudinal tracking of public support for simplified systems; pilot program outcomes from Alaska Permanent Fund, Finland, Kenya, and Stockton CA experiments",
+      "impact": "If feasible: scaffold classification confirmed, sunset timeline < 15 years. If infeasible: current system lock-in is structural not institutional (reclassify toward mountain or piton).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Political feasibility of welfare system simplification"
+    },
+    {
+      "id": "caseworker_autonomy_suppression_mechanism",
+      "question": "Is caseworker behavior driven by genuine legal/technical constraints on benefit disbursement, or by organizational culture and career incentives that could be reformed?",
+      "resolution_mechanism": "Ethnographic comparison of caseworker behavior under different performance metrics (fraud prevention vs recipient satisfaction); analysis of discretionary authority actually exercised vs formally available",
+      "impact": "If constraints structural (legal): suppression legitimate cost of verification. If constraints cultural: suppression is organizational extraction from both recipients and caseworkers (reclassify toward snare for both groups).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Source of caseworker behavior constraints: legal necessity vs organizational incentives"
+    },
+    {
+      "id": "dignity_extraction_quantification",
+      "question": "How much of welfare bureaucracy's extraction is financial (administrative costs, benefit clawbacks) vs dignity/autonomy costs (humiliation, surveillance, supplication rituals)?",
+      "resolution_mechanism": "Recipient surveys on experienced extraction; comparative analysis of physical health and mental health outcomes between recipients in high-burden vs low-burden verification regimes",
+      "impact": "If dignity costs dominate: extractiveness calculation may underestimate true burden (reclassify toward pure snare). If financial costs dominate: current calculation justified.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Relative magnitude of financial vs dignity extraction costs"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 21,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 21,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 21
+  },
+  "commentary": {
+    "narrative_context": "Welfare bureaucracy efficiency creates a structural constraint between the genuine coordination problem of distributing limited resources fairly and the institutional incentive to deny claims through administrative friction. The system exhibits the full range of DR classifications depending on perspective. From the recipient's view, bureaucratic requirements function as pure extraction \u2014 documentation burdens, means testing surveillance, and benefit clawback penalties extract compliance labor and dignity without meaningful coordination function. From the administrator's view, the same requirements are legitimate coordination mechanisms preventing arbitrary claiming and ensuring fairness. From the political perspective, welfare complexity serves gatekeeping functions: discretionary administrative hurdles reduce claims and containing 'undeserving' recipients becomes possible through procedural tightening. The constraint's theater ratio (0.68) reflects that significant administrative activity is performative: fraud detection consumes resources disproportionate to actual fraud detected; means testing surveillance demonstrates toughness rather than optimizing benefit delivery. The measurement trajectory shows both theater and extractiveness rising over the interval \u2014 not because the welfare problem grew harder to coordinate, but because political pressure for cost control intensified the administrative burden without removing the underlying coordination necessity.",
+    "key_agents": [
+      "Welfare Recipients: Primary victim (powerless/trapped) \u2014 economically dependent, geographically immobile, face documented burden of bureaucratic proof requirements and benefit clawbacks with no exit option",
+      "Administrative Agencies: Primary beneficiary (institutional/arbitrage) \u2014 benefit from cost control through friction, institutional legitimacy through rigor, and discretionary gatekeeping authority",
+      "Caseworkers: Secondary victim/moderator (moderate/constrained) \u2014 constrained by caseload mandates and metrics rewarding fraud prevention over service delivery; genuinely coordinate resources but subordinated to enforcement logic",
+      "Political Gatekeepers: Secondary beneficiary (organized/mobile) \u2014 benefit from ability to restrict welfare access through administrative tightening; can arbitrage between benefit level and procedural burden",
+      "Social Justice Coalition: Organized opposition (organized/mobile) \u2014 see current system as temporary, advocating for simplified cash transfers and universal basic income with explicit sunset logic",
+      "Fraud Prevention Apparatus: Institutional actor (institutional/arbitrage) \u2014 maintains performative verification machinery through inertia and political theater despite low cost-benefit ratio on actual fraud detection"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, reflecting that welfare bureaucracy extracts both financial and dignity costs from recipients. The financial extraction includes administrative overhead (staff, systems), benefit clawbacks through income testing, and opportunity costs of time spent on documentation. The dignity extraction includes supplication requirements, surveillance, and humiliation through means testing. However, extractiveness is not maximal (not 0.80+) because some administrative cost is genuinely necessary coordination \u2014 verifying eligibility, preventing duplicate claims, and resource allocation at scale require documentation and verification. The constraint is hybrid: real coordination function plus asymmetric extraction. Suppression (0.62): Moderate-high. Recipients face substantial barriers to exit: economic dependency makes welfare necessary; geographic mobility is limited for low-income populations; alternative support systems (family, community) are increasingly unavailable; and documentation requirements create paper-thin barriers that are technically surmountable but practically formidable. Suppression is not total because some recipients do strategically work around the system, navigate it successfully, or advocate for reform. Theater ratio (0.68): High and rising. The measurement trajectory shows theater increasing from 0.52 to 0.68 over 21 periods \u2014 proportionally larger than extractiveness increase (0.42 to 0.58). This indicates that the constraint is degrading toward piton territory: verification apparatus is becoming more performative (fraud prevention theater) and less functionally optimized. The rise suggests political pressure for 'toughness' is driving procedural intensification beyond what actual fraud rates would justify.",
+    "perspectival_gap": "The primary perspectival gap is between the recipient (snare: pure extraction, no exit) and the administrator (rope: coordination, net benefit). This gap is NOT a measurement error \u2014 it reflects genuine structural difference. The recipient and administrator are solving different problems: the recipient needs benefits; the administrator needs to allocate resources according to eligibility rules and political constraints. Their agreement about the classification would suggest one of them is being denied or misrepresented. The secondary gap is between the administrator's rope (sees coordination) and the fraud prevention apparatus's piton (sees degraded ritual). The administrator still believes verification is functional; the apparatus shows rising theater with declining fraud detection efficiency, indicating institutional inertia. The coalition's scaffold perspective introduces a temporal dimension: they see the current system as a solvable problem with a sunset, not a structural feature. The analytical observer's mountain is revealed as a false summit \u2014 'administration requires overhead' naturalizes what are actually contingent design choices about acceptable verification burden.",
+    "directionality_logic": "Each perspective's d value derives from their structural relationship to the extraction flow. Recipients classified as trapped powerless agents: dependency + no exit = d \u2248 0.95, yielding high f(d) \u2248 1.42, producing high \u03c7. Caseworkers classified as constrained moderate agents: resource constraints + career incentive misalignment + genuine service function = d \u2248 0.60, yielding f(d) \u2248 0.85, producing moderate \u03c7. Administrators classified as beneficiary institutional agents with arbitrage options: cost control benefits + discretionary authority + ability to shift burden = d \u2248 0.15, yielding f(d) \u2248 -0.01, producing low or negative \u03c7 (they experience coordination, not extraction). Coalition classified as mobile organized agents: exit pathways exist (policy alternatives documented), shared commitment to reform = d \u2248 0.40, yielding f(d) \u2248 0.40, producing moderate \u03c7 with sunset perspective. The fraud prevention apparatus classified as institutional arbitrage agent: cost control interest, institutional inertia = d \u2248 0.20, yielding low \u03c7, but piton classification derives from theater gate, not from high experienced extraction.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing how the same structural arrangement (documentation requirements, verification procedures, eligibility determination) functions as coordination for some agents and extraction for others. The mandatrophy resolves through recognition that BOTH perspectives are structurally correct \u2014 the system IS solving a coordination problem AND extracting from recipients. The tangled rope classification is the accurate one: genuine coordination function (preventing arbitrary claiming, allocating scarce resources) exists ALONGSIDE asymmetric extraction (recipients bear disproportionate burden of verification). The mandatrophy risk is misclassifying this as either pure rope (ignoring extraction costs and dignity harms) or pure snare (denying that any coordination function exists). The administrative perspective sees only the coordination problem and genuinely solved it according to their criteria. The recipient perspective sees only the extraction and genuinely experiences it as uncompensated burden. Both are correct \u2014 the constraint is hybrid. The measurement trajectory showing rising theater with rising extractiveness provides a warning: if theater continues rising and extractiveness continues rising, the constraint may degrade from tangled rope toward snare as the extraction function increasingly dominates the coordination function. The scaffold perspective prevents false naturalization by showing that alternative coordination mechanisms (cash transfers, simplified eligibility) can solve the coordination problem with lower extraction burden, proving that the current extractiveness is not inherent to the coordination task."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "disability_eligibility_gatekeeping",
+      "unemployment_benefit_access_friction",
+      "medicaid_enrollment_barriers"
+    ],
+    "dual_formulation_note": "Welfare bureaucracy efficiency decomposes into domain-specific constraint stories: eligibility determination (coordination problem), verification procedures (mixed coordination/extraction), and administrative gatekeeping (institutional inertia). Each has distinct \u03b5 values. This story focuses on the system-level constraint; downstream stories address specific benefit program friction points."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

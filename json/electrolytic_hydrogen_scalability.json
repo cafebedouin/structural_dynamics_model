@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "electrolytic_hydrogen_scalability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "elh2"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Electrolytic Hydrogen Scalability Constraint",
+    "topic_domain": "energy/industrial_decarbonization",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "electrolyzer_manufacturers",
+      "renewable_energy_operators",
+      "industrial_users_with_hydrogen_alternatives"
+    ],
+    "victims": [
+      "stranded_fossil_fuel_workers",
+      "grid_infrastructure_communities",
+      "developing_economies_without_electric_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Stranded Fossil Fuel Workers",
+      "comment": "PERSPECTIVE 1: STRANDED FOSSIL FUEL WORKERS (SNARE) \u2014 No exit from regional coal/oil infrastructure collapse driven by hydrogen transition narrative. Cannot relocate without abandoning family/property. Extraction runs toward industrial hydrogen operators; suppression is structural (no alternative employment, geographic isolation, skill mismatch). Bears full cost of the transition; receives no coordination benefit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Grid Infrastructure Communities",
+      "comment": "PERSPECTIVE 2: GRID INFRASTRUCTURE COMMUNITIES (SNARE) \u2014 Communities hosting massive new electricity demands for electrolyzer clusters face environmental costs (grid strain, water depletion, thermal pollution) while electricity price benefits accrue to distant manufacturers. Trapped by geography; suppression structural (no meaningful voice in siting decisions, environmental impact distributed across region)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Industrial Hydrogen Users",
+      "comment": "PERSPECTIVE 3: INDUSTRIAL HYDROGEN USERS (TANGLED ROPE) \u2014 Face both genuine coordination problem (need low-carbon H2 for emissions targets) and extraction by electrolyzer manufacturers (long-term contracts, high capital costs, vendor lock-in). Can exit by retaining fossil hydrogen or switching processes, but at substantial cost. Mixed experience: coordination benefit (decarbonization pathway) + extraction cost (pricing, contract terms)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Electrolyzer Manufacturers",
+      "comment": "PERSPECTIVE 4: ELECTROLYZER MANUFACTURERS (ROPE) \u2014 Net beneficiaries. Experience constraint as pure coordination problem: standardizing electrolyzer deployment, grid integration, hydrogen distribution networks. Extraction runs toward this agent via government subsidies, long-term purchase agreements, and technology lock-in. Can arbitrage between markets (selecting high-subsidy regions). Low suppression \u2014 high agency and multiple exit options."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Climate Policy Coalition",
+      "comment": "PERSPECTIVE 5: CLIMATE POLICY COALITION (SCAFFOLD) \u2014 International climate agreements, EU Green Deal, hydrogen production targets frame electrolytic H2 as temporary bridge technology with sunset clause: long-term goal is direct industrial electrification or next-generation H2 (biological, plasma-catalytic). Current subsidy intensity (0.45 theater ratio) will decline as technology matures or is phased out. Low effective extraction because coalition has agency and sees explicit exit path."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "label": "Renewable Energy Operators (Identity-Locked)",
+      "comment": "PERSPECTIVE 6: RENEWABLE ENERGY OPERATORS (IDENTITY_LOCKED) \u2014 Structurally mobile but identity-fused with 'clean energy' narrative. Can exit by liquidating wind/solar assets and switching to fossil revenue, but this would contradict professional identity and community standing. Bears both coordination benefit (stable hydrogen demand) and extraction cost (grid management complexity, contract volatility). Identity lock prevents exercising mobility even though exit barriers are primarily financial."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Coal Infrastructure (Piton View)",
+      "comment": "PERSPECTIVE 7: LEGACY COAL INFRASTRUCTURE (PITON) \u2014 Coal-fired power plants retrofitted for 'hydrogen-ready' operation represent theater: they maintain operational status through performative hydrogen transition plans while continuing fossil fuel dependence. Theater ratio indicates that much of the hydrogen scalability narrative is aspirational rather than functionally coordinated. The constraint persists through institutional inertia (existing coal plants, entrenched supply chains) rather than genuine coordination function."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Thermodynamic Natural Law View",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / THERMODYNAMIC VIEW (MOUNTAIN) \u2014 From a fundamental physics perspective, electrolytic hydrogen scalability faces immutable constraints: electrolyzer efficiency plateaus near ~75% (thermodynamic ceiling), electricity requirements scale linearly with production, grid infrastructure cannot be arbitrarily expanded without losses. These physical limits appear as natural law. However, structural data (beneficiaries, victims, suppression mechanisms) suggests this is a false summit: the 'scalability bottleneck' is partly policy-contingent (subsidy duration, grid investment) rather than purely physical."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "electrolyzer_efficiency_plateau",
+      "question": "Is the observed 75% electrolyzer efficiency ceiling a fundamental thermodynamic limit or a contingent engineering plateau reversible with sufficiently motivated research?",
+      "resolution_mechanism": "Comparative analysis of electrolyzer efficiency gains over decades; identification of theoretical maximum (Gibbs free energy ~286 kJ/mol H2) vs. empirical best-case; investment in advanced electrochemistry (plasma-assisted, photoelectrochemical) pathways",
+      "impact": "If fundamental: electrolytic H2 scalability faces hard natural-law limits (mountain classification confirmed). If contingent: efficiency ceiling is an engineering extraction opportunity; more extraction can be prevented with R&D investment (snare partially resolved to tangled_rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether electrolyzer efficiency ceiling is thermodynamic or engineering-contingent"
+    },
+    {
+      "id": "green_hydrogen_subsidy_credibility",
+      "question": "Are government 'green hydrogen' subsidies genuine infrastructure investment with sustained commitment, or performative policy theater that will collapse when political attention shifts?",
+      "resolution_mechanism": "Historical comparison of hydrogen subsidy duration vs. solar/wind subsidy trajectories; budget commitment beyond 2030; binding international agreements with enforcement mechanisms",
+      "impact": "If genuine: scaffold sunset is real \u2014 electrolytic H2 is temporary bridge with planned phaseout. If performative: constraint will oscillate between high/low suppression based on political cycles (piton-like theater). Classification shifts from Scaffold to Piton or persistent Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Credibility of green hydrogen subsidy commitment"
+    },
+    {
+      "id": "stranded_worker_retraining_feasibility",
+      "question": "Can coal-region workers structurally transition to electrolyzer manufacturing/maintenance roles, or is the skill-location mismatch insurmountable?",
+      "resolution_mechanism": "Post-transition employment tracking; retraining program completion rates; wage parity between legacy and new roles; geographic location of electrolyzer manufacturing clusters",
+      "impact": "If feasible: suppression is contingent (policy-changeable); victims can become beneficiaries. If infeasible: suppression is structural; stranded worker snare classification is correct and extraction is permanent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether coal-region workers can transition to hydrogen sector roles"
+    },
+    {
+      "id": "grid_water_availability_constraint",
+      "question": "How much of the electrolytic H2 scaling pathway is constrained by water scarcity in electrolyzer-dense regions (Germany, Middle East, US Southwest)?",
+      "resolution_mechanism": "Hydrological models of freshwater withdrawal for electrolyzer clusters; comparison with industrial/agricultural competing demands; seawater electrolyzer viability assessment",
+      "impact": "If water is hard constraint: electrolyzer deployment geographically limited (snare for grid communities expands to include water-stressed regions). If seawater offsets: constraint is more a coordination problem than extraction (tangled_rope may downgrade toward rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Water availability limit on electrolytic hydrogen scaling"
+    },
+    {
+      "id": "renewable_grid_parity_timing",
+      "question": "When does renewable electricity generation sufficiently exceed peak demand that electrolyzer utilization reaches viability thresholds (>60% capacity factor) without curtailment subsidy?",
+      "resolution_mechanism": "Grid models with renewable penetration scenarios; economic analysis of electrolyzer operating hours without subsidies; comparison across regions (Denmark, Chile, Australia)",
+      "impact": "If achieved by 2030: scaffold sunset is structural (economic viability removes need for extraction). If after 2050: suppression and extraction persist indefinitely (constraint becomes institutional, not temporary).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for renewable grid parity enabling subsidy-free electrolyzer operation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Electrolytic hydrogen scalability represents a structural constraint embedded within the global energy transition. The constraint operates at multiple levels: as a technical coordination problem (standardizing electrolyzer deployment, grid integration), as an extractive mechanism (electrolyzer manufacturers capturing subsidy value and vendor lock-in), as a displacement problem (stranded fossil fuel workers and grid-stressed communities bearing costs), and as a performative policy narrative (hydrogen-ready coal plants maintaining operations). The constraint exhibits all six DR types from different structural positions, making it a rich exemplar of how energy decarbonization creates new extraction mechanisms while appearing to solve old ones. The extractiveness trajectory (0.35\u21920.58) reflects increasing capital intensity and subsidy dependence; the theater trajectory (0.40\u21920.55) indicates growing gap between rhetorical scalability claims and actual deployment rates. The constraint is a genuine tangled rope from the analytical center: real coordination function (solving low-carbon hydrogen supply) coupled with asymmetric extraction (beneficiaries capturing subsidy value, victims absorbing stranded asset costs and grid stress). The piton perspective reveals that much electrolytic hydrogen policy is aspirational rather than functionally integrated \u2014 retrofit coal plants claim hydrogen-readiness while continuing fossil operation, a classic theater signature.",
+    "key_agents": [
+      "Electrolyzer Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 capture government subsidies, long-term purchase agreements, and technology lock-in with industrial users",
+      "Industrial Hydrogen Users: Mixed (organized/constrained) \u2014 need low-carbon H2 for emissions compliance but face vendor lock-in and contract volatility",
+      "Renewable Energy Operators: Structurally mobile but identity-locked (moderate/identity_locked) \u2014 benefit from stable hydrogen demand but cannot exit despite mobility because professional identity fused with clean energy narrative",
+      "Stranded Fossil Fuel Workers: Primary victim (powerless/trapped) \u2014 no exit from regional coal infrastructure collapse; bear transition costs without coordination benefit",
+      "Grid Infrastructure Communities: Primary victim (powerless/trapped) \u2014 host massive electricity demands and environmental externalities; receive no benefit from distributed hydrogen production value",
+      "Climate Policy Coalition: Organized agents (organized/mobile) \u2014 see electrolytic H2 as temporary bridge with explicit sunset (2050 phaseout toward direct electrification)",
+      "Legacy Coal Infrastructure: Institutional theater (institutional/arbitrage) \u2014 maintains operational status through performative hydrogen transition plans; perpetuates constraint through inertia"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint exhibits genuine extraction mechanisms: electrolyzer manufacturers capture subsidy value and establish vendor lock-in; industrial users must sign 10-20 year contracts at prices above fossil hydrogen; grid communities absorb environmental externalities without revenue share. Extractiveness is not maximal (0.70+) because legitimate coordination benefits exist: electrolytic H2 provides genuine low-carbon pathway for hard-to-electrify industrial processes, and this coordination function is non-negligible. The trajectory from 0.35 to 0.58 reflects increasing capitalization and subsidy dependence as deployment accelerates. Suppression (0.48): Moderate. Barriers include high capital costs for electrolyzer installation, lack of hydrogen distribution infrastructure, grid capacity constraints in dense deployment regions, and water availability in arid regions. Suppression is not severe because alternatives exist (retaining fossil hydrogen, switching industrial processes, direct electrification) even though they are costly. Theater ratio (0.55): Moderate. Significant performative elements: hydrogen production targets are repeatedly ratcheted up without corresponding infrastructure deployment; coal plants retrofitted for 'hydrogen-ready' operation continue fossil fuel use; policy announcements emphasize future scalability rather than present capability. But theater is not dominant (0.70+) because some genuine deployment is occurring and technical progress is real. The gap between rhetorical claims and actual deployment rates drives the theater metric.",
+    "perspectival_gap": "Each agent's perspective reflects their structural relationship to extraction flow. The beneficiary (electrolyzer manufacturer) sees the constraint as a coordination problem requiring standardization and infrastructure investment \u2014 their lived experience is solving technical challenges, not extracting. The victim (stranded worker) sees no coordination benefit and all extraction \u2014 they are simply displaced. The mixed agent (industrial user) experiences both genuine coordination (solving decarbonization problem) and real extraction (vendor lock-in, contract terms). The identity-locked agent (renewable operator) would rationally exit if their identity were not fused with the constraint, but cannot access this rational exit because their professional identity is constituted through commitment to clean energy. The climate policy coalition sees the constraint as temporary (scaffold) because their power and scope give them the ability to see and plan the exit. The coal infrastructure maintains theater (piton) because institutional inertia preserves the appearance of hydrogen-readiness even as the constraint's extraction mechanisms remain. The analytical observer risks naturalizing the constraint as mountain (physical efficiency limits) without recognizing the policy-contingent suppression mechanisms that make it extractive.",
+    "directionality_logic": "Directionality is derived from beneficiary/victim status and exit capacity. Electrolyzer manufacturers (beneficiary + arbitrage exit) have low d (~0.10-0.15): they experience the constraint as coordination. Stranded workers (victim + trapped exit) have high d (~0.95): they bear maximum extraction. Industrial users (mixed: both beneficiary of decarbonization pathway and victim of vendor lock-in + constrained exit) have moderate-high d (~0.55-0.70). Renewable operators (beneficiary of stable demand + constrained exit that is only identity-locked rather than material) have reduced d (~0.25-0.35) derived from beneficiary status but elevated by identity lock. Grid communities (victim + trapped exit) have very high d (~0.90-0.95). The chi calculation applies f(d) to derive effective extractiveness: low-d beneficiaries experience negative or near-zero chi (the constraint subsidizes them), while high-d victims experience high chi (they bear full cost). The scope modifier \u03c3(S) scales chi: global scope (1.2x) amplifies extraction visibility; regional scope (0.9x) dampens it relative to base. The piton classification derives from theater gate (0.55 > threshold) rather than from high chi, indicating performative maintenance of constraint status despite degraded functional role.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The constraint is classified as Tangled Rope because it possesses both genuine coordination function (solving low-carbon hydrogen supply for hard-to-electrify processes) AND asymmetric extraction (electrolyzer manufacturers capturing subsidy value and lock-in; stranded workers bearing costs; grid communities absorbing externalities). The mandatrophy is resolved by recognizing that the coordination and extraction are structurally coupled: the same institutional mechanisms (long-term contracts, government subsidies, monopoly-like electrolyzer manufacturing) that enable deployment also create extraction opportunities. Neither function dominates; both are essential to understanding the constraint's operation. The scaffold perspective (climate policy coalition) reveals that the extraction mechanisms are intended to be temporary (with phaseout toward direct electrification by 2050), which mitigates mandatrophy risk: a sunset clause legitimizes temporary high extraction if the goal is genuine infrastructure transition. However, the piton perspective suggests that actual operational sunset may be theater \u2014 coal plants claim hydrogen-readiness without genuine transition, and subsidy duration may outlast the scaffold's theoretical endpoint. This creates a conditional mandatrophy: IF the sunset is real and enforced, Tangled Rope is the correct classification; IF the sunset is aspirational and actual policy perpetuates the constraint indefinitely, the classification should degrade to Snare (extraction without sunset)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "renewable_grid_parity",
+      "fossil_fuel_stranded_assets",
+      "water_scarcity_industrial_demand"
+    ],
+    "dual_formulation_note": "Electrolytic hydrogen scalability decomposes into three structurally distinct constraints: (1) renewable_grid_parity (\u03b5~0.15, Rope) \u2014 purely coordination of electricity generation timing, (2) fossil_fuel_stranded_assets (\u03b5~0.72, Snare) \u2014 pure extraction from coal/oil workers and communities, (3) water_scarcity_industrial_demand (\u03b5~0.55, Tangled Rope) \u2014 mixed coordination of water allocation and extraction from arid-region communities. The present story treats electrolytic H2 as the primary constraint; the others are downstream dependencies that share institutional mechanisms (subsidy policy, infrastructure investment) but have distinct extraction mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ]
+}

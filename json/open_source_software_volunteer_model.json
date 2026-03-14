@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "open_source_software_volunteer_model",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "oss_volunteer"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Open Source Software Volunteer Labor Extraction Model",
+    "topic_domain": "technology/labor/digital_commons",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "corporate_adopters",
+      "end_users",
+      "platform_operators"
+    ],
+    "victims": [
+      "volunteer_contributors",
+      "maintainer_burnout",
+      "software_sustainability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Volunteer Contributor",
+      "comment": "PERSPECTIVE 1: VOLUNTEER CONTRIBUTOR (SNARE) \u2014 A developer contributing to a widely-used open source project faces total extraction: massive corporations depend on their unpaid labor for critical infrastructure, yet the contributor has no negotiating power, no revenue share, no guarantee of recognition or employment outcome. Exit is costly (reputation damage in the technical community, loss of project authority). The suppression is structural: the ideology of 'meritocracy' and 'giving back' naturalizes the extraction, preventing collective action. Trapped at biographical horizon."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "label": "The Maintainer (Identity-Locked)",
+      "comment": "PERSPECTIVE 2: MAINTAINER WITH IDENTITY FUSION (SNARE via identity_locked) \u2014 The primary maintainer experiences extraction differently than casual contributors. They have structurally mobile options (they could stop, delegate, demand payment) but are identity-locked to the project: their professional identity, reputation, and self-concept are constituted through stewardship of the project. Exit would require becoming a different person professionally. Burnout accelerates but identity lock prevents exit. The constraint persists not through material barriers but through internalized obligation framing ('I am the person who maintains this')."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Employed Contributor",
+      "comment": "PERSPECTIVE 3: EMPLOYED CONTRIBUTOR (TANGLED ROPE) \u2014 A developer working for a tech company that uses and contributes to open source experiences genuine coordination (collaboration across company boundaries, shared code reduces redundant development) alongside asymmetric extraction (their employer captures value from collective ecosystem, while individual contributors remain unpaid). They are constrained by employment (cannot exit without career cost) but also benefit from project reputation and skill development. Mixed experience."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Corporate Adopter",
+      "comment": "PERSPECTIVE 4: LARGE CORPORATION (ROPE) \u2014 Google, Meta, Amazon, etc. experience the OSS volunteer model as pure coordination: they collaborate via open source standards, reduce development costs through shared infrastructure, and gain interoperability benefits. They can arbitrage: use the software, contribute when strategically useful, withdraw if licensing terms change. No meaningful extraction experienced because they have full exit capacity and genuine coordination benefit. The constraint appears as the cooperative mechanism it partially is."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Meritocratic Ideology",
+      "comment": "PERSPECTIVE 5: MERITOCRATIC OSS IDEOLOGY (PITON) \u2014 The narrative that 'the best contributors rise and are rewarded by reputation / employment' was functional in early open source (1990s\u20132000s when recruitment from OSS communities was an actual path to employment). Over a generational timescale, this story has become increasingly performative: the same reputation/employment pathway is now available to far fewer contributors, yet the ideology persists as the mechanism that naturalizes the extraction. Theater ratio (0.55) reflects the ongoing ritualistic celebration of volunteer contribution despite degraded functional connection between contribution and reward."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Sustainable Funding Coalition",
+      "comment": "PERSPECTIVE 6: SUSTAINABLE FUNDING MOVEMENT (SCAFFOLD) \u2014 Organizations like the Linux Foundation, Software Freedom Conservancy, Tidelift, and individual sponsorship platforms (GitHub Sponsors, Patreon) represent a structured alternative to pure volunteer extraction. This organized response has sunset logic: as funding and sustainability norms mature, the pure volunteer model's extraction mechanism loses force. However, suppression remains high because corporate incentives favor the zero-cost extraction model, and adoption of sustainability mechanisms is constrained by coordination costs and incumbent power."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Critical View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational scope, the OSS volunteer model is revealed as a global extraction mechanism masquerading as meritocracy. Billions in corporate value rest on unpaid developer labor, organized through identity-lock and suppressed by myth. The coordination benefits are real (standards, interoperability) but vastly outweighed by asymmetric extraction. This perspective sees the constraint as pure snare, not mixed. The mythological framing (meritocracy, community giving) is the suppression mechanism."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "employment_conversion_rate",
+      "question": "What fraction of OSS contributors actually convert reputation into employment or economic reward, and how has this rate changed over time?",
+      "resolution_mechanism": "Longitudinal survey data: track OSS contributor cohorts by contribution history; measure employment outcomes and income changes post-contribution",
+      "impact": "If conversion rate > 30%: piton classification is incorrect, and meritocratic pathway may still be functional (scaffold). If conversion rate < 10%: piton confirmed, and ideology is performative. This determines whether the 'reputation reward' suppression mechanism is real or mythological.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Rate of employment/economic conversion for OSS contributors"
+    },
+    {
+      "id": "corporate_dependency_concentration",
+      "question": "What fraction of critical OSS projects have >50% of dependency traffic from a single corporation or top-5 corporations?",
+      "resolution_mechanism": "Dependency graph analysis: measure traffic from corporate deployments vs community; identify single points of corporate dependency control",
+      "impact": "If concentration > 60%: extraction is highly asymmetric and concentrated (snare confirmed). If concentration < 30%: extraction may be more diffuse (tangled rope from more perspectives).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Corporate dependency concentration in critical OSS projects"
+    },
+    {
+      "id": "burnout_causation_mechanism",
+      "question": "Is OSS maintainer burnout primarily caused by volunteer labor volume (structural extraction) or by identity fusion preventing delegation (cognitive lock)?",
+      "resolution_mechanism": "Post-burnout trajectory analysis: maintainers who exit vs those who restructure projects to distribute labor; measure whether psychological identity-lock persists after material exit",
+      "impact": "If primarily structural: snare classification holds. If primarily identity fusion: identity_locked exit option is diagnostic. If both: decompose into separate constraints (labor extraction vs identity dynamics).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal mechanism of OSS maintainer burnout"
+    },
+    {
+      "id": "sustainability_funding_scalability",
+      "question": "Can GitHub Sponsors, Tidelift, and Linux Foundation funding models scale to cover all critical OSS maintenance, or are they inherently limited to high-visibility projects?",
+      "resolution_mechanism": "Funding distribution analysis: measure median sustainability funding across all critical projects vs required maintenance cost; track adoption rate over next 5 years",
+      "impact": "If scalable: scaffold sunset is real, and alternative pathways can replace volunteer extraction within a generational timescale. If limited: scaffold perspective is aspirational, and pure volunteer extraction persists for invisible infrastructure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scalability of OSS sustainability funding models"
+    },
+    {
+      "id": "free_rider_corporate_benefit",
+      "question": "What is the quantified commercial value captured by corporations using critical OSS projects without contributing maintenance resources?",
+      "resolution_mechanism": "Economic analysis: shadow pricing of equivalent commercial software; comparison of corporate value capture vs funding contribution",
+      "impact": "If value >> funding: asymmetric extraction is massive (snare confirmed with quantified magnitude). If value \u2248 funding: tangled rope is more accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantified corporate benefit from free-riding on OSS"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 1991,
+    "end": 2026
+  },
+  "commentary": {
+    "narrative_context": "The open source software volunteer model represents a structural extraction mechanism that has powered the digital economy for three decades. Billions of dollars in corporate value rest on unpaid developer labor, organized through a combination of meritocratic mythology, identity fusion (maintainers locked into stewardship roles), and ideological suppression (framing contribution as 'giving back' rather than 'labor extraction'). The constraint exhibits contradictory classification from different structural positions: corporations see pure coordination (rope), maintainers see pure extraction (snare), employed contributors see mixed mechanisms (tangled rope), and organized sustainability efforts see a temporary problem with an emerging alternative pathway (scaffold). The constraint's extraction has increased significantly over the 35-year interval as the economic value of software infrastructure has grown while volunteer compensation mechanisms have remained stagnant or deteriorated (piton degradation of the meritocratic pathway).",
+    "key_agents": [
+      "Volunteer Contributors: Primary victims (powerless/trapped) \u2014 bear unpaid labor costs; exit is economically and reputationally costly",
+      "Project Maintainers: Secondary victims (powerless/identity_locked) \u2014 structurally mobile but identity-fused to projects; burnout cascade from impossible maintenance loads",
+      "Corporate Software Users: Primary beneficiaries (institutional/arbitrage) \u2014 capture billions in value from free/zero-maintenance software; full exit capacity and coordination benefits",
+      "Employed Contributors: Secondary beneficiary (moderate/constrained) \u2014 employees of companies using OSS; experience both coordination benefits and extraction constraints",
+      "Sustainability Movement: Organized alternative (organized/constrained) \u2014 Linux Foundation, Software Freedom Conservancy, sponsorship platforms building sunset mechanisms",
+      "Meritocratic Ideology: Suppression mechanism (institutional/arbitrage) \u2014 narrative that contribution converts to employment/reputation; increasingly performative as this conversion rate declines",
+      "Analytical Observer: Systemic view (analytical/analytical) \u2014 sees the constraint as a global extraction mechanism sustained by myth and identity fusion"
+    ],
+    "logic_rationale": "Extractiveness (0.62): High and increasing over the interval. At t=0 (1991), OSS was peripheral to commercial software, and volunteer contribution was genuinely motivated by community building and intrinsic satisfaction. At t=20 (2026), the same projects are critical infrastructure for financial systems, healthcare, military operations, and tech platforms \u2014 the extraction is massive because the value captured is massive. The increase from 0.35 \u2192 0.62 reflects this trajectory. Suppression (0.68): Very high. The suppression mechanisms include: (1) Meritocratic ideology \u2014 'your reputation is payment' \u2014 which naturalizes the extraction; (2) Identity fusion \u2014 maintainers cannot exit without psychological crisis; (3) Collective action barrier \u2014 distributed, anonymous contributors cannot coordinate to demand compensation; (4) Employment dependence \u2014 contributing to OSS is gambled-on career development, creating pressure to accept extraction in hope of future reward. Theater ratio (0.55): Moderate and rising. The rituals include: celebrating 'top contributors,' awarding merit badges, maintaining contributor codes of conduct, annual open source summits \u2014 performative recognition that masks the absence of material compensation. The theater has increased as the employment-pathway payoff has declined (piton degradation).",
+    "perspectival_gap": "The critical gap is between the powerless contributor's experience (maximum extraction) and the corporate adopter's experience (pure coordination benefit, negative extraction). The same structural arrangement \u2014 volunteers provide unpaid labor, corporations capture value \u2014 registers as snare from one position and rope from another. This is not a measurement problem or ambiguity \u2014 it is a genuine asymmetry in the constraint's operation. The beneficiary truly does experience it as coordination; the victim truly does experience it as extraction. The gap persists because the power differential (institutional vs powerless) and exit options (arbitrage vs trapped) are real structural facts, not observational artifacts. The maintainer's identity_locked position bridges these: structurally they could exit (making them more mobile than powerless contributors) but psychologically they cannot (making them trapped in a different way). The maintenance crisis over 2000\u20132026 shows that identity lock + psychological obligation + identity-constituted-through-project creates a burnout cascade that neither pure material extraction nor pure psychological fusion alone would produce.",
+    "directionality_logic": "Directionality (d) is determined by each agent's structural position: their power, exit options, and relationship to the extraction flow. Volunteer contributors with trapped exit options and powerless status experience d \u2248 0.95 (full targets). Maintainers with identity_locked exit options have d \u2248 0.89 (high targets but with some psychological mobility if identity frame shifts). Employed contributors with constrained exit and both beneficiary and victim status have d \u2248 0.55 (mixed). Corporations with arbitrage exit options and full beneficiary status have d \u2248 0.05 (full beneficiaries). The sigmoid f(d) transforms these to experienced extractiveness: f(0.95) \u2248 1.42, f(0.89) \u2248 1.28, f(0.55) \u2248 0.75, f(0.05) \u2248 -0.12. Scope modifier \u03c3(global) = 1.2, so \u03c7 = 0.62 \u00d7 \u03c3(d) \u00d7 1.2. For powerless contributors: \u03c7 \u2248 1.05, revealing they experience the constraint as highly extractive. For corporations: \u03c7 \u2248 -0.09, revealing they experience it as cooperative (negative extraction = subsidy).",
+    "mandatrophy_analysis": "DIAGNOSTIC EXEMPLAR OF HYBRID MECHANISMS: This constraint avoids mandatrophy (confusion between coordination and extraction) by precisely distinguishing them. The constraint genuinely contains both: real coordination benefits exist (standards, interoperability, reduced redundant development), alongside real asymmetric extraction (value capture without compensation). The classification as tangled_rope at the analytical level correctly captures this hybrid. The misclassification risk is the piton perspective \u2014 if the meritocratic ideology remains sufficiently functional, the constraint could be dismissed as 'just coordination with optional recognition.' But the measurable degradation of the meritocratic pathway (employment conversion rates declining, theater ratio rising) reveals the ideology as performative. The organizational responses (sustainability funding, codes of conduct, contributor recognition programs) are attempts to restore the functional connection between contribution and reward \u2014 they are scaffold-logic interventions in what has become primarily snare extraction. The mandatrophy is resolved by the perspectival decomposition: all six types are simultaneously true from their respective structural positions; the presheaf of perspectives over the observation site is the complete answer, not any single type."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_infrastructure_dependency",
+      "technology_worker_precarity",
+      "platform_developer_ecosystem_control"
+    ],
+    "dual_formulation_note": "The OSS volunteer model is upstream of several downstream constraints: corporations' dependency on OSS creates fragility if the volunteer base collapses (digital_infrastructure_dependency); unpaid OSS work subsidizes the tech industry and depresses wages (technology_worker_precarity); platform operators' control of OSS hosting (GitHub) creates additional extraction leverage (platform_developer_ecosystem_control). Each downstream constraint has its own \u03b5; link them to reveal the full extraction architecture."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ]
+}

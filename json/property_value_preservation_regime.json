@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "property_value_preservation_regime",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pvpr"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Property Value Preservation Regime",
+    "topic_domain": "economic/social/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "existing_property_owners",
+      "real_estate_financial_institutions"
+    ],
+    "victims": [
+      "prospective_first_time_buyers",
+      "renters_seeking_ownership",
+      "lower_income_households"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Excluded First-Time Buyer",
+      "comment": "PERSPECTIVE 1: EXCLUDED FIRST-TIME BUYER (SNARE) \u2014 Trapped by artificially elevated property values sustained through zoning restrictions, building quotas, and speculative dynamics. No realistic path to homeownership within biographical horizon. Suppression is structural: capital requirements, credit barriers, competing demand from institutional investors. Maximum experienced extraction \u2014 bear full cost of the regime with no exit option or coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Renting Household",
+      "comment": "PERSPECTIVE 2: RENTING HOUSEHOLD (TANGLED ROPE) \u2014 Constrained by down-payment requirements and competing bidders; also benefits from stable neighborhood conditions (schools, services) that value preservation maintains. Real estate markets provide housing coordination (matching supply to demand) alongside extraction (wealth transfer to existing owners through scarcity rent). Exit possible but costly \u2014 relocation, credit damage, opportunity cost. Moderate extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Property Owner with Institutional Capital",
+      "comment": "PERSPECTIVE 3: PROPERTY OWNER WITH INSTITUTIONAL CAPITAL (ROPE) \u2014 Benefits from value preservation mechanisms without bearing suppression costs. Can arbitrage across markets, exit freely through sale, or refinance. Experiences the regime as pure coordination: property value stability enables equity extraction, refinancing, and investment decisions. Negative experienced extraction \u2014 the constraint subsidizes this agent."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Financial Institution",
+      "comment": "PERSPECTIVE 4: FINANCIAL INSTITUTION (ROPE) \u2014 Banks and mortgage lenders benefit from stable property values (reduces default risk, collateral volatility). Value preservation mechanisms enable mortgage products and lending arbitrage. Can exit entirely through portfolio reallocation. Experiences the regime as enabling coordination with asymmetric benefit \u2014 they capture spread and risk reduction without bearing suppression costs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Existing Homeowner",
+      "comment": "PERSPECTIVE 5: EXISTING HOMEOWNER (TANGLED ROPE) \u2014 Benefits from value preservation (equity gains, neighborhood stability) but also constrained by the regime. Cannot freely subdivide, renovate, or develop property (zoning restrictions). Values create intergenerational wealth but also create lock-in (selling means exit from community, schools, networks). Moderate extraction \u2014 extraction runs toward financial institutions more than toward this agent, but constraints are real."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Zoning Enforcement Apparatus",
+      "comment": "PERSPECTIVE 6: ZONING ENFORCEMENT APPARATUS (PITON) \u2014 Local government zoning and building codes maintain the value preservation regime through performative enforcement. The original coordination function (preventing incompatible uses, protecting neighborhood character) has largely atrophied; the regime now primarily serves wealth concentration. Maintained through institutional inertia and political capture rather than genuine coordination need. Theater ratio high \u2014 elaborate planning procedures, design review boards, neighborhood opposition procedures perform the role of 'careful stewardship' while blocking supply response."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a broad view, property value preservation appears as an immutable consequence of scarcity, geography, and human preference. Values must rise in high-demand areas because land is finite. This perspective naturalizes the regime as inevitable. However, the structural data reveals this as a false summit: extraction through artificial supply restriction (zoning, building caps) is distinguishable from genuine scarcity-driven appreciation. Policy choices create the regime; they are not laws of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "natural_vs_artificial_scarcity",
+      "question": "What portion of property value appreciation reflects genuine land scarcity vs. artificial supply restriction through zoning and regulatory barriers?",
+      "resolution_mechanism": "Comparative analysis: jurisdictions with vs. without restrictive zoning; price elasticity studies; counterfactual modeling of housing supply under reduced-restriction scenarios",
+      "impact": "If artificial scarcity > 50%: extraction component is dominant, snare/tangled_rope classifications strengthened. If artificial < 30%: regime is closer to natural law, mountain classification gains credibility.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Natural vs. artificial scarcity component in property value"
+    },
+    {
+      "id": "neighborhood_stability_value",
+      "question": "How much of owner benefit comes from value preservation vs. from genuine neighborhood public goods (schools, services, safety)?",
+      "resolution_mechanism": "Hedonic pricing analysis isolating neighborhood amenities from scarcity rent; measurement of correlation between zoning stringency and amenity quality",
+      "impact": "If public goods > 40%: coordination function is stronger, tangled_rope framing solidifies. If public goods < 15%: coordination is post-hoc rationalization for extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Share of owner benefit from public goods vs. scarcity rent"
+    },
+    {
+      "id": "financial_institution_dependency",
+      "question": "Does the property value preservation regime depend structurally on financial institution participation, or could alternative financing mechanisms (community land trusts, owner-financed transactions, cooperative models) sustain housing coordination without the regime?",
+      "resolution_mechanism": "Analysis of successful alternative financing models; mortgage market dynamics without value preservation guarantees; pilot program outcomes",
+      "impact": "If alternatives viable: financial institution perspective shifts from rope (pure beneficiary) to constrained (could operate differently but profit incentives enforce status quo). Directionality of regime toward this agent becomes more visible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural dependency of regime on financial institution participation"
+    },
+    {
+      "id": "exit_cost_trajectory",
+      "question": "Is suppression (down-payment barriers, competition, credit requirements) increasing or decreasing over the measurement interval?",
+      "resolution_mechanism": "Time-series analysis of median down-payment as % of property value; credit score requirements for approval; first-time buyer share of market",
+      "impact": "If increasing: snare classification strengthened, regime becoming more extractive over time. If stable: tangled_rope framing holds, extraction not accumulating.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Trajectory of suppression (exit barriers) over time"
+    },
+    {
+      "id": "regime_beneficiary_concentration",
+      "question": "Has wealth concentration among property owners increased relative to non-owners over the interval?",
+      "resolution_mechanism": "Gini coefficient analysis of property owner vs. renter wealth; intergenerational wealth transfer patterns; correlation of zoning stringency with wealth inequality",
+      "impact": "If concentration increased: extraction component of regime is accumulating, mandatrophy risk (disguised snare as tangled rope). If stable: regime is functioning as partial coordination.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Wealth concentration trajectory among property owners"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.46
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The property value preservation regime encompasses the cluster of policies, zoning restrictions, building quotas, and financial incentives that stabilize or increase residential property values. Ostensibly designed to preserve neighborhood character and protect homeowner equity, the regime functions as a mechanism for wealth concentration and exclusion. The constraint generates coordination benefits (stable neighborhoods, predictable neighborhoods, investment security) alongside severe asymmetric extraction (exclusion of new entrants, wealth transfer to existing owners). This is a canonical tangled rope: genuine coordination function exists (neighborhoods require some stability to provide schools, services, safety), but the coordination mechanism is layered with extractive mechanisms (artificial scarcity, financial institution capture, zoning gatekeeping). The regime exhibits drift over the measurement interval: extractiveness rises from 0.38 to 0.58 as down-payment requirements, credit barriers, and property costs increase relative to household income. Theater ratio rises from 0.42 to 0.58 as the regime's performative elements (design review boards, community input processes, 'livability' metrics) become more elaborate while supply response capability remains constrained.",
+    "key_agents": [
+      "Existing Property Owners: Primary beneficiaries (institutional/arbitrage, moderate/constrained) \u2014 benefit from equity gains and neighborhood stability; captured by the regime but with real options for exit",
+      "First-Time Buyers: Primary victims (powerless/trapped) \u2014 excluded by down-payment barriers and competing demand; no realistic path to ownership within biographical horizon",
+      "Renters: Secondary victims (moderate/constrained) \u2014 benefit from neighborhood stability but bear suppression costs; can exit through relocation but at high cost",
+      "Financial Institutions: Secondary beneficiaries (institutional/arbitrage) \u2014 profit from stable collateral values and mortgage origination; no suppression burden",
+      "Local Government Zoning Apparatus: Institutional maintainer (institutional/arbitrage) \u2014 enforces the regime through planning procedures and building restrictions; sees its coordination function as degraded (piton perspective)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing policy choice as inevitable economic law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and increasing. The regime transfers wealth from new entrants to existing owners through artificial scarcity. Down-payment requirements, competing institutional investor bidders, and credit barriers create suppression proportional to household income, making extraction severe for lower-income agents. The value has increased from 0.38 to 0.58 over 20 years as down-payment ratios rise (from median ~10% to ~15% of property value in many markets) while median household incomes stagnate relative to property prices. This trajectory indicates extraction is accumulating, not stabilizing. Suppression (0.65): High and structural. Barriers to property ownership include capital requirements (down payment), credit score minimums, competing institutional demand, zoning-limited supply, and longer approval timelines. These barriers affect powerless and moderate agents disproportionately. Suppression does not decrease as household wealth increases \u2014 it affects the bottom 60% of earners uniformly high. Theater ratio (0.58): Moderate-high. Zoning enforcement includes elaborate design review processes, neighborhood input procedures, environmental assessments, and 'livability' metrics \u2014 performative procedures that maintain the appearance of careful stewardship while functioning primarily to restrict supply. The theater has increased as planning bureaucracy has elaborated (from ~0.42 to ~0.58) while supply response has actually declined. Claimed type (Tangled Rope): Requires beneficiaries + victims + active enforcement. The regime coordinates genuine neighborhood public goods (schools, services, safety correlate with stable property ownership). But it accomplishes this coordination through artificial scarcity and wealth transfer rather than through direct public provisioning. The enforcement is active: zoning boards, building review committees, lending standards all actively maintain the regime.",
+    "perspectival_gap": "The perspectival gap centers on whether the regime's coordination function (neighborhood stability, public goods) is genuinely integral or post-hoc rationalization. Existing homeowners sincerely experience the stability benefit and coordination value. Powerless renters and first-time buyers see only the extraction: they are excluded from the benefit (cannot own) while bearing the suppression cost (cannot afford). The analytical observer risks conflating genuine coordination (schools require stable tax base, neighborhoods require long-term resident investment) with false natural law (values must rise because land is finite). The gap is diagnostic: if zoning and building restrictions were removed, would neighborhood public goods degrade? If yes, the coordination function is real and the regime is justified as tangled rope with a misaligned extraction mechanism. If no, the coordination is a cover story and the regime is a snare with elaborate theater.",
+    "directionality_logic": "Directionality (d) values are derived from structural position: existing property owners with arbitrage options (can sell, refinance, relocate) experience low d (~0.15 derived from institutional + arbitrage + beneficiary). Financial institutions derive similar d (~0.10, full beneficiary with maximum exit). First-time buyers with trapped exit experience high d (~0.92, powerless + trapped + victim). Renting households with constrained exit experience moderate-high d (~0.68, moderate + constrained + victim). The sigmoid f(d) amplifies the difference: high d values produce \u03c7 multipliers > 1.0, low d values produce \u03c7 multipliers < 0.3. This explains why the powerless agent experiences extraction as maximum (snare) while the institutional beneficiary experiences it as zero or negative (rope). The regime's effective extractiveness \u03c7 scales differently for each agent based on their structural position, not based on variation in the regime itself.",
+    "mandatrophy_analysis": "MANDATROPHY RISK DETECTED: The regime risks classification as a snare disguised as tangled rope. The coordination function (neighborhood stability, public goods) is real but may not require the extraction mechanism that the regime employs. Alternative mechanisms (direct public provisioning of schools and services, community land trusts, reduced zoning restrictions with alternative stabilization) could provide the same coordination with lower or zero extraction. The extractiveness trajectory (rising from 0.38 to 0.58) suggests the regime is accumulating rent-seeking layers rather than maintaining stable coordination. Mandatrophy resolution: Establish whether removing the regime's supply restriction mechanisms would degrade neighborhood public goods. If neighborhood quality depends structurally on scarcity-driven exclusion, the tangled rope classification holds. If neighborhood quality depends on public investment and long-resident composition (achievable under higher-density scenarios), the regime is a snare with a coordination cover story. The measurement trajectory (rising extractiveness, rising theater) suggests the latter: the regime has shifted from tangled rope (mixed) toward snare (pure extraction) over the 20-year interval. This represents degradation of the coordination function \u2014 a drift toward extraction dominance."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "financial_institution_capital_concentration",
+      "intergenerational_wealth_inequality",
+      "urban_development_zoning_capture"
+    ],
+    "dual_formulation_note": "The property value preservation regime decomposes into multiple structurally distinct constraints: (1) zoning coordination (genuine neighborhood public goods function, likely rope or tangled rope), (2) financial institution value capture (extraction, snare), (3) intergenerational wealth transfer (accumulation, snare). This constraint story focuses on the aggregate regime as experienced by first-time buyers and renters (snare/tangled rope perspectives dominant). Separate stories can decompose the zoning coordination function from the financial extraction mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

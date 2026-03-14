@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "eu_directive_2001_84_ec",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_eu_directive_2001_84_ec"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Directive 2001/84/EC (Droit de Suite / Artist Resale Right)",
+    "topic_domain": "intellectual_property/art_market",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "deceased_artist_heirs",
+      "living_artists"
+    ],
+    "victims": [
+      "art_market_traders",
+      "secondary_market_liquidity"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "label": "The Small Art Dealer",
+      "comment": "PERSPECTIVE 1: SMALL ART DEALER (SNARE) \u2014 Trapped by legal obligation to track resale rights, remit royalties, and manage complex administrative compliance. Cannot exit the continental market without abandoning their business model. Bears the full administrative cost while large galleries absorb overhead. No genuine coordination benefit \u2014 pure extraction through regulatory burden."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Art Auction House",
+      "comment": "PERSPECTIVE 2: ART AUCTION HOUSE (TANGLED ROPE) \u2014 Constrained by enforcement requirements but also benefits from standardized resale tracking that creates market transparency. Genuine coordination (efficient secondary market information) coexists with asymmetric extraction (compliance cost falls disproportionately on smaller competitors). Medium-sized firms experience mixed burden and benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Artist Estate Administrator",
+      "comment": "PERSPECTIVE 3: ARTIST ESTATE ADMINISTRATOR (ROPE) \u2014 Benefits from droit de suite without ongoing enforcement burden. Receives royalty remittances through established institutional channels. Experiences the directive as pure coordination: passive income from resales enables continued artist scholarship and estate management. Low extraction, high coordination benefit."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The Artist Union / Advocacy Coalition",
+      "comment": "PERSPECTIVE 4: ARTIST UNION & ADVOCACY COALITION (SCAFFOLD) \u2014 Organized agents that successfully lobbied for the directive saw it as temporary support for artist income during the transition to sustainable art markets. Artists with sufficient bargaining power have mobile exits: they can work outside the EU, negotiate direct contracts with galleries, or transition to digital/NFT markets. The sunset clause is implicit: if artists achieve stable income through alternative means, the directive's extraction rationale expires. Theater ratio reflects that compliance burden often exceeds actual royalty flows."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Copyright Collection Administration",
+      "comment": "PERSPECTIVE 5: COPYRIGHT COLLECTION ADMINISTRATION (PITON) \u2014 Collection agencies that manage remittance have become entrenched institutional actors with weak functional justification. Theater ratio (0.58) reflects that much administrative activity is procedural compliance rather than value-added distribution. The institution persists through legal mandate rather than demonstrable coordination benefit. Market data shows 30-50% of collected royalties never reach intended heirs due to administrative barriers."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (International Trade View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / INTERNATIONAL TRADE VIEW (MOUNTAIN) \u2014 From a global trade perspective, the directive appears as an immutable principle: intellectual property rights require protection across borders, and artist compensation is a fundamental norm that cannot be negotiated away. However, the structural data reveals this as false natural law \u2014 the directive has measurable extraction effects on secondary markets, variable compliance by jurisdiction, and significant dead weight loss. Non-EU markets (US, China, UK post-Brexit) have adopted alternative approaches (no droit de suite or voluntary licensing) that continue functioning, contradicting the universality claim."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "compliance_cost_vs_actual_royalties",
+      "question": "Do the administrative compliance costs of tracking and remitting droit de suite royalties exceed the actual amount distributed to artists and heirs?",
+      "resolution_mechanism": "Comparative analysis of EU collection agency data: total royalties collected vs. final payments to beneficiaries vs. administrative overhead. Cross-reference with Member State enforcement audits.",
+      "impact": "If compliance_cost > royalties_distributed: the directive is a pure rent-seeking mechanism for administrative bureaucracy, not artist support (shift from Rope/Tangled Rope toward pure Snare). If royalties_distributed >> compliance_cost: coordination function is genuine (maintain or upgrade toward Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Comparative analysis of compliance costs versus actual artist benefit"
+    },
+    {
+      "id": "secondary_market_liquidity_loss",
+      "question": "To what extent does droit de suite reduce secondary art market trading volume and liquidity?",
+      "resolution_mechanism": "Time-series analysis of pre- and post-directive transaction volumes in EU markets. Comparison with non-EU markets (US art market) controlling for wealth and art collecting demographics. Measurement of price suppression for artworks below the royalty threshold.",
+      "impact": "If volume decline > 15%: extractiveness should increase (dealers unable to pass royalty cost to buyers experience genuine snare). If volume decline < 5%: market has absorbed cost (tangled_rope classification sustained).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Secondary market liquidity impact of droit de suite implementation"
+    },
+    {
+      "id": "beneficiary_identification_problem",
+      "question": "For deceased artists with complex ownership histories (contested estates, heirs in conflict, lost documentation), can the directive's institutional framework reliably identify and compensate rightful beneficiaries?",
+      "resolution_mechanism": "Audit of unclaimed royalties held by collection agencies; case studies of contested claims; comparison of payment success rates for contemporary vs. deceased artists; analysis of what percentage of collected royalties never reach a beneficiary.",
+      "impact": "If > 40% of royalties accumulate unclaimed: the directive functions primarily as extraction from dealers to collection agencies (high piton classification). If < 10% unresolved: coordination function is genuine.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural difficulty of identifying rightful heirs for deceased artists"
+    },
+    {
+      "id": "international_arbitrage_escape",
+      "question": "Can dealers and auction houses systematically avoid droit de suite by shifting transactions to non-EU jurisdictions or to exempt categories (private sales)?",
+      "resolution_mechanism": "Market analysis of EU vs. non-EU auction volumes for comparable artworks; tracking of private sale market growth post-directive; case studies of high-value transactions relocating to London, New York, or Hong Kong after Brexit.",
+      "impact": "If high-value art systematically migrates to non-EU markets: suppression is lower than measured (dealers have exit options beyond 'comply'), shifting classification toward Rope. If migration is blocked by market infrastructure: suppression remains high, classification stands as Tangled Rope or Snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Extent to which dealers can circumvent droit de suite through jurisdictional arbitrage"
+    },
+    {
+      "id": "artist_income_effect_measurement",
+      "question": "Have living artists' average incomes from resale royalties increased measurably since the directive, or do most artists receive negligible payments?",
+      "resolution_mechanism": "Survey data from artist organizations; comparison of reported royalty income pre- and post-directive (2001 baseline); stratification by career stage and market prominence.",
+      "impact": "If top 10% of artists receive 90% of royalties: the directive functions as selective redistribution (Tangled Rope with asymmetric beneficiary structure). If distribution is relatively flat: coordination function is genuine. If most artists receive zero: the directive is rent-seeking without artist benefit (shift toward pure Snare or Piton).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Actual income effect on artists from droit de suite royalties"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "EU Directive 2001/84/EC establishes droit de suite (artist resale right), requiring that artists or their heirs receive a percentage (0.25% to 4%) of revenue each time their work is sold on the secondary market. Framed as a cultural policy protecting artists from exploitation by dealers, the directive creates a mandatory royalty system administered through Member State collection agencies. The constraint exhibits all characteristics of a Tangled Rope: genuine coordination objective (equitable artist compensation in secondary markets) coexists with significant asymmetric extraction (administrative burden on dealers, inefficient remittance mechanisms, disproportionate impact on small traders). The theater ratio (0.58) reflects that compliance administration often exceeds actual artist benefit: collection agencies retain administrative margins, tracking overhead is substantial, and significant percentages of collected royalties accumulate unclaimed. The extractiveness has increased from 0.35 (initial implementation, high artist goodwill) to 0.52 (mature implementation, established administrative burden) as institutional inertia has calcified and creative workarounds have diminished dealer exit options.",
+    "key_agents": [
+      "Small Art Dealers: Primary victims (powerless/trapped) \u2014 face fixed compliance costs and cannot exit without abandoning business model. Disproportionately burdened compared to large galleries with dedicated royalty tracking infrastructure.",
+      "Artist Estates & Heirs: Primary beneficiaries (institutional/arbitrage) \u2014 receive passive royalty income through established institutional channels. No enforcement burden.",
+      "Large Auction Houses: Secondary beneficiary & constrained victim (moderate/constrained) \u2014 benefit from market standardization but experience compliance overhead. Can absorb costs across large transaction volumes.",
+      "Artist Unions & Copyright Advocates: Organized beneficiary (organized/mobile) \u2014 successfully lobbied for directive; maintain mobile exit through digital markets and alternative compensation models.",
+      "Collection Agencies: Institutional administrator (institutional/arbitrage) \u2014 benefits from mandatory fee structure; manages royalty distribution with significant administrative margin capture.",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks treating artist compensation as universal principle rather than contingent policy with measurable extraction effects."
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The directive imposes mandatory royalty remittance with significant administrative overhead. Initial extractiveness (0.35) reflected genuine artist support enthusiasm and dealer compliance willingness. Current extractiveness (0.52) reflects settled equilibrium where institutional inefficiencies are apparent: collection agencies retain administrative margins (typically 10-20% of collected royalties), compliance burden falls disproportionately on small traders, and substantial royalties accumulate unclaimed (estimated 30-50% of total collected). The increase reflects not increasing regulatory stringency but crystallization of structural extraction as initial goodwill coordination has degraded into routine rent-seeking. Suppression (0.48): Moderate. Dealers face legal obligation to remit royalties with limited exit options within EU jurisdictions. However, suppression is not total: some escape through private sales, geographic arbitrage (pre-Brexit shift to London), or relocation of business to non-EU markets. Many small dealers operate with informal compliance or calculate risks of detection. Theater ratio (0.58): Moderate-high. Compliance administration is substantial \u2014 tracking resales, calculating percentages, remitting funds through collection agencies, maintaining records. Much of this activity is procedural compliance rather than value-addition. The theater has increased as bureaucratic procedures have solidified without corresponding improvements in remittance speed or accuracy.",
+    "perspectival_gap": "This constraint reveals the full tension between distributional justice and institutional efficiency. The artist estate sees pure coordination (Rope) \u2014 they benefit without effort. The artist union sees temporary support with exit paths (Scaffold) \u2014 organized agents can shift to alternative income models. The collection agency sees an entrenched role (Piton) \u2014 the institution persists through mandate rather than demonstrable value. Auction houses see mixed burden and benefit (Tangled Rope) \u2014 genuine coordination but also significant extraction. Small dealers see pure extraction (Snare) \u2014 trapped by compliance without proportional benefit. The analytical observer risks naturalizing the principle (Mountain) \u2014 but market evidence shows alternative models (US non-enforcement, UK voluntary licensing post-Brexit) function without the EU's mandatory apparatus, revealing the directive as contingent policy rather than universal principle.",
+    "directionality_logic": "Directionality values (d) derive from each agent's structural position relative to royalty extraction flow. Artist estates occupy d \u2248 0.15 (institutional beneficiary with arbitrage exit) \u2014 they receive royalties passively through collection infrastructure with no enforcement responsibility. They experience negative effective extraction (the constraint subsidizes them). Small dealers occupy d \u2248 0.92 (powerless with trapped exit) \u2014 they bear full compliance burden and cannot exit EU markets without abandoning their business. They experience maximum effective extraction. Large auction houses occupy d \u2248 0.55 (moderate power with constrained exit) \u2014 they experience mixed extraction (can absorb costs but face absolute obligation). Collection agencies occupy d \u2248 0.12 (institutional beneficiary through administrative fees) \u2014 they experience negative effective extraction (the constraint generates their revenue stream). The tangled_rope classification holds because both coordination (equitable artist access) and extraction (disproportionate dealer burden, administrative rent-seeking) are genuine structural features.",
+    "mandatrophy_analysis": "The directive resolves the mandatrophy by distinguishing genuine coordination function from extractive institutional accretion. Years 0-3: Rope-dominant (genuine artist support, low resistance, dealer goodwill cooperation). Years 3-7: Tangled Rope transition (institutional overhead accrues, compliance becomes routine burden, extraction mechanism becomes visible). Years 7+: Piton danger zone (collection agencies become entrenched administrators, theater ratio rises, actual artist benefit declines). The classification must track this temporal dimension: the constraint's type changes as institutional inertia calcifies. Current status (2024) is Tangled Rope, but trajectories show either: (1) Sunset path (Scaffold resolution) \u2014 alternative artist income models (NFTs, direct licensing, digital distribution) replace resale royalty dependency, reducing directive's functional necessity; or (2) Extraction path (Snare consolidation) \u2014 administrative bureaucracy becomes self-justifying, royalty collection serves administrators more than artists, dealer resistance increases. Omega variables target the empirical distinction between these paths."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "art_market_secondary_trading",
+      "cultural_policy_enforcement",
+      "intellectual_property_harmonization"
+    ],
+    "dual_formulation_note": "EU Directive 2001/84/EC decomposes into two structurally distinct constraints: (1) artist_resale_right_principle (\u03b5 \u2248 0.15, Rope) \u2014 the genuine coordination principle that artists benefit from resale markets; (2) collection_agency_enforcement_mechanism (\u03b5 \u2248 0.68, Snare) \u2014 the bureaucratic implementation that extracts from dealers and intermediaries. The present story models the unified constraint; decomposition into principle vs. implementation mechanism is recommended for detailed analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

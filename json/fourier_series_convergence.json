@@ -1,0 +1,121 @@
+{
+  "header": {
+    "constraint_id": "fourier_series_convergence",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fourier"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Fourier Series Convergence",
+    "topic_domain": "mathematical_analysis/harmonic_analysis",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Mathematical Structure)",
+      "comment": "Fourier series convergence is a mathematical theorem with proven sufficient conditions (Dirichlet, Fej\u00e9r, Carleson). The classification as Mountain reflects that the convergence properties are determined by intrinsic mathematical structure \u2014 regularity conditions on the function class, not by institutional or external constraints. Zero degrees of freedom for all indices."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Practitioner (Signal Processing Context)",
+      "comment": "From the applied perspective of signal processing and engineering, Fourier convergence emerges as a natural law governing which functions can be exactly represented by finite Fourier sums and which cannot. The practitioner cannot 'exit' discontinuities or unbounded derivatives \u2014 these are fixed properties of the function domain. Convergence behavior is determined by mathematical structure, not by design choice."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Teaching Institution (Mathematical Fact)",
+      "comment": "Educational institutions and mathematical textbooks present Fourier convergence as a settled mathematical fact. The convergence theorems (Dirichlet, Fej\u00e9r, Carleson) are proven; their conditions are non-negotiable. No institutional power can change the mathematical truth. This perspective also yields Mountain \u2014 the constraint is epistemically immutable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "convergence_pointwise_vs_uniform",
+      "question": "Does 'convergence' mean pointwise convergence, uniform convergence, or convergence in norm? Different function classes have different answers.",
+      "resolution_mechanism": "Specify the function space (L\u00b2, C\u2070, L\u1d56, etc.) and the convergence mode. Each pair has a definitive mathematical answer.",
+      "impact": "Different convergence modes yield the same underlying mountain classification but with different technical scope. The ambiguity is semantic, not structural. No re-classification occurs.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Pointwise vs. uniform vs. norm convergence \u2014 semantic specification, not structural"
+    },
+    {
+      "id": "discontinuity_handling",
+      "question": "For functions with jump discontinuities, does the Fourier series converge to the function value or to the midpoint of the jump?",
+      "resolution_mechanism": "The Dirichlet theorem specifies: at a jump discontinuity, the series converges to the average of the left and right limits. This is proven and non-negotiable.",
+      "impact": "The answer is mathematically settled. No re-classification \u2014 Mountain remains Mountain.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Convergence behavior at discontinuities (Dirichlet condition)"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 200
+  },
+  "commentary": {
+    "narrative_context": "Fourier series convergence is a mathematical theorem asserting conditions under which an infinite sum of sinusoids converges to a target function. The constraint emerges from the logical and analytical structure of harmonic analysis, not from institutional design or power asymmetries. For piecewise smooth functions (Dirichlet's condition), the series converges pointwise to the function except at discontinuities, where it converges to the average of left and right limits. For functions in L\u00b2, the series converges in the mean-square norm (Riesz-Fischer). For smooth functions with sufficient regularity, convergence is uniform. There are no agents who benefit differently from this constraint, no exit options, and no alternatives. The convergence properties are mathematical facts that hold regardless of observer position, measurement regime, or institutional context. This is the canonical exemplar of a Mountain constraint.",
+    "key_agents": [
+      "No agents exist in the traditional sense. The 'constraint' is a mathematical theorem, not a social coordination mechanism. All perspectives \u2014 analytical, practical, educational \u2014 converge on the same classification."
+    ],
+    "logic_rationale": "Extractiveness (0.12): Extremely low. There is no extraction mechanism in a mathematical theorem. The value reflects only that any mathematical representation has a minimal 'cost' in terms of specification complexity and computational overhead, but this is negligible and applies equally to all users. Suppression (0.03): Virtually absent. There are no alternatives to suppress. The convergence behavior is fully determined by the mathematical structure. Theater ratio (0.15): Minimal. No performative content. The theorem is either true or false \u2014 no social performance masks or mediates the mathematical fact. Accessibility collapse (0.92): Very high. Alternative representations (wavelets, polynomial approximations, spline bases) exist for specific applications, but they solve different problems. Within the domain of harmonic analysis, there are no practical alternatives to Fourier series for solving the specific class of PDEs (heat equation, wave equation, Laplace's equation) where Fourier convergence matters most. Users cannot escape the constraint by choosing a different analytical tool if they are working with periodic boundary conditions or seeking solutions in terms of sine/cosine bases. Resistance (0.08): Minimal. The constraint is not resisted because it is not imposed. It is a fact about mathematical structure, recognized as soon as one engages with the relevant theorems.",
+    "perspectival_gap": "All three perspectives yield Mountain. There is no perspectival gap \u2014 the constraint is invariant across all observables, measurement regimes, and observer positions. The analytical observer, the practitioner applying Fourier methods to signal processing, and the instructor teaching harmonic analysis all agree on the classification. This uniformity is itself diagnostic: it confirms that Fourier convergence is genuinely a natural law (Mountain) and not a contingent institutional arrangement misidentified as one.",
+    "directionality_logic": "Directionality analysis does not apply. Mountain-type constraints are beneficiary/victim neutral \u2014 there are no agents experiencing extraction or coordination. The constraint emerges naturally from mathematical structure. No derivation chain operates."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "directionality_overrides": []
+}

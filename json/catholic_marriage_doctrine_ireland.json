@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "catholic_marriage_doctrine_ireland",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Catholic Marriage Doctrine in Ireland: Institutional Coordination and Identity Extraction",
+    "topic_domain": "religion/culture/family_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "catholic_institutional_authority",
+      "conservative_family_structure_advocates"
+    ],
+    "victims": [
+      "divorced_catholics",
+      "unmarried_cohabiting_couples",
+      "lgbtq_individuals",
+      "women_constraining_reproductive_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "The Faithful Adherent",
+      "comment": "PERSPECTIVE 1: FAITHFUL ADHERENT (SNARE) \u2014 Catholic identity is constituted through doctrine acceptance. Exit would require abandoning not merely religious practice but the foundational identity frame that structures family, community membership, and self-conception. Structurally mobile (can legally divorce, cohabitate, access contraception) but identity-locked by internalized doctrine. Experiences maximum suppression of alternatives because the identity frame makes exit literally unthinkable from within the worldview."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Practicing Catholic in Modern Ireland",
+      "comment": "PERSPECTIVE 2: PRACTICING CATHOLIC IN MODERN IRELAND (TANGLED ROPE) \u2014 Faces real coordination benefits (community, ritual structure, identity affiliation) alongside asymmetric extraction (reproductive control, divorce restriction, sexual autonomy constraint). Exit costs are high (social penalty, family rupture, identity disruption) but not absolute. Experiences both genuine coordination function and coercive extraction \u2014 neither dominates."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Women's Rights Coalition",
+      "comment": "PERSPECTIVE 3: WOMEN'S RIGHTS COALITION (TANGLED ROPE) \u2014 Organized actor constrained by persistent Catholic doctrine influence on family law, reproductive autonomy, and gender roles. Experiences coordination (shared struggle for equality) alongside extraction (doctrine-imposed reproductive constraints). Exit options constrained by cultural inertia and political coalition dynamics but improving with generational change."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Catholic Institutional Authority",
+      "comment": "PERSPECTIVE 4: CATHOLIC INSTITUTIONAL AUTHORITY (ROPE) \u2014 Primary beneficiary experiencing the doctrine as pure coordination mechanism: organizing community, regulating family structure, maintaining institutional coherence. No exit costs; full arbitrage capability. The institution experiences coordination benefits without apparent extraction \u2014 the extraction runs toward this agent but is invisible from within institutional perspective."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Irish State Legal Framework",
+      "comment": "PERSPECTIVE 5: IRISH STATE LEGAL FRAMEWORK (PITON) \u2014 Historically embedded Catholic doctrine in family law (divorce prohibition until 1996, contraception restrictions until 1980s, ongoing abortion restrictions). Theater ratio high: legal frameworks cite 'traditional values' and 'constitutional protection of family' while functioning primarily to enforce doctrine without transparent acknowledgment. State capacity to exit has increased (constitutional referenda, legislative change) but inertia and path dependency remain. The legal framework has become degraded \u2014 performing constitutional protection while actual function is doctrine enforcement."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law Naturalization)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 Risks treating Catholic doctrine's claims about indissoluble marriage, sexual ethics, and family structure as unchangeable natural law rather than contingent institutional doctrine. This perspective naturalizes what is actually a historical, culturally-specific system of meaning. The engine's false summit detection will flag this classification as naturalization of contingent doctrine."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "identity_lock_vs_constrained_boundary",
+      "question": "Where is the boundary between identity-locked adherence (cognitive/identity binding) and constrained exit (high-cost material barriers)?",
+      "resolution_mechanism": "Post-exit trajectory analysis: adherents who leave Catholicism show whether suppression persists after institutional exit. If identity frame breaks, suppression should decline; if internalized, it persists.",
+      "impact": "If primarily identity_locked: constraint's effective suppression is higher than structural measure suggests \u2014 agent carries binding with them. If primarily constrained: exit path remains viable if cost barriers are reduced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Identity lock versus material constraint boundary"
+    },
+    {
+      "id": "intergenerational_transmission_mechanism",
+      "question": "Is Catholic doctrine transmission primarily through identity socialization or through institutional enforcement?",
+      "resolution_mechanism": "Generational cohort analysis: comparison of doctrine adherence rates between cohorts raised with strong institutional enforcement (mandatory religious education, exclusionary social structures) versus cohorts with voluntary participation. Tracking of apostasy rates and identity drift across generations.",
+      "impact": "If primarily socialization: doctrine becomes vestigial as institutional enforcement declines \u2014 constraints naturally weaken (scaffold sunset). If primarily enforcement: doctrine persistence requires active institutional maintenance regardless of generational preference.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether transmission is socialization-based or enforcement-based"
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the measured suppression (0.72) primarily structural (legal barriers, social sanctions, institutional enforcement) or internalized (cognitive patterns, identity fusion, epistemic closure)?",
+      "resolution_mechanism": "Granular measurement: distinguish between legal barriers (divorce prohibition until 1996, contraception access, abortion law), social sanctions (family rejection, community exclusion, employment discrimination), institutional enforcement (confession, sacrament withholding), and internalized suppression (belief in doctrine legitimacy, identity fusion, internalized shame around contraception/divorce). Track changes in each component over the interval.",
+      "impact": "If primarily structural: institutional reform reduces constraint severity. If primarily internalized: post-institutional exit may maintain suppression as agents carry internalized doctrine frame. If mixed: different interventions target different components.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of suppression that is structural versus internalized"
+    },
+    {
+      "id": "doctrine_coordination_function_vs_extraction_cover",
+      "question": "Does Catholic doctrine coordinate genuine community/meaning functions, or does the coordination narrative mask extraction mechanisms?",
+      "resolution_mechanism": "Comparative institutional analysis: identify which coordination functions (meaning-making, community solidarity, ritual structure, social capital) persist in secular alternatives. Measure community satisfaction and social capital in Catholic vs non-Catholic Irish populations with equivalent income/education. Assess whether coordination functions are doctrine-specific or generic to any community structure.",
+      "impact": "If genuine coordination: doctrine provides real benefits alongside extraction \u2014 tangled_rope classification confirmed. If mask for extraction: primary function is control; coordination is secondary \u2014 reclassify toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether coordination benefits are genuine or exploitation cover story"
+    },
+    {
+      "id": "theater_ratio_measurement_validity",
+      "question": "Does the theater_ratio (0.68) accurately capture the gap between stated doctrine function (moral/spiritual guidance) and actual social function (reproductive control, family structure enforcement, patriarchal norm maintenance)?",
+      "resolution_mechanism": "Content analysis of Catholic doctrine articulation versus institutional enforcement patterns. Discourse analysis: what doctrine claims to do versus what institutional practice reveals. Track correspondence between stated teaching and actual enforcement resources allocated.",
+      "impact": "If theater underestimated: constraint is closer to piton (high performance, low function). If theater accurate: tangled_rope with both genuine and performative elements.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Theater ratio measurement validity and potential underestimation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Catholic marriage doctrine in Ireland represents a hybrid constraint combining genuine community coordination (ritual, identity, social structure) with asymmetric extraction (reproductive control, divorce restriction, patriarchal enforcement). The constraint's character changed dramatically across the interval: from institutional monopoly over family law (1950-1980) to contested coordination within pluralist society (2000-2026). The extractiveness declined from 0.72 to 0.58 as institutional enforcement capacity weakened through constitutional reforms (divorce legalization 1996, contraception access, abortion access gains), but theater increased from 0.55 to 0.68 as the doctrine's performance role became more explicit \u2014 the institution now articulates doctrine as spiritual guidance while continuing to enforce reproductive and family norms through cultural inertia and identity mechanisms rather than legal force. The constraint decomposition reveals multiple structurally distinct mechanisms: the identity-locked binding of faithful adherents, the institutional beneficiary position of Catholic authority, the state legal embedding (piton), organized opposition (women's coalitions), and the naturalizing analytical perspective. The critical diagnostic signal is the perspectival gap between the institutional beneficiary (rope \u2014 pure coordination) and the identity-locked victim (snare \u2014 maximum suppression through identity fusion).",
+    "key_agents": [
+      "Faithful Catholic Adherents: Primary victims (powerless/identity_locked) \u2014 identity constituted through doctrine acceptance; structurally mobile but identity-locked by internalized worldview",
+      "Catholic Institutional Authority: Primary beneficiary (institutional/arbitrage) \u2014 maintains doctrine coordination and enforcement; experiences no extraction costs; benefits from structural position",
+      "Irish State: Secondary institutional actor (institutional/constrained) \u2014 historically embedded Catholic doctrine in family law; increasingly constrained to reform by constitutional pressure and pluralism",
+      "Women's Rights Coalitions: Organized victims (organized/constrained) \u2014 bear disproportionate extraction through reproductive control and family labor expectations; constrained by cultural inertia",
+      "Divorced and Unmarried Catholics: Specific victim group (moderate/constrained) \u2014 face both legal and social barriers to recognition; experience mixed coordination benefits and extraction costs",
+      "LGBTQ Individuals: Specific victim group (moderate/trapped) \u2014 excluded from doctrine's family coordination framework; trapped by doctrine's moral framework regardless of legal status",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent doctrine as unchangeable natural law about marriage and sexuality"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The doctrine extracts reproductive autonomy, divorce freedom, and gender equality through identity-locking mechanisms. However, extractiveness declined over the interval as institutional enforcement capacity weakened through constitutional reforms. Initial value (0.72) reflects the period of near-total institutional monopoly over family law (1950-1980); current value (0.58) reflects pluralism and secular alternatives, yet extractiveness remains substantial because identity-locking perpetuates suppression even as legal barriers dissolve. Suppression (0.72): High. Multiple layered mechanisms: legal barriers (abolished for some but persistent for abortion), social sanctions (family rejection, community exclusion), institutional enforcement (confession, sacrament withholding), and internalized suppression (identity fusion, epistemic closure, shame). The high suppression reflects both structural enforcement and internalized cognitive binding \u2014 agents cannot see alternatives as legitimate because the identity frame makes exit unthinkable. Theater ratio (0.68): Moderate-high. Doctrine performance has increased as enforcement capacity declined. The institution now articulates doctrine as 'spiritual guidance' and 'moral teaching' while continuing to enforce reproductive norms and family structure expectations through cultural mechanisms rather than legal force. The gap between stated function (moral direction) and actual function (reproductive control, gender role maintenance) has widened, increasing the performative content.",
+    "directionality_logic": "The constraint generates vastly different directionality values for different agents despite identical base extractiveness. The Catholic institutional authority (beneficiary/arbitrage) derives low d from their structural position \u2014 they capture benefits with no exit cost, producing negative effective extraction from their perspective (rope classification). The faithful adherent (victim/identity_locked) derives high d from their structural position \u2014 they bear extraction costs through identity fusion and cannot exercise exit options, producing high effective extraction (snare classification). The organized women's coalition (victim/constrained) derives moderate-high d \u2014 they can organize and exert pressure (raising power level) but face substantial exit costs (constrained exit), producing moderate effective extraction (tangled_rope). The analytical observer risks false directionality by naturalizing the constraint as unchangeable (mountain) when the structural data reveals contingent institutional arrangements. The key insight: identical base_extractiveness (0.58) produces six different experienced \u03c7 values across perspectives, with the perspectival gap revealing the asymmetry of the constraint.",
+    "perspectival_gap": "The constraint shows maximum perspectival divergence. The institutional beneficiary experiences pure coordination (rope) \u2014 they see doctrine as solving legitimate community problems. The faithful adherent experiences pure extraction with identity binding (snare) \u2014 they see no coordination benefit because their identity is constituted through the constraint, making exit unthinkable. The organized coalition experiences mixed coordination and extraction (tangled_rope) \u2014 they recognize community benefits alongside recognized extraction. The state legal framework experiences degradation (piton) \u2014 the institution performs constitutional family protection while actually enforcing doctrine through inertia rather than legitimate function. The analytical observer risks seeing immutable natural law (mountain) \u2014 naturalizing contingent doctrine as unchangeable. This six-way perspectival gap indicates high structural information content: the constraint's meaning radically depends on the observer's structural position. No single perspective is 'wrong' \u2014 each is genuinely grounded in structural reality from that position. The gap itself is diagnostic of a hybrid constraint with both real coordination and real extraction.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that Catholic marriage doctrine genuinely coordinates community meaning and ritual while extracting reproductive autonomy and gender equality. The constraint is not purely extractive (snare) \u2014 faithful adherents do experience community benefits, identity grounding, and ritual structure. Nor is it purely coordinative (rope) \u2014 the asymmetry of who benefits and who bears costs, and the identity-locking mechanisms that prevent exit perception, clearly indicate extraction. The tangled_rope classification captures this hybrid function. The critical analytical move is separating the three mechanisms: (1) genuine coordination (ritual, meaning-making, community structure), (2) asymmetric extraction (reproductive control, gender role maintenance), and (3) identity-locking (internalized doctrine frame that prevents exit perception). The theater_ratio increase (0.55\u21920.68) indicates that coordination function has declined relative to performative maintenance as institutional enforcement capacity weakened. The constraint persists not because it coordinates irreplaceable functions but because identity-locking and cultural inertia maintain suppression even as legal barriers dissolve. This is the classic piton pattern in disguise \u2014 the coordination narrative masks what is increasingly an inertial institutional performance."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "irish_abortion_restriction",
+      "irish_contraception_access",
+      "irish_family_law_patriarchy",
+      "irish_lgbtq_exclusion"
+    ],
+    "dual_formulation_note": "Catholic marriage doctrine is upstream of multiple specific family law and reproductive constraints in Ireland. Each downstream constraint has its own \u03b5 value reflecting specific domain empirics (abortion law \u03b5\u22480.62, contraception access \u03b5\u22480.35, family law patriarchy \u03b5\u22480.51, LGBTQ exclusion \u03b5\u22480.68), but all share the identity-coordination type and identity_locked exit mechanisms. The constraint family can be analyzed as a presheaf over Irish family law domains."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

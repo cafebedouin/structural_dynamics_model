@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "postal_network_franchising_model",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "postal"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Postal Network Franchising Model",
+    "topic_domain": "infrastructure/logistics/public_goods",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "franchise_operators",
+      "central_postal_authority"
+    ],
+    "victims": [
+      "rural_service_areas",
+      "universal_access_recipients",
+      "small_towns"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Rural Communities Dependent on Universal Service",
+      "comment": "Rural and underserved communities perceive the franchising model as pure extraction. They are trapped by geography and regulatory obligation \u2014 postal operators must service unprofitable routes, but franchising creates incentive structures where operators minimize service quality to unprofitable areas. Exit is impossible: communities cannot obtain service elsewhere, and operators bear no cost for degradation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Franchise Operator",
+      "comment": "Franchise operators experience the model as coordination with benefit. They solve the logistics problem of distributed mail delivery while capturing revenue from profitable urban routes. Exit options include expanding service territory, consolidating operations, or pivoting to parcel logistics. The constraint functions as genuine coordination: operators must maintain network coverage to retain franchise; the maintenance discipline enables the postal authority's universal service mandate."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Central Postal Authority",
+      "comment": "The postal authority occupies a hybrid position. It genuinely coordinates universal service through franchising \u2014 the mechanism enables coverage that a monolithic state operation might not achieve. But it also extracts: franchise fees, performance requirements, and regulatory control create asymmetric returns. The authority faces constraints: loss of franchise fees disrupts its budget model, but maintaining too much extraction pressure on operators risks service collapse."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Small Town Postal Customers",
+      "comment": "Small towns experience both coordination and extraction. The franchising model coordinates mail delivery to areas that pure market pricing would abandon. But customers are constrained: they depend on franchised operator quality, face limited choice, and bear costs if the operator decides to reduce hours or service scope. Some benefit from the system (receiving any service at all); others bear extraction if service degrades."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Large Commercial Shippers",
+      "comment": "Large shippers see the franchising model as largely performative theater. They have alternative logistics options (private couriers, integrated logistics) and use postal franchises opportunistically. The postal obligation to maintain rural service appears to them as a regulatory constraint, but they are mobile \u2014 they can arbitrage between postal and private logistics. The franchising system's ritual commitment to universal service carries minimal operational cost for large shippers, who effectively bypass it."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer: Natural Law Hypothesis",
+      "comment": "The analytical observer at civilizational scope risks identifying the franchising model as a natural law of postal logistics: that geographically distributed last-mile delivery in low-density areas is inherently uneconomical and therefore requires subsidy or forced cross-subsidization. This perspective naturalizes the tension between universal service and cost recovery. The structural data contradicts this naturalization \u2014 the tension is institutional (franchise incentive structures, regulatory mandate design), not physical or mathematical."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "profitable_route_extraction_magnitude",
+      "question": "What proportion of franchisee profit derives from cross-subsidization (urban-to-rural) vs. legitimate operational efficiency?",
+      "resolution_mechanism": "Comparative analysis of franchisee margins on urban routes vs. mandatory rural routes; decomposition of profit drivers into scale economics, operational efficiency, and cross-subsidy capture",
+      "impact": "If cross-subsidy exceeds 40% of urban profit: extraction is higher than base metrics suggest (reclassify tangled_rope toward snare). If below 20%: model functions more as coordination than extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of franchisee profit from cross-subsidization vs. efficiency"
+    },
+    {
+      "id": "rural_service_alternatives_emergence",
+      "question": "Are technological alternatives (drone delivery, local hub-and-spoke models, consolidated rural co-ops) becoming viable options that would deconstrain rural communities?",
+      "resolution_mechanism": "Market analysis of emerging logistics models in low-density areas; pilot project outcomes; cost trajectories of alternative delivery technologies",
+      "impact": "If alternatives become viable and cost-competitive: rural communities' exit options upgrade from 'trapped' to 'constrained' or 'mobile', changing classification from snare toward tangled_rope or rope. Franchising model transitions from extraction mechanism to voluntary coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of technological alternatives for rural delivery"
+    },
+    {
+      "id": "regulatory_mandate_enforceability",
+      "question": "Can postal authorities actually enforce universal service obligations, or is enforcement itself the theater that operators navigate?",
+      "resolution_mechanism": "Audit of service compliance in unprofitable regions; documentation of enforcement actions vs. service violations; franchisee response patterns to regulatory pressure",
+      "impact": "If enforcement is weak: operators de facto choose service quality independent of mandate, eliminating the coordination function and pushing classification toward snare. If strong: franchising genuinely constrains operator behavior toward collective good, supporting tangled_rope classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Enforceability of universal service mandate"
+    },
+    {
+      "id": "institutional_dependency_lock",
+      "question": "Does the postal authority's dependence on franchise fee revenue create path dependency that prevents regulatory reform even if reform would improve social welfare?",
+      "resolution_mechanism": "Budget analysis showing franchise revenue as percentage of postal authority budget; modeling of authority financial stability under alternative funding mechanisms; historical cases of regulatory reform attempts",
+      "impact": "If dependency is high and lock-in is institutional: the postal authority becomes an identity_locked agent at the institutional level, unable to perceive or implement less extractive alternatives. This changes directionality and may push postal_authority perspective from tangled_rope toward identity_locked snare (from analytical view).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Institutional dependency lock on franchise revenue model"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The postal network franchising model represents a hybrid institutional arrangement where a central postal authority delegates last-mile delivery to distributed franchise operators, typically within geographically defined territories. The model emerged in countries seeking to maintain universal service obligations (rural coverage) while reducing direct state operational burden. It coordinates the logistical challenge of reaching low-density areas through entrepreneurial incentive structures, but this coordination function is layered with extraction mechanisms: franchise fees, regulatory control, and asymmetric risk distribution. The constraint's theater ratio (0.58) reflects the performative aspects of universal service regulation \u2014 mandatory obligations that franchisees navigate through service quality degradation rather than outright refusal. Rural and small-town communities experience severe suppression (0.65): they are geographically trapped and regulated to depend on franchised service, with minimal alternatives and no negotiating power. Franchise operators experience genuine coordination benefits (lower d, negative chi from institutional perspective) alongside extraction of rural routes. The postal authority occupies the hybrid position: it must coordinate universal service (genuine function) while capturing franchise revenue and regulatory rents (extraction).",
+    "key_agents": [
+      "Franchise Operators: Primary beneficiary (institutional/arbitrage) \u2014 capture urban route profitability; navigate regulatory obligations through discretionary service management",
+      "Central Postal Authority: Coordinator and secondary beneficiary (organized/constrained) \u2014 collects franchise fees and maintains regulatory control; depends on franchise model for budget stability",
+      "Rural Communities and Small Towns: Primary victims (powerless/trapped and moderate/constrained) \u2014 geographically dependent on franchised service; suppressed by lack of alternatives and regulatory obligations that bind operators but lack enforcement teeth",
+      "Large Commercial Shippers: Secondary beneficiary (powerful/mobile) \u2014 arbitrage between postal and private logistics; experience piton-level constraints from performative universal service obligations",
+      "Mail Customers in Unprofitable Areas: Dispersed victims (moderate/constrained) \u2014 experience service quality degradation as franchisees minimize costs; benefit from receiving any service but constrained by lack of choice"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The model shows increasing extractiveness over the 15-year interval (0.35 \u2192 0.52), reflecting accumulating franchise fees, regulatory rents, and franchisee incentive drift. The underlying structure is mixed: genuine coordination (franchising solves the last-mile problem) combined with extraction (franchisees profit from mandatory rural routes via cross-subsidy, postal authority captures ongoing fees). The trajectory shows classic rent-seeking accumulation: initial efficiency gains (franchising is cheaper than state operation) followed by fee and regulatory pressure increases. Suppression (0.65): High. Rural communities face genuine barriers: geographic isolation, regulatory obligation to depend on single franchisee, no exit options, and weak enforcement of service quality. Urban competitors use private alternatives; rural communities do not have this option. The suppression mechanism is structural (geography + regulation + market absence), not primarily coercive (no threats or violence), which places it in the tangled_rope/snare range. Theater ratio (0.58, increasing to 0.65): Moderate-high. The performative aspect is in universal service regulation: postal authorities mandate service to unprofitable routes, but enforcement is weak (creating piton-like dynamics), and franchisees manage obligations through service degradation rather than exit. The trend toward higher theater reflects increasing reliance on performative compliance rather than genuine service \u2014 posted hours that are not staffed, service points that are understaffed, processing delays that are within regulation but exceed customer expectations.",
+    "perspectival_gap": "This constraint demonstrates how a single institutional arrangement can be beneficial coordination for one agent (franchisee) and destructive extraction for another (rural community). The franchisee's rope classification reflects genuine solving of the collective action problem: without franchising incentives, who would serve unprofitable routes? The rural community's snare classification reflects genuine extraction: they are trapped and bear costs of degradation with no exit. The postal authority's tangled_rope classification reflects the hybrid function: it genuinely solves the universal service coordination problem (without it, rural service might collapse entirely), but it also extracts franchise rents and regulatory control. The theater ratio increase (0.42 \u2192 0.65) suggests the coordination function is degrading relative to the performative function \u2014 the model is increasingly a mechanism for extracting fees while maintaining the appearance of universal service, rather than genuinely solving coordination. The piton perspective on large shippers suggests that the universal service obligation is becoming increasingly theatrical relative to actual impact on commercial logistics.",
+    "directionality_logic": "Franchisees derive directionality from beneficiary status (profit from urban routes) combined with arbitrage exit options (can expand territory, pivot to parcels, exit franchising entirely). This yields low d, negative chi \u2014 they experience the constraint as enabling rather than extractive. The postal authority's directionality reflects organized power and constrained exit (budget model depends on franchise revenue), yielding moderate d. Rural communities' directionality reflects powerless status, trapped exit (no alternatives), and victim status (bear costs of service quality degradation), yielding high d and high chi. Large shippers' directionality combines powerful status and mobile exit (can use alternative logistics), yielding moderate-to-low d despite appearing as beneficiaries of postal infrastructure \u2014 they can arbitrage away. Small towns occupy intermediate positions depending on their specific economic profile: towns with some commercial activity experience constrained exit (could theoretically shift to private logistics at cost); very small towns experience trapped exit. The divergence reflects real structural differences in how the constraint operates across spatial scales and economic profiles.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by showing that franchising can genuinely serve both coordination and extraction functions simultaneously. The coordination function is real: franchising enables rural service that a purely state operation might not provide and that pure market pricing would certainly abandon. The extraction function is also real: franchisees profit from cross-subsidization, postal authorities capture rents, and rural communities bear the cost of degraded service quality. The classification as Tangled Rope captures both simultaneously: the model is not pure coordination (would be Rope) nor pure extraction (would be Snare), but a hybrid where enforcement of the coordination mandate is weak (theater_ratio 0.58) and beneficiaries capture asymmetric returns (extractiveness 0.52). The increasing theater_ratio and extractiveness over time suggest mandatrophy drift: the model may be devolving from tangled_rope toward piton (performative compliance without functional coordination) or snare (pure extraction with coordination function abandoned). Monitoring the omega variables \u2014 whether alternatives emerge, whether enforcement strengthens, whether institutional lock-in persists \u2014 will determine if the constraint is stable tangled_rope or degrading toward extraction-dominated classification."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "universal_service_obligation_logistics",
+      "rural_infrastructure_access",
+      "last_mile_delivery_economics"
+    ],
+    "dual_formulation_note": "The postal franchising model decomposes into three structurally related constraints: (1) universal_service_obligation_logistics (\u03b5~0.15, coordination challenge at core), (2) postal_network_franchising_model (\u03b5~0.52, hybrid institutional arrangement), and (3) rural_infrastructure_access (\u03b5~0.68, impact on rural communities). The franchising model is downstream of the universal service obligation (which creates the coordination problem) and upstream of rural access (which experiences the impact). Each constraint has different extractiveness because each measures a different observable: the obligation itself is low-extraction (defining a coordination goal), the institutional mechanism is moderate-extraction (adding fees and regulatory rents), and the impact on rural actors is high-extraction (showing the burden distribution)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ]
+}

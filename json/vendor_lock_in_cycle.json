@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "vendor_lock_in_cycle",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "vlock"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Vendor Lock-In Cycle",
+    "topic_domain": "technology/economics/business",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_vendor"
+    ],
+    "victims": [
+      "customer_base",
+      "market_competition"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Locked-In Customer",
+      "comment": "PERSPECTIVE 1: LOCKED-IN CUSTOMER (SNARE) \u2014 Faces prohibitive switching costs (data migration, retraining, contract penalties, compatibility disruption). Cannot exit without severe operational disruption. Experiences pure extraction with minimal coordination benefit. Bears full cost of vendor price increases and feature stagnation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Enterprise Client",
+      "comment": "PERSPECTIVE 2: ENTERPRISE CLIENT (TANGLED ROPE) \u2014 Experiences genuine coordination: vendor provides ongoing support, integration services, and ecosystem access. Also experiences asymmetric extraction: switching costs create price leverage for the vendor. Mixed costs and benefits \u2014 can theoretically exit but faces significant friction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Vendor",
+      "comment": "PERSPECTIVE 3: INCUMBENT VENDOR (ROPE) \u2014 Experiences the lock-in as coordination mechanism: customer switching costs create reliable revenue stream and long-term partnership stability. Can exit (to alternative vendor strategies) without penalty. Net beneficiary \u2014 extraction flows toward the vendor."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Standards Coalition",
+      "comment": "PERSPECTIVE 4: OPEN STANDARDS COALITION (SCAFFOLD) \u2014 Organized actors (open-source foundations, interoperability consortia, data portability advocates) see lock-in as a temporary coordination failure with architectural solutions: API standardization, data portability regulations (GDPR, DMA), and open-source alternatives create exit pathways. Sunset mechanism: as standards mature and regulatory mandates take effect, proprietary lock-in loses force."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Vendor Ecosystem",
+      "comment": "PERSPECTIVE 5: LEGACY VENDOR ECOSYSTEM (PITON) \u2014 Older enterprise platforms (mainframe vendors, legacy ERP systems) continue extracting through lock-in despite degraded functionality. Customers remain locked-in by massive switching costs and organizational inertia, not by superior product features. The constraint persists through institutional momentum rather than current functional coordination. Theater ratio high because the extraction mechanism is maintenance of switching-cost barriers, not delivery of exceptional value."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational scale, some vendor-customer coordination cost and switching inertia may appear inherent to complex software ecosystems: integration, customization, and operational dependency are genuine coordination mechanisms. This perspective risks naturalizing contingent institutional arrangements (proprietary APIs, closed data formats, legal contract lock-in) as laws of technology. The engine's false summit detector will flag this as naturalization of extractive design choices."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "switching_cost_composition",
+      "question": "What proportion of switching costs are inherent coordination costs versus deliberate architectural extraction?",
+      "resolution_mechanism": "Comparative analysis: switching costs for proprietary platforms vs open-standard platforms; architectural audit of data portability barriers; customer interviews on perceived vs actual migration friction",
+      "impact": "If mostly inherent: lock-in is Rope (legitimate coordination). If mostly deliberate: lock-in is Snare (pure extraction). Current assessment (Tangled Rope) assumes mixed composition; resolution refines classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of switching costs that are inherent vs architectural extraction"
+    },
+    {
+      "id": "interoperability_standard_viability",
+      "question": "Can open interoperability standards (APIs, data formats, cross-platform protocols) actually achieve functional parity with proprietary lock-in ecosystems?",
+      "resolution_mechanism": "Performance benchmarks comparing standard-based platforms to proprietary equivalents; adoption rates for open-standard alternatives; customer migration success rates and post-migration satisfaction",
+      "impact": "If yes: scaffold sunset is real and achievable. If no: open standards remain aspirational and lock-in persists indefinitely as effective snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether open standards can achieve functional parity with proprietary platforms"
+    },
+    {
+      "id": "regulatory_compliance_enforcement",
+      "question": "Will data portability and interoperability regulations (DMA, GDPR Article 20, successor mandates) actually reduce lock-in, or will vendors find compliance-minimal workarounds?",
+      "resolution_mechanism": "Post-regulation audit: measurement of actual data portability rates, customer switching rates, and vendor API compliance depth; analysis of regulatory enforcement mechanisms and penalty structures",
+      "impact": "If enforced effectively: regulatory sunset enables scaffold transition. If compliance-minimal: regulations become theater and lock-in persists (piton perspective confirmed).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether regulatory compliance will reduce lock-in or trigger workarounds"
+    },
+    {
+      "id": "cloud_migration_lock_in_tradeoff",
+      "question": "Does cloud migration (moving to cloud-native platforms) reduce lock-in to traditional vendors or create new lock-in to cloud platform providers?",
+      "resolution_mechanism": "Comparative lock-in analysis: traditional enterprise software vs cloud infrastructure providers; measurement of switching costs between cloud providers; customer lock-in perception before/after migration",
+      "impact": "If lock-in merely transfers: the constraint family expands (vendor_lock_in_cycle is upstream of cloud_provider_lock_in). If lock-in reduces: cloud enables scaffold transition (positive). If lock-in increases: cloud architecture is net-negative for customer freedom.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether cloud migration reduces or transfers lock-in"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Vendor lock-in represents a structural extraction cycle where customers accumulate switching costs (data portability barriers, custom integrations, organizational process dependency, retraining burden, contract penalties) that create asymmetric exit costs favoring the incumbent vendor. The constraint exhibits coordination elements (vendor provides integration services, ecosystem support, feature development) alongside extraction elements (price increases leveraging switching-cost barriers, feature stagnation, forced upgrades, proprietary data formats). The lock-in cycle is not static \u2014 extractiveness has increased from 0.35 to 0.58 over the measurement interval as vendors progressively build architectural barriers (APIs locked to proprietary ecosystems, data formats resistant to migration, licensing terms penalizing departure). Theater ratio increased from 0.38 to 0.52, reflecting growing performative elements: vendor marketing emphasizing ecosystem lock-in as 'strategic value', bogus 'open' APIs with hidden proprietary extensions, theatrical interoperability commitments without actual implementation. The constraint demonstrates all six DR types: pure extraction for powerless trapped customers, mixed coordination-extraction for constrained enterprises, pure coordination for the beneficiary vendor, temporary problems with architectural solutions for organized standards coalitions, degraded ecosystems for legacy platforms, and risks of naturalization for analysts viewing lock-in as inherent to complex software.",
+    "key_agents": [
+      "Incumbent Vendor: Primary beneficiary (institutional/arbitrage) \u2014 captures lock-in rents through pricing power and feature prioritization; can exit to alternative strategies without penalty",
+      "Locked-In Customer Base: Primary victim (powerless/trapped) \u2014 faces prohibitive switching costs; cannot exit without severe operational disruption; pays lock-in premium indefinitely",
+      "Enterprise Clients: Secondary victim (moderate/constrained) \u2014 experience genuine coordination services alongside extraction; face high but theoretically surmountable switching costs; some organizational agency to negotiate terms",
+      "Open Standards Coalition: Organized actors \u2014 open-source foundations, interoperability consortia, data portability advocates building architectural alternatives; create sunset pathways through standards maturation and regulatory mandates",
+      "Legacy Vendor Ecosystem: Institutional actor \u2014 older platforms persisting through inertia; customers locked in by sunk costs not by current feature superiority; extraction maintained through switching-cost barriers alone (piton mechanism)",
+      "Regulatory Bodies: Emerging institutional actors \u2014 GDPR Article 20 (data portability), Digital Markets Act (interoperability mandates), equivalent regulations creating compliance requirements that enable exit pathways"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Lock-in creates genuine price leverage for vendors \u2014 customers accept above-market pricing because switching costs exceed the price premium. But extraction is not total (0.66+) because some coordination value persists: vendors do provide integration, feature development, and ecosystem maintenance. The constraint is hybrid. Suppression (0.65): High. Multiple suppression mechanisms: technical (proprietary APIs, closed data formats), legal (contract lock-in, license restrictions), organizational (switching requires enterprise-wide retraining, disruption to operations), and informational (vendors obscure true switching costs, market conditions make alternatives appear risky). Customers face multiple barriers to exit. Theater ratio (0.52): Moderate-high. Vendor marketing emphasizes lock-in as 'partnership value' and 'strategic alignment' rather than extraction. APIs are labeled 'open' while remaining proprietary. Interoperability commitments are announced without implementation. The theater has increased over time as sophisticated vendors learned to frame extraction as coordination. Claimed type (Tangled Rope): Justified by both genuine coordination function (vendor provides real services) AND asymmetric extraction (lock-in creates pricing leverage and feature stagnation). Active enforcement is required \u2014 vendors must continuously maintain switching-cost barriers (proprietary APIs, incompatible data formats, licensing restrictions) for extraction to persist.",
+    "directionality_logic": "Directionality varies by agent position. The incumbent vendor is a beneficiary with arbitrage options (low d, negative chi) \u2014 they can exit to alternative vendor strategies without cost. The locked-in customer is a victim with trapped exit options (high d, high chi) \u2014 they perceive maximum extraction because they have no credible exit threat. The enterprise client is a victim with constrained exit options (d \u2248 0.65, moderate chi) \u2014 they have some theoretical mobility but face significant friction. The standards coalition has organizational power and some exit optionality (d \u2248 0.45, moderate chi) \u2014 their barrier is architectural immaturity and vendor resistance, not fundamental incapacity. Directionality overrides are not needed; the standard derivation chain produces accurate d values.",
+    "perspectival_gap": "The locked-in customer sees pure extraction (Snare) \u2014 they perceive no coordination benefit, only switching-cost penalty. The enterprise client sees mixed coordination-extraction (Tangled Rope) \u2014 they recognize genuine vendor services while also experiencing lock-in leverage. The incumbent vendor sees pure coordination (Rope) \u2014 they frame the lock-in as customer investment in ecosystem and long-term partnership, not extraction. The standards coalition sees a temporary problem with architectural solutions (Scaffold) \u2014 they are actively building exit pathways through open standards. The legacy vendor ecosystem sees its own degradation (Piton) \u2014 older platforms persisting through inertia, no longer delivering exceptional value but too costly to leave. The analytical observer risks naturalizing lock-in as inherent to complex software (Mountain) \u2014 this is the false summit. The structural data contradicts naturalization: lock-in is largely architectural and legal design choice, not inherent constraint.",
+    "mandatrophy_analysis": "Vendor lock-in resolves mandatrophy by demonstrating that the same structural phenomenon (customer switching costs, vendor switching incentives, ecosystem coupling) produces different classifications depending on observer position. The powerless trapped customer sees Snare (pure extraction with no exit). The moderate constrained enterprise sees Tangled Rope (coordination with extraction). The beneficiary vendor sees Rope (coordination with beneficial outcomes). The organized standards coalition sees Scaffold (temporary problem with sunset). The legacy platform sees Piton (degraded extraction persisting through inertia). The analytical observer risks seeing Mountain (inherent to software) but this is false \u2014 switching costs are largely architectural choices, not laws of nature. The mandatrophy is not 'which type is correct' but 'which perspective captures the structural reality from which position?' All six are legitimate readings of different positions in the constraint network."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "cloud_provider_lock_in",
+      "proprietary_api_ecosystem",
+      "data_portability_barrier"
+    ],
+    "dual_formulation_note": "Vendor lock-in is downstream of specific architectural choices (proprietary APIs, closed data formats, licensing lock-in) but represents a distinct structural constraint. The upstream constraints have their own extractiveness values reflecting technical implementation details; vendor_lock_in_cycle aggregates these into a customer-experienced economic constraint with its own dynamics."
+  },
+  "directionality_overrides": []
+}

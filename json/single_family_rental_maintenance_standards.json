@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "single_family_rental_maintenance_standards",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sfr_maint"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Single-Family Rental Maintenance Standards Enforcement",
+    "topic_domain": "housing/property_management/regulatory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "property_management_industry",
+      "municipal_code_enforcement"
+    ],
+    "victims": [
+      "tenant_habitability",
+      "small_landlord_compliance_burden"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Tenant",
+      "comment": "PERSPECTIVE 1: THE TENANT (SNARE) \u2014 Trapped in the rental unit; cannot exit without losing housing security and bearing relocation costs. Bears full cost of substandard conditions (health, safety, quality of life). No collective organization or formal exit mechanism. Suppression is structural: homelessness or displacement is the cost of exit. Maximum experienced extraction \u2014 the tenant has no leverage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Small Landlord",
+      "comment": "PERSPECTIVE 2: THE SMALL LANDLORD (TANGLED ROPE) \u2014 Constrained by compliance costs, specialized knowledge requirements, and enforcement action risk. But also coordinates genuine maintenance \u2014 safety and habitability require landlord investment. The constraint has both a real coordination function (maintaining safe housing) and asymmetric extraction (disproportionate cost burden on small owners vs. institutional management). Exit options are constrained: selling triggers capital gains tax and opportunity cost; refusing maintenance triggers fines or tenant remedies."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Property Management Company",
+      "comment": "PERSPECTIVE 3: THE PROPERTY MANAGEMENT COMPANY (ROPE) \u2014 Institutional actors with economies of scale, specialized compliance knowledge, and diversified portfolios. Experiences the constraint as coordination: maintenance standards are built into their service model. Can pass costs to owners and select properties by profitability. Net beneficiary \u2014 they arbitrage between landlords with high compliance costs and tenants."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Municipal Code Enforcement Agency",
+      "comment": "PERSPECTIVE 4: MUNICIPAL CODE ENFORCEMENT (ROPE) \u2014 Institutional actor coordinating safety standards across residential stock. Experiences the constraint as solving a collective action problem: uncoordinated landlord decisions would produce substandard housing. Has stable authority structure, resource allocation, and career advancement tied to enforcement success. Net beneficiary \u2014 enforcement discretion and budget authority flow to them."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Tenant Advocacy Coalition",
+      "comment": "PERSPECTIVE 5: TENANT ADVOCACY COALITION (SCAFFOLD) \u2014 Organized agents (legal aid, housing nonprofits, tenant unions) see maintenance standards as a temporary coordination failure being solved through alternative mechanisms: right-to-repair laws, repair-and-deduct provisions, habitability codes with private causes of action. These pathways shift enforcement from institutional code agencies to individual tenants. Low effective extraction because organized agents have agency and see a structural exit path toward tenant-empowered enforcement. Theater is present but declining as legal tools shift enforcement burden."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Property Tax / Valuation System",
+      "comment": "PERSPECTIVE 6: THE PROPERTY TAX/VALUATION SYSTEM (PITON) \u2014 Ostensibly links property tax to maintenance condition (lower assessments for substandard units should incentivize landlord investment). In practice, the assessment-to-maintenance feedback loop is weak: political resistance to property tax changes, lag in assessment cycles, and opacity in valuation methodology create theatrical accountability without real incentive force. The system persists through inertia despite low functional coupling to actual maintenance outcomes. Theater ratio high because the system appears to price maintenance but doesn't."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational view, housing requires maintenance; tenants and landlords are parties to exchange; some coordination mechanism must exist. The naturalizing framing claims: 'Standards enforcement is inherent to rental markets \u2014 you cannot have functioning housing without it.' However, structural data reveals this as false summit: the specific institutional arrangement (municipal code enforcement + landlord liability + compliance costs borne asymmetrically by small owners) is contingent, not natural. Alternative mechanisms exist (tenant-enforced repair rights, performance-based deposits, third-party inspection services) that achieve habitability with different extractiveness profiles."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "code_enforcement_selectivity",
+      "question": "Are code enforcement inspections distributed equitably across socioeconomic neighborhoods or concentrated in ways that correlate with tenant advocacy capacity and political visibility?",
+      "resolution_mechanism": "Audit of code enforcement patterns: complaint-to-inspection ratios by neighborhood, demographic analysis of enforcement action distribution, temporal comparison of enforcement against advocacy presence",
+      "impact": "If inequitable: the constraint functions as targeted extraction (snare) in low-advocacy areas and effective coordination in high-advocacy areas, splitting the classification. If equitable: snare classification is less justified; tangled rope classification is more appropriate for all tenants.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether code enforcement is equitably distributed or concentrated by neighborhood advocacy capacity"
+    },
+    {
+      "id": "small_landlord_viability_threshold",
+      "question": "At what cumulative compliance cost do small (1-5 unit) landlords exit the market or sell to institutional management companies, triggering portfolio consolidation?",
+      "resolution_mechanism": "Time-series analysis of small landlord demographic turnover; regression of exit rates against cumulative compliance cost indices; tracking of portfolio consolidation patterns pre- and post-enforcement intensity changes",
+      "impact": "If threshold is crossed: the constraint functions as an institutional consolidation mechanism (accelerating transition from distributed small landlords to institutional management), changing the extraction pattern from directed-at-individuals to structural-market-concentration.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The compliance cost threshold at which small landlords exit the rental market"
+    },
+    {
+      "id": "tenant_repair_rights_substitutability",
+      "question": "Do private repair-and-deduct remedies and right-to-repair laws achieve comparable habitability outcomes to municipal code enforcement, with lower theater and lower extractiveness?",
+      "resolution_mechanism": "Comparison of habitability outcomes (safety inspections, health code compliance, resident satisfaction) in jurisdictions with strong private repair rights vs. enforcement-dependent models; measurement of theater ratio in each pathway (compliance evidence vs. enforcement action)",
+      "impact": "If substitutable: scaffold classification is justified, and the sunset is real \u2014 private remedies are alternative extraction pathways with lower institutional capture risk. If not substitutable: municipal enforcement remains necessary, reducing sunset prospect and strengthening tangled rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether private repair-and-deduct remedies substitute for municipal code enforcement"
+    },
+    {
+      "id": "externality_asymmetry_magnitude",
+      "question": "What proportion of maintenance costs represent genuine coordination of shared externalities (foundation damage affecting adjacent units, health hazards spreading to neighborhood) vs. pure tenant-specific habitability (aesthetic conditions, minor repairs)?",
+      "resolution_mechanism": "Structural engineering analysis of maintenance cost itemization; separation of inter-unit externality costs from tenant-specific habitability requirements; comparison against standard habitability code language",
+      "impact": "If externalities dominate: the constraint is primarily coordination, justifying rope classification and beneficiary designation as genuine. If tenant-specific habitability dominates: the constraint is primarily protection, shifting beneficiary status and justifying snare classification for the tenant.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The relative magnitude of coordination externalities vs. pure tenant habitability in maintenance cost structure"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Single-family rental maintenance standards enforce habitability requirements through municipal code enforcement, landlord liability, and tenant remedies. The constraint exhibits the core tension of housing regulation: legitimate coordination (maintaining safe living conditions across a distributed owner base) coexists with asymmetric extraction (compliance costs borne unequally by small landlords vs. institutional management, enforcement burden on tenants without resources). The constraint's classification varies sharply by observer position, making it a diagnostic exemplar for how distributional asymmetry creates perspectival divergence. The tenant experiences the constraint as a snare \u2014 trapped in substandard conditions with no exit mechanism. The small landlord experiences it as tangled rope \u2014 genuine coordination function (maintenance is necessary) alongside extraction (costs are high and concentrated). Institutional management companies and code enforcement agencies experience it as rope \u2014 solving a coordination problem with acceptable cost structure. Tenant advocacy coalitions see it as scaffold \u2014 private repair rights and tenant remedies are building exit pathways. The property tax system appears to coordinate maintenance incentives but functions as piton \u2014 theatrical without real force.",
+    "key_agents": [
+      "Tenant: Primary victim (powerless/trapped) \u2014 bears cost of substandard conditions; no exit mechanism except homelessness or displacement",
+      "Small Landlord (1-5 units): Secondary victim (moderate/constrained) \u2014 faces compliance costs and enforcement action risk; also coordinates genuine maintenance; consolidation pressure from institutional competitors",
+      "Institutional Property Management: Primary beneficiary (institutional/arbitrage) \u2014 economies of scale enable compliance; arbitrage between landlords and tenants; concentration advantage from small landlord displacement",
+      "Municipal Code Enforcement: Primary beneficiary (institutional/arbitrage) \u2014 enforcement authority and discretionary budget flow to agency; stable institutional role",
+      "Tenant Advocacy Coalition: Organized agent (organized/constrained) \u2014 building alternative enforcement mechanisms (repair-and-deduct, private causes of action, habitability codes); represent potential sunset mechanism",
+      "Property Tax/Valuation System: Institutional observer (institutional/arbitrage) \u2014 ostensibly coordinates maintenance incentives through assessment; theater high, functional coupling low",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional enforcement as necessary to housing"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint has genuine coordination content (maintenance is required for safe housing), but asymmetric cost distribution and institutional consolidation effects amplify the extraction component. The initial value (0.35) reflects coordination dominance in small-owner markets with low enforcement; the increased value (0.52) reflects consolidation and heightened enforcement intensity over the interval. Suppression (0.58): Moderate-high. Structural barriers to tenant exit (housing insecurity, displacement cost) are high. Barriers to small landlord exit (capital gains tax, opportunity cost, liquidity constraints) are significant. But suppression is not total \u2014 some mobility exists for tenants who relocate, and some landlords can sell or exit. Theater ratio (0.64): Moderate-high. Code enforcement involves inspection rituals, violation citation processes, and documented remediation that serve accountability functions but also contain performative elements. The theater has increased over the interval as enforcement has become more systematic and paperwork-intensive. Repair-and-deduct remedies bypass much of this theater, suggesting theater is not strictly necessary for habitability outcomes.",
+    "perspectival_gap": "Snare (tenant) vs. Rope (management/enforcement) represents the maximum gap. The tenant perceives pure extraction with no coordination benefit because code enforcement delivers habitability standards but leaves them no agency and no recovery of compliance costs. Institutional management perceives coordination because economies of scale make compliance cost-effective, and they can pass costs to owners and tenants. The gap is not observational (both see the same enforcement actions) but distributional: enforcement benefits flow to management/agencies; costs flow to small landlords/tenants. The scaffold perspective (tenant advocates) represents an emerging perspectival shift \u2014 as repair-and-deduct rights mature, the constraint appears less like a snare and more like a temporary coordination failure being solved. The piton perspective (property tax) reveals theatrical accountability without real functional coupling, suggesting the constraint's apparent necessity (mountain view) is partially performative.",
+    "directionality_logic": "Directionality (d) for each perspective is determined by the agent's structural position relative to extraction flow. Tenants are victims with trapped exit: d \u2248 0.95, producing high f(d) \u2248 1.42, high effective extraction chi. Small landlords are victims with constrained exit (high cost but possible): d \u2248 0.70, producing moderate f(d) \u2248 1.00. Institutional management companies are beneficiaries with arbitrage exit: d \u2248 0.10, producing low f(d) \u2248 -0.02, negative chi (they arbitrage the constraint). Code enforcement is institutional beneficiary with arbitrage: d \u2248 0.15, producing f(d) \u2248 0.00 (neutral experienced extraction). Tenant advocates are organized with constrained exit but growing alternatives: d \u2248 0.45, producing f(d) \u2248 0.52. The property tax system is institutional with arbitrage but theater masks true function: d \u2248 0.12. The analytical observer is analytical position: d \u2248 0.72. The scope modifier \u03c3(local=0.8) dampens chi for local perspectives, \u03c3(regional=0.9) for mid-scale. This produces Chi values: tenant snare chi = 0.52 \u00d7 1.42 \u00d7 0.8 \u2248 0.59 (high), small landlord tangled rope chi = 0.52 \u00d7 1.00 \u00d7 0.9 \u2248 0.47 (moderate), institutional management rope chi = 0.52 \u00d7 (-0.02) \u00d7 1.0 \u2248 negative (arbitrage benefit), code enforcement rope chi = 0.52 \u00d7 0.00 \u00d7 1.0 \u2248 0.0 (neutral), tenant advocates scaffold chi = 0.52 \u00d7 0.52 \u00d7 0.9 \u2248 0.24 (low, justifying scaffold classification).",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by distinguishing coordination function from extraction function. The base claim is that maintenance standards require institutional enforcement \u2014 that without code enforcement, landlords would provide substandard housing. The counter-claim is that private repair-and-deduct remedies, habitability codes with private causes of action, and third-party inspection services achieve comparable outcomes with lower extractiveness and theater. The mandatrophy is resolved by recognizing that BOTH claims can be true: the coordination function (ensuring habitability) is real, but the specific institutional arrangement (municipal code enforcement) is one of several mechanisms for achieving it. The tangled rope classification captures this: the constraint has genuine coordination content (maintenance is required) AND asymmetric extraction (costs are borne unequally). The scaffold perspective operationalizes the resolution by identifying alternative enforcement pathways (repair-and-deduct, private causes of action) that deliver habitability with lower theater and lower institutional consolidation effects. The sunset is real: as tenant remedies mature, the extraction component of municipal enforcement declines. The piton perspective (property tax) reveals that some apparent 'coordination' mechanisms are theatrical \u2014 the property tax system claims to incentivize maintenance but demonstrates weak functional coupling."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "tenant_remediation_rights",
+      "landlord_portfolio_consolidation",
+      "housing_cost_affordability"
+    ],
+    "dual_formulation_note": "Maintenance standards enforcement can be decomposed into coordination function (ensuring safe housing) and extraction mechanism (institutional consolidation and cost-shifting). The coordination component appears as rope/scaffold (alternative mechanisms achieve habitability). The extraction component appears as snare/tangled rope (unequal cost distribution and consolidation effects). This story addresses the hybrid constraint; separate stories could model pure-coordination repair-and-deduct mechanisms (lower extractiveness, higher tenant agency) and institutional consolidation dynamics (extraction-focused, pure institutional perspective)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

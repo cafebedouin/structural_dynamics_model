@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "real_estate_investment_regulation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "reir"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Real Estate Investment Regulation and Affordable Housing Coordination",
+    "topic_domain": "economic/housing_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_investors",
+      "real_estate_development_firms",
+      "municipal_governments"
+    ],
+    "victims": [
+      "low_income_renters",
+      "first_time_homebuyers",
+      "housing_affordability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Low-Income Renter",
+      "comment": "PERSPECTIVE 1: LOW-INCOME RENTER (SNARE) \u2014 Trapped in housing markets where investment capital has concentrated ownership and driven rents beyond wage growth. No viable exit: relocation carries massive switching costs (transportation, childcare, school district disruption, informal social networks). Cannot organize collective bargaining due to high tenant turnover and atomization. Experiences the regulation as pure extraction: compliance costs are passed to renters through higher rents, while tenant protections are minimal and unenforced. Maximum structural extraction with near-total suppression of alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Tenant Organizing Coalition",
+      "comment": "PERSPECTIVE 2: TENANT ORGANIZING COALITION (TANGLED ROPE) \u2014 Organized agents (tenant unions, housing justice groups) experience the regulation as hybrid coordination-extraction. The regulation creates genuine coordination: rent control, habitability standards, eviction protections, and anti-discrimination rules do solve collective action problems around housing stability. But the constraint simultaneously enables extraction: landlords/investors evade regulations through legal loopholes (corporate ownership structures, management company fragmentation), speculation during regulatory gaps, and systematic underinvestment in properties where rent control caps profit. The coalition has significant agency but faces substantial external suppression: legal barriers to enforcement, resource asymmetries in litigation, political capture of regulatory bodies. Genuine mixed structure with both coordination function and asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Investor",
+      "comment": "PERSPECTIVE 3: INSTITUTIONAL INVESTOR (ROPE) \u2014 Large real estate investment firms, REITs, and institutional capital experience the regulation as coordination. The framework creates predictable rules: tax treatment of rental income, depreciation schedules, regulatory certainty around property rights, and enforcement against tenant activism. These actors have high exit optionality\u2014capital is mobile, they can reallocate to other markets, other asset classes, or other countries. For them, regulation is a coordination mechanism that enables efficient capital deployment. They benefit from the framework's legitimacy (properties held under rules that investors trust) and from suppression of tenant organizing that would drive up labor costs. Net beneficiaries with substantial agency and escape routes."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Housing Trust Fund Coalition",
+      "comment": "PERSPECTIVE 4: HOUSING TRUST FUND COALITION (SCAFFOLD) \u2014 Organized public and nonprofit actors (municipal housing authorities, community land trusts, housing trust funds) see the regulation as temporary scaffolding with a sunset clause. These actors are building alternative ownership and financing models (social housing, community control, equitable development frameworks) that will eventually replace the investor-driven model. The scaffolding coordinates housing delivery during the transition period via inclusionary zoning mandates, affordable housing set-asides, and funding mechanisms. Low effective extraction because the coalition perceives an exit path: as alternative models mature (15-30 year horizon), traditional investor-driven rental markets become optional rather than necessary. Theater ratio is moderately high\u2014many policies are symbolic (targets that are missed) rather than functional, yet the real work of alternative model building is ongoing."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Zoning and Land Use System",
+      "comment": "PERSPECTIVE 5: ZONING AND LAND USE SYSTEM (PITON) \u2014 The underlying land use and zoning framework that constrains investment regulation is substantially inertial and performative. Zoning codes were designed mid-20th century for single-family suburban development. Modern density, mixed-use, and affordable housing requirements exist on paper but are functionally blocked by:inherited zoning restrictions, NIMBY politics embedded in local governance, permitting processes with high theater and low approval rates. The zoning system persists through institutional inertia despite minimal functional verification that it achieves stated housing goals. Theater ratio is high\u2014extensive public comment processes, environmental reviews, and planning procedures exist but outcome rates show that only 5-15% of proposed affordable units are actually built. The system maintains itself through procedural complexity and constituency capture, not because zoning regulation works."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational view, some tension between housing as commodity and housing as social right may be immutable: any system allocating scarce land must choose between market efficiency and social provision, and no choice fully escapes extraction. This perspective risks naturalizing what is actually a contingent institutional choice: the assumption that private investment capital should be the primary housing supplier is a policy decision, not a law of nature. The engine will flag this as a false summit\u2014the structural data shows the tension is resolvable through alternative models (social housing, community control), not immutable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "regulatory_capture_depth",
+      "question": "To what extent is housing regulation captured by investor interests versus genuinely protective?",
+      "resolution_mechanism": "Analysis of regulatory outcomes: rent increase trajectories in regulated vs unregulated markets, displacement rates, enforcement action frequency, penalties relative to violations, and the composition and funding sources of regulatory agencies",
+      "impact": "If captured: snare classification dominates, extraction coefficient rises. If genuinely protective: tangled rope classification holds, mixed coordination-extraction structure is real. If purely protective: rope classification for all perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of regulatory capture by real estate interests"
+    },
+    {
+      "id": "alternative_model_viability",
+      "question": "Can community-owned, municipal, and trust-based housing models actually scale to meet housing demand, or are they constrained by capital availability and political will?",
+      "resolution_mechanism": "Longitudinal comparison of social housing scaling in jurisdictions with genuine commitment (Vienna, Singapore, parts of Scandinavia) versus those with symbolic commitment; analysis of capital financing models and political sustainability",
+      "impact": "If viable at scale: scaffold perspective is structural (true sunset), and alternative models will reduce investor extraction over generational timescale. If not viable: scaffold is aspirational, and investor-driven extraction persists indefinitely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scalability of community-based housing alternatives"
+    },
+    {
+      "id": "suppression_mechanism_source",
+      "question": "Is suppression of tenant organizing primarily structural (material barriers: atomization, legal liability, capital asymmetry) or internalized (cultural beliefs about property rights, individualism, privatization)?",
+      "resolution_mechanism": "Comparative analysis of tenant organizing success rates across jurisdictions with different legal frameworks, property philosophies, and cultural norms; case studies of organizing outcomes post-legal reform",
+      "impact": "If structural: suppression will decline as legal barriers are removed. If internalized: suppression persists even after legal barriers fall, constraining organizing capacity. If both: post-reform suppression trajectory reveals the proportion.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Source of tenant organizing suppression"
+    },
+    {
+      "id": "affordability_definition_circularity",
+      "question": "Does 'affordable housing' regulation define affordability relative to prevailing market rents (which investors set), creating a circularity where investor extraction determines what counts as 'affordable'?",
+      "resolution_mechanism": "Analysis of how affordability thresholds are set; comparison of affordability targets versus actual household wage distributions and housing cost burden outcomes; tracking of how affordability definitions shift as markets change",
+      "impact": "If circular: regulation cannot constrain extraction because extraction itself determines the baseline for 'affordability'. The regulation becomes definitional cover for continued extraction. If non-circular: regulation has genuine constraint power.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Circularity in affordability definition relative to market-set rents"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 45
+  },
+  "commentary": {
+    "narrative_context": "Real estate investment regulation exists to coordinate housing provision and protect tenants from extraction, yet simultaneously enables the extraction it purports to constrain. This constraint exhibits a hybrid structure across six perspectives that diagnoses the central tension: regulation creates predictable rules that attract investment capital, but that capital then organizes around regulatory loopholes, captures enforcement agencies, and uses legal complexity to suppress tenant organizing. The framework shows steady degradation over the 45-year interval measured here (extractiveness rising from 0.38 to 0.62, theater rising from 0.42 to 0.65), indicating that the regulatory apparatus is increasingly performative rather than functionally protective. This pattern is classic mandatrophy resolution: the regulation was designed to solve a coordination problem (how to provide housing to low-income populations), but the mechanism it created (investor-friendly property rules, tax incentives, market-rate development with mandatory set-asides) has become an extraction apparatus that uses coordination language ('market efficiency', 'housing supply', 'economic development') to legitimize asymmetric capital flows. The measured degradation suggests that the regulation's primary function has shifted from housing provision to investor rent-seeking, while the coordination language persists as theater.",
+    "key_agents": [
+      "Low-Income Renters: Primary victims (powerless/trapped) \u2014 bear extraction through above-wage-growth rents, eviction threat, substandard conditions, no organizing power",
+      "Institutional Investors: Primary beneficiaries (institutional/arbitrage) \u2014 capture appreciation, tax benefits, regulatory certainty, can exit or reallocate freely",
+      "Tenant Organizing Coalition: Organized secondary victims (organized/constrained) \u2014 can sometimes block or slow extraction but lack structural power to fundamentally reshape the constraint",
+      "Housing Trust Fund Coalition: Organized alternative-model builders (organized/constrained) \u2014 see extraction as temporary and are building parallel systems with sunset logic",
+      "Municipal Governments: Institutional actors with dual role \u2014 benefit from development fees and tax base expansion while nominally responsible for housing provision; experience constrained arbitrage",
+      "Zoning and Land Use System: Institutional structure (institutional/arbitrage) \u2014 persists through inertia; theater-heavy procedure blocks most affordable housing proposals while legitimizing developer-friendly projects",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent market-based housing allocation as immutable economic law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate, reflecting genuine asymmetric capital flows to investors while acknowledging that some housing does get built through the regulated system. The value has risen over the interval from 0.38 to 0.62, indicating increasing extraction as regulatory loopholes have been discovered and capital has learned to work around protections. Suppression (0.65): High. Low-income renters face substantial barriers to collective action (atomization, legal liability for organizing activity, resource asymmetries in disputes with landlords, threat of eviction used to silence complaints), and tenant organizing faces structural opposition from investor-aligned local governments. Theater ratio (0.58): Moderate-high, indicating that roughly 58% of regulatory activity is performative rather than functionally protective. Public comment periods, environmental reviews, affordability targets that are missed, enforcement actions that rarely occur\u2014these create the appearance of regulation without proportional housing security outcomes. The theater has increased over the interval as regulatory complexity has expanded without commensurate enforcement or outcome improvement. Claimed type (tangled_rope): Justified by the presence of genuine coordination function (the regulation does create some predictable rules that enable housing markets to function, does prevent the worst abuse) alongside genuine asymmetric extraction (capital systematically extracts more value than it provides, and the regulatory framework enables rather than prevents this). The active enforcement requirement is met\u2014municipal governments actively enforce property rights, eviction rules, and tax frameworks that benefit investors.",
+    "perspectival_gap": "This constraint reveals fundamental disagreement about what the regulation does. The institutional investor sees Rope\u2014pure coordination mechanism enabling efficient capital deployment. The low-income renter sees Snare\u2014pure extraction with no functional protection. The tenant coalition sees Tangled Rope\u2014mixed structure with real protections embedded alongside real extraction. The alternative-model builders see Scaffold\u2014temporary structure being replaced by superior alternatives. The zoning system itself is Piton\u2014the procedural machinery persists through inertia despite failing to produce stated outcomes. The civilizational observer risks seeing Mountain\u2014immutable tension between efficiency and provision\u2014but the structural data reveals this as a false summit: alternative models (social housing, community control, cooperative ownership) are resolvable at the institutional level, not natural law constraints. The perspectival gap is not disagreement about measurements\u2014all perspectives use the same extractiveness and suppression values\u2014but disagreement about what these facts mean: is the regulation succeeding (investor view) or failing (renter view) at its stated purpose? The gap reveals that 'success' and 'failure' are indexed to different agents' actual outcomes.",
+    "directionality_logic": "Directionality is determined by the agent's structural position in the extraction flow. Low-income renters (powerless/trapped) have maximum d \u2248 0.95, producing maximum experienced extraction via f(d) \u2248 1.42. They bear full cost and receive minimal benefit. Institutional investors (institutional/arbitrage) have minimum d \u2248 0.00-0.10, producing negative or minimal experienced extraction\u2014they benefit from the framework and can exit. The tenant coalition (organized/constrained) has intermediate d \u2248 0.45-0.60 because they have some agency but face real barriers; they bear substantial cost but can sometimes extract concessions. Municipal governments occupy a complex position: they are nominally agents of housing provision but structurally benefit from development fees and tax base expansion, placing them closer to beneficiary status despite their governance role. This institutional split is captured by including them as beneficiaries while noting in directionality_logic that their position is constrained arbitrage rather than pure institutional benefit\u2014they have less freedom to exit than private investors but more benefit than tenant advocates. The housing trust fund coalition has d \u2248 0.40-0.50\u2014they bear some cost of building alternatives (slow capital accumulation, political opposition) but will benefit as alternative models mature. The zoning system is treated as institutional/arbitrage with minimal directionality complexity because it is not an agent but a structure; its classification is based on theater_ratio rather than extraction flow.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The classification resolves the contradiction between regulation's stated purpose (provide housing and protect tenants) and actual outcome (enable investor extraction while using coordination language to legitimize it). The regulation was designed to solve a coordination problem: how to ensure housing provision to low-income populations without relying purely on charity or government construction. The mechanism chosen was investor-friendly property rules with mandatory public benefits (affordable housing set-asides, rent control, tenant protections). This mechanism created unintended extraction pathways: (1) investor capital learns to work around affordability mandates through corporate structures, loan securitization, and development timing; (2) the regulatory framework legitimizes private ownership and market allocation, making it politically impossible to adopt non-market alternatives; (3) enforcement capacity lags violations, so regulations exist on paper but not in practice. The mandatrophy is resolved by recognizing that the regulation has shifted functions: it was designed for housing provision but has become an apparatus for legitimizing investor extraction. The six perspectives capture this: the perspectives that see Rope or Tangled Rope (investor, coalition, municipal government) are experiencing the regulation's legitimization function\u2014it creates rules that make investment safe and profitable. The perspectives that see Snare or higher extraction (renters, field of housing provision) are experiencing the extraction function\u2014the rules enable accumulation and displacement. The Scaffold perspective (alternative-model builders) is the diagnostic perspective: they see that the current regulation solves a real problem (coordinating housing provision) but is not the only solution; the problem is solvable through different institutions. If the Scaffold perspective is correct, then the regulation is not solving an immutable coordination problem\u2014it is solving a contingent one, and the extraction is not necessary overhead but surplus value captured by investors. The theater_ratio rising from 0.42 to 0.65 over the interval indicates that the coordination function is real but declining: actual housing provision is slowing, actual tenant protection is declining, while the procedural apparatus (theater) is expanding. This is the signature of a constraint whose primary function has shifted from solving coordination problems to enabling extraction while maintaining the fiction that coordination is occurring."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "homelessness_prevention_systems",
+      "gentrification_displacement_cycles",
+      "municipal_fiscal_dependency"
+    ],
+    "dual_formulation_note": "Real estate investment regulation decomposes along observable lines. Measuring as 'housing provision' (\u03b5 \u2248 0.30, Rope) emphasizes coordination function. Measuring as 'tenant extraction' (\u03b5 \u2248 0.70, Snare) emphasizes asymmetric capital flows. These are not alternative frames of the same constraint\u2014they are different constraints reflecting different causal chains. The housing provision story focuses on regulatory frameworks enabling diverse ownership and financing models. The tenant extraction story focuses on capital concentration and organizing suppression. They are linked by network dependency: housing provision mechanisms enable the extraction structures that extract from tenants."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

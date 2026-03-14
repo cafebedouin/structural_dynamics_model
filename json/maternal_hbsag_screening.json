@@ -1,0 +1,207 @@
+{
+  "header": {
+    "constraint_id": "maternal_hbsag_screening",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mhbs"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Maternal HBsAg Screening and Perinatal Hepatitis B Prevention",
+    "topic_domain": "public_health/maternal_medicine/infectious_disease",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "newborn_infants",
+      "public_health_systems",
+      "vaccine_manufacturers"
+    ],
+    "victims": [
+      "pregnant_women_with_limited_access",
+      "healthcare_equity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Pregnant Women in Low-Resource Settings",
+      "comment": "PERSPECTIVE 1: PREGNANT WOMEN (LOW-RESOURCE) (SNARE) \u2014 Mandatory screening with no genuine exit option. Women in under-resourced health systems face screening pressure without guaranteed access to timely results, antiviral therapy, or immunoprophylaxis for infants. Suppression is structural: no alternative pathway exists; non-compliance risks stigma and barriers to prenatal care. Maximum extraction from this agent's perspective."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Pregnant Women with Treatment Access",
+      "comment": "PERSPECTIVE 2: PREGNANT WOMEN (WITH ACCESS) (TANGLED ROPE) \u2014 Screening provides genuine coordination benefit (early intervention prevents transmission) but also requires disclosure, potential partner notification, medication adherence, and repeated testing. Benefits and costs are asymmetric: newborns benefit most; mothers bear medical and psychological costs. Constrained exit \u2014 women can decline screening but face pressure from healthcare systems and family planning expectations."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Public Health Authorities",
+      "comment": "PERSPECTIVE 3: PUBLIC HEALTH AUTHORITIES (ROPE) \u2014 Screening programs solve a genuine coordination problem: preventing perinatal transmission requires identifying HBsAg-positive mothers before delivery. From this perspective, the constraint is pure coordination with minimal coercive overhead. Health authorities have arbitrage options (can shift screening protocols, modify enforcement intensity, adjust resource allocation). Net benefit \u2014 no extraction flows toward them; they coordinate a genuine collective good."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International Vaccine Coalition and WHO",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL VACCINE COALITION (SCAFFOLD) \u2014 HBsAg screening exists within a larger infrastructure of hepatitis B vaccination, antiviral access, and birth-dose immunization. This coalition sees screening as a transitional mechanism: as universal infant vaccination expands and treatment accessibility improves, the structural need for intensive maternal screening becomes conditional. Sunset clause: once HBV vaccination coverage exceeds 95% globally and perinatal treatment is accessible in all settings, the screening mandate becomes redundant. Organized agents can navigate this transition; they experience the constraint as temporary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "Healthcare Billing and Administrative Systems",
+      "comment": "PERSPECTIVE 5: BILLING AND ADMINISTRATIVE SYSTEMS (PITON) \u2014 Screening generates billing codes, compliance reports, and documentation workflows that persist through institutional inertia. Many health systems continue three-trimester screening (first, second, third trimester) despite evidence that third-trimester screening has minimal clinical utility if first-trimester results are negative. The administrative requirement (theater_ratio = 0.55) reflects performative compliance with historical screening protocols. These systems have arbitrage options but maintain status quo because change requires coordination across multiple institutions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Vaccine and Antiviral Manufacturers",
+      "comment": "PERSPECTIVE 6: PHARMACEUTICAL MANUFACTURERS (TANGLED ROPE) \u2014 Screening programs generate market demand for HBsAg testing reagents, vaccines, and antivirals. Manufacturers benefit from expanded screening (coordinate access to market) but also extract through price-setting power for vaccines in low-resource markets and for antivirals where treatment alternatives are limited. Mobile exit option \u2014 can shift products or markets \u2014 but extraction persists through market positioning. Coordination function (ensuring consistent supply) is genuine; asymmetric benefit extraction also exists."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a pure epidemiological perspective, perinatal hepatitis B transmission prevention requires identifying infectious mothers. The constraint could appear as an immutable feature of infectious disease control \u2014 there is no escape from the biological fact that untreated HBsAg-positive mothers transmit to infants. However, the structural data contradicts the mountain classification: screening timing, intensity, and enforcement pathways are all contingent institutional choices, not biological necessities. The engine will detect this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "equity_access_threshold",
+      "question": "At what level of treatment access does screening transition from extractive (screening without treatment access) to coordinative (screening with guaranteed treatment pathway)?",
+      "resolution_mechanism": "Analysis of screening impact in settings with varying treatment access; measurement of adverse outcomes (anxiety, stigma, non-engagement) in screened but untreated populations vs treated populations",
+      "impact": "If access threshold is low (< 30% of screened women receive treatment): current global screening regime is primarily extractive for low-resource settings. If threshold is high (> 70%): current regime functions as intended coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Access threshold at which screening functions as coordination vs extraction"
+    },
+    {
+      "id": "repetitive_screening_utility",
+      "question": "Does repeat HBsAg screening in second and third trimester (beyond initial screening) provide clinical utility proportional to cost and burden, or is it primarily theater?",
+      "resolution_mechanism": "Longitudinal analysis of seroconversion rates in initially negative women; comparison of clinical outcomes between one-time vs repeated screening protocols; assessment of false-positive management burden",
+      "impact": "If seroconversion < 0.5% in initially negative women: repeat screening is theater (theater_ratio should increase). If seroconversion > 3%: repeat screening has clinical justification (theater_ratio should decrease).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Clinical utility of repeat HBsAg screening"
+    },
+    {
+      "id": "vaccination_surge_coverage_timeline",
+      "question": "At what global HBV vaccination coverage rate does the structural utility of maternal screening become conditional rather than mandatory?",
+      "resolution_mechanism": "Modeling of perinatal transmission risk across vaccination coverage scenarios; historical comparison with other vaccine-preventable disease screening programs; analysis of policy shifts in high-vaccination-coverage regions",
+      "impact": "If coverage > 90% reduces transmission below detectable rates in screened populations: screening becomes safety-net rather than primary prevention. If coverage < 85% is insufficient: screening remains mandatory even with widespread vaccination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Vaccination coverage threshold for conditional screening utility"
+    },
+    {
+      "id": "disclosure_harm_asymmetry",
+      "question": "Does harm from HBsAg disclosure (stigma, partner notification, insurance/employment discrimination) in low-resource settings exceed benefit from treatment access that is unavailable or inaccessible?",
+      "resolution_mechanism": "Qualitative analysis of disclosure outcomes in settings with treatment access vs without; measurement of mental health impact, healthcare engagement post-screening, and actual treatment uptake rates",
+      "impact": "If harm > benefit in untreated populations: mandatory screening becomes net-harmful extraction (snare classification reinforced). If benefit > harm: coordination classification is supported.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Balance of disclosure harm vs treatment benefit"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Maternal HBsAg screening during pregnancy is a public health intervention designed to prevent perinatal hepatitis B transmission through identification of infected mothers and implementation of birth-dose immunization and/or antiviral prophylaxis for exposed infants. The constraint exhibits tangled coordination: genuine coordination benefit (preventing transmission) coexists with asymmetric extraction through mandatory disclosure, variable treatment access, pharmaceutical benefit capture, and healthcare system burden. The classification varies dramatically by observer position: for powerless women in low-resource settings without treatment access, screening appears as pure extraction (Snare); for public health authorities solving a coordination problem, it is pure coordination (Rope); for organized international actors with pathway redundancy (vaccination scaling), it is temporary (Scaffold). The theater_ratio (0.55) reflects that screening protocols include elements with questionable clinical utility (repeated third-trimester screening in initially negative women) maintained through administrative inertia.",
+    "key_agents": [
+      "Pregnant Women (Low-Resource Settings): Primary victim (powerless/trapped) \u2014 mandatory screening with no exit; bear suppression through limited access to results, treatment, and care coordination",
+      "Pregnant Women (With Treatment Access): Secondary victim-beneficiary (moderate/constrained) \u2014 genuine benefit from early intervention but face constraints from disclosure requirements, partner notification, and treatment adherence",
+      "Public Health Authorities: Primary beneficiary (institutional/arbitrage) \u2014 solve coordination problem of perinatal transmission prevention; have flexibility in implementation protocols",
+      "WHO and International Vaccine Coalition: Organized actor (organized/mobile) \u2014 see screening as transitional mechanism; have pathway diversity through vaccination scale-up and treatment expansion",
+      "Vaccine and Antiviral Manufacturers: Beneficiary (powerful/mobile) \u2014 profit from demand generation through screening; coordinate market access but maintain extraction through pricing",
+      "Healthcare Billing and Administrative Systems: Institutional inertia actor (institutional/arbitrage) \u2014 maintain screening protocols through administrative routine; perpetuate theater through compliance documentation",
+      "Analytical Observer: Civilizational context (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as epidemiological necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The screening program provides genuine coordination benefit (identifying mothers to prevent transmission) but extraction flows upward through several channels: (1) information asymmetry \u2014 women in low-resource settings may not receive timely results or understand implications; (2) pharmaceutical pricing \u2014 manufacturers extract through vaccine and antiviral costs; (3) administrative burden \u2014 healthcare systems extract labor from pregnant women through repeated screening and documentation. The trajectory shows increasing extractiveness (0.22 \u2192 0.38) as healthcare systems have shifted from one-time screening to multi-trimester protocols and as administrative documentation requirements have expanded. Suppression (0.48): Moderate-high. Barriers to exit are substantial: mandatory screening in most formal healthcare settings, social/family pressure to undergo testing, cultural and religious factors affecting disclosure, and limited treatment alternatives in many regions. However, suppression is not total \u2014 home birth and informal healthcare pathways provide partial exit options in some contexts. Theater ratio (0.55): Moderate. Evidence suggests third-trimester screening has minimal clinical utility if first-trimester results are negative and no risk factors intervene (seroconversion rates < 1% in initially negative women). Yet many systems maintain three-trimester protocols due to administrative inertia, regulatory habit, and conservative liability management. This represents moderate theater \u2014 not purely performative (first-trimester screening has clear utility) but containing substantial ritualistic elements.",
+    "perspectival_gap": "This constraint demonstrates fundamental perspectival divergence based on structural position and access. The powerless agent in low-resource settings (trapped, immediate horizon) experiences a Snare: mandatory screening with no guarantee of treatment, creating psychological burden and stigma without proportional benefit. The moderate agent with treatment access (constrained, biographical horizon) experiences a Tangled Rope: screening provides genuine prevention benefit but requires accepting disclosure, partner notification, and medication adherence \u2014 mixed costs and benefits. The public health authority (institutional, generational horizon) experiences a Rope: screening solves a legitimate coordination problem with minimal overhead from their perspective. The organized international actor (mobile, generational horizon) experiences a Scaffold: sees screening as temporary mechanism being replaced by vaccination and treatment scale-up. The administrative system (institutional, civilizational horizon) experiences a Piton: maintains screening protocols through inertia despite declining marginal utility. The analytical observer risks seeing a Mountain (immutable epidemiological law) but structural data reveals this as false naturalization of contingent institutional choices.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from agent power, exit options, and beneficiary/victim status. Powerless pregnant women in low-resource settings: trapped exit \u2192 high d (0.92) \u2192 high f(d) (1.38) \u2192 maximum experienced extraction. Moderate pregnant women with treatment access: constrained exit + victim status \u2192 moderate d (0.68) \u2192 moderate f(d) (1.02) \u2192 moderate extraction. Public health authorities: institutional power + arbitrage exit + beneficiary status \u2192 low d (0.15) \u2192 negative f(d) (-0.01) \u2192 minimal experienced extraction (coordination benefit dominates). Vaccine manufacturers: powerful + mobile + beneficiary status \u2192 low-moderate d (0.32) \u2192 low f(d) (0.18) \u2192 modest extraction but coordinated benefit visible. Healthcare systems: institutional + arbitrage + mixed relationship \u2192 low d (0.20) \u2192 low f(d) (0.02) \u2192 performs as coordination from their perspective. The perspectival gap reveals that structural extraction exists but is invisible to institutional beneficiaries and visible only to trapped agents. The scope modifier \u03c3(S) = 1.0 (national) for most perspectives except global perspectives (manufacturers, WHO) where \u03c3 = 1.2.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy through decomposition by access level. The classification 'Tangled Rope' is appropriate for integrated systems where screening + treatment + support are coordinated (some high-income and upper-middle-income countries). For low-resource systems where screening exists without treatment access, the correct classification is Snare. The error would be treating 'maternal screening' as a single constraint with single classification across all contexts. Instead: maternal_hbsag_screening_high_access (\u03b5=0.25, Rope) and maternal_hbsag_screening_low_access (\u03b5=0.62, Snare) are separate constraints with different \u03b5 values and different beneficiary/victim configurations. The global coordination (Rope from WHO perspective) is real but does not invalidate the extraction (Snare from low-access pregnant women perspective). The mandate is resolved by recognizing that the same intervention label covers structurally distinct constraints in different contexts."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "hepatitis_b_vaccination_universal_coverage",
+      "antiviral_access_low_income_countries",
+      "perinatal_transmission_prevention_infrastructure"
+    ],
+    "dual_formulation_note": "Maternal HBsAg screening decomposes into at least two distinct constraints by access level: high-access settings where screening coordinates with treatment and support systems (\u03b5\u22480.25, Rope); low-access settings where screening exists without treatment pathway (\u03b5\u22480.62, Snare). These are linked by affects_constraints because scaling treatment access shifts the low-access constraint toward the high-access classification. Additionally, universal HBV vaccination coverage would reduce the structural necessity for intensive maternal screening (Scaffold perspective validated)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "infectious_disease_surveillance",
+      "pregnancy_medical_management"
+    ]
+  }
+}

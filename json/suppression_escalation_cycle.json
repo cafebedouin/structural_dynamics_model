@@ -1,0 +1,249 @@
+{
+  "header": {
+    "constraint_id": "suppression_escalation_cycle",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "supp_esc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Suppression Escalation Cycle",
+    "topic_domain": "institutional/political/psychological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "suppressing_institution"
+    ],
+    "victims": [
+      "targeted_population",
+      "alternative_voice_ecosystem"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Silenced Target",
+      "comment": "PERSPECTIVE 1: SILENCED TARGET (SNARE) \u2014 Trapped population experiences maximal extraction. Suppression mechanisms (legal, economic, social) prevent exit. Each failed suppression triggers escalation, forcing target to invest increasing resources in mere survival or minimal voice. Cycle itself becomes the extraction mechanism \u2014 targets bear rising costs of escalating counter-suppression."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "The Identity-Locked Resister",
+      "comment": "PERSPECTIVE 2: IDENTITY-LOCKED RESISTER (TANGLED ROPE) \u2014 Resister identity fused with opposition to suppression; cannot exit without abandoning core self-concept. Structurally mobile but identity-bound. Experiences genuine coordination (resisters organize mutual support, information sharing) alongside extraction (escalating suppression forces resource mobilization). Classification: Rope if identity frame shifted; Mountain if structural barriers absolute; Tangled Rope given actual bind of identity + rising enforcement costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Suppressing Institution",
+      "comment": "PERSPECTIVE 3: SUPPRESSING INSTITUTION (ROPE) \u2014 Experiences suppression as coordination mechanism: maintaining social order, controlling information flow, protecting institutional legitimacy. Suppression apparatus is solution to collective action problem from institutional perspective. Benefits from monopoly on authorized speech. Arbitrage exit available: can shift to dialogue if institutional power position sufficiently secure. Sees the cycle as stabilizing, not destabilizing."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Alternative Voice Ecosystem",
+      "comment": "PERSPECTIVE 4: ALTERNATIVE VOICE ECOSYSTEM (SNARE) \u2014 Decentralized network of marginalized media, underground publishing, diaspora communication. Each suppression escalation triggers ecosystem innovation (new platforms, routing, encryption). But the cost of maintenance and innovation is borne by ecosystem members with no institutional backing. Theater ratio high: much activity appears as survival or symbolic resistance rather than effective voice amplification. Trapped in the cycle \u2014 cannot exit without losing communication function entirely."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Degraded Censorship Apparatus",
+      "comment": "PERSPECTIVE 5: DEGRADED CENSORSHIP APPARATUS (PITON) \u2014 Formal censorship systems (licensing boards, review committees, content moderation rules) persist long after their functional necessity has declined. Theater ratio high: reviewing content, maintaining bureaucracy, ritualistic enforcement consume resources while internet-scale information flow renders centralized censorship mechanically obsolete. Apparatus persists through institutional inertia. Decentralized alternatives (algorithm filtering, platform enforcement, peer moderation) have largely replaced formal censorship, but formal mechanisms persist for legitimacy theater."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Powerful Dissident",
+      "comment": "PERSPECTIVE 6: POWERFUL DISSIDENT (TANGLED ROPE) \u2014 High-status individual (academic, artist, former official) with rare combination of power and dissent. Experiences suppression escalation as selective extraction: some suppression mechanisms (legal action, funding cuts) constrain movement, but status creates exit options unavailable to powerless targets. Coordination function: powerful dissident's visible resistance reduces theater ratio for entire ecosystem by demonstrating that suppression is selective rather than universal. Extraction function: institution focuses suppression on powerless while leaving powerful dissident constrained but visible."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Democratic Transition Coalition",
+      "comment": "PERSPECTIVE 7: DEMOCRATIC TRANSITION COALITION (SCAFFOLD) \u2014 Coalition of international actors (UN bodies, treaty organizations, civil society networks) promoting institutional openness and speech norms. Temporary support structure: suppression escalation eventually triggers regime transition, democratic opening, or international pressure sufficient to require institutional recalibration. Sunset clause: if sufficient external pressure and internal contradictions accumulate, suppression escalation becomes unsustainable and apparatus collapses. Coordination function: coalition models and advocates for alternative governance. Extraction function: transition mechanisms often impose costs on previously suppressed populations (vetting, lustration, truth commissions). Theater ratio moderate: much coalition activity is advocacy and normative work rather than direct pressure."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law View",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational/universal scope, suppression escalation cycles are inherent features of power asymmetry: when one agent controls coercive capacity and another seeks to evade control, the mathematical structure of the system implies escalation. Information-theoretic view: if target innovation in evasion exceeds suppressing institution's innovation in control, cycle is unsustainable; if institution's capacity exceeds target innovation, equilibrium emerges. This perspective risks naturalizing what is actually a contingent institutional arrangement with many historical alternatives (negotiation, co-optation, institutional reform, power-sharing)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "escalation_threshold_trigger",
+      "question": "What determines whether suppression escalation is triggered by target resistance or by institutional preemption independent of target action?",
+      "resolution_mechanism": "Temporal sequence analysis: Does escalation follow observable target action (delayed reaction) or precede it (preemptive)? Correlation between suppression intensity changes and prior target activity.",
+      "impact": "If preemptive dominates: escalation is institutional security logic, not reaction. Classification shifts from Snare (reactive extraction) toward Tangled Rope (institution uses escalation as coordination of internal security). If reactive: escalation is extraction mechanism driven by target resistance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether escalation is reactive response or preemptive institutional logic"
+    },
+    {
+      "id": "alternative_voice_ecosystem_sustainability",
+      "question": "Can decentralized alternative voice ecosystems sustain themselves indefinitely against escalating suppression, or is their sustainability dependent on external support or institutional weakness?",
+      "resolution_mechanism": "Long-term survival analysis of underground networks, diaspora media, encrypted platforms under continuous suppression. Correlation between ecosystem innovation and institutional suppression capacity. Cost analysis of ecosystem maintenance vs institutional suppression budget.",
+      "impact": "If self-sustaining: Snare classification is stable at powerless/trapped perspective. If dependent on external support or institutional weakness: Snare transforms into Tangled Rope when institutional capacity increases, or collapses entirely when suppression overwhelms innovation capacity. Theater ratio interpretation changes based on sustainability mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sustainability of decentralized alternatives against escalating suppression"
+    },
+    {
+      "id": "identity_locked_exit_capacity",
+      "question": "Can identity-locked resisters perceive or execute exit options if suppression intensity reaches critical thresholds, or does identity fusion prevent exit regardless of capacity?",
+      "resolution_mechanism": "Case studies of resisters exiting suppressive environments: Did exit require identity shift (professional reorientation, relational reconstruction)? Did suppressors offer identity-compatible exit paths? Correlation between identity-lock strength and exit barriers.",
+      "impact": "If identity exit is possible: identity_locked classification at biographical horizon should shift to constrained or mobile at higher thresholds. If identity-locked is immutable: resister is trapped within identity frame regardless of suppression intensity or institutional capacity. Affects interpretation of whether escalation cycle is structural or psychological.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether identity-locked resisters can exit when suppression escalates"
+    },
+    {
+      "id": "institutional_suppression_intent",
+      "question": "Is suppression escalation driven by institutional intent to eliminate target voice, or by bureaucratic momentum, internal security logic, or reactive overreach?",
+      "resolution_mechanism": "Analysis of institutional decision-making: Are escalation orders deliberate policy or emergent from security apparatus autonomy? Do institutional leaders reverse escalation if politically costlier than continuation? Correlation between institutional incentives and escalation patterns.",
+      "impact": "If intentional: Snare classification stable; extraction is institutional strategy. If bureaucratic momentum: Piton classification more appropriate (degraded ritual persistence). If security logic without elimination intent: Tangled Rope more accurate (coordination function exists alongside extraction). Intent classification affects mandatrophy resolution.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether suppression escalation is intentional policy or institutional momentum"
+    },
+    {
+      "id": "external_pressure_effectiveness",
+      "question": "Can external democratic transition coalitions reduce suppression escalation cycles, or does external pressure trigger nationalist backlash that intensifies institutional suppression?",
+      "resolution_mechanism": "Longitudinal analysis of suppression changes correlated with international pressure campaigns, sanctions, diplomatic intervention. Comparison of suppression trajectories in high vs low international pressure regimes. Evidence of backfire effect or strategic compliance.",
+      "impact": "If external pressure effective: Scaffold perspective confirmed; transition coalition has genuine sunset function. If pressure ineffective or backfire-producing: Scaffold is aspirational rather than structural. Alternative exit mechanisms required; cycle may be self-sustaining. Theater ratio of international pressure becomes questionable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether external pressure effectively reduces institutional suppression"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.63
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "The suppression escalation cycle describes a structural trap in which institutional attempts to control dissent, resistance, or unauthorized voice trigger counter-innovations by targets, which in turn trigger institutional escalation, which triggers further target innovation, in a self-reinforcing cycle. The cycle is neither pure coordination (as the suppressing institution perceives it) nor pure extraction (as the target experiences it) but a hybrid dynamic where each agent's actions create the conditions for the other's escalation. The constraint exhibits all eight perspectives as a diagnostic exemplar for how suppression mechanisms, identity fusion, institutional degradation, and democratic transition dynamics interact. The extractiveness value (0.58) reflects that the primary extraction (concentration of coercive capacity and authorized voice in institutional hands) is moderate in the early phases and rises as the cycle accelerates. The theater ratio (0.65) captures that much suppression apparatus activity is performative \u2014 maintaining the appearance of order and information control \u2014 while actual information flow increasingly escapes institutional channels. The measurement trajectory shows extractiveness rising from 0.35 to 0.61 over nine time units as suppression escalates, then declining slightly to 0.58 as the cycle reaches unsustainability. Theater ratio climbs from 0.48 to 0.68 as institutional suppression becomes more ritual-bound and disconnected from actual information control. This pattern is characteristic of cycles that reach critical instability and trigger regime transition or institutional collapse.",
+    "key_agents": [
+      "Targeted Population: Primary victim (powerless/trapped) \u2014 bears full cost of suppression escalation through restrictions on freedom, economic penalty, legal jeopardy, psychological toll",
+      "Identity-Locked Resister: Secondary victim (moderate/identity_locked) \u2014 cannot exit without abandoning core identity; experiences both coordination (mutual support networks) and extraction (rising enforcement costs)",
+      "Suppressing Institution: Primary beneficiary (institutional/arbitrage) \u2014 controls coercive apparatus, authorized speech, and institutional legitimacy; perceives suppression as coordination mechanism for order",
+      "Alternative Voice Ecosystem: Victim collective (powerless/trapped) \u2014 decentralized network bearing innovation and maintenance costs of evading suppression; trades functional voice for distributed resilience",
+      "Degraded Censorship Apparatus: Institutional actor (institutional/constrained) \u2014 formal censorship mechanisms persist through inertia despite functional obsolescence; theater-heavy",
+      "Powerful Dissident: Secondary beneficiary (powerful/mobile) \u2014 rare status-dissent combination enables selective suppression exposure and rare exit options; visible resistance reduces ecosystem theater",
+      "Democratic Transition Coalition: Organized external actor (organized/constrained) \u2014 promotes institutional openness and speech norms; temporary support structure with potential sunset",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as inherent features of power asymmetry"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The suppressing institution extracts by concentrating voice, controlling information flow, and restricting target agency. The extraction is not maximal because targets retain some innovation capacity and alternative voice ecosystems survive, albeit with high costs. The rising trajectory from 0.35 to 0.61 reflects escalation as extraction deepens \u2014 initial suppression is selective and lower-cost; as targets innovate, suppression must escalate, raising institutional enforcement costs alongside target resistance costs. The slight decline from 0.61 to 0.58 at the cycle's critical point suggests unsustainability \u2014 at maximum escalation, the cycle becomes brittle and prone to collapse or transition. Suppression (0.72): High. Barriers to target exit and voice are substantial: legal prohibitions, economic sanctions, social stigma, psychological internalization of suppression narratives. Alternative voice ecosystems operate at high cost (distributed resources, encryption overhead, operational risk). Yet suppression is not absolute \u2014 some channels remain open, some information escapes, some individuals maintain public voice despite cost. Theater ratio (0.65): Moderately high. Suppression apparatus maintains performative elements (trials, licenses, bureaucratic review) that consume resources without fully controlling information flow. Alternative voice ecosystems develop workarounds (encrypted platforms, diaspora networks, underground publishing) that reduce institutional suppression's functional effectiveness. As cycle escalates, theater ratio increases because institutional suppression becomes more ritual-bound (elaborate legal frameworks, extensive security justifications) while actual information control erodes. This is the diagnostic signature of Piton dynamics within a Snare structure.",
+    "perspectival_gap": "The suppression escalation cycle produces eight distinct classifications from the same base properties, making it a diagnostic exemplar for perspectival pluralism. The suppressing institution's Rope classification reflects their genuine experience: suppression solves their coordination problem of maintaining institutional order and authorized narrative. The targeted population's Snare reflects their genuine experience: they are trapped targets with rising extraction costs and no exit. These are not disagreements about facts but about structural position. From the institution's vantage point, suppression is proportionate and functional; from the target's vantage point, suppression is severe and extractive. Neither perspective is false; both are locally true given their structural positions. The identity-locked resister's Tangled Rope reflects a third genuine structure: they are neither pure coordinating agents nor pure extraction targets but trapped in a hybrid where resistance organization (coordination function) and enforcement escalation (extraction function) interact within their identity frame. The powerful dissident's Tangled Rope differs structurally from the identity-locked resister's because the powerful dissident has genuine exit options that the identity-locked agent lacks, shifting their experienced extraction downward. The alternative voice ecosystem's Snare with high theater reflects that decentralized resistance networks bear escalating costs of evasion and innovation while producing diminishing amplification returns \u2014 the ecosystem's survival becomes the primary function rather than voice amplification. The degraded censorship apparatus's Piton reflects that formal suppression mechanisms persist despite their mechanical obsolescence in an information-saturated environment \u2014 the apparatus survives through institutional inertia and legitimacy theater, not functional necessity. The democratic transition coalition's Scaffold reflects that external pressure creates an exit path for the entire cycle: if institutional suppression becomes unsustainable due to internal contradictions and external pressure, regime transition creates a sunset clause for the entire suppression architecture. The analytical observer's Mountain is a false summit \u2014 it naturalizes the escalation cycle as an inevitable feature of power asymmetry, missing the historical fact that many regimes achieve voice governance through negotiation, power-sharing, or institutional reform rather than suppression escalation.",
+    "directionality_logic": "Each agent's directionality d is computed from their structural position: Are they beneficiaries or targets? Do they have exit capacity? Beneficiaries (suppressing institution: d \u2248 0.20, powerful dissident positioned as partial beneficiary: d \u2248 0.40) experience low or moderate f(d), producing low or moderate experienced extraction. Targets with trapped exit (targeted population, alternative voice ecosystem: d \u2248 0.90-0.95) experience high f(d) around 1.30-1.42, producing high experienced extraction. Identity-locked targets (identity-locked resister: d \u2248 0.75, beneficiary-side identity-locked like a true believer in suppression institution: d \u2248 0.25) experience medium f(d) around 1.05-1.15 because identity fusion creates an additional perceptual layer on top of material position. Organized external agents (democratic transition coalition: d \u2248 0.60) experience moderate f(d) around 0.95-1.05 because they are committed but not directly embedded in the suppression structure. Scope modifiers \u03c3(S) apply: national scope (\u03c3=1.0) is baseline; global scope (\u03c3=1.2) amplifies chi for all agents, making suppression's effects more systemic; universal scope (\u03c3=1.0 for analytical) preserves baseline. The measured suppression of 0.72 is a raw structural property \u2014 it does not scale by context, only extractiveness scales by f(d) and \u03c3(S). This reflects that the barriers to exit (legal, economic, social, psychological) are structural features of the suppression apparatus itself, not dependent on whether the target is analytical or powerless.",
+    "mandatrophy_analysis": "The suppression escalation cycle has a measured extractiveness of 0.58, which does not trigger the mandatrophy gate (\u03b5 > 0.70). However, the cycle exhibits mandatrophy-like dynamics at the conceptual level: the suppressing institution genuinely perceives itself as solving a coordination problem (order maintenance, institutional preservation), while the target perceives pure extraction. This is not a false mandatrophy (where the analyst incorrectly conflates Rope and Snare) but a genuine perspectival mandatrophy: multiple agents with equal information perceive the same constraint as having opposite primary functions. The resolution is not to choose one perspective as 'correct' but to recognize that suppression escalation cycles inherently hide their extraction function behind coordination rhetoric (the institution's perspective) while making extraction transparent to targets (the target's perspective). The mandatrophy is structural to asymmetric power. The escalation dynamic itself creates a false mandate: institutional actors believe suppression escalation is necessary for order, but the escalation is actually driven by institutional security logic and target innovation \u2014 it is not a coordination mechanism but a reactive extraction mechanism masked as order maintenance. The theatrical components (high theater ratio, performative rituals) reveal institutional awareness that suppression's functional necessity is declining (why else the elaborate justification theater?) \u2014 this suggests the cycle is reaching unsustainability and approaching a phase transition where institutional actors may be forced to recognize suppression as extraction rather than coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "identity_locked_capture",
+      "institutional_innovation_arms_race",
+      "regime_transition_instability"
+    ],
+    "dual_formulation_note": "The suppression escalation cycle is upstream of several downstream constraints. Institutional suppression directly feeds identity_locked_capture (targets internalize suppression narratives and develop identity fusion with resistance identity). The cycle drives institutional_innovation_arms_race (target voice innovation spurs institutional suppression innovation in an escalating competition). The accumulation of suppression unsustainability eventually triggers regime_transition_instability (the cycle becomes brittle and prone to collapse). All three downstream constraints have higher extractiveness values because they are consequences of the escalation cycle reaching critical intensity."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.22
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.38
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "medium-high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "institutional_control_asymmetry"
+    ]
+  }
+}

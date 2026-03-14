@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "job_mobility_suppression",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "jms"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Job Mobility Suppression",
+    "topic_domain": "labor_economics/employment_relations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "employer_firms",
+      "capital_concentration"
+    ],
+    "victims": [
+      "workers",
+      "labor_market_dynamism"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Trapped Worker",
+      "comment": "PERSPECTIVE 1: TRAPPED WORKER (SNARE) \u2014 Worker faces non-compete clauses, licensing requirements, geographic lock-in, and skill-specific capital that transfers poorly. Career capital is firm-specific. Exit would mean abandoning accumulated knowledge, social networks, and resume credentials tied to current employer. Maximum extraction experienced: no alternatives visible, high cost to exit, suppression fully internalized through opportunity cost calculation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Skilled Mobile Worker",
+      "comment": "PERSPECTIVE 2: SKILLED MOBILE WORKER (TANGLED ROPE) \u2014 High-skill worker (software engineer, manager) retains some mobility but faces significant costs: non-compete enforcement, vesting cliffs, equity compensation loss, reputation risk, credential portability barriers. Experiences genuine coordination benefits (firm-internal development, skill-matching) alongside extraction (wage suppression through immobility, equity lock-in). Significant but not total extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Employer Firm",
+      "comment": "PERSPECTIVE 3: EMPLOYER FIRM (ROPE) \u2014 Firm benefits from worker immobility through wage suppression, reduced poaching risk, and ability to recoup training investments. Experiences constraint as pure coordination problem: how to retain talent and invest in development in competitive labor market. Non-compete clauses and golden handcuffs solve the retention coordination problem with minimal coercive overhead from the firm's perspective. Beneficiary position with arbitrage exit (can replace workers, relocate operations)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor-Market Reform Coalition",
+      "comment": "PERSPECTIVE 4: LABOR-MARKET REFORM COALITION (SCAFFOLD) \u2014 Organized agents (antitrust enforcement, labor unions, policy advocates) see suppression as a temporary coordination failure being addressed through non-compete ban legislation, portable benefits reform, and credential standardization. Low effective extraction from this perspective because organized agents have clear exit pathway: regulatory reform with estimated sunset of 5-10 years as state-level non-compete bans propagate and federal harmonization advances."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The HR Theater Apparatus",
+      "comment": "PERSPECTIVE 5: HR THEATER APPARATUS (PITON) \u2014 Human resources 'talent development' and 'retention strategies' are substantially performative: career pathing discussions without real mobility, development plans locked to firm-specific goals, mandatory loyalty signaling. The machinery persists through institutional inertia (inherited from mid-20th century corporate culture) despite low actual function. The theater has been partially replaced by gig economy and job-hopping norms among top talent, but institutional HR apparatus maintains the performance for compliance and legitimacy. Theater ratio remains high (0.65) because mobility suppression still operates through formal mechanisms even as functional reality shifts."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Elite Mobile Professional",
+      "comment": "PERSPECTIVE 6: ELITE MOBILE PROFESSIONAL (TANGLED ROPE) \u2014 Top 5% of workers (elite technologists, executives, specialized experts) have genuine mobility options and arbitrage capacity. But they experience the constraint differently: their mobility is coordinated through recruitment ecosystems, executive search, and specialized networks that extract through high placement fees, equity concentration, and talent lock-in during acquisition cycles. Even with high power and mobility, they experience asymmetric extraction in the form of talent concentration mechanisms and golden handcuffs. The constraint is tangled for them \u2014 it coordinates talent matching while extracting rents through scarcity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational perspective, human capital is structurally immobile relative to physical capital: workers cannot instantly acquire new skills, cannot freely relocate without family/community costs, cannot instantaneously learn new organizational cultures. Some lag between job change and productivity is immutable. However, the degree of suppression (0.72) far exceeds what mobility friction alone would produce. This perspective risks naturalizing contingent institutional mechanisms (non-competes, vesting, credential gatekeeping, geographic fragmentation) as inherent to labor economics. The engine will flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "non_compete_enforceability_variance",
+      "question": "What fraction of suppression derives from legal enforceability of non-competes versus voluntary lock-in through psychological and financial mechanisms?",
+      "resolution_mechanism": "Comparative analysis across jurisdictions with different non-compete regimes (California ban vs Texas enforcement) controlling for labor market structure, firm size, and worker skill level",
+      "impact": "If legal enforceability > 60%: suppression drops significantly under regulatory reform, classification remains Snare/Tangled Rope but chi decreases. If psychological lock-in > 60%: legal reform has limited impact, suppression is internalized (identity-locked mechanism), classification deepens.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Contribution of legal enforceability vs psychological lock-in to suppression"
+    },
+    {
+      "id": "skill_transferability_asymmetry",
+      "question": "Do firm-specific skills genuinely transfer at lower rates than claimed, or does the transferability discount reflect employer-side information asymmetry and credential gatekeeping?",
+      "resolution_mechanism": "Wage trajectory analysis for workers changing firms with similar skill profiles; comparison of hiring discount for internal transfers vs external hires with identical certifications",
+      "impact": "If genuine skill gap: suppression is coordination problem (higher Rope/Scaffold proportion). If information asymmetry: suppression is extraction mechanism (higher Snare/Tangled Rope), employers suppress mobility to maintain wage-setting power.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether firm-specific skill discount is genuine or information asymmetry"
+    },
+    {
+      "id": "regulatory_sunset_credibility",
+      "question": "Are non-compete bans and portable benefits reforms actually reducing mobility suppression, or are employers adapting with new mechanisms (trade secret liability, garden leave, equity acceleration cliffs)?",
+      "resolution_mechanism": "Longitudinal tracking of actual quit rates and wage growth for mobile workers in pre- vs post-ban jurisdictions; analysis of emerging contractual mechanisms designed to replace non-competes",
+      "impact": "If bans effective: scaffold perspective confirmed, extractiveness decreases toward 0.35-0.40. If employers adapt: suppression persists through alternate mechanisms, extractiveness stays high (0.55-0.65), scaffold is aspirational rather than structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of non-compete ban reform in reducing mobility suppression"
+    },
+    {
+      "id": "identity_lock_in_professional_identity",
+      "question": "To what extent is worker immobility driven by internalized professional identity (self-concept fused with current firm/role) versus material barriers to exit?",
+      "resolution_mechanism": "Post-exit trajectory analysis: do workers who forced into mobility (layoff, firm closure) show rapid re-attachment to new identity/firm or prolonged identity crisis? Do workers express identity loss vs purely financial anxiety about job change?",
+      "impact": "If identity-locked: suppression is cognitive rather than structural, workers perceive immutability from within their frame but could exercise mobility if identity frame shifted. Classification remains Snare from powerless perspective but becomes Rope from identity-unlocked perspective. If material barriers dominant: suppression is structural, identity lock is secondary effect.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Role of professional identity fusion in perceived immobility"
+    },
+    {
+      "id": "gig_economy_substitution_effectiveness",
+      "question": "Does gig work actually provide genuine mobility escape or does it represent precarity that reinforces traditional employment lock-in (workers forced to cycle between gig and traditional employment)?",
+      "resolution_mechanism": "Comparative wage and benefit trajectories between workers with gig-only, traditional-only, and hybrid gig-traditional careers; analysis of whether gig work provides bridge to new traditional employment or trap in lower-paying precarity",
+      "impact": "If genuine escape: alternative constraint structure emerging (gig economy suppression mechanisms are different \u03b5 values, decompose to separate constraint family). If trap: gig economy creates secondary constraint that reinforces traditional employment lock-in, tangled rope classification deepens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether gig work provides mobility escape or reinforces traditional employment lock-in"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Job mobility suppression encompasses mechanisms that restrict workers' ability to exit current employment or change career paths without significant cost. These mechanisms include non-compete clauses, licensing requirements, vesting schedules tied to tenure, firm-specific skill capital, geographic lock-in through housing and family ties, credential gatekeeping, and psychological identification with professional role. The constraint exhibits the full spectrum of DR classifications depending on observer position: powerless workers see it as an inescapable trap (Snare), skilled workers experience it as a mix of coordination benefits and extraction costs (Tangled Rope), employers see it as pure coordination problem (Rope), reform coalitions see it as temporary problem with policy solutions (Scaffold), institutional HR apparatus maintains it as degraded ritual (Piton), and the analytical observer risks naturalizing institutional contingency as inherent labor economics friction (Mountain). Over the 20-year interval, extractiveness has increased from 0.35 to 0.58, and theater ratio from 0.45 to 0.65, reflecting both intensification of suppression mechanisms and expansion of performative justifications. The constraint's suppression metric (0.72) reflects multiple barriers: material (equipment costs, geographic relocation, lost tenure benefits), informational (credential discounting, tacit knowledge transfer), legal (non-compete enforcement, licensing reciprocity), and psychological (identity fusion, opportunity cost internalization).",
+    "key_agents": [
+      "Trapped Worker: Primary victim (powerless/trapped) \u2014 bears full cost of immobility, experiences maximum extraction through wage suppression and career constraint",
+      "Skilled Mobile Worker: Secondary victim (moderate/constrained) \u2014 faces significant but surmountable barriers, experiences mixed coordination benefits and extraction",
+      "Employer Firm: Primary beneficiary (institutional/arbitrage) \u2014 benefits from reduced poaching risk, wage suppression, and ability to recoup training investment",
+      "Capital Concentration: Secondary beneficiary (institutional/arbitrage) \u2014 benefits from reduced labor negotiating power and increased firm valuation through reduced turnover costs",
+      "Labor-Market Reform Coalition: Organized agent (organized/constrained) \u2014 seeks to reduce suppression through non-compete bans, portable benefits, credential standardization with estimated 5-10 year sunset",
+      "HR Theater Apparatus: Institutional actor (institutional/arbitrage) \u2014 maintains performative talent development and retention strategies; sees own function as degraded",
+      "Elite Mobile Professional: Powerful agent (powerful/mobile) \u2014 retains mobility options but experiences extraction through executive recruitment mechanisms and talent concentration",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing institutional suppression as inherent labor friction"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The original assessment of pure productivity loss from immobility would suggest higher values (0.70-0.80), but the constraint provides genuine coordination benefits: firms can invest in worker development without immediate loss to poaching, workers gain skill development and credential certification that has value beyond current employer. The 0.58 value reflects that extractiveness is primarily rent-seeking through immobility (wage suppression) rather than creation of new value loss. The 20-year trend (0.35 \u2192 0.58) shows intensification: non-competes have expanded geographically and sectorally, equity vesting structures have replaced fixed wages, credential gatekeeping has increased, and psychological identification with firms has become more normalized. Suppression (0.72): High. Multiple reinforcing barriers prevent exit: legal (non-competes with 55-75% enforcement depending on jurisdiction), material (lost benefits, relocation costs, geographic lock-in), informational (credential discounting, knowledge transfer barriers), psychological (identity fusion, learned helplessness about alternatives), and structural (firm-specific capital and tacit knowledge). The barriers are not uniformly distributed \u2014 powerless workers face all four; skilled workers face mainly informational and psychological barriers. Theater ratio (0.65): Moderate-high. HR 'talent development' discourse, career pathing, retention bonuses, and 'culture fit' hiring are substantially performative: they serve legitimation and compliance functions while the actual mobility restriction operates through contractual and structural mechanisms. The theater has increased from 0.45 as firms have developed more sophisticated narratives around 'employee engagement' and 'development ecosystems' while mobility suppression has hardened through legal and financial mechanisms.",
+    "directionality_logic": "Directionality (d) is computed from the agent's structural position: who benefits, who bears costs, and what exit capacity they have. Employers and capital concentration are beneficiaries with arbitrage capacity \u2014 they can replace workers, relocate operations, or change strategy \u2014 producing low d (0.05-0.20) and negative \u03c7 (they experience the constraint as beneficial). Trapped workers are victims with no exit, producing high d (0.95) and maximum \u03c7 (1.42 \u00d7 \u03b5). Skilled mobile workers are victims with constrained exit (high cost but possible), producing moderate-high d (0.75-0.85) and elevated \u03c7 (1.15 \u00d7 \u03b5). Organized reform agents have power and exit options (they can lobby, litigate, organize), producing moderate d (0.40-0.50) and moderate \u03c7 (0.60 \u00d7 \u03b5). The perspectival gap emerges from these divergent d values: the employer experiences Rope because their d is low and they genuinely coordinate; the trapped worker experiences Snare because their d is high and they bear full extraction; the organized coalition experiences Scaffold because they have power to alter the constraint within their time horizon.",
+    "perspectival_gap": "The original research assumption was that this constraint has a single 'correct' classification based on objective metrics. The perspectival gaps reveal why this is false. The employer firm's 'retention problem' (Rope) is the worker's 'trap' (Snare). The reform coalition's 'temporary policy failure' (Scaffold) is the trapped worker's 'permanent structure' (Snare from biographical perspective, Mountain from immediate perspective). The HR apparatus' 'talent development' (Piton theater) is the worker's 'career path constraint' (Snare). The skilled mobile worker's 'constrained mobility with benefits' (Tangled Rope) is the powerless worker's 'impossibility of exit' (Snare). The elite professional's 'executive recruitment market' (Tangled Rope with power and mobile exit) is the trapped worker's 'impossibility of aspiration.' No single type is 'correct' \u2014 the presheaf over observation positions IS the structure. The false summit detector flags the mountain classification because the civilizational 'inherent friction' narrative naturalizes what is actually a contingent institutional arrangement that varies radically across jurisdictions and time periods.",
+    "mandatrophy_analysis": "RESOLVES MANDATROPHY by showing that the classification spectrum emerges legitimately from structural position differences. The mandatrophy question is 'Is job mobility suppression coordination or extraction?' The answer is 'both, from different positions.' Employers coordinate retention and development (Rope from their position). Workers experience extraction through immobility (Snare from theirs). The constraint cannot be classified as 'pure extraction' (Snare) or 'pure coordination' (Rope) at the aggregate level because the aggregate does not exist \u2014 the structure is a presheaf over distinct agent positions. The Tangled Rope classification at institutional/constrained and powerful/mobile reflects that institutional actors in the suppression system (large firms, recruiters, HR systems) experience mixed coordination and extraction even among the beneficiary class, and powerful workers experience extraction even with high exit options (through talent market mechanisms). This resolves the classic mandatrophy: the constraint is simultaneously coordination, extraction, and both-mixed, depending on observer position. The policy implication is that 'reform' cannot eliminate the constraint by choosing the 'right' classification \u2014 it must target the extraction mechanisms while preserving genuine coordination function, which is precisely what non-compete bans + portable benefits reform aims to do: remove legal and financial lock-in while preserving skill development and credential systems."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wage_suppression_through_labor_immobility",
+      "skills_credential_gatekeeping",
+      "geographic_lock_in_housing_costs"
+    ],
+    "dual_formulation_note": "Job mobility suppression decomposes into three structurally distinct constraints with different \u03b5 values: (1) wage suppression through immobility (\u03b5\u22480.55, how immobility enables wage rent-seeking), (2) credential gatekeeping (\u03b5\u22480.48, how licensing/certification requirements restrict entry and transfer), and (3) geographic lock-in through housing/family costs (\u03b5\u22480.62, how structural immobility compounds job mobility constraints). Each has different beneficiaries, different suppression mechanisms, and different policy solutions. The aggregate 'job mobility suppression' story represents the coordinated effect of these three upstream constraints. Links indicate that policy intervention in one (e.g., non-compete bans) partially addresses the aggregate constraint but leaves others intact."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

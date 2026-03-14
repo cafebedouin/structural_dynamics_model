@@ -1,0 +1,220 @@
+{
+  "header": {
+    "constraint_id": "danish_immigration_policy",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dip"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Danish Immigration Policy Constraint",
+    "topic_domain": "political_economy/immigration/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "danish_labor_market_employers",
+      "danish_tax_base_beneficiaries",
+      "danish_welfare_system_beneficiaries"
+    ],
+    "victims": [
+      "asylum_seekers_and_refugees",
+      "immigrant_communities",
+      "non_western_migrants"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Asylum Seeker",
+      "comment": "PERSPECTIVE 1: ASYLUM SEEKER (SNARE) \u2014 Trapped by legal status, geographic restriction, and material dependency. Cannot work, cannot exit, cannot influence policy. Bears full extraction cost through family separation requirements, integration barriers, and indefinite processing delays. Maximum experienced extraction with zero agency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Immigrant Community",
+      "comment": "PERSPECTIVE 2: IMMIGRANT COMMUNITY (TANGLED ROPE) \u2014 Constrained by licensing restrictions, language requirements, housing discrimination, and documented surveillance of non-Western minorities. Also benefits from labor market access, welfare universalism, and educational opportunities once legal status is secured. Mixed experience: genuine coordination (labor market integration) with asymmetric extraction (behavioral policing, family unity restrictions)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Danish Labor Market",
+      "comment": "PERSPECTIVE 3: DANISH LABOR MARKET (ROPE) \u2014 Benefits from controlled access to migrant labor. Experiences policy as coordination mechanism: point-based systems and skills matching enable efficient allocation without domestic labor shortage. Net beneficiary \u2014 extraction runs toward employers and high-skill sectors, policy is designed to serve their interests."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Integration Administration",
+      "comment": "PERSPECTIVE 4: INTEGRATION ADMINISTRATION (SCAFFOLD) \u2014 Organized bureaucratic apparatus sees immigration policy as temporary coordination structure with sunset clauses built into integration programs and refugee quotas. Experiences enforcement as a manageable administrative burden with declining theater as digital ID systems and integration metrics replace manual case management. However, sunset never materializes \u2014 quotas reset annually, new restrictions layer atop old ones, suggesting piton degradation."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Danish Welfare Gatekeeping Myth",
+      "comment": "PERSPECTIVE 5: WELFARE GATEKEEPING MYTH (PITON) \u2014 The narrative that 'welfare costs require immigration control' is largely performative. Studies show net fiscal contribution from working-age migrants; welfare spending per capita on immigrants is lower than on Danish-born citizens. Yet the welfare-protection framing persists as a public justification layer (theater = 0.78) despite contradictory evidence. The constraint maintains itself through ritualized policy reviews, media amplification of extreme cases, and institutional resistance to contradictory data."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The EU and International Law System",
+      "comment": "PERSPECTIVE 6: EU AND INTERNATIONAL LAW (TANGLED ROPE) \u2014 EU legal frameworks (Dublin Regulation, family reunification directives) create coordination obligations while allowing Denmark opt-outs and derogations. Denmark benefits from labor mobility within EU while restricting third-country migration. Experiences constraint as hybrid: genuine coordination on internal mobility with asymmetric extraction through EU burden-shifting (Dublin means border states like Italy absorb asylum applications)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Global Justice View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From a global justice perspective, Danish immigration policy exhibits pure extraction masked as security/welfare protection. The constraint serves rich-nation interests (labor supply control, welfare preservation) while imposing maximum costs on poor-nation populations (family separation, asylum processing delays, climate refugee exclusion). The analytical view sees through the welfare-protection framing and identifies the constraint as global extraction without meaningful coordination function for the targets."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "welfare_fiscal_impact_threshold",
+      "question": "What is the actual net fiscal impact of immigration on the Danish welfare system, and does it justify the suppression level embedded in policy?",
+      "resolution_mechanism": "Longitudinal fiscal analysis controlling for demographic structure and tax contributions; comparison of lifetime fiscal impact by migration cohort and skill level",
+      "impact": "If net positive: welfare-protection framing is false justification, suppression is revealed as xenophobic rather than fiscally rational, extraction classification strengthens. If net negative: suppression is partially justified, constraint shifts toward Rope from higher-income perspective.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Net fiscal impact of immigration on welfare system"
+    },
+    {
+      "id": "integration_success_metric_manipulation",
+      "question": "Are published integration success metrics measuring genuine outcomes or performing compliance with policy objectives?",
+      "resolution_mechanism": "Comparison of official integration metrics with independent educational attainment, employment stability, wage trajectory, and social inclusion measures; analysis of metric definition changes correlating with policy changes",
+      "impact": "If metrics are gaming outputs: theater_ratio should be higher (0.75+), constraint should classify as Piton from administration perspective. If metrics are valid: suppression justification is stronger, constraint shifts toward Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether integration metrics measure genuine outcomes or policy compliance"
+    },
+    {
+      "id": "extraction_beneficiary_concentration",
+      "question": "Is extraction concentrated on specific demographic targets (non-Western, Muslim identity) or dispersed across all immigrant populations?",
+      "resolution_mechanism": "Differential policy impact analysis: enforcement intensity, family reunification approval rates, housing access, employment discrimination complaints by origin country and religious affiliation",
+      "impact": "If highly concentrated on non-Western minorities: classification shifts toward coordinated discrimination (Snare from multiple perspectives). If dispersed: suppression is economically rational rather than discriminatory, constraint shifts toward Tangled Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether extraction targets are concentrated or dispersed across immigrant populations"
+    },
+    {
+      "id": "family_separation_sustainability",
+      "question": "Is the family separation requirement ('no welfare benefits for family members in origin country') enforced or symbolically maintained?",
+      "resolution_mechanism": "Compliance audit: percentage of policy violations detected vs prosecuted; longitudinal tracking of family reunification despite formal restrictions; investigation of enforcement variation by political party in office",
+      "impact": "If strictly enforced: suppression is maximal (0.78+), extraction is structural and severe. If loosely enforced: constraint is largely performative (Piton), theater ratio should be higher.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Enforcement intensity of family separation policy"
+    },
+    {
+      "id": "alternative_policy_path_dependency",
+      "question": "Are the restrictions path-dependent on early policy choices or structurally necessary for Danish labor market function?",
+      "resolution_mechanism": "Comparative analysis with other high-wage nations achieving similar labor market outcomes with lower suppression; historical analysis of policy decision points where less restrictive alternatives existed",
+      "impact": "If path-dependent: constraint is political choice rather than natural law, extractiveness classification is strengthened. If structurally necessary: constraint shifts toward Rope, suppression is legitimate coordination cost.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether suppression is path-dependent or structurally necessary"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 21,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 21,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 21
+  },
+  "commentary": {
+    "narrative_context": "Danish immigration policy exhibits a structural constraint that simultaneously coordinates labor market access and extracts from asylum seekers and immigrant populations through legal status restrictions, family separation requirements, and integration barriers. The policy framework creates genuine coordination for employers and high-skill workers (efficient labor matching through point-based systems) while imposing maximum suppression on vulnerable populations (indefinite processing, material dependency, behavioral surveillance). The constraint's theater ratio (0.64) reflects that public justification centers on welfare protection and security, yet empirical analysis shows net fiscal contribution from migrants and minimal security gains from restrictions. The extractiveness trajectory shows steady accumulation: early restrictions (0.38 at t=0) have expanded through policy layering to current severity (0.58), with theater increasing alongside extractiveness \u2014 a diagnostic signal that the justification narrative is being ritualized rather than empirically validated. The constraint exhibits all six classification types across perspectives, making it a diagnostic exemplar of how the same policy structure appears as pure extraction to powerless agents, coordination to beneficiary institutions, and welfare gatekeeping mythology to the general public.",
+    "key_agents": [
+      "Asylum Seekers and Refugees: Primary victim (powerless/trapped) \u2014 bears maximum extraction through indefinite processing, material dependency, family separation, and zero legal agency",
+      "Non-Western Immigrant Communities: Secondary victim (moderate/constrained) \u2014 face licensing restrictions, housing discrimination, employment barriers, and documented behavioral surveillance; also benefit from labor market access and welfare universalism once status secured",
+      "Danish Labor Market Employers: Primary beneficiary (institutional/arbitrage) \u2014 control labor supply through point-based systems, avoid domestic wage pressure, access skilled migrants on favorable terms",
+      "Danish Taxpayers and Welfare Beneficiaries: Secondary beneficiary (powerful/mobile) \u2014 benefit from restricted welfare access for immigrants; narrative protection through welfare-preservation framing",
+      "Integration Administration and Bureaucracy: Institutional mediator (institutional/arbitrage) \u2014 manages constraint through administrative systems; benefits from policy complexity and discretionary enforcement",
+      "EU Legal and Border System: Inter-institutional actor (institutional/constrained) \u2014 coordinates with Denmark on burden-shifting (Dublin Regulation externalities) while constraining unilateral restriction capacity",
+      "Analytical Observer: Global justice perspective (analytical/analytical) \u2014 sees through welfare-protection framing and identifies global extraction mechanism concentrating on poorest populations"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The policy extracts labor value from migrants (suppressed wages through skill devaluation, credential non-recognition), material security from asylum seekers (indefinite processing delays, family separation), and dignity/autonomy from all non-Western migrants (behavioral surveillance, integration requirements framed as 'culture fit'). The extraction is substantial but not totalizing \u2014 Denmark's welfare universalism and labor market access do provide real benefits to immigrants once status is secured. Suppression (0.68): High. Barriers are structural and multiple: indefinite legal status, family separation requirements, housing segregation, licensing restrictions, employment discrimination, and documented heightened enforcement against non-Western minorities. These barriers are active (requires ongoing enforcement) not passive. Theater ratio (0.64): Moderate-high. Public justification emphasizes welfare protection and cultural integration, but empirical analysis reveals net fiscal contribution and minimal integration gaps compared to other OECD nations. The welfare-gatekeeping narrative persists despite contradictory evidence \u2014 a signal that the theater is performing policy legitimacy rather than explaining necessity. Temporal trajectory shows theater increasing (0.52\u21920.68) as restrictions accumulate \u2014 diagnostic signal of Goodhart drift. Claimed type (Tangled Rope) reflects that genuine labor coordination (employer benefit) is layered with asymmetric extraction (target cost). The constraint requires active enforcement (point-system administration, integration monitoring, deportation capacity) \u2014 structural marker of Tangled Rope vs pure Rope.",
+    "perspectival_gap": "Perspectival gap between beneficiary institutions and victim populations is maximal and driven by asymmetric legal status and exit capacity. Employers see labor market coordination (Rope); asylum seekers see indefinite legal trap with forced family separation (Snare). Immigrant communities experience mixed outcomes: tangible benefits (work access, education, welfare universalism) layered with tangible restrictions (licensing limits, housing segregation, behavioral surveillance). The gap reflects genuine structural asymmetry \u2014 the policy is designed to benefit one population and extract from another. The analytical observer can view this as either domestic coordination (Rope) or global extraction (Snare) depending on whether they adopt the beneficiary's frame (wealthy-nation labor market logic) or the victim's frame (poor-nation mobility restriction). The welfare-protection narrative creates a third perspectival layer: the general public may believe the policy serves collective welfare, while immigrants experience it as discrimination, and employers benefit while claiming coordination necessity. This narrative-structural desynchronization is itself diagnostic \u2014 it suggests the constraint's extraction mechanism depends on public misunderstanding of its true function.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from structural position relative to extraction flow. Asylum seekers (victim + trapped \u2192 d \u2248 0.95) experience maximum f(d) \u2248 1.42. Immigrant communities (victim + constrained \u2192 d \u2248 0.82) experience high f(d) \u2248 1.08. Employers (beneficiary + arbitrage \u2192 d \u2248 0.12) experience low f(d) \u2248 0.00. The asymmetry is structural: policy design concentrates benefits on employers (legal certainty, labor supply control) and distributes costs on migrants (indefinite uncertainty, legal restrictions). This is not accidental but intentional \u2014 the policy is written to extract from migrants and deliver to employers. The EU perspective (institutional + constrained \u2192 d \u2248 0.58) experiences moderate extraction through burden-shifting mechanisms embedded in Dublin Regulation. The analytical observer (analytical exit \u2192 d \u2248 0.72) sees the global structure: wealthy-nation extraction from poor-nation populations through mobility restriction. Directionality overrides are not needed \u2014 the structural data (beneficiary/victim declarations + power + exit options) produces accurate d values that explain the perspectival gap.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that different institutional levels and perspectives produce legitimately different classifications from identical base properties. The employer sees Rope (labor market coordination) \u2014 their experience is factually accurate within their institutional frame. The asylum seeker sees Snare (pure extraction with zero agency) \u2014 their experience is factually accurate within their structural position. The analyst sees Tangled Rope or Snare depending on whether they focus on domestic coordination (labor market function) or global extraction (mobility restriction for poor-nation populations). The welfare-protection narrative (Piton of mythologized justification) is factually falsifiable through fiscal analysis but socially persistent. No single classification is 'the' answer. The constraint IS a Tangled Rope at the domestic level (labor coordination + extraction) AND a Snare at the global level (mobility restriction targeting poor populations). The perspectival plurality is not failure of the classification system but correct diagnosis of how institutional structures create different realities for different agents. The mandatrophy resolution: this constraint coordinates labor markets for wealthy nations while extracting from mobile poor populations \u2014 simultaneously Rope (domestic) and Snare (global)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_burden_shifting_asylum",
+      "nordic_welfare_gatekeeping",
+      "labor_market_credential_devaluation"
+    ],
+    "dual_formulation_note": "Danish immigration policy decomposes into separate constraints with different extractiveness values: (1) labor market coordination mechanism (\u03b5 \u2248 0.25, Rope) focused on efficient skills matching, (2) asylum processing extraction (\u03b5 \u2248 0.68, Snare) focused on indefinite status control, (3) welfare gatekeeping mythology (\u03b5 \u2248 0.72, Piton) performative narrative. The aggregate policy (\u03b5 = 0.58) reflects institutional bundling of these three structurally distinct constraints. Decomposition recommended for precision analysis of which mechanism drives observed effects."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

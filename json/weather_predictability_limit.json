@@ -1,0 +1,138 @@
+{
+  "header": {
+    "constraint_id": "weather_predictability_limit",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "weather"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Weather Predictability Limit (Chaos and Lyapunov Exponents)",
+    "topic_domain": "atmospheric_physics/dynamical_systems",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Weather-Dependent Agent",
+      "comment": "PERSPECTIVE 1: WEATHER-DEPENDENT AGENT (MOUNTAIN) \u2014 Individual or community dependent on weather predictions cannot escape the predictability limit. The 2-week horizon is an immutable constraint for planning horizons. No alternative coordination mechanism exists. Maximum perceived immutability."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Agricultural Community",
+      "comment": "PERSPECTIVE 2: AGRICULTURAL COMMUNITY (MOUNTAIN) \u2014 Planning requires weather prediction beyond the predictability limit. High-cost mitigation strategies (insurance, irrigation, crop diversification) exist but are costly. The underlying constraint remains: atmospheric chaos cannot be overcome by social organization. Perceives immutability at generational scale."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Meteorological Establishment",
+      "comment": "PERSPECTIVE 3: METEOROLOGICAL ESTABLISHMENT (MOUNTAIN) \u2014 Institutional actors (national weather services, climate research centers) have studied the predictability limit for decades. The Lyapunov exponent and deterministic chaos are well-characterized. Institutional knowledge confirms immutability and universality of the constraint across all methodologies."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 Lyapunov instability and atmospheric chaos are mathematical and physical facts independent of observation context. The predictability limit emerges from the nonlinear dynamics of the Navier-Stokes equations on a rotating sphere. This is a natural law perspective: universal, unchangeable, applies across all contexts."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "chaotic_vs_deterministic",
+      "question": "Is the weather predictability limit due to intrinsic chaos (butterfly effect) or due to incomplete information and model error?",
+      "resolution_mechanism": "Ensemble forecasting analysis: compare growth rates of initial condition perturbations (chaos signature) against model improvement and data assimilation gains over the past 30 years",
+      "impact": "If intrinsic chaos dominates: limit is immutable natural law (Mountain confirmed). If incomplete information dominates: limit could be pushed back by better data and models (constraint degrades from Mountain to Piton).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether predictability limit is intrinsic chaos or incomplete information"
+    },
+    {
+      "id": "predictability_horizon_generalization",
+      "question": "Does the 2-week predictability horizon apply universally to all weather phenomena, or only to small-scale perturbations?",
+      "resolution_mechanism": "Skill score analysis across phenomenon scales: monsoon onset, teleconnection patterns, blocking highs, tropical cyclones, severe local storms; map skill decay timescales by scale",
+      "impact": "If universal: simplifies mountain classification. If scale-dependent: larger-scale phenomena may have longer predictability (horizon stretches to 3-4 weeks for some phenomena), suggesting the mountain is actually a piton (theater_ratio high for small-scale forecasts, low for climate patterns).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether predictability horizon is scale-universal or phenomenon-dependent"
+    },
+    {
+      "id": "model_fidelity_asymptote",
+      "question": "Is the predictability limit fixed by physics, or will it shift as computational resources and observational networks expand?",
+      "resolution_mechanism": "Longitudinal trend analysis: track median forecast skill for lead times 1-14 days over 20-year period; test for asymptotic convergence or continued improvement",
+      "impact": "If asymptote exists: natural law (Mountain). If trend continues upward: the limit is shifting, suggesting the constraint is institutional/technological (Piton or Scaffold), not physical.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether predictability limit is fixed or shifting with model improvement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "The weather predictability limit represents a fundamental constraint on atmospheric forecasting arising from nonlinear dynamics and initial condition sensitivity (Lyapunov chaos). The practical prediction horizon for mesoscale atmospheric features is approximately 2 weeks, beyond which forecast skill degrades below climatological baseline. This constraint is invariant across all observer positions: meteorologists, climate modelers, dependent agents (farmers, disaster preparedness systems), and analytical observers all recognize the same fundamental limit. The constraint is not extractive \u2014 no agent benefits asymmetrically from the inability to predict weather. It is not suppressive \u2014 no actor is using the predictability limit to coerce another. It is purely a mathematical and physical fact: the Navier-Stokes equations governing atmospheric motion are chaotic on the Earth's parameter space, and perturbations at the scale of atmospheric measurement uncertainty grow at a characteristic rate (Lyapunov exponent \u03bb \u2248 0.1-0.2 per day, doubling time \u2248 3-5 days for midlatitude weather features). After 2-3 doubling times, initial condition uncertainties become as large as the signal itself, and deterministic predictability is lost. This is a canonical natural law constraint: universal, unchangeable, applies identically regardless of measurement method or social context.",
+    "key_agents": [
+      "Weather-Dependent Agents (farmers, disaster systems, transportation): Primary victims (powerless/trapped) \u2014 constrained by the predictability limit in planning horizon",
+      "Meteorological Research Community: Institutional observers (institutional/analytical) \u2014 understand the chaos mechanism deeply; cannot overcome it through better theory",
+      "Meteorological Forecasters: Institutional actors (institutional/constrained) \u2014 work within the skill ceiling defined by the predictability limit",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees the constraint as universal law independent of social arrangement"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Minimal. The predictability limit is not an extractive mechanism. No actor captures asymmetric benefit from weather unpredictability. The constraint produces real costs (crop loss, disaster surprise, planning difficulty) but these are distributed damages, not concentrated extraction. Suppression (0.02): Negligible. The predictability limit does not suppress alternatives \u2014 it is simply a structural fact about what is possible. Weather observations are freely available; forecast models are openly shared; no agent is blocking better predictions. Theater ratio (0.15): Minimal. Meteorological forecasting is a straightforward technical process: data assimilation, model integration, statistical post-processing. Little performative content. The forecasts themselves are honest about uncertainty and skill limits. The constraint exhibits all hallmarks of a pure natural law: invariant across observers, unchangeable by institutional means, applies universally, requires no enforcement, and has no beneficiaries.",
+    "perspectival_gap": "Unusually, this constraint exhibits no perspectival gap. All six observer positions (powerless/trapped, moderate/constrained, institutional/arbitrage, institutional/analytical, organized/constrained, analytical/analytical) converge on the same classification: Mountain. This convergence is diagnostic evidence for natural law status. The weather-dependent agent trapped by the 2-week horizon sees it as unchangeable. The agricultural community planning across generations sees it as unchangeable. The meteorological establishment studying chaos for 50+ years sees it as unchangeable and universal. The analytical observer at civilizational scale sees it as a law of physics. No observer perceives negotiability, coalition possibility, or sunset logic. This universal invariance is the definitive signature of Mountain classification.",
+    "mandatrophy_analysis": "No mandatrophy. The constraint is uniform-type Mountain across all perspectives. No actor is misclassified as perpetrator (beneficiary) when they are victim, or vice versa. No extraction is being naturalized as coordination. The constraint is genuinely about immutable limits, not about power asymmetries. The theoretical possibility: an observer might attempt to naturalize institutional forecasting failures as 'chaotic unpredictability,' blaming the constraint rather than weak prediction infrastructure. The empirical test: compare forecast skill trajectories across countries and decades. If institutional/resource differences correlate with forecast skill, the constraint is malleable (Piton). If skill converges to a common asymptote regardless of investment, the constraint is truly Mountain. Historical data shows convergence to asymptote (~2-week horizon) across all developed meteorological services, confirming natural law status."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  }
+}

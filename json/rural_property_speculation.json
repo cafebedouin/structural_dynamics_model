@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "rural_property_speculation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rurspec"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.52,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Rural Property Speculation and Agricultural Land Consolidation",
+    "topic_domain": "economic/land_use/agricultural_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "external_investors",
+      "financial_intermediaries",
+      "land_development_corporations"
+    ],
+    "victims": [
+      "small_farmers",
+      "rural_communities",
+      "future_food_security"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Small Farmer",
+      "comment": "PERSPECTIVE 1: SMALL FARMER (SNARE) \u2014 Trapped by debt dependency, rising property taxes, and lack of alternative livelihoods. Cannot exit without losing land and identity. Experiences full extraction through forced sale at below-market rates when unable to service debt or taxes. No coordination benefit \u2014 the constraint serves only to transfer wealth upward."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Rural Community",
+      "comment": "PERSPECTIVE 2: RURAL COMMUNITY (TANGLED ROPE) \u2014 Constrained by limited capital access, knowledge asymmetries about land value, and dependence on agricultural income. Experiences both coordination (market enables land transactions, price discovery) and asymmetric extraction (outsiders with superior information and capital extract surplus). Has some agency through collective action but faces high coordination costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Investment Fund",
+      "comment": "PERSPECTIVE 3: INVESTMENT FUND (ROPE) \u2014 Primary beneficiary with maximal exit optionality. Experiences the constraint as pure coordination: acquire undervalued land, hold, exit at profit. Land as asset class merely requires market mechanism. No coercion needed from fund's perspective \u2014 mechanism is self-interested coordination among rational economic actors."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Agricultural Ministry",
+      "comment": "PERSPECTIVE 4: AGRICULTURAL MINISTRY (PITON) \u2014 Maintains formal land-use protections and agricultural support programs, but enforcement capacity has atrophied. Theater ratio (0.38) is moderate-low because regulatory framework still exists and is ostensibly enforced, but the constraint operates despite this \u2014 the ministry's primary function (protecting agricultural land) has degraded while bureaucratic apparatus persists. Policies exist; compliance is uncertain."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Land Reform Coalition",
+      "comment": "PERSPECTIVE 5: LAND REFORM COALITION (SCAFFOLD) \u2014 Organized agents (cooperatives, NGOs, agrarian movements) perceive the constraint as a temporary coordination failure with a potential sunset: community land trusts, purchase-and-grant schemes, and cooperative purchase agreements create alternative pathways that reduce extraction by replacing speculative acquisition with stewardship incentives. Suppression is high but declining as coalitional power grows."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Market Rationality View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / MARKET RATIONALITY (MOUNTAIN) \u2014 From a civilizational/universal perspective, land price appreciation driven by supply scarcity and capital flows is treated as a natural market equilibrium \u2014 an immutable outcome of rational agents allocating scarce resources. This perspective risks naturalizing what are actually political choices: agricultural land policy, capital gains taxation, foreign ownership restrictions, and speculation taxes are all contingent policy levers, not laws of nature. The mountain classification reveals false naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "speculative_vs_productive_intent",
+      "question": "How do we empirically distinguish speculative land acquisition (extraction) from investment in agricultural productivity (coordination)?",
+      "resolution_mechanism": "Longitudinal tracking of land use: improvements, soil investment, working-capital deployment, employment generation on acquired parcels vs. holding for resale. Cross-referencing investor portfolio diversity (agricultural focus vs. diversified speculation).",
+      "impact": "If distinction is reliable: extractiveness may be lower than 0.58 for investors with genuine productivity intent, requiring classification revision. If indistinguishable: the market mechanism conflates both intents, masking extraction as investment.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing speculative from productive land acquisition"
+    },
+    {
+      "id": "debt_trap_mechanism",
+      "question": "Is farmer indebtedness driven by agricultural commodity price volatility (external shock) or by land-debt escalation engineered by speculation-driven price inflation?",
+      "resolution_mechanism": "Time-series analysis of commodity prices vs. land price inflation; comparison of debt-to-income ratios in high-speculation regions vs. low-speculation control regions; structural examination of credit terms offered to farmers in speculative zones.",
+      "impact": "If external shock dominates: suppression is structural but not engineered \u2014 classification shifts toward Rope (coordination failure). If debt-trap mechanism dominates: suppression is deliberately maintained \u2014 classification confirmed as Snare/Tangled Rope (extraction).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether farmer debt is exogenous shock or engineered extraction"
+    },
+    {
+      "id": "capital_inflow_inevitability",
+      "question": "Is the concentration of land ownership in external investor hands an inevitable outcome of market efficiency or a preventable outcome of policy choices?",
+      "resolution_mechanism": "Comparative institutional analysis: jurisdictions with active land-use restrictions, community purchase programs, and capital gains taxation show different ownership concentration patterns than deregulated markets. Historical counterfactuals where policy interventions altered trajectories.",
+      "impact": "If inevitable: mountain classification for capital flows is legitimate \u2014 policy can only redirect, not prevent. If preventable: mountain classification is false naturalization \u2014 the constraint is a Tangled Rope with policy-determined suppression levels.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether land concentration is inevitable or policy-contingent"
+    },
+    {
+      "id": "food_security_causality",
+      "question": "Does rural land consolidation and loss of small-farm productivity directly threaten food security, or is the linkage overstated?",
+      "resolution_mechanism": "Longitudinal agricultural productivity analysis post-consolidation; yield per hectare comparison before/after ownership change; supply chain resilience assessment; food import dependency trends correlated with land concentration.",
+      "impact": "If direct causality confirmed: victim status of 'future_food_security' is justified, strengthening snare classification. If linkage is weak: victim designation is rhetorical, not structural, requiring reclassification toward pure Rope (market coordination without true victims).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether land consolidation directly threatens food security"
+    },
+    {
+      "id": "reform_sunset_realism",
+      "question": "Are land reform and community purchase mechanisms a genuine structural sunset for speculation-driven extraction, or aspirational policy theater without enforcement capacity?",
+      "resolution_mechanism": "Longitudinal tracking of community land trust acquisition rates, purchase subsidy utilization, land return to smallholder management; comparison of policy ambition vs. actual capital deployed; analysis of whether reform mechanisms reverse ownership concentration or merely slow it.",
+      "impact": "If sunset is real: scaffold classification confirmed \u2014 extraction mechanism is genuinely declining. If theater: scaffold is misclassified \u2014 should reclassify as Piton (degraded reform institutions maintaining appearance without function).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether land reform mechanisms provide genuine sunset or theatrical policy"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Rural property speculation represents a structural extraction mechanism where external capital concentrates ownership of agricultural land by exploiting informational asymmetries, capital access differentials, and weak enforcement of land-use protections. Small farmers face rising property taxes, debt servicing obligations, and commodity price volatility that force asset liquidation at below-true-value prices. Investment funds and development corporations acquire this land at discount, holding it for appreciation as population pressure and urbanization increase regional land values. The constraint exhibits genuine coordination (market price discovery for land transactions) alongside asymmetric extraction (informed outsiders extracting surplus from uninformed locals). Rural communities experience this as a generational loss of agricultural capacity and social resilience, but lack the capital or political power to reverse consolidation. Land reform mechanisms exist but face capacity and political constraints. The theater ratio has declined over time as deregulation has reduced enforcement of land-use restrictions, making the extraction mechanism more direct and less dependent on performative regulation.",
+    "key_agents": [
+      "Small Farmers: Primary victims (powerless/trapped) \u2014 forced to sell land due to debt, taxes, and lack of alternative income; cannot afford to compete with external capital; lose livelihood and identity",
+      "External Investors/Investment Funds: Primary beneficiaries (institutional/arbitrage) \u2014 acquire undervalued land, hold for appreciation, exit at profit; experience constraint as pure market coordination with no coercion felt",
+      "Rural Communities: Secondary victims (moderate/constrained) \u2014 face knowledge asymmetries about true land value, limited capital for competitive bidding, loss of community control; constrained by resource and political limitations",
+      "Financial Intermediaries: Secondary beneficiaries (institutional/arbitrage) \u2014 provide financing that enables investor acquisition; extract fees and interest; benefit from land price inflation",
+      "Land Development Corporations: Secondary beneficiaries (institutional/arbitrage) \u2014 convert agricultural land to urban/commercial use; capture value from zoning and development rights; benefit from regulatory capture",
+      "Agricultural Ministry/Regulators: Institutional actors (institutional/constrained) \u2014 formally maintain land-use protections but enforcement capacity has atrophied; theater ratio declined as regulations become performative",
+      "Land Reform Coalition: Organized actors (organized/constrained) \u2014 cooperatives, NGOs, agrarian movements building alternatives (community land trusts, cooperative purchase); facing suppression through capital scarcity and political opposition"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate, reflecting that external capital systematically acquires undervalued assets from information-disadvantaged sellers, but the mechanism requires willing participation (land sales are legal transactions, not theft). The extraction is embedded in market asymmetries, not pure coercion. The trajectory shows rising extractiveness over the interval as regulatory frameworks have weakened and speculative capital has become more aggressive, increasing the price gap between what locals can afford and what investors offer. Suppression (0.52): Moderate-high. Barriers to farmer exit include: (1) debt dependency trapping landholdings as collateral, (2) limited alternative income sources in rural economies, (3) information asymmetries about true land value, (4) weak enforcement of land-use protections and anti-speculation measures, (5) cultural attachment to ancestral land making psychological exit costly. These are not total barriers \u2014 some farmers retain land and some organize to resist \u2014 but most face substantial suppression. Theater ratio (0.38): Moderate-low. Unlike many extractive constraints, rural property speculation relies less on performative legitimation and more on market rationality framing ('prices reflect scarcity and capital flows'). Regulatory theater has declined over the interval as land-use controls were relaxed, making extraction more naked. The theater that remains is ideological (naturalizing market outcomes as inevitable) rather than institutional (maintaining degraded bureaucratic forms).",
+    "perspectival_gap": "This constraint's perspectival gap reflects the fundamental difference between market efficiency (the investor's frame) and extraction asymmetry (the farmer's frame). From the investor's perspective, the constraint solves a real coordination problem: how to allocate scarce agricultural land to agents with capital and intent to develop it. Land is efficiently transferred from those unable to maximize its value to those who can. This is Rope \u2014 pure coordination, minimal coercion, mutual benefit (the farmer gets liquidity; the land gets development). From the small farmer's perspective, the same mechanism is extraction: they sell not because they chose to but because they were forced by debt, tax, and commodity price shocks. They received below-market value for their land. They lost livelihood and identity. This is Snare \u2014 pure extraction, high suppression, no compensation, no exit. Both perspectives are structurally accurate. The constraint IS a coordination mechanism (market transaction) AND an extraction mechanism (asymmetric surplus transfer). The gap reveals that Rope and Snare are not absolute categories but relational ones \u2014 the same institutional mechanism can be Rope for beneficiaries and Snare for victims. The perspectival divergence is diagnostic evidence that the constraint is actually Tangled Rope (mixed coordination and extraction), not pure of either kind.",
+    "directionality_logic": "The directionality values track the flow of extraction. External investors (d \u2248 0.10) experience negative effective extraction (they extract FROM the system, not toward them). Small farmers (d \u2248 0.93) experience positive extraction (the system extracts FROM them). The sigmoid function f(d) translates these structural positions into power multipliers. The farmer's trapped status and victim position produce high d \u2192 high f(d) \u2248 1.42, amplifying their experienced extractiveness. The investor's arbitrage status and beneficiary position produce low d \u2192 low f(d) \u2248 -0.12, dampening their experienced extraction (they benefit). Scope modifier \u03c3(regional) = 0.90 applies to effective extraction but not to suppression \u2014 rural property speculation's suppression (0.52) is structural and unscaled. The chi formula produces the perspectival divergence: the same \u03b5 (0.58) yields very different \u03c7 values depending on agent position. Beneficiary investors experience \u03c7 \u2248 0.58 \u00d7 (-0.12) \u00d7 0.90 \u2248 -0.063 (they perceive the constraint as beneficial Rope). Trapped farmers experience \u03c7 \u2248 0.58 \u00d7 1.42 \u00d7 0.90 \u2248 0.741 (they perceive the constraint as high-extraction Snare). The numerical gap (from negative to high-positive) explains the perspectival chasm.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating how Tangled Rope is the correct classification when a genuine coordination function (market price discovery for land) is irreducibly coupled with asymmetric extraction (informed outsiders extracting surplus from uninformed locals). The false summit (Mountain via market rationality) claims that land price appreciation is a natural equilibrium with no extractive component. The structural data contradicts this: small farmers are victims, external investors are beneficiaries, and there is active enforcement (land sales law, debt servicing, tax collection). These three facts (beneficiary, victim, enforcement) are required by the Tangled Rope gate and absent from pure Rope. The constraint cannot be Rope-only because it produces clear victims who bear costs without equivalent benefit. It cannot be Snare-only because market transactions create genuine coordination value \u2014 the land is traded to agents with intent and capital to use it, and this allocation may produce socially valuable outcomes. It is Tangled Rope: both mechanisms operate, neither dominates, both must be recognized. The mandatrophy prevention emerges from the dual perspective structure: beneficiary sees Rope, victim sees Snare, analytical observer sees Tangled Rope, land reform coalition sees sunset (Scaffold). No single type captures the structure; the presheaf over all perspectives IS the accurate characterization."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "agricultural_commodity_price_volatility",
+      "rural_credit_market_extraction",
+      "land_tenure_insecurity"
+    ],
+    "dual_formulation_note": "Rural property speculation is downstream of commodity price shocks and rural credit extraction but represents a distinct constraint with its own \u03b5. Upstream constraints (commodity volatility, credit market extraction) force farmer asset liquidation; the speculation constraint governs who captures the liquidated assets and at what terms. Constraint family: upstream shocks \u2192 forced farmer distress \u2192 downstream investor acquisition."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "header": {
+    "constraint_id": "silicon_photolithography_limits",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "silphotolith"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.04,
+    "theater_ratio": 0.12,
+    "claimed_type": "mountain",
+    "human_readable": "Silicon Photolithography Physical Limits",
+    "topic_domain": "physics/semiconductor_manufacturing",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Semiconductor Manufacturer",
+      "comment": "PERSPECTIVE 1: MANUFACTURER (MOUNTAIN) \u2014 All semiconductor fabrication is bound by the diffraction limit and quantum mechanical tunneling constraints. No exit exists from these physical laws. The manufacturer cannot negotiate or circumvent the wavelength-scale feature limits; they can only adapt process chemistry and masking strategies within this immutable boundary."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "universal",
+      "label": "The Equipment Manufacturer",
+      "comment": "PERSPECTIVE 2: EQUIPMENT MANUFACTURER (MOUNTAIN) \u2014 Despite global market dominance and billions in R&D investment, the equipment maker cannot escape the Rayleigh criterion or quantum tunneling physics. Physical constraints are indifferent to corporate power or financial resources. The constraint is immutable even at the highest material and institutional power levels."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 Silicon photolithography bottlenecks emerge directly from quantum mechanics and classical optics. The Rayleigh diffraction limit (d \u2248 \u03bb/2NA), quantum tunneling probability scaling, and thermodynamic entropy constraints are natural laws. No institutional, economic, or technical arrangement can abolish these limits. This is the canonical mountain \u2014 a constraint that requires no enforcement, exhibits zero degrees of freedom, and persists across all measurement methodologies."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "extreme_ultraviolet_feasibility",
+      "question": "Can extreme ultraviolet (EUV) lithography extend the photolithography regime indefinitely, or does it hit its own insurmountable physical limits?",
+      "resolution_mechanism": "Empirical tracking of EUV source power scaling limits, photoresist sensitivity degradation at shorter wavelengths, and quantum noise in photon detection at extreme ultraviolet wavelengths",
+      "impact": "If EUV can extend indefinitely: photolithography constraint shifts to resource scarcity (cost of EUV plants), not physics. If EUV hits its own wall: the constraint remains mountain, but the boundary shifts to a smaller feature size. Either way, a hard physical limit exists somewhere.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether EUV lithography can indefinitely extend photolithography regime"
+    },
+    {
+      "id": "quantum_tunneling_vs_feature_control",
+      "question": "At what feature size does quantum tunneling through resist films and gate dielectrics become the dominant failure mechanism, making gate control and pattern transfer impossible?",
+      "resolution_mechanism": "Empirical characterization of tunneling current and resist integrity at sub-3nm feature sizes; direct measurement of gate control loss due to tunneling leakage",
+      "impact": "If tunneling dominates below 5nm: hard physical wall. If tunneling is manageable to 2nm: the constraint extends further but still terminates. The exact boundary matters less than the existence of the boundary.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Feature size at which quantum tunneling dominates resist and gate control"
+    },
+    {
+      "id": "alternative_lithography_regimes",
+      "question": "Do non-photonic approaches (electron-beam lithography, ion-beam lithography, directed self-assembly, nanoimprint) offer genuine alternatives or do they merely shift the constraint to different physical bottlenecks (throughput, defect rates, cost)?",
+      "resolution_mechanism": "Economic and technological comparison of alternative lithography methods at production scale; assessment of whether they can replace optical lithography for commodity chip manufacturing or only for niche applications",
+      "impact": "If alternatives can truly replace photolithography: this constraint becomes about manufacturing economics, not physics. If alternatives have their own immutable limits: the constraint family fragments into multiple mountains, one per lithography method.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether non-photonic lithography methods can replace photolithography at scale"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Silicon photolithography has enabled five decades of exponential transistor scaling through increasingly sophisticated optical engineering \u2014 immersion lithography, extreme ultraviolet (EUV) sources, and computational lithography. Yet the constraint underlying all photolithography is physical, not institutional: classical optics and quantum mechanics impose hard limits on the smallest feature that optical systems can print. The Rayleigh diffraction criterion (minimum feature size \u2248 wavelength / (2\u00d7numerical aperture)) is a natural law, as is quantum tunneling probability through resist films and gate dielectrics at nanometer scales. This constraint is invariant across all measurement methodologies and all institutional contexts. It exhibits zero degrees of freedom \u2014 no engineering, investment, or organizational arrangement can abolish the speed of light or Planck's constant. Extractiveness (0.18) reflects that the constraint does not extract in the economic sense; it is a floor, not a mechanism of transfer. Suppression (0.04) is minimal \u2014 the constraint operates through transparent physical mechanisms, not coercion or information asymmetry. Theater (0.12) is low \u2014 photolithography process reports measure directly against physical reality (feature size measurements via scanning electron microscopy, resist profiles, electrical parametrics); there is minimal room for performative claims.",
+    "key_agents": [
+      "Semiconductor Manufacturers: Embedded in the constraint (powerful/mobile) \u2014 operate within the diffraction and tunneling boundaries; cannot negotiate exit",
+      "Equipment Manufacturers (ASML, Canon, Nikon): Powerful actors (powerful/mobile) \u2014 develop tools to approach the limits but cannot transcend them",
+      "Process Engineers: Craft specialists (moderate/constrained) \u2014 innovate within the constraint's boundaries (multiple-patterning, resist chemistry, computational lithography)",
+      "Physics Community: Analytical observers (analytical/analytical) \u2014 understand the natural law basis; no institutional bias toward either confirmation or denial",
+      "Alternative Lithography Researchers: Specialized actors (organized/constrained) \u2014 explore non-photonic paths (electron-beam, EUV, directed self-assembly) but each method has its own physical limits"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Very low. The constraint imposes a physical ceiling, not a mechanism of extraction from one party to another. The boundary exists regardless of who is measuring or paying. No one extracts value from the constraint itself \u2014 the constraint is a limitation on what can be printed, not a redistribution mechanism. Suppression (0.04): Minimal. The constraint operates through open physical mechanisms (diffraction, quantum mechanics) that are fully transparent and measurable. There are no hidden mechanisms, no information asymmetries, no coercion \u2014 the constraint simply is. Theater (0.12): Very low. Photolithography metrics are directly observable: feature size is measured via scanning electron microscopy, resist profiles via cross-section analysis, electrical function via on-wafer testing. Claims about lithography capability can be falsified in real time. There is almost no room for performative or theatrical claims to persist.",
+    "perspectival_gap": "There is minimal perspectival gap in this constraint because it is truly universal. All perspectives (manufacturer, equipment maker, analyst) arrive at the same classification: mountain. Power level does not change the classification \u2014 even the most capable equipment manufacturers cannot print features smaller than the diffraction limit or prevent quantum tunneling. Exit options do not change it \u2014 there is no 'exit' from physics. Time horizon does not matter \u2014 the constraint has been present since the first photolithography system and will persist as long as photons and atoms behave according to quantum mechanics. The uniformity across all perspectives confirms that this is a natural law constraint, not a contingent institutional arrangement.",
+    "directionality_logic": "Directionality derivation does not apply to mountain constraints \u2014 there are no beneficiaries or victims, no extraction direction, no agent-relative perception. The constraint is agent-invariant. All agents experience the same immutable limit regardless of their structural position. Directionality d is undefined (or uniformly constant across all agents at d \u2248 0.5, representing neutral exposure to an external boundary). The chi formula \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) becomes degenerate because \u03b5 is so low (0.18) that chi remains near zero regardless of f(d) or scope modifiers. This is the signature of a mountain: the classification is independent of who is measuring and from where.",
+    "mandatrophy_analysis": "NATURAL LAW CONFIRMATION: This constraint resolves all mandatrophy risks because there is no mandatrophy to resolve. Mandatrophy (Type V error \u2014 misclassifying extraction as coordination) arises when an asymmetric mechanism claims to be coordination. Silicon photolithography limits claim to be physics, and they are. There is no hidden extraction mechanism. There are no beneficiaries or victims relative to the constraint itself. The constraint is not enforced by any institutional actor \u2014 it is enforced by the speed of light and Planck's constant. The analytical observer sees exactly what the affected manufacturers see: an immutable physical boundary. No perspective-dependent reclassification occurs. This is the cleanest mountain case: the natural law claim is genuine."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "semiconductor_cost_scaling",
+      "quantum_tunneling_leakage",
+      "extreme_ultraviolet_feasibility"
+    ],
+    "dual_formulation_note": "Silicon photolithography limits is a master constraint that influences downstream semiconductor economics (cost scaling follows Moore's Law until photolithography hits walls), quantum tunneling mechanisms in devices, and the feasibility of alternative lithography methods. Each downstream constraint has its own \u03b5 value reflecting domain-specific extraction or coordination; this master constraint has minimal \u03b5 because it is purely a physical boundary."
+  },
+  "directionality_overrides": []
+}

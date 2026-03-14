@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "gacha_game_mechanics",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gacha"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Gacha Game Monetization Mechanics",
+    "topic_domain": "digital_entertainment/behavioral_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "game_publisher",
+      "gacha_system_operator"
+    ],
+    "victims": [
+      "vulnerable_player_populations",
+      "player_financial_autonomy",
+      "game_ecosystem_health"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Compulsive Spender",
+      "comment": "PERSPECTIVE 1: COMPULSIVE SPENDER (SNARE) \u2014 Player locked into spending cycle through variable ratio reinforcement schedule. Lacks information about odds, cannot exit without abandoning social bonds with other players, faces intermittent reinforcement that sustains pull-spending behavior. Experiences maximal extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Casual Player",
+      "comment": "PERSPECTIVE 2: CASUAL PLAYER (TANGLED ROPE) \u2014 Faces both genuine coordination benefit (social play, cosmetic progression) and asymmetric extraction (monetization pressure, FOMO mechanics). Can exit by switching games but faces sunk-cost barriers and social penalty. Moderate experienced extraction alongside real coordination function."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Game Publisher",
+      "comment": "PERSPECTIVE 3: GAME PUBLISHER (ROPE) \u2014 Experiences gacha mechanics as pure coordination: enabling player connection, cosmetic differentiation, and sustainable development funding. Net beneficiary with exit capacity (can shift monetization models). Extraction flows toward this agent through variable-ratio scheduling."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulatory Coalition",
+      "comment": "PERSPECTIVE 4: REGULATORY COALITION (SCAFFOLD) \u2014 Organized actors (loot box regulation, age-gating proposals, odds disclosure mandates) see gacha mechanics as a temporary coordination failure with sunset logic. Loot box transparency laws, spending caps, and odds-disclosure requirements create enforcement pathways. Suppression declines as regulation matures."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Cosmetic Justification Frame",
+      "comment": "PERSPECTIVE 5: COSMETIC JUSTIFICATION (PITON) \u2014 Industry claims that gacha mechanics fund cosmetics and optional content ('cosmetics-only' frame) persist through institutional inertia despite evidence that monetary extraction is primary functional goal. Theater persists because regulation hasn't fully replaced it; the cosmetic frame is maintained not because it accurately describes the system but because alternatives haven't solidified."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational/global perspective, gacha mechanics are pure extraction dressed in coordination language. Variable ratio reinforcement (the underlying psychological mechanism) has no coordination benefit \u2014 it is pure behavioral capture. The game coordination (multiplayer, social features) is orthogonal to gacha monetization; games can coordinate socially without gacha. This perspective sees the constraint as structural behavioral extraction at global scale."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cosmetic_vs_power_boundary",
+      "question": "What proportion of gacha monetization funds cosmetics (genuine non-extractive) vs gameplay power (extractive)?",
+      "resolution_mechanism": "Revenue attribution analysis: track spending distribution across cosmetic-only vs power-granting gacha pools; player survey on perceived power impact",
+      "impact": "If cosmetic-heavy (>70%): constraint is tangled_rope (coordination + moderate extraction). If power-heavy (<30% cosmetic): constraint is snare (pure extraction). Most games fall in the middle, but the ratio determines whether 'optional' framing is accurate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of monetization that is cosmetic vs power-granting"
+    },
+    {
+      "id": "player_numeracy_and_odds_transparency",
+      "question": "Does odds disclosure (when required by regulation) actually reduce spending, or does it have minimal effect on behavioral extraction?",
+      "resolution_mechanism": "Comparison of spending patterns before/after odds disclosure mandates (Korea, China, Japan regulatory data); correlation between player odds-awareness and spending behavior",
+      "impact": "If disclosure reduces spending significantly: suppression is primarily informational (can be reduced by transparency). If minimal effect: suppression is behavioral (variable ratio schedule persists regardless of odds knowledge), indicating deeper extraction mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effect of odds disclosure on player spending behavior"
+    },
+    {
+      "id": "alternative_monetization_viability",
+      "question": "Can games fund ongoing development and studio sustainability with non-gacha monetization (battle pass only, cosmetic cosmetics only, pay-once)?",
+      "resolution_mechanism": "Financial analysis of gacha-free or low-gacha games (Helldivers 2, Path of Exile, Satisfactory model); comparison of revenue per player and per-developer payroll sustainability",
+      "impact": "If alternative models are viable: gacha's high extractiveness is not necessary for coordination (games can socially coordinate without behavioral extraction). If alternatives fail: gacha represents genuine tradeoff between extraction and development sustainability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether non-gacha monetization can sustainably fund game development"
+    },
+    {
+      "id": "vulnerable_population_identification",
+      "question": "What demographic and psychological profiles correlate with gacha spending above sustainable levels? Are specific player populations disproportionately targeted?",
+      "resolution_mechanism": "Spending distribution analysis by age/income/psychological trait; analysis of FOMO mechanics and event-structure timing targeting specific circadian/work patterns",
+      "impact": "If vulnerable populations are disproportionately targeted: suppression is intentional and mechanism is predatory (snare classification strengthened). If distribution is uniform: mechanism is broadly-acting behavioral extraction without targeting (still snare but less predatory).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Demographic/psychological vulnerability to gacha mechanics"
+    },
+    {
+      "id": "regulatory_effectiveness_and_ceiling",
+      "question": "Can regulation (spending caps, odds disclosure, age-gating, loot box bans) meaningfully reduce extraction, or does it reach a point of diminishing returns?",
+      "resolution_mechanism": "Longitudinal tracking of regulated jurisdictions (Belgium, Netherlands, Korea, China) versus unregulated ones; measurement of player spending post-regulation and publisher adaptation strategies",
+      "impact": "If regulation achieves extraction floor reduction: scaffold sunset is credible and suppression can decline significantly with regulatory maturity. If publishers successfully route around regulation: extraction persists and scaffold is aspirational rather than structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness ceiling of regulatory approaches to gacha mechanics"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Gacha game mechanics represent a structural constraint that converts player engagement and social coordination into behavioral extraction via variable ratio reinforcement scheduling. The constraint operates across global digital entertainment and targets vulnerable populations through intentional psychological manipulation. Gacha mechanics (randomized reward systems with monetary escalation) have evolved over two decades from cosmetic monetization into primary revenue extraction mechanisms that often gate gameplay power and progression. The underlying behavioral mechanism \u2014 intermittent reinforcement \u2014 is borrowed directly from behavioral psychology literature on operant conditioning. The constraint exhibits the full spectrum of DR classifications depending on observer position: publishers experience coordination (funding sustainable games), casual players experience mixed coordination and extraction (tangled rope), compulsive spenders experience pure extraction with behavioral lock-in (snare), regulatory actors see a solvable temporary problem (scaffold), and the cosmetic-justification narrative persists through institutional inertia (piton). The analytically coherent view recognizes that variable ratio scheduling has no genuine coordination benefit \u2014 it is behavioral extraction, and the game coordination (multiplayer, social features) is orthogonal to the gacha mechanism itself.",
+    "key_agents": [
+      "Compulsive Spenders: Primary victims (powerless/trapped) \u2014 locked into variable ratio reinforcement cycles; cannot exit without social isolation and sunk-cost abandonment",
+      "Casual Players: Secondary victims (moderate/constrained) \u2014 face coordination benefit (social play) alongside extraction pressure (FOMO, cosmetic gatekeeping, event urgency)",
+      "Vulnerable Populations: Tertiary victims (powerless/trapped) \u2014 disproportionately targeted by time-gated mechanics, circadian-aligned events, and social-proof dark patterns",
+      "Game Publisher: Primary beneficiary (institutional/arbitrage) \u2014 captures revenue from behavioral extraction; can shift monetization model but benefits from high-extraction regime",
+      "Game Developer Team: Secondary beneficiary \u2014 dependent on publisher revenue; may not directly benefit from extraction but team sustainability is coupled to high monetization pressure",
+      "Regulatory Coalition: Organized agents (organized/constrained) \u2014 loot box regulation advocates, consumer protection agencies, age-rating boards building alternative pathways through transparency and caps",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 recognizes gacha as pure behavioral extraction mechanisms beneath coordination framing"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The base measurement reflects that gacha mechanics have evolved specifically to maximize spending from willing and unwilling players. The 2009-2026 interval shows steady escalation: early games (2009) used gacha for optional cosmetics (\u03b5 \u2248 0.35); by 2015 power gating emerged (\u03b5 \u2248 0.52); by 2026 gacha is primary revenue stream with aggressive FOMO design (\u03b5 \u2248 0.68). The measurement trajectory reveals intentional optimization for extraction. Suppression (0.72): Very high. Multiple suppression mechanisms operate: (1) information suppression \u2014 odds hidden or poorly disclosed, probability of competitive viability unclear; (2) cognitive suppression \u2014 variable ratio schedule creates behavioral lock that persists despite explicit odds knowledge; (3) social suppression \u2014 leaving the game means abandoning friendships and guild identity; (4) financial suppression \u2014 sunk cosmetics and time investment create exit costs. Theater ratio (0.65): Moderate-high. Industry narrative frames gacha as 'optional cosmetics for sustainable development' despite evidence that power-granting gacha is primary revenue. This frame persists because: (a) regulatory pressure hasn't fully replaced it with disclosure requirements, (b) publishers actively maintain the narrative, (c) game design obscures what is actually gated behind gacha. The theater has increased over the interval as regulatory pressure mounted and publishers refined the cosmetic justification language.",
+    "directionality_logic": "Directionality values (d) are derived from each agent's structural position relative to the extraction flow. Compulsive spenders: powerless + trapped exit = high d \u2192 maximum f(d) \u2192 maximum experienced extractiveness (\u03c7 \u2248 0.85). Casual players: moderate power + constrained exit = moderate d \u2192 moderate f(d) \u2192 moderate experienced extraction (\u03c7 \u2248 0.55). Publishers: institutional power + arbitrage exit = low d (beneficiary status) \u2192 negative f(d) \u2192 negative/low experienced extraction (\u03c7 \u2248 -0.10). The automatic derivation from beneficiary/victim status plus exit options produces these relationships. The snare classification for both compulsive spenders and analytical observer reflects that the structural mechanism (variable ratio reinforcement) is extraction-only with no genuine coordination benefit. Gacha mechanics could be removed without affecting multiplayer coordination or social features \u2014 the coordination function exists independently of the extraction mechanism.",
+    "perspectival_gap": "The constraint demonstrates maximum perspectival divergence. Publishers see coordination (rope) \u2014 gacha funds sustainable games and enables cosmetic expression. Casual players see mixed benefit and extraction (tangled rope) \u2014 social coordination is real but monetization pressure intrudes. Compulsive spenders see pure extraction (snare) \u2014 behavioral lock-in with no perceived coordination benefit. Regulatory actors see a solvable problem (scaffold) \u2014 odds disclosure, spending caps, age-gating can reduce extraction over a generational timeline. The cosmetic-justification narrative sees its own degradation (piton) \u2014 persists through institutional inertia as regulation and consumer awareness increase. The analytical observer sees behavioral extraction at civilizational scale (snare) \u2014 variable ratio reinforcement is not a coordination mechanism; it is a behavioral capture mechanism that extracts value through psychological manipulation. The gap between publisher's rope and victim's snare reveals the directional asymmetry of the extraction flow.",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION MANDATROPHY RESOLUTION: The constraint qualifies as snare (\u03b5=0.68 > 0.46, suppression=0.72 > 0.60, \u03c7 \u2265 0.66 for victims) and the mandatrophy is resolved by recognizing that gacha mechanics are behavioral extraction mechanisms without genuine coordination benefit. The industry's rope-framing ('optional cosmetics funding sustainability') is a false summit \u2014 games can and do fund development through battle passes, cosmetic-only monetization, or buy-once models without gacha. The snare classification prevents mislabeling gacha as pure coordination (rope) by requiring explicit evidence that: (1) removal of gacha would not disable the game's coordination function (it wouldn't \u2014 multiplayer and social features are orthogonal), (2) the extraction mechanism is behavioral rather than economic (variable ratio scheduling is behavioral, not voluntary exchange), and (3) alternatives exist but are suppressed by publisher preference for high extraction (they exist but publishers adopt gacha specifically for higher revenue). The mandatrophy resolves by showing that 'both publishers and players benefit from gacha' (false rope reading) conflates legitimate coordination with behavioral extraction. Publishers benefit; players at compulsive spending levels experience pure extraction. Casual players experience mixed, which is tangled rope for them but snare for vulnerable populations. The classification prevents the false consensus that gacha is coordination by requiring victim testimony and exit option measurement."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "loot_box_regulation",
+      "game_addiction_mechanics",
+      "cosmetic_monetization_ethics"
+    ],
+    "dual_formulation_note": "Gacha game mechanics decompose into multiple structurally distinct constraints: (1) gacha_game_mechanics (this story, \u03b5=0.68, snare) \u2014 behavioral extraction through variable ratio reinforcement at the player level; (2) loot_box_regulation (downstream, \u03b5 varying by jurisdiction) \u2014 regulatory response to suppress gacha mechanisms; (3) game_addiction_mechanics (upstream, \u03b5=0.75+, snare) \u2014 broader behavioral capture mechanisms of which gacha is one instantiation; (4) cosmetic_monetization_ethics (sibling, \u03b5\u22480.25, rope) \u2014 legitimate cosmetic-only monetization as coordination mechanism. Each has distinct \u03b5 and structural data. Gacha_game_mechanics affects the regulatory and addiction stories downstream because regulatory response and addiction research are directly targeted at gacha mechanics specifically."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ]
+}

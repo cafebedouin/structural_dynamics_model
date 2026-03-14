@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "paleoanthropological_funding_concentration",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "paleo"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Paleoanthropological Funding Concentration",
+    "topic_domain": "academic_research/anthropology/funding",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "established_research_institutions",
+      "elite_universities",
+      "well_connected_researchers"
+    ],
+    "victims": [
+      "early_career_researchers",
+      "underfunded_regions",
+      "emerging_institutions",
+      "field_diversity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Early-Career Researcher",
+      "comment": "PERSPECTIVE 1: EARLY-CAREER RESEARCHER (SNARE) \u2014 Trapped by funding structure requiring established publications and institutional affiliation to access grants. Cannot exit without abandoning career. Must work within the concentration system or leave the field entirely. Maximum extraction from this position."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Emerging Research Institution",
+      "comment": "PERSPECTIVE 2: EMERGING RESEARCH INSTITUTION (SNARE) \u2014 Regional institution seeking to build paleoanthropology program faces structural barriers: funding agencies concentrate grants in elite universities, limiting access to African field sites and international collaborations. Constrained exit through gradual reputation building, but extraction is severe during growth phase. High-cost alternative is relocation to established institution."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Underfunded Regional Research Community",
+      "comment": "PERSPECTIVE 3: UNDERFUNDED REGIONAL RESEARCH COMMUNITY (TANGLED ROPE) \u2014 In Africa, Asia, and South America, paleoanthropological research benefits from international funding and collaborations, enabling knowledge advancement and local capacity building. Simultaneously, these researchers bear asymmetric extraction: funding flows through Northern institutions, intellectual property favors Northern teams, and site access is mediated by grants controlled by established centers. Genuine coordination coexists with embedded asymmetry."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Established Research Institution",
+      "comment": "PERSPECTIVE 4: ESTABLISHED RESEARCH INSTITUTION (ROPE) \u2014 Elite universities with endowments and existing grant portfolios experience the constraint as coordination: federal and private funding favors institutions with track records, enabling them to attract talent and fund expeditions. The constraint solves the coordination problem of 'where should funding go?' by using reputation as a proxy. Benefits from first-mover advantage and institutional inertia."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open-Access Paleoanthropology Movement",
+      "comment": "PERSPECTIVE 5: OPEN-ACCESS PALEOANTHROPOLOGY MOVEMENT (SCAFFOLD) \u2014 Organized agents (digital repositories, collaborative databases, open-access journals) are building alternative funding and dissemination pathways. Crowdfunding, international consortia, and data-sharing platforms create sunset logic for the traditional concentration mechanism. As open methods reduce dependency on elite institutions for site access and data interpretation, the extraction mechanism weakens. Estimated sunset: 15-25 years for new norms to mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Peer Review and Grant Committee System",
+      "comment": "PERSPECTIVE 6: PEER REVIEW AND GRANT COMMITTEE SYSTEM (PITON) \u2014 Grant review committees are largely performative: they assess proposal quality using metrics (publication record, institutional prestige, preliminary data) that are themselves shaped by the concentration system. Committee members are drawn from established institutions, reproducing in-group bias. The ritual persists through institutional inertia despite evidence that review outcomes correlate with institutional affiliation, not proposal merit. High theater ratio reflects that the review process does not reliably identify best science but reproduces existing hierarchies."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, funding concentration might appear as an immutable natural law: limited research funding always concentrates in proven institutions; complex fieldwork requires infrastructure that only established centers can provide; expert networks are path-dependent and cannot be rapidly redistributed. However, the structural data contradicts the mountain classification \u2014 the constraint emerges from policy choices (grant mechanisms, peer review composition, site access mediation), not physical laws. The engine's false summit detector identifies this as naturalization of a contingent institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "funding_concentration_threshold",
+      "question": "What distribution of funding across institutions constitutes unequal concentration vs. natural clustering around research excellence?",
+      "resolution_mechanism": "Gini coefficient of funding distribution; comparison against null model of random allocation; analysis of funding concentration vs. output metrics (discoveries, publications, field advancement)",
+      "impact": "If concentration correlates with research output: system may be meritocratic (Rope). If concentration exceeds output variance: system is extractive (Snare/Tangled Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Threshold distinguishing natural clustering from excessive concentration"
+    },
+    {
+      "id": "alternative_funding_effectiveness",
+      "question": "Do alternative funding models (crowdfunding, international consortia, regional grants) produce equally significant discoveries at lower concentration levels?",
+      "resolution_mechanism": "Comparative analysis of discovery significance, methodological rigor, and field impact for research funded through alternative pathways vs. traditional agencies. Citation analysis and expert assessment of innovation quality.",
+      "impact": "If alternative funding produces equivalent science: scaffold sunset is real and extraction mechanism is contingent on funding structure. If alternative funding produces lower-quality work: concentration may reflect genuine epistemic inequality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative funding models can sustain high-quality paleoanthropology"
+    },
+    {
+      "id": "site_access_mediation_mechanism",
+      "question": "To what extent does funding concentration derive from control of site access vs. control of research capital (equipment, training, publication channels)?",
+      "resolution_mechanism": "Analysis of site access patterns: which institutions have permits, which researchers lead expeditions, how much site access correlates with grant funding. Disaggregation of funding flow: equipment/infrastructure vs. personnel vs. direct research costs.",
+      "impact": "If primarily site access: constraint is geopolitically driven (governments control permits, Northern institutions have historical relationships). If primarily research capital: constraint is institutional-structural and more malleable through policy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether concentration derives from site access control or research capital monopoly"
+    },
+    {
+      "id": "identity_lock_in_institutional_affiliation",
+      "question": "Do researchers and institutions experience funding concentration as an unchangeable feature of career structure (identity lock) or as a high-cost but surmountable barrier (constrained exit)?",
+      "resolution_mechanism": "Qualitative analysis of researcher narratives; career trajectory data for researchers who attempted to build programs outside elite institutions; exit rate analysis for early-career researchers",
+      "impact": "If identity-locked: constraint is experienced as 'how things are' even when structural change is possible. If constrained: agents perceive alternatives but face high costs. Identity lock prevents organizational coordination for reform.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether institutional position is internalized as identity or perceived as contingent"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Paleoanthropological funding exhibits a structural asymmetry where research capital (grants, equipment, site permits, training) concentrates in elite Northern institutions, while the evidence base itself is geographically distributed across Africa, Asia, and South America. This creates a coordination problem \u2014 who decides which sites get studied, which hypotheses get tested, which research questions matter? \u2014 that is nominally solved through merit-based competitive funding. However, the merit-based system is corrupted by path dependence: elite institutions have advantages in the grant competition (track record, networks, resources for proposal development) that are difficult for emerging competitors to overcome. The result is a tangled coordination mechanism (genuine need to concentrate resources for complex fieldwork) layered with asymmetric extraction (wealth and priority flowing toward established institutions, intellectual labor and site access mediated through Northern researchers). The constraint has intensified over the past 20 years as funding has become more competitive and more concentrated in response to post-2008 austerity. Simultaneously, open-science movements (digital specimen databases, collaborative methods papers, crowdfunded expeditions, open-access journals) are creating alternative pathways that bypass the traditional funding bottleneck, suggesting a potential sunset to the concentration mechanism.",
+    "key_agents": [
+      "Early-Career Researchers: Victims (powerless/trapped) \u2014 face credential barriers to funding and employment; require established publications and institutional affiliation to access competitive grants",
+      "Emerging Research Institutions: Victims (moderate/constrained) \u2014 regional universities in Africa, Asia, South America face barriers building paleoanthropology programs; funding agencies favor established centers; site access mediated by Northern institutions",
+      "Underfunded Regional Research Communities: Hybrid (moderate/constrained) \u2014 benefit from international collaborations and funding inflows but bear asymmetric extraction; intellectual property and authorship patterns favor Northern teams",
+      "Established Research Institutions: Beneficiaries (institutional/arbitrage) \u2014 elite universities experience funding concentration as coordination mechanism; reputation and endowments create compounding advantages in grant competition",
+      "Federal and Private Funding Agencies: Institutional agents (institutional/arbitrage) \u2014 structure funding mechanisms that nominally select by merit but actually reproduce institutional hierarchies",
+      "Open-Access Paleoanthropology Movement: Organized agents (organized/constrained) \u2014 arXiv-like repositories, data consortia, collaborative databases building alternative pathways; represent potential sunset mechanism",
+      "Peer Review and Grant Committee System: Institutional theater (institutional/arbitrage) \u2014 maintains performative review while reproducing in-group bias; composed primarily of established researchers",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing institutional arrangement as immutable limit"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and increasing. The baseline (0.35 at t=0) reflects legitimate coordination need \u2014 complex paleoanthropological fieldwork requires sustained institutional capacity and cannot be freely distributed. However, the trajectory from 0.35 to 0.58 shows that concentration has increased beyond what coordination requires. The current level reflects that funding mechanisms extract wealth/priority from emerging researchers and institutions, not just coordinating resource allocation. Suppression (0.62): High. Multiple barriers constrain alternatives: (1) Geopolitical \u2014 site access requires government permits often mediated by historically-connected institutions; (2) Infrastructural \u2014 equipment, lab facilities, and training networks concentrate in elite institutions; (3) Career \u2014 publications and credentials required for grants are themselves generated within the concentration system; (4) Informational \u2014 informal networks dominate funding decisions, disadvantaging outsiders. Theater ratio (0.65): Moderate-high and increasing. Grant review committees assess proposals using metrics (publication record, institutional prestige, preliminary data, network connections) that are themselves products of the concentration system, creating circular validation. The review process does not reliably identify best science but reproduces hierarchies. The trajectory from 0.48 to 0.65 shows increasing performativity as funding has tightened and criteria have formalized, paradoxically making the system more ritualistic even as it claims greater rigor.",
+    "perspectival_gap": "This constraint demonstrates a classic extraction-disguised-as-coordination asymmetry. The nominal function is coordination \u2014 directing limited research resources to important discoveries. The actual extraction is: priority in claim-staking (which researchers publish first), control of narrative (which interpretations dominate), mediation of site access (which questions get studied), and wealth concentration (funding flows toward established institutions). Early-career researchers and underfunded regions experience the constraint as Snare or Tangled Rope. Established institutions experience it as Rope. The gap between these perspectives reveals the constraint's hybrid nature: it genuinely solves a coordination problem while simultaneously enabling asymmetric extraction.",
+    "directionality_logic": "Directionality derives from structural position: who benefits and who bears costs. Established institutions with arbitrage options (can move research elsewhere, retain researchers) experience low effective extraction \u2014 the system works for them. Early-career researchers and emerging institutions without alternative pathways experience high extraction \u2014 trapped or constrained exit options apply the sigmoid transformation to produce high f(d). Regional researchers in Africa, Asia, South America experience moderate extraction \u2014 they benefit from funding inflows and international collaborations (lowering d somewhat) but lose control over site access, publication narrative, and career trajectories (raising d). The beneficiary/victim structure differentiates these positions mechanically: those declared as victims have high d \u2192 high f(d) \u2192 high chi, even when power levels are moderate or powerful, because their exit options are constrained or trapped within the constraint.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating that Tangled Rope classification is appropriate. The constraint has a genuine coordination function (complex fieldwork requires sustained institutional capacity, geographic distribution of evidence requires coordinated international effort). It also has asymmetric extraction: funding concentration, career barriers, and site-access mediation flow benefits toward established institutions and bearers of costs toward early-career researchers and underfunded regions. The presence of both coordination and asymmetric extraction satisfies the Tangled Rope requirements: beneficiaries (established institutions), victims (early-career researchers, emerging institutions), and active enforcement (funding mechanisms, peer review, permit systems). The alternative classifications (pure Rope if only coordination; pure Snare if only extraction) would mislabel the constraint. The Tangled Rope classification holds: genuine coordination with embedded extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "paleoanthropological_methodological_pluralism",
+      "indigenous_knowledge_intellectual_property"
+    ],
+    "dual_formulation_note": "Funding concentration is upstream of specific epistemological debates in paleoanthropology (e.g., methodological pluralism around trait interpretation, integration of indigenous knowledge). The funding mechanism controls which research questions get asked and which researchers can ask them, making it a structural constraint on the field's epistemic diversity."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.75
+    }
+  ]
+}

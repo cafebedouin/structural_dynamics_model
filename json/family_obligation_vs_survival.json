@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "family_obligation_vs_survival",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fobs"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Family Obligation vs Survival: Identity-Lock in Kinship Systems",
+    "topic_domain": "social/interpersonal/economic",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "primary_dependent_beneficiaries"
+    ],
+    "victims": [
+      "obligated_adult_member",
+      "household_economic_viability"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Obligated Adult (Trapped Exit)",
+      "comment": "PERSPECTIVE 1: OBLIGATED ADULT (SNARE) \u2014 Structurally trapped by economic dependency of family members, legal parental/filial obligations, and absence of institutional safety net. Exit would require abandoning dependents. Maximum extraction: the obligated agent bears full cost of household survival while forgoing personal development, education, career advancement, and mobility. No coordination benefit perceived \u2014 the constraint is pure extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "label": "The Obligated Adult (Identity-Locked Exit)",
+      "comment": "PERSPECTIVE 2: OBLIGATED ADULT (SNARE, IDENTITY-LOCKED) \u2014 Structurally mobile (could walk away) but identity-fused with the role of caregiver/provider. The obligated agent's self-concept is constituted through the family dependency relationship. Exit would require becoming 'a different person' \u2014 the caregiver identity is the agent's primary source of meaning. The lock is cognitive rather than material. Perceived extraction is identical to trapped perspective but the binding mechanism is internal."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Primary Dependent (Child/Elder)",
+      "comment": "PERSPECTIVE 3: PRIMARY DEPENDENT (ROPE) \u2014 Receives material and emotional care through the obligated adult's extraction. From the dependent's immediate perspective, the constraint appears as coordination: the family system coordinates care, food, shelter. The dependent has limited time horizon and mobility. The extraction is not perceived because the dependent lacks the cognitive or social capacity to recognize the asymmetry. This perspective is the 'innocent' beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Secondary Family Adults (Siblings, Relatives)",
+      "comment": "PERSPECTIVE 4: SECONDARY FAMILY ADULTS (TANGLED ROPE) \u2014 May be co-obligated or partially obligated. Experience both coordination benefit (shared household resources, labor division, emotional support) and extraction (unequal labor distribution, opportunity costs, pressure to contribute to primary dependent's care). Generational time horizon captures the possibility of shifting burdens or negotiating exit as life circumstances change. Constrained exit reflects that leaving imposes costs on remaining obligators without fully breaking kinship bonds."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "State Social Support Apparatus",
+      "comment": "PERSPECTIVE 5: STATE SOCIAL SUPPORT APPARATUS (PITON) \u2014 The constraint is maintained partly through the state's arbitrage: subsidizing family care is cheaper than providing public care infrastructure. The state has formal programs (tax credits, child allowances, elderly care subsidies) that are largely performative \u2014 insufficient to replace household extraction but sufficient to justify calling it 'family responsibility.' Theater ratio reflects the gap between stated policy support and actual resource availability. The state's own process is degraded (maintenance through inertia and political ease rather than functional effectiveness)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Organized Care Worker Movement",
+      "comment": "PERSPECTIVE 6: ORGANIZED CARE WORKER MOVEMENT (SCAFFOLD) \u2014 Labor organizing, care worker collectives, and public care infrastructure campaigns see family obligation as a temporary extraction mechanism that will be replaced by socialized care systems. The constraint has a sunset: universal childcare, public long-term care, robust social safety nets reduce obligatory extraction by shifting care provisioning from individuals to institutions. Sunset timeline: 15-30 years in developed nations; longer in low-income countries. Organizations have exit paths (unionization, policy advocacy) and perceive the constraint as solvable."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/biological perspective, kinship obligation is rooted in human reproduction and parental investment requirements \u2014 some form of kin-based care is inevitable. The constraint appears as a natural law: humans have dependent periods; dependents require care; someone must provide it; kinship structures encode this necessity. However, the structural data contradicts the mountain classification. The high extractiveness, suppression, and theater values reveal that what is naturalized as 'biological necessity' is actually a contingent institutional arrangement (absence of public care systems, exclusion of care work from economic compensation, identity fusion in gender roles)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "identity_lock_vs_structural_trap",
+      "question": "Is the obligated adult genuinely structurally trapped by economic necessity, or is the trap primarily cognitive (identity-locked)?",
+      "resolution_mechanism": "Post-exit analysis: if obligated adults who leave their families show persistent psychological attachment and guilt-driven return to care roles, reclassify as internalized constraint. If departure leads to clean break and psychological relief, reclassify as structural entrapment.",
+      "impact": "If identity-locked: the constraint's effective suppression is higher than structural measures suggest because the agent carries the lock after exit. Therapeutic intervention becomes relevant alongside economic intervention. If structurally trapped: economic policy (universal care, wage support) is sufficient to break the constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural entrapment or internalized identity-lock"
+    },
+    {
+      "id": "dependent_legitimacy_threshold",
+      "question": "At what age or capability level does a dependent cease to be legitimate and become a beneficiary of extraction rather than an innocent party?",
+      "resolution_mechanism": "Ethnographic analysis of caregiver role transitions; study of when obligated adults shift blame from systemic factors to dependent family members' behavior choices.",
+      "impact": "If threshold is low (childhood only): most adult dependents (unemployed relatives, elderly with assets, disabled adults with earning capacity) are considered extractive beneficiaries, not innocent parties. If threshold is high: system maintains fiction of innocence even when dependents could contribute more.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Legitimate dependency vs extractive beneficiary threshold"
+    },
+    {
+      "id": "public_care_substitutability",
+      "question": "Can public care systems actually substitute for family-provided care without loss of relational continuity and emotional attachment quality?",
+      "resolution_mechanism": "Longitudinal outcomes study: countries with high public care investment (Scandinavia, OECD average) vs. low (low-income countries, US); measurement of elder and child well-being, obligated adult mental health, family relational stability.",
+      "impact": "If substitutable: scaffold sunset is real and the constraint is solvable through policy. If not: some residual family obligation is inevitable, and the constraint never fully disappears \u2014 reclassify as persistent tangled_rope rather than solvable snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether public care systems can substitute family care provision"
+    },
+    {
+      "id": "gendered_obligation_asymmetry",
+      "question": "Is family obligation equally distributed across genders, or does gender systematically determine who becomes the obligated adult?",
+      "resolution_mechanism": "Statistical analysis of care responsibilities by gender, household-by-household data on labor division, measurement of career impact differentiation by gender, intergenerational transmission of obligation.",
+      "impact": "If gender-asymmetric: the constraint is layered with a distinct gender extraction mechanism, and the snare classification understates the extraction's asymmetry. Obligated female adults experience higher suppression and lower exit optionality than obligated male adults. Classification should separate gender-explicit and gender-neutral versions.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Gender asymmetry in obligation distribution"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Family obligation \u2014 the social and legal expectation that adult family members will financially and emotionally support dependents (children, elderly, disabled relatives, unemployed siblings) \u2014 creates a structural constraint that systematically extracts from obligated individuals while naturalizing the extraction as kinship love and moral duty. This constraint is especially severe in contexts with weak social safety nets, strong kinship-based identity systems, and gendered care work norms. The extractiveness has increased over the measurement interval as economic precarity has deepened, requiring obligated adults to work longer hours and forgo educational and career advancement. The theater ratio has also increased as state programs (child tax credits, elderly care subsidies) have become more prominent while remaining insufficient to replace actual care costs \u2014 the performative appearance of public support masks the persistence of private extraction. This constraint exhibits all six DR types, but the primary classification is Snare because the obligated adult (typically female, typically powerless relative to household dependents) bears extraction with minimal coordination benefit and no genuine exit option.",
+    "key_agents": [
+      "Obligated Adult: Primary victim (powerless/trapped and identity-locked) \u2014 bears full cost of household survival, reduced opportunity, career sacrifice, psychological burden",
+      "Primary Dependent: Secondary beneficiary (moderate/mobile) \u2014 receives care, food, shelter; lacks awareness of extraction asymmetry",
+      "Secondary Family Adults: Co-obligators (moderate/constrained) \u2014 experience both coordination benefits and unequal burden distribution",
+      "State Social Support Apparatus: Institutional beneficiary (institutional/arbitrage) \u2014 subsidizes family care through insufficient programs, maintaining private extraction while claiming public support",
+      "Organized Care Worker Movement: Organized agents (organized/constrained) \u2014 building alternative care infrastructure and socialized care systems with sunset logic",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing socially contingent care arrangements as biological necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and increasing. The obligated adult bears full household survival costs while forgoing education, career development, and mobility. The extraction is not symmetrical \u2014 dependents do not reciprocate proportionally. Base extractiveness started at 0.45 (partial coordination, some benefit from household interdependence) but increased to 0.68 as economic precarity and dependent needs intensified. Suppression (0.72): High. Barriers to exit include legal parental obligations, economic dependency of dependents, absence of institutional care alternatives, social stigma and guilt, internalized identity-lock. The obligated adult cannot exit without abandoning dependents to hardship. Suppression is both structural (material barriers) and internalized (identity fusion, moral framing). Theater ratio (0.58): Moderate-high and increasing. State programs create the appearance of public care support while remaining insufficient. The obligated adult's care work is invisible (unpaid labor, domestic work) and reframed as love/duty rather than economic activity. The theater increased as formal programs were introduced without commensurate funding \u2014 the performance of support now covers what is actually continued private extraction.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival disagreement: the obligated adult and dependent perceive opposite classifications (snare vs rope) from the same structural phenomenon. The gap reveals that the constraint's function depends entirely on position. From the obligated adult's view, extraction is severe and inescapable. From the dependent's view (or the state's view), the constraint is coordination or beneficial. The gap also reveals the identity-lock mechanism: the obligated adult cannot see their own objectivity (that they are being extracted from) because their identity is fused with the extraction. Identity-locked perspective 2 produces snare (same classification as trapped perspective 1) but for different binding mechanisms. The analytical observer's mountain classification is a false summit \u2014 what is naturalized as biological kinship necessity is actually a contingent institutional arrangement (absence of public care systems, economic structures that exclude care work, gender norms).",
+    "directionality_logic": "Directionality derivation for this constraint centers on victim/beneficiary declarations and exit options. The obligated adult is a victim (bears costs) with trapped or identity-locked exit \u2192 d = 0.90-0.95 (maximum victimhood). The dependent is a beneficiary (receives care) with mobile exit (constrained by age/capability) \u2192 d = 0.20 (low, innocent party). Secondary family adults are both victims and partial beneficiaries, constrained exit \u2192 d = 0.55-0.60 (moderate, experience both extraction and benefit). The state is a beneficiary (saves on public care costs) with arbitrage exit (could shift to public care) \u2192 d = 0.10-0.15 (low, institutional beneficiary). For the identity-locked perspective, d is not reduced by the fact that the agent could technically exit \u2014 identity-lock prevents the agent from exercising exit capacity, so d remains high (0.88-0.92). This shows that directionality captures structural victim status, not agent choice.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: This constraint is a pure Snare from the obligated adult's perspective (the primary victim). Mandatrophy asks: is this extraction disguised as coordination? The answer is YES. The constraint is presented in family/kinship framing (coordination language: love, duty, interdependence) while delivering pure extraction (obligated adult's opportunity, autonomy, resources stolen for benefit of dependents and, secondarily, for the state's savings on care infrastructure). The tangled_rope and rope perspectives are perspectival illusions \u2014 they perceive coordination because they are beneficiaries or have low extraction costs. From the obligated adult's actual structural position, coordination is minimal and asymmetric. The constraint is solvable through public care investment (scaffold perspective), but in contexts where such investment is absent or insufficient, it remains a snare. The mandatrophy is resolved by recognizing that family obligation is a synthetic constraint \u2014 it exists only because institutional alternatives (public childcare, public elderly care, robust social safety net) do not exist. It is not a natural law but a policy failure naturalized through kinship rhetoric."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "gendered_care_work_exclusion",
+      "inadequate_social_safety_net",
+      "identity_fusion_in_kinship"
+    ],
+    "dual_formulation_note": "Family obligation decomposes into three structurally distinct constraints with different \u03b5 values. This story captures the primary extraction mechanism (obligated adult bearing care costs). Gendered_care_work_exclusion (\u03b5=0.62) focuses on the labor extraction and wage penalty aspects. Inadequate_social_safety_net (\u03b5=0.75, policy-level) focuses on the institutional mechanism that enforces private extraction. Identity_fusion_in_kinship (\u03b5=0.55) focuses on the cognitive lock mechanism. All three are upstream/downstream of family_obligation_vs_survival and linked via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.18
+    }
+  ]
+}

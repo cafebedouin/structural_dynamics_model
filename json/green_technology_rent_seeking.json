@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "green_technology_rent_seeking",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gtrs"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.48,
+    "theater_ratio": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Green Technology Rent Seeking and Policy Capture",
+    "topic_domain": "economic_policy/environmental_regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_green_technology_firms",
+      "subsidy_capture_coalitions"
+    ],
+    "victims": [
+      "competing_technologies",
+      "fossil_fuel_transition_workers",
+      "general_taxpayers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Displaced Fossil Fuel Workers",
+      "comment": "Workers in coal, natural gas, and oil sectors face structural trapping through geographic dependence, capital depreciation, and skill lock-in. Climate policy channels transition support through incumbent green firms, limiting worker agency in sector choice. No alternative income pathways available at comparable wages in declining coal regions."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Competing Green Technology Developers",
+      "comment": "Developers of more efficient or cost-effective green technologies face regulatory capture through incumbent firm lobbying. Patent thickets, grandfathered subsidies, and standards capture create high barriers to market entry. Can exit through relocation or sector switching, but at substantial cost to technology development and market opportunity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Renewable Energy Transition Communities",
+      "comment": "Communities hosting renewable installations both benefit from green energy generation and coordination (grid stability, local investment) and bear extraction (land use restrictions, visual impact, infrastructure concentration). Genuine coordination function exists alongside asymmetric extraction of site-specific costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Incumbent Green Technology Firms",
+      "comment": "Primary beneficiaries experiencing constraint as pure coordination mechanism. Subsidies and standards capture align perfectly with their business model. High-margin extraction of policy rents with minimal coercion experience \u2014 beneficiaries see regulation as enabling their market dominance."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Decentralized Renewable Energy Coalition",
+      "comment": "Organized groups (distributed solar advocates, community wind cooperatives, microgrid developers) perceive green technology rent-seeking as a temporary institutional problem with a sunset pathway. Distributed renewable technologies bypass incumbent capture mechanisms. As battery costs decline and grid technology matures, centralized subsidy regimes lose their monopoly extraction power. Sunset estimated at 15-20 years as distributed generation reaches grid parity."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Climate Policy Bureaucracy",
+      "comment": "Regulatory agencies designed to implement climate targets have become vessels for incumbent firm preferences. Theater ratio (0.62) reflects that much climate policy activity is performative: setting targets without enforcement mechanisms, subsidizing technologies without cost controls, or establishing standards that lock in incumbent advantage. The bureaucratic apparatus persists through institutional inertia despite degraded function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From the analytical perspective, green technology rent-seeking is a genuine hybrid: environmental coordination function (decarbonization requires scale-up of green technologies) coexists with substantial asymmetric extraction (incumbent firms capturing policy rents, excluding alternatives, shifting transition costs to workers and taxpayers). The constraint requires active enforcement of subsidy regimes and standard-setting \u2014 without regulatory backing, rent extraction would collapse. Both coordination and extraction elements are structurally real."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_vs_subsidy_boundary",
+      "question": "What portion of green technology subsidies reflects genuine coordination costs (market failure correction, infrastructure externalities) versus pure rent extraction (incumbent protection)?",
+      "resolution_mechanism": "Cost-benefit analysis of subsidized technologies against unsubsidized alternatives; comparison of policy costs to measured emissions reduction; counterfactual analysis of technology deployment without subsidies",
+      "impact": "If coordination dominates (>60%): constraint reclassifies toward Rope/Scaffold. If extraction dominates (>60%): constraint reclassifies toward Snare/Tangled Rope with higher effective \u03b5.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Boundary between genuine coordination cost and pure rent extraction in subsidy regimes"
+    },
+    {
+      "id": "alternative_technology_exclusion_mechanism",
+      "question": "Are competing green technologies (advanced nuclear, green hydrogen, next-generation geothermal, carbon capture) excluded from policy support through deliberate capture or through genuine comparative advantage of incumbent technologies?",
+      "resolution_mechanism": "Comparative analysis of research funding, patent support, and deployment incentives across technology categories; interviews with policy formulators and technologists; historical timeline of inclusion/exclusion decisions and their justifications",
+      "impact": "If exclusion is deliberate capture: suppression rises, extractiveness rises, constraint tightens toward Snare. If exclusion reflects genuine technical/economic barriers: suppression may reflect legitimate risk aversion, and constraint loosens toward Rope/Scaffold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether technology exclusion is capture-driven or evidence-driven"
+    },
+    {
+      "id": "worker_transition_sufficiency",
+      "question": "Do green sector employment gains for displaced fossil fuel workers match or exceed the geographic and skill-adjusted losses from coal/oil sector contraction?",
+      "resolution_mechanism": "Longitudinal wage and employment data for fossil fuel workers post-policy; geographic matching of green job creation to fossil fuel job loss; wage premium analysis (if green jobs pay less, workers bear hidden extraction cost)",
+      "impact": "If sufficient: displacement is transitional cost justified by decarbonization goal. If insufficient: constraint extracts from workers as asymmetric transition burden, raising snare perspective validity.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether green transition creates sufficient jobs for displaced fossil fuel workers"
+    },
+    {
+      "id": "distributed_renewable_sunset_realism",
+      "question": "Are distributed renewable technologies (rooftop solar, community wind, microgrids) actually approaching economic viability sufficient to bypass incumbent subsidy regimes, or is the scaffold sunset pathway aspirational rather than structural?",
+      "resolution_mechanism": "Cost trend analysis for distributed renewable deployment; analysis of grid regulation barriers to distributed systems; market adoption rates in regions with different policy frameworks",
+      "impact": "If pathway is real: scaffold classification holds, sunset is structural. If pathway faces regulatory/technical barriers that persist: scaffold classification becomes piton (aspirational, not executable).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether distributed renewables approach viability to bypass incumbent capture"
+    },
+    {
+      "id": "policy_lock_in_duration",
+      "question": "How long does green technology subsidy capture lock in incumbent firm advantage once deployed? At what point do sunk costs become legacy burden rather than competitive moat?",
+      "resolution_mechanism": "Technology cost curves; competitive entry analysis; patent expiration timelines; infrastructure lifespan; policy change sensitivity analysis",
+      "impact": "If lock-in is short (5-10 years): constraint is naturally sunset-prone. If lock-in is long (30+ years): constraint approaches mountain-like entrapment.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Duration of policy lock-in for incumbent green firms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Green technology rent-seeking emerges when climate policy mechanisms designed to accelerate decarbonization become vehicles for incumbent firm extraction through subsidy capture, standards setting, and regulatory moats. The constraint exhibits genuine coordination function (market failure correction, scaling green infrastructure) layered with substantial asymmetric extraction (incumbent firms capturing policy rents, excluding competing technologies, channeling transition costs to displaced workers and taxpayers). Extractiveness has risen over the past decade (0.35 \u2192 0.58) as incumbent firms have consolidated policy influence and as fiscal costs of subsidy regimes have grown without proportional decarbonization gains. Theater ratio has also risen (0.42 \u2192 0.62) as climate policy activity has become increasingly performative: setting emissions targets without enforcement, subsidizing technologies without cost controls, establishing standards that lock in incumbent advantage while generating minimal incremental emissions reductions.",
+    "key_agents": [
+      "Incumbent Green Technology Firms (institutional/arbitrage): Primary beneficiaries capturing policy rents through subsidies, tax credits, renewable portfolio standards, and preferential grid access. Experience constraint as enabling their market dominance.",
+      "Displaced Fossil Fuel Workers (powerless/trapped): Primary victims with no exit options due to geographic dependence, skill lock-in, and concentrated regional employment. Bear asymmetric transition costs while policy channels benefits to incumbent firms.",
+      "Competing Green Technology Developers (moderate/constrained): Face regulatory capture through incumbent lobbying, patent thickets, and standards capture. High costs to exit through relocation or sector switching.",
+      "General Taxpayers (powerless/trapped): Bear hidden extraction cost through subsidy regimes that exceed justified coordination costs. No individual agency; collective victims trapped through taxation.",
+      "Renewable Energy Transition Communities (moderate/mobile): Experience both coordination benefits (green energy generation, local investment) and extraction costs (land use restrictions, infrastructure concentration). Mixed position enables some exit.",
+      "Decentralized Renewable Coalition (organized/constrained): See rent-seeking as temporary institutional problem with sunset pathway through distributed generation technologies. Build alternative mechanisms outside incumbent capture.",
+      "Climate Policy Bureaucracy (institutional/arbitrage): Regulatory agencies designed for climate implementation have become vessels for incumbent preferences. Maintain performative appearance of enforcement without challenging rent extraction."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Policy rents captured by incumbent firms are substantial but not total \u2014 unsubsidized technologies still function, policy intervention is not uniformly enforced, and alternative mechanisms are emerging. The value reflects that extraction is real but incomplete. Suppression (0.48): Moderate. Barriers to competing technologies exist (regulatory capture, standards lock-in, incumbent lobbying) but are not insurmountable. Some competing technologies succeed through cost advantages; organized groups are building alternative institutions. Suppression reflects real barriers without absolute entrenchment. Theater ratio (0.62): Moderate-high. Climate policy generates substantial performative activity: emissions targets without enforcement mechanisms, subsidies without cost controls, standards that lock in incumbent advantage while producing marginal decarbonization gains. Theater has increased as policy has shifted from genuine market correction (early period) toward incumbent capture maintenance (current period). The analytical perspective classifies as Tangled Rope because both coordination (decarbonization requires technology scale-up) and extraction (incumbent rents, worker displacement costs, technology exclusion) are structurally real and require active enforcement.",
+    "perspectival_gap": "This constraint is diagnostic of how extraction can hide behind coordination framing. Green technology transition IS a genuine coordination challenge \u2014 decarbonization at scale requires market correction for carbon externalities and infrastructure investment. But that coordination function coexists with incumbent firm extraction through subsidy capture, technology exclusion, and cost-shifting to displaced workers. The gap between Rope (incumbent firm perspective) and Snare (displaced worker perspective) is not measurement error \u2014 it reflects that the same policy regime genuinely coordinates technology scaling AND genuinely extracts from workers and taxpayers. The analytical observer cannot choose between coordination and extraction; both are structurally real. The Tangled Rope classification reflects this irreducible hybridity.",
+    "directionality_logic": "Directionality values (d) are derived from each agent's structural position relative to the extraction flow and their exit options. Incumbent firms are beneficiaries with arbitrage exit options (d \u2248 0.05): they can relocate operations, switch technologies, or exit policy dependence with minimal cost. Displaced workers are victims with trapped exit (d \u2248 0.95): geographic dependence, skill lock-in, and concentrated regional employment eliminate alternatives. Competing technologists are victims with constrained exit (d \u2248 0.65): they can relocate or switch sectors but at substantial cost. The decentralized renewable coalition is organized with constrained exit (d \u2248 0.45): they have real agency in building alternative institutions, reducing experienced extraction despite remaining policy barriers. The climate bureaucracy is institutional with arbitrage exit (d \u2248 0.10): they benefit from policy apparatus and can exit through regulatory change if political pressure shifts. These d values feed into f(d) sigmoid functions that scale chi: beneficiaries with arbitrage experience negative or near-zero \u03c7; victims with trapped exit experience maximum \u03c7; organized groups with agency experience moderate \u03c7.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating that green technology policy REQUIRES both coordination and extraction elements. The coordination function (market failure correction, infrastructure scaling) cannot be achieved through Rope mechanisms alone because incumbent firms lack sufficient incentive to deploy green technologies at the pace required by decarbonization targets. Policy enforcement (subsidies, standards, mandates) is necessary for coordination. But that same enforcement apparatus enables extraction because incumbent firms have capacity to capture it. The solution is not to eliminate enforcement (which would collapse coordination) but to redesign enforcement mechanisms to reduce capture surface \u2014 decentralization mandates, technology-neutral standards, worker transition guarantees, and sunset clauses that force institutional renewal. The Tangled Rope classification holds because both elements are irreducible, and the constraint's future trajectory depends on whether policy redesign reduces extraction while maintaining coordination function. Constraint families: this story links to 'incumbent_firm_regulatory_capture' (institutional-level extraction mechanism) and 'fossil_fuel_worker_displacement' (worker-level extraction mechanism) through network dependencies."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "incumbent_firm_regulatory_capture",
+      "fossil_fuel_worker_displacement",
+      "distributed_renewable_technology_adoption"
+    ],
+    "dual_formulation_note": "Green technology rent-seeking decomposes into three structurally distinct constraints with different \u03b5 values: (1) incumbent_firm_regulatory_capture (\u03b5 \u2248 0.42) addressing the institutional-level mechanism of policy capture; (2) fossil_fuel_worker_displacement (\u03b5 \u2248 0.68) addressing the worker-level asymmetric transition costs; (3) distributed_renewable_technology_adoption (\u03b5 \u2248 0.25) addressing the alternative decentralized pathway. This story integrates all three through the tangled rope coordination function that links them. See dual formulation notes in each linked constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

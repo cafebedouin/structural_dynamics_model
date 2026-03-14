@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "capital_flight_suppression",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "capflight"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Capital Flight Suppression: Exchange Controls and Financial Restrictions",
+    "topic_domain": "political_economy/financial_regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "domestic_government",
+      "protected_domestic_industries"
+    ],
+    "victims": [
+      "individual_savers",
+      "export_oriented_firms",
+      "cross_border_investors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Individual Saver",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL SAVER (SNARE) \u2014 Faces legal prohibition on currency conversion and account freezes for unauthorized transfers. Trapped within national financial system with no legitimate exit mechanism. Bears full extraction cost through currency devaluation and negative real returns while unable to protect savings through diversification. Maximum suppression: legal barriers, enforcement infrastructure, and information asymmetry prevent escape."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Export-Oriented Firm",
+      "comment": "PERSPECTIVE 2: EXPORT-ORIENTED FIRM (TANGLED ROPE) \u2014 Genuine coordination function: capital controls prevent currency volatility that disrupts export pricing. But simultaneously experiences extraction through forced repatriation requirements, mandatory conversion at unfavorable rates, and restricted dividend distribution. Constrained exit: legal requirements and transaction costs prevent capital relocation despite having organizational resources. Both benefits and costs are structural."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Domestic Government",
+      "comment": "PERSPECTIVE 3: DOMESTIC GOVERNMENT (ROPE) \u2014 Primary beneficiary experiencing capital controls as pure coordination mechanism: stabilizes currency, prevents reserve depletion, maintains monetary policy autonomy, and enables public spending without interest-rate spiral. Experiences the constraint as infrastructure with low cost. Net flows run toward this agent through seigniorage capture and retained foreign exchange reserves."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Regional Trade Bloc",
+      "comment": "PERSPECTIVE 4: REGIONAL TRADE BLOC (SCAFFOLD) \u2014 Organized actors (IMF coordination, ASEAN harmonization, EU-style monetary union) see capital controls as temporary crisis measures with sunset clauses. The constraint is perceived as having limited duration \u2014 as regional integration deepens and macroeconomic stabilization improves, capital account liberalization becomes both feasible and coordinated. Sunset timeline: 5-15 years depending on stabilization success. Low effective extraction because organized agents see exit pathway and can negotiate terms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Central Bank",
+      "comment": "PERSPECTIVE 5: CENTRAL BANK (TANGLED ROPE) \u2014 Enforcement institution experiencing dual role: benefits from capital controls (tools for monetary policy and reserve management) but constrained by political pressure to liberalize and by coordination costs of maintaining the enforcement apparatus. Active enforcement required; genuine coordination function (currency stability) coexists with asymmetric extraction from restricted agents. Constrained exit through political dependency and institutional path-dependence."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Capital Control Apparatus",
+      "comment": "PERSPECTIVE 6: LEGACY APPARATUS (PITON) \u2014 Historical capital controls from post-colonial independence or Cold War containment persist through institutional inertia long after their original justification has eroded. Theater ratio high (0.45): regulations require documentation, licensing, and approval procedures that consume resources but don't effectively prevent motivated capital flight through informal channels, trade misinvoicing, or cryptocurrency. The ritual persists because removing it signals weakness; the apparatus persists because it's bureaucratically entrenched."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational/global perspective, capital controls are a genuine hybrid: they provide real coordination benefits (monetary autonomy, exchange rate stability, prevention of boom-bust cycles) alongside real extraction (wealth taxation through inflation, forced conversions, opportunity costs). No perspective naturalizes this as immutable law \u2014 all agents recognize the constraint as contingent policy choice. The extractiveness value reflects true structural mix: neither pure coordination nor pure predation."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "enforcement_vs_evasion_equilibrium",
+      "question": "What is the true compliance rate of capital controls versus the reported legal compliance rate?",
+      "resolution_mechanism": "Analysis of informal capital flows (hawala transfers, trade misinvoicing, cryptocurrency adoption, cash smuggling) compared to measured capital account deficits; cross-border transaction tracing",
+      "impact": "If true evasion rate > 40 percent: suppression metric is overestimated (many agents are not actually trapped); reclassify from Snare to Tangled Rope or Rope for significant victim cohorts. If evasion < 20 percent: suppression is real and underestimated; extraction mechanism is more severe.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "True compliance rate of capital controls versus reported rates"
+    },
+    {
+      "id": "macroeconomic_benefit_realization",
+      "question": "Do capital controls actually achieve their stated macroeconomic objectives (exchange rate stability, reserve accumulation, monetary policy autonomy) or do they simply delay adjustment while creating distortions?",
+      "resolution_mechanism": "Time-series comparison of countries with vs without capital controls; impulse response analysis of shocks; measurement of exchange rate volatility, reserve sustainability, and inflation differentials pre/post implementation",
+      "impact": "If benefits realized: extractiveness may be justified as legitimate coordination cost. If benefits are illusory: extractiveness represents pure extraction disguised as necessity. Classification may shift from Tangled Rope to Snare if coordination function disappears.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether capital controls achieve stated macroeconomic objectives"
+    },
+    {
+      "id": "distributional_incidence_heterogeneity",
+      "question": "Do capital controls fall uniformly on all agents or do wealthy/connected agents escape through informal channels while powerless agents bear full suppression?",
+      "resolution_mechanism": "Cross-sectional analysis of capital flight patterns by wealth quintile, sector, and political connection; comparison of effective rates of extraction across agent types",
+      "impact": "If highly heterogeneous: effective suppression is lower for beneficiaries and institutional actors, higher for individuals; this implies separate constraint stories (one for each agent class) rather than a single uniform constraint. If uniform: suppression metric is accurate across all perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distributional heterogeneity of capital control incidence"
+    },
+    {
+      "id": "alternative_policy_counterfactual",
+      "question": "Would the macroeconomic outcomes sought by capital controls be achievable through alternative instruments (fiscal consolidation, monetary credibility, sectoral protection, targeted infant-industry support) without the suppression cost?",
+      "resolution_mechanism": "Historical comparison of countries that achieved similar outcomes through different policy mixes; structural econometric modeling of policy substitution elasticity",
+      "impact": "If alternatives are feasible: capital controls are revealed as politically easier rent-seeking mechanism than genuine stabilization tool. Extractiveness-to-coordination ratio shifts downward. If alternatives are infeasible: coordination benefit is higher than skeptics claim. Classification stability increases.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Feasibility of alternative policy instruments for achieving control objectives"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Capital flight suppression through exchange controls and financial restrictions represents a structural tension between the government's need for monetary policy autonomy and macroeconomic stability (coordination benefit) and the distributional extraction from individual savers, exporters, and cross-border investors who bear the suppression cost. The constraint exhibits hybrid characteristics: genuine coordination function (preventing currency crisis, enabling seigniorage capture) coexists with asymmetric extraction through forced conversions, negative real returns, and restricted access to global capital markets. The constraint's theater_ratio (0.45) reflects that enforcement mechanisms often become ritualized: licensing procedures, documentation requirements, and approval processes consume resources without effectively preventing motivated evasion through informal channels, trade misinvoicing, or cryptocurrency. Measurement data shows theater increasing over the interval (0.25 to 0.48) as enforcement becomes more procedural and less functionally effective against sophisticated evasion. The extractiveness trajectory (0.35 to 0.62) reflects escalating enforcement intensity and widening effectiveness gap between formal rules and actual capital flows.",
+    "key_agents": [
+      "Individual Savers: Primary victims (powerless/trapped) \u2014 face legal prohibition on currency conversion and account restrictions; trapped within national system with no legitimate exit; bear extraction through real returns erosion",
+      "Export-Oriented Firms: Secondary victims (powerful/constrained) \u2014 benefit from exchange rate stability but constrained by repatriation requirements and conversion mandates; experience both coordination benefits and extraction costs",
+      "Domestic Government: Primary beneficiary (institutional/arbitrage) \u2014 captures seigniorage, maintains monetary autonomy, prevents reserve depletion; experiences constraint as low-cost infrastructure for fiscal spending",
+      "Central Bank: Enforcement institution (institutional/constrained) \u2014 implements controls as coordination tool but politically pressured to liberalize; constrained exit through institutional dependency",
+      "Regional Trade Bloc: Organized actors (organized/mobile) \u2014 perceive capital controls as temporary crisis measure with sunset as regional integration deepens; can negotiate exit terms",
+      "Legacy Enforcement Apparatus: Institutional inertia (institutional/arbitrage) \u2014 maintains procedural rituals that reduce functional effectiveness while persisting through bureaucratic entrenchment",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 recognizes genuine hybrid of coordination and extraction without naturalizing either"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Capital controls extract wealth from individual savers through seigniorage capture (government spending financed by suppressed capital outflows) and forced conversions at unfavorable rates. However, extractiveness is not maximal because some domestic agents benefit from currency stability and because export-oriented firms experience genuine coordination benefits alongside extraction costs. The trajectory from 0.35 to 0.62 reflects escalation: controls become more severe as macroeconomic pressure builds (currency depreciation, inflation acceleration), forcing government to tighten enforcement. Suppression (0.72): High. Legal barriers (prohibition on currency conversion, account freezes, mandatory licensing) create structural impossibility of exit for individual savers. But sophisticated agents can evade through informal channels, trade misinvoicing, or capital relocation, so effective suppression is heterogeneous by agent capability. Theater ratio (0.45): Moderate. Enforcement procedures (foreign exchange licenses, documentation requirements, approval delays) are partly functional (information gathering, fraud detection) and partly performative (ritual compliance, bureaucratic gatekeeping). The increasing theater (0.25 to 0.48) reflects degradation: as evasion becomes more sophisticated, procedures become more elaborate while effectiveness declines, creating a hallmark pattern of theater substitution for functional control.",
+    "perspectival_gap": "The constraint classifies as Snare from the powerless individual saver perspective (maximum extraction, no exit, full suppression) but as Rope from the government perspective (pure coordination, net benefit, low-cost infrastructure). Export-oriented firms see Tangled Rope (mixed coordination and extraction, constrained but not trapped). This perspectival gap reflects genuine distributional asymmetry: the constraint benefits government and some protected sectors while harming individual savers and capital-intensive exporters. The regional organized actors see Scaffold (temporary measure with sunset as stabilization succeeds), while the analytical observer sees Tangled Rope (genuine hybrid at civilizational scale). The key insight: no perspective perceives capital controls as immutable natural law. All recognize them as contingent policy choice \u2014 the disagreement is whether the choice benefits or harms them.",
+    "directionality_logic": "Directionality flows from structural relationship to the constraint. The government is a beneficiary with arbitrage-level exit options (can liberalize capital account at will) \u2014 derives low d value (beneficial position) producing negative \u03c7 in analysis. Individual savers are victims with trapped exit options (no legal mechanism to escape) \u2014 derive high d values (maximum targeting) producing high \u03c7 (high experienced extraction). Export-oriented firms are mixed: benefit from exchange rate stability coordination but are victimized by repatriation mandates; constrained exit (high costs to relocate) moderates d value below full-victim status. The Central Bank is an enforcement institution constrained by political pressure \u2014 derives moderate d value reflecting mixed institutional position. The scaffold perspective's organized regional actors have mobile exit options (can coordinate multilateral liberalization) \u2014 derive low d values despite some victim-like characteristics because they have genuine agency and negotiating power.",
+    "mandatrophy_analysis": "CAPITAL CONTROLS AS MANDATROPHY EXEMPLAR: The mandate (suppress capital flight to preserve macroeconomic stability and government fiscal space) creates the trophy (individuals trapped in losing currencies, firms unable to optimize capital allocation, wealth destruction through seigniorage). This constraint demonstrates why mandatrophy matters: governments implementing capital controls believe they are creating coordination benefits (preventing runs on reserves, maintaining currency value, enabling counter-cyclical policy). But the mechanism for preventing capital flight is extraction from trapped savers, and this extraction reveals the structural hybrid: coordination and extraction are not separable. The government stabilizes the macroeconomy partly by genuine coordination (preventing boom-bust cycles, managing current account flows) and partly by predation (capturing inflation tax from savers who cannot exit). Removing the mandate (liberalizing capital account) risks trophy loss (currency volatility, inflation acceleration) if macroeconomic fundamentals are weak. The resolution lies in the scaffold perspective: the constraint should carry a sunset clause contingent on achieving macroeconomic stabilization (inflation target, current account balance). Once stabilization is real, coordinated regional liberalization becomes feasible, and the extraction mechanism loses justification."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "currency_crisis_prevention",
+      "seigniorage_dependency",
+      "financial_market_fragmentation"
+    ],
+    "dual_formulation_note": "Capital flight suppression is downstream of currency crises (upstream: constraint on currency stability) and enables government fiscal dependency on seigniorage (downstream: constraint on monetary policy autonomy). These form a constraint family where each story has distinct \u03b5 values reflecting their structural position: currency stability constraint has lower \u03b5 (genuine coordination), seigniorage dependency has higher \u03b5 (extraction wrapped in macro necessity), capital suppression sits between (hybrid Tangled Rope)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.55
+    }
+  ]
+}

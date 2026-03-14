@@ -1,0 +1,185 @@
+{
+  "header": {
+    "constraint_id": "hierarchy_fragility_collapse",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.64,
+    "claimed_type": "snare",
+    "human_readable": "Hierarchy Fragility Collapse",
+    "topic_domain": "organizational/systemic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "hierarchical_leadership"
+    ],
+    "victims": [
+      "subordinate_agents",
+      "organizational_resilience"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Subordinate Agent",
+      "comment": "Subordinate agents experience the hierarchy as a snare: they cannot exit without career destruction, cannot voice dissent without retaliation risk, and bear the full cost when the system becomes fragile. Their only option is compliance with increasingly brittle coordination demands."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Level Manager",
+      "comment": "Mid-level managers experience mixed extraction and coordination. They benefit from hierarchical status but are constrained by upward compliance and downward enforcement obligations. Genuine coordination function (resource allocation, information flow) coexists with asymmetric extraction (burden of bridge roles)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Hierarchical Leadership",
+      "comment": "Leadership experiences the constraint as pure coordination: centralized decision-making, clear authority lines, and rapid command execution. They perceive the system as solving collective action problems. Effective extraction runs toward them, but they frame it as legitimate reward for bearing decision responsibility."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Hierarchical Institution",
+      "comment": "Organizations maintain hierarchical theater long after its functional coordination value has degraded. Org charts, chain-of-command rituals, and rank-based status persist through inertia. Theater ratio reflects the growing gap between formal hierarchy structure and actual information flow and decision pathways."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Distributed Alternative",
+      "comment": "Organized agents (flat organizations, peer networks, open-source governance) see hierarchical fragility as a temporary problem with a sunset. Distributed decision-making, consensus protocols, and role-based (not rank-based) authority are building alternatives. Low effective extraction because exit pathways are visible and organized alternatives exist."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "From a civilizational/universal perspective, some hierarchical ordering is inherent to large-system coordination: any organization above a critical complexity threshold requires authority differentiation and information filtering. This perspective naturalizes hierarchy as an immutable law of organizational physics. The engine's false summit detector will reveal this as problematic \u2014 the structural data suggests hierarchy is a contingent institutional choice, not a natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fragility_trigger_threshold",
+      "question": "At what organizational scale or complexity does hierarchical coordination begin to generate fragility faster than resilience?",
+      "resolution_mechanism": "Empirical analysis of failure rates across organizational sizes; identification of inflection point where information bottlenecks exceed decision-making speed requirements",
+      "impact": "If threshold is low (100-1000 people): hierarchies are inherently fragile structures that snap under modest stress. If threshold is high (10000+ people): hierarchy remains viable for very large organizations, and the constraint is observational bias from mid-size institutions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Organizational scale threshold for hierarchy fragility transition"
+    },
+    {
+      "id": "suppression_internalization",
+      "question": "Is subordinate compliance driven by material barriers (job loss risk, economic dependency) or by internalized deference (identity fusion with hierarchical role)?",
+      "resolution_mechanism": "Post-hierarchy trajectory analysis: do subordinates retain compliance patterns after exiting the hierarchy? Do they seek new hierarchies or pursue non-hierarchical structures?",
+      "impact": "If material: suppression ends when barriers are removed (trapped classification holds). If internalized: subordinates replicate hierarchy in new contexts (identity_locked classification). If mixed: classification depends on agent background.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether subordinate suppression is structural or internalized"
+    },
+    {
+      "id": "distributed_system_coordination_feasibility",
+      "question": "Can distributed coordination (peer networks, consensus protocols, market signals) achieve the same coordination speed and quality as hierarchical command at scale?",
+      "resolution_mechanism": "Comparative analysis of decision latency, error rates, and adaptive capacity between hierarchical and distributed organizations at equivalent scale; measurement of scalability breaking points",
+      "impact": "If feasible: hierarchy is not natural law (mountain false summit confirmed) and scaffold sunset is real. If infeasible: hierarchy becomes rope or scaffold-with-longer-sunset (exit alternatives don't actually work).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether distributed coordination can replace hierarchy at scale"
+    },
+    {
+      "id": "theater_vs_function_divergence_rate",
+      "question": "How fast does the gap between hierarchical theater (org chart, formal authority) and actual decision-making structures (informal networks, expertise-based authority) expand over organizational lifetime?",
+      "resolution_mechanism": "Historical mapping of informal vs formal authority flows in long-lived organizations; measurement of org chart alignment with actual decision pathways",
+      "impact": "If gap widens rapidly: piton classification is correct, theater_ratio should increase faster in measurements. If gap stabilizes: theater serves a real coordination function (consensus building, legitimacy) and should not be classified as pure piton.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Rate of divergence between formal hierarchy and informal authority structures"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Hierarchical systems face a fundamental fragility trap: the structures that enable fast, centralized coordination become increasingly brittle under complexity and change. As organizations grow, information bottlenecks at the apex increase decision latency while subordinates face suppression that prevents them from signaling failures or suggesting adaptations. The hierarchy extracts loyalty and compliance in exchange for decision-making authority held by leaders who lack the information needed to make good decisions. This constraint exhibits all six DR types from different observational positions, revealing a systematic mislabeling of a contingent extractive structure as a natural law of organizational physics. The theater_ratio (0.64) reflects that hierarchical ritual (org charts, reporting chains, rank-based decision authority) increasingly diverges from actual information flows and decision-making patterns in complex environments. The extractiveness (0.68) reflects that subordinates bear accelerating costs (adaptation lag, suppression of local knowledge, career risk) while the extracted value flows upward to leadership who are increasingly isolated from reality.",
+    "key_agents": [
+      "Subordinate Agents: Primary victims (powerless/trapped) \u2014 bear suppression costs (information filtering, retaliation risk, compliance overhead) without decision authority; cannot exit without career destruction",
+      "Mid-Level Managers: Secondary victims (moderate/constrained) \u2014 experience mixed extraction and coordination; bear bridge burden of translating between leadership isolation and ground-level reality",
+      "Hierarchical Leadership: Primary beneficiary (institutional/arbitrage) \u2014 captures decision authority and status benefits; experiences the constraint as pure coordination mechanism",
+      "Organizational Institution: Institutional actor (institutional/constrained) \u2014 maintains hierarchical theater through inertia; recognizes degradation (piton perspective) but resistant to structural change",
+      "Distributed Alternative: Organized agents (organized/mobile) \u2014 flat organizations, peer networks, open-source governance represent parallel coordination pathways with visible exit routes",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing hierarchy as immutable organizational law when structural data reveals it as contingent institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. Subordinates bear suppression costs (information filtering, retaliation risk, compliance overhead, adaptation lag) that grow with organizational complexity and change velocity. Leadership captures decision authority and status benefits while becoming increasingly isolated from the ground truth needed for good decisions. The extraction is not sustainable at this level \u2014 hierarchies at 0.68 extractiveness typically experience collapse or radical restructuring. Suppression (0.72): High. Multiple suppression mechanisms operate: career risk of dissent, information asymmetry, formal authority that prohibits upward challenge, implicit assumption that hierarchy is natural and unchangeable. Subordinates have trapped-level exit barriers because removing oneself from the hierarchy means career damage in a world where hierarchies are default. Theater ratio (0.64): Moderate-high and increasing. Hierarchical theater (org charts, titles, formal reporting channels) persists but increasingly diverges from actual decision-making. Real authority flows through informal networks based on expertise and information access; formal authority based on rank becomes performative. The increase from 0.35 to 0.68 over the measurement interval reflects this growing divergence. Claimed type (Snare): The structure exhibits snare properties \u2014 high suppression, high extractiveness, minimal coordination benefit to subordinates, reliance on suppressing knowledge of alternatives.",
+    "perspectival_gap": "This constraint demonstrates how a single structural arrangement produces dramatically different classifications depending on observer position and exit options. Leadership sees coordination (Rope) \u2014 centralized authority solving collective action problems efficiently. The institution maintaining hierarchy sees a degraded ritual (Piton) \u2014 knowing the theater-to-function ratio is problematic but locked into the structure by inertia. Mid-level managers experience the hybrid (Tangled Rope) \u2014 genuine coordination coexists with asymmetric extraction of their bridge labor. Subordinates see extraction (Snare) \u2014 suppression, information filtering, and retaliation risk with no decision authority. Organized alternatives (flat networks, peer governance) see a temporary problem with exits available (Scaffold) \u2014 distributed coordination can replace hierarchy at scale, providing a sunset pathway. The analytical observer risks naturalizing this entire arrangement as an immutable law (Mountain) \u2014 'complex organizations require hierarchy' \u2014 when the structural data reveals a contingent institutional choice that extracts value by suppressing knowledge of alternatives.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that the snare classification is structural, not perspectival. Snare requires: (1) high extractiveness (0.68), (2) high suppression (0.72), (3) \u03c7 \u2265 0.66 from the subordinate perspective, (4) minimal coordination benefit to victims. All four conditions are met. The snare exists not because it coordinates efficiently (it doesn't at 0.68 extractiveness \u2014 leadership is too isolated to decide well), but because it suppresses knowledge that alternatives exist (scaffold/distributed coordination work at scale). The mandatrophy is resolved by recognizing that the 'natural law' view (mountain) is a false summit \u2014 hierarchy is naturalized through suppression of evidence that alternatives work. The theater_ratio drift (0.35\u21920.68) reveals the underlying mechanism: as real authority diverges from formal hierarchy, the hierarchy is maintained through theater (ritual, status signaling, legitimacy narratives) rather than functional superiority. When theater exceeds function, the constraint is piton at the institutional level and snare at the subordinate level simultaneously \u2014 the institution is maintaining a degraded ritual, and subordinates are suppressed within it."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "information_bottleneck",
+      "organizational_resilience_trap",
+      "distributed_authority_scalability"
+    ],
+    "dual_formulation_note": "Hierarchy fragility collapse is downstream of specific organizational choices (centralized decision authority, rank-based status, information filtering) but represents a distinct structural constraint. It affects larger organizational constraints (resilience, adaptive capacity, knowledge integration) by creating the suppression and extraction mechanisms that prevent adaptation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.28
+    }
+  ]
+}

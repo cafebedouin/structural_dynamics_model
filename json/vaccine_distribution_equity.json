@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "vaccine_distribution_equity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "vaxdist"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Vaccine Distribution Equity Constraint",
+    "topic_domain": "public_health/global_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_income_countries",
+      "pharmaceutical_manufacturers"
+    ],
+    "victims": [
+      "low_income_countries",
+      "vaccine_insecure_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Vaccine-Insecure Population",
+      "comment": "PERSPECTIVE 1: VACCINE-INSECURE POPULATIONS (SNARE) \u2014 Trapped without exit options. Lack economic resources to purchase vaccines at market rates, lack political voice in procurement negotiations, and depend entirely on aid allocation decisions made by higher-power actors. Face maximum suppression: no alternatives, no bargaining capacity, no exit. Classification as snare reflects the absence of coordination benefit \u2014 the distribution constraint imposes pure extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Low-Income Country Government",
+      "comment": "PERSPECTIVE 2: LOW-INCOME COUNTRY GOVERNMENT (TANGLED ROPE) \u2014 Constrained by budget limits and dependence on donor coordination. Experiences genuine coordination function (COVAX mechanism, WHO guidance enable collective action at scale). But also experiences asymmetric extraction: resources flow away during critical window, prices are set externally, and domestic capacity building is deprioritized. High suppression via resource scarcity and structural inequality. Moderate power via organized state apparatus but constrained by global competition."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Pharmaceutical Manufacturer",
+      "comment": "PERSPECTIVE 3: PHARMACEUTICAL MANUFACTURER (ROPE) \u2014 Primary beneficiary with arbitrage capacity. Can choose which markets to supply, which prices to charge, which production facilities to prioritize. Experiences distribution constraint as pure coordination mechanism: supply agreements with high-income countries enable predictable revenue and market access. No suppression from this actor's perspective \u2014 they have exit options and direct benefit flow. Classification as rope reflects net positive extraction benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The High-Income Country Government",
+      "comment": "PERSPECTIVE 4: HIGH-INCOME COUNTRY GOVERNMENT (ROPE) \u2014 Primary beneficiary with strongest arbitrage capacity. Can purchase at volume, negotiate priority supply windows, secure manufacturing contracts with conditional IP terms. Experiences distribution constraint as coordination mechanism enabling large-scale vaccine access with domestic political benefit. Asymmetry runs in their favor \u2014 they extract value from lower-income actors who bid against them for limited supply. Low suppression from this perspective."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Multilateral Health Organization (WHO/COVAX)",
+      "comment": "PERSPECTIVE 5: MULTILATERAL HEALTH ORGANIZATION (TANGLED ROPE) \u2014 Organized actors (WHO, GAVI, COVAX) attempt to coordinate equity through negotiation and financing mechanisms. Experience genuine coordination function: pooled procurement reduces per-unit costs, tiered pricing enables access across income levels, information sharing improves allocation efficiency. But also experience extraction: constrained by state sovereignty (cannot mandate supply), constrained by manufacturer profit requirements (tiered pricing erodes revenue targets), constrained by high-income country political pressure. High enforcement requirements sustain the mechanism. Moderate effective extraction via these binding constraints."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Patent Enforcement System",
+      "comment": "PERSPECTIVE 6: PATENT ENFORCEMENT SYSTEM (PITON) \u2014 Intellectual property protections for vaccine technology are maintained through institutional inertia and legal enforcement, but their functional role in incentivizing innovation has degraded once the technology is proven and mass-production is the bottleneck. Theater ratio high: patents appear to protect innovation but actually protect monopoly pricing once demand is known and public funding has de-risked development. The patent framework persists because it benefits high-income countries and manufacturers, not because it solves a real coordination problem at scale-production stage. Classification driven by high theater ratio despite moderate extracted value."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational/universal scope, vaccine supply is fundamentally scarce during rapid-response scenarios: manufacturing capacity takes months to scale, global coordination is inherently difficult, and some prioritization of demand is mathematically necessary. This perspective naturalizes the distribution constraint as immutable \u2014 scarcity of manufacturing capacity is a fact of physics/economics. However, the structural data contradicts this mountain classification: actual supply constraints are far less severe than political/pricing constraints. The engine's false summit detector will identify this as naturalization of a contingent institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "manufacturing_scarcity_vs_pricing_scarcity",
+      "question": "Is the primary constraint physical manufacturing capacity or policy/pricing decisions that reduce effective supply?",
+      "resolution_mechanism": "Comparison of actual production capacity utilization vs maximum feasible production; analysis of counterfactual scenarios (if prices were capped at cost + 20%, how much total supply would have been produced?); post-constraint data on manufacturing expansion rates",
+      "impact": "If manufacturing-limited: constraint is closer to mountain (objective scarcity). If pricing-limited: constraint is snare (policy choice extracting from vulnerable populations). This determines whether the mountain perspective is a false summit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether supply scarcity is driven by manufacturing capacity or pricing/policy"
+    },
+    {
+      "id": "ip_patent_necessity_for_innovation",
+      "question": "Did patent protections on vaccine technology materially accelerate development, or was acceleration driven primarily by public funding and competitive prestige?",
+      "resolution_mechanism": "Historical analysis of R&D investment timelines, funder categories (public vs private), and stated developer motivations; comparison with non-patented vaccine development timelines in prior pandemics; analysis of licensing practices post-development",
+      "impact": "If patents were necessary: piton classification is misapplied (the system has real function). If unnecessary: piton classification confirmed (patents persist through inertia/law enforcement, not functional coordination). This affects whether IP enforcement is treated as degraded.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether patent protection was functionally necessary for vaccine development"
+    },
+    {
+      "id": "covax_coordination_effectiveness",
+      "question": "Did COVAX/multilateral mechanisms genuinely reduce inequity, or primarily create the appearance of equity work while preserving high-income advantage?",
+      "resolution_mechanism": "Quantitative comparison: actual vaccination rates achieved in low-income countries under COVAX vs counterfactual of purely market-driven distribution; post-hoc analysis of which countries received doses and timeline adherence; analysis of financing flows and actual subsidy amounts",
+      "impact": "If effective coordination: COVAX rope/tangled_rope classification confirmed. If primarily theater: COVAX should be reclassified as piton (performative mechanism preserving inequality). This affects whether organized actors are genuine coordinators or extractors.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether multilateral coordination mechanisms reduced actual inequity"
+    },
+    {
+      "id": "suppression_mechanism_source",
+      "question": "Is suppression in low-income countries primarily structural (resource scarcity, capacity limits) or policy-driven (pricing, IP enforcement, donor conditions)?",
+      "resolution_mechanism": "Decomposition analysis: isolate infrastructure/capacity constraints vs policy/pricing constraints; counterfactual modeling of alternative institutional arrangements; post-constraint institutional reforms and measured impact",
+      "impact": "If structural: suppression is inherent, closer to mountain constraint. If policy-driven: suppression is extractive, validates snare classification for trapped victims. This affects mitigation strategy selection.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural scarcity or policy-driven inequality"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "Vaccine distribution equity during pandemic response creates a structural constraint where multiple conflicting coordination logics collide. High-income countries, pharmaceutical manufacturers, and multilateral organizations all experience coordination benefits (rope perspective) \u2014 the distribution mechanism enables predictable supply and market access. Simultaneously, low-income countries and vaccine-insecure populations experience pure extraction (snare perspective) \u2014 they face suppression via resource scarcity, pricing power, and donor-country conditionality. The constraint exhibits both coordination function (genuinely enabling large-scale immunization) and asymmetric extraction (systematically advantaging wealthy actors). This makes it a canonical tangled_rope: cannot be classified as pure coordination, cannot be classified as pure extraction, but must be classified as both simultaneously. The distribution system is enforced through intellectual property law, contract enforcement, and multilateral financing agreements. Theater increases over time as equity rhetoric intensifies while actual inequity persists (COVAX targets announced but missed, tiered pricing creates appearance of access while maintaining profitability, political commitment to equity without structural change). The constraint's temporal trajectory shows extractiveness rising early (when capacity is most constrained and competition fiercest) and stabilizing as production scales, but theater continuing to rise as gap between equity rhetoric and actual outcomes widens.",
+    "key_agents": [
+      "Vaccine-insecure populations in low-income countries: Primary victims (powerless/trapped) \u2014 structurally dependent on external allocation decisions with no bargaining capacity or exit options",
+      "Low-income country governments: Secondary victims (moderate/constrained) \u2014 organized state actors but resource-limited and competing in global market where they hold weak position",
+      "High-income country governments: Primary beneficiaries (institutional/arbitrage) \u2014 can prioritize domestic populations, negotiate manufacturer contracts, secure supply at favorable terms",
+      "Pharmaceutical manufacturers: Primary beneficiaries (institutional/arbitrage) \u2014 control production, set prices within constraints, choose which markets to prioritize",
+      "Multilateral organizations (WHO, GAVI, COVAX): Organized coordinators (organized/constrained) \u2014 attempt equity through negotiation but constrained by manufacturer profit requirements and state sovereignty",
+      "Patent and IP enforcement system: Institutional actor (institutional/arbitrage) \u2014 maintains monopoly pricing and technology control through legal mechanism",
+      "Analytical observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing policy-contingent scarcity as physical law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. The constraint extracts significant value from low-income actors to high-income actors and manufacturers through multiple mechanisms: pricing power (doses cost more in competitive markets), prioritization (high-income countries secure earlier shipments), and IP barriers (generic manufacturing limited). But extraction is not maximal (0.70+) because: (1) some vaccination does occur in low-income countries via aid and COVAX, (2) multilateral mechanisms provide some negotiating power, (3) public funding was substantial (reducing extraction relative to pure-market scenario). Suppression (0.62): High. Low-income countries face multiple binding constraints: budget limits prevent market purchase, political dependence on donor countries, limited manufacturing capacity, and lack of IP/contract negotiating power. Suppression is structural (resource scarcity) and policy-driven (pricing, IP enforcement, donor conditionality). Theater ratio (0.55): Moderate-high and increasing over interval. Early phase: genuine coordination problem (scarce doses need allocation). Later phase: manufacturing scales but political/pricing constraints persist while equity rhetoric intensifies. Theater rises as COVAX targets are missed, tiered pricing is praised while profitability remains, and political commitment statements are unmatched by structural change.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival disagreement on whether the core problem is coordination or extraction. High-income countries and manufacturers perceive genuine coordination benefit \u2014 the distribution system solves the real problem of allocating scarce goods at continental/global scale. Multilateral organizations perceive mixed coordination and extraction \u2014 they genuinely solve some coordination problems through pooling and negotiation, but are constrained by the asymmetries they cannot overcome. Low-income countries perceive extraction with minimal coordination benefit \u2014 for them, the system's primary function is to preserve pricing power and manufacturing control, not to solve a collective action problem. Vaccine-insecure populations perceive pure extraction \u2014 they are systematically excluded from access via pricing and have no bargaining role. The mountain perspective (scarcity is immutable) conflicts sharply with snare perspective (distribution choices create artificial scarcity). This gap reveals the analytical challenge: in early pandemic phase (genuine capacity constraints), mountain/rope perspectives are empirically supported. But as capacity scales, the distribution problem becomes institutional/political, not physical, and snare/tangled_rope perspectives become empirically supported. The constraint's type should shift over the interval, but base_properties must be static, so they reflect the time-averaged classification.",
+    "directionality_logic": "Directionality is derived from structural position: beneficiary status, victim status, and exit options. High-income countries and manufacturers are beneficiaries with strong exit options (can walk away from equity commitments, can choose profitable markets) \u2014 they experience low or negative effective extraction. Low-income countries are victims with constrained exit (must participate in distribution system to access vaccines at all) \u2014 they experience high effective extraction. Multilateral organizations are beneficiaries of coordination (they reduce transaction costs for both sides) but constrained victims of the asymmetries they cannot overcome (they cannot mandate fair pricing or supply priority). The piton perspective derives from institutional actors (patent system) who maintain enforcement of a mechanism (IP protection) that is dysfunctional at the distribution scale \u2014 it has become primarily extractive theater. The mountain perspective risks misclassifying institutional/policy choices as natural law by conflating 'allocation is necessary' (true) with 'this allocation mechanism is necessary' (false).",
+    "mandatrophy_analysis": "DIAGNOSTIC EXEMPLAR FOR TANGLED_ROPE: This constraint resolves the mandatrophy by demonstrating that coordination and extraction are not mutually exclusive. The distribution system genuinely solves a real coordination problem (allocating scarce manufacturing output at global scale) while simultaneously extracting asymmetrically (systematically advantaging wealthy actors). Both functions are real. The mandatrophy is resolved by recognizing that the claimed type (tangled_rope) is the correct unified classification, not by trying to choose between rope and snare. The perspectival disagreement is real and reflects genuine structural differences (different agents have different actual experiences of the constraint), but the base classification is unified: this is a hybrid mechanism that coordinates while extracting. The false summit detection would flag the mountain perspective: scarcity at the manufacturing stage is real, but the distribution mechanism's primary effect at scale is institutional/extractive, not physical. Theater increase over time (equity rhetoric without structural change) is a mandatrophy warning sign: the coordination benefit initially justifies the extraction, but as theater increases, the extraction persists without corresponding coordination payoff."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "pandemic_intellectual_property_barriers",
+      "global_supply_chain_concentration",
+      "health_financing_inequity"
+    ],
+    "dual_formulation_note": "Vaccine distribution equity decomposes into at least three structurally distinct constraints: (1) manufacturing capacity scarcity (\u03b5\u22480.15, closer to mountain), (2) IP/patent enforcement restricting generic production (\u03b5\u22480.45, closer to snare), (3) financing inequality limiting purchase power (\u03b5\u22480.60, snare). This story treats the integrated distribution constraint at system level. Downstream constraints specify the mechanical components of the extraction."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.28
+    }
+  ]
+}

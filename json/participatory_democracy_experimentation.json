@@ -1,0 +1,229 @@
+{
+  "header": {
+    "constraint_id": "participatory_democracy_experimentation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pde"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Participatory Democracy Experimentation Constraint",
+    "topic_domain": "political_governance/democratic_innovation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "facilitating_institutions",
+      "professional_facilitators",
+      "political_elites"
+    ],
+    "victims": [
+      "non_participating_citizens",
+      "marginalized_communities",
+      "representative_democracy_legitimacy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Excluded Non-Participant",
+      "comment": "PERSPECTIVE 1: EXCLUDED NON-PARTICIPANT (SNARE) \u2014 Citizens without time, literacy, or cultural capital to engage in participatory forums bear costs of experimental governance without voice. Trapped by structural barriers (work schedule, childcare, language, civic confidence). Maximum extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "label": "The Marginalized Community Member",
+      "comment": "PERSPECTIVE 2: MARGINALIZED COMMUNITY MEMBER (SNARE) \u2014 Structurally mobile (could attend meetings, could organize) but identity-locked by prior exclusion, distrust of institutions, and internalized belief that 'people like us don't participate in politics.' Extraction mechanism relies on internalized exclusion, not material barriers."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Engaged Participant",
+      "comment": "PERSPECTIVE 3: ENGAGED PARTICIPANT (TANGLED ROPE) \u2014 Benefits from voice in decision-making (genuine coordination gain) but also experiences extraction: time burden, emotional labor, tokenism risk (consulted but decisions made elsewhere). Exit costly due to social commitment and civic identity."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Facilitating Institution",
+      "comment": "PERSPECTIVE 4: FACILITATING INSTITUTION (ROPE) \u2014 Municipal government, NGO, or civic tech platform benefits from participatory experiments (increased legitimacy, access to distributed intelligence, cost externalization to volunteers). Experiences constraint as pure coordination mechanism. Can exit by reverting to representative process if beneficial; high arbitrage optionality."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Professional Facilitator",
+      "comment": "PERSPECTIVE 5: PROFESSIONAL FACILITATOR (ROPE) \u2014 Consultants, community organizers, and facilitation experts benefit from market demand for participatory process design. Experiences constraint as opportunity (coordination problem to solve). Can arbitrage into other markets if participatory democracy loses funding."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Political Elite",
+      "comment": "PERSPECTIVE 6: POLITICAL ELITE (TANGLED ROPE) \u2014 Benefits from participatory experiments when they generate legitimacy and distribute unpopular decisions to 'the people' (deniability extraction). Also constrained by need to maintain representative democracy fiction and implement decisions made in parallel representative channels. Mobile exit option (can abandon participatory experiment if politically convenient)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Democratic Innovation Movement",
+      "comment": "PERSPECTIVE 7: DEMOCRATIC INNOVATION MOVEMENT (SCAFFOLD) \u2014 Global network of civic technologists, political scientists, and activists see participatory experiments as transitional scaffolding toward more inclusive governance. Perceive the constraint as temporary: as digital literacy, civic infrastructure, and inclusive design improve, the need for managed participatory experiments will decline. Structured sunset as deliberative quality improves."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Liberal Democratic Ritual",
+      "comment": "PERSPECTIVE 8: LIBERAL DEMOCRATIC RITUAL (PITON) \u2014 From a civilizational view, participatory democracy experiments maintain the ritual of 'rule by the people' while actual power allocation remains concentrated. Theater_ratio high: the ceremonies of participation (forums, votes, deliberation) persist through institutional inertia and legitimacy needs, not because they fundamentally alter governance. The constraint degrades as real power hollows out the participatory form."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "participation_selection_bias",
+      "question": "Are participatory forums generating genuinely representative deliberation or reproducing participation bias favoring already-engaged citizens?",
+      "resolution_mechanism": "Demographic comparison of forum participants vs broader citizenry; tracking of repeat-participant bias; analysis of socioeconomic composition changes over time",
+      "impact": "If selection bias is severe: constraint functions as snare for non-participants (extraction via false representation). If selection can be addressed: constraint trends toward rope (genuine coordination).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether participatory forums achieve representative participation or reproduce bias"
+    },
+    {
+      "id": "implementation_fidelity",
+      "question": "Are decisions made in participatory forums actually implemented, or does the constraint function as a legitimacy theater masking pre-determined outcomes?",
+      "resolution_mechanism": "Audit of implementation rates; comparison of forum outputs vs official policy decisions; tracking of overruled or reinterpreted participatory outcomes",
+      "impact": "If implementation is high: constraint is genuinely tangled_rope (coordination with asymmetry). If implementation is low: constraint is piton (performative degradation) or snare (extraction via false participation).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether participatory decisions are actually implemented"
+    },
+    {
+      "id": "identity_lock_mechanisms",
+      "question": "What specific internalized beliefs prevent marginalized citizens from engaging despite structural mobility (time off work available, translation services provided)?",
+      "resolution_mechanism": "Qualitative interviews with non-participants; identity frames analysis; tracking of participation changes when internalized barriers are explicitly addressed vs structural barriers removed",
+      "impact": "If identity lock is primary: exit from non-participation requires identity reframing, not just removing material barriers. Interventions must address internalized exclusion, not just logistics.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Identity lock mechanisms in participatory exclusion"
+    },
+    {
+      "id": "scalability_ceiling",
+      "question": "Does participatory deliberation quality degrade below a critical threshold as participation scale increases?",
+      "resolution_mechanism": "Quality metrics across forum sizes; deliberation depth analysis; decision complexity handling at different scales; identification of quality degradation patterns",
+      "impact": "If ceiling exists: scaffold perspective limited \u2014 participatory experiments may be transitional but cannot replace representative democracy. If no ceiling: scaffold represents genuine path to inclusive governance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scalability limits of participatory deliberation quality"
+    },
+    {
+      "id": "extraction_via_deniability",
+      "question": "Do political elites use participatory processes to shift accountability for unpopular decisions ('we consulted the people') while retaining actual power?",
+      "resolution_mechanism": "Tracking of decision reversals; analysis of unpopular vs popular decision implementation rates; interviews with both participants and elites about decision-making; accountability tracing",
+      "impact": "If extraction via deniability is systematic: elite perspective classifies higher on victimhood scale \u2014 they extract from the constraint via legitimacy gain while bearing no real constraint on power.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extraction through deniability in participatory decision-making"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Participatory democracy experimentation \u2014 citizen assemblies, participatory budgeting, deliberative forums, civic tech platforms \u2014 represents a structural tension between the aspiration for inclusive governance and the institutional machinery that sustains representative democracy. The constraint exhibits genuine coordination function (solving the legitimacy and information problems of representative systems) alongside systematic extraction (concentrating voice-bearing among already-engaged citizens, outsourcing decision costs to volunteers, enabling deniability extraction by elites). The measurement trajectory shows increasing theater_ratio and extractiveness over the interval: as experiments mature, they professionalize (higher theater), develop repeat-participant communities (higher extraction from non-participants), and become embedded in political strategy (higher deniability extraction). The constraint is tangled_rope at the core but exhibits all six types from different structural positions, making it diagnostic for understanding how democratic innovation can both enable voice and reproduce exclusion.",
+    "key_agents": [
+      "Facilitating Institutions: Primary beneficiary (institutional/arbitrage) \u2014 gain legitimacy, distributed problem-solving, cost externalization",
+      "Professional Facilitators: Primary beneficiary (institutional/arbitrage) \u2014 market demand, consulting fees, career advancement",
+      "Engaged Participants: Secondary beneficiary and victim (moderate/constrained) \u2014 gain voice and agency but bear time and emotional labor costs",
+      "Non-Participating Citizens: Primary victim (powerless/trapped) \u2014 excluded by structural barriers; bear costs of experiments designed without their input",
+      "Marginalized Communities: Primary victim (powerless/identity_locked) \u2014 structurally mobile but identity-locked by distrust and internalized exclusion",
+      "Political Elites: Secondary beneficiary (powerful/mobile) \u2014 gain legitimacy and deniability while retaining actual power; can exit if politically inconvenient",
+      "Democratic Innovation Movement: Organized perspectives (organized/constrained) \u2014 see experiments as transitional scaffold with sunset as digital governance matures",
+      "Liberal Democratic Ritual: Civilizational view (institutional/constrained) \u2014 participatory forms maintain fiction of popular rule while actual power remains concentrated"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint benefits facilitating institutions and professional facilitators substantially while imposing costs on non-participants (who bear governance decisions made without their input) and engaged participants (who bear time and emotional labor). The extraction is not total \u2014 genuine voice gains exist for engaged participants \u2014 but the participation ceiling and selection bias mean that the demos is not actually enlarged, only rearranged. Suppression (0.48): Moderate. Barriers to non-participation include time burden (structural), language/literacy (structural), childcare (structural), civic confidence (internalized), distrust of institutions (identity), and geographic/digital access (structural). Not all can be removed by design alone; some are identity-locked. Theater ratio (0.58): Moderate-high. Participatory forums perform deliberation and decision-making rituals; actual power allocation follows separate (representative/elite) processes. The constraint exhibits significant theater: forum ceremonies, voting procedures, and deliberation protocols persist partly for legitimacy rather than function.",
+    "perspectival_gap": "The perspectival gap centers on the question: 'Does this constraint expand democratic voice or rationalize its concentration?' The engaged participant sees expansion (tangled_rope \u2014 mixed benefits and costs). The facilitating institution sees coordination (rope \u2014 solving legitimacy problem). The non-participant sees extraction (snare \u2014 decisions made without them). The elite sees opportunity (rope \u2014 deniability and legitimacy without power loss). The marginalized sees identity lock (snare via internalized exclusion). The democratic innovator sees transitional scaffolding (sunset as inclusive design matures). The civilizational observer sees degraded ritual (piton \u2014 performative participation masking concentrated power). The perspectival gap reveals that 'participatory democracy' is not a single constraint but a family of distinct extraction mechanisms (one per structural position) coordinated under a unifying label.",
+    "directionality_logic": "Each agent's experienced extractiveness (chi) is computed from their base extraction (0.52), their directionality value (d) derived from their structural position, and the scope modifier. Facilitators with arbitrage options derive low d \u2192 chi approaches zero (negative, coordinative experience). Non-participants with trapped exit derive high d \u2192 chi amplified (high experienced extraction). Engaged participants with constrained exit derive mid-range d \u2192 chi moderate. Elites are overridden upward (deniability extraction mechanism not captured by base derivation) \u2192 chi raised. Marginalized with identity_locked exit: if identity frame shifts, d drops from ~0.89 to ~0.60, and chi drops correspondingly \u2014 revealing that the extraction is partly cognitive rather than structural.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint avoids false conflation of coordination and extraction by decomposing perspectival experiences. It is NOT 'coordination that has extraction problems' (false rope). It is NOT 'pure extraction dressed as democracy' (false snare simplification). It IS a tangled_rope with genuine coordination function (solving representative democracy's legitimacy deficit) alongside genuine asymmetric extraction (concentrating voice among already-engaged, distributing costs to volunteers and non-participants, enabling deniability extraction by elites). The mandatrophy resolves by accepting the multiplicity: each agent's experience is accurate from their position. Facilitation institutions genuinely solve a coordination problem. Non-participants genuinely bear costs without voice. Elites genuinely extract deniability. All are simultaneously true. The error would be in claiming a single truth ('participatory democracy is good coordination' or 'participatory democracy is elite extraction theater'). The framework shows why both readings are structurally correct \u2014 from different positions."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "representative_democracy_legitimacy_crisis",
+      "civic_participation_inequality",
+      "digital_governance_infrastructure"
+    ],
+    "dual_formulation_note": "Participatory democracy experimentation is downstream of representative democracy's legitimacy crisis but represents a structurally distinct constraint. It enables voice expansion for some while reproducing exclusion for others. Related constraints: civic_participation_inequality (extraction via access barriers), representative_democracy_legitimacy_crisis (coordination problem participatory experiments attempt to solve), digital_governance_infrastructure (enabling technology with separate extractiveness profile)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.58
+    }
+  ]
+}

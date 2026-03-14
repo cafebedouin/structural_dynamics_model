@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "platform_regulatory_capture",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "prc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Platform Regulatory Capture",
+    "topic_domain": "political_economy/technology_regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dominant_platform_operators"
+    ],
+    "victims": [
+      "emerging_competitors",
+      "public_interest_constituencies",
+      "data_subjects"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Data Subjects and Emerging Competitors",
+      "comment": "PERSPECTIVE 1: DATA SUBJECTS AND EMERGING COMPETITORS (SNARE) \u2014 Trapped by network effects and regulatory complexity. Data subjects cannot exit platforms without losing social connectivity; emerging competitors cannot access regulatory space to challenge incumbents. Maximum extraction with minimal coordination function. No viable alternatives; suppression operates through lock-in effects and regulatory capture itself."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Consumer Advocates and Privacy Regulators",
+      "comment": "PERSPECTIVE 2: CONSUMER ADVOCATES AND PRIVACY REGULATORS (TANGLED ROPE) \u2014 Constrained by information asymmetries and resource limitations relative to platform legal teams, but also benefit from coordination that regulation provides (liability frameworks, disclosure standards). Experience mixed coordination and extraction \u2014 regulations nominally protect them but are shaped by the regulated entities through lobbying and regulatory capture dynamics."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Dominant Platform Operators",
+      "comment": "PERSPECTIVE 3: DOMINANT PLATFORM OPERATORS (ROPE) \u2014 Experience the regulatory constraint as pure coordination. Existing rules, even burdensome ones, entrench competitive advantage by raising barriers to new entrants. High compliance costs are trivial for incumbents but fatal for startups. Regulatory complexity itself becomes a moat. Net beneficiary \u2014 regulation coordinates against their competitors."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Captured Regulator",
+      "comment": "PERSPECTIVE 4: CAPTURED REGULATOR (TANGLED ROPE) \u2014 Institutional actor whose identity and career incentives are fused with the regulated industry. Genuine coordination function: the regulator prevents the worst harms (major breaches, monopoly predation), but this coordination is asymmetrically extracted: the regulator's effectiveness is limited by regulatory capture (revolving door, information dependence on platforms, identity fusion with industry worldview). Requires active enforcement but enforcement is compromised."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Regulatory Coalition",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL REGULATORY COALITION (SCAFFOLD) \u2014 EU GDPR, Digital Markets Act, and emerging national frameworks (India's data protection bill, UK Online Safety Bill) represent organized agents building alternative regulatory pathways. These are temporary scaffolds with sunset logic: as interoperable standards mature and data portability mandates take effect, the capture mechanism loses leverage. Platforms cannot arbitrage divergent regulatory regimes indefinitely \u2014 convergence toward binding standards reduces extraction opportunity."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Existing Regulatory Framework (FTC, etc.)",
+      "comment": "PERSPECTIVE 6: EXISTING REGULATORY FRAMEWORK (PITON) \u2014 Antitrust law and consumer protection frameworks designed for pre-internet markets are largely performative: the FTC lacks technical expertise, enforcement authority, and resources to challenge platform dominance meaningfully. Litigation (Meta/Instagram merger review, TikTok bans) are theatrical \u2014 the underlying market structure persists. The framework persists through institutional inertia and legitimacy theater, not because it functions effectively. Theater ratio high because enforcement produces headlines but minimal market change."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (False Summit Risk)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN \u2014 FALSE SUMMIT) \u2014 From a civilizational perspective, network effects and information asymmetries between platforms and regulators appear as unchangeable natural laws of digital markets. Platform dominance looks inevitable, regulatory capture looks like a law of nature ('regulatory agencies always get captured'). However, this naturalizes contingent institutional arrangements: regulatory capture is not inevitable. It persists because current political economy makes it rational for regulators to be captured. This perspective risks the oracle gap \u2014 the analyst's native position cannot see that the constraint is changeable by restructuring political incentives."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "capture_mechanism_vs_structural_advantage",
+      "question": "Is platform dominance driven primarily by regulatory capture or by genuine network effects and scale economies independent of regulation?",
+      "resolution_mechanism": "Counterfactual analysis: compare platform market shares in jurisdictions with weak vs strong regulation; historical analysis of pre-regulatory dominance patterns; study of platforms that succeeded despite regulatory disadvantage",
+      "impact": "If capture is primary: deregulation or regulatory restructuring could enable competition (scaffold sunset accelerates). If structural advantage is primary: regulation merely entrenches existing winners (tangled rope persists). Classification sensitivity: high impact on whether capture is mutable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether dominance is driven by regulatory capture or structural advantages"
+    },
+    {
+      "id": "interoperability_implementation_feasibility",
+      "question": "Can data portability, interoperability, and open standards genuinely reduce platform network effects, or do technical and social switching costs make exit still prohibitive?",
+      "resolution_mechanism": "Technical audits of interoperability standards (ActivityPub, DMA obligations); empirical study of user switching rates post-interoperability mandates; cost-benefit analysis of migrations to alternative platforms",
+      "impact": "If feasible: scaffold sunset is structural (exit becomes mobile rather than trapped), extraction mechanism loses leverage. If infeasible: interoperability mandates are theatrical, capture persists. Classification outcome: determines whether snare is mutable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether interoperability can reduce network effect lock-in"
+    },
+    {
+      "id": "regulatory_capture_reversibility",
+      "question": "Are regulatory capture dynamics reversible through institutional reform (independent agency structure, rotational staffing, technical capacity building), or is capture self-reinforcing once established?",
+      "resolution_mechanism": "Historical analysis of regulatory capture reversals in other industries (telecommunications, energy); study of institutional reforms that increased regulator independence; longitudinal tracking of capture indicators post-reform",
+      "impact": "If reversible: captured regulator (tangled rope) can be reoriented toward genuine constraint enforcement. If self-reinforcing: capture is nearly permanent, regulator's identity lock to industry becomes the binding mechanism. Classification implication: determines whether identity_locked should apply to regulator perspective.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether regulatory capture dynamics are reversible"
+    },
+    {
+      "id": "global_coordination_threshold",
+      "question": "What fraction of global platforms' revenue must be subject to binding interoperability/portability requirements before network effects become breakable and competitive entry becomes viable?",
+      "resolution_mechanism": "Economic modeling of escape velocities from network effects; empirical data on user switching elasticity at varying interoperability coverage; analysis of when alternative platforms (Mastodon, Bluesky) gain traction",
+      "impact": "Determines credibility of scaffold sunset: if threshold is < 30% coverage, sunset is real and near-term. If threshold is > 70%, scaffold is aspirational. Affects timeline for escape from snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for interoperability to break network effects"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.59
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Platform regulatory capture describes the structural dynamic in which dominant digital platforms shape the regulatory frameworks nominally designed to constrain them. This constraint exhibits a tangled mixture of genuine coordination (regulation does prevent the worst harms: data breaches, unfiltered algorithmic radicalization, unchecked monopoly predation) and asymmetric extraction (the platforms themselves define what counts as 'the worst harms' and ensure that regulation raises barriers to competitive entry). The constraint's extractiveness has increased over the interval (0.45 \u2192 0.58) as platforms have matured their regulatory strategy: from reactive compliance to proactive standard-setting. Theater ratio has risen correspondingly (0.52 \u2192 0.68), reflecting that regulatory enforcement produces headlines but minimal structural change in platform dominance. The constraint operates simultaneously as a Snare for data subjects (trapped by network effects), a Rope for platforms (regulation as competitive moat), a Piton for legacy regulatory frameworks (FTC antitrust doctrine), a Scaffold for emerging international coalitions (GDPR, DMA), and a false Mountain for civilizational observers who mistake political contingency for natural law.",
+    "key_agents": [
+      "Dominant Platform Operators (Meta, Google, Amazon, Apple, ByteDance): Primary beneficiary (institutional/arbitrage) \u2014 capture regulatory process; benefit from complexity barriers to competition",
+      "Data Subjects and Users: Primary victim (powerless/trapped) \u2014 locked into platforms by network effects and cognitive switching costs; subject to surveillance capitalism enabled by regulatory gaps",
+      "Emerging Competitors and Startups: Secondary victim (powerless/trapped or moderate/constrained) \u2014 cannot meet compliance costs; lack lobbying power to reshape rules in their favor",
+      "Regulatory Agencies (FTC, SEC, EU DMA enforcers): Captured institution (institutional/constrained with identity_locked dynamics) \u2014 dependent on platforms for technical information; staff revolve between agency and industry; identity of 'tech regulator' requires industry legitimacy",
+      "Consumer Privacy Advocates and NGOs: Secondary actor (moderate/constrained) \u2014 advocate for stronger regulation but lack resources and expertise to match platform legal teams; benefit nominally from rules but rules are shaped by capture",
+      "International Regulatory Coalition (EU, UK, India): Organized agents (organized/constrained) \u2014 building alternative regulatory pathways; creating competitive pressure through jurisdictional divergence",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing capture as inevitable feature of digital markets rather than mutable political outcome"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Platforms extract significant value through regulatory arbitrage (complying with the minimum necessary in each jurisdiction while maintaining core surveillance/monopoly practices), through capacity to shape rule design (revolving-door access to regulators), and through enforcement gaps (regulations exist but are under-resourced and technically complex). The extraction is not total (Snare-level 0.72) because some regulation does constrain harms and because organized coalitions (EU, international standards) are gradually reducing arbitrage space. Suppression (0.65): High. Data subjects and emerging competitors face substantial barriers: information asymmetries (platforms know their own data flows; regulators don't), network effects (leaving a platform is costly), regulatory complexity (compliance requires expensive legal/technical teams that only giants can afford), and capture itself (the rules are written to entrench incumbents). Suppression is primarily structural for small actors and internalized for data subjects (who have accepted surveillance as the price of connectivity). Theater ratio (0.68): High and rising. Regulatory enforcement is substantially performative: FTC consent decrees rarely change core business models; antitrust litigation spans decades and usually settles with nominal penalties; DMA enforcement is nascent and has not yet produced structural change. The rise in theater (0.52 \u2192 0.68) reflects increasing choreography: platforms are getting better at producing the appearance of compliance while maintaining extraction.",
+    "perspectival_gap": "The tangled rope classification holds at multiple institutional positions but with different reasons: platforms see rope (coordination), captured regulators see tangled rope (mixed but constrained), independent regulators (where they exist \u2014 rare) would see snare (extraction they're trying to stop but can't). The scaffold perspective introduces the critical mutability marker: international coalitions are building structural alternatives that make the capture mechanism less effective. This is the engine's signal that the constraint is not inevitably self-reproducing \u2014 it's conditional on the absence of external coordination. The piton and mountain perspectives are risk factors: if enforcement becomes purely theatrical and observers naturalize capture as inevitable, the constraint hardens into a more stable form. The framework's job is to flag that this is a political choice, not a law of nature.",
+    "directionality_logic": "Directionality d is computed from agent power, exit options, and beneficiary/victim status. Dominant platforms (institutional/arbitrage) get low d: they are beneficiaries with exit options, so f(d) is negative, meaning the constraint subsidizes them. Data subjects (powerless/trapped) get high d: they are victims with no exit, so f(d) is high (~1.42), meaning they experience maximum extraction. Emerging competitors (powerless/constrained to moderate/trapped) get moderate-to-high d depending on whether they have any alternative market or must compete head-to-head. Regulators in the captured position (institutional/constrained) have an intermediate d with a significant upward override: structural analysis would place them as partial beneficiaries (they gain regulatory authority, career advancement, industry access) but they are also victims (their agency's mission is compromised, their independence is eroded). The override reflects that institutional capture involves identity fusion \u2014 the regulator has internalized the industry's framing as their own. This is why identity_locked applies: the captured regulator is not trapped by external barriers (they have legal authority) but by identity fusion (they have become the industry regulator rather than the public interest regulator).",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves mandatrophy (the paradox of calling extraction 'coordination') by distinguishing levels. At the platforms' level, regulation IS coordination \u2014 it prevents certain harms and provides certainty. At the data subjects' level, the same regulation enables extraction \u2014 it creates plausible deniability for harms and regulatory complexity prevents exit. At the international coalition level, the regulation itself becomes a tool for escape \u2014 DMA interoperability mandates create structural alternatives. The mandatrophy is real but resolvable: the constraint has a genuine coordination function (preventing catastrophic harms, establishing liability frameworks) AND a genuine extraction function (raising barriers to competition, enabling surveillance capitalism through regulatory approval). It is not pure coordination pretending to extract, nor pure extraction pretending to coordinate. It is both, at different scales, and this is the definition of tangled rope. The classification prevents false categorization in either direction: regulation is neither purely beneficial (rope) nor purely harmful (snare), and pretending one or the other would miss the key insight that the benefits and harms are distributed asymmetrically across power positions."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "network_effects_lock_in",
+      "data_surveillance_asymmetry",
+      "antitrust_doctrine_obsolescence",
+      "international_regulatory_divergence"
+    ],
+    "dual_formulation_note": "Platform regulatory capture is downstream of three structural phenomena: network effects create lock-in conditions; data asymmetries enable surveillance capitalism; antitrust law was designed for industrial-era markets and fails to constrain digital monopolies. This story focuses on the capture mechanism itself. Each upstream constraint has its own \u03b5 value reflecting different structural features. The capture constraint links them by explaining how regulation, nominally designed to correct for these problems, becomes captured and entrenches them."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.58
+    }
+  ]
+}

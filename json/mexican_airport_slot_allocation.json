@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "mexican_airport_slot_allocation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mxslot"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Mexican Airport Slot Allocation System",
+    "topic_domain": "economic_policy/infrastructure/regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_carriers",
+      "mexican_government_revenue"
+    ],
+    "victims": [
+      "new_market_entrants",
+      "regional_carriers",
+      "fare_paying_passengers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Regional Carrier",
+      "comment": "PERSPECTIVE 1: REGIONAL CARRIER (SNARE) \u2014 Trapped by inability to access Mexico City and Cancun slots; cannot expand route network or scale operations without slots. Faces full extraction: incumbent carriers maintain pricing power and route dominance. Exit requires abandoning growth strategy or relocating operations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Budget Carrier",
+      "comment": "PERSPECTIVE 2: BUDGET CARRIER (TANGLED ROPE) \u2014 Constrained by slot scarcity and allocation grandfathering rules. Benefits from coordination function (predictable operations, efficient scheduling) but bears asymmetric extraction through slot pricing and limited allocation. Can operate at secondary airports but faces high cost of airport congestion and passenger inconvenience."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Incumbent Carrier (Beneficiary)",
+      "comment": "PERSPECTIVE 3: INCUMBENT CARRIER (ROPE) \u2014 Benefits from grandfathered slot allocation and maintains competitive advantage through network effects. Experiences constraint as coordination: slot stability enables long-term planning and network optimization. Net beneficiary with arbitrage options (can trade slots, adjust capacity, optimize routes)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Reform Coalition",
+      "comment": "PERSPECTIVE 4: REGULATORY REFORM COALITION (SCAFFOLD) \u2014 Organized pressure for slot trading markets, capacity auctions, and transparent allocation. Views the bottleneck as a temporary coordination failure with a sunset: if competitive allocation mechanisms (slot auctions, use-it-or-lose-it rules) are implemented, the extractive grandfathering mechanism loses force. Constrained by incumbent political power but sees structural path to regime change."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Government Aviation Authority",
+      "comment": "PERSPECTIVE 5: GOVERNMENT AVIATION AUTHORITY (PITON) \u2014 Maintains performative allocation rules (historical use, carrier equity) while the actual mechanism is political patronage and incumbent rent extraction. Theater persists through institutional inertia: the authority's formal allocation criteria (equity, frequency levels, carrier size) are largely decorative relative to the actual slot distribution, which is negotiated through political channels. The authority benefits from arbitrage revenue but sees its own process as degraded."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Scarcity View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / SCARCITY VIEW (MOUNTAIN) \u2014 From a civilizational scale, airport capacity is genuinely scarce at Mexico City and Cancun hubs. Slot allocation to SOMEBODY is a structural necessity. This perspective risks naturalizing the current allocation mechanism (grandfathering, political negotiation) as an inevitable response to scarcity. However, the structural data reveals this as a false summit: many nations (EU, US auctions) have proven slot scarcity is compatible with competitive allocation mechanisms. Naturalization masks contingent institutional design."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "slot_trading_market_viability",
+      "question": "Could secondary markets in slot trading reduce extraction while maintaining capacity coordination?",
+      "resolution_mechanism": "Comparative analysis of EU slot trading results (post-2008), US slot performance at constrained airports (LGA, ORD, DCA), Brazil's slot auction pilot outcomes",
+      "impact": "If viable: scaffold sunset is real and achievable through policy reform. Extraction could drop below Snare threshold (0.46). If not viable: extraction mechanism is structural to scarcity, constraining policy options.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether slot trading markets can reduce extraction while maintaining coordination"
+    },
+    {
+      "id": "governmental_revenue_dependency",
+      "question": "How much of government aviation authority budget depends on implicit rents from slot allocation opacity?",
+      "resolution_mechanism": "Budget audit; correlation analysis between slot allocation decisions and authority revenue sources; interviews with decision-makers on revenue pressure",
+      "impact": "If significant dependency: government is co-beneficiary (not neutral allocator), altering the directed extraction flow and possibly changing classification toward Snare. If minimal: extraction is primarily incumbent-captured, supporting current Tangled Rope analysis.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Government revenue dependency on implicit slot allocation rents"
+    },
+    {
+      "id": "regional_carrier_coalition_threshold",
+      "question": "At what number of excluded regional carriers does coalition power emerge to challenge incumbent dominance?",
+      "resolution_mechanism": "Historical analysis of airline coalitions in Mexico and regional markets; threshold analysis from network game theory applied to Mexican carrier structure",
+      "impact": "If threshold exceeded: powerless agent power atom could upgrade to organized, changing snare classification trajectory and enabling credible exit threats. If threshold not met: powerless agents remain atomized, snare persists unchanged.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Coalition formation threshold for regional carriers"
+    },
+    {
+      "id": "international_passenger_welfare_accounting",
+      "question": "What proportion of passenger fare impact (higher fares, reduced route choice) is attributable to slot allocation extraction vs. legitimate congestion costs?",
+      "resolution_mechanism": "Econometric decomposition: compare fares on competitive (unconstrained) routes vs. slot-constrained routes, controlling for distance and demand; international benchmarking of Mexico City slot utilization efficiency",
+      "impact": "If extraction dominates congestion costs: victim classification (passengers) strengthens, supporting snare perspective. If costs are primarily congestion-driven: extraction is legitimate scarcity coordination cost, shifting some classification weight toward rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fare impact attribution: extraction vs. legitimate congestion costs"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 16
+  },
+  "commentary": {
+    "narrative_context": "Mexico's airport slot allocation system, concentrated at Mexico City International (MEX) and Cancun (CUN), exhibits a classic tangled rope structure: genuine coordination function (safe, efficient operations at capacity-constrained hubs) layered with asymmetric extraction (incumbent carriers protected from competition, new entrants and regional carriers excluded, passengers pay higher fares). The system uses formal allocation criteria (historical use, service to regional routes, carrier size) that are substantially decorative relative to the actual mechanism: political negotiation and incumbent rent capture. Theater has increased over the observation interval (0.42 to 0.58) as the gap between formal rules and political practice has widened. The constraint appears as an immutable scarcity problem (mountain) from the civilizational analytical view, but this naturalizes a contingent allocation regime that could be restructured toward competitive mechanisms (auctions, slot trading, use-it-or-lose-it enforcement) as demonstrated by the EU and US. The primary extraction mechanism is grandfathering: historical slot holders (primarily Aeromexico and a few other incumbents) retain dominant market position despite growth in competing demand from budget carriers, regional operators, and new entrants. The suppression (0.65) reflects barriers to entry that combine structural (airport congestion) and institutional (allocation opacity, discretionary authority). The beneficiaries are incumbent carriers and government revenue (implicit rents from allocation authority). The victims are regional carriers, budget carriers, and fare-paying passengers who face higher prices and reduced route choice.",
+    "key_agents": [
+      "Incumbent Carriers (Aeromexico, Interjet historically): Institutional/arbitrage beneficiaries \u2014 capture network effects, pricing power, and route dominance through grandfathered slots",
+      "Regional Carriers (Volotea, regional Mexicana franchises): Powerless/trapped victims \u2014 excluded from major hubs, cannot scale operations or offer competitive fares",
+      "Budget Carriers (Viva Aerobus, Frontier expansion): Moderate/constrained victims \u2014 operate at secondary airports or high-cost secondary slots; bear asymmetric coordination burden",
+      "Fare-Paying Passengers: Powerless/trapped victims \u2014 face higher fares and reduced route competition due to slot scarcity artificially constrained by allocation opacity",
+      "Government Aviation Authority (SCT): Institutional/arbitrage beneficiary \u2014 captures implicit revenue and maintains political discretion over allocation",
+      "Regulatory Reform Coalition (competition advocates, consumer groups, international pressure): Organized/constrained agents \u2014 pushing for slot trading markets, use-it-or-lose-it enforcement, competitive auctions",
+      "Analytical Observer: Civilizational/analytical \u2014 risks naturalizing scarcity response as inevitable structural law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The incumbent carriers capture substantial rents through grandfathered slots at capacity-constrained hubs. The extraction is not maximal (0.72+) because: (1) the system does serve a genuine coordination function (safe operations at congested airports), (2) some new entry does occur through secondary slots or secondary airports, and (3) the formal allocation criteria (service to regional routes, carrier equity) create some binding constraints on pure rent extraction. The trajectory from 0.38 to 0.58 reflects the progressive tightening of slot scarcity and the widening gap between formal allocation rules and political practice. Suppression (0.65): Moderate-high. Barriers to exit include both structural (airport congestion is real) and institutional (allocation opacity, discretionary authority, lack of transparent trading mechanisms). Regional carriers face multiple exit costs: they cannot access major hubs without slots, cannot operate profitably at secondary airports, and cannot cheaply relegate from their current markets. The suppression combines hard constraints (physical airport capacity) with soft constraints (political/institutional barriers to transparent allocation and secondary markets). Theater Ratio (0.58): Moderate-high and increasing. The formal allocation criteria (historical use, regional service, carrier equity) are substantially decorative. Actual allocation is negotiated through political channels; the authority's formal rules predict allocation outcomes poorly. The theater has increased because the gap between formal rules and political practice has widened \u2014 early in the sample period (t=0), the formal criteria had more predictive power (theater=0.42); by t=16, allocation is almost entirely political negotiation (theater=0.58). This Goodhart drift (observed metrics become targets of manipulation) indicates that the authority is deliberately maintaining performative procedures while the actual allocation mechanism has shifted to political negotiation. Claimed Type (Tangled Rope): The system combines a genuine coordination function (managing capacity constraints at congested hubs) with active enforcement of asymmetric extraction (grandfathering, political discretion). This satisfies the tangled rope requirements: beneficiaries (incumbents), victims (entrants and passengers), active enforcement (government authority), and genuinely mixed coordination and extraction.",
+    "perspectival_gap": "This constraint demonstrates the full range of institutional classification perspectives. The incumbent carrier (institutional/arbitrage) sees coordination and benefits \u2014 slot stability enables planning. The government authority (institutional/arbitrage) also sees coordination benefits plus revenue capture. The budget carrier (moderate/constrained) sees mixed coordination and extraction \u2014 can operate but at high cost. The regional carrier (powerless/trapped) sees pure extraction \u2014 grandfathering blocks their market access. The reform coalition (organized/constrained) sees a temporary problem with a sunset \u2014 competitive mechanisms could restructure allocation. The analytical observer (analytical/analytical) risks seeing immutable scarcity \u2014 but this naturalizes contingent institutional design. The perspectival gap reveals that beneficiaries and authority experience rope (coordination), victims experience snare (extraction), organized agents experience scaffold (temporary), and the system's own process (formal rules vs. political reality) experiences piton (degraded). The mountain classification is a false summit \u2014 scarcity is real but allocation mechanism is contingent.",
+    "directionality_logic": "Directionality values are derived from agent power, exit options, and beneficiary/victim status. Incumbent carriers are beneficiaries with arbitrage options (can trade slots, adjust capacity, switch routes): d \u2248 0.15 \u2192 f(d) \u2248 -0.01 \u2192 negative or near-zero effective extraction experienced by beneficiary. Regional carriers are victims with trapped exit options (cannot access major hubs, cannot scale): d \u2248 0.92 \u2192 f(d) \u2248 1.38 \u2192 high experienced extraction. Budget carriers are victims with constrained exit (can operate at secondary airports but at high cost): d \u2248 0.70 \u2192 f(d) \u2248 0.95 \u2192 moderate-high experienced extraction. Passengers are powerless victims with trapped exit (must accept whatever routes/fares result from slot allocation): d \u2248 0.95 \u2192 f(d) \u2248 1.42 \u2192 maximum experienced extraction. The scope modifier \u03c3(S) = 1.0 (national scope) does not amplify or dampen chi relative to the canonical case. The composition \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) produces moderate effective extractiveness for the incumbent beneficiary and high effective extractiveness for trapped victims, sustaining the tangled rope classification rather than pure rope (which would require more balanced directionality) or snare (which would require \u03b5 \u2265 0.66).",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: This constraint demonstrates how the tangled rope classification prevents misidentification as pure coordination (rope) or pure extraction (snare). If the constraint were classified as Rope (coordination only), the analysis would miss the systematic asymmetry: incumbent carriers benefit, new entrants are blocked, and passengers pay higher fares. This misclassification would wrongly suggest that slot allocation is solving a collective action problem for everyone's benefit. The rope classification would be accurate ONLY from the beneficiary's perspective (incumbent carrier) and the authority's perspective (both see coordination and benefit). But the regional carrier's snare perspective and the passenger's snare perspective are equally structurally valid. The tangled rope classification (0.40 \u2264 \u03c7 \u2264 0.90) unifies these: the system has a genuine coordination function that benefits incumbents and the authority, AND it has an extractive function that harms entrants and passengers. Both are real and structural. If the constraint were classified as Snare (pure extraction), the analysis would miss that some agents actually benefit from coordination and that the system does solve legitimate problems (safe operations at congested hubs). The snare classification would wrongly suggest that the slot allocation could be eliminated without replacing its coordination function. The tangled rope classification insists that reform must preserve coordination capacity while redirecting extraction: auctions, trading, and use-it-or-lose-it mechanisms are structurally viable because they maintain coordination (predictable, efficient operations) while removing the grandfathering extraction. This is exactly what the reform coalition (scaffold perspective) proposes: competitive mechanisms with a sunset from current extractive regime."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "mexican_airline_market_concentration",
+      "international_connectivity_mexico"
+    ],
+    "dual_formulation_note": "The slot allocation system is upstream of airline market concentration and international connectivity. The concentration constraint (\u03b5 \u2248 0.55) and connectivity constraint (\u03b5 \u2248 0.48) are structurally dependent on slot allocation decisions. Changes to slot allocation mechanism would propagate directly to these downstream constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.22
+    }
+  ]
+}

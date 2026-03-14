@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "supply_chain_data_asymmetry",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "scda"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Supply Chain Data Asymmetry",
+    "topic_domain": "economic/logistics/information_asymmetry",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "lead_firms",
+      "platform_operators"
+    ],
+    "victims": [
+      "tier_suppliers",
+      "final_consumers",
+      "supply_chain_transparency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Tier Supplier",
+      "comment": "PERSPECTIVE 1: TIER SUPPLIER (SNARE) \u2014 Trapped in asymmetric data relationship with lead firms. Forced to provide detailed production data, inventory, pricing, and logistics information while receiving minimal visibility into demand forecasts, pricing decisions, or contract terms. No exit option: supplier cannot refuse without losing contract. Suppression is severe \u2014 information barriers are contractually enforced through NDAs and platform restrictions. Maximum extraction experienced."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Final Consumer",
+      "comment": "PERSPECTIVE 2: FINAL CONSUMER (TANGLED ROPE) \u2014 Benefits from supply chain coordination that lowers costs and improves product availability. Simultaneously victimized by hidden defects, counterfeit products, and environmental externalities that asymmetric data prevents from surfacing. Exit is costly (switching brands/suppliers) but possible. Experiences both coordination function and asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Lead Firm",
+      "comment": "PERSPECTIVE 3: LEAD FIRM (ROPE) \u2014 Experiences data asymmetry as pure coordination mechanism. Real-time supplier visibility enables just-in-time production, demand-responsive procurement, and risk mitigation. Information flows upstream (supplier \u2192 lead firm) enabling efficiency. Lead firm can arbitrage to alternative suppliers if data access is threatened. Net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 4: PLATFORM OPERATOR (ROPE) \u2014 Experiences asymmetry as coordination infrastructure. Aggregating supplier data enables matching, visibility, and risk assessment across networks. Arbitrage option: can shift to alternative data-collection business models. Suppression is low \u2014 information disclosure rules are contractual rather than coercive."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulatory Coalition",
+      "comment": "PERSPECTIVE 5: REGULATORY COALITION (TANGLED ROPE) \u2014 Sustainability regulations (EU due diligence directives, SEC climate disclosure) mandate supply chain visibility while remaining incomplete. Regulators benefit from data aggregation for enforcement; suppliers are constrained by compliance costs and incomplete guidance. Active enforcement through audits and penalties. Some coordination function (driving transparency) alongside extraction (compliance burden falls primarily on suppliers)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Transparency Standard Coalition",
+      "comment": "PERSPECTIVE 6: TRANSPARENCY STANDARD COALITION (SCAFFOLD) \u2014 Industry consortia, open standards (GS1, OpenDEP), and blockchain initiatives create alternative data-sharing pathways with mutual transparency rather than asymmetric extraction. Theater is lower (real data flow vs performative compliance). Sunset logic: as common standards mature and regulatory enforcement strengthens, lock-in to proprietary platform asymmetry becomes less tenable. Estimated sunset: 5-10 years as interoperable standards capture market share."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy EDI System",
+      "comment": "PERSPECTIVE 7: LEGACY EDI SYSTEM (PITON) \u2014 Electronic Data Interchange standards (ANSI X.12, EDIFACT) persist despite higher-cost alternatives (APIs, real-time data clouds). Theater ratio is high \u2014 systems maintain data exchange ritual through incumbent infrastructure and switching costs rather than functional superiority. Vendors maintain backward compatibility to preserve customer lock-in. Degraded institutional form persisting through inertia."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some information asymmetry is inherent to complex supply chains: not all data can be perfectly transparent without destroying strategic advantage and competitive viability. This perspective risks naturalizing what is actually a contingent institutional arrangement \u2014 the specific scope and enforcement mechanisms of data asymmetry are policy choices, not natural limits."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "asymmetry_threshold_definition",
+      "question": "What level of data asymmetry is legitimate coordination overhead vs extractive withholding?",
+      "resolution_mechanism": "Empirical comparison: correlation between supplier data withholding and supplier profitability across industries; comparison of industries with symmetric vs asymmetric data flows on cost pass-through and innovation rates",
+      "impact": "If threshold is low: most current arrangements classify as snare. If threshold is high: arrangements shift toward rope/tangled rope. Classification of entire supply chains pivots on this parameter.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold distinguishing coordination overhead from extractive asymmetry"
+    },
+    {
+      "id": "countervailing_power_sufficiency",
+      "question": "Do large suppliers have sufficient countervailing power to negotiate symmetric data arrangements, or is asymmetry enforced through market concentration?",
+      "resolution_mechanism": "Empirical analysis: proportion of suppliers by tier and firm size who have negotiated data-symmetric contracts; correlation between supplier size/diversification and data access rights; market concentration indices for lead firms",
+      "impact": "If countervailing power is high: suppliers have real constrained (not trapped) exit; classification shifts toward tangled rope. If power is concentrated: suppliers are truly trapped; snare classification holds.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Supplier countervailing power and negotiation asymmetry"
+    },
+    {
+      "id": "externality_capture_mechanism",
+      "question": "Does the data asymmetry actively hide environmental or labor externalities, or does it merely fail to reveal them?",
+      "resolution_mechanism": "Historical analysis: cases where lead firms withheld data and later-discovered externalities emerged; comparison of audit findings in opaque vs transparent supply chains; mechanism analysis of whether asymmetry is maintained specifically to prevent externality discovery",
+      "impact": "If asymmetry actively hides externalities: extraction component is higher; snare classification strengthened. If passive opacity: classification may shift toward rope (coordination without intentional suppression).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether data asymmetry actively conceals or merely reveals externalities"
+    },
+    {
+      "id": "standard_interoperability_timeline",
+      "question": "At what adoption rate do open standards (GS1, OpenDEP, blockchain supply chain) achieve sufficient critical mass to break proprietary platform lock-in?",
+      "resolution_mechanism": "Adoption curve analysis for open standards; tracking of supplier defection from proprietary platforms to interoperable alternatives; cost-benefit analysis of migration as standard maturity increases",
+      "impact": "If timeline is < 5 years: scaffold sunset is credible. If > 15 years: scaffold is aspirational; constraint may persist as tangled rope or snare long-term.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Adoption timeline for open supply chain data standards"
+    },
+    {
+      "id": "regulatory_enforcement_asymmetry",
+      "question": "Are sustainability regulations enforced symmetrically (equal compliance burden) or asymmetrically (enforcement focuses on suppliers, not lead firms)?",
+      "resolution_mechanism": "Audit of SEC/EU enforcement actions: proportion of enforcement against lead firms vs suppliers; cost allocation analysis in compliance regulations; interview data on perceived burden by firm tier",
+      "impact": "If asymmetric enforcement: regulatory perspective shifts from tangled rope toward snare. Regulatory coalition becomes extractive rather than coordinating.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Asymmetry in regulatory compliance burden by firm tier"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Supply chain data asymmetry represents a structural tension between the legitimate need for coordination (lead firms require visibility to manage complex networks) and extractive information control (suppliers surrender operational autonomy and strategic information without reciprocal visibility). The constraint exhibits all major types from different structural positions. From the perspective of trapped tier suppliers, data asymmetry is pure extraction (Snare): they are forced to disclose production capacity, costs, and logistics while receiving minimal visibility into demand forecasts or pricing decisions. From the lead firm's perspective, asymmetry is coordination (Rope): real-time supplier visibility enables just-in-time production and risk mitigation. From the perspective of final consumers, the constraint is mixed (Tangled Rope): asymmetry enables supply chain coordination that lowers costs and improves availability, but prevents discovery of quality defects and hidden externalities. The constraint's extractiveness has increased from 0.35 to 0.58 over the ten-year interval as platform operators have deepened data collection and enforcement mechanisms while alternative transparency standards remain nascent. Theater ratio has increased correspondingly, reflecting that compliance with data-sharing contractual obligations often performs transparency without enabling genuine visibility.",
+    "key_agents": [
+      "Tier Suppliers: Primary victim (powerless/trapped) \u2014 forced to disclose operational data without reciprocal visibility; no realistic exit option",
+      "Lead Firms: Primary beneficiary (institutional/arbitrage) \u2014 capture coordination benefits; can arbitrage to alternative suppliers if data access threatened",
+      "Platform Operators: Secondary beneficiary (institutional/arbitrage) \u2014 aggregate data across networks; enable matching and risk assessment",
+      "Final Consumers: Secondary victim (moderate/constrained) \u2014 benefit from coordination-enabled supply chain efficiency but cannot exit or access hidden defect/externality information",
+      "Regulatory Coalition: Mixed actor (organized/constrained) \u2014 attempt to mandate transparency for sustainability compliance but enforcement often asymmetric; constrained by supplier resistance",
+      "Transparency Standard Coalition: Organized agents (organized/constrained) \u2014 create alternative pathways (open standards, consortia) with mutual transparency; building exit option for suppliers",
+      "Legacy EDI Operators: Institutional incumbents (institutional/arbitrage) \u2014 maintain degraded data exchange standards through switching costs and backward compatibility requirements",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional power asymmetry as inherent supply chain necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts significant value from suppliers through information control, enabling lead firms to negotiate unfavorable terms and access pricing/capacity data that shifts bargaining power. However, extraction is not maximal because: (1) some suppliers can negotiate better terms via countervailing power or diversification; (2) regulatory pressure is increasing disclosure requirements; (3) open standards are creating alternative pathways. The trajectory from 0.35 to 0.58 reflects deepening platform data collection and enforcement, but the rate of increase is slowing as regulatory and competitive alternatives emerge. Suppression (0.65): High. Contractual confidentiality clauses, platform lock-in, switching costs, and market concentration create formidable barriers to supplier exit or information symmetry. Suppliers cannot disclose their own data, cannot access lead firm data, and cannot easily switch to competing platforms. Theater ratio (0.68): High. Compliance with data-sharing obligations often creates appearance of transparency without genuine visibility \u2014 suppliers provide data that is immediately proprietary-locked, compressed into aggregates, or used for benchmarking without feedback loop. Real-time APIs create higher theater than actual supplier empowerment. The theater has increased as platforms have sophisticated data collection/usage tracking without corresponding transparency to suppliers.",
+    "directionality_logic": "Directionality is derived from the structural relationship of each agent to the asymmetric data flow. Tier suppliers occupy the position of full targets (d \u2248 0.89\u20130.95): trapped, providing information without reciprocal access, no exit option. Lead firms occupy the beneficiary position (d \u2248 0.10\u20130.20): arbitrage-enabled exit, capture coordination benefits, face minimal information disclosure burden. Consumers occupy an intermediate position (d \u2248 0.65\u20130.75): constrained exit (switching brands is costly but possible), experience both benefits (supply chain efficiency) and costs (hidden externalities). Platform operators operate from an institutional beneficiary perspective (d \u2248 0.15\u20130.25): arbitrage-enabled, capture value from data aggregation. The regulatory coalition occupies a contested middle (d \u2248 0.50\u20130.60): ostensibly neutral but enforcement asymmetry means suppliers bear higher compliance cost, making them closer to victims. The transparency coalition occupies a constrained organized position (d \u2248 0.40\u20130.55): pushing for symmetry but facing entrenched incumbent power. The analytical observer's natural law reading derives maximum d from the universal/civilizational context (d \u2248 0.72), treating information asymmetry as inherent constraint \u2014 but the structural data reveals this as a false summit.",
+    "perspectival_gap": "The constraint demonstrates perspectival divergence across eight distinct structural positions. The tier supplier and lead firm experience opposite data flows and opposite extraction direction \u2014 supplier sees Snare, lead firm sees Rope. The consumer sees Tangled Rope because supply chain coordination benefits them while hidden externalities extract value without consent. The platform operator sees Rope because data aggregation is a genuine coordination function from their perspective. The regulatory coalition sees Tangled Rope because regulations mandate transparency (coordination function) while enforcement burden falls asymmetrically on suppliers (extraction). The transparency coalition sees Scaffold because open standards represent a sunset mechanism \u2014 once mutual transparency standards mature, proprietary asymmetry becomes less competitive. The legacy EDI system sees its own function as degraded (Piton) \u2014 persists through inertia and switching costs despite technological obsolescence. The civilizational analytical observer risks seeing Mountain (information asymmetry is inherent to supply chain complexity) but structural data reveals this as naturalization of contingent power arrangements.",
+    "mandatrophy_analysis": "MANDATROPHY STRUCTURE: The constraint resolves the coordination-vs-extraction mandate through perspectival multiplicity. The beneficiary (lead firm) experiences genuine coordination \u2014 asymmetric data flow solves real problems (just-in-time production, risk mitigation). The victim (tier supplier) experiences genuine extraction \u2014 information asymmetry shifts bargaining power and prevents exit. Both classifications are structurally correct from their respective positions. The constraint is NOT a disguised snare (false rope) because lead firms genuinely solve a coordination problem. It is NOT a disguised rope (false snare) because suppliers genuinely experience extraction without exit. The resolution: the constraint IS a tangled rope, with the coordination and extraction functions distributed asymmetrically across agents. The analytical observer's mountain risk \u2014 that some information asymmetry is 'inherent to supply chains' \u2014 is a false summit detection case: the specific enforcement mechanisms (confidentiality clauses, platform lock-in, data aggregation depth, regulatory asymmetry) are policy-contingent, not natural. The constraint could be restructured toward mutual transparency (open standards model) or toward explicit negotiated asymmetry (negotiated data-sharing contracts) without violating the coordination function. The existence of viable Scaffold alternatives proves the mountain framing is incorrect."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "supply_chain_pricing_power",
+      "supplier_financial_distress",
+      "product_recall_coordination"
+    ],
+    "dual_formulation_note": "Supply chain data asymmetry is upstream of multiple derived constraints. Pricing power asymmetry (lead firms extract through information-enabled price negotiation) is a secondary extraction mechanism enabled by data asymmetry. Supplier financial distress (inability to access demand forecasts forces higher safety stock and working capital requirements) flows from information barriers. Product recall coordination failure (inability of lead firms to access full supplier defect data delays recalls) is a functional consequence. The upstream constraint (this story) affects all three downstream constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

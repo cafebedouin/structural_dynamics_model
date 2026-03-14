@@ -1,0 +1,212 @@
+{
+  "header": {
+    "constraint_id": "platform_gatekeeper_power",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pgp"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Platform Gatekeeper Power",
+    "topic_domain": "digital_economy/platform_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operator"
+    ],
+    "victims": [
+      "dependent_creators",
+      "dependent_merchants",
+      "consumer_choice"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dependent Creator",
+      "comment": "PERSPECTIVE 1: DEPENDENT CREATOR (SNARE) \u2014 Creator whose entire income and audience derive from a single platform. Cannot exit without losing livelihood, audience, and years of accumulated content value. Platform enforces algorithmic ranking, content moderation, commission structures with zero transparency or appeal. Maximum extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dependent Merchant",
+      "comment": "PERSPECTIVE 2: DEPENDENT MERCHANT (SNARE) \u2014 Small retailer whose sales, inventory visibility, and customer access flow entirely through a platform. Trapped by customer distribution: migrating to alternative platform means losing established customer relationships. Platform dictates fees, product policies, and visibility criteria unilaterally. Suppression is structural \u2014 no alternative distribution channels at comparable scale."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Organized Creator Coalition",
+      "comment": "PERSPECTIVE 3: ORGANIZED CREATOR COALITION (TANGLED ROPE) \u2014 Collective of creators with negotiating power (union, guild, trade association) experiences the platform as both coordinator and extractor. The platform solves genuine coordination problems: matching creators with audiences at scale, managing payment infrastructure, hosting content. But the platform also extracts through commission asymmetry, algorithmic opacity, and unilateral policy changes. Organized agents have some exit options (multi-platform strategies, direct funding) but face switching costs and audience fragmentation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 4: PLATFORM OPERATOR (ROPE) \u2014 The platform benefits from the constraint as pure coordination: aggregating supply, matching with demand, managing trust and payments. Experiences the gatekeeper power as the legitimate function of the platform itself. Exit options include expanding to new markets, adding services, optimizing fees. Extraction runs toward this agent, not away \u2014 they are the primary beneficiary of the asymmetry."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Consumer Base",
+      "comment": "PERSPECTIVE 5: CONSUMER BASE (TANGLED ROPE) \u2014 Consumers benefit from platform coordination (selection, price comparison, trust ratings) but also bear extraction costs through platform rent-seeking, price discrimination, and data extraction. Constrained by network effects: switching to alternative platform means losing access to incumbent creators/merchants and their audience/inventory. Some organizational power (consumer advocacy) but high switching costs."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Interoperability Coalition",
+      "comment": "PERSPECTIVE 6: INTEROPERABILITY COALITION (SCAFFOLD) \u2014 Regulatory bodies, open-source projects, and alternative platform initiatives (fediverse, decentralized protocols, digital markets acts) see gatekeeper power as a temporary structural problem with a sunset clause. Digital Markets Act, data portability requirements, and interoperability standards are building technical and regulatory pathways to reduce platform lock-in. This is a genuine sunset: as interoperability matures, the gatekeeper's extraction mechanism (network effect + switching cost + switching cost) loses force."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Content Moderation Theater",
+      "comment": "PERSPECTIVE 7: LEGACY CONTENT MODERATION THEATER (PITON) \u2014 Platform's content moderation and community guidelines have devolved into largely performative activity: opaque appeal processes, inconsistent enforcement, reliance on algorithmic systems that generate false positives at scale. The theater persists due to institutional inertia and regulatory pressure rather than actual effective governance. The function (community trust) has atrophied; the ritual (moderation boards, policy documents) remains. Theater ratio is high because most visibility of moderation is public relations rather than actual justice."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, platform gatekeeping appears to be an immutable consequence of digital coordination at scale: any system that connects many producers to many consumers must have some curatorial or filtering function, and that function grants structural power to whoever controls it. This perspective risks naturalizing what is actually a contingent institutional arrangement (network effects as a technological barrier rather than a policy choice). False summit detection will flag this."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "network_effect_contingency",
+      "question": "Are network effects (value increases with user count) a fundamental property of digital platforms or a contingent outcome of specific architectural and policy choices?",
+      "resolution_mechanism": "Comparative analysis of platforms with weak network effects (decentralized protocols, interoperable services); testing whether interoperability reduces lock-in effects; measurement of switching costs pre- and post-interoperability policy implementation",
+      "impact": "If fundamental: gatekeeper power is unavoidable (mountain). If contingent: gatekeeper power is a policy artifact, and interoperability can dissolve it structurally. Classification shifts from Mountain to Tangled Rope or Scaffold depending on policy trajectory.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether network effects are fundamental or contingent"
+    },
+    {
+      "id": "extraction_floor_for_platform_coordination",
+      "question": "What minimum commission/fee rate would constitute legitimate coordination cost vs. extractive overhead for platform services (payment processing, hosting, discovery)?",
+      "resolution_mechanism": "Cost accounting analysis: actual infrastructure costs, payment processing fees, content delivery costs, moderation overhead, compared against platform commission rates across different market segments",
+      "impact": "If extraction floor is 5-10%: most platforms operate within reasonable coordination cost. If floor is 2-3%: current platform commissions (15-30%) are predominantly extractive rent-seeking. Classification implications: higher extraction floor (Rope or Tangled Rope) vs. lower extraction floor (Snare or more extractive Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Legitimate coordination cost floor for platform services"
+    },
+    {
+      "id": "exit_option_feasibility_for_creators",
+      "question": "Can creators realistically establish independent audience distribution channels (direct-to-fan, alternative platforms, federated protocols) at comparable scale to platform-dependent distribution within a 3-year horizon?",
+      "resolution_mechanism": "Longitudinal tracking of creator migration success rates; measurement of audience retention and growth rates when creators establish independent channels; comparative engagement metrics on platform vs. independent channels",
+      "impact": "If feasible: creator exit options upgrade from 'trapped' to 'constrained' or 'mobile'. Classifications shift from Snare to Tangled Rope or Rope. If not feasible: trapped status is confirmed, Snare classification holds for dependent creators.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether creators can realistically migrate to independent channels"
+    },
+    {
+      "id": "interoperability_implementation_timeline",
+      "question": "How long until Digital Markets Act interoperability requirements, data portability, and federated protocol adoption actually reduce platform switching costs from current 80%+ to levels where exit becomes genuinely feasible (target: <30%)?",
+      "resolution_mechanism": "Policy implementation tracking; technical readiness assessment of interoperability standards; measurement of actual switching costs post-implementation; creator/merchant migration rates when exit options improve",
+      "impact": "If timeline is 2-5 years: Scaffold classification is realistic (sunset visible). If timeline is 10+ years: Scaffold is aspirational, and constraints remain Snare/Tangled Rope. If implementation stalls: Scaffold reverts to Piton (performative regulation without effect).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Timeline for interoperability to reduce switching costs materially"
+    },
+    {
+      "id": "algorithmic_transparency_sufficiency",
+      "question": "Does transparency about algorithmic ranking (disclosing ranking factors, showing how content is prioritized) constitute meaningful exit opportunity (creator can optimize) or merely theater (ranking remains opaque in practice, optimization is captured by platform)?",
+      "resolution_mechanism": "Comparison of creator success metrics pre- and post-transparency disclosure; analysis of whether disclosed ranking factors actually predict visibility; measurement of whether creators can successfully optimize for disclosed metrics or whether platform changes criteria in response",
+      "impact": "If transparency enables real optimization: exit options improve for organized creators, classification shifts toward Rope. If optimization is captured/futile: transparency is theater (Piton-level performance), and trapped status confirmed for dependent creators.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether algorithmic transparency enables meaningful creator agency"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Platform gatekeeper power emerges as a structural constraint when digital platforms achieve sufficient network effects to become quasi-monopolistic intermediaries between creators, merchants, and consumers. The constraint operates through a combination of genuine coordination (platforms solve the problem of matching supply and demand at scale) and extractive lock-in (network effects and switching costs trap dependent actors). The constraint's classification varies radically across perspectives: from pure extraction (Snare) for creators whose entire income depends on a single platform, to pure coordination (Rope) from the platform operator's perspective, to a mixed coordination-extraction hybrid (Tangled Rope) from organized creators and consumers. The theater ratio's rise from 0.30 to 0.55 reflects the accumulation of performative regulation (privacy policies, content moderation appeals, community guidelines) that operate as public relations without corresponding functional governance. The extractiveness progression from 0.35 to 0.58 reflects two trends: (1) platform deepening of commissions and fees as competitive pressure decreases, and (2) growth of organizing among dependent actors, raising the measured extraction from the platform operator's perspective (organized agents pay higher effective extraction than individual dependents).",
+    "key_agents": [
+      "Platform Operator: Institutional beneficiary (institutional/arbitrage) \u2014 captures network value, controls algorithmic visibility, sets unilateral terms",
+      "Dependent Creator: Primary victim (powerless/trapped) \u2014 entire income and audience bound to platform, zero negotiating power",
+      "Dependent Merchant: Primary victim (powerless/trapped) \u2014 customer access and inventory visibility entirely platform-mediated",
+      "Organized Creator Coalition: Secondary victim (moderate/constrained) \u2014 collective bargaining power but constrained by audience fragmentation and switching costs",
+      "Consumer Base: Mixed victim (moderate/constrained) \u2014 benefits from coordination but bears extraction through price discrimination, data extraction, and reduced choice",
+      "Interoperability Coalition: Organized agents (organized/constrained) \u2014 regulatory bodies and alternative protocol initiatives building exit pathways and sunset mechanisms",
+      "Content Moderation System: Institutional actor (institutional/arbitrage) \u2014 performative governance theater maintained through inertia and regulatory pressure",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing network effects as technological inevitability rather than policy artifact"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Platform operators extract through multiple channels: commission rates (15-30% typical for e-commerce, 30-50% for app stores, variable for content creators), algorithmic visibility control, unilateral policy changes, and data monetization. However, genuine coordination value is significant \u2014 platforms do solve the matching and trust problems at scale. Extractiveness of 0.58 reflects that extraction is substantial but not maximal; genuine coordination functions are present. Suppression (0.68): High. Multiple suppression mechanisms operate: (1) network effects create lock-in (switching away means abandoning audience/customer base), (2) alternative platforms fragment supply/demand rather than replace (a creator cannot move their audience wholesale), (3) no transparent appeal or governance mechanisms for policy disputes, (4) technical barriers (content export, audience portability) are non-trivial. Suppression is high because exit options are genuinely constrained, not merely costly. Theater ratio (0.55): Moderate-high. Content moderation, community guidelines, and appeals processes are substantially performative: opaque decision-making, inconsistent enforcement, algorithmic false positives, and lack of meaningful recourse. But platforms do perform some genuine trust/safety functions. Theater increased from 0.30 to 0.55 as regulation pressured platforms to create visible governance theater (bias audits, transparency reports, policy frameworks) while actual enforcement remained opaque and algorithmic.",
+    "perspectival_gap": "The gap between the platform operator's Rope and the dependent creator's Snare reveals the asymmetry of the constraint: the beneficiary experiences coordination, the victim experiences extraction. The analytical observer's Mountain risks naturalizing this asymmetry as technological inevitability ('platforms must have gatekeepers') rather than as a policy choice (interoperability could distribute the gatekeeper function). The organized creators' Tangled Rope sits between these extremes, reflecting mixed benefits and extraction. The Scaffold perspective's sunset logic is crucial: if interoperability succeeds, switching costs collapse, and dependent actors gain genuine exit options, transforming the classification for all victim perspectives from Snare/Tangled Rope toward Rope or Scaffold. The perspectival gap thus encodes the political economy of the constraint: current gatekeeping is extractive, but future interoperability could restore coordination-only dynamics.",
+    "directionality_logic": "Beneficiary (platform operator) with arbitrage exit: derives d \u2248 0.12 from institutional power + arbitrage options + beneficiary status. Low d produces negative f(d) and negative \u03c7 from their perspective, so they classify the constraint as Rope (pure coordination) \u2014 the extraction runs toward them but is not their experienced burden. Victims (dependent creators/merchants) with trapped exit: derive d \u2248 0.92 from powerless power + trapped options + victim status. High d produces maximum f(d) \u2248 1.42 and high \u03c7 from their perspective, producing Snare (pure extraction). Organized creators with constrained exit: derive d \u2248 0.60 from moderate power + constrained options + mixed victim/partial-beneficiary status. Middle d produces moderate f(d) \u2248 0.92 and moderate \u03c7, enabling Tangled Rope (mixed coordination/extraction). The directionality values are derived from the structural relationship declarations (beneficiaries: platform_operator; victims: dependent_creators, dependent_merchants, consumer_choice) combined with the exit options for each perspective. No overrides needed \u2014 the structural data is sufficient to produce differentiated directionality.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by distinguishing genuine coordination from extraction via the Tangled Rope category. The initial risk is that platforms appear to be pure coordination (matching creators with audiences, solving the discovery problem, providing infrastructure) and thus should classify as Rope from all perspectives. But the perspective-specific classification reveals the asymmetry: the platform operator genuinely experiences Rope (coordination is their entire function), while dependent actors experience Snare (pure extraction relative to their position). The Tangled Rope from the organized coalition's perspective confirms that both coordination AND asymmetric extraction are present in the same constraint structure \u2014 it's not a matter of perspective illusion but of structural asymmetry. The mandatrophy is resolved by the indexical tuple: (powerless, biographical, trapped, global) sees Snare; (institutional, immediate, arbitrage, global) sees Rope; (moderate, biographical, constrained, national) sees Tangled Rope. All three are structurally correct descriptions of the same \u03b5 = 0.58 constraint. The platform is simultaneously a coordination technology (genuine) and an extraction mechanism (genuine). Which one is 'primary' depends on the observer's position."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_visibility_opacity",
+      "creator_financial_precarity",
+      "platform_monopoly_consolidation"
+    ],
+    "dual_formulation_note": "Platform gatekeeper power should be decomposed into three structurally distinct constraints: (1) algorithmic visibility control (\u03b5 \u2248 0.50, Tangled Rope \u2014 genuine ranking function + opaque optimization), (2) commission structure extraction (\u03b5 \u2248 0.65, Snare \u2014 pure rent extraction from dependent merchants), (3) data extraction and monetization (\u03b5 \u2248 0.55, Tangled Rope \u2014 coordination of personal data markets + asymmetric information advantage). This story represents the aggregate constraint; each component has different manipulation vectors and different sunset opportunities."
+  },
+  "directionality_overrides": []
+}

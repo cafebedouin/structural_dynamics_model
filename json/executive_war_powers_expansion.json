@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "executive_war_powers_expansion",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ewpe"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Executive War Powers Expansion",
+    "topic_domain": "political/constitutional_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "executive_branch_actors"
+    ],
+    "victims": [
+      "legislative_constraint_systems",
+      "civilian_populations_in_conflict_zones",
+      "democratic_deliberation_norms"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Civilian Populations Under Executive Military Action",
+      "comment": "PERSPECTIVE 1: CIVILIAN POPULATIONS (SNARE) \u2014 Civilians in conflict zones authorized by executive order bear full extraction with no exit capacity. No deliberative input into war decisions; no legal recourse under war powers authorization. Maximum suppression through fog of war and classification authorities. Trapped in zones where executive determinations override constitutional process."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Congress and Legislative Constraint Systems",
+      "comment": "PERSPECTIVE 2: LEGISLATIVE SYSTEM (SNARE) \u2014 Congress faces structural barriers to reasserting war powers: political costs of challenging sitting executive, information asymmetries (classified operations), and sunk institutional costs of prior delegations. Constrained rather than trapped, but extraction is severe \u2014 the legislative check has atrophied through disuse and executive precedent-setting. Each executive action shifts the Overton window, making prior congressional authority threshold appear abnormal."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Executive Branch Security Apparatus",
+      "comment": "PERSPECTIVE 3: EXECUTIVE SECURITY APPARATUS (ROPE) \u2014 Experiences the constraint as coordination: rapid decision-making in security crises requires unified command authority. Interprets war powers expansion as solving a collective action problem (coordinating military response) rather than as extraction. Net beneficiary with arbitrage options \u2014 can reinterpret/narrow authorities in subsequent administrations if political winds shift."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Constitutional Accountability Movements",
+      "comment": "PERSPECTIVE 4: CONSTITUTIONAL REFORM COALITIONS (TANGLED ROPE) \u2014 Organized agents (civil liberties groups, reform legislators, international law advocates) see genuine coordination problem (security response requires speed) but experience extraction (war powers authority applied to non-emergency contexts, classified operations prevent oversight). Constrained by political weakness and institutional inertia, but organized enough to create legal challenges and norm contestation. Mixed extraction-coordination experience."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "War Powers Resolution Formal Framework",
+      "comment": "PERSPECTIVE 5: WAR POWERS RESOLUTION (PITON) \u2014 The 1973 WPR is largely performative: it requires presidential notification of military actions and authorizes 60 days of operations before congressional approval. In practice, administrations route operations through emergency authorities, ally-coordinated actions, or counter-terrorism designations, bypassing the notification requirement. The formal framework persists (theater ratio = 0.58) but its functional constraint has degraded. Maintained through institutional inertia despite widespread acknowledgment that it fails to constrain executive action."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer - Democratic Constitutional Order",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From a universal/civilizational view, the constraint represents the asymmetric extraction from the democratic constitutional order itself. The separation of powers doctrine is being selectively interpreted to expand executive authority. This is not an immutable law but a constitutional interpretation that has progressively favored executive action over legislative deliberation. The analytical perspective sees the mechanism clearly: each crisis creates a precedent for executive action; bureaucratic expansion follows; subsequent administrations inherit expanded authority; crises become pretexts for normalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "emergency_threshold_ambiguity",
+      "question": "What constitutes a genuine security emergency versus a manufactured or exaggerated threat justifying war powers expansion?",
+      "resolution_mechanism": "Post-hoc analysis of threat severity claims versus actual security outcomes; comparison of predicted risks against materialized harms; historical analysis of declared emergencies that did not escalate",
+      "impact": "If threshold is low: many questionable executive actions receive democratic cover. If threshold is high: genuine security responses face institutional delays. The ambiguity itself is the extraction mechanism.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Threshold for distinguishing genuine emergency from pretext"
+    },
+    {
+      "id": "congressional_delegation_intentionality",
+      "question": "To what degree have expansions of executive war powers resulted from explicit congressional delegation versus implicit acceptance through inaction and appropriations?",
+      "resolution_mechanism": "Legislative history analysis; voting record correlation between war funding and dissent; tracking of explicit war authorization versus implicit funding authorization",
+      "impact": "If explicit: congress retains modification capacity through defunding or repeal. If implicit: the constraint is more entrenched \u2014 congressional silence becomes interpreted as consent, and breaking silence becomes politically costly.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether war powers expansion is explicit delegation or implicit acceptance"
+    },
+    {
+      "id": "classify_retaliation_authority_scope",
+      "question": "Does the executive authority to retaliate against armed attack extend to preemptive action, support of allied military operations, or only direct response to direct attack?",
+      "resolution_mechanism": "Comparison of executive interpretation across administrations; court rulings on scope of retaliation authority; international law consensus on legitimate scope",
+      "impact": "If scope is broad: extractiveness increases (executive can classify diverse actions as retaliation). If scope is narrow: most executive military actions fall outside authorized retaliation, requiring explicit congressional approval.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Scope of authorized retaliation authority"
+    },
+    {
+      "id": "ally_proxy_operation_accountability",
+      "question": "When the executive funds or directs military operations through allied states or private contractors, does the War Powers Resolution apply, or can the executive classify these as indirect support not requiring congressional authorization?",
+      "resolution_mechanism": "Legal analysis of proxy operation accountability; tracking of operations classified as ally support versus direct executive action; congressional investigation scope",
+      "impact": "If proxy operations fall outside WPR: extractiveness increases (executive can bypass authorization via intermediaries). If proxy operations are in scope: executive authority is more constrained.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether proxy military operations require war powers authorization"
+    },
+    {
+      "id": "democratic_norm_recovery_possibility",
+      "question": "Is the legislative constraint erosion reversible through explicit congressional reassertion, or has it become structurally entrenched through precedent and executive bureaucratic expansion?",
+      "resolution_mechanism": "Analysis of prior constraint reassertions in other domains; feasibility study of legislative recapture mechanisms; modeling of political economy of constraint reversal",
+      "impact": "If reversible: the snare may have a sunset path and could reclassify as tangled rope. If entrenched: the extraction is permanent within current institutional structure, and reversal requires constitutional amendment.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether legislative constraint erosion is reversible"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.46
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Executive war powers expansion represents a systematic extraction of constitutional authority from the legislative branch, justified through security rhetoric and normalized through repeated precedent-setting. The constraint operates across multiple institutional levels: individual presidents accumulate authorities; bureaucracies inherit expanded mandates; subsequent administrations inherit a broader interpretation of executive prerogative; each crisis generates new claims to emergency authority; the Overton window shifts incrementally. The mechanism exhibits high suppression through classification authorities (military necessity, national security, intelligence protection) that prevent transparent deliberation. Theater ratio (0.58) reflects that formal constraints (War Powers Resolution, congressional authorization rhetoric) persist performatively while functional constraint has degraded. The constraint is extractive rather than coordinative because the security rationale serves simultaneously as justification and as mechanism to obscure the power transfer itself. Civilian populations in conflict zones authorized by executive order are the primary victims \u2014 bearing military consequences without deliberative input. The legislative system is a secondary victim \u2014 losing constraint capacity through precedent accumulation and information asymmetries. The executive security apparatus is the primary beneficiary \u2014 gaining speed of response at the cost of democratic oversight.",
+    "key_agents": [
+      "Executive Branch Security Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 gains rapid unilateral decision-making authority; experiences constraint as coordination problem solution",
+      "Civilian Populations in Conflict Zones: Primary victim (powerless/trapped) \u2014 subject to military action authorized without their deliberative participation; no exit capacity",
+      "Legislative Branch and Congressional System: Secondary victim (moderate/constrained) \u2014 erosion of war powers check through precedent, information asymmetries, and political costs of reassertion",
+      "Constitutional Reform Coalitions: Organized agents (organized/constrained) \u2014 civil liberties groups, reform legislators attempting to reassert legislative authority; face political weakness but maintain institutional challenge capacity",
+      "War Powers Resolution Framework: Institutional actor (institutional/arbitrage) \u2014 formal constraint that persists performatively but lacks functional power; maintained through inertia",
+      "Analytical Observer: Universal perspective (analytical/analytical) \u2014 sees the extraction mechanism clearly: emergency pretext \u2192 precedent \u2192 bureaucratic expansion \u2192 inherited authority \u2192 normalization"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and rising. The executive captures unilateral authority to initiate military operations with minimal legislative input. The extraction has grown over 50 years from baseline (0.35) to current (0.68) through precedent accumulation and bureaucratic expansion. Early constraints (authorization requirements, notification obligations) have been progressively reinterpreted as advisory rather than mandatory. Each administrations' exercise of authority becomes precedent for successor's broader claims. The mechanism is extraction disguised as coordination: security coordination requires speed, therefore legislative consultation is framed as impediment rather than constraint. Suppression (0.72): High. Multiple suppression mechanisms operate: classification authorities prevent public deliberation of threat assessments; fog of war prevents real-time accountability; intelligence protection prevents disclosure of operational details; emergency declarations fast-track decisions; allied intermediaries obscure operational scope. The suppression is structural \u2014 even well-intentioned officials face legal barriers to transparency. Theater ratio (0.58): Moderate-high. Formal war powers constraints persist (WPR, authorization language, notification procedures) but function performatively. Congress holds hearings but rarely exercises defunding power; executive provides briefings but classifies operational details; military commanders prepare contingency litigation but rarely challenge orders; public debates war powers in abstract while specific operations proceed under emergency authorities.",
+    "directionality_logic": "Directionality derives from who benefits and bears costs in this constraint structure. The executive security apparatus derives d \u2248 0.10 (beneficiary with arbitrage exit: can reinterpret authorities in successor administrations). Congress derives d \u2248 0.85 (victim with constrained exit: faces political costs and sunk institutional losses from reasserting authority, but retains theoretical capacity to defund or repeal). Civilians in conflict zones derive d \u2248 0.98 (victims with trapped exit: no legal recourse, no deliberative participation, no capacity to refuse military exposure). Constitutional reform coalitions derive d \u2248 0.65 (organized victims with constrained exit: can mount legal challenges and political pressure but lack institutional power to reverse precedent accumulation). The WPR framework derives d \u2248 0.05 (institutional actor maintaining coordination function for security response, though degraded). The analytical observer derives d \u2248 0.75 (observer position captures the extraction asymmetry: executive benefits, legislative system atrophies, civilians bear costs).",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence. The executive security apparatus sees Rope (coordination solution to security crisis requiring speed). Congress sees Snare (loss of constitutional check with no capacity to recover it). Civilians see Snare (subject to military action without participation). Reform coalitions see Tangled Rope (genuine security coordination need exists but overlaid with extraction asymmetry). The WPR sees Piton (formal framework persists but lacks functional power). The analytical observer sees Snare (the democratic constitutional order is the victim; executive authority extraction is the mechanism). The perspectives do not converge because the agents occupy genuinely different structural positions: one gains speed and authority, others lose constraint capacity and deliberative participation. This is not a measurement ambiguity \u2014 it is real structural extraction.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: This constraint resolves mandatrophy by demonstrating genuine extraction asymmetry rather than coordination disagreement. The security coordination framing (executive perspective) is real \u2014 security response does require unified command \u2014 but this does not adjudicate the extraction question. The mandatrophy would arise if the constraint genuinely coordinated security response while minimizing extraction. But the empirical trajectory shows increasing extractiveness (0.35 \u2192 0.68) and rising theater ratio (0.42 \u2192 0.58) while security outcomes have not demonstrably improved. The rising theater suggests the coordination function is degrading even as extraction increases \u2014 suggesting that post-hoc security rhetoric justifies what is primarily a power transfer. The constraint is Snare rather than Tangled Rope because: (1) suppression is high (0.72) through classification and information asymmetries, (2) victims (legislature, civilians) have no exit capacity, (3) extraction benefits concentrate on executive actors with arbitrage exit, (4) theater ratio shows performative constraint persistence rather than functional coordination. A true Tangled Rope would show either declining theater (genuine coordination replacing ritual) or declining extractiveness (beneficiaries accepting constraint). This constraint shows neither."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "separation_of_powers_erosion",
+      "presidential_emergency_declaration_scope",
+      "classified_information_constraint_on_oversight"
+    ],
+    "dual_formulation_note": "Executive war powers expansion is downstream of both separation-of-powers institutional design and emergency declaration authority. Each upstream constraint interacts with this one: erosion of separation of powers creates permissive environment for war powers expansion; emergency declaration scope determines which actions executive can classify as requiring speed; classification authority determines what information congress can access for oversight. The three constraint family members should be analyzed together for full contamination picture."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.85
+    }
+  ]
+}

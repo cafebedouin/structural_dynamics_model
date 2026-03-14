@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "suppression_of_civil_society_assembly",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "supp_civil"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.62,
+    "claimed_type": "snare",
+    "human_readable": "Suppression of Civil Society Assembly",
+    "topic_domain": "political/governance/civic_rights",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_apparatus",
+      "incumbent_power_structures"
+    ],
+    "victims": [
+      "civil_society_organizations",
+      "collective_political_voice",
+      "dissenting_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Dissenting Population",
+      "comment": "PERSPECTIVE 1: DISSENTING POPULATION (SNARE) \u2014 Trapped within national jurisdiction with no exit option for expressing collective grievances. Subject to arrest, surveillance, dispersal, and violence for attempting assembly. Maximum extraction: the constraint removes the right to coordinate, leaving isolated individuals bearing full cost of suppression."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Civil Society Organization",
+      "comment": "PERSPECTIVE 2: CIVIL SOCIETY ORGANIZATION (SNARE) \u2014 Constrained by legal liability, founder/member arrests, permit denial, and funding freezes. High costs to exit (organizational dissolution, loss of institutional capacity). Primary extraction: loss of platform and political efficacy. Secondary suppression: infiltration, informant networks, and legal harassment reduce capacity to organize even nominally permitted activities."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State Apparatus",
+      "comment": "PERSPECTIVE 3: STATE APPARATUS (ROPE) \u2014 Experiences the constraint as coordination mechanism: suppression aggregates state power, prevents opposition coordination, and centralizes decision-making authority. Net beneficiary \u2014 extraction flows toward this actor. State experiences constraint as solution to collective action problem (preventing coordinated challenges to state authority)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Complicit Middle-Tier Apparatus",
+      "comment": "PERSPECTIVE 4: COMPLICIT MIDDLE-TIER APPARATUS (TANGLED ROPE) \u2014 Police departments, local administrators, and security services are both enforcers and victims. They benefit from centralized authority and resource allocation (rope function) but are also constrained by orders to suppress, ethical dilemmas, and institutional fragility. Mixed classification reflects genuine coordination role (maintaining state hierarchy) alongside asymmetric extraction (forced participation in repression)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Formal Constitutional Framework",
+      "comment": "PERSPECTIVE 5: FORMAL CONSTITUTIONAL FRAMEWORK (PITON) \u2014 Written constitutional guarantees of assembly rights exist in most suppressive regimes, but are performatively overridden by emergency powers, national security doctrines, and public order statutes. The formal legal framework persists through institutional inertia while actual suppression operates through parallel de facto mechanisms. Theater ratio high: constitutional theater of rights exists alongside de facto suppression regime."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From cross-national analysis, suppression of assembly is consistently classified as snare: high extraction, high suppression, reliance on coercion and surveillance for maintenance, minimal coordination benefit to victims. This classification is consistent across institutional contexts (authoritarian, hybrid, democratic backsliding) and geographic regions."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "violence_escalation_threshold",
+      "question": "At what frequency/intensity of state violence does suppression transition from institutional coercion to state terror, and does the transition change the constraint's structural type?",
+      "resolution_mechanism": "Comparative analysis of suppression regimes by incident frequency, severity (arrests vs. lethal force), and population exposure. Correlation with victim organization rates and collective action attempts.",
+      "impact": "If escalation threshold is exceeded: suppression may lose all coordination function and reclassify as pure extraction snare. If below threshold: some regimes may show tangled rope characteristics (state legitimacy mixed with suppression).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Violence escalation threshold triggering transition to state terror"
+    },
+    {
+      "id": "underground_coordination_capacity",
+      "question": "Can dissenting populations organize effectively through underground/clandestine networks, and if so, does this change the 'trapped' exit classification to 'constrained'?",
+      "resolution_mechanism": "Historical analysis of clandestine organizing success rates; study of arrested underground networks; comparison of above-ground vs underground movement effectiveness and sustainability.",
+      "impact": "If clandestine organization is viable: exit_options shift from trapped to constrained for some subpopulations (those with network access). Perspectives would reclassify from snare to tangled_rope or constrained/mobile rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of underground coordination networks"
+    },
+    {
+      "id": "state_apparatus_fragmentation",
+      "question": "When enforcement agencies (police, military, local government) refuse or selectively enforce suppression orders, does the constraint lose coercive enforcement capacity and degrade to piton?",
+      "resolution_mechanism": "Analysis of regime transitions where security force defection coincided with suppression failure; study of selective enforcement patterns and their relationship to constraint collapse.",
+      "impact": "If state apparatus fragmentation is primary failure mechanism: suppression is contingent on monopoly enforcement, not on structural inevitability. This suggests the snare classification is accurate but the regime is unstable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "State apparatus fragmentation as suppression mechanism failure"
+    },
+    {
+      "id": "international_spillover_dynamics",
+      "question": "Do international legal mechanisms (UN human rights bodies, ICC, foreign sanctions) effectively constrain suppression, or do they merely create theater without reducing enforcement capacity?",
+      "resolution_mechanism": "Analysis of correlation between international condemnation/sanctions and actual reduction in suppression incidents. Study of regime behavior before vs after international attention.",
+      "impact": "If international mechanisms are effective: they reduce scope of viable suppression (or raise costs), potentially moving suppression toward piton (theater) or scaffold (sunset if sanctions create exit pressure).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "International mechanism effectiveness in constraining suppression"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Suppression of civil society assembly is a structural constraint that prevents collective coordination of political voice through coercion and surveillance. The constraint operates at the national scale through legal prohibitions (permit requirements, public order statutes), physical force (police dispersal, arrest), and psychological suppression (surveillance, informant networks, threat of violence). It extracts political efficacy from dissenting populations while concentrating power in state hands. The constraint is enforced through a machinery of specialized institutions (police, security services, courts) and operates through both visible coercion and invisible surveillance. The extractiveness has increased over the interval (0.42 \u2192 0.68) as surveillance technology and permit denial mechanisms have expanded. The theater ratio has similarly risen (0.35 \u2192 0.62) as constitutional frameworks maintain the appearance of assembly rights while de facto suppression expands through emergency powers and national security doctrine.",
+    "key_agents": [
+      "Dissenting Populations: Primary victim (powerless/trapped) \u2014 bear full suppression cost; no exit option",
+      "Civil Society Organizations: Secondary victim (moderate/constrained) \u2014 face legal liability, arrests, permit denial; constrained exit via organizational shutdown",
+      "State Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 captures concentrated power and ability to prevent opposing coordination",
+      "Middle-Tier Enforcement Agencies: Complicit actor (institutional/constrained) \u2014 benefit from hierarchy but constrained by orders to suppress",
+      "Constitutional Framework: Degraded institution (institutional/arbitrage) \u2014 maintains legal theater while de facto suppression operates in parallel",
+      "Analytical Observer: Cross-national view (analytical/analytical) \u2014 sees consistent snare structure across geographic and regime contexts"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. Suppression removes the fundamental right to collective political coordination. The extraction is not partial or negotiable \u2014 either assembly is permitted or it is not. The value reflects the near-total removal of one mode of political voice. Suppression (0.78): Very high. Barriers to exit are material (arrest, violence, surveillance), structural (geographic jurisdiction, legal liability), and psychological (fear, internalized self-censorship). Suppression is intentionally layered: legal prohibitions create formal justification; enforcement creates physical costs; surveillance creates information asymmetry that makes safe coordination impossible. Theater ratio (0.62): Moderate-high. Constitutional guarantees of assembly remain performatively in place in most regimes while de facto suppression operates through emergency powers and statutory exceptions. As the regime matures, the ratio rises \u2014 the gap between formal rights and actual enforcement widens. Measurements show extractiveness rising more slowly than theater, suggesting that as regimes consolidate, they rely less on visible coercion and more on invisible surveillance and psychological suppression.",
+    "perspectival_gap": "The primary gap is between the state apparatus (experiences rope: centralized coordination of authority) and the dissenting population (experiences snare: pure extraction with no benefit). The state sees the constraint as solving the collective action problem of maintaining hierarchy; the dissenting population sees it as preventing their collective action problem (mobilizing political voice). A secondary gap appears between the formal constitutional framework (claims rope: coordination mechanism for protecting rights) and the de facto suppression apparatus (executes snare: extraction through coercion). The middle-tier enforcement agencies experience tangled rope: they coordinate state power (rope function) while being constrained to participate in repression (snare extraction). These perspectival gaps reveal that the constraint's primary function (from state view) is coordination of state power, but its effect on victims is pure extraction.",
+    "directionality_logic": "Directionality is derived from beneficiary/victim declarations and exit options. The state apparatus has arbitrage exit options (can choose enforcement level) and benefits from suppression, yielding low d (beneficiary position). The dissenting population has trapped exit options (cannot leave jurisdiction) and bears victim costs, yielding high d (full target position). The civil society organization has constrained exit (can dissolve but at high cost) and bears victim costs, yielding high d but modulated by the organizational power level (moderate rather than powerless). The middle-tier apparatus has constrained exit (cannot refuse orders without legal consequences) and is both beneficiary (shares state power concentration) and victim (forced participation in repression), yielding mid-range d. The analytical observer has analytical exit (can change frame) and no structural position in suppression, yielding derived d reflecting the aggregate victim burden.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that suppression of assembly is a snare from the analytical perspective but appears as rope from the state beneficiary perspective. The state's experience of suppression as coordination (rope) naturalizes what is extraction (snare) from the victim perspective. The formal constitutional guarantee of assembly rights creates false rope framing \u2014 it appears as a coordination mechanism for protecting political voice, but it operates as scaffolding for snare enforcement (rights are guaranteed but enforcement is suppressed). The middle-tier institutional perspective shows tangled rope because enforcement agencies genuinely coordinate state function while being extracted from (forced participation in repression). The piton classification of the constitutional framework reveals that formal rights persist through institutional inertia while actual suppression operates through de facto mechanisms. The constraint's theater (constitutional rights language) masks its function (extraction of political voice). Mandatrophy resolution requires understanding that the state's rope experience is real (they are solving a coordination problem) but structurally depends on the snare extraction from victims. The constraint cannot function as rope without functioning as snare."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "permit_denial_systems",
+      "surveillance_infrastructure",
+      "protest_criminalization"
+    ],
+    "dual_formulation_note": "Suppression of civil society assembly decomposes into three related constraints: permit denial systems (\u03b5=0.55, tangled rope \u2014 genuine coordination of public order mixed with asymmetric gate-keeping), surveillance infrastructure (\u03b5=0.72, snare \u2014 pure extraction with no coordination benefit), and protest criminalization (\u03b5=0.65, snare \u2014 legal prohibition with enforcement apparatus). Each has distinct \u03b5 values reflecting whether coordination function is present. All three are upstream of the aggregate suppression constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "header": {
+    "constraint_id": "synthetic_data_governance_gap",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "synth"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Synthetic Data Governance Gap",
+    "topic_domain": "data_governance/ai_regulation/institutional_coordination",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "synthetic_data_producers",
+      "ai_model_developers"
+    ],
+    "victims": [
+      "data_subjects_represented_in_training",
+      "regulatory_compliance_infrastructure",
+      "downstream_ai_system_reliability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Data Subjects Whose Likenesses Are Replicated",
+      "comment": "PERSPECTIVE 1: DATA SUBJECTS (SNARE) \u2014 Individuals whose characteristics, demographics, and behaviors are encoded in synthetic training data have no exit option and no meaningful consent mechanism. They cannot opt out of synthetic replication without proving their data was used. Maximum experienced extraction: identity used without compensation or control, with no recourse mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regulatory Institutions and Compliance Bodies",
+      "comment": "PERSPECTIVE 2: REGULATORY BODIES (TANGLED ROPE) \u2014 National data protection authorities (GDPR, CCPA enforcement bodies) face a coordination problem: synthetic data is genuinely useful for innovation and privacy-preserving ML training. But the same synthetic generation process creates extractive asymmetries: producers capture value from replicated likenesses without consent frameworks. Regulators are constrained by their own mandate to balance innovation and protection. They benefit from synthetic data's coordination function (enables privacy-preserving research) while bearing costs of defining new enforcement categories with limited precedent."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Synthetic Data Producers and Model Developers",
+      "comment": "PERSPECTIVE 3: SYNTHETIC DATA PRODUCERS (ROPE) \u2014 Experience the constraint as pure coordination: generating synthetic data enables faster model development, reduces privacy risk from real data, and creates legitimate value. From their position, the constraint is a solution to the real-data-training bottleneck. They have arbitrage options (shift to synthetic data, licensing frameworks) and capture concentrated benefits. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Downstream AI System Operators",
+      "comment": "PERSPECTIVE 4: DOWNSTREAM AI OPERATORS (TANGLED ROPE) \u2014 Organizations deploying trained models benefit from higher-quality models trained on synthetic data (coordination). But they also bear extraction costs: models trained on synthetic data can have subtle distribution shifts, demographic representation gaps, or out-of-distribution failure modes that are harder to detect without knowing the synthetic generation process. Constrained by lack of transparency into training data provenance. Mixed benefit and harm."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Traditional Data Governance Frameworks",
+      "comment": "PERSPECTIVE 5: TRADITIONAL DATA GOVERNANCE (PITON) \u2014 Existing data governance categories (personally identifiable information, consent, purpose limitation, data minimization) were built for concrete data trails. Synthetic data degrades these categories: Is synthetic data 'about' the original data subjects? Does consent to real-data collection cover synthetic replication? Is purpose limitation binding on synthetic derivatives? The governance machinery persists through institutional inertia (GDPR articles are recited) but the functional mapping is broken. Theater ratio high because enforcement actions cite traditional doctrine that no longer clearly applies."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Emerging Synthetic Data Governance Coalition",
+      "comment": "PERSPECTIVE 6: EMERGING GOVERNANCE COALITION (SCAFFOLD) \u2014 International standards bodies (ISO, IEEE), AI transparency initiatives, and federated learning consortia are building alternative governance pathways: synthetic data lineage tracking, quality attestation frameworks, provenance registries, and federated/decentralized training as substitutes. These are sunset mechanisms \u2014 as distributed training and differential privacy mature, the centralized synthetic generation bottleneck loses its necessity. Organized agents see a temporary problem being solved. Has exit path and agency."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Inherent Trade-off View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURALIZATION VIEW (MOUNTAIN) \u2014 The civilizational perspective risks naturalizing the governance gap as an inherent trade-off between innovation and privacy: 'Large-scale AI training has always required data, and synthetic data is a neutral technical solution to privacy concerns.' This framing treats the gap as a structural feature of how ML scales rather than a governance failure. The engine's false summit detector will identify this as naturalization of what is actually a contingent institutional coordination gap."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "synthetic_data_derivativeness_threshold",
+      "question": "At what degree of transformation does synthetic data cease to be a derivative of original subjects and become genuinely independent?",
+      "resolution_mechanism": "Empirical analysis of membership inference attacks, attribute inference attacks, and identity leakage from synthetic datasets. Comparison with privacy-preserving training baseline (differential privacy epsilon bounds).",
+      "impact": "If transformation is minimal (membership inference high): synthetic data is legally and ethically a derivative work requiring consent. If transformation is complete (membership inference near random): synthetic data is independent data, extraction mechanism disappears.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Threshold for synthetic data independence from original subjects"
+    },
+    {
+      "id": "consent_retroactivity_doctrine",
+      "question": "Does consent to real-data collection legally or ethically extend to synthetic replication, or does synthetic generation require new consent?",
+      "resolution_mechanism": "Legal analysis across jurisdictions (GDPR, CCPA, emerging synthetic-data-specific regulations). Case law tracking consent doctrine under conditions of secondary use and transformation.",
+      "impact": "If old consent extends: extraction mechanism is institutionally legitimate, constraint reclassifies toward Rope. If new consent required: extraction is uncompensated secondary use, constraint remains Snare/Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether original consent covers synthetic replication"
+    },
+    {
+      "id": "model_provenance_disclosure_burden",
+      "question": "Who bears the burden and cost of proving synthetic data provenance and disclosure?",
+      "resolution_mechanism": "Analysis of regulatory enforcement (who demands provenance, who supplies it, at what cost). Comparison of audit costs across industries (finance, healthcare, general ML).",
+      "impact": "If burden on producers: creates enforcement mechanism and cost, reducing extraction incentive. If burden on regulators/operators: extraction persists because disclosure is too expensive to verify.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Burden allocation for synthetic data provenance verification"
+    },
+    {
+      "id": "federated_training_adoption_timeline",
+      "question": "At what point does federated/decentralized training become cost-competitive with centralized synthetic-data-based training?",
+      "resolution_mechanism": "Infrastructure cost tracking, latency benchmarks, and adoption curves for federated learning frameworks. Comparison with synthetic data generation compute costs.",
+      "impact": "If federated adoption is rapid (3-5 years): scaffold perspective validated, constraint has real sunset. If adoption stalls: centralized synthetic training persists as dominant paradigm, extraction mechanism remains.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for federated training cost-competitiveness"
+    },
+    {
+      "id": "synthetic_data_quality_floor",
+      "question": "What is the minimum quality floor for synthetic data before model performance degradation becomes unacceptable?",
+      "resolution_mechanism": "Empirical benchmarking of synthetic-trained models across task domains. Comparison of downstream performance on held-out real data when trained on synthetic vs real data.",
+      "impact": "If quality floor is low: synthetic data solves the coordination problem efficiently, constraint reclassifies toward Rope. If quality floor is high: synthetic data requires enormous additional governance overhead, remaining Tangled Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Minimum acceptable quality for synthetic training data"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The synthetic data governance gap describes a structural coordination failure where the technical solution (synthetic data training) creates genuine value for ML development while simultaneously enabling extractive secondary use of individual likenesses without consent frameworks. The constraint exhibits the full DR spectrum: from the data subject's perspective (snare \u2014 no exit, no consent mechanism), to the regulator's (tangled rope \u2014 must balance innovation and protection), to the producer's (rope \u2014 pure coordination value), to the traditional governance system's (piton \u2014 categories are performing enforcement rituals without functional mapping to synthetic data), to an emerging alternative governance coalition's (scaffold \u2014 distributed training and privacy-preserving techniques offer exit paths). The theater_ratio of 0.68 reflects that much current synthetic data governance consists of iterating existing doctrine (consent, purpose limitation, minimization) against a fundamentally different class of data objects. Extractiveness increased from 0.32 to 0.58 over the measurement interval as synthetic data adoption accelerated without corresponding governance evolution.",
+    "key_agents": [
+      "Data Subjects: Primary victims (powerless/trapped) \u2014 whose characteristics are replicated without meaningful consent or compensation mechanism",
+      "Synthetic Data Producers and Model Developers: Primary beneficiaries (institutional/arbitrage) \u2014 capture value from faster development cycles and privacy-preserving training without consent frameworks",
+      "Regulatory Bodies (GDPR, CCPA, DPA): Organized victims (organized/constrained) \u2014 must define new enforcement categories while balancing innovation and protection",
+      "Downstream AI Operators: Moderate victims (moderate/constrained) \u2014 benefit from higher-quality models but bear risk from non-transparent training data provenance",
+      "Traditional Data Governance System: Institutional piton (institutional/arbitrage) \u2014 enforcement categories persist through inertia despite degraded functional mapping",
+      "Emerging Governance Coalition: Organized agents (organized/mobile) \u2014 international standards bodies, AI transparency initiatives, federated learning consortia building alternative pathways with sunset logic",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing governance failure as inherent innovation/privacy trade-off"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and increasing. Synthetic data producers capture significant value from faster development cycles, reduced privacy liability exposure, and avoidance of consent infrastructure costs. The extraction is not maximal because synthetic training is genuinely useful for downstream innovation and does reduce privacy risks relative to unconstrained real-data training. The increase from 0.32 to 0.58 reflects growing adoption without corresponding governance evolution \u2014 as synthetic data becomes standard practice, the 'exceptional research tool' framing disappears and the extraction mechanism becomes structural. Suppression (0.62): High. Data subjects have no meaningful exit or recourse mechanism. No consent requirement exists in most jurisdictions for synthetic replication of likenesses derived from training data. Regulatory enforcement is nascent and uncertain. Career and institutional incentives favor synthetic generation. Theater ratio (0.68): High and increasing. Current governance consists of retrofitting GDPR consent and purpose-limitation doctrine onto synthetic data without clear functional mapping. Enforcement actions cite traditional doctrine; compliance consists of adding consent checkboxes that do not meaningfully govern synthetic replication. The theater increased as synthetic adoption accelerated without governance evolution.",
+    "perspectival_gap": "Data subjects (Snare) vs. producers (Rope) exhibit maximum perspectival divergence because they occupy opposite structural positions: one has no exit or control, the other has both. Regulators and downstream operators (both Tangled Rope) experience asymmetric mixed benefit/harm: they are constrained by different factors (mandate vs. opacity) but both face real costs alongside benefits. The traditional governance system (Piton) versus the emerging coalition (Scaffold) represents institutional divergence in time horizon: legacy doctrine persists through inertia despite degraded fit; alternatives are being built with generational time horizons. The analytical observer risks collapsing this perspectival structure into a false mountain ('innovation requires privacy friction') \u2014 the false summit detector identifies this as naturalization.",
+    "directionality_logic": "Directionality values (d) are derived from beneficiary/victim position and exit options. Data subjects are victims with trapped exit \u2192 high d \u2192 high f(d) \u2192 maximum experienced extraction chi. Producers are beneficiaries with arbitrage exit \u2192 low d \u2192 low f(d) \u2192 negative or minimal experienced extraction. Regulators are victims (constrained by mandate to protect) but with moderate institutional power and constrained exit (they cannot simply opt out of regulating) \u2192 moderate d \u2192 moderate f(d) \u2192 moderate chi. Downstream operators are both beneficiaries (better models) and victims (opacity risk) with constrained exit (they must train models) \u2192 moderate-high d \u2192 moderate chi. The analytical observer with analytical exit experiences moderate d reflecting neither pure victim nor beneficiary status. The scaffold coalition with mobile exit and organized power experiences low chi \u2014 they have agency and exit pathways.",
+    "mandatrophy_analysis": "DIAGNOSTIC RESOLUTION: The synthetic data governance gap resolves the mandatrophy by showing that the coordination benefit (faster, privacy-preserving training) is real AND the extraction mechanism (replicated likenesses without consent) is real \u2014 they are not competing interpretations of a single underlying phenomenon, but genuinely distinct structural elements that happen to be co-located in the same technical object (synthetic data). Tangled Rope classification correctly identifies both. The mandate is not 'Is synthetic data good or bad?' but 'How do we decouple the coordination function (privacy-preserving training) from the extraction mechanism (unconsented likeness replication)?' This is precisely what scaffold/alternative governance mechanisms (federated training, differential privacy, provenance registries) attempt to do: preserve the coordination benefit while blocking the extraction pathway. The mandatrophy is resolved not by choosing a single type but by recognizing that Tangled Rope is the correct classification and that the strategic problem is transforming it toward either pure Rope (if extraction can be eliminated via governance) or pure Scaffold (if alternatives can replace centralized synthetic generation entirely)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_model_training_bottleneck",
+      "privacy_preserving_ml_constraints",
+      "data_subject_consent_infrastructure"
+    ],
+    "dual_formulation_note": "Synthetic data governance gap is downstream of AI training infrastructure constraints but represents a distinct structural constraint on data governance coherence. The upstream training bottleneck has its own \u03b5 reflecting empirical difficulty of obtaining large labeled datasets; this constraint has \u03b5 reflecting governance failure in allocating consent and compensation for synthetic replication."
+  },
+  "directionality_overrides": []
+}

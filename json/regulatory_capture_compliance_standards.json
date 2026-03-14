@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "regulatory_capture_compliance_standards",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "regcap"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Regulatory Capture via Compliance Standards",
+    "topic_domain": "political_economy/regulatory_capture",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_regulated_firms"
+    ],
+    "victims": [
+      "new_market_entrants",
+      "consumer_protection_system",
+      "regulatory_independence"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The New Entrant",
+      "comment": "PERSPECTIVE 1: NEW MARKET ENTRANT (SNARE) \u2014 Faces immobilizing compliance burden designed by and for incumbents. No exit without abandoning entry. Compliance standards are structurally opaque (written in industry jargon, requiring expensive consulting). Cannot compete on innovation; must match incumbent-approved technical specifications. Maximum extraction, zero coordination benefit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Consumer Protection Mission",
+      "comment": "PERSPECTIVE 2: CONSUMER PROTECTION (SNARE) \u2014 The regulatory mandate is co-opted to serve incumbent interests rather than consumer safety. Compliance theater masks extraction: rules exist in name of protection but are written to exclude competitors. The system has no exit\u2014consumers are trapped in a market with reduced competition and innovation. The abstracted regulatory mission bears the cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Incumbent Regulated Firm",
+      "comment": "PERSPECTIVE 3: INCUMBENT REGULATED FIRM (ROPE) \u2014 Experiences the constraint as coordination of technical standards, market stability, and competitive positioning. Benefits from complexity barriers that exclude new entrants. Has arbitrage options: can influence standards through lobbying, can diversify into new markets, can outsource compliance. Net beneficiary. Views compliance standards as enabling legitimate inter-firm coordination on safety and interoperability\u2014which is partly true."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Agency",
+      "comment": "PERSPECTIVE 4: REGULATORY AGENCY (TANGLED ROPE) \u2014 Constrained by resource limitations, dependence on industry expertise, and revolving-door employment. Genuinely coordinates safety standards (coordination function: authentic risk management). Simultaneously captured\u2014writes and enforces standards that exclude competitors rather than achieve safety objectives. High enforcement cost; moderate technical coordination benefit. The agency cannot fully exit its capture, but has marginal agency in specific standards revisions."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Compliance Consulting Industry",
+      "comment": "PERSPECTIVE 5: COMPLIANCE CONSULTING INDUSTRY (PITON) \u2014 Originally emerged to translate genuine regulatory requirements into operational procedure. Now largely performative: consultants help clients navigate opaque standards designed by incumbents. Theater ratio high (0.65) because much consulting effort goes to repackaging existing practice rather than substantive compliance improvement. Inertia: the consulting sector's business model depends on standards remaining complex and opaque. Degraded function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Sees genuine coordination function (safety, interoperability, consistent measurement) alongside systematic extraction (incumbents use standards to exclude competitors). The constraint is not pure snare (coordination is real) nor pure rope (extraction is structural). The system requires active enforcement to maintain the coordination function while the extraction flows to beneficiaries. Definitional tangled rope: mixed motives with asymmetric power."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "standards_capture_vs_legitimate_coordination",
+      "question": "Do compliance standards primarily serve genuine safety/interoperability coordination, or have they been primarily optimized for incumbent protection?",
+      "resolution_mechanism": "Comparative analysis: compare standards that emerged through open-access processes (e.g., ISO open standards bodies) vs closed industry-led processes; measure correlation between standard complexity and incumbent market share; analyze revision history for whether standards tighten after new entrants begin conforming or tighten preemptively.",
+      "impact": "If primarily coordination: constraint should be classified as Rope from regulatory agency perspective and Rope/Scaffold from entrant perspective (high exit barriers but genuine benefits). If primarily extraction: Snare/Tangled Rope classifications confirmed; extraction mechanism is institutional rather than incidental.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether standards serve coordination or incumbent protection"
+    },
+    {
+      "id": "regulatory_agency_identity_lock",
+      "question": "Is the regulatory agency genuinely captured (constrained by external barriers\u2014funding, expertise dependence, revolving door) or identity-locked (has internalized the incumbent frame as 'how good regulation works')?",
+      "resolution_mechanism": "Interview analysis of agency personnel: do regulators see incumbent preferences as necessary technical requirements or as policy choices? Exposure experiment: how do agency positions shift when given alternative expertise sources (academic labs, nonprofits) with no incumbent connections? Longitudinal tracking of agency positions after leadership turnover.",
+      "impact": "If constrained: agency could shift with resource/structural reform. If identity_locked: agency's self-conception must change\u2014regulators must reframe 'good regulation' away from incumbent stability toward consumer dynamism. Identity lock requires different intervention logic.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory capture is structural or identity-based"
+    },
+    {
+      "id": "entrant_barrier_irreducibility",
+      "question": "Are compliance standards genuinely necessary for safety/function, or could substantially equivalent safety be achieved through alternative verification mechanisms (third-party testing, outcome-based standards, performance certification)?",
+      "resolution_mechanism": "Cross-domain comparison: industries with outcome-based standards vs prescriptive standards; comparison of safety performance, innovation rates, and competition metrics; controlled experiments with alternative verification approaches in low-risk domains.",
+      "impact": "If standards are irreducible: entrant barriers are partly legitimate costs of safety coordination (reduces Snare classification, increases Rope). If alternatives exist: barriers are extraction-optimized rather than safety-optimized (confirms Snare/extraction mechanism).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether compliance standards are irreducibly necessary"
+    },
+    {
+      "id": "extractive_overhead_magnitude",
+      "question": "What proportion of compliance cost is genuinely attributable to safety/interoperability coordination vs incumbent-optimized complexity?",
+      "resolution_mechanism": "Cost decomposition analysis: compare compliance costs for startups vs incumbents; measure cost reduction when entrants receive direct regulatory guidance vs consulting intermediary; longitudinal tracking of compliance costs before/after standards simplification initiatives.",
+      "impact": "If >70% is extractive overhead: extractiveness score increases to 0.65+, Snare classification strengthens. If <30% is extractive overhead: Tangled Rope classification strengthens with higher coordination weight.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of compliance cost attributable to extraction vs coordination"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Regulatory capture via compliance standards represents a structurally sophisticated extraction mechanism where incumbent firms shape technical standards that appear neutral but systematically exclude competitors. The constraint exhibits a genuine coordination function\u2014safety and interoperability standards are real and necessary\u2014alongside systematic extraction channeled through complexity, opacity, and incumbent expertise. This makes it a canonical tangled rope: the beneficiary (incumbent firms) genuinely benefits from coordination mechanisms (stable technical environment, predictable requirements) while simultaneously using those mechanisms to extract from the victim (new entrants). The regulatory agency occupies a constrained institutional position where genuine regulatory mandate (consumer protection, market fairness) is systematically captured. The high theater ratio (0.65) reflects that much of the compliance apparatus consists of ritual documentation and consultant-mediated transliteration rather than genuine technical verification. Over a 20-year interval, extractiveness has drifted upward (0.35 \u2192 0.58) as standards have accumulated without simplification, and theater has risen (0.42 \u2192 0.65) as documentation requirements have outpaced functional improvement. The trajectory indicates institutional entropy: rules accumulate, complexity increases, and the original coordination function becomes harder to distinguish from the incumbency-protection function.",
+    "key_agents": [
+      "Incumbent Regulated Firms: Primary beneficiary (institutional/arbitrage) \u2014 shapes standards through lobbying, benefits from complexity barriers, can influence regulatory process through technical expertise and revolving-door relationships",
+      "New Market Entrants: Primary victim (powerless/trapped) \u2014 faces immobilizing compliance burden, must match incumbent-designed specifications, cannot afford compliance consulting, cannot exit without abandoning market entry",
+      "Consumer Protection System: Secondary victim (powerless/trapped) \u2014 regulatory mandate is co-opted; markets have reduced competition and innovation, consumers bear the cost of reduced choice and slower technological progress",
+      "Regulatory Agency: Constrained institutional actor (institutional/constrained) \u2014 genuinely coordinates safety standards but constrained by resource limitations, expertise dependence on regulated firms, and revolving-door employment patterns",
+      "Compliance Consulting Industry: Institutional actor with degraded function (institutional/constrained) \u2014 originally served to translate standards into operation; now perpetuates complexity by repackaging incumbent-designed specifications as necessary procedure",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees mixed coordination and extraction; identifies that the system requires enforcement to maintain coordination while extraction systematically flows to beneficiaries"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint exhibits substantial extraction\u2014new entrants face compliance costs that are orders of magnitude higher than incumbents' marginal compliance costs, and this asymmetry is structurally designed rather than incidental. However, extractiveness is not maximal (0.70+) because genuine coordination function exists: safety standards are not entirely theater, interoperability requirements serve real functions, and some technical complexity is irreducible. The 0.58 value reflects the hybrid: approximately 35% of measured compliance cost is genuine safety/interoperability coordination; approximately 65% is extractive overhead (barriers to entry, complexity without functional benefit, consultant intermediation). Suppression (0.68): Moderate-high. Barriers to exit from the extracted position include: high sunk costs of compliance (learning, certification, consulting), capital requirements, information asymmetry (standards are opaque to outsiders), and regulatory uncertainty (standards can change unpredictably). Exit barriers are high but not absolute\u2014some entrants do successfully navigate them, and offshore alternatives exist in some sectors. The value reflects that suppression is strong but not total, leaving marginal space for exit. Theater ratio (0.65): Moderate-high. Traditional compliance certification, documentation requirements, and consulting-mediated standard translation constitute substantial performative content. Much compliance effort (audits, certifications, compliance reports) serves signaling and ritualistic functions rather than direct safety verification. However, theater is not dominant (not 0.85+) because genuine technical verification occurs in some standards. The value reflects that the certification system is substantially but not entirely theater.",
+    "perspectival_gap": "The magnitude of perspectival divergence reveals the constraint's extractive structure. The incumbent (institutional/arbitrage) experiences Rope\u2014they genuinely coordinate a technical environment while benefiting from protection against disruptive competition. Their experience is authentic: they do solve real coordination problems. The entrant (powerless/trapped) experiences Snare\u2014immobilizing barriers, no genuine benefit, zero alternative pathways. The regulatory agency (institutional/constrained) experiences Tangled Rope\u2014genuinely tries to serve consumer protection while constrained by captured institutional position and resource limits. The consumer protection mission (powerless/trapped) experiences Snare\u2014the regulatory mandate is hollowed out to serve incumbent interests, no exit pathway. This perspectival scatter (Rope \u2192 Snare \u2192 Tangled Rope \u2192 Snare) is diagnostic of institutional capture: beneficiaries see coordination, victims see extraction, and captured regulators see mixed motives they cannot untangle. The wide gap between incumbent and entrant perspectives on the same structural facts indicates that the inequality is not incidental but designed.",
+    "directionality_logic": "Directionality values (d) are derived from structural position: who benefits, who bears costs, and what options exist for exit. Incumbent firms get low d (~0.10-0.15) because they are net beneficiaries with arbitrage options\u2014they can influence standards, can choose which markets to serve, can adjust operations. The engine computes their effective extraction chi as low or slightly negative (they benefit). New entrants get high d (~0.85-0.95) because they bear full costs with no exit options\u2014trapped by capital requirements and information asymmetry. Their chi is maximal. The regulatory agency gets moderate d (~0.55-0.65) because it is structurally constrained but not fully trapped\u2014constrained exit options (resource limits, expertise dependence, career incentives) but some marginal agency in standard revisions. The consumer protection system gets very high d (~0.95) because it is an abstracted collective good that bears the cost of reduced competition and innovation with no capacity to organize or exit. The analytical observer gets moderate-high d (~0.72) reflecting their external position measuring extraction flowing through the system. These directionality values feed the sigmoid f(d) to produce the experienced extractiveness chi for each perspective, explaining why the incumbent genuinely experiences Rope while the entrant genuinely experiences Snare\u2014they occupy opposite positions in the extraction flow.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by revealing that it is neither pure coordination nor pure extraction but a hybrid where the coordination function is genuine and the extraction mechanism is systematic. The trap: if you eliminate the extractive overhead, you risk eliminating genuine safety coordination. The mandatrophy resolution shows that the solution is not to abandon standards but to decompose the coordination from the extraction. Open-access standard-setting processes (ISO, IETF model) can preserve genuine coordination while reducing incumbent influence. Outcome-based standards (performance targets rather than prescriptive specifications) can preserve safety while eliminating incumbent-designed complexity. Third-party testing (academic labs, nonprofits, decentralized verification) can replace consultant-mediated ritual with technical verification. The key insight: the coordination function and the extraction mechanism are operationally separable. They are hybrid not because they must be, but because the institutional design conflates them. Regulatory reform that separates these functions converts the constraint from Tangled Rope toward Rope (if coordination is preserved) or Scaffold (if standards sunset and alternative mechanisms mature). The analytical observer's Tangled Rope classification is the structural truth\u2014it contains both rope and snare components. The reform goal is to isolate the rope and eliminate the snare without collapsing the whole system."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "market_concentration_barriers",
+      "regulatory_agency_resource_dependency",
+      "information_asymmetry_expertise"
+    ],
+    "dual_formulation_note": "Regulatory capture via compliance standards is downstream of specific industry domains (finance, healthcare, telecom, environmental) and upstream of market concentration. The constraint story applies across domains but manifests differently depending on how standards are embedded in regulatory infrastructure and whether alternative verification mechanisms are available. Decompose by sector if sector-specific metrics are needed; this story models the generic institutional mechanism of capture through standards design."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.58
+    }
+  ]
+}

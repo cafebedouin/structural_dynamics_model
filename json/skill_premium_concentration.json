@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "skill_premium_concentration",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "skill"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Skill Premium Concentration in Labor Markets",
+    "topic_domain": "economic/labor",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "credentialed_professionals",
+      "educational_institutions",
+      "knowledge_employers"
+    ],
+    "victims": [
+      "low_skill_workers",
+      "wage_stagnation_populations",
+      "credential_excluded_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Low-Skill Worker (Trapped)",
+      "comment": "PERSPECTIVE 1: LOW-SKILL WORKER (SNARE) \u2014 Faces structural barriers to skill acquisition: cost of credentialing, time burden of retraining, geographic immobility, family obligations. Wage stagnation while skill premium rises. No viable exit from the constraint. Maximum experienced extraction without coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Aspiring Credential Seeker",
+      "comment": "PERSPECTIVE 2: ASPIRING CREDENTIAL SEEKER (TANGLED ROPE) \u2014 Constrained by credential costs and opportunity costs but also benefits from genuine credentialing value: market does reward real skill development. The system coordinates skill matching with employment while extracting through credential-gating and debt-financed education. Mixed experience: some real coordination, significant asymmetric costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Knowledge Employer (Tech/Finance)",
+      "comment": "PERSPECTIVE 3: KNOWLEDGE EMPLOYER (ROPE) \u2014 Experiences the constraint as coordination: credential system solves talent matching problem, reduces hiring risk, enables competitive wage differentiation. Benefits from concentration without bearing significant cost. Net beneficiary with arbitrage exit (can source talent globally)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Educational Credential System",
+      "comment": "PERSPECTIVE 4: EDUCATIONAL CREDENTIAL SYSTEM (ROPE) \u2014 Benefits from monopoly on skill certification. Coordination function: provides standardized credential signaling. Low experienced extraction because institutions have arbitrage exit (other credentialing pathways) and the system does deliver some genuine value. Theater ratio moderate because credentials correlate with actual skill, not purely performative."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "High-Skill Incumbent (Professional)",
+      "comment": "PERSPECTIVE 5: HIGH-SKILL INCUMBENT (TANGLED ROPE) \u2014 Benefits significantly from credential gatekeeping that maintains wage premium. Experiences constraint as both coordination (credentials signal quality) and extraction (protects market share against new entrants). Mobile exit option (can switch sectors/geography) but incentivized to maintain the constraint. Effective extraction from below funds their premium."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Alternative Credentialing Coalition",
+      "comment": "PERSPECTIVE 6: ALTERNATIVE CREDENTIALING COALITION (SCAFFOLD) \u2014 Organized agents (bootcamps, online platforms, apprenticeship programs) building parallel pathways with lower barriers and faster completion. Sees the traditional credential constraint as temporary and being bypassed. Has sunset clause: as alternative credentials gain employer recognition, traditional credential gatekeeping loses extractive force. Constrained by incumbent institutional resistance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Structural View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational scope, this constraint genuinely coordinates labor matching: employers need reliable signals of capability, workers need certification. The constraint also genuinely extracts: credential gatekeeping maintains wage premium by restricting supply of certified workers. Both functions are structural and irreducible. Effective extraction (chi) is moderate because the coordination function is genuine."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "credential_real_value_vs_signaling",
+      "question": "What proportion of the skill premium reflects genuine productivity gains from credentials vs. pure signaling power (Spence screening)?",
+      "resolution_mechanism": "Comparative wage analysis: same-task workers with/without credentials; productivity measurement by task type; cross-country credential requirement variation; longitudinal skill-gain tracking",
+      "impact": "If high real value (>70%): constraint is primarily Rope (coordination). If high signaling (>50%): constraint is primarily Snare (extraction). Classification sensitivity: if signaling dominates, victim perspectives become more accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of credential premium that reflects genuine skill vs. pure signaling"
+    },
+    {
+      "id": "alternative_credential_employer_acceptance",
+      "question": "Are non-traditional credentials (bootcamps, online certifications, apprenticeships) achieving labor market acceptance parity with traditional degrees?",
+      "resolution_mechanism": "Longitudinal wage tracking for alternative-credentialed workers; employer hiring data on credential acceptance; wage convergence analysis over 10+ years; sector-specific adoption rates",
+      "impact": "If parity achieved: scaffold sunset is real, constraint extractiveness declining. If stagnant: alternative pathways remain stigmatized, traditional credential monopoly persists, extractiveness rising.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Labor market acceptance trajectory of alternative credentials"
+    },
+    {
+      "id": "geographic_credential_arbitrage",
+      "question": "Can credential-excluded populations exercise exit by relocating to labor markets with lower credential requirements or different gating mechanisms?",
+      "resolution_mechanism": "Migration flow analysis: credential-excluded populations to regional/international labor markets; wage gains post-migration; regional wage dispersion for same-skill workers; immigration policy barrier measurement",
+      "impact": "If exit viable: suppression lower than measured, constraint may downgrade from Snare to Tangled Rope. If exit blocked: exit_options remain 'trapped', suppression confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of geographic exit for credential-excluded populations"
+    },
+    {
+      "id": "automation_skill_premium_feedback",
+      "question": "Does automation increase or decrease the skill premium by replacing routine tasks at both low and high skill levels?",
+      "resolution_mechanism": "Sectoral automation impact analysis; wage trend correlation with automation adoption; occupational displacement patterns by skill level; task-level automation substitution analysis",
+      "impact": "If automation increases premium (high-skill tasks less automatable): constraint becomes more extractive, beneficiary positions strengthen. If automation decreases premium: constraint extractiveness may decline, compressed wage distribution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Automation's effect on skill premium trajectory"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The skill premium concentration constraint describes the structural mechanism by which labor markets allocate higher wages to credentialed workers while restricting access to those credentials through cost, time, and gating mechanisms. This constraint exhibits genuine tension between its coordination and extraction functions. Credentials do solve a real labor market problem: employers need reliable signals of worker capability, and standardized credentials reduce information asymmetry. Simultaneously, credential gatekeeping restricts the supply of certified workers, maintaining wage premiums that exceed what unrestrained competition would produce. The extractiveness has increased from 0.35 to 0.58 over two decades as the credential premium has widened and retraining barriers have risen. The theater ratio (0.48) indicates moderate performative content \u2014 credentials correlate with skill but also function as positional goods where much of their value derives from scarcity rather than from intrinsic productivity. Alternative credentialing pathways (bootcamps, online platforms, apprenticeships) are building parallel systems with different gating mechanisms, but traditional credential institutions maintain substantial gatekeeping power through employer familiarity and established signaling convention.",
+    "key_agents": [
+      "Low-Skill Workers: Primary victim (powerless/trapped) \u2014 wage stagnation, credential barriers, structural immobility",
+      "Aspiring Credential Seekers: Secondary victim (moderate/constrained) \u2014 face debt, time burden, opportunity costs; also benefit from genuine skill development",
+      "Knowledge Employers (Tech/Finance): Primary beneficiary (institutional/arbitrage) \u2014 credential system solves talent matching; can access global talent pools",
+      "Educational Credential System: Beneficiary (institutional/arbitrage) \u2014 monopoly on certification, coordination value genuine but extractive gatekeeping maintained",
+      "High-Skill Incumbents: Mixed actor (powerful/mobile) \u2014 benefit from wage premium protection; experience constraint as protecting professional monopoly",
+      "Alternative Credentialing Coalition: Organized actor (organized/constrained) \u2014 building sunset pathways: bootcamps, online platforms, apprenticeships",
+      "Analytical Observer: Structural view (analytical/analytical) \u2014 sees both genuine coordination (skill matching) and genuine extraction (credential gatekeeping)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The skill premium has widened substantially \u2014 credentialed workers earn 50-100% wage premiums over non-credentialed workers in comparable roles. The increase from 0.35 to 0.58 reflects rising barriers to credential attainment: cost of higher education has doubled in real terms over two decades, retraining windows have compressed, and credential inflation means low-skill workers face higher credential requirements for the same roles. However, extractiveness is not higher (e.g., 0.70+) because credentials do correlate with genuine skill gains and employers do benefit from real productivity improvements alongside signaling value. The constraint is hybrid: real coordination + real extraction, neither fully reducible to the other. Suppression (0.62): High. Multiple barriers prevent trapped workers from acquiring credentials: direct costs ($20k-$200k for degree programs), opportunity costs (2-6 years foregone earnings), family/geographic constraints, incomplete information about ROI, and qualification barriers (prior credentials required). These create near-total suppression of exit for poorest populations; mobility and constrained exit are available to middle-income aspiring credential seekers but at high cost. Theater ratio (0.48): Moderate. Credentials signal real skill but also function as positional goods \u2014 much of their value derives from relative scarcity. Credentialing institutions maintain performative content (graduation ceremonies, institutional prestige narratives) but credentials do correlate with measurable capability. The theater is lower than pure Piton (which would require theater_ratio \u2265 0.70) because the signaling function, while imperfect, works reasonably well.",
+    "perspectival_gap": "This constraint demonstrates classic hybrid dynamics. The trapped victim sees a Snare because suppression is total and exit is inaccessible. The constrained seeker sees a Tangled Rope because they experience both real skill development (genuine coordination) and real extraction costs (debt, opportunity cost). The beneficiary sees a Rope because they experience coordination benefit without bearing the suppression cost. The alternative coalition sees a Scaffold because they have organized agency and see a clear sunset: as alternative credentials mature and employers accept them, the traditional constraint's extractive gatekeeping will lose force. The analytical observer sees Tangled Rope because both functions are structurally real \u2014 credentials genuinely coordinate labor matching and genuinely gate access to wage premiums.",
+    "directionality_logic": "Each perspective's experienced extractiveness flows from its structural position relative to the constraint. Trapped workers with no exit pay the full extraction cost. Constrained seekers with access to (expensive) exit pay high but not maximum costs, and they gain real skill benefit that partially offsets extraction. Beneficiaries gain from the constraint and experience it as coordination. Organized alternatives have agency and see clear exit paths. The analytical observer integrates across all positions and sees the constraint as genuinely hybrid: the coordination function (skill matching) is real, and the extraction function (wage gatekeeping) is real. Neither can be reduced to the other or dissolved without dissolving both.",
+    "mandatrophy_analysis": "HYBRID RESOLUTION: This constraint resolves mandatrophy by demonstrating that classification depends on agent position and that the constraint is genuinely hybrid, not mistakenly bifurcated. The constraint is not 'really' coordination with an extraction cover story, nor is it 'really' extraction with a coordination narrative. Both functions are structural. The coordination function is real: employers need skill signals, workers benefit from credential development, the system does match talent to roles more efficiently than unmediated labor markets would. The extraction function is real: credential gatekeeping restricts supply of certified workers, maintaining wage premiums that exceed competitive levels, and the barriers to credential attainment concentrate benefits upward. Neither function can be removed without destroying the other. Removing the credential gatekeeping (extraction) would also remove the skill-signaling function (coordination). Removing credential requirements (coordination) would also remove the wage premium protection (extraction). The constraint is a genuine Tangled Rope: hybrid extraction-coordination that cannot be decomposed into pure types. The mandatrophy resolves by recognizing that some constraints are irreducibly hybrid."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "wage_stagnation",
+      "credential_inflation",
+      "educational_debt_accumulation"
+    ],
+    "dual_formulation_note": "Skill premium concentration is upstream of wage stagnation and credential inflation constraints. The coordination function of skill-matching is genuine; the extraction function of gatekeeping is also genuine. Decomposition would artificially separate these coupled functions. Network links show downstream consequences: wage stagnation for credential-excluded populations, credential inflation as employers raise requirements, and educational debt accumulation as credentialing costs rise."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.42
+    }
+  ]
+}

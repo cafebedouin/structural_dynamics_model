@@ -1,0 +1,212 @@
+{
+  "header": {
+    "constraint_id": "algorithmic_stablecoin_bootstrap_extractiveness",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "algostab"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Algorithmic Stablecoin Bootstrap Extractiveness",
+    "topic_domain": "cryptoeconomics/defi/monetary_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "early_token_holders",
+      "protocol_developers",
+      "arbitrage_traders"
+    ],
+    "victims": [
+      "late_entrants",
+      "retail_depositors",
+      "ecosystem_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Late Retail Depositor",
+      "comment": "PERSPECTIVE 1: LATE RETAIL DEPOSITOR (SNARE) \u2014 Enters the protocol after initial phases, trapped by apparent stability narrative. Cannot exit without realizing losses once the depeg begins. Bears full extraction cost as bootstrap incentives collapse. No meaningful agency or alternative."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Early Token Holders and Developers",
+      "comment": "PERSPECTIVE 2: EARLY TOKEN HOLDERS AND DEVELOPERS (ROPE) \u2014 Experience the constraint as pure coordination: bootstrapping liquidity for the stablecoin through token incentives solves a genuine cold-start problem. Net beneficiaries with exit optionality (arbitrage). Incentive structure aligns with protocol success narrative."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Arbitrage Traders",
+      "comment": "PERSPECTIVE 3: ARBITRAGE TRADERS (TANGLED ROPE) \u2014 Exploit the peg maintenance mechanism and token incentives. Coordination function: liquidity provision during volatile periods. Extraction: systematic extraction of protocol reserves through arbitrage while maintaining superficial peg. Mobile exit once depeg becomes inevitable."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Ecosystem Growth Coalition",
+      "comment": "PERSPECTIVE 4: ECOSYSTEM GROWTH COALITION (SCAFFOLD) \u2014 Sees bootstrap extractiveness as temporary coordination mechanism with sunset. Incentives are designed to decline as protocol matures. Meaningful agency through governance participation; sunset path clear (transition to endogenous stabilization mechanisms)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Reserve Stabilization Theater",
+      "comment": "PERSPECTIVE 5: RESERVE STABILIZATION THEATER (PITON) \u2014 The advertised reserve mechanism and stability guarantees are largely theatrical. Actual stabilization relies on token incentive flows and sustained new capital, not genuine reserve backing. Theater persists through institutional inertia and marketing narrative."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Ecosystem Stability Commons",
+      "comment": "PERSPECTIVE 6: ECOSYSTEM STABILITY COMMONS (SNARE) \u2014 Abstract collective good that bears the cost of cascading depegs and protocol failure. System risk that accrues to the broader DeFi ecosystem and retail participants cannot organize to exit or protect themselves."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Monetary Economics View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / MONETARY ECONOMICS VIEW (MOUNTAIN) \u2014 From a civilizational perspective on monetary systems, algorithmic stablecoins face an immutable constraint: they require continuous growth and external capital to maintain peg in the face of redemption pressure. This perspective risks naturalizing what is actually a contingent design choice \u2014 seeing Ponzi-like capital flow requirements as inherent to the form rather than as a specific failure mode."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "bootstrap_sustainability_threshold",
+      "question": "At what size of total value locked (TVL) does token incentive bootstrapping become mathematically unsustainable relative to organic demand?",
+      "resolution_mechanism": "Comparative analysis of successful stablecoin adoption curves; identification of the ratio between incentivized liquidity and organic usage volume at depeg events",
+      "impact": "If threshold is low (below $500M TVL): bootstrap extractiveness is inherent to the design. If threshold is high: extractiveness derives from scale and duration of incentive program, not from the core mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sustainable TVL threshold for token-incentivized bootstrap"
+    },
+    {
+      "id": "reserve_backing_adequacy",
+      "question": "What fraction of the stablecoin supply is genuinely backed by protocol reserves versus capital inflows, at the moment of bootstrap completion?",
+      "resolution_mechanism": "Reserve accounting at multiple time points; reconstruction of actual reserve coverage ratios from on-chain data; comparison to stated reserve metrics",
+      "impact": "If reserves cover >60% of supply at bootstrap completion: extractiveness is moderate. If reserves cover <20%: extractiveness is extreme (pure capital flow scheme).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Actual reserve backing percentage at bootstrap end"
+    },
+    {
+      "id": "endogenous_stability_mechanism_viability",
+      "question": "Can any algorithmic stablecoin transition from exogenous token incentives to endogenous stabilization (e.g., demand-driven collateral ratio adjustment) without either depeg or extreme volatility?",
+      "resolution_mechanism": "Historical analysis of stablecoin transitions; identification of successful endogenous stabilization implementations or structural impossibility proofs",
+      "impact": "If viable: scaffold classification holds; sunset is real. If nonviable: scaffold is aspirational; the constraint is perpetual snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether endogenous stabilization can replace exogenous incentives"
+    },
+    {
+      "id": "late_entrant_awareness",
+      "question": "What fraction of late-stage retail depositors are aware of the bootstrap extraction mechanism and actively choose to participate despite it?",
+      "resolution_mechanism": "User surveys; analysis of participant behavior in relation to protocol communication and reserve metrics; comparison of user retention before/after depeg across cohorts",
+      "impact": "If awareness is high (>50%): users are constrained but informed, justifying tangled rope. If awareness is low (<20%): users are trapped through informational capture, justifying snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Late-entrant awareness of bootstrap extraction mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Algorithmic stablecoins bootstrap liquidity and price stability through token incentive programs that reward early liquidity providers, arbitrage traders, and protocol participants. The constraint arises from a structural tension: the protocol requires continuous capital inflows and maintained peg to sustain value, but the incentive structure systematically extracts value from late entrants once bootstrap conditions are satisfied. Early participants (token holders, developers, arbitrage specialists) benefit from upside appreciation and yield capture; late entrants bear asymmetric risk when token incentives collapse and underlying demand proves insufficient to maintain peg. The constraint exhibits classification across all six types depending on observer perspective: early participants see pure coordination (Rope), arbitrage traders exploit the system while helping maintain coordination (Tangled Rope), late entrants face pure extraction (Snare), the ecosystem bears system risk (Snare), reserve stability claims are theatrical (Piton), some believe bootstrap is a temporary necessity (Scaffold), and some economists see immutable limits to algorithmic stabilization (Mountain).",
+    "key_agents": [
+      "Early Token Holders: Primary beneficiary (institutional/arbitrage) \u2014 capture token appreciation and yield during bootstrap phase; can exit before collapse",
+      "Protocol Developers: Primary beneficiary (institutional/arbitrage) \u2014 secure funding and community value from token allocation; aligned with bootstrap success narrative",
+      "Arbitrage Traders: Secondary beneficiary (powerful/mobile) \u2014 systematically extract protocol reserves through trades that maintain peg while capturing spread; exit before depeg",
+      "Late Retail Depositors: Primary victim (powerless/trapped) \u2014 enter after bootstrap phase, lured by stability narrative; trapped by illiquidity once depeg begins",
+      "Ecosystem Stability: Secondary victim (powerless/trapped) \u2014 system risk concentrates in DeFi ecosystem; cascading failures harm other protocols",
+      "Ecosystem Growth Coalition: Organized agents (organized/constrained) \u2014 believe bootstrap is temporary; expect transition to organic demand or endogenous stability"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and increasing. The baseline extractiveness reflects the asymmetric value transfer from late entrants to early participants. The measurement trajectory (0.22 \u2192 0.68 over 6 periods) shows classic bootstrap pattern: early phase low extractiveness as legitimacy builds, middle phase moderate extractiveness as capital inflows grow and incentives accumulate, late phase high extractiveness as token incentives collapse and depeg becomes visible. The highest values reflect the period when late entrants are maximally trapped \u2014 token incentives have stopped growing, but depeg has not yet occurred, leaving exit illiquid. Suppression (0.72): Very high. Multiple suppression mechanisms operate: (1) Informational asymmetry \u2014 reserve adequacy and sustainability are obscured by marketing; (2) Coordination failure \u2014 late entrants cannot organize or exit collectively; (3) Liquidity illusion \u2014 apparent stability through maintained peg prevents accurate risk assessment; (4) Capital lock-in \u2014 illiquidity prevents rapid exit; (5) Sunk cost attachment \u2014 individuals who have experienced gains resist loss realization. Theater ratio (0.58): Moderate-high. Reserve stability claims (published reserve metrics, peg maintenance narratives, 'backed by assets' framing) are partially theatrical \u2014 actual stabilization relies on continuous token incentive flows. The theater component increases as bootstrap matures: marketing emphasis on stability grows while actual stability mechanisms weaken.",
+    "directionality_logic": "Directionality values are derived from structural position within the extraction flow. Early token holders benefit from the constraint (d \u2248 0.10) \u2014 arbitrage exit options, low suppression experienced, institutional positioning. Late depositors bear costs (d \u2248 0.92) \u2014 trapped exit, high suppression, powerless positioning. Arbitrage traders sit asymmetrically (d \u2248 0.45) \u2014 they benefit from token flows but are also extracting from the protocol itself, so their relationship is mixed. The ecosystem stability commons (d \u2248 0.95) is maximally targeted \u2014 trapped against cascading risk, powerless to organize. The analytical observer at civilizational scope may naturalize the constraint as inherent to algorithmic money (d \u2248 0.72 as canonical analytical), but structural data reveals this as false summit: the extractiveness derives from contingent design choices (infinite token issuance, reserve inadequacy) not from immutable monetary economics.",
+    "perspectival_gap": "The constraint demonstrates maximum perspectival divergence. Early participants see a legitimate bootstrapping mechanism (Rope from institutional/arbitrage perspective). Arbitrage traders explicitly exploit the system while providing liquidity (Tangled Rope \u2014 mixed coordination and extraction). Late entrants face pure extraction with no exit (Snare \u2014 powerless/trapped). The ecosystem bears uncompensated risk (Snare \u2014 abstract collective). Reserve claims are theatrical (Piton \u2014 performative stability narrative). Some believe the system can mature past bootstrap (Scaffold \u2014 organized participants see sunset). The analytical observer risks seeing inherent monetary constraints (Mountain) when actually observing contingent design failures. The perspectival gap is extreme because the constraint's legitimacy genuinely differs across entry cohorts and time horizons.",
+    "mandatrophy_analysis": "RESOLUTION: This constraint avoids mandatrophy by accurately decomposing the bootstrap mechanism into components with different structural functions. (1) COORDINATION COMPONENT: genuine cold-start problem requiring liquidity \u2014 this is real and legitimate. (2) EXTRACTION COMPONENT: asymmetric value transfer from late entrants to early beneficiaries \u2014 this is also real and illegitimate. The claimed_type (Snare) prioritizes the extraction component because it governs terminal outcomes: late entrants are trapped regardless of whether early coordination was real. The Rope and Tangled Rope perspectives capture the coordination function from beneficiary/mixer positions but do not override the snare classification because the extraction is structural, not contingent. The false mountain (natural law view) is caught by the false summit detector \u2014 if the analytical observer were correct about immutable constraints, the protocol could not be redesigned; but algorithmic stablecoins with different incentive structures and reserve mechanics exist, proving the constraint is contingent. The mandatrophy is resolved by (a) accepting multiple types as legitimate from different positions, (b) prioritizing the type that captures late-stage terminal outcomes over types that capture early-stage intentions, and (c) flagging the mountain as a false summit."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "defi_liquidity_mining_extractiveness",
+      "cryptocurrency_reserve_adequacy"
+    ],
+    "dual_formulation_note": "The algorithmic stablecoin bootstrap constraint decomposes into two structurally distinct claims: (1) bootstrap_cold_start_necessity (\u03b5=0.15, Rope) \u2014 liquidity mining addresses genuine network effects problem; (2) algorithmic_stablecoin_bootstrap_extractiveness (\u03b5=0.68, Snare) \u2014 the specific implementation transfers asymmetric value to early participants. The stories are linked because bootstrap necessity does not imply the observed extractiveness level \u2014 alternative bootstrap designs with lower extractiveness exist."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    }
+  ]
+}

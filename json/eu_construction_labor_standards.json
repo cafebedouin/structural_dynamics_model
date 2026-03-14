@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "eu_construction_labor_standards",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "eucls"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Construction Labor Standards and Wage Extraction",
+    "topic_domain": "labor_regulation/international_coordination",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "western_european_construction_firms",
+      "unionized_labor_organizations",
+      "regulatory_agencies"
+    ],
+    "victims": [
+      "migrant_construction_workers",
+      "eastern_european_labor_supply",
+      "labor_market_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "label": "The Migrant Construction Worker",
+      "comment": "PERSPECTIVE 1: MIGRANT CONSTRUCTION WORKER (SNARE) \u2014 Trapped by visa restrictions, debt-financed migration, language barriers, and family dependency on remittances. Cannot exit without losing both income and immigration status. Faces wage suppression relative to native workers, despite identical work. Zero degrees of freedom structurally; maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Eastern European Labor Supply",
+      "comment": "PERSPECTIVE 2: EASTERN EUROPEAN LABOR SUPPLY (TANGLED ROPE) \u2014 Constrained by EU mobility rules, skill certification requirements, and regional income differentials. Participates in coordination mechanism (EU labor mobility framework) that legitimately solves skill matching and wage harmonization problems. Also subject to asymmetric extraction via wage depression, deliberate under-enforcement of standards in Eastern member states, and regulatory arbitrage. Mixed experience: genuine coordination benefit alongside significant extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "Western European Construction Firms",
+      "comment": "PERSPECTIVE 3: WESTERN EUROPEAN CONSTRUCTION FIRMS (ROPE) \u2014 Net beneficiaries with arbitrage options. Standards create cost floors that prevent wage competition from low-cost migration, protecting domestic labor costs and profit margins. Firms see the constraint as coordination: the standards allow simultaneous access to lower-wage labor while preventing price wars. They can arbitrage by posting workers from Eastern subsidiaries (Posted Workers Directive creates loophole), capturing differential wages."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Unionized Labor Organizations",
+      "comment": "PERSPECTIVE 4: UNIONIZED LABOR ORGANIZATIONS (ROPE) \u2014 Organized beneficiaries with constrained exit (cannot exit EU labor coordination without forfeiting political influence). Standards protect unionized workers' wage floors and prevent undercutting by migrant labor. The constraint solves the collective action problem of wage suppression through immigration. Unions experience the framework as coordination mechanism, not extraction \u2014 it serves their interests."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "EU Regulatory Agencies and Compliance Theater",
+      "comment": "PERSPECTIVE 5: EU REGULATORY AGENCIES (PITON) \u2014 The enforcement apparatus (labor inspectorates, social security oversight) is substantially performative. Standards exist on paper; enforcement varies dramatically across member states (Western enforcement ~80%, Eastern enforcement ~20%). Inspectorates conduct routine audits that firms anticipate and manage through temporary compliance. Theater ratio high because the regulatory ritual persists despite known low functional enforcement. Agencies maintain the appearance of standards without achieving equal application across EU space."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Cross-position analysis reveals the constraint simultaneously coordinates legitimate labor market matching (solves the skill mismatch and wage equalization problem across unequal development zones) and extracts from migrant workers via regulatory arbitrage, enforcement gaps, and structural immobility. The constraint is NOT a mountain (immutable feature of labor economics) nor pure coordination. It is a hybrid that requires active enforcement to suppress the arbitrage mechanisms that beneficiaries use to capture differential rents."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "enforcement_gap_structural_or_intentional",
+      "question": "Is the enforcement gap between Western and Eastern member states a structural result of capacity differences, or an intentional regulatory strategy to preserve differential extraction?",
+      "resolution_mechanism": "Comparative analysis of inspection frequencies, fine structures, and prosecution rates controlling for firm size and GDP; interviews with labor inspectorates in high-enforcement vs low-enforcement member states; correlation between enforcement level and firm profit margins",
+      "impact": "If structural (capacity): reclassify the constraint as Rope with regional variation. Sunset clause realistic through capacity-building. If intentional (regulatory arbitrage): snare characteristics are deliberate, sunset clause is cosmetic, and extraction is systemic.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether enforcement gaps reflect capacity constraints or intentional regulatory strategy"
+    },
+    {
+      "id": "posted_workers_directive_loophole_scope",
+      "question": "What proportion of migrant construction labor enters via the Posted Workers Directive (PWD) loophole versus direct hire? Does PWD legitimately solve labor mobility or does it primarily enable wage arbitrage?",
+      "resolution_mechanism": "Administrative data on PWD deployment percentages by member state; longitudinal wage comparison between posted workers and directly hired migrants doing identical work; analysis of PWD utilization surge after 2004 Eastern EU accession",
+      "impact": "If PWD primarily labor mobility: constraint is coordination with spillover benefit to migrants. If PWD primarily arbitrage mechanism: constraint is extraction mechanism disguised as mobility, and the beneficiary/victim structure is deliberate architectural choice.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Posted Workers Directive is labor mobility mechanism or wage arbitrage vehicle"
+    },
+    {
+      "id": "wage_suppression_migration_or_standards",
+      "question": "Does wage suppression of migrant workers result from labor supply elasticity (more workers competing for jobs) or from deliberate standards enforcement differential (treated as lower-wage category)?",
+      "resolution_mechanism": "Wage regression analysis with controls for skill, experience, position, firm size, and member state enforcement level; comparison of wage gaps for identical work before/after PWD implementation; quasi-experimental analysis of firm behavior following increased inspection rates",
+      "impact": "If supply-driven: constraint is economic law, not institutional extraction. Reclassify toward mountain. If standards-driven: constraint is deliberate structural differentiation, classification as snare/tangled_rope confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether wage suppression is supply-side or standards-enforcement mechanism"
+    },
+    {
+      "id": "identity_lock_migrant_acceptance",
+      "question": "Do migrant construction workers accept wage suppression because they cognitively frame migration as temporary (identity not tied to construction career) or because structural exit barriers create learned helplessness?",
+      "resolution_mechanism": "Qualitative research on migrant self-identification and career aspiration; comparison of acceptance levels with linguistic/cultural integration levels; analysis of exit propensities when exit barriers are removed (acquisition of citizenship, skill certification)",
+      "impact": "If identity-locked (temporary migration frame): suppression persists even after structural barriers removed. If trapped (structural barriers): removing barriers should increase exit and reduce acceptance. If constrained (cost-based exit): exit increases with income gains.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether migrant worker acceptance is identity-based or structurally determined"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "EU construction labor standards represent a structural hybrid between legitimate cross-border labor coordination and extractive wage suppression of migrant workers. The constraint operates through a formal framework (EU labor mobility directives, Posted Workers Directive, minimum wage harmonization targets) that genuinely solves the coordination problem of skill matching and labor supply across unequal development zones. Simultaneously, the constraint enables asymmetric extraction: enforcement gaps between member states, visa restrictions that trap migrant workers, deliberate regulatory arbitrage through the PWD loophole, and structural wage suppression relative to native workers doing identical work. The theater ratio (0.58) reflects that compliance theater is moderate but increasing \u2014 EU standards are publicly enforced in Western member states while systematically under-enforced in Eastern states, creating the appearance of uniform labor protection alongside structural differentiation. The extractiveness trajectory (0.35\u21920.55 over the interval) shows accumulation: as the constraint matured post-2004, beneficiaries (Western firms, unions) increasingly exploited enforcement gaps and PWD loopholes, while the formal standard remained unchanged.",
+    "key_agents": [
+      "Migrant Construction Workers: Primary victims (powerless/trapped) \u2014 trapped by visa restrictions, debt, family dependency, and language barriers; face wage suppression and non-enforcement of standards in actual workplace conditions",
+      "Eastern European Labor Supply: Secondary victims (moderate/constrained) \u2014 constrained by EU mobility rules and skill certification requirements; subject to regulatory arbitrage via enforcement differential",
+      "Western European Construction Firms: Primary beneficiaries (institutional/arbitrage) \u2014 capture differential wages between posted workers and native workers; use PWD to arbitrage enforcement gaps; maintain market position through standards that prevent wage competition",
+      "Unionized Labor Organizations: Secondary beneficiaries (organized/constrained) \u2014 defend unionized workers' wage floors through standards; constrained by EU political process but retain significant influence",
+      "EU Regulatory Agencies: Theater maintainers (institutional/arbitrage) \u2014 conduct compliance ritual while enforcement varies 4x across member states; maintain appearance of uniform standards",
+      "Analytical Observer: Cross-position analyst (analytical/analytical) \u2014 observes simultaneous coordination function (labor market matching across unequal zones) and extraction mechanism (enforcement arbitrage, wage suppression via differential application)"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate-high, reflecting genuine extraction alongside coordination. The constraint captures differential wages through (a) structural wage suppression of migrants relative to native workers for identical work, (b) enforcement gap exploitation (firms invest in compliance only in high-inspection member states), (c) Posted Workers Directive loophole that allows posting without full labor standard application. But extractiveness is not maximal (\u22640.66 snare threshold) because the coordination function is real \u2014 the standard does enable labor mobility that would not occur without wage harmonization framework. Suppression (0.65): Moderate-high. Visa restrictions, family dependency on remittances, debt-financed migration, language barriers, and lack of citizenship all create barriers to exit. But suppression is not total \u2014 some workers accumulate skills, acquire citizenship, and exit. Theater ratio (0.58): Moderate. Compliance ritual exists but is not the dominant extraction mechanism. Standards are genuinely enforced in Western member states (~80% of firms comply with documented audits). Eastern enforcement (~20%) creates appearance of uniform standards while actual compliance varies. The gap is structural and visible, not purely theatrical \u2014 firms and workers alike know enforcement varies by jurisdiction. Claimed type (Tangled Rope) reflects both coordination (beneficiaries + active enforcement gate) and extraction (victims + asymmetric gains).",
+    "perspectival_gap": "The constraint exhibits maximal perspectival divergence. Western firms see Rope (coordination mechanism that enables profitable access to skill-matched labor while protecting native wage floors). Migrants see Snare (trapped in low-wage work with no exit). Unions see Rope (protection against wage undercutting). Eastern labor supply sees Tangled Rope (both benefit from EU mobility and suffer from enforcement differential). Regulatory agencies see Piton (performative compliance ritual maintained through inertia). The analytical observer sees Tangled Rope (simultaneous coordination and extraction). The perspectival gap reveals that 'the same labor standard' is experienced as coordination by beneficiaries, as enforcement theater by agencies, and as structural trap by powerless victims.",
+    "directionality_logic": "Directionality is derived from power + exit + beneficiary/victim status. Migrant workers (powerless/trapped/victim) derive d \u2248 0.95, producing maximum f(d) \u2248 1.42, maximum chi. Western firms (institutional/arbitrage/beneficiary) derive d \u2248 0.10, producing f(d) \u2248 -0.01, negative chi (they experience subsidy, not extraction). Eastern labor supply (moderate/constrained/victim) derives d \u2248 0.65, producing f(d) \u2248 1.00, moderate chi. The directionality spread (d=0.10 to d=0.95) explains why the same constraint produces Rope from institutional beneficiaries and Snare from powerless victims. Scope modifier \u03c3(S=continental) = 1.1 amplifies extractiveness at larger scale \u2014 enforcement gaps are harder to detect and address across 27 member states than within a single state.",
+    "mandatrophy_analysis": "RESOLUTION: The constraint resolves mandatrophy by showing that Tangled Rope and Rope perspectives are not contradictory but perspectival. The snare perspective (migrant worker) and rope perspective (Western firm) are both correct descriptions of the same constraint from their respective structural positions. The mandate-atrophy resolution requires recognizing that (a) the coordination function is genuine and necessary (labor market matching without standards would fail), (b) the extraction is equally genuine and structural (enforcement gaps are not accidents but architectural features), and (c) the hybrid classification correctly identifies both. The false summit test would misclassify this as 'just coordination' or 'just extraction' depending on which perspective dominates. The tangled_rope classification prevents both errors by insisting on active enforcement (distinguishing from pure rope) and genuine coordination function (distinguishing from pure snare). The theater ratio (0.58) confirms that enforcement ritual is real but not dominant \u2014 this is not a piton (degraded constraint maintained purely through ritual). The presence of both beneficiaries and victims, and the requirement for active enforcement to maintain the extraction mechanism, satisfies the Tangled Rope canonical gate."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "posted_workers_directive_loophole",
+      "eastern_european_labor_market_integration",
+      "union_wage_protection_mechanisms"
+    ],
+    "dual_formulation_note": "The EU labor standards constraint is upstream of the specific PWD loophole mechanism. The standards create the coordination framework within which arbitrage occurs. The loophole is downstream and represents the specific extraction vehicle. Both constraints have different \u03b5 values: standards coordination ~0.30 (pure rope), PWD arbitrage ~0.72 (snare). The family structure shows how a coordination framework becomes a vehicle for extraction through institutional design choices."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

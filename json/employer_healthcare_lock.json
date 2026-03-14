@@ -1,0 +1,186 @@
+{
+  "header": {
+    "constraint_id": "employer_healthcare_lock",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ehcl"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "snare",
+    "human_readable": "Employer-Mediated Healthcare Lock in the United States",
+    "topic_domain": "economic/labor/healthcare",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "large_employers",
+      "health_insurance_carriers",
+      "pharmaceutical_manufacturers"
+    ],
+    "victims": [
+      "employees_with_health_conditions",
+      "early_career_workers",
+      "independent_contractors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Employee with Chronic Illness",
+      "comment": "PERSPECTIVE 1: EMPLOYEE WITH CHRONIC CONDITION (SNARE) \u2014 Faces material barriers to exit: losing employer coverage means losing continuity of care, facing pre-existing condition exclusions (pre-ACA context) or premium hikes, and bearing catastrophic out-of-pocket costs. Cannot leave the job without risking medical bankruptcy. Suppression is structural \u2014 the coupling of employment and healthcare coverage creates a direct financial penalty for exit. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Early-Career Worker",
+      "comment": "PERSPECTIVE 2: EARLY-CAREER WORKER (SNARE) \u2014 Family health insurance depends on maintaining employment. Job mobility is severely constrained \u2014 changing employers means coverage gaps, requalification delays, and exposure. No meaningful alternative (individual market is prohibitively expensive for young families). Trapped by structural dependency, not personal choice. The constraint extracts career mobility options."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Healthy Mobile Worker",
+      "comment": "PERSPECTIVE 3: HEALTHY MOBILE WORKER (TANGLED ROPE) \u2014 Experiences genuine coordination (employer provides group purchasing power that reduces individual premium burden) alongside asymmetric extraction (employer captures surplus from group rate negotiation, conditions benefits on continued employment). High exit costs (loses group rate access) but not catastrophic (personal health risk is lower). Constrained by switching costs, not trapped by medical necessity. Some coordination benefit genuine."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Large Employer",
+      "comment": "PERSPECTIVE 4: LARGE EMPLOYER (ROPE) \u2014 Benefits substantially from lock-in: employee retention without requiring competitive wages, workforce stability, reduced turnover costs. Experiences the constraint as pure coordination \u2014 providing group coverage solves collective action problem for healthcare access. No pressure to exit; can arbitrage to alternative workforce strategies. Minimal experienced extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Health Insurance Carrier",
+      "comment": "PERSPECTIVE 5: HEALTH INSURANCE CARRIER (ROPE) \u2014 Employer group markets are their primary revenue and risk distribution model. Group plans bundle diverse health risks, reducing adverse selection. The constraint solves a genuine market coordination problem (adverse selection in individual markets). Benefits from lock-in through predictable member populations. Experiences as coordination mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (GENERATIONAL VIEW) \u2014 From a comparative health systems perspective, the employer-mediated model is a historical artifact of US wage controls during WWII. Other wealthy democracies decouple healthcare from employment (Germany, Canada, Nordic countries). The constraint reflects path dependence and regulatory capture, not medical necessity. The model generates genuine coordination problems it purports to solve (adverse selection) while creating extraction inefficiencies (labor mobility reduction, wage suppression, unequal access). Classification: Tangled Rope because the constraint does coordinate healthcare access but extracts significant value through labor mobility restriction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "pre_aca_post_aca_extraction_magnitude",
+      "question": "Has the Affordable Care Act (2010) reduced the extractiveness of the employer healthcare lock, or merely shifted its mechanism?",
+      "resolution_mechanism": "Comparative analysis of voluntary job-leaving rates before/after ACA; measurement of premium differentials between group and individual markets post-ACA; analysis of pre-existing condition waiver prevalence before/after coverage mandate",
+      "impact": "If ACA substantially reduced extraction: constraint may downgrade to Tangled Rope baseline with declining theater. If ACA merely shifted mechanism (group rates remain advantageous, individual market still expensive, medical underwriting shifted to employer selection): suppression remains high and extraction persists with different surface.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "ACA impact on employer healthcare lock extraction magnitude"
+    },
+    {
+      "id": "exit_cost_individual_market_sufficiency",
+      "question": "Are individual market healthcare costs (post-ACA exchanges/subsidies) genuinely affordable alternatives, or do they remain prohibitively expensive for working families?",
+      "resolution_mechanism": "Analysis of total cost of ownership (premium + deductible + out-of-pocket max) for family coverage: employer-sponsored vs individual market at various income levels; tracking of actual enrollment in individual market vs employer group plans among voluntary job-changers",
+      "impact": "If individual market is genuinely affordable: many workers perceive exit option as mobile rather than trapped \u2014 constraint downgrades toward Tangled Rope. If individual market remains expensive or covers fewer providers: suppression remains high, exit remains trapped, Snare classification confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Individual market affordability as genuine exit option"
+    },
+    {
+      "id": "voluntary_versus_coercive_retention",
+      "question": "What fraction of employer-mediated healthcare lock is voluntary (employees value the coordination benefit and accept employment coupling) versus coercive (employees stay trapped despite preferring alternatives)?",
+      "resolution_mechanism": "Surveys of employee preferences with hypothetical scenarios; analysis of job-switching decisions in cohorts with and without dependent care; comparison of stated reasons for staying vs leaving jobs in populations with different health status",
+      "impact": "If predominantly voluntary: constraint may be Rope for most agents (coordination benefit is genuine and valued). If predominantly coercive: Snare classification stands and theater may increase (lock is legitimized through narrative of employee choice).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Proportion of lock that is voluntary vs coercive"
+    },
+    {
+      "id": "employment_wage_suppression_coupling",
+      "question": "Does employer-provided healthcare suppress wage growth because employers substitute health benefits for salary, reducing workers' ability to exit?",
+      "resolution_mechanism": "Wage regression analysis: comparison of total compensation (wages + health insurance value) vs wages-only in sectors with different healthcare models; analysis of wage stagnation acceleration post-employer-healthcare-expansion; international comparison of wage growth in employer-mediated vs state-mediated healthcare systems",
+      "impact": "If coupled: healthcare lock amplifies wage suppression, increasing effective extraction. If decoupled: healthcare lock is primarily a mobility trap, not a wage suppression mechanism. Changes interpretation of beneficiary-victim relationship (employers benefit from both lock-in and wage suppression).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Healthcare coupling to wage suppression mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 1945,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "The employer-mediated healthcare system in the United States emerged from a historical accident: wage controls during World War II made employer-provided health insurance an untaxed form of compensation, creating a structural incentive to couple employment and healthcare access. This constraint now affects over 160 million Americans and creates a sophisticated extraction mechanism where workers become trapped by the convergence of employment dependency and healthcare necessity. The system performs genuine coordination (large employer group pools reduce adverse selection and lower individual premium burden) while simultaneously extracting significant value through labor mobility suppression, wage stagnation, and unequal access based on employment status. The extractiveness value has declined from 0.72 (pre-ACA, when pre-existing condition exclusions and medical underwriting created maximal extraction) to 0.58 (post-ACA, when coverage mandates and subsidies created partial alternatives). However, the suppression has remained high (0.65) because even with ACA protections, individual market premiums and deductibles remain substantially higher than employer-group rates, maintaining structural barriers to exit. The constraint exhibits all characteristics of a Snare: high base extractiveness (0.58), high suppression (0.65), minimal coordination benefit for vulnerable populations, and absence of genuine exit options for workers with health conditions or families.",
+    "key_agents": [
+      "Employees with Chronic Conditions: Primary victims (powerless/trapped) \u2014 medical necessity and fear of coverage loss prevent exit; face catastrophic costs if employment is lost",
+      "Early-Career Workers and Families: Secondary victims (powerless/trapped) \u2014 dependent healthcare creates employment lock; family coverage continuity prevents job mobility",
+      "Healthy Mobile Workers: Mixed agents (moderate/constrained) \u2014 experience some coordination benefit but face substantial switching costs; could exit but at high cost",
+      "Large Employers: Primary beneficiaries (institutional/arbitrage) \u2014 capture retention value from healthcare lock without providing competitive compensation; group coverage solves employee coordination problem on employer terms",
+      "Health Insurance Carriers: Secondary beneficiaries (institutional/arbitrage) \u2014 group markets provide predictable member populations and reduce adverse selection; employer contracts are their core business model",
+      "Independent Contractors and Self-Employed: Victims by exclusion (powerless/trapped) \u2014 entirely excluded from group purchasing power; face individual market premiums 1.5-3x employer rates",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees constraint as path-dependent institutional artifact, not medical necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High but not maximal. The employer-healthcare system extracts substantial value through labor mobility suppression and wage suppression (workers accept lower wages in exchange for healthcare; employers retain workers who would otherwise quit). However, extraction is not at the maximum (0.72) because: (1) ACA coverage mandates and subsidies created partial alternatives to employer coverage, (2) some employers genuinely invest in employee welfare (not pure extraction), and (3) healthy workers with minimal healthcare needs experience lower extraction. The 0.58 value reflects the average across populations with different health statuses and employment options. Suppression (0.65): High. Structural barriers to exit include: medical necessity (people need continuous coverage), financial barriers (individual premiums and out-of-pocket costs far exceed employer-sponsored costs), regulatory barriers (pre-existing condition restrictions, though mitigated post-ACA), informational barriers (complexity of individual market navigation), and psychological barriers (fear of coverage gaps). Suppression is lower than the maximum (0.85) because some pathways exist (ACA exchanges, state programs, spousal coverage) and some workers can exit (healthy individuals, high-income workers, those with partner coverage). Theater ratio (0.48): Moderate-low. The constraint relies less on performative legitimation than on structural financial barriers. The system is legitimized through: (1) framing as employee benefit rather than lock-in mechanism, (2) employer rhetoric about 'competitive benefits packages', (3) narrative of healthcare as complex coordination problem requiring employer mediation. But the theater is not high because the extraction mechanism is primarily material (expensive alternatives) rather than ideological. If the constraint relied on narrative alone (theater high), it would degrade faster as alternatives became available.",
+    "perspectival_gap": "The constraint produces maximum perspectival divergence: trapped employees see pure extraction (Snare); healthy mobile workers see mixed coordination and extraction (Tangled Rope); employers see pure coordination (Rope). This gap reveals that the constraint operates differently across populations based on health status and exit options. An employee with diabetes classified as 'powerless/trapped' experiences \u03b5\u21921.0 extraction; a young healthy employee classified as 'moderate/constrained' experiences \u03b5\u21920.40 extraction from the same institutional structure. The suppression mechanism is structural (expensive alternatives) but experienced differently based on medical necessity. The analytical observer's generational perspective reveals that the constraint is not inherent to healthcare coordination \u2014 all other wealthy democracies coordinate healthcare without employment coupling. This is a false summit trap: the system legitimizes itself by naturalizing employment-healthcare coupling as necessary for risk pooling, when in fact alternative models (state pooling, multi-employer pools, professional association pools) solve the same coordination problem without extraction.",
+    "directionality_logic": "Directionality (d) for each agent derives from their beneficiary/victim status and exit options. Large employers and insurance carriers: d \u2248 0.05 (full beneficiaries with arbitrage options). This produces low f(d) \u2248 -0.12, making \u03c7 negative \u2014 they experience subsidy, not extraction. Healthy mobile workers: d \u2248 0.55 (mixed: benefit from group rates but pay switching costs). This produces f(d) \u2248 0.75, making \u03c7 moderate. Early-career workers with families: d \u2248 0.85 (victims with constrained exit). This produces f(d) \u2248 1.15, making \u03c7 high. Employees with chronic illness: d \u2248 0.95 (victims with trapped exit). This produces f(d) \u2248 1.42, making \u03c7 maximal. The directionality pipeline correctly captures that the same constraint extracts different amounts from different agents based on medical necessity and exit capacity. No overrides are required; the beneficiary/victim declarations and exit_options produce accurate d values.",
+    "mandatrophy_analysis": "CONSTRAINT FAMILY DECOMPOSITION REQUIRED: The employer-healthcare system should decompose into 2-3 linked constraints with different \u03b5 values, because the coordination function varies by observable: (1) Group-based adverse selection pooling (\u03b5\u22480.15, Rope) \u2014 genuine coordination benefit that could not be achieved through individual markets. (2) Labor mobility suppression (\u03b5\u22480.58, Snare) \u2014 extraction mechanism that coupling employment to healthcare enables. (3) Wage suppression (\u03b5\u22480.40, Tangled Rope) \u2014 mixed coordination (employers coordinate compensation) and extraction (workers accept lower wages). These are structurally distinct constraints with different beneficiaries, victims, and reform pathways. The current single-story representation conflates them; a decomposed family would enable more precise policy analysis. For now, the 0.58 Snare classification reflects dominance of the labor mobility suppression mechanism for vulnerable populations. Mandatrophy is resolved by recognizing that the constraint is not 'is the employer system a coordination mechanism or an extraction mechanism?' but 'for which populations is it which?' The answer depends on health status, family structure, and employment alternatives \u2014 these are perspectival variables, not universal properties."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wage_suppression_coupling",
+      "healthcare_adverse_selection_pooling",
+      "labor_mobility_restriction"
+    ],
+    "dual_formulation_note": "Employer-mediated healthcare lock is downstream of three distinct structural constraints: (1) adverse selection in healthcare markets (why pooling is needed), (2) tax code incentive structure (why coupling employment to healthcare made sense post-WWII), and (3) labor market competition for retention (how employers extracted value from health benefits). The \u03b5=0.58 value reflects dominance of labor mobility extraction in the current regime. Decomposition into separate stories would enable precision analysis of reform pathways: breaking the employment coupling (\u03b5\u2193), expanding multi-employer pools (coordination \u2191), or decoupling wages from benefits (extraction mechanism reduction)."
+  },
+  "directionality_overrides": []
+}

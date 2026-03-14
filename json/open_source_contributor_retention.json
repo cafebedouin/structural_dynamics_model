@@ -1,0 +1,228 @@
+{
+  "header": {
+    "constraint_id": "open_source_contributor_retention",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "oscr"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Open Source Contributor Retention and Value Extraction",
+    "topic_domain": "software_economics/labor",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "corporate_maintainers",
+      "proprietary_vendors",
+      "platform_providers"
+    ],
+    "victims": [
+      "volunteer_contributors",
+      "independent_maintainers",
+      "sustainability_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Volunteer Contributor",
+      "comment": "PERSPECTIVE 1: VOLUNTEER CONTRIBUTOR (SNARE) \u2014 Trapped by identity fusion with the project and sunk psychological investment. Cannot exit without abandoning professional reputation built through contribution. High extraction: unpaid labor, burnout risk, no benefits or job security. Suppression through reputational lock and community pressure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Independent Maintainer",
+      "comment": "PERSPECTIVE 2: INDEPENDENT MAINTAINER (TANGLED ROPE) \u2014 Genuine coordination function: the project solves real problems and enables collaboration. But also experiences asymmetric extraction: managing community expectations, handling security issues, dealing with entitled users. Exit is possible (switch careers, abandon project) but costly in reputation and identity terms. Mixed experience of coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Corporate Beneficiary",
+      "comment": "PERSPECTIVE 3: CORPORATE BENEFICIARY (ROPE) \u2014 Extracts value through dependency: builds proprietary products on open source foundations, captures licensing/support revenue, gains first-mover advantages. Experiences constraint as pure coordination: 'we benefit from the ecosystem, we contribute back.' Net beneficiary with full exit option (could fork, could build proprietary alternative) but chooses to remain. Zero effective extraction when you control the relationship."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Sustainability Initiative",
+      "comment": "PERSPECTIVE 4: SUSTAINABILITY INITIATIVE (SCAFFOLD) \u2014 Organized agents (Linux Foundation, GitHub Sponsors, grants programs) see this as a temporary coordination failure with a sunset clause. Initiatives like Tidelift, Open Collective, and corporate sponsorship are building alternative value-capture mechanisms that align incentives. Suppression is declining as alternatives mature. Sunset clause: as sustainable funding models proliferate, the pure volunteer extraction mechanism loses force."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Open Source Ideology",
+      "comment": "PERSPECTIVE 5: OPEN SOURCE IDEOLOGY (PITON) \u2014 The narrative that open source 'just works' through community goodwill has become substantially performative. The mythology persists (we celebrate volunteer heroism, we tell origin stories of passionate hackers) while the actual mechanism has atrophied \u2014 most significant open source projects now depend on corporate subsidies or grants. The ideology performs its function (legitimates free software) without executing it (volunteers cannot sustain complex projects alone). Theater ratio high because the volunteer narrative is maintained despite being empirically degraded."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Platform Provider",
+      "comment": "PERSPECTIVE 6: PLATFORM PROVIDER (TANGLED ROPE) \u2014 GitHub, GitLab, etc. have genuine coordination function: hosting, CI/CD, community tools. But also extract value through lock-in and behavioral data. Users (contributors) have constrained exits \u2014 alternatives exist but switching costs are high. Platforms benefit from contributor activity and ecosystem effects. Mixed coordination and extraction, with asymmetry toward platform."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalization Risk)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURALIZATION RISK (MOUNTAIN) \u2014 From a civilizational view, one might argue that some extraction is inherent to knowledge production: complex software is hard to maintain, value creation requires labor, and free software lives in tension with economic sustainability. This view risks naturalizing what is actually a contingent institutional arrangement (the choice to extract value from volunteers rather than build sustainable funding models)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "identity_lock_vs_constrained",
+      "question": "Is the psychological bind on volunteer contributors identity-locked (ego/professional identity fused with project) or merely constrained (high-cost exit)?",
+      "resolution_mechanism": "Post-exit trajectory analysis: if contributor experiences depression/identity loss after leaving project, identity-locked. If they quickly reorganize their career/identity, merely constrained.",
+      "impact": "If identity-locked: classification as mountain becomes appropriate at biographical timescale from the trapped perspective (oracle gap). If merely constrained: snare classification is accurate. Changes the Mandatrophy signature.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether contributor burnout is identity-fusion or high-cost exit"
+    },
+    {
+      "id": "value_extraction_measurement",
+      "question": "How much total value is extracted from volunteer/independent contributors annually across the open source ecosystem?",
+      "resolution_mechanism": "Econometric analysis: cost-replacement valuation (what would these volunteer-hours cost if purchased on market), compared against funding available to projects. Surveys of contributor opportunity-cost (salary foregone, time unavailable for paid work).",
+      "impact": "If value > $50B annually with <$2B in funding: severe extraction (snare confirmed). If value > $50B with $10B+ in funding: mixed coordination-extraction (tangled_rope confirmed). If value < $10B: pure coordination (rope from more perspectives).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Total annual value extracted from volunteer contributions"
+    },
+    {
+      "id": "sustainability_initiative_effectiveness",
+      "question": "Do corporate sponsorship programs, grants, and alternative funding models actually reduce the extraction of volunteer labor, or merely obscure it?",
+      "resolution_mechanism": "Longitudinal study: compare burnout rates, contribution patterns, and project health metrics in funded vs unfunded projects. Control for project size and maturity. Measure whether funding reduces volunteer workload or merely supplements it.",
+      "impact": "If funding reduces extraction: scaffold perspective confirmed, sunset is real. If funding complements but doesn't replace volunteer labor: scaffold is aspirational, extraction persists. Changes prognosis for constraint evolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether funding initiatives reduce volunteer extraction or merely add layer"
+    },
+    {
+      "id": "platform_lock_magnitude",
+      "question": "How much of GitHub's value comes from network effects on open source ecosystem vs proprietary features and hosted services?",
+      "resolution_mechanism": "Analysis of migration costs for projects attempting to move from GitHub to alternatives (Gitea, GitLab self-hosted). Survey data on perceived switching costs and barriers.",
+      "impact": "If network effects dominate (>60% of value from ecosystem): platform lock is primary extraction mechanism (platform perspective becomes snare). If proprietary features dominate: platform provides genuine value and is less extractive than open source volunteer system.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "What portion of platform value derives from network effects vs proprietary features"
+    },
+    {
+      "id": "corporate_subsidy_dependence",
+      "question": "What percentage of major open source projects receive direct corporate funding vs relying on pure volunteer labor?",
+      "resolution_mechanism": "Systematic survey of top 100 GitHub projects by stars/usage. Coding for funding source: corporate sponsorship, grants, individual donations, none. Correlation with burnout/abandonment rates.",
+      "impact": "If >80% receive corporate funding: open source is already a tangled_rope (mixed coordination-subsidy). If <30% receive funding: pure volunteer extraction (snare). Changes whether piton's degradation narrative is accurate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Prevalence of corporate funding vs pure volunteer dependence"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Open source software has become critical digital infrastructure, yet the labor that sustains it relies disproportionately on unpaid volunteer contributors. This constraint exhibits the tension between genuine coordination functions (enabling collaboration, reducing duplicated effort, building commons knowledge) and systematic extraction of value from powerless contributors to benefit corporations and platform providers. The volunteer contributor experiences identity fusion with projects, creating psychological lock-in that suppresses exit even when economic value extraction is severe. The independent maintainer navigates a mixed coordination-extraction dynamic, benefiting from the ecosystem while managing unsustainable workloads. Corporate beneficiaries capture enormous value (infrastructure, competitive advantage, revenue streams) while experiencing the relationship as pure coordination. Sustainability initiatives (grants, sponsorships, alternative funding models) are building sunset mechanisms that could restructure the constraint, but adoption is uneven. The open source ideology performs the function of legitimating free software even as the actual mechanism (volunteer heroism) has substantially degraded, requiring corporate subsidies to function. The platform providers (GitHub, GitLab) add another extraction layer through lock-in and behavioral data capture.",
+    "key_agents": [
+      "Volunteer Contributors: Primary victims (powerless/trapped) \u2014 provide unpaid labor, experience identity lock, face burnout and exit barriers",
+      "Independent Maintainers: Secondary victims (moderate/constrained) \u2014 manage projects as unpaid work, face burnout risk, have constrained exit options",
+      "Corporate Beneficiaries: Primary beneficiaries (institutional/arbitrage) \u2014 build products on open source, gain competitive advantage, control the relationship entirely",
+      "Platform Providers: Secondary beneficiaries (institutional/arbitrage) \u2014 extract network effects and lock-in value from ecosystem activity",
+      "Sustainability Initiatives: Organized agents (organized/constrained) \u2014 Linux Foundation, GitHub Sponsors, Open Collective building alternative value-capture and sunset mechanisms",
+      "Sustainability Commons: Victim (powerless/trapped) \u2014 the shared resource of maintainer wellbeing and project stability that bears the extraction cost",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing volunteer extraction as necessary to software economics"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, trending upward. Over the 15-year interval, the amount of value extracted from volunteer and independent contributors has increased as open source has become critical infrastructure and corporate dependence has grown. The initial value (0.35) reflects earlier phases when open source was more niche and extraction less organized. The current level (0.58) reflects systematic value extraction: volunteer labor generates billions in corporate value while most projects operate on minimal budgets. The upward trajectory reflects increasing professionalization of corporate open source consumption without corresponding growth in contributor funding. Suppression (0.62): Moderate-high. Barriers to exit are significant: identity fusion, sunk reputation investment, lack of alternative income, community pressure ('you started this, you owe it'), platform lock-in (where would the project go?). But suppression is not total \u2014 some contributors do burn out and leave; some projects do migrate platforms. Theater ratio (0.58): Moderate-high. The open source mythology (passionate hackers building amazing software for free) performs legitimation while the actual mechanism has degraded (most significant projects require corporate subsidy). The celebration of volunteer contributions masks the unsustainability. The GitHub ideology of 'democratized software development' obscures the platform extraction layer. Theater has increased as the disconnect between narrative (pure community) and reality (corporate-dependent) has widened.",
+    "directionality_logic": "The constraint's extraction flow is asymmetric: volunteer/independent contributors are targets; corporations and platforms are beneficiaries. Exit options differentiate within each group: trapped volunteers experience maximum extraction; constrained maintainers experience mixed extraction-coordination; corporate beneficiaries with arbitrage have zero effective extraction (they benefit from the relationship and control it entirely). Platform providers occupy an intermediate position \u2014 they benefit from network effects but are somewhat dependent on ecosystem health, creating moderate extraction rather than minimal. The beneficiary/victim declarations capture this: beneficiaries are [corporate_maintainers, proprietary_vendors, platform_providers]; victims are [volunteer_contributors, independent_maintainers, sustainability_commons]. This maps directly to structural power and exit capacity. The engine derives d from these declarations \u2014 low d for beneficiaries (they benefit), high d for victims (they bear costs).",
+    "perspectival_gap": "Seven perspectives produce five distinct classifications (snare, tangled_rope, rope, scaffold, piton, mountain). This range demonstrates why indexical classification is necessary. No single type captures the constraint adequately from all positions. The gap between rope (corporate perspective) and snare (volunteer perspective) is the diagnostic signal: the same structural mechanism produces opposite experiences based on power asymmetry. The piton classification reveals that the open source ideology has degraded (theater ratio 0.58) \u2014 the mythology of volunteer-powered communities persists while the actual mechanism requires corporate subsidy. The scaffold classification reveals a genuine sunset mechanism in development \u2014 sustainability initiatives are not just policy interventions but structural changes in how the ecosystem captures and distributes value. The mountain classification is a false summit \u2014 the analytical observer risks naturalizing institutional arrangements (choosing to extract from volunteers rather than fund maintainers) as laws of nature.",
+    "mandatrophy_analysis": "STRUCTURAL EXEMPLAR: This constraint resolves the mandatrophy by revealing that the tension between coordination and extraction is not about which is 'really' true, but about observable-dependent classification from different structural positions. From the volunteer's perspective (trapped, powerless), the constraint is a snare \u2014 pure extraction with minimal coordination benefit perceived at that structural location. From the corporate beneficiary's perspective (institutional, arbitrage), the constraint is rope \u2014 they experience it as coordination and have complete agency. Both are accurate descriptions of their experience. The mandatrophy is resolved by recognizing that the constraint IS coordination (it does solve the problem of building complex software collaboratively) AND extraction (it systematically transfers value from powerless contributors to powerful corporations). The measured extractiveness (0.58) is neither 'too high' for coordination nor 'too low' for extraction \u2014 it accurately captures the hybrid nature. The Tangled Rope classification is correct because: (1) genuine coordination function exists (collaborative development, knowledge commons), (2) asymmetric extraction exists (value flows from volunteers to corporations), (3) active enforcement exists (community norms, GitHub's terms of service, funding gatekeeping), and (4) the two functions are structurally intertwined (you cannot remove the extraction without damaging coordination, and you cannot remove coordination without eliminating the basis for extraction). The false summit here would be calling it pure rope (ignoring extraction) or pure snare (ignoring coordination) from a universal position. The accurate classification requires indexing to position."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "software_supply_chain_risk",
+      "digital_infrastructure_fragility",
+      "knowledge_commons_sustainability"
+    ],
+    "dual_formulation_note": "Open source contributor retention decomposes into multiple structurally distinct constraints: (1) volunteer_labor_extraction (\u03b5=0.58, snare from volunteer perspective), (2) corporate_subsidy_dependence (\u03b5=0.42, scaffold from sustainability perspective), (3) platform_lock_in (\u03b5=0.35, rope from platform perspective). These are linked through the constraint family: corporate beneficiaries can only extract because volunteers are trapped; sustainability initiatives provide sunset only if they successfully fund maintainers; platform providers capture value only because of ecosystem network effects. The higher-extractiveness story dominates the family's classification."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "digital_infrastructure_fragility",
+      "software_supply_chain_risk"
+    ]
+  }
+}

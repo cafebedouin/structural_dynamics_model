@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "semiconductor_manufacturing_vertical_integration",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "semiv"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.52,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Semiconductor Manufacturing Vertical Integration",
+    "topic_domain": "industrial_organization/technology_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "integrated_device_manufacturers",
+      "supply_chain_opacity_maintainers"
+    ],
+    "victims": [
+      "foundry_ecosystem",
+      "fabless_designers",
+      "supply_chain_transparency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Foundry Ecosystem",
+      "comment": "PERSPECTIVE 1: FOUNDRY ECOSYSTEM (SNARE) \u2014 Small foundries and contract manufacturers locked into supply chains with no exit without massive capital reinvestment. Asymmetric information, proprietary process technology, and exclusive agreements create structural entrapment. The foundry bears costs of vertical integration by larger players while capturing minimal coordination benefit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Fabless Design Community",
+      "comment": "PERSPECTIVE 2: FABLESS DESIGNERS (SNARE) \u2014 Constrained by high switching costs between manufacturing partners, long qualification timelines, and locked-in process node dependencies. Fabless firms face significant barriers to exit; switching manufacturers costs 18-24 months and millions in re-engineering. The constraint extracts through forced bundling of design services with manufacturing and restricted access to leading-edge nodes."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open-Source Hardware Coalition",
+      "comment": "PERSPECTIVE 3: OPEN-SOURCE HARDWARE COALITION (TANGLED ROPE) \u2014 Organized agents (EDA consortia, open-source chip projects, academic fab initiatives) benefit from vertical integration through lower design costs and standardized toolchains, but simultaneously face extraction through restricted access to leading-edge process technology. The coalition has some exit capacity (alternative fabs, cross-licensing) but remains constrained by technological asymmetry. Both genuine coordination and asymmetric extraction coexist."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Integrated Device Manufacturers",
+      "comment": "PERSPECTIVE 4: INTEGRATED DEVICE MANUFACTURERS (ROPE) \u2014 Major IDMs (TSMC, Samsung, Intel, SK Hynix) experience the vertical integration constraint as pure coordination: capturing all stages of production (design, fabrication, assembly, testing) solves economies of scale and supply chain coordination. The IDM benefits from the constraint through preferential node access, proprietary process advantage, and supply chain control. Effective extraction flows toward this agent."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Process Technology Lock-In",
+      "comment": "PERSPECTIVE 5: PROCESS TECHNOLOGY LOCK-IN (PITON) \u2014 Vertically integrated process control persists partly through technological necessity (precision, yield, customization) but increasingly through institutional inertia and exclusive relationships. The theater_ratio (0.48) reflects that much of the proprietary process control is performative \u2014 the actual technical barriers are lower than claimed, sustained by secrecy agreements and exclusive foundry relationships that have become ritual. Legacy fab partnerships persist despite superior open alternatives emerging."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational vantage, vertical integration provides genuine coordination benefits (yield optimization, design-process co-optimization, supply assurance) but also extracts through information asymmetry, proprietary lock-in, and restricted access to leading-edge technology. The constraint is neither pure coordination nor pure extraction \u2014 it is an asymmetric hybrid where the coordination benefits are real but inequitably distributed."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technical_necessity_vs_institutional_lock_in",
+      "question": "How much of vertical integration is technically necessary (precision, yield optimization, supply assurance) versus institutionally locked-in (exclusive relationships, proprietary secrets, withholding leading-edge access)?",
+      "resolution_mechanism": "Comparative analysis of open-source foundry success rates (MOSIS, efabless, IHP) versus proprietary fabs; measurement of yield gaps, process control, and design flexibility; historical analysis of when exclusive relationships replaced technical necessity",
+      "impact": "If 70%+ technical: reclassify as Rope (coordination primary). If 50%+ institutional lock-in: keep Tangled Rope (mixed). If 70%+ institutional: reclassify as Snare (extraction primary).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical versus institutional components of vertical integration"
+    },
+    {
+      "id": "open_source_fab_scalability",
+      "question": "Can open-source foundries (MOSIS, efabless, IHP) scale to handle advanced nodes and high-volume production, or are they structurally limited to niche/legacy nodes?",
+      "resolution_mechanism": "Tracking open-source fab capacity expansion, yield metrics, process maturity (28nm, 16nm, 7nm); comparison of design ecosystem migration rates; measurement of time-to-maturity for new open process nodes",
+      "impact": "If open fabs mature to 5nm: sunset on Tangled Rope constraint \u2014 extractive vertical integration loses structural necessity. If locked at 28nm+: vertical integration remains structurally extractive for advanced-node designers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scalability of open-source foundry alternatives"
+    },
+    {
+      "id": "supply_chain_transparency_reversal",
+      "question": "Would forced transparency (public process specs, cross-licensing, open EDA tools) reduce extraction faster than waiting for open alternatives to mature?",
+      "resolution_mechanism": "Policy simulation; comparison of regulatory transparency regimes (EU Digital Services Act precedent); analysis of cross-licensing history in semiconductor industry; measurement of extraction levels before/after policy interventions in adjacent industries",
+      "impact": "If transparency-first works: constraint reclassifies as Scaffold with policy sunset. If it fails: constraint remains Tangled Rope, and sunset depends on open-source technological maturation, not policy.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Policy versus technological pathways to constraint resolution"
+    },
+    {
+      "id": "geographic_fragmentation_effect",
+      "question": "Does geographic redundancy (foundries in Taiwan, South Korea, US, Europe) reduce extraction by increasing competitive alternatives, or does coordination between IDMs preserve the constraint despite geographic distribution?",
+      "resolution_mechanism": "Network analysis of foundry partnerships, exclusive agreements, and technology-sharing arrangements; measurement of inter-fab competition and price differentiation; historical analysis of foundry capacity allocation during supply-demand imbalances",
+      "impact": "If geographic fragmentation breaks coordination: constraint drops to Snare (pure extraction). If IDMs maintain coordination despite geography: geographic redundancy is performative, and constraint remains Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether geographic foundry diversity reduces extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.36
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Semiconductor manufacturing vertical integration \u2014 the consolidation of design, fabrication, process technology development, assembly, and testing within single corporate entities \u2014 creates a structurally asymmetric constraint on the semiconductor ecosystem. The constraint operates through two mechanisms: (1) technical lock-in, where process-specific design knowledge creates genuine switching costs, and (2) institutional lock-in, where exclusive relationships, proprietary secrecy, and withholding of leading-edge access maintain extraction beyond technical necessity. Over the 20-year measurement interval (2004-2024), extractiveness has increased from 0.35 to 0.58 as leading-edge nodes (7nm, 5nm, 3nm) have become increasingly concentrated in three foundries (TSMC, Samsung, Intel). Theater ratio has also increased from 0.32 to 0.48, reflecting that proprietary process control claims have become increasingly performative \u2014 the actual technical barriers are arguably lower than claimed, but the institutional barriers (exclusive foundry agreements, long qualification timelines, IP restrictions) enforce the constraint regardless. The constraint exhibits genuine coordination benefits (economies of scale, yield optimization, design-process co-optimization) alongside asymmetric extraction (restricted access to leading-edge nodes, forced bundling, information asymmetry). This hybrid structure classifies as Tangled Rope from the analytical perspective and as Snare from the perspectives of foundries and fabless designers.",
+    "key_agents": [
+      "Integrated Device Manufacturers (IDMs): Primary beneficiaries (institutional/arbitrage) \u2014 TSMC, Samsung, Intel, SK Hynix capture value through supply chain control, proprietary process access, and exclusive customer relationships",
+      "Foundry Ecosystem: Primary victims (powerless/trapped) \u2014 Small and medium foundries locked into supply chains by capital requirements, process technology dependencies, and exclusive agreements",
+      "Fabless Designers: Secondary victims (moderate/constrained) \u2014 Design companies dependent on foundry access; face 18-24 month switching costs and restricted access to leading-edge process nodes",
+      "Open-Source Hardware Coalition: Organized victim-beneficiary (organized/constrained) \u2014 Benefits from standardized EDA and design methodologies; constrained by restricted access to advanced process nodes",
+      "Supply Chain Transparency: Victim (powerless/trapped) \u2014 Abstract collective good; asymmetric information maintained by proprietary secrecy prevents ecosystem-wide optimization",
+      "Analytical Observer: Civilizational analyst (analytical/analytical) \u2014 Can perceive the hybrid structure; identifies both genuine coordination and asymmetric extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, reflecting genuine coordination benefits (economies of scale, yield optimization) alongside asymmetric extraction (restricted node access, switching costs). The extraction is not total because the foundry ecosystem does provide genuine benefits to users \u2014 leading-edge fabrication, proven processes, supply assurance. However, the benefits are inequitably distributed. IDMs capture disproportionate value through control of process technology and exclusive customer relationships. The extractiveness trajectory (0.35\u21920.58 over 20 years) reflects concentration in leading-edge nodes and increasing institutional lock-in through exclusive agreements and proprietary IP claims. Suppression (0.52): Moderate. Barriers to exit include capital requirements for competing foundries ($10B+), process technology complexity, long qualification timelines (18-24 months), and institutional relationships that create switching costs. However, suppression is not total \u2014 open-source alternatives exist (MOSIS, efabless, IHP), and foundries can qualify with alternative partners at cost. Theater ratio (0.48): Moderate. The constraint has both genuine technical components (precision requirements, process yield, design-process co-optimization) and performative components (proprietary secrecy claims that exceed technical necessity, exclusive relationship rituals, qualification theater). The increasing theater ratio (0.32\u21920.48) suggests that institutional lock-in has grown faster than technical lock-in, and secrets are increasingly maintaining the constraint relative to genuine technical barriers.",
+    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon classifies differently depending on the observer's power, exit options, and time horizon. An IDM at institutional/immediate level sees Rope (coordination). A foundry at powerless/biographical level sees Snare (extraction). An organized open-source coalition at organized/generational level sees Tangled Rope (mixed). The analytical observer at civilizational level sees Tangled Rope (hybrid with inequitable distribution). The piton perspective reveals that the constraint is increasingly maintained through institutional inertia \u2014 exclusive relationships and proprietary secrets persist even as open alternatives mature, suggesting the constraint is being maintained by enforcement rather than by technical necessity.",
+    "directionality_logic": "Directionality values (d) are derived from structural position: IDMs as beneficiaries with arbitrage options (low d, negative chi); foundries as victims with trapped/constrained options (high d, high chi); open-source hardware as organized agents with constrained exit (moderate d, moderate chi); analytical observer as neutral analyst (canonical d \u2248 0.73). The IDM's arbitrage exit option means they can freely reallocate capital between foundry operations and fabless designs, experiencing the constraint as coordination with negative effective extraction (they benefit). The foundry's trapped/constrained options mean they cannot easily exit without massive reinvestment, experiencing high effective extraction. The open-source coalition has moderate d because they have some exit capacity (alternative fabs, cross-licensing) but face technological barriers that prevent full escape. The extraction flow is directional: value flows from foundries and fabless designers toward IDMs, making d asymmetric across the ecosystem.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The constraint qualifies as Tangled Rope under the canonical classifier: (1) beneficiaries exist (IDMs benefit from vertical integration through supply chain control and process access), (2) victims exist (foundries and fabless designers face extraction through lock-in and access restrictions), (3) active enforcement exists (exclusive agreements, IP restrictions, long qualification timelines enforce the constraint). The mandatrophy is resolved by recognizing that vertical integration provides genuine coordination benefits (economies of scale, yield optimization, design-process co-optimization) that justify some asymmetry, but the distribution of benefits is inequitable, and institutional lock-in maintains the constraint beyond technical necessity. The theater ratio (0.48) indicates that roughly half the constraint's persistence is performative (proprietary secrecy, exclusive relationship theater) rather than technically necessary. The extractiveness trajectory (0.35\u21920.58) reveals increasing asymmetry: concentration in leading-edge nodes has made exit more costly, and IDMs have captured disproportionate value. The constraint is neither pure coordination (Rope) because asymmetric extraction exists, nor pure extraction (Snare) because genuine coordination benefits exist and are widely distributed. Tangled Rope is the correct classification."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "semiconductor_supply_chain_concentration",
+      "process_technology_lock_in",
+      "fabless_foundry_dependency",
+      "open_source_chip_design_barriers"
+    ],
+    "dual_formulation_note": "Semiconductor vertical integration is part of a constraint family covering supply chain consolidation (upstream: supply concentration, downstream: foundry dependency, process lock-in, open-source barriers). This story focuses on the institutional structure of vertical integration itself; sibling stories decompose supply chain transparency, geographic redundancy, and open-source alternative pathways. Link via affects_constraints to track ecosystem-wide impacts of concentration."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

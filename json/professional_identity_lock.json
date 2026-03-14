@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "professional_identity_lock",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "prof_id"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Professional Identity Lock",
+    "topic_domain": "organizational/institutional/interpersonal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_employers",
+      "professional_gatekeepers"
+    ],
+    "victims": [
+      "identity_locked_practitioners"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "The Locked Practitioner",
+      "comment": "PERSPECTIVE 1: THE LOCKED PRACTITIONER (SNARE) \u2014 The professional whose identity is constituted through the career path. Cannot imagine themselves outside this role. Exit would require abandoning the self-concept built over decades. Structurally mobile (has alternative employment options, financial resources, no legal barriers) but functionally trapped by identity fusion. The binding mechanism is cognitive \u2014 the agent's identity frame makes exit literally unthinkable from within."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Aware Practitioner",
+      "comment": "PERSPECTIVE 2: THE AWARE PRACTITIONER (TANGLED ROPE) \u2014 Recognizes the identity lock while remaining partially bound by it. Understands the constraint rationally but faces high costs to exit: social penalties, career damage, financial loss, relocation burden. The constraint coordinates continued professional contribution (genuine function) while extracting from the practitioner's autonomy and life choices (asymmetric cost)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Professional Institution",
+      "comment": "PERSPECTIVE 3: THE PROFESSIONAL INSTITUTION (ROPE) \u2014 Experiences the constraint as pure coordination. Licensing bodies, professional associations, and employers benefit from identity lock as a coordination mechanism that aligns practitioner behavior with institutional standards. From this perspective, the constraint solves a collective action problem: ensuring practitioners maintain competence and ethical standards. Net beneficiary experiencing low extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Captured Regulator",
+      "comment": "PERSPECTIVE 4: THE CAPTURED REGULATOR (TANGLED ROPE) \u2014 A regulatory body or licensing agency whose institutional identity has fused with the professional field it was created to oversee. The regulator is structurally constrained (legislative mandate, organizational culture, career paths through the regulated field). Coordinates legitimate credentialing standards while participating in extraction mechanisms that protect incumbent practitioners from competition."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Reform Coalition",
+      "comment": "PERSPECTIVE 5: THE REFORM COALITION (SCAFFOLD) \u2014 Professional outsiders, new entrants, and alternative-credential advocates see the identity lock as a temporary barrier. Digital credentials, lateral entry programs, and alternative professional pathways are creating exits that bypass the traditional lock. Organized agents perceive a sunset: as alternative pathways mature, the identity lock's extraction power decays. Theater-driven transition with real coordination function underneath."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Professional Guild System",
+      "comment": "PERSPECTIVE 6: THE PROFESSIONAL GUILD SYSTEM (PITON) \u2014 The institutional apparatus (licensing boards, professional associations, credentialing rituals) persists through inertia despite diminished function. Digital credentials and skill-based hiring are eroding the guild's gatekeeping role, but the licensing ritual persists because alternatives haven't fully replaced it. High theater ratio reflects performative credentialing \u2014 the ritual maintains social legitimacy even as its verification function atrophies."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Natural Law View)",
+      "comment": "PERSPECTIVE 7: THE ANALYTICAL OBSERVER / FALSE NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some version of professional identity attachment appears inherent to human social organization. The observer might naturalize this as an unchangeable feature of how specialized knowledge is transmitted and enforced. However, the structural data contradicts the mountain classification \u2014 the engine's false summit detector identifies this as naturalization. Professional identity lock is contingent on specific institutional arrangements (licensure, credentialing monopoly, career path dependence), not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "identity_lock_vs_constrained_boundary",
+      "question": "At what cost threshold does a structurally mobile agent become effectively trapped by identity fusion rather than material barriers?",
+      "resolution_mechanism": "Longitudinal study of practitioners who attempted exit: What was the stated reason for returning? Was it external cost (lost income, social penalty) or internal cognitive barrier (couldn't sustain new identity)? Compare agents who exited successfully (identity frame shifted) vs those who returned (identity fusion reasserted).",
+      "impact": "If primarily external: classification should use 'constrained' rather than 'identity_locked' for more accurate directionality. If primarily internal: identity_locked is correct, but the suppression metric should be reclassified as partially internalized rather than structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Boundary between material constraint and identity lock"
+    },
+    {
+      "id": "alternative_credential_sufficiency",
+      "question": "Do alternative credentialing pathways (digital credentials, skill-based hiring, portfolio verification) actually provide functional equivalents to traditional licensing, or do they serve different labor markets?",
+      "resolution_mechanism": "Outcome comparison: earnings, employer prestige, job security, advancement trajectory for alternative-credentialed practitioners vs traditionally licensed practitioners in the same role. Network analysis of which employers accept alternative credentials.",
+      "impact": "If functionally equivalent: scaffold sunset is real \u2014 the identity lock's coordination function is being replaced, and extraction will decline over time. If different markets: alternative pathways create parallel systems with different identity requirements, potentially deepening rather than resolving the lock.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether alternative credentials provide functional equivalents to licensing"
+    },
+    {
+      "id": "internalized_vs_structural_suppression",
+      "question": "What proportion of the measured suppression (0.48) is structural (external barriers to exit) vs internalized (cognitive patterns that persist after barrier removal)?",
+      "resolution_mechanism": "Post-exit trajectory analysis: practitioners who exit the profession \u2014 do career penalties persist indefinitely (structural) or do they dissipate as new identity frame stabilizes (internalized)? Compare suppression scores for practitioners who exited voluntarily vs those forced out by external events.",
+      "impact": "If primarily internalized: the constraint carries suppressive force even after material barriers are removed. The identity lock is more severe than structural cost measures suggest. If primarily structural: suppression score is accurate, and removing material barriers would substantially reduce experienced constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of suppression that is internalized vs structural"
+    },
+    {
+      "id": "gatekeeping_vs_coordination_function",
+      "question": "Does professional licensing genuinely coordinate competence and ethics (real function) or primarily restrict competition (extraction mechanism)?",
+      "resolution_mechanism": "Comparative analysis: regulatory outcomes across jurisdictions with strict licensing (high gatekeeping) vs permissive credentials (low gatekeeping). Measure: practitioner quality metrics, consumer safety/satisfaction, innovation rate, job market concentration, wage premia.",
+      "impact": "If coordination dominates: the rope perspective is correct \u2014 identity lock serves genuine collective action function. If gatekeeping dominates: the snare and tangled_rope perspectives are correct \u2014 the identity lock is primarily extractive with thin coordination veneer.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether licensing coordinates competence or restricts competition"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Professional identity lock occurs when a practitioner's self-concept becomes fused with their professional role and credentials. The agent is structurally mobile \u2014 they have financial resources, alternative employment options, no legal barriers to exit \u2014 but functionally trapped by identity fusion. The binding mechanism is cognitive rather than material: exit would require not just paying a cost but *becoming a different person*. This constraint exhibits the full spectrum of DR classifications because the same institutional arrangement (professional licensing, credentialing requirements, career path dependence) appears as pure coordination (institutional perspective), mixed coordination-extraction (moderate perspective), pure extraction (locked perspective), a temporary barrier being eroded by alternatives (reform coalition), a degraded ritual (guild system), and a false natural law (naive analytical view). The constraint's extractiveness has increased over the 20-year interval as credential inflation has raised barriers and professional identity has become more rigidly defined. Theater ratio has risen as credentialing rituals have become more elaborate relative to their actual verification function.",
+    "key_agents": [
+      "Identity-Locked Practitioner: Primary victim (powerless/identity_locked) \u2014 structurally mobile but identity-fused; cannot imagine themselves outside the role; bears full extraction",
+      "Aware Practitioner: Secondary victim (moderate/constrained) \u2014 recognizes the lock intellectually but faces high exit costs; mixed experience of coordination and extraction",
+      "Professional Institution: Primary beneficiary (institutional/arbitrage) \u2014 licensing bodies, professional associations; experience the constraint as coordination; benefit from standardization and controlled entry",
+      "Captured Regulator: Inter-institutional actor (institutional/constrained) \u2014 regulatory body whose identity has fused with the field it oversees; participates in extraction while maintaining coordination facade",
+      "Reform Coalition: Organized challengers (organized/constrained) \u2014 alternative-credential advocates, new entrants, digital credential platforms; perceive a sunset as alternatives mature",
+      "Professional Guild System: Institutional structure (institutional/arbitrage) \u2014 licensing boards, credentialing rituals; persists through inertia (piton perspective)",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as inherent features of professional knowledge"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high and rising. The lock extracts from practitioners through credential inflation (rising costs and time requirements), credential lock-in (sunk costs in specific credentialing pathway), and market concentration (restricted entry protecting incumbent wages and opportunity). The extraction is real but not total \u2014 practitioners benefit from professional status, network access, and collective standard-setting. The upward trajectory reflects intensifying credential requirements and rising barriers to lateral entry as professional gatekeeping has strengthened. Suppression (0.48): Moderate. Significant barriers to exit include financial sunk costs (years of training), social penalties (professional network loss, status downgrade), career penalties (resume gaps, skill atrophy), and psychological barriers (identity fusion preventing even conception of exit). However, suppression is not total \u2014 some practitioners do exit, and external pathways exist though narrow. Theater ratio (0.65): Moderately high and rising. Professional credentialing increasingly relies on theatrical validation \u2014 licenses, certifications, formal credentials \u2014 that signal competence to employers but whose actual verification function has atrophied relative to their cost and complexity. Continuing education requirements, professional conferences, and credentialing exams often maintain social legitimacy without proportional quality assurance. Theater has risen as digital credentials and skill-based hiring have begun eroding the license's gatekeeping function, forcing the traditional system to rely more heavily on ritual legitimacy.",
+    "perspectival_gap": "This constraint demonstrates how a single structural arrangement produces divergent classifications. The professional institution sees the lock as legitimate coordination \u2014 ensuring practitioners maintain standards, preventing incompetence from harming consumers. The locked practitioner sees extraction and suppression \u2014 their autonomy and life choices are constrained, and they cannot imagine escaping. The captured regulator sees mixed coordination and extraction \u2014 genuinely overseeing competence standards while participating in incumbent protection. The reform coalition sees a temporary barrier with a sunset \u2014 alternative pathways are real and growing. The guild system (piton) sees its own degrading function \u2014 credentialing maintains ritual legitimacy even as its verification role atrophies. The naive analytical observer risks seeing a natural law \u2014 professional identity attachment as inherent to specialization \u2014 but the structural data reveals this as contingent on specific institutional arrangements (licensing monopoly, career path dependence, credential inflation).",
+    "directionality_logic": "Directionality is determined by the agent's structural position relative to the identity lock. Professional institutions (beneficiaries with arbitrage exit) experience low d: they set standards and collect licensing fees with minimal extraction cost. Locked practitioners (victims with identity_locked exit) experience high d: they bear full extraction and cannot exercise structural mobility because their identity frame makes exit unthinkable. Aware practitioners (victims with constrained exit) experience moderate-high d: they perceive extraction and barriers but maintain some agency. The captured regulator (institutional/constrained) experiences moderate d: they benefit institutionally but are also constrained by the field's norms. The reform coalition (organized/constrained) experiences lower d because they have agency and see an exit path (sunset). The piton perspective derives from theater ratio (0.65) rather than from high experienced extraction. The false mountain at the analytical level is revealed by the structural data: the constraint is contingent on institutions (licensing, credentialing monopoly), not universal.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing how identity lock weaponizes coordination. The professional institution legitimately coordinates competence standards (rope function). But the same institutional apparatus enables extraction through credential lock-in, market concentration, and identity fusion (snare and tangled rope functions coexist). The mandatrophy is resolved by distinguishing the actual coordination needed (verifying competence) from the extractive mechanisms layered on top (credential inflation, lateral entry barriers, professional network gatekeeping). The constraint is tangled rope: genuine coordination + asymmetric extraction coexist and cannot be separated. The piton perspective reveals that theater is rising as the coordination function weakens \u2014 the rituals persist even as their functional verification decays. The reform coalition's scaffold perspective is the exit: alternative credentialing pathways (skill-based hiring, digital credentials, portfolio verification) provide coordination function without identity lock, suggesting the lock is institutional contingency rather than coordination necessity."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "credential_inflation",
+      "professional_gatekeeping",
+      "lateral_entry_barriers"
+    ],
+    "dual_formulation_note": "Professional identity lock is downstream of specific credentialing systems (medical licensing, law bar, engineering PE) but represents a distinct structural constraint operating at the identity/psychological level. Decomposition into domain-specific stories recommended: medical_identity_lock (specialty lock within physicians), legal_identity_lock (partnership track lock in law firms), academic_identity_lock (tenure track lock in universities). Each subdomain has different extractiveness values reflecting domain-specific credential inflation rates, lateral entry availability, and identity fusion mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

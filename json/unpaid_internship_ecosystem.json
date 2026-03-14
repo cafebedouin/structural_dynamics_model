@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "unpaid_internship_ecosystem",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "unpaid_intern"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Unpaid Internship Ecosystem",
+    "topic_domain": "labor/economic/educational",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "hiring_organizations",
+      "wealthy_families"
+    ],
+    "victims": [
+      "interns_from_low_income_backgrounds",
+      "labor_market_pricing",
+      "aspiring_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Low-Income Intern",
+      "comment": "PERSPECTIVE 1: LOW-INCOME INTERN (SNARE) \u2014 Structurally trapped by need for experience credentials, lack of financial cushion to survive unpaid work, and dependency on family income. Cannot exit without sacrificing career entry. Experiences maximum extraction: labor value extracted with zero compensation while bearing full opportunity cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Middle-Class Intern",
+      "comment": "PERSPECTIVE 2: MIDDLE-CLASS INTERN (TANGLED ROPE) \u2014 Constrained but not trapped: family financial support creates exit option at high cost (delaying career, accumulating debt, lifestyle compression). Benefits from genuine skill development and networking access while bearing extraction of labor value. Mixed experience: significant coercion but some coordination value."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Hiring Organization",
+      "comment": "PERSPECTIVE 3: HIRING ORGANIZATION (ROPE) \u2014 Experiences the constraint as beneficial coordination: access to motivated labor at zero compensation, filter for identifying committed workers, cost reduction mechanism. Extraction runs toward this agent. Arbitrage option available: can hire paid employees if unpaid interns become unavailable; maintains flexibility."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Wealthy Family",
+      "comment": "PERSPECTIVE 4: WEALTHY FAMILY (ROPE) \u2014 Net beneficiary through child's ability to access prestigious unpaid positions; subsidizes child's labor contribution through living expenses. Experiences the constraint as enabling access to elite networks and experience credentials. No exit pressure; can maintain status quo indefinitely."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Rights Coalition",
+      "comment": "PERSPECTIVE 5: LABOR RIGHTS COALITION (SCAFFOLD) \u2014 Organized agents (unions, advocacy groups, state labor boards) perceive unpaid internships as a temporary institutional anomaly with a sunset trajectory. Legal pathways (Fair Labor Standards Act enforcement, minimum wage extension, internship wage requirements) are building toward elimination. See the constraint as a coordination failure being corrected through regulation. Theater ratio is high (internship rhetoric about 'experience' and 'mentorship' masks pure extraction), but the coalition has agency and sees an exit mechanism."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The University Career Services",
+      "comment": "PERSPECTIVE 6: UNIVERSITY CAREER SERVICES (PITON) \u2014 Institutional maintenance of internship program framework that has lost functional justification. Universities simultaneously promote unpaid internships (career development theater) while declaring commitment to equity. The institutional ritual persists through inertia: internship placement is a measurable metric, funding often comes from employer partnerships, and alternatives (paid apprenticeships, cooperative education) require structural change. Theater ratio high; functional value degraded."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law Framing (False Summit)",
+      "comment": "PERSPECTIVE 7: NATURAL LAW FRAMING (MOUNTAIN) \u2014 A false summit perspective that naturalizes unpaid internships as inevitable: 'Entry-level workers have always had to prove themselves,' 'Experience has always been unpaid,' 'This is how professional socialization works.' From a civilizational/universal lens, this framing treats a contingent institutional arrangement as an immutable feature of labor markets. The analytical engine will flag this as a false summit, revealing that the 'naturalness' is performative \u2014 historical examination shows unpaid internships are a recent, concentrated phenomenon driven by specific policy choices and labor market dynamics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intra_class_heterogeneity",
+      "question": "Does unpaid internship access vary significantly within the 'middle-class' category based on ethnic, gender, or geographic factors beyond raw household income?",
+      "resolution_mechanism": "Demographic analysis of unpaid intern cohorts; controlling for household income, track access disparity by race, gender, geography, family occupation",
+      "impact": "If significant disparity exists: the 'constrained' exit for middle-class interns is actually stratified \u2014 some have functional arbitrage options while others face near-trapped conditions. The Tangled Rope classification for moderate agents would be too generous; many would map to trapped. Recompute perspectival classification with finer-grained stratification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Intra-class variation in unpaid internship access beyond income"
+    },
+    {
+      "id": "selection_effect_vs_extraction",
+      "question": "How much of the career advantage from unpaid internships reflects genuine skill development and networking value versus pure selection effect (already-privileged candidates sorting into high-status internships)?",
+      "resolution_mechanism": "Longitudinal tracking of intern cohorts with matched controls; separate wage and career outcomes by (1) unpaid internship completers, (2) paid internship completers, (3) non-internship entrants, controlling for entry credentials and family background",
+      "impact": "If selection effect dominates (80%+ of advantage): unpaid internships are primarily a filtering/sorting mechanism masquerading as development, increasing snare classification confidence. If genuine skill transfer significant (30%+ of advantage): tangled rope classification is correct \u2014 real coordination value exists alongside extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Selection effect versus genuine skill development in internships"
+    },
+    {
+      "id": "legal_enforcement_feasibility",
+      "question": "Can Fair Labor Standards Act minimum wage requirements be practically enforced against unpaid internship structures, or do organizational workarounds (classification as 'volunteer,' 'participant,' 'student researcher') successfully evade wage law?",
+      "resolution_mechanism": "Audit of state labor board enforcement: complaint rates, settlement outcomes, organizational compliance post-violation; tracking of classification strategy shifts following wage litigation",
+      "impact": "If enforcement feasible: scaffold sunset trajectory is real; wage extension is a viable regulatory path. If workarounds are effective: sunset is aspirational rather than structural; the constraint will persist through reclassification rather than elimination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Enforceability of wage law against unpaid internship structures"
+    },
+    {
+      "id": "alternative_credential_signaling",
+      "question": "Do alternative pathways to labor market entry (apprenticeships, bootcamps, direct hire-and-train, portfolio-based hiring) provide equivalent signaling value compared to prestigious internships?",
+      "resolution_mechanism": "Comparative analysis of job placement rates, wage outcomes, and employer perception across credential pathways; employer hiring decision process analysis",
+      "impact": "If alternatives are equivalent: unpaid internship necessity is artificial; the ecosystem persists due to organizational convenience rather than functional necessity. Snare classification strengthened. If alternatives are significantly weaker: unpaid internships may provide genuine valuable signal; tangled rope classification more defensible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Equivalence of alternative credential pathways"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The unpaid internship ecosystem functions as a credential signaling and labor acquisition mechanism that disproportionately benefits hiring organizations and wealthy families while extracting value from aspiring workers with limited financial resources. The constraint exhibits structural characteristics of Tangled Rope: it contains a genuine coordination function (skill development, mentorship, professional network access) alongside asymmetric extraction (unpaid labor, opportunity cost concentration on low-income workers). The extractiveness score (0.58) reflects moderate-to-high value capture by organizations; the suppression score (0.72) reflects substantial barriers to exit (credential dependency, labor market structure, family financial constraints). The theater ratio (0.65) reflects that internship positioning emphasizes development and mentorship value while downplaying pure labor extraction. Over the 20-year interval, both extractiveness and theater ratio have increased, indicating accumulation of rent-seeking behavior on top of coordination function and increasing reliance on narrative framing ('experience') to justify unpaid work.",
+    "key_agents": [
+      "Low-Income Interns: Primary victim (powerless/trapped) \u2014 structurally dependent on unpaid experience to enter labor market; cannot exit without sacrificing career entry",
+      "Middle-Class Interns: Secondary victim (moderate/constrained) \u2014 face high cost of exit (debt, delayed career) but have family financial support as fallback; experience genuine skill development alongside extraction",
+      "Hiring Organizations: Primary beneficiary (institutional/arbitrage) \u2014 capture unpaid labor value, filter for committed workers, maintain cost advantage; can switch to paid labor if supply dries up",
+      "Wealthy Families: Primary beneficiary (powerful/arbitrage) \u2014 subsidize children's unpaid work; enable access to elite networks and prestigious positions",
+      "Labor Rights Coalition: Organized agent (organized/constrained) \u2014 arXiv equivalent organizations pushing regulation toward sunset; have agency and see regulatory pathways",
+      "University Career Services: Institutional actor (institutional/arbitrage) \u2014 maintain performative internship ecosystem through inertia; generate placement metrics while advancing equity rhetoric",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing recent contingent institutional arrangement as inevitable feature of labor markets"
+    ],
+    "logic_rationale": "Extractiveness (0.58): The hiring organization captures full labor value with zero monetary compensation. This is high but not maximum (0.66+) because: (1) genuine skill development and mentorship occur, reducing pure exploitation profile, and (2) some credentialing value flows to interns, creating partial benefit alignment. The trajectory from 0.35 to 0.58 over 20 years reflects increasing formalization of internships as labor strategies rather than developmental programs \u2014 organizations have optimized the extraction function. Suppression (0.72): High barriers to exit include: credential dependency (internship experience required for entry-level jobs), financial barriers (inability to live without compensation), labor market concentration (internship supply concentrated in prestigious organizations), and opportunity cost (competing life activities \u2014 other jobs, education, family obligations). Not maximal (0.85+) because some exit paths exist (paid positions, alternative credentials, family support). Theater ratio (0.65): Internship framing emphasizes development ('hands-on experience,' 'mentorship,' 'professional network') and downplays extraction ('supporting the next generation'). This narrative maintenance is necessary because pure extraction is not socially legitimate \u2014 the theater sustains organizational consent. Rising to 0.65 reflects increasing gap between rhetoric and function as organizations have systematized unpaid internship programs.",
+    "directionality_logic": "Directionality varies sharply by structural position. Low-income interns (powerless/trapped) experience maximum extraction: d \u2248 0.95, f(d) \u2248 1.42, high experienced extractiveness. They bear full cost; organization captures full benefit. Middle-class interns (moderate/constrained) experience moderate extraction: d \u2248 0.65, f(d) \u2248 1.00, moderate experienced extractiveness. Hiring organizations (institutional/arbitrage) experience extraction running TOWARD them: d \u2248 0.05, f(d) \u2248 -0.12, negative effective extraction (they are beneficiaries). Wealthy families (powerful/arbitrage) similarly experience negative extraction: d \u2248 0.10, f(d) \u2248 0.02, near-zero extraction. The pipeline computes d from beneficiary/victim status plus exit options: beneficiaries with exit options get low d; victims with no exit get high d. The gap between low-income and middle-class intern experiences reflects the differential cost of exit, not difference in labor extraction \u2014 both contribute unpaid work, but the financial impact stratifies their structural relationship to the constraint.",
+    "perspectival_gap": "This constraint demonstrates a 6-type perspectival gap. Low-income interns see a snare: they are trapped in the constraint with no exit and no benefit compensation. Middle-class interns see tangled rope: genuine skill/network benefit exists alongside substantial extraction. Hiring organizations see rope: they experience pure coordination value (access to motivated labor, skill development of workforce). Wealthy families see rope: they benefit from children's network access and credential acquisition. Labor rights coalition sees scaffold: regulations (wage extension, apprenticeship requirements) are building an exit pathway with a sunset. University career services see piton: the institutional ritual of promoting internships has become performative while universities simultaneously advance equity goals. The analytical observer risks seeing mountain: naturalizing unpaid internships as inevitable feature of labor markets. The perspectival gap reveals that the same institutional arrangement is experienced as entrapment, extraction, coordination, beneficiary advantage, regulable problem, degraded ritual, and natural law \u2014 depending on structural position. No single classification captures all positions; the presheaf of perspectives IS the analytical output.",
+    "mandatrophy_analysis": "RESOLVED: The unpaid internship ecosystem demonstrates how Tangled Rope resolves the mandatrophy (coordination \u2260 extraction) by unifying multiple perspectives under a single type. The presence of genuine coordination (skill development, mentorship, professional network access) alongside asymmetric extraction (unpaid labor, opportunity cost concentration) is the defining structural signature of Tangled Rope. The mandatory condition \u03c7 \u2265 0.40 \u2227 \u2264 0.90 is satisfied at \u03c7 \u2248 0.58. The presence of beneficiaries (hiring organizations, wealthy families) establishes coordination function. The presence of victims (low-income interns, aspiring workers) establishes asymmetric extraction. The requirement for active enforcement is satisfied: the ecosystem requires continuous organizational enforcement (classification as 'intern' vs 'employee,' wage-law avoidance, cultural narrative maintenance of development rhetoric) and cultural enforcement (prestige signaling, network gatekeeping). Without active enforcement, interns would demand wages or alternative pathways would emerge. The falsehood would be classifying this as pure Rope (pure coordination) or pure Snare (pure extraction). It is genuinely both \u2014 the mandatrophy is resolved by recognizing the hybrid structure."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "labor_market_credentialism",
+      "wealth_based_network_access",
+      "class_reproduction_in_professional_entry"
+    ],
+    "dual_formulation_note": "Unpaid internship ecosystem is downstream of class stratification in educational access and upstream of labor market outcome inequality. Separate constraint stories exist for (1) educational credentialing gatekeeping (high school \u2192 college \u2192 internship pipeline), (2) professional network asymmetry (wealthy families' access to industry contacts), and (3) early-career wage compression (internship \u2192 entry-level job wage penalty). Each has distinct \u03b5 values and perspectives; the family is linked via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.68
+    }
+  ]
+}

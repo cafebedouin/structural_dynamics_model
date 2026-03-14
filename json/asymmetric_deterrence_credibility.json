@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "asymmetric_deterrence_credibility",
+    "version": "1.0",
+    "generated_date": "2026-02-27",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "asym_deter"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Asymmetric Deterrence Credibility",
+    "topic_domain": "geopolitical/security",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nuclear_capable_state",
+      "military_establishment"
+    ],
+    "victims": [
+      "non_nuclear_adversary",
+      "civilian_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Non-Nuclear Adversary",
+      "comment": "PERSPECTIVE 1: NON-NUCLEAR ADVERSARY (SNARE) \u2014 Structurally trapped by asymmetric military capability. Cannot credibly threaten escalation beyond conventional means. Deterrence operates through coercive threat of disproportionate response. No exit option \u2014 withdrawal concedes strategic position; engagement risks catastrophic loss. Maximum extraction: compliance extracted through existential fear rather than coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Civilian Population Under Deterrence",
+      "comment": "PERSPECTIVE 2: CIVILIAN POPULATION (TANGLED ROPE) \u2014 Experiences both coordination (deterrence prevents major war) and extraction (risk of nuclear escalation is externalized onto civilian safety). High suppression \u2014 cannot exit jurisdiction or credibly challenge deterrent regime. Constrained by geographic, legal, and economic barriers. Mixed extraction and coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Nuclear-Capable State",
+      "comment": "PERSPECTIVE 3: NUCLEAR-CAPABLE STATE (ROPE) \u2014 Primary beneficiary. Experiences deterrence as a coordination mechanism: credibly communicating red lines enables conflict avoidance and strategic stability. Net beneficiary through credibility extraction and reduced conventional military burden. Can exit via arms control agreements or d\u00e9tente if strategic calculus changes. Arbitrage options preserve freedom."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Military Establishment of Nuclear Power",
+      "comment": "PERSPECTIVE 4: MILITARY ESTABLISHMENT (TANGLED ROPE) \u2014 Institutional beneficiary with constrained options. Benefits from deterrence framework (mission legitimacy, budgets, strategic relevance). Also extraction target: credibility maintenance requires continuous military readiness, expensive infrastructure, and willingness to accept mutual vulnerability. Constrained by institutional lock-in and strategic logic \u2014 cannot credibly reduce nuclear posture without undermining deterrent."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Nuclear Non-Proliferation Regime",
+      "comment": "PERSPECTIVE 5: NPT AND ARMS CONTROL INSTITUTIONS (PITON) \u2014 Institutional actor maintaining a performative role. The regime's stated function (preventing proliferation) has degraded \u2014 multiple threshold states possess or approach capability despite NPT. The institutions persist through legitimacy theater and procedural maintenance rather than functional prevention. Theater ratio high because compliance monitoring and verification are largely performative; the actual constraint on proliferation comes from strategic cost-benefit calculations, not from institutional enforcement."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Game-Theoretic Natural Law)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / GAME-THEORETIC NATURAL LAW (MOUNTAIN) \u2014 From a civilizational analytical view, deterrence credibility appears as an immutable feature of strategic interaction: any asymmetric capability differential creates an incentive for preemption that can only be managed through credible counter-threat. Mutual assured vulnerability is a logical consequence of nuclear weapons, not a contingent institutional arrangement. However, this perspective risks naturalizing what is partly a choice: credibility is maintained through active military posturing, signaling, and willingness to accept escalation risk \u2014 all contingent decisions, not laws of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "credibility_maintenance_cost",
+      "question": "What proportion of deterrence extraction is inherent to the security problem versus deliberate amplification by military institutions seeking budgetary and strategic advantage?",
+      "resolution_mechanism": "Comparative analysis of deterrent stability in high-credibility low-cost regimes (e.g., Pakistan-India post-Kargil stability through costless signaling) versus high-credibility high-cost regimes (continuous platform modernization, strategic communication campaigns); identification of cost drivers that serve deterrence versus institutional self-interest",
+      "impact": "If cost is mostly inherent: deterrence is lower-extraction (Rope from more perspectives). If cost is mostly institutional choice: deterrence is higher-extraction (Snare from more perspectives). Determines whether extractiveness should be 0.45 (coordination-heavy) or 0.65 (extraction-heavy).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether deterrence cost is inherent to strategic problem or amplified by institutional interests"
+    },
+    {
+      "id": "alternative_credibility_mechanisms",
+      "question": "Could deterrence credibility be maintained through lower-cost mechanisms (arms control agreements with verification, graduated response protocols, communication channels) without sacrificing strategic stability?",
+      "resolution_mechanism": "Historical case analysis of periods of strategic stability achieved at lower deterrence cost (Cold War arms control era, Cuban Missile Crisis aftermath); identification of institutional barriers preventing adoption of lower-cost mechanisms; game-theoretic modeling of graduated-response versus overwhelming-force credibility",
+      "impact": "If alternatives exist but are institutionally blocked: constraint is tangled_rope with high institutional extraction (current assessment confirmed). If alternatives are structurally impossible: constraint approaches rope (coordination-dominated). If alternatives are deliberately rejected: constraint is snare (pure extraction framed as deterrence).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether lower-cost credibility mechanisms could maintain deterrent stability"
+    },
+    {
+      "id": "non_nuclear_escalation_dynamics",
+      "question": "Does deterrence credibility actually prevent conventional conflict escalation, or does it create incentive structures that make lower-intensity conflicts more likely as 'safe' alternatives below the nuclear threshold?",
+      "resolution_mechanism": "Longitudinal analysis of conventional conflict frequency in nuclear versus non-nuclear dyads; examination of whether nuclear deterrence increases conventional conflict risk by creating 'safe' escalation zones; comparison of dyad stability metrics across different deterrent posture configurations",
+      "impact": "If deterrence prevents escalation: coordination benefit is real (Rope perspective more accurate). If deterrence creates conventional-conflict safety zone: coordination benefit is overstated and constraint is more extractive than claimed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether nuclear deterrence prevents or redirects conflict"
+    },
+    {
+      "id": "epistemic_closure_credibility_claim",
+      "question": "To what extent does the requirement for 'credible deterrence' function as epistemic closure that prevents questioning the institutional arrangements maintaining deterrent posture?",
+      "resolution_mechanism": "Analysis of policy discourse constraints: identify topics treated as non-negotiable versus negotiable in deterrence debates; track institutional suppression of alternative strategic frameworks; examine whether credibility-maintenance framing forecloses cost-benefit analysis of deterrence versus alternative security arrangements",
+      "impact": "High epistemic closure indicates the constraint includes a suppression function not explicitly modeled in the chi calculation. Suggests true suppression may be higher than measured (0.65 \u2192 0.75+), pushing toward snare classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether credibility requirement functions as epistemic closure"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Asymmetric deterrence credibility is the structural constraint that emerges when one party possesses weapons of mass destruction and the other does not. The constraint operates through a paradoxical mechanism: credibility requires demonstrated willingness to use catastrophic force, yet actual use would be strategically irrational. Deterrence thus depends on maintaining a credible threat of irrational action \u2014 a commitment problem that generates continuous institutional and communicative overhead. The constraint exhibits the full range of classification types depending on the observer's structural position. For the nuclear power, it functions as coordination (Rope) \u2014 a way to communicate red lines and prevent war. For the non-nuclear adversary, it functions as pure extraction (Snare) \u2014 compliance extracted through coercive threat with no coordination benefit. For civilian populations, it is mixed (Tangled Rope) \u2014 deterrence prevents major war but externalizes catastrophic risk. For military institutions, it is hybrid (Tangled Rope) \u2014 genuine deterrent coordination function combined with institutional extraction through budget capture and mission legitimacy. The measurements show increasing extractiveness (0.35 \u2192 0.58) and theater ratio (0.52 \u2192 0.68) over a 40-year interval, indicating that deterrence maintenance has become progressively more costly and performative as weapons systems have proliferated and strategic communication has required larger infrastructure.",
+    "key_agents": [
+      "Non-Nuclear Adversary: Primary target (powerless/trapped) \u2014 cannot credibly escalate; faces maximum extraction through asymmetric threat",
+      "Civilian Population: Secondary victim (moderate/constrained) \u2014 benefits from conventional war prevention; bears catastrophic escalation risk with no exit option",
+      "Nuclear-Capable State Leadership: Primary beneficiary (institutional/arbitrage) \u2014 captures strategic advantage and credibility extraction; can modify deterrent posture via arms control or d\u00e9tente",
+      "Military Establishment of Nuclear Power: Secondary beneficiary (institutional/constrained) \u2014 benefits from mission legitimacy and budgets; extraction target for credibility maintenance costs; constrained by strategic logic preventing posture reduction",
+      "Arms Control Institutions (NPT, etc.): Institutional actor (organized/constrained) \u2014 maintain performative verification role; actual proliferation prevention delegated to strategic calculation rather than institutional enforcement",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing the commitment problem as a law of strategic interaction rather than a choice to maintain nuclear arsenals"
+    ],
+    "logic_rationale": "Extractiveness (0.58): The constraint extracts significantly from non-nuclear adversaries and civilian populations through coercive threat and risk externalization, but is experienced as coordination by the nuclear power. Base extractiveness of 0.58 reflects that the primary function (war prevention) is genuine, but the mechanism (catastrophic threat) creates asymmetric harm and extraction. The measurement trajectory shows increasing extractiveness (0.35 \u2192 0.58) as deterrence infrastructure has become more elaborate and costly, suggesting that institutional expansion is amplifying the extractiveness beyond the minimal level required for strategic credibility. Suppression (0.65): High but not maximal. Non-nuclear adversaries cannot credibly exit (trapped), but some exit options exist through diplomatic accommodation, conventional build-up, or external alliance. Civilian populations face geographic, legal, and economic barriers to exit (constrained). Military institutions face institutional lock-in but retain some policy influence. Theater ratio (0.68): Substantial performative content. Credibility maintenance requires signaling through weapons deployments, strategic communications, military exercises, and declaratory policy \u2014 much of which is performative (communicating resolve to adversaries and domestic audiences) rather than functionally necessary for actual deterrence. The measurement trajectory (0.52 \u2192 0.68) shows increasing theater as weapons systems have become more elaborate and strategic communication infrastructure has expanded.",
+    "perspectival_gap": "The non-nuclear state sees snare because it experiences maximum extraction with no exit. The nuclear power sees rope because it benefits from coordination (preventing war) at low cost. These are not different measurements of the same thing \u2014 they are genuinely incompatible experiences of the same structural fact. The gap is not resolution-able by getting better data about deterrence; it is a fundamental perspectival difference rooted in structural position. This is exactly what the DR framework is designed to reveal: when a single constraint produces incompatible classifications from different positions, the framework captures that irreducible disagreement rather than forcing a false unity.",
+    "directionality_logic": "Directionality values (d) are derived from beneficiary/victim status and exit options. The non-nuclear adversary is a victim with no exit (trapped) \u2192 d \u2248 0.95 \u2192 f(d) \u2248 1.42, experiencing maximum extractiveness chi. The nuclear power is a beneficiary with exit options (arbitrage) \u2192 d \u2248 0.05 \u2192 f(d) \u2248 -0.12, experiencing negative or low extractiveness chi (net benefit). Civilian populations are victims with constrained exit \u2192 d \u2248 0.85 \u2192 f(d) \u2248 1.15, experiencing high chi. Military institutions are beneficiaries with constrained exit \u2192 d \u2248 0.35 \u2192 f(d) \u2248 0.25, experiencing moderate chi. The analytical observer at civilizational scope with analytical exit \u2192 d \u2248 0.72 \u2192 f(d) \u2248 1.15, viewing the constraint as nearly natural but with hints of contingency.",
+    "mandatrophy_analysis": "This constraint demonstrates mandatrophy resolution through perspectival decomposition. The question 'Is deterrence a coordination mechanism or an extraction mechanism?' has no single answer \u2014 it is both, depending on the observer. The non-nuclear adversary experiences extraction; the nuclear power experiences coordination. The mandatrophy is resolved by showing that all six types are legitimate readings from their respective positions. The analytical observer's mountain classification (strategic interaction laws) is a false summit revealed by the structural data: the constraint depends on contingent institutional choices (willingness to maintain nuclear posture, decisions about signaling, policy choices about arms control) rather than immutable logic. The measured theater ratio of 0.68 supports this: if deterrence were a natural law, it would require minimal theater. The high theater indicates significant performative content, which suggests that institutional choices are amplifying the extractiveness beyond what minimal deterrence would require. The constraint is not natural; it is maintained through active institutional and communicative work."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "arms_control_negotiation_dynamics",
+      "preemption_incentive_structure",
+      "nuclear_proliferation_threshold"
+    ],
+    "dual_formulation_note": "Asymmetric deterrence credibility decomposes into multiple constraint families depending on the observable: (1) credibility-maintenance costs (extractiveness driven by institutional overhead), (2) non-nuclear escalation dynamics (conventional conflict risk below nuclear threshold), (3) epistemic closure effects (suppression of alternative security frameworks). Each has different \u03b5 and different institutional actors. The current story focuses on the credibility-maintenance trajectory. See linked constraints for alternative decompositions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

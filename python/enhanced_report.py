@@ -1257,6 +1257,138 @@ def build_cohomology_section(constraint_id, pipeline_data):
     return "\n".join(lines)
 
 
+# --- Section E4: PARAMETRIC PERSISTENCE ---
+
+def build_persistence_section(constraint_id, persistence_data):
+    """Section E4: PARAMETRIC PERSISTENCE -- bar durations from grid sweep."""
+    lines = ["", "--- PARAMETRIC PERSISTENCE ---", ""]
+
+    if persistence_data is None:
+        lines.append("  [persistence_results.json not available — run persistence_sweep.py]")
+        return "\n".join(lines)
+
+    results = persistence_data.get("results", {})
+    if not results:
+        lines.append("  [no persistence sweep results]")
+        return "\n".join(lines)
+
+    key = constraint_id.lower()
+    has_any = False
+
+    for param_name, param_result in sorted(results.items()):
+        bars = param_result.get("bars", [])
+        sweep_range = param_result.get("sweep_range", 0)
+        grid_range = param_result.get("grid_range", [])
+        original = param_result.get("original")
+
+        # Filter bars for this constraint
+        c_bars = [b for b in bars if b.get("constraint", "").lower() == key]
+        if not c_bars:
+            continue
+        has_any = True
+
+        range_str = (f"[{grid_range[0]:.4f}, {grid_range[1]:.4f}]"
+                     if len(grid_range) == 2 else "?")
+        lines.append(f"  Swept: {param_name} (baseline={original}, range={range_str})")
+        lines.append("")
+
+        # H1 bars
+        h1_bars = [b for b in c_bars if b["dimension"] == "h1"]
+        if h1_bars:
+            lines.append("  H1 bars:")
+            for b in sorted(h1_bars, key=lambda x: x.get("birth", 0)):
+                death_str = "end" if b["death"] is None else f"{b['death']:.4f}"
+                dur = b["duration"]
+                frac = dur / sweep_range if sweep_range > 0 else 0
+                tag = _persistence_tag(frac)
+                lines.append(
+                    f"    H1={b['value']}: [{b['birth']:.4f}, {death_str}] "
+                    f"duration={dur:.4f} ({frac*100:.0f}% of range) — {tag}"
+                )
+            lines.append("")
+
+        # W1 bars (per edge)
+        edge_labels = {
+            "w1_u1_u2": "U1→U2",
+            "w1_u2_u3": "U2→U3",
+            "w1_u3_u4": "U3→U4",
+        }
+        w1_bars = [b for b in c_bars if b["dimension"].startswith("w1_")]
+        if w1_bars:
+            lines.append("  W1 bars:")
+            for b in sorted(w1_bars, key=lambda x: (x["dimension"], x.get("birth", 0))):
+                edge = edge_labels.get(b["dimension"], b["dimension"])
+                death_str = "end" if b["death"] is None else f"{b['death']:.4f}"
+                dur = b["duration"]
+                frac = dur / sweep_range if sweep_range > 0 else 0
+                tag = _persistence_tag(frac)
+                lines.append(
+                    f"    {edge}: [{b['birth']:.4f}, {death_str}] "
+                    f"duration={dur:.4f} ({frac*100:.0f}% of range) — {tag}"
+                )
+            lines.append("")
+
+        # Type bars
+        type_bars = [b for b in c_bars if b["dimension"].startswith("type:")]
+        if type_bars:
+            lines.append("  Type bars:")
+            for b in sorted(type_bars, key=lambda x: (x["dimension"], x.get("birth", 0))):
+                ctx = b["dimension"].split(":", 1)[1] if ":" in b["dimension"] else "?"
+                death_str = "end" if b["death"] is None else f"{b['death']:.4f}"
+                dur = b["duration"]
+                frac = dur / sweep_range if sweep_range > 0 else 0
+                lines.append(
+                    f"    {ctx}: {b['value']} [{b['birth']:.4f}, {death_str}] "
+                    f"duration={dur:.4f} ({frac*100:.0f}%)"
+                )
+            lines.append("")
+
+        # H1/W1 divergence check
+        h1_total = sum(b["duration"] for b in h1_bars)
+        w1_u3u4 = [b for b in w1_bars if b["dimension"] == "w1_u3_u4"]
+        w1_total = sum(b["duration"] for b in w1_u3u4)
+        if sweep_range > 0:
+            h1_frac = h1_total / sweep_range
+            w1_frac = w1_total / sweep_range
+            if abs(h1_frac - w1_frac) > 0.3:
+                lines.append(
+                    f"  ** H1/W1 DIVERGENCE: H1 {h1_frac*100:.0f}% vs "
+                    f"W1(U3→U4) {w1_frac*100:.0f}% — "
+                    f"topological and transport persistence disagree **"
+                )
+                lines.append("")
+
+        # Diagnosis from snare_chi_floor special section
+        if param_name == "snare_chi_floor":
+            diag = param_result.get("snare_chi_floor_diagnosis", [])
+            for d in diag:
+                if d.get("constraint", "").lower() == key:
+                    lines.append(f"  Diagnosis: {d.get('interpretation', '')}")
+                    if d.get("h1_drops_to_zero"):
+                        lines.append(
+                            "  WARNING: H1 reaches 0 — fracture disappears "
+                            "in part of sweep range"
+                        )
+                    break
+
+    if not has_any:
+        lines.append("  No persistence bars for this constraint across swept parameters.")
+
+    return "\n".join(lines)
+
+
+def _persistence_tag(frac):
+    """Return a human-readable persistence tag."""
+    if frac >= 0.80:
+        return "FULL RANGE"
+    elif frac >= 0.20:
+        return "ROBUST"
+    elif frac >= 0.05:
+        return "MODERATE"
+    else:
+        return "FRAGILE"
+
+
 # --- Section F: ABDUCTIVE FLAGS ---
 
 def build_abductive_section(constraint_id, pipeline_data):
@@ -1630,6 +1762,7 @@ def generate_report(constraint_id, data, iteration_round=None):
     # Indexed-mode MaxEnt now embedded in build_maxent_section (Gap analysis Change 5 — resolved)
     l2_wasserstein = build_wasserstein_section(constraint_id, data["pipeline"])
     l2_cohomology = build_cohomology_section(constraint_id, data["pipeline"])
+    l2_persistence = build_persistence_section(constraint_id, data["persistence"])
     l2_abductive = build_abductive_section(constraint_id, data["pipeline"])
     l2_verdict = build_level2_verdict_body(constraint_id, data["pipeline"])
     l2_theorems = build_theorem_instantiation(
@@ -1654,7 +1787,7 @@ def generate_report(constraint_id, data, iteration_round=None):
         build_level_header(1, "SELF-CONSISTENCY"),
         l1_identity, l1_contamination, l1_orbit, l1_omega,
         build_level_header(2, "DIAGNOSTIC CONVERGENCE"),
-        l2_convergence, l2_maxent, l2_wasserstein, l2_cohomology, l2_abductive, l2_verdict, l2_theorems,
+        l2_convergence, l2_maxent, l2_wasserstein, l2_cohomology, l2_persistence, l2_abductive, l2_verdict, l2_theorems,
         build_level_header(3, "CORPUS POSITIONING"),
         l3_distribution, l3_structural,
     ]
@@ -1732,6 +1865,7 @@ def main():
         "orbit":    load_json(OUTPUTS_DIR / "orbit_data.json", "orbit_data.json"),
         "omega":    load_json(OUTPUTS_DIR / "enriched_omega_data.json", "enriched_omega_data.json"),
         "corpus":   load_json(OUTPUTS_DIR / "corpus_data.json", "corpus_data.json"),
+        "persistence": load_json(SCRIPT_DIR / "persistence_results.json", "persistence_results.json"),
         "maxent":   load_text(OUTPUTS_DIR / "maxent_report.md", "maxent_report.md"),
         "pattern":  load_text(OUTPUTS_DIR / "pattern_mining.md", "pattern_mining.md"),
         "covering": load_text(OUTPUTS_DIR / "covering_analysis.md", "covering_analysis.md"),

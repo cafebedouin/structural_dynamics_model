@@ -1,0 +1,207 @@
+{
+  "header": {
+    "constraint_id": "dividend_policy_optionality",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "divopt"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dividend Policy Optionality in Corporate Governance",
+    "topic_domain": "corporate_finance/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "management_discretion",
+      "controlling_shareholders"
+    ],
+    "victims": [
+      "minority_shareholders",
+      "capital_allocation_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Minority Shareholder",
+      "comment": "PERSPECTIVE 1: MINORITY SHAREHOLDER (SNARE) \u2014 Cannot exit without realizing losses; faces full extraction through dividend suppression or opportunistic allocation. Management retains discretion to defer dividends indefinitely while pursuing private benefit projects. No meaningful exit option \u2014 selling into a suppressed market locks in losses. Maximum extraction experienced by the powerless agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Institutional Investor Coalition",
+      "comment": "PERSPECTIVE 2: INSTITUTIONAL INVESTOR COALITION (TANGLED ROPE) \u2014 Organized agents (pension funds, asset managers, voting blocs) coordinate through shareholder activism and stewardship codes to enforce dividend policies. Benefits from coordination mechanism that protects capital returns. Constrained by reputational costs of forced actions and by the distributed nature of holdings. Genuine coordination function (enforcing capital discipline) coexists with asymmetric extraction (management discretion to delay or redirect dividends)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Management Team",
+      "comment": "PERSPECTIVE 3: MANAGEMENT TEAM (ROPE) \u2014 Experiences dividend policy as pure coordination mechanism: regular payouts discipline capital allocation and enable growth planning. Arbitrage exit option \u2014 can shift to debt financing or alternative capital structures if dividend constraints become binding. Benefits from the constraint's legitimacy function (dividend policy makes management credible). Net beneficiary experiencing coordination rather than extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Regulatory Reform Movement",
+      "comment": "PERSPECTIVE 4: REGULATORY REFORM MOVEMENT (SCAFFOLD) \u2014 Powerful actors (regulators, governance reformers, index-linked activist investors) see dividend optionality as a temporary coordination failure with a sunset. Mandatory dividend disclosure, clawback provisions, and stakeholder representation on compensation committees are building alternative mechanisms that reduce management discretion. Mobile exit option \u2014 regulatory pressure is shifting norms. Extraction levels declining as sunset approaches through institutional reform."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Retained Earnings Doctrine",
+      "comment": "PERSPECTIVE 5: RETAINED EARNINGS DOCTRINE (PITON) \u2014 The theoretical principle that retained earnings optimize long-term shareholder value persists despite empirical evidence that discretionary retention often funds managerial empire-building or entrenchment. The doctrine is maintained through institutional inertia \u2014 business school curriculum, analyst expectations, corporate governance norms \u2014 not because it demonstrably works. Theater ratio reflects the performative 'growth story' that justifies discretionary dividend suppression. Piton classification derives from the high theater of growth narratives masking extraction."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Agency Cost View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / AGENCY COST VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, the separation of ownership and control creates an inherent agency cost: managers have structural incentives to retain cash for size/control/compensation rather than return it to shareholders. This perspective sees dividend discretion as an immutable property of the corporate form itself. However, the structural data (extractiveness 0.52, suppression 0.48, theater 0.61) contradicts the mountain classification \u2014 empirical constraints on management (shareholder votes, regulatory oversight, market discipline, activist pressure) demonstrate that agency costs are not laws of nature but contingent institutional arrangements. The engine will compute this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "growth_investment_authenticity",
+      "question": "Are discretionary retained earnings genuinely funding high-return growth investments, or are they funding value-destroying managerial projects?",
+      "resolution_mechanism": "Return on incremental invested capital (ROIC) analysis; comparison of post-retention value creation to cost of capital; econometric studies linking discretionary dividend cuts to subsequent acquisition and compensation choices",
+      "impact": "If ROIC > cost of capital: retention is coordination mechanism, extraction is minimal. If ROIC < cost of capital: retention is extraction mechanism, dividend discretion is snare. Classification shifts from tangled_rope toward snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether retained earnings fund value-creating or value-destroying investments"
+    },
+    {
+      "id": "minority_shareholder_exit_feasibility",
+      "question": "Do minority shareholders have genuinely available exit options (sale, portfolio diversification, voting with feet) or are they structurally trapped?",
+      "resolution_mechanism": "Liquidity analysis of minority share blocks; transaction cost measurement; correlation between minority shareholding size and exit capacity; empirical study of minority exit patterns in response to dividend suppression",
+      "impact": "If exits are available at reasonable cost: exit_options should be constrained or mobile, not trapped. If exits are blocked by illiquidity or lock-in: trapped classification confirmed, snare classification strengthened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether minority shareholders have viable exit options"
+    },
+    {
+      "id": "institutional_investor_enforcement_effectiveness",
+      "question": "Do institutional investor voting blocs and stewardship codes actually constrain management discretion, or do they represent performative activism?",
+      "resolution_mechanism": "Dividend policy change rates post-voting pressure; management response to institutional investor proposals; correlation between active institutional ownership and dividend payout ratios; longitudinal tracking of institutional investor threats vs actual enforcement",
+      "impact": "If effective: institutional investor perspective is genuine tangled_rope with real coordination function. If performative: organized agent experiences theater, classification shifts toward piton. Theater ratio would increase.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether institutional investor enforcement actually constrains management discretion"
+    },
+    {
+      "id": "regulatory_sunset_plausibility",
+      "question": "Are mandatory dividend disclosure, clawback provisions, and stakeholder representation mechanisms actually reducing management discretion, or are these reforms merely symbolic?",
+      "resolution_mechanism": "Comparison of executive compensation structures pre/post-reform; dividend policy stability and predictability in reformed vs unreformed regimes; empirical measurement of discretionary dividend suppression rates before/after regulatory implementation",
+      "impact": "If sunset is real: scaffold perspective confirmed, theater declining, extraction should show temporal decline. If reforms are symbolic: scaffold perspective is aspirational, no sunset occurs, extraction plateaus or rises. Measurement interval trajectory becomes diagnostic.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory reform is reducing management discretion over dividend policy"
+    },
+    {
+      "id": "agency_cost_universality",
+      "question": "Is the agency cost inherent to all corporate structures, or is it contingent on specific institutional arrangements (dispersed ownership, weak governance, concentrated control)?",
+      "resolution_mechanism": "Comparative institutional analysis: dividend discretion in widely-held vs family-controlled vs state-owned corporations; variation across legal regimes (civil law vs common law, strong vs weak minority protections); empirical measurement of agency costs under different ownership structures",
+      "impact": "If inherent: mountain classification confirmed (agency costs are immutable). If contingent: mountain is false summit (agency costs are institutional artifacts). Classification shifts from mountain toward tangled_rope or snare depending on structural controls present.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether agency costs are universal or contingent on institutional arrangement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.49
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.57
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Dividend policy optionality creates a structural tension between management's legitimate discretion to allocate capital efficiently and shareholders' need for credible constraints on rent extraction. The constraint exhibits multiple classification types from different agent perspectives: minority shareholders experience it as pure extraction (snare); management experiences it as coordination; institutional investors see a problem being solved through reform (scaffold); and the agency cost theory risks naturalizing a contingent institutional arrangement as an immutable law of corporate structure. The extractiveness trajectory shows an initial rise (0.38 \u2192 0.52 over the interval) reflecting increasing instances of dividend suppression without credible growth justification, followed by early signs of decline (0.49 at T=15) as regulatory reforms and activist pressure begin constraining discretion. The theater ratio (0.61) reflects the prevalence of 'growth story' narratives that justify dividend cuts despite weak return expectations \u2014 analysts and management consistently invoke strategic investment justifications that are post-hoc rationalizations for discretionary cash retention.",
+    "key_agents": [
+      "Minority Shareholders: Primary victims (powerless/trapped) \u2014 cannot exit without losses; face full extraction through discretionary dividend suppression",
+      "Management Team: Primary beneficiary (institutional/arbitrage) \u2014 retains discretion to deploy capital for empire-building, compensation increases, or value-destroying acquisitions",
+      "Institutional Investor Coalition: Organized agents (organized/constrained) \u2014 coordinate through voting and stewardship to enforce dividend discipline; benefit from coordination mechanism but constrained by distributed holdings",
+      "Regulatory Reform Movement: Powerful actors (powerful/mobile) \u2014 driving mandatory disclosure, clawback provisions, and stakeholder representation to create sunset to discretionary management control",
+      "Retained Earnings Doctrine: Institutional actor (institutional/arbitrage) \u2014 maintains performative legitimacy for dividend suppression despite weak empirical foundation; maintains through business school curriculum and analyst expectations",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing agency costs as immutable property of corporate form rather than contingent institutional arrangement"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Management has substantial discretion to suppress dividends in the name of 'growth,' and minority shareholders bear the cost through diluted capital returns. The extraction is not total (some constraints exist through voting and regulatory oversight) but significant. The trajectory shows rise during period of light governance (0.38 \u2192 0.52) with early reversal due to regulatory pressure. Suppression (0.48): Moderate. Minority shareholders face material barriers to exit (illiquidity, transaction costs, lock-in through index funds) but not absolute barriers \u2014 they can sell at some cost or vote. Institutional investors can coordinate voting and stewardship pressure. Neither exit is costless; both are possible. Theater ratio (0.61): Moderate-high. The dominant narrative justifying dividend suppression is the 'growth story' \u2014 management claims strategic investments justify capital retention despite weak return evidence. This narrative persists through institutional inertia despite frequent failure to deliver promised returns. Analysts mechanically accept the growth story; business schools teach that retained earnings optimize value despite empirical evidence otherwise.",
+    "perspectival_gap": "The gap between management (rope), institutional investors (tangled_rope), and minority shareholders (snare) reflects their different structural positions relative to the dividend discretion flow. Management controls the discretion and benefits from optionality; minorities bear the cost with no exit option; organized investors coordinate to create constraints that benefit minorities but acknowledge management's legitimate discretion need. The scaffold perspective reflects a genuine structural shift \u2014 regulatory mechanisms are reducing the discretion gap. The piton perspective reflects institutional inertia: retained earnings doctrine maintains theoretical legitimacy despite weak empirical support. The mountain perspective is a false summit: agency costs appear immutable from the civilizational view but are actually contingent on institutional structures (dispersed ownership, weak minority protections, compensation concentrated in stock/options).",
+    "directionality_logic": "Management team benefits from discretion and experiences low directionality (d \u2248 0.15) \u2014 they are the beneficiary, arbitrage exit option, institutional power. Minority shareholders experience high directionality (d \u2248 0.90) \u2014 they are victims, trapped exit option, powerless position. Institutional investors coordinate on behalf of minorities but retain some optionality (d \u2248 0.50) \u2014 organized power, constrained exit, mixed beneficiary/victim status as coordinators rather than principals. The engine derives d from these structural positions and applies sigmoid f(d) to compute experienced extractiveness chi. Management's arbitrage exit produces negative f(d), dampening their experienced extraction (they see coordination). Trapped minority shareholders produce high f(d), amplifying experienced extraction (they see snare). Organized institutional investors with constrained exit produce moderate f(d), consistent with their tangled_rope experience.",
+    "mandatrophy_analysis": "DIAGNOSTIC: The mandatrophy is resolved through the perspectival gap itself. All six types are valid readings of the same structural data. Management genuinely experiences the constraint as pure coordination (rope) because they benefit from it and can arbitrage into alternative capital structures. Minorities genuinely experience it as pure extraction (snare) because they bear all costs with no exit. Institutional investors genuinely experience it as tangled_rope because they coordinate to enforce some constraints while acknowledging management's legitimate discretion need. The regulatory reform movement genuinely experiences it as scaffold because new governance mechanisms are creating sunset to discretionary management control. The retained earnings doctrine genuinely experiences it as piton because the theoretical justification persists despite weak empirical foundation. The civilizational analytical observer risks a false summit (mountain) by naturalizing agency costs, but the structural data (extractiveness 0.52, suppression 0.48, theater 0.61) and the perspectival diversity confirm that agency costs are institutional artifacts, not laws of nature. The presheaf over the observation site \u2014 the full set of perspectives with their different classifications and directionalities \u2014 is the answer, not any single type."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "executive_compensation_asymmetry",
+      "minority_shareholder_protection_gaps",
+      "capital_market_information_asymmetry"
+    ],
+    "dual_formulation_note": "Dividend policy optionality decomposes into three distinct constraints with different \u03b5 values: (1) discretionary capital allocation (\u03b5=0.52, tangled_rope) \u2014 management control over retained earnings for investment/acquisition decisions; (2) minority shareholder exit barriers (\u03b5=0.68, snare) \u2014 liquidity constraints and lock-in preventing exit when dividends are suppressed; (3) growth narrative theater (\u03b5=0.45, piton) \u2014 institutional maintenance of 'retained earnings optimize value' doctrine despite weak empirical foundation. This story addresses the primary coordination-extraction hybrid. The minority exit constraint (downstream) has higher extractiveness; the narrative theater constraint (downstream) has higher performativity. All three are linked through management discretion flows."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.48
+    }
+  ]
+}

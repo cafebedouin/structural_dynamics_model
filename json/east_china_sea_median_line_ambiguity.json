@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "east_china_sea_median_line_ambiguity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ecs"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "East China Sea Median Line Ambiguity",
+    "topic_domain": "geopolitical/maritime_law/resource_extraction",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "chinese_state_resource_access",
+      "japanese_state_resource_access"
+    ],
+    "victims": [
+      "maritime_law_credibility",
+      "third_party_fisheries",
+      "regional_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Regional Fishing Communities",
+      "comment": "PERSPECTIVE 1: REGIONAL FISHING COMMUNITIES (SNARE) \u2014 Small-scale fishers from Taiwan, Philippines, and Southeast Asia cannot exit territorial waters; face seizure, fines, and violence with no recourse. Maximum extraction with minimal coordination benefit. Trapped by geography and economic necessity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "China (People's Republic)",
+      "comment": "PERSPECTIVE 2: CHINA STATE (TANGLED ROPE) \u2014 Extracts hydrocarbon access and fishing zones through active enforcement (coast guard, military presence) while nominally adhering to UNCLOS framework. Coordination function exists (maritime boundary principle), but asymmetric extraction dominates. Exit constrained by domestic legitimacy narratives around 'historical rights' and nationalist resource security."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Japan (State)",
+      "comment": "PERSPECTIVE 3: JAPAN STATE (TANGLED ROPE) \u2014 Mirror position to China. Extracts median-line EEZ access and gas field rights through legal assertion and coast guard enforcement. Also benefits from UNCLOS coordination framework while extracting through asymmetric claims. Exit constrained by alliance obligations (US security guarantee) and domestic constituencies demanding energy security."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International Law & Arbitration Framework",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL LAW FRAMEWORK (SCAFFOLD) \u2014 UNCLOS, arbitration processes, and maritime law institutions provide scaffolding for boundary resolution. Low theater (law-based rather than performative) but operates under sunset logic: if China or Japan achieves political/military dominance, arbitration becomes irrelevant. Current function is genuine coordination toward stable boundaries, with exit available through institutionalization. Suppression is moderate \u2014 framework constrains both states from unilateral seizure but both can exit through non-compliance."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "UNCLOS Median Line Principle",
+      "comment": "PERSPECTIVE 5: UNCLOS MEDIAN LINE PRINCIPLE (PITON) \u2014 The abstract rule (EEZ boundaries derived from median line between baselines) is mathematically clean and theoretically sound. But the principle has degraded into performative citation: both China and Japan invoke it selectively while advancing contradictory baselines. The ritual persists (both cite UNCLOS frequently) but function is compromised. Theater high because legal argument obscures power asymmetries and resource extraction."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Structural Geometry)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN VIEW) \u2014 From a pure geometric perspective, continental shelf boundaries in overlapping EEZ zones create inherent verification ambiguity: there is no natural fact of the matter about where the 'true' median line lies when baselines are contested. This appears as a natural law limit \u2014 the constraint emerges from mathematical structure, not institutional design. But the structural data reveals false summit: the ambiguity is instrumentalized by both states for extraction, making it a contingent geopolitical constraint, not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "baseline_definition_ambiguity",
+      "question": "Which baseline should be used to calculate the median line: low-water mark, straight archipelago lines, or contested outer continental shelf claims?",
+      "resolution_mechanism": "ICJ/ITLOS arbitration establishing binding baseline precedent; geological/hydrographic surveys establishing objective tidal reference",
+      "impact": "Different baseline definitions shift the median line by 20-80 nautical miles. If baselines are fixed by arbitration: constraint shifts from snare/tangled_rope toward rope (coordination frame dominates). If baselines remain contested: extraction frame persists.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Baseline definition determines median line position by 20-80nm"
+    },
+    {
+      "id": "resource_distribution_beneath_ambiguity",
+      "question": "Are high-value hydrocarbon deposits (Shirakaba/Chunxiao fields) actually centered on the disputed boundary, or do resource surveys reveal unambiguous ownership?",
+      "resolution_mechanism": "Seismic surveys establishing field geometries; geological continuity analysis determining resource ownership",
+      "impact": "If resources straddle the boundary: extraction incentives are symmetric (both states have plausible claims). If resources are substantially on one side: extraction is asymmetric, favoring the state that controls that side.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether hydrocarbon deposits straddle or fall cleanly within one state's territory"
+    },
+    {
+      "id": "military_balance_stability_threshold",
+      "question": "At what military capability gap does China's coast guard enforcement become irresistible, converting the constraint from tangled_rope (asymmetric but negotiable) to snare (unilateral extraction)?",
+      "resolution_mechanism": "Comparative military capability assessment; empirical testing through incident escalation patterns; analysis of incident outcomes (seizures vs negotiated release)",
+      "impact": "If gap is already decisive: constraint is effectively a snare (China extracting unilaterally). If gap remains contested: tangled_rope holds (both states still negotiating). Determines whether scaffold sunset is realistic.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Military balance threshold at which enforcement becomes unilateral"
+    },
+    {
+      "id": "unclos_exit_cost_asymmetry",
+      "question": "Would Japan's exit from UNCLOS coordination (unilateral enforcement of its claimed baseline) impose higher legitimacy costs than China's equivalent exit?",
+      "resolution_mechanism": "Analysis of US alliance dependencies; assessment of international law community leverage; historical precedent from other UNCLOS disputes",
+      "impact": "If exit costs are asymmetric: China faces lower reputational penalty for non-compliance, making unilateral extraction more rational. If symmetric: both states remain constrained by UNCLOS exit costs.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether UNCLOS exit costs differ between China and Japan"
+    },
+    {
+      "id": "third_party_alliance_constraint",
+      "question": "Does US security guarantee to Japan function as external suppression of China's extraction, or does US neutrality posture undermine the constraint?",
+      "resolution_mechanism": "Analysis of US statements on ECS disputes; assessment of freedom of navigation operations impact; game-theoretic modeling of deterrence credibility",
+      "impact": "If guarantee is credible: suppression of Chinese extraction keeps constraint in tangled_rope zone. If credibility degrades: China can extract unilaterally (snare), and the constraint's type shifts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether US alliance credibility functions as extraction suppression"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The East China Sea median line ambiguity is a geopolitical constraint that emerges from the intersection of maritime law, resource scarcity, and power asymmetry. UNCLOS (United Nations Convention on the Law of the Sea) establishes the median line principle as the default boundary for exclusive economic zones (EEZ) in overlapping maritime claims. However, both China and Japan contest each other's baseline definitions\u2014the geographic starting points from which the median line is calculated. China claims an outer continental shelf (OCS) boundary that extends the Chinese baseline far into the ECS, shifting the median line southward and granting China access to hydrocarbon deposits and fishing zones that Japan claims under a median line calculated from different baselines. Japan adheres to a baseline closer to its actual low-water mark coastline, pushing the median line northward. This structural ambiguity\u2014the lack of agreement on baselines\u2014creates a legal deadlock that both states exploit for resource extraction and geopolitical advantage. The constraint exhibits all six classification types from different perspectives: for powerless fishing communities, it is a snare (trapped extraction with no exit); for both major states, it is a tangled rope (genuine coordination function via UNCLOS exists alongside asymmetric extraction through baseline manipulation and coast guard enforcement); for international law institutions, it is a scaffold with sunset logic (arbitration and law-based resolution offer paths to stability but these pathways can be rendered irrelevant by military dominance); for the abstract UNCLOS principle, it is a piton (the rule persists through citation ritual but functional coordination has degraded); and from a civilizational analytical view, it risks appearing as a natural law (geometric ambiguity in overlapping zones) when in fact it is an instrumentalized geopolitical extraction mechanism. The constraint's theater ratio has increased over the past decade as legal argumentation has become increasingly sophisticated while actual resource extraction and military enforcement have intensified\u2014the performative framing (invocation of UNCLOS, arbitration rhetoric) now substantially obscures the underlying extraction dynamics.",
+    "key_agents": [
+      "China (PRC State): Powerful beneficiary (powerful/constrained) \u2014 extracts hydrocarbon access and fishing zone expansion through coast guard enforcement and baseline assertions; constrained by US alliance with Japan and UNCLOS legitimacy costs but increasingly dominant militarily",
+      "Japan (State): Powerful beneficiary (powerful/constrained) \u2014 extracts median-line EEZ rights through legal assertion and limited coast guard presence; constrained by alliance obligations and relative military disadvantage against China",
+      "Regional Fishing Communities: Primary victims (powerless/trapped) \u2014 small-scale fishers from Taiwan, Philippines, Vietnam, and Southeast Asia face seizure and violence with no recourse; cannot exit territorial waters due to economic necessity",
+      "Maritime Law Institutions: Organized institutional actors (organized/mobile) \u2014 UNCLOS signatories, arbitration frameworks (ITLOS, ICJ), and legal experts providing scaffolding for boundary resolution; maintain exit options through continued arbitration processes",
+      "UNCLOS Median Line Principle: Institutional abstraction (institutional/mobile) \u2014 the mathematical rule exists independent of enforcement; persists through citation but function degrades as enforcement diverges from principle",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing the ambiguity as an inherent geometric property when it is actually instrumentalized for geopolitical extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. The constraint extracts both resource access (hydrocarbon fields worth billions annually) and geopolitical advantage (leverage over regional states and alliance partners). The extraction is not maximal because both major states retain some coordination incentive (UNCLOS adherence maintains international legitimacy; arbitration remains possible). The measurement trajectory shows increasing extractiveness over the decade (0.35 \u2192 0.58) reflecting China's growing military capacity to enforce its baseline claims unilaterally, reducing the negotiation requirement. Suppression (0.72): High. Small-scale fishers face violence, seizure, and economic coercion with minimal legal recourse. State-level suppression is also high\u2014neither China nor Japan can credibly exit UNCLOS without major reputational costs, and both face domestic legitimacy constraints that prevent compromise (Chinese nationalism around 'historical rights'; Japanese alliance obligations and resource security narratives). The suppression mechanism is both structural (military enforcement, economic barriers) and institutional (UNCLOS commitment makes unilateral exit costly). Theater ratio (0.68): High and increasing. Legal argumentation about baselines and median line principles increasingly obscures the underlying power dynamics and resource extraction. Both states cite UNCLOS frequently, invoke arbitration rhetoric, and maintain the appearance of law-based dispute resolution while simultaneously conducting military enforcement and resource extraction. The performative content has grown as the legal complexity has increased while the actual coordination function (moving toward agreed boundaries) has stalled.",
+    "perspectival_gap": "The gap between the snare perspective (regional fishers) and the tangled rope perspectives (China, Japan) is substantial. Fishers perceive pure extraction with no coordination benefit; states perceive genuine coordination necessity (maritime boundaries must be established) combined with extraction advantage. This gap is not a measurement error\u2014it reflects real structural asymmetry: both states do benefit from some coordination mechanisms (UNCLOS prevents escalation to open conflict), while fishers receive zero coordination benefit (the boundaries, once established, will exclude them further, not enable their access). The gap between the tangled rope perspectives (states) and the scaffold perspective (law institutions) reveals that powerful actors see the constraint as providing extraction opportunity, while institutional mediators see it as a problem to be solved through arbitration. The gap between the piton perspective (UNCLOS principle persisting through theater) and the snare perspective (actual unilateral extraction happening on the ground) reveals that the performative legal framework obscures the material extraction dynamics.",
+    "directionality_logic": "Directionality values are derived from structural position within the extraction flow. China and Japan are beneficiaries of baseline ambiguity (they can assert favorable boundaries and extract resources/geopolitical advantage), but their exit options are constrained\u2014they cannot credibly exit UNCLOS without massive legitimacy costs. This produces moderate-to-high d values (~0.40-0.55 for each) reflecting that they experience extraction pressure (UNCLOS constraints) but benefit from the ambiguity's existence (continued baseline flexibility). Regional fishing communities are pure victims (zero beneficiary status) with trapped exit options, producing maximum d values (~0.95) reflecting that they bear extraction costs with no escape route. International law institutions are organized actors with mobile exit options; they are not beneficiaries of the ambiguity (they would prefer resolution) but they are not victims either (the law-based framework protects their legitimacy). This produces moderate d values (~0.50-0.60) reflecting their neutral structural position. The UNCLOS principle is an institutional abstraction with no embodied agent; it experiences no extraction in the material sense but its functional credibility is being degraded by state manipulation of the ambiguity, producing a synthetic d-equivalent of degradation (~0.60-0.70 reflecting that the principle is increasingly captured for extraction purposes). The analytical observer derives d from the full pattern of asymmetries, producing a d-equivalent of ~0.75 reflecting that the true structure of extraction is being obscured by the legal-principle framing.",
+    "mandatrophy_analysis": "The mandatrophy is partially resolved here. This is not a case of false attribution to coordination (where extraction masquerades as cooperation). Rather, this is a case where genuine coordination function (UNCLOS boundary-setting) coexists with and is being instrumentalized for extraction. Both classification types are accurate from their respective perspectives: the constraint IS a tangled rope (coordination + extraction) from the state perspective, and it IS a snare (pure extraction) from the fishing community perspective. The analytical perspective risks a false mountain (treating the ambiguity as a natural law) when the ambiguity is actually maintained instrumentally. The constraint does not resolve to a single type\u2014it is authentically a presheaf over the observation site. The mandatrophy reveals that the question 'is this coordination or extraction?' has different answers depending on who you are asking. For major states, it is coordinate-with-extraction. For powerless actors, it is extraction masquerading as coordination (international law provides them zero benefit). For international institutions, it is coordination (law-based resolution). The true structure is that the constraint provides coordination benefits among powerful actors while extracting from powerless ones\u2014it is an extraction mechanism that coordinates among extractors. This is the canonical form of tangled rope, and it demonstrates that mandatrophy resolution is not about choosing one classification but about recognizing that different groups experience the constraint fundamentally differently."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "taiwan_strait_ambiguity",
+      "south_china_sea_nine_dash_line",
+      "island_dispute_entitlement_rules"
+    ],
+    "dual_formulation_note": "The ECS median line ambiguity is upstream of broader maritime boundary disputes in the region (Taiwan Strait, SCS nine-dash line claims). All three constraints share the instrumentalization of UNCLOS ambiguities for geopolitical extraction. The ECS constraint has the most symmetric power structure (two roughly equal states); the Taiwan Strait has asymmetric military power; the SCS involves multiple smaller states and a rising power. Decomposition is justified because the \u03b5 values differ: ECS ~0.58 (tangled rope dominant), Taiwan Strait ~0.71 (snare for smaller states), SCS ~0.65 (tangled rope with coalition dynamics)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ]
+}

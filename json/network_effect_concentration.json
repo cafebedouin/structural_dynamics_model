@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "network_effect_concentration",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "neteff"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Network Effect Concentration in Digital Platforms",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dominant_platform_operator"
+    ],
+    "victims": [
+      "competing_platforms",
+      "smaller_service_providers",
+      "end_users_locked_in"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "End User Locked in Network",
+      "comment": "PERSPECTIVE 1: END USER (SNARE) \u2014 Cannot exit the dominant platform without abandoning social connections, professional contacts, and ecosystem access. Material barriers include lock-in through data, relationships, and switching costs. Zero effective alternatives at scale. Maximum experienced extraction \u2014 user benefits from network reach but cannot negotiate terms and bears full cost of exploitation."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Competing Platform Provider",
+      "comment": "PERSPECTIVE 2: COMPETING PLATFORM (SNARE) \u2014 Faces structural impediment to growth: even with superior product, cannot achieve critical mass without the installed user base already on the dominant platform. Network effects create exponential cost to entry. High suppression through technical, financial, and coordination barriers. Moderate power but constrained exit \u2014 the alternative (exit the market) carries severe career and capital loss."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Dominant Platform Operator",
+      "comment": "PERSPECTIVE 3: DOMINANT PLATFORM (ROPE) \u2014 Experiences the network effect as pure coordination: user growth drives value, which attracts more users. Genuine coordination function exists \u2014 the platform solves a real collective action problem (connecting many agents). Net beneficiary with high arbitrage capacity. Can exit by licensing technology, pivoting to adjacent networks, or monetizing data. Effective extraction but framed as coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Large Service Provider on Platform",
+      "comment": "PERSPECTIVE 4: LARGE SERVICE PROVIDER (TANGLED ROPE) \u2014 Coordinated with the dominant platform (shared value creation through ecosystem), but also extracted from (platform takes commission, controls terms, can change policies unilaterally). Moderate power and mobile exit options (can diversify across platforms or build own ecosystem), but significant sunk costs in platform-specific optimization. Mixed experience of coordination benefit and extraction cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Coalition of Smaller Providers",
+      "comment": "PERSPECTIVE 5: COALITION OF SMALLER PROVIDERS (TANGLED ROPE) \u2014 Individually trapped, but collectively can create alternative coordination mechanisms (open protocols, federation, cooperative platforms). Network effects can be broken through coordinated defection and technical standardization. Genuine coordination function exists (coalition members benefit from each other), but extraction occurs through platform control of terms and rate-setting. Constrained exit at individual level, but coalition structure provides exit pathway if sustained."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Regulatory Framework (Theater View)",
+      "comment": "PERSPECTIVE 6: REGULATORY FRAMEWORK (PITON) \u2014 Antitrust and platform regulation frameworks persist through institutional inertia despite degraded function. Original purpose was breaking monopolies through structural separation or conduct restrictions, but enforcement has atrophied relative to platform evolution. Theater_ratio is low because regulation conducts performative oversight (investigating, fining, imposing behavioral remedies) that does not arrest concentration. The regulatory apparatus maintains legitimacy through ritual rather than effectiveness."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Network Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a mathematical/economic perspective, network effects are an immutable property of many-to-many coordination systems: value grows with scale, creating winner-take-most dynamics inherent to the structure. This perspective naturalizes concentration as a law of network topology. However, structural data reveals this as a false summit: network effects are real but concentration is contingent on institutional choices (interoperability rules, data portability, open standards). The 'inevitability' framing masks policy alternatives."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "network_effect_interoperability_boundary",
+      "question": "Do network effects prevent interoperability, or does institutional choice (interoperability requirements) break the concentration lock even when network effects persist?",
+      "resolution_mechanism": "Comparative case analysis: SMS/email interoperability despite network effects; EU interoperability mandates and resulting market outcomes; historical telephone network unbundling; open social network protocol experiments (ActivityPub adoption rates)",
+      "impact": "If interoperability can break concentration: network effect is a genuine coordination problem but not an extraction mechanism \u2014 classification shifts from Snare/Tangled Rope to Rope/Scaffold. If interoperability fails or is insufficient: concentration is structural and network effect is the extraction mechanism.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether interoperability can break network effect concentration"
+    },
+    {
+      "id": "critical_mass_threshold_measurement",
+      "question": "What is the empirical critical mass threshold below which a competing platform cannot achieve sufficient user density to offer competitive value?",
+      "resolution_mechanism": "Historical analysis of failed competing platforms; econometric estimation of critical mass via diffusion models; user retention studies at different network densities; comparative analysis across platform categories (social, messaging, payments, e-commerce)",
+      "impact": "If threshold is low relative to global user base: multiple platforms can coexist (Rope from more perspectives). If threshold is high: market concentration is structural (Snare from more perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical critical mass threshold for competing platforms"
+    },
+    {
+      "id": "data_portability_effectiveness",
+      "question": "Can user data portability meaningfully reduce switching costs and break the lock-in mechanism, or is relationship/identity switching (losing social connections) the irreducible lock even with portable data?",
+      "resolution_mechanism": "Field experiments with data portability features; user switching rates pre/post data portability implementation; analysis of switching barriers beyond data (relational, reputational, identity); adoption of open data standards",
+      "impact": "If effective: lock-in is technical and can be solved (exit_options upgrade to mobile/arbitrage). If ineffective: lock-in is social/relational and persists even with data portability (exit_options remain trapped/constrained).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether data portability reduces switching costs and lock-in"
+    },
+    {
+      "id": "regulatory_enforcement_sufficiency",
+      "question": "Can existing antitrust enforcement (behavioral remedies, fines, structural separation threats) prevent further concentration, or is the rate of concentration faster than regulatory capacity?",
+      "resolution_mechanism": "Time-series analysis of market concentration vs regulatory action; case-by-case outcome analysis (did remedies achieve stated goals?); international regulatory effectiveness comparison; estimation of enforcement lag vs consolidation speed",
+      "impact": "If enforcement is sufficient: Piton classification is incorrect (theater has functional role). If enforcement is insufficient: Piton is correct (regulatory theater persists while concentration continues).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regulatory enforcement can prevent platform concentration"
+    },
+    {
+      "id": "federation_protocol_adoption_barrier",
+      "question": "What prevents coordinated adoption of federation protocols (ActivityPub, Matrix, etc.) by alternative platforms and users, despite their technical feasibility?",
+      "resolution_mechanism": "Adoption rate analysis; network density in federated systems vs centralized platforms; user switching cost studies; platform incentive analysis (why do platforms resist interoperability despite user preference?); protocol standardization timelines",
+      "impact": "If adoption barrier is technical: coalition can overcome it (exit_options upgrade). If adoption barrier is coordination/incentive: the barrier itself is a constraint that should be modeled separately.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Barriers to federation protocol adoption by platforms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Network effect concentration in digital platforms creates a structural constraint where dominant position becomes increasingly self-reinforcing: users join where other users are, creating exponential value growth for the incumbent. This constraint exhibits the full range of DR classifications depending on observational position. The dominant platform operator experiences pure coordination (Rope) \u2014 solving a real collective action problem. End users and competing platforms experience extraction (Snare) \u2014 trapped by network lock-in with no viable alternatives. Smaller service providers experience mixed coordination and extraction (Tangled Rope) \u2014 they benefit from platform reach but are extracted from through commission rates and policy changes. The coalition of smaller providers sees a genuine exit pathway through federation protocols (Tangled Rope), but only if they can overcome coordination barriers to collective adoption. The analytical observer risks naturalizing concentration as an immutable law of network topology (Mountain), when institutional choices about interoperability, data portability, and regulatory enforcement determine whether concentration persists. The constraint's evolution shows extractiveness increasing from 0.35 to 0.58 over the measurement interval, while theater_ratio slightly declined from 0.55 to 0.48 \u2014 indicating genuine (rather than performative) extraction mechanisms strengthening, as the platform operator optimized monetization and reduced friction that previously appeared as regulatory theater.",
+    "key_agents": [
+      "Dominant Platform Operator: Primary beneficiary (institutional/arbitrage) \u2014 captures network effects, can monetize user data and attention, controls ecosystem terms, experiences coordination function",
+      "End Users: Primary victim (powerless/trapped) \u2014 locked in through relationships, data, and ecosystem embeddedness; cannot exit without abandoning social capital; bears extraction through data monetization and attention capture",
+      "Competing Platform Providers: Secondary victim (moderate/constrained) \u2014 face exponential cost to entry due to network effects; cannot achieve critical mass without existing user base; high barriers to exit market",
+      "Large Service Providers: Mixed actor (powerful/mobile) \u2014 coordinated with platform (mutual value creation) but extracted from (commission rates, unilateral policy changes); can diversify across platforms but sunk in optimization",
+      "Coalition of Smaller Providers: Organized potential agent (organized/constrained) \u2014 individually trapped but collectively capable of building federation/interoperability alternatives; faces coordination barrier to adoption",
+      "Regulatory Framework: Institutional observer (institutional/arbitrage) \u2014 maintains oversight apparatus but enforcement capacity lags platform evolution; regulatory theater persists (Piton view)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as immutable network laws"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High but not maximum. The platform operator captures significant value through data monetization, commission extraction, and attention capture, but the extraction is not as severe as pure predation because genuine coordination function exists \u2014 the platform does solve the collective action problem of connecting many agents. The measurement trajectory (0.35\u21920.47\u21920.58) shows extractiveness increasing over time as the operator optimized monetization strategies and concentrated market control. Suppression (0.65): High. Users and competing providers face substantial barriers to exit: switching costs (data migration, relationship rebuilding), technical lock-in (API dependencies, proprietary formats), and market structure (no viable alternatives at comparable scale). Smaller providers face coordination barriers to collective exit. Theater ratio (0.48): Moderate-low and declining. Unlike regulatory constraints (high theater), network effect concentration involves genuine extraction mechanisms \u2014 network lock-in is real and functional, not performative. The slight decline in theater over time (0.55\u21920.48) indicates that early-stage regulatory theater has given way to more efficient extraction as the platform operator learned to optimize extraction without maintaining fa\u00e7ades.",
+    "directionality_logic": "Directionality values are derived from each agent's structural position in the extraction flow. The dominant platform operator is a clear beneficiary with arbitrage capacity (d\u22480.05-0.15, low f(d), negative \u03c7). End users trapped by lock-in are victims with no exit (d\u22480.92-0.98, high f(d), high \u03c7). Competing platforms are victims facing suppression through market structure (d\u22480.80-0.88, high f(d), moderate-high \u03c7). Large service providers are mixed \u2014 benefiting from platform reach but extracted from through commissions (d\u22480.52-0.58, f(d)\u22480.65-0.75, moderate \u03c7). The coalition of smaller providers have constrained but not trapped exit (d\u22480.65-0.75, f(d)\u22480.95-1.05, moderate-high \u03c7). The regulatory framework sees itself as agent (institutional/arbitrage) with low d due to beneficiary position in legitimacy, but the false-mountain analysis reveals this as an observational trap.",
+    "perspectival_gap": "The perspectival gap is maximal across the full range of types. The dominant operator sees coordination (Rope) \u2014 they are genuinely solving a network coordination problem. End users see extraction (Snare) \u2014 they cannot exit despite experiencing harm. The coalition sees a temporary problem with federation solutions (Tangled Rope with potential Scaffold upgrade). The regulatory observer sees degraded oversight (Piton) \u2014 antitrust enforcement persists as theater while concentration accelerates. The civilizational analytical view risks seeing a natural law (Mountain) \u2014 network effects as inevitable law of topology \u2014 but the structural data reveals this as a false summit. The gap between the operator's experience (coordination, positive value creation) and the powerless user's experience (extraction, lock-in) is not a difference in interpretation but a difference in structural position: the operator genuinely benefits from the coordination function, while the user is trapped by the lock-in mechanism. Both are correct about what they experience.",
+    "mandatrophy_analysis": "CONSTRAINT FAMILY DECOMPOSITION: Network effect concentration should be modeled as two structurally distinct constraints with different \u03b5 values and different resolution mechanisms: (1) NETWORK COORDINATION (\u03b5\u22480.15-0.20, Rope) \u2014 the genuine coordination benefit of many-to-many connection platforms; (2) MARKET CONCENTRATION LOCK-IN (\u03b5\u22480.58-0.72, Tangled Rope/Snare) \u2014 the extraction mechanism that prevents competing platforms from achieving scale despite superior features. These are not the same constraint viewed from different angles \u2014 they have different causal mechanisms, different beneficiaries, and different policy responses. Network coordination is solved (Rope); market concentration requires antitrust, interoperability mandates, or federation protocols to break. The present story models the dominant perspective (market concentration) as the primary constraint. The network coordination perspective should be modeled separately if detailed analysis of pure coordination function is needed. The mandatrophy is resolved by recognizing that the platform operator's experience (pure coordination, Rope) is asymmetric to the trapped user's experience (extraction, Snare) not due to measurement error but due to structural position. Both are correct. The constraint is Tangled Rope overall because both coordination and extraction occur in the same institutional structure, and the coalition perspective shows the path to Scaffold (sunset through interoperability standards)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_advertising_extraction",
+      "data_portability_rights",
+      "interoperability_mandate_enforcement"
+    ],
+    "dual_formulation_note": "Network effect concentration is downstream of two distinct structural dynamics: (1) genuine coordination function of many-to-many networks (low extraction, Rope-type), and (2) market concentration lock-in mechanism (high extraction, Snare-type). These should be modeled as separate constraint stories with different \u03b5 values and linked via network.affects_constraints. The present story models the dominant lock-in mechanism (extractiveness 0.58). A separate story modeling the pure coordination function (extractiveness \u22480.15) would show the true decomposition of the colloquial label 'network effects' into structurally distinct claims."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

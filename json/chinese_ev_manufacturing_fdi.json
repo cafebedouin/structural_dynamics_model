@@ -1,0 +1,211 @@
+{
+  "header": {
+    "constraint_id": "chinese_ev_manufacturing_fdi",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cn_ev"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Chinese EV Manufacturing Foreign Direct Investment",
+    "topic_domain": "economic_policy/trade/manufacturing",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "chinese_ev_manufacturers",
+      "host_country_employment",
+      "local_supply_chains"
+    ],
+    "victims": [
+      "incumbent_automotive_sectors",
+      "domestic_ev_competitors",
+      "technology_transfer_constraint",
+      "labor_standards_pressure"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Incumbent Auto Workers in Host Countries",
+      "comment": "PERSPECTIVE 1: INCUMBENT AUTO WORKERS (SNARE) \u2014 Trapped by geographic and skill dependency. EV manufacturing FDI displaces skilled labor from traditional ICE automotive production. Workers cannot exit regional labor markets without economic devastation; retraining costs are high; wage suppression follows from oversupply of specialized labor. Maximum experienced extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Domestic EV Competitors in Host Countries",
+      "comment": "PERSPECTIVE 2: DOMESTIC EV COMPETITORS (TANGLED ROPE) \u2014 Constrained by capital requirements and technology gaps. Chinese FDI creates coordination benefits (supply chain ecosystem, consumer market expansion, manufacturing infrastructure development) but also extraction through IP capture, supply chain dominance, and market share concentration. Exit costs are high but not insurmountable\u2014competitors can relocate operations or seek alternate supply chains, but at significant expense."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Host Country Government",
+      "comment": "PERSPECTIVE 3: HOST COUNTRY GOVERNMENT (ROPE) \u2014 Experiences the constraint as pure coordination. Chinese FDI solves immediate policy problems: job creation, tax revenue, technology access, transition to EV manufacturing infrastructure. Governments can exercise optionality (favor or disfavor specific investors, adjust subsidy structures, negotiate terms) and have exit paths (attracting competing FDI, diversifying investment sources). Net beneficiary from the constraint viewed at immediate time horizon."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Trade Regulatory Coalition",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL TRADE REGULATORY COALITION (SCAFFOLD) \u2014 Organized actors (USMCA, EU trade bodies, RCEP signatories) view Chinese EV FDI as a temporary regulatory arbitrage problem with a sunset. Local content requirements, origin rules, and labor standards are being embedded into trade agreements to phase out the extraction mechanism. The constraint has an explicit time horizon: as regulations tighten and local capacities mature, the asymmetric advantage of Chinese manufacturers declines. Theater ratio reflects the performative framing of these negotiations\u2014regulatory posturing precedes actual enforcement."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Automotive Supply Chains",
+      "comment": "PERSPECTIVE 5: LEGACY AUTOMOTIVE SUPPLY CHAINS (PITON) \u2014 Traditional automotive supplier networks (European, Japanese, Korean Tier-1 suppliers) maintain their institutional roles and procurement relationships despite eroding functional relevance. Chinese manufacturers are increasingly internalizing supply chains, reducing dependency on legacy suppliers. The legacy supplier ecosystem persists through contractual inertia and switching costs rather than genuine coordination function. Theater ratio reflects the performative maintenance of supply relationships as actual integration declines."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Chinese EV Manufacturers",
+      "comment": "PERSPECTIVE 6: CHINESE EV MANUFACTURERS (TANGLED ROPE) \u2014 Powerful institutional actors with high mobile exit options (can shift investment to other markets, source from alternative suppliers). FDI abroad is a coordination mechanism: building global manufacturing footprint, accessing markets, diversifying supply chains. Simultaneously, it enables extraction: IP leverage over host country sectors, preferential access to supply chains, technology-for-access terms that benefit Chinese firms asymmetrically. The constraint is genuinely mixed\u2014these firms both coordinate global EV ecosystem and extract asymmetric rents."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational and global perspective, Chinese EV manufacturing FDI represents a structural transformation of global automotive production with both genuine coordination function (accelerating EV adoption, building supply chains, creating manufacturing capacity) and persistent asymmetric extraction (IP capture, labor cost arbitrage, market dominance, technology-for-access dependencies). The constraint persists because the coordination benefits are real and necessary, but the extraction mechanism is embedded in the asymmetric power relationships between Chinese manufacturers and host countries."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technology_transfer_voluntariness",
+      "question": "Is technology transfer from Chinese EV manufacturers to host country sectors voluntary market exchange or coercive extraction?",
+      "resolution_mechanism": "Analysis of IP licensing agreements, patent ownership patterns, subsidiary independence levels; comparison with non-Chinese FDI technology transfer rates; interview-based assessment of host country firm autonomy in tech-sharing decisions",
+      "impact": "If voluntary: constraint reclassifies toward Rope from host country perspective. If coercive: suppression and extraction metrics increase; snare reclassification for technology-dependent sectors.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether technology transfer is voluntary market exchange or coerced extraction"
+    },
+    {
+      "id": "supply_chain_lock_in_duration",
+      "question": "What is the time horizon for supply chain lock-in to Chinese manufacturers? Can host countries build alternative sources, and at what cost?",
+      "resolution_mechanism": "Historical analysis of supply chain transitions in automotive; cost-benefit modeling for alternative sourcing; capacity development timelines for competing suppliers; scenario analysis for retaliatory trade measures",
+      "impact": "If short-term (3-5 years): suppliers can transition, scaffold perspective strengthened. If long-term (10+ years): lock-in is substantial, snare perspective for dependent suppliers strengthened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Duration and reversibility of supply chain dependencies on Chinese manufacturers"
+    },
+    {
+      "id": "labor_standards_extraction_mechanism",
+      "question": "Are labor suppression and wage pressure in host countries a direct mechanism of Chinese FDI (companies deliberately undercut local standards) or a market effect of increased manufacturing capacity?",
+      "resolution_mechanism": "Comparative analysis of wage trends in host countries before/after Chinese FDI; labor inspection data; union negotiation records; interviews with host country manufacturers about wage-setting decisions",
+      "impact": "If direct: suppression metrics increase, snare classification for workers strengthened, extraction mechanism explicit. If market effect: suppression is correlated but not directly caused, tangled rope interpretation remains stable.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether labor suppression is deliberate mechanism or market side-effect of FDI"
+    },
+    {
+      "id": "local_content_regulation_effectiveness",
+      "question": "Do local content requirements and origin rules actually constrain Chinese manufacturer extraction, or are they performative regulatory theater?",
+      "resolution_mechanism": "Enforcement data on local content violations; actual cost impact on Chinese manufacturers from compliance; substitution patterns (Chinese subsidiaries vs parent companies); comparison with regulatory intent vs actual outcomes",
+      "impact": "If effective: scaffold sunset is real, theater ratio decreases. If performative: theater ratio increases, regulations are institutional inertia rather than functional constraint on extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether local content regulations functionally constrain extraction or remain performative"
+    },
+    {
+      "id": "domestic_competitor_viability",
+      "question": "Can host country EV manufacturers achieve cost parity with Chinese manufacturers without protective trade barriers or subsidies?",
+      "resolution_mechanism": "Comparative cost analysis; technology development timelines; capital requirements; economies of scale achievable at different production levels; scenario analysis for different subsidy/tariff regimes",
+      "impact": "If yes: competitive threat forces Chinese manufacturers to improve terms, tangled rope equilibrium stabilizes. If no: domestic competitors become dependent on protection, shifting from tangled rope to snare for protected sectors.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether domestic EV competitors can achieve cost parity without protection"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Chinese EV manufacturing foreign direct investment represents a structural transformation of global automotive production driven by technological advantage, labor cost differentials, and policy coordination (Belt and Road, trade arrangements, EV acceleration targets). The constraint exhibits tangled rope characteristics: genuine coordination function (accelerating global EV adoption, building manufacturing capacity, creating supply chain ecosystems) combined with asymmetric extraction (technology leverage, cost advantages, market dominance, supplier lock-in). Chinese manufacturers benefit from arbitrage across regulatory regimes, labor cost differentials, and accumulated technological lead in battery production and BEV design. Host countries experience immediate job creation and tax revenue but face long-term supply chain dependence, technology transfer on asymmetric terms, wage pressure on incumbent workers, and erosion of domestic competitive capacity. The constraint's theater ratio (0.48) reflects significant performative elements in regulatory negotiations and local content requirements that are often not enforced or are circumvented through subsidiary structures, while the genuine coordination function remains substantial. The constraint is generationally unstable\u2014trade regulations and local capacity development are gradually embedding constraints on the extraction mechanism, but the process is slow (10-15 year timescale) and unevenly distributed across host countries.",
+    "key_agents": [
+      "Chinese EV Manufacturers: Primary beneficiary (powerful/mobile) \u2014 extract asymmetric rents through technology leverage, cost advantages, and supply chain dominance",
+      "Incumbent Auto Workers: Primary victim (powerless/trapped) \u2014 displaced from traditional ICE production; cannot exit regional labor markets; experience wage suppression",
+      "Host Country Governments: Secondary beneficiary (institutional/arbitrage) \u2014 gain job creation, tax revenue, manufacturing capacity; exercise optionality through investment terms",
+      "Domestic EV Competitors: Secondary victim (moderate/constrained) \u2014 face technology gaps and capital barriers; extracted through supply chain dependence and market share pressure",
+      "Legacy Automotive Supply Chains: Tertiary victim (institutional/arbitrage) \u2014 lose procurement relevance as Chinese manufacturers internalize supplies (piton dynamics)",
+      "International Trade Regulators: Organized actors (organized/constrained) \u2014 attempting to embed sunset constraints through local content requirements and trade rules",
+      "Technology-Dependent Host Sectors: Potential victim (moderate/constrained) \u2014 coerced technology transfer and IP asymmetries create long-term dependency"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Elevated but not extreme. Chinese FDI generates real coordination benefits (EV acceleration, supply chain infrastructure) that partially offset extraction. The extractiveness is driven by technology leverage, labor cost arbitrage, and supply chain dominance. The measure reflects that extraction is substantial but not pure\u2014the coordination function is genuine and valued by host countries. Measurement trajectory from 0.35 to 0.58 shows accumulation of extraction as Chinese manufacturers build dominance and lock in supply dependencies. Suppression (0.65): High. Significant barriers to host country exit include capital requirements for alternative manufacturing, technology gaps, switching costs for established supply chains, labor market immobility for displaced workers, and regulatory capture by large investors. However, suppression is not absolute\u2014some host countries (EU, US) are developing protective regulations and alternative sourcing strategies. Theater ratio (0.48): Moderate. Local content requirements, regulatory negotiations, and origin rules are partly performative (enforcement is selective, subsidiary structures circumvent requirements) but also partly functional (they do increase costs for manufacturers). The theater ratio does not trend high because the coordination function is substantive enough to maintain genuine operational requirements rather than pure ritual.",
+    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon (Chinese EV manufacturing investment) produces radically different experienced types based on the observer's position. Incumbent auto workers see a snare because they are trapped: they cannot exit the regional labor market, cannot retrain at reasonable cost, and experience pure wage suppression with no coordination benefit to them. Host governments see rope because they exercise agency (attract competing investors, negotiate terms, adjust subsidies) and experience genuine coordination benefits (jobs, taxes, technological acceleration). Domestic competitors see tangled rope because they experience both\u2014the supply ecosystem benefits them (coordination) while the technology gap and cost advantages of Chinese manufacturers extract from them (extraction). Organized trade regulators see scaffold because they are building exit paths through regulatory constraints and local capacity development with explicit time horizons (10-15 years). Legacy suppliers see piton\u2014their institutional role persists through inertia even as their functional relevance erodes. The analytical observer at civilizational scope sees tangled rope because both mechanisms are structurally embedded: coordination is necessary for global EV transition; extraction is embedded in asymmetric power relationships. The constraint cannot be resolved by collapsing to a single type\u2014the presheaf of perspectives IS the structure.",
+    "directionality_logic": "Each perspective's experienced extractiveness (\u03c7) is computed from base extractiveness (\u03b5=0.58), the agent's directionality value (d), and scope modifier \u03c3(S). Incumbent workers have d \u2248 0.95 (trapped victim) at regional scope (\u03c3=0.9), yielding \u03c7 \u2248 0.58 \u00d7 1.35 \u00d7 0.9 \u2248 0.70\u2014they experience this as a severe snare. Host governments have d \u2248 0.15 (institutional beneficiary) at national scope (\u03c3=1.0), yielding \u03c7 \u2248 0.58 \u00d7 (-0.01) \u00d7 1.0 \u2248 negative (they benefit). Chinese manufacturers have d \u2248 0.10 (powerful beneficiary) at global scope (\u03c3=1.2), yielding \u03c7 \u2248 0.58 \u00d7 (-0.08) \u00d7 1.2 \u2248 negative (they capture value). Domestic competitors have d \u2248 0.65 (moderate victim-beneficiary mix) at national scope, yielding \u03c7 \u2248 0.58 \u00d7 1.00 \u00d7 1.0 \u2248 0.58 (they experience mixed extraction and benefit). The piton classification for legacy suppliers derives from theater ratio (0.48 is approaching the piton gate of 0.70) rather than from high \u03c7\u2014their institutional role persists performatively despite functional erosion.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that tangled rope is not a fudge category for 'can't decide between rope and snare.' It is the legitimate classification when a constraint genuinely contains both coordination and extraction mechanisms at structurally distinct levels. Chinese EV manufacturing FDI coordinates the global automotive transition toward EVs (genuine coordination function requiring these investment flows) while simultaneously extracting rents through technology asymmetries, cost advantages, and supply chain dominance (genuine extraction function). Neither rope nor snare captures this: rope would miss the extraction; snare would miss the coordination that benefits host countries. The mandatrophy is resolved by showing that the perspectival variation is not noise\u2014it reflects real structural differences in how different agents experience the constraint. The snare classification for incumbent workers is not a 'perspective error'; it is their actual structural reality. The rope classification for host governments is not a misreading; it is their actual structural reality. The constraint IS tangled rope from the analytical perspective because both mechanisms are necessary to understand the system. Local content regulations and trade negotiations are attempting to shift the constraint toward scaffold by embedding sunset logic, but this is a slow institutional process (10-15 years) that has not yet succeeded."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "automotive_labor_displacement",
+      "battery_supply_chain_concentration",
+      "technology_transfer_asymmetry",
+      "trade_regulatory_fragmentation"
+    ],
+    "dual_formulation_note": "Chinese EV manufacturing FDI is upstream of multiple domain-specific constraints: labor displacement in incumbent sectors, supply chain concentration in battery production, technology transfer asymmetries in host country firms, and regulatory fragmentation in trade agreements. Each downstream constraint has its own extractiveness value reflecting domain-specific structures; the FDI constraint operates at the institutional/geopolitical level."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.62
+    }
+  ]
+}

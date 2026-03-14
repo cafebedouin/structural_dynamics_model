@@ -1,0 +1,222 @@
+{
+  "header": {
+    "constraint_id": "healthcare_equity_access_disparity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hcequity"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Healthcare Equity Access Disparity",
+    "topic_domain": "healthcare/access/equity",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_income_insured_patients",
+      "private_insurance_corporations",
+      "specialty_care_providers",
+      "pharmaceutical_manufacturers"
+    ],
+    "victims": [
+      "uninsured_populations",
+      "underinsured_low_income_patients",
+      "rural_communities",
+      "healthcare_system_equity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Uninsured Patient",
+      "comment": "PERSPECTIVE 1: UNINSURED PATIENT (SNARE) \u2014 Structurally trapped by inability to pay for care, absence of insurance safety net, and geographic isolation from specialty services. No realistic exit from the constraint. Maximum extraction: bears full cost burden while unable to access preventive care, resulting in worse health outcomes and deeper poverty. The suppression mechanism is material and complete \u2014 no alternatives exist within the patient's economic reach."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Underinsured Low-Income Patient",
+      "comment": "PERSPECTIVE 2: UNDERINSURED LOW-INCOME PATIENT (TANGLED ROPE) \u2014 Constrained by high deductibles, limited network coverage, and cost of co-payments. Experiences genuine coordination: insurance enables access to emergency care and some routine services that would be impossible without the system. However, the coordination is paired with asymmetric extraction: high out-of-pocket costs, delayed care due to cost barriers, and exclusion from specialized treatment options. Cost of exit (loss of insurance) makes constrained mobility real but expensive."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Private Insurance Corporation",
+      "comment": "PERSPECTIVE 3: PRIVATE INSURANCE CORPORATION (ROPE) \u2014 Experiences the constraint as a coordination mechanism with substantial arbitrage options. The insurance system genuinely solves the collective action problem of pooling health risk. Net beneficiary with full exit capacity: can arbitrage regulatory gaps, shift costs to patients, adjust underwriting to exclude high-risk groups, or relocate operations. The constraint is pure coordination from this perspective \u2014 extraction runs toward this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Specialty Care Provider (Concentrated Market)",
+      "comment": "PERSPECTIVE 4: SPECIALTY CARE PROVIDER IN CONCENTRATED MARKET (TANGLED ROPE) \u2014 Coordinates specialized knowledge and high-tech care delivery (genuine function), while also extracting through monopolistic pricing in concentrated markets where competition is limited. Mobile with respect to geographic location but locked into the specialty care role. Moderate extraction experienced as reimbursement pressures from payers, but substantial power over pricing and access for rare services. Both coordination and asymmetric extraction present."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Health Equity Reform Coalition",
+      "comment": "PERSPECTIVE 5: HEALTH EQUITY REFORM COALITION (SCAFFOLD) \u2014 Organized agents (community health centers, Medicaid expansion advocates, universal healthcare movements) see the disparity as a temporary structural problem with identifiable sunset mechanisms: Medicaid expansion, community health center growth, telehealth infrastructure, and price regulation all represent pathways to reduced extraction. The suppression of alternative systems is real but eroding. Constrained by political economy but with agency and exit pathways visible. Sunset logic applies: as these mechanisms mature, the disparity constraint's extraction mechanism loses force."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Fee-for-Service Billing System",
+      "comment": "PERSPECTIVE 6: FEE-FOR-SERVICE BILLING SYSTEM (PITON) \u2014 The billing and reimbursement infrastructure is substantially performative: much administrative overhead (prior authorizations, coding verification, insurance adjudication) is theater that extracts time and resources without improving care coordination. The system persists through institutional inertia despite recognized dysfunction. High theater ratio reflects that the billing apparatus consumes 25-30% of healthcare spending while adding minimal value. The system is maintained by legacy incentives and entrenched workflows, not because it solves coordination problems effectively."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a systems perspective, the healthcare constraint exhibits genuine coordination functions (risk pooling, specialized knowledge concentration, capital investment incentives for research) paired with real asymmetric extraction (cost barriers, access rationing, profit maximization). The constraint cannot be classified as pure coordination or pure extraction \u2014 it is structurally hybrid. The driver of asymmetry is that the coordination function (risk pooling) could theoretically operate with low extraction, but market mechanisms and regulatory gaps create conditions where extraction is maximized alongside coordination."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_extraction_threshold",
+      "question": "What level of cost-sharing and access restriction is necessary for healthcare coordination (risk pooling, care delivery incentives) versus what level constitutes extractive overhead?",
+      "resolution_mechanism": "Comparative analysis of healthcare outcomes and cost-access correlation across OECD nations with different cost-sharing models; identification of threshold where patient cost barriers meaningfully reduce health outcomes without corresponding system efficiency gains",
+      "impact": "If threshold is high: disparity is legitimate coordination cost (more perspectives shift toward Rope). If threshold is low: most current cost-sharing is extractive (more perspectives shift toward Snare). Classification sensitivity directly proportional to empirical threshold location.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Necessary cost-sharing threshold for healthcare coordination"
+    },
+    {
+      "id": "insurance_risk_segmentation_mechanism",
+      "question": "Is health insurance risk segmentation (excluding high-risk populations, high deductibles for chronic disease) a necessary market mechanism for sustainability or an extractive exclusion strategy?",
+      "resolution_mechanism": "Analysis of insurance profitability with and without risk segmentation; comparison of outcomes in systems with risk equalization pools versus competitive risk selection; identification of whether risk segmentation reduces overall system sustainability or merely concentrates profit",
+      "impact": "If necessary: suppression metrics should be lower (constraints from beneficiaries' perspective shift toward coordination). If extractive: suppression remains high and institutional perspectives confirm high chi. Classification of insurance corporation perspective (currently Rope) may shift to Tangled Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether insurance risk segmentation is necessary or extractive"
+    },
+    {
+      "id": "specialty_care_monopoly_dynamics",
+      "question": "Do specialty care provider monopolies in concentrated markets (rare disease treatment, tertiary care) reflect genuine scarcity-driven concentration or rent-extraction through artificial supply limitation?",
+      "resolution_mechanism": "Analysis of specialty care pricing variance across regions; identification of relationship between provider concentration and patient outcomes versus pricing; study of cases where new providers entered concentrated markets and whether pricing normalized",
+      "impact": "If genuine scarcity: specialty provider perspective remains Tangled Rope with moderate extraction justified by coordination value. If artificial limitation: perspective shifts to Snare or high-extraction Tangled Rope, and organized actors gain leverage for antitrust intervention.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether specialty care concentration is scarcity-driven or rent-extractive"
+    },
+    {
+      "id": "telehealth_sunset_mechanism",
+      "question": "Does telehealth infrastructure genuinely reduce access barriers at scale, or does it primarily serve mobile populations while leaving trapped populations further isolated?",
+      "resolution_mechanism": "Longitudinal analysis of telehealth adoption and health equity trends post-COVID; identification of whether telehealth expansion correlates with reduced access disparity or merely increased disparity in telehealth access itself",
+      "impact": "If scalable: scaffold perspective's sunset mechanism is credible and extraction timeline shortens (measurements should show theater_ratio declining). If limited: scaffold is aspirational rather than structural, and trapped populations face compounding barriers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether telehealth reduces access barriers at scale"
+    },
+    {
+      "id": "suppression_internalization_mechanism",
+      "question": "Is the measured suppression (0.72) entirely structural (material barriers to access, inability to pay) or partially internalized (patients have internalized health system framing of deservingness, believe barriers are natural, have epistemic isolation from alternative systems)?",
+      "resolution_mechanism": "Post-barrier removal trajectory: if suppression persists after material barriers are removed (e.g., Medicaid expansion, free clinic availability), reclassify as partially internalized. Interview-based identification of whether trapped populations perceive barriers as changeable.",
+      "impact": "If internalized: effective suppression is higher than structural metrics suggest because populations carry suppression constraints with them. The identity_locked exit option becomes more salient for understanding behavioral responses. If structural only: current suppression metrics are accurate and exit depends on barrier removal.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized suppression mechanism in healthcare access barriers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.46
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Healthcare equity access disparity represents a structural constraint where genuine coordination functions (risk pooling through insurance, capital concentration for specialized care infrastructure, knowledge coordination across providers) operate alongside asymmetric extraction (cost barriers, access rationing, profit maximization). The constraint affects different populations with radically different structural relationships: uninsured populations trapped by material barriers; underinsured populations constrained by high cost-sharing; providers enriched through market power; payers arbitraging regulatory gaps; reformers organized to build alternative pathways. The base extractiveness has increased from 0.42 to 0.58 over the measurement interval (20 years), reflecting rising medical costs, increasing uninsured rates, and widening out-of-pocket burden. Theater ratio has risen from 0.55 to 0.65, indicating that administrative overhead (prior authorization, claims adjudication, coding verification) has grown as a proportion of system activity without corresponding efficiency gains. This is a classic tangled rope: coordination is real (insurance does solve the collective action problem of pooling health risk; specialized care requires concentration of capital and knowledge), but the extraction mechanism is also real and growing.",
+    "key_agents": [
+      "Uninsured populations: Primary victim (powerless/trapped) \u2014 structurally excluded from care access; bears maximum extraction cost through preventive care deprivation and worse health outcomes",
+      "Underinsured low-income patients: Secondary victim (moderate/constrained) \u2014 constrained by high deductibles and cost barriers; experience genuine coordination alongside asymmetric extraction",
+      "Private insurance corporations: Primary beneficiary (institutional/arbitrage) \u2014 arbitrage regulatory gaps, shift costs to patients, benefit from risk segmentation; experience constraint as pure coordination",
+      "Specialty care providers in concentrated markets: Secondary beneficiary (powerful/mobile) \u2014 coordinate specialized knowledge and capital; extract through monopolistic pricing in rare disease and tertiary care",
+      "Health equity reform coalition: Organized actors (organized/constrained) \u2014 community health centers, Medicaid advocates, universal healthcare movements building alternative pathways with sunset logic",
+      "Fee-for-service billing system: Institutional actor (institutional/arbitrage) \u2014 maintains performative administrative theater; persists through inertia rather than function",
+      "Analytical observer: Civilizational perspective (analytical/analytical) \u2014 sees genuine hybrid coordination-extraction; classifies constraint as tangled rope structurally"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint has grown more extractive over the measurement interval. Initial extractiveness (0.42) reflected baseline cost barriers and access disparity; current level (0.58) reflects rising medical inflation, increasing uninsured rates (peak uninsured rate ~16% nationally, 2010), and widening out-of-pocket burden for underinsured populations. The growth trajectory indicates accumulation of extraction alongside genuine coordination function. Suppression (0.72): High. Multiple independent barriers prevent exit and access: (1) Material barriers \u2014 inability to pay for uninsured and underinsured; (2) Geographic barriers \u2014 specialty care concentration in urban areas, provider shortage in rural regions; (3) Informational barriers \u2014 medical complexity and epistemic closure preventing navigation of system; (4) Institutional barriers \u2014 administrative complexity of insurance authorization and claims; (5) Regulatory capture \u2014 policy barriers preventing alternative systems. The suppression is both structural and, for some populations, partially internalized. Theater ratio (0.65): Moderately high. Administrative overhead (prior authorization, claims processing, coding verification, insurance adjudication) consumes 25-30% of healthcare spending while adding minimal value to care coordination. This is theater: performative infrastructure that extracts time and resources without solving the underlying coordination problem of matching patients with appropriate care.",
+    "perspectival_gap": "The core perspectival gap lies between the beneficiaries (insurance corporations, specialty providers, high-income insured patients) who experience the system as pure coordination enabling access to care at the margin, and the victims (uninsured and underinsured populations) who experience barriers that block access entirely. The beneficiary perspective naturalizes the system as the only way to achieve care coordination; the victim perspective reveals the system as a barrier masquerading as coordination. The analytical observer detects both: coordination IS achieved through risk pooling and specialization, AND extraction IS real through cost barriers and access rationing. The resolution is that both are true \u2014 the constraint is genuinely hybrid (tangled rope), not purely one or the other. The perspectival gap reveals the distribution of benefits and harms, not a disagreement about what the system does.",
+    "directionality_logic": "The directionality computation for each perspective follows the structural relationship declaration. Insurance corporations are declared as beneficiaries with arbitrage exit: the pipeline derives d \u2248 0.15 (low d for beneficiaries with escape options), producing low effective extraction \u03c7. Uninsured populations are declared as victims with trapped exit: the pipeline derives d \u2248 0.95 (high d for victims without escape options), producing high effective extraction \u03c7. The underinsured populations are victims but with constrained (not trapped) exit: d \u2248 0.65, producing moderate \u03c7. Specialty providers in concentrated markets are beneficiaries with mobile exit but operating in markets with artificial scarcity: baseline d would be ~0.25 (beneficiary + mobile), but the concentrated market structure supports directionality override to d \u2248 0.45 to reflect that their apparent mobility is constrained by market structure and scope limitations. No overrides are declared in the current JSON because the automatic derivation from beneficiary/victim + exit produces accurate relative directionality.",
+    "mandatrophy_analysis": "TANGLED ROPE GATE RESOLUTION: This constraint passes all three tangled rope gates: (1) Beneficiaries are declared (insurance corporations, specialty providers, high-income patients). (2) Victims are declared (uninsured populations, underinsured low-income patients). (3) Requires active enforcement is true (insurance regulation, reimbursement rules, licensing of providers all require active maintenance). The mandate for this constraint is to coordinate health risk pooling and specialized care delivery while distributing access equitably. The mandatrophy surfaces the fundamental tension: the coordination function (risk pooling, specialization) requires concentration of capital and selective enrollment, which creates extraction mechanisms (cost barriers, access rationing). The tangled rope classification captures this hybrid: the constraint is neither pure coordination (because extraction is real and structural) nor pure extraction (because coordination benefit is real). The mandatrophy is resolved by recognizing that efficient extraction is embedded in the coordination function \u2014 the cost of access is not separable from the benefit of care coordination. The constraint cannot be 'fixed' by removing extraction while preserving coordination; it can only be managed by (a) accepting higher-cost coordination models (like universal systems with lower selective enrollment), (b) redistributing extraction burden more equitably, or (c) building alternative coordination pathways (health equity reform coalition's scaffold approach). The current analysis assumes path (b) is the implicit mandate: keep the coordination function, reduce the asymmetric extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "medical_bankruptcy_debt_trap",
+      "racial_health_outcome_disparity",
+      "rural_provider_shortage"
+    ],
+    "dual_formulation_note": "Healthcare equity access disparity is upstream of several constraint stories that inherit its structural properties. Medical bankruptcy represents the personal-level extraction mechanism driven by disparity. Racial health outcome disparity represents the empirical measurement of disparity's health consequences. Rural provider shortage represents a geographic manifestation of disparity dynamics. All three are influenced by the resource allocation mechanisms and cost barriers defined in this story."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.45
+    }
+  ]
+}

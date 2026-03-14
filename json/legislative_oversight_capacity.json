@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "legislative_oversight_capacity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "leg_oversight"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Legislative Oversight Capacity Constraint",
+    "topic_domain": "political/governmental",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "executive_branch",
+      "administrative_agencies",
+      "regulatory_apparatus"
+    ],
+    "victims": [
+      "legislative_body",
+      "constituency_accountability",
+      "public_interest"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Constituency",
+      "comment": "PERSPECTIVE 1: THE CONSTITUENCY (SNARE) \u2014 Citizens cannot exit their jurisdiction and face structural capture through information asymmetry. Elected representatives lack capacity to investigate executive actions; constituents bear the cost of regulatory overreach with no mechanism to compel legislative action. Maximum extraction from a trapped, powerless position."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Legislative Body",
+      "comment": "PERSPECTIVE 2: THE LEGISLATIVE BODY (TANGLED ROPE) \u2014 Constrained by staff limitations, technical expertise gaps, and agenda pressure. Genuine coordination function: legislatures must review executive operations and pass laws. Simultaneously experiences extraction: executive agencies and lobbyists exploit oversight capacity limits to operate with minimal transparency. High theater in committee hearings that appear to investigate but lack follow-up capacity."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Executive Branch",
+      "comment": "PERSPECTIVE 3: THE EXECUTIVE BRANCH (ROPE) \u2014 Experiences the constraint as pure coordination: legislative oversight provides legitimate accountability signaling and policy constraints. Benefits from oversight bottleneck (underfunded committees cannot track regulatory drift). Can exit through policy expansion (regulatory reach) or information control. Net beneficiary position."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Regulatory Agencies",
+      "comment": "PERSPECTIVE 4: REGULATORY AGENCIES (ROPE) \u2014 Genuinely coordinate with legislative intent through statutory mandates and appropriations. Oversight bottleneck benefits agencies: limited legislative scrutiny allows regulatory drift toward agency preferences without triggering reform. Arbitrage: agencies can shift emphasis within statutory authorization without detection."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Legislative Reform Coalition",
+      "comment": "PERSPECTIVE 5: LEGISLATIVE REFORM COALITION (SCAFFOLD) \u2014 Organized actors (good-government groups, transparency advocates, staff improvement initiatives) see oversight capacity as a temporary coordination failure with sunset potential. Congressional budget increases, specialized committees, inspector general expansion, and transparency mandates are building alternative pathways. Theater high (reform is often symbolic) but has sunset logic if implementation succeeds."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Committee Hearing Ritual",
+      "comment": "PERSPECTIVE 6: THE COMMITTEE HEARING RITUAL (PITON) \u2014 Traditional congressional hearings where agencies respond to questions from legislators have degraded from functional oversight to performative theater. Hearings proceed; no follow-up investigation; no enforcement of testimony accuracy; no legislative action based on findings. The ritual persists through institutional inertia despite minimal verification capacity. Theater ratio very high (0.75+) \u2014 the activity appears to constitute oversight but produces minimal accountability."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Institutional Complexity View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / INSTITUTIONAL COMPLEXITY VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some capacity mismatch is inherent to democratic governance: the executive manages complexity that legislatures cannot fully track, and this gap is a structural feature of modern state administration. This perspective naturalizes the constraint as an immutable limit of democratic institutions. However, structural data contradicts the mountain classification \u2014 the engine will identify this as false summit, revealing that 'inherent to complexity' naturalizes what is actually a contingent resource allocation choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "oversight_capacity_measurement",
+      "question": "What constitutes 'adequate' legislative oversight capacity? Is the standard enforcement capacity, information access, or deterrence outcome?",
+      "resolution_mechanism": "Empirical comparison of enforcement rates, regulatory challenge success rates, and agency compliance with legislative intent across jurisdictions with different oversight funding levels",
+      "impact": "If standard is enforcement: current capacity is severely deficient (extractiveness likely > 0.70). If standard is information access: current capacity is moderate (current 0.58 is accurate). If standard is deterrence outcome: capacity may be sufficient for agencies to internalize legislative intent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Definition and measurability of adequate oversight capacity"
+    },
+    {
+      "id": "agency_autonomy_necessity",
+      "question": "What portion of executive agency autonomy is structurally necessary for effective governance versus rent-seeking extraction by agencies?",
+      "resolution_mechanism": "Cross-national comparison of delegation patterns, audit rates, and policy stability in different oversight regimes; analysis of which agency decisions produce better outcomes with vs without legislative scrutiny",
+      "impact": "If agency autonomy is mostly necessary: constraint is primarily coordination (more rope, less snare). If autonomy is mostly extraction: constraint is asymmetric exploitation of oversight gaps (more snare, less rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether executive agency autonomy is necessary or extractive"
+    },
+    {
+      "id": "information_technology_disruption",
+      "question": "Can digital platforms, automated compliance tracking, and distributed citizen review significantly reduce the cost of legislative oversight without formal capacity expansion?",
+      "resolution_mechanism": "Pilot programs with legislative IT platforms, automated regulatory monitoring, and crowdsourced compliance review; measurement of oversight productivity per dollar spent and per staffer hour",
+      "impact": "If technology succeeds: sunset is real \u2014 oversight capacity constraint becomes solvable without legislative budget expansion, scaffold trajectory confirmed. If technology fails: structural barriers (expertise requirements, political pressure) are more binding than information access, and capacity constraint remains structural.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether technology can reduce oversight cost without formal capacity expansion"
+    },
+    {
+      "id": "partisan_incentive_misalignment",
+      "question": "To what degree does partisan control of legislature reduce oversight of same-party executive, independent of objective capacity constraints?",
+      "resolution_mechanism": "Time-series analysis of legislative investigation rates, appropriations scrutiny, and agency accountability across periods of unified vs divided government and partisan alignment",
+      "impact": "If partisan incentive dominates: capacity constraints are secondary \u2014 increasing staff alone will not improve oversight (theater remains high). If capacity is primary constraint: oversight will improve with funding regardless of partisanship.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether partisan alignment reduces oversight independent of capacity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Legislative oversight capacity is the structural ability of a legislature to investigate, monitor, and enforce constraints on executive and regulatory agency behavior. The constraint emerges when executive complexity outpaces legislative technical capacity and staffing resources. This creates a characteristic extractive dynamic: agencies expand their scope beyond legislative intent, legislatures perform oversight rituals without enforcement capacity, and constituencies bear the cost of regulatory drift unchecked by accountability. The constraint exhibits all six DR types from different perspectives, making it diagnostic for how institutional capacity mismatches generate extraction mechanisms.",
+    "key_agents": [
+      "Constituency: Primary victim (powerless/trapped) \u2014 cannot exit jurisdiction, faces information asymmetry, bears cost of regulatory overreach",
+      "Legislative Body: Moderate victim (moderate/constrained) \u2014 understaffed committees, expertise gaps, constrained by agenda pressure and resource limitations",
+      "Executive Branch: Primary beneficiary (institutional/arbitrage) \u2014 expands regulatory scope with minimal legislative constraint; can exit through policy expansion",
+      "Regulatory Agencies: Secondary beneficiary (institutional/arbitrage) \u2014 drift away from statutory intent unchecked by legislative scrutiny",
+      "Legislative Reform Coalition: Organized agent (organized/constrained) \u2014 transparency advocates, staff improvement initiatives building alternative oversight pathways with sunset logic",
+      "Committee Hearing System: Institutional ritual (institutional/arbitrage) \u2014 maintains performative theater despite minimal functional verification capacity",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent resource allocation as inherent complexity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and increasing. The constraint represents an asymmetric capacity mismatch where executive agencies operate under minimal legislative scrutiny. Initial extractiveness (0.35) reflected pre-1970s period when executive scope was narrower and legislative capacity closer to adequate. Current value (0.58) reflects regulatory expansion outpacing staff growth, particularly in specialized domains (environmental, financial, health regulation) where legislative committees lack technical expertise. The trajectory upward (0.35 \u2192 0.48 \u2192 0.58 over 20 years) reflects the accumulating gap between regulatory complexity and oversight resources. Suppression (0.62): Moderate-high. Barriers to effective oversight include: (a) staff limitations (most legislative committees have 3-5 staff; regulatory agencies have hundreds), (b) expertise asymmetry (agencies employ subject-matter experts; legislators do not), (c) information asymmetry (agencies control data presentation), (d) agenda pressure (legislatures juggle hundreds of issues; agencies focus on one domain), (e) retaliation risk (agencies can slow or redirect constituent services if overseen too aggressively). Theater ratio (0.68): High and increasing. Congressional hearings where agency officials testify appear to constitute oversight but rarely produce follow-up investigation, testimony verification, or enforcement. Theater has increased (0.45 \u2192 0.60 \u2192 0.68) as gap between hearing activity and actual investigative capacity has widened.",
+    "perspectival_gap": "The legislative body and executive/agencies perceive the constraint completely differently. From the legislative perspective, the constraint is mixed coordination-extraction (tangled rope) \u2014 the capacity limit is real, extractive, and asymmetric. From the executive perspective, the constraint is coordination (rope) \u2014 legislative oversight provides legitimate accountability feedback and policy constraints. The gap reveals that the constraint's extractive character depends on whether the agent has the capacity to exercise exit. The executive has arbitrage (can operate despite oversight); the legislature does not (cannot close the information gap without resources it lacks). The tanglement is real: genuine coordination function (agencies do implement legislative intent, mostly) alongside genuine extraction (agencies drift beyond intent and legislatures cannot detect or correct this).",
+    "directionality_logic": "Directionality values derive from structural position and power. Constituencies are trapped with no exit (d near 1.0) \u2014 maximum extraction. Legislatures are constrained but have some agency through budget power and statutory authority (d ~0.65). Executive agencies are beneficiaries with arbitrage options (expand scope, control information, shift interpretation) (d ~0.20). The asymmetry is structural: the agency can operate despite legislative constraint because the legislature lacks capacity to monitor agency operations in real time. The extraction flow is not from legislator coercion but from capacity asymmetry that allows agencies to drift beyond legislative intent. The oversight beneficiary (executive) derives d from arbitrage exit \u2014 the agency can always claim implementation discretion, budget limitations, or changed circumstances to justify policy drift without legislative detection. This produces effective extraction despite formally legitimate executive authority.",
+    "mandatrophy_analysis": "The constraint is classified as tangled rope at the moderate agent (legislative) perspective because it exhibits both genuine coordination (legislative oversight enables policy implementation and constraint) and genuine extraction (capacity asymmetry allows regulatory drift beyond legislative intent). The mandatrophy resolves by recognizing that this is not pure extraction masquerading as coordination (snare) nor pure coordination (rope) \u2014 it is genuinely hybrid. The legislative body benefits from oversight capacity in principle (it enables them to fulfill constitutional function) while simultaneously bearing extraction costs from the capacity gap (it prevents them from detecting drift). The constraint would become rope if capacity were adequate; it would become snare if legislatures had zero ability to constrain agencies even in principle. The current state is the hybrid tangled rope: coordination function is real (statutes do constrain agencies) but extracted by capacity asymmetry (agencies exploit the fact that drift is undetectable)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture",
+      "administrative_state_expansion",
+      "budget_process_dysfunction"
+    ],
+    "dual_formulation_note": "Legislative oversight capacity is upstream of regulatory capture \u2014 the capacity bottleneck enables agencies to be captured by regulated industries without legislative detection. The administrative state expansion is downstream \u2014 agency autonomy expands into the oversight gap. Decomposition: write separate stories for structural capacity limits (this story) vs political incentive failure (partisan oversight reduction) vs institutional degradation (committee hearing theater) if those components show materially different \u03b5 values under different observables."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

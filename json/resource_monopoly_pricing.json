@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "resource_monopoly_pricing",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rmp"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Resource Monopoly Pricing Constraint",
+    "topic_domain": "economic/industrial",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "monopoly_holder"
+    ],
+    "victims": [
+      "dependent_consumers",
+      "downstream_producers",
+      "market_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Price-Taker Dependent Consumer",
+      "comment": "PERSPECTIVE 1: DEPENDENT CONSUMER (SNARE) \u2014 Faces no meaningful exit options. Alternative sources for the resource are unavailable, prohibitively expensive, or technically incompatible with existing infrastructure. Bears full extraction cost with no negotiating power. Suppression mechanisms include switching costs, network effects, and technical lock-in."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Downstream Producer",
+      "comment": "PERSPECTIVE 2: DOWNSTREAM PRODUCER (TANGLED ROPE) \u2014 Bears elevated input costs but also benefits from the monopoly holder's infrastructure investment and coordination. Constrained exit: can substitute materials or relocate production at significant cost. Experiences both extraction (high input prices) and coordination (reliable supply, standardized quality)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Monopoly Holder",
+      "comment": "PERSPECTIVE 3: MONOPOLY HOLDER (ROPE) \u2014 Experiences the constraint as coordination: maintaining infrastructure, enforcing contracts, managing supply. Net beneficiary with full arbitrage options (can price-discriminate, expand markets, or exit into related sectors). Perceived extraction is minimal from their perspective; they see legitimate return on capital and coordination effort."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Regulatory Coalition",
+      "comment": "PERSPECTIVE 4: REGULATORY COALITION (TANGLED ROPE) \u2014 Organized agents (antitrust authorities, industry associations, consumer groups) see the monopoly as both a coordination mechanism (standardized pricing, supply reliability) and extractive overhead (deadweight loss, innovation suppression). Mobile exit options (antitrust enforcement, price regulation, alternative supply chains) but enforcement is resource-intensive and politically contested. The constraint persists because benefits to some constituencies (monopoly holder, incumbent suppliers) outweigh costs."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Market Efficiency Principle",
+      "comment": "PERSPECTIVE 5: MARKET EFFICIENCY (PITON) \u2014 The abstract principle that competitive markets allocate resources efficiently appears degraded here: monopoly pricing violates the ideal, yet the principle persists as a normative standard in economic discourse. Theater ratio high (0.35): economists regularly invoke market efficiency as justification for price-taking behavior while monopoly distortions persist. The principle survives through rhetorical maintenance despite functional atrophy."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 Classifies monopoly pricing as pure extraction when analyzed across all relevant time horizons and scopes. The constraint persists because the monopoly holder has structural power (control of critical resource) combined with suppression mechanisms (high switching costs, network effects, technical barriers) that prevent meaningful exit for dependent agents. No coordination function justifies the pricing premium; the monopoly is sustained purely through power asymmetry and dependence."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "natural_monopoly_vs_artificial_barrier",
+      "question": "Is the monopoly's pricing power derived from natural economies of scale or from artificial barriers to entry?",
+      "resolution_mechanism": "Comparative cost analysis: single supplier vs hypothetical competitive suppliers; historical data on entry attempts; technical assessment of capital requirements and economies of scale",
+      "impact": "If natural monopoly: extractiveness justified by coordination cost (\u03b5 \u2264 0.35). If artificial barriers: extractiveness is pure rent-seeking (\u03b5 \u2265 0.65). Classification shifts from Tangled Rope to Snare accordingly.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Natural monopoly vs artificial barriers to entry"
+    },
+    {
+      "id": "substitute_resource_existence",
+      "question": "Do viable substitutes exist at comparable functionality and cost, and why are dependent agents not adopting them?",
+      "resolution_mechanism": "Market survey of alternatives; cost-benefit analysis of switching for each agent class; identification of technical, contractual, or information barriers preventing adoption",
+      "impact": "If substitutes available and accessible: suppression mechanism is behavioral/informational (\u03b5 reduced, reclassify as Rope). If substitutes unavailable or inaccessible: suppression is structural (\u03b5 unchanged, Snare confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Availability and accessibility of substitute resources"
+    },
+    {
+      "id": "regulatory_capture_mechanism",
+      "question": "Has the monopoly holder captured regulatory institutions that would otherwise enforce price controls or permit new entry?",
+      "resolution_mechanism": "Analysis of regulatory decisions, lobbying expenditure, revolving-door employment patterns, and policy outcomes favorable to monopoly holder",
+      "impact": "If regulatory capture confirmed: suppression is actively enforced (not merely structural). Reclassify from Snare to Tangled Rope if coordination benefits exist, or maintain Snare with directed suppression vector.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Regulatory capture by monopoly holder"
+    },
+    {
+      "id": "deadweight_loss_magnitude",
+      "question": "What is the magnitude of deadweight loss (unrealized trades due to monopoly pricing) relative to total market surplus?",
+      "resolution_mechanism": "Econometric estimation of demand elasticity; calculation of consumer surplus lost to monopoly pricing; comparison with competitive benchmark",
+      "impact": "If DWL > 20% of market surplus: extraction is severe (\u03b5 remains \u2265 0.58). If DWL < 5%: constraint may be reclassified as Rope (low-extraction coordination).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Deadweight loss from monopoly pricing relative to competitive benchmark"
+    },
+    {
+      "id": "innovation_suppression_mechanism",
+      "question": "Does monopoly pricing suppress innovation in competing technologies or substitutes by reducing downstream producer R&D investment?",
+      "resolution_mechanism": "Longitudinal R&D expenditure analysis in monopolized vs competitive sectors; patent filing trends; comparison with alternative pricing regimes",
+      "impact": "If innovation suppression confirmed: extractiveness includes long-term technological opportunity cost (\u03b5 increases to \u2265 0.70). If no suppression detected: extractiveness is allocative only (\u03b5 decreases to \u2264 0.50).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Innovation suppression through monopoly pricing"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "Resource monopoly pricing occurs when a single actor controls supply of a critical input with limited substitutes and faces dependent customers unable to exit the market. The constraint exhibits high extractiveness (0.58) because the monopoly holder captures economic surplus through pricing above marginal cost, and high suppression (0.65) because dependent actors lack meaningful alternatives. The theater ratio (0.35) is moderate \u2014 monopoly pricing operates openly through market mechanisms, not through performative rituals, but the market rhetoric of 'efficient resource allocation' obscures the extraction mechanism. The constraint manifests differently across perspectives: the monopoly holder experiences it as legitimate coordination (Rope), regulatory coalitions see it as mixed extraction and coordination (Tangled Rope), dependent consumers see it as pure extraction with no exit (Snare). The measurement trajectory shows extractiveness increasing over the interval from 0.42 to 0.58, indicating accumulating rent-seeking behavior or market power concentration.",
+    "key_agents": [
+      "Monopoly Holder: Primary beneficiary (institutional/arbitrage) \u2014 captures economic surplus through pricing power; experiences constraint as coordination mechanism",
+      "Dependent Consumers: Primary victim (powerless/trapped) \u2014 price-takers with no viable alternatives; bear full extraction cost",
+      "Downstream Producers: Secondary victim (moderate/constrained) \u2014 face elevated input costs; can exit at significant cost; also benefit from supply reliability",
+      "Regulatory Coalition: Organized agent (organized/mobile) \u2014 can enforce antitrust or price regulation but faces political constraints and enforcement costs",
+      "Market Efficiency: Institutional principle (institutional/arbitrage) \u2014 degraded through monopoly distortion; persists as normative standard",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees structure independent of framing; classifies as Snare due to power asymmetry and lack of coordination benefit"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High, reflecting monopoly pricing premium above marginal cost. The value is not at maximum (\u22650.66 Snare threshold) because some dependent actors have constrained exit options (can relocate, substitute materials, or coordinate purchases) that create pressure on the monopoly holder. If substitutes were literally unavailable, \u03b5 would reach 0.70+. Suppression (0.65): Moderate-high, reflecting multiple barriers to exit \u2014 switching costs (technical retraining, infrastructure adaptation), network effects (compatible with existing systems), information asymmetry (dependent actors unaware of alternatives), and contractual lock-in (long-term supply agreements). These are structural, not performative. Theater Ratio (0.35): Low-moderate. Monopoly pricing operates through transparent market mechanisms (posted prices, published tariffs) rather than theatrical performance, but economic discourse around 'market efficiency' and 'competitive pricing' provides a legitimizing narrative that obscures extraction.",
+    "directionality_logic": "The monopoly holder benefits directly from the constraint: they receive above-normal returns and arbitrage mobility across markets. Directionality d is low (\u22480.10-0.20), producing negative or minimal f(d), so their experienced extractiveness \u03c7 approaches zero or negative \u2014 they perceive coordination, not extraction. Dependent consumers are pure targets: they derive no benefit from monopoly pricing and have trapped exit options. Directionality d is high (\u22480.85-0.95), producing f(d) \u2248 1.15, amplifying their experienced extractiveness to maximum. Downstream producers occupy middle ground: they suffer input cost burden (d \u2248 0.60-0.70) but also benefit from reliable supply coordination (partially offsetting d). Regulatory agents have mobile exit options and organized power (d \u2248 0.45-0.55), experiencing moderate extractiveness but with agency to challenge it.",
+    "perspectival_gap": "The constraint demonstrates maximum perspectival divergence. The monopoly holder (Rope) perceives legitimate return on capital and supply coordination. Regulatory coalitions (Tangled Rope) perceive mixed effects \u2014 extraction to consumers, but coordination benefits and efficiency risk. Dependent consumers (Snare) perceive pure coercive extraction with no exit. The analytical observer (Snare) agrees with the powerless perspective but for structural reasons: the monopoly holder's 'coordination benefit' is actually unilateral power, not genuine coordination. No beneficiary-victim pair experiences symmetric costs/benefits; the constraint is not a coordination mechanism but a power transfer mechanism.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by rejecting the false coordination frame. Some analyses claim monopolies coordinate supply and justify elevated pricing as necessary for capital recovery and reliability. This framing collapses under directionality analysis: if genuine coordination existed, we would see symmetry (both parties benefit) or at least beneficiary investment in victim welfare. Instead, we observe: monopoly holder maximizes extraction, dependent consumers are forced-takers at whatever price, and downstream producers extract partial rent from the monopoly holder's power without passing benefit downward. The constraint is not 'extractive coordination' (tangled rope); it is pure extraction with a coordination cover story (snare). The mandatrophy is resolved by distinguishing the monopoly holder's experienced coordination from the actual structural asymmetry."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "market_concentration_threshold",
+      "supply_chain_dependency",
+      "regulatory_capture"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.68
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "platform_vendor_lock_in",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pvli"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Platform Vendor Lock-In Constraint",
+    "topic_domain": "technology/economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_vendor"
+    ],
+    "victims": [
+      "dependent_businesses",
+      "end_users",
+      "ecosystem_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dependent Business",
+      "comment": "PERSPECTIVE 1: DEPENDENT BUSINESS (SNARE) \u2014 Small merchants relying entirely on platform infrastructure (Amazon seller, Shopify store, App Store developer) face insurmountable barriers to exit. Switching costs include porting customer data, rebuilding supply chain integrations, establishing new payment processing, and replicating platform features at prohibitive cost. Platform can derank, suspend, or change terms with no recourse. Maximum extraction experienced."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Tier Enterprise",
+      "comment": "PERSPECTIVE 2: MID-TIER ENTERPRISE (TANGLED ROPE) \u2014 Larger business with technical capacity to diversify platforms faces high but surmountable exit costs (engineering resources, duplicated infrastructure, operational complexity). Experiences genuine coordination benefits (customer reach, payment processing, logistics integration) alongside asymmetric extraction (margin compression, algorithmic preference opacity, unilateral policy changes). Constrained exit produces mixed classification."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Vendor",
+      "comment": "PERSPECTIVE 3: PLATFORM VENDOR (ROPE) \u2014 AWS, Apple, Google, Meta experience the constraint as pure coordination: managing ecosystem dependencies, standardizing interfaces, and extracting value from network effects. Experiences the lock-in as beneficial coordination enabling business model scale. Zero exit pressure; can arbitrage to other markets or acquisition targets."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Interoperability Coalition",
+      "comment": "PERSPECTIVE 4: INTEROPERABILITY COALITION (SCAFFOLD) \u2014 Competing vendors (Microsoft, open-source foundations, regulated telecom), alternative platforms (Shopify vs Amazon, Stripe vs PayPal), and antitrust regulators see lock-in as a temporary problem with a sunset clause. Digital Markets Act (EU), data portability mandates (GDPR), and open standards initiatives (WebAssembly, OIDC) are building interoperability pathways. Organized agents have exit tools and see expiration date on extraction mechanism."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Vendor Lock Legacy",
+      "comment": "PERSPECTIVE 5: LEGACY LOCK-IN RITUAL (PITON) \u2014 Historical vendor lock-in mechanisms (Oracle database, Salesforce CRM, SAP) now operate primarily as theater: switching is more feasible than in 2000, but enterprise inertia, training investments, and integration depth persist despite reduced technical barriers. The lock appears more severe than actual exit constraints warrant. Theater ratio reflects the performative maintenance of lock-in through organizational momentum rather than technical inevitability."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal perspective, some degree of lock-in is inherent to any system with sunk costs: switching costs are a mathematical consequence of specialization and integration depth. The argument suggests vendor lock-in is immutable because specialization is immutable. However, the structural data contradicts this false summit \u2014 the constraints are policy and architecture choices (API enclosure, data portability restrictions, switching cost subsidies), not laws of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "switching_cost_composition",
+      "question": "What portion of switching costs are technological necessity vs. deliberate architecture choices?",
+      "resolution_mechanism": "Audit of data export formats, API documentation, and integration points; comparison of lock-in depth across platforms with different architectures (open-source vs proprietary); measurement of actual vs theoretical switching friction",
+      "impact": "If primarily necessity: lock-in is rope/scaffold (genuine coordination cost). If primarily deliberate: lock-in is snare (engineered extraction). This determines whether interoperability mandates reduce or fail to reduce effective extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Composition of switching costs: technological vs deliberate architecture"
+    },
+    {
+      "id": "multi_homing_feasibility",
+      "question": "Can dependent businesses operate profitably across multiple platforms simultaneously, or does the economics require single-platform concentration?",
+      "resolution_mechanism": "Cost analysis of parallel infrastructure operation; survey of business models across platform combinations; measurement of margin compression under multi-homing vs single-platform concentration",
+      "impact": "If feasible: powerless agents can exercise option of constrained exit (reclassify from trapped to constrained). If infeasible: platform has structural monopoly power independent of lock-in engineering (extraction mechanism is economic not institutional).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether profitable multi-homing is economically feasible"
+    },
+    {
+      "id": "interoperability_mandate_effectiveness",
+      "question": "Do digital markets regulation and data portability mandates actually reduce lock-in extraction or merely transfer it to compliance costs?",
+      "resolution_mechanism": "Post-DMA measurement of business exit rates, margin recovery, and switching velocity; comparison of interoperability cost to original lock-in cost; analysis of whether regulation creates new lock-in (to compliance infrastructure)",
+      "impact": "If effective: scaffold sunset is real and extraction declines post-mandate. If ineffective: mandates are theater and lock-in persists; reclassify as piton with higher theater ratio.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether interoperability mandates reduce effective lock-in extraction"
+    },
+    {
+      "id": "network_effect_dependency",
+      "question": "How much of the lock-in premium comes from genuine network effects (customers follow suppliers to platform) vs. switching cost engineering?",
+      "resolution_mechanism": "Measurement of customer churn rates under platform switching; analysis of whether customers follow supplier across platforms or require re-acquisition; comparison of platform value to users as function of supplier availability",
+      "impact": "If network effects dominate: lock-in reflects genuine coordination value (upgrade rope classification). If switching costs dominate: lock-in is engineered extraction (maintain snare/tangled rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of lock-in premium to network effects vs switching costs"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Platform vendor lock-in represents a structural constraint where providers of critical digital infrastructure create and maintain high switching costs for dependent businesses and users. The constraint exhibits genuine coordination benefits (standardized APIs, payment processing, customer reach, logistics integration) alongside engineered extraction mechanisms (data enclosure, algorithmic preference opacity, unilateral policy changes, API deprecation). The constraint has intensified over the interval as platforms consolidated market power and as business dependence on platform infrastructure deepened. The theater ratio reflects how lock-in preservation relies increasingly on organizational inertia and perception of inevitability rather than technical barriers \u2014 interoperability is more feasible than platforms suggest, but switching costs remain formidable. The constraint operates across all DR types depending on observational position: it is trap for powerless vendors, mixed coordination-extraction for mid-tier businesses, pure coordination for platforms, a problem with a sunset for regulators, degraded ritual for legacy systems, and false natural law for civilizational observers.",
+    "key_agents": [
+      "Platform Vendor (AWS, Apple, Google, Meta, Shopify, Stripe): Primary beneficiary (institutional/arbitrage) \u2014 captures ecosystem rent, margin compression on dependent businesses, unilateral control over terms",
+      "Dependent Business (small merchant, app developer, hosted SaaS startup): Primary victim (powerless/trapped) \u2014 faces insurmountable switching costs, zero negotiation power, vulnerability to unilateral platform changes",
+      "Mid-Tier Enterprise (larger SaaS, multi-channel retailer): Secondary victim/partial beneficiary (moderate/constrained) \u2014 experiences both genuine coordination benefits and asymmetric extraction; has exit options but at high cost",
+      "Interoperability Coalition (competing vendors, open-source foundations, regulators): Organized agents (organized/constrained) \u2014 building alternatives with sunset logic (Digital Markets Act, data portability mandates, open standards)",
+      "End Users (platform customers): Indirect victims (powerless/trapped) \u2014 suffer from reduced choice, higher prices, degraded service quality as platform-dependent businesses compress margins or exit",
+      "Ecosystem Autonomy (abstract structural good): Victim (powerless/trapped) \u2014 network effects and switching costs reduce global business diversity and create single points of failure"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts via margin compression (platforms take 15-40% of transaction value for small vendors), unilateral policy changes (algorithm changes, API deprecation, term modifications), and option value suppression (dependent businesses cannot credibly threaten exit). However, the extraction is not as severe as pure snare (0.72+) because genuine coordination benefits exist and some dependent businesses remain profitable. The interval trajectory shows increasing extractiveness as platform consolidation deepened (2014-2024) and as platforms refined extraction mechanisms (algorithmic preference, dynamic pricing, bundled services). Suppression (0.68): High. Switching costs include technical (data port, API integration, retraining), economic (duplicated infrastructure, margin loss during transition), and organizational (change management, customer communication). Barriers to competition entry are formidable (network effects, scale economies). However, suppression is not total (0.90+) because open-source alternatives exist, some businesses do successfully multi-home, and interoperability mandates are reducing barriers. Theater ratio (0.55): Moderate. Lock-in is partly genuine technical-economic constraint (specialization and integration create real switching costs) and partly institutional narrative ('platforms are natural monopolies,' 'switching is impossible'). Interoperability is more feasible than industry framing suggests, but the performative insistence on inevitability sustains extraction. Theater has declined from historical levels (early cloud era: 0.75) because technical feasibility of switching is now obvious, but organizational inertia maintains theater at moderate level.",
+    "perspectival_gap": "The constraint demonstrates maximum perspectival divergence. The dependent business (powerless/trapped) sees a snare with no exit: platform control of supply is total. The mid-tier business (moderate/constrained) sees tangled rope: genuine coordination mixed with asymmetric extraction. The platform (institutional/arbitrage) sees rope: managing ecosystem and capturing network value through coordination. The regulator/coalition (organized/constrained) sees scaffold: interoperability mandates and open standards provide a sunset mechanism (5-10 year horizon for DMA compliance). The legacy lock-in (institutional/arbitrage at civilizational scale) sees piton: switching is more feasible than organizational memory suggests. The civilizational analytical observer risks naturalizing contingent architecture as immutable law. This perspectival range from snare to rope is the signature of tangled rope at the primary (moderate) level: extraction exists alongside genuine coordination, with asymmetry between who benefits and who bears cost.",
+    "directionality_logic": "Directionality (d) flows from beneficiary status (platform vendors) with arbitrage-level exit options and victim status (dependent businesses) with trapped-level exit options. Platform vendors derive d \u2248 0.05 (full beneficiaries + arbitrage exit \u2192 low d \u2192 negative f(d)): they experience effective extraction as negative (subsidized). Dependent businesses derive d \u2248 0.95 (full victims + trapped exit \u2192 high d \u2192 high f(d) \u2248 1.42): they experience maximal effective extraction. Mid-tier businesses derive d \u2248 0.55 (partial victim + constrained exit \u2192 moderate d \u2192 f(d) \u2248 0.75): mixed experience. The regulatory coalition derives d from organized power + constrained exit + partial victim status (regulation is being imposed on them) \u2192 d \u2248 0.40 \u2192 f(d) \u2248 0.40: they experience moderate extraction from the lock-in constraint they are trying to dismantle. This differentiation across institutional perspectives reveals the true structure: two institutions operating different roles in the same constraint, with different directionalities.",
+    "mandatrophy_analysis": "RESOLVED TANGLED ROPE: The constraint avoids mandatrophy by satisfying all three gates: (1) beneficiaries declared (platform_vendor); (2) victims declared (dependent_businesses, end_users, ecosystem_autonomy); (3) requires_active_enforcement = true (platforms actively engineer and maintain lock-in through API enclosure, terms-of-service changes, algorithmic preference, data format restrictions). The tangled rope classification is confirmed by perspectival structure: the beneficiary sees rope (pure coordination), the victim sees snare (pure extraction), the moderate level sees tangled rope (both functions present). The presumption against mandatrophy \u2014 that the coordination function is genuine \u2014 is met: platforms do provide real value (standardized interfaces, reach, payment processing, logistics). However, the extraction function is also genuine and asymmetric. The classification avoids either romanticizing the coordination or dismissing the extraction. The interval measurements show extractiveness increasing (0.32 \u2192 0.58) while theater_ratio stays moderate (0.35 \u2192 0.55), indicating that extraction is becoming more transparent over time, not more theatrical \u2014 lock-in is being engineered more openly as market power consolidates. This pattern is characteristic of tangled rope degradation toward snare: if extractiveness reaches 0.70+ and enforcement becomes total, the classification would degrade to snare."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "data_portability_barriers",
+      "api_deprecation_cycles",
+      "marketplace_algorithmic_preference"
+    ],
+    "dual_formulation_note": "Platform vendor lock-in is decomposed into three structurally distinct constraints: (1) data_portability_barriers (\u03b5\u22480.35, rope) \u2014 genuine cost of moving data, partly technical necessity; (2) api_deprecation_cycles (\u03b5\u22480.52, tangled rope) \u2014 platforms maintain lock-in through deliberate API changes, mixed coordination and extraction; (3) marketplace_algorithmic_preference (\u03b5\u22480.65, snare) \u2014 algorithmic deranking/promotion operates with minimal coordination benefit and high extraction of merchant visibility. The parent constraint (platform_vendor_lock_in) is the integrated effect across these mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.4
+    }
+  ]
+}

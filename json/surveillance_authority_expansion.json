@@ -1,0 +1,204 @@
+{
+  "header": {
+    "constraint_id": "surveillance_authority_expansion",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "surv"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Surveillance Authority Expansion",
+    "topic_domain": "political/security/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_security_apparatus",
+      "law_enforcement_agencies",
+      "intelligence_services"
+    ],
+    "victims": [
+      "general_population",
+      "marginalized_groups",
+      "political_dissidents",
+      "privacy_rights"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Surveilled Citizen",
+      "comment": "PERSPECTIVE 1: SURVEILLED CITIZEN (SNARE) \u2014 Citizens have no meaningful exit option from state surveillance; they cannot opt out of the surveillance apparatus without leaving the nation-state. Suppression is extreme: data collection is legal, normalized, and pervasive. Extraction operates through behavioral chilling effects, loss of informational autonomy, and vulnerability to selective enforcement. Maximum experienced extractiveness."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "The Political Dissident",
+      "comment": "PERSPECTIVE 2: POLITICAL DISSIDENT (SNARE, IDENTITY-LOCKED) \u2014 Activists and dissidents are both structurally trapped (exit would mean abandoning their identity and cause) and informationally vulnerable (surveillance enables selective prosecution). Their identity as agents of change is fused with their public presence, making privacy impossible. Suppression is extreme through both legal exposure and epistemic isolation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Security State",
+      "comment": "PERSPECTIVE 3: SECURITY STATE (ROPE) \u2014 Law enforcement and intelligence agencies experience expanded surveillance authority as pure coordination: enabling information-sharing, threat detection, and institutional coordination across agencies. From their institutional position, surveillance solves collective action problems around national security coordination. Net beneficiary with maximal exit flexibility (arbitrage)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Compliant Business",
+      "comment": "PERSPECTIVE 4: COMPLIANT BUSINESS (TANGLED ROPE) \u2014 Corporations participate in surveillance ecosystems through data sharing agreements and compliance with legal demands. They benefit from law enforcement coordination and market stability, but bear costs of regulatory compliance and reputational risk. Extraction is asymmetric but not total \u2014 firms have some negotiating power and exit options (relocation, encryption adoption)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Civil Liberties Coalition",
+      "comment": "PERSPECTIVE 5: CIVIL LIBERTIES COALITION (SCAFFOLD) \u2014 Privacy advocates, encryption advocates, and digital rights organizations see surveillance expansion as a temporary institutional imbalance with a sunset clause: technological barriers to total surveillance (encryption, decentralization, anonymization protocols) and legal/political pushback create paths toward privacy restoration. The coalition has agency and sees structural exits. Theater ratio reflects that surveillance legitimation narratives (security necessity) may not persist as technical alternatives mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Outdated Legal Framework",
+      "comment": "PERSPECTIVE 6: OUTDATED LEGAL FRAMEWORK (PITON) \u2014 Pre-digital surveillance law and constitutional protections (4th Amendment, reasonable expectation of privacy) have atrophied relative to technical surveillance capacity. Legal frameworks persist through institutional inertia, declaring protection while surveillance occurs openly. The theater is high: legal ritual (warrant requirements, oversight committees) continues while practical privacy has vanished. The framework is maintained because alternatives have not fully replaced it institutionally."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, surveillance is an inherent feature of complex governance: any large-scale coordination system requires information-gathering mechanisms, and technological advancement always increases surveillance capacity. This perspective sees expansion as an immutable consequence of technology and human organization. However, the structural data contradicts this \u2014 surveillance authority expansion is a contingent institutional choice, not a natural law. The engine's false summit detector identifies this as naturalization of a policy choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technological_inevitability",
+      "question": "Is surveillance expansion driven by technological capability (inevitable given digital infrastructure) or by institutional choices to weaponize that capability?",
+      "resolution_mechanism": "Comparative analysis of surveillance adoption rates across democracies with similar technical capacity but different legal frameworks; historical analysis of alternative design choices for digital infrastructure (privacy-by-design vs surveillance-by-design)",
+      "impact": "If technology-driven: surveillance is architectural and nearly impossible to reverse. If choice-driven: expansion is reversible through institutional reform. This determines whether the constraint should be classified as mountain (immutable) or snare (extractive and contingent).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether surveillance expansion is technology-driven or institutionally contingent"
+    },
+    {
+      "id": "collateral_security_benefits",
+      "question": "Do surveillance systems provide genuine security benefits that balance against privacy costs, or are security narratives post-hoc justifications for power accumulation?",
+      "resolution_mechanism": "Analysis of crime-solving and threat-prevention attribution: what percentage of crimes prevented are attributable to mass surveillance vs targeted investigation? Cross-country comparison of security outcomes vs surveillance intensity.",
+      "impact": "If genuine benefits: classification shifts toward tangled rope (mixed coordination and extraction). If security narratives are ex-post: classification remains snare (pure extraction rationalized as necessity).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether surveillance systems provide genuine security benefits or justify extraction through security narratives"
+    },
+    {
+      "id": "identity_lock_mechanism",
+      "question": "For political dissidents, is the identity lock a matter of fused activist identity, or is it better modeled as constrained exit due to legal prosecution risk?",
+      "resolution_mechanism": "Qualitative analysis of dissident narratives: do they describe inability to leave their cause (identity fusion) or inability to leave safely (legal barriers)? Do exiled dissidents report identity loss or relief?",
+      "impact": "If identity lock: the dissident perspective models cognitive capture and internal binding. If legal constraint: reclassify exit_options as trapped. This affects the interpretation of how surveillance binds political agents.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether dissident entrapment is identity-based or legally/materially constrained"
+    },
+    {
+      "id": "privacy_restoration_feasibility",
+      "question": "Can surveillance expansion be reversed through technical (encryption, decentralization) or legal (privacy law, constitutional amendment) reforms, or are expansion mechanisms locked in by institutional path dependence?",
+      "resolution_mechanism": "Historical case studies of surveillance rollback or constraint (post-GDPR enforcement, EU data protection, unsuccessful US privacy legislation); analysis of technical barriers to implementing strong privacy protections in existing digital infrastructure",
+      "impact": "If restoration feasible: scaffold perspective is structurally sound with real sunset. If locked in: scaffold is aspirational and should downgrade to piton or snare. This determines the likelihood of the constraint's own classification changing.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether surveillance expansion can be reversed through technical or legal reform"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.53
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Surveillance authority expansion represents the state's systematic accumulation of information-gathering capacity over populations, justified through security narratives but functioning primarily as a mechanism of social control and power concentration. The constraint operates across all six DR types depending on the observer's structural position: the security state experiences it as coordination (rope); surveilled citizens experience it as extraction with no exit (snare); political dissidents experience it as extraction fused with identity loss (snare with identity_lock); compliant businesses experience mixed costs and benefits (tangled rope); privacy advocates see a temporary institutional imbalance with technical and legal exits (scaffold); obsolete legal frameworks persist through inertia (piton); and the civilizational observer risks naturalizing a contingent institutional choice as an immutable feature of governance (false mountain). The extractiveness trajectory (0.42 \u2192 0.68 over the interval) reflects technological capacity accumulation, normalization of surveillance practice, and erosion of legal/technical barriers. The theater ratio (0.48 \u2192 0.58) reflects increasing gap between legitimation narratives (security necessity, public safety) and actual functional surveillance use (minority surveillance targeting, political monitoring, social control).",
+    "key_agents": [
+      "General Population: Primary victim (powerless/trapped) \u2014 bears surveillance costs without consent or exit; informationally asymmetric",
+      "Political Dissidents: Victim with identity lock (powerless/identity_locked) \u2014 activism identity fused with public presence; vulnerability to selective enforcement",
+      "Marginalized Groups: Victims (powerless/trapped) \u2014 over-surveillance through algorithmic bias, law enforcement concentration; minimal exit options",
+      "State Security Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 accumulates information power, coordinates across agencies, enforces social norms",
+      "Law Enforcement Agencies: Beneficiary (institutional/arbitrage) \u2014 gains investigative capacity, access to population data, coordination infrastructure",
+      "Intelligence Services: Beneficiary (institutional/arbitrage) \u2014 expands operational scope, monitoring capacity, institutional reach",
+      "Compliant Businesses: Secondary actor (moderate/constrained) \u2014 participate in surveillance ecosystem; benefit from law enforcement coordination; bear compliance costs",
+      "Civil Liberties Coalition: Organized opposition (organized/constrained) \u2014 builds alternative technical and legal pathways; creates sunset mechanism through encryption, decentralization, privacy law",
+      "Legal Framework: Institutional artifact (institutional/arbitrage) \u2014 pre-digital law persists through inertia despite technical obsolescence"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The state captures information advantage, enforcement selectivity, and behavioral control. The extraction increases over time as technological capacity accumulates (surveillance infrastructure becomes cheaper, more comprehensive, harder to avoid). The trajectory from 0.42 to 0.68 reflects that surveillance is not a single snapshot but an ongoing process of institutional power accumulation. Suppression (0.72): High. Citizens cannot exit surveillance without emigration (physical barrier); legal protections are eroded (institutional barrier); surveillance is normalized and expected (cognitive barrier). Suppression combines structural, legal, and internalized components. Theater ratio (0.58): Moderate-high but not extreme. Security justifications and warrant processes create performance of accountability, but the performance is increasingly transparent as a theater \u2014 actual surveillance operates beneath legal categories, algorithms operate outside oversight, and selective enforcement reveals underlying power asymmetries. The gap between legal legitimation and operational reality grows as technical capacity expands.",
+    "perspectival_gap": "The primary perspectival gap is between the security state (rope \u2014 sees coordination benefit) and surveilled citizens (snare \u2014 experiences pure extraction). The security apparatus experiences the same institutional mechanism as solving collective action problems (coordination between agencies, threat detection, social ordering). Surveilled citizens experience the same mechanism as asymmetric power extraction with no ability to exit, defend, or refuse. This gap is not based on different metrics or different values \u2014 it reflects different structural positions within the same constraint. The security state's arbitrage exit option (they can choose what data to collect, how to use it, when to surveil) is directly enabled by the trapped population's lack of exit (they cannot refuse participation). The tangled rope perspective (compliant businesses) represents the boundary: businesses benefit from law enforcement coordination but bear costs of surveillance demands and reputational risk. The scaffold perspective (civil liberties coalition) attempts to shift the structural position by lowering suppression and creating new exit options (encryption, privacy law, decentralization). The piton perspective reveals that legal frameworks are performing accountability while surveillance operates outside their reach. The false mountain perspective exposes the naturalization error: civilization requires surveillance is a political choice, not a law of nature.",
+    "directionality_logic": "Each perspective's directionality d is derived from structural position within the surveillance system. The general population and dissidents are full victims of the extraction mechanism (d \u2248 0.95, trapped) \u2014 high experienced extraction through behavioral chilling, informational vulnerability, and lack of exit. The security state is a full beneficiary (d \u2248 0.05, arbitrage) \u2014 low experienced extraction because they control the mechanism. Compliant businesses are symmetric (d \u2248 0.50, constrained) \u2014 they benefit from law enforcement coordination but bear compliance costs and reputational risk. The civil liberties coalition is a partial victim fighting the mechanism (d \u2248 0.60, constrained with organized power) \u2014 they bear costs of surveillance but have institutional resources to organize opposition and create alternative pathways. The legal framework sits outside the victim/beneficiary distinction; it is a piton artifact experiencing zero effective extraction because it is ceremonial. The analytical observer at the universal scope faces a false summit: if they treat surveillance as immutable (mountain), they have naturalized a contingent institutional choice and missed the constraint's actual structure. The engine's chi formula with these d values produces the perspectival gap: victim agents experience high \u03c7; beneficiary agents experience low/negative \u03c7; organized opposition experiences moderate \u03c7 with potential for change.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: This constraint is classified as snare (extractiveness > 0.70, suppression \u2265 0.60, \u03c7 \u2265 0.66 in victim perspectives), resolving potential confusion with tangled rope. The potential mandatrophy is: 'Does surveillance expansion also provide genuine coordination benefit that would elevate it to tangled rope?' The resolution: security apparatus coordination is a real coordination function (agencies share threat intelligence, coordinate investigations, maintain border security), BUT this coordination benefit accrues exclusively to the beneficiary (state/law enforcement) while extraction accrues exclusively to the victims (general population). This asymmetry is the defining feature of snare vs tangled rope. In tangled rope, both beneficiaries and victims derive net benefit from the coordination function despite extraction. In snare, the victims derive only costs. The surveillance constraint is pure snare because the general population does not benefit from surveillance-enabled law enforcement coordination \u2014 they experience only the extraction (behavioral chilling, vulnerability, informational asymmetry) without the coordination benefit. The coordination occurs within the security state; it does not extend to the surveilled. This is why the security state perspective sees rope (they benefit from coordination) while the population perspective sees snare (they experience only extraction). The mandatrophy is resolved by the beneficiary/victim declaration and the structural asymmetry in benefit distribution."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "privacy_erosion",
+      "policing_bias_amplification",
+      "political_dissent_suppression"
+    ],
+    "dual_formulation_note": "Surveillance authority expansion decomposes into multiple structurally distinct constraints: technical surveillance capacity (engineering/architecture), legal authority expansion (policy), institutional coordination benefits (security apparatus), and behavioral extraction through visibility. This story addresses the macro constraint (institutional power accumulation); downstream constraints address specific domain applications (predictive policing, border surveillance, dissent monitoring)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.6
+    }
+  ]
+}

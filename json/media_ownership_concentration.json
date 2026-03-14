@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "media_ownership_concentration",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mediacon"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Media Ownership Concentration and Editorial Control",
+    "topic_domain": "media/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_media_corporations",
+      "political_elite_with_media_access"
+    ],
+    "victims": [
+      "independent_journalists",
+      "public_information_commons",
+      "local_news_infrastructure",
+      "editorial_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Independent Journalist",
+      "comment": "PERSPECTIVE 1: INDEPENDENT JOURNALIST (SNARE) \u2014 Faces near-total career barriers: consolidation has eliminated independent outlets and closed editorial positions. Must either accept corporate employment under editorial constraints or abandon journalism entirely. No viable alternative pathways. Maximum extraction: cannot negotiate terms, cannot exit the constraint, cannot organize sufficient collective power. The journalist's labor is extracted through wage suppression and editorial censorship masked as market forces."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Local Community Information Needs",
+      "comment": "PERSPECTIVE 2: LOCAL COMMUNITY (SNARE) \u2014 Concentration has eliminated local news coverage; communities cannot organize alternative information systems quickly enough. Trapped in information deserts. No exit without decades of collective effort. Extracted information value (local accountability reporting) has been removed from the constraint system. Pure extraction with no coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Level Editor or Reporter",
+      "comment": "PERSPECTIVE 3: MID-LEVEL EDITORIAL STAFF (TANGLED ROPE) \u2014 Experiences both coordination and extraction. Benefits from professional infrastructure (fact-checking resources, editorial standards, distribution networks) that consolidation enables. Simultaneously constrained by ownership directives, editorial suppression of stories that conflict with corporate interests, and career advancement tied to corporate preference. Exit is costly (reputation damage, industry blacklisting) but not impossible for highly skilled journalists. Moderate effective extraction masks genuine coordination function."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Large Media Corporation",
+      "comment": "PERSPECTIVE 4: LARGE MEDIA CORPORATION (ROPE) \u2014 Consolidation solves the coordination problem of managing multiple editorial voices under unified business strategy. The corporation experiences the constraint as pure coordination: centralizing ownership reduces editorial conflict, enables economies of scale in newsgathering, and allows strategic narrative alignment. Net beneficiary with complete exit capacity (can divest, can exit markets). No suppression experienced at this level \u2014 constraints operate downward, not upward."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Political Elite with Media Access",
+      "comment": "PERSPECTIVE 5: POLITICAL ELITE WITH MEDIA ACCESS (TANGLED ROPE) \u2014 Experiences mixed coordination and extraction. Benefits from consolidated media's ability to amplify preferred narratives (coordination function: organized message distribution). Simultaneously faces extraction when media ownership aligns with opposing political factions. Mobile exit option (can cultivate alternative media channels, social media platforms, direct communication). Experienced extraction is moderate because powerful agents can negotiate and exit."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Journalism Profession",
+      "comment": "PERSPECTIVE 6: JOURNALISM PROFESSION AS INSTITUTION (PITON) \u2014 The professional norms of journalism (objectivity, editorial independence, public interest) persist despite concentration eroding the structural basis for these norms. Theater ratio 0.48 reflects that professional rituals (editorial standards, fact-checking protocols) continue but increasingly serve to legitimize corporate narratives rather than provide genuine editorial independence. The profession maintains theatrical adherence to independence ideals while material conditions of work have fundamentally changed. Inertia keeps the professional frame intact despite functional degradation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (False Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (FALSE MOUNTAIN) \u2014 From a civilizational/global perspective, media consolidation might appear as an inevitable consequence of capital accumulation and technology (network effects favor large platforms, economies of scale favor large newsrooms, etc.). This perspective risks naturalizing what is actually a contingent institutional arrangement dependent on regulatory choices (antitrust law, licensing regimes, ownership caps). The engine will identify this as a false summit: consolidation is structurally contingent, not a law of nature or technology."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "editorial_suppression_mechanism",
+      "question": "Is observed editorial convergence driven by ownership control or by genuine coordination of professional standards?",
+      "resolution_mechanism": "Cross-ownership comparison of editorial positions on politically contentious stories; analysis of editorial variance within consolidated outlets vs across independent outlets; journalist testimony regarding editorial pressures.",
+      "impact": "If ownership-driven: suppression value should increase to 0.75+, classification shifts toward pure Snare for powerless agents. If standards-driven: suppression value should decrease to 0.40-0.45, constraint reclassifies as weaker Tangled Rope or Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether editorial suppression is structurally required or contingent on ownership"
+    },
+    {
+      "id": "alternative_media_viability",
+      "question": "Do digital platforms and independent online media constitute genuine alternatives to consolidated outlets, or are they structurally unable to replace local news function?",
+      "resolution_mechanism": "Longitudinal tracking of audience migration to alternative outlets; analysis of whether alternative outlets generate investigative journalism or only aggregate/comment; measurement of local accountability reporting volume before/after consolidation.",
+      "impact": "If alternatives viable: exit_options for journalists should shift from 'trapped' to 'constrained', reducing effective extraction. If alternatives insufficient: confirms snare classification and justifies higher suppression.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative media can replace consolidated outlets' social function"
+    },
+    {
+      "id": "regulatory_intervention_feasibility",
+      "question": "Can antitrust action or ownership caps reversibly break the consolidation pattern, or has it reached structural irreversibility?",
+      "resolution_mechanism": "Historical case analysis of post-antitrust divestiture outcomes; modeling of market viability for independent local news under different regulatory regimes; journalist labor market analysis.",
+      "impact": "If reversible: constraint is structural but contingent (Tangled Rope confirmed, potential for Scaffold with sunset). If irreversible: constraint approaches Mountain-like immutability through accumulated capital barriers.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether media consolidation is reversible through policy intervention"
+    },
+    {
+      "id": "suppression_internalization",
+      "question": "To what degree have journalists internalized editorial suppression as professional norm rather than experienced it as external coercion?",
+      "resolution_mechanism": "Qualitative analysis of journalist self-narratives; comparison of suppression experienced by hired journalists vs independent/freelance journalists; tracking of self-censorship patterns.",
+      "impact": "High internalization shifts the binding mechanism from structural (career consequences) toward identity-locked (professional identity fused with corporate expectations). Increases effective suppression beyond measured value because the journalist carries constraints internally.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of internalization of editorial suppression as professional norm"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Media ownership concentration represents a structural constraint where consolidation of news production under corporate ownership creates asymmetric extraction between owners (who capture editorial control and political influence) and workers/public (who lose editorial autonomy and information access). The constraint exhibits simultaneous coordination functions (consolidated outlets enable economies of scale, unified editorial strategy, professional standards infrastructure) and extractive mechanisms (suppression of inconvenient stories, political alignment with corporate interests, elimination of independent outlets that would compete). The base extractiveness value (0.58) reflects that consolidation genuinely does solve some coordination problems for media corporations while simultaneously extracting from journalists, communities, and the information commons. The suppression value (0.65) captures both structural barriers (capital requirements for launching independent outlets) and behavioral suppression (editorial directives, career consequences for publishing disfavored stories). Theater ratio (0.48) reflects that professional journalism standards (fact-checking, editorial processes) continue but increasingly serve to legitimize corporate narratives rather than provide genuine independence\u2014a moderate level of performativity, not yet the high theater of purely degraded institutions. This constraint decomposes into at least two structurally distinct stories: (1) the market consolidation itself (economic extraction through competitive elimination) and (2) the editorial suppression mechanism (information extraction through narrative control). The narrative focuses on editorial suppression; market consolidation would be a separate story with potentially higher extractiveness.",
+    "key_agents": [
+      "Large Media Corporations: Primary beneficiary (institutional/arbitrage) \u2014 capture editorial control, political access, and market rents through consolidated ownership",
+      "Independent Journalists: Primary victim (powerless/trapped) \u2014 face elimination of employment pathways, editorial censorship, career suppression",
+      "Local Communities: Primary victim (powerless/trapped) \u2014 loss of local accountability reporting, information deserts, no exit capacity",
+      "Mid-Level Editorial Staff: Secondary victim (moderate/constrained) \u2014 benefit from professional infrastructure while constrained by ownership directives; can exit at cost",
+      "Political Elite with Media Access: Moderate beneficiary (powerful/mobile) \u2014 benefit from narrative amplification while maintaining exit options through alternative channels",
+      "Journalism Profession: Institutional actor (institutional/arbitrage) \u2014 maintains professional norms theatrically while structural basis has degraded"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts through dual mechanisms: (1) elimination of competitive alternatives (powerless journalists have no exit), and (2) editorial control (consolidated outlets suppress narratives that contradict corporate interests). The value reflects that consolidation solves some genuine coordination problems (economies of scale, professional standards) for the beneficiary while simultaneously creating extraction mechanisms. The measurement trajectory (0.30\u21920.58 over 15 time periods) shows increasing extractiveness as consolidation matured and professional norms were incrementally compromised. Suppression (0.65): High. Significant structural barriers include: capital requirements for launching independent outlets (billions required for national reach), advertising market consolidation favoring large outlets, journalistic labor market concentration (fewer independent employers), career consequences for publishing disfavored stories (blacklisting, editorial suppression, compensation reduction). Some exit exists (freelance work, nonprofit outlets, digital platforms) but at substantial cost. Theater ratio (0.48): Moderate. Professional journalism maintains genuine editorial standards (fact-checking, source verification) that serve legitimate verification functions. However, these same standards increasingly serve to legitimize corporate-preferred narratives rather than provide genuine editorial independence. The theater is neither minimal (standards are materially enforced) nor maximal (some investigative capacity persists), positioning the constraint as mid-stage degradation rather than pure piton. The measurement trajectory (0.32\u21920.48) shows theater increasing as professional norms became decoupled from their original function.",
+    "directionality_logic": "Each perspective's directionality derives from (1) agent power level, (2) exit options within this specific constraint, and (3) beneficiary/victim status. Large media corporations: institutional power + arbitrage exit + beneficiary status \u2192 d \u2248 0.05 \u2192 low/negative \u03c7. Independent journalists: powerless + trapped exit + victim status \u2192 d \u2248 0.95 \u2192 maximum \u03c7. Mid-level editors: moderate power + constrained exit + victim status (constrained by suppression) \u2192 d \u2248 0.70 \u2192 moderate-high \u03c7. Political elite with media access: powerful power + mobile exit + partial beneficiary status \u2192 d \u2248 0.30-0.40 \u2192 low-moderate \u03c7. The derivation chain prioritizes structural data (beneficiary/victim declarations, exit options) over power atom alone. A powerful agent with trapped exit experiences higher extraction than their power level suggests; a powerless agent with arbitrage exit experiences lower extraction than their power level suggests.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival divergence from structural position. The beneficiary (large media corporation) sees pure coordination (Rope) \u2014 consolidation solves the engineering problem of managing multiple editorial voices and distributing content profitably. The trapped agent (independent journalist) sees pure extraction (Snare) \u2014 no career alternatives, editorial censorship, professional suppression. The constrained agent (mid-level staff) sees mixed coordination and extraction (Tangled Rope) \u2014 benefits from professional infrastructure while oppressed by ownership directives. The organized agent (open media advocacy movements) sees a structural problem with potential policy solutions (Scaffold with sunset) \u2014 antitrust intervention could break consolidation. The profession maintains theatrical commitment to independence (Piton) \u2014 professional norms persist despite material conditions for independence have eroded. The analytical observer risks false naturalization (Mountain) \u2014 mistaking a contingent institutional arrangement for an inevitable consequence of technology or capital. The perspectival gap reflects real structural differences: powerful agents with exit options experience weak extraction; powerless agents with no exit experience maximum extraction. The constraint is not Mountain (not inevitable), not Rope (coordination is present but not primary function), not pure Snare (beneficiaries genuinely gain from coordination, not just from extraction), and not pure Scaffold (the sunset requires active policy intervention, not inevitable technological replacement). Tangled Rope is the structural truth: consolidation coordinates corporate operations while extracting from journalists, communities, and editorial autonomy.",
+    "mandatrophy_analysis": "Tangled Rope classification resolves potential mandatrophy by recognizing that consolidation creates BOTH a genuine coordination function AND asymmetric extraction. The false choice between 'pure coordination problem (Rope)' and 'pure extraction mechanism (Snare)' is dissolved by the Tangled Rope category, which requires: (1) genuine coordination function (consolidated outlets do solve editorial coordination and distribution problems), (2) asymmetric extraction (these same consolidations eliminate competitive alternatives and suppress editorial independence), and (3) active enforcement of asymmetry (ownership structures must be actively maintained, not spontaneous). The Piton perspective notes that professional norms (objectivity, editorial independence) persist theatrically despite material conditions supporting those norms have degraded \u2014 this is the degradation signature. The false Mountain perspective (consolidation is inevitable technology effect) is prevented by recognizing the constraint as regulatory/institutional contingent, not technological necessity. The Scaffold perspective (antitrust intervention creates sunset) is legitimate but secondary to the Tangled Rope structural reality \u2014 policy intervention might break the constraint but the constraint currently exists as Tangled Rope, not as an incipient Scaffold."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "editorial_suppression_of_political_narratives",
+      "local_news_market_elimination",
+      "journalistic_labor_precarity"
+    ],
+    "dual_formulation_note": "Media ownership concentration decomposes into at least three distinct constraints: (1) editorial_suppression_of_political_narratives (\u03b5 \u2248 0.65, Snare/Tangled Rope at editorial level), (2) local_news_market_elimination (\u03b5 \u2248 0.72, Snare at community level, higher extractiveness), and (3) journalistic_labor_precarity (\u03b5 \u2248 0.60, Snare/Tangled Rope at labor market level). This story focuses on the editorial suppression mechanism (\u03b5=0.58, Tangled Rope). The upstream constraint is market concentration itself (economic extraction through competitive elimination); downstream constraints involve specific manifestations of suppressed narratives and labor precarity."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

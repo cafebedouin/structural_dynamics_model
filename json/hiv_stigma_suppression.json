@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "hiv_stigma_suppression",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hiv_stigma"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.62,
+    "claimed_type": "snare",
+    "human_readable": "HIV Stigma and Suppression of Disclosure",
+    "topic_domain": "public_health/social/identity",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "stigma_perpetuators",
+      "risk_denial_institutions"
+    ],
+    "victims": [
+      "people_living_with_hiv",
+      "public_health_efficacy"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "label": "Person Living with HIV (Identity-Locked)",
+      "comment": "A person living with HIV faces structural suppression through material barriers (employment discrimination, housing denial, healthcare access restrictions) AND internalized suppression through identity fusion. The individual cannot disclose without risking livelihoods and relationships, but also cannot imagine themselves outside the HIV-positive identity they have constructed \u2014 secrecy becomes constitutive of self-concept. Exit from the constraint would require becoming a different person, not just changing circumstances."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Person Living with HIV (Structurally Trapped)",
+      "comment": "Material barriers to disclosure are insurmountable within the immediate context: employment-at-will settings where disclosure risks termination with no legal recourse; healthcare access conditional on disclosure to insurers who may deny coverage; family structures where disclosure risks abandonment or violence. The structural entrapment is independent of identity \u2014 the agent perceives the constraint as purely external and unchangeable."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Public Health Institutions (Constrained Coordination)",
+      "comment": "Public health agencies coordinate HIV prevention and treatment through surveillance, partner notification, and treatment adherence programs \u2014 genuine coordination functions. Simultaneously, they extract compliance through threat of disclosure (breach of medical confidentiality), mandatory reporting to authorities, and selective resource allocation. They experience the constraint as both coordination necessity and enforcement burden."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Stigma-Perpetuating Institutions (Net Beneficiary)",
+      "comment": "Religious institutions, media gatekeepers, and cultural norm-setters benefit from HIV stigma through mechanisms of social control and moral authority. The constraint coordinates group identity ('us' vs. 'them') while extracting from the stigmatized outgroup. These beneficiaries experience the constraint as coordination of shared values and cultural coherence."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Historical Moral Panics (Degraded Function)",
+      "comment": "Institutional stigmatization rituals \u2014 mandatory testing with forced disclosure, quarantine protocols, social exclusion ceremonies \u2014 persist through institutional inertia long after their public health function has been scientifically invalidated. The theater ratio is high (0.62): much of institutional HIV response involves performative moral cleansing rather than functional disease control. These rituals maintain credibility through spectacle, not effectiveness."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Systemic Extraction)",
+      "comment": "From a civilizational analytical view, HIV stigma functions as a pure extractive constraint: it suppresses disclosure (reducing public health efficacy), concentrates costs on the infected population (barriers to treatment, employment, relationships), and produces no coordination benefit that could not be achieved through non-stigmatizing mechanisms. Suppression is near-total: fear of disclosure operates through internalized shame and material consequences."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "identity_lock_vs_structural_entrapment",
+      "question": "What proportion of disclosure suppression is driven by internalized stigma (identity-locked) vs. material barriers (trapped/constrained)?",
+      "resolution_mechanism": "Longitudinal study of barriers to disclosure: qualitative interviews post-disclosure comparing pre- and post-disclosure fear levels; analysis of whether material barriers alone (legal employment protection, healthcare access guaranteed) eliminate suppression or whether internalized shame persists independently",
+      "impact": "If primarily identity-locked (>60%): intervention focus must be cognitive/identity-reframing alongside structural removal of material barriers. If primarily trapped (>60%): material policy change (employment protection, healthcare access, confidentiality guarantees) would substantially reduce suppression. Mixed mechanism suggests dual intervention required.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of suppression driven by internalized identity-lock vs structural material barriers"
+    },
+    {
+      "id": "suppression_persistence_after_structural_removal",
+      "question": "If all material barriers to disclosure are removed (employment protection, healthcare access, legal confidentiality), does internalized suppression persist and at what magnitude?",
+      "resolution_mechanism": "Comparison of disclosure rates and psychological outcomes in jurisdictions with strong legal protections (Canada, Netherlands, Scandinavia) vs. weak protections (US at-will employment states, countries with criminalization). Measurement of residual shame/secrecy even when legal barriers are absent.",
+      "impact": "If suppression persists at >40% magnitude even with structural removal: the constraint has significant identity-lock component that requires cognitive intervention (community building, narrative reframing, identity affiliation). If suppression drops to <20%: structural removal is sufficient and identity-lock is secondary.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether internalized suppression persists after removal of material barriers"
+    },
+    {
+      "id": "coordination_function_necessity",
+      "question": "Could public health coordination objectives (partner notification, treatment adherence, prevention cascade) be achieved through mechanisms that do not rely on stigmatizing suppression?",
+      "resolution_mechanism": "Case study analysis of non-stigmatizing public health approaches (opt-in partner notification, community-based treatment adherence support, shame-free prevention education); measurement of treatment cascade outcomes in countries with decriminalization and de-stigmatization policies vs. criminalization regimes",
+      "impact": "If non-stigmatizing coordination achieves equivalent or superior outcomes: stigma suppression has zero coordination justification and is pure extraction. If non-stigmatizing approaches perform worse: some degree of stigmatic pressure may have coordination function (though it may still be extractively excessive).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether public health coordination requires stigmatizing suppression or can be achieved through non-stigmatizing mechanisms"
+    },
+    {
+      "id": "theater_threshold_for_institutional_degradation",
+      "question": "At what theater ratio (currently 0.62) does institutional HIV response fully become degraded ritual with no functional disease control component?",
+      "resolution_mechanism": "Analysis of institutional response components: segregate actual disease control activities (testing, treatment, prevention) from performative activities (public shaming, quarantine theater, moral gatekeeping). Measure functional outcome variance explained by each component.",
+      "impact": "If functional component explains >40% of outcome variance: theater at current ratio is concerning but institution retains mixed rope/piton character. If <20%: institution is fully piton (degraded ritual maintained by inertia). If functional component is negative (stigma reduces treatment-seeking, delays care, drives transmission): institution is pure extraction with negative public health function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Theater threshold at which institutional HIV response becomes fully degraded ritual"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "HIV stigma operates as a pure extraction mechanism disguised as moral and public health necessity. The constraint suppresses disclosure of HIV status through both material barriers (employment discrimination, healthcare denial, legal criminalization) and internalized shame (identity fusion with the diagnosis, internalized worthlessness). The suppression serves institutional interests \u2014 religious and moral authority institutions extract social control value; risk-denial frameworks extract legitimacy by externalizing disease responsibility onto the stigmatized population; public health institutions extract enforcement capacity through mandatory disclosure threats. Simultaneously, suppression directly undermines stated public health objectives by preventing testing, treatment initiation, and prevention behavior. The constraint is a diagnostic exemplar of how extraction can be perpetuated through a cover story of necessity ('we must stigmatize for public health') that is empirically false. The theater ratio (0.62) reflects that institutional HIV responses increasingly consist of performative moral gatekeeping \u2014 quarantine and exclusion ceremonies, mandatory testing with forced disclosure, public shaming \u2014 long after scientific evidence invalidated their disease control function. The trajectory shows both extractiveness and theater increasing over the interval (0.42 \u2192 0.68 extractiveness; 0.45 \u2192 0.62 theater), indicating institutional capture and degradation rather than public health improvement.",
+    "key_agents": [
+      "People living with HIV: Primary victims (powerless/identity-locked and trapped) \u2014 face material barriers to disclosure (employment, healthcare, housing discrimination) and internalized suppression through identity fusion. Carry suppression regardless of structural barriers due to cognitive capture.",
+      "Risk-denial institutions: Primary beneficiaries (institutional/arbitrage) \u2014 extract legitimacy and social control by externalizing disease responsibility onto the infected population. Benefit from stigma-based moral authority.",
+      "Religious and cultural norm-setters: Secondary beneficiaries (institutional/arbitrage) \u2014 extract social cohesion through group identity maintenance (us vs. them) and moral authority claims. Stigma coordinates group boundaries.",
+      "Public health institutions: Complex actors (moderate/constrained) \u2014 have genuine coordination functions (treatment cascade, partner notification, prevention) but extract enforcement capacity through suppression and mandatory disclosure threats. Mixed rope-snare character.",
+      "At-risk populations (sex workers, LGBTQ+, people who inject drugs): Secondary victims (moderate/constrained) \u2014 face suppression through association with HIV, stigma generalization, and exclusion from prevention resources. Constrained by both material barriers and stigmatic assumptions.",
+      "Medical professionals with disclosure obligations: Institutional actors caught between confidentiality obligations and mandatory reporting laws. Experience institutional contradiction (constrained) \u2014 legal duty to maintain confidentiality conflicts with public health reporting mandates that operate through threat of forced disclosure."
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts from people living with HIV through suppression that prevents disclosure, impedes treatment access, blocks economic participation, and breaks social bonds. It extracts legitimacy from institutions through a cover story of necessity ('stigma is regrettable but necessary for disease control'). The extractiveness score reflects that suppression produces asymmetric costs (borne by the infected population) with no offsetting benefit for that population. Suppression (0.75): Very high. Multiple reinforcing suppression mechanisms operate: (1) Material barriers \u2014 employment-at-will settings allow termination upon disclosure; healthcare systems require disclosure to insurers who may deny coverage; housing and adoption laws explicitly discriminate; (2) Legal penalties \u2014 many countries criminalize HIV non-disclosure, creating disclosure risks; (3) Internalized shame \u2014 decades of stigmatizing public health messaging have internalized diagnosis as moral failing; (4) Relationship risks \u2014 disclosure often triggers abandonment, violence, or family fracture. Suppression approaches totality: most people living with HIV never disclose to all potential contacts, creating ongoing secrecy burden. Theater ratio (0.62): Moderate-high and rising. Institutional HIV responses include genuine disease control components (antiretroviral therapy, testing programs, prevention education) but increasingly emphasize performative moral gatekeeping: quarantine theaters (historically), mandatory testing with threat of forced disclosure, public health campaigns that conflate disease with moral failing. The theater has increased over time as scientific evidence on undetectable-untransmittable (U=U) status shifted the discourse \u2014 institutions have responded by increasing performative enforcement (stricter disclosure laws, moral panic around criminalization) rather than reducing stigma-based interventions.",
+    "perspectival_gap": "This constraint exhibits maximum perspectival divergence. The powerless/identity-locked perspective sees pure snare; the institutional beneficiary sees rope or even coordination necessity; the public health actor sees mixed tangled rope; the analytical observer sees extraction with a false cover story. The gap reveals how suppression operates: beneficiaries experience it as natural/necessary; targets experience it as all-consuming. The identity-lock mechanism is critical: even when structural barriers are removed, the identity-locked target continues to experience suppression because their self-concept is fused with the diagnosis. This is the signature of cognitive capture masquerading as individual pathology.",
+    "directionality_logic": "Directionality derivation for each perspective reflects power, exit options, and beneficiary/victim status. A person living with HIV classified as powerless/identity-locked faces d \u2248 0.89 (high target status, internalized suppression prevents exit recognition). The same person classified as powerless/trapped faces d \u2248 0.95 (full target status, material barriers absolute). Beneficiary institutions (religious/cultural authorities) classified as institutional/arbitrage face d \u2248 0.05 (full beneficiary, can exit constraint at will, benefits from coordination value). Public health institutions classified as moderate/constrained face d \u2248 0.55 (symmetric position: some benefits from coordination function, some costs from enforcement burden, constrained by law and funding). The directionality chain produces f(d) values that amplify extraction for targets and dampen extraction for beneficiaries, creating the perspectival gap visible in classification divergence.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION \u2014 The constraint resolves the mandatrophy by identifying a false necessity narrative. The cover story is 'stigma is necessary for public health' (treating the snare as rope or mountain \u2014 justified extraction). The structural analysis shows: (1) Suppression serves institutional interests, not disease control. (2) Non-stigmatizing public health approaches (Scandinavian decriminalization + treatment-as-prevention) achieve superior outcomes. (3) Beneficiaries are not disease control experts but moral authority institutions. Therefore, the constraint is pure extraction masquerading as coordination necessity. The mandatrophy is resolved by decomposing the false unity: the legitimate public health coordination function (treatment, prevention, testing) should be separated from the extraction mechanism (stigma, suppression, criminalization). These are two different constraints: one is rope or tangled rope with genuine coordination; the other is snare with a false necessity cover story."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "healthcare_access_barriers",
+      "criminalization_of_disclosure"
+    ],
+    "dual_formulation_note": "HIV stigma suppression decomposes into two structurally distinct constraints: (1) identity_coordination_stigma (\u03b5\u22480.55) \u2014 the cognitive capture mechanism through which identity becomes fused with diagnosis, enabling internalized suppression even when material barriers are removed; (2) material_suppression_mechanisms (\u03b5\u22480.72) \u2014 employment discrimination, healthcare denial, legal criminalization that create structural barriers to disclosure. These are linked: material barriers reinforce identity lock, and identity lock persists after material barriers are removed. Both must be addressed for meaningful suppression reduction."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

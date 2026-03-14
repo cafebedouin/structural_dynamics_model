@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "state_funding_dependency",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sfund"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "State Funding Dependency in Institutional Governance",
+    "topic_domain": "political_economy/institutional_capture",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_apparatus",
+      "budget_gatekeeping_institutions"
+    ],
+    "victims": [
+      "funded_organizations",
+      "democratic_accountability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Dependent Organization",
+      "comment": "PERSPECTIVE 1: DEPENDENT ORGANIZATION (SNARE) \u2014 A public university, nonprofit, or service provider depends on state funding for 60-90% of operations. Exit is impossible without existential collapse. The organization must conform to budget cycles, reporting requirements, and implicit policy preferences. Suppression is structural: to lose funding is to cease functioning. Maximum experienced extraction \u2014 the organization bears full cost of the dependency relationship."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Tier Administrator",
+      "comment": "PERSPECTIVE 2: MID-TIER ADMINISTRATOR (TANGLED ROPE) \u2014 A department head or program director receives genuine coordination benefits (stable baseline funding, access to shared infrastructure, participation in state planning) alongside extraction (compliance burden, loss of autonomy, reporting overhead). Exit is costly but possible (private sector, foreign institution, retirement). Suppression is high but not absolute \u2014 constrained rather than trapped."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State Budget Authority",
+      "comment": "PERSPECTIVE 3: STATE BUDGET AUTHORITY (ROPE) \u2014 From the state's perspective, funding dependency is a pure coordination mechanism. The state uses budget allocation to coordinate behavior of distributed institutions (universities, hospitals, social services) toward state policy objectives. No significant suppression of the state's options \u2014 it can adjust funding, retract it, restructure institutions, or reallocate resources freely. Net beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Historical State University Model",
+      "comment": "PERSPECTIVE 4: HISTORICAL UNIVERSITY GOVERNANCE (PITON) \u2014 The post-WWII state university model emerged as genuine public coordination: states funded institutions to serve public goods (research, mass higher education). The functional model persists through institutional inertia and legislative path-dependence, but its coordination function has largely atrophied. State funding now subsidizes workforce training for private employers; universities compete for private research grants; teaching quality depends on adjunct labor markets. Theater ratio (0.65) reflects that budget justifications still invoke public good language while actual mechanisms serve workforce production and research concentration. The piton model is maintained through accreditation requirements and historical naming, not functional necessity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Elite Research Institution",
+      "comment": "PERSPECTIVE 5: ELITE RESEARCH INSTITUTION (TANGLED ROPE) \u2014 Universities like Stanford, MIT, or Harvard receive state funding (through federal research grants, state tax benefits, infrastructure investment) but have sufficient private endowment, corporate partnerships, and prestige to reduce dependency. They experience the funding system as coordination with embedded extraction: state funds require compliance reporting and some deference to state priorities, but exit is possible (private funding, endowment growth). They capture asymmetric benefits (federal research funding concentration, intellectual property from publicly-funded research) while bearing low suppression costs. Moderately organized with arbitrage options."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Political Economy View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN?) \u2014 From a civilizational analytical view, state control of public resource allocation appears as an immutable structural feature of modern political economy. No institution can entirely escape state funding or state authority. But this perspective risks naturalizing a contingent historical arrangement (the post-WWII welfare state funding model) as if it were a law of nature. The analytical observer should recognize this as a false summit: the dependency is real, but not immutable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "dependency_threshold",
+      "question": "At what funding percentage does an organization transition from constrained to trapped?",
+      "resolution_mechanism": "Historical case analysis: organizations that exited state funding at 40%, 60%, 80% thresholds; cost analysis of creating alternative revenue streams at different initial dependency levels",
+      "impact": "If threshold is 50%: many moderately-funded organizations misclassified as mobile when they are trapped. If threshold is 80%: only fully-dependent organizations are classified as snare, missing mid-tier extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Percentage of state funding that constitutes structural trap vs constrained dependency"
+    },
+    {
+      "id": "alternative_funding_viability",
+      "question": "Can institutions genuinely replace state funding through private endowment, corporate partnerships, or international funding, or does political pressure prevent true exit?",
+      "resolution_mechanism": "Comparative institutional analysis: institutions that attempted private funding transitions; documentation of political opposition or regulatory barriers to reduced state dependency; international case studies of private-funded equivalents",
+      "impact": "If alternatives are viable: exit_options should upgrade from trapped to constrained; classification becomes Tangled Rope rather than pure Snare. If alternatives face political barriers: exit is theoretically possible but practically suppressed; identity_locked exit mechanism may apply.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether organizational exit from state funding is structurally or politically constrained"
+    },
+    {
+      "id": "identity_lock_mechanism",
+      "question": "Is institutional identity fused with state funding dependency (self-concept as public institution), or is the constraint purely material (budget requirements)?",
+      "resolution_mechanism": "Institutional culture analysis: whether leadership, mission statements, and strategic planning frame the organization around state mission or private sustainability; historical trajectory of institutions that successfully transitioned to private funding; employee surveys on organizational identity",
+      "impact": "If identity_locked: some organizations will be unable to exit even if alternative funding exists; suppression is partially internalized. If purely material: exit is blocked by budget requirements alone; organizations could shift direction if funding became available.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether institutional dependency is identity-constituted or materially structural"
+    },
+    {
+      "id": "democratic_accountability_cost",
+      "question": "What is the extractive cost of maintaining public accountability mechanisms (board meetings, budget transparency, legislative oversight) vs the extraction cost of state control?",
+      "resolution_mechanism": "Comparative cost analysis: administrative burden of public accountability vs discretionary power retained by state funding gatekeepers; measurement of actual policy constraint imposed by legislative oversight vs freedom lost to budget conditionality",
+      "impact": "If accountability cost exceeds state control cost: the constraint is legitimately coordinating public interests alongside extraction. If state control dominates: accountability mechanisms are theater, and the constraint is pure snare despite democratic framing.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Trade-off between democratic accountability cost and state extraction benefit"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "State funding dependency creates a structural extraction mechanism embedded in the governance of public institutions. Organizations that depend on state funding for operational survival lose autonomy over mission, priorities, and resource allocation. The constraint exhibits hybrid characteristics: legitimate coordination (the state uses funding to align institutions toward public priorities, stable baseline funding enables long-term planning) coexists with pure extraction (budget gatekeeping, compliance overhead, implicit policy conditioning). The measurement trajectory shows increasing extractiveness and theater ratio over 30 years, reflecting the shift from post-WWII public investment models toward neoliberal performance metrics and privatization-threat conditioning. The constraint appears differently to trapped institutions (pure snare), moderately autonomous ones (tangled rope), state budget authorities (pure rope coordination), elite institutions with alternative funding (tangled rope at high power), and analysts who risk naturalizing the dependency as immutable law.",
+    "key_agents": [
+      "Public universities and service providers: Primary victims (powerless/trapped at 70-90% funding) \u2014 lose autonomy, face suppression through budget cycles and implicit policy conditioning",
+      "State legislature and budget authority: Primary beneficiary (institutional/arbitrage) \u2014 uses funding control to coordinate institutional behavior and capture public resources for state priorities",
+      "Mid-tier administrators and department heads: Secondary victims (moderate/constrained) \u2014 experience genuine coordination benefits (stable baseline) alongside extraction (compliance burden)",
+      "Elite research institutions: Secondary beneficiary (powerful/arbitrage) \u2014 capture disproportionate research funding and prestige; extract from other institutions through competitive funding concentration",
+      "Democratic accountability mechanisms: Victim collective (powerless/trapped) \u2014 appear to constrain extraction through oversight but often lack enforcement power against budget gatekeeping",
+      "Analytical observer: Sees risk of false mountain (civilizational/analytical) \u2014 dependency appears natural until revealed as contingent post-WWII political choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, reflecting significant asymmetric control of resources and decision-making. The state captures institutional behavior through funding conditionality without bearing the operational costs or risks of the institutions. Over 30 years, extractiveness has increased from 0.35 (when public funding was abundant and less conditional) to 0.58 (neoliberal era with performance metrics and privatization threats). Suppression (0.72): High. Organizations cannot exit state funding without existential collapse; they must comply with budget cycles, reporting requirements, and implicit policy preferences. Suppression is structured through both material barriers (no alternative funding sources) and institutional capture (regulatory requirements, accreditation tied to state recognition). Theater ratio (0.65): Moderate-high and rising. Public funding systems maintain democratic accountability language (transparent budgets, legislative oversight, public mission) while actual mechanisms serve budget gatekeeping and policy control. The rise from 0.40 to 0.65 reflects increasing performative content: outcome metrics, efficiency measures, and 'accountability' frameworks that measure compliance rather than mission achievement.",
+    "directionality_logic": "Beneficiaries are the state apparatus and budget-gatekeeping institutions (legislative committees, finance ministries) that control resource allocation and capture institutional behavior as a coordination benefit. Their exit options are arbitrage \u2014 they can shift funding priorities, redirect resources, or restructure institutions without existential consequence. This produces low d values and negative chi from the state's perspective. Victims are the funded organizations (universities, hospitals, social services) and the abstract collective good of democratic accountability. Their exit options are trapped (existential collapse without state funding) or constrained (costly transition to private funding with political barriers). This produces high d values and high chi from their perspective. The derived directionality chain: beneficiaries (state, budget gatekeepers) + arbitrage exit \u2192 d \u2248 0.05-0.15 \u2192 f(d) \u2248 -0.08 to 0.05 \u2192 low chi (experienced as rope coordination). Victims (dependent organizations) + trapped exit \u2192 d \u2248 0.92-0.95 \u2192 f(d) \u2248 1.38-1.42 \u2192 high chi (experienced as snare extraction). Elite institutions + arbitrage exit + partial beneficiary status \u2192 d \u2248 0.30-0.40 \u2192 f(d) \u2248 0.30-0.55 \u2192 moderate chi (experienced as tangled rope with escape velocity).",
+    "perspectival_gap": "The constraint demonstrates maximum perspectival divergence. The state sees coordination (Rope) \u2014 funding achieves alignment and policy goals. Dependent organizations see extraction (Snare) \u2014 they lose autonomy and bear suppression. Mid-tier actors see hybrid dynamics (Tangled Rope) \u2014 genuine coordination benefits alongside extraction burden. Elite institutions see favorable tangled rope \u2014 they capture benefits while retaining exit options. The piton perspective reveals the constraint is increasingly performative \u2014 democratic language masks budget gatekeeping. The analytical observer risks false mountain \u2014 seeing state funding dependency as inherent to governance rather than a contingent post-WWII choice. The perspectival gap reveals that the constraint is not objectively 'one type' but rather a presheaf of readings indexed by agent power and exit capacity.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that tangled rope classification is accurate from the aggregate institutional perspective: genuine coordination function (stable baseline funding, policy alignment) coexists with asymmetric extraction (loss of autonomy, budget conditioning, compliance burden). The mandatrophy arises from the temptation to call this 'pure coordination' (rope) because democratic framing emphasizes public good, or 'pure extraction' (snare) because institutions lose control. The DN resolution is that BOTH are true from different structural positions: the state experiences it as coordination; dependent organizations experience it as extraction; the constraint itself requires enforcement to maintain (state capacity to withhold funding, institutional compliance mechanisms). The theater ratio rising to 0.65 signals increasing mandatrophy risk: as the constraint becomes more explicitly extractive (performance metrics, privatization threats), the democratic framing becomes thinner. If theater continues rising above 0.75, the constraint risks cascading to pure snare as the coordination function fully atrophies."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "public_university_autonomy",
+      "healthcare_institutional_capture",
+      "regulatory_budget_hostage_dynamics"
+    ],
+    "dual_formulation_note": "State funding dependency is upstream to more specific institutional capture mechanisms. Organizations with high funding dependency are structurally vulnerable to regulatory capture, mission drift, and political conditioning. Each downstream constraint (university autonomy loss, healthcare budget cycles) represents a specific instantiation of the general funding dependency mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

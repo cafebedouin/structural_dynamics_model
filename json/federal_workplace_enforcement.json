@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "federal_workplace_enforcement",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fwe"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Federal Workplace Enforcement Asymmetry",
+    "topic_domain": "labor_policy/regulatory_enforcement",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_employers",
+      "enforcement_agencies"
+    ],
+    "victims": [
+      "low_wage_workers",
+      "worker_collective_organizing"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Low-Wage Worker",
+      "comment": "PERSPECTIVE 1: LOW-WAGE WORKER (SNARE) \u2014 Structurally trapped: job dependence precludes exit; suppression through at-will employment doctrine; minimal accessible complaint mechanisms; retaliation risk. Enforcement regime extracts compliance (wage theft, unsafe conditions tolerated) with no reciprocal protection."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Worker Collective/Union",
+      "comment": "PERSPECTIVE 2: WORKER COLLECTIVE (TANGLED ROPE) \u2014 Constrained by organizing costs, legal barriers, and employer surveillance. Also benefits from enforcement regime: NLRA protections (when enforced), wage-and-hour standards, safety rules. Mixed extraction: the enforcement mechanism simultaneously protects and constrains collective action."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "NLRB/OSHA/DOL Enforcement Agency",
+      "comment": "PERSPECTIVE 3: ENFORCEMENT AGENCY (ROPE) \u2014 Experiences enforcement regime as coordination mechanism: standardized rules enable nationwide labor market consistency. Arbitrage exit (can shift enforcement priorities within statutory mandate). Net beneficiary of the constraint: enforcement authority validates institutional role and budget."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Large Employer (Multinational)",
+      "comment": "PERSPECTIVE 4: LARGE EMPLOYER (ROPE) \u2014 Mobile exit options (regulatory arbitrage across jurisdictions, offshoring, classification restructuring). Enforcement regime is coordination that standardizes labor costs across competitors. Net beneficiary: high compliance costs are barriers to entry that protect market position."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Small/Mid-Size Employer",
+      "comment": "PERSPECTIVE 5: SMALL EMPLOYER (TANGLED ROPE) \u2014 Constrained: cannot offshore or restructure as easily as multinational; higher compliance burden relative to revenue. Also benefits: enforcement against wage theft competitors protects their reputation and market share. Asymmetric extraction relative to size."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Formal Complaint Mechanism",
+      "comment": "PERSPECTIVE 6: FORMAL COMPLAINT MECHANISM (PITON) \u2014 Theater ratio 0.61: workers file complaints at low rates despite violations; agencies conduct investigations that face political pressure to close without substantive remedy; settlements are performative (tiny penalties, no admission). The formal mechanism persists through institutional inertia despite low verification of actual compliance change."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Federal enforcement coordinates minimum labor standards (prevents race-to-the-bottom) while extracting enforcement legitimacy. Suppression mechanisms (at-will doctrine, retaliation barriers, cost of organizing) block worker exit. System exhibits genuine coordination (enforceable wage floors, safety standards) alongside asymmetric extraction (low-wage workers bear suppression costs; large employers arbitrage compliance)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "enforcement_capacity_versus_intent",
+      "question": "Does low enforcement (penalties, settlement rates) reflect resource constraints or structural preference for lenient treatment of employers?",
+      "resolution_mechanism": "Comparative analysis: budget appropriations for enforcement agencies vs statutory authority; comparison of settlement amounts to documented violation costs; audit of agency prosecutorial discretion applied to similar violations across employer size classes.",
+      "impact": "If resource-constrained: constraint reclassifies to Scaffold with sunset clause (increased funding would resolve). If structural preference: constraint is pure Snare extraction (system is deliberately underfunded to protect employers).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether low enforcement reflects capacity limits or structural preference"
+    },
+    {
+      "id": "retaliation_suppression_mechanism",
+      "question": "Is suppression of worker complaints driven by at-will employment doctrine (structural legal barrier) or by internalized fear of retaliation (identity-locked via identity_locked exit option)?",
+      "resolution_mechanism": "Field studies of worker decision-making: survey workers in states with at-will vs wrongful termination statutes and track complaint rates; analyze complaint patterns post-legal reform; examine whether workers persist in internalized suppression despite legal protections.",
+      "impact": "If structural: trapped classification is appropriate. If internalized: identity_locked exit option captures the binding mechanism better \u2014 workers are structurally mobile but feel unable to exit due to identity fusion with employer or internalized fear despite legal protection.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural (legal barriers) or internalized (identity-locked)"
+    },
+    {
+      "id": "collective_organizing_coordination_versus_extraction",
+      "question": "Does federal labor law (NLRA protections, unfair labor practice enforcement) genuinely enable worker organizing or does it function primarily to channel grievances into formal mechanisms that prevent effective mobilization?",
+      "resolution_mechanism": "Historical analysis of organizing success rates before/after NLRA; comparison of successful organizing (card check vs NLRB elections); study of election delays and their impact on campaign viability; examination of injunction patterns.",
+      "impact": "If genuinely enabling: Tangled Rope classification correct (mixed coordination and extraction). If primarily channeling: reclassifies toward Snare (the 'protection' mechanism is a suppression mechanism in disguise).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether NLRA enables or suppresses worker organizing"
+    },
+    {
+      "id": "employer_arbitrage_scope",
+      "question": "What fraction of workplace violations are addressable through federal enforcement versus outsourced via subcontracting, misclassification, and temporary worker stratification that federal enforcement cannot reach?",
+      "resolution_mechanism": "Sectoral audit of misclassified workers; comparison of violation rates in regulated sectors vs outsourced/subcontracted chains; analysis of statutory gaps (temp agencies, gig platforms) and their prevalence in violation-prone industries.",
+      "impact": "If large fraction outsourced: suppression is higher than measured (workers exit compliance regime entirely rather than face formal enforcement); constraint reclassifies as more extractive. If small fraction: suppression metric is approximately accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fraction of workplace violations outside federal enforcement reach"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.61
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Federal workplace enforcement (NLRB, OSHA, DOL wage-and-hour) combines genuine coordination (minimum standards prevent race-to-the-bottom, protect smaller employers from undercutting) with asymmetric extraction (low-wage workers bear suppression costs; large employers arbitrage compliance; enforcement agencies gain legitimacy without full enforcement). The constraint exhibits Tangled Rope structure: beneficiaries include both large employers (who use enforcement as a market-entry barrier) and enforcement agencies (whose authority depends on the constraint's existence). Victims include low-wage workers (trapped, unable to organize due to suppression mechanisms) and worker collectives seeking to organize (constrained by legal barriers that frame 'protections' as mandatory formal processes that delay and neutralize campaigns). The theater ratio (0.61) reflects that formal complaint and NLRB election mechanisms produce performative outputs (closed cases, settlements, certified elections) without systematic verification that workplace conditions actually change. Extractiveness has risen from 0.38 to 0.52 over the 40-year interval, indicating that coordination benefits have been outpaced by extraction layering: outsourcing, misclassification, and gig work growth have expanded the pool of workers outside enforcement reach while formal protections have narrowed.",
+    "key_agents": [
+      "Low-wage workers: Primary victims (powerless/trapped) \u2014 job dependence and retaliation risk prevent exit or complaint",
+      "Worker organizing collectives: Secondary victims (moderate/constrained) \u2014 NLRA framing as 'protection' actually channels organizing into delays and reduces mobilization capacity",
+      "Large multinationals: Primary beneficiaries (powerful/mobile) \u2014 enforcement rules standardize labor costs and create compliance barriers to entry for competitors",
+      "Small/mid-size employers: Mixed (powerful/constrained) \u2014 benefit from large-employer constraint but face higher relative compliance burden",
+      "Enforcement agencies (NLRB/OSHA/DOL): Institutional beneficiaries (institutional/arbitrage) \u2014 authority and budgets justified by enforcement regime; set enforcement priorities; experience minimal external accountability",
+      "Formal complaint mechanisms: Theater performers (institutional/arbitrage) \u2014 processing complaints and producing settlements without systematic compliance verification",
+      "Analytical observer: Civilizational view (analytical/analytical) \u2014 sees the constraint as coordinating baseline protections while extracting worker agency through formalization and outsourcing dynamics"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high and rising. The constraint genuinely coordinates baseline standards (wage floors, safety minimums prevent undercutting) but extraction mechanisms have intensified: outsourcing and misclassification exclude growing worker populations from formal enforcement; settlement amounts have not kept pace with violation severity; political cycles have reduced enforcement budgets relative to private sector workforce growth. The base extractiveness increased from 0.38 (1980s peak enforcement relative to workforce) to 0.52 (2020s, enforcement capacity declining while violation opportunities expand). Suppression (0.68): High. Multiple layers: at-will employment doctrine eliminates most retaliation protection; NLRA election process delays (6\u201312 months typical) allow employer counter-campaigns; fee-shifting and discovery rules favor employer litigation; fear of visa sponsorship loss suppresses complaints from documented immigrants; identity fusion with employer role suppresses conscious complaint in family-owned businesses. Theater ratio (0.61): Moderate-high. NLRB elections produce certified outcomes (performative victory) but not workplace conditions change; OSHA inspections are rare (once per 100 years per facility in many sectors) and penalties are tiny relative to violation cost; DOL wage-and-hour settlements involve penalties that are expenses, not deterrents. The theater has risen from 0.45 (1980s, when enforcement was higher relative to violations) to 0.61 (2020s, when formal mechanisms produce outcomes without effectiveness verification).",
+    "perspectival_gap": "The beneficiary (large employer) sees Rope: enforcement standardizes labor costs, preventing competitors from undercutting through wage suppression, and creates barriers to entry. The victim (low-wage worker) sees Snare: exit options are blocked by job dependence, retaliation risk, and outsourcing that removes their job entirely if they organize. The enforcement agency sees Rope: their authority is justified and their budgets are allocated via the enforcement mandate. The worker collective sees Tangled Rope: the formal NLRA machinery offers theoretical protections (genuine coordination benefit) while simultaneously containing and delaying organizing campaigns through mandatory procedures (extraction). The analytical observer sees the same phenomenon: coordination (standardized floors prevent race-to-bottom) and extraction (workers bear suppression costs, large employers capture regulatory benefits through structural asymmetry).",
+    "directionality_logic": "Directionality (d) values vary by agent's structural position. Low-wage workers: trapped exit + victim status \u2192 d \u2248 0.92 \u2192 high f(d) \u2248 1.38 \u2192 experience strong effective extraction despite moderate base \u03b5. Large employers: mobile exit + beneficiary status \u2192 d \u2248 0.12 \u2192 low f(d) \u2248 0.08 \u2192 experience negative/minimal effective extraction (the constraint subsidizes them through market-entry barriers). Enforcement agencies: arbitrage exit + beneficiary status \u2192 d \u2248 0.05 \u2192 f(d) \u2248 -0.10 \u2192 experience institutional subsidy from the constraint's existence. Small employers: constrained exit + mixed benefit/cost \u2192 d \u2248 0.48 \u2192 f(d) \u2248 0.60 \u2192 experience moderate extraction asymmetric to size. Worker collectives: constrained exit + victim status \u2192 d \u2248 0.72 \u2192 f(d) \u2248 1.15 \u2192 experience significant extraction despite coordination benefits from formal protections.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by showing that federal enforcement is legitimately Tangled Rope: it contains both genuine coordination (wage floors, safety minimums, protection against retaliation in theory) and asymmetric extraction (enforcement gaps, outsourcing routes, formal procedure delays that suppress organizing). The false summit risk is the analytical mountain classification: 'Federal minimum wage is a natural law of labor markets' or 'Enforcement necessarily creates extraction.' This naturalizes a contingent institutional arrangement. The actual structure: enforcement coordination is real, extraction mechanisms are real, and both grow from the same institutional design. The mandatrophy is resolved by declaring both beneficiaries (large employers gaining cost-standardization and market-entry barriers; agencies gaining authority) and victims (low-wage workers bearing suppression costs; organizing collectives bearing formalization delays), which forces Tangled Rope over either pure Rope or pure Snare."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "gig_economy_misclassification",
+      "subcontracting_liability_avoidance",
+      "union_election_delay_mechanism"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.12
+    }
+  ]
+}

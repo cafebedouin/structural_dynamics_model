@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "policing_discretion_subordination",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pds"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Policing Discretion Subordination",
+    "topic_domain": "criminal_justice/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_police_leadership",
+      "political_authorities"
+    ],
+    "victims": [
+      "street_level_officers",
+      "marginalized_communities",
+      "due_process_protections"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Street-Level Officer",
+      "comment": "PERSPECTIVE 1: STREET-LEVEL OFFICER (SNARE) \u2014 Officers face pervasive discretionary mandates that extract compliance through ambiguous performance metrics, threat of administrative discipline, and career trajectory dependency on institutional favor. They cannot exit without abandoning their livelihood. Discretion is formally granted but functionally subordinated to unwritten expectations. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Marginalized Communities",
+      "comment": "PERSPECTIVE 2: MARGINALIZED COMMUNITIES (SNARE) \u2014 Bear the costs of discretionary policing without meaningful exit or appeal. Subject to stop-and-frisk, pretextual charges, and unequal enforcement based on officer discretion. Suppression is structural: legal recourse is costly, punishment for complaint is social isolation, and the system perpetuates enforcement asymmetry. No agency or alternative."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Police Leadership and Political Authorities",
+      "comment": "PERSPECTIVE 3: POLICE LEADERSHIP & POLITICAL AUTHORITIES (ROPE) \u2014 Experience the constraint as pure coordination: discretionary authority allows rapid response to local conditions, resource efficiency, and political flexibility. Discretion is the mechanism by which they delegate accountability downward while maintaining deniability. Benefits from the extraction without direct management burden."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Police Unions and Officer Associations",
+      "comment": "PERSPECTIVE 4: POLICE UNIONS & OFFICER ASSOCIATIONS (TANGLED ROPE) \u2014 Organize officers to resist some extractive pressure (contract protections, grievance procedures) but also coordinate with management to enforce compliance culture. Both genuine coordination function (protecting members) and asymmetric extraction (enforcing solidarity, suppressing whistle-blowing). Mixed classification reflects dual role."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Legitimacy Theater",
+      "comment": "PERSPECTIVE 5: LEGITIMACY THEATER (PITON) \u2014 Formal accountability mechanisms (civilian review boards, use-of-force policies, training requirements) persist as performative structures that signal legitimacy without constraining discretionary extraction. Theater ratio is moderately high (0.58) because accountability processes create procedural appearance while discretion remains functionally unconstrained. The constraint is maintained through institutional inertia despite reduced functional verification."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational perspective, policing discretion subordination appears as a structural snare: it systematically extracts compliance from officers through career dependency while extracting equity from marginalized communities through unequal enforcement. The constraint persists because both extraction flows are obscured by the legitimacy claims of discretion (necessary for officer responsiveness) and the proceduralism of the system (which signals but does not guarantee fairness). High suppression because alternatives (automated enforcement, strict rule-following, decriminalization) are politically and institutionally suppressed."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "discretion_necessity_threshold",
+      "question": "At what level of situational variation does discretionary authority become genuinely necessary versus merely convenient for management?",
+      "resolution_mechanism": "Comparative analysis of policing outcomes in high-discretion vs rule-based systems; measurement of outcome variance vs incident variance; statistical analysis of when officers invoke discretion vs when policy covers the scenario",
+      "impact": "If necessity threshold is low: discretion is primarily extractive (snare classification holds). If threshold is high: discretion provides genuine coordination benefit (rope reclassification for leadership).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold at which discretion becomes necessary versus convenient"
+    },
+    {
+      "id": "subordination_mechanism_visibility",
+      "question": "Are officers aware that their discretion is functionally subordinated, or does the formal grant of discretion create an illusion of autonomy that obscures extraction?",
+      "resolution_mechanism": "Officer interviews about perceived autonomy; comparison of self-reported discretionary freedom vs measured compliance with unwritten expectations; longitudinal tracking of officers who resist vs comply with extractive pressures",
+      "impact": "If obscured: constraint operates partly through cognitive capture (identity_locked component). If visible: constraint operates through pure coercion (trapped component). Visibility determines whether this is a snare or partially a cognitive trap.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Visibility of discretion subordination to officers"
+    },
+    {
+      "id": "accountability_mechanism_functionality",
+      "question": "Do formal accountability structures (civilian review, use-of-force policies, training) actually constrain discretionary extraction or are they purely theatrical?",
+      "resolution_mechanism": "Analysis of review board outcomes vs officer behavior changes; measurement of policy impact on discretionary stops, searches, and force incidents; comparison of outcomes with and without accountability procedures",
+      "impact": "If functional: suppression should be lower and theater ratio lower (piton classification weakens). If theatrical: confirms piton perspective and suggests accountability is legitimacy performance rather than constraint.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether accountability mechanisms actually constrain discretion"
+    },
+    {
+      "id": "alternative_policing_model_feasibility",
+      "question": "Can rule-based or algorithmic policing systems actually replace human discretion without creating different extractive problems?",
+      "resolution_mechanism": "Comparison of discretion-based vs rule-based policing outcomes; measurement of bias in algorithmic systems vs human discretion; cost-benefit analysis of accountability mechanisms in each model",
+      "impact": "If alternatives are feasible: suppression of alternatives is political/institutional (extractive mechanism confirmed). If alternatives create worse outcomes: discretion subordination may be lesser-evil coordination rather than pure snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Feasibility of rule-based alternatives to discretionary policing"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Policing discretion subordination is a structural snare in which the formal grant of discretionary authority to street-level officers becomes a mechanism for extracting compliance from officers and unequal enforcement from marginalized communities. The constraint operates through two extraction flows: (1) officers are nominally granted discretion but functionally subordinated to unwritten performance expectations, administrative pressure, and career trajectory incentives, creating compliance extraction; (2) marginalized communities bear the costs of discretionary enforcement without meaningful appeal or exit, creating equity extraction. The constraint is maintained through the legitimacy narrative that discretion is necessary for effective policing (true in some contexts) combined with suppression of alternatives (rule-based systems, community policing, decriminalization) through political, institutional, and union resistance. Theater has increased over the measurement interval as accountability mechanisms (civilian review, use-of-force policies) have proliferated without substantively constraining discretionary practice, creating performance of legitimacy rather than actual constraint.",
+    "key_agents": [
+      "Street-Level Officers: Primary victims (powerless/trapped) \u2014 extract compliance through career dependency, administrative discipline threats, and unwritten performance expectations",
+      "Marginalized Communities: Primary victims (powerless/trapped) \u2014 extract unequal enforcement, stop-and-frisk exposure, pretextual charges without meaningful appeal",
+      "Police Leadership: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from discretion as coordination mechanism that delegates accountability downward while maintaining deniability",
+      "Political Authorities: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from discretion as tool for resource allocation and political flexibility without direct accountability",
+      "Police Unions & Officer Associations: Secondary actors (organized/mobile) \u2014 both resist some extractive pressure and coordinate to enforce compliance culture",
+      "Accountability Systems: Theater maintainers (institutional/arbitrage) \u2014 civilian review, use-of-force policies, training signal legitimacy without substantively constraining extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts compliance from officers through unwritten expectations, career dependency, and administrative coercion. It extracts equity from marginalized communities through discretionary enforcement asymmetry. Both extraction flows are significant, and suppression of alternatives is substantial. The 0.68 value reflects that discretion does provide some genuine coordination benefit (rapid response to local variation) but the extraction component dominates over the measurement interval. Suppression (0.72): High. Officers cannot exit without losing their livelihood; marginalized communities have no meaningful appeal or recourse; alternatives (rule-based systems, strict rule-following) are politically and institutionally suppressed. Legal remedies for improper discretion are costly and slow. Social suppression of complaint (isolation, retaliation) is real. Theater ratio (0.58): Moderate-high. The increase in theater from 0.35 to 0.58 over the interval reflects the proliferation of accountability mechanisms that signal legitimacy without constraining discretionary extraction. Civilian review boards, use-of-force policies, and training requirements create procedures that appear to constrain discretion while officers retain functional autonomy. The theater is not complete (some accountability procedures have effects) but substantial.",
+    "directionality_logic": "Police leadership and political authorities derive d \u2248 0.05 (beneficiary + arbitrage exit) producing low or negative f(d), low chi. Street-level officers derive d \u2248 0.85 (victim + trapped exit) producing high f(d) \u2248 1.15, high chi. Marginalized communities derive d \u2248 0.90 (victim + trapped exit) producing f(d) \u2248 1.28, very high chi. Police unions derive d \u2248 0.50 (mixed benefit/victim + mobile exit) producing f(d) \u2248 0.65, moderate chi. The perspectival gap reveals that the same constraint structure is experienced as coordination (by beneficiaries) and extraction (by victims). The analytical observer's snare classification reflects that the coordination narrative (discretion enables responsiveness) is overridden by the extraction structure (both officer compliance and community equity are extracted).",
+    "perspectival_gap": "Police leadership and political authorities perceive the constraint as pure coordination (Rope) \u2014 discretion is a tool for efficient resource allocation and local responsiveness. Street-level officers perceive it as a snare extracting compliance through career dependency and administrative pressure. Marginalized communities perceive it as a snare extracting unequal enforcement without appeal. Police unions perceive it as a mixed system (Tangled Rope) \u2014 they negotiate protections but also enforce compliance culture. Accountability systems appear as legitimacy theater (Piton) \u2014 procedures signal constraint without substantively limiting discretionary extraction. The analytical observer perceives the full snare structure: both extraction flows (officer compliance and community equity) are systematic, suppression is substantial, and alternatives are suppressed.",
+    "mandatrophy_analysis": "RESOLVED: The constraint resolves the mandatrophy by showing that discretion can be both genuinely necessary (for local responsiveness) and genuinely extractive (for compliance and equity). The false choice is 'is discretion coordination or extraction?' The true structure is 'discretion serves coordination functions for institutional leadership while operating as a snare for officers and marginalized communities.' The beneficiary's rope experience and the victim's snare experience are both structurally accurate \u2014 they differ because the agent's position in the extraction flow differs. The piton classification (legitimacy theater) correctly identifies that accountability mechanisms have proliferated without constraining extraction, suggesting the system is maintaining its extractive function through performance of legitimacy rather than through genuine coordination benefit. The constraint cannot be resolved by 'more training' or 'better policies' because the extraction is structural, not accidental."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "stop_and_frisk_asymmetry",
+      "prosecutorial_discretion_lock_in",
+      "qualified_immunity_suppression"
+    ],
+    "dual_formulation_note": "Policing discretion subordination is downstream of specific institutional structures (stop-and-frisk practices, prosecutorial discretion, qualified immunity) that enable and protect discretionary extraction. Each affects_constraint has its own extractiveness value but all are enabled by the discretion subordination frame."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

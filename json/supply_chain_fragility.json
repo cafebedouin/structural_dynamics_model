@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "supply_chain_fragility",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "scf"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Supply Chain Fragility and Systemic Extraction",
+    "topic_domain": "economic/logistics/infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "consolidating_logistics_firms",
+      "large_retailers",
+      "financial_intermediaries"
+    ],
+    "victims": [
+      "small_suppliers",
+      "consumers",
+      "dependent_nations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Small Supplier",
+      "comment": "PERSPECTIVE 1: SMALL SUPPLIER (SNARE) \u2014 Trapped in dependency on major retailers' ordering systems with no alternative distribution channels. Bears full cost of demand volatility, payment delays, and inventory risk. No exit option exists; supplier is locked into asymmetric contractual terms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regional Consumer Base",
+      "comment": "PERSPECTIVE 2: REGIONAL CONSUMER BASE (TANGLED ROPE) \u2014 Benefits from just-in-time efficiency (lower retail prices) but bears cost of supply disruptions. Constrained by limited alternative retail options in concentrated markets. Moderate power through collective consumer action, but coordinating withdrawal is costly."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Large Retailer",
+      "comment": "PERSPECTIVE 3: LARGE RETAILER (ROPE) \u2014 Experiences the constraint as pure coordination: inventory optimization, demand signaling, supplier diversification create mutual benefit with suppliers. Has exit options (alternative suppliers, vertical integration); constraint is a negotiated settlement beneficial to both parties at macro level, though asymmetric at micro level."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Export-Dependent Nation",
+      "comment": "PERSPECTIVE 4: EXPORT-DEPENDENT NATION (TANGLED ROPE) \u2014 Organized actor constrained by integration into global supply chains. Genuine coordination function exists (access to markets, employment, technology transfer) but paired with structural extraction: dependency on external demand, vulnerability to upstream disruptions, wage suppression relative to productivity. Real but asymmetric benefit."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Redundancy Theater",
+      "comment": "PERSPECTIVE 5: THE REDUNDANCY THEATER (PITON) \u2014 Supply chain resilience protocols (safety stock policies, dual sourcing, contingency plans) are increasingly performative. Firms maintain these on paper while operational pressure incentivizes just-in-time elimination in practice. Theater ratio reflects the gap between stated redundancy strategy and actual implementation; the institutional mechanism persists through regulatory compliance and insurance requirements despite degraded function."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Reshoring Movement",
+      "comment": "PERSPECTIVE 6: THE RESHORING MOVEMENT (SCAFFOLD) \u2014 Organized actors (policy makers, domestic manufacturers, labor coalitions) are building alternative supply chain structures through reshoring incentives, regional manufacturing hubs, and supplier diversification mandates. This represents a temporary coordination mechanism with a sunset: as domestic capacity matures and regional supply chains stabilize, the global fragility constraint loses force. High suppression now but declining trajectory as alternatives mature."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a systems perspective, supply chain fragility appears as an immutable law: any sufficiently optimized complex system trades robustness for efficiency, and perfect resilience is economically impossible. Specialization and comparative advantage necessarily create dependencies. However, this naturalizes what is actually a policy choice: the fragility emerges from specific institutional arrangements (just-in-time optimization mandates, financial incentives for asset-light models, lack of regulatory resilience requirements), not from physics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "efficiency_resilience_tradeoff_bound",
+      "question": "Is the efficiency-resilience tradeoff fundamental to supply networks or is it an artifact of current financial incentive structures?",
+      "resolution_mechanism": "Comparative analysis of supply chain design in different regulatory regimes; examination of systems with explicit resilience constraints (military procurement, critical infrastructure) versus cost-optimized systems",
+      "impact": "If fundamental: many constraints should reclassify toward mountain. If incentive-driven: the fragility is extractive institutional choice, not natural law.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether efficiency-resilience tradeoff is fundamental or policy-driven"
+    },
+    {
+      "id": "power_asymmetry_enforcement_mechanism",
+      "question": "Does the large retailer's power over suppliers derive from their market position or from their ability to shift risk through contractual terms and payment delays?",
+      "resolution_mechanism": "Analysis of supplier profit margins, payment cycles, and contract terms across market structures; comparison of firms with and without market power but similar operational needs",
+      "impact": "If structural market position: extraction is endogenous to scale. If enforcement through risk-shifting: extraction is a policy choice and could be reduced through contract regulation.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether asymmetric power derives from market position or contractual enforcement"
+    },
+    {
+      "id": "redundancy_collapse_threshold",
+      "question": "At what point does elimination of redundancy (safety stock, backup suppliers, excess capacity) become systemically dangerous rather than merely operationally risky?",
+      "resolution_mechanism": "Network simulation and historical failure analysis; correlation between redundancy levels and cascade failure rates across industries",
+      "impact": "If threshold is well-defined and currently breached: the constraint should classify toward snare for dependent actors. If threshold is fuzzy: actors can claim system is still resilient and maintain fragility.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold at which redundancy elimination becomes systemically dangerous"
+    },
+    {
+      "id": "alternative_supply_chain_viability",
+      "question": "Can reshoring and regional supply chains provide comparable cost and availability to global just-in-time networks, or is the fragility the price of accessing the global cost advantage?",
+      "resolution_mechanism": "Cost analysis of regional supply chains under mature development; tracking of reshoring initiatives' actual cost-competitiveness versus imported goods; assessment of whether resilience gains offset lost comparative advantage",
+      "impact": "If regionally viable: scaffold sunset is real and extractive fragility can be escaped. If cost penalty is substantial: fragility is an ongoing extraction of resilience from dependent actors for global consumer benefit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regional supply chains can match cost-competitiveness of global just-in-time"
+    },
+    {
+      "id": "small_supplier_coalition_capacity",
+      "question": "Can small suppliers organize collective bargaining power sufficient to negotiate away the asymmetric terms that create their trapped exit status?",
+      "resolution_mechanism": "Analysis of supplier associations, purchasing cooperatives, and collective contracting mechanisms; comparison of organized versus unorganized supplier power in different industries and geographies",
+      "impact": "If capacity exists: powerless classification may upgrade to organized under coalition conditions, changing the snare perspective. If organizing is prevented by law or contract: suppression is structural and snare classification confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether small suppliers can achieve collective bargaining power"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Supply chain fragility represents a structural constraint where the pursuit of operational efficiency through just-in-time logistics, inventory minimization, and supplier consolidation has created a system with minimal slack and high vulnerability to disruption. This constraint exhibits dual nature: it is both a genuine coordination mechanism solving real problems of inventory cost and demand matching, and an extraction mechanism that transfers risk asymmetrically from large retailers and financial intermediaries to small suppliers and dependent nations. The constraint classification varies dramatically across perspectives because different actors experience different mixes of benefit and cost. Large retailers experience it as pure coordination; small suppliers experience it as a snare with no exit; consumer bases experience it as mixed coordination with periodic extraction through shortages; export-dependent nations experience it as generational lock-in with both genuine market access and structural dependency. The extractiveness value has increased over the interval as firms have progressively eliminated redundancy, pushed inventory costs upstream to suppliers, and concentrated logistics infrastructure. The theater ratio remains moderate because the constraint has genuine functional content (actual demand coordination) alongside degrading redundancy protocols.",
+    "key_agents": [
+      "Large Retailers: Primary beneficiary (institutional/arbitrage) \u2014 capture efficiency gains through just-in-time, shift inventory and shortage costs to suppliers, maintain exit options through multi-sourcing at scale",
+      "Small Suppliers: Primary victim (powerless/trapped) \u2014 locked into retailer demand, bear inventory risk and payment delays, have no alternative distribution channels",
+      "Consumers: Secondary victim (moderate/constrained) \u2014 benefit from lower retail prices but bear cost of periodic shortages and supply disruptions; constrained by limited retail alternatives in concentrated markets",
+      "Export-Dependent Nations: Organized victim (organized/constrained) \u2014 integrated into global supply chains with genuine market access but structural vulnerability to upstream disruptions and wage suppression",
+      "Financial Intermediaries: Beneficiary (institutional/arbitrage) \u2014 profit from supply chain financing, inventory factoring, and risk instruments that monetize supplier vulnerability",
+      "Reshoring Coalition: Organized actor (organized/mobile) \u2014 policy makers, domestic manufacturers, labor unions building alternative supply structures with sunset logic",
+      "Redundancy Theater: Institutional mechanism (institutional/arbitrage) \u2014 insurance and regulatory compliance requirements maintain fiction of supply chain resilience despite operational pressure to eliminate actual redundancy"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The baseline extractiveness has increased from 0.35 to 0.58 over the 20-year interval as firms systematized the elimination of redundancy and shifted operational risk upstream. The metric reflects the magnitude of costs borne by small suppliers (payment delays averaging 30-60 days, inventory risk absorption, demand volatility absorption) relative to benefits captured by large retailers (inventory turnover advantages, working capital optimization). Suppression (0.65): High. Small suppliers face severe barriers to exit: switching costs are substantial (retailer-specific systems, sunk relationship investment), alternative distribution channels are limited in consolidated retail markets, and the threat of delisting creates strong compliance incentives. Consumers face information asymmetries and collective action problems in coordinating retail switching. Export-dependent nations face lock-in through infrastructure and capital investment. Theater ratio (0.48): Moderate. The constraint has genuine functional content (actual demand coordination) but is paired with increasing performative redundancy \u2014 firms maintain safety stock policies on paper while operational metrics incentivize just-in-time elimination in practice. Insurance and regulatory compliance drive some residual redundancy, but it is increasingly theatrical as actual capacity is stripped away.",
+    "perspectival_gap": "Maximum divergence between beneficiary and victim perspectives. The large retailer (institutional/arbitrage, immediate/global) sees a coordination mechanism with net-positive benefits to both parties. The small supplier (powerless/trapped, biographical/global) sees pure extraction with no exit. This gap indicates that the constraint's structure is genuinely hybrid: the coordination function is real and benefits the retailer, but the implementation distributes costs asymmetrically. The scope modifier amplifies this gap: at global scope, large retailers' arbitrage options compound while small suppliers' trapped status is reinforced by inability to shift to alternative regional chains. The reshoring perspective (scaffold) suggests the gap could narrow over time as alternative supply structures mature, giving small suppliers mobile exit options. The piton perspective indicates that the gap is widening in the short term as redundancy theater declines and actual operational pressure increases toward just-in-time elimination.",
+    "directionality_logic": "The beneficiary/victim declaration drives directionality: large retailers are primary beneficiaries of efficiency gains (payment term benefits, inventory turnover, working capital optimization); small suppliers, consumers, and dependent nations are victims of risk-shifting. Financial intermediaries are secondary beneficiaries (profiting through supply chain financing and risk instruments). The exit options differentiate beneficiaries from victims: large retailers have arbitrage options (multiple suppliers, vertical integration, automation) while small suppliers have trapped options (switching costs, delisting threat, limited alternatives). This differentiation produces the directional gap: beneficiaries with arbitrage have d \u2248 0.05-0.15, victims with trapped/constrained options have d \u2248 0.60-0.92. The scope modifier \u03c3(S) = 1.2 at global scope amplifies the effective extraction chi, because larger-scope disruptions (global pandemic affecting container shipping, geopolitical conflict disrupting semiconductor supply) create higher-stakes fragility and greater extraction asymmetry. Overrides are not needed \u2014 the derivation chain captures the structural relationships accurately.",
+    "mandatrophy_analysis": "The supply chain fragility constraint resolves mandatrophy by separating the coordination function (genuine demand matching) from the extraction mechanism (risk shifting and redundancy elimination). The constraint is a tangled rope at the analytical level because both functions are structurally necessary: the large retailer genuinely needs supply coordination, AND the small supplier is genuinely being extracted from through asymmetric risk allocation. The mandatrophy is not 'which is correct?' but 'how do we decompose the real coordination from the extractive overhead?' The large retailer's rope perspective is structurally valid for their experience \u2014 they do experience the constraint as coordination. But this does not invalidate the small supplier's snare perspective or the analytical observer's tangled rope assessment. The constraint's extractiveness (0.58) reflects that a significant portion of the coordination could be achieved with lower asymmetric cost-shifting \u2014 the extraction is not inherent to coordination but embedded in how the coordination is structured (payment terms, inventory responsibility allocation, contract terms). This is precisely the structure that the tangled rope type is designed to detect: genuine coordination function plus asymmetric extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "semiconductor_supply_concentration",
+      "just_in_time_redundancy_elimination",
+      "port_infrastructure_consolidation"
+    ],
+    "dual_formulation_note": "Supply chain fragility decomposes into three structurally distinct constraints: (1) resource allocation coordination (genuine demand matching), (2) redundancy elimination (policy choice about acceptable risk), and (3) supplier power asymmetry (contractual extraction mechanism). This story captures the bundle; individual stories could decompose each element separately with distinct epsilon values."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

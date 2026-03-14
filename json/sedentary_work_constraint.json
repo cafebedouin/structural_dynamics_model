@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "sedentary_work_constraint",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sedwork"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Sedentary Work Constraint: Health Extraction Within Coordination",
+    "topic_domain": "labor/occupational_health/economic_structure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "employers_capital_efficiency",
+      "productivity_metrics_optimization"
+    ],
+    "victims": [
+      "worker_musculoskeletal_health",
+      "worker_metabolic_function"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Sedentary Worker",
+      "comment": "PERSPECTIVE 1: THE SEDENTARY WORKER (SNARE) \u2014 Trapped by economic dependency and labor market structure. Cannot exit desk work without sacrificing income stability. Trapped exit means the constraint is unchangeable from this position. Extraction is maximal: health costs are borne entirely by the worker while productivity gains flow to employer."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Worker Collective",
+      "comment": "PERSPECTIVE 2: THE WORKER COLLECTIVE (TANGLED ROPE) \u2014 Faces high costs to exit sedentary labor (career retraining, wage penalties, geographic relocation) but can mobilize collectively through unions and advocacy. Generational timeframe reveals genuine coordination function: sedentary work enables complex knowledge work and distributed labor processes. Asymmetric extraction: coordinated productivity gains concentrate benefits to capital while health costs diffuse to workers. Active enforcement through workplace norms, productivity expectations, and scheduling requirements."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Employer/Capital",
+      "comment": "PERSPECTIVE 3: THE EMPLOYER/CAPITAL (ROPE) \u2014 Experiences sedentary work as pure coordination: concentrating workers in fixed locations enables supervision, synchronization, and efficient capital deployment. High arbitrage optionality \u2014 can shift to remote work, alternate locations, or automation. Net beneficiary. The constraint solves a coordination problem from this perspective; the extraction is invisible because benefits flow toward this agent."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Wellness and Remote Work Coalition",
+      "comment": "PERSPECTIVE 4: THE WELLNESS AND REMOTE WORK COALITION (SCAFFOLD) \u2014 Organized agents (occupational health authorities, ergonomics standards bodies, remote-work advocates) see sedentary constraint as a temporary coordination failure being solved through technology and policy. Standing desks, ergonomic mandates, and remote-work infrastructure represent sunset mechanisms. Has explicit temporal horizon: 15-25 years for knowledge work to become location-independent and sedentary work to become optional rather than mandatory."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Industrial Office Paradigm",
+      "comment": "PERSPECTIVE 5: THE INDUSTRIAL OFFICE PARADIGM (PITON) \u2014 The office building itself has become largely ceremonial. Real-time communication technology has eliminated the need for physical proximity, yet office attendance persists through institutional inertia and supervisory theater. Theater ratio (0.58) reflects that presenteeism and visibility measures maintain the constraint despite functional redundancy. The paradigm knows its own function has atrophied but persists because organizational identity remains fused with office real estate and management culture."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: THE ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some coordination through physical proximity may be inherent to knowledge transfer, apprenticeship, and cultural reproduction. In-person interaction may have irreducible value that no technology can fully replace. This perspective risks naturalizing the office constraint as an immutable feature of human work. However, the structural data contradicts this \u2014 the 0.52 extractiveness and 0.65 suppression reveal that the constraint is extractive in ways that genuine coordination mechanisms are not."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "health_cost_attribution",
+      "question": "Are the measured health costs (cardiovascular disease, metabolic syndrome, musculoskeletal disorder) causally attributable to sedentary work or to correlated factors (diet, stress, lifestyle selection)?",
+      "resolution_mechanism": "Longitudinal studies controlling for diet, stress, exercise behavior, and socioeconomic status; natural experiments comparing health trajectories before and after work-from-home transitions",
+      "impact": "If sedentary work is causal: suppression value is justified; victims group is accurately identified. If confounded: some measured suppression reflects agent choices rather than constraint imposition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal attribution of health costs to sedentary work vs confounded lifestyle factors"
+    },
+    {
+      "id": "remote_work_productivity_parity",
+      "question": "Does remote knowledge work produce equivalent or superior productivity compared to office-based work, controlling for task type and worker experience?",
+      "resolution_mechanism": "Meta-analysis of productivity studies; comparison of output metrics (code commits, project completion, error rates) for identical teams before and after remote transition; industry-specific case studies",
+      "impact": "If parity or superior: the coordination function claimed by the employer perspective is largely theater; extractiveness should increase toward 0.66+ (pure snare). If office produces measurably higher coordination: the tangled_rope classification is justified; coordination benefit is real but captured asymmetrically.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether remote work produces equivalent productivity outcomes"
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is worker acceptance of sedentary work constraint driven by material economic necessity (structural suppression) or by internalized beliefs about work discipline, professional identity, and organizational loyalty (identity-locked suppression)?",
+      "resolution_mechanism": "Survey-based measurement of exit costs (income penalty, benefits loss, relocation burden) vs exit beliefs (perceived damage to career trajectory, internalized sense of professional obligation); comparison of stated vs revealed preferences when exit costs are experimentally reduced",
+      "impact": "If structural: suppression value (0.65) is accurate; exit_options remain trapped/constrained. If partially internalized: some workers are identity_locked rather than trapped; classify with (moderate, identity_locked) perspective showing different perceived mutability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural economic necessity or internalized professional identity"
+    },
+    {
+      "id": "office_real_estate_sunk_cost_lock",
+      "question": "Does employer commitment to sedentary office work reflect genuine coordination necessity or primarily reflect sunk cost fallacy and real estate investment lock-in?",
+      "resolution_mechanism": "Analysis of office real estate commitments relative to productivity data; comparison of firms with long-term leases vs flexible space arrangements; qualitative interviews with facility and HR leadership about remote work resistance drivers",
+      "impact": "If sunk cost dominates: the piton classification is correct; extractiveness represents institutional inertia rather than functional necessity. If coordination is genuine: scaffold classification may be overstated; sunset timeline may be longer.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether office constraint reflects sunk cost lock-in vs genuine coordination necessity"
+    },
+    {
+      "id": "knowledge_work_tacit_transfer_necessity",
+      "question": "Is in-person proximity genuinely necessary for transfer of tacit knowledge, cultural reproduction, and mentorship in knowledge work, or can these functions be adequately supported through distributed means?",
+      "resolution_mechanism": "Longitudinal measurement of knowledge transfer outcomes (mentee skill development, innovation diffusion) for distributed vs co-located teams; analysis of tacit knowledge sharing mechanisms in high-performing remote organizations; cross-sector comparison of apprenticeship success rates",
+      "impact": "If in-person is necessary: mountain or rope classifications gain legitimacy; the constraint reflects genuine structural limits. If distribution is adequate: the coordination function is overstated; extractiveness should increase (constraint becomes more purely extractive).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether in-person proximity is necessary for tacit knowledge transfer"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.5
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "commentary": {
+    "narrative_context": "The sedentary work constraint binds knowledge workers into desk-based labor through a hybrid mechanism: genuine coordination needs (synchronization, supervision, capital concentration) layered over asymmetric health extraction. Employers capture productivity and efficiency gains while workers bear musculoskeletal, metabolic, and cardiovascular costs. The constraint manifests as mandatory office presence despite technological obsolescence of physical proximity. It demonstrates how coordination mechanisms can be captured by extractive power structures. The theatrical dimension (presenteeism, status signaling, visibility management) has increased over the interval as technology has eliminated functional necessity for co-location, revealing the piton component: office persistence is increasingly institutional inertia rather than functional coordination. Remote work infrastructure and ergonomic standards represent real alternative pathways with genuine sunset potential, making the scaffold perspective structurally plausible for organized actors, while trapped workers remain locked through economic dependency.",
+    "key_agents": [
+      "Knowledge Workers: Primary victims (powerless/trapped) \u2014 experience health extraction through sustained postural stress, metabolic constraint, and sedentary-related disease risk. Economic dependency prevents exit.",
+      "Worker Collective/Unions: Secondary actor (moderate/constrained) \u2014 can mobilize advocacy and negotiate working conditions but face high organizing barriers in knowledge sectors. Generational timeframe for structural change.",
+      "Employers/Capital: Primary beneficiary (institutional/arbitrage) \u2014 capture productivity and efficiency gains from coordination while externalizing health costs. High arbitrage optionality to shift constraints.",
+      "Occupational Health Authorities: Organized reform coalition (organized/mobile) \u2014 implement ergonomic standards, accessibility requirements, wellness programs with explicit sunset to distributed work models.",
+      "Real Estate and Facility Management: Institutional actor (institutional/arbitrage) \u2014 maintains office constraint through sunk-cost commitment and real estate investment cycles. High arbitrage optionality but structural lock-in to office model.",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing office-based coordination as inherent to knowledge work rather than recognizing it as contingent institutional choice."
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts significant health costs from workers while providing genuine coordination benefits to employers. The value reflects that the coordination function is real (synchronization, supervision, knowledge transfer) but captures benefits asymmetrically \u2014 productivity gains concentrate to capital while health externalities diffuse to workers. Rising trajectory (0.38\u21920.52 over interval) reflects increasing theater ratio and decreasing functional necessity for physical presence, indicating extraction is becoming less coordinated and more purely extractive. Suppression (0.65): High. Economic dependency traps workers in sedentary positions despite knowledge of health risks. Labor market structure, benefits lock-in, geographic immobility, and career risk of job-switching create near-total barriers to exit. However, suppression is not absolute \u2014 some workers have mobile options through remote work transitions and sector switching. Theater ratio (0.58): Moderate-high. Office presence increasingly performs status and discipline functions (presenteeism, visibility, supervision) that technology has made functionally unnecessary. Rising trajectory (0.35\u21920.58) reflects that as remote work has proven viable, office persistence becomes more clearly theatrical. The constraint operates through performative requirements (showing up, being seen, clock time) rather than actual coordination necessity.",
+    "perspectival_gap": "This constraint demonstrates how a genuine coordination mechanism (office co-location for synchronization and knowledge transfer) becomes captured by asymmetric extraction (health costs borne by workers, productivity gains captured by capital). The trapped worker cannot perceive the coordination function \u2014 they experience only extraction (Snare). The worker collective perceives both the coordination and the extraction asymmetry (Tangled Rope). The employer perceives only the coordination benefit, not the extraction (Rope). The scaffold coalition sees the constraint as temporary and solvable through technology (remote infrastructure, asynchronous communication). The piton observer recognizes that office persistence is increasingly theatrical \u2014 the function has atrophied but organizational inertia maintains the constraint. The civilizational analytical observer risks assuming office-based knowledge work is inherent to human cognition and learning, naturalizing what is actually a 20th-century industrial artifact that post-industrial technology has rendered optional.",
+    "directionality_logic": "The beneficiary-victim relationship is clear: employers benefit from capital concentration, synchronization, and supervision; workers bear health extraction costs. Suppression flows through economic dependency (trapped exit) rather than direct coercion. The theater ratio's rise reveals that as technology has eliminated functional necessity for proximity, the constraint persists through performative requirements (presenteeism, visibility) rather than genuine coordination needs. Directionality overrides are not needed \u2014 the structural relationship is transparent. However, the intra-agent heterogeneity (some workers are trapped, some are constrained, some are mobile) suggests that perspectives should differentiate exit_options within the worker group. The trapped worker (powerless/trapped) sees snare; the unionized or mobile worker (moderate/constrained or mobile) sees tangled_rope; the professional with flexible options (powerful/mobile) might see rope or scaffold. This heterogeneity is captured in the perspectives above through differential power levels and exit options.",
+    "mandatrophy_analysis": "DIAGNOSTIC EXEMPLAR: The sedentary work constraint resolves the mandatrophy by showing how a genuine coordination mechanism (office co-location) becomes structurally indistinguishable from pure extraction when asymmetric capture occurs. The tangled_rope classification avoids false positive (incorrectly labeling extraction as pure coordination) by requiring BOTH a real beneficiary group AND a real victim group PLUS active enforcement. The constraint has all three: employers benefit from capital concentration, workers bear health costs, and office presence is actively enforced through workplace norms and productivity expectations. The rising theater ratio (0.35\u21920.58) indicates the coordination function is atrophying while extraction persists, which would eventually reclassify this as a snare if theaters exceed 0.70 and extractiveness increases further. The scaffold perspective shows a genuine alternative pathway (remote work infrastructure) with explicit sunset mechanisms, preventing misclassification as immutable snare. The piton perspective reveals the institutional inertia component: office persistence is increasingly theatrical, maintained by sunk-cost real estate commitments and organizational identity rather than coordination necessity. The false-summit mountain perspective identifies the risk of naturalizing office work as inherent to knowledge work rather than recognizing it as a contingent institutional choice that technology has made optional."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "occupational_health_externalities",
+      "real_estate_asset_lock_in",
+      "workplace_visibility_surveillance"
+    ],
+    "dual_formulation_note": "Sedentary work constraint decomposes into distinct structural stories: (1) labor coordination through physical concentration (genuine coordination function), (2) health extraction through postural demand (victim extraction), (3) real estate investment lock-in (institutional inertia), (4) presenteeism theater (performative supervision). This story treats them as one constraint because they operate through the same enforcement mechanism (office presence requirement). Decomposition would separate the coordination story (office-based knowledge work) from the extraction story (health externalities) if their \u03b5 values diverged significantly. Current modeling treats them as integrated: the constraint's extractiveness reflects both coordination benefit (real) and health cost asymmetry (extractive)."
+  },
+  "directionality_overrides": []
+}

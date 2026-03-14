@@ -1,0 +1,138 @@
+{
+  "header": {
+    "constraint_id": "nutrient_cycling",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nutcycle"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Nutrient Cycling Constraint",
+    "topic_domain": "ecology/biogeochemistry",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Organism in the Nutrient Cycle",
+      "comment": "An individual organism cannot exit nutrient cycling \u2014 the constraint is immutable from any biographical or shorter timescale. Phosphorus, nitrogen, carbon must cycle through metabolic processes. No organism can choose not to require these elements."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Agricultural System",
+      "comment": "Even the most advanced agricultural technology cannot escape nutrient cycling constraints. Phosphorus mining depletes finite reserves; nitrogen fixation requires energy; carbon balance determines productivity. The constraint is immutable across all technological timescales."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "From a universal/civilizational perspective, nutrient cycling is a natural law of biochemistry and ecology. The stoichiometric requirements for life, the thermodynamic constraints on energy transfer, and the finite abundance of elements are immutable properties of the physical world."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "anthropogenic_disruption_threshold",
+      "question": "At what scale of anthropogenic perturbation does nutrient cycling transition from natural constraint to managed system?",
+      "resolution_mechanism": "Historical analysis of pre-industrial vs industrial-era nitrogen and phosphorus cycles; comparison of natural cycling rates to anthropogenic flux magnitudes",
+      "impact": "If threshold is exceeded: nutrient cycling becomes a tangled_rope (mixed coordination and extraction). If threshold remains beyond current human activity: mountain classification holds.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether human activity has transformed nutrient cycling into a managed extraction system"
+    },
+    {
+      "id": "regeneration_vs_depletion_dominance",
+      "question": "Do regenerative practices (cover crops, rotational grazing, compost cycling) meaningfully restore nutrient stocks, or does depletion from extraction remain the dominant flow?",
+      "resolution_mechanism": "Long-term field studies measuring soil nutrient content, crop yields, and carbon sequestration under regenerative vs extractive management across climate zones",
+      "impact": "If regenerative practices achieve true renewal: nutrient cycling persists as a mountain with negotiable extraction rates. If depletion dominates: the constraint becomes tangled_rope with unsustainable extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether nutrient cycling can be sustained through regenerative practices"
+    },
+    {
+      "id": "finite_phosphorus_peak",
+      "question": "What is the remaining timescale for economically recoverable phosphorus reserves, and does this represent an immutable hard constraint or a remediable resource problem?",
+      "resolution_mechanism": "Mining cost curves, reserve estimates, secondary phosphorus recovery rates, and substitution technology development; comparison to historical resource depletion curves",
+      "impact": "If peak phosphorus is imminent (< 50 years): nutrient cycling transitions from mountain to snare for agricultural extraction. If recovery/substitution is viable: mountain classification persists with different cost structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether phosphorus depletion creates an immutable extraction constraint"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.07
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.075
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Nutrient cycling is the biogeochemical process by which essential elements (nitrogen, phosphorus, potassium, carbon, sulfur, calcium, magnesium) cycle between the biotic and abiotic components of ecosystems. No organism, population, or human system can exit this constraint. The biochemical requirement for nutrient uptake, metabolic processing, and decomposition/return is immutable \u2014 it is a natural law of biochemistry rather than a social or institutional arrangement. The constraint exhibits zero extractiveness in the Deferential Realism sense because there is no agent who benefits at another's expense through the cycling mechanism itself. Rather, the cycling is a universal requirement that all agents must satisfy. The theater ratio is minimal because the cycling process has no performative component \u2014 it either occurs (via microbial decomposition, plant uptake, animal metabolism) or the system fails. No organizational layer mediates or simulates nutrient cycling.",
+    "key_agents": [
+      "Organisms: Universally subject (powerless) \u2014 all living things require and depend on nutrient cycling with no exit option",
+      "Agricultural Systems: Institutionally dependent (institutional) \u2014 must manage nutrient flows but cannot escape the constraint, only negotiate terms through input sourcing",
+      "Soil Microbiota: Primary functional agent (analytical) \u2014 drives decomposition and nutrient availability; operates without agency but is the mechanism that makes cycling possible",
+      "Analytical Observer: Civilizational perspective (analytical) \u2014 recognizes nutrient cycling as a natural law"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Very low. The constraint is purely functional \u2014 it distributes no benefit to beneficiaries or cost to victims because cycling is a universal requirement. The minimal non-zero value reflects the thermodynamic cost of nutrient mobilization (energy required for decomposition, nutrient transport, metabolic processing) which is inherent to the process, not extractive overhead. Suppression (0.03): Very low. Nutrient cycling operates automatically through ecological processes without requiring coercion or alternatives suppression. Organisms cannot choose not to participate, but this is immutability of natural law, not suppression through coercion. Theater ratio (0.15): Very low. The cycling process is functional and transparent \u2014 decomposition, plant uptake, and animal metabolism either occur or don't. Modern soil management and crop rotation practices are primarily functional rather than performative, though there exists a small performative layer in 'regenerative agriculture' marketing that may exceed actual nutrient cycling improvement.",
+    "perspectival_gap": "All perspectives classify nutrient cycling as mountain with minimal gap. The immutability is universal across power levels, time horizons, and exit options. The analytical observer's perspective is identical to the powerless organism's perspective \u2014 the constraint is equally immutable whether viewed from the cellular or civilizational level. This uniformity across perspectives is diagnostic of a true natural law constraint.",
+    "directionality_logic": "Nutrient cycling has no inherent directionality \u2014 no agent benefits from the constraint while another bears costs. The constraint is symmetric across all agents: all require nutrient uptake; all generate waste that must be decomposed. The derivation of d from beneficiary/victim declarations does not apply because nutrient cycling has neither beneficiaries nor victims in the extraction sense. The constraint is a universal requirement."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "agricultural_productivity",
+      "soil_carbon_sequestration",
+      "freshwater_eutrophication",
+      "phosphorus_peak"
+    ],
+    "dual_formulation_note": "Nutrient cycling is a foundational constraint that upstream of multiple domain-specific constraints: agricultural productivity depends on nitrogen availability; soil carbon sequestration depends on decomposition rates; freshwater eutrophication is driven by anthropogenic nitrogen and phosphorus cycling disruption; phosphorus peak depletion is a derivative constraint on the finite phosphorus cycle."
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "header": {
+    "constraint_id": "pharmaceutical_pricing_monopoly",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pharma_price"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Pharmaceutical Pricing Monopoly",
+    "topic_domain": "healthcare/pharmaceutical_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharmaceutical_manufacturer"
+    ],
+    "victims": [
+      "patients_without_insurance",
+      "developing_nations",
+      "public_health_systems"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Uninsured Patient",
+      "comment": "PERSPECTIVE 1: UNINSURED PATIENT (SNARE) \u2014 No structural exit from the pricing regime. Faces choice between medical bankruptcy, treatment rationing, or forgoing essential medication. High suppression via legal patent enforcement prevents generic alternatives. Maximum experienced extraction with zero coordination benefit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Developing Nations",
+      "comment": "PERSPECTIVE 2: DEVELOPING NATIONS (SNARE) \u2014 Patent enforcement mechanisms and trade agreements (TRIPS) prevent local generic manufacturing. Population lacks purchasing power to negotiate prices. Trapped by international legal regime and economic dependency. Suppression enforced through trade sanctions and IP litigation threats."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Public Health Systems",
+      "comment": "PERSPECTIVE 3: PUBLIC HEALTH SYSTEMS (TANGLED ROPE) \u2014 Benefit from coordinated drug development and regulatory approval processes, but face extraction through pricing power. Constrained by budget caps and political feasibility of price negotiations. Some agency through bulk purchasing leverage, but high political cost of rationing decisions."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Pharmaceutical Manufacturer",
+      "comment": "PERSPECTIVE 4: PHARMACEUTICAL MANUFACTURER (ROPE) \u2014 Experiences the constraint as pure coordination: recouping R&D costs through patent-protected pricing. Captures monopoly rents during patent life. Has arbitrage options (geographic price discrimination, tiered pricing, licensing). Net beneficiary experiencing the constraint as legitimate coordination mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Government Regulator",
+      "comment": "PERSPECTIVE 5: GOVERNMENT REGULATOR (TANGLED ROPE) \u2014 Coordinates drug approval process and safety standards (genuine coordination function), but also subject to regulatory capture through revolving-door employment and lobbying. Mobile enough to impose price controls but politically constrained by industry influence. Mixed coordination and extraction from regulatory power asymmetry."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Patent System Infrastructure",
+      "comment": "PERSPECTIVE 6: PATENT SYSTEM INFRASTRUCTURE (PITON) \u2014 Maintains intellectual property enforcement mechanisms originally justified by innovation incentives. Theater ratio high because the patent system persists long after serving its stated coordination function. Pharmaceutical patents generate rents exceeding innovation incentives. Maintained through institutional inertia and legal doctrine despite pharmaceutical alternatives (prize funds, open-source models) existing."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational perspective, the constraint exhibits all hallmarks of pure extraction: high suppression (patent law, trade agreements), minimal coordination benefit (innovation incentives could be achieved through alternatives), and asymmetric power (pharmaceutical companies enforce monopolies against dispersed patients). The constraint persists through suppression mechanisms rather than genuine social value alignment."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "innovation_counterfactual",
+      "question": "How much innovation would persist without pharmaceutical patent monopolies? What portion of drug development is driven by patent rents versus by competitive advantage, reputation, and alternative incentive structures?",
+      "resolution_mechanism": "Historical analysis of drug development patterns pre/post-patent expansion; comparison with prize-fund-supported drug development; analysis of orphan drug development with different incentive structures",
+      "impact": "If substantial innovation would persist: patent monopoly appears as pure extraction (Snare). If innovation would collapse: patent regime appears as legitimate coordination mechanism (Rope). Current evidence suggests 40-60% of pharmaceutical innovation would persist without patent protection.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether pharmaceutical innovation requires current patent monopoly regime"
+    },
+    {
+      "id": "suppression_mechanism_identity",
+      "question": "Is suppression of generic alternatives primarily structural (patent law) or internalized (belief in innovation incentive legitimacy among policymakers)?",
+      "resolution_mechanism": "Analysis of policy responses in jurisdictions with aggressive generic enforcement (India, Brazil) versus strict IP enforcement (US, EU). Longitudinal tracking of policy shift correlations with public health outcomes.",
+      "impact": "If primarily structural: suppression persists through law enforcement; removing patent protection changes the constraint. If internalized: many policymakers would resist generic alternatives even without patent law because they believe the innovation story.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural legal enforcement or internalized belief system"
+    },
+    {
+      "id": "geographic_arbitrage_sustainability",
+      "question": "Can parallel importation and geographic price discrimination persist indefinitely, or will price convergence eventually eliminate arbitrage opportunities for manufacturers?",
+      "resolution_mechanism": "Econometric modeling of long-term price dynamics across markets; analysis of manufacturer response to parallel trade threats; comparison with electronics and luxury goods pricing convergence patterns",
+      "impact": "If arbitrage opportunities decline: manufacturer classification shifts from institutional/arbitrage (Rope) toward institutional/constrained (Tangled Rope). Extracted rents would decrease over time.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Long-term viability of geographic price discrimination in pharmaceuticals"
+    },
+    {
+      "id": "regulatory_capture_extent",
+      "question": "What fraction of pharmaceutical pricing extraction is enabled by regulatory capture (industry influence over approval and pricing decisions) versus structural patent rights?",
+      "resolution_mechanism": "Campaign finance analysis; revolving-door employment tracking; comparison of regulatory decisions pre/post industry funding events; jurisdiction comparison (countries with strict regulatory independence versus captured regulators)",
+      "impact": "If capture is primary: removing industry influence changes the constraint more than removing patents. If patents are primary: regulatory reform has limited impact. Current evidence suggests 30-40% of extraction operates through capture.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent to which regulatory capture enables pharmaceutical pricing extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Pharmaceutical pricing monopolies represent a structural constraint that combines patent-law enforcement, regulatory capture, and asymmetric information to extract rents from patients with inelastic demand for essential medications. The constraint operates globally but exhibits differentiated impacts: uninsured patients in high-income countries face catastrophic costs; developing nations face both price extraction and legal barriers to generic manufacturing. The manufacturer benefits from patent protection framed as innovation incentive, but the innovation argument masks an extractive regime that suppresses alternatives (generic drugs, prize-fund models, open-source drug development). The constraint is enforced through multiple interlocking mechanisms: patent law, trade agreements (TRIPS), regulatory approval gatekeeping, and industry influence over pricing bodies. Theater has increased over time as manufacturers have invested in direct-to-consumer marketing and disease-awareness campaigns that frame high prices as necessary for innovation.",
+    "key_agents": [
+      "Uninsured Patients: Primary victim (powerless/trapped) \u2014 bears catastrophic costs with no exit option",
+      "Developing Nations: Structural victim (powerless/trapped) \u2014 prevented from generic manufacturing by trade agreements and IP enforcement",
+      "Public Health Systems: Mixed agent (moderate/constrained) \u2014 benefits from drug approval coordination but bears cost of price-driven rationing decisions",
+      "Pharmaceutical Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 captures monopoly rents through patent protection with geographic price discrimination options",
+      "Government Regulators: Captured institutional actor (powerful/mobile) \u2014 supposed to regulate in public interest but subject to industry influence",
+      "Patent System: Degraded institutional structure (institutional/arbitrage) \u2014 enforces monopolies that exceed innovation requirements"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. Manufacturers capture substantial rents above competitive drug costs, justified nominally by innovation incentives but substantially in excess of necessary incentives (evidence suggests 40-60% of pharmaceutical innovation would persist with alternative incentive structures). The constraint prevents price competition (generics) and blocks lower-cost alternatives (prize funds, public manufacturing). Trajectory shows increasing extractiveness over 15 years as manufacturers expanded pricing power and developed new therapeutic areas with captive markets. Suppression (0.72): High. Patent law, trade agreements (TRIPS), trademark protections, data exclusivity, and regulatory approval gatekeeping all suppress alternatives to paying monopoly prices. Legal threats against generic manufacturers and developing nations manufacturing essential drugs. Career barriers for generics manufacturers. Suppression is rising as manufacturers deploy ever-more complex strategies to extend patent lives (evergreening, combination therapies, formulation changes). Theater ratio (0.55): Moderate-high. Manufacturer framing of prices as necessary for innovation is partially theatrical \u2014 innovation story is cover for rent extraction. But genuine R&D costs are real and require recoupment. Increasing theater as marketing budgets exceed R&D for many manufacturers, and direct-to-consumer advertising frames expensive drugs as essential.",
+    "directionality_logic": "Directional flow: manufacturers (d \u2248 0.05, beneficiary + arbitrage) experience negative effective extraction \u2014 the constraint subsidizes them. Uninsured patients (d \u2248 0.95, victim + trapped) experience maximum extraction. Public health systems (d \u2248 0.65, victim + constrained) experience high extraction but retain some negotiating agency. Regulators (d \u2248 0.45, victim + mobile) are partly captured but retain agency, reflecting the moderate-powerful classification. The perspectival gap between manufacturer (Rope) and powerless patient (Snare) is maximal \u2014 same structural constraint, radically different classifications due to directionality differences (d varies from 0.05 to 0.95) and exit options (arbitrage versus trapped).",
+    "perspectival_gap": "The manufacturer sees the constraint as legitimate coordination (Rope): patent protection enables R&D investment, which benefits society through drug innovation. The uninsured patient sees the constraint as pure extraction (Snare): they face medical bankruptcy with no escape. The public health system sees mixed coordination and extraction (Tangled Rope): the drug approval and safety coordination function is real, but the pricing power is extractive. The regulator sees themselves as coordinating drug safety but is actually party to regulatory capture (Tangled Rope from their perspective, though they may not perceive it). The patent system sees itself as coordinating innovation incentives (Rope from its own perspective) but functions primarily to enforce rent extraction (Snare from victims' perspectives, Piton from analytical perspective because it persists through inertia beyond its stated purpose). The analytical observer sees pure extraction (Snare) because the coordination benefits could be achieved through alternative mechanisms (public prizes, accelerated FDA approval for generic manufacturers, prize funds for neglected diseases) while the suppression mechanisms could not. The perspectival collapse between manufacturer-as-rope and victim-as-snare is the diagnostic signature of this constraint.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that Snare classification is correct from the analytical perspective and from the victims' perspectives. The manufacturer's Rope classification is a misclassification driven by beneficiary status \u2014 they experience the constraint as coordinating innovation incentives, but this is a cover story for extraction. The mandatrophy is resolved by recognizing that multiple institutional actors (manufacturers, regulators, patent offices) have internalized a false narrative about the constraint's necessity that permits them to classify it as benign coordination when it is actually extraction. The constraint qualifies as Snare: \u03b5=0.68 (\u22650.46), suppression=0.72 (\u22650.60), and \u03c7 (effective extraction) is high across all victim perspectives. The manufacturer's Rope perspective is rejected as a false positive derived from beneficiary bias. The piton classification reveals the patent system as degraded infrastructure \u2014 the suppression mechanisms have accumulated (data exclusivity, evergreening, trademarking) far beyond what innovation incentive theory justifies. These are the added layers that push extractiveness from justified innovation incentive (~0.25) to extractive monopoly (~0.68)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "generic_drug_access_barriers",
+      "orphan_drug_pricing",
+      "tiered_pricing_mechanisms"
+    ],
+    "dual_formulation_note": "Pharmaceutical pricing monopoly decomposes into three constraint stories: patent_protection_mechanism (\u03b5=0.45, justifiable innovation incentive), regulatory_gatekeeping (\u03b5=0.38, security coordination function), and monopoly_rent_extraction (\u03b5=0.68, pure extraction). The unified constraint story treats them as one system; analytical decomposition reveals that suppression mechanisms (evergreening, data exclusivity, price discrimination) transform the first two into pure extraction. This story focuses on the combined monopoly regime; downstream constraints address specific implementation mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

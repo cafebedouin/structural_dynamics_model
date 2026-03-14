@@ -1,0 +1,206 @@
+{
+  "header": {
+    "constraint_id": "nuclear_proliferation_incentive_cascade",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Nuclear Proliferation Incentive Cascade",
+    "topic_domain": "international_security/geopolitics",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "nuclear_armed_states"
+    ],
+    "victims": [
+      "non_nuclear_states",
+      "global_nuclear_stability"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Non-Nuclear State",
+      "comment": "PERSPECTIVE 1: NON-NUCLEAR STATE (SNARE) \u2014 Trapped by security dilemma. Nuclear-armed neighbors create credible existential threat; conventional deterrence insufficient. Exit path (maintaining non-nuclear status) leads to strategic vulnerability. Proliferation is simultaneously forbidden (NPT, sanctions) and incentivized (neighbor proliferation). Suppression is total: diplomatic pressure, sanctions regimes, inspection regimes, and strategic isolation all constrain exit options. The constraint extracts security cost from non-nuclear states while offering no stable alternative."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Global Nuclear Stability",
+      "comment": "PERSPECTIVE 2: GLOBAL NUCLEAR STABILITY (SNARE) \u2014 Collective good that cannot organize, exit, or defend itself. Each state's proliferation decision is individually rational given security dilemma, but aggregate outcome is cascade toward greater instability. The stability architecture (NPT, safeguards, extended deterrence) erodes as more states acquire nuclear weapons. No mechanism to reverse the cascade once begun. Stability bears full cost while beneficiaries capture security advantage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Proliferating Regional Power",
+      "comment": "PERSPECTIVE 3: PROLIFERATING REGIONAL POWER (TANGLED ROPE) \u2014 Genuinely solves coordination problem: nuclear capability deters larger adversaries and stabilizes regional balance (coordination function). Simultaneously extracts cost from regional neighbors and global stability (asymmetric extraction). Exit options exist (forgo weapons, accept conventional inferiority, rely on alliance) but are costly \u2014 career risk for leadership, loss of strategic autonomy, vulnerability during alliance dissolution. Constrained by both security dilemma and institutional pressures."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Nuclear-Armed Great Power",
+      "comment": "PERSPECTIVE 4: NUCLEAR-ARMED GREAT POWER (ROPE) \u2014 Pure coordination beneficiary. Nuclear weapons deter existential threats; extended deterrence is a coordination mechanism providing security public goods to allies. Exit from nuclear capability would require existential trust and abandonment of deterrence (currently infeasible). Arbitrage options available: sell reactor technology, negotiate arms control treaties, shift proliferation risks to other powers. Experiences the constraint as essential coordination with net benefit."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Non-Proliferation Treaty Regime",
+      "comment": "PERSPECTIVE 5: NON-PROLIFERATION TREATY REGIME (PITON) \u2014 Performative enforcement mechanism. NPT established in 1968 to prevent cascade; now degraded. Theater ratio is high because verification (IAEA inspections) cannot detect covert weapons programs reliably (North Korea, Iran), enforcement (UN sanctions) is inconsistent and reversible, and the treaty's core bargain (non-nuclear states forgo weapons in exchange for nuclear disarmament by armed states) has been violated by armed states' failure to disarm. Regime persists through institutional inertia and because alternatives (no agreement, or enforcement mechanisms requiring military action) are worse. Exit costs for states are high but function is minimal."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational/universal scope, the proliferation incentive cascade is a structural consequence of the security dilemma embedded in anarchic international system. Each rational actor's proliferation decision creates externalities that push other actors toward proliferation, producing a cascade where exit is individually irrational but collectively catastrophic. The analytical view reveals that the constraint is not an immutable law of physics but a contingent institutional arrangement (state sovereignty + anarchic structure + nuclear technology diffusion) that has produced snare-like dynamics. However, the structural data cannot distinguish between (a) irreversible cascades and (b) temporarily reversible dynamics that could be arrested by institutional reform."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "security_dilemma_irreversibility",
+      "question": "Is the proliferation cascade irreversible once begun, or can institutional interventions (credible security guarantees, verification breakthroughs, alliance restructuring) arrest it?",
+      "resolution_mechanism": "Historical analysis of proliferation arrests (South Africa, Libya, Kazakhstan); game-theoretic modeling of credible guarantee mechanisms; empirical testing of extended deterrence stability under proliferation scenarios",
+      "impact": "If irreversible: snare classification stands. If arrestable: constraint might reclassify as Tangled Rope with institutional exit paths (e.g., security council guarantees), suggesting mandatrophy resolution through verified denuclearization agreements.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether proliferation cascades are irreversible"
+    },
+    {
+      "id": "covert_weapons_detectability",
+      "question": "Can advanced verification technologies (genomic attribution, radiation signature analysis, satellite verification, AI-enhanced inspections) reliably detect covert weapons programs, or is the verification bottleneck inherent to the problem?",
+      "resolution_mechanism": "Empirical assessment of IAEA detection rates; analysis of Iran, North Korea, and historical cases; technological roadmap for verification capabilities 2026-2050",
+      "impact": "If detectable: NPT Piton can be reformed into functional Rope (verification bottleneck removed). If inherently undetectable: regime remains Piton and snare extraction persists unchecked.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether covert weapons programs can be reliably detected"
+    },
+    {
+      "id": "credible_security_guarantee_feasibility",
+      "question": "Can nuclear-armed powers credibly guarantee non-nuclear states against existential threats without the guaranteed state acquiring nuclear weapons, or is the guarantee itself rationally suspect given great-power self-interest?",
+      "resolution_mechanism": "Analysis of alliance commitment mechanisms (NATO Article 5, bilateral defense treaties, NNPT negative security assurances); game-theoretic assessment of guarantee credibility under severe crisis scenarios; historical review of alliance defection cases",
+      "impact": "If credible: non-nuclear states have genuine exit option from snare (security without weapons). If suspect: security dilemma trap deepens and proliferation becomes individually rational for all non-nuclear states.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether credible security guarantees can substitute for nuclear capability"
+    },
+    {
+      "id": "regional_nuclear_stability_equilibrium",
+      "question": "Do regional nuclear balances (e.g., India-Pakistan, Israel-regional states) produce mutually assured destruction stability ('Mutual Assured Stability') or precarious equilibria vulnerable to breakdown under crisis?",
+      "resolution_mechanism": "Game-theoretic analysis of regional conflict scenarios; empirical assessment of near-miss nuclear incidents; stability analysis of command-and-control systems under stress; crisis simulation modeling",
+      "impact": "If stable: Tangled Rope classification for regional proliferators is justified (coordination function exists). If precarious: Snare classification deepens and regional proliferation represents destabilization cascade.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regional nuclear balances are stable or precarious"
+    },
+    {
+      "id": "nuclear_technology_diffusion_trajectory",
+      "question": "Is nuclear weapons-usable material (highly enriched uranium, separated plutonium) becoming more accessible to sub-state actors and rogue regimes, or are supply-side controls (mining, enrichment, reprocessing) becoming more restrictive?",
+      "resolution_mechanism": "Tracking of known HEU and separated plutonium stockpiles; analysis of uranium enrichment technology proliferation; assessment of IAEA safeguards effectiveness; modeling of future supply constraints",
+      "impact": "If diffusing: snare extraction accelerates (more actors trapped in cascade). If controllable: supply-side interventions could arrest cascade, moving constraint toward Tangled Rope with policy exit.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether weapons-usable nuclear material is becoming more or less accessible"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.41
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "The nuclear proliferation incentive cascade represents a structural trap embedded in the security dilemma facing non-nuclear states. When one state acquires nuclear weapons, it creates credible existential threat to neighbors, incentivizing their own acquisition. The Non-Proliferation Treaty (NPT) regime attempts to prevent this cascade by offering non-nuclear states security guarantees in exchange for forgoing weapons, but the regime's enforcement is weak (theater_ratio = 0.58) and the underlying security dilemma remains unresolved. The constraint exhibits pure snare characteristics from the perspective of non-nuclear states and global stability: they are trapped by cascading incentives with no viable exit that doesn't involve unacceptable risk. Extractiveness has risen from 0.42 (1970) to 0.68 (present) as verification mechanisms have become less reliable, more states have approached or crossed the nuclear threshold, and the NPT bargain (disarmament by armed states) has been violated. The theater ratio has increased similarly as the gap widens between the treaty's stated function (preventing proliferation) and its actual performance (unable to prevent Iran, North Korea, Pakistan, or Israel; unable to reverse their acquisition).",
+    "key_agents": [
+      "Non-Nuclear States (especially threshold states): Primary victim (powerless/trapped) \u2014 face security dilemma incentivizing proliferation while treaty obligations and sanctions suppress that path. No stable exit.",
+      "Global Nuclear Stability: Primary victim (powerless/trapped) \u2014 abstract collective good bearing full cost of cascade; no exit mechanism or organizational capacity.",
+      "Proliferating Regional Powers (Iran, North Korea, etc.): Secondary agent (organized/constrained) \u2014 face mixed incentives (security benefit, sanctions cost, alliance constraints); constrained exit options.",
+      "Nuclear-Armed Great Powers (P5): Primary beneficiary (institutional/arbitrage) \u2014 benefit from deterrence and strategic autonomy; maintain proliferation advantage; arbitrage through selective nonproliferation enforcement.",
+      "Non-Proliferation Treaty Regime: Institutional mechanism (institutional/constrained) \u2014 designed to prevent cascade but now degraded (piton); verification incomplete, enforcement selective, disarmament bargain violated.",
+      "Analytical Observer: Sees structural inevitability of cascade (analytical/analytical) \u2014 but risks naturalizing what is a contingent institutional arrangement (state sovereignty + anarchic structure) rather than a law of nature."
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and rising. The constraint extracts security cost from non-nuclear states who must accept strategic vulnerability, economic sanctions (if they proliferate), or costly alliance dependence (if they don't). The extraction increases over time as the NPT regime degrades and verification becomes less reliable\u2014states must spend more resources on security as confidence in the regime declines. Suppression (0.72): High. Multiple overlapping suppression mechanisms: (1) Treaty obligations and international law making proliferation formally illegal; (2) Sanctions regimes (economic, military, diplomatic); (3) Coercive inspections and verification regimes limiting sovereignty; (4) Strategic isolation and threat of military intervention (Iraq 2003 precedent); (5) Technology controls and export restrictions limiting access to nuclear technology. Theater ratio (0.58): Moderate. The NPT regime performs some genuine coordination function (slowing proliferation relative to baseline, providing inspection framework, establishing nonproliferation norm), but significant theatrical component: IAEA cannot detect covert programs reliably (Iran's undeclared sites, North Korea's facilities), enforcement is selective (P5 exemptions, enforcement only against weak states), the disarmament bargain has been abandoned, and the regime persists partly because the alternative (no agreement, or enforcement requiring military force) appears worse. The increasing theater ratio reflects growing gap between treaty promise and actual performance.",
+    "perspectival_gap": "This constraint demonstrates how indexical classification reveals the asymmetry at the heart of the proliferation trap. The same structural phenomenon\u2014nuclear deterrence\u2014appears as essential coordination (rope) from the nuclear power's perspective and as extractive snare from the non-nuclear state's perspective. The gap is not an observational ambiguity; it reflects genuine structural asymmetry: the nuclear power has choices (maintain arsenal, negotiate arms control, extend deterrence), while the non-nuclear state has only costs (accept vulnerability, violate treaty with sanctions, proliferate illegally and risk intervention). The piton classification of the NPT regime reveals the mechanism: the regime's performative theater obscures the underlying snare, allowing states to maintain the fiction of a functioning system even as it degrades.",
+    "directionality_logic": "Each perspective's experienced extractiveness (chi) derives from its structural position. Non-nuclear states have maximum directionality (d \u2248 0.95): they are full targets of the cascade, with trapped exit options and no beneficiary status. The nuclear power derives d \u2248 0.10: beneficiary + arbitrage exit \u2192 negative chi (they gain from the constraint). The proliferating regional power derives d \u2248 0.60: victim of suppression + constrained exit \u2192 moderate chi (caught between security benefit and suppression cost). Global stability is a powerless agent with no exit: d = 1.0. The piton perspective applies standard institutional directionality (~0.15) modified by the theatrical degradation signal. The cascade effect\u2014each proliferation decision raising d for remaining non-nuclear states\u2014is the mechanism by which the constraint feeds on itself.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint avoids false natural law classification through several mechanisms: (1) The analytical 'mountain' perspective is correctly identified as a false summit \u2014 the cascade is not an immutable law of international relations but a contingent outcome of specific institutional arrangements (state sovereignty, anarchic structure, nuclear technology diffusion). (2) The piton classification correctly captures the NPT regime as degraded theater rather than functional constraint. (3) The tangled rope and snare classifications from different perspectives reveal that the constraint's function (coordination for nuclear powers, suppression for non-nuclear states) is asymmetric\u2014it is not a pure coordination mechanism masquerading as constraint, but genuine mixed mechanism with asymmetric distribution of benefits and costs. (4) The measurement trajectory (extractiveness rising from 0.42 to 0.68 over 40 years, theater ratio rising from 0.35 to 0.58) documents Goodhart drift: as NPT verification becomes less reliable and enforcement more selective, the regime's actual constraint function decays while its theatrical performance increases. Mandatrophy is resolved by recognizing the constraint as genuine snare from non-nuclear perspectives, not as natural law or failed coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "weapons_grade_material_access",
+      "extended_deterrence_credibility",
+      "regional_nuclear_balance_stability"
+    ],
+    "dual_formulation_note": "The proliferation incentive cascade decomposes into three structurally distinct constraints: (1) Weapons-grade material supply constraints (verification/control infrastructure), (2) Extended deterrence credibility (alliance commitment mechanisms), (3) Regional nuclear balance stability (conflict escalation pathways). This story addresses the cascade mechanism integrating all three; each component story has its own epsilon value reflecting empirical uncertainty about that component's controllability."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

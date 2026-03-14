@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "dns_hierarchy_lock_in",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dns"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "DNS Hierarchy Lock-In and Root Server Governance",
+    "topic_domain": "internet_infrastructure/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "root_server_operators",
+      "icann",
+      "incumbent_registrars"
+    ],
+    "victims": [
+      "alternative_root_developers",
+      "internet_sovereignty_advocates",
+      "decentralized_dns_participants"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Alternative Root Initiative Participant",
+      "comment": "PERSPECTIVE 1: ALTERNATIVE ROOT INITIATIVE (SNARE) \u2014 Cannot exit the ICANN hierarchy without abandoning global interoperability. Trapped by network effects: every domain must resolve through the 13 root servers to reach 99.9% of internet users. Alternative roots (OpenNIC, Namecoin) remain marginalized despite technical viability. Maximum extraction: captured by the incumbent system with no meaningful exit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Nation-State Internet Sovereignty Advocate",
+      "comment": "PERSPECTIVE 2: NATION-STATE SOVEREIGNTY (TANGLED ROPE) \u2014 Constrained by technical and diplomatic barriers. Derives genuine coordination benefit: DNS hierarchy provides global namespace unity and prevents domain collisions. Simultaneously extracts: governance decisions exclude non-ICANN actors, and root zone authority is concentrated in US-aligned institutions. Costly exit (national intranet, fragmented namespace) but possible \u2014 some nations maintain parallel DNS infrastructure."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "ICANN and Root Server Operator",
+      "comment": "PERSPECTIVE 3: ICANN AND ROOT OPERATORS (ROPE) \u2014 Net beneficiary. Experiences the constraint as coordination: root servers provide essential namespace management, and ICANN's governance role solves the coordination problem of a single global namespace. Exit is available through arbitrage (sell governance authority, transition to competing root system) but unnecessary \u2014 the current position yields authority and funding. Classification as rope reflects genuine coordination function alongside institutional capture."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Blockchain-Based DNS Alternative Coalition",
+      "comment": "PERSPECTIVE 4: BLOCKCHAIN DNS COALITION (TANGLED ROPE) \u2014 Organized agents (ENS, Unstoppable Domains, Handshake) see the DNS hierarchy as solvable through decentralized consensus. They derive coordination benefit from the single namespace problem that DNS solves and the technical standards it provides. Simultaneously constrained: blockchain DNS systems must either fork the root zone (fragmentation) or achieve critical mass adoption (chicken-and-egg problem). Requires active enforcement of their own rules; sees ICANN enforcement as extractive gatekeeping."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy DNS Protocol Maintenance",
+      "comment": "PERSPECTIVE 5: LEGACY DNS PROTOCOL (PITON) \u2014 The DNS protocol itself (RFC 1035 core architecture) is maintained as a degraded system. Modern DNS operates through security patches (DNSSEC), performance hacks (query caching, content delivery), and workarounds (DNS over HTTPS/TLS). The protocol persists through institutional inertia: replacing DNS entirely is too disruptive, so legacy infrastructure is patched indefinitely. Theater ratio reflects performative DNSSEC deployments that do not achieve their stated security goals."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "ICANN Reform and Governance Transition",
+      "comment": "PERSPECTIVE 6: ICANN REFORM (SCAFFOLD) \u2014 ICANN itself operates as a temporary coordination mechanism with a sunset clause. The organization was created to transition DNS governance from the US Department of Commerce (NTIA) to a multistakeholder body. Its legitimacy rests on implementing that transition fully. As governance matures (IANA stewardship transition, community board empowerment), the need for ICANN's specific hierarchical control diminishes. Low theater: reform advocates see a visible path to alternative governance. Extraction is constrained because the scaffold's mandate is explicit \u2014 it must sunset or transform."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, the DNS hierarchy appears as an immutable law: a single global namespace requires a single root authority; distributed consensus cannot coordinate the namespace without fragmentation; the technical constraint of preventing conflicting domain assignments is inherent to the problem space. However, this naturalization masks contingent institutional choices (US-centric governance, commercial incentives, path dependence)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "decentralized_consensus_namespace",
+      "question": "Can decentralized consensus mechanisms (blockchain, distributed hash tables) coordinate a globally unique namespace without fragmenting into competing roots?",
+      "resolution_mechanism": "Long-term empirical observation of blockchain DNS systems (ENS, Handshake); measurement of adoption rates and fragmentation events; comparison of collision resolution mechanisms across systems",
+      "impact": "If yes: the mountain perspective is false \u2014 DNS hierarchy is contingent, not inherent. The lock-in is institutional, not technical. If no: the technical constraint is real, and the hierarchy is partially naturalizable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether decentralized consensus can coordinate global namespace without fragmentation"
+    },
+    {
+      "id": "exit_cost_magnitude",
+      "question": "What fraction of internet users and services would be disrupted by a complete migration from ICANN DNS to an alternative root system?",
+      "resolution_mechanism": "Technical analysis of dependency chains; measurement of services that can and cannot function on alternative roots; user survey on awareness and switching costs",
+      "impact": "If < 5%: exit costs are overstated; the lock-in is weaker than suppression metrics suggest. If > 40%: the lock-in is primarily technical, not institutional. If 15-30%: the lock-in is genuinely mixed (institutional capture on top of network effects).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Magnitude of disruption from complete migration to alternative DNS root"
+    },
+    {
+      "id": "icann_governance_legitimacy",
+      "question": "Is ICANN's multistakeholder governance model perceived as legitimate by non-Western states, developing economies, and alternative root advocates?",
+      "resolution_mechanism": "Survey of nation-state representatives, ICANN meeting participation analysis, measurement of policy adoption rates, comparison with parallel governance initiatives (Russia's DNS mirror, China's gTLD ecosystem)",
+      "impact": "If low legitimacy: the constraint may fragment into regional DNS hierarchies (tangled rope becomes multiple snares). If high: the rope classification is more defensible. If moderate with geographic variance: scaffold sunset may be delayed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Perceived legitimacy of ICANN multistakeholder governance"
+    },
+    {
+      "id": "protocol_replacement_feasibility",
+      "question": "Is DNS replacement technically feasible at internet scale, or is the protocol architecture sufficiently embedded in infrastructure that replacement requires civilization-scale disruption?",
+      "resolution_mechanism": "Analysis of DNS-dependent infrastructure layers; comparison with prior major protocol transitions (IPv4 to IPv6); technical roadmap analysis for next-generation identifier systems",
+      "impact": "If replacement is feasible: the hierarchy is contingent and institutional lock-in is the primary mechanism. If replacement requires 50+ year transition: the technical constraint dominates and the mountain perspective has merit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical feasibility of DNS protocol replacement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The DNS hierarchy lock-in represents a structural constraint embedded in internet governance that combines genuine technical coordination with institutional capture and path dependence. The Domain Name System's hierarchical architecture \u2014 with 13 root servers controlled through ICANN, a US-founded nonprofit with significant US government influence \u2014 creates a single global namespace that prevents domain name collisions and coordinates internet addressing. However, this coordination mechanism also concentrates governance authority, creates barriers to alternative root systems, and reflects historical contingencies (NTIA delegation in 1998, ICANN's nonprofit structure) rather than technical inevitability. The constraint manifests differently across observer positions: incumbent operators perceive it as essential coordination infrastructure; alternative root advocates experience it as extractive lock-in; nation-states see both coordination benefits and governance exclusion; decentralized DNS projects experience it as a technical and social barrier; and the legacy DNS protocol itself operates as a degraded system maintained through patches rather than fundamental redesign.",
+    "key_agents": [
+      "ICANN (Internet Corporation for Assigned Names and Numbers): Institutional beneficiary (institutional/arbitrage) \u2014 captures governance authority, funding, and regulatory legitimacy through root zone control",
+      "Root Server Operators (VeriSign, Cogent, University of Maryland, etc.): Institutional beneficiary (institutional/arbitrage) \u2014 operate critical infrastructure with regulatory protection and coordination privilege",
+      "Alternative Root Developers (OpenNIC, Namecoin, Handshake): Primary victim (powerless/trapped) \u2014 cannot achieve network effects without displacing the incumbent; fragmentation is the only exit path",
+      "Nation-States (especially non-Western): Secondary victim (moderate/constrained) \u2014 benefit from DNS coordination but excluded from governance decisions; constrained by interoperability requirements",
+      "Decentralized DNS Coalition (ENS, Unstoppable Domains): Organized challenger (organized/constrained) \u2014 solving coordination through consensus; experiencing extraction through ICANN's regulatory advantage",
+      "Legacy DNS Protocol: Institutional degradation (institutional/arbitrage) \u2014 maintained through patches and workarounds; performance at scale compromised by architectural choices made in 1983"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The DNS hierarchy does extract from alternative root developers and nation-states seeking sovereignty, but the extraction is not maximal because genuine coordination benefits justify some of the extraction. The incumbent operators gain significant authority and de facto regulatory power, but this power is constrained by ICANN's multistakeholder model and international pressure. The extractiveness value reflects the asymmetry between coordination benefit (global namespace unity) and institutional capture (concentrated governance). Suppression (0.65): High. Multiple barriers prevent exit: network effects lock users into the ICANN root, technical standards require root zone delegation, and diplomatic pressure constrains parallel root systems. However, suppression is not total \u2014 alternative roots exist technically and some nation-states maintain parallel infrastructure. Theater ratio (0.48): Moderate. DNSSEC deployments often perform theater (signature validation without enforcement), but DNS operations are largely functional \u2014 the core role (name-to-IP translation) works reliably. Theater increased over time as security patches accumulated without fundamental redesign.",
+    "directionality_logic": "Directionality values reflect each agent's structural position in the extraction flow. Root server operators and ICANN experience low d (around 0.10-0.15) \u2014 they are beneficiaries with arbitrage options, deriving authority and funding. Alternative root developers experience high d (around 0.90) \u2014 they are powerless victims trapped by network effects with no cost-free exit. Nation-states are at intermediate d (around 0.55) \u2014 they benefit from coordination but experience governance exclusion and constrained exit options. Blockchain DNS coalitions are at moderate d (around 0.50) \u2014 they are organized enough to build alternatives but face chicken-and-egg problems and collision-avoidance trade-offs. The scaffold perspective on ICANN reform shows lower d (around 0.35) because reform advocates perceive an exit path through governance transition. The analytical mountain perspective risks d around 0.72 (full technical objectivity), but the structural data reveals this naturalizes contingent institutional choices.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence. ICANN experiences rope (coordination function with benefits), while alternative roots experience snare (pure extraction via lock-in). Nation-states see tangled rope (mixed coordination and governance exclusion). The ICANN reform movement sees scaffold (temporary coordination with sunset). The analytical observer risks seeing mountain (inherent technical law), but this is a false summit \u2014 the hierarchy is contingent on institutional arrangements, not technical necessity. The gap between ICANN's rope perception and alternative roots' snare perception reveals the full extractive mechanism: the same institutional structure that coordinates the global namespace simultaneously prevents competition through network effects and regulatory capture.",
+    "mandatrophy_analysis": "MANDATROPHY MECHANISM: The DNS hierarchy lock-in is a case where the coordination function (preventing domain collisions, providing single global namespace) is real and valuable, but the institutional capture (ICANN governance concentration, US-aligned control, barriers to alternatives) is also real. Neither function can be cleanly separated. The constraint is genuinely tangled rope, not pure extraction. However, the mandatrophy risk emerges when stakeholders claim the constraint is mountain (technically necessary) to justify institutional capture, or claim it is snare (pure extraction) to advocate for complete system replacement without accounting for coordination costs. The framework resolves mandatrophy by showing that all six types are valid perspectival readings \u2014 the constraint IS rope from ICANN's position, IS snare from alternative developers' position, IS scaffold from reform advocates' position, etc. The question is not 'which type is correct?' but 'which governance structure best serves the coordination function while minimizing extractive capture?' This moves the analysis from classification to design: can the namespace coordination function be achieved with lower institutional capture (e.g., through decentralized consensus, regional diversity in root operators, or governance reform)?"
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "icann_multistakeholder_model",
+      "internet_governance_fragmentation",
+      "certificate_authority_lock_in"
+    ],
+    "dual_formulation_note": "The DNS hierarchy lock-in decomposes into technical coordination (name-to-IP resolution) and institutional capture (governance concentration). The technical coordination story (\u03b5 \u2248 0.08, rope) is distinct from the governance extraction story (\u03b5 \u2248 0.52, tangled rope). This story addresses the combined institutional-technical constraint. Network links show how DNS lock-in affects broader internet governance fragmentation and how it depends on ICANN's governance model."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

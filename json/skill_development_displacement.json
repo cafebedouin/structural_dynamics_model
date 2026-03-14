@@ -1,0 +1,215 @@
+{
+  "header": {
+    "constraint_id": "skill_development_displacement",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "skd"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Skill Development Displacement in Labor Market Transitions",
+    "topic_domain": "labor_economics/human_capital",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_employers",
+      "high_skill_credential_holders"
+    ],
+    "victims": [
+      "displaced_workers",
+      "skill_acquisition_markets"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Displaced Worker",
+      "comment": "PERSPECTIVE 1: DISPLACED WORKER (SNARE) \u2014 Faces skill obsolescence with minimal exit options. Retraining programs are underfunded, lengthy, and provide no income guarantee during transition. Labor market barriers (age discrimination, credential requirements, geographic immobility) make exit nearly impossible. Worker bears full extraction cost with suppression mechanisms preventing alternative pathways."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Retraining Participant",
+      "comment": "PERSPECTIVE 2: RETRAINING PARTICIPANT (TANGLED ROPE) \u2014 Constrained by financial barriers, time costs, and outcome uncertainty; retraining programs coordinate labor supply adjustment but extract value through opportunity costs and credential inflation. Participants benefit from skill development infrastructure while bearing disproportionate risk and cost of the transition."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Incumbent Employers and Credential Systems",
+      "comment": "PERSPECTIVE 3: INCUMBENT EMPLOYERS AND CREDENTIAL SYSTEMS (ROPE) \u2014 Experience the constraint as coordination: efficient labor market clearing, skills matching, and credential signaling. Benefit from worker retraining through labor supply adjustment without bearing transition costs. Can arbitrage between regions, sectors, and credential tiers with low friction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Traditional Skills Certification Bodies",
+      "comment": "PERSPECTIVE 4: TRADITIONAL SKILLS CERTIFICATION BODIES (PITON) \u2014 Maintain licensing and credentialing authority through institutional inertia despite erosion of their actual predictive value. Theater ratio (0.48) reflects that many traditional credentials no longer correlate with job performance or provide genuine verification of competency. Persist through legal requirement and career path dependence, not through functional necessity."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Alternative Credentialing Platforms",
+      "comment": "PERSPECTIVE 5: ALTERNATIVE CREDENTIALING PLATFORMS (SCAFFOLD) \u2014 Bootcamps, micro-credentials, competency-based platforms (Coursera, LinkedIn Learning) provide lower-cost pathways with shorter timelines and reduced theater. See the traditional constraint as temporary \u2014 alternative verification methods (portfolio assessment, practical demonstration, employer endorsement) are creating exit paths. Extractiveness is tempered by genuine coordination function and visible sunset mechanisms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "High-Skill Credentialed Workers",
+      "comment": "PERSPECTIVE 6: HIGH-SKILL CREDENTIALED WORKERS (TANGLED ROPE) \u2014 Mobile across labor markets; credentials serve as coordination mechanism enabling career mobility. Also extract value from credential scarcity and signaling advantage. Benefit from the displacement of lower-credentialed workers (reduces wage competition) while contributing to the skill development constraint through credential inflation cycles."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Sees genuine coordination function (skills matching, labor supply adjustment) embedded within asymmetric extraction (workers bear transition costs, employers capture productivity gains). The constraint is neither pure coordination nor pure extraction but a genuine hybrid. Civilizational scope reveals multi-generational credential inflation cycles that compound extraction over time."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "retraining_program_effectiveness",
+      "question": "Do subsidized retraining programs genuinely improve long-term employment outcomes or merely shuffle workers between low-wage sectors?",
+      "resolution_mechanism": "Longitudinal wage tracking 5+ years post-completion; comparison of program completers vs matched non-participants; sector mobility analysis of graduates",
+      "impact": "If effective: constraint is higher-quality Rope/Scaffold (coordination with real outcomes). If ineffective: constraint is higher-extractiveness Snare (displacement channeled through theater of retraining).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Effectiveness of retraining programs in improving long-term outcomes"
+    },
+    {
+      "id": "credential_inflation_accumulation",
+      "question": "Is rising credential requirements a response to genuine skill gaps or does it function primarily as rent-seeking and credential inflation?",
+      "resolution_mechanism": "Analysis of job posting requirements vs task complexity over time; worker productivity metrics by education level; wage premium decline for credentials holding task constant",
+      "impact": "If skill-driven: extraction is moderate (justified by needs). If rent-seeking-driven: extraction increases substantially (unjustified credential barriers amplify snare dynamics).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether credential requirements reflect genuine skill needs or rent-seeking"
+    },
+    {
+      "id": "alternative_credentialing_viability",
+      "question": "Can micro-credentials and competency-based platforms (bootcamps, digital certificates) actually displace traditional degree requirements or are they relegated to secondary labor markets?",
+      "resolution_mechanism": "Wage and career progression comparison for alternative-credential vs traditional-degree holders in same role; hiring manager acceptance analysis; salary premium retention analysis",
+      "impact": "If viable: scaffold perspective confirmed \u2014 genuine sunset mechanism exists. If confined to secondary markets: alternative credentials remain lower-status, perpetuating traditional credential requirement barrier.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative credentials can displace traditional credentials"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the measured suppression (0.65) primarily structural (material barriers to retraining access) or internalized (workers internalize credential requirements as necessary)?",
+      "resolution_mechanism": "Survey analysis of worker perception of necessity vs actual barrier cost; counterfactual behavior if barriers were removed; cultural shift analysis as alternative credentials gain acceptance",
+      "impact": "If structural: removing barriers (subsidized retraining, income support) directly reduces suppression. If internalized: workers carry suppression with them post-exit; requires narrative shift alongside material support.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized"
+    },
+    {
+      "id": "generational_accumulation",
+      "question": "Does credential inflation compound across generations (children of displaced workers face higher credential barriers) or is displacement reset between generations?",
+      "resolution_mechanism": "Intergenerational mobility analysis; credential requirement escalation across cohorts; parental displacement effect on child educational attainment and wage outcomes",
+      "impact": "If compounding: extractiveness increases with each generation; constraint should be reclassified as high-intensity Snare. If reset: constraint remains Tangled Rope with moderate per-generation extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether credential inflation compounds across generations"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Skill development displacement occurs when labor market transitions create barriers to worker retraining and credential acquisition that extract value from displaced workers while concentrating benefits among employers and high-credential holders. The constraint operates at the intersection of labor market coordination (matching workers to skill requirements) and extractive rent-seeking (credential inflation and barrier maintenance). Displaced workers face suppression mechanisms including lack of income support during retraining, geographic immobility, age discrimination, and rising credential requirements that outpace actual skill needs. Extractiveness has increased over 15 years as credential inflation accelerated and retraining program funding failed to keep pace with labor market velocity. Alternative credentialing platforms (bootcamps, micro-credentials) represent a scaffold structure with sunset potential \u2014 if these platforms can displace traditional degree requirements, the constraint's extraction mechanism loses force. The theater ratio remains moderate (0.48) because while retraining programs involve genuine skill development (low theater), traditional credentialing increasingly decouples from actual job competency (moderate theater). The constraint is diagnosed as Tangled Rope because it contains both genuine coordination (skills matching, labor market adjustment) and asymmetric extraction (workers bear transition costs, employers capture gains).",
+    "key_agents": [
+      "Displaced Workers: Primary victims (powerless/trapped) \u2014 face skill obsolescence with minimal exit options; retraining is underfunded and lengthy with no income guarantee",
+      "Incumbent Employers: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from labor supply adjustment and credential signaling without bearing transition costs; extract value through wage suppression during surplus periods",
+      "High-Skill Credentialed Workers: Secondary beneficiaries (powerful/mobile) \u2014 extract value from credential scarcity and benefit from reduced wage competition as lower-credentialed workers are displaced",
+      "Retraining Programs: Institutional actors (institutional/constrained) \u2014 coordinate labor supply adjustment but extract through opportunity costs and prolonged dependency; suppression mechanisms limit uptake and completion",
+      "Traditional Credentialing Bodies: Institutional actors (institutional/constrained) \u2014 maintain authority through inertia despite erosion of predictive value; theater ratio reflects performative verification",
+      "Alternative Credentialing Platforms: Organized actors (organized/constrained) \u2014 provide lower-cost exit pathways with genuine sunset mechanics; represent coordination alternative with lower overhead"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts from displaced workers through suppression mechanisms (lack of income support, credential inflation, age discrimination, geographic barriers) while concentrating benefits among employers and high-skill workers. The 15-year upward trajectory (0.35 \u2192 0.58) reflects credential inflation accelerating faster than retraining infrastructure improvements. Suppression (0.65): High. Structural barriers are substantial: retraining costs (tuition, opportunity cost of foregone wages), time requirements (2-4 years for degree vs weeks for bootcamp), age discrimination, geographic immobility, and psychological barriers to mid-career transition. Theater ratio (0.48): Moderate. Retraining programs involve genuine skill development (low theater), but traditional credentialing has increasing disconnect from job requirements (moderate-high theater). Credential inflation has outpaced task complexity in many fields; employers use degrees as screening mechanisms rather than competency verification. The moderate theater reflects that some genuine learning occurs within a system that also maintains barriers for non-skill reasons.",
+    "perspectival_gap": "This constraint demonstrates marked divergence between beneficiary and victim perspectives. Displaced workers experience the constraint as a snare with trap-like properties: the more they try to escape (enrolling in retraining), the more the constraint extracts (opportunity costs, tuition, time away from income). Employers experience the same constraint as rope \u2014 efficient labor market clearing. The gap reveals that the coordination function (skills matching) is real but serves primarily the interests of employers and high-skill workers, while extracting heavily from those transitioning between labor market roles.",
+    "directionality_logic": "Directionality values are derived from structural positions within the constraint. Displaced workers (powerless/trapped) have high d (~0.95) because they are structural targets with no exit capacity \u2014 the constraint extracts maximum value. Retraining participants (moderate/constrained) have d ~0.65 because they face high but surmountable costs to exit \u2014 they have some agency but significant barriers. Employers (institutional/arbitrage) have low d (~0.10) because they can access labor across multiple credential markets and geographic regions \u2014 they are structural beneficiaries. High-skill workers (powerful/mobile) have low-moderate d (~0.35) because they benefit from credential scarcity (concentration of value) but also share exposure to credential inflation as a norm setter. Traditional credentialing bodies (institutional/constrained) have moderate d (~0.45) because they maintain authority through institutional inertia but lack true arbitrage capacity \u2014 they cannot easily exit their role without losing legitimacy. Alternative credential platforms (organized/constrained) have moderate d (~0.40) because they face barriers to market penetration but retain genuine exit/competition options.",
+    "mandatrophy_analysis": "CONSTRAINT RESOLVES AS TANGLED ROPE: This constraint satisfies all three gates for tangled rope classification: (1) Genuine coordination function present: skills matching, labor supply adjustment, credential signaling reduce friction in labor market transitions; (2) Asymmetric extraction present: displaced workers bear transition costs (foregone income, tuition, time, psychological stress) while employers capture productivity gains without bearing adjustment costs; (3) Active enforcement required: credential requirements, degree gates, licensing laws maintain the constraint through institutional mechanisms. The mandatrophy is resolved by recognizing that the apparent naturalness of 'you need credentials to get jobs' naturalizes what is actually an enforced institutional arrangement. The credential inflation trajectory shows the extraction mechanism strengthening over time \u2014 credentials that once signaled real competency now function as pure barriers, but the enforcement mechanisms (employer hiring practices, professional licensing, degree requirements) persist. The alternative credentialing platforms (scaffold) represent the real exit route, which will become viable if they can prove equivalent or superior competency signals at lower cost. The constraint is neither pure coordination (benefits are asymmetric) nor pure extraction (real coordination occurs), but a genuine hybrid where the coordination function has become increasingly subordinate to the extraction mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "labor_market_wage_suppression",
+      "credential_inflation_rent_seeking",
+      "geographic_mobility_barriers"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

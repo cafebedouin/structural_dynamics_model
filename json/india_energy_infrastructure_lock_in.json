@@ -1,0 +1,213 @@
+{
+  "header": {
+    "constraint_id": "india_energy_infrastructure_lock_in",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ieili"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "India Energy Infrastructure Lock-In: Coal Dependency and Transition Friction",
+    "topic_domain": "economic_political/energy_infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "coal_mining_interests",
+      "thermal_power_operators",
+      "incumbent_utilities"
+    ],
+    "victims": [
+      "renewable_energy_sector",
+      "future_climate_adaptation_capacity",
+      "low_income_rural_communities",
+      "grid_flexibility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Rural Communities Without Grid Access",
+      "comment": "PERSPECTIVE 1: RURAL COMMUNITIES (SNARE) \u2014 Trapped by geographic isolation and income constraints. Coal-dependent grid infrastructure provides only intermittent, unreliable access. Cannot exit the constraint through market mechanisms; cannot afford distributed renewable alternatives at current capital costs. Maximum experienced extraction with no alternatives within biographical timeframe."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Renewable Energy Developers",
+      "comment": "PERSPECTIVE 2: RENEWABLE ENERGY DEVELOPERS (TANGLED ROPE) \u2014 Structurally mobile but constrained by grid integration barriers, interconnection delays, and dispatch priority rules favoring coal plants. Benefits from renewable energy mandates and declining equipment costs, but faces real barriers to market entry. Mixed coordination (grid access) with asymmetric extraction (priority dispatch rules)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Coal Mining Companies and Thermal Power Operators",
+      "comment": "PERSPECTIVE 3: COAL MINING COMPANIES & THERMAL OPERATORS (ROPE) \u2014 Experience the constraint as coordination mechanism enabling their business model. Benefit from long-term power purchase agreements, capacity utilization guarantees, and preferential dispatch. Can exit through portfolio diversification but choose not to; coordination benefits exceed exit costs. Net beneficiary position."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "State Distribution Companies (Discoms)",
+      "comment": "PERSPECTIVE 4: STATE DISCOMS (TANGLED ROPE) \u2014 Institutional actors structurally captured by cross-subsidization and cost-recovery politics. Benefit from stable coal-based supply (low price volatility, predictable costs); constrained by political pressure on tariffs, stranded assets in coal plants, and lack of capital for grid modernization. Mixed experience: genuine coordination benefits alongside asymmetric extraction from stranded cost obligations."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Climate Commitments and Green Energy Mandate",
+      "comment": "PERSPECTIVE 5: CLIMATE COMMITMENTS & GREEN MANDATE (SCAFFOLD) \u2014 India's 2030 renewable capacity target (500 GW) and Paris Agreement commitments create organized pressure for transition. High suppression currently (coal lobby, sunk costs in thermal plants), but sunset logic is explicit: renewable targets have fixed dates, international capital flows depend on progress, global supply chains for solar/wind equipment create competitive advantage for early adopters. Temporary constraint with declining suppression over generational timescale."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Coal Ministry Institutional Apparatus",
+      "comment": "PERSPECTIVE 6: COAL MINISTRY APPARATUS (PITON) \u2014 Institutional structure that has atrophied in functional capacity relative to energy transition needs. Maintains regulatory theater (energy audits, efficiency standards, clean coal technology mandates) while primary function (coal supply coordination) persists through inertia. Theater ratio high (0.58) \u2014 substantial performative compliance without commensurate functional change. Institutional identity fused with coal logistics; exists because alternatives haven't fully replaced it."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Physical Energy Density Constraint (False Summit)",
+      "comment": "PERSPECTIVE 7: PHYSICAL ENERGY DENSITY (FALSE SUMMIT) \u2014 Risk of naturalizing a contingent infrastructure choice as physical law. Coal energy density is real, but the constraint is not the physics; it's the institutional lock-in that treats coal as inevitable because infrastructure was designed for it decades ago. This perspective will be flagged as a false summit \u2014 the mountain classification naturalizes what is actually a tangled_rope at all inhabited perspectives."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "grid_stability_requirement_scope",
+      "question": "What fraction of current grid stability difficulties are genuinely caused by coal-free operation vs. caused by grid technical design for thermal baseload generation?",
+      "resolution_mechanism": "Comparative grid stability analysis from high-renewable-penetration grids (Denmark 80% wind, South Australia 60% variable renewables); technical audits of required vs. claimed stability margins in Indian grids",
+      "impact": "If genuine requirement: grid modernization costs are real and substantial, raising exit costs for renewable transition. If mostly design artifact: perceived stability requirement is performative theater, and the suppression metric is partly illusory.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Actual vs. perceived grid stability requirements for coal-free operation"
+    },
+    {
+      "id": "capital_cost_trajectory_inflection",
+      "question": "At what renewable capacity deployment level do solar/wind supply chains achieve cost dominance making thermal retirement economically rational without policy intervention?",
+      "resolution_mechanism": "Long-term cost modeling with learning curve parameters from manufacturing scale; threshold analysis for economic retirement of thermal plants",
+      "impact": "If inflection point < 300 GW: market forces will drive transition within 10-15 years, scaffold perspective dominates. If inflection > 500 GW: transition requires active policy extraction (maintaining suppression), snare perspective dominates.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Economic inflection point for thermal plant retirement"
+    },
+    {
+      "id": "stranded_asset_political_spillover",
+      "question": "Will thermal power asset write-downs (2-3 trillion INR cumulative) trigger fiscal strain on state discoms that forces renationalization or bailout, creating new extraction layers?",
+      "resolution_mechanism": "Fiscal impact modeling of stranded asset recognition; comparative case study of other energy transitions (Germany Energiewende coal closures, Australia coal region transition)",
+      "impact": "If yes: stranded costs become externalized through bailout, creating new snare constraint on general taxpayers. If no: extraction remains localized to coal sector. Either way, suppression increases during transition phase.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Political spillover from thermal plant asset write-downs"
+    },
+    {
+      "id": "distributed_renewable_autonomy_capture",
+      "question": "Do distributed rooftop solar and microgrids provide genuine exit option for rural communities, or do interconnection requirements and state discom revenue protection create new extraction layers?",
+      "resolution_mechanism": "Longitudinal tracking of net metering policy erosion; comparison of net metering tariff structures across states; analysis of interconnection queue wait times vs. renewable deployment",
+      "impact": "If genuine exit option: rural communities move from trapped to mobile, classification changes. If captured by new extraction: rural constraint persists with different mechanism, theater ratio increases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether distributed renewables provide genuine autonomy or new extraction layer"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.64
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "India's energy infrastructure lock-in represents a tangled coordination-extraction hybrid spanning decades of thermal power plant deployment, coal mining expansion, and regulatory design around coal supply. The constraint coordinates legitimate energy access and industrial capacity (rope function) while simultaneously extracting from renewables sector development, rural electrification equity, and climate adaptation capacity. Coal mining interests and thermal operators benefit from long-term power purchase agreements, capacity utilization guarantees, and system-wide dispatch priority. Renewable energy developers, rural communities without reliable grid access, and future climate adaptation capacity bear asymmetric costs. The constraint exhibits all hall-marks of institutional lock-in: sunk capital in thermal plants and coal mines, contractual obligations extending 15-20 years, workforce dependencies, political economy of coal-producing regions, and regulatory architecture designed for coal-centric dispatch. Extractiveness has increased from 0.42 (2010s) to 0.58 (present) as renewable deployment has accelerated, generating conflicts with coal plant utilization and creating visible stranded asset problems. Theater ratio has risen as policy apparatus intensifies performative compliance with renewable targets (capacity auction mandates, green energy certification) while maintaining coal plant dispatch priority. The constraint contains a genuine scaffold component: India's 2030 renewable energy targets and Paris Agreement commitments create explicit sunset logic, with capital flows and supply chains increasingly conditional on transition progress.",
+    "key_agents": [
+      "Coal Mining Companies & Thermal Power Operators: Primary beneficiary (institutional/arbitrage) \u2014 capture stable long-term contracts, preferential dispatch, portfolio concentration benefits during lock-in period",
+      "Rural Communities Without Reliable Grid Access: Primary victim (powerless/trapped) \u2014 geographic isolation, income constraints, and grid design biased toward thermal baseload make alternatives inaccessible; trapped in intermittent/absent access",
+      "Renewable Energy Developers: Secondary victim (moderate/constrained) \u2014 face grid interconnection barriers, dispatch priority disadvantages, and financing constraints; benefit from renewable mandates but constrained by institutional barriers",
+      "State Distribution Companies (Discoms): Institutional victim-beneficiary (institutional/constrained) \u2014 benefit from stable coal supply costs but trapped by cross-subsidization politics, stranded thermal assets, and capital constraints for grid modernization",
+      "Coal Ministry & Mining Ministry: Institutional beneficiary (institutional/arbitrage) \u2014 maintain regulatory dominance and coal supply coordination; can exit through portfolio diversification but benefit from status quo",
+      "International Climate Actors & Green Capital: Organized beneficiary (organized/constrained) \u2014 organized pressure for transition with explicit sunset (2030 targets), benefits from renewable market growth but constrained by Indian institutional resistance",
+      "Grid Flexibility & Future Climate Capacity: Victim abstraction (powerless/trapped) \u2014 abstract goods bearing cost of locked-in thermal dependency; cannot organize or exit"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The constraint extracts from renewable deployment (delay of 5-10 years), rural electrification (substandard service quality), and climate adaptation (sunk carbon from extended thermal plant lifespans). The rise from 0.42 to 0.58 reflects that as renewables become cheaper and more deployable, the extraction mechanism intensifies \u2014 incumbent actors increase regulatory pressure and dispatch priority rules to protect thermal utilization. This is not declining with technological change (as pure coordination would), but increasing. The metric captures the widening gap between economically rational renewable deployment and politically enforced coal utilization. Suppression (0.62): Moderate-high. Barriers include: sunk capital (150+ GW thermal capacity), long-term power purchase agreements (enforceable contracts extending 15-20 years), coal worker employment (concentrated in coal-producing regions with limited alternative employment), and regulatory architecture (dispatch rules, grid codes, environmental standards) designed around coal-centric operation. Exit for thermal operators requires capital write-downs and political permission; exit for renewable developers requires navigating interconnection queues and dispatch rules; exit for rural communities requires alternative electricity sources at accessible costs. Theater ratio (0.58): Increasing. Performance indicators include renewable capacity targets (met through auctions), efficiency standards (applied to coal plants), clean energy mandates (met through green certificates), and energy audits \u2014 substantial regulatory activity without commensurate functional change in coal dispatch priority. Theater has risen as political accountability for renewable targets has increased while institutional capacity to enforce coal exit has remained negligible.",
+    "perspectival_gap": "The constraint demonstrates maximum perspectival divergence. Coal operators see rope \u2014 coordination of energy access and industrial power with beneficial long-term contracts. Renewable developers see tangled rope \u2014 real market opportunities blocked by institutional barriers and preferential dispatch. Rural communities see snare \u2014 trapped without viable exit options. Discoms see tangled rope \u2014 stable coal costs (benefit) but stranded assets and political tariff pressure (extraction). International climate actors see scaffold \u2014 explicit sunset dates and capital flows dependent on progress, with suppression declining toward 2030. Coal ministry sees piton \u2014 institutional ritual persists through inertia despite loss of functional primacy. Analytical observer risks mountain classification (treating coal as inevitable for grid stability) that will be flagged as naturalization of contingent infrastructure design. No single perspective is 'wrong' \u2014 each captures the constraint as experienced from that structural position.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from the agent's relationship to the extraction flow. Coal companies and thermal operators benefit (d \u2248 0.10-0.15, low directionality toward extraction); renewable developers are victims (d \u2248 0.65, moderate-high toward extraction); rural communities are trapped victims (d \u2248 0.92, maximum toward extraction); discoms are mixed (d \u2248 0.55, moderate toward extraction due to constrained position and stranded costs); organized climate actors are beneficiaries with power (d \u2248 0.35, moderate toward but constrained by institutional resistance). The sigmoid f(d) function then modulates these into effective extractiveness chi. The piton perspective derives from theater ratio (0.58) exceeding functional necessity, not from high chi. The false summit perspective is an analytical risk \u2014 grid stability constraints are real, but the constraint is not physical; it is the institutional lock-in treating coal as essential.",
+    "mandatrophy_analysis": "RESOLUTION VIA PERSPECTIVAL DECOMPOSITION: The tangled rope classification is validated by the presence of both genuine coordination (energy access, industrial power supply) and asymmetric extraction (coal lock-in, renewable delay, rural service quality). Beneficiaries and victims are clearly distinguished: coal sector benefits, renewables and rural access bear costs. Active enforcement is present (dispatch rules, grid codes, interconnection barriers). The constraint resolves mandatrophy by showing that neither pure coordination (rope) nor pure extraction (snare) captures the structure \u2014 the lock-in simultaneously enables energy access (would be snare without this) and extracts through artificial preservation of high-cost thermal capacity (would be rope without this). The measurement trajectory (extractiveness rising, theater increasing) confirms that the coordination function is weakening relative to the extraction mechanism as renewable alternatives mature. The scaffold perspective provides the sunset mechanism: explicit 2030 renewable targets with capital flows conditional on progress suggest that suppression is expected to decline over 10-15 year timescale, potentially transitioning the constraint from tangled rope toward rope (as coal becomes residual) or toward snare (if stranded costs cascade into new extraction layers). The piton perspective is a warning signal \u2014 institutional inertia may prevent the intended transition even after suppression declines, creating a degraded snare rather than a clean rope handoff."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "indian_renewable_manufacturing_capacity",
+      "coal_worker_transition_livelihoods",
+      "grid_interconnection_bottleneck",
+      "discoms_financial_sustainability",
+      "rural_electrification_equity"
+    ],
+    "dual_formulation_note": "India's energy infrastructure lock-in is decomposable into multiple structurally distinct constraints with different \u03b5 values. The present story captures the macroeconomic lock-in (coal vs. renewables system-level competition, \u03b5=0.58). Downstream constraints include grid technical architecture (renewable integration barriers, \u03b5=0.40-0.50), coal worker transition (livelihood extraction, \u03b5=0.60-0.70), and discom fiscal strain (financial extraction, \u03b5=0.55-0.65). Each has distinct perspectives and resolution pathways but all are influenced by the macroeconomic lock-in. This story models the system-level constraint; linked stories address specific mechanism layers."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

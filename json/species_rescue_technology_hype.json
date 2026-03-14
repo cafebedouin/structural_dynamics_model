@@ -1,0 +1,220 @@
+{
+  "header": {
+    "constraint_id": "species_rescue_technology_hype",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "srtech"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Species Rescue Technology Hype Cycle",
+    "topic_domain": "conservation/biotechnology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "biotech_companies",
+      "academic_researchers",
+      "conservation_marketing_orgs"
+    ],
+    "victims": [
+      "field_conservation_funding",
+      "habitat_protection_capacity",
+      "endangered_species_actual_recovery"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Endangered Species and Habitat Systems",
+      "comment": "PERSPECTIVE 1: ENDANGERED SPECIES (SNARE) \u2014 Trapped within a system that redirects scarce conservation resources toward speculative technological interventions rather than proven habitat protection. Actual species recovery declines even as hype-driven funding increases. No exit option; bears full cost of delayed and diverted resources. Maximum extraction experienced."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "label": "Field Conservation Organizations",
+      "comment": "PERSPECTIVE 2: FIELD CONSERVATION ORGS (SNARE via identity_locked) \u2014 Structurally mobile: could shift funding back to habitat protection, pursue alternative conservation models, or challenge tech narratives. But identity-locked into a conservationist framing that celebrates technological solutions as inevitable progress. Identity fusion with 'cutting-edge' framing prevents recognition that they are reproducing the extraction mechanism. Organizational identity becomes dependent on appearing technologically sophisticated. Exit would require abandoning 'conservation innovator' self-concept."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Donor Funding Base",
+      "comment": "PERSPECTIVE 3: DONOR FUNDING BASE (TANGLED ROPE) \u2014 Constrained by information asymmetry and desire to believe in solutions. Coordination benefit exists: donors genuinely want to fund effective conservation, and hype channels enthusiasm and capital that might otherwise be dormant. But extraction occurs through misallocation: funds flow to charismatic tech rather than to unsexy habitat work. Constrained exit: donors face costs of reputation damage if they defund high-profile initiatives, but retain some agency in portfolio rebalancing."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Biotech and Synthetic Biology Companies",
+      "comment": "PERSPECTIVE 4: BIOTECH COMPANIES (ROPE) \u2014 Net beneficiaries experiencing the constraint as pure coordination. Hype enables venture funding, attracts talent, and creates market narratives for genome editing, de-extinction, and synthetic biology applications. Companies can arbitrage between hype cycles: move to next charismatic species or next technological narrative when current funding dries up. Extraction flows toward this agent; they experience the constraint as a coordination mechanism enabling their expansion."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Academic Research Institutions",
+      "comment": "PERSPECTIVE 5: ACADEMIC RESEARCHERS (ROPE) \u2014 Organized beneficiaries with arbitrage options. Hype enables grant funding, career advancement through high-profile publications, and access to technology partnerships. Researchers experience the constraint as enabling: the hype cycle funds labs, attracts students, and opens career pathways. Can arbitrage by shifting research focus across hype cycles. Net benefit through career prestige and resource access."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Conservation Policy Frameworks",
+      "comment": "PERSPECTIVE 6: POLICY AND GOVERNANCE (PITON) \u2014 Conservation policy rhetoric has internalized 'technology will solve this' framing despite decades of evidence that habitat protection is the primary driver of species recovery. Policy institutions maintain the appearance of technological engagement while actual enforcement of habitat law declines. Theater dominates: species action plans reference genome sequencing and gene drives; actual enforcement of wetland protection statutes atrophies. Piton because the primary function (habitat conservation) has degraded while theatrical commitment (technology narratives) increases."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 The constraint exhibits genuine coordination: technology funding mobilizes capital and attention that would otherwise be dormant; researchers collaborating across institutions build genuine knowledge infrastructure. But extraction is structurally embedded: the coordination mechanism simultaneously channels resources away from proven interventions (habitat protection, anti-poaching enforcement, anti-fragmentation policy). Benef fit and cost cannot be decoupled; the mechanism is hybrid."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technology_readiness_ambiguity",
+      "question": "Are speculative technologies (de-extinction, synthetic populations, gene drives) genuinely intermediate solutions, or are they funding-absorbing dead-ends that will never achieve operational efficacy at scale?",
+      "resolution_mechanism": "10-20 year longitudinal tracking: compare promised timelines and cost projections at hype peak vs actual implementation outcomes. Track what fraction of announced technologies achieve real-world deployment and species-level impact.",
+      "impact": "If genuinely intermediate: tangled_rope classification confirmed; extraction coexists with real benefit. If dead-ends: extraction is pure (snare), and the constraint is Goodhart fraud \u2014 theater pretending to be function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether speculative technologies will achieve operational efficacy or remain perpetual dead-ends"
+    },
+    {
+      "id": "counterfactual_funding_redirect",
+      "question": "What fraction of biotech/academic species conservation funding would redirect to habitat protection if hype narratives collapsed, vs what would simply evaporate?",
+      "resolution_mechanism": "Natural experiment analysis: examination of donor behavior when hype cycles collapse (e.g., decline of de-extinction interest post-2024). Surveys of conservation program directors about funding reallocation under scenarios without biotech hype.",
+      "impact": "If high redirect fraction: constraint is allocation distortion (victims still receive benefits, just misdirected). If most funding evaporates: constraint is net-negative for victims, and suppression of habitat alternatives is real extraction.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Counterfactual funding behavior absent hype narratives"
+    },
+    {
+      "id": "field_organizational_identity_fusion",
+      "question": "Are field conservation organizations genuinely identity-locked into technology narratives, or do they strategically deploy hype language while maintaining private skepticism about efficacy?",
+      "resolution_mechanism": "Discourse analysis of private communications (board minutes, internal strategy docs) vs public-facing messaging. Interviews with program directors about stated vs actual conservation priorities when hype pressure is absent.",
+      "impact": "If genuinely identity-locked: perspective 2 classification (snare via identity_locked) confirmed; unlock requires identity shift. If strategic: organizations have agency and suppression is lower than measured; reclassify to constrained exit.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Degree of genuine identity fusion vs strategic deployment of hype language"
+    },
+    {
+      "id": "policy_theater_intentionality",
+      "question": "Do policy makers genuinely believe technology will substitute for habitat protection, or do they use technology narratives cynically to avoid implementing politically costly habitat law enforcement?",
+      "resolution_mechanism": "Institutional discourse analysis: compare rhetoric about technology in public hearings vs private policy documents. Longitudinal tracking of budget allocations for habitat enforcement relative to technology investment.",
+      "impact": "If genuine belief: policy institutions are captured by hype narratives (piton classification valid). If cynical deployment: constraint is deliberately obfuscatory extraction, and classification may shift to snare at the policy level.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether policy theater reflects genuine belief or cynical misdirection"
+    },
+    {
+      "id": "habitat_decline_attribution",
+      "question": "What fraction of observed accelerating species decline attributable to resource misdirection via hype cycles vs to exogenous factors (climate, land use, pollution) beyond conservation control?",
+      "resolution_mechanism": "Species recovery model comparison: simulations of counterfactual funding allocation (habitat protection vs current mix) vs observed outcomes. Control for confounding drivers; isolate conservation-controllable variance.",
+      "impact": "If high attribution to misdirection: constraint causes measurable harm (victims bear real extraction cost). If low: hype may be epiphenomenal to dominant decline drivers, and suppression metrics should be recalibrated.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Attribution of species decline to hype-driven resource misdirection"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.73
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Species rescue technology hype represents a structural constraint where the coordination mechanism (channeling capital and attention toward conservation through charismatic technological narratives) is inseparable from an extraction mechanism (redirecting resources away from proven habitat protection toward speculative interventions with lower real-world impact). The constraint operates at multiple scales: funding organizations experience it as enabling their expansion; biotech companies arbitrage between hype cycles; academic researchers benefit from high-profile publication opportunities; field conservation NGOs internalize technology-forward framing as part of organizational identity; donors experience information asymmetry that suppresses skepticism; and species themselves experience delayed recovery as conservation resources flow toward genome editing and synthetic biology rather than anti-poaching enforcement and habitat protection. The theater ratio has increased from 0.48 to 0.73 over fifteen years, reflecting the growing gap between narrative commitments (we will de-extinct the passenger pigeon, we will engineer climate-resistant corals) and implemented practice (habitat degradation accelerates despite record conservation funding). This is a diagnostic case of how coordination narratives can be captured by extraction mechanisms: the underlying story\u2014that technology will solve conservation\u2014is coherent and appealing to funders; it mobilizes capital that might otherwise remain dormant; but it simultaneously channels that capital away from interventions with proven efficacy.",
+    "key_agents": [
+      "Biotech and Synthetic Biology Companies: Primary beneficiaries (institutional/arbitrage) \u2014 capture venture funding, market narratives, and talent pipeline. Can arbitrage across multiple hype cycles.",
+      "Academic Research Institutions: Primary beneficiaries (organized/arbitrage) \u2014 researchers gain funding, prestige, and career advancement through high-profile species rescue narratives.",
+      "Conservation Marketing Organizations: Secondary beneficiaries (organized/arbitrage) \u2014 funding-dependent nonprofits benefit from public salience of hype narratives; experience constraint as enabling fundraising.",
+      "Endangered Species and Ecosystems: Primary victims (powerless/trapped) \u2014 experience delayed recovery as resources redirect toward speculative tech rather than habitat protection.",
+      "Field Conservation Organizations: Secondary victims (powerless/identity_locked) \u2014 structurally mobile (could prioritize habitat protection) but identity-fused with technology narratives. Self-identity as conservation innovators prevents recognition of extraction.",
+      "Donor Funding Base: Mixed (moderate/constrained) \u2014 constrained by information asymmetry; experiences both coordination (capital mobilized) and extraction (misdirection).",
+      "Policy and Governance Institutions: Complicit maintainers (institutional/constrained) \u2014 theater increases; actual enforcement of habitat law atrophies. Piton classification.",
+      "Analytical Observer: Structural witness (analytical/analytical) \u2014 sees tangled hybrid mechanism that cannot cleanly separate benefit from cost."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts resources from habitat protection (proven efficacy, unsexy, difficult) toward speculative technology (charismatic, narrative-rich, fundable). The extraction accelerated from 0.35 to 0.58 over the measurement interval, driven by: (1) increasing biotech venture appetite for conservation narratives, (2) academic incentives for novel research over replication of habitat-protection work, (3) donor preference for solutions-oriented narratives. Suppression (0.62): Moderate-high. Multiple barriers prevent exit or redirection: (a) information asymmetry \u2014 most donors cannot distinguish speculative from proven interventions; (b) identity lock \u2014 organizations have internalized technology narratives; (c) career lock \u2014 researchers have built expertise and reputation in hype-aligned domains; (d) policy capture \u2014 governance institutions have rhetorically committed to technology pathways and face costs of reversal. Theater ratio (0.68 rising to 0.73): High and increasing. The gap between narrative investment and functional impact widens. Species action plans increasingly reference genome editing and synthetic biology; actual resource allocation to these domains is rising while endangered species continue to decline. The theater-to-function ratio indicates that much conservation discourse is performative.",
+    "directionality_logic": "Biotech companies and academic institutions experience low d values (beneficiaries with arbitrage options) \u2014 they extract via the coordination mechanism but can exit by shifting hype focus. They experience \u03c7 as beneficial. Field conservation organizations experience high d (victims despite structural mobility) because their identity frame prevents recognizing exit options. Endangered species experience maximum d (trapped, powerless) \u2014 they bear extraction with no alternative. Donors experience intermediate d (constrained by information asymmetry) \u2014 they benefit from the coordination narrative (feeling they are funding solutions) but bear extraction through misdirection cost. Policy institutions experience constrained d (cannot reverse course without political cost) \u2014 the theater has become institutionalized. The analytical observer recognizes that d differs radically across positions despite observing the same structural phenomenon.",
+    "perspectival_gap": "The perspectival gap is maximal. Biotech companies see a pure coordination mechanism (Rope) \u2014 hype funds their growth. Academic researchers see career opportunity (Rope) \u2014 prestige flows toward novel tech research. Conservation NGOs experience capture via identity-lock (Snare) \u2014 they cannot exit because their self-concept depends on appearing innovative. Field practitioners see pure extraction (Snare) \u2014 they have evidence that habitat protection works and watch funding flow elsewhere. Policy institutions see their own degradation (Piton) \u2014 public commitment to technology narratives alongside atrophying habitat enforcement. Donors see coordination with some misdirection (Tangled Rope) \u2014 they benefit from feeling part of a solution while bearing allocation inefficiency. The analytical observer sees a hybrid mechanism (Tangled Rope) where the coordination and extraction cannot be separated: the very narrative that mobilizes capital simultaneously misdirects it.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint is genuinely tangled: both rope and snare elements are structurally real. The coordination benefit (hype mobilizes dormant capital; technology research builds knowledge infrastructure) is not theater \u2014 it is real. But the extraction mechanism (redirection from proven interventions) is equally real. The false summit is the claim that technology is a substitute for habitat protection rather than a complement. Most beneficiaries (biotech, academia) experience the constraint as enabling their growth (rope), while most victims (species, habitat systems, field practitioners) experience it as pure extraction (snare). The constraint cannot be resolved by choosing one type \u2014 it requires managing the hybrid. Mandatrophy resolution requires acknowledging that funding hype and resource misdirection are inseparable faces of the same mechanism. No unitary classification captures the full reality; instead, the presheaf of perspectives at different (P,T,E,S) positions constitutes the complete structural description."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "habitat_protection_enforcement",
+      "academic_publication_bias_conservation",
+      "venture_capital_nature_commodification"
+    ],
+    "dual_formulation_note": "This constraint is part of a larger constraint family around conservation funding allocation mechanisms. Upstream: venture_capital_nature_commodification (how biotech financing enters conservation discourse). Downstream: habitat_protection_enforcement (how hype narratives suppress investment in unglamorous but proven interventions). Each story in the family has distinct \u03b5 and perspectival structure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.38
+    }
+  ]
+}

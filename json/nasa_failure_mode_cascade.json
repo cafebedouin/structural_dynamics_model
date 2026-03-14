@@ -1,0 +1,207 @@
+{
+  "header": {
+    "constraint_id": "nasa_failure_mode_cascade",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "NASA Failure Mode Cascade and Risk Normalization",
+    "topic_domain": "organizational/safety/aerospace_engineering",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mission_schedule_pressure",
+      "bureaucratic_risk_management"
+    ],
+    "victims": [
+      "safety_culture",
+      "frontline_engineers",
+      "astronauts"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Frontline Engineer",
+      "comment": "PERSPECTIVE 1: FRONTLINE ENGINEER (SNARE) \u2014 Structurally trapped within hierarchical reporting lines that suppress dissent. Career consequences for escalating safety concerns; no mechanisms for independent safety review; retaliation implicit in institutional culture. Maximum extraction: bears costs of safety degradation while having no power to prevent it. The constraint extracts obedience while suppressing the very information needed for course correction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Astronaut",
+      "comment": "PERSPECTIVE 2: ASTRONAUT (SNARE) \u2014 Professional commitment to mission (identity_locked component) combined with asymmetric information about risk. Mission timeline pressures dominate risk assessment. No structural exit: professional identity fused with willingness to accept calculated risk. Trapped within the cascade because the institutional narrative frames mission success as value-transcendent, making dissent appear cowardly or insufficient faith in the machine."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Level Program Manager",
+      "comment": "PERSPECTIVE 3: MID-LEVEL PROGRAM MANAGER (TANGLED ROPE) \u2014 Experiences genuine coordination function: aggregating subsystem data, risk analysis, resource allocation across complex integration. Also experiences extraction: schedule pressure from above, suppression of bad news, incentive misalignment between career advancement and actual safety outcomes. Constrained exit because program continuity depends on their institutional knowledge; leaving damages their career and the program simultaneously."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Mission Success Narrative",
+      "comment": "PERSPECTIVE 4: MISSION SUCCESS NARRATIVE (ROPE) \u2014 Benefits from the cascade through coordination of political, budgetary, and technical requirements into a coherent story of progress. Arbitrage position: can selectively highlight successes, defer failures, reframe risks as managed uncertainties. Low extraction experienced because the narrative apparatus captures the benefits of constraint maintenance while externalities (risk normalization, culture degradation) are borne by frontline actors."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Safety Engineering Function",
+      "comment": "PERSPECTIVE 5: SAFETY ENGINEERING FUNCTION (TANGLED ROPE) \u2014 Organized group with genuine safety coordination role (risk analysis, failure mode identification, integration testing). Also experiences extraction: safety concerns deprioritized against schedule pressure, resources allocated to mission critical path rather than verification, escalation mechanisms bypassed in crisis conditions. Constrained exit because safety engineering legitimacy depends on being embedded in mission structure; independence would isolate them from decision data."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Risk Management Theater",
+      "comment": "PERSPECTIVE 6: RISK MANAGEMENT THEATER (PITON) \u2014 Post-Challenger, NASA implemented elaborate quantified risk assessment (QRA) procedures: probability estimates, failure mode tables, sign-off documentation. The theater persists despite low functional verification: QRA accuracy correlates poorly with actual failure rates, risk numbers are negotiable under schedule pressure, and the ritual primarily serves stakeholder confidence rather than risk reduction. Performative system maintained through institutional inertia despite known limitations."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some risk normalization is inherent to large-scale engineering projects: the more experience accumulated without failure, the more compelling the argument that current margins are sufficient. This perspective risks naturalizing what is actually a contingent institutional failure: the cascade is not an immutable property of complex systems but a specific organizational pathology where status hierarchy suppresses dissent and schedule pressure overrides safety deliberation."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "risk_normalization_threshold",
+      "question": "At what point does accumulated mission success without failure transition from reasonable confidence margin adjustment to pathological risk normalization?",
+      "resolution_mechanism": "Historical failure-rate data correlated with quantified risk estimates at time of mission; identification of inflection points where QRA predictions systematically underestimated actual failure rates",
+      "impact": "If threshold < 50 consecutive success flights: current NASA practices may already exceed safe risk envelope. If threshold > 200 flights: normalization is more gradual than data suggests. Determines whether cascade represents active extraction or passive drift.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for risk normalization vs. reasonable confidence adjustment"
+    },
+    {
+      "id": "hierarchy_suppression_mechanism",
+      "question": "Is risk information suppression primarily a deliberate institutional strategy or an emergent outcome of hierarchical reporting structures under schedule pressure?",
+      "resolution_mechanism": "Analysis of pre-launch communications, decision meeting transcripts, escalation attempt documentation; comparison of suppression rates in crisis vs. nominal conditions; organizational analysis of incentive structures vs. explicit directives",
+      "impact": "If deliberate strategy: requires systemic intervention in decision authority and accountability. If emergent from structure: can be addressed through transparency mechanisms, cross-functional review, and schedule protection.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether suppression is deliberate institutional strategy or structural emergence"
+    },
+    {
+      "id": "safety_culture_recovery_pathway",
+      "question": "Can safety culture be restored within the current hierarchical mission structure, or does the constraint require reorganization to separate safety verification from schedule authority?",
+      "resolution_mechanism": "Comparison of safety culture metrics (incident reporting rates, near-miss escalation) in different organizational models; longitudinal tracking of proposed structural changes and their correlation with safety outcomes",
+      "impact": "If recovery possible within current structure: the tangled_rope classification holds and coordination function can be restored. If structural separation required: the constraint is a snare that cannot be reformed by better processes alone.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether safety culture recovery requires structural reorganization"
+    },
+    {
+      "id": "identity_locked_astronaut_exit",
+      "question": "For astronauts experiencing identity_locked exit options, how would dissent from mission manifest in practice? What percentage of astronauts would voice safety concerns if retaliation mechanisms were removed?",
+      "resolution_mechanism": "Anonymized safety concern surveys in parallel reporting structure; post-flight interviews using explicit protection against retaliation; comparison of concern rates before/after implementation of independent safety escalation channels",
+      "impact": "If high percentage would dissent: identity lock is secondary to suppression (treat as trapped rather than identity_locked). If low percentage: identity fusion with mission is genuine constraint even absent institutional retaliation.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Extent of identity lock vs. structural suppression for astronauts"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 45
+  },
+  "commentary": {
+    "narrative_context": "The NASA failure mode cascade represents a structural constraint where institutional hierarchy, schedule pressure, and success-breeds-confidence dynamics combine to suppress safety-critical information and normalize acceptance of increasing risk margins. The constraint exhibits the characteristic signature of a tangled rope: a genuine coordination function (aggregating complex subsystem data into mission feasibility assessment) coupled with asymmetric extraction (risks externalized onto powerless frontline engineers and astronauts while benefits flow to schedule maintainers and mission leadership). The theater ratio of 0.68 reflects that post-Challenger quantified risk assessment procedures are substantially performative: they produce documentation and decision trails that satisfy stakeholder confidence requirements but correlate poorly with actual mission risk. The cascade is not a simple snare because some actors (program managers, safety engineers) genuinely coordinate complex integration. It is not pure rope because the coordination is embedded within an extraction mechanism that suppresses the very dissent necessary for course correction. The constraint's suppression value (0.65) reflects multiple overlapping mechanisms: hierarchical authority structure that makes dissent costly, professional identity fusion for astronauts that makes risk questions appear disloyal, retaliation risk for engineers who escalate concerns outside approved channels, and the organizational epistemic closure that accumulating success produces (previous narrow margins were acceptable, therefore current narrower margins are acceptable).",
+    "key_agents": [
+      "Frontline Engineers: Primary victims (powerless/trapped) \u2014 bear costs of safety degradation while having no institutional mechanism to prevent it; face career retaliation for escalating concerns",
+      "Astronauts: Primary victims (powerless/identity_locked) \u2014 professional identity fused with willingness to accept mission risk; structurally mobile (could resign) but identity-locked against exercising that option",
+      "Safety Engineering Function: Organized secondary victims (organized/constrained) \u2014 possess expertise and formal authority for safety review but constrained by embeddedness in mission hierarchy; resources and attention allocated away from verification under schedule pressure",
+      "Mid-Level Program Managers: Mixed position (moderate/constrained) \u2014 genuine coordination role but also extraction: schedule pressure from above, suppression of bad news, incentive misalignment between career advancement and safety outcomes",
+      "Mission Success Narrative: Primary beneficiary (institutional/arbitrage) \u2014 captures political and budgetary benefits of schedule maintenance while externalities (risk normalization) are borne by others",
+      "Risk Management Theater: Institutional system (institutional/arbitrage) \u2014 maintains performative procedures that satisfy stakeholder confidence while low functional verification; perpetuated through post-Challenger institutional inertia",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional failures as immutable properties of complex systems"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, rising over the interval. Initial value (0.32) reflects early post-Challenger safety culture emphasis. Middle value (0.45) reflects gradual schedule pressure increasing as program maturity normalizes risk margins. Final value (0.58) reflects systematic risk elevation in pursuit of increasingly ambitious mission schedules. The trajectory shows cumulative extraction rather than stable mechanism \u2014 each successful mission with narrow margin justifies accepting even narrower margins for the next mission. Suppression (0.65): High. Multiple overlapping suppression mechanisms: hierarchical authority structure that concentrates information and suppresses dissent, identity fusion (astronauts cannot exit without abandoning professional identity), professional retaliation risk (engineers who escalate safety concerns face career damage), and organizational epistemic closure (success breeding confidence in current margins). Theater ratio (0.68): Moderate-high, rising over the interval. Post-Challenger quantified risk assessment produces extensive documentation and decision trails but low functional verification. Risk numbers are negotiable under schedule pressure; QRA accuracy correlates poorly with actual failure modes. The ritual serves stakeholder confidence (demonstrating 'rigor') rather than actual risk reduction.",
+    "directionality_logic": "The primary beneficiary of the constraint is the mission success narrative and schedule maintainers, who capture political and budgetary benefits of on-time, on-budget execution. Their directionality is low (full beneficiary position) because they experience the constraint as coordination: aggregating complex technical requirements into feasible schedules. The primary victims are frontline engineers and astronauts, who bear extraction through suppressed voice and externalized risk. Engineers are trapped (directionality high) because hierarchical authority and retaliation risk prevent exit. Astronauts are identity_locked (directionality high-moderate) because professional identity is fused with willingness to accept mission risk, making dissent appear disloyal even absent institutional retaliation. Mid-level program managers occupy a hybrid position: constrained exit because institutional embeddedness is career-defining, yet some coordination function legitimacy. The piton classification derives from the theater ratio \u2014 performative risk management procedures persist through institutional inertia despite known limitations.",
+    "perspectival_gap": "This constraint demonstrates why single-perspective analysis fails to capture institutional pathologies. The mission success narrative sees coordination (rope) \u2014 they are solving a legitimate problem of aggregating complex requirements. Frontline engineers see pure extraction (snare) \u2014 their voice is systematically suppressed and their risk bears without recourse. Safety engineers see mixed coordination and extraction (tangled_rope) \u2014 they have legitimate integration role but constrained authority and resource starvation. Program managers see constraint (tangled_rope) \u2014 both coordinating complexity and bearing pressure from above/below. The institutional risk management system sees its own ritual as degraded (piton) \u2014 post-Challenger procedures exist through inertia rather than effective function. The civilizational analytical observer risks seeing natural law (mountain) \u2014 complexity breeds risk, margins erode, success breeds confidence. But the structural data reveals this as naturalization of contingent organizational failure: the cascade is not an inherent property of complex systems but an extractive mechanism that uses technical coordination as cover for risk externalization.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that all six types are legitimate readings of the same structural phenomenon, but the preponderance of snare/tangled_rope classifications (4 out of 7 perspectives) reveals the constraint's true character: it is fundamentally extractive, with coordination function embedded as justification rather than primary purpose. The piton classification (degraded ritual) is diagnostic \u2014 it identifies that post-Challenger risk management theater serves institutional legitimacy rather than safety verification. The mountain classification is a false summit (naturalization). The rope classification (mission narrative) reflects beneficiary perspective rather than structural reality. The tangled_rope and snare classifications accurately capture the constraint's mechanism: legitimate coordination problems (system integration, risk aggregation) are the vehicle through which risk is extracted and suppressed. The constraint persists not because coordination is impossible without it, but because the extraction mechanism benefits powerful actors (mission leadership, schedule maintainers) while costs are borne by powerless ones (engineers, astronauts)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "organizational_culture_suppression",
+      "schedule_driven_risk_elevation",
+      "astronaut_autonomy_erosion"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ]
+}

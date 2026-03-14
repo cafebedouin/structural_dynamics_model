@@ -1,0 +1,223 @@
+{
+  "header": {
+    "constraint_id": "welfare_cliff_effects",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "welf"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Welfare Cliff Effects: Poverty Trap Through Benefit Discontinuity",
+    "topic_domain": "economic_policy/social_welfare",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "fiscal_conservatism_coalition",
+      "administrative_overhead_reduction"
+    ],
+    "victims": [
+      "low_income_workers",
+      "benefit_recipients_at_threshold",
+      "single_parents_earning_near_cutoff"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Low-Income Worker at the Cliff",
+      "comment": "PERSPECTIVE 1: LOW-INCOME WORKER AT CLIFF (SNARE) \u2014 Faces sharp discontinuity in take-home income as earnings cross benefit threshold. Trapped by the structure: earning $1 more results in losing $3-5 in benefits, creating effective marginal tax rate of 300-500%. No exit option exists within the constraint. Maximum extraction experienced \u2014 the worker bears full cost of the threshold mechanism."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "label": "The Single Parent Trapped by Identity and Economics",
+      "comment": "PERSPECTIVE 2: SINGLE PARENT WITH IDENTITY LOCK (SNARE) \u2014 Structurally mobile (could relocate, retrain) but identity-locked to 'primary caregiver' role. Perceives cliff through fused lens of parental identity and economic dependency. Cannot imagine leaving childcare arrangement or part-time status that keeps income below threshold without experiencing identity dissolution. Suppression is both structural (childcare costs, transportation barriers) and internalized (guilt about working more, cultural narratives about motherhood)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Fiscal Conservative Policy Coalition",
+      "comment": "PERSPECTIVE 3: FISCAL CONSERVATIVE POLICY COALITION (ROPE) \u2014 Benefits from sharp cliff because it reduces administrative overhead and controls benefit roll-off. Experiences the constraint as coordination mechanism: the cliff is an efficient (if harsh) rule that solves the categorical problem of 'who qualifies?' without means-tested phase-out complexity. Net beneficiary \u2014 the mechanism serves their policy objective of cost control."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Healthcare/Childcare Dependent",
+      "comment": "PERSPECTIVE 4: HEALTHCARE AND CHILDCARE DEPENDENT (TANGLED ROPE) \u2014 Faces both coordination benefit (access to subsidized childcare/healthcare while below threshold) and extraction (loss of subsidies creates high marginal cost to earning slightly more). The constraint serves genuine coordination (matching childcare supply to demand below threshold) while simultaneously extracting from those near the boundary. Constrained exit: can work more, but at severe cost. This perspective experiences the mixed function characteristic of tangled rope."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Welfare Administration Bureaucracy",
+      "comment": "PERSPECTIVE 5: WELFARE ADMINISTRATION BUREAUCRACY (PITON) \u2014 The cliff mechanism persists largely through institutional inertia: welfare systems were designed with discrete eligibility categories decades ago, and the administrative apparatus (staff training, computer systems, benefit determination rules) remains locked into these categories despite recognition that the cliff creates perverse incentives. The theater is high (eligibility determinations, verification processes) but the function has atrophied \u2014 modern alternatives (negative income tax, earned income tax credit phase-out) would serve the coordination goal better. The bureaucracy maintains the cliff through path dependency, not active necessity."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Earnings Supplement Reform Coalition",
+      "comment": "PERSPECTIVE 6: EARNINGS SUPPLEMENT REFORM COALITION (SCAFFOLD) \u2014 Organized agents (nonprofits, progressive economists, state welfare offices) see the cliff as a temporary coordination failure with a genuine sunset: earned income tax credit expansion, negative income tax pilots, and gradual phase-out mechanisms are building alternative architectures that preserve work incentives while maintaining support. This coalition has identified the exit path (smooth phase-out rather than cliff) and is constructing it. Low effective extraction from this perspective because the structure has a visible horizon and the coalition has agency in building alternatives."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Alleged Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FALSE SUMMIT (MOUNTAIN) \u2014 Tempting to argue that welfare cliffs are inherent to any categorical benefit system: once you define eligibility categories, discontinuities appear at boundaries. This is a false summit. The cliff is not inherent to the concept of categorical benefits \u2014 it is a contingent choice about how to design the boundary. Smooth phase-out (which accomplishes the same coordination goal of connecting support to need) has the same logical foundation. The mountain classification reveals when 'this is just how welfare works' has naturalized a design choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "behavioral_response_elasticity",
+      "question": "How much do workers actually reduce hours/earnings in response to the cliff versus how much do they remain trapped in the low-earnings trap?",
+      "resolution_mechanism": "Quasi-experimental analysis using state-level cliff discontinuities; labor supply response analysis comparing regions with sharp vs gradual phase-outs; longitudinal tracking of worker trajectories at threshold",
+      "impact": "If high behavioral response: the snare classification is correct \u2014 workers are actively constrained by the disincentive. If low behavioral response: extraction mechanism may be institutional inertia rather than active suppression; Piton classification becomes more prominent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Labor supply elasticity response to cliff discontinuities"
+    },
+    {
+      "id": "threshold_awareness_and_cognition",
+      "question": "Do workers understand the cliff effect exists and can accurately calculate their take-home income at different earnings levels?",
+      "resolution_mechanism": "Survey of benefit recipients near threshold; cognitive testing of perceived marginal tax rates; analysis of whether actual earnings patterns cluster below threshold (indicating awareness) or cross freely (indicating lack of awareness)",
+      "impact": "If high awareness: suppression is active and intentional (workers organize around the constraint). If low awareness: suppression works through structural complexity rather than transparent disincentive \u2014 extraction mechanism relies on cognitive capture/information asymmetry rather than clear tradeoff.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Recipient awareness and understanding of welfare cliff structure"
+    },
+    {
+      "id": "administrative_cost_savings_verification",
+      "question": "Do cliff-based categorical systems actually cost less to administer than graduated phase-out systems, or is the claimed efficiency gain a justification story?",
+      "resolution_mechanism": "Comparative cost accounting: total administrative spending (staff, systems, verification) in categorical systems vs smooth phase-out systems; per-beneficiary cost analysis; overhead burden analysis",
+      "impact": "If categorical systems are genuinely cheaper: the fiscal conservative coalition's rope classification reflects real coordination benefit. If costs are comparable: the cliff's existence is not justified by efficiency \u2014 it is pure extraction mechanism maintained by organizational path dependency (stronger piton signal).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "True administrative cost comparison between categorical and graduated systems"
+    },
+    {
+      "id": "internalized_suppression_persistence",
+      "question": "For beneficiaries with identity_locked exit options, does the suppression they experience persist after earning enough to exit the system, or does it dissolve?",
+      "resolution_mechanism": "Longitudinal tracking of former beneficiaries who escaped the cliff: do they maintain low earnings/hours patterns months/years after cliff is no longer binding? Do they report reduced identity-based barriers after crossing threshold permanently?",
+      "impact": "If suppression persists: the identity lock is genuinely internalized; the constraint travels with the agent even after the structural mechanism is removed. This indicates deeper extraction mechanism (psychological entrapment) than the structural cliff alone. If suppression dissolves: the snare classification captures the mechanism \u2014 it was the external barrier, not identity.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized for identity-locked agents"
+    },
+    {
+      "id": "phase_out_design_political_feasibility",
+      "question": "Are gradual phase-out mechanisms (which solve the coordination problem without cliffs) politically achievable, or are they blocked by ideology/coalition dynamics?",
+      "resolution_mechanism": "Legislative history analysis; comparative analysis of states that implemented smooth phase-outs; stakeholder interviews with fiscal conservatives about why cliff-based design is defended; modeling of political economy of reform",
+      "impact": "If politically feasible: scaffold classification is structurally valid \u2014 sunset mechanism exists and can be activated. If blocked: the scaffold perspective is aspirational; the constraint may be locked in by political equilibrium rather than technical inevitability. Implies mandatrophy is not resolvable through reform \u2014 the snare is sustained by political choice.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Political feasibility of smooth phase-out alternatives"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Welfare cliff effects occur when benefit eligibility criteria create sharp income thresholds where earning slightly more income results in losing benefit access, producing effective marginal tax rates of 300-500% and trapping workers in low-earning equilibrium. This constraint operates across most developed nations' welfare systems and affects millions of beneficiaries. The cliff is justified as an administrative efficiency mechanism (categorical eligibility reduces means-testing complexity) but functions as a pure extraction mechanism from the perspective of trapped workers. The constraint demonstrates how indexical classification reveals competing narratives: fiscal conservatives see coordination (efficient categorical design), administrators see institutional inertia (piton), reform coalitions see a temporary problem with solution pathway (scaffold), and trapped workers see structural extraction with no exit (snare). The extractiveness score (0.58) reflects that the mechanism is moderately severe \u2014 the benefit loss is real and disruptive, but not total impoverishment. The suppression score (0.72) reflects high barriers to exit: childcare costs, transportation, skill gaps, and identity-locked caregiving roles constrain workers' ability to find employment that pays more than the cliff threshold.",
+    "key_agents": [
+      "Low-income workers earning near benefit threshold: Primary victims (powerless/trapped) \u2014 face 300-500% marginal tax rates at threshold crossing",
+      "Single parents and caregivers: Secondary victims (powerless/identity_locked) \u2014 structurally mobile but identity-fused to caregiving roles that keep income below threshold",
+      "Fiscal conservative policy coalitions: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from administrative simplicity and cost control; experience constraint as coordination",
+      "Welfare administration bureaucracy: Secondary beneficiary (institutional/arbitrage) \u2014 maintains categorical systems due to path dependency; sees own process as degraded (piton perspective)",
+      "Reform coalitions (nonprofits, progressive economists): Organized agents (organized/mobile) \u2014 see cliff as temporary problem with solution pathway; building earned income tax credit expansion and smooth phase-out alternatives",
+      "Healthcare/childcare systems: Mixed (moderate/constrained) \u2014 provide genuine coordination function at low-income level while creating cliff through benefit discontinuity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The welfare cliff creates genuine extraction from trapped workers through the effective marginal tax rate mechanism. However, the extractiveness is not as severe as pure predatory extraction (0.75+) because the mechanism operates through administrative rule rather than overt coercion, and because some workers can exit by changing employment or location. The value reflects that the extraction is systematic and intentional (fiscal policy design choice) but not total impoverishment. Suppression (0.72): High. Multiple barriers prevent exit: childcare costs rise sharply with work hours (reducing net income gains), transportation and work-related expenses absorb additional earnings, skill gaps limit job search options, and identity-based commitments (primary caregiver role) constrain mobility. These barriers are both structural and internalized. The suppression has increased over the measurement interval (0.65 in year 0 to 0.72 in year 15) as childcare and healthcare costs have risen faster than wage growth, making the cliff more binding. Theater ratio (0.55): Moderate. The welfare administration process involves substantial theater (eligibility verification, recertification processes) but the core mechanism (the cliff) is structurally real, not purely performative. The theater reflects administrative overhead to determine categorical eligibility, but this doesn't hide the extraction \u2014 it enables it. The theater ratio remains relatively flat across the interval because the categorical administration process hasn't fundamentally changed, even as awareness of the problem has grown.",
+    "perspectival_gap": "The perspectival gap in this constraint reveals how the same structural mechanism appears radically different from different positions. From the fiscal conservative institutional view, the welfare cliff is coordination mechanism solving an important problem (categorical targeting without expensive verification). From the trapped low-income worker view, the cliff is a pure snare preventing upward mobility. From the single parent identity-locked view, the cliff is a snare compounded by cognitive entrapment \u2014 the structural barrier is only half the problem; the other half is the internalized identity that makes exiting the caregiving role unthinkable. From the reform coalition organized view, the cliff is a temporary problem with a visible solution path (smooth phase-out mechanisms). From the administration bureaucratic view, the cliff is an inertial piton \u2014 the system was designed this way decades ago and persists because alternative architecture is complex, not because it's optimal. From the false analytical summit view, the cliff appears inherent to any benefit system (mountain), revealing when 'this is just how welfare works' has naturalized a contingent design choice. The gap is diagnostic: it shows that the constraint's classification depends entirely on the observer's structural relationship to the benefit flow and their exit options. No single perspective is 'wrong' \u2014 they're all accurate descriptions of what the constraint looks like from that position.",
+    "directionality_logic": "Directionality values (d) are derived from the structural flow of extraction. Low-income workers are victims of the cliff \u2014 they lose income when crossing the threshold. Their d is high (\u22480.90-0.95) because the constraint extracts from them. Fiscal conservative coalitions are beneficiaries \u2014 the cliff solves their coordination problem and doesn't apply to them. Their d is low (\u22480.05-0.15) because the constraint benefits them. Single parents appear as victims structurally (d \u2248 0.90) but the identity_locked exit option captures that their cognitive frame prevents exercise of the structural exit path, which modulates their experienced extraction upward (they perceive greater immutability than constrained agents). Administrators and welfare bureaucracies are in ambiguous position: they benefit from simpler systems (low d) but also bear costs of dealing with consequences (systems strain, appeals, legislative pressure). The directionality override mechanism could be used here to fine-tune administrative d upward from the default beneficiary position (0.10-0.15) to (0.30-0.40) if analysis shows the administrative burden is high enough to create partial victimhood. Earnings supplement reform coalitions have analytical or organized power with mobile exit, placing them at d \u2248 0.50-0.60 (neither pure beneficiary nor victim, but seeing the problem from the powerless perspective).",
+    "mandatrophy_analysis": "The welfare cliff resolves potential mandatrophy by showing that all six types are simultaneously valid from different structural positions. The mandatrophy is not 'which type is correct?' but 'which stakeholder position are you analyzing from?' The fiscal conservative coalition genuinely experiences coordination (rope). The trapped worker genuinely experiences extraction (snare). The reform coalition genuinely sees a temporary problem with solution (scaffold). The bureaucracy genuinely operates through inertia (piton). The false summit perspective (mountain) reveals when 'this is how welfare works' naturalizes a contingent design. The classification framework prevents the false reduction to a single 'true' type by requiring that all perspectives be validated against their structural position. This prevents the standard policy error where reformers claim the cliff is 'obviously' bad (snare perspective) while conservatives claim it's 'obviously' necessary (rope perspective) \u2014 both are correct from their position. The mandatrophy resolves by showing the constraint is a **mixed coordination-extraction hybrid** (tangled rope from moderate perspectives, snare from powerless perspectives) with genuine functions (targeting benefit to low income) and genuine harms (trapping people in low-earnings equilibrium). This mixed diagnosis suggests that simple removal of the cliff (satisfying the snare perspective) risks breaking the coordination function (understood from the rope perspective) \u2014 the solution is not to eliminate the cliff but to replace it with a mechanism that preserves targeting while eliminating the discontinuity (smooth phase-out), which is exactly what the scaffold perspective proposes."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "unemployment_benefits_discontinuity",
+      "medicaid_coverage_thresholds",
+      "housing_subsidy_cliffs",
+      "child_tax_credit_phase_out"
+    ],
+    "dual_formulation_note": "The welfare cliff is one instance of a broader class of benefit discontinuity constraints affecting multiple welfare systems. Each system (SNAP, Medicaid, housing subsidies, EITC phase-out) has its own extractiveness profile and temporal dynamics, but they share the same structural mechanism: categorical eligibility creates sharp boundaries with high marginal costs to crossing. The stories are linked because workers often face multiple overlapping cliffs from different benefit programs simultaneously, compounding the suppression and extraction effects."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "medium-high",
+    "hypothesis": "snare",
+    "downstream_of": []
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "header": {
+    "constraint_id": "platform_labor_arbitrage",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pla"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "snare",
+    "human_readable": "Platform Labor Arbitrage: Structural Extraction Through Algorithmic Intermediation",
+    "topic_domain": "economic/labor_markets/digital_platforms",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "end_consumers"
+    ],
+    "victims": [
+      "platform_workers",
+      "labor_market_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Gig Worker",
+      "comment": "PERSPECTIVE 1: GIG WORKER (SNARE) \u2014 Structural entrapment through income dependency, algorithmic control of task allocation, and lack of alternative employment pathways with comparable flexibility. Worker cannot exit without catastrophic income loss. Platform controls all terms: pricing, work rules, deactivation risk. Maximal extraction experienced."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Platform-Dependent Labor Supply",
+      "comment": "PERSPECTIVE 2: PLATFORM-DEPENDENT LABOR COHORT (SNARE) \u2014 At generational timescale, workers born into precarious labor markets face normalized platform dependence. Structural exclusion from traditional employment pathways (permanent contracts, benefits, collective bargaining) makes platforms the only accessible option. Suppression mechanism includes regulatory capture preventing labor protections. Intergenerational extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Competing Platform Worker",
+      "comment": "PERSPECTIVE 3: MULTI-PLATFORM WORKER (TANGLED ROPE) \u2014 Some worker agency through multi-platform arbitrage (ride-share + delivery + task work). Constrained exit costs (account switching, reputation loss, learning curve). Genuine coordination function: platforms match supply and demand with efficiency unavailable to centralized employment. Mixed extraction and benefit \u2014 more agency than single-platform worker but still subject to algorithmic wage suppression."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Platform Operator",
+      "comment": "PERSPECTIVE 4: PLATFORM OPERATOR (ROPE) \u2014 Experiences the constraint as pure coordination: matching workers to customers, logistics optimization, market expansion. Enormous arbitrage optionality (geographic expansion, service diversification, cross-subsidization). Net beneficiary experiencing the system as coordination mechanism. Low perceived extraction because operator extracts value without bearing the suppression costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "End Consumer",
+      "comment": "PERSPECTIVE 5: END CONSUMER (ROPE) \u2014 High mobility (can switch platforms or use alternatives). Receives genuine coordination benefit: on-demand services, price transparency, convenience. Experiences platform as efficiency mechanism. Unaware of suppression costs borne by workers. Derives net benefit from arbitrage."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Labor Regulators and Unions",
+      "comment": "PERSPECTIVE 6: LABOR REGULATION SYSTEM (PITON) \u2014 Traditional labor protections (minimum wage, worker classification, collective bargaining rights) are performatively maintained but systematically circumvented through platform-designed worker classification (independent contractor status). Theater ratio high: regulatory agencies conduct hearings and issue pronouncements while platforms restructure work to evade regulatory categories. Institutional inertia prevents updating labor law to platform realities. Exit from this degradation is constrained by regulatory capture and political economy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Platform labor simultaneously coordinates supply-demand matching (genuine function) and extracts surplus through wage suppression, algorithmic control, and barrier elevation (asymmetric power). Civilization-scale analysis reveals this as a hybrid mechanism: some platform value is coordination rent (legitimate), some is extraction rent (behavioral suppression of wages below reservation level). Classification as Tangled Rope reflects both components operating simultaneously. Theater moderately low because the extraction is largely direct (wage setting, task allocation) rather than performative."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "market_clearing_wage_ambiguity",
+      "question": "What proportion of the wage suppression is market-clearing (supply exceeds demand at reservation wage) vs platform-enforced (platform suppresses wages below market-clearing equilibrium)?",
+      "resolution_mechanism": "Comparative analysis with traditional labor markets; measurement of wages in high-demand platforms vs oversupplied platforms; historical wage data during platform growth phases",
+      "impact": "High market-clearing component: snare classification weakens toward tangled_rope (workers bear cost of own oversupply). High platform-enforcement component: snare classification strengthened (asymmetric power structure). Extraction bounds: \u03b5 could range 0.35-0.72 depending on resolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Market clearing vs platform-enforced wage suppression"
+    },
+    {
+      "id": "platform_switching_cost_breakdown",
+      "question": "What percentage of worker exit costs are technological/account-based vs reputational/social vs opportunity (earnings loss during transition)?",
+      "resolution_mechanism": "Worker interviews on switching experience; measurement of account transfer feasibility; reputation portability analysis; earnings data during multi-platform transitions",
+      "impact": "If primarily reputational/opportunity: workers are identity_locked (reputation fused with platform identity) rather than structurally trapped \u2014 suppression is internalized. If primarily technological: workers are trapped (external barriers). Classification of exit_options shifts the directionality and potentially the constraint type.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Composition of worker platform exit costs"
+    },
+    {
+      "id": "alternative_employment_viability",
+      "question": "What percentage of gig platform workers could transition to traditional employment at comparable or superior income if barriers (credential gaps, geography, discrimination) were removed?",
+      "resolution_mechanism": "Cohort analysis of workers transitioning to traditional employment; skill-match studies; wage comparison studies of same workers across employment modes",
+      "impact": "High viability (>60%): suppression is primarily market-clearing; workers are voluntarily choosing gig work despite extraction. Low viability (<30%): suppression is structural exclusion; workers are trapped by lack of alternatives. Classification orientation shifts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of alternative employment for gig workers"
+    },
+    {
+      "id": "algorithmic_control_transparency",
+      "question": "Can workers, on average, predict which actions and performance metrics will affect their algorithmic ranking and task allocation? Is the control mechanism transparent or opaque?",
+      "resolution_mechanism": "Worker surveys on algorithmic predictability; comparison of worker mental models with documented platform algorithms; analysis of platform transparency disclosures vs actual algorithmic behavior",
+      "impact": "High opacity: workers cannot adapt; suppression is maximized. High transparency: workers can game the system; suppression is reduced and some agency emerges. Affects perception of 'trapped' vs 'constrained' exit options.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Algorithmic control transparency to workers"
+    },
+    {
+      "id": "collective_organization_feasibility",
+      "question": "What are the structural barriers to platform workers organizing collectively for wage negotiation? Are barriers primarily legal (classification status), technical (algorithmic visibility limits), or social (identity fragmentation)?",
+      "resolution_mechanism": "Analysis of unionization attempts across platforms; legal barriers assessment; technical feasibility of worker coordination mechanisms; psychological studies on worker collective identity",
+      "impact": "If legal barriers dominant: regulatory reform could enable collective power. If technical/social barriers dominant: organization remains infeasible regardless of legal status. Affects whether workers can transition from 'powerless' to 'organized' power atom under different horizon timescales.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Structural barriers to collective worker organization"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "Platform labor arbitrage represents a structural constraint in which digital intermediaries extract surplus from workers by capturing the informational asymmetry between supply and demand, encoding suppression mechanisms into algorithmic control systems, and maintaining classification barriers that prevent worker access to labor protections. The constraint operates through the platform's monopoly on matching information and allocation decisions. Unlike traditional employment where wages reflect bilateral negotiation and market clearing, platform wages reflect unilateral algorithmic determination without transparency, collective voice, or exit options that preserve income. The mechanism is not primarily coercive (platforms do not prevent workers from leaving) but suppressive: workers remain dependent because alternatives have been structurally degraded or made inaccessible. The extractiveness has increased monotonically over the measurement interval as platforms have grown, normalized, and entrenched their control mechanisms. Theater ratio remains moderate because extraction is direct (wage setting, task allocation) rather than performative (theatrical compliance rituals).",
+    "key_agents": [
+      "Gig Workers: Primary victims (powerless/trapped) \u2014 structurally dependent on platform income; face algorithmic task allocation control; cannot negotiate terms; deactivation is permanent and opaque",
+      "Platform Operators: Primary beneficiaries (institutional/arbitrage) \u2014 control all matching information; set unilateral terms; extract surplus through pricing asymmetry; enormous optionality to expand or relocate",
+      "End Consumers: Secondary beneficiaries (powerful/mobile) \u2014 receive genuine matching coordination benefit; unaware of suppression costs; high switching optionality across platforms",
+      "Multi-Platform Workers: Moderate agents (moderate/constrained) \u2014 some agency through multi-platform arbitrage but constrained by switching costs and reputation dependencies",
+      "Labor Regulators: Institutional degradation actors (organized/constrained) \u2014 maintain performative labor protections that platforms circumvent through classification (independent contractor); trapped by regulatory capture and political economy",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees simultaneous genuine coordination function (matching) and extraction mechanism (wage suppression and algorithmic control)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Platform operators systematically suppress wages below market-clearing levels through algorithmic control, information monopoly, and barrier elevation. The suppression is not maximal (workers retain some income, some choice of when to work) but is structural and durable. The value reflects that a significant portion of potential worker surplus is captured by the platform through mechanisms that would not exist in competitive labor markets. The increase over time (0.32 \u2192 0.58) reflects platform consolidation and normalization \u2014 as platforms mature, their market power increases and wage suppression intensifies. Suppression (0.65): High. Structural barriers include: income dependency (workers cannot leave without catastrophic loss), algorithmic opacity (workers cannot predict how to improve allocation), classification barriers (workers excluded from labor protections), and regulatory capture (labor law has not updated to platform models). These barriers are substantial but not total \u2014 some workers maintain minimal savings, some multi-platform arbitrage occurs, and some regulators pursue enforcement. Theater ratio (0.48): Moderate. The extraction mechanism is relatively direct: platform sets prices, allocates tasks, controls communication with customers. Less theater than traditional labor regulation (where compliance rituals dominate) but some performative element exists: platforms present algorithmic allocation as neutral/fair/merit-based when allocation actually reflects unilateral platform interest. Claimed type (Snare): Justified by high extractiveness, high suppression, and unilateral control structure. Workers lack meaningful exit options and the constraint depends on suppressing alternatives (traditional employment, collective bargaining, regulatory protection).",
+    "perspectival_gap": "The perspectival gap between platform operator and worker is the core diagnostic signature of this constraint. The operator sees coordination (Rope) \u2014 algorithmic matching is more efficient than traditional labor intermediaries. This is true. The worker sees extraction (Snare) \u2014 wages are suppressed unilaterally and exit is blocked. This is also true. The disagreement is not empirical; it is structural. They occupy different positions in the extraction flow. The operator's perspective is internally consistent and factually accurate about the coordination component. The worker's perspective is internally consistent and factually accurate about the suppression component. Neither is wrong; they are measuring different aspects of the same constraint. The Tangled Rope classification from the analytical perspective resolves this by asserting both are simultaneously valid \u2014 the constraint genuinely provides coordination value AND genuinely suppresses wages asymmetrically. The perspectival gap persists because there is no single correct view; there is only a structural reality with multiple legitimate readings.",
+    "directionality_logic": "Each perspective's classification is derived from four inputs: power atom, time horizon, exit options, and spatial scope. These combine with the beneficiary/victim declarations to produce directionality (d), which the sigmoid f(d) converts to an effective extraction multiplier. For the platform operator: institutional power + immediate horizon + arbitrage exit + global scope produces d \u2248 0.05 (beneficiary with maximum exit optionality). The sigmoid f(d \u2248 0.05) = -0.12, yielding \u03c7 \u2248 0.58 \u00d7 (-0.12) \u00d7 1.2 \u2248 -0.08 (negative extraction, experienced as net benefit). Classification: Rope. For the gig worker: powerless + biographical horizon + trapped exit + global scope produces d \u2248 0.92 (victim with zero exit optionality). The sigmoid f(d \u2248 0.92) = 1.28, yielding \u03c7 \u2248 0.58 \u00d7 1.28 \u00d7 1.2 \u2248 0.89 (high experienced extraction). Classification: Snare. For the multi-platform worker: moderate + biographical + constrained exit + regional scope produces d \u2248 0.68 (victim with partial agency). Sigmoid f(d \u2248 0.68) \u2248 1.02, yielding \u03c7 \u2248 0.58 \u00d7 1.02 \u00d7 0.9 \u2248 0.53 (moderate experienced extraction). Classification: Tangled Rope (coordination component from multi-platform optionality; extraction component from constrained switching). The analytical observer with analytical power + civilizational horizon + analytical exit + global scope produces d \u2248 0.73 (observer position). Sigmoid f(d \u2248 0.73) \u2248 1.15, yielding \u03c7 \u2248 0.58 \u00d7 1.15 \u00d7 1.2 \u2248 0.80 (high observed extraction). But the classification is Tangled Rope (not Snare) because the observer position recognizes the dual function: coordination is real, extraction is real, both are significant. The chi value reflects the extraction component; the classification reflects the full structural reality.",
+    "mandatrophy_analysis": "The mandatrophy in platform labor arbitrage is the temptation to classify the constraint as pure Rope based on the genuine coordination function (matching workers to tasks with unprecedented efficiency) while ignoring the asymmetric extraction mechanism (wage suppression through unilateral algorithmic control). The resolution requires recognizing that both components are simultaneously true: the platform genuinely solves the matching problem better than alternatives (Rope function), AND the platform structurally extracts surplus through its monopoly on matching information (Snare mechanism). The constraint is Tangled Rope because it provides genuine coordination benefit (workers would have worse outcomes without platform matching) while simultaneously suppressing wages below what competitive markets would produce. This dual structure is the essence of Tangled Rope: the constraint cannot be understood as pure coordination (it would misclassify the extraction mechanism) nor as pure extraction (it would ignore the real coordination value). The mandatrophy is resolved by insisting that both perspectives are correct and that the constraint provides insufficient separation between them to justify collapsing either component. The analytical classification is Tangled Rope; subordinate perspectives emphasizing one component over the other (Rope for the beneficiary, Snare for the victim) are correct about their local perspective but incomplete about the global structure."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "precarious_employment_normalization",
+      "labor_law_classification_crisis"
+    ],
+    "dual_formulation_note": "Platform labor arbitrage decomposes into two structurally distinct constraints: (1) The matching coordination function (\u03b5 \u2248 0.15, pure Rope) which platforms genuinely improve over traditional labor intermediaries. (2) The wage suppression mechanism (\u03b5 \u2248 0.72, pure Snare) which captures surplus through algorithmic control and information monopoly. These two constraints are unified in this story because they are operationally inseparable \u2014 the platform's monopoly on matching information is the mechanism that enables wage suppression. The Tangled Rope classification reflects their entanglement. Upstream constraints include labor market precarity and regulatory capture; downstream constraints include worker collective action and labor law reform efforts."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ]
+}

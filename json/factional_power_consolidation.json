@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "factional_power_consolidation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fpc"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Factional Power Consolidation",
+    "topic_domain": "political/organizational",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "faction_leadership"
+    ],
+    "victims": [
+      "peripheral_faction_members",
+      "competing_factions",
+      "institutional_neutrality"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Peripheral Faction Member",
+      "comment": "PERSPECTIVE 1: PERIPHERAL FACTION MEMBER (SNARE) \u2014 Structurally trapped within factional boundaries. Social ostracism, economic dependency, and relational identity fusion make exit prohibitively costly. Maximum experienced extraction \u2014 constrained choices presented as voluntary alignment while real alternatives are suppressed through social pressure and institutional gatekeeping."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "The Mid-Level Factional Operative",
+      "comment": "PERSPECTIVE 2: MID-LEVEL FACTIONAL OPERATIVE (SNARE) \u2014 Identity fused with factional commitment. Structurally mobile (could leave) but cognitively captured \u2014 self-concept, professional legitimacy, and social standing are entirely constituted through factional membership. Exit would require becoming a different person. High suppression maintained through epistemic closure: competing narratives are filtered or reframed as threats rather than alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Rival Faction",
+      "comment": "PERSPECTIVE 3: RIVAL FACTION (TANGLED ROPE) \u2014 Experiences the consolidation as both coordination threat and extractive competition. The constraint includes genuine coordination function (factional identity enables collective action, resource pooling, information networks) but is layered with asymmetric extraction (leadership concentrates resources and decision authority). Rival faction has mobility and organization \u2014 can exit or contest \u2014 but does so within a system where factional consolidation is the dominant constraint structure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Faction Leadership",
+      "comment": "PERSPECTIVE 4: FACTION LEADERSHIP (TANGLED ROPE) \u2014 Primary beneficiary. Experiences consolidation as effective coordination mechanism: mobilizes members, allocates resources, enforces discipline, aggregates power. Genuine coordination benefits exist (faction solves collective action problems) but are inseparable from asymmetric extraction (leadership captures disproportionate resources, authority, and decision control). Leadership has arbitrage options \u2014 can shift allegiances, exit to neutral positions \u2014 but chooses consolidation because extraction exceeds coordination costs."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Institutional Neutrality Norm",
+      "comment": "PERSPECTIVE 5: INSTITUTIONAL NEUTRALITY NORM (PITON) \u2014 Formal commitment to non-partisan governance exists but is substantially performative. Institutions maintain neutral rhetoric while factional consolidation proceeds unchecked. Theater ratio reflects that neutrality language persists (formal rules, public statements, procedural theater) while actual decision-making is factionally captured. The norm persists through inertia \u2014 it is institutionalized through rules and norms that have lost functional force."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 Risk of naturalizing factional dynamics as immutable feature of political organization. From civilizational perspective, factional consolidation could appear as irreducible consequence of human group psychology or organizational structure. However, base properties contradict mountain criteria: extractiveness (0.68) exceeds mountain threshold (\u22640.25), suppression (0.72) exceeds mountain threshold (\u22640.05), and emerges_naturally is false. This perspective exemplifies false summit risk \u2014 treating contingent institutional arrangements as natural laws."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "identity_lock_vs_coercion",
+      "question": "Is the binding mechanism in mid-level operatives primarily identity fusion or primarily material coercion and exit costs?",
+      "resolution_mechanism": "Post-exit trajectory analysis: if operatives retain suppressive beliefs/behaviors after leaving the faction, binding was identity-locked; if beliefs rapidly update toward factional-neutral positions, binding was coercive/material. Comparison with exited members who maintain vs abandon factional framing.",
+      "impact": "If primarily identity-locked: constraint is more stable and harder to dissolve (identity frames persist); interventions must address epistemic capture, not just exit barriers. If primarily coercive: constraint is more fragile; lowering exit costs or removing material dependencies could rapidly destabilize consolidation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is identity-based or material"
+    },
+    {
+      "id": "rival_faction_coalition_threshold",
+      "question": "At what critical mass of organized rivals can competition shift from tangled rope (mixed coordination-extraction) to collective coordination against consolidation?",
+      "resolution_mechanism": "Analysis of multi-faction dynamics: when do rival factions coordinate against the primary consolidating faction rather than competing individually? Measurement of coalition formation thresholds in historical factional systems.",
+      "impact": "If threshold < 2 competing organized factions: consolidation is vulnerable to horizontal coalition formation. If threshold > 4: consolidation is robust because rival coordination is harder than individual competition. Changes classification dynamics for rival faction perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Critical mass for rival coalition formation"
+    },
+    {
+      "id": "institutional_capture_reversal_cost",
+      "question": "What is the institutional cost of reversing factional capture once the piton (performative neutrality) has been fully absorbed into decision-making structure?",
+      "resolution_mechanism": "Comparison of institutional reset costs across historical cases: rule reform, personnel restructuring, cultural reprogramming time. Measurement of reversibility timeframe.",
+      "impact": "If reversal cost becomes prohibitively high: piton transitions to snare for the institution itself (the institution becomes trapped). If reversal remains possible: piton classification is accurate \u2014 degraded but not trapped.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Cost of institutional capture reversal"
+    },
+    {
+      "id": "narrativization_of_necessity",
+      "question": "Does factional consolidation eventually produce a narrative that reframes consolidation as necessary (natural law) rather than contingent (institutional choice)?",
+      "resolution_mechanism": "Content analysis of faction leadership rhetoric over time: measurement of frequency and intensity of necessity-framing ('this is how power works,' 'human nature demands hierarchy,' 'organization requires clear authority'). Comparison with early consolidation phase when alternatives were still verbally available.",
+      "impact": "If narrativization succeeds: consolidation moves toward false mountain classification (perceived as natural law by participants). If narrativization fails: consolidation remains perceived as extractive snare/tangled_rope. Affects sustainability and exit barrier perception.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Narrativization of consolidation as natural necessity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Factional power consolidation represents a structural constraint that transforms organizational or political contexts through the progressive concentration of authority, resources, and decision-making power within a dominant faction. The constraint operates across multiple levels simultaneously: it solves genuine coordination problems (factions enable collective action, resource pooling, shared identity) while simultaneously extracting asymmetric benefits for leadership, suppressing alternative power centers, and degrading institutional neutrality norms. The measurement trajectory shows extractiveness rising from 0.32 to 0.68 over ten time periods, with theater ratio increasing from 0.22 to 0.58 \u2014 indicating both a shift toward more extractive mechanisms and a parallel increase in performative legitimation as consolidation advances. The constraint is empirically classified as a snare from powerless and identity-locked perspectives but appears as tangled rope from organized and institutional perspectives. The analytical observer risks mistaking consolidation for immutable natural law, exemplifying false summit classification.",
+    "key_agents": [
+      "Faction Leadership: Primary beneficiary (institutional/arbitrage) \u2014 captures disproportionate authority, resources, and decision control; can exit to neutral positions but chooses consolidation",
+      "Peripheral Faction Members: Primary victim (powerless/trapped) \u2014 bears extraction through constrained choices, social ostracism barriers, economic dependency; cannot exit",
+      "Mid-Level Operatives: Secondary victim (moderate/identity_locked) \u2014 structurally mobile but identity-fused; self-concept constituted through factional membership; epistemic capture maintains suppression",
+      "Rival Factions: Organized actor (organized/mobile) \u2014 experiences mixed coordination and extraction; can contest or exit but operates within factional system structure",
+      "Institutional Neutrality Norm: Institutional structure (institutional/constrained) \u2014 maintains performative neutrality language while actual decision-making is factionally captured; persistence through inertia",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent consolidation dynamics as immutable political law"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and accelerating. The measurement trajectory shows extractiveness rising from 0.32 to 0.68 over ten periods, reflecting the consolidation process: early phases involve genuine coordination benefits (extraction moderate), but leadership increasingly concentrates authority and resources (extraction rises). Final plateau at 0.68 indicates consolidation has reached equilibrium \u2014 further extraction would destabilize the system through revolt or institutional collapse. Suppression (0.72): High. Multiple suppression mechanisms operate: formal barriers to factional exit (social ostracism, economic sanctions, institutional gatekeeping); epistemic closure (alternative narratives suppressed or reframed as threats); identity fusion (self-concept dependent on factional membership). For peripheral members, suppression is primarily coercive (trapped exit option). For mid-level operatives, suppression is primarily cognitive (identity_locked exit option). Theater ratio (0.58): Moderate-high. Consolidation is legitimated through performative institutional language (neutrality norms persist in rhetoric), procedural theater (formal rules maintained while factionally applied), and narrativization (consolidation reframed as necessary or natural). Theater is lower than in purely performative constraints (piton) because consolidation includes real coordination function and real extraction \u2014 the theater supplements rather than replaces the mechanism.",
+    "perspectival_gap": "The measurement trajectory shows extractiveness accelerating over time (0.32 \u2192 0.68), but different perspectives perceive this acceleration differently. Faction leadership perceives rising extractiveness as increasing coordination effectiveness \u2014 they see themselves solving problems, aggregating power, and improving faction capacity. Peripheral members perceive the same trajectory as tightening suppression \u2014 choices narrow, exit costs rise, identity fusion deepens. Mid-level operatives may not consciously perceive the trajectory at all, experiencing each year as 'business as usual' while their epistemic frame gradually restricts toward faction-provided interpretations. Rival factions perceive the trajectory as threatening \u2014 the consolidating faction's rising extraction becomes their competition pressure. The institutional neutrality norm maintains consistent performative language throughout (theater ratio rises, but absolute neutrality rhetoric is constant), creating a gap between formal institutional position and empirical factional capture. The analytical observer risks seeing mountain stability (consolidation appears unchangeable) when actually the system is dynamically unstable \u2014 sustained by active enforcement and suppression mechanisms that would collapse if those mechanisms failed.",
+    "directionality_logic": "Each perspective's directionality (d) reflects the agent's structural position within the consolidation flow. Peripheral members with trapped exit and victim status have high d (~0.95) \u2192 high f(d) \u2192 high experienced \u03c7. Mid-level operatives with identity_locked exit and mixed beneficiary/victim status have d derived from their epistemic capture (beneficiary status \u2192 lower d, but victim status in constraint \u2192 higher d); the engine derives d \u2248 0.78 reflecting the captured operative's partial benefit from factional resources and status combined with extraction in terms of autonomy. Rival factions with mobile exit and organized power have moderate d (~0.55) reflecting that they benefit from factional coordination mechanisms (resource pooling, collective action capacity) but bear extraction costs through competition and resource concentration asymmetry. Faction leadership with arbitrage exit and primary beneficiary status has low d (~0.15), producing negative effective extraction (they experience the constraint as beneficial coordination). The piton institutional norm has constrained exit (cannot easily reform institutions) but beneficiary status (the norm legitimates factional capture), yielding d \u2248 0.35. The analytical observer uses canonical d for analytical power (~0.73), mapping to moderate effective extraction.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION via perspectival pluralism: This constraint demonstrates that snare and tangled rope are simultaneous truths from different positions, not competing hypotheses to be resolved. The mandatrophy question \u2014 'Is this pure extraction (snare) or mixed coordination-extraction (tangled rope)?' \u2014 is resolved by recognizing that BOTH are structurally correct: from the perspective of powerless trapped members, the constraint IS a snare (they perceive only extraction, no benefit); from the perspective of organized rivals or institutional leadership, the constraint IS tangled rope (they perceive mixed benefits and costs). The constraint contains genuine coordination function (factions solve collective action problems, enable resource pooling, provide identity and belonging) and genuine extraction (leadership concentrates authority, suppresses alternatives, prevents institutional neutrality). The resolution is not to choose one type but to recognize that the perspectival gap itself \u2014 the fact that powerless see pure extraction while powerful see mixed function \u2014 is the diagnostic signature of the consolidation mechanism. The constraint works precisely because it can be experienced as pure coordination by beneficiaries and pure extraction by victims from the same base structure. False summit risk (mountain) is resolved by noting that extractiveness (0.68) and suppression (0.72) both violate mountain thresholds (\u22640.25 and \u22640.05 respectively), and emerges_naturally is false. The apparent naturalness of factional consolidation is a narrativization effect, not a structural property."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "institutional_capture",
+      "epistemic_closure",
+      "hierarchical_inversion"
+    ],
+    "dual_formulation_note": "Factional power consolidation is an organizational dynamic that appears across multiple domains (political parties, religious movements, criminal organizations, academic departments, corporate divisions). This constraint story captures the generic structure; domain-specific instantiations will have the same \u03b5 and suppression profile but may vary in theater_ratio and temporal trajectory. Related constraints: institutional_capture (consolidation enables capture), epistemic_closure (consolidation produces closure), hierarchical_inversion (consolidation inverts nominal authority structure)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.78
+    }
+  ]
+}

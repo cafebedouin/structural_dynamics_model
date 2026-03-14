@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "french_electoral_bifurcation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "French Electoral Bifurcation: Far-Right Polarization and Institutional Extraction",
+    "topic_domain": "political/electoral_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "far_right_political_movement",
+      "centrist_establishment_gatekeepers"
+    ],
+    "victims": [
+      "moderate_left_constituency",
+      "progressive_political_space",
+      "electoral_system_legitimacy"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Moderate Left Voter",
+      "comment": "PERSPECTIVE 1: MODERATE LEFT VOTER (SNARE) \u2014 Trapped in a two-round runoff system where voting for preferred left candidate in round one guarantees right-wing victory in round two if centrist establishment refuses coalition. Cannot exit electoral participation without abandoning political voice. Bears full extraction cost: forced to vote against preference (defensive voting) or accept defeat."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Progressive Coalition",
+      "comment": "PERSPECTIVE 2: PROGRESSIVE COALITION (TANGLED ROPE) \u2014 Constrained by institutional rules (two-round system, constituency geometry) and electoral arithmetic (need centrist votes in round two). Also benefits from coordination mechanism: the runoff system enables coalition-building and prevents pure plurality fragmentation. Mixed experience of extraction and coordination benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Centrist Establishment",
+      "comment": "PERSPECTIVE 3: CENTRIST ESTABLISHMENT (ROPE) \u2014 Experiences the constraint as pure coordination: the bifurcation gives centrists maximum leverage as kingmakers in round two. Can arbitrage their position \u2014 negotiate concessions from either left or right. Net beneficiary with maximum mobility. Coordination serves their interests perfectly."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Far-Right Movement",
+      "comment": "PERSPECTIVE 4: FAR-RIGHT MOVEMENT (SNARE) \u2014 Despite organizational capacity and voter base, sees the bifurcation as a snare for their opponents, not themselves. The polarization traps centrists and progressives in reactive positions. Far-right experiences the constraint as maximizing their structural leverage \u2014 not extraction, but extraction from others. Organized/mobile actors see snare dynamics differently: they benefit from the polarization trap."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Fifth Republic Electoral System",
+      "comment": "PERSPECTIVE 5: FIFTH REPUBLIC ELECTORAL SYSTEM (PITON) \u2014 The two-round runoff system has become increasingly performative. Designed to prevent fragmentation and enable consensus-building, it now functions primarily as a theater of inevitability: round two becomes a binary choice with minimal strategic variance. The system persists through institutional inertia despite critics arguing for proportional representation or alternative runoff designs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 The bifurcation is a genuine structural feature with both coordination benefits (prevents fragmentation into 7+ parties with no majority) and extraction costs (traps centrist-left coalitions, empowers kingmakers). The constraint exhibits mandatory features: beneficiaries (centrist, far-right), victims (left), active enforcement (round-two runoff ballot structure), asymmetric extraction (left concedes more than gains). This is the engine's computed constraint claim."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "runoff_coalition_formation_inevitability",
+      "question": "Is the centrist refusal to pre-commit to coalition in round two structural (rational game-theoretic positioning) or institutional (cultural normalization of 'no alliances before votes cast')?",
+      "resolution_mechanism": "Comparative analysis of electoral systems: countries with mandatory pre-electoral coalitions vs optional ones; behavioral game theory experiments on voting strategy under uncertainty",
+      "impact": "If structural: the bifurcation is an unavoidable feature of two-round systems. If institutional: alternative coordination rules could reduce extraction without changing ballot structure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether coalition refusal is structural or institutional norm"
+    },
+    {
+      "id": "far_right_floor_ceiling_asymmetry",
+      "question": "Does the far-right movement experience an organizational ceiling (inability to convert voter support into coalition leverage) that stabilizes the bifurcation, or is the bifurcation itself what prevents the ceiling?",
+      "resolution_mechanism": "Counterfactual modeling: proportional representation scenarios with identical voter distribution; analysis of historical shifts in far-right structural position under different electoral rules",
+      "impact": "If ceiling is independent: bifurcation is contingent institutional feature. If ceiling is created by bifurcation: the electoral system actively constrains far-right consolidation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether far-right experiences independent ceiling or system-created constraint"
+    },
+    {
+      "id": "progressive_fragmentation_counterfactual",
+      "question": "Would a proportional representation system reduce left fragmentation or increase it by lowering the coordination cost of splinter movements?",
+      "resolution_mechanism": "Analysis of multi-party left spaces under PR in Europe (Germany, Italy, Spain); simulation of French party competition under 3-5% PR thresholds; organizational structure analysis of French left parties under different rule sets",
+      "impact": "If fragmentation increases: the two-round system's coordination benefit is real (snare is the cost of preventing worse outcomes). If fragmentation decreases: the system artificially sustains left coalition dependence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether proportional representation would increase or decrease left fragmentation"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Do left voters' strategic voting patterns reflect genuine external suppression (the runoff arithmetic forces the choice) or internalized suppression (left voters have absorbed the inevitability narrative)?",
+      "resolution_mechanism": "Post-election surveys on counterfactual preferences and perceived choice constraint; comparison of suppression levels in populations before vs after runoff rule changes; measurement of tactical voting elasticity with respect to rule uncertainty",
+      "impact": "If external: suppression is structural and would persist under alternative systems. If internalized: suppression diminishes rapidly if rules change and expectations reset.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether voting suppression is structural or internalized"
+    },
+    {
+      "id": "mandatrophy_false_summit_danger",
+      "question": "Does the analytical observer's tangled_rope classification risk being a false summit that naturalizes contingent institutional arrangements (fifth republic rules, geographic constituency design, party financing structures)?",
+      "resolution_mechanism": "Historical analysis of French electoral design choices: which elements were explicitly chosen for partisan advantage vs which emerged accidentally? Comparative legal analysis: how many democracies have adopted identical two-round runoff structures?",
+      "impact": "If design was contingent: the tangled_rope classification captures real structural data but risks treating artificial arrangements as natural. If design was inevitable: the classification appropriately reflects structural inevitability.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Risk of false summit in analytical classification"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.53
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The French electoral bifurcation describes the structural polarization of the electorate into two competing coalitions (centrist-left vs centrist-right) under the fifth republic's two-round runoff system. This arrangement exhibits genuine coordination benefits \u2014 it prevents fragmentation into six or more non-viable parties and forces coalition-building during campaigns \u2014 while simultaneously extracting disproportionate costs from the moderate left and progressive constituencies. The constraint intensified as far-right electoral performance improved, forcing left voters into increasingly defensive voting positions and granting centrist gatekeepers maximum kingmaker leverage. The theater ratio has risen as round-two contests have become increasingly predictable binary choices with minimal strategic variation, reducing the functional verification work of the electoral process itself. The bifurcation is a tangled rope from the analytical view: it coordinates coalition formation (genuine benefit) while systematically advantaging centrist and far-right positions at the expense of progressive alternatives (asymmetric extraction).",
+    "key_agents": [
+      "Moderate Left Constituency: Primary victim (powerless/trapped) \u2014 forced into defensive coalition voting; no exit from electoral system without political voice abandonment",
+      "Progressive Political Movements: Secondary victim (moderate/constrained) \u2014 structurally dependent on centrist coalition partners; cannot achieve independent majorities",
+      "Centrist Establishment: Primary beneficiary (institutional/arbitrage) \u2014 kingmakers in round two; can negotiate from maximum leverage position",
+      "Far-Right Political Movement: Secondary beneficiary (organized/mobile) \u2014 polarization benefits from structural positioning; converts high vote share into structural leverage against fragmented left",
+      "Fifth Republic Electoral System: Institutional actor (institutional/arbitrage) \u2014 two-round runoff structure; maintains coordination function while creating extraction asymmetry",
+      "Electoral System Legitimacy: Victim (powerless/trapped) \u2014 abstract collective good; loses legitimacy as bifurcation increases voter frustration with binary choice constraints"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The system extracts significant political concessions from the moderate left during coalition negotiations while providing centrist actors with maximum leverage. The rise from 0.35 to 0.58 over the interval reflects intensifying bifurcation as far-right gains, forcing left actors into more defensive positions. This is not maximum extraction \u2014 left still influences policy outcomes through coalition membership \u2014 but substantial enough to warrant tangled_rope rather than rope classification. Suppression (0.62): Moderate-high. Structural barriers include the round-one vs round-two arithmetic (vote splitting in round one guarantees defeat in round two), electoral threshold effects from geographic constituency design, and the cultural norm (increasingly entrenched) that coalition formation occurs after round-one results are known. Theater ratio (0.68): High. The second round increasingly functions as a predetermined binary choice. Geographic maps show runoff patterns months in advance; strategic voting calculations dominate over genuine preference expression; the round-two campaign often consists of repetitive inevitability messaging rather than substantive alternative presentation.",
+    "perspectival_gap": "The bifurcation produces maximum perspectival divergence from identical structural data. Centrists see coordination mechanism that works in their favor (rope). Progressives see coordination coupled with unfair cost distribution (tangled rope). Powerless left voters see constraint with no exit (snare). The far-right sees structural advantage from polarization (snare for opponents, leverage for themselves). The electoral system sees its own function degrading into performative ritual (piton). The analytical observer sees the entire structure: genuine coordination benefit with asymmetric extraction cost distribution (tangled rope, the computed constraint claim). This perspectival range indicates the classification is capturing real structural data rather than imposing a predetermined framework.",
+    "directionality_logic": "Directionality (d) values derive from structural position in the extraction flow. Moderate left voters are victims with trapped exit (d \u2248 0.95), experiencing maximum f(d) amplification. Centrist gatekeepers are beneficiaries with arbitrage exit (d \u2248 0.05), experiencing minimal or negative f(d). Progressive coalitions are mixed \u2014 they benefit from coordination but face extraction (d \u2248 0.55), generating moderate f(d). The far-right organized movement benefits from bifurcation without bearing suppression costs (d \u2248 0.35), experiencing moderate benefit rather than extraction. The constraint exhibits the hallmark of tangled rope: beneficiaries would collapse the system absent suppression mechanisms (high suppression at 0.62 maintains the extraction flow), yet the coordination function is genuine (round-two runoff does prevent splintering into dysfunctional multi-party competition).",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The tangled_rope classification is confirmed by the presence of all three mandatory features. (1) BENEFICIARIES: centrist establishment gains maximum kingmaker leverage through round-two positioning; far-right gains structural advantage from polarization. (2) VICTIMS: moderate-left constituency forced into defensive voting; progressive political space constrained by coalition dependence. (3) ACTIVE ENFORCEMENT: the two-round ballot structure actively enforces the bifurcation \u2014 round-one prevents coalition pre-commitment; round-two creates binary choice. The coordination function is genuine: absent the runoff system, French elections would fragment into 6+ viable parties competing under pure plurality rules, preventing stable coalition formation and clear governance mandates. The extraction cost is real: left constituencies pay that cost through concessions to centrist coalition partners and through strategic voting that suppresses preference expression. Both dimensions are structural, not observational. The mandatrophy resolves: this is not confusion between coordination and extraction \u2014 it is a constraint that does both simultaneously, and the extraction asymmetry is not incidental but structural to how the coordination function allocates power. The analytical observer should not be tempted to call it 'just coordination' (rope) because the distribution is fair, nor 'just extraction' (snare) because the coordination benefit is real. It is genuinely tangled."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "french_coalition_formation_norms",
+      "progressive_party_fragmentation",
+      "centrist_institutional_lock"
+    ]
+  },
+  "directionality_overrides": []
+}

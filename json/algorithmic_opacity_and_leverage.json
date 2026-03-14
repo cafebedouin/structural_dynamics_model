@@ -1,0 +1,207 @@
+{
+  "header": {
+    "constraint_id": "algorithmic_opacity_and_leverage",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "alg_opac"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.61,
+    "claimed_type": "snare",
+    "human_readable": "Algorithmic Opacity and Leverage in Automated Decision Systems",
+    "topic_domain": "technology/governance/economics",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "algorithm_deploying_institutions",
+      "algorithm_designers"
+    ],
+    "victims": [
+      "affected_individuals",
+      "regulatory_oversight_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Affected Individual",
+      "comment": "PERSPECTIVE 1: AFFECTED INDIVIDUAL (SNARE) \u2014 Subject to algorithmic decisions (credit, hiring, parole, content moderation) with no transparency into decision logic, no meaningful appeal process, and no exit from the algorithmic ecosystem. Cannot understand why decisions were made. Cannot articulate grounds for appeal because grounds are hidden. Trapped by systemic dependency on algorithmic mediation (financial systems, employment markets, digital platforms)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Marginalized Communities",
+      "comment": "PERSPECTIVE 2: MARGINALIZED COMMUNITIES (SNARE) \u2014 Structurally constrained exit (geographic/economic/social immobility) from algorithmic decision systems that disproportionately harm them. High suppression: alternatives are more expensive, less accessible, or legally unavailable. Cannot coordinate collective action because individual harms are dispersed and attributed to 'algorithm behavior' rather than policy choice. Multigenerational extraction via algorithmic discrimination feeds into structural inequality."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Regulatory Agencies",
+      "comment": "PERSPECTIVE 3: REGULATORY AGENCIES (TANGLED ROPE) \u2014 Agencies benefit from algorithmic efficiency (scale oversight, faster turnaround) but victims of opacity constraint (cannot effectively regulate what they cannot see). Experience both coordination (algorithms enable services that would be impossible without automation) and extraction (ability to regulate is weakened). Mobile exit option at institutional scale \u2014 can mandate transparency \u2014 but face political and technical barriers. Asymmetric: agency capacity lags algorithm complexity growth."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Algorithm-Deploying Institutions",
+      "comment": "PERSPECTIVE 4: ALGORITHM-DEPLOYING INSTITUTIONS (ROPE) \u2014 Primary beneficiary. Opacity enables scale (process decisions faster), cost reduction (labor replacement), and risk mitigation (opacity insulates from legal liability when outcomes are 'algorithm's fault'). Experience constraint as pure coordination problem: they need to automate decision-making, algorithms require parameter tuning, opacity is a side effect they actively prefer. Arbitrage exit option: can migrate to jurisdictions with weaker transparency requirements."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Advocacy and Research Communities",
+      "comment": "PERSPECTIVE 5: ADVOCACY/RESEARCH COMMUNITIES (TANGLED ROPE) \u2014 Organized agents who derive benefit from algorithmic systems (training data, computational access, platform reach) while working to expose opacity. Constrained exit: cannot fully withdraw from algorithmic ecosystems without losing research capacity and advocacy reach. Both coordinate (demand transparency, develop interpretability methods) and extract (create new institutional lever for institutional actors, potentially creating audit theater without actual power redistribution)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Explainability Theater and AI Ethics Governance",
+      "comment": "PERSPECTIVE 6: EXPLAINABILITY THEATER (PITON) \u2014 The proliferation of 'explainable AI' frameworks, ethics boards, and algorithmic audits has become largely theatrical: they create appearance of governance without reducing underlying opacity or shifting power. Institutions maintain explainability rituals (publishing ethics statements, conducting audits, deploying LIME/SHAP interpretability tools) because governance pressure exists, not because these mechanisms meaningfully constrain algorithmic leverage. The theater persists through institutional inertia despite low functional capacity to alter outcomes."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational view, algorithmic opacity is a genuine coordination mechanism (enables scale, cost reduction, distributed decision-making) yoked to asymmetric extraction (opacity concentrates power, obscures harms, prevents accountability). The constraint is neither pure coordination nor pure extraction but a hybrid that uses coordination benefits to justify tolerating extraction costs borne by powerless agents. Classification would misfire if observing only coordination function; must capture both."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "opacity_necessity_threshold",
+      "question": "Is algorithmic opacity inherent to model complexity, or is it a chosen design parameter to avoid accountability?",
+      "resolution_mechanism": "Comparison of deployed opacity vs theoretical minimum required for model function; analysis of proprietary-code vs open-source systems; correlation between opacity and institutional liability exposure",
+      "impact": "If inherent: snare classification may mischaracterize necessary complexity as intentional suppression. If chosen: snare classification is accurate, and alternative transparent designs are feasible but rejected for cost/liability reasons.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether opacity is inherent to algorithm complexity or chosen for institutional benefit"
+    },
+    {
+      "id": "interpretability_tool_effectiveness",
+      "question": "Do post-hoc interpretability methods (LIME, SHAP, attention mechanisms) actually restore meaningful user agency or are they primarily theater?",
+      "resolution_mechanism": "User studies measuring decision confidence/recourse action after explainability; audit effectiveness comparing algorithmic decisions before/after institution-mandated transparency; regulatory enforcement rates on institutions providing vs not providing explanations",
+      "impact": "If effective: suppress score should be lower (users have actual leverage); piton classification for 'ethics boards' is accurate. If theater: suppress score confirmed; entire explainability apparatus is piton-like degradation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether explainability tools provide user agency or are primarily theater"
+    },
+    {
+      "id": "market_viability_of_transparency",
+      "question": "Could competitive markets sustain transparent algorithms if regulatory pressure were removed, or is opacity lock-in structural?",
+      "resolution_mechanism": "Historical analysis of transparency-favorable vs opacity-favorable regulatory regimes; emergence of transparent-algorithm startups in high-transparency jurisdictions; cost differential between transparent and opaque deployment at comparable scale",
+      "impact": "If market-sustainable: constraint is piton (institutional inertia) or scaffold (temporary until market shifts). If structurally locked: snare persists because transparency has real cost disadvantages that markets do not overcome.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether transparent algorithms are viable in competitive markets"
+    },
+    {
+      "id": "collective_action_barriers",
+      "question": "Why do affected individuals not coordinate to demand algorithmic transparency? Is it suppression of coordination capacity or diffuse harm attribution?",
+      "resolution_mechanism": "Comparative analysis of transparency campaigns: successful (GDPR, algorithmic audits) vs stalled (algorithmic recourse, hiring algorithm transparency); interviews with affected populations on barriers to organizing; network analysis of transparency advocacy movements",
+      "impact": "If suppression of coordination: snare classification maintained. If diffuse harm + attribution failure: suppress score should be lower; constraint is more snare-like than institutional suppression metrics suggest (individual-level internalization of responsibility).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Why affected individuals do not coordinate to demand transparency"
+    },
+    {
+      "id": "identity_locked_institutional_actors",
+      "question": "Are algorithm deployers identity-locked to opacity (profit-maximization identity), or do they face genuine technical/commercial barriers to transparency?",
+      "resolution_mechanism": "Analysis of institutions that voluntarily adopted transparency (Zillow's algorithm publication, some hiring audits); cost-benefit analysis of proprietary vs open code; regulatory enforcement trends and institution adaptation speed",
+      "impact": "If identity-locked: deploying institutions may reclassify at constrained exit rather than arbitrage; mandating transparency changes their strategic logic. If structural barriers: transparency mandates create compliance theater without functional change.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether deployers are identity-locked to opacity or face technical barriers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.61
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Algorithmic opacity in automated decision systems creates a structural extraction mechanism where opacity simultaneously serves genuine coordination functions (enabling scale, efficiency, distributed decision-making) and asymmetric extraction (concentrating power, obscuring harms, preventing accountability). The constraint exhibits the signature of a snare yoked to coordination theater. Affected individuals cannot understand or appeal algorithmic decisions in credit, employment, criminal justice, content moderation, and resource allocation systems. Marginalized communities disproportionately bear extraction costs due to training data bias and constrained exit options. Regulatory agencies face a fundamental capacity gap: they cannot oversee what they cannot observe, and algorithm complexity grows faster than regulatory tools. Institutions deploying algorithms benefit from opacity (reduced liability, cost containment, speed) while claiming that explainability would be technically infeasible or would sacrifice performance \u2014 a claim that oscillates between true (some performance-interpretability tradeoffs are real) and convenient (many opacity choices are design decisions, not necessities). The theater ratio rising from 0.25 to 0.61 reflects proliferation of explainability frameworks, ethics boards, and algorithmic audits that create appearance of governance without shifting underlying power asymmetries. The extractiveness rising from 0.35 to 0.58 reflects deepening algorithmic mediation across life domains (financial, employment, criminal, social) without corresponding transparency gains.",
+    "key_agents": [
+      "Affected Individuals: Primary victims (powerless/trapped) \u2014 subject to opaque decisions with no recourse, trapped by ecosystem dependency, no exit option",
+      "Marginalized Communities: Victims (powerless/constrained) \u2014 face high suppression, high structural barriers to exit, multigenerational extraction through algorithmic discrimination",
+      "Algorithm-Deploying Institutions: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from opacity through scale, cost reduction, liability insulation; can exit by regulatory arbitrage to low-transparency jurisdictions",
+      "Regulatory Agencies: Secondary victims (powerful/mobile) \u2014 need opacity for enforcement capacity but have mobile exit option (mandate transparency); experience both coordination and extraction",
+      "Advocacy and Research Communities: Organized intermediaries (organized/constrained) \u2014 expose opacity while benefiting from algorithmic systems; constrained by ecosystem dependence",
+      "Algorithm Designers: Secondary beneficiaries (powerful/mobile) \u2014 benefit from opacity via intellectual property protection and career insulation; can migrate to deploying institutions",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees both genuine coordination (algorithmic efficiency) and asymmetric extraction (opacity as power concentration)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Elevated. Affected individuals cannot exit algorithmic decision systems and cannot understand or contest outcomes. The opacity is not random complexity but a design choice that concentrates interpretive power with deploying institutions. Suppression (0.68): High. Multiple overlapping barriers prevent individuals from contesting algorithmic decisions: technical opacity (cannot understand decision logic), legal opacity (intellectual property protections prevent access to code/data), institutional opacity (no mandatory explanation requirement in many domains), and diffuse harm (individual decisions appear isolated rather than systemic). Theater ratio (0.61): Moderate-high. Explainability frameworks, ethics statements, algorithmic audits, and interpretability tools have proliferated without corresponding shifts in actual power or accountability. Institutions provide post-hoc explanations (LIME, SHAP, attention weights) that create appearance of transparency while preserving core opacity. The theater has risen as pressure has mounted, with low functional impact on actual decision contestability.",
+    "perspectival_gap": "The snare vs rope perspectival gap is the core diagnostic signal. Affected individuals accurately perceive snare: they cannot escape, cannot understand, cannot appeal. Deploying institutions genuinely experience rope: opacity solves a real coordination problem (automating decisions that would be impossible to make manually at scale). But the rope exists in an asymmetric configuration: the coordination benefit flows to beneficiaries while suppression costs flow to victims. The snare classification from the powerless perspective and rope classification from the institutional perspective are not contradictory \u2014 they are orthogonal views of the same asymmetric structure. The analytical observer must integrate both to arrive at tangled rope: genuine coordination function + asymmetric extraction + active institutional enforcement of opacity.",
+    "directionality_logic": "The pipeline derives directionality from beneficiary/victim declarations and exit options. Affected individuals are trapped victims with no exit (d \u2248 0.92), deriving high f(d) \u2248 1.40 and high experienced extraction chi. Deploying institutions are institutional beneficiaries with arbitrage exit (d \u2248 0.08), deriving low/negative f(d) \u2248 -0.08 and negative experienced extraction. Regulatory agencies are powerful victims with mobile exit (d \u2248 0.65), deriving f(d) \u2248 0.98 and moderate experienced extraction. Advocacy communities are organized actors with constrained exit (d \u2248 0.50), deriving f(d) \u2248 0.65 and moderate experienced extraction. The scope modifier \u03c3(global) = 1.2 amplifies chi across all perspectives: trapped individuals experience chi = 0.58 \u00d7 1.40 \u00d7 1.2 \u2248 0.97 (near-total extraction); beneficiary institutions experience chi = 0.58 \u00d7 (-0.08) \u00d7 1.2 \u2248 -0.06 (slight leverage inversion, they experience constraint as enabling rather than extractive).",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that algorithmic opacity is genuinely a snare from the perspective of powerless, trapped agents AND genuinely a rope from the perspective of institutional deployers. The constraint is not mislabeled coordination (institutions do genuinely need to automate decisions) nor mislabeled extraction (the power asymmetry and suppression are structural, not incidental). The snare classification is correct for powerless agents; the rope classification is correct for institutional agents. The piton classification for 'explainability theater' is correct as a separate observation about institutional responses to transparency pressure. The tangled rope classification at the analytical level captures the hybrid: opacity serves genuine coordination functions while enabling asymmetric extraction. Mandatrophy is resolved by recognizing multiple local classifications as legitimate perspectival readings rather than contradictions."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_discrimination",
+      "regulatory_capture_by_platform_companies",
+      "information_asymmetry_in_automated_systems"
+    ],
+    "dual_formulation_note": "Algorithmic opacity is upstream of specific harms (discrimination, regulatory capture, information asymmetry). It represents a structural constraint on the capacity to observe and contest algorithmic decisions. The downstream constraints inherit the opacity characteristic from this upstream constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

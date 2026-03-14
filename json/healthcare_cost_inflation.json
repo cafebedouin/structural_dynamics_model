@@ -1,0 +1,214 @@
+{
+  "header": {
+    "constraint_id": "healthcare_cost_inflation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hci"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Healthcare Cost Inflation and Rent Extraction Through Pricing Opacity",
+    "topic_domain": "healthcare/economics/regulatory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharmaceutical_manufacturers",
+      "hospital_systems",
+      "medical_device_manufacturers",
+      "insurance_corporations"
+    ],
+    "victims": [
+      "uninsured_patients",
+      "underinsured_patients",
+      "healthcare_system_efficiency",
+      "public_fiscal_health"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Uninsured Patient",
+      "comment": "PERSPECTIVE 1: UNINSURED PATIENT (SNARE) \u2014 Faces full sticker price with no negotiating power, no exit option, no subsidy. Trapped by medical necessity and financial barriers. Experiences maximum extraction: hospital bills become debt, debt becomes medical bankruptcy. The constraint is not coordinating their care \u2014 it is extracting from their future earnings and credit. Suppression is structural: emergency services cannot be refused; bankruptcy law is designed to protect creditors, not medical debtors."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Insured Patient via Employer",
+      "comment": "PERSPECTIVE 2: INSURED PATIENT VIA EMPLOYER (TANGLED ROPE) \u2014 Genuinely benefits from insurance coordination: risk pooling, negotiated rates, access to care. But also bears costs: rising premiums, higher deductibles, coinsurance, non-coverage for specific treatments. The system coordinates care while extracting rents through cost-shifting to workers (lower wages to pay premiums) and cost-avoidance (denial of expensive treatments). Exit is constrained by health status and employment lock: changing jobs risks losing coverage continuity, especially pre-existing conditions (though ACA reduced this barrier)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Hospital System",
+      "comment": "PERSPECTIVE 3: HOSPITAL SYSTEM (ROPE) \u2014 Primary beneficiary. The constraint coordinates: centralized treatment facilities, standardized protocols, pooled expertise. But hospital systems also benefit from pricing opacity, market consolidation, and cost-shifting from uninsured to insured patients. Arbitrage exit: hospitals can shift revenue sources, cross-subsidize between profitable and unprofitable services, leverage their market power. The rope classification reflects that hospitals experience the constraint as beneficial coordination with extractive overlay."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Pharmaceutical Manufacturer",
+      "comment": "PERSPECTIVE 4: PHARMACEUTICAL MANUFACTURER (ROPE) \u2014 Benefits from patent protection, pricing opacity, and limited price regulation in the US market. Can arbitrage: charge different prices in different countries, restrict access to establish scarcity, lobby for regulatory barriers. Experiences the constraint as beneficial coordination (ensuring R&D funding) with extractive leverage (setting monopoly prices). Exit is arbitrage: can shift manufacturing, licensing, or market focus."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Public Health Authority (CMS/Medicare)",
+      "comment": "PERSPECTIVE 5: PUBLIC HEALTH AUTHORITY (TANGLED ROPE) \u2014 Coordination function: CMS and Medicare coordinate access to care for elderly and disabled populations, redistribute risk across large pools. But also captured by provider and pharmaceutical lobbying: price caps are politically difficult to enact, cost-control mechanisms are weakened through regulatory exemptions and exceptions. Exit is constrained by democratic accountability and political economy: cannot simply refuse to pay for expensive treatments without political backlash, cannot unilaterally cap prices without industry legal challenge. Moderate extraction: system functions but costs grow faster than revenue."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Insurance Corporation Pricing Models",
+      "comment": "PERSPECTIVE 6: INSURANCE CORPORATION PRICING MODELS (PITON) \u2014 High theater ratio. Insurance underwriting and actuarial models appear to serve coordination (risk assessment, premium calculation) but have largely degraded into performative complexity. Insurance corporations engage in extensive cost containment theater: prior authorization, utilization review, formulary management. These processes consume resources but serve primarily to delay claims and exclude expensive treatments rather than to identify genuinely unnecessary care. The theater persists because it generates revenue (through administrative margin) and shifts costs off-books through bureaucratic denial rather than explicit refusal. The underlying pricing coordination function (matching premiums to risk) is obscured by complexity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, healthcare cost inflation appears immutable: aging population, advanced technology, chronic disease prevalence, and the nature of medical knowledge production all create inherent pressure for cost growth. This perspective risks naturalizing what is actually a contingent institutional arrangement. The extractive overlay (pricing opacity, monopoly pricing, cost-shifting) is presented as inseparable from the coordination function (ensuring access, funding innovation, supporting infrastructure). However, international comparisons reveal that other developed nations achieve comparable or superior health outcomes at 40-50% of US costs, indicating that cost inflation is not a natural law but a product of specific policy and institutional choices."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "administrative_overhead_vs_necessary_coordination_cost",
+      "question": "What proportion of healthcare administrative overhead (currently ~25% of total spending) is necessary coordination cost vs. rent extraction through complexity?",
+      "resolution_mechanism": "International comparative analysis of administrative spending and health outcomes across OECD nations; cost accounting by function (genuinely necessary processing vs. cost containment theater); time-motion studies of prior authorization and appeals processes",
+      "impact": "If >60% of overhead is rent extraction: constraint should be reclassified upward in extractiveness, confirming Snare perspective for powerless agents. If <40% extraction: constraint is more purely coordination-driven (stronger Rope/Tangled Rope readings).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "What proportion of administrative overhead is rent extraction vs coordination cost"
+    },
+    {
+      "id": "price_sensitivity_and_true_demand_elasticity",
+      "question": "To what degree does healthcare price inflation reflect genuine supply scarcity vs. monopolistic pricing in a market with inelastic demand (people cannot choose not to get sick)?",
+      "resolution_mechanism": "Cross-country price and quantity analysis; investigation of price variations for identical procedures within US markets; measurement of demand elasticity when prices are transparent vs. opaque; analysis of competition effects in markets with genuine price transparency",
+      "impact": "If demand is truly inelastic: pricing power is pure extraction, independent of supply constraints. Snare classification is correct. If demand shows elasticity when prices are transparent: some price inflation reflects coordination on value rather than extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether price inflation reflects scarcity or monopolistic pricing in inelastic demand"
+    },
+    {
+      "id": "innovation_funding_attribution",
+      "question": "How much of pharmaceutical R&D funding actually comes from monopoly pricing rents vs. public funding (NIH grants, university research, international public health institutions) and venture capital?",
+      "resolution_mechanism": "Detailed accounting of R&D funding sources for major therapeutic breakthroughs; attribution of public sector contribution to drug development; comparison of innovation rates in countries with price regulation vs. price freedom",
+      "impact": "If public/VC funding > 50% of real innovation: monopoly pricing is not necessary for innovation, Snare classification is strengthened. If monopoly pricing is genuinely necessary: coordination function becomes more defensible, Tangled Rope reading gains strength.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Attribution of pharmaceutical innovation funding sources"
+    },
+    {
+      "id": "cost_shifting_measurement",
+      "question": "What is the actual magnitude of cost-shifting from uninsured/underinsured to insured patients, and what fraction of insured premium increases is attributable to this mechanism vs. genuine cost growth?",
+      "resolution_mechanism": "Hospital cost accounting by payer type; measurement of charge-master price variations by insurance status; analysis of bad debt and charity care offsetting; premium trend decomposition",
+      "impact": "If cost-shifting accounts for >30% of premium growth: the beneficiary group (insured) is partially funding extraction from the victim group (uninsured), confirming Tangled Rope with asymmetric extraction. If <15%: premium growth reflects genuine cost inflation rather than redistribution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude of cost-shifting from uninsured to insured populations"
+    },
+    {
+      "id": "sunset_pathway_feasibility",
+      "question": "Is there a credible policy pathway (regulatory reform, price negotiation expansion, transparency mandates) that could reduce extractiveness while maintaining coordination function? What is the timeline?",
+      "resolution_mechanism": "Policy analysis of existing price regulation models (Medicare negotiation expansion, drug-price negotiation authority, price transparency mandates); measurement of outcomes in jurisdictions with stronger regulation; stakeholder assessment of political feasibility",
+      "impact": "If credible sunset pathway exists with <15 year timeline: Scaffold reclassification is warranted. If no pathway or timeline >25 years: constraint is structural Snare/Tangled Rope with no managed exit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of policy sunset pathway for rent extraction component"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Healthcare cost inflation in the United States represents a structural constraint where genuine coordination (pooling risk, financing innovation, centralizing expertise) is tightly coupled with systematic rent extraction through pricing opacity, market consolidation, and cost-shifting. Between 1995 and 2015, US healthcare spending as a percentage of GDP rose from 13% to 17%, while comparable OECD nations maintained 9-12% with equivalent or superior health outcomes. This gap reflects not faster disease progression or aging in the US but structural institutional choices: physician consolidation into large health systems, limited price regulation, opaque pricing mechanisms, aggressive patenting and brand-name drug protection, and administrative overhead that exceeds comparable nations by 10-15 percentage points. The constraint exhibits all six DR types from different vantage points. For the uninsured, it appears as pure extraction (Snare) with no coordination benefit and no exit. For the insured via employer, it coordinates care while extracting through cost-shifting and wage suppression (Tangled Rope). For hospital systems and pharmaceutical manufacturers, it appears as beneficial coordination with extractive leverage (Rope). For public authorities, it is a mixed coordination-extraction hybrid with constrained policy options (Tangled Rope). For insurance corporations, complex pricing and prior authorization systems provide administrative theater (Piton). For the analytical observer at civilizational scale, there is a risk of naturalizing the arrangement as an inherent consequence of medical complexity rather than recognizing it as contingent institutional design.",
+    "key_agents": [
+      "Uninsured Patients: Primary victim (powerless/trapped) \u2014 face full sticker pricing with no negotiation power, no insurance subsidy, no exit option except medical debt and bankruptcy",
+      "Underinsured Patients: Secondary victim (moderate/constrained) \u2014 have insurance but high deductibles, coinsurance, and out-of-network costs; constrained by health status and employment lock",
+      "Hospital Systems: Primary beneficiary (institutional/arbitrage) \u2014 coordinate care while leveraging market consolidation and pricing opacity to extract rents; can shift costs between payer types and services",
+      "Pharmaceutical Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 benefit from patent protection and pricing opacity; can charge monopoly prices for drugs with no close substitutes; arbitrage across international markets",
+      "Insurance Corporations: Mixed actor (institutional/arbitrage) \u2014 theoretically coordinate risk pooling but extract through administrative complexity, prior authorization theater, and margin extraction; pass costs to employers and employees",
+      "Medicare/CMS (Public Health Authority): Constrained actor (organized/constrained) \u2014 coordinate access for elderly and disabled but politically unable to implement unilateral cost controls; captured by provider lobbying; exit constrained by democratic accountability",
+      "Employers Providing Insurance: Cost-bearer (organized/constrained) \u2014 coordinate employee access to care but face rising premiums that suppress wage growth; exit constrained by employee expectations and talent competition",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as inherent to medical complexity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, reflecting the genuine coordination function (risk pooling, research financing, centralized expertise) alongside systematic rent extraction through multiple mechanisms: pricing opacity (no transparent price discovery), market consolidation (hospitals and insurers operate as regional monopolies), cost-shifting (uninsured subsidize insured through higher charge-master prices), and administrative extraction (insurance overhead that exceeds international norms). The value increased from 0.32 (1995) to 0.58 (2015) as consolidation deepened and price opacity hardened. Suppression (0.65): Moderate-high. Medical necessity creates inelastic demand; bankruptcy law protects creditors more than debtors; prior authorization creates bureaucratic barriers to expensive treatments; price opacity prevents informed consumer choice; employer-based insurance creates lock-in effects; pharmaceutical patents prevent generic competition. Suppression is not absolute (public insurance exists, some transparency is emerging, generic competition functions in transparent markets), but barriers are substantial. Theater ratio (0.58): Moderate. Prior authorization and utilization review consume resources but serve primarily to delay claims and shift costs through bureaucratic denial rather than to identify genuinely unnecessary care. Administrative overhead (now 25% of spending) vastly exceeds levels in countries with centralized negotiation. However, some administrative complexity is genuine (coordinating millions of beneficiaries, processing claims, managing drug formularies). The theater has grown as pricing has become less transparent \u2014 more complexity is required to obscure pricing extraction.",
+    "perspectival_gap": "The constraint splits into opposing experienced realities. The uninsured person sees a Snare: pricing extraction with no care coordination. The insured employee sees Tangled Rope: coordination benefits mixed with cost-shifting. The hospital sees Rope: coordination of care with legitimate margin. The pharmaceutical company sees Rope: coordination of R&D funding with justified pricing. The public health authority sees Tangled Rope with capture: coordination mandate constrained by political economy. The insurance corporation sees Piton: performative complexity. The civilization-scale observer risks Mountain: 'this is just how complex systems work.' These are not measurement disputes but genuine structural differences in what the constraint is *for* from each position.",
+    "directionality_logic": "The directionality derivation is transparent in the base_properties declarations. Uninsured patients are declared as victims \u2014 they bear the costs of pricing extraction with no offsetting benefit. Their exit options are trapped: medical necessity forces engagement; financial barriers prevent exit; no alternative system exists. The engine derives d from victim status + trapped exit, producing maximum f(d). Hospital systems are declared as beneficiaries \u2014 they receive financial benefit from the pricing and consolidation mechanisms. Their exit options are arbitrage: they can shift service mix, consolidate or divest, change pricing strategy. The engine derives d from beneficiary status + arbitrage exit, producing low or negative f(d), which means negative effective extraction (they are not being extracted from; they are extracting). The insured patient occupies an intermediate position: partially benefits from coordination, partially bears cost through premiums and deductibles. Constrained exit (health status, employment lock) produces moderate d, moderate f(d). Pharmaceutical manufacturers are beneficiaries with arbitrage exit (shift markets, licensing, focus), producing low d. Public health authorities are constrained (political accountability) despite organizational power, producing moderate d. The pattern shows that beneficiary status and exit options together fully determine experienced extraction \u2014 this is the engine's directionality calculation."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.2
+  },
+  "network": {
+    "affects_constraints": [
+      "pharmaceutical_patent_system",
+      "employer_based_insurance_lock",
+      "hospital_market_consolidation",
+      "medical_bankruptcy_spiral"
+    ],
+    "dual_formulation_note": "Healthcare cost inflation decomposes into multiple structurally distinct constraints: pharmaceutical pricing (\u03b5\u22480.60, Snare), hospital consolidation (\u03b5\u22480.55, Tangled Rope), insurance administrative overhead (\u03b5\u22480.50, Piton), and medical bankruptcy (\u03b5\u22480.75, Snare). This story treats the system-level coordination-and-extraction hybrid; each component has its own story with different \u03b5, beneficiaries, victims, and exit options. The network links show how failures in one component cascade to others: pharmaceutical monopoly pricing drives insurance premiums; high premiums increase the uninsured population; uninsured patients face cost-shifting. All are downstream of the fundamental opacity in pricing negotiation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.52
+    }
+  ]
+}

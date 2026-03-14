@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "terrestrial_mobile_incumbent_protection",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tmip"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Terrestrial Mobile Incumbent Protection via Regulatory Capture",
+    "topic_domain": "telecommunications/regulatory_capture",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_carriers"
+    ],
+    "victims": [
+      "new_market_entrants",
+      "spectrum_efficiency",
+      "consumer_choice"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Potential Market Entrant",
+      "comment": "PERSPECTIVE 1: POTENTIAL MARKET ENTRANT (SNARE) \u2014 New carriers face multi-billion-dollar licensing fees, spectrum auctions designed to preserve incumbent market share, infrastructure deployment barriers (tower access, right-of-way), and regulatory approval delays lasting 3-7 years. No meaningful exit option exists short of abandoning entry entirely. Maximum experienced extraction: must pay oligopolistic rents to use spectrum incumbents control."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Competitor (EU/East Asian Carrier)",
+      "comment": "PERSPECTIVE 2: INTERNATIONAL COMPETITOR (TANGLED ROPE) \u2014 Foreign carriers have alternative markets where they can invest and scale. They benefit from fragmented regulatory regimes (can forum-shop between jurisdictions) but face significant entry barriers in the US market. Exit cost is high (capital write-off) but not insurmountable (relocation to EU, Asia). Experiences mixed coordination (spectrum standardization enables global operations) and asymmetric extraction (must pay US incumbent premium to access US customers)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Incumbent Carrier (e.g., AT&T, Verizon)",
+      "comment": "PERSPECTIVE 3: INCUMBENT CARRIER (ROPE) \u2014 Experiences the constraint as coordination: spectrum licenses, tower infrastructure, equipment standards are genuine coordination goods. The regulatory framework coordinates 50+ state actors, multiple frequency bands, and international standards. Incumbents see themselves as solving coordination problems; their arbitrage option (relocate operations to another geography) is theoretically available but practically irrelevant due to network effects and sunk capital. Net beneficiary of the constraint."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Open Spectrum Coalition (NGO/Consumer Advocates)",
+      "comment": "PERSPECTIVE 4: OPEN SPECTRUM COALITION (SCAFFOLD) \u2014 Organized advocates (Public Knowledge, Citizens Communications) see incumbent protection as a temporary market structure flaw. They push for spectrum auctions that favor small carriers, dynamic spectrum sharing, and unlicensed band expansion. These reforms have a visible sunset: once dynamic spectrum and open protocols mature (estimated 10-15 years), spectrum access becomes less scarce, incumbent moat weakens. Current extraction is tolerable because the coalition perceives a clear policy pathway to exit."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Regulatory Agency (FCC)",
+      "comment": "PERSPECTIVE 5: REGULATORY AGENCY (FCC) (PITON) \u2014 The FCC maintains spectrum auction processes and licensing frameworks that formally appear competitive but structurally advantage incumbents. The rules are theater: bidding processes allow incumbents to leverage sunk capital and superior financing; rules that appear pro-competition (net neutrality, tower access) coexist with rules that entrench incumbents (spectrum concentration limits that grandfathered existing holdings). The FCC sees its own mandate as degraded \u2014 balancing competition and investment incentives \u2014 and maintains the ritual framework through bureaucratic inertia."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Device Manufacturer (Apple, Samsung, Qualcomm)",
+      "comment": "PERSPECTIVE 6: DEVICE MANUFACTURER (TANGLED ROPE) \u2014 Manufacturers benefit from spectrum standards and large installed base created by incumbents (coordination function). But they also face extraction: licensing fees for patent pools, reduced negotiating power when carriers control network access (content throttling, zero-rating). Exit cost is moderate (can sell globally but lose US market share); exit is constrained by network effects, not by legal barriers. Genuine hybrid: coordination + asymmetric extraction."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Natural Law View (Physics of Spectrum)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a physics/information-theory perspective, spectrum is inherently scarce (electromagnetic property), and some allocation mechanism must exist. Interference between transmitters is a physical law. Coordination costs (licensing, delineation of frequency bands) are inherent to any multi-user spectrum system. From this perspective, incumbent protection appears as an immutable law: scarcity requires allocation, allocation requires rules, rules require coordination, coordination requires someone to benefit. But this naturalizes what is actually a contingent institutional arrangement: spectrum scarcity is real, but allocation via oligopolistic auction (vs. dynamic spectrum sharing, unlicensed bands, or commons-based approaches) is a policy choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "spectrum_commons_viability",
+      "question": "Can dynamic spectrum sharing and unlicensed band protocols achieve capacity and quality-of-service parity with licensed incumbent networks within a 10-15 year horizon?",
+      "resolution_mechanism": "Empirical testing of dynamic spectrum protocols (TV white space, CBRS, future 6GHz unlicensed); comparative analysis of capacity, latency, reliability across licensed vs unlicensed deployments; adoption data for commons-based spectrum",
+      "impact": "If viable: the scaffold perspective is materially correct, extractiveness drops to 0.25-0.35 (transition to pure coordination), and the constraint has a genuine sunset. If not viable: incumbent protection is structurally necessary, the snare classification becomes mountain (scarcity constraint), and extractiveness remains high indefinitely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of dynamic spectrum sharing as incumbent moat replacement"
+    },
+    {
+      "id": "regulatory_capture_mechanism",
+      "question": "Is incumbent protection primarily a capture mechanism (regulators captured by incumbent lobbying) or a structural consequence (scarcity requires allocation, allocation requires delegation to efficient actors)?",
+      "resolution_mechanism": "Comparative regulatory analysis across jurisdictions with different capture intensity (US vs. EU vs. India); analysis of auction rules before and after lobbying pressure; measurement of regulatory distance between legislated intent and implemented rules",
+      "impact": "If capture: the constraint's extractiveness is partly a function of incumbent power, reforms addressing capture could lower extractiveness to 0.35-0.45. If structural: extractiveness reflects genuine scarcity costs, and reforms would shift the burden without eliminating it.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether incumbent protection is regulatory capture or structural necessity"
+    },
+    {
+      "id": "sunk_capital_lock_in",
+      "question": "How much of incumbent moat strength is due to sunk infrastructure capital (towers, spectrum, equipment) vs. regulatory rules (licensing requirements, auction design)?",
+      "resolution_mechanism": "Counterfactual analysis: estimate entrant competitive position under different regulatory rules but same sunk capital distribution; analyze historical entry periods with less regulatory protection",
+      "impact": "If primarily sunk capital: reforms cannot eliminate moat (physical reality), but can reduce regulatory premium; extractiveness floor remains at 0.35-0.40. If primarily regulatory: reforms could significantly weaken moat; extractiveness could drop to 0.20-0.30.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sunk capital vs regulatory rule contribution to incumbent moat"
+    },
+    {
+      "id": "investment_incentive_dependency",
+      "question": "Would reducing incumbent protection (lowering extractiveness, increasing entry) materially harm network investment and coverage expansion?",
+      "resolution_mechanism": "Comparison of investment rates and coverage expansion across jurisdictions with different incumbent protection regimes (US high-protection vs. EU medium-protection vs. India low-protection); time-series analysis of investment before/after major reforms",
+      "impact": "If investment dependent on high margins: reforms must be gradual (scaffold rather than sharp sunset) to avoid network degradation. If investment is robust to lower margins: reforms can proceed faster, confirming scaffold sunset.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Network investment dependency on incumbent margin preservation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Terrestrial mobile incumbent protection via regulatory capture represents a structurally rich constraint that exhibits the full range of DR classification types. The US Federal Communications Commission maintains a spectrum licensing and auction system that formally presents itself as competitive but structurally advantages the three dominant carriers (AT&T, Verizon, T-Mobile). This constraint combines genuine coordination functions (spectrum allocation requires rule-based delineation; network standardization enables interoperability) with asymmetric extraction (incumbents capture rent through pricing, spectrum hoarding, and barrier creation). The constraint's theater ratio (0.55) reflects that FCC auction rules and competitive frameworks are performative: auctions are designed to appear competitive while preserving incumbent market share through rules that favor leveraged bidders. The extractiveness trajectory (0.35 \u2192 0.58 over a decade) shows how regulatory protections have intensified as spectrum scarcity has increased and incumbents have invested heavily in lobbying.",
+    "key_agents": [
+      "Incumbent Carriers (AT&T, Verizon, T-Mobile): Primary beneficiary (institutional/arbitrage) \u2014 capture spectrum rents, set pricing, control infrastructure access",
+      "New Market Entrants (failed attempts: MetroPCS pre-acquisition, Lightsquared, etc.): Primary victim (powerless/trapped) \u2014 face multi-billion-dollar barriers, regulatory approval delays, spectrum cost premiums",
+      "Spectrum Efficiency (collective good): Victim (powerless/trapped) \u2014 incumbents hold spectrum without fully utilizing it (hoarding dynamic); spectrum is scarcer than it should be",
+      "Consumer Choice (collective good): Victim (powerless/trapped) \u2014 duopoly/oligopoly pricing; reduced service quality innovation due to incumbent complacency",
+      "International Competitors (EU/Asian carriers): Secondary victim (moderate/constrained) \u2014 have alternatives (exit to other jurisdictions) but face extraction in US market",
+      "Device Manufacturers (Apple, Qualcomm): Secondary agent (moderate/constrained) \u2014 benefit from incumbent infrastructure but face licensing fees and carrier control",
+      "Open Spectrum Coalition (NGO advocates): Organized agent (organized/constrained) \u2014 sees incumbent protection as temporary problem with policy solutions",
+      "FCC Regulatory Agency: Institutional actor (institutional/mobile) \u2014 maintains performative framework; sees own mandate as degraded but continues ritual"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Incumbents capture substantial economic rent through spectrum control, infrastructure barriers, and regulatory pricing. The rent is not as extreme as pure monopoly (0.80+) because some new entry occurs (Metro by T-Mobile, MVNO agreements) and international competition constrains pricing at the margin. However, extractiveness has been rising (0.35 to 0.58 over a decade) as spectrum scarcity increased and incumbents consolidated lobbying power. Suppression (0.68): High. Significant barriers include: (1) Spectrum licensing costs ($500M-$10B per major auction), (2) Infrastructure deployment (tower access, right-of-way negotiations), (3) Regulatory approval timelines (2-7 years), (4) Equipment standardization costs (must support multiple bands), (5) Financing barriers (risk premium for new entrants), (6) Regulatory capture (rules designed to favor incumbents). The suppression is structural (some barriers are real costs of coordination) and institutional (some are rules that could be changed). Theater ratio (0.55): Moderate-high. FCC competitive frameworks are substantially performative: auction rules appear competitive but use bidding structures that favor leveraged incumbents, spectrum concentration caps are grandfathered (incumbent holdings exempt), competitive bidding requirements coexist with facilities-based exemptions (incumbents use themselves as 'competitors'), and investment commitments are monitored without binding enforcement. The theater has increased as auctions have become more complex and rule-making more technical, making competitive intent harder to verify.",
+    "directionality_logic": "The directionality derivation chain operates as follows: Incumbent carriers hold beneficiary status + arbitrage-level exit options (can theoretically relocate but practically cannot due to sunk capital and network effects). Derived d \u2248 0.05-0.15 (full beneficiary range). Entrants hold victim status + trapped exit options (multi-billion-dollar sunk cost barriers). Derived d \u2248 0.90-0.98 (full target range). International competitors hold victim status (in US market) + constrained exit (can relocate to EU/Asia, but at high cost). Derived d \u2248 0.65-0.75 (moderate-to-high target range). Device manufacturers hold mixed status (beneficiary from infrastructure standardization, victim from carrier pricing power) + constrained exit (cannot abandon US market). Derived d \u2248 0.55-0.60 (mixed range). The FCC as institutional actor with mobile exit (could theoretically apply rules differently but faces political capture and institutional inertia) derives d \u2248 0.25-0.35 (moderate beneficiary: maintains the status quo).",
+    "perspectival_gap": "This constraint demonstrates maximal perspectival divergence. The incumbent carrier sees pure coordination (Rope) \u2014 spectrum allocation is a genuine problem they are helping solve. The open spectrum coalition sees a temporary problem with policy solutions (Scaffold) \u2014 unlicensed spectrum expansion and dynamic sharing will eventually replace the incumbent moat. The FCC sees its own degraded ritual (Piton) \u2014 competitive frameworks that no longer deliver competition, maintained through bureaucratic inertia. The entrant sees pure extraction (Snare) \u2014 no meaningful exit option exists. The device manufacturer sees mixed coordination and extraction (Tangled Rope) \u2014 real benefits from standardization, real costs from carrier gatekeeping. The international competitor sees mixed extraction and exit options (Tangled Rope) \u2014 significant extraction in the US market but ability to relocate globally. The civilizational analytical observer risks seeing spectrum scarcity as natural law (Mountain) \u2014 but the structural data reveals this as a false summit: scarcity is physical reality, but allocation via oligopolistic auction (vs. commons-based spectrum, dynamic sharing, unlicensed bands) is a policy choice.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that incumbent protection is genuinely both coordination AND extraction. The coordination function is real: spectrum allocation does require rules, delineation, and some form of delegation. Network standardization does create efficiency gains. Infrastructure investment does require some predictability and profit incentive. The extraction is also real: incumbents capture far more economic rent than necessary to provide these coordination functions. The constraint could be restructured with lower extractiveness (unlicensed spectrum, dynamic sharing, reduced auction costs) without losing coordination benefits. The mandatrophy is resolved by recognizing that the constraint belongs to the tangled_rope category precisely because both functions are genuine, neither can be removed without destroying the constraint entirely, and the task of governance is to shift the ratio: maximize coordination, minimize unnecessary extraction. This is not a false positive where a name-only extractive constraint hides as coordination, nor a false negative where genuine coordination is misread as pure extraction. The benchmark is not perfect fairness but structural functionality: can the constraint be redesigned to deliver equivalent or better coordination with lower asymmetric extraction? Yes \u2014 scaffold technologies (dynamic spectrum, unlicensed bands, commons protocols) suggest that extractiveness could be reduced to 0.25-0.35 without eliminating coordination. This confirms that current extractiveness (0.58) includes policy-contingent rent (0.25-0.33 reducible range) not structural necessity."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "spectrum_scarcity",
+      "net_neutrality_enforcement",
+      "tower_access_regulation"
+    ],
+    "dual_formulation_note": "Incumbent protection is downstream of spectrum scarcity (physical constraint) but represents a distinct institutional/regulatory constraint. The upstream scarcity constraint has \u03b5 \u2248 0.10 (mountain: electromagnetic interference is inherent). The incumbent protection constraint has \u03b5 \u2248 0.58 (tangled_rope: the *allocation mechanism* for scarce spectrum is policy-contingent). Decomposition clarifies that scarcity is inevitable; protectionism is not."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.3
+    }
+  ]
+}

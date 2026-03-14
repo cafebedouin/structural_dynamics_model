@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "leo_debris_accumulation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "leo_debris"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "LEO Debris Accumulation and Orbital Access Control",
+    "topic_domain": "space_infrastructure/environmental_commons",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_satellite_operators",
+      "space_debris_mitigation_researchers"
+    ],
+    "victims": [
+      "new_entrant_operators",
+      "shared_orbital_environment",
+      "future_space_access"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Shared Orbital Environment",
+      "comment": "PERSPECTIVE 1: SHARED ORBITAL ENVIRONMENT (SNARE) \u2014 Cannot exit the debris field or escape collision risk. Bears full cost of accumulated debris from past and present operations. No mechanism for cost recovery or remediation. The orbital commons is powerless against continued debris generation \u2014 bears maximum extraction with no alternatives."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "New Entrant Space Operators",
+      "comment": "PERSPECTIVE 2: NEW ENTRANT OPERATORS (SNARE) \u2014 Face structurally higher launch and operational costs due to debris avoidance requirements, tracking systems, and collision insurance premiums. Cannot access LEO without bearing debris externality costs created by historical operators. Trapped by inherited debris field \u2014 exit requires abandoning space ambitions entirely. Multi-generational impact: debris will degrade orbital access for decades even if debris generation stops today."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Active Satellite Constellation Operators",
+      "comment": "PERSPECTIVE 3: ACTIVE CONSTELLATION OPERATORS (TANGLED ROPE) \u2014 Mix of coordination and extraction. Genuine coordination: all operators benefit from shared debris-tracking infrastructure (Space Force SSA, ESA tracking). Asymmetric extraction: established operators benefit from first-mover advantage and grandfathered operational standards; new operators must meet stricter deorbiting requirements. Constrained by regulatory compliance and insurance costs but possess market power and exit options (migrate to GEO, cease operations with asset value retention)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Incumbent Satellite Operators (Telecom/Navigation)",
+      "comment": "PERSPECTIVE 4: INCUMBENT OPERATORS (ROPE) \u2014 Primary beneficiaries. Integrated tracking and avoidance systems protect existing constellations and increase their competitive moat against new entrants. Debris mitigation regulations create barriers to market entry that protect incumbent market share. Experience the constraint as coordination (orbital safety management) with asymmetric benefits \u2014 their market position is strengthened. High arbitrage: can shift operations to GEO or retire with retained asset value."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Space Debris Mitigation Coalition",
+      "comment": "PERSPECTIVE 5: DEBRIS MITIGATION RESEARCHERS (TANGLED ROPE) \u2014 Organized agents benefit from debris accumulation that drives research funding and policy attention. Genuine coordination function: active debris removal and collision avoidance are collective action problems requiring shared standards. Asymmetric extraction: research funding concentrates where debris is densest (incumbent operators' orbital regions); removal technology development is controlled by well-capitalized firms and government agencies. Coalition has agency but constrained by dependence on operator funding and space launch infrastructure."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Space Coordination Bodies",
+      "comment": "PERSPECTIVE 6: COORDINATION BODIES (PITON) \u2014 ITU, IADC, and UN COPUOS maintain the debris tracking and deorbiting frameworks, but compliance is voluntary and enforcement is performative. Theater ratio reflects gap between formal protocols (5-year deorbiting standards, collision avoidance maneuvers) and actual compliance (estimated 40-60% of defunct satellites remain in orbit). The coordination system persists through institutional inertia and diplomatic ritual \u2014 it provides tracking data and standards but lacks enforcement mechanism. Degraded function: the institutional framework generates theater of coordination without preventing debris accumulation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a long-term/global perspective, orbital debris is treated as an immutable consequence of space use \u2014 'you cannot access space without creating debris.' This naturalizes what is structurally a choice about regulatory standards, operator accountability, and cost allocation. The false summit: debris is not inherent to space access but to unpriced externalities and grandfathered operational freedom. The natural law framing obscures that debris accumulation is driven by institutional arrangements (no liability framework, voluntary compliance, regulatory forbearance on existing operators)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kessler_syndrome_threshold_ambiguity",
+      "question": "At what debris density threshold does cascade probability become self-sustaining, and has that threshold been reached in LEO?",
+      "resolution_mechanism": "Empirical collision rate modeling; comparison of NASA/ESA debris cascade simulations under current and projected debris densities; measurement of cascade-triggering probability at observed orbital population levels",
+      "impact": "If threshold already exceeded: debris field is irreversibly self-generating (mountain-type immutability). If threshold not yet reached: debris accumulation is still a policy choice (tangled rope remains accurate). Classification outcome: mountain vs tangled_rope hinges on this parameter.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Kessler cascade threshold has been reached in LEO"
+    },
+    {
+      "id": "active_removal_cost_effectiveness",
+      "question": "Can active debris removal (ADR) technology reduce debris density faster than new satellite launches increase it, and at what cost ratio?",
+      "resolution_mechanism": "Techno-economic analysis of ADR mission costs vs launch rate projections; modeling of debris density trajectory under various ADR/launch scenarios; comparison of removal cost per unit debris vs cost to absorb via satellite hardening",
+      "impact": "If ADR cost-effective: debris mitigation is a solvable coordination problem (scaffold with sunset, or rope with governance). If ADR prohibitively expensive: debris accumulation becomes structural constraint on future space access (snare for new entrants becomes permanent).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Cost-effectiveness of active debris removal relative to launch growth"
+    },
+    {
+      "id": "liability_framework_enforceability",
+      "question": "Can an orbital debris liability regime (charging operators for debris creation/retention) be enforced without fragmenting space governance and driving operators to non-compliant jurisdictions?",
+      "resolution_mechanism": "Analysis of existing inter-state liability precedents (shipping pollution, air emissions); modeling of regulatory arbitrage incentives; assessment of enforcement mechanisms for transnational space activities",
+      "impact": "If enforceable: debris becomes priced, extraction mechanism converts to coordination mechanism, tangled_rope \u2192 rope transition possible. If unenforceable: extraction persists, incumbent operators retain grandfathered advantage indefinitely (tangled_rope remains structural).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether orbital debris liability can be enforced internationally"
+    },
+    {
+      "id": "incumbent_operator_coordination_necessity",
+      "question": "Is the incumbent operator integration with debris tracking genuinely necessary for orbital safety, or is it primarily a competitive moat?",
+      "resolution_mechanism": "Comparative analysis of collision avoidance outcomes for operators with and without integrated tracking; measurement of cost reduction from proprietary tracking vs public SSA use; assessment of whether fragmented operators could achieve equivalent safety via public tracking systems",
+      "impact": "If genuinely necessary: tangled_rope classification is correct \u2014 coordination function is real. If primarily competitive moat: extraction dominates, classification should shift toward snare (higher d for new entrants).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether incumbent tracking integration is necessary for safety or primarily competitive differentiation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "LEO debris accumulation is a multi-layered constraint that functions simultaneously as a natural commons problem, an incumbent-protection mechanism, and a degraded coordination system. Low Earth Orbit contains approximately 34,000 tracked objects \u226510 cm and an estimated 900,000 objects 1-10 cm. Collision cascades create new debris, raising the overall collision probability and forcing operators to invest in avoidance infrastructure. The constraint exhibits tangled rope structure: there is a genuine coordination function (shared debris tracking, collision avoidance protocols, deorbiting standards) AND asymmetric extraction (incumbent operators benefit from the debris field as a barrier to market entry; new operators bear the externality costs through higher insurance, tracking, and compliance expenses). The constraint's extractiveness has grown from 0.32 (early 2000s, when debris density was manageable) to 0.58 (current), reflecting the accumulation of both physical debris and regulatory overhead. Theater ratio remains moderate (0.45), indicating that coordination protocols are substantive but fragmented \u2014 international standards exist but compliance is voluntary and enforcement is absent.",
+    "key_agents": [
+      "Shared Orbital Environment: Victim (powerless/trapped) \u2014 commons that cannot exit debris field; bears collision risk and contamination from all operators",
+      "New Entrant Operators: Victim (powerless/trapped) \u2014 bear debris avoidance costs and compliance overhead created by historical operators; cannot access LEO below cost threshold",
+      "Active Constellation Operators: Mixed (moderate/constrained) \u2014 benefit from debris tracking moat and entry barriers; also constrained by collision avoidance and deorbiting compliance",
+      "Incumbent Operators (Telecom/Navigation): Beneficiary (institutional/arbitrage) \u2014 protected by debris-density barriers; market share defended against new entrants by high compliance costs",
+      "Debris Mitigation Researchers: Beneficiary (organized/constrained) \u2014 funding and research opportunities driven by debris density; benefit from operator contracts for tracking and removal research",
+      "International Coordination Bodies: Institutional actor (institutional/arbitrage) \u2014 maintain voluntary compliance framework; benefit from diplomatic role and research funding without enforcement responsibility",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing the debris field as an inevitable consequence of space use rather than a policy choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. New entrant operators bear structural cost disadvantage (estimated 15-40% higher operational costs due to debris tracking, collision insurance, and compliance overhead). However, the extraction is not as severe as snare-level (\u03b5 \u2265 0.46, \u03c7 \u2265 0.66) would suggest for victims because incumbent operators also incur debris mitigation costs \u2014 the commons is degraded for all actors, not just new entrants. The 0.58 value reflects that new entrants face a higher cost floor than incumbents who amortized tracking systems over decades of operations. Suppression (0.72): High. Entry barriers include specialized tracking infrastructure (requiring government SSA access or expensive private systems), collision insurance (10-50x higher premiums for high-debris orbits), and regulatory compliance (5-year deorbiting standards, pre-launch collision risk assessment). These barriers are structural but not absolute \u2014 they can be paid at cost, creating constrained rather than trapped exit for well-capitalized operators. The 0.72 reflects that entry is possible but expensive and heavily regulated. Theater ratio (0.45): Moderate. ITU Radio Regulations, IADC guidelines, and UN COPUOS frameworks provide substantive protocols. However, compliance is voluntary \u2014 estimated 40-60% of defunct satellites remain in orbit beyond their 5-year deorbiting window, indicating significant gap between protocol and actual practice. Theater reflects this compliance gap without being as high as piton-level (\u03b5 \u2264 0.25, theater \u2265 0.70) because the protocols do drive observable behavior (collision avoidance maneuvers are performed; debris tracking is funded).",
+    "perspectival_gap": "This constraint exemplifies how the same structural phenomenon can appear as pure coordination (rope), pure extraction (snare), or mixed (tangled rope) depending on the observer's power and exit options. Incumbents experience coordination benefits and low cost (rope). New entrants experience extraction and high cost (snare). The analytical observer risks seeing the debris field as a mountain \u2014 natural consequence of space use \u2014 when it is actually a tangled rope whose extraction is sustainable only because enforcement is weak and regulatory asymmetry protects beneficiaries from liability.",
+    "directionality_logic": "Each agent's directionality is determined by their power level, exit options, and structural relationship to debris accumulation. Incumbent operators with institutional power and arbitrage options (can migrate to GEO, cease operations, absorb costs) derive low d and experience coordination benefits. New entrants with powerless status and trapped options (cannot access space without absorbing debris costs) derive high d and experience extraction. The shared orbital environment derives maximum d because it is powerless and has no exit option \u2014 it is the pure victim. Researchers benefit from debris funding despite constrained exit, creating moderate d with beneficiary status. Coordination bodies maintain arbitrage (diplomatic role, research funding) without enforcement responsibility, creating low d and rope experience. The asymmetry between incumbents' grandfathered operational freedom and new operators' strict compliance standards is the core extraction mechanism. This asymmetry could be eliminated by retroactive liability or harmonized standards, but such changes face incumbent resistance \u2014 the extraction persists because it is institutionally protected, not because it is technically necessary.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that LEO debris is genuinely a tangled rope: it coordinates orbital safety (shared tracking infrastructure, collision avoidance protocols, deorbiting standards) AND extracts asymmetrically (incumbents protected by grandfathered standards; new entrants bear compliance costs). The constraint is not purely extractive (which would make it a snare) because coordination function is real \u2014 debris tracking benefits all operators. It is not purely coordinating (which would make it rope) because the regulatory asymmetry creates systematic cost advantage for incumbents. The false summit (mountain classification) naturalizes the debris field as immutable, obscuring that it is a policy choice. The piton classification (coordination bodies) is accurate \u2014 the institutional framework is substantially performative; it maintains the forms of coordination while failing to prevent debris accumulation. The decomposition into separate stories is NOT warranted here because all the diverse structural relationships (coordination, extraction, degradation) are aspects of the same constraint mechanism: unpriced orbital externalities + grandfathered regulatory standards + weak international enforcement."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "commercial_space_access_barriers",
+      "international_space_governance_fragmentation"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

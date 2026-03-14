@@ -1,0 +1,228 @@
+{
+  "header": {
+    "constraint_id": "predictive_policing_disparate_impact",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pred_pol"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Predictive Policing Disparate Impact on Marginalized Communities",
+    "topic_domain": "criminal_justice/algorithmic_discrimination",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "law_enforcement_agencies",
+      "technology_vendors"
+    ],
+    "victims": [
+      "marginalized_communities",
+      "criminal_justice_equity"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Residents of Over-Policed Communities",
+      "comment": "PERSPECTIVE 1: OVER-POLICED RESIDENTS (SNARE) \u2014 Trapped in neighborhoods targeted by predictive algorithms with no exit option. Increased stops, surveillance, and arrests driven by models trained on historical biased data. Cannot exit the geographic constraint or the algorithmic targeting. Maximum experienced extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "Criminal Justice Reformers (Identity-Locked)",
+      "comment": "PERSPECTIVE 2: CRIMINAL JUSTICE REFORMERS (SNARE via identity_locked) \u2014 Structurally mobile (could abandon reform work) but identity-fused with criminal justice reform movement. Cannot exit their professional and ideological commitment to fairness even as the system absorbs their critiques into legitimation narratives. The constraint extracts their labor and moral authority while neutralizing their reform potential through algorithmic fairness theater."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Community Advocacy Organizations",
+      "comment": "PERSPECTIVE 3: COMMUNITY ADVOCACY ORGS (TANGLED ROPE) \u2014 Organized agents with constrained exits (funding dependencies, network effects). Experience genuine coordination function (mobilizing collective defense, documenting disparate impacts) alongside asymmetric extraction (their data and expertise fuel algorithm audits that legitimize the systems they critique; their advocacy becomes regulatory input that tech vendors incorporate into compliance theater)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Law Enforcement Agencies",
+      "comment": "PERSPECTIVE 4: LAW ENFORCEMENT AGENCIES (ROPE) \u2014 Net beneficiary with arbitrage capacity (can switch vendors, implement or defund systems). Coordinate enforcement strategy through algorithmic tools while capturing crime reduction credit and liability displacement. Experience the constraint as pure coordination: algorithms guide resource allocation, reduce decision discretion claims, enable data-driven narratives."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Technology Vendors",
+      "comment": "PERSPECTIVE 5: TECHNOLOGY VENDORS (ROPE) \u2014 Net beneficiary with global arbitrage capacity (can sell to other jurisdictions, retract from markets with regulation). Experience constraint as pure coordination: algorithms bundle law enforcement workflow, create lock-in through data integration, generate revenue from recurring licensing and model updates. Minimal experienced extraction relative to value captured."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Algorithmic Accountability Movement",
+      "comment": "PERSPECTIVE 6: ALGORITHMIC ACCOUNTABILITY MOVEMENT (SCAFFOLD) \u2014 Organized agents building exit pathways through regulatory requirements (impact assessments, bias audits, transparency mandates). See predictive policing as a temporary coordination failure with a sunset: mathematical approaches to fairness, algorithmic transparency requirements, and hardware-agnostic replacement systems are maturing. High organizational agency and declining effectiveness of the traditional extraction mechanism \u2014 as auditing norms spread, algorithmic legitimation narratives lose force. Theater ratio declining as external validation requirements increase."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Algorithmic Fairness Certification Apparatus",
+      "comment": "PERSPECTIVE 7: FAIRNESS CERTIFICATION APPARATUS (PITON) \u2014 Academic fairness metrics (bias detection tools, impact assessment frameworks) persist largely as performance theater. The mathematical tools (disparate impact ratios, equalized odds) cannot detect systemic gaming (training data poisoning, feedback loop amplification, outcome measure manipulation). The certification apparatus maintains itself through institutional inertia \u2014 it offers the appearance of verification without capacity to prevent the extraction it claims to audit. Theater ratio 0.72 \u2014 the metrics are comprehensive but orthogonal to actual disparate impact."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (False Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / FALSE NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, there is a temptation to see this as an inherent property of algorithmic systems: any sufficiently complex predictive model will embed historical biases, and no audit can fully eliminate this. This perspective risks naturalizing what is actually a contingent institutional choice \u2014 to deploy known-biased systems with legitimation theater rather than to refrain from deployment. The engine's false summit detector identifies this as naturalization of a policy choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "feedback_loop_amplification_mechanism",
+      "question": "Does the constraint operate primarily through initial biased training data or through feedback loop amplification that accelerates disparate impact over time?",
+      "resolution_mechanism": "Longitudinal analysis of algorithmic predictions vs. actual crime patterns; comparison of disparate impact metrics across early deployment (years 1-3) vs. mature systems (years 5+); intervention studies with algorithmic retraining using debiased data",
+      "impact": "If primarily training data bias: constraint is remediable through data curation and external auditing. If primarily feedback amplification: constraint is self-reinforcing and requires system discontinuation, not reform.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether disparate impact is driven by biased training data or self-reinforcing feedback loops"
+    },
+    {
+      "id": "algorithmic_gaming_by_law_enforcement",
+      "question": "To what extent do law enforcement agencies deliberately manipulate outcomes (arrest targets, crime classifications) to game the algorithmic inputs and preserve system legitimacy?",
+      "resolution_mechanism": "Analysis of arrest patterns before vs. after algorithmic deployment; comparison of crime classifications with independent victim surveys; interviews with officers about deliberate data gaming; detection of statistical breaks that suggest outcome manipulation",
+      "impact": "If significant gaming: the constraint includes active conspiracy to maintain disparate impact despite knowledge. If minimal gaming: the constraint operates through passive feedback loops rather than deliberate extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of deliberate manipulation of algorithmic inputs by law enforcement"
+    },
+    {
+      "id": "reformability_of_fairness_metrics",
+      "question": "Can mathematical fairness constraints (disparate impact thresholds, equalized odds, demographic parity) be implemented in live systems without vendors circumventing through metric selection or outcome measure gaming?",
+      "resolution_mechanism": "Comparative analysis of jurisdictions with strong fairness mandates vs. minimal requirements; longitudinal tracking of metric compliance vs. actual disparate impact; detection of metric substitution (complying with mandated metric while gaming alternative metrics)",
+      "impact": "If remediable: algorithmic accountability movement's scaffold perspective is structural and sunset is real. If unremediable: fairness metrics are pure theater and the constraint requires system discontinuation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether mathematical fairness constraints can prevent disparate impact in deployed systems"
+    },
+    {
+      "id": "identity_lock_in_reform_community",
+      "question": "Is the criminal justice reform community's commitment to algorithmic fairness rooted in instrumental belief that fairness is achievable, or in identity fusion with the reform narrative itself?",
+      "resolution_mechanism": "Analysis of reform rhetoric: presence of sunset clauses or discontinuation scenarios vs. exclusive focus on improving fairness metrics; behavioral shifts when fairness interventions demonstrably fail; willingness to recommend full system discontinuation vs. continued advocacy for reform",
+      "impact": "If instrumental: reformers will pivot to discontinuation advocacy if fairness proves unachievable. If identity-locked: reformers will continue extractive fairness work even when evidence suggests futility, maintaining the constraint's legitimation narrative.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether reform commitment is instrumental or identity-constituted"
+    },
+    {
+      "id": "jurisdictional_heterogeneity_in_disparate_impact",
+      "question": "Does disparate impact vary systematically across jurisdictions based on system design choices, or is it invariant to local implementation details?",
+      "resolution_mechanism": "Comparative analysis of disparate impact metrics across municipalities using same vendor, vs. same municipality using different vendors; correlation between implementation choices (model architecture, hyperparameters, audit frequency) and disparate impact magnitude",
+      "impact": "If heterogeneous and controllable: disparate impact is a constraint design flaw remediable through better architecture. If invariant: disparate impact is inherent to predictive policing itself and requires discontinuation, not design improvement.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether disparate impact varies with implementation or is invariant"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "Predictive policing systems deployed in the United States create a structural constraint that concentrates law enforcement surveillance and enforcement on historically marginalized communities through algorithmic amplification of biased training data. The constraint operates as a self-reinforcing feedback loop: historic disparities in policing produce biased arrest data; algorithms trained on this data recommend increased enforcement in the same communities; increased enforcement generates more arrests; these arrests retrain the algorithm with amplified bias. The victims (marginalized communities) are trapped geographically and administratively; they cannot exit the targeting. Law enforcement agencies benefit through liability displacement (decisions attributed to algorithms rather than officers) and resource concentration. Technology vendors benefit through system licensing, ongoing updates, and lock-in effects. The constraint exhibits all six DR types from different observer positions, revealing how institutional capture operates through algorithmic legitimation. The theater ratio (0.58) reflects that fairness metrics and bias audits perform accountability without preventing disparate impact \u2014 agencies comply with fairness metrics while the underlying targeting disparity persists through feedback loop amplification and metric gaming.",
+    "key_agents": [
+      "Marginalized Communities: Primary victims (powerless/trapped) \u2014 geographically concentrated, cannot exit algorithmic targeting; bear full cost of increased enforcement",
+      "Criminal Justice Reformers: Secondary victims (moderate/identity_locked) \u2014 structurally mobile but identity-fused with reform narrative; their work becomes extractive as their expertise legitimates systems they critique",
+      "Law Enforcement Agencies: Primary beneficiaries (institutional/arbitrage) \u2014 capture crime reduction credit, displace liability to algorithms, reduce discretion claims",
+      "Technology Vendors: Secondary beneficiaries (institutional/arbitrage) \u2014 generate recurring revenue, create lock-in through data integration, globalize market presence",
+      "Community Advocacy Organizations: Organized victims (organized/constrained) \u2014 mobilize collective defense and documentation; also have their advocacy absorbed into regulatory theater",
+      "Algorithmic Accountability Advocates: Organized agents building exit pathways (organized/constrained) \u2014 developing fairness mandates, impact assessment requirements, and alternative approaches",
+      "Fairness Certification Apparatus: Institutional theater (institutional/arbitrage) \u2014 maintains mathematical fairness metrics that cannot prevent actual disparate impact",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing algorithmic bias as inherent rather than contingent policy choice"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and increasing. The constraint extracts substantial value from marginalized communities through concentration of enforcement, arrest inflation, and criminal record accumulation. The value is captured by law enforcement (through metrics, funding, political legitimation) and vendors (through licensing and lock-in). Extractiveness increased from 0.42 to 0.68 as systems matured and feedback loops amplified biases \u2014 early deployments operated on historical data alone; mature systems operate on poisoned data streams that accelerate disparate impact. Suppression (0.72): Very high. Victims face compound barriers: geographic immobility (housing market discrimination concentrates marginalized populations), administrative barriers (policing prevents exit mobility), technological opacity (algorithms are proprietary), and legitimation narratives (fairness audits create appearance of control). The suppression is not purely external \u2014 some component is internalized through legitimation narratives that frame algorithm recommendations as objective and unavoidable. Theater ratio (0.58): Moderate-high and increasing. Fairness metrics (bias audits, disparate impact ratios, equalized odds) are mathematically comprehensive but orthogonal to actual disparate impact because vendors can game metric selection (comply with mandated metrics while violating alternative fairness criteria) and manipulate outcome measures (redefining what counts as crime or a successful prediction).",
+    "directionality_logic": "Directionality values derive from each agent's structural position: power level, exit capacity, and extraction flow. Powerless trapped residents experience maximum d (0.95), producing high f(d) and thus high \u03c7. Institutional beneficiaries with arbitrage capacity experience low d (0.10-0.20), producing negative f(d) and thus negative \u03c7 (the constraint subsidizes them). Organized agents with constrained exits (community orgs, accountability advocates) experience moderate d (0.55-0.65), producing moderate f(d) and moderate \u03c7. Identity-locked reformers are structurally mobile but experientially trapped; their d derives from victim status (they bear the extraction of being extracted from by the systems they critique) combined with constrained exit (identity fusion prevents walking away), producing d around 0.75 and f(d) around 1.20. The engine's directionality pipeline produces the measured extraction values that differentiate powerless experience (maximum) from institutional experience (minimal) from organized experience (moderate).",
+    "perspectival_gap": "This constraint demonstrates perspectival divergence across all six types from identical base properties. Marginalized residents see pure extraction (Snare) \u2014 maximum experienced exploitation with no coordination benefit. Community organizations see mixed coordination and extraction (Tangled Rope) \u2014 their defensive work coordinates collective resistance but is absorbed into regulatory theater. Law enforcement agencies see pure coordination (Rope) \u2014 algorithms coordinate enforcement strategy with minimal experienced extraction. Technology vendors see pure coordination (Rope) \u2014 algorithms bundle workflow with lock-in effects. The algorithmic accountability movement sees a temporary problem with solutions (Scaffold) \u2014 fairness audits, transparency mandates, and alternative technologies are building exit pathways. The fairness certification apparatus sees its own degraded ritual (Piton) \u2014 metrics persist through institutional inertia despite evidence of ineffectiveness. The civilizational analytical observer risks seeing an inherent property of algorithmic systems (Mountain) \u2014 that all predictive systems embed biases. This false summit is revealed by the structural data: disparate impact is not inherent to prediction; it results from specific institutional choices to deploy known-biased systems with legitimation theater.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating that all six types are legitimate perspectival readings that together reveal the full extraction structure. The question 'Is this a snare or a tangled rope?' has no single answer \u2014 it depends on your structural position. For trapped residents: snare (maximum extraction). For community organizations: tangled rope (mixed coordination and extraction). For law enforcement: rope (net benefit). For vendors: rope (net benefit). For accountability advocates: scaffold (remediable). For fairness metrics: piton (degraded theater). For the analytical observer: mountain is a FALSE summit \u2014 the constraint naturalizes a contingent institutional choice. The mandatrophy is not resolved by picking the 'correct' type but by recognizing that the distributional gap between victim and beneficiary experience (snare vs. rope) is the defining feature of extraction. When different agents experience the same constraint as snare/tangled rope/rope simultaneously, the constraint is operating as organized extraction with institutional legitimation."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_bias_in_loan_underwriting",
+      "criminal_record_employment_discrimination",
+      "housing_discrimination_algorithmic_steering"
+    ],
+    "dual_formulation_note": "Predictive policing disparate impact is downstream of biased historical data but represents a distinct constraint with its own feedback loop structure. The upstream constraint (historical biased policing data) has different \u03b5 reflecting past institutional choices; the downstream constraint (algorithmic amplification through feedback loops) has higher \u03b5 reflecting the self-reinforcing nature of the system. Separating these stories enables distinct policy interventions: data curation addresses the upstream constraint; system discontinuation addresses the downstream feedback loop constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.72
+    }
+  ]
+}

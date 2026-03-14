@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "safe_water_access",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "water"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Safe Water Access as Infrastructure Constraint",
+    "topic_domain": "public_health/infrastructure/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "water_utilities",
+      "large_industrial_consumers",
+      "wealthy_municipalities"
+    ],
+    "victims": [
+      "low_income_households",
+      "rural_populations",
+      "informal_settlements"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Low-Income Urban Household",
+      "comment": "PERSPECTIVE 1: LOW-INCOME HOUSEHOLD (SNARE) \u2014 Cannot exit dependency on unsafe water systems. Bears full cost of disease burden, medical expenses, and time spent collecting/boiling water. No structural alternative within economic constraints. Zero degrees of freedom."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Rural Agrarian Population",
+      "comment": "PERSPECTIVE 2: RURAL AGRARIAN POPULATION (SNARE) \u2014 Trapped by geographic isolation and lack of infrastructure investment. Limited capacity to dig wells or install treatment. Generational time horizon shows intergenerational transmission of constraint \u2014 children born into same unsafe systems as parents. Exit requires migration (itself costly and risky)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Middle-Income Neighborhood",
+      "comment": "PERSPECTIVE 3: MIDDLE-INCOME NEIGHBORHOOD (TANGLED ROPE) \u2014 Has some access coordination benefit (piped systems reduce collection burden) but bears significant extraction through unreliable service, high water bills relative to income, and inferior water quality. Can organize (neighborhood associations) but exit to independent systems is costly. Mixed benefit and burden."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Public Water Utility",
+      "comment": "PERSPECTIVE 4: PUBLIC WATER UTILITY (ROPE) \u2014 Experiences safe water access constraint as coordination mechanism: organizing water supply prevents epidemics, enables economic activity, solves collective action problem of individual well-drilling. Benefits from revenue streams and political legitimacy. Has arbitrage options (operate more efficiently, expand services, adjust pricing). Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Large Industrial Water Consumer",
+      "comment": "PERSPECTIVE 5: LARGE INDUSTRIAL CONSUMER (TANGLED ROPE) \u2014 Coordinates production and supply chain through reliable water access but extracts through preferential allocation, negotiated rates, and guaranteed supply during scarcity. Can arbitrage to alternative sources or relocate. Powerful negotiating position within the constraint system."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Water Governance Apparatus",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL WATER GOVERNANCE (PITON) \u2014 UN Sustainable Development Goal 6 (Clean Water and Sanitation) and related water-cooperation treaties create theatrical coordination performance with minimal enforcement. Goals are declared but funding mechanisms are inadequate, compliance is unverified, and real extraction barriers remain unchanged. Maintains institutional theater of commitment without functional change."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Scarcity View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL SCARCITY (MOUNTAIN) \u2014 From a civilizational view, water scarcity in arid regions and limits on purification technology constitute an immutable constraint. Some regions lack sufficient water; treatment scales with energetic cost. However, structural data contradicts this: 2+ billion people lack safe water access in regions with sufficient water resources. The false summit reveals naturalization of a political-economic distribution problem as a natural-law scarcity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "infrastructure_capital_vs_maintenance",
+      "question": "Is safe water access constrained by capital investment (building systems) or operational maintenance (keeping systems functional)?",
+      "resolution_mechanism": "Comparative analysis of regions with infrastructure but service collapse vs regions lacking infrastructure entirely. Tracking maintenance budgets vs capital budgets in water utility allocations.",
+      "impact": "If capital-constrained: constraint is a coordination problem (Rope/Tangled Rope). If maintenance-constrained: constraint is primarily extraction (Snare/Piton), since infrastructure exists but extraction takes maintenance resources from system reliability.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Capital investment vs operational maintenance constraints"
+    },
+    {
+      "id": "willingness_to_pay_genuine_demand",
+      "question": "Low take-up of piped water in some regions: is this suppression (target cannot afford) or genuine preference (target does not value piped system)?",
+      "resolution_mechanism": "Randomized pricing experiments, ethnographic research on value perception, willingness-to-pay studies that control for information asymmetry.",
+      "impact": "If suppression: classification shifts toward Snare. If genuine low demand: constraint is over-specified (people have opted for alternative water sources with full information). Affects both \u03b5 and suppression metrics.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether low water uptake reflects suppression or genuine preference"
+    },
+    {
+      "id": "decentralized_vs_centralized_extraction",
+      "question": "Does distributed water access (boreholes, rainwater harvesting, small treatment systems) reduce extraction, or does centralized utility extraction get replaced by extraction by local gatekeepers (water committee capture, informal pricing)?",
+      "resolution_mechanism": "Longitudinal studies of decentralized water access projects; documentation of gatekeeper capture patterns in community water committees; comparison of cost structures and equity outcomes.",
+      "impact": "If decentralized reduces extraction: constraint can be reframed as coordination problem solvable at smaller scale. If replaced by local extraction: constraint is reframed rather than resolved \u2014 extraction mechanism relocates rather than disappears.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether decentralized water systems eliminate or relocate extraction mechanisms"
+    },
+    {
+      "id": "climate_scarcity_irreducibility",
+      "question": "In regions where precipitation is genuinely insufficient (arid/semi-arid zones), is water scarcity a mountain (immutable) or is current distribution mechanism itself unjust extraction?",
+      "resolution_mechanism": "Engineering analysis of minimum water requirements vs available renewable sources; documentation of non-water uses in the region; analysis of historical/alternative allocation mechanisms.",
+      "impact": "If insufficient water: some extraction is immutable (mountain component). If sufficient but inequitably allocated: constraint is politically constructed Snare, not natural scarcity. Most regions show mixed: some absolute scarcity + significant extractive reallocation.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Irreducibility of water scarcity vs political inequality in allocation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Access to safe water is framed globally as a human right and a public health imperative, yet over 2 billion people lack reliable access to safely managed water. The constraint exhibits the tangled structure of modern infrastructure: genuine coordination function (water systems solve collective action problems, prevent waterborne epidemics, enable economic activity) combined with systematic extraction from powerless agents. The extractiveness has increased over the measurement interval (0.42 to 0.58) as infrastructure systems have been constructed but maintenance has been systematically under-resourced, shifting from a capital-investment problem to an operational extraction mechanism. Theater ratio has risen modestly (0.38 to 0.48) as international commitments (SDG 6, water treaties) have proliferated without corresponding enforcement or resource allocation. The constraint is not a mountain of absolute scarcity \u2014 most regions with safe water access failures have sufficient water resources; the constraint is political-economic distribution. However, in genuinely arid zones, some component is immutable (pure water insufficiency), creating a mixed constraint family.",
+    "key_agents": [
+      "Low-income urban households: Primary victims (powerless/trapped) \u2014 no material alternatives within economic reach; bear disease burden and time costs of collection/treatment",
+      "Rural agrarian populations: Primary victims (powerless/trapped) \u2014 geographically isolated, no infrastructure investment, intergenerational transmission of constraint",
+      "Middle-income neighborhoods: Secondary victims (moderate/constrained) \u2014 benefit from coordination (piped systems reduce collection burden) but bear extraction through unreliable service and high costs",
+      "Public water utilities: Primary beneficiary (institutional/arbitrage) \u2014 capture revenue streams, political legitimacy, and coordination rent; operate monopolies with limited accountability",
+      "Large industrial consumers: Secondary beneficiary (powerful/arbitrage) \u2014 preferential allocation during scarcity, negotiated rates, guaranteed supply; can exit via relocation or alternative sources",
+      "International governance apparatus: Institutional theater (institutional/arbitrage) \u2014 SDG 6, water treaties, UN agencies declare commitments with minimal enforcement or funding",
+      "Analytical observer: Civilizational risk (analytical/analytical) \u2014 naturalizes political distribution as immutable scarcity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, and increasing over the measurement interval. Base extractiveness reflects systematic concentration of safe water access in wealthy/industrial populations while powerless agents are trapped in unsafe systems. The increase from 0.42 to 0.58 over 20 years indicates that as infrastructure has been constructed in wealthy areas, extraction mechanisms have solidified \u2014 the utility system now actively maintains inequality through pricing, service allocation, and maintenance prioritization. Suppression (0.65): High. Significant barriers include lack of capital for independent systems, geographic isolation, regulatory barriers to alternative water sources (groundwater extraction regulations that freeze current allocations), and political powerlessness. Suppression is structural (external barriers) rather than internalized. Theater ratio (0.48): Moderate. Water systems have genuine coordination function \u2014 they do prevent epidemics and enable economic activity \u2014 so theater is not dominant. But theater is rising: international commitments (SDG 6) generate reporting and conferences without enforcement, and utility performance metrics are often theatrical (percentage of population connected) rather than functional (water safety and reliability for those connected).",
+    "directionality_logic": "Directionality values are derived from beneficiary/victim status and exit options. Low-income households are victims with trapped exit \u2192 maximum d (0.95) \u2192 maximum f(d) \u2192 experience maximum chi. Rural populations similarly trapped but with generational horizon \u2192 high d \u2192 high chi. Water utilities are beneficiaries with arbitrage options (can operate more or less efficiently, can expand or contract service areas) \u2192 low d \u2192 low or negative chi (experienced as coordination mechanism, not extraction). Industrial consumers are beneficiaries with powerful status and arbitrage options \u2192 very low d \u2192 negative chi (perceive utility as providing valuable service). The piton perspective (international governance) has institutional power with arbitrage (can fund or defund initiatives) but experiences the constraint as empty ritual \u2014 low chi from arbitrage position but high theater obscures the extraction happening at victim levels.",
+    "perspectival_gap": "The gap between victim and beneficiary perspectives is maximal here. Low-income households see Snare (pure extraction, no coordination benefit to them \u2014 the system traps them in unsafe water). Water utilities see Rope (coordination mechanism providing essential service). Industrial consumers see Rope (access to reliable supply for production). The middle-income neighborhood sees the true hybrid: Tangled Rope (benefits from piped system and coordination, but extracted through cost and unreliability). The international apparatus sees Piton (the performative theater of global commitments masking unchanged local reality). The analytical observer risks Mountain (water scarcity as natural limit) but the falsity is revealed: water scarcity is geographically and politically contingent, not universal. The perspectival gap is not perceptual (people misunderstanding the same reality) but structural (they experience radically different extraction flows from the same constraint system).",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that safe water access is genuinely a mixed coordination-extraction system (Tangled Rope is the analytical position), while simultaneously appearing as pure extraction to trapped agents and pure coordination to beneficiaries. The mandatrophy question is 'Is this coordination or extraction?' \u2014 the answer is 'It is both, and which you experience depends on your structural position.' The constraint cannot be reduced to either pure type without loss of diagnostic power. The piton perspective reveals theatrical elements (international commitments without enforcement) that might otherwise be invisible. The mountain perspective reveals the risk of naturalizing political distribution as immutable scarcity \u2014 this risk is real in arid regions where absolute water insufficiency exists, but in most regions with safe water access failures, the scarcity is political, not physical. A future resolution would require either (a) universal access through reallocation (political choice), (b) acceptance of differential access (explicit inequality), or (c) decentralized systems that remove the utility monopoly (structural change)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "sanitation_access",
+      "hygiene_disease_transmission",
+      "water_scarcity_agriculture",
+      "utility_monopoly_pricing"
+    ],
+    "dual_formulation_note": "Safe water access decomposes into upstream constraints (water resource availability, scarcity in arid regions) and downstream constraints (utility monopoly extraction, pricing mechanisms, maintenance prioritization). This story captures the distribution and access mechanism; upstream scarcity constraints should be separate stories with their own \u03b5 values. Industrial water usage, agricultural demand, and urban consumption create competing extraction mechanisms \u2014 each could be a separate story linked via network. The constraint family includes: water_resource_scarcity (\u03b5\u22480.20, may be mountain in arid regions), water_utility_monopoly (\u03b5\u22480.58, this story), sanitation_access (\u03b5\u22480.55, parallel to water), and disease_transmission_via_unsafe_water (\u03b5\u22480.40, consequence story)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.12
+    }
+  ]
+}

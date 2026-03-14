@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "algorithm_interpretability_barrier",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "algo_interp"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Algorithm Interpretability Barrier in Machine Learning Systems",
+    "topic_domain": "artificial_intelligence/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "algorithm_developers",
+      "deploying_organizations",
+      "proprietary_ip_holders"
+    ],
+    "victims": [
+      "affected_populations",
+      "regulatory_enforcement_capacity",
+      "algorithmic_fairness_advocates"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Affected Population",
+      "comment": "PERSPECTIVE 1: AFFECTED POPULATION (SNARE) \u2014 Subjects of algorithmic decisions (loan denials, hiring rejections, criminal risk scoring, benefit eligibility) have no visibility into the reasoning and no meaningful recourse. Cannot exit the constraint; bears full cost of opaque extraction. Suppression through information asymmetry and legal frameworks that defer to developer claims of trade secret protection."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Body",
+      "comment": "PERSPECTIVE 2: REGULATORY BODY (TANGLED ROPE) \u2014 Tasked with ensuring fairness and preventing discrimination, but lacks interpretability tools to audit algorithms. Constrained by technical capacity gaps and developer resistance to disclosure. Benefits from coordination function (algorithms enable scale in service delivery) but bears extraction cost through enforceability gap \u2014 regulations become theater when compliance cannot be verified."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Algorithm Developer",
+      "comment": "PERSPECTIVE 3: ALGORITHM DEVELOPER (ROPE) \u2014 Primary beneficiary. Interprets the interpretability barrier as legitimate coordination: proprietary algorithms enable competitive advantage and reward innovation. Trade secret protection solves the collective action problem of incentivizing R&D investment. Low effective extraction from developer perspective \u2014 they experience the constraint as enabling rather than extractive."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Transparency Movement",
+      "comment": "PERSPECTIVE 4: TRANSPARENCY MOVEMENT (SCAFFOLD) \u2014 Organized actors (regulators, civil rights groups, researchers) are building interpretability techniques (LIME, SHAP, saliency maps, mechanistic interpretability) that bypass the opacity barrier. See a temporary sunset: as explainability methods mature and regulatory mandates strengthen (EU AI Act, algorithmic accountability laws), the opacity extraction mechanism weakens. Mobile exit path through technical and regulatory alternatives."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Black Box Myth",
+      "comment": "PERSPECTIVE 5: THE BLACK BOX MYTH (PITON) \u2014 The framing that neural networks are inherently uninterpretable persists through institutional inertia despite growing evidence of mechanistic interpretability breakthroughs. The 'black box' narrative is performatively maintained to justify opacity, but its functional basis is degraded \u2014 alternatives exist that weren't available 10 years ago. Theater ratio measures the gap between claimed opacity and actual interpretability capacity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Deploying Organization",
+      "comment": "PERSPECTIVE 6: DEPLOYING ORGANIZATION (TANGLED ROPE) \u2014 Organizations using algorithms (banks, employers, government agencies) benefit from automation at scale but face regulatory and reputational extraction. Constrained by liability exposure, regulatory compliance costs, and public backlash. The opacity enables automation benefits but creates enforceability gaps that become liabilities."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Computational Hardness View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / COMPUTATIONAL HARDNESS VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some algorithmic opacity is inherent to computation: complex nonlinear functions are difficult to interpret by design, and the interpretability-accuracy tradeoff may be fundamental. This perspective naturalizes the barrier as a law of mathematics. However, the structural data contradicts this \u2014 the empirical tradeoff is much smaller than the institutional opacity suggests, and the barrier functions more as a coordination mechanism (trade secret) than as a computational necessity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "interpretability_accuracy_tradeoff_magnitude",
+      "question": "Is the claimed interpretability-accuracy tradeoff a genuine mathematical constraint or primarily an institutional artifact?",
+      "resolution_mechanism": "Comparative analysis of simple vs complex models on benchmark tasks; measurement of actual accuracy loss from interpretable architectures vs claimed losses in literature; empirical accuracy cost of transparency mechanisms (LIME, SHAP, attention mechanisms)",
+      "impact": "If genuine constraint: interpretability barrier approaches mountain status. If institutional: barrier is primarily extraction maintained through false necessity claims.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether interpretability-accuracy tradeoff is mathematical or institutional"
+    },
+    {
+      "id": "mechanistic_interpretability_sufficiency",
+      "question": "Do emerging mechanistic interpretability techniques (circuit analysis, feature attribution, attention patterns) provide sufficient transparency for regulatory audit and fairness verification?",
+      "resolution_mechanism": "Evaluation of mechanistic interpretability methods against regulatory audit criteria; case studies of algorithmic discrimination detection using interpretability techniques; expert assessment of explainability completeness",
+      "impact": "If sufficient: scaffold sunset timeline accelerates \u2014 transparency movement has exit path. If insufficient: opacity barrier persists despite method development.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether mechanistic interpretability enables adequate regulatory verification"
+    },
+    {
+      "id": "trade_secret_necessity_for_innovation",
+      "question": "Is opacity genuinely necessary to incentivize algorithmic innovation, or does it primarily protect rent extraction from earlier innovations?",
+      "resolution_mechanism": "Historical analysis of algorithm development timelines and publication patterns; comparison of innovation rates pre/post opensourcing of major models; investment patterns and returns relative to disclosed vs proprietary systems",
+      "impact": "If necessary: coordination function is real (Rope classification supported). If rent protection: extraction mechanism is primary (Snare classification supported).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether trade secrecy is necessary for innovation incentives"
+    },
+    {
+      "id": "regulatory_audit_capability_gap",
+      "question": "Can meaningful algorithmic audit occur without full algorithm access, or does the opacity create a fundamental enforceability gap?",
+      "resolution_mechanism": "Case studies of regulatory audit effectiveness with vs without code access; assessment of audit capability under current explainability requirements; expert opinion on sufficiency of external verification methods",
+      "impact": "If audit possible: suppression is lower than measured (barrier is coordination problem). If gap fundamental: suppression is accurate (barrier enables extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory audit is possible without full algorithm access"
+    },
+    {
+      "id": "affected_population_identity_lock",
+      "question": "Do affected populations internalize the inevitability of algorithmic opacity, making exit from the constraint conceptually unavailable even when structurally possible?",
+      "resolution_mechanism": "Ethnographic research on algorithmic literacy and perceived agency; analysis of public discourse on algorithmic decision-making; measurement of awareness of recourse mechanisms and appeal processes",
+      "impact": "If identity-locked: classification changes from trapped to identity_locked for powerless perspective, altering temporal durability analysis. If genuinely trapped: external barriers dominate.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether affected populations are trapped or identity-locked by algorithmic opacity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The algorithm interpretability barrier represents a structural tension between the legitimate need to protect proprietary ML systems and the equally legitimate need to verify that algorithms do not discriminate, manipulate, or extract unfairly from affected populations. The constraint exhibits signature tangled rope properties: genuine coordination function (trade secrets do incentivize investment) coexists with asymmetric extraction (opacity enables unfair treatment without visibility or recourse). The theater ratio (0.68) reflects that claims of algorithmic opacity are increasingly performative \u2014 mechanistic interpretability techniques have advanced substantially, yet organizations continue to invoke trade secret protection to avoid disclosure. The extractiveness trajectory (0.35\u21920.58 over 6 years) shows accumulation of extraction as algorithmic deployment scales and regulatory frameworks fail to keep pace with technical deployment. The interpretability barrier is neither a pure law of mathematics (mountain) nor a pure coordination mechanism (rope), but a hybrid that exploits information asymmetry to create asymmetric power.",
+    "key_agents": [
+      "Affected Populations: Primary victim (powerless/trapped) \u2014 subjects of algorithmic decisions with no visibility into reasoning or recourse",
+      "Algorithm Developers: Primary beneficiary (institutional/arbitrage) \u2014 capture proprietary advantage from opacity and trade secret protection",
+      "Regulatory Bodies: Secondary victim (moderate/constrained) \u2014 tasked with fairness enforcement but lack tools to audit; constrained by technical capacity and developer resistance",
+      "Deploying Organizations: Mixed (institutional/constrained) \u2014 benefit from automation at scale but bear extraction costs from regulatory and reputational liability",
+      "Transparency Movement: Organized agents (organized/mobile) \u2014 researchers, civil rights advocates, regulators building interpretability alternatives; see sunset path through technical and legal mechanisms",
+      "The Black Box Myth: Institutional framing (institutional/arbitrage) \u2014 narrative of inherent opacity maintaining extraction through false necessity; piton classification shows performative maintenance of degraded function"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The barrier extracts through opacity-enabled unfair treatment, lack of recourse, and regulatory arbitrage. However, extractiveness is not maximal (snare-level \u22650.70) because the coordination function is real \u2014 proprietary algorithms do drive innovation and competitive advantage. The extraction is embedded in a legitimate coordination mechanism rather than pure coercion. Suppression (0.65): High. Multiple mechanisms suppress alternatives: (1) Legal frameworks that defer to developer trade secret claims; (2) Technical barriers that make algorithm design and audit expensive; (3) Information asymmetry that prevents affected populations from understanding their own treatment; (4) Regulatory capture where developer interests shape audit standards. Theater ratio (0.68): High. Claims of algorithmic opacity persist despite emergence of interpretability techniques (LIME, SHAP, mechanistic interpretability). The opacity is increasingly a choice to maintain extraction rather than a necessity of mathematics. Explainability theater masquerades as technical incapacity when alternatives exist.",
+    "perspectival_gap": "The fundamental gap separates beneficiaries from victims. The developer (institutional/arbitrage) sees coordination and legitimacy in trade secret protection \u2014 the opacity enables innovation incentives. The affected population (powerless/trapped) sees extraction and injustice \u2014 the same opacity prevents recourse and enables discrimination. The regulatory body (moderate/constrained) sees a tangled hybrid \u2014 genuine automation benefits coexist with enforceability gaps. The transparency movement (organized/mobile) sees a sunset \u2014 interpretability methods and regulatory mandates are building exit paths. The deploying organization (institutional/constrained) sees liability \u2014 the automation benefits are offset by reputational and legal risk. The black box myth (institutional/arbitrage) sees performance through theater \u2014 the narrative of inherent opacity is maintained as a coordination story even as its functional basis degrades. The analytical observer (analytical/analytical) risks seeing an immutable law of mathematics when the barrier is contingent on institutional arrangements.",
+    "directionality_logic": "Directionality values derive from structural position: beneficiaries with secure proprietary status experience low d (high arbitrage, low threat to position), while trapped victims experience high d (no exit, full exposure to extraction). The algorithm developer's d is ~0.10-0.20 (beneficiary + arbitrage), yielding negative or near-zero effective extraction in their experience \u2014 they perceive the constraint as enabling, not extractive. The affected population's d is ~0.92-0.95 (victim + trapped), yielding maximum experienced extractiveness chi through the sigmoid amplification. Regulatory bodies with constrained exit have intermediate d (~0.55-0.65), experiencing tangled hybrid effects. The transparency movement with mobile exit options has lower d (~0.35-0.45) despite victim status, because technical alternatives reduce trap depth. The deploying organization's d is ~0.58-0.68 (victim + constrained in their regulatory/reputational exposure, but beneficiary in automation gains) \u2014 the mixed sign reflects tangled rope complexity.",
+    "mandatrophy_analysis": "RESOLUTION VIA PERSPECTIVAL ANALYSIS: The constraint resolves mandatrophy through indexical classification. From the developer's institutional/arbitrage position, the barrier is legitimate coordination (Rope) \u2014 trade secrets solve a real collective action problem. From the affected population's powerless/trapped position, it is pure extraction (Snare) \u2014 opacity enables unfair treatment without recourse. From the regulatory position, it is tangled rope \u2014 genuine automation benefits coexist with enforceability gaps. From the transparency movement's organized/mobile position, it is a temporary scaffold \u2014 interpretability methods and regulatory mandates are building sunset pathways. The mandatrophy is not resolved by choosing 'the right' type but by recognizing that all types are legitimate readings of different structural positions. The false summit (analytical/computational hardness mountain) is exactly what masks the extraction \u2014 framing the barrier as mathematical necessity naturalizes what is actually an institutional choice."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_fairness_verification",
+      "proprietary_ai_governance",
+      "regulatory_enforcement_gap"
+    ],
+    "dual_formulation_note": "The algorithm interpretability barrier decomposes into distinct structural constraints: (1) the mathematical interpretability-accuracy tradeoff (closer to mountain or rope depending on empirical evidence); (2) the institutional trade secret protection regime (tangled rope of coordination + extraction); (3) the regulatory audit capability gap (tangled rope of need + incapacity). This story focuses on the institutional regime. Upstream constraints include the technical tradeoff; downstream constraints include specific fairness verification and enforcement gaps."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.62
+    }
+  ]
+}

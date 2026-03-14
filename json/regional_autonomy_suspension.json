@@ -1,0 +1,180 @@
+{
+  "header": {
+    "constraint_id": "regional_autonomy_suspension",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Regional Autonomy Suspension",
+    "topic_domain": "political/constitutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "central_government"
+    ],
+    "victims": [
+      "regional_population",
+      "regional_elected_officials",
+      "local_institutional_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Suspended Regional Population",
+      "comment": "PERSPECTIVE 1: SUSPENDED REGIONAL POPULATION (SNARE) \u2014 Cannot exit the jurisdiction without abandoning property, social ties, and cultural identity. Faces direct coercion through military/police presence and loss of electoral voice. No meaningful alternatives to central authority's unilateral decisions. Maximum extraction \u2014 population bears full cost of suspension with no countervailing coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Regional Political Elites",
+      "comment": "PERSPECTIVE 2: REGIONAL POLITICAL ELITES (TANGLED ROPE) \u2014 Constrained by electoral cycle restoration uncertainty and career dependence on central government approval. Benefit from selective resource transfers and administrative coordination during suspension. Mixed extraction and coordination \u2014 some genuine institutional function (emergency administration) alongside asymmetric power consolidation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Central Government Authority",
+      "comment": "PERSPECTIVE 3: CENTRAL GOVERNMENT AUTHORITY (ROPE) \u2014 Experiences suspension as pure coordination mechanism: consolidated emergency authority enables rapid crisis response and unified policy implementation. Net beneficiary with arbitrage option (can lift suspension unilaterally). Sees constraint as legitimate institutional function with minimal coercive overhead from their position."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Constitutional Oversight Bodies",
+      "comment": "PERSPECTIVE 4: CONSTITUTIONAL OVERSIGHT BODIES (SCAFFOLD) \u2014 Organized actors (courts, international observers, human rights monitors) see suspension as temporary emergency measure with explicit sunset clause in constitutional frameworks. Constrained by the political pressure to defer during crisis, but with institutional mandate for eventual restoration. Lower effective extraction because oversight has structural power and normative exit path, even if politically difficult to exercise."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Emergency Powers Architecture",
+      "comment": "PERSPECTIVE 5: EMERGENCY POWERS ARCHITECTURE (PITON) \u2014 The constitutional apparatus for suspending autonomy persists through institutional inertia and performative use of emergency justifications. What began as a genuine coordination mechanism for acute crises has become a degraded tool used for chronic governance problems. Theater ratio high (0.55+) because suspension is maintained through emergency declarations that may exceed the factual crisis scope. The power to suspend accrues more symbolic than functional value \u2014 the architecture remains because alternatives haven't fully displaced it, not because it solves current problems."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Sovereignty as Natural Law)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, state sovereignty and the capacity to suspend subnational autonomy during existential crisis may appear as an immutable structural feature of state organization itself. This perspective risks naturalizing what is a contingent institutional arrangement \u2014 treating the power to suspend autonomy as inherent to statehood rather than a specific constitutional design choice. The engine's false summit detector will flag this as naturalization of institutional contingency."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "emergency_threshold_ambiguity",
+      "question": "What constitutes an emergency sufficient to justify autonomy suspension? When does the justifying crisis end?",
+      "resolution_mechanism": "Comparative constitutional analysis of suspension triggers; historical examination of how long suspensions persist after stated crisis resolution",
+      "impact": "If threshold is narrow and enforced: suspension remains temporary (Scaffold). If threshold is broad or unenforced: suspension becomes permanent extraction tool (Snare). Current ambiguity allows central authority to determine when suspension ends.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Constitutional definition and enforcement of emergency thresholds"
+    },
+    {
+      "id": "coercion_vs_coordination_mechanism",
+      "question": "Does the suspension primarily function as crisis coordination (legitimate emergency authority) or as institutional extraction (consolidating central power)?",
+      "resolution_mechanism": "Policy outcome analysis: Do suspension powers produce crisis-responsive outcomes (food distribution, disaster relief, disease control) or rent extraction outcomes (corruption increases, opposition persecution, resource seizure)? Comparison with non-suspension crisis management in peer states.",
+      "impact": "If coordination dominant: lower \u03c7, Rope or Scaffold. If extraction dominant: higher \u03c7, Snare or Tangled Rope. Current high theater_ratio (0.55) suggests extraction mechanism disguised as coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suspension mechanism functions as coordination or extraction"
+    },
+    {
+      "id": "restoration_probability",
+      "question": "What is the actual probability that suspended autonomy will be restored? Do constitutional promises of restoration have credible enforcement?",
+      "resolution_mechanism": "Historical data on similar suspensions globally; analysis of judicial enforcement capacity; examination of whether central government has incentive to maintain suspension indefinitely",
+      "impact": "If restoration probability > 0.70: agents perceive exit path (Scaffold or Tangled Rope). If probability < 0.30: agents perceive permanent entrapment (Snare or Mountain). Current uncertainty allows both beneficiaries and victims to maintain incompatible beliefs about permanence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Actual probability and credibility of autonomy restoration"
+    },
+    {
+      "id": "identity_locked_vs_trapped",
+      "question": "For regional population, is the binding mechanism material (trapped: cannot physically exit jurisdiction) or cognitive (identity_locked: cannot psychologically exit regional identity)? Or both?",
+      "resolution_mechanism": "Post-suspension migration analysis: if populations leave at high rates, binding was material (trapped). If populations remain despite material mobility, binding includes identity fusion (identity_locked). Language/cultural/historical attachment cannot be externally measured \u2014 relies on self-report and ethnographic analysis.",
+      "impact": "If trapped: exit_options properly classified as trapped. If identity_locked: exit_options should be reclassified as identity_locked, changing baseline classification and requiring commentary on cognitive capture. If both: suppression is both structural and internalized.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regional binding is material or cognitive"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "Regional autonomy suspension occurs when a central government unilaterally removes the governing authority and electoral processes of a subnational region, typically justified by emergency conditions (separatism, terrorism, governance failure) but often extended beyond the stated crisis period. This constraint exemplifies the boundary between legitimate emergency coordination and permanent extraction of political power. A suspension may begin as genuine crisis response (Rope or Scaffold perspective) but degrade over time into an extraction mechanism (Snare perspective) as the stated emergency justification becomes performative while the power consolidation persists. The increasing theater_ratio (0.28 \u2192 0.55 over the interval) indicates that the suspension's justifying rationale becomes increasingly theatrical relative to its actual governance function, while extractiveness increases as the mechanism shifts from crisis-response to rent extraction. Regional populations face direct coercion (military/police presence), loss of electoral voice, and inability to exit the jurisdiction without abandoning property and identity. Central government benefits from consolidated authority, reduced need to negotiate with elected regional leaders, and ability to redirect resources without regional scrutiny.",
+    "key_agents": [
+      "Regional Population: Primary victim (powerless/trapped) \u2014 cannot exit jurisdiction; bears direct coercion and loss of political voice",
+      "Regional Elected Officials: Secondary victim (moderate/constrained) \u2014 career disrupted; subject to potential prosecution; constrained by uncertainty about restoration timing",
+      "Central Government Authority: Primary beneficiary (institutional/arbitrage) \u2014 consolidates power; eliminates need for negotiation; unilaterally determines policy",
+      "Constitutional Oversight Bodies: Organized actors (organized/constrained) \u2014 courts, human rights monitors, international observers; have structural mandate but limited enforcement capacity during suspension",
+      "Emergency Administration Officials: Tertiary beneficiary (powerful/arbitrage) \u2014 appointed administrators gain discretionary authority; no electoral accountability",
+      "Analytical Observer: Detached perspective (analytical/analytical) \u2014 risks naturalizing suspension as inherent state capacity rather than contingent institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High, increasing over time. The suspension begins at 0.42 (justifiable as crisis response with genuine coordination function) and increases to 0.68 (predominantly extractive mechanism). The increase reflects the degradation of crisis-response rationale into permanent power consolidation. Victim population bears full cost of suspension with no offsetting coordination benefit. Suppression (0.72): High. Multiple barriers prevent exit: geographic/cultural/property attachment (trapped), legal prohibition on political organization (coercion), military presence (direct force), loss of electoral channels (institutional closure), and lack of international intervention capacity. Suppression is both structural and potentially internalized \u2014 regional identity may prevent psychological exit even where material exit becomes technically possible. Theater ratio (0.55): Moderate-high, increasing. Early in suspension, emergency justification has credibility (real crisis framing). Over time, the justifying conditions diminish while suspension persists, creating theater \u2014 the emergency powers apparatus is maintained through performative emergency declarations rather than genuine crisis response. The central government maintains the suspension not because it solves current problems but because it has accrued to institutional use and dislodging it would require political capital.",
+    "directionality_logic": "Central government derives d \u2248 0.05\u20130.15 (strong beneficiary, arbitrage exit) \u2192 negative f(d) \u2192 negative \u03c7, experiencing the constraint as coordination/benefit. Regional population derives d \u2248 0.92\u20130.98 (full target, trapped exit) \u2192 high f(d) \u2248 1.38\u20131.42 \u2192 high \u03c7, experiencing maximum extraction. Regional elites occupy intermediate position: d \u2248 0.65\u20130.75 (victim status due to electoral disruption, but constrained rather than trapped exit; possibility of restoration creates residual exit option) \u2192 f(d) \u2248 1.05\u20131.20 \u2192 moderate-high \u03c7. The perspectival gap is massive: the central government sees coordination; the population sees extraction. Regional elites occupy a mixed position where they are partly victims (career disruption) and partly beneficiaries (if they cooperate with central authority, they may retain local power through appointment rather than election).",
+    "perspectival_gap": "This constraint reveals a radical perspectival divide between institutional positions. The central government's institutional perspective sees the suspension as solving a genuine coordination problem: unified authority, rapid crisis response, elimination of veto points. They genuinely believe in the emergency framing and experience the constraint as coordination. The regional population sees the opposite \u2014 their freedoms suspended, their government removed, their alternatives closed. Constitutional oversight bodies see a temporary mechanism with sunset language in constitutional frameworks, but they lack enforcement power during the suspension itself. Regional political elites see a mixed situation: their formal authority is suspended, but some may benefit from selection into central government's appointed structure. The historical pattern is that this perspectival gap closes only when suspension is lifted \u2014 the central government's 'temporary' measure becomes permanent not through explicit decision but through gradual normalization and institutional inertia, precisely the degradation the Piton perspective captures.",
+    "mandatrophy_analysis": "SNARE classification resolves the mandatrophy by establishing that this constraint is not legitimate coordination (which would be Rope) but extraction disguised as emergency response. The high suppression (0.72) and increasing extractiveness (0.42 \u2192 0.68) confirm the Snare classification: the central government is not solving a collective action problem in which all parties benefit, but rather consolidating power asymmetrically with the regional population bearing the full cost. The increasing theater_ratio (0.28 \u2192 0.55) confirms the degradation mechanism: the emergency justification becomes increasingly performative as the actual crisis conditions diminish. If the suspension were genuinely Rope (pure coordination), extractiveness would decline as the crisis resolved and the suspension was lifted. If it were Scaffold (temporary with sunset), theater_ratio would decline as restoration mechanisms became operationalized. Instead, both metrics move toward Snare territory: extractiveness rising and theater increasing, indicating that the institutional mechanism is shifting from crisis response to rent extraction. The mandatrophy is resolved by recognizing that early suspension may have had legitimate Rope-like coordination function, but the structural analysis must be based on the current state (0.68 extractiveness, 0.72 suppression), which classifies unambiguously as Snare."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "constitutional_democracy_enforcement",
+      "regional_separatism_mechanism"
+    ]
+  },
+  "directionality_overrides": []
+}

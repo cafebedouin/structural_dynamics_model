@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "algorithmic_fairness_verification",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "algfair"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Algorithmic Fairness Verification and Audit Theater",
+    "topic_domain": "machine_learning/ethics/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "algorithm_deployers",
+      "platform_operators"
+    ],
+    "victims": [
+      "marginalized_demographic_groups",
+      "fairness_verification_reliability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Affected Marginalized Groups",
+      "comment": "PERSPECTIVE 1: AFFECTED MARGINALIZED GROUPS (SNARE) \u2014 Subjected to algorithmic decisions with no meaningful participation in fairness verification, no exit option, and no transparency into the audit process. The constraint extracts compliance from their data while suppressing the capacity to challenge or understand decisions. Bears full burden of fairness gaps with no recourse."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Fairness Researchers and Auditors",
+      "comment": "PERSPECTIVE 2: FAIRNESS RESEARCHERS AND AUDITORS (TANGLED ROPE) \u2014 Genuinely coordinate the production of fairness claims and contribute real verification labor. Simultaneously extracted from: their work is deployed as corporate compliance theater; funding dependencies constrain which fairness definitions they can pursue; publication pressure incentivizes novel fairness metrics over replication of existing ones."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Algorithm Deployers and Platform Operators",
+      "comment": "PERSPECTIVE 3: ALGORITHM DEPLOYERS AND PLATFORM OPERATORS (ROPE) \u2014 Benefit from fairness verification as a coordination mechanism: public trust legitimacy, regulatory compliance narrative, employee and investor satisfaction. Coordinate fairness claims with research community. Low effective extraction experienced \u2014 they set the problem bounds and can exit if regulation changes."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regulatory and Advocacy Coalitions",
+      "comment": "PERSPECTIVE 4: REGULATORY AND ADVOCACY COALITIONS (SCAFFOLD) \u2014 Organized actors (EEOC, civil rights orgs, EU AI Act advocates) see fairness verification mandates as temporary coordination mechanisms with built-in sunset: binding regulatory requirements for algorithmic impact assessments, mandatory fairness audits, and transparency obligations will eventually standardize verification away from ad-hoc theater. Expect transition from voluntary compliance theater to mandatory structural verification within 5-10 years."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Corporate Fairness Commitments and Ethics Boards",
+      "comment": "PERSPECTIVE 5: CORPORATE FAIRNESS COMMITMENTS AND ETHICS BOARDS (PITON) \u2014 Internal ethics boards and fairness commitments are substantially performative. They provide reputational cover and regulatory defense while actual algorithmic deployment decisions remain insulated from their oversight. The theater persists because it provides institutional protection despite minimal functional verification capacity. Theater ratio: 0.68 reflects the gap between stated fairness commitments and actual algorithmic behavior."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 Risks classifying the verification bottleneck as an inherent limit: 'fairness is multidimensional and incommensurable, therefore comprehensive verification is mathematically impossible.' This naturalizes what is actually a contingent institutional choice to prioritize deployment speed over verification depth. The mountain perspective falsely universalizes the constraint."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fairness_metric_gaming",
+      "question": "Do fairness verification audits actually detect discrimination or do they primarily measure optimization against declared fairness metrics that deployers control?",
+      "resolution_mechanism": "Comparative analysis: audited fairness scores vs real-world outcome disparities post-deployment; tracking of fairness metrics chosen for audit vs actual disparities in sensitive outcomes; measurement of Goodhart drift (declared metric improving while actual fairness declines)",
+      "impact": "If audits detect real fairness: verification bottleneck is coordination problem (higher rope/scaffold percentages). If audits measure gaming: bottleneck is pure extraction mechanism (higher snare percentage), and the verification system actively obscures discrimination.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether fairness audits measure real fairness or metric optimization"
+    },
+    {
+      "id": "affected_group_participation_deficit",
+      "question": "Can marginalized groups meaningfully participate in fairness verification design and auditing, or is participation permanently constrained by technical gatekeeping and power asymmetries?",
+      "resolution_mechanism": "Audit of fairness verification processes: representation of affected groups in metric selection, access to audit protocols and findings, capacity to challenge or contest fairness determinations, enforcement mechanisms for group-identified fairness concerns",
+      "impact": "If genuine participation possible: snare classification may overstate \u2014 groups have some agency and voice. If participation permanently blocked: snare classification confirmed, and the constraint functions as elite-controlled narrative about marginalized groups rather than genuine fairness.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether affected groups can participate in fairness verification"
+    },
+    {
+      "id": "verification_resource_bottleneck",
+      "question": "Is the fundamental constraint on comprehensive fairness verification a genuine resource/technical limitation or a choice to underfund verification relative to deployment?",
+      "resolution_mechanism": "Cost analysis: ratio of deployment budget to fairness audit budget across major platforms; comparison to regulated industries (pharmaceutical, aviation) where verification costs are built into product cost; tracking of verification complexity relative to available technical capacity",
+      "impact": "If genuine technical limit: mountain perspective partially justified, extractiveness lower (0.40-0.45). If choice/underfunding: extractiveness higher (0.65-0.75), theater_ratio higher (0.80+), snare classification more strongly supported.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether verification bottleneck is technical limit or resource allocation choice"
+    },
+    {
+      "id": "open_source_fairness_alternative",
+      "question": "Do open-source fairness verification tools and community auditing constitute a genuine alternative to corporate-controlled verification, or do they remain epistemically dependent on corporate algorithm implementations?",
+      "resolution_mechanism": "Tracking of open-source algorithmic fairness tools: adoption rate, independence from corporate platforms, ability to audit closed-source systems, effectiveness at detecting discrimination missed by corporate audits",
+      "impact": "If open-source is independent: scaffold sunset logic is real \u2014 community verification creates exit path from corporate theater. If open-source is dependent: sunset is aspirational, and corporate control of the verification narrative persists even with external tools.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether open-source fairness tools provide independent verification alternative"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The algorithmic fairness verification constraint creates a structural tension between the genuine need for fairness assessment and the deployment incentives that make comprehensive verification costly and reputationally risky for deployers. As machine learning systems have expanded into high-stakes domains (credit decisions, hiring, criminal justice, content moderation), regulatory and advocacy pressure has driven the emergence of fairness auditing and certification as governance mechanisms. The constraint exhibits characteristics of tangled rope: deployers and researchers genuinely coordinate to produce fairness assessments (coordination function), while simultaneously the verification system serves to legitimize deployment decisions and defer actual fairness accountability to abstract metrics controlled by deployers (extraction function). The theater ratio (0.68) reflects that fairness audits often measure optimization against declared metrics rather than measuring real-world outcome disparities, and corporate ethics commitments are substantially performative theater. The constraint's extractiveness (0.58) models the asymmetric distribution of verification labor and the suppression of alternative fairness frameworks through metric gatekeeping.",
+    "key_agents": [
+      "Marginalized Demographic Groups: Primary victim (powerless/trapped) \u2014 subjected to algorithmic decisions with no participation in fairness verification; bearing full cost of fairness gaps",
+      "Algorithm Deployers: Primary beneficiary (institutional/arbitrage) \u2014 capture legitimacy and regulatory compliance through fairness narratives; control which metrics count as fairness",
+      "Fairness Researchers and Auditors: Secondary victim/beneficiary (moderate/constrained) \u2014 coordinate real verification labor while extracted from via funding dependencies and publication incentives; work deployed as corporate theater",
+      "Regulatory and Advocacy Coalitions: Organized actors (organized/constrained) \u2014 pushing binding verification mandates as temporary mechanisms that will eventually standardize verification requirements and reduce corporate discretion",
+      "Corporate Fairness Commitments: Institutional actor (institutional/arbitrage) \u2014 maintains performative ethics boards and fairness claims; protected from accountability by opacity and metric gaming",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing the verification bottleneck as inherent to fairness rather than recognizing it as an institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Algorithm deployers capture significant benefits during the verification phase \u2014 they set the fairness metrics, control which groups are included in audits, and can adjust deployment based on audit findings before public visibility. The extraction is not maximal (0.72+) because some real fairness improvements do result, and researchers do contribute genuine labor. The value reflects asymmetric control over the verification process and metric definition. Suppression (0.65): High. Multiple barriers prevent marginalized groups from exiting or challenging fairness determinations: technical gatekeeping (fairness audits use specialized statistical methods), power asymmetries (groups have no seat at metric selection), structural opacity (audit methodologies and results are often proprietary), and institutional insulation (corporate ethics boards operate without external accountability). Regulatory oversight exists but is weak and reactive. Theater ratio (0.68): High and rising. Corporate fairness commitments are substantially performative \u2014 they provide reputational cover and regulatory defense while actual algorithmic decisions remain insulated from fairness oversight. The ratio increases from 0.45 to 0.71 over the interval, reflecting Goodhart drift: as fairness metrics become more prominent in corporate reporting and regulatory scrutiny, deployers have stronger incentives to optimize the metric itself rather than the underlying fairness outcome.",
+    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon \u2014 the gap between fairness claims and actual algorithmic behavior \u2014 is experienced differently by agents at different power levels and with different exit options. Algorithm deployers experience fairness verification as coordination: they solve the problem of legitimizing deployment to stakeholders and regulators. Fairness researchers experience tangled rope: they contribute real labor to fairness assessment but find their work deployed as theater and their career incentives pulled toward novel metrics over replication. Marginalized groups experience snare: they have no participation in fairness definition, no control over metrics, and no exit option. The regulatory coalition sees scaffold: binding verification mandates will gradually standardize and depoliticize fairness requirements, creating a sunset path away from corporate discretion. Corporate ethics boards see piton: they maintain the ritual of fairness commitment despite minimal actual verification capacity. The civilizational analytical observer risks seeing mountain (fairness is multidimensional and therefore verification is impossible) but this naturalizes what is actually a contingent institutional choice to prioritize deployment speed over verification depth.",
+    "directionality_logic": "Directionality values derive from each agent's structural position relative to the extraction flow. Algorithm deployers benefit from the constraint (d \u2248 0.15, low d from beneficiary status + arbitrage exit) and experience it as coordination. Marginalized groups bear full cost (d \u2248 0.92, high d from victim status + trapped exit) and experience maximum extraction. Fairness researchers occupy a mixed position (d \u2248 0.55, moderate-high d from victim status via extraction through funding dependencies and publication pressure, but also beneficiary-adjacent through research opportunities) and experience tangled rope. Regulatory coalitions have organized power and constrained exit (d \u2248 0.45, moderate d from partial-victim status of the public interest they represent + constrained exit through political processes) and see a temporary coordination problem with a sunset. The piton perspective derives from the theater gate (theater_ratio 0.68) rather than from high experienced extraction \u2014 the institutional actor has arbitrage-level exit but maintains performative involvement because the ritual provides protection.",
+    "mandatrophy_analysis": "TANGLED ROPE WITH FALSE MOUNTAIN RISK: The mandatrophy is resolved by distinguishing genuine coordination (fairness auditing does improve some algorithmic outcomes and provide real verification labor) from embedded extraction (the verification system itself is a mechanism for deferring accountability and controlling which fairness definitions count). The tangled rope classification is correct because both elements are present and essential to the constraint's function. The risk of mandatrophy comes from the mountain perspective: naturalizing the verification bottleneck as inherent to fairness mathematics rather than recognizing it as an institutional choice about verification resource allocation. If policymakers accept the mountain framing ('fairness is incommensurable, so verification is impossible'), they license indefinite corporate discretion. If they recognize the constraint as tangled rope, they can build toward the scaffold sunset: mandatory structural verification requirements, transparency mandates, and affected-group participation in metric selection."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_opacity_governance",
+      "metric_definition_gatekeeping"
+    ],
+    "dual_formulation_note": "Algorithmic fairness verification is downstream of specific deployment decisions but represents a distinct structural constraint on accountability. Linked constraints include opacity (algorithms remain a black box to auditors and affected groups) and metric gatekeeping (deployers control which fairness definitions are auditable). Each has its own extractiveness value reflecting the specific mechanism of control."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.55
+    }
+  ]
+}

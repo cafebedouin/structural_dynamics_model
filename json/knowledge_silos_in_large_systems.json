@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "knowledge_silos_in_large_systems",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ksilo"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Knowledge Silos in Large Systems",
+    "topic_domain": "organizational_structure/information_flow",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "departmental_leadership",
+      "specialized_unit_gatekeepers"
+    ],
+    "victims": [
+      "system_wide_coordination_capacity",
+      "peripheral_knowledge_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Peripheral Knowledge Worker",
+      "comment": "PERSPECTIVE 1: PERIPHERAL KNOWLEDGE WORKER (SNARE) \u2014 Lacks access to cross-functional information flows and organization-wide context. Cannot exit without leaving the organization entirely. Extraction of labor productivity through information asymmetry: worker invests effort without visibility into broader patterns they could optimize. Maximum suppression through compartmentalization and need-to-know restrictions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Level Coordinator",
+      "comment": "PERSPECTIVE 2: MID-LEVEL COORDINATOR (TANGLED ROPE) \u2014 Benefits from information brokerage role (status, leverage in local decisions) while constrained by inability to access or share information above departmental level. Real coordination function (bridging local silos) exists alongside asymmetric extraction (coordinator captures value of information asymmetry). Career risk and mobility constraints prevent exit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Department Leadership",
+      "comment": "PERSPECTIVE 3: DEPARTMENT LEADERSHIP (ROPE) \u2014 Primary beneficiary. Maintains specialized knowledge base and institutional authority through silo maintenance. Experiences silo as coordination function (preserves expertise, prevents dilution of specialized knowledge). Can arbitrage between internal specialization and external market value. Low suppression experienced \u2014 boundaries are maintained through preferred institutional structures, not force."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Knowledge Management Initiative",
+      "comment": "PERSPECTIVE 4: KNOWLEDGE MANAGEMENT INITIATIVE (SCAFFOLD) \u2014 Organized agents (knowledge managers, digital infrastructure teams) treating silos as a temporary coordination problem with sunset logic. KM systems, wiki platforms, and cross-functional working groups are building bridges. Constraints persist due to institutional inertia, but organized agents see clear exit path through systematic knowledge codification. Theater ratio high initially (elaborate documentation theater); declines as genuinely useful tools replace performative knowledge sharing."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Formal Information Governance Structure",
+      "comment": "PERSPECTIVE 5: FORMAL INFORMATION GOVERNANCE STRUCTURE (PITON) \u2014 The institutional apparatus of information classification, clearance levels, and access controls. Originally functioned as a genuine coordination mechanism (managing sensitive data, organizing complex workflows). Now substantially theater: elaborate access-request procedures that perform governance while actual information flow operates through informal channels, back channels, and workarounds. Theater ratio 0.68 reflects significant performative documentation and approval rituals maintaining the appearance of structured information management."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Complexity Immutability View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / COMPLEXITY IMMUTABILITY VIEW (MOUNTAIN) \u2014 From a civilizational scale, information silos appear as an immutable consequence of complexity: large systems necessarily subdivide into specialized domains, and perfect knowledge integration across all domains is computationally and cognitively infeasible. Knowledge loss across boundaries is inherent to scaling, not a contingent organizational choice. This perspective risks naturalizing what structural analysis reveals as extractive institutional choices. The engine's false summit detector will identify this as misclassification: genuine complexity constraints (specialization is necessary) are being conflated with organizational extraction mechanisms (silos are maintained *beyond* functional necessity)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "functional_specialization_threshold",
+      "question": "Where is the boundary between functionally necessary specialization and extractive silo maintenance?",
+      "resolution_mechanism": "Comparative analysis of organizations with different silo permeability; measurement of coordination failure costs vs. specialization-depth benefits; cross-sectional data on information-sharing intensity and system performance",
+      "impact": "If threshold is high (current silo structure is mostly necessary): classification shifts toward Rope and Mountain, reducing snare detection. If threshold is low (most silo depth is extractive): Snare and Tangled Rope percentages increase, revealing hidden extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Boundary between necessary specialization and extractive silo depth"
+    },
+    {
+      "id": "informal_network_substitution",
+      "question": "Do informal information networks (hallway conversations, back channels, hidden groups) actually provide sufficient cross-silo knowledge flow to convert this to a lower-extraction constraint?",
+      "resolution_mechanism": "Network analysis of informal information flows; comparison of coordination effectiveness via formal vs. informal channels; measurement of which decisions rely on informal knowledge brokerage",
+      "impact": "If informal networks are effective: systemic extraction is lower than base_properties suggest (revise extractiveness downward). If ineffective: informal flows are tactical workarounds masking systemic failure, and extraction estimate is accurate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether informal networks substitute for formal silo-crossing mechanisms"
+    },
+    {
+      "id": "knowledge_loss_versus_redundancy_cost",
+      "question": "Is the measured extraction cost primarily knowledge loss (information decay across boundaries) or redundancy cost (duplicated effort when silos prevent reuse)?",
+      "resolution_mechanism": "Audit of duplicate work across departments; measurement of knowledge loss metrics (citations of missed internal precedents, redundant problem-solving); comparison with organizations using different silo structures",
+      "impact": "If primarily redundancy: constraint is coordination problem (Rope from organized perspective). If primarily knowledge loss: constraint is extraction mechanism (Snare from peripheral perspective) \u2014 organization is consuming knowledge worker capacity without delivering proportional system benefit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether constraint cost is knowledge loss or redundant effort"
+    },
+    {
+      "id": "silo_maintenance_intentionality",
+      "question": "Are silos maintained through explicit institutional policy or through emergent path-dependence and cultural inertia?",
+      "resolution_mechanism": "Historical analysis of institutional decisions: were silos formally created and are they formally defended, or did they emerge and persist through default? Interview data on leadership intent regarding silo boundaries.",
+      "impact": "If intentional policy: Tangled Rope classification confirmed \u2014 requires active enforcement, asymmetric beneficiaries. If emergent inertia: classification may degrade toward Piton (theater-driven persistence without conscious extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether silo maintenance reflects policy choice or institutional inertia"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Knowledge silos in large systems represent a structural constraint where the organization of specialized expertise creates boundaries that prevent cross-functional information flow. This constraint exhibits a core tension: genuine specialization requires some degree of knowledge compartmentalization and expertise preservation, but organizations often maintain silo depth and impermeability far beyond functional necessity, extracting value from the resulting information asymmetries. Department leadership maintains gatekeeping authority over specialized knowledge; mid-level coordinators capture value from bridging local silos; peripheral workers lack access to system-wide context despite needing it for effective contribution. The constraint operates through formal governance structures (access controls, approval hierarchies, classification schemes) that have acquired substantial theater over time \u2014 elaborate documentation and clearance procedures that perform coordination while actual knowledge flow operates through informal channels. Knowledge management initiatives represent an organized response with sunset logic: systematic codification and shared platforms are gradually building bridges that reduce silo extraction. At the civilizational scale, the analytical observer risks naturalizing silo fragmentation as an immutable consequence of complexity, missing the extractive institutional choices that maintain silos beyond functional necessity.",
+    "key_agents": [
+      "Department Leadership: Primary beneficiary (institutional/arbitrage) \u2014 maintains specialized authority and information advantage; can choose to share knowledge or restrict it",
+      "Peripheral Knowledge Workers: Primary victim (powerless/trapped) \u2014 lack access to cross-functional context; cannot exit without leaving organization",
+      "Mid-Level Coordinators: Secondary actor (moderate/constrained) \u2014 benefit from information brokerage role while constrained by inability to access upper-level information; capture asymmetric value",
+      "Knowledge Management Initiative: Organized agents (organized/constrained) \u2014 treating silos as temporary coordination problem with clear sunset path through codification and systematic knowledge sharing",
+      "Formal Information Governance Structure: Institutional apparatus (institutional/arbitrage) \u2014 maintains elaborate access controls and approval procedures; now substantially performative (Piton perspective)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing complexity-driven fragmentation as immutable law rather than contingent organizational choice"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The organization captures value from information asymmetries maintained through silo structure. Peripheral workers invest effort without full system context; their productivity is constrained by lack of cross-functional awareness. Department leadership captures premium from specialized knowledge control. The extraction is not maximal (0.72+) because some silos reflect genuine specialization needs and some informal knowledge flow occurs. Over the interval, extractiveness increased from 0.38 to 0.52 as organizational growth made silo depth more severe. Suppression (0.58): Moderate-high. Significant barriers to cross-silo information flow include formal access restrictions, clearance procedures, cultural norms around knowledge hoarding, absence of platforms for cross-functional sharing, and career incentives aligned with departmental loyalty rather than organization-wide coordination. Suppression is not total because informal networks and back channels provide partial workarounds. Theater ratio (0.68): High and increasing. Formal information governance (classification schemes, access-request procedures, approval hierarchies) is substantially performative \u2014 elaborate documentation that creates the appearance of controlled information flow while actual knowledge transfer happens informally. Theater increased from 0.55 to 0.68 as governance apparatus expanded without proportional improvement in information accessibility.",
+    "directionality_logic": "Directionality derives from each agent's structural position relative to information flow and silo boundaries. Department leadership (institutional/arbitrage) has high organizational flexibility and can arbitrage between internal specialization and external market value \u2014 low d (beneficiary position). Peripheral workers (powerless/trapped) have no exit options and lack structural alternatives \u2014 high d (victim position). Mid-level coordinators (moderate/constrained) occupy intermediate position: they benefit from brokerage role (moderate d) but face real constraints on upward information access and mobility. The knowledge management initiative (organized/constrained) has agency through systematic codification work \u2014 constrained exit (moderate d) because they can see and work toward sunset. Formal governance structure (institutional/arbitrage) maintains appearance of control through procedural theater \u2014 low d, beneficiary of the inertia.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence on what constitutes the problem. Department leadership sees Rope \u2014 they are coordinating specialized expertise and protecting knowledge commons from dilution. The organized KM initiative sees Scaffold \u2014 systematic knowledge codification and sharing platforms have clear sunset path and are already reducing silo depth. The formal governance apparatus sees Piton \u2014 it recognizes its own procedures as degraded theater while defending their necessity. Mid-level coordinators see Tangled Rope \u2014 they benefit from brokerage role but are constrained by information asymmetries they cannot transcend. Peripheral workers see Snare \u2014 they bear the cost of information poverty without exit or recourse. The analytical observer risks seeing Mountain \u2014 information fragmentation as inherent to complexity \u2014 but the structural data reveals this as false: the constraint persists and deepens through institutional choices (career incentive structures, deliberate gatekeeping, absence of investment in knowledge platforms) that could be otherwise.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that genuine specialization benefits (Rope from leadership perspective) coexist with extractive silo depth maintenance (Snare from peripheral perspective). The constraint is legitimately Tangled Rope \u2014 it coordinates specialized expertise while asymmetrically extracting from those without silo-crossing authority. The theater ratio (0.68) indicates that the formal governance apparatus is substantially performative, but the performance serves the extraction by creating procedural barriers (access requests, clearances, approval chains) that feel legitimate but are not functionally necessary. The scaffold perspective is crucial: the constraint is not immutable because organized agents are systematically building alternatives (knowledge platforms, cross-functional working groups, codification initiatives) that reduce silo depth and extraction. The false summit in the mountain perspective lies in conflating necessary specialization (genuine coordination benefit) with extractive silo maintenance (institutional choice)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "organizational_communication_bottleneck",
+      "specialized_expertise_lock_in",
+      "cross_functional_project_failure"
+    ],
+    "dual_formulation_note": "Knowledge silos form a constraint family with three related but distinct claims. The silo structure itself (this story) has extractiveness 0.52 \u2014 it coordinates specialization while maintaining information asymmetries. The communication bottleneck downstream (higher extractiveness) reflects how silo structure blocks inter-departmental coordination. The expertise lock-in constraint (separate story) has higher extractiveness because it examines how silo structure traps decision-making authority within specialized domains."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.38
+    }
+  ]
+}

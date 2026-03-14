@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "personal_data_market_concentration",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pdmc"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Personal Data Market Concentration and Asymmetric Extraction",
+    "topic_domain": "digital_economy/data_rights/platform_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_corporations"
+    ],
+    "victims": [
+      "individual_data_subjects",
+      "competing_firms",
+      "public_data_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Data Subject (Individual User)",
+      "comment": "PERSPECTIVE 1: DATA SUBJECT (SNARE) \u2014 Individual users cannot meaningfully exit the constraint. Participation in digital life (employment, finance, healthcare, social connection) requires data submission to concentrated platforms. Exit costs are prohibitive: loss of economic opportunity, social isolation, reduced access to essential services. No alternative infrastructure exists at comparable scale. The individual bears extraction (behavioral profiling, attention commodification, price discrimination, manipulation) with no compensation or genuine consent mechanism. Maximum experienced extraction \u2014 trapped agent with zero degrees of freedom."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Competing Firm (Data-Dependent Business)",
+      "comment": "PERSPECTIVE 2: COMPETING FIRM (SNARE) \u2014 Data-dependent businesses (retailers, logistics, finance, advertising) are structurally dependent on data from concentrated platforms. Exit is theoretically possible but costs are severe: switching to alternative data sources reduces competitive precision, forgoing platform APIs reduces market reach, building proprietary data infrastructure requires massive capital. The competitive extraction is substantial \u2014 dominant platforms charge monopoly rates for data access or use data advantages to compete directly against their clients. Constrained rather than trapped; costs are severe but surmountable for well-capitalized firms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulatory Coalition (Data Protection Advocates)",
+      "comment": "PERSPECTIVE 3: REGULATORY COALITION (TANGLED ROPE) \u2014 Organized data protection movements (regulators, privacy advocates, civil society) see both coordination and extraction. The constraint coordinates information standards (data transparency requirements, consent forms, audit trails) that benefit platforms by creating legal safe harbors while simultaneously creating theater that masks extraction. The coalition faces suppression through regulatory capture, industry lobbying, and the technical complexity advantage of platforms. But the coalition has exit capacity through legislative pressure, international coordination (GDPR, CCPA), and norm-setting \u2014 a mixed experience of both coordination benefit (legitimacy framework) and extraction cost (influence asymmetry)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Corporation",
+      "comment": "PERSPECTIVE 4: PLATFORM CORPORATION (ROPE) \u2014 For dominant platforms, the constraint functions as pure coordination. The concentration of data enables network effects, personalization, and targeted service delivery \u2014 genuine coordination benefits. The extraction (from data subjects) is experienced by the platform as rightful value capture for providing communication infrastructure. The platform sees the market concentration as solving the coordination problem: fragmented data services would reduce network value. The platform experiences low suppression because it has maximum exit capacity: it can exit regulatory jurisdictions, adjust business models, invest in new data collection. The constraint appears as coordinating the digital commons, not extracting from it."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Legacy Data Protection Framework",
+      "comment": "PERSPECTIVE 5: LEGACY DATA PROTECTION FRAMEWORK (PITON) \u2014 Early data protection regulations (fair information practices, notice-and-consent, data portability rights) are substantially theatrical and degraded. Theater_ratio is high because consent mechanisms are performative (users cannot meaningfully process or evaluate data terms), data portability is technically complex to the point of uselessness, and notice-and-choice architecture presupposes rational actors with time to evaluate terms. The framework persists through institutional inertia and industry preference for the appearance of regulation over functional constraint. It coordinates neither effectively nor extracts maximally \u2014 it validates extraction while performing regulation. Maintained because full transparency/portability would trigger political crisis, not because it functions."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some data concentration may appear immutable: network effects mathematically favor consolidation, data valuation requires scale, algorithmic optimization benefits from large datasets. This perspective risks naturalizing the concentration as inherent to digital technology. However, the structural data contradicts the mountain classification. The concentration is contingent on specific regulatory choices (intellectual property law, merger approval, platform liability exemptions), business model choices (advertising-dependent rather than subscription), and network effects that are socially constructed rather than physically immutable. The engine's false summit detector will identify this as naturalization of contingent institutional arrangements."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "network_effect_inevitability",
+      "question": "Are data network effects mathematically inevitable or contingent on specific platform architecture choices?",
+      "resolution_mechanism": "Comparative analysis of federated vs centralized architectures; measurement of network value retention under interoperability; historical analysis of alternative data market structures (credit bureaus, telecom data sharing, health information exchanges)",
+      "impact": "If inevitable: market concentration is a natural law, snare classification is contingent on business models. If contingent: concentration is a choice, snare classification stands regardless of architecture.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether network effects driving data concentration are inevitable or contingent"
+    },
+    {
+      "id": "consent_mechanism_functionality",
+      "question": "Can notice-and-choice data consent be made functionally meaningful, or is the mechanism fundamentally theater?",
+      "resolution_mechanism": "Experimental evaluation of consent comprehension under different disclosure formats; measurement of actual decision-making behavior when meaningful alternatives are presented; longitudinal tracking of users with genuine choice capacity (sophisticated investors, technologists) vs general population",
+      "impact": "If achievable: legacy framework piton classification is premature, framework could evolve toward rope. If theater: framework classification confirmed, suppression of true choice mechanisms is structural.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether meaningful data consent mechanisms are functionally achievable"
+    },
+    {
+      "id": "alternative_infrastructure_viability",
+      "question": "Are decentralized, federated, or public-option data architectures technically and economically viable at scale?",
+      "resolution_mechanism": "Technology readiness assessment of decentralized identity, federated learning, data trusts, public data infrastructure; cost-benefit analysis vs centralized platforms; pilot program outcomes (EU data spaces, city-level data commons)",
+      "impact": "If viable: trapped classification becomes constrained, exit options materialize, snare perspective weakens. If unviable: trap remains absolute, suppression measure (0.72) is structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative data infrastructure architectures are viable at scale"
+    },
+    {
+      "id": "data_subject_collective_action",
+      "question": "Can individual data subjects achieve collective exit capacity through data unions, cooperatives, or coordinated withholding?",
+      "resolution_mechanism": "Measurement of union/cooperative formation rates and member retention; analysis of data-withholding campaigns and platform response; comparison of collective bargaining outcomes vs individual consent",
+      "impact": "If achievable: powerless classification could be upgraded to organized, snare becomes tangled rope. If blocked: suppression of coalition formation is part of extraction mechanism.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether data subjects can achieve collective exit capacity through organized action"
+    },
+    {
+      "id": "regulatory_capture_persistence",
+      "question": "Is the regulatory coalition's constrained exit capacity durable, or does concentrated platform power prevent effective data protection regulation?",
+      "resolution_mechanism": "Longitudinal analysis of regulatory outcomes vs industry lobbying expenditure; measurement of regulatory authority independence from platform influence; comparison of enforcement outcomes across jurisdictions with varying institutional autonomy",
+      "impact": "If durable: coalition's tangled rope classification holds, coalition has genuine leverage. If blocked: coalition is degraded piton, regulation persists as theater masking permanent extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory authority can sustain independence from platform influence"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Personal data market concentration represents a structural constraint where dominant platforms consolidate control over information flows necessary for economic and social participation. The constraint exhibits snare characteristics from the perspective of data subjects (trapped with no exit options) and competing firms (constrained by asymmetric data access), while platforms experience it as coordination (network effects and data utility) and regulators experience it as a mixed coordination-extraction hybrid (theater-intensive regulation that validates extraction while performing protection). The extractiveness has increased over the interval (0.45 to 0.68) as platforms have layered additional extraction mechanisms (behavioral profiling, attention commodification, algorithm-mediated discrimination, data-derived competitive advantages against users' own economic interests) on top of the initial data collection infrastructure. Theater ratio has similarly increased (0.35 to 0.58) as regulatory frameworks have grown more complex and performative: notice-and-consent mechanisms, data portability rights, and audit requirements create legitimacy theater that masks extraction by appearing to protect users while making meaningful choice functionally impossible.",
+    "key_agents": [
+      "Individual Data Subjects: Primary victims (powerless/trapped) \u2014 structurally dependent on platform participation; bear extraction through behavioral manipulation, discrimination, and attention commodification with no exit capacity",
+      "Platform Corporations: Primary beneficiaries (institutional/arbitrage) \u2014 extract asymmetric value from data concentration; control access to essential infrastructure; experience constraint as coordination mechanism",
+      "Competing Firms: Secondary victims (moderate/constrained) \u2014 data-dependent businesses pay monopoly rates for platform data access or accept competitive disadvantage; can theoretically exit but costs are severe",
+      "Data Protection Regulators & Civil Society: Organized coalition (organized/constrained) \u2014 see both coordination function (transparency norms, audit requirements) and extraction (regulatory capture, influence asymmetry); have exit capacity through legislation but face persistent suppression",
+      "Legacy Data Protection Framework: Institutional actor (institutional/constrained) \u2014 maintains performative regulation; piton classification reflects degradation of functional protection"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts through multiple mechanisms: (1) behavioral profiling and surveillance creating informational asymmetry; (2) attention commodification converting user engagement into advertiser revenue with no user compensation; (3) algorithmic discrimination in pricing, credit, employment, and service access; (4) competitive data advantages where platforms use user data to compete against their own business partners; (5) lock-in effects where individual users cannot exit without losing economic opportunity. The trajectory from 0.45 to 0.68 reflects layering of extraction mechanisms and the maturation of data monetization strategies. Suppression (0.72): High. Barriers to exit include: genuine technical necessity of platform participation for digital participation in employment, finance, healthcare, social connection; absence of practical alternatives at comparable scale; hidden data flows that users cannot monitor or control; terms-of-service complexity that obscures extraction mechanisms; regulatory capture that prevents functional constraints on platforms. Theater ratio (0.58): Moderate-high and increasing. Regulatory theater is substantial: consent mechanisms (notice-and-choice) are performative because users cannot meaningfully evaluate or act on disclosure; data portability rights are technically complex to uselessness; audit and transparency requirements create legitimacy appearance while platforms retain control over data use. Theater has increased as regulatory complexity has grown \u2014 more rules create more appearance of control without increasing actual constraint on extraction.",
+    "perspectival_gap": "The core perspectival gap lies in how each agent experiences the same structural constraint. Platforms genuinely experience network effects and data utility \u2014 the coordination functions are real and valuable. Users experience asymmetric extraction with no coordination benefit from their perspective \u2014 the services they receive do not compensate for behavioral manipulation and algorithmic discrimination. Regulators experience a hybrid: they are building coordination frameworks (transparency, audit, rights) that create legitimacy but are embedded in theater that validates rather than constrains extraction. The analytical observer risks the false summit: concluding that concentration is immutable because network effects mathematically favor consolidation, when the structural data reveals the consolidation as contingent on specific regulatory choices (intellectual property law, merger policy, platform liability exemptions) and business model choices (advertising-dependent rather than subscription or public utility models).",
+    "directionality_logic": "Directionality values are derived from beneficiary/victim declarations and exit options. Platform corporations as beneficiaries with arbitrage exit options (can move to new markets, adjust business models, invest in new data collection) derive d \u2248 0.05, producing low/negative f(d) \u2014 they experience the constraint as enabling, not extractive. Individual data subjects as victims with trapped exit options (no practical alternatives for digital participation) derive d \u2248 0.95, producing high f(d) \u2248 1.42 \u2014 they experience maximum extraction. Competing firms as secondary victims with constrained exit options derive d \u2248 0.75, producing f(d) \u2248 1.15. Regulators as organized agents with constrained but real exit capacity (legislative and norm-setting leverage) derive d \u2248 0.55, producing f(d) \u2248 0.75. The scope modifier \u03c3(S) applies at global scope (\u03c3 = 1.2), amplifying the effective extraction chi for all perspectives because the concentration operates across all major digital ecosystems globally.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The classification as snare is robust to perspectival variation. From the data subject perspective (powerless/trapped), the constraint is unambiguously snare: high extraction (\u03c7 \u2248 0.96), minimal coordination benefit, maximum suppression. From the competing firm perspective (moderate/constrained), it also classifies as snare: extraction is high though somewhat lower (\u03c7 \u2248 0.80), minimal coordination benefit from their structural position, significant suppression. From the platform perspective (institutional/arbitrage), the classification would be rope by the metrics alone (the beneficiary experiences coordination), but this reveals a perspectival asymmetry: the same structural constraint is coordination for extractors and snare for victims. The mandatrophy is resolved by recognizing that snare is the engine's canonical classification because the constraint's existence depends on suppressing victim exit options. If victims could freely exit without cost, the extraction would immediately collapse \u2014 this is the snare definition. The coordination experienced by platforms would vanish if they could not extract from captive users. The constraint's persistence depends on suppression of victim choice, making it fundamentally snare rather than rope."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_discrimination",
+      "attention_economy_lock_in",
+      "regulatory_capture_data_governance",
+      "digital_identity_centralization"
+    ],
+    "dual_formulation_note": "Personal data market concentration operates as a constraint family. Decomposed into: (1) structural data concentration (this story) with \u03b5=0.68 (snare); (2) algorithmic discrimination using concentrated data (\u03b5=0.62, snare); (3) attention commodification mechanisms (\u03b5=0.55, tangled rope with coordination function); (4) regulatory capture preventing data protection (\u03b5=0.72, snare). Each story has distinct extraction mechanisms, though all depend on the underlying data concentration. Upstream: digital_identity_centralization (\u03b5=0.45, tangled rope) \u2014 the initial consolidation of identity infrastructure that enabled data concentration."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ]
+}

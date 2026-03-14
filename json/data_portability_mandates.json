@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "data_portability_mandates",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dpm"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Data Portability Mandates (GDPR, DMA)",
+    "topic_domain": "digital_regulation/data_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "individual_data_subjects",
+      "emerging_platform_competitors"
+    ],
+    "victims": [
+      "incumbent_platform_operators",
+      "data_interoperability_infrastructure"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Data Subject Locked In",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL DATA SUBJECT (SNARE) \u2014 Users cannot practically exit incumbent platforms despite portability mandates because network effects and switching costs trap them. Portability creates an illusion of choice; exit remains costly. Data subjects bear the extraction (engagement tracking, behavioral modeling, targeted manipulation) with no real exit path."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Emerging Competitor",
+      "comment": "PERSPECTIVE 2: EMERGING COMPETITOR (TANGLED ROPE) \u2014 New platforms benefit from data portability rules that create interoperability; this is genuine coordination function enabling competition. Yet incumbents can weaponize portability mandates through selective compliance, technical obstruction, and data format fragmentation. The constraint simultaneously enables and extracts from competitors."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Authority",
+      "comment": "PERSPECTIVE 3: REGULATORY AUTHORITY (ROPE) \u2014 EU/UK regulators experience the mandate as pure coordination: solving the collective action problem of platform lock-in through data portability rules. Enforcement costs are high but viewed as necessary to maintain competitive markets. Arbitrage exit through selective enforcement available."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Incumbent Platform",
+      "comment": "PERSPECTIVE 4: INCUMBENT PLATFORM (PITON) \u2014 Large platforms comply with portability mandates theatrically: formatting data in technical forms that are difficult to process, delaying transfers, creating incompatible data schemas, or offering portability features that are procedurally burdensome. Compliance performance is maintained while functional utility remains minimal. Effective extraction persists beneath the ritual of compliance."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Interoperability Coalition",
+      "comment": "PERSPECTIVE 5: INTEROPERABILITY COALITION (SCAFFOLD) \u2014 Data Commons initiatives, open standards bodies (W3C), and NGOs view portability mandates as temporary scaffolding toward true data interoperability. The coalition sees a sunset: portable data formats will eventually be replaced by real-time APIs and federated architectures. Sunset clause is implicit in the technology roadmap (5-10 year horizon)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Immutable Lock-In)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN VIEW) \u2014 From a systemic perspective, network effects and switching costs constitute an immutable structural constraint: any communication platform must exhibit some lock-in because value increases with user base size. Portability mandates cannot escape this fundamental law. However, this perspective risks naturalizing what is a contingent institutional arrangement (lock-in exploited through strategic design choices rather than inherent to network effects)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "portability_technical_feasibility",
+      "question": "Can data portability ever be technically frictionless, or does the complexity of platform-specific data structures create irreducible barriers to meaningful transfer?",
+      "resolution_mechanism": "Empirical assessment of data transfer completion rates, post-transfer functionality success, and user satisfaction metrics across major platforms implementing GDPR/DMA portability rules",
+      "impact": "If frictionless transfer is possible: portability mandates can be tangled rope with genuine coordination value. If transfers are inherently degraded: portability is theater masking continued lock-in (Piton classification for incumbent platform perspective).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether data portability can achieve technical frictionlessness"
+    },
+    {
+      "id": "network_effects_irreducibility",
+      "question": "Is platform lock-in caused by inherent network effects (mathematical immutability) or by strategic design choices (contingent institutional arrangement)?",
+      "resolution_mechanism": "Historical analysis of platforms designed for interoperability or federation; comparison of switching costs across platforms with identical network size but different architectural choices",
+      "impact": "If inherent: mountain classification from all perspectives is justified. If contingent: mountain is a false summit, and portability mandates address a solvable coordination problem.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether network lock-in is mathematically inevitable or architecturally chosen"
+    },
+    {
+      "id": "interoperability_infrastructure_cost",
+      "question": "What is the true cost of maintaining interoperable data infrastructure, and who bears it? Do portability mandates transfer infrastructure costs from platforms to public systems?",
+      "resolution_mechanism": "Cost accounting for data transfer infrastructure, standards maintenance, and API development across public vs private implementations; analysis of who funds interoperability infrastructure over time",
+      "impact": "If public infrastructure costs exceed private, mandates may create a new extraction mechanism: shifting infrastructure burden to underfunded public systems while platforms retain data value. If costs are manageable and fairly distributed: tangled rope classification is stable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "True cost and distribution of interoperability infrastructure"
+    },
+    {
+      "id": "regulatory_capture_portability_weaponization",
+      "question": "Do incumbent platforms capture regulators to define portability rules in ways that appear compliant while minimizing actual data utility (Goodhart-style metric substitution)?",
+      "resolution_mechanism": "Content analysis of platform compliance documentation and regulatory guidance; empirical testing of whether ported data can reconstruct equivalent platform functionality; analysis of platform lobbying influence on regulatory standards development",
+      "impact": "If weaponized: portability rules become theater (Piton), and the mandate's tangled rope classification collapses toward snare for users. If not weaponized: mandate retains genuine coordination value.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether platforms capture regulators to weaponize portability rules"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Data portability mandates (GDPR Article 20, Digital Markets Act) represent a regulatory attempt to solve platform lock-in through forced data interoperability. The constraint exhibits tension between its stated coordination function (enabling users to switch platforms) and its actual extraction mechanism (incumbent platforms control data format, timing, and usability of transfers). Theater has increased as platforms have learned to comply technically while maintaining functional lock-in through data complexity and transfer friction. The constraint is a diagnostic exemplar of how coordination mandates can degrade into extraction theater when beneficiaries (users, regulators) lack technical capacity to verify compliance, while victims (incumbents) have incentive and resources to weaponize rules.",
+    "key_agents": [
+      "Individual Data Subjects: Primary intended beneficiary (powerless/trapped) \u2014 nominally gain exit option but remain locked-in due to network effects and high switching costs",
+      "Emerging Competitors: Secondary beneficiary (moderate/constrained) \u2014 data portability creates genuine interoperability opportunity but also extraction risk through rule weaponization",
+      "EU/UK Regulators: Regulatory authority (institutional/arbitrage) \u2014 frame mandate as coordination mechanism solving market concentration; maintain enforcement authority",
+      "Incumbent Platforms: Primary victim-turned-extractor (powerful/mobile) \u2014 face compliance costs but learn to weaponize technical complexity; shift extraction mechanism from surveillance to portability friction",
+      "Data Interoperability Infrastructure: Systemic victim (powerless/trapped) \u2014 bears cost of maintaining standards and infrastructure; receives no revenue or formal governance",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing network effects as inherent law rather than contingent institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high and rising. The mandate creates genuine coordination value (enabling competitor access to user data), but incumbent platforms have learned to comply theatrically while maintaining lock-in. Extractiveness has increased from 0.38 to 0.52 over six years as platforms optimized compliance procedures. The rising curve reflects Goodhart-style metric substitution: platforms now allocate resources to making portability technically compliant while functionally useless. Suppression (0.48): Moderate. Barriers to exit include network effects (switching to smaller platforms reduces utility), social graph switching costs, learned UI dependencies, and coordination problems among users. But suppression is not maximal \u2014 some users do switch, and regulatory enforcement creates pressure. Theater ratio (0.58): Moderate-high and rising. Portability compliance is increasingly performative. Platforms file data in formats optimized for technical correctness (meeting the API specification) rather than user utility. Transfer delays are procedurally justified. Data structures are intentionally complex. Real-time APIs are unavailable. Users receive ported data that satisfies the mandate but cannot recreate their social networks, interaction histories, or algorithmic contexts on alternative platforms.",
+    "directionality_logic": "Beneficiary-victim flow: Users (intended beneficiary) cannot exit platform lock-in despite portability rights \u2014 they are partially trapped by network effects (d \u2248 0.85). Emerging competitors (intended beneficiary) gain access to user data but face extraction through rule weaponization \u2014 they are partially victimized (d \u2248 0.55). Incumbent platforms (formal victim of the mandate) weaponize compliance rules to maintain extraction \u2014 they are actually beneficiaries of technical complexity (d \u2248 0.15). The regulatory authority (coordinator) experiences the mandate as low extraction (d \u2248 0.10). Data infrastructure systems (unmentioned in mandate design) absorb costs (d \u2248 0.95). The directionality structure reveals that the mandate's intended beneficiaries remain trapped, while formal victims learn to extract through procedural compliance.",
+    "perspectival_gap": "The regulatory authority sees coordination (rope) \u2014 the mandate solves a collective action problem (platform concentration). Users see extraction (snare) \u2014 they remain locked in despite portability rights. Incumbents see theater (piton) \u2014 they comply performatively while maintaining extraction. Competitors see mixed extraction (tangled rope) \u2014 data access enables them but procedural weaponization constrains them. The interoperability coalition sees a sunset (scaffold) \u2014 portability is temporary; real-time APIs will eventually replace data transfer. The analytical observer risks seeing immutable lock-in (mountain) \u2014 but this naturalizes contingent technical choices (data format complexity, API unavailability) as inherent to network effects. The perspectival gap reveals a systemic misalignment: the mandate was designed to solve user lock-in but created new extraction mechanisms for incumbents and new coordination problems for infrastructure maintainers.",
+    "mandatrophy_analysis": "REGULATORY CAPTURE VARIANT: Data portability mandates exemplify how coordination rules become extraction theater under regulatory asymmetry. Regulators have enforcement authority but lack technical capacity to verify meaningful compliance. Incumbents have technical capacity and incentive to weaponize rule definitions. The mandate contains genuine coordination value (competitor access) buried under increasing extraction theater (procedural friction, format complexity). The theater ratio rising from 0.42 to 0.58 shows Goodhart drift: platforms optimize for metric compliance (data transfer completion) rather than actual coordination function (meaningful user exit). Resolution requires shifting the mandate from backward-compatibility (porting historical data) to forward-compatibility (real-time API access), which would raise the coordination function but lower incumbent platform power to maintain extraction through complexity. The mandatrophy resolves by recognizing that portability mandates alone cannot overcome network effects; they require pairing with interoperability mandates (API requirements, standards governance) and user coordination mechanisms (cohort switching incentives). Without these, theater ratio approaches 1.0 and the constraint degrades to pure performance."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_lock_in",
+      "data_interoperability_standards",
+      "regulatory_capture_digital_markets"
+    ],
+    "dual_formulation_note": "Data portability mandates are downstream of both platform lock-in (structural constraint about network effects) and regulatory capture dynamics (institutional constraint about regulator-incumbent alignment). The portability mandate represents an intervention designed to address lock-in but whose effectiveness depends on whether it creates genuine interoperability (coordination) or merely procedural compliance theater (extraction)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.15
+    }
+  ]
+}

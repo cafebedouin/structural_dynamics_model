@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "coalition_government_stability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "coal"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.48,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Coalition Government Stability Constraint",
+    "topic_domain": "political_economy/institutional_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "coalition_leadership",
+      "median_party_kingmakers"
+    ],
+    "victims": [
+      "excluded_minority_parties",
+      "voter_mandate_fidelity",
+      "policy_coherence"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Minority Party (Excluded Coalition Member)",
+      "comment": "PERSPECTIVE 1: EXCLUDED MINORITY PARTY (SNARE) \u2014 Trapped within electoral system; cannot exit short of franchise collapse. Bears full extraction via exclusion from power despite significant vote share. Kingmaker parties extract disproportionate concessions while maintaining veto threat. Suppression is structural: electoral system prevents third-party viability, and coalition arithmetic forces exclusion as punishment mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Voter Coalition",
+      "comment": "PERSPECTIVE 2: VOTER COALITION (TANGLED ROPE) \u2014 Receives coordination benefit (stable government replaces electoral chaos) but bears extraction through mandate dilution. Coalition agreements override voter intent on specific policies. Constrained exit: voters cannot easily coordinate against both major parties simultaneously, and defection to third parties carries spoiler risk. Genuine coordination function (stability) coexists with asymmetric extraction (policy divergence from what voters actually preferred)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Coalition Leadership (Majority Partners)",
+      "comment": "PERSPECTIVE 3: COALITION LEADERSHIP (ROPE) \u2014 Primary beneficiaries. Experience constraint as pure coordination mechanism: coalition agreement enables government formation that individual parties could not achieve alone. Arbitrage exit (can form alternative coalitions or minority governments). Extraction flows toward this agent; they perceive the constraint as mutually beneficial bargaining rather than exploitation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Kingmaker Party",
+      "comment": "PERSPECTIVE 4: KINGMAKER PARTY (TANGLED ROPE) \u2014 Holds pivotal position in coalition arithmetic; genuinely solves coordination problem (government wouldn't form without them) but also extracts rents through disproportionate policy concessions and ministerial portfolios. Mobile exit (could dissolve coalition and force new elections, shifting kingmaker status). Extraction mechanism is the credible threat to collapse government \u2014 benefits from maintaining instability risk as bargaining tool."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Coalition Agreement Ritual",
+      "comment": "PERSPECTIVE 5: COALITION AGREEMENT RITUAL (PITON) \u2014 The formal coalition agreement and joint government program persist as institutional theater. Much of the documented coordination (written policy platforms, ministerial divisions) is performative; real coordination happens through behind-the-scenes negotiation. Theater ratio high (public agreements diverge from actual policy implementation). The ritual maintains legitimacy appearance despite degraded function \u2014 parties see their own agreements as frequently honored only in breach."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, coalition instability is inherent to multiparty systems: multiple parties with incompatible platforms must always negotiate, creating permanent potential for collapse. This perspective sees the constraint as an immutable property of proportional representation systems themselves. However, structural data contradicts mountain classification \u2014 variation across coalition systems and countries reveals the instability is contingent on political culture, veto player count, and institutional design, not a natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kingmaker_extraction_vs_coordination",
+      "question": "Is kingmaker party leverage a necessary coordination cost or pure extractive rent-seeking?",
+      "resolution_mechanism": "Comparative analysis: measure policy concessions to kingmaker parties across multiple coalitions; correlate with whether coalition would form without them. If kingmakers are structurally necessary, some leverage is genuine coordination cost. If coalitions could form without them, leverage is rent extraction.",
+      "impact": "If coordination: reclassify kingmaker perspective as Rope with high but justified asymmetry. If extraction: kingmaker perspective becomes Snare, increasing overall system extractiveness.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether kingmaker leverage is necessary coordination cost or pure extraction"
+    },
+    {
+      "id": "mandate_dilution_measurement",
+      "question": "How much of the policy divergence between coalition output and voter intent reflects necessary coordination compromise versus deliberate mandate overriding?",
+      "resolution_mechanism": "Pre-election voter surveys on policy preferences; post-government implementation tracking; regression analysis of coalition agreement content vs actual legislation.",
+      "impact": "If mostly compromise: extraction is moderate and justified; snare classification of excluded parties may be unfair. If deliberate override: extraction is asymmetric; victim classification of voters is correct.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of mandate dilution from compromise vs deliberate override"
+    },
+    {
+      "id": "coalition_collapse_trigger_mechanism",
+      "question": "Does coalition collapse result from genuine coordination failure or from intentional veto player destruction of coalition for electoral advantage?",
+      "resolution_mechanism": "Historical analysis of coalition breakdown narratives; game-theoretic modeling of incentive structures; comparison of public rationales vs private incentives (where documentary evidence exists).",
+      "impact": "If genuine failure: constraint is structural coordination problem. If intentional: constraint is partly extraction mechanism disguised as instability. Affects whether stabilization mechanisms are feasible.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether coalition collapse is coordination failure or intentional extraction"
+    },
+    {
+      "id": "institutional_design_contingency",
+      "question": "Is coalition instability inherent to proportional representation or contingent on specific institutional design choices?",
+      "resolution_mechanism": "Comparative cross-national analysis: stability rates across PR systems with different thresholds, runoff rules, investiture procedures, and dissolution powers. Analysis of whether constitutional reforms increase or decrease stability.",
+      "impact": "If contingent: mountain classification is false summit; constraint is decomposable into design-choice stories, not a natural law. If inherent: mountain classification is correct; constraint is unavoidable feature of PR systems.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether coalition instability is inherent or contingent on institutional design"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Coalition government stability represents a hybrid constraint that simultaneously coordinates multiparty governance and extracts rents from excluded parties and voters. The constraint operates across multiple institutional levels: voters who select party portfolios, parties who negotiate coalitions, kingmaker parties who hold veto power, and the formal coalition agreement mechanisms that ritualize coordination. The extractiveness has increased over the measurement interval (0.42 \u2192 0.58) as kingmaker parties have learned to weaponize coalition fragility for policy concessions. The theater ratio (0.65) reflects divergence between formal coalition agreements and actual policy implementation \u2014 parties publicly commit to coordination platforms they privately subvert through parliamentary maneuvering. The constraint exhibits genuine coordination benefits (preventing electoral chaos and enabling minority representation) while simultaneously suppressing the electoral mandates of excluded parties and distorting voter-intended policy outcomes through kingmaker extraction.",
+    "key_agents": [
+      "Coalition Leadership (Majority Parties): Primary beneficiary (institutional/arbitrage) \u2014 forms government, distributes ministerial portfolios, controls agenda",
+      "Kingmaker Party: Secondary beneficiary (powerful/mobile) \u2014 holds pivotal vote; extracts disproportionate concessions through collapse threat",
+      "Voter Coalition: Primary victim (moderate/constrained) \u2014 receives stability coordination benefit but suffers mandate dilution and policy override",
+      "Excluded Minority Parties: Secondary victim (powerless/trapped) \u2014 cannot exit electoral system; face systematic exclusion from power despite significant vote share",
+      "Policy Coherence (Abstract Collective): Tertiary victim (powerless/trapped) \u2014 government policy reflects coalition compromise rather than any coherent mandate",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as inherent to proportional representation"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The kingmaker party mechanism extracts rents through three channels: (1) disproportionate ministerial portfolios relative to vote share, (2) policy concessions on specific issues where they hold veto power, (3) maintenance of coalition fragility as a bargaining asset. However, extractiveness is not as severe as a pure snare (which would be 0.75+) because genuine coordination benefits exist \u2014 coalitions do prevent electoral stalemate and enable minority representation. The measurement trajectory shows accumulation of extraction over time (0.42 \u2192 0.58) as parties refine strategies for leveraging kingmaker position. Suppression (0.48): Moderate. Excluded parties face structural barriers to inclusion (arithmetic of multiparty systems), but suppression is not total \u2014 parties can move between coalition and opposition, and voter turnout to third parties remains possible (though costly). Theater ratio (0.65): Moderate-high. Coalition agreements are performative \u2014 they create appearance of coordinated governance that actual parliamentary behavior often undermines. Party discipline within coalitions weakens as individual members extract rents from the coalition's survival requirement. The theater has increased over time as the gap between public commitments and private implementation has widened.",
+    "perspectival_gap": "Coalition stability exhibits maximum perspectival divergence across the six types: Rope (leadership), Tangled Rope (kingmakers and voters), Snare (excluded minorities), Piton (institutional ritual), Mountain (natural law view), and Snare (voter mandate). The gap between leadership (Rope) and excluded minorities (Snare) is maximal \u2014 they experience opposite classification outcomes from the same constraint. This gap reveals the fundamental asymmetry: governance coordination requires negotiation, but negotiation produces asymmetric extraction. The mountain perspective's false summit (naturalizing coalition instability as inherent) is revealed through the omega variables: cross-national variation and constitutional design contingency demonstrate the instability is institutional, not natural.",
+    "directionality_logic": "Directionality (d) is derived from each agent's structural relationship: beneficiaries (coalition leaders, kingmakers) with arbitrage/mobile exit options experience low d (negative effective extraction \u2014 they benefit). Voters with constrained exit experience moderate d (they exit at cost through defection or non-voting). Excluded minorities with trapped exit experience high d (maximum extraction \u2014 they cannot exit the electoral system). The pipeline computes d automatically from beneficiary/victim status and exit capacity. Kingmakers occupy an intermediate position (d \u2248 0.40-0.50) because they simultaneously create and exploit the coordination problem \u2014 their exit option is mobile (can collapse coalition) but its exercise is costly (electoral competition re-opens, kingmaker status disappears). This ambiguity is captured in the kingmaker omega variable.",
+    "mandatrophy_analysis": "The mandatrophy here is between the coordination function (multiparty governance requires negotiation) and the extraction mechanism (negotiation produces kingmaker rents and mandate dilution). The constraint resolves mandatrophy by showing that both functions are real and coexistent: coalitions genuinely coordinate multiparty systems AND kingmakers genuinely extract rents. The distinction is not 'which function is real?' but 'how are extraction and coordination coupled?' The coupling is tight: the more fragmented the multiparty system (more potential kingmakers), the greater the extraction. The less fragmented (fewer kingmakers), the greater the extraction concentrates. No design escapes both functions simultaneously. The mandatrophy is irreducible unless the system is decomposed into separate stories: (1) multiparty coordination (\u03b5 \u2248 0.15, Rope), and (2) kingmaker rent extraction (\u03b5 \u2248 0.65, Snare). The tangled_rope classification (0.58) represents the empirical entanglement of these two mechanisms in actual coalition governments."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "electoral_system_threshold_effects",
+      "minority_party_viability"
+    ],
+    "dual_formulation_note": "Coalition stability decomposes into two structurally distinct constraints: (1) multiparty_coordination (\u03b5 \u2248 0.15, Rope) \u2014 the genuine problem of forming governments from multiple parties, and (2) kingmaker_rent_extraction (\u03b5 \u2248 0.65, Snare) \u2014 the mechanism by which pivotal parties extract policy concessions. This story represents their empirical entanglement in actual coalition systems. Separate stories with network links would enable precise measurement of which institutional reforms target coordination vs extraction."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.42
+    }
+  ]
+}

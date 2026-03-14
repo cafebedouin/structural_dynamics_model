@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "path_dependent_lock_in",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pdli"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Path Dependent Lock-In: Coordination with Embedded Extraction",
+    "topic_domain": "institutional_economics/technology_diffusion",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_technology_vendor",
+      "installed_base_stakeholders"
+    ],
+    "victims": [
+      "superior_alternative_developers",
+      "adopters_constrained_to_inferior_path"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Adopter Locked to Inferior Technology",
+      "comment": "PERSPECTIVE 1: LOCKED ADOPTER (SNARE) \u2014 Cannot exit the established technology path without bearing prohibitive switching costs. Lock-in is enforced through complementary asset requirements, data format incompatibility, skill depreciation, and network effects. The adopter experiences maximum extraction: the incumbent extracts rents precisely because exit is structurally impossible at biographical timescale. No alternatives exist at acceptable cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Superior Alternative Developer",
+      "comment": "PERSPECTIVE 2: SUPERIOR ALTERNATIVE DEVELOPER (TANGLED ROPE) \u2014 Technically superior solution exists but faces coordination problem: installed base has no incentive to migrate. High-cost barrier to entry due to network effects and switching costs. However, the constraint also functions as coordination: the installed base's lock-in enables the incumbent to make long-term investments that create genuine value. The developer bears extraction (excluded from market despite technical superiority) but the overall system coordinates stable technology transitions. Moderate power and constrained exit reflect high but not insurmountable barriers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Technology Vendor",
+      "comment": "PERSPECTIVE 3: INCUMBENT VENDOR (ROPE) \u2014 Experiences lock-in as pure coordination benefit. The installed base dependency enables long-term planning, justifies infrastructure investment, and creates stable customer relationships. Lock-in functions as coordination for this agent: committed installed base allows vendor to invest in improvements rather than constantly competing on acquisition. The vendor has arbitrage options (licensing, platform extensions) and benefits from the constraint's coordination function. Effective extraction runs toward the vendor, not away."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Transition Coalition",
+      "comment": "PERSPECTIVE 4: TRANSITION COALITION (SCAFFOLD) \u2014 Standards bodies, open-source communities, regulatory agencies (organized agents) are building interoperability layers and migration pathways that reduce switching costs. Backward-compatibility standards, API translation layers, and data format converters create a temporary scaffold that enables adopters to exit the path without total loss of legacy investments. The coalition sees lock-in as solvable through coordinated standards work with a sunset: as transition infrastructure matures, switching costs decline and lock-in loses force. Theater ratio low for this perspective because the work is substantive (technical standards) not performative."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Compliance Theater",
+      "comment": "PERSPECTIVE 5: LEGACY COMPLIANCE THEATER (PITON) \u2014 Regulatory compliance frameworks and enterprise architecture standards perpetually reference the incumbent technology (Windows in enterprise, COBOL in banking, x86 in computing) not because they are optimal but because organizational inertia maintains the reference. New systems are certified for 'backward compatibility' with legacy tech; regulations mandate interoperability with systems using outdated standards. The compliance infrastructure is substantially theatrical \u2014 regulatory bodies maintain reference to legacy tech because alternatives haven't fully replaced it, not because the legacy is functionally optimal. Theater ratio high (0.70+) reflecting performative compliance."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, path dependence is an immutable feature of any system with increasing returns, network externalities, or complementary asset requirements. Once multiple adopters commit to a technology, the cost structure itself becomes mathematically favorable for incumbents \u2014 path dependence is not a policy choice but a structural consequence of how adoption curves work. This perspective risks naturalizing what may be a contingent institutional arrangement (e.g., the specific regulatory and intellectual property structures that enable lock-in) as a law of economics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "switching_cost_measurability",
+      "question": "What portion of measured switching costs are technological vs. institutional/organizational vs. psychological?",
+      "resolution_mechanism": "Decompose switching cost studies by category: hardware compatibility, software licensing, data migration, employee retraining, organizational process change. Compare actual vs perceived costs post-migration.",
+      "impact": "If primarily technological: path dependence may be solvable through interoperability standards (scaffold viable). If primarily institutional/psychological: path dependence is stickier than technology can fix, requiring regulatory intervention or organizational change.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Composition of switching costs by category"
+    },
+    {
+      "id": "network_effect_threshold",
+      "question": "What installed-base size threshold makes lock-in mathematically irreversible vs reversible?",
+      "resolution_mechanism": "Historical analysis of technology transitions: identify cases where superior technologies displaced entrenched incumbents despite network effects, measure installed-base size ratios at transition point.",
+      "impact": "If threshold is crossed early in lifecycle: lock-in is structurally temporary (scaffold sunset ~10-15 years). If threshold enables indefinite lock-in: constraint approaches mountain classification (irreversible).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold at which network effects become mathematically irreversible"
+    },
+    {
+      "id": "incumbent_active_extraction",
+      "question": "Does the incumbent actively enforce lock-in (through pricing, licensing restrictions, interoperability sabotage) or is lock-in a passive structural outcome of network effects?",
+      "resolution_mechanism": "Document incumbent behavior: pricing strategy during transition periods, interoperability policy changes, intellectual property enforcement. Compare to passive network-effect predictions.",
+      "impact": "If active enforcement: tangled_rope classification is correct (requires active enforcement gate). If purely passive: may reclassify closer to rope (coordination without enforcement), reducing extraction component.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether incumbent actively enforces lock-in or lock-in is passive structural outcome"
+    },
+    {
+      "id": "coalition_success_rates",
+      "question": "Do organized transition efforts (interoperability standards, open-source alternatives, regulatory mandates) actually reduce switching costs at measurable rates?",
+      "resolution_mechanism": "Track migration rates before/after standards completion; measure adoption of interoperability layers; compare organizations that adopt transition infrastructure vs those that don't.",
+      "impact": "If successful: scaffold perspective validated \u2014 lock-in has real sunset timescale (generational). If unsuccessful: scaffold is aspirational, and lock-in behaves more like snare for most adopters.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Efficacy of organized coalition efforts to reduce switching costs"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Path-dependent lock-in is a structural constraint that arises when adoption of a particular technology or institutional arrangement creates irreversible or high-cost switching dynamics, enabling incumbents to extract rents from adopters who cannot exit without bearing prohibitive costs. The constraint combines genuine coordination functions \u2014 the installed base enables vendors to make long-term investments and provide stable services \u2014 with asymmetric extraction, wherein the incumbent's market power derives not from superior performance but from the cost structure of exit. This constraint exhibits the full six-type perspectival range: adopters experience it as a snare (trapped), superior alternatives experience it as tangled rope (mixed coordination-extraction), incumbents experience it as rope (pure coordination benefit), organized transition efforts see it as scaffold (temporary with sunset), legacy systems perpetuate it as piton (performative), and the analytical observer risks seeing it as mountain (immutable feature of increasing-returns systems). The rising extractiveness over the measurement interval (0.35\u21920.58) reflects accumulating rents as lock-in deepens; rising theater ratio reflects the increasing performative burden of maintaining legacy compatibility while technically superior alternatives mature.",
+    "key_agents": [
+      "Incumbent Technology Vendor: Primary beneficiary (institutional/arbitrage) \u2014 extracts rents through lock-in mechanism; experiences constraint as coordination enabling long-term planning",
+      "Adopters Locked to Inferior Path: Primary victim (powerless/trapped) \u2014 bear switching costs; cannot exit without prohibitive loss; experience maximum extraction",
+      "Superior Alternative Developers: Secondary victim (moderate/constrained) \u2014 technically superior but face coordination problem: installed base has no incentive to migrate; excluded from market despite merit",
+      "Transition Coalition: Organized agents (organized/constrained) \u2014 standards bodies, open-source communities, regulatory agencies building interoperability layers and migration pathways",
+      "Legacy Compliance Infrastructure: Institutional actor (institutional/arbitrage) \u2014 regulatory frameworks and enterprise standards perpetually reference incumbent technology; maintains through inertia",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as immutable economic laws"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. Lock-in generates rents for incumbents, but extraction is constrained by the need to maintain quality sufficient to prevent wholesale migration and by regulatory pressure. Rising from 0.35 to 0.58 over the interval reflects accumulating rents as installed base grows and switching cost ratios sharpen \u2014 early in lifecycle, paths are not yet locked; later, they are. Suppression (0.65): High. Switching costs are substantial and multidimensional: technical (data migration, API relearning), economic (licensing costs, infrastructure duplication), organizational (process redesign, workforce retraining), and psychological (preference lock, familiarity bias). Suppression rises with installed base size because early adopters had more alternatives. Theater ratio (0.58): Moderate-high. Lock-in itself is not performative, but the compliance infrastructure built around it increasingly is \u2014 regulations mandate backward compatibility with legacy tech not because it's optimal but because alternatives haven't fully displaced it. Claimed type (Tangled Rope): Satisfies gates \u2014 has beneficiaries (incumbent, installed base stakeholders) and victims (superior alternatives, locked adopters), requires active enforcement (through IP, licensing, interoperability sabotage), exhibits mixed coordination (enabling long-term planning) and extraction (rents from switching costs).",
+    "perspectival_gap": "The incumbent experiences lock-in as pure coordination (Rope) \u2014 the installed base enables stable planning and justifies infrastructure investment. The adopter experiences it as pure extraction (Snare) \u2014 they cannot escape and bear full cost. The superior alternative experiences it as mixed (Tangled Rope) \u2014 the system does coordinate technology transitions at some rate, but the existing adopter base's lock-in excludes better solutions. The organized coalition sees a solvable problem with a sunset (Scaffold) \u2014 backward compatibility standards and migration layers reduce switching costs over time. The legacy compliance system sees itself as performing a function (Piton) \u2014 maintaining regulatory reference to incumbent technology despite technical obsolescence. The analytical observer risks seeing immutable economics (Mountain) \u2014 but the structural data reveals this as a false summit: the specific intellectual property, regulatory, and organizational structures that enable lock-in are contingent, not laws of nature. The perspectival gap is large because the constraint's extraction mechanism is not force or fraud but structural cost asymmetry.",
+    "directionality_logic": "The incumbent vendor's directionality (d) is low despite market power because they are structurally a net beneficiary: locked-in adopters enable long-term planning, complementary service offerings, and stable revenue. This produces low d (beneficiary status) and low f(d), making their experienced extractiveness negative (they benefit from the constraint). Adopters have high d (victim status) and trapped exit options, producing high f(d) and high experienced extractiveness. Superior alternatives have moderate d (victim but with constrained exit to market through coalition support) and moderate f(d). The organized coalition has low d relative to their power level because they are solving a coordination problem \u2014 their position is beneficiary-aligned (reducing switching costs helps all parties eventually, including current adopters). The compliance infrastructure has low d (beneficiary status, arbitrage options) because maintaining legacy reference is organizationally convenient. The analytical observer's d is canonical (0.73 for analytical power), but their classification as mountain is subject to false-summit detection: the structural data contradicts the mountain gates.",
+    "mandatrophy_analysis": "Path-dependent lock-in resolves mandatrophy by showing that the constraint's classification depends critically on the time horizon and exit options of the observing agent. At immediate/trapped, it is pure extraction (Snare). At generational/constrained, it is mixed (Tangled Rope). At civilizational analytical, it risks false naturalization (Mountain). The constraint prevents mislabeling coordination as extraction by requiring explicit declaration of the coordination function: the incumbent's ability to plan long-term and invest in quality is genuine coordination benefit. It prevents mislabeling extraction as pure coordination by requiring explicit declaration of victims and barriers to exit: locked adopters bear real costs precisely because alternatives exist but are inaccessible. The mandate resolves by declaring BOTH: beneficiaries (who experience coordination), victims (who experience extraction), and the active enforcement mechanism (how the vendor maintains the lock-in). The tangled_rope classification is forced; the analysis must justify why both coordination and extraction are structurally real, not why one dominates the other."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "network_effects_positive_feedback",
+      "vendor_lock_in_economic_rents",
+      "interoperability_standards_fragmentation"
+    ],
+    "dual_formulation_note": "Path-dependent lock-in is upstream of specific vendor lock-in mechanisms and downstream of general network effects. The constraint captures the structural bridge between positive feedback dynamics (network effects) and asymmetric extraction (vendor rents). Separate stories address the coordination benefits (network effects) and the extraction mechanism (switching costs + IP enforcement), linked by this story's affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

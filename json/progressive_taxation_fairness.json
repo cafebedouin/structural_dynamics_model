@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "progressive_taxation_fairness",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.52,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Progressive Taxation Fairness Constraint",
+    "topic_domain": "economic_policy/taxation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "low_income_households",
+      "public_goods_provision",
+      "welfare_programs"
+    ],
+    "victims": [
+      "high_income_earners",
+      "capital_owners"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The High-Income Earner",
+      "comment": "PERSPECTIVE 1: HIGH-INCOME EARNER (SNARE) \u2014 Faces progressive tax extraction with high marginal rates and limited exit options within jurisdiction. Can relocate or restructure assets (constrained, not trapped), but relocation costs are substantial. Experiences the constraint as primarily extractive with minimal coordination benefit. Suppression through tax complexity, enforcement mechanisms, and capital controls."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Global Capital Owner",
+      "comment": "PERSPECTIVE 2: GLOBAL CAPITAL OWNER (TANGLED ROPE) \u2014 Has significant arbitrage options across jurisdictions with different tax regimes. Benefits from coordination aspects (stable infrastructure, rule of law, educated labor force funded by public goods), while simultaneously extracting through tax avoidance strategies (profit shifting, transfer pricing). Both genuine coordination function and asymmetric extraction are present. High effective extraction due to arbitrage exit options and global scope."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Low-Income Household",
+      "comment": "PERSPECTIVE 3: LOW-INCOME HOUSEHOLD (ROPE) \u2014 Trapped in jurisdiction by employment, family, and geographic constraints. Experiences progressive taxation primarily as coordination: contributes proportionally less, receives disproportionately more public goods and welfare transfers. Experiences constraint as enabling, not extractive. The system coordinates resource redistribution and ensures access to essential services."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Government Fiscal Authority",
+      "comment": "PERSPECTIVE 4: GOVERNMENT FISCAL AUTHORITY (TANGLED ROPE) \u2014 Coordinates public goods provision and welfare redistribution (genuine coordination function), while simultaneously extracting rents through tax collection efficiency gaps, bureaucratic overhead, and political allocation of tax revenue to favored constituencies. Faces pressure from both high-income taxpayers (exit threat through capital mobility) and low-income beneficiaries (demand for services). Constrained by both sovereign debt constraints and democratic legitimacy requirements."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Progressive Tax Ideology",
+      "comment": "PERSPECTIVE 5: PROGRESSIVE TAX IDEOLOGY (PITON) \u2014 The normative commitment to progressive taxation has partially atrophied from a functional coordination mechanism into performative legitimacy theater. Marginal rates are high in rhetoric but lower in practice through deductions, credits, and enforcement gaps. The theater of fairness persists (high theater_ratio) while actual redistribution is increasingly captured or circumvented. Maintained through institutional inertia and rhetorical commitment despite degraded functional efficacy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a global civilizational perspective, progressive taxation coordinates resource redistribution and funds public goods (coordination function), while simultaneously enabling extraction through capital mobility asymmetries, tax competition between jurisdictions, and regulatory arbitrage. The constraint exhibits both genuine coordination and structural extraction. The system is tangled rather than pure extraction or pure coordination."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "capital_mobility_asymmetry",
+      "question": "Does the observed capital flight and profit shifting represent rational response to extractive taxation or structural reality of global capital mobility?",
+      "resolution_mechanism": "Comparative analysis of effective tax rates (statutory vs. actual) across jurisdictions; measurement of capital flight volumes and elasticity to tax changes; cross-country regression of investment flows on tax differentials",
+      "impact": "If primarily extractive response: suppression value should increase to 0.65+, shifting more perspectives toward Snare. If primarily structural inevitability: suppression remains moderate, confirming Tangled Rope classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether capital mobility response indicates extraction or structural reality"
+    },
+    {
+      "id": "enforcement_mechanism_efficacy",
+      "question": "What proportion of the tax-evasion suppression is structural (inherent difficulty of verifying offshore income) versus institutional choice (insufficient enforcement resources)?",
+      "resolution_mechanism": "Audit rate analysis; comparison of effective enforcement between countries with high vs low compliance infrastructure investment; measurement of revenue recovery from increased enforcement spending",
+      "impact": "If structural: suppression is inherent to complexity (theater increases). If institutional choice: suppression is politically determined (extraction mechanism is amplified through deliberate underenforcement).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs institutional sources of enforcement gaps"
+    },
+    {
+      "id": "redistribution_effectiveness",
+      "question": "Does progressive taxation actually reduce inequality, or does the extraction offset and rhetorical theater obscure minimal net redistribution?",
+      "resolution_mechanism": "Time-series analysis of Gini coefficient before/after-tax; comparison of post-tax inequality across countries with different progressivity levels; decomposition of inequality change into tax vs transfer components",
+      "impact": "If effective redistribution: Rope classification gains weight (genuine coordination outcome). If theater dominates: Piton classification gains weight (performative inequality reduction with inertial maintenance).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether progressive taxation achieves actual or performative redistribution"
+    },
+    {
+      "id": "tax_base_elasticity",
+      "question": "At what progressivity level does behavioral response (avoidance, evasion, labor supply reduction) reverse the redistributive function?",
+      "resolution_mechanism": "Laffer curve estimation for different tax bases; elasticity measurement of taxable income, capital gains, and labor supply to marginal rate changes; cross-country comparison of revenue optimization points",
+      "impact": "If reversal occurs at moderate progressivity (30-40% marginal rates): constraint may be Scaffold with sunset (progressive taxation becomes counterproductive). If reversal is asymptotic and high (60%+): Tangled Rope holds across all practical progressivity ranges.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Tax base elasticity and revenue-optimization threshold"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.61
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "commentary": {
+    "narrative_context": "Progressive taxation operates as a hybrid coordination-extraction mechanism. It coordinates public goods provision and income redistribution (genuine coordination function) while simultaneously extracting from high earners and capital owners through confiscatory marginal rates, enforcement asymmetries, and capital controls. The constraint exhibits structural tangling: the system cannot function as pure coordination because high earners would exit or evade; it cannot function as pure extraction because legitimate public goods require sustained cooperation and investment. The theater_ratio (0.65) reflects the gap between progressive taxation's rhetorical commitment to fairness and actual redistributive outcomes, which are increasingly captured or circumvented through tax avoidance. Over the 60-year interval (roughly 1965-2025), both extractiveness and theater have increased as globalization enables capital mobility and asymmetries compound, while marginal rate enforcement has become increasingly theatrical (high nominal rates, low effective rates through deductions).",
+    "key_agents": [
+      "High-Income Earners: Primary victims (moderate/constrained) \u2014 face progressive extraction with constrained exit options within jurisdiction; can relocate or restructure with significant costs",
+      "Capital Owners: Primary victims (powerful/arbitrage) \u2014 have global arbitrage options and can structure assets across jurisdictions; benefit from coordination but exploit extraction gaps",
+      "Low-Income Households: Primary beneficiaries (powerless/trapped) \u2014 trapped in jurisdiction; benefit from redistribution and public goods provision; experience constraint as enabling",
+      "Government Fiscal Authority: Institutional beneficiary (institutional/constrained) \u2014 coordinates public goods and welfare while extracting rents through efficiency gaps and political allocation",
+      "Public Goods/Welfare Programs: Beneficiary collective (powerless/trapped) \u2014 receive resources; experience constraint as coordination mechanism enabling service provision",
+      "Progressive Tax Ideology: Institutional-cultural actor (institutional/mobile) \u2014 maintains rhetorical commitment despite degraded functional efficacy; exhibits piton characteristics"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. The constraint extracts from high-income earners and capital owners through progressive marginal rates, capital controls, and enforcement mechanisms. However, the extraction is not total (not 0.70+) because coordination aspects are genuine \u2014 public goods provision, rule of law, educated labor force, and infrastructure funded through taxation benefit all participants including high earners. The extractiveness has increased over time as capital mobility enables avoidance and jurisdictions compete, forcing higher nominal rates to maintain revenue. Suppression (0.52): Moderate. Barriers to exit include relocation costs, family/community ties, asset illiquidity, and legal/regulatory obstacles to capital flight. However, suppression is not total because global capital mobility and tax planning strategies provide partial exit. High-income earners face constraints but have options; low-income earners face traps but lack the resources to exercise exit. Theater ratio (0.65): Moderately high. The gap between statutory and effective tax rates reflects theater \u2014 marginal rates are high in rhetoric but lower in practice through tax deductions, credits, accelerated depreciation, and carried interest rules. The rhetoric of fairness persists while actual redistribution is eroded. Theater has increased over the interval as tax avoidance strategies have proliferated.",
+    "perspectival_gap": "The core perspectival gap reveals the constraint's tangled nature. High-income earners perceive extraction dominance (Snare classification: trapped, moderate power, biographical horizon). Low-income households perceive coordination dominance (Rope classification: genuine enablement of welfare and public goods access). Capital owners with global options perceive genuine tangling \u2014 they benefit from coordination (infrastructure, educated labor, rule of law) while exploiting extraction gaps (arbitrage, profit shifting). The government perceives tangling from a different angle \u2014 coordinating provision while simultaneously threatened by exit (capital flight) and managing demand from beneficiaries. The analytical observer at civilizational scope sees the constraint as tangled globally: jurisdictions coordinate for mutual benefit while competing through tax rates, creating extraction through regulatory arbitrage. The piton perspective (progressive tax ideology) reveals that the nominally functional system is increasingly maintained through theater rather than effective operation.",
+    "directionality_logic": "Directionality values are derived from structural position and exit options. High-income earners are victims with constrained exit (d \u2248 0.75), experiencing higher effective extraction. Capital owners are structural beneficiaries with arbitrage options despite victim status in the tax code (d \u2248 0.55, offset by arbitrage exit), experiencing moderate extraction. Low-income households are beneficiaries with trapped exit (d \u2248 0.15), experiencing negative effective extraction (or coordination-as-benefit). The government is a complex institutional actor with constrained exit on both sides (threatened by capital flight, accountable to beneficiaries), producing moderate d (\u2248 0.50). The progressivity of the constraint creates asymmetric directionality: the same tax system produces high chi for high earners and low/negative chi for low earners, depending on f(d) and their structural position. Suppression applies uniformly (not scaled by individual position), but experienced extraction is scaled by directionality.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: Progressive taxation satisfies all three tangled rope gates: (1) Genuine coordination function exists \u2014 public goods provision, welfare redistribution, rule of law funding \u2014 these coordinate the collective benefit structure. (2) Asymmetric extraction is structural \u2014 high earners and capital owners bear extraction while low earners receive subsidy; the system is fundamentally asymmetric. (3) Active enforcement is required \u2014 tax collection, compliance monitoring, enforcement against avoidance are continuous and nontrivial. The mandatrophy is resolved by recognizing that the constraint simultaneously solves a collective action problem (funding public goods is a prisoner's dilemma without taxation) AND extracts rents (through enforcement inefficiency, administrative overhead, and political allocation of tax benefits). Neither classification (pure Rope or pure Snare) is correct; the system is tangled. The increasingness of both extractiveness and theater over the interval suggests that the tangling is becoming more asymmetric \u2014 the coordination benefit persists while extraction mechanisms proliferate through tax avoidance and enforcement gaps."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "capital_mobility_constraint",
+      "tax_competition_between_jurisdictions",
+      "income_inequality_reduction"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.65
+    }
+  ]
+}

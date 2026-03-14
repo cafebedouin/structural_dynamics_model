@@ -1,0 +1,137 @@
+{
+  "header": {
+    "constraint_id": "rice_theorem_undecidability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.02,
+    "theater_ratio": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Rice's Theorem: Undecidability of Semantic Program Properties",
+    "topic_domain": "theoretical_computer_science/computability_theory",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.95,
+    "resistance": 0.02,
+    "requires_active_enforcement": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Compiler Seeking Semantic Properties",
+      "comment": "PERSPECTIVE 1: COMPILER OPTIMIZATION (MOUNTAIN) \u2014 A compiler seeking to determine semantic properties of arbitrary programs (whether code terminates, uses memory correctly, implements a specific algorithm) faces a mathematical impossibility. No algorithm can solve this for all programs. This is not a limitation of current technology or technique \u2014 it is a logical limit. The compiler designer cannot exit this constraint through better engineering."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "label": "The Static Analysis Tool Developer",
+      "comment": "PERSPECTIVE 2: STATIC ANALYSIS TOOL DEVELOPER (MOUNTAIN) \u2014 The tool developer can approximate semantic properties via abstract interpretation, but cannot achieve completeness. The constraint is real at the formal level \u2014 any total decision procedure for non-trivial semantic properties does not exist. The developer is constrained by mathematics, not by market competition or institutional inertia. Can work around specific cases but cannot defeat the general theorem."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Theoretical Computer Scientist",
+      "comment": "PERSPECTIVE 3: THEORETICAL OBSERVER (MOUNTAIN) \u2014 From the perspective of mathematical logic and computability theory, Rice's Theorem is a consequence of the undecidability of the Halting Problem. It is a structural property of Turing-complete computation, not a contingent institutional constraint. The theorem emerged from first principles and holds across all possible computational models equivalent to Turing machines. No observational perspective or measurement methodology changes this classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "non_turing_complete_escape",
+      "question": "Do restricted computational models (linear logic, bounded-resource languages, Presburger arithmetic) escape Rice's Theorem?",
+      "resolution_mechanism": "Formal analysis of expressiveness hierarchy; demonstration that semantic decidability requires sub-Turing-completeness",
+      "impact": "If true: Rice's Theorem is specific to Turing-complete models, suggesting computational expressiveness trades off against semantic decidability. If false: the undecidability is more fundamental than Turing completeness alone.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether Rice's Theorem is specific to Turing-complete computation or more fundamental"
+    },
+    {
+      "id": "approximation_sufficiency_boundary",
+      "question": "For practical software systems, at what approximation threshold do abstract interpretation and heuristic tools become 'sufficient' semantic analysis despite formal undecidability?",
+      "resolution_mechanism": "Empirical metrics: false positive/negative rates of static analysis tools on real codebases; industry adoption thresholds for different tool precision levels",
+      "impact": "If approximation suffices for all practical cases: Rice's Theorem becomes a mountain with zero operational impact. If not: the theorem establishes permanent resource-extraction tradeoffs (more precision requires more computation/cost).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Practical sufficiency boundary for approximate semantic analysis"
+    },
+    {
+      "id": "proof_mechanism_necessity",
+      "question": "Is the undecidability of semantic properties a direct consequence of G\u00f6del's Incompleteness, or does it rest on independent foundations (e.g., the Halting Problem specifically)?",
+      "resolution_mechanism": "Proof-theoretic analysis: formalize Rice's Theorem in minimal axiom systems and identify which axioms are essential",
+      "impact": "If derivable from G\u00f6del: semantic undecidability is part of a broader impossibility family. If independent: it may have different implications for logic and languages that evade G\u00f6delian limits.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Relationship between Rice's Theorem and G\u00f6del's Incompleteness"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "Rice's Theorem establishes that every non-trivial semantic property of programs (properties that depend on the behavior of the program when executed, not just its syntactic form) is undecidable \u2014 no algorithm can correctly determine whether an arbitrary program has that property for all possible inputs. This is a mathematical impossibility, not a engineering challenge or a coordination problem. The constraint is invariant across all three perspectives because it is grounded in formal logic and computability theory, not in institutional design or actor interests. The undecidability is a consequence of the Turing-completeness of the computational model and the Halting Problem's own undecidability. Theater ratio is negligibly low (0.05) because there is no performative element to the constraint \u2014 the mathematical proof is direct and non-negotiable. Extractiveness is minimal (0.12) because no agent benefits from the constraint; it is a pure limitation. Suppression is negligible (0.02) because the constraint operates at the level of formal mathematics, not enforcement or behavioral suppression.",
+    "key_agents": [
+      "Compiler writers and static analysis tool developers: Encounter this constraint when attempting to prove properties of arbitrary programs \u2014 they cannot exit or overcome it through better algorithms",
+      "Software verification researchers: Accept the constraint as fundamental and work within it via approximation, partial solutions, and restricted domains",
+      "Programming language designers: Design languages with restricted expressiveness (sub-Turing-complete) to enable semantic decidability, accepting reduced computational power",
+      "Theoretical computer scientists: Document the constraint and establish its relationships to other undecidability results"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Minimal. No agent extracts value from this constraint in the extractive sense. The constraint is a pure limitation \u2014 it removes degrees of freedom from all observers equally. The small non-zero value reflects that the theoretical result does enable some communities to claim expertise (semantic analysis researchers, formal methods specialists) and could theoretically direct resources or reputation. But this is incidental, not structural. Suppression (0.02): Negligible. The constraint operates through mathematical impossibility, not behavioral suppression or barrier-raising. Agents understand the constraint through proof, not enforcement. Theater ratio (0.05): Negligible. The mathematical proof is direct \u2014 Rice's proof establishes the result via a reduction from the Halting Problem. No performative layer masks the mechanism. Accessibility collapse (0.95): Very high. Alternative approaches to semantic analysis are blocked completely. Approximation and restricted domains are not alternatives to Rice's Theorem \u2014 they are acknowledgments of it. Resistance (0.02): Very low. The theorem has stood for 70+ years without effective challenge. No alternative computational model equivalent to Turing machines escapes the undecidability.",
+    "perspectival_gap": "There is no perspectival gap for this constraint. All three perspectives classify it as Mountain because the constraint's source is formal logic, not institutional design or actor interests. A compiler writer, a language designer, and a theoretical computer scientist all agree that semantic undecidability is a mathematical fact, not a coordination problem or extraction mechanism. The invariance across perspectives is itself the diagnostic signal \u2014 when a constraint classifies identically from powerless, moderate, and analytical positions across all time horizons and scopes, it is very likely a true mountain or a false summit. The commentary below tests whether this is genuine or naturalized.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by being a genuine natural law. The base properties meet all mountain gates: extractiveness (0.12) \u2264 0.25, suppression (0.02) \u2264 0.05, emerges_naturally: true, accessibility_collapse (0.95) \u2265 0.85, resistance (0.02) \u2264 0.15. All three perspectives classify as Mountain. The theater ratio (0.05) is stable over the interval \u2014 no degradation or drift toward Piton. The constraint is not maintained by institutional inertia or performative activity; it is maintained by mathematics. No perspective perceives meaningful extraction, coordination, or enforcement. This is the negative mandatrophy case: the threat is not over-classification as mountain (false summit), but under-classification or conflation with institutional constraints. Rice's Theorem must not be confused with institutional barriers to semantic analysis (budgets, tool availability, researcher specialization) \u2014 those are separate constraints. The formal undecidability is distinct from the practical difficulty of semantic analysis."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "halting_problem_undecidability",
+      "godel_incompleteness_first",
+      "semantic_program_verification"
+    ],
+    "dual_formulation_note": "Rice's Theorem is downstream of the Halting Problem undecidability (via reduction) and related to G\u00f6del's Incompleteness, but represents a distinct structural impossibility specific to semantic properties of programs. Affects practical constraints like semantic program verification, which attempts to work around the undecidability via approximation and restricted domains."
+  }
+}

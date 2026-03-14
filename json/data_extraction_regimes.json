@@ -1,0 +1,220 @@
+{
+  "header": {
+    "constraint_id": "data_extraction_regimes",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "data_extract"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Data Extraction Regimes in Digital Platforms",
+    "topic_domain": "digital_economy/information_asymmetry",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "data_aggregators",
+      "advertising_networks"
+    ],
+    "victims": [
+      "data_subjects",
+      "information_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Data Subject",
+      "comment": "PERSPECTIVE 1: DATA SUBJECT (SNARE) \u2014 Trapped in mandatory data extraction by account creation and service dependency. No viable exit without abandoning social/economic participation. Suppression is structural and internalized: terms of service are incomprehensible by design, data flows are opaque, and surveillance is invisible. Maximum experienced extraction because the subject cannot articulate, negotiate, or escape the constraint."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Privacy-Conscious User",
+      "comment": "PERSPECTIVE 2: PRIVACY-CONSCIOUS USER (SNARE) \u2014 Constrained rather than fully trapped: can use privacy tools, limit sharing, or leave platforms. But exit costs are high (social isolation, economic disadvantage, knowledge opacity). Attempts to opt-out are met with dark patterns, friction, and algorithmic suppression of alternatives. Extraction is severe but not maximized because constrained agents retain some agency, albeit at high personal cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATOR (ROPE) \u2014 Experiences data extraction as coordination: collecting signals about user behavior enables content recommendation, fraud detection, and service improvement. Benefits massively from the data flow. Has exit options (can diversify, can reduce data collection) and exercises them selectively. Net beneficiary \u2014 the constraint subsidizes platform operations. Sees the regime as a problem-solving mechanism, not as extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Regulatory Regime",
+      "comment": "PERSPECTIVE 4: REGULATORY REGIME (TANGLED ROPE) \u2014 Organized state actors (GDPR, FTC, DPA) see the extraction regime and respond with coordination mechanisms (consent requirements, transparency mandates, data subject rights). But enforcement is partial, regulatory arbitrage is rampant, and compliance creates theater rather than actual control. The regime involves genuine coordination (establishing data protection standards) alongside asymmetric extraction (firms still extract far more than consent enables). Mobile exit because regulators can escalate enforcement, ban services, or impose structural remedies."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Alternative Data Marketplace",
+      "comment": "PERSPECTIVE 5: ALTERNATIVE DATA MARKETPLACE (PITON) \u2014 Data brokers and secondary markets once thrived on selling user data (Acxiom, Equifax, data append services). This ecosystem is now largely degraded: GDPR and equivalent regulations have reduced data availability, consent frameworks limit onward sale, and the primary extraction now happens at the source (platforms retain data rather than reselling it). The marketplace persists through inertia and niche use cases but has lost primary function. Theater ratio is high because the secondary market maintains the pretense of 'data trading' while platforms have monopolized the extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Data Governance Alternative",
+      "comment": "PERSPECTIVE 6: DATA GOVERNANCE ALTERNATIVE (SCAFFOLD) \u2014 Organized coalitions (cooperative data trusts, personal data pod initiatives, open data standards) are building alternative infrastructures where data subjects control their own information flows. Low effective extraction because the coalition has agency and sees a clear sunset: as cooperative data models mature and interoperability standards proliferate, the centralized extraction regime loses its structural necessity. Suppression is declining as alternatives proliferate. Sunset logic applies: the constraint degrades as decentralized architectures mature (estimated 10-20 year horizon)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalized View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURALIZED VIEW (MOUNTAIN) \u2014 From a civilizational timescale, some data extraction appears inevitable: platforms must gather signals to improve services, security requires behavioral anomaly detection, and personalization requires understanding user preferences. This perspective risks naturalizing what is actually a contingent design choice: the current extraction regime reflects specific architectural decisions (centralized data storage, opaque algorithms, asymmetric ownership) not immutable requirements. The engine's false summit detector will flag this perspective as a naturalization of institutional choices presented as natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "consent_fiction_threshold",
+      "question": "At what threshold of incomprehensibility do terms of service constitute non-consensual extraction rather than informed consent?",
+      "resolution_mechanism": "Readability analysis of privacy policies (Flesch-Kincaid grade level, comprehension testing with representative users); correlation between stated consent and actual reading/understanding behavior",
+      "impact": "If threshold is low (grade 8): most platform ToS are non-consensual. If threshold is high (grade 16+): platforms can claim validity of consent by compliance. Determines whether extraction is trap (non-consensual) or rope (coordinated).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for distinguishing consensual from non-consensual data extraction via terms of service"
+    },
+    {
+      "id": "alternatives_sufficiency",
+      "question": "Do alternative platforms (encrypted messaging, federated social networks, cooperative data models) provide functionally equivalent services that enable exit without material loss?",
+      "resolution_mechanism": "User adoption rates and retention rates for alternatives; feature parity analysis; network effects measurement (does value of alternative increase with adoption?); cost-benefit analysis for users switching platforms",
+      "impact": "If alternatives are sufficient: exit option is constrained not trapped, classification downgrades from snare to tangled_rope. If alternatives are insufficient: trapped classification confirmed, extraction severity is high.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether functional alternatives exist and enable exit without material loss"
+    },
+    {
+      "id": "data_monetization_necessity",
+      "question": "Is the current level and scope of data extraction necessary for platform service delivery and sustainable business models, or does it exceed functional requirements?",
+      "resolution_mechanism": "Engineering analysis of data minimization: which data attributes are necessary for service function vs. which are collected purely for monetization? Comparison with minimal-data platform designs that deliver equivalent service (e.g., DuckDuckGo vs. Google). Cost allocation: what percentage of platform revenue requires data extraction beyond service delivery?",
+      "impact": "If extraction exceeds service requirements: confirms snare/extraction classification. If extraction is necessary: reframes as coordination cost, potentially changing perspectives from snare to rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Necessity and scope of data extraction relative to service delivery requirements"
+    },
+    {
+      "id": "suppression_internalization_depth",
+      "question": "How much of the measured suppression (0.72) is structural (technical barriers, legal frameworks, economic dependency) versus internalized (users believe surveillance is inevitable or deserved)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: if users maintain secrecy-conscious behaviors after leaving extractive platforms, suppression persists (internalized). If behavior changes radically (oversharing on non-extractive platforms), suppression was primarily structural. Qualitative interviews on perceived inevitability of data extraction.",
+      "impact": "If internalized: effective suppression is higher than structural measure suggests \u2014 users carry the extraction with them. If structural: suppression is purely technical/legal and declines when barriers are removed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which suppression is structural vs. internalized in user cognition"
+    },
+    {
+      "id": "regulatory_capture_depth",
+      "question": "To what extent has the regulatory regime (perspective 4) been captured by platform operators, weakening its coordination function and leaving asymmetric extraction intact?",
+      "resolution_mechanism": "Analysis of regulatory outcomes: enforcement patterns (which violations are penalized vs. ignored?), penalty severity (are fines large enough to change behavior?), regulatory timeline (can compliance occur faster than regulatory cycles?). Revolving door analysis (regulator-to-industry movement). Compliance theater measurement (do actual data practices change after regulatory action?).",
+      "impact": "If capture is high: regulatory perspective is overstating coordination and understating continued extraction. Tangled rope classification becomes closer to snare. If capture is low: regulatory regime is genuine check on extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree of regulatory capture within data protection frameworks"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Data extraction regimes constitute the structural mechanism by which digital platforms capture, process, and monetize information about user behavior, preferences, and identity. The constraint operates at multiple scales: individual users generate granular behavioral data; platforms aggregate and derive inferences at population scale; advertisers and data aggregators purchase access to derived insights; information commons are contaminated by surveillance asymmetries. The regime is enforced through terms of service (legal), technical architecture (code as law), and market concentration (economic). The extraction is masked by claims of inevitable technological necessity, user consent narratives, and free-service reciprocity. This constraint demonstrates why the same structural phenomenon classifies as snare from the user perspective (trapped, no real exit, extraction is invisible and non-negotiable), as rope from the platform perspective (coordination function is genuine: recommendation requires signals), as tangled rope from the regulatory perspective (genuine coordination attempt alongside continued extraction), and as scaffold from the alternative governance perspective (emerging exit pathways with sunset logic). The theater ratio (0.58, rising to 0.58 by interval end) reflects that data extraction is substantially masked: users see interface theater (privacy controls, opt-out buttons) that give appearance of choice while real extraction continues at infrastructure scale.",
+    "key_agents": [
+      "Data Subjects: Primary victims (powerless/trapped) \u2014 mandatory extraction via service dependency; no viable exit without social/economic harm",
+      "Privacy-Conscious Users: Secondary victims (moderate/constrained) \u2014 can employ privacy tools and exit at high personal cost; constrained rather than fully trapped",
+      "Platform Operators: Primary beneficiaries (institutional/arbitrage) \u2014 extract massive value from user data signals; experience regime as coordination mechanism",
+      "Advertising Networks: Secondary beneficiaries (institutional/arbitrage) \u2014 purchase derived data products; depend on platform extraction",
+      "Regulatory Regimes: Organized actors (organized/mobile) \u2014 attempt to impose coordination constraints (GDPR, FTC enforcement) with partial success; navigate regulatory arbitrage by platforms",
+      "Alternative Data Governance: Organized coalitions (organized/constrained) \u2014 building cooperative data trusts, federated platforms, personal data pods; seeing decentralization as sunset pathway",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent architectural choices as inevitable technical requirements"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The current regime extracts substantial value from users who receive service access but derive no benefit from their own data monetization. The extraction is not maximized (0.95) because users retain some ability to migrate (slow, costly, but possible) and platforms do invest some portion of extracted value back into service improvements. The rising extractiveness trajectory (0.45 \u2192 0.68 over interval) reflects accumulation: as platforms build larger datasets, behavioral inferences become more accurate and more valuable, enabling higher-margin extraction. Suppression (0.72): High. Structural suppression includes technical opacity (algorithms are proprietary black boxes), informational suppression (terms of service are intentionally incomprehensible), legal suppression (data ownership structures favor platforms), and economic suppression (switching costs are high, network effects lock users in). Internalized suppression is also significant: users have absorbed narratives that 'privacy is dead,' surveillance is inevitable, and data is the price of digital participation. Theater ratio (0.58, rising): Moderate-high. Significant performative activity includes privacy control interfaces (that do not prevent the extraction they appear to control), consent dialogs (that are theatrically required but practically non-negotiable), and transparency disclosures (written in legalese, functionally opaque). However, some genuine coordination theater exists: platforms do use data for service improvement, not purely for monetization. The rising theater trajectory reflects increasing sophistication of consent theater and privacy theater as regulatory pressure increases.",
+    "directionality_logic": "Directionality (d) flows from each agent's structural position relative to the extraction. Data subjects are victims with trapped exit (no real alternative): d \u2248 0.95, f(d) \u2248 1.42 (maximum experienced extraction). Privacy-conscious users are victims with constrained exit (can leave at high cost): d \u2248 0.75, f(d) \u2248 1.15 (high extraction). Platform operators are beneficiaries with arbitrage exit (can diversify data collection strategies): d \u2248 0.05, f(d) \u2248 -0.12 (effective subsidy \u2014 constraint runs toward them). Regulatory regimes are mixed \u2014 nominally organized monitors but partly captured by platforms they regulate: d \u2248 0.50, f(d) \u2248 0.65 (balanced). Alternative governance coalitions have mobile exit (can build competitive systems): d \u2248 0.45, f(d) \u2248 0.50 (moderate extraction). The platform operator's perspective applies negative f(d) because they are structured beneficiaries \u2014 the extraction flows TO them, not FROM them. Their perspective is rope (or coordination) precisely because they experience the constraint as subsidizing their operations.",
+    "perspectival_gap": "This constraint produces stark perspectival divergence. Data subjects see an inescapable snare: no viable exit, extraction is non-negotiable, suppression is total (structural and internalized). Platform operators see a rope: the constraint solves the coordination problem of understanding user needs; they derive massive benefit; they experience only the service-improvement function. Regulatory regimes see a tangled rope: they acknowledge genuine coordination (data improves service) while attempting to impose extraction limits (consent requirements, data minimization, user rights), but enforcement is partial. Alternative governance sees a scaffold: the constraint is temporary, emerging architectures (federated identity, user-controlled data stores, cooperative platforms) will eventually replace centralized extraction. The piton perspective reveals degradation: secondary data markets that once thrived (Acxiom, data brokers) are atrophying because primary extraction now happens at platform scale; the secondary market persists through inertia. The analytical observer risks a false summit: naturalizing extraction as inevitable requirement of digital service, when the current regime actually reflects specific architectural and business model choices.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating that snare and rope are both structurally correct for their respective observational contexts. The user (snare) and platform (rope) are measuring the same constraint from positions of opposite structural power. The conflict is not 'which type is true' but 'whose structural position determines the classification.' The snare classification from the user perspective is not false; it accurately describes the user's structural reality. The rope classification from the platform perspective is not false; it accurately describes the platform's structural reality. The mandatrophy dissolves when the presheaf structure is recognized: classification is perspectival, not objective. The regulatory and alternative governance perspectives add important signal: they reveal that the snare-vs-rope gap can be reduced through intervention (regulation, architecture redesign) but not eliminated without fundamentally changing platform business models. The piton perspective indicates which coordination mechanisms (secondary data markets) have already degraded under regulatory pressure. The analytical mountain perspective is false \u2014 the current extraction architecture is contingent, not inevitable."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.25
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_recommendation_bias",
+      "surveillance_capitalism",
+      "consent_framework_theater",
+      "personal_data_commodification"
+    ],
+    "dual_formulation_note": "Data extraction regimes decompose into multiple structurally distinct constraints. This story covers the primary extraction mechanism (user data collection and monetization). Downstream constraints include algorithmic bias (how extracted data is used), consent theater (the performative extraction authorization), and commodification (how data is priced and traded). Each has distinct epsilon values reflecting different verification bottlenecks. All are linked via network.affects_constraints to enable contamination propagation analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.72
+    }
+  ]
+}

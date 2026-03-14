@@ -1,0 +1,230 @@
+{
+  "header": {
+    "constraint_id": "hong_kong_electoral_system_constraint",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hkec"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Hong Kong Electoral System Constraint",
+    "topic_domain": "political_governance/electoral_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "beijing_central_government",
+      "pro_beijing_political_parties",
+      "hong_kong_establishment_elites"
+    ],
+    "victims": [
+      "pro_democracy_movement",
+      "independent_candidates",
+      "hong_kong_electorate"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Pro-Democracy Activist",
+      "comment": "PERSPECTIVE 1: PRO-DEMOCRACY ACTIVIST (SNARE) \u2014 Trapped within Hong Kong's constrained electoral system. Cannot exit political participation without abandoning advocacy. Bears maximum extraction: candidacy screening, disqualification rules, restricted political expression, surveillance. No effective alternative for effecting political change."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Ordinary Voter",
+      "comment": "PERSPECTIVE 2: ORDINARY VOTER (SNARE) \u2014 Trapped in a system where voting options are pre-filtered. Cannot vote for banned parties or disqualified candidates. Participation appears free but is structurally constrained. Bears extraction through reduced meaningful choice and suppressed political voice."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "Beijing Central Government",
+      "comment": "PERSPECTIVE 3: BEIJING CENTRAL GOVERNMENT (ROPE) \u2014 Experiences the constraint as coordination mechanism. The electoral system coordinates Hong Kong governance with mainland preferences. Benefits from extraction: maintains political control while preserving appearance of local autonomy. Has exit option: can modify the system at will. Net beneficiary with arbitrage capacity."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "Pro-Beijing Political Establishment",
+      "comment": "PERSPECTIVE 4: PRO-BEIJING POLITICAL ESTABLISHMENT (ROPE) \u2014 Experiences the constraint as coordination beneficial to their interests. System guarantees their electoral dominance. Benefits from the structure while maintaining legitimacy through electoral theater. Can shift positions within the system with relatively low cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Civil Society Organizations",
+      "comment": "PERSPECTIVE 5: CIVIL SOCIETY ORGANIZATIONS (TANGLED ROPE) \u2014 Experience both coordination and extraction. The system enables civic participation through voting and some forms of engagement, but constrains advocacy, organizing, and political expression. Benefits from electoral legitimacy while constrained by regulations and surveillance. Moderate agency but significant costs to more radical political action."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Electoral Commission",
+      "comment": "PERSPECTIVE 6: ELECTORAL COMMISSION (PITON) \u2014 Manages performative electoral process. Conducts technical operations (counting votes, managing polling) while applying political screening criteria determined externally. Theater ratio high because the legitimacy function (free elections) is decoupled from the actual governance function (ensuring pro-Beijing outcomes). The institution maintains rituals divorced from substantive outcomes."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "International Observer",
+      "comment": "PERSPECTIVE 7: INTERNATIONAL OBSERVER (SNARE) \u2014 From global/analytical context, the constraint is pure extraction masked by democratic forms. Electoral system extracts political control from Hong Kong society while maintaining the apparatus of electoral legitimacy. No genuine competing perspectives exist within the system's structure \u2014 all meaningful paths lead to same outcome. Classification is invariant across time horizons when exit options are considered."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "electoral_legitimacy_vs_control",
+      "question": "Is the Hong Kong electoral system primarily designed for political control (snare) or for coordination between Beijing and local interests (rope)?",
+      "resolution_mechanism": "Historical analysis of decision-making: do outcomes consistently favor Beijing's preferences across diverse policy domains? Does the system adapt to local preferences or enforce predetermined results?",
+      "impact": "If control-oriented: classification remains Snare across most perspectives. If coordination-oriented: primary beneficiary perspectives shift toward Rope. The distinction determines whether suppression is structural or contingent on Beijing's preferences.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether system is designed for control or coordination"
+    },
+    {
+      "id": "candidacy_screening_mechanism",
+      "question": "Are candidacy screening rules (Article 44 of electoral law, 'love the country' oath) administrative efficiency measures or political veto mechanisms?",
+      "resolution_mechanism": "Examination of screening criteria application: are they applied consistently across political orientations? Do disqualifications follow predictable patterns relative to Beijing preferences? Can independent candidates meet the criteria?",
+      "impact": "If administrative: screening is a coordination cost (shifting classification toward Rope). If political veto: screening is pure extraction mechanism (maintaining Snare). Current evidence suggests political veto, but the ambiguity allows system defenders to maintain coordination framing.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether candidacy screening is administrative or political filtering"
+    },
+    {
+      "id": "identity_locked_activist_exit",
+      "question": "Do pro-democracy activists remain trapped in the electoral system due to structural barriers or due to identity fusion with political struggle?",
+      "resolution_mechanism": "Behavioral analysis: do activists maintain engagement with system despite personal cost? Would they accept alternative political channels (e.g., external advocacy, migration)? Is continued participation identity-constituting?",
+      "impact": "If identity-locked: exit option should be reclassified from 'trapped' to 'identity_locked', changing biographical perspective classification from Snare to Rope. This reveals cognitive capture by the legitimacy frame. If trapped: current classification stands \u2014 structural barriers prevent exit.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether activist constraint is structural entrapment or identity-based cognitive lock"
+    },
+    {
+      "id": "theater_ratio_accuracy",
+      "question": "What proportion of electoral activity is performative vs functional? Are public hearings, debate events, and counting procedures genuine civic participation or theatrical legitimacy theater?",
+      "resolution_mechanism": "Content analysis of electoral events: do they influence outcomes? Do vote counts matter for policy outcomes? Comparison with pre-determined governance structures that bypass electoral input.",
+      "impact": "If theater_ratio > 0.75: classification shifts toward Piton (degraded institution). If theater_ratio < 0.55: classification shifts toward Tangled Rope (genuine but constrained coordination). Current estimate (0.65) reflects mixed evidence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of electoral activity that is performative vs functional"
+    },
+    {
+      "id": "voter_suppression_mechanism",
+      "question": "Does reduced voter turnout reflect voter apathy from degraded system (Piton) or active suppression preventing participation?",
+      "resolution_mechanism": "Turnout trend analysis: declining participation due to disillusionment or active barriers? Comparison with pre-2020 (higher turnout) to post-NSL period. Exit polling on decision to vote/abstain.",
+      "impact": "If apathy: classification shifts toward Piton with lower suppression metric. If active suppression: classification remains Snare with high suppression. Suppression value drives \u03c7 calculation directly \u2014 ambiguity here affects classification confidence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether reduced turnout reflects apathy or active suppression"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "commentary": {
+    "narrative_context": "The Hong Kong electoral system constraint operates as a structural mechanism for maintaining Beijing's political control while preserving the institutional appearance of democratic governance. The system has evolved from 1997 (initial handover with broader electoral representation) through 2019 (pro-democracy landslide disrupting expected outcomes) to 2020-2024 (National Security Law and electoral reforms dramatically restricting candidate eligibility and political expression). The constraint manifests through multiple reinforcing mechanisms: candidate disqualification (Article 44 oath compliance testing), district boundary gerrymandering, functional constituency seats weighted toward business interests, and appointment mechanisms that bypass electoral will. The extractiveness has increased over the interval as Beijing has shifted from coordination framing ('One Country Two Systems') toward explicit control mechanisms. Theater ratio has similarly increased as the system has become less responsive to electoral outcomes, forcing greater reliance on legitimacy theater to maintain institutional appearance.",
+    "key_agents": [
+      "Beijing Central Government: Primary beneficiary (institutional/arbitrage) \u2014 maintains political control over Hong Kong while preserving global legitimacy claims of autonomy",
+      "Pro-Democracy Movement: Primary victim (powerless/trapped) \u2014 cannot exit political struggle; faces disqualification, surveillance, legal jeopardy",
+      "Hong Kong Electorate: Primary victim (powerless/trapped) \u2014 voting options pre-filtered; meaningful choice eliminated",
+      "Pro-Beijing Political Parties: Secondary beneficiary (powerful/mobile) \u2014 guaranteed electoral dominance despite popular opposition",
+      "Hong Kong Establishment Elites: Secondary beneficiary (powerful/arbitrage) \u2014 wealth and status preserved through functional constituencies and appointment mechanisms",
+      "Electoral Commission: Institutional actor (institutional/arbitrage) \u2014 manages legitimacy theater while implementing political screening externally determined",
+      "Civil Society Organizations: Mixed status (organized/constrained) \u2014 can mobilize voters but face restrictions on political speech and organizing",
+      "International Democratic Community: External observer (analytical/analytical) \u2014 sees structural mismatch between electoral form and authoritarian substance"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The system extracts political voice from Hong Kong society to serve Beijing's control objectives. The value reflects that extraction is not total (some voting still occurs, some dissent remains visible) but is extensive and systematic. The trajectory (0.35\u21920.68 over 14-year interval) shows escalation from coordination framing toward explicit control extraction as pro-democracy movements threatened outcomes. Suppression (0.72): High. Multiple mechanisms constrain political participation: candidacy screening (eliminating pro-independence candidates), NSL prosecutions (silencing opposition voices), surveillance infrastructure, restricted political speech, and reduced effective choice. Suppression is structural and institutionalized through law, not merely contingent on enforcement decisions. Theater ratio (0.65): Moderate-high. Electoral procedures are conducted (voting booths, ballot counting, official announcements) creating appearance of democratic process, but outcomes are predetermined by screening and control mechanisms. The theater has increased as actual electoral responsiveness has declined \u2014 the legitimacy apparatus must compensate for reduced substantive democratic function.",
+    "perspectival_gap": "The constraint's key diagnostic feature is the complete absence of beneficiary perspectives perceiving extraction costs. In genuine Tangled Rope constraints, beneficiaries acknowledge real coordination burdens they bear. In Ropes, beneficiaries experience both coordination benefits and modest distribution costs. Here: Beijing/establishment perspectives report only benefits with no costs. This asymmetry is the hallmark of Snare-classified constraints \u2014 the extraction mechanism is asymmetric and the beneficiaries deny or minimize their extraction gains.",
+    "directionality_logic": "Directionality values are derived from structural position in the extraction flow. Beijing (institutional/arbitrage) receives extraction \u2014 low d \u2248 0.10, resulting in negative f(d) \u2248 -0.08. They experience the system as beneficial coordination. Pro-Beijing elites (powerful/mobile) receive extraction benefits with minor costs \u2014 moderate d \u2248 0.35, f(d) \u2248 0.35. They experience mixed but favorable relationship. Pro-democracy activists (powerless/trapped) bear maximum extraction \u2014 high d \u2248 0.95, f(d) \u2248 1.42. They experience maximum coercion. Ordinary voters (powerless/trapped) similarly bear extraction \u2014 d \u2248 0.92, f(d) \u2248 1.35. Civil society (organized/constrained) experience intermediate extraction \u2014 d \u2248 0.65, f(d) \u2248 1.00. The derivation is transparent: beneficiaries get low d (extraction toward them = negative experience), victims get high d (extraction from them = high experience). The structure is not ambiguous \u2014 the flow is unidirectional from powerless to institutional beneficiaries.",
+    "mandatrophy_analysis": "Mandatrophy is resolved by recognizing that the Hong Kong electoral system is NOT a coordination mechanism that has degraded or become extractive. It was designed as a control mechanism from inception (1997 Joint Declaration framed democracy narrowly) and has become progressively more explicit about its control function. The constraint is not a rope that became a snare \u2014 it is a snare masquerading as rope. The 'democracy' framing provides the mandatrophy cover: system defenders claim it IS coordination (elections DO occur, votes ARE counted) while evidence shows it is pure extraction (outcomes predetermined, dissent eliminated, choice illusory). The resolution is structural not reframing: the system functions as designed (extracting Hong Kong autonomy to serve Beijing) but cannot admit this function publicly. Suppression > 0.70 and extractiveness > 0.66 confirm the Snare classification against mandatrophy claims. The system has never been a legitimate coordination mechanism \u2014 calling it such is false naturalization, not tragic degradation."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "hong_kong_national_security_law_constraint",
+      "hong_kong_press_freedom_constraint",
+      "hong_kong_civil_society_constraint"
+    ],
+    "dual_formulation_note": "Electoral system constraint is upstream of NSL implementation, press freedom restrictions, and civil society constraints. Electoral mechanism is the primary control architecture; NSL and speech restrictions are enforcement instruments supporting electoral control. The three downstream constraints have higher extractiveness values reflecting more specialized targeting (speech vs voting vs organizing), but all derive structural leverage from the electoral system's foundation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

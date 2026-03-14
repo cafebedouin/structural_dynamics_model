@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "institutional_legitimacy_deficit",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "legit"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Institutional Legitimacy Deficit",
+    "topic_domain": "institutional/political/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_power_holders",
+      "institutional_administrators"
+    ],
+    "victims": [
+      "excluded_populations",
+      "institutional_trust"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Excluded Populations",
+      "comment": "PERSPECTIVE 1: EXCLUDED POPULATIONS (SNARE) \u2014 Populations systematically excluded from meaningful participation in institutional decision-making face extraction with minimal coordination benefit. They cannot exit the institutional system without bearing severe costs (loss of services, legal penalties, social isolation). The constraint operates through deliberate suppression of alternative pathways and narrative denial of the exclusion itself. Maximum experienced extraction from those with no structural voice."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Mid-Level Institutional Participants",
+      "comment": "PERSPECTIVE 2: MID-LEVEL PARTICIPANTS (TANGLED ROPE) \u2014 Career professionals and community leaders within institutions face genuine coordination needs (coordinating resources, maintaining service delivery) but also experience asymmetric extraction through opaque decision-making and manufactured consent. They have some agency and access to information, but exit costs are high (career damage, loss of status). Experiences both the coordination function and the extraction mechanism."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Incumbent Power Holders",
+      "comment": "PERSPECTIVE 3: INCUMBENT POWER HOLDERS (ROPE) \u2014 Institutional leadership experiences the legitimacy constraint primarily as a coordination mechanism: maintaining consistency in rules, messaging, and authority structures. They have high exit options (can relocate, restructure, capture alternative institutions). The constraint secures their position without appearing coercive \u2014 legitimacy as cover for authority. Net beneficiary position with maximal agency."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Accountability Movements and Reform Coalitions",
+      "comment": "PERSPECTIVE 4: REFORM COALITIONS (SCAFFOLD) \u2014 Organized reform movements, transparency advocates, and accountability-focused coalitions view the legitimacy deficit as a temporary institutional failure with a sunset clause. Participatory governance, open-data mandates, and truth commissions represent alternative pathways. The scaffold classification reflects the coalition's agency and clarity of exit mechanism: institutional design can shift from opaque to transparent through deliberate reform. Theater is elevated because reform rhetoric often substitutes for substantive change, but the coalition's mobilization provides genuine agency."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Procedural Legitimacy Rituals",
+      "comment": "PERSPECTIVE 5: PROCEDURAL RITUALS (PITON) \u2014 Public consultations, advisory boards, and stakeholder engagement processes persist as institutional theater despite their well-documented failure to shift power dynamics. These procedures maintain appearance of legitimacy while preserving the actual decision-making structure unchanged. Theater ratio high because the functional coordination value has atrophied; the rituals persist through institutional inertia and because alternatives aren't fully established. The constraint is maintained by ceremonial repetition, not by structural necessity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalized View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some legitimacy deficit is claimed to be inherent to complex governance: perfect transparency is impossible, complete participation is impractical, power asymmetries are inevitable. This perspective naturalizes the deficit as an immutable feature of human organization. However, comparative institutional analysis and historical shifts in legitimacy mechanisms reveal this as false naturalization \u2014 legitimacy deficits vary dramatically across institutional types and time periods. The mountain classification indicates the risk of treating contingent power arrangements as laws of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legitimacy_deficit_measurement",
+      "question": "What observable distinguishes a genuine institutional legitimacy deficit from the normal gap between ideal and actual governance?",
+      "resolution_mechanism": "Comparative analysis of institutions with high public trust vs. low public trust; tracking whether procedural changes correlate with trust recovery or remain cosmetic",
+      "impact": "If legitimacy deficit is universal: constraint reclassifies from tangled_rope toward mountain. If deficit is concentrated in specific institutional types: constraint decomposes into separate stories per domain.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "How to distinguish actual legitimacy deficit from normal governance friction"
+    },
+    {
+      "id": "participation_capture_vs_genuine",
+      "question": "Does formal inclusion of excluded populations in institutional processes constitute genuine power-sharing or merely absorb dissent through participation theater?",
+      "resolution_mechanism": "Analysis of decision outcomes: do policies shift when excluded groups participate in consultation vs. when they are excluded? Does participation reduce or merely channel protest?",
+      "impact": "If genuine: some legitimacy deficit resolves through expanded participation (tangled_rope \u2192 rope). If theater: expanded participation deepens the snare by legitimating decisions that excluded groups had no actual power over.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether formal participation constitutes genuine power-sharing"
+    },
+    {
+      "id": "institutional_exit_feasibility",
+      "question": "Can excluded populations realistically exit or alternative-institution around the constraint (local governance, mutual aid, exit to other jurisdictions), or is the trapped classification accurate?",
+      "resolution_mechanism": "Historical analysis of successful institutional alternatives; cost-benefit analysis of exit vs. participation in contested institutions",
+      "impact": "If exit feasible: powerless agents reclassify toward constrained or mobile; snare classification weakens. If exit systematically prevented: snare classification confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether powerless agents have realistic institutional exit options"
+    },
+    {
+      "id": "reform_sunset_actualization",
+      "question": "Do reform movements and transparency initiatives actually shift institutional decision-making structures, or do they degrade into piton-style rituals?",
+      "resolution_mechanism": "Longitudinal analysis of reform initiatives: power distribution before/after reforms; tracking whether procedural changes outlast initial reform period",
+      "impact": "If reforms actualize: scaffold classification valid \u2014 legitimacy deficit has real sunset mechanism. If reforms degrade: scaffold is aspirational; the constraint reclassifies toward piton.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether institutional reforms produce sustained power-sharing or degrade to ritual"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Institutional legitimacy deficit describes the structural gap between institutional claims to democratic authority and the actual distribution of power within decision-making processes. This constraint operates across all institutional contexts \u2014 governments, corporations, universities, NGOs \u2014 wherever formal procedures and rhetorical commitments to participation coexist with concentrated power. The deficit creates extractive dynamics: excluded populations bear the costs of institutional decisions while having no meaningful voice in them, yet the institution's legitimating narrative claims to represent 'the public interest' or 'all stakeholders.' The constraint exhibits all six DR types depending on observer position: it appears as snare (powerless agents trapped with no exit), tangled rope (mid-level participants experiencing mixed coordination and extraction), rope (incumbent leaders securing power through legitimacy mechanisms), scaffold (reform coalitions working to expand actual participation), piton (procedural rituals maintaining appearance of legitimacy through inertia), and false-naturalized mountain (treating power asymmetries as inevitable). The theater ratio trend (0.42 \u2192 0.68) reflects the layering of legitimacy mechanisms: as direct power becomes more visible and contested, institutions respond by multiplying procedural theaters (public consultations, advisory boards, stakeholder engagement, equity task forces) whose primary function is to absorb dissent while preserving actual decision-making structures. The extractiveness trend (0.35 \u2192 0.58) reflects the escalation of the constraint: initial legitimacy deficits create excluded populations; excluded populations mobilize for voice; institutions respond with procedural expansion rather than power-sharing; the gap between form and substance grows wider, requiring more theater to maintain appearance; extraction increases as the energy cost of manufacturing consent rises.",
+    "key_agents": [
+      "Excluded Populations: Primary victims (powerless/trapped) \u2014 bear costs of institutional decisions with no meaningful decision-making power; systematically prevented from exiting or voicing dissent",
+      "Incumbent Power Holders: Primary beneficiaries (institutional/arbitrage) \u2014 maintain power through legitimacy mechanisms; have high exit options and ability to restructure institutions",
+      "Mid-Level Institutional Participants: Secondary actors (moderate/constrained) \u2014 face coordination needs (service delivery, resource allocation) alongside participation in power structures they don't control; career and status dependent on institutional continuity",
+      "Reform Coalitions and Accountability Movements: Organized actors (organized/mobile) \u2014 mobilize to expand actual participation and transparency; see legitimacy deficit as a solvable institutional design problem with clear sunset mechanisms",
+      "Procedural Legitimacy Rituals: Institutional mechanisms (institutional/constrained) \u2014 public consultations, advisory boards, stakeholder engagement processes that persist through inertia despite documented failure to shift power",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent power arrangements as inevitable features of governance"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts significant benefit for incumbent power holders through concentrated authority while imposing costs on excluded populations. However, extraction is not maximal because: (a) incumbents must maintain legitimacy performance, which requires some responsiveness to excluded populations; (b) reform coalitions have successfully shifted some domains toward greater transparency; (c) excluded populations retain some agency through protest and alternative institutions. Suppression (0.65): Moderate-high. The constraint operates through multiple suppression mechanisms: structural barriers to participation (time, expertise, access), social penalties for dissent, narrative denial of exclusion, and co-option of dissenting voices into procedural theaters. The suppression is not total \u2014 information about power asymmetries is available, organizing is possible \u2014 but the costs of challenging the system are high. Theater ratio (0.68): High. Institutional legitimacy increasingly relies on procedural theater rather than actual power-sharing. Public consultations, diversity initiatives, stakeholder committees, and participatory processes proliferate as the legitimacy deficit deepens \u2014 each new procedure is presented as addressing the problem, while actual decision-making structures remain concentrated. Theater rises over the interval as institutions respond to visibility of power asymmetries by multiplying appearance-management mechanisms.",
+    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon \u2014 institutional decision-making concentrated in the hands of power holders while requiring rhetorical commitment to serving 'the public' \u2014 classifies as six different types depending on structural position. The perspectival gap reveals that the institution's legitimacy claim is doing critical work: it allows incumbent power holders to experience the concentration of authority as coordination (rope), while excluded populations experience it as extraction (snare). The gap is not about disagreement on facts \u2014 both positions observe the same power asymmetry \u2014 but about structural position relative to the extraction mechanism. The reform coalition sees the gap as solvable (scaffold), while the procedural ritual sees it as managed through theater (piton). The analytical observer risks falsely naturalizing the structure as inevitable.",
+    "directionality_logic": "Directionality (d) measures the structural position of each agent in the extraction flow. Excluded populations with no meaningful exit (trapped) and positioned as victims of the constraint derive high d (0.92+), producing maximum f(d) \u2248 1.42. Incumbent power holders positioned as beneficiaries with arbitrage exit options derive low d (~0.05), producing negative f(d) \u2248 -0.12. Mid-level participants with constrained exit and mixed structural position derive moderate d (~0.55), producing moderate f(d) \u2248 0.75. Reform coalitions with mobile exit and organized power derive lower-moderate d (~0.40), producing f(d) \u2248 0.40. The procedural rituals (piton classification) are not agents in the derivation chain \u2014 they are mechanisms the institution uses to manage the legitimacy deficit. Their classification reflects theater_ratio exceeding 0.70 and loss of primary function, not through directionality calculation. The analytical observer with analytical exit derives moderate d (~0.72), producing f(d) \u2248 1.15.",
+    "mandatrophy_analysis": "RESOLVED: This constraint resolves the mandatrophy by clarifying that institutional legitimacy deficits are structurally tangled_rope at the base level (genuine coordination functions coexist with asymmetric extraction), but appear as different types from different structural positions. The snare perspective captures the victim-side reality; the rope perspective captures the beneficiary-side reality; the scaffold captures the reform possibility; the piton captures the institutional decay pattern. None of these is 'the real type' \u2014 each is a legitimate reading of the same constraint structure from a different position. The analytical observer's mountain classification is false naturalization (the deficit is not inherent to governance, as shown by historical variation in institutional legitimacy). The mandatrophy is resolved by the presheaf structure: the constraint's true classification IS the full map of perspectives showing how power positions determine institutional experience."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "democratic_deficit",
+      "regulatory_capture",
+      "institutional_inertia"
+    ]
+  },
+  "directionality_overrides": []
+}

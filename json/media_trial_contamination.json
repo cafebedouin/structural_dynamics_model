@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "media_trial_contamination",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mediatrial"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Media Trial Contamination of Judicial Fairness",
+    "topic_domain": "legal/media/institutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "media_organizations",
+      "prosecution_agencies"
+    ],
+    "victims": [
+      "defendant_fair_trial_right",
+      "judicial_impartiality",
+      "jury_epistemic_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Defendant",
+      "comment": "PERSPECTIVE 1: THE DEFENDANT (SNARE) \u2014 Trapped by judicial geography and unavoidable media exposure. Cannot exit the constraint without forfeiting trial. Bears maximum extraction: narrative prejudgment, reputation destruction, and loss of presumption of innocence. No alternatives, no exit routes. Maximum experienced extractiveness."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Jury",
+      "comment": "PERSPECTIVE 2: THE JURY (SNARE) \u2014 Conscripted and trapped. Subject to massive pretrial publicity, social media contamination, and community pressure. Cannot exit despite cognitive contamination. Suppressed by the media narrative and unable to unhear prejudicial information. Experiences the constraint as extraction of their epistemic integrity \u2014 forced to participate in a trial whose fairness has been undermined."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Prosecution Agencies",
+      "comment": "PERSPECTIVE 3: PROSECUTION AGENCIES (TANGLED ROPE) \u2014 Constrained by media dynamics but also benefit from narrative advantage. Media coverage can amplify public perception of prosecution strength. Genuine coordination function exists: media coverage communicates case details to public. But asymmetric extraction emerges: prosecution controls information flow to media, shaping narratives before defense can respond. Active enforcement of narrative control required. Suppression operates on media access and timing."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Media Organizations",
+      "comment": "PERSPECTIVE 4: MEDIA ORGANIZATIONS (TANGLED ROPE) \u2014 Constrained by competitive pressure to maximize engagement and first-to-publish advantage. Genuine coordination function: communicating case information to the public enables democratic oversight of trials. But extraction mechanism emerges: sensationalism, narrative framing, and selective emphasis contaminate rather than inform. Active enforcement through editorial decisions required. Beneficiaries of attention economy incentives despite constraints from defamation law."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Judicial System",
+      "comment": "PERSPECTIVE 5: THE JUDICIAL SYSTEM (ROPE) \u2014 Institutional actor with significant exit options: judges can declare mistrial, change venue, impose gag orders, manage jury selection. Sees media trial contamination as a coordination problem requiring institutional management. The constraint is a coordination mechanism for public accountability, but judges have tools to enforce boundaries. Can arbitrage between trial publicity and fairness through procedural mechanisms."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "First Amendment Doctrine",
+      "comment": "PERSPECTIVE 6: FIRST AMENDMENT DOCTRINE (PITON) \u2014 Maintains a performative commitment to 'free press' and 'fair trial' as compatible values. The doctrine itself has atrophied: empirical research shows media prejudgment affects jury outcomes, yet constitutional law maintains the fiction that jury nullification of media bias is possible. Theater ratio high because doctrine performs neutrality while structural incentives (attention economy, prosecution narrative control) determine outcomes. Maintained through institutional inertia rather than functional effectiveness."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 Risk of naturalizing the constraint as an inevitable feature of democratic justice: 'media coverage is inherent to public trials' or 'jury contamination is inescapable in the information age.' However, structural data contradicts mountain classification \u2014 the constraint exists through institutional design choices (prosecution information control, media business model incentives, jury selection limits) not through physical/logical necessity. Engine will compute false summit, revealing that the 'inevitability' framing naturalizes what are contingent institutional arrangements."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "jury_contamination_measurement",
+      "question": "How can contamination be measured objectively when jury deliberation is private and jurors cannot articulate the sources of their beliefs?",
+      "resolution_mechanism": "Comparison of verdict rates in high-publicity vs low-publicity cases controlling for case strength; mock jury studies; post-verdict juror interviews; change-of-venue analysis showing correlation between media saturation and verdicts",
+      "impact": "If contamination is severe and systematic: snare classification holds across more perspectives. If contamination is marginal or inconsistent: tangled rope classification becomes dominant.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Measurement methodology for jury cognitive contamination"
+    },
+    {
+      "id": "media_prosecution_coordination",
+      "question": "Is media-prosecution narrative alignment the result of: (a) active information control by prosecution, (b) independent media editorial judgment favoring prosecution, or (c) structural incentive alignment that requires no explicit coordination?",
+      "resolution_mechanism": "Leak analysis: tracking information asymmetries between prosecution and defense in media coverage timeline; interviews with prosecutors and journalists about information access; analysis of prosecution press releases vs media framing; comparison of convicted vs acquitted defendant media coverage patterns",
+      "impact": "If active control: prosecution is deliberate beneficiary of extraction. If independent media judgment: media is autonomous beneficiary. If structural incentive alignment: both are beneficiaries of the same extraction mechanism, deepening tangled rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether prosecution-media alignment is active coordination or structural incentive"
+    },
+    {
+      "id": "mistrial_remedy_sufficiency",
+      "question": "Do mistrial declarations and venue changes actually remove contamination or merely reset the clock without addressing underlying structural incentives?",
+      "resolution_mechanism": "Longitudinal study of retrials: comparing first-trial contamination severity vs retrial outcomes in cases with long delays; analysis of whether jury selection voir dire can eliminate media narrative effects; mock jury studies testing remedies",
+      "impact": "If remedies work: judicial exit options are real and rope classification justified. If remedies fail: judicial system lacks genuine exit options and snare classification extends to institutional actors.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether mistrial and venue change remedies eliminate contamination"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is jury suppression of media narratives structural (external information barriers) or internalized (jurors' own belief frameworks shaped by media exposure before trial)?",
+      "resolution_mechanism": "Pre-trial and post-trial juror surveys on media exposure and belief formation; analysis of jurors who claim lack of exposure vs their actual media consumption; intervention studies with media literacy training before jury duty",
+      "impact": "If structural: mistrial and venue change can solve the problem. If internalized: jurors carry contamination regardless of trial environment, and the constraint is categorically more severe.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether jury suppression is structural or internalized"
+    },
+    {
+      "id": "first_amendment_counterfactual",
+      "question": "Would restricting pretrial media coverage (gag orders, restricted access to prosecution information) reduce contamination at the cost of reducing public accountability oversight?",
+      "resolution_mechanism": "Comparative analysis of jurisdictions with strong gag order enforcement vs permissive media access; mock jury studies comparing juror contamination vs perceived fairness across media restriction levels; public opinion surveys on acceptable trade-offs",
+      "impact": "If restriction works without eliminating oversight: piton classification holds (doctrine persists despite better alternatives). If restriction creates accountability gaps: doctrine may be defending a necessary evil rather than an atrophied practice.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Trade-off between contamination reduction and democratic oversight"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Media trial contamination describes the structural constraint in which pretrial media coverage of high-profile cases creates cognitive contamination of judge and jury, undermining the fair trial guarantee. The constraint exhibits genuine coordination function (public right to information about judicial proceedings) alongside extractive mechanisms (prosecution narrative control, media sensationalism, attention economy incentives). The defendant and jury are trapped \u2014 they cannot exit without forfeiting trial rights. Prosecution and media organizations are beneficiaries constrained by legal rules but actively enforcing narrative advantage. The judicial system has theoretical exit options through mistrial and venue change, but these remedies may be insufficient. First Amendment doctrine performs neutrality while structural incentives determine outcomes, making it a piton\u2014maintained through institutional inertia rather than functional effectiveness. The constraint's theater ratio (0.68) reflects that much trial publicity is performative rather than genuinely informative: sensationalism, narrative framing, and selective emphasis replace balanced reporting. The extractiveness value (0.58) reflects moderate but serious contamination of fair trial rights\u2014extraction is substantial but not total, because some cases remain unaffected by media pressure and some mistrial remedies do function.",
+    "key_agents": [
+      "Defendant: Primary victim (powerless/trapped) \u2014 bears reputation destruction, prejudgment, loss of presumption of innocence; cannot exit",
+      "Jury: Primary victim (powerless/trapped) \u2014 conscripted and contaminated; epistemic integrity compromised; cannot unhear prejudicial narratives",
+      "Prosecution Agencies: Primary beneficiary (organized/constrained) \u2014 controls information flow to media; benefits from narrative advantage during pretrial period",
+      "Media Organizations: Institutional beneficiary (institutional/constrained) \u2014 profits from engagement and sensationalism; gains audience through trial coverage; constrained by defamation law and journalistic ethics",
+      "Judicial System: Institutional actor (institutional/arbitrage) \u2014 has theoretical exit options through mistrial, venue change, gag orders; can manage contamination through procedural mechanisms",
+      "First Amendment Doctrine: Institutional framework (institutional/arbitrage) \u2014 maintains fiction that free press and fair trial are compatible; enforces through procedural mechanisms that may not work"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Fair trial contamination is substantial and systematic in high-profile cases, but not universal across all trials. Media coverage intensity varies; jury contamination severity varies by community saturation. The trajectory from 0.35 to 0.58 reflects increasing media penetration and social media amplification over the measured period (likely 10-20 years). Suppression (0.65): Moderate-high. Significant barriers to uncontaminated trial: jurors are conscripted and cannot opt out; information environment is saturated; defendant cannot prevent media coverage; jury selection voir dire has limited effectiveness at eliminating narrative effects. Media narrative suppresses defendant's rebuttal capacity\u2014prosecution speaks first and shapes frame before defense can respond. Theater ratio (0.68): Moderate-high. Trial publicity contains substantial performative elements: media dramatization rather than neutral reporting; prosecution press conferences designed to shape public narrative; defense counterspeech is reactive and less resourced. However, theater is not dominant\u2014genuine information about trials does reach the public, and jury decisions do respond to actual case evidence not just media narratives.",
+    "perspectival_gap": "This constraint demonstrates asymmetric extraction visible only through perspectival multiplicity. From the defendant's viewpoint, the constraint is pure extraction (Snare): no coordination benefit, only cognitive contamination and prejudgment. From prosecution's viewpoint, the constraint is coordination with asymmetric benefit (Tangled Rope): genuine information function (communicating case details) paired with systematic narrative advantage. From media's viewpoint, similar tangled rope: coordination function (public information) with embedded sensationalism incentive. From judicial system's viewpoint, rope: a solvable coordination problem. The perspectival gap reveals what each actor cannot see from their position: defendant cannot see that prosecution benefits structurally from the same media environment; prosecution cannot see that their information control creates epistemic contamination rather than fair trial communication; media cannot see that engagement incentives override accuracy incentives; judicial system cannot see that its remedies may be insufficient against structural incentive misalignment.",
+    "directionality_logic": "Defendant: powerless + trapped \u2192 d \u2248 0.95 \u2192 f(d) \u2248 1.42 \u2192 maximum experienced extractiveness. Cannot exercise agency; bears full cost of narrative contamination. Jury: powerless + trapped \u2192 d \u2248 0.95 \u2192 f(d) \u2248 1.42 \u2192 maximum experienced extractiveness. Conscripted and contaminated; cannot exit. Prosecution: organized + constrained \u2192 d \u2248 0.40 \u2192 f(d) \u2248 0.40 \u2192 moderate extracted benefit. Controls information flow; benefits from narrative advantage; constrained by legal rules preventing direct trial interference. Media: institutional + constrained \u2192 d \u2248 0.35 \u2192 f(d) \u2248 0.30 \u2192 moderate extracted benefit. Profits from engagement; benefits from trial sensationalism; constrained by defamation law and journalistic ethics that are weakly enforced. Judicial system: institutional + arbitrage \u2192 d \u2248 0.10 \u2192 f(d) \u2248 -0.02 \u2192 effective subsidy to judicial function. Has exit options and can arbitrage; benefits from legitimate publicity while managing contamination through procedural tools.",
+    "mandatrophy_analysis": "MANDATROPHY PRESENT BUT UNRESOLVED: This constraint sits at extractiveness 0.58, below the 0.70 threshold requiring mandatrophy resolution. However, it demonstrates the mandatrophy at the conceptual level. The core tension: 'fair trial' requires suppression of prejudicial information (First Amendment restriction) to protect defendant; 'free press' requires publication of trial information to enable democratic accountability. Neither can fully exist without constraining the other. The false mountain (Perspective 7) naturalizes this tension as inevitable, but structural data shows it is contingent on institutional design: information asymmetry favoring prosecution, media business model incentives toward sensationalism, and jury selection procedures with limited contamination-filtering capacity. The mandatrophy resolves toward 'contingent institutional tension' rather than 'natural law': the constraint could be restructured (prosecution information parity, media literacy requirements, alternative jury selection) to reduce contamination while preserving both fairness and press freedom. No such restructuring has been attempted at scale, which is why the piton classification holds\u2014doctrine persists through inertia, maintaining the fiction of compatibility rather than designing for genuine balance."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "wrongful_conviction_epistemic_closure",
+      "prosecution_narrative_authority"
+    ],
+    "dual_formulation_note": "Media trial contamination is distinct from but causally upstream of wrongful conviction formation. The contamination constraint has its own extractiveness value (0.58) reflecting the severity of fair trial violation; wrongful conviction has higher extractiveness (0.75+) reflecting the finality of false imprisonment. Media narrative authority is a complementary constraint (extraction flowing from media's control of public discourse) with different \u03b5 reflecting different harm mechanisms."
+  },
+  "directionality_overrides": []
+}

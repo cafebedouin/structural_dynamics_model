@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "tragedy_of_commons_mechanism",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "toc"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Tragedy of the Commons: Individual Incentive vs Collective Outcome",
+    "topic_domain": "economic/environmental/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "individual_short_term_actors"
+    ],
+    "victims": [
+      "collective_long_term_commons",
+      "future_generations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Commons Itself",
+      "comment": "PERSPECTIVE 1: THE COMMONS (SNARE) \u2014 The shared resource (fishery, pasture, atmosphere, aquifer) cannot exit the degradation cycle. Bears full extraction cost with no agency. Maximum experienced coercion \u2014 the resource is locked into depletion trajectory by rational defection of individual users. Suppression is structural: depletion creates its own momentum independent of any actor's continued extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Individual User (Defection View)",
+      "comment": "PERSPECTIVE 2: INDIVIDUAL USER \u2014 DEFECTION VIEW (ROPE) \u2014 An individual user can see restraint as coordination: if everyone limits harvest, the commons sustains and everyone benefits long-term. But the actual constraint they face is that defection is individually rational even when mutual restraint would be collectively optimal. This is not extraction \u2014 it is a coordination failure. The individual experiences the constraint as a pure problem-solving mechanism, and from their perspective it appears solvable through communication and monitoring."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Organized Extractive User (Commercial Actor)",
+      "comment": "PERSPECTIVE 3: ORGANIZED EXTRACTIVE USER (TANGLED ROPE) \u2014 A commercial operator or large-scale user coordinates with other users (through market mechanisms, informal cartels, or lobbying against regulation) to maximize collective extraction while preventing smaller users from accessing the commons. This perspective shows both genuine coordination (among the powerful users) and asymmetric extraction (against powerless users and future availability). Active enforcement of informal extraction rules maintains the asymmetry."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Commons Management Coalition",
+      "comment": "PERSPECTIVE 4: COMMONS MANAGEMENT COALITION (TANGLED ROPE) \u2014 Organized agents (indigenous communities, environmental advocates, some states) attempt to establish sustainable management rules through monitoring and enforcement. They coordinate to solve the collective action problem but face extraction by defectors and powerful users. The constraint appears as a solvable coordination problem with enforcement mechanisms, but enforcement requires suppressing the defection incentive \u2014 creating an asymmetry between enforcers and those who bear the cost of restraint."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Transition (Enclosure/Privatization/Regulation)",
+      "comment": "PERSPECTIVE 5: INSTITUTIONAL TRANSITION (SCAFFOLD) \u2014 Privatization, state regulation, or technological alternatives (e.g., water markets, tradable fishing permits, renewable energy replacing fossil fuels) represent sunset pathways out of the tragedy. These systems have high theater initially (many rules, complex monitoring) but the theater ratio decreases as the mechanism stabilizes. Extraction exists during the transition (privatization benefits some, hurts others; regulation distributes costs unevenly) but with a clear sunset: once property rights or regulation equilibrate, the extraction mechanism can be adjusted or removed."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Game Theory View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN CLAIM) \u2014 From a game-theoretic perspective, the tragedy appears to be an immutable logical consequence of incentive structure: given rational self-interest, individual incentives diverge from collective welfare. The prisoner's dilemma structure appears universal \u2014 applicable to any common-pool resource. However, empirical data contradicts this mountain classification: Elinor Ostrom's research documented hundreds of communities that successfully managed commons for centuries through informal rules, monitoring, and graduated sanctions. This reveals the mountain as a false summit: the tragedy is contingent on institutional context, not a law of logic."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "scope_dependence_of_tragedy",
+      "question": "Is the tragedy of the commons an inevitable feature of resource governance or contingent on institutional scale and enforcement capacity?",
+      "resolution_mechanism": "Comparative analysis of successful commons (Swiss alpine pastures, Indonesian subak irrigation, Philippine groundwater aquifers) vs failed commons (Atlantic cod fishery, Aral Sea, Amazon deforestation). Identify institutional design patterns that distinguish success from failure.",
+      "impact": "If contingent: the constraint is not mountain but tangled_rope with management solutions available \u2014 classification shifts from inevitable law to solvable coordination problem. If inevitable: the tragedy persists across all institutional contexts regardless of design \u2014 mountain classification stands but is falsified by empirical evidence.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether tragedy is inevitable or contingent on institutional design"
+    },
+    {
+      "id": "defection_threshold_heterogeneity",
+      "question": "Do individual actors have heterogeneous thresholds at which they will defect from cooperative restraint, and does population composition (proportion of cooperative vs defecting types) determine tragedy outcome?",
+      "resolution_mechanism": "Agent-based modeling with heterogeneous preferences; empirical measurement of individual willingness-to-pay for restraint under varying threat conditions and inequality levels; cross-population comparison of defection rates against predicted thresholds.",
+      "impact": "If thresholds vary significantly: trajectory depends on population composition, not structural inevitability \u2014 management can succeed by recruiting cooperative-type actors or enforcing against free-riders selectively. If thresholds cluster tightly: the tragedy is more inevitable but still not mountain (clustering is observable-dependent and policy-responsive).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether defection thresholds vary or cluster uniformly"
+    },
+    {
+      "id": "technology_substitution_possibility",
+      "question": "Can technological development or institutional innovation (quotas, privatization, renewable alternatives) eliminate the extraction mechanism, creating a genuine scaffold sunset?",
+      "resolution_mechanism": "Historical case studies of successful resource transitions (whale oil \u2192 petroleum \u2192 renewables; open-access fisheries \u2192 individual transferable quotas \u2192 ecosystem management); measurement of extraction reduction post-intervention; identification of persistent extractive features in supposedly resolved commons.",
+      "impact": "If substitution is possible: scaffold perspective is real \u2014 the constraint has a terminal date. If substitution requires perpetual enforcement: the constraint degrades to piton (the sunset clause is aspirational, not structural). If new technologies create new common-pool problems: constraint families decompose into multiple stories rather than resolving singularly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether technology or institutional innovation can eliminate the tragedy mechanism"
+    },
+    {
+      "id": "inequality_amplification_mechanism",
+      "question": "Does the tragedy of the commons mechanism inherently amplify inequality (powerful users extract more, commons degrades, powerless users lose access first), or is amplification contingent on initial inequality levels?",
+      "resolution_mechanism": "Comparative analysis of commons outcomes in high-inequality vs egalitarian societies; measurement of extraction distribution before and after commons degradation; model simulations testing inequality as parameter vs outcome.",
+      "impact": "If inherent amplification: the constraint generates its own suppression feedback (inequality increases \u2192 extraction increases \u2192 commons fails \u2192 inequality increases) creating a snare-like lock-in. If contingent: initial inequality distribution matters \u2014 relatively equal commons can stabilize, unequal ones degrade, decoupling the mechanism from its outcome.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether tragedy mechanism inherently amplifies inequality"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The tragedy of the commons is a structural constraint where individually rational behavior aggregates into collectively irrational outcomes. A shared resource (pasture, fishery, atmosphere, groundwater, knowledge commons, attention commons) is degraded or depleted because each user benefits from extraction while bearing only a fraction of the resulting cost. The mechanism exhibits genuine coordination functions (users could benefit from mutual restraint) alongside extraction (those who defect benefit at others' expense). The constraint demonstrates how the same phenomenon appears as game-theoretic law (mountain), coordination failure (rope), managed extraction (tangled_rope), solvable through institutional design (scaffold), or contingent institutional feature (piton) depending on the observer's structural position. The theater ratio increases over time as degradation accelerates \u2014 initial open-access extraction appears straightforward, but as the commons degrades, users invest increasingly in justification rhetoric (claims of necessity, cultural rights, temporary hardship) rather than changing behavior.",
+    "key_agents": [
+      "The Commons: Primary victim (powerless/trapped) \u2014 the shared resource itself, bearing full cost of degradation with no agency or exit",
+      "Individual User (Defection View): Moderate/mobile \u2014 sees coordination problem as solvable; rational defection is one individual actor among many",
+      "Organized Extractive User: Powerful/arbitrage \u2014 coordinates with other powerful actors to maximize extraction while suppressing smaller users' access",
+      "Commons Management Coalition: Organized/constrained \u2014 attempts to solve coordination through monitoring and enforcement but faces extraction by defectors",
+      "Institutional Transition System: Institutional/arbitrage \u2014 privatization, regulation, or technological alternatives offer sunset pathways with embedded asymmetries during transition",
+      "Analytical Observer: Analytical/analytical \u2014 risks naturalizing contingent institutional context as game-theoretic necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The tragedy mechanism creates genuine extraction \u2014 those who harvest more than sustainable levels benefit, those who restrain bear costs. But extraction is not total because mutual restraint would benefit everyone, creating a coordination function. The value reflects the genuine mixed nature: users could exit through cooperation but face strong individual incentives against it. Suppression (0.52): Moderate-high. Barriers to exit include: (1) dependence on commons resources for livelihood with no alternatives, (2) knowledge barriers about sustainability tipping points, (3) coordination barriers against defection (monitoring other users' behavior is costly), (4) institutional barriers (no property rights to enforce individual restraint). Theater ratio (0.35): Moderate, increasing. Early-stage commons often show relatively low theater \u2014 extraction is direct and obvious. As degradation accelerates, theater rises as users justify extraction through cultural arguments, temporary hardship claims, and technical uncertainty about sustainability thresholds. The measurement trajectory shows extractiveness and theater both increasing, indicating Goodhart drift: as pressure to explain behavior grows, justification narratives substitute for actual restraint.",
+    "directionality_logic": "The individual short-term actor benefits from extraction while others bear collective costs \u2014 high d value (0.70+). The commons itself has d approaching 1.0 (full target, trapped, powerless). The organized extractive user has lower d because they successfully coordinate to distribute extraction asymmetrically, positioning themselves as beneficiary \u2014 d approximately 0.20-0.30. The commons management coalition has moderate d: they are partially in control (organized, constrained exit) but fighting against structural defection incentives, so they bear significant costs \u2014 d approximately 0.55-0.65. Future generations have d approaching 1.0 (completely trapped, bearing costs of present extraction with zero bargaining power). The institutional transition actor (privatization, regulation) experiences low d during transition if they control the distribution of property rights or regulatory authority, but higher d if they must defend against defectors \u2014 d approximately 0.25-0.50 depending on enforcement capacity.",
+    "perspectival_gap": "The largest perspectival gap appears between the individual user's rope (coordination solvable through communication) and the commons' snare (trapped in degradation). The user sees the constraint as a problem about information and monitoring; the commons experiences it as inexorable depletion. The powerful extractive user sees the constraint as rope (coordination with peers benefits everyone in their group) while the powerless users see snare (locked into scarcity). The analytical mountain perspective claims the tragedy is inevitable, yet the scaffold perspective documents exit pathways (Ostrom's work shows successful commons management). The gap reveals that the game-theoretic inevitability is conditional: it holds when institutional context prevents monitoring and graduated sanctions but fails when these mechanisms are present. The false summit detector should flag the mountain classification as naturalization of institutional context rather than logical necessity.",
+    "mandatrophy_analysis": "The mandatrophy resolves by recognizing that 'the tragedy of the commons' as a natural-language concept conflates two distinct constraints with different \u03b5 values: (1) the coordination problem of aggregate resource depletion (\u03b5 \u2248 0.08-0.15, Rope) and (2) the extraction mechanism where organized powerful users benefit at the expense of powerless users and future commons (\u03b5 \u2248 0.45-0.55, Tangled Rope). Hardin's original 1968 framing emphasized the coordination problem (all users rationally defecting) but empirical commons management literature emphasizes the extraction mechanism (the tragedy as asymmetric power, not symmetric prisoner's dilemma). The constraint story presents both: decomposition into separate stories would be appropriate if the corpus requires \u03b5-invariance precision, but the present story recognizes that both mechanisms operate simultaneously in observed commons degradation. The tangled_rope classification captures the hybrid: genuine coordination failure exists (rational defection is real) AND asymmetric extraction exists (powerful users coordinate while powerless users defect). The mandatrophy is resolved by declaring this explicitly: the tragedy is not pure coordination failure (that would be rope with \u03b5 \u2264 0.35) nor pure extraction (snare would have no beneficiary coordinating function), but genuinely tangled."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "prisoner_dilemma_mechanism",
+      "collective_action_problem",
+      "externality_mechanism"
+    ],
+    "dual_formulation_note": "The tragedy of the commons is upstream of multiple specific resource domains (fisheries, pastures, groundwater, atmosphere) and downstream of general game-theoretic coordination problems. The resource_allocation coordination type reflects that the commons mechanism fundamentally addresses how shared resources are distributed among users. Specific commons (Atlantic cod, Aral Sea, Amazon) should be modeled as separate stories with higher \u03b5 values reflecting observed extraction, linked to this general mechanism story."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

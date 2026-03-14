@@ -1,0 +1,148 @@
+{
+  "header": {
+    "constraint_id": "vehicle_routing_problem_distance_symmetry",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "vrp_dist_sym"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.02,
+    "theater_ratio": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Vehicle Routing Problem Distance Symmetry Constraint",
+    "topic_domain": "operations_research/combinatorial_optimization",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "beneficiaries": [],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Route Planning Agent",
+      "comment": "PERSPECTIVE 1: ROUTE PLANNING AGENT (MOUNTAIN) \u2014 Cannot escape the constraint. Any algorithm that produces a route must satisfy the symmetry assumption or explicitly rewrite the problem formulation. The agent cannot choose to violate the constraint; the mathematical structure enforces it universally."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Problem Modeler",
+      "comment": "PERSPECTIVE 2: PROBLEM MODELER (MOUNTAIN) \u2014 Recognizes the constraint as a mathematical property, not a contingent design choice. The modeler can choose to work in the symmetric or asymmetric domain, but cannot eliminate the structural distinction. Both formulations exhibit irreducible mathematical properties."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Optimization Algorithm",
+      "comment": "PERSPECTIVE 3: OPTIMIZATION ALGORITHM (MOUNTAIN) \u2014 Encounters the symmetry as a fixed feature of the problem space. Algorithms that exploit symmetry produce computationally efficient solutions; algorithms that ignore it do not benefit from the reduction in search space. The constraint is intrinsic to the mathematical structure."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a civilizational and universal perspective, the distance symmetry constraint is a fixed property of Euclidean geometry and metric space mathematics. The constraint emerges naturally from the axioms of metric spaces and cannot be violated by any agent or system that operates within that mathematical framework."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "asymmetric_embedding_question",
+      "question": "Does the constraint apply universally or only within Euclidean metric spaces?",
+      "resolution_mechanism": "Formal analysis of non-Euclidean routing domains (manifolds with non-symmetric metrics, directed graph environments, asymmetric cost functions from real-world factors like wind, elevation, or traffic flow directionality)",
+      "impact": "If constraint is universal: Mountain classification confirmed for all routing contexts. If constraint is domain-specific: Classification may degrade to Rope (coordination of distance assumptions) in asymmetric domains.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Universal scope of distance symmetry across all routing domains"
+    },
+    {
+      "id": "computational_accessibility",
+      "question": "Is the constraint accessible in practice for large routing instances, or does it become computationally intractable?",
+      "resolution_mechanism": "Empirical analysis of solver performance on symmetric vs asymmetric VRP instances of varying size; measurement of whether symmetry exploitation reduces computational barrier in practice",
+      "impact": "If symmetry remains accessible: Mountain persists. If accessibility collapses for large instances: Constraint may degrade to Piton (performative rather than functional).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Computational accessibility of distance symmetry constraint at scale"
+    },
+    {
+      "id": "real_world_violation_prevalence",
+      "question": "How frequently do real-world routing problems violate distance symmetry due to one-way streets, traffic flow directionality, or asymmetric terrain?",
+      "resolution_mechanism": "Survey of real-world routing datasets; analysis of how often d(A,B) \u2260 d(B,A) in practice",
+      "impact": "If violations are rare: Constraint remains applicable as a simplifying assumption (Mountain). If violations are frequent: Constraint becomes a modeling approximation (Rope or Scaffold).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Prevalence of distance asymmetry in real-world routing problems"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Vehicle Routing Problem (VRP) distance symmetry constraint asserts that the distance from location A to location B equals the distance from location B to location A: d(A,B) = d(B,A). This constraint is a foundational assumption in classical VRP formulations and emerges naturally from Euclidean metric space axioms. It is not a policy choice, institutional arrangement, or contingent design decision \u2014 it is a property of the mathematical structure that underlies the problem domain. The constraint reduces the problem's complexity by eliminating half the distance matrix (since symmetric matrices contain redundant information). All perspectives classify this as a Mountain: the constraint is unchangeable within its domain, exhibits zero degrees of freedom, and applies universally to any routing system that operates in Euclidean space or metric spaces where the triangle inequality and symmetry axioms hold.",
+    "key_agents": [
+      "Route Planning Agent: Structurally trapped (powerless/trapped) \u2014 any algorithm must work within the symmetry constraint or redefine the problem entirely",
+      "Problem Modeler: Analytical capacity (moderate/analytical) \u2014 recognizes the constraint as mathematical, not contingent; can choose domains but cannot change the mathematical property",
+      "Optimization Algorithm: Institutional actor (institutional/analytical) \u2014 encounters symmetry as a fixed feature; algorithms exploit it for efficiency but do not violate it",
+      "Analytical Observer: Universal perspective (analytical/analytical) \u2014 sees the constraint as an emergent property of metric space axioms"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Minimal. The constraint imposes no coercion, extraction, or asymmetric burden. It is a structural property of the mathematical domain, not an institution that extracts value. The value reflects only that any simplifying assumption reduces available problem space \u2014 a negligible cost. Suppression (0.02): Minimal. There are no alternative frameworks being suppressed; the symmetry axiom is an axiom, not a suppressed option. Agents who need asymmetric distance functions must switch problem domains (directed graphs, manifolds) rather than negotiate within the symmetric domain. Theater ratio (0.05): Negligible. The constraint has no performative component. Either a metric space is symmetric, or it is not. Accessibility collapse (0.92): Very high. Once one accepts the metric space formulation, the symmetry constraint is entirely inaccessible from alternative frameworks \u2014 agents cannot 'work around' it within the domain. Resistance (0.08): Very low. No agent resists the constraint; it is simply the structure of the space.",
+    "directionality_logic": "No directionality derivation applies to this Mountain constraint. Mountain constraints are beneficiary/victim-agnostic because they impose no extraction. The symmetry constraint has no beneficiaries (no agent gains asymmetric advantage) and no victims (no agent bears asymmetric cost). The constraint is indifferent across all observers \u2014 it applies equally to all agents regardless of power, time horizon, exit options, or scope.",
+    "perspectival_gap": "All four perspectives converge on Mountain classification. There is no perspectival gap. This uniformity is the diagnostic signature of a genuine natural law: different observers with different structural positions all experience the constraint as unchangeable, inaccessible, and applicable universally. The constraint does not exhibit the perspectival variance that characterizes institutional arrangements (Rope, Snare, Tangled Rope) or degraded mechanisms (Piton, Scaffold).",
+    "mandatrophy_analysis": "This constraint does not exhibit mandatrophy. It is a pure Mountain \u2014 there is no tension between coordination and extraction, no hidden institutional arrangement, no degraded function. The constraint is what it claims to be: a mathematical property of metric spaces. The mandatrophy is resolved by recognizing that some constraints are genuinely, intrinsically mountain-type across all perspectives. The absence of mandatrophy is itself diagnostic \u2014 it confirms that the constraint is not masking an extractive institution under the appearance of natural law."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "traveling_salesman_problem_tour_optimality",
+      "graph_metric_space_axioms"
+    ]
+  },
+  "directionality_overrides": []
+}

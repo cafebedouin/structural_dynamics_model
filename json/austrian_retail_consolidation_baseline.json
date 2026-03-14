@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "austrian_retail_consolidation_baseline",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "arc"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Austrian Retail Consolidation Baseline",
+    "topic_domain": "economic/retail/market_structure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_retail_chains",
+      "real_estate_holders",
+      "consumer_aggregation_benefits"
+    ],
+    "victims": [
+      "small_independent_retailers",
+      "local_market_diversity",
+      "neighborhood_retail_competition"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Independent Shopkeeper",
+      "comment": "PERSPECTIVE 1: INDEPENDENT SHOPKEEPER (SNARE) \u2014 Small retailers face rising commercial rents (driven by consolidation-friendly real estate valuation), supplier pressure toward volume commitments, and inability to compete on price/scale with consolidated chains. Exit requires abandoning family business and livelihood. Suppression is structural: landlord pressure, supplier terms, consumer price-seeking behavior. No coordination benefit experienced \u2014 only extraction of market share and commercial viability."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Medium-Sized Regional Chain",
+      "comment": "PERSPECTIVE 2: MEDIUM-SIZED REGIONAL CHAIN (TANGLED ROPE) \u2014 Benefits from consolidation coordination: supplier relationships, economies of scale in logistics, customer convenience from multi-location shopping. Also bears extraction costs: pressure to merge with larger chains, margin compression from price competition, need for capital investment to remain competitive. Genuine coordination function (supply chain efficiency) coexists with asymmetric extraction (margin consolidation). Constrained exit: could remain independent but at reduced profitability."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Large Retail Chain (REWE, Spar, Hofer)",
+      "comment": "PERSPECTIVE 3: LARGE RETAIL CHAIN (ROPE) \u2014 Primary beneficiary experiencing consolidation as pure coordination: economies of scale in procurement, distribution network optimization, purchasing power with suppliers, cross-location inventory management. Extraction flows toward this agent. Experiences the constraint as solving legitimate supply chain problems. Arbitrage options: can shift to online retail, international expansion, or format diversification if needed."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Real Estate Sector",
+      "comment": "PERSPECTIVE 4: REAL ESTATE SECTOR (ROPE) \u2014 Commercial landlords benefit from consolidation through standardized, high-volume commercial tenants. Consolidation drives property valuations upward (centralized chains pay premium rents). Experiences the constraint as coordination: predictable tenants, high-volume usage. Arbitrage option: can diversify into office, residential, or shift tenant mix if retail market shifts. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Consumer Interest (Price vs. Diversity)",
+      "comment": "PERSPECTIVE 5: CONSUMER INTEREST ORGANIZED (TANGLED ROPE) \u2014 Consumers benefit from consolidation coordination: lower prices through scale efficiency, convenience of standardized offerings, extended shopping hours in larger locations. Also bear extraction costs: loss of neighborhood retail diversity, reduced shopping choice variety, homogenization of consumer experience. Some constrained exit: online shopping emerging as partial alternative, but local convenience loss remains. Genuine coordination (price reduction, convenience) coexists with asymmetric cost (diversity loss)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Regulatory/Policy Actors (Anti-Trust, Planning)",
+      "comment": "PERSPECTIVE 6: REGULATORY/POLICY ACTORS (SCAFFOLD) \u2014 Competition authorities and urban planners observe consolidation as a temporary coordination problem with policy sunset potential. Market concentration triggers merger reviews; planning authorities can zone against consolidation. Exit pathway: stronger merger enforcement, zoning restrictions favoring neighborhood retail, tax incentives for small retailers. Mobile options available \u2014 policy can shift without high cost. Scaffold classification derives from genuine enforcement capacity and policy levers creating a sunset dynamic."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Consumer Welfare Theory (Economic Theater)",
+      "comment": "PERSPECTIVE 7: CONSUMER WELFARE THEORY (PITON) \u2014 Economic orthodoxy defines consolidation as efficiency-enhancing (lower prices, reduced transaction costs). This narrative has high theater_ratio: the 'consumer welfare' metric is performative \u2014 it counts price reductions but not diversity loss, convenience loss from reduced locations, or social cohesion effects. The underlying coordination mechanism (supply chain efficiency) is real, but the welfare framing obscures redistribution toward large chains and away from small retailers. Piton classification: the consolidation efficiency narrative persists through institutional inertia in economic policy despite evidence that 'efficiency' naturalizes distributional extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "label": "The Analytical Observer (Structural Extraction View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational/continental perspective, retail consolidation is pure extraction cloaked as efficiency. The coordination function (supply chain optimization) is genuine but modest; the extraction function (wealth transfer to large chains, real estate holders, and consolidated capital) dominates. Theater_ratio is low (35%) because the mechanism is transparently structural: larger capital captures surplus through scale advantages. The analytical observer classifies this as snare rather than tangled rope because the coordination gains are modest (maybe 15-20% of total effect) while extraction dominates (80-85%). This is not false summit but structural asymmetry."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "consolidation_efficiency_threshold",
+      "question": "What proportion of retail consolidation gains derive from genuine supply chain efficiency vs. distributional extraction through market power?",
+      "resolution_mechanism": "Comparative analysis of price reductions attributable to scale efficiency vs. supplier margin compression; modeling of counter-factual without consolidation; cross-country comparison with different retail concentration levels",
+      "impact": "If efficiency gains > 60%: Tangled Rope classification confirmed. If efficiency gains < 40%: Snare classification confirmed. Threshold determines whether consolidation is primarily coordination or primarily extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Efficiency gains vs. distributional extraction proportion"
+    },
+    {
+      "id": "neighborhood_retail_irreplaceability",
+      "question": "Are neighborhood retail functions (convenience, social hub, foot traffic generation, property tax base) replaceable by online retail and large-format stores, or do they constitute irreplaceable community goods?",
+      "resolution_mechanism": "Measurement of neighborhood vitality before/after retail closure; economic analysis of foot traffic to adjacent businesses; social network analysis of community cohesion effects; property value analysis of neighborhoods with vs. without neighborhood retail",
+      "impact": "If functions are replaceable: consolidation cost is modest (snare interpretation weakened). If irreplaceable: consolidation cost is substantial (snare interpretation strengthened; victim group expands to include neighborhood social fabric).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether neighborhood retail functions are economically replaceable"
+    },
+    {
+      "id": "regulatory_ceiling_effectiveness",
+      "question": "Can Austrian/EU competition policy effectively constrain consolidation through merger review and market concentration thresholds, or has consolidation exceeded policy capacity?",
+      "resolution_mechanism": "Analysis of rejected vs. approved mergers in Austrian retail; comparison of actual market concentration with regulatory thresholds; assessment of enforcement resource constraints vs. legal complexity; timeline of policy effectiveness over consolidation interval",
+      "impact": "If policy is effective: scaffold sunset is real (policy has genuine enforcement levers). If policy is ineffective: scaffold is illusory (regulation is theater maintaining appearance of control). Classification could shift from Scaffold to Piton.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regulatory policy can effectively constrain consolidation"
+    },
+    {
+      "id": "small_retailer_identity_lock",
+      "question": "To what degree is the small retailer victim locked by identity (family business identity, professional identity as merchant, community identity) vs. by material barriers to exit?",
+      "resolution_mechanism": "Survey and interview analysis of exit decisions among closing retailers; measurement of financial barriers vs. psychological/identity barriers; cohort analysis of identity-locked vs. materially-trapped retailers; post-exit career trajectory analysis",
+      "impact": "If identity-locked dominates: reclassify small retailer exit as identity_locked rather than trapped. Suggests intervention targets (identity reframing, career path alternatives) distinct from material supports (subsidies, zoning relief). If material barriers dominate: trapped classification correct.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Proportion of small retailer exit driven by identity fusion vs. material barriers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2023,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2023,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 1995,
+    "end": 2023
+  },
+  "commentary": {
+    "narrative_context": "Austrian retail consolidation represents a structural economic transformation spanning three decades, driven by capital efficiency gains from scale, real estate dynamics, and consumer price preference. The constraint exhibits features of both genuine coordination (supply chain efficiency, consumer price reduction, convenience) and pure extraction (market share concentration, margin compression for suppliers and small retailers, neighborhood commercial diversity loss). The eight perspectives reveal a fractured landscape: large chains and real estate holders experience the constraint as solving legitimate coordination problems; small independent retailers experience it as an inescapable snare; consumers experience mixed benefits (lower prices) and costs (reduced choice); policy actors retain theoretical levers but face enforcement challenges; and economic theory naturalizes the consolidation as efficiency, obscuring distributional effects. The extractiveness measurement shows a clear upward trend from 0.28 (1995) to 0.52 (2023), reflecting the intensification of consolidation effects over the interval. The theater_ratio has declined slightly (0.42 to 0.35), indicating that the mechanism is increasingly transparent rather than performative \u2014 the consolidation logic is structurally visible, not hidden behind narrative cover. This transparency suggests that the constraint is best understood as structural extraction cloaked in economic efficiency language, rather than false-performance masquerading as coordination.",
+    "key_agents": [
+      "Large Retail Chains (REWE, Spar, Hofer, Merkur): Primary beneficiaries (institutional/arbitrage) \u2014 capture scale advantages, supplier leverage, market consolidation gains",
+      "Small Independent Retailers: Primary victims (powerless/trapped) \u2014 face rising rents, supplier pressure, inability to compete on scale; exit requires abandoning livelihood",
+      "Commercial Real Estate Sector: Secondary beneficiary (institutional/arbitrage) \u2014 property valuations rise, tenant base consolidates to predictable large-volume tenants",
+      "Medium-Sized Regional Chains: Mixed victim-beneficiary (moderate/constrained) \u2014 gain from consolidation coordination but also face extraction pressure from larger chains and margin compression",
+      "Consumers (Organized Interest): Mixed victim-beneficiary (organized/constrained) \u2014 gain from price reductions and convenience but lose neighborhood retail diversity and shopping choice",
+      "Competition Authorities & Planning Regulators: Policy actors (powerful/mobile) \u2014 retain theoretical enforcement capacity through merger review and zoning; scaffold perspective suggests policy sunset if enforcement strengthens",
+      "Economic Theory Establishment: Institutional narrative agent (institutional/arbitrage) \u2014 maintains consumer welfare framing that counts only price effects, obscuring distributional extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, increasing over interval. The measurement trajectory (0.28\u21920.52) reflects genuine intensification of consolidation effects. The 1995 baseline shows modest consolidation (extractiveness 0.28) in a still-fragmented retail market. By 2023, consolidation has concentrated retail market share in 3-4 large chains accounting for ~70% of grocery retail volume, driving small retailer closures and margin compression. The 0.52 value reflects that consolidation is now the dominant market structure, with extraction mechanisms (price pressure, supplier leverage, real estate inflation) clearly embedded. Suppression (0.48): Moderate. Barriers to exit for small retailers are substantial (sunk costs in location-specific stores, family business identity lock, limited retraining opportunities) but not absolute (migration, wage employment alternatives exist). The suppression value reflects real structural barriers without total incapacity. Theater ratio (0.35): Low to moderate. The consolidation mechanism is structurally transparent \u2014 the competitive advantage of large chains is visible (scale, supplier terms, real estate). Unlike theater-heavy constraints that hide extraction behind narrative, consolidation's logic is openly visible. The 0.35 value (declining from 0.42 in 1995) reflects that consolidation efficiency narrative has become less necessary as consolidation dominance has become undeniable.",
+    "directionality_logic": "Directionality values are derived from beneficiary/victim status and exit options per the sigmoid f(d) formula. Large chains: beneficiary status + arbitrage exit = d \u2248 0.12, f(d) \u2248 -0.01. Small retailers: victim status + trapped exit = d \u2248 0.92, f(d) \u2248 1.35. Medium chains: mixed (victim of larger consolidation pressure; beneficiary of consolidation coordination) with constrained exit = d \u2248 0.55, f(d) \u2248 0.65. Real estate: beneficiary + arbitrage = d \u2248 0.08, f(d) \u2248 -0.10. Consumers: mixed benefit/cost + constrained exit = d \u2248 0.58, f(d) \u2248 0.72. Regulators: analytical position = canonical d \u2248 0.72, f(d) \u2248 1.15. These derivations produce the perspectival gap: same \u03c7 formula applied to different structural positions yields radically different experienced extraction values, confirming the tangled_rope classification (asymmetric extraction coexisting with genuine coordination).",
+    "perspectival_gap": "The perspectival gap between the large chain (rope) and small retailer (snare) perspectives is maximal. The large chain sees consolidation as coordination solving real supply chain problems; the small retailer sees identical structural dynamics as extraction of their commercial viability. The gap is not perspectival confusion but structural asymmetry: consolidation genuinely solves coordination problems for chains while creating extraction problems for retailers. The medium-sized regional chain perspective (tangled_rope) bridges this gap \u2014 they experience genuine coordination benefits (scale efficiency) simultaneously with extraction pressure (margin compression, merger pressure). The policy/regulatory perspective (scaffold) suggests the gap is theoretically remediable through enforcement action (merger review, zoning restrictions, anti-trust intervention), creating a sunset dynamic if enforcement strengthens. The consumer perspective (tangled_rope) adds a third dimension: consumers benefit from consolidation coordination (lower prices, convenience) but bear extraction costs (diversity loss, neighborhood retail closure). The piton perspective reveals that economic welfare theory naturalizes this gap through the consumer welfare metric, which counts only price effects and obscures distributional consequences.",
+    "mandatrophy_analysis": "RESOLUTION: Austrian retail consolidation resolves the mandatrophy through the tangled_rope classification, which permits both genuine coordination AND asymmetric extraction simultaneously. The mistake would be classifying consolidation as pure rope (coordination without extraction) based on supply chain efficiency gains, or as pure snare (extraction without coordination) based on small retailer harm. The tangled_rope resolves this by distinguishing: consolidation delivers real coordination benefits (supply chain efficiency, consumer price reduction, convenience), creating genuine beneficiaries (large chains, real estate, price-conscious consumers). Simultaneously, consolidation extracts value asymmetrically through market power concentration (supplier margin compression, small retailer displacement, commercial diversity loss). Both effects are structural and real. The mandatrophy would arise if the constraint were misclassified as rope (hiding the extraction) or snare (hiding the coordination). The tangled_rope classification correctly names the hybrid nature: this is a hybrid coordination-extraction mechanism where the coordination function (supply chain efficiency) is real but the extraction mechanism (market power leverage) is the dominant functional driver. The beneficiary/victim decomposition (beneficiaries: large chains, real estate; victims: small retailers, neighborhood diversity) makes the asymmetry explicit, preventing false balance or naturalization of consolidation as pure coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "austrian_urban_neighborhood_vitality",
+      "small_business_employment_decline",
+      "real_estate_commercialization_pressure"
+    ],
+    "dual_formulation_note": "Retail consolidation is a single structural constraint with genuine coordination function (supply chain efficiency) and genuine extraction mechanism (market power concentration). It is not decomposed into separate stories because the coordination and extraction are produced by the same structural dynamic (scale economies + capital concentration). Unlike the BGS case (where spectral universality and ETH compliance are causally independent), retail consolidation's coordination and extraction are mutually constituted \u2014 supply chain efficiency IS what produces market power; market power leverage IS what captures coordination gains. The network links document secondary constraints that are affected by consolidation (neighborhood vitality declines as retail anchors close; small business employment declines due to consolidation; real estate pressures intensify as commercial property becomes consolidated-chain-dependent)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

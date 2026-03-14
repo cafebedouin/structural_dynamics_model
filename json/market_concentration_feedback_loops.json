@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "market_concentration_feedback_loops",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mconc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Market Concentration Feedback Loops",
+    "topic_domain": "economic/industrial_organization",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_firms",
+      "financial_intermediaries"
+    ],
+    "victims": [
+      "new_entrants",
+      "consumers",
+      "competitive_market_function"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Potential Entrant",
+      "comment": "PERSPECTIVE 1: POTENTIAL ENTRANT (SNARE) \u2014 New firms face capital requirements, network effects, and incumbent acquisition strategies that eliminate viable entry pathways. Cannot exit the barrier structure; must accept non-participation or acquisition on incumbent terms. Maximum extraction through suppression of alternatives."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Consumer Base",
+      "comment": "PERSPECTIVE 2: CONSUMER BASE (SNARE) \u2014 Reduced choice set, price increases, and lock-in effects from network externalities. Trapped by switching costs and lack of alternatives. Over a generational horizon, consumer welfare deteriorates and exit becomes unavailable for subsequent cohorts born into the concentrated market."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Firm",
+      "comment": "PERSPECTIVE 3: INCUMBENT FIRM (ROPE) \u2014 Experiences the constraint as a coordination mechanism: controlling market share enables investment in standards, platforms, and ecosystem development. Network effects and data advantages are genuine coordination benefits. Net beneficiary \u2014 extraction flows toward this agent through entry barriers, but the agent derives real coordination value."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Antitrust Regulator",
+      "comment": "PERSPECTIVE 4: ANTITRUST REGULATOR (TANGLED ROPE) \u2014 Enforces coordination through merger review and conduct rules, but faces genuine trade-offs: some consolidation enables R&D efficiency and global competitiveness. Constrained by budget limits, technical expertise gaps, and political pressure. Benefits from cooperative relationships with incumbents (information access, compliance incentives) while bearing costs of enforcement labor and political backlash. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Antitrust Doctrine Framework",
+      "comment": "PERSPECTIVE 5: ANTITRUST DOCTRINE FRAMEWORK (PITON) \u2014 Consumer welfare standard, efficiency defenses, and rule-of-reason analysis have become largely performative. Incumbents use consumer welfare arguments to justify concentration while avoiding scrutiny of dynamic competition effects. The doctrinal apparatus persists through institutional inertia despite theoretical and empirical challenges to its prescriptive power. Theater ratio high: economic reasoning serves legitimation function more than constraint function."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Scale Economy View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / SCALE ECONOMY VIEW (MOUNTAIN) \u2014 From a universal economic-theory perspective, positive feedback loops are inherent to markets with increasing returns to scale. Larger firms reduce unit costs, which enables lower prices, which attracts customers, which increases scale \u2014 creating a self-reinforcing dynamic. This perspective naturalizes concentration as an immutable consequence of technology and economics. However, structural data reveals this as a false summit: concentration's magnitude and rate depend on contingent institutional choices (IP regime, merger enforcement, platform neutrality rules), not on scale economies alone."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Financial Intermediary (Investor Perspective)",
+      "comment": "PERSPECTIVE 7: FINANCIAL INTERMEDIARY (TANGLED ROPE) \u2014 Venture capital and private equity investors benefit from consolidation: they have exit optionality through acquisition channels and portfolio diversification. But they also face genuine coordination challenges in funding breakthrough innovation and managing founder incentives. Mobile at global scale, but constrained by regulatory scrutiny and reputational risk. Mixed but asymmetric \u2014 benefits exceed costs for capital holders."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "dynamic_efficiency_trade_off",
+      "question": "Do efficiency gains from consolidation (R&D investment, network effects, global scale) outweigh allocative efficiency losses from reduced competition?",
+      "resolution_mechanism": "Longitudinal productivity analysis of concentrated vs competitive sectors; correlation between market concentration and innovation metrics (patent quality, time-to-market, fundamental breakthroughs); consumer surplus decomposition (price vs choice set vs quality changes)",
+      "impact": "If dynamic efficiency dominates: concentration is welfare-positive (rope predominates from multiple perspectives). If allocative efficiency dominates: concentration is welfare-negative (snare predominates). Mandatrophy hinges on this empirical fact.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Trade-off between dynamic efficiency gains and allocative efficiency losses"
+    },
+    {
+      "id": "feedback_loop_acceleration",
+      "question": "What institutional factors determine the speed at which concentration feedback loops intensify \u2014 IP enforcement strength, acquisition barriers, data accumulation rates, platform neutrality rules?",
+      "resolution_mechanism": "Comparative institutional analysis across sectors with varying legal regimes; measurement of feedback loop kinetics (time to market dominance, rate of price increases post-consolidation); identification of regulatory interventions that interrupt loops",
+      "impact": "If institutional factors are dominant: concentration is contingent and policy-malleable (tangled_rope with sunset possibilities). If technological factors dominate: feedback loops are quasi-inevitable (mountain or immutable snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Role of institutional factors in determining feedback loop speed"
+    },
+    {
+      "id": "entry_barrier_reversibility",
+      "question": "Are entry barriers created by concentration (network effects, switching costs, data advantages) reversible through technology disruption or policy intervention, or are they durably locked in?",
+      "resolution_mechanism": "Historical case studies of market disruption across sectors (mobile phones disrupting telecommunications, cloud computing disrupting enterprise software); identification of conditions under which new entrants overcome network effects; measurement of barrier durability post-disruption",
+      "impact": "If barriers are reversible: powerless agents have latent exit options (scaffold or temporary snare). If barriers are durable: powerless agents are permanently trapped (permanent snare). Classification trajectory depends on reversibility.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether entry barriers are reversible or durably locked in"
+    },
+    {
+      "id": "regulator_capture_ambiguity",
+      "question": "Is the antitrust regulator's constrained exit the result of genuine trade-offs (some consolidation is welfare-positive) or regulatory capture (incumbents have coopted the enforcement apparatus)?",
+      "resolution_mechanism": "Analysis of enforcement discretion: case selection patterns, settlement terms, lobbying influence; comparison with other regulatory domains; measurement of revolving-door effects (regulator-to-incumbent movement); international regulator comparison (EU vs US stringency differences)",
+      "impact": "If genuine trade-offs: regulator's tangled_rope classification stands (constrained by real limits). If capture: regulator should be reclassified as institutional victim or beneficiary accomplice (identity_locked or mobile with high d).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulator is constrained by genuine trade-offs or regulatory capture"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Market concentration feedback loops represent a structural constraint where initial market power generates mechanisms that entrench and amplify that power over time. Larger firms achieve lower unit costs (scale), which enables lower prices or higher margins (capital accumulation), which attracts customers and investment capital, which increases scale further. Simultaneously, network effects, switching costs, data advantages, and acquisition strategies for competitive threats create asymmetric barriers to entry that protect incumbents. The constraint exhibits tangled rope characteristics: genuine coordination benefits (standards, platform stability, global competitiveness) coexist with systematic extraction from new entrants and consumer choice restriction. The extractiveness value (0.58) reflects moderate base extraction \u2014 some consolidation is welfare-improving, but the rate and magnitude of concentration in recent decades exceeds what scale economies alone would justify. Suppression (0.65) is high: capital requirements, network effects, regulatory approval timelines, and incumbent acquisition of nascent competitors create durable barriers. Theater ratio (0.48) indicates moderate performative content: antitrust doctrine uses consumer welfare and efficiency arguments to justify consolidation while obscuring dynamic competition effects.",
+    "key_agents": [
+      "Incumbent Firms: Primary beneficiary (institutional/arbitrage) \u2014 capture market power, margins, and acquisition channels for competitive threats",
+      "New Entrants: Primary victim (powerless/trapped) \u2014 face capital barriers, network effects, incumbent acquisition strategies, and regulatory approval delays",
+      "Consumers: Secondary victim (powerless/trapped) \u2014 reduced choice set, lock-in effects, price increases, and diminished switching optionality",
+      "Financial Intermediaries: Secondary beneficiary (powerful/mobile) \u2014 benefit from acquisition exit channels and portfolio concentration; constrained by regulatory scrutiny",
+      "Antitrust Regulator: Organized enforcer (organized/constrained) \u2014 faces genuine trade-offs between dynamic and allocative efficiency; constrained by budget, expertise, and political pressure",
+      "Antitrust Doctrine: Institutional framework (institutional/arbitrage) \u2014 provides legitimation framework for consolidation; theater persists through inertia",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as inevitable economic laws"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, increasing over the measurement interval. The trajectory (0.35 \u2192 0.58) reflects acceleration of feedback loops. Initial consolidation may be justified by scale economies or global competitiveness. But the acceleration beyond technological requirements suggests institutional factors (weaker enforcement, IP strengthening, platform immunity) amplifying extraction. Suppression (0.65): High. Entry barriers include capital requirements ($1B+ for competitive platforms in cloud, semiconductors, telecommunications), network effects (lock-in to dominant platforms), switching costs (data migration, application dependencies), and incumbent acquisition of competitive threats (over 400 acquisitions annually by tech incumbents). These are not surmountable obstacles \u2014 they are system-level barriers that scale with incumbent advantage. Theater ratio (0.48): Moderate. Antitrust doctrine has substantial performative elements (efficiency defenses, consumer welfare standard) but retains some genuine constraint force (merger blocking, conduct remedies). The ratio increases over time as doctrine accommodates consolidation while maintaining legitimacy through economic reasoning.",
+    "perspectival_gap": "Incumbent firms see the constraint as coordination (rope): they solve real problems (platform stability, standards, ecosystem governance). New entrants see it as pure extraction (snare): they face impassable barriers. Consumers see it as mixed constraint and extraction (tangled rope graduating to snare): they benefit from ecosystem stability but lose choice and face lock-in. Regulators see it as a constrained problem to manage (tangled rope): they recognize trade-offs but lack tools to address dynamic effects. The doctrine sees its own function as degraded (piton): economic arguments legitimize consolidation through performative reasoning. The analytical observer at universal scale risks naturalizing contingent arrangements as inevitable (false mountain).",
+    "directionality_logic": "Directionality (d) is derived from each agent's structural position. Incumbent firms benefit from market power and barriers \u2014 low d (0.15-0.20). New entrants face barriers and acquisition threat \u2014 high d (0.90+). Consumers face lock-in and reduced choice \u2014 high d (0.85+). Regulators experience mixed: they benefit from incumbent cooperation (information, compliance) but bear enforcement costs and political pressure \u2014 moderate d (0.50-0.60). Financial intermediaries benefit from acquisition exits but face regulatory constraints \u2014 low-moderate d (0.35-0.45). The asymmetry in directionality is the core extraction mechanism: the constraint channels costs toward high-d agents (powerless new entrants, consumers) and benefits toward low-d agents (incumbents, financiers). The feedback loop amplifies this asymmetry over time.",
+    "mandatrophy_analysis": "MANDATROPHY STRUCTURE: The constraint avoids mandate collapse by resolving the tangled_rope ambiguity through perspectival differentiation. From the incumbent's view, the constraint is coordination (genuine network effects, scale economies). From the new entrant's view, it is extraction (barriers that prevent viable competition). From the consumer's view, it is mixed (ecosystem benefits traded for choice restriction). The mandatrophy is resolved not by choosing a single type but by mapping the constraint family across the observation site: the same structural phenomena (network effects, scale economies, capital requirements) appear as coordination from positions of incumbency and as extraction from positions of exclusion. The theater ratio increase (0.32 \u2192 0.48) indicates doctrinal legitimation drifting upward \u2014 efficiency arguments doing more work than constraint work \u2014 suggesting piton degradation. If theater ratio reaches 0.70+, reclassification to piton becomes warranted, indicating the doctrine has become primarily legitimation apparatus rather than functional constraint."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_gatekeeping",
+      "data_moat_accumulation",
+      "venture_capital_acquisition_channel"
+    ],
+    "dual_formulation_note": "Market concentration feedback loops is the parent constraint affecting downstream institutional mechanisms. Platform gatekeeping represents the coordination function that generates entry barriers; data moat accumulation represents the feedback mechanism that entrenches market power; venture capital acquisition channel represents the exit route that absorbs competitive threats. Each downstream constraint has distinct \u03b5 values reflecting different coordination vs extraction ratios."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.58
+    }
+  ]
+}

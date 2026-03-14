@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "incumbent_industry_moat",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "moat"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Incumbent Industry Moat Protection Mechanism",
+    "topic_domain": "economic/industrial_organization",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_firms"
+    ],
+    "victims": [
+      "potential_entrants",
+      "consumers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Blocked Entrepreneur",
+      "comment": "PERSPECTIVE 1: BLOCKED ENTREPRENEUR (SNARE) \u2014 Faces capital barriers, regulatory licensing, supplier lock-in, and switching cost networks with no viable exit. Cannot compete; cannot operate in adjacent markets; cannot access distribution channels. Full extraction with maximum suppression."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Aspiring Competitor",
+      "comment": "PERSPECTIVE 2: ASPIRING COMPETITOR (TANGLED ROPE) \u2014 Can enter through niche markets or digital channels (some coordination benefit from infrastructure the moat maintains), but faces high switching costs, brand disadvantage, and regulatory compliance costs. Entry is possible at substantial price; exit into adjacent markets also carries costs. Mixed experience \u2014 some benefit from industry infrastructure; severe extraction from moat mechanisms."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Firm",
+      "comment": "PERSPECTIVE 3: INCUMBENT FIRM (ROPE) \u2014 Experiences the moat as pure coordination: network effects that lock in customers, brand loyalty that reduces marketing costs, scale advantages that enable efficient supply chains, switching costs that retain customers. The incumbent benefits from the collective network; the moat is a coordination problem they've solved and now benefit from solving. Net beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Technology Disruptor",
+      "comment": "PERSPECTIVE 4: TECHNOLOGY DISRUPTOR (SCAFFOLD) \u2014 Organized entrants (platform companies, venture-backed firms) can bypass traditional moat mechanisms through technological innovation or network-adjacent markets. The moat is temporary because paradigm shifts render legacy barriers obsolete. Exit path is visible: the disruptor's goal is to make the moat irrelevant rather than to compete within it."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Apparatus",
+      "comment": "PERSPECTIVE 5: REGULATORY APPARATUS (PITON) \u2014 Licensing regimes, patent systems, and standards enforcement that constitute the moat are largely performed: regulatory compliance becomes theater when the burden is calibrated to exclude competitors rather than to achieve actual safety/quality standards. The apparatus persists through institutional inertia and incumbent lobbying, not because the regulatory function is efficient. Theater ratio high; function degraded."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some incumbent advantage is inherent to competition: first movers accumulate scale, networks, and reputation that cannot be instantly replicated. Barriers to entry are natural consequences of prior success and network effects. However, the structural data contradicts this mountain reading \u2014 the base extractiveness is driven by enforcement mechanisms, regulatory capture, and suppression of alternatives, not by irreducible physical/economic law. The 'natural moat' framing naturalizes what is actually contingent institutional design."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "network_effect_vs_regulatory_lock",
+      "question": "Does the moat's power come from genuine network effects and consumer preference, or primarily from regulatory/legal barriers and high switching costs?",
+      "resolution_mechanism": "Empirical analysis: measure customer retention when switching costs are artificially removed (e.g., data portability regulations, subsidized migration); compare willingness-to-pay for incumbent vs equivalent alternative in markets with low regulatory barriers",
+      "impact": "If network-driven: extractiveness drops significantly, classification shifts toward Rope. If regulatory-driven: extractiveness persists, classification remains Tangled Rope or Snare. Determines whether the moat is sustainable or dependent on enforcement.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether moat power derives from network effects or regulatory barriers"
+    },
+    {
+      "id": "technological_disruption_timeline",
+      "question": "What is the realistic horizon for paradigm-shifting technology to render the incumbent's moat obsolete?",
+      "resolution_mechanism": "Historical precedent analysis (Kodak \u2192 digital, Nokia \u2192 smartphones, Yellow Pages \u2192 search); technical feasibility assessment of disruptive technologies relative to incumbent moat mechanics",
+      "impact": "If timeline < 10 years: scaffold perspective dominates; moat is genuinely temporary. If timeline > 30 years: scaffold is aspirational; moat provides multi-generational extraction. Affects whether constraint should classify as Scaffold (temporary) or Tangled Rope (persistent).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Realistic horizon for technological disruption of incumbent advantage"
+    },
+    {
+      "id": "switching_cost_endogeneity",
+      "question": "Are switching costs caused by technological incompatibility and genuine coordination complexity, or deliberately engineered to prevent competition?",
+      "resolution_mechanism": "Technical comparison: cost of implementing genuine interoperability vs actual switching cost; analysis of legacy format dependencies and whether simpler alternatives were deliberately avoided; testimony/evidence of design decisions favoring lock-in",
+      "impact": "If exogenous (genuine technical incompatibility): suppression is coordination cost, extractiveness lower. If endogenous (deliberately designed): suppression is enforcement mechanism, extractiveness higher. May shift classification from Tangled Rope toward Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether switching costs are technical necessities or deliberate lock-in design"
+    },
+    {
+      "id": "consumer_welfare_distribution",
+      "question": "Do consumers experience net benefit from the moat (stable ecosystem, quality, innovation) or net harm (high prices, reduced choice, suppressed innovation)?",
+      "resolution_mechanism": "Consumer surplus analysis; price/quality comparison with competitive markets; innovation rate pre/post moat establishment; welfare economics analysis of consumer outcomes",
+      "impact": "If net positive: moat provides genuine coordination value, strengthens Rope perspective. If net negative: moat is pure extraction, strengthens Snare perspective. Determines whether to classify as Tangled Rope (mixed) or shift toward pure extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Net welfare impact of incumbent moat on consumer outcomes"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "An incumbent industry moat is a structural constraint that protects established firms from competition through mechanisms including network effects, switching costs, regulatory licensing, brand loyalty, scale advantages, and control over critical resources or distribution channels. The moat exhibits hybrid characteristics: it provides genuine coordination value (industry standards, network stability, consumer trust in quality) while simultaneously extracting rents from potential entrants and consumers unable to switch. The constraint's classification varies dramatically by observer position: the incumbent experiences it as pure coordination (Rope); the blocked entrepreneur experiences it as entrapment (Snare); the aspiring competitor experiences it as mixed (Tangled Rope); the technology disruptor sees it as temporary (Scaffold); the regulatory apparatus maintains it through increasingly theatrical compliance; and the civilizational analyst risks naturalizing what is actually contingent institutional design. The rising extractiveness over the 10-year interval reflects accumulating barriers as the incumbent's advantages compound \u2014 scale, data, network effects, and regulatory capture all amplify the moat over time.",
+    "key_agents": [
+      "Incumbent Firms: Primary beneficiary (institutional/arbitrage) \u2014 capture supernormal returns through moat protection; experience constraint as coordination solution",
+      "Potential Entrants (Blocked): Primary victim (powerless/trapped) \u2014 face insurmountable barriers; cannot compete or access market",
+      "Aspiring Competitors: Secondary victim (moderate/constrained) \u2014 can enter at high cost through niches or innovation; face substantial switching costs and brand disadvantage",
+      "Technology Disruptors: Organized agents (organized/mobile) \u2014 can bypass moat through paradigm-shifting innovation or adjacent-market entry; see moat as temporary",
+      "Regulatory Apparatus: Institutional actor (institutional/arbitrage) \u2014 maintains licensing, standards, and barriers; experiences function as increasingly theatrical",
+      "Consumers: Powerless agents (powerless/trapped or powerless/constrained) \u2014 benefit from incumbent's stability but bear cost of reduced choice and higher prices; unable to switch or form alternatives"
+    ],
+    "logic_rationale": "Extractiveness (0.52): High-moderate. The incumbent captures supernormal returns during the moat's protection period, but the extraction is not maximal because: (a) some of the incumbent's advantage comes from genuine coordination value (network effects, brand quality, infrastructure stability), (b) consumers do derive some benefit from the stable ecosystem, and (c) innovation occurs within the moat even if slowed by protection. The value reflects that the moat is hybrid \u2014 partly coordination, partly extraction. The rising trajectory (0.35 \u2192 0.52) reflects accumulating barriers as incumbent advantages compound over time: network effects deepen, switching costs increase, regulatory capture tightens, and data advantages widen. Suppression (0.58): High. Multiple enforcement mechanisms constrain exit: capital barriers, regulatory licensing requirements, supplier lock-in, switching costs, brand disadvantage, and network effects all create barriers to entry or exit. But suppression is not total \u2014 niche entry, technological disruption, and regulatory reform remain possible. Theater ratio (0.48): Moderate. The moat's maintenance involves some performative elements (regulatory compliance theater, brand narratives, artificial product differentiation) but retains genuine functional content (actual network effects, real switching costs, legitimate scale advantages). The ratio is lower than regulatory constraints alone because the moat's network and switching cost mechanisms are partially real, not entirely theatrical.",
+    "perspectival_gap": "The perspectival gap between the incumbent's Rope and the blocked entrepreneur's Snare is the core diagnostic. The same mechanism (switching costs, network effects, regulatory barriers) appears as coordination to one agent and entrapment to another. This gap is not resolvable by better information or transparency \u2014 it is structural. The incumbent genuinely benefits from network stability; the blocked entrepreneur genuinely cannot enter. Both perceptions are accurate from their positions. The gap reveals that the moat's classification depends entirely on position. If the analytical observer conflates the incumbent's Rope perspective with the moat's 'true' nature, they naturalize extraction as coordination. If they focus only on the blocked entrepreneur's Snare, they miss the genuine coordination value the moat provides. The Tangled Rope classification at the institutional/moderate level captures the hybrid nature: the constraint both coordinates (enables network stability) and extracts (protects incumbent rents, blocks entry). The scaffold perspective is aspirational \u2014 it assumes that technology will eventually disrupt the moat, but the timeline is uncertain (omega: disruption_timeline). The piton perspective on regulatory apparatus suggests that enforcement is becoming increasingly theatrical: compliance burdens may exceed their original justification as the moat sustains itself through regulatory inertia. The mountain perspective risks naturalizing contingent institutional design: competition may have 'natural' winners, but the specific form that advantage takes (network lock-in, regulatory capture, switching costs) is designed, not inevitable.",
+    "directionality_logic": "Directionality (d) is determined by each agent's structural position relative to the extraction flow. Incumbent firms are beneficiaries with arbitrage options \u2014 they have low d (\u22480.10) because they can exit the moat by abandoning the market, and they benefit from the moat (negative effective extraction). Blocked entrepreneurs are victims with no exit \u2014 they have high d (\u22480.95) because they cannot enter and bear the full cost of exclusion. Aspiring competitors are victims with constrained exit options \u2014 they have moderate-high d (\u22480.60) because they can enter at high cost and can exit by pursuing adjacent markets, but the cost of both is substantial. Technology disruptors are organized agents with mobile exit \u2014 they have moderate d (\u22480.45) because they can bypass the moat entirely through innovation and do not experience extraction as binding. The regulatory apparatus benefits from the moat through institutional capture (low d \u22480.20) and experiences it as coordination (their role is to enforce the barriers). The cyclical measurement pattern (extractiveness rising 0.35 \u2192 0.52, theater ratio rising 0.38 \u2192 0.48) reflects moat accumulation: as the incumbent's advantages compound, more suppression mechanisms are required to maintain the barrier, but the functional content remains stable (theater ratio rises slowly, not sharply).",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by revealing how the same structural mechanism provides genuine coordination value (network effects, industry standards, consumer trust) while simultaneously extracting rents (supernormal incumbent returns, reduced consumer choice, suppressed competition). The mandatrophy resolution: the moat is simultaneously Rope (for the incumbent who benefits from coordination) and Snare (for the blocked entrepreneur who cannot compete). No single type is 'correct' \u2014 the presheaf over observer positions IS the answer. The Tangled Rope classification at the analytical/moderate level captures this duality: the constraint has both coordination function (genuine network effects) and extraction mechanism (artificial barriers). The theater ratio (0.48) is key: if theater were higher (> 0.70), the constraint would degrade to Piton (regulatory theater maintaining a defunct function). If theater were lower (< 0.30), it would be pure Rope (genuine coordination). At 0.48, the constraint is in the unstable region where both functions remain active. The rising extractiveness trajectory (0.35 \u2192 0.52) combined with rising theater ratio (0.38 \u2192 0.48) suggests moat accumulation: the incumbent's advantages are compounding, requiring more suppression mechanisms and increasing theatrical enforcement to maintain. This pattern is consistent with regulatory capture (the regulatory apparatus becoming theater) and network effect concentration (requiring artificial switching cost maintenance). The mandatrophy is resolved not by choosing a single type but by recognizing that the constraint is genuinely Tangled Rope \u2014 it requires active enforcement precisely because it is not a natural law (Mountain) nor pure coordination (Rope), but an institutional arrangement that must be maintained against forces that would dissolve it (technological disruption, regulatory reform, competitive entry through adjacent markets)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture",
+      "technology_disruption_cycle",
+      "consumer_switching_costs"
+    ],
+    "dual_formulation_note": "The incumbent industry moat is upstream of specific market-structure constraints (regulatory capture, switching costs, network effects) but represents a distinct structural phenomenon: the aggregate effect of multiple enforcement mechanisms protecting incumbent advantage. The upstream constraints have their own extractiveness values reflecting specific barrier types; the moat aggregates these into a single institutional structure."
+  },
+  "directionality_overrides": []
+}

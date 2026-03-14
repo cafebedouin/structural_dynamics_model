@@ -1,0 +1,217 @@
+{
+  "header": {
+    "constraint_id": "insurance_risk_stratification",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ins_risk"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Insurance Risk Stratification and Premium Extraction",
+    "topic_domain": "economic/insurance/actuarial",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "insurance_underwriters",
+      "low_risk_pools"
+    ],
+    "victims": [
+      "high_risk_individuals",
+      "adverse_selection_targets"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The High-Risk Individual",
+      "comment": "PERSPECTIVE 1: HIGH-RISK INDIVIDUAL (SNARE) \u2014 Trapped by pre-existing conditions, demographic factors, or health history. Cannot exit insurance markets (legally mandated in many jurisdictions) or move to lower-risk categories. Bears maximum extraction as premiums escalate with every new medical event. No alternative markets available; suppression is structural."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Self-Employed High-Risk Worker",
+      "comment": "PERSPECTIVE 2: SELF-EMPLOYED HIGH-RISK WORKER (TANGLED ROPE) \u2014 Faces high premiums and limited access to group plans, but retains some agency through employer status or geographic arbitrage. Can reduce premiums through lifestyle changes (coordination function) but bears significant extraction cost. Exit is possible at high cost (relocate to lower-cost region, change occupation)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Insurance Underwriter",
+      "comment": "PERSPECTIVE 3: INSURANCE UNDERWRITER (ROPE) \u2014 Experiences risk stratification as a coordination mechanism: precise categorization enables risk pooling and prevents cross-subsidization. Arbitrage exit available (alternative underwriting models, peer-to-peer insurance). Net beneficiary \u2014 extraction runs toward this institution. Classification reflects genuine coordination function: stratification solves the adverse selection problem."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Low-Risk Pool",
+      "comment": "PERSPECTIVE 4: LOW-RISK POOL (ROPE) \u2014 Benefits from stratification through lower premiums. Experiences the constraint as pure coordination: accurate risk assessment keeps their premiums low and prevents subsidization of high-risk pools. Arbitrage exit available (self-insurance, direct arrangements). Strong net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Health Equity Coalition",
+      "comment": "PERSPECTIVE 5: HEALTH EQUITY COALITION (TANGLED ROPE) \u2014 Organized agents (patient advocacy, public health authorities, regulators) see stratification as mixing coordination (actuarial accuracy) with extraction (discriminatory pricing that reproduces health inequities). Can constrain underwriting practices through regulation but cannot eliminate stratification entirely. Seeks to rebalance the coordination-extraction mix."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Framework",
+      "comment": "PERSPECTIVE 6: REGULATORY FRAMEWORK (PITON) \u2014 Insurance regulation ostensibly prevents discrimination, but the framework is largely performative: regulators prohibit explicit use of protected characteristics (race, gender) while permitting proxies (ZIP code, occupation, education) that replicate the same stratification. Theater ratio reflects regulatory capture \u2014 rules exist but enforcement creates exceptions. The constraint persists through institutional inertia."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Information Asymmetry View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal analytical perspective, risk stratification is an inherent response to information asymmetry: insurers cannot know individual risk profiles perfectly, so they use proxies. This perspective sees the stratification as a natural law of insurance markets. However, the structural data contradicts the mountain classification \u2014 the engine will identify this as a false summit, revealing that information asymmetry is manageable through alternative mechanisms (community rating, subsidized pools, transparency mandates) rather than an immutable constraint."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "proxy_vs_causation_ambiguity",
+      "question": "Does risk stratification based on proxies (ZIP code, occupation, family medical history) identify genuine causal risk factors or merely replicate historical discrimination patterns?",
+      "resolution_mechanism": "Actuarial validation studies separating correlation from causation; cross-jurisdictional analysis comparing outcomes under stratification vs community rating models",
+      "impact": "If proxies identify genuine risk: stratification is justifiable coordination (Rope dominates). If proxies replicate discrimination: stratification is extractive proxy enforcement (Snare dominates, regulatory framework fails).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether risk proxies measure genuine causation or replicate discrimination"
+    },
+    {
+      "id": "adverse_selection_quantification",
+      "question": "What proportion of insurance market instability is attributable to adverse selection vs other factors (claims inflation, underpricing, operational costs)?",
+      "resolution_mechanism": "Historical claims data analysis under different stratification regimes; comparison of market stability in community-rating vs risk-stratified systems",
+      "impact": "If adverse selection is dominant (>60%): stratification is essential coordination. If minimal (<20%): stratification is unnecessary extraction justified by exaggerated actuarial concerns.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Quantification of adverse selection as driver of stratification necessity"
+    },
+    {
+      "id": "lifestyle_modifiability_assumption",
+      "question": "Are the behavioral changes implied by risk stratification (lifestyle modifications) actually achievable for constrained agents, or does the stratification assume agency that doesn't exist?",
+      "resolution_mechanism": "Longitudinal tracking of high-risk individuals' ability to reduce premiums through behavioral change; comparison of success rates across socioeconomic strata",
+      "impact": "If achievable across strata: stratification provides legitimate coordination incentive. If impossible for constrained agents: stratification extracts from those with no realistic exit pathway (Snare, not Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether behavioral modification is achievable across risk strata"
+    },
+    {
+      "id": "regulatory_proxy_enforcement",
+      "question": "Are insurance regulators actually enforcing non-discrimination rules, or does regulatory capture permit proxy enforcement that circumvents explicit protections?",
+      "resolution_mechanism": "Analysis of regulatory enforcement actions; comparison of explicit vs proxy-based stratification patterns before/after regulatory intervention",
+      "impact": "If enforced: some Piton theater is eliminated, constraint lowers toward genuine Rope. If captured: regulatory framework is purely performative (Piton confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regulatory enforcement constrains or permits proxy discrimination"
+    },
+    {
+      "id": "alternative_coordination_feasibility",
+      "question": "Can alternative insurance models (mutual aid, community rating, subsidized pools, public option) coordinate the genuine coordination function of risk pooling without the extraction mechanism?",
+      "resolution_mechanism": "Comparative analysis of alternative models' sustainability, coverage rates, and adverse selection outcomes",
+      "impact": "If feasible: stratification is unnecessary (reclassify as Snare, not Tangled Rope). If infeasible: stratification is genuinely hybrid coordination-extraction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether alternative models can replicate coordination without extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Insurance risk stratification creates a structural tension between legitimate actuarial coordination (separating high-risk and low-risk pools to enable accurate pricing and sustainable markets) and extractive discrimination (using stratification to exclude or charge excessive premiums to unfavorable risk categories). The constraint exhibits the full diagnostic range of Deferential Realism classifications depending on the observer's structural position. For low-risk individuals and institutional underwriters, stratification solves the adverse selection problem and enables efficient markets (Rope). For high-risk individuals trapped in constrained labor markets with pre-existing conditions, stratification becomes a mechanism of perpetual extraction with no exit (Snare). For organized health equity coalitions, stratification mixes genuine coordination with extractive outcomes, requiring regulatory rebalancing (Tangled Rope). The regulatory framework designed to prevent discrimination is itself substantially performative, permitting proxy-based stratification that replicates the discrimination it ostensibly prevents (Piton). The analytical observer risks naturalizing stratification as an immutable information-asymmetry problem (Mountain), when alternative coordination mechanisms exist and have been successfully deployed in other jurisdictions. The extractiveness trajectory (0.35 \u2192 0.58 over 20 years) reflects increasing use of algorithmic risk scores and granular data harvesting, enabling more precise segmentation and higher extraction targeting. The theater ratio trajectory (0.32 \u2192 0.48) reflects the rise of algorithmic opaqueness: early stratification was transparent actuarial logic; modern stratification uses machine-learning black boxes that obscure the classification basis and prevent meaningful regulatory oversight.",
+    "key_agents": [
+      "Insurance Underwriters: Primary beneficiary (institutional/arbitrage) \u2014 capture efficiency gains and cost reduction through risk separation; can arbitrage to alternative models",
+      "Low-Risk Individuals: Secondary beneficiary (powerful/arbitrage) \u2014 benefit from lower premiums; strong bargaining position with multiple insurers",
+      "High-Risk Individuals: Primary victim (powerless/trapped) \u2014 face escalating premiums, limited market access, no realistic exit options",
+      "Adverse Selection Targets: Secondary victim (moderate/constrained) \u2014 selected out of standard risk pools, forced into substandard products at high cost",
+      "Health Equity Coalition: Organized agent (organized/constrained) \u2014 advocates for regulatory constraints on proxy discrimination; has some agency but cannot eliminate stratification",
+      "Insurance Regulators: Institutional actor (institutional/constrained) \u2014 ostensibly enforce non-discrimination rules but often captured by underwriter interests; maintain performative framework",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks treating information asymmetry as natural law rather than contingent market condition"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Risk stratification generates significant extraction for high-risk agents (premiums escalate far beyond actuarially justified levels due to cream-skimming and exclusion mechanisms), but extraction is not total (low-risk agents benefit, coordination function is real). The value reflects that stratification successfully solves the adverse selection coordination problem while simultaneously enabling substantial extraction from constrained agents. Suppression (0.62): High. Significant barriers to exit include: (1) legal mandates requiring insurance coverage in many jurisdictions, eliminating market exit; (2) pre-existing conditions and health status are largely immutable, preventing risk category changes; (3) geographic and occupational constraints limit arbitrage; (4) information asymmetry prevents high-risk individuals from challenging actuarial classifications. Theater ratio (0.48): Moderate. Early insurance stratification was relatively transparent actuarial logic; modern stratification increasingly uses algorithmic black boxes (credit scores, behavioral data, algorithmic risk models) that obscure the classification basis. Some of the performative element reflects regulatory compliance theater (non-discrimination rules are followed in letter but circumvented through proxies); some reflects genuine technical opacity.",
+    "perspectival_gap": "High-risk individuals experience this constraint as a Snare (high extraction, no exit, maximum suppression) while underwriters experience it as Rope (coordination that solves adverse selection, arbitrage available). This gap is not a measurement error \u2014 it reflects genuine structural asymmetry. The constraint simultaneously coordinates (separates pools to prevent cross-subsidization) and extracts (charges constrained agents far above actuarially justified premiums). The analytical observer risks conflating coordination function with legitimate outcome, naturalizing the extraction as necessary information-processing cost.",
+    "directionality_logic": "High-risk individuals are trapped victims (d\u21920.94, f(d)\u21921.38). Underwriters are arbitrage beneficiaries (d\u21920.08, f(d)\u2192-0.10). Low-risk individuals are mobile beneficiaries (d\u21920.22, f(d)\u21920.08). Constrained agents (self-employed, occupationally locked) are constrained victims (d\u21920.68, f(d)\u21921.08). Organized coalitions are organized agents with constrained exit (d\u21920.48, f(d)\u21920.65). The regulatory framework has institutional status but constrained exit from insurance market logic (d\u21920.45, f(d)\u21920.58). These structural derivations explain why the same constraint classifies as Snare, Rope, and Tangled Rope from different positions \u2014 the d values differ by a factor of ten, producing radically different effective extraction experiences.",
+    "mandatrophy_analysis": "UNRESOLVED MANDATROPHY: This constraint is genuinely hybrid \u2014 it solves the adverse selection coordination problem (Rope function) while simultaneously enabling asymmetric extraction (Snare outcome). The mandatrophy resolves by acknowledging that risk stratification is not correctly classified as pure extraction (Snare alone) nor as pure coordination (Rope alone). It is a Tangled Rope where the coordination and extraction functions are deeply entangled. The analytical observer's Mountain classification (information asymmetry is inherent) is a false summit \u2014 information asymmetry is real, but alternative coordination mechanisms exist (community rating, subsidized pools, transparency mandates) that achieve similar risk pooling without the same extraction mechanisms. The regulatory framework's Piton classification reveals that the rules designed to prevent extraction are largely performative \u2014 explicit protections (no discrimination by race, gender) are circumvented through proxies (ZIP code, occupation, credit score) that replicate the same effects. The health equity coalition's Tangled Rope perspective indicates that the coordination-extraction split can be rebalanced through regulatory intervention without eliminating risk stratification entirely."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "health_care_access_inequality",
+      "algorithmic_discrimination",
+      "adverse_selection_market_spiral"
+    ],
+    "dual_formulation_note": "Insurance risk stratification decomposes into multiple structurally distinct constraints: (1) actuarial coordination (risk pooling), (2) proxy-based discrimination (replication of protected class exclusion), (3) information asymmetry (market condition enabling cream-skimming), and (4) regulatory capture (performative non-discrimination). Each has different extractiveness and should be tracked separately as a constraint family if detailed decomposition is required."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.42
+    }
+  ]
+}

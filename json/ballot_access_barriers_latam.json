@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "ballot_access_barriers_latam",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ballot"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Ballot Access Barriers in Latin America",
+    "topic_domain": "political/electoral/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_parties",
+      "dominant_coalitions"
+    ],
+    "victims": [
+      "grassroots_movements",
+      "new_entrants",
+      "marginalized_communities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Grassroots Movement",
+      "comment": "PERSPECTIVE 1: GRASSROOTS MOVEMENT (SNARE) \u2014 Faces signature collection requirements (50,000-200,000 signatures), filing fees ($5,000-$50,000 USD equivalent), documentation barriers, and arbitrary electoral commission decisions. No meaningful alternative to ballot access; trapped in a system that forecloses entry. Experiences maximum extraction with no exit pathway."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Opposition Party",
+      "comment": "PERSPECTIVE 2: OPPOSITION PARTY (TANGLED ROPE) \u2014 Benefits from some structural coordination function (ballot access rules do define the electoral arena and enable predictable competition), but faces asymmetric barriers. Can mobilize resources and existing organizational infrastructure to clear thresholds, but at significant cost. Has some agency but must pay an extraction tax to participate. Suppression is high but not absolute."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Incumbent Coalition",
+      "comment": "PERSPECTIVE 3: INCUMBENT COALITION (ROPE) \u2014 Experiences ballot rules as pure coordination mechanism. Incumbent parties benefit from pre-existing ballot access, familiarity with regulatory processes, and control over electoral commissions in many contexts. Can arbitrage between formal rules and informal enforcement. Net beneficiary with minimal extraction cost."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The Electoral Reform Coalition",
+      "comment": "PERSPECTIVE 4: ELECTORAL REFORM COALITION (SCAFFOLD) \u2014 International organizations (OAS, IIDH), domestic NGOs, and cross-party reform blocs are systematizing alternative pathways: digital signature collection, reduced filing fees, post-election reimbursement, expedited vetting. Reform has sunset logic \u2014 as democratic consolidation matures and regional coordination increases, barrier reduction becomes institutionalized norm. High agency and visible exit pathway."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Electoral Commission Apparatus",
+      "comment": "PERSPECTIVE 5: ELECTORAL COMMISSION APPARATUS (PITON) \u2014 Administrative machinery for processing ballot access claims is largely performative in many jurisdictions: formally neutral processes (signature verification, document review) are applied selectively and lack transparent standards. Decisions often reflect political pressure rather than clear rules. The apparatus persists through institutional inertia \u2014 replaced by neither restructured capacity nor openly acknowledged political gatekeeping."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some ballot access threshold is inherent to electoral administration: states must have canonical ballots, and infinite candidate access creates logistical impossibility. This perspective treats minimum access barriers as a natural structural law. However, the base properties contradict pure mountain classification \u2014 suppression (0.72) and extractiveness (0.58) reveal contingent institutional choices, not immutable limits. The engine will flag this as false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "arbitrary_enforcement_vs_rule_application",
+      "question": "Are signature collection and filing requirements applied consistently and transparently, or are they selective enforcement mechanisms for political gatekeeping?",
+      "resolution_mechanism": "Audit of ballot access decisions with analysis of approval rates by party/movement; comparison of documented requirements vs. actual application; tracking of electoral commission decision appeals and reversal rates",
+      "impact": "If consistently applied: constraint reclassifies as lower-extraction Rope or Scaffold (genuine coordination with fair entry cost). If selectively applied: confirms Snare/Tangled Rope classification and reveals suppression mechanism.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether ballot access requirements are consistently applied or selectively enforced"
+    },
+    {
+      "id": "absolute_barrier_vs_cost_barrier",
+      "question": "Do ballot access barriers foreclose entry entirely (impossible to clear thresholds), or do they impose high costs that some actors can overcome?",
+      "resolution_mechanism": "Time-series analysis of successful ballot access by non-incumbent actors; measurement of actual resource requirements vs. available funding for grassroots organizations; documentation of cases where barriers were cleared vs. insurmountable",
+      "impact": "If purely cost barriers: victims experience Tangled Rope or Scaffold (not Snare). If absolute foreclosure: confirms Snare classification for powerless agents. If mixed by context: suggests constraint family decomposition (separate stories for different country contexts).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether barriers are cost-imposing or absolutely foreclosing"
+    },
+    {
+      "id": "electoral_reform_sustainability",
+      "question": "Will ballot access reforms (simplified signature collection, reduced fees, digital filing) persist once implementation begins, or will incumbent pressure reverse them?",
+      "resolution_mechanism": "Track implementation and rollback of reform measures across Latin American countries; analyze whether reforms introduced in one cycle remain in subsequent cycles; correlate persistence with change in incumbent party control",
+      "impact": "If persistent: Scaffold classification is validated \u2014 reforms represent genuine sunset of the constraint. If reversed: reforms are performative and theater_ratio remains high; constraint may reclassify as Piton.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ballot access reforms persist or are reversed by incumbent pressure"
+    },
+    {
+      "id": "signature_collection_authenticity",
+      "question": "Can signature collection requirements be met through legitimate grassroots mobilization, or are they structured to require centralized resources (paid signature collectors, established party infrastructure)?",
+      "resolution_mechanism": "Analysis of actual signature collection methods; comparison of per-signature cost for grassroots vs. incumbent-backed campaigns; assessment of whether small organizations can achieve targets through volunteer effort alone",
+      "impact": "If achievable through grassroots effort: constraint is a coordination threshold (Rope/Tangled Rope). If requires paid infrastructure: suppression mechanism confirmed and extractiveness increases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether signature collection can be accomplished by grassroots volunteers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.66
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Ballot access barriers in Latin America create a structural tension between the coordination function of defining a bounded electoral arena and the extractive function of excluding challengers to incumbent coalitions. Across the region, formal requirements for ballot access\u2014signature collection thresholds (ranging from 10,000 to 200,000), filing fees ($2,000 to $50,000 USD equivalent), documentation standards, and electoral commission vetting\u2014ostensibly serve administrative purposes but function asymmetrically: incumbent parties and dominant coalitions clear these barriers routinely; grassroots movements, new entrants, and marginalized communities face arbitrary enforcement, selective application, and effectively insurmountable costs. The constraint exhibits high suppression (0.72) because alternatives to ballot access are foreclosed: political participation outside formal electoral channels is constrained by weak party-building capacity, limited campaign finance, and legal restrictions on unregistered organizing. Theater ratio (0.68) reflects that formal neutrality in ballot access administration masks political discretion\u2014electoral commissions frame decisions as technical or procedural while applying standards selectively. The extractiveness trajectory (0.35\u21920.58 over the interval) indicates accumulation of barriers: signature requirements have increased, digital filing systems have been introduced without reducing other barriers, and commission scrutiny of documentation has intensified.",
+    "key_agents": [
+      "Grassroots Movements: Primary victims (powerless/trapped) \u2014 face signature collection barriers, filing fees, documentation requirements with no meaningful alternative to formal ballot access",
+      "Incumbent Coalition: Primary beneficiary (institutional/arbitrage) \u2014 controls electoral commission interpretation, benefits from pre-existing ballot access, can arbitrage between formal rules and informal enforcement",
+      "Opposition Parties: Secondary actor (moderate/constrained) \u2014 have organizational infrastructure and some resources to clear barriers, but must pay extraction cost; benefit from some coordination function (defined electoral arena)",
+      "Electoral Commission: Implementing institution (institutional/arbitrage) \u2014 maintains performative neutral process while enabling selective enforcement; benefits from formal authority to gate access",
+      "Electoral Reform Coalition: Organized interveners (organized/mobile) \u2014 OAS, IIDH, domestic NGOs, regional organizations pushing for simplified requirements, digital signatures, fee reduction; see sunset pathway through normalization of reform",
+      "Marginalized Communities: Victim class (powerless/identity_locked) \u2014 face compounded barriers: language requirements for documents, geographic barriers to signature collection, exclusion from formal political processes by design; identity-locked through criminalization of alternative organizing"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Incumbent parties extract benefits through the entire interval by excluding competitors during the verification window and by maintaining asymmetric enforcement. The extractiveness has increased over time (0.35\u21920.58) as barriers have been refined and formalized\u2014signature requirements have grown, filing fees have increased in real terms, and digital systems have been introduced without reducing other barriers. The constraint combines genuine coordination function (defining the electoral arena) with significant asymmetric extraction (disadvantaging new entrants). Suppression (0.72): High. Multiple mechanisms: signature collection requires sustained mobilization, filing fees represent prohibitive cost for grassroots organizations, documentation standards exclude those without formal identification, electoral commission processes lack transparency and are subject to political pressure, and alternatives to formal ballot access are legally restricted or face police enforcement. Suppression is structural (cost barriers are real) and internalized (grassroots movements often believe they cannot compete and do not attempt to clear thresholds). Theater ratio (0.68): High. Electoral commission processes are formally neutral but substantively political\u2014signature verification, document review, and eligibility determination follow stated rules but are applied selectively. The theater has increased as processes have become more technical-seeming while enforcement remains opaque. The administrative machinery performs neutrality while enabling partisan gatekeeping.",
+    "directionality_logic": "The beneficiary group (incumbent_parties, dominant_coalitions) occupies institutional power with arbitrage exit options\u2014they can afford filing fees, can mobilize signatures through party infrastructure, and have direct or indirect influence over commission decisions. Their directionality (d \u2248 0.10) yields low effective extraction because they experience the constraint as enabling coordination, not as extraction. The victim groups (grassroots_movements, new_entrants, marginalized_communities) occupy powerless or moderate power with trapped or constrained exit options\u2014signature collection requires volunteer mobilization they cannot afford to hire out, filing fees represent unavailable resources, and documentation requirements may literally exclude them (undocumented status, absence of formal identification). Their directionality (d \u2248 0.85-0.95) yields high effective extraction. The opposition parties occupy moderate power with constrained exit\u2014they can pay and mobilize but face higher costs than incumbents, and their exit options are limited by the ballot system itself (no alternative path to executive office). Their directionality (d \u2248 0.55) yields medium-high extraction. This asymmetry is the core of the constraint's hybrid character: genuine coordination function for defining the electoral arena exists alongside systematic extraction from powerless agents.",
+    "perspectival_gap": "The grassroots movement sees a Snare (maximum extraction, no exit). The opposition party sees Tangled Rope (mixed coordination and extraction, constrained exit). The incumbent sees Rope (pure coordination, arbitrage exit). The reform coalition sees Scaffold (temporary problem, sunset pathway via normalization of simpler access rules). The electoral commission sees Piton (performative neutral process maintained through institutional inertia). The analytical observer risks seeing a Mountain (ballot definition requires administrative gates)\u2014but the structural data reveals contingency. The perspectival gap widens over time as extractiveness increases (theater_ratio rises, barriers accumulate). This gap is diagnostic: if all actors converged on a single classification, the constraint would be purely coordinating or purely extracting. The gap's persistence across 10 years of measurement indicates that the constraint's hybrid character (coordination + extraction) is structural, not transitional.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: This constraint's classification as Tangled Rope rather than pure Rope (coordination) or pure Snare (extraction) is justified by the presence of both genuine coordination function (defining the electoral arena, establishing canonical ballots, preventing logistical chaos) AND asymmetric extraction (benefiting incumbents, harming new entrants). The coordination function is evidenced by the fact that opposition parties benefit from clear rules and defined electoral procedures\u2014they oppose modification not elimination of ballot access requirements. The extraction function is evidenced by the asymmetric application of requirements and the accumulation of barriers over time. If the constraint were pure Rope, all perspectives would classify similarly and extractiveness would be lower (\u22640.45). If the constraint were pure Snare, beneficiaries would not experience coordination benefits and would support barrier reduction\u2014but incumbents often resist simplification of access rules, indicating they perceive coordination value alongside extraction. The Tangled Rope classification resolves this: coordination and extraction coexist, and different power positions experience different ratios of each. The theater ratio (0.68) confirms that formal procedure provides cover for partisan gatekeeping\u2014the ritual of 'neutral administration' masks the reality of selective enforcement. This is diagnostic of Tangled Rope: active enforcement (electoral commission decisions) maintains an appearance of impartiality while enabling asymmetric outcome."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "campaign_finance_inequality_latam",
+      "media_access_concentration_latam",
+      "voter_suppression_latam"
+    ],
+    "dual_formulation_note": "Ballot access barriers are structurally coupled to campaign finance constraints and media access barriers\u2014all three restrict entry to electoral competition. However, they are decomposed into separate stories because they have different \u03b5 values and different institutional mechanisms. Ballot access (\u03b5=0.58) involves electoral commission gatekeeping; campaign finance (\u03b5\u22480.65) involves asymmetric spending access; media access (\u03b5\u22480.52) involves broadcasting regulation. The network reflects that degradation in one constraint exacerbates others."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.62
+    }
+  ]
+}

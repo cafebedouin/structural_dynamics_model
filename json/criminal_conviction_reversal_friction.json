@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "criminal_conviction_reversal_friction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ccrf"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "Criminal Conviction Reversal Friction",
+    "topic_domain": "criminal_justice/appellate_process",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "prosecutorial_agencies",
+      "conviction_preservation_incentives"
+    ],
+    "victims": [
+      "wrongly_convicted_persons",
+      "innocence_verification_system"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Wrongly Convicted Person",
+      "comment": "PERSPECTIVE 1: WRONGLY CONVICTED PERSON (SNARE) \u2014 Trapped by procedural barriers, evidentiary standards, and institutional inertia. Lacks resources for prolonged appeals, faces stigma and employment barriers. The system extracts their labor (incarceration), freedom, and life years with minimal mechanism for correction. Zero meaningful exit options."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Innocence Verification System",
+      "comment": "PERSPECTIVE 2: INNOCENCE VERIFICATION SYSTEM (SNARE) \u2014 Operates under severe resource constraints, procedural friction, and institutional resistance. Can theoretically exit (decline to pursue cases) but faces moral/ethical suppression. Experiences the constraint as high coercion with minimal coordination benefit. Must fight entrenched prosecutorial incentives to function."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Prosecutorial Agencies",
+      "comment": "PERSPECTIVE 3: PROSECUTORIAL AGENCIES (ROPE) \u2014 Benefit from conviction preservation through resource allocation, performance metrics (conviction rates), and institutional continuity. Experience the constraint as coordination: maintaining conviction finality enables prosecutorial confidence and case closure. Net beneficiary with high exit optionality."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Appellate Courts",
+      "comment": "PERSPECTIVE 4: APPELLATE COURTS (TANGLED ROPE) \u2014 Constrained by docket pressure, precedent requirements, and institutional legitimacy concerns. Benefit from finality (reduces appeals volume) but also have genuine interest in correctness. Mixed coordination (efficient case resolution) and extraction (suppression of reversal pathways) with significant enforcement requirements."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Legal Formalism and Procedural Theater",
+      "comment": "PERSPECTIVE 5: PROCEDURAL FORMALISM (PITON) \u2014 The appellate process maintains high theater through rigid evidentiary standards (newly discovered evidence rules, harmless error doctrine, Brady materiality thresholds) that appear neutral but functionally preserve convictions. These procedures persist through institutional inertia despite empirical evidence of wrongful convictions. Formalism is performative \u2014 the ritual of review appears thorough while systematically disfavoring reversal."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Finality Doctrine as Natural Law",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, conviction finality appears as an immutable requirement of legal systems: every system must eventually close cases and prevent infinite appeals. This perspective naturalizes what is actually a policy choice about error tolerance. The engine's false summit detector will identify this as naturalization \u2014 finality is not a law of nature but a contingent institutional arrangement trading error correction against system stability."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "procedural_standard_function",
+      "question": "Do strict evidentiary standards (newly discovered evidence, harmless error doctrine, Brady materiality) function as legitimate gatekeeping mechanisms or as systemic suppression of reversal pathways?",
+      "resolution_mechanism": "Empirical analysis of reversal rates for jurisdictions with strict vs permissive standards; longitudinal tracking of DNA exonerations and their relationship to evidentiary bar height; comparison of error detection rates across appeals frameworks",
+      "impact": "If legitimate gatekeeping: suppression metric should be lower (0.50-0.60). If systemic suppression: suppression metric justified at current level (0.72+). Determines whether extractiveness is 0.58 (moderate, mixed coordination) or should be 0.68+ (high, pure extraction).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether procedural standards function as legitimate gatekeeping or systemic reversal suppression"
+    },
+    {
+      "id": "prosecutorial_incentive_structure",
+      "question": "Are prosecutorial agencies actively suppressing reversal mechanisms (organized opposition to innocence projects, resource hoarding, Brady violations) or passively benefiting from structural friction?",
+      "resolution_mechanism": "Documentary analysis of prosecutorial responses to exoneration cases; comparison of Brady violation rates and patterns across jurisdictions; tracking of prosecutorial resource allocation to oppose reversals",
+      "impact": "If active suppression: snare classification is solid (high intentional extraction). If passive benefit from friction: constraint may be better classified as rope with extractive byproduct; suppression metric could be 0.55-0.65 instead of 0.72.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether prosecutorial agencies actively suppress reversals or passively benefit from structural friction"
+    },
+    {
+      "id": "resource_constraint_materiality",
+      "question": "Would innocence verification systems achieve significantly different reversal rates if given equivalent resources to prosecutorial agencies, or does institutional resistance prevent resource solutions?",
+      "resolution_mechanism": "Comparative analysis of reversal rates in resource-rich vs resource-poor innocence organizations; post-funding analysis of organizations receiving major grant infusions; structural interviews with innocence practitioners on resource-to-reversal elasticity",
+      "impact": "If resource-elastic: constraint could transition to rope/tangled_rope with targeted funding (policy-solvable). If resource-inelastic: extraction is structural, not contingent on funding, supporting snare classification and justifying high suppression metric.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether reversal barriers are resource constraints or structural institutional resistance"
+    },
+    {
+      "id": "collective_action_possibility",
+      "question": "Can wrongly convicted persons and innocence advocates organize into a coalition that shifts the institutional balance toward reversal, or is trapped status immutable by structural barriers?",
+      "resolution_mechanism": "Historical analysis of innocence movements in states with coordinator power; case studies of jurisdictions where organized pressure shifted reversal standards; identification of critical mass thresholds where political coalition capacity emerges",
+      "impact": "If coalition-capable: powerless agent classification could upgrade to organized at longer time horizons (generational); classification might shift from snare toward tangled_rope. If coalition-blocked: snare classification persists; trapped status is confirmed as immutable structural condition.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether trapped victims can achieve coalition power to shift institutional balance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.56
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Criminal conviction reversal friction represents a structural constraint in appellate systems where institutional, procedural, and resource barriers systematically suppress the correction of wrongful convictions. The constraint operates between trapped victims (wrongly convicted persons) who bear the full cost of systemic error and institutional beneficiaries (prosecutorial agencies, conviction preservation incentives) who benefit from conviction finality and resource scarcity in appeal systems. The extractiveness of 0.58 reflects that the system extracts freedom, time, and life opportunity from those it has wrongly convicted while maintaining appearance of due process through theatrical procedural review. Suppression of 0.72 captures the multiple barriers to reversal: strict evidentiary standards (newly discovered evidence rules), procedural finality doctrines, resource asymmetry between prosecution and defense, institutional resistance to reopening cases, and appellate docket pressure that creates disincentives for reversal. Theater ratio of 0.68 reflects that appellate review maintains performative correctness (written opinions, standards of review, evidentiary hearings) while functionally preserving convictions through procedural friction rather than evidence-based reversal.",
+    "key_agents": [
+      "Wrongly Convicted Persons: Primary victims (powerless/trapped) \u2014 bear full extraction of freedom and life years; lack resources and legal standing for reversal",
+      "Prosecutorial Agencies: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from conviction preservation, resource scarcity, and performance metrics tied to conviction rates",
+      "Innocence Verification System: Secondary victim (moderate/constrained) \u2014 operates under severe resource constraints, procedural barriers, and institutional resistance; moral pressure prevents exit despite constrained options",
+      "Appellate Courts: Institutional actor (organized/constrained) \u2014 constrained by docket pressure and legitimacy concerns; benefit from finality while having genuine correctness interest",
+      "Legal Formalism and Procedural Theater: Institutional mechanism (institutional/arbitrage) \u2014 maintains appearance of due process while functionally preserving convictions through rigid evidentiary standards",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing finality doctrine as immutable legal requirement rather than contingent policy choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts significant value from wrongly convicted persons (freedom, time, opportunity, dignity) while providing little coordination benefit to victims. The extracted value accrues to prosecutorial agencies (conviction rate metrics, resource allocation, institutional continuity) and legal formalism (legitimacy through appearance of review). The metric reflects that extraction is substantial but not absolute \u2014 some reversals occur, and DNA evidence has forced reform in high-profile cases. The trajectory from 0.35 to 0.58 shows that extractive friction has increased as institutional resistance to reversal has hardened and evidentiary standards have become more restrictive. Suppression (0.72): High. Multiple barriers suppress reversal pathways: (1) Procedural barriers (harmless error doctrine, newly discovered evidence rules that require showings of materiality and impact); (2) Resource asymmetry (prosecution has vastly more investigative resources than defense appeals); (3) Institutional inertia (courts reluctant to revisit settled convictions due to legitimacy concerns and docket pressure); (4) Brady violation suppression (materiality standard requires showing that withheld evidence would have changed outcome, a high bar); (5) Temporal barriers (statute of limitations on motions, timeliness requirements that trap claims). Suppression is not total \u2014 some mechanisms exist (DNA testing statutes, actual innocence claims) \u2014 but barriers are substantial and require wealthy/privileged access (innocence organizations, pro bono counsel). Theater ratio (0.68): Moderate-high. Appellate process maintains significant performative content: written opinions, standards of review, evidentiary hearings, reasoned analysis all create appearance of thorough correctness verification. Yet the functional outcome is conviction preservation \u2014 theater disguises systematic friction. The trajectory from 0.52 to 0.68 shows theater increasing as procedures become more elaborate (harmless error frameworks, Brady materiality standards) while reversals become less frequent.",
+    "perspectival_gap": "The wrongly convicted person perceives pure extraction (Snare) \u2014 the system takes their freedom with high procedural friction and low correction rate. The innocence verification system perceives extraction with moral pressure (Snare with constrained exit) \u2014 they have the option to stop pursuing cases but face ethical suppression. Prosecutorial agencies perceive coordination (Rope) \u2014 conviction finality enables confidence and closure; they benefit from the constraint. Appellate courts perceive mixed coordination and extraction (Tangled Rope) \u2014 they benefit from docket management (finality) but have genuine correctness interest; their suppression is constrained by legitimacy concerns. The legal system's formalism perceives its own degradation (Piton) \u2014 procedures persist through institutional inertia despite showing limited reversal function. The civilizational observer perceives natural law (Mountain) \u2014 finality appears immutable \u2014 but this is a false summit that naturalizes what is actually a contingent institutional arrangement balancing speed against accuracy.",
+    "directionality_logic": "Directionality derives from structural position: wrongly convicted persons are victims with trapped exit (d \u2248 0.95, f(d) \u2248 1.42) \u2014 maximum experienced extraction. Innocent verification systems are also victims but with constrained exit (d \u2248 0.75, f(d) \u2248 1.10) \u2014 high but not maximum extraction, with some residual agency. Prosecutorial agencies are beneficiaries with arbitrage exit (d \u2248 0.10, f(d) \u2248 -0.02) \u2014 they experience the constraint as coordination or even subsidy. The scope modifier (national scale, \u03c3=1.0) does not amplify or dampen chi for this constraint \u2014 the verification difficulty and institutional complexity are at national level. The directionality pipeline produces asymmetric experienced extractiveness: maximum for trapped victims, near-zero or negative for beneficiaries with arbitrage options, moderate for constrained secondary actors.",
+    "mandatrophy_analysis": "SNARE DIAGNOSIS: The constraint clearly exhibits snare properties \u2014 it extracts from victims with high suppression and minimal coordination benefit. The snare identification is not threatened by the tangled_rope or rope perspectives from other actors, because those represent the beneficiaries' and intermediate actors' genuine experience, not mislabeling of the constraint's true nature. The mandatrophy is resolved by noting that the snare exists within a larger institutional ecology (appellate courts, legal formalism) that contains tangled_rope and piton elements. The wrongly convicted person's snare is real. The prosecutor's rope experience is also real. Both are accurate readings from their respective positions. The theater ratio increase (0.52 to 0.68) supports the snare diagnosis \u2014 as procedures have become more elaborate without increasing reversals, theater has risen, concealing what is functionally a pure-extraction mechanism under appearance of thorough review. The false summit at the civilizational perspective reveals that naturalization of finality is the primary mechanism by which the snare persists: treating finality as a law of nature prevents questioning the institutional arrangements that enforce it."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "prosecutorial_resource_asymmetry",
+      "appellate_docket_pressure",
+      "brady_violation_materiality_standard"
+    ],
+    "dual_formulation_note": "Criminal conviction reversal friction is downstream of specific procedural mechanisms (Brady rules, harmless error doctrine, newly discovered evidence standards) and upstream of systemic wrongful conviction persistence. The constraint represents the aggregate effect of multiple institutional arrangements that individually appear neutral but collectively suppress reversal pathways. Separate constraint stories may be written for specific procedural mechanisms (e.g., harmless_error_doctrine, brady_materiality_standard) with their own \u03b5 values; this story captures the aggregate structural constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

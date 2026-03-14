@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "amyloid_targeting_drug_approval",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "amyloid"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Amyloid-Targeting Drug Approval Bottleneck",
+    "topic_domain": "pharmaceutical/neurodegeneration/regulatory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharmaceutical_companies",
+      "early_stage_patient_advocates"
+    ],
+    "victims": [
+      "later_stage_patients",
+      "patient_safety_monitoring_systems"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Later-Stage Alzheimer's Patient",
+      "comment": "PERSPECTIVE 1: LATER-STAGE PATIENT (SNARE) \u2014 Trapped by disease progression timeline and regulatory sequencing. Cannot exit the constraint; must either accept amyloid-targeting drugs with uncertain safety profiles or progress without treatment. Bears full extraction cost: early-access cohorts receive therapies while later-stage patients wait through approval cycles, by which time they are often ineligible due to disease severity thresholds. No alternatives and no agency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Pharmaceutical Company",
+      "comment": "PERSPECTIVE 2: PHARMACEUTICAL COMPANY (ROPE) \u2014 Net beneficiary (institutional/arbitrage). Experiences constraint as pure coordination: rapid approval pathways, accelerated review programs, and expanded access programs serve legitimate role of getting drugs to patients while maintaining safety oversight. Can exit via alternative regulatory jurisdictions if domestic approval slows. Extraction runs toward this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Early-Stage Patient Advocate",
+      "comment": "PERSPECTIVE 3: EARLY-STAGE ADVOCATE (TANGLED ROPE) \u2014 Mixed position. Benefits from accelerated access programs that enable treatment at optimal disease stage; but also trapped by the constraint structure: advocates must endorse expanded access to gain access, which suppresses safety monitoring and creates extraction for later-stage cohorts. Moderate power, constrained by funding and visibility dependence on pharmaceutical industry partnerships."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Real-World Evidence Coalition",
+      "comment": "PERSPECTIVE 4: REAL-WORLD EVIDENCE COALITION (SCAFFOLD) \u2014 Organized actors (academic centers, patient registries, decentralized trial networks) see accelerated approval as temporary coordination problem with sunset: post-marketing surveillance infrastructure, real-world evidence databases, and adaptive trial designs are creating alternative verification pathways. Organized agents have mobility and agency. Sunset logic: as real-world evidence systems mature, the regulatory gap between accelerated and traditional approval narrows."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Regulatory Approval Theater",
+      "comment": "PERSPECTIVE 5: REGULATORY APPROVAL SYSTEM (PITON) \u2014 The accelerated approval pathway itself is degraded institutional theater. Biomarker endpoints (amyloid PET reduction, phosphorylated tau) have weak correlation with clinical outcomes; yet approval relies heavily on these proxy metrics. Post-market safety monitoring is performative: adverse event reporting systems are slow, causal attribution is difficult, and withdrawal from market is rare even when safety concerns emerge. The system persists through inertia despite declining functional verification of clinical benefit."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational view, some approval lag is inherent to neurodegenerative disease research: cognitive endpoints are hard to measure, patient heterogeneity is extreme, and the gap between biomarker changes and clinical outcomes is a structural feature of AD biology, not regulatory choice. This perspective naturalizes the approval bottleneck as an immutable property of the disease domain. However, the structural data contradicts this classification \u2014 the engine will flag this as a false summit, revealing that 'inherent disease complexity' naturalizes what is actually a contingent alignment of incentives between regulators, industry, and patient advocates."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "amyloid_biomarker_sufficiency",
+      "question": "Do amyloid biomarker changes (PET reduction, tau pathology decline) constitute adequate evidence of clinical benefit, or are they proxy metrics masking persistent cognitive decline?",
+      "resolution_mechanism": "Longitudinal comparison of amyloid reduction magnitude vs clinical cognitive slope; meta-analysis of post-market cognitive outcomes in patients treated under accelerated approval vs those in standard trial cohorts; autopsy data on amyloid clearance vs neurodegeneration pathology",
+      "impact": "If biomarkers are sufficient: the accelerated pathway provides genuine early treatment benefit (rope/scaffold classification upheld). If biomarkers decouple from clinical outcomes: the constraint is extractive (snare/tangled_rope classification strengthened), using patient hope and biomarker theater to justify expanded access while clinical benefit remains unproven.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether amyloid biomarkers predict clinical cognitive outcomes"
+    },
+    {
+      "id": "safety_monitoring_detection_lag",
+      "question": "What is the median time between drug administration and adverse event detection in post-market surveillance systems for amyloid-targeting monoclonals? How does this lag compare to the disease progression window?",
+      "resolution_mechanism": "Analysis of FDA adverse event database (FAERS) signal detection timelines; comparison to known pharmacokinetics and disease progression rates; audit of post-market safety commitments vs actual monitoring intensity",
+      "impact": "If detection lag < 6 months and disease window > 5 years: safety system is functional. If detection lag > 18 months: safety monitoring is theater, adverse events are suppressed during window when early adopters still benefit, and later-stage patients bear discovery cost.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Time lag in post-market adverse event detection"
+    },
+    {
+      "id": "patient_stage_selection_bias",
+      "question": "Are early-stage patients preferentially enrolled in accelerated approval programs while later-stage patients are excluded, creating artificial efficacy signal through selection rather than drug effect?",
+      "resolution_mechanism": "Comparison of baseline disease severity, cognitive reserve, and comorbidity profiles in accelerated approval cohorts vs traditional trial arms; disease stage distribution in expanded access programs vs patient registry populations seeking treatment",
+      "impact": "If strong selection bias exists: the apparent efficacy is artifact of patient stratification, not drug benefit. The snare classification is confirmed \u2014 later-stage patients are trapped by stage-based eligibility criteria that screen in responders and screen out those most desperate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Disease stage selection in accelerated approval cohorts"
+    },
+    {
+      "id": "regulatory_arbitrage_incentives",
+      "question": "Do international regulatory differences (EMA vs FDA vs China approval standards) create incentives for pharmaceutical companies to pursue approval in the most lenient jurisdiction first, creating expectation effect in more conservative jurisdictions?",
+      "resolution_mechanism": "Timeline analysis of regulatory applications across jurisdictions; correlation between approval in one jurisdiction and subsequent approval decisions in others; evidence of patient expectation pressure following earlier approval elsewhere",
+      "impact": "If arbitrage incentives are strong: the constraint is institutional (arbitrage exit for beneficiary is real), but the extraction mechanism targets patients in conservative-regulation jurisdictions who wait longer. Tangled rope classification confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Regulatory arbitrage effects on approval sequencing"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "The accelerated drug approval pathway for amyloid-targeting therapies in Alzheimer's disease creates a structural tension between early access for patients with progressive neurodegenerative disease and the epistemic and safety requirements for validating clinical benefit. The constraint exhibits the full spectrum of DR classifications depending on observer position. The pharmaceutical beneficiary experiences this as coordination (Rope) \u2014 a mechanism for getting therapies to patients. Early-stage patient advocates experience mixed coordination and extraction (Tangled Rope) \u2014 access comes with suppressed safety monitoring. Later-stage patients experience pure extraction (Snare) \u2014 they are trapped by disease progression while earlier cohorts receive treatments that may be clinically unproven. The regulatory system itself is degraded institutional theater (Piton) \u2014 biomarker endpoints substitute for clinical outcomes, post-market surveillance is slow and weak, and the system persists through inertia despite weak clinical evidence. Real-world evidence coalitions see this as a temporary coordination problem with sunset (Scaffold) \u2014 alternative verification pathways (adaptive trials, decentralized monitoring) will eventually replace accelerated approval. The analytical observer risks naturalizing this as an immutable feature of neurodegenerative disease research (Mountain), but the structural data reveals it as a contingent alignment of regulatory incentives, industry timelines, and patient hope.",
+    "key_agents": [
+      "Later-Stage Alzheimer's Patients: Primary victim (powerless/trapped) \u2014 cannot exit constraint; must accept drugs with uncertain clinical benefit or progress untreated; disease timeline creates time-lock that prevents later access",
+      "Pharmaceutical Companies: Primary beneficiary (institutional/arbitrage) \u2014 capture revenue and market position during extended approval periods; can exit via regulatory arbitrage across jurisdictions",
+      "Early-Stage Patient Advocates: Secondary beneficiary (moderate/constrained) \u2014 benefit from accelerated access but trapped by pharmaceutical industry dependence; must suppress safety concerns to maintain funding",
+      "Real-World Evidence Coalition: Organized actors (organized/mobile) \u2014 academic centers, patient registries building alternative verification pathways with sunset logic",
+      "Regulatory Approval System: Institutional actor (institutional/arbitrage) \u2014 maintains performative biomarker verification while post-market safety monitoring remains weak",
+      "Patient Safety Monitoring Systems: Victim (institutional/trapped) \u2014 adverse event detection lags months to years behind disease progression; system constraints prevent timely signal detection"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high and rising. The constraint extracts from later-stage patients through three mechanisms: (1) disease stage eligibility criteria that screen in responders and screen out those most desperate, (2) approval timeline that advances early-stage cohorts while later-stage patients wait, and (3) biomarker theater that substitutes for clinical outcome verification, allowing drugs with uncertain clinical benefit to be approved and marketed. The rising trajectory (0.28 \u2192 0.52) reflects increasing reliance on biomarker proxies and expanding patient access programs that depend on reduced post-market surveillance. Suppression (0.68): High. Barriers to exit include: disease progression timeline (patients cannot wait indefinitely), cognitive decline (patients cannot participate in standard trials once disease advances), regulatory stage-eligibility criteria that lock in early-stage preference, and information asymmetry (biomarker changes are visible to regulators while clinical outcomes are diffuse and long-term). Theater ratio (0.64): Moderate-high and rising. The system uses biomarker endpoints (amyloid PET reduction, tau pathology changes) as proxy validation while the actual clinical endpoint \u2014 cognitive and functional decline \u2014 remains weakly correlated. Post-market safety monitoring is performative: adverse event reporting relies on healthcare provider vigilance in patients often seen by multiple specialists; causal attribution is difficult; withdrawal from market is rare even when safety signals emerge. The rising trajectory (0.42 \u2192 0.64) reflects increasing substitution of biomarker theater for clinical verification as more drugs enter the space.",
+    "directionality_logic": "Pharmaceutical companies (beneficiary/institutional/arbitrage) experience low d and negative effective extraction \u2014 the system benefits them through expanded access programs, reduced trial requirements, and rapid market entry. Later-stage patients (victim/powerless/trapped) experience high d and maximum effective extraction \u2014 they have no alternatives, no exit options, and cannot organize (individually scattered across healthcare systems). Early-stage advocates (moderate/constrained) experience intermediate d because they benefit from accelerated access (lowering d toward beneficiary) but also bear extraction risk through suppressed safety data (raising d toward victim). The deriv chain produces different \u03c7 values for each agent despite identical base extractiveness, reflecting their different structural positions relative to the approval flow. Real-world evidence organizations (organized/mobile) experience reduced d because they have exit options (can build parallel verification systems) and organizational capacity (can mobilize resources), placing them near the rope/scaffold boundary rather than snare extraction.",
+    "perspectival_gap": "The pharmaceutical company sees this as pure coordination (Rope) \u2014 a mechanism enabling therapy delivery. Early-stage advocates see mixed coordination and extraction (Tangled Rope) \u2014 access comes with embedded asymmetry. Later-stage patients see pure extraction (Snare) \u2014 the system extracts their disease progression uncertainty as the price of early-stage access. The regulatory system sees its own ritual as degraded (Piton) \u2014 biomarker endpoints are weak proxies; post-market safety is theater; the system persists because alternatives haven't yet matured. Real-world evidence coalitions see temporary problem with exit path (Scaffold) \u2014 adaptive trials and decentralized monitoring will eventually provide verification without the delay. The analytical observer risks seeing natural law (Mountain) \u2014 'neurodegenerative diseases are inherently hard to measure' \u2014 but this naturalizes what is actually a regulatory choice: to prioritize speed and industry incentives over verification precision, justified by disease urgency.",
+    "mandatrophy_analysis": "DIAGNOSTIC EXEMPLAR FOR TANGLED ROPE: This constraint demonstrates why tangled rope differs from both rope and snare. A pure rope (like a consensus safety standard) would coordinate without extracting \u2014 all participants benefit from the standard. A pure snare (like predatory lending) would extract without coordinating \u2014 the beneficiary gains only at others' expense. The amyloid pathway is tangled rope because: (1) it genuinely coordinates therapy delivery to early-stage patients who would benefit (coordination function is real), but (2) it does this through mechanisms (accelerated approval, biomarker theater, weak post-market surveillance) that systematically extract from later-stage patients and safety monitoring systems (asymmetric extraction is real), and (3) both functions are required for the constraint to exist. Remove the coordination function and you lose the apparent legitimacy; remove the extraction and you lose the mechanism that enables speed. Tangled rope is the only type that captures this hybrid logic. The mandatrophy is resolved by recognizing that the classification must reflect BOTH functions or it's false. A benign 'accelerated access pathway' framing (rope) ignores the systematic harm to later-stage cohorts. A purely malicious 'patient exploitation' framing (snare) ignores that early-stage patients genuinely benefit from speed. Tangled rope holds both truths simultaneously."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "biomarker_proxy_validation",
+      "post_market_safety_monitoring",
+      "neurodegenerative_clinical_trial_design"
+    ],
+    "dual_formulation_note": "The amyloid targeting drug approval constraint is upstream of specific biomarker proxy sufficiency claims (does amyloid reduction predict cognitive outcomes?) and post-market safety monitoring infrastructure. Each downstream constraint has its own \u03b5 reflecting empirical status of the specific claim; the approval bottleneck has its own \u03b5 reflecting the career and regulatory incentive asymmetry between early-stage and later-stage patient cohorts. Decomposed as constraint family: approval_bottleneck (this story, \u03b5=0.52) \u2192 biomarker_proxy_validation (\u03b5=0.68, snare of therapeutic optimism) \u2192 post_market_surveillance (\u03b5=0.45, tangled rope of liability vs patient access)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

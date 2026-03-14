@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "manufacturing_novelty_risk",
+    "version": "1.0",
+    "generated_date": "2025-01-10",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mfg_novelty"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.74,
+    "claimed_type": "piton",
+    "human_readable": "Manufacturing Novelty Risk in Unboxed Assembly Process",
+    "topic_domain": "automotive_manufacturing/autonomous_systems/production_engineering",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "executive_leadership",
+      "innovation_narrative_consumers"
+    ],
+    "victims": [
+      "production_engineering_teams",
+      "supply_chain_partners",
+      "capital_allocation_efficiency"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Production Engineering Teams",
+      "comment": "PERSPECTIVE 1: PRODUCTION ENGINEERING TEAMS (SNARE) \u2014 Trapped by organizational commitment to unproven process. Cannot exit without career damage. Bear full cost of impossible targets: 10-second cycle time with no demonstrated volume production path. Suppression is structural \u2014 speaking up about infeasibility risks retaliation. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Supply Chain Partners",
+      "comment": "PERSPECTIVE 2: SUPPLY CHAIN PARTNERS (TANGLED ROPE) \u2014 Constrained by contractual commitments and capital investment in novel tooling. Experience both coordination (access to high-volume customer) and extraction (retooling costs for unproven process, payment terms risk). Can exit but at significant cost. Mixed coordination-extraction hybrid."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Executive Leadership",
+      "comment": "PERSPECTIVE 3: EXECUTIVE LEADERSHIP (ROPE) \u2014 Primary beneficiary. Captures narrative value and stock price premium from innovation claims during the announcement-to-reality window. Experiences constraint as coordination: communicating manufacturing ambition signals technical leadership. Can exit via stock sales or career mobility. Net beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Manufacturing Innovation Theater",
+      "comment": "PERSPECTIVE 4: MANUFACTURING INNOVATION THEATER (PITON) \u2014 The constraint's primary function has atrophied. Originally, manufacturing innovation announcements served genuine coordination: signaling capability to suppliers, attracting engineering talent, justifying capital allocation. Now the function is largely performative: cycle time targets are set for narrative impact rather than engineering feasibility. The ritual persists through institutional inertia \u2014 retracting the claim would damage credibility more than maintaining the theater. High theater ratio reflects that the 10-second target is a symbolic goal, not an operational plan."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Industry Standards Bodies",
+      "comment": "PERSPECTIVE 5: INDUSTRY STANDARDS BODIES (SCAFFOLD) \u2014 Organized agents (SAE, ISO, automotive engineering consortia) see novel manufacturing processes as temporary coordination challenges with sunset logic. As production data accumulates, either the process proves viable (becomes new standard) or fails (reverts to proven methods). The constraint has a natural resolution timeline: 3-5 years to demonstrate volume production or abandon the approach. Low effective extraction because the coalition has agency and sees an exit path."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, manufacturing innovation requires risk-taking, and some novel processes will fail. The constraint exhibits both genuine coordination (pushing manufacturing state-of-art forward benefits the industry) and extraction (premature commitment to unproven process extracts from engineering teams and capital efficiency). The analytical classification is tangled_rope rather than the claimed piton because the base extractiveness (0.38) and suppression (0.42) exceed piton thresholds when viewed from positions with less exit capacity than the executive beneficiaries."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cycle_time_achievability_threshold",
+      "question": "What cycle time is actually achievable with parallel-module assembly at volume production, and what is the timeline to reach it?",
+      "resolution_mechanism": "Production ramp data over 18-24 months; comparison of actual cycle times to target; defect rate correlation with cycle time pressure",
+      "impact": "If achievable cycle time approaches 10 seconds within 24 months: constraint resolves as legitimate innovation risk (scaffold). If cycle time remains above 30 seconds: constraint confirmed as extraction mechanism (snare from more perspectives).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Achievable cycle time and timeline for parallel-module assembly"
+    },
+    {
+      "id": "capital_allocation_counterfactual",
+      "question": "What alternative manufacturing improvements could the capital investment in Unboxed assembly have funded, and what would their ROI have been?",
+      "resolution_mechanism": "Comparative analysis of capital efficiency: cost per unit of capacity increase for Unboxed vs incremental improvements to proven sequential assembly; opportunity cost calculation",
+      "impact": "If Unboxed ROI exceeds alternatives: innovation risk justified. If alternatives would have delivered higher ROI with lower risk: capital misallocation confirmed, increasing extractiveness assessment.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Opportunity cost of capital allocation to novel vs proven processes"
+    },
+    {
+      "id": "narrative_value_vs_operational_cost",
+      "question": "Does the stock price premium from innovation narrative exceed the operational cost of pursuing unproven manufacturing process?",
+      "resolution_mechanism": "Event study analysis: stock price response to Unboxed announcements vs cumulative cost of development, retooling, and production delays; comparison to peer companies with conservative manufacturing strategies",
+      "impact": "If narrative value exceeds cost: extraction is rational from shareholder perspective (though still extractive from engineering team perspective). If cost exceeds value: pure value destruction, confirming piton classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether narrative value justifies operational cost"
+    },
+    {
+      "id": "engineering_team_suppression_mechanism",
+      "question": "Is the suppression of engineering dissent structural (retaliation risk, career damage) or cultural (optimism bias, groupthink)?",
+      "resolution_mechanism": "Post-exit interviews with departed engineers; internal communication analysis; comparison of publicly stated timelines vs internal engineering estimates",
+      "impact": "If structural: suppression metric should be higher (0.60+), strengthening snare classification from engineering perspective. If cultural: suppression is lower but theater ratio is higher (groupthink is performative alignment).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Mechanism of engineering dissent suppression"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "theater_announcement"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.52,
+      "id_override": "theater_prototype"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.68,
+      "id_override": "theater_pilot"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 36,
+      "value": 0.74,
+      "id_override": "theater_current"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18,
+      "id_override": "extract_announcement"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.25,
+      "id_override": "extract_prototype"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.33,
+      "id_override": "extract_pilot"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 36,
+      "value": 0.38,
+      "id_override": "extract_current"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 36
+  },
+  "commentary": {
+    "narrative_context": "The Unboxed manufacturing process represents a novel parallel-module assembly approach targeting 10-second cycle time versus traditional 60-second sequential assembly. Announced with significant fanfare and capital commitment, the process has no demonstrated volume production track record. The constraint exhibits piton characteristics: what began as genuine manufacturing innovation (coordination function: pushing state-of-art forward, attracting engineering talent, justifying capital allocation) has degraded into largely performative theater as the gap between announced targets and engineering feasibility becomes apparent. The theater_ratio (0.74) reflects that cycle time targets are now set for narrative impact rather than operational planning. Production engineering teams are trapped by organizational commitment to the unproven process, bearing the cost of impossible targets. Executive leadership captures narrative value during the announcement-to-reality window. Supply chain partners face mixed coordination-extraction: access to high-volume customer but retooling costs for unproven process. The constraint is downstream of hardware_before_software_inversion: the manufacturing novelty is partly driven by the need to compensate for software delays with hardware differentiation claims.",
+    "key_agents": [
+      "Production Engineering Teams: Primary victim (powerless/trapped) \u2014 cannot exit without career damage; bear full cost of infeasible targets and suppression of dissent",
+      "Supply Chain Partners: Secondary victim (moderate/constrained) \u2014 face retooling costs and payment risk; also benefit from access to high-volume customer",
+      "Executive Leadership: Primary beneficiary (institutional/arbitrage) \u2014 captures narrative value and stock premium during announcement-to-reality window; can exit via stock sales",
+      "Capital Allocation Efficiency: Abstract victim (powerless/trapped) \u2014 opportunity cost of capital deployed to unproven process vs incremental improvements to proven methods",
+      "Industry Standards Bodies: Organized agents (organized/mobile) \u2014 see novel processes as temporary coordination challenges with natural resolution timeline",
+      "Innovation Narrative Consumers: Secondary beneficiary (moderate/mobile) \u2014 investors and media who reward innovation claims; can exit positions when reality diverges from narrative"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. Executive leadership captures career and stock price benefits during the 3-5 year announcement-to-reality window, while production engineering teams bear the cost of impossible targets and supply chain partners face retooling risk. The extraction is not as severe as a pure snare because some genuine innovation attempt exists, but it exceeds coordination-only levels because targets are set for narrative impact rather than engineering feasibility. Suppression (0.42): Moderate. Engineering teams face career risk for dissenting on feasibility; supply chain partners face contractual lock-in; but suppression is not total \u2014 some internal pushback occurs and external analysts question timelines. Theater ratio (0.74): High. The constraint's primary function has atrophied from genuine innovation coordination to performative signaling. Cycle time targets (10 seconds) are symbolic rather than operational. The ritual persists through institutional inertia \u2014 retracting would damage credibility more than maintaining the theater. Theater has increased over the interval as the gap between target and reality widened.",
+    "directionality_logic": "Executive leadership is the primary beneficiary with arbitrage exit options \u2014 they capture narrative value through stock appreciation and can exit positions or roles before production reality becomes apparent. This produces low directionality (d \u2248 0.15) and low or negative effective extraction from their perspective. Production engineering teams are primary victims with trapped exit options \u2014 they cannot leave without career damage and bear the full cost of infeasible targets. This produces high directionality (d \u2248 0.92) and maximum effective extraction. Supply chain partners are secondary victims with constrained exit options \u2014 they face retooling costs and contractual commitments but can exit at significant cost. This produces moderate directionality (d \u2248 0.58) and moderate effective extraction. The piton classification derives from the theater gate (0.74 \u2265 0.70) rather than from high chi across all perspectives. The analytical perspective classifies as tangled_rope rather than piton because the base metrics (\u03b5=0.38, \u03c3=0.42) reveal genuine extraction alongside the performative function.",
+    "perspectival_gap": "This constraint demonstrates how a single structural phenomenon \u2014 commitment to unproven manufacturing process \u2014 appears differently depending on the observer's position. Executive leadership sees coordination (rope): they are solving the legitimate problem of signaling technical leadership and justifying capital allocation. Industry standards bodies see a temporary problem with a sunset (scaffold): novel processes either prove viable or fail within a predictable timeline. The manufacturing innovation theater itself sees its own degraded ritual (piton): the function has atrophied from genuine coordination to performative signaling. Supply chain partners see mixed coordination and extraction (tangled_rope): the system both enables (access to customer) and constrains (retooling risk) their business. Production engineering teams see pure extraction (snare): they are trapped by impossible targets with no exit path. The analytical observer sees tangled_rope rather than the claimed piton: the base extractiveness and suppression metrics reveal genuine extraction that exceeds what the piton classification would suggest when viewed from less privileged positions.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by showing that the piton classification is perspectival \u2014 it accurately describes the executive and institutional view (degraded coordination ritual maintained through inertia) but masks the snare experienced by trapped engineering teams and the tangled_rope experienced by constrained supply chain partners. The mandatrophy is not 'piton vs snare' but 'piton from the beneficiary perspective, snare from the victim perspective, tangled_rope from the analytical perspective.' The theater_ratio gate (0.74) correctly identifies the performative nature of the constraint, but the base extractiveness (0.38) and suppression (0.42) reveal that real extraction occurs alongside the theater. The analytical classification as tangled_rope rather than piton reflects this: the constraint has both a degraded coordination function (theater) and genuine asymmetric extraction (career risk, capital misallocation, supplier lock-in)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of hardware_before_software_inversion: the manufacturing novelty is partly driven by the need to compensate for software delays with hardware differentiation claims. The upstream constraint (software development delays forcing premature hardware commitments) creates pressure for manufacturing innovation announcements even when engineering feasibility is uncertain."
+  },
+  "directionality_overrides": []
+}

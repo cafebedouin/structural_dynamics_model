@@ -1,0 +1,193 @@
+{
+  "header": {
+    "constraint_id": "genetic_equity_access_barrier",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "geneq"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Genetic Equity Access Barrier in Precision Medicine",
+    "topic_domain": "healthcare/biomedics/social_equity",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_income_ancestry_groups",
+      "genetic_testing_companies",
+      "research_institutions_with_funding"
+    ],
+    "victims": [
+      "underrepresented_populations",
+      "health_equity_outcomes",
+      "global_south_nations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Low-Income Patient in Non-European Ancestry Background",
+      "comment": "PERSPECTIVE 1: LOW-INCOME PATIENT WITH NON-EUROPEAN ANCESTRY (SNARE) \u2014 Trapped by economic barriers (testing costs $500-5000), genetic reference databases 80% European ancestry (rendering prediction accuracy <50% for African/Asian/Indigenous genomes), and clinical skepticism about non-European genetic variants. No exit mechanism. Bears full extraction cost: denied precision treatment options, excluded from clinical trials, forced into generic medicine protocols. Maximum experienced suppression \u2014 cannot afford testing, cannot access knowledge, cannot exit the constraint."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Public Health System in Middle-Income Country",
+      "comment": "PERSPECTIVE 2: PUBLIC HEALTH SYSTEM IN MIDDLE-INCOME COUNTRY (TANGLED ROPE) \u2014 Experiences genuine coordination function (genetic databases enable rare disease diagnosis, improving outcomes for connected patients) alongside asymmetric extraction (licensing costs for validated panels exceed annual genomics budget; data infrastructure concentrated in high-income institutions). Constrained by resource dependencies and standards set externally. Mixed: benefits from genetic knowledge coordination while bearing extraction costs of data colonialism and technology access monopolies."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Genetic Testing Company or Reference Lab",
+      "comment": "PERSPECTIVE 3: GENETIC TESTING COMPANY (ROPE) \u2014 Experiences the constraint primarily as a coordination problem they help solve: establishing standards, curating variant databases, training clinicians. Benefits from their institutional position (monopolistic access to well-curated European ancestry data). Can arbitrage: negotiate licensing, set pricing, control data access. Net beneficiary. Sees the constraint as coordination that they enable and that benefits patients \u2014 framing that naturalizes their extraction position."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Clinical Genetics Guidelines Board",
+      "comment": "PERSPECTIVE 4: CLINICAL GENETICS GUIDELINES BOARD (PITON) \u2014 Maintains performative equity language (boards include diversity statements, include underrepresented populations in recommendations) while actual practice remains oriented to European reference data. Guidelines declare aspirational inclusion but lack enforcement mechanisms or funding redirects. Theater ratio reflects: guidelines published, diversity committees formed, but material resource allocation to population-specific variant databases remains minimal. Function is degraded \u2014 the board's process no longer meaningfully improves outcomes for non-European populations; it persists through institutional inertia."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Global Genetic Equity Coalition and Open Sequencing Projects",
+      "comment": "PERSPECTIVE 5: GLOBAL GENETIC EQUITY COALITION (SCAFFOLD) \u2014 Organized agents (All of Us Research Program, African Genome Variation Project, Trans-Omics for Precision Medicine in Indigenous populations) building decentralized genetic reference databases with explicit sunset logic: as population-specific variant databases mature and integrate into clinical tools, the access barrier from European-only reference data decreases. Sees the constraint as a temporary coordination failure being solved through data infrastructure investment. Low effective extraction because coalition has agency and sees exit path \u2014 estimated sunset: 10-15 years for integrated multi-ancestry databases to reach clinical utility equivalence."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational scope, variant annotation accuracy necessarily depends on reference population size. Rare variant interpretation requires statistical power that naturally concentrates in high-income/large-population genetic studies. This perspective sees the access barrier as an immutable consequence of how genetic knowledge works: underrepresented populations structurally have fewer sequenced genomes, fewer rare variants documented, weaker statistical basis for clinical interpretation. This is presented as a natural law of genetics \u2014 'sample size effects are inherent.' But the structural data contradicts the mountain classification \u2014 the engine will identify this as false naturalization of a policy choice: the distribution of sequencing investment is contingent (decisions about where to fund studies, whose populations to include), not inherent."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "sample_size_equity_threshold",
+      "question": "At what sample size threshold does variant prediction accuracy equalize across ancestry groups?",
+      "resolution_mechanism": "Empirical: compare current European N~500k to non-European N~50k-100k; model prediction accuracy curves as non-European N approaches 500k; track ongoing cohort growth rates",
+      "impact": "If threshold reachable in 10 years: scaffold perspective confirmed, sunset is real. If threshold requires 50+ years or is asymptotic: access barrier is structural (snare persists), equity becomes intractable.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Sample size threshold for ancestry-equitable variant prediction accuracy"
+    },
+    {
+      "id": "licensing_and_data_sovereignty_constraints",
+      "question": "Are licensing costs and data-sharing restrictions (patents, export controls) structural barriers or symptoms of upstream sequencing equity failure?",
+      "resolution_mechanism": "Policy analysis: track cost reductions as open-source variant databases (gnomAD, ClinVar) mature; correlate countries' data-access delays with licensing restrictions vs genomics infrastructure gaps",
+      "impact": "If licensing is primary barrier: policy reform (open licensing) can reduce extraction in 2-3 years. If infrastructure is primary barrier: cost reduction requires 10-15 year investment cycle. Different barriers drive different constraint types.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative impact of licensing vs infrastructure equity barriers"
+    },
+    {
+      "id": "clinical_utility_lag_for_non_european_variants",
+      "question": "Do non-European ancestry variants show measurably lower clinical validity for treatment recommendations, or is the disparity driven by lower genetic study diversity (sampling bias) rather than true biological difference?",
+      "resolution_mechanism": "Meta-analysis: compare clinical validity effect sizes (odds ratios, explained variance) for same genes across ancestry-stratified cohorts; control for sample size and experimental design quality",
+      "impact": "If true biological difference exists: access barrier is partly insurmountable (mountain for some specific claims). If disparity is sampling bias: barrier is policy/equity choice (snare with fixable extraction). Classification depends on root cause.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ancestry-based variant clinical utility disparities reflect biology or sampling bias"
+    },
+    {
+      "id": "identity_lock_in_research_epistemology",
+      "question": "Do genetic researchers in high-income institutions perceive non-European genetic diversity as scientifically inferior (identity-locked to European reference paradigm) or merely acknowledge economic constraints on data collection?",
+      "resolution_mechanism": "Discourse analysis: publications, grant reviews, editorial decisions; survey of researcher perceptions of non-European variant databases; correlation between institution wealth and willingness to invest in population-specific research",
+      "impact": "If identity-locked: researchers would resist non-European data even if funding were available (cognitive barrier). If constrained: removing financial barriers would shift research focus rapidly (structural barrier). Affects whether scaffold perspective is achievable or if epistemic capture must be overcome.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether genetic research epistemology is identity-locked to European reference paradigm"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The genetic equity access barrier emerges from the structural concentration of sequenced human genomes in high-income populations with predominantly European ancestry. This creates a feedback loop: genetic reference databases are 80%+ European ancestry, clinical decision support is calibrated to European variant frequencies, and research funding concentrates studies in high-income institutions. Patients and healthcare systems serving underrepresented populations face cascading barriers: unaffordable testing costs, poor prediction accuracy on their genetic variants (often missing rare variants specific to their ancestry), and clinical tools validated only on European genotypes. The constraint exhibits all six DR types from different perspectives. From the low-income patient's view, it is a snare: trapped by cost and knowledge exclusion. From the research institution's view, it is a rope: they are solving a genuine coordination problem (establishing variant standards). From the equity coalition's view, it is a scaffold: decentralized genomics projects with sunset logic (building population-specific databases). From the clinical guidelines board's view, it is a piton: rhetorical equity commitments without material resource reallocation. From the analytical civilizational view, it risks appearing as a mountain: sample size effects and rare variant discovery are presented as natural laws of genetics. But the structural data reveals this as false naturalization \u2014 the distribution of sequencing investment is a policy choice, not a law of nature.",
+    "key_agents": [
+      "Low-income patients with non-European ancestry: Primary victims (powerless/trapped) \u2014 denied precision medicine options due to cost and prediction inaccuracy; forced into generic protocols",
+      "Public health systems in middle-income and low-income countries: Secondary victims (moderate/constrained) \u2014 face licensing costs and infrastructure dependencies; benefit from genetic coordination while bearing extraction costs",
+      "Genetic testing companies and reference labs: Primary beneficiaries (institutional/arbitrage) \u2014 control access to well-curated European ancestry data; set pricing and licensing terms; can exit or renegotiate",
+      "High-income ancestry groups (predominantly European): Secondary beneficiaries (powerful/mobile) \u2014 benefit from precision medicine, clinical trials designed on their genetic data, treatment options optimized for their variants",
+      "Clinical genetics guidelines boards: Institutional actors (institutional/arbitrage) \u2014 maintain performative equity language while anchoring to European-derived standards; persist through inertia",
+      "Global genetic equity coalition: Organized agents (organized/constrained) \u2014 building decentralized multi-ancestry databases; see exit path through data infrastructure investment",
+      "Analytical observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent research funding patterns as inherent scientific limits"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The barrier combines three extraction mechanisms: (1) testing cost ($500-5000) excludes low-income patients; (2) prediction inaccuracy on non-European variants reduces clinical utility for 50%+ of global population; (3) research design bias (studies powered only for European variants) perpetuates the gap. Extractiveness has increased from 0.42 to 0.58 over the interval as precision medicine has become a therapeutic category \u2014 the gap between those who can access it and those excluded has widened. Suppression (0.72): High. Multiple barriers reinforce the constraint: economic (testing unaffordable), knowledge (reference databases don't contain your variants), institutional (clinical protocols skeptical of non-European variant interpretations), and epistemic (genetic variation itself is defined through European-derived frameworks). Suppression persists because each barrier alone might be surmountable, but combined they create a lock-in. Theater ratio (0.45): Moderate-low. The constraint's performative content is lower than some; equity language is present (diversity statements, inclusion initiatives) but material resource allocation remains concentrated. Theater is not the primary mechanism \u2014 extraction operates through genuine coordination problems (variant databases do require standards) combined with asymmetric access. The theater that does exist (equity commitments without funding) functions as a suppression mechanism: mutes pressure for reform by creating false impression of progress.",
+    "perspectival_gap": "The snare perspective (powerless patient) sees pure extraction with no coordination benefit \u2014 genetic knowledge exists but is priced and designed for others. The rope perspective (testing company) sees genuine coordination: they enable variant classification, establish standards, improve outcomes for connected patients. The scaffold perspective (equity coalition) sees a temporary problem with a real solution path \u2014 building population-specific databases reduces extraction within a 10-15 year horizon. The piton perspective (guidelines board) sees a degraded process \u2014 equity commitments without enforcement, performative inclusion without material change. The mountain perspective (analytical civilizational) sees an immutable limit \u2014 rare variant interpretation requires large sample sizes, which naturally concentrate in high-income populations. The gap between snare and rope is about experienced vs actual extraction: the company genuinely solves a coordination problem AND extracts asymmetrically. The gap between scaffold and mountain is about whether the constraint is policy-contingent (fixable) or scientifically inherent (not fixable). The structural data supports the scaffold reading: as non-European sample sizes increase, prediction accuracy should equalize \u2014 this would be impossible if the barrier were a natural law.",
+    "directionality_logic": "Each perspective's directionality derives from the agent's structural position relative to the extraction flow. Low-income patients bear the full cost (d \u2248 0.95, high f(d)) with no exit \u2014 trapped. High-income groups benefit (d \u2248 0.15, low f(d)) with multiple exits \u2014 mobile or arbitrage. Testing companies benefit with arbitrage options (d \u2248 0.20, low f(d)). Public health systems in middle-income countries are partially captured \u2014 they benefit from genetic coordination but bear extraction costs (d \u2248 0.60, mid f(d)). The equity coalition has real agency and exit paths (d \u2248 0.40, moderate f(d)). Clinical guidelines boards maintain beneficiary status without high d because they have institutional insulation and arbitrage (they can shift focus without material loss). The directionality computation reveals why the constraint persists: those most harmed have zero options; those benefiting have multiple exits.",
+    "mandatrophy_analysis": "DIAGNOSTIC EXEMPLAR: This constraint resolves mandatrophy through structural decomposition. The constraint is NOT 'genetic access is a snare or a rope depending on perspective.' The constraint is a TANGLED ROPE: it performs genuine coordination (establishing variant databases, standardizing interpretation) AND it extracts asymmetrically (concentrating benefits to high-income ancestry groups). The mandatrophy is resolved by recognizing that all six perspectival readings are correct \u2014 they are not alternative interpretations of a single underlying fact, but rather different agents' actual experiences of the same structural phenomenon. The powerless patient actually experiences a snare (extraction with no coordination benefit for them). The testing company actually experiences a rope (their coordination function is genuine). The equity coalition actually experiences a scaffold (they have agency and exit paths). The guidelines board actually experiences a piton (performative process). The mountain perspective is a false naturalization of a policy choice \u2014 the engine's false summit detector flags this as naturalization of contingency. The analytical observer's challenge is to recognize that the constraint's type varies by perspective because agents occupy different structural positions, not because the constraint is ambiguous."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "precision_medicine_access_disparity",
+      "rare_disease_diagnosis_equity",
+      "clinical_trial_representation_bias",
+      "genomic_data_colonialism"
+    ],
+    "dual_formulation_note": "The genetic equity access barrier is downstream of research funding allocation patterns and upstream of clinical outcomes disparities. Separate constraint stories should address: (1) research funding concentration (why European populations are oversequenced), (2) licensing and data-sharing restrictions (separate from sequencing equity), and (3) clinical trial representation bias (separate but coupled). Each has distinct epsilon; linked via network affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

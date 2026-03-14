@@ -1,0 +1,213 @@
+{
+  "header": {
+    "constraint_id": "un_security_council_veto_system",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "unsc_veto"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UN Security Council Veto System",
+    "topic_domain": "international_governance/geopolitics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "permanent_members",
+      "great_powers"
+    ],
+    "victims": [
+      "non_permanent_members",
+      "small_states",
+      "intervention_targets",
+      "global_conflict_resolution"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Vetoed State",
+      "comment": "PERSPECTIVE 1: VETOED STATE (SNARE) \u2014 A state facing military aggression or humanitarian crisis cannot obtain Security Council authorization for intervention or peacekeeping. The veto traps them without alternatives. Exit is impossible: they cannot withdraw from the UN, cannot bypass UNSC approval for legitimate multilateral action, and cannot access the coordination mechanism they were promised upon joining. Maximum suppression (0.65) applies \u2014 no legal alternatives exist; unilateral action is deemed illegitimate without UNSC cover."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Non-Permanent Members",
+      "comment": "PERSPECTIVE 2: NON-PERMANENT MEMBERS (SNARE) \u2014 Fifteen non-permanent members serve two-year terms on the Council but have no veto power. They participate in deliberations but cannot prevent or authorize action without alignment with permanent members. They are trapped in a pseudo-decision-making body where their formal vote is meaningless if a P5 member disagrees. The suppression is structural: they cannot exit the arrangement without abandoning UN membership."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Permanent Member (Beneficiary Position)",
+      "comment": "PERSPECTIVE 3: PERMANENT MEMBER \u2014 BENEFICIARY (ROPE) \u2014 A permanent member experiences the veto as coordination: the system protects their interests while enabling multilateral action. Exit is available (de facto: a P5 member can ignore UNSC decisions; legally: withdrawal is possible under Article 60). The veto serves as a coordination device ensuring great-power consensus on major interventions. Effective extraction is low because the beneficiary can arbitrage \u2014 they have the power to shape outcomes through the veto itself."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Permanent Member (Constrained by Legitimacy Costs)",
+      "comment": "PERSPECTIVE 4: PERMANENT MEMBER \u2014 CONSTRAINED (TANGLED ROPE) \u2014 A permanent member benefits from the veto but faces escalating reputational costs (legitimacy erosion, soft power loss) when blocking humanitarian action or conflict resolution. The veto is both a coordination tool (enables great-power consensus) and an extraction mechanism (concentrates decision-making power asymmetrically). The member experiences constraint because abandoning the veto would signal weakness, but using it too often degrades international legitimacy. This perspective shows the hybrid nature: genuine coordination function plus asymmetric extraction benefit."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Reform Advocates and Civil Society",
+      "comment": "PERSPECTIVE 5: REFORM ADVOCATES (SCAFFOLD) \u2014 Civil society, humanitarian organizations, and mid-size powers see the veto as a temporary coordination failure with potential sunset pathways. Proposals for limiting veto use (Uniting for Peace, abstention votes, humanitarian carve-outs) represent organizational strategies to dissolve the constraint. High suppression currently (0.65) but declining as reform coalitions organize. Theater ratio is moderate (0.48) because reform efforts themselves are partly performative (they face permanent member opposition) but partly functional (they shift norms and accountability). Sunset mechanism: if P5 consensus shifts on veto scope, the constraint weakens rapidly."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The UN System as Institution",
+      "comment": "PERSPECTIVE 6: UN INSTITUTION (PITON) \u2014 From the civilizational perspective, the UN system maintains the veto through institutional inertia despite degraded legitimacy and coordination function. The veto was a post-WWII coordination mechanism ensuring great-power buy-in to a universal security system. Today it primarily serves to block action (extractive function) rather than enable consensus (coordination function). Theater ratio is moderate-low (0.48) because the veto still shapes real decisions, but the institutional system's primary activity is now theater: debates, condemnations, and symbolic votes that go nowhere. The institution persists because replacing it requires P5 consensus \u2014 which the veto mechanism itself prevents."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (False Summit)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER \u2014 MOUNTAIN (FALSE SUMMIT) \u2014 From the analytical/universal perspective, one might claim the veto is an immutable natural law of multilateral governance: great powers will never accept security decisions that override their interests, therefore some veto mechanism is inevitable in any universal system. However, this perspective naturalize a contingent institutional design. The structural data shows this is not a mountain \u2014 the veto's power derives from specific institutional rules, not from laws of nature. The false summit detection fires: this is a snare or tangled rope masquerading as a law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "veto_reform_ceiling",
+      "question": "Can the veto system be reformed (scope-limited, vote-qualified, humanitarian carve-outs) without P5 consensus, which the veto itself requires?",
+      "resolution_mechanism": "Historical precedent analysis: Uniting for Peace resolution (1950) bypassed Security Council deadlock through General Assembly supermajority; assessment of whether similar workarounds could institutionalize veto restrictions",
+      "impact": "If yes: scaffold sunset is real \u2014 reform pathways exist. If no: veto is locked by its own mechanism (a snare property). Determines whether the constraint can degrade to rope or must remain snare/tangled rope.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether veto can be reformed without veto consensus"
+    },
+    {
+      "id": "coordination_vs_blocking_function",
+      "question": "Does the veto primarily serve as a coordination mechanism (ensuring consensus) or as a blocking mechanism (enabling extraction/obstruction)?",
+      "resolution_mechanism": "Content analysis: proportion of vetoes cast for self-interest vs. P5 consensus-protecting vetoes; temporal trend of veto usage relative to major power agreement; counterfactual assessment of whether outcomes differ without veto option",
+      "impact": "If coordination: classification upgrades toward rope from all perspectives. If blocking: snare and tangled rope classifications confirmed. High/rising ratio of self-interest vetoes suggests transition from rope to snare over time.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Primary function of veto in contemporary context"
+    },
+    {
+      "id": "legitimacy_cost_asymmetry",
+      "question": "Do all P5 members experience equal legitimacy costs for veto use, or do some members (e.g., those with higher soft power dependence) experience higher reputational damage?",
+      "resolution_mechanism": "Analysis of voting patterns and subsequent diplomatic outcomes; correlation between veto use and UN voting support loss, ally coordination changes, and international standing measurements",
+      "impact": "If asymmetric: some P5 members are actually constrained (powerful/constrained \u2192 tangled rope or even rope); others are fully beneficiaries (institutional/arbitrage \u2192 rope). This differentiates P5 member perspectives. If symmetric: all P5 see rope or tangled rope identically.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Asymmetry in legitimacy costs across P5 members"
+    },
+    {
+      "id": "unilateral_action_alternative",
+      "question": "When the veto blocks UNSC action, is unilateral or coalition-based action actually available as an alternative, or is the veto functionally irreplaceable?",
+      "resolution_mechanism": "Case analysis: situations where veto blocked UNSC action followed by actual unilateral/coalition response vs. situations where no action occurred; assessment of whether absence of UNSC cover materially changes outcomes or merely affects legitimacy",
+      "impact": "If alternatives are available: exit option for trapped agents upgrades to constrained or mobile (classification softens). If veto is functionally irreplaceable: trapped exit is confirmed, snare classification strengthened.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Availability of unilateral/coalition alternatives to UNSC action"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "unsc_veto_extractiveness_1945"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.48,
+      "id_override": "unsc_veto_extractiveness_1970"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.58,
+      "id_override": "unsc_veto_extractiveness_1995"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.62,
+      "id_override": "unsc_veto_extractiveness_2020"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "unsc_veto_theater_1945"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.35,
+      "id_override": "unsc_veto_theater_1970"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.42,
+      "id_override": "unsc_veto_theater_1995"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.48,
+      "id_override": "unsc_veto_theater_2020"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 75
+  },
+  "commentary": {
+    "narrative_context": "The UN Security Council veto system represents a foundational constraint in international governance \u2014 a hybrid coordination-extraction mechanism that has evolved from a post-WWII great-power consensus-building device into an increasingly asymmetric blocking tool. Established by the UN Charter (1945) to ensure great-power participation in a universal security system, the veto grants five permanent members (US, Russia, China, France, UK) the unilateral power to block any substantive Council resolution. This structure exhibits all six constraint types from different structural positions, revealing how institutional design naturalizes power asymmetry as coordination necessity. The constraint's extractiveness has risen from 0.35 (1945, when the P5 were more aligned) to 0.62 (2020, amid great-power fragmentation), while theater ratio has nearly doubled as Council deliberations have become increasingly performative \u2014 votes are cast knowing they will fail, diplomatic language becomes coded, and the institution persists through ritual rather than function. The constraint suppresses alternative governance pathways: states cannot bypass the Council through General Assembly authorization without confronting the precedent that a universal system might not require great-power consensus; they cannot form competing security arrangements without fragmenting the post-1945 international order; they cannot exit through unilateral action without legitimacy costs. Yet the veto also coordinates: it has prevented great-power wars, protected smaller states from great-power domination (through P5 agreement to protect them), and forced multilateral deliberation on major conflicts. The constraint is structurally a tangled rope \u2014 genuine coordination function (great-power buy-in, multilateral deliberation, consensus-forcing) plus asymmetric extraction (P5 blocking power, ability to protect allies, shield from judgment).",
+    "key_agents": [
+      "Permanent Members (US, Russia, China, France, UK): Institutional/arbitrage beneficiaries \u2014 retain veto power, extract blocking privilege and protection for allies",
+      "Non-Permanent Members: Powerless/trapped victims \u2014 participate in deliberations but lack decision-making power",
+      "Vetoed States: Powerless/trapped victims \u2014 cannot access Council authorization for legitimate intervention or peacekeeping",
+      "Global Conflict Resolution: Abstract victim (powerless/trapped) \u2014 humanitarian crises, genocides, and interstate conflicts blocked by vetoes; no formal representation but systemically harmed",
+      "Reform Coalitions: Organized/constrained actors \u2014 civil society, humanitarian orgs, mid-size powers pushing for veto limits; see sunset mechanisms (Uniting for Peace precedent, norm shifts, abstention practices)",
+      "UN Institution: Institutional/constrained \u2014 maintains veto through institutional inertia; sees own deliberative function degrading",
+      "Analytical Observer: Civilizational perspective \u2014 risks naturalizing P5 privilege as inherent necessity in universal systems"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, and rising. The base value reflects the P5's asymmetric decision-making power \u2014 they can block any action, veto is costless in formal terms, and they use it to shield allies or block actions against themselves. However, extractiveness is not maximal (0.70+) because the veto also imposes legitimacy costs, and some P5 members show constraint from reputational damage. The measurement trajectory (0.35 \u2192 0.62 over 75 years) reflects the shift from post-WWII alignment (P5 rarely vetoed) to contemporary fragmentation (vetoes are frequent and contentious). Suppression (0.65): High. Trapped states have no legal alternatives to UNSC action; unilateral intervention is delegitimized without Council cover; alternative security arrangements (NATO, regional bodies) exist but do not replace the universal legitimacy UNSC provides. Theater ratio (0.48): Moderate and rising. Council deliberations remain substantive (voting outcomes affect real policy) but increasingly performative (speeches coded with diplomatic language, votes cast knowing they will fail, ritual maintained despite degraded function). The theater ratio rise (0.25 \u2192 0.48) reflects this degradation. Claimed type (Tangled Rope): The constraint coordinates great-power consensus (genuine function) while enabling asymmetric extraction (P5 blocking privilege). Both features are essential: remove coordination function and it becomes pure snare; remove extraction and it becomes pure coordination rope. The active enforcement requirement is met: the veto must be formally maintained and invoked to function \u2014 it does not emerge naturally.",
+    "perspectival_gap": "This constraint demonstrates how the same institutional mechanism appears as coordination to beneficiaries and extraction to victims. The P5's Rope perspective is genuine from their position: the veto ensures their security, enables multilateral deliberation, and prevents great-power wars. The vetoed state's Snare perspective is equally genuine: they have no legal alternative, cannot access intervention authorization, and face suppression from the P5 blocking power. The gap is not resolvable by better information or clearer framing \u2014 it reflects genuine structural asymmetry. The Scaffold perspective (reform advocates) sees a sunset: Uniting for Peace (1950) showed the veto could be worked around; rising norm shifts on humanitarian protection could limit veto scope. The Piton perspective (UN institution) sees the system's function degrading: the veto was a consensus-building tool; it now primarily blocks action. The false summit (Mountain/analytical) naturalizes the veto as inherent to universal systems, but this elides the contingency of the UN Charter's design \u2014 alternative institutional designs (supermajority voting, rotating permanent membership, mandatory humanitarian carve-outs) are structurally possible.",
+    "directionality_logic": "Directionality (d) for each agent class: P5 beneficiaries with institutional power and arbitrage exit derive d from their position as beneficiaries who can ignore consequences (d \u2248 0.08 \u2192 f(d) \u2248 -0.12). Non-permanent members who are victims but have constrained (not trapped) exit because they can leave the Council at term end derive d \u2248 0.55 (victim + constrained \u2192 f(d) \u2248 0.75). Vetoed states facing genuine humanitarian crises with no legal alternative to UNSC action derive d \u2248 0.92 (victim + trapped \u2192 f(d) \u2248 1.40). The abstract collective 'global conflict resolution capacity' has no power, no exit, and no organizational form, so it derives d \u2248 1.00 (powerless/trapped/analytical \u2192 f(d) \u2248 1.42). These directionality variations explain the perspectival classifications: beneficiaries with low d experience \u03c7 < 0 and see Rope; victims with high d experience \u03c7 > 0.66 and see Snare. No override needed \u2014 the structural data produces the right directionality.",
+    "mandatrophy_analysis": "The veto constraint resolves mandatrophy through perspectival pluralism: all six types are legitimate readings from their structural positions. The resolution is not 'which type is the veto?' but 'which perspective are you in?' P5 beneficiaries see Rope and this is not a mislabeling (genuine coordination function exists, consensus-forcing does occur, great-power wars have been prevented). Vetoed states see Snare and this is not a mislabeling (pure extraction, no exit, high suppression, no beneficiary status). The Tangled Rope classification for a constrained P5 member is not a collapse of categories but a reflection of hybrid experience: the member benefits from the veto but faces legitimacy costs, so they experience both coordination (system protects their interests) and extraction (but at reputational cost). The mandatrophy resolves because the Tangled Rope type correctly captures agents in genuinely mixed positions \u2014 agents who are both beneficiaries (in institutional terms) and victims (in legitimacy terms) simultaneously. The false summit (Mountain) is detected and rejected: the claim that the veto is a natural law fails because the constraint's power derives from institutional rules, not physical necessity. Alternative institutional designs are possible; the veto's necessity is contingent on Charter design, not inherent to all possible universal systems."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "great_power_war_prevention",
+      "humanitarian_intervention_authorization",
+      "weapons_proliferation_coordination"
+    ],
+    "dual_formulation_note": "The veto system operates as a single constraint but could be decomposed into separate constraints for different decision categories: vetoes on military action, vetoes on admission/membership, vetoes on procedural matters show different extractiveness profiles (military vetoes are more extracted, procedural vetoes are more coordination-heavy). However, they share a common enforcement mechanism (the Charter veto power), so they are kept as one story rather than three."
+  },
+  "directionality_overrides": []
+}

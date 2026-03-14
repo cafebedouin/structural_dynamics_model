@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "media_gatekeeping_power",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "media_gate"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Media Gatekeeping Power in Information Distribution",
+    "topic_domain": "communications/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dominant_media_corporations",
+      "established_political_actors"
+    ],
+    "victims": [
+      "marginalized_voices",
+      "information_access_equity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Excluded Voice",
+      "comment": "PERSPECTIVE 1: EXCLUDED VOICE (SNARE) \u2014 Marginalized speakers cannot access dominant media channels without intermediation by gatekeepers. No exit from the constraint without gaining institutional backing or capital. Suppression is structural: distribution platforms require editorial approval, advertising budgets, or institutional credibility that powerless agents lack. Full extraction experienced."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Independent Publisher",
+      "comment": "PERSPECTIVE 2: INDEPENDENT PUBLISHER (TANGLED ROPE) \u2014 Medium-sized outlets or independent journalists depend on distribution networks controlled by gatekeepers. They benefit from the coordination function: editorial standards, fact-checking infrastructure, audience aggregation. But they also bear extraction costs: algorithmic prioritization favors dominant outlets, distribution requires proprietary platforms, revenue concentration limits sustainability. Constrained exit due to network effects."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Dominant Media Corporation",
+      "comment": "PERSPECTIVE 3: DOMINANT MEDIA CORPORATION (ROPE) \u2014 Experiences the gatekeeping constraint as pure coordination: setting editorial standards, aggregating audiences, establishing credibility signals. Net beneficiary through monopolistic positioning. Can arbitrage between content creation, distribution, and advertising. The constraint appears as a necessary mechanism for managing information quality and reducing audience search costs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Political Establishment",
+      "comment": "PERSPECTIVE 4: POLITICAL ESTABLISHMENT (TANGLED ROPE) \u2014 Established political parties and leaders benefit from gatekeeping: media relationships provide guaranteed access, framing power, and protection from insurgent challengers. They also rely on media coordination for legitimacy and narrative control. Constrained by need to maintain media relationships; exit would require building parallel media infrastructure. Active enforcement of access norms benefits this actor."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Editorial Standards",
+      "comment": "PERSPECTIVE 5: LEGACY EDITORIAL STANDARDS (PITON) \u2014 The institutional practice of editorial gatekeeping (fact-checking, source verification, narrative coherence) was designed to reduce information chaos. But the primary function has degraded: editorial standards are now selectively enforced, theater-ratio content dominates, and the legitimacy function persists through inertia rather than effectiveness. Digital platforms have made these standards partially obsolete while maintaining their performative role."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Information Movement",
+      "comment": "PERSPECTIVE 6: OPEN INFORMATION MOVEMENT (SCAFFOLD) \u2014 Organized coalitions (open-source journalism, decentralized media platforms, blockchain-based distribution, fact-checking networks) are building temporary coordination mechanisms that bypass traditional gatekeeping. These scaffolds have sunset logic: as distributed verification becomes mature and algorithm transparency improves, the traditional gatekeeping power diminishes. Medium extractiveness because organized actors have agency and visible exit paths."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Social Media Platforms",
+      "comment": "PERSPECTIVE 7: SOCIAL MEDIA PLATFORMS (TANGLED ROPE) \u2014 Digital platforms both replicate and disrupt traditional gatekeeping. They benefit from controlling algorithmic distribution (gatekeeping 2.0) but are constrained by regulatory pressure, advertiser demands, and coordination requirements with legacy media. They exert extraction through algorithmic prioritization while claiming to provide coordination through network effects and audience aggregation. Constrained by regulatory capture and advertiser dependency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational perspective, gatekeeping coordinates editorial standards and reduces information chaos while extracting through monopoly positioning and narrative control. The constraint simultaneously solves a genuine coordination problem (too much information requires curation) and creates asymmetric power over narrative. This is genuine tangled rope: both functions are real and inseparable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "gatekeeper_legitimacy_foundation",
+      "question": "Is media gatekeeping legitimate because it reduces information chaos and maintains quality, or is quality maintenance a rationalization for monopoly control?",
+      "resolution_mechanism": "Comparative analysis of fact-checking accuracy, retraction rates, and narrative diversity across gatekept vs non-gatekept information sources over 10+ year longitudinal study",
+      "impact": "If quality benefits are genuine and substantial: classification shifts toward Rope (more coordination, less extraction). If quality outcomes are indistinguishable or worse: classification confirms Snare for powerless agents (pure extraction dressed as quality maintenance).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether gatekeeping legitimacy rests on genuine quality benefits"
+    },
+    {
+      "id": "alternative_curation_scalability",
+      "question": "Can decentralized curation (community fact-checking, algorithmic transparency, distributed reputation systems) perform the information-reduction function at scale without concentrating power?",
+      "resolution_mechanism": "Network analysis of distributed platforms (Bluesky, Mastodon, decentralized journalism networks); measurement of false-positive rates, coordinated misinformation detection, and audience search costs",
+      "impact": "If alternatives scale effectively: scaffold perspective confirmed \u2014 transition path exists and sunset is realistic. If alternatives fail at scale: gatekeeping extraction is unavoidable (tangled rope confirmed as stable equilibrium).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scalability of decentralized curation mechanisms"
+    },
+    {
+      "id": "algorithmic_gatekeeping_equivalence",
+      "question": "Do social media algorithms replicate traditional gatekeeping extraction or create new extraction mechanisms with different structural properties?",
+      "resolution_mechanism": "Comparative power analysis: measurement of visibility concentration (top-10% accounts as share of total impressions) across traditional media, social media, and decentralized platforms",
+      "impact": "If algorithms replicate traditional gatekeeping: constraint is resilient to platform shifts (gatekeeping power relocates to algorithms). If algorithms create distinct extraction: multiple tangled-rope constraints exist with different beneficiaries and victims.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether algorithmic distribution replicates traditional gatekeeping power"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is suppression primarily structural (economic barriers to distribution, technical requirements, institutional access) or internalized (marginalized actors self-censor due to anticipated rejection)?",
+      "resolution_mechanism": "Survey and interview data on decision to speak vs. remain silent; measurement of suppression coefficient pre- and post-platform access removal",
+      "impact": "If primarily structural: suppression reverses when barriers are removed. If internalized: suppression persists (internalized gatekeeper) even after structural barriers fall.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Media gatekeeping power refers to the structural control exercised by dominant media corporations and allied institutions over which voices, narratives, and information reach mass audiences. This constraint exhibits eight distinct perspectival readings from the same structural base, making it a diagnostic exemplar for institutional extraction mechanisms. The gatekeeper solves a genuine coordination problem\u2014curating information in a world of information overabundance\u2014while simultaneously extracting power through monopolistic control of distribution channels. Extractiveness has risen from 0.42 to 0.58 over the measurement interval, driven by concentration of ownership and algorithmic prioritization that reinforces dominant voices. Theater ratio has remained moderate (0.48\u21920.55), reflecting that editorial legitimacy claims have modest performative content\u2014editors do perform meaningful curation, but the function no longer justifies the monopolistic positioning. The constraint is hybrid: genuine coordination function coexists with asymmetric extraction targeting powerless and moderate voices.",
+    "key_agents": [
+      "Dominant Media Corporations: Primary beneficiary (institutional/arbitrage) \u2014 control distribution channels, set narrative frames, capture advertising revenue, maintain monopolistic positioning",
+      "Marginalized Voices: Primary victim (powerless/trapped) \u2014 cannot reach audiences without gatekeeper approval; trapped by distribution infrastructure requirements and capital barriers",
+      "Independent Publishers: Secondary victim (moderate/constrained) \u2014 depend on gatekeeping platforms, face algorithmic suppression, constrained by network effects and survival economics",
+      "Political Establishment: Secondary beneficiary (institutional/constrained) \u2014 benefits from media relationships and guaranteed access; constrained by need to maintain legitimacy through gatekeepers",
+      "Social Media Platforms: Rival gatekeeper (institutional/constrained) \u2014 replicate gatekeeping through algorithms; constrained by regulatory pressure and advertiser demands",
+      "Open Information Movement: Organized challenger (organized/constrained) \u2014 building decentralized alternatives with sunset logic; constrained by network effects and coordination challenges",
+      "Legacy Editorial Standards: Degraded institutional practice (institutional/arbitrage) \u2014 once legitimate coordination mechanism; now maintained through inertia (piton perspective)",
+      "Analytical Observer: Civilizational context (analytical/analytical) \u2014 sees genuine tangled rope: real coordination function coexisting with asymmetric extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Gatekeeping corporations extract through monopoly control of distribution channels, algorithmic prioritization of in-house content, and narrative framing advantages. The extraction has increased from 0.42 to 0.58 because digital platforms have amplified concentration effects: traditional media consolidation plus algorithmic amplification creates dual gatekeeping. But extractiveness is below 0.70 because legitimate coordination functions (editing, fact-checking, audience aggregation) remain partially real, and alternative platforms (social media, podcasting, direct distribution) provide partial exits. Suppression (0.65): High. Barriers to accessing dominant media include capital requirements (production and distribution costs), institutional credibility requirements (track records, advertising budgets), technical infrastructure (server capacity, algorithmic optimization), and gatekeeping decisions themselves (editorial discretion to reject). Suppression is not total\u2014some groups find workarounds (social media organic growth, podcast networks, newsletter platforms)\u2014but it is substantial and persistent. Theater ratio (0.55): Moderate. Editorial gatekeeping involves genuine quality maintenance (fact-checking, source verification, narrative coherence) but also significant performative elements: prestige signaling, institutional legitimacy claims, and manufactured debate formats that serve ratings rather than information quality. The theater ratio increased from 0.48 to 0.55 because digital platforms have reduced the functional necessity of editorial curation while maintaining its performative role as a legitimacy mechanism.",
+    "perspectival_gap": "The perspectival gap is maximal between powerless/trapped outsiders (Snare perception) and institutional/arbitrage beneficiaries (Rope perception). The beneficiary experiences the constraint as natural coordination\u2014what the system does is organize information, and their prominent position is earned through quality and institutional legitimacy. The powerless outsider experiences the constraint as pure extraction\u2014the same mechanisms that coordinate for beneficiaries suppress access for them. The moderately positioned independent publisher experiences both: real benefits from editorial infrastructure and audience aggregation, real costs from algorithmic suppression and resource barriers. This perspectival gap is not a difference in perspective alone\u2014it is a difference in structural extraction. The same constraint distributes costs and benefits asymmetrically, producing genuine disagreement about what the constraint IS. The beneficiary calls it coordination; the victim calls it extraction; both are empirically correct from their positions.",
+    "directionality_logic": "Directionality for each perspective derives from structural position relative to distribution extraction. Powerless/trapped agents (marginalized voices) experience d \u2248 0.95: maximum distance from beneficiary position, no arbitrage options, high f(d) \u2192 experienced extraction \u03c7 is maximum. Institutional/arbitrage agents (dominant media) experience d \u2248 0.05: beneficiary position, extraction flows toward them, low f(d) \u2192 negative or near-zero \u03c7. Moderate/constrained agents (independent publishers) experience d \u2248 0.55-0.65: partially benefiting from coordination, partially extracted from through algorithmic suppression, mixed f(d) \u2192 moderate \u03c7. Institutional/constrained agents (political establishment, platforms) experience d \u2248 0.40-0.50: benefiting from gatekeeping access while constrained by regulatory and relationship requirements, moderate f(d) \u2192 low-to-moderate \u03c7. Organized/constrained agents (open information movement) experience d \u2248 0.45: organized enough to articulate alternatives, but constrained by network effects and coordination challenges, moderate f(d) \u2192 low \u03c7. Analytical/analytical agents experience d \u2248 0.72: outsider position permits full observation of extraction mechanisms; high f(d) reflects that analytical position itself is constrained by the constraint's invisibility to insiders.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: Media gatekeeping is a genuine tangled rope, not a snare masquerading as rope or a rope hiding snare extraction. The analytical perspective confirms that coordination and extraction are inseparable in this constraint. (1) Genuine coordination function: editorial standards reduce information chaos, fact-checking surfaces verification, audience aggregation solves search costs. These are real problems that gatekeeping solves. (2) Asymmetric extraction: beneficiaries capture disproportionate benefits (revenue, narrative control, agenda-setting power), while victims bear suppression costs (access barriers, voice exclusion, narrative marginalization). The extraction is not hidden or rhetorical\u2014it is structural and measurable. (3) Requires active enforcement: the constraint persists through conscious decisions by gatekeeping institutions (editorial review, algorithmic prioritization, advertising allocation). Without active enforcement, alternative platforms would capture audiences and narrative diversity would increase. (4) No single perspective dominates: the powerless agent correctly identifies extraction; the beneficiary correctly identifies coordination; neither is lying or mistaken. The constraint genuinely coordinates and extracts simultaneously. This is the defining signature of tangled rope. Alternative classification: Could this be a snare disguised as rope? Only from a powerless perspective with no awareness of coordination benefits. The moderate and institutional perspectives reveal the genuine coordination function, disconfirming snare classification. Could this be rope hiding snare? Only if beneficiaries are deceived about their own role, which contradicts the analytical perspective confirming active enforcement. Tangled rope is the structurally accurate classification."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_recommendation_bias",
+      "attention_economy_extraction",
+      "narrative_framing_power"
+    ],
+    "dual_formulation_note": "Media gatekeeping has decomposed into three constraint stories reflecting distinct mechanisms: information standards (traditional editorial gatekeeping, \u03b5=0.58, tangled rope), algorithmic recommendation (digital platform gatekeeping, \u03b5=0.65, snare), and narrative framing (power over story selection and interpretation, \u03b5=0.52, tangled rope). All three are linked through network.affects_constraints and share institutional beneficiaries and marginalized victims, but have distinct \u03b5 values reflecting different measurement observables and structural mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

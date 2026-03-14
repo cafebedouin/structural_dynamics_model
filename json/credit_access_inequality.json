@@ -1,0 +1,217 @@
+{
+  "header": {
+    "constraint_id": "credit_access_inequality",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "credit"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Credit Access Inequality",
+    "topic_domain": "economic/financial",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "financial_institutions",
+      "high_credit_score_borrowers"
+    ],
+    "victims": [
+      "low_income_borrowers",
+      "marginalized_communities",
+      "first_time_borrowers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Unbanked and Underbanked",
+      "comment": "PERSPECTIVE 1: LOW-INCOME BORROWERS (SNARE) \u2014 Trapped by structural barriers: no credit history, no collateral, no alternative sources of capital. The constraint extracts predatory interest rates, fees, and collateral demands. Exit is impossible; these agents bear maximum extraction cost. The system maintains suppression through information asymmetry, legal complexity, and alternative predatory channels (payday lending, loan sharks)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Marginalized Communities",
+      "comment": "PERSPECTIVE 2: MARGINALIZED COMMUNITIES (TANGLED ROPE) \u2014 Face historical redlining, persistent discrimination, and wealth gaps that compound access barriers. The credit system coordinates capital allocation (genuine coordination function) but asymmetrically extracts from these communities through higher rates, stricter terms, and discriminatory underwriting. Constrained exit: migration to alternative lenders or informal credit networks incurs significant costs and social risks."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Financial Institutions",
+      "comment": "PERSPECTIVE 3: FINANCIAL INSTITUTIONS (ROPE) \u2014 Primary beneficiaries. Experience the constraint as pure coordination: risk assessment mechanisms that efficiently allocate credit to low-risk borrowers. Arbitrage exit: institutions can move capital to other markets, other products, or other geographies. The constraint functions as a coordination mechanism for capital distribution; extraction runs toward these agents."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "High-Creditworthiness Borrowers",
+      "comment": "PERSPECTIVE 4: HIGH-CREDIT-SCORE BORROWERS (TANGLED ROPE) \u2014 Benefit from preferential access and favorable rates (coordination function: risk-based pricing incentivizes creditworthy behavior). Also extract value through favorable terms that subsidize credit institution operations. Mobile exit: can access alternative credit sources (peer-to-peer lending, family, savings). Moderate extraction experienced because they have both benefit and mobility."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Credit Access Reformers",
+      "comment": "PERSPECTIVE 5: CREDIT ACCESS REFORMERS (SCAFFOLD) \u2014 Organized agents (regulators, nonprofits, fintech advocates) see credit access inequality as a temporary coordination failure with a sunset: alternative credit assessment models (alternative data, machine learning, community-based lending), financial inclusion initiatives, and regulatory reform are building pathways to lower the extractiveness over time. Theater ratio is moderate because some functional verification (credit scoring) exists alongside performative documentation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regulatory Bodies",
+      "comment": "PERSPECTIVE 6: REGULATORY BODIES (TANGLED ROPE) \u2014 Caught between coordinating financial stability (genuine coordination function) and preventing predatory extraction (asymmetric extraction prevention). Constrained exit: cannot fully dismantle credit scoring without destabilizing capital allocation, yet current systems produce discriminatory outcomes. Requires active enforcement to maintain the system; extraction persists because regulatory constraints limit their ability to restructure underlying mechanisms."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Credit Scoring Infrastructure",
+      "comment": "PERSPECTIVE 7: LEGACY CREDIT SCORING SYSTEMS (PITON) \u2014 Credit score methodologies (FICO, Equifax, TransUnion) persist through institutional inertia despite well-documented limitations, discrimination risk, and better alternatives available. The theater is substantial: credit scores provide the appearance of objective, data-driven risk assessment, yet they reproduce historical discrimination and exclude valid lending candidates. Maintained because alternatives haven't fully replaced them and institutions are path-dependent."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Informationally Impossible View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / INFORMATION IMPOSSIBILITY VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some credit access inequality is inherent to asymmetric information: lenders cannot perfectly predict default, and must use proxies. This perspective sees the constraint as a natural law of finance \u2014 you cannot allocate capital to unknown borrowers without some information asymmetry creating barriers. However, the structural data contradicts the mountain classification \u2014 the engine will compute this as a false summit, revealing that the informationally-impossible framing naturalizes contingent institutional arrangements (specific credit metrics, discriminatory proxies, wealth-based collateral requirements) that could be otherwise designed."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "historical_discrimination_internalization",
+      "question": "To what extent is suppression structural (external barriers) versus internalized (low-income borrowers have lost faith in credit access, don't apply)?",
+      "resolution_mechanism": "Application rate analysis: comparison of denied applicants vs non-applicants; psychological studies on credit access beliefs; tracking of application behavior changes post-reform",
+      "impact": "If internalized suppression dominates: constraint's effective suppression is higher than structural measures suggest; post-reform barriers removal alone won't restore credit access without belief shifts. If structural suppression dominates: removal of objective barriers (fees, rates, collateral) will quickly restore access.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of internalized vs structural suppression"
+    },
+    {
+      "id": "alternative_credit_model_effectiveness",
+      "question": "Do alternative credit assessment models (alternative data, community lending, peer-to-peer) actually produce comparable default rates to traditional credit scoring or merely shift risk?",
+      "resolution_mechanism": "Longitudinal default rate comparison: alternative-model borrowers vs traditional-credit borrowers, controlling for actual default vs perceived risk; tracking of whether 'excluded' borrowers actually default less than expected",
+      "impact": "If alternative models work: scaffold perspective confirmed \u2014 financial inclusion sunset is real and risk-based extraction is justified. If alternative models fail: extractive credit institutions are correct that barriers are risk-based, and scaffold is aspirational rather than structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative credit assessment models effectively reduce risk while expanding access"
+    },
+    {
+      "id": "discrimination_mechanism_detection",
+      "question": "Is credit access inequality driven by statistical discrimination (rational use of correlated proxies) or taste-based discrimination (irrational prejudice)?",
+      "resolution_mechanism": "Audit studies: matched borrower pairs (identical credit profiles, different demographics) applying for credit; analysis of underwriting documentation for proxy use patterns; comparison of default rates by demographic group controlling for observables",
+      "impact": "If statistical discrimination: some extraction is justified as risk-based pricing; reform requires alternative data collection. If taste discrimination: extraction is pure rent-seeking on protected characteristics; reform requires enforcement and remediation.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether credit inequality reflects statistical or taste-based discrimination"
+    },
+    {
+      "id": "fintech_disruption_timeline",
+      "question": "Will fintech and alternative lending platforms substantially displace traditional credit scoring within one generation?",
+      "resolution_mechanism": "Market share tracking of fintech vs traditional lenders; adoption curves for alternative credit models; regulatory adaptation timelines; institutional capacity to absorb new methodologies",
+      "impact": "If fintech disrupts within 15 years: scaffold sunset is real, system transformation is structural. If disruption stalls: traditional institutions maintain extractive power through network effects and regulatory barriers.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether fintech will displace traditional credit scoring systems"
+    },
+    {
+      "id": "wealth_collateral_necessity",
+      "question": "Is collateral-based lending a functional necessity for risk mitigation or a wealth-extraction mechanism that excludes otherwise-viable borrowers?",
+      "resolution_mechanism": "Comparison of unsecured lending default rates vs collateral-secured rates for matched borrower cohorts; analysis of collateral haircuts and recovery rates; tracking of borrower outcomes post-default",
+      "impact": "If collateral is functionally necessary: some barriers are coordination costs. If collateral is extraction: wealth-based access becomes pure rent-seeking on initial inequality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether collateral requirements are functionally necessary or extractive"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Credit access inequality represents a structural constraint in which financial institutions coordinate capital allocation to borrowers while simultaneously extracting disproportionate value from those least able to bear the cost. The constraint operates through information asymmetry (lenders claim inability to assess creditworthiness of excluded borrowers), discriminatory proxies (credit scores that reproduce historical inequality), and wealth-based collateral requirements that concentrate credit access among those already privileged. The same institutional mechanism \u2014 credit risk assessment \u2014 appears as an immutable information problem (mountain), a coordination mechanism for capital allocation (rope), a system producing mixed coordination and extraction (tangled rope), a temporary problem being solved by fintech and alternative models (scaffold), and a degraded ritual maintained through institutional inertia (piton), depending on the observer's structural position within the credit system. The extractiveness has increased from 0.42 to 0.58 over the measurement interval, driven by fee proliferation, predatory alternative-lending growth, and rising denial rates for marginalized communities despite formal loosening of credit standards. The theater ratio remains moderate (0.48) because some functional risk assessment exists alongside substantial performative documentation and exclusionary screening practices.",
+    "key_agents": [
+      "Low-Income Borrowers: Primary victims (powerless/trapped) \u2014 lack credit history, collateral, and information; face predatory rates and exclusion from formal credit; no exit options",
+      "Marginalized Communities: Secondary victims (moderate/constrained) \u2014 suffer from historical discrimination, wealth gaps, and discriminatory underwriting; constrained exit to informal or predatory lending",
+      "Financial Institutions: Primary beneficiaries (institutional/arbitrage) \u2014 capture interest margin, fees, and risk premium from entire portfolio; arbitrage exit to other markets or products",
+      "High-Creditworthiness Borrowers: Secondary beneficiaries (powerful/mobile) \u2014 access favorable rates and terms; mobile exit to alternative lenders",
+      "Credit Access Reformers: Organized agents (organized/constrained) \u2014 regulators, nonprofits, fintech advocates building alternative pathways; constrained by need to maintain financial stability",
+      "Regulatory Bodies: Institutional constraint-holders (institutional/constrained) \u2014 must coordinate financial stability while preventing discrimination; enforcement tensions limit exit",
+      "Legacy Credit Scoring Systems: Institutional persistence (institutional/arbitrage) \u2014 FICO, Equifax, TransUnion maintain market position through path dependence and network effects",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent design choices (specific credit metrics, collateral requirements) as information-theoretic necessities"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Financial institutions capture significant extraction from low-income borrowers through interest margins (often 8-15 percentage points higher than prime rates), origination fees (2-5%), ongoing maintenance fees, and prepayment penalties. However, the extraction is not maximal (\u22640.66 threshold for snare) because some institutions offer genuine credit products with lower extraction, and the overall system coordinates some legitimate capital allocation. The rising trajectory (0.42\u21920.58) reflects fee proliferation and predatory alternative-lending growth in the formal market. Suppression (0.65): High. Significant barriers include lack of credit history, no collateral, information asymmetry exploitation, discriminatory underwriting, regulatory complexity, and alternative predatory channels that trap borrowers in cycles. Suppression is not total (\u22641.0) because some escape routes exist (credit unions, community banks, fintech) and formal credit access is theoretically available. Theater ratio (0.48): Moderate. Credit scoring provides appearance of objective, data-driven risk assessment, yet reproduces historical discrimination and excludes viable borrowers. Regulatory compliance documentation (loan applications, disclosure forms) is substantial. However, credit scoring methodologies produce actual signal about default likelihood, so theater is not dominant (\u22650.70). The theater ratio's relative stability reflects that while credit scoring methodology hasn't fundamentally changed, public awareness of its limitations and discrimination risk has grown, modestly increasing the performative/functional distinction.",
+    "directionality_logic": "Directionality values (d) derive from each agent's structural position relative to credit flow. Low-income borrowers are victims with trapped exit options: d \u2248 0.95, producing high f(d) \u2248 1.42, resulting in high experienced extraction chi. Financial institutions are beneficiaries with arbitrage exit: d \u2248 0.05, producing f(d) \u2248 -0.12, resulting in negative experienced extraction (they net extract value). Marginalized communities are victims with constrained (not trapped) exit options: d \u2248 0.75, producing f(d) \u2248 1.10, resulting in moderate-high experienced extraction. High-creditworthiness borrowers are beneficiaries with mobile exit: d \u2248 0.35, producing f(d) \u2248 0.20, resulting in low or negligible experienced extraction. Reformers are organized agents with constrained exit: d \u2248 0.60, producing f(d) \u2248 0.85, resulting in moderate experienced extraction (they bear costs of reform effort without full structural change capacity). Regulatory bodies are institutional constraint-holders with constrained exit: d \u2248 0.55, producing f(d) \u2248 0.75, resulting in moderate experienced extraction. The piton perspective derives from theater ratio (0.48) not reaching the piton threshold (\u22650.70) in the main calculation, but appears here because legacy credit scoring systems specifically have been maintained through institutional inertia despite better alternatives \u2014 the perspective represents a real institutional phenomenon even if not dominant in the aggregated metrics.",
+    "perspectival_gap": "This constraint exhibits the full perspectival range across its observation sites. Low-income borrowers see a snare: pure extraction with no exit and no coordination benefit \u2014 the credit system does not coordinate their capital needs, it excludes them or traps them in predatory cycles. Marginalized communities see tangled rope: some coordination (access to capital for business, home, education) mixed with asymmetric extraction (discrimination-inflated rates, collateral demands tied to historical wealth gaps). Financial institutions see rope: pure coordination mechanism that efficiently allocates capital to low-risk borrowers and facilitates economic activity. High-creditworthiness borrowers see tangled rope: coordination (access to capital at favorable rates) with minor extraction (cross-subsidization of riskier borrowers). Reformers see scaffold: a temporary coordination problem with a sunset \u2014 alternative credit models and fintech are building pathways to expand access at lower cost. Legacy credit scoring systems see piton: their own process is recognized as degraded (discriminatory, inefficient) but maintained through inertia. The analytical observer at civilizational scope risks seeing a mountain: information asymmetry makes credit rationing inherent and unavoidable \u2014 but the structural data reveals this as false summit, naturalizing specific institutional choices (FICO scores, collateral-based lending, centralized credit bureaus) that could be otherwise designed.",
+    "mandatrophy_analysis": "Credit access inequality resolves mandatrophy by instantiating how coordination and extraction coexist within a single constraint. The credit system genuinely coordinates capital allocation (a coordination function: it routes capital to productive uses). It also genuinely extracts value asymmetrically (high rates and fees on low-income borrowers who have no alternatives). These are not two separate constraints or two phases of the same constraint \u2014 they are simultaneous properties of the tangled rope. The snare perspective from the trapped borrower is not a 'misperception' of a rope; it is the borrower's genuine structural experience of pure extraction. The rope perspective from the financial institution is not false; it is their genuine structural experience of a coordination mechanism. Mandatrophy is resolved by recognizing that 'is this coordination or extraction?' has different answers depending on where you stand. The presheaf of perspectives across the indexical sites reproduces the full structure of the constraint as a hybrid that cannot be simplified to a single type."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wealth_inequality_accumulation",
+      "predatory_lending_cycles",
+      "financial_exclusion_feedback"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    }
+  ]
+}

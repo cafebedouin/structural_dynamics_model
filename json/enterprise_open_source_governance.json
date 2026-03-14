@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "enterprise_open_source_governance",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "eosg"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Enterprise Open Source Governance Constraint",
+    "topic_domain": "software/governance/institutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "enterprise_software_vendors",
+      "platform_stewards"
+    ],
+    "victims": [
+      "independent_developers",
+      "community_sustainability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Independent Developer",
+      "comment": "PERSPECTIVE 1: INDEPENDENT DEVELOPER (SNARE) \u2014 Trapped by dependency lock-in and governance exclusion. Powerless developer cannot influence licensing decisions, contribution acceptance criteria, or roadmap priorities. Code contributions are reviewed within corporate governance frameworks controlled by stewards. Exit requires abandoning years of investment in project-specific knowledge. Maximum suppression: licensing changes can retroactively alter contribution terms; no appeal mechanism for exclusion."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Community Sustainability Advocate",
+      "comment": "PERSPECTIVE 2: COMMUNITY SUSTAINABILITY ADVOCATE (TANGLED ROPE) \u2014 Constrained by funding dependencies and institutional pressure. Moderate power through collective voice but faces significant barriers to exit (career identity fused with project community). Does experience genuine coordination benefits (shared infrastructure, collective problem-solving) alongside asymmetric extraction (labor captured by corporate sponsors). Resource constraints force dependency on corporate infrastructure (CI/CD, hosting, legal support)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Enterprise Software Vendor",
+      "comment": "PERSPECTIVE 3: ENTERPRISE SOFTWARE VENDOR (ROPE) \u2014 Benefits from community labor without bearing maintenance costs. Institutional power enables exit through relicensing, fork management, or governance restructuring. Experiences the constraint as pure coordination: mobilizing external developers to extend capabilities. Low extraction from their perspective because they control the exit \u2014 they can restructure terms at will. Arbitrage options allow them to play multiple projects simultaneously."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Governance Reform Coalition",
+      "comment": "PERSPECTIVE 4: GOVERNANCE REFORM COALITION (SCAFFOLD) \u2014 Organized agents (Linux Foundation, Apache Foundation, community councils) implementing structured governance with documented sunset: transparent decision-making, contributor rights frameworks, and independence paths. Sunset clause: as governance structures mature and adoption of decentralized models increases, corporate veto power over community projects weakens. Constrained by institutional momentum and funding dependencies, but sees a real exit path through governance reform over 5-10 year horizon."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Benevolent Dictator Model",
+      "comment": "PERSPECTIVE 5: BENEVOLENT DICTATOR MODEL (PITON) \u2014 The BDFL governance structure persists through institutional inertia despite limited functionality. Assumes benevolence but provides no structural constraints on abuse. Theater ratio high: elaborate processes for community input that lack binding decision authority. The model is largely performative \u2014 corporate stewards make final decisions. Maintained because it signals openness while preserving control. Low actual coordination function relative to theatrical commitment."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational scale, capital always seeks to externalize costs onto communities. The constraint appears as an immutable law: corporations will extract value from collective labor to the maximum degree the institutional framework permits. This perspective risks naturalizing a contingent power asymmetry as inherent to collaborative software development. The structural data contradicts the mountain classification \u2014 governance choices, funding models, and legal frameworks are changeable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "corporate_steward_benevolence_threshold",
+      "question": "At what point does corporate governance of open source infrastructure cease to be coordination and become extractive veto power?",
+      "resolution_mechanism": "Historical analysis of licensing changes, contribution acceptance rate disparities by affiliations, roadmap decisions reversing community consensus, and fork incidence rates by governance type",
+      "impact": "If steward benevolence is structural (commits are enforceable/reversible): constraint is Rope. If stewards retain unilateral veto: constraint is Tangled Rope or Snare depending on power asymmetry.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Threshold distinguishing benevolent coordination from extractive control in corporate-stewarded open source"
+    },
+    {
+      "id": "contributor_lock_in_reversibility",
+      "question": "Can developers exit corporate-stewarded projects without abandoning their contributions and reputation?",
+      "resolution_mechanism": "Measurement of fork sustainability, contributor follow-rate on forks vs main projects, relicensing event outcomes, and post-exit career trajectories of developers leaving stewarded projects",
+      "impact": "If reversible (forks thrive, contributors transfer): exit barriers are high but not insurmountable (Constrained). If irreversible (forks fail, reputation stuck in main project): trapped condition (Snare aggravation).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether developer exit from corporate-stewarded projects is reversible or irreversible"
+    },
+    {
+      "id": "governance_reform_sustainability",
+      "question": "Do structured governance reforms (transparency documents, contributor councils, independence commitments) persist or degrade when corporate incentives shift?",
+      "resolution_mechanism": "Longitudinal analysis of governance framework adherence across market cycles; correlation between corporate financial performance and contribution acceptance criteria changes; audit of governance structure predictions vs actual decision outcomes",
+      "impact": "If persistent: scaffold framework is real structural exit path. If degradable: governance reform is theater (Piton). Classification pivots from Scaffold to Piton if persistence cannot be verified.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether open source governance reforms are sustainable or theater"
+    },
+    {
+      "id": "decentralized_alternative_viability",
+      "question": "Can decentralized/consensus-based governance models (blockchain, distributed DAOs, pure federation) sustain complex open source infrastructure projects at scale?",
+      "resolution_mechanism": "Comparative analysis of decentralized vs corporate-stewarded projects: complexity maintained, security record, contributor retention, funding sustainability, roadmap coordination effectiveness",
+      "impact": "If viable: sunset clause for Scaffold is credible \u2014 decentralized alternatives can absorb projects. If not viable: corporate stewardship becomes structural inevitability, sunset becomes aspirational, Scaffold downgrade to Piton.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether decentralized governance can replace corporate-stewarded open source at scale"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Enterprise open source governance creates a structural tension between corporate capital seeking to externalize development costs and community actors seeking autonomy and sustainability. Large technology vendors (Google, Meta, Microsoft, Apple) stewarding critical infrastructure projects (Kubernetes, TensorFlow, PyTorch, LLVM, WebKit) deploy governance structures that appear consensual while preserving unilateral decision authority. The constraint exhibits the full range of indexical classifications depending on observer position. Independent developers experience extraction (Snare). Community sustainability advocates experience mixed coordination and extraction (Tangled Rope). Corporate vendors experience pure coordination (Rope). Reform coalitions see temporary problems with sunset paths (Scaffold). The benevolent dictator model persists as performative governance theater (Piton). Civilizational observers risk naturalizing the asymmetry as inherent law (false Mountain). The extractiveness value (0.52) reflects that genuine coordination occurs (shared problem-solving, infrastructure access, funding support) alongside asymmetric capture of labor and governance authority. The theater ratio (0.68) reflects elaborately documented governance processes whose outcomes are predetermined by corporate stewards.",
+    "key_agents": [
+      "Enterprise Software Vendors: Primary beneficiary (institutional/arbitrage) \u2014 capture community labor externalities, reduce R&D costs, maintain strategic control over roadmaps",
+      "Independent Developers: Primary victim (powerless/trapped) \u2014 locked in by knowledge investment, dependency on project ecosystem, no exit mechanism with reputation preservation",
+      "Community Sustainability Advocates: Secondary victim (moderate/constrained) \u2014 face funding constraints, career identity fusion with projects, pressure from corporate sponsors to accept unfavorable terms",
+      "Governance Reform Coalition: Organized intermediary (organized/constrained) \u2014 Linux Foundation, Apache Foundation, community councils building structured governance with independence commitments",
+      "Benevolent Dictator Model: Institutional artifact (institutional/arbitrage) \u2014 governance structure persisting through inertia; provides signal of openness while preserving steward control",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent capital dynamics as inherent scientific/technical requirements"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Corporate stewards do extract genuine value \u2014 they capture community labor, reduce their own R&D costs, and accumulate market power through ecosystem control. The constraint is not pure extraction because real coordination occurs: shared infrastructure reduces duplication, collective problem-solving accelerates innovation, and community participants gain access to resources they couldn't build alone. The measurement shows extractiveness increasing over time (0.28 \u2192 0.52) as projects mature and corporate dependence deepens. Suppression (0.58): Moderate-high. Barriers to independent action include: specialized knowledge lock-in, infrastructure dependency (CI/CD systems, legal support, funding), career risk from forking established projects, and reputation effects of being seen as divisive. However, suppression is not total \u2014 some forks succeed (Docker, Spark, Tensorflow alternative implementations), and licensing changes can trigger community exits. Theater ratio (0.68): High. Governance processes are elaborate (contributor guidelines, RFC systems, community councils, code of conduct enforcement) but outcomes are often predetermined by corporate stewards. The theater increased over time (0.45 \u2192 0.68) as projects grew and corporate stakes increased \u2014 more elaborate governance processes were added to signal openness while preserving control.",
+    "perspectival_gap": "This constraint demonstrates how the same governance structure produces divergent classifications based on observer power and exit capacity. The vendor sees Rope because their arbitrage options and institutional power mean they experience the constraint as enabling (they can always restructure). The developer sees Snare because their trapped status and powerlessness mean they experience no exit. The analyst risks seeing Mountain because the asymmetry appears inevitable \u2014 'open source is just how innovation works' \u2014 naturalizing what is actually a contingent institutional choice. The reformers see Scaffold because they have identified plausible exit paths (governance transparency, contributor rights, federation models) that would shift the constraint toward Rope for developers and away from Snare.",
+    "directionality_logic": "Directionality values derive from structural position in the extraction flow. Corporate vendors have low d (they are net beneficiaries): arbitrage exit options + beneficiary status + institutional power \u2192 d \u2248 0.10 \u2192 f(d) \u2248 -0.05 \u2192 negative \u03c7 (they experience subsidization, not extraction). Independent developers have high d (they are net targets): trapped exit + victim status + powerless atoms \u2192 d \u2248 0.92 \u2192 f(d) \u2248 1.38 \u2192 high \u03c7 (they bear full extraction load). Community advocates have moderate d (mixed position): constrained exit + both beneficiary and victim aspects + moderate power \u2192 d \u2248 0.55 \u2192 f(d) \u2248 0.73 \u2192 moderate \u03c7. The vendor perspective's arbitrage exit is especially important: they can easily move resources to other projects or relicense if community terms shift unfavorably. The developer's trapped exit is the key structural asymmetry: they cannot relocate their reputation and contribution history.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that the six types represent genuinely different structural experiences of the same institutional arrangement. The mandatrophy question is not 'which type is correct?' but 'under what conditions does corporate-stewarded open source function as coordination vs extraction?' The answer is indexical: it functions as Rope for powerful agents with exit options and as Snare for powerless agents without them. The theater ratio (0.68) indicates that governance processes are substantially performative \u2014 elaborate RFC procedures, community councils, and contributor guidelines create the appearance of consensual process while stewards retain veto authority. The scaffold perspective provides a non-evasive resolution: concrete governance reforms (enforceable contributor rights, binding decision procedures, independence commitments) could shift the constraint toward Rope for all participants. The mountain perspective is a false summit \u2014 the analyst naturalizes what is actually a choice about power distribution in technology governance."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "software_commons_sustainability",
+      "developer_labor_capture",
+      "venture_capital_platform_control"
+    ],
+    "dual_formulation_note": "Enterprise open source governance decomposes into three structurally distinct constraints: (1) software_commons_sustainability (infrastructure erosion over time as corporate stewards reduce maintenance during downturns); (2) developer_labor_capture (value extraction from contributor labor relative to employment alternatives); (3) venture_capital_platform_control (market consolidation via ecosystem lock-in). This story focuses on governance mechanisms; downstream stories address sustainability and labor dynamics separately."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "airline_market_concentration",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "airline"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Airline Market Concentration and Competitive Extraction",
+    "topic_domain": "economic/regulatory/transportation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "major_carriers",
+      "airport_slot_holders"
+    ],
+    "victims": [
+      "passengers",
+      "regional_airlines",
+      "competitors_seeking_entry"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Captive Passenger",
+      "comment": "PERSPECTIVE 1: CAPTIVE PASSENGER (SNARE) \u2014 Passengers dependent on air travel face severely restricted choice in concentrated markets. High suppression through lack of alternatives (driving/rail uneconomical for long distances), high extractiveness through price premiums and fee structures. No meaningful exit except for essential travel choices. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Regional Airline",
+      "comment": "PERSPECTIVE 2: REGIONAL AIRLINE COMPETITOR (SNARE) \u2014 New entrants face barriers to entry (slot availability, fuel cost leverage, network effects of frequent flyer programs). Once committed to entry, stuck in asymmetric competition. Major carriers can absorb losses on competitive routes to drive out competitors. Trapped in predatory dynamics with no profitable exit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Business Traveler",
+      "comment": "PERSPECTIVE 3: BUSINESS TRAVELER (TANGLED ROPE) \u2014 Benefits from network connectivity and frequent flyer coordination across major carriers; constrained by the need for reliable scheduling and the ecosystem of airline partnerships. Experiences mixed extraction (higher fares) and coordination benefits (frequent flyer miles, schedule density, alliance perks). Can partially exit via shifting to video conferencing but faces career/business costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Major Carrier (Delta/United/American)",
+      "comment": "PERSPECTIVE 4: MAJOR CARRIER (ROPE) \u2014 Experiences concentration as coordination mechanism: airline partnerships, codeshare agreements, and slot control enable efficient network planning and revenue management. Benefits from barriers to entry that protect market position. Can arbitrage between routes and across alliances. Sees concentration as solving a coordination problem \u2014 how to match supply and demand across complex networks while maintaining profitability."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regional Communities and Small Airports",
+      "comment": "PERSPECTIVE 5: REGIONAL COMMUNITIES (TANGLED ROPE) \u2014 Small airports depend on major carrier agreements for essential air service (subsidized routes). Receive coordination benefit (air connectivity) alongside extraction (control over service quality and route planning). Cannot freely exit dependence on major carriers; organized resistance possible through political pressure but constrained by economic realities. Genuine coordination function (routes would not exist without carrier commitment) coexists with asymmetric extraction (service is conditional on carrier's profitability calculations)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Regulatory Framework (DOT/FAA)",
+      "comment": "PERSPECTIVE 6: REGULATORY FRAMEWORK (PITON) \u2014 The antitrust enforcement and slot allocation system is largely performative. Mergers are reviewed but major consolidations are approved despite concentration concerns. Slot allocation at congested airports (LAX, JFK, ORD) occurs through grandfather clauses and long-term holdings rather than competitive auctions. The regulatory apparatus maintains the theater of competitive oversight while the actual enforcement is degraded \u2014 regulatory capture and bureaucratic inertia preserve the status quo. Theater ratio reflects the disconnect between stated competitive goals and actual market outcomes."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Network Effects View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NETWORK EFFECTS VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, some degree of concentration may be inherent to airline economics: network effects (hubs benefit from denser connections), capital intensity (economies of scale in fleet and maintenance), and coordination complexity (scheduling across hundreds of daily flights) create natural barriers to entry. This perspective sees concentration as a feature of the industry's fundamental physics rather than a contingent institutional arrangement. However, the structural data contradicts this \u2014 regulatory decisions (merger approvals, slot allocation mechanisms) are contingent choices, not immutable laws. The mountain classification is a false summit that naturalizes policy artifacts as natural limits."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "network_effects_necessity",
+      "question": "Are airline network effects genuinely necessary (economies of scale, scheduling complexity) or are they artificially reinforced by regulatory and business model choices?",
+      "resolution_mechanism": "Comparative analysis of airline markets with different regulatory regimes (EU slot allocation reforms, budget carrier network models, historical deregulation outcomes); econometric isolation of true economies of scale from lock-in effects",
+      "impact": "If genuinely necessary: concentration is partially justified by coordination demands (tangled_rope classification more durable). If reinforced artifacts: concentration is primarily extractive (snare classification strengthens for passengers and competitors).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether network effects are inherent or artificially reinforced"
+    },
+    {
+      "id": "slot_allocation_alternative_feasibility",
+      "question": "Would price-based slot allocation (auctions) at congested airports enable new entrants, or would major carriers' ability to cross-subsidize routes prevent meaningful competition?",
+      "resolution_mechanism": "Policy simulation studies; case analysis of EU/UK slot auctions post-Brexit; historical analysis of slot allocation mechanisms and entry outcomes",
+      "impact": "If auctions enable entry: primary barrier is regulatory choice (extractiveness remains but becomes politically addressable). If cross-subsidization prevents entry regardless: structural economics limit competition more than policy choices.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of slot allocation reform to enable competition"
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_economic",
+      "question": "Is high suppression of passenger choice due to structural lack of alternatives (no competing surface transport) or economic mechanisms (airlines artificially inflate margins to price out competition)?",
+      "resolution_mechanism": "Comparison of markets with different surface transport availability (transcontinental US vs European short-haul where rail competes); price elasticity analysis pre/post competitive entry; international comparison of fares in concentrated vs competitive markets",
+      "impact": "If structural: suppression is unavoidable coordination cost. If economic: suppression is extractive mechanism that policy could address.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or economically manipulated"
+    },
+    {
+      "id": "merger_approval_logic",
+      "question": "Do airline merger approvals reflect genuine coordination benefits (complementary networks, cost synergies) or regulatory capture and abandonment of competitive standards?",
+      "resolution_mechanism": "Analysis of post-merger outcomes: competition intensity, capacity discipline, route rationalization; comparison of predicted vs actual synergies; historical pattern of merger approval and subsequent market outcomes",
+      "impact": "If coordination benefits real: mergers may justify tangled_rope classification despite high concentration. If capture: mergers are extractive power consolidation (snare classification for competitors/passengers).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether merger approvals reflect genuine coordination or regulatory capture"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "U.S. airline market concentration has increased dramatically over the past two decades through mergers (Delta-Northwest, United-Continental, American-US Airways), reduced low-cost carrier entry, and strategic dominance of major carriers at key hubs. This constraint exhibits the signature of a tangled rope with strong snare characteristics for passengers and competitors: genuine coordination benefits (network density, schedule reliability, cost efficiency) coexist with significant extractive mechanisms (price premiums, reduced route competition, predatory pricing on competitive routes, barriers to entry through slot control and network effects). The theatrical regulatory apparatus (DOT scrutiny of mergers, FAA slot allocation oversight) maintains the appearance of competitive oversight while actual enforcement is degraded. The constraint's extractiveness has risen over 20 years through sequential mergers and slot consolidation; theater_ratio remains moderate because the extraction mechanism (pricing power, service reduction) is economically visible, not purely procedural. However, the regulatory theater has intensified relative to actual competitive pressure.",
+    "key_agents": [
+      "Passengers on concentrated routes (powerless/trapped) \u2014 dependent on air travel with limited alternatives, facing price premiums and reduced service options",
+      "Regional/low-cost carriers (powerless/trapped) \u2014 face barriers to entry and predatory competition from incumbents; once committed, cannot profitably exit or compete",
+      "Business travelers (moderate/constrained) \u2014 benefit from network connectivity and frequent flyer programs while paying premium fares and accepting pricing discipline",
+      "Major carriers (institutional/arbitrage) \u2014 benefit from concentration, control slot allocation, capture merger approvals, arbitrage across routes and international partnerships",
+      "Regional communities and small airports (organized/constrained) \u2014 depend on major carrier agreements for essential air service while having limited bargaining power",
+      "Department of Transportation and FAA (institutional/arbitrage) \u2014 maintain regulatory theater; capture by major carriers reduces enforcement effectiveness"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Airlines extract through price premiums on concentrated routes (estimated 20-30% above competitive levels in some markets), ancillary fees, capacity discipline (reducing seats to maintain load factors), and reduced service on low-margin routes. The extraction is substantial but not maximal because genuine coordination benefits exist (hub efficiency, schedule density) and some competitive pressure persists (low-cost carriers, international competitors). Suppression (0.65): High. Passengers have severely restricted alternatives: long-distance driving is uneconomical for most routes, rail is underdeveloped in the U.S., video conferencing doesn't eliminate business travel necessity. Barriers to entry for competitors include slot scarcity, network effects of frequent flyer programs, fuel cost leverage by major carriers, and strategic predatory pricing. Theater ratio (0.48): Moderate. The regulatory theater is visible but not dominant because the extraction mechanism is economically transparent \u2014 passengers experience price premiums and fee structures directly. The theater manifests in merger reviews that appear rigorous but result in approvals, and slot allocation that claims competitive principles but actually operates through grandfather clauses.",
+    "directionality_logic": "Passengers experience high d (0.85-0.95) because they are trapped victims with no exit option. Competitors experience high d (0.80-0.90) because they are victims of predatory competition despite nominally being able to choose not to enter (the choice is structurally unavailable once they assess the barriers). Business travelers experience moderate d (0.55-0.65) because they benefit from network coordination but pay extraction premiums and face suppression of alternative services. Major carriers experience low d (0.10-0.25) because they are beneficiaries of concentration, extract more than they pay in coordination costs, and have arbitrage options. Regulatory agencies would experience low/negative d in an ideal competitive regime, but actual regulatory capture produces mixed effects \u2014 they benefit from industry relationships and political support while nominally bearing responsibility for enforcement. The analytical observer at civilizational scope is at risk of d \u2248 0.72 (analytical canonical) which maps to the false summit \u2014 naturalizing what is actually a contingent institutional arrangement.",
+    "perspectival_gap": "The constraint reveals a fundamental perspectival divide between beneficiaries and victims. Passengers and regional competitors see snare (maximum extraction, no coordination benefit perceived). Business travelers and small airports see tangled rope (mixed extraction and genuine coordination). Major carriers see rope (pure coordination mechanism that solves the problem of matching supply to demand in complex networks). Regulators see piton (their enforcement role has atrophied while the apparatus persists through theater). The analytical observer risks seeing mountain (network effects and economies of scale are inherent to airline economics), but the structural data contradicts this \u2014 regulatory decisions (merger approvals, slot allocation mechanisms) are contingent choices, not immutable laws of physics or economics.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by exposing that the debate between 'is airline concentration a natural feature of the industry?' and 'is it extractive market failure?' is not a classification question but a question about which institutions and mechanisms are changeable. The mountain perspective (concentration is inherent to airline economics) is empirically questionable \u2014 regulatory reforms (slot auctions, merger blocking, capacity discipline agreements) could reduce concentration. The snare perspective (passengers are simply extracted from) misses the genuine coordination benefits of hub-and-spoke networks. The rope perspective (from carriers' view) is real for the specific coordination problem of network planning but obscures the power asymmetry that extracts from captive passengers. The tangled rope classification is most durable because it acknowledges both the genuine coordination function (networks do require density and planning) and the genuine asymmetric extraction (passengers and competitors bear costs disproportionate to their negotiating power). The mandatrophy is resolved by recognizing that concentration solves a coordination problem (hubs) through mechanisms that also enable extraction (pricing power, entry barriers). The policy lever is whether the coordination benefits require the extractive mechanisms, or whether alternative coordination structures (auction-based slot allocation, regulated pricing on concentrated routes, capacity caps) could preserve coordination while reducing extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "aircraft_emissions_regulation",
+      "labor_power_imbalance_airlines",
+      "hub_airport_capacity_limits"
+    ],
+    "dual_formulation_note": "Airline market concentration decomposes into three structurally distinct constraint stories with different epsilon values: (1) pricing power and route entry barriers (this story, \u03b5=0.58, tangled_rope), (2) fleet coordination and schedule complexity (\u03b5\u22480.30, rope \u2014 genuine coordination with minimal extraction), (3) airport capacity bottleneck (\u03b5\u22480.70, snare \u2014 passengers and airlines trapped by scarcity). This story focuses on market concentration as an extraction mechanism. The fleet coordination constraint exists independently; the capacity bottleneck would persist even with market fragmentation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ]
+}

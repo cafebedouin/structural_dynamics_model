@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "microservice_boundary_instability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "msb"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Microservice Boundary Instability",
+    "topic_domain": "software_architecture/distributed_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_infrastructure_team",
+      "central_architecture_authority"
+    ],
+    "victims": [
+      "feature_delivery_teams",
+      "system_reliability",
+      "operational_flexibility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Feature Delivery Team",
+      "comment": "PERSPECTIVE 1: FEATURE DELIVERY TEAM (SNARE) \u2014 Trapped by dependency lattice and architectural enforcement mechanisms. Cannot exit without complete system redesign. Bears full cost of boundary instability through blocked deployments, coordination overhead, and architectural lock-in. Experiences extraction as mandatory coordination overhead with no perceived reciprocal benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Operations Team",
+      "comment": "PERSPECTIVE 2: OPERATIONS TEAM (TANGLED ROPE) \u2014 Constrained by the need to maintain system stability while adapting service boundaries. Benefits from standardized interfaces and coordination mechanisms but bears significant operational cost when boundaries shift. Extraction and coordination are genuinely mixed \u2014 some boundary enforcement prevents cascading failures (coordination), but much of it is theater around the instability (extraction)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Infrastructure Team",
+      "comment": "PERSPECTIVE 3: PLATFORM INFRASTRUCTURE TEAM (ROPE) \u2014 Benefits from maintaining central architectural authority and enforcement mechanisms. Experiences the constraint as solving a genuine coordination problem: without boundary definition and stability enforcement, the microservice ecosystem becomes chaotic. Extracts value through control over architectural decisions while solving real coordination needs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Service Mesh Coalition",
+      "comment": "PERSPECTIVE 4: SERVICE MESH COALITION (TANGLED ROPE) \u2014 Organized teams (Istio, Consul, Linkerd advocates) see boundary instability as a solvable coordination problem with technological answers. Mobile enough to switch platforms or adopt distributed governance. Mixed view: the constraint represents a real coordination failure (tangled rope function) that technological solutions address without eliminating extraction (operators must adopt complex tooling and standards)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy SOA Patterns",
+      "comment": "PERSPECTIVE 5: LEGACY SOA PATTERNS (PITON) \u2014 Service-oriented architecture design patterns from the 2000s persist through institutional inertia despite being poorly matched to modern cloud-native constraints. The boundary definitions and enforcement mechanisms are substantially performative \u2014 they maintain appearance of order without solving underlying instability. Theater ratio high because much effort goes to maintaining the pattern itself rather than solving the coordination problem it was designed for."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, distributed system boundary definition appears as an immutable constraint inherent to scaling software: any large distributed system must define boundaries, must enforce interfaces, must coordinate across them. The instability appears as a law of network communication rather than a contingent architectural choice. This perspective risks naturalizing what are actually institutionally maintained boundaries."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "boundary_definition_authority",
+      "question": "Is boundary instability inherent to distributed systems or engineered by centralized architectural authority to maintain control?",
+      "resolution_mechanism": "Comparative analysis of organizations with decentralized boundary governance vs centralized enforcement; measurement of actual instability rates vs perceived instability in each model",
+      "impact": "If inherent: mountain classification is correct, constraint is unavoidable. If engineered: snare/tangled_rope classifications are correct, constraint is contingent on organizational choice. This determines whether boundary stability is a technical problem or a governance choice.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether boundary instability is inherent to distributed systems or engineered by centralized control"
+    },
+    {
+      "id": "coordination_necessity_threshold",
+      "question": "What level of inter-service coordination is functionally necessary vs ceremonially maintained by architectural enforcement?",
+      "resolution_mechanism": "Measurement of actual failure rates when coordination overhead is reduced; comparison of systems with strict vs loose boundary enforcement; analysis of whether enforcement failures correlate with production incidents",
+      "impact": "If most coordination overhead is functional: rope/tangled_rope classifications justified, constraint serves real purpose. If mostly ceremonial: piton classification indicates degraded mechanism, extraction is theater. Shift in boundary between rope and piton depends on answer.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Ratio of functionally necessary to ceremonially maintained coordination overhead"
+    },
+    {
+      "id": "service_mesh_exit_effectiveness",
+      "question": "Do service mesh platforms (Istio, Consul, etc.) solve boundary instability or merely relocate the extraction and instability to the mesh control plane?",
+      "resolution_mechanism": "Longitudinal analysis of organizations pre/post service mesh adoption; measurement of architectural enforcement overhead, operational complexity, and delivery velocity; tracking of control plane instability as a new constraint",
+      "impact": "If effective solution: scaffold perspective confirmed with sunset path via mesh maturation. If relocation: constraint persists at different layer, tangled_rope/snare classifications remain valid, boundary moves but instability doesn't resolve.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether service mesh adoption resolves boundary instability or relocates it"
+    },
+    {
+      "id": "decentralized_governance_scalability",
+      "question": "Can decentralized boundary governance (domain-driven design, inverse Conway maneuver) scale to organizations with 100+ services without coordination failure?",
+      "resolution_mechanism": "Case studies of organizations using decentralized boundary governance at scale; measurement of coordination costs, incident rates, and deployment velocity; comparison with centralized enforcement at equivalent scale",
+      "impact": "If scalable: alternative constraint pathway exists, enabling exit from central enforcement. Current snare classification becomes contingent on organizational choice. If not scalable: central enforcement becomes unavoidable at scale, mountain classification gains credibility.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether decentralized boundary governance can scale without loss of coordination"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Microservice architecture imposes boundaries on service ownership and communication contracts to enable independent deployment and scaling. The instability arises when these boundaries require constant renegotiation, enforcement, or change \u2014 when the boundary definition itself becomes a bottleneck and a source of coordination overhead rather than a solution to coordination problems. Organizations experience this as a tightening cycle: as service count increases, boundary definition becomes more explicit to maintain coherence; as boundaries become more explicit, the cost of boundary changes increases; as boundary change cost increases, services lock into outdated boundaries, creating technical debt and coupling that boundary enforcement then prevents teams from resolving. The constraint exhibits characteristics of both coordination (real need to define interfaces) and extraction (maintaining architectural authority and centralized decision-making). The theater ratio increases over time as more effort goes to maintaining boundary enforcement mechanisms (service mesh, API gateways, contract testing) relative to solving the actual coordination problem.",
+    "key_agents": [
+      "Feature Delivery Teams: Primary victims (powerless/trapped) \u2014 blocked by boundary enforcement and dependency restrictions; cannot exit without architectural redesign",
+      "Operations Team: Secondary victim (moderate/constrained) \u2014 must maintain stability while adapting to boundary changes; benefits from stability mechanisms but bears cost of enforcement",
+      "Platform Infrastructure Team: Primary beneficiary (institutional/arbitrage) \u2014 maintains central architectural authority and controls boundary decisions; benefits from standardized enforcement",
+      "Service Mesh Coalition: Secondary organizer (organized/mobile) \u2014 advocates technological solutions that maintain extraction while solving coordination",
+      "Legacy SOA Patterns: Institutional mechanism (institutional/arbitrage) \u2014 persists through inertia, provides appearance of order but diminishing actual function",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks treating contingent architectural choice as immutable technical law"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, reflecting genuine coordination function combined with significant extraction. Boundary definition solves a real problem \u2014 without it, large distributed systems become chaotic. However, the extraction component is substantial: the platform infrastructure team maintains control over boundary decisions, uses enforcement mechanisms to prevent team autonomy, and leverages architectural authority to extract compliance and dependency. The 0.52 value (from 0.35 baseline) reflects increasing lock-in over time as the system scales. Suppression (0.58): Moderate-high. Teams face barriers to autonomous boundary design (architectural review gates, enforcement mechanisms, dependency management tools) but can technically exit through complete redesign or organizational restructuring. The suppression is not total but is institutionally maintained. Theater ratio (0.65): Moderately high, showing significant performative activity. Service mesh tooling, contract testing, API gateway configuration, and architectural review meetings consume substantial effort relative to actual boundary stabilization. The theater increases from 0.48 to 0.65 because the enforcement mechanisms themselves become increasingly complex and ceremonial as organizations try to solve instability through more enforcement rather than less.",
+    "perspectival_gap": "The feature delivery team experiences snare \u2014 they see mandatory, inescapable coordination overhead that blocks their work. The platform infrastructure team experiences rope \u2014 they see coordination mechanisms that solve genuine scaling problems. The operations team experiences tangled rope \u2014 mixed benefit and cost from the enforcement mechanisms. The service mesh coalition experiences tangled rope but with more agency \u2014 they see technological solutions that reconfigure but don't eliminate extraction. The legacy SOA patterns experience only institutional inertia (piton) \u2014 the mechanisms persist despite low functional value. The analytical observer risks mountain classification \u2014 treating boundary definition as an immutable law of distributed systems. The engine's false summit detector will identify this as naturalization: boundary instability is contingent on specific architectural choices and organizational governance models, not inherent to distributed computing.",
+    "directionality_logic": "Directionality derives from the structural relationship each agent bears to the constraint. Platform infrastructure teams are beneficiaries with arbitrage options \u2014 they can switch enforcement mechanisms or governance models but benefit most from maintaining central authority. Feature delivery teams are victims with trapped exit \u2014 they must comply with boundaries and cannot exit without organizational restructuring. Operations teams are mixed: they benefit from stability mechanisms but are constrained by enforcement costs. Organized teams (service mesh advocates) are victims with mobile exit \u2014 they can adopt alternative technologies or governance models but are not fully free from the underlying coordination requirements. The piton perspective has arbitrage exit because the legacy patterns can be replaced. The analytical perspective has analytical exit because the natural law view dissolves once examined across perspectives.",
+    "mandatrophy_analysis": "This constraint demonstrates how architectural authority naturalizes itself as technical necessity. The mandatrophy resolution requires distinguishing between: (1) Genuine coordination problem (distributed systems must define boundaries) \u2014 this is rope function. (2) Extraction mechanism maintaining that coordination through centralized control \u2014 this is the snare component. (3) Institutional theater around the enforcement (service mesh, architectural review, compliance mechanisms) \u2014 this is the piton component. The engine resolves mandatrophy by showing that the extracted value comes not from solving the coordination problem (which is genuinely solvable by multiple methods) but from maintaining organizational authority over solution choice. The mountain perspective is false: boundary instability is not inherent to distributed systems, it's contingent on choosing centralized enforcement as the coordination mechanism. Alternative governance models (decentralized boundary ownership, inverse Conway maneuver, domain-driven design) exist but are suppressed by the organizational constraint on centralized decision-making."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "api_versioning_lock_in",
+      "deployment_coupling_debt",
+      "architectural_review_bottleneck"
+    ],
+    "dual_formulation_note": "Microservice boundary instability is the upstream constraint that generates or exacerbates api_versioning_lock_in and deployment_coupling_debt. The architectural review bottleneck is a downstream manifestation where the coordination overhead becomes concentrated in review gates. Each story has its own extractiveness value reflecting the specific mechanism (boundary definition vs versioning vs deployment vs review), but all are linked through the central platform infrastructure team's authority."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

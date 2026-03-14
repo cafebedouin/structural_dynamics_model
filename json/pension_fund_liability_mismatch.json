@@ -1,0 +1,217 @@
+{
+  "header": {
+    "constraint_id": "pension_fund_liability_mismatch",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pfm"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.52,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Pension Fund Liability Mismatch: Coordination and Extraction in Longevity Risk Transfer",
+    "topic_domain": "financial_systems/institutional_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pension_fund_sponsors",
+      "institutional_investors"
+    ],
+    "victims": [
+      "plan_beneficiaries",
+      "younger_cohorts"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Retired Plan Member",
+      "comment": "PERSPECTIVE 1: RETIRED PLAN MEMBER (SNARE) \u2014 Trapped in the liability mismatch with no exit. Cannot switch pension providers or renegotiate benefits. Bears longevity risk through benefit freezes, COLA reductions, and delayed payment schedules. Maximum extraction with zero agency. Sees constraint as immutable because exit requires abandoning earned benefits."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Younger Active Member",
+      "comment": "PERSPECTIVE 2: YOUNGER ACTIVE MEMBER (TANGLED ROPE) \u2014 Constrained by career path dependence and inability to redirect pension contributions. Benefits from coordination (employer matches, diversified investments) but bears extraction through contribution increases, benefit accruals that may not materialize, and cross-subsidization of unfunded legacy liabilities. Mixed experience \u2014 some benefit, significant cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Pension Fund Sponsor",
+      "comment": "PERSPECTIVE 3: PENSION FUND SPONSOR (ROPE) \u2014 Institutional beneficiary with arbitrage options. Can adjust liability assumptions, extend contribution schedules, reduce future accruals, or seek liability transfer deals. Experiences the constraint as coordination: matching investments to liabilities enables financial stability and reduces equity volatility. Net beneficiary from liability matching frameworks."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory and Governance Framework",
+      "comment": "PERSPECTIVE 4: REGULATORY AND GOVERNANCE FRAMEWORK (TANGLED ROPE) \u2014 Organized actors (regulators, accounting standards boards, pension protection corporations) coordinate liability disclosure and funding rules while extracting governance overhead and imposing rigid asset-liability matching that constrains portfolio optimization. Active enforcement maintains the constraint; some genuine coordination benefit (risk containment) alongside extractive effects (reduced return-seeking, regulatory compliance costs)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Alternative De-Risking Pathway",
+      "comment": "PERSPECTIVE 5: ALTERNATIVE DE-RISKING PATHWAY (SCAFFOLD) \u2014 Pension buyout firms, annuity providers, and liability-driven investment strategies represent sunset mechanisms. As these alternatives mature, plan sponsors can transfer liabilities to specialized providers, reducing the need for long-term coordination of in-house mismatches. Theater is moderate (buyouts involve substantial fees and administrative theater); sunset is structural (growing liability transfer market). Effective extraction declines as exits become available."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Traditional Defined-Benefit Model",
+      "comment": "PERSPECTIVE 6: TRADITIONAL DEFINED-BENEFIT MODEL (PITON) \u2014 The DB pension structure persists through institutional inertia and cultural expectation despite degraded functionality: equity returns insufficient to fund promised benefits, plan design changes render original contracts hollow, and administrative overhead is high relative to actual risk mitigation achieved. The theater ratio (0.64) reflects performative governance around a mechanism that no longer solves the problem it was designed for. Maintained because alternatives (DC plans, auto-IRAs) are still developing."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Mortality Risk View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / MORTALITY RISK VIEW (MOUNTAIN) \u2014 From a civilizational perspective, longevity risk is an irreducible feature of any system that promises lifetime payments. The mismatch between asset duration (finite) and liability duration (stochastic but potentially infinite) is structurally immutable. This view risks naturalizing what is contingent: the obligation to provide lifetime benefits is a human choice, not a law of nature. The engine flags this as a false summit, revealing that 'inherent longevity risk' naturalizes institutional commitment rather than physical law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "longevity_assumption_uncertainty",
+      "question": "How much of the measured liability mismatch reflects genuine longevity improvement vs. outdated mortality assumption updates?",
+      "resolution_mechanism": "Historical comparison of assumed vs actual lifespans; analysis of assumption revision cycles; correlation with population-level mortality data",
+      "impact": "If mismatch is primarily assumption lag: constraint is temporary (scaffold). If mismatch reflects genuine uninsurable longevity trends: constraint is structural (tangled_rope or snare). Classification shifts with resolution.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether mismatch reflects assumption lag or genuine longevity risk"
+    },
+    {
+      "id": "asset_return_realism",
+      "question": "Are expected asset returns used in liability matching realistic given current market valuations and demographic headwinds?",
+      "resolution_mechanism": "Stress-test return assumptions against historical ranges; Monte Carlo analysis of portfolio outcomes; comparison across pension systems using different return assumptions",
+      "impact": "If returns are optimistic: mismatch is understated, extraction heavier than measured. If returns are conservative: mismatch reflects realistic risk allocation. Impacts whether constraint is classified as snare (if returns are wishful) or rope (if realistic).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether return assumptions are realistic for liability matching"
+    },
+    {
+      "id": "cross_generational_fairness_asymmetry",
+      "question": "Does the liability mismatch systematically transfer intergenerational risk from older to younger cohorts, and is this transfer intentional or emergent?",
+      "resolution_mechanism": "Generational accounting analysis; comparison of benefit-contribution ratios across cohorts; policy document analysis of design intent; interview data from plan design decision-makers",
+      "impact": "If intentional intergenerational transfer: constraint is foundational (tangled_rope). If unintended consequence: constraint is failure mode (snare). If mitigated by sunset mechanisms: constraint is scaffold. Intent affects classification and mandatrophy resolution.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether intergenerational transfer is intentional or emergent"
+    },
+    {
+      "id": "alternative_de_risking_sufficiency",
+      "question": "Can pension buyout and annuity transfer markets actually absorb the volume and risk profile of liability transfers without systemic cost increases?",
+      "resolution_mechanism": "Analysis of liability transfer market growth rates; pricing data for buyouts and annuities; correlation between transfer volume and cost; stress-test of insurance industry capacity",
+      "impact": "If sufficient: scaffold sunset is real and structural. If insufficient: buyout pathway is theater (expensive alternative theater for same fundamental constraint), reducing confidence in scaffold classification. Impacts generational outlook for constraint resolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether de-risking market can absorb pension liabilities"
+    },
+    {
+      "id": "regulatory_capture_in_liability_matching",
+      "question": "Do accounting and regulatory standards for liability matching reflect genuine risk management needs or serve primarily to favor pension fund sponsors and insurance firms?",
+      "resolution_mechanism": "Historical analysis of regulatory changes and industry lobbying; comparison of risk-adjusted returns across different matching strategies; cost-benefit analysis of specific regulations from beneficiary perspective",
+      "impact": "If genuinely protective: regulatory framework is coordination mechanism. If captured: framework is extraction vehicle, increasing suppression and shifting classification toward snare. Directly affects directionality and institutional perspective.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether liability matching standards reflect genuine risk management or regulatory capture"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Pension fund liability mismatch arises when the duration and characteristics of invested assets diverge from the duration and structure of promised liabilities. In a defined-benefit system, this creates a coordination problem: the plan sponsor must invest resources strategically to ensure assets will be available to pay promised benefits. However, the constraint embeds extraction: younger workers and future generations subsidize unfunded legacy liabilities; beneficiaries bear longevity risk through benefit adjustments; and the regulatory apparatus enforces liability-matching rules that extract governance overhead while constraining return-seeking strategies. The extractiveness value (0.58) reflects that the mismatch is neither pure coordination (rope) nor pure extraction (snare), but a hybrid that genuinely coordinates around longevity risk while systematically extracting value from powerless agents. Theater has increased as regulatory complexity has outpaced actual risk mitigation effectiveness \u2014 pension governance now requires substantial compliance infrastructure that performs governance ritual without commensurately improving benefit security.",
+    "key_agents": [
+      "Retired Plan Members: Primary victim (powerless/trapped) \u2014 stuck with frozen benefits and longevity risk; cannot exit or renegotiate",
+      "Younger Active Members: Secondary victim (moderate/constrained) \u2014 cross-subsidize legacy liabilities and bear contribution increases; have some exit through career change or shifting to DC plans",
+      "Pension Fund Sponsors: Primary beneficiary (institutional/arbitrage) \u2014 can adjust liability assumptions, extend contribution schedules, or transfer liabilities to insurance firms",
+      "Regulatory and Governance Framework: Organized enforcer (organized/constrained) \u2014 maintains liability-matching standards and funding rules; coordinates disclosure but extracts compliance costs",
+      "Alternative De-Risking Industry: Organized pathway (organized/mobile) \u2014 buyout firms and annuity providers offering liability transfer mechanisms with sunset logic",
+      "Traditional DB Plan Structure: Degraded institution (institutional/arbitrage) \u2014 persists through inertia despite declining function; maintains high theater relative to risk mitigation achieved",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing longevity risk as immutable law rather than institutional commitment"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The liability mismatch began as a genuine coordination challenge: matching assets to liabilities reduces portfolio volatility and ensures benefit security. But as equity returns have declined and longevity has increased, the mismatch has become structural. Younger workers now contribute at rates that would have been unthinkable 30 years ago, and their accruals may not materialize if plans close to new entrants (common since 2000s). The trajectory from 0.35 to 0.58 reflects that the coordination function has degraded while the extraction mechanism has persisted and intensified. Suppression (0.52): Moderate-high. Significant barriers prevent workers from exiting: earned benefits cannot be forfeited, alternative retirement systems are underdeveloped, career switching is expensive, and regulatory frameworks penalize plan termination. But suppression is not absolute \u2014 some workers can shift to DC plans, and buyout options are expanding. Theater ratio (0.64): Moderate-high and rising. Traditional DB pension governance involves substantial compliance (actuarial valuations, funding reports, trustee meetings) that performs risk management without proportionally improving outcomes. The theater increase from 0.48 to 0.64 reflects that regulatory complexity has grown while actual benefit security has declined in many plans \u2014 the theater is now the primary output relative to the actual risk mitigation achieved.",
+    "perspectival_gap": "This constraint reveals perspectival divergence rooted in structural position rather than disagreement about facts. All perspectives agree on the core structural facts: liabilities exceed expected asset returns; workers cannot easily exit; regulatory frameworks enforce coordination rules. But the experienced classification differs radically. Retired members with trapped exit see snare (pure extraction, no coordination benefit). Younger members with constrained exit see tangled rope (mixed coordination and extraction). Sponsors with arbitrage exit see rope (primarily coordination). Regulators see enforcement as coordination (themselves); beneficiaries see it as extraction overhead. De-risking industry sees temporary constraint with sunset. DB plan advocates see degraded ritual. The analytical observer risks seeing natural law. The gap is not disagreement but structural difference in extraction flow direction and exit capacity.",
+    "directionality_logic": "Directionality (d) is derived from structural position: who benefits, who bears costs, and what options exist for exit. Retired members are victims with zero exit (d \u2248 0.95, f(d) \u2248 1.42, maximum experienced extraction). Younger members are mixed (both contributors to current retirees and future beneficiaries); constrained exit yields d \u2248 0.65, f(d) \u2248 1.00, moderate extraction. Plan sponsors are beneficiaries with arbitrage options (can transfer liabilities, adjust assumptions); d \u2248 0.15, f(d) \u2248 -0.01, experienced as coordination or slight subsidy. Organized agents (regulators, de-risking firms) with mobile/constrained exit experience moderate d. The scope modifier \u03c3(S) = 1.0 (national) reflects that the constraint operates primarily within national regulatory frameworks, though pension systems increasingly operate across borders. The pipeline computes \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) for each perspective, showing why the same structural mismatch is experienced as snare by powerless agents and rope by institutional beneficiaries.",
+    "mandatrophy_analysis": "RESOLVED MANDATROPHY: The constraint resolves the tension between calling it 'coordination' (DB pensions genuinely coordinate longevity risk) and calling it 'extraction' (the system extracts value from younger workers and locked-in beneficiaries). The resolution is perspectival: it IS coordination from the plan sponsor's view (they are solving a real problem \u2014 matching assets to liabilities). It IS extraction from the powerless member's view (they bear the full cost of the mismatch with no exit). It IS a mixed tangled_rope from the younger worker's view (they benefit from coordination structure but subsidize legacy costs). The mandatrophy collapses when we recognize that the two descriptions are compatible \u2014 they describe different aspects of the same constraint from different structural positions. The constraint is coordinative for those with exit options and extractive for those without. The classification is not 'which one is it?' but 'from which structural position are you measuring?' The claimed type (tangled_rope) captures this hybrid correctly: genuine coordination function + asymmetric extraction + active enforcement to maintain the mismatch."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "longevity_risk_transfer",
+      "defined_contribution_system_adequacy",
+      "intergenerational_fiscal_sustainability"
+    ],
+    "dual_formulation_note": "The liability mismatch is upstream of specific de-risking mechanisms and downstream of demographic/economic trends. Separate constraint stories should address: (1) longevity_risk_transfer (\u03b5 \u2248 0.42, the insurance industry's side of liability buyouts) and (2) intergenerational_fiscal_sustainability (\u03b5 \u2248 0.65, whether the mismatch is symptom of deeper fiscal imbalance or contained within pension systems). These stories decompose the mismatch along domain lines per the \u03b5-invariance principle."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.65
+    }
+  ]
+}

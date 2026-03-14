@@ -1,0 +1,186 @@
+{
+  "header": {
+    "constraint_id": "employment_legitimacy_ideology",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "empl_leg"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Employment Legitimacy Ideology",
+    "topic_domain": "labor/political_economy/ideology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "capital_holders",
+      "corporate_management"
+    ],
+    "victims": [
+      "precarious_workers",
+      "labor_collective_power"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Precarious Worker",
+      "comment": "PERSPECTIVE 1: PRECARIOUS WORKER (SNARE) \u2014 Trapped by economic dependency and normative framing that employment = legitimacy. Cannot exit the labor market; internalized belief that joblessness is personal failure. Bears full extraction: wage suppression justified as 'market reality,' irregular hours normalized as inevitable, lack of benefits rationalized as 'job mobility trade-off.' Maximum experienced extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Organized Labor Movement",
+      "comment": "PERSPECTIVE 2: ORGANIZED LABOR (TANGLED ROPE) \u2014 Constrained by declining membership and fragmented bargaining power, but coordinates genuine workplace protections and wage standards. The constraint operates simultaneously as coordination mechanism (labor standards, collective voice) and extraction mechanism (union dues, bureaucratic capture by negotiated settlement rather than systemic change). Perspectival gap from the precarious worker: organized labor benefits from the legitimacy ideology (it stabilizes their hard-won contracts) while being constrained by it (it prevents radicalization of precarious workers who could expand membership)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Capital-Holding Class",
+      "comment": "PERSPECTIVE 3: CAPITAL-HOLDING CLASS (ROPE) \u2014 Experiences the legitimacy ideology as pure coordination: it solves the collective action problem of maintaining a workforce that accepts submarket compensation without revolution. The ideology coordinates wage suppression across competing firms. Net beneficiary \u2014 extraction flows toward this agent through normalized low wages, minimal benefits, and suppressed labor organizing. From their perspective, this is efficient coordination, not extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Welfare State Apparatus",
+      "comment": "PERSPECTIVE 4: WELFARE STATE APPARATUS (PITON) \u2014 Maintains the legitimacy ideology through means-testing, welfare stigma, and conditional benefits (unemployment insurance requiring job-seeking, disability requiring proof). These institutions once coordinated genuine social insurance; they now primarily perform verification theater (means-testing bureaucracy that costs more to administer than it saves in benefit reduction). The apparatus sees its own function as degraded \u2014 means-testing survives through inertia despite evidence it increases costs and reduces effectiveness. Theater ratio reflects that modern welfare bureaucracy spends more effort on eligibility certification than on benefit delivery."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Basic Income / Alternative Work Coalition",
+      "comment": "PERSPECTIVE 5: ALTERNATIVE WORK COALITION (SCAFFOLD) \u2014 Organized advocates for universal basic income, cooperative ownership, and work-sharing see the legitimacy ideology as a temporary institutional arrangement with a sunset clause. Their organizing creates parallel institutions (worker cooperatives, gig-worker unions, UBI pilot programs) that decouple survival from employment legitimacy. The constraint is temporary and declining \u2014 not because the ideology is being refuted intellectually, but because material conditions (technological unemployment, housing costs, climate migration) are making the legitimacy-to-employment link unintelligible to younger cohorts. Sunset estimated at 15-25 years as generational economic insecurity reaches critical mass."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURALIZATION VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some employment constraint is inherent to organizing complex economies: the coordination of labor inputs, skill development, and resource allocation fundamentally requires some mechanism of allocation and incentive. This view sees employment legitimacy as an inevitable natural law of economic organization. However, this perspective risks naturalizing what is actually a historically contingent ideological construction. The constraint is NOT a mountain \u2014 the engine's false summit detector will flag this as naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "identity_lock_mechanism",
+      "question": "Is the constraint sustained by internalized identity fusion (worker identity constituted through employment) or by external material barriers (economic dependency)?",
+      "resolution_mechanism": "Longitudinal tracking of exited workers: do those who leave employment (retirement, disability, sabbatical) maintain identity-lock effects post-exit? Do they seek reemployment from internalized framing or from material necessity? Survey data on whether job loss is experienced as identity loss vs. financial loss.",
+      "impact": "If primarily identity-locked: constraint persists even after material barriers are removed; exits require identity reconstruction. If primarily material: providing alternative income (UBI, inheritance) enables exit. Classification changes from Snare (identity-locked behavioral trap) to Snare (material trap) \u2014 same type but different dissolution mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether workers are trapped by identity fusion or material dependency"
+    },
+    {
+      "id": "coordination_vs_extraction_decomposition",
+      "question": "Does the legitimacy ideology coordinate genuine labor market functions (skill allocation, productivity incentives) or is coordination merely the rationalization for extraction?",
+      "resolution_mechanism": "Comparative institutional analysis: sectors/countries with decoupled legitimacy-employment (strong safety nets, UBI pilots, cooperative ownership) vs. those with tight coupling. Measure productivity, skill development, and worker satisfaction. If outcomes improve post-decoupling: legitimacy was rationalizing extraction. If outcomes degrade: coordination function was real.",
+      "impact": "If coordination is genuine: Tangled Rope justified \u2014 constraint has real coordination function alongside extraction. If coordination is cover story: reclassify as Snare from all perspectives except beneficiaries. Changes the justification premise for scaffold sunset (temporary fix for real problem vs. dissolution of false legitimacy).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether employment legitimacy coordinates real labor functions or merely rationalizes extraction"
+    },
+    {
+      "id": "suppression_structural_vs_internalized",
+      "question": "Is suppression maintained primarily by external barriers (economic dependency, legal restrictions) or by internalized belief (shame, internalized meritocracy myth)?",
+      "resolution_mechanism": "Experimental intervention: provide unconditional income to treatment group; track whether labor force participation, organizing, or exit attempts increase. Qualitative analysis of narratives: do workers who exit cite external barriers or internal conviction?",
+      "impact": "If primarily external: removal of material barriers enables mobilization. If primarily internalized: material support alone insufficient \u2014 requires identity/cognitive reframing. Affects assessment of suppression metric (0.68): if structural, it may be lower than perceived; if internalized, it may persist despite material intervention.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized"
+    },
+    {
+      "id": "generational_sunset_timing",
+      "question": "At what economic stress threshold (unemployment rate, housing affordability index, debt-to-income ratio) does the legitimacy-employment linkage break generationally?",
+      "resolution_mechanism": "Cohort analysis: survey generational attitudes toward employment necessity and life legitimacy at different economic stress levels. Model critical threshold where majority reject legitimacy-employment coupling. Track which institutional innovations (UBI pilots, cooperative scaling, work-sharing) accelerate threshold crossing.",
+      "impact": "If threshold is near (< 8 years): scaffold sunset is imminent and constraint classification should emphasize temporary nature. If threshold is distant (> 25 years): scaffold may be aspirational rather than structural. Affects timeline for mandatrophy resolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Generational threshold for rejecting employment legitimacy ideology"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Employment legitimacy ideology is the normative framework that equates having a paid job with social legitimacy, moral worth, and the right to survival resources. This constraint operates across contemporary capitalist democracies as a coordinating mechanism that allocates labor while simultaneously extracting concessions from workers who internalize the belief that employment is the only valid claim on income, dignity, and social belonging. The constraint exhibits the classic Tangled Rope signature: it performs genuine coordination (labor market sorting, skill incentives, productivity) while simultaneously extracting from workers through wage suppression, benefit denial, and suppression of collective alternatives. The constraint's theater_ratio (0.65) reflects that much institutional apparatus (welfare bureaucracy, job-seeking requirements, meritocratic justification) has become performative \u2014 it costs significant resources to maintain the legitimacy theater (means-testing administration, job compliance verification) while the actual coordination function has atrophied in the precariat.",
+    "key_agents": [
+      "Precarious Workers: Primary victim (powerless/trapped) \u2014 economic dependency and internalized identity fusion leave no exit options; bear maximum extraction of low wages, irregular hours, minimal benefits",
+      "Capital-Holding Class: Primary beneficiary (institutional/arbitrage) \u2014 wage suppression justified as market coordination; can arbitrage between labor markets and regulatory regimes",
+      "Organized Labor: Secondary beneficiary/victim (moderate/constrained) \u2014 benefits from legitimacy ideology (stabilizes hard-won contracts) while constrained by it (prevents radicalization of precarious workers); internal conflict between institutional stability and systemic transformation",
+      "Welfare State Apparatus: Institutional enforcer (institutional/constrained) \u2014 maintains legitimacy through means-testing theater and joblessness stigma; sees own function as degraded (piton perspective)",
+      "Alternative Work Coalition: Organized challenger (organized/mobile) \u2014 building scaffold: cooperatives, UBI pilots, work-sharing norms that create exit paths",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent ideology as economic law of nature"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts from precarious workers through suppressed wages (estimated 20-40% below union-negotiated rates in comparable industries), minimal benefits (health insurance conditional on job tenure, retirement savings shifting from employer-defined to individual-responsible), and suppressed collective power (anti-union messaging rationalized as market efficiency). The extraction is not total (0.90+) because employment does provide material survival and some workers experience genuine coordination benefits (skill development, access to capital, productivity incentives). The intermediate value reflects that the constraint mixes real coordination with extraction layered on top. Suppression (0.68): High. Barriers to exit and mobilization include: economic dependency (alternative income sources scarce), normative coupling (joblessness treated as moral failure), legal barriers (at-will employment, weak organizing protections), and cognitive capture (meritocracy myth suggests precarity is deserved). Theater ratio (0.65): Moderate-high. Significant performative elements: welfare means-testing (costs more to verify eligibility than to pay benefits), job-training programs (low post-training earnings improvement), corporate DEI initiatives (organizational performance unchanged post-adoption), meritocratic hiring mythology (skill requirements inflated beyond actual job demands). These theater elements have increased as the constraint's actual function has become visible and requires legitimation."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "welfare_stigma",
+      "union_decline",
+      "wage_stagnation",
+      "precarity_normalization"
+    ],
+    "dual_formulation_note": "Employment legitimacy ideology is upstream of specific labor market constraints (wage stagnation, union decline, welfare stigma, precarity normalization). Each downstream constraint has its own epsilon but shares the common ideology as a coordination/extraction backbone. The decomposition reflects that the single ideological constraint creates multiple structural effects with different \u03b5 values in different domains."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.62
+    }
+  ]
+}

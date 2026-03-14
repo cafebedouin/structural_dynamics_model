@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "regional_air_defense_procurement",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "radp"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Regional Air Defense Procurement System",
+    "topic_domain": "defense/regional_security/procurement",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "defense_contractors",
+      "wealthy_nation_states",
+      "procurement_bureaucrats"
+    ],
+    "victims": [
+      "developing_region_states",
+      "military_personnel",
+      "civilian_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Developing Regional State",
+      "comment": "PERSPECTIVE 1: DEVELOPING REGIONAL STATE (SNARE) \u2014 Trapped in procurement lock-in. Once committed to a weapons system family, switching to alternatives incurs catastrophic costs: incompatible supply chains, lost training investment, ammunition standardization failure, political humiliation. The state faces genuine security threats and must purchase systems, but the market structure offers no real alternatives \u2014 dominant suppliers enforce ecosystem lock-in through parts scarcity, proprietary software, and training monopolies. Maximum suppression through technical and economic barriers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Defense Contractor",
+      "comment": "PERSPECTIVE 2: DEFENSE CONTRACTOR (ROPE) \u2014 Experiences the constraint as coordination: enabling regional states to procure systems that address collective security concerns. The contractor benefits from demand and market position, but also coordinates a genuine security function \u2014 providing air defense systems that deter aggression. From the contractor's position, the constraint is a stable coordination mechanism with clear beneficiaries. The asymmetry in favor of the contractor is not experienced as extraction but as fair market exchange."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Regional Military Command",
+      "comment": "PERSPECTIVE 3: REGIONAL MILITARY COMMAND (TANGLED ROPE) \u2014 Organized but constrained. Benefits from having sophisticated air defense systems (coordination function: deters adversary air operations). But also bears extraction: limited maintenance autonomy, high spare parts costs, dependence on foreign training, vulnerability to supply disruption during conflict. The command has some agency (can negotiate terms, choose among competing systems) but faces high switching costs and geopolitical pressure to align with supplier nation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Wealthy Supplier Nation",
+      "comment": "PERSPECTIVE 4: WEALTHY SUPPLIER NATION (TANGLED ROPE) \u2014 Powerful actor with constrained options in the long term. Benefits from defense contractor revenue, geopolitical leverage over purchasing states, and extension of its military-industrial influence. But also coordinates a genuine security function \u2014 supplying systems that stabilize regional power balances. The supplier nation is constrained by international arms control regimes, alliance relationships, and the risk that over-extraction drives purchasing states toward competitors or indigenous development. Active enforcement through export controls and diplomatic pressure."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The International Arms Control Regime",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL ARMS CONTROL REGIME (PITON) \u2014 Ostensibly coordinates proliferation prevention and transparency. In practice, enforcement is highly selective, applied differentially to weak vs. powerful states, and routinely subordinated to geopolitical expedience. The regime persists through institutional inertia and ceremonial compliance despite widespread violation and inconsistent enforcement. Theater ratio high (compliance theater, transparency theater) because the actual function \u2014 preventing destabilizing proliferation \u2014 is underperformed while the ceremonial function \u2014 appearing to regulate arms markets \u2014 is overperformed."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (FALSE SUMMIT) \u2014 At civilizational/universal scope, an observer might perceive air defense procurement as governed by immutable constraints: security dilemmas are inherent to anarchic international systems, technological asymmetries are inevitable, and arms race dynamics are natural consequences of strategic competition. This natural law framing naturalizes what are actually contingent institutional arrangements \u2014 monopolistic market structure, lock-in through proprietary standards, enforcement asymmetries. The engine's false summit detector identifies this mountain as naturalization of contingent extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "indigenous_capability_threshold",
+      "question": "At what level of indigenous air defense capability development does a regional state achieve genuine exit options from lock-in?",
+      "resolution_mechanism": "Technical analysis of developmental milestones; comparison of indigenous system performance vs. imported systems; assessment of maintenance and upgrade autonomy",
+      "impact": "If threshold is low (achievable in 5-10 years): the snare may transition to constrained/tangled_rope as exit becomes feasible. If threshold is high (20+ years): lock-in persists across generations and extraction deepens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Development timeline for indigenous air defense capability"
+    },
+    {
+      "id": "supply_chain_weaponization",
+      "question": "During regional conflict, can the supplier nation weaponize supply chains by withholding spare parts, software updates, or training cooperation?",
+      "resolution_mechanism": "Historical case studies of defense supply disruption during conflict; assessment of actual spare parts stockpiling vs. stated autonomy; monitoring of software update controls during geopolitical tensions",
+      "impact": "If weaponization is routine: suppression mechanism is higher than measured (0.62), extraction is closer to snare (\u03c7 > 0.66). If suppliers maintain supply chain neutrality: suppression is lower, tangled_rope classification holds.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether supplier nations weaponize spare parts and software supply chains"
+    },
+    {
+      "id": "coalition_counter_procurement",
+      "question": "Can developing regional states coordinate joint procurement of alternative air defense systems to break monopoly lock-in?",
+      "resolution_mechanism": "Analysis of existing regional defense consortia; assessment of barriers to joint procurement (political divergence, technical standards incompatibility); monitoring of Chinese/Russian systems adoption as coordinated alternatives",
+      "impact": "If coalition procurement succeeds: powerless agents organize into moderate/organized agents, snare transitions to constrained/rope. If coalition fails: lock-in persists, suppression remains high, snare classification confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether developing states can coordinate alternative procurement"
+    },
+    {
+      "id": "geopolitical_alliance_leverage",
+      "question": "Is the primary extraction mechanism economic (high margins, spare parts pricing) or geopolitical (political leverage through supply dependency)?",
+      "resolution_mechanism": "Financial analysis of defense contractor margins vs. civilian tech industry norms; tracking of supplier nations' use of arms supply as political leverage in diplomatic disputes; assessment of whether extraction persists without geopolitical asymmetry",
+      "impact": "If primarily economic: constraint is driven by market structure (monopolistic contractor behavior). If primarily geopolitical: constraint is driven by alliance enforcement, and classification depends on whether supplier nation is beneficiary or enforcer.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether extraction is economic monopoly or geopolitical leverage"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Regional air defense procurement creates a hybrid coordination-extraction system where the defense requirement (genuine security coordination) becomes the cover for monopolistic market control and geopolitical leverage. Developing regional states face legitimate air defense needs but encounter a market structure that offers limited real alternatives: once committed to a weapons family, switching incurs prohibitive switching costs through incompatible logistics, training retraining requirements, and ammunition standardization. Defense contractors enforce ecosystem lock-in through proprietary software, restricted maintenance authorization, and spare parts scarcity. Wealthy supplier nations leverage this dependency for geopolitical advantage. The system exhibits all characteristics of tangled rope: genuine coordination function (states do need air defense systems), but asymmetric extraction (beneficiary captures disproportionate gains, victim bears switching costs and supply vulnerability). The theater ratio has increased over the interval as procurement processes have become more elaborate while actual capacity to conduct indigenous maintenance has declined, indicating Goodhart drift \u2014 the process has become decoupled from the function it was designed to serve.",
+    "key_agents": [
+      "Defense Contractors (institutional/arbitrage): Primary beneficiary \u2014 captures high margins, lock-in rents, long-term service contracts. Benefits from supply dependency enforcement.",
+      "Developing Regional States (powerless/trapped): Primary victim \u2014 faces genuine security needs but trapped in lock-in. Bears high costs of switching, supply disruption vulnerability, and geopolitical pressure.",
+      "Regional Military Command (organized/constrained): Secondary victim/beneficiary \u2014 coordinates defense function but constrained by procurement terms, maintenance restrictions, and spare parts dependency.",
+      "Wealthy Supplier Nation (powerful/constrained): Beneficiary and enforcer \u2014 gains geopolitical leverage, export revenue, and military-industrial influence. Constrained by international arms control norms and competition from alternative suppliers.",
+      "International Arms Control Regime (institutional/mobile): Institutional actor \u2014 nominally enforces proliferation prevention but selectively enforces and routinely subordinates to geopolitical expedience. Maintains performative function (compliance theater) while actual prevention function is weak.",
+      "Analytical Observer (analytical/analytical): Sees risk of naturalizing contingent extraction as inherent security dilemma."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high, reflecting genuine coordination function layered with substantial extraction. The base value has increased from 0.35 to 0.58 over the interval, indicating accumulation of rent-seeking mechanisms on top of the core coordination. Suppression (0.62): Moderately high. Genuine barriers include technical complexity requiring supplier training, incompatible supply chains, ammunition standardization, and geopolitical pressure to align with supplier. But suppression is not total \u2014 some states have maintained indigenous development programs, and alternative suppliers (China, Russia) provide exit options for some regions. Theater ratio (0.68): Indicates substantial performative activity. Procurement processes have become increasingly elaborate (tender documentation, compliance assessment, environmental review) while actual capacity to conduct independent verification or indigenous maintenance has declined. The ceremony of procurement has decoupled from the function of capability acquisition.",
+    "directionality_logic": "Deriving directionality (d) from structural position: Defense contractors are institutional beneficiaries with arbitrage exit options \u2014 they capture extraction gains and can serve multiple markets. Their d is low (near 0.1), making their f(d) \u2248 -0.01, producing negative experienced extractiveness (they benefit). Developing regional states are powerless victims with trapped exit options \u2014 they have no alternative and bear full extraction costs. Their d is high (near 0.95), making f(d) \u2248 1.42, producing maximum experienced extractiveness. Regional military commands are organized agents with constrained exit \u2014 they partially benefit (capability coordination) but face real switching costs. Their d is moderate (0.55), producing f(d) \u2248 0.75, intermediate extraction experience. Supplier nations are powerful actors with constrained exit \u2014 they benefit geopolitically but face long-term constraints from alliance costs and competition. Their d is moderate (0.45), producing positive f(d) \u2248 0.5, but the institution gains leverage rather than experiencing extraction.",
+    "perspectival_gap": "This constraint demonstrates large perspectival gaps. The defense contractor sees pure coordination (Rope) \u2014 they are solving the legitimate problem of providing sophisticated air defense systems. The developing state sees pure extraction (Snare) \u2014 they are trapped in a system where technological dependence becomes political leverage. The supplier nation sees tangled rope with a coordinating role \u2014 they provide security while gaining leverage. The regional military command sees tangled rope with constrained agency \u2014 they benefit from capability but suffer from autonomy loss. The international arms control regime sees itself as maintaining order (Piton) but enforcement is performative. The analytical observer risks seeing an immutable security dilemma (Mountain) when the constraint actually reflects contingent monopolistic market structure and geopolitical asymmetry.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by clarifying how the same procurement mechanism serves both genuine coordination and systematic extraction. The mandatrophy question is: Is this a rope (pure coordination for air defense) or a snare (pure extraction through lock-in)? The resolution is tangled rope: it is genuinely both. The coordination function (states need air defense, contractors provide capability) is real. But the extraction mechanism (lock-in, switching costs, supply weaponization) is equally real. The constraint cannot be classified as rope because the asymmetry is not incidental \u2014 it is structurally embedded in the vendor lock-in design. It cannot be classified as snare because eliminating the coordination function would not eliminate the extraction \u2014 states would still need air defense, the problem would just shift to whether they could access it. The tangled rope classification correctly identifies this as a hybrid where both functions are structural and neither is dominant."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "arms_embargoes_and_sanctions",
+      "defense_industrial_base_concentration",
+      "indigenous_military_technology_development"
+    ],
+    "dual_formulation_note": "Regional air defense procurement is downstream of arms market monopolization and upstream of geopolitical leverage dynamics. Separate constraints model the supplier market concentration (structural cause) and the sanctions weaponization (enforcement mechanism). This story focuses on the procurement constraint itself."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "bureaucratic_compliance_creep",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bcc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bureaucratic Compliance Creep",
+    "topic_domain": "administrative/regulatory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "regulatory_agencies",
+      "compliance_service_providers"
+    ],
+    "victims": [
+      "regulated_organizations",
+      "operational_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Frontline Operator",
+      "comment": "PERSPECTIVE 1: FRONTLINE OPERATOR (SNARE) \u2014 Compliance requirements accumulate without relief. Exit is impossible: non-compliance results in organizational penalties, personal liability, and license revocation. The operator bears full cost of compliance overhead without capacity to reduce it. Maximum extraction from an agent with no alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Level Manager",
+      "comment": "PERSPECTIVE 2: MID-LEVEL MANAGER (TANGLED ROPE) \u2014 Constrained by the requirement to maintain regulatory compliance while managing operations. Benefits from compliance systems that demonstrate organizational safety/quality but bears significant overhead in documentation, reporting, and personnel allocation. Can exit through career relocation but at substantial cost. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Regulatory Agency",
+      "comment": "PERSPECTIVE 3: REGULATORY AGENCY (ROPE) \u2014 Experiences the constraint as coordination: compliance requirements create a communication and accountability mechanism that enables public health, safety, and fairness objectives. Can arbitrage between regulatory standards (choosing which requirements to enforce). Net beneficiary experiencing low or negative extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Large Multinational Enterprise",
+      "comment": "PERSPECTIVE 4: LARGE MULTINATIONAL (TANGLED ROPE) \u2014 Powerful agent with mobile exit options (relocate operations, lobbying influence, regulatory arbitrage across jurisdictions). Both benefits (complexity barrier to entry protects market position) and bears costs (absolute compliance burden is substantial in dollar terms, though marginal cost per unit is lower than for competitors). Genuine coordination function mixed with asymmetric extraction that privileges incumbents over entrants."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Compliance Bureaucracy",
+      "comment": "PERSPECTIVE 5: COMPLIANCE BUREAUCRACY (PITON) \u2014 Compliance procedures persist through institutional inertia. Many specific requirements have lost their original justification (outdated regulations remain on the books; reporting mechanisms serve archival rather than enforcement purposes). Theater ratio is high because compliance activity is often performative rather than functionally necessary. Agencies maintain requirements because alternatives haven't been built, not because they work optimally. The system performs its own memory rather than its stated function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a global civilizational view, compliance systems serve genuine coordination functions (preventing tragedy of the commons, information asymmetries, externalities) while simultaneously extracting rents through regulatory capture, compliance service markets, and complexity barriers. The constraint is neither pure coordination (rope) nor pure extraction (snare) \u2014 it is a hybrid where the extraction mechanism parasitizes the legitimate coordination function."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_vs_theater_threshold",
+      "question": "How much of measured compliance activity is genuine risk mitigation vs. performative compliance theater?",
+      "resolution_mechanism": "Regression analysis of compliance expenditure against downstream outcomes (actual harm prevented); comparison of complaint investigation rates before vs. after regulatory changes; analysis of organizations using minimal vs. maximal compliance practices and their actual safety/quality records",
+      "impact": "If theater ratio is actually \u22650.80: constraint should reclassify toward Piton. If theater ratio is actually \u22640.40: constraint should reclassify toward Rope. Current estimate of 0.68 reflects genuine mixed function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of compliance activity that is performative vs. functionally necessary"
+    },
+    {
+      "id": "regulatory_capture_mechanism",
+      "question": "Do large incumbents shape compliance requirements specifically to increase barriers to entry?",
+      "resolution_mechanism": "Analysis of regulatory proposal origins and beneficiary patterns; comparison of compliance cost as percentage of revenue for market leaders vs. entrants; historical tracking of requirement complexity changes and industry consolidation rates",
+      "impact": "If systematic capture is confirmed: extractiveness should increase toward 0.68+; asymmetric extraction component dominates. If capture is minimal: extractiveness should decrease toward 0.45; constraint functions as mixed coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether large incumbents systematically shape requirements to disadvantage competitors"
+    },
+    {
+      "id": "exit_option_feasibility",
+      "question": "For regulated organizations, how real is the exit option of relocating operations to lower-compliance jurisdictions?",
+      "resolution_mechanism": "Analysis of actual organization relocation patterns; survey of regulatory arbitrage capabilities by sector and firm size; identification of practical constraints to geographic exit (supply chains, customer bases, talent availability)",
+      "impact": "If exit is genuinely available: many agents should reclassify from trapped to constrained or mobile. If exit is illusory: suppression value should increase because exit options are formally available but structurally blocked. Current assessment assumes constrained/mobile options for larger actors; trapped for smaller ones.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether geographic exit to lower-compliance jurisdictions is practically available"
+    },
+    {
+      "id": "compliance_creep_measurement",
+      "question": "What is the actual rate of new requirement addition vs. removal? Is 'creep' a documented phenomenon or a perception bias?",
+      "resolution_mechanism": "Historical audit of regulatory requirement counts by sector and year; analysis of requirement lifecycle (creation, modification, repeal); tracking of time-to-compliance burden over multi-year periods for fixed-scope organizations",
+      "impact": "If net requirement growth is \u22652% annually: creep is structural and extractiveness should be stable at 0.58+. If net growth is <1% annually: creep may be illusory, and extractiveness should decrease. Measurements show theater_ratio increasing more than base_extractiveness, suggesting creep is primarily in theater (documentation, reporting) rather than in new substantive requirements.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Net annual rate of new compliance requirements vs. removals"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Bureaucratic compliance creep is a constraint where regulatory requirements accumulate faster than they are removed, creating an expanding overhead burden on regulated organizations. The constraint exhibits a classic hybrid structure: genuine coordination functions (preventing catastrophic failures, protecting public interests, ensuring fair competition) coexist with extraction mechanisms (regulatory capture by incumbents, compliance service industries, complexity barriers to entry). The theater ratio has increased from 0.42 to 0.68 over the measurement interval, indicating that compliance activity increasingly consists of documentation and reporting that serve archival rather than enforcement purposes. The base extractiveness has increased from 0.32 to 0.58, suggesting that both functional and performative requirements have accumulated. Different agents experience the same constraint radically differently: frontline operators see an inescapable trap; managers see a mixed coordination-extraction trade-off; regulatory agencies see coordination; large multinationals see a barrier protecting their market position; the compliance bureaucracy sees degraded ritual maintained through inertia; and the analytical observer sees a constraint that serves legitimate functions while simultaneously enabling rent extraction.",
+    "key_agents": [
+      "Frontline Operators: Primary victims (powerless/trapped) \u2014 face non-negotiable compliance requirements with no exit option; accumulating documentation and reporting burden",
+      "Mid-Level Managers: Secondary victims (moderate/constrained) \u2014 constrained by compliance overhead; also benefit from safety/quality coordination systems; can exit through career mobility but at cost",
+      "Regulatory Agencies: Primary beneficiaries (institutional/arbitrage) \u2014 experience compliance systems as coordination mechanisms enabling their mandates; can arbitrage between requirements",
+      "Large Multinational Enterprises: Secondary beneficiaries (powerful/mobile) \u2014 bear absolute compliance costs but experience lower marginal cost per unit; benefit from complexity barriers that disadvantage smaller competitors",
+      "Compliance Service Industry: Secondary beneficiaries (institutional/arbitrage) \u2014 consulting firms, software vendors, audit services profit from requirement expansion and complexity",
+      "Compliance Bureaucracy: Institutional actor (institutional/arbitrage) \u2014 maintains procedures through inertia; performs archival function rather than enforcement; sees own system as degraded"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Compliance creep extracts through several mechanisms: time burden (documentation, reporting, training), capital burden (systems, monitoring equipment), opportunity cost (resources diverted from productive activity), and market barriers (complexity disadvantages entrants). However, the extraction is not as severe as pure snare (0.72+) because genuine coordination functions exist \u2014 preventing catastrophic failures, protecting public health, ensuring fair competition. The increase from 0.32 to 0.58 over 20 years reflects both real requirement accumulation and theater expansion. Suppression (0.65): High. Organizations cannot easily exit: non-compliance results in penalties, license revocation, legal liability. Some exit options exist (geographic relocation, lobbying influence for large firms) but are constrained by practical factors. Smaller organizations face near-total suppression; larger organizations have more mobility. Theater ratio (0.68): High-moderate. A significant portion of compliance activity is performative: documentation maintained for regulatory appearance rather than operational necessity, reporting that is filed and rarely reviewed, procedures that persist after their original justification has become obsolete. The increase from 0.42 to 0.68 reflects the expansion of documentation and reporting requirements outpacing substantive regulatory changes. Claimed type (Tangled Rope): The constraint simultaneously coordinates and extracts. Genuine coordination function prevents externalities and information asymmetries. Asymmetric extraction benefits incumbents (complexity barriers reduce competition) and compliance service industries. Active enforcement is required: regulatory agencies must continuously add and update requirements; the system does not persist passively.",
+    "perspectival_gap": "The core perspectival gap is between agents who benefit from coordination (regulatory agencies, the public interest in catastrophic failure prevention) and agents who bear accumulating overhead (operators, smaller organizations). The secondary gap is between small/powerless organizations experiencing snare-like accumulation and large/powerful organizations able to arbitrage or lobby against requirements. The third gap is between lived experience of operators (snare: inescapable, accumulating) and the legitimate coordination function the system serves (rope: prevents bad outcomes). The analytical position must hold both: the system genuinely prevents catastrophic failures AND accumulates theatre and extraction beyond functional necessity. This is not a false summit (mountain that would be revealed as snare) \u2014 it is a genuine hybrid (tangled rope) where no single perspective captures the full structure.",
+    "directionality_logic": "Directionality (d) varies by agent's structural position. Frontline operators are victims with trapped exit options: d \u2248 0.95 (maximum target), experiencing maximum extraction. Mid-level managers are victims with constrained exit options: d \u2248 0.70 (high target), experiencing significant extraction with some agency. Regulatory agencies are beneficiaries with arbitrage options: d \u2248 0.10 (beneficiary), experiencing low or negative extraction \u2014 the constraint subsidizes their capacity to execute their mandate. Large multinationals are mixed: officially victims (bear compliance costs) but beneficiaries of complexity barriers: d \u2248 0.45 (symmetric), experiencing moderate extraction masked by market position protection. Compliance service providers are clear beneficiaries: d \u2248 0.05, experiencing strong subsidy from requirement growth. The analytical observer at institutional power with analytical exit options derives d \u2248 0.72 (moderate target), reflecting the honest position that the constraint serves some functions while extracting asymmetrically. The engine will derive these values from the beneficiary/victim declarations and exit options; the directionality overrides are not needed because the structural data clearly reflects the actual relationships.",
+    "mandatrophy_analysis": "RESOLUTION: The mandatrophy is resolved by recognizing that the constraint is genuinely a tangled rope \u2014 not a rope falsely labeled as tangled, and not a snare hidden behind a coordination narrative. The coordination function is real and substantial: compliance systems do prevent many failures, protect public interests, and enable fair information flows. The extraction is equally real: requirement accumulation creates rents for compliance service industries, market barriers that protect incumbents, and performative overhead that serves no protective function. The hybrid classification is not a hedge \u2014 it is a precise description of a constraint that solves coordination problems while enabling extraction mechanisms. The false summit risk (natural law framing) would be 'compliance requirements are an immutable feature of modern governance.' The structural data contradicts this: requirements are human choices subject to design revision, removal, and replacement. Theater creep (0.42 \u2192 0.68) indicates that performative elements are growing faster than functional ones, suggesting opportunity for reform through requirement pruning and process simplification. The mandatrophy is fully resolved by the tangled rope classification with measured beneficiary/victim declarations and increasing theater ratio that enables future monitoring."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture",
+      "market_concentration_through_compliance_barriers",
+      "organizational_innovation_suppression"
+    ]
+  },
+  "directionality_overrides": []
+}

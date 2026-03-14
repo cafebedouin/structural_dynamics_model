@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "international_dispute_resolution_capacity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "intl_disp"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.52,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "International Dispute Resolution Capacity Constraint",
+    "topic_domain": "international_relations/institutional_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "powerful_states",
+      "institutional_dispute_resolvers"
+    ],
+    "victims": [
+      "weak_states",
+      "dispute_access_equity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Weak State in Dispute",
+      "comment": "PERSPECTIVE 1: WEAK STATE (SNARE) \u2014 Faces a dispute requiring international resolution but lacks resources for extended proceedings, expert legal representation, or political leverage to influence outcomes. Exit from the constraint system means accepting unresolved grievance or unilateral adverse settlement. The system extracts through cost burden (expertise, time, financial resources) while offering minimal guarantee of favorable resolution. No alternative dispute mechanisms are accessible."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regional Dispute Resolution Coalitions",
+      "comment": "PERSPECTIVE 2: REGIONAL COALITIONS (TANGLED ROPE) \u2014 Organized groups of states benefit from shared dispute resolution capacity (coordination function: pooling legal expertise, establishing precedent, reducing transaction costs for members). Simultaneously extract from non-member states through capacity gatekeeping and selective enforcement. Member states gain access; non-members bear disproportionate burden. Active enforcement through institutional commitment and network effects."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Dispute Resolution Institutions",
+      "comment": "PERSPECTIVE 3: RESOLUTION INSTITUTIONS (ROPE) \u2014 ICJ, UNCLOS arbitration, WTO dispute settlement function as pure coordination mechanisms from the institutional perspective. They solve the collective action problem of dispute resolution by establishing neutral forums, reducing verification costs, and enabling reciprocal commitment. Institutions themselves benefit from legitimacy and workload (arbitrage exit: can shift dispute-handling capacity across domains). Net beneficiary position through institutional prestige and resource allocation authority."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Powerful States with Alternative Mechanisms",
+      "comment": "PERSPECTIVE 4: POWERFUL STATES (SCAFFOLD) \u2014 Can exit the international resolution system and resort to bilateral negotiation, military pressure, or economic coercion. The formal dispute resolution constraint is tolerated because it provides limited benefits (international legitimacy, rhetorical cover) at low cost (powerful states can afford extended proceedings and control interpretation through institutional influence). This perspective sees the constraint as temporary scaffolding \u2014 as power imbalances persist, powerful states gradually substitute direct mechanisms, eroding the need for formal resolution."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Institutional Degradation View)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER \u2014 INSTITUTIONAL DEGRADATION (PITON) \u2014 From a civilizational horizon, the international dispute resolution system shows signs of degradation. Theater has risen (increased emphasis on institutional legitimacy and procedural theater rather than actual dispute resolution efficacy). The functional capacity of institutions has not kept pace with dispute volume and complexity. Powerful states increasingly bypass formal mechanisms. The institutions persist through inertia and formal legitimacy rather than because they are the most effective resolution pathway. Theater ratio indicates that institutional performance involves substantial performative activity (ceremonial procedures, rhetorical framing) masking limited practical dispute resolution."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Mid-Tier States Navigating the System",
+      "comment": "PERSPECTIVE 6: MID-TIER STATES (TANGLED ROPE) \u2014 Face moderate barriers to dispute resolution access. Can afford some legal expertise and institutional participation but lack the power to shape institutional outcomes. Benefit from the existence of formal resolution mechanisms (avoiding unilateral powerful-state dominance) while bearing costs of time, legal resources, and uncertainty. The system constrains outcomes while enabling dispute participation. Active enforcement through institutional procedures and power dynamics within forums."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "capacity_vs_willingness_distinction",
+      "question": "Is the constraint primarily a lack of dispute resolution capacity (insufficient institutional resources, expertise, procedures) or a lack of state willingness to use available mechanisms?",
+      "resolution_mechanism": "Comparative analysis of dispute caseload growth vs institutional resource growth; empirical measurement of utilization rates vs stated capacity; interviews with state representatives about barriers to dispute filing",
+      "impact": "If capacity-constrained: institutional investment and procedural reform can address the bottleneck (Scaffold/Rope classification appropriate). If willingness-constrained: the constraint is fundamentally about power asymmetry and institutional legitimacy gaps (Snare/Tangled Rope classification more accurate).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether bottleneck is institutional capacity or state willingness"
+    },
+    {
+      "id": "powerful_state_exit_sustainability",
+      "question": "Can powerful states sustain indefinite exit from formal international dispute resolution without destabilizing the system for weak states?",
+      "resolution_mechanism": "Game-theoretic analysis of reciprocal non-cooperation; historical analysis of system collapse scenarios (League of Nations, pre-WTO trade disputes); measurement of powerful-state participation rates over time",
+      "impact": "If sustainable: powerful states will continue to erode the system, shortening the sunset horizon and accelerating piton degradation (Scaffold becomes Piton faster). If unsustainable: powerful states must maintain formal participation, stabilizing the constraint as Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Sustainability of powerful-state exit from dispute resolution"
+    },
+    {
+      "id": "alternative_resolution_mechanism_emergence",
+      "question": "Are regional and bilateral dispute resolution mechanisms emerging as genuine alternatives that will replace international institutional mechanisms?",
+      "resolution_mechanism": "Comparative case analysis of dispute resolution outcomes: bilateral vs institutional vs regional forums; measurement of state preferences revealed through dispute forum selection; institutional market share over time",
+      "impact": "If genuine alternatives emerging: international institutions are degrading into pitons faster (scaffold sunset timeline shortens). If alternatives remain supplementary: formal institutions maintain tangled-rope classification with longer-term stability.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether alternative dispute mechanisms are replacing international institutions"
+    },
+    {
+      "id": "legitimacy_vs_efficacy_decoupling",
+      "question": "Are international dispute resolution institutions maintaining legitimacy through procedural theater while actual dispute resolution efficacy (settlement rates, implementation compliance) declines?",
+      "resolution_mechanism": "Longitudinal analysis of dispute settlement rates, implementation compliance rates, duration of proceedings; correlation analysis between institutional procedural elaboration and efficacy metrics; analysis of theater components vs functional necessity",
+      "impact": "If decoupled: theater_ratio will continue rising, accelerating piton classification. If coupled: theater reflects genuine functional necessity, and institutions remain Tangled Rope or Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Decoupling of institutional legitimacy from dispute resolution efficacy"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.59
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 45
+  },
+  "commentary": {
+    "narrative_context": "International dispute resolution capacity represents a structural constraint operating at the intersection of institutional coordination and power asymmetry. States require mechanisms for resolving cross-border disputes (treaties, trade, maritime boundaries, environmental damage) without resorting to force. International institutions (ICJ, arbitration forums, WTO dispute settlement) provide these mechanisms but operate under conditions of profound power imbalance: powerful states can afford extended proceedings and can exit to alternative mechanisms; weak states depend on institutional access and face resource constraints that limit their ability to participate effectively. The constraint exhibits the full spectrum of DR classifications depending on observer position. It functions as genuine coordination (enabling disputes to be resolved peacefully through established forums) while simultaneously extracting from participants (through cost allocation, procedural complexity, and power-asymmetric outcomes). The rising theater_ratio indicates that procedural elaboration is increasing faster than dispute resolution efficacy, suggesting early-stage institutional degradation consistent with piton dynamics.",
+    "key_agents": [
+      "Weak States: Primary victims (powerless/trapped) \u2014 lack resources for extended proceedings, lack political leverage to influence institutional outcomes, face unresolved grievances as the cost of exit",
+      "Powerful States: Primary beneficiaries (institutional/arbitrage) \u2014 can afford extended proceedings, can influence institutional interpretation through political pressure, can exit to alternative mechanisms (bilateral negotiation, economic coercion)",
+      "International Dispute Resolution Institutions: Institutional actors (institutional/arbitrage) \u2014 benefit from legitimacy, workload authority, and prestige; coordinate dispute resolution while allocating costs asymmetrically",
+      "Regional Dispute Resolution Coalitions: Organized secondary actors (organized/constrained) \u2014 benefit from coordinated capacity building while extracting through membership gatekeeping and selective enforcement",
+      "Mid-Tier States: Moderate secondary actors (moderate/constrained) \u2014 can participate but lack power to shape outcomes; benefit from formal mechanisms while bearing participation costs"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate-high. The constraint extracts from weak and mid-tier states through cost allocation (legal expertise, proceeding duration, institutional participation) while distributing benefits toward powerful states and institutions. However, extractiveness is not maximal (0.75+) because the system does provide genuine value: weak states can bring disputes without military capacity, and the existence of formal mechanisms constrains powerful state unilateralism. The extraction is embedded in coordination rather than pure predation. Suppression (0.52): Moderate-high. Barriers to access include financial constraints, expertise requirements, procedural complexity, and power asymmetries in institutional decision-making. Weak states face significant suppression of their dispute-filing capacity. Suppression is not total (0.80+) because states can theoretically access institutions, but actual access faces severe practical barriers. Theater ratio (0.58): Moderate. International dispute resolution institutions have elevated procedural complexity (increasing theater) as they have developed sophisticated legal frameworks. However, genuine coordination function remains \u2014 procedures are not purely performative. The rising trajectory (0.42 \u2192 0.58 over 45 years) indicates increasing theatrical component relative to functional dispute resolution, consistent with institutional aging.",
+    "perspectival_gap": "Weak states perceive maximum extraction (snare) because they experience the full cost-burden without exit option. Powerful states perceive pure coordination (rope/scaffold) because they benefit from institutional legitimacy while maintaining exit capacity. Institutions perceive pure coordination (rope) because they solve the genuine problem of establishing neutral dispute forums. The analytical observer perceives institutional degradation (piton) because theater is rising faster than efficacy. This gap is not a measurement error \u2014 it reflects structural reality. The same institutional system solves a genuine problem (enabling dispute resolution without military escalation) while simultaneously extracting from those with limited alternatives. The constraint is both rope and snare, depending on the observer's structural position relative to it.",
+    "directionality_logic": "Directionality derives from each agent's structural relationship to the extraction flow and their power to escape it. Weak states (powerless/trapped) have d \u2248 0.95 \u2014 maximum target position because they cannot exit and must bear costs. Powerful states (institutional/arbitrage) have d \u2248 0.10 \u2014 low target position because they can exit and benefit from institutional legitimacy while externalizing costs. International institutions (institutional/arbitrage) have d \u2248 0.05 \u2014 full beneficiary position because they allocate costs and capture legitimacy value. Regional coalitions (organized/constrained) have d \u2248 0.45 \u2014 moderate position because membership provides benefits but non-membership ensures extraction. Mid-tier states (moderate/constrained) have d \u2248 0.55 \u2014 slightly above-center because participation is necessary but costly and outcomes are constrained by power asymmetry. The directionality values confirm the tangled-rope classification: the constraint provides genuine coordination (low d for beneficiaries, institutions) while extracting from those without exit capacity (high d for weak states).",
+    "mandatrophy_analysis": "The constraint avoids mandatrophy by demonstrating that tangled rope is the correct classification: genuine coordination function coexists with asymmetric extraction. The mistake would be to classify this purely as rope (ignoring the extraction of weak states) or purely as snare (ignoring the real benefit of having a dispute resolution mechanism). The tangled-rope classification captures that the system provides legitimate coordination while extracting value through cost allocation and power asymmetry. The presence of beneficiaries (powerful states, institutions), victims (weak states), and active enforcement (institutional procedures, power dynamics) confirms tangled-rope gates are satisfied. The rising theater ratio indicates early-stage institutional degradation, which is consistent with long-term piton drift but does not change current classification."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "maritime_boundary_dispute_resolution",
+      "trade_dispute_settlement_capacity",
+      "environmental_damage_liability_determination"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.12
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.93
+    }
+  ]
+}

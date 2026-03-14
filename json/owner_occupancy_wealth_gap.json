@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "owner_occupancy_wealth_gap",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Owner-Occupancy Wealth Gap Constraint",
+    "topic_domain": "economic/housing/policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "property_owners",
+      "financial_institutions"
+    ],
+    "victims": [
+      "renters",
+      "excluded_populations",
+      "intergenerational_mobility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Renter Trapped in Rent",
+      "comment": "PERSPECTIVE 1: RENTER (SNARE) \u2014 Structurally mobile economically but mathematically trapped: rent consumes 30-50% of income, preventing capital accumulation for down payment. Exit requires capital that the constraint structure prevents accumulating. No coordination benefit; pure extraction through structural debt-dependency. Generational horizon: wealth gap compounds across decades, trapping descendants of renters."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Property Owner",
+      "comment": "PERSPECTIVE 2: PROPERTY OWNER (ROPE) \u2014 Experiences the constraint as coordination: tax incentives, leverage via mortgage debt, and rent extraction solve the genuine problem of capital formation and housing allocation. Net beneficiary with arbitrage options (can buy/sell strategically). Experiences low effective extraction; the constraint extracts toward them."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The First-Time Buyer on Margins",
+      "comment": "PERSPECTIVE 3: FIRST-TIME BUYER (TANGLED ROPE) \u2014 Structurally mobile (can save, can borrow) but severely constrained by down-payment requirements, income qualification thresholds, and regional housing cost escalation. Experiences genuine coordination (mortgage debt allows housing access) alongside asymmetric extraction (debt burden, foreclosure risk, appreciation capture by earlier cohorts). High perceived extraction due to constrained options; some coordination benefit from debt access."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Housing Policy Coalition",
+      "comment": "PERSPECTIVE 4: HOUSING POLICY COALITION (SCAFFOLD) \u2014 Organized agents (affordable housing advocates, some municipalities, first-time buyer programs) see a temporary coordination failure with sunsets: community land trusts, inclusionary zoning, first-time buyer assistance programs, and rent-to-own initiatives represent alternative pathways. Suppression remains high but is perceived as declining through policy intervention. Sunset clause implicit in transitional nature of affordability programs."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Homeownership Ideology System",
+      "comment": "PERSPECTIVE 5: HOMEOWNERSHIP IDEOLOGY (PITON) \u2014 The cultural and policy narrative of homeownership as primary wealth-building vehicle persists despite structural barriers that make it inaccessible to renters. Theater ratio 0.65 reflects that much homeownership policy is performative: first-time buyer programs reach <5% of renters annually; down-payment assistance is insufficient given price escalation. The ideology maintains through institutional inertia and political coalition value, not because it functionally solves housing access."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (False Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / FALSE NATURAL LAW (MOUNTAIN) \u2014 The risk of naturalizing owner-occupancy wealth gaps as immutable economic laws: capital accumulation requires starting capital (bootstraps problem), housing scarcity drives prices, individual financial responsibility determines access. This perspective risks seeing the constraint as emergent from nature (economics) rather than constructed (policy + incentives + credit allocation). The engine will flag this as a false summit: the structural data shows requirements_active_enforcement and beneficiaries/victims, contradicting mountain emergence criteria."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "debt_amplification_mechanism",
+      "question": "Is the wealth gap driven by differential access to credit leverage or by differential savings capacity?",
+      "resolution_mechanism": "Decomposition of wealth accumulation: isolate mortgage leverage effects from rent-vs-own savings differences; control for down payment assistance programs",
+      "impact": "If leverage: policy should equalize debt access (constrained credit expansion \u2192 reduces snare character). If savings: policy should raise renter income or reduce rent (trapped income allocation \u2192 strengthens snare character). Different mechanisms require different interventions.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Debt leverage vs savings capacity as mechanism"
+    },
+    {
+      "id": "housing_supply_vs_demand_elasticity",
+      "question": "Does policy enforcement of owner-occupancy benefits (tax incentives, low down-payment mortgages) cause housing price escalation that neutralizes renter mobility?",
+      "resolution_mechanism": "Price elasticity analysis; longitudinal housing cost tracking in regions with vs without aggressive homeownership promotion; correlation between tax incentive magnitude and down-payment barrier growth",
+      "impact": "If yes: policy creates feedback loop where coordination (tax incentives) amplifies extraction (price escalation). Classification shifts toward Snare (extraction amplified by policy intent). If no: policy genuinely enables access. Classification remains Tangled Rope (mixed coordination-extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether homeownership incentives cause price escalation feedback"
+    },
+    {
+      "id": "intergenerational_lock_in",
+      "question": "Is the owner-occupancy wealth gap self-perpetuating through inheritance and kinship wealth transfer, or can policy intervention break the cycle?",
+      "resolution_mechanism": "Generational wealth transmission analysis; comparison of wealth mobility in cohorts with vs without inherited down-payment assistance; tracking of policy program graduates across 2-3 generations",
+      "impact": "If self-perpetuating via inheritance: the constraint has mountain characteristics at generational scope (accessibility_collapse \u2265 0.85 if inheritance substitutes for policy). If breakable via policy: scaffold sunset is realistic. If inheritance-dependent but policy can substitute: Tangled Rope with active enforcement required.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Generational lock-in vs policy-breakable cycle"
+    },
+    {
+      "id": "renter_preference_confound",
+      "question": "To what extent is the wealth gap a constraint that suppresses renter ownership, vs a market outcome of heterogeneous preferences (some agents prefer rental flexibility)?",
+      "resolution_mechanism": "Preference studies controlling for income and availability; tracking of stated preferences for ownership pre-vs-post policy change; behavioral response to first-time buyer programs",
+      "impact": "If preference-driven: extractiveness is lower (agent has mobile options aligned with preferences). If suppression-driven: extractiveness is higher (agent's preference for ownership is blocked). This affects whether the snare classification is robust or understated.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Preference heterogeneity vs structural suppression"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The owner-occupancy wealth gap is a structural constraint that channels housing and capital accumulation toward property owners while systematically excluding renters from wealth-building mechanisms. The constraint operates through multiple mechanisms: tax incentives (mortgage interest deduction, capital gains exclusion), credit allocation (favorable mortgage terms for owner-occupants, restrictive terms for rental borrowers), and behavioral anchoring (cultural narrative of homeownership as primary wealth vehicle). The constraint exhibits mixed coordination-extraction character: it does coordinate housing allocation (matching capital with properties) and solves genuine credit problems (mortgages enable housing access), but does so asymmetrically, extracting from renters through rent expenditure that prevents down-payment accumulation while extracting toward property owners through tax and credit benefits. The extractiveness has increased substantially over 20 years as housing costs have escalated faster than renter incomes, creating a widening gap between owner and renter wealth accumulation. Theater ratio (0.65) reflects that many policy interventions (first-time buyer programs, down-payment assistance) are performative \u2014 designed to address the constraint symbolically rather than structurally, reaching <5% of eligible renters annually while down-payment gaps continue widening.",
+    "key_agents": [
+      "Renters (trapped/powerless): Primary victims; cannot accumulate capital for down payment; rent consumes income that owner-occupants direct to equity build-up",
+      "Property owners (arbitrage/institutional): Primary beneficiaries; experience constraint as coordination; capture tax benefits, leverage advantages, and asset appreciation",
+      "Financial institutions (institutional/powerful): Secondary beneficiaries; capture mortgage servicing margins; allocate credit favorable to owner-occupants, restrictive to renters",
+      "First-time buyers (constrained/moderate): Transitional agents; experience tangled rope mix of debt access (coordination) and high burden (extraction)",
+      "Housing advocates/policy makers (organized/constrained): See scaffold potential; pursuing sunset mechanisms (community land trusts, inclusionary zoning, rent control)",
+      "Ideological homeownership narrative (institutional/arbitrage): Piton constraint; maintains cultural legitimacy despite functional limitations; performative policy interventions sustain appearance of accessibility"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate, reflecting that the constraint transfers substantial economic value from renters to owners through systematic allocation of credit, tax incentives, and asset appreciation rights. The value is higher than a pure coordination mechanism (Rope \u22640.45) because extraction is asymmetric and structural. Suppression (0.72): High, reflecting multiple barriers to renter exit: down-payment requirements ($30-50k), income qualification thresholds (debt-to-income \u226443%), regional housing cost escalation (median prices rising 3-5% annually vs median renter income rise <2% annually), and intergenerational wealth dependency (inheritance of down-payment capital strongly predicts ownership). Theater ratio (0.65): Moderate-high, reflecting that policy interventions targeting the constraint are substantially performative. First-time buyer programs reach <5% of renters annually; down-payment assistance averages $8-15k in regions where median down-payment gaps exceed $80-120k; inclusionary zoning requirements cover <2% of new construction nationally. The theater has increased over the 20-year interval as policy rhetoric about 'expanding homeownership' has become disconnected from material accessibility.",
+    "perspectival_gap": "The owner-occupancy constraint demonstrates stark perspectival divergence. Property owners perceive it as pure coordination (Rope) \u2014 mortgages solve the capital problem, tax incentives reward responsibility, and the market fairly allocates housing. Renters perceive it as pure extraction (Snare) \u2014 rent expenditure mathematically prevents capital accumulation, and the system is designed to exclude them. Analytical observers risk a false mountain perspective (natural law) \u2014 capital accumulation requires starting capital, housing supply is scarce, individuals differ in financial responsibility. But the structural data reveals contingent institutional design: the tax code could treat renters and owners equally; credit allocation could be neutral on occupancy type; housing policy could prioritize accessibility over wealth concentration. The gap between beneficiary and victim perspectives reveals the constraint is not inevitable but enforced.",
+    "directionality_logic": "Directionality d values flow from structural position: Property owners (beneficiary + arbitrage exit) derive d \u2248 0.15 (low extraction experienced). Renters (victim + trapped exit) derive d \u2248 0.92 (maximum extraction experienced). Financial institutions (beneficiary + powerful context) derive d \u2248 0.05 (negative extraction \u2014 they are subsidized by the constraint structure). First-time buyers (mixed beneficiary/victim + constrained exit) derive d \u2248 0.65 (moderate extraction despite some benefit). The sigmoid f(d) amplifies extraction for trapped agents and dampens it for arbitrage agents, making the perspectival gap large. Scope \u03c3(national=1.0) does not amplify or dampen; national housing markets scale uniformly.",
+    "mandatrophy_analysis": "The mandatrophy in owner-occupancy is the risk of conflating 'market outcome' with 'coordination mechanism.' The constraint IS a coordination mechanism (mortgages do allocate capital to housing), but the mandatrophy reveals that coordination and extraction are NOT mutually exclusive. The constraint requires active policy enforcement (tax code, credit regulations, zoning, down-payment standards) \u2014 it does not emerge naturally. The beneficiary/victim structure is asymmetric: owners benefit from tax incentives and leverage, renters bear costs through price escalation and exclusion. If policy enforcement were removed (eliminate mortgage interest deduction, equalize credit terms, allow renter wealth alternatives), the constraint would collapse \u2014 which proves it is an artifact of policy design, not an emergent property of capital markets. The false mountain perspective naturalizes this constructed asymmetry as economic law."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "housing_affordability_crisis",
+      "intergenerational_wealth_mobility",
+      "racial_wealth_gap"
+    ],
+    "dual_formulation_note": "Owner-occupancy wealth gap is downstream of specific policy decisions (tax code, credit allocation, zoning) but represents a distinct structural constraint. Related constraints in housing affordability and wealth mobility have their own extractiveness values reflecting domain-specific mechanisms; this constraint focuses on the coordination-extraction hybrid in capital allocation via homeownership."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.05
+    }
+  ]
+}

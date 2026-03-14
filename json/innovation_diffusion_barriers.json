@@ -1,0 +1,191 @@
+{
+  "header": {
+    "constraint_id": "innovation_diffusion_barriers",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "idb"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Innovation Diffusion Barriers",
+    "topic_domain": "economic/technological/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_firms",
+      "patent_holders",
+      "regulatory_gatekeepers"
+    ],
+    "victims": [
+      "potential_adopters",
+      "downstream_innovators",
+      "consumer_welfare"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Potential Adopter (Trapped)",
+      "comment": "PERSPECTIVE 1: POTENTIAL ADOPTER (SNARE) \u2014 Individuals and small organizations without capital or network access to innovation face maximal extraction through licensing fees, patent royalties, and regulatory compliance costs. Trapped by resource barriers and information asymmetry. Cannot exit the constraint without abandoning adoption entirely."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Downstream Innovator (Constrained)",
+      "comment": "PERSPECTIVE 2: DOWNSTREAM INNOVATOR (TANGLED ROPE) \u2014 Medium-sized firms building on prior innovations face genuine coordination need (accessing foundational innovations accelerates development) alongside asymmetric extraction (licensing costs, patent thickets, freedom-to-operate restrictions). Can exit via alternative technical approaches but at high cost. Constrained by both the coordination benefits and extraction barriers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Patent Holder (Beneficiary)",
+      "comment": "PERSPECTIVE 3: PATENT HOLDER (ROPE) \u2014 Institutional actors holding foundational patents experience the diffusion constraint as pure coordination: licensing enables follow-on innovation while securing return on R&D investment. Low experienced extraction \u2014 the arrangement solves the legitimate problem of rewarding innovation investment. Net beneficiary with significant exit options (can license broadly or narrowly)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Open Innovation Movement (Temporary)",
+      "comment": "PERSPECTIVE 4: OPEN INNOVATION MOVEMENT (SCAFFOLD) \u2014 Organized coalitions (open-source communities, Creative Commons, open-access mandates) have built alternative diffusion pathways with built-in sunset logic. As these ecosystems mature, their lower-extraction mechanisms become viable alternatives to traditional patent-based diffusion. Sees the constraint as temporary \u2014 not because patents will disappear, but because decentralized innovation coordination reduces their practical necessity. High agency and clear exit path."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Patent Prosecution System (Degraded)",
+      "comment": "PERSPECTIVE 5: PATENT PROSECUTION SYSTEM (PITON) \u2014 The formal patent system increasingly operates as theater: examining thousands of patents with overlapping claims, maintaining prosecution machinery that produces patent thickets rather than clear rights, and consuming enormous institutional resources while failing at its stated function of enabling rather than blocking diffusion. Maintained through institutional inertia despite low functional effectiveness. Theater ratio reflects that patent prosecution is largely performative compliance."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a civilizational perspective, some innovation diffusion lag is inherent to technological change: complex innovations take time to understand, adapt, and integrate. The gap between invention and widespread adoption reflects structural limits on human learning capacity and capital constraints, not a contingent institutional arrangement. This perspective risks naturalizing what is actually policy-contingent through patent policy and regulatory design choices."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legitimate_diffusion_lag_vs_extraction",
+      "question": "What threshold distinguishes legitimate adoption lag (time required for learning, adaptation, capital formation) from extractive barriers maintained by incumbent actors?",
+      "resolution_mechanism": "Historical comparison: diffusion timelines in high-patent-enforcement regimes vs low-enforcement regimes for equivalent innovations; correlation between patent strength and diffusion speed",
+      "impact": "If thresholds are short (1-3 years): patent-based extraction is dominant. If long (10+ years): structural learning capacity dominates and extraction is secondary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold distinguishing diffusion lag from extraction"
+    },
+    {
+      "id": "open_innovation_substitution_timing",
+      "question": "At what maturity level of open-source and decentralized innovation ecosystems does patent-based diffusion control effectively transfer to distributed alternatives?",
+      "resolution_mechanism": "Domain-by-domain analysis of adoption rates in patent-heavy vs open-source-heavy sectors; measurement of innovation velocity in each pathway; identification of inflection points where open alternatives become dominant",
+      "impact": "If substitution occurs on 5-10 year horizon: scaffold sunset is realistic and constraint will naturally degrade. If substitution stalls: barrier persists and remains extractive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timing of open-innovation substitution for patent-based diffusion"
+    },
+    {
+      "id": "patent_thicket_intentionality",
+      "question": "To what degree are patent thickets (overlapping, semi-blocking claims) an unintended consequence of increasing technical complexity vs an intentional strategy by incumbents to maintain control?",
+      "resolution_mechanism": "Analysis of patent prosecution strategies: citation patterns, claim breadth evolution, defensive patenting vs offensive licensing; comparison of thicket density in concentrated vs competitive industries",
+      "impact": "If primarily unintended: diffusion barriers are a side effect, not extraction mechanism, and piton classification is accurate. If intentional: barriers are maintained through deliberate strategy and represent active snare behavior.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether patent thickets are intentional barrier strategy"
+    },
+    {
+      "id": "capability_gaps_vs_access_barriers",
+      "question": "For potential adopters in low-income or peripheral regions, what fraction of diffusion lag is due to technical/knowledge capability gaps vs access barriers (financing, licensing cost, regulatory requirement)?",
+      "resolution_mechanism": "Comparative analysis: adoption rates when access barriers are reduced (subsidized licensing, technology transfer programs) vs when capability is invested; proxy measurement via regions with strong capability but weak access vs weak capability but strong access",
+      "impact": "If capability gaps dominate: removing access barriers has limited effect and extraction is secondary. If access barriers dominate: licensing and regulatory reform would unlock rapid diffusion.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Relative impact of capability gaps vs access barriers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Innovation diffusion barriers represent the structural tension between rewarding innovation investment (through intellectual property protection and exclusivity periods) and enabling broad adoption of new technologies. This constraint manifests differently depending on the observer's structural position: for patent holders, it is a legitimate coordination mechanism enabling R&D investment; for potential adopters, it is pure extraction through licensing fees and regulatory gatekeeping; for open-source communities, it is a temporary problem being displaced by alternative coordination mechanisms. The constraint's extractiveness has increased over the measurement interval (0.35 to 0.52) as patent thickets have accumulated and regulatory complexity has grown, while theater ratio has risen (0.48 to 0.65) as patent prosecution increasingly functions as performative compliance rather than effective rights definition.",
+    "key_agents": [
+      "Patent Holders: Primary beneficiary (institutional/arbitrage) \u2014 capture licensing revenue and market control during exclusivity windows",
+      "Potential Adopters: Primary victim (powerless/trapped) \u2014 face licensing costs, information barriers, and regulatory compliance requirements with no exit",
+      "Downstream Innovators: Secondary victim (moderate/constrained) \u2014 need access to foundational patents for follow-on innovation but face freedom-to-operate restrictions and patent thickets",
+      "Consumer Welfare: Abstract victim (powerless/trapped) \u2014 delayed innovation adoption, higher prices during monopoly periods",
+      "Open Innovation Communities: Organized alternatives (organized/mobile) \u2014 building decentralized innovation coordination pathways (open-source, Creative Commons, open-access) with exit options",
+      "Patent Prosecution System: Institutional actor (institutional/arbitrage) \u2014 maintains formal patent prosecution machinery despite low functionality; benefits from institutional inertia",
+      "Regulatory Gatekeepers: Secondary beneficiary (institutional/arbitrage) \u2014 extract through compliance requirements and licensing approval processes"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint genuinely solves the problem of rewarding R&D investment, so not all measured extraction represents pure rent-seeking. However, much of the current extractiveness reflects accumulation beyond what is necessary for innovation incentives \u2014 patent thickets, evergreening strategies, cross-licensing blocking, and regulatory gatekeeping add extraction layers without corresponding innovation benefits. The rising trajectory (0.35\u21920.52 over 20 years) reflects increasing sophistication in barrier maintenance. Suppression (0.58): Moderate-high. Significant barriers include licensing fees, patent prosecution costs, regulatory compliance requirements, information asymmetries favoring incumbents, and capability gaps in peripheral regions. However, suppression is not absolute \u2014 some actors escape through independent invention, open-source alternatives, and geographic arbitrage. Theater ratio (0.65): High and rising. Patent prosecution has become increasingly performative: the system examines thousands of patents with overlapping claims, produces thickets that block rather than enable, and consumes enormous institutional resources while failing at effective rights definition. The rise in theater ratio reflects the gap between the system's stated function (enabling innovation) and its actual operation (maintaining barriers for incumbents).",
+    "perspectival_gap": "This constraint exhibits maximum perspectival disparity. The patent holder sees rope (legitimate coordination enabling investment recovery). The trapped potential adopter sees snare (pure extraction with no exit). The constrained downstream innovator sees tangled rope (genuine coordination function alongside asymmetric extraction). The open innovation coalition sees scaffold (temporary problem being displaced). The patent system sees piton (degraded ritual maintained through inertia). The analytical observer risks seeing mountain (diffusion lag as inherent to innovation) but the structural data reveals this as a false summit: the diffusion timeline is policy-contingent. Crucially, the same licensing mechanism that coordinates investment (rope from beneficiary perspective) simultaneously extracts from victims (snare from trapped perspective). The perspectival gap is not measurement error \u2014 it reflects the constraint's actual dual function as both coordination and extraction.",
+    "directionality_logic": "Directionality (d) varies sharply by structural position. Patent holders with arbitrage options experience low d (they benefit from the constraint) \u2192 low f(d) \u2192 negative effective extraction. Potential adopters who are trapped experience high d (they bear costs with no exit) \u2192 high f(d) \u2192 high effective extraction. Downstream innovators who are constrained experience moderate d (they bear costs but can exit at expense) \u2192 moderate f(d) \u2192 moderate effective extraction. Organized actors with mobile exit options experience low-moderate d (they can exit to alternative pathways) \u2192 lower f(d) \u2192 lower effective extraction despite similar base extractiveness. The constraint's effective extractiveness (\u03c7) is dramatically different across agents: near zero for patent holders, very high for trapped adopters, moderate for constrained innovators. This directionality differentiation is the primary source of perspectival type diversity.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by recognizing that innovation diffusion barriers serve genuine coordination (rewarding investment) while simultaneously enabling extraction (monopoly rents, gatekeeping). The classification varies by perspective not because the base structural properties are ambiguous, but because the constraint genuinely operates as both rope and snare depending on position. The patent holder's rope experience is real \u2014 patents do coordinate investment. The adopter's snare experience is also real \u2014 licensing costs do extract. The mandatrophy is resolved by noting that a single constraint can be functionally dual: the same mechanism (exclusivity) that coordinates investment also extracts from adopters. This is not a measurement ambiguity but a structural property of how intellectual property constraints work. The piton classification of the patent prosecution system is separate: the formal prosecution machinery maintains the barriers through increasingly performative mechanisms, independent of whether the underlying IP coordination function is legitimate. The scaffold perspective is crucial for mandatrophy resolution: it shows that the constraint is not immutable (the mountain false summit) but subject to displacement by alternative coordination mechanisms with lower extraction. The existence of viable open-source innovation pathways demonstrates that diffusion acceleration is possible without patent-based IP control, making the patent barrier contingent rather than natural."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "patent_thicket_accumulation",
+      "regulatory_compliance_costs",
+      "knowledge_transfer_barriers"
+    ],
+    "dual_formulation_note": "Innovation diffusion barriers decompose into three structurally distinct constraints: (1) patent-based IP control (\u03b5\u22480.40, primary coordination + secondary extraction), (2) regulatory compliance gatekeeping (\u03b5\u22480.45, pure extraction with coordination facade), (3) knowledge transfer barriers (\u03b5\u22480.38, coordination failure producing diffusion lag). This story models the aggregate constraint; individual decomposed stories track how each mechanism contributes to overall diffusion barriers and show distinct pathways for barrier reduction."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

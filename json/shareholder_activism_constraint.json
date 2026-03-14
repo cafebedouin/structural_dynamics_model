@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "shareholder_activism_constraint",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Shareholder Activism Constraint",
+    "topic_domain": "corporate_governance/financial_markets",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "activist_investors",
+      "institutional_shareholders"
+    ],
+    "victims": [
+      "management_discretion",
+      "long_term_strategic_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Constrained Executive",
+      "comment": "PERSPECTIVE 1: CONSTRAINED EXECUTIVE (SNARE) \u2014 Corporate management faces quarterly pressure cycles, threat of takeover, board displacement. Exit options are minimal: cannot leave the firm without career damage; cannot ignore shareholder demands without lawsuit risk. Maximum extraction from this position."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Activist Investor",
+      "comment": "PERSPECTIVE 2: ACTIVIST INVESTOR (ROPE) \u2014 Benefits from the activism constraint through governance leverage and value capture. Can arbitrage between multiple targets; if one engagement fails, moves capital elsewhere. Experiences the constraint as coordination mechanism: mobilizing shareholder pressure to align management incentives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Passive Index Fund",
+      "comment": "PERSPECTIVE 3: PASSIVE INDEX FUND (TANGLED ROPE) \u2014 Must hold index positions and cannot easily exit holdings; forced to engage in shareholder activism to protect index value. Faces cost burden of governance participation (proxy voting, shareholder meetings) with limited exit options. Also benefits from improved governance outcomes that raise fund returns. Mixed experience of coordination and extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Worker Pension Fund",
+      "comment": "PERSPECTIVE 4: WORKER PENSION FUND (TANGLED ROPE) \u2014 Organized agent (union/pension trustee) with mobile capital but fiduciary duty to beneficiaries forces engagement with activism. Benefits from governance improvements that raise long-term returns. Bears extraction through costly governance participation and exposure to management retaliation (which can depress stock prices). Moderate agency with significant constraint."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Proxy Voting System",
+      "comment": "PERSPECTIVE 5: PROXY VOTING SYSTEM (PITON) \u2014 Annual shareholder meetings and proxy contests are substantially performative rituals. Most votes are predetermined; proxy advisors (ISS, Glass Lewis) exercise enormous gate-keeping power without formal accountability. The ritual persists through institutional inertia despite low functional verification that votes actually change corporate behavior. Theater dominates; coordination function attenuated."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational lens, the separation of ownership and control in corporations creates an irreducible agency conflict: shareholders cannot directly manage the firm; management cannot fully align with dispersed shareholder interests. This perspective sees the activism constraint as an immutable response to this structural problem. However, the empirical base_properties show this classification as a false summit \u2014 the constraint's extractiveness (0.52) and theater (0.58) reveal it as a contingent institutional arrangement, not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "activist_vs_passive_alignment",
+      "question": "Do activist shareholders impose value-destructive constraints on management, or do they correct genuine agency failures?",
+      "resolution_mechanism": "Longitudinal analysis of firm performance post-activism campaign; comparison of returns under active vs passive ownership; stock price reaction to campaign announcement",
+      "impact": "If value-destructive: activism is primarily extractive (snare). If value-corrective: activism is coordination (rope). If mixed: tangled rope classification holds.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether activist shareholder campaigns create or destroy long-term firm value"
+    },
+    {
+      "id": "short_termism_mechanism",
+      "question": "Does shareholder activism create short-term pressure that forces management to sacrifice long-term strategy, or is this a cover story for management resistance to needed changes?",
+      "resolution_mechanism": "Analysis of capital allocation changes post-activism; R&D spending patterns; comparison of long-term vs short-term value realization; management testimony about constraint perception",
+      "impact": "If short-termism real: suppression metric should increase. If cover story: management exaggerates constraint to defend discretion.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether quarterly pressure from activism actually forces suboptimal capital allocation"
+    },
+    {
+      "id": "proxy_advisor_capture",
+      "question": "Do proxy advisors (ISS, Glass Lewis) function as gatekeepers for activist demands, or do they provide genuine independent scrutiny of shareholder proposals?",
+      "resolution_mechanism": "Analysis of ISS recommendation rates across activist vs non-activist proposals; correlation between ISS recommendation and shareholder vote outcome; investigation of ISS client conflicts",
+      "impact": "If gatekeepers: proxy voting theater is high, piton classification confirmed. If independent: proxy system has real coordination function, should reclassify toward rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proxy advisor independence and gatekeeping power in shareholder activism"
+    },
+    {
+      "id": "index_fund_exit_illusion",
+      "question": "Do passive index funds truly face immobile capital, or could they exit through index alternatives and threaten forced exit to influence management?",
+      "resolution_mechanism": "Analysis of index fund switching costs; availability of alternative indices that exclude activist targets; theoretical modeling of switching as credible exit threat",
+      "impact": "If immobile: index fund classification as constrained (tangled rope) correct. If mobile: reclassify as mobile (rope or lower chi tangled rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether passive index funds face genuine capital immobility or illusory constraint"
+    },
+    {
+      "id": "suppression_mechanism_structural",
+      "question": "Is management suppression of activism-driven changes structural (legal, structural incentives) or theatrical (managment resistance masquerading as external constraint)?",
+      "resolution_mechanism": "Comparative analysis of activism success rates across regulatory regimes with different shareholder protections; analysis of management disclosure about activism impact; legal barrier identification",
+      "impact": "If structural: suppression metric (0.48) correct and conservation-worthy. If theatrical: suppression should be lower, reclassifying some perspectives toward lower-extraction types.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether measured suppression reflects structural barriers or manufactured resistance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Shareholder activism represents a structural constraint on corporate management arising from the separation of ownership and control. Activist investors use concentrated ownership stakes, proxy contests, and public pressure campaigns to force management alignment with shareholder interests. The constraint operates through governance mechanisms (shareholder votes, board seats, strategic pressure) but generates heterogeneous experiences across different agent types. The activist investor benefits from leverage and value capture; management experiences quarterly pressure and takeover threat; passive index funds face forced participation in activism they didn't initiate; workers' pension funds balance long-term returns against exploitation risks. The constraint exhibits both genuine coordination (aligning management with shareholder interests) and asymmetric extraction (concentrating decision-making power, shifting risk to management, creating theater through proxy voting rituals). The extractiveness has increased from 0.38 to 0.52 over the measurement interval as activism has become more frequent and institutionalized; theater has risen from 0.42 to 0.58 as annual meeting rituals have become more performative while actual change mechanisms migrate to behind-closed-doors pressure campaigns.",
+    "key_agents": [
+      "Activist Investors: Primary beneficiary (institutional/arbitrage) \u2014 capture value through governance leverage and exit arbitrage; can move capital to new targets",
+      "Corporate Management: Primary victim (powerless/trapped) \u2014 faces quarterly pressure, board threat, potential displacement; limited exit options without career damage",
+      "Passive Index Funds: Secondary victim (moderate/constrained) \u2014 forced to participate in activism governance; cannot exit holdings without tracking error; bear governance participation costs",
+      "Workers' Pension Funds: Organized victim (organized/mobile) \u2014 fiduciary duty forces activism engagement; have exit through capital reallocation but constrained by diversification requirements and long-term horizons",
+      "Proxy Voting System: Institutional actor (institutional/arbitrage) \u2014 maintains performative annual meeting ritual; proxy advisors (ISS, Glass Lewis) function as gatekeeping intermediaries",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent ownership structures as inherent to capitalism"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, rising. Activist investors capture substantial value through governance leverage, board seat threats, and strategic pressure. The extractiveness has increased as activism has professionalized and scaled \u2014 a 2010 activist campaign differed significantly from 2020 campaigns in sophistication and institutional acceptance. However, extractiveness is not as severe as pure snare (0.66+) because the constraint also delivers genuine governance improvements in many cases. Suppression (0.48): Moderate. Management faces real barriers to resistance \u2014 proxy vote rules, fiduciary duty litigation risk, shareholder litigation, media pressure \u2014 but also possesses significant capacity to delay or deflect activism (information asymmetry, complex capital structures, strategic alternatives). Theater ratio (0.58): Moderate-high. Annual shareholder meetings are substantially performative: voting outcomes are largely predetermined by proxy adviser recommendations; actual strategic change happens through pressure campaigns and board negotiations, not through shareholder votes. The theater has increased as activism has become more sophisticated \u2014 the public proxy contest has become a ritualized negotiation theater masking real power dynamics conducted off-camera.",
+    "perspectival_gap": "The activist investor sees pure coordination (Rope): 'We're aligning management with shareholder interests, creating value.' Management sees extraction (Snare): 'We're under constant threat, forced to abandon long-term strategy for quarterly earnings.' Index funds see a mixed burden (Tangled Rope): 'We benefit from governance improvements but bear the costs of activism participation.' The proxy voting system sees its own degradation (Piton): 'Annual meetings are theater; real power is exercised through concentrated activist stakes and threat of board displacement.' The analytical observer risks naturalizing this as inevitable agency conflict (Mountain) but should recognize that alternative ownership structures (stakeholder capitalism, long-term ownership norms, patient capital) could reduce extractiveness \u2014 the constraint is not immutable.",
+    "directionality_logic": "Activist investors occupy the beneficiary position with arbitrage exit options \u2014 they can move capital between targets, amplifying their power relative to trapped insiders. d \u2248 0.15 (beneficiary with mobile exit). Management occupies the victim position with trapped exit \u2014 they cannot abandon their firms without career damage and have minimal ability to resist coordinated shareholder pressure. d \u2248 0.95 (victim with trapped exit). Passive index funds occupy an intermediate position: they are technically beneficiaries (governance improvements raise fund returns) but face constrained exit (cannot sell index holdings without tracking error) and bear activism participation costs. d \u2248 0.60 (mixed beneficiary-victim with constrained exit). Pension funds are organized (can coordinate with other long-term investors) but still constrained (fiduciary duty, diversification requirements). d \u2248 0.55 (organized victim with mobile but constrained exit). The piton perspective derives from the proxy advisor gatekeeping power and ritualized annual meetings \u2014 high theater (0.58) signals degraded function maintained by institutional inertia rather than effectiveness.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by revealing shareholder activism as a hybrid coordination-extraction mechanism. The genuine coordination function (aligning management with shareholder interests, reducing agency drift) is real and valuable. But the extraction function (concentrating decision power in activist hands, forcing management to sacrifice autonomy, creating theater through proxy voting) is also real. The constraint cannot be classified as pure coordination (Rope) because it involves suppression (0.48) and asymmetric distribution of benefits. It cannot be classified as pure extraction (Snare) because it delivers genuine governance improvements in many cases. The Tangled Rope classification captures this: activism genuinely coordinates and genuinely extracts, with extractive benefits concentrated on activist investors and coordination benefits dispersed across all shareholders. The measurement trajectory (extractiveness rising from 0.38 to 0.52, theater rising from 0.42 to 0.58) shows that as activism has become more professionalized and institutionalized, the extractive dimension has grown relative to the pure coordination dimension \u2014 the mechanism has shifted toward snare-like dynamics as it has matured."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "corporate_short_termism",
+      "executive_compensation_escalation",
+      "board_capture_by_insiders"
+    ],
+    "dual_formulation_note": "Shareholder activism is downstream of the general separation of ownership and control problem in public corporations. Upstream constraints include regulatory frameworks governing proxy access, shareholders' rights, and fiduciary duties. This story focuses on the activism mechanism itself; related constraints address specific domains (short-termism, compensation, board capture) where activism operates."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

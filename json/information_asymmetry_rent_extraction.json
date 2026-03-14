@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "information_asymmetry_rent_extraction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "iare"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "snare",
+    "human_readable": "Information Asymmetry Rent Extraction",
+    "topic_domain": "economic/information/structural",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "informed_agents"
+    ],
+    "victims": [
+      "uninformed_agents"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Uninformed Agent",
+      "comment": "PERSPECTIVE 1: UNINFORMED AGENT (SNARE) \u2014 Structurally trapped in a market, transaction, or negotiation where counterparty possesses material information they will not disclose. Cannot exit without bearing transaction costs or foregone opportunity. Suppression is structural: information barriers prevent even awareness of their own disadvantage. High effective extraction as the informed party extracts rents through selective disclosure."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Informed Agent",
+      "comment": "PERSPECTIVE 2: INFORMED AGENT (ROPE) \u2014 Possesses actionable information advantage and exercises it for material benefit. Experiences the constraint as coordination: using private information to select advantageous transactions is their legitimate function. Exit is costless (they can trade on the information or withhold it). From this perspective, the information asymmetry solves a selection problem \u2014 their knowledge enables efficient matching."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Market Participant (Partial Information)",
+      "comment": "PERSPECTIVE 3: MARKET PARTICIPANT WITH PARTIAL INFORMATION (TANGLED ROPE) \u2014 Aware of some information asymmetry but not its full extent. Faces high costs to acquire complete information or to exit (transaction costs, search costs, relocation costs). The constraint both coordinates market clearing and extracts from them through information opacity. Neither pure coordination nor pure extraction \u2014 mixed extraction with some genuine coordinating function."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Coalition",
+      "comment": "PERSPECTIVE 4: REGULATORY COALITION (SCAFFOLD) \u2014 Organized agents (disclosure mandates, transparency requirements, financial regulations, consumer protection rules) aim to temporarily compress information asymmetry through enforcement and sunset-clause logic: as transparency norms and market infrastructure mature, the asymmetry should self-liquidate. Enforcement is active but decreases as voluntary disclosure standards mature. Sees the constraint as a temporary coordination failure being solved."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Inertia View",
+      "comment": "PERSPECTIVE 5: INSTITUTIONAL INERTIA (PITON) \u2014 Information asymmetry is often perpetuated through vestigial institutional arrangements: licensing requirements that restrict information access, professional gatekeeping that creates artificial scarcity of expert knowledge, regulatory compliance theater that obscures rather than clarifies. The constraint persists through institutional momentum rather than functional necessity. Theater ratio reflects that much 'information disclosure' is performative \u2014 compliance documents that satisfy legal requirements but don't convey actionable intelligence."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some information asymmetry is inherent to any economic system: no agent can know everything about counterparties, future states, or hidden attributes. Information gaps are an irreducible feature of bounded rationality and distributed knowledge. This perspective risks naturalizing what is actually a policy-contingent degree of asymmetry. The engine will flag this as a false summit if structural data shows the asymmetry is compressible through institutional design."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "asymmetry_irreducibility_threshold",
+      "question": "What portion of observed information asymmetry is inherent to bounded rationality vs. policy-enforced scarcity?",
+      "resolution_mechanism": "Comparative analysis across regulatory regimes: countries with strong transparency mandates vs. minimal disclosure requirements; correlation between regulation stringency and measured asymmetry compression",
+      "impact": "If policy-enforced scarcity dominates: mountain classification fails (reveals snare). If inherent asymmetry is dominant: mountain classification confirmed (natural structural feature). Distribution of the gap determines whether the constraint is contingent or natural.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree to which information asymmetry is policy-enforced vs inherent"
+    },
+    {
+      "id": "disclosure_quality_vs_compliance",
+      "question": "Does mandatory disclosure mandate actually reduce information asymmetry or merely create performative compliance without changing actual information access?",
+      "resolution_mechanism": "Pre/post regulatory analysis: information asymmetry measures (bid-ask spreads, pricing discrepancies, transaction costs) before and after major transparency rules; analysis of whether disclosed information correlates with price discovery",
+      "impact": "If effective: regulatory constraints are rope (coordination). If performative: disclosure theater is piton (degraded institution). Determines whether scaffold sunset logic is real or aspirational.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether disclosure mandates reduce actual asymmetry or create theater"
+    },
+    {
+      "id": "informed_agent_exit_costlessness",
+      "question": "Can informed agents costlessly exit from exploiting information asymmetry or are they locked into extraction by institutional structure?",
+      "resolution_mechanism": "Market data: frequency of informed agent voluntary full disclosure; correlation between information advantage and participation in market; analysis of whether informed agents face consequences for non-exploitation",
+      "impact": "If exit is costless: rope classification valid (arbitrage-level exit). If exit is constrained by institutional pressure to exploit: extraction is more coercive than rope (snare component strengthens). Determines whether beneficiary actually experiences rope or is partially trapped.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether informed agents can costlessly refrain from exploiting asymmetry"
+    },
+    {
+      "id": "suppression_internalization",
+      "question": "Do uninformed agents accept the asymmetry as natural/inevitable or do they experience it as illegitimate extraction they are unable to resist?",
+      "resolution_mechanism": "Qualitative analysis: survey data on perceived fairness/inevitability; correlation between belief in asymmetry inevitability and willingness to engage in information disclosure transparency; analysis of social movements demanding transparency",
+      "impact": "If internalized as natural: suppression includes cognitive component (identity_locked exit for some uninformed agents). If perceived as illegitimate: suppression is purely structural (trapped/constrained exit). Affects whether snare is experienced as coercive or as 'just how markets work'.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether uninformed agents internalize asymmetry as natural"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Information asymmetry rent extraction occurs when one party possesses material information that another party lacks, and uses that information advantage to capture surplus value in transactions, negotiations, or market interactions. This is a structural constraint present in all economic systems with distributed knowledge, but the degree and enforceability of asymmetry varies dramatically across institutional contexts. In some domains (financial markets with strong transparency mandates, consumer markets with warranty requirements, labor markets with hiring disclosure rules), the asymmetry is actively compressed. In others (used car sales, professional services pricing, insider trading in weak regulatory regimes), the asymmetry is actively preserved or exploited. The constraint exhibits all six classification types from different perspectives, revealing that the boundary between 'natural information scarcity' and 'policy-enforced extraction' is contestable. The extractiveness trajectory (0.42 \u2192 0.58) reflects that absent regulatory intervention, informed agents progressively extract more rents as they develop more sophisticated information production and concealment techniques. Theater ratio increases (0.35 \u2192 0.48) as disclosure compliance grows without corresponding information transparency \u2014 the performative layer (compliance documents, disclaimer statements, regulatory signoffs) expands while actual information access stagnates.",
+    "key_agents": [
+      "Informed Agents: Primary beneficiary (institutional/arbitrage) \u2014 possess actionable information asymmetry and profit from selective use and concealment; face no structural barriers to exit from exploitation",
+      "Uninformed Agents: Primary victim (powerless/trapped) \u2014 lack material information; face transaction costs, search costs, and bounded rationality that prevent full closure of asymmetry; cannot exit without bearing costs",
+      "Market Participants with Partial Information: Secondary agent (moderate/constrained) \u2014 aware of some information gaps but not their full scope; face costs to acquire complete information or to exit markets",
+      "Regulatory Coalition: Organized actors (organized/constrained) \u2014 transparency mandates, disclosure requirements, consumer protection rules; aim to compress asymmetry through sunset-clause institutional design",
+      "Professional Gatekeepers: Institutional actors (institutional/arbitrage) \u2014 licensing, credentialing, professional standards that ostensibly reduce asymmetry but often preserve information scarcity",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent policy choices (what asymmetry is enforced/allowed) as inherent limits of knowledge"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High. Information asymmetry enables rents because uninformed agents make value-destroying decisions they would reverse with full information. The magnitude of extraction is substantial \u2014 studies of used car markets, insurance adverse selection, and financial products show informed-uninformed price discrepancies of 15-50%. Suppression is structural (information barriers prevent awareness) but not total (market signals provide partial information). Extractiveness is not at snare maxima (0.70+) because the asymmetry is compressible through institutional design \u2014 regulatory intervention demonstrably reduces it. Theater ratio is moderate (0.48) because some information disclosure is genuine (price transparency in financial markets) while much is performative (disclaimer statements). The trajectory shows theater rising faster than true extractiveness, indicating Goodhart drift: as more information is disclosed, uninformed agents may believe the asymmetry is closing while their actual information gap widens.",
+    "directionality_logic": "Directionality d is determined by each agent's structural position relative to the information advantage. Informed agents with arbitrage-level exit (can use or withhold information at will) derive low d (~0.15). Uninformed agents with trapped exit (cannot access information regardless of effort/cost) derive high d (~0.95). Moderate agents with constrained exit (can acquire some information but at high cost) derive mid-range d (~0.65). The sigmoid f(d) maps these to experienced extractiveness multipliers. The pipeline computes chi = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S). For the uninformed agent at (powerless, trapped, global scope): d \u2248 0.95, f(d) \u2248 1.42, \u03c3(global) = 1.2, yielding \u03c7 \u2248 0.58 \u00d7 1.42 \u00d7 1.2 \u2248 0.99 \u2014 essentially pure extraction. For the informed agent at (institutional, arbitrage): d \u2248 0.15, f(d) \u2248 -0.01, \u03c3(global) = 1.2, yielding \u03c7 \u2248 0.58 \u00d7 (-0.01) \u00d7 1.2 \u2248 -0.01 \u2014 negative effective extraction (the constraint benefits this agent). The perspectival gap reveals that one agent's snare is another's rope.",
+    "perspectival_gap": "This constraint demonstrates how the same structural mechanism (information advantage) classifies as snare, rope, tangled rope, scaffold, piton, and mountain depending on the observer. The uninformed agent sees pure extraction (snare) \u2014 they cannot escape the disadvantage and bear its full cost. The informed agent sees coordination (rope) \u2014 they are solving a selection problem by using private information efficiently. The moderate agent sees mixed extraction and coordination (tangled rope) \u2014 they have some information and some options but face barriers that create extraction. The regulatory coalition sees a temporary problem with a sunset (scaffold) \u2014 transparency mandates are meant to compress asymmetry over time. The institutional gatekeepers see a degraded ritual (piton) \u2014 disclosure requirements persist through inertia while actual information access stagnates. The civilizational observer risks seeing an immutable feature of bounded rationality (mountain) \u2014 but the institutional evidence shows asymmetry is policy-contingent, not natural. The perspectival gap is diagnostic: it reveals that the degree of information asymmetry is not determined by technology (what information is knowable) but by institutional choice (what information is compressible, transmitted, or protected).",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing how information asymmetry is neither pure coordination nor pure extraction, but a hybrid constrained by institutional design. The snare classification from the uninformed perspective is correct \u2014 they experience pure extraction. The rope classification from the informed perspective is also correct \u2014 they experience coordination benefit. The mandatrophy dissolves when we recognize that BOTH perspectives are measuring the same structural fact: whether an institutional actor (the informed agent) is locked into extraction or can costlessly refrain. If regulatory pressure or reputational incentives constrain informed agents to disclose information, snare becomes tangled rope or scaffold. If informed agents face no barriers to exploiting asymmetry, snare is the correct classification for uninformed victims. The false mountain (from the civilizational observer) is particularly important to reject \u2014 treating information asymmetry as a natural law prevents recognition that institutional design choices (transparency mandates, disclosure requirements, professional licensing reforms) directly compress it. The constraint is genuinely policy-contingent rather than natural."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "adverse_selection",
+      "moral_hazard",
+      "market_failure_information_goods",
+      "regulatory_arbitrage"
+    ],
+    "dual_formulation_note": "Information asymmetry rent extraction is upstream of multiple specific extractive mechanisms: adverse selection in insurance/credit markets, moral hazard in principal-agent relationships, market failures in information goods pricing. Each downstream constraint has its own \u03b5 reflecting domain-specific institutional arrangements. The upstream constraint is the general structural mechanism; downstream constraints are particular instantiations with different policy levers."
+  },
+  "directionality_overrides": []
+}

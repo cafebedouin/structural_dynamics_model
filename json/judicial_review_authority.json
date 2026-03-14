@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "judicial_review_authority",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "jrev"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Judicial Review Authority in Constitutional Systems",
+    "topic_domain": "political/constitutional/institutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "judiciary_institutional_power",
+      "constitutional_constraint_defenders"
+    ],
+    "victims": [
+      "legislative_majority_will",
+      "executive_discretion",
+      "democratic_responsiveness"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Legislative Majority Locked Out",
+      "comment": "PERSPECTIVE 1: LEGISLATIVE MAJORITY (SNARE) \u2014 Cannot override judicial decisions without constitutional amendment (exit_options: trapped). Bears extraction cost of judicial veto on legitimately enacted laws. Maximum suppression via constitutional text. No mechanism for democratic reversal within normal political time horizons. The legislative will is captured by an unelected institution."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Individual Rights Holder",
+      "comment": "PERSPECTIVE 2: INDIVIDUAL RIGHTS HOLDERS (TANGLED ROPE) \u2014 Constrained by lack of resources to litigate; also benefit from judicial protection against majority tyranny. Experiences both extraction (litigation costs, uncertainty, delay) and coordination (access to rights defense). Medium suppression \u2014 high cost to exit (cannot enforce rights without courts) but genuine coordination benefit exists."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Constitutional Framework Beneficiary",
+      "comment": "PERSPECTIVE 3: CONSTITUTIONAL DESIGN BENEFICIARY (ROPE) \u2014 Experiences judicial review as pure coordination mechanism: the judiciary enforces the separation of powers and prevents constitutional erosion. Net beneficiary \u2014 judicial restraint on legislative overreach protects the constitutional structure itself. Low extraction from this perspective because the coordination function is genuine and essential."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Judiciary Institutional Actor",
+      "comment": "PERSPECTIVE 4: JUDICIARY INSTITUTIONAL POWER (TANGLED ROPE) \u2014 Genuinely coordinates constitutional interpretation but also consolidates institutional power and prestige. Benefits from judicial review authority through precedent expansion and counter-majoritarian capacity. Constrained exit because abdication of review authority would delegitimize the institution. Requires active enforcement of judicial supremacy doctrine."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "The Institutional Inertia View",
+      "comment": "PERSPECTIVE 5: INSTITUTIONAL INERTIA (PITON) \u2014 Over long time horizons, judicial review has accumulated layers of performative doctrine (rational basis review, strict scrutiny, intermediate scrutiny) that obscure rather than clarify constitutional application. The theater_ratio reflects that courts often invoke formalistic standards that yield predetermined outcomes. The original Marbury v. Madison rationale (preventing constitutional violation) has degraded into routine invalidation of majority preferences, maintained through institutional inertia. Piton classification derives from high theater_ratio combined with moderate extractiveness."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Logical Necessity View",
+      "comment": "PERSPECTIVE 6: LOGICAL NECESSITY (MOUNTAIN) \u2014 From a universal/civilizational perspective, some form of constitutional constraint mechanism is logically necessary: a written constitution without enforcement is merely advisory. The analytical observer risks naturalizing the specific institutional form (unelected judiciary with final authority) as immutable, when only the abstract principle (constitution must constrain power) is necessary. This perspective claims mountain status but the structural data will likely reveal it as a false summit \u2014 the necessity is logical but the implementation is contingent and extractive."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "constitutional_necessity_vs_institutional_form",
+      "question": "Is judicial review authority a logically necessary consequence of constitutional governance, or a contingent institutional choice?",
+      "resolution_mechanism": "Comparative constitutional analysis: do non-judicial-review systems (parliamentary supremacy, constitutional court with limited scope, supermajority-override mechanisms) achieve constitutional constraint? If yes, judicial review is contingent. If no, it is necessary.",
+      "impact": "If contingent: judicial review is a Tangled Rope extracting counter-majoritarian power while providing coordination. If necessary: the mountain perspective is justified, and the extraction is cost of constitutional enforceability.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether judicial review is logically necessary or institutionally contingent"
+    },
+    {
+      "id": "countermajoritarian_threshold",
+      "question": "At what rate of judicial invalidation of legislation does the coordination function (protecting constitution) become dominated by extraction (imposing judicial will)?",
+      "resolution_mechanism": "Historical analysis of invalidation rates across time periods and jurisdictions; correlation between invalidation frequency and public confidence in judiciary; tracking of legislative work-around strategies (strategic ambiguity, litigation anticipation)",
+      "impact": "If threshold is low (< 1% of major legislation): most judicial review is extractive. If threshold is high (> 5%): coordination dominates. Different democracies show different patterns; identifies jurisdictions where equilibrium is shifting toward extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold rate at which judicial veto becomes predominantly extractive"
+    },
+    {
+      "id": "accountability_mechanism_gap",
+      "question": "Does the constraint that judges cannot be easily removed for decisions protect constitutional independence or enable unaccountable extraction?",
+      "resolution_mechanism": "Comparative analysis of judicial removal procedures, impeachment success rates, and electoral (re)selection mechanisms; tracking of cases where judicial decisions contradicted public will and consequences to judges. Do judges facing removal ever reverse doctrinal positions?",
+      "impact": "If removal impossibility is necessary for independence: suppression is justified coordination cost. If it enables routinized extraction against majority preferences: suppression is an extractive mechanism. The same structural fact (can't remove judges) generates different ethical weight depending on whether independence is genuine or cover story.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether judicial independence protects or enables unaccountable extraction"
+    },
+    {
+      "id": "litigation_access_asymmetry",
+      "question": "Does the constraint that judicial review requires expensive litigation create systematic bias toward wealthy litigants, or does it appropriately filter claims by seriousness?",
+      "resolution_mechanism": "Empirical analysis of litigant demographics (corporate vs individual; repeat players vs one-shot); tracking of pro bono litigation patterns; comparison of success rates by litigant wealth; analysis of which issues reach courts vs which are abandoned due to cost.",
+      "impact": "If wealthy litigants systematically prevail: the constraint extracts from powerless majorities by converting majority preferences into resources-inaccessible legal claims. If cost filtering improves decisional quality: suppression is a justified coordination mechanism.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether litigation cost creates systematic bias or appropriate filtering"
+    },
+    {
+      "id": "written_constitution_assumption",
+      "question": "Does the analysis change for systems with unwritten/evolutionary constitutions (e.g., UK, Canada) where judicial review has different scope and deference?",
+      "resolution_mechanism": "Decompose into separate constraint stories for written vs unwritten constitutional contexts. Compare extractiveness and suppression across systems. If dramatically different: written constitution systems have higher extractiveness, suggesting the constraint itself (rather than judicial review specifically) is the driver.",
+      "impact": "If unwritten constitutions show lower extractiveness: judicial review authority specifically (not constitutional constraint generally) is the extraction mechanism. If similar: the constraint is about constitutional governance broadly, and judicial review is one implementation among several.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether written vs unwritten constitution changes constraint structure"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "Judicial review authority \u2014 the power of courts to invalidate legislation and executive action as unconstitutional \u2014 is a foundational institutional mechanism in many constitutional democracies. It presents a fundamental tension between constitutional fidelity and democratic accountability. From some perspectives, judicial review is an essential coordination mechanism that prevents constitutional erosion and protects minority rights against majoritarian tyranny. From other perspectives, it is an extractive mechanism by which an unelected institution imposes its policy preferences on elected branches while hiding behind constitutional rhetoric. The constraint exhibits all six DR types across perspectives, making it a diagnostic exemplar of how the same structural institution can be coordinating, extractive, or both simultaneously depending on the agent's position. The theater_ratio (0.58) reflects accumulated doctrinal complexity (rational basis, strict scrutiny, intermediate scrutiny) that obscures rather than clarifies constitutional application. The extractiveness (0.52) reflects moderate extraction through counter-majoritarian capacity coupled with genuine constitutional coordination function.",
+    "key_agents": [
+      "Legislative Majority: Primary victim (powerless/trapped) \u2014 legitimately enacted laws can be invalidated by unelected judges; no mechanism for democratic reversal within normal timeframes",
+      "Individual Rights Holders: Secondary victim/beneficiary (moderate/constrained) \u2014 constrained by litigation costs and access barriers; benefit from judicial protection against majority tyranny",
+      "Judiciary Institutional Power: Primary beneficiary (institutional/constrained) \u2014 consolidates authority and prestige through judicial review; constrained by need to maintain legitimacy through restraint doctrine",
+      "Constitutional Framework: Beneficiary (institutional/arbitrage) \u2014 judicial review enforces separation of powers and prevents constitutional erosion",
+      "Democratic Process: Victim (powerless/trapped) \u2014 majority will constrained by judicial veto independent of electoral mandate",
+      "Analytical Observer: Neutral (analytical/analytical) \u2014 sees both coordination necessity and extraction mechanism; risks naturalizing contingent institutional form as logical necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Judicial review extracts counter-majoritarian power from elected branches; judges can and do invalidate legislation that passed through normal democratic processes. However, the extraction is not maximal (\u22650.66 Snare threshold) because a genuine coordination function exists \u2014 courts do prevent constitutional violation and protect rights. The trajectory shows increasing extractiveness over time (0.38 \u2192 0.52) as doctrinal proliferation enables more invasive judicial intervention and legislatures learn to anticipate judicial preferences. Suppression (0.65): High. The legislative majority faces severe barriers to override judicial decisions: constitutional amendment (supermajority + ratification), court-packing (politically costly and norm-violating), or strategic legislative work-around (expensive and uncertain). Trapped exit except through generation-scale constitutional change. Theater ratio (0.58): Moderate-high. Judicial review doctrine includes layers of formal standards (rational basis, strict scrutiny, intermediate scrutiny, proportionality) that claim to constrain judicial discretion but often yield predetermined outcomes. Over the historical interval (0 to 100), theater has increased (0.35 \u2192 0.58) as doctrinal complexity accumulated without increasing clarity. Courts invoke formalistic standards that obscure rather than justify outcomes. This trajectory distinguishes judicial review from other constitutional mechanisms with lower theater.",
+    "perspectival_gap": "The core gap is between the beneficiary's experience (Rope/pure coordination) and the trapped agent's experience (Snare/pure extraction). The same institutional mechanism \u2014 judicial power to invalidate legislation \u2014 is coordinating from the constitutional framework's perspective (prevents erosion, enforces separation of powers) and extractive from the legislative majority's perspective (unelected veto on democratic will, no override mechanism). The moderate agents (judiciary, rights holders) occupy intermediate positions. The Piton perspective reveals that accumulated doctrinal theater obscures whether the function (constitutional enforcement) justifies the form (counter-majoritarian veto). The false Mountain perspective risks naturalizing what is actually a contingent institutional choice.",
+    "directionality_logic": "Directionality derivation chains from power level, exit options, and beneficiary/victim status. Legislative majority: powerless + trapped + victim status \u2192 d \u2248 0.95 \u2192 maximum f(d) \u2192 maximum experienced extraction. Constitutional framework: institutional + arbitrage + beneficiary status \u2192 d \u2248 0.05 \u2192 minimum f(d) \u2192 negative effective extraction (receives coordination value). Judiciary: institutional + constrained (must maintain legitimacy) + beneficiary status \u2192 d \u2248 0.35 \u2192 intermediate f(d) \u2192 moderate positive extraction (consolidates power while providing coordination). Individual rights holders: moderate + constrained (litigation costs) + mixed victim/beneficiary status \u2192 d \u2248 0.55 \u2192 intermediate f(d) \u2192 moderate experienced extraction. The directionality derivation captures how different institutional positions experience the same judicial review authority differently, producing the perspectival gap between snare, rope, and tangled_rope classifications.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that judicial review simultaneously coordinates (protects constitution) and extracts (constrains democratic will) from different agent perspectives. The mandatrophy is not 'is this coordination or extraction?' but 'for whom is it coordinating and from whom is it extracting?' The constitutional framework is coordinated; the legislative majority is extracted from. The judiciary benefits from both functions \u2014 its institutional power is extracted from the elected branches, while it provides genuine constitutional coordination. The omega variables (written vs unwritten constitutions, countermajoritarian threshold, accountability gap) establish that the balance between coordination and extraction is empirically contingent, not logically necessary. A constitutional system could in principle allocate judicial review differently (parliamentary supremacy, constitutional court with limited scope, supermajority override), suggesting that the current form is Tangled Rope (hybrid) rather than Mountain (necessary) or Rope (pure coordination). The piton trajectory (theater increasing from 0.35 to 0.58) suggests that institutional inertia is layering performance on top of the core constraint, potentially degrading functional enforcement in favor of theatrical legitimacy maintenance."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "separation_of_powers_enforcement",
+      "minority_rights_protection",
+      "legislative_veto_override_mechanisms"
+    ],
+    "dual_formulation_note": "Judicial review authority is the structural mechanism; upstream constraints include the written constitutional text (which authority enforces) and downstream constraints include specific domains where judicial authority operates (voting rights, free speech, property protection, executive power). These are linked: the authority constraint depends on constitutional text for legitimacy, and domain-specific constraints depend on judicial review authority for enforcement."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

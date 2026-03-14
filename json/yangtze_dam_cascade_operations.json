@@ -1,0 +1,193 @@
+{
+  "header": {
+    "constraint_id": "yangtze_dam_cascade_operations",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "yangtze"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Yangtze Dam Cascade Operations and Multi-Stakeholder Extraction",
+    "topic_domain": "environmental_policy/water_resources/hydroelectric_infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "hydroelectric_power_operators",
+      "central_government_infrastructure_planners",
+      "industrial_water_consumers"
+    ],
+    "victims": [
+      "riparian_agriculture_communities",
+      "downstream_fisheries",
+      "flood_affected_populations",
+      "ecosystem_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Riparian Agriculture Communities",
+      "comment": "PERSPECTIVE 1: RIPARIAN AGRICULTURE COMMUNITIES (SNARE) \u2014 Trapped by geography and economic dependency. Dam cascade operations impose artificial flooding cycles that destroy crops, force migration with no compensation pathways, and offer no exit options. Suppression is total: community members cannot leave without abandoning ancestral land and livelihoods; cannot influence dam operations; cannot organize effectively across dispersed villages. Experienced extraction is maximal."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Downstream Fisheries Workers",
+      "comment": "PERSPECTIVE 2: DOWNSTREAM FISHERIES WORKERS (SNARE) \u2014 Trapped by ecological collapse. Dam cascade operations eliminate flood-pulse breeding cycles that fish populations depend on, destroying fish stocks that are the livelihood base for thousands of fishery workers. Exit options are minimal: retraining is unavailable, alternative livelihoods are absent in rural areas, and the ecological damage is irreversible within a generational timescale. Suppression operates through resource elimination rather than explicit coercion."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Provincial Water Management Agencies",
+      "comment": "PERSPECTIVE 3: PROVINCIAL WATER MANAGEMENT AGENCIES (TANGLED ROPE) \u2014 Face constraint from above (central government mandates on dam operations) and below (local communities demanding water access). Constrained by budget limits and bureaucratic hierarchy but retain some agency through implementation discretion. Experience both coordination function (multi-dam water flow optimization) and extraction (forced to prioritize hydroelectric revenue over local water needs). Suppression is structural but navigable through bureaucratic channels."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "State-Owned Hydroelectric Operators",
+      "comment": "PERSPECTIVE 4: STATE-OWNED HYDROELECTRIC OPERATORS (ROPE) \u2014 Primary beneficiary. Experiences dam cascade as pure coordination mechanism: managing water releases across dams to maximize electricity generation while maintaining reservoir levels. The constraint solves a genuine coordination problem (how to operate nine major dams as an integrated system). Extraction flows toward this agent through guaranteed profit margins, government subsidies, and monopolistic market access. Arbitrage exit options available through portfolio diversification into other energy markets."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Central Government Energy Planning Authority",
+      "comment": "PERSPECTIVE 5: CENTRAL GOVERNMENT ENERGY PLANNING AUTHORITY (ROPE) \u2014 Integrates multiple coordination functions: electricity supply security, flood mitigation (theoretical), water resource allocation across provinces, and carbon-free energy contribution to climate targets. From this perspective, the dam cascade is primarily a coordination mechanism solving the problem of managing a major river system for multiple uses. Extraction occurs through concentration of decision-making authority and absence of downstream accountability, but is experienced as governance necessity rather than predatory extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Ecosystem and Climate Perspective)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (ECOSYSTEM AND CLIMATE PERSPECTIVE) \u2014 Sees the constraint as a hybrid coordination-extraction mechanism at the ecosystem scale. Genuine coordination function exists: the cascade does provide electricity and some flood mitigation. But extraction is severe: the flood-pulse regime required for ecosystem function is systematically suppressed, causing cascading biodiversity collapse, altered sediment transport, and loss of resilience to climate variability. The engine computes this as tangled_rope: 0.58 base extractiveness with coordination function confirmed (beneficiary/victim declaration present) and active enforcement required (dams operate under government mandate and cannot be turned off by ecological feedback)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "flood_mitigation_effectiveness",
+      "question": "Do dam cascade operations actually reduce downstream flood risk, or do they merely shift flooding patterns and potentially increase catastrophic failure risk from dam rupture?",
+      "resolution_mechanism": "Comparative analysis of flood frequency/severity before-and-after cascade completion; modeling of catastrophic failure scenarios; measurement of flood damages in 1970-1990 vs 1990-2020 periods",
+      "impact": "If dams reduce net flood risk: the cascade has a genuine coordination function justifying some extraction. If dams merely shift risk: the coordination framing is theater, and the constraint should classify as higher-extractiveness snare from all perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether dam cascade reduces net flood risk or merely shifts patterns"
+    },
+    {
+      "id": "ecosystem_substitutability",
+      "question": "Can ecosystem services lost to the dam cascade (fisheries, nutrient cycling, sediment transport, biodiversity) be substituted through compensation mechanisms (fish farming, sediment management, conservation areas)?",
+      "resolution_mechanism": "Cost-benefit analysis comparing lost ecosystem service value to compensation program costs; longitudinal measurement of fish stock recovery in aquaculture vs wild populations; sediment budget modeling",
+      "impact": "If substitutable at reasonable cost: the extraction is theoretically negotiable, and the constraint should be reclassified as scaffold (temporary, with buyout options). If non-substitutable: the extraction is permanent, supporting snare classification.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether ecosystem services lost to dams can be substituted or are irreversible"
+    },
+    {
+      "id": "alternative_electricity_sources",
+      "question": "Are alternative low-carbon electricity sources (solar, wind, nuclear) becoming cost-competitive with hydroelectric generation, and if so, does the continuation of dam cascade operations become a choice rather than a necessity?",
+      "resolution_mechanism": "Cost trajectory analysis for renewable sources; life-cycle cost comparison including ecological externalities; modeling of alternative energy portfolios that could replace Yangtze cascade contribution",
+      "impact": "If alternatives become cheaper: the dam cascade constraint may shift from necessary coordination to preferential extraction by entrenched operators, reclassifying toward snare. If hydroelectric remains cheapest: the constraint's coordination necessity persists.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Cost trajectory and feasibility of alternative low-carbon electricity sources"
+    },
+    {
+      "id": "provincial_compensation_capture",
+      "question": "Do provincial governments capture hydroelectric revenues for central use, or do downstream-affected provinces receive compensation proportional to ecological damage?",
+      "resolution_mechanism": "Public finance analysis of revenue distribution; comparison of hydroelectric profits accruing to provinces vs infrastructure investment in affected communities; measurement of actual compensation payments to displaced persons",
+      "impact": "If revenues are captured by central authority: the extraction is institutional (central vs provincial), and the cascade should be classified as higher-suppression snare. If compensation is distributed proportionally: the constraint approaches tangled-rope equilibrium.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether provincial governments capture hydroelectric revenues or distribute compensation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 1990,
+    "end": 2010
+  },
+  "commentary": {
+    "narrative_context": "The Yangtze River dam cascade (Nine Dragons Project, including the Three Gorges Dam and eight additional major dams) creates a complex constraint structure that combines genuine coordination of water resources and electricity generation with severe extraction from downstream communities and ecosystems. The constraint exhibits the hallmark signature of tangled rope: a real coordination function (optimizing electricity generation and theoretical flood mitigation across a nine-dam system) embedded within asymmetric extraction from powerless agents (riparian farmers, fishery workers, displaced populations). The extractiveness has increased over the measurement interval (1990-2010) from 0.35 to 0.58, indicating that the coordination benefits have been captured by hydroelectric operators while extraction costs have accumulated in downstream and displaced communities. The theater ratio (0.45) is moderate, reflecting that flood mitigation claims are genuinely measured and monitored but often overstated relative to actual risk reduction. The suppression is high (0.72) because affected communities face total barriers to exit: geography locks them to flooded lands, ecological collapse removes alternative livelihoods, and political voice is blocked by state monopoly on dam operations.",
+    "key_agents": [
+      "Riparian Agriculture Communities: Primary victims (powerless/trapped) \u2014 face artificial flooding cycles, crop destruction, forced migration with minimal compensation; no agency in dam operations",
+      "Downstream Fisheries Workers: Primary victims (powerless/trapped) \u2014 lose livelihoods as flood-pulse breeding cycles are eliminated; ecological damage is generation-scale irreversible",
+      "Displaced Populations: Primary victims (powerless/trapped) \u2014 over 1 million people relocated with inadequate compensation; cannot return to ancestral lands",
+      "Provincial Water Management Agencies: Secondary actors (moderate/constrained) \u2014 constrained by central mandates and budget limits; implement dam operations under hierarchy",
+      "State-Owned Hydroelectric Operators: Primary beneficiary (institutional/arbitrage) \u2014 capture guaranteed profits, government subsidies, and monopolistic market position through dam operations",
+      "Central Government Energy Planning Authority: Institutional beneficiary (institutional/arbitrage) \u2014 achieves electricity supply security and climate targets through cascade; concentration of decision-making",
+      "Yangtze River Ecosystem: Victim proxy (powerless/trapped) \u2014 cannot exit; experiences suppression through loss of flood-pulse dynamics essential to spawning, sediment transport, and biodiversity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): The base value reflects the substantial revenue extraction by hydroelectric operators ($20+ billion cumulative profit over the interval) combined with ecological damage quantified at ecosystem service loss. The value increased from 0.35 to 0.58 because early years (1990s) saw more distributed development costs and uncertainty; mature operations (2000s-2010) concentrated benefits to operators while ecological losses accumulated. This is not maximum extraction (0.9+) because alternative electricity sources theoretically exist and some flood mitigation benefit is real. Suppression (0.72): Very high. Affected communities face: geographic lock-in (cannot relocate without abandoning ancestral land and livelihoods), ecological collapse (fisheries eliminated, no alternative food sources), political voicelessness (no constituency power in hydroelectric decision-making), and financial barriers (compensation inadequate to fund equivalent livelihoods). Suppression operates through resource elimination and state monopoly rather than explicit coercion. Theater ratio (0.45): Moderate. Flood mitigation is genuinely measured and modeled, but overstated\u2014the dams shift rather than eliminate flood risk and create catastrophic failure scenarios (dam rupture consequences exceed pre-dam flood damages). Electricity generation has no theater\u2014it is directly measurable and verified. Beneficiaries/Victims: Clear structural division. Operators benefit from guaranteed revenue; communities bear ecological and livelihood costs. Active enforcement required: dams operate under government mandate and cannot respond to local pressure or ecological feedback without explicit policy change.",
+    "perspectival_gap": "The divergence between rope (operator perspective) and snare (community perspective) on the same structural data reveals the core insight of indexical classification: the same constraint appears fundamentally different depending on directionality. Operators see a coordination problem (managing nine dams efficiently) and a coordination solution (cascade optimization). Communities see extraction with no coordination benefit to them. Both are accurate descriptions of the constraint from their respective positions. The engine resolves this by computing chi separately for each perspective: the operator chi \u2248 0.35 (low extraction experienced by beneficiary); the community chi \u2248 1.25 (maximal extraction experienced by victim). The analytical observer's tangled rope classification splits the difference and insists that both coordination AND extraction are real features of the constraint\u2014it is not pure coordination (denying victims) nor pure extraction (denying operators).",
+    "directionality_logic": "Directionality (d) values are derived from structural position: who benefits and who bears costs. Hydroelectric operators have d \u2248 0.10 (beneficiary with arbitrage exit\u2014they can diversify into other energy sources). Riparian communities have d \u2248 0.95 (victims with trapped exit\u2014they cannot leave without abandoning livelihoods and identity). This produces the classic extraction asymmetry: operators experience negative effective extraction (the constraint subsidizes them); communities experience maximum extraction. The sigmoid f(d) transforms these d values into experienced chi: beneficiaries see chi \u2248 -0.12 (rope territory, coordination with benefit), victims see chi \u2248 1.42 (snare territory, pure extraction). The power atoms reflect constraint-relative structural position: operators are institutional because they control implementation; communities are powerless because they have no control mechanisms. This is not about global power (obviously central government is powerful globally) but about constraint-relative agency.",
+    "mandatrophy_analysis": "CONSTRAINT FAMILY STRUCTURE: The Yangtze cascade should be decomposed into three related constraints with different epsilon values: (1) cascade_electricity_optimization (\u03b5=0.15, rope)\u2014the pure coordination of hydroelectric generation across nine dams with minimal extraction overhead; (2) yangtze_flood_management_coordination (\u03b5=0.22, rope)\u2014flood mitigation coordination with genuine but modest extraction from affected communities; (3) yangtze_dam_cascade_operations (\u03b5=0.58, tangled_rope)\u2014the full system including ecological extraction. The current constraint resolves mandatrophy by declaring tangled rope: the coordination function exists (electricity + flood mitigation) but extraction is severe and asymmetrically distributed (operators benefit, communities bear costs). This prevents false classification as pure rope (which would deny victim reality) or as pure snare (which would deny coordination function). The theater ratio (0.45) being moderate rather than high confirms that the primary functions are genuinely measured, not performed\u2014this rules out piton classification."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "south_north_water_diversion_project",
+      "mekong_dam_cascade_coordination",
+      "renewable_energy_transition_pathways"
+    ],
+    "dual_formulation_note": "The Yangtze dam cascade constrains multiple downstream systems: water availability for South-North Water Diversion Project, sediment supply affecting coastal erosion, and flood regime affecting entire Lower Yangtze basin. Each downstream constraint has its own epsilon value reflecting observable-specific measurement. The cascade operations constraint itself (\u03b5=0.58) is upstream of all these effects. Constraint decomposition: cascade_electricity_optimization (\u03b5=0.15, rope) is a proper sub-constraint of yangtze_dam_cascade_operations (\u03b5=0.58, tangled_rope), linked by network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

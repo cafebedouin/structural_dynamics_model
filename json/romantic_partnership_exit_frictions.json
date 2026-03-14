@@ -1,0 +1,217 @@
+{
+  "header": {
+    "constraint_id": "romantic_partnership_exit_frictions",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rpef"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Romantic Partnership Exit Frictions",
+    "topic_domain": "interpersonal/relational",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dominant_partner",
+      "institutional_gatekeepers"
+    ],
+    "victims": [
+      "subordinate_partner",
+      "relational_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Subordinate Partner",
+      "comment": "PERSPECTIVE 1: SUBORDINATE PARTNER (SNARE) \u2014 Structurally trapped by economic dependency, childcare obligations, social stigma, legal costs, and internalized identity as 'married person' or 'committed partner.' Cannot exit without material catastrophe: housing loss, custody battles, financial ruin, social isolation. The partnership constraint operates as pure extraction with minimal coordination function from this position. Suppression is maximal \u2014 exit capacity is near zero."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Dominant Partner",
+      "comment": "PERSPECTIVE 2: DOMINANT PARTNER (ROPE) \u2014 Experiences the partnership as coordination with low extraction cost. Controls household resources, decision-making, information flow. Exit options are mobile (less economic dependency, social capital more portable). Benefits from the constraint structure while perceiving it as natural or mutually desired. Experiences low effective extraction because can exit at moderate cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Ambivalent Partner",
+      "comment": "PERSPECTIVE 3: AMBIVALENT PARTNER (TANGLED ROPE) \u2014 Some partners experience genuine coordination benefits (emotional intimacy, shared child-rearing, economic efficiency, mutual caregiving) alongside real extraction (labor asymmetry, sexual coercion, emotional regulation burden, autonomy constraints). Not fully trapped but facing high exit costs: custody loss, housing insecurity, social penalty. Moderate power because some capacity for negotiation, but constrained by economic and social dependencies."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Legal/Social Institution",
+      "comment": "PERSPECTIVE 4: LEGAL/SOCIAL INSTITUTION (TANGLED ROPE) \u2014 Institutional framework (marriage law, family courts, social norms, religious structures) coordinates genuine relational functions (property succession, child custody clarity, tax efficiency, social stability) while actively enforcing exit frictions through high divorce costs, custody battles, alimony complexity, and cultural shame. Requires active institutional enforcement \u2014 legal machinery, social judgment, religious condemnation. Institutional actors benefit from the constraint structure (fee extraction from divorce proceedings, power to adjudicate custody, cultural authority over 'proper' relationships)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Marriage Ritual System",
+      "comment": "PERSPECTIVE 5: MARRIAGE RITUAL SYSTEM (PITON) \u2014 From a civilizational view, marriage rituals (ceremonies, vows, social recognition) are largely performative theater that maintains inertial institutional structure rather than serving coordination function. The vows restate abstract commitment; the ceremony is public performance; the social recognition persists regardless of actual relational function. Theater ratio is high \u2014 most marriage 'work' (maintaining appearances, performing commitment, sexual availability, emotional management) is performative rather than functionally necessary. The system persists through institutional inertia (expectations, life-planning around marriage, cultural identity fusion with marital status) rather than because it solves coordination problems better than alternatives."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalization View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURALIZATION VIEW (MOUNTAIN) \u2014 From analytical distance, relationship exit frictions appear as inherent to human pair-bonding: attachment costs are real, shared child-rearing requires commitment mechanisms, economic interdependence creates friction, social embeddedness makes dissolution costly. This perspective risks treating contingent institutional arrangements (legal marriage monopoly, custody allocation mechanisms, alimony formulas, social shame for divorced persons) as natural laws of pair-bonding. However, comparative analysis (varying legal regimes, different cultural norms around partnership dissolution, historical changes in exit friction) reveals that most frictions are institutional rather than inevitable \u2014 a false summit."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Exit Alternative Coalition",
+      "comment": "PERSPECTIVE 7: EXIT ALTERNATIVE COALITION (SCAFFOLD) \u2014 Organized advocates (family law reformers, no-fault divorce advocates, cohabitation-as-alternative promoters, feminist legal scholarship) see exit frictions as a solvable coordination problem with a sunset clause. No-fault divorce, shared custody norms, accessible legal aid, childcare decoupling from marriage, economic independence pathways are building alternative structures. From this perspective, the friction is temporary \u2014 a mismatch between institutional constraints and actual relational diversity. Organized agents have agency and a pathway out. Theater is moderate because alternative structures are partly already functioning (cohabitation, informal partnerships, community co-parenting) \u2014 the transition is underway."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "identity_lock_vs_structural_trap",
+      "question": "Is the measured suppression (0.62) primarily structural barriers (economic, legal, childcare) or internalized identity fusion (self-concept as 'married person,' fused relational identity)?",
+      "resolution_mechanism": "Post-exit trajectory analysis: if suppression declines after barrier removal (economic independence achieved, custody stable), suppression was structural. If suppression persists (agent cannot imagine alternative self, experiences identity dissolution despite material safety), suppression is internalized identity lock. Longitudinal follow-up of exited partners; comparison of suppression during relationship vs after barrier removal.",
+      "impact": "If structural: reclassify subordinate partner perspective exit_options from 'trapped' to 'constrained' (barriers are high but surmountable). If internalized: identity_locked exit is appropriate; suppression is effectively higher than measured because it persists after barriers fall.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or identity-based"
+    },
+    {
+      "id": "coordination_benefit_authenticity",
+      "question": "The ambivalent partner perspective claims genuine coordination benefits (emotional intimacy, shared child-rearing, mutual caregiving) alongside extraction. Are these coordination functions or performative claims masking extraction?",
+      "resolution_mechanism": "Comparative case analysis: do partners in 'high-extraction' relationships (high labor asymmetry, emotional domination, sexual coercion) still report coordination benefits? If yes, investigate whether benefits are actual or defensive (agent minimizes costs because exit is too high to acknowledge). Comparison with non-partnered individuals' access to same benefits via alternative arrangements (co-parenting, communal living, friendship-based caregiving networks).",
+      "impact": "If coordination is genuine: tangled_rope classification is correct for many partnerships. If coordination is defensive rationalization: many partnerships currently classified as tangled_rope belong in snare category, with higher \u03b5. Classification shifts affect victim group identification and beneficiary/victim directionality derivation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether reported coordination benefits are genuine or defensive rationalization"
+    },
+    {
+      "id": "institutional_enforcement_necessity",
+      "question": "How much of the measured exit friction (0.62 suppression) depends on active institutional enforcement (courts, legal fees, social sanctions) versus passive structural dependencies (no alternative housing, childcare infrastructure, income)?",
+      "resolution_mechanism": "Comparative jurisdiction analysis: compare suppression levels in regimes with high active enforcement (fault-based divorce, custody presumptions favoring male partners, alimony mandatory) vs low active enforcement (no-fault divorce, no-cost mediation, joint custody default). Temporal analysis: how much suppression declines when legal enforcement mechanisms are reformed without changing material dependencies.",
+      "impact": "If enforcement-dependent: reducing institutional active enforcement would materially lower exit friction. If dependency-dependent: legal reform alone insufficient \u2014 must also address economic independence, childcare infrastructure, social support. Affects which institutional actors are properly classified as beneficiaries (courts/lawyers vs employers/social structure).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether exit friction depends on active institutional enforcement or passive structural dependency"
+    },
+    {
+      "id": "dominant_partner_awareness",
+      "question": "Does the dominant partner perceive the partnership as coordination (rope perspective) or as beneficial extraction (beneficiary in tangled_rope)? Are these the same thing or different structural positions?",
+      "resolution_mechanism": "Qualitative analysis of dominant partners' framing: do they describe partnership as 'solving coordination problem' or as 'getting what they want'? Behavioral indicator: how much enforcement/vigilance do dominant partners invest in maintaining the constraint? If high vigilance, dominant partner may experience extraction benefits (rope misses the enforcement cost). Comparative analysis of partnership stability predictions based on dominant partner perspective.",
+      "impact": "If rope is accurate: dominant partner genuinely sees mutual coordination, and beneficiary/victim asymmetry is less total. If extraction-aware: dominant partner should be reclassified with higher d value, reflecting that they are enforcer, not coordinator. Affects institutional actor classification \u2014 are courts/religious authorities truly coordinating or actively extracting?",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether dominant partners perceive partnership as coordination or beneficial extraction"
+    },
+    {
+      "id": "natural_attachment_vs_institutional_lock",
+      "question": "The mountain perspective claims exit frictions are inherent to human pair-bonding. How much of the measured friction derives from biological/psychological attachment vs institutional structures designed to prevent exit?",
+      "resolution_mechanism": "Comparative analysis: measure attachment strength (separation distress, pair-bond formation speed) in humans vs institutional exit friction (divorce costs, custody battles). Do humans in low-friction exit regimes (no-fault divorce, co-parenting alternatives available) show different attachment patterns or slower pair dissolution? Cross-cultural comparison: do societies with minimal institutional exit frictions show different partnership formation/dissolution dynamics?",
+      "impact": "If attachment-driven: mountain classification has legitimate basis \u2014 inherent biological/psychological foundation to friction. If institution-driven: mountain is false summit; most friction (0.50+ of 0.62) is contingent institutional architecture. Affects whether partnership exit friction is classified as immutable or reformable.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "How much partnership exit friction is biological attachment vs institutional structure"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Romantic partnership exit frictions describe the structural and institutional mechanisms that make leaving intimate relationships costly, dangerous, or perceived as impossible. The constraint operates through multiple interlocking mechanisms: economic dependency (shared housing, one partner's career sacrifice, unequal asset accumulation), childcare entanglement (custody uncertainty, loss of daily contact), legal complexity (divorce fees, asset division battles, spousal support negotiations), social stigma (shame narratives, community judgment, identity loss), and internalized identity fusion (self-concept constituted through 'married person' role, fused relational identity). The constraint exhibits all six DR types from different agent positions, revealing how institutional frameworks, legal structures, social norms, and internalized psychology interact to make exit increasingly costly over the partnership's lifetime. The extractiveness rises from 0.35 (early partnership, low sunk costs) to 0.62 (mature partnership, maximum entanglement), showing how the constraint strengthens as dependencies accumulate. Theater ratio is modest (0.48) because while relationship maintenance includes performative elements (public displays of commitment, sexual availability scripts, emotional regulation theater), the constraint's primary function is genuinely structural \u2014 controlling exit through real material and legal barriers rather than purely symbolic enforcement.",
+    "key_agents": [
+      "Subordinate Partner: Primary victim (powerless/trapped) \u2014 bears maximum extraction cost; typically has lower income, higher childcare burden, higher exit cost relative to resources",
+      "Dominant Partner: Primary beneficiary (institutional/arbitrage) \u2014 benefits from labor asymmetry, sexual access, financial control, decision-making power; can exit at lower relative cost",
+      "Ambivalent Partner: Secondary actor (moderate/constrained) \u2014 experiences both genuine coordination benefits and real extraction; not fully trapped but facing high exit costs",
+      "Legal/Social Institutions: Secondary beneficiary (institutional/constrained) \u2014 courts, religious authorities, family governance structures; benefit from fee extraction, power to adjudicate, cultural authority; also genuinely coordinate some relational functions",
+      "Exit Alternative Coalition: Reform-oriented agents (organized/mobile) \u2014 family law advocates, no-fault divorce proponents, cohabitation alternative promoters; see exit frictions as solvable",
+      "Marriage Ritual System: Performative institutional actor (institutional/arbitrage) \u2014 ceremonies, vows, public recognition; maintains inertial structure through theater rather than functional necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts labor, sexual access, emotional regulation, financial control, and autonomy from the subordinate partner while delivering unequal benefits. Early in partnerships, extractiveness is lower (0.35) because dependencies are minimal and exit costs are moderate. Over time, children, shared assets, intertwined finances, and identity fusion accumulate, raising extractiveness to 0.62 by year 8. This is not maximum extraction (which would be 0.80+) because many partnerships also provide genuine coordination benefits (shared child-rearing, mutual caregiving, economic efficiency), and some partners maintain partial autonomy. Suppression (0.62): Moderate-high, reflecting multiple overlapping barriers: economic dependency (housing, income inequality, childcare costs), legal complexity (divorce filing fees, property division fights, custody battles costing $10,000-50,000+), social penalties (custody presumptions against mothers, judgment for 'failed' marriages, isolation from married social circles), and internalized identity fusion. Suppression is not total (0.90+) because some exits are possible, some legal aid exists, some social acceptance of dissolution is emerging. Theater ratio (0.48): Moderate. Relationship maintenance includes genuine coordination work (child-rearing, household management, emotional support) and performative theater (public displays of commitment, sexual availability scripts, emotional management performances). The theater is less than in marriage rituals (0.72) because daily partnership has functional necessity \u2014 you cannot raise children or share housing purely through ceremony. But the theater is significant because much relationship work is about maintaining external appearances (staying for the children, performing happiness for social circles, managing reputation) rather than actual relational function.",
+    "perspectival_gap": "The gap between subordinate partner (Snare) and dominant partner (Rope) is the engine's primary diagnostic signal: the same constraint structure is experienced as extractive from below and coordinative from above. This gap reveals that the constraint's classification depends entirely on the agent's structural position. No single type is 'correct' \u2014 the presheaf over all positions is. The mountain perspective is a false summit: treating partnership exit friction as natural law naturalizes institutional choices (fault-based divorce, custody allocation rules, legal fee structures) as inevitable constraints. The piton perspective correctly identifies that much marriage ritual (vows, ceremonies, public recognition) is performative \u2014 the functions these perform (commitment signaling, social recognition, legal recognition) could be performed by alternatives (cohabitation with commitment ceremonies, informal social recognition, accessible legal partnership registration) with lower theater ratio and lower enforcement costs.",
+    "directionality_logic": "Each perspective's directionality is computed from structural position. Subordinate partner: high d (~0.90) derives from trapped exit options + victim status in labor/autonomy extraction. Dominant partner: low d (~0.15) derives from arbitrage exit + beneficiary status in labor/sexual/financial extraction. Ambivalent partner: moderate d (~0.55) reflects constrained exit but also some beneficiary status (coordination benefits). Institutional actors: moderate d (~0.45-0.60) reflects that they benefit from enforcement (fee extraction, cultural authority) but also genuinely coordinate some relational functions (custody clarity, property succession, child protection). Reform coalition: low d (~0.25) reflects mobile exit options (they can advocate exit friction reduction) and moderate beneficiary status from implementation (law reformers benefit professionally). The engine applies the sigmoid f(d) to these values: high d (trapped victim) produces high f(d) ~1.42 \u2192 maximum experienced extraction; low d (arbitrage beneficiary) produces negative f(d) ~-0.12 \u2192 extraction subsidizes this agent. This directionality structure explains why the constraint feels like pure extraction from below but coordination from above \u2014 the d values are structurally different.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that classification divergence is not a problem to solve but a structural fact to report. The same constraint system (romantic partnership + exit frictions) is simultaneously Snare (from victim perspective), Rope (from beneficiary perspective), Tangled Rope (from ambivalent perspective and institutional perspective), Piton (from ritual system perspective), Scaffold (from reform coalition perspective), and false Mountain (from naturalizing observer perspective). The mandatrophy is not 'which type is correct?' but 'what is the presheaf structure across all positions?' The ambivalence of many partners (experiencing both coordination benefits and extraction) is not a classification error but a structural reality of tangled_rope type \u2014 genuine coordination functions embedded in asymmetric extraction. The reform coalition's scaffold perspective is not aspirational but structural: the alternative pathways (cohabitation, co-parenting, communal living, friendship-based caregiving) already exist and function; the scaffold sunset is real. The piton classification accurately captures that much marriage ritual (vows, ceremonies, public performance) maintains institutional inertia rather than solving coordination problems better than alternatives. The false mountain classification reveals the core mandatrophy resolution: a naturalizing observer treats exit friction as inherent to pair-bonding, but structural analysis shows most friction (0.50+ of 0.62 suppression) derives from institutional design choices, not biological necessity."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "domestic_labor_asymmetry",
+      "sexual_coercion_in_partnership",
+      "custody_determination_mechanism",
+      "financial_interdependence_lock"
+    ],
+    "dual_formulation_note": "Romantic partnership exit frictions decompose into multiple structurally distinct constraints sharing a common institutional framework (marriage law, social norms, economic structures) but having different \u03b5 values and different primary mechanisms. Financial interdependence has \u03b5~0.45 (coordination function + moderate extraction); sexual coercion has \u03b5~0.72 (minimal coordination, maximum extraction); domestic labor asymmetry has \u03b5~0.55 (mixed); custody determination has \u03b5~0.68 (enforcement-dependent). This story captures the aggregate constraint from all these mechanisms operating together. Upstream is the institutional framework itself (marriage law, legal fee structures, custody presumptions) which could be decomposed as a separate story. Downstream are specific relationship pathologies (abuse, control, isolation) which operate on top of and within the partnership exit friction constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

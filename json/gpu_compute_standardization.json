@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "gpu_compute_standardization",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gpu_std"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "GPU Compute Standardization and Market Lock-in",
+    "topic_domain": "technology/hardware/software_coordination",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dominant_gpu_vendors",
+      "software_frameworks_aligned_with_dominant_architecture"
+    ],
+    "victims": [
+      "competing_gpu_architectures",
+      "hardware_diversity",
+      "portability_aspirations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Compute Portability Requirement",
+      "comment": "PERSPECTIVE 1: COMPUTE PORTABILITY REQUIREMENT (SNARE) \u2014 Hardware-agnostic compute cannot exit the standardization lock-in. Code written for one GPU architecture faces prohibitive porting costs to alternatives. No viable escape route; bears full cost of vendor-specific optimization requirements and lock-in dependencies."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Competing GPU Vendors",
+      "comment": "PERSPECTIVE 2: COMPETING GPU VENDORS (TANGLED ROPE) \u2014 Face high costs to establish alternative standards but gain coordination benefits within their own ecosystem. Constrained by software ecosystem lock-in and large installed bases favoring dominant players. Extract value through proprietary instruction sets while coordinating research collaboration within their vendor community."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Dominant GPU Vendor",
+      "comment": "PERSPECTIVE 3: DOMINANT GPU VENDOR (ROPE) \u2014 Experiences standardization as coordination mechanism enabling ecosystem growth. Benefits from network effects as software frameworks optimize for their architecture. Can arbitrage between markets and standards. Net beneficiary of the constraint structure."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Open Standards Initiative Coalition",
+      "comment": "PERSPECTIVE 4: OPEN STANDARDS INITIATIVE (SCAFFOLD) \u2014 Organized actors (Khronos Group, oneAPI, OpenCL consortia) see standardization lock-in as temporary coordination failure with viable sunset. Building cross-platform abstraction layers and unified compute interfaces. Extraction mechanism declines as standards mature and hardware abstraction becomes genuinely vendor-neutral."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Standardization Bodies",
+      "comment": "PERSPECTIVE 5: LEGACY STANDARDIZATION BODIES (PITON) \u2014 Traditional GPU compute standards bodies maintain outdated specifications and governance structures. Institutional inertia keeps them functional in name only. Theater ratio high: meetings occur, standards are published, but actual hardware follows proprietary specifications. Piton derives from functional atrophy, not from measured extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Software Framework Maintainers",
+      "comment": "PERSPECTIVE 6: SOFTWARE FRAMEWORK MAINTAINERS (TANGLED ROPE) \u2014 Powerful actors (PyTorch, TensorFlow, CUDA ecosystem) coordinate across diverse hardware but extract through vendor-specific optimization paths. High mobility: can theoretically support multiple backends. But extraction occurs through incentive alignment with dominant vendors and performance differentiation. Mixed coordination and asymmetric benefit distribution."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some standardization concentration is inherent to complex compute systems: hardware-software codesign requires tight coupling, and perfect portability is mathematically impossible given conflicting optimization constraints. This perspective naturalizes market concentration as technical necessity. However, the structural data contradicts the mountain classification \u2014 the engine will compute this as a false summit, revealing that technical necessity claims often obscure contingent institutional choices."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "portability_vs_performance_tradeoff",
+      "question": "Is the standardization lock-in driven by genuine technical necessity (hardware-software codesign requires tight coupling) or by extractive market incentives (vendors profit from porting friction)?",
+      "resolution_mechanism": "Comparative analysis of performance gaps: fully generic compute implementations vs vendor-optimized implementations; benchmarking of hardware-agnostic code; historical correlation between vendor market share and optimization investment",
+      "impact": "If driven by technical necessity: mountain classification recovers legitimacy, extraction is minimal overhead. If driven by market incentives: snare classification dominates, standardization is pure extraction mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical necessity vs extractive market incentives in standardization lock-in"
+    },
+    {
+      "id": "open_standards_sunset_viability",
+      "question": "Can cross-platform abstraction layers (oneAPI, SYCL, Vulkan Compute) genuinely achieve vendor-neutral performance parity, or are they permanently slower due to generalization overhead?",
+      "resolution_mechanism": "Long-term performance benchmarking of open-standard implementations vs vendor-specific optimizations; correlation between standard maturity and performance gap; analysis of compiler transformation capabilities and hardware exposure",
+      "impact": "If parity achievable: scaffold perspective confirmed, sunset is structural. If permanent gap persists: open standards remain aspirational, extraction mechanism is sustained by performance penalty for portability.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether open standards can achieve vendor-neutral performance parity"
+    },
+    {
+      "id": "ecosystem_tipping_point",
+      "question": "At what critical mass of alternative hardware support do software frameworks shift optimization investment priorities away from the dominant vendor?",
+      "resolution_mechanism": "Historical analysis of framework optimization distribution: code commits, feature releases, performance benchmarking time allocation; threshold detection for market share shifts in competing architectures",
+      "impact": "If tipping point is < 15% alternative market share: standardization extraction is vulnerable to coordinated ecosystem building. If tipping point is > 40%: dominant vendor lock-in is robust, extraction sustained for decades.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Market share threshold for framework optimization priority shifts"
+    },
+    {
+      "id": "hardware_abstraction_impossibility",
+      "question": "Is perfect hardware abstraction logically impossible (fundamental information-theoretic limit) or merely economically infeasible (requires investment that vendors block)?",
+      "resolution_mechanism": "Formal analysis of hardware feature space diversity and compiler synthesis limits; historical tracking of abstraction layer maturity and capability gaps; measurement of vendor-specific feature adoption vs portability gains",
+      "impact": "If logically impossible: mountain classification recovers, standardization concentration is inevitable. If economically infeasible: tangled rope classification dominates, extraction is enforced through investment asymmetry rather than technical limit.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Information-theoretic limits vs economic barriers in hardware abstraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.53
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "GPU compute standardization creates a structural tension between the genuine coordination benefits of unified instruction sets and software frameworks, and the extractive lock-in that dominant vendors maintain through proprietary architecture optimization and ecosystem concentration. The constraint exhibits tangled rope structure: legitimate coordination of hardware-software interfaces coexists with asymmetric extraction from competing architectures and portability aspirations. Extractiveness has risen from 0.28 to 0.52 over the interval as market concentration increased and vendor-specific optimization became the default path for performance-critical applications. Theater ratio has climbed from 0.42 to 0.64, reflecting standardization bodies maintaining nominal role while actual hardware-software pairing follows proprietary channels. The constraint is downstream of technical choices about hardware-software coupling but downstream of market incentives that amplify those technical choices into lock-in mechanisms.",
+    "key_agents": [
+      "Dominant GPU Vendor (institutional/arbitrage): Primary beneficiary \u2014 captures value through network effects, software ecosystem optimization, and switching costs for application developers",
+      "Competing GPU Architectures (moderate/constrained): Primary victim \u2014 face prohibitive costs to establish alternative standardization pathways; constrained by installed software bases",
+      "Hardware Portability Requirement (powerless/trapped): Abstract collective victim \u2014 code must either optimize for specific vendors or accept performance penalties; no exit option",
+      "Open Standards Coalition (organized/constrained): Secondary actor \u2014 Khronos Group, oneAPI, Vulkan working groups building cross-platform abstractions with potential sunset logic",
+      "Software Framework Maintainers (powerful/mobile): Mixed position \u2014 coordinate across hardware but extract through vendor-specific optimization and performance differentiation",
+      "Legacy Standardization Bodies (institutional/arbitrage): Institutional actor \u2014 maintain formal standardization role through inertia despite proprietary hardware evolution",
+      "Analytical Observer (analytical/analytical): Civilizational perspective \u2014 risks naturalizing market concentration as technical necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The dominant vendor captures significant value through ecosystem network effects, installed code base compatibility, and software framework optimization priorities. However, extraction is not maximal \u2014 competing architectures do gain limited adoption, open-source frameworks exist, and users have formal choice of hardware. The extractiveness reflects sustained vendor advantage amplified by switching costs, not absolute lock-in. Suppression (0.58): Moderate-high. Barriers to alternative standardization include large installed software bases, framework optimization asymmetry, development cost concentration, and performance trade-offs for portability. But suppression is not total \u2014 some hardware diversity persists, and open standards initiatives are building escape routes. Theater ratio (0.64): Moderately high. Standardization bodies publish specifications and maintain governance structures, but actual hardware-software pairing follows vendor-specific optimization paths. The theater has increased as industry maturity concentrated around dominant platforms and performance optimization became essential. Traditional standards maintain legitimacy through formality while real innovation follows proprietary channels.",
+    "perspectival_gap": "The constraint generates divergent classifications across structural positions. The dominant vendor sees coordination (Rope) \u2014 they are solving the real problem of unified compute interfaces and ecosystem growth. The open standards coalition sees a temporary problem with viable sunset (Scaffold) \u2014 cross-platform abstractions are maturing and vendor-agnostic performance is improving. Competing vendors and portability requirements see extraction (Snare/Tangled Rope) \u2014 the standardization mechanism locks in dominant vendor advantage. Framework maintainers see mixed coordination and vendor-driven optimization (Tangled Rope) \u2014 they coordinate across hardware but distribute optimization effort asymmetrically. The analytical observer risks seeing immutable technical necessity (Mountain) \u2014 hardware-software codesign requires tight coupling \u2014 but the structural data reveals this as naturalization of market incentives that could be otherwise arranged.",
+    "directionality_logic": "Directionality values are derived from agents' structural relationships to the standardization constraint. Dominant vendors with arbitrage mobility and beneficiary status experience low d \u2192 low chi (negative extraction from their perspective). Competing architectures with trapped or constrained exit and victim status experience high d \u2192 high chi (extraction from their perspective). Portability requirements with no exit options experience maximum d \u2192 maximum chi. Software frameworks with mobile options but vendor optimization alignment experience intermediate d values reflecting their mixed position. The piton classification derives from high theater ratio rather than measured chi. Theater ratio increase signals that standardization performs legitimacy more than function \u2014 the real hardware-software coupling follows proprietary paths while formal standards maintain governance role.",
+    "mandatrophy_analysis": "This constraint demonstrates how mandatrophy resolution depends on distinguishing technical necessity from market incentive structure. If standardization lock-in were purely technical (hardware-software codesign impossibly constrains portability), the mountain classification would recover and extraction would be minimal overhead. If lock-in is purely market-driven (vendors can choose to support open standards but don't because proprietary optimization is more profitable), the snare classification dominates and extraction is pure rent-seeking. The actual structure is tangled rope: genuine coordination benefits coexist with asymmetric extraction. The coordination function is real (unified interfaces do enable ecosystem growth). The extraction is real (vendors profit from porting friction). The constraint is not pure extraction disguised as coordination, nor pure coordination incidentally producing asymmetry \u2014 it is genuinely both. Resolution requires accepting that both functions are structural and that mandatrophy reflects this dual functionality rather than disappearing when analyzed more carefully."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "chip_architecture_diversity",
+      "software_framework_fragmentation",
+      "hardware_vendor_market_concentration"
+    ],
+    "dual_formulation_note": "GPU compute standardization is downstream of hardware-software codesign constraints but represents a distinct structural phenomenon. The upstream constraint is the technical requirement for tight coupling; the standardization constraint is how market incentives amplify that technical requirement into lock-in mechanisms. Separate stories enable distinct \u03b5 values: hardware-software codesign has \u03b5 \u2248 0.12 (mountain-ish technical necessity); GPU standardization lock-in has \u03b5 \u2248 0.52 (tangled rope market structure)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

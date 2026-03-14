@@ -1,0 +1,206 @@
+{
+  "header": {
+    "constraint_id": "attachment_disruption_trauma",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Attachment Disruption Trauma",
+    "topic_domain": "developmental_psychology/trauma",
+    "requires_active_enforcement": true,
+    "beneficiaries": [],
+    "victims": [
+      "child_victim",
+      "developmental_capacity"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Traumatized Child",
+      "comment": "PERSPECTIVE 1: TRAUMATIZED CHILD (SNARE) \u2014 Trapped in the relationship that caused the trauma. Lacks material exit routes (dependent on caregiver for survival, shelter, food). Interpersonal and institutional barriers prevent leaving. Bears full cost of attachment disruption through developmental harm, internal working models of relationships as dangerous, and neurobiological dysregulation. Maximum extraction without meaningful coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "label": "The Adult Survivor",
+      "comment": "PERSPECTIVE 2: ADULT SURVIVOR (TANGLED ROPE) \u2014 Structurally mobile (can physically leave, has income, legal protections) but identity-locked to the original relationship through internalized patterns, fused identity ('I deserve this treatment'), and cognitive capture. Simultaneously experiences genuine coordination elements (learned caregiving behaviors, loyalty as identity anchor) alongside extraction (relationship patterns perpetuate the trauma dynamic). Moderate extraction in new contexts because the binding is now primarily cognitive rather than material."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Therapeutic Intervention",
+      "comment": "PERSPECTIVE 3: THERAPEUTIC INTERVENTION (SCAFFOLD) \u2014 Organized agents (attachment-based family therapy, trauma-informed care, evidence-based intervention protocols) provide structured exit pathway from the constraint. Theater ratio is low \u2014 the intervention focuses on real relational change, not performative compliance. Has clear sunset: as the survivor develops secure attachment capacity and processes the trauma, the intervention winds down. Effective only when the survivor can achieve the breakthrough shift from identity_locked to mobile exit options."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Perpetuator (Institutional View)",
+      "comment": "PERSPECTIVE 4: PERPETUATOR / INSTITUTIONAL CONTEXT (ROPE) \u2014 If the perpetuator is an institution (residential facility, religious organization, state custody) rather than individual caregiver, the constraint appears as coordination from the institution's perspective: maintaining control over dependent populations, managing compliance, extracting compliant behavior through attachment disruption as a mechanism. The institution sees this as functional social control, not trauma \u2014 reframing extraction as coordination to minimize cognitive dissonance."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Intergenerational Transmission",
+      "comment": "PERSPECTIVE 5: INTERGENERATIONAL TRANSMISSION (PITON) \u2014 Attachment disruption trauma reproduces itself across generations through internalized working models, parenting scripts, and identity fusion. The perpetuation appears 'natural' (this is how families work, how relationships function) and persists through institutional inertia despite causing documented harm. Theater is moderate \u2014 the transmission is visible in parenting behavior and relationship patterns, but the underlying mechanism (identity lock) remains opaque to participants. Functionally degraded because it reproduces harm without any coherent coordination benefit at the generational level."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalized View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURALIZED VIEW (MOUNTAIN) \u2014 From an evolutionary or culturally naturalized perspective, attachment disruption might appear as an immutable feature of hierarchical caregiving: dominance hierarchies require compliance mechanisms, trauma bonds create behavioral lock-in, and vulnerability in childhood produces extractability across the lifespan. This perspective risks naturalizing what is actually a contingent institutional and developmental choice. The engine flags this as a false summit: attachment disruption is not a law of nature but a consequence of specific caregiving arrangements."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "identity_lock_vs_structural_entrapment",
+      "question": "In the adult survivor perspective, is the primary binding mechanism cognitive (identity fusion) or material (economic/legal dependency recreated in adulthood)?",
+      "resolution_mechanism": "Longitudinal tracking of exit attempts: Do survivors who achieve economic independence and legal autonomy still report inability to leave relationships exhibiting similar trauma patterns? If yes, binding is identity-locked. If material barriers alone explain continued contact, binding is trapped/constrained rather than identity-locked.",
+      "impact": "If identity-locked: classification remains tangled_rope; intervention must address cognitive frame shift in addition to material exit. If trapped: reclassify as higher extraction; material barriers dominate and must be removed first. If constrained: moderate extraction with cost-based exit pricing.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether adult survivor binding is cognitive or material"
+    },
+    {
+      "id": "institutional_perpetuation_extraction_vs_coordination",
+      "question": "When attachment disruption occurs in institutional contexts (residential care, detention, religious community), is the mechanism primarily extractive control or genuine coordination dysfunction?",
+      "resolution_mechanism": "Comparison of institutional outcomes: Do institutional populations with attachment disruption show better behavioral compliance (extraction success) or worse developmental outcomes (coordination failure)? Do institutions with lower attachment disruption show better long-term institutional stability?",
+      "impact": "If primarily extractive: perpetuator perspective is rope with clear beneficiary (institutional order). If primarily dysfunction: perpetuator perspective is piton (the institution has internalized false belief that attachment disruption is necessary for function). If mixed: confirms tangled_rope classification for institutional view.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether institutional attachment disruption is extraction or coordination failure"
+    },
+    {
+      "id": "suppression_internalization_trajectory",
+      "question": "What proportion of measured suppression (0.72) is structural (material barriers: parental dependency, legal status, geographic isolation) versus internalized (cognitive barriers: identity fusion, shame, learned helplessness that persist after structural barriers are removed)?",
+      "resolution_mechanism": "Post-exit suppression persistence: Measure suppression indicators (relationship maintenance, behavioral compliance, communication patterns) before, during, and after exit from the primary trauma relationship. If suppression drops immediately after material exit, structural. If suppression persists despite material freedom, internalized. Most cases will show both components.",
+      "impact": "If primarily structural: escape interventions (legal, economic, geographic) will rapidly reduce constraint. If primarily internalized: survivor carries suppression mechanism post-exit and will require extensive identity-frame intervention (therapy, community reintegration) to achieve true freedom. If both: sequential intervention strategy needed (remove structural barriers first, then address internalized mechanisms).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs internalized proportion of suppression"
+    },
+    {
+      "id": "therapeutic_intervention_ceiling_effect",
+      "question": "Does trauma-informed attachment-based therapy reliably shift survivors from identity_locked to mobile exit options, or does identity fusion often persist despite therapeutic success on other dimensions?",
+      "resolution_mechanism": "Comparison of therapy outcomes: Measure both symptom reduction (PTSD, anxiety, depression scores) and identity fusion persistence (Implicit Association Test for self-concept, relational pattern replication in new relationships). Do survivors with symptom improvement still exhibit identity-locked relationship choices?",
+      "impact": "If therapy reliably breaks identity lock: scaffold sunset is realistic and intervention can be time-limited. If identity lock persists despite symptom improvement: scaffold sunset is delayed and may require indefinite maintenance support or repeated intervention cycles.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether therapy reliably breaks identity lock"
+    },
+    {
+      "id": "intergenerational_transmission_inevitability",
+      "question": "What proportion of attachment-disrupted children reproduce similar patterns with their own children? Is transmission inevitable absent intervention, or are there natural circuit-breakers?",
+      "resolution_mechanism": "Longitudinal family cohort studies: Track parenting patterns in children raised with significant attachment disruption. Identify which develop secure attachment capacity with their own children (transmission interrupted) versus which repeat patterns (transmission continues). Correlate with protective factors (alternative attachment figures, therapeutic intervention, reflective capacity).",
+      "impact": "If transmission is near-inevitable (>70%): intergenerational piton is accurately classified as stable institutional pattern. If transmission can be interrupted (rates drop to <30% with intervention): piton is more degraded than initially classified; constraint shows vulnerability to targeted intervention. If transmission rates depend on specific family context: classification varies by institutional structure (state care vs family vs community).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Intergenerational transmission rates and circuit-breaker mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Attachment disruption trauma is a constraint structured through the rupture of the primary caregiver relationship during critical developmental periods. The trauma operates as a snare for the child victim (powerless, trapped) but exhibits all six DR types depending on observer position. The adult survivor often becomes identity-locked to the original trauma pattern, experiencing themselves as constitutively unable to escape despite structural mobility. The constraint persists through internalized working models of relationships as dangerous, intermittent reinforcement cycles (moments of connection followed by betrayal), and identity fusion with the role assigned by the perpetuator. The suppression mechanism combines material factors (childhood dependency) with cognitive factors (shame, learned helplessness, identity fusion). The measurements show increasing extractiveness over the interval (0.45 \u2192 0.72) as the child develops greater agency but internalizes the trauma pattern more deeply. Theater increases (0.35 \u2192 0.68) as the transmission becomes normalized and invisible \u2014 the trauma reproduces itself through 'natural' parenting patterns and relationship choices rather than overt coercion. Therapeutic intervention offers a genuine exit pathway (scaffold) by targeting both structural barriers and identity-frame shifts. Institutional contexts reproduce the constraint at scale through normalization and inertia (piton).",
+    "key_agents": [
+      "Child Victim: Primary powerless/trapped agent \u2014 bears full extraction cost through developmental harm, neurobiological dysregulation, internal working models of danger",
+      "Adult Survivor: Primary moderate/identity_locked agent \u2014 structurally mobile but cognitively captured through identity fusion with the trauma role",
+      "Perpetuator (Individual): Beneficiary in the child perspective (extraction mechanism), but in institutional context may be secondary to organizational logic",
+      "Perpetuator (Institutional): Powerful/arbitrage or constrained depending on whether institution is intentionally extractive or functionally dysfunctional",
+      "Therapeutic System: Organized agents providing structured exit \u2014 attachment-based family therapy, trauma-informed care, evidence-based protocols",
+      "Intergenerational Transmission: Institutional inertia mechanism \u2014 perpetuates constraint through normalized parenting patterns across generations",
+      "Analytical Observer: Risk of naturalizing contingent caregiving arrangements as developmental necessity rather than institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts developmental capacity, secure attachment capacity, relational health, and behavioral autonomy from the child victim. The extraction continues into adulthood through internalized patterns. The value reflects that extraction is substantial (coded in neurobiology and identity) but not absolute \u2014 some survivors develop resilience, some achieve therapeutic breakthrough, some form secure attachments despite history. Not 0.85+ because exit is possible with intervention. Suppression (0.72): High. Multiple layers: material (childhood dependency, legal status, geographic isolation), institutional (normalized family structures, limited access to alternative attachment figures), psychological (shame, fear, learned helplessness, identity fusion). Suppression increases over developmental time as the child internalizes the trauma pattern as 'how relationships work.' Theater ratio (0.55): Moderate-high. The constraint operates partly through overt abuse/rupture (lower theater) but increasingly through internalized patterns and normalized family dynamics that appear 'natural' (higher theater). Therapeutic contexts introduce genuine functional intervention (lower theater) but also performance of trauma recovery (higher theater). The intergenerational view is highly theatrical \u2014 the transmission appears as destiny or natural parenting instinct rather than as a reproducible institutional pattern.",
+    "perspectival_gap": "The adult survivor's identity_locked classification is the diagnostic pivot. This agent has structural mobility (income, housing options, legal protections) that would permit exit classified as mobile or constrained. But identity fusion with the trauma role \u2014 internalized belief that they deserve the treatment, fear of abandonment, loyalty to the perpetuator, self-concept constituted through caregiver role \u2014 creates a perceptual lock: exit is unthinkable from within the internalized frame. The gap between structural capacity (mobile) and perceived capacity (trapped within identity frame) reveals that the binding mechanism is cognitive rather than material. This is why the classification is tangled_rope rather than snare: there is genuine coordination content (loyalty, caregiving identity, learned interdependence) alongside the extraction, AND the agent could perceive mutability if their identity frame shifted (unlike mountain perception of immutability). The therapeutic intervention targets precisely this gap: helping the survivor shift from identity_locked to mobile exit options.",
+    "directionality_logic": "Directionality derives from structural position relative to extraction flow. The child victim is at maximum d (trapped, powerless, full target of extraction). The adult survivor has lower d than the child (identity-locked produces lower d than trapped due to structural mobility), but still on the target side. The perpetuator (individual) has d \u2248 0.0 (full beneficiary) if extraction is intentional, higher d if acting within institutional script. The therapeutic system has d \u2248 0.5 (symmetric costs and benefits; helping entails relational vulnerability for therapist). The intergenerational view distributes d across multiple agents: perpetuators of prior generation have low d (beneficiaries), current generation victims have high d (targets), future generation victims have even higher d (trapped in system they did not create). The institutional context shifts beneficiary identity: individual perpetuator may be constrained agent within institutional logic, with true beneficiary being the organization's operational success.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The constraint's classification as snare for the child (pure extraction without coordination) versus tangled_rope for the adult survivor (mixed coordination-extraction with identity lock) versus scaffold for the intervention (temporary coordination failure with sunset) demonstrates that mandatrophy is resolved through perspectival decomposition. The constraint is not 'really' one type \u2014 it IS all types simultaneously from different structural positions. The snare classification is correct from the powerless/trapped child's perspective. The tangled_rope classification is correct from the moderate/identity_locked adult's perspective. The scaffold classification is correct from the organized/mobile therapeutic system's perspective. The mandatrophy was the false question 'which type is objectively correct?' The resolution is: each type is correct from its observer position. The constraint's extractive power derives from this perspectival slippage \u2014 the adult survivor mistakes their identity-locked tangled_rope for a continuing snare, maintaining the extraction mechanism through internalized belief rather than external force."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "intergenerational_trauma_transmission",
+      "insecure_attachment_patterns",
+      "relational_reenactment_cycles"
+    ],
+    "dual_formulation_note": "Attachment disruption trauma decomposes into a constraint family by developmental phase and agent perspective. Child victim story (snare, immediate/trapped). Adult survivor story (tangled_rope, biographical/identity_locked). Therapeutic intervention story (scaffold, generational/mobile). Intergenerational transmission story (piton, civilizational/constrained). Each story has distinct epsilon reflecting different observable: trauma as experienced harm (high epsilon), trauma as internalized pattern (medium epsilon), trauma as intervention target (low epsilon), trauma as cultural reproduction (medium-high epsilon). Stories linked through network.affects_constraints showing causal and institutional coupling."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

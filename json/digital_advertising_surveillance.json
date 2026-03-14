@@ -1,0 +1,230 @@
+{
+  "header": {
+    "constraint_id": "digital_advertising_surveillance",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "digads"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Digital Advertising Surveillance Infrastructure",
+    "topic_domain": "technology/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "advertising_platforms",
+      "data_brokers",
+      "targeted_advertisers"
+    ],
+    "victims": [
+      "consumer_autonomy",
+      "informational_privacy",
+      "attention_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Surveilled Consumer",
+      "comment": "PERSPECTIVE 1: SURVEILLED CONSUMER (SNARE) \u2014 Individual users cannot exit digital services without abandoning essential economic and social participation. Tracking is ubiquitous, consent mechanisms are performative (dark patterns, pre-checked boxes, incomprehensible terms), and behavioral data extraction is the operational core of the ad-tech stack. Maximum experienced extraction with minimal coordination benefit and negligible exit options."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Small Business Advertiser",
+      "comment": "PERSPECTIVE 2: SMALL BUSINESS ADVERTISER (TANGLED ROPE) \u2014 Faces high cost to exit (search visibility requires platform advertising), but also depends on platform's targeting mechanisms for cost-effective customer acquisition. Extraction and coordination coexist: the platform extracts attention rent while solving the SMB's targeting problem. Constrained exit with genuine but asymmetric benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Advertising Platform",
+      "comment": "PERSPECTIVE 3: ADVERTISING PLATFORM (ROPE) \u2014 Experiences the surveillance infrastructure as pure coordination: matching advertisers to interested consumers solves a genuine targeting problem. The platform's extraction accrues to it, but from the platform's perspective it is solving market inefficiency. Maximum beneficiary with exit arbitrage \u2014 can redirect data collection, change targeting algorithms, or pivot business models without existential loss."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Privacy Regulation Coalition",
+      "comment": "PERSPECTIVE 4: PRIVACY REGULATION COALITION (SCAFFOLD) \u2014 Organized actors (GDPR, CCPA, DMA, civil society) see surveillance as a temporary coordination failure being solved through regulation. Privacy-by-design mandates, consent mechanisms, data minimization requirements, and transparency rules are building alternative pathways. Suppression is high (regulatory complexity, compliance costs) but has a sunset clause: as privacy-protective technologies mature and user agency increases, the extraction mechanism loses force."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Consent Theater Apparatus",
+      "comment": "PERSPECTIVE 5: CONSENT THEATER APPARATUS (PITON) \u2014 Cookie banners, consent dialogs, privacy policies, and opt-out mechanisms are largely performative. They create the appearance of user agency while maintaining the underlying extraction \u2014 users accept because rejecting is friction, policies are incomprehensible by design, opt-out is buried in settings. The apparatus persists through institutional inertia despite being recognized as dysfunctional by regulators and researchers alike."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Captured Regulator",
+      "comment": "PERSPECTIVE 6: CAPTURED REGULATOR (TANGLED ROPE) \u2014 Regulators depend on ad-tech revenue models for content ecosystem funding (media literacy programs, public broadcasting, digital services), while also tasked with constraining extraction. Identity-locked into the platform-dependent digital economy, constrained exit. Genuine coordination function (setting rules) coexists with extraction (regulatory capture, industry influence on rule design, enforcement gaps)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Optimized Matching Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / OPTIMIZATION NATURALIZING VIEW (MOUNTAIN) \u2014 From a civilization-scale view, some matching of consumer interest to advertiser message is 'efficient' by economic definition. This perspective frames surveillance as an immutable law of information economics: asymmetric information creates screening mechanisms; targeting is the solution to information asymmetry; extraction is the natural price. The engine's false summit detector will flag this as naturalizing what is actually a contingent policy choice (privacy-protective alternatives exist)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "behavioral_data_necessity",
+      "question": "Is fine-grained behavioral tracking necessary for effective advertising, or is it an optimization layered onto coarser targeting?",
+      "resolution_mechanism": "Comparative analysis of ad effectiveness across privacy-protective targeting (contextual, keyword-based, minimal behavioral data) vs. behavioral surveillance; real-world trials with differential data retention policies",
+      "impact": "If necessary: suppression justified as coordination cost (raise floor). If optimization: tracking is pure extraction overhead \u2014 lower claimed extractiveness, reclassify toward snare from advertiser perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether behavioral tracking is necessary or optimized extraction"
+    },
+    {
+      "id": "consent_mechanism_functionality",
+      "question": "Do privacy regulation consent mechanisms (GDPR, CCPA) actually change user data exposure, or are they theater that preserves extraction while creating compliance cost?",
+      "resolution_mechanism": "Measurement of actual data collection pre/post regulation; analysis of GDPR/CCPA opt-out rates and resulting reduction in tracking; platform behavioral response to consent requirements",
+      "impact": "If functional: scaffold perspective confirmed, sunset is real. If theater: piton classification for the regulator, and extractiveness for consumers increases (suppression via false choice).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether consent mechanisms actually reduce data extraction"
+    },
+    {
+      "id": "alternative_business_model_viability",
+      "question": "Can advertising-supported digital services sustain themselves with privacy-protective data practices (subscription, contextual targeting, federated learning), or does the business model require behavioral surveillance?",
+      "resolution_mechanism": "Longitudinal analysis of platforms with privacy-first models (Duck Duck Go, privacy-focused browsers) market viability; cost structure comparison between behavioral and contextual targeting infrastructure",
+      "impact": "If viable: extraction is choice rather than necessity \u2014 reclassify toward snare for all but platform. If unviable without surveillance: extraction is coordination cost, and platform perspective (rope) is correct.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether privacy-protective business models are viable"
+    },
+    {
+      "id": "consumer_identity_lock",
+      "question": "Are consumers trapped by structural necessity (no alternatives) or identity-locked by internalized narratives ('free services are normal,' 'I have nothing to hide,' 'surveillance is inevitable')?",
+      "resolution_mechanism": "Qualitative analysis of consumer mental models; controlled exposure to privacy alternatives; measurement of defection to privacy-protective services when switching costs are reduced",
+      "impact": "If trapped: snare persists. If identity-locked: consumers are structurally mobile but cognitively captured \u2014 creates potential for reframing campaigns to break lock.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether consumer exit barriers are structural or cognitive"
+    },
+    {
+      "id": "regulatory_capture_mechanism",
+      "question": "Is the regulator genuinely constrained by identity fusion with the ad-tech ecosystem, or do they have structural autonomy but choose not to enforce?",
+      "resolution_mechanism": "Analysis of enforcement gaps, industry influence on rule design, regulator recruitment from industry, budget constraints; comparison to regulators with structural autonomy (privacy ombudsmen, DPA without ad-tech ecosystem dependence)",
+      "impact": "If identity-locked: captured regulator perspective (tangled rope) is correct. If choice: reclassify to institutional beneficiary or complicit observer.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulator capture is structural or chosen"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.53
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Digital advertising surveillance represents a hybrid constraint combining genuine coordination (matching advertisers to interested consumers) with systematic extraction (behavioral data capture, attention rent, informational power asymmetry). The constraint exhibits the structural signature of tangled rope: platforms solve a real targeting problem while extracting surplus through behavioral tracking; suppression operates through both structural barriers (exit from digital services is costly) and internalized frames (consent theater, inevitability narratives); enforcement is active (algorithmic systems, data infrastructure) but relies on obscurity rather than legal authority. The constraint's theater ratio (0.55) reflects that consent mechanisms, privacy policies, and cookie banners create performative user agency while preserving underlying extraction. Extractiveness has increased from 0.35 to 0.58 over twenty years as behavioral tracking has expanded from simple cookie data to cross-device profiles, real-time bidding, lookalike audiences, and predictive modeling. Suppression has remained high (0.68) because consumer exit requires abandoning social media, email, search, navigation, and online commerce \u2014 participation in the digital economy is increasingly non-negotiable.",
+    "key_agents": [
+      "Individual Consumers: Primary victims (powerless/trapped) \u2014 cannot exit digital services without severe participation penalty; tracked by default with performative consent",
+      "Small Business Advertisers: Secondary actors (moderate/constrained) \u2014 benefit from targeting capability but also face extraction through platform fees; constrained exit",
+      "Advertising Platforms: Primary beneficiaries (institutional/arbitrage) \u2014 core business logic depends on behavioral data; maximum exit optionality and extraction advantage",
+      "Data Brokers: Secondary beneficiaries (institutional/arbitrage) \u2014 intermediate layer selling aggregated profiles; operate with minimal regulatory friction",
+      "Privacy Regulation Coalition: Organized opponents (organized/constrained) \u2014 building alternative pathways through GDPR, CCPA, DMA, DPA; sunset logic of privacy-protective regulation",
+      "Regulators: Captured institutional actor (institutional/constrained) \u2014 dependent on ad-tech revenue for digital services ecosystem funding; identity-locked into surveillance-dependent economy",
+      "Consumer Autonomy (Abstract Victim): Cannot organize; bears cost of behavioral profiling and manipulation"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Behavioral data extraction generates substantial surplus for platforms \u2014 behavioral-targeted ads command 3-5x premium over contextual ads. This is measurable, sustained extraction. However, extractiveness is not maximal (0.72+) because: (1) some legitimate coordination value exists (advertisers do benefit from targeting, consumers do sometimes find relevant ads), (2) alternative business models are theoretically viable (subscription, contextual advertising), and (3) regulatory pressure is increasing enforcement costs. The upward trajectory (0.35\u21920.58 over twenty years) reflects deepening of behavioral tracking, expansion of cross-device profiling, and sophistication of inference algorithms. Suppression (0.68): High. Structural barriers include switching costs (integrating out of digital services), information asymmetry (users don't know what data is collected), and apparent inevitability (all platforms use surveillance). Internalized suppression includes narratives ('I have nothing to hide,' 'free services are the tradeoff,' 'surveillance is inevitable'). Theater ratio (0.55): Moderate. Consent mechanisms are substantially performative \u2014 cookie banners use dark patterns (pre-checked boxes, buried opt-out), privacy policies are incomprehensible by design, and opt-out friction is intentional. However, the underlying extraction mechanism (algorithmic tracking, data aggregation) is functionally efficient (not purely theatrical), so theater doesn't reach piton levels. Tangedness (tangled rope gate): Genuine coordination function exists (advertiser-consumer matching), at least one beneficiary (platforms), at least one victim (consumer autonomy), and active enforcement (algorithmic systems with legal backing).",
+    "perspectival_gap": "The constraint demonstrates maximum perspectival divergence: consumer sees snare; platform sees rope; regulator sees tangled rope; privacy coalition sees scaffold; consent apparatus sees piton; observer risks mountain. This spread indicates genuine structural hybridity (tangled rope is correct) rather than misclassification. Different agents experience the same constraint as serving radically different functions: extraction (consumer view), coordination (platform view), regulation failure (regulator view), temporary problem with solution (coalition view), ritual theater (apparatus view), economic law (observer risk). The perspectival gaps reveal the real structural tensions: platforms cannot maintain cooperation with consumers without suppressing their perception of extraction; regulators cannot maintain legitimacy without hiding their capture; observers cannot maintain analytical neutrality without naturalizing extraction as optimization.",
+    "directionality_logic": "Directionality is derived from structural position: who bears costs, who receives benefits, and what exit options they have. Platforms and data brokers are beneficiaries with arbitrage exit (can change business models, redirect data, or exit markets) \u2014 they experience low or negative effective extraction. Consumers are victims with trapped exit (participation in digital economy is non-negotiable) \u2014 they experience high effective extraction. Small advertisers are ambiguous: they benefit from targeting (lower acquisition cost) but are also extracted from (platform fees, data leverage), with constrained exit \u2014 they experience moderate extraction. Regulators are institutional actors with constrained exit (embedded in ad-tech ecosystem, budget-dependent on platform revenue) and victim status regarding their own regulatory function (captured by industry) \u2014 complex directionality between 0.40-0.60. The computational chain: beneficiary status + arbitrage exit \u2192 low d \u2192 negative f(d); victim status + trapped exit \u2192 high d \u2192 high f(d); mixed status + constrained exit \u2192 moderate d \u2192 moderate f(d).",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that tangled rope classification is correct and stable across the structural data. The temptation is to classify as pure snare (from consumer) or pure rope (from platform). The mandatrophy resolves by noting: (1) genuine coordination function exists (targeting does solve information asymmetry for all three parties: advertiser finds audience, consumer sees relevant ads, platform connects them), (2) asymmetric extraction also exists (behavioral data creation extracts surplus from consumers who don't choose it, platforms capture disproportionate gains), (3) beneficiaries and victims are distinct groups (not same actor experiencing both symmetrically), (4) enforcement is active but requires suppression (consent theater, dark patterns). The constraint is neither pure coordination nor pure extraction \u2014 it is coordination infrastructure weaponized for extraction. This is the definition of tangled rope: a mechanism that solves a genuine collective problem AND extracts asymmetric surplus, with both functions essential to the constraint's persistence."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "attention_extraction_via_algorithmic_feeds",
+      "platform_lock_in_and_switching_costs",
+      "regulatory_capture_in_tech_sectors"
+    ],
+    "dual_formulation_note": "The digital advertising surveillance constraint family decomposes into three structurally distinct constraints: (1) advertising_surveillance_data_extraction (\u03b5\u22480.58, core tangled rope) focusing on the data pipeline, (2) attention_extraction_via_algorithmic_feeds (\u03b5\u22480.65, snare) focusing on content amplification mechanisms that serve extraction, and (3) platform_lock_in_and_switching_costs (\u03b5\u22480.52, tangled rope) focusing on participation barriers. Each has different empirical status, different omega variables, and different regulatory pathways. They are linked by network relationships: surveillance enables targeting, which justifies lock-in; lock-in increases surveillance value; suppression mechanisms operate across all three. This story focuses on the core data extraction mechanism; sister stories cover feed manipulation and switching cost extraction."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.52
+    }
+  ]
+}

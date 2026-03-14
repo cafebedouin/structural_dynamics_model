@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "journalistic_sourcing_norms",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "jsn"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Journalistic Sourcing Norms and Source Protection",
+    "topic_domain": "media/information_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "professional_journalists",
+      "institutional_media_outlets"
+    ],
+    "victims": [
+      "whistleblowers_and_dissidents",
+      "marginalized_communities",
+      "public_information_access"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Coerced Whistleblower",
+      "comment": "PERSPECTIVE 1: COERCED WHISTLEBLOWER (SNARE) \u2014 Trapped in asymmetric confidentiality agreement with journalist; cannot exit without retaliation risk; bears full extraction cost through anonymity debt and institutional vulnerability. No alternative disclosure channels with equivalent protection. Maximum suppression from institutional power asymmetry."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Local Reporter",
+      "comment": "PERSPECTIVE 2: LOCAL REPORTER (TANGLED ROPE) \u2014 Benefits from sourcing norms that enable access to confidential information and protect their reporting relationships. Also constrained by institutional editorial pressure, audience expectations, and inability to fully corroborate anonymous claims. Experiences both coordination (accessing otherwise-silenced voices) and asymmetric extraction (editors controlling which stories run, sources unable to verify attribution)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Editorial Institution",
+      "comment": "PERSPECTIVE 3: EDITORIAL INSTITUTION (ROPE) \u2014 Primary beneficiary of sourcing norms. Controls narrative framing through source selection and editing; uses anonymity to protect institutional relationships and expand access to powerful actors. Experiences the constraint as pure coordination: protecting sources enables access to otherwise-unavailable information, expanding reportorial capacity."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Transparency and Access Coalition",
+      "comment": "PERSPECTIVE 4: TRANSPARENCY AND ACCESS COALITION (SCAFFOLD) \u2014 Organized advocates for source transparency (fact-checking networks, media literacy organizations, academic researchers) see sourcing norms as a temporary coordination failure being systematized as law. The sunset: digital verification methods, blockchain-backed source verification, and decentralized publishing platforms are creating alternative disclosure pathways that require less opacity and provide better auditability. As these mature, traditional anonymity-based sourcing becomes less necessary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Journalistic Objectivity Ritual",
+      "comment": "PERSPECTIVE 5: JOURNALISTIC OBJECTIVITY RITUAL (PITON) \u2014 The sourcing norm of 'protect anonymous sources to maintain objectivity' persists through institutional inertia despite diminished function. In practice, source anonymity enables narrative construction (the journalist selects which anonymous sources appear, how they are framed, what context is included) while the anonymity obscures this construction. The ritual claims to serve transparency but often obscures power relationships. Theater ratio high because the norm is maintained through professional identity and editorial gatekeeping rather than empirical success."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, source protection appears as a fundamental structural necessity: any investigative authority must maintain confidentiality to enable access to private information. The anonymity principle seems to be built into the problem of investigation itself. However, this perspective risks naturalizing what is actually a historical institutional arrangement. The constraint's extractiveness and suppression scores suggest the opposite: source protection is a contingent human institution, not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "anonymous_source_identity_recovery",
+      "question": "What methods distinguish effective source protection from plausible deniability that obscures journalistic accountability?",
+      "resolution_mechanism": "Comparative analysis of source protection success rates across publication contexts; historical cases where anonymity genuinely prevented retaliation vs. where it enabled false reporting; feasibility studies of cryptographic source verification",
+      "impact": "If effective: sourcing norms genuinely enable marginalized voices (Rope function strengthens). If plausible deniability: anonymity obscures journalistic power and enables narrative construction without accountability (Snare function dominates).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether anonymity enables accountability or obscures it"
+    },
+    {
+      "id": "institutional_source_asymmetry",
+      "question": "Do powerful institutional sources (government officials, corporate executives) experience different protection and verification standards than marginalized sources?",
+      "resolution_mechanism": "Corpus analysis of sourcing patterns in national media; comparison of anonymity protections granted to official vs. dissenting sources; audit of which anonymous sources drive editorial decisions",
+      "impact": "If symmetric: sourcing norms serve coordination across power levels (Rope). If asymmetric: norms systematically favor institutional actors while marginalizing dissidents (Snare for powerless, Rope for institutional).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether sourcing protections are symmetric across power levels"
+    },
+    {
+      "id": "alternative_verification_sufficiency",
+      "question": "Do emerging verification technologies (blockchain source records, cryptographic attribution, distributed fact-checking networks) provide adequate alternatives to anonymity-based sourcing?",
+      "resolution_mechanism": "Pilot programs using transparent source tracking; comparison of claim accuracy and source reliability between traditional anonymity and verifiable alternatives; adoption metrics for new protocols",
+      "impact": "If sufficient: scaffold sunset clause is viable \u2014 transition timeline becomes measurable. If insufficient: traditional anonymity remains necessary, and sunset clause is aspirational rather than structural.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether transparent verification can replace anonymity"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression (0.65) structural (legal liability, editorial gatekeeping, institutional power asymmetry) or internalized (journalists self-censor to maintain access, sources internalize institutional framing)?",
+      "resolution_mechanism": "Exit trajectory analysis: sources who break with institutions report reduced suppression or persistent self-censorship post-exit; journalist interviews about editorial pressure vs. internalized professional norms",
+      "impact": "If structural: suppression drops post-exit. If internalized: suppression persists after institutional contact ceases \u2014 the constraint is psychological rather than material.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Journalistic sourcing norms \u2014 the practices of protecting source anonymity, maintaining confidentiality agreements, and using 'off the record' conversations \u2014 create a constraint that simultaneously enables information access and obscures journalistic accountability. The constraint exhibits hybrid properties: it coordinates between journalists and sources who would otherwise lack disclosure channels (enabling marginalized voices and whistleblowing), while simultaneously enabling powerful institutional actors to shape narratives without accountability (anonymous government officials, corporate spokespersons). The extractiveness has increased from 0.38 to 0.52 over forty years as digital archiving has made anonymity less effective (sources become identifiable through metadata and contextual analysis) while editorial pressures have intensified (reducing reporters' capacity to cross-verify anonymous claims). Theater ratio has risen from 0.42 to 0.58, reflecting that the professional practice of anonymous sourcing now serves more to maintain journalistic institutional authority than to serve the stated function of protecting sources \u2014 many sources are identifiable to sophisticated adversaries despite anonymity agreements, yet the ritual persists.",
+    "key_agents": [
+      "Whistleblowers and Dissidents: Primary victims (powerless/trapped) \u2014 structurally dependent on journalist intermediary; cannot verify how their information is framed or used; bear retaliation risk",
+      "Professional Journalists: Primary beneficiary (institutional/arbitrage) \u2014 gain access to otherwise-unavailable information; control editorial framing and narrative selection; can invoke professional norms to resist editorial interference",
+      "Institutional Media Outlets: Primary beneficiary (institutional/arbitrage) \u2014 benefit from expanded access to powerful sources; use anonymity to protect institutional relationships; avoid direct accountability for source verification",
+      "Marginalized Communities: Secondary victim (powerless/constrained) \u2014 may benefit from access to disclosure channels but lack capacity to verify journalistic framing; disproportionately identified when anonymity fails",
+      "Transparency and Access Coalition: Organized agents (organized/constrained) \u2014 fact-checking networks, academic researchers, media literacy organizations seeking to replace anonymity with verifiable sourcing",
+      "Government Officials and Corporate Executives: Asymmetric beneficiaries (institutional/arbitrage) \u2014 receive anonymity protections while wielding institutional power; use journalists as proxies for narrative management"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint enables significant information access (coordination function) but creates asymmetric power dynamics where editors and powerful institutional sources shape narratives while marginalized sources bear retaliation risk and lack verification capacity. The rise from 0.38 to 0.52 reflects that digital forensics have made anonymity less protective while institutional pressures have intensified extraction. The trajectory shows extraction accumulation rather than decay. Suppression (0.65): High. Multiple barriers constrain source mobility: legal liability for breaking confidentiality, career damage for disloyalty, organizational power asymmetries between journalists and institutional sources, and lack of alternative disclosure channels with comparable reach. Theater ratio (0.58): Moderate. The anonymity ritual serves some genuine verification function (protecting sources from retaliation) but increasingly serves institutional performance (maintaining journalistic authority and editorial gatekeeping). Digital verification alternatives (blockchain, cryptographic attribution) are emerging, suggesting the theater function is becoming dominant.",
+    "directionality_logic": "Each perspective's experienced extractiveness (\u03c7) derives from the agent's position in the sourcing constraint. Powerless whistleblowers trapped in anonymity agreements experience high extraction (d \u2248 0.92, constrained by trapped exit options and victim status). Professional journalists with institutional backing and arbitrage options experience low or negative extraction (d \u2248 0.15, beneficiary status + arbitrage exit \u2192 they can navigate to competing outlets or independent platforms). The institutional media outlet experiences negative extraction \u2014 the constraint subsidizes their access and reduces accountability (d \u2248 0.10). The analytical observer at civilizational scope risks naturalizing this arrangement as an inherent feature of investigative journalism (d \u2248 0.72 for 'natural law' interpretation), but the structural data reveals it as a contingent institutional arrangement vulnerable to verification alternatives.",
+    "perspectival_gap": "The constraint demonstrates maximum perspectival variance across the six types. The institutional beneficiary (editorial outlet) sees pure coordination (Rope) \u2014 anonymity enables access and reporting. The whistleblower sees pure extraction (Snare) \u2014 trapped in asymmetric confidentiality with no exit and maximum retaliation risk. The local reporter sees mixed coordination-extraction (Tangled Rope) \u2014 benefits from access but constrained by editorial control and source verification limits. The organized transparency advocates see a temporary institutional failure with a sunset (Scaffold) \u2014 verifiable sourcing alternatives are emerging. The journalistic objectivity ritual sees itself as degraded (Piton) \u2014 the anonymity norm persists through professional identity despite diminished protective function. The civilizational analytical observer risks seeing immutable law (Mountain) \u2014 investigation requires confidentiality \u2014 but the structural data reveals this as a false summit: the extractiveness and suppression metrics show the constraint is contingent, not inevitable.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that sourcing norms serve dual functions \u2014 coordination (enabling marginalized voices access to disclosure channels) and extraction (enabling institutional actors to shape narratives without accountability). The constraint cannot be classified as pure Rope (coordination) because of the asymmetric extraction; it cannot be classified as pure Snare (extraction) because genuine coordination occurs. Tangled Rope is the correct canonical classification: the constraint has BOTH genuine coordination function (some marginalized sources genuinely gain access who would otherwise have none) AND asymmetric extraction (institutional sources receive protection while marginal sources bear retaliation risk). The mandatrophy reveals that the coordination function is real but insufficient to justify the extraction asymmetry. Resolution requires either (a) symmetric source protection across power levels, or (b) transition to verification-based sourcing that eliminates anonymity-enabled narrative construction."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "institutional_media_gatekeeping",
+      "whistleblower_protection_asymmetry"
+    ],
+    "dual_formulation_note": "Journalistic sourcing norms decompose into institutional media gatekeeping (how editorial institutions select and frame anonymous sources) and whistleblower protection asymmetry (how power asymmetries determine whose anonymity is protected). This story addresses the constraint itself; downstream stories address how it manifests in specific institutional contexts."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

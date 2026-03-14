@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "spanish_political_opposition_suppression",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Spanish Political Opposition Suppression (Post-2017 Catalonia)",
+    "topic_domain": "political/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "madrid_central_government",
+      "ruling_political_coalition"
+    ],
+    "victims": [
+      "catalan_independence_movements",
+      "regional_political_autonomy",
+      "democratic_opposition_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Catalan Independence Activists",
+      "comment": "PERSPECTIVE 1: CATALAN INDEPENDENCE ACTIVISTS (SNARE) \u2014 Face criminal prosecution, sedition charges, imprisonment, financial ruin. Exit mechanism (renounce independence goal) requires abandoning political identity. No structural escape without accepting political defeat. Maximum extraction with minimal coordination benefit \u2014 constraint exists to suppress, not coordinate."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "label": "Catalan Civil Society (Regional Perspective)",
+      "comment": "PERSPECTIVE 2: CATALAN CIVIL SOCIETY (SNARE) \u2014 Identity-locked perspective. Structurally mobile (some could relocate, change political affiliation) but identity constituted through Catalan regional identity and democratic participation. Exit would require abandoning self-conception as Catalan and participant in regional democracy. Severe suppression of speech, assembly, and autonomous governance. Binding is cognitive (identity fusion with regional autonomy) + structural (legal/enforcement barriers)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Spanish Left-Opposition Parties",
+      "comment": "PERSPECTIVE 3: SPANISH LEFT-OPPOSITION PARTIES (TANGLED ROPE) \u2014 Constrained but not trapped. Face barriers to organizing (surveillance, media control, prosecution risk for allies) but retain some parliamentary voice and organizational capacity. Constraint includes genuine coordination of state security (legitimate function) alongside asymmetric suppression of electoral opposition. Mixed extraction: some benefit from state monopoly on political narrative, but also bear suppression costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Madrid Central Government",
+      "comment": "PERSPECTIVE 4: MADRID CENTRAL GOVERNMENT (ROPE) \u2014 Net beneficiary. Constraint functions as coordination mechanism for state authority (legitimate security function) and extraction mechanism for political opponents (illegitimate suppression). Experiences constraint as governance tool with coordination benefit (maintaining territorial integrity through enforcement). Can exit via constitutional reform or negotiation \u2014 arbitrage options available."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Spanish Judiciary (Theater Perspective)",
+      "comment": "PERSPECTIVE 5: SPANISH JUDICIARY (PITON) \u2014 Maintains theater of legal due process and judicial independence while applying sedition and rebellion laws designed to criminalize political opposition. High theater ratio: procedural regularity masks substantive politicization. Judicial system persists through institutional inertia despite degraded function (independence compromised by political pressure). Primary function (neutral adjudication) has atrophied; constraint sustained by performance of legality rather than actual independence."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Democratic Principle View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From democratic principles (universal scope), suppression of legitimate political opposition violates foundational norms. Constraint is predatory extraction disguised through state authority. High suppression, minimal coordination benefit, systematic extraction of political rights. Classification remains Snare at analytical level \u2014 no perspective shift naturalizes this into coordination or necessity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "sedition_law_legitimacy",
+      "question": "Are sedition charges for independence advocacy legitimate state security enforcement or illegitimate criminalization of political opposition?",
+      "resolution_mechanism": "Comparative analysis: judicial outcomes in other EU democracies for similar independence movements; international human rights assessment against ECHR standards; proportionality test (imprisonment length vs alleged harm)",
+      "impact": "If legitimate: constraint reclassifies toward tangled_rope (genuine security coordination with extraction). If illegitimate: constraint is pure snare (political suppression disguised as law). Current classification assumes illegitimacy based on ECHR findings.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Legitimacy of sedition laws applied to independence activism"
+    },
+    {
+      "id": "democratic_reform_pathway",
+      "question": "Is constitutional reform pathway to Catalan autonomy genuinely available or is it politically closed by suppression logic?",
+      "resolution_mechanism": "Historical analysis of reform timelines; negotiation capacity measurement; political feasibility assessment by independent analysts; comparison to other EU federal restructurings",
+      "impact": "If reform pathway open: constraint has sunset potential (scaffold reclassification possible). If pathway closed by suppression itself: constraint is self-perpetuating snare with no exit mechanism.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Availability of democratic constitutional reform pathway"
+    },
+    {
+      "id": "judiciary_independence_capture",
+      "question": "Has Spain's judiciary been captured by executive political pressure or does it retain functional independence despite controversial rulings?",
+      "resolution_mechanism": "Analysis of judicial reversals in independence cases; comparison of sentencing patterns between independence and non-independence defendants; assessment of prosecution selectivity; international rule-of-law indices; judicial autonomy survey data",
+      "impact": "If captured: piton classification is accurate (theater disguises politicized enforcement). If independent: judiciary is genuinely adjudicating complex constitutional questions and classifications require adjustment toward tangled_rope. Current data suggests significant capture.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of judicial independence from executive political pressure"
+    },
+    {
+      "id": "civil_society_suppression_scope",
+      "question": "Is suppression limited to political leadership (elite targeting) or extended to broader civil society participation (mass suppression)?",
+      "resolution_mechanism": "Data on arrests/prosecutions by social class; measurement of protest participation changes; survey data on self-censorship prevalence; analysis of prosecution patterns across organizational levels",
+      "impact": "If elite-targeting only: extraction is concentrated (snare affecting powerless political class, rope for broader society). If mass suppression: constraint affects entire regional population (snare for all). Current evidence suggests both elite prosecution AND mass suppression via surveillance/prosecution threat.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Scope of suppression (elite targeting vs mass suppression)"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Following the 2017 Catalan independence referendum and unilateral declaration, Spain's central government implemented a multi-faceted suppression apparatus targeting pro-independence movements and regional autonomy advocates. This constraint operates through criminal prosecution (sedition and rebellion charges), surveillance infrastructure, media control, and institutional pressure on the judiciary. The suppression is not presented as raw authoritarianism but justified through state security and constitutional unity narratives. The constraint exhibits snare characteristics: high extraction (imprisonment, financial ruin, political exclusion), high suppression (legal barriers, prosecution threat, surveillance), minimal coordination benefit (no genuine dialogue or problem-solving), and reliance on criminalization to prevent alternatives. The judicial system performs due process theater while applying laws designed to criminalize political opposition. The extractiveness has risen from 0.42 to 0.68 over six years as legal penalties accumulated and prosecution infrastructure expanded. Theater ratio (0.58) reflects that formal legal procedures mask substantive political use of law as suppression tool.",
+    "key_agents": [
+      "Catalan Independence Leadership: Primary targets (powerless/trapped) \u2014 imprisoned, banned from office, facing financial ruin; cannot exit without renouncing political identity and goals",
+      "Catalan Civil Society: Broader victim pool (moderate-powerless/identity_locked) \u2014 subject to surveillance, self-censorship, prosecution threat; identity-locked through fusion of Catalan regional identity with democratic participation; structurally mobile but identity prevents exit",
+      "Madrid Central Government: Primary beneficiary (institutional/arbitrage) \u2014 maintains territorial control, eliminates electoral competition, concentrates political power; can exit via negotiation or constitutional reform",
+      "Spanish Left-Opposition Parties: Secondary victim (moderate/constrained) \u2014 face surveillance and prosecution risk for allies but retain some parliamentary voice; barriers are high but not insurmountable",
+      "Spanish Judiciary: Institutional actor (institutional/arbitrage) \u2014 applies politically-motivated prosecution under guise of neutral law; maintains theater of independence while executing executive political priorities",
+      "International Democratic Institutions: Analytical observers (analytical/analytical) \u2014 view constraint as violation of democratic norms; no power to exit or modify constraint from within Spain"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and increasing. The constraint extracts political rights, liberty (imprisonment), economic resources (legal fees, asset freezes), and political voice from pro-independence populations. The extraction has accumulated over six years as prosecution infrastructure expanded and political penalties increased. The 0.68 value reflects demonstrated extraction (hundreds imprisoned, thousands prosecuted, electoral suppression through disqualifications) not potential extraction. Suppression (0.72): Severe. Legal mechanisms (sedition laws applied to political speech), surveillance infrastructure (Pegasus deployment reported), prosecution threat (selective enforcement against opposition), and institutional capture (judiciary applying politically-motivated rulings) create multiple layers of suppression. Targets cannot organize freely, communicate openly, or participate in political processes without prosecution risk. Theater ratio (0.58): Moderate-high. The constraint is administered through formal legal procedures (trials, appeals, constitutional court review) that perform judicial legitimacy while substantively serving political suppression. The theater is significant but not absolute \u2014 Spain retains some international legal norms and EU oversight that constrain pure arbitrariness. As extraction deepened, theater increased (more elaborate legal justifications required).",
+    "perspectival_gap": "The snare classification diverges across almost all perspectives except analytical. The beneficiary (Madrid government) would classify this as rope (coordination for state security). The captured judiciary would classify as rope (neutral adjudication). The broader analytical perspective must classify as snare (suppression of political opposition). The gap reveals the suppression's defining feature: beneficiaries invoke coordination framing ('we are managing territorial integrity') while victims experience extraction without coordination dialogue ('we are being criminalized for political speech'). The identity_locked perspective (civil society) is particularly diagnostic: these agents are structurally mobile (could relocate, change political affiliation, cease activism) but perceive the constraint as immutable because their identity is constituted through Catalan regional participation. If their identity frame shifted, the constraint would become mobile. The frame IS the trap.",
+    "directionality_logic": "Madrid central government (institutional/arbitrage) derives low directionality through beneficiary status + arbitrage exit options (can negotiate, reform constitution, offer amnesty). Effective extraction flowing TO this agent, not FROM them \u2014 derived d \u2248 0.15, f(d) \u2248 -0.01. Catalan independence targets (powerless/trapped) derive high directionality through victim status + trapped exit (imprisoned, disqualified, criminalized; cannot exit without renouncing political identity and goal). Maximum extraction flowing FROM this agent \u2014 derived d \u2248 0.95, f(d) \u2248 1.42. Catalan civil society (moderate-powerless/identity_locked) derive high-moderate directionality through victim status + identity_locked exit (structurally mobile but identity-constituted through regional autonomy). Extraction flowing FROM this agent with internal binding \u2014 derived d \u2248 0.89, f(d) \u2248 1.28. Spanish judiciary (institutional/arbitrage claiming independence) appears in perspective as beneficiary + arbitrage, but directionality override may be needed: judicial actors are partly captured (constrained by executive pressure), not true arbitrage. Could override d upward from 0.15 to 0.35 to reflect capture.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves through perspectival dominance, not through ambiguity. The snare classification is correct from analytical and victim perspectives (high suppression, high extraction, minimal coordination benefit). The rope classification from the beneficiary is a false summit \u2014 it naturalizes political suppression as legitimate state function. The theater (formal legal procedures) creates the false summit: procedures look like coordination (trials, appeals, constitutional review) but are substantially suppression (prosecution designed to eliminate political alternatives). The piton classification of judiciary reflects this theater accurately: formal legal process with degraded underlying independence. The mandatrophy is resolved by recognizing that structural extraction (imprisonment, disqualification, prosecution) contradicts the coordination frame \u2014 this is not a problem-solving mechanism where both sides negotiate toward shared benefit. It is a constraint where one side prevents the other from participating. Therefore snare is correct. Mandate (state security and territorial integrity) does not override classification: extraction is the PRIMARY function, not a side effect of legitimate security coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "catalan_regional_autonomy_degradation",
+      "spanish_judicial_independence_capture",
+      "eu_rule_of_law_deterioration"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "colombia_rural_vote_buying",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "crvb"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Rural Vote Buying in Colombian Elections",
+    "topic_domain": "political_economy/electoral_capture",
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
+    "victims": [
+      "rural_voters",
+      "electoral_legitimacy",
+      "democratic_accountability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Rural Voter",
+      "comment": "PERSPECTIVE 1: RURAL VOTER (SNARE) \u2014 Trapped by material poverty, geographic isolation, and absence of viable alternatives. The voter faces immediate survival pressures (food security, medical access, credit access) and has zero capacity to exit. Vote buying preys on this structural immobility. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "label": "The Rural Community (Identity-Locked)",
+      "comment": "PERSPECTIVE 2: RURAL COMMUNITY (SNARE, IDENTITY-LOCKED) \u2014 Structurally mobile (some members could migrate; some could organize) but identity-locked into accepting vote buying as 'how politics works.' Internalized framing treats electoral exchange as normal reciprocity rather than extractive capture. The community's identity as 'loyal to the patron' makes exit unthinkable even where material barriers have weakened. High suppression through cognitive capture."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Political Machine (Candidate/Party)",
+      "comment": "PERSPECTIVE 3: POLITICAL MACHINE (TANGLED ROPE) \u2014 Benefits from vote aggregation and reduced electoral uncertainty. Coordinates voter mobilization and resource distribution \u2014 genuine coordination function exists. But coordination is built on coercion: voters cannot refuse without losing access to critical services. Asymmetric extraction embedded within the coordination mechanism. The machine constrains its own exit (cannot abandon clientelist networks without losing electoral base)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Electoral Authority (Institutional Reform Effort)",
+      "comment": "PERSPECTIVE 4: ELECTORAL AUTHORITY (SCAFFOLD) \u2014 Attempts to build alternative verification mechanisms: voter verification systems, observer networks, digital voting, direct service delivery decoupled from voting. These reforms target a sunset \u2014 as rural economies develop and direct service provision improves, vote-buying loses mechanism. But the authority itself is constrained by limited budget, geographic coverage gaps, and resistance from entrenched machines. High suppression during the transition window."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State Welfare Apparatus",
+      "comment": "PERSPECTIVE 5: STATE WELFARE APPARATUS (ROPE) \u2014 Benefits from centralized delivery of services (healthcare, education, rural infrastructure) that reduces the patron's monopoly on local survival goods. Pure coordination function with minimal extraction \u2014 the state coordinates the distribution of public goods. High arbitrage capacity (state can withdraw and redeploy resources). Vote buying succeeds precisely where state welfare is weak; improves where state provision strengthens."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Constitutional Court (Vestigial Control)",
+      "comment": "PERSPECTIVE 6: CONSTITUTIONAL COURT (PITON) \u2014 Maintains theoretical prohibition on vote buying and clientelism through case law and declarations. The mechanism is largely performative \u2014 constitutional rulings rarely penetrate rural zones where enforcement capacity is absent and alternative dispute resolution (patronage networks) has higher legitimacy. Court maintains ritual of legality while the actual mechanism persists. Theater ratio 0.55 reflects this performance-reality gap."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 Vote buying is a pure extraction mechanism: the voter receives material benefit but surrenders political autonomy with no coordination function that requires this surrender. The mechanism works *because* it separates material necessity (food, credit, medicine) from political choice, then weaponizes that separation. No genuine coordination problem requires vote buying \u2014 it persists because it redistributes power from the many (voters) to the few (patrons and elites). The analytical classification is unambiguous: Snare."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "rural_economy_development_timeline",
+      "question": "At what level of rural income per capita and welfare state service coverage does vote buying become unsustainable as a political mechanism?",
+      "resolution_mechanism": "Longitudinal analysis of vote-buying prevalence in Colombian departments correlated with departmental income growth, rural school enrollment, healthcare coverage, and pension expansion. Cross-country comparison with Brazil, Mexico, Philippines where similar transitions occurred.",
+      "impact": "If threshold is low (e.g., $3,000 per capita): scaffold sunset is near-term, mechanism will collapse within one generation. If threshold is high (e.g., >$8,000): vote buying persists despite nominal development, revealing identity-lock persistence beyond material necessity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Income/welfare threshold for vote-buying sustainability"
+    },
+    {
+      "id": "identity_lock_vs_material_trap",
+      "question": "Is rural acceptance of vote buying driven by material immobility (trapped) or by cognitive internalization that survives improved material conditions (identity_locked)?",
+      "resolution_mechanism": "Panel study comparing voting behavior in rural communities that experienced welfare improvements (pension expansion, rural electrification) vs control communities. Measurement: persistence of vote-buying correlations after controlling for income changes. Qualitative interviews probing self-narratives about voting autonomy.",
+      "impact": "If predominantly material (trapped): welfare expansion reduces prevalence sharply. If predominantly identity-locked: welfare expansion shows weak impact; political education and norm-shifting are necessary. True answer likely mixed \u2014 measuring the proportion determines intervention strategy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative weight of material vs cognitive binding mechanisms"
+    },
+    {
+      "id": "alternative_patron_functions",
+      "question": "Does the political patron provide genuine public goods (dispute resolution, collective action coordination) that would be lost under electoral reform, or is the patron purely extractive?",
+      "resolution_mechanism": "Institutional analysis of patron-provided services in areas with strong clientelism: adjudication, infrastructure coordination, group lending, public safety. Comparison with patron-weak areas where state/market provides equivalents. Measurement: voter satisfaction with public goods access before/after patron relationship dissolution.",
+      "impact": "If patron provides genuine coordination: electoral reform must replace patron functions, else scaffold sunset fails. If purely extractive: electoral reform only requires removal of coercive mechanism, enabling swift transition.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether patron relationship provides genuine coordination function"
+    },
+    {
+      "id": "observer_position_bias",
+      "question": "Does the analytical observer's classification as 'pure Snare' depend on the observer's own position outside the vote-buying network, or would a participant observer nested in the patronage system see genuine coordination benefits?",
+      "resolution_mechanism": "Ethnographic research recording beneficiary and patron justifications for vote-buying arrangement; interviews with past patrons and reformed voters; analysis of peasant organizational literature from periods of patronage breakdown.",
+      "impact": "If the snare classification persists from participant perspective: confirms pure extraction (mountain-quality snare signal). If participants perceive coordination: reveals that snare/tangled_rope distinction depends on observer position \u2014 the extractive frame is observer-dependent rather than observer-invariant.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether snare classification is observer-invariant or position-relative"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Rural vote buying in Colombia operates as a mechanism of political extraction embedded within a system of material dependency and geographic isolation. Small-holder farmers and rural laborers, lacking access to credit, healthcare, and public services through formal state channels, depend on local political patrons for survival-critical goods and services. During election cycles, patrons convert this dependency into electoral control through direct payments, material gifts, and conditional access to services. The mechanism creates a structural bind: voters cannot refuse without risking loss of patron access to essential resources, yet the transaction is typically framed as voluntary reciprocity or political support. The constraint exhibits the full taxonomy of extraction types depending on observer position: pure snare from the powerless voter's perspective; tangled rope from the patron's perspective (genuine coordination of local resource mobilization alongside coercive extraction); scaffold from the institutional reformer's perspective (temporary problem solvable by strengthening state service delivery and electoral monitoring); piton from the constitutional court's perspective (formal prohibition with weak enforcement). The theater ratio (0.55) reflects the gap between the formal legal prohibition of vote buying and the practical persistence of the mechanism in regions where state capacity remains weak and alternative survival mechanisms absent.",
+    "key_agents": [
+      "Rural voters (small-holder farmers, agricultural laborers): Primary victims (powerless/trapped or identity_locked) \u2014 bear the extraction directly through loss of political autonomy while experiencing material benefit",
+      "Political patrons (local candidates, party operatives, regional elites): Primary beneficiaries (organized/constrained) \u2014 aggregate votes and political power through the mechanism, constrained by dependence on maintaining clientelist networks",
+      "Rural communities (as collective identity): Secondary victims (organized/identity_locked) \u2014 internalize vote buying as normal political reciprocity, making exit cognitively difficult despite structural mobility improvements",
+      "Electoral authority (CNE and departmental electoral bodies): Institutional reformer (organized/constrained) \u2014 attempts to build monitoring capacity and alternative service delivery mechanisms with finite budget",
+      "State welfare apparatus (departmental health, education, social programs): Institutional ally (institutional/arbitrage) \u2014 decouples survival needs from political conditionality, reducing patron monopoly",
+      "Constitutional Court: Institutional degradation (institutional/arbitrage) \u2014 maintains formal prohibition with declining enforcement capacity (piton characteristic)",
+      "Analytical observer: Sees pure extraction mechanism with no coordination function"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. Vote buying is a mechanism of transferring electoral labor (the voter's political choice) to the patron in exchange for material benefit. The extraction is severe because the voter faces material necessity and has no alternative mechanism to access critical goods. Extractiveness increased from 0.52 to 0.68 over the interval (2000-2020) as rural marginalization deepened and state service provision failed to expand into isolated departments \u2014 the extraction became *more* severe even as formal incomes nominally improved, because welfare coverage gaps persisted. Suppression (0.75): Very high. Structural barriers include: geographic isolation reducing information access and alternative employment; poverty creating dependency on patron-controlled credit and services; limited education reducing capacity to organize alternative mechanisms; weak state enforcement making patronage networks more reliable than formal institutions; and cultural-historical normalization of clientelism. Suppression is not total (some rural voters do refuse, some communities have broken patron dependence) but remains near-maximum. Theater ratio (0.55): Moderate-high. The constitutional prohibition on vote buying is widely known but functionally absent in enforcement. Media coverage, court cases, and election observer reports create performance of legality while the mechanism persists. Theater increased over the interval as formal anti-corruption rhetoric expanded while actual enforcement remained capacity-constrained.",
+    "perspectival_gap": "The constraint demonstrates a fundamental DR insight: the same extraction mechanism appears as different types from different positions. The powerless rural voter and the identity-locked rural community both experience snare-level extraction but through different binding mechanisms (material vs cognitive). The patron experiences tangled rope because they genuinely coordinate resource mobilization while simultaneously extracting votes. The electoral reformer experiences scaffold because they see institutional pathways toward terminating the mechanism. The constitutional court experiences piton because the formal mechanism is performative (the court makes rulings; the mechanism persists). The analytical observer sees snare because they see no genuine coordination function \u2014 the mechanism could be replaced by state service provision without losing any functionality. These are not measurement disagreements (all observers agree on the extraction magnitude). They are structural disagreements about what the constraint *is*: immutable natural law, temporary coordination failure, extractive coercion, or institutional theater. The perspectival gap is the core analytical value \u2014 it reveals that a single structural phenomenon can be simultaneously all six constraint types depending on who is measuring.",
+    "directionality_logic": "The directionality derivation chain operates on explicit structural data: each perspective declares who benefits (beneficiaries) and who bears costs (victims), then applies the power atom and exit option to compute d. Rural voters are explicitly victims (trapped exit) producing d \u2248 0.92 and f(d) \u2248 1.42, yielding high chi. Patrons are explicitly beneficiaries (constrained exit) producing d \u2248 0.35 and f(d) \u2248 0.40, yielding low chi relative to their nominal power. Electoral authority is constrained but neither pure beneficiary nor victim \u2014 the structural data produces d \u2248 0.45 (moderate) reflecting mixed position. Identity-locked rural community derives d from victim status + identity_locked exit \u2248 0.89, producing f(d) \u2248 1.28 \u2014 higher than trapped because the binding is cognitive (could break with identity shift) but still near-maximum because cognitive escape is as difficult as material escape from within the frame. The analytical observer gets d \u2248 0.72 (moderate-high) reflecting that the observer is orthogonal to the primary extraction but not embedded within it, producing moderate experienced extractiveness. The directionality logic captures why the constraint persists: beneficiaries and constrained institutional actors experience manageable extraction levels and see reform as disrupting useful coordination; trapped and identity_locked victims experience maximum extraction but lack power to reform; the analytical observer sees snare-level extraction but typically has no direct influence on rural electoral systems.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the classification paradox by showing that vote buying is a pure snare from the analytical/powerless perspectives but a genuine tangled rope from the patron's perspective. The mandatrophy would incorrectly ask 'is this REALLY coordination or REALLY extraction?' The DR answer is: it is both, depending on the observer's structural position. For the rural voter, it is pure extraction (snare) because they face coercive necessity. For the patron, it is coordination + extraction (tangled rope) because they are genuinely solving the collective action problem of resource mobilization in dispersed rural areas while simultaneously extracting votes. For the electoral reformer, it is a temporary problem with a sunset (scaffold) because welfare-state development and electoral monitoring can obsolete the mechanism. No single answer is 'wrong' \u2014 each is the true classification from that structural position. The framework prevents mandatrophy by insisting that the observer's power, exit capacity, and time horizon MUST be part of the classification, not held constant. The snare classification (primary) holds when power = powerless and exit = trapped. The tangled rope classification (secondary) holds when power = organized and exit = constrained. Both are DR-valid; neither falsifies the other. The mandatrophy is resolved by acknowledging that a pure snare and a genuine tangled rope can be the same structural mechanism viewed from opposite ends of the extraction flow."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.2
+  },
+  "network": {
+    "affects_constraints": [
+      "colombian_rural_poverty",
+      "state_capacity_deficit",
+      "informal_credit_dependency"
+    ],
+    "dual_formulation_note": "Vote buying is downstream of rural economic marginalization and upstream of electoral legitimacy degradation. The constraint family includes: rural_poverty (\u03b5\u22480.15, mountain) \u2014 poverty itself as immutable structural condition, vote_buying (\u03b5\u22480.68, snare) \u2014 the specific extraction mechanism preying on poverty, and electoral_legitimacy (\u03b5\u22480.42, tangled_rope) \u2014 the broader political system coupling. Vote buying's extractiveness increased as state capacity failed to expand into rural departments, making the poverty constraint more binding and the vote-buying mechanism more severe. Welfare-state development would operate as an upstream intervention on the rural_poverty constraint, automatically weakening the vote_buying mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ]
+}

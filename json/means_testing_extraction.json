@@ -1,0 +1,230 @@
+{
+  "header": {
+    "constraint_id": "means_testing_extraction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "means"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Means Testing Extraction in Welfare Administration",
+    "topic_domain": "social_policy/economic_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "administrative_apparatus",
+      "higher_income_taxpayers"
+    ],
+    "victims": [
+      "low_income_beneficiaries",
+      "program_accessibility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Means-Tested Recipient",
+      "comment": "PERSPECTIVE 1: MEANS-TESTED RECIPIENT (SNARE) \u2014 Trapped in recursive verification cycles. Earning income triggers benefit loss; applying for benefits triggers invasive documentation requirements; non-compliance triggers penalties. The constraint extracts time, dignity, and psychological cost with no meaningful exit path. Maximum suppression through bureaucratic friction and stigma."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Marginally-Employed Worker",
+      "comment": "PERSPECTIVE 2: MARGINALLY-EMPLOYED WORKER (TANGLED ROPE) \u2014 Constrained by high implicit marginal tax rates (benefit clawback on earned income). The means test coordinates income verification (genuine coordination function) while simultaneously extracting through phase-out design and administrative burden. Moderate extraction; some agency through informal economy options but constrained by legality and penalties."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Welfare Administration",
+      "comment": "PERSPECTIVE 3: WELFARE ADMINISTRATION (ROPE) \u2014 Experiences means testing as coordination infrastructure: verifying income prevents fraud, targets resources to those most in need, and fulfills legislative intent. Net beneficiary \u2014 the institution gains administrative clarity and political cover for resource targeting. Low experienced extraction; institutional power enables arbitrage (can modify policy unilaterally)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Fiscal Gatekeeper (Treasury/Budgeting Authority)",
+      "comment": "PERSPECTIVE 4: FISCAL GATEKEEPER (TANGLED ROPE) \u2014 Constrained by competing fiscal pressures and political opposition to welfare spending. Means testing serves genuine coordination function (targeting limited funds to greatest need) while enabling extraction through reduction of overall program expenditure. The constraint extracts from future beneficiaries (eligibility tightens over time) while coordinating current fiscal discipline. Institutional power but constrained exit \u2014 cannot abandon means testing without political cost."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Anti-Poverty Coalition",
+      "comment": "PERSPECTIVE 5: ANTI-POVERTY COALITION (SCAFFOLD) \u2014 Organized agents (NGOs, advocacy groups, sympathetic policymakers) see means testing as a temporary coordination failure being solved through universal basic income pilots, simplified eligibility processes, and automatic enrollment. Low effective extraction because the coalition has agency and sees an exit pathway (removing means testing entirely). The sunset is generational \u2014 as pilot data accumulates and political consensus shifts, means-test dependent administration is expected to be phased out."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Universal Eligibility Principle (Degraded)",
+      "comment": "PERSPECTIVE 6: UNIVERSAL ELIGIBILITY PRINCIPLE (PITON) \u2014 The original principle of universal welfare (universality to reduce stigma and maximize take-up) has been inverted into means testing ostensibly for fiscal discipline. However, the performative maintenance of fiscal virtue through means testing persists even as evidence mounts that administrative costs and behavioral distortion reduce net benefit delivery. Theater ratio (0.61) reflects that much of the 'targeting efficiency' justification is narrative cover for extraction \u2014 the actual fiscal savings are often less than the administrative cost. The institution maintains the means-test ritual through inertia despite degraded function."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Scarcity View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / SCARCITY VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some rationing mechanism is inherent to any resource allocation system with budget constraints. Means testing appears as a natural law: given finite resources and multiple claimants, some discrimination is inevitable. However, the structural data reveals this as false naturalization \u2014 unlimited eligibility combined with automatic delivery (universal basic income, universal basic services) represents an alternative coordination mechanism that has not been tried at scale. The mountain classification conceals contingent institutional choices as immutable law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fraud_prevention_vs_exclusion_trade_off",
+      "question": "What level of fraud detection actually justifies the administrative burden and error exclusion (false negatives) created by means testing?",
+      "resolution_mechanism": "Comparative empirical analysis: fraud rates under means testing vs. simplified/universal eligibility; false negative rates (eligible individuals excluded) vs. false positive rates (ineligible individuals included); total cost of fraud prevention vs. total cost of false negatives",
+      "impact": "If fraud prevention value < exclusion cost: means testing is net-extractive design. If fraud prevention value > exclusion cost: means testing is legitimate targeting mechanism. If roughly equal: the choice between them is political rather than technical.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Fraud prevention justification vs. exclusion cost trade-off"
+    },
+    {
+      "id": "administrative_overhead_recapture",
+      "question": "Do fiscal savings from means-test-driven benefit reduction exceed or fall short of the administrative costs incurred in means testing?",
+      "resolution_mechanism": "Full-cost accounting: administrative apparatus cost (personnel, systems, verification infrastructure) + behavioral costs (reduced take-up due to stigma, application burden, non-compliance penalties) vs. reduced benefit expenditure due to targeting and phase-out",
+      "impact": "If costs exceed savings: means testing is pure extraction mechanism (Snare). If savings exceed costs: means testing is genuine efficiency mechanism (Rope). If roughly equal: the classification depends on whose behavioral costs are counted.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Administrative overhead vs. realized fiscal savings"
+    },
+    {
+      "id": "implicit_marginal_tax_rate_distortion",
+      "question": "What is the magnitude of labor supply distortion created by means-test-induced high implicit marginal tax rates (benefit clawback), and does this distortion exceed the coordination benefit of income verification?",
+      "resolution_mechanism": "Labor supply elasticity estimation; comparison of work behavior under means testing vs. alternative eligibility mechanisms; earnings mobility analysis",
+      "impact": "If distortion is severe (labor supply collapse, poverty trap amplification): means testing amplifies extraction (Snare dominates). If distortion is modest: means testing is mixed coordination-extraction (Tangled Rope holds). If distortion is reversed by earned-income incentives: means testing is net-beneficial (Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Labor supply distortion from marginal tax rates in means testing"
+    },
+    {
+      "id": "stigma_and_internalized_exclusion",
+      "question": "To what degree does the stigma of means testing (internalized as shame, unworthiness, or identity as 'welfare dependent') constitute internalized suppression that persists independent of structural barriers?",
+      "resolution_mechanism": "Qualitative analysis of beneficiary narratives; comparison of health/psychological outcomes under means testing vs. universal programs; longitudinal tracking of stigma-derived self-exclusion",
+      "impact": "If internalized suppression is severe: the suppression metric should be classified as partially internalized, carrying greater persistence post-exit. If mild: suppression is primarily structural. If medium: suppression in the measurements is a composite of structural and internalized components.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Internalized suppression and identity-based exclusion from means testing"
+    },
+    {
+      "id": "universal_basic_income_sunset_feasibility",
+      "question": "Is the scaffold perspective's sunset (transition to UBI or universal basic services) structurally feasible given fiscal and political constraints, or is it aspirational narrative?",
+      "resolution_mechanism": "Pilot outcome analysis from UBI trials; fiscal sustainability modeling under various tax and inflation scenarios; political coalition mapping for UBI adoption",
+      "impact": "If feasible: scaffold classification holds, sunset is real, exit pathway exists. If infeasible: scaffold is aspirational, organized agents are identity-locked to a framing that cannot be realized. The means test persists indefinitely, and the classification reverts to snare/tangled rope from all but analytical positions.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Feasibility of UBI-based exit from means testing"
+    },
+    {
+      "id": "bureaucratic_discretion_and_power_asymmetry",
+      "question": "To what degree do administrative staff (case workers, eligibility officers) exercise discretionary power in ways that amplify extraction or create clientelism?",
+      "resolution_mechanism": "Case file analysis for discretionary decisions; comparative treatment analysis across sociodemographic groups; administrative appeal rates and success rates",
+      "impact": "If discretion is high and unevenly distributed: extraction mechanism is amplified by interpersonal power dynamics. The constraint contains an embedded snare (beneficiary-staff dyad) nested within the institutional snare. If discretion is low (rule-based): the constraint is more purely institutional. If discretion is high but evenly distributed: the constraint remains Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Bureaucratic discretion amplification of extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 22,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 22,
+      "value": 0.67
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 22
+  },
+  "commentary": {
+    "narrative_context": "Means testing in welfare administration creates a structural tension between the legitimate coordination function of targeting limited resources to those most in need and the extractive mechanism of bureaucratic verification, benefit phase-out, and stigma-based exclusion. The constraint exhibits all six DR types from different perspectives, making it a diagnostic exemplar for how institutional extraction operates through seemingly neutral administrative design. The same structural phenomenon \u2014 the verification of income and assets to determine benefit eligibility \u2014 appears as an immutable economic law (scarcity requires rationing), a coordination mechanism (targeting prevents waste), a temporary problem being solved by universal basic income (sunset perspective), a degraded principle inverted from universal to means-tested (piton), a mixed coordination-extraction hybrid (tangled rope from multiple perspectives), or pure extraction (snare from the trapped beneficiary). The extractiveness trajectory (0.38 \u2192 0.58) reflects the accumulation of administrative burden over policy cycles and the intensification of means-test design as fiscal pressure increases. The theater ratio trajectory (0.45 \u2192 0.61) reflects the growing performative justification of means testing as genuine fiscal efficiency as alternative mechanisms (UBI pilots) emerge to challenge its necessity.",
+    "key_agents": [
+      "Low-Income Beneficiaries: Primary victim (powerless/trapped) \u2014 bear full cost of verification burden, stigma, and poverty trap effects; cannot exit without abandoning income support",
+      "Marginally-Employed Workers: Secondary victim (moderate/constrained) \u2014 face high implicit marginal tax rates and benefit clawback; constrained by cost of formal employment vs. informal economy trade-offs",
+      "Welfare Administration: Primary beneficiary (institutional/arbitrage) \u2014 gains administrative clarity, political cover, and operational efficiency through means testing; can modify policy unilaterally",
+      "Fiscal Gatekeeper (Treasury/Budgeting): Secondary beneficiary (institutional/constrained) \u2014 benefits from reduced expenditure through targeting and phase-out; constrained by fiscal pressures and political opposition",
+      "Anti-Poverty Coalition: Organized agent (organized/constrained) \u2014 advocates for UBI and simplified eligibility; sees means testing as temporary problem with sunset pathway",
+      "Administrative Staff (Case Workers): Intermediate actor (moderate/constrained) \u2014 exercise discretionary power in eligibility decisions; may amplify extraction through discriminatory practices or alleviate it through sympathetic interpretation",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional choice (means testing) as inevitable economic law (scarcity)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The means test extracts through multiple mechanisms: (1) benefit phase-out reduces net income for working beneficiaries, (2) administrative burden creates time and psychological cost, (3) stigma and identity effects create self-exclusion, (4) non-compliance penalties impose direct costs. However, extraction is not maximal (0.72+) because the coordination function is genuine \u2014 preventing waste and targeting are legitimate administrative goals. The value reflects that extraction is embedded within a genuinely functional system, not a pure predatory mechanism. Suppression (0.68): High. Significant barriers to exit include economic dependency on benefits (trapped), career penalties for benefit receipt (constrained), and internalized shame (identity_locked for some agents). Documentation requirements, repeated applications, and surveillance create continuous friction. The suppression is both structural (bureaucratic barriers) and partially internalized (stigma that persists post-exit). Theater ratio (0.61): Moderate-high. Much of the 'fiscal efficiency' justification for means testing is performative. The narrative of 'targeting to prevent waste' serves real political functions (justifying reduced spending) while obscuring that administrative overhead and behavioral distortion often exceed savings. The theater has increased over time as alternative mechanisms (UBI pilots) emerge, forcing greater rhetorical defense of means testing.",
+    "perspectival_gap": "The gap between the powerless beneficiary's snare classification and the institutional administrator's rope classification measures the asymmetric extraction built into the system. A trapped agent with no exit options experiences the same structural mechanisms (income verification, benefit targeting) as high extraction because they cannot access the arbitrage opportunities the institutional agent can exercise. The institutional agent experiences coordination because they have power to modify the system. The marginally-employed worker's tangled rope reflects their intermediate position: they benefit from the coordination function (formal income verification enables benefit receipt) but suffer from extraction (phase-out reduces work incentives). The anti-poverty coalition's scaffold reflects organized agency and a visible exit pathway (UBI adoption), which reduces experienced extraction despite the same base constraints. The piton perspective captures the phenomenon of institutional inertia \u2014 the original principle of universal eligibility has been inverted into means testing, but the institution continues performing verification theater even as evidence mounts that administrative costs exceed savings. The mountain perspective at the analytical level naturalizes what are contingent institutional choices, which the engine's false summit detector should identify.",
+    "directionality_logic": "The derivation of d for each perspective follows from beneficiary/victim status and exit options. Welfare administration and fiscal gatekeepers are beneficiaries with institutional power and exit options (they can modify policy), yielding low d (\u22480.15-0.20 for institutional/arbitrage), producing negative or near-zero f(d) \u2014 experienced extractiveness is low or neutral because these agents control the mechanism. Trapped beneficiaries are victims with no exit, yielding high d (\u22480.95), producing maximum f(d) \u22481.42 \u2014 experienced extractiveness is amplified because they bear costs with no escape. Marginally-employed workers are victims with constrained exit (can work informally but risk legality/penalties), yielding moderate-high d (\u22480.70-0.80), producing moderate f(d) \u22481.15 \u2014 experienced extractiveness is significant because costs are high and exit is costly. Anti-poverty coalition members are organized agents with constrained but real exit (can build alternatives), yielding moderate d (\u22480.60), producing moderate f(d) \u22480.85 \u2014 experienced extraction is reduced because agency exists. The analytical observer at civilizational scale derives d from the objective structural position (if framing means testing as natural law, they are passive observers, d\u22480.70), but the false summit detector identifies the error.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by revealing how institutional extraction can be embedded within apparently neutral administrative design. The mandatrophy challenge is: 'Is means testing coordination (targeting efficiency) or extraction (benefit reduction)?'. The answer is perspectival and structural: It functions as coordination for agents with power and arbitrage capacity (welfare administration, fiscal gatekeepers) and as extraction for agents trapped in the system (low-income beneficiaries). The system is genuinely hybrid (Tangled Rope is the correct classification from neutral observation). However, the falsity of the mountain perspective (scarcity requires means testing) reveals that the system's structure is not inevitable \u2014 it is a contingent institutional choice among several alternatives (universal basic income, automatic enrollment, simplified universal eligibility). The constraint does not resolve to a single 'true' type; rather, it exemplifies how the same structural mechanism produces different classification outcomes based on agent position, power, and exit options. This is the core insight of deferential realism: constraints are not observer-independent; they are observer-position-relative. The mandatrophy is resolved by acknowledging that all six perspectives are locally accurate descriptions of agents' actual experiences, and the constraint's true nature is the presheaf of all six perspectives together."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "poverty_trap_accumulation",
+      "informal_economy_precarity",
+      "welfare_stigma_internalization"
+    ],
+    "dual_formulation_note": "Means testing represents a constraint family with three structurally distinct claims: (1) income verification as coordination mechanism (\u03b5=0.25, primarily Rope), (2) benefit phase-out as extraction mechanism (\u03b5=0.65, primarily Snare), (3) bureaucratic verification theater as degraded principle (\u03b5=0.40, primarily Piton). This story aggregates all three into a single \u03b5=0.58 Tangled Rope. Downstream constraints represent the actual observed effects of means testing on labor supply (poverty trap), employment strategy (informal economy shift), and identity formation (stigma internalization)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

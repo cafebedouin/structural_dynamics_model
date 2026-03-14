@@ -1,0 +1,127 @@
+{
+  "header": {
+    "constraint_id": "halting_problem_decidability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Halting Problem Decidability",
+    "topic_domain": "theoretical_computer_science/mathematical_logic",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.95,
+    "resistance": 0.03
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Programmer Seeking Decidability",
+      "comment": "PERSPECTIVE 1: PROGRAMMER (MOUNTAIN) \u2014 A developer attempting to build a universal halting detector faces an absolute logical barrier. No amount of computational power, cleverness, or resources can overcome this limit. The barrier is not enforced but inherent \u2014 it is a feature of logic itself, not a constraint imposed by external agents."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Theoretical Computer Scientist",
+      "comment": "PERSPECTIVE 2: THEORETICAL COMPUTER SCIENTIST (MOUNTAIN) \u2014 From the position of formal analysis, the halting problem is undecidable by Turing's proof. The proof is constructive and universal: it applies to all possible abstract machines with equivalent computational capacity. There is no degree of freedom. The boundary between decidable and undecidable problems is immutable across all formal systems of equivalent power."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "label": "The Computer Science Community",
+      "comment": "PERSPECTIVE 3: COMPUTER SCIENCE COMMUNITY (MOUNTAIN) \u2014 The undecidability of the halting problem is a foundational theorem that constrains all subsequent theory. Research institutions, funding bodies, and curriculum designers all operate under this constraint. It cannot be negotiated, legislated, or innovated away. The constraint is invariant across all institutional positions and has been since 1936."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "hypercomputation_feasibility",
+      "question": "Could a hypercomputer (oracle machine, quantum system with access to infinite resources, or non-Turing model) decide the halting problem for Turing machines?",
+      "resolution_mechanism": "Formal proof that oracle machines can decide the halting problem for standard Turing machines; analysis of whether such proofs require abandoning Turing-equivalence or accepting a hierarchy of undecidability levels",
+      "impact": "If hypercomputation is possible and feasible: the constraint is local to Turing-class systems, not universal. If hypercomputation is unphysical or requires resources exceeding any realizable system: the constraint remains effectively universal for all practical computation.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether hypercomputation could circumvent halting problem undecidability"
+    },
+    {
+      "id": "problem_formulation_boundary",
+      "question": "Does the undecidability result depend on the specific formulation (self-referential proof by contradiction) or is it truly independent of proof technique?",
+      "resolution_mechanism": "Analysis of alternative proofs of halting undecidability (Rice's theorem, G\u00f6del incompleteness connection); verification that all proofs converge on the same conclusion regardless of formulation",
+      "impact": "If formulation-dependent: the constraint might be overcome by choosing a different problem statement or encoding. If formulation-independent: the constraint is deeper and truly unavoidable. Current evidence strongly supports formulation-independence.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether undecidability depends on specific proof technique"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The halting problem decidability constraint is a pure mathematical limit on computation. It states that no algorithm can, in finite time, determine for all possible program-input pairs whether that program will eventually halt or run forever. Alan Turing proved this in 1936 through a diagonal argument (self-referential proof by contradiction). The constraint is logically unavoidable within any formal system of computational power equivalent to or exceeding the Turing machine. It has persisted unchanged for nearly 90 years because it is not a constraint enforced by agents or institutions \u2014 it is a feature of the logical landscape itself. There are no beneficiaries or victims, no extraction mechanism, and no suppression. The constraint simply exists: some problems are undecidable. The structure is identical from every observer position. This is a uniform-type mountain (NL-type uniform).",
+    "key_agents": [
+      "Programmers: Encounter the limit when attempting to build universal debugging tools or program analysis systems",
+      "Theoretical Computer Scientists: Prove and refine the boundary between decidable and undecidable problems",
+      "Computer Science Institutions: Teach the halting problem as a foundational result constraining all subsequent theory",
+      "Formal Logic Community: Recognize undecidability as a deep structural feature connecting computation, mathematics, and G\u00f6del incompleteness"
+    ],
+    "logic_rationale": "Extractiveness = 0.08: Minimal. The constraint does not extract value from anyone. It is not a mechanism for transferring resources or power from one agent to another. It is a logical boundary. Suppression = 0.02: Minimal. There is no coercion. Agents are not forced to accept the constraint through threats or barriers \u2014 they accept it because it is true. Theater ratio = 0.05: Minimal. There is no performative activity. The proof is direct and constructive. The constraint emerges naturally from the logical structure of self-reference and the definition of decidability itself. Accessibility collapse = 0.95: Extremely high. Every attempted workaround (restricting to finite programs, using probabilistic methods, limiting input domains) either fails to decide the general halting problem or shifts to a different constraint. The logical landscape offers no accessible alternatives. Resistance = 0.03: Minimal. The proof has been refined, formalized, and cross-verified from multiple angles (Rice's theorem, incompleteness connection, oracle machines, quantum complexity). Resistance to the fundamental result is near zero.",
+    "perspectival_gap": "There is no perspectival gap. The halting problem is undecidable from every observer position. A programmer trying to build a halting detector, a theorist analyzing computability, and an institution designing a CS curriculum all encounter exactly the same constraint: it cannot be done. This is a uniform-type mountain. The classification outcome is invariant across all indexical tuples because the constraint itself is logical rather than structural. No degree of power, time horizon, exit options, or scope changes the truth of Turing's theorem.",
+    "directionality_logic": "Directionality is not applicable to this constraint. There is no extraction flow. No agent benefits at another agent's expense. The constraint has zero beneficiaries and zero victims \u2014 it is a feature of the logical landscape, not a relationship between agents. The chi formula does not apply because there is no directionality value d to compute. This is a structural signature of a true mountain: the absence of any asymmetric relationship or flow of resources."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "godel_incompleteness",
+      "rice_theorem",
+      "turing_machine_universality"
+    ],
+    "dual_formulation_note": "The halting problem undecidability is a foundational result that constrains the entire landscape of computability theory. It does not decompose into multiple constraints with different epsilon values \u2014 the boundary between decidable and undecidable is invariant across all formulations. However, it relates structurally to G\u00f6del incompleteness (both involve self-reference and logical limits) and Rice's theorem (which generalizes undecidability to all non-trivial properties of programs)."
+  }
+}

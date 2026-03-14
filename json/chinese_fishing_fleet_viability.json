@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "chinese_fishing_fleet_viability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cff"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Chinese Fishing Fleet Economic Viability and Ocean Governance",
+    "topic_domain": "economic_policy/maritime_governance/environmental_sustainability",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "chinese_fishing_industry",
+      "coastal_communities",
+      "state_revenue_systems"
+    ],
+    "victims": [
+      "global_fish_stocks",
+      "small_scale_fishers",
+      "coastal_ecosystems"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Small-Scale Coastal Fishers (Southeast Asia)",
+      "comment": "PERSPECTIVE 1: SMALL-SCALE COASTAL FISHERS (SNARE) \u2014 Trapped by territorial depletion and inability to compete with industrial fleets. No exit options: migration to other regions means losing traditional fishing grounds and social identity; switching livelihoods requires capital and skills they lack. Bear full cost of the constraint through resource scarcity while having no voice in governance. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Global Marine Ecosystem",
+      "comment": "PERSPECTIVE 2: GLOBAL MARINE ECOSYSTEM (TANGLED ROPE) \u2014 Experiences both coordination and extraction. The constraint coordinates resource extraction across multiple stakeholders and timeframes, but at asymmetric cost. Marine ecology cannot exit; it bears suppression through overfishing and habitat destruction. Genuine coordination function (sustainable yield targets, seasonal closures) exists alongside severe extraction (actual practices far exceed sustainable levels). Active enforcement required to maintain the facade of coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Chinese State Revenue and Employment",
+      "comment": "PERSPECTIVE 3: CHINESE STATE REVENUE AND EMPLOYMENT (ROPE) \u2014 Primary beneficiary. Extracts value through subsidies, export revenue, and employment maintenance. Experiences the constraint as coordination: balancing domestic food security, coastal employment, and international relations. Has substantial arbitrage options (can redirect subsidies, adjust fleet size, invest in alternative sectors). Net beneficiary with agency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regional Fishing States and International Bodies",
+      "comment": "PERSPECTIVE 4: REGIONAL FISHING STATES AND INTERNATIONAL BODIES (TANGLED ROPE) \u2014 Organized actors (UNCLOS framework, ASEAN, FAO, RFMOs) experience coordinating across conflicting interests while being constrained by enforcement capacity. Genuine coordination function (negotiated fishing rights, marine protected areas) exists alongside extraction through regulatory capture and weak enforcement. Can exit disputes through bilateral agreements or withdrawal, but constrained by geopolitical consequences."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Post-UNCLOS Law of the Sea Theater",
+      "comment": "PERSPECTIVE 5: POST-UNCLOS LAW OF THE SEA THEATER (PITON) \u2014 The legal and regulatory framework (UNCLOS, EEZ enforcement, fishing licenses) persists largely through institutional inertia. Theater ratio is moderate (0.48) because some enforcement occurs, but compliance is theatrical: Chinese distant-water fleets operate across multiple jurisdictions with varying enforcement rigor, often flagging vessels in convenient registries to avoid accountability. The framework is maintained because alternatives haven't replaced it, not because it functions effectively."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Ecological Limit View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / ECOLOGICAL LIMIT VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, the constraint approaches an irreducible ecological boundary: the biological carrying capacity of exploited fish stocks has hard limits independent of governance preferences. As fishing pressure exceeds recruitment rates, stock collapse becomes inevitable \u2014 a structural limit, not a policy choice. However, the structural data reveals this as a prospective mountain (future reality), not a present one. The current classification is Tangled Rope because enforcement of sustainable limits remains incomplete. The mountain emerges only if depletion continues unchecked."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "subsidy_dependency_collapse",
+      "question": "What proportion of Chinese fishing fleet viability depends on direct government subsidies vs. market-based economics?",
+      "resolution_mechanism": "Comparative analysis of fleet profitability with and without fuel subsidies, tax incentives, and vessel construction support. Historical data from subsidy reduction periods (if any) or cross-country comparison with less-subsidized fleets.",
+      "impact": "If subsidy-dependent > 70%: the constraint is primarily a transfer mechanism maintained by state policy (Rope with beneficiary-side extraction), vulnerable to subsidy removal. If subsidy-dependent < 30%: genuine market viability exists independently (constraint is ecological scarcity, approaching Mountain).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of fleet viability dependent on government subsidies"
+    },
+    {
+      "id": "stock_recovery_feasibility",
+      "question": "Are currently depleted fish stocks capable of recovery under enforced catch reductions, or have they crossed irreversible tipping points?",
+      "resolution_mechanism": "Stock modeling with recruitment dynamics, comparison to historical baseline populations, identification of ecosystem-level regime shifts. Specific focus on species under greatest pressure (Atlantic bluefin tuna, South China Sea demersal species).",
+      "impact": "If recovery feasible: constraint is a temporal tragedy of the commons solvable by enforcement (Tangled Rope). If tipping points crossed: constraint is approaching Mountain (ecological limit has become immutable). Classification changes from Snare/Tangled Rope to Mountain depending on timeline.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether depleted stocks can recover under enforced conservation"
+    },
+    {
+      "id": "enforcement_capacity_vs_fleet_scale",
+      "question": "What is the technical/political feasibility of enforcement mechanisms matching the scale of distant-water fishing fleets?",
+      "resolution_mechanism": "Analysis of satellite monitoring (AIS, VMS), port state control capacity, flag state compliance rates. Comparison to enforcement costs relative to extraction value.",
+      "impact": "If feasible at reasonable cost: enforcement gaps are political choices, not technical limits (supports Tangled Rope with extractive enforcement asymmetry). If infeasible: the constraint includes an unenforceable element (raises theater_ratio, supports Piton classification).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of enforcement mechanisms at fleet scale"
+    },
+    {
+      "id": "alternative_livelihoods_transition_cost",
+      "question": "What is the economic and social cost of transitioning coastal communities away from fishing into alternative sectors?",
+      "resolution_mechanism": "Cost-benefit analysis of retraining programs, capital requirements for alternative sectors, social cohesion impacts, regional economic dependency data.",
+      "impact": "If transition cost < subsidies: constraint removal (enforcement) is economically preferable to subsidy continuation. If transition cost > subsidies: constraint perpetuation becomes economically rational (supports interpretation of Rope as coordination function for employment stability). Shifts victim analysis.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cost of transitioning coastal communities to alternative livelihoods"
+    },
+    {
+      "id": "state_capacity_for_alternative_nutrition",
+      "question": "Can China secure equivalent nutrition/protein for its population through aquaculture, plant-based substitutes, or imports if wild-catch fisheries are constrained?",
+      "resolution_mechanism": "Nutritional modeling, aquaculture capacity expansion data, trade dependency analysis for protein sources.",
+      "impact": "If alternative sources are available: state rationale for fleet expansion becomes geopolitical/extraction-based rather than necessity-based (deepens Tangled Rope analysis). If alternatives are limited: constraint includes genuine coordination function around food security (shifts beneficiary_justification toward legitimate coordination).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Alternative sources for protein/nutrition if wild fisheries constrained"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Chinese distant-water fishing fleet represents a structural constraint operating at the intersection of economic development, food security, maritime governance, and ecological carrying capacity. Approximately 3,500 Chinese fishing vessels operate across global waters, concentrated in Southeast Asian EEZs, the Atlantic, and Pacific regions. The constraint generates six distinct classifications depending on observer position: small-scale coastal fishers see a snare (trapped by depletion), marine ecosystems experience tangled coordination-extraction, the Chinese state perceives a rope (coordination tool for employment and food security), organized international bodies encounter a tangled rope (coordinating conflicting interests under weak enforcement), the legal framework appears as a piton (maintained through institutional inertia), and the civilizational analytical perspective approaches a mountain (ecological carrying capacity is a hard limit). The constraint's extractiveness (0.58) reflects that the fleet's continued viability depends substantially on exceeding sustainable catch levels \u2014 the contradiction between stated sustainability norms and actual practices. Theater ratio (0.48) reflects that enforcement mechanisms (port state control, RFMOs, bilateral agreements) produce visible compliance structures while actual overfishing persists.",
+    "key_agents": [
+      "Chinese Fishing Industry: Primary beneficiary (institutional/arbitrage) \u2014 captures export revenue, employment, and state subsidies. Has agency to adjust fleet composition and fishing grounds.",
+      "Small-Scale Coastal Fishers (Southeast Asia): Primary victim (powerless/trapped) \u2014 lose access to traditional fishing grounds, cannot compete with industrial fleets, have no exit options without abandoning livelihoods and social identity.",
+      "Global Fish Stocks and Marine Ecosystems: Secondary victim (moderate/constrained) \u2014 bear suppression through overfishing and habitat destruction; cannot exit or organize; subject to biological limits on recovery.",
+      "Chinese State Apparatus: Beneficiary (institutional/arbitrage) \u2014 extracts revenue and maintains employment in politically important coastal communities; has policy alternatives but faces domestic pressure.",
+      "Regional Fishing States (Vietnam, Indonesia, Philippines): Organized actors (organized/constrained) \u2014 experience coordination burden of managing overlapping claims and enforcement gaps; constrained by geopolitical power asymmetries.",
+      "International Regulatory Bodies (UNCLOS, ASEAN, FAO, RFMOs): Institutional actors (institutional/constrained) \u2014 tasked with coordination but lack enforcement capacity; experience constraint as enforced cooperation with limited real power.",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees approaching ecological boundary and risks naturalizing governance failure as immutable ecological limit."
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The fleet's profitability and viability depend on accessing fishing grounds beyond sustainable yield levels. Historical analysis shows catch per unit effort declining while fleet size and technology intensity increase \u2014 indicators that expansion is driven by subsidy and debt accumulation rather than genuine productivity. Extractiveness has risen from 0.35 to 0.58 over the interval (0-10 years) as stocks have declined and vessels have had to venture further. The rate of increase reflects accelerating depletion. Suppression (0.65): High. Multiple layers: small-scale fishers have limited geographic mobility, regulatory barriers to alternative sectors are high, social identity is fused with fishing occupations, and geopolitical consequences constrain state policy flexibility. China's involvement in territorial disputes (South China Sea) makes fishing fleet presence a sovereignty claim, reducing state flexibility to accept fishing restrictions. Theater ratio (0.48): Moderate. Enforcement mechanisms exist (port state control, RFMOs, bilateral agreements, AIS monitoring) and produce visible compliance structures. However, compliance is often achieved through flag state shopping, underreporting, and jurisdictional gaps. The theater is neither minimal (there is real enforcement infrastructure) nor maximal (it does affect behavior, albeit incompletely). The rising theater ratio over the interval reflects increasing sophistication in evasion tactics.",
+    "perspectival_gap": "The constraint demonstrates maximum perspectival divergence. The Chinese state genuinely experiences the fleet as a coordination mechanism solving employment and food security \u2014 from their position, other constraints (coastal unemployment, geopolitical competition) create pressure to maintain fleet expansion. Small-scale fishers see pure extraction with no coordination benefit \u2014 they bear costs while receiving nothing. The global marine ecosystem bears extraction with embedded coordination theater: catch limits, seasonal closures, and protected areas exist as coordination structures, but actual enforcement is weak enough that extraction far exceeds coordination. Regional states experience a governance tragedy: they coordinate enforcement among themselves but cannot compel Chinese compliance without geopolitical costs. The journal/international body (piton perspective) sees a ritual framework \u2014 the Post-UNCLOS law of the sea persists through institutional maintenance and theater, but actual compliance patterns follow power asymmetries rather than norms.",
+    "directionality_logic": "Directionality values are derived from beneficiary/victim declarations and exit options. The Chinese state (beneficiary + arbitrage) has low d (~0.15) \u2014 the constraint extracts value toward them. Small-scale coastal fishers (victim + trapped) have high d (~0.95) \u2014 the constraint extracts value away from them. Regional fishing states (organized actors + constrained exit) have moderate d (~0.50) \u2014 they experience mixed costs and benefits. Marine ecosystems (victim + no exit) have high d (~0.90). These d values feed the sigmoid f(d) to produce experienced extractiveness chi, which varies by perspective. The organized institutional perspective (Chinese state) sees low chi because their d is low (they benefit). The powerless perspective (coastal fishers) sees high chi because their d is high (they bear costs). The analytical perspective derives d from its position as an observer of the system (~0.72, slightly toward target because the system imposes costs on the analyst's presumed values of sustainability).",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: This constraint avoids the mandatrophy trap by acknowledging that the 'viability' framing itself contains the extraction mechanism. 'Fleet viability' is defined as the state's capacity to maintain employment and geopolitical presence through fishing, which is only 'viable' by subsidizing beyond ecological carrying capacity. The coordinate system that makes the constraint visible is the one where costs are externalized to small-scale fishers and marine ecosystems while benefits concentrate in the Chinese state and industrial fleet operators. From the state's perspective, the constraint is a rope solving coordination problems (employment, food security, geopolitical leverage). From the ecosystem's perspective, it is a snare with embedding coordination theater. The mandatrophy dissolves when we recognize that 'viability of the fleet' and 'viability of coastal fishing communities' are not the same constraint \u2014 they have opposite extraction directions. The corpus should treat them as separate stories linked by network causality: fleet expansion undermines small-fisher viability, creating a zero-sum relationship. The current story models the fleet viability constraint (beneficiary: Chinese state; victim: small-scale fishers and marine ecosystems). A companion story should model small-scale fisher viability constraint (beneficiary: regional communities; victim: subsidy-dependent industrial fleet development pressure). The two stories together clarify the true structure: a state-enforced transfer mechanism from small-scale fishers and ecosystems to industrial fleet operators."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "southeast_asia_maritime_sovereignty",
+      "south_china_sea_territorial_disputes",
+      "marine_biodiversity_loss",
+      "small_scale_fisher_livelihoods"
+    ],
+    "dual_formulation_note": "This story models the Chinese fishing fleet viability constraint from the perspective of industrial fleet maintenance and state revenue extraction. A companion constraint story (small_scale_fisher_viability) should model the symmetric problem from coastal community perspectives. The two constraints are causally linked: fleet expansion directly undermines small-scale fisher viability through resource depletion and market exclusion. The network relationship should show upstream causality: this constraint (industrial fleet expansion) affects the companion constraint (small-scale fisher viability as victims of depletion). The \u03b5 values differ structurally: industrial fleet viability depends on subsidy and depletion (\u03b5 \u2248 0.58), while small-scale fisher viability depends on resource access and competitive capacity (\u03b5 different value reflecting different structural mechanism)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.48
+    }
+  ]
+}

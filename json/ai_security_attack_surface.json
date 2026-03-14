@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "ai_security_attack_surface",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aisurf"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AI Security Attack Surface Coordination vs. Extraction",
+    "topic_domain": "artificial_intelligence/cybersecurity/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ai_developers",
+      "capability_frontier_labs"
+    ],
+    "victims": [
+      "security_researchers",
+      "downstream_users",
+      "public_safety"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Security Researcher",
+      "comment": "PERSPECTIVE 1: SECURITY RESEARCHER (SNARE) \u2014 Caught between pressure to report vulnerabilities (which enables exploitation if disclosure is premature) and pressure to not disclose (which enables indefinite exploitation). No viable exit: responsible disclosure takes months/years while attackers iterate; full disclosure causes immediate harm; staying silent means complicity. Bears full extraction cost with minimal coordination benefit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The End User",
+      "comment": "PERSPECTIVE 2: END USER (SNARE) \u2014 No knowledge of AI system attack surface. Cannot assess risk, cannot patch, cannot exit or switch. Trapped in extraction via unequal information. Suppression is nearly total \u2014 users have no access to security posture data and no recourse if systems are compromised through known vulnerabilities."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Body",
+      "comment": "PERSPECTIVE 3: REGULATORY BODY (TANGLED ROPE) \u2014 Must coordinate multi-stakeholder security governance (researchers, developers, users) but cannot fully enforce compliance. Faces extraction via regulatory capture (industry lobbying against disclosure requirements) and coordination overhead (managing conflicting incentives). High suppression of regulatory capacity itself."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The AI Developer (Labs at Frontier)",
+      "comment": "PERSPECTIVE 4: AI DEVELOPER (ROPE) \u2014 Primary beneficiary. Experiences constraint as pure coordination: responsible disclosure frameworks, security auditing, vulnerability bounties all serve to strengthen security while preserving competitive advantage and limiting liability. Can arbitrage between public safety commitments and internal security practices. Net benefit from coordination mechanisms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Attacker / Adversary",
+      "comment": "PERSPECTIVE 5: ATTACKER (TANGLED ROPE) \u2014 Coordinates with other threat actors through vulnerability marketplaces and exploit trading; also extracts value from security researchers' forced silences and users' lack of awareness. High mobility enables exit through jurisdictional arbitrage. Experiences constraint as hybrid: coordination with peer attackers + extraction from victims."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Responsible Disclosure Theater",
+      "comment": "PERSPECTIVE 6: RESPONSIBLE DISCLOSURE (PITON) \u2014 The responsible disclosure framework persists through institutional inertia despite degraded function. Researchers perform security research, labs conduct audits, organizations publish CVEs \u2014 but the theater masks a structural problem: the gap between disclosure timeline and patch deployment remains vast, making the ritual performative. Theater ratio high because much disclosure activity (CVE numbering, CVSS scoring) is process theater rather than effective vulnerability elimination."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, the constraint appears to reflect an immutable property of complex systems: any sufficiently complex artifact (software, AI model, network) has unbounded attack surface that cannot be fully secured or enumerated. The problem appears to be inherent to the domain rather than a contingent institutional arrangement. However, the structural data reveals this as a false summit \u2014 the extraction is driven by information asymmetry and incentive misalignment, not by physics or logic."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "disclosure_timing_paradox",
+      "question": "What disclosure timeline (responsible disclosure window) is short enough to prevent exploitation but long enough for developers to patch across heterogeneous deployment environments?",
+      "resolution_mechanism": "Empirical analysis of historical CVE timeline data: correlation between disclosure-to-patch timeframe and actual exploitation rates; tracking of zero-day vs. N-day exploitation patterns",
+      "impact": "If optimal window < 30 days: most patches deployed late; disclosure mechanism drives rather than prevents attacks. If optimal window > 180 days: window long enough to enable market-driven vulnerabilities and encourages suppression. If no window exists: the constraint is a snare, not tangled_rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Optimal disclosure window paradox"
+    },
+    {
+      "id": "ai_capability_vs_safety_coupling",
+      "question": "Does increasing AI capability directly increase attack surface (more parameters, more complexity, more attack vectors) or does safety investment reduce surface faster than capability growth?",
+      "resolution_mechanism": "Longitudinal analysis of model safety audits: comparison of attack surface size vs. model parameter count and capability benchmarks; cost curves for security research vs. capability scaling",
+      "impact": "If capability growth > safety improvement: attack surface expansion is inevitable and constraint becomes structural (mountain or snare). If safety keeps pace: constraint is coordination problem (rope/tangled_rope with sunset possibility via investment).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether AI safety can scale with capability growth"
+    },
+    {
+      "id": "information_asymmetry_structural",
+      "question": "Is the information gap between developers and users/researchers structural (inherent to proprietary AI systems) or contingent (policy choice to keep security data proprietary)?",
+      "resolution_mechanism": "Case studies comparing proprietary vs. open-source AI systems; analysis of security posture transparency in open-source models; policy experiments with mandatory transparency requirements",
+      "impact": "If structural: users cannot exit trap; constraint is permanent snare. If contingent: transparency policy could convert to rope/scaffold; constraint is policy-fixable.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether information asymmetry is structural or policy-contingent"
+    },
+    {
+      "id": "collective_action_failure",
+      "question": "Can independent security researchers, developers, and users coordinate to establish shared vulnerability disclosure standards without regulatory enforcement?",
+      "resolution_mechanism": "Analysis of existing coordination attempts (industy standards, frameworks, consortia); measurement of adoption rates and enforcement mechanisms; comparison with scenarios where regulatory enforcement is present",
+      "impact": "If coordination fails: constraint is snare requiring regulatory intervention. If coordination succeeds: constraint becomes rope with minimal enforcement overhead.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Feasibility of voluntary coordination on disclosure standards"
+    },
+    {
+      "id": "exploit_market_dynamics",
+      "question": "Does the existence of zero-day exploit markets fundamentally restructure the security game from disclosure coordination to asymmetric extraction, making responsible disclosure a false solution?",
+      "resolution_mechanism": "Economic analysis of zero-day pricing, exploit trading patterns, and attacker incentive structure; correlation between disclosure framework adoption and zero-day market activity",
+      "impact": "If markets dominate: responsible disclosure is theater masking permanent extraction. If markets are marginal: responsible disclosure addresses real coordination problem.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Zero-day market impact on disclosure mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "AI systems present an expanding attack surface that creates a structural tension between security researchers' obligation to disclose vulnerabilities, developers' need time to patch, users' right to know, and attackers' incentive to exploit before patches deploy. The constraint exhibits hybrid coordination-extraction dynamics: genuine coordination function (vulnerability management, responsible disclosure frameworks, security auditing) layered with systematic extraction (information asymmetry that traps researchers and users, capability advantage that accrues to early-moving developers, zero-day exploit markets that profit from delayed patches). The theater ratio (0.64) reflects that responsible disclosure, CVE numbering, security scoring, and vulnerability bounties are partly performative \u2014 they create appearance of systematic security management while the underlying problem (unbounded attack surface growth) remains largely unmanaged. The extractiveness (0.58) indicates moderate but growing extraction driven by information asymmetry and incentive misalignment: researchers face dilemma costs (disclose \u2192 enable attack, delay \u2192 enable indefinite exploitation, stay silent \u2192 complicity); users face trapped ignorance; developers capture first-mover advantage in patching; attackers exploit windows between disclosure and patch deployment.",
+    "key_agents": [
+      "Security Researchers: Primary victims (powerless/trapped) \u2014 face disclosure dilemma with no exit; bear reputation risk either way",
+      "End Users: Primary victims (powerless/trapped) \u2014 unaware of attack surface, cannot assess risk, cannot switch systems",
+      "AI Developers (Frontier Labs): Primary beneficiaries (institutional/arbitrage) \u2014 capture competitive advantage during disclosure windows, benefit from security frameworks that preserve proprietary control",
+      "Attackers & Threat Actors: Secondary beneficiary (powerful/mobile) \u2014 profit from vulnerability windows; arbitrage between disclosure timeline and patch deployment",
+      "Regulatory Bodies: Coordination agents (moderate/constrained) \u2014 attempt to coordinate multi-stakeholder incentives; face capture risk and limited enforcement capacity",
+      "Responsible Disclosure Framework: Institutional theater (institutional/arbitrage) \u2014 performs security management while masking structural problems",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent incentive structures as immutable properties of AI systems"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and increasing. The constraint extracts from security researchers (forced silences, reputational cost), end users (unequal information, inability to assess risk), and the general public (accumulated unpatched vulnerabilities). The extraction is not total because: (1) developers genuinely benefit from security research and have incentive to fix vulnerabilities; (2) responsible disclosure frameworks do reduce average disclosure-to-patch timelines compared to full secrecy; (3) open-source alternatives create exit options for some users. However, extraction dominates because the gap between discovery and deployment remains large (median 30-90 days for critical vulnerabilities), attackers actively exploit during windows, and information asymmetry systematically advantages those who understand the attack surface (developers, attackers) over those who don't (users, policymakers). Suppression (0.68): High. Barriers to exit or resistance include: (1) proprietary systems make security assessment impossible for external parties; (2) disclosure brings reputational risk (attackers immediately exploit); (3) silence brings complicity and safety risk; (4) regulatory barriers limit user options and enforce NDAs; (5) market concentration means switching costs are prohibitive. Theater ratio (0.64): Moderate-high and increasing. The responsible disclosure framework, CVE numbering, CVSS scoring, security auditing, and vulnerability bounties all perform systematic security management while masking the structural problem: attack surface continues to grow faster than patch deployment can manage. The theater has increased over the interval because: (1) AI capability growth has outpaced safety investment, expanding attack surface; (2) responsible disclosure frameworks have become formalized and ritualized without fundamental efficiency improvements; (3) zero-day markets have grown, incentivizing disclosure suppression; (4) media attention to AI security creates demand for visible coordination mechanisms, driving performative activity.",
+    "directionality_logic": "The beneficiary group (ai_developers, capability_frontier_labs) is structurally positioned to arbitrage between public safety commitments and internal security practices. They benefit from both the coordination framework (which enables systematic security improvement and reputational benefit) and from the extraction mechanism (information asymmetry and disclosure timing windows that give them first-mover advantage in patching). Victims (security_researchers, downstream_users, public_safety) bear the cost of information gaps, suppression of disclosure, and the time lag between vulnerability discovery and patch availability. The directive flow is clear: researchers and users have high d (\u2192 high extraction), developers have low d (\u2192 benefit), and the constraint preserves this asymmetry through enforcement (legal NDAs, liability shields, proprietary claims).",
+    "perspectival_gap": "The constraint demonstrates maximal perspectival divergence. Security researchers see a permanent snare (disclosure dilemma with no good option); end users see another snare (trapped ignorance); developers see pure coordination (responsible disclosure as enabling security improvement); regulators see tangled hybrid (must coordinate conflicting incentives while their capacity is suppressed); attackers see a hybrid (coordination with other attackers + extraction from victims during windows); the institutional responsible disclosure theater sees itself as degraded ritual (piton); the analytical observer risks seeing immutable natural law (unbounded attack surface is inherent to complexity). The gap reveals that 'AI security' labels a bundle of structurally distinct problems: genuine coordination challenges (making disclosure timely), extraction mechanisms (information asymmetry), theatrical performance (CVE scoring), and possibly immutable limits (if attack surface growth is truly unbounded). The constraint's claimed type (tangled_rope) reflects that the coordination function (vulnerability management) and extraction mechanisms (information capture, disclosure timing) are inseparable \u2014 you cannot remove the extraction without losing the coordination benefit, and you cannot strengthen coordination without enabling deeper extraction.",
+    "mandatrophy_analysis": "MANDATROPHY PARTIALLY RESOLVED: The constraint is classified as tangled_rope because the coordination function (systematic vulnerability management) is genuine and valuable, AND the extraction mechanism (information asymmetry + disclosure timing + market advantage) is also genuine and asymmetric. This is not a case of misconstruing extraction as coordination or vice versa. However, the constraint contains at least one false summit risk: the analytical observer's natural law view (unbounded attack surface is immutable) is likely a naturalization of contingent incentive structures. The question of whether attack surface growth is structurally inevitable or policy-fixable is unresolved and appears in the omegas. The theater ratio (0.64) indicates that the responsible disclosure framework is performing legitimacy rather than fully solving the coordination problem, which is appropriate for a tangled_rope \u2014 the framework must maintain apparent legitimacy to preserve the coordination fiction while actually redistributing extraction. If the theater ratio rises above 0.75, the classification should downgrade to piton (the coordination function has atrophied)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_model_interpretability_limits",
+      "ai_red_teaming_asymmetry",
+      "zero_day_exploit_markets"
+    ],
+    "dual_formulation_note": "AI security attack surface is downstream of fundamental AI capability scaling and interpretability limits. The surface itself is constrained by the balance between disclosure frameworks and patch deployment timelines. Upstream constraints have their own extractiveness values reflecting the inevitability of attack surface; this story captures the coordination and extraction dynamics around managing the surface given that it exists."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

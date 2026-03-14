@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "vendor_certification_capture",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "vcc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Vendor Certification Capture in Supply Chain Governance",
+    "topic_domain": "economic_governance/regulatory_capture",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_vendors",
+      "certification_bodies"
+    ],
+    "victims": [
+      "market_entrants",
+      "end_consumers",
+      "supply_chain_transparency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Market Entrant",
+      "comment": "PERSPECTIVE 1: MARKET ENTRANT (SNARE) \u2014 New vendors face certification requirements designed by incumbent vendors; cannot enter market without certification; certification standards are opaque and capture-prone. No exit from the certification gate \u2014 entry barrier is absolute. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Small-Scale Supplier",
+      "comment": "PERSPECTIVE 2: SMALL-SCALE SUPPLIER (TANGLED ROPE) \u2014 Has genuine coordination need (certification ensures quality baseline for buyer confidence) but faces asymmetric extraction through opaque standards, expensive audit procedures, and incumbent vendor influence on certification criteria. Can technically exit by not selling to buyers requiring certification, but this eliminates market access. Mixed experience."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Vendor",
+      "comment": "PERSPECTIVE 3: INCUMBENT VENDOR (ROPE) \u2014 Experiences certification as coordination mechanism: common standards reduce verification costs, enable quality signaling, and create market trust. Net beneficiary through first-mover advantage and influence over standard-setting. Can arbitrage by participating in certification body governance while maintaining insider status."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Certification Body",
+      "comment": "PERSPECTIVE 4: CERTIFICATION BODY (TANGLED ROPE) \u2014 Provides genuine coordination function (establishing and maintaining quality standards) but is structurally captured by incumbent vendors who serve on advisory boards, fund operations, and define audit criteria. Active enforcement of standards is real; asymmetric extraction toward incumbents is structural. The certification body is itself a victim of the capture dynamic."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Buyer Organization",
+      "comment": "PERSPECTIVE 5: BUYER ORGANIZATION (ROPE) \u2014 Certification reduces verification burden and enables supply chain transparency. Benefits from coordination across vendors. Has mobility \u2014 can shift between certified vendors or pressure for alternative certification schemes. Experiences the constraint as net positive coordination."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Regulatory Framework",
+      "comment": "PERSPECTIVE 6: LEGACY REGULATORY FRAMEWORK (PITON) \u2014 Government standards bodies originally designed certification to ensure safety and quality; now perform largely theatrical compliance role. Real regulatory function has been displaced by private certification bodies. Government role persists through institutional inertia rather than functional necessity. Theater ratio high \u2014 compliance theater replaces actual oversight."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational perspective, vendor certification capture represents a pure extraction mechanism disguised as coordination. The high theater ratio and suppression of alternatives (market entrants cannot bypass certification) reveal the snare structure. Alternative certification schemes are prevented from gaining traction through incumbent vendor control of validation narratives."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "standard_necessity_vs_capture",
+      "question": "Are the technical requirements within certification standards genuinely necessary for quality assurance, or are they designed to disadvantage market entrants?",
+      "resolution_mechanism": "Comparative analysis of incumbent vendor vs new entrant compliance costs; correlation between standard requirements and incumbent vendor production capabilities; audit of standards against documented safety incidents vs incumbent vendor behavior",
+      "impact": "If genuinely necessary: constraint is rope with asymmetric friction (tangled rope). If designed for incumbent advantage: constraint is snare with coordination theater. Determines whether suppression reflects genuine safety requirements or artificial barriers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether certification standards reflect genuine quality needs or incumbent advantage"
+    },
+    {
+      "id": "audit_transparency_mechanism",
+      "question": "Do certification audits follow transparent, reproducible criteria, or do auditors exercise discretionary judgment that advantages incumbents?",
+      "resolution_mechanism": "Audit decision tree analysis; comparison of audit findings for similar violations by incumbent vs entrant vendors; statistical analysis of pass/fail rates by vendor size and incumbency status",
+      "impact": "If transparent and reproducible: suppression is legitimate cost of qualification. If discretionary: suppression is mechanism of capture \u2014 same standard applied differently to different vendors.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Audit transparency and fairness analysis"
+    },
+    {
+      "id": "alternative_certification_viability",
+      "question": "Could alternative certification schemes emerge and gain market acceptance, or are incumbents systematically preventing competing standards from establishing credibility?",
+      "resolution_mechanism": "Historical analysis of certification scheme emergence attempts; buyer willingness-to-accept alternative schemes; incumbent vendor advocacy against alternative schemes; network analysis of certification body board composition",
+      "impact": "If alternatives are viable: this is capture with an exit path (scaffold with long sunset). If alternatives are systematically suppressed: this is snare with illusory exit options.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of competing certification schemes"
+    },
+    {
+      "id": "cost_distribution_asymmetry",
+      "question": "What proportion of certification costs are borne by entrants vs incumbents, and how does this compare to the value created by the standard?",
+      "resolution_mechanism": "Cost accounting for certification compliance across vendor cohorts; comparison to documented risk reduction or quality improvement; analysis of cost allocation mechanisms within standards bodies",
+      "impact": "If costs are proportional to value: tangled rope is appropriate classification. If costs are asymmetric beyond coordination necessity: extractiveness should be higher.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cost distribution asymmetry across vendor types"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "commentary": {
+    "narrative_context": "Vendor certification capture occurs when certification standards intended to ensure quality become mechanisms for incumbent vendors to exclude competitors while extracting rents. The constraint exhibits classic regulatory capture dynamics but operates at the private standard-setting level rather than through government agencies. Incumbent vendors influence certification body governance, participate in standard-setting committees, and fund audit operations. New market entrants face opaque standards, expensive compliance audits, and discretionary enforcement that systematically advantages incumbents. The constraint provides genuine coordination benefit \u2014 common standards do reduce buyer verification costs and enable supply chain transparency \u2014 but this coordination function is paired with asymmetric extraction that concentrates benefits with incumbents and costs with entrants. The theater ratio has increased over time as certification bodies shift from technical standard-setting toward performative compliance administration. The constraint's extractiveness has grown as incumbents have consolidated control over standard-setting, audit procedures, and validation narratives.",
+    "key_agents": [
+      "Market Entrants: Primary victims (powerless/trapped) \u2014 face absolute barriers to market entry without certification; cannot exit the certification gate",
+      "Small-Scale Suppliers: Secondary victims (moderate/constrained) \u2014 face high compliance costs and discretionary audit judgment; technically can exit by leaving market",
+      "Incumbent Vendors: Primary beneficiaries (institutional/arbitrage) \u2014 influence standard-setting, benefit from market protection, capture rents from entrant compliance costs",
+      "Certification Bodies: Institutional actors (institutional/constrained) \u2014 provide genuine coordination function but are structurally captured by incumbent influence; constrained by dependence on incumbent funding",
+      "Buyer Organizations: Secondary beneficiaries (powerful/mobile) \u2014 benefit from supply chain coordination; have mobility to demand alternative schemes",
+      "Legacy Regulatory Framework: Institutional actor (institutional/arbitrage) \u2014 government role persists theatrically while private certification bodies perform actual gate-keeping",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees the capture mechanism clearly from outside the system; identifies theater ratio drift as indicator of capture progression"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, increasing over time. Initial value (0.35) reflected genuine coordination function with manageable incumbent advantage. Growth to 0.58 reflects accumulation of incumbent control over standard-setting committees, audit procedures, and fee structures. The trajectory shows classic capture progression: initial coordination benefits are preserved while extraction barriers are layered on top. Suppression (0.65): High. Market entrants face multiple suppression mechanisms: opaque standard-setting processes, expensive audit fees, discretionary compliance judgment, and absence of credible alternative certification schemes. Suppression reflects both structural barriers (genuine cost of quality assurance) and artificial barriers (incumbent-designed standards). Theater ratio (0.68): High and increasing. Certification body operations have increasingly become performative \u2014 audit procedures follow ritualistic pathways rather than evidence-based quality verification; compliance theater substitutes for actual safety oversight; standards bodies issue glossy compliance reports while incumbent vendors control substantive decisions.",
+    "perspectival_gap": "The captured certification body is the critical divergence point. From the outside, it appears institutional and powerful (arbitrage options). From within, it is constrained by funding dependence and board composition lock-in that effectively makes exit costly. This produces a perspectival gap between the institutional/arbitrage perspective (which would classify the constraint as rope for the certification body) and the institutional/constrained perspective (which would reveal tangled rope \u2014 the certification body is both enforcer and victim of the capture). An identity-locked institutional perspective (certification bodies whose professional identity has fused with their role as incumbent-aligned gatekeepers) would show even stronger entanglement.",
+    "directionality_logic": "Incumbents derive low d values (high beneficiary status, arbitrage-level mobility) producing negative or near-zero chi \u2014 the constraint subsidizes them. Market entrants derive high d values (victim status, trapped exit) producing high chi \u2014 they experience maximum extraction. Certification bodies occupy an intermediate position: they are technically institutional actors with arbitrage options (could theoretically leave the certification business), but their structural capture creates identity lock with incumbent interests, effectively raising their d toward constrained values. The directional flow is clear: extraction runs from entrants toward incumbents, with certification bodies as extraction infrastructure.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by decomposing the apparent single coordination mechanism into two distinct flows: genuine quality assurance (coordination, low \u03b5) and incumbent rent extraction (capture, high \u03b5). The tangled rope classification captures both flows operating simultaneously. The theater ratio increase (0.42 \u2192 0.68) signals that the theatrical coordination component is growing relative to functional oversight \u2014 a diagnostic marker of capture progression. The original intent was pure rope (certification coordination); the current state is tangled rope (coordination + extraction); if capture continues unchecked, the trajectory leads toward piton (theatrical compliance while real gatekeeping happens elsewhere) or snare (pure extraction, coordination function fully displaced)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "supply_chain_opacity",
+      "market_concentration_dynamics",
+      "standards_body_governance_capture"
+    ],
+    "dual_formulation_note": "Vendor certification capture is downstream of standards-body governance capture but represents a distinct structural constraint with its own extractiveness metrics. The upstream constraint (governance capture) determines whether certification bodies can resist incumbent influence; this constraint (certification capture) determines the market-level effects of that governance failure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.62
+    }
+  ]
+}

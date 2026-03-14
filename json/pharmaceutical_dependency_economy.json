@@ -1,0 +1,231 @@
+{
+  "header": {
+    "constraint_id": "pharmaceutical_dependency_economy",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pharmdep"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Pharmaceutical Dependency Economy",
+    "topic_domain": "healthcare/pharmaceutical_policy/economic_extraction",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharmaceutical_manufacturers",
+      "patent_holders",
+      "pharmacy_benefit_managers",
+      "institutional_investors"
+    ],
+    "victims": [
+      "chronic_disease_patients",
+      "low_income_populations",
+      "healthcare_systems",
+      "generic_drug_developers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Chronic Patient",
+      "comment": "PERSPECTIVE 1: CHRONIC PATIENT (SNARE) \u2014 Biologically dependent on continuous medication; faces structural entrapment through patent monopolies, lack of affordable alternatives, and medical necessity. Cannot exit the constraint without risking health deterioration. Maximum experienced extraction \u2014 the patient bears full cost of monopoly pricing with no genuine alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Healthcare System",
+      "comment": "PERSPECTIVE 2: HEALTHCARE SYSTEM (TANGLED ROPE) \u2014 Coordinates drug access and patient care through pharmaceutical supply chains while experiencing significant extraction via price inflation. Constrained by patent law, regulatory requirements, and dependency on branded drugs during patent periods. Mixed experience: genuine coordination function (ensuring drug availability) alongside asymmetric extraction (manufacturers control prices)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Pharmaceutical Manufacturer",
+      "comment": "PERSPECTIVE 3: PHARMACEUTICAL MANUFACTURER (ROPE) \u2014 Experiences the constraint as beneficial coordination: patent protection enables recovery of R&D costs and funds future drug development. Net beneficiary with arbitrage options (can shift to other therapeutic areas, negotiate pricing). Experiences constraint as coordination mechanism that solves the innovation funding problem."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Generic Drug Manufacturer",
+      "comment": "PERSPECTIVE 4: GENERIC DRUG MANUFACTURER (TANGLED ROPE) \u2014 Coordinated through regulatory approval pathways for bioequivalence testing, enabling affordable alternatives. Simultaneously extracted from: patent law excludes them during exclusivity periods, regulatory complexity creates barriers to market entry. Mixed extraction and coordination \u2014 some agents benefit from enabling access, others are locked out by patent enforcement."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Patent Reform Coalition",
+      "comment": "PERSPECTIVE 5: PATENT REFORM COALITION (SCAFFOLD) \u2014 Organized agents (patient advocacy groups, international health organizations, some governments) perceive the pharmaceutical dependency economy as a temporary institutional arrangement with a sunset clause. Patent extensions (evergreening), regulatory exclusivity periods, and bilateral trade agreements all have defined time horizons. Coalition strategy: accelerate generic uptake, renegotiate TRIPS provisions, implement compulsory licensing frameworks. Low effective extraction because the coalition has agency and sees an exit path through policy reform."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Drug Approval Ritual",
+      "comment": "PERSPECTIVE 6: DRUG APPROVAL RITUAL (PITON) \u2014 FDA/EMA approval processes maintain significant performative content: regulatory burdens create barriers to entry that protect incumbent firms more than they ensure safety. The approval theater persists through institutional inertia despite lower functional benefit in mature drug classes. Expensive clinical trials (often performed on populations different from end-users) delay generic alternatives. Theater ratio reflects that much approval complexity functions to maintain extraction rather than ensure public health \u2014 a degraded institutional mechanism maintained by structural momentum."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some pharmaceutical cost is inherent: drug development requires significant capital investment, clinical trial safety requirements are biologically necessary, and manufacturing complexities cannot be eliminated. This perspective risks naturalizing contingent policy arrangements (patent lengths, exclusivity periods, regulatory design) as immutable requirements of pharmaceutical economics. The engine's false summit detector will identify this as rationalization of institutional arrangements rather than natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "innovation_extraction_tradeoff",
+      "question": "How much of pharmaceutical profit margin is necessary for R&D funding versus extractive rent-seeking?",
+      "resolution_mechanism": "Comparative analysis of R&D spending, clinical trial costs, and marketing budgets across firms; correlation between profit margins and drug innovation rates; pharmaceutical economics empirical studies on optimal patent periods",
+      "impact": "If R&D requirement accounts for <30% of margin: pharmaceutical dependency economy is primarily extractive (Snare). If >50%: coordination function is substantial (Rope/Tangled Rope justified). Current estimates range 10-30% R&D, 20-40% marketing, remainder profit/shareholder extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of pharmaceutical pricing necessary for innovation versus extraction"
+    },
+    {
+      "id": "generic_equivalent_availability",
+      "question": "What percentage of patients with chronic conditions have access to generic equivalents at any given time, and how does this vary by disease type and geography?",
+      "resolution_mechanism": "Global pharmaceutical supply data; patent expiration tracking; analysis of patent evergreening practices; generic availability studies by therapeutic area and region",
+      "impact": "If >70% have generic access: snare classification weakens (trapped exit is less total). If <30%: snare classification strengthens (trapped agents have minimal alternatives). Current estimates: 40-60% have generics available, but 20-30% of chronic medications still under extended patent/exclusivity periods.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Availability of generic alternatives for chronic medications"
+    },
+    {
+      "id": "price_elasticity_patient_behavior",
+      "question": "What proportion of patients reduce adherence or abandon treatment when faced with cost barriers, and what are the health outcome consequences?",
+      "resolution_mechanism": "Medication adherence studies controlling for cost; health outcome data for patients with insurance gaps; comparative analysis of adherence rates across cost tiers",
+      "impact": "If high elasticity + severe outcomes: suppression classification justified (costs prevent exit). If patients have workarounds: suppression lower (constraining rather than trapping).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Medication adherence reduction due to cost barriers"
+    },
+    {
+      "id": "patent_evergreening_prevalence",
+      "question": "How systematically do manufacturers extend patent/exclusivity periods through minor formulation changes, new indications, or combination drugs rather than genuine innovation?",
+      "resolution_mechanism": "Patent analysis of drug class extensions; comparison of original patent terms to extended protection periods; FDA approval data for incremental vs breakthrough indications",
+      "impact": "If evergreening is systematic (>70% of extended exclusivity): rent-seeking mechanism confirmed (extraction). If rare: patent system functions as intended (coordination). Current data suggests evergreening in >80% of top-grossing drugs.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Systematic use of patent evergreening to extend monopoly periods"
+    },
+    {
+      "id": "regulatory_capture_versus_public_health",
+      "question": "To what extent does FDA/EMA regulatory design reflect optimal public health requirements versus pharmaceutical industry preferences?",
+      "resolution_mechanism": "Comparative analysis of approval timelines and standards across jurisdictions; pharmaceutical industry influence on regulatory policy; analysis of approval standards for generic versus branded drugs",
+      "impact": "If capture substantial: approval ritual (Piton) confirmed. If regulatory design is genuinely optimal: approval complexity justified (coordination). Current evidence suggests moderate capture in approval prioritization and complexity thresholds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of regulatory capture in pharmaceutical approval processes"
+    },
+    {
+      "id": "compulsory_licensing_effectiveness",
+      "question": "When governments invoke compulsory licensing for essential medicines, how effective are alternative supply chains at reducing prices and meeting demand?",
+      "resolution_mechanism": "Analysis of countries using compulsory licensing (India, Brazil, Thailand); price changes after licensing invoked; supply chain stability; comparison to branded monopoly supply",
+      "impact": "If effective (>50% price reduction, stable supply): scaffold/exit mechanisms are real (policy reform works). If ineffective: victims remain trapped despite policy tools. Current evidence mixed by geography.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of compulsory licensing as escape mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The pharmaceutical dependency economy creates a structural coupling between biological need (chronic disease management requiring continuous medication), institutional control (patent law, regulatory approval, manufacturing complexity), and economic extraction (monopoly pricing, evergreening strategies, supply chain bottlenecks). This constraint exhibits Tangled Rope characteristics: genuine coordination function (bringing drugs from development to patient) coexists with asymmetric extraction (manufacturers capture rents from patients who have no exit options). The constraint's extractiveness has increased over the measurement interval (0.42 \u2192 0.58) as patent evergreening strategies have extended monopoly periods and as manufacturing complexity creates barriers to generic entry. Theater ratio (0.55) reflects that regulatory approval processes maintain significant performative content \u2014 complexity that serves barrier-to-entry functions more than safety validation for mature drug classes. The analytical observer risks naturalizing contingent policy choices (patent length, exclusivity periods, regulatory design) as immutable requirements of pharmaceutical innovation. The constraint is simultaneously solving a real problem (funding drug R&D, ensuring safety, coordinating complex manufacturing) and extracting rents from trapped agents (chronic patients with no alternatives).",
+    "key_agents": [
+      "Chronic Disease Patients: Primary victims (powerless/trapped) \u2014 biologically dependent on continuous medication with no exit options; bear full cost of monopoly pricing",
+      "Low-Income Populations: Secondary victims (powerless/constrained to trapped) \u2014 medication adherence reduces with cost barriers; face health consequences from treatment abandonment",
+      "Healthcare Systems: Mixed position (moderate/constrained) \u2014 coordinate drug access while experiencing extraction through price inflation; constrained by patent law and regulatory requirements",
+      "Pharmaceutical Manufacturers: Primary beneficiaries (institutional/arbitrage) \u2014 experience constraint as beneficial coordination enabling R&D recovery and innovation funding; have arbitrage options (therapeutic area shifts, market selection)",
+      "Generic Drug Manufacturers: Secondary position (powerful/constrained) \u2014 enabled by regulatory bioequivalence pathways but excluded by patent enforcement during exclusivity periods",
+      "Patent Reform Coalition: Organized agents (organized/constrained) \u2014 patient advocacy groups, international health organizations, some governments perceiving pharmaceutical dependency as temporary arrangement with sunset clause",
+      "Regulatory Agencies (FDA/EMA): Institutional actors (institutional/arbitrage) \u2014 approve drugs and set standards; maintain performative approval complexity that protects incumbents",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent policy as immutable natural law of pharmaceutical economics"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The pharmaceutical dependency economy exhibits substantial extraction through monopoly pricing, patent evergreening, and supply chain control. However, extraction is not maximal because: (a) genuine R&D costs justify some margin (estimated 10-30% of pricing), (b) regulatory complexity creates real safety/quality assurance (though with performative component), (c) manufacturing scale economies require significant capital investment. The increasing trajectory (0.42 \u2192 0.58 over 15 years) reflects rising rates of evergreening, increasing regulatory complexity, and consolidation reducing competition among manufacturers. Suppression (0.62): High. Patients experience strong suppression through: biological necessity of medication (cannot simply choose not to take treatment), legal enforceability of patents (no ability to produce generics), regulatory barriers to generic entry (expensive bioequivalence testing), geographic barriers (some regions lack generic supply chains), economic barriers (cost prevents purchase for low-income groups). Suppression is not total because: some generics eventually reach market (patent expiration), some countries invoke compulsory licensing, some patients find cost-control workarounds (medication splitting, reduced adherence, international purchasing). Theater ratio (0.55): Moderate. Approval processes maintain significant performative content: FDA/EMA review complexity, clinical trial designs often conducted on populations different from end-users, post-market surveillance rituals. However, theater is not dominant because genuine safety validation exists (manufacturing control, adverse event tracking) and is functionally valuable. Theater has increased over the interval as regulatory complexity has grown faster than genuine safety requirements (0.35 \u2192 0.55).",
+    "directionality_logic": "Each perspective's directionality is determined by structural position: (1) Chronic patients: trapped exit + victim status \u2192 high d (0.93) \u2192 high f(d) (1.38) \u2192 experience \u03c7 as high extraction. (2) Healthcare systems: constrained exit + mixed victim/beneficiary \u2192 moderate d (0.60) \u2192 moderate f(d) (0.78) \u2192 experience mixed tangled rope. (3) Manufacturers: arbitrage exit + beneficiary status \u2192 low d (0.18) \u2192 low f(d) (0.00) \u2192 experience \u03c7 as coordination. (4) Generic manufacturers: constrained exit + mixed position \u2192 moderate-high d (0.65) \u2192 f(d) (1.00) \u2192 experience as asymmetric tangled rope. (5) Reform coalition: constrained exit + organized power \u2192 lower d (0.52) \u2192 f(d) (0.65) \u2192 see extraction as surmountable through policy. The beneficiary/victim declarations (manufacturers benefit, patients/systems are victims) drive the directionality pipeline and explain why the same constraint produces snare from powerless perspective, rope from beneficiary perspective, and tangled rope from systemic perspective.",
+    "perspectival_gap": "The pharmaceutical dependency economy demonstrates maximal perspectival divergence. Chronic patients experience pure extraction (Snare) \u2014 no coordination benefit, no exit option, full cost. Manufacturers experience pure coordination (Rope) \u2014 patent protection solves the innovation funding problem, enables risk-taking, benefits their operations. Healthcare systems experience mixed tangled rope \u2014 genuine coordination (drugs reach patients) alongside extraction (prices exceed production costs plus R&D). Generic manufacturers experience constrained tangled rope \u2014 regulatory pathways coordinate bioequivalence testing but patent law extracts by excluding them from markets. Patent reform coalition sees temporary extraction (Scaffold) \u2014 sunset clauses inherent in patent law (expiration dates, exclusivity periods), policy reform (compulsory licensing, TRIPS renegotiation) providing exits. The approval ritual appears as degraded piton (institutional inertia, complexity no longer justified by safety gains). The civilizational observer risks seeing mountain (innovation requires investment, safety requires testing, complexity is inevitable) but the structural data reveals this as false summit \u2014 many contingencies (patent length choices, evergreening strategies, regulatory complexity) are policy decisions, not natural laws.",
+    "mandatrophy_analysis": "The pharmaceutical dependency economy resolves mandatrophy by acknowledging that ALL perspectives have structural validity. The constraint simultaneously solves real problems (funding drug development, ensuring safety, coordinating complex supply chains) AND extracts rents from trapped agents (chronic patients, low-income populations). This is exactly what tangled rope classification captures: genuine coordination function + asymmetric extraction + active enforcement. The mandatrophy does not arise from ambiguity about whether the constraint is good or bad \u2014 it arises from the genuine structural coexistence of coordination and extraction. The analytical observer's temptation to classify as Mountain (innovation has unavoidable costs) is a false summit: yes, some costs are necessary (R&D, safety testing, manufacturing complexity), but the actual constraint value (0.58 extractiveness, 0.62 suppression, rising theater ratio) reflects extraction beyond these necessities. The constraint is not resolved by choosing one perspective \u2014 it is resolved by recognizing the legitimacy of each perspective while rejecting the naturalization that converts contingent policy choices into inevitable laws."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "drug_access_inequality",
+      "antimicrobial_resistance_incentive_misalignment",
+      "rare_disease_orphan_drug_pricing"
+    ],
+    "dual_formulation_note": "The pharmaceutical dependency economy decomposes into multiple structurally distinct constraints: (1) drug access inequality (distribution mechanisms, geographic barriers, insurance gaps) has different \u03b5 from pricing extraction; (2) antimicrobial resistance incentive misalignment (R&D incentives poorly aligned with public health needs) is downstream of the dependency economy; (3) rare disease orphan drug pricing (small markets, no generics possible) represents a variant where suppression approaches total but extractiveness can be lower (fewer agents trapped). These are linked constraints sharing a common institutional foundation (patent law, regulatory design) but with distinct \u03b5 values and beneficiary/victim relationships."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

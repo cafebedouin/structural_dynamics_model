@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "research_publication_bias",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rpb"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Research Publication Bias",
+    "topic_domain": "academic/scientific_publishing",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "journal_publishers",
+      "positive_result_researchers",
+      "tenure_track_academics"
+    ],
+    "victims": [
+      "null_result_researchers",
+      "replication_studies_scholars",
+      "scientific_knowledge_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Null-Result Researcher",
+      "comment": "PERSPECTIVE 1: NULL-RESULT RESEARCHER (SNARE) \u2014 Structurally trapped by career dependence on publications. Publishing null results faces rejection, desk rejects, and career damage. No exit option: must publish positive results or face professional extinction. Experiences maximum extraction through publication gatekeeping and suppression of their actual findings."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Scientific Knowledge Commons",
+      "comment": "PERSPECTIVE 2: SCIENTIFIC KNOWLEDGE COMMONS (SNARE) \u2014 Cannot exit the publication system; is systematically poisoned by false positives and omitted null results. The commons has no agent to advocate for it. Suffers maximum extraction through resource waste chasing false positives and accumulated bias in documented knowledge."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Replication Scholar",
+      "comment": "PERSPECTIVE 3: REPLICATION SCHOLAR (TANGLED ROPE) \u2014 Constrained by low prestige of replication work and resource barriers, but also benefits from the publication ecosystem for disseminating replication results. Receives genuine coordination benefit (venue exists for publishing replications) alongside asymmetric extraction (replication work is undervalued). Medium experienced extraction with agency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Journal Publishers",
+      "comment": "PERSPECTIVE 4: JOURNAL PUBLISHERS (ROPE) \u2014 Experience the publication bias mechanism as pure coordination: selecting for novel, positive results attracts readers, citations, and impact factor. Net beneficiary. Can arbitrage by founding new journals or shifting publication models. Coordination function is genuine (filtering signal from noise) even though the filter is biased."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Established Researcher with Reputational Capital",
+      "comment": "PERSPECTIVE 5: ESTABLISHED RESEARCHER (ROPE) \u2014 High reputational capital provides mobile exit option: can publish negative results and still maintain career trajectory. Also benefits from coordination (prestigious journals provide visibility). Constrained chi from high f(d) but genuine coordination function. Can weather career risk that traps junior researchers."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Traditional Peer Review Process",
+      "comment": "PERSPECTIVE 6: TRADITIONAL PEER REVIEW (PITON) \u2014 Performative review ritual justified by quality control but increasingly theatrical. Reviewers cannot verify most empirical claims; acceptance decisions often rest on novelty assessment and plausibility heuristics rather than replication. Peer review persists through institutional inertia despite degraded function. Theater ratio is high because the review's gatekeeping function is real (sorts submissions) but its verification function is largely performed."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Open Science Movement",
+      "comment": "PERSPECTIVE 7: OPEN SCIENCE MOVEMENT (TANGLED ROPE) \u2014 Organized agents (preprint servers, registered reports, open-access mandates) are building alternative publication pathways. Genuine coordination function (reducing barrier to null-result publication) combined with extraction (mandatory open data requirements can impose high costs on resource-limited groups). Constrained exit because institutional change is slow; genuine agency because norms are measurably shifting."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (False Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 Risks viewing publication bias as an immutable feature of how humans process information: positive results are more salient, memorable, and publishable by nature. This perspective naturalizes what is actually a contingent institutional arrangement (journal-based reward structure, impact factor metrics, career dependence on publication counts). The engine's false summit detector will flag this as naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "publication_bias_magnitude_empirical",
+      "question": "What is the actual proportion of null results that remain unpublished across scientific disciplines?",
+      "resolution_mechanism": "Meta-analyses of trial registries (e.g., ClinicalTrials.gov) comparing registered studies to published results; file drawer effect quantification across multiple fields; arXiv preprints vs journal publications ratio analysis",
+      "impact": "If true null-suppression > 40%: extractiveness increases to 0.68+, tangled rope \u2192 snare. If < 20%: extractiveness decreases to 0.35, tangled rope \u2192 rope. Current estimates range 30-60% across biomedical research.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Quantification of unpublished null results across disciplines"
+    },
+    {
+      "id": "career_cost_null_results_specificity",
+      "question": "How much does publishing null results actually damage career trajectories in different fields and career stages?",
+      "resolution_mechanism": "Longitudinal career tracking of researchers with high null-result publication rates vs peers; analysis of tenure decisions, grant success rates, and job placement for null-result publishers; field-specific variation (molecular biology vs psychology vs physics)",
+      "impact": "If cost is severe and universal: suppression increases, transforms powertracks from constrained to trapped. If cost is low or field-dependent: suppression decreases, exit options broaden for some agents.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Career impact of publishing null results by field and stage"
+    },
+    {
+      "id": "preprint_server_efficacy_alternative",
+      "question": "Do preprint servers (arXiv, bioRxiv, medRxiv) actually reduce publication bias or merely create parallel publication systems with their own biases?",
+      "resolution_mechanism": "Comparison of result distributions (positive vs null rates) on preprint servers vs journals; analysis of which preprints get picked up by journals (selection bias within preprints); measurement of null-result visibility on preprint servers",
+      "impact": "If truly alternative: open science sunset is real, scaffold perspective confirmed. If parallel bias: constraint persists, just decentralized; piton classification for preprints.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether preprint servers provide genuine alternative to publication bias"
+    },
+    {
+      "id": "registered_reports_structural_efficacy",
+      "question": "Does the registered reports model (pre-registration + in-principle acceptance) actually prevent publication bias or does it concentrate bias at the registration stage?",
+      "resolution_mechanism": "Analysis of registered reports outcomes: what fraction get published; what fraction report originally hypothesized results; whether registration itself creates gatekeeping (selective registration of 'publishable' protocols)",
+      "impact": "If effective: extractiveness decreases, rescue mechanism confirmed. If shifted: extraction redistributes upstream (to registration gatekeepers), maintains tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Efficacy of registered reports model in preventing publication bias"
+    },
+    {
+      "id": "journal_business_model_causality",
+      "question": "Is publication bias a necessary consequence of journal business models (impact factor, subscription revenue) or a contingent choice that could be eliminated within existing institutional structures?",
+      "resolution_mechanism": "Comparison of publication bias metrics across journals with different business models (open access vs subscription, pre-registration advocates vs traditional, impact-factor-dependent funding vs alternative metrics); analysis of editor policies on null results",
+      "impact": "If necessary: constraint is harder to escape; institutional entrenchment is high. If contingent: suggests policy interventions could reduce extractiveness without system redesign.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether publication bias is inherent to journal-based publishing or contingent on specific models"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Publication bias is the systematic tendency to publish research with positive or novel results while suppressing null results, negative findings, and replications. This constraint operates through career incentives (publications count toward tenure, grants, promotion), journal incentives (positive results attract citations and readership), and cognitive biases (novel results seem more valuable). The constraint exhibits tangled rope structure: it has a genuine coordination function (journals filter signal from noise, rewarding novel findings) alongside systematic asymmetric extraction (null-result researchers and the knowledge commons bear costs while positive-result researchers and publishers benefit). The extractiveness has increased over the interval (0.35 \u2192 0.58) as metrics-based evaluation has intensified and publication counts have become more directly tied to career outcomes. The theater ratio has also increased (0.52 \u2192 0.68) as peer review has become increasingly performative relative to its verification capacity. Publication bias affects different agents asymmetrically: junior researchers without reputational capital are trapped; established researchers with tenure can exit by publishing null results; the knowledge commons cannot exit.",
+    "key_agents": [
+      "Journal Publishers: Primary beneficiary (institutional/arbitrage) \u2014 profit from positive results through citations, impact factor, subscription revenue",
+      "Tenure-Track Academics: Secondary beneficiary (powerful/mobile with high-capital subset) \u2014 benefit from publication counts and novel findings; established researchers can exit by publishing null results",
+      "Positive-Result Researchers: Beneficiary (moderate/constrained) \u2014 career trajectory reinforced by bias; publishable findings create network effects",
+      "Null-Result Researchers: Primary victim (powerless/trapped) \u2014 unpublished work creates career damage; no exit option without abandoning research",
+      "Replication Studies Scholars: Secondary victim (moderate/constrained) \u2014 replication work undervalued; face barriers to publishing but can benefit from open-science alternatives",
+      "Scientific Knowledge Commons: Tertiary victim (powerless/trapped) \u2014 systematically contaminated with false positives; accumulates bias in documented knowledge; abstract collective good with no agent advocate",
+      "Open Science Coalition: Organized agents (organized/constrained) \u2014 building alternative pathways (preprints, registered reports, open access) that reduce bias but also impose new costs"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Publication bias imposes substantial costs on null-result researchers through career damage, resource waste on failed replications, and lost research productivity. The extraction is not maximal because: (1) alternative publication venues exist (preprints, some specialized journals), (2) meta-scientific work on publication bias is increasing visibility, (3) some fields (physics, chemistry) show lower bias than others (psychology, biomedicine). The trajectory from 0.35 \u2192 0.58 reflects intensification of metrics-based evaluation over the past decade. Suppression (0.65): Moderate-high. Barriers to null-result publication include desk rejects, reviewer bias toward novelty, career risk, reduced citations, and funding consequences. But suppression is not total \u2014 some researchers do publish null results and maintain careers, and preprint servers reduce formal publication barriers. Theater ratio (0.68): High. Peer review for novel results is substantially performative: reviewers assess novelty and plausibility but cannot verify empirical claims at scale. The editorial process for positive results focuses on significance and saliency rather than replicability. The performance is rising as journals emphasize impact-factor optimization and acceptance decisions drift toward marketing logic.",
+    "directionality_logic": "Directionality is determined by each agent's structural position. Null-result researchers have high d (0.95+) \u2014 they are victims experiencing maximum extraction through suppressed publication. Journal publishers have low d (0.05-0.15) \u2014 they are beneficiaries whose interests align with the bias. Established researchers have moderate d (0.40-0.50) \u2014 they benefit from the system but have exit options. Replication scholars have high-moderate d (0.65-0.75) \u2014 they bear extraction costs but can also publish through alternative venues. The knowledge commons has maximum d (0.99) \u2014 abstract victim with no agency. Directionality flows from beneficiary/victim declarations and exit option capacity: trapped agents get high d and experience maximum f(d); arbitrage-capable agents get low d and experience negative effective extraction.",
+    "perspectival_gap": "The perspectival gap between null-result researchers (snare) and journal publishers (rope) is maximal. Publishers see the bias as a coordination mechanism \u2014 they filter for significance and novelty, solving the publication problem of separating signal from noise. Null-result researchers see the same mechanism as pure extraction \u2014 their work is suppressed regardless of quality because it lacks positive findings. The open-science coalition sees a constraint that can be sunset through alternative publication models. Established researchers see a manageable coordination challenge they can navigate with reputational capital. The knowledge commons sees systematic contamination it cannot escape. The analytical observer risks naturalizing the bias as an immutable feature of scientific attention rather than a contingent institutional arrangement. The gap reveals that 'what is this constraint?' depends entirely on power position and exit options.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: Publication bias is NOT misclassified extraction presented as coordination. It genuinely serves coordination functions (filtering, priority-setting, resource allocation to novel claims) while simultaneously extracting asymmetrically from null-result researchers. Both aspects are structurally real. The tangled rope classification holds. However, the constraint's classification changes under different temporal horizons and power positions: from the immediate perspective of a powerless null-result researcher, it is a snare (maximum extraction, no exit). From the generational perspective of the knowledge commons, it is also a snare (systematic contamination of knowledge). From the immediate perspective of publishers, it is rope (pure coordination). From the generational perspective of the open-science movement, it is a temporary constraint with a sunset \u2014 the scaffold classification emerges as alternative publication pathways mature. No single type is correct \u2014 the constraint IS a tangled rope that appears as snare to trapped agents and rope to beneficiaries. The mandatrophy resolves by acknowledging this perspectival reality rather than trying to force a single type."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "research_replication_crisis",
+      "career_incentive_misalignment",
+      "scientific_knowledge_accumulation_bias"
+    ],
+    "dual_formulation_note": "Publication bias decomposes into multiple structurally distinct constraints: (1) journal editor selection bias (\u03b5=0.42, tangled rope), (2) researcher career incentive misalignment (\u03b5=0.65, snare), (3) null-result suppression dynamics (\u03b5=0.58, snare). This story represents the system-level constraint encompassing all three. Downstream constraints inherit publication bias as a causal prerequisite."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ]
+}

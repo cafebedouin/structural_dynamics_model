@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "spectrum_allocation_monopoly",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "spec_alloc"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "Spectrum Allocation Monopoly in Wireless Communications",
+    "topic_domain": "regulatory/telecommunications/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_carriers",
+      "regulatory_agencies"
+    ],
+    "victims": [
+      "spectrum_access_seekers",
+      "consumer_innovation_potential"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "New Market Entrants",
+      "comment": "PERSPECTIVE 1: NEW MARKET ENTRANTS (SNARE) \u2014 Face absolute barriers to spectrum access. Licensing costs exceed billions; no secondary market permits real-time frequency trading. Entry into wireless markets is functionally impossible without spectrum allocation approval from regulatory gatekeepers. Maximum suppression and extraction with zero exit options."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Spectrum-Dependent Technologies",
+      "comment": "PERSPECTIVE 2: SPECTRUM-DEPENDENT INNOVATION (SNARE) \u2014 Entire technology development pathways (IoT, autonomous vehicles, next-generation cellular) are blocked by spectrum scarcity that is partly artificial. The constraint is generational because decades of missed innovation cannot be recovered. Technologies requiring spectrum access but lacking incumbent backing face extinction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Incumbent Carriers",
+      "comment": "PERSPECTIVE 3: INCUMBENT CARRIERS (ROPE) \u2014 Benefit from exclusive spectrum allocations. Experience the constraint as coordination: managing interference between licensed users, coordinating spectrum-sharing standards, communicating technical requirements to regulators. Net beneficiaries with full exit optionality (can divest, merge, or operate in alternative markets). The constraint subsidizes their market position."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regulatory Agency",
+      "comment": "PERSPECTIVE 4: REGULATORY AGENCY (TANGLED ROPE) \u2014 Manages the allocation mechanism through auctions and licensing. Experiences genuine coordination function (preventing interference, assigning frequencies efficiently) alongside asymmetric extraction (agency captures auction revenue, controls market structure through allocation decisions). Active enforcement required; cannot exit without legislative restructuring."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Command-and-Control Allocation Model",
+      "comment": "PERSPECTIVE 5: COMMAND-AND-CONTROL MODEL (PITON) \u2014 The original allocation mechanism (regulatory assignment of specific bands to specific users) was designed for radio scarcity in 1930-1950s. Modern technology enables dynamic spectrum sharing, cognitive radio, and real-time frequency negotiation. The command-and-control model persists through regulatory inertia despite being technically obsolete. Theater ratio is moderate because the model still performs its assigned function (preventing interference) but does so through increasingly theatrical scarcity assertions rather than genuine technical limits."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, spectrum allocation serves real coordination functions (interference prevention, band standardization) while simultaneously enabling rent extraction. The constraint is not a mountain: spectrum scarcity is partly artificial\u2014driven by regulatory allocation choices rather than physics. Cognitive radio and dynamic spectrum access technologies could reduce artificial scarcity, but implementation is blocked by incumbent incumbency and regulatory path dependence. The asymmetric extraction of benefit toward incumbents is the operative mechanism."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "artificial_vs_physical_scarcity",
+      "question": "How much of observed spectrum scarcity is physical (inherent to radio propagation) versus artificial (regulatory allocation choices)?",
+      "resolution_mechanism": "Technical analysis of spectrum utilization efficiency; deployment of dynamic spectrum access technologies in controlled environments; international comparison of allocation schemes and resulting market structure",
+      "impact": "If predominantly physical: constraint should be reclassified as mountain (unavoidable law of physics). If predominantly artificial: classification as snare/tangled_rope confirmed \u2014 incumbency protection is the operative mechanism.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of scarcity that is physical versus regulatory"
+    },
+    {
+      "id": "cognitive_radio_deployment_viability",
+      "question": "Can cognitive radio and dynamic spectrum sharing technologies achieve practical deployment at scale, or do they face insurmountable technical obstacles?",
+      "resolution_mechanism": "Real-world cognitive radio pilots; engineering analysis of interference mitigation reliability; measurement of spectrum utilization efficiency gains",
+      "impact": "If viable: the piton classification is correct \u2014 command-and-control is technically obsolete and maintained by inertia. If not viable: spectrum scarcity enforcement becomes a genuine technical requirement, supporting the natural law argument.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical viability of dynamic spectrum access at scale"
+    },
+    {
+      "id": "incumbent_investment_lock_in",
+      "question": "To what extent does incumbent infrastructure investment (base stations, device compatibility, spectrum licensing) create irreversible path dependence that justifies regulatory protection?",
+      "resolution_mechanism": "Economic analysis of sunk cost recovery timelines; comparison to other infrastructure-heavy industries (power grids, transportation networks) and their regulatory treatment; assessment of stranded asset risk if allocation schemes change",
+      "impact": "If lock-in is severe: tangled_rope classification justified (genuine coordination cost + legitimate protection). If lock-in is manageable: classification tilts toward snare \u2014 incumbency protection is rent extraction rather than necessary coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of irreversible infrastructure lock-in"
+    },
+    {
+      "id": "spectrum_auction_design_alternatives",
+      "question": "Would alternative auction designs (continuous markets, spectrum trading, dynamic allocation mechanisms) materially reduce extraction compared to current static allocation auctions?",
+      "resolution_mechanism": "Auction theory analysis; comparison to spectrum trading pilots (US 600MHz incentive auctions, Australia unlicensed band experiments); economic modeling of market efficiency gains",
+      "impact": "If alternatives are superior: current auction design is a choice supporting incumbent extraction. If alternatives perform worse or equivalently: auction design is defensible coordination mechanism.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether alternative auction mechanisms reduce extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Spectrum allocation monopoly represents a structural constraint where regulatory gatekeepers control access to a finite but partially artificially-scarce resource\u2014the radio frequency spectrum. The constraint exhibits high extractiveness (0.68) because incumbent carriers capture enormous economic rents through exclusive spectrum allocations, while new entrants face functionally insurmountable barriers to market entry. Suppression is particularly high (0.72) because spectrum access is fundamentally regulated: there is no black market, no workaround, and no secondary mechanism for acquiring spectrum allocation rights outside the official regulatory process. The theater ratio (0.45) is moderate because the constraint maintains genuine technical function (preventing radio interference) while simultaneously serving extractive incumbency protection. Over the 30-year measurement interval, extractiveness has increased from 0.45 to 0.68 as the value of spectrum has grown with wireless technology adoption, while theater ratio has declined from 0.55 to 0.45\u2014indicating that the technical justification for spectrum allocation has weakened (modern technologies like cognitive radio and unlicensed band sharing make command-and-control allocation increasingly obsolete), yet the extraction mechanism persists and strengthens.",
+    "key_agents": [
+      "New Market Entrants: Primary victims (powerless/trapped) \u2014 face multi-billion-dollar barriers to spectrum access; functionally excluded from wireless markets",
+      "Spectrum-Dependent Innovation Pathways: Secondary victims (powerless/trapped) \u2014 entire technology development streams (IoT, autonomous systems, next-gen cellular) blocked by artificial scarcity",
+      "Incumbent Carriers: Primary beneficiaries (institutional/arbitrage) \u2014 capture economic rents from exclusive spectrum allocations; experience constraint as coordination mechanism",
+      "Regulatory Agencies: Secondary beneficiary (institutional/constrained) \u2014 capture auction revenue; maintain control over market structure; experience constraint as both coordination and enforcement mechanism",
+      "Command-and-Control Allocation Model: Institutional arrangement (institutional/arbitrage) \u2014 technically obsolete but maintained through regulatory inertia (piton classification)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 recognizes constraint as hybrid coordination-extraction with growing extractive component as technological alternatives emerge"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. Incumbency carriers enjoy monopolistic pricing power within allocated spectrum bands; entry barriers prevent competitive discipline. The measure reflects that new entrants face an effective license requirement costing 5-50 billion USD for viable national coverage, with no assurance of approval. Over 30 years, extractiveness grew from 0.45 to 0.68 as spectrum became more economically valuable and allocation scarcity tightened, but the growth flattened after year 20 as regulations began opening unlicensed bands (WiFi, Bluetooth) providing alternatives for some applications. Suppression (0.72): Very high. Spectrum allocation is a regulated monopoly with no secondary market, no black market alternatives, and no exit other than complete market withdrawal. Unlike capital markets (where barriers to entry exist but can be overcome with sufficient funding), spectrum access cannot be obtained through side channels. This produces the high suppression characteristic of snare classifications. Theater ratio (0.45): Moderate-low. The constraint maintains genuine technical function\u2014radio interference prevention requires coordination, and licensed bands genuinely reduce harmful interference. However, this legitimate function is undermined by the fact that (1) unlicensed bands and modern spectrum-sharing technologies demonstrate that much coordination could occur through technical standards rather than regulatory allocation, (2) the allocation process itself has become increasingly performative (auctions generating revenue rather than optimizing allocation), and (3) command-and-control assignment is technically obsolete relative to cognitive radio alternatives. Theater declined from 0.55 to 0.45 over the interval as technological alternatives (dynamic spectrum access, unlicensed band success) made the original regulatory justification increasingly untenable, yet the constraint strengthened extractively. This pattern\u2014declining theater with rising extractiveness\u2014is characteristic of constraints where the original coordination function has been replaced by rent-seeking through regulatory capture.",
+    "perspectival_gap": "This constraint produces a dramatic perspectival gap between incumbents and entrants. Incumbent carriers perceive the constraint as pure coordination (Rope perspective): they are solving the real problem of radio interference and standardization, and the exclusive allocations are a proportionate incentive for infrastructure investment. New entrants perceive the constraint as pure extraction (Snare perspective): they face absolute barriers to market entry, preventing any competitive pressure on pricing or innovation. The regulatory agency occupies an intermediate position (Tangled Rope): it performs legitimate coordination (spectrum conflict prevention, auction administration) while simultaneously extracting rent (through auction revenue and control over market structure) and serving incumbent interests (through allocation decisions that favor incumbents). The analytical observer recognizes that all these perspectives are partially correct\u2014the constraint does coordinate interference prevention, but it also extracts, and the extractive component has grown as technological alternatives have emerged. The piton classification of the command-and-control model itself reflects that this once-necessary institutional arrangement is maintained through inertia despite being technically obsolete.",
+    "directionality_logic": "Each perspective's directionality d derives from the agent's structural relationship to spectrum allocation. Incumbent carriers are beneficiaries with arbitrage options (can divest, merge, operate internationally)\u2014they experience low d (beneficiary modifier reduces directionality) and thus low/negative effective extraction \u03c7. The regulatory agency is a beneficiary (captures auction revenue) with constrained exit (cannot abandon allocation authority without legislative restructuring)\u2014moderate d reflecting mixed extraction and coordination. New entrants are victims (excluded from spectrum access) with trapped exit (no alternative to regulatory approval)\u2014they experience maximum d and thus maximum effective extraction \u03c7. The divergence between incumbent and entrant perspectives is therefore structurally determined: the same constraint produces opposite classifications because the agents occupy opposite positions in the extraction flow. Suppression applies uniformly across all perspectives because spectrum scarcity is a hard constraint (regulatory monopoly on allocation)\u2014no agent can simply acquire spectrum outside official channels regardless of their power level.",
+    "mandatrophy_analysis": "RESOLVES VIA EXTRACTION ASYMMETRY: The mandatrophy is resolved by the asymmetric victim/beneficiary structure. The constraint genuinely coordinates interference prevention (beneficiary perspective: Rope) while genuinely extracting from excluded competitors (victim perspective: Snare). The tangled_rope classifications (regulatory agency, analytical observer) confirm the hybrid structure. The mandatrophy would be unresolved if the constraint were purely extraction (snare-only) or purely coordination (rope-only) with no agent perceiving mixed function. But here, the inconsistency between perspectives is not due to measurement ambiguity\u2014it is due to structural position. Incumbents and entrants genuinely experience opposite constraint types because they occupy opposite positions relative to the extraction mechanism. The analytical observer recognizes this as the constraint's true structure: it is a snare for those excluded, a rope for those included, and a mechanism for incumbent rent extraction regardless of perceived coordination benefit. The rising extractiveness over 30 years (0.45\u21920.68) with declining theater (0.55\u21920.45) confirms that the coordination function is increasingly secondary to the extraction function as technological alternatives emerge and the original scarcity justification weakens."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "cellular_market_concentration",
+      "broadband_access_inequality",
+      "iot_deployment_fragmentation"
+    ],
+    "dual_formulation_note": "Spectrum allocation monopoly can be decomposed into two structurally distinct constraints: (1) interference_prevention_coordination (\u03b5\u22480.08, Mountain/Rope) \u2014 the technical requirement to prevent radio interference, a genuine law of physics/engineering, and (2) incumbent_market_protection (\u03b5\u22480.68, Snare) \u2014 the regulatory choice to limit spectrum access to protect incumbent market position. These constraints are often conflated in policy discourse, with the interference prevention argument used as a cover story for market protection. The current JSON models the combined constraint as experienced by stakeholders. Decomposition would require separate stories for the pure coordination function versus the incumbent protection mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.62
+    }
+  ]
+}

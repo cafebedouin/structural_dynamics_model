@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "ihl_proportionality_justification",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ihl_prop"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "IHL Proportionality Justification in Armed Conflict",
+    "topic_domain": "international_humanitarian_law/military_operations",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "military_forces_conducting_operations"
+    ],
+    "victims": [
+      "civilian_populations_in_conflict_zones",
+      "international_humanitarian_law_compliance"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Civilian Population Under Fire",
+      "comment": "PERSPECTIVE 1: CIVILIAN POPULATION (SNARE) \u2014 Trapped in conflict zones with no exit capacity. Bears full cost of proportionality calculations that systematically undervalue civilian harm relative to military advantage. Cannot organize, cannot appeal, cannot escape the constraint. Maximum experienced extraction through exposure to attacks justified by opaque proportionality reasoning."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Humanitarian Monitor (NGO/IO)",
+      "comment": "PERSPECTIVE 2: HUMANITARIAN MONITOR (SNARE) \u2014 Constrained by access restrictions, funding dependence, and retaliation risk. Observes proportionality calculations but has limited capacity to challenge or verify them. Faces suppression through denial of access, expulsion, or security threats. Moderate power but trapped by structural barriers to investigation and advocacy."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Military Command Structure",
+      "comment": "PERSPECTIVE 3: MILITARY COMMAND (ROPE) \u2014 Experiences proportionality doctrine as legitimate coordination mechanism: it enables operations while nominally respecting civilian protection. Possesses arbitrage exit (operational flexibility). Benefits from proportionality framework by legitimizing military action and deflecting accountability. Sees the constraint as coordination, not extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Legal Apparatus",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL LEGAL APPARATUS (PITON) \u2014 Maintains proportionality doctrine through treaty language, court opinions, and legal training despite structural inability to verify or enforce the doctrine. Theater ratio high: elaborate proportionality analyses in military reports and legal opinions performed with ceremonial rigor while actual decision-making remains opaque. Institutional inertia maintains the form of IHL compliance without functional verification."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "State Actors (Non-Combatants)",
+      "comment": "PERSPECTIVE 5: STATE ACTORS (NON-COMBATANTS) (TANGLED ROPE) \u2014 Powerful states not engaged in active combat benefit from proportionality doctrine as soft power mechanism (imposes constraints on adversaries) while maintaining operational flexibility. Mobile exit (can disengage from humanitarian advocacy). Genuine coordination function (international law promotes predictability) paired with asymmetric extraction (norm allows powerful militaries to conduct operations that weaker actors cannot justify). Moderate experienced extraction offset by coordination benefits."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Epistemic Limit View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / EPISTEMIC LIMIT VIEW (MOUNTAIN) \u2014 From civilizational perspective, proportionality is an irreducible epistemic constraint: military commanders cannot perfectly calculate civilian harm ex ante, and any rule of proportionality must tolerate some opacity. This perspective risks naturalizing a contingent institutional failure (inability to verify proportionality calculations) as a law of warfare. Engine false summit detection applies: the mountain classification reveals naturalization rather than inherent limit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "proportionality_verification_impossibility",
+      "question": "Is proportionality verification structurally impossible or merely institutionally absent?",
+      "resolution_mechanism": "Technology assessment: can real-time proportionality auditing (drone footage, targeting data, collateral damage estimates) be made mandatory and transparent? If yes, verification is institutionally absent; if no, verification is epistemically impossible.",
+      "impact": "If verification is possible but withheld: snare classification is confirmed \u2014 the constraint is enforcement mechanism for extraction. If verification is impossible: proportionality becomes mountain-like epistemic constraint, but still subject to institutional choice (transparency vs opacity).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether proportionality verification is structurally impossible or institutionally withheld"
+    },
+    {
+      "id": "military_advantage_measurement_commensurability",
+      "question": "Can military advantage and civilian harm be measured on commensurable scales for genuine proportionality calculation?",
+      "resolution_mechanism": "Analysis of proportionality decisions in military targeting: what units and metrics are used for advantage vs harm? Are they comparable or incommensurable? Review of cases where proportionality calculations were documented.",
+      "impact": "If incommensurable: proportionality is theater (calculations mask preference-based decisions). If commensurable: proportionality could be objective constraint, dependent on accuracy of harm estimation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Commensurability of military advantage and civilian harm metrics"
+    },
+    {
+      "id": "substitution_effects_in_constraint_architecture",
+      "question": "Does IHL proportionality constraint reduce total civilian harm or merely shift extraction timing and location?",
+      "resolution_mechanism": "Comparative analysis: total civilian casualties in conflicts governed by IHL vs non-IHL contexts, controlling for conflict type and intensity. Does proportionality reduce harm or redistribute it across time/space/civilian groups?",
+      "impact": "If harm reduction: constraint has coordination function. If harm redistribution: constraint is pure extraction mechanism with zero net protective effect.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether proportionality reduces or redistributes civilian harm"
+    },
+    {
+      "id": "accountability_decoupling_mechanism",
+      "question": "Does proportionality doctrine operate as a decoupling mechanism \u2014 creating appearance of restraint while enabling extraction without accountability?",
+      "resolution_mechanism": "Analysis of proportionality justifications in post-conflict accountability: how many proportionality-based decisions are later contested or reversed? What is prosecution rate for violations? Does doctrine create safe harbor for decision-makers?",
+      "impact": "If high decoupling: snare classification confirmed \u2014 proportionality is accountability theater. If low decoupling: doctrine has genuine constraining force.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether proportionality doctrine decouples decision-making from accountability"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.63
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The International Humanitarian Law doctrine of proportionality mandates that parties to armed conflict balance expected military advantage against anticipated civilian harm. Proportionality operates as a constraint on targeting, mandatory in principle but opaque in practice. Military commanders conduct proportionality analysis before strikes; legal advisors review targeting decisions; post-conflict accountability mechanisms assess proportionality claims. Yet the mechanism exhibits classical extraction architecture: suppression of verification (targeting decisions remain classified), theater (elaborate legal memoranda justify decisions that were likely made on operational grounds), and asymmetric distribution (civilians bear maximum cost of proportionality calculations that systematically undervalue their harm). The constraint has genuinely coordinated at times \u2014 proportionality doctrine has prevented some operations and shifted others to lower-harm alternatives. But the overall pattern across 30+ years of case law shows theater_ratio increasing (more elaborate justifications accompanying similar harm patterns) and civilian protection declining. The constraint simultaneously enables operations that would otherwise violate community norms and creates the appearance of restraint without functional verification.",
+    "key_agents": [
+      "Civilian Population: Primary victim (powerless/trapped) \u2014 bears cost of proportionality calculations with no voice in input, no visibility into calculation, no appeal mechanism",
+      "Military Command: Primary beneficiary (institutional/arbitrage) \u2014 benefits from proportionality doctrine by legitimizing operations while maintaining operational flexibility through opacity",
+      "International Legal Apparatus: Institutional actor (institutional/constrained) \u2014 maintains proportionality framework through theater despite structural inability to verify underlying calculations",
+      "Humanitarian Monitors: Secondary agent (moderate/constrained) \u2014 observe proportionality claims but lack access to targeting data and face suppression through denial and retaliation",
+      "State Actors (Non-Combatants): Secondary beneficiary (powerful/mobile) \u2014 benefit from proportionality as soft power constraint on adversaries while maintaining exit from humanitarian accountability",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing institutional failure (verification absence) as epistemic necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Proportionality enables military operations while creating appearance of restraint. The extraction derives from systematic undervaluation of civilian harm (proportionality calculations weight military advantage heavily relative to civilian cost), opacity of calculations (military decision-making remains classified), and asymmetric burden (only civilians bear cost of calculation errors). Base value (0.38 at interval start) reflects that proportionality doctrine has prevented some operations; current value (0.58) reflects that harm prevention has declined as theater has increased. Suppression (0.72): High. Multiple mechanisms suppress verification: targeting data classified as military secret, post-conflict access to documentation restricted, humanitarian monitors denied access to operational areas, accountability proceedings rare and lengthy. Exit barriers for civilians are insurmountable; for military, proportionality doctrine is optional in practice. Theater ratio (0.68): High and increasing. Proportionality legal memoranda elaborate continuously while operational logic remains unchanged. As conflicts persist, theater increases (more sophisticated justifications for stable harm patterns) \u2014 Goodhart substitution effect. Initial theater (0.45) reflects early period when proportionality was enforced through rules; current theater (0.72) reflects period when proportionality has become ceremonial justification.",
+    "perspectival_gap": "The five-way split reveals that 'the' proportionality constraint is actually multiple structurally distinct constraints layered on top of each other: (1) the legal doctrine (Rope for military, Piton for legal apparatus), (2) the verification mechanism (Snare due to suppression), (3) the accountability system (Piton \u2014 ceremonial rather than functional), (4) the humanitarian protection norm (aspirational Rope, actual Snare). The perspectival gap shows that proportionality has coordination function (prevents some operations) but extraction function (enables others that opaque calculations justify). The military sees benefit (coordination); civilians see cost (extraction); observers see performance (theater).",
+    "directionality_logic": "Directionality d values derive from each agent's relationship to the extraction flow. Trapped civilians experience maximum d (~0.95) \u2192 highest experienced extractiveness. Constrained humanitarian monitors experience moderate-high d (~0.80). Institutional military with arbitrage options experience low d (~0.15) \u2192 negative or near-zero effective extraction (they are beneficiaries). Non-combatant states experience moderate d (~0.55) \u2014 they coordinate through proportionality doctrine (benefits) but also practice it (costs), producing mixed directionality. The analytical context experiences d ~0.72 (observer position trying to measure from outside the extraction). The piton classification does not derive from high experienced extraction but from high theater ratio indicating functional decay while institutional form persists.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED VIA DECOMPOSITION: The proportionality constraint conceals two structurally distinct mechanisms: (1) Genuine proportionality norm (Rope) \u2014 when verification is transparent, calculation is honest, and accountability is real, proportionality prevents excessive harm. This has coordination function. (2) Proportionality theater (Snare) \u2014 when verification is suppressed, calculations are opaque, and accountability is absent, proportionality becomes mechanism for legitimizing predetermined military decisions while appearing to constrain them. This is pure extraction. The measured constraint (extractiveness 0.58, theater 0.68) is the blended average of two distinct mechanisms at different strength levels. The increasing theater_ratio (0.45 \u2192 0.68) reveals the degradation path: as functional verification declined, theater increased \u2014 the form persisted while the function decayed. The mandatrophy resolves by recognizing that proportionality contains both a real coordination function and a real extraction mechanism, making it structurally Tangled Rope at the blended level or Snare at the functional level (treating theater as a distinct constraint story that should be decomposed)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "military_necessity_doctrine",
+      "distinction_principle_in_warfare",
+      "civilian_casualty_accountability"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "header": {
+    "constraint_id": "blockchain_mining_centralization",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bmc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Blockchain Mining Centralization",
+    "topic_domain": "cryptocurrency/distributed_systems/economic_incentives",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_mining_pools",
+      "asic_manufacturers",
+      "electricity_providers_in_low_cost_regions"
+    ],
+    "victims": [
+      "small_miners",
+      "network_decentralization",
+      "energy_security"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Individual Miner",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL MINER (SNARE) \u2014 Solo miners face escalating hardware costs and electricity requirements that make independent operation economically unviable. Joining mining pools extracts a 1-4% fee while eliminating independence. Exit means abandoning mining entirely. Maximum extraction experienced by individual actors without coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Small Mining Operation",
+      "comment": "PERSPECTIVE 2: SMALL MINING OPERATION (TANGLED ROPE) \u2014 Regional operations coordinate with other miners through pools and achieve some economies of scale. Constrained by hardware sourcing bottlenecks and electricity cost variation. Experiences both coordination benefits (shared infrastructure, reduced variance) and extraction (pool fees, difficulty adjustment punishing small operations)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Large Mining Pool Operator",
+      "comment": "PERSPECTIVE 3: LARGE MINING POOL OPERATOR (ROPE) \u2014 Benefits from network effects and arbitrage opportunities. Sees centralization as coordination of hashing power and variance reduction. Operates across jurisdictions to optimize electricity costs. Net beneficiary \u2014 extraction flows toward this actor."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Protocol Development Community",
+      "comment": "PERSPECTIVE 4: PROTOCOL DEVELOPMENT COMMUNITY (TANGLED ROPE) \u2014 Organized actors (core developers, research communities) coordinate on protocol upgrades to mitigate centralization (difficulty adjustments, mining algorithm changes). Constrained by backwards compatibility and political consensus requirements. Genuine coordination function (maintaining protocol security) alongside extraction pressure (mining pool control of upgrade signaling)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "ASIC Manufacturer",
+      "comment": "PERSPECTIVE 5: ASIC MANUFACTURER (TANGLED ROPE) \u2014 Powerful actor (institutional capability) with mobile exit options (can pivot to other chip markets). Benefits from Moore's law-driven hardware obsolescence cycle. Coordinates with mining pools through hardware specifications and firmware optimization. Experiences mixed extraction and coordination \u2014 drives commoditization of mining while accumulating rents from first-mover chip advantages."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Decentralization Advocates",
+      "comment": "PERSPECTIVE 6: DECENTRALIZATION ADVOCATES (PITON) \u2014 Organized movement maintaining narrative that mining decentralization is inherent to blockchain design. Theater ratio high: proof-of-work decentralization rhetoric persists despite clear empirical centralization trend. Advocates see their own framing as degraded (performative commitment to decentralization despite accepting centralized pools). Exit constrained by ideological commitment to blockchain's founding narrative."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a computational complexity perspective, mining centralization may appear as natural law: economies of scale, fixed costs, and hardware optimization create unavoidable convergence toward large-scale operations. This perspective risks false summit: treating contingent economic incentive structures as immutable physical limits."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "pool_cartelization_mechanism",
+      "question": "Are large mining pools operating as a cartel restricting hash distribution, or does their centralization reflect genuine economies of scale that no solo operator can overcome?",
+      "resolution_mechanism": "Analysis of pool fee structures over time; comparison of solo mining profitability curves before and after pool emergence; statistical test for artificial fee maintenance above competitive equilibrium",
+      "impact": "If cartel: classification shifts toward Snare for powerless agents (extraction mechanism is legal coordination mimicking competition). If genuine economy of scale: classification remains Tangled Rope (extraction is incidental to coordination efficiency).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether mining pool centralization is cartelization or genuine economy of scale"
+    },
+    {
+      "id": "algorithm_switching_feasibility",
+      "question": "Can proof-of-work algorithms be modified to eliminate ASIC advantages and restore commodity hardware mining, or does ASIC resistance inevitably create new forms of centralization?",
+      "resolution_mechanism": "Examination of past algorithm change attempts (Monero XMR-V8, etc.); measurement of ASICization timeline post-algorithm change; analysis of capital requirements for GPU vs ASIC mining at different block reward levels",
+      "impact": "If feasible: decentralization is reversible, constraint is Scaffold with sunset (technical solutions available). If infeasible: centralization is structural, constraint hardens toward Snare (no exit path for solo miners).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether ASIC resistance is technically achievable long-term"
+    },
+    {
+      "id": "geographic_electricity_arbitrage_irreversibility",
+      "question": "Does the geographic concentration of mining toward low-electricity-cost regions (Iceland, El Salvador, crypto-friendly jurisdictions) represent temporary arbitrage or structural capture of mining by capital flows?",
+      "resolution_mechanism": "Mapping of mining farm locations and electricity costs over 10-year period; correlation of hash distribution with electricity price maps; analysis of whether electricity-rich but politically unfriendly regions (nuclear-heavy jurisdictions without crypto support) remain unmined",
+      "impact": "If temporary arbitrage: mining can re-distribute if electricity costs shift. If structural capture: centralization reflects permanent capital lock-in and regulatory permissioning, hardening toward Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether geographic mining concentration is reversible arbitrage or structural capital lock-in"
+    },
+    {
+      "id": "protocol_upgrade_veto_power",
+      "question": "Do large mining pools exercise de facto veto power over protocol upgrades (via signaling mechanisms), or do developers retain effective control through social consensus?",
+      "resolution_mechanism": "Historical analysis of protocol upgrades (Bitcoin SegWit2x, block size wars); measurement of correlation between miner signaling and final protocol outcome; identification of cases where miner preference was overridden by community consensus",
+      "impact": "If miners have veto: extraction includes governance capture, constraint shifts toward Snare (powerless users cannot change rules). If developers retain control: extraction is economic only, constraint remains Tangled Rope (coordination still functions).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether mining pools hold de facto veto power over protocol governance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Blockchain mining centralization represents a structural tension between the proof-of-work consensus mechanism's theoretical requirement for distributed participation and the economic incentives that converge participation toward large-scale, capital-intensive operations. The constraint exhibits all six DR types from different perspectives: solo miners experience pure extraction (Snare), small operations experience mixed coordination-extraction (Tangled Rope), large pools coordinate efficiently (Rope), developers coordinate protocol upgrades under extraction pressure (Tangled Rope), ASIC manufacturers operate with mobile exit (Tangled Rope), decentralization advocates maintain performative commitment to distributed ideals (Piton), and analytical observers risk naturalizing contingent economic structures as immutable law (Mountain). The extractiveness trajectory (0.28 \u2192 0.58 over 10 years) reflects accelerating hardware specialization and economies of scale. Theater ratio (0.32 \u2192 0.48) reflects increasing performative commitment to decentralization despite measured empirical centralization in hash distribution. The constraint is fundamentally about who captures the economic rents from the shared verification work that secures the protocol.",
+    "key_agents": [
+      "Solo Miners: Primary victim (powerless/trapped) \u2014 face continuous equipment obsolescence and electricity cost barriers; economic exit is forced consolidation or abandonment",
+      "Small Mining Operations: Secondary victim (moderate/constrained) \u2014 achieve some scale but constrained by capital access and electricity procurement; in precarious position between commoditization and consolidation",
+      "Large Mining Pool Operators: Primary beneficiary (institutional/arbitrage) \u2014 capture network effects and operate across jurisdictions for electricity arbitrage; coordinate hashing power and distribute variance",
+      "ASIC Manufacturers: Secondary beneficiary (powerful/mobile) \u2014 design specialized hardware; capture rents from first-mover advantage and obsolescence cycles; coordinate with pools on firmware optimization",
+      "Protocol Developers: Organized coordinator (organized/constrained) \u2014 attempt to maintain decentralization through algorithm and difficulty adjustment changes; constrained by backwards compatibility and consensus requirements; extraction pressure from miners over upgrade signaling",
+      "Electricity Providers in Low-Cost Regions: Incidental beneficiary (institutional/arbitrage) \u2014 benefit from mining farm clustering; coordinate infrastructure provisioning",
+      "Decentralization Movement: Organized advocate (organized/constrained) \u2014 maintain ideological commitment to distributed mining; constrained by historical narrative; see own framing as degraded (Piton perspective)",
+      "Network Security (Abstract): Primary victim (powerless/trapped) \u2014 centralized mining increases 51% attack risk; cannot organize or represent its own interests"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High. Solo and small miners face escalating barriers to profitable independent operation. Hardware costs grow exponentially; electricity costs provide a structural moat; pool participation extracts 1-4% fees. The trajectory from 0.28 to 0.58 reflects Moore's law driving ASIC specialization faster than difficulty adjustment can accommodate individual miners. Suppression (0.65): High. Individual miners face multiple suppression mechanisms: hardware obsolescence (replaced within 1-2 years), electricity cost heterogeneity (not addressable by individual operator), pool cartelization risk (1-4% fee lock-in with limited exit), and geographic permissioning (some jurisdictions hostile to mining). However, suppression is not total \u2014 solo mining remains technically possible, and some geographic arbitrage exists. Theater ratio (0.48): Moderate. The 'decentralization' narrative for proof-of-work systems persists despite clear empirical centralization trend. The narrative emphasizes 'anyone can mine' while obscuring that profitability has converged to large-scale operations. Theater has increased over the measurement interval as the gap between rhetoric and observed Nakamoto coefficient has widened.",
+    "directionality_logic": "Directionality (d) for each perspective derives from structural position relative to extraction flow. Solo miners (powerless/trapped): d \u2248 0.95 (near-total victims, no exit capacity). Small operations (moderate/constrained): d \u2248 0.60 (significant victims, but some organizational capacity). Large pools (institutional/arbitrage): d \u2248 0.10 (beneficiaries with exit options). Pool operators have arbitrage options (relocate operations, pivot to other verification systems); solo miners face extracted rents with no recovery path. Protocol developers (organized/constrained) experience d \u2248 0.50 (symmetric position \u2014 both benefit from mining's security provision and bear cost of centralization pressure on governance). ASIC manufacturers have mobile exit (d \u2248 0.25 as powerful actors with hedge options into other chip markets). The constraint's effective extractiveness \u03c7 is scaled by network power asymmetry (f(d)) and global scope (\u03c3(global) = 1.2), amplifying the extraction visible at large spatial scales.",
+    "perspectival_gap": "The perspectival gap between solo miners and large pools is maximum in this constraint. Solo miners see an insurmountable economic barrier (Snare \u2014 pure extraction with no coordination benefit to them). Large pool operators see a coordination solution (Rope \u2014 they are solving the variance reduction and capital efficiency problem). The decentralization advocates see performative commitment to an ideal that empirical reality contradicts (Piton \u2014 the ritual persists, the function has atrophied). The protocol developers see genuine coordination work under extraction pressure (Tangled Rope \u2014 they coordinate security upgrades while mining pools signal veto over protocol changes). The analytical observer risks collapsing this multiplicity by declaring centralization a 'law' of distributed systems (Mountain \u2014 false summit), when it is actually a contingent outcome of economic incentive structures that could be redesigned. The perspectival gap reveals that mining centralization is neither immutable nor purely extractive \u2014 it is a mixed mechanism that solves some coordination problems while creating new extraction mechanisms.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy through multi-perspectival decomposition. The mandatrophy question is: 'Is mining centralization a natural law of proof-of-work, or is it an extractive mechanism?' The answer is: neither univocally \u2014 it appears as natural law from the analytical context (Mountain), as pure extraction from the powerless solo miner's context (Snare), as coordination solution from the pool operator's context (Rope), and as mixed mechanism from the developer's and moderate operator's contexts (Tangled Rope). No single type is 'correct.' The constraint's actual structure is a presheaf of types over the observation positions. The false summit risk lies in naturalizing what is actually a reversible economic outcome: if electricity cost heterogeneity disappeared (renewable energy ubiquity), if ASIC resistance were maintained (algorithm updates), or if mining rewards shifted toward other verification mechanisms, the centralization pressure would ease and perspectives would shift toward Rope or Scaffold. The mandatrophy resolves by recognizing that mining centralization is structure-dependent, not nature-dependent."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "blockchain_51_percent_attack_risk",
+      "cryptocurrency_energy_consumption",
+      "asic_manufacturing_concentration",
+      "proof_of_work_governance_veto"
+    ],
+    "dual_formulation_note": "Mining centralization decomposes into multiple structurally distinct constraints: (1) individual miner economic viability (\u03b5\u22480.72, Snare) \u2014 solo mining is unviable; (2) mining pool fee extraction (\u03b5\u22480.48, Tangled Rope) \u2014 pools coordinate variance but extract rents; (3) ASIC manufacturer rent capture (\u03b5\u22480.55, Tangled Rope) \u2014 hardware specialization drives obsolescence cycles; (4) protocol governance capture (\u03b5\u22480.62, Snare) \u2014 large pools can veto protocol upgrades. Each story has its own beneficiary/victim structure and measurement trajectory. This story treats the aggregate constraint at the protocol level; decomposed stories address specific extraction mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.52
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "header": {
+    "constraint_id": "regulatory_standardization_mandate",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "regstd"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Regulatory Standardization Mandate",
+    "topic_domain": "regulatory_governance/industrial_coordination",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_firms",
+      "regulatory_agencies"
+    ],
+    "victims": [
+      "small_entrants",
+      "innovation_velocity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Excluded Innovator",
+      "comment": "PERSPECTIVE 1: EXCLUDED INNOVATOR (SNARE) \u2014 Small firms and entrepreneurs cannot exit the standardization regime. Compliance costs exceed their operating margins; non-compliance means market exclusion. No viable alternative pathways exist within their time horizon. Maximum extraction from the perspective of those unable to meet standard."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Regional Competitor",
+      "comment": "PERSPECTIVE 2: REGIONAL COMPETITOR (TANGLED ROPE) \u2014 Mid-sized firms benefit from standardization as coordination (level playing field, reduced duplicative certification) but face significant extraction (compliance burden, regulatory barrier to entry that larger competitors can absorb). Constrained by capital requirements but perceive possible long-term pathways to scale."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Firm",
+      "comment": "PERSPECTIVE 3: INCUMBENT FIRM (ROPE) \u2014 Large firms experience standardization as pure coordination: reduced market uncertainty, predictable compliance costs, barrier against smaller competitors, and economies of scale in meeting standards. Net beneficiary with full arbitrage capability (can relocate production, influence rulemaking, absorb compliance costs)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Standards Harmonization Coalition",
+      "comment": "PERSPECTIVE 4: STANDARDS HARMONIZATION COALITION (SCAFFOLD) \u2014 International bodies (ISO, IEC, regional bodies) working toward mutual recognition and streamlined compliance see standardization as a temporary coordination problem with a sunset: harmonization reduces duplicative national standards and creates a pathway to lower overall compliance burden. This perspective assumes coalition competence and political will to execute the sunset."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Regulatory Agency",
+      "comment": "PERSPECTIVE 5: REGULATORY AGENCY (PITON) \u2014 The agency maintains the standardization regime through institutional inertia. The original function (safety/quality assurance) has been partially captured by incumbent firms and bureaucratic preference for rule expansion. Theater ratio is high: many standards persist despite unclear safety justification. The agency has arbitrage options (can revise standards, harmonize with other jurisdictions) but these are constrained by institutional path dependency and captured expertise."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universalist perspective, some standardization is inherent to scaled production and safety: you cannot coordinate modern supply chains without shared technical specifications. This perspective risks naturalizing what is actually a contingent institutional arrangement \u2014 the level and rigor of standardization is not a law of nature but a policy choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "safety_necessity_threshold",
+      "question": "What proportion of the current standardization regime is genuinely required for safety/functionality versus driven by incumbent protection and regulatory creep?",
+      "resolution_mechanism": "Comparative analysis: jurisdictions with lower standard rigor but equivalent safety outcomes; longitudinal data on hazard incidence before and after standard implementation",
+      "impact": "If genuine safety proportion > 70%: constraint is mostly rope (coordination). If < 50%: constraint is mostly snare (extraction). Current value determines whether mandatrophy is resolved or deferred.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of standards genuinely required for safety versus regulatory creep"
+    },
+    {
+      "id": "compliance_cost_distribution",
+      "question": "Does compliance cost scale sub-linearly with firm size (favoring incumbents) or linearly (neutral coordination)?",
+      "resolution_mechanism": "Audit of actual compliance costs as percentage of revenue across firm size cohorts; analysis of whether cost reductions for large firms reflect genuine economies of scale or regulatory favoritism",
+      "impact": "Sub-linear scaling confirms extractive design; linear scaling suggests genuine coordination. This directly affects whether small entrants face snare or tangled rope conditions.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Compliance cost scaling by firm size"
+    },
+    {
+      "id": "alternative_certification_pathway_viability",
+      "question": "Could decentralized certification (third-party audits, market reputation, open-source testing) replace mandatory standards for safety-critical properties?",
+      "resolution_mechanism": "Pilot programs with alternative certification; market testing of consumer willingness to accept non-standardized alternatives backed by transparent auditing",
+      "impact": "If viable: scaffold sunset is real and extractiveness can decline to < 0.30. If not viable: extraction mechanism is locked in place (chi remains high indefinitely).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Viability of decentralized certification as alternative to mandatory standards"
+    },
+    {
+      "id": "regulatory_capture_mechanism",
+      "question": "Is the regulatory agency genuinely captured (incumbent firms write the standards) or independently exercising discretion within a conflicted incentive structure?",
+      "resolution_mechanism": "Analysis of standard-setting committee composition; timeline correlation between industry lobbying and standard revisions; variation in standard stringency across politically differentiated jurisdictions",
+      "impact": "If captured: agency becomes victim not beneficiary (perspective 5 requires reclassification). If independent but conflicted: tangled rope classification for the agency itself. This affects directionality for the institutional perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of regulatory capture in standard-setting"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Regulatory standardization mandates create a structural tension between the legitimate coordination problem of scaled production and the asymmetric extraction mechanism that emerges when standards are set by or for incumbent firms. A standard specifies technical requirements that all producers must meet to access a regulated market. The coordination function is genuine: standards reduce duplicative testing, enable supply-chain interoperability, and establish minimum safety baselines. However, the standardization regime also functions as an extractive mechanism: incumbents who influence standard-setting can embed design choices that disadvantage competitors, compliance costs create barriers to entry that larger firms can absorb more easily, and the regulatory process itself becomes a rent-seeking arena. The constraint exhibits tangled rope classification at the systemic level \u2014 genuine coordination benefits coexist with asymmetric extraction. But the perspectival view is highly differentiated: excluded innovators see a pure snare (no exit, total extraction); regional competitors experience a hybrid (benefits + extraction); incumbents perceive only coordination benefits; and the regulatory agency maintains the regime through inertia (piton). The extractiveness score (0.52) reflects that the extraction mechanism is significant but depends on whose perspective is being measured. The theater ratio (0.64) indicates that a substantial portion of standards enforcement is performative \u2014 compliance verification is often pro forma rather than rigorous testing.",
+    "key_agents": [
+      "Incumbent Firms: Primary beneficiary (institutional/arbitrage) \u2014 capture coordination benefits, influence standard-setting, absorb compliance costs as operational expenses",
+      "Small Entrants: Primary victim (powerless/trapped) \u2014 compliance costs exceed margins, barriers lock out market entry, no alternative certification pathways within their time horizon",
+      "Regional Competitors: Secondary victim (moderate/constrained) \u2014 both benefit from coordination and bear extraction costs; perceive long-term pathways to scale but face significant near-term barriers",
+      "Regulatory Agency: Institutional beneficiary with captured interests (institutional/arbitrage) \u2014 maintains standard-setting authority, faces incumbent influence, exercises discretion within conflicted incentive structure",
+      "Standards Harmonization Coalition: Organized reformers (organized/mobile) \u2014 working toward mutual recognition and streamlined compliance with sunset logic",
+      "Analytical Observer: Universalist perspective (analytical/analytical) \u2014 risks naturalizing policy choice as inherent to scaled production"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Standards create genuine coordination value but the extractiveness score reflects that incumbent firms systematically capture compliance advantages through standard influence. The measurement trajectory (0.35 \u2192 0.52 over the interval) indicates regulatory creep and increasing complexity that disproportionately harms small producers. Suppression (0.58): Moderate-high. Barriers to exit include sunk compliance costs, lack of alternative certification pathways, market access contingent on compliance, and regulatory enforcement risk. Suppression is high enough to prevent most small firms from testing alternatives but not total \u2014 some market segments are less regulated. Theater ratio (0.64): Moderate-high. Compliance verification is often procedural rather than rigorous; many standards persist despite marginal safety improvement; enforcement emphasizes documentation over substantive testing. The trajectory (0.48 \u2192 0.64) reflects increasing bureaucratic formalism as standards accumulate.",
+    "perspectival_gap": "The constraint produces maximal perspectival divergence. Incumbents see rope \u2014 coordination that benefits them. Excluded entrants see snare \u2014 pure extraction with no exit. Regional competitors see tangled rope \u2014 mixed benefits and burdens. The regulatory agency sees itself as rope-functioning but actually practices piton (maintains inertia). The standards coalition sees scaffold (temporary, solvable through harmonization). The analytical observer risks seeing mountain (naturalizes policy as physics). The gap between the incumbent's experienced rope and the innovator's experienced snare is purely structural: same rules, different positions. This illustrates the DR principle that classification is observer-relative, not observer-independent.",
+    "directionality_logic": "Incumbents derive d from beneficiary status + arbitrage exit \u2192 low d (approximately 0.10\u20130.20) \u2192 negative or near-zero \u03c7. They experience the constraint as coordination, not extraction. Small entrants derive d from victim status + trapped exit \u2192 high d (approximately 0.90\u20130.95) \u2192 high \u03c7 (approximately 1.15\u20131.42). They experience maximum extraction. Regional competitors derive d from mixed status (partial victim, partial beneficiary) + constrained exit \u2192 moderate d (approximately 0.55\u20130.65) \u2192 moderate \u03c7 (approximately 0.75\u20130.90). The regulatory agency should derive d from beneficiary-captured status + arbitrage exit, but the omega variable on capture status creates uncertainty: if genuinely captured, the agency's d should be upward-overridden to reflect that it is partially complicit in the extraction mechanism. Directionality override not declared here because the constraint analysis does not presuppose capture; instead, the omega variable flags it as an open question.",
+    "mandatrophy_analysis": "STRUCTURAL RESOLUTION: The constraint resolves mandatrophy by decomposing classification along agent perspective. The system simultaneously satisfies 'this is rope' (beneficiary experienced) and 'this is snare' (victim experienced) because both observations are structurally accurate from their respective positions. Mandatrophy is resolved not by choosing a single type but by accepting that the presheaf of perspectives is the correct answer. Incumbent firms see coordination (rope); excluded innovators see extraction (snare); the system embeds both mechanisms simultaneously. The analytical challenge is to recognize that the coordination function is genuine (standards are necessary) while the extraction mechanism is real (asymmetric cost distribution). Policy resolution would require decoupling these mechanisms \u2014 preserving coordination benefits while eliminating asymmetric extraction \u2014 which requires addressing the regulatory capture omega variable."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "market_entry_barrier",
+      "regulatory_capture",
+      "compliance_cost_burden"
+    ],
+    "dual_formulation_note": "Regulatory standardization mandate decomposes into three related constraints: market_entry_barrier (\u03b5\u22480.65, snare for small firms), regulatory_capture (\u03b5\u22480.48, tangled rope for agencies), and compliance_cost_burden (\u03b5\u22480.55, tangled rope for mid-tier firms). Each story has its own perspectives and measurements. The standardization mandate story provides the coordination context for all three downstream constraints."
+  },
+  "directionality_overrides": []
+}

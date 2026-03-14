@@ -1,0 +1,216 @@
+{
+  "header": {
+    "constraint_id": "geopolitical_mineral_dependency",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "geomin"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Geopolitical Mineral Dependency Constraint",
+    "topic_domain": "geopolitical_economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mineral_producing_states",
+      "integrated_supply_chain_actors"
+    ],
+    "victims": [
+      "mineral_importing_states",
+      "downstream_industrial_sectors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Import-Dependent Manufacturing Sector",
+      "comment": "PERSPECTIVE 1: IMPORT-DEPENDENT MANUFACTURING SECTOR (SNARE) \u2014 Nations dependent on imported critical minerals for domestic manufacturing have no exit option within biographical timescales. Supply chain disruption causes immediate economic damage. Suppression is total: no stockpile lasts indefinitely, substitution is technologically limited, and alternative suppliers are similarly constrained. This agent experiences maximum extraction during geopolitical crises."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Strategic Importer Nation",
+      "comment": "PERSPECTIVE 2: STRATEGIC IMPORTER NATION (TANGLED ROPE) \u2014 States with moderate power and constrained exit options experience both genuine coordination (mineral supply chains do enable advanced manufacturing and energy transition) and asymmetric extraction (dependency creates vulnerability to sanctions, price volatility, and geopolitical coercion). At generational timescale, alternatives emerge: domestic mining revival, substitution research, diversification of suppliers. Extraction is real but not total."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Mineral Producing State",
+      "comment": "PERSPECTIVE 3: MINERAL PRODUCING STATE (ROPE) \u2014 Primary beneficiary with arbitrage exit options (can redirect exports, integrate downstream, or negotiate with competing buyers). Experiences the constraint as beneficial coordination: mineral exports create foreign exchange, enable infrastructure investment, and provide leverage in international negotiations. This perspective sees the constraint as enabling their agency rather than constraining it."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Integrated Supply Chain Actor",
+      "comment": "PERSPECTIVE 4: INTEGRATED SUPPLY CHAIN ACTOR (TANGLED ROPE) \u2014 Multinational firms that control processing, refinement, and downstream manufacturing benefit from supply constraints (reduced competition, geographic rents) while also coordinating actual supply chain logistics. These actors have constrained exit (reversing vertically-integrated operations requires decades) but also have arbitrage capacity (can shift operations between jurisdictions). Effective extraction is moderate \u2014 they coordinate real functions while capturing rents."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Energy Transition Coalition",
+      "comment": "PERSPECTIVE 5: ENERGY TRANSITION COALITION (SCAFFOLD) \u2014 Organized states and private actors pursuing renewable energy and electrification are building alternative supply chains and substitution pathways. Lithium mining expansion, recycling infrastructure, and rare-earth substitution research create exit mechanisms within generational timescales. This constraint is experienced as temporary: the coalition sees a sunset where mineral dependency declines as circular economy practices mature. Theater is low because the coalition is driving real substitution, not performative compliance."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Cold War Resource Control Narrative",
+      "comment": "PERSPECTIVE 6: COLD WAR RESOURCE CONTROL NARRATIVE (PITON) \u2014 Post-Cold War institutions (strategic mineral stockpiles, trade agreements, supply security rhetoric) persist largely as theater. The actual geopolitical leverage of minerals has shifted: rare-earth substitution is accelerating, electric vehicle mineral demand is volatile, and recycling reduces primary supply dependency. The institutional narrative of 'critical minerals as strategic weapons' maintains its form through inertia despite functional degradation. Theater ratio 0.48 reflects that much strategic mineral policy is now performative \u2014 countries maintain stockpiles and security rhetoric even as the actual leverage declines."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Civilizational analysis reveals the constraint as a genuine hybrid: mineral supply chains do enable advanced manufacturing and energy transition (coordination function), AND geopolitical control over mineral supplies enables asymmetric extraction (states use export restrictions as coercion, supply chain actors capture rents). The classification is not falsely naturalized as mountain \u2014 this is a contingent institutional arrangement with both real coordination and real extraction mixed together."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "substitution_velocity",
+      "question": "How quickly can technological substitution reduce dependency on specific critical minerals?",
+      "resolution_mechanism": "Historical velocity of substitution (rare-earth elements in magnets, cobalt in batteries). Time-to-replacement for critical technologies.",
+      "impact": "If substitution is fast (5-10 years): constraint degrades to scaffold. If slow (30+ years): constraint hardens as snare for importers. If blocked by physics/economics: constraint is structurally durable tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technological substitution velocity for critical minerals"
+    },
+    {
+      "id": "recycling_loop_closure",
+      "question": "Can circular economy recycling close the supply loop fast enough to meaningfully reduce primary dependency?",
+      "resolution_mechanism": "Recycling infrastructure deployment rates, recovery rates by mineral, economic viability of secondary processing, time-to-steady-state circulation.",
+      "impact": "If loop closes < 15 years: supply constraint shifts to resource availability within importers (reduces extraction). If > 30 years: importers remain dependent on primary extraction and geopolitical supply.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Speed of circular economy loop closure for mineral recycling"
+    },
+    {
+      "id": "geopolitical_chokepoint_fungibility",
+      "question": "Are specific geographic chokepoints (DRC cobalt, China rare earths) truly irreplaceable, or does supply diversification eliminate the extraction leverage?",
+      "resolution_mechanism": "Comparison of production capacity when secondary producers scale up; identification of true bottlenecks vs contingent concentration.",
+      "impact": "If truly irreplaceable: extraction is structural and durable (snare for importers). If fungible: leverage is temporary and vulnerable to supply competition (weaker tangled rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether geographic mineral chokepoints are truly irreplaceable"
+    },
+    {
+      "id": "energy_transition_mineral_coupling",
+      "question": "As energy transitions away from fossil fuels, does mineral dependency shift or merely relocate (battery minerals replacing oil)?",
+      "resolution_mechanism": "Comparative analysis of supply chain complexity: oil geopolitics vs. battery mineral geopolitics. Concentration metrics for producing regions.",
+      "impact": "If dependency shifts structurally: constraint persists but with different beneficiaries. If dependency is reduced: energy transition truly breaks the constraint. If dependency relocates equally: the constraint's beneficiary shifts but extraction magnitude stays constant.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether energy transition reduces or relocates mineral dependency"
+    },
+    {
+      "id": "export_control_enforcement_cost",
+      "question": "What is the true enforcement cost for mineral-producing states to weaponize supply constraints?",
+      "resolution_mechanism": "Historical analysis of export restrictions (China rare earths 2010, DRC cobalt embargoes): revenue losses, retaliation, supply chain repositioning costs.",
+      "impact": "If enforcement is cheap: extraction leverage is durable. If enforcement is expensive: the threat is credible but exercising it damages the beneficiary.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Cost of enforcing mineral supply weaponization"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 22,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 22,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 22
+  },
+  "commentary": {
+    "narrative_context": "Geopolitical mineral dependency creates a structural constraint operating at the intersection of physical resource scarcity, technological demand, and state power. The constraint exhibits asymmetric extraction: states and actors controlling supply chains benefit from artificial scarcity (whether naturally occurring or politically maintained), while import-dependent states bear vulnerability to supply disruption, price volatility, and coercive leverage. The constraint is not purely extractive (mineral supply chains do enable genuine coordination in manufacturing and energy systems) nor purely coordinating (beneficiaries use their structural position to extract rents and geopolitical leverage). The constraint's architecture involves multiple institutional actors: mineral-producing states (primary beneficiaries), integrated multinational supply chain firms (secondary beneficiaries), import-dependent manufacturing states (victims), and energy transition coalitions (organizing to build exit mechanisms). The measurement trajectory shows extractiveness increasing from 0.42 to 0.58 over 22 years, reflecting intensifying demand for battery minerals and rare-earth elements in clean energy and electronics. Theater ratio remained relatively low (0.35-0.52) because actual supply constraints and material dependencies are real, not performative \u2014 the constraint operates through genuine scarcity rather than narrative.",
+    "key_agents": [
+      "Mineral-Producing States: Primary beneficiary (institutional/arbitrage) \u2014 benefit from export revenue, geopolitical leverage, and rents from supply scarcity",
+      "Integrated Supply Chain Actors: Secondary beneficiary (institutional/constrained) \u2014 multinational firms controlling processing and downstream manufacturing capture geographic rents and reduced competition",
+      "Import-Dependent Manufacturing States: Primary victim (powerless/trapped) \u2014 manufacturing base depends on minerals with no meaningful domestic alternative; vulnerable to disruption",
+      "Downstream Industrial Sectors: Secondary victim (moderate/constrained) \u2014 electronics, automotive, renewable energy sectors face rising input costs and supply uncertainty",
+      "Energy Transition Coalition: Organized agent (organized/mobile) \u2014 states, firms, and coalitions pursuing renewable energy are building substitution pathways, recycling infrastructure, and supply diversification",
+      "Cold War Strategic Minerals Institutions: Degraded actor (institutional/arbitrage) \u2014 government stockpiles and supply security rhetoric persist but with declining functional leverage"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, reflecting real supply-side constraints combined with beneficiary rent capture. The constraint is not at maximum extraction (0.70+) because substitution pathways exist and supply diversification is occurring. The measurement trajectory shows a rise from 0.42 to 0.58, indicating intensifying extraction pressure driven by energy transition mineral demand (lithium, cobalt, rare earths for batteries) without matching supply growth. At time=0 (early 2000s), mineral dependency was less acute; by time=15 (mid-2010s), clean energy demand and supply concentration in China created sharp extraction increases; by time=22 (early 2020s), the constraint stabilized as recycling and substitution began scaling. Suppression (0.65): High. Barriers to exit include long lead times for mining development (10-15 years), geological concentration of deposits, capital intensity of processing, and geopolitical control of key chokepoints. Import-dependent states cannot substitute quickly within biographical timescales. Theater ratio (0.48): Moderate-low. The constraint operates through real material scarcity, not narrative \u2014 mineral supply chains are functionally critical for manufacturing and energy systems. However, some theater exists: strategic mineral stockpiles are maintained partly for actual security and partly for political signaling; trade policy rhetoric exaggerates leverage (export controls are expensive for producers and often fail); Cold War resource control narratives persist despite declining functional relevance. The theater is increasing slightly (0.35\u21920.48) as policy responses outpace actual supply constraints.",
+    "directionality_logic": "Directionality (d values) for each institutional actor reflects their structural position relative to the extraction flow. Mineral-producing states are beneficiaries with arbitrage exit options (can redirect exports, negotiate with competing buyers, or integrate downstream) \u2014 low d (\u22480.15), resulting in low/negative effective extraction. Import-dependent manufacturing states are victims with trapped exit options (cannot substitute minerals quickly; no alternative supply chains) \u2014 high d (\u22480.85), resulting in high effective extraction. Integrated supply chain firms are secondary beneficiaries with constrained exit (reversing vertical integration is expensive) \u2014 moderate d (\u22480.35), resulting in moderate effective extraction capturing rents without pure extraction. The energy transition coalition is organized with mobile exit options (substitution research, recycling, alternative materials) \u2014 lower d (\u22480.40), resulting in moderate extraction pressure but with declining impact over time as alternatives mature. The analytical observer at civilizational scope applies no beneficiary/victim asymmetry \u2014 neutral d (\u22480.50), producing a balanced tangled rope classification that reflects genuine mixed coordination and extraction.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence across institutional actors. The mineral-producing state sees coordination and beneficial exchange (Rope) \u2014 mineral exports enable development and geopolitical agency. The integrated supply chain firm sees profitable coordination (Tangled Rope) \u2014 genuine supply chain functions with captured rents. The import-dependent manufacturing state sees extraction with no exit (Snare) \u2014 supply vulnerability creates coercive leverage without offsetting benefits. The energy transition coalition sees a temporary problem with solutions (Scaffold) \u2014 substitution and recycling pathways are building exits. The Cold War resource control narrative sees persistent strategic imperative (Piton) \u2014 institutional rhetoric of 'critical minerals as weapons' persists despite declining leverage. The analytical observer at civilizational scope sees a durable hybrid (Tangled Rope) \u2014 real coordination functions mixed with real extraction mechanisms that will persist even as specific supply constraints resolve. No perspective sees a false summit (Mountain); the constraint is genuinely contingent and structurally mixed.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by decomposing geopolitical mineral dependency into its actual structural components: (1) Real coordination function \u2014 mineral supply chains do enable manufacturing, electronics, renewable energy, and modern industrial systems. (2) Asymmetric extraction \u2014 beneficiaries use control over supply to capture rents and geopolitical leverage. (3) Temporal structure \u2014 substitution and recycling are building exit mechanisms within generational timescales, making the constraint a Scaffold from the coalition perspective rather than permanent Snare from the importer perspective. The classification is Tangled Rope at the civilizational/analytical level because both functions are structurally durable: even as specific mineral constraints resolve (battery recycling matures, substitutes are found), the general pattern of geopolitical leverage over critical resources will persist \u2014 resources will shift from rare earths and cobalt to other materials, but the asymmetry of control over concentration will remain. The constraint does not collapse to pure Rope (mere coordination) because beneficiaries will continue to exercise extraction leverage. It does not collapse to pure Snare because the coordination function is genuine and victims are not completely powerless \u2014 they are organizing substitution pathways, diversifying suppliers, and building alternatives."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "energy_transition_supply_chain",
+      "semiconductor_manufacturing_bottleneck",
+      "rare_earth_export_restriction"
+    ],
+    "dual_formulation_note": "Geopolitical mineral dependency is an upstream structural constraint affecting downstream specific-material and technology-specific constraints. The general constraint operates through supply concentration and geopolitical control; specific constraints (rare earths, lithium, cobalt) have higher extraction values because they represent acute chokepoints. All specific-material constraints link to this general story as affected constraints, showing how systemwide resource allocation asymmetries cascade into technology-specific vulnerabilities."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "header": {
+    "constraint_id": "value_learning_incompleteness",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "vli"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Value Learning Incompleteness in AI Systems",
+    "topic_domain": "artificial_intelligence/alignment/mechanism_design",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ai_developers_with_time_advantage",
+      "incumbent_value_frameworks"
+    ],
+    "victims": [
+      "downstream_stakeholders",
+      "value_pluralism"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Unrepresented Stakeholder",
+      "comment": "PERSPECTIVE 1: UNREPRESENTED STAKEHOLDER (SNARE) \u2014 Cannot exit the constraint; their values are structurally excluded from the learning process. If a value frame was not observed or encoded during training, the agent whose values it represents has no mechanism to correct or update the system's value function. Maximum extraction: stakeholders bear costs of misalignment with no voice in the system's behavior."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Value-Adjacent Community",
+      "comment": "PERSPECTIVE 2: VALUE-ADJACENT COMMUNITY (TANGLED ROPE) \u2014 Constrained by dependence on the AI system's decisions while also participating in its training ecosystem. Communities with values similar to the training distribution benefit from coordination; those distant from it face extraction. Moderate agency through advocacy, feedback mechanisms, and retraining initiatives, but high barriers to shifting the system's core learned values."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The AI Developer",
+      "comment": "PERSPECTIVE 3: AI DEVELOPER (ROPE) \u2014 Benefits from the value learning bottleneck through time advantage: deployment window before value corrections become feasible. Experiences constraint as coordination problem (training the system to learn values at all). Can arbitrage between different value frameworks through model versions and fine-tuning."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Alignment Research Coalition",
+      "comment": "PERSPECTIVE 4: ALIGNMENT RESEARCH COALITION (SCAFFOLD) \u2014 Organized agents (interpretability researchers, red-teamers, constitutional AI frameworks) see value incompleteness as a solvable technical problem with a generational sunset. Constitutional AI, mechanistic interpretability, and value-learning architectures are building pathways to capture broader value distributions. Suppression is high initially but declining as techniques mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Utility Maximization Framework",
+      "comment": "PERSPECTIVE 5: UTILITY MAXIMIZATION FRAMEWORK (PITON) \u2014 Classical expected utility theory persists in AI system design largely through institutional inertia despite known limitations in value aggregation. The framework cannot represent incommensurable values, value pluralism, or context-dependent preferences. Maintenance is largely performative: system designers cite utility maximization in documentation while using ad-hoc value encoding in practice."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Limit View",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LIMIT VIEW (MOUNTAIN) \u2014 From a civilizational perspective, value incompleteness may reflect a fundamental limit: no finite training distribution can capture the complete value space of an unbounded stakeholder population. Arrow's impossibility theorem, value incommensurability, and learning-theoretic bounds suggest structural unchangeability. However, this false summit naturalizes what may be contingent limitations of current architecture choices."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "learning_theoretic_lower_bound",
+      "question": "Is value incompleteness a fundamental information-theoretic limit or a contingent limitation of current training methodologies?",
+      "resolution_mechanism": "Formal analysis of sample complexity for value function learning; comparison of bounds for different value representation schemes; empirical testing of alternative architectures",
+      "impact": "If fundamental limit: mountain classification confirmed, constraint is immutable. If contingent: constraint is tangled_rope/scaffold, technical solutions exist but face institutional barriers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether value incompleteness reflects fundamental limits or current methodology constraints"
+    },
+    {
+      "id": "value_space_cardinality",
+      "question": "Is the stakeholder value space finite and potentially completable through enumeration, or infinite and requiring continuous learning mechanisms?",
+      "resolution_mechanism": "Formal definition of value space cardinality; analysis of value distribution across actual stakeholder populations; testing whether new values emerge after training completion",
+      "impact": "If finite and enumerable: technical solution possible. If infinite or continuously generating: constraint is structurally persistent; learning systems must operate with permanently incomplete value capture.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Cardinality and enumerability of stakeholder value space"
+    },
+    {
+      "id": "incommensurability_irreducibility",
+      "question": "Can incommensurable values be represented in a unified learning framework, or does value incompleteness reflect genuinely incommensurable value systems?",
+      "resolution_mechanism": "Empirical testing of multi-objective value learning on historically incommensurable domains (individual liberty vs collective welfare, present vs future generations); formal analysis of value representation expressiveness",
+      "impact": "If commensurable: architectural solutions may exist. If irreducibly incommensurable: constraint is classification-dependent on which values are declared 'core' \u2014 piton classification from utilitarian framework, snare from excluded perspectives.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether incommensurable values can be represented in unified frameworks"
+    },
+    {
+      "id": "training_distribution_bias_persistence",
+      "question": "Does value learning incompleteness persist even with perfectly accurate training on the actual stakeholder value distribution, or is incompleteness solely a function of distribution bias?",
+      "resolution_mechanism": "Counterfactual analysis: simulate perfect training on maximal stakeholder sampling. Compare against current distribution bias. If incompleteness persists: architectural limit. If incompleteness disappears: distribution bias is the sole driver.",
+      "impact": "If persistence: need architectural changes and value pluralism mechanisms. If distribution bias alone: problem is governance/stakeholder inclusion, not fundamental learning limit.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether incompleteness persists beyond training distribution bias"
+    },
+    {
+      "id": "temporal_value_emergence",
+      "question": "Do new values emerge in stakeholder populations after the AI system's training completion, making the constraint inherently non-static?",
+      "resolution_mechanism": "Longitudinal study of value distributions in stakeholder populations; tracking of novel values not present in training set appearing post-deployment; measurement of cultural/moral innovation rates",
+      "impact": "If values continuously emerge: no completion state exists, constraint is permanent feature of system-stakeholder co-evolution, requires ongoing adaptation mechanisms rather than one-time learning.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether stakeholder values continuously emerge post-training"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "Value learning incompleteness in AI systems creates a structural asymmetry between the values the system learns and the values stakeholders hold. During training, the system's objective function is constructed from a finite sample of observed or declared preferences \u2014 these might come from training data, human feedback, or specified utility functions. But this sample is necessarily incomplete: stakeholders exist whose values were not represented in training, future values that don't yet exist in the population, values held by communities without voice in the training process, and incommensurable values that resist quantification. Once training concludes, the system's value function becomes fixed or slowly adaptive, while stakeholder populations continue to generate new values, shift preferences, and discover previously unrepresented needs. This creates structural extraction: some groups benefit from alignment with the learned values (through coordination), while others suffer from misalignment with no mechanism to correct it. The constraint exhibits all six DR types depending on the observer's structural position relative to the value distribution.",
+    "key_agents": [
+      "AI Developers: Primary beneficiary (institutional/arbitrage) \u2014 capture deployment advantage before value corrections become feasible; can arbitrage between value frameworks",
+      "Unrepresented Stakeholders: Primary victim (powerless/trapped) \u2014 excluded from training distribution, no exit mechanism, bear costs of misalignment",
+      "Value-Adjacent Communities: Secondary victim (moderate/constrained) \u2014 may participate in feedback mechanisms but face high barriers to shifting core learned values",
+      "Alignment Research Coalition: Organized agents (organized/constrained) \u2014 interpretability researchers, red-teamers, constitutional AI frameworks building technical solutions with generational timeline",
+      "Incumbent Value Framework (Utilitarian): Institutional actor (institutional/arbitrage) \u2014 benefits from continued use of utility maximization despite known limitations; maintenance is performative",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent architectural choices as fundamental limits"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The system captures career and deployment value from the time advantage before value corrections; developers can fine-tune for different stakeholders but the base learned values persist. Extraction is not total because communities can provide feedback and some value learning mechanisms exist, but the barriers are high. The value has increased from 0.32 to 0.58 over the interval (time_point 0-6) as stakeholder dissatisfaction accumulates and unrepresented values become salient, then plateaus as the system's core values stabilize. Suppression (0.65): High. Barriers to correcting learned values include: (1) architectural inertia \u2014 retraining is expensive, (2) stakeholder exclusion \u2014 many groups lack channels for value input, (3) measurement problems \u2014 some values resist quantification, (4) institutional capture \u2014 current value frameworks benefit incumbents. Theater ratio (0.68): Moderate-high. Contemporary AI value specification uses elaborate formal frameworks and stakeholder consultation, but much of this is performative \u2014 the actual learned values reflect the training data distribution and developer priors more than stakeholder input. Constitutional AI adds procedural legitimacy but doesn't fundamentally resolve incompleteness.",
+    "directionality_logic": "Directionality d is derived from the agent's structural position relative to value representation. Developers with arbitrage exit options (can deploy different value versions, fine-tune for different markets) experience low d \u2014 they benefit from incompleteness by capturing multiple stakeholder segments. Unrepresented stakeholders with no exit (no mechanism to correct the system's values about them) experience high d. Value-adjacent communities (values partially represented, but can only exit through costly retraining or system replacement) experience moderate-high d. The alignment research coalition has organized power to build alternatives (scaffold perspective) \u2014 their d is moderate because they can see and work toward an exit. The utilitarian framework benefits from continued use (d \u2248 0.15) despite limitations. The analytical observer risks high d (seeing the constraint as unchangeable natural law) but the false summit detection reveals this as naturalization of contingent choices.",
+    "perspectival_gap": "The critical gap is between the developer's rope (coordinate preferences through training) and the unrepresented stakeholder's snare (no mechanism to register existence, let alone preferences). The open-science alignment coalition sees a solvable scaffold (constitutional AI, mechanistic interpretability, ongoing value learning architectures), while the utilitarian framework sees its own persistence as performative theater \u2014 utilities are cited, but actual value encoding reflects developer choices and historical accident. The natural limit view (mountain) claims value incompleteness is inherent to any learning system with finite samples, but this naturalizes what may be architectural contingency. If stakeholder populations continuously generate new values, then no completion state exists \u2014 the constraint is not a temporary bottleneck to overcome but a permanent feature of system-stakeholder coevolution.",
+    "mandatrophy_analysis": "DIAGNOSTIC EXEMPLAR OF VALUE INCOMPLETENESS ITSELF: The mandatrophy resolution reveals that value learning incompleteness is not a constraint the system has \u2014 it IS a constraint the system creates. The system's learned values determine which other constraints agents experience. A bank's AI system trained primarily on financial stability values may treat access constraints differently than one trained on inclusivity values. The AI's value learning incompleteness cascades into constraint multiplicity for downstream stakeholders. The mandatrophy here is not 'what type is this constraint?' but 'this constraint creates the conditions under which other constraints proliferate.' Resolution requires making explicit that: (1) no training distribution is complete, (2) stakeholder populations continuously generate new values, (3) architectural solutions like constitutional AI or mechanistic interpretability can reduce but never eliminate incompleteness, (4) value pluralism frameworks may be necessary rather than unified learning targets. The tangled_rope classification holds: genuine coordination exists (system learns to respond to values at all), but asymmetric extraction is structural (some groups' values are cheaper to represent than others; developers benefit from the window before value corrections)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "goal_specification_hazard",
+      "distributional_shift_alignment",
+      "preference_aggregation_impossibility"
+    ],
+    "dual_formulation_note": "Value learning incompleteness decomposes into three structurally distinct constraints: (1) goal_specification_hazard \u2014 the problem of specifying any goal at all given ontological uncertainty; (2) distributional_shift_alignment \u2014 the problem of value learning that generalizes beyond training distribution; (3) preference_aggregation_impossibility \u2014 the problem of representing incommensurable values in unified frameworks. This story models the constraint at the system level; the downstream stories model specific architectural instantiations."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

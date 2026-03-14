@@ -1,0 +1,181 @@
+{
+  "header": {
+    "constraint_id": "school_safety_zone_definition",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ssz"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "School Safety Zone Definition and Enforcement",
+    "topic_domain": "policy/enforcement/urban_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "property_developers",
+      "transit_operators",
+      "municipal_zoning_authorities"
+    ],
+    "victims": [
+      "low_income_residents",
+      "homeless_populations",
+      "small_business_operators"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Displaced Resident",
+      "comment": "PERSPECTIVE 1: DISPLACED RESIDENT (SNARE) \u2014 Caught between enforcement that excludes them from established spaces and inability to relocate due to economic constraints. Lacks resources to challenge zoning decisions or find alternative housing within safe walking distance. Zero exit options; maximum extraction and suppression."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Community Coalition",
+      "comment": "PERSPECTIVE 2: COMMUNITY COALITION (TANGLED ROPE) \u2014 Organized local groups benefit from genuine child safety coordination infrastructure (police presence, design review) while bearing costs of criminalization and enforcement targeting homeless and low-income populations. Real coordination function exists alongside asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Municipal Authority",
+      "comment": "PERSPECTIVE 3: MUNICIPAL AUTHORITY (ROPE) \u2014 Coordinates school site planning, police patrols, and design standards across jurisdictions. Sees the zone definition as a coordination mechanism for legitimate safety goals. Experiences low extraction relative to benefits of standardized enforcement."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Property Developer",
+      "comment": "PERSPECTIVE 4: PROPERTY DEVELOPER (TANGLED ROPE) \u2014 Zone definitions create coordinated land use planning that enables profitable development (school-adjacent residential/commercial projects benefit from safety premium and regulation clarity). Also coordinates with municipal infrastructure. But extraction mechanism: zone enforcement can expand to impose development restrictions that increase costs or reduce profitability. Asymmetric relationship with municipal authority."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Regulatory Framework",
+      "comment": "PERSPECTIVE 5: REGULATORY FRAMEWORK (PITON) \u2014 School safety zone regulations, inherited from 1990s-2000s crime prevention orthodoxy, persist through institutional inertia despite contested effectiveness. Enforcement theater (police presence, restricted zones) maintains symbolic function of 'taking safety seriously' even as evidence for zone-based crime reduction grows thin. Theater ratio high; functional coordination modest."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Harm Reduction Coalition",
+      "comment": "PERSPECTIVE 6: HARM REDUCTION COALITION (SCAFFOLD) \u2014 Organized actors (housing advocates, public health agencies, alternative safety models) see school safety zones as a temporary enforcement-based approach that excludes vulnerable populations. Alternatives exist: restorative justice, housing-first models, community-embedded safety. This perspective sees a sunset clause: as evidence accumulates that enforcement-based zones displace rather than deter crime, and housing/mental health interventions show superior outcomes, the zone-based model loses policy legitimacy. Estimated transition: 10-15 years to policy shift away from enforcement-centric zones."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "zone_effectiveness_ambiguity",
+      "question": "Do school safety zones actually reduce crime and injury around schools, or do they displace activity to adjacent areas?",
+      "resolution_mechanism": "Longitudinal crime data analysis comparing zones with and without enforcement; spatial analysis of crime displacement patterns; comparison of injury rates in enforced vs non-enforced zones controlling for socioeconomic factors",
+      "impact": "If genuinely effective: zone definition is justified coordination mechanism (Rope becomes more prominent). If displacing: zones are largely extractive enforcement with theater cover (Snare becomes more prominent; Piton classification confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether safety zones reduce crime or displace activity"
+    },
+    {
+      "id": "definition_discretion_capture",
+      "question": "Are zone definitions set primarily by child safety data and school input, or do developer/municipal interests drive expansion and scope?",
+      "resolution_mechanism": "Analysis of zone definition decision-making: compare zones justified by incident data vs zones that align with development incentives; audit frequency of zone expansion relative to safety incidents; interview school principals vs municipal planners on definition rationale",
+      "impact": "If safety-driven: coordination function dominates (Rope becomes more accurate). If interest-driven: extractive function dominates (Snare and Tangled Rope confirmed); developer perspective changes from Tangled Rope to beneficiary classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether zone definitions are driven by safety data or development interests"
+    },
+    {
+      "id": "enforcement_target_disparity",
+      "question": "Is enforcement applied equally across socioeconomic contexts, or does it disproportionately target homeless and low-income populations?",
+      "resolution_mechanism": "Enforcement audit: arrest/citation rates by enforcement action (loitering, vagrancy) within zones vs outside; demographic analysis of enforcement recipients; comparison of enforcement intensity in affluent vs low-income school zones",
+      "impact": "If equal enforcement: suppression is structural but not asymmetrically applied (Tangled Rope confirmed). If disparate: enforcement is extractive mechanism targeting powerless agents (Snare classification confirmed; victim designation validated).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether enforcement targets disproportionately affect homeless and low-income populations"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "School safety zone definitions create a structural constraint operating across multiple institutional levels: school systems, municipal governments, property markets, and enforcement agencies. The constraint coordinates genuine child safety infrastructure (police presence, design standards, pedestrian protections) while functioning as an enforcement mechanism that excludes and displaces homeless and low-income populations from designated areas. The extractiveness has increased over the measurement interval (0.35 to 0.58) as enforcement scope expanded and zone definitions became more expansive. Theater ratio has similarly increased (0.48 to 0.62), indicating that the performative function of safety zones \u2014 signaling that authorities are 'doing something' about school safety \u2014 has grown relative to evidence-based safety coordination. The constraint exhibits all structural signatures of Tangled Rope: genuine coordination of school site planning and police resources alongside asymmetric extraction targeting those unable to comply with or challenge zone definitions.",
+    "key_agents": [
+      "Low-income Residents and Homeless Populations: Primary victims (powerless/trapped) \u2014 bear enforcement costs and displacement; cannot exit via relocation or legal challenge",
+      "Community Coalition: Organized moderate agents (moderate/constrained) \u2014 benefit from safety infrastructure while experiencing moral/political costs of enforcement targeting vulnerable populations",
+      "Municipal Zoning Authority: Institutional beneficiary (institutional/arbitrage) \u2014 coordinates land use planning and enforcement; experiences low extraction cost relative to control benefits",
+      "Property Developers: Powerful institutional actor (powerful/arbitrage) \u2014 benefit from development premium in safe-zoned areas; constrained by enforcement expansion that increases compliance costs",
+      "Police/Enforcement Agencies: Institutional actor (institutional/arbitrage) \u2014 coordinate with schools and municipal authorities; execute enforcement that extracts from powerless agents",
+      "Harm Reduction Coalition: Organized agents (organized/constrained) \u2014 recognize zone enforcement as temporary phase in shift toward housing-first and restorative justice models"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The constraint extracts through displacement (powerless agents excluded from public spaces) and through enforcement (disproportionate policing and citations targeting homeless and low-income populations). Early in the interval (t=0), zones were narrower and more closely tied to school safety data, producing lower extractiveness (0.35). As zones expanded and enforcement intensified, extractiveness rose to 0.58 by t=10. This trajectory indicates that the constraint is accumulating extraction over time \u2014 zones grow larger and enforcement becomes more expansive, while actual safety gains plateau or become unverifiable. Suppression (0.65): High. Structural barriers to resistance include: municipal authority monopoly on land-use definitions, legal barriers to challenging enforcement (homeless cannot afford legal representation), no alternative spaces to retreat to (economic constraints), and police power to enforce. Theater ratio (0.62): Moderate-high. School zones are highly visible \u2014 signs, police presence, design features \u2014 creating strong performative signal that authorities are protecting children. But evidence that zones actually reduce crime vs displace it remains contested. The theater function (reassuring parents, signaling state capacity) may exceed the actual safety function.",
+    "perspectival_gap": "The municipal authority and developers perceive the constraint as coordination (Rope/Tangled Rope) \u2014 legitimate land-use planning with clear rules and mutual benefits. Enforcement agencies perceive coordination plus necessary order-maintenance (Rope). Community coalitions perceive mixed benefits and costs (Tangled Rope) \u2014 genuine safety infrastructure exists but enforced against vulnerable populations. Displaced residents perceive pure extraction and suppression (Snare) \u2014 they bear costs of enforcement with no exit option. The harm reduction coalition perceives a temporary phase with a visible sunset (Scaffold) \u2014 alternative models (housing-first, restorative justice) are building policy traction and will eventually replace enforcement-based zones. The regulatory framework itself (viewed civilizationally across long time) is Piton \u2014 an inherited enforcement model that persists through institutional inertia and performative safety theater, even as evidence questions its effectiveness.",
+    "directionality_logic": "Directionality (d) for each perspective is determined by the agent's structural position relative to the constraint. Low-income residents and homeless populations have d \u2248 0.95 (full targets of extraction) \u2014 no exit options (trapped), no beneficiary status, enforced against directly. Municipal authority has d \u2248 0.10 (beneficiary with arbitrage) \u2014 controls definitions, coordinates enforcement, experiences low extraction cost. Developers have d \u2248 0.35-0.40 (mixed \u2014 benefit from zone-adjacent development premium but constrained by enforcement expansion). Community coalition has d \u2248 0.55 (moderate \u2014 mixed benefits and moral costs). Organized harm reduction actors have d \u2248 0.65 (high but with exit path \u2014 organized actors see sunset clause). The rising extractiveness over time (0.35\u21920.58) reflects that d values shift as zones expand: residents become more trapped, municipal authority becomes more powerful relative to them, developer constraints increase. The beneficiary/victim declarations map to real structural extraction flow: developers and authorities benefit; low-income populations and homeless groups are victims.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that school safety zone definitions coordinate genuine child safety infrastructure (design standards, police coordination, pedestrian safety measures) while simultaneously functioning as an extraction and displacement mechanism. The constraint is NOT 'purely extractive' (which would justify dismissing all safety concerns) NOR 'purely coordinative' (which would ignore enforcement asymmetries). The Tangled Rope classification captures both functions: active enforcement keeps the zones functional as coordination mechanisms; the same enforcement extracts from powerless agents who cannot comply or exit. The rising theater ratio (0.48\u21920.62) indicates that over time, the performative function (appearing to be 'tough on crime,' reassuring parents) has grown relative to evidence-based safety gains \u2014 this is classic Goodhart drift. The scaffold perspective introduces the temporal resolution: as alternative safety models (housing-first, restorative justice, evidence-based community policing) accumulate evidence and policy traction, the enforcement-based zone model will sunset. The transition is already visible in forward-looking jurisdictions (some cities piloting housing-first school-zone approaches). The constraint's current classification as Tangled Rope with rising theater is therefore temporally accurate: it is Tangled Rope in the enforcement-based era, and it is transitioning toward Scaffold as harm-reduction alternatives demonstrate superior outcomes."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "street_level_discretion_enforcement",
+      "spatial_exclusion_mechanisms",
+      "development_property_value_premium"
+    ],
+    "dual_formulation_note": "School safety zone definition has two structurally distinct constraint components: (1) school site planning coordination (genuine multi-stakeholder safety coordination), (2) enforcement-based displacement (extraction targeting homeless/low-income populations). The unified constraint story treats these as interdependent mechanisms. Alternative decomposition would create separate stories: safety_zone_planning_coordination (\u03b5\u22480.15, Rope) and enforcement_displacement_mechanism (\u03b5\u22480.72, Snare), linked as upstream/downstream. The current single-story approach treats them as one Tangled Rope reflecting institutional reality: municipal authorities use genuine safety coordination as justification for enforcement mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.38
+    }
+  ]
+}

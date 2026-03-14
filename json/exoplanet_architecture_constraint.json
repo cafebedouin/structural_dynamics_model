@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "exoplanet_architecture_constraint",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "exo_arch"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Exoplanet Architecture Constraint: Kepler-Type Detection Bias and Target Selection Asymmetry",
+    "topic_domain": "observational_astronomy/exoplanet_detection",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_resource_observatories",
+      "established_research_teams"
+    ],
+    "victims": [
+      "underfunded_programs",
+      "early_career_researchers",
+      "small_scale_surveys"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Underfunded Research Program",
+      "comment": "PERSPECTIVE 1: UNDERFUNDED PROGRAM (SNARE) \u2014 Lacks access to premium observation slots, cannot conduct systematic follow-up of marginal signals, trapped by resource allocation mechanisms. Bears full cost of detection architecture bias without capacity to exit or organize alternative verification pathways. Experiences the constraint as pure extraction: observation time is allocated to high-resource teams; marginal discoveries remain unconfirmed."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Early-Career Research Team",
+      "comment": "PERSPECTIVE 2: EARLY-CAREER TEAM (TANGLED ROPE) \u2014 Constrained by limited proposal success rates and reliance on survey data, but benefits from published exoplanet catalogs and collaborative networks. Must work within observation queue hierarchy; significant extraction (unequal access to resources) paired with genuine coordination function (shared survey standards enable follow-up work)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Major Observatory Institution",
+      "comment": "PERSPECTIVE 3: MAJOR OBSERVATORY (ROPE) \u2014 Institutional beneficiary with arbitrage options (can allocate observation time strategically to maximize publication returns). Experiences the constraint as pure coordination: establishing target priority criteria enables efficient use of expensive instrumentation. Net beneficiary of resource allocation architecture \u2014 extraction flows toward this agent."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Open Exoplanet Catalog Coalition",
+      "comment": "PERSPECTIVE 4: OPEN CATALOG COALITION (SCAFFOLD) \u2014 Organized agents (NASA Exoplanet Archive, ESA archives, community crowdsourcing platforms) see the architecture constraint as a temporary coordination problem with a sunset clause. Distributed data standards, computational verification methods, and machine-learning-assisted analysis are building alternative pathways that bypass premium observation time bottlenecks. The coalition has agency and sees an exit strategy: democratized data access and computational methods reducing reliance on scarce instrument time."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Traditional Target Selection Committee",
+      "comment": "PERSPECTIVE 5: TARGET SELECTION COMMITTEE (PITON) \u2014 The formal peer-review process for observation time allocation is substantially performative. Committees assess proposal quality and scientific merit, but the primary allocation mechanism is path-dependent institutional preference and prior success metrics. The process is maintained through institutional inertia despite its reduced functional role \u2014 alternative allocation mechanisms (algorithmic fairness in queue management, randomized trials, dedicated small-telescope windows) could replace it. Theater ratio reflects that formal review sessions are rituals that ratify pre-determined allocation patterns."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (False Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / FALSE NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some observational asymmetry appears inherent to astronomy: scarce instrument time must be allocated somehow, and established teams with track records have legitimate advantages in resource competition. This perspective risks naturalizing what is actually a contingent institutional choice \u2014 the architecture could be designed for equal access with randomized slots, staggered observation windows, or computational augmentation of limited observations. The engine's false summit detector identifies this as naturalization of a policy choice as a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "detection_bias_mechanism_identity",
+      "question": "Is the measured observational bias primarily driven by architectural resource constraints (scarce telescope time) or by scientific legitimacy differentials (established teams have better targets)?",
+      "resolution_mechanism": "Counterfactual analysis: simulate observation queue allocation under resource-blind (randomized) vs. merit-ranked assignment; measure discovery rate parity across funding tiers",
+      "impact": "If architecture-driven: constraint classifies as Tangled Rope (extractive allocation of coordinated resource). If merit-driven: constraint reflects legitimate scientific hierarchies, reducing extraction narrative.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether observational bias is architectural or merit-based"
+    },
+    {
+      "id": "computational_verification_sufficiency",
+      "question": "Can machine-learning and computational methods reliably verify exoplanet signals without intensive follow-up observation, thereby bypassing the instrument time bottleneck?",
+      "resolution_mechanism": "False positive rate comparison: ML-verified candidates vs. traditionally confirmed planets; multi-dataset cross-validation of computational methods on archival data",
+      "impact": "If yes: scaffold sunset is structural (open tools genuinely democratize discovery). If no: computational methods cannot replace instrument time, and the constraint persists indefinitely.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether computational methods can replace expensive follow-up observation"
+    },
+    {
+      "id": "institutional_capture_depth",
+      "question": "To what extent is the observation architecture controlled by major observatory institutions (captured by their interests) vs. coordinated through genuinely neutral scientific consensus?",
+      "resolution_mechanism": "Decision audit: trace allocation outcomes for proposals from major-institution vs. independent teams; analyze committee composition and funding flows; measure correlation between committee membership affiliation and proposal success rates",
+      "impact": "If captured: extraction mechanism is institutional gatekeeping (Snare from underfunded perspective). If neutral: allocation reflects legitimate resource scarcity (Rope from all perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of institutional capture in observation allocation"
+    },
+    {
+      "id": "follow_up_bias_irreversibility",
+      "question": "Are initial discoveries by major teams sufficiently well-characterized that later independent follow-up would be redundant, or does the first-mover advantage create persistent knowledge asymmetries?",
+      "resolution_mechanism": "Publication lag analysis: time between initial discovery and subsequent characterization by independent teams; measurement quality comparison between first and subsequent observations",
+      "impact": "If irreversible: first-mover creates lasting extraction (underfunded teams cannot catch up even with later access). If reversible: delayed access is constraint but not permanent disadvantage.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether first-mover advantages in exoplanet discovery are persistent"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The exoplanet discovery landscape exhibits a structural constraint arising from the asymmetric allocation of premium observation time combined with the path-dependent advantage of early discoveries. Major observatories (Kepler, TESS, ground-based facilities) command scarce instrument time and strategic observation priority. Within this architecture, established research teams capture disproportionate access, enabling higher discovery rates and early characterization rights. Underfunded programs and early-career researchers face constrained access to follow-up observations, reducing their ability to confirm marginal signals or pursue systematic surveys. The constraint combines genuine coordination (observation scheduling, target prioritization standards) with asymmetric extraction (allocation favoring institutional actors). The theater ratio (0.68) reflects that formal proposal review and observation allocation processes appear merit-based but are substantially performative \u2014 they ratify pre-determined preferences shaped by prior resource distribution. Meanwhile, open data catalogs and computational verification methods are building alternative pathways that could reduce reliance on scarce instrument time, suggesting a scaffold structure with potential sunset logic.",
+    "key_agents": [
+      "Major Observatory Institution: Primary beneficiary (institutional/arbitrage) \u2014 controls premium observation slots and can allocate them strategically; captures first-discovery advantage",
+      "Established Research Team: Secondary beneficiary (institutional/constrained) \u2014 has historical proposal success and institutional affiliation; preferential access to observation time",
+      "Underfunded Research Program: Primary victim (powerless/trapped) \u2014 lacks resources for competitive proposals; cannot conduct follow-up observations; trapped in unequal resource allocation",
+      "Early-Career Researcher: Secondary victim (moderate/constrained) \u2014 faces high proposal rejection rates; limited institutional prestige for priority allocation; constrained by career vulnerability",
+      "Open Exoplanet Catalog Coalition: Organized agents (organized/constrained) \u2014 NASA Exoplanet Archive, ESA databases, community platforms providing alternative data pathways; building democratized computational verification methods",
+      "Target Selection Committee: Institutional actor (institutional/arbitrage) \u2014 manages observation queue allocation; maintains formal review process; sees own role as increasingly performative",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing resource scarcity as inherent to astronomy rather than as a policy choice"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint extracts from underfunded and early-career researchers through unequal observation access, but the extraction is not maximal because (a) published exoplanet data is openly shared, enabling secondary analysis; (b) some observation programs explicitly reserve time for small-scale surveys; and (c) computational methods are reducing the observation time required for verification. The value reflects genuine resource scarcity (scarce telescope time is real) combined with institutional preference (allocation favors established teams beyond what resource scarcity alone would require). Suppression (0.52): Moderate-high. Barriers to exit include limited alternative observation facilities for many science cases, high cost of proposal preparation competing for limited acceptance rates, and career risk of pursuing marginal signals without institutional backing. However, suppression is not total \u2014 some researchers successfully navigate the system, computational methods provide partial workarounds, and open data enables alternative research pathways. Theater ratio (0.68): High. The proposal review process appears merit-based but operates largely as a ratification of institutional preferences. Committee decisions show high correlation with prior institutional success, proposal affiliation, and resource availability. The formal review session is a ritual that confirms patterns established by prior allocation decisions. As computational and open-data methods mature, this performative element becomes more apparent \u2014 the review process' function is decreasing even as its form persists.",
+    "directionality_logic": "Directionality values (d) for each perspective derive from structural position: who benefits and who pays in this constraint. Major observatories with arbitrage options (can direct observation time to maximize outcomes) have d \u2248 0.10-0.20 (beneficiaries with exit capacity). Established teams with constrained access (face high proposal costs but have institutional resources and track record) have d \u2248 0.35-0.45 (partial beneficiaries with limited exit). Early-career researchers with trapped financial status and institutional vulnerability have d \u2248 0.70-0.80 (victims constrained by career risk). Underfunded programs with no resource alternatives have d \u2248 0.85-0.95 (full victims trapped in allocation hierarchy). The open science coalition has d \u2248 0.50-0.60 (organized agents with mixed costs and benefits, but agency to build alternatives). Computed \u03c7 values reflect this directionality spread: institutional beneficiaries experience low or negative effective extraction; trapped agents experience high effective extraction. The piton perspective's moderate d reflects institutional arbitrage options despite low functional role.",
+    "perspectival_gap": "This constraint demonstrates divergent structural experiences despite shared observable reality. The major observatory sees a coordination problem with a reasonable solution (Rope) \u2014 allocate premium time to high-quality proposals. The established team sees partial constraint (Tangled Rope) \u2014 some resource disadvantages offset by institutional advantages. The early-career researcher sees significant extraction (Tangled Rope or Snare boundary) \u2014 unequal access combined with career vulnerability. The underfunded program sees pure extraction (Snare) \u2014 no meaningful exit option, all costs, no benefits. The open science coalition sees a temporary problem with an exit route (Scaffold) \u2014 distributed data and computational methods are building alternatives. The target selection committee sees its own role degrading (Piton) \u2014 formal review persists through inertia despite reduced function. The analytical observer risks seeing an immutable feature (Mountain) \u2014 scarce telescope time means unequal allocation is inevitable \u2014 but this naturalizes what is actually a policy choice (one could allocate equally via lottery, staggered windows, or computational priority tiers). The perspectival gap reveals that the constraint is not inherent to astronomy but contingent on institutional architecture.",
+    "mandatrophy_analysis": "This constraint avoids mandatrophy by clearly documenting both its coordination function (scheduling complex observations, prioritizing high-impact targets) and its extraction mechanism (unequal allocation that favors institutional actors). The tangled rope classification acknowledges both: genuine coordination exists, but paired with asymmetric extraction. The theater ratio (0.68) indicates that the coordination function is weakening relative to the extraction mechanism \u2014 proposal review is increasingly performative. The measurements show theater increasing from 0.52 to 0.68 over the interval, indicating institutional inertia (the formal process persists despite declining functional role). The scaffold perspective identifies a real structural feature with sunset logic: open data catalogs and computational methods are genuinely building alternative pathways that bypass the observation time bottleneck. The mountain perspective is flagged as a false summit \u2014 the analytical observer's claim that 'scarce telescope time necessitates unequal allocation' naturalizes what is actually a policy choice. The constraint's resolution lies not in proving extraction (which the tangled rope already captures) but in recognizing that the 'inherent scarcity' framing serves institutional interests by making the extraction appear inevitable."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "exoplanet_confirmation_bias",
+      "habitable_zone_target_selection"
+    ],
+    "dual_formulation_note": "The exoplanet architecture constraint has upstream dependencies on specific detection methods (Kepler photometry, radial velocity follow-up) which have their own extractiveness profiles, and downstream effects on confirmation bias and target selection strategies. Each stage of the discovery pipeline has its own constraint structure; this story focuses on the resource allocation layer."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

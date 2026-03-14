@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "tcp_congestion_control",
+    "version": "1.0",
+    "generated_date": "2025-01-20",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tcp"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "TCP Congestion Control as Coordination and Extraction",
+    "topic_domain": "networking/infrastructure/protocol_design",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "backbone_operators",
+      "content_delivery_networks"
+    ],
+    "victims": [
+      "latency_sensitive_applications",
+      "throughput_constrained_users"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Latency-Sensitive Application",
+      "comment": "PERSPECTIVE 1: LATENCY-SENSITIVE APPLICATION (SNARE) \u2014 Cannot exit TCP without losing reliability guarantees. IoT devices, real-time trading platforms, and interactive applications are trapped by the requirement for ordered delivery. Congestion control deliberately backs off when latency increases, starving real-time flows. The constraint suppresses alternatives (QUIC adoption is slow; UDP unreliability is unacceptable for many use cases). Maximum extraction experienced \u2014 the application must accept degradation with no negotiation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Throughput-Constrained User",
+      "comment": "PERSPECTIVE 2: THROUGHPUT-CONSTRAINED USER (TANGLED ROPE) \u2014 Locked into TCP by OS defaults and application design, but benefits from congestion control's network stability. The constraint both coordinates (prevents network collapse) and extracts (deliberately backs off sending, reducing individual throughput by 30-40% during congestion). Exit options exist (QUIC, custom protocols) but carry switching costs and loss of ecosystem support. Significant extraction but not maximal \u2014 some coordination benefit acknowledged."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Backbone Network Operator",
+      "comment": "PERSPECTIVE 3: BACKBONE NETWORK OPERATOR (ROPE) \u2014 Primary beneficiary (institutional/arbitrage). Congestion control coordinates shared link utilization by throttling senders voluntarily. The operator experiences the constraint as a coordination solution: it reduces their infrastructure costs, prevents buffer overflow, and avoids aggressive escalation wars that would degrade service for all users. Can exit (deploy QoS policies, enforce rate limits, update infrastructure) but these alternatives cost more than relying on TCP's built-in cooperation. Net beneficiary \u2014 the constraint extracts cooperation from senders for the operator's stability."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Content Delivery Network",
+      "comment": "PERSPECTIVE 4: CONTENT DELIVERY NETWORK (ROPE) \u2014 Benefits from congestion control by reducing infrastructure cost and network congestion, enabling better average user experience. Modern CDNs (Akamai, Cloudflare) have mobile exit options: they can tune TCP window sizes, implement custom congestion algorithms (BBR, CUBIC variants), deploy edge caching, and shift to QUIC. The constraint appears as coordination with substantial room for optimization. Experiences cooperation mechanism, not extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Protocol Evolution Coalition",
+      "comment": "PERSPECTIVE 5: PROTOCOL EVOLUTION COALITION (SCAFFOLD) \u2014 IETF working groups, standards bodies, and browser vendors (organized/constrained) see TCP congestion control as a temporary coordination mechanism with a sunset clause. QUIC, DCCP, and transport innovations are building alternatives that combine reliability with lower latency. Exit is constrained by installed base lock-in and slow adoption curves, but the coalition has agency and sees an exit path. Sunset horizon: 10-15 years for QUIC to become the default transport for new applications. Theater ratio is low because the congestion control mechanism solves a real coordination problem; the theater will rise only if the protocol persists after its functional need declines."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Middlebox",
+      "comment": "PERSPECTIVE 6: LEGACY MIDDLEBOX (PITON) \u2014 Firewalls, NAT devices, and load balancers that depend on TCP's sequential processing model are increasingly theatrical \u2014 they inspect packet streams that QUIC encrypts, perform actions (connection reset, rate limiting) that QUIC makes transparent to end-to-end encryption. Legacy middleboxes maintain TCP compatibility through institutional inertia rather than functional necessity. New deployments use QUIC passthrough or explicit signaling. The theater ratio reflects that congestion control's original function (avoiding overload collapse) is now partially redundant for well-provisioned modern networks; congestion control persists because replacing it globally requires perfect coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational/universal scope, TCP congestion control is a hybrid mechanism: it genuinely coordinates shared link utilization (rope function), but it also implements asymmetric extraction by constraining high-bandwidth applications and latency-sensitive flows while favoring steady-state bulk transfer. The constraint's persistence despite superior alternatives (QUIC, proprietary protocols) reflects institutional lock-in rather than optimality. Classification remains tangled_rope because both functions (coordination and extraction) are structurally necessary \u2014 removing either would degrade the system."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "congestion_signal_reliability",
+      "question": "Are packet loss and round-trip time increase reliable signals of actual network congestion, or do they reflect middlebox interference, buffering heterogeneity, and wireless link volatility?",
+      "resolution_mechanism": "Cross-ISP studies comparing congestion signal correlation with actual queue depth; analysis of false positive rates in cellular vs wired networks",
+      "impact": "If signals are reliable: congestion control is primarily coordination (rope). If highly noisy: much of the backed-off sending is extraction based on false signals; classification shifts toward snare for affected flows.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Reliability of packet loss and RTT as congestion signals"
+    },
+    {
+      "id": "fairness_across_technologies",
+      "question": "Do competing congestion algorithms (TCP Reno, CUBIC, BBR) converge to fair sharing or does algorithm diversity create systematic extraction where slow algorithms starve aggressive ones?",
+      "resolution_mechanism": "Long-term simulation and testbed experiments measuring throughput distribution across algorithm pairs; analysis of de facto fairness vs theoretical fairness",
+      "impact": "If convergence to fairness: constraint is primarily coordination mechanism. If algorithm wars persist: extraction is embedded in protocol adoption cycles; classification trends toward snare for non-dominant algorithms.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether competing algorithms converge to fair sharing"
+    },
+    {
+      "id": "quic_adoption_tipping_point",
+      "question": "Will QUIC adoption reach critical mass (>60% of new connections) within 10 years, or will TCP's installed base resistance prevent displacement?",
+      "resolution_mechanism": "Longitudinal tracking of QUIC adoption rates; measurement of barriers to deployment in legacy infrastructure; network ossification analysis",
+      "impact": "If tipping point: scaffold sunset is real; congestion control transitions from fundamental to vestigial. If stalled: TCP persists indefinitely; extraction from legacy lock-in becomes permanent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "QUIC adoption and TCP displacement timeline"
+    },
+    {
+      "id": "buffer_bloat_extraction_mechanism",
+      "question": "How much of the congestion control backoff reflects actual network saturation vs middlebox buffering that itself is extractive (forcing latency on all flows)?",
+      "resolution_mechanism": "AQM deployment analysis; measurement of latency reduction when buffer sizes are constrained; comparison of congestion response before/after buffering limits",
+      "impact": "If large fraction is buffer-bloat-driven: extraction is partly a response to prior infrastructure flaw; reducing suppression may require fixing buffering, not just tuning algorithms.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Buffer bloat as extraction mechanism vs legitimate congestion response"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "TCP congestion control is a foundational constraint on internet infrastructure that exhibits genuine coordination and genuine extraction simultaneously. Deployed in 1988 (Van Jacobson's Tahoe algorithm) to prevent network collapse during the first congestion catastrophe, it represents a negotiated limit on sending rates proportional to available bandwidth. From the perspective of network operators and well-provisioned CDNs, it is a coordination mechanism that prevents overload and reduces infrastructure costs. From the perspective of latency-sensitive applications (real-time trading, IoT devices, video conferencing) and bandwidth-constrained users, it is an extraction mechanism that deliberately reduces throughput and increases latency. The constraint's persistence despite superior alternatives (QUIC, proprietary transport protocols) reflects institutional lock-in: TCP is baked into operating system kernels, middleboxes, and application assumptions. The extractiveness value (0.38) reflects that the mechanism achieves genuine coordination (preventing collapse) but with asymmetric costs borne by flows that cannot benefit from bulk transfer. The theater ratio (0.35) reflects that congestion control's original function (preventing network meltdown) remains real, though its mechanisms are increasingly mistuned for modern networks with heterogeneous link qualities, deep buffering, and application diversity.",
+    "key_agents": [
+      "Backbone Network Operator: Primary beneficiary (institutional/arbitrage) \u2014 benefits from congestion control's network stability and reduced infrastructure cost",
+      "Content Delivery Network: Institutional beneficiary (institutional/mobile) \u2014 optimizes TCP variants and can deploy QUIC; experiences constraint as tunable coordination",
+      "Latency-Sensitive Application: Primary victim (powerless/trapped) \u2014 real-time trading, video conferencing, IoT; forced to accept degradation with no negotiation",
+      "Throughput-Constrained User: Secondary victim (moderate/constrained) \u2014 experiences both coordination benefit and extraction; could adopt QUIC but faces ecosystem barriers",
+      "Protocol Evolution Coalition: Organized coalition (organized/constrained) \u2014 IETF working groups, standards bodies, browser vendors building QUIC alternatives with sunset horizon",
+      "Legacy Middlebox: Institutional actor in decline (institutional/arbitrage) \u2014 maintains TCP compatibility through inertia; increasingly bypassed by QUIC and encryption",
+      "Analytical Observer: Systemic view (analytical/analytical) \u2014 sees both genuine coordination and genuine extraction; identifies lock-in preventing displacement by superior protocols"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. TCP congestion control achieves its primary goal of preventing network collapse and coordinates shared link utilization \u2014 this is genuine coordination, not pure extraction. However, the mechanism is asymmetric: flows that cannot adjust their sending rate (interactive applications, IoT devices) bear disproportionate cost compared to bulk transfer flows that can tolerate latency. The value reflects that significant extraction occurs but is balanced against real coordination benefits. Over the measurement interval, extractiveness increased from 0.20 to 0.38 as application workloads diversified \u2014 earlier TCP assumed mostly bulk transfer, but modern applications (video streaming, real-time comms, gaming) suffer more from congestion control backoff. Suppression (0.42): Moderate. Multiple barriers prevent escape: TCP is embedded in OS kernels (exit cost is high for applications), QUIC adoption is slow (network effects favor incumbents), and middlebox interference makes alternative protocols unreliable. But suppression is not total \u2014 QUIC deployment exists, custom transport layers are possible, and new applications can design around TCP. Theater ratio (0.35): Low-moderate. The congestion control mechanism solves a real problem (preventing collapse), so there is genuine functional content. Theater has increased slightly over the interval as the actual problem (preventing all-out sending races) has become less acute with provisioning improvements, but the protocol persists for lock-in reasons. The theater ratio remains below 0.5 because congestion control still prevents real harm \u2014 middleboxes that depend on inspecting TCP flows score higher theater (piton perspective) because their function is increasingly vestigial.",
+    "directionality_logic": "Directionality values are derived from structural position: network operators benefit from the constraint (low d, negative f(d)), latency-sensitive applications are victimized (high d, high f(d)), and moderate actors experience mixed cost-benefit (mid-range d, moderate f(d)). The beneficiary (backbone operator) with arbitrage exit options derives d \u2248 0.15, producing negative effective extraction because they can tune or exit if the constraint becomes unfavorable. The victim (latency-sensitive application) with trapped exit derives d \u2248 0.90, producing high f(d) and high experienced extraction because they have no alternative. The moderate actor (throughput-constrained user) with constrained exit derives d \u2248 0.55, producing moderate f(d) because they could exit (switch to QUIC, use UDP) but face significant switching costs. The analytical observer derives d \u2248 0.72 (between victim and beneficiary) because the constraint's extractiveness is genuinely bidirectional \u2014 it coordinates for some, extracts from others.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. The backbone operator (institutional/arbitrage) sees the constraint as pure coordination (rope) \u2014 it solves their infrastructure problem elegantly and costs them nothing to enforce (senders voluntarily back off). The latency-sensitive application (powerless/trapped) sees pure extraction (snare) \u2014 it is forced to accept degradation with no negotiation and no exit option. The protocol coalition (organized/constrained) sees a temporary problem with a known exit (scaffold) \u2014 QUIC and other transports are building alternatives with a realistic sunset timeline. The legacy middlebox (institutional/arbitrage) sees a degraded ritual (piton) \u2014 it depends on TCP's sequential nature, which QUIC encrypts away, forcing its own redundancy. The gap between operator's rope and application's snare is the gap between who benefits and who bears cost. The gap between scaffold and piton reflects different timeframes: the coalition sees a sunset mechanism (10-15 years), while the middlebox sees indefinite persistence through inertia. The analytical observer sees tangled_rope because both functions (coordination and extraction) are structurally real.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by refusing false unification: it is not 'really' coordination masked as extraction, nor 'really' extraction masked as coordination. Both characterizations are structurally accurate from different positions. The backbone operator's rope perspective is not wrong \u2014 the operator genuinely does solve a collective action problem. The latency-sensitive application's snare perspective is not wrong \u2014 the application genuinely is forced to degrade with no exit. The tangled_rope classification accommodates both truths: the mechanism coordinates shared link utilization (genuine rope function) while implementing asymmetric extraction (genuine snare function). The mandatrophy is resolved by showing that the constraint serves two structurally different purposes for two structurally different agents. Mandatrophy would arise if we tried to claim the constraint 'is really' one type \u2014 the data demand both."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "buffer_bloat",
+      "network_latency_heterogeneity",
+      "quic_protocol_adoption"
+    ],
+    "dual_formulation_note": "TCP congestion control is upstream of several derived constraints. Buffer bloat (the middlebox buffering that amplifies congestion signals) has its own extractiveness. Network latency heterogeneity (the diversity of link qualities that makes uniform congestion response suboptimal) has its own constraint on fairness. QUIC adoption represents a downstream constraint: displacement of TCP requires solving coordination and extraction problems differently. All three are structurally linked \u2014 fixing buffer bloat reduces the congestion control backoff requirement; optimizing latency diversity reduces the extraction asymmetry; deploying QUIC reduces lock-in suppression."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

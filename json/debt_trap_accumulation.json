@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "debt_trap_accumulation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "debt"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Debt Trap Accumulation",
+    "topic_domain": "economic/financial",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "creditors",
+      "debt_securitizers"
+    ],
+    "victims": [
+      "borrowers_with_inadequate_income",
+      "precarious_workers",
+      "economically_vulnerable_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Trapped Borrower",
+      "comment": "PERSPECTIVE 1: TRAPPED BORROWER (SNARE) \u2014 Structurally immobilized by debt obligations exceeding escape capacity. Income insufficient to service debt while meeting subsistence needs. No collateral to liquidate. Unable to default without catastrophic consequences (bankruptcy stigma, asset seizure, wage garnishment). Experiences maximum extraction with zero degrees of freedom."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Constrained Borrower (Intergenerational)",
+      "comment": "PERSPECTIVE 2: CONSTRAINED BORROWER / INTERGENERATIONAL (SNARE) \u2014 At generational time horizon, sees debt patterns inherited from parents or forced onto children. Structural barriers include inadequate wage growth relative to living costs, limited educational access (blocked by debt), geographic immobility (tied to employment for wage garnishment avoidance). High suppression through institutional mechanisms (employment verification, credit scoring, asset tracking). Exit costlier than immediate default but nominally possible. Still experiences snare classification due to suppression magnitude and multi-generational lock-in."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Financially Literate Borrower with Alternatives",
+      "comment": "PERSPECTIVE 3: FINANCIALLY LITERATE BORROWER WITH ALTERNATIVES (TANGLED ROPE) \u2014 Mobile exit options through bankruptcy discharge, debt negotiation, or income diversification (gig economy, relocation). Benefits from legitimate credit access for housing/education. Experiences coordination function (credit system allocates capital) alongside asymmetric extraction (interest compounds faster than earned income). Suppression is surmountable at moderate cost (credit score impact, legal fees). Effective extraction significant but not maximal."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Creditor Institution",
+      "comment": "PERSPECTIVE 4: CREDITOR INSTITUTION (ROPE) \u2014 Experiences the constraint as pure coordination: managing loan portfolios, pricing risk, regulatory compliance. Has arbitrage options (securitization, sale of debt, portfolio diversification). Benefits from the constraint's extraction mechanisms without direct enforcement costs. Suppression is externalized onto borrowers; creditor operates within legal frameworks. Perceives debt accumulation as market-clearing mechanism rather than extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Debtors' Coalition",
+      "comment": "PERSPECTIVE 5: DEBTORS' COALITION (TANGLED ROPE) \u2014 Organized collective action (strike debt campaigns, debt jubilee movements) has real but constrained power. Can negotiate partial relief, policy changes, or collective default mechanisms. Suppression persists through legal frameworks and social stigma but is partially surmountable through political organizing. Both coordination and extraction occur: collective action is coordinated response, but the constraint itself extracts from the organized group through repressive legal actions, debt assignment to collection agencies, reputation systems."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Structural Poverty Function)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational scope, debt trap accumulation is a structural mechanism for converting temporary income insufficiency into permanent poverty and intergenerational transmission of disadvantage. The constraint's extractiveness (0.68) is below the immediate snare threshold (0.66 chi) but suppression (0.75) is extreme. The mechanism relies on making borrowers structurally powerless through compounding interest, reduced mobility, and institutional barriers. Theater ratio (0.35) is low \u2014 this is not performative, it is material extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "subsistence_threshold_ambiguity",
+      "question": "Below what income level do debt obligations become structurally impossible to service alongside subsistence needs?",
+      "resolution_mechanism": "Time-budget analysis: ratio of debt service + living expenses vs. available income; cross-national comparison of bankruptcy trigger points",
+      "impact": "If threshold is high (low income ratio): more borrowers classified as trapped (snare perspective dominant). If threshold is low: more borrowers appear constrained rather than trapped (tangled rope perspective viable).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Income threshold distinguishing trapped from constrained debt obligations"
+    },
+    {
+      "id": "interest_compounding_extraction_proportion",
+      "question": "What fraction of a borrower's debt burden is attributable to interest compounding vs original principal?",
+      "resolution_mechanism": "Loan-level amortization analysis across product types (credit cards, payday loans, subprime mortgages, student loans); correlation of interest magnitude with borrower income level",
+      "impact": "If interest > 60% of total repayment: extraction mechanism is clearly superlinear (snare). If interest < 30%: mechanism appears more like standard coordination (rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of debt attributable to compounding interest"
+    },
+    {
+      "id": "default_consequence_severity_distribution",
+      "question": "Are default consequences (wage garnishment, asset seizure, credit destruction, imprisonment in debt-prison contexts) applied uniformly or concentrated on powerless agents?",
+      "resolution_mechanism": "Enforcement pattern analysis: prosecution/collection rates by borrower income level, attorney representation, geographic jurisdiction; comparison of institutional vs individual default treatment",
+      "impact": "If concentrated on powerless: confirms snare classification through selective suppression. If distributed: extraction mechanism is more symmetric, moving toward tangled rope or rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Distributional pattern of default enforcement consequences"
+    },
+    {
+      "id": "debt_securitization_extraction_opacity",
+      "question": "To what extent does securitization of debt (pooling into financial instruments, sale to institutional investors) obscure the extractive mechanism from borrowers and creditors alike?",
+      "resolution_mechanism": "Trace capital flow from borrower payment through servicer, investor, and financial instruments; identify where extraction accumulates and who captures it; measure information asymmetry between borrowers and actual beneficial owners",
+      "impact": "If high opacity: creditors are also constrained agents within a larger extraction system (institutional snare). If low opacity: creditors are clear beneficiaries (institutional rope or tangled rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Opacity of debt securitization processes and true extraction concentration"
+    },
+    {
+      "id": "behavioral_lock_in_mechanisms",
+      "question": "Are borrowers trapped by material barriers (legal, economic) or by internalized beliefs (financial illiteracy, shame, identity as debtor)?",
+      "resolution_mechanism": "Comparative analysis: debt-load outcomes for borrowers with identical income but different information/counseling access; exit rates after identity-shifting interventions (bankruptcy counseling, financial therapy); geographic jurisdiction effects",
+      "impact": "If primarily material barriers: trapped exit classification is accurate (snare). If significant behavioral lock-in: some borrowers are identity_locked (perceive constraint as unchangeable from within identity frame) \u2014 classification shifts to rope from identity_locked perspective at biographical time.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative contribution of material vs behavioral trapping mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.33
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Debt trap accumulation is a structural constraint in which creditors extract wealth from borrowers through compounding interest, unequal bargaining power, and suppression mechanisms (wage garnishment, credit destruction, asset seizure, institutional tracking) that prevent exit. The constraint is intentionally designed: predatory lending targets borrowers below income thresholds where debt service becomes impossible without sacrificing subsistence needs. Interest compounds faster than borrower income grows, creating permanent indebtedness. Suppression operates through legal enforcement systems that treat default as a crime (in some jurisdictions literally \u2014 debt-prison frameworks) and social/institutional mechanisms that make exit costlier than compliance. The constraint appears as a pure snare (Snare) from the perspective of powerless, trapped borrowers; as an extractive coordination mechanism (Tangled Rope) from moderate borrowers with some mobility; as pure coordination (Rope) from creditor institutions; and as a structural poverty function (Snare) from civilizational scope. Theater ratio (0.35) is relatively low \u2014 debt traps are not sustained through performative mechanisms but through material enforcement.",
+    "key_agents": [
+      "Borrowers with inadequate income (powerless/trapped): Primary victims \u2014 structurally unable to service debt while meeting subsistence needs; experience maximum suppression through wage garnishment and asset seizure",
+      "Precarious workers (moderate/constrained): Secondary victims \u2014 income volatility makes debt service unpredictable; high barriers to exit through institutional employment tracking and credit scoring",
+      "Economically vulnerable populations (powerless/trapped): Structural victims \u2014 systemic exclusion from traditional credit creates dependency on predatory lenders (payday loans, subprime mortgages, title loans)",
+      "Creditors and debt servicers (institutional/arbitrage): Primary beneficiaries \u2014 extract through interest compounding and institutional enforcement mechanisms; operate within legal frameworks that externalize suppression",
+      "Debt securitizers (institutional/arbitrage): Secondary beneficiaries \u2014 pool debt into financial instruments, concentrating extraction and obscuring accountability; have options to sell portfolios or diversify",
+      "Debtors' coalitions (organized/constrained): Secondary agents \u2014 organized collective action creates partial exit options but faces legal/social repression; demonstrate that organization is possible at cost"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts through three mechanisms: (1) compounding interest that grows faster than income, (2) suppression that prevents exit and forces compliance, (3) asymmetric information (lender knows risk; borrower does not). The measurement trajectory (0.42 \u2192 0.68 over 10 years) reflects how debt accumulates and borrowers become progressively more trapped \u2014 the initial debt obligation is manageable (0.42 extractiveness) but compounds into immobility (0.68). This trajectory captures the mechanism: it is not predatory at origination but becomes extractive through time. Suppression (0.75): High. Material barriers to exit include wage garnishment (direct income capture), asset seizure (eliminates emergency reserves), credit score destruction (blocks alternative credit), geographic immobility (employment tracking prevents relocation), and in some contexts literal imprisonment for debt. These mechanisms are legally enforced and institutionalized. Theater ratio (0.35): Low. Debt traps are not sustained through narrative, performance, or ideological cover. The mechanism is straightforward: borrow, fail to repay on schedule, accrue interest, attempt to repay, fall further behind. The apparent 'reasonableness' of interest charges and the legality of enforcement provide some cover story, but the core mechanism is transparent material extraction. The theater ratio is not higher because the constraint does not rely on pretense \u2014 it relies on legal authority and material enforcement.",
+    "perspectival_gap": "Creditors perceive Rope (pure coordination); trapped borrowers perceive Snare (pure extraction); constrained borrowers perceive Tangled Rope (mixed); organized borrowers perceive Tangled Rope with sunset potential (scaffold for policy change). This gap is not a misunderstanding but a genuine structural difference in how the constraint operates for each actor. The creditor institution truly is allocating credit (coordination function) even as it extracts (asymmetric distribution of benefit). The trapped borrower truly cannot exit (snare condition) even though other agents experience choices (rope condition for creditors). The perspectival gap is the diagnostic \u2014 it shows that the constraint is extractive, not that some perspectives are wrong.",
+    "directionality_logic": "Directional d values flow from beneficiary/victim declarations and exit options. Trapped borrowers (victims + trapped exit) derive d \u2248 0.95, producing f(d) \u2248 1.42 and chi \u2248 0.68 \u00d7 1.42 \u00d7 1.0 \u2248 0.96 (effective extraction near-maximal). Creditor institutions (beneficiaries + arbitrage exit) derive d \u2248 0.05, producing f(d) \u2248 -0.12 and chi \u2248 0.68 \u00d7 (-0.12) \u00d7 1.0 \u2248 -0.08 (negative effective extraction \u2014 they perceive benefit, not burden). Constrained moderate borrowers (victims + constrained exit) derive d \u2248 0.75, producing f(d) \u2248 1.15 and chi \u2248 0.68 \u00d7 1.15 \u00d7 1.0 \u2248 0.78 (high effective extraction, less extreme than trapped). The directionality derivation explains why creditors see Rope while borrowers see Snare \u2014 they are measuring different d values through the same constraint structure.",
+    "mandatrophy_analysis": "RESOLVED: The constraint is clearly Snare from the victim perspective. Extractiveness (0.68), suppression (0.75), and chi (\u22650.66) all exceed snare thresholds. The mandatrophy \u2014 the ambiguity between coordination and extraction \u2014 is resolved by noting that the constraint genuinely provides coordination benefits (credit allocation, risk pricing, portfolio management) but concentrates those benefits on creditors while concentrating extraction on borrowers. This is not a single constraint misclassified as two types; it is two structures in one: a coordination system for creditors (Rope) and an extraction system for borrowers (Snare). The entire system is Snare at the civilizational level because the coordination function is secondary to the extraction function \u2014 the system could allocate credit without the suppression mechanisms, but those mechanisms exist because extraction is the primary goal. The beneficiary/victim declarations and the directional derivation resolve the mandatrophy: the creditor sees Rope, the borrower sees Snare, the system is Snare."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "credit_score_punishment",
+      "wage_garnishment_mechanisms",
+      "predatory_lending_cycles",
+      "intergenerational_poverty_transmission"
+    ],
+    "dual_formulation_note": "Debt trap accumulation is upstream of multiple downstream constraints: credit scoring punishment (individual borrower consequences), wage garnishment (institutional enforcement), predatory lending cycles (systemic reproduction), and intergenerational poverty transmission (family-level reproduction). Each downstream constraint has its own extractiveness value reflecting its structural specificity, but all depend on the debt trap mechanism as their foundation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.72
+    }
+  ]
+}

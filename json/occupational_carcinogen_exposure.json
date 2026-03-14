@@ -1,0 +1,206 @@
+{
+  "header": {
+    "constraint_id": "occupational_carcinogen_exposure",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "occ_carcin"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Occupational Carcinogen Exposure as Structural Extraction",
+    "topic_domain": "labor/occupational_health/environmental",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "industry_cost_minimizers"
+    ],
+    "victims": [
+      "exposed_workers",
+      "worker_families"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Exposed Worker",
+      "comment": "PERSPECTIVE 1: EXPOSED WORKER (SNARE) \u2014 Trapped by economic dependency and information asymmetry. Worker bears full health cost of carcinogen exposure; cannot exit without losing livelihood. No effective alternative employment in the sector. Extraction runs entirely toward the employer through cost externalization onto worker health."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Worker Families",
+      "comment": "PERSPECTIVE 2: WORKER FAMILIES (SNARE) \u2014 Trapped intergenerationally. Secondary exposure through worker clothing and hygiene. Children internalize health risks from parental occupational exposure. No formal agency in the constraint; caught in extraction cycle without direct negotiating capacity. Biological inheritance of risk."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Employer/Industry",
+      "comment": "PERSPECTIVE 3: EMPLOYER/INDUSTRY (ROPE) \u2014 Experiences constraint as coordination problem: managing production efficiency while navigating regulatory requirements. Has arbitrage options (relocating to lower-regulation jurisdictions, switching processes, offshoring). Encounters the constraint as manageable overhead rather than binding extraction. Net beneficiary through externalized health costs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Occupational Health Professional",
+      "comment": "PERSPECTIVE 4: OCCUPATIONAL HEALTH PROFESSIONAL (TANGLED ROPE) \u2014 Moderate power; faces both coordination function (identifying and mitigating exposure) and asymmetric extraction (employer pressure to downplay risks, career consequences for whistleblowing). Constrained by employment relationship; some agency through professional standards but significant retaliation risk. Mixed experience: genuine protective function combined with institutional pressure to minimize findings."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Regulatory Framework",
+      "comment": "PERSPECTIVE 5: REGULATORY FRAMEWORK (PITON) \u2014 Occupational safety regulations persist through institutional inertia despite degraded function. Theater ratio reflects performative compliance: exposure limits set decades ago (OSHA PEL for asbestos: 0.1 fibers/cc established 1972, widely considered inadequate); monitoring is episodic; enforcement is sparse; reclassification as 'likely carcinogen' versus 'established carcinogen' creates theatrical distinction without functional protection. Regulatory theater maintains legitimacy of the regime while permitting continued exposure."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Worker Collective/Labor Union",
+      "comment": "PERSPECTIVE 6: WORKER COLLECTIVE / LABOR UNION (SCAFFOLD) \u2014 Organized agents see temporary exposure mechanisms being gradually replaced by alternative pathways: process substitution, automation, containment technology. Some unions have negotiated exposure reduction schedules with sunset clauses (e.g., asbestos phase-out agreements). Constrained by employer bargaining power but possess agency through collective action. Classification reflects both low effective extraction (through organized resistance) and the real sunset function (substitution technologies reducing exposure over time)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Sees genuine coordination function (protecting worker health, managing occupational disease prevention) layered beneath asymmetric extraction (health costs borne by workers, profits retained by employers). The constraint coordinates production and disease prevention simultaneously; the asymmetry is structural rather than accidental. Global scope reveals that the constraint persists partly through information discontinuities: high-risk sectors concentrated in lower-regulation jurisdictions; knowledge of alternatives suppressed through industry funding of research."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "dose_response_threshold_ambiguity",
+      "question": "Is the dose-response relationship for occupational carcinogens linear with no-observed-adverse-effect-level (NOAEL), or does a safe threshold exist below which risk approaches zero?",
+      "resolution_mechanism": "Longitudinal epidemiological studies comparing workers with documented exposure below regulatory limits versus unexposed controls; meta-analysis of dose-response studies across multiple carcinogens",
+      "impact": "If linear: all exposure constitutes extraction (snare from worker perspective becomes more justified). If threshold exists: regulatory frameworks approach genuine coordination. Current evidence favors linear for many carcinogens (tobacco, asbestos, benzene).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Dose-response relationship for occupational carcinogens"
+    },
+    {
+      "id": "alternative_process_technical_feasibility",
+      "question": "Are technically and economically viable alternatives to carcinogenic processes available for the majority of high-exposure occupations, or do fundamental production constraints require accepting exposure?",
+      "resolution_mechanism": "Engineering assessment of substitution feasibility for: asbestos (insulation/friction), crystalline silica (mining/sandblasting), PAH (foundry work), formaldehyde (resin production). Cost-benefit analysis comparing process substitution to exposure management.",
+      "impact": "If alternatives are viable: suppression should be lower (workers can exit via industry process shift); constraint is more snare than mountain. If alternatives are technically infeasible: higher suppression is justified; constraint approaches mountain for that specific process.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Availability of alternatives to carcinogenic processes"
+    },
+    {
+      "id": "information_asymmetry_persistence",
+      "question": "To what extent does workers' documented lack of knowledge about carcinogenic exposure (vs. employers' documented knowledge) persist despite regulatory disclosure requirements, and what maintains this information gap?",
+      "resolution_mechanism": "Survey studies of worker awareness of specific carcinogens in their workplace vs. employer training records; analysis of information control mechanisms (suppression of health and safety data, limited access to occupational health records, language barriers in safety materials)",
+      "impact": "If gap is largely informational (fixable through better disclosure): constraint is partly snare because workers are choosing unknowingly. If gap persists despite full information (workers choose to stay due to economic desperation): constraint is purely snare through structural powerlessness.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Information asymmetry about carcinogenic exposure"
+    },
+    {
+      "id": "intergenerational_epigenetic_inheritance",
+      "question": "Do occupational carcinogen exposures produce heritable epigenetic modifications in worker offspring that increase their disease risk independent of direct exposure?",
+      "resolution_mechanism": "Longitudinal studies of worker offspring comparing disease incidence/epigenetic markers with baseline population; analysis of occupational exposure timing (preconception, during pregnancy) and offspring outcomes",
+      "impact": "If epigenetic inheritance is confirmed and significant: worker families perspective (generational snare) is strengthened; suppression is higher because extraction reaches across generations. If absent: family constraint is secondary exposure only, not biological inheritance.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Heritable epigenetic effects of occupational carcinogen exposure"
+    },
+    {
+      "id": "regulatory_capture_institutional_mechanism",
+      "question": "What maintains the gap between scientific evidence about carcinogen danger and regulatory action? Is delay primarily industry lobbying, bureaucratic inertia, or genuine scientific uncertainty?",
+      "resolution_mechanism": "Analysis of regulatory timelines (date of hazard identification vs. date of regulatory action) for major carcinogens; document analysis of industry communications; tracking of revolving-door employment between industry and regulatory agencies",
+      "impact": "If captured by industry lobbying: regulatory framework perspective (piton) is validated. If bureaucratic inertia: piton is accurate but not intentional. If genuine uncertainty dominates: framework is rope (coordination around difficult science), not snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Institutional mechanisms maintaining regulatory lag"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Occupational carcinogen exposure represents a structural constraint where workers' economic dependency creates a binding extraction mechanism: employers externalize health costs onto workers through processes known to cause cancer, while retaining profits and shifting disease burden onto the worker, their family, and the public health system. The constraint exhibits multiple structural features: trapped workers lack meaningful exit options; information asymmetries prevent informed choice; regulatory frameworks are degraded (piton) due to capture and lag; employers experience the constraint primarily as coordination (rope) around regulatory compliance rather than genuine restriction; organized labor develops collective countermeasures (scaffold perspective); and the analytical observer sees genuine coordination function (disease prevention) layered beneath structural asymmetry (cost externalization). Base extractiveness has increased over recent decades as scientific evidence about carcinogenic hazards has accumulated while regulatory action has lagged, and as the composition of the exposed workforce has shifted toward workers with lower bargaining power (immigrant workers, workers in lower-income countries). The theater ratio reflects performative compliance: OSHA standards remain decades old despite new evidence; exposure monitoring is episodic; reclassification of substances ('likely' vs. 'established' carcinogen) creates regulatory theater rather than protection.",
+    "key_agents": [
+      "Exposed Workers: Primary victims (powerless/trapped) \u2014 economic dependency prevents exit; bear full health cost; no exit options short of unemployment",
+      "Worker Families: Secondary victims (powerless/trapped) \u2014 intergenerational exposure; internalize parental occupational risk; no negotiating capacity",
+      "Employers/Industry: Primary beneficiary (institutional/arbitrage) \u2014 capture productivity and profits; externalize health costs; have exit options (relocation, process substitution, offshoring)",
+      "Occupational Health Professionals: Moderate institutional actors (moderate/constrained) \u2014 carry both protective function and pressure to minimize findings; face retaliation risk for whistleblowing",
+      "Regulatory Agencies: Institutional actors (institutional/arbitrage) \u2014 maintain performative framework (piton) through capture and bureaucratic inertia; have power to act but exercise it inconsistently",
+      "Labor Unions / Worker Collectives: Organized agents (organized/constrained) \u2014 develop collective countermeasures; negotiate exposure reduction schedules; represent scaffold perspective with sunset function",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees both genuine coordination function and structural asymmetry; identifies mechanism of capture and cost externalization"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The employer captures the value of production while the worker bears health cost. Unlike ambiguous workplace harms, carcinogenic exposure has documented dose-response relationships and long latency periods \u2014 the extraction is scientifically quantifiable. Extractiveness is not higher (e.g., 0.75+) because regulatory frameworks do impose some constraints (exposure limits, disclosure requirements, monitoring), and some sectors have genuine technical barriers to substitution. Measurement trajectory shows extractiveness rising from 0.38 to 0.61 over six decades, reflecting accumulation of evidence without corresponding regulatory tightening \u2014 the constraint has become more obviously extractive as the asymmetry has become scientifically undeniable. Suppression (0.72): High. Multiple barriers prevent worker exit: (1) Economic dependency \u2014 occupational carcinogen exposure is concentrated in working-class sectors where workers have limited alternative employment; (2) Information asymmetry \u2014 workers often do not know they are exposed or misjudge the risk; (3) Collective action barriers \u2014 scattered workers cannot easily organize resistance; (4) Regulatory capture \u2014 agencies move slowly; (5) Intergenerational trapping \u2014 children inherit both occupational exposure (parental clothing/hygiene) and limited employment options (social class reproduction). Suppression approaches 0.80 for the most vulnerable sectors. Theater ratio (0.55): Moderate. Regulatory frameworks contain genuine protective components (exposure standards, monitoring) alongside performative components (outdated standards, episodic enforcement, reclassification games). Unlike pure-piton constraints, the theater ratio is not dominant; some functional protection exists. But significant performative content: OSHA's asbestos standard (0.1 fibers/cc, set 1972) is widely considered inadequate by current evidence; 'likely carcinogen' vs. 'established carcinogen' distinction carries more regulatory theater than toxicological substance.",
+    "perspectival_gap": "The snare classifications (perspectives 1-2: trapped workers and families) contrast maximally with the rope classification (perspective 3: employer). The same structural phenomenon \u2014 carcinogen exposure in industrial production \u2014 appears as inescapable extraction from the worker's view and as manageable coordination from the employer's view. This gap reveals the asymmetry: the constraint is experienced as snare by those who cannot exit and as rope by those who can. The piton classification (perspective 5: regulatory framework) reflects that occupational safety law has become performative theater maintained by institutional inertia rather than functional protection. The tangled rope at the analytical level (perspective 7) resolves the perspectival gap by showing that the constraint is BOTH coordination (protecting occupational health) AND extraction (externalizing costs). The coordination function is real but asymmetric: it coordinates around production efficiency and disease prevention simultaneously, but the worker bears the cost while the employer retains benefit. This is the defining signature of tangled rope \u2014 genuine coordination overlaid on asymmetric extraction.",
+    "directionality_logic": "Directionality values (d) derive from each agent's structural relationship to the extraction flow. Trapped workers with victim status: d approaches 1.0 (maximum target). They have no exit options and no choice in the constraint. Family members: d also approaches 1.0 (intergenerational trapping). Employers with arbitrage options and beneficiary status: d approaches 0.0\u20130.15 (beneficiary with exit). They could reduce exposure (process substitution, offshoring) but choose not to; they benefit from extraction. Occupational health professionals with victim status but constrained (not trapped) exit: d ~0.65 (moderate target). They face pressure and risk but possess professional agency. Labor unions with organized power and some exit options (negotiating collectively): d ~0.45\u20130.55 (symmetric to slightly victim-oriented). The union has leverage but workers remain trapped, so the collective's position is compromise-oriented. Regulatory agencies with institutional power and beneficiary status (from cost externalization): d ~0.20\u20130.30 (institutional beneficiary with arbitrage). Agencies could enforce stricter standards but face industry pressure and bureaucratic constraints. The analytical observer with analytical exit: d ~0.72 (observer position, asymmetric toward revealing extraction). The engine derives these automatically from beneficiary/victim declarations and exit options; the commentary reflects the structural reasoning.",
+    "mandatrophy_analysis": "This constraint avoids mandatrophy by maintaining perspectival plurality. The classification is not 'occupational carcinogen exposure IS a snare' but rather 'different agents structurally experience this constraint as snare/rope/tangled rope/piton/scaffold depending on their exit options and beneficiary status.' The false summit (mountain) perspective is not included because the constraint is not natural law \u2014 it is contingent institutional arrangement. Employers could reduce exposure through process substitution (technical feasibility is established for most high-risk sectors). Regulatory frameworks could enforce stricter standards (political choice, not scientific uncertainty dominates the lag). Workers could collectively exit by organizing sector-wide resistance (though individual exit is blocked by economic desperation). The constraint is maintained through institutional and market mechanisms, not natural law. The mandatrophy resolves by showing that the single correct classification is the analytical-level tangled rope: genuine coordination function (occupational disease prevention) layered beneath structural asymmetry (cost externalization). This classification contains the snare experience (for trapped workers), the rope experience (for employers with exit), the scaffold experience (for organized labor), and the piton experience (degraded regulatory function) as perspectival readings of the same underlying tangled structure. The constraint does what tangled rope does: it coordinates activity (production and health management) while extracting asymmetrically (costs on workers, benefits on employers)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "occupational_disease_epidemiology",
+      "worker_collective_bargaining",
+      "regulatory_capture_in_osha"
+    ],
+    "dual_formulation_note": "Occupational carcinogen exposure constrains multiple distinct processes: (1) worker disease acquisition (epidemiological process), (2) workplace hazard management (institutional process), (3) regulatory enforcement (political process). These constraints share mechanisms but have different \u03b5 values. Occupational_disease_epidemiology downstream of this constraint reflects medical consequences. Worker_collective_bargaining is partially blocked by this constraint. Regulatory_capture_in_osha is upstream \u2014 the institutional capture mechanism enables carcinogen exposure to persist."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

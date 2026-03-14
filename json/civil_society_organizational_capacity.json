@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "civil_society_organizational_capacity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "civorg"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Civil Society Organizational Capacity Constraint",
+    "topic_domain": "governance/civil_society",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_institutions",
+      "corporate_foundations",
+      "professional_ngos"
+    ],
+    "victims": [
+      "grassroots_movements",
+      "local_organizing_capacity",
+      "community_self_determination"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Grassroots Movement",
+      "comment": "PERSPECTIVE 1: GRASSROOTS MOVEMENT (SNARE) \u2014 Local community organizing groups face overwhelming barriers to formal organizational capacity. Regulatory compliance, accounting standards, insurance, nonprofit incorporation, and grant administration create extraction mechanisms that funnel grassroots energy upward into professionalized structures. Powerless agents cannot exit \u2014 they lack resources to meet compliance or alternative pathways for collective action. Maximum structural extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Community-Based Organization",
+      "comment": "PERSPECTIVE 2: COMMUNITY-BASED ORGANIZATION (TANGLED ROPE) \u2014 Mid-scale organizations coordinate genuine local activities (food distribution, youth programs, health outreach) while simultaneously extracting control from the communities they serve. Donor reporting requirements redirect focus from community needs to funder preferences. Staff professionalization creates distance from constituency. Exit is costly \u2014 losing funding or legitimacy \u2014 but possible. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Foundation Complex",
+      "comment": "PERSPECTIVE 3: FOUNDATION COMPLEX (ROPE) \u2014 Philanthropic institutions and state agencies coordinate resource allocation through grantmaking. The constraint enables their function: standardized organizational capacity requirements ensure accountability and leverage for donor priorities. Net beneficiary \u2014 experiences the constraint as coordination infrastructure that multiplies their allocative power."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The International Capacity-Building Movement",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL CAPACITY-BUILDING MOVEMENT (SCAFFOLD) \u2014 Organized coalitions (CIVICUS, WINGS, Tactical Tech, capacity networks) are building alternative models: peer-to-peer learning, horizontal governance documentation, informal legitimacy, and decentralized funding mechanisms. These represent sunset clauses to professionalized capacity requirements \u2014 as they mature, grassroots groups can exist outside the formal nonprofit apparatus. Moderate extraction because organized agents see agency and exit pathways."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Nonprofit Governance Industry",
+      "comment": "PERSPECTIVE 5: NONPROFIT GOVERNANCE INDUSTRY (PITON) \u2014 Professional nonprofit management (consulting, training, standards-setting) persists largely through institutional inertia. The industry knows that standardized capacity requirements filter participation and concentrate power upward \u2014 this is transparent in strategy documents. Yet the industry maintains these standards through accreditation, funder preferences, and social proof. High theater: performative compliance workshops that teach organizations how to comply with requirements that the workshop itself legitimizes."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal perspective, any collective action requires coordination mechanisms, and coordination has inherent costs. Organizational capacity is the cost of collective action: no movement can scale without some standardization. This view naturalizes the constraint as inevitable. However, the structural data contradicts the mountain classification \u2014 the specific form of capacity requirements (professionalization, fiduciary standards, donor reporting) is contingent, not natural. The engine's false summit detector will identify this as naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "formality_necessity_threshold",
+      "question": "What scale of collective action requires formal organizational capacity, and what scale can operate informally without loss of coordination function?",
+      "resolution_mechanism": "Comparative analysis of movement outcomes: formal vs informal organizations at equivalent scale and mission; longitudinal tracking of informal groups that rejected formalization vs those that professionalized",
+      "impact": "If informal effectiveness plateaus at small scale: formality is coordination requirement (legitimizes capacity barrier). If informal groups achieve scale without formalization: capacity requirement is extraction mechanism (reclassifies snare perspectives toward tangled_rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scale threshold distinguishing coordination necessity from extraction mechanism"
+    },
+    {
+      "id": "professionalization_autonomy_tradeoff",
+      "question": "Does nonprofit professionalization genuinely improve service delivery and movement effectiveness, or does it primarily entrench donor control and staff interests?",
+      "resolution_mechanism": "Outcome studies comparing professionalized vs grassroots service delivery; cost-benefit analysis of compliance burden vs service quality gains; staff retention and community trust metrics",
+      "impact": "If professionalization improves outcomes: constraint is coordination hybrid (current tangled_rope classification confirmed). If outcomes are unchanged or degraded: constraint is pure extraction (more perspectives reclassify to snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether professionalization improves outcomes or primarily entrench control"
+    },
+    {
+      "id": "alternative_legitimacy_mechanisms",
+      "question": "Can informal organizations achieve the same community legitimacy and donor access through alternative mechanisms (community assemblies, mutual aid networks, decentralized decision-making) as through formal nonprofit status?",
+      "resolution_mechanism": "Comparative analysis of legitimacy sources for grassroots vs formalized organizations; tracking of funding access for non-nonprofit structures (fiscal sponsorship, DAOs, collectives); community perception studies",
+      "impact": "If alternatives achieve parity: scaffold perspective is structural (sunset is real). If alternatives face systematic exclusion: capacity requirement is enforcement mechanism (reclassifies organized perspectives toward snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative legitimacy mechanisms achieve parity with formal nonprofits"
+    },
+    {
+      "id": "funder_power_concentration",
+      "question": "How much of the capacity requirement reflects genuine coordination needs vs funder desire for control and reporting?",
+      "resolution_mechanism": "Analysis of funder-imposed requirements vs field-adopted standards; comparative requirements across funding sources with different political orientations; cost accounting of compliance burden",
+      "impact": "If high funder concentration: capacity requirement is primarily extraction (reclassifies institutional perspectives from rope to snare). If requirements are field-derived: capacity requirement is coordination (legitimizes constraint).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Funder control vs genuine coordination needs in capacity requirements"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Civil society organizational capacity represents a structural constraint on grassroots collective action. The formal requirements for organizational legitimacy \u2014 nonprofit incorporation, financial accounting standards, board governance, donor reporting, insurance and compliance infrastructure \u2014 ostensibly exist to enable coordination and accountability. However, they function simultaneously as extraction mechanisms that concentrate power upward, filter participation by education and resource level, and subordinate grassroots priorities to funder preferences. This constraint exhibits the full range of DR types across different structural positions. From the perspective of local grassroots movements, it appears as pure extraction (snare) \u2014 they lack resources to meet requirements and face no exit options. From the perspective of community-based organizations, it appears as mixed coordination and extraction (tangled_rope) \u2014 genuine local service delivery alongside funder-driven mission creep. From the perspective of foundations and state institutions, it appears as coordination infrastructure (rope) \u2014 the constraint multiplies their allocative power and ensures accountability. From organized coalitions building alternatives, it appears as a temporary problem with a sunset clause (scaffold) \u2014 peer networks, horizontal governance models, and decentralized funding are creating pathways outside formal professionalization. From the nonprofit industry's perspective, it appears as degraded institutional ritual (piton) \u2014 the industry knows standardized requirements filter participation and concentrate power, yet maintains them through inertia and social proof. From a civilizational viewpoint, it risks appearing as natural law (mountain) \u2014 coordination requires standards, and organizational capacity is the cost of collective action. The constraint's extractiveness has increased over 30 years (0.28 \u2192 0.58) as professionalization requirements have accumulated, while theater_ratio has risen (0.38 \u2192 0.68) as compliance workshops and governance training have become performative industries.",
+    "key_agents": [
+      "Grassroots movements: Primary victims (powerless/trapped) \u2014 lack resources for formal organizational capacity; face barriers to collective action",
+      "Community-based organizations: Secondary victims/partial beneficiaries (moderate/constrained) \u2014 deliver services while subordinating decisions to funder preferences",
+      "Foundations and state institutions: Primary beneficiaries (institutional/arbitrage) \u2014 use capacity requirements to ensure accountability and leverage allocative power",
+      "Nonprofit consulting and training industry: Institutional beneficiaries (institutional/arbitrage) \u2014 profit from capacity-building services and professionalization requirements",
+      "Capacity-building coalitions: Organized agents (organized/constrained) \u2014 building alternatives (peer learning, horizontal governance, decentralized funding) that create sunset pathways",
+      "Analytical observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as inherent coordination costs"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The capacity requirement extracts value from grassroots movements by directing organizing energy toward compliance, funneling community resources to professional intermediaries, and creating barriers to participation. But extraction is not total \u2014 some organizations successfully navigate the system, and alternative pathways (informal organizing, mutual aid) remain possible at smaller scales. The increase from 0.28 to 0.58 reflects accumulation of professionalization standards over 30 years. Suppression (0.58): Moderate-high. Barriers to formal organizing include regulatory complexity, accounting and compliance costs, liability and insurance requirements, board governance norms, and funder reporting demands. These create material suppression for resource-poor groups while being surmountable for well-resourced organizations. Theater_ratio (0.61): Moderate-high. Nonprofit compliance activities are substantially performative \u2014 board meetings follow governance templates disconnected from actual decision-making; grant reports emphasize metrics that funders want to see rather than community priorities; staff professional credentials are required despite limited evidence they improve outcomes. The theater has increased as the industry has developed standardized training and certification regimes. Measurements show a rising trend, indicating that compliance activities have become increasingly performative relative to functional coordination.",
+    "directionality_logic": "The constraint's directionality differs sharply across agent types. Grassroots movements bear extraction costs with no alternative pathways (trapped, d \u2248 0.95) \u2014 they experience maximum effective extraction. Community-based organizations face high exit costs but can negotiate with funders (constrained, d \u2248 0.65) \u2014 they experience moderate extraction and some coordination benefit. Foundations and institutional actors benefit from capacity requirements (institutional/arbitrage, d \u2248 0.10) \u2014 they experience negative effective extraction (the constraint amplifies their power). Organized capacity-building coalitions have developed alternative pathways (organized/constrained, d \u2248 0.45) \u2014 they experience moderate extraction but with visible exit options. The piton classification derives from high theater_ratio rather than from high experienced extraction \u2014 the nonprofit governance industry is institutionally captured and performs rather than functions. The mountain classification at the analytical level is a false summit \u2014 the constraint naturalizes contingent institutional choices (professionalization standards, funder reporting, board governance) as inevitable costs of coordination.",
+    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon \u2014 organizational capacity requirements \u2014 produces radically different classifications across structural positions. Grassroots movements see a snare: insurmountable barriers with no coordination benefit. Community organizations see a tangled rope: genuine service coordination mixed with funder extraction. Foundations see a rope: coordination infrastructure that multiplies their control. Organized capacity builders see a scaffold: temporary problem being solved by alternatives. The nonprofit industry sees a piton: knows the requirements filter participation, maintains them anyway through institutional inertia. The civilizational observer risks seeing a mountain: naturalizes professionalization as an inherent cost of scale. The perspectival gap reveals that the constraint's function depends entirely on structural position \u2014 it is coordination for the powerful and extraction for the powerless.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy through perspectival multiplicity. The question is not 'Is civil society capacity a coordination mechanism or an extraction mechanism?' but rather 'For whom, in what position, at what scale, with what exit options?' The constraint functions as BOTH simultaneously \u2014 it genuinely coordinates resource allocation for foundations while simultaneously extracting from grassroots movements. The tangled_rope classification as the claimed_type captures this structural hybridity. Mandatrophy is resolved by recognizing that single-type classification would require collapsing the perspectival gap \u2014 forcing either a rope reading (ignoring the grassroots snare) or a snare reading (ignoring the genuine coordination function for funders). The six-type range preserves the structural truth: the constraint is fundamentally asymmetric, and different observers see different types because they occupy different structural positions relative to the extraction flow."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "philanthropic_power_concentration",
+      "nonprofit_industrial_complex",
+      "grassroots_organizing_barriers"
+    ],
+    "dual_formulation_note": "Civil society organizational capacity is upstream of capacity-building interventions and downstream of funder governance standards. Related constraints (philanthropic_power_concentration, nonprofit_industrial_complex, grassroots_organizing_barriers) share extractiveness mechanisms but measure different structural aspects of the same institutional ecosystem."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

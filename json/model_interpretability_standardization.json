@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "model_interpretability_standardization",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mint"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Model Interpretability Standardization in Machine Learning",
+    "topic_domain": "artificial_intelligence/governance/epistemology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "model_developers_incumbent",
+      "regulatory_authorities"
+    ],
+    "victims": [
+      "model_transparency_advocates",
+      "affected_populations",
+      "scientific_reliability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Affected Population",
+      "comment": "PERSPECTIVE 1: AFFECTED POPULATIONS (SNARE) \u2014 Trapped in systems whose decision-making processes cannot be meaningfully explained to them. No exit mechanism: the systems govern loan eligibility, parole recommendations, healthcare access, employment screening. Cannot understand or contest decisions that affect their lives. Extraction is maximal \u2014 bear full cost of opaque algorithmic judgment with no compensating benefit or recourse."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Scientific Reliability (Abstract Collective)",
+      "comment": "PERSPECTIVE 2: SCIENTIFIC RELIABILITY (SNARE) \u2014 Cannot exit the problem; cannot organize. The epistemic commons bears the cost of uninterpretable models used to generate scientific claims. Irreproducibility, unexplained failures, and hidden causal assumptions accumulate in the literature. The collective good has no advocate with agency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Model Transparency Advocates",
+      "comment": "PERSPECTIVE 3: MODEL TRANSPARENCY ADVOCATES (TANGLED ROPE) \u2014 Constrained by access barriers to model internals, computational resources, and institutional capacity. Also benefit from the constraint indirectly: their authority and funding derive from the demonstrated need for interpretability research. Significant extraction but not maximal \u2014 possess agency through activism and research, though constrained by power asymmetries."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Model Developers (Incumbent)",
+      "comment": "PERSPECTIVE 4: MODEL DEVELOPERS (INCUMBENT) (ROPE) \u2014 Primary beneficiary. Interpretability standardization is framed as coordination: providing explanations, standardizing reporting, enabling reproducibility. But the standards selected are those that pose minimal friction to existing development practices while appearing to address transparency demands. They experience the constraint as enabling their continued operation under the cover of 'compliance.' Net beneficiary with arbitrage options \u2014 can conform to standards, move between jurisdictions, or lobby for regulatory revision."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regulatory Authorities",
+      "comment": "PERSPECTIVE 5: REGULATORY AUTHORITIES (TANGLED ROPE) \u2014 Organized actors with genuine coordination function: establishing common baselines for model testing, enabling cross-jurisdiction oversight, coordinating on minimal safety standards. But also benefit from the constraint itself \u2014 interpretability standardization creates regulatory capacity and legitimacy. Constrained by technical complexity and capture dynamics: agencies staffed by ex-industry personnel who internalize developer preferences."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Academic Interpretability Research Ecosystem",
+      "comment": "PERSPECTIVE 6: ACADEMIC INTERPRETABILITY RESEARCH (PITON) \u2014 The research field on model interpretability has become substantially performative. Papers propose new explanation methods and metrics at accelerating rates; each is adopted minimally before the next appears. The procedural appearance of interpretability advancement persists (citations, conferences, grant funding) while the actual influence on practice remains marginal. Theater ratio high: rituals of methodology, benchmark creation, and metric definition dominate; actual impact on deployed model transparency is low. Institutional inertia maintains the field's functions despite degraded core mission."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW CLAIM (MOUNTAIN) \u2014 Some interpretability limits appear inherent to certain model architectures: deep neural networks operating on high-dimensional spaces may have fundamental information-theoretic barriers to human-comprehensible explanations. From a civilizational view, the claim is that interpretation cannot exceed certain boundaries determined by model complexity and data dimensionality. However, the structural data (beneficiaries extracting via selective standardization, victims trapped without recourse, high suppression of alternatives) contradicts the mountain classification. The engine will identify this as a false summit: the framing of interpretation impossibility naturalizes what is actually a contingent engineering and governance choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "interpretability_definition_arbitrage",
+      "question": "Can 'interpretability' be standardized as a single measurable construct, or does the term cover irreducibly distinct concepts (local feature attribution, global decision logic, causal mechanism, user comprehension)?",
+      "resolution_mechanism": "Empirical test: apply leading interpretability standards to the same model and measure agreement rates on feature importance, decision rules, and user comprehension outcomes. If agreement < 0.60, interpretability is not a standardizable quantity.",
+      "impact": "If standardizable: constraint is genuine coordination problem (Rope from more perspectives). If not standardizable: standards are theater \u2014 appearing to solve the problem while leaving real opacity intact. Tangled Rope \u2192 Snare reclassification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether interpretability is a single standardizable construct or multiple incommensurable concepts"
+    },
+    {
+      "id": "adversarial_explanation_robustness",
+      "question": "Can explanations generated by standardized interpretability methods be manipulated by model developers without changing the model's actual decision logic?",
+      "resolution_mechanism": "Adversarial testing: attempt to craft explanations that satisfy all standard interpretability metrics while the underlying model makes decisions via a different logic than the explanation claims. Success rate > 0.50 indicates explanation gaming is feasible.",
+      "impact": "If explanations are gameably: standards provide false transparency (pure theater). Victims perceive explanations but receive no actual insight. Snare classification strengthened. If robust: interpretability standards have real binding force.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether standardized explanations can be decoupled from actual model logic"
+    },
+    {
+      "id": "alternative_transparency_mechanisms",
+      "question": "Do non-interpretability mechanisms (model simplicity requirements, decision auditing, human-in-the-loop architectures, performance monitoring on sensitive subgroups) achieve affected population protection more effectively than interpretability standardization?",
+      "resolution_mechanism": "Comparative measurement: track outcomes for populations under interpretability-standardized systems vs simplicity-first systems vs audit-based systems. Measure decision accuracy, appeal success rates, and perceived fairness over 5-year horizon.",
+      "impact": "If alternatives superior: interpretability standardization is a rent-preserving framework choice rather than genuine transparency solution. Constraint reclassified as pure extraction (Snare). If interpretability superior: genuine coordination function confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Comparative effectiveness of interpretability vs alternative transparency mechanisms"
+    },
+    {
+      "id": "model_complexity_technical_bind",
+      "question": "Is the current trend toward larger, more opaque models technically necessary (performance-complexity tradeoff) or driven by compute economics and scale-dependent market advantages?",
+      "resolution_mechanism": "Historical analysis: measure performance gains per unit of interpretability loss over the past decade. Compare actual vs hypothetical performance gains under interpretability constraints. Assess whether constraints would reduce market share or merely reduce profit margins.",
+      "impact": "If technically necessary: some opacity is inherent (mountain perspective partially valid). If economics-driven: opacity is a choice. Constraint reclassified as pure extraction mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether model complexity growth is technical necessity or economic choice"
+    },
+    {
+      "id": "regulatory_capture_mechanism",
+      "question": "Have regulatory interpretability standards been shaped by incumbent model developer preferences more than by affected population or transparency advocate input?",
+      "resolution_mechanism": "Institutional analysis: trace standards development process \u2014 who participated in committees, whose proposals were adopted, whose were rejected, which proposals would impose highest friction on incumbent vs new developers. Measure correlation between developer position statements and final standard text.",
+      "impact": "If captured: standards are designed to appear responsive while preserving developer control. Tangled Rope \u2192 Snare reclassification. If representative: constraint represents genuine multi-stakeholder coordination.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Extent of regulatory capture in interpretability standards development"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Model interpretability standardization represents a structural constraint between the demand for algorithmic transparency (from affected populations, regulators, and society) and the incentive structure of model developers to preserve opaque architectures that maximize performance and market advantage. The constraint operates across six distinct types depending on the observer's structural position, revealing how standardization efforts can simultaneously appear to solve the transparency problem while preserving the opacity it nominally addresses. Extractiveness has risen from 0.35 to 0.62 over the interval as interpretability standards have become established and routinized: the early period (0-3) saw genuine uncertainty and openness to fundamental changes in model architecture; the later period (6-10) shows standardized approaches that developers can conform to while maintaining core opacity through technical sophistication and metric gaming. Theater ratio rising from 0.42 to 0.72 indicates that the constraint has become increasingly performative: papers on new interpretability methods proliferate while actual model transparency in production systems remains marginal. The suppression value (0.65) reflects high barriers to genuinely transparent models: computational overhead, performance penalties, market pressure for scale, institutional momentum, and technical complexity all combine to suppress alternatives.",
+    "key_agents": [
+      "Affected Populations: Primary victim (powerless/trapped) \u2014 bear full cost of opaque algorithmic decisions with no recourse or comprehension mechanism",
+      "Scientific Reliability: Primary victim (powerless/trapped) \u2014 abstract collective good cannot exit; accumulates irreproducibility and hidden assumptions in research",
+      "Model Transparency Advocates: Secondary victim (moderate/constrained) \u2014 constrained by access barriers and institutional asymmetries; also derive authority from the problem they address",
+      "Model Developers (Incumbent): Primary beneficiary (institutional/arbitrage) \u2014 select standards that appear responsive while minimizing friction to existing practices; capture regulatory process",
+      "Regulatory Authorities: Organized beneficiary (organized/constrained) \u2014 develop standards for safety and accountability; benefit from legitimacy and capacity created by standardization process; constrained by technical complexity and developer capture",
+      "Academic Interpretability Research: Institutional actor (institutional/arbitrage) \u2014 maintains research field through paper production and metric definition; actual influence on practice is marginal (piton classification)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent engineering choices as inherent technical limits"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts through regulatory capture: incumbents select standards that appear to address transparency while preserving technical opacity through complexity. The value reflects significant but not maximal extraction \u2014 affected populations genuinely receive some additional information through standards, just not enough to exercise meaningful control. The upward trajectory (0.35 \u2192 0.62) tracks the maturation of capture: early uncertainty gave way to routine compliance with theater-heavy standards. Suppression (0.65): High. Barriers to genuine transparency include technical complexity (deep neural networks have fundamental explanation-information tradeoffs), economic pressure (transparent models often underperform opaque ones at scale), institutional momentum (developer ecosystems optimized for opaque architectures), and regulatory capture (standards shaped by those they ostensibly regulate). Theater ratio (0.68): High and rising. Interpretability research produces new methods and metrics at accelerating rates; adoption in practice lags behind research output; academic visibility of the field is high while actual influence on deployed system transparency remains marginal. This is the signature of a piton: institutional inertia maintaining the appearance of function while core mission (actual transparency) remains unachieved.",
+    "perspectival_gap": "The perspectival gap between beneficiary and victim is maximal in this constraint. The incumbent developer sees a solution to a regulatory problem (Rope classification). The affected population sees a system that now produces explanations they still cannot understand and cannot contest (Snare classification). Both are evaluating the same standardized systems, but their structural positions produce radically different experienced constraints. The gap between what affected populations experience and what developers experience defines the constraint's extractive character.",
+    "directionality_logic": "Incumbent developers (institutional/arbitrage) occupy the beneficiary position with maximum mobility: they can conform to standards, migrate to favorable jurisdictions, or influence standards development. This derives low d values (0.10-0.20) producing negative effective extraction \u2014 the constraint subsidizes their operations by legitimizing them under the cover of standardization. Affected populations (powerless/trapped) bear maximum cost with zero alternatives: they cannot opt out of systems that use standardized interpretability approaches to govern decisions that affect their lives. This derives d approaching 1.0 producing chi > 1.0 \u2014 maximum experienced extraction. Regulatory authorities occupy an intermediate position as constrained-but-organized beneficiaries: they benefit from the standardization process (legitimacy, technical baselines, coordinating capacity) while facing capture pressures from developers and technical complexity barriers to genuine enforcement.",
+    "mandatrophy_analysis": "The mandatrophy in this constraint arises from the apparent paradox that genuine progress in interpretability science produces increased opacity in practice. As academic research develops more sophisticated explanation methods (SHAP, attention visualization, concept activation vectors), model developers incorporate these into 'standardized' pipelines that appear to provide transparency while preserving opacity through layered complexity. The constraint resolves this paradox by distinguishing the theoretical interpretability problem (potentially solvable through research) from the governance/incentive problem (currently unsolved). Interpretability research produces real knowledge; interpretability standardization captures that research in a theater-heavy format that legitimizes continued opacity. The mandatrophy is resolved by recognizing that two different constraints are being conflated: (1) the technical constraint of explaining high-dimensional model outputs (genuine coordination/rope problem), and (2) the governance constraint of ensuring affected populations can understand and contest decisions (currently a snare). Standardization has not solved the governance problem; it has layered additional theater on top of the technical problem."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_accountability_enforcement",
+      "ai_safety_governance",
+      "model_documentation_theater"
+    ],
+    "dual_formulation_note": "Model interpretability standardization is distinct from but affects the broader governance constraint of algorithmic accountability. Standards provide the appearance of addressing interpretability while upstream constraints (model complexity, developer incentives, regulatory capture) preserve opacity. The standardization constraint is therefore downstream of economic incentive structures and architectural choices, making it a second-order governance mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

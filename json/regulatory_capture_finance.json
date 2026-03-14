@@ -1,0 +1,229 @@
+{
+  "header": {
+    "constraint_id": "regulatory_capture_finance",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "regcap"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Regulatory Capture in Financial Services",
+    "topic_domain": "financial_regulation/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_financial_institutions",
+      "regulatory_agencies"
+    ],
+    "victims": [
+      "retail_consumers",
+      "financial_system_stability",
+      "competitive_entrants"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Retail Consumer",
+      "comment": "Retail consumers face predatory lending, hidden fees, and adverse contract terms with no viable alternatives. Exit options are severely constrained by market concentration and information asymmetry. They perceive the regulatory system as colluding with lenders rather than protecting them. Maximum extraction, full suppression."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Financial System Stability (Systemic Risk)",
+      "comment": "Systemic financial stability is treated as a victim \u2014 premature deregulation and competitive forbearance create tail risks. The regulatory agency is captured such that macro-prudential safeguards are systematized away during profit cycles, then restored only after crisis. The constraint ensures instability is built into the system structure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Competitive Entrants (Community Banks, Fintechs)",
+      "comment": "Smaller financial firms face genuine coordination with regulators (shared information standards, shared safety goals) alongside asymmetric extraction via regulatory moats. Larger competitors lobby for rules that increase compliance costs, pricing out smaller players. Constrained exit \u2014 they need banking licenses and regulatory approval to operate, but some can arbitrage geographic or product-specific regulatory gaps."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Large Financial Institution (the Capturer)",
+      "comment": "The systemically important financial institution experiences the constraint as pure coordination with regulators. They participate in rule-setting, provide 'industry expertise' to regulatory agencies, and have exit options (relocate to friendlier jurisdictions, offshore operations, regulatory arbitrage across borders). The constraint solves their collective action problem: how to extract economic rents while maintaining the veneer of legitimate regulation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "The Captured Regulator",
+      "comment": "The regulatory agency itself is a victim of capture through institutional identity fusion. The agency's mission, career pathways, hiring pool, and professional culture are constituted through its relationship with the regulated industry. Regulators rotate between agencies and financial sector employers; the regulatory perimeter is defined through industry input; budget and staffing depend on industry-friendly regulations that generate fee revenue for government. Exit (genuine adversarial regulation) would require the agency to become a different institution \u2014 destroying the professional identity of existing staff. Identity-locked at institutional power: structurally mobile (could enforce stricter rules) but cognitively captured (cannot perceive enforcement as compatible with legitimate regulation)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Dodd-Frank Ritual (Institutional Inertia)",
+      "comment": "Dodd-Frank regulation (2010) and its successors represent a degraded enforcement ritual. The apparatus exists, the rules are written, compliance departments maintain elaborate procedures \u2014 but the functional verification capacity has atrophied. Regulators lack adequate funding, technical expertise, and political will to enforce. The theater ratio is high: compliance theater masks weak enforcement. The constraint persists through institutional inertia (lawmakers fear deregulation but lack political power to strengthen oversight) and performative maintenance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Reform Coalition (Consumer Advocates, Legislators)",
+      "comment": "Reform-minded actors (consumer protection advocates, some legislators, academic economists) perceive genuine coordination mechanisms \u2014 rules against predatory lending, capital adequacy standards, stress testing \u2014 that do provide some protection. But they also perceive the extraction mechanism: each reform is watered down through lobbying, enforcement is starved of resources, and compliant industry players capture the rulemaking. Constrained exit: building political power requires decades; direct regulatory action faces industry pushback."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (False Natural Law)",
+      "comment": "From a civilizational horizon, regulatory capture appears inevitable \u2014 'regulatory agencies always get captured by their industries' is treated as a natural law of political economy, derived from public choice theory and principal-agent logic. But the base structural data contradicts this naturalization. Multiple jurisdictions (Nordic banking models, Canadian regulatory independence, Australian ASIC mandates) show sustained non-capture. The mountain classification is a false summit: capture is contingent on institutional design choices, not inherent to the regulatory function."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "revolving_door_causal_mechanism",
+      "question": "Does the revolving door between regulators and industry cause capture, or do pre-captured individuals self-select into those career paths?",
+      "resolution_mechanism": "Longitudinal career tracking: comparison of former regulators' positions and advocacy patterns before and after industry employment; institutional design experiment (implement fixed non-mobile regulatory staff vs current revolving-door system) measuring enforcement intensity and rule durability",
+      "impact": "If causal: regulatory independence requires structural separation of personnel markets (life tenure, sealed-door careers, elevated compensation). If selection: capture could be addressed through better screening and identity-based recruitment. Current analysis assumes bidirectional causation (career incentives select for capture-prone individuals AND the employment pattern reinvokes capture once inside).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether revolving door causes capture or selects for pre-captured individuals"
+    },
+    {
+      "id": "industry_expertise_necessity",
+      "question": "Is industry input genuinely necessary for regulatory expertise, or does it represent a power asymmetry disguised as technical necessity?",
+      "resolution_mechanism": "Comparative analysis of regulatory regimes with vs without industry participation (e.g., SEC enforcement division vs CFTC commodity trading divisions); measurement of rule quality and enforcement effectiveness by participation intensity; expert panel review of technical rules to assess whether industry-provided expertise improved outcomes",
+      "impact": "If necessary: capture is unavoidable cost of effective regulation; mitigations focus on offsetting industry power via counter-expertise (consumer advocacy funding, academic researchers in agencies). If power disguise: industry participation can be minimized; capture can be reduced by cutting these information channels.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether industry expertise input is technically necessary for regulation"
+    },
+    {
+      "id": "electoral_politics_binding",
+      "question": "Is regulatory capture driven by financial industry lobbying power, or is it constrained/enabled by the electoral politics of financial sector campaign contributions?",
+      "resolution_mechanism": "Causal inference analysis of campaign contribution timing vs regulatory timing; natural experiments (politicians losing industry support, elections removing capture-friendly legislators); jurisdictional comparison (countries with public campaign financing vs private show higher or lower capture rates)",
+      "impact": "If lobbying-driven: capture is a money-in-politics problem; solutions involve campaign finance reform and political power redistribution. If electoral-driven: capture reflects voter preferences (many voters benefit from financial services growth); solutions require political education or institutional veto points that override electoral majorities.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether capture is driven by lobbying money or electoral politics"
+    },
+    {
+      "id": "identity_locked_regulator_reversibility",
+      "question": "Can a captured regulator reverse course and enforce rules adversarially, or does institutional identity lock make this psychologically/institutionally impossible?",
+      "resolution_mechanism": "Case studies of regulatory agencies that shifted from captured to independent (SEC post-2008, environmental agencies under enforcement-focused leadership); measurement of internal resistance, staff turnover, and enforcement escalation rates when agency leadership mandates stronger enforcement; structural analysis of whether reversals persist or revert after leadership change",
+      "impact": "If reversible: capture is contingent on leadership and can be broken by external pressure or change in agency head. If locked: the captured identity persists regardless of formal mandate; institutional reform is required (new agency, personnel replacement, cultural change). Current analysis assumes partial lock that requires external shock to break.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether captured regulatory identity can be reversed or is identity-locked"
+    },
+    {
+      "id": "financial_crisis_reset_mechanism",
+      "question": "Do financial crises create reset points where regulatory capture temporarily breaks, or is post-crisis regulatory strengthening merely an oscillation that reverts as memories fade?",
+      "resolution_mechanism": "Historical analysis of 2008 (Dodd-Frank passed, then enforcement degraded), 1990s (S&L crisis led to tighter rules, then deregulation under Clinton), 1980s (Savings & Loan crisis). Measure: enforcement intensity (audit rates, enforcement actions, penalties) across crisis/non-crisis periods; longevity of regulatory changes post-crisis.",
+      "impact": "If reset: crises provide windows for genuine reform; coalition-building should focus on crisis periods. If oscillation: capture is structural and crises provide only temporary respite; sustained reform requires institutional redesign, not leveraging crisis windows.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether financial crises reset capture or create temporary oscillations"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Regulatory capture in financial services is a structural constraint where financial institutions extract economic rents by controlling the regulatory apparatus nominally designed to constrain them. The constraint exhibits multiple classification types across different structural positions: retail consumers experience it as a snare with no exit; competing firms experience mixed coordination and extraction; the regulator experiences identity-locked institutional capture; and the analytical observer risks naturalizing what is a contingent institutional arrangement as an inevitable law of political economy. The constraint involves both genuine coordination (rule-setting, safety standards, information standards) and asymmetric extraction (competitors priced out via compliance moats, systemic risk built into deregulatory cycles, consumer protections hollowed of enforcement). Theater is high (0.65) because regulatory apparatus maintains elaborate performative compliance frameworks (Dodd-Frank structure, stress testing rituals, consumer protection agencies) while core enforcement capacity atrophies under industry lobbying. Extractiveness has trended upward from 0.35 to 0.62 over the measurement interval, reflecting the accumulation of regulatory concessions and erosion of post-2008 enforcement momentum.",
+    "key_agents": [
+      "Large Financial Institutions (JPMorgan, Bank of America, Goldman Sachs): Primary beneficiaries (institutional/arbitrage) \u2014 extract economic rents through regulatory moats, preferential access to regulators, favorable rule interpretation, and light-touch enforcement",
+      "Retail Consumers: Primary victims (powerless/trapped) \u2014 face predatory lending, hidden fees, adverse contract terms with no viable alternatives in concentrated markets",
+      "Regulatory Agencies (Federal Reserve, OCC, SEC): Captured institutions (institutional/identity_locked) \u2014 nominally independent but structurally fused with industry through revolving-door employment, industry participation in rulemaking, and funding/staffing dependency on industry-friendly policies",
+      "Competitive Entrants (Community Banks, Fintechs): Secondary victims (moderate/constrained) \u2014 face regulatory moats designed by larger competitors; must navigate compliance costs that favor incumbent scale; some can arbitrage regulatory gaps but lack the exit option of relocation or political influence",
+      "Financial System Stability: Systemic victim (powerless/trapped) \u2014 macro-prudential regulation is undermined during profit cycles and restored only after crisis; the constraint builds instability into the regulatory cycle",
+      "Reform Coalition (Consumer Advocates, Progressive Legislators, Academic Economists): Organized challengers (organized/constrained) \u2014 perceive genuine coordination mechanisms but also the extraction; lack political power to overcome industry lobbying; constrained by electoral cycles and budgetary limits",
+      "Analytical Observer (Political Economists, Public Choice Theorists): Risks naturalizing capture as inevitable law of regulatory dynamics"
+    ],
+    "logic_rationale": "Extractiveness (0.62): High but not maximal. Financial institutions extract substantial economic rents through regulatory advantages, but the extraction is partial \u2014 some consumer protections persist, some enforcement occurs, and crises periodically force resets. The metric reflects accumulated concessions rather than total regulatory capture. The upward trend (0.35\u21920.62) reflects the post-2008 degradation cycle: initial reform (Dodd-Frank 2010) gave way to gradual erosion through lobbying, budget starvation, and personnel rotation. Suppression (0.68): High. Barriers to exit include market concentration (four banks hold ~40% of deposits), information asymmetry (consumers cannot evaluate complex financial products), network effects (switching banks is costly), and regulatory barriers (charter requirements, capital adequacy that favor incumbents). Retail consumers face near-total suppression; smaller competitors face high but partially surmountable barriers. Theater ratio (0.65): Moderately high. The regulatory apparatus maintains elaborate performance frameworks (stress testing, consumer complaint systems, compliance audits) while enforcement capacity has atrophied. The 2008 crisis forced more rigorous theater; the subsequent period saw gradual reversion to lower-effort compliance. The measurement interval (0\u201315) captures this degradation: theater rises from 0.40 to 0.72 as the constraint shifts from recovery (2010\u20132012) through regulatory fatigue (2012\u20132024) to possible reset (future).",
+    "perspectival_gap": "The gap between the large institution's rope and the consumer's snare is fundamental: one agent perceives legitimate coordination while the other perceives pure extraction. This is not disagreement about facts but genuinely different structural experiences. The coordinating rule-set (capital adequacy, liquidity ratios, stress testing) does provide the institution with useful signals and collective action benefits. The same rule-set gives consumers no direct benefit \u2014 they experience only the extracted rents (higher fees, adverse selection into risky products, predatory lending). The captured regulator bridges these perspectives but is itself captured: they believe they are coordinating (neutral arbiter, technical expert, industry partner) but are actually enforcing extraction. The piton perspective shows that this bridge is increasingly performative \u2014 the regulatory apparatus has grown while enforcement has shrunk, suggesting that the coordination function has degraded to theater.",
+    "directionality_logic": "Directionality computation follows the beneficiary/victim/exit chain. Large institutions are beneficiaries with arbitrage exit \u2192 low d \u2192 low/negative \u03c7. Consumers are victims with trapped exit \u2192 high d \u2192 high \u03c7. Competitive entrants are victims with constrained exit \u2192 moderate-high d \u2192 moderate \u03c7. The captured regulator is the critical case: they are nominally an institutional agent with the power to enforce rules (could be a powerful beneficiary), but their identity is fused with the industry through career paths and professional culture (identity_locked exit). This identity lock prevents them from experiencing themselves as extractive even though they are enforcing extraction. Their directionality d derives not from their formal power but from their actual structural position: constrained to defend the existing regulatory framework, which benefits large institutions. The directionality override for captured regulators (d \u2248 0.45) reflects this: they are neither pure beneficiaries (institution) nor pure victims (consumer), but captured intermediaries whose agency is hijacked by the constraint itself.",
+    "mandatrophy_analysis": "MANDATROPHY STATUS: UNRESOLVED. The constraint carries extractiveness of 0.62 but remains classified as tangled_rope rather than snare because it retains genuine coordination mechanisms (capital adequacy standards, stress testing, information disclosure requirements) alongside the extraction. If these were removed, the constraint would be pure snare. However, the mandatrophy question is whether the coordination is *functional* or merely *performative*. The high theater ratio (0.65) and upward extractiveness trend (0.35\u21920.62) suggest that the coordination is degrading toward pure extraction. A resolved mandatrophy would require evidence that either: (1) the coordination mechanisms are being strengthened (theater drops, enforcement intensity rises, extractiveness plateaus or falls), or (2) they are being eliminated entirely (classification shifts to snare). Current state is a transition: the constraint began as genuine tangled rope (2010, post-Dodd-Frank era with meaningful new rules and initial enforcement). It has degraded toward snare through regulatory capture and enforcement atrophy. The analytical work is to determine whether the degradation is reversible or if the constraint will stabilize as a more extractive snare with vestigial coordination theater (piton dynamics). The reform coalition hypothesis is that crisis moments (financial instability, political shifts) can reset the constraint back toward functional coordination (true tangled rope or even rope). The captured regulator hypothesis is that the degradation is structural and will persist absent institutional redesign."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "too_big_to_fail_moral_hazard",
+      "predatory_lending_debt_traps",
+      "financial_crime_enforcement_underinvestment"
+    ],
+    "dual_formulation_note": "Regulatory capture operates at the meta-level: it is the constraint on how other financial constraints (too-big-to-fail, predatory lending, crime enforcement) are regulated. This story models the regulatory capture mechanism itself; downstream stories model the specific extraction mechanisms that capture enables."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "knowledge_representation_fragmentation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.54,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Knowledge Representation Fragmentation",
+    "topic_domain": "epistemology/informatics/organizational_knowledge",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "domain_specialists",
+      "proprietary_knowledge_holders",
+      "institutional_gatekeepers"
+    ],
+    "victims": [
+      "cross_domain_researchers",
+      "knowledge_seekers",
+      "system_interoperability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Knowledge Seeker",
+      "comment": "PERSPECTIVE 1: KNOWLEDGE SEEKER (SNARE) \u2014 Confronts fragmented representation systems with no alternative pathway. Cannot exit the constraint without abandoning the knowledge domain entirely. Bears full cost of translation overhead, incompatible schemas, and re-encoding effort. Maximum extraction from the powerless position."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Cross-Domain Researcher",
+      "comment": "PERSPECTIVE 2: CROSS-DOMAIN RESEARCHER (TANGLED ROPE) \u2014 Experiences genuine coordination benefit (domain specialists' schemas are optimized for their domains) alongside significant extraction (translation costs, incompatibility friction, career penalty for work that bridges siloed knowledge). Can exit by narrowing to single domain but at career cost. Mixed experience of coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Domain Specialist Community",
+      "comment": "PERSPECTIVE 3: DOMAIN SPECIALIST COMMUNITY (ROPE) \u2014 Benefits from specialized representation systems optimized for their epistemic practices. Experiences fragmentation as coordination mechanism: their domain's schema solves coordination problems within their field. Can arbitrage knowledge by maintaining exclusive representation standards. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Standards Body",
+      "comment": "PERSPECTIVE 4: STANDARDS BODY (TANGLED ROPE) \u2014 Genuinely coordinates knowledge exchange through unified representation frameworks (XML, ontologies, semantic web standards). Yet also enforces extraction: standard adoption requires costly technical integration, and standards bodies maintain power through the coordination function itself. Constrained by network effects \u2014 cannot freely change standards without destabilizing coordinated groups."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Knowledge System",
+      "comment": "PERSPECTIVE 5: LEGACY KNOWLEDGE SYSTEM (PITON) \u2014 Historical knowledge representations (card catalogs, early taxonomies, discipline-specific citation styles) persist despite degraded function. Theater ratio high: institutions maintain legacy systems through inertia and regulatory compliance even as their real coordinating work has shifted to digital formats. The constraint is enforced procedurally rather than functionally."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From universalizable perspective, some representational divergence is inherent to knowledge specialization: domains require internal vocabularies optimized for their phenomena. The constraint appears as natural law \u2014 representation systems must fragment because knowledge itself fragments. However, structural data reveals false summit: the magnitude of fragmentation and suppression of interoperability are contingent institutional choices, not inherent to knowledge."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "inherent_vs_enforced_fragmentation",
+      "question": "Is knowledge representation fragmentation inherent to domain specialization or actively enforced through institutional structures?",
+      "resolution_mechanism": "Comparison of fragmentation degree across domains with different institutional histories. Analysis of system interoperability pre- and post-incentive alignment for cross-domain work.",
+      "impact": "If inherent: mountain classification becomes justified. If enforced: piton/snare classifications dominate; institutional reorganization could reduce fragmentation substantially.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether fragmentation is inherent to knowledge or institutionally enforced"
+    },
+    {
+      "id": "translation_cost_asymmetry",
+      "question": "Do certain knowledge domains face disproportionate translation costs when bridging to other domains, and if so, is this cost distribution correlated with power asymmetries?",
+      "resolution_mechanism": "Quantification of translation effort (person-hours, computational resources) required for cross-domain knowledge transfer. Correlation analysis between translation cost and domain institutionalization level, funding concentration, and disciplinary prestige.",
+      "impact": "If asymmetric and power-correlated: supports tangled rope classification \u2014 fragmentation extracts from less-institutionalized domains. If symmetric: constraint is pure coordination challenge.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Asymmetry in translation costs across domains"
+    },
+    {
+      "id": "interoperability_suppression_mechanism",
+      "question": "Are interoperability barriers primarily technical (genuine incompatibility between representation systems) or social-institutional (disincentive structures, career costs of cross-domain work, proprietary control)?",
+      "resolution_mechanism": "Technical analysis of representation system compatibility. Longitudinal study of career trajectories for cross-domain researchers vs. domain-specialized researchers. Survey of knowledge workers on barriers to using alternative representation systems.",
+      "impact": "If primarily technical: barriers are coordination problem (Rope). If primarily institutional: barriers reflect enforced extraction (Snare/Tangled Rope). If mixed: classification depends on agent position.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical vs. institutional sources of interoperability suppression"
+    },
+    {
+      "id": "semantic_precision_tradeoff",
+      "question": "Does unified representation necessarily sacrifice domain-specific semantic precision, or can sufficiently expressive meta-schemas preserve precision while enabling interoperability?",
+      "resolution_mechanism": "Prototyping of unified representation frameworks (RDF, property graphs, vector embeddings) with domain-specific vocabularies. Quantitative assessment of information loss in translation vs. native representation.",
+      "impact": "If tradeoff is hard: fragmentation becomes coordination necessity (Rope). If expressive schemes exist: fragmentation becomes institutional choice (extraction via artificial complexity).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether semantic precision requires fragmentation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 45
+  },
+  "commentary": {
+    "narrative_context": "Knowledge representation fragmentation emerges at the intersection of technical specialization and institutional power. Different knowledge domains (physics, biology, law, humanities) have developed representation systems optimized for their phenomena and epistemic practices \u2014 vocabularies, ontologies, notation systems, citation conventions. This generates genuine coordination benefits: domain specialists can express precise concepts efficiently within their native representation. But the constraint exhibits extraction: those who control representation systems maintain power over knowledge access and interpretation. Cross-domain researchers must invest translation labor; knowledge seekers cannot access fragmented silos without re-encoding effort; interoperability is suppressed by institutional incentives that reward domain specialization over integration. The theater ratio has risen over 45 years as representation systems have proliferated (from ~20 major taxonomic schemes in 1980 to hundreds of domain-specific ontologies today) while performing diminishing coordination function per scheme. The extractiveness has increased as institutional gatekeeping around representation standards has intensified despite technical solutions for interoperability existing.",
+    "key_agents": [
+      "Domain Specialists: Primary beneficiaries (institutional/arbitrage) \u2014 maintain power through control of specialized representation systems; benefit from intra-domain coordination",
+      "Knowledge Seekers: Primary victims (powerless/trapped) \u2014 cannot access fragmented knowledge silos without costly re-encoding; no alternative pathways",
+      "Cross-Domain Researchers: Secondary victims (moderate/constrained) \u2014 experience mixed benefit (coordination within domains) and cost (translation overhead, career penalties). Can exit by specializing narrowly.",
+      "Standards Bodies: Institutional intermediaries (institutional/constrained) \u2014 genuinely coordinate through unified frameworks (XML, RDF, OWL) but also extract through adoption costs and lock-in",
+      "Legacy Systems: Institutional persistence (institutional/arbitrage) \u2014 maintain representation authority through procedural inertia; gradually performing less real coordination function",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing institutional fragmentation as inherent to knowledge diversity"
+    ],
+    "logic_rationale": "Extractiveness (0.54): Moderate-high. The constraint extracts through multiple mechanisms: (1) control over representation standards gives domain gatekeepers power to set coordination costs; (2) knowledge seekers bear translation overhead with no alternative; (3) institutional lock-in prevents efficient interoperability solutions from being adopted. The value reflects that some representation specialization is genuinely necessary (pure coordination benefit), but extraction through artificial complexity (theater ratio rising while coordination function declining) raises the effective extractiveness. Suppression (0.62): Moderate-high. Barriers to interoperability include technical incompatibility, but primarily institutional: career incentives punish cross-domain work; institutions enforce proprietary representation standards; knowledge in one domain is not recognized as legitimate in another. The suppression is strong enough that knowledge workers cannot exit fragmentation without professional cost. Theater ratio (0.58): Moderate-high. Over the 45-year interval, representation systems have proliferated while coordination function per system has declined. Institutions maintain legacy systems (card catalogs, outdated citation standards) through procedural compliance even as digital representation becomes dominant. The theater has increased as the gap between performative compliance and actual coordination has widened.",
+    "perspectival_gap": "Domain specialists see pure coordination (Rope) \u2014 their specialized schemas solve genuine problems of expressing domain concepts precisely. Standards bodies see tangled rope \u2014 they genuinely coordinate through semantic frameworks but also extract through adoption costs. Cross-domain researchers see extraction (Tangled Rope) \u2014 they benefit from coordinated within-domain knowledge but pay heavy translation costs. Knowledge seekers see pure extraction (Snare) \u2014 fragmented silos prevent access without prohibitive re-encoding effort. Legacy systems see their own degradation (Piton) \u2014 institutions maintain procedural authority while functional coordination has migrated to digital alternatives. The analytical observer risks naturalizing this fragmentation as inherent to knowledge specialization (Mountain) \u2014 a false summit that ignores how institutional incentive structures actively enforce fragmentation beyond what genuine knowledge specialization requires.",
+    "directionality_logic": "Directionality varies by agent position within the constraint. Domain specialists benefit from fragmentation (they control representation standards) \u2014 low d, negative chi. Knowledge seekers cannot exit without abandoning the knowledge domain (trapped) \u2014 high d, maximum chi. Cross-domain researchers face constrained exit (can narrow to single domain at career cost) \u2014 moderate d, moderate chi. Standards bodies are constrained (network effects lock in their standards) \u2014 moderate d. Legacy systems maintain arbitrary power (arbitrage capability through procedural inertia) \u2014 low d despite performing little real coordination. The analytical observer's canonical d is used (0.73) but fails to capture that their 'natural law' framing is actually institutional naturalization.",
+    "mandatrophy_analysis": "RESOLUTION: This constraint demonstrates mandatrophy through perspectival multiplicity. The domain specialist's Rope is genuine \u2014 unified representation would sacrifice coordination efficiency within domains. The knowledge seeker's Snare is genuine \u2014 fragmented silos enforce extraction without coordination benefit. The standards body's Tangled Rope is genuine \u2014 they coordinate cross-domain knowledge exchange while also extracting adoption costs. The legacy system's Piton is genuine \u2014 procedural authority persists despite degraded function. The analytical observer's Mountain is a FALSE SUMMIT \u2014 naturalizes institutional enforcement (career incentives, proprietary control, prestige asymmetries) as inherent to knowledge. The mandatrophy resolves by recognizing that fragmentation magnitude is NOT inherent. Technical solutions (RDF, semantic web, vector embeddings) exist to enable interoperability while preserving domain-specific precision. The constraint persists because institutional incentives reward specialization (career advancement in narrow domains) and because representation standards are sites of institutional power. Reducing fragmentation would require: (1) career incentives that reward cross-domain integration; (2) open standards adoption with adoption-cost subsidies; (3) epistemological recognition that domain-boundary-crossing is legitimate knowledge work, not dilution. These are contingent institutional choices, not natural laws."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "disciplinary_gatekeeping",
+      "knowledge_silo_accumulation",
+      "semantic_lock_in"
+    ],
+    "dual_formulation_note": "Knowledge representation fragmentation decomposes into three linked constraints: (1) semantic_interoperability (the technical problem of translating between systems) \u2014 \u03b5 \u2248 0.15, Rope; (2) institutional_gatekeeping (career incentives rewarding specialization) \u2014 \u03b5 \u2248 0.68, Snare; (3) legacy_compliance (procedural enforcement of outdated standards) \u2014 \u03b5 \u2248 0.25, Piton. This story addresses the unified phenomenon; see separate stories for domain-specific decomposition."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.28
+    }
+  ]
+}

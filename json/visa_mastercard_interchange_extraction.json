@@ -1,0 +1,207 @@
+{
+  "header": {
+    "constraint_id": "visa_mastercard_interchange_extraction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "vmc_ifx"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Visa/Mastercard Interchange Fee Extraction System",
+    "topic_domain": "financial/payment_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "card_issuing_banks",
+      "visa_mastercard_networks"
+    ],
+    "victims": [
+      "merchants",
+      "consumers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Small Merchant",
+      "comment": "PERSPECTIVE 1: SMALL MERCHANT (SNARE) \u2014 Cannot exit the payment card system without losing access to customers; faces fixed interchange fees (1.5-3.5% of transaction value) with no negotiating power. Bears extraction costs directly with no coordination benefit. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Consumer",
+      "comment": "PERSPECTIVE 2: CONSUMER (TANGLED ROPE) \u2014 Constrained by the near-universal adoption of card payments; benefits from payment convenience and fraud protection but bears hidden costs through higher prices that merchants pass on to cover interchange fees. Extraction is real but not total \u2014 consumer is not trapped, merely constrained by convenience lock-in."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Card-Issuing Bank",
+      "comment": "PERSPECTIVE 3: CARD-ISSUING BANK (ROPE) \u2014 Primary beneficiary; receives interchange fees as revenue stream. Experiences the system as pure coordination: managing card accounts, fraud prevention, and settlement. Net beneficiary with arbitrage options (can issue cards, adjust offerings, change networks). Effective extraction runs toward this agent."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Card Network (Visa/Mastercard)",
+      "comment": "PERSPECTIVE 4: CARD NETWORK (ROPE) \u2014 Primary beneficiary; sets interchange fee standards and collects fees from issuers. Coordinates multi-sided platform (merchants, consumers, banks) while capturing significant rents. Arbitrage options extensive (can adjust fee schedules, set rules, branch into new segments). Experiences constraint as coordination mechanism with substantial embedded extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Large Merchant/Retailer",
+      "comment": "PERSPECTIVE 5: LARGE MERCHANT (TANGLED ROPE) \u2014 Has negotiating power and mobile exit options (can accept alternative payment methods, push against-card transactions, develop proprietary systems like Amazon Pay). Still constrained by customer expectations for card acceptance but has genuine agency. Experiences extraction with coordination benefits \u2014 payment system coordination enables transactions but with asymmetric fee structure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Regulatory Coalition",
+      "comment": "PERSPECTIVE 6: REGULATORY COALITION (TANGLED ROPE) \u2014 Organized agents (regulators, merchant associations, consumer advocates) see the interchange system as requiring active enforcement against extraction. Experience shows regulated caps (EU 0.3% credit/0.1% debit) reduce extraction while maintaining coordination function. Sees the system as solvable through regulatory boundaries rather than technological exit."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Network Effect View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a civilizational perspective, multi-sided platform coordination for payment systems faces an apparently immutable network effect constraint: merchants must accept cards because consumers expect them; consumers expect cards because merchants accept them; networks extract rents from this lock-in as a structural inevitability. However, structural data contradicts the mountain classification \u2014 regulatory caps and alternative payment systems demonstrate the network effect is contingent, not natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "network_effect_contingency",
+      "question": "Is the network effect lock-in an immutable structural property or a contingent institutional outcome?",
+      "resolution_mechanism": "Comparison of EU-regulated markets (capped interchange) with unregulated markets (US); time-series analysis of payment method diversity and merchant acceptance rates pre/post regulation; emergence of alternative systems (mobile wallets, crypto, stablecoins) as genuine exits",
+      "impact": "If contingent: mountain classification is false summit; constraint is Tangled Rope from all perspectives. If immutable: network effect justifies extraction as coordination cost unavoidable by any payment system.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether network lock-in is structural or institutional"
+    },
+    {
+      "id": "alternative_payment_viability",
+      "question": "Can decentralized payment systems (blockchain, mobile money) provide genuine exit from Visa/Mastercard extraction without requiring universal adoption?",
+      "resolution_mechanism": "Market penetration analysis of alternative systems; cost structure comparison; consumer friction measurement in multi-payment environments; merchant profitability correlation with payment method mix",
+      "impact": "If viable: scaffold perspective correct \u2014 alternative systems have sunset logic. If not viable: extraction constraint remains mountain-like despite alternatives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of alternative payment systems as genuine exits"
+    },
+    {
+      "id": "interchange_necessity_for_coordination",
+      "question": "What minimum interchange rate is structurally necessary for the coordination function (fraud prevention, settlement, cardholder benefits) vs what is pure extraction rent?",
+      "resolution_mechanism": "Cost accounting of card issuer operations (fraud losses, processing, rewards); comparison with actual interchange rates; empirical analysis of service degradation at lower fee caps; counterfactual analysis of payments markets with zero interchange fees",
+      "impact": "If high minimum (> 0.8%): most extraction claimed by banks is coordination cost; constraint better classified as Rope. If low minimum (< 0.3%): current fees (1.5-3.5%) are primarily extraction; Snare/Tangled Rope classification confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Minimum interchange necessary for coordination function"
+    },
+    {
+      "id": "regulatory_arbitrage_escalation",
+      "question": "As jurisdictions cap interchange fees, do card networks escalate extraction through alternative mechanisms (assessment fees, network fees, scheme fees)?",
+      "resolution_mechanism": "Fee structure tracking across jurisdictions; correlation of regulatory caps with emergence of new fee categories; merchant and issuer revenue impact analysis; comparison of total payment system costs pre/post regulation",
+      "impact": "If escalation observed: regulation removes one extraction channel but does not constrain the underlying asymmetric relationship; constraint persists as Tangled Rope with shifted extraction vectors. If no escalation: regulation reduces total extraction and demonstrates constraint is not immutable.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether card networks escalate extraction through alternative fee mechanisms after regulation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The Visa/Mastercard interchange fee system extracts rents from merchants and consumers through a structurally asymmetric fee arrangement that vendors cannot negotiate. Interchange fees\u2014amounts paid by acquiring banks to issuing banks for each card transaction\u2014represent approximately 1.5-3.5% of transaction value in unregulated markets. This constraint exhibits genuine coordination function (fraud prevention, settlement, cardholder benefits) combined with significant asymmetric extraction, making it a canonical Tangled Rope. The system is defended as immutable network effect (mountain view), but regulatory evidence from EU and Australia demonstrates the extraction component is contingent: capped interchange maintains coordination function while reducing extraction. The constraint's low theater ratio (0.35) reflects that interchange fees are functionally transparent, not performative\u2014they directly subsidize issuer operations. However, the visibility of their necessity (fraud prevention, settlement) obscures the monopoly rent component (lack of negotiation, network lock-in), creating a category error: calling all interchange 'coordination cost' naturalizes what regulators can and have separated into 'necessary cost' (lower) and 'extraction rent' (reducible).",
+    "key_agents": [
+      "Card-Issuing Banks: Primary beneficiaries (institutional/arbitrage) \u2014 receive interchange fee revenues; have arbitrage options and can adjust offerings; lowest friction exit from system",
+      "Visa/Mastercard Networks: Primary beneficiaries (institutional/arbitrage) \u2014 set interchange standards, collect network fees; maintain duopoly control; arbitrage options through fee schedule adjustments",
+      "Small Merchants: Primary victims (powerless/trapped) \u2014 cannot exit card system without losing customer access; face fixed fees with zero negotiating power; no alternative payment infrastructure sufficiently mature",
+      "Consumers: Secondary victims (moderate/constrained) \u2014 don't directly pay interchange but bear costs through merchant price increases; convenience lock-in constrains ability to reject cards; not trapped, merely constrained",
+      "Large Merchants/Retailers: Secondary victim-beneficiaries (powerful/mobile) \u2014 have negotiating power with banks; can implement alternative payment channels (Apple Pay, proprietary systems); constrained by customer expectations but mobile enough to shape payments landscape",
+      "Regulatory Coalitions: Organized agents (organized/constrained) \u2014 see extraction as regulable; have constrained but real power to cap fees; operate within jurisdictional limits",
+      "Analytical Observer: Risks naturalizing contingent institutional arrangements as immutable network effects"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Substantial but not maximal. The system performs genuine coordination function \u2014 fraud prevention, transaction settlement, cardholder benefits. But empirical evidence (EU regulation at 0.3% credit/0.1% debit maintaining functionality) demonstrates 1.5-3.5% fees include significant extraction rent above coordination cost. The intermediate value (0.58 rather than 0.70+) reflects the genuine coordination component alongside extraction. Suppression (0.72): High. Merchants face near-total inability to exit: card acceptance is nearly mandatory for retail viability; alternative payment systems lack critical mass; no negotiation possible for individual merchants; even large retailers are constrained by consumer expectations. Regulatory and network barriers are substantial. Theater ratio (0.35): Moderate-low. Interchange fees are functionally transparent and directly tied to real services (fraud prevention, settlement). This is not performative like peer review theater. However, the justification framing obscures the monopoly rent component \u2014 claiming 'all interchange is necessary cost' when regulation shows 'half could be eliminated without losing coordination' is a rhetorical theater masking the actual fee structure. The theater has increased slightly over the interval as networks add new fee categories (assessment fees, network fees) to recapture regulatory savings.",
+    "perspectival_gap": "The powerless merchant sees a snare: complete extraction with no coordination benefit from their perspective (they would function identically with lower fees). The issuing bank sees rope: coordination mechanism that serves their core function (managing accounts, fraud, settlement) while providing revenue. The consumer sees tangled rope: genuine benefits (payment convenience, fraud protection) alongside hidden extraction (price increases from merchants). The card network sees rope: their networks genuinely coordinate a multi-sided platform. Large merchants see tangled rope: they have mobile options and negotiating power, experience both coordination benefits and extraction constraints. Regulators see tangled rope with solvable extraction component: demonstrate that coordination function persists at lower fee caps (EU evidence). The analytical observer risks seeing mountain (network effect immutable) but the EU regulation counterfactual shows the extraction component is regulable while preserving coordination. The perspectival gap reveals that the same set of fees is experienced as pure extraction (powerless merchant), necessary coordination cost (issuing bank), unavoidable overhead (consumer), and controllable rent (regulator).",
+    "directionality_logic": "Beneficiaries (card-issuing banks, card networks) have arbitrage exit options and are net recipients of interchange flows \u2014 they derive d from low exit cost and beneficiary status, producing negative f(d), absorbing extraction toward themselves. Victims (small merchants) have trapped or constrained exit, derive high d from victim + trapped combination, producing high f(d) and maximum experienced extraction. Large merchants have powerful status + mobile exit options, moderating their experienced extraction despite victim status \u2014 mobile exit options reduce their d value. Consumers are constrained but not trapped, producing moderate d and moderate experienced extraction. The regulatory coalition has organized status + constrained (jurisdictional) exit, producing moderate d and providing a structural check on extraction escalation. Each perspective's chi value emerges from the base extractiveness (0.58) scaled by f(d) and scope modifier: a powerless trapped merchant at global scope experiences high chi; an institutional arbitrage issuer experiences low or negative chi despite identical base extractiveness.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by decomposing the interchange system into its coordination and extraction components empirically: EU regulation and other capped-fee jurisdictions demonstrate that coordination function (fraud prevention, settlement, cardholder benefits) persists at materially lower fee rates. This falsifies the claim that all 1.5-3.5% fees are coordination cost. It also falsifies the mountain view that network effects necessarily produce this extraction level \u2014 network effects explain why the extraction persists despite being reducible, not why it must be at current levels. The constraint is Tangled Rope: genuine coordination (fraud prevention, settlement) combined with genuine extraction (monopoly rents from network lock-in), and the tangled structure is confirmed by the regulatory evidence that one component can be removed without destroying the other. The constraint cannot be classified as pure coordination (Rope) because the monopoly rent component is real and harms powerless merchants. It cannot be classified as pure extraction (Snare) because coordination function is genuinely necessary and valuable. The Tangled Rope classification is the only one consistent with all observed perspectives and the regulatory counterfactual."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "payment_network_duopoly_control",
+      "merchant_acquiring_bank_power_asymmetry"
+    ],
+    "dual_formulation_note": "The interchange extraction system is downstream of two upstream structural constraints: the payment network duopoly (Visa/Mastercard control ~85% of global card volume) and the power asymmetry between acquiring banks and individual merchants. The interchange constraint has its own extractiveness (0.58) reflecting the specific fee extraction mechanism; the upstream constraints have different extractiveness values reflecting the structural duopoly and power asymmetry. Decomposition clarifies that reducing interchange while preserving duopoly control may shift extraction mechanisms rather than eliminate them (captured in the regulatory_arbitrage_escalation omega variable)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

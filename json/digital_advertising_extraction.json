@@ -1,0 +1,225 @@
+{
+  "header": {
+    "constraint_id": "digital_advertising_extraction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "digad"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Digital Advertising Extraction and Behavioral Capture",
+    "topic_domain": "technology/economics/behavioral",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "advertising_platforms",
+      "data_brokers"
+    ],
+    "victims": [
+      "users_attention_autonomy",
+      "advertisers_sme",
+      "privacy_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The User Attention Commodity",
+      "comment": "PERSPECTIVE 1: USER ATTENTION (SNARE) \u2014 Trapped by necessity of digital participation. Cannot escape platform dependency (email, social connection, job search all require platform presence). Behavioral data extracted continuously; algorithmic targeting removes genuine choice. No real alternatives; exit cost is social/economic isolation. Maximum extraction with maximum suppression."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "label": "The Platform User (Identity-Fused)",
+      "comment": "PERSPECTIVE 2: IDENTITY-LOCKED USER (SNARE) \u2014 Structurally mobile (could delete account) but identity fused with platform participation. Social identity, professional presence, relational continuity constituted through platform membership. Exit requires abandoning identity constructed within the platform ecosystem. Behavioral autonomy extraction is cognitive; suppression is enforced by identity frame rather than material barriers."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Small Advertiser (SME)",
+      "comment": "PERSPECTIVE 3: SMALL ADVERTISER (TANGLED ROPE) \u2014 Mixed experience: platforms provide genuine coordination (targeting small customer bases, demand-side efficiency) alongside asymmetric extraction (algorithmic opacity, account suspension risk, cost inflation via bidding wars). Can exit by switching platforms or using direct marketing, but cost is high (audience loss, learning curve). Moderate extraction with real suppression from lock-in."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Advertising Platform",
+      "comment": "PERSPECTIVE 4: ADVERTISING PLATFORM (ROPE) \u2014 Experiences the constraint as pure coordination: matching advertisers to users, enabling market efficiency. Extract behavioral surplus value but frame it as market function. Can arbitrage between user privacy expectations and advertiser demand. Net beneficiary with high degrees of freedom."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Privacy Regulation Coalition",
+      "comment": "PERSPECTIVE 5: PRIVACY REGULATION (SCAFFOLD) \u2014 Organized agents (GDPR, DMA, privacy advocates) see extractive data practices as a solvable problem with sunset logic. Regulatory frameworks establish consent requirements, data portability, and algorithmic transparency that reduce extraction mechanisms. Suppression declines as technical compliance measures mature. High theater (compliance theater, dark patterns) but genuine extraction reduction over generational timescale."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Privacy Policy Ritual",
+      "comment": "PERSPECTIVE 6: PRIVACY POLICY THEATER (PITON) \u2014 Formal consent mechanisms (privacy policies, cookie banners, consent walls) are largely performative. Users do not read policies; dark patterns optimize for accept; technical language obscures actual data flows. The ritual persists because it provides regulatory cover, not because it enables informed consent. Theater ratio is high (0.58 baseline, driven by performative compliance). Degraded institution maintained by legal requirement, not functional verification of consent."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 Sees the full architecture: behavioral extraction at scale, algorithmic opacity, suppression mechanisms preventing informed exit, multi-layer extraction (attention, data, psychological nudging). From civilizational view, the asymmetry is structural and deepening. Extraction mechanisms become more sophisticated (machine learning behavioral profiling) faster than regulation closes loopholes. Classification remains Snare despite attempts to frame as coordination or natural market efficiency."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "behavioral_autonomy_threshold",
+      "question": "At what level of algorithmic targeting does user behavior cease to be self-directed choice and become responsive to extraction mechanisms?",
+      "resolution_mechanism": "Neuroscience/behavioral economics analysis of attention capture, addictive design metrics, and autonomy-impairing notification patterns. Comparative A/B testing of informed vs uninformed user behavior.",
+      "impact": "If threshold is high: much current behavior attributable to coordination benefits (matching to preferences). If threshold is low: most targeted behavior is extracted, not chosen.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for behavioral autonomy loss to algorithmic extraction"
+    },
+    {
+      "id": "privacy_regulation_effectiveness",
+      "question": "Do GDPR/DMA compliance measures actually reduce data extraction or merely shift extraction mechanisms (dark patterns, consent walls, data intermediaries)?",
+      "resolution_mechanism": "Longitudinal measurement of data collection volumes, consent rates, dark pattern prevalence, and user behavior changes post-regulation. Audit of platform compliance vs technical data hoarding.",
+      "impact": "If effective: scaffold perspective valid, sunset mechanisms exist. If ineffective: extraction continues, suppression merely adapts, regulatory theater is piton not scaffold.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regulation reduces extraction or shifts mechanisms"
+    },
+    {
+      "id": "alternative_platform_viability",
+      "question": "Do decentralized or regulation-compliant alternatives (Signal, DuckDuckGo, federated social networks) offer genuine exit or are they marginal platforms lacking network effects?",
+      "resolution_mechanism": "Adoption curve analysis, cost comparison, feature parity assessment, network effect threshold measurement for each alternative class.",
+      "impact": "If viable: exit_options upgrade from trapped to constrained or mobile. If marginal: trapped classification holds, suppression reflects genuine structural dependency.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of alternative platforms as genuine exit options"
+    },
+    {
+      "id": "identity_lock_mechanism_scale",
+      "question": "What proportion of platform users are materially trapped vs identity-locked? Are identity-lock and material dependency separable in practice?",
+      "resolution_mechanism": "Qualitative interviews with users in different demographic and socioeconomic categories about perceived barriers to exit. Post-deletion follow-up on whether identity-lock persists after material exit.",
+      "impact": "If primarily identity-locked: intervention targets identity frame, not regulation. If primarily materially trapped: regulation reducing economic dependency will reduce suppression.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Proportion and interaction of material vs cognitive traps"
+    },
+    {
+      "id": "extraction_surplus_distribution",
+      "question": "What fraction of extracted value is retained by platform (profit), what is returned to advertisers (efficiency gain), and what is lost to rent-seeking (algorithmic opacity tax)?",
+      "resolution_mechanism": "Financial analysis of platform margins, advertiser ROI data, and comparison with hypothetical transparent-pricing market equilibrium.",
+      "impact": "If most extraction is redistributed: snare classification may be overstated (asymmetric but coordinated). If most is retained: snare confirmed, extraction is pure rent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distribution of extracted surplus across stakeholders"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Digital advertising platforms have evolved into the primary extraction architecture of the internet: behavioral data collection, algorithmic targeting, and attention capture create asymmetric value flows where users' autonomy and informational commons are extracted to fund free services. The constraint exhibits high extractiveness (0.68) and suppression (0.72) because users face genuine traps (material dependency on platforms for communication and opportunity) and cognitive locks (identity fusion with platform participation). The extractiveness trajectory shows steady increase over the interval, reflecting acceleration of behavioral profiling sophistication and reduction of alternative pathways. Theater ratio (0.58) reflects performative consent mechanisms (privacy policies, cookie banners) that provide regulatory cover without enabling informed choice. From the powerless user's perspective, this is a classical Snare: trapped, behavioral autonomy extracted, suppression mechanisms prevent exit. From the platform's perspective, it appears as Rope: coordination of supply and demand, market efficiency. The perspective gap reveals the structural asymmetry \u2014 the same mechanism is Rope to the beneficiary and Snare to the victim.",
+    "key_agents": [
+      "Users (Powerless/Trapped): Primary victim \u2014 materially dependent on platforms for communication, employment, and social connection; behavioral autonomy continuously extracted",
+      "Users (Moderate/Identity-Locked): Secondary victim \u2014 structurally mobile but identity fused with platform membership; exit would require psychological identity reconstruction",
+      "Small Advertisers (Moderate/Constrained): Mixed victim-beneficiary \u2014 genuine coordination benefit (targeting) alongside asymmetric extraction (algorithmic opacity, account suspension risk, cost inflation)",
+      "Advertising Platforms (Institutional/Arbitrage): Primary beneficiary \u2014 extract behavioral surplus, arbitrage between user privacy expectations and advertiser demand, maintain opacity to preserve extraction margins",
+      "Data Brokers (Institutional/Arbitrage): Secondary beneficiary \u2014 extract and resell behavioral profiles; operate in regulatory shadows",
+      "Privacy Regulation Coalition (Organized/Constrained): Agent of sunset \u2014 GDPR, DMA, and privacy advocates building regulatory frameworks that reduce extraction mechanisms over generational timescale",
+      "Privacy Policy Ritual (Institutional/Constrained): Degraded institution \u2014 formal consent mechanisms maintain legal cover while enabling de facto non-consent; theater persists because functional transparency would collapse extraction",
+      "Analytical Observer (Analytical/Analytical): Sees full architecture from civilizational perspective; behavioral extraction mechanisms become more sophisticated faster than regulation closes gaps"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High, reflecting sustained behavioral autonomy extraction. The value increased from 0.35 to 0.68 over the interval as machine learning targeting became more sophisticated and behavioral profiling granularity increased. Users perceive diminishing agency over time as algorithmic systems become better at predicting and nudging behavior. Suppression (0.72): High, reflecting multiple overlapping barriers to exit. Material dependency (communication, employment, social opportunity), cognitive lock-in (identity fusion), network effects (switching cost), and designed addictive mechanisms all elevate suppression. The measurement trajectory (0.43\u21920.50\u21920.58) for theater ratio indicates that performative consent mechanisms have become more elaborate over the interval, not more functional \u2014 dark patterns, consent walls, and pseudo-transparency increase the theatrical coating while extraction mechanisms themselves remain opaque. The snare classification is driven by high extractiveness and suppression with no genuine coordination benefit to the victims (users); the beneficiaries (platforms) experience the same architecture as rope. The perspectival gap is the diagnostic signal of asymmetric extraction.",
+    "perspectival_gap": "The fundamental gap is between the platform (Rope) and the user (Snare) \u2014 they are experiencing the same mechanism but with opposite directionalities. The platform sees coordination (matching supply to demand, enabling market efficiency, providing free services). The user sees extraction (attention captured, behavioral data harvested, choice removed by algorithmic nudging). The small advertiser occupies the middle ground (Tangled Rope) \u2014 they genuinely benefit from targeting coordination but also experience extraction through opacity and account vulnerability. The analytical observer (Snare) aligns with the powerless user but sees the full structural architecture, recognizing that the platform's rope perception is available only because platforms control the information asymmetry and can choose what extraction mechanisms are visible or invisible. The privacy regulation perspective (Scaffold) sees the constraint as solvable through sunset mechanisms (regulatory frameworks), but this assumes effective compliance \u2014 if GDPR/DMA merely shift extraction to dark patterns and data intermediaries rather than reducing it, the scaffold is aspirational rather than structural. The privacy policy perspective (Piton) observes that the formal consent ritual is mostly theater \u2014 users don't read policies, dark patterns optimize for acceptance, technical language obscures actual data flows. The ritual persists because it provides legal protection to platforms, not because it enables informed consent.",
+    "directionality_logic": "The directionality chain flows from beneficiary/victim declarations through power and exit options. Users with trapped exit experience d \u2248 0.90-0.95, producing maximum f(d) \u2248 1.35-1.42 and thus maximum effective extraction chi. Users with identity_locked exit experience d \u2248 0.85-0.90 (high because victim status, but structurally mobile), producing f(d) \u2248 1.15-1.28 \u2014 still extremely high extraction but slightly lower than trapped because the binding mechanism is cognitive (can theoretically break with frame shift) rather than material (cannot break with resources alone). Platforms as beneficiaries with arbitrage exit experience d \u2248 0.05-0.15 (low because beneficiary status + high exit freedom), producing f(d) \u2248 -0.12 to 0.05 \u2014 negative or near-zero experienced extraction, consistent with their rope perception. Small advertisers with constrained exit experience d \u2248 0.50-0.60 (mixed victim-beneficiary status), producing moderate chi, consistent with tangled rope. The scope modifier \u03c3(S) applies at global scope (1.2), amplifying extractiveness across all indices \u2014 the constraint operates at planetary scale, making verification of alternative arrangements impossible for any single user or advertiser to escape. This scale multiplier is critical to understanding why local or national regulatory interventions face such difficulty: the coordination lock is global, so local opt-out is economically irrational even when technically possible.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that platforms genuinely provide coordination benefits (matching advertisers to users, reducing search costs, enabling markets) while simultaneously and structurally extracting behavioral surplus from users who experience no benefit and cannot exit. The constraint is not 'Is this extraction or coordination?' but 'At what point does the extraction become so asymmetric that the coordination framing becomes a cover story?' The answer lies in the disparity between platform control (high algorithmic opacity, dark patterns, account suspension power) and user agency (no transparency, no real consent, no exit). The tangled rope classification for small advertisers confirms that coordination benefits CAN be real \u2014 they experience genuine matching efficiency. But for users, the coordination benefit is fictional: they do not benefit from being matched to ads; the platform benefits from their data. The theater ratio (0.58) indicates that roughly 58% of the visible constraint mechanism is performative (consent rituals, privacy policies, compliance theater) while 42% is functional (actual targeting systems, data infrastructure). This suggests that reducing theater through regulatory enforcement (GDPR's transparency requirements, consent mechanisms) can expose the underlying extraction architecture \u2014 users who break through the theater to understand actual data flows typically attempt exit despite barriers. The privacy regulation scaffold perspective is credible only if regulatory pressure continues to erode the extraction mechanisms rather than being captured by platform influence (regulatory arbitrage, revolving-door employment, lobbying success). If regulation becomes capturadas part of the snare, it transforms into piton (degraded ritual) rather than scaffold (genuine sunset)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.25
+  },
+  "network": {
+    "affects_constraints": [
+      "attention_economy_extraction",
+      "algorithmic_opacity_lock",
+      "behavioral_autonomy_suppression"
+    ],
+    "dual_formulation_note": "Digital advertising extraction decomposes into three structurally distinct constraints: (1) resource allocation coordination (matching supply/demand, genuine market function with \u03b5\u22480.25) bundled with (2) behavioral autonomy extraction through algorithmic targeting (\u03b5\u22480.65) and (3) information asymmetry exploitation through opacity (\u03b5\u22480.72). The family treats the coordination and extraction as separate constraints; the present story bundles them as a snare where extraction dominates coordination. See attention_economy_extraction for pure-coordination view and algorithmic_opacity_lock for opacity-focused extraction analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": []
+  }
+}

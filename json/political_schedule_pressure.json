@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "political_schedule_pressure",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "psp"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Political Schedule Pressure",
+    "topic_domain": "political_governance/institutional_constraint",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "executive_leadership",
+      "media_cycle_actors"
+    ],
+    "victims": [
+      "policy_deliberation_quality",
+      "legislative_minority",
+      "long_term_planning_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Legislative Minority",
+      "comment": "PERSPECTIVE 1: LEGISLATIVE MINORITY (SNARE) \u2014 Trapped by the electoral cycle. Minority factions have no exit from pressure to vote on abbreviated timelines; cannot slow deliberation without being labeled obstructionist. Bears extraction of having their concerns heard only through performative opposition. Maximum suppression: procedural rules prevent extended debate on controversial bills; political cost of delay is delegitimation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Career Legislators and Policy Staff",
+      "comment": "PERSPECTIVE 2: CAREER LEGISLATORS & POLICY STAFF (TANGLED ROPE) \u2014 Constrained by electoral calendars and campaign schedules, but also benefit from accelerated passage (reduced time for opponents to mobilize, opportunity for major legislative accomplishment in compressed window). Experience genuine coordination (scheduling shared votes, synchronizing floor time) alongside extraction (forced votes on incomplete analysis). Career advancement depends on legislative productivity metrics tied to schedule pressure."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Executive Leadership and Party Leadership",
+      "comment": "PERSPECTIVE 3: EXECUTIVE & PARTY LEADERSHIP (ROPE) \u2014 Benefits from schedule compression as a coordination mechanism: accelerated timelines force coherence around leadership priorities, reduce floor delays, and concentrate decision-making power at the top. Leadership experiences this as effective coordination (getting legislation passed), not extraction. Has exit options: can set the schedule, negotiate timelines, prioritize bills."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Advocacy Organizations and Interest Groups",
+      "comment": "PERSPECTIVE 4: ADVOCACY ORGANIZATIONS (TANGLED ROPE) \u2014 Organized agents with some constrained exit. Benefit from predictable legislative calendars (can plan campaigns) and from schedule pressure reducing influence windows (forces mobilization). Extraction occurs when bills advance faster than advocacy capacity allows comment or testimony. Experience both coordination (predictable schedule) and extraction (time compression limits effective participation)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Legislative Procedure and Committee System",
+      "comment": "PERSPECTIVE 5: LEGISLATIVE PROCEDURE (PITON) \u2014 Committee review, hearings, and formal debate are increasingly performative: bills bypass committees through suspension of rules; hearings are scheduled for theater rather than genuine deliberation; markup sessions are choreographed around predetermined outcomes. The procedural apparatus persists through institutional inertia despite reduced functional verification of policy claims. Theater ratio reflects that formal processes are maintained but decisions are made outside them."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Reform Movements and Alternative Governance Structures",
+      "comment": "PERSPECTIVE 6: REFORM MOVEMENTS (SCAFFOLD) \u2014 Powerful actors (citizen initiatives, ballot measure movements, participatory budgeting pilots) are creating alternative decision pathways with longer timelines: ballot measures require extended public comment windows; participatory budgeting uses deliberative formats. These represent potential sunset mechanisms \u2014 distributed decision-making could reduce dependency on compressed legislative schedules. Sees schedule pressure as a solvable coordination problem with architectural solutions."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 From a civilizational perspective, electoral cycles are fixed structural features of representative democracy: decisions must be made within defined periods, and the constraint between decision capacity and calendar is immutable. This perspective naturalizes schedule pressure as inherent to democratic cycles. However, the structural data contradicts this \u2014 the measured suppression and theater ratio reveal that the constraint is institutional (procedural rules, campaign finance dependencies, leadership gatekeeping) rather than natural. False summit detection applies."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "deliberation_quality_measurement",
+      "question": "How is deliberation quality measured, and does schedule pressure reduce it or merely compress it temporally?",
+      "resolution_mechanism": "Content analysis of legislative debate: linguistic markers of substantive engagement vs performative positioning; tracking of amendments and substantive floor modifications; comparison of bills pre-passage revision rates across time horizons",
+      "impact": "If quality actually degrades: extraction mechanism confirmed. If quality is preserved but compressed: schedule pressure is coordination solution rather than extraction mechanism. Affects victim group classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether schedule pressure reduces deliberation quality or merely compresses it"
+    },
+    {
+      "id": "alternative_legislative_timeline_feasibility",
+      "question": "Could extended legislative calendars achieve equivalent policy outcomes at lower suppression cost?",
+      "resolution_mechanism": "Comparative analysis of outcomes in legislative systems with different session lengths (US states, European parliaments); historical periods with different schedule pressure (pre-1920s US with longer sessions); experimental deliberative legislatures with extended timelines",
+      "impact": "If extended timelines produce equivalent outcomes: schedule pressure is pure extraction mechanism (Snare). If extended timelines degrade outcomes: schedule pressure is genuine coordination necessity (Rope). If mixed: confirms Tangled Rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative legislative timelines could achieve equivalent outcomes"
+    },
+    {
+      "id": "executive_schedule_autonomy",
+      "question": "Does executive leadership genuinely control the legislative schedule, or is the executive also constrained by implicit pressure cycles (media, campaign, financial market expectations)?",
+      "resolution_mechanism": "Tracking of executive schedule proposals vs actual passage timing; analysis of emergency declarations and deadline-driven legislation; comparison of schedule pressure across legislative and executive branches",
+      "impact": "If executives control schedule: extraction runs from executive to other agents (confirms leadership beneficiary classification). If schedule is autonomous constraint: all agents including executives are victims (pyramid collapses, Snare from all perspectives).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether executives genuinely control or are also constrained by schedule pressure"
+    },
+    {
+      "id": "suppression_mechanism_breakdown",
+      "question": "Is measured suppression primarily procedural (formal rules limiting debate) or internalized (actors self-censor due to political cost expectations)?",
+      "resolution_mechanism": "Tracking of formal procedure violations and suspensions vs self-imposed debate constraints; interviews and statements from legislative staff about decision calculus; historical comparison of suppression across periods with different political polarization",
+      "impact": "If primarily procedural: suppression can be reduced through rule changes. If primarily internalized: deeper political realignment required. Affects reform pathway credibility.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is primarily procedural or internalized political cost"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Political schedule pressure constrains deliberation through electoral and fiscal calendars that compress decision-making into narrow windows. This constraint exhibits a structural hybrid: it provides genuine coordination (synchronizing legislative action, forcing prioritization, preventing indefinite obstruction) while simultaneously extracting through suppression of substantive deliberation, minority voice exclusion, and delegation to executive summary review. The constraint is maintained through multiple enforcement mechanisms \u2014 formal procedural rules (suspension of rules, expedited passage procedures), informal political costs (labeling delays as obstruction), and implicit media/market expectations around deadline-driven governance. Theater has increased over the measurement interval as formal deliberative procedures (committee hearings, floor debate, amendment markup) have become increasingly disconnected from actual decision points (which occur in leadership offices before floor votes). The constraint affects different agents asymmetrically: executive and party leadership benefit from compression; career legislators experience mixed costs and benefits; policy deliberation quality and legislative minorities bear extraction; the long-term planning capacity of government is structurally degraded.",
+    "key_agents": [
+      "Executive Leadership & Party Leadership: Primary beneficiary (institutional/arbitrage) \u2014 controls schedule, uses pressure to concentrate power, benefits from reduced deliberation time",
+      "Legislative Minorities: Primary victim (powerless/trapped) \u2014 cannot exit compressed timelines, cannot slow process without political delegitimation, lack forum for substantive opposition",
+      "Policy Deliberation Quality: Secondary victim (powerless/trapped) \u2014 abstract collective good; cannot organize; compressed timelines prevent adequate analysis of complex policy implications",
+      "Long-Term Planning Capacity: Secondary victim (powerless/trapped) \u2014 government becomes reactive to immediate schedule demands; strategic planning displaced by crisis-driven governance",
+      "Career Legislators & Policy Staff: Mixed (moderate/constrained) \u2014 benefit from productivity metrics tied to legislation passed, constrained by reduced analysis time, gain from opponents' reduced capacity to mobilize",
+      "Advocacy Organizations: Organized agent (organized/constrained) \u2014 can mobilize around predictable schedules but extraction occurs when bills advance faster than advocacy capacity allows participation",
+      "Legislative Procedure & Committee System: Institutional inertia (institutional/arbitrage) \u2014 maintains performative apparatus while real decisions occur outside formal procedures",
+      "Reform Movements: Powerful challenger (powerful/mobile) \u2014 building alternative deliberative pathways (ballot measures, participatory budgeting) with potential sunset mechanism"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and increasing over time. Schedule pressure extracts by compressing deliberation, but extraction is not maximal because some actors (executives, party leaders, organized interests with resources) retain capacity to participate. The upward trend (0.38\u21920.58 over 20-year interval) reflects acceleration of deadline-driven governance and reduction of substantive legislative review. Suppression (0.62): Moderate-high. Formal procedural barriers (suspension of rules, expedited passage) are high; informal political costs of delay are severe (delegitimation as obstructionist); but not total \u2014 determined minorities can still obstruct through floor filibuster and procedural delay tactics. Structural barriers to exit are severe but not absolute. Theater ratio (0.65): Moderate-high and increasing. Committee hearings, floor debate, and amendment markup processes persist as formal procedures but are increasingly disconnected from actual decision points. Decisions are predetermined by leadership; formal procedures serve primarily communicative/legitimation function. The rising theater ratio reflects increasing disconnect between procedural form and substantive function.",
+    "perspectival_gap": "The beneficiary perspective (executive/institutional) sees Rope: schedule pressure is a coordination mechanism that forces coherence and prevents endless obstruction. The trapped minority perspective sees Snare: no exit, no voice, pure extraction. The moderate perspective sees Tangled Rope: genuine coordination benefits mixed with significant extraction costs. The reform perspective sees Scaffold: alternative deliberative pathways with sunset potential. The natural law perspective sees Mountain: electoral cycles are immutable constraints \u2014 but this is a false summit, as the measured theater ratio and suppression data reveal that the constraint is institutional (procedure, custom, expectation) rather than physical. The key gap is between the beneficiary's experience (this works) and the victim's experience (this excludes me) \u2014 exactly the signature of a Tangled Rope where both coordination and extraction are real but asymmetrically distributed.",
+    "directionality_logic": "Directionality (d) for each agent follows from power level, exit options, and structural relationship. Executive leadership (institutional power, arbitrage exit): low d \u2192 negative chi \u2192 benefits from constraint. Legislative minorities (powerless, trapped): high d \u2192 high f(d) \u2192 maximum experienced extraction. Career legislators (moderate power, constrained exit): mid-range d \u2192 moderate f(d) \u2192 mixed experience. The sigmoid f(d) amplifies the extraction experienced by trapped agents while compressing the burden on those with exit options. The beneficiary's experience of Rope (coordination) is accurate within their structural position; the victim's experience of Snare (extraction) is equally accurate within theirs. The perspectival gap is not a classification error but a sign that Tangled Rope is the appropriate type \u2014 both coordination and asymmetric extraction are structural.",
+    "mandatrophy_analysis": "Schedule pressure resolves mandatrophy by showing that the constraint is legitimately hybrid: genuine coordination function exists (forcing prioritization, preventing indefinite obstruction, synchronizing action) alongside genuine asymmetric extraction (suppressing deliberation, excluding minority voice, degrading long-term planning). The classification resists collapse to pure extraction (Snare) because the beneficiaries genuinely experience this as solving a coordination problem. The classification resists collapse to pure coordination (Rope) because suppression is severe and asymmetrically distributed. The mandatrophy is resolved by accepting that the constraint is structurally both: it solves a real coordination problem (how to make timely decisions in a divided legislature) while extracting asymmetrically from those without power to control the schedule. The false summit (natural law mountain) is rejected because the measurement data shows that theater ratio and suppression are institutional features (procedural rules, political cost expectations, leadership gatekeeping) that could be altered, not immutable features of electoral cycles."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "legislative_minority_exclusion",
+      "executive_power_concentration",
+      "long_term_policy_planning_horizon"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

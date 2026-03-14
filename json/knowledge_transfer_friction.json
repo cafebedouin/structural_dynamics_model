@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "knowledge_transfer_friction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ktf"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Knowledge Transfer Friction Across Organizational and Epistemic Boundaries",
+    "topic_domain": "organizational_behavior/epistemic_institutions",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "knowledge_gatekeepers",
+      "incumbent_institutions"
+    ],
+    "victims": [
+      "knowledge_seekers",
+      "organizational_periphery"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Peripheral Knowledge Seeker",
+      "comment": "PERSPECTIVE 1: PERIPHERAL KNOWLEDGE SEEKER (SNARE) \u2014 Trapped within institutional boundaries and gatekeeping structures. Cannot access tacit knowledge held by incumbents; cannot bypass established channels without career damage. Maximum extraction cost: must pay in time, credentials, or organizational loyalty to access knowledge that would be freely available in absence of friction. No viable exit option from the friction itself."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Organizational Adapter",
+      "comment": "PERSPECTIVE 2: ORGANIZATIONAL ADAPTER (TANGLED ROPE) \u2014 Moderately constrained agents who bridge institutions but at cost. They benefit from access to multiple knowledge domains (coordination function) while bearing significant friction costs (extraction). Career advancement requires translating between implicit institutional cultures. Extraction is asymmetric: translators subsidize knowledge integration."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Knowledge Gatekeeper Institution",
+      "comment": "PERSPECTIVE 3: KNOWLEDGE GATEKEEPER INSTITUTION (ROPE) \u2014 Primary beneficiary. Institutional actors (universities, professional associations, corporate R&D) control knowledge access through credentialing, publication norms, and tacit skill transmission. The friction preserves their authority over knowledge legitimacy. They experience the constraint as coordination: structuring access prevents chaos and ensures quality control. Net beneficiary with arbitrage exit options."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Knowledge Coalition",
+      "comment": "PERSPECTIVE 4: OPEN KNOWLEDGE COALITION (TANGLED ROPE) \u2014 Organized agents (open-source communities, Wikipedia, open-access movements, MOOCs) simultaneously coordinate knowledge access while being constrained by incumbent institutional resistance. They provide coordination function (pooling tacit knowledge, democratizing access) while bearing extraction costs (fighting against institutional gatekeeping, resource scarcity, institutional dismissal of non-credentialed contributions)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Credentialing Theater",
+      "comment": "PERSPECTIVE 5: CREDENTIALING THEATER (PITON) \u2014 Traditional credentialing systems (degrees, certifications, peer review gatekeeping) persist through institutional inertia despite degraded functional utility. Theater ratio (0.55) reflects that formal credentials increasingly fail to predict actual knowledge or capability. The credentialing process is largely performative maintenance of institutional authority, not genuine knowledge verification. Persists because alternatives haven't fully displaced it."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Tacit Knowledge Limit)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / TACIT KNOWLEDGE VIEW (MOUNTAIN) \u2014 From a universal perspective, some friction is inherent to knowledge transfer: tacit knowledge (know-how, intuition, embodied practice) cannot be fully codified and transmitted. The gap between explicit and tacit is a structural feature of how knowledge propagates. However, the structural data contradicts the pure mountain classification \u2014 observed friction substantially exceeds what tacit knowledge limits alone would require, revealing that institutional gatekeeping amplifies what might otherwise be a modest coordination challenge."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "tacit_vs_institutional_friction",
+      "question": "What proportion of observed knowledge transfer friction is inherent to tacit knowledge limits versus artificially imposed by institutional gatekeeping?",
+      "resolution_mechanism": "Comparative analysis: measure transfer friction in open-knowledge environments (GitHub, arXiv preprints, Wikipedia communities) versus closed institutional contexts with identical tacit knowledge complexity. High correlation with institutional openness vs institutional closure would indicate institutional gatekeeping drives most friction.",
+      "impact": "If institutional drives >70% of friction: Snare/Tangled Rope classification correct, organizational restructuring can reduce friction significantly. If tacit limits drive >50% of friction: friction has legitimate natural limit component, organizational change alone cannot eliminate it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of friction driven by tacit knowledge limits vs institutional gatekeeping"
+    },
+    {
+      "id": "extraction_mechanism_internalization",
+      "question": "Are peripheral agents internalizing the friction as legitimate credentialing necessity, or perceiving it as externally imposed extraction?",
+      "resolution_mechanism": "Qualitative analysis of agent narratives about knowledge access barriers. Agents who frame barriers as 'necessary rigor' or 'maintaining standards' versus agents who frame barriers as 'unjust gatekeeping'. Survey of displaced/unsuccessful transfer attempts.",
+      "impact": "If internalized as legitimate: friction may persist despite accessibility improvements because agents perceive barriers as justified. If perceived as extraction: organizational changes enabling access will encounter less resistance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether peripheral agents internalize friction as legitimate or extractive"
+    },
+    {
+      "id": "decentralized_knowledge_viability",
+      "question": "Can decentralized, non-credentialed knowledge systems (open-source communities, online learning networks) scale to match institutional knowledge accessibility in specialized domains?",
+      "resolution_mechanism": "Longitudinal comparison of knowledge quality, speed of innovation, and practitioner competence in decentralized versus credentialed systems across domains (software engineering, medical practice, scientific research). Market adoption rates.",
+      "impact": "If decentralized systems prove viable: scaffold perspective confirmed \u2014 friction is temporary, alternative pathways are functional. If decentralized systems prove inadequate: institutional gatekeeping has genuine functional value, friction is partly justified coordination cost.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Viability of decentralized knowledge systems as alternatives to credentialed institutions"
+    },
+    {
+      "id": "identity_lock_in_knowledge_gatekeeping",
+      "question": "To what extent do institutional actors maintain gatekeeping because their professional identity is constituted through exclusive knowledge claims?",
+      "resolution_mechanism": "Analysis of institutional resistance to knowledge democratization; whether resistance decreases when alternative identity structures (e.g., 'guide' versus 'gatekeeper', 'mentor' versus 'authority') are offered. Exit pathways for professional identity migration.",
+      "impact": "If high identity lock: friction persists even when functional justification disappears; requires deep institutional identity restructuring. If low identity lock: friction responds to structural incentives and can be modified through policy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Role of professional identity fusion in maintaining knowledge gatekeeping"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Knowledge transfer friction arises when the cost of acquiring and transmitting knowledge across organizational, professional, or epistemic boundaries exceeds what the inherent complexity of the knowledge itself requires. This constraint creates a hybrid coordination-extraction system: institutions require gatekeeping structures to maintain knowledge quality and professional standards (coordination function), but those same structures create artificial scarcity and restrict access to agents outside the institutional boundary (extraction function). The constraint exhibits all six DR types from different observation contexts, making it a diagnostic exemplar for how institutional extraction can masquerade as quality control. Theater ratio (0.55) reflects that credentialing systems increasingly perform institutional legitimacy maintenance rather than actual knowledge verification \u2014 degrees verify institutional affiliation, not capability; peer review gates prestige rather than ensuring quality. Over the 20-year interval, both theater ratio and extractiveness increased as institutional gatekeeping intensified despite the emergence of competing open-knowledge systems.",
+    "key_agents": [
+      "Peripheral Knowledge Seekers: Primary victims (powerless/trapped) \u2014 bear full cost of friction; cannot access knowledge without institutional credentials or payment",
+      "Organizational Adapters: Secondary victims (moderate/constrained) \u2014 bridge multiple knowledge domains at personal cost; subsidize knowledge translation",
+      "Knowledge Gatekeeper Institutions: Primary beneficiaries (institutional/arbitrage) \u2014 control access through credentialing, publication norms, professional associations; capture rent from scarcity",
+      "Open Knowledge Coalition: Organized agents (organized/constrained) \u2014 Wikipedia, arXiv, GitHub, MOOCs, open-source communities; provide coordination function while fighting institutional resistance",
+      "Credentialing Systems: Institutional actors (institutional/arbitrage) \u2014 maintain performative authority over knowledge legitimacy; persist through inertia despite degraded utility",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing institutional gatekeeping as inherent to knowledge itself"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Knowledge transfer friction imposes real costs on peripheral agents \u2014 time spent acquiring credentials, payment for access, career penalties for non-institutional knowledge. But extraction is not total: some knowledge transfers freely (open-source, volunteer teaching, mentorship); institutional pathways do confer real benefits (quality assurance, professional networks, social legitimation). The 0.52 value reflects that friction is partly extractive (institutional rent-seeking) and partly coordination cost (genuine quality maintenance). Suppression (0.48): Moderate. Barriers to knowledge access exist but are not total \u2014 workarounds include informal mentorship, open-access alternatives, self-study. Career risk of non-credentialed knowledge-seeking exists but is manageable. Theater ratio (0.55): Moderate-high and increasing. Credentialing systems increasingly perform institutional legitimacy rather than knowledge verification. A university degree verifies institutional affiliation more reliably than technical capability; peer review gates prestige more than quality; professional licensing certifies institutional membership more than competence. This ratio has increased over 20 years as specialized knowledge has become more complex, making verification by traditional gatekeepers less credible.",
+    "directionality_logic": "Directionality (d) for each agent reflects their structural position in the extraction flow. Gatekeeping institutions (d \u2248 0.05-0.15) experience low effective extraction because they are primary beneficiaries with arbitrage exit options \u2014 they control the friction mechanism. Peripheral seekers (d \u2248 0.95) experience maximum extraction because they are trapped: cannot exit without acquiring expensive credentials. Organizational adapters (d \u2248 0.55-0.65) experience moderate extraction because they are moderately constrained \u2014 they can acquire credentials or find informal pathways, but both are costly. Open knowledge coalitions (d \u2248 0.65-0.75) experience high extraction through resistance they face, but also moderate benefits through the coordination function they provide. The analytical observer (d \u2248 0.72) experiences the constraint at the civilizational scale where tacit knowledge limits create genuine friction independent of institutional gatekeeping.",
+    "perspectival_gap": "This constraint demonstrates perpendicularity across multiple institutional contexts. Gatekeeping institutions see Rope (coordination for quality assurance) \u2014 they genuinely solve the problem of knowledge legitimacy in a world where false claims propagate quickly. Peripheral seekers see Snare (pure extraction) \u2014 they must pay rent to institutions for access that would be freely available in absence of gatekeeping. Organizational adapters see Tangled Rope (mixed coordination and extraction) \u2014 they benefit from access to multiple knowledge domains and professional networks while bearing translation costs. Open knowledge movements see Tangled Rope (they coordinate knowledge access while being suppressed by institutional resistance). The piton perspective reveals credentialing theater \u2014 formal credentials persist through inertia despite declining functional utility. The analytical observer risks seeing a Mountain (tacit knowledge limits are immutable) but the structural data reveals this as false \u2014 observed friction substantially exceeds what inherent tacit limits require.",
+    "mandatrophy_analysis": "The mandatrophy in knowledge transfer friction is NOT 'which type is correct?' but 'which extraction mechanism is driving the friction?' The analytical observer's mountain (tacit knowledge is inherently hard to transfer) is partially true but substantially incomplete \u2014 it naturalizes institutional gatekeeping as if it were an inherent feature of knowledge rather than a contingent institutional choice. The resolution is perspectival: all six types are legitimate readings of the same structural data from different positions. The gatekeeper sees rope; the peripheral seeker sees snare; the adapter sees tangled rope; the coalition sees tangled rope with asymmetric suppression; the credentialing system sees piton (performing legitimacy through ritual); the analyst sees mountain (tacit limits). The constraint resolves mandatrophy by showing that friction serves multiple functions simultaneously \u2014 coordination (preventing knowledge pollution), extraction (concentrating professional status), and legitimation theater (maintaining institutional authority). No single type is 'the truth'; the presheaf over all observation positions IS the structural reality."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "professional_credentialing_cartel",
+      "academic_prestige_hierarchy",
+      "intellectual_property_barriers"
+    ],
+    "dual_formulation_note": "Knowledge transfer friction is upstream of specific credentialing systems and intellectual property regimes but represents a distinct structural constraint. The downstream constraints (credentialing cartels, prestige hierarchies, IP barriers) are specific institutional manifestations; this constraint captures the generic mechanism by which institutional boundaries create knowledge access friction."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ]
+}

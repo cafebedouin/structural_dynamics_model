@@ -1,0 +1,148 @@
+{
+  "header": {
+    "constraint_id": "no_free_lunch_theorem",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nfl"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "No Free Lunch Theorem (Wolpert-Macready)",
+    "topic_domain": "computational_theory/optimization",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "beneficiaries": [],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Optimization Practitioner",
+      "comment": "PERSPECTIVE 1: OPTIMIZATION PRACTITIONER (MOUNTAIN) \u2014 Any specific problem-solver faces an irreducible constraint: no algorithm dominates all problem instances. The practitioner is trapped by the mathematical structure itself. No exit, no negotiation, no institutional override \u2014 the constraint is independent of the practitioner's preferences or resources."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 2: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 Wolpert-Macready rigorously establishes that averaged over all possible problem distributions, every algorithm exhibits identical average performance (proportional to random guessing). This is a mathematical theorem, not a contingent institutional arrangement. The proof is universal \u2014 it does not depend on computational substrate, market conditions, or incentive design."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Algorithm Designer (Specialization View)",
+      "comment": "PERSPECTIVE 3: ALGORITHM DESIGNER (MOUNTAIN) \u2014 Even an institutional actor with resources and exit options faces the constraint: you cannot design an algorithm that outperforms all competitors on all problems. Specialization is mandatory \u2014 any algorithmic strategy improves on some problem instances only by worsening on others. This is not a coordination problem or an enforcement challenge; it is a structural feature of the problem landscape itself."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "universal",
+      "label": "The Research Community",
+      "comment": "PERSPECTIVE 4: RESEARCH COMMUNITY (MOUNTAIN) \u2014 Even coordinated collective research cannot escape the theorem. No community can develop a universally optimal optimization algorithm because mathematics forbids it. The constraint is invariant across all levels of organization and resource availability. Collective action does not relax mathematical limits."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "problem_distribution_specification",
+      "question": "Does the 'uniform distribution over all possible problems' (implicit in Wolpert-Macready averaging) accurately model real-world problem selection?",
+      "resolution_mechanism": "Empirical analysis of actual problem instances tackled by practitioners: does the distribution of real problems cluster in a subset where specific algorithms do dominate? If yes, the theorem's universality becomes perspectival \u2014 it constrains only in the context of worst-case or uniform-prior analysis.",
+      "impact": "If real problems are non-uniformly distributed: practitioners can escape via problem selection (choose a domain where your algorithm dominates). The constraint shifts from mountain (inescapable) to rope (coordination around problem specialization). If real problems are uniformly distributed: mountain classification confirmed.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether real-world problem distributions match theorem assumptions"
+    },
+    {
+      "id": "metalearning_and_transfer_exception",
+      "question": "Do metalearning approaches (learning-to-learn, neural architecture search, transfer learning) evade or merely delay the no-free-lunch constraint?",
+      "resolution_mechanism": "Theoretical analysis: can metalearning frameworks be shown to violate the proof's assumptions (e.g., by encoding problem-specific inductive bias into the learning framework itself)? Empirical analysis: do metalearning systems show consistent cross-domain improvement that would falsify uniformity?",
+      "impact": "If metalearning evades: theorem applies only to non-adaptive algorithms; adaptive systems that encode domain knowledge may achieve statistical advantage without violating mathematics. If metalearning merely delays: theorem still constrains in the limit, but allows practical advantage through hierarchical problem structure. This determines whether practitioners can achieve escape velocity or merely orbit the constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether metalearning frameworks escape no-free-lunch constraints"
+    },
+    {
+      "id": "computational_substrate_independence",
+      "question": "Are the theorem's universality claims independent of the computational substrate (classical, quantum, biological), or do substrate properties enable domain-specific advantage?",
+      "resolution_mechanism": "Formal extension of Wolpert-Macready proofs to non-classical substrates; demonstration of whether quantum algorithms can break the averaging constraint by exploiting superposition or entanglement in ways that violate the proof's symmetry assumptions.",
+      "impact": "If substrate-independent: mountain classification is robust across all physical realizations. If substrate-dependent: quantum or biological substrates might enable classes of solutions that the classical theorem forbids, making the constraint contingent on computational implementation rather than pure mathematics.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether no-free-lunch constraints are substrate-independent"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The No Free Lunch Theorem (Wolpert & Macready, 1997) is a foundational result in computational theory establishing that no algorithm can outperform all others across all possible problems. When performance is averaged uniformly over all problem distributions, every algorithm achieves identical average performance \u2014 equivalent to random guessing. This constraint is a pure mathematical limit: it emerges from the symmetry of the problem space, not from institutional design, market incentives, or resource scarcity. The theorem applies universally to optimization, learning, and search problems. It states a fundamental asymmetry between the infinity of possible problems and the finitude of any algorithm's design space. The constraint binds all practitioners equally \u2014 no organizational structure, funding level, or specialization can escape the mathematical proof. The theorem's universality makes it the canonical exemplar of a mountain constraint: zero degrees of freedom, universal applicability, emergence from pure logical structure, and immutability across all observables.",
+    "key_agents": [
+      "Individual Optimizer: Powerless/trapped \u2014 faces the theorem as an inescapable law; any algorithm choice trades off performance across problem instances",
+      "Algorithm Designer: Institutional/arbitrage \u2014 possesses resources and design freedom, but cannot exceed the mathematical constraint; specialization is mandated, not optional",
+      "Research Community: Organized/mobile \u2014 collective research cannot relax mathematical limits; the constraint is invariant across coordination levels",
+      "Analytical Observer: Civilizational/analytical \u2014 sees the full mathematical structure; the proof is independent of implementation or context"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Extremely low. The constraint extracts nothing \u2014 it is a mathematical fact, not an asymmetric power relationship. The 0.12 value represents the minimal baseline structural cost of stating and verifying the constraint itself (the theorem's proof requires cognitive effort to understand). Suppression (0.02): Minimal. There are no alternatives to suppress because the constraint is not a mechanism preventing something; it is a mathematical law. The 0.02 represents only the incidental suppression inherent to formal systems (you must accept axioms to accept theorems derived from them). Theater ratio (0.15): Minimal. The No Free Lunch Theorem is stated in pure mathematics with no performative overlay. The 0.15 reflects only the pedagogical theater required to teach and communicate the result; the underlying result is non-performative. Accessibility collapse (0.92): Extremely high. The theorem is maximally inaccessible to agents trying to escape it \u2014 they cannot negotiate, cannot appeal to exceptions, cannot create institutional workarounds. Every strategic approach fails because the constraint is mathematical rather than institutional. Resistance (0.08): Minimal. No resistance to a mathematical law is possible \u2014 you cannot resist a true theorem. The 0.08 represents only incidental friction in accepting formal proofs (the challenge of verifying the proof is not resistance to the constraint itself).",
+    "perspectival_gap": "Unlike typical constraints, the No Free Lunch Theorem produces ZERO perspectival gap across all observer positions. Every perspective classifies as mountain. The powerless optimizer, the resource-rich algorithm designer, the organized research community, and the analytical observer all face identical constraints. This uniformity is the signature of a true natural law: the constraint does not depend on observer position, resource availability, organizational structure, or time horizon. The constraint is invariant. This is not a convergence of perspectives to agreement; it is the erasure of perspectival differences through mathematical universality. Each perspective would produce identical classification outputs if indexed independently \u2014 the constraint's immutability is independent of who is observing.",
+    "mandatrophy_analysis": "ZERO MANDATROPHY. The No Free Lunch Theorem has no ambiguity between coordination and extraction because it is neither \u2014 it is a mathematical law. There is no extraction function (no agent benefits while others bear costs) and no coordination function (no collective action problem being solved). The constraint simply maps the logical structure of the problem space. Mandatrophy resolution is vacuous here because the mandatrophy frame (distinguishing pure coordination from pure extraction) does not apply to non-institutional constraints. The theorem exemplifies the distinction between structural constraints (which may be coordination or extraction) and logical constraints (which are neither \u2014 they are laws). This places the No Free Lunch Theorem in the class of pure mountain constraints where mandatrophy is category-mismatch rather than ambiguity."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_superiority_claims",
+      "universal_learning_bound",
+      "optimization_landscape_structure"
+    ]
+  },
+  "directionality_overrides": []
+}

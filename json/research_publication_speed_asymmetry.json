@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "research_publication_speed_asymmetry",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rpsa"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Research Publication Speed Asymmetry",
+    "topic_domain": "academic/publishing",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_resource_research_institutions",
+      "well_funded_research_groups",
+      "commercial_publishers"
+    ],
+    "victims": [
+      "under_resourced_researchers",
+      "early_career_scientists",
+      "researchers_in_developing_economies",
+      "research_accessibility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Early Career Researcher",
+      "comment": "PERSPECTIVE 1: EARLY CAREER RESEARCHER (SNARE) \u2014 Trapped in a system where publication speed determines career viability. Faces pressure to publish rapidly to secure positions, but lacks resources (funding, lab infrastructure, editorial connections) to accelerate publication. Cannot exit without abandoning career trajectory. Experiences maximum extraction through the asymmetry."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Under-Resourced Research Group",
+      "comment": "PERSPECTIVE 2: UNDER-RESOURCED RESEARCH GROUP (TANGLED ROPE) \u2014 Constrained by limited funding for open access fees, preprint servers, and publication marketing. Also benefits from peer review system's gatekeeping function (prevents low-quality work from flooding field) and coordination of research standards. Experiences both extraction and genuine coordination benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Well-Funded Research Institution",
+      "comment": "PERSPECTIVE 3: WELL-FUNDED RESEARCH INSTITUTION (ROPE) \u2014 Benefits from coordination mechanism that maintains quality standards and visibility hierarchies. Can afford open access fees, preprint marketing, and rapid submission cycles. Experiences the constraint as pure coordination: publication system enables their research visibility. Net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Commercial Publisher",
+      "comment": "PERSPECTIVE 4: COMMERCIAL PUBLISHER (ROPE) \u2014 Primary beneficiary. Sees publication speed asymmetry as coordination of research dissemination and quality control. The speed differential creates profitable market segmentation (regular journals, high-speed tracks, premium services). High margins through subscription and open access fee arbitrage."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Open Science Movement",
+      "comment": "PERSPECTIVE 5: OPEN SCIENCE MOVEMENT (SCAFFOLD) \u2014 Organized actors (preprint servers, open access mandates, rapid publication platforms) are building alternative publication pathways that reduce speed asymmetry. See the constraint as temporary and solvable through distributed preprints and post-publication peer review. Exit path is clear: arXiv, bioRxiv, medRxiv bypass traditional publication gatekeeping."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Traditional Peer Review System",
+      "comment": "PERSPECTIVE 6: TRADITIONAL PEER REVIEW SYSTEM (PITON) \u2014 Performative verification ritual maintaining institutional legitimacy long after its functional utility has eroded. Slow review cycles justified by quality concerns, but actual quality control is weak (high rejection often reflects editorial taste, not rigor). Theater persists through institutional inertia and prestige economics. Researchers continue submitting because journal brand name still signals credibility, though this is degrading."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From universal perspective, review and dissemination of research claims necessarily takes time \u2014 this is an immutable constraint of knowledge verification. Some speed asymmetry is inherent to any gating mechanism. However, the structural data contradicts pure mountain classification; the engine will identify this as false summit, revealing that the magnitude of the observed asymmetry (2-5 year publication delays varying by funding) exceeds what inherent verification requirements would predict."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "publication_delay_threshold",
+      "question": "What publication delay reflects legitimate peer review requirements versus extractive gatekeeping?",
+      "resolution_mechanism": "Comparative analysis of review times across journals, institutions, and funding levels; correlation between review duration and ultimate citation impact; historical trend analysis of review timelines",
+      "impact": "If threshold is 6 months: many quality reviews classified as extraction. If threshold is 18 months: extractive delays persist unchallenged. Current median is 12-24 months in most fields.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold distinguishing legitimate review delay from extractive gatekeeping"
+    },
+    {
+      "id": "resource_dependency_causality",
+      "question": "Does publication speed asymmetry cause research inequality or merely reflect pre-existing resource inequality?",
+      "resolution_mechanism": "Longitudinal tracking of early career researchers with equivalent quality work but different initial resources; analysis of whether publication speed predicts career outcomes controlling for research quality",
+      "impact": "If causal: publication asymmetry is an independent extraction mechanism. If merely reflective: the constraint is derivative (piton rather than snare). Most likely both effects are present.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether publication speed asymmetry causes or merely reflects resource inequality"
+    },
+    {
+      "id": "preprint_credibility_gap",
+      "question": "Do preprints establish sufficient credibility for hiring, funding, and career advancement decisions to enable meaningful exit from traditional publication gatekeeping?",
+      "resolution_mechanism": "Survey of hiring committees, funding agencies, and promotion committees on preprint weight; analysis of career outcomes for researchers using preprint-first strategies; longitudinal career tracking",
+      "impact": "If yes: scaffold exit path is real and functional. If no: preprints are performative (rope-like coordination without true exit). Current answer varies dramatically by field and institution.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether preprints provide credible exit from journal-based gatekeeping"
+    },
+    {
+      "id": "reviewer_capacity_binding",
+      "question": "Is publication speed asymmetry driven by reviewer shortage (structural bottleneck) or by artificial supply constraints (journal prestige maximization)?",
+      "resolution_mechanism": "Analysis of reviewer pool availability, time spent on reviews, and review cycle time across journals with different review models (traditional anonymous peer review vs post-publication review vs instant publication)",
+      "impact": "If structural bottleneck: some asymmetry is unavoidable (mountain-like). If artificial constraint: asymmetry is pure extraction mechanism (snare-like). Journal economics suggests both are operating.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether speed asymmetry reflects reviewer shortage or artificial prestige constraints"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The research publication speed asymmetry creates a structural extraction mechanism where publication velocity determines career viability, but velocity is asymmetrically accessible based on institutional resources and funding. The same research claim faces different publication timelines (and thus different career value) depending on the originating group's ability to afford open access fees, preprint marketing, editorial expediting, and rapid submission cycles. This constraint exhibits coordination (maintaining research quality standards and visibility) alongside extraction (speed as a positional good creating artificial scarcity). The theater ratio has increased over the interval as traditional peer review persists in justifying delay through quality claims while actual quality control remains weak. Preprint servers and open science movements are building exit paths but have not yet achieved sufficient credential weight to replace journal prestige as a hiring/funding signal.",
+    "key_agents": [
+      "Early Career Researcher: Primary victim (powerless/trapped) \u2014 career trajectory depends on publication speed, cannot afford to accelerate publication, no exit option without abandoning field",
+      "Under-Resourced Research Groups: Secondary victim (moderate/constrained) \u2014 face resource barriers to rapid publication but also benefit from quality gatekeeping that prevents low-credibility work from entering field",
+      "Well-Funded Research Institutions: Primary beneficiary (institutional/arbitrage) \u2014 can afford open access fees and rapid submission cycles; benefit from prestige associated with publication speed",
+      "Commercial Publishers: Primary beneficiary (institutional/arbitrage) \u2014 profit from open access fee arbitrage and prestige-based market segmentation; create and maintain speed asymmetries through service tiers",
+      "Open Science Movement: Organized agents (organized/mobile) \u2014 building preprint infrastructure and post-publication review systems that reduce speed asymmetry; have exit pathway via institutional bypassing",
+      "Traditional Peer Review System: Institutional actor (institutional/arbitrage) \u2014 maintains performative quality control ritual; slows publication in proportion to perceived journal prestige",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent speed asymmetries as inherent research requirements"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The asymmetry extracts career value and research visibility from under-resourced researchers through a mechanism (speed-dependent prestige) that is not inherent to knowledge verification. Some delay for peer review is legitimate; the observed 2-5 year variance between institutions and funding levels suggests artificial speed constraints are layered onto legitimate verification requirements. The value reflects that the extraction is real and significant but not maximal\u2014it operates through prestige scarcity rather than total exclusion. Suppression (0.58): Moderate-high. Barriers to rapid publication include: open access fees ($3,000-5,000 per article, prohibitive for under-resourced groups), lack of editorial connections for expedited review, limited infrastructure for manuscript preparation, and career incentive systems that still reward journal prestige. However, suppression is not absolute\u2014preprints provide partial exit, and some journals have reduced review times. Theater ratio (0.65): Moderate-high. Peer review is increasingly performative in large-scale fields: reviewer expertise cannot match research specialization, review often reflects journal taste rather than rigor, rejection is uncorrelated with eventual citation impact. Theater has increased as field size has grown and journal prestige economics have intensified. The claimed quality control function persists through institutional inertia long after its functional utility has declined.",
+    "perspectival_gap": "The gap between early career (snare) and well-funded institutions (rope) is substantial\u2014the same constraint creates opposite experiences. The early career researcher sees extraction; the well-funded institution sees coordination. This gap reveals that the constraint's classification depends entirely on structural position, not on objective properties. The piton classification of traditional peer review (degraded ritual) contrasts with the rope classification of publishers (genuine coordination of market segmentation), suggesting that different actors experience the same institutional apparatus differently.",
+    "directionality_logic": "Directionality is derived from beneficiary/victim status and exit options. Early career researchers in under-resourced groups are victims with trapped exit\u2014maximum d. Well-funded institutions are beneficiaries with arbitrage exit\u2014low d. Commercial publishers benefit from the speed asymmetry (they profit from open access fee segmentation) and have arbitrage exit\u2014low d. The open science movement is organized and mobile\u2014they have real exit options through preprint infrastructure and can opt out of traditional journal prestige. The traditional peer review system benefits from the prestige it creates (institutional legitimacy, high citation to highly-cited journals) and has arbitrage-like exit (journals can choose to accelerate or decelerate review).",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The constraint is neither pure coordination (rope) nor pure extraction (snare). It has genuine coordination content\u2014peer review does prevent low-quality work from dominating the literature, and publication standards do coordinate field norms. But it also has significant asymmetric extraction\u2014the speed differential creates positional scarcity that benefits high-resource groups. The constraint cannot resolve into pure rope because the speed asymmetry is not a necessary coordination cost; preprint systems and post-publication review demonstrate that quality coordination can occur with lower speed variance. The constraint cannot resolve into pure snare because the peer review gatekeeping does provide legitimate value (prevents trivial claims from entering record). The mandatrophy is resolved by accepting that the constraint is genuinely hybrid: it coordinates field norms while extracting career value through speed asymmetry. The extraction is not incidental to coordination\u2014it is profitable precisely because coordination creates prestige, and prestige is valuable, and speed determines prestige access."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "research_inequality_perpetuation",
+      "early_career_career_precarity",
+      "journal_prestige_economics"
+    ],
+    "dual_formulation_note": "The publication speed asymmetry is upstream of several institutional constraints. The career precarity of early-career scientists is partially caused by speed asymmetry but has additional structural components (funding scarcity, position shortage). Journal prestige economics is both upstream (prestige drives willingness to pay for expedited review) and downstream (speed asymmetry reinforces prestige hierarchies)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

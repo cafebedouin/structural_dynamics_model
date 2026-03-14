@@ -1,0 +1,186 @@
+{
+  "header": {
+    "constraint_id": "sports_card_grading_monopoly",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "scgm"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Sports Card Grading Monopoly",
+    "topic_domain": "collectibles_market/economics",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "major_grading_companies"
+    ],
+    "victims": [
+      "independent_sellers",
+      "retail_collectors",
+      "card_market_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Independent Seller",
+      "comment": "PERSPECTIVE 1: INDEPENDENT SELLER (SNARE) \u2014 Card sellers without grading company credentials face severe market barriers. Ungraded or independently-graded cards sell at 30-50% discount regardless of actual condition. No practical exit exists \u2014 participating in the market requires submission to monopoly pricing (current fees 15-50% per card depending on turnaround). Suppression is maximal: alternatives are systematically devalued by collective expectation."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Retail Collector",
+      "comment": "PERSPECTIVE 2: RETAIL COLLECTOR (SNARE) \u2014 Hobbyist collectors bear extraction through inflated prices (grading cost passed to secondary market) and artificial scarcity (high-grade cards artificially scarce due to grading backlogs). Exit is constrained rather than trapped: can collect raw cards at lower prices but faces liquidity penalty when selling. Can avoid market entirely but loses participation in the collectibles hobby. Significant extraction with some agency but not full freedom."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Investment Dealer",
+      "comment": "PERSPECTIVE 3: INVESTMENT DEALER (TANGLED ROPE) \u2014 Professional dealers have genuine coordination benefit from standardized grading (enables wholesale markets, reduces information asymmetry, increases liquidity) but also extract through volume discounts and position advantage. Mixed experience: the system coordinates their market AND extracts from them (they pay grading fees, face turnaround delays). Mobile enough to shift to raw cards or alternative asset classes, but the coordination value keeps them participating."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Major Grading Company",
+      "comment": "PERSPECTIVE 4: MAJOR GRADING COMPANY (ROPE) \u2014 Experiences the constraint as pure coordination: they solve the information asymmetry problem that makes collectibles markets function. Grading standardization enables price discovery, enables wholesale distribution, enables secondary markets. Net beneficiary \u2014 extraction runs toward them (fees flow from market). The constraint's existence is their business model."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Grading Authority",
+      "comment": "PERSPECTIVE 5: LEGACY GRADING AUTHORITY (PITON) \u2014 Traditional institutions (PSA, BGS) maintain market dominance through institutional inertia: their grades are 'trusted' because they always have been, not because their methodology is superior. Theater is high (0.58) \u2014 the physical slab and hologram are performative markers of authenticity; the actual grading criteria are proprietary and non-verifiable. The system persists because switching costs are high (resellers won't accept alternative grades), not because the alternative is impossible. New entrants emerge but fail to displace incumbents despite better technology or lower fees."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 Information asymmetry in collectibles is a fundamental market problem: buyers cannot verify condition without expertise, and no individual grader's credentials are universally recognized. Some form of standardized certification is structurally necessary for market function. However, the specific form (monopolistic grading companies with proprietary criteria) is not inevitable \u2014 the structural data reveals this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "authentication_vs_grading_conflation",
+      "question": "Are buyers paying for authentication (card is genuine) or grading (card is condition X)? If the former, do alternative authentication methods (spectral analysis, blockchain provenance) sufficiently compete?",
+      "resolution_mechanism": "Market segmentation analysis: willingness-to-pay for authentication alone vs grading service; adoption rate of alternative authentication technologies; price premiums that persist after authentication alternative is available",
+      "impact": "If authentication dominates: monopoly is more defensible (authentication is natural monopoly due to network effects). If grading dominates: monopoly is artificial and vulnerable to alternative grading standards.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether buyers value authentication or grading service in graded cards"
+    },
+    {
+      "id": "counterfeit_circulation_risk",
+      "question": "What is the actual counterfeit circulation rate in sports cards? If authentication is the primary barrier, does it prevent counterfeits effectively?",
+      "resolution_mechanism": "Forensic analysis of cards in circulation; longitudinal tracking of counterfeit detection rates; correlation between authentication tightness and market price stability",
+      "impact": "If counterfeits are rare (< 1%): authentication monopoly is legitimately protective. If counterfeits are common (> 5%): monopoly authentication is failing and alternatives may be more effective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Actual counterfeit rate in sports card market"
+    },
+    {
+      "id": "alternative_grading_adoption_barrier",
+      "question": "Why do alternative grading services (CGC Cards, Sportscard Guaranty, etc.) fail to displace incumbents despite lower prices and faster turnaround?",
+      "resolution_mechanism": "Historical analysis of market share shifts; price elasticity analysis of grading service demand; willingness-to-accept analysis of alternative grades in secondary market; institutional switching cost measurement",
+      "impact": "If adoption barrier is rational (better authentication, true reliability advantage): monopoly is structural. If adoption barrier is switching cost (buyers' expectations locked in): monopoly is extractive but unstable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Why alternative grading services fail to compete successfully"
+    },
+    {
+      "id": "collector_identity_lock_mechanism",
+      "question": "To what extent is the monopoly grading company (PSA, BGS) part of the collector's identity? Are collectors defending the specific company or the grading function?",
+      "resolution_mechanism": "Survey data on brand loyalty; analysis of collector forums and communication; switching behavior analysis when alternative services offer objectively better terms; qualitative interviews on what 'having a PSA card' means vs 'having a graded card'",
+      "impact": "If identity-locked: collectors perceive alternatives as inauthentic, and monopoly has cognitive lock independent of structural lock. If rational evaluation: collector behavior is price-sensitive and alternatives can displace incumbents.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether collector identity is fused with specific grading company brand"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The sports card grading monopoly constrains the collectibles market through control of standardized condition certification. Three major grading companies (PSA, BGS/Beckett, CGC Cards) dominate the market, with PSA holding approximately 80% market share for vintage cards. Sellers and collectors must submit cards to these services for authentication and grading, incurring fees of 15-50% per card depending on turnaround speed and card value. The monopoly extracts through fees, artificial scarcity (grading backlogs limit market liquidity), and lock-in effects (cards graded by alternative services sell at significant discounts regardless of condition). The constraint exhibits both extractive (snare for powerless sellers) and coordination (rope for institutional beneficiaries) properties from different perspectives. Theater ratio (0.58) reflects that the physical slab and hologram are performative: the actual condition assessment is proprietary, non-verifiable, and subject to grade inconsistency across different graders. The extractiveness trajectory (0.38 \u2192 0.62 over 10 years) shows increasing rent-seeking: fees have escalated, turnaround times have lengthened during boom periods, and the market has become more dependent on monopoly certification.",
+    "key_agents": [
+      "Major Grading Companies (PSA, BGS, CGC): Primary beneficiaries (institutional/arbitrage) \u2014 capture fees, control market access, maintain brand moat through network effects",
+      "Independent Sellers: Primary victims (powerless/trapped) \u2014 must pay grading fees or accept 30-50% price discount; no practical alternative",
+      "Retail Collectors: Secondary victims (moderate/constrained) \u2014 bear cost of grading fees passed through secondary market; can exit via raw card collecting but sacrifice liquidity",
+      "Investment Dealers: Mixed position (powerful/mobile) \u2014 benefit from standardized market but pay grading fees; mobile enough to shift asset classes",
+      "Card Manufacturers: Institutional actor with arbitrage (institutional/arbitrage) \u2014 benefit from grading-driven collectibility and secondary market liquidity",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks seeing information asymmetry resolution as justifying monopoly rather than examining specific institutional form"
+    ],
+    "logic_rationale": "Extractiveness (0.62): High and rising. The monopoly extracts through mandatory participation fees (sellers cannot avoid), price mark-ups in secondary market (grading cost paid by collector), and artificial scarcity (backlogs limit supply of graded cards). The value rose from 0.38 to 0.62 as the market matured: early grading was optional and low-cost; current grading is necessary for market participation and high-cost. The constraint is not pure extraction (0.72+) because grading does provide real coordination benefit (enables wholesale markets, enables price discovery). Suppression (0.68): High. Barriers to exit include: network effects (grade standards are worthless if market doesn't accept them), switching costs (resellers reject alternative grades), and collective expectation (buyers trust incumbent brands). Independent grading services exist but fail to capture market share despite better terms. Suppression is not maximal (0.80+) because exit is structurally possible (raw card markets exist, alternative graders operate) but economically punitive. Theater ratio (0.58): Moderate-high and rising. The physical slab and hologram are performative authenticators. The grading criteria are proprietary and non-transparent \u2014 buyers trust the grade because they trust the brand, not because they can verify the methodology. Theater has increased as grades have become more granular (half-point grades, subgrades) and harder to consistently replicate.",
+    "perspectival_gap": "This constraint shows the deepest perspectival divergence from sellers vs beneficiaries. Sellers (powerless/trapped) classify as Snare: they experience mandatory extraction with no exit. The major grading companies (institutional/arbitrage) classify as Rope: they experience pure coordination. Investment dealers (powerful/mobile) classify as Tangled Rope: they benefit from the coordination function but also pay extraction costs and can exit. The piton perspective reveals that the monopoly persists through institutional inertia and brand lock-in, not superior methodology \u2014 alternatives exist with better technology but fail to displace incumbents. The analytical observer risks naturalizing the monopoly as necessary (Mountain) when the specific institutional form (three companies, proprietary criteria, slabs with holograms) is contingent and extractive.",
+    "directionality_logic": "Directionality values derive from structural position in the extraction flow. Sellers and collectors are victims (high d \u2192 high experienced extraction). Major grading companies are beneficiaries with no exit friction (low d \u2192 negative/near-zero extraction). Investment dealers are both beneficiary and victim depending on their position in the supply chain \u2014 they benefit from market liquidity but pay fees; they have mobile exit options but choosing to exit is costly (d \u2248 0.50 \u2192 moderate extraction). The piton perspective's directionality is determined by the institutional actor's arbitrage options: they can maintain the monopoly indefinitely, but alternatives exist and could displace them if conditions change. The theater ratio drives the piton classification more than directionality.",
+    "mandatrophy_analysis": "SNARE vs TANGLED ROPE RESOLUTION: The constraint classifies as Snare from the seller/collector perspective (pure extraction, trapped exit) but Tangled Rope from the dealer perspective (mixed coordination and extraction, constrained exit). The mandatrophy is resolved by recognizing these are legitimate perspectival differences. For sellers, the constraint is pure Snare: they must participate, must pay fees, must accept monopoly terms. For dealers, it is Tangled Rope: the grading function genuinely coordinates market operations (enables wholesale, enables pricing), and dealers benefit from this coordination even as they pay fees. The piton perspective (institutional/civilizational) reveals a third structural truth: the incumbent monopoly is degraded. Better alternatives (faster turnaround, transparent criteria, blockchain authentication) are technically feasible, but the monopoly persists through institutional lock-in. The false mountain (analytical observer) naturalizes this as necessary information-asymmetry resolution, when the specific form is contingent and extractive."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "collectibles_authentication_standards",
+      "secondary_market_liquidity_lock"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

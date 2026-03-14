@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "institutional_degradation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "instdeg"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.78,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Institutional Degradation: Coordination Collapse and Extractive Maintenance",
+    "topic_domain": "institutional_analysis/organizational_decline",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "administrative_incumbents",
+      "rent_extractors"
+    ],
+    "victims": [
+      "institutional_constituents",
+      "public_interest",
+      "institutional_function"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Dependent Constituent",
+      "comment": "PERSPECTIVE 1: DEPENDENT CONSTITUENT (SNARE) \u2014 Citizens, students, patients, or workers dependent on the degraded institution have no viable exit. They bear the full cost of institutional decline \u2014 reduced service quality, broken processes, perverse incentives \u2014 while trapped by geographic proximity, economic necessity, or legal obligation. No alternatives available at comparable cost. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "label": "The Institutional Servant (Identity-Locked)",
+      "comment": "PERSPECTIVE 2: INSTITUTIONAL SERVANT (SNARE via identity_locked) \u2014 Career administrators, long-term employees, or institutional actors whose professional identity is fused with the degraded institution. They cannot imagine themselves outside it, even when the institution ceases to serve its purported function. The lock is cognitive rather than material \u2014 they have theoretically mobile alternatives but cannot exercise them because their identity is constituted through the institutional role. Structurally mobile but functionally trapped."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Administrative Incumbent",
+      "comment": "PERSPECTIVE 3: ADMINISTRATIVE INCUMBENT (ROPE) \u2014 Beneficiaries with arbitrage options: executives, board members, consultants who coordinate the degraded institution's maintenance. They experience the constraint as coordination \u2014 managing stakeholder expectations, maintaining procedural facades, and preserving their own position. They have exit options (move to other institutions, rotate to private sector) but benefit from the current arrangement. Negative directionality; low effective extraction experienced by this group."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Mid-Level Manager",
+      "comment": "PERSPECTIVE 4: MID-LEVEL MANAGER (TANGLED ROPE) \u2014 Constrained by career investment and organizational dependency, but also receiving some institutional benefits (salary, status, procedural authority). Experiences both coordination function (processes must be maintained for any work to occur) and asymmetric extraction (required to enforce dysfunctional rules and absorb the gap between institutional rhetoric and reality). Moderate agency and significant extraction \u2014 the constraint's mixed nature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Reformer Coalition",
+      "comment": "PERSPECTIVE 5: REFORMER COALITION (PITON) \u2014 Organized agents attempting to reform or revitalize the institution. They perceive that institutional function has atrophied while performance theater has increased (accreditations, metrics, public messaging that masks decline). The reform effort is itself partially degraded \u2014 reform proposals become performative, new policies layer onto old dysfunction rather than replacing it. Theater ratio exceeds function. The constraint is maintained by institutional inertia despite loss of primary purpose."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Peer Institution",
+      "comment": "PERSPECTIVE 6: PEER INSTITUTION (TANGLED ROPE) \u2014 Other institutions in the same ecosystem (sister universities, competing hospitals, neighboring government agencies) face coordination challenges due to the degraded neighbor's unreliability. They must often compensate for or work around the failing institution, creating asymmetric extraction. But they also benefit from reduced competition and stable-but-weakened ecosystem relationships. Constrained by institutional interdependencies."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, institutional decay may appear to be a natural law: all institutions eventually degrade, lose purpose, and persist through inertia. This perspective risks naturalizing what is actually a contingent product of specific incentive structures, path dependency, and extractive maintenance. The engine's false summit detector will identify this as naturalization of contingent institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "function_versus_theater_threshold",
+      "question": "At what ratio of theater to function does an institution cross from 'degraded but operational' to 'extractive maintenance apparatus'?",
+      "resolution_mechanism": "Longitudinal measurement of actual service output vs. procedural activity; correlation between theater_ratio and outcome metrics (graduation rates, patient recovery, case resolution, etc.)",
+      "impact": "If threshold < 0.60: many institutions with high theater but genuine function misclassified as snares. If threshold > 0.85: extractive maintenance persists unchallenged by reform pressure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold distinguishing degraded coordination from extractive theater"
+    },
+    {
+      "id": "exit_cost_distribution",
+      "question": "How are exit costs distributed across constituent groups? Do some bear costs others can avoid, or are costs truly universal?",
+      "resolution_mechanism": "Comparative exit analysis: tracking which constituencies remain in degraded institutions, which have exited, what their exit costs were, and whether they had alternatives",
+      "impact": "If exit costs highly unequal: institution maintains power through differential trapping (snare from powerless perspective, rope from powerful). If universal: constraint is closer to rope or mountain.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether exit costs are distributed equally or differentially"
+    },
+    {
+      "id": "identity_lock_mechanism",
+      "question": "What portion of institutional persistence is explained by identity fusion (constituents cannot imagine themselves outside) vs. material barriers?",
+      "resolution_mechanism": "Qualitative analysis of why constituents remain despite alternatives; post-exit trajectory (do identity-locked agents reconstruct identity after leaving?)",
+      "impact": "If primarily identity-locked: constraint maintains power through cognitive capture; institutional reform requires identity disruption, not just structural change. If primarily material barriers: institutional reform can succeed by reducing exit costs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative contribution of identity fusion vs. material barriers to institutional persistence"
+    },
+    {
+      "id": "reform_capture",
+      "question": "Do reform efforts themselves become absorbed into the institutional degradation cycle, becoming part of the theater rather than functional renewal?",
+      "resolution_mechanism": "Historical analysis of reform proposals and outcomes; measurement of whether reforms produce output changes or just procedural changes; tracking reform effort expenditure vs. actual function improvement",
+      "impact": "If reforms are captured: the institution exhibits even deeper extraction (constraints on the constrainers). If reforms succeed: piton classification is correct and sunset potential exists. If reforms partially succeed: institution is transitioning from tangled_rope to scaffold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether institutional reform efforts are captured by degradation logic"
+    },
+    {
+      "id": "suppression_source",
+      "question": "Is suppression primarily structural (material barriers to exit) or narrative (constituents believe exit is impossible despite evidence)?",
+      "resolution_mechanism": "Comparison of expressed vs. actual exit options; exit experiments (assistance removing barriers) and outcomes; post-exit asset recovery for those who do leave",
+      "impact": "If narrative: institutional degradation is partially a shared hallucination; modest external intervention could catalyze exit. If structural: degradation requires sustained policy change to address underlying barriers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or narrative-based"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Institutional degradation describes the structural trap created when an organization's primary function has atrophied or been corrupted, but the institution persists through extractive maintenance \u2014 consuming resources, enforcing compliance, and generating theater \u2014 without delivering the coordination or service benefits that justified its original existence. This constraint affects universities losing research funding but maintaining administrative hierarchies, hospitals with reduced capacity but inflated procedure counts, government agencies managing policy failure through metrics manipulation, religious institutions sustaining authority through ritual despite loss of genuine community function, and corporations maintaining organizational structure despite commodified products. The degradation is not inevitable decay; it is a specific structural equilibrium in which rent extraction becomes more profitable than function renewal. The constraint exhibits dual nature: it genuinely coordinates *something* (maintains order, distributes resources, processes cases) while extracting asymmetrically (those dependent on the institution bear disproportionate costs, while beneficiaries capture rents). The theater ratio has increased over the interval (0.52 \u2192 0.78) while actual extractiveness has also increased (0.38 \u2192 0.58), indicating not just performative drift but increasing asymmetry. The institution no longer pretends to serve its constituents; it serves to maintain itself.",
+    "key_agents": [
+      "Dependent Constituents: Primary victims (powerless/trapped) \u2014 citizens, students, patients, workers with no viable exit; bear full cost of degradation",
+      "Institutional Servants: Secondary victims (powerless/identity_locked) \u2014 career employees whose professional identity is fused with the degraded institution; structurally mobile but cognitively trapped",
+      "Administrative Incumbents: Primary beneficiaries (institutional/arbitrage) \u2014 executives, board members, consultants maintaining the degraded apparatus; have exit options and benefit from arrangement",
+      "Mid-Level Managers: Mixed victims-beneficiaries (moderate/constrained) \u2014 supervise dysfunction while receiving institutional rewards; experience both coordination function and extraction",
+      "Reformers: Organized challengers (organized/constrained) \u2014 attempt institutional renewal but often absorbed into degradation cycle; reform efforts become performative",
+      "Peer Institutions: Secondary stakeholders (institutional/constrained) \u2014 face coordination challenges due to degraded neighbor's unreliability; limited exit from institutional ecosystem",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangement as inevitable organizational physics"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The institution extracts resources (funding, labor, compliance) from constituents and converts them into administrative overhead, procedural theater, and executive rents rather than service delivery. The measurement increased from 0.38 to 0.58 over the observation interval, reflecting acceleration of rent extraction. The constraint is tangled_rope rather than pure snare because genuine coordination function persists (some services are delivered, some order is maintained, some legitimate work occurs) alongside extraction. Suppression (0.62): Moderate-high. Constituents face significant barriers to exit: material cost (relocation, finding alternatives), psychological cost (identity fusion, internalized beliefs about necessity), and institutional barriers (legal requirements, lack of alternatives, ecosystem lock-in). But suppression is not absolute \u2014 some exit pathways exist and some constituents do leave. Theater ratio (0.78): High and rising. The institution increasingly consumes resources for procedural activity, metrics generation, public relations, and accreditation management rather than delivery of stated service. The theatrical component accelerates as actual function declines \u2014 the institution substitutes visible ritual for invisible service quality. Claimed type (tangled_rope): The institution coordinates some genuine function while extracting asymmetrically. It is not pure snare (extraction without coordination) because coordination genuinely occurs. It is not pure rope (low-extraction coordination) because extraction is substantial and asymmetric. The active enforcement requirement is met: the degraded institution requires continuous effort to suppress alternatives, maintain constituent compliance, and manage the narrative gap between rhetoric and reality.",
+    "directionality_logic": "Directionality is determined by each agent's structural relationship to the extraction flow. Dependent constituents trapped in the institution experience maximum directionality (d \u2248 0.95 for powerless/trapped), producing high effective extraction. Identity-locked institutional servants experience moderately high directionality (d \u2248 0.85 for powerless/identity_locked) \u2014 they are structurally mobile but cognitively captured. Administrative incumbents with arbitrage options experience low or negative directionality (d \u2248 0.10 for institutional/arbitrage) \u2014 extraction flows toward them, not away. Mid-level managers experience moderate directionality (d \u2248 0.55 for moderate/constrained) \u2014 they both benefit from the institution and bear extraction costs. Reformer coalitions organized at institutional level with constrained exit experience mixed directionality (d \u2248 0.48) \u2014 they have leverage but are partially locked into the ecosystem they seek to reform. The analytical observer at civilizational scope risks naturalizing the contingent institutional arrangement (d \u2248 0.72 for analytical/analytical) \u2014 perceiving degradation as inevitable law rather than structural product.",
+    "perspectival_gap": "This constraint demonstrates stark perspectival divergence. The dependent constituent sees pure extraction (Snare) \u2014 an institution that offers no value and provides no escape. The institutional servant sees the same constraint differently due to identity fusion (identity_locked produces Snare classification) \u2014 they are trapped not by material barriers but by inability to imagine themselves otherwise. The administrative incumbent sees coordination (Rope) \u2014 they are solving the legitimate problem of maintaining the institution's operations and managing stakeholder expectations; they experience low extraction and benefit from the arrangement. The mid-level manager sees mixed function and extraction (Tangled Rope) \u2014 the constraint both enables their work (processes, authority) and corrupts it (enforces dysfunction, demands compliance with degraded procedures). The reformer sees institutional inertia with sunset potential (Piton) \u2014 the reform effort recognizes that theater has consumed function but miscalculates the difficulty of structural change; reform proposals often become absorbed into the degradation cycle. The analytical observer risks seeing inevitable institutional physics (Mountain, false summit) \u2014 decay appears as natural law when it is actually contingent product of specific incentive structures. The perspectival gaps reveal that the institution's degradation is not uniform; it is experienced very differently depending on one's structural position and whether one benefits or bears extraction.",
+    "mandatrophy_analysis": "The constraint resolves the mandatrophy by distinguishing between genuine coordination function (institutional process, decision-making, service delivery at degraded but nonzero level) and extractive theater (metrics manipulation, procedural ritual, administrative overhead). A purely extractive constraint (Snare) with zero coordination would not be classified as tangled_rope; it would be snare regardless of who observes it. The tangled_rope classification is justified because: (1) the institution genuinely coordinates some functions \u2014 there is some actual service delivery, not just illusion; (2) beneficiaries (administrative incumbents) experience genuine coordination benefits (the institution's processes enable their work) alongside their extraction; (3) constituents experience genuine costs alongside genuine (if degraded) service delivery. If the institution provided zero coordination and only theater, it would be pure snare or piton (degraded snare). The mandatrophy is resolved by empirically measuring the coordination-to-theater ratio and confirming that genuine function persists, justifying the tangled classification."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture",
+      "organizational_sclerosis",
+      "path_dependency_lock"
+    ],
+    "dual_formulation_note": "Institutional degradation is a composite of three structurally distinct constraints: (1) regulatory_capture \u2014 how incumbent beneficiaries maintain extraction despite constituent pressure; (2) organizational_sclerosis \u2014 how reform efforts become captured by institutional inertia; (3) path_dependency_lock \u2014 how early institutional design choices create downstream lock-in that persists even when circumstances change. This story models the integrated phenomenon; see network constraints for component analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "header": {
+    "constraint_id": "fractal_dimension_computation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "frac"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.08,
+    "claimed_type": "mountain",
+    "human_readable": "Fractal Dimension Computation Limit",
+    "topic_domain": "mathematics/computational_geometry",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Computational Agent",
+      "comment": "PERSPECTIVE 1: COMPUTATIONAL AGENT (MOUNTAIN) \u2014 Any algorithm computing fractal dimension must confront the box-counting limit: the resolution achievable is bounded by available memory and processing time. This is not a policy choice or institutional arrangement; it is a mathematical-physical limit. No exit from this constraint."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Well-Resourced Researcher",
+      "comment": "PERSPECTIVE 2: WELL-RESOURCED RESEARCHER (MOUNTAIN) \u2014 Even with unlimited computational resources, the fundamental limit on distinguishing self-similarity across scales remains: fractal dimension emerges from the relationship between structure and scale, and computing it requires sampling that relationship across multiple scales. The constraint is invariant to resources."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Observer",
+      "comment": "PERSPECTIVE 3: MATHEMATICAL OBSERVER (MOUNTAIN) \u2014 From the analytical perspective, fractal dimension computation derives from the Hausdorff dimension limit: the set being measured has an intrinsic dimension value, and finite algorithms can only approximate it. The approximation error is fundamental, not institutional. All perspectives converge on the same classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "computational_vs_theoretical_dimension",
+      "question": "Is the constraint the mathematical definition of Hausdorff dimension (theoretical limit) or the practical box-counting algorithm (computational limit)?",
+      "resolution_mechanism": "Clarify whether the constraint concerns the existence of the dimension value or the practical computation of it. These are mathematically equivalent but pedagogically distinct.",
+      "impact": "If theoretical: the constraint is about measurement resolution. If computational: the constraint includes algorithm choice dependencies. Both yield mountain classification but with different emphasis.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the constraint is theoretical or computational in nature"
+    },
+    {
+      "id": "scale_sampling_sufficiency",
+      "question": "How many scales must be sampled to approximate fractal dimension within a given error tolerance?",
+      "resolution_mechanism": "Established in fractal geometry literature: the number of scales needed grows logarithmically with desired precision. But the practical stopping point depends on when self-similarity breaks down (the fractal is not truly infinite).",
+      "impact": "If self-similarity is persistent: fractal dimension remains well-defined across scales. If self-similarity breaks down quickly: practical dimension is less meaningful. Classification remains mountain in both cases, but the domain of applicability shifts.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Number of scales required for dimension approximation"
+    },
+    {
+      "id": "fractal_definition_scope",
+      "question": "Does the constraint apply to mathematical fractals (strictly self-similar, infinite) or natural fractals (approximately self-similar, finite)?",
+      "resolution_mechanism": "Distinguish definitions: Hausdorff dimension applies rigorously to infinite mathematical fractals; box-counting applies approximately to finite natural objects. The constraint's universality depends on the scope.",
+      "impact": "If universal (mathematical fractals): mountain classification is unambiguous. If domain-limited (natural fractals): the constraint is mountain for theoretical case, rope or scaffold for practical estimation case. Recommend constraining to mathematical definition for mountain purity.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Scope of fractal definition (mathematical vs natural)"
+    }
+  ],
+  "measurements": [],
+  "interval": {
+    "start": 0,
+    "end": 1
+  },
+  "commentary": {
+    "narrative_context": "Fractal dimension computation represents a mathematical limit intrinsic to the definition of fractals themselves. A fractal's dimension is defined as the value d such that the object exhibits self-similarity across scales \u2014 finer detail repeats the coarser structure. Computing this dimension requires sampling the object at multiple resolutions and measuring how the measure (typically count or mass) scales with resolution. The fundamental constraint is that any finite algorithm can only sample a finite number of scales, yet the fractal definition is inherently infinite. This is not a policy choice, institutional arrangement, or extractive mechanism \u2014 it is a consequence of the mathematical object's definition. The constraint is invariant across all observers, all time horizons, and all resource levels.",
+    "key_agents": [
+      "Computational Agent (powerless/trapped) \u2014 any system attempting to compute the dimension faces the resolution limit",
+      "Well-Resourced Researcher (powerful/trapped) \u2014 even with unlimited resources, the fundamental mathematical limit remains",
+      "Mathematical Observer (analytical/analytical) \u2014 sees the constraint as a pure logical necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Very low. No extraction occurs from one agent to another. The constraint is not about redistribution or taking resources from one party and giving to another. The 0.12 value reflects the minimal measurement noise and approximation error inherent to any finite computation, not actual extraction. Suppression (0.03): Minimal. There is no coercion mechanism. The constraint is transparent \u2014 everyone understands the limit. Agents can choose to compute fractal dimension or not; there is no force preventing exit from the problem. Theater ratio (0.08): Negligible. The constraint has no performative content. Either the algorithm converges on a dimension value or it doesn't. The mathematics is objectively verifiable.",
+    "directionality_logic": "No directionality applies because there are no beneficiaries or victims. The constraint is not redistributive. All observers experience the same mathematical limit. The d-value would be 0.5 (symmetric) or undefined (not applicable), but since there is no extraction mechanism, the power and exit parameters do not drive classification. The mountain classification derives purely from the constraint's mathematical nature.",
+    "perspectival_gap": "There is no perspectival gap. All six perspective positions (powerless/powerful/analytical \u00d7 trapped/analytical) yield mountain classification. The constraint is invariant under all observational contexts. This is the signature of a true natural law.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy vacuously: there is no mixed coordination-extraction to resolve. The constraint is pure mathematical definition, not a social or institutional arrangement. All perspectives converge. No false summit risk because the underlying structure is transparent and universal."
+  },
+  "boltzmann": {},
+  "network": {
+    "affects_constraints": [
+      "fractal_brownian_motion_simulation",
+      "self_affine_surface_estimation"
+    ]
+  },
+  "directionality_overrides": []
+}

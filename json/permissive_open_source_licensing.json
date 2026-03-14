@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "permissive_open_source_licensing",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "posl"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Permissive Open Source Licensing",
+    "topic_domain": "software/intellectual_property/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "corporate_adopters",
+      "derivative_producers"
+    ],
+    "victims": [
+      "original_contributors",
+      "commons_sustainability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Original Open Source Contributor",
+      "comment": "PERSPECTIVE 1: ORIGINAL CONTRIBUTOR (SNARE) \u2014 Individual developers who contribute to permissive-licensed projects (MIT, Apache 2.0, BSD) have no exit once code enters the commons. Their labor produces value extracted by corporations for proprietary products with zero attribution obligation or contribution obligation. Trapped by the license terms they agreed to; cannot recover contributions. Maximum extraction with suppression through legitimacy framing ('open source is freedom')."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Small Open Source Maintainer",
+      "comment": "PERSPECTIVE 2: SMALL MAINTAINER (TANGLED ROPE) \u2014 Maintainers of popular permissive-licensed libraries face coordination benefits (community feedback, issue triage, code contributions) alongside extraction (unpaid labor, dependency management burden, security liability without compensation). Cannot exit without abandoning project reputation; constrained by ecosystem dependence. Genuine coordination function mixed with asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Corporate Adopter",
+      "comment": "PERSPECTIVE 3: CORPORATE ADOPTER (ROPE) \u2014 Large technology companies experience permissive licensing as pure coordination: they can freely integrate, modify, and commercialize code without legal friction. The license solves their coordination problem (reducing licensing friction) while producing net benefit to their organization. Low extraction because they have arbitrage options (proprietary code, other licenses) and benefit from standardization."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Downstream Derivative Creator",
+      "comment": "PERSPECTIVE 4: DOWNSTREAM DERIVATIVE CREATOR (TANGLED ROPE) \u2014 Mid-tier companies building on permissive-licensed code benefit from reduced licensing constraints but are themselves constrained by competing upstream dependencies and maintenance burden they inherit. Can relicense their own derivatives freely but cannot change upstream terms. Mixed coordination (access to foundational code) and extraction (unpaid dependency management, security cascades)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Open Source Licensing Norm",
+      "comment": "PERSPECTIVE 5: LICENSING NORM SYSTEM (PITON) \u2014 The open source movement as institutional practice has largely become performative: the language of 'free software freedom' persists as normative covering while extraction flows from contributors to corporations continue. The norm is maintained through cultural inertia ('open source is good') despite documented sustainability crises. Theater ratio high because community governance rituals mask asymmetric value extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Alternative Licensing Coalition",
+      "comment": "PERSPECTIVE 6: ALTERNATIVE LICENSING MOVEMENT (SCAFFOLD) \u2014 Organized efforts (copyleft licenses like GPL, Commons Clause, dual licensing, SSPL, Prosperity Public License) represent emerging recognition that permissive licensing creates unsustainable extraction. These alternatives have sunset logic: they are temporary frameworks while cultural/institutional norms shift to require contribution equity. Low effective extraction from this perspective because organized agents see exit pathways (license migration, ecosystem forking)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational analytical perspective, permissive licensing appears as an immutable property of how open source coordinates: the license terms are fixed contracts, corporations naturally optimize within legal frameworks, and value flows inevitably follow incentive gradients. This perspective risks naturalizing what are actually contingent institutional choices (the choice to use permissive rather than copyleft licenses, the choice to forgo contribution requirements)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "contribution_sustainability_threshold",
+      "question": "What proportion of contribution must flow back to original projects for permissive licensing to remain self-sustaining rather than extractive?",
+      "resolution_mechanism": "Empirical analysis of contribution ratios in major ecosystems (Linux kernel, Python, Node.js); comparison of permissive vs copyleft ecosystems; longitudinal tracking of maintainer burnout rates",
+      "impact": "If threshold < 10% return flow: most permissive ecosystems are already extractive (Snare). If threshold > 30%: permissive licensing can be sustainable (Rope). Current data suggests < 5% return flow in many ecosystems.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sustainability threshold for permissive licensing contribution flows"
+    },
+    {
+      "id": "corporate_dependency_irreversibility",
+      "question": "Once a permissive-licensed library becomes critical infrastructure in corporate stacks, can the original contributors ever reassert control or change license terms?",
+      "resolution_mechanism": "Historical case analysis (OpenSSL, jQuery, etc.); examination of attempted license migrations; measurement of 'too big to fork' threshold",
+      "impact": "If irreversible: contributors are permanently trapped once code scales (Snare). If reversible: exit options improve over time (Tangled Rope or Rope). Empirical evidence suggests high irreversibility once 10K+ projects depend.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether contributor control is irreversibly lost at scale"
+    },
+    {
+      "id": "alternative_license_adoption_feasibility",
+      "question": "Can organized coalitions successfully migrate open source ecosystems away from permissive licenses to contribution-equity models (GPL variants, Commons Clause, dual licensing)?",
+      "resolution_mechanism": "Tracking license migration attempts; analysis of fork success rates; measurement of corporate resistance and adoption curves for alternative licenses",
+      "impact": "If feasible: scaffold perspective is structural (exit pathways real). If infeasible: alternative licenses are purely aspirational (scaffold is performative, constraint remains Snare/Tangled Rope). Current adoption of alternatives shows modest but growing penetration (5-15% of new projects).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of collective migration to alternative licensing models"
+    },
+    {
+      "id": "open_source_identity_lock",
+      "question": "Are contributors locked into permissive licensing by identity fusion with 'open source values' (universalism, freedom rhetoric) that prevents perception of the extraction mechanism?",
+      "resolution_mechanism": "Qualitative analysis of contributor narratives; comparison of contribution behavior under permissive vs copyleft models; measurement of awareness of value extraction among contributors",
+      "impact": "If identity-locked: contributors experience constraint as mountain (unchangeable values) when it is actually contingent institutional choice (Snare/Tangled Rope). If not identity-locked: contributors correctly perceive extraction and could organize opposition. Anecdotal evidence suggests significant identity lock in subcultures of 'pure open source' philosophy.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether contributors are identity-locked to permissive licensing ideology"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Permissive open source licensing (MIT, Apache 2.0, BSD) represents a structural coordination mechanism that has evolved into an extraction constraint as corporate adoption has scaled. The constraint exhibits hybrid properties: it genuinely solves coordination problems (reducing legal friction, enabling code reuse) while simultaneously extracting value from original contributors to corporate beneficiaries. The theater ratio (0.65) reflects increasing performative framing around 'open source community' and 'shared values' masking asymmetric value flows. Individual contributors and small maintainers experience suppression through legitimacy narratives that frame extraction as inevitable ('code wants to be free') and ethical ('open source is freedom'). The constraint shows signs of degradation (increasing theater ratio) and accumulation (rising extractiveness) over the measured interval, with organized alternatives (GPL, Commons Clause) emerging as escape pathways. However, the 'too big to fork' problem and identity lock around open source ideology limit the practical effectiveness of these alternatives.",
+    "key_agents": [
+      "Original Contributors: Primary victim (powerless/trapped) \u2014 individual developers whose labor is extracted without compensation or attribution obligation once code is licensed permissively",
+      "Small Maintainers: Secondary victim (moderate/constrained) \u2014 projects that become critical infrastructure but lack resources to manage security, maintenance, or governance; face unpaid labor and liability",
+      "Corporate Adopters: Primary beneficiary (institutional/arbitrage) \u2014 technology companies extracting value through free integration of mature libraries without contribution obligation or licensing friction",
+      "Downstream Derivative Creators: Secondary beneficiary (powerful/mobile) \u2014 mid-tier companies building proprietary products on permissive-licensed foundations with full relicensing freedom",
+      "Open Source Licensing Norm: Institutional actor (institutional/arbitrage) \u2014 the cultural system maintaining legitimacy of permissive licensing through 'freedom' rhetoric despite sustainability crises",
+      "Alternative Licensing Coalition: Organized agents (organized/constrained) \u2014 GPL advocates, Commons Clause promoters, dual-licensing movements attempting to migrate ecosystems to contribution-equity models",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing permissive licensing as inevitable property of 'how code works' rather than contingent institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Permissive licensing extracts contributor labor to corporate benefit, but the extraction is moderate rather than severe because: (1) significant genuine coordination benefits exist (reduced legal friction, code reuse), (2) some contributors volunteer explicitly for visibility/portfolio building, (3) corporations do contribute back in some cases (though measurement shows <5% return flow in most ecosystems). The moderate value reflects that the constraint has real coordination function alongside extraction. Suppression (0.48): Moderate-high. Contributors face multiple barriers to exit: psychological (identity lock to open source ideology), technical (once code is in the wild, contributors cannot control its use), and economic (small maintainers lack resources to fork or migrate). However, suppression is not total because copyleft alternatives exist and some projects successfully migrate. Theater ratio (0.65): Increasing. The open source community governance rituals (community councils, contributor agreements, roadmap discussions) are increasingly performative: they create appearance of shared decision-making while corporate priorities dominate through resource concentration and technical expertise. The interval shows theater increasing from 0.40 to 0.65, indicating degradation of authentic coordination function. Claimed type (Tangled Rope): The constraint exhibits both genuine coordination (license solves real legal/technical problems) and asymmetric extraction (value flows predominantly to corporations). The active enforcement (requirement to include license text, prohibition on sublicensing restrictions) is what maintains the extraction mechanism.",
+    "perspectival_gap": "The gap is structural and irreconcilable within the current institutional arrangement. Contributors and corporations occupy genuinely different positions relative to permissive licensing: what solves corporations' coordination problems directly enables extraction from contributors. This is not a disagreement about facts or values \u2014 it is a structural incompatibility. The constraint persists because corporations have institutional power to set defaults (GitHub recommends MIT; frameworks default to Apache 2.0) and because contributors are identity-locked to open source ideology, preventing collective action. The alternative licensing coalition's scaffold perspective is real but faces structural barriers: the 'too big to fork' threshold means once a library becomes critical infrastructure, license migration is technically impossible (all downstream projects would need to accept new terms, which they will not do).",
+    "directionality_logic": "Directionality values derive from beneficiary/victim declarations and exit options. Original contributors (powerless, trapped, victim) compute high d \u2192 high f(d) \u2192 high experienced extraction. Corporate adopters (institutional, arbitrage, beneficiary) compute low d \u2192 negative f(d) \u2192 negative experienced extraction. Small maintainers (moderate, constrained, victim + beneficiary mix) compute mid-range d, producing moderate \u03c7. The Tangled Rope classification requires active enforcement (license text requirement, prohibition on relicensing restrictions) which maintains the asymmetry. The scaffold perspective's lower chi derives from organized power and perceived exit options, reducing d. The piton perspective's theater_ratio gate captures that the open source norm system has become largely performative in maintaining legitimacy despite documented extraction.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that classification depends entirely on the observer's structural position and time horizon. The original contributor sees permanent extraction (Snare at biographical horizon). The corporate adopter sees coordination (Rope at immediate horizon). The alternative licensing coalition sees temporary constraint with exit pathways (Scaffold at generational horizon). The piton perspective sees ritualized performance (theater ratio increasing from 0.40 to 0.65). No single type is 'correct' \u2014 the presheaf over the observation site describes the full structure. The natural law perspective (Mountain) is a false summit: permissive licensing is not inevitable or unchangeable, it is a contingent institutional choice made visible by comparing with copyleft alternatives that produce different extraction patterns. The mandatrophy resolution shows that the constraint's persistence despite awareness of extraction derives from a combination of: (1) identity lock in the contributor population (open source ideology preventing perception of mechanism), (2) institutional power concentration (corporations set defaults), (3) technical irreversibility ('too big to fork' barrier), and (4) performative legitimacy (theater masking extraction through 'freedom' rhetoric)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "software_commons_sustainability",
+      "corporate_open_source_capture",
+      "contributor_attribution_asymmetry"
+    ],
+    "dual_formulation_note": "Permissive licensing constrains multiple distinct phenomena: legal coordination (license solves genuine friction), value extraction (labor asymmetry), and norm maintenance (open source ideology). Upstream constraints concern the technical properties of open source (why code benefits from distributed development); downstream constraints concern the institutional capture of those benefits by corporations. This story models the value extraction constraint itself; related stories model sustainability crisis and attribution asymmetry."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

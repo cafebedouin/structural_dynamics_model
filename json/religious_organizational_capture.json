@@ -1,0 +1,226 @@
+{
+  "header": {
+    "constraint_id": "religious_organizational_capture",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "relorg"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Religious Organizational Capture",
+    "topic_domain": "institutional/religious/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "administrative_leadership",
+      "institutional_power_holders"
+    ],
+    "victims": [
+      "rank_and_file_believers",
+      "religious_mission_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "label": "The Faithful Member (Identity-Locked)",
+      "comment": "PERSPECTIVE 1: RANK-AND-FILE BELIEVER (SNARE) \u2014 Structurally mobile (has housing, income, legal protections) but identity-fused with the organization. Exit would require abandoning their religious identity, community bonds, and life trajectory constituted through membership. Experiences the constraint as extraction: administrative priorities diverge from stated mission, resources flow to institutional maintenance rather than spiritual practice. Cannot perceive mutability from within identity frame despite structural mobility."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Committed Practitioner (High-Cost Exit)",
+      "comment": "PERSPECTIVE 2: COMMITTED PRACTITIONER (TANGLED ROPE) \u2014 Genuinely coordinates religious practice with others (the organizational structure enables community worship, spiritual guidance, mutual support). Also experiences extraction: administrative overhead, leadership wealth accumulation, mission drift toward institutional growth rather than spiritual depth. Exit is possible (relocate, change denominations, practice independently) but carries high cost (loss of community, decades of invested relationships, children's social bonds)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Administrative Leadership",
+      "comment": "PERSPECTIVE 3: ADMINISTRATIVE LEADERSHIP (ROPE) \u2014 Benefits from the organizational coordination structure. Experiences the constraint as solving collective action problems: managing finances, maintaining buildings, coordinating services. Net beneficiary due to arbitrage options (can move to other religious organizations, secular nonprofits, or commercial sectors). Experiences coordination function as primary; extraction is invisible to them."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Captured Theologian",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL THEOLOGIAN (TANGLED ROPE) \u2014 Professional identity fused with the organization; genuinely coordinates theological work and religious scholarship. Also experiences extraction: the organization constrains what theological directions can be publicly explored, scholarly resources are allocated to mission-serving rather than truth-seeking inquiries. Identity-locked exit would require abandoning professional standing. Differently positioned than leadership: sees both real function and extractive constraint."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Reform Coalition",
+      "comment": "PERSPECTIVE 5: REFORM COALITION (SCAFFOLD) \u2014 Organized agents (lay boards, accountability networks, transparency initiatives, independent oversight bodies) see the organizational capture as solvable through governance reform. Low effective extraction from their position because they have agency and exit options (move to reformed organizations, build parallel structures). Sunset logic: governance reforms (financial transparency, democratic decision-making, leadership term limits) can restructure the constraint within a generational timeframe."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Doctrinal Apparatus",
+      "comment": "PERSPECTIVE 6: DOCTRINAL APPARATUS (PITON) \u2014 The formal teachings and theological positions of the organization have become largely performative, disconnected from actual resource allocation and operational priorities. The theology persists through institutional inertia and maintains legitimacy for the administrative structure, but actual decision-making is driven by institutional survival, financial management, and political considerations. Theater ratio: 0.65 reflects doctrine-action gap."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalization View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURALIZATION (MOUNTAIN) \u2014 Risk of false summit: the analytical frame may naturalize organizational capture as an inevitable consequence of scale ('hierarchies always become extractive,' 'power corrupts universally'). This perspective treats capture as a natural law rather than a contingent institutional arrangement. However, the structural data reveals this as false naturalization: the separation of stated mission from actual resource allocation is a design choice, not a law of nature. Alternative organizational forms (democratic governance, radical transparency, distributed leadership) demonstrate the constraint is not immutable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "identity_lock_permeability",
+      "question": "Is the identity lock holding faithful members truly cognitive (internalized framing) or is it primarily structural (economic dependency, social isolation, legal barriers)?",
+      "resolution_mechanism": "Post-exit surveys: do members who leave report sustained identity distress, or did identity reorganize after structural exit? Longitudinal tracking of members who attempted exit and returned vs those who successfully disaffiliated.",
+      "impact": "If primarily cognitive: the constraint is changeable if identity frames shift (biography \u2192 generational). If primarily structural: the constraint is effectively mountain-like for that agent (remains immutable across time horizons). Classification shifts from rope (identity_locked at biographical) to mountain (trapped at biographical).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cognitive vs structural basis of identity lock in members"
+    },
+    {
+      "id": "extraction_versus_overhead",
+      "question": "What proportion of administrative cost and resource diversion is genuine coordination overhead vs illegitimate extraction (salary inflation, nepotism, luxurious facilities)?",
+      "resolution_mechanism": "Comparative accounting: cost-of-services analysis across organizations of similar size and function; benchmarking administrative overhead ratios; investigation of leadership compensation packages relative to sector norms.",
+      "impact": "If overhead \u2264 10%: constraint reclassifies as pure Rope (low-extraction coordination). If overhead 15-30%: Tangled Rope classification confirmed. If overhead > 30%: reclassifies toward Snare (extraction-dominant).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of costs attributable to overhead vs illegitimate extraction"
+    },
+    {
+      "id": "theological_constraint_independence",
+      "question": "Is the theological system genuinely independent from organizational capture, or has doctrine itself been captured to justify administrative priorities?",
+      "resolution_mechanism": "Doctrinal genealogy analysis: tracking when theological positions shifted relative to resource allocation shifts; comparing stated doctrine to historical doctrine; assessing whether theology explains or justifies observed institutional behavior.",
+      "impact": "If theology is independent: the constraint is organizational (admin captured) but theology remains a potential reform lever (can appeal to authentic doctrine against corrupted practice). If theology is captured: the constraint extends to epistemology itself \u2014 the framework for criticism has been colonized. Reclassifies victims from 'rank-and-file' to 'epistemology of authenticity.'",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether theology has been captured or remains independent"
+    },
+    {
+      "id": "reform_pathway_viability",
+      "question": "Can governance reform (transparency, democratization, term limits, accountability structures) actually resolve the organizational capture, or do such reforms get co-opted during implementation?",
+      "resolution_mechanism": "Longitudinal case studies of organizations that attempted governance reform: tracking whether reforms produce measurable behavior change or become performative theater; studying reform movements that succeeded vs those that failed or were reversed.",
+      "impact": "If reforms succeed: Scaffold classification is accurate, sunset is real, generational timeframe is plausible. If reforms are co-opted: Scaffold perspective is aspirational rather than structural; the constraint may be more permanent than Scaffold suggests. Organization may require external intervention rather than internal reform.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether internal governance reforms can resolve capture"
+    },
+    {
+      "id": "competitive_religious_market",
+      "question": "Does the existence of competing religious organizations and alternative spiritual paths constitute a real exit option (making the constraint Rope/Tangled Rope) or is religious identity so fused that switching organizations/traditions is effectively impossible (making the constraint Snare)?",
+      "resolution_mechanism": "Exit rate analysis: what proportion of members actually leave for competing organizations vs those who leave religion entirely? Measuring cost-of-exit by tracking outcomes for those who switch vs those who disengage entirely.",
+      "impact": "If switching is viable: organizational capture is constrained by competitive pressure; members have effective exit option (mobile); \u03c7 reduces. If switching is impossible: members are trapped despite market alternatives; identity_locked dominates; \u03c7 increases and Snare classification becomes more accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether competitive religious market provides real exit options"
+    },
+    {
+      "id": "suppression_internalization_split",
+      "question": "What portion of suppression (0.68) is structural (legal/financial/social barriers to leaving) vs internalized (members believe they should stay despite recognizing extraction)?",
+      "resolution_mechanism": "Survey design distinguishing perceived barriers (structural) from felt obligation (internalized). Experimental design: would members leave if structural barriers were removed? Post-exit analysis: does suppression persist after structural separation?",
+      "impact": "If suppression is primarily structural: removing barriers reduces chi substantially. If suppression is primarily internalized: removing barriers may not reduce extraction experience \u2014 members carry suppression with them. Suggests need for deprogramming or identity-frame intervention beyond structural reform.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs internalized basis of suppression"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Religious organizational capture occurs when a religious institution's stated mission (spiritual practice, community care, doctrinal fidelity) becomes subordinated to institutional self-preservation, administrative priorities, and leadership wealth accumulation. The constraint is structurally identical to regulatory capture (captured regulator subordinates public interest to regulated industry) but operates through identity-based binding rather than primarily through material barriers. Members are typically structurally mobile \u2014 they could exit, relocate, or practice independently \u2014 but are identity-locked: their self-concept, social bonds, and spiritual identity are constituted through the organization. This creates a hybrid coordination-extraction mechanism: the organization genuinely coordinates religious practice and community while simultaneously extracting resources and labor justified by spiritual framing. The constraint's evolution shows increasing theater (doctrine-action gap widening) and extractiveness (administrative overhead and mission drift accumulating). Six perspectives from different structural positions yield all six constraint types, making this a diagnostic exemplar for identity-based capture and perspectival variation.",
+    "key_agents": [
+      "Rank-and-file believers: Primary victims (powerless/identity_locked) \u2014 bear extraction costs but cannot exit due to identity fusion; experience constraint as Snare",
+      "Committed practitioners: Secondary victims (moderate/constrained) \u2014 balance genuine coordination benefits against extraction; experience mixed Tangled Rope dynamic",
+      "Administrative leadership: Primary beneficiary (institutional/arbitrage) \u2014 captures institutional resources and decision-making power; experiences coordination function as primary",
+      "Institutional theologians: Captured intellectual class (institutional/constrained) \u2014 professionally identity-fused; coordinate intellectual work while constrained by organizational priorities",
+      "Reform coalition: Organized agents (organized/mobile) \u2014 see capture as solvable through governance structures; experience constraint as temporary Scaffold with sunset potential",
+      "Doctrinal apparatus: Formal theology and teaching structures (institutional/arbitrage) \u2014 increasingly performative; maintain legitimacy for administrative structure while disconnected from actual priorities",
+      "Analytical observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing capture as inevitable rather than recognizing it as contingent institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The organization extracts through multiple mechanisms: administrative overhead diverts resources from stated mission, leadership compensation exceeds sector norms, facilities maintenance prioritizes prestige over spiritual function, and member labor is leveraged through theological framing of service as spiritual obligation. However, extraction is not total (0.70+) because genuine coordination does occur \u2014 the organization coordinates religious practice, provides community, and delivers some stated services. The extraction is hidden within coordination. Suppression (0.68): High. Multiple suppression mechanisms operate: identity-lock prevents cognitive exit (members cannot imagine leaving without losing identity), social isolation reduces exit information (communities discourage contact with those who leave), theological framing redefines extraction as sacrifice (resource extraction is relabeled as spiritual discipline), and economic dependency (some members rely on organization for housing, employment, or healthcare). Suppression is both structural and internalized. Theater ratio (0.65): Moderate-high. Doctrine has become increasingly disconnected from resource allocation. Theology teaches detachment from material things; administration accumulates wealth. Doctrine emphasizes service; administrative decisions prioritize institutional growth. Teaching about mission and authentic practice; actual decisions reflect institutional self-preservation. The gap has grown over the 20-year measurement interval as administrative complexity has increased while theological fidelity has become performative.",
+    "perspectival_gap": "The maximum gap lies between leadership (rope: low extraction, high exit, beneficiary) and believers (snare: high extraction, identity-locked exit, victim). Same organization, same constraint, opposite experienced types. The gap reveals that deferential realism correctly models the constraint's structure: institutional designs that exploit identity-fusion create extractive constraint systems that appear as coordination to beneficiaries. The analytical observer's mountain perspective represents the risk that we naturalize capture as inevitable rather than recognizing it as a design consequence of combining identity-based belonging with hierarchical authority.",
+    "directionality_logic": "Leadership: beneficiary + arbitrage exit \u2192 d\u22480.15 (low experienced extraction). Believers: victim + identity_locked exit \u2192 d\u22480.89 (high experienced extraction). The pipeline computes f(d) via sigmoid, which produces f(0.15)\u2248-0.01 (leadership experiences negative extraction \u2014 benefits exceed costs) and f(0.89)\u22481.28 (believers experience high extraction multiplier). This produces the chi asymmetry: leadership sees low chi (beneficial coordination), believers see high chi (extractive snare). The identity_locked exit option is key: it's structurally equivalent to trapped in terms of effective immobility, but conceptually distinct \u2014 the immobility is cognitive/identity-based rather than material. This distinction only matters for the biographical time horizon: at biographical, identity_locked \u2192 rope (can change identity frame in principle), but trapped \u2192 mountain (immutable regardless of frame). For believers in this constraint, identity shift is difficult but possible (though rare), whereas trapped agents cannot shift without external intervention.",
+    "mandatrophy_analysis": "DIAGNOSTIC EXEMPLAR: This constraint resolves mandatrophy by showing that organizational capture can be simultaneously Rope (for beneficiaries with arbitrage options) and Snare (for identity-locked victims) from the same base properties. The mandatrophy resolution principle states: when a constraint appears to be both coordination and extraction, check whether different agents have asymmetric exit options or identity-fusion. If yes, it's Tangled Rope (mixed) or perspectival variation of Rope/Snare. In this case, the leadership genuinely coordinates (Rope), the believers genuinely suffer extraction (Snare), and the organization contains both. The constraint is not mislabeled \u2014 it's a Tangled Rope that appears as different types to different agents. The theater ratio increase (0.35\u21920.65) indicates doctrine-action gap widening, confirming extraction layering onto coordination. The extractiveness increase (0.28\u21920.58) shows accumulation: initial coordination function is intact but extraction has been added and is growing."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "religious_institutional_identity_formation",
+      "theological_epistemology_capture"
+    ],
+    "dual_formulation_note": "Religious organizational capture is downstream of identity-formation mechanisms (how the organization constitutes member identity) and upstream of theological capture (whether doctrine itself has been colonized to justify administrative structures). This story focuses on resource extraction and mission drift. The identity-formation story focuses on how belonging is constructed and maintained. The theology story focuses on epistemic capture \u2014 whether critique is possible from within the doctrinal system."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

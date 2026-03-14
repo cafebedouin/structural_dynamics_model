@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "uk_female_labor_market_exit",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ukfem"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UK Female Labor Market Exit via Childcare and Career Penalty",
+    "topic_domain": "economic/labor/gender",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "employers_avoiding_retention_costs",
+      "male_household_earners",
+      "childcare_gap_exploiters"
+    ],
+    "victims": [
+      "women_exiting_workforce",
+      "household_income_inequality"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Exiting Woman Worker",
+      "comment": "PERSPECTIVE 1: EXITING WOMAN WORKER (SNARE) \u2014 Trapped by childcare costs (\u00a31000+ monthly for full-time nursery), inflexible workplace expectations, and career penalty for part-time work. Material barriers to continued labor force participation are severe. No arbitrage option exists; return to work after exit carries permanent wage penalty. Maximum experienced extraction \u2014 bears full burden of coordination failure on household childcare."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Employers and Firms",
+      "comment": "PERSPECTIVE 2: EMPLOYERS AND FIRMS (ROPE) \u2014 Experience the constraint as coordination of labor supply through a de facto mechanism: women exit, workforce stabilizes at lower cost, firms avoid investing in flexible work infrastructure. Benefits from reduced turnover costs and wage compression. The extraction is real but benefits are real too \u2014 firms coordinate labor market expectations without explicit coercion. Effective extraction runs toward employers; they have arbitrage options (replace with cheaper labor, remain with smaller workforce)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Household Male Earner",
+      "comment": "PERSPECTIVE 3: HOUSEHOLD MALE EARNER (TANGLED ROPE) \u2014 Constrained by implicit expectation that female partner bears childcare burden. Benefits from partner's exit (reduced childcare coordination burden falls to her, household specialization increases income efficiency in short term). Also bears cost (partner's forgone income, household financial vulnerability if he loses employment, relationship stress). Mixed extraction with genuine coordination function \u2014 household division of labor does solve daily childcare logistics, but the solution is asymmetric."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Policy-Driven Work-Family Balance Reformers",
+      "comment": "PERSPECTIVE 4: WORK-FAMILY BALANCE REFORMERS (SCAFFOLD) \u2014 Organized actors (unions, equality bodies, progressive employers) see the constraint as a temporary coordination failure with institutional sunset clause. Shared parental leave, employer-supported childcare, flexible working rights (post-2015 legislation) are building alternative pathways. The constraint classification as scaffold is contingent: these pathways must mature and enforcement must increase. Theater is lower in this perspective \u2014 reforms target the structural problem (childcare access, workplace inflexibility) not the performance of exit as natural choice."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Cultural Gender Role Norms",
+      "comment": "PERSPECTIVE 5: CULTURAL GENDER ROLE NORMS (PITON) \u2014 The primary function (organizing household labor allocation) has been substantially automated or outsourced but the institutional expectation persists through inertia. Modern childcare alternatives and employer flexibility make the traditional female exit unnecessary, yet the norm ('mothers should stay home,' 'fathers are breadwinners') continues through cultural performance. Theater ratio is moderate (0.45) because workplace inflexibility and childcare costs are real structural facts, not pure performance, but the cultural overlay is largely theatrical. The constraint is degraded \u2014 it persists not because it solves the problem it once did, but because alternative arrangements haven't fully replaced it."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Institutional Entrenchment)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational scale, the UK female labor market exit is a hybrid: genuine coordination (household childcare, labor specialization) layered with extractive asymmetry (wage penalties for women, career discontinuity, retirement income inequality). The constraint is not immutable law but nor is it purely performative. It reflects real unresolved infrastructure gaps (childcare access) plus institutional path dependence (employer expectations) plus power asymmetry (who bears childcare burden). Globally, higher-income economies (Nordic, Netherlands) show exit rates can be reduced through policy without destroying household coordination, suggesting the extraction is contingent."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "childcare_cost_mechanism",
+      "question": "Is the female exit driven primarily by childcare cost barriers (structural trap) or by internalized identity expectations (identity lock), or both in different proportions?",
+      "resolution_mechanism": "Quasi-experimental analysis of exit rates pre/post childcare subsidy policies (e.g., Scotland's expansion to 30 hours free childcare). If exit rates drop significantly: cost barrier is primary. If rates persist: identity-lock mechanism is substantial.",
+      "impact": "If cost barrier primary: constraint is snare/tangled_rope (structural extraction). If identity-lock primary: constraint is rope (internalized coordination). If both: tangled_rope holds as classification, but omega variables for suppression mechanism must distinguish structural vs internalized components.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cost barrier vs identity-lock mechanism in female labor market exit"
+    },
+    {
+      "id": "wage_penalty_permanence",
+      "question": "Is the wage penalty for career interruption permanent (structural snare property) or recoverable with career continuation (tangled rope property with high but transient extraction)?",
+      "resolution_mechanism": "Longitudinal earnings analysis: women who exit and re-enter vs women with continuous employment, controlling for human capital and sector. If penalty persists 10+ years post-return: structural. If penalty decays with tenure: tangled rope with temporary asymmetry.",
+      "impact": "If permanent: constraint is snare (extraction is path-dependent, inescapable). If recoverable: constraint is tangled rope (asymmetric but not irreversible). Classification may shift biographical\u2192generational based on recovery rates.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether wage penalties for interruption are permanent or recoverable"
+    },
+    {
+      "id": "flexible_work_constraint_substitution",
+      "question": "Does flexible working (part-time, compressed hours) substitute for exit or create new extraction through underemployment and permanent wage suppression?",
+      "resolution_mechanism": "Comparison of career trajectories: full-time exit vs flexible part-time continuance. Track wage growth, promotion rates, and long-term earnings for each group. If flexible workers show wage recovery vs ex-workers but still face suppression: substitution has occurred (theater rises, extraction becomes attenuated but persistent).",
+      "impact": "If genuine substitution: the constraint becomes more visible (theater_ratio increases, classification may become piton rather than snare). If flexible work is extractive: constraint adapts but doesn't dissolve \u2014 women trade overt exit for part-time trap with same lifetime earnings loss.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether flexible work substitutes for exit or creates new extraction"
+    },
+    {
+      "id": "identity_lock_cultural_entrenchment",
+      "question": "To what extent is female labor market exit identity-locked through internalized gender roles vs structurally trapped by childcare/financial barriers?",
+      "resolution_mechanism": "Comparative analysis across cohorts and education levels. If highly educated women (high arbitrage options) still exit at high rates despite financial capacity to pay for childcare: identity-lock mechanism is substantial. If rates vary inversely with childcare access: structural trap is primary.",
+      "impact": "If identity-locked is substantial: constraint persists even after structural barriers removed (scaffold sunset is aspirational, not structural). If structural trap is primary: policy intervention (childcare, flexibility) creates real exit path. Informs whether piton classification is accurate (theater-driven persistence) or whether snare elements will persist post-reform.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of identity-lock vs structural barriers in female exit patterns"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 1990,
+    "end": 2020
+  },
+  "commentary": {
+    "narrative_context": "The UK female labor market exit is a structurally complex constraint that combines genuine coordination (household childcare logistics) with asymmetric extraction (wage penalties, career discontinuity, retirement savings gaps). Between 1990\u20132020, this constraint shifted from primarily cultural (19th-century gender roles persisting through institutional inertia) to increasingly structural (real childcare cost barriers, workplace inflexibility, fiscal incentives for single-earner households). The constraint exhibits a falling theater ratio (declining cultural performance, increasing structural reality) coupled with rising extractiveness (as structural barriers became more visible and quantifiable, the extraction became more measurable). Women exiting the workforce bear disproportionate costs: foregone income (\u00a3200k+ lifetime), permanent wage penalty (18\u201335% for 5+ years out), retirement savings gap (40\u201350% lower), and psychological burden of identity discontinuity. Employers benefit from reduced turnover costs and stable low-wage labor supply. Male household earners benefit from coordination of childcare burden (though lose household income resilience). Cultural norms around motherhood and work persist despite structural reforms (shared parental leave, workplace flexibility legislation) that enable alternatives. The constraint is tangled because genuine household coordination function (someone must handle childcare logistics) coexists with extractive asymmetry (that someone is disproportionately the woman).",
+    "key_agents": [
+      "Women exiting workforce: Primary victim (powerless/trapped) \u2014 face childcare cost barriers, workplace inflexibility, and permanent career penalty with no structural exit",
+      "Employers and firms: Primary beneficiary (institutional/arbitrage) \u2014 benefit from reduced turnover, wage compression, and avoidance of childcare/flexibility infrastructure investment",
+      "Male household earners: Secondary beneficiary (moderate/constrained) \u2014 benefit from partner's exit (childcare burden transferred) but lose household financial resilience",
+      "Household income inequality system: Victim (powerless/trapped) \u2014 structural inequality persists across UK households; female earnings gap accumulates into retirement crisis",
+      "Work-family balance reformers: Organized agents (organized/mobile) \u2014 policy actors building alternative pathways (shared parental leave, flexible working rights, childcare subsidy) with sunset logic",
+      "Cultural gender role norms: Institutional persistence mechanism (institutional/arbitrage) \u2014 cultural expectations ('mothers should prioritize family') maintain the constraint through theater even as structural barriers decline",
+      "Analytical observer: Civilizational view (analytical/analytical) \u2014 recognizes the constraint as contingent institutional arrangement, not natural law; identifies that Nordic and Dutch models demonstrate exit rates can be substantially reduced"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts from exiting women through multiple channels: foregone lifetime income (~\u00a3200,000), permanent wage penalty (18\u201335% for 5+ years discontinuity), pension savings gap (40\u201350% lower retirement income), and opportunity cost of career advancement. This is not speculative \u2014 the empirical wage penalty literature in UK labor economics (Gutierrez et al., Budig & England) documents these losses. Extractiveness is not higher (0.70+) because some women benefit from exit (improved family time, reduced double-shift burden), and some exit is nominally voluntary (though voluntary choice under structural constraint is not freely chosen). Suppression (0.58): Moderate-high. Structural barriers include childcare costs (\u00a31000\u20131200/month for full-time nursery), workplace inflexibility (UK has weak statutory part-time protections compared to EU), and fiscal incentives for single-earner households (tax breaks for couples on single income). But suppression is not total (0.70+) because: (1) policy alternatives exist (shared parental leave, flexible working legislation post-2015), (2) some women navigate around the constraint (higher education, high income, dual-earner households), and (3) external shock (COVID-19 forced remote work) demonstrated flexibility is technically possible. Theater ratio (0.45): Moderate. The constraint has declined in theatrical content over 1990\u20132020 as structural barriers became more visible. Early period (1990s): exit was largely performance of gender roles ('mothers belong at home'), theater was high (0.60). Later period: childcare costs and wage penalties are measurable structural facts, theater dropped (0.42\u20130.45) as the performance collapsed and the structure remained. Theater is not higher because the constraint does solve a real coordination problem (household childcare), not a purely performative one.",
+    "perspectival_gap": "The perspectival gap is profound. The exiting woman's Snare classification reflects her structural reality: she faces trapped conditions (childcare cost, workplace inflexibility, permanent wage penalty), experiences maximum extraction (all costs fall on her), and sees no exit path (reentry carries permanent penalty). The employer's Rope classification reflects genuine coordination benefit: the constraint solves the problem of labor supply coordination without explicit coercion. The male household earner's Tangled Rope reflects mixed experience: he benefits from coordination (childcare handled) but also bears cost (partner's income lost, household financial vulnerability, relationship stress from inequality). The work-family reformers' Scaffold classification is aspirational rather than descriptive: it reflects belief that policy alternatives (flexible work, parental leave, childcare subsidy) will create genuine exit paths. The cultural norms' Piton classification reveals the constraint's degradation: the norm ('mothers stay home') is performative in modern context because childcare alternatives exist, yet the norm persists through institutional inertia rather than functional necessity. The analytical observer's classification as Tangled Rope from civilizational perspective recognizes the genuine coordination function (childcare logistics must be solved) coexists with extractive asymmetry (the burden falls disproportionately on women). The gap between Snare and Rope is the widest: they perceive fundamentally different constraint types.",
+    "directionality_logic": "Directionality is derived from structural position and exit options. Women exiting face high barriers to re-entry (career penalty) and cannot arbitrage out of the constraint \u2014 their d value is high (0.92\u20130.95), producing high f(d) \u2248 1.38, amplifying experienced extraction. Employers have arbitrage options (replace with male workers, outsource childcare provision, adopt flexible work) \u2014 their d value is low (0.15\u20130.25), producing low f(d) \u2248 0.00, experiencing minimal extraction or net benefit. Male household earners are constrained but not trapped \u2014 they could theoretically take parental leave or bear childcare burden, but do so at career cost \u2014 d \u2248 0.55, f(d) \u2248 0.75, experiencing moderate asymmetry. Cultural norms have no individual d (they are institutional persistence, not agents), but their effect is to anchor beneficiary expectations (d toward 0) and victim expectations (d toward 1) in framing that makes exit appear inevitable or desirable. The directionality chain shows why the exiting woman perceives Snare (high d, high f(d), maximum \u03c7) while the employer perceives Rope (low d, low f(d), minimal \u03c7) \u2014 the same constraint produces opposite experienced extractiveness based on structural position.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by showing that extraction and coordination coexist at the same structural level. This is not 'which is it, extraction or coordination?' but 'extraction coexists with coordination \u2014 the coordination serves extractive function.' The household childcare coordination genuinely needs to happen (someone must arrange childcare), but the constraint ensures women bear this coordination burden disproportionately. This is the classic mandatrophy trap: defenders claim the constraint solves a real coordination problem (true \u2014 childcare must be coordinated), while critics identify extractive asymmetry (also true \u2014 burden falls disproportionately on women). The Tangled Rope classification preserves both truths: the constraint requires active enforcement (workplace inflexibility, cultural expectations) and has genuine beneficiaries (employers, male earners) AND genuine victims (exiting women, household inequality). The measured extractiveness (0.52) is below the snare threshold (0.66) not because the constraint is pure coordination, but because the coordination function is genuine even though it is asymmetrically distributed. Nordic and Dutch models demonstrate that the same coordination function can be delivered with lower asymmetry (higher female participation, shared parental leave, subsidized childcare), proving the UK extraction is policy-contingent, not coordination-necessary."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "gender_pay_gap",
+      "pension_savings_inequality",
+      "childcare_access_scarcity",
+      "workplace_flexibility_deficit"
+    ],
+    "dual_formulation_note": "The female labor market exit is downstream of and causally linked to multiple structural constraints: childcare access scarcity (infrastructure gap), workplace flexibility deficit (employer expectation mismatch), and gender pay gap (which is both upstream cause and downstream effect of exit patterns). The exit itself is a distinct constraint (identity-based coordination with extractive asymmetry), not reducible to any single upstream cause. Network family: female_labor_market_exit \u2190 childcare_access_scarcity, workplace_flexibility_deficit; female_labor_market_exit \u2192 gender_pay_gap, pension_savings_inequality."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

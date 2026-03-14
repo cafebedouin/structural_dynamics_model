@@ -1,0 +1,213 @@
+{
+  "header": {
+    "constraint_id": "platform_market_concentration",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "plat"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.65,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Platform Market Concentration and Digital Gatekeeping",
+    "topic_domain": "economic/technology/regulatory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dominant_platform_operators"
+    ],
+    "victims": [
+      "small_business_sellers",
+      "competitor_platforms",
+      "consumer_choice",
+      "app_developer_ecosystem"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Small Seller",
+      "comment": "PERSPECTIVE 1: SMALL SELLER (SNARE) \u2014 Sellers dependent on platform reach have no viable exit. Alternative marketplaces lack network effects; building direct customer channels requires capital and time they cannot afford. Platform can unilaterally change terms, algorithms, fees, or remove seller with minimal recourse. Suppression is structural: network lock-in, switching costs, and lack of alternative distribution channels. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The App Developer",
+      "comment": "PERSPECTIVE 2: APP DEVELOPER (SNARE) \u2014 Developer access to platform app store is effectively a monopoly distribution channel. Platform can unilaterally change terms, reject apps, suppress visibility, or extract revenue through forced use of platform payment systems. Developer trapped by: network effects (users expect app on dominant platform), switching costs (rebuilding user base on alternative platform is prohibitive), and lack of alternatives. High suppression, high extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Emerging Competitor",
+      "comment": "PERSPECTIVE 3: EMERGING COMPETITOR PLATFORM (SNARE) \u2014 New entrant platforms face suppression through: network effects (lock-in to incumbent), scale asymmetries (incumbent's data and algorithmic advantages), and predatory practices (underpricing, exclusive dealing, acquisition of potential rivals). Exit is theoretically possible but prohibitively expensive. Constrained rather than trapped because regulatory intervention or investor capital could change this, but the structural costs are so high that exit is effectively unavailable to most competitors."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Regulatory Coalition",
+      "comment": "PERSPECTIVE 4: REGULATORY COALITION (SCAFFOLD) \u2014 Antitrust authorities, consumer protection agencies, and interoperability advocates see market concentration as a temporary regulatory problem with a sunset clause. Digital Markets Acts (EU), executive orders on interoperability, and antitrust enforcement are intentionally designed to degrade the extraction mechanism: forced interoperability, API access mandates, and data portability rules lower switching costs and reduce network lock-in. Sunset logic: as these regulations mature and are enforced, the dominant platform's structural advantages should weaken. Theater ratio is moderate because enforcement theater exists alongside real structural changes. Exit path is clear for organized actors \u2014 the constraint is intentionally being dismantled."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Dominant Platform",
+      "comment": "PERSPECTIVE 5: DOMINANT PLATFORM OPERATOR (ROPE) \u2014 Platform experiences market concentration as coordination mechanism: network effects that connect buyers and sellers, standards that enable interoperability within the platform, and curation that manages quality and trust. Platform benefits from scale and switching costs. Extraction is experienced as legitimate coordination benefit \u2014 the platform provides real value (distribution, payment processing, fraud prevention, discovery). From this perspective, suppression of competitors is not extraction but natural market outcome of superior efficiency. Arbitrage exit (could become a seller/developer on their own platform, but chooses not to) makes effective extraction low or negative."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Large Merchant",
+      "comment": "PERSPECTIVE 6: LARGE MERCHANT (TANGLED ROPE) \u2014 Large sellers (major brands with significant market share) have mobile exit options \u2014 they can build direct-to-consumer channels, use multiple platforms simultaneously, or leverage brand power to negotiate favorable terms. However, they still benefit from and depend on platform access for market reach. They experience the constraint as mixed coordination (platform enables reach, payment processing, logistics) and extraction (high fees, algorithmic suppression, data access asymmetries, forced bundling). Mobile exit options reduce experienced extraction relative to trapped sellers, creating a perspectival gap between large and small merchants."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The E-Commerce Infrastructure Thesis",
+      "comment": "PERSPECTIVE 7: E-COMMERCE INFRASTRUCTURE (PITON) \u2014 From a civilizational view, market concentration in digital platforms mirrors historical concentration in railroads, telecommunications, and utilities \u2014 network effects create natural monopoly structures that are difficult to dislodge. From this perspective, the current platform dominance is inertial: the structure persists because alternatives haven't fully replaced it (no viable competing infrastructure with equal network effects), not because extraction is currently maximized. Theater ratio (0.55) reflects that some platform activities are genuinely coordinative while others are pure gatekeeping theater. This perspective risks naturalizing contingent institutional arrangements."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (SNARE) \u2014 From the analytical/civilizational perspective, market concentration exhibits all the structural hallmarks of a snare: high base extractiveness (0.68 \u2014 platforms extract through fees, data, algorithmic visibility control, forced bundling), high suppression (0.65 \u2014 network lock-in and switching costs prevent exit for most users and sellers), high effective extraction chi (platforms capture disproportionate value relative to their coordination function), and minimal theater (the extraction mechanisms are transparent once examined). The analytical observer sees the constraint as structural extraction made possible by network effects, not as natural monopoly or inevitable economic outcome."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "network_effects_vs_switching_costs",
+      "question": "Is the dominant platform's durability driven by genuine network effects (platforms become more valuable as more users join) or by sunk switching costs (users stay because switching is expensive, not because value increases)?",
+      "resolution_mechanism": "Historical analysis of user retention across regulatory interventions (interoperability mandates, data portability rules, API access); measurement of user migration when switching costs decline. If users migrate readily when switching costs drop, network effects are weaker than claimed.",
+      "impact": "If network effects dominate: market concentration is stable absent major technological disruption (Piton classification more accurate). If switching costs dominate: reduced switching costs should enable competition and reduce extraction (Scaffold sunset logic is valid). Classification could shift toward Tangled Rope or Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Decomposition of network effects from switching costs in platform persistence"
+    },
+    {
+      "id": "extraction_vs_coordination_boundary",
+      "question": "What portion of platform value capture represents coordination cost (legitimate payment for infrastructure, curation, dispute resolution) versus extractive overhead (rents from gatekeeper position)?",
+      "resolution_mechanism": "Comparison of platform fee structures against measured coordination costs in competing models (direct-to-consumer, wholesale, cooperative platforms). Analysis of fee changes when regulatory pressure increases (should decrease if extractive, persist if coordination cost).",
+      "impact": "If coordination costs are high (>40% of fees): platform is closer to Rope, extraction lower. If coordination costs are low (<20% of fees): platform is Snare, extraction higher. This shifts \u03c7 calculation and potentially changes classification from Snare toward Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Boundary between legitimate coordination costs and extractive gatekeeping"
+    },
+    {
+      "id": "regulatory_enforcement_capacity",
+      "question": "Can antitrust and interoperability regulations actually reduce market concentration, or does platform dominance persist despite enforcement efforts?",
+      "resolution_mechanism": "Post-enforcement measurement: DMA interoperability mandates (EU), executive order implementation (US), and DSA enforcement outcomes. Track: new platform entrant market share, merchant exit rates, app developer switching, consumer switching. If suppression and extractiveness decline measurably within 3-5 years, enforcement is working. If metrics stagnate, enforcement theater exceeds real impact.",
+      "impact": "If enforcement succeeds: Scaffold perspective is validated, sunset clause is real, constraint will degrade to Rope or weaken substantially. If enforcement fails: constraint may shift toward Piton (theater dominates function) or remain Snare (extraction persists despite regulatory performance). Could invalidate mandatrophy resolution.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Effectiveness of regulatory intervention in reducing platform market concentration"
+    },
+    {
+      "id": "trapped_vs_constrained_boundary",
+      "question": "For small sellers and developers, is exit truly impossible (trapped) or merely prohibitively expensive (constrained)?",
+      "resolution_mechanism": "Economic analysis: cost and time required to build direct customer channels, use competing platforms, or form cooperative alternatives. Survey of merchant perception: do sellers see viable alternatives or perceive exit as impossible? Historical case studies: have any market segments or regions escaped dominant platform dependency?",
+      "impact": "If trapped: powerless agent perspectives and Snare classification are correct. If constrained: effective extraction \u03c7 should be lower; classification might shift toward Tangled Rope in some contexts (if sellers perceive some agency). Could affect directionality derivation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinction between structural impossibility of exit versus high cost of exit"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Platform market concentration represents a structural constraint where dominant digital intermediaries (Amazon, Apple, Google, Meta, Alibaba, TikTok) have captured disproportionate value from digital commerce and services by leveraging network effects and switching costs. Small sellers, app developers, competing platforms, and merchants are locked into the ecosystem by the absence of viable alternatives. The constraint exhibits high extractiveness (0.68) driven by platform fee structures, algorithmic suppression, mandatory use of platform payment systems, forced bundling, and data asymmetries. Suppression is structural (network lock-in, switching costs, lack of alternatives) rather than purely regulatory. The constraint shows distinct classification types across different observer positions: sellers and developers see a Snare (trapped, high extraction); emerging competitors see a Snare (constrained by scale asymmetries); regulatory coalitions see a Scaffold with sunset clause (interoperability mandates designed to degrade extraction); the platform operator sees Rope (coordination mechanism); large merchants see Tangled Rope (mixed coordination and extraction with exit options); and the civilizational view risks a Piton (naturalizing contingent dominance as infrastructure inevitability). Theater ratio (0.55) reflects that platform activities are genuinely coordinative (payment processing, curation, dispute resolution) while others are pure gatekeeping performance (algorithmic opacity, exclusive dealing, acquisition of competitors).",
+    "key_agents": [
+      "Dominant Platform Operators: Primary beneficiary (institutional/arbitrage) \u2014 capture disproportionate value through network effects and switching costs; experience constraint as coordination mechanism",
+      "Small Sellers and Merchants: Primary victim (powerless/trapped) \u2014 locked into platform dependency by lack of alternatives; face arbitrary fee changes, algorithmic suppression, and forced terms. Also constrained/moderate large merchants with some exit options",
+      "App Developers: Secondary victim (powerless/trapped) \u2014 dependent on app store distribution; face mandatory terms, revenue extraction through forced payment systems, and visibility control",
+      "Emerging Competitor Platforms: Secondary victim (moderate/constrained) \u2014 face network effects, scale disadvantages, and predatory practices; exit theoretically possible but prohibitively expensive",
+      "Regulatory Coalition: Organized actor (organized/mobile) \u2014 antitrust authorities, consumer protection agencies, interoperability advocates building exit pathways through enforcement",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 can identify the structural extraction mechanisms underlying platform dominance"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. Platforms extract through multiple overlapping mechanisms: commissions (15-45% on marketplace transactions), forced use of payment systems (2-3.5% + fees), data monetization, algorithmic visibility control, and exclusive dealing requirements. The value extracted is disproportionate to coordination costs. Measurement trajectory shows growth from 0.48 to 0.68 over 15 years as platforms expanded commission structures and bundled services. Suppression (0.65): High. Structural barriers prevent exit: network effects make competing platforms unviable (users expect to find all merchants on dominant platform), switching costs are high (merchants must rebuild customer acquisition), alternative distribution channels require capital and time most sellers lack, and platform can unilaterally change terms with minimal recourse. Regulatory action (data portability, interoperability mandates) is beginning to reduce suppression, but effect lags. Theater ratio (0.55): Moderate. Platforms perform genuine coordination functions (payment processing, merchant curation, dispute resolution, fraud prevention, logistics integration) but also maintain theater around algorithmic decisions, recommendation systems, and quality control that obscures extraction mechanisms. Theater has increased slightly (0.42 to 0.55) as platforms rely more on algorithmic opacity to justify visibility decisions.",
+    "perspectival_gap": "The core perspectival gap separates beneficiaries (platform operators perceiving Rope) from victims (small sellers perceiving Snare). The gap is driven by directionality: beneficiaries have arbitrage exit and derive value from network effects; victims have trapped exit and face suppression. The scaffold perspective (regulatory coalition) adds a temporal dimension \u2014 the constraint is temporary and being intentionally dismantled through enforcement. The piton perspective adds a risk: naturalizing market dominance as infrastructure necessity when it is actually extractive institutional arrangement.",
+    "directionality_logic": "Directionality values are derived from structural position and exit capacity. Platform operators as beneficiaries with arbitrage exit have low d (\u22480.10), producing negative \u03c7 \u2014 extraction runs toward them. Small sellers as victims with trapped exit have high d (\u22480.95), producing maximum f(d) \u2192 high \u03c7 experienced by them. Large merchants as victims with mobile exit have moderate d (\u22480.55), producing moderate \u03c7 relative to small sellers. Emerging competitors as victims with mobile but prohibitively expensive exit have d (\u22480.75), producing high \u03c7 despite nominal exit option. Regulatory agents as organized/mobile have d (\u22480.50), producing moderate \u03c7 reflecting their agency in reshaping the constraint. The directionality derives from beneficiary/victim declarations and exit capacity \u2014 no overrides needed.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by examining whether platform dominance is a natural monopoly coordination mechanism or extractive gatekeeping. If coordination: should classify as Rope (pure coordination with minimal extraction). If extraction: should classify as Snare (high extraction with coordination as cover story). The structural data supports the Snare classification: (1) High extractiveness independent of coordination value \u2014 platforms extract fees far exceeding measured coordination costs. (2) High suppression creating trapped condition for merchants and developers \u2014 network effects and switching costs prevent exit. (3) Multiple victim classes (sellers, developers, competitors, consumer choice) with no exit options \u2014 indicates asymmetric extraction, not coordination. (4) Theater (algorithmic opacity, quality control framing) obscures extraction mechanisms. (5) Regulatory response (DMA, Executive Orders, antitrust enforcement) specifically targets extraction, not coordination failure. The constraint is accurately classified as Snare. The piton risk is that dominance naturalizes as infrastructure \u2014 this is a false summit that the analytical observer should reject."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "small_business_access_digital_markets",
+      "algorithmic_transparency_in_content_distribution",
+      "data_asymmetry_in_consumer_platforms",
+      "payment_system_interoperability"
+    ],
+    "dual_formulation_note": "Platform market concentration is upstream of specific extraction mechanisms (algorithmic suppression, forced bundling, data access asymmetries, payment system lock-in). Each downstream constraint has its own \u03b5 reflecting domain-specific extractiveness. The parent constraint models the structural concentration enabling all downstream mechanisms."
+  },
+  "directionality_overrides": []
+}

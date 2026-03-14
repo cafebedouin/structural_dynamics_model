@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "nyquist_sampling_theorem",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Nyquist Sampling Theorem",
+    "topic_domain": "signal_processing/mathematics",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "Signal Without Sufficient Bandwidth",
+      "comment": "PERSPECTIVE 1: SIGNAL WITHOUT SUFFICIENT BANDWIDTH (MOUNTAIN) \u2014 Any signal attempting to evade the Nyquist bound by undersampling faces inevitable aliasing. This is not a negotiable constraint; it is a mathematical limit inherent to the sampling process itself. No escape, no alternative, no transcendence possible."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "label": "Engineer Designing Sample Rate",
+      "comment": "PERSPECTIVE 2: ENGINEER DESIGNING SAMPLE RATE (MOUNTAIN) \u2014 Even with substantial resources and expertise, the engineer cannot violate the theorem. The constraint appears as a technical requirement, not an obstacle \u2014 meet the Nyquist criterion or accept aliasing artifacts. Suppression is the mathematical structure itself, not coercive overhead."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From the vantage of signal theory, the Nyquist theorem is a natural law of information transmission. Fourier analysis guarantees that bandlimited signals require a minimum sampling rate (2f_max) for lossless reconstruction. This is not institutional, not coercive, not extractive \u2014 it is the structure of reality."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "label": "Signal Processing Standards Body",
+      "comment": "PERSPECTIVE 4: SIGNAL PROCESSING STANDARDS BODY (MOUNTAIN) \u2014 Even institutional actors with power to set standards cannot codify a violation of Nyquist. Standards documents incorporate the theorem as a natural law, not as an enforceable rule. No suppression because no enforcement is needed \u2014 the mathematics enforces itself."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "finite_precision_approximation",
+      "question": "Is the Nyquist theorem a true mathematical law or a limit derived from idealized assumptions (infinite precision, continuous time, infinite observation windows)?",
+      "resolution_mechanism": "Analysis of real-world sampling in finite precision arithmetic; examination of whether practical 'violations' (sub-Nyquist sampling with prior constraints) constitute true exceptions or approximations valid only under restricted conditions",
+      "impact": "If idealized: the mountain classification holds universally. If approximation: the constraint transitions to Piton (degraded from its idealized form under real-world conditions).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether Nyquist is absolute mathematical law or limit from idealized assumptions"
+    },
+    {
+      "id": "prior_information_loophole",
+      "question": "Does compressive sensing (sub-Nyquist sampling with sparsity priors) represent a genuine violation of Nyquist or a different application of information theory that does not contradict the theorem?",
+      "resolution_mechanism": "Rigorous comparison of information-theoretic requirements: CS requires prior knowledge (sparsity basis) that Nyquist assumes absent. Does CS reduce the effective information rate (and thus the effective Nyquist bound) or transcend the bound?",
+      "impact": "If CS transcends: Nyquist is not a universal law \u2014 reclassify as Rope (pragmatic coordination around sampling conventions). If CS complies: Nyquist holds universally \u2014 mountain confirmed.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether compressive sensing violates or complies with Nyquist principle"
+    },
+    {
+      "id": "domain_specificity",
+      "question": "Is Nyquist a law of signal processing or a mathematical theorem specific to bandlimited signals and equidistant sampling?",
+      "resolution_mechanism": "Examine constraints that appear to violate Nyquist (non-equidistant sampling, non-bandlimited signals, quantum systems). Determine whether each represents a true exception or a different domain with different constraints.",
+      "impact": "If domain-specific: mountain classification is preserved for bandlimited signals but does not generalize. If universal: mountain classification applies across all signal classes.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Domain specificity of Nyquist theorem applicability"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The Nyquist sampling theorem establishes that a bandlimited signal containing no frequencies higher than f_max must be sampled at a rate of at least 2f_max to avoid aliasing and enable lossless reconstruction. This is a mathematical law, not a social arrangement, institution, or coercive mechanism. No agent benefits from the theorem; no agent is victimized by it. All perspectives perceive it identically as an irreducible constraint on information transmission. The theorem's universality, necessity, and mathematical proof make it the canonical example of a Mountain in the Deferential Realism system. The minimal extractiveness (0.12) and suppression (0.03) reflect that the constraint imposes no coercive overhead \u2014 agents align with Nyquist not because they are forced but because it is impossible to transmit bandlimited signals through sampling without respecting the bound.",
+    "key_agents": [
+      "Bandlimited Signal: The information source \u2014 constrained by its own frequency content; cannot be sampled below Nyquist without loss",
+      "Signal Processor/Engineer: The agent implementing sampling \u2014 must choose a sample rate; constrained by the theorem to meet Nyquist or accept artifacts",
+      "Information Channel: The medium through which samples are transmitted \u2014 Nyquist defines the information capacity of any sampled pathway",
+      "Analytical Observer: The mathematical perspective \u2014 perceives the theorem as a natural law derivable from Fourier analysis"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Minimal. The theorem has no extractive function \u2014 it does not redistribute resources, does not concentrate power, does not create asymmetric obligations. The value reflects that there is minimal coercive overhead; the constraint is so fundamental that it appears as pure mathematics rather than as a constraint mechanism. The slight non-zero value accounts for the trivial overhead of documentation, education, and engineering practice around implementing Nyquist. Suppression (0.03): Minimal. No agent is suppressed by the theorem \u2014 all agents with technical knowledge can access the mathematics and understand it fully. No alternative is hidden; no exit is blocked by institutional authority. The value reflects only the inherent difficulty of the underlying mathematics (the theorem requires some technical sophistication to fully grasp). Theater ratio (0.15): Very low. There is no performative element to the Nyquist theorem \u2014 it either holds or it does not. Implementation (sample rate selection, filter design) may involve some ritual around standards compliance, hence the minimal non-zero value, but the theorem itself has zero theater. No institution needs to maintain the appearance of Nyquist's validity because the mathematics guarantees it.",
+    "directionality_logic": "The Nyquist theorem has no directionality in the sense defined by the DR framework. There is no beneficiary (no agent who profits from the constraint) and no victim (no agent who bears a cost imposed by others). All agents face the same mathematical reality equally: signals cannot be reconstructed from undersampled data. The absence of directionality is a defining characteristic of Mountains. The theorem does not extract from anyone; it is a property of reality that applies uniformly across all contexts and perspectives.",
+    "perspectival_gap": "There is no perspectival gap for the Nyquist theorem. All perspectives agree: it is a mountain, a natural law. The engineer and the signal both perceive the same constraint. The standards body cannot alter it. The analytical observer sees mathematical necessity. Uniform-type constraints like Nyquist are invariant across all indexical positions \u2014 the theorem's universality is its defining feature. The absence of perspectival disagreement is strong evidence that the classification is correct.",
+    "mandatrophy_analysis": "Mandatrophy resolution: NOT APPLICABLE. The Nyquist theorem is a Mountain \u2014 mathematical law with no institutional form to degrade. The mandatrophy arises when a constraint's claimed type matches its structural data but misses contingent institutional arrangements (Piton disguised as Mountain). Nyquist has no institutional form to degrade. Its accessibility (mathematical proof available universally), resistance to falsification (Fourier analysis guarantees the bound), and natural emergence (from first principles of information theory) all confirm the mountain classification. The accessibility collapse (0.92) reflects that the theorem is difficult to fully internalize without mathematical training, but once understood, it is universally accessible. The resistance (0.08) reflects the mathematical certainty of the proof \u2014 there is minimal intellectual resistance to accepting the conclusion once the premises are granted."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "signal_reconstruction_fidelity",
+      "analog_digital_conversion",
+      "data_compression_limits"
+    ]
+  },
+  "directionality_overrides": []
+}

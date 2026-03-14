@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "institutional_gatekeeping",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gate"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Institutional Gatekeeping and Access Control",
+    "topic_domain": "institutional/social/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_gatekeepers",
+      "institutional_insiders"
+    ],
+    "victims": [
+      "excluded_aspirants",
+      "field_diversity",
+      "innovation_marginal_perspectives"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Excluded Aspirant",
+      "comment": "PERSPECTIVE 1: EXCLUDED ASPIRANT (SNARE) \u2014 Faces absolute barriers to institutional access: requires gatekeepers' permission to compete. No alternative pathways. Education, credentials, networks all controlled by the gatekeeper. Cannot exit without abandoning career aspirations entirely. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Aspiring Insider",
+      "comment": "PERSPECTIVE 2: ASPIRING INSIDER (TANGLED ROPE) \u2014 Faces high costs to access (credentialing gauntlet, apprenticeship, cultural conformity requirements) but some pathways exist. Constrained by resource requirements, time investment, and social capital barriers. Also benefits from access to institutional resources, networks, and legitimation once credentials are earned. Mixed coordination (credentialing serves legitimate skill-verification) and extraction (gatekeepers capture disproportionate value from the aspiring insider's investment)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Gatekeeper",
+      "comment": "PERSPECTIVE 3: INCUMBENT GATEKEEPER (ROPE) \u2014 Experiences the gatekeeper constraint as pure coordination: maintaining standards, managing competence verification, ensuring institutional legitimacy. Can exit to alternative institutions or markets. Net beneficiary but sees constraint as functional (coordination not extraction). Benefits include: control over supply of labor/participants, ability to set compensation/opportunity rates, prestige and authority."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Disruption Coalition",
+      "comment": "PERSPECTIVE 4: DISRUPTION COALITION (SCAFFOLD) \u2014 Organized agents (alternative credentialing systems, online platforms, decentralized networks, open-source communities) are building parallel access pathways with lower gatekeeper overhead. These alternatives have a sunset logic: as they mature and gain legitimacy, the traditional gatekeeper's extraction mechanism loses force. Low experienced extraction because organized agents have agency and see concrete alternatives emerging."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Legacy Credentialing System",
+      "comment": "PERSPECTIVE 5: LEGACY CREDENTIALING SYSTEM (PITON) \u2014 Traditional gatekeeping mechanisms (university degrees, guild membership, professional licensing) persist largely through institutional inertia. The actual skill-verification function has atrophied: credentials serve signaling and network-access roles rather than competence assurance. Theater ratio is high because credentialing theater (exam performance, thesis format, ritualized apprenticeship) has replaced actual skill demonstration as the gatekeeper's primary function. The system maintains itself through self-reinforcement (gatekeepers require credentials because gatekeepers require credentials) rather than genuine need."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Secondary Gatekeeper",
+      "comment": "PERSPECTIVE 6: SECONDARY GATEKEEPER (TANGLED ROPE) \u2014 Mid-level gatekeepers (department chairs, hiring managers, journal editors) who enforce primary gatekeeper standards but also navigate constraints from above (institutional policies) and below (aspirant pressure). Both enforce extraction and experience it. Can partially exit by loosening standards, but face professional consequences from primary gatekeepers. Mixed role: coordinator of legitimate standards but also extractor of rents from aspirants."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some gatekeeper function is inherent to any institutional structure: organizations must distinguish members from non-members, capable from incapable, insiders from outsiders. Without gatekeeping, no institution can maintain identity or function. This perspective risks naturalizing contingent gatekeeping mechanisms (extractive credentialism, network closure, arbitrary standards) as inherent to organization itself. The engine's false summit detector will reveal this as naturalization of institutional contingency."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legitimate_credentialing_threshold",
+      "question": "What proportion of gatekeeping overhead is legitimate competence verification versus extractive rent-seeking?",
+      "resolution_mechanism": "Correlation analysis: compare gatekeeper-imposed barriers with measurable competence gaps; measure whether gatekeepers who claim to verify competence actually use competence signals (portfolio review, capability testing) versus pure signaling barriers (credentials, network membership, demographic conformity)",
+      "impact": "If legitimate portion > 60%: gatekeeping is primarily coordination (Rope for more perspectives). If legitimate portion < 30%: gatekeeping is primarily extraction (Snare from more perspectives). The extracted value can be estimated from the gap.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ratio of legitimate competence verification to extractive overhead in gatekeeping"
+    },
+    {
+      "id": "alternative_credentialing_viability",
+      "question": "Do alternative credentialing systems (portfolio-based, skills-tested, blockchain-verified, open-source track records) actually produce equivalent or superior competence signals compared to traditional gatekeepers?",
+      "resolution_mechanism": "Longitudinal outcome tracking: compare success rates, failure rates, and competence assessment accuracy of individuals credentialed through traditional gates versus alternative systems; measure employer/user satisfaction and long-term performance",
+      "impact": "If alternatives are equivalent or superior: scaffold perspective confirmed \u2014 traditional gatekeeping's extraction mechanism will erode as alternatives gain legitimacy. If alternatives underperform: traditional gatekeeping retains genuine coordination function and cannot be decomposed as pure extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Competence equivalence of alternative credentialing systems"
+    },
+    {
+      "id": "gatekeeper_substitution_economics",
+      "question": "What are the actual economic rents extracted by gatekeepers (wage premium, compensation markup, position scarcity value) and what percentage of these rents reflect genuine scarcity versus artificial restriction?",
+      "resolution_mechanism": "Market analysis: measure gatekeepers' compensation premium versus non-gated equivalents; model the elasticity of supply response if gatekeeping barriers were partially relaxed; estimate deadweight loss from excluded talent",
+      "impact": "If rents > 40% of gatekeeper compensation: gatekeeping is substantially extractive. If rents < 10%: gatekeeping may be legitimate supply-scarcity response. Intermediate values require institutional-specific analysis.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Economic rent extraction through gatekeeping"
+    },
+    {
+      "id": "gatekeeping_mechanism_identity_lock",
+      "question": "To what extent do gatekeepers' professional identities depend on their gatekeeper role? Is gatekeeping essential to the gatekeeper's self-concept or merely their job function?",
+      "resolution_mechanism": "Interview/ethnographic analysis: assess whether gatekeepers perceive relaxing standards as professional identity threat versus practical adjustment; measure identity-lock severity (would identity dissolution accompany role loss?)",
+      "impact": "If identity-locked: gatekeepers will resist alternatives even when alternatives are empirically superior, making sunset dynamics slower than scaffold perspective assumes. If identity-neutral: gatekeepers may accommodate alternatives faster.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Identity fusion of gatekeepers to their gatekeeper role"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Institutional gatekeeping is the mechanism by which organizations control access to membership, resources, opportunities, and legitimacy. This constraint exhibits a fundamental tension between the genuine coordination function of gatekeeping (distinguishing capable from incapable, maintaining institutional integrity, ensuring legitimate membership) and its extraction function (controlling supply, capturing economic rents, excluding competitors, enforcing conformity). The same structural mechanism \u2014 standards enforcement, credential requirements, access control \u2014 simultaneously serves coordination and extraction. The constraint's seven perspectives reveal this ambiguity: from the excluded aspirant's view it is pure extraction (snare); from the incumbent gatekeeper's view it is pure coordination (rope); from the disruption coalition's view it is a temporary problem with alternative solutions (scaffold); from the legacy system's view it is a performative ritual sustained by inertia (piton). The theater_ratio (0.58) reflects that credentialing systems increasingly substitute theatrical compliance (credential possession, ritual signaling, demographic conformity) for actual competence verification. The rising trajectory (0.42 \u2192 0.58 over 20 units) indicates that as alternative competence signals emerge (portfolios, open-source contributions, skills testing), traditional gatekeeping has responded not by improving competence verification but by increasing theater \u2014 adding more credentials, more specialized requirements, more gatekeeping overhead \u2014 to preserve gatekeeper control.",
+    "key_agents": [
+      "Excluded Aspirants: Primary victims (powerless/trapped) \u2014 cannot access institutional pathways; face absolute barriers to gatekeepers' permission to compete",
+      "Aspiring Insiders: Secondary victims (moderate/constrained) \u2014 face high access costs but some pathways exist; experience mixed coordination and extraction",
+      "Incumbent Gatekeepers: Primary beneficiaries (institutional/arbitrage) \u2014 control supply of access; capture economic rents; see gatekeeping as legitimate coordination",
+      "Disruption Coalition: Organized agents (organized/mobile) \u2014 building alternative credentialing systems (online platforms, skills-based hiring, open-source reputation, blockchain credentials) with exit dynamics",
+      "Legacy Credentialing System: Institutional actor (institutional/arbitrage) \u2014 traditional gatekeeping mechanisms maintained through inertia; high theater ratio indicates performative function",
+      "Secondary Gatekeepers: Institutional actors (moderate/constrained) \u2014 mid-level enforcers (hiring managers, department chairs, journal editors) who both enforce and experience extraction",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent gatekeeping as inherent to all institutions"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Gatekeepers capture economic rents (wage premiums, position scarcity, access control), restrict supply to artificially maintain scarcity, and enforce conformity requirements that exceed legitimate competence concerns. However, extraction is not total (0.70+) because some gatekeeping serves genuine coordination: institutions do need to distinguish members from non-members, some credentialing does reflect real competence gaps, and alternative systems have not yet fully replaced gatekeepers. The rising trajectory (0.35 \u2192 0.52) reflects that gatekeepers are increasing extraction intensity as alternatives emerge \u2014 adding more requirements, more specialized credentials, more gatekeeping theater \u2014 rather than improving actual competence verification. Suppression (0.65): High. Barriers to bypassing gatekeeping include: educational monopolies, professional licensing requirements, credentialing time costs, network access restrictions, alternative system stigma (self-reinforcing because gatekeepers control employment), and regulatory/legal enforcement of gatekeeper authority. Suppression is substantial but not absolute (0.80+) because alternative pathways are emerging and some mobility exists for exceptional talent. Theater ratio (0.58): Moderate-high. Credentialing has increasingly substituted theatrical compliance (passing exams, completing prescribed curricula, demographic/cultural conformity) for actual competence demonstration. Portfolio-based hiring, skills testing, and open-source track records show that meaningful competence can be verified without theater, yet gatekeepers maintain theatrical requirements (degrees, certifications, standardized tests) as access gates.",
+    "perspectival_gap": "The core perspectival gap is between the incumbent gatekeeper's rope (genuine coordination) and the excluded aspirant's snare (pure extraction). Both views describe real structural features: gatekeeping does coordinate legitimate standards AND restrict supply to extract rents. The disagreement is not empirical but perspectival \u2014 from the gatekeeper's institutional position, the coordination function is primary and visible; from the aspirant's position of exclusion, the extraction function is primary and visible. The secondary gatekeeper's tangled_rope perspective shows that mid-level enforcers experience both functions simultaneously: they coordinate standards (their stated function) but also enforce gatekeepers' rent extraction (their actual structural role). The piton perspective reveals that the gatekeeper system responds to pressure by increasing theater rather than improving function \u2014 a diagnostic sign that the coordination rationale is becoming post-hoc justification rather than genuine need. The scaffold perspective (disruption coalition) documents that alternative credentialing systems are demonstrably functional, which means the mountain perspective's 'inherent to institutions' framing is demonstrably false \u2014 gatekeeping is contingent institutional arrangement, not natural law.",
+    "directionality_logic": "Beneficiaries and victims are structurally distinct: incumbent gatekeepers and the institutional gatekeeping system are net beneficiaries (d \u2248 0.08-0.15: benefit from extraction, have arbitrage exits); excluded aspirants are net victims (d \u2248 0.95: bear full cost, trapped); aspiring insiders are mixed (d \u2248 0.55-0.60: face high access costs but eventual benefit status). The disruption coalition (d \u2248 0.40) is partially victimized (gatekeepers suppress alternatives) but has sufficient organization and mobile exit options to reduce experienced extraction. Secondary gatekeepers (d \u2248 0.55) are both enforcers and subjects of extraction \u2014 they enforce gatekeeping standards that extract from below but face pressure from above to maintain extraction intensity even when it exceeds legitimate competence verification. The directionality derives from this structural asymmetry: gatekeepers benefit from supply restriction; gatekeepees bear the cost of access restriction and conformity requirements.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by showing that institutional gatekeeping genuinely exhibits both coordination and extraction functions, making the tangled_rope classification the analytical truth. The piton perspective documents that traditional gatekeeping is increasingly performative (theater_ratio 0.58, rising trajectory), meaning the coordination rationale is becoming post-hoc cover for extraction. The scaffold perspective documents that alternative systems solve the coordination problem (competence verification) without the extraction mechanism (supply restriction), which proves that genuine coordination does not require traditional gatekeeping's current intensity. The mountain perspective risks false naturalization \u2014 it claims gatekeeping is inherent to institutions, but the alternative system evidence shows that institutions can coordinate without gatekeeping's current extraction overhead. The snare and rope perspectives are both structurally accurate from their positions, but the constraint's true nature is tangled: it solves a real coordination problem (distinguishing capable from incapable) while simultaneously solving an extraction problem (restricting supply, capturing rents). The rising theater_ratio (0.42 \u2192 0.58) suggests that as alternatives emerge, gatekeepers are responding not by improving coordination (demonstrating actual competence value) but by increasing extraction (adding requirements, stacking credentials, increasing gatekeeping theater)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "professional_licensing_extraction",
+      "educational_credentialism",
+      "organizational_hierarchy_preservation"
+    ],
+    "dual_formulation_note": "Institutional gatekeeping decomposes into several structurally distinct constraints: professional licensing (regulatory gatekeeping with legal enforcement), educational credentialism (academic gatekeeping with time/cost barriers), and organizational hierarchy (internal gatekeeping with career progression barriers). Each has its own epsilon value and network of affected constraints. This story addresses the generic institutional gatekeeping mechanism; domain-specific stories address licensing (higher epsilon, higher legal enforcement overhead) and credentialism (higher theater ratio, lower legitimate competence signal)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

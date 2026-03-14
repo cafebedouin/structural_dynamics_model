@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "information_asymmetry_labor_markets",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "infoasym"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Information Asymmetry in Labor Markets",
+    "topic_domain": "economic/labor",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "employers",
+      "credential_gatekeepers"
+    ],
+    "victims": [
+      "job_seekers",
+      "workers_without_signals"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Unscreened Worker",
+      "comment": "PERSPECTIVE 1: UNSCREENED WORKER (SNARE) \u2014 Workers without elite credentials or social networks face systematic extraction through wage suppression and exclusion from high-opportunity positions. No exit option: alternative labor markets (gig economy, informal sector) offer lower pay and worse conditions. Employers capture information advantage completely. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Credentialed Worker",
+      "comment": "PERSPECTIVE 2: CREDENTIALED WORKER (TANGLED ROPE) \u2014 Workers with recognized credentials experience the constraint as mixed: it coordinates efficient matching (employers can trust degree signals) AND extracts through credential cost and credential inflation requirements. Some agency through credential switching costs but meaningful extraction through necessary education expense. Both coordination and asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Employer",
+      "comment": "PERSPECTIVE 3: EMPLOYER (ROPE) \u2014 Experiences the constraint as pure coordination: information asymmetry is solved by credential screening, reference checks, and interview protocols. These mechanisms enable matching of worker skills to job requirements with manageable screening costs. Net beneficiary with optionality to adjust screening intensity. Low experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Credential Institution",
+      "comment": "PERSPECTIVE 4: CREDENTIAL INSTITUTION (TANGLED ROPE) \u2014 Universities and professional certifying bodies benefit from information asymmetry (extraction rent through tuition and credentialing fees) while providing genuine coordination (signal of competence). Constrained by regulatory requirements and accreditation standards. Active enforcement through credential gatekeeping. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Alternative Credentialing Coalition",
+      "comment": "PERSPECTIVE 5: ALTERNATIVE CREDENTIALING COALITION (SCAFFOLD) \u2014 Bootcamps, online certifications (Coursera, edX), skills-based hiring, and portfolio assessment represent organized attempts to bypass traditional credential gatekeeping. These create parallel verification pathways with lower cost. Sunset logic: as employer norms shift toward skills assessment (GitHub portfolios, project work, demonstrated output), the traditional credential monopoly weakens. Estimated sunset: 15-25 years for complete norm shift."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Degree-Obsessed Hiring Manager",
+      "comment": "PERSPECTIVE 6: DEGREE-OBSESSED HIRING MANAGER (PITON) \u2014 Many employers continue credential-only screening (degree required even for roles where skills matter more) despite evidence that credentials poorly predict actual job performance. The ritual persists through institutional inertia: HR departments maintain degree requirements because alternatives require policy change and risk management. Theater ratio high because screening theater (interview panels, reference checks) substitutes for actual skill assessment. The constraint is maintained by performative institutional behavior rather than functional necessity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, information asymmetry in labor markets appears as an immutable feature: employers can never perfectly observe worker quality, so screening mechanisms are inherently necessary. Verification lag between credential and actual performance is fundamental to how labor markets function. However, the structural data contradicts this naturalization \u2014 information asymmetry is amplified by credential gatekeeping policies and hiring norms, not determined by physics. The mountain classification is a false summit revealing how institutional arrangements masquerade as natural limits."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "credential_signal_quality",
+      "question": "What proportion of wage differences attributed to information asymmetry actually reflects credential signal quality versus credential gatekeeping extraction?",
+      "resolution_mechanism": "Comparative analysis of wage premiums for credentialed vs non-credentialed workers in roles with measurable output (sales commissions, project management); correlation between credential specificity and actual job performance metrics",
+      "impact": "If signal quality dominates: credentialing is primarily coordination, extractiveness lower. If gatekeeping dominates: credentialing is primarily extraction, extractiveness higher.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of wage differences from signal quality vs gatekeeping extraction"
+    },
+    {
+      "id": "alternative_screening_effectiveness",
+      "question": "Do skills-based hiring, portfolio assessment, and work trials successfully identify high-performing workers at rates comparable to credential screening?",
+      "resolution_mechanism": "Longitudinal performance tracking for workers hired via credential screening vs alternative pathways; retention rates, productivity metrics, promotion velocity; error rates (false positives and false negatives) across screening mechanisms",
+      "impact": "If alternative screening equally effective: scaffold sunset is achievable, constraint can shift toward lower extractiveness. If significantly worse: credential gatekeeping has genuine functional value despite high theater ratio.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Effectiveness of alternative screening mechanisms compared to credentials"
+    },
+    {
+      "id": "network_effects_credential_monopoly",
+      "question": "To what extent does credential value persist due to network effects (everyone wants degrees because employers want degrees) versus genuine signal quality?",
+      "resolution_mechanism": "Controlled experiments in hiring: identical candidates presented with/without degrees; comparison of employer decision patterns across industries with different credential norms; analysis of credential demand elasticity to signals of actual skills",
+      "impact": "If primarily network effects: credential requirement is coordination failure (all-pay auction dynamic), easily disrupted by norm shift. If partly genuine signal: alternative credentials will struggle to fully displace traditional ones.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Network effects versus genuine signal quality in credential value"
+    },
+    {
+      "id": "information_asymmetry_measurement",
+      "question": "How is information asymmetry magnitude estimated? Is it measured as wage variance attributable to unobserved worker quality, or as the cost of screening mechanisms, or as credential inflation premium?",
+      "resolution_mechanism": "Meta-analysis of labor economics literature; mapping of different measurement methodologies to extractiveness values; sensitivity analysis of base_properties.extractiveness to measurement choice",
+      "impact": "If extractiveness value depends heavily on measurement methodology, this is a false constraint (observable-dependent) and should be decomposed into multiple stories per \u03b5-invariance principle.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Measurement methodology dependence of information asymmetry magnitude"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.59
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Information asymmetry in labor markets creates a structural tension between the legitimate coordination problem (employers cannot directly observe worker quality) and extractive credential gatekeeping (institutional actors capture rents by controlling the signals employers rely on). The constraint has intensified over recent decades as education costs have risen faster than wage growth, while simultaneously alternative credentialing pathways (bootcamps, online certifications, skills-based hiring) have emerged to challenge the traditional university-degree monopoly. This constraint exhibits all six DR types depending on the observer's structural position: it appears as pure extraction (snare) to workers without credentials, as mixed coordination-extraction (tangled rope) to credentialed workers and credential institutions, as pure coordination (rope) to employers who benefit from screening mechanisms, as a solvable temporary problem (scaffold) to alternative credentialing movements, as a degraded ritual (piton) to hiring managers who maintain degree requirements despite evidence they predict performance poorly, and as an immutable natural law (mountain) to analysts who treat information asymmetry as inherent to labor markets. The rising extractiveness trajectory (0.35 \u2192 0.52) reflects credential inflation: the threshold credential requirement for entry-level positions has escalated, increasing extraction costs for workers. The theater ratio rise (0.48 \u2192 0.64) indicates that credential screening has become increasingly performative as degree holders proliferate but actual job-relevant skills diverge from curriculum.",
+    "key_agents": [
+      "Workers without credentials: Primary victims (powerless/trapped) \u2014 face wage suppression, job exclusion, and forced acceptance of lower-quality employment",
+      "Credentialed workers: Secondary victims (moderate/constrained) \u2014 benefit from signal value but bear extraction through escalating education costs and credential inflation",
+      "Employers: Primary beneficiaries (institutional/arbitrage) \u2014 solve screening problem cost-effectively through credential filtering; capture wage surplus from information advantage",
+      "Universities and professional bodies: Secondary beneficiaries (institutional/constrained) \u2014 extract tuition rents while providing genuine credentialing signal; constrained by accreditation requirements",
+      "Alternative credentialing providers: Organized challengers (organized/mobile) \u2014 building parallel verification systems with sunset logic; not yet fully replacing traditional credentials",
+      "Hiring managers and HR departments: Institutional actors maintaining piton (powerful/mobile) \u2014 persist with degree requirements through institutional inertia and risk aversion despite low predictive power",
+      "Analytical observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing institutional credential arrangement as immutable feature of labor market functioning"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Information asymmetry creates genuine coordination value (employers need screening mechanisms) but extraction is substantial and rising. The base value reflects: (1) wage suppression from unequal information (employers capture surplus), (2) credential inflation (workers must overeducate to meet arbitrary thresholds), (3) credential gatekeeping rents (universities extract tuition revenue), and (4) exclusion of non-credentialed workers from opportunity. The rising trajectory indicates escalating credential requirements beyond actual job-relevant skill levels. Suppression (0.58): Moderate-high. Workers face multiple barriers: education costs create financial dependency on credential institutions, social networks concentrate credential access by class/race, alternative labor markets offer worse conditions (wage lower, hours longer, benefits absent), career path penalties for credential gaps, and institutional inertia locks employers into degree-only screening. Suppression is not total because some alternative credentialing exists and some employers are shifting to skills-based hiring. Theater ratio (0.64): Moderate-high. Screening mechanisms have significant performative content: interview panels assess personality/cultural fit more than job-relevant skills, reference checks are predictable rather than informative, degree requirements persist for roles where on-the-job training would be equal/better, and hiring criteria diverge from actual job performance metrics. Theater has increased as credential inflation widened gap between degree signals and demonstrated skills.",
+    "directionality_logic": "Each perspective's directionality derives from structural position relative to information extraction flow. Unscreened workers face maximum directionality (d \u2248 0.95): trapped exit + full victim status \u2192 f(d) \u2248 1.42 \u2192 high experienced \u03c7. Credentialed workers face intermediate directionality (d \u2248 0.55): constrained exit + partial victim status (also benefit from credential signal) \u2192 f(d) \u2248 0.75 \u2192 moderate \u03c7. Employers face low directionality (d \u2248 0.15): arbitrage exit + full beneficiary status \u2192 f(d) \u2248 -0.01 \u2192 negative/minimal \u03c7 (they experience the constraint as coordination solution, not extraction). Credential institutions face low-intermediate directionality (d \u2248 0.35): constrained exit (regulatory requirements) + mixed beneficiary/victim (extract tuition but provide genuine signal) \u2192 f(d) \u2248 0.30 \u2192 moderate \u03c7. Alternative credentialing coalition faces intermediate directionality (d \u2248 0.50): mobile exit + neither pure beneficiary nor victim (external challengers) \u2192 f(d) \u2248 0.65 \u2192 moderate \u03c7. The piton perspective derives from theater_ratio (0.64) exceeding the gate threshold (0.50), not from high \u03c7. The mountain perspective is classified as false summit by the engine because accessibility_collapse will be low (credential monopoly is not inescapable; alternative pathways exist) and resistance will be moderate (institutional forces defend credentials, not laws of nature).",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival divergence across power positions. The unscreened worker sees pure extraction (snare) \u2014 they are systematically disadvantaged with no exit. The credentialed worker sees mixed extraction-coordination (tangled rope) \u2014 credentials solved their information problem but at high cost. The employer sees pure coordination (rope) \u2014 credential screening is their cost-effective solution to a real problem. The credential institution sees mixed (tangled rope) \u2014 they coordinate educational signaling while extracting tuition rents. The alternative credentialing coalition sees a temporary problem with a solution path (scaffold) \u2014 employer norms are shifting toward skills-based hiring. The hiring manager who insists on degrees despite irrelevance sees only ritual (piton) \u2014 the degree requirement persists through institutional habit. The analytical observer who believes information asymmetry is inherent risks naturalizing a contingent institutional arrangement (false summit mountain). The gap is sharpest between the powerless worker (snare) and the employer (rope): identical structural phenomenon experienced as maximum extraction vs minimal extraction.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: This constraint's mandatrophy is resolved by recognizing that information asymmetry has both genuine coordination function (screening heterogeneous worker quality) and genuine extraction function (credential gatekeeping rents, wage suppression through information monopoly). The classification as tangled rope (not pure rope or pure snare) captures this hybrid. The mandatrophy would arise if an analyst tried to classify this as pure rope (all coordination, no extraction) or pure snare (all extraction, no coordination). The data prevents this misclassification: beneficiaries exist (employers, credential institutions) showing coordination function exists; victims exist (unscreened workers, credentialed workers bearing education costs) showing extraction exists; active enforcement is required (credential gatekeeping must be continuously defended against alternative pathways). The perspectival gap between employer (rope) and unscreened worker (snare) is not an error \u2014 it reflects real structural difference: employers genuinely benefit from the coordination solution, while excluded workers genuinely suffer the extraction. Both perspectives are locally accurate from their structural position."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "credential_inflation",
+      "social_capital_concentration",
+      "wage_inequality_structural"
+    ],
+    "dual_formulation_note": "Information asymmetry in labor markets decomposes into multiple structurally distinct constraints. This story covers the screening mechanism constraint (extractiveness primarily from credential gatekeeping and information monopoly). Upstream constraint credential_inflation (extractiveness from escalating education cost requirements) and social_capital_concentration (extractiveness from unequal access to networks and signaling opportunities) are separate stories with their own \u03b5 values. All three are linked by affects_constraints to show institutional coupling."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.35
+    }
+  ]
+}

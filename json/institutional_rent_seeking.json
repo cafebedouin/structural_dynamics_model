@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "institutional_rent_seeking",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rentseek"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Institutional Rent Seeking and Regulatory Capture",
+    "topic_domain": "political_economy/institutional_dynamics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_firms",
+      "regulatory_agencies"
+    ],
+    "victims": [
+      "new_market_entrants",
+      "consumer_surplus",
+      "economic_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Excluded Entrepreneur",
+      "comment": "PERSPECTIVE 1: EXCLUDED ENTREPRENEUR (SNARE) \u2014 New market entrants face regulatory barriers designed to protect incumbents. Licensing requirements, compliance costs, and discretionary approval gates create insurmountable barriers to entry. The constraint extracts opportunity rents from aspiring competitors with no coordination benefit and no realistic exit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Small Incumbent Firm",
+      "comment": "PERSPECTIVE 2: SMALL INCUMBENT FIRM (TANGLED ROPE) \u2014 Benefits from regulatory protection against new entrants (coordination of market stability) but bears ongoing compliance costs and faces extraction by larger competitors who can better navigate regulatory complexity. Mixed experience: protected but also constrained by the same rules they lobbied for."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Incumbent Oligopoly",
+      "comment": "PERSPECTIVE 3: INCUMBENT OLIGOPOLY (ROPE) \u2014 Large firms experience the constraint as pure coordination: regulatory barriers prevent competition and stabilize market share. Minimal suppression from their perspective because compliance is routine. Net beneficiary \u2014 extraction runs toward this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Agency",
+      "comment": "PERSPECTIVE 4: REGULATORY AGENCY (TANGLED ROPE) \u2014 Genuine coordination function: manages market stability and protects consumer welfare (institutional mandate). Simultaneous extraction: captured by incumbent firms through revolving-door personnel exchange, lobbying pressure, and career incentives aligned with industry preferences. Caught between statutory duty and de facto capture."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Protective Regulation Framework",
+      "comment": "PERSPECTIVE 5: PROTECTIVE REGULATION FRAMEWORK (PITON) \u2014 The formal regulatory apparatus maintains a theater of impartial review, but the functional purpose (protecting consumer welfare, enabling competition) has atrophied. Regulations persist through institutional inertia, justified by safety/quality narratives that once were genuine but now primarily serve incumbent protection."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational view, some regulatory structure is necessary (genuine coordination for market stability and consumer protection). But the analytical observer sees clear evidence of asymmetric extraction: regulatory barriers are designed and maintained by incumbent interests, not by impartial welfare maximization. The coordination function and extraction mechanism are structurally inseparable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legitimate_vs_extractive_regulation",
+      "question": "What portion of regulatory requirements serve legitimate consumer protection vs incumbent rent extraction?",
+      "resolution_mechanism": "Comparative analysis of regulatory stringency across jurisdictions; correlation between regulatory intensity and consumer outcomes; empirical testing of stated safety/quality rationales",
+      "impact": "If legitimate portion > 60%: reclassify toward pure rope. If legitimate portion < 30%: reclassify toward snare. Current classification assumes 40-50% legitimate coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Portion of regulation serving legitimate vs extractive purposes"
+    },
+    {
+      "id": "regulatory_capture_mechanism_intensity",
+      "question": "Is the capture mechanism primarily through personnel exchange (revolving door), lobbying pressure, or ideological alignment?",
+      "resolution_mechanism": "Network analysis of personnel flows between regulator and industry; campaign finance and lobbying expenditure tracking; regulatory decision correlation with industry preferences",
+      "impact": "If personnel exchange dominates: capture is structural and near-permanent. If lobbying dominates: capture is contingent on political coalitions. Different mechanisms imply different sunset trajectories.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Primary mechanism of regulatory capture"
+    },
+    {
+      "id": "alternative_market_entry_pathways",
+      "question": "Do non-regulated alternative service providers (e.g., online platforms, unregistered practitioners, informal markets) effectively bypass the regulatory barrier?",
+      "resolution_mechanism": "Market share analysis of regulated vs alternative providers; consumer preference data; regulatory enforcement effectiveness against alternatives",
+      "impact": "If alternatives are viable: exit is not trapped (reclassify to constrained). If alternatives are suppressed/illegal: exit remains trapped (snare confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative pathways bypass regulatory barriers"
+    },
+    {
+      "id": "rent_extraction_magnitude_vs_coordination_value",
+      "question": "What is the ratio of extractive rents captured by incumbents to the social value of the coordination function provided by regulation?",
+      "resolution_mechanism": "Deadweight loss calculation; consumer surplus reduction from restricted competition; comparison to estimated coordination costs of non-regulatory alternatives",
+      "impact": "If rent >> coordination value: snare classification dominates. If rent < coordination value: rope or tangled rope remains accurate.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Ratio of extractive rents to coordination value"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Institutional rent seeking occurs when organizations use their regulatory or market power to extract value without creating genuine economic surplus \u2014 using rules designed to coordinate legitimate collective problems to instead protect themselves from competition and redistribute wealth toward incumbents. This constraint exhibits the classic tangled rope structure: legitimate coordination functions (consumer protection, market stability, quality assurance) coexist with asymmetric extraction (barrier-to-entry protection, incumbent insulation, regulatory capture). The same regulatory apparatus that genuinely prevents predatory practices also prevents legitimate new entrants from competing. The constraint has intensified over the measurement interval as regulatory complexity has increased, theater has risen, and the capture mechanism has deepened. New entrants face an explicit regulatory moat designed and maintained by the very agencies ostensibly protecting consumer interests \u2014 creating a structural lock-in where the coordination problem (we need market stability) becomes the extraction mechanism (only we can enter because only we can afford compliance).",
+    "key_agents": [
+      "New Market Entrants: Primary victims (powerless/trapped) \u2014 face insurmountable regulatory barriers designed to exclude them",
+      "Incumbent Oligopoly: Primary beneficiaries (institutional/arbitrage) \u2014 capture protected market share and extraction rents",
+      "Regulatory Agency: Captured actor (institutional/constrained) \u2014 maintains genuine statutory duties while serving incumbent interests through de facto capture",
+      "Small Incumbent Firms: Secondary victims (moderate/constrained) \u2014 protected from new entry but extracted by larger competitors and compliant to the same rules",
+      "Consumer Surplus: Structural victim (powerless/trapped) \u2014 restricted choice and higher prices from reduced competition; cannot participate in regulatory process",
+      "Economic Efficiency: Abstract victim (analytical/trapped) \u2014 allocative losses from protected inefficient incumbents"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts significant rents from excluded competitors and consumers, but the extraction is not maximal (which would be >0.70) because genuine coordination benefits exist \u2014 regulations do prevent some fraud and destabilizing behavior. The extractiveness has grown from 0.35 to 0.58 over the interval as incumbents have learned to exploit regulatory complexity and regulatory capacity has not kept pace with market sophistication. Suppression (0.65): High. Multiple barriers prevent exit and alternatives: legal prohibition on unregulated provision in many sectors, enforcement against informal providers, high compliance costs that scale with firm size, and information asymmetries about requirements. These are not trivial barriers \u2014 they constitute real suppression of alternatives. Theater ratio (0.68): Moderate-high. Regulatory reviews maintain an appearance of impartial safety assessment but increasingly serve as venue for incumbent lobbying and barrier reinforcement. The performative content has increased as the technical justification for many regulations has weakened (outdated standards maintained for incumbents) while the compliance theater has expanded.",
+    "perspectival_gap": "The analytical observer's classification (tangled rope) aligns with the regulatory agency's lived experience (tangled rope) and the consumer/excluded agent's lived experience (snare, from their perspective). The incumbent's rope classification is their genuine subjective experience but misses the extraction vector entirely \u2014 they see only the coordination benefit that accrues to them. The small incumbent's tangled rope classification reflects their split position: protected but also constrained. The piton classification (the regulatory framework itself) reflects that the apparatus has become largely performative \u2014 maintained through institutional inertia and political economy, not genuine functional necessity. The deepest perspectival gap is between the powerless excluded entrepreneur (snare) and the institutional incumbent (rope) \u2014 they experience maximum directionality difference (d: 0.95 vs 0.15) due to their structural positions.",
+    "directionality_logic": "Directionality (d) values are derived from beneficiary/victim status and exit options. The excluded entrepreneur has d \u2248 0.95 (full target with no exit) \u2192 high f(d) \u2192 high chi experienced. The incumbent oligopoly has d \u2248 0.15 (beneficiary with arbitrage exit) \u2192 negative f(d) \u2192 low/negative chi experienced. The regulatory agency has d \u2248 0.50 (symmetric: genuine mission vs capture pressure) but this is modulated by their power level (institutional) and exit options (constrained \u2014 they cannot simply abandon their statutory role) \u2192 canonical d \u2248 0.50 \u00d7 institutional context \u2192 moderate d. The consumer surplus agent would have d \u2248 1.0 (full victim) but this is an abstract collective, not an organized political actor, so their power is listed as powerless but their coordination capacity approaches zero. The constraint's effective directionality concentrates extraction on those with least power and least exit capacity.",
+    "mandatrophy_analysis": "Institutional rent seeking resolves the mandatrophy by showing that tangled rope is the correct type when genuine coordination and extraction coexist structurally. The constraint is NOT pure rope (pure coordination with no asymmetric extraction) because the regulatory barriers serve no coordination function that couldn't be served by less restrictive means \u2014 the barriers exist precisely to extract rents. The constraint is NOT pure snare (pure extraction with no coordination) because genuine harm does happen from unregulated markets (fraud, quality failures, destabilizing competition) and the regulatory apparatus does prevent some of these. The coordination function and extraction function are inseparable: they are achieved through the same regulatory mechanism. Dismantling the extraction would require also dismantling the coordination benefit, which is why the constraint persists despite clear inefficiency \u2014 the beneficiaries have successfully framed rent extraction as necessary coordination cost."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture",
+      "market_entry_barriers",
+      "consumer_welfare_extraction"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.5
+    }
+  ]
+}

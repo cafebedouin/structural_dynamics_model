@@ -1,0 +1,227 @@
+{
+  "header": {
+    "constraint_id": "data_asymmetry_labor_markets",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "datalm"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Information Asymmetry in Labor Markets",
+    "topic_domain": "economic/labor",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "employers",
+      "recruitment_platforms"
+    ],
+    "victims": [
+      "job_seekers",
+      "wage_transparency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Job Seeker",
+      "comment": "PERSPECTIVE 1: JOB SEEKER (SNARE) \u2014 Trapped in asymmetric information environment. Lacks access to internal salary data, performance metrics, promotion pathways, and competing offers until late in hiring process. Cannot walk away from labor market entirely without existential risk. Experiences maximum extraction through wage suppression and information disadvantage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Organizing Coalition",
+      "comment": "PERSPECTIVE 2: LABOR COALITION (TANGLED ROPE) \u2014 Organized agents (unions, worker advocacy groups) perceive genuine coordination function: matching workers to roles requires some information flow. But also perceive asymmetric extraction: employers control what information flows and when. Can organize to demand salary transparency, but face employer resistance and legal/contractual barriers to information sharing."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Employer",
+      "comment": "PERSPECTIVE 3: EMPLOYER (ROPE) \u2014 Net beneficiary of information asymmetry. Controls information disclosure timing and content. Experiences the constraint as coordination: job descriptions, interviews, and reference checking serve legitimate matching function. Can arbitrage between labor markets (hiring remotely, relocating positions) if transparency pressures rise in one jurisdiction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The High-Skill Worker",
+      "comment": "PERSPECTIVE 4: HIGH-SKILL WORKER (TANGLED ROPE) \u2014 Mobile labor with access to internal networks, headhunters, and competing offers. Still operates within information asymmetry but has exit options and alternative information channels. Experiences constraint as less extractive than powerless workers but still present \u2014 cannot fully observe internal salary bands or cultural fit metrics until embedded."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Recruitment Platform",
+      "comment": "PERSPECTIVE 5: RECRUITMENT PLATFORM (ROPE) \u2014 Coordinates matching between workers and employers. Extracts value through access fees, featured listing, and data analytics. Benefits from information asymmetry (platforms control what candidate and employer data is visible). Can arbitrage between labor markets and shift platform rules if transparency pressures rise."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Transparency Mandate Movement",
+      "comment": "PERSPECTIVE 6: TRANSPARENCY MANDATE COALITION (SCAFFOLD) \u2014 Organized agents (labor departments, legislatures, worker advocates) imposing salary transparency requirements (NYC, California, EU models). See constraint as temporary and solvable: legal mandates to disclose salary ranges in job postings create alternative information pathways. Extract low chi because sunset is explicit \u2014 regulations creating sunset with 5-10 year compliance horizon."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Confidentiality Norm",
+      "comment": "PERSPECTIVE 7: CONFIDENTIALITY NORM (PITON) \u2014 Deep institutional norm that salary discussion is private/taboo persists despite being organizationally inertial. The norm served coordination function when labor markets were local and repeated transactions created incentive alignment. Now largely performative: confidentiality persists through cultural enforcement despite worker mobility and impersonal hiring. Theater ratio high because enforcement ritual (\"don't discuss compensation\") exceeds functional benefit."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational scale, information asymmetry appears inherent to all market matching: one party always has more information about their own quality/constraints/alternatives. Hiring is fundamentally about incomplete information. This view naturalizes the contingent institutional arrangements (nondisclosure, timing control) as laws of labor economics. However, structural data contradicts mountain classification \u2014 empirical variation across jurisdictions and time periods reveals this as false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "wage_transparency_counterfactual",
+      "question": "Would complete wage transparency reduce or increase overall wage inequality and labor market efficiency?",
+      "resolution_mechanism": "Comparative analysis of jurisdictions with salary disclosure mandates (California, NYC, EU) vs without; measurement of wage compression, hiring velocity, and labor market participation rates pre/post transparency legislation",
+      "impact": "If reduces inequality: constraint is primarily extractive (snare). If increases inequality or reduces efficiency: constraint includes genuine coordination function (tangled_rope). If neutral: constraint is pure coordination with theatrical suppression (piton).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether wage transparency reduces or increases inequality"
+    },
+    {
+      "id": "employer_information_necessity",
+      "question": "How much information asymmetry is structurally necessary for employers to make hiring decisions versus how much is extractive rent-seeking?",
+      "resolution_mechanism": "Analysis of interview process: (a) information employers require to assess job fit vs (b) information employers extract to reduce competing offers and suppress negotiations. Measurement of correlation between interview depth and job performance prediction.",
+      "impact": "High ratio of necessary/extractive: constraint is tangled rope (coordination + extraction). Low ratio: constraint is snare with theatrical coordination claims. If dominated by performance prediction: reveals coordination function is real.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of information asymmetry that is structurally necessary"
+    },
+    {
+      "id": "platform_aggregation_effects",
+      "question": "Do recruitment platforms reduce overall information asymmetry (by aggregating job postings and candidate profiles) or amplify it (by controlling information visibility and ranking)?",
+      "resolution_mechanism": "Measurement of information accessibility: time to job match, offer acceptance rates, wage compression, hiring velocity with vs without platforms. Analysis of platform algorithmic ranking and recommendation bias.",
+      "impact": "If platforms reduce asymmetry: classification shifts toward Rope for platform perspective. If amplify: platform becomes primary extractor (snare victim becomes recruitment platform victim). If neutral: platform is piton (theatrical matching with degraded function).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether platforms reduce or amplify information asymmetry"
+    },
+    {
+      "id": "reference_checking_asymmetry",
+      "question": "How much of employers' information advantage derives from asymmetric reference checking (they check worker history; workers rarely check employer history) versus wage nondisclosure?",
+      "resolution_mechanism": "Decomposition of information asymmetry sources: survey of worker access to employer reviews/glassdoor vs employer access to background checks/references. Measurement of wage offer variance explained by unobservable employer quality vs worker negotiation suppression.",
+      "impact": "If high proportion from reference asymmetry: constraint partially resolves through worker access to employer reputation (shifts piton/snare to rope). If dominated by wage secrecy: suppression mechanism is primary and requires explicit mandate for resolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of asymmetry from reference checking vs wage secrecy"
+    },
+    {
+      "id": "mandatory_disclosure_unintended_effects",
+      "question": "Do salary transparency mandates produce unintended extraction through alternative channels (non-salary benefits, relocation requirements, performance metrics as proxies)?",
+      "resolution_mechanism": "Post-mandate analysis: measure whether wage suppression is replaced by benefits suppression, increased geographic requirements, higher performance uncertainty, or other compensating mechanisms. Longitudinal tracking of total compensation inequality before/after mandate.",
+      "impact": "If extraction simply shifts: mandatrophy fails and constraint remains tangled rope at lower \u03b5 but same \u03c7. If extraction genuinely reduced: mandate is successful scaffold with real sunset. If extraction increases: unintended consequences reveal structure (constraint moves toward snare with more sophisticated extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether transparency mandates shift extraction to alternative channels"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.54
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Information asymmetry in labor markets creates a structural tension between the legitimate coordination problem of matching workers to roles and the extractive incentive of employers to suppress wage information and control offer timing. Workers lack access to internal salary bands, performance evaluation criteria, promotion pathways, and competing offers until late in hiring processes. Employers control information disclosure timing and content, creating systematic wage suppression and power imbalance. The constraint exhibits characteristics of both pure extraction (snare) for powerless workers and mixed coordination-extraction (tangled rope) for organized labor and mobile workers. The emergence of transparency mandates (California, NYC, EU salary disclosure rules) represents an organized challenge to the constraint's suppression mechanism, creating a scaffold perspective with explicit sunset logic. The deep cultural norm against discussing compensation (piton perspective) persists despite being organizationally inertial, maintained through enforcement ritual rather than functional necessity. From a civilizational scale, information asymmetry appears inherent to labor matching (mountain perspective), but empirical variation across jurisdictions reveals this as false summit \u2014 the constraint is structurally contingent, not natural law.",
+    "key_agents": [
+      "Job Seekers: Primary victim (powerless/trapped) \u2014 lack access to salary data, internal metrics, and competing offers. Cannot exit labor market without existential risk.",
+      "Employers: Primary beneficiary (institutional/arbitrage) \u2014 control information disclosure and extract wage suppression. Can arbitrage between jurisdictions and labor markets.",
+      "Recruitment Platforms: Secondary beneficiary (institutional/arbitrage) \u2014 extract value through access fees and data asymmetry. Control candidate/employer visibility.",
+      "Labor Organizing Coalition: Organized victim (organized/constrained) \u2014 push for transparency mandates; constrained by employer resistance and legal barriers.",
+      "High-Skill Workers: Mobile partial victim (powerful/mobile) \u2014 have alternative information channels and exit options; still operate within asymmetry but less trapped.",
+      "Transparency Mandate Coalition: Organized solver (organized/constrained) \u2014 legislatures, labor departments imposing salary disclosure requirements with explicit sunset horizon.",
+      "Confidentiality Norm: Institutional enforcement mechanism (institutional/arbitrage) \u2014 cultural rule against discussing compensation persists through enforcement ritual.",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as inherent to labor economics."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Elevated. Wage suppression through information control is systematic and affects most labor market participants. However, value is below 0.70 (snare threshold) because: (1) employers derive real coordination benefits from some information asymmetry (assessing job fit requires information workers cannot provide about themselves), and (2) empirical variation shows asymmetry can be reduced through policy without destroying labor matching. The measurement trajectory shows increasing extractiveness over the interval (0.42\u21920.58) reflecting intensification of information concentration through platform dominance and globalization, even as transparency mandates emerge. Suppression (0.62): Moderate-high. Significant barriers to reducing asymmetry include: cultural norms against salary discussion, legal restrictions on information sharing, contractual confidentiality clauses, and employer collective action against disclosure. But suppression is not total \u2014 worker networks, glassdoor reviews, legislation, and union organizing provide alternative information channels and create exit pressure. Theater ratio (0.55): Moderate. The hiring interview ritual includes genuine coordination (assessing fit, communication, cultural alignment) but also performative gatekeeping. Reference checking, behavioral assessments, and certification requirements serve both coordination and suppression functions. Theater increased slightly (0.48\u21920.55) as companies developed more elaborate interview processes that exceed what job performance prediction studies justify.",
+    "perspectival_gap": "This constraint shows stark perspectival divergence across power positions. Powerless job seekers experience pure extraction (snare) \u2014 the constraint offers them no exit and maximum harm. Organized labor experiences mixed coordination and extraction (tangled rope) \u2014 they recognize the legitimate matching function while identifying systematic extraction. Employers experience coordination (rope) \u2014 their perspective centers on legitimate hiring needs while suppressing awareness of their information advantage. High-skill workers experience moderate extraction (tangled rope) \u2014 they have some information channels and alternatives but still operate within the asymmetry. Transparency mandate advocates experience a solvable problem (scaffold) \u2014 the constraint is temporary and has an explicit sunset path through legislation. The confidentiality norm enforcement sees the constraint as natural and necessary (piton with high theater). The civilizational analyst risks seeing immutable law (mountain) \u2014 'information asymmetry is inherent to hiring' \u2014 but the structural data reveals this as false summit: the specific institutional arrangements (wage secrecy, timing control, reference asymmetry) are contingent, not natural.",
+    "directionality_logic": "Directionality varies sharply by agent structural position. Job seekers are trapped victims: d \u2248 0.95, experiencing maximum f(d) \u2248 1.42, amplified by scope \u03c3(national=1.0). Employers are arbitrage beneficiaries: d \u2248 0.05, experiencing negative f(d) \u2248 -0.12, extraction runs toward them. Organized labor at constrained exits: d \u2248 0.60 (between victim and beneficiary, asymmetrically burdened), f(d) \u2248 0.85. High-skill mobile workers: d \u2248 0.45 (more balanced than powerless), f(d) \u2248 0.50. Platforms at institutional/arbitrage: d \u2248 0.10 (beneficiaries but less central than employers), f(d) \u2248 -0.05. The transparency mandate coalition operates from outside the direct extraction flow, seeking to reset the constraint structure \u2014 d \u2248 0.50 (neutrally positioned relative to the extraction, but constrained by employer resistance). The directional asymmetry is sharp: the constraint concentrates extraction on the most powerless and least mobile agents while distributing benefits to the most institutional and most mobile.",
+    "mandatrophy_analysis": "Mandatrophy is resolved through the scaffold perspective and temporal measurement trajectory. The constraint exhibits genuine coordination function (job matching requires information flow \u2014 employers need to assess fit, workers need to assess opportunities). But it also exhibits asymmetric extraction (information control suppresses wages and worker agency). The tangled rope classification at the base level correctly identifies both functions. The snare classification from the powerless worker perspective reveals the extraction dominates their experience. The scaffold classification from the transparency mandate perspective reveals the constraint is solvable through institutional means (salary disclosure laws, union organizing, platform transparency requirements). The temporal data shows extractiveness increasing (0.42\u21920.58) despite transparency mandate emergence, suggesting the constraint is adapting rather than dissolving \u2014 information control shifts from wages to benefits, performance metrics, and algorithmic ranking. The scaffold has a real sunset if transparency mandates achieve sufficient adoption and enforce-ability; but the unresolved omega variable (whether mandates simply shift extraction to alternative channels) indicates the sunset may be partial. The piton classification of the confidentiality norm reveals the constraint is partly maintained through institutional inertia \u2014 the norm serves enforcement function but has largely lost coordination necessity. False mountain detection at the analytical level confirms the constraint is contingent institutional arrangement, not natural law of labor economics \u2014 empirical variation and legislative solutions prove alternatives exist."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wage_suppression_mechanisms",
+      "worker_mobility_barriers",
+      "employment_contract_lock_in"
+    ],
+    "dual_formulation_note": "Data asymmetry in labor markets is upstream of wage suppression mechanisms and worker mobility constraints. Separate stories should decompose: (1) wage secrecy-specific extraction (\u03b5\u22480.52, snare/tangled rope), (2) performance metric opacity (\u03b5\u22480.48, tangled rope), (3) internal mobility barriers from hidden promotion criteria (\u03b5\u22480.55, tangled rope). Each story has different \u03b5 and different exit options for affected agents. The family is linked through platform aggregation (recruitment platforms amplify all three)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

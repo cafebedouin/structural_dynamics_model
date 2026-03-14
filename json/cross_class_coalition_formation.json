@@ -1,0 +1,213 @@
+{
+  "header": {
+    "constraint_id": "cross_class_coalition_formation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ccf"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Cross-Class Coalition Formation Constraint",
+    "topic_domain": "political_economy/collective_action",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "organized_working_class",
+      "professional_middle_class"
+    ],
+    "victims": [
+      "precariat_workers",
+      "marginalized_communities"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Precariat Worker",
+      "comment": "PERSPECTIVE 1: PRECARIAT WORKER (SNARE) \u2014 Structurally excluded from coalition benefits. Trapped by gig economy conditions, lack of stable employment, and isolation from organized labor infrastructure. Bears costs of coalition formation (union dues pressure, credential requirements) without access to its protections. Maximum extraction with minimal exit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Organized Working Class",
+      "comment": "PERSPECTIVE 2: ORGANIZED WORKING CLASS (TANGLED ROPE) \u2014 Primary beneficiary of coalition structure (union scale, workplace protections) but faces extraction through professional-class gatekeeping within the coalition. Benefits from coordination mechanism while bearing asymmetric costs of maintaining coalition discipline. Constrained by mobility barriers within labor market stratification."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Professional Middle Class",
+      "comment": "PERSPECTIVE 3: PROFESSIONAL MIDDLE CLASS (ROPE) \u2014 Net beneficiary (institutional/arbitrage). Experiences coalition as pure coordination mechanism: political voice, regulatory access, counter-lobbying power against capital. Can arbitrage between political coalitions if terms deteriorate. Minimal experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "The Precariat Aspirant",
+      "comment": "PERSPECTIVE 4: PRECARIAT ASPIRANT (TANGLED ROPE) \u2014 Structurally mobile (could exit into gig economy or informal labor) but identity-locked to working-class coalition by family history, cultural identity, and ideological commitment. Benefits from coalition protections theoretically but unable to access them due to precariat status. The identity lock prevents exit despite high structural mobility. Classification driven by identity_locked exit option producing rope at biographical horizon, converting to tangled_rope via inherited victim status."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Coalition Apparatus",
+      "comment": "PERSPECTIVE 5: COALITION APPARATUS (PITON) \u2014 Formal structures (unions, professional associations, political machines) that coordinate coalition activity. Theater ratio 0.65 reflects performative aspects: constituency theater (parades, rallies, media campaigns) that maintain coalition visibility despite declining material enforcement capacity. Coalition maintenance increasingly theatrical as material leverage (membership numbers, strike capacity) has declined. Institutional arbitrage options allow apparatus to shift emphasis between coalition partners."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Structural Inevitability View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / STRUCTURAL INEVITABILITY (MOUNTAIN) \u2014 From civilizational/global scope, class coalition formation faces irreducible coordination problems: divergent material interests (workers vs professionals), information asymmetries (about real vs stated preferences), and commitment credibility issues (each class can benefit from defection). These constraints appear immutable across all historical contexts. However, the structural data contradicts mountain classification \u2014 the moderate extractiveness, suppression, and theater values reveal this as contingent institutional arrangement rather than natural law. False summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "identity_lock_mechanism_ambiguity",
+      "question": "Is the precariat aspirant's identity lock to working-class coalition genuine cognitive fusion or rationalization of material dependency?",
+      "resolution_mechanism": "Post-exit trajectory analysis: if precariat workers who exit coalition organizing maintain working-class identity and ideological commitment despite material non-participation, the identity lock is independent of access. If identity dissolves upon exit, the lock was rationalization of material status.",
+      "impact": "If genuine identity lock: perspective correctly classifies as tangled_rope. If rationalization: should reclassify as snare \u2014 the exit option is constrained, not identity_locked. Changes directionality from 0.50 (identity_locked) to 0.85 (constrained victim).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether precariat aspirant identity lock is cognitive or material"
+    },
+    {
+      "id": "professional_class_extraction_visibility",
+      "question": "Do professional-class coalition members perceive themselves as extracting from organized workers or as equal partners in shared struggle?",
+      "resolution_mechanism": "Survey/interview data on professional perception of wage ratios, credential gatekeeping, leadership concentration. Compare perceived vs actual distribution of coalition resources and decision-making power.",
+      "impact": "If professionals perceive extraction: may reframe their perspective from rope to tangled_rope, creating perspectival gap within institutional power class. If professionals deny extraction: suggests identity-locked perspective among institutional actors themselves.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Professional class perception of extraction within coalition"
+    },
+    {
+      "id": "coalition_formation_prerequisite_costs",
+      "question": "What minimum mobilization costs (organizing infrastructure, communication channels, credential vetting) are inherent to cross-class coalition formation vs contingent to current institutional arrangements?",
+      "resolution_mechanism": "Historical comparison across coalition formation efforts; analysis of costs that scale with coalition size vs fixed structural costs. Estimation of minimum viable coalition communication infrastructure.",
+      "impact": "If costs are inherent/unavoidable: extractiveness should be classified as higher (\u03b5 > 0.70) and reclassified as snare from precariat perspective. If costs are contingent/reducible: current \u03b5=0.58 is accurate; technological/organizational innovation could reduce extraction significantly.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Inherent vs contingent costs of cross-class coalition formation"
+    },
+    {
+      "id": "marginalized_community_exclusion_mechanism",
+      "question": "Is marginalized community exclusion from coalition due to structural incompatibility of interests or to institutional gatekeeping by organized class members?",
+      "resolution_mechanism": "Analysis of formal coalition admission criteria vs informal veto power. Historical cases of attempted inclusion by marginalized groups with documented response from coalition leadership.",
+      "impact": "If structural incompatibility: victim status may be inappropriate \u2014 different coalition may be more compatible. If institutional gatekeeping: confirms tangled_rope structure with asymmetric enforcement benefiting organized class.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Root cause of marginalized community coalition exclusion"
+    },
+    {
+      "id": "mandatrophy_classification_gap",
+      "question": "Is cross-class coalition formation primarily a coordination mechanism (rope) naturalizing into extraction (snare) or a mixed hybrid (tangled_rope) from inception?",
+      "resolution_mechanism": "Historical analysis of early coalition formation: did material benefits initially distribute relatively evenly (rope origin) or was asymmetry present from founding? Longitudinal comparison of extraction ratios across coalition lifecycle.",
+      "impact": "If rope\u2192snare trajectory: explains piton perspective (degraded former function) and suggests reversibility. If tangled_rope from origin: suggests structural necessity of asymmetry and lower probability of significant reform.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether coalition evolved from rope or was always tangled_rope"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Cross-class coalition formation represents a structural constraint on collective political action in which workers, professionals, and marginalized communities attempt to coordinate against concentrated capital. The constraint exhibits the classic hallmark of tangled_rope: genuine coordination function (unified political voice, mutual defense against capital accumulation) coupled with asymmetric extraction (organized working class and professional middle class benefit disproportionately; precariat workers and marginalized communities bear costs without equivalent access). The constraint's theater ratio (0.58) reflects increasing performative content (rallies, media campaigns, electoral theater) as the material coordination capacity has declined (strike rates, union density, membership participation). Suppression (0.65) operates through multiple mechanisms: isolation of precariat workers from formal membership structures, credential gatekeeping by professional class, and organizational discipline enforced through selective benefit distribution. The extractiveness trajectory (0.35 \u2192 0.58 over 50-year interval) shows accumulation of rent-seeking behaviors within the coalition structure itself \u2014 maintenance costs have become extraction.",
+    "key_agents": [
+      "Organized Working Class: Primary beneficiary (organized/constrained) \u2014 captures union scale, workplace protections, political voice. Bears costs of professional-class dominance within coalition.",
+      "Professional Middle Class: Primary beneficiary (institutional/arbitrage) \u2014 captures regulatory access, counter-lobbying power, credential leverage. Can arbitrage between coalitions.",
+      "Precariat Workers: Primary victim (powerless/trapped) \u2014 structurally excluded from coalition infrastructure by gig economy conditions and isolation. Bears costs without access to protections.",
+      "Marginalized Communities: Secondary victim (powerless/trapped) \u2014 excluded through formal criteria and informal gatekeeping. Coalition interests often conflict with direct material interests of marginalized communities.",
+      "Precariat Aspirants: Tertiary victim (moderate/identity_locked) \u2014 identity-locked to working-class coalition by family/cultural heritage but structurally unable to access benefits. Trapped by cognitive frame rather than material barriers alone.",
+      "Coalition Apparatus: Institutional actor (institutional/arbitrage) \u2014 unions, professional associations, political machines that maintain coalition coordination. Experiences constraint as increasingly performative as material leverage declines."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The coalition extracts from precariat and marginalized members through membership expectations, credential requirements, and political discipline while distributing benefits asymmetrically toward organized working class and professionals. The measurement trajectory (0.35\u21920.58) reflects rent-seeking accumulation as coalition leadership developed mechanisms to extract resources from peripheral members. Not as severe as pure snare (\u03b5\u22650.66) because some genuine coordination benefit exists and some mobility options remain. Suppression (0.65): High. Multiple reinforcing mechanisms prevent exit: informal ostracism from working-class communities for coalition defectors, material dependency on union benefits, lack of alternative collective action infrastructure for precariat workers, identity-level integration into working-class identity. Information barriers also suppress: precariat workers may not understand that coalition leadership has shifted toward professional-class interests. Theater ratio (0.58): Moderate-high. Coalition visibility activities (electoral mobilization, public rallies, media campaigns) have become increasingly central to coalition maintenance as material enforcement capacity (ability to strike, mobilize membership) has declined. This suggests piton-trajectory degradation: coalition performing its function theatrically rather than materially.",
+    "perspectival_gap": "The perspective array shows the full range of experienced extractiveness across the class structure. Precariat workers experience snare: high extraction, trapped exit, no coordination benefit. Organized workers experience tangled_rope: genuine coordination benefit (union protections) coupled with extraction through professional-class dominance. Professionals experience rope: pure coordination, arbitrage options, minimal extraction. The precariat aspirant experiences tangled_rope differently: identity-locked to the coalition but structurally unable to access its benefits, creating a gap between identity and material position. The coalition apparatus experiences piton: sees its own function as increasingly performative. The analytical observer risks mountain (immutable conflict between class interests) but the structural data reveals this as naturalization: the extractiveness trajectory and theater growth show the constraint is contingent, not immutable.",
+    "directionality_logic": "Directionality values are derived from structural position within the coalition. Beneficiaries of the coalition structure (organized working class, professional middle class) experience low d-values reflecting their net positive position. Victims of the coalition structure (precariat workers, marginalized communities) experience high d-values reflecting extraction. The precariat aspirant presents a novel case: structurally mobile (could exit into informal economy, gig platforms, or individual precarity) but identity-locked to working-class coalition through family history and ideological commitment. This produces d-value around 0.50 at biographical horizon when identity-locked exit option is applied, which yields rope-type classification \u2014 the agent perceives the constraint as theoretically changeable (via identity shift) even though they cannot currently exercise that exit. This differs sharply from trapped precariat workers for whom d-value remains high (0.90+) regardless of identity considerations, yielding snare classification. The gap between identity_locked and trapped perspectives on the same precariat workers reveals the mechanism of suppression: structural isolation is reinforced by internalized identity commitment.",
+    "mandatrophy_analysis": "This constraint demonstrates mandatrophy resolution through multiple classification types that each capture structural reality. The apparent contradictions (snare + rope + tangled_rope from different perspectives) resolve into a comprehensive picture: cross-class coalition formation genuinely solves collective action problems (rope coordination function) while creating new extraction mechanisms (tangled_rope asymmetry) that trap the most marginalized agents (snare from precariat perspective). The piton perspective (degraded function, performative maintenance) suggests the constraint has drifted from pure rope toward snare across its 50-year lifecycle. The analytical mountain perspective reveals the critical mandatrophy risk: naturalizing class conflict as immutable law ('workers and capital will always conflict') when the actual constraint is the contingent structure of coalition organization itself. Mandatrophy is not resolved \u2014 it is clarified: the constraint is NOT an immutable aspect of collective action but a specific institutional arrangement (union-professional partnership) that could be reorganized to reduce extraction or decomposed into separate coalitions. Current analysis leaves mandatrophy_resolved as false because the structural path to resolution is not yet crystallized in practice."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "union_density_decline",
+      "professional_credentialing_gatekeeping",
+      "precariat_labor_market_segmentation"
+    ],
+    "dual_formulation_note": "Cross-class coalition formation is upstream of specific labor market constraints but represents a distinct structural constraint. Union density decline, professional credentialing gatekeeping, and precariat labor market segmentation are downstream manifestations of coalition structure failures, each with their own \u03b5 values. The coalition constraint coordinates (or fails to coordinate) these subsidiary mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.88
+    }
+  ]
+}

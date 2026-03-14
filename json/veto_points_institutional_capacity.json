@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "veto_points_institutional_capacity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "veto"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Veto Points and Institutional Capacity Mismatch",
+    "topic_domain": "institutional_governance/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "status_quo_defenders",
+      "veto_point_holders"
+    ],
+    "victims": [
+      "reform_constituencies",
+      "policy_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Reform Constituency",
+      "comment": "PERSPECTIVE 1: REFORM CONSTITUENCY (SNARE) \u2014 Trapped by institutional design. Multiple veto points (executive, legislative chamber, judiciary, bureaucracy) require supermajority consensus or unanimous agreement. The constituency seeking change faces an asymmetric burden: reform requires winning support at all veto points; blockade requires only control of one. No exit \u2014 the constituency is embedded in the jurisdiction and cannot opt out of national policy outcomes. Experiences maximum extraction: their preferences are systematically subordinated to those of status quo defenders."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Fragmented Reform Coalition",
+      "comment": "PERSPECTIVE 2: FRAGMENTED REFORM COALITION (TANGLED ROPE) \u2014 Multiple reform movements (labor, environmental, social justice) must coordinate with each other to muster the consensus required by veto-point architecture. This coordination function is genuine \u2014 the coalition solves collective action problems. But the veto-point structure extracts from the coalition: energy spent negotiating internal consensus cannot be spent on policy advocacy. Constrained exit \u2014 members can defect to smaller movements but lose coalition strength; movements can splinter but become irrelevant. Mixed experience: genuine coordination value but embedded extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Status Quo Defender Institution",
+      "comment": "PERSPECTIVE 3: STATUS QUO DEFENDER INSTITUTION (ROPE) \u2014 Single institution (e.g., upper chamber, judiciary, executive bureaucracy) that holds a veto point. Experiences the veto-point structure as pure coordination: communication of blocking intent is sufficient for policy stability. High exit optionality via arbitrage \u2014 the institution can shift positions or leverage across policy domains; can negotiate side payments or issue trades. Net beneficiary from veto architecture. The constraint appears as coordination mechanism, not extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Reform Movement Coalition Leadership",
+      "comment": "PERSPECTIVE 4: REFORM MOVEMENT LEADERSHIP (TANGLED ROPE) \u2014 Organized coalition (party leadership, advocacy networks, civil society organizations) must maintain internal discipline to achieve consensus while negotiating across veto points. Experiences genuine coordination \u2014 disciplining the coalition, sequencing reform initiatives, building issue-linkage are real coordination functions. But also experiences extraction: leadership must suppress internal disagreement to maintain negotiating strength; the organization must subordinate member preferences to coalition-wide strategy. Constrained exit \u2014 leaders can defect but lose organizational platform; organization can fragment but become marginalized."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Subnational Exit Coalition",
+      "comment": "PERSPECTIVE 5: SUBNATIONAL EXIT COALITION (SCAFFOLD) \u2014 Subnational governments (states, provinces, municipalities) can implement policy innovation locally, bypassing national veto points. This represents a temporary scaffold: as subnational experimentation proves policy viability, national political pressure builds and veto points weaken. Regional governments have mobile exit options \u2014 they can implement locally without national consent. Theater ratio here is low (genuine policy implementation, not performative compliance). Has implicit sunset: as subnational innovation accumulates, the national veto-point structure's blocking capacity diminishes, and reform becomes possible nationally."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Checks-and-Balances Institutional Theater",
+      "comment": "PERSPECTIVE 6: CHECKS-AND-BALANCES INSTITUTIONAL THEATER (PITON) \u2014 Civilizational view of veto-point architecture as constitutional principle: 'separation of powers prevents tyranny.' The underlying coordination function (checking state power) has largely atrophied in many jurisdictions \u2014 veto points are now primarily used for partisan blockade rather than principled oversight. The constraint persists through institutional inertia and constitutional mythology rather than functional necessity. Theater ratio high (0.65+): performative constitutional reverence masks degraded deliberative capacity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit Risk)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (FALSE SUMMIT RISK) \u2014 From a universalist/analytical position, multiple veto points might appear as an immutable natural law: 'All political systems require checks and balances.' This naturalization risks masking the contingent institutional choice (number of veto points is deliberately designed, not inherent). Base extraction (0.58) and required enforcement (true) contradict mountain classification. Engine will flag as false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "veto_count_threshold",
+      "question": "What is the empirical threshold for 'too many veto points'? Does institutional capacity degrade continuously with each additional veto point or is there a discrete threshold beyond which reform becomes structurally impossible?",
+      "resolution_mechanism": "Comparative analysis of polities with 2, 3, 4, 5+ veto points; measurement of policy innovation rate, reform success rate, and time-to-enactment; longitudinal tracking of whether additional veto points correlate with paralysis or simply slower consensus-building",
+      "impact": "If continuous: extraction accumulates with each veto point; suppressiveness scales with veto count. If threshold exists: some veto-point designs are functional rope (low extraction) while others are snare (high extraction). Current design may be on wrong side of threshold.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Empirical threshold for veto-point induced institutional paralysis"
+    },
+    {
+      "id": "subnational_escape_valve_adequacy",
+      "question": "Does subnational policy experimentation actually reduce national veto-point blocking, or does it provide a permanent escape valve that prevents national reform by allowing complainants to exit the national political arena?",
+      "resolution_mechanism": "Historical tracking of policy innovations first tested locally, then adopted nationally; measurement of whether subnational success increases national reform likelihood or decreases national reform pressure; analysis of whether subnational exit makes national reform coalitions smaller and weaker",
+      "impact": "If escape valve: scaffold perspective is correct; veto points will eventually weaken as subnational success accumulates. If permanent exit: veto points are reinforced; subnational experimentation removes the constituency that would push for national reform, perpetuating national blockade.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether subnational policy allows escape from or reinforces national veto points"
+    },
+    {
+      "id": "coordination_function_decay",
+      "question": "Has the original coordination function of veto points (preventing tyranny through distributed power) been replaced by partisan blockade logic, or do veto points still serve a meaningful deliberative function in contemporary institutional contexts?",
+      "resolution_mechanism": "Qualitative analysis of veto-point exercise patterns: are blocking actions justified by principled constitutional concerns or by partisan advantage? Measurement of deliberative quality in veto-point negotiations; analysis of whether veto points generate policy compromise or merely stalemate",
+      "impact": "If function decayed: piton classification is correct; veto-point architecture persists through inertia and should be reformed. If function intact: tangled rope or rope classification may be more accurate; extraction is compensation for genuine coordination service.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether veto points maintain genuine coordination function or have become purely extractive blockade mechanism"
+    },
+    {
+      "id": "institutional_capacity_measurement",
+      "question": "How is 'institutional capacity to implement reform' measured? Is it a function of coordination costs alone, or does it include the substantive complexity of the policy being reformed?",
+      "resolution_mechanism": "Decompose policy adoption timelines by policy complexity; distinguish between coordination delays (veto-point induced) and substantive delays (legitimate deliberation on complex issues); measure whether veto-point delays exceed substantive deliberation time",
+      "impact": "If coordination dominates: extractiveness estimate (0.58) is accurate. If substantive complexity is conflated with veto-point blockade: extractiveness may be overstated; some delay may be legitimate rather than extractive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of policy delays to veto-point coordination vs. substantive complexity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Veto points are institutional checkpoints designed to require consensus or supermajority support for policy change. A political system with multiple veto points (bicameral legislature, executive override power, judicial review, civil service implementation capacity) forces reformers to win agreement across all points while status quo defenders need only control one. This structural asymmetry creates a tangled-rope constraint: genuine coordination function (requiring deliberation across institutional actors) coexists with asymmetric extraction (reform constituencies bear disproportionate burden). The constraint's extractiveness increases over time (0.42\u21920.58) as jurisdictions accumulate new veto points or as existing points become politicized. Theater ratio increases (0.35\u21920.48) as institutions justify blockade through constitutional mythology rather than principled deliberation. Subnational governments provide temporary scaffolding\u2014regional experimentation bypasses national veto points and generates political pressure for national reform\u2014but this scaffold persists only if subnational success actually translates to national reform appetite rather than providing permanent exit for complainants.",
+    "key_agents": [
+      "Reform Constituencies: Primary victims (powerless/trapped) \u2014 seek policy change but systematically subordinated to status quo defenders across all veto points",
+      "Status Quo Defenders: Primary beneficiaries (institutional/arbitrage) \u2014 control one or more veto points and leverage blocking capacity for policy concessions",
+      "Fragmented Reform Coalitions: Secondary victims (moderate/constrained) \u2014 must coordinate internally to achieve supermajority consensus; energy spent on internal coordination cannot be directed at advocacy",
+      "Reform Movement Leadership: Secondary victims (organized/constrained) \u2014 organize coalition while suppressing internal disagreement to maintain negotiating strength",
+      "Subnational Governments: Temporary scaffolders (organized/mobile) \u2014 implement policy locally, test innovations, build pressure for national reform",
+      "Constitutional Custodians: Institutional theater maintainers (institutional/arbitrage) \u2014 justify veto-point architecture through separation-of-powers mythology despite degraded deliberative function"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Multiple veto points impose coordination costs (supermajority assembly, cross-institutional negotiation, accommodation of diverse preferences) that exceed transaction costs of single-authority decision-making. For reform constituencies, these coordination costs manifest as extraction: energy spent assembling consensus across veto points is energy not available for substantive policy advocacy. The 0.42\u21920.58 trajectory reflects accumulation of veto points or politicization of existing points. Suppression (0.62): Moderate-high. Structural barriers prevent unilateral reform: exit options are limited (exit jurisdiction entirely, or exit national politics by focusing on subnational implementation). Policy preferences cannot be satisfied outside the national institutional framework. Suppression includes both structural factors (multiple veto points requiring consensus) and behavioral factors (internalized expectations that reform is impossible). Theater ratio (0.48): Moderate. Veto-point exercises include both genuine deliberative content (substantive disagreements on policy) and performative content (constitutional justifications, partisan positioning). The ratio increases over time as institutions invest more in constitutional mythology to justify blockade.",
+    "directionality_logic": "Directionality d is derived from beneficiary/victim status and exit options. Status quo defenders with arbitrage options experience low d (they benefit from veto-point architecture and can shift positions or negotiate side payments). Reform constituencies with trapped exit experience high d (they cannot exit the national framework and are systematically subordinated). Organized reform coalitions with constrained exit experience moderate d (they can form alternative organizations but lose coalition strength). Subnational governments with mobile exit experience lower d (they can implement locally without national consent). The beneficiary/victim asymmetry is structural: veto points systematically advantage status quo over reform. This produces high d for victims and low d for beneficiaries, driving the tangled-rope classification.",
+    "perspectival_gap": "The major perspectival gap is between status quo defenders (Rope perspective: veto points enable coordination and deliberation) and reform constituencies (Snare perspective: veto points impose impossible consensus requirements). Status quo defenders experience the constraint as enabling stable governance; reform constituencies experience it as blocking capacity. The piton perspective reveals that constitutional justifications for veto-point architecture (separation of powers, checks and balances) persist despite atrophied deliberative function\u2014veto points are now primarily partisan blockade tools rather than principled oversight mechanisms. The scaffold perspective reveals a temporary exit: subnational governments bypass national veto points through regional policy innovation, but this scaffold only persists if subnational success accumulates to create national reform pressure. The false summit (analytical/mountain) risks naturalizing a contingent institutional choice as immutable constitutional principle.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by distinguishing the genuine coordination function of veto points (deliberation across institutional actors) from their extractive use (partisan blockade). The tangled-rope classification captures both: veto points do coordinate (deliberative exchanges, issue-linkage, multi-institutional accommodation) AND extract (asymmetric burden on reform constituencies). The piton perspective reveals that the coordination function has partially degraded\u2014veto-point exercises are increasingly performative. The scaffold perspective suggests time-limited structure: subnational policy innovation could eventually weaken national veto-point blocking through demonstrated feasibility and accumulated political pressure. Mandatrophy is resolved by treating veto-point architecture as a design choice (contingent, potentially reformable) rather than a natural law."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "legislative_bicameralism_partisan_alignment",
+      "executive_judicial_power_distribution"
+    ],
+    "dual_formulation_note": "Veto-point architecture itself (number and distribution of veto points) is a structural parameter. This constraint story treats veto points as a fixed institutional design. Separate constraint stories address specific veto-point instantiations (bicameral legislatures, executive/judicial checks) with their own extractiveness values. This story models the general coordination/extraction tension inherent to multi-veto-point systems."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.58
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "header": {
+    "constraint_id": "gasoline_tax_insufficiency",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gastax"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Gasoline Tax Insufficiency and Road Infrastructure Funding",
+    "topic_domain": "fiscal_policy/transportation/infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "automobile_dependent_commuters",
+      "highway_construction_contractors",
+      "fuel_retailers"
+    ],
+    "victims": [
+      "road_maintenance_agencies",
+      "transit_dependent_populations",
+      "future_taxpayers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Road Maintenance Crisis",
+      "comment": "PERSPECTIVE 1: ROAD MAINTENANCE AGENCIES (SNARE) \u2014 Trapped in a structural funding gap that worsens annually. Gasoline tax revenues, unchanged since 1993 in the US federal context, fail to keep pace with inflation and rising road deterioration costs. Agencies cannot exit this constraint: they must maintain roads regardless of funding. Bears maximum extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Transit-Dependent Populations",
+      "comment": "PERSPECTIVE 2: TRANSIT-DEPENDENT POPULATIONS (SNARE) \u2014 Trapped by car-dependent infrastructure built on cheap-road subsidies. Public transit is underfunded because road subsidies consume the transportation budget; cannot exit reliance on deteriorating roads (transit underfunded) or automobiles (cannot afford). Generational structural capture."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Automobile-Dependent Commuters (High-Income)",
+      "comment": "PERSPECTIVE 3: AUTOMOBILE-DEPENDENT COMMUTERS (ROPE) \u2014 Benefit from roads maintained below their true cost; gasoline tax insufficiency subsidizes their commuting. Can exit by paying tolls, using transit, or relocating; choose not to because road subsidies make current arrangement optimal. Net beneficiary with stable exit options."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Highway Construction Contractors",
+      "comment": "PERSPECTIVE 4: HIGHWAY CONSTRUCTION CONTRACTORS (ROPE) \u2014 Benefit from ongoing infrastructure repair cycles driven by deferred maintenance. Can arbitrage between contract types; benefit from road crisis without creating it. Coordination function: emergency repairs mobilize resources quickly. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "State and Local Governments",
+      "comment": "PERSPECTIVE 5: STATE AND LOCAL GOVERNMENTS (TANGLED ROPE) \u2014 Experience both coordination and extraction. Must coordinate multi-jurisdictional road networks (genuine coordination problem); also extractively constrained by federal funding structures that lock them into auto-dependent patterns. Can raise local taxes but face political resistance. Constrained exit (election costs, fiscal federalism constraints)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Urban Planning and Transit Advocates",
+      "comment": "PERSPECTIVE 6: TRANSIT ADVOCATES AND PLANNERS (SCAFFOLD) \u2014 Organized agents seeing this as a temporary problem with a sunset. Vehicle electrification, congestion pricing, and land-value capture mechanisms offer exit paths from gasoline tax dependence. Public support for transit alternatives has grown. See the constraint as coordination challenge with emerging solutions. Mobile: can build alternative systems. Theater declining as real pricing mechanisms replace subsidies."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Federal Legislative System",
+      "comment": "PERSPECTIVE 7: FEDERAL LEGISLATIVE SYSTEM (PITON) \u2014 Maintains the 18.4 cents per gallon federal gasoline tax through institutional inertia despite complete disconnect from infrastructure needs. The tax exists, is collected, is spent \u2014 but the ritual of setting it persists despite its dysfunctional scale. Theater-ratio high: the tax is collected and spent but does not solve the problem it was designed to address. Piton: maintained through legislative consensus around 'not raising taxes' rather than through functional necessity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Fiscal Reality)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / FISCAL REALITY (FALSE SUMMIT) \u2014 From a civilizational view, inflation-adjusted road maintenance costs have grown while revenues remained fixed; this appears as an immutable physical law of transportation economics. However, this naturalizes what is actually a political choice: setting tax rates is not determined by physics. The mountain classification is a false summit \u2014 the engine detects naturalization of a contingent policy decision."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "true_cost_of_roads",
+      "question": "What is the true economic cost of road maintenance and construction, accounting for congestion externalities, environmental damage, and land-use opportunity costs?",
+      "resolution_mechanism": "Full-cost accounting studies (e.g., Texas A&M Transportation Institute, USDOT lifecycle cost analyses); comparison of true cost against gasoline tax collections and supplementary appropriations",
+      "impact": "If true cost is 2-3x current funding: constraint is legitimately a snare (underfunded public good). If true cost is lower: some 'insufficiency' is behavioral (political unwillingness to fund).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "True economic cost of road maintenance vs tax revenue"
+    },
+    {
+      "id": "elasticity_of_demand",
+      "question": "Would substantial gasoline tax increases (to $0.50-$1.00 per gallon) reduce driving sufficiently to create a new equilibrium, or would revenues plateau due to inelastic demand?",
+      "resolution_mechanism": "Econometric analysis of gas tax elasticity in high-tax jurisdictions (California, Washington, Oregon); simulation models of behavioral response to pricing",
+      "impact": "If elastic: higher tax solves insufficiency permanently. If inelastic: tax increases face political limits and structural gap persists.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Price elasticity of gasoline demand"
+    },
+    {
+      "id": "electric_vehicle_transition_timeline",
+      "question": "At what penetration rate do EV sales make the gasoline tax functionally obsolete, and will transition occur before road funding crisis becomes acute?",
+      "resolution_mechanism": "Fleet turnover models; EV adoption rate data; projection of gasoline tax revenue under various EV penetration scenarios",
+      "impact": "If EV transition completes in 10-15 years: scaffold sunset is real, constraint resolution is structural. If longer: gasoline tax insufficiency persists until alternate funding mechanisms replace it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for EV transition to obsolete gasoline tax"
+    },
+    {
+      "id": "congestion_pricing_feasibility",
+      "question": "Can congestion pricing and vehicle-miles-traveled (VMT) fees replace gasoline taxes as funding mechanisms without creating new distributional extractiveness?",
+      "resolution_mechanism": "Pilot programs (Singapore, London, Stockholm) showing VMT fee equity outcomes; analysis of low-income impact under different pricing regimes",
+      "impact": "If feasible with equity protections: alternative exists, scaffold sunset is real. If creates new trapped populations: replacement mechanism recreates the snare at new location.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of congestion pricing as gasoline tax replacement"
+    },
+    {
+      "id": "political_commitment_constraint",
+      "question": "Is gasoline tax insufficiency fundamentally a fiscal reality or a political choice to avoid tax increases?",
+      "resolution_mechanism": "Comparative analysis of gas tax rates across jurisdictions with similar infrastructure needs; voter surveys on willingness to fund transit/roads; legislative voting patterns on gas tax increases",
+      "impact": "If fiscal reality: constraint is snare (structural underfunding). If political choice: constraint is snare with solvable mechanism (organizing political will).",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "Whether insufficiency is fiscal reality or political choice"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The gasoline tax insufficiency constraint represents a structural funding gap between the revenue generated by per-gallon fuel taxes and the actual cost of maintaining road infrastructure. In the United States, the federal gasoline tax has remained fixed at 18.4 cents per gallon since 1993, while inflation has eroded its real purchasing power by over 60%. Road deterioration, measured by pavement condition indices, has worsened substantially, forcing agencies into deferred-maintenance cycles that increase long-term costs. This creates a tangled rope: gasoline tax insufficiency simultaneously enables cheap driving (benefiting car-dependent commuters), maintains contractor employment (through emergency repairs), and systematically underfunds transit alternatives (harming transit-dependent populations). The constraint exhibits strong perspectival variation: powerless agents (road agencies, transit-dependent populations) experience it as a snare with no exit; beneficiaries experience it as rope (coordination of auto-subsidy); organized agents see it as scaffold (with electrification and pricing mechanisms offering exits); the federal legislative system maintains it through piton inertia (the ritual of collecting tax without solving the problem).",
+    "key_agents": [
+      "Road Maintenance Agencies: Primary victim (powerless/trapped) \u2014 must maintain roads regardless of funding adequacy; cannot exit or refuse service",
+      "Transit-Dependent Populations: Primary victim (powerless/trapped) \u2014 structurally locked into underfunded transit and deteriorating road networks; no arbitrage options",
+      "Automobile-Dependent Commuters: Primary beneficiary (powerful/arbitrage) \u2014 benefit from roads maintained below true cost; could use transit or pay tolls but choose subsidized driving",
+      "Highway Construction Contractors: Secondary beneficiary (institutional/arbitrage) \u2014 profit from deferred-maintenance repair cycles; benefit from ongoing crisis without creating it",
+      "State and Local Governments: Intermediate actor (organized/constrained) \u2014 coordinate multi-jurisdictional networks; extractively constrained by federal funding structures; face election costs to raise local taxes",
+      "Urban Planners and Transit Advocates: Organized change agents (organized/mobile) \u2014 see alternative funding mechanisms (congestion pricing, VMT fees, electrification) as exit paths from gasoline tax dependence",
+      "Federal Legislative System: Institutional custodian (institutional/arbitrage) \u2014 maintains dysfunctional 18.4-cent tax through legislative inertia and 'no new taxes' consensus"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts from road agencies (forced underfunding) and transit-dependent populations (systematic disinvestment in alternatives) while benefiting auto commuters and contractors. The extraction is not total (road repairs happen; some transit funding exists) but is substantial and structural. Measured as the gap between collected revenues and infrastructure costs expressed as a proportion of total transportation spending. Suppression (0.65): High. Suppression mechanisms include: (1) political constraint on raising gas taxes (voter resistance to tax increases); (2) path dependence on auto-oriented development (makes transit alternatives economically less viable initially); (3) information asymmetry (general public does not perceive the true cost of road maintenance). These barriers prevent exit and alternative-building. Theater ratio (0.58): Moderate. The gasoline tax system is partly functional (collects revenue, funds some repairs) and partly performative (the tax exists, is collected, but does not solve the problem it was designed to address \u2014 maintaining infrastructure as car use grows). Theater has declined slightly over the interval as alternatives (toll roads, regional transit initiatives) have become more visible. The federal legislative system maintains the ritual of a fixed tax despite its dysfunctional scale (piton pattern).",
+    "directionality_logic": "Each agent's directionality derives from their structural position relative to the extraction flow. Road agencies and transit-dependent populations are victims (high d) with no exit options (trapped) \u2014 they experience maximum extraction. Auto commuters are beneficiaries (low d) with full exit options (arbitrage) \u2014 they experience minimal or negative extraction (subsidy). Contractors are beneficiaries (low d) with institutional flexibility (arbitrage) \u2014 they benefit from the ongoing crisis. State governments face a constrained exit (can raise local taxes but face political costs) and mixed role (both coordinate infrastructure and are extracted from by federal structure) \u2014 they experience moderate extraction. Transit advocates have mobile exit options (can build alternatives) \u2014 they experience lower extraction and see a scaffold sunset. The federal legislative system experiences the constraint as institutional routine (arbitrage-positioned) \u2014 can change the tax but chooses not to.",
+    "perspectival_gap": "This constraint shows substantial perspectival divergence. Road agencies see a snare: trapped in underfunding with no exit. Transit-dependent populations see a snare: locked into degraded alternatives and underfunded service. Auto commuters see rope: coordination of their subsidized access to maintained roads; optimal for them. Contractors see rope: ongoing repair work coordinated by crisis cycle. State governments see tangled rope: both coordinate and are constrained. Transit advocates see scaffold: temporary problem being solved by electrification and pricing mechanisms. Federal legislators see piton: maintain the ritual of the tax without adjusting it. The analytical observer risks seeing a mountain (fiscal law of physics) but the structural data reveals this as a political choice \u2014 the tax can be raised, alternatives can be funded, but institutional inertia (piton) and organized beneficiary resistance prevent it.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by revealing that the 'insufficiency' narrative is a false summit when viewed as natural law. The constraint is not inherently about road funding; it is about political choice regarding who pays for auto infrastructure and who bears the cost of alternatives. The snare perspective (road agencies and transit-dependent populations) is the structural reality: certain actors are locked into extractive positions. The rope perspectives (commuters, contractors) reveal the beneficiary coalition. The scaffold perspective (transit advocates) reveals emerging exit mechanisms that make the constraint impermanent \u2014 EV transition, congestion pricing, and land-value capture offer ways to decouple funding from gasoline consumption. The piton perspective (legislative inertia) identifies the specific institutional mechanism maintaining the constraint: the ritual of collecting an insufficient tax persists because changing it requires organizing political will that beneficiaries actively resist. Resolving mandatrophy means recognizing that 'gasoline tax insufficiency' is not a problem of fiscal reality but a problem of political economy \u2014 who has power to set rates, and what coalition prevents adjustment."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "urban_transit_underfunding",
+      "deferred_infrastructure_maintenance",
+      "automobile_subsidy_distribution"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

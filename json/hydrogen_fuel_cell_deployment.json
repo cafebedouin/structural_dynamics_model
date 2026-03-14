@@ -1,0 +1,193 @@
+{
+  "header": {
+    "constraint_id": "hydrogen_fuel_cell_deployment",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hfcd"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hydrogen Fuel Cell Deployment Infrastructure Lock-in",
+    "topic_domain": "energy/transportation/industrial_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_energy_companies",
+      "hydrogen_production_equipment_manufacturers",
+      "government_renewable_energy_subsidies_recipients"
+    ],
+    "victims": [
+      "alternative_energy_infrastructure_developers",
+      "renewable_electricity_grid_modernization",
+      "end_consumers_via_infrastructure_costs"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Grid Decarbonization Systems",
+      "comment": "PERSPECTIVE 1: GRID DECARBONIZATION (SNARE) \u2014 The electricity grid modernization pathway is structurally trapped. Investment capital flows toward hydrogen infrastructure via policy mandates and subsidies, crowding out direct electrification alternatives (vehicle-to-grid, demand response, battery-centric systems). Grid operators cannot exit this constraint without defunding billions in committed hydrogen projects. Maximum experienced extraction with no coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Alternative Energy Technology Developers",
+      "comment": "PERSPECTIVE 2: ALTERNATIVE ENERGY DEVELOPERS (TANGLED ROPE) \u2014 Constrained by subsidy capture (hydrogen gets preferential funding) and technical standards lock-in, but also benefit from hydrogen ecosystem investment in infrastructure and industrial processes. Exit is costly but possible: can pivot to hydrogen components, can seek export markets, or can develop disruptive alternatives. Mixed extraction and coordination benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Incumbent Energy Companies",
+      "comment": "PERSPECTIVE 3: INCUMBENT ENERGY COMPANIES (ROPE) \u2014 Primary beneficiary with high-exit arbitrage capacity. Experiences hydrogen deployment as pure coordination: leveraging existing fossil fuel infrastructure (steam reforming, pipeline distribution, refueling stations) while decarbonizing narratively. Can exit by simply shifting product mix or divesting. Net beneficiary \u2014 extraction runs toward this agent."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Decarbonization Coalition",
+      "comment": "PERSPECTIVE 4: DECARBONIZATION COALITION (SCAFFOLD) \u2014 Organized actors (climate advocates, progressive governments, renewable energy firms) see hydrogen deployment as a temporary bridging mechanism with a sunset: as battery technology, direct electrification, and grid storage mature, hydrogen's role narrows to hard-to-decarbonize industrial processes (steel, cement, chemicals). The constraint has built-in obsolescence. Moderate extraction acceptable because the coalition perceives the constraint declining over the generational horizon as alternatives mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Hydrogen Policy Infrastructure",
+      "comment": "PERSPECTIVE 5: HYDROGEN POLICY INFRASTRUCTURE (PITON) \u2014 Hydrogen deployment targets, subsidy programs, and regulatory frameworks persist through institutional inertia despite questionable cost-effectiveness for decarbonization (hydrogen from steam reforming remains 90%+ of supply; green hydrogen via electrolysis is energy-inefficient vs. direct grid electrification). The policy machinery maintains performance theater ('hydrogen economy transition') while the functional coordination benefit has atrophied. Theater ratio high because success is measured by deployment capacity, not by actual decarbonization efficiency."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Thermodynamic Physical Limit",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / THERMODYNAMIC VIEW (MOUNTAIN) \u2014 At a universal/civilizational scale, hydrogen's role as an energy carrier is constrained by thermodynamics: energy required to produce green hydrogen via electrolysis (~50 kWh/kg) plus conversion losses means direct electrification is always more efficient. The 'hydrogen economy' claim naturalizes what is actually a contingent infrastructure lock-in as inherent physics. The engine's false summit detector will identify this as naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "green_hydrogen_cost_trajectory",
+      "question": "Will green hydrogen production costs (via electrolysis) decline below 50% of current fossil fuel pathway costs within 15 years, enabling genuine cost-parity decarbonization?",
+      "resolution_mechanism": "Technology learning curve analysis; electrolyzer manufacturing scale-up; renewable electricity cost trajectories; pilot program cost data",
+      "impact": "If yes: hydrogen deployment becomes genuine coordination mechanism with real decarbonization benefit (reclassifies toward Rope). If no: extraction mechanism persists (remains Tangled Rope/Snare) and represents misallocation of climate capital.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Green hydrogen cost trajectory and cost-parity threshold"
+    },
+    {
+      "id": "direct_electrification_substitutability",
+      "question": "How much of the 'hard-to-decarbonize' industrial process fraction (steel, cement, chemicals) is genuinely unsuitable for direct electrification vs. operationally unsuitable (requires retrofit, not physics)?",
+      "resolution_mechanism": "Engineering feasibility analysis for electric arc furnaces, direct reduction processes, electrolytic synthesis; cost-benefit comparison with hydrogen pathways; pilot demonstration results",
+      "impact": "If majority directly electrifiable: hydrogen deployment is temporary stopgap (Scaffold valid, extraction is intentional and bounded). If majority requires hydrogen: deployment is coordination mechanism for necessary decarbonization (reclassifies toward Rope/Tangled Rope with lower extraction).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Electrification vs. hydrogen necessity for industrial processes"
+    },
+    {
+      "id": "incumbent_incumbent_lock_in",
+      "question": "Is hydrogen infrastructure deployment primarily capturing subsidy flows and locking in incumbent energy company dominance, or is it genuinely transitional infrastructure that incumbent companies will abandon once direct electrification dominates?",
+      "resolution_mechanism": "Corporate strategy analysis; capital expenditure allocation tracking; comparison of incumbent investment in hydrogen vs. battery/grid infrastructure; exit timing patterns when cost structures shift",
+      "impact": "If primarily lock-in: Snare classification is correct, extraction is permanent, and policy is captured (Piton perspective valid). If genuinely transitional: Scaffold is correct and extraction is bounded and intentional.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether hydrogen deployment is temporary transition or incumbent lock-in"
+    },
+    {
+      "id": "subsidy_displacement_mechanism",
+      "question": "How much of hydrogen infrastructure investment represents actual additional decarbonization spending vs. displacement of renewable electricity grid modernization that would have occurred anyway?",
+      "resolution_mechanism": "Comparative budget analysis with and without hydrogen mandates; counterfactual infrastructure investment scenarios; opportunity cost calculation for alternative climate spending",
+      "impact": "If high displacement: suppression mechanism is significant (policy crowds out alternatives), extraction is severe (Snare dominant). If low displacement: hydrogen is additive spending and extraction mechanism is weaker (Tangled Rope extraction is real but not total).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of subsidy displacement vs. additional spending"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Hydrogen fuel cell deployment represents a policy infrastructure for decarbonization that exhibits high extractiveness (0.58) and significant suppression (0.62) of alternative low-carbon pathways. The constraint operates through subsidy allocation, regulatory mandates, and technical standards that preferentially funnel investment toward hydrogen infrastructure while constraining direct electrification of transportation and heating, battery-centric grid modernization, and demand-response mechanisms. The extractiveness has risen over the measurement interval (0.35 \u2192 0.58) as policy commitments have deepened and incumbent energy companies have locked in hydrogen-compatible infrastructure. Theater ratio (0.68) reflects that success metrics prioritize deployment capacity (hydrogen vehicles produced, refueling stations built, industrial hydrogen conversion projects initiated) rather than decarbonization efficiency (tons of CO2 avoided per dollar invested, cost-effectiveness vs. alternatives, thermodynamic efficiency). The constraint exhibits all six DR types from different institutional perspectives, enabling diagnostic analysis of how climate policy can simultaneously enable coordination, extract capital, and degrade over time into theatrical compliance.",
+    "key_agents": [
+      "Incumbent Energy Companies: Primary beneficiary (institutional/arbitrage) \u2014 leverage existing fossil fuel distribution infrastructure, capture subsidy flows, maintain market dominance during energy transition",
+      "Grid Decarbonization Systems: Primary victim (powerless/trapped) \u2014 alternative pathways (vehicle-to-grid, demand response, battery storage, direct renewable electrification) structurally crowded out by hydrogen mandates",
+      "Alternative Energy Technology Developers: Secondary victim (moderate/constrained) \u2014 face subsidy crowding, but can pivot to hydrogen ecosystem or export markets",
+      "Decarbonization Coalition: Organized actors (organized/constrained) \u2014 climate advocates, progressive governments, renewable energy firms that see hydrogen as temporary bridge with known sunset",
+      "Hydrogen Policy Infrastructure: Institutional maintainer (institutional/arbitrage) \u2014 governments, regulatory agencies perpetuating deployment targets and subsidy programs through inertia",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing thermodynamically inefficient infrastructure as physics-driven necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The constraint captures approximately 0.58 units of allocation flow from alternative decarbonization pathways toward hydrogen infrastructure. This reflects subsidy concentration, technical standards that privilege hydrogen equipment, and policy mandates that require hydrogen adoption timelines. The trajectory from 0.35 to 0.58 over 6 years shows accelerating extraction as policy commitments deepen. Suppression (0.62): High. Significant structural barriers to exit the constraint include: (1) incumbent companies' embedded hydrogen infrastructure investment, (2) government commitments to hydrogen deployment targets, (3) regulatory mandates requiring hydrogen compatibility, (4) psychological commitment to 'hydrogen economy' narrative, (5) technical lock-in in planning and equipment specifications. Suppression is primarily structural (policy and capital commitments) with secondary internalized components (commitment to 'hydrogen transition' identity). Theater ratio (0.68): High and rising. Hydrogen deployment success is measured by visible metrics (vehicles deployed, refueling stations built, industrial conversion projects) rather than decarbonization efficiency. A study of hydrogen from steam reforming (90%+ of current supply) shows only ~5% lifecycle decarbonization benefit vs. 75%+ for direct grid electrification when both are powered by renewables. Theater has increased as deployment capacity has grown but efficiency benefits remain modest.",
+    "directionality_logic": "Each perspective's directionality derives from structural position relative to extraction flows. Incumbent energy companies benefit (low d \u2192 negative effective extraction) because hydrogen deployment leverages their existing infrastructure and maintains their market position. The grid decarbonization system is trapped (high d \u2192 maximum f(d)) because investment capital flows away from alternative pathways without compensation. Alternative energy developers face constrained exit (moderate d \u2192 moderate f(d)) \u2014 they can pivot but at significant cost. The decarbonization coalition has organized escape routes (constrained d, moderate f(d)) because they can accelerate alternative technologies and create political pressure for policy shifts. The hydrogen policy infrastructure benefits (low d) because it captures budget authority and maintains regulatory power. The analytical observer faces maximum ambiguity (canonical analytical d \u2248 0.73) because thermodynamic limits mask contingent infrastructure choices.",
+    "perspectival_gap": "The critical perspectival gap is between the incumbent energy company view (Rope: pure coordination, beneficial infrastructure) and the grid decarbonization view (Snare: pure extraction, crowding out alternatives). From the beneficiary's position, hydrogen deployment solves a coordination problem \u2014 how to transition large-scale energy infrastructure without immediate replacement. From the trapped agent's position, the same deployment mechanism is extraction \u2014 policy capital that should fund direct electrification, battery development, or grid modernization is instead allocated to hydrogen. The scaffold perspective (Decarbonization Coalition) resolves this gap by explicitly accepting the extraction as temporary and bounded: hydrogen deployment is intentionally transitional, with an expected sunset as alternatives mature. The piton perspective (Policy Infrastructure) reveals that the constraint persists through inertia \u2014 the policy machinery continues hydrogen deployment targets even as cost data and decarbonization efficiency studies suggest alternatives are superior. The analytical observer risks the false summit \u2014 naturalizing thermodynamically inefficient infrastructure as physics-driven.",
+    "mandatrophy_analysis": "The mandatrophy here arises from the tension between 'hydrogen deployment as genuine energy transition coordination' (Rope/Scaffold framing) and 'hydrogen deployment as incumbent lock-in and capital extraction' (Snare/Piton framing). The resolution depends on empirical resolution of the omega variables: if green hydrogen costs decline to competitive levels AND industrial electrification proves infeasible for majority of applications, then hydrogen deployment was justified coordination and extraction was intentional and bounded (Scaffold resolves the tension). If green hydrogen remains uncompetitive AND most industrial processes can be directly electrified, then hydrogen deployment was primarily incumbent lock-in and extraction was permanent (Snare resolves the tension). Current data suggests the second scenario is more likely: green hydrogen costs remain 2-3x fossil hydrogen even with optimistic learning curves, and direct electrification is technically feasible for most industrial processes but requires capital reallocation. The mandatrophy is not resolved in this constraint story \u2014 the empirical ambiguity remains high confidence (medium)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "battery_vehicle_supply_chain",
+      "renewable_grid_modernization",
+      "incumbent_fossil_fuel_infrastructure",
+      "direct_electrification_heating_systems"
+    ],
+    "dual_formulation_note": "Hydrogen fuel cell deployment is a single constraint with multiple decomposable functions: (1) industrial hydrogen production (steam reforming vs. electrolysis) \u2014 separate story with \u03b5\u22480.32; (2) transportation fuel cells \u2014 this story; (3) hydrogen heating for buildings \u2014 separate story with \u03b5\u22480.52. The stories are linked via network.affects_constraints because policy mandates coordinate across all three functions and subsidy flows pool them. The integrated story (this one) captures the policy lock-in mechanism; decomposed stories capture domain-specific extraction dynamics."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.28
+    }
+  ]
+}

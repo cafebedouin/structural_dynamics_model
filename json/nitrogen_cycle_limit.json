@@ -1,0 +1,138 @@
+{
+  "header": {
+    "constraint_id": "nitrogen_cycle_limit",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ncl"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.03,
+    "theater_ratio": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "The Nitrogen Cycle Limit",
+    "topic_domain": "biogeochemistry/planetary_boundaries",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Agricultural Communities in Nitrogen-Limited Regions",
+      "comment": "PERSPECTIVE 1: AGRICULTURAL COMMUNITIES (MOUNTAIN) \u2014 Face the nitrogen cycle limit as an immutable physical constraint. Soil nitrogen availability is determined by nitrogen fixation rates, mineralization kinetics, and denitrification losses \u2014 none of which are negotiable. Soil microbial communities cannot be forced to fix nitrogen at rates exceeding their thermodynamic capability. The constraint appears unchangeable at the scale of individual farms or even regions."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Global Agricultural System",
+      "comment": "PERSPECTIVE 2: GLOBAL AGRICULTURAL SYSTEM (MOUNTAIN) \u2014 Even with industrial nitrogen fixation (Haber-Bosch process), the constraint manifests as a coupled biogeochemical limit: increasing reactive nitrogen production increases eutrophication, groundwater contamination, and atmospheric N\u2082O emissions. The Haber-Bosch solution trades one constraint (soil nitrogen deficiency) for another (nitrogen cycle disruption). The underlying limit \u2014 the planet's capacity to process reactive nitrogen without system-level dysfunction \u2014 remains immutable."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a biogeochemical perspective, the nitrogen cycle limit is a natural law: the rate at which atmospheric N\u2082 can be reduced to bioavailable forms is constrained by enzyme kinetics (nitrogenase), thermodynamics (energy cost of N-N bond breaking), and the finite number of nitrogen-fixing microorganisms on Earth. These constraints are not contingent on human policy, technology, or economic incentives \u2014 they are properties of chemistry and microbial ecology."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "haber_bosch_substitution_boundary",
+      "question": "Does industrial nitrogen fixation (Haber-Bosch) represent a genuine expansion of Earth's nitrogen cycle capacity, or merely temporal borrowing against future biogeochemical debt?",
+      "resolution_mechanism": "Long-term trajectory of eutrophication, hypoxic zone expansion, atmospheric N\u2082O accumulation, and soil health degradation. If trajectory remains stable despite Haber-Bosch expansion: substitution boundary is real (extraction of future capacity). If trajectory shows saturation and reversal: the boundary has been overcome.",
+      "impact": "If substitution: the nitrogen cycle limit remains mountain-class; industrial nitrogen is a Snare constraint (extraction masquerading as coordination). If overcome: the limit transitions to Rope (coordination of nitrogen allocation) or disappears entirely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Haber-Bosch represents genuine capacity expansion or temporal borrowing"
+    },
+    {
+      "id": "biological_nitrogen_fixation_ceiling",
+      "question": "Is there a hard thermodynamic ceiling on biological nitrogen fixation capacity, or can selective breeding and genetic engineering push the boundary indefinitely?",
+      "resolution_mechanism": "Comparative analysis of nitrogenase efficiency across species, theoretical maximum enzyme turnover rates, energy requirements for N-N bond breaking under different environmental conditions, and upper bounds on microbial population size in agricultural ecosystems.",
+      "impact": "If hard ceiling exists: mountain classification holds across all time horizons. If ceiling is indefinitely movable: the constraint is better classified as Tangled Rope (coordination of nitrogen allocation with embedded technological extraction) or shifts to Rope as technology generalizes.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Thermodynamic ceiling on biological nitrogen fixation"
+    },
+    {
+      "id": "planetary_nitrogen_budget_equilibrium",
+      "question": "Can global nitrogen cycling reach a new equilibrium that sustains agriculture, reduces eutrophication, and stabilizes atmospheric N\u2082O without triggering systemic biogeochemical collapse?",
+      "resolution_mechanism": "Integrated Earth system modeling; paleoclimatic nitrogen cycle reconstructions; empirical measurement of nitrogen fluxes under various agricultural management scenarios; monitoring of watershed and atmospheric nitrogen concentrations.",
+      "impact": "If equilibrium is achievable at current or higher agricultural productivity: the limit becomes a coordination problem (Rope, Tangled Rope) rather than mountain. If equilibrium requires significant productivity reduction: mountain remains, but the constraint moves from physical limit to resource scarcity limit.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether sustainable biogeochemical equilibrium is achievable"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The nitrogen cycle limit is a planetary boundary constraint rooted in the biogeochemical cycles that govern nutrient availability on Earth. Natural nitrogen fixation \u2014 the enzymatic reduction of atmospheric N\u2082 to bioavailable ammonia and nitrate \u2014 is the exclusive gateway through which inert atmospheric nitrogen enters the biosphere. This process is catalyzed by nitrogenase enzymes in nitrogen-fixing bacteria and archaea, and the rate of fixation is constrained by enzyme kinetics, energy availability, and the finite population of microorganisms capable of catalyzing the reaction. For millennia, global agriculture was bounded by the rate of natural nitrogen cycling. The development of the Haber-Bosch process (industrial nitrogen fixation) in the early 20th century appeared to overcome this boundary by allowing synthetic production of reactive nitrogen at rates matching or exceeding natural fixation. However, this expansion revealed a coupled constraint: while industrial nitrogen fixation increased agricultural nitrogen availability, it simultaneously increased eutrophication of aquatic ecosystems, contamination of groundwater, accumulation of nitrous oxide in the atmosphere, and long-term soil degradation. The nitrogen cycle limit persists \u2014 not as a hard ceiling on nitrogen supply, but as a biogeochemical carrying capacity constraint: the planetary system has a maximum rate at which it can process reactive nitrogen without triggering cascading ecological dysfunction.",
+    "key_agents": [
+      "Agricultural Communities: Primary victims (powerless/trapped) \u2014 face nitrogen limitation without ability to overcome constraint through local action; constrained by natural fixation rates and soil microbial capacity.",
+      "Global Agricultural System: Primary beneficiary (institutional/arbitrage) \u2014 benefits from industrial nitrogen fixation breakthrough; experiences the constraint as a coordination and optimization problem rather than immutable limit.",
+      "Soil Microbial Communities: Structural actor (analytical/analytical) \u2014 nitrogen-fixing bacteria and their enzyme systems are the physical mechanism that enforces the constraint; their metabolic capabilities and population dynamics determine the constraint's rigidity.",
+      "Biogeochemical System: Constraint origin (analytical/analytical) \u2014 the planet's capacity to cycle nitrogen without exceeding carrying capacity is the immutable property; all human agents are embedded within this system."
+    ],
+    "logic_rationale": "Extractiveness (0.18): Very low. The nitrogen cycle limit does not extract value from anyone \u2014 it is a physical/chemical boundary condition. The low extractiveness reflects that the constraint is not an asymmetric transfer mechanism but rather a boundary on total available flux. No agent benefits disproportionately from the limit itself; the limit is equally constraining to all. Suppression (0.03): Minimal. The constraint permits multiple response strategies: selective breeding for nitrogen-use efficiency, legume intercropping, precision fertilization, symbiotic management of nitrogen-fixing microorganisms, and industrial nitrogen fixation. Suppression is low because the constraint leaves significant agency for adaptation. Theater ratio (0.05): Negligible. The nitrogen cycle limit is not performed or theater-dependent; it is a quantifiable biogeochemical property. Accessibility collapse (0.92): Very high. Understanding nitrogen cycle limits requires access to soil microbiology, biogeochemistry, and planetary-scale data \u2014 not accessible to most individual actors. The constraint's mechanism is opaque at the local scale; its effects are visible but its causes are hidden in soil processes. Resistance (0.08): Very low. The constraint cannot be resisted, negotiated, or appealed. It manifests through the laws of chemistry and microbial metabolism.",
+    "perspectival_gap": "All three perspectives classify the nitrogen cycle limit as mountain. This uniformity reflects that the constraint is genuinely invariant across observation contexts: agricultural communities, global systems, and analytical observers all encounter the same biogeochemical boundary. The perspectival gap appears not in classification type (all mountain) but in the meaning of the constraint. For agricultural communities at a generational time horizon, the limit appears as a persistent ceiling on productivity \u2014 the natural background of soil fertility. For the global agricultural system at a civilizational horizon, the limit appears as a problem that has been partly overcome (Haber-Bosch) but replaced with a new constraint (planetary nitrogen cycle saturation). For the analytical observer, the limit appears as a natural law of chemistry and microbiology \u2014 immutable and universal. These differences in meaning do not change the classification but reveal how mountain constraints are experienced differently depending on power level and time horizon.",
+    "directionality_logic": "The nitrogen cycle limit has no directionality in the sense of directed extraction. There are no beneficiaries and victims; the constraint is distributed across all agents proportional to their nitrogen demands. If a directionality were computed, it would be symmetrical across all observers because the constraint is indifferent to human agency \u2014 it enforces equally on all attempts to extract nitrogen flux beyond its rate. The absence of beneficiary/victim structure confirms the mountain classification: the constraint appears as a physical boundary, not as an asymmetric transfer mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "phosphorus_cycle_limit",
+      "agricultural_yield_ceiling",
+      "eutrophication_boundary"
+    ],
+    "dual_formulation_note": "The nitrogen cycle limit is a natural law constraint that structures downstream constraints in agricultural and aquatic systems. Phosphorus cycle limit is a parallel planetary boundary. Agricultural yield ceiling and eutrophication boundary are downstream constraints that emerge from the nitrogen cycle limit's interaction with human economic activity."
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,220 @@
+{
+  "header": {
+    "constraint_id": "pension_fund_solvency_relief",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pfsr"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Pension Fund Solvency Relief Mechanisms",
+    "topic_domain": "financial/regulatory/labor",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "corporate_sponsors",
+      "fund_managers"
+    ],
+    "victims": [
+      "active_workers",
+      "retirees",
+      "taxpayers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Underfunded Retiree",
+      "comment": "PERSPECTIVE 1: UNDERFUNDED RETIREE (SNARE) \u2014 Trapped in pension system with no exit. Solvency relief mechanisms allow sponsors to reduce contributions and delay benefit guarantees while retirees bear longevity risk and inflation erosion. No alternative retirement income source; maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Active Worker",
+      "comment": "PERSPECTIVE 2: ACTIVE WORKER (TANGLED ROPE) \u2014 Constrained by career investment in the sponsoring firm. Solvency relief extends contribution holidays and lowers benefit accrual, reducing retirement security. But the constraint also coordinates continued firm viability and pension continuation \u2014 without relief, some plans terminate entirely, leaving workers worse off. Mixed extraction and genuine coordination function."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Corporate Sponsor",
+      "comment": "PERSPECTIVE 3: CORPORATE SPONSOR (ROPE) \u2014 Benefits from solvency relief through reduced mandatory contributions. Experiences the constraint as legitimate coordination: relief enables continued funding of defined-benefit promises that would otherwise require unsustainable cash outflows. Net beneficiary with agency to exit (substitute 401k or terminate plan with regulatory approval)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Pension Fund Manager",
+      "comment": "PERSPECTIVE 4: PENSION FUND MANAGER (TANGLED ROPE) \u2014 Tasked with managing liabilities under solvency relief assumptions. Genuine coordination function: relief mechanisms allow continued management of plan obligations. But also enforces asymmetric timelines \u2014 managers can reallocate risk to participants (lower benefit guarantees) while sponsors reduce contributions. Active enforcement required; asymmetric extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Regulatory Framework",
+      "comment": "PERSPECTIVE 5: REGULATORY FRAMEWORK (PITON) \u2014 Solvency relief mechanisms persist through regulatory inertia despite degraded function. Designed to balance sponsor viability and participant security, but the balance has shifted \u2014 contribution holidays and longevity risk transfers are now routine adaptations rather than emergency measures. Theater ratio high: regulatory hearings and actuarial studies maintain appearance of rigorous evaluation while real parameters (mortality assumptions, discount rates) are administratively adjusted to produce 'solvency' findings. Primary function (protecting participants) has atrophied; institutional maintenance function (preserving plan continuance) remains performative."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Taxpayer Contingent Liability",
+      "comment": "PERSPECTIVE 6: TAXPAYER CONTINGENT LIABILITY (TANGLED ROPE) \u2014 Trapped as ultimate guarantor through Pension Benefit Guaranty Corporation (PBGC). Solvency relief reduces sponsor funding obligations while increasing taxpayer exposure to plan termination risk. Coordination function genuine: relief reduces immediate sponsor distress costs. Extraction asymmetric: gains to sponsors and managers; risks and costs deferred to taxpayers and participants."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational perspective, solvency relief appears to solve an inherent structural problem: the mismatch between promised benefits and funded assets is a natural feature of long-term benefit obligations under uncertain returns and mortality. Interest rate changes, longevity gains, and market volatility create funding gaps that are 'inherent to pension finance.' This perspective naturalizes what is actually a contingent institutional arrangement (benefit design, funding rules, mortality assumptions). Engine will classify as false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "longevity_assumption_arbitrage",
+      "question": "Are administrative mortality assumptions (used to compute solvency) deliberately outdated to produce favorable solvency findings, or do they reflect genuine technical uncertainty?",
+      "resolution_mechanism": "Longitudinal analysis of administrative mortality assumptions vs. realized mortality; comparison of assumptions used for solvency relief vs. assumptions used in sponsor investment decisions; audit of actuarial independence from sponsor incentives",
+      "impact": "If deliberately outdated: solvency relief is pure regulatory theater masking extraction (snare from more perspectives). If technical uncertainty: relief is justified coordination mechanism for managing predictive errors (rope from more perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether mortality assumptions are manipulated for regulatory outcomes"
+    },
+    {
+      "id": "sponsor_insolvency_distribution",
+      "question": "What proportion of solvency relief benefits accrue to sponsors that would genuinely terminate plans without relief versus sponsors using relief to optimize capital structure?",
+      "resolution_mechanism": "Historical analysis of plan termination rates pre- and post-relief; comparison of sponsor financial statements (leverage, dividends, capex) between relief-using and non-relief-using firms; structural equation modeling of relief utilization drivers",
+      "impact": "If majority face genuine insolvency: relief is essential coordination (rope from sponsor perspective). If majority are optimizing: relief is regulatory subsidy for capital structure arbitrage (snare from taxpayer perspective).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distribution of relief benefits to genuinely distressed vs. opportunistic sponsors"
+    },
+    {
+      "id": "participant_knowledge_asymmetry",
+      "question": "Do active workers and retirees understand how solvency relief mechanisms reduce their benefit guarantees and transfer longevity risk to them?",
+      "resolution_mechanism": "Survey of participant understanding of solvency relief, benefit guarantee reductions, and risk transfers; analysis of disclosure adequacy; comparison of participant risk perception vs. actuarial risk exposure",
+      "impact": "If knowledge gap exists: suppression is partly internalized (participants unaware of extraction); identity_locked exit option more accurate than trapped or constrained. If participants informed: suppression is purely structural (external barriers); trapped or constrained more accurate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Participant awareness of how solvency relief reduces benefits"
+    },
+    {
+      "id": "pbgc_funding_mechanism_adequacy",
+      "question": "Does PBGC premium structure adequately price the risk that solvency relief increases plan termination likelihood, or is PBGC underfunded relative to actual taxpayer exposure?",
+      "resolution_mechanism": "Actuarial analysis of PBGC premiums vs. expected claim costs; modeling of termination risk conditional on sponsor usage of solvency relief; historical analysis of PBGC balance sheet",
+      "impact": "If premiums inadequate: taxpayer contingent liability is dramatically underpriced; true extractiveness of relief is higher (snare from taxpayer view). If premiums adequate: relief redistributes risk but fairly prices it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether PBGC premiums adequately cover relief-related termination risk"
+    },
+    {
+      "id": "alternative_funding_mechanisms_suppression",
+      "question": "Why do regulatory frameworks not mandate sponsor funding through market mechanisms (surety bonds, insurance, indexed contributions) that would prevent solvency crises rather than relieving them after the fact?",
+      "resolution_mechanism": "Historical analysis of why alternative funding was rejected; cost-benefit analysis of proactive vs. reactive mechanisms; stakeholder interviews with regulators, sponsors, and unions",
+      "impact": "If suppression of alternatives is regulatory capture: relief is extractive rent (snare). If alternatives are genuinely infeasible: relief is least-bad option (tangled rope).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Why proactive funding mechanisms were not adopted"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 22,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 22,
+      "value": 0.74
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "commentary": {
+    "narrative_context": "Pension fund solvency relief mechanisms \u2014 contribution holidays, extended amortization periods, mortality assumption adjustments, and longevity risk transfers \u2014 exemplify how regulatory coordination mechanisms can embed asymmetric extraction. The constraint solves a genuine coordination problem (sponsors cannot fund promises at promised rates when markets collapse or demographics shift) while simultaneously enabling sponsors and fund managers to extract value by shifting risks to workers and taxpayers. The extractiveness has increased over the interval (0.32 \u2192 0.58) as relief became routine rather than emergency, and theater has increased (0.45 \u2192 0.68) as regulatory actuarial assumptions have drifted from empirical mortality data. The constraint exhibits all six classification types from different structural positions: snare for retirees (trapped in underfunded plans), tangled rope for active workers and taxpayers (genuine coordination mixed with extraction), rope for sponsors (net beneficiary with agency), piton for the regulatory framework (performative maintenance of equilibrium), mountain for the analytical observer (naturalizes contingent design as inherent structural limit).",
+    "key_agents": [
+      "Corporate Sponsors: Primary beneficiary (institutional/arbitrage) \u2014 reduces mandatory contributions and defers funding obligations; can exit through plan termination or substitution",
+      "Pension Fund Managers: Primary beneficiary (institutional/constrained) \u2014 relief enables continued fund management and fee extraction; constrained by fiduciary obligations",
+      "Active Workers: Secondary victim (moderate/constrained) \u2014 face reduced benefit accrual and extended work requirement; constrained by career path dependence",
+      "Retirees: Primary victim (powerless/trapped) \u2014 trapped in underfunded plans; bear longevity risk, inflation erosion, and benefit cuts",
+      "Taxpayers: Secondary victim (powerless/trapped) \u2014 trapped as ultimate PBGC contingent guarantor; risk exposure undisclosed and inadequately priced",
+      "Pension Benefit Guaranty Corporation (PBGC): Institutional actor (institutional/constrained) \u2014 manages termination risk; constrained by premium structure and political pressure",
+      "Regulatory Agencies: Institutional actor (institutional/mobile) \u2014 maintains solvency relief framework; mobile to alternative regulatory designs but locked by institutional inertia",
+      "Actuarial Profession: Analytical actor (analytical/constrained) \u2014 technical role constrained by institutional incentive alignment; mortality assumptions driven partly by sponsor preference"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Solvency relief delivers three quantified benefits to sponsors: (1) reduced mandatory contributions (immediate cash flow relief), (2) extended amortization periods (deferred funding obligations), (3) mortality assumption adjustments (optimized benefit liability calculations). For retirees, extraction occurs through: (1) benefit guarantee reductions (explicit), (2) longevity risk transfer (implicit \u2014 retirees bear mortality gains), (3) inflation erosion (purchasing power loss as nominal benefits fixed). The extractiveness trajectory reflects that relief mechanisms became institutionalized \u2014 early relief (0.32) was emergency response to market crashes; mature relief (0.58) is routine administrative adjustment. Suppression (0.65): High. Barriers to beneficiary exit include: (1) regulatory prohibition of plan switching for vested accrued benefits (trapped), (2) career path dependence (constrained for active workers), (3) lack of alternative retirement security mechanisms (trapped for retirees), (4) distributed taxpayer losses obscuring individual exposure (trapped for taxpayers). Theater ratio (0.68): High-moderate, increasing. Solvency relief requires annual actuarial valuations, regulatory hearings, and technical documentation that maintain appearance of rigorous evaluation. Reality: key parameters (mortality assumptions, discount rates, market value smoothing) are administratively adjusted to achieve desired solvency findings. Theater increased over interval because adjustment became more sophisticated (parameter adjustments now account for market conditions, yield curves, demographic trends) and more normalized (annual adjustments treated as routine rather than emergency measures).",
+    "perspectival_gap": "The three primary victims perceive the constraint very differently based on their exit options and temporal horizon. Retirees (trapped, immediate/biographical) perceive snare \u2014 immediate and permanent benefit cuts with no exit. Active workers (constrained, biographical) perceive tangled rope \u2014 they face reduced accrual and extended work requirement, but the constraint also preserves the plan's viability and their eventual retirement. Taxpayers (trapped, distributed temporal horizon) rarely perceive the constraint at all \u2014 their exposure is abstracted, aggregated, and made invisible by the PBGC mechanism. This visibility asymmetry is itself a suppression mechanism: retirees clearly see the extraction (benefit cuts are explicit), while taxpayers do not see theirs (contingent liability is abstract). The beneficiary (sponsor, institutional/arbitrage) perceives rope \u2014 legitimate coordination between current funding constraints and future benefit promises. The analytical observer risks perceiving mountain \u2014 treating the funding mismatch as an immutable law of pension finance. The regulatory framework perceives piton \u2014 the original coordination function (ensuring plan solvency during shocks) has degraded into routine theater that normalizes extraction.",
+    "directionality_logic": "Directionality values (d) are derived from structural relationships: Sponsors benefit from relief \u2192 d \u2248 0.10 (beneficiary + arbitrage exit \u2192 low d \u2192 negative f(d) \u2192 institutional benefits from constraint). Retirees trapped without benefit \u2192 d \u2248 0.92 (victim + trapped exit \u2192 very high d \u2192 very high f(d) \u2192 powerless agents experience maximum extraction). Active workers have mixed status: trapped by career dependence but receiving continued benefit accrual \u2192 d \u2248 0.55 (split victim/beneficiary + constrained exit \u2192 moderate d \u2192 moderate extraction experience). Taxpayers have distributed exposure and no explicit agency \u2192 d \u2248 0.88 (implicit victim + trapped exit \u2192 powerless agents experience high extraction). Fund managers benefit but constrained by fiduciary duty \u2192 d \u2248 0.35 (partial beneficiary + constrained exit \u2192 moderate-low d). Regulatory agencies have high mobility to alternative designs but locked by institutional inertia \u2192 d \u2248 0.45 (neither fully beneficiary nor victim; constraint is their primary function). These directionality values feed the sigmoid f(d) to produce effective extractiveness (\u03c7) from each structural position.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that solvency relief is structurally a tangled rope, not a pure rope or pure snare. The constraint exhibits genuine coordination function (it solves the real problem of benefit-funding mismatch by allowing extended amortization) AND asymmetric extraction (benefits flow to sponsors, costs to participants). The false summit is the analytical observer's mountain perspective \u2014 the idea that funding mismatches are 'inherent to pension finance' naturalizes regulatory design choices (benefit accrual rules, sponsor responsibility allocation, mortality assumption methodologies) that could be redesigned. The false low ground is the pure snare perspective \u2014 while extraction is real, the coordination function is also real and participants would be worse off if plans terminated entirely. The true classification (tangled rope) forces recognition that both mechanisms are operating simultaneously: relief does coordinate, AND it does extract. The mandatrophy dissolves when this simultaneity is accepted rather than resolved into one narrative."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "interest_rate_discount_volatility",
+      "pbgc_premium_adequacy",
+      "defined_benefit_plan_sustainability"
+    ],
+    "dual_formulation_note": "Pension solvency relief is downstream of the structural mismatch between promised benefit obligations and available funding (which varies with market conditions and mortality assumptions). The upstream constraint concerns benefit design and sponsor funding rules; this story concerns the relief mechanisms used when those mismatches create solvency crises. The upstream has higher epistemic confidence (the mismatch is empirically persistent); this story's extractiveness (0.58) reflects the contingency of relief design choices."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

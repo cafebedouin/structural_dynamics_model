@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "knowledge_worker_wage_suppression",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "kwws"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Knowledge Worker Wage Suppression",
+    "topic_domain": "economic/labor",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "capital_owners",
+      "corporate_management"
+    ],
+    "victims": [
+      "software_engineers",
+      "data_scientists",
+      "researchers",
+      "technical_specialists"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Individual Knowledge Worker",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL KNOWLEDGE WORKER (SNARE) \u2014 Trapped by visa sponsorship, stock vesting schedules, and the global labor market structure. High skill specificity creates switching costs. Geographic mobility restricted by immigration regimes. Compensation structures (deferred equity, signing bonuses) lock workers into multi-year commitments. No meaningful exit without severe economic penalty."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Knowledge Worker Collective (Organized)",
+      "comment": "PERSPECTIVE 2: ORGANIZED KNOWLEDGE WORKERS (TANGLED ROPE) \u2014 When collectively organized (professional associations, union movements), knowledge workers benefit from genuine coordination (knowledge-sharing, skill standardization, collective bargaining) while simultaneously experiencing extraction. The constraint requires active enforcement through non-compete agreements, IP ownership structures, and mobility restrictions. Organization provides some exit capacity through collective action, but capital can reorganize to counter collective power."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Capital Owners and Management",
+      "comment": "PERSPECTIVE 3: CAPITAL OWNERS AND MANAGEMENT (ROPE) \u2014 Experience the constraint as pure coordination: labor supply standardization, wage compression, and mobility restrictions enable predictable cost planning and knowledge hoarding. The constraint coordinates capital accumulation. Management has full exit optionality \u2014 they can hire internationally, offshore work, or restructure compensation. Effective extraction flows toward this agent."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Skills Development and Education Sector",
+      "comment": "PERSPECTIVE 4: SKILLS DEVELOPMENT ECOSYSTEM (SCAFFOLD) \u2014 Educational institutions, bootcamps, and credentialing systems are building parallel pathways (alternative credentials, portfolio-based hiring, direct skill demonstration) that bypass traditional wage suppression mechanisms. As these mature, the constraint's extraction force diminishes. The sunset logic applies: as skills become tradeable outside institutional hierarchies, wage suppression loses leverage. Theater is moderate (education credentialing involves performative elements) but declining as market-validated alternatives emerge."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Tech Company as Institutional Actor",
+      "comment": "PERSPECTIVE 5: TECH COMPANY AS INSTITUTIONAL ACTOR (TANGLED ROPE) \u2014 Large tech firms benefit from wage suppression (lower labor costs, reduced turnover, increased leverage) while also genuinely coordinating knowledge worker productivity through infrastructure, tools, and organizational design. The firm experiences the constraint as enforceable coordination that happens to be extractive. Constrained exit options because competitive labor market dynamics can shift rapidly, forcing wage adjustments. Both beneficiary and (partially) victim of the suppression mechanism."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Human Capital Management System",
+      "comment": "PERSPECTIVE 6: HUMAN CAPITAL MANAGEMENT SYSTEM (PITON) \u2014 Traditional HR practices (performance reviews, salary bands, equity vesting) were designed to coordinate talent allocation but now function largely as theater. The practices persist through institutional inertia despite being increasingly decoupled from actual knowledge worker value or market dynamics. The system maintains appearance of meritocratic evaluation while suppression mechanisms operate through other channels (market concentration, non-competes, visa restrictions). Theater ratio high because the evaluation apparatus is performative \u2014 it produces legitimacy narratives rather than actual wage determination."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (FALSE SUMMIT) \u2014 Risk of naturalizing the constraint as an immutable feature of labor markets ('supply and demand sets wages', 'higher education requires years of investment', 'knowledge specialization creates switching costs'). These framings mistake contingent institutional arrangements (visa sponsorship, credential gatekeeping, equity vesting structures) for natural laws. The mountain classification is a false summit \u2014 the engine will detect this through accessibility_collapse and resistance metrics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "visa_enforcement_dependency",
+      "question": "How much of wage suppression depends on visa sponsorship and immigration enforcement specifically?",
+      "resolution_mechanism": "Comparative analysis: wage trajectories and mobility rates for visa-sponsored vs. citizen knowledge workers; simulation of suppression under open-immigration regime",
+      "impact": "If visa-dependent (>60%): suppression is enforceable only through immigration controls; looser immigration regime collapses the constraint. If foundational (<30%): suppression persists through market concentration and credential gatekeeping regardless of immigration policy.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree to which wage suppression depends on visa sponsorship mechanisms"
+    },
+    {
+      "id": "alternative_credential_effectiveness",
+      "question": "Do alternative credentials (bootcamps, portfolio-based hiring, direct skill demonstration) actually create wage premium parity with traditional degree-holders?",
+      "resolution_mechanism": "Longitudinal wage tracking: starting salaries, career trajectory, and total compensation for bootcamp graduates vs. university graduates in same roles; employer hiring patterns by credential type over time",
+      "impact": "If parity achieved: scaffold sunset is real and extraction mechanism is weakening. If persistent wage discount: alternative credentials remain subordinate, suppression persists through credential stratification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative credentials eliminate wage suppression mechanisms"
+    },
+    {
+      "id": "market_concentration_necessity",
+      "question": "Can wage suppression be sustained in a competitive labor market, or does it require oligopolistic market concentration (FAANG dominance)?",
+      "resolution_mechanism": "Historical analysis: wage trajectories during competitive tech booms vs. consolidation periods; regional analysis comparing concentrated tech hubs (SF, NYC) vs. distributed tech labor markets; simulation of suppression under fragmented employer base",
+      "impact": "If concentration-dependent: antitrust enforcement could disrupt suppression. If competitive-market-compatible: suppression persists through other mechanisms (credential gatekeeping, visa control) even in fragmented markets.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether wage suppression requires oligopolistic market concentration"
+    },
+    {
+      "id": "collective_action_threshold",
+      "question": "What critical mass of organized knowledge workers is required to shift the tangled_rope classification toward rope (genuine coordination without extraction)?",
+      "resolution_mechanism": "Historical case studies of successful knowledge worker organizing (post-WWII manufacturing, public sector unions); analysis of current unionization attempts in tech; threshold modeling based on labor market dynamics",
+      "impact": "If low threshold (<20% unionization): organized labor can shift power balance quickly. If high threshold (>50%): suppression is structurally resistant to incremental organizing.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Critical mass required for knowledge workers to shift constraint classification"
+    },
+    {
+      "id": "extraction_vs_coordination_boundary",
+      "question": "What portion of wage suppression is necessary coordination cost (matching supply/demand, compensating for firm-specific human capital investment) vs. pure extractive overhead?",
+      "resolution_mechanism": "Decomposition analysis: compare wages in purely competitive markets (if any exist) vs. suppressed markets; identify which wage differentials correlate with measurable firm-provided value vs. market power; examine wage stickiness downward during labor supply shocks",
+      "impact": "If small coordination component (<10%): suppression is primarily extractive, mandatrophy suggests piton or snare. If large component (>40%): tangled_rope classification is robust, suppression has legitimate functional basis.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Boundary between necessary coordination costs and extractive overhead"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Knowledge worker wage suppression is a hybrid coordination-extraction mechanism that has intensified over the past decade through the concentration of tech capital, the expansion of visa-dependent labor regimes, and the stratification of credentials. The constraint operates simultaneously as genuine coordination (knowledge workers benefit from infrastructure, training, and network effects provided by large firms) and as asymmetric extraction (capital captures disproportionate share of productivity gains through wage suppression, stock concentration, and mobility restrictions). This story exemplifies Tangled Rope classification: both coordination and extraction functions are structural and necessary to understand the constraint's persistence. The extractiveness trajectory shows accumulation over time as market concentration deepened and alternative exit routes (independent consulting, startup formation, geographic mobility) became more costly. The theater ratio remains moderate because actual wage determination increasingly bypasses the performative HR apparatus (performance reviews, salary bands) and operates through informal market mechanisms, reducing the performative component relative to classical industrial labor relations. The constraint requires active enforcement through visa sponsorship systems, non-compete agreements, IP ownership structures, and credential gatekeeping \u2014 removing any one enforcement mechanism significantly weakens the suppression capacity.",
+    "key_agents": [
+      "Individual Knowledge Worker: Primary victim (powerless/trapped) \u2014 trapped by visa sponsorship, vesting schedules, and specialized skill sets with limited outside market",
+      "Capital Owners and Tech Management: Primary beneficiary (institutional/arbitrage) \u2014 extract wage differential; maintain full exit optionality and can reorganize labor strategy rapidly",
+      "Organized Knowledge Workers: Secondary actor (moderate/constrained) \u2014 when collectively mobilized, experience genuine coordination benefits alongside extraction; growing union movements testing exit capacity",
+      "Educational and Skills Development Sector: Secondary actor (organized/constrained) \u2014 building alternative pathways (bootcamps, credential alternatives) with potential to sunset wage suppression mechanisms",
+      "Tech Companies as Institutional Actors: Dual role (institutional/constrained) \u2014 simultaneously beneficiaries and partial victims; constrained by competitive dynamics that occasionally force wage adjustments but retain structural advantage",
+      "HR and Human Capital Management Systems: Institutional theater (institutional/arbitrage) \u2014 maintains performative evaluation apparatus while suppression operates through other channels; persists through inertia",
+      "Analytical Observer: Risk of false summit \u2014 naturalizing contingent institutional arrangements as immutable features of labor markets"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Knowledge workers generate significant productivity value (software engineers, researchers, data scientists) whose output is captured by capital owners. The wage suppression represents extraction of 35-50% of marginal productivity gains based on various economic analyses. The 0.58 figure reflects that this is substantial but not total \u2014 knowledge workers still earn absolute high wages (compared to global labor median) even while experiencing suppression relative to their contribution. Suppression (0.65): High. Multiple enforcement mechanisms reduce exit capacity: (1) Visa sponsorship creates legal dependency for ~30% of US tech workforce, (2) Stock vesting locks workers into 4-year commitment cycles, (3) Non-compete agreements in some jurisdictions restrict geographic mobility, (4) Credential gatekeeping (degree requirements, certification costs) raises switching costs, (5) Specialized skill sets have limited external markets, (6) Market concentration (FAANG dominance) reduces employer alternatives. Suppression is not total because knowledge workers can (with difficulty and cost) exit to entrepreneurship, geographic arbitrage, or sector change, and because market dynamics occasionally force wage adjustments. Theater ratio (0.48): Moderate-low. Unlike industrial-era labor, wage determination for knowledge workers is increasingly transparent (market data, GitHub portfolios, public project work demonstrate competence; industry salary surveys are widely available). HR performance review apparatus has declined in predictive power. However, performative elements persist through: equity compensation complexity (vesting schedules, grant refreshes create theater around 'total compensation'), title inflation (Senior Engineer, Principal Engineer, Fellow creating pseudo-meritocratic hierarchy), and the credentialing apparatus (degree requirements, certifications) that serves gatekeeping function disguised as skill validation. Theater ratio is lower than industrial-era labor relations (0.70-0.85) and declining as market transparency increases.",
+    "directionality_logic": "Each perspective's directionality is derived from structural position: Capital owners/management benefit from wage suppression (d \u2248 0.08, near-zero derived from beneficiary status + arbitrage exit \u2192 negative f(d)); organized knowledge workers experience constrained exit with partial victim status (d \u2248 0.55); individual trapped workers experience maximum extraction (d \u2248 0.95); institutional tech companies are partially beneficiaries and partially constrained (d \u2248 0.40, reflecting mixed position); alternative education sector experiences low extraction (d \u2248 0.25, beneficiary of credential arbitrage but not direct victim of wage suppression). The piton institutional actor (HR systems) has arbitrage exit options but benefits primarily from theater maintenance rather than wage suppression directly (d \u2248 0.15). The analytical observer at universal scope risks false summit through naturalizing institutional arrangements.",
+    "perspectival_gap": "This constraint generates six distinct classifications from the same base metrics: the beneficiary (capital) sees pure coordination (Rope) \u2014 wage standardization enables predictable planning; trapped workers see extraction (Snare) \u2014 no meaningful exit, full cost bearing; organized workers see mixed coordination-extraction (Tangled Rope) \u2014 genuine collective benefits with asymmetric distribution; education sector sees a temporary problem with sunset (Scaffold) \u2014 alternative credentials will eventually undermine suppression mechanisms; HR systems see their own degraded ritual (Piton) \u2014 performance reviews persist but no longer drive wage determination; analytical observer risks seeing natural law (Mountain) \u2014 but the structural data reveals this as false summit. The gap between capital's rope perspective and powerless worker's snare perspective is the core diagnostic: same constraint, opposite classifications, driven by directionality d and exit capacity. The scaffold perspective represents the real structural hope \u2014 alternative credentials actually could weaken suppression if they achieve wage parity with traditional pathways.",
+    "mandatrophy_analysis": "The mandatrophy for knowledge worker wage suppression is resolved by recognizing that the constraint IS legitimately Tangled Rope: genuine coordination (knowledge workers benefit from organizational infrastructure, training, network effects, project scope) coexists with asymmetric extraction (capital captures disproportionate share of productivity gains). The tension is not resolvable into pure coordination (Rope) because suppression mechanisms are deliberately maintained (visa sponsorship, IP ownership, non-compete agreements); nor is it pure extraction (Snare) because the organizational infrastructure genuinely enables productivity that individual workers could not replicate alone. The false summit (Mountain) is definitively rejected: the constraint is demonstrably changeable through policy intervention (visa reform, antitrust enforcement, credential alternatives), not an immutable feature of knowledge work. The Piton classification correctly identifies the performative HR apparatus as degraded theater. The Scaffold classification correctly identifies the real structural pressure: alternative credentials and distributed work models are genuinely eroding the suppression mechanisms' force. No single classification captures the full structure \u2014 the perspectival presheaf IS the answer. The organizational coordination function is real; the extraction is real; neither can be dismissed. The extractiveness trajectory (0.35 \u2192 0.58 over interval) shows accumulation, suggesting the extraction mechanisms have intensified faster than coordination benefits have been redistributed \u2014 a true signal of constraint degradation from balanced coordination toward skewed extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "tech_visa_dependency",
+      "stock_compensation_vesting",
+      "credential_gatekeeping",
+      "market_concentration_tech"
+    ],
+    "dual_formulation_note": "Knowledge worker wage suppression decomposes into four structurally distinct mechanisms: (1) visa dependency (\u03b5 \u2248 0.35, extraction through legal status), (2) stock vesting (\u03b5 \u2248 0.42, temporal lock-in), (3) credential gatekeeping (\u03b5 \u2248 0.40, barriers to entry), and (4) market concentration (\u03b5 \u2248 0.52, employer power asymmetry). The aggregate 0.58 extractiveness reflects the combined effect; measuring suppression via any single mechanism produces lower \u03b5. Each mechanism can be partially disrupted independently (visa reform, alternative credentials) but suppression persists if others remain enforced. Linked stories capture this decomposition."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.4
+    }
+  ]
+}

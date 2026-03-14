@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "technical_documentation_quality",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "techdoc"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Technical Documentation Quality Constraint",
+    "topic_domain": "software_engineering/knowledge_management",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "product_team",
+      "development_organization"
+    ],
+    "victims": [
+      "end_users",
+      "maintenance_developers",
+      "knowledge_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The End User",
+      "comment": "PERSPECTIVE 1: END USER (SNARE) \u2014 Cannot exit system dependency; bears full cost of poor documentation. Trapped by software lock-in, network effects, and lack of alternatives. Forced to reverse-engineer undocumented features, waste time troubleshooting, pay for workarounds. Maximum extraction with no exit capacity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Maintenance Developer",
+      "comment": "PERSPECTIVE 2: MAINTENANCE DEVELOPER (TANGLED ROPE) \u2014 Constrained by career path dependence and skill specificity to the codebase; also benefits from job security through system complexity and knowledge asymmetry. Experiences both coordination (they solve real problems for the organization) and extraction (their labor is undervalued and their specialized knowledge locks them in). High extraction cost but some institutional recognition and stability."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Product Team",
+      "comment": "PERSPECTIVE 3: PRODUCT TEAM (ROPE) \u2014 Benefits from documentation gap; can capture time value by shipping without documentation overhead, achieve faster iteration cycles, redirect resources to feature development. Experiences constraint as pure coordination: documentation enables handoff between team members. Net beneficiary through arbitrage \u2014 can substitute feature velocity for documentation completeness."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Open Documentation Movement",
+      "comment": "PERSPECTIVE 4: OPEN DOCUMENTATION MOVEMENT (SCAFFOLD) \u2014 Organized agents (doc-as-code, community wikis, AI-assisted generation tools) see poor proprietary documentation as a temporary failure. Building alternative knowledge pathways: open-source projects with community-maintained documentation, markdown-first tooling, automated doc generation from code. Sunset logic: as cultural norms shift toward documentation-first development and tools lower documentation cost, the extraction mechanism loses force. Estimated sunset: 5-10 years as tooling matures."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Enterprise Documentation Department",
+      "comment": "PERSPECTIVE 5: ENTERPRISE DOCUMENTATION DEPARTMENT (PITON) \u2014 Traditional technical writing and documentation maintenance persists largely through institutional inertia. The actual function has atrophied: users ignore formal documentation and rely on Stack Overflow, vendor-supplied examples, and community forums. The documentation department continues performing the ritual (maintaining style guides, reviewing documents, producing PDFs) despite low functional verification. Maintained because the alternative (dissolving the function) requires organizational change, not because documentation is working. Theater dominates function."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some documentation lag is inherent to software systems: complexity always outpaces documentation completeness, tacit knowledge in code always exceeds explicit documentation, and the gap between implementation and documentation is a structural feature of how systems evolve. This perspective sees the constraint as an immutable property of software development. However, the structural data contradicts the mountain classification \u2014 the engine will compute this as a false summit, revealing that 'inherent to software' naturalizes what is actually a contingent organizational choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "documentation_vs_code_divergence_threshold",
+      "question": "At what divergence rate between documented and actual behavior does documentation cease being useful and become actively harmful?",
+      "resolution_mechanism": "Empirical tracking of documentation accuracy over software versions; correlation between accuracy decay rate and user reliance metrics; analysis of support ticket distributions before/after documentation accuracy drops",
+      "impact": "If threshold is low (<5% divergence): current documentation practices are extractive \u2014 users are trapped by inaccurate information. If threshold is high (>20% divergence): substantial documentation debt is tolerable, loosening the extraction characterization.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold divergence rate between documentation and implementation"
+    },
+    {
+      "id": "self_documenting_code_sufficiency",
+      "question": "Do well-structured code (clear naming, type hints, inline comments) and automated documentation generation (docstrings, API specs) constitute adequate documentation, or do users require separate prose documentation?",
+      "resolution_mechanism": "User satisfaction surveys controlling for code quality levels; support ticket analysis comparing low-comment vs high-comment codebases; time-to-productivity studies for new developers with only generated vs prose documentation",
+      "impact": "If code-level documentation sufficient: constraint shifts to Rope \u2014 problem is coordination of documentation discipline, not extraction. If prose documentation necessary: constraint remains Snare for users \u2014 they are trapped by the gap between generated specs and practical understanding.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether self-documenting code eliminates documentation extraction"
+    },
+    {
+      "id": "documentation_production_cost_evolution",
+      "question": "Will AI-assisted documentation generation (large language models generating docs from code, automated test case extraction, docstring inference) reduce the labor cost of documentation sufficiently to eliminate the extraction incentive?",
+      "resolution_mechanism": "Comparison of human documentation labor hours vs AI-assisted generation output quality; cost-benefit analysis of AI tooling adoption rates across organizations; longitudinal tracking of documentation investment as percentage of engineering budget",
+      "impact": "If labor cost drops below 5% of engineering budget: extraction mechanism breaks \u2014 no longer economical to skip documentation. If labor cost remains >15%: extraction incentive persists regardless of tool improvements.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Will AI tooling eliminate the documentation labor cost extraction"
+    },
+    {
+      "id": "knowledge_worker_exit_capacity_evolution",
+      "question": "As community-maintained documentation, video tutorials, and AI chatbots improve, do users actually exit low-documentation systems for better-documented alternatives, or do network effects lock them in regardless of documentation quality?",
+      "resolution_mechanism": "Market share analysis of software with strong vs weak documentation; user survey on documentation quality as decision factor in tool adoption; longitudinal tracking of churn rates correlated with documentation investment",
+      "impact": "If users readily switch: exit capacity is higher than current assessment \u2014 reclassify users from trapped to constrained. If users stay despite poor documentation: network effects dominate \u2014 trapped classification confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether users actually exit systems with poor documentation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Technical documentation quality creates a structural asymmetry between those who benefit from shipping without documentation (product teams, organizations optimizing for velocity) and those who bear the cost of poor documentation (end users, maintenance developers, knowledge workers). The constraint exhibits high extractiveness because organizations can systematically choose to underinvest in documentation when users face high switching costs. Suppression is substantial because end users have limited alternatives (locked into platforms by network effects, integration costs, and ecosystem effects), maintenance developers face career path dependence (specialized knowledge becomes a lock), and the organizational incentive structure systematically rewards feature velocity over documentation. The theater ratio (0.65) reflects that formal documentation often becomes performative: style-guide-compliant documents that users ignore in favor of Stack Overflow answers, vendor examples, and community wikis. The constraint's extractiveness has increased over the interval (0.35 \u2192 0.52) as software complexity outpaced documentation practices and network effects strengthened platform lock-in. Open documentation movements and AI-assisted generation tools represent a genuine sunset pathway \u2014 if these mature, the extraction mechanism loses force because documentation cost becomes negligible and users gain viable exit options.",
+    "key_agents": [
+      "End Users: Primary victim (powerless/trapped) \u2014 depend on software despite poor documentation; face high switching costs from network effects and integration dependencies; cannot organize to demand better documentation",
+      "Maintenance Developers: Secondary victim (moderate/constrained) \u2014 trapped in knowledge silos; specialized expertise in undocumented systems creates job security but limits career mobility; bear cognitive load of reverse-engineering peers' code",
+      "Product Team: Primary beneficiary (institutional/arbitrage) \u2014 captures time value by shipping without documentation overhead; achieves faster iteration velocity; redirects resources to feature development; arbitrage capacity enables trade-off between documentation and velocity",
+      "Development Organization: Secondary beneficiary (institutional/arbitrage) \u2014 reduced labor costs, faster feature delivery, competitive advantage in market velocity; can extract rents through platform lock-in and switching cost asymmetry",
+      "Open Documentation Movement: Organized coalition (organized/mobile) \u2014 building alternative knowledge pathways through doc-as-code tooling, community-maintained wikis, AI-assisted generation; have exit capacity and see sunset logic in documentation constraints",
+      "Enterprise Documentation Department: Institutional actor (institutional/arbitrage) \u2014 maintains documentation ritual through inertia; primary function has atrophied but organizational structure persists; sees constraint as natural law of software development",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent organizational incentives as inherent software properties"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Organizations can systematically choose to underinvest in documentation when users face switching costs, but the extraction is not maximal because some organizations do invest in documentation as a competitive differentiator, and open-source communities often maintain documentation despite no direct extraction incentive. The value reflects that the choice to underdocument is contingent on market structure (platform power, switching costs), not inevitable. Suppression (0.58): Moderate-high. Significant barriers include network effects (users locked into platforms despite poor documentation), integration dependencies, specialized skill requirements for documentation, and organizational career incentives that reward shipping features over documentation work. But suppression is not total \u2014 users can migrate between tools, documentation can be crowdsourced, and tooling innovations (doc-as-code, AI generation) are lowering documentation barriers. Theater ratio (0.65): Moderate-high. Formal technical documentation often becomes performative: style-guide-compliant documents maintained for regulatory compliance or quality theater while users rely on Stack Overflow, vendor examples, blog posts, and video tutorials. The gap between official documentation and actual knowledge sources has widened as complexity increased and community alternatives matured. Theater has increased over the interval as organizations maintained documentation department rituals while the actual epistemic function shifted to distributed community knowledge.",
+    "directionality_logic": "The beneficiary-victim asymmetry drives directionality. Product teams and organizations benefit from faster shipping without documentation overhead \u2014 they have arbitrage capacity (can choose velocity over completeness). End users face trapped exit options: locked into platforms by network effects, switching costs, and integration dependencies, with no recourse except reverse-engineering or external knowledge sources. Maintenance developers face constrained exit: they benefit from documentation for coordination but are trapped in knowledge silos when documentation is poor; their specialized expertise creates lock-in. The organization perceives the constraint as coordination (solving the communication problem between engineers) while users perceive it as extraction (forced to substitute personal labor for missing documentation). The product team's low directionality (d \u2248 0.15) comes from arbitrage exit capacity; the end user's high directionality (d \u2248 0.90) comes from trapped dependency; the maintenance developer's moderate directionality (d \u2248 0.55) reflects constrained exit with mixed benefits.",
+    "perspectival_gap": "This constraint demonstrates perpectival collapse across institutional boundaries. The product team sees coordination (Rope): documentation enables handoff between developers and enables feature velocity. The organization sees coordination (Rope): documentation is a communication cost traded against velocity. The end user sees extraction (Snare): they are forced to expend personal labor to understand undocumented features with no exit option. The maintenance developer sees mixed extraction and coordination (Tangled Rope): they solve real problems for the organization but are trapped in knowledge silos. The open documentation coalition sees a solvable problem with sunset (Scaffold): tooling and cultural shifts are building alternatives. The documentation department sees degraded ritual (Piton): formal documentation persists through inertia while actual knowledge flows through external channels. The civilizational observer risks naturalizing the constraint (Mountain): 'documentation always lags implementation' \u2014 but the structural data reveals this as a false summit, a contingent organizational choice enabled by platform power and switching cost asymmetry.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that documentation quality is NOT an immutable property of software development. The civilizational/natural law perspective (Mountain) is a false summit: organizations with strong documentation commitments (Apple, PostgreSQL, Rust) prove that full documentation IS achievable. The constraint's extractiveness is a contingent organizational choice, not a law of nature. The classification resolves as Tangled Rope because: (1) Genuine coordination function exists \u2014 documentation enables team communication and knowledge transfer; (2) Asymmetric extraction occurs \u2014 the coordination costs are borne by users and maintenance developers while benefits flow to product teams and organizations through velocity gains; (3) Active enforcement required \u2014 organizations must choose to prioritize velocity over documentation, a choice that is actively enforced through resource allocation, performance metrics, and incentive structures. The constraint persists not because documentation is impossible but because the incentive structure rewards shipping over completeness. The scaffold perspective's sunset logic is real: open documentation tooling and AI-assisted generation are reducing the labor cost of documentation, which will eventually eliminate the extraction incentive."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "software_maintenance_burden",
+      "knowledge_worker_lock_in",
+      "platform_switching_cost"
+    ],
+    "dual_formulation_note": "Technical documentation quality is downstream of organizational incentive structures (feature velocity prioritization) and platform market structures (switching costs, network effects). The documentation constraint is distinct from these upstream constraints but structurally enabled by them."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    }
+  ]
+}

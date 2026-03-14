@@ -1,0 +1,211 @@
+{
+  "header": {
+    "constraint_id": "synthetic_text_detection_arms_race",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "syndet"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.48,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Synthetic Text Detection Arms Race",
+    "topic_domain": "information/technology/epistemic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "detection_service_providers",
+      "content_platforms_with_gating",
+      "institutional_credentialing_systems"
+    ],
+    "victims": [
+      "open_knowledge_commons",
+      "low_resource_researchers",
+      "students_in_access_constrained_regions"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Epistemic Commons",
+      "comment": "PERSPECTIVE 1: EPISTEMIC COMMONS (SNARE) \u2014 The open knowledge ecosystem cannot exit the detection arms race and bears full cost of escalating gatekeeping. Text classification tools proliferate; detection paywalls multiply; researchers in low-resource contexts face compounding barriers. No organizing principle, no exit option. Experiences maximum extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Students in Access-Constrained Regions",
+      "comment": "PERSPECTIVE 2: STUDENTS IN ACCESS-CONSTRAINED REGIONS (SNARE) \u2014 Cannot afford premium detection tools or attend institutions with site licenses. Trapped between generative tools (free, powerful) and detection tools (paywalled, proprietary). Original academic pathways increasingly unavailable. No alternatives for credential acquisition."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Educators and Institutional Gatekeepers",
+      "comment": "PERSPECTIVE 3: EDUCATORS AND INSTITUTIONAL GATEKEEPERS (TANGLED ROPE) \u2014 Benefit from detection tools as enforcement mechanism for academic integrity norms (genuine coordination function: maintaining assessment validity). But also bear costs: false positives damage student relationships, detection tools require budget allocation, rapid tool obsolescence forces continuous re-adoption. Constrained by institutional need to demonstrate integrity verification."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Detection Service Providers",
+      "comment": "PERSPECTIVE 4: DETECTION SERVICE PROVIDERS (ROPE) \u2014 Primary beneficiaries. Experience the constraint as pure coordination: they provide signal for integrity verification, enabling institutions to gate credentials. Revenue model scales with adoption and perceived necessity. Net beneficiary \u2014 extraction runs toward them."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Open-Source Detection Coalition",
+      "comment": "PERSPECTIVE 5: OPEN-SOURCE DETECTION COALITION (SCAFFOLD) \u2014 Organized agents (academia, open-source communities, nonprofit fact-checkers) building detection tools outside the proprietary ecosystem. See the arms race as a temporary market dysfunction with a sunset: sufficiently accurate, open, community-maintained detection would undercut extraction by eliminating the scarcity premium. Constrained by resource limitations but perceive an exit path through collective action."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Traditional Academic Credentialing",
+      "comment": "PERSPECTIVE 6: TRADITIONAL ACADEMIC CREDENTIALING (PITON) \u2014 The primacy of in-person, proctored examination and supervised thesis work is being maintained through performative adoption of detection tools as proxy for integrity verification. Detection paywalls actually weaken academic institutions' independence (they become dependent on vendor services), yet adoption is mandated through accreditation norms. The mechanism (detection tools) persists through institutional inertia despite undermining the function (independent assessment)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some verification lag between generative capability and detection capability is inherent to the adversarial game: generators always outpace detectors in an arms race, and perfect detection is mathematically impossible given sufficient computational resource disparity. This perspective naturalizes the arms race as an immutable feature of computational limits. However, the structural data contradicts the mountain classification \u2014 the constraint is contingent on design choices (public detection APIs, adversarial incentive structures, gating mechanisms) and institutional arrangements (accreditation mandates), not on physical or logical limits."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "detection_falsifiability_limit",
+      "question": "Is the fundamental unprovability of text origin a logical limit or a contingent feature of current detection design?",
+      "resolution_mechanism": "Formal analysis of information-theoretic bounds on detection; comparison of stylometric, probabilistic, and watermarking approaches; empirical limits of multi-modal verification (metadata, provenance chains, structural markers)",
+      "impact": "If logical limit: mountain classification gains weight; arms race is unavoidable. If contingent: tangled_rope classification confirmed; arms race is institutional design choice subject to sunset.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether text origin is fundamentally undetectable or contingently difficult"
+    },
+    {
+      "id": "open_detection_sufficiency",
+      "question": "Can open-source detection tools achieve institutional acceptance parity with proprietary vendors, or does the proprietary premium reflect genuine performance gaps or liability asymmetries?",
+      "resolution_mechanism": "Comparative false positive/negative analysis across open and proprietary tools; institutional adoption patterns after tool parity; barrier analysis (liability concerns, support requirements, certification gaps)",
+      "impact": "If open tools suffice: scaffold sunset is structural; open-source coalition will reduce extraction through commodification. If proprietary premium is justified: arms race persists; extraction continues.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether open-source detection achieves institutional parity"
+    },
+    {
+      "id": "credential_bypass_emergence",
+      "question": "Will alternative credentialing systems (project portfolios, direct competency demonstration, blockchain/cryptographic proof) emerge fast enough to make synthetic text detection gatekeeping obsolete?",
+      "resolution_mechanism": "Growth trajectories of alternative credentialing; institutional adoption rates; cost comparison with detection-based credentialing; employer signal extraction patterns",
+      "impact": "If alternatives emerge (5-10 years): scaffold sunset becomes real; institutional gatekeeping pressure decreases; extraction pressure on access-constrained populations decreases. If alternatives stall: detection arms race becomes permanent institutional feature.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether alternative credentialing can render detection gatekeeping obsolete"
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Does measured suppression (0.48) reflect material barriers (cost, algorithm opacity, institutional mandate) or internalized acceptance of detection legitimacy, or both?",
+      "resolution_mechanism": "Post-mandate behavior analysis: if detection tools were freely available, would access-constrained populations increase synthetic text use? Survey data on perceived legitimacy vs actual tool barriers. Cross-border policy comparison: regions without detection mandates show different patterns.",
+      "impact": "If structural: suppression reflects real barriers (cost, access, complexity). If internalized: agents carry suppression internally; reducing barriers alone does not eliminate constraint. If both: constraint is more stable than structural metrics suggest.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs internalized suppression mechanism in detection gatekeeping"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The synthetic text detection arms race creates a structural tension between the capability of generative language models and the institutional demand for credentialing systems that distinguish human-authored work from synthetic work. This constraint exhibits classical tangled_rope dynamics: it genuinely coordinates academic integrity verification (beneficiaries like educators and institutions solve a real problem: maintaining assessment validity), while simultaneously extracting from access-constrained populations who cannot afford proprietary detection tools and face compounding credential barriers. The constraint's extractiveness (0.58) reflects that the primary benefit flow runs toward detection service vendors and institutional gatekeepers, while the costs (surveillance, privacy erosion, access barriers, credential inflation) fall on students and researchers without institutional affiliation or resources. The theater_ratio (0.65) indicates that a significant portion of detection adoption is performative \u2014 institutions adopt tools to demonstrate compliance with emerging integrity norms and accreditation expectations, rather than because detection accuracy solves their core assessment problems. The arms race cycle shows accelerating extractiveness: as generative models improve, detection demands increase, vendor lock-in deepens, and alternative credentialing pathways that could provide exits become less attractive to mainstream institutions.",
+    "key_agents": [
+      "Detection Service Providers: Primary beneficiary (institutional/arbitrage) \u2014 capture vendor premium through proprietary detection APIs and institutional subscriptions; experience constraint as pure coordination mechanism for academic integrity",
+      "Educators and Institutional Gatekeepers: Secondary beneficiary (moderate/constrained) \u2014 gain enforcement mechanism for academic integrity but bear costs of false positives, tool obsolescence, and vendor lock-in; benefit from coordination function outweighs extraction costs",
+      "Students in Access-Constrained Regions: Primary victim (powerless/trapped) \u2014 cannot afford detection tools; face compounding credential barriers as institutions adopt detection as gating mechanism; no exit options",
+      "Low-Resource Researchers: Primary victim (powerless/trapped) \u2014 cannot afford detection tools; institutional repositories increasingly require detection certification; career advancement pathways blocked",
+      "Open Knowledge Commons: Victim (powerless/trapped) \u2014 open-access publishing pressured to adopt detection; knowledge circulation barriers increase; abstract collective good bears cost of vendor lock-in",
+      "Open-Source Detection Coalition: Organized actor (organized/constrained) \u2014 building alternative detection tools; perceive sunset mechanism through commodification; constrained by funding and institutional adoption resistance",
+      "Traditional Academic Credentialing Systems: Institutional actor (institutional/arbitrage) \u2014 maintain own structure through performative adoption of detection; actually weakened by vendor dependence despite appearing to strengthen integrity verification",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional design choices as immutable features of text verification"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high, reflecting asymmetric benefit distribution. Detection vendors capture subscription revenue and market concentration gains. Institutions gain enforcement capability without bearing development costs. Access-constrained populations and open knowledge commons bear gatekeeping costs without benefiting from detection improvements. The trajectory shows acceleration (0.28 \u2192 0.58 over 6 periods) as vendor concentration increases and institutional adoption mandates spread through accreditation systems. Suppression (0.48): Moderate. Multiple layers of suppression exist: cost barriers (detection tools are paywalled), institutional mandates (accreditation bodies increasingly expect detection), information barriers (algorithm opacity makes independent verification difficult), and structural barriers (alternative credentialing systems are still nascent). Suppression is not total because some populations have institutional access (universities with site licenses), but the barriers are sufficiently high to trap the most vulnerable populations. Theater ratio (0.65): High and increasing. Institutional adoption of detection tools often serves performative functions: demonstrating compliance with emerging norms, signaling institutional rigor, deflecting liability concerns. The actual detection accuracy and utility for core assessment functions are secondary to the institutional ritual of having a detection system. This is evident in institutional behavior: detection tool adoption frequently precedes clear pedagogical integration, suggesting the mechanism (having a tool) matters more than the outcome (actually improving assessment validity). The increasing trajectory (0.42 \u2192 0.65) suggests that as the arms race intensifies and tool switching accelerates, institutions are adopting tools more for signaling than for genuine integrity improvement.",
+    "directionality_logic": "Directionality (d) for each perspective derives from their structural position relative to the extraction flow. Detection vendors (beneficiary + arbitrage exit) experience low d (~0.10-0.15) \u2192 negative effective extraction (\u03c7). Educators (beneficiary but constrained exit due to institutional mandates) experience moderate d (~0.35-0.40) \u2192 moderate positive \u03c7. Students and researchers (victims + trapped exit) experience high d (~0.90-0.95) \u2192 maximum \u03c7. Open-source coalition (organized exit + victim status through knowledge commons effects) experience moderate-high d (~0.60-0.70) \u2192 high \u03c7 despite organizational capacity. The scaffold classification for the open-source coalition derives from genuine exit optionality (building alternative detection tools) and perceived sunset mechanism (commodification of open detection would undercut vendor premium), despite current trappedness. The piton classification for traditional credentialing derives from the theater gate (high performative adoption) rather than from low extractiveness \u2014 credentialing systems maintain themselves through ritual compliance with detection adoption mandates rather than through genuine functional improvement.",
+    "perspectival_gap": "The vendor perspective (Rope) sees pure coordination: providing signal that institutions value for gatekeeping. The educator perspective (Tangled Rope) sees mixed function: coordinating assessment validity but also bearing institutional costs of vendor lock-in and false positives. The access-constrained student perspective (Snare) sees pure extraction: credential barriers they cannot overcome. The open-source coalition perspective (Scaffold) sees a temporary dysfunction with exit: building open tools that would commodify detection and eliminate the vendor premium. The traditional credentialing perspective (Piton) sees a degraded ritual: detection adoption mandates that actually weaken institutional independence while appearing to strengthen integrity. The analytical observer perspective risks a false summit (Mountain) by naturalizing the arms race as inherent to text verification rather than contingent on design choices (public APIs for generative models, adversarial incentive structures, gating mechanisms). The gap reveals that the constraint is not about detection technology itself but about the institutional arrangements that create vendor lock-in and gatekeeping leverage.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: This constraint resolves the mandatrophy by demonstrating genuine mixed function. The coordination element is real: institutions face a legitimate problem (verifying assessment validity in the presence of powerful generative tools) and detection systems provide signal. But the extraction element is equally real: beneficiary groups (vendors, gatekeepers) capture disproportionate value while victim groups (access-constrained populations) bear disproportionate costs. The constraint cannot be reduced to pure extraction (Snare) because educators genuinely benefit from integrity verification capacity. It cannot be reduced to pure coordination (Rope) because access barriers create asymmetric benefits. The tangled_rope classification holds exactly because both elements are structurally necessary \u2014 extraction enables coordination (vendor revenue funds detection development and adoption incentives), and coordination enables extraction (institutions willing to gate credentials require powerful detection signals). The constraint persists because dismantling either element (removing detection entirely, or removing vendor premium) would undermine the other. Open-source coalition's scaffold perspective offers a genuine alternative: if open detection tools achieve parity, the vendor premium disappears and extraction pressure decreases, while coordination function (institutions still need to gate credentials) remains. This is the sunset mechanism \u2014 not elimination of the coordination need, but elimination of the extraction premium through commodification."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "academic_credentialing_inflation",
+      "generative_model_capability_acceleration",
+      "institutional_surveillance_mandate_expansion"
+    ],
+    "dual_formulation_note": "The synthetic text detection arms race decomposes into three structurally distinct constraints: (1) detection_technology_arms_race (\u03b5\u22480.35, Rope) \u2014 the technical competition between generative and detection models; (2) synthetic_text_detection_arms_race (\u03b5\u22480.58, Tangled Rope) \u2014 the institutional gatekeeping and access barrier dynamics studied here; (3) academic_credentialing_extraction (\u03b5\u22480.62, Snare) \u2014 the broader credential inflation dynamic that detection tools participate in. This story focuses on the institutional constraint (2), which is downstream of generative capability acceleration and upstream of broader credentialing system degradation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

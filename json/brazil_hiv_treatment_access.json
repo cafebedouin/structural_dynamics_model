@@ -1,0 +1,227 @@
+{
+  "header": {
+    "constraint_id": "brazil_hiv_treatment_access",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bhta"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Brazil HIV Treatment Access Constraint",
+    "topic_domain": "healthcare/pharmaceutical_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharmaceutical_manufacturers",
+      "international_patent_holders",
+      "healthcare_bureaucracy"
+    ],
+    "victims": [
+      "low_income_hiv_patients",
+      "marginalized_communities",
+      "treatment_initiation_delays"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Untreated Patient (Trapped)",
+      "comment": "PERSPECTIVE 1: LOW-INCOME HIV PATIENT (SNARE) \u2014 Faces interconnected barriers: geographic distance to treatment centers, cost of antiretrovirals despite nominal free provision, employment disruption from clinic visits, and stigma preventing access to informal care networks. Cannot exit the constraint without treatment initiation, yet treatment requires navigating the constraint. Maximum extraction experienced through delayed treatment and health deterioration."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Community Health Worker Network",
+      "comment": "PERSPECTIVE 2: COMMUNITY HEALTH WORKER NETWORK (TANGLED ROPE) \u2014 Provides genuine coordination function (connecting dispersed patients to treatment, reducing stigma through trusted local advocates) while bearing asymmetric extraction: underfunded, high burnout, limited career progression, emotional labor without adequate support infrastructure. The network both enables access and is exploited by the system."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Public Health System (SUS)",
+      "comment": "PERSPECTIVE 3: PUBLIC HEALTH SYSTEM (ROPE) \u2014 Experiences the constraint as coordination: distributing antiretrovirals, managing supply chains, integrating HIV care into primary health centers. The system benefits from international technical support and disease-focused funding that prioritizes HIV. Extracts minimal surplus \u2014 primarily manages cost distribution."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The HIV Activist Coalition",
+      "comment": "PERSPECTIVE 4: HIV ACTIVIST COALITION (SNARE, ORGANIZED) \u2014 Organized groups (ABIA, Grupo Pela Vidda) fight for access but face resource constraints, legal barriers to advocacy, and the energy cost of perpetual crisis response. Their organization enables some leverage, but they cannot exit the constraint without dismantling the structural barriers that created the activist need."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The International Patent Regime",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL PATENT REGIME (ROPE) \u2014 Provides coordination function (incentivizing drug development, standardizing treatment protocols internationally) while benefiting patent holders. For Brazil, the regime is extractive at the national level but the international observers see it as pure coordination\u2014cost distribution across globally-distributed development."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Generic Manufacturing Coalition",
+      "comment": "PERSPECTIVE 6: GENERIC ANTIRETROVIRAL MANUFACTURERS (SCAFFOLD) \u2014 Brazil's capacity to produce generic ARVs (through FARMANGUINHOS and licensed manufacturers) creates an alternative pathway with sunset logic: as generic patents expire and manufacturing capacity matures, dependence on expensive branded pharmaceuticals declines. High suppression currently (patent disputes, manufacturing bottlenecks) but declining trajectory as sunset approaches."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "The Decentralization Theater",
+      "comment": "PERSPECTIVE 7: HEALTHCARE DECENTRALIZATION POLICY (PITON) \u2014 The formal policy of integrating HIV care into primary health centers was progressive in design but has degraded into performative compliance: clinics are formally designated to provide HIV services but lack resources, training, and supply chain integration. Theater ratio elevated because policy exists on paper but functional delivery is uneven."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Pharmaceutical Manufacturer",
+      "comment": "PERSPECTIVE 8: BRANDED PHARMACEUTICAL MANUFACTURER (TANGLED ROPE, POWERFUL) \u2014 Both coordinates global drug distribution and extracts monopoly rents through patent protections. From the manufacturer's perspective, Brazil's generics policy threatens their arbitrage exit (can shift production elsewhere). High directionality asymmetry: powerful with multiple exits, so effective extraction is dampened despite baseline \u03b5 being high."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit Risk)",
+      "comment": "PERSPECTIVE 9: CIVILIZATIONAL ANALYTICAL VIEW (MOUNTAIN, FALSE SUMMIT RISK) \u2014 At the scale of civilizational time and universal scope, pharmaceutical supply constraints might appear as natural laws of biology and economics. But the structural data (beneficiary/victim declarations, measurable suppression, organized opposition) reveals this as naturalization of contingent policy choices. The mountain classification is a false summit that the engine should flag."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cost_vs_access_causality",
+      "question": "Is treatment delay primarily caused by direct cost to patients or by supply chain / geographic access barriers?",
+      "resolution_mechanism": "Cohort analysis comparing outcomes in regions with subsidized transport vs high drug cost regions; patient interviews on primary barriers to treatment initiation",
+      "impact": "If cost-driven: generic manufacturing expansion is high-impact solution. If supply-chain-driven: geographic decentralization and logistics investment are required. Affects which perspective (pharma snare vs logistics tangled-rope) is most accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Primary cause of treatment access delay: cost vs supply chain"
+    },
+    {
+      "id": "generic_manufacturing_ceiling",
+      "question": "Can Brazil's generic manufacturing capacity scale to meet 100% of national demand while maintaining quality and supply chain resilience?",
+      "resolution_mechanism": "Capacity audit of FARMANGUINHOS and licensed manufacturers; comparison with India's generic scale; supply chain vulnerability analysis",
+      "impact": "If yes: scaffold sunset is real, pharmaceutical dependence terminates within 10 years. If no: Brazil remains partially dependent on patent-protected imports, tangled-rope extraction persists.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Feasibility of full domestic generic manufacturing scale"
+    },
+    {
+      "id": "activist_leverage_sustainability",
+      "question": "Can organized HIV activism sustain collective action against suppression without additional structural support?",
+      "resolution_mechanism": "Historical analysis of activist organization persistence; funding source stability; comparison with activist movements that have degraded or splintered",
+      "impact": "If sustainable: organized perspective is accurate, coalition can extract concessions. If unsustainable: organized status is temporary, coalition will fragment into powerless agents.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Sustainability of organized activist capacity without systemic support"
+    },
+    {
+      "id": "geographic_access_mechanism",
+      "question": "Is geographic access disparity a function of infrastructure investment (fixable) or inherent to Brazil's geography and population distribution (quasi-natural)?",
+      "resolution_mechanism": "Cost-benefit analysis of mobile clinics and telemedicine in remote regions; comparison with access outcomes in regions with similar geography but different investment",
+      "impact": "If fixable: geographic barrier is policy choice, not constraint. If quasi-natural: geographic suppression is partially structural, extraction is less avoidable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether geographic access disparity is policy-fixable or quasi-natural"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Brazil's HIV treatment access constraint represents a tangled intersection of pharmaceutical patent regimes, public health decentralization policy, geographic disparity, and community organization. Brazil has a constitutional commitment to free universal healthcare (Art. 196) and pioneered generic antiretroviral manufacturing in the 1990s, yet treatment gaps persist, particularly for low-income and marginalized communities. The constraint exhibits all six DR types depending on perspective: powerless patients experience it as a snare (trapped between formal free provision and practical barriers); community health workers experience tangled rope (genuine coordination function alongside exploitation); the public health system experiences rope (coordination of distribution); activists experience organized snare (capable of leverage but unable to exit crisis response); the international patent regime and pharmaceutical manufacturers experience rope or profitable tangled rope (depending on directionality); generic manufacturers see a scaffold (sunset logic as patents expire); decentralization policy exhibits piton (performative integration without functional delivery). The theater ratio has risen from 0.42 to 0.58 as formal policies have expanded while functional delivery has stagnated, indicating increasing performative content. Extractiveness has risen from 0.38 to 0.52 as pharmaceutical costs have accumulated and geographic disparity has widened despite nominal free provision.",
+    "key_agents": [
+      "Low-income HIV patients: Primary victims (powerless/trapped) \u2014 face cost barriers, geographic access gaps, stigma; cannot exit without treatment initiation",
+      "Community health workers: Secondary actor (moderate/constrained) \u2014 provide genuine access coordination but are underfunded and emotionally exploited",
+      "Public health system (SUS): Institutional coordinator (institutional/arbitrage) \u2014 distributes antiretrovirals and manages supply chains; extracts minimal surplus",
+      "HIV activist coalition: Organized opposition (organized/constrained) \u2014 fights access barriers but consumes organizational resources in perpetual crisis response",
+      "International patent regime: Global beneficiary (institutional/arbitrage) \u2014 incentivizes drug development; extracts through monopoly pricing",
+      "Pharmaceutical manufacturers (branded): Global extractor (powerful/arbitrage) \u2014 benefits from patent protections; threatened by generic competition",
+      "Generic manufacturers: Alternative pathway (institutional/constrained) \u2014 produces lower-cost antiretrovirals; faces patent disputes and scaling constraints",
+      "Healthcare decentralization policy: Performative institution (institutional/analytical) \u2014 exists on paper; functional delivery is degraded and uneven"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high and rising. The constraint extracts from patients through delayed treatment initiation, forced geographic mobility, and disrupted employment. The extraction flows to patent holders and pharmaceutical manufacturers through monopoly pricing, and to healthcare bureaucracy through administrative overhead. Suppression (0.65): High. Barriers include: geographic distance to treatment centers (Brazil's vast territory and sparse rural infrastructure), informal cost barriers despite nominal free provision (transportation, lost wages, informal fees), stigma preventing care-seeking, knowledge gaps about treatment availability, and limited clinic hours. Theater ratio (0.58): Moderate-high. Formal policy (decentralized HIV care, generic manufacturing, free provision) performs universally but functional delivery is inconsistent. Clinics are designated to provide HIV services but lack resources, training, and reliable supply chains. The gap between policy rhetoric ('universal healthcare') and patient experience (treatment delays, geographic barriers) creates performative theater.",
+    "perspectival_gap": "The widest gap separates the manufacturer's arbitrage perspective (rope or tangled rope with profitable extraction, multiple exit options) from the patient's trapped perspective (snare, no exit). The manufacturer sees the constraint as coordinating global pharmaceutical supply; the patient sees it as preventing access to life-saving treatment. Both are accurate descriptions of the same structural mechanism\u2014but experienced from positions with radically different extraction flows and exit capacities. The analytical observer risks naturalizing the constraint as a function of scarcity or geography (mountain) rather than recognizing it as a policy choice (tangled rope).",
+    "directionality_logic": "Each perspective's directionality value (d) derives from: (1) structural position in the constraint (beneficiary vs victim); (2) exit options available (arbitrage vs trapped); (3) power level relative to the constraint's enforcement. Patients benefit from formal free provision but pay through geographic mobility and employment disruption\u2014they are net victims (d \u2248 0.95). The public health system distributes costs across the population\u2014it is roughly balanced (d \u2248 0.50) or slightly beneficiary if it captures prestige from universal coverage. Manufacturers with arbitrage options experience low d despite high baseline extraction (\u03b5 = 0.52) because they can exit: they derive d from their powerful/arbitrage position (d \u2248 0.10), producing negative or very low effective extraction \u03c7 from their perspective. The generic manufacturers derive medium d (\u22480.50) because they face patent disputes and scaling barriers but can eventually scale. The formula \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) translates these structural positions into experienced extractiveness: low-income patients experience high \u03c7 (high d, high f(d), large scope \u03c3 increases national-level d to 1.0); manufacturers experience low \u03c7 (low d, negative f(d)). The gap between these experienced values is the perspectival divergence.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by disambiguating institutional framing from structural reality. The false mountain classification (decentralization as natural evolution of healthcare) obscures the tangled rope reality: the system coordinates treatment access AND asymmetrically extracts from the most vulnerable agents. The mandate to provide universal free HIV treatment (constitutional, international commitments) conflicts with the extractive effect of geographic disparity and cost barriers. Resolution: classify as tangled rope (genuine coordination of drug distribution alongside asymmetric extraction of mobility and time costs from low-income patients), not as mountain (inevitable scarcity) or rope (pure coordination). The scaffold perspective (generic manufacturing exit path) provides a partial resolution mechanism\u2014as patents expire and manufacturing scales, the pharmaceutical extraction component declines, leaving primarily geographic/administrative coordination costs. The piton perspective (performative decentralization) flags the degradation of the formal policy, indicating that sustained investment in functional delivery is required to prevent the policy from further hollowing into theater."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "pharmaceutical_patent_enforcement",
+      "healthcare_geographic_disparity",
+      "activist_coalition_sustainability"
+    ],
+    "dual_formulation_note": "Brazil's HIV treatment access is decomposed into three related constraints: (1) pharmaceutical_patent_enforcement (\u03b5\u22480.70, pure extraction at global level) dominates pricing; (2) healthcare_geographic_disparity (\u03b5\u22480.45, independent infrastructure constraint) creates access barriers; (3) activist_coalition_sustainability (\u03b5\u22480.50, organizational extraction) determines organized opposition capacity. The present story integrates all three but treating them separately reveals that generic manufacturing sunset (scaffold perspective) primarily addresses constraint 1, while mobile clinics and telemedicine address constraint 2, and sustained activist funding addresses constraint 3. Full resolution requires simultaneous intervention on all three."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "pharmaceutical_patent_enforcement"
+    ]
+  }
+}

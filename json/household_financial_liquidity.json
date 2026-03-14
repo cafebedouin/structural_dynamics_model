@@ -1,0 +1,212 @@
+{
+  "header": {
+    "constraint_id": "household_financial_liquidity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hfl"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Household Financial Liquidity Constraints",
+    "topic_domain": "economic/household_finance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "financial_institutions",
+      "credit_providers",
+      "asset_managers"
+    ],
+    "victims": [
+      "low_income_households",
+      "precarious_workers",
+      "unbanked_populations"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Precarious Household",
+      "comment": "PERSPECTIVE 1: PRECARIOUS HOUSEHOLD (SNARE) \u2014 Trapped by wage volatility, no savings buffer, and high cost of credit. Faces binary choice: borrow at extractive rates or face immediate deprivation. No exit options; suppression through poverty itself. Experiences maximum extraction as liquidity constraints force dependence on high-cost credit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Working-Class Household",
+      "comment": "PERSPECTIVE 2: WORKING-CLASS HOUSEHOLD (TANGLED ROPE) \u2014 Constrained by limited liquid reserves and career mobility costs. Household financial system does coordinate consumption smoothing across income volatility, but extraction embedded in fees, interest rates, and collateral requirements. Benefits from credit access; bears asymmetric costs through suppression and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Financial Institution",
+      "comment": "PERSPECTIVE 3: FINANCIAL INSTITUTION (ROPE) \u2014 Experiences liquidity constraints as a coordination mechanism: deposit collection, lending standards, and reserve requirements enable their core function. Benefits from the constraint structure through interest margin arbitrage. Net beneficiary with full institutional power and exit options."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Reform Coalition",
+      "comment": "PERSPECTIVE 4: REGULATORY REFORM COALITION (SCAFFOLD) \u2014 Community development financial institutions, microfinance advocates, and consumer protection organizers see liquidity barriers as temporary policy failures with sunset solutions. Regulations capping interest rates, expanding access, and mandating transparency create parallel lower-extraction pathways. Coalition has agency and perceives exit path through policy change."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Affluent Household",
+      "comment": "PERSPECTIVE 5: AFFLUENT HOUSEHOLD (PITON) \u2014 For wealthy households with substantial liquid reserves, 'financial liquidity constraints' is a vestigial label. The constraint persists discursively (financial planning, wealth management advice) but functionally has atrophied \u2014 liquid assets, credit access, and arbitrage options are unlimited. Theater ratio high: the constraint is maintained performatively through financial advice culture while material binding has vanished."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational scope, household liquidity constraints appear as immutable facts: human time preference, uncertainty about future income, and the irreducible cost of capital coordination are inherent to economic life. No household can have infinite liquid reserves; all face trade-offs between consumption today and insurance against tomorrow. However, the structural data reveals this as false naturalization \u2014 the specific extractive mechanisms (usury, predatory lending, asymmetric information) are policy-contingent, not laws of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "subsistence_vs_preference_threshold",
+      "question": "What portion of measured extraction represents coordination cost of capital provision vs. predatory markup above cost?",
+      "resolution_mechanism": "Comparative institutional analysis: examine interest rate differentials across regulatory regimes, social credit systems, and informal lending networks to identify floor rates vs. extractive premiums",
+      "impact": "If markup < 15%: constraint is largely functional coordination (shift toward Rope). If markup > 40%: constraint is substantially extractive (confirm Snare/Tangled Rope). Determines whether suppression is inherent to liquidity or policy-driven.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Extractive markup above capital coordination cost"
+    },
+    {
+      "id": "alternative_liquidity_sufficiency",
+      "question": "Do informal lending networks, mutual aid, and kinship credit provide functionally equivalent liquidity access when formal channels are inaccessible?",
+      "resolution_mechanism": "Ethnographic analysis of informal vs formal liquidity; measurement of transaction costs, coercion levels, and sustainability of informal networks under stress",
+      "impact": "If informal systems are effective: suppression is lower (constrained rather than trapped). If informal systems depend on coercion or social obligation: they transfer extraction to relational domain (identity_locked dynamics). If informal networks collapse under individual shocks: trapped exit is structurally inevitable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Functional equivalence of informal vs formal liquidity access"
+    },
+    {
+      "id": "income_volatility_exogeneity",
+      "question": "To what degree is household income volatility (the triggering problem the constraint coordinates) structurally exogenous vs. endogenous to labor market extraction?",
+      "resolution_mechanism": "Historical analysis of employment stability, wage volatility trends, gig economy expansion; comparison of income volatility across labor regimes with different power asymmetries",
+      "impact": "If exogenous: liquidity constraint is genuine coordination response to random shocks (stronger Rope classification). If endogenous to labor market power: the 'problem' the constraint solves is itself extractive, creating stacked extraction (Tangled Rope confirmed, severity increased).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether income volatility is exogenous shock or structural extraction"
+    },
+    {
+      "id": "digital_payment_accessibility",
+      "question": "Does expansion of digital payment infrastructure and fintech credit genuinely reduce liquidity barriers for unbanked populations, or does it extend extractive mechanisms into previously informal networks?",
+      "resolution_mechanism": "Comparative study of unbanked household financial outcomes before/after digital finance access; analysis of fee structures, algorithm-driven credit denial, and data extraction in fintech platforms",
+      "impact": "If access genuinely expands options: suppression decreases (constrained rather than trapped). If fintech replaces traditional extraction with data-driven extraction and algorithmic redlining: suppression persists at new level (Piton progression). If both: creates stratified markets with different constraints at different levels (separate stories needed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether fintech expands access or extends extraction"
+    },
+    {
+      "id": "political_economy_of_liquidity_policy",
+      "question": "Why do liquidity-expanding policies (usury caps, access mandates, financial inclusion programs) persistently face regulatory capture and institutional resistance despite demonstrated welfare gains?",
+      "resolution_mechanism": "Historical policy analysis: track regulatory changes, lobbying patterns, and enforcement levels across jurisdictions with different political economies; examine captured vs independent regulatory bodies",
+      "impact": "If capture is fundamental: the constraint's extractive structure is politically sustained and Snare classification is deepened (systematic extraction, not accidental). If capture is contingent: policy change is viable, Scaffold perspective is strengthened, sunset timeline becomes actionable. Determines whether financial institutions benefit from constraint or merely adapt to it.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Regulatory capture in liquidity policy persistence"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Household financial liquidity constraints represent the structural binding mechanism through which precarious households are extracted from: they lack sufficient liquid reserves to weather income shocks, cannot access low-cost credit, and face binary choices between deprivation or high-cost borrowing. This constraint demonstrates the tangled interweaving of genuine coordination function (credit systems do coordinate consumption smoothing across income volatility) with systematic extraction (pricing and access structures concentrate benefits on financial institutions while concentrating costs on powerless households). The constraint exhibits all six types across different perspectives: pure extraction (snare) from the precarious household perspective, mixed coordination-extraction (tangled rope) from moderate working-class households, pure coordination (rope) from financial institutions' perspective, temporary policy failure with exit path (scaffold) from reform coalitions, degraded vestigial constraint (piton) from affluent households with unlimited liquidity, and false naturalization (mountain) from civilizational analytical perspectives that treat human time preference as immutable law. The extractiveness trajectory shows acceleration over the measurement interval: from 0.35 (initial state) to 0.62 (final state), tracking the real-world expansion of high-cost lending, gig economy wage volatility, and erosion of traditional savings-based household financial strategies. Theater ratio remains low (0.45) because financial extraction mechanisms operate through actual material extraction of capital rather than performative ritual \u2014 unlike degraded constraints, the functional enforcement of liquidity barriers remains intact.",
+    "key_agents": [
+      "Precarious households (powerless/trapped): primary victims bearing full extraction cost through high-interest debt, payday lending, overdraft fees",
+      "Working-class households (moderate/constrained): secondary victims and partial beneficiaries; access to credit enables consumption smoothing but at extractive costs",
+      "Financial institutions (institutional/arbitrage): primary beneficiaries capturing interest margin arbitrage, collateral extraction, and fee structure advantages",
+      "Low-income depositors (powerless/constrained): provide capital base for institutions while receiving minimal returns, subsidizing institutional profitability",
+      "Regulatory reform coalitions (organized/constrained): advocating for usury caps, access mandates, transparency requirements; perceive policy sunset as viable",
+      "Affluent households (powerful/mobile): experience constraint as functionally atrophied; theater of financial planning persists but material binding has vanished"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Household liquidity constraints operate through real asymmetric extraction: interest rates on high-risk borrowing average 2-3x the cost of capital to financial institutions, and borrowing against volatile income is forced not optional. The 0.58 value reflects that extraction is substantial but not maximized \u2014 some households retain constrained-level agency (can shop for rates, refinance, reduce borrowing), and formal credit systems do provide genuine coordination function absent which households would face worse alternatives. The measurement trajectory (0.35\u21920.62) reflects historical acceleration of gig economy wage volatility, erosion of employer-provided liquidity insurance, and expansion of high-cost lending into previously informal networks. Suppression (0.62): Moderate-high. Barriers to exit include: limited savings capacity (trapped in paycheck-to-paycheck cycle), high collateral requirements (asset barriers), employment insecurity (cannot negotiate terms), information asymmetry (borrowers cannot evaluate true cost), and social dependency (kinship lending creates relational obligation). The suppression is not total \u2014 some households can improve outcomes through education, relocation, or career change \u2014 but the suppression is high enough that exit is effectively constrained rather than mobile. Theater ratio (0.45): Low-moderate. Financial extraction operates primarily through actual material transfer (interest payments, fees, collateral loss), not through performative ritual. Lending contracts do have theater (complexity, fine print, obligation framing), but the theater does not substitute for genuine extraction \u2014 it obscures extraction rather than replacing it. Theater is lower than, e.g., degraded legal systems that maintain purely symbolic function, because financial extraction remains functionally operative.",
+    "directionality_logic": "Directionality (d) derives from structural position relative to extraction flow. Precarious households (powerless/trapped): d\u22480.95 (maximum target status) because they have zero exit options and full victim status. Working-class households (moderate/constrained): d\u22480.65 because they have partial exit (can improve through effort, career change) and partial beneficiary status (credit access enables consumption smoothing). Financial institutions (institutional/arbitrage): d\u22480.05 because they are full beneficiaries with maximum exit options \u2014 they can arbitrage across jurisdictions, adjust lending criteria, exit unprofitable markets. The sigmoid f(d) transforms these d values into experienced extractiveness multipliers: f(0.95)\u22481.42 (powerless experience maximum chi), f(0.65)\u22481.00 (moderate experience baseline), f(0.05)\u2248-0.12 (institutional experience negative or subsidized cost). The scope modifier \u03c3(S) scales by spatial scale: local liquidity constraints operate at \u03c3=0.8 (dampened by informal networks), national at \u03c3=1.0 (baseline), global at \u03c3=1.2 (amplified by capital mobility asymmetries \u2014 institutions can move capital globally; households cannot). The tangled rope classification at baseline (analytical) perspective reflects: base extractiveness 0.58, effective extraction \u03c7 = 0.58 \u00d7 f(0.72) \u00d7 1.0 \u2248 0.67, which exceeds snare threshold of 0.66 \u2014 BUT the constraint simultaneously exhibits genuine coordination function (credit access, consumption smoothing) that would classify as rope absent the extraction. The combination of coordination + extraction + enforced structure (financial regulation, collateral law) is the definitive tangled rope signature.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence across power positions. Precarious households see pure snare: no coordination benefit (crisis borrowing is not coordination, it is forced extraction), maximum suppression, maximum extraction experienced (\u03c7\u22480.82). Working-class households see tangled rope: genuine benefit from credit access for income smoothing (coordination component) partially offset by extractive pricing and suppression (constrained exit, asymmetric rates). Financial institutions see rope: the constraint is experienced as coordination mechanism (capital pooling, lending standards, reserve management) enabling their core function, with extraction running toward them (institutional arbitrage benefits). Reform coalitions see scaffold: they perceive the extractive structure as policy-contingent and fixable through regulatory change (usury caps, access mandates), with a feasible sunset timeline (15-25 years for alternative financial infrastructure to mature). Affluent households see piton: the constraint persists discursively (financial planning, wealth management) but functionally has atrophied \u2014 with sufficient liquid assets, 'liquidity constraints' becomes a vestigial label maintained through cultural practice rather than material binding. Civilizational analytical observer risks seeing mountain: time preference and capital scarcity appear as immutable economic laws. The structural data contradicts this \u2014 the specific extractive mechanisms (usury, asymmetric information, regulatory capture) are contingent policy choices, not laws of nature. The false summit is detected by the accessibility collapse gate: if liquidity constraints were natural law, they would apply equally to all households; the fact that affluent households experience them as fully accessible reveals the constraint as socially constructed.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that financial liquidity constraints are genuinely tangled \u2014 they serve a real coordination function (credit systems do smooth consumption across income volatility) AND operate as extraction mechanism (pricing and access are asymmetrically favorable to institutions). The analytical error is attempting to classify as either pure coordination (rope) or pure extraction (snare) when the structural reality is hybrid. The snare perspective (precarious household) is their genuine experience of the constraint as extraction-only \u2014 from their structural position, the coordination benefit is invisible because they lack bargaining power to negotiate terms. The rope perspective (financial institution) is also their genuine experience \u2014 the coordination mechanism IS the functional core that enables their business model. Both cannot be simultaneously 'the' classification because classification is indexical. The mandatrophy resolves by recognizing that: (1) the constraint has measurable extractiveness (0.58) AND measured beneficiary coordination function (credit access), making tangled rope the analytical classification; (2) perspectives diverge because power positions diverge \u2014 agents with power see coordination, agents without power see extraction; (3) the reform coalition's scaffold perspective is actionable \u2014 policy changes CAN reduce extraction while preserving coordination, because the extractive premium (interest markup, collateral requirements) is policy-determined, not functionally required. The false summit (mountain perspective) naturalizes what is policy-contingent: it claims liquidity constraints are inevitable features of human nature / economic law, when in fact the specific extractive form is produced by institutional design choices (lending standards, collateral law, regulatory capture) that could be reformed."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "wage_volatility",
+      "consumer_debt_accumulation",
+      "informal_credit_dependencies",
+      "wealth_inequality"
+    ],
+    "dual_formulation_note": "Household financial liquidity is a composite constraint family that decomposes into three structurally distinct stories: (1) income_volatility_coordination (\u03b5=0.25, Rope): the coordination function for consumption smoothing across legitimate income shocks; (2) predatory_lending_extraction (\u03b5=0.72, Snare): the extractive mechanisms of payday loans, overdraft fees, and subprime credit; (3) wealth_inequality_structure (\u03b5=0.55, Tangled Rope): the institutional mechanisms that convert temporary liquidity constraints into permanent wealth deficits. The present story aggregates all three, weighted by observability and institutional salience. Separate stories are warranted for specialized policy analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

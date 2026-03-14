@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "search_relevance_ranking",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "srch"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Search Relevance Ranking Algorithms",
+    "topic_domain": "information_technology/platform_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "search_platform_operator",
+      "high_bidding_advertisers"
+    ],
+    "victims": [
+      "end_users",
+      "low_resource_content_creators",
+      "query_intent_alignment"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "End User Information Dependency",
+      "comment": "PERSPECTIVE 1: END USER (SNARE) \u2014 Trapped in search ecosystem with no viable exit. Users cannot access the internet's information without passing through ranking algorithms; no alternatives provide comparable comprehensiveness. Suppression is extreme: algorithm changes go unannounced, ranking criteria are opaque, and users have zero visibility into why results changed. Maximum experienced extraction from the perspective of information access as a fundamental need."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Low-Resource Content Creators",
+      "comment": "PERSPECTIVE 2: LOW-RESOURCE CONTENT CREATORS (SNARE) \u2014 Trapped between the requirement to reach audience through search (no alternative distribution channel) and inability to influence ranking algorithms. Algorithm changes unilaterally alter their visibility; SEO costs are barriers to entry; demotions happen without notice or recourse. Suppression is total \u2014 creators cannot organize collective action against algorithm changes, and exit (creating off-platform audience) requires resources they lack."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Content Creator Ecosystem (Collective)",
+      "comment": "PERSPECTIVE 3: CONTENT CREATOR ECOSYSTEM (TANGLED ROPE) \u2014 At the collective level with longer time horizon, content creators benefit from search distribution (genuine coordination function: reaching audience at scale) but bear extraction through visibility asymmetry and algorithm gambling. Some agency exists \u2014 collective SEO practices, community standards, reverse-engineering ranking signals \u2014 but exit remains costly (building platform, investing in alternative distribution). Mixed extraction and coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Search Platform Operator",
+      "comment": "PERSPECTIVE 4: SEARCH PLATFORM OPERATOR (ROPE) \u2014 Experiences ranking system as coordination mechanism: organizing information to serve user queries is the platform's core function. The operator has exit optionality through design choices (can change ranking criteria, migrate to new algorithms) and derives primary benefit from comprehensive index and user engagement. Extraction runs toward this agent \u2014 they capture data, attention, and advertising revenue. Classification as Rope reflects genuine coordination function alongside extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "High-Bidding Advertisers",
+      "comment": "PERSPECTIVE 5: HIGH-BIDDING ADVERTISERS (TANGLED ROPE) \u2014 Powerful agents with substantial arbitrage options (can advertise through multiple platforms, can create owned distribution). Coordinate through search ads to reach intent-rich users (genuine coordination function). Also benefit from extraction \u2014 rankings are subtly influenced by ad-adjacent positioning, and ranking opacity prevents competitors from challenging positions. High extraction effectiveness but significant agency and exit optionality. Require active enforcement of payment mechanisms and bidding rules."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "PageRank-Era Legitimacy Narrative",
+      "comment": "PERSPECTIVE 6: PAGERANK LEGITIMACY NARRATIVE (PITON) \u2014 The original PageRank algorithm (link-based relevance as proxy for authority) provided a mathematical justification for ranking. Modern search has layered on thousands of ML-based signals, behavioral tracking, and intent inference. The PageRank narrative persists \u2014 'our algorithm finds the most relevant results' \u2014 but is substantially theater. Ranking is now optimized for engagement, ad-adjacent positioning, and platform retention. Theater ratio (0.68) reflects the gap between the mathematical legitimacy story and actual black-box optimization. The narrative is maintained through institutional inertia; the original justification is degraded."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regulatory and Competing-Platform Coalition",
+      "comment": "PERSPECTIVE 7: REGULATORY AND COMPETING PLATFORM COALITION (TANGLED ROPE) \u2014 Organized agents (regulators, competing platforms, search-adjacent services) see ranking algorithms as extractive mechanisms that concentrate power. Coordinating through regulatory frameworks (EU Digital Services Act, potential antitrust action) and alternative platforms. Benefit from search's coordination function (some use search infrastructure themselves) but bear extraction through market concentration. Constrained exit (can build alternatives but face network effects). Require active enforcement of regulatory frameworks."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer - Relevance Impossibility",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / INFORMATION THEORY VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, perfect relevance ranking is computationally and epistemologically impossible: query ambiguity is irreducible, user intent is unknowable from search strings alone, and relevance is observer-dependent. This perspective sees the ranking problem as an inherent limit to information access systems. However, this naturalization obscures the contingent institutional choice: the platform deliberately avoids user-side customization and query clarification mechanisms that would reduce ambiguity. The 'impossibility' is partly engineered to justify opacity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "relevance_intent_alignment",
+      "question": "Are ranking algorithms optimizing for user-perceived relevance or for platform-measured engagement metrics?",
+      "resolution_mechanism": "User satisfaction surveys vs engagement metrics; analysis of ranking changes that increase engagement but reduce relevance assessments; A/B tests with user feedback loop",
+      "impact": "If optimizing for relevance: constraint is Rope from user perspective. If optimizing for engagement: constraint is Snare from user perspective; extraction is hidden behind the relevance narrative.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether ranking optimizes relevance or engagement"
+    },
+    {
+      "id": "algorithmic_opacity_necessity",
+      "question": "Is ranking algorithm opacity necessary for spam prevention and quality, or is it strategic opacity masking extraction?",
+      "resolution_mechanism": "Comparison with open-ranking systems (academic search, library systems); impact analysis of transparency on spam; historical analysis of algorithm disclosure and subsequent gaming",
+      "impact": "If necessary: opacity is coordination cost (suppression is justified). If strategic: opacity is primary extraction mechanism (suppression is engineered, not inherent).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether opacity is technical necessity or strategic choice"
+    },
+    {
+      "id": "alternative_discovery_mechanisms",
+      "question": "Could user-controlled ranking (filtering, re-ranking, personalization controls) replace platform-controlled ranking without loss of discovery effectiveness?",
+      "resolution_mechanism": "Empirical performance of user-customizable ranking systems; user satisfaction with transparency; content creator reach in decentralized discovery systems",
+      "impact": "If effective: tangled rope could become rope for users + scaffold for creators (sunset to user agency). If ineffective: mountain classification partially justified; current architecture is least-bad solution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether user-controlled ranking can replace platform ranking"
+    },
+    {
+      "id": "advertising_signal_contamination",
+      "question": "To what degree do paid advertising signals influence organic ranking, either directly or through behavioral feedback loops?",
+      "resolution_mechanism": "Analysis of ranking changes at ad-insertion boundaries; A/B tests with ad budget variations; measurement of engagement-amplification for high-bidders",
+      "impact": "If substantial: snare classification strengthened; ranking is extraction mechanism wrapped in coordination narrative. If minimal: tangled rope classification validated; coordination function is genuine.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether advertising influences organic ranking"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Search relevance ranking represents a global infrastructure constraint that coordinates information access while simultaneously extracting value from both information seekers and content creators. The ranking algorithm's purported function \u2014 connecting users with relevant information \u2014 is genuine, but the constraint exhibits classical tangled rope architecture: real coordination (users find relevant content, creators reach audience, platform aggregates supply and demand) layered with asymmetric extraction (platform captures attention and advertising revenue, low-resource creators face visibility barriers, users are subject to algorithmic changes they cannot control or understand). The constraint has degraded significantly over two decades: early search engines (PageRank era) were closer to pure coordination; modern search has accumulated engagement optimization, advertising integration, and behavioral tracking such that the ranking system now functions as much as an extraction mechanism as a coordination mechanism. Theater ratio has risen from 0.35 to 0.75 as the gap has widened between the 'finding relevant results' narrative and the actual optimization target (engagement, ad-adjacent positioning, retention).",
+    "key_agents": [
+      "End Users: Primary victims (powerless/trapped) \u2014 no viable alternatives for internet information access; face algorithmic opacity and unilateral ranking changes",
+      "Low-Resource Content Creators: Primary victims (powerless/trapped) \u2014 depend on search for audience reach but cannot influence rankings; face total suppression (no collective action capacity)",
+      "Search Platform Operator: Primary beneficiary (institutional/arbitrage) \u2014 controls ranking algorithm; captures data, attention, and advertising revenue; can unilaterally change criteria",
+      "High-Bidding Advertisers: Secondary beneficiary (powerful/arbitrage) \u2014 benefit from ranking influence through ads; have exit optionality through alternative platforms",
+      "Content Creator Ecosystem: Secondary victim/moderate agent (moderate/constrained) \u2014 benefits from search distribution but bears extraction through visibility asymmetry; some collective agency through SEO practices",
+      "Regulatory Coalition: Organized opponent (organized/constrained) \u2014 coordinating through antitrust and digital services regulation; constrained by network effects and platform dominance",
+      "Analytical Observer: Universal perspective (analytical/analytical) \u2014 risks naturalizing contingent ranking design as inevitable outcome of the 'relevance problem'"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The platform captures surplus from information discovery that could theoretically accrue to users (through saved search time, higher satisfaction) or creators (through direct audience access). Measurement shows extraction increasing over time \u2014 early search (0.28) was closer to coordination; modern search (0.58) is substantially extractive through engagement optimization and ad integration. The extraction is not total (users do find information, creators do reach some audience) but is significant and growing. Suppression (0.65): High. Multiple reinforcing mechanisms prevent exit and reduce information flows: algorithmic opacity (users cannot understand or challenge ranking changes), network effects (no alternative provides comparable coverage), SEO barriers (creators must invest in gaming), and behavioral tracking (platform extracts information to refine targeting). Individual exit is impossible; collective action is suppressed through information asymmetry. Theater ratio (0.68): High. The 'finding relevant results' narrative masks engagement optimization, advertising influence, and retention mechanics. The PageRank legitimacy story (mathematical rigor in ranking) is maintained but degraded \u2014 modern ranking is black-box ML trained on engagement rather than authority-based link analysis. The narrative serves as justification for opacity.",
+    "perspectival_gap": "The perspectival gap between the powerless user (Snare) and the platform operator (Rope) reveals the extraction mechanism. Both perspectives are correct: the system genuinely coordinates information access (Rope function) AND genuinely extracts from users and creators (Snare function). The gap is not a measurement error \u2014 it reflects that the constraint simultaneously performs coordination and extraction, with the extraction hidden behind the coordination narrative. The piton classification (PageRank legitimacy degraded) reveals how the theater increases over time: as actual ranking optimization drifts further from the 'relevant results' principle toward engagement and ad optimization, the narrative maintenance effort intensifies. The mountain classification risk (relevance is inherently impossible) is a false summit: it naturalizes the architectural choice (platform-controlled, opaque ranking) when alternatives exist (user-controlled ranking with transparent signals, federated discovery systems). The constraint is tangled rope, not mountain.",
+    "directionality_logic": "Directionality values derive from each agent's structural position. End users and low-resource creators are full targets (d \u2248 0.95) \u2014 they bear extraction costs without benefiting; trapped exit yields high f(d) \u2192 high \u03c7. The platform is a beneficiary with arbitrage (d \u2248 0.05) \u2014 captures surplus; arbitrage exit yields low f(d) \u2192 low/negative \u03c7. High-bidding advertisers are beneficiaries with arbitrage (d \u2248 0.25) \u2014 benefit from ad reach and subtle ranking preferences; arbitrage exit yields f(d) \u2248 0.02. The regulatory coalition are victims with constrained exit (d \u2248 0.70) \u2014 cannot fully exit search's dominance, but have some agency through regulation. The constraint is global scope (\u03c3=1.2), which amplifies \u03c7 across all agents \u2014 the scale of concentration amplifies both coordination and extraction.",
+    "mandatrophy_analysis": "Mandatrophy is UNRESOLVED in this constraint and represents a critical policy question. The core tension: Search ranking simultaneously performs essential coordination (connecting information seekers with information sources) and essential extraction (concentrating visibility asymmetrically, capturing attention surplus, enforcing behavioral tracking). No single classification captures the full structure. The platform-controlled architecture makes extraction inherent to the coordination function \u2014 the platform can only coordinate by controlling visibility, which creates the extraction mechanism. Resolving mandatrophy requires either: (a) decomposing into separate constraints (coordination function vs extraction function), or (b) accepting tangled rope as the stable classification and regulating the asymmetric extraction without destroying the coordination function. The regulatory coalition's approach is (b): enforce transparency, enable user control, establish content creator rights, without migrating to pure coordination (which would require decentralized search \u2014 architecturally feasible but network-effect-hamstrung). The unresolved mandatrophy is itself the policy crux: what degree of extraction is acceptable as the price of the coordination function?"
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "advertising_marketplace_extraction",
+      "content_creator_dependency",
+      "behavioral_data_asymmetry"
+    ],
+    "dual_formulation_note": "Search ranking decomposes into at least two structurally distinct constraints: (1) relevance_ranking_coordination (\u03b5 \u2248 0.25, Rope) \u2014 the core function of matching queries to relevant results, which is genuine coordination; (2) visibility_concentration_extraction (\u03b5 \u2248 0.72, Snare) \u2014 the asymmetric allocation of visibility and the suppression of low-resource creators. These are linked constraints; the platform's control of relevance ranking enables the visibility concentration. This story focuses on the tangled combination."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

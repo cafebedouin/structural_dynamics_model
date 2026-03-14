@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "rover_onboard_autonomy_complexity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rover"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Rover Onboard Autonomy Complexity Constraint",
+    "topic_domain": "robotics/space_exploration/autonomous_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mission_control_infrastructure",
+      "hardware_vendors"
+    ],
+    "victims": [
+      "field_exploration_capability",
+      "rover_operational_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Rover's Operational Autonomy",
+      "comment": "PERSPECTIVE 1: ROVER OPERATIONAL CAPABILITY (SNARE) \u2014 The rover system cannot exit the complexity bottleneck. Real-time autonomous decision-making is suppressed by architectural constraints: computational limits, communication latency, thermal/power budgets. The rover experiences full extraction in the form of crippled autonomy \u2014 it must wait for Earth commands despite possessing sensors and processing capacity for local decisions. Maximum suppression; minimal coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Field Exploration Science Community",
+      "comment": "PERSPECTIVE 2: FIELD EXPLORATION SCIENCE (TANGLED ROPE) \u2014 Scientists experience genuine coordination (rovers enable missions that would be impossible otherwise) alongside extraction (mission timelines are constrained by autonomy limits, exploration sites are pre-selected rather than dynamically chosen in response to discoveries). Constrained exit: moving to alternative platforms (different rovers, terrestrial analogs) is costly but possible. Mixed experience \u2014 benefit from rover existence, harm from its autonomy ceiling."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Mission Control Infrastructure",
+      "comment": "PERSPECTIVE 3: MISSION CONTROL (ROPE) \u2014 Benefits from centralized control architecture. Experiences the constraint as coordination mechanism: managing rover behavior through Earth commands solves the synchronization problem (all rovers operate under unified protocols). Net beneficiary through reduced coordination overhead and risk concentration. High arbitrage options: can shift protocols, reassign personnel, scale infrastructure up/down."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Hardware Vendors",
+      "comment": "PERSPECTIVE 4: HARDWARE VENDORS (ROPE) \u2014 Benefit from continuing demand for upgrades to processor/communication systems to marginally increase onboard autonomy without breaching the complexity threshold. Experience the constraint as pure coordination \u2014 managing component integration across mission architectures. Sustained demand for solutions within the complexity envelope. High arbitrage: can shift between vendors, adjust component specifications, develop for adjacent markets."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Autonomous Robotics Research Community",
+      "comment": "PERSPECTIVE 5: AUTONOMY RESEARCH (SCAFFOLD) \u2014 Organized agents (AI/robotics labs, rover development teams) see the onboard complexity bottleneck as a temporary coordination failure with a real sunset. Edge computing architectures, hierarchical planning algorithms, and neuromorphic computing are creating pathways to higher autonomy within strict resource budgets. Suppression declines as research matures and proves in operational settings. Constrained exit because adoption requires mission redesign, but exit path is visible and being walked."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Pre-Autonomy Operational Doctrine",
+      "comment": "PERSPECTIVE 6: MISSION DOCTRINE (PITON) \u2014 The remote-command paradigm persists despite technical feasibility of greater onboard autonomy. Operational doctrine (procedures, training, command structure) and risk management frameworks treat the Earth-rover link as functionally irreplaceable. This doctrine maintains itself through institutional inertia and path dependence in mission design, not because the technical constraint is immutable. Theater ratio elevated by rehearsal of command protocols and contingency planning that could be partially automated. Extracted value: organizational stability and career continuity for mission control staff."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Physics View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, communication latency and computational complexity are immutable constraints of physics and mathematics. Mars rovers operate under ~20-minute one-way light delay; onboard computing is limited by thermal/power physics; complex algorithms (real-time SLAM, pathfinding, hazard detection) grow exponentially in state space. These limits appear as natural law. However, this perspective risks naturalizing what is actually contingent technological and organizational choice. The analytical engine will flag this as a false summit: the 'laws' are real but the constraint's extraction arises from architectural decisions layered on top of them, not from the physical laws themselves."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "autonomy_sufficiency_threshold",
+      "question": "What level of onboard autonomous capability would constitute 'exit' from the constraint? Is the threshold technical or organizational?",
+      "resolution_mechanism": "Operational deployment data: comparison of mission science yield between Earth-commanded rovers and hypothetical higher-autonomy rovers using simulation/analog studies. Measurement of decision latency impact on exploration effectiveness.",
+      "impact": "If threshold is technical (e.g., 95% autonomous decisions): constraint remains fundamental. If threshold is organizational (e.g., risk acceptance culture): constraint is contingent on institutional appetite for innovation risk.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Definition of sufficient autonomy for constraint exit"
+    },
+    {
+      "id": "edge_computing_feasibility",
+      "question": "Can hierarchical/edge computing architectures achieve significant autonomy gains within the current power/thermal budget, or are the gains marginal/illusory?",
+      "resolution_mechanism": "Technical performance data from experimental rovers and testbeds. Quantification of autonomy improvement vs computational overhead and reliability costs. Real mission performance data if available.",
+      "impact": "If gains are significant: scaffold sunset is real, research pathway is viable. If gains are marginal: scaffold is aspirational, autonomy constraint remains fundamental.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether edge computing enables substantial autonomy gains"
+    },
+    {
+      "id": "mission_control_risk_model_accuracy",
+      "question": "Are mission control's risk models justified by actual failure data, or do they represent organizational conservatism/liability aversion?",
+      "resolution_mechanism": "Comparative failure analysis: rovers that operated with higher autonomy (test rovers, commercial units) vs NASA/ESA Mars rovers. Frequency of autonomous-decision failures vs Earth-command failures (including communication latency failures).",
+      "impact": "If models are justified: constraints reflect genuine risk. If conservative: constraints are organizational choice maintainable via doctrine rather than physics.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether risk models justify autonomy restrictions"
+    },
+    {
+      "id": "career_structure_lock_in",
+      "question": "Would adoption of higher onboard autonomy require restructuring mission control career paths and organizational roles?",
+      "resolution_mechanism": "Organizational analysis of skill requirements, staffing patterns, training pipelines. Interviews with mission control personnel. Comparison with organizations (commercial space, robotics labs) operating higher-autonomy systems.",
+      "impact": "If yes: piton perspective is accurate, constraint persists through institutional identity lock despite technical feasibility. If no: organizational barriers are weaker than technical barriers.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether organizational restructuring blocks autonomy adoption"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Rover onboard autonomy complexity presents a structural constraint where genuine coordination challenges (managing rover behavior across 20+ minute communication delays, integrating diverse sensor modalities, operating under severe thermal and power budgets) are layered with institutional extraction mechanisms (centralized mission control authority, risk-averse doctrine, vendor dependency). The constraint appears as immutable technical law (communication latency, computational complexity) from the analytical perspective, but manifests as organizational choice and career incentive structure from institutional and operational perspectives. The constraint exhibits tangled rope characteristics: coordination is genuine (rovers require command architecture), but extraction is real (autonomy is suppressed below technical feasibility, mission control maintains a power position beyond what physics requires). The theater ratio (0.55) reflects increasing ceremonial character of mission control procedures as onboard computational capability grows \u2014 decision protocols are rehearsed rather than adaptive. The extractiveness trajectory (0.22 \u2192 0.38) shows the constraint tightening over time as rover sophistication increases relative to autonomy budget, forcing more elaborate workarounds rather than enabling direct autonomy gains.",
+    "key_agents": [
+      "Rover Operational Autonomy: Primary victim (powerless/trapped) \u2014 system capabilities constrained below technical feasibility by architectural limits; cannot exercise onboard decision capacity.",
+      "Mission Control Infrastructure: Primary beneficiary (institutional/arbitrage) \u2014 maintains centralized authority and organizational continuity through command architecture; can exit/adapt protocols.",
+      "Field Exploration Science Community: Secondary victim (moderate/constrained) \u2014 benefits from rover capability but harmed by exploration constraints imposed by autonomy ceiling; constrained exit via alternative platforms.",
+      "Hardware Vendors: Secondary beneficiary (institutional/arbitrage) \u2014 sustained demand for incremental upgrades to processor/communication systems within complexity envelope.",
+      "Autonomy Research Community: Organized agents (organized/constrained) \u2014 developing edge computing and hierarchical planning solutions; building sunset pathway through research maturation.",
+      "Pre-Autonomy Operational Doctrine: Institutional inertia (institutional/arbitrage) \u2014 command-centric mission doctrine persists through path dependence; maintains itself through training, procedures, organizational structure.",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent organizational arrangements as immutable physical law."
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint creates real asymmetry \u2014 mission control benefits from centralized authority, hardware vendors benefit from sustained upgrade demand, while field autonomy is suppressed. However, the extraction is not severe (not a snare) because rovers do function and autonomy has increased marginally over time. The suppression (0.48) reflects real barriers (communication latency is physics, onboard computation is limited), but these barriers do not fully explain the autonomy ceiling \u2014 organizational doctrine and risk models contribute significantly to suppression. Theater ratio (0.55): Moderate. Mission control procedures have increasingly ceremonial character as rover sophistication grows \u2014 decision trees are rehearsed at Earth when rovers possess sufficient onboard compute to execute more of them locally. The theater increased over the interval as the technical feasibility/autonomy practice gap widened. Claimed type (tangled_rope): The constraint exhibits both coordination function (command architecture solves genuine synchronization problem) and asymmetric extraction (autonomy is suppressed below what physics/technology would permit). Requires active enforcement (doctrine, training, risk protocols) to maintain the suppression; cannot arise passively from physics alone.",
+    "perspectival_gap": "The gap between mission control (sees Rope, pure coordination) and rover autonomy (sees Snare, pure extraction) is the core perspectival divergence. Mission control genuinely solves a coordination problem \u2014 rovers in a swarm must operate under unified protocols. Autonomy system genuinely experiences suppression \u2014 its capabilities are capped below technical feasibility. Both perspectives are accurate to their structural position. The analytical observer risks collapsing this gap by naturalizing the constraint as immutable physical law (Mountain), which would erase the agency dimension of organizational choice. The scaffold perspective (research pathway to higher autonomy) and piton perspective (mission doctrine maintaining suppression through inertia) together show that the constraint is contingent \u2014 it could change if organizational risk appetite shifted or if research validated higher autonomy.",
+    "directionality_logic": "Directionality derives from structural position. Mission control occupies a beneficiary position (arbitrage exit) \u2014 centralized authority provides career stability, procedural continuity, and organizational power. Their experienced extraction (d \u2248 0.15) is low or slightly negative because the constraint distributes benefits toward them. Rover autonomy occupies a victim position (trapped exit) \u2014 it cannot exercise capability without violating command protocols; has no alternative; experiences maximum suppression relative to technical feasibility. Its experienced extraction (d \u2248 0.95) is maximal because it bears all constraint costs with no exit. Field exploration occupies an intermediate position (constrained exit) \u2014 constrained by autonomy limits but also enabled by rover existence; can exit through alternative platforms at significant cost. Their experienced extraction (d \u2248 0.60) reflects mixed exposure. Hardware vendors occupy a beneficiary position (arbitrage exit) \u2014 sustained upgrade demand within the complexity envelope. Their directionality (d \u2248 0.20) is favorable because the constraint creates recurring revenue.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by revealing that 'coordination' (mission control's experience) and 'extraction' (autonomy system's experience) coexist in the same structure. The tangled rope classification captures this duality: the command architecture genuinely coordinates multi-rover behavior, AND it genuinely suppresses onboard autonomy below technical feasibility. Neither reading is false. The risk is that mission control's beneficiary perspective (Rope) drowns out the victim perspective (Snare) in policy discussions, naturalizing the constraint as inevitable. The analytical observer's mountain perspective threatens the same error at civilizational scale \u2014 'communication latency is a law of physics' becomes 'therefore rovers will always be remote-controlled' in sloppy thinking. The true mandatrophy resolution is the scaffold perspective: the constraint is real (coordination is needed, latency is physics), but the specific architectural choice (Earth-centric command) is contingent. Higher onboard autonomy with coordinated command is technically feasible and is being incrementally deployed. The sunset is real."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "mars_communication_latency",
+      "rover_thermal_power_budget"
+    ],
+    "dual_formulation_note": "Rover autonomy complexity is downstream of communication latency (fundamental physics) and power/thermal budgets (engineering constraints). The autonomy constraint itself is not a physical limit but an architectural choice that manages complexity within those underlying constraints. All three should be modeled separately: latency and power are upstream mountains; autonomy complexity is a tangled rope layered on top. This story focuses on autonomy complexity as an organizational/architectural constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

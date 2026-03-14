@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "police_union_qualified_immunity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "puqi"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Police Union Qualified Immunity",
+    "topic_domain": "criminal_justice/employment_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "police_departments",
+      "individual_officers"
+    ],
+    "victims": [
+      "civilians_subjected_to_misconduct",
+      "civil_rights_claimants",
+      "constitutional_accountability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Injured Civilian",
+      "comment": "PERSPECTIVE 1: INJURED CIVILIAN (SNARE) \u2014 Victim of police misconduct with no meaningful recourse. Qualified immunity eliminates civil suit remedy; criminal prosecution requires separate political will; internal discipline is opaque and toothless. Trapped with no exit \u2014 cannot sue, cannot appeal, cannot compel accountability. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "The Marginalized Community",
+      "comment": "PERSPECTIVE 2: MARGINALIZED COMMUNITY (SNARE / IDENTITY_LOCKED) \u2014 Communities subject to disproportionate police contact and misconduct experience qualified immunity as a structural extraction mechanism embedded in their relationship with law enforcement. Identity-locked through racialized historical experience of policing \u2014 exit from subordination would require not just legal reform but reconstituting the community's relationship with state authority itself. Suppression operates through normalized state violence and epistemic closure about policing necessity."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Police Department Administration",
+      "comment": "PERSPECTIVE 3: POLICE DEPARTMENT ADMINISTRATION (ROPE) \u2014 Benefits from qualified immunity as a coordination mechanism: enables risk-taking in enforcement without liability exposure, reduces pension and insurance burdens, and simplifies officer hiring/retention. Experiences constraint as coordination \u2014 the rules enable collective action (aggressive policing) that would be individually risky if officers faced civil suit. Net beneficiary with arbitrage options (can lobby, negotiate union contracts, allocate risk internally)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Police Union",
+      "comment": "PERSPECTIVE 4: POLICE UNION (ROPE) \u2014 Extracts value by using qualified immunity as a negotiating tool and retention mechanism. Union operates as coordinator: ensures member protection, standardizes defense costs, and maintains solidarity against external accountability pressure. Experiences constraint as enabling collective bargaining power. Powerful actor with multiple arbitrage options (contract renegotiation, legal advocacy, political mobilization)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Individual Officer",
+      "comment": "PERSPECTIVE 5: INDIVIDUAL OFFICER (TANGLED_ROPE) \u2014 Mixed experience: qualified immunity provides genuine coordination function (protects officers from frivolous suits, reduces risk of personal ruin) AND creates asymmetric extraction (enables misconduct without consequence, creates collective reputation damage, traps officers in departments with high-misconduct cultures). Constrained \u2014 cannot exit without career damage; cannot remain without complicity. Moderate power \u2014 collective bargaining gives some leverage but individual officer is subordinate to union and department."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Civil Rights Advocacy Coalition",
+      "comment": "PERSPECTIVE 6: CIVIL RIGHTS ADVOCACY COALITION (TANGLED_ROPE) \u2014 Organized agents (legal nonprofits, civil rights groups, victim organizations) see qualified immunity as both a coordination problem (the constraint exists to enable law enforcement) and an extraction mechanism (it eliminates civilian accountability). Coalition is constrained by limited litigation resources and political pressure to defend 'officer safety' but has some agency through legislative advocacy and precedent litigation. Extractiveness is real but not maximal because coalition can partially circumvent (state law remedies, selective publicity, building political coalitions)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Legal Doctrine (Doctrine Theater)",
+      "comment": "PERSPECTIVE 7: QUALIFIED IMMUNITY DOCTRINE (PITON) \u2014 The doctrine itself persists through institutional inertia and legal theater. Supreme Court originated qualified immunity as a doctrinal compromise (Harlow v. Fitzgerald 1982) designed to balance officer accountability with operational flexibility. Over 40+ years, the doctrine has become degraded: it functions as near-absolute immunity rather than the 'sliding scale' it nominally provides. Theater ratio high because courts invoke 'clearly established law' standard that is rarely met, creating performative due process. The doctrine persists not because it serves its original function well but because institutional actors benefit from it and alternatives are not yet institutionalized."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Comparative Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / COMPARATIVE VIEW (SNARE) \u2014 From a civilizational/comparative perspective, qualified immunity is not a natural law of policing but a specific U.S. doctrinal choice. Most liberal democracies (UK, Canada, Australia, EU states) enable civil suits against police and maintain functional policing through direct accountability rather than immunity. This perspective reveals qualified immunity as structurally contingent \u2014 not inevitable, not required by the nature of law enforcement, but a particular extraction mechanism institutionalized in American law. The global view shows the snare classification is generalizable, not naturalized."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "clearly_established_law_threshold",
+      "question": "What standard should apply to 'clearly established law' for qualified immunity denial? Current threshold requires prior case law establishing *identical* conduct as unconstitutional \u2014 is this threshold set to protect officers or to enable immunity?",
+      "resolution_mechanism": "Comparative analysis: Supreme Court qualified immunity denials vs. denials under state law tests; analysis of how often 'clearly established' requirement actually bars recovery vs. serves as absolute immunity barrier",
+      "impact": "If threshold is set too high (current doctrine): qualified immunity is de facto absolute immunity (Snare). If threshold is set appropriately: qualified immunity becomes functional balancing of interests (Tangled Rope or Rope).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether 'clearly established law' standard functions as designed or provides de facto absolute immunity"
+    },
+    {
+      "id": "union_collective_action_necessity",
+      "question": "Does qualified immunity serve a genuine collective action coordination function for police departments, or would functional departments operate similarly under direct individual liability?",
+      "resolution_mechanism": "Empirical comparison: police performance metrics, misconduct rates, recruitment/retention, and operational metrics in jurisdictions with (a) qualified immunity, (b) state law immunity that is narrower, (c) no immunity but high indemnification. Compare to international police forces without qualified immunity.",
+      "impact": "If coordination function is genuine: qualified immunity is Rope or Tangled Rope (enables necessary collective action with some extraction overhead). If function is not genuine: qualified immunity is pure extraction (Snare), and coordination rationale is cover story.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether qualified immunity serves genuine coordination function or is pure extraction"
+    },
+    {
+      "id": "marginalized_community_exit_modulation",
+      "question": "For the identity_locked perspective applied to marginalized communities: is the binding mechanism cognitive capture (the community has internalized the inevitability of police sovereignty) or structural (the community genuinely has no alternative institutions or has tried and failed to create them)?",
+      "resolution_mechanism": "Historical analysis: documented movements for alternative public safety, community policing models, civilian oversight adoption; comparison with communities that have successfully reconstituted police accountability relationships",
+      "impact": "If primarily cognitive: identity_lock is accurate \u2014 the constraint is changeable if the identity frame breaks. If primarily structural: identity_locked is misclassified as trapped (high-cost barriers) or constrained (surmountable barriers). Classification of the marginalized community perspective determines whether the constraint appears as culturally embedded (identity_locked rope) or as externally imposed (trapped snare).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether identity-lock for marginalized communities is cognitive capture or structural barrier"
+    },
+    {
+      "id": "individual_officer_complicity_threshold",
+      "question": "At what point does an officer's participation in a misconduct-heavy department constitute complicity that makes the tangled_rope classification inaccurate, and the officer becomes a willing beneficiary (rope) rather than a constrained participant?",
+      "resolution_mechanism": "Behavioral analysis: officer participation in complaints against colleagues, whistleblowing rates, voluntary exit rates, demographic patterns in who stays vs. leaves high-misconduct departments",
+      "impact": "If complicity threshold is high: most officers are genuinely constrained (Tangled Rope). If threshold is low: many officers have chosen the extraction (Rope), and institutional response should target retention incentives differently.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Threshold for individual officer complicity in misconduct environment"
+    },
+    {
+      "id": "civil_rights_coalition_bargaining_power",
+      "question": "Has the civil rights coalition's bargaining power increased or decreased over the 2010-2025 period? If increasing, does this modulate the constraint from Snare toward Tangled Rope, or from Tangled Rope toward Rope?",
+      "resolution_mechanism": "Longitudinal analysis: successful litigation outcomes, legislative wins (qualified immunity reform bills), media/political salience of police accountability, voter support for reform measures across time",
+      "impact": "If coalition power is increasing: the constraint is transitioning from Snare toward Tangled Rope, and the interval measurements should show theater_ratio declining and base_extractiveness declining as institutional response increases. If power is stalled: constraint remains Snare with high extractiveness.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether civil rights coalition is gaining or losing bargaining power over time"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Police union qualified immunity represents a structural extraction mechanism embedded in American criminal justice that protects officers and police departments from civil liability for constitutional violations. Qualified immunity originated in 1982 (Harlow v. Fitzgerald) as a doctrinal compromise intended to balance individual officer accountability with operational flexibility \u2014 a genuine coordination problem. Over 40+ years, the doctrine has evolved into near-absolute immunity in practice while maintaining a nominal 'clearly established law' standard that is rarely met. The constraint exhibits multiple classification types depending on structural position: pure extraction from the perspective of injured civilians and marginalized communities (Snare), coordination mechanism from the perspective of police departments and unions (Rope), mixed coordination-extraction from individual officer perspective (Tangled Rope), institutional theater from the perspective of the legal doctrine itself (Piton), and contingent rather than inevitable from the analytical/comparative perspective. The extractiveness trajectory shows accumulation over the interval: from 0.45 (2010s, post-Ferguson activism creating pressure for reform) to 0.68 (2020s, reform momentum stalled in legislatures, Supreme Court reaffirmed immunity doctrine). Theater ratio has increased from 0.42 to 0.58 as the doctrine's nominal 'clearly established' standard becomes increasingly decoupled from functional accountability.",
+    "key_agents": [
+      "Injured Civilians: Primary victims (powerless/trapped) \u2014 no civil suit remedy; bear full cost of misconduct with no recourse",
+      "Marginalized Communities: Primary victims (powerless/identity_locked) \u2014 disproportionate exposure to police misconduct; identity-fused with state subordination through historical racialization of policing",
+      "Police Departments: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from reduced liability exposure, simplified risk allocation, enables aggressive enforcement without fear of civil judgments",
+      "Police Unions: Primary beneficiaries (powerful/arbitrage) \u2014 use qualified immunity as negotiating tool, member retention mechanism, and shield against external accountability pressure",
+      "Individual Officers: Mixed (moderate/constrained) \u2014 benefit from personal immunity but trapped in departments with high misconduct cultures; cannot exit without career damage",
+      "Civil Rights Advocacy Coalition: Organized agents (organized/constrained) \u2014 legally and politically mobilized to challenge immunity; constrained by litigation costs and political barriers",
+      "Legal Doctrine Itself: Institutional (institutional/arbitrage) \u2014 persists through inertia; serves original beneficiaries despite doctrinal degradation",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 reveals qualified immunity as contingent U.S. choice, not law of nature; most liberal democracies enable direct accountability"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint systematically eliminates civil suit remedy for constitutional violations, creating near-absolute immunity in practice through the 'clearly established law' requirement that is rarely satisfied. Extractiveness increased from 0.45 to 0.68 over the interval as Supreme Court decisions made qualified immunity even more difficult to overcome and legislative reform efforts stalled. The increase reflects accumulation of favorable precedent for immunity rather than change in underlying mechanism \u2014 the doctrine has become more entrenched. Suppression (0.72): High. Multiple barriers prevent accountability: (1) civil suits blocked by qualified immunity, (2) criminal prosecution requires separate political will and high evidentiary burden, (3) internal discipline is opaque and rarely results in meaningful consequences, (4) union contracts often require strong due process protections that delay/obstruct discipline, (5) qualified immunity is framed as necessary for 'officer safety' creating public narrative suppression. Theater ratio (0.58): Moderate-high. The 'clearly established law' standard creates performative due process \u2014 courts invoke the standard as though it applies meaningful constraint while de facto granting immunity in most cases. The interval shows theater increasing from 0.42 to 0.58 as the gap between nominal doctrine (balancing framework) and actual practice (near-absolute immunity) widened. Theater is lower than doctrinal theater in some medical licensing contexts because the extraction is straightforward \u2014 courts literally say 'immunity granted' rather than performing complex ritualistic evaluation.",
+    "perspectival_gap": "The gap reveals extraction mechanisms that would be invisible from a single perspective. The police union perspective (Rope) sees pure coordination \u2014 qualified immunity enables risk-taking. The injured civilian perspective (Snare) sees pure extraction \u2014 no accountability. Neither is wrong; both are right from their position. The gap is the structure. An observer seeing only the police perspective would conclude qualified immunity is necessary coordination. An observer seeing only the victim perspective would conclude it is pure oppression. The analytical perspective reveals both are true: coordination function is real (departments do need to manage risk), but the coordination benefit accrues entirely to police while the extraction cost accrues entirely to civilians. The constraint is coordination WITH ASYMMETRIC EXTRACTION \u2014 exactly the definition of Tangled Rope \u2014 except that from the victim perspective, the extraction is so complete and suppression so high that it appears as Snare. The perspectival gap is not ambiguity; it is a diagnostic signature of the extraction mechanism's success.",
+    "directionality_logic": "Beneficiaries/victims flow: (1) Police departments benefit from reduced liability exposure and simplified risk allocation \u2014 they are net beneficiaries. (2) Police unions benefit from using qualified immunity as negotiating tool and member retention mechanism \u2014 they are net beneficiaries. (3) Individual officers receive mixed benefits (personal immunity) and costs (complicity, reputation damage, institutional trap) \u2014 they are partly beneficiary, partly victim. (4) Injured civilians are pure victims \u2014 they bear full cost of misconduct with no recourse. (5) Marginalized communities are pure victims with the additional layer that the extraction is normalized through historical racialization of policing. (6) Civil rights advocates are victims of the extraction (their clients are harmed) and also targets of the constraint (their legal strategy is blocked). The directionality derivation follows: beneficiaries with arbitrage options (departments, unions) get low d; trapped victims get high d; mixed actors get moderate d. The chi formula \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) applies scope modifier \u03c3(S=national) = 1.0, so f(d) directly scales \u03b5. For powerless/trapped agents, f(d) \u2248 1.42, pushing effective extraction toward maximum despite the 'moderate' base extractiveness.",
+    "mandatrophy_analysis": "SNARE OR TANGLED ROPE? The constraint classifies as Snare (pure extraction) from the victim perspectives because: (1) base extractiveness \u2265 0.46 (\u03b5 = 0.68), (2) suppression \u2265 0.60 (s = 0.72), (3) effective extraction \u03c7 \u2265 0.66. For powerless/trapped victims, f(d) \u2248 1.42, so \u03c7 = 0.68 \u00d7 1.42 \u00d7 1.0 \u2248 0.96 \u2014 extreme extraction. However, the constraint ALSO appears as Rope (pure coordination) from police perspective because the beneficiary experiences negative effective extraction (constraint subsidizes them). The mandatrophy is resolved by recognizing that qualified immunity IS coordination (it solves the real problem of managing police liability risk) but with completely asymmetric extraction (all coordination benefit goes to police, all extraction cost goes to civilians). This makes it Tangled Rope from the system perspective \u2014 it has both genuine coordination function AND asymmetric extraction. From specific agent perspectives, it appears as pure Snare (victims) or pure Rope (beneficiaries) because the asymmetry is so extreme. The engine's job is to detect that BOTH dynamics are true \u2014 there is real coordination happening, and real extraction happening, and they are fused in the same institutional mechanism. The mandatrophy is the false choice between 'this is just coordination' (beneficiary framing) and 'this is just extraction' (victim framing). The truth is the fusion: qualified immunity coordinates police liability risk management while extracting accountability rights from civilians."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "civil_rights_litigation_access",
+      "police_accountability_culture",
+      "state_tort_immunity_doctrine"
+    ],
+    "dual_formulation_note": "Qualified immunity interacts with several related constraints: (1) civil rights litigation access (Section 1983 lawsuits blocked by qualified immunity threshold), (2) police accountability culture (immunity reduces internal incentives for discipline), (3) state tort immunity doctrine (parallel state law doctrines provide alternative paths but are less developed). Each upstream/downstream relationship reflects how qualified immunity serves as a chokepoint preventing other accountability mechanisms from functioning. The network decomposition separates the doctrinal mechanism (qualified immunity itself) from its institutional effects (culture, litigation access, alternative remedies)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

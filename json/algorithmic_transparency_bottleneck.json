@@ -1,0 +1,195 @@
+{
+  "header": {
+    "constraint_id": "algorithmic_transparency_bottleneck",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "algotrans"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Algorithmic Transparency Bottleneck in Commercial AI Systems",
+    "topic_domain": "technology/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "algorithm_developers",
+      "deploying_organizations"
+    ],
+    "victims": [
+      "affected_populations",
+      "regulatory_bodies",
+      "algorithmic_accountability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Affected Populations",
+      "comment": "PERSPECTIVE 1: AFFECTED POPULATIONS (SNARE) \u2014 Subjects of algorithmic decisions (credit scoring, hiring, bail recommendations, content moderation) cannot exit, cannot see the decision logic, and cannot meaningfully contest outcomes. Bear full extraction cost with no transparency or recourse. Maximum suppression: decisions are presented as objective when logic is proprietary; appeals process is opaque."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Bodies",
+      "comment": "PERSPECTIVE 2: REGULATORY BODIES (TANGLED ROPE) \u2014 Constrained by technical expertise gaps, resource limitations, and legal uncertainty (e.g., can regulators demand source code as trade secret?). Also benefit from algorithmic coordination: the same systems they regulate provide data for regulatory decision-making. Genuine coordination function (market efficiency, safety testing) layered with asymmetric extraction (regulators cannot verify claims they must approve)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Algorithm Developers",
+      "comment": "PERSPECTIVE 3: ALGORITHM DEVELOPERS (ROPE) \u2014 Experience the constraint as coordination: proprietary opacity enables competitive differentiation and intellectual property protection, solving the real problem of enabling innovation without complete knowledge disclosure. Can exit by open-sourcing (arbitrage option). Net beneficiary of opacity."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Transparency Advocacy Coalition",
+      "comment": "PERSPECTIVE 4: TRANSPARENCY ADVOCACY COALITION (SCAFFOLD) \u2014 Organized agents (civil society organizations, transparency advocates, some regulators) see the opacity bottleneck as a temporary failure that is being systematized away through explainability research, regulatory mandates (EU AI Act, algorithmic audits), and technical standards (SHAP, LIME, mechanistic interpretability). High suppression tolerated because coalition has agency and sees a sunset: as interpretability techniques mature and transparency become regulatory baseline, the extraction mechanism loses force."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Black-Box Testing Ritual",
+      "comment": "PERSPECTIVE 5: BLACK-BOX TESTING RITUAL (PITON) \u2014 Third-party auditing of algorithms (bias testing, fairness audits, adversarial robustness checks) is largely performative: auditors test against known attack vectors but cannot verify the system's actual decision logic or catch emergent failure modes. Auditing maintains legitimacy theater while providing minimal transparency. Persists through institutional inertia (regulators require audits; audits provide apparent accountability) despite degraded effectiveness as algorithms become more complex."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Computational Limits View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / COMPUTATIONAL LIMITS VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, the opacity bottleneck appears immutable: large neural networks are inherently difficult to interpret due to their complexity; perfect transparency may be computationally impossible; there is a fundamental tradeoff between model accuracy and interpretability. This perspective naturalizes transparency barriers as laws of mathematics. However, structural data contradicts the mountain classification \u2014 the engine's false summit detector identifies this as naturalization of what is actually a contingent institutional arrangement (IP protection norms, commercial incentives, regulatory capture)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "transparency_cost_asymmetry",
+      "question": "Is the high cost of transparency technical (genuinely difficult to explain complex models) or institutional (developers choose opacity to protect IP and maintain competitive advantage)?",
+      "resolution_mechanism": "Empirical analysis of open-source vs proprietary systems: do open-source high-complexity models (transformers, graph neural networks) achieve equivalent transparency despite no IP incentive to hide? Can open standards (ONNX, model cards, documentation) reduce effective opacity costs?",
+      "impact": "If primarily technical: transparency bottleneck is structural (stronger mountain classification). If primarily institutional: transparency bottleneck is extractive choice (stronger snare/tangled rope from affected populations' perspective).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Technical vs institutional sources of opacity"
+    },
+    {
+      "id": "interpretability_sufficiency",
+      "question": "Do current explainability techniques (SHAP, LIME, attention visualizations, feature importance rankings) provide meaningful accountability or merely create appearance of transparency while hiding actual decision logic?",
+      "resolution_mechanism": "Adversarial testing: can explanations be gamed independently of model predictions? Do explanations predict what the model actually does or only what makes intuitive sense? Comparative analysis of explanation stability across input perturbations.",
+      "impact": "If techniques are genuinely effective: transparency advocacy coalition's sunset is real (scaffold classification confirmed). If techniques are theater: black-box testing ritual persists (piton classification confirmed); affected populations remain trapped (snare classification confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether explainability techniques provide genuine accountability"
+    },
+    {
+      "id": "regulatory_capture_mechanism",
+      "question": "Are regulatory bodies' constraints (expertise gaps, resource limits, technical dependence on industry) a structural feature of this domain or deliberately manufactured by industry to maintain opacity?",
+      "resolution_mechanism": "Historical analysis of regulatory development capacity in other domains (nuclear, pharmaceuticals, aviation); comparison of regulatory expertise ratios (regulator-to-regulated technical staff) across sectors; analysis of revolving-door patterns (industry-to-regulator career flows).",
+      "impact": "If structural: regulatory bodies genuinely have constrained agency (tangled rope classification warranted). If manufactured: capture is extractive strategy (regulatory bodies are colluded beneficiaries; snare classification from affected populations' view is more severe).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory constraints are structural or manufactured"
+    },
+    {
+      "id": "interpretability_accuracy_tradeoff_reality",
+      "question": "Does a fundamental mathematical tradeoff between model accuracy and interpretability exist, or is this narrative a post-hoc justification for choosing opaque architectures?",
+      "resolution_mechanism": "Comparative benchmarking of accuracy-on-difficulty task using transparent models (decision trees, linear models, small ensembles) vs opaque models (large neural networks). Historical analysis: did accuracy/interpretability tradeoff shift with architectural choices or remain constant?",
+      "impact": "If fundamental tradeoff exists: mountain perspective (computational limits view) has validity; some opacity is immutable. If tradeoff is contingent: mountain perspective is a false summit; opacity is institutional choice to maximize extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether accuracy-interpretability tradeoff is fundamental or contingent"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The algorithmic transparency bottleneck in commercial AI systems creates a structural asymmetry between the technical and commercial incentives to conceal decision logic and the democratic and operational need to understand and contest algorithmic outcomes. Developers and deploying organizations benefit from opacity \u2014 it protects intellectual property, enables competitive differentiation, and insulates decision-making from accountability. Affected populations (borrowers denied credit, job applicants filtered by hiring algorithms, defendants scored by bail prediction systems, users whose content is moderated by algorithmic systems) cannot see the decision logic, cannot contest it meaningfully, and bear the full cost of errors or bias. Regulatory bodies are caught in a coordination-extraction hybrid: they benefit from algorithmic systems for efficient policy-making yet lack the technical expertise and legal authority to demand genuine transparency. The constraint exhibits all six DR types from different structural positions, revealing how the same opacity operates as: an immutable computational limit (mountain, analytically), a legitimate innovation incentive (rope, for developers), a coordination problem being solved by explainability research (scaffold, for advocacy organizations), a degraded auditing theater (piton, for third-party testing), a mixed coordination-extraction system (tangled rope, for regulators), and pure extraction (snare, for affected populations).",
+    "key_agents": [
+      "Algorithm Developers: Primary beneficiary (institutional/arbitrage) \u2014 capture IP protection, competitive advantage, and freedom from accountability during development cycle",
+      "Deploying Organizations: Primary beneficiary (institutional/arbitrage) \u2014 reduce operational oversight and liability exposure; maintain user dependency through algorithmic decision-making",
+      "Affected Populations: Primary victim (powerless/trapped) \u2014 cannot exit algorithmic systems, cannot see decision logic, cannot contest outcomes; bear full cost of errors and bias",
+      "Regulatory Bodies: Secondary victim (moderate/constrained) \u2014 constrained by expertise gaps, resource limits, legal uncertainty; also benefit from algorithmic efficiency; cannot verify claims they must approve",
+      "Transparency Advocacy Coalition: Organized agents (organized/mobile) \u2014 civil society organizations, interpretability researchers, transparency advocates building alternative pathways (explainability techniques, regulatory standards, mechanistic interpretability) with sunset logic",
+      "Black-Box Testing Ritual: Institutional actor (institutional/arbitrage) \u2014 third-party auditing maintains legitimacy theater; persists through regulatory requirement and institutional inertia despite degraded transparency function",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements (IP norms, commercial incentives, regulatory capture) as immutable computational limits"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The opacity constraint extracts significant value from affected populations (no transparency, no recourse) and regulatory bodies (constrained verification). But the extraction is not maximal because: (1) transparency advocates are building genuine alternatives (interpretability research, explainability standards) that reduce the opacity advantage; (2) commercial incentives for accuracy create some alignment between model quality and user outcomes; (3) high-profile failures (algorithmic bias cases, hiring discrimination lawsuits) generate counter-pressure toward transparency. The measurement trajectory shows increasing extractiveness over the interval (0.42 \u2192 0.60) as algorithms become more complex and opaque, and as developers more aggressively resist transparency demands using computational-limits narratives. Suppression (0.68): High. Significant barriers to transparency include: trade secret protections, IP law arguments (source code as protected expression), computational complexity genuinely limiting post-hoc explanation, organizational opacity (even internal developers may not fully understand ensemble behavior), regulatory capture (agencies lack authority to demand code), and information asymmetry (developers control all technical details). Suppression is not total because some transparency is emerging (model cards, explainability research, regulatory pressure) and some affected populations can legally demand explanations (GDPR right to explanation, Fair Credit Reporting Act audit rights). Theater ratio (0.65): Moderate-high. Third-party algorithmic auditing is substantially performative: auditors test against known bias vectors (gender, race, age) but cannot verify the system's internal logic; they test on provided test sets that may not represent real-world conditions; they publish opacity-friendly summaries (\"model fairness assessment\") that create appearance of accountability without addressing underlying opacity. Theater increases over the measurement interval as auditing becomes mandatory regulatory theater (EU AI Act, FTC algorithmic transparency initiatives) while genuinely addressing opacity remains limited. The trajectory shows theater rising as extractiveness rises, indicating that performative transparency measures are substituting for genuine transparency.",
+    "directionality_logic": "Each perspective's directionality value is determined by the agent's structural relationship to the transparency extraction. Algorithm developers experience low/negative d because they are net beneficiaries of opacity (arbitrage exit option lets them choose to remain opaque). Affected populations experience high d (close to 1.0, full victim) because opacity is imposed on them with no exit option and no alternative decision-making system. Regulatory bodies experience moderate d because they are both victims (constrained by expertise gaps, dependent on industry for verification) and partial beneficiaries (opacity reduces their verification burden, enabling lighter-touch regulation). The opacity constraint runs from developers/deployers (low d, beneficiary) toward affected populations (high d, victim), with regulatory bodies in a mixed middle position (moderate d, caught between roles). The canonical f(d) sigmoid maps these to experienced extractiveness: beneficiaries see rope-level coordination; victims see snare-level extraction; mixed agents see tangled rope.",
+    "perspectival_gap": "This constraint demonstrates the full perspectival gap between structural positions. Algorithm developers see legitimate coordination (Rope) \u2014 opacity enables innovation and competitive function. Transparency advocates see a sunset problem being solved (Scaffold) \u2014 interpretability techniques and regulatory standards are building alternative pathways that will reduce opacity's extraction advantage. The black-box testing ritual (Piton) presents a performative appearance of accountability while preserving underlying opacity. Regulatory bodies see mixed coordination and extraction (Tangled Rope) \u2014 algorithms enable policy efficiency yet constrain verification capacity. Affected populations see pure extraction (Snare) \u2014 they are trapped in opaque systems with no transparency, no contest mechanism, no exit option. The analytical observer risks seeing immutable computational limits (Mountain) \u2014 neural networks are inherently hard to interpret, interpretability may be impossible, accuracy-vs-interpretability tradeoffs are fundamental. But structural data reveals this as a false summit: the constraints are primarily institutional (IP protection norms, commercial incentives, regulatory capture) rather than mathematical. Open-source systems show that complex models can be transparent; interpretability research shows that explanations are possible; regulatory mandates show that transparency can be enforced. The mountain perspective naturalizes what is actually a contingent choice.",
+    "mandatrophy_analysis": "DIAGNOSTIC EXEMPLAR: This constraint resolves the mandatrophy by showing how the same opacity operates simultaneously as coordination (for developers), extraction (for affected populations), a sunset problem (for advocates), a degraded ritual (for auditing institutions), and a naturalized limit (from analytical distance). The mandatrophy is not 'which type is correct?' but 'who do we measure from?'. The false summit (analytical mountain) is the key diagnostic \u2014 it reveals that narratives claiming transparency is 'impossible due to model complexity' are actually covering institutional choices to maintain opacity. The real question is not whether transparency is technically possible but whether the extraction benefits to developers and deployers outweigh the democratic costs to affected populations. The constraint demonstrates why Deferential Realism requires multiple perspectives: a single 'objective' assessment (transparency bottleneck = immutable computational limit) would miss the entire extractive apparatus it's justifying. The perspectival analysis reveals that opacity is a chosen institutional arrangement, not a law of nature, and that alternatives (open-source, interpretability research, regulatory mandates) exist and are feasible."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_bias_detection",
+      "regulatory_capacity_constraint",
+      "intellectual_property_tradeoff"
+    ],
+    "dual_formulation_note": "The algorithmic transparency bottleneck decomposes into: (1) technical complexity of interpretation (genuine but not immutable \u2014 open-source systems solve it), (2) IP protection incentive (contingent institutional choice), (3) regulatory expertise gap (structural but remediable). These stories are linked because transparency reduction is driven by institutional arrangements that could be changed (stronger IP protections could be weakened; regulatory capacity could be increased; open standards could be mandated). The transparency bottleneck is downstream of specific algorithmic choices (opacity-enabling architectures, closed development) but represents a distinct structural constraint operating at the governance level."
+  },
+  "directionality_overrides": []
+}

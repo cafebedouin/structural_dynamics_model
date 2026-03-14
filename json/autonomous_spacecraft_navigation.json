@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "autonomous_spacecraft_navigation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "autnav"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Autonomous Spacecraft Navigation System Coordination and Extraction",
+    "topic_domain": "aerospace/autonomy/systems_engineering",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mission_control_agencies",
+      "spacecraft_manufacturers"
+    ],
+    "victims": [
+      "mission_reliability",
+      "remote_explorers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Remote Spacecraft",
+      "comment": "PERSPECTIVE 1: REMOTE SPACECRAFT (SNARE) \u2014 Bound by communication delay (signal travel time 3-20+ minutes each way) and irreversible decision constraints. Cannot appeal decisions, cannot exit the autonomous navigation protocol once deployed. Fully dependent on pre-programmed behaviors and cannot negotiate real-time. Bears maximum constraint risk with zero exit capacity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mission Operations Team",
+      "comment": "PERSPECTIVE 2: MISSION OPERATIONS TEAM (TANGLED ROPE) \u2014 Constrained by communication latency and telemetry bandwidth limitations; must trust autonomous decisions yet bears responsibility for outcomes. Gains efficiency from autonomous navigation (genuine coordination benefit) but loses real-time control authority (asymmetric extraction). High suppression due to irreversibility of deployed decisions and limited override capacity."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Space Agency and Mission Control",
+      "comment": "PERSPECTIVE 3: SPACE AGENCY AND MISSION CONTROL (ROPE) \u2014 Primary beneficiary. Autonomous navigation reduces operational costs, enables ambitious mission timelines, and allows deployment of multiple simultaneous missions with minimal ground staff. Experiences the constraint as pure coordination: the communication latency is a natural fact they navigate through autonomous protocols. Net beneficiary \u2014 the extracted value (operational efficiency) flows toward this agent."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Fault Tolerance Engineering Coalition",
+      "comment": "PERSPECTIVE 4: FAULT TOLERANCE ENGINEERING COALITION (SCAFFOLD) \u2014 Organized effort (redundant systems, health monitoring protocols, graceful degradation frameworks) building structured recovery pathways. Sunset logic: as autonomous system maturity increases and fault tolerance improves, the extraction risk (mission loss from autonomous failures) declines over generational timeframes. Current theater (0.58) reflects ongoing validation testing; as systems mature, theater should decline toward 0.35-0.40."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Manual Navigation Paradigm",
+      "comment": "PERSPECTIVE 5: MANUAL NAVIGATION PARADIGM (PITON) \u2014 Legacy protocol maintenance: mission control maintains oversight authority and decision-approval workflows designed for real-time control, despite their irrelevance to deep-space operations. These rituals persist through institutional inertia (operators trained in manual protocols, regulatory frameworks requiring explicit approval chains) despite being purely performative for Mars-scale or outer planets missions. Theater ratio high for this institutional artifact."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Physical Limits View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / PHYSICAL LIMITS VIEW (MOUNTAIN) \u2014 From a universal perspective, signal propagation speed limits create an immutable constraint: no communication faster than light. At Mars distances, round-trip communication takes 3-22 minutes depending on orbital positions. This physical fact makes real-time remote piloting impossible. However, the structural data reveals this mountain is a false summit \u2014 the 'immutable law' of light speed has been routinely transcended by autonomous systems. The constraint is not the physics; it is the institutional choice of whether to delegate authority to spacecraft or insist on ground control rituals."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "autonomy_failure_causation",
+      "question": "Are autonomous navigation failures primarily due to unforeseen environmental conditions (coordinative challenge) or inadequate algorithm design (extractive mismanagement)?",
+      "resolution_mechanism": "Post-mission failure analysis: classification of failure modes into environmental-contingency vs algorithmic-inadequacy; trend analysis across multiple missions",
+      "impact": "If environmental: autonomy extraction is justified and suppression should decline as systems mature (scaffold logic holds). If algorithmic: suppression is not declining and the constraint is Snare not Tangled Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether autonomy failures reflect physical contingency or design inadequacy"
+    },
+    {
+      "id": "communication_latency_justification",
+      "question": "Does mission control retain the actual capacity to override autonomous decisions in real-time, or is the oversight authority purely ceremonial?",
+      "resolution_mechanism": "Technical audit: measurement of decision latency (time from telemetry receipt to command execution) vs nominal spacecraft response time; analysis of historical override attempts and their efficacy",
+      "impact": "If real capacity: mission operations team experiences genuine shared authority (moderate extraction, Tangled Rope confirmed). If ceremonial: mission operations oversight is pure theater masking powerlessness (extraction approaches Snare levels).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether mission control override authority is functional or ceremonial"
+    },
+    {
+      "id": "fault_tolerance_maturation_timeline",
+      "question": "What is the realistic timeline for autonomous spacecraft fault tolerance to reach 99.9%+ mission success rates, validating the scaffold sunset clause?",
+      "resolution_mechanism": "Technology roadmap analysis; comparison with historical autonomous system maturation curves (aviation, robotics); extrapolation from current mission success rates",
+      "impact": "If realistic (10-20 years): scaffold perspective is justified and the constraint will naturally transition to rope as systems mature. If unrealistic (30+ years or never): scaffold framing is aspirational and extraction persists indefinitely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for autonomous fault tolerance to reach high reliability thresholds"
+    },
+    {
+      "id": "alternative_architectures_feasibility",
+      "question": "Are intermediate architectures (semi-autonomous with human-in-the-loop or automated error recovery) genuinely superior to either full autonomy or real-time control, or are they theater masking institutional compromise?",
+      "resolution_mechanism": "Comparative mission success analysis: full autonomy vs semi-autonomy vs real-time control across comparable mission profiles; cost-benefit accounting of operator overhead vs risk reduction",
+      "impact": "If genuinely superior: intermediate architectures represent a valid third structural option and the constraint may decompose. If theater: institutional reluctance to choose either autonomy or manual control creates false middle ground.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether semi-autonomous intermediates are structurally distinct or institutional compromise"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Autonomous spacecraft navigation represents a structural tension between the physical constraints of space communication and the institutional preferences for human authority and control. Signal propagation delays (3-22 minutes round-trip to Mars) make real-time remote piloting impossible, forcing a choice: delegate navigation authority to onboard autonomous systems or accept severe mission limitations. The constraint exhibits all six DR types from different perspectives. From the spacecraft's perspective, it is a snare \u2014 bound by pre-programmed behaviors with no negotiation capacity. From mission control's perspective, it is tangled rope \u2014 genuine coordination benefits (reduced operational overhead) embedded in asymmetric authority loss. From the space agency's perspective, it is pure coordination (rope) \u2014 autonomous systems enable ambitious timelines and multiple simultaneous missions. From the engineering perspective, it is a temporary problem being solved (scaffold) \u2014 redundant systems and fault tolerance frameworks are building confidence in autonomous reliability. From institutional vantage, it is a degraded ritual (piton) \u2014 the oversight and approval workflows designed for real-time control persist despite irrelevance. From a physical perspective, it appears immutable (mountain) \u2014 light speed limits are laws of nature. However, this is a false summit: the constraint is not the physics but the organizational choice of whether to trust autonomous systems.",
+    "key_agents": [
+      "Remote Spacecraft: Primary victim (powerless/trapped) \u2014 bound by pre-programmed protocols, communication latency, irreversible decisions; no exit capacity",
+      "Mission Operations Team: Secondary victim and partial beneficiary (moderate/constrained) \u2014 gains efficiency from autonomy but loses real-time control; constrained by latency and irrevocability",
+      "Space Agency and Mission Control: Primary beneficiary (institutional/arbitrage) \u2014 captures operational efficiency, enables ambitious timelines, reduces ground staff burden",
+      "Fault Tolerance Engineering Coalition: Organized intermediate (organized/constrained) \u2014 building redundant systems and recovery protocols with sunset logic",
+      "Manual Navigation Institutional Legacy: Institutional actor (institutional/arbitrage) \u2014 maintains ceremonial oversight and approval workflows from real-time control era",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks treating physics as the constraint rather than institutional choices about delegation"
+    ],
+    "logic_rationale": "Extractiveness (0.38, climbing to 0.38 over 20-year interval): Moderate. Initially driven by genuine operational efficiency gains (autonomy reduces staffing costs and enables ambitious timelines), but climbing as systems accumulate mission responsibility and the cost of a single autonomous failure increases. The trajectory shows the constraint shifting from a pure coordination benefit toward mixed extraction as missions become more ambitious and failures become more consequential. Not as high as original estimates (0.72) because genuine coordination benefits are real and measurable: autonomous Mars rovers accomplish tasks impossible under real-time control. Suppression (0.52): Moderate-high. Significant barriers include communication latency (irreversible decisions), limited telemetry bandwidth (incomplete situational information), irreversibility (no real-time correction), and irreplaceability (each spacecraft is unique and expensive). However, not total \u2014 multiple redundant systems and graceful degradation frameworks exist. Theater ratio (0.58, declining to 0.58): Moderate. Traditional mission control approval workflows persist despite irrelevance at Mars distances \u2014 purely ceremonial for outer planets missions. Theater has declined over the interval as engineering practices shifted toward confidence-based validation rather than oversight-based approval. Trajectory is positive (theater declining).",
+    "directionality_logic": "Directionality values derive from each agent's structural position relative to this specific constraint. The remote spacecraft has zero exit capacity (trapped) and bears all non-negotiable costs \u2014 high d producing high experienced extraction chi. The mission operations team has constrained exit (could switch to simpler missions with less autonomy, but at high career and capability cost) and mixed benefits/costs \u2014 moderate d. The space agency has arbitrage exit (could delegate to private operators or accept mission constraints, but chooses autonomy for competitive advantage) and net benefits \u2014 low d with negative chi. The analytical observer computing d from physical law perspective would produce an anomalously high d (treating light speed as an agent-targeting force) revealing the false summit. Beneficiaries include the mission control agencies (reduced overhead, expanded mission scope) and spacecraft manufacturers (reduced ground control infrastructure required). Victims include mission reliability (concentrated risk in autonomous algorithms) and remote explorers (crews or future habitats dependent on successful autonomous navigation).",
+    "perspectival_gap": "The massive gap between the spacecraft's snare perspective and the space agency's rope perspective reveals the distributional asymmetry. The same constraint that enables efficient mission operations imposes irreversible risk on the autonomous system. The mission operations team's tangled rope classification shows they experience both coordination benefits and asymmetric extraction simultaneously \u2014 genuine operational efficiency alongside loss of real-time authority. The scaffold perspective shows an important structural feature: the constraint's character is changing over time as fault tolerance matures. The piton perspective reveals the institutional layer \u2014 mission control maintains ceremonial oversight workflows from an era when real-time piloting was possible, now purely performative. The analytical observer's mountain is a false summit \u2014 the constraint being naturalized as a law of physics is actually a choice about institutional delegation.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by decomposing the apparent choice between 'autonomy vs control' into its actual structure: the choice is between distributed risk (snare for spacecraft, rope for agencies) and centralized risk (snare for mission control if it retains false authority). The analytics reveal that 'real-time control' at Mars distances is a false option \u2014 light speed has already made the choice. The institutional mandatrophy (cannot have both real-time human control AND Mars exploration) is resolved by recognizing that the constraint is not immutable but institutional. Space agencies have chosen to delegate authority to autonomous systems and build fault tolerance frameworks, accepting the snare-risk distribution for spacecraft as the cost of ambitious exploration. This is not natural law \u2014 it is institutional choice with measurable consequences for different agents."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "deep_space_communication_latency",
+      "rover_autonomy_failure_modes"
+    ],
+    "dual_formulation_note": "Autonomous spacecraft navigation is downstream of deep space communication latency (physical constraint) but represents a distinct structural arrangement about delegation and authority. Communication latency is a mountain (light speed); autonomous navigation is the institutional response to that mountain, creating its own extraction dynamics distinct from the underlying physics."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

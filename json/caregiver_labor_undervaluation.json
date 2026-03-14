@@ -1,0 +1,221 @@
+{
+  "header": {
+    "constraint_id": "caregiver_labor_undervaluation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "care"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Caregiver Labor Undervaluation",
+    "topic_domain": "social/economic/labor",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "state_welfare_systems",
+      "employing_households",
+      "care_service_purchasers"
+    ],
+    "victims": [
+      "primary_caregivers",
+      "care_workers",
+      "children_elderly_dependent_populations"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Primary Caregiver",
+      "comment": "PERSPECTIVE 1: PRIMARY CAREGIVER (SNARE) \u2014 Structurally trapped. Care responsibilities create dependency (financial, identity, relational). Exit options are systematically suppressed: career penalties for work interruption, childcare costs that exceed potential wages, legal custody barriers, identity fusion with caregiver role. The constraint extracts unpaid or severely underpaid labor while suppressing awareness of alternatives through normalization ('it's what mothers do'). Maximum experienced extraction \u2014 the caregiver bears the full asymmetry."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Care Worker (Low-Wage)",
+      "comment": "PERSPECTIVE 2: CARE WORKER (SNARE) \u2014 Trapped by occupational concentration (limited alternatives in care sector), credential requirements that don't translate to other sectors, employer power asymmetry, and wage floors set below subsistence-adjacent levels. Immigration status often used as suppression mechanism. The care sector is structured to maximize extraction: high emotional labor, somatic vulnerability, legal restriction of benefits. High suppression, high extraction, minimal coordination function."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State Welfare System",
+      "comment": "PERSPECTIVE 3: STATE WELFARE SYSTEM (ROPE) \u2014 Benefits from the constraint through massive cost savings: caregiving is extracted from private households (non-market) or subsidized care sector instead of funded publicly. The state experiences the undervaluation as coordination: it solves the collective action problem of providing care by offloading costs to families and low-wage workers. From this perspective, the system functions to distribute care provision without full public funding. The state has exit options (e.g., public childcare systems, care worker wage standardization) but chooses arbitrage (maintaining current structure for budget optimization)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Employing Household (High-Income)",
+      "comment": "PERSPECTIVE 4: EMPLOYING HOUSEHOLD (TANGLED ROPE) \u2014 Simultaneously benefits and is constrained. Benefits from cheap domestic labor and childcare; constrained by reliance on care workers' availability and quality, which are suppressed by undervaluation (high turnover, low training, burnout). Coordination function is genuine: hiring a care worker solves a household's time allocation problem. But asymmetric extraction persists: the wage is suppressed relative to the labor's value and alternatives. Mobile exit options (hire different workers, use institutional care, relocate) but exercised within a constrained market. The household experiences genuine coordination benefit alongside extraction benefit."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Care Worker Organizing Movement",
+      "comment": "PERSPECTIVE 5: CARE WORKER ORGANIZING MOVEMENT (SCAFFOLD) \u2014 Organized agents (domestic worker unions, care sector advocacy, wage-fixing legislation) see the undervaluation as a temporary extraction mechanism with a sunset clause. Institutional design changes (sectoral bargaining, care worker certification standards, public care infrastructure) create pathways to revalue care. Low effective extraction because this perspective has agency and sees an exit path through collective power and policy change. Suppression is high structurally but declining as organizing capacity grows. Theater is moderate \u2014 the movement must perform visibility work, but the coordination function (collective wage-setting) is substantive."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Care Economy Institution",
+      "comment": "PERSPECTIVE 6: CARE ECONOMY INSTITUTION (PITON) \u2014 The institutional framing of care as non-market, gift-based, or 'unskilled' labor persists through cultural and regulatory inertia despite evidence that care requires high emotional intelligence, technical skill, and physical stamina. The institutional narrative ('care is labor of love') is performative \u2014 it justifies undervaluation while masking the extraction. Theater ratio is high because the care economy is maintained by repeated affirmation of its non-market character despite functioning as a labor market. The institution sees itself as degraded \u2014 policymakers and employers acknowledge care workers are underpaid \u2014 but alternatives haven't fully replaced the narrative, so undervaluation persists."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From the civilizational perspective, care is both genuinely coordinating (solves reproduction/dependency problems inherent to human biology) and genuinely extracting (captures surplus value from unpaid/underpaid caregivers to subsidize consumption by care recipients and employing agents). The constraint exhibits the core tangled rope signature: both coordination and asymmetric extraction coexist, and enforcement mechanisms maintain both. The analytical observer sees the mandate structure clearly: the state enforces undervaluation through labor law, welfare policy, and credential restriction, while simultaneously benefiting from the cost savings."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "identity_lock_vs_structural_trap",
+      "question": "To what extent is the caregiver's exit barrier structural (economic dependency, custody law, credential barriers) versus identity-locked (caregiver identity fused with self-concept, internalized beliefs about caregiving as natural female role)?",
+      "resolution_mechanism": "Comparative analysis of barriers post-exit: do caregivers continue to define themselves as caregivers after leaving caregiving? Do they report persistent identity pressure even after financial/legal barriers are removed? Ethnographic work on identity renegotiation among formerly primary caregivers.",
+      "impact": "If primarily structural: classification stands at trapped across all perspectives. If significant identity component: reclassify to identity_locked for perspectives where the agent is structurally mobile but identity-constrained. This would change biographical-time classification for some perspectives (rope instead of snare for identity_locked + high-power agent).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus identity-locked binding in caregiver entrapment"
+    },
+    {
+      "id": "care_quality_vs_cost_extraction_tradeoff",
+      "question": "Does undervaluation of care workers reduce care quality for dependent populations, or is quality maintained despite low wages through emotional commitment and intrinsic motivation?",
+      "resolution_mechanism": "Longitudinal outcome studies comparing care quality (child development, elderly health outcomes) against care worker wages across regions; analysis of turnover effects on continuity of care; ethnographic work on how care workers maintain quality under suppressed wages.",
+      "impact": "If quality degrades significantly: suppression is partially self-limiting (poor outcomes undermine the extraction mechanism). If quality persists: extraction is more stable and higher effective chi. If quality persists only through worker burnout and mental health costs: true extraction is higher than measured (hidden costs borne by workers).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether care quality persists despite worker undervaluation"
+    },
+    {
+      "id": "public_care_infrastructure_viability",
+      "question": "Would fully public care infrastructure (state-funded childcare, elder care, disability support) be economically viable at current care standards, or does the current undervaluation represent an economically necessary subsidy to care provision?",
+      "resolution_mechanism": "Comparative cost analysis: fully public care sector costing in countries with high public investment (Denmark, Sweden) versus current mixed public/private/household arrangement costs in low-public-investment countries. Attribution of cost differences to scale, efficiency, wage levels, and hidden household labor.",
+      "impact": "If viable at higher wages: scaffold sunset is real \u2014 public infrastructure is a genuine alternative. If viable only with service degradation: the snare classification is correct \u2014 the undervaluation is an extraction mechanism that cannot be eliminated without serious service reduction. Affects mandatrophy resolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Economic viability of public care infrastructure"
+    },
+    {
+      "id": "gender_versus_occupational_undervaluation",
+      "question": "Is caregiver undervaluation primarily driven by occupational concentration in low-status sectors (feminized work), or by explicit gendered devaluation of care work as non-economic?",
+      "resolution_mechanism": "Comparative wage analysis: do male-dominated care sectors (e.g., athletic training, certain medical specialties) face similar suppression? Do care workers in gender-integrated occupations (e.g., nurses vs home health aides, pediatricians vs nannies) show wage convergence? Analysis of how caregiving is framed in public discourse by gender.",
+      "impact": "If primarily occupational: policy interventions should focus on occupational revaluation (certification, unionization, sectoral bargaining). If primarily gendered: interventions must address identity narratives and cultural valuations of women's work. If both: constraint family should decompose into gender_occupational_undervaluation + care_sector_occupational_undervaluation stories with different \u03b5 values.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Gender versus occupational drivers of care undervaluation"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the measured suppression (0.72) maintained primarily by external barriers (legal, economic, informational) or by internalized beliefs among caregivers that devalue their own labor?",
+      "resolution_mechanism": "Survey analysis: do caregivers report external barriers (legal, financial, mobility) or internal barriers (identity, beliefs about caregiving, perceived unsuitability for other work) as the primary constraint? Experimental interventions: what happens to caregiver exit rates when external barriers are removed (income support, childcare, credential recognition) without explicitly addressing identity narratives?",
+      "impact": "If primarily external: interventions targeting removal of barriers should enable exits. If primarily internalized: the constraint is partially identity_locked rather than trapped, and interventions must address identity narratives and self-perception. If both: suppression is over-estimated at 0.72 \u2014 the constraint carries its suppression internally after external barriers are removed, suggesting higher true extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized suppression in caregiver entrapment"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Caregiver labor undervaluation is a structural extraction mechanism that operates across multiple institutional domains (family, state welfare, labor markets) and captures value from primary caregivers, care workers, and dependent populations simultaneously. The constraint combines suppression of exit options, normalization of undervaluation through cultural narratives, and institutional enforcement through labor law, welfare policy, and credential gatekeeping. The constraint exhibits snare characteristics for powerless agents (primary caregivers, low-wage care workers) who face high extraction and high suppression with minimal perceived coordination benefit, while simultaneously functioning as rope from the state's perspective (coordination benefit of cost savings) and tangled rope from the household's perspective (genuine coordination of care needs alongside extraction benefit). The theater ratio (0.65) reflects the degree to which caregiver undervaluation is justified through cultural narratives ('it's labor of love,' 'care is naturally provided by women') rather than economic necessity. The constraint has intensified over 50-year interval as care work has become more formalized and marketized without corresponding wage increases, and as measurement and quantification of care work have revealed the degree of undervaluation without eliminating it.",
+    "key_agents": [
+      "Primary Caregiver (usually mother, family member): Victim (powerless/trapped) \u2014 provides unpaid or severely underpaid care; structurally dependent on care recipient or employing household; identity fused with caregiver role",
+      "Care Worker (childcare provider, home health aide, nanny): Victim (powerless/trapped) \u2014 occupationally concentrated in low-wage sector; high suppression of alternatives; emotional labor and somatic vulnerability exploited",
+      "Dependent Population (children, elderly, disabled): Indirect victim \u2014 receives care but dependent quality and continuity on worker wages and turnover; interests not represented in wage-setting",
+      "State Welfare System: Beneficiary (institutional/arbitrage) \u2014 cost savings from offloading care provision to families and low-wage sector; enforces undervaluation through labor law and credential restriction",
+      "Employing Household (high-income): Beneficiary-victim (powerful/mobile) \u2014 benefits from cheap care labor; constrained by reliance on workers who are turnover-prone due to low wages; coordination benefit alongside extraction benefit",
+      "Care Sector Employers (childcare centers, home care agencies): Beneficiary (powerful/mobile) \u2014 profit from spread between care worker wages and care recipient/household prices; labor cost discipline enforced through market segmentation and credential barriers",
+      "Care Worker Organizing Movement: Organized agent (organized/constrained) \u2014 building alternative pathways through sectoral bargaining, wage-fixing legislation, public care infrastructure proposals; sees constraint as temporary with sunset clause",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 observes that caregiver undervaluation serves as implicit tax on care provision and subsidy to consumption by care recipients and employing agents"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and rising. The measurement trajectory shows extractiveness increasing from 0.45 (50 years ago, when much care was non-market) to 0.68 (present), reflecting the formalization and marketization of care work without corresponding wage increases. The rise indicates that as care has become more explicitly valued and quantified, the undervaluation has become more visible and more entrenched (institutional enforcement rather than just cultural normalization). For primary caregivers, extraction is captured through wage penalties, lost benefits, restricted credit, and dependency. For care workers, extraction is captured through occupational wage suppression relative to skills required. For the state, extraction is negative (benefit from cost savings). Suppression (0.72): Very high. Barriers to exit are multifaceted: (1) structural \u2014 childcare costs exceed potential wages, custody law restricts mobility, credential requirements create occupational lock-in; (2) identity-based \u2014 caregiver identity internalized, beliefs about natural female role, perceived unsuitability for other work; (3) informational \u2014 undervaluation naturalized through cultural narratives, alternative arrangements invisible; (4) institutional \u2014 labor law excludes domestic workers from protections, welfare policy penalizes secondary earners. Theater ratio (0.65): Moderate-high. The justification for caregiver undervaluation relies significantly on performative narratives ('it's labor of love,' 'care is naturally provided') rather than economic necessity. The institutional framing of care as gift-based or naturally female-gendered sustains undervaluation even when it becomes economically irrational.",
+    "directionality_logic": "Each perspective's directionality derives from structural position. Primary caregivers are trapped victims with no exit options: d = 0.95 \u2192 high f(d) \u2192 high experienced \u03c7. Care workers are powerless trapped victims but with slightly more occupational mobility than primary caregivers: d = 0.90 \u2192 high f(d) \u2192 high \u03c7. State welfare system is institutional beneficiary with arbitrage options: d = 0.05 \u2192 negative f(d) \u2192 negative \u03c7 (extraction flows toward this agent). Employing households are powerful beneficiaries with mobile exit but also dependent on care worker availability: d = 0.50 \u2192 moderate f(d) \u2192 moderate \u03c7 (both benefit and constraint). Care worker organizing movement is organized agent with constrained exit but organized power: d = 0.35 \u2192 low-moderate f(d) \u2192 low \u03c7. Analytical observer sees the full structure at civilizational scale: d = 0.72 \u2192 high f(d) \u2192 high \u03c7 (the system is extracting from powerless agents at large scope to subsidize care for all households).",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence. The primary caregiver and care worker see snare (pure extraction, no coordination benefit, maximum suppression). The state sees rope (genuine coordination benefit of cost distribution without public funding). The employing household sees tangled rope (genuine coordination of care needs alongside extraction benefit). The care worker movement sees scaffold (temporary constraint with sunset via public infrastructure and sectoral bargaining). The institutional narrative sees piton (degraded but persistent ritual). The analytical observer sees tangled rope at civilizational scale (genuine care coordination alongside systematic extraction from powerless agents). The gap reveals that extraction and coordination are not mutually exclusive \u2014 the same institutional arrangement can be purely extractive for trapped agents and genuinely coordinating for powerful agents. The mandatrophy is resolved by recognizing all perspectives as valid: they describe the same constraint from different structural positions.",
+    "mandatrophy_analysis": "EXTRACTION + COORDINATION COEXISTENCE: Caregiver undervaluation is both a coordination mechanism (solves the problem of how to provide and finance care within households) and an extraction mechanism (captures surplus value from caregivers to subsidize other consumption). The mandatrophy is resolved by disaggregating perspectives: trapped agents experience snare (extraction without coordination benefit), while powerful agents and the state experience rope or tangled rope (coordination with extraction benefit). The constraint cannot be reclassified as pure rope because the extraction is asymmetric and suppression is high \u2014 trapped agents have no alternatives and no coordination benefit. The classification as snare for powerless perspectives and tangled rope for the analytical observer is consistent with the structural data: the same institutional arrangement is extractive for some agents and coordinating for others. INSTITUTIONAL ENFORCEMENT: The constraint is maintained not by natural limits but by institutional design choices (labor law, welfare policy, credential gatekeeping, wage-setting norms). This makes it accessible to policy intervention \u2014 the scaffold perspective is not aspirational but structural. Organized agents can create exit paths through sectoral bargaining, public infrastructure, and wage-fixing legislation. IDENTITY LOCK COMPONENT: A significant portion of suppression (estimated 0.20-0.30 of the 0.72) is likely internalized/identity-locked rather than purely structural. This complicates the exit analysis but does not change classification \u2014 identity-locked is still a form of entrapment at biographical timescale, even if it is cognitively rather than materially grounded."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "women_labor_market_participation",
+      "intergenerational_poverty_transmission",
+      "elderly_dependent_care_access"
+    ],
+    "dual_formulation_note": "Caregiver labor undervaluation is upstream of three constraint families: women's labor market participation (blocked by care responsibility penalties), intergenerational poverty (children of primary caregivers inherit the constraint), and elderly care access (dependent populations receive lower-quality care due to worker suppression). The measurement trajectory shows extractiveness increasing as care has formalized without corresponding wage increases, indicating institutional enforcement is substituting for cultural normalization."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

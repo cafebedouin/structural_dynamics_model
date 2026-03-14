@@ -1,0 +1,228 @@
+{
+  "header": {
+    "constraint_id": "turkish_kurdish_regional_conflict",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tkrc"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Turkish-Kurdish Regional Conflict Constraint",
+    "topic_domain": "geopolitical/ethnic_conflict",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "turkish_state_security_apparatus",
+      "nationalist_political_parties"
+    ],
+    "victims": [
+      "kurdish_populations_southeast",
+      "civilian_communities_border_regions",
+      "regional_economic_development"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Kurdish Civilian Population",
+      "comment": "PERSPECTIVE 1: KURDISH CIVILIAN POPULATION (SNARE) \u2014 Structurally trapped within geographic region with no exit options. Faces extraction through military operations, displacement risk, restricted movement, and economic marginalization. Cannot exit region without abandoning land, property, and community. High suppression through armed presence and institutional barriers to autonomous governance."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Border Region Communities",
+      "comment": "PERSPECTIVE 2: BORDER REGION COMMUNITIES (SNARE) \u2014 Trapped within militarized zones with restricted economic activity and movement. Face extraction through economic constraints, security operations, and institutional neglect. High suppression through security state apparatus and closure of normal commerce routes."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Kurdish Political Movements",
+      "comment": "PERSPECTIVE 3: KURDISH POLITICAL MOVEMENTS (TANGLED ROPE) \u2014 Organized agents (political parties, civil society) face constrained but not impossible exit options. Experience genuine coordination function (representation of community interests, advocacy for autonomy) alongside asymmetric extraction (legal restrictions, party closures, leadership detention). Active enforcement required to maintain the extraction layer."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Turkish State Security Apparatus",
+      "comment": "PERSPECTIVE 4: TURKISH STATE SECURITY APPARATUS (ROPE) \u2014 Primary beneficiary with arbitrage options (can shift enforcement tactics, negotiate ceasefires, adjust military posture without exiting the state structure). Experiences the constraint as coordination: managing territorial integrity, controlling security threats, and maintaining state monopoly on force. Net beneficiary with high agency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "International Community and NATO Allies",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL ACTORS (TANGLED ROPE) \u2014 NATO and EU actors have genuine coordination interests (counter-terrorism, regional stability) alongside asymmetric extraction (geopolitical leverage, conditional aid, strategic advantage). Mobile exit options enable influence without direct extraction; constrained by alliance relationships and strategic interests."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Peace and Rights Organizations",
+      "comment": "PERSPECTIVE 6: HUMAN RIGHTS AND PEACE ORGANIZATIONS (SCAFFOLD) \u2014 Organized agents with sunset logic: peace agreements, constitutional reforms protecting minority rights, and international monitoring mechanisms represent exit pathways. Low extraction experienced because these actors see alternatives and have partial agency through advocacy and documentation."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Historical Border Maintenance Rituals",
+      "comment": "PERSPECTIVE 7: BORDER CONTROL RITUALS (PITON) \u2014 Institutional enforcement patterns (security protocols, checkpoint operations, military patrols) persist largely through historical inertia. Theater ratio high because much of the visible enforcement serves performative functions (demonstrating state control, ritualistic securitization) rather than solving underlying coordination problem. The institutional apparatus maintains itself despite diminishing functional necessity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Natural Law View - Ethnic Territoriality",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER - FALSE NATURAL LAW (MOUNTAIN) \u2014 This perspective risks naturalizing the constraint as an immutable law of geopolitics: that ethnic groups inevitably compete for territory, that states inherently resist internal fragmentation, that regional conflicts are permanent features of the landscape. The engine's false summit detector will flag this: the structural data shows contingent institutional arrangements (state construction, security doctrine, political ideology) rather than natural laws. This perspective instantiates the oracle gap."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "pkk_insurgency_status_ambiguity",
+      "question": "Is the PKK (Kurdistan Workers Party) a nationalist liberation movement, a terrorist organization pursuing separatism, or a hybrid actor with legitimate political grievances channeled through insurgent tactics?",
+      "resolution_mechanism": "Analysis of PKK organizational evolution, documented civilian targeting patterns, political program changes over time, international designation inconsistencies, and comparison with other recognized liberation movements",
+      "impact": "If primarily nationalist: constraint is ethnic conflict requiring political settlement (classification shifts toward scaffold). If primarily terrorist: constraint is state counter-terrorism requiring security dominance (validates snare from state perspective). If hybrid: constraint is tangled_rope with genuine asymmetric grievance alongside security threats.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Classification of PKK organizational nature and political status"
+    },
+    {
+      "id": "state_decentralization_feasibility",
+      "question": "Could Turkish state maintain territorial integrity and democratic governance through constitutional decentralization granting substantial autonomy to Kurdish regions?",
+      "resolution_mechanism": "Comparative institutional analysis: case studies of federal systems managing ethnic-national minorities (Spain/Catalonia, Belgium/Flanders, India/regional states); modeling of Turkish state capacity for devolved governance; analysis of separatist vs autonomy demands in Kurdish movement",
+      "impact": "If feasible: constraint is institutional design problem (Scaffold classification gains credibility \u2014 sunset pathway exists). If infeasible: constraint is structural incompatibility (Snare from victim perspective remains dominant). If partially feasible: Tangled Rope classification confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether constitutional decentralization could resolve the constraint"
+    },
+    {
+      "id": "extraction_beneficiary_ambiguity",
+      "question": "Who structurally benefits from perpetuation of the Turkish-Kurdish conflict? Is it primarily state security apparatus, nationalist political factions, military-industrial interests, or a coalition of actors with different benefit structures?",
+      "resolution_mechanism": "Analysis of career advancement patterns in security establishment during high-conflict vs peaceful periods; funding flows to nationalist vs progressive parties correlated with conflict intensity; military procurement cycles and domestic defense spending patterns; international arms sales and strategic leverage gains",
+      "impact": "If security apparatus primarily benefits: Snare classification confirmed. If nationalist political factions primarily benefit: classification shifts to tangled_rope with political extraction layer. If distributed coalition: classification remains snare but benefits layer becomes more complex.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Identity and motivation structure of extraction beneficiaries"
+    },
+    {
+      "id": "identity_locked_vs_constrained_exit_ambiguity",
+      "question": "For Kurdish populations, is the structural lock primarily identity-based (self-concept fused with territorial claim and national identity) or constrained (high material cost of exit)? Can exit occur within identity frame (stay Turkish while acknowledging Kurdish identity) or does it require identity transformation?",
+      "resolution_mechanism": "Ethnographic and survey analysis of Turkish and Kurdish identity frames; study of individuals and communities that have shifted identity positions; examination of whether political solutions recognizing dual identity (Turkish-Kurdish) reduce perceived exit costs",
+      "impact": "If primarily identity_locked: constraint persists even if material barriers removed (Snare remains). If primarily constrained: political settlement and material investment could reduce extraction (Tangled Rope becomes visible). Classification at biographical time shifts between Mountain (identity_locked) and Rope (constrained).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether exit barriers are structural or identity-based for Kurdish populations"
+    },
+    {
+      "id": "international_pressure_effectiveness",
+      "question": "Do international pressure mechanisms (EU conditionality, NATO alliance terms, sanctions threat, ICC investigation) effectively constrain Turkish state extraction behavior, or do they lack enforcement credibility given strategic importance of Turkey?",
+      "resolution_mechanism": "Time series analysis of state behavior changes correlated with international pressure; comparison of pressure effectiveness on strategic vs non-strategic actors; documentation of enforcement consistency across similar cases",
+      "impact": "If effective: international scaffold actors gain real leverage (Scaffold classification gains empirical support). If ineffective: international pressure becomes theatrical (Piton classification; theater_ratio increases). If selective: extractiveness becomes partially platform-dependent.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Effectiveness of international pressure mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The Turkish-Kurdish regional conflict represents a structural constraint where military force, political repression, and institutional control mechanisms extract costs from Kurdish civilian populations and constrain political autonomy, while concentrating benefits to Turkish state security apparatus and nationalist political factions. The constraint exhibits characteristics of a pure extraction snare from the perspective of trapped civilian populations, but appears as tangled coordination-extraction hybrid from organized Kurdish political actors' perspective, as tactical coordination mechanism from the state security apparatus, and as a false natural law from the analytical civilizational perspective that naturalizes ethnic territoriality as immutable. The extractiveness has increased over the 30-year interval (0.42 \u2192 0.68) as security operations have intensified, while theater_ratio has remained moderate (0.38 \u2192 0.55), indicating that while significant performative components exist (ritualistic checkpoint operations, ceremonial military deployments), the constraint also maintains functional extraction mechanisms (genuine displacement, economic marginalization, political restrictions). The moderate theater ratio distinguishes this from pure piton degradation \u2014 the constraint is not primarily maintained by institutional inertia, but by active enforcement of asymmetric extraction.",
+    "key_agents": [
+      "Turkish State Security Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 benefits from territorial control, counter-insurgency justification for military budgets, and monopoly on legitimate force. Can adjust enforcement tactics and negotiate without exiting state structure.",
+      "Nationalist Political Parties: Secondary beneficiary (powerful/mobile) \u2014 gain electoral and ideological leverage from perpetuating securitization narrative; can shift political position while maintaining nationalist positioning.",
+      "Kurdish Civilian Population: Primary victim (powerless/trapped) \u2014 bears extraction through military operations, restricted movement, displacement risk, and economic marginalization. Geographically trapped with no exit option.",
+      "Border Region Communities: Secondary victim (powerless/trapped) \u2014 trapped in militarized zones with restricted economic activity. Face extraction through security operations and institutional neglect.",
+      "Kurdish Political Movements: Organized victim (organized/constrained) \u2014 experience both genuine coordination function (representation, advocacy) and asymmetric extraction (party closures, leadership detention, legal restrictions). Have constrained but not impossible exit options.",
+      "International Community (NATO/EU): Interested third party (powerful/mobile) \u2014 have genuine coordination interests (counter-terrorism, stability, alliance maintenance) alongside strategic leverage extraction. Mobile exit options provide high agency.",
+      "Human Rights Organizations: Partial beneficiary of alternatives (organized/constrained) \u2014 experience constraint as solvable through political settlement and international mechanisms. Constrained by funding and political influence but experience low direct extraction.",
+      "Analytical Observer: Risks naturalizing contingent arrangements \u2014 may perceive ethnic territoriality as immutable natural law rather than institutional construct."
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts substantial costs from Kurdish populations through security operations, movement restrictions, economic marginalization, and political disenfranchisement. The trajectory from 0.42 to 0.68 over 30 years reflects intensification of security operations (1990s through post-2015 period). The beneficiaries (state security apparatus, nationalist politicians) accrue career advancement, institutional resources, and political leverage from perpetuation of the conflict. This is not maximal extraction (0.72+) because some coordination function exists: the state genuinely addresses security threats (though their scale is partially constructed), and international actors coordinate counter-terrorism. Suppression (0.78): Very high. Significant barriers to exit include geographic immobility, military presence, restricted movement across borders, institutional discrimination, political restrictions on Kurdish political expression, and psychological trauma from violence. Suppression is not total (some exit occurs through migration, internal displacement, political participation at constrained levels) but remains severe. Theater ratio (0.55): Moderate-high. Significant performative components exist: ceremonial military deployments, ritualistic checkpoint operations, public security announcements that serve domestic political functions. But the theater does not dominate \u2014 actual military operations, detention, and economic restriction mechanisms are functionally extractive, not primarily performative. This moderates the piton classification.",
+    "perspectival_gap": "The constraint demonstrates dramatic perspectival divergence. The trapped Kurdish civilian population experiences pure extraction (Snare) \u2014 no perceived coordination benefit, maximum experienced extraction. Organized Kurdish political movements experience tangled coordination-extraction hybrid (Tangled Rope) \u2014 they coordinate representation of community interests and advance political autonomy claims, but simultaneously face restrictions and asymmetric legal/political constraints. The Turkish state security apparatus experiences genuine coordination (Rope) \u2014 the constraint solves the problem of territorial control and counter-insurgency; the state perceives itself as solving a security coordination problem, not extracting from civilians. International actors experience Tangled Rope with lower extraction experienced \u2014 they coordinate counter-terrorism while leveraging strategic advantage, but have sufficient agency and alternatives to prevent maximum extraction. Human rights and peace organizations experience a Scaffold with visible sunset pathways (constitutional reform, political settlement, international monitoring). The analytical observer at civilizational scale risks a false Mountain classification \u2014 naturalizing ethnic territoriality and state-ethnic group conflict as immutable features of geopolitics. The perspectival gap between the powerless victim (Snare), the state beneficiary (Rope), and the civilizational observer (Mountain) reveals how single-position analysis (state perspective) produces false natural law conclusions about ethnic conflict.",
+    "directionality_logic": "Directionality (d) is determined by structural position, exit options, and benefit flow. Turkish state security apparatus benefits from the constraint and has arbitrage options (can adjust tactics, negotiate, shift security doctrine without exiting state structure) \u2192 low d \u2192 experienced as coordination/low extraction. Kurdish civilians are victims, trapped geographically and institutionally, with no exit option \u2192 high d \u2192 maximum experienced extraction (f(d) at ~0.95). Kurdish political movements are victims but organized with constrained exit options (can negotiate, shift strategy) \u2192 moderate-high d (0.65-0.75) \u2192 moderate experienced extraction. International actors are neither pure beneficiaries nor pure victims, with mobile exit options \u2192 moderate d (0.50-0.60) \u2192 moderate experienced extraction with perception of agency. The identity_locked vs constrained distinction is critical: if Kurdish populations experience the constraint as identity-locked (self-concept fused with territorial claim and ethnic nationalism), the biographical-time perspective shifts from Snare (constrained exit) toward potential Rope visibility only if identity frame breaks. If the constraint is primarily constrained (high material costs to exit), then the classification remains Snare at biographical time but Rope becomes visible at generational horizon as costs diminish. The omega variable on this ambiguity will determine whether exit barriers are primarily structural or cognitive.",
+    "mandatrophy_analysis": "The constraint's mandatrophy is resolved by recognizing that multiple legitimate classifications emerge from different structural positions and time horizons, and that the false natural law (Mountain) at the civilizational analytical perspective reveals institutional contingency rather than geopolitical necessity. The state beneficiary perceives Rope (coordination function: territorial control, counter-insurgency). The trapped victim perceives Snare (pure extraction). The organized political actor perceives Tangled Rope (mixed coordination and extraction). The international actor perceives Tangled Rope with lower extraction (sufficient agency and alternatives). The peace organization perceives Scaffold (visible exit pathways through political settlement). The analytical observer risks Mountain (naturalizing ethnic conflict as inevitable). The engine's mandatrophy resolution: (1) Flag the Mountain perspective as a false summit \u2014 the structural data (moderate theater ratio, identified beneficiary class, absence of accessibility collapse and resistance metrics required for NL certification) contradicts NL classification. (2) Recognize that the constraint's type depends on which position one occupies: this is not a defect but an insight into how extractive constraints appear differently to beneficiaries vs victims. (3) Note that the Scaffold classification (via human rights organizations and constitutional reform pathways) provides a genuine exit vector: the constraint's classification could shift if political settlement mechanisms mature. The mandatrophy is not resolved by picking one 'correct' type, but by acknowledging that indexical classification reveals the constraint's asymmetry: the same structure appears as coordination to beneficiaries, extraction to victims, and natural law to those who benefit from naturalizing it."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "middle_east_regional_instability",
+      "eu_turkey_relations",
+      "nato_alliance_cohesion"
+    ],
+    "dual_formulation_note": "The Turkish-Kurdish conflict decomposes into multiple structurally distinct constraints: (1) security counter-terrorism coordination (genuine state function), (2) ethnic-national political autonomy (structural incompatibility between centralized state and autonomous region), (3) human rights enforcement (institutional compliance gap), (4) economic marginalization (development constraint). Each has distinct \u03b5 value and beneficiary/victim structure. This story captures the highest-extractiveness reading (security apparatus extraction); separate stories should decompose the political autonomy and economic development constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.7
+    }
+  ]
+}

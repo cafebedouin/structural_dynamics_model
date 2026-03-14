@@ -1,0 +1,195 @@
+{
+  "header": {
+    "constraint_id": "municipal_government_liability_reduction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mun_liab"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Municipal Government Liability Reduction Through Procedural Compliance",
+    "topic_domain": "administrative/legal/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "municipal_government",
+      "risk_management_departments"
+    ],
+    "victims": [
+      "resident_access_to_remedy",
+      "injured_parties",
+      "transparency_norms"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Injured Resident",
+      "comment": "PERSPECTIVE 1: INJURED RESIDENT (SNARE) \u2014 Faces procedural barriers (notice requirements, claims filing deadlines, immunity doctrines) with no meaningful exit. Trapped within a legal system that extracts remedy access while performing the appearance of due process. Maximum suppression: procedural complexity prevents understanding of filing requirements; notice periods are designed to be missed; sovereign immunity doctrines remove the jurisdiction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Community Safety Standards",
+      "comment": "PERSPECTIVE 2: COMMUNITY SAFETY STANDARDS (SNARE) \u2014 Abstract victim: accountability standards for public infrastructure maintenance and employee conduct are systematically suppressed through liability reduction procedures. No organized advocate; no mechanism for exit or self-correction. Safety violations that would trigger liability are pre-emptively eliminated from the record or protected under qualified immunity doctrines."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Community Advocacy Groups",
+      "comment": "PERSPECTIVE 3: COMMUNITY ADVOCACY GROUPS (TANGLED ROPE) \u2014 Organized agents with constrained exit: they can litigate against municipalities, but at prohibitive cost and with low probability of success due to immunity doctrines. The constraint coordinates issue amplification and legal resource sharing (genuine coordination function), while extracting from advocates through procedural barriers and litigation costs (asymmetric extraction). Active enforcement is required: cities employ risk management strategies, pre-litigation settlement practices, and administrative procedures specifically designed to discourage claims."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Municipal Risk Management Industry",
+      "comment": "PERSPECTIVE 4: MUNICIPAL RISK MANAGEMENT INDUSTRY (ROPE) \u2014 Institutional beneficiary with arbitrage options. Insurance brokers, claims administrators, and risk consultants experience the liability reduction framework as pure coordination: it creates a stable market for their services through standardized procedures, predictable risk profiles, and established settlement patterns. Extraction runs toward these agents via liability reduction that captures pricing power, but they also genuinely solve the municipal coordination problem of spreading risk across jurisdictions."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "Municipal Government",
+      "comment": "PERSPECTIVE 5: MUNICIPAL GOVERNMENT (ROPE) \u2014 Primary beneficiary. The liability reduction framework is experienced as pure coordination: it enables fiscally sustainable municipal operations by capping liability exposure, pooling risk through inter-governmental insurance, and standardizing claims procedures. The framework genuinely solves the coordination problem of how to maintain public services while managing legal risk. Extraction runs toward the municipality, which captures the benefit of suppressed remedy access."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Sovereign Immunity Doctrine",
+      "comment": "PERSPECTIVE 6: SOVEREIGN IMMUNITY DOCTRINE (PITON) \u2014 Historical institutional inertia with high theater ratio. The doctrine originated as a principle ensuring government could act without personal liability (England, 19th century), but its current function is largely performative: it maintains the fiction that government is qualitatively different from private actors while simultaneously extracting from residents through liability reduction. The doctrine persists through legal tradition and institutional path dependence rather than serving its original coordination function. Modern qualified immunity modifications (Bivens actions, \u00a71983 actions at state level) represent partial sunset \u2014 the doctrine is degrading in real time."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational/global perspective, the constraint exhibits both genuine coordination function (enabling municipal operations despite risk exposure) and systematic extraction (suppressing resident remedy access). The framework solves the real problem of municipal bankruptcy from liability claims while simultaneously using that solution to extract accountability from government. The tangled rope classification at the analytical level confirms the mandatrophy: this is not pure coordination and not pure extraction, but a hybrid with asymmetric benefit distribution."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "immunity_doctrine_purpose_drift",
+      "question": "Has sovereign immunity doctrine drifted from protecting government function to protecting government from accountability?",
+      "resolution_mechanism": "Longitudinal analysis of immunity claims: historical comparison of cases where immunity was claimed for genuine operational necessity vs. cases where immunity protected negligence or misconduct",
+      "impact": "If drift confirmed: immunity functions as extraction mechanism (high \u03b5 supports snare classification for victims). If no drift: immunity is legitimate coordination cost (lower \u03b5 supports rope classification).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether sovereign immunity has drifted from protecting function to protecting accountability avoidance"
+    },
+    {
+      "id": "procedural_barrier_intent",
+      "question": "Are complex notice requirements and claims procedures designed as coordination safeguards or as extraction barriers?",
+      "resolution_mechanism": "Comparative institutional analysis: audit of notice periods, filing requirements, and deadlines across municipalities with different liability outcomes; assessment of whether procedures are calibrated to the cognitive/temporal demands of injured parties",
+      "impact": "If design as barriers confirmed: suppression increases (0.65 \u2192 0.75+), \u03b5 rises, snare classification strengthens. If design as safeguards: suppression may be legitimate coordination cost (0.65 \u2192 0.50).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether procedural barriers are intentional extraction mechanisms or legitimate safeguards"
+    },
+    {
+      "id": "settlement_collusion_patterns",
+      "question": "Do municipal risk pools and intergovernmental insurance agreements suppress remedy access through coordinated settlement ceilings?",
+      "resolution_mechanism": "Network analysis of settlement amounts across municipal claims; identification of non-competitive settlement patterns or coordinated pricing within risk pools; comparison to private liability settlements for equivalent harms",
+      "impact": "If collusion detected: institutional beneficiary extraction increases (risk management industry and municipalities capture rent through coordination), confirming tangled rope + institutional beneficiary analysis. If competitive: extraction is lower than base_extractiveness suggests.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether municipal risk pools suppress remedy access through coordinated settlement patterns"
+    },
+    {
+      "id": "qualified_immunity_collapse_timeline",
+      "question": "What is the structural timeline for qualified immunity collapse and sunset of the liability reduction framework?",
+      "resolution_mechanism": "Monitoring of federal and state liability reform; tracking of immunity doctrine precedent erosion; assessment of political coalition strength supporting reform",
+      "impact": "If collapse timeline < 10 years: scaffold classification strengthens (sunset is real and imminent). If collapse timeline > 20 years or indeterminate: framework persists as tangled rope or piton indefinitely.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Timeline for qualified immunity reform and framework sunset"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Municipal governments face genuine financial risk from liability claims arising from employee conduct, infrastructure negligence, and policy decisions. The constraint examined here is the systematic framework of liability reduction procedures, immunities, and risk management practices that municipalities employ to suppress remedy access while maintaining the appearance of due process and accountability. This constraint exhibits characteristics of both coordination (enabling municipal operations by managing risk) and extraction (suppressing resident remedy access through procedural and doctrinal barriers). The municipality coordinates risk pooling and procedure standardization while extracting remedy denial from injured parties. The framework combines sovereign immunity doctrines (legal barriers), notice requirements and claims filing deadlines (procedural barriers), qualified immunity protections for government employees (doctrinal barriers), and risk management practices that discourage claims (institutional barriers). The theater ratio (0.55) reflects that the framework maintains significant performative elements \u2014 due process procedures, claims processes, and judicial review \u2014 while actual remedy access is substantially suppressed through upstream barriers that most injured parties never navigate.",
+    "key_agents": [
+      "Injured Residents: Primary victims (powerless/trapped) \u2014 face insurmountable procedural barriers and immunity doctrines; no meaningful exit from the legal framework",
+      "Community Safety Standards: Secondary victim (powerless/trapped) \u2014 abstract accountability standards systematically suppressed through liability reduction; no organized advocate",
+      "Community Advocacy Groups: Secondary beneficiary/victim hybrid (organized/constrained) \u2014 coordinate legal resources and issue amplification while bearing litigation costs and low success rates",
+      "Municipal Government: Primary beneficiary (institutional/arbitrage) \u2014 captures benefits of liability reduction; genuinely coordinates risk management across jurisdictions",
+      "Municipal Risk Management Industry: Institutional beneficiary (institutional/arbitrage) \u2014 brokers, insurers, and consultants experience framework as pure coordination mechanism generating market demand",
+      "Sovereign Immunity Doctrine: Institutional inertia (institutional/constrained) \u2014 legal doctrine persisting through path dependence; low functional necessity but high ceremonial importance",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 observes tangled rope structure across all levels"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, reflecting both genuine coordination function and systematic remedy suppression. The base value is elevated from a naive 0.35 (pure risk management cost) because the framework has accumulated layers of extraction mechanisms (notice requirements, immunity doctrines, qualified immunity, settlement collusion patterns) that suppress remedy access beyond what is necessary for fiscal sustainability. The measurement trajectory (0.35 \u2192 0.58 over 40 years) shows extraction accumulation \u2014 liability reduction procedures have intensified as municipal exposure has grown and as risk management industry has professionalized. Suppression (0.65): Moderate-high, reflecting multiple layers: procedural complexity (notice requirements, filing deadlines, administrative procedures), legal doctrines (sovereign immunity, qualified immunity), institutional practices (risk pool settlement ceilings), and information asymmetries (injured parties do not understand filing requirements or immunity protections). Theater ratio (0.55): Moderate, indicating that the framework maintains legitimate procedural elements (due process, judicial review, administrative procedures) while performing accountability through processes that systematically suppress remedy access. The theater is not maximal (0.55 not 0.75+) because some procedural elements are functionally substantive \u2014 notice requirements and administrative review serve some coordination function beyond pure theater.",
+    "perspectival_gap": "The core perspectival gap separates beneficiaries from victims. Municipal government and risk management industry perceive the framework as rope (coordination solving genuine fiscal risk problem). Injured residents and abstract community standards perceive it as snare (systematic remedy suppression with no escape). Community advocacy groups with constrained exit perceive it as tangled rope (both coordination enabling and extraction suppressing). The gap reveals that beneficiaries and victims are observing genuinely different structural features of the same constraint: beneficiaries see the real coordination function (risk pooling is necessary and beneficial), while victims see the real extraction function (remedy suppression exceeds what is necessary for risk management). Neither perspective is wrong about the mechanisms they observe; they simply occupy incommensurate structural positions. The analytical observer at civilizational scale correctly identifies both functions as present \u2014 tangled rope, not rope, and not snare alone.",
+    "directionality_logic": "Directionality values derive from structural position. Injured residents are victims with trapped exit (high d \u2192 high f(d) \u2192 high \u03c7), experiencing maximum extraction. Community safety standards are abstract victims with no exit (d \u2248 0.95). Community advocacy groups are organized but constrained (d \u2248 0.65), experiencing moderate extraction with some agency. Municipal government is beneficiary with arbitrage exit (d \u2248 0.10), experiencing extraction running toward them (negative \u03c7). Risk management industry is institutional beneficiary with arbitrage (d \u2248 0.05), experiencing pure benefit from the coordination mechanism. Directionality overrides are not required \u2014 the derivation chain correctly captures institutional differentiation through exit options (arbitrage vs. constrained vs. trapped).",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that liability reduction frameworks are genuinely hybrid: they solve a real coordination problem (municipal fiscal sustainability) while simultaneously extracting through remedy suppression (capturing more benefit than necessary for the coordination function). The mandate is not 'municipalities should manage risk' (real) nor 'municipalities should not suppress remedy access' (also real) \u2014 the mandate is 'how much remedy suppression is necessary for fiscal sustainability, and what mechanisms minimize extraction beyond that threshold?' Current frameworks (with theater_ratio \u2248 0.55 and extractiveness \u2248 0.58) bundle coordination and extraction in ways that can be partially unbundled: comparative liability regimes (Australia's strict liability, European no-fault systems, U.S. state variations) provide data on how much extraction is structurally necessary vs. institutionally contingent. The framework resolves to tangled rope by confirming both functions are real and present \u2014 not by claiming one function is illusory."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "qualified_immunity_doctrine",
+      "municipal_pension_funding",
+      "public_employee_misconduct_accountability"
+    ],
+    "dual_formulation_note": "Liability reduction operates at the framework level (this constraint). Upstream constraints include specific immunity doctrines (qualified immunity, sovereign immunity) with their own \u03b5 values. Downstream constraints include specific institutional practices (settlement collusion, notice requirement design) with \u03b5 values reflecting actual implementation choices rather than doctrinal necessity."
+  },
+  "directionality_overrides": []
+}

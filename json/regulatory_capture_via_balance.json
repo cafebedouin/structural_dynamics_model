@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "regulatory_capture_via_balance",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "regcap"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Regulatory Capture Via Balance Sheet Opacity",
+    "topic_domain": "economic/regulatory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "regulated_financial_institutions",
+      "incumbent_industry_players"
+    ],
+    "victims": [
+      "depositors_and_creditors",
+      "market_entrants",
+      "regulatory_effectiveness"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Depositor",
+      "comment": "PERSPECTIVE 1: DEPOSITOR (SNARE) \u2014 No meaningful exit from deposit accounts; cannot independently verify asset quality or risk exposure. Regulatory framework exists but enforcement is asymmetrically captured. Full extraction borne without agency or recourse."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Startup Fintech Entrant",
+      "comment": "PERSPECTIVE 2: STARTUP FINTECH ENTRANT (SNARE) \u2014 Must comply with regulatory requirements designed for incumbent banks. Compliance costs are fixed; incumbents amortize over trillion-dollar balance sheets. Entry barrier extraction is severe, exit is theoretically possible but at ruinous cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Community Bank Coalition",
+      "comment": "PERSPECTIVE 3: COMMUNITY BANK COALITION (TANGLED ROPE) \u2014 Benefits from regulatory stability and capital requirements that insulate from global competition. Also bears extraction: access to capital markets restricted by regulations designed for mega-banks. Mixed coordination-extraction at moderate power level."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Systemically Important Financial Institution",
+      "comment": "PERSPECTIVE 4: SYSTEMICALLY IMPORTANT FINANCIAL INSTITUTION (ROPE) \u2014 Net beneficiary through regulatory forbearance and implicit government backing. Risk is socialized; gains are privatized. Experiences the constraint as coordination: balance sheet complexity serves as coordination mechanism for peer-to-peer capital flows while maintaining information asymmetry from regulators."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Agency",
+      "comment": "PERSPECTIVE 5: REGULATORY AGENCY (PITON) \u2014 Professional identity fused with the regulated industry (revolving-door staffing, regulatory expertise concentrated in incumbent firms). Formally charged with enforcement but structurally captured. The performative regulation persists: stress tests, reporting requirements, capital adequacy frameworks. These are theater that maintains the appearance of supervision while actual enforcement is attenuated. Theater ratio is high because the regulatory machinery looks comprehensive but lacks teeth."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "label": "The Captured Regulator (Identity-Locked View)",
+      "comment": "PERSPECTIVE 6: CAPTURED REGULATOR (PITON / IDENTITY_LOCKED) \u2014 The regulatory institution's professional identity is constituted through the regulatory framework it inherited (Basel Accords, post-2008 reforms). Exit would mean abandoning the entire legitimacy structure. Career trajectories are built within this system. The regulator sees light-touch enforcement as pragmatism (markets discipline themselves, regulations must be balanced) rather than capture. This is identity lock: the institution cannot perceive its own capture because perception reform would require institutional suicide."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Full structural visibility. The constraint serves genuine coordination functions (capital allocation, price discovery, risk transfer across time horizons). It also extracts asymmetrically (depositors subsidize institutions, entrants subsidize incumbents). Effective extraction is high (chi \u2248 0.72 at this position) because depositors have zero exit and institutions have global arbitrage options. The theatrical regulation persists because it appears balanced while creating asymmetric real-world outcomes."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "accounting_standard_manipulation",
+      "question": "Are accounting standards (mark-to-model valuations, loss provisioning methodologies) capturing true economic reality or enabling endemic low-grade misrepresentation?",
+      "resolution_mechanism": "Post-crisis asset liquidation analysis: compare marked values to realized recovery rates; measure frequency of 'surprise' impairments that should have been anticipated",
+      "impact": "If standards capture reality well: balance sheet opacity is coordination cost (raise extractiveness floor to 0.15). If standards systematically understate risk: the opacity is intentional extraction mechanism (keep extractiveness at 0.58+).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether accounting standards enable systematic understatement of asset risk"
+    },
+    {
+      "id": "regulatory_forbearance_intentionality",
+      "question": "Is regulatory light-touch a deliberate choice based on theory (market discipline works) or structural inability to enforce (capture + complexity)?",
+      "resolution_mechanism": "Archival analysis of regulatory decision-making; interviews with exit-path regulators (those who left for explicit ethical reasons); comparison of enforcement intensity before vs after revolving-door rotation events",
+      "impact": "If deliberate choice: extract extraction component (claim snare only from depositor view). If structural inability: snare classification broadens to regulatory agency itself.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory forbearance is intentional or structural capture"
+    },
+    {
+      "id": "substitution_velocity_in_entrant_barrier",
+      "question": "How quickly can compliant fintech platforms substitute for incumbent bank functions as regulatory complexity becomes prohibitive?",
+      "resolution_mechanism": "Time series of market share transitions for payments, lending, deposit-taking; measurement of startup-to-scale velocity in jurisdictions with different regulatory burdens",
+      "impact": "If fast substitution (< 3 years): entrant snare is temporary, scaffold classification applies. If slow (> 10 years): snare persists, extraction is durable.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Velocity of fintech substitution under regulatory burden"
+    },
+    {
+      "id": "implicit_guarantee_pricing",
+      "question": "Do market prices reflect the implicit government guarantee ('too big to fail') embedded in SIFI debt?",
+      "resolution_mechanism": "Comparison of CDS spreads on SIFI debt vs equally-risky non-guaranteed debt; measurement of SIFI cost-of-capital benefit attributable to implicit backing",
+      "impact": "If reflected: the constraint's coordination function is real but extraction is transparent to markets (downgrade theater and beneficiary claims). If not reflected: extraction is hidden, theater is higher.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Market pricing of implicit government guarantee for SIFIs"
+    },
+    {
+      "id": "identity_lock_binding_mechanism",
+      "question": "What breaks a captured regulator's identity lock \u2014 external shock (crisis forcing reform), generational turnover, or institutional restructuring?",
+      "resolution_mechanism": "Historical case study of regulatory agency reform: measurement of reform intensity vs explanatory variables (leadership change, political pressure, external shock, succession planning)",
+      "impact": "If shock-driven: the constraint persists until next crisis. If rotation-driven: gradual reform possible. If structural: reform requires institutional dissolution.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Mechanism for breaking identity lock in captured regulatory agencies"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "Regulatory capture via balance sheet opacity is the structural mechanism by which financial institutions extract rents from depositors, market entrants, and the broader financial system while maintaining the appearance of neutral regulation. The constraint emerges from an authentic coordination problem \u2014 capital allocation across time and risk requires aggregation of diverse asset exposures into institutional vehicles. But that coordination function has become entangled with an extractive mechanism: the informational asymmetry that enables capital coordination simultaneously enables institutions to obscure true risk exposure from regulators and depositors. The regulator, originally designed to supervise capital adequacy, has itself become captured not through conspiracy but through structural mechanisms \u2014 revolving-door staffing, intellectual capture (economists trained in markets-discipline-themselves theory), and institutional identity fusion with the Basel framework and post-2008 reforms. The constraint's theater ratio (0.68) reflects that contemporary regulation appears comprehensive: stress testing, liquidity coverage ratios, leverage ratios, resolution planning, capital buffers. These are real mechanisms. But their enforcement is attenuated \u2014 deprivation of material enforcement capacity (regulators lack pricing data, cannot easily value illiquid assets, face political constraint from incumbent-friendly administrations). The apparatus looks sophisticated; the teeth are missing.",
+    "key_agents": [
+      "Systemically Important Financial Institutions (SIFIs): Primary beneficiary (institutional/arbitrage) \u2014 implicit government guarantee, regulatory forbearance, balance sheet opacity enables risk-shifting",
+      "Depositors: Primary victim (powerless/trapped) \u2014 no exit from deposit function, cannot verify risk, bear tail risk of failure",
+      "Market Entrants (Fintech Startups): Secondary victim (moderate/constrained) \u2014 face fixed compliance costs that incumbent banks amortize over scale; barriers to entry extraction is severe",
+      "Regulatory Agency: Institutional actor with captured identity (institutional/identity_locked) \u2014 professionally constituted through Basel framework; cannot perceive capture because reform would require institutional self-negation",
+      "Community Banks: Organized secondary victim (organized/constrained) \u2014 benefit from regulatory insulation but bear extraction through restricted access to capital markets",
+      "Analytical Observer: Sees full structure (analytical/analytical) \u2014 detects both genuine coordination function and extraction asymmetry"
+    ],
+    "logic_rationale": "Base extractiveness (0.58): Moderately high. The constraint extracts significantly through implicit guarantee subsidy, entry barrier imposition, and depositor risk-shifting. It is not a pure snare (\u03b5 \u2265 0.46 would be required for snare gate alone) because genuine coordination functions exist \u2014 capital aggregation, price discovery, risk transfer across time. The extraction is systematic but not total. Suppression (0.65): Moderately high. Barriers to exit include technological lock-in (deposit accounts), regulatory requirement (depositors must use licensed institutions), information asymmetry (true risk exposure is obscured), and political coordination (incumbents have concentrated lobbying power). Theater ratio (0.68): High. Contemporary financial regulation has grown more complex (stress tests, liquidity ratios, resolution plans) but enforcement intensity has declined. The apparatus is substantial; its impact is attenuated. This ratio reflects the gap between regulatory appearance and enforcement reality. The measurement trajectory shows theater rising faster than extractiveness (theater at 0.42\u21920.68, extractiveness at 0.38\u21920.58), which is the signature of Goodhart drift \u2014 the regulatory apparatus is optimizing for the appearance of supervision rather than actual risk prevention.",
+    "perspectival_gap": "This constraint demonstrates the diagnostic power of multi-perspectival classification. The same structural arrangement \u2014 balance sheet opacity, implicit guarantees, regulatory complexity \u2014 appears as coordinating value creation (from the SIFI view), protection mechanism (from the regulator's captured view), extraction mechanism (from the depositor's view), and barrier (from the entrant's view). Each perspective is analytically correct from its position. The gap between them reveals the constraint's true nature: it is not primarily about market failure (which would suggest Rope) but about asymmetric information and regulatory capture creating extraction channels. The identity_locked perspective on the regulator reveals a specific binding mechanism: the regulator's legitimacy is fused with the regulatory framework itself. Admitting capture would require admitting institutional failure. This is why regulatory reform is so difficult \u2014 it requires the regulator to undertake a kind of institutional suicide.",
+    "directionality_logic": "Directionality values are derived from beneficiary/victim declarations and structural position. SIFIs are beneficiaries with global arbitrage capacity (can exit national jurisdiction, can shift risk through derivatives) \u2192 low d (0.10-0.20). Depositors are victims with no exit (cannot switch to alternative banking systems) \u2192 high d (0.90-0.95). Entrants are victims with expensive exit (can comply but at prohibitive cost) \u2192 high d (0.70-0.80). The regulatory agency occupies a unique position: institutional power but identity-locked exit. The agency is structurally capable of enforcing regulations (has legal authority, staffing, technical capacity) but cognitively captured by the Basel framework. d for the agency \u2248 0.45 (neither full beneficiary nor full victim, but caught between structural position and cognitive frame). The identity-locked classification for the regulatory agency reflects that the binding mechanism is not material (they cannot be fired for light-touch enforcement; there is political support for market-friendly regulation) but cognitive (the regulator's professional identity makes stringent enforcement unthinkable).",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy through the tangled_rope classification. The constraint has a genuine coordination function (capital allocation, price discovery, risk transfer) which prevents it from being classified as pure snare. But it also has asymmetric extraction (depositors subsidize institutions, entrants subsidize incumbents) which prevents it from being classified as pure rope. The coordination and extraction are structurally entangled \u2014 the opacity that enables capital aggregation also enables risk-shifting. The mandatrophy is prevented by the tangled_rope gate: requires beneficiaries (SIFIs, incumbents), victims (depositors, entrants), and active enforcement (the regulatory apparatus). All three conditions are met. The constraint is not a coordination mechanism that happens to have costs (Rope). It is a hybrid where extraction depends on the coordination function to operate \u2014 remove the coordination and the extraction mechanism collapses, but the coordination mechanism alone would still require suppression of alternatives (closed deposit accounts, regulatory barriers) to function. This entanglement is the mandatrophy-resolving feature: the constraint is irreducible to either type."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.2
+  },
+  "network": {
+    "affects_constraints": [
+      "too_big_to_fail_subsidy",
+      "depositor_insurance_moral_hazard",
+      "fintech_regulatory_arbitrage"
+    ],
+    "dual_formulation_note": "Regulatory capture via balance sheet opacity decomposes into three linked constraints: (1) too-big-to-fail implicit subsidy (\u03b5\u22480.30, Rope for institutions, Snare for taxpayers); (2) depositor insurance moral hazard (\u03b5\u22480.45, Tangled Rope); (3) fintech regulatory arbitrage (\u03b5\u22480.65, Snare for startups). This story focuses on the unified capture mechanism that enables all three to persist. The three downstream constraints have higher extractiveness because they are more visible \u2014 this story is about the opacity mechanism that keeps all three hidden."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ]
+}

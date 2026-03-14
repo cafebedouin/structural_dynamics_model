@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "resume_signaling_arms_race",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "resume_sig"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Resume Signaling Arms Race",
+    "topic_domain": "labor_market/education/credentialing",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "credential_issuers",
+      "high_barrier_entry_employers"
+    ],
+    "victims": [
+      "job_seekers",
+      "low_income_credential_seekers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Job Seeker Without Capital",
+      "comment": "PERSPECTIVE 1: JOB SEEKER WITHOUT CAPITAL (SNARE) \u2014 Faces escalating credential and signal requirements with no ability to exit. Must accumulate degrees, certifications, and resume padding (internships, volunteer work, networks) to remain competitive. The system extracts time, money, and opportunity cost with no coordination benefit \u2014 the signaling is purely competitive, not cooperative."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Resourced Job Seeker",
+      "comment": "PERSPECTIVE 2: RESOURCED JOB SEEKER (TANGLED ROPE) \u2014 Has access to internship networks, test prep, resume coaches, and family connections. Experiences genuine coordination (signals reduce information asymmetry for employers) alongside extraction (must still participate in arms race to maintain advantage over competitors). Constrained exit \u2014 can refuse to optimize resume but faces career penalty."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Elite Employer",
+      "comment": "PERSPECTIVE 3: ELITE EMPLOYER (ROPE) \u2014 Benefits from efficient screening via resume signals. Low cost of participation in the signaling system (just reading resumes) and high benefit (access to pre-filtered talent pool). Arbitrage available \u2014 can always switch to alternative hiring methods but has no incentive to do so."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The University Administrator",
+      "comment": "PERSPECTIVE 4: UNIVERSITY ADMINISTRATOR (TANGLED ROPE) \u2014 Benefits from escalating credential demand (enrollment pressure, credential inflation increases market value of degrees). Also bears costs \u2014 must manage credential inflation, maintain reputation, invest in continuous program updates. Mobile exit available (could reduce credential requirements) but mobile in both directions \u2014 market pressure forces continued arms race participation."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Credentialing Bureaucracy",
+      "comment": "PERSPECTIVE 5: CREDENTIALING BUREAUCRACY (PITON) \u2014 The formal credential system (diplomas, certifications, transcripts) is largely performative. Employers report that resume signals (degree from brand-name school, GPA, prestigious internship) predict job performance weakly; the real coordination benefit has decayed. Yet the credential ritual persists through institutional inertia, accreditation standards, and regulatory entrenchment. Theater ratio high because credentials are maintained for status signaling rather than skill verification."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Labor Market Equilibrium)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (LABOR MARKET EQUILIBRIUM) \u2014 From the perspective of labor market structure, the resume arms race is a prisoner's dilemma with no exit. Individual employers benefit from filters (resume signals); individuals benefit from signaling (staying competitive). But the collective equilibrium extracts from job seekers without producing information \u2014 signals are positional goods, not productive. The analytical view shows this as a Snare at scale."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "signal_productivity_gap",
+      "question": "Do resume signals (education credentials, internship experience, certifications) actually predict job performance, or are they purely positional/competitive goods with no productivity link?",
+      "resolution_mechanism": "Longitudinal employer data: correlation between resume signals and actual performance reviews, retention rates, promotion trajectories; comparison between hired candidates with vs without elite credentials",
+      "impact": "If productive: the arms race has genuine coordination function (Rope from more perspectives). If purely positional: the arms race is pure extraction (Snare confirmed). If weak productivity: Tangled Rope correctly classifies the mixed reality.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether resume signals predict actual job performance"
+    },
+    {
+      "id": "credential_inflation_mechanism",
+      "question": "What sustains credential inflation? Is it employer signaling demand, institutional rent-seeking, regulatory credentialism, or status competition among job seekers?",
+      "resolution_mechanism": "Analysis of credential requirement trends by industry; employer surveys on hiring decision factors; comparison of role requirements vs credential requirements; policy analysis of credentialing regulatory drivers",
+      "impact": "If employer demand: constraint is responsive to labor market (exit paths exist via direct hiring). If institutional rent-seeking: credentialing actors actively maintain extraction. If status competition: job seekers voluntarily escalate (constrained exit rather than trapped exit).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Root driver of credential inflation dynamics"
+    },
+    {
+      "id": "low_income_exit_pathway_existence",
+      "question": "Are there structured exit pathways for low-income job seekers to bypass the resume signaling arms race (apprenticeships, skills-based hiring, network-independent hiring)?",
+      "resolution_mechanism": "Prevalence analysis of alternative hiring mechanisms; long-term outcome comparison between signals-based hiring vs skills-based hiring; scalability assessment of alternatives",
+      "impact": "If pathways exist at scale: powerless agent's exit_options should be upgraded from 'trapped' to 'constrained' \u2014 representation improves. If pathways minimal: Snare classification confirmed for this group.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Availability of alternative hiring pathways bypassing resume signals"
+    },
+    {
+      "id": "family_network_advantage_decay",
+      "question": "Does the resume arms race actually reduce the advantage of family/social network hiring, or does it amplify it (high-capital families can better optimize signals)?",
+      "resolution_mechanism": "Analysis of hiring outcomes by family income, network access, geographic location; trend analysis of diversity metrics in signal-gated vs signals-free hiring",
+      "impact": "If network advantage decays: arms race has transparency benefit (weak Rope function). If network advantage amplifies: arms race is extraction mechanism that concentrates advantage (Snare confirmed for low-capital seekers).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether resume signals reduce or amplify family network hiring advantages"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The resume signaling arms race is a structural constraint in labor markets where job seekers must continuously escalate educational credentials, certifications, internships, and resume optimization to remain competitive for positions that nominally require lower qualification levels. What began as efficient screening (employers using education as a proxy for capability) has degraded into pure positional competition \u2014 individuals escalate signals not because it increases their absolute productivity, but because it maintains their relative position as others escalate. This creates a prisoner's dilemma: each job seeker benefits from signaling to stand out, but the collective effect is credential inflation with minimal productivity gain. The constraint exhibits genuine coordination function (reducing information asymmetry between employers and candidates) alongside asymmetric extraction (time and money costs concentrated on job seekers, benefits concentrated on employers and credential issuers). The theater ratio has increased substantially (0.42 to 0.68) reflecting that credential value increasingly derives from positional status rather than skill verification.",
+    "key_agents": [
+      "Job Seekers Without Capital: Primary victims (powerless/trapped) \u2014 must escalate credentials and signals to remain competitive; bear time, money, and opportunity costs with no alternative pathways",
+      "Resourced Job Seekers: Secondary victims/minor beneficiaries (moderate/constrained) \u2014 experience coordination benefit (signals help them distinguish themselves) alongside extraction (must still participate in arms race); have some exit optionality through networks",
+      "Elite Employers: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from efficient screening via resume signals; low cost of participation; can always exit to alternative hiring methods but have no incentive",
+      "University Administrators: Secondary beneficiaries (powerful/mobile) \u2014 benefit from credential demand (enrollment, prestige, revenue); also manage costs of maintaining credential relevance",
+      "Credentialing Bureaucracy: Tertiary beneficiary (institutional/arbitrage) \u2014 maintains institutional inertia in credential requirements through accreditation, regulatory entrenchment, and professional standards",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 reveals the constraint as equilibrium outcome of individual rationality producing collective irrationality"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The arms race extracts substantial time, money, and opportunity cost from job seekers. Entry costs include degrees (4 years, $20k-$200k+), certifications ($500-$5k each), internships (unpaid or low-wage, 3-12 months), resume coaching, networking events, test prep. The extraction is not maximal (0.66+) because employers do genuinely benefit from reduced information asymmetry, and some credential investment does improve job match quality. Suppression (0.65): Moderate-high. Job seekers face strong barriers to exit: not signaling means remaining invisible to employers; competing on skills alone without credentials triggers automatic resume filters; geographic and family-network barriers increase suppression for low-capital seekers. Alternative pathways (apprenticeships, skills-based hiring) exist but are minority channels. Theater ratio (0.68): High and increasing. Credentials increasingly function as positional signals rather than skill verification. Employers report weak correlation between hiring signals and job performance; degree inflation has reduced GPA and institution predictivity; the ritual of credential accumulation persists despite declining information value. The rise reflects Goodhart's Law: as credentials became targets for optimization, they ceased to measure what they intended to measure.",
+    "perspectival_gap": "The gap between trapped job seekers (who see pure Snare) and elite employers (who see beneficial Rope) is structural and unbridgeable from within the system. Job seekers see escalation with no exit and no benefit. Employers see efficient filtering with minimal cost. Both are correct from their positions. The Tangled Rope classification at the moderate agent level captures the real mixed function: genuine coordination (reduced information asymmetry) alongside genuine extraction (positional competition). The Piton at the bureaucratic level reveals institutional degradation \u2014 the credentialing system sees its own theater but lacks the power to exit (exit would collapse its institutional legitimacy). The perspectival gaps are driven by exit optionality: agents with arbitrage (can leave the system) experience low extraction; agents with no exit (trapped) experience maximum extraction.",
+    "directionality_logic": "Directionality derives from structural position relative to the extraction flow. Job seekers without capital bear maximum costs with no exit optionality (d \u2248 0.95, trapped \u00d7 victim). Resourced seekers experience lower extraction because they can exit via networks and have some benefit from signals (d \u2248 0.55, constrained \u00d7 moderate-benefit). Elite employers experience negative extraction \u2014 they benefit from the signaling mechanism (d \u2248 0.15, arbitrage \u00d7 beneficiary). Universities experience moderate extraction because they benefit from credential demand but also bear costs of maintaining credential relevance (d \u2248 0.50, mobile \u00d7 mixed-benefit). The credentialing bureaucracy experiences low extraction \u2014 it benefits from institutional entrenchment (d \u2248 0.20, arbitrage \u00d7 beneficiary). The analytical observer sees the full structure with no position-specific bias (d \u2248 0.72, analytical \u00d7 neutral).",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that Tangled Rope is the correct classification at the analytical/generational level: the arms race has BOTH genuine coordination function (employers do gain signal value, job seekers do get matched to better-fit roles) AND asymmetric extraction (escalation benefits high-capital seekers and credential issuers disproportionately, while imposing costs on low-capital seekers). The false summit detector would catch the 'natural law' reading ('credentialing is inherent to labor markets') as naturalization of a contingent institutional arrangement. The Snare reading from the trapped perspective is correct from that position but incomplete \u2014 it omits the genuine coordination function that makes the constraint persistent. The Rope reading from the employer perspective is correct from that position but incomplete \u2014 it omits the extraction function that constrains job seeker choices. The full mandatrophy resolution: this is a Tangled Rope where the coordination function (information reduction) is real but has decayed relative to the extraction function (positional competition). The theater ratio increase (0.42 \u2192 0.68) reflects this decay \u2014 the performative component of the credential system is rising relative to its functional component."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "credential_inflation",
+      "educational_debt_accumulation",
+      "labor_market_sorting"
+    ],
+    "dual_formulation_note": "Resume signaling is upstream of credential inflation (the signaling demand drives credential proliferation) and labor market sorting (signals determine matching quality). Educational debt accumulation is a downstream cost consequence of signaling participation. All three constraints share the structural feature of high theater ratio and positional-good dynamics; decomposition by observable (what aspect of signaling) produces distinct stories."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.45
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "meme_stock_momentum_extraction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "meme"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Meme Stock Momentum Extraction",
+    "topic_domain": "financial_markets/retail_investor_dynamics",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "institutional_shorters",
+      "early_meme_coordinators",
+      "trading_platforms"
+    ],
+    "victims": [
+      "late_wave_retail_investors",
+      "long_term_bagholders"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Late-Wave Retail Investor",
+      "comment": "PERSPECTIVE 1: LATE-WAVE RETAIL INVESTOR (SNARE) \u2014 Emotionally and informationally entrapped by social proof, FOMO narratives, and the momentum signal itself. Faces maximum extraction with no meaningful exit \u2014 selling at a loss triggers regret, holding traps them in declining value. The constraint extracts capital through coordinated momentum depletion once early coordinators and institutional players exit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Wave Coordinated Participant",
+      "comment": "PERSPECTIVE 2: MID-WAVE COORDINATED PARTICIPANT (TANGLED ROPE) \u2014 Participates in genuine coordination (information sharing, collective action against institutional shorting) while also experiencing extraction from early coordinators and institutional players. Has some agency and modest exit options (can leave before maximum extraction) but faces social pressure and sunk-cost effects. Experiences both coordination benefits and asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Early Meme Coordinator",
+      "comment": "PERSPECTIVE 3: EARLY MEME COORDINATOR (ROPE) \u2014 Initiates genuine coordination of retail investors against institutional shorting. Benefits from first-mover information asymmetry and momentum amplification. Experiences the constraint as pure coordination: organizing retail action solves a collective-action problem. Low effective extraction because coordinators have exit options (stop posting, sell early) and clear coordination function (mobilizing retail capital)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Shorter / Platform Operator",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL SHORTER / PLATFORM OPERATOR (SNARE FROM INSTITUTIONAL VIEW) \u2014 Institutional actors (hedge funds with short positions, trading platforms profiting from volatility and order flow) extract through momentum capture. They have perfect exit options (close positions, route orders to highest bidder) and extract maximum value during the momentum window. From their perspective the constraint is a mechanism for asymmetric gain \u2014 retail retail provides liquidity for institutional extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Regulatory Framework (Degraded)",
+      "comment": "PERSPECTIVE 5: REGULATORY FRAMEWORK (PITON) \u2014 Securities regulations were designed for institutional markets with information asymmetries flowing through broker-dealers and research channels. The meme stock mechanism (social media coordination, retail order flow concentration, retail collateral cascades) operates in this regulatory framework but its primary function (protecting retail from institutional extraction) is heavily degraded. The regulations persist through institutional inertia despite low functional capacity to prevent retail momentum extraction. Theater ratio is high: compliance theater continues while the extraction mechanism evolves."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a full analytical view, the meme stock constraint combines genuine coordination (retail collective action against institutional shorting) with systematic extraction (momentum depletion, information cascades, volatility capture). The constraint solves a real coordination problem (mobilizing dispersed retail capital) while simultaneously enabling asymmetric extraction by actors with superior exit options and information. This is a canonical tangled rope: both coordination and extraction are essential to understanding the mechanism."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "momentum_depletion_mechanism",
+      "question": "Is momentum depletion a structural feature of retail coordination at scale, or a contingent outcome of specific institutional responses?",
+      "resolution_mechanism": "Comparative analysis of meme stock episodes with and without institutional shorting responses; simulation of pure-retail momentum in absence of short-seller counter-positioning",
+      "impact": "If structural: meme stock extraction is inherent to retail coordination dynamics (higher extractiveness). If contingent: extraction depends on institutional counter-play (lower inherent extractiveness, higher contingency).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether momentum depletion is structural or contingent on institutional response"
+    },
+    {
+      "id": "information_asymmetry_source",
+      "question": "Do early meme coordinators accumulate unfair information advantages (about sentiment trends, cascade timing, exit windows) or simply achieve first-mover timing advantage available to any participant?",
+      "resolution_mechanism": "Network analysis of information flow in meme stock communities; comparison of early vs late adopter information content and timing of trade signals",
+      "impact": "If unfair advantage: early coordinators are extracting through information monopoly (higher snare classification for early coordinators). If timing only: extraction is purely momentum-driven (rope classification for early coordinators is more accurate).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Source of early coordinator advantage: information asymmetry vs timing"
+    },
+    {
+      "id": "social_proof_entrapment_intensity",
+      "question": "What proportion of late-wave retail retention is rational sunk-cost acceptance vs internalized social commitment to the meme identity?",
+      "resolution_mechanism": "Behavioral analysis of exit timing; correlation between community participation level and holding duration beyond peak; identity fusion measurement in exit interviews",
+      "impact": "If primarily rational: suppression is moderate, exit options are constrained but available (trap classification softer). If primarily identity-fusion: suppression is severe, exit options become identity_locked (trap classification stronger).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Role of identity fusion vs rational sunk-cost in late-wave holding"
+    },
+    {
+      "id": "volatility_extraction_attribution",
+      "question": "How much of retail extraction occurs through volatility capture by institutional traders vs direct momentum depletion through strategic shorting?",
+      "resolution_mechanism": "Decomposition of institutional profit sources in meme stock episodes; attribution of gains to directional shorts, volatility trading, and order flow monetization",
+      "impact": "If volatility-dominant: institutional extraction is less targeted (lower perceived malice, but same amount of capital transfer). If short-dominant: extraction is adversarial positioning (higher perceived unfairness).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Institutional extraction attribution: volatility vs short-directed"
+    },
+    {
+      "id": "collective_action_sustainability",
+      "question": "Can retail meme stock coordination sustain itself as a durable institutional form, or does it require periodic external shocks (short-seller escalation, regulatory announcement) to maintain momentum and community cohesion?",
+      "resolution_mechanism": "Longitudinal analysis of meme stock communities post-peak; measurement of coordination stability in low-volatility regimes; survey of coordinator motivation persistence",
+      "impact": "If sustainable: meme stocks represent a new institutional actor class (reevaluate from organized/powerful perspective). If shock-dependent: meme stocks are cyclical phenomena (remains snare for most participants).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Sustainability of retail meme stock coordination as institutional form"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Meme stock momentum extraction represents a contemporary constraint that reveals the structure of how collective retail action against institutional positioning can simultaneously generate genuine coordination benefits and severe asymmetric extraction. The constraint emerges when early-wave retail coordinators mobilize dispersed small investors to challenge institutional short positions, creating powerful collective action that drives prices up and extracts shorts from profitable positions. However, the momentum mechanism itself \u2014 the positive feedback loop of retail buying, price appreciation, and social proof \u2014 contains an embedded extraction mechanism: as momentum depletes (shorts close, price support evaporates, institutional algorithms detect liquidity windows), late-wave retail investors face maximum extraction. The constraint is classified as a snare from the perspective of late-wave retail participants because they face high suppression (social proof, FOMO narratives, momentum signals), no meaningful exit options (selling at losses triggers regret and community backlash), and maximum extraction (capital drain as momentum depletes). Early coordinators and institutional players experience the same structural mechanism as rope or arbitrage \u2014 they have exit options, information advantages, and clear profits. The constraint exhibits high extractiveness (0.68) because the capital transfer from late-wave retail to institutional shorters and early coordinators is systematic and severe. Suppression is high (0.62) because retail participation is sustained through social media narratives, community identity, FOMO cascades, and momentum signals that obscure exit timing. Theater ratio is moderate-to-high (0.58) because retail communities perform coordination rituals (Diamond Hand affirmations, Rocket emojis, community validation) that have genuine coordination function but increasingly serve entertainment and identity purposes as the momentum window closes.",
+    "key_agents": [
+      "Late-Wave Retail Investors: Primary victims (powerless/trapped) \u2014 enter momentum peak with high conviction but lowest information; face maximum extraction and minimal exit options",
+      "Mid-Wave Coordinated Participants: Secondary victims (moderate/constrained) \u2014 participate in genuine retail coordination; experience both coordination benefits and extraction from early coordinators",
+      "Early Meme Coordinators: Primary beneficiaries (organized/arbitrage) \u2014 initiate and amplify retail coordination; capture timing advantage and exit before maximum extraction",
+      "Institutional Shorters: Extraction agents (institutional/arbitrage) \u2014 initially targeted by retail coordination but capture extraction during depletion phase; profit from momentum collapse",
+      "Trading Platforms: Secondary beneficiaries (institutional/arbitrage) \u2014 capture order flow monetization, volatility premiums, and transaction fees across entire momentum cycle",
+      "Regulatory Framework: Institutional observer (analytical/analytical) \u2014 securities regulations designed for institutional markets; degraded functional capacity to prevent retail momentum extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and increasing. The constraint starts at low extractiveness (0.18) during early retail mobilization when coordination benefits dominate and extraction is minimal. As the momentum window extends, extraction accelerates through three mechanisms: (1) momentum depletion \u2014 late-wave retail enters at peak prices with no liquidity support at lower prices; (2) cascade entrapment \u2014 social proof and community identity increase psychological holding costs, reducing exit behavior; (3) institutional extraction \u2014 shorters who closed early positions re-enter as volatility extractors, capturing remaining capital through directional trades and option strikes. By the measurement endpoint (0.68), extraction is severe and systematic. Suppression (0.62): Moderate-to-high and stable. Suppression mechanisms include social media echo chambers that reinforce bullish narratives, momentum signals that activate FOMO, community backlash against 'paperhand' sellers, and sunk-cost effects that increase holding beyond rational decision points. These are not structural barriers (like capital controls or legal restrictions) but internalized and social barriers that are highly effective. Theater ratio (0.58): Moderate and increasing. Early retail coordination has genuine coordination function (sharing analysis, organizing against shorters, collective action). As momentum window extends, theatrical performance increases: community rituals (Diamond Hands, Rocket emojis) serve identity purposes more than information transmission, and retail conviction becomes increasingly disconnected from underlying fundamentals. The theater is not primarily regulatory theater (like the piton perspective's degraded review ritual) but social theater \u2014 community identity performance that sustains participation even as information asymmetry increases.",
+    "perspectival_gap": "The analytical observer sees what individual participants cannot: that the constraint is fundamentally a tangled rope (mixed coordination and extraction) because it solves a real coordination problem (mobilizing retail capital against institutional positioning) while simultaneously implementing an extraction mechanism (momentum depletion targeting late arrivals). Early participants mistake it for pure rope because they exit before extraction hits maximum. Late participants mistake it for a snare because they enter after coordination benefits have depleted. Institutional participants see it as arbitrage because they control the extraction timing. The gap between perspectives reveals the constraint's true structure: it is neither pure coordination nor pure extraction but a hybrid that changes its character depending on entry timing. This is diagnostically significant \u2014 many financial constraints labeled as 'predatory' or 'manipulative' are actually tangled ropes that participants experience as snares because they enter at the wrong point in the cycle.",
+    "directionality_logic": "Directionality values are derived from each agent's structural position in the extraction flow. Late-wave retail investors are maximum victims with no exit options: d \u2248 0.95 \u2192 f(d) \u2248 1.42 \u2192 high experienced extraction. Early coordinators are beneficiaries with arbitrage exit (can stop posting, sell before peak): d \u2248 0.15 \u2192 f(d) \u2248 0.00 \u2192 low effective extraction experienced by this agent. Institutional shorters are beneficiaries with perfect exit options (close positions instantly): d \u2248 0.05 \u2192 f(d) \u2248 -0.12 \u2192 negative effective extraction (they profit from the constraint). Mid-wave participants are mixed: they benefit from coordination but face extraction from early players and institutional competition; d \u2248 0.55 \u2192 f(d) \u2248 0.75 \u2192 moderate experienced extraction. The spatial scope is global (1.2 modifier) because the constraint operates across geographies \u2014 retail on social media platforms, institutional players across global markets. The scope amplifies extractiveness: \u03c7 = 0.68 \u00d7 f(d) \u00d7 1.2 produces high chi for victims, confirming snare classification.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that meme stock momentum extraction is a genuine snare for late-wave retail investors (high suppression, no exit options, maximum extraction) but NOT a false natural law or simple mislabeling of coordination. The constraint has real coordination function: it mobilizes retail capital and challenges institutional shorting positions effectively. But the coordination function is inseparable from the extraction mechanism. The early coordinators and institutional players do not experience the constraint as snare because they have exit options and information advantages. The constraint is genuinely mixed (tangled rope from analytical view) and genuinely predatory (snare from late-wave participant view) simultaneously. The resolution is to classify from the specific perspective rather than seeking a single 'true' type: the snare classification is correct for powerless/trapped agents; the rope classification is correct for organized/arbitrage coordinators; the tangled rope classification is correct for the analytical observer. The mandatrophy fails precisely when regulators try to regulate 'meme stocks' as a single constraint type rather than recognizing that different participants experience different constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "short_squeeze_institutional_cascade",
+      "retail_investor_momentum_bias",
+      "volatility_extraction_mechanisms"
+    ],
+    "dual_formulation_note": "Meme stock momentum extraction operates as both a genuine coordination mechanism (early retail mobilization against institutional shorting) and an extraction mechanism (momentum depletion capturing from late arrivals). The constraint family decomposes into three structurally distinct stories: (1) retail_coordination_against_shorts (\u03b5 \u2248 0.20, Rope) \u2014 the genuine coordination function of retail mobilization; (2) momentum_depletion_dynamics (\u03b5 \u2248 0.55, Tangled Rope) \u2014 the mixed coordination-extraction hybrid; (3) institutional_volatility_extraction (\u03b5 \u2248 0.42, Snare) \u2014 the extraction mechanism isolated. This story covers the middle term (momentum dynamics) where all three mechanisms are visible. The upstream story is retail coordination; the downstream story is institutional extraction."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "uk_it_procurement_liability_transfer",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ukit"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UK IT Procurement Liability Transfer Mechanism",
+    "topic_domain": "public_procurement/risk_allocation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "it_contractors",
+      "cabinet_office_efficiency_targets"
+    ],
+    "victims": [
+      "government_agencies",
+      "public_service_continuity",
+      "taxpayers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Civil Service Procurer",
+      "comment": "PERSPECTIVE 1: CIVIL SERVICE PROCURER (SNARE) \u2014 Trapped by statutory duty to competitively tender; contractually bound to accept risk transfer clauses as standard procurement terms. Cannot exit without violating public law. Bears full liability for contractor failure while lacking operational control. Career risk compounds the structural trap: failure to deliver IT projects damages advancement prospects."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Government Agency",
+      "comment": "PERSPECTIVE 2: GOVERNMENT AGENCY (SNARE) \u2014 Statutory responsibility for service delivery but contractual liability for contractor performance. Cannot refuse the IT system or transfer responsibility further without abandoning the service. Suppressed by legal framework (public law duties) and market structure (few qualified vendors). Maximum extraction: agency pays for the system AND bears liability when it fails."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The IT Contractor",
+      "comment": "PERSPECTIVE 3: IT CONTRACTOR (ROPE) \u2014 Benefits from liability transfer clauses in standard form contracts. Experiences the constraint as a coordination mechanism: clear liability boundaries enable competitive pricing and risk-appropriate resource allocation. Can arbitrage between contracts; can exit underperforming accounts. Net beneficiary of the liability transfer structure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Government Digital Service",
+      "comment": "PERSPECTIVE 4: GOVERNMENT DIGITAL SERVICE (TANGLED ROPE) \u2014 Organized agents attempting to rationalize procurement and drive digital standards. Benefit from clear service specifications that enable contract standardization; bear extraction when bad contracts persist due to path dependence. Constrained by legacy infrastructure and political resistance to renegotiation. See the constraint as simultaneously enabling better practice (coordination) and locking in problematic allocations (extraction)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Public Accounts Committee",
+      "comment": "PERSPECTIVE 5: PUBLIC ACCOUNTS COMMITTEE (PITON) \u2014 Performs oversight function through performative inquiry cycles: investigate failed projects, issue reports, demand improvements, contracts still drafted identically. Theater_ratio reflects the ritual nature of accountability \u2014 reports are published but procurement terms persist unchanged. Maintains appearance of control over risk allocation despite persistent project failures. Degraded institutional function maintained through inertia."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Procurement Reform Movement",
+      "comment": "PERSPECTIVE 6: PROCUREMENT REFORM MOVEMENT (SCAFFOLD) \u2014 Organized civil servants, academics, and reform advocates working to shift liability allocation toward shared risk models and outcome-based contracting. See the constraint as temporary and solvable through procedural change. Low effective extraction because this coalition has agency and sees an exit path: revised Standard Government Contract terms, outcome-based SLAs, and capability-building in client organizations. Sunset horizon: 5-10 years as new procurement models mature."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, risk transfer is an inherent property of complex procurement: someone must bear the risk of failure, and in market transactions, liability naturally flows to the party with operational control. This perspective sees the constraint as an inevitable feature of how IT contracting must work. However, the base properties reveal this is a false summit: risk allocation is a policy choice, not a law of nature. Comparative analysis (Australia's shared risk models, Norway's capability-building approach) demonstrates structural alternatives."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "liability_allocation_vs_pricing_efficiency",
+      "question": "Does shifting liability to government agencies genuinely improve contractor pricing efficiency, or does it permit cost-plus extraction without incentive for delivery?",
+      "resolution_mechanism": "Comparative analysis of IT project costs and delivery performance across procurement models (fixed-price vs shared-risk vs cost-reimbursable); correlation between liability transfer intensity and project outcomes",
+      "impact": "If efficiency gains are real: the tangled_rope classification holds \u2014 genuine coordination benefit justifies some extraction. If efficiency gains are illusory: reclassify as snare \u2014 pure extraction justified by false efficiency narrative.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether liability transfer produces genuine pricing efficiency or permits cost extraction"
+    },
+    {
+      "id": "contractor_skill_scarcity_dependency",
+      "question": "Is the government's acceptance of adverse liability terms driven by genuine scarcity of IT contractor capacity, or by institutional path dependence and procurement inertia?",
+      "resolution_mechanism": "Market capacity analysis: ratio of qualified vendors to active procurements; analysis of contractor switching costs; survey of government procurement teams on actual vs perceived vendor availability",
+      "impact": "If capacity scarcity is real: some extraction is unavoidable (high f(d) for government). If scarcity is manufactured or outdated: extracted value represents pure rent \u2014 reclassify toward higher snare signature.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether scarcity of IT contractor capacity justifies liability allocation"
+    },
+    {
+      "id": "reform_sunset_timeline_feasibility",
+      "question": "Is the 5-10 year sunset horizon realistic for procurement reform, or does institutional inertia extend timeline indefinitely?",
+      "resolution_mechanism": "Tracking of Standard Government Contract adoption rates; longitudinal analysis of major agency compliance with new outcome-based SLA frameworks; interviews with procurement leadership on actual barriers to change",
+      "impact": "If timeline is realistic: scaffold classification confirmed. If sunset is perpetually deferred: reclassify toward piton \u2014 the reform movement is performative theater, not a genuine exit path.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether procurement reform sunset timeline is credible"
+    },
+    {
+      "id": "false_summit_naturalization",
+      "question": "Is the perception that liability transfer is inherent to procurement a genuine structural insight or a naturalization of contingent institutional arrangements?",
+      "resolution_mechanism": "Cross-national comparative study of procurement liability allocation models (UK fixed-price transfer vs Australian shared-risk vs Norwegian capability-building); analysis of which models produce better outcomes for public value",
+      "impact": "If naturalization is detected: mountain classification is false \u2014 reveals how institutional actors use inevitability rhetoric to block policy alternatives.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether liability transfer is structural necessity or naturalized institutional choice"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The UK IT procurement liability transfer mechanism is a structural arrangement in which government agencies assume contractual and operational liability for contractor performance while lacking direct control over delivery. This constraint exhibits multiple classification types across different observer positions: civil servants experience a snare (trapped by statute and market structure), contractors experience coordination (clear liability boundaries enable efficient pricing), the Public Accounts Committee performs degraded oversight (piton), and reform advocates see a solvable temporary problem (scaffold). The mechanism combines genuine coordination function (clear risk allocation enables contracting) with asymmetric extraction (liability concentrated on government side without corresponding control). Extractiveness has risen from 0.42 to 0.58 over 15 years as IT complexity has grown and contractor consolidation has reduced competitive pressure, while theater_ratio has increased (performative accountability rituals substitute for actual risk restructuring). The constraint demonstrates how a policy choice (where to place liability in contracts) becomes naturalized as an inevitable feature of procurement.",
+    "key_agents": [
+      "IT Contractors: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from liability transfer clauses; can exit or repricing underperforming contracts",
+      "Civil Service Procurers: Primary victims (powerless/trapped) \u2014 statutorily responsible for competitive procurement; contractually bound to accept risk transfer",
+      "Government Agencies: Secondary victims (powerless/trapped) \u2014 bear both financial and reputational risk for contractor failure",
+      "Public Accounts Committee: Institutional actor (institutional/arbitrage) \u2014 performs oversight ritual without structural authority to change terms",
+      "Government Digital Service: Organized reformers (organized/constrained) \u2014 attempting to rationalize procurement through new standards",
+      "Procurement Reform Movement: Organized coalition (organized/constrained) \u2014 advocating shifted risk models with visible exit path",
+      "Analytical Observer: Civilizational context (analytical/analytical) \u2014 risks naturalizing policy choice as immutable constraint"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Government agencies and civil servants bear contractual liability while lacking operational control over IT delivery. Contractors retain pricing power despite liability transfer \u2014 they bundle risk premiums into fixed-price contracts and shift actual risks through subcontracting and scope interpretation. The extraction is not at snare levels (0.66+) because some of the liability transfer reflects genuine pricing for real risk; however, government capacity to negotiate alternative terms has declined as contractor consolidation has reduced competitive pressure. Theater ratio (0.68): Moderate-high. Public Accounts Committee investigations follow a ritualized cycle: failed project identified, report issued, recommendations made, contracts drafted identically the next cycle. The performative nature reflects that accountability mechanisms operate on oversight side (reports, inquiries) while procurement terms remain controlled by contractors. Theater has increased because IT project failures persist despite accountability investigations \u2014 the investigation ritual substitutes for structural change. Suppression (0.65): High. Statutory duty to competitively tender constrains procurers' ability to reject contractor terms. Market structure (few large contractors, complex technical requirements) suppresses agency's ability to build internal IT capacity or negotiate alternatives. Career risk suppresses innovation: procurement teams who attempt novel risk allocation models face blame if the model fails.",
+    "directionality_logic": "Contractor directionality (d\u22480.15): Beneficiary status + arbitrage exit produce low d \u2014 contractors experience the constraint as enabling (clear liability boundaries permit competitive bidding and arbitrage between contracts). Government directionality (d\u22480.88): Victim status + trapped exit produce high d \u2014 government cannot exit competitive tendering obligation, cannot refuse the IT system, and cannot reallocate liability without creating budget gaps or project delays. The high f(d) for government actors means they experience the effective extraction (chi) acutely despite the base extractiveness (0.58) being moderate. Organized reform coalitions (d\u22480.55): Mixed status \u2014 they are institutional actors with constrained (not trapped) exit and advocacy capacity, but the constraint is embedded in public law and cabinet office policy, limiting their leverage.",
+    "perspectival_gap": "The primary perspectival gap is between contractors (rope \u2014 clear liability boundaries enable efficient coordination) and civil servants (snare \u2014 liability concentration with no control). Contractors see the constraint as solving the coordination problem of IT risk allocation; civil servants see it as pure extraction justified by market scarcity narratives. The Public Accounts Committee gap reflects performative oversight: they conduct investigations and issue reports (theater) but lack authority to restructure procurement terms, creating an illusion of control. The reform movement gap shows a tension between scaffold (sunset is plausible if political will materializes) and piton (sunset is perpetually deferred). The analytical observer gap reveals false naturalization: the constraint is presented as inherent to market procurement, but comparative analysis shows it is a policy choice that other countries have avoided.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by distinguishing genuine coordination function (liability transfer does enable clearer contracting) from asymmetric extraction (government bears disproportionate downside risk). The classification as tangled_rope is defensible: the mechanism coordinates pricing and risk allocation (genuine benefit to contractors and, in theory, to government through more efficient bids) while extracting through concentrated liability allocation (actual government outcomes are worse than available alternatives). The false summit mountain classification is a critical diagnostic: it reveals that the 'naturally inevitable' framing of liability transfer is a cover story for institutional path dependence. If the mountain were real, comparative procurement models would fail; instead, countries with different liability allocations (Australia, Norway, Singapore) achieve comparable or better outcomes, confirming the constraint is contingent institutional arrangement, not law of nature. The constraint is defensible as tangled_rope only if the genuine coordination benefits exceed the extraction costs \u2014 longitudinal data on project success rates across procurement models is required to sustain this classification."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "uk_it_project_delivery_failure",
+      "contractor_consolidation_market_power"
+    ],
+    "dual_formulation_note": "Liability transfer is downstream of broader UK procurement policy (competitive tendering mandates); upstream constraints include statutory duty to competitively tender and market consolidation reducing contractor competition. Linked to IT project delivery failure constraint which is a consequence of liability misallocation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

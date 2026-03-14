@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "patent_disclosure_tensions",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "patdis"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Patent Disclosure Tensions: Knowledge Monopoly vs. Public Innovation",
+    "topic_domain": "intellectual_property/innovation_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "patent_holders",
+      "innovation_incentive_framework"
+    ],
+    "victims": [
+      "field_practitioners",
+      "subsequent_innovators",
+      "public_knowledge_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Field Practitioners Under Patent Thicket",
+      "comment": "PERSPECTIVE 1: FIELD PRACTITIONERS (SNARE) \u2014 Trapped practitioners face maximum extraction. Prior art searches impose time and cost barriers; freedom-to-operate analysis is prohibitively expensive for small innovators. Exit is not available: operating without patent clearance invites litigation or invalidation. The suppression mechanism is structural and total \u2014 legal, financial, and epistemic barriers lock practitioners into the system with no alternative pathways."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Subsequent Innovators and Researchers",
+      "comment": "PERSPECTIVE 2: SUBSEQUENT INNOVATORS (TANGLED ROPE) \u2014 Constrained by patent licensing costs and disclosure delays (18-month publication lag for patent applications) but also benefit from the disclosure system itself. The patent system coordinates knowledge sharing through forced publication while enabling extraction through exclusivity. They can license, work around, or challenge patents, but at significant cost. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Patent Holders and IP Portfolio Managers",
+      "comment": "PERSPECTIVE 3: PATENT HOLDERS (ROPE) \u2014 Institutional actors with portfolio diversification and arbitrage options. They experience the patent system as pure coordination: disclosure rules enable their monopoly control while the publication mechanism coordinates the broader field. They can license strategically, cross-license, or defend through litigation. Net beneficiary with full agency \u2014 extraction flows toward this agent."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Open Source and Creative Commons Coalition",
+      "comment": "PERSPECTIVE 4: OPEN SOURCE/CREATIVE COMMONS COALITION (SCAFFOLD) \u2014 Organized agents building alternative pathways (GPL, FOSS licensing, copyleft mechanisms) that bypass or reframe patent extraction. These mechanisms have a sunset logic: as network effects grow for open-source communities, the patent monopoly's extraction leverage diminishes. Constrained by compatibility and adoption barriers but with clear exit pathway as alternatives mature. Theater is lower than traditional patent prosecution \u2014 enforcement is through community norm rather than litigation threat."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Patent Office and Examination System",
+      "comment": "PERSPECTIVE 5: PATENT OFFICE AND EXAMINATION SYSTEM (PITON) \u2014 High theater ratio (0.65+): patent examination is substantially performative. Examiners cannot evaluate non-obvious claim validity across domains; prior art searches are incomplete; claim language is opaque by design; prosecution procedures consume resources while producing contested legitimacy. The system persists through institutional inertia despite degraded function \u2014 maintained because alternatives haven't fully replaced it, not because examination reliably produces valid patents. Theater has increased as application complexity has grown faster than examination capacity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, information disclosure creates inherent tension: once disclosed, information cannot be un-known; monopoly over knowledge is structurally unstable; the disclosure-exclusivity paradox is fundamental to patent law. However, this naturalizes what is actually a contingent institutional design choice. The 'inherent tension' framing obscures that alternative schemes (prize systems, patent buyouts, compulsory licensing) resolve the same problem without the suppression mechanism."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "disclosure_scope_ambiguity",
+      "question": "What constitutes sufficient disclosure for a patent claim to be valid? Enablement standard vs. written description standard create conflicting measurement frames.",
+      "resolution_mechanism": "Case law analysis and Federal Circuit precedent; empirical measurement of patent validity rates under different disclosure standards; survey of practitioners on sufficiency perception",
+      "impact": "If disclosure standard is strict: more practitioners trapped (high suppression). If lenient: more patents invalidated post-grant, reducing monopoly extraction but increasing litigation uncertainty.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Disclosure sufficiency standard ambiguity"
+    },
+    {
+      "id": "innovation_incentive_counterfactual",
+      "question": "Would equivalent innovation occur under alternative incentive schemes (prizes, patent buyouts, data commons) without the extraction mechanism?",
+      "resolution_mechanism": "Historical analysis of innovation rates before/after patent reform; controlled comparison of innovation outcomes in jurisdictions with different IP regimes; economic modeling of alternative incentive structures",
+      "impact": "If innovation is incentive-independent: patent monopoly is pure extraction (Snare). If innovation requires monopoly exclusivity: patent system is necessary coordination (Rope from broader perspective).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether patents are necessary for innovation incentives"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the measured suppression (0.65) structural (legal barriers, search costs) or partially internalized (practitioners self-censor from field entry due to perceived patent landscape)?",
+      "resolution_mechanism": "Longitudinal surveys of field entry rates; exit interviews with practitioners who leave the field; comparison of patent filing density to practitioner population in adjacent non-patented fields",
+      "impact": "If structural: suppression persists as long as patent system exists. If internalized: suppression would partially persist even post-patent reform (practitioners believe the barrier exists when it doesn't).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in patent landscape"
+    },
+    {
+      "id": "patent_quality_degradation_rate",
+      "question": "What is the actual rate of patent validity degradation due to insufficient disclosure or prior art misclassification? Theater ratio may mask systematic quality loss.",
+      "resolution_mechanism": "Post-grant review data; inter partes review outcomes; validity rates in invalidation proceedings; comparison to patent prosecution timeline and examiner workload trends",
+      "impact": "If high degradation: theater ratio is understated, and the piton classification is more severe. If low: patent examination maintains baseline function despite appearance of theater.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Patent validity degradation rate over time"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Patent disclosure creates a structural tension between innovation incentives (requiring some form of monopoly exclusivity) and public knowledge advancement (requiring disclosure). The constraint exhibits all six DR classification types from different structural positions. Patent holders benefit from the monopoly; practitioners are trapped by the legal and search barriers; open-source coalitions are building alternative pathways; the patent office maintains a performative examination ritual; the system coordinates knowledge sharing while simultaneously extracting through exclusivity; and naturalizing observers risk treating the disclosure-exclusivity paradox as an immutable feature of innovation itself. The extractiveness has increased from 0.35 to 0.52 over 20 years as patent thicketing, defensive patenting, and application complexity have grown faster than examination capacity. The theater ratio has similarly increased from 0.42 to 0.58, reflecting that patent prosecution and examination are increasingly performative \u2014 claim language is designed for tactical advantage rather than clarity; prosecution strategies focus on legal argumentation rather than technical disclosure; and examination outcomes depend more on procedural skill than on substantive validity assessment.",
+    "key_agents": [
+      "Patent Holders: Primary beneficiary (institutional/arbitrage) \u2014 capture monopoly rents from excluded practitioners; benefit from strategic licensing and cross-licensing",
+      "Field Practitioners: Primary victim (powerless/trapped) \u2014 face prohibitive patent search costs, freedom-to-operate barriers, and litigation risk; exit is not available",
+      "Subsequent Innovators: Secondary victim (moderate/constrained) \u2014 constrained by licensing costs and 18-month publication lag; can challenge or license but at significant expense",
+      "Public Knowledge Commons: Tertiary victim (powerless/identity_locked) \u2014 abstract collective good that cannot organize; constituted through the assumption that patent disclosure contributes to public knowledge; but disclosure happens too late (18-month lag) and exclusivity prevents use",
+      "Open Source/Creative Commons Coalition: Organized agents (organized/constrained) \u2014 building alternative frameworks (copyleft, GPL) that reframe or bypass patent extraction; have agency and exit pathways",
+      "Patent Office and Examination System: Institutional actor (institutional/arbitrage) \u2014 maintains the performative ritual; sees own process as degraded but persists through inertia",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing the disclosure-exclusivity paradox as inherent to innovation rather than contingent institutional design"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, increasing over time. The base extraction reflects the monopoly premium that patent holders capture from practitioners who must license, design around, or exit the field. The increase from 0.35 to 0.52 reflects patent thicketing \u2014 defensive patenting strategies have created denser patent landscapes that impose higher search and litigation costs on practitioners, increasing the extraction mechanism's friction. Suppression (0.65): Moderate-high. Practitioners face legal barriers (infringement risk), financial barriers (FTO analysis, licensing costs), epistemic barriers (patent landscape opacity), and career risk (litigation exposure). The suppression is structural and systematic. Theater ratio (0.58): Moderate-high, increasing over time. Patent prosecution and examination have increasingly become procedurally focused: claim drafting is tactical (designed to pass examination and survive subsequent challenges rather than to communicate technical content); prosecution strategy focuses on legal argumentation; examination assessment relies on keyword searches and procedural compliance rather than substantive technical evaluation. The increase reflects growing application complexity outpacing examiner capacity and growing incentive misalignment (examiners are evaluated on throughput, not validity).",
+    "perspectival_gap": "The fundamental gap is between the holder's experience of coordination (disclosure rules protect my monopoly) and the practitioner's experience of extraction (the same disclosure rules prevent my innovation). The analytical observer risks a false mountain by naturalizing this as inherent to innovation. In fact, alternative schemes exist: patent buyouts (government purchases patents and releases them), prize systems (innovation rewards without monopoly), compulsory licensing thresholds (monopoly with mandatory licensing at regulated rates), or data commons models (structured knowledge sharing without exclusivity). Each alternative trades off different coordination costs, but the disclosure-exclusivity paradox is not inherent \u2014 it is a design choice.",
+    "directionality_logic": "Patent holders derive low directionality (d \u2248 0.15) from beneficiary status + arbitrage options \u2014 they can choose to license, cross-license, or defend strategically. Practitioners derive high directionality (d \u2248 0.90) from victim status + trapped exit \u2014 they face insurmountable legal and financial barriers with no alternative. The derived f(d) values map to experienced extractiveness chi: beneficiaries experience low/negative chi (coordination function); victims experience high chi (extraction). The tangency between coordination and extraction \u2014 both operate through the same disclosure-exclusivity mechanism \u2014 is what makes this a Tangled Rope rather than a Rope or Snare.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that the classification varies legitimately across structural positions. The patent holder's Rope (pure coordination) is their genuine structural experience. The practitioner's Snare (pure extraction) is their genuine structural experience. The open-source coalition's Scaffold (temporary coordination with sunset) is real \u2014 alternative frameworks ARE creating exit pathways. The patent office's Piton (performative ritual) is real \u2014 examination quality has degraded. The analytical observer's Mountain is a false summit \u2014 naturalizing the disclosure-exclusivity paradox obscures that the constraint is contingent on institutional design. The comprehensive view requires all perspectives: the patent system is simultaneously a coordination mechanism (for holders), an extraction mechanism (for practitioners), a degraded ritual (for the office), and a solvable coordination problem with alternative designs (from the analytical observer's position)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "trade_secret_vs_patent_tradeoff",
+      "software_patent_eligibility_ambiguity",
+      "innovation_commons_access_barriers"
+    ],
+    "dual_formulation_note": "Patent disclosure tensions decompose into domain-specific constraints: software patent eligibility (\u03b5=0.38, Tangled Rope), trade secret strategy (\u03b5=0.45, Snare), and commons access barriers (\u03b5=0.55, Snare). Each has different disclosure standards, suppression mechanisms, and beneficiary/victim structures. The family shares the core disclosure-exclusivity paradox but manifests differently across biotechnology, software, mechanical systems, and chemical patents."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    }
+  ]
+}

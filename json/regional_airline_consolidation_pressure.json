@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "regional_airline_consolidation_pressure",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rac"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Regional Airline Consolidation Pressure",
+    "topic_domain": "economic/aviation/competition",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "major_legacy_carriers",
+      "airport_hub_operators"
+    ],
+    "victims": [
+      "regional_airline_operators",
+      "secondary_market_communities",
+      "regional_route_connectivity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Regional Airline Operator",
+      "comment": "A regional carrier cannot exit without ceasing operations. Trapped by structural dependency on major carriers' feed networks, fuel cost volatility, and CRJ-900 aircraft financing. Bears full extraction through capacity requirements contracts, fuel surcharges, and slot restrictions. No alternative route to market access."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Secondary Market Community",
+      "comment": "Communities served by regional carriers experience both coordination benefit (connectivity to hub networks) and extraction (price increases, route abandonment risk, reduced schedule frequency). High switching costs and geographic constraints limit exit but not immutably."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Major Legacy Carrier",
+      "comment": "Legacy carriers benefit from regional feed networks with minimal coordination cost from their perspective. Can arbitrage regional capacity by shifting between owned-operated and partner-operated aircraft. Experience the constraint as pure coordination mechanism for hub-and-spoke leverage."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Low-Cost Carrier Entrant",
+      "comment": "Southwest, Allegiant, and low-cost carriers experience consolidation pressure as a temporary barrier that is being dissolved by alternative business models: point-to-point routing, secondary airports, all-Boeing fleets. Sunset mechanism: as fuel efficiency improves and secondary airport infrastructure develops, the regional consolidation constraint loses force."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "DOT Capacity and Slot Allocation",
+      "comment": "Runway capacity controls at major hubs (ORD, DCA, ATL, LGA) are theoretically allocated by DOT to prevent congestion. In practice, these slots are captured and defended by major carriers; the allocation mechanism persists as a performative gate while the real allocation is done through legacy carrier market power and regional feed contracts. Theater ratio reflects that slots are nominally public but functionally privatized."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Aircraft Manufacturer (Boeing/Airbus)",
+      "comment": "Aircraft manufacturers benefit from consolidation through increased CRJ and narrow-body aircraft orders from expanding legacy carriers, but also face extraction through fixed regional specs, warranty obligations, and aftermarket service requirements. Experience both coordination (standardized fleets) and asymmetric extraction (margin pressure on regional-sized jets)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "From a civilizational perspective, airline consolidation is framed as an inevitable response to fuel costs, labor availability, and network economics \u2014 a natural law of aviation. However, this naturalizes policy choices (slot allocation, foreign ownership restrictions, labor regulation) that could be restructured. The mountain classification is a false summit indicating naturalization of contingent institutional arrangements."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "regional_profitability_threshold",
+      "question": "What combination of fuel costs, labor wages, and aircraft financing makes a regional route economically unsustainable?",
+      "resolution_mechanism": "Time-series analysis of regional airline profitability against cost inputs; cross-carrier operational metrics; synthetic cost modeling with varied policy parameters",
+      "impact": "If threshold is primarily structural (fuel/physics): consolidation pressure is partially inevitable. If threshold is primarily policy-driven (labor rules, slot allocation): consolidation pressure could be reversed through regulatory restructuring.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Economic viability threshold for regional airline operations"
+    },
+    {
+      "id": "hub_network_necessity",
+      "question": "Is the hub-and-spoke model necessary for efficient route coverage, or is it primarily a legacy carrier strategy to capture secondary market connectivity?",
+      "resolution_mechanism": "Comparative analysis of point-to-point networks (Southwest, Frontier) vs hub-dependent networks (United, Delta); cost-structure modeling; community connectivity outcomes under different architectures",
+      "impact": "If necessary: regional consolidation reflects real network efficiency. If strategic: consolidation is extractive leveraging of legacy network advantages. Classification shifts from Tangled Rope (necessary coordination) to Snare (extractive gatekeeping) from regional carrier perspective.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether hub-and-spoke architecture is technically necessary or strategically chosen"
+    },
+    {
+      "id": "secondary_airport_viability",
+      "question": "Can secondary airports (Midway, Oakland, Love Field) develop sufficient connecting flight volume to serve as genuine alternatives to major hubs?",
+      "resolution_mechanism": "Operational data on secondary airport cargo/passenger volumes; infrastructure investment trends; route profitability at secondary vs primary airports",
+      "impact": "If secondary airports can scale: scaffold perspective confirmed \u2014 low-cost carrier sunset mechanism is real. If not: scaffold is aspirational and consolidation pressure persists longer than 20-year horizon.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scalability of secondary airports as consolidation alternatives"
+    },
+    {
+      "id": "foreign_ownership_constraint_binding",
+      "question": "How much of the regional consolidation pressure derives from the foreign ownership restrictions (49% non-US) that prevent global carriers from directly acquiring regional operators?",
+      "resolution_mechanism": "Counterfactual analysis: modeling regional carrier valuations under liberalized foreign ownership vs current restrictions; historical comparison to countries with different ownership rules",
+      "impact": "If binding: removing ownership restrictions would enable alternative consolidation paths (global carrier acquisition vs legacy carrier absorption). This shifts the constraint from purely structural to policy-dependent, making it a Scaffold with explicit policy sunset rather than market-driven sunset.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Binding effect of foreign airline ownership restrictions on consolidation dynamics"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Regional airline consolidation pressure arises from a structural asymmetry in the US aviation system: major carriers control hub airports and international routes through legacy slot allocations and network advantages, while regional carriers depend entirely on feed contracts with these majors for route access and passenger supply. This dependency creates a extraction mechanism where legacy carriers progressively pressure regional operators to accept lower margins, accept capacity commitments that exceed profitable demand, absorb fuel cost volatility, and ultimately either accept acquisition or cease operations. The constraint is 'tangled' because genuine coordination function exists (regional aircraft efficiently serve secondary markets and feed hub networks) alongside asymmetric extraction (legacy carriers capture the coordination surplus). Base extractiveness has grown from 0.35 (2015) to 0.58 (2025) as fuel costs, labor shortages, and aircraft financing have compressed regional margins while legacy carriers have consolidated further. The scaffold perspective from low-cost carriers represents a real sunset mechanism: point-to-point networks, secondary airport development, and all-electric regional aircraft (in development) could dissolve the hub-dependency structure within 10-20 years.",
+    "key_agents": [
+      "Regional Airline Operators: Primary victims (powerless/trapped) \u2014 financially dependent on feed contracts; face margin compression, capacity mandates, and acquisition pressure",
+      "Secondary Market Communities: Secondary victims (moderate/constrained) \u2014 depend on regional connectivity; face route abandonment risk and price increases as regional carriers consolidate",
+      "Major Legacy Carriers (United, Delta, American): Primary beneficiaries (institutional/arbitrage) \u2014 extract capacity coordination surplus; can shift between owned-operated and partner-operated aircraft; control hub slot allocation",
+      "Airport Hub Operators: Secondary beneficiary (institutional/arbitrage) \u2014 benefit from major carrier network concentration; maintain slot allocation authority",
+      "Low-Cost Carriers (Southwest, Allegiant, Frontier): Organized challengers (organized/mobile) \u2014 represent alternative business model that bypasses regional consolidation constraint through secondary airports and point-to-point routing",
+      "Aircraft Manufacturers (Boeing/Airbus): Mixed institutional actor (powerful/mobile) \u2014 benefit from consolidation-driven regional aircraft orders but face margin pressure on regional specs",
+      "DOT Capacity/Slot System: Institutional degraded actor (institutional/arbitrage) \u2014 slot allocation nominally public but functionally captured by legacy carriers; maintenance through performative regulation",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent policy and network arrangements as inevitable physics of aviation"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high and rising. Regional carriers face margin compression from fuel costs, labor competition, and aircraft financing, but the primary extraction mechanism is the feed contract structure itself \u2014 legacy carriers can demand capacity commitments, frequency requirements, and yield management terms that lock regional partners into low-margin operations. The measurement trajectory (0.35 \u2192 0.58) reflects both genuine structural cost increases and progressive intensification of extraction through contract renegotiation. Theater ratio (0.48): Moderate. DOT slot allocation and foreign ownership restrictions create procedural theater (appear to govern carrier relationships when they actually reflect legacy carrier market power), but the primary coordination function (feed networks, capacity efficiency) is functionally real, not purely theatrical. Theater ratio increases slightly (0.38 \u2192 0.48) as regulatory workarounds and contractual complexity increase without resolving the underlying asymmetry. Suppression (0.65): High. Regional operators face structural barriers to exit: aircraft financing requires major carrier contracts for revenue certainty; slot access at major hubs is controlled by legacy carriers; international routes are closed to regional operators. However, suppression is not absolute \u2014 some independent regional operators exist (Horizon, SkyWest); Southwest demonstrates that point-to-point routing is an alternative business model. The suppression reflects concentrated power, not physical impossibility.",
+    "perspectival_gap": "The constraint demonstrates maximal perspectival divergence. The legacy carrier sees a rope (efficient network coordination with minimal overhead). The regional operator sees a snare (trapped in low-margin feed dependency with no exit). The low-cost carrier sees a scaffold (temporary barrier being dissolved by alternative models). The secondary market community sees tangled rope (benefits from connectivity but extracted from by margin pressure). The DOT slot system sees a piton (allocated by regulation but functionally captured, maintained through policy inertia). The analytical observer risks seeing a mountain (inevitable consolidation) when the evidence points to a tangled rope with a sunset mechanism. The perspectival gap reveals that the constraint is not a single natural phenomenon but a set of institutional arrangements (slot allocation, feed contracting, foreign ownership rules, labor regulation) that could be restructured.",
+    "directionality_logic": "Directionality (d) is determined by each agent's structural position relative to the extraction flow. Legacy carriers as beneficiaries with arbitrage options (can exit through acquisition or rebalancing) experience low d \u2192 negative effective extraction \u03c7. Regional operators as victims with trapped exit (cannot exit without ceasing to exist) experience high d \u2192 high f(d) \u2192 high \u03c7. Low-cost carriers as organized agents with mobile exit (can operate through alternative business models) experience moderate d. Secondary market communities as constrained victims experience moderate-to-high d depending on alternate transportation options. The directionality derivation correctly predicts that legacy carriers perceive coordination (rope) while regional operators perceive extraction (snare) \u2014 the same structural arrangement produces opposite perceptual classifications based on exit capacity and beneficiary status.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The constraint satisfies all three tangled rope gates: (1) genuine coordination function exists (regional aircraft efficiently serve secondary markets and feed hub networks \u2014 this is real network efficiency, not pure theater); (2) asymmetric extraction exists (regional operators are locked into below-cost margin contracts while majors extract the coordination surplus); (3) active enforcement is required (legacy carriers must continuously negotiate and renegotiate feed contracts to maintain the arrangement). The mandatrophy is not 'is this coordination or extraction?' but 'what portion of the arrangement is real coordination versus extractive leverage?' The measurement trajectory shows increasing extractiveness (0.35 \u2192 0.58) while theater ratio stays moderate (0.38 \u2192 0.48), indicating that the coordination function remains real (low theater) but extraction has intensified due to structural cost pressures. The scaffold perspective from low-cost carriers confirms the sunset mechanism \u2014 alternative business models (point-to-point, secondary airports, all-electric aircraft) can replicate the coordination function without the asymmetric extraction. The constraint is not permanently tangled but tangled under current institutional arrangements."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "hub_airport_slot_allocation",
+      "international_route_carrier_licensing",
+      "regional_aircraft_manufacturing_margins"
+    ],
+    "dual_formulation_note": "Regional airline consolidation pressure is downstream of structural choices in hub airport slot allocation and foreign ownership restrictions. The consolidation pressure could be decomposed into three distinct constraints: (1) slot allocation asymmetry (how hubs are governed), (2) feed contract extraction (how regional operators are leveraged), and (3) aircraft financing dependency (how regional equipment is financed). This story treats consolidation as a unified phenomenon but acknowledges the causal upstream constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

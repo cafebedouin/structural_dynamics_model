@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "renewable_cost_parity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "renew"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Renewable Energy Cost Parity Constraint",
+    "topic_domain": "energy/economics/technology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_fossil_fuel_producers",
+      "grid_infrastructure_operators",
+      "energy_equipment_manufacturers"
+    ],
+    "victims": [
+      "renewable_deployment_communities",
+      "climate_mitigation_timeline"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Community Facing Climate Urgency",
+      "comment": "PERSPECTIVE 1: VULNERABLE COMMUNITIES (SNARE) \u2014 Communities dependent on rapid decarbonization face maximum extraction. They bear the costs of delayed transition (climate damage, health impacts, stranded infrastructure) while parity requirements lock them into slow adoption timelines. No exit: they cannot implement transition faster than cost curves permit. The constraint extracts their future welfare while they remain powerless to accelerate adoption."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Grid Operator",
+      "comment": "PERSPECTIVE 2: GRID OPERATORS (TANGLED ROPE) \u2014 Grid operators benefit from stable long-term planning enabled by parity requirements (coordination function: predictable investment horizons, manageable technical integration). But they also bear asymmetric costs: maintaining backup capacity for intermittency, managing network topology changes, absorbing stranded fossil asset risk. High suppression through regulatory requirement to maintain grid reliability regardless of technology transition speed. Both genuine coordination and extractive asymmetry present."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Equipment Manufacturer",
+      "comment": "PERSPECTIVE 3: RENEWABLE EQUIPMENT MANUFACTURERS (ROPE) \u2014 Primary beneficiaries. The parity requirement creates a coordination function (standardized procurement, predictable demand curves) while enabling extraction through sustained premium margins during the transition. Cost curves favor manufacturers: they can delay aggressive cost reduction by framing 'parity' as already achieved (LCOE accounting tricks, scope narrowing). Arbitrage: manufacturers can shift operations and supply chains globally; exit is low-cost."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Climate Policy Coalition",
+      "comment": "PERSPECTIVE 4: CLIMATE POLICY COALITION (SCAFFOLD) \u2014 Organized agents (climate scientists, environmental NGOs, renewable energy startups) view parity as a transitional scaffolding: it enables legal legitimacy for renewable deployment while market mechanisms and policy learning gradually reduce fossil lock-in. Low effective extraction because the coalition has agency and sees a sunset: as genuine parity emerges, the artificial parity requirements become redundant and dissolve. Sunset mechanism: technology cost curves and climate pressure eventually make fossil fuels uncompetitive regardless of parity framing."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Utility Regulatory Framework",
+      "comment": "PERSPECTIVE 5: UTILITY REGULATORY FRAMEWORK (PITON) \u2014 Traditional utility regulation assumes long-term asset depreciation and stable fuel cost curves. The parity constraint persists as regulatory theater: utilities maintain the language of 'full cost accounting' and 'market integration' while operating under depreciation rules designed for fossil fuels. The framework's original function (managing natural monopolies, ensuring cost recovery) has atrophied as grid technology and market structure change. Maintained through institutional inertia, not because it functions as designed. Theater ratio high: 'integrated resource planning' and 'least-cost procurement' processes often reach predetermined conclusions."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Thermodynamic View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / THERMODYNAMIC VIEW (MOUNTAIN) \u2014 From a purely physical perspective, cost parity between renewable and fossil energy reflects fundamental thermodynamic and geological limits: fossil fuels are highly energy-dense but depletable; renewables are dilute but abundant. The 'parity problem' appears as an invariant feature of energy physics \u2014 you cannot escape thermodynamic costs of resource conversion regardless of technology choice. However, the structural data contradicts this mountain framing: the measured extractiveness and suppression reflect institutional choices (accounting standards, subsidy structures, grid topology, policy timelines), not physical laws. The engine's false summit detector will flag this as naturalization of political economy as thermodynamics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "parity_accounting_definition",
+      "question": "What expenditure categories should be included in 'cost parity' calculations? Grid balancing? Transmission infrastructure? Decommissioning? System integration costs?",
+      "resolution_mechanism": "Standardized lifecycle cost accounting framework; comparison of parity claims across multiple accounting methodologies",
+      "impact": "If narrow LCOE (levelized cost of electricity) used: renewables appear at parity sooner, reducing measured extractiveness and suppression. If full system costs included: parity pushed further into future, increasing extraction. Current variation: 0.15\u20130.35 \u03b5 swing depending on scope.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Variation in 'cost parity' definition across accounting frameworks"
+    },
+    {
+      "id": "grid_integration_feasibility_threshold",
+      "question": "At what renewable penetration level (grid inertia, frequency stability, storage requirements) does the technical constraint (not cost) become binding?",
+      "resolution_mechanism": "Grid simulation and empirical data from high-renewable grids (Denmark, Uruguay, South Australia); identification of technical barriers independent of cost",
+      "impact": "If threshold low (20\u201330% penetration): cost parity is sufficient for rapid transition; constraint is purely economic (Rope or Tangled Rope). If threshold high (60\u201380%): grid integration costs and technical requirements exceed cost parity savings; constraint becomes structural (more Snare-like for communities dependent on rapid transition).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical threshold for grid integration feasibility"
+    },
+    {
+      "id": "fossil_subsidy_counterfactual",
+      "question": "If fossil fuel subsidies (direct and externalized: healthcare costs, climate damage, military expenditure on resource security) were fully internalized, what would actual cost parity be and when?",
+      "resolution_mechanism": "Meta-analysis of subsidy quantification studies; sensitivity analysis on externality valuations; comparison of actual deployment rates with full-cost LCOE",
+      "impact": "If true parity already achieved at current externality valuations: parity is performative theater masking political choice, not economic constraint. Extractiveness would increase (Snare classification more appropriate). If true parity still 5\u201310 years away: parity remains real constraint but measurement reveals political cost-shifting.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact of fossil fuel subsidy internalization on parity timeline"
+    },
+    {
+      "id": "technology_learning_rate_variance",
+      "question": "Are renewable cost curves following stable exponential learning patterns, or are they subject to supply-chain shocks, manufacturing bottlenecks, and geopolitical disruptions that could flatten trajectories?",
+      "resolution_mechanism": "Historical cost trajectory data with shock identification; forecasting model validation; supply-chain resilience analysis",
+      "impact": "If stable learning curves: parity timeline is predictable, extractiveness remains moderate. If volatile with flattening risk: trajectory is hostage to geopolitical contingencies, extractiveness and suppression increase unpredictably.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Stability and predictability of renewable cost learning curves"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The renewable energy cost parity constraint operates at the intersection of technology learning curves, economic incentives, and climate urgency. It manifests as a requirement that renewable energy reach price parity with incumbent fossil fuels before accelerated deployment can be justified politically and economically. This framing creates a structural tension: communities facing climate impacts experience the parity requirement as an extractive delay mechanism, while equipment manufacturers and utility operators experience it as a coordination framework that enables long-term planning and margin protection. The constraint exhibits hybrid characteristics: it contains genuine coordination functions (stable investment horizons, technical integration standards) alongside asymmetric extraction (delayed transition costs borne by vulnerable populations, premium margins sustained during transition). The theater ratio has increased from 0.42 to 0.55 over the interval as 'parity' claims have become increasingly contested and scope-dependent, with different accounting methodologies producing widely varying timelines. The constraint's extractiveness has grown from 0.22 to 0.38 as climate impacts have accelerated, making delay costs more visible, while technology learning curves have continued to narrow the actual cost gap\u2014creating a widening gap between the authentic cost convergence and the parity narrative used to justify continued fossil infrastructure investment.",
+    "key_agents": [
+      "Incumbent Fossil Fuel Producers: Primary beneficiary (institutional/arbitrage) \u2014 parity requirement delays market displacement and sustains stranded asset value during transition window",
+      "Renewable Equipment Manufacturers: Secondary beneficiary (institutional/arbitrage) \u2014 parity framing enables premium pricing and sustainable margins as production scales",
+      "Grid Infrastructure Operators: Mixed (moderate/constrained) \u2014 benefit from predictable transition timelines; bear asymmetric costs of grid management during technology transition",
+      "Climate-Vulnerable Communities: Primary victim (powerless/trapped) \u2014 experience delay costs through climate damage, health impacts, and stranded local infrastructure; no exit from parity timeline requirements",
+      "Climate Policy Coalition: Organized advocates (organized/constrained) \u2014 view parity as temporary scaffold; perceive sunset mechanism through market forces and policy learning",
+      "Utility Regulatory Agencies: Institutional theater (institutional/arbitrage) \u2014 maintain depreciation and cost-recovery rules designed for fossil fuel era; persist through inertia despite functional atrophy"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The parity constraint extracts from climate-vulnerable populations through delayed transition, imposing health and climate damage costs. However, the extraction is not total\u2014renewable deployment is accelerating in many jurisdictions despite parity framing, and genuine technology learning curves are converging costs independently. The measurement reflects that parity functions as a political brake, not an absolute barrier. Suppression (0.42): Moderate. Barriers to faster transition include financing structures, grid integration requirements, supply-chain capacity, and regulatory timelines. But suppression is not insurmountable\u2014some countries have deployed >50% renewable grids, and no fundamental physical law prevents acceleration. Theater ratio (0.55): Moderate-high and rising. The parity narrative has become increasingly performative as actual cost convergence proceeds faster than parity claims acknowledge. LCOE calculations claim parity or near-parity in many regions; yet deployment continues to face 'parity not yet sufficient' barriers in policy and financing. The gap between calculated parity and required parity for deployment reveals the constraint's performative function\u2014it justifies maintenance of fossil-compatible infrastructure and utility rate structures designed for the pre-parity era.",
+    "perspectival_gap": "The constraint demonstrates sharp perspectival separation. The beneficiary (fossil/renewable producers) sees rope\u2014their genuine coordination function is enabled by stable parity framing. The victim (climate-vulnerable communities) sees snare\u2014they cannot exit the temporal requirement and bear all delay costs. The grid operator sees tangled rope\u2014they coordinate integration while absorbing transition costs. The policy coalition sees scaffold\u2014they perceive an exit mechanism through technology learning curves and political pressure. The utility regulator sees piton\u2014the regulatory framework persists despite functional obsolescence. The analytical observer risks seeing mountain\u2014but structural analysis reveals institutional contingency, not thermodynamic necessity.",
+    "directionality_logic": "Directionality follows the extraction flow: fossil producers and renewable manufacturers derive arbitrage benefits (low d) from sustained price premiums during the transition window. Grid operators face constrained exit (medium d)\u2014they can invest in renewable integration but at mandated timelines and cost structures. Vulnerable communities face trapped exit (high d)\u2014they bear climate impacts regardless of transition speed and cannot exit the constraint's temporal requirements. The analytical observer at civilizational timescale risks d=0.5 (false symmetry), seeing 'inevitable thermodynamic tradeoff' instead of 'contingent political choice.' The climate policy coalition's d derives from their power to shape sunset mechanisms\u2014constrained exit but with strategic agency reduces their experienced extraction.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by separating genuine coordination functions from extractive delay mechanisms. The coordination function is real: standardized cost accounting, investment horizons, technical integration planning enable large-scale renewable deployment. The extraction is also real: the delay imposed by parity framing costs vulnerable populations more than the coordination benefit accrues to them. The tangled rope classification is stable across structural variations\u2014the two functions coexist in the same constraint with asymmetric distribution of costs and benefits. The false summit mountain classification (thermodynamic inevitability) is detectible through structural analysis: the constraints are political and institutional, not physical. Overcoming the mandatrophy requires acknowledging that parity is simultaneously a real economic phenomenon (cost curves are converging) and a performative narrative (parity framing is sustained beyond its original analytical purpose, masking continued extraction during transition)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "grid_stability_infrastructure",
+      "fossil_stranded_asset_write_down",
+      "renewable_supply_chain_bottleneck"
+    ],
+    "dual_formulation_note": "Cost parity decomposes into two structurally distinct constraints: (1) direct cost convergence (technology learning, manufacturing scale), which has \u03b5 ~0.08 (mountain-like empirically verifiable);  (2) parity-as-deployment-timeline (political/regulatory requirement), which has \u03b5 ~0.38 (tangled rope). The JSON story covers the second constraint (the one that matters for transition speed). The first constraint (pure technology learning curve) is downstream and should be modeled separately if fine-grained analysis is required."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

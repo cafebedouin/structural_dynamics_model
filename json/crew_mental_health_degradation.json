@@ -1,0 +1,215 @@
+{
+  "header": {
+    "constraint_id": "crew_mental_health_degradation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "crew_mhd"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Crew Mental Health Degradation in Long-Duration Missions",
+    "topic_domain": "aerospace/occupational_health/organizational_behavior",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mission_operations",
+      "organizational_leadership"
+    ],
+    "victims": [
+      "crew_psychological_wellbeing",
+      "mission_safety_culture"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Individual Crew Member",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL CREW MEMBER (SNARE) \u2014 Trapped by contractual obligations, mission criticality, and career consequences of refusing deployment. Bears psychological costs (isolation, confinement stress, circadian disruption, separation from family) with no legitimate exit mechanism. Mission completion requirements override wellbeing. Maximum extraction experienced by the powerless actor with no alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Flight Surgeon / Medical Officer",
+      "comment": "PERSPECTIVE 2: FLIGHT SURGEON / MEDICAL OFFICER (TANGLED ROPE) \u2014 Constrained by dual loyalty: medical oath to crew wellbeing vs. organizational pressure to clear crew for mission. Benefits from access to crew data and career advancement through mission success. Faces significant extraction through forced complicity in minimizing psychological risk. Some agency (can escalate concerns) but constrained by institutional hierarchy and career jeopardy."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Mission Operations Leadership",
+      "comment": "PERSPECTIVE 3: MISSION OPERATIONS LEADERSHIP (ROPE) \u2014 Experiences the constraint as coordination mechanism: managing crew psychological resources to maintain mission success. Net beneficiary with high arbitrage capacity (can defer, relocate, or redistribute crew). Sees mental health protocols as enabling mission coordination rather than constraining it. Extraction flows toward this institutional actor through maintained access to crew labor and attention."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Crew Unions / Advocacy Groups",
+      "comment": "PERSPECTIVE 4: CREW UNIONS / ADVOCACY GROUPS (TANGLED ROPE) \u2014 Organized agents with some power (collective bargaining, media advocacy, regulatory engagement) but constrained by mission-critical framing and national security priorities. Benefit from membership dues and advocacy presence; experience extraction through limited enforcement power. Some agency (can publicize problems, negotiate protocols) but structural constraints limit victory scope."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Mental Health Reform Initiatives",
+      "comment": "PERSPECTIVE 5: MENTAL HEALTH REFORM INITIATIVES (SCAFFOLD) \u2014 Temporary support structures (pre-deployment screening improvements, in-mission peer support programs, post-mission psychological integration protocols) showing sunset architecture. High theater (training emphasizes protocols; actual use varies by mission culture) but genuinely lower extraction than traditional model because initiatives create alternative pathways for crew support. Suppression declines as initiatives mature \u2014 crew have more legitimate channels to surface distress."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Traditional Stoicism-as-Selection Culture",
+      "comment": "PERSPECTIVE 6: TRADITIONAL STOICISM-AS-SELECTION CULTURE (PITON) \u2014 Vestigial institutional narrative that crew mental health challenges are individual weakness rather than structural extraction. The framing persists through inertia (astronaut/pilot culture idealization) despite evidence that psychological support improves outcomes. Theater ratio (0.68) reflects performative selection messaging ('we only choose psychologically resilient individuals') masking actual psychological degradation during missions. Function has atrophied \u2014 selection-based screening cannot prevent mission-induced degradation \u2014 but narrative persists."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalization Risk)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (NATURALIZATION RISK, APPEARS MOUNTAIN) \u2014 From a civilizational perspective, some degree of psychological stress in extreme environments may appear unchangeable \u2014 confinement, isolation, and separation from family are inherent to space/remote missions. Risks naturalizing contingent extraction as immutable fact of space exploration. However, the base properties contradict mountain classification: accessibility_collapse would require \u22650.85 (crew have well-established psychological support science); resistance would require \u22640.15 (organizational resistance to mental health prioritization is substantial). This is a false summit revealing naturalization bias."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "structural_vs_individual_psychology",
+      "question": "Is crew mental health degradation primarily a structural extraction mechanism (organizational prioritizes mission over crew wellbeing) or primarily individual susceptibility variation (some crew members are psychologically resilient to confinement; others are not)?",
+      "resolution_mechanism": "Longitudinal psychological assessment data comparing crew members across multiple missions; control groups of non-mission personnel exposed to similar confinement conditions; measurement of degradation rate variance between crew of similar selection profiles",
+      "impact": "If structural: constraint remains Tangled Rope/Snare. If primarily individual: classification shifts toward Rope (coordination mechanism for sorting resilient from vulnerable crew). If mixed: determine proportion to calibrate extraction baseline.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether mental health degradation is structural extraction or individual variation"
+    },
+    {
+      "id": "suppression_mechanism_type",
+      "question": "Is suppression of mental health challenges (0.72) primarily structural (career consequences, contractual lock-in, mission-critical justifications prevent reporting) or primarily internalized (crew have internalized the cultural narrative that psychological distress is individual weakness and self-censor reporting)?",
+      "resolution_mechanism": "Anonymous psychological assessment during missions; comparison of reported vs undetected psychological distress; exit interviews and post-mission debriefs with psychological transparency protocols; measurement of distress reporting rates post-retirement vs during service",
+      "impact": "If structural: suppression would decline if career consequences and contractual lock-in were removed. If internalized: crew would continue self-censoring even with external barrier removal \u2014 the constraint travels with the crew post-mission. Mixed suppression complicates extraction measurement and post-mission recovery.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether suppression of mental health reporting is structural or internalized"
+    },
+    {
+      "id": "mission_success_causality",
+      "question": "Do crew mental health optimization and mission success have positive, neutral, or negative correlation? Is suppressing psychological support actually instrumental to mission success, or does optimization improve outcomes?",
+      "resolution_mechanism": "Comparative analysis: missions with robust mental health protocols vs minimal protocols; outcome metrics (mission completion, safety incidents, crew performance, post-mission integration); cost-benefit analysis of psychological support investment vs mission risk reduction",
+      "impact": "If positive correlation (support improves success): constraint classification shifts significantly downward in extractiveness \u2014 the beneficiaries are actually also the beneficiaries of crew wellbeing. Extraction would be revealed as organizational error rather than intentional. If neutral: extraction is real but unplanned side effect. If negative: extraction is intentional trade-off.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Correlation between crew mental health support and mission success"
+    },
+    {
+      "id": "identity_lock_in_astronaut_culture",
+      "question": "To what degree are crew members identity-locked into the role (their self-concept constituted through astronaut/mission identity) vs structurally trapped (external barriers to exit)?",
+      "resolution_mechanism": "Post-career psychological assessment of identity transition; measurement of career-change motivation; analysis of crew retention post-mission vs exit rates after psychological degradation; identity restructuring requirements in post-mission integration",
+      "impact": "If primarily identity-locked: crew cannot imagine themselves outside the role even after psychological degradation. Exit would require identity dissolution \u2014 increases long-term extraction costs. If primarily structurally trapped: exit barriers removal would increase voluntary exit and create pressure for working conditions improvement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether crew psychological lock-in is identity-based or structural"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "crew_mhd_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52,
+      "id_override": "crew_mhd_extract_t30"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.58,
+      "id_override": "crew_mhd_extract_t60"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55,
+      "id_override": "crew_mhd_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.64,
+      "id_override": "crew_mhd_theater_t30"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.68,
+      "id_override": "crew_mhd_theater_t60"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 90,
+      "value": 0.56,
+      "id_override": "crew_mhd_extract_t90"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 90,
+      "value": 0.62,
+      "id_override": "crew_mhd_theater_t90"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 90
+  },
+  "commentary": {
+    "narrative_context": "Crew mental health degradation in long-duration missions (space, submarine, polar research, remote scientific stations) represents a structural constraint where organizational mission-completion imperatives systematically override crew psychological wellbeing. The constraint exhibits Tangled Rope characteristics: a genuine coordination function (organizing crew labor, maintaining psychological baseline for mission success) coexists with systematic extraction (psychological costs borne disproportionately by crew; organizational benefits from maintained mission schedule despite crew degradation). The theater_ratio (0.68) reflects performative mental health protocols that emphasize crew resilience and stoic selection while minimizing acknowledgment of actual psychological degradation during and after missions. The suppression (0.72) is high because crew face career consequences, contractual obligations, and cultural pressure to report only normalized stress levels. The extractiveness (0.58) reflects moderate but sustained extraction: crew psychological resources are extracted through confinement, isolation, circadian disruption, separation from family, and mission-critical prioritization over wellbeing \u2014 yet the extraction is not absolute (some crew complete multiple missions without catastrophic degradation) and some organizational investment in psychological support exists. The constraint's measurement trajectory shows degradation acceleration over time, with theater ratio increasing as protocols become more performative and extractiveness plateauing as organizational pressure to maintain mission schedule limits further psychological optimization.",
+    "key_agents": [
+      "Individual Crew Members: Primary victims (powerless/trapped) \u2014 contract-bound, career-dependent, socially isolated during missions; bear full psychological costs with minimal exit options",
+      "Mission Operations Leadership: Primary beneficiaries (institutional/arbitrage) \u2014 control crew deployment timing and mission scope; benefit from maintained schedule and crew productivity despite psychological costs",
+      "Flight Surgeons / Medical Officers: Secondary actors (moderate/constrained) \u2014 face dual loyalty between medical ethics and organizational pressure; constrained by hierarchy and career incentives to clear crew for continued deployment",
+      "Crew Unions / Advocacy Groups: Organized resistance (organized/constrained) \u2014 collective power limited by mission-critical framing; benefit from membership but constrained by national security and organizational resistance",
+      "Mental Health Reform Initiatives: Institutional reformers (organized/constrained) \u2014 building alternative protocols with sunset logic; partially constrained by organizational inertia and funding limitations",
+      "Organizational Culture (Stoicism Narrative): Institutional actor (institutional/arbitrage) \u2014 maintains vestigial narrative of crew resilience through selection; benefits from continued mission prioritization over wellbeing; perceives itself as degraded (piton) but persists through inertia"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Crew psychological resources are systematically extracted through confinement, isolation, family separation, circadian disruption, and mission-over-wellbeing prioritization. The extraction is not total (some crew complete multiple missions; some organizations invest in psychological support) and not clearly intentional (many organizations believe they are optimizing for mission success, not deliberately harming crew). Revised downward from initial 0.72 assessment due to genuine organizational investment in screening, support protocols, and post-mission integration \u2014 these represent partial coordination function alongside extraction. Suppression (0.72): High. Multiple barrier layers: contractual obligations prevent mid-mission exit; career consequences punish psychological disclosure (mission disqualification, peer judgment); cultural narrative frames distress as individual weakness; mission-critical framing justifies psychological cost acceptance. Crew have limited legitimate channels to report distress without jeopardizing mission or career. Theater_ratio (0.68): Moderate-high. Mental health protocols are substantially performative: pre-deployment screening emphasizes crew resilience; peer support training emphasizes coping and mission focus rather than psychological needs articulation; organizational communication emphasizes protocols rather than outcomes. Actual psychological support quality and availability vary widely by mission context. The measurements show theater increasing over time as organizational pressure to maintain mission schedule increases performative elements while reducing substantive psychological monitoring.",
+    "perspectival_gap": "The original research group sees coordination (Rope) \u2014 mission operations views psychological protocols as enabling crew labor coordination. Crew members see extraction (Snare) \u2014 their psychological resources are extracted with minimal consent or benefit. Flight surgeons see mixed coordination and extraction (Tangled Rope) \u2014 they must balance professional ethics with organizational pressure. The open science coalition analogue here is mental health reformers (Scaffold) \u2014 they are building alternative protocols with sunset logic. The journal editorial system analogue is organizational stoicism culture (Piton) \u2014 performative emphasis on crew resilience persists despite limited function. The naturalization risk appears at the analytical level (Mountain) \u2014 risks treating psychological stress as inherent to extreme environments rather than as contingent extraction.",
+    "directionality_logic": "Each perspective's directionality (d) flows from structural position. Individual crew members are trapped (highest d \u2192 highest f(d) \u2192 highest experienced extraction chi). They have no exit options and bear full psychological costs. Mission operations leadership has arbitrage exit (lowest d \u2192 low/negative f(d)) \u2014 they can defer, relocate, or redistribute crew, meaning the constraint subsidizes their operational flexibility. Flight surgeons face constrained exit and dual-victim status (moderate d). Advocacy groups have some organized power but constrained exit (moderate d, offset upward by organized power modifier). The psychological wellbeing itself is labeled as victim (abstract collective good that cannot exit) \u2014 it receives maximum d treatment in the engine's derivation chain. The directionality override is not needed \u2014 structural data (beneficiaries: mission_operations, organizational_leadership; victims: crew_psychological_wellbeing, mission_safety_culture) produces accurate d values through the standard derivation.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that crew mental health degradation is genuinely a Tangled Rope constraint, not a failure of classification. The coordination function is real: organizing crew labor for mission success requires some psychological baseline and some organizational investment in crew welfare. The extraction is also real: crew bear disproportionate psychological costs; organizational leadership bears minimal psychological risk while capturing mission success benefits. The Snare perspective is the crew member's experiential reality \u2014 they experience near-total extraction. The Rope perspective is the organizational reality \u2014 they experience coordination benefits and moderate extraction. The Scaffold perspective is the reformer reality \u2014 they see temporary constraints being solved by cultural evolution. The Piton perspective is the organizational culture reality \u2014 stoicism narrative persists despite degraded function. No single type is 'correct' \u2014 the presheaf over observation sites is the answer. The engine correctly identifies this as Tangled Rope at the analytical level because the base properties contain BOTH genuine beneficiaries (mission operations) and genuine victims (crew wellbeing) and BOTH coordination function (organizing crew labor) and asymmetric extraction (psychological costs to crew, benefits to operations). The false summit (Mountain) would commit the naturalization error \u2014 treating contingent organizational choices about prioritizing mission over crew as immutable laws of space exploration."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "organizational_risk_externalization",
+      "astronaut_recruitment_pipeline"
+    ],
+    "dual_formulation_note": "Crew mental health degradation is a distinct constraint from the organizational structures that enable it (risk externalization) and from the recruitment incentive structures that perpetuate it (astronaut pipeline idealization). All three are linked: organizational risk externalization creates structure that enables mental health extraction; the pipeline idealizes crew resilience, filtering for psychological traits compatible with extraction tolerance. The three constraints form a cluster where degradation of one increases pressure on the others."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

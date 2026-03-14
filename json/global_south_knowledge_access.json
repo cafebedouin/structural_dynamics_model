@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "global_south_knowledge_access",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gsouthka"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Global South Knowledge Access Restriction",
+    "topic_domain": "knowledge_infrastructure/epistemic_justice",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "global_north_publishers",
+      "paywalled_journal_systems",
+      "subscription_licensing_intermediaries"
+    ],
+    "victims": [
+      "global_south_researchers",
+      "developing_world_institutions",
+      "epistemic_justice"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Developing World Researcher",
+      "comment": "PERSPECTIVE 1: DEVELOPING WORLD RESEARCHER (SNARE) \u2014 Trapped by institutional poverty and currency barriers. Cannot afford subscription fees (often $30-40 per article or $5,000+ annual institutional subscriptions). No meaningful exit option: participation in global knowledge production requires access to published literature. Maximum extraction experienced. Cannot organize effectively across dispersed low-resource institutions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Developing Nation Research Institution",
+      "comment": "PERSPECTIVE 2: DEVELOPING NATION RESEARCH INSTITUTION (TANGLED ROPE) \u2014 Constrained by budget limitations and political priority competition. Genuinely benefits from journal coordination (access enables research participation, publication pipelines, citations). Also bears asymmetric extraction through escalating subscription costs (annually 5-15% increases) and licensing restrictions. Has some negotiating power (consortial licensing, government advocacy) but insufficient to achieve fair terms."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Paywalled Journal System",
+      "comment": "PERSPECTIVE 3: PAYWALLED JOURNAL SYSTEM (ROPE) \u2014 Benefits from coordinating peer review, quality assurance, and distribution. Experiences the constraint as pure coordination problem: managing access controls enables sustainable operation (they claim). Net beneficiary \u2014 extraction flows toward this actor. Has exit option (open-access transition) but perceives it as economically threatening rather than viable."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Global North Research Consortium",
+      "comment": "PERSPECTIVE 4: GLOBAL NORTH RESEARCH CONSORTIUM (ROPE) \u2014 Primary beneficiary. Well-funded institutions negotiate favorable site licenses, provide researchers unlimited institutional access. Experiences the constraint as coordination mechanism (centralized publishing enables citation networks, quality control, career advancement through prestigious venue publication). Extraction does not touch this actor \u2014 they are subsidized by the system."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Science Movement",
+      "comment": "PERSPECTIVE 5: OPEN SCIENCE MOVEMENT (SCAFFOLD) \u2014 Organized agents (arXiv, Open Access Button, Plan S, institutional repositories) see this as a temporary structural failure being solved through alternative architectures. Has genuine sunset: preprints, open-access mandates, and funder requirements are building parallel knowledge infrastructure. Experiences suppression from established publishers but has agency and exit pathways (institutional repositories, funder mandates, open licenses). Effective extraction is moderate because the organizing coalition perceives viable alternatives."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Copyright/IP Legal Framework",
+      "comment": "PERSPECTIVE 6: COPYRIGHT/IP LEGAL FRAMEWORK (PITON) \u2014 The legal apparatus (copyright duration, patent protections, licensing restrictions) persists largely through institutional inertia. Its coordination function (incentivizing knowledge production through exclusivity) is partially atrophied \u2014 much research is publicly funded yet publicly inaccessible. Theater is high (copyright framed as necessary incentive, but empirical evidence shows open access increases citations and impact). The legal framework maintains access restrictions through enforcement of outdated IP norms rather than genuine functional necessity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a naturalization frame, knowledge access restriction appears inevitable: production of high-quality research requires funding, peer review infrastructure, and distribution systems; these systems require revenue streams; paywalling is a natural market mechanism. This perspective risks false summitry \u2014 it naturalizes a contingent political choice (centralized paywall model) as an immutable feature of knowledge production."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "knowledge_production_necessity",
+      "question": "What fraction of the observed paywall extraction is necessary to fund legitimate research infrastructure vs. what fraction is rent-seeking profit accumulation?",
+      "resolution_mechanism": "Comparative accounting: journal production costs vs. subscription revenue; open-access journal sustainability analysis; publisher profit margins (typically 30-40% vs. scientific publishing norms of 10-15%)",
+      "impact": "If > 60% is rent-seeking: constraint reclassifies from Tangled Rope toward Snare (pure extraction with minimal coordination). If < 30% is rent-seeking: coordination function is genuine, classification holds as Tangled Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of paywall revenue that funds coordination vs. captures economic rent"
+    },
+    {
+      "id": "open_access_sustainability",
+      "question": "Can open-access models (preprints, government-funded repositories, author-fee models) actually sustain the quality-control and distribution infrastructure at global scale?",
+      "resolution_mechanism": "Empirical tracking of open-access journal quality metrics (citation impact, retraction rates, peer review rigor); cost accounting for Plan S and similar mandates; long-term stability analysis of non-profit open platforms",
+      "impact": "If sustainable: scaffold perspective is confirmed, sunset timeline is real (15-25 years for full transition). If not: open-access represents aspirational ideology without structural viability; scaffold reclassifies toward rope (coordination without real exit path).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether open-access models can sustainably replace paywalled publishing at scale"
+    },
+    {
+      "id": "epistemic_harm_quantification",
+      "question": "What is the epistemic damage (slower science, biased research agendas, missed discoveries) from Global South researchers lacking full knowledge access, and does it exceed the coordination benefits of centralized quality control?",
+      "resolution_mechanism": "Bibliometric analysis of citation patterns and research diversity; comparative innovation rates by access level; survey of researcher populations on how access restrictions affect research direction and collaboration",
+      "impact": "If epistemic harm significantly exceeds coordination benefit: classification moves toward Snare from developing world perspective. If harm is minor: Tangled Rope classification is accurate \u2014 extraction cost is balanced against genuine coordination value.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Epistemic harm from access restrictions vs. coordination benefits of quality control"
+    },
+    {
+      "id": "alternative_peer_review_viability",
+      "question": "Can decentralized peer review systems (post-publication review, open commenting, reputation-based quality signals) provide equivalent quality assurance to traditional paywalled journal gatekeeping?",
+      "resolution_mechanism": "Comparative analysis of retraction rates, fraud detection rates, and impact factor correlations across traditional journals vs. open-review platforms; longitudinal study of preprint quality evolution",
+      "impact": "If alternative systems work: paywall's coordination function is dispensable; reclassifies toward Snare. If traditional gatekeeping is necessary: coordination function is genuine; Tangled Rope holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative peer review models provide equivalent quality assurance"
+    },
+    {
+      "id": "global_north_subsidy_dependency",
+      "question": "To what extent does the paywall model depend on Global North institutional subscription revenue vs. how much could it function on open-access author fees alone?",
+      "resolution_mechanism": "Financial modeling of journal economics; analysis of which journals have successfully transitioned to full open-access; comparison of subscription revenue vs. article processing charges (APCs) in hybrid/open journals",
+      "impact": "If Global North subsidizes Global South access through high institutional fees: paywall is a North-South transfer mechanism wearing the mask of market coordination. If model is symmetric: less asymmetric extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Dependence of paywall model on Global North subscription revenue"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.63
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Global knowledge access through paywalled academic publishing represents a structural constraint that extracts wealth and epistemic resources from the Global South while claiming to coordinate scientific quality assurance. The constraint exhibits the core Tangled Rope signature: genuine coordination function (peer review, quality control, curation) layered with asymmetric extraction (subscription fees that developing-world institutions cannot afford, profit margins that exceed production costs, licensing restrictions on use and redistribution). The extractiveness has increased measurably over three decades as journal consolidation (six corporations control >50% of research publishing) has reduced competitive pressure and increased subscription costs annually at 5-15% \u2014 far exceeding inflation or library budget growth. The theater ratio (0.58) reflects that much of the paywall's claimed necessity for quality control is performance: open-access and preprint platforms (arXiv, bioRxiv, medRxiv) demonstrate equivalent or superior quality signals through decentralized review, yet the paywalled system persists by leveraging institutional inertia (prestige, career advancement systems built around paywalled journals) and legal enforcement (copyright/licensing). The developing world researcher faces a snare: full participation in global science requires knowledge the paywalled system controls.",
+    "key_agents": [
+      "Global South Researchers: Primary victims (powerless/trapped) \u2014 cannot afford subscription access; participation in knowledge production requires overcoming access barriers; no exit option",
+      "Developing World Research Institutions: Secondary victims (moderate/constrained) \u2014 face choice between subscription costs and research capacity; some negotiating power (consortial licensing) but insufficient to achieve fair terms",
+      "Paywalled Journal Systems: Primary beneficiary (institutional/arbitrage) \u2014 coordinate peer review and quality assurance; capture excess extraction through high margins and price discrimination; perceive open-access as existential threat",
+      "Global North Universities and Research Centers: Secondary beneficiary (institutional/arbitrage) \u2014 have fully subsidized access through institutional subscriptions; experience constraint as pure coordination; not directly exposed to extraction",
+      "Open Science Coalition: Organized agents (organized/constrained) \u2014 arXiv, Open Access Button, Plan S, funder mandates building alternative infrastructure with genuine sunset pathway; perceive paywall as temporary market failure being corrected",
+      "Copyright and IP Legal Framework: Institutional enforcement mechanism (institutional/arbitrage) \u2014 maintains paywall viability through legal enforcement of licensing restrictions; seen as enabling infrastructure by publishers but increasingly recognized as contingent policy choice",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing paywall as inevitable feature of knowledge production rather than contingent political-economic arrangement"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and increasing. The paywall mechanism has genuine coordination value (peer review, editorial curation, distribution infrastructure cost ~$5-10k per article in traditional publishing), but captured rents far exceed coordination cost. Publisher profit margins of 30-40% vs. 10-15% norms indicate substantial excess extraction. The increase over time (0.35 \u2192 0.58) reflects consolidation of publishing market (six corporations control >50%) reducing competitive pressure and enabling annual price increases of 5-15%. Suppression (0.72): High. Multiple structural barriers prevent exit: (a) Institutional barriers \u2014 prestige and career advancement systems built around paywalled venue publication; researchers cannot optimize for quality alone; (b) Economic barriers \u2014 institutional budgets cannot afford alternative systems; transitioning to open-access requires coordinated funding model change; (c) Legal barriers \u2014 copyright and IP frameworks enforce licensing restrictions; (d) Network barriers \u2014 researchers must follow where funding bodies and career systems lead; defection costs are high. Theater ratio (0.58): Moderate and increasing. The claimed necessity for paywall model (funding quality peer review, maintaining standards) is partly theatrical \u2014 open-access systems demonstrably provide equivalent quality signals. The theater increases as the open-access alternative becomes more viable and more clearly comparable in quality metrics. Claimed type (Tangled Rope): Required beneficiary (paywalled systems), victims (developing world researchers), and active enforcement (legal/licensing structures) all present.",
+    "perspectival_gap": "The constraint exhibits maximal perspectival divergence. The developing world researcher sees a snare \u2014 their exit is structurally blocked and the constraint extracts from them without offering proportional coordination benefit. The developing nation institution sees a tangled rope \u2014 both genuine coordination benefit (access enables participation, citations, prestige) and asymmetric extraction (unsustainable costs). The Global North university sees pure coordination (rope) \u2014 the constraint solves their knowledge distribution problem with no experienced extraction. The paywall system sees coordination (rope) \u2014 it genuinely solves the problem of funding peer review and distribution. The open science movement sees a temporary problem (scaffold) \u2014 arXiv, preprints, and open-access mandates are building alternative infrastructure with a real sunset timeline (15-25 years). The legal IP framework sees itself as enabling necessary coordination (rope), but the analytical observer sees the IP framework itself as performative (piton) \u2014 maintaining outdated restrictions through institutional inertia rather than functional necessity. The false summit (mountain) naturalizes paywall as inherent to knowledge production, ignoring the contingency of the current institutional arrangement.",
+    "directionality_logic": "The directionality derivation chain produces high d values (high extraction experienced) for developing-world researchers because they are victims with trapped exit options: they cannot afford access and have no alternative pathway to knowledge. The Global North institution derives low d (benefits without extraction cost) because they are beneficiaries with arbitrage options: they can negotiate institutional licenses or transition to open access without bearing structural costs. The paywalled system derives low d (benefits from coordination function) because they are institutional beneficiaries with arbitrage exit options. The developing nation institution derives moderate d (some extraction, some benefit) because they are both victims (bearing cost burden) and partial beneficiaries (gaining access and prestige). The open science coalition derives moderate d (constrained exit, but exits are viable) because they can build alternative infrastructure though facing resistance. The legal framework derives low d (enables extraction for others) as an institutional mechanism rather than direct actor. These derivations explain why the same constraint classifies as snare from one perspective, tangled rope from another, and rope from yet another \u2014 the structural extraction flow runs toward and away from different agents depending on their position in the system.",
+    "mandatrophy_analysis": "RESOLVES: The mandatrophy is resolved by recognizing that the constraint is genuinely hybrid. The paywalled system does coordinate (peer review, quality assurance, distribution infrastructure are real coordination functions). It also genuinely extracts (publisher profit margins, price discrimination, geographic access barriers are real extraction). The classification as Tangled Rope is correct precisely because both components are structural, not because one is naturalized or misnamed. The perspectival gap reveals that the mix is experienced differently: Global North sees pure coordination because they are subsidized; Global South sees pure extraction because they bear the cost. The false summit (analytical/mountain) is the error \u2014 it naturalizes the paywall as inevitable when the coordination function could be performed by alternative systems with lower extraction. The scaffold perspective (open science with sunset) and piton perspective (IP framework with theater) together provide diagnostic specificity: the paywall persists not because it is functionally necessary but because it is legally protected (copyright/licensing) and institutionally entrenched (career systems built around paywalled journals). The constraint is not an immutable feature of knowledge production \u2014 it is a contingent institutional arrangement being actively challenged by viable alternatives. Resolving the mandatrophy requires distinguishing the coordination function (real, worth maintaining) from the current institutional apparatus (contingent, replaceable)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "research_prestige_hierarchy",
+      "global_innovation_capacity",
+      "developing_world_institutional_capacity"
+    ],
+    "dual_formulation_note": "The global south knowledge access constraint represents extraction through institutional arrangements rather than direct physical barriers. It is upstream of specific research outcome constraints (innovation rates, institutional capacity building) whose extractiveness depends partly on this knowledge access bottleneck. The paywall acts as a gating constraint on broader epistemic justice dynamics."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

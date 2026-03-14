@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "parental_liability_asymmetry",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pla"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Parental Liability Asymmetry",
+    "topic_domain": "family_law/institutional_responsibility",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_child_welfare_apparatus",
+      "state_liability_avoidance"
+    ],
+    "victims": [
+      "economically_vulnerable_parents",
+      "child_developmental_outcomes"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Economically Vulnerable Parent",
+      "comment": "PERSPECTIVE 1: ECONOMICALLY VULNERABLE PARENT (SNARE) \u2014 Bears unlimited personal liability for child neglect/abuse outcomes even when state welfare systems fail to intervene despite known risk. Cannot exit parental role; faces criminal prosecution, asset seizure, incarceration. Suppression is structural: legal definitions of adequate care are indexed to middle-class material capacity; poverty itself becomes culpable negligence. Maximum extraction with minimal alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Working-Class Parent Managing Risk",
+      "comment": "PERSPECTIVE 2: WORKING-CLASS PARENT (TANGLED ROPE) \u2014 Genuine coordination function exists: parents do need incentive to maintain child safety. But the liability assignment is asymmetric \u2014 parents bear full legal risk even when structural constraints (poverty, lack of childcare, underfunded schools) prevent meeting legal standards. High cost to exit (child separation, criminal record) but some agency through resource optimization and documentation. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Child Welfare State Apparatus",
+      "comment": "PERSPECTIVE 3: CHILD WELFARE STATE APPARATUS (ROPE) \u2014 Experiences the constraint as enabling coordination: parental liability allocates responsibility for child safety at the lowest enforcement cost. The state obtains compliance without maintaining universal monitoring, intervention, or support systems. Arbitrage exit: the state can reallocate liability burden upward (to parents) or downward (to communities/institutions) as budget cycles demand. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Child Protective Services System",
+      "comment": "PERSPECTIVE 4: CHILD PROTECTIVE SERVICES (TANGLED ROPE) \u2014 Under-resourced institutional actor bearing genuine coordination function (preventing child abuse/neglect) alongside extraction (deflecting liability to parents). CPS must investigate parental conduct while itself operating under budget constraints that prevent adequate intervention or support. Constrained by caseload/funding limits; cannot exit responsibility. Experiences the constraint as both enabling and extractive."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Family Support and Advocacy Organizations",
+      "comment": "PERSPECTIVE 5: FAMILY SUPPORT ORGANIZATIONS (SCAFFOLD) \u2014 Organized agents (legal aid, family service nonprofits, community child centers) see parental liability asymmetry as a temporary policy problem solvable through systemic reform: shifting from individual liability to shared responsibility models, expanding public childcare, redefining adequate care standards to account for structural poverty. Mobile exit: these organizations can build alternative service pathways. The sunset logic is real \u2014 some jurisdictions have shifted to family preservation models reducing liability extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Patriarchal Family Responsibility Doctrine",
+      "comment": "PERSPECTIVE 6: PATRIARCHAL FAMILY DOCTRINE (PITON) \u2014 The underlying legal principle (parents are responsible for children's welfare/conduct) has largely atrophied into theater. Modern enforcement is selective, targeting economically vulnerable families while wealthy parents with access to expert childcare, private schools, and legal defense obtain de facto immunity. The principle persists through institutional inertia and ideological attachment to family autonomy rather than through functional enforcement of universal standards. Theater ratio indicates degradation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational view, the constraint reflects a structural tension between child protection (genuine coordination need) and cost externalization (extraction mechanism). The asymmetry is neither natural law nor pure coordination \u2014 it is a contingent institutional choice to allocate safety responsibility to parents while maintaining state capacity to criminalize parental conduct without providing material support for compliance. This is a tangled rope: genuine coordination function (children need protection), asymmetric extraction (burden on vulnerable agents), active state enforcement through liability law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "structural_poverty_vs_parental_negligence",
+      "question": "What portion of prosecuted parental 'neglect' reflects genuine inability to provide adequate care (structural poverty) versus genuine indifference or incapacity to parent?",
+      "resolution_mechanism": "Longitudinal data: follow families prosecuted for neglect post-prosecution; measure outcomes when material support is provided (housing, food security, childcare) vs. incarceration. Correlation between neglect charges and introduction of material support programs.",
+      "impact": "If structural poverty is dominant cause: parental liability is mislabeled extraction (should shift to Snare). If genuine parental incapacity is dominant: classification as Tangled Rope is correct but extraction ratio \u03b5 is too high. If mixed: decompose into two distinct constraints (structural poverty barrier + genuine incapacity/indifference).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of neglect attributable to structural poverty vs. parental incapacity"
+    },
+    {
+      "id": "state_liability_counterfactual",
+      "question": "If the state bore direct liability for child safety outcomes (rather than parents), would child welfare improve, degrade, or remain unchanged?",
+      "resolution_mechanism": "Comparative jurisdictional analysis: jurisdictions with state-primary liability (e.g., some EU models emphasizing state support over parental prosecution) vs. parental-primary liability models. Measure child safety outcomes, cost of intervention, family preservation rates, and parent-state conflict.",
+      "impact": "If state-primary improves outcomes: parental liability is extractive overhead, not coordination benefit \u2014 downgrade to Snare. If outcomes degrade: coordination function is real but asymmetry is necessary. If unchanged: the liability allocation is orthogonal to actual child safety (indicates piton degradation).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether state-primary liability would improve child welfare outcomes"
+    },
+    {
+      "id": "identity_fusion_in_parental_liability",
+      "question": "To what extent is parental liability accepted because parents have internalized the narrative that bearing unlimited responsibility for child outcomes is constitutive of parenthood itself?",
+      "resolution_mechanism": "Qualitative interviews and narrative analysis: do parents describe liability as external punishment or as intrinsic to their identity/role? Analysis of parental discourse before/after exposure to alternative models (shared responsibility, state support frameworks). Measurement of identity-based resistance to liability reform.",
+      "impact": "If identity-locked: the constraint persists through cognitive capture even when material barriers are removed \u2014 the binding mechanism is internal (identity fusion), not external (legal/economic). This would elevate the classification from Snare/Tangled Rope to indicate a stronger hold. If not identity-locked: parents perceive liability as external punishment; reform faces only structural/political barriers, not psychological resistance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether parental acceptance of liability reflects identity fusion with the parental role"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the measured suppression (0.62) primarily structural (legal barriers to exit, asset seizure, incarceration threat) or internalized (parents have accepted liability as deserved, moral obligation)?",
+      "resolution_mechanism": "Post-liability-reform data: when legal suppression mechanisms are reduced (decriminalization, liability caps, statutory defenses for structural poverty), do parents seek exit or maintain engagement? Measure compliance persistence after legal threat is removed.",
+      "impact": "If structural: suppression should decrease when legal mechanisms are reformed. If internalized: suppression persists after legal reform because parents carry the obligation internally \u2014 the constraint is more entrenched than structural measures suggest.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in parental liability acceptance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Parental liability asymmetry describes the legal and institutional arrangement where parents bear unlimited personal and criminal liability for child safety, welfare, and conduct outcomes, while the state maintains capacity to prosecute parental 'neglect' without providing proportional material support for compliance or resources to prevent failure. This constraint exhibits a genuine but highly asymmetric coordination function: children do require protection, and parental incentive for vigilance serves that function. However, the allocation of responsibility is structured to minimize state spending and liability exposure while maximizing parental culpability \u2014 particularly for economically vulnerable families who lack the material and informational resources to meet middle-class adequacy standards that are encoded in law. The constraint has intensified over the past two decades (extractiveness rising from 0.42 to 0.58) as mandatory reporting laws have proliferated, criminal standards for parental conduct have expanded, and family court proceedings have become more adversarial, while public investment in family support systems has stagnated. Theater ratio (0.55) reflects that much enforcement is performative: high-profile cases receive intensive prosecution while systemic failures (school systems failing to detect abuse, welfare systems failing to intervene despite known risk) are treated as separate issues rather than as state liability failures.",
+    "key_agents": [
+      "Economically Vulnerable Parents: Primary victims (powerless/trapped) \u2014 bear unlimited liability for outcomes beyond their material control; face criminal prosecution even when state systems fail to intervene",
+      "Working-Class Parents Managing Risk: Secondary victims (moderate/constrained) \u2014 navigate liability asymmetry through resource optimization and documentation; some agency but high cost of failure",
+      "Child Welfare State Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 externalizes responsibility to parents; obtains compliance without maintaining universal monitoring or support systems",
+      "Child Protective Services: Secondary institutional actor (institutional/constrained) \u2014 implements liability regime while itself under-resourced; bears genuine coordination function (protecting children) alongside extraction (deflecting state liability)",
+      "Family Support and Advocacy Organizations: Organized reformers (organized/mobile) \u2014 building alternative models based on shared responsibility and structural support; mobilizing for sunset of pure parental liability regime",
+      "Patriarchal Family Doctrine: Institutional principle (institutional/arbitrage) \u2014 the underlying legal principle persists through ideological attachment and institutional inertia despite selective, class-stratified enforcement"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The state captures significant benefit by externalizing child safety responsibility to parents while maintaining state authority to criminalize parental conduct. However, extraction is not total (0.66+) because genuine coordination function exists \u2014 parental vigilance does reduce child harm. The extraction reflects the *asymmetry* in burden allocation, not absence of coordination need. Suppression (0.62): Moderate-high. Multiple suppression mechanisms operate: (1) legal threat of prosecution, asset seizure, family separation; (2) definitional capture (poverty-indexed adequacy standards encode class assumptions); (3) selective enforcement (wealthy families obtain de facto immunity through expert childcare/legal defense); (4) informational asymmetry (parents often unaware of specific legal standards until violation occurs). Theater ratio (0.55): Moderate. Enforcement is selective and performative \u2014 high-profile cases receive intensive attention while systemic failures (school detection, welfare coordination) are treated as separate systems. The theater is lower than for piton-class constraints because genuine parental liability does occur; but it is significant because enforcement tracks class/visibility rather than actual child danger. Extractiveness rising over 20-year interval reflects proliferation of mandatory reporting, expansion of criminal standards, and intensified family court adversarialism without corresponding increase in support systems.",
+    "perspectival_gap": "The core perspectival gap is between the vulnerable parent (Snare at d\u22480.92) and the state apparatus (Rope at d\u22480.08). The parent experiences unlimited liability and no exit; the state experiences cost-minimization and flexibility. At intermediate d values, intermediate classifications appear: working-class parents see Tangled Rope (mixed burden and benefit), CPS sees Tangled Rope (implementing extraction while under-resourced). Organized agents (family support orgs) see Scaffold because they have agency to build alternative pathways. The patriarchal doctrine classification as Piton indicates that the underlying principle has atrophied into theater \u2014 modern enforcement is selective and class-stratified, not universal, suggesting the functional coordination purpose (universal parental responsibility) has been displaced by extraction purpose (state liability avoidance for wealthy families while targeting vulnerable families).",
+    "directionality_logic": "Each agent's experienced extractiveness is computed from their d value via the sigmoid f(d). Vulnerable parents with d\u22480.92 experience f(d)\u22481.32 \u2014 their experienced extraction is amplified by their powerless position and trapped exit status, magnifying the base extractiveness. Institutional beneficiaries with d\u22480.08 experience f(d)\u2248-0.10 \u2014 the constraint appears as negative extraction (net benefit/coordination) from their position. The analytical observer's d\u22480.70 produces f(d)\u22481.05 \u2014 moderate amplification. The spatial scope (national) applies a scope modifier \u03c3(S)=1.0 (no amplification or dampening at national scope). Effective extraction chi = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) ranges from \u2248 0.58 \u00d7 (-0.10) \u00d7 1.0 \u2248 -0.06 (beneficiary view) to \u2248 0.58 \u00d7 1.32 \u00d7 1.0 \u2248 0.77 (victim view). The gap between these experienced values is the perspectival gap that makes the constraint visible as extraction from victim position, coordination from beneficiary position.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that parental liability is neither pure coordination (protection of children is genuinely needed) nor pure extraction (the liability mechanism does serve a protective function), but a tangled rope where coordination function has been preserved while extraction has intensified. The constraint is NOT a false positive for Tangled Rope \u2014 it genuinely exhibits both coordination (child safety incentives) and asymmetric extraction (burden on vulnerable agents, state liability avoidance). The rising extractiveness over 20 years indicates that enforcement has intensified without corresponding state investment in support systems, gradually shifting the constraint toward pure snare (extraction) from some perspectives (vulnerable parents). The theater ratio is moderate (0.55) because enforcement is selective rather than performative throughout \u2014 some parents do face real consequences, but the class stratification in enforcement indicates the coordination function is being displaced by extraction in practice. Mandatrophy is resolved by recognizing that the constraint is legitimately Tangled Rope at the analytical level (it exhibits both functions) while acknowledging that from the perspective of economically vulnerable parents, the extraction function dominates and the constraint appears as Snare."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "mandatory_reporting_escalation",
+      "child_welfare_system_capacity",
+      "family_court_adversarialism"
+    ],
+    "dual_formulation_note": "Parental liability asymmetry is upstream of specific enforcement mechanisms (mandatory reporting, CPS intervention thresholds, family court standards). The separate constraint stories on mandatory reporting escalation and family court adversarialism represent downstream intensifications of the base liability asymmetry. This story captures the foundational institutional arrangement; downstream stories model how enforcement mechanisms have changed over time."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

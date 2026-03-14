@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "k12_school_funding_inequality",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "k12fund"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "K-12 School Funding Inequality in the United States",
+    "topic_domain": "education/fiscal_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "wealthy_school_districts",
+      "property_tax_revenue_jurisdictions"
+    ],
+    "victims": [
+      "low_income_students",
+      "under_resourced_districts",
+      "rural_communities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Low-Income Student",
+      "comment": "PERSPECTIVE 1: LOW-INCOME STUDENT (SNARE) \u2014 Trapped within geographic jurisdiction; cannot exit to better-funded district without family relocation (prohibitive cost). Trapped within age/developmental window (cannot defer schooling). Suppression is near-total: structural barriers to exit (residential segregation, housing costs, transportation) prevent escape. Experiences maximum extraction \u2014 resource deprivation during critical developmental years with no alternative. No genuine coordination benefit \u2014 the constraint exists to extract resources upward, not to solve a collective action problem."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Under-Resourced District",
+      "comment": "PERSPECTIVE 2: UNDER-RESOURCED DISTRICT (TANGLED ROPE) \u2014 Constrained but not fully trapped: can marginally improve conditions through bond elections, grants, or operational efficiency, but faces high barriers (declining population, lower property tax base, voter fatigue). Experiences genuine coordination function (managing educational service delivery across students) alongside asymmetric extraction (resources systematically flow toward wealthy districts via state funding allocation mechanisms). Active enforcement required: state legislature maintains the property-tax-based funding structure that drives inequality."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Wealthy School District",
+      "comment": "PERSPECTIVE 3: WEALTHY SCHOOL DISTRICT (ROPE) \u2014 Primary beneficiary (institutional/arbitrage). Experiences the constraint as coordination: tax base pooling and spending decisions align resources with their community's preferences. Can exit the constraint via property value appreciation, economic clustering, and selective residence \u2014 arbitrage is genuine. No experienced extraction; net beneficial relationship. The constraint solves their coordination problem (how to fund schools at their preferred level) with minimal friction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The School Choice Coalition",
+      "comment": "PERSPECTIVE 4: SCHOOL CHOICE COALITION (TANGLED ROPE) \u2014 Organized agents (charter networks, education reformers, voucher advocates) see funding inequality as a coordination problem solvable through market mechanisms: per-pupil funding portability, open enrollment, and school choice enable low-income students to arbitrage to better schools. But school choice itself creates secondary extraction mechanisms: cream-skimming (selection bias in who participates), increased overhead (administrative duplication across competing operators), and political concentration of governance. The coalition both solves a coordination problem (student access to better options) and creates asymmetric extraction (power concentrated in choice operators). Theater includes substantial performance theater: choice accountability reporting that masks cream-skimming dynamics and selection bias."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Equalization Formula",
+      "comment": "PERSPECTIVE 5: THE EQUALIZATION FORMULA (PITON) \u2014 Most states maintain equalization formulas (weighted funding for high-need students, base aid guarantees) that are substantially performative. The formulas acknowledge inequality but maintain weak enforcement, allow wealthy districts to augment state baseline with local revenue, and fail to actually equalize (per-pupil spending gaps persist despite formulas). The mechanism persists through institutional inertia \u2014 it creates an appearance of effort to address inequality while preserving structural extraction. Theater ratio is high because the formula's inputs and adjustment factors are complex rituals that obscure the persistence of underlying inequality. The formula's primary function has atrophied: equalization in theory, wealth preservation in practice."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, unequal resource distribution is an immutable property of federalist systems: decentralization necessarily produces variance in local capacity to fund public goods. This perspective sees funding inequality as emerging naturally from constitutional structure (local property tax base, state sovereignty, market housing dynamics). However, structural data contradicts this classification \u2014 empirical analysis shows that countries with equally federal systems (Canada, Switzerland, Germany) achieve far lower funding inequality through transfer mechanisms and floor funding. The mountain classification is a false summit: it naturalizes what is actually a contingent policy choice (allowing local wealth to determine school resources) as a law of governance."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "causality_poverty_vs_funding",
+      "question": "Does funding inequality cause poverty-correlated educational outcomes, or do poverty demographics select into under-resourced districts?",
+      "resolution_mechanism": "Instrumental variable analysis using district boundary discontinuities and quasi-experimental variation in funding levels; longitudinal tracking of outcomes at identical poverty levels in high-vs-low-funding contexts",
+      "impact": "If funding causes outcomes: constraint is snare (extraction prevents capability). If selection dominates: constraint may be rope or scaffold (outcome gaps reflect broader inequality, not school-specific extraction). This drives classification certainty.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causality between funding and outcomes vs. poverty-driven selection"
+    },
+    {
+      "id": "equalization_mechanism_sufficiency",
+      "question": "Can state equalization formulas theoretically eliminate funding gaps, or do they encounter hard limits (tax base, administrative capacity, property values)?",
+      "resolution_mechanism": "Comparative analysis of equalization formula performance across states; identification of threshold effects where formulas break down; modeling of maximum achievable equalization under different policy designs",
+      "impact": "If formulas can equalize: constraint is tangled_rope with clear sunset (equalization formula refinement). If hard limits exist: constraint is structural snare (extraction is inherent to federalism unless fundamental restructuring). Classification depends on policy ceiling.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether equalization formulas can theoretically eliminate funding inequality"
+    },
+    {
+      "id": "school_choice_filtering",
+      "question": "Does per-pupil funding portability (school choice) actually reduce extraction for low-income students, or does it primarily enable cream-skimming and administrative rent-seeking?",
+      "resolution_mechanism": "Comparison of post-choice outcomes for students with equal baseline characteristics between choice-participating and non-participating cohorts; measurement of selection bias in participation and stability of charter/choice school closures",
+      "impact": "If choice reduces extraction: scaffold perspective correct, sunset is genuine (market mechanisms solve the problem). If choice enables cream-skimming: choice becomes secondary snare (new extraction mechanism replaces old one). Reclassifies the school choice coalition's perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether school choice portability reduces extraction or enables cream-skimming"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the measured suppression (0.72) primarily structural (geographic, economic barriers to relocation) or partially internalized (low-income families internalize residential constraints as inevitable)?",
+      "resolution_mechanism": "Post-relocation outcome tracking; cross-cultural comparison with societies where relocation costs are lower; survey measurement of perceived vs. actual barriers to exit",
+      "impact": "If primarily structural: suppression is external and could be reduced by policy (reduce relocation costs, enable open enrollment). If internalized: suppression persists even after structural barriers are lowered; requires identity/narrative reframing alongside policy change.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism"
+    },
+    {
+      "id": "federalism_comparative_design",
+      "question": "Do equally federal systems (Canada, Switzerland, Germany, Australia) with lower funding inequality use fundamentally different transfer mechanisms, or do they apply property-tax-plus-equalization models more stringently?",
+      "resolution_mechanism": "Comparative institutional analysis of transfer formulas, floor funding mechanisms, and enforcement strictness across federal democracies; identification of design choices (not just scale) that produce variance",
+      "impact": "If design differences are determinative: US funding inequality is policy-contingent, not natural law (false summit diagnosis confirmed). If all federal systems produce similar gaps when measured at equivalent development levels: constraint may be closer to mountain. This shapes the false summit analysis.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Comparative analysis of federal systems' funding inequality mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "commentary": {
+    "narrative_context": "K-12 school funding inequality in the United States is a structural constraint that combines genuine coordination challenges (how to fund schools at scale across diverse communities) with systematic extraction of resources from low-income and rural students toward wealthy districts. The constraint operates through property-tax-based funding mechanisms that create feedback loops: wealthy communities generate high tax revenue per student, which enables better schools, which attracts higher-income residents, which increases property values, which increases the tax base further. Simultaneously, low-income communities face declining population, lower property values, and thus lower tax revenue per student. This cycle is maintained through active policy enforcement (state legislatures preserve property-tax-based structures, limit equalization formula effectiveness, and enable school choice mechanisms that selectively benefit higher-income families). The constraint exhibits all six types from different perspectives because it genuinely serves coordination functions (enabling communities to fund local schools) while systematically extracting resources from trapped students with no exit options. Theater has increased over the measurement interval as equalization formulas, choice mechanisms, and accountability systems have proliferated without substantially reducing inequality \u2014 the performance of addressing inequality has increased while the substantive gaps persist.",
+    "key_agents": [
+      "Low-Income Students: Primary victim (powerless/trapped) \u2014 cannot exit geographic jurisdiction or relocation barriers; face resource deprivation during critical developmental years",
+      "Under-Resourced Districts: Secondary victims (moderate/constrained) \u2014 can marginally improve through local effort but face structural revenue barriers and population decline",
+      "Wealthy School Districts: Primary beneficiary (institutional/arbitrage) \u2014 capture resources through property tax system; can exit via economic clustering and continued appreciation",
+      "State Legislature: Primary enforcer (institutional/arbitrage) \u2014 maintains property-tax-based structure despite equalization mandate; enables choice mechanisms that preserve stratification",
+      "School Choice Coalition: Organized agents (organized/constrained) \u2014 claim to solve the problem through market mechanisms but create secondary extraction (cream-skimming, administrative rent-seeking)",
+      "Equalization Formula: Institutional mechanism (institutional/arbitrage) \u2014 performs the role of addressing inequality while preserving structural extraction; theater-dominant",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing policy-contingent inequality as a law of federalism"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts resources from low-income students and under-resourced districts toward wealthy districts. The extraction is not maximal (0.85+) because some equalization occurs, some high-need students benefit from targeted funding, and some districts maintain reasonable quality of life outcomes despite resource gaps. But the baseline extraction is substantial \u2014 per-pupil spending gaps of 2:1 or 3:1 between districts are common, and these gaps compound over a student's K-12 career. The v1.0 measurement (0.42) reflected lower precision in identifying the extraction mechanism; the refined value reflects clear structural data on resource flow asymmetry. Suppression (0.72): High. Multiple barriers prevent low-income students from exiting the constraint: (1) residential constraint \u2014 relocation to wealthier district requires housing price appreciation most low-income families cannot achieve; (2) age constraint \u2014 cannot defer K-12 education to a later time when circumstances might improve; (3) information constraint \u2014 family may lack knowledge of alternative schools or choice mechanisms; (4) transportation constraint \u2014 open enrollment requires student transportation which families may not afford; (5) social cost \u2014 moving or changing schools carries identity/relationship costs. The combination of barriers is near-total, though not quite to the level of trapped (0.85+) because some escape routes exist (school choice, charter networks, relocation with family support). Theater ratio (0.65): Moderate-high. State equalization formulas, school accountability systems, and choice mechanisms create performative complexity that obscures the persistence of underlying inequality. Complex funding formulas give appearance of rigorous redistribution while weak enforcement allows wealthy districts to augment state baseline with local revenue. Choice accountability reporting masks selection bias in participation. Theater has increased over time as policy mechanisms have proliferated without proportional reduction in inequality.",
+    "perspectival_gap": "The gap between the low-income student's Snare perception and the wealthy district's Rope perception reflects the complete inversion of their structural positions. From the trapped student's position, the constraint is pure extraction with suppression near-total. From the arbitrage-enabled wealthy district's position, the constraint is pure coordination with no felt extraction. The under-resourced district's Tangled Rope perception is accurate \u2014 they genuinely coordinate (deliver education) while experiencing systematic extraction (resource disadvantage). The school choice coalition's perspective obscures secondary extraction mechanisms (cream-skimming, administrative overhead, political concentration) that may be worse for trapped students than the original constraint. The equalization formula's Piton status reveals that state institutional response has become substantially performative \u2014 the policy mechanisms (formulas, choice accountability) create appearance of effort without proportional substantive change. The civilizational analytical observer's false summit demonstrates how perspective can naturalize contingent policy arrangements: funding inequality is framed as inherent to federalism, but comparative analysis shows federal systems with lower inequality use different policy designs (floor funding, stringent equalization, tighter transfer mechanisms). The false summit is policy-contingent, not natural law.",
+    "directionality_logic": "Directionality values are determined by structural position relative to the resource flow. Low-income students face maximum d (0.95+) \u2014 they are full extraction targets with trapped exit options. Under-resourced districts face high d (0.70-0.80) \u2014 they are constrained victims but with some marginal agency. Wealthy districts face low d (0.10-0.20) \u2014 they are beneficiaries with arbitrage exit options (can further cluster, appreciate property values, exit entirely). The state legislature (enforcer) has d around 0.35-0.45 \u2014 it maintains the constraint (which benefits some constituencies) while formally committed to equalization (apparent beneficiary status). The school choice coalition has intermediate d (0.55-0.65) \u2014 they claim to solve the problem but enable secondary extraction. The equalization formula is effectively neutral (d \u2248 0.50) \u2014 it formally redistributes but fails to substantially equalize due to weak enforcement. These d values are derived from exit options: trapped agents experience maximum f(d); arbitrage agents experience minimum or negative extraction. The beneficiary/victim declarations (wealthy districts benefit, low-income students and under-resourced districts are victims) directly feed the computation.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint's classification varies legitimately across structural positions, and the variation itself is diagnostic. The beneficiary's Rope classification is correct for their position \u2014 they experience the system as coordination. The victim's Snare classification is correct for their position \u2014 they experience the system as pure extraction with no alternative. The analytical observer's false summit diagnosis (Mountain is incorrect; the constraint is policy-contingent, not natural law) is the diagnostic signal: when the system's own institutions (equalization formula, accountability mechanisms) are substantially performative (theater_ratio 0.65+) despite formal commitment to addressing the problem, the constraint is being actively maintained as extractive, not emerging naturally from structural necessity. The refinement from v1.0 (which treated this as straightforward Snare at 0.72 extractiveness) to v1.1 (tangled rope/piton hybrid with explicit false summit diagnosis) clarifies that the constraint is enforcement-dependent: state legislature maintains property-tax-based structures and limits equalization despite formal commitment, which is evidence of active extraction, not natural emergence. This reclassifies the constraint toward the tangled_rope cluster (genuine coordination function + asymmetric extraction + active enforcement required) and away from the pure-snare hypothesis."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "residential_segregation_feedback",
+      "school_to_prison_pipeline",
+      "wealth_intergenerational_transmission"
+    ],
+    "dual_formulation_note": "K-12 funding inequality is structurally upstream of residential segregation (funding gaps drive school quality differences which drive residential choice, which reinforces segregation patterns) and downstream of broader wealth distribution inequality. Separate constraint stories model the specific feedback loops: funding \u2192 school quality \u2192 residential selection \u2192 funding. This story focuses on the education system's internal extraction mechanism; the residential segregation constraint models the same phenomenon from a housing market perspective. Both constraints link to the intergenerational wealth transmission constraint because school quality is a primary mechanism for inter-generational persistence of economic advantage."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.4
+    }
+  ]
+}

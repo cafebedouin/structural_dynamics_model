@@ -1,0 +1,238 @@
+{
+  "header": {
+    "constraint_id": "sanctions_regime_economic_extraction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sanc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Sanctions Regime Economic Extraction",
+    "topic_domain": "international_relations/economic_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "sanctioning_state_coalition",
+      "alternative_supply_networks",
+      "domestic_substitute_producers"
+    ],
+    "victims": [
+      "sanctioned_state_economy",
+      "third_party_trading_partners",
+      "sanctioned_state_civilian_population"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Sanctioned State Civilian Population",
+      "comment": "PERSPECTIVE 1: SANCTIONED STATE CIVILIAN POPULATION (SNARE) \u2014 No exit capacity. Trapped within borders of sanctioned state with restricted access to trade, credit, and technology. Bears full extraction through inflation, medicine scarcity, fuel rationing. Cannot negotiate, relocate, or opt out of the constraint. Maximum experienced extraction \u2014 powerless agents with zero degrees of freedom."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Sanctioned State Government",
+      "comment": "PERSPECTIVE 2: SANCTIONED STATE GOVERNMENT (TANGLED ROPE) \u2014 Constrained by coordinated external enforcement but retains some agency: can negotiate sanctions relief, build alternative supply networks, adjust domestic policy. Experiences both extraction (revenue loss, capital flight) and coordination cost (international negotiation required to exit). High suppression but partial agency distinguishes from pure snare."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Sanctioning State Coalition",
+      "comment": "PERSPECTIVE 3: SANCTIONING STATE COALITION (ROPE) \u2014 Primary beneficiary with high agency. Experiences sanctions as coordination mechanism: unified action enforces political demands with minimal internal cost to coalition members. Arbitrage exit option: can alter sanctions scope and timing. Net coordination function \u2014 coalition members solve collective action problem of coercing target state behavior."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Third-Party Trading Partners",
+      "comment": "PERSPECTIVE 4: THIRD-PARTY TRADING PARTNERS (TANGLED ROPE) \u2014 Powerful actors (multinational corporations, financial institutions, logistics networks) with mobile exit options can relocate trade relationships, but face secondary sanctions and compliance cost. Experience mixed extraction (forced compliance, limited market access) and coordination benefit (cleared to do business with sanctioning coalition). Constrained mobility distinguishes from pure rope."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Alternative Supply Networks",
+      "comment": "PERSPECTIVE 5: ALTERNATIVE SUPPLY NETWORKS (ROPE) \u2014 Beneficiaries with high agency (shadow suppliers, informal trade channels, gray-market logistics). Arbitrage exit option: can shift between markets and regulatory regimes. Low experienced extraction \u2014 they benefit from market concentration in sanctioned goods and have competitive advantage. Genuine coordination function for parallel economic systems."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Neighboring States",
+      "comment": "PERSPECTIVE 6: NEIGHBORING STATES (TANGLED ROPE) \u2014 Organized actors with constrained exits. Experience both extraction (spillover economic damage, refugee pressure, security risks) and coordination benefit (security guarantee from sanctioning coalition, trade preferences if aligned). Cannot fully exit due to geographic dependence and coalition pressure. Moderate extraction, genuine coordination content."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Sanctions Administration",
+      "comment": "PERSPECTIVE 7: INTERNATIONAL SANCTIONS ADMINISTRATION (PITON) \u2014 Institutional actors (UN panels, Treasury offices, export control agencies) maintain sanctions bureaucracy with theater_ratio near 0.55. Enforcement has degraded: evasion networks circumvent controls, compliance costs exceed deterrent effects, sanctions persist through institutional inertia beyond original policy goals. Sees own enforcement as degraded (piton characteristic) while justifying maintenance through procedural ritual."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Humanitarian Exemption Coalition",
+      "comment": "PERSPECTIVE 8: HUMANITARIAN EXEMPTION COALITION (SCAFFOLD) \u2014 Organized actors (NGOs, medical groups, humanitarian agencies) see sanctions as temporary coordinated measure with built-in sunset logic: humanitarian carve-outs, medical exemptions, and negotiation timelines are designed to ease toward relief. Low theater because exemptions require genuine material differentiation and documentation. Coordination function dominates extraction function from this perspective."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 9: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational/universal scope, some extraction is inherent to any enforcement system: coordinated action requires credible threat, threat requires asymmetric cost distribution, cost distribution requires targeting. This perspective risks naturalizing the contingent institutional arrangement (state-level collective punishment) as an immutable feature of international relations. Engine's false summit detector will flag this as naturalization of a policy choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "humanitarian_exception_enforcement",
+      "question": "Do humanitarian carve-outs function as genuine exceptions or theater that legitimizes broader extraction?",
+      "resolution_mechanism": "Empirical audit: what percentage of humanitarian goods successfully reach sanctioned populations? What delays occur between exception approval and delivery? Do exceptions reduce civilian cost measurably?",
+      "impact": "If genuine: scaffold perspective confirmed; sanctions have real sunset logic. If theater: humanitarianism becomes cover story; extract/suppression ratios increase; reclassify from tangled_rope to snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether humanitarian carve-outs function as genuine exceptions or theater"
+    },
+    {
+      "id": "third_party_secondary_sanctions_enforcement",
+      "question": "How effectively do secondary sanctions enforce compliance on third-party actors who lack direct dependence on sanctioning coalition?",
+      "resolution_mechanism": "Track trade volume, pricing, and substitution rates for third parties under secondary sanctions. Identify threshold: sanctions duration vs compliance erosion.",
+      "impact": "If effective: tangled_rope classification of third parties stands. If ineffective: third parties experience lower extraction; reclassify toward rope; sanctions regime's true enforceability is overestimated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of secondary sanctions on third-party compliance"
+    },
+    {
+      "id": "targeted_vs_collective_punishment_boundary",
+      "question": "What fraction of measured extraction targets regime elites vs civilian population? Is there enforceable differentiation, or does extraction flow inevitably to powerless populations?",
+      "resolution_mechanism": "Economic impact analysis: GDP loss, inflation, medicine/food access by income quintile. Compare elite asset availability (black-market access, capital flight) vs civilian deprivation.",
+      "impact": "If targeting works: extraction mechanism may be precision-aligned with political objective; snare classification of civilians may degrade toward tangled_rope with constrained exit. If targeting fails: extraction flows to powerless; snare is structural inevitability; classify as pure extortionate regime.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Distribution of extraction burden between regime elites and civilian population"
+    },
+    {
+      "id": "sanctions_duration_time_horizon_mismatch",
+      "question": "Do sanctions regimes have implicit sunset clauses (tied to specific behavioral changes) or de facto permanence (conditioned on immeasurable political concessions)?",
+      "resolution_mechanism": "Historical analysis of sanctions duration and termination: what triggers relief? How many sanctions regimes that lasted >10 years were eventually lifted? What were the stated exit criteria?",
+      "impact": "If genuine sunset logic: scaffold classification is justified. If de facto permanence: sanctions become pure extraction mechanism (snare); reclassify suppression upward; piton theater ratio increases as enforcement becomes ritualized without exit path.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether sanctions regimes have genuine sunset clauses or de facto permanence"
+    },
+    {
+      "id": "alternative_supply_network_symbiosis",
+      "question": "Do shadow supply networks and gray-market logistics depend on sanctions regime for competitive advantage, creating symbiotic relationship that prevents sanctions termination?",
+      "resolution_mechanism": "Economic analysis: would shadow networks' profitability collapse if sanctions were lifted? Do they have incentive to perpetuate sanctions? Track lobbying, political influence by alternative supply actors.",
+      "impact": "If symbiotic: beneficiaries have perverse incentive to maintain regime; extraction mechanism is structurally self-perpetuating; snare and tangled_rope classifications become more entrenched; duration omega resolves toward permanent regime.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether shadow networks depend on sanctions for competitive advantage"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Sanctions regimes represent a hybrid coordination-extraction constraint: the sanctioning coalition coordinates unified action to impose costs on a target state, ostensibly to coerce policy change. However, the extraction flow is systematically asymmetric \u2014 punishment falls disproportionately on powerless civilian populations rather than decision-making elites, while beneficiaries include both the sanctioning coalition and alternative supply networks that profit from market concentration. The constraint's extractiveness has increased over the measurement interval (0.35 \u2192 0.58) as evasion networks have matured and sanctions have become de facto permanent rather than conditional on measurable policy change. Theater ratio has also risen (0.38 \u2192 0.55) as sanctions administration has shifted from direct enforcement toward procedural legitimation (humanitarian exemptions, UN panels, compliance certifications) that mask the underlying extraction mechanism. The regime exhibits all six constraint types from different structural perspectives: pure extraction for trapped civilian populations (snare), mixed coordination-extraction for the sanctioning coalition and neighboring states (tangled_rope), coordination for alternative suppliers (rope), degraded enforcement ritual for bureaucratic actors (piton), and temporary measures for humanitarian coalitions (scaffold). From the analytical perspective, naturalizing sanctions as inherent to international relations (mountain) risks concealing the policy choices that perpetuate them.",
+    "key_agents": [
+      "Sanctioning State Coalition: Primary beneficiary (institutional/arbitrage) \u2014 coordinates unified action to impose costs; captures political concessions, market share, and geopolitical leverage",
+      "Sanctioned State Civilian Population: Primary victim (powerless/trapped) \u2014 bears extraction through inflation, medicine scarcity, fuel rationing; no exit capacity or negotiating power",
+      "Sanctioned State Government: Secondary actor (organized/constrained) \u2014 experiences extraction and coordination asymmetry; some agency to negotiate relief but under duress",
+      "Third-Party Trading Partners: Powerful secondary victim (powerful/mobile) \u2014 face secondary sanctions and compliance cost; can relocate but with friction and reputational damage",
+      "Alternative Supply Networks: Beneficiary (institutional/arbitrage) \u2014 profit from market concentration and sanctions-driven price premiums; have perverse incentive to perpetuate regime",
+      "Neighboring States: Mixed actor (organized/constrained) \u2014 experience spillover costs and security guarantees; constrained by coalition pressure and geographic dependence",
+      "International Sanctions Administration: Institutional actor (institutional/arbitrage) \u2014 maintains enforcement bureaucracy with degraded function; sustains through procedural theater",
+      "Humanitarian Exemption Coalition: Organized actor (organized/constrained) \u2014 see sanctions as temporary with built-in sunset logic; attempt to carve out genuine exceptions"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The baseline extraction reflects the asymmetric cost distribution \u2014 costs fall on powerless civilian populations with no exit capacity while benefits accrue to coalition members with arbitrage options. The rising trajectory (0.35 \u2192 0.58 over 15 years) indicates that sanctions have become increasingly extractive as they have shifted from targeted measures with conditional sunset logic to de facto permanent regimes justified through ritual compliance and humanitarian carve-outs. Suppression (0.65): Moderate-high. Significant barriers to exit and alternatives include coordinated enforcement across sanctioning coalition, secondary sanctions on third parties, restrictions on capital flight, trade network disruption, and geographic/material dependence of target state on specific imported goods. But suppression is not total \u2014 shadow supply networks exist, humanitarian channels operate, and some third parties evade compliance. Theater ratio (0.55): Moderate. Sanctions administration has shifted toward procedural legitimation \u2014 UN panels, humanitarian exemptions, compliance certifications \u2014 that maintains the appearance of precision and conditionality while the underlying extraction mechanism operates with less specificity. The rising theater trajectory reflects bureaucratic ritual growth as direct enforcement has faced evasion pressure. The theater is genuine institutional performance but increasingly decoupled from measurable policy change.",
+    "perspectival_gap": "The gap between sanctioning coalition perspective and sanctioned civilian perspective is maximum: rope (low extraction, coordination, arbitrage exit) versus snare (high extraction, no coordination benefit, trapped exit). This gap is not an artifact of observational position but a structural fact about the constraint \u2014 the extraction mechanism is designed to be asymmetric, with costs concentrated on powerless populations and benefits concentrated on institutional beneficiaries. The gap cannot be closed by better information or negotiation frameworks because the asymmetry is intentional. The gap can only be closed by changing the constraint structure: either by genuinely enforcing targeted sanctions against elites (reducing civilian extraction) or by lifting sanctions entirely (removing extraction). The humanitarian exemption coalition's scaffold perspective attempts a third path: reducing suppression through carve-outs while maintaining coordination. But if exemptions are theater rather than genuine, this path also fails. The piton classification of sanctions bureaucracy reveals institutional capture: the enforcement apparatus has become invested in its own continuation rather than in measurable policy change, creating a structural lock-in where extraction persists beyond the original coordinating goal.",
+    "directionality_logic": "Each perspective's d value is derived from: (1) beneficiary/victim status + power level + exit options. Beneficiaries with high exit capacity (sanctioning coalition, alternative networks) derive low d (\u22480.05\u20130.15) producing negative or minimal chi. Victims with trapped or constrained exits derive high d (0.60\u20130.95) producing high chi. Mixed actors (third-party traders, neighboring states) derive mid-range d (0.55\u20130.65) producing moderate chi. The analytical observer (d \u2248 0.72 by canonical fallback) sees the constraint at high chi but acknowledges all perspectives as valid. The directed flow of extraction is clear: sanctions coalition \u2192 sanctioned state government \u2192 sanctioned state civilians (downward pressure) with intermediate beneficiaries (alternative networks) capturing rents along the way. This directionality is not hidden or ambiguous \u2014 it is the deliberate design of sanctions policy \u2014 which makes the mountain perspective (naturalizing it as law) particularly dangerous: it conceals a policy choice as an immutable feature.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy through perspectival multiplexing: no single type is 'correct' \u2014 the six types are simultaneous valid readings of the same structural phenomenon from different observational contexts. The mandatrophy emerges from the gap between coordinating-coalition perspective (rope) and trapped-civilian perspective (snare). The resolution is not to choose one but to recognize that the constraint is structurally tangled_rope \u2014 it genuinely coordinates coalition action to enforce behavioral change AND it genuinely extracts asymmetrically from powerless populations with no exit. The tension is not resolvable by choosing a 'true' type; it is the defining feature. The piton classification of the sanctions bureaucracy reveals that the coordinating mechanism has degraded: enforcement now relies on procedural theater (humanitarian exemptions, compliance certifications) rather than direct coercion. This degradation does not eliminate extraction \u2014 it redistributes it upward through bureaucratic cost and downward through civilian deprivation via reduced aid and supply fluctuation. The scaffold perspective (humanitarian coalitions seeing temporary measures) is aspirational \u2014 it represents the intended exit path \u2014 but is currently not materially instantiated because the duration omega (sanctions permanence vs conditional sunset) remains unresolved. If humanitarian exceptions functioned as genuine exceptions and sanctions had explicit sunset tied to measurable concessions, the scaffold would be structurally real. Currently it is hoped-for rather than actual."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "geopolitical_zero_sum_competition",
+      "secondary_sanctions_compliance",
+      "shadow_supply_network_profitability"
+    ],
+    "dual_formulation_note": "Sanctions regime decomposition: the primary regime (this story) models coordination + extraction at state level; it affects three downstream constraints representing the detailed mechanisms: geopolitical positioning, secondary enforcement, and shadow profit channels. Each has its own \u03b5 value reflecting different structural logics. See network edges for dependency graph."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

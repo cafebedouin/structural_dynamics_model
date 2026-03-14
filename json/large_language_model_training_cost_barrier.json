@@ -1,0 +1,216 @@
+{
+  "header": {
+    "constraint_id": "large_language_model_training_cost_barrier",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "llm_cost"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.68,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Large Language Model Training Cost Barrier",
+    "topic_domain": "artificial_intelligence/machine_learning/computational_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "frontier_research_labs",
+      "capital_rich_tech_corporations"
+    ],
+    "victims": [
+      "independent_researchers",
+      "smaller_organizations",
+      "ai_safety_ecosystem",
+      "epistemic_accessibility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Independent Researcher",
+      "comment": "PERSPECTIVE 1: INDEPENDENT RESEARCHER (SNARE) \u2014 Faces insurmountable barriers: training costs ($10M-$100M+ per frontier model) exceed lifetime research budgets and grant cycles. Cannot participate in frontier model development. Exit: only option is abandoning LLM research entirely. Minimal coordination benefit \u2014 the cost barrier exists to exclude, not to coordinate."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Smaller Research Organization",
+      "comment": "PERSPECTIVE 2: SMALLER RESEARCH ORGANIZATION (SNARE) \u2014 Universities, non-profit research institutes, and startups with <$500M capital cannot access training infrastructure at competitive scales. Trapped between adopting pre-trained models (locked into incumbent choices) or accepting permanent technical disadvantage. The cost barrier creates artificial scarcity and forecloses alternative research paradigms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Safety Research Community",
+      "comment": "PERSPECTIVE 3: SAFETY RESEARCH COMMUNITY (TANGLED ROPE) \u2014 Benefits from access to frontier models for safety testing and alignment research; constrained by reliance on frontier labs' API access and partnership arrangements. Faces extraction through access control: gating mechanisms determine which safety research questions can be studied. Research agenda shaped by what frontier labs permit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Frontier Research Lab",
+      "comment": "PERSPECTIVE 4: FRONTIER RESEARCH LAB (ROPE) \u2014 Benefits from coordination problem they solve: economies of scale in training infrastructure, proprietary access to computational resources, first-mover advantage in capability development. Cost barrier enables: exclusive access to frontier capabilities, ability to shape research agenda through API gating, captured position in safety ecosystem."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Capital-Rich Tech Corporation",
+      "comment": "PERSPECTIVE 5: CAPITAL-RICH TECH CORPORATION (ROPE) \u2014 Experiences cost barrier as coordination mechanism: can absorb training costs (amortized across products, user bases, and infrastructure), achieving scale economies. Extraction: maintains monopoly pricing on model access; controls which downstream applications are permitted; shapes competitive landscape."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open-Source Coalition",
+      "comment": "PERSPECTIVE 6: OPEN-SOURCE COALITION (TANGLED ROPE) \u2014 Organized actors (Meta/Llama, Hugging Face, community researchers) benefit from distributed training infrastructure and parameter reduction techniques (quantization, fine-tuning) that lower entry barriers. Constrained by: computational power required still exceeds most participants' resources; frontier models trained by well-capitalized actors set baseline expectations; legal/IP barriers around training data."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Academic Prestige System",
+      "comment": "PERSPECTIVE 7: ACADEMIC PRESTIGE SYSTEM (PITON) \u2014 University hiring and grant allocation increasingly favor researchers with access to frontier models. The prestige mechanism (publications in top venues that require frontier model baselines) persists through institutional inertia even though alternative research trajectories might be equally valid. Theater ratio high: hiring committees reward 'state-of-the-art' metrics that track frontier model performance, not fundamental insights. Degraded because the actual intellectual contribution is increasingly orthogonal to model scale."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Physical Limits View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / PHYSICAL LIMITS VIEW (MOUNTAIN) \u2014 From civilizational/universal scope: training large-scale neural networks requires proportional computational resources and energy. This is a fundamental constraint of physics \u2014 larger models need more compute. No actor can escape this law. However, the structural data reveals this is a FALSE SUMMIT: the actual barriers are not physical laws but capital allocation, electricity cost margins, and datacenter monopolization. Many computational arrangements could achieve similar capabilities at lower absolute cost \u2014 the barrier is institutional, not natural."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "training_cost_floor_ambiguity",
+      "question": "What is the actual floor cost for training frontier-capability models given optimal scaling laws and infrastructure efficiency?",
+      "resolution_mechanism": "Engineering analysis of theoretical minimum compute requirements vs actual observed costs; correlation between reported training budgets and estimated FLOPs; historical trend analysis of cost-per-capability improvements",
+      "impact": "If floor < $10M: most of observed cost barrier is capital/market-driven extraction, not physical constraint. If floor > $50M: barrier is more structurally justified as coordination cost. Classification shifts from Snare toward Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Physical floor for frontier model training costs"
+    },
+    {
+      "id": "alternative_capability_parity",
+      "question": "Can equivalent capabilities be achieved through smaller distributed models, fine-tuned smaller architectures, or alternative training paradigms at significantly lower total cost?",
+      "resolution_mechanism": "Empirical comparison: small-scale distributed systems vs frontier models on identical capability benchmarks; cost-per-capability ratios; identify capability tasks where frontier scale provides no advantage",
+      "impact": "If yes: cost barrier is artificial scarcity mechanism (Snare justified). If no: cost barrier is necessary for genuine capability coordination (Rope justified). If mixed: Tangled Rope confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether alternative models can match frontier capabilities at lower cost"
+    },
+    {
+      "id": "access_gating_mechanism_necessity",
+      "question": "Is API gating and proprietary access control structurally necessary for capital recovery, or does it exceed what competitive markets would produce?",
+      "resolution_mechanism": "Cost analysis: what pricing/access structures would recover training investment in competitive environment? Compare to observed gating restrictions; identify restrictions that exceed competitive equilibrium; analyze counterfactual with open-source dominance",
+      "impact": "If necessary: gating is rent-recovery (Rope). If excessive: gating is extractive rent-seeking beyond competitive returns (Snare). If mixed: Tangled Rope confirmed with extraction component.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether API gating exceeds competitive necessity"
+    },
+    {
+      "id": "knowledge_worker_training_pipeline",
+      "question": "Is the cost barrier creating systemic knowledge gaps \u2014 researchers trained only on accessible models unable to understand frontier-scale phenomena?",
+      "resolution_mechanism": "Longitudinal tracking of PhD/postdoc cohorts from resource-constrained institutions; measurement of capability/understanding gaps vs frontier-trained cohorts; analysis of research direction divergence between populations",
+      "impact": "If yes: barrier creates permanent epistemic inequality (Snare mechanism). If no: alternative paradigms remain equally valid (barrier is Rope/coordination). Impacts classification of safety research perspective.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether cost barrier produces systemic knowledge inequality"
+    },
+    {
+      "id": "energy_cost_sustainability",
+      "question": "As electricity costs and datacenter capacity constraints tighten, does the cost barrier become increasingly driven by energy/infrastructure scarcity vs capital access?",
+      "resolution_mechanism": "Comparative analysis: current cost structure (capital-dominant) vs projected 2030-2035 (energy/infrastructure-dominant); model sensitivity to electricity price changes; identify phase transition where constraint mechanism shifts",
+      "impact": "If energy becomes dominant: barrier becomes more immutable (Mountain tendency). If remains capital-driven: barrier remains contingent (Snare/Rope). Affects long-term classification trajectory.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Energy sustainability and cost barrier evolution"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The training cost barrier in large language model development creates a structural constraint that exhibits genuine coordination properties alongside significant extractive effects. The barrier is partially justified by real computational and capital requirements (economies of scale, infrastructure investment) but also operates as an artificial scarcity mechanism that forecloses participation and shapes research agendas. The constraint demonstrates the tangled_rope pattern: frontier research labs and capital-rich corporations must solve a genuine coordination problem (large-scale training requires synchronized compute clusters, specialized expertise, and sustained funding), and this solution provides real value. However, the same mechanism that solves coordination also enables extraction \u2014 by controlling access through APIs, gating research partnerships, and shaping which downstream applications are permitted. The cost barrier has increased over the analyzed interval (extractiveness 0.35\u21920.62) as model scale has grown and computational requirements have accelerated, suggesting that the extraction component is intensifying faster than the coordination component. Theater ratio remains moderate (0.45), indicating that while prestige systems valorize frontier scale, the underlying training dynamics are relatively transparent \u2014 the barrier is not maintained through deception but through genuine capital requirements and infrastructure limitations.",
+    "key_agents": [
+      "Independent Researchers: Primary victims (powerless/trapped) \u2014 face lifetime budget constraints that make frontier training inaccessible; must exit LLM research or accept permanent disadvantage",
+      "Smaller Research Organizations: Primary victims (powerless/trapped) \u2014 universities, non-profits, smaller startups cannot amortize $100M+ training costs across user bases; locked into pre-trained model dependency",
+      "Safety Research Community: Secondary victims (moderate/constrained) \u2014 benefit from frontier model access but constrained by gating mechanisms; research agenda shaped by what labs permit",
+      "AI Safety Ecosystem: Diffuse victim (dispersed) \u2014 researchers scattered across institutions unable to independently verify safety properties or conduct systematic safety research",
+      "Epistemic Accessibility: Abstract victim (powerless/trapped) \u2014 the ability of the research community broadly to understand and study LLM behavior increasingly concentrated in capital-rich labs",
+      "Frontier Research Labs (OpenAI, DeepMind, Anthropic): Primary beneficiaries (institutional/arbitrage) \u2014 coordinate large-scale training while capturing exclusive capability access and agenda-setting power",
+      "Capital-Rich Tech Corporations (Meta, Google): Primary beneficiaries (institutional/arbitrage) \u2014 amortize training costs across products; maintain competitive moats; extract through proprietary model pricing",
+      "Open-Source Coalition (Llama, Hugging Face): Secondary beneficiaries (organized/constrained) \u2014 lower entry barriers through distributed infrastructure and fine-tuning techniques but remain constrained by frontier baseline expectations",
+      "Academic Prestige System: Institutional actor (institutional/arbitrage) \u2014 maintains incentive alignment favoring frontier model access; perpetuates theater through hiring/publication norms",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing the cost barrier as an immutable physical law when it is partially contingent on capital allocation and market structures"
+    ],
+    "logic_rationale": "Extractiveness (0.62): High-moderate, reflecting that the cost barrier enables substantial extraction beyond what competitive coordination would produce. Training costs for frontier models ($10M-$100M+) are genuine but accelerating faster than commodity compute cost improvements suggest is necessary. The increase from 0.35\u21920.62 indicates extraction is accumulating: frontier labs are capturing larger absolute margins as they achieve scale advantages that don't fully cascade to smaller actors. Suppression (0.68): High. Multiple suppression mechanisms exist: absolute capital requirements exceed most organizations' budgets; specialized expertise concentrated in a few labs; datacenter capacity constraints; legal/IP barriers around training data; brain drain to capital-rich labs. Theater ratio (0.45): Moderate. The barrier is maintained through actual computational requirements (transparent) but justified through prestige narratives about 'scale' and 'frontier capabilities' that exceed what capability metrics justify. As a proportion, theater is growing slower than actual capability gains, indicating the barrier is becoming more defensible on merits.",
+    "directionality_logic": "Directionality computation flows from beneficiary/victim declarations + power atoms + exit options. Beneficiaries (frontier labs, capital-rich corporations) with institutional power and arbitrage exit options derive d \u2248 0.05 (full beneficiaries, maximum exit freedom). Victims (independent researchers, smaller organizations) with powerless power atoms and trapped exit options derive d \u2248 0.95 (full targets, minimal exit options). Mixed agents (safety researchers with moderate power and constrained exit) derive d \u2248 0.55-0.65 (symmetric or victim-leaning). The scope modifier \u03c3(global)=1.2 amplifies the difference: the barrier affects research globally, making exclusion more consequential.",
+    "perspectival_gap": "This constraint shows sharp perspectival divergence. Frontier labs see a coordination problem they are solving (Rope): large-scale neural network training requires synchronized infrastructure, specialized teams, sustained funding \u2014 their solution enables not just their own advancement but downstream applications. Independent researchers see pure extraction (Snare): the same cost barrier forecloses their participation entirely, with no coordination benefit to them. The open-source coalition sees mixed effects (Tangled Rope): they benefit from lower barriers created by open-source models and fine-tuning techniques, but remain constrained by frontier labs setting capability baselines. Safety researchers see constrained extraction (Tangled Rope): they need frontier model access for safety research but have it gated through partnership arrangements. The academic prestige system sees theater (Piton): hiring committees valorize 'frontier scale' performance metrics that increasingly diverge from scientific merit. The analytical observer risks naturalizing this as an immutable physical law (Mountain) \u2014 neural networks require compute proportional to scale. The structural data reveals this is false: many alternative training arrangements could achieve similar capabilities at different cost distributions; the current barrier reflects institutional and market choices, not physical necessity.",
+    "mandatrophy_analysis": "The mandatrophy resolves by distinguishing coordination from extraction through structural decomposition: (1) Coordination component: Large-scale neural network training is genuinely difficult. Synchronizing compute across datacenters, maintaining specialized expertise, managing thermal/power delivery, iterating through multiple training runs \u2014 these require scale and capital investment. This is real problem-solving, not extraction. (2) Extraction component: The same infrastructure that solves coordination also forecloses participation by non-capital-rich actors. The cost barrier is not the minimum required for coordination but exceeds it by a margin that captures rents. The increase in extractiveness from 0.35\u21920.62 suggests extraction is growing faster than coordination necessity. (3) Tangled rope classification holds: the constraint coordinates large-scale training while asymmetrically extracting from those without capital access. Both components are structural, not perceptual. The false summit risk is classifying this as Mountain (immutable physical law) when it is Tangled Rope (contingent institutional arrangement with both genuine coordination and genuine extraction)."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_capability_concentration",
+      "ai_safety_research_accessibility",
+      "scientific_reproducibility_crisis_ai"
+    ],
+    "dual_formulation_note": "The training cost barrier decomposes into three structurally distinct constraints. The capital cost barrier (this story, \u03b5=0.62) addresses the direct training investment required. The capability concentration constraint (downstream) addresses how cost barriers concentrate capability development. The safety research accessibility constraint (downstream) addresses how gating of frontier models constrains safety investigation. All three are linked: cost barriers enable concentration, which enables gating. The upstream constraint (training cost) affects downstream constraints through coordination_type: global_infrastructure requiring capital concentration that cascades to capability and safety constraints."
+  },
+  "directionality_overrides": []
+}

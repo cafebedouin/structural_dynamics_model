@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "winner_take_most_distribution",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "wtm"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Winner Take Most Distribution in Competitive Markets",
+    "topic_domain": "economic/social_stratification",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "market_leader",
+      "network_effect_beneficiaries"
+    ],
+    "victims": [
+      "competitive_entrants",
+      "market_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Marginal Competitor",
+      "comment": "PERSPECTIVE 1: MARGINAL COMPETITOR (SNARE) \u2014 A competitor with inferior market position faces insurmountable barriers to growth. Network effects, consumer attention scarcity, and winner-take-most dynamics extract loyalty from consumers and capital from investors, funneling resources to the market leader. Exit requires abandoning the market entirely or accepting permanent marginality. No coordination function visible; pure extraction mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Secondary Incumbent",
+      "comment": "PERSPECTIVE 2: SECONDARY INCUMBENT (TANGLED ROPE) \u2014 A second-place firm benefits from coordination functions (platform standards, market liquidity, consumer trust in the category) while simultaneously experiencing extraction through talent drain, venture capital concentration toward the leader, and customer switching costs. High suppression but not total \u2014 secondary firm can compete on service quality or niche positioning. Both coordination and asymmetric extraction present."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Market Leader",
+      "comment": "PERSPECTIVE 3: MARKET LEADER (ROPE) \u2014 The dominant firm experiences the winner-take-most constraint as a coordination mechanism: network effects strengthen the platform, consumer lock-in stabilizes revenue, and scale advantages improve product quality. The constraint coordin ates users, developers, and capital toward network deepening. Net beneficiary with maximum exit flexibility \u2014 can shift markets, monetization strategies, or business models with minimal cost."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulatory Coalition",
+      "comment": "PERSPECTIVE 4: REGULATORY COALITION (SCAFFOLD) \u2014 Organized agents (antitrust regulators, consumer advocates, open-source movements) perceive winner-take-most as a temporary coordination problem with a sunset clause. Interoperability standards, data portability mandates, and open-source alternatives are structural constraints on monopoly lock-in. Suppression exists but declining: regulations reduce switching costs, break network effects, and redistribute competitive opportunity. Sunset: technological disruption or regulatory intervention breaks the winner-take-most constraint within 15-30 years."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Consumer Base",
+      "comment": "PERSPECTIVE 5: CONSUMER BASE (TANGLED ROPE) \u2014 Individual consumers coordinate through the platform (low search costs, network effects improve utility) but also experience extraction through lock-in (data control, switching costs, limited alternatives). Organized consumer movements (class-action litigation, coordinated switching campaigns) can exit or negotiate better terms. Mixed coordination and extraction, with exit options increasing as mobile substitutes mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The 'Natural Market Outcome' Narrative",
+      "comment": "PERSPECTIVE 6: NATURAL MARKET OUTCOME NARRATIVE (PITON) \u2014 The framing that winner-take-most is the natural result of free-market competition is substantially performative. It obscures the enforcement mechanisms (intellectual property law, patent breadth, trademark strength, regulatory capture) required to maintain concentration. The theater persists through economics textbooks and venture capital ideology despite declining functional truth as regulatory scrutiny and open-source alternatives mature."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Information Theory View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / INFORMATION THEORY VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, winner-take-most is a mathematical property of attention economics: consumer attention is a fixed resource; information abundance creates scarcity in attention. As communication costs drop, the value of centralized coordination increases, making concentration inevitable. However, the structural data contradicts this classification \u2014 the constraint requires active enforcement (intellectual property, regulatory capture, data lock-in) to persist. The mountain framing naturalizes what are contingent institutional choices."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "network_effect_magnitude",
+      "question": "Are observed market concentrations driven by genuine network effects or by enforcement mechanisms (IP law, regulatory capture, switching costs)?",
+      "resolution_mechanism": "Comparative analysis of markets with different IP regimes, switching cost structures, and regulatory environments; A/B testing of interoperability mandates on competitive dynamics",
+      "impact": "If driven by genuine network effects: winner-take-most is closer to mountain (structural). If driven by enforcement: winner-take-most is contingent institutional arrangement (tangled rope with sunset potential via regulatory intervention).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether concentration results from network effects or enforcement mechanisms"
+    },
+    {
+      "id": "disruptive_substitution_velocity",
+      "question": "How quickly can technological disruption or regulatory intervention break winner-take-most concentration in each market domain?",
+      "resolution_mechanism": "Historical analysis of market transitions (SMS\u2192iPhone\u2192social platform shifts); prediction of next disruption timeline; correlation between regulatory intervention intensity and competitive opening",
+      "impact": "If velocity < 5 years: scaffold sunset is real, classify toward temporary constraint. If velocity > 20 years: concentration is more durable, classify toward structural extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Velocity of market disruption or regulatory intervention"
+    },
+    {
+      "id": "consumer_surplus_extraction",
+      "question": "What fraction of the market leader's excess profit is extracted from consumer surplus (via lock-in, price increases, data monetization) vs. captured from competitors (via scale advantages, network effects)?",
+      "resolution_mechanism": "Price comparison across markets with different competitive structures; quantification of consumer switching costs; accounting analysis of profit sources (incremental revenue vs. margin expansion)",
+      "impact": "If mostly from competitors: constraint is primarily coordination-driven (rope-like). If mostly from consumers: constraint is primarily extraction-driven (snare-like), violating tangled rope balance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distribution of excess profit between consumer surplus and competitor extraction"
+    },
+    {
+      "id": "interoperability_enforcement",
+      "question": "Do interoperability standards and data portability mandates (EU DMA, Digital Markets Act) actually reduce winner-take-most concentration or create new enforcement costs that preserve incumbent advantage?",
+      "resolution_mechanism": "Post-mandate market analysis (3-5 years post-DMA implementation); competitive entry rates for firms leveraging interoperability; cost-benefit analysis of compliance burden on entrants vs. incumbents",
+      "impact": "If effective: scaffold sunset is materializing. If creating new enforcement costs: constraint evolves to tangled rope with different extraction mechanisms (compliance burden extraction).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Effectiveness of interoperability mandates in reducing winner-take-most"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Winner-take-most distribution describes the concentration of market value, user attention, and competitive advantage in dominant platform leaders, particularly in digital markets where network effects, switching costs, and attention scarcity create reinforcing barriers to entry. This constraint exhibits structural tension between genuine coordination functions (platforms solve matching problems, reduce search costs, enable network participation) and extractive dynamics (lock-in, data control, monopolistic pricing, barrier elevation). The constraint's evolution shows increasing extractiveness (0.35\u21920.58 over 30 years) reflecting rent accumulation and regulatory capture, while theater ratio slightly declines (0.55\u21920.48) as open-source alternatives and regulatory scrutiny make the 'natural market outcome' narrative less defensible. The constraint operates simultaneously as coordination mechanism (rope), mixed coordination-extraction (tangled rope), extraction trap (snare), and temporary institutional arrangement (scaffold) depending on the agent's structural position and time horizon. Regulatory intervention (antitrust enforcement, data portability, interoperability mandates) represents the primary sunset mechanism for scaffold perspective.",
+    "key_agents": [
+      "Market Leader: Primary beneficiary (institutional/arbitrage) \u2014 captures network effects, consumer lock-in, talent concentration, venture capital flows; maximum exit flexibility",
+      "Marginal Competitor: Primary victim (powerless/trapped) \u2014 faces insurmountable barriers to growth; excluded from network effects; cannot exit without abandoning market",
+      "Secondary Incumbent: Secondary victim (moderate/constrained) \u2014 benefits from category coordination but experiences talent drain, capital scarcity, customer switching; can compete on service quality or niche positioning",
+      "Consumer Base: Mixed (organized/mobile) \u2014 coordinates through platform (reduced search costs, network benefits) but experiences lock-in extraction; organized consumer movements increasing exit options",
+      "Regulatory Coalition: Organized beneficiary-of-change (organized/constrained) \u2014 perceives winner-take-most as temporary coordination problem; building interoperability standards, data portability, antitrust enforcement as sunset mechanisms",
+      "Venture Capital: Institutional beneficiary (institutional/arbitrage) \u2014 concentrates capital toward market leaders; benefits from winner-take-most dynamic through portfolio concentration and exit multiples"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, increasing over time. Base value reflects that market leaders extract significantly through lock-in, data control, and barrier elevation, but genuine coordination functions (network effects, platform stability, reduced search costs) reduce the pure extraction component. The 23-point increase over 30 years (0.35\u21920.58) reflects rent accumulation as leaders build regulatory moats, consolidate acquisitions, and entrench ecosystem control. The trajectory suggests ongoing extraction accumulation without offsetting productivity gains for trapped competitors. Suppression (0.65): High. Significant barriers include network effects (new entrants cannot offer equivalent value without achieving critical mass), switching costs (consumer and developer lock-in), regulatory capture (IP law breadth, trademark strength), venture capital concentration (funding flowing to leaders), and attention scarcity (consumer attention finite; winner captures disproportionate share). These barriers are not insurmountable but extremely costly to overcome. Theater ratio (0.48): Moderate-low and declining. The 'natural market outcome' narrative is still performative but increasingly challenged. Regulatory intervention, antitrust enforcement, and open-source alternatives are making the enforcement mechanisms visible \u2014 the theater persists but its credibility is declining. The slight decline (0.55\u21920.48) reflects this erosion.",
+    "directionality_logic": "Beneficiary and victim declarations establish the primary asymmetry: market leaders benefit from winner-take-most dynamics (network effects, switching costs, capital concentration); marginal competitors and market stability bear costs (trapped in non-viable positions, reduced competitive diversity). The tangled rope classification requires both genuine coordination (platforms do solve matching/search problems) and asymmetric extraction (leaders extract through lock-in, data control, barrier elevation) \u2014 both elements are structurally present. The base extractiveness (0.58) reflects that extraction is substantial but not total; genuine coordination value offsets some extraction cost. The 23-point increase in extractiveness over 30 years (0.35\u21920.58) indicates rent accumulation: as network effects deepen and switching costs compound, the extraction component grows while coordination value may plateau or decline.",
+    "perspectival_gap": "The primary perspectival gap lies between the market leader (rope: genuine coordination, low extraction experienced) and marginal competitors (snare: pure extraction trap with no exit). The secondary incumbent (tangled rope) occupies the middle ground \u2014 recognizing both coordination benefits and extraction constraints, with constrained exit options. The regulatory coalition perspective (scaffold: temporary constraint with sunset) introduces temporal dimension absent from individual agent perspectives: the constraint's extractiveness increases precisely because regulatory and technological sunset mechanisms are becoming visible and costly to prevent. The piton perspective reveals that 'natural market outcome' framing persists despite declining functional truth \u2014 the narrative is maintained through institutional inertia (economics education, VC ideology, media framing) rather than empirical defensibility. The mountain perspective risks naturalizing what are contingent enforcement mechanisms (IP law, regulatory capture) as immutable mathematical laws of attention scarcity.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy through temporal decomposition: at immediate time horizons (market leader perspective), winner-take-most appears as pure coordination (rope) \u2014 platforms solve genuine matching problems with low extraction overhead. At biographical horizons (marginal competitor perspective), the same constraint appears as pure extraction (snare) \u2014 trapped agents see only the barriers and lock-in costs. At generational horizons (regulatory coalition perspective), the constraint appears as temporary coordination with sunset (scaffold) \u2014 interoperability mandates, antitrust enforcement, and open-source alternatives are structural constraints on indefinite concentration. The mandatrophy reveals that 'which type is correct?' is not the right question; instead, the presheaf of perspectives over different agent positions and time horizons shows how the same structural phenomenon is experienced as coordination, extraction, or temporary constraint depending on standpoint. The piton perspective (theatrical 'natural market outcome' narrative) and mountain perspective (information theory inevitability) both risk false closure \u2014 the piton through institutional inertia, the mountain through false naturalization. The analytical observer's task is to recognize that all perspectival readings are legitimate (the constraint genuinely coordinates AND genuinely extracts) and that temporal dynamics (increasing extractiveness, declining theater) signal whether enforcement mechanisms or alternative pathways are winning."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "network_effect_lock_in",
+      "attention_scarcity_economics",
+      "regulatory_capture_digital_markets"
+    ],
+    "dual_formulation_note": "Winner-take-most distribution decomposes into three structurally distinct constraints: (1) network_effect_lock_in (\u03b5\u22480.35, natural lock-in mechanism) \u2014 the mathematical property that larger networks offer more value, creating self-reinforcing concentration; (2) attention_scarcity_economics (\u03b5\u22480.42, bounded rationality) \u2014 consumer attention is finite; information abundance creates scarcity in attention channels; (3) regulatory_capture_digital_markets (\u03b5\u22480.68, enforcement mechanism) \u2014 IP law breadth, patent strategies, trademark strength, and antitrust underenforcement are actively used to elevate and maintain barriers. Winner-take-most as a unified constraint (\u03b5=0.58) represents the interaction of all three. The increasing extractiveness trajectory (0.35\u21920.58) reflects accumulation of enforcement mechanisms on top of the natural network effect base."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.45
+    }
+  ]
+}

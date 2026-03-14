@@ -1,0 +1,183 @@
+{
+  "header": {
+    "constraint_id": "destination_labor_market_saturation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dlms"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "snare",
+    "human_readable": "Destination Labor Market Saturation",
+    "topic_domain": "labor_economics/migration",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "incumbent_workers_destination",
+      "wage_suppression_beneficiaries"
+    ],
+    "victims": [
+      "migrant_workers",
+      "destination_wage_earners"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Migrant Worker",
+      "comment": "PERSPECTIVE 1: THE MIGRANT WORKER (SNARE) \u2014 Trapped by investment sunk in relocation, family commitments, visa restrictions, and psychological commitment to destination city. Cannot exit without absorbing full cost of failed migration. Bears extraction through wage suppression, occupational downgrading, and lack of alternatives. Maximum experienced extraction due to trapped exit options."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Destination Wage Earner",
+      "comment": "PERSPECTIVE 2: THE DESTINATION WAGE EARNER (TANGLED ROPE) \u2014 Constrained by labor market location, skill respecialization costs, and family ties. Experiences both coordination benefit (labor supply enables businesses to operate, wages remain stable through wage compression rather than unemployment) and extraction (suppressed wage growth, occupational competition). Moderate exit cost creates constrained rather than trapped classification."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Destination Employer Coalition",
+      "comment": "PERSPECTIVE 3: THE DESTINATION EMPLOYER COALITION (ROPE) \u2014 High exit optionality through labor arbitrage: can shift hiring practices, relocate, or adjust compensation. Benefits from wage suppression and labor supply abundance. Experiences constraint as pure coordination mechanism solving labor shortage problems. Net beneficiary with full arbitrage options."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Migration Policy Coalition",
+      "comment": "PERSPECTIVE 4: THE MIGRATION POLICY COALITION (SCAFFOLD) \u2014 Organized actors (migration advocates, labor unions, housing organizations) see saturation as a temporary policy problem with a sunset: immigration reform, wage floor enforcement, and geographic distribution policies can redirect migrant flows or restructure labor market coordination. Suppression declines over generational horizons as policy solutions mature. Theater ratio is moderate because enforcement mechanisms (visa caps, wage monitoring) are genuinely functional, not purely performative."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Immigration Enforcement System",
+      "comment": "PERSPECTIVE 5: THE IMMIGRATION ENFORCEMENT SYSTEM (PITON) \u2014 Border controls, visa processing, work permit verification persist largely through institutional inertia despite ineffectiveness at reducing net migration or preventing saturation. The enforcement theater (deportation operations, workplace raids) maintains legitimacy even as actual market-clearing function degrades. Theater ratio is high because enforcement activity is decoupled from outcomes \u2014 migrants find ways through, around, or despite enforcement mechanisms. The system is maintained because it hasn't been fully replaced, not because it works."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: THE ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, labor market saturation appears as an immutable economic law: when labor supply exceeds demand, wages fall and unemployment rises, regardless of policy. This perspective naturalizes the constraint as inherent to market dynamics. However, the structural data reveals this as a false summit \u2014 the saturation is contingent on policy choices (visa caps, worker protections) and institutional arrangements (geographic concentration of opportunity), not immutable law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "wage_suppression_mechanism_ambiguity",
+      "question": "Is measured wage suppression a direct effect of labor supply saturation or an indirect effect of reduced bargaining power and union density?",
+      "resolution_mechanism": "Longitudinal wage analysis controlling for worker skill, education, and experience; comparison of wage trajectories in high-saturation vs low-saturation labor markets with similar institutional structures",
+      "impact": "If direct supply effect: saturation mechanism is fundamentally extractive (snare). If institutional effect: wage suppression is contingent on labor law and union strength, suggesting scaffold (policy-solvable) rather than snare (structural).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether wage suppression is direct supply effect or institutional bargaining effect"
+    },
+    {
+      "id": "migrant_alternative_availability",
+      "question": "Do trapped migrants have material ability to return to origin labor market or migrate to third destinations, or is the trap primarily psychological/sunk-cost driven?",
+      "resolution_mechanism": "Post-saturation migration flow analysis; tracking of return migration and onward migration rates; interview data on perceived vs actual barriers to exit",
+      "impact": "If material barriers dominate (visa restrictions, no savings for relocation): trapped classification is correct. If psychological barriers dominate (identity investment, family commitments): reclassify as identity_locked with constrained structural options.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether migrant trap is material, psychological, or both"
+    },
+    {
+      "id": "labor_market_clearing_threshold",
+      "question": "What threshold of labor supply abundance constitutes extractive saturation vs normal competitive labor market functioning?",
+      "resolution_mechanism": "Analysis of labor market tightness indices (unemployment rate, vacancy ratios, wage growth rates) across comparable cities; identification of point where individual migrant agency dissolves",
+      "impact": "If threshold is high (20%+ unemployment in destination sector): most saturated markets are still somewhat extractive. If threshold is low (5%+ above trend): more markets classified as snares.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Threshold distinguishing competitive labor market from extractive saturation"
+    },
+    {
+      "id": "coordination_value_in_saturation",
+      "question": "Does labor market saturation provide genuine coordination value (labor supply enables businesses, public services, and infrastructure that would not exist without migrants) or is this coordination claim merely cover for extraction?",
+      "resolution_mechanism": "Counterfactual analysis: what would destination economy look like without migrant labor? Comparison of business survival rates, service capacity, wage costs in high-saturation vs hypothetical low-saturation scenarios",
+      "impact": "If genuine coordination: tangled_rope and scaffold classifications justified. If cover for extraction: reclassify more perspectives as snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether saturation provides genuine coordination benefits"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Destination labor market saturation occurs when migrant inflows exceed local labor demand, creating downward wage pressure, occupational downgrading, and reduced mobility for all workers \u2014 both migrants and destination natives. The constraint operates through suppression of alternatives: migrants face high exit costs (sunk investment, visa status, family commitments, psychological attachment) while employers benefit from wage compression and labor abundance. The saturation mechanism exhibits extraction characteristics (wages suppressed below marginal product, workers locked into deteriorating conditions) alongside coordination value (labor supply enables businesses and services that would not exist without migrants). Theater components emerge through immigration enforcement (border controls that persist despite ineffectiveness) and policy performance (saturation described as inevitable rather than as contingent policy outcome). The constraint's classification varies sharply across observer positions: trapped migrants experience snare, destination workers experience tangled coordination-extraction, employers experience pure coordination, organized policy advocates see a temporary problem solvable through reform, enforcement agencies maintain a degraded ritual, and analytical observers risk naturalizing contingent policy as immutable economic law.",
+    "key_agents": [
+      "Migrant Workers: Primary victims (powerless/trapped) \u2014 sunk costs in relocation, visa status dependence, family commitments, psychological investment in destination city create exit barriers",
+      "Destination Wage Earners: Secondary victims (moderate/constrained) \u2014 face wage suppression and occupational competition; constrained rather than trapped by relocation costs and local ties",
+      "Destination Employers: Primary beneficiaries (institutional/arbitrage) \u2014 access abundant, lower-cost labor; can adjust hiring, relocate, or restructure compensation; full arbitrage optionality",
+      "Incumbent Workers' Political Representation: Secondary beneficiaries (organized/constrained) \u2014 benefit from reduced labor competition; constrained by need to balance worker/employer interests",
+      "Migration Policy Advocates: Organized reform actors (organized/constrained) \u2014 see saturation as solvable through geographic distribution, wage floors, and work protections; constrained by political implementation barriers",
+      "Immigration Enforcement Apparatus: Institutional maintainers (institutional/arbitrage) \u2014 enforce border controls and visa restrictions with high theater and low functional effect; maintain legitimacy despite ineffectiveness"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Saturation mechanisms directly suppress wages below market-clearing levels, with measured wage depression of 3-8% in high-saturation sectors. The extraction is not as extreme as pure monopoly/monopsony (which would approach 0.75+) because some workers retain mobility and employers retain competition. The upward trajectory over the interval (0.42 \u2192 0.58) reflects that as saturation deepens, extraction mechanisms intensify \u2014 more workers become trapped, wage suppression accelerates, and alternatives shrink. Suppression (0.62): High. Significant barriers include visa restrictions that create legal dependency, sunk costs in relocation that create financial dependency, occupational downgrading that makes return migration irrational, family commitments that create psychological dependency, and credential non-recognition that locks migrants into lower-wage work. Suppression is not absolute (some migration occurs, some return migration happens) but is severe enough to prevent market-clearing responses. Theater ratio (0.48): Moderate. Immigration enforcement (visa controls, workplace inspections, deportations) is substantially performative \u2014 enforcement intensity does not correlate with actual migration flows, net wage suppression persists despite enforcement activity, and enforcement targets low-visibility migrants while high-value migrants access exemptions. However, theater is not as dominant as in pure piton structures \u2014 some policy tools (wage monitoring, work permit auditing) have partial functional effects. The moderate theater indicates a constraint in transition: policies have real but declining effectiveness as saturation deepens and enforcement complexity increases.",
+    "directionality_logic": "Migrants experience maximum directionality (d \u2248 0.95) because they are pure extraction targets \u2014 they receive suppressed wages, constrained opportunities, and bear psychological costs of failed migration. Their trapped exit status means f(d) approaches maximum (f(0.95) \u2248 1.42), amplifying experienced extractiveness. Destination wage earners experience intermediate directionality (d \u2248 0.55) because they experience both cost (wage suppression through increased labor supply) and benefit (labor abundance enables economic activity; unemployment risk is distributed rather than concentrated). Their constrained exit options place them at moderate d. Employers experience low directionality (d \u2248 0.08) because they are net beneficiaries \u2014 labor abundance reduces their hiring costs and increases their exit optionality. Arbitrage exit status means f(d) can be negative or near-zero, reducing effective extraction to near-zero or negative values (chi becomes coordination rather than extraction). The scaffolding coalition experiences intermediate directionality (d \u2248 0.40) because they are organized actors with real power to influence policy but face implementation constraints. The enforcement apparatus experiences low directionality (d \u2248 0.05) because enforcement maintains beneficiary status (funding, institutional legitimacy, arbitrage mobility) while experiencing minimal cost from saturation dynamics.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence across institutional positions. The trapped migrant sees pure extraction (Snare) \u2014 wages suppressed, alternatives eliminated, costs internalized, no exit available. The destination worker sees mixed coordination-extraction (Tangled Rope) \u2014 wage suppression is a cost, but labor supply enables economic vitality that creates some employment opportunities and services. The employer sees pure coordination (Rope) \u2014 the constraint solves their labor supply problem with minimal resistance; they experience saturation as beneficial market condition. The policy coalition sees a temporary problem with solutions (Scaffold) \u2014 geographic distribution of migrants, labor protections, and wage floors can restructure the constraint's extractiveness within a generation. The enforcement apparatus sees a degraded ritual (Piton) \u2014 enforcement theater maintains legitimacy despite declining functional effect; the apparatus persists through inertia and funding dependence. The analytical observer risks a false summit (Mountain) \u2014 describing saturation as inevitable economic law rather than contingent policy outcome. The perspectival gap reveals that classification outcome is entirely determination by structural position: those trapped experience snares, those with arbitrage experience coordination, those with organized power experience solvable problems, and those maintaining degraded institutions experience ritual.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by revealing that saturation classification depends entirely on institutional position and exit options rather than on any objective feature of saturation itself. The same saturation event is simultaneously: (1) A Snare for trapped migrants with no exit. (2) A Tangled Rope for destination workers with constrained mobility. (3) A Rope for employers with full arbitrage. (4) A Scaffold for organized policy actors who can reshape the constraint over generational time horizons. (5) A Piton for enforcement institutions maintaining degraded control mechanisms. (6) A potential false Mountain for observers who naturalize contingent policy as inevitable law. No single classification is 'correct' \u2014 each is the authentic structural reality from that position. The mandatrophy is resolved not by choosing one type but by recognizing that the presheaf of perspectives over all institutional positions fully determines the constraint's character. The analytical observer should not ask 'what type is saturation?' but rather 'what is the distribution of experienced constraint types across the population?' That distribution IS the constraint."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wage_suppression_mechanism",
+      "occupational_downgrading",
+      "destination_housing_cost_inflation"
+    ],
+    "dual_formulation_note": "Destination labor market saturation is upstream of multiple sectoral constraints (wage suppression, occupational downgrading, housing inflation) but represents a distinct structural constraint operating through labor supply abundance and exit barriers. Decomposition strategy: saturation (this story, \u03b5=0.58) is the general mechanism; wage suppression in specific sectors (\u03b5=0.42-0.65 depending on sector), occupational downgrading (\u03b5=0.52), and housing cost inflation (\u03b5=0.68) are downstream manifestations with sector-specific extraction values."
+  },
+  "directionality_overrides": []
+}

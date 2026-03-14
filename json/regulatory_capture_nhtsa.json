@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "regulatory_capture_nhtsa",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nhtsa"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Regulatory Capture at NHTSA (National Highway Traffic Safety Administration)",
+    "topic_domain": "regulatory_governance/transportation_safety",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "automotive_manufacturers"
+    ],
+    "victims": [
+      "vehicle_safety_standards",
+      "consumer_protection"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Consumer Safety Standard",
+      "comment": "PERSPECTIVE 1: CONSUMER SAFETY STANDARD (SNARE) \u2014 The abstract public good of vehicle safety cannot exit the regulatory capture mechanism; bears full cost of weakened standards. Consumers face maximum coercion through degraded safety requirements with minimal coordination benefit. No exit option available."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Independent Safety Advocates",
+      "comment": "PERSPECTIVE 2: INDEPENDENT SAFETY ADVOCATES (TANGLED ROPE) \u2014 Consumer groups and safety researchers benefit from access to NHTSA data and regulatory process but face high costs to challenge industry-favorable rulings (litigation, resource barriers). Genuine coordination function (setting baseline safety standards) exists alongside asymmetric extraction favoring manufacturers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Automotive Manufacturers",
+      "comment": "PERSPECTIVE 3: AUTOMOTIVE MANUFACTURERS (ROPE) \u2014 Primary beneficiary experiencing the constraint as coordination of compliance standards and liability frameworks. Manufacturers can arbitrage between NHTSA, state regulators, and international standards. Net positive extraction flow toward this institution. Coordination function is genuine but subordinated to extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "NHTSA Leadership",
+      "comment": "PERSPECTIVE 4: NHTSA LEADERSHIP (TANGLED ROPE) \u2014 Institutional actor whose identity has fused with industry stakeholder relations. Leadership must coordinate safety rulemaking (genuine function) while managing manufacturer compliance costs and political pressure. Constrained by revolving-door employment patterns and industry capture of technical expertise. Extraction flows both toward and from manufacturers depending on regulatory cycle phase."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "NHTSA Formal Process",
+      "comment": "PERSPECTIVE 5: NHTSA FORMAL PROCESS (PITON) \u2014 Notice-and-comment rulemaking, cost-benefit analysis, technical testing protocols persist as performative theater. The process generates legitimate-appearing regulatory outputs while manufacturers systematically undermine stringency through comment flooding, expert testimony manipulation, and cost projection inflation. Theater maintains institutional legitimacy; function has degraded to ritual."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, regulatory capture appears as an immutable structural consequence of concentrated industry power meeting information asymmetries: whenever regulators depend on regulated industry for technical expertise and political support, capture is inevitable. However, this perspective risks naturalizing a contingent institutional arrangement as physical law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "capture_vs_coordination_boundary",
+      "question": "At what point does legitimate manufacturer input in rulemaking become regulatory capture? How does one distinguish coordination from extraction?",
+      "resolution_mechanism": "Comparative analysis of rule stringency across jurisdictions with different capture levels; longitudinal tracking of proposed vs final rule stringency; cost projections vs actual compliance costs; safety outcome correlations with rule stringency",
+      "impact": "If boundary is ambiguous: capture appears inevitable and debate becomes rhetorical. If boundary is detectable: capture mechanisms become addressable through structural reform (independent expertise, funding insulation, outcome accountability).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold distinguishing manufacturer influence from regulatory capture"
+    },
+    {
+      "id": "revolving_door_causality",
+      "question": "Does industry employment of former NHTSA officials cause regulatory capture, or do captured regulators self-select into industry employment?",
+      "resolution_mechanism": "Matching analysis comparing regulatory voting patterns of officials before and after departure to industry; career trajectory analysis of regulators with different tenure lengths; difference-in-differences estimation around regulatory transitions",
+      "impact": "If causal (employment \u2192 capture): revolving door itself is the extraction mechanism. If selection (capture \u2192 employment): employment is symptom of pre-existing capture. If bidirectional: capture is mutually reinforced through career incentives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causality of revolving-door career effects on capture"
+    },
+    {
+      "id": "international_standard_coordination",
+      "question": "Do global harmonization efforts (Geneva agreements, international standards bodies) represent genuine efficiency coordination or manufacturer arbitrage?",
+      "resolution_mechanism": "Analysis of voting patterns in international standards bodies; correlation between industry concentration and international standard stringency; comparative stringency analysis across jurisdictions with different capture levels",
+      "impact": "If coordination: international standards provide downward pressure on capture. If arbitrage: manufacturers coordinate globally to establish weak baseline, then capture individual regulators into compliance. If mixed: both mechanisms operate simultaneously.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether international standards coordinate or enable manufacturer arbitrage"
+    },
+    {
+      "id": "identity_lock_regulatory_class",
+      "question": "To what extent is NHTSA capture maintained through identity-locking of leadership to industry stakeholder relations rather than through structural material dependency?",
+      "resolution_mechanism": "Post-capture institutional analysis: if NHTSA leadership transitions to individuals with no industry ties, does capture mechanism persist? Do leadership identity narratives emphasize 'working with industry' as constitutive of regulatory role? Do captured leaders perceive captured outcomes as correct rather than forced?",
+      "impact": "If identity-locked: breaking capture requires identity frame shift (difficult, generational). If structurally forced: capacity exists for immediate remediation through funding/staffing reforms. If both: identity lock may persist even after structural barriers are removed.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Role of identity fusion in maintaining regulatory capture"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Regulatory capture at NHTSA exemplifies how an institutional constraint operates across multiple structural positions simultaneously. The National Highway Traffic Safety Administration was established to set and enforce vehicle safety standards, creating a genuine coordination function \u2014 uniform standards reduce consumer confusion and facilitate interstate commerce. However, over decades, the regulatory process has been systematically captured by automotive manufacturers through multiple mechanisms: revolving-door employment, technical expertise capture, cost-benefit analysis inflation, and comment flooding in notice-and-comment proceedings. The constraint exhibits tangled-rope characteristics: genuine coordination of baseline safety standards persists alongside systematic extraction favoring manufacturers over consumer safety. Extractiveness has risen from 0.35 (1970s, early regulation) to 0.58 (2020s, mature capture), while theater ratio has increased from 0.45 to 0.68, indicating that the formal process has become increasingly performative relative to its real function. The constraint operates across six distinct observational contexts, each perceiving a different classification, making it a diagnostic exemplar for understanding how institutional capture manifests as a tangled rope rather than pure extraction (snare) or pure coordination (rope).",
+    "key_agents": [
+      "Automotive Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 capture NHTSA standards-setting to minimize compliance costs while preserving liability protection",
+      "Vehicle Safety Standards: Primary victim (powerless/trapped) \u2014 abstract public good that cannot exit; bears cost of weakened standards with no compensation mechanism",
+      "Consumer Protection Advocates: Secondary victim (moderate/constrained) \u2014 face high resource barriers to challenge manufacturer-favorable rulings; dependent on NHTSA data access and regulatory process",
+      "Independent Safety Researchers: Secondary beneficiary (powerful/constrained) \u2014 benefit from regulatory infrastructure and testing data but constrained by industry influence over research funding and publication channels",
+      "NHTSA Leadership: Captured institutional actor (powerful/constrained) \u2014 identity fused with industry stakeholder relations; manages coordination function while serving manufacturer interests",
+      "Congress and Executive Leadership: Oversight institution (organized/arbitrage) \u2014 nominally sets NHTSA mandate but lacks technical expertise and faces manufacturer lobbying; arbitrage between consumer safety and industry competitiveness",
+      "Analytical Observer: External analyst (analytical/analytical) \u2014 risks naturalizing capture as inevitable structural feature of regulation"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and increasing. Manufacturers capture baseline safety standards, reducing their compliance costs relative to uncontaminated regulation. The extraction is not total (complete capture would yield \u03b5 \u2248 0.75+) because NHTSA retains some functional autonomy, consumer groups can still challenge rulings, and international standards provide downward pressure. The trajectory shows acceleration \u2014 capture deepened from 1980s to 2020s as manufacturers invested in regulatory expertise and lobbying infrastructure. Suppression (0.65): Moderate-high. Barriers to independent safety advocacy include: litigation costs, technical expertise concentration in industry, publication bias against negative vehicle safety findings, and career risk for NHTSA staff who challenge industry consensus. However, suppression is not total \u2014 some groups successfully litigate, independent researchers publish, and congressional oversight exists. Theater ratio (0.68): Moderate-high and increasing. NHTSA's formal notice-and-comment process, cost-benefit analysis, and technical testing generate legitimate-appearing regulatory outputs, but manufacturers systematically manipulate the process through comment flooding, expert testimony, and inflated cost projections. The theater has increased as manufacturers professionalized capture efforts, while the actual function of independent safety standard-setting has degraded to manufacturer accommodation with cosmetic regulation.",
+    "directionality_logic": "Directionality (d) values are determined by each agent's structural position relative to the extraction flow. Manufacturers are beneficiaries with arbitrage exit options (d \u2248 0.15, low f(d)) \u2014 they experience the constraint as coordination and can move to other regulators if needed. Consumer safety is a victim with no exit (d \u2248 0.95, high f(d)) \u2014 the abstract public good cannot leave and bears maximum extraction. Moderate safety advocates face constrained exit (d \u2248 0.70, moderate-high f(d)) \u2014 they can litigate or protest but at high cost. NHTSA leadership faces capture-specific directionality: they are nominally regulators but are identity-locked to industry stakeholder relations, making their d intermediate (\u2248 0.55) \u2014 they maintain some regulatory function (beneficiary-adjacent) while serving manufacturer interests (victim-adjacent). The perspectival gap reflects these directionality differences: manufacturers see rope (coordination), NHTSA leadership sees tangled rope (mixed coordination/extraction), safety advocates see snare (pure extraction), and the analytical observer risks seeing mountain (inevitable capture).",
+    "perspectival_gap": "The largest gap exists between the manufacturer perspective (rope: coordination of compliance standards, genuine function) and the consumer safety perspective (snare: degraded standards with no exit). NHTSA leadership occupies an intermediate position (tangled rope) \u2014 they coordinate genuine safety rulemaking while serving manufacturer interests through capture. The independent advocates see tangled rope (mixed function and extraction), while the formal regulatory process itself appears as piton (theater masking degraded function). The analytical observer risks the false summit of seeing capture as inevitable (mountain) \u2014 naturalization of what is actually a contingent institutional arrangement sustained by specific career incentives and information asymmetries. These gaps reveal that the classification of the same constraint depends entirely on the observer's structural position and exit options.",
+    "mandatrophy_analysis": "REGULATORY CAPTURE MANDATROPHY: The constraint's existence relies on suppressing the alternative frame \u2014 that safety standards SHOULD prioritize consumer protection over manufacturer cost minimization. The tangled-rope classification resolves the mandatrophy by acknowledging that genuine coordination (baseline standards) and systematic extraction (manufacturer cost minimization) coexist in the same institutional structure. The constraint is NOT a snare (pure extraction) because safety standards do serve a real coordination function \u2014 they reduce consumer confusion and facilitate interstate commerce. The constraint is NOT a rope (pure coordination) because manufacturers systematically capture the standards-setting process to minimize their own costs relative to what independent regulation would require. The tangled rope captures both dynamics: the institutional mechanism simultaneously solves a coordination problem (uniform safety standards) and enables extraction (manufacturer capture of the standards-setting process). Breaking the capture would NOT eliminate the coordination function \u2014 reforming NHTSA with independent expertise, insulated funding, and outcome accountability would preserve or improve coordination while reducing extraction. The mandatrophy is resolved by recognizing that the institutional form (regulatory agency with manufacturer input) can serve either coordination or extraction depending on the capture level and structural safeguards."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "vehicle_safety_information_asymmetry",
+      "automotive_lobbying_structural_power"
+    ],
+    "dual_formulation_note": "NHTSA capture is downstream of manufacturer structural power in automobile markets but represents a distinct constraint focused on the regulatory process itself. The upstream constraints concern market structure and information flows; this constraint concerns how regulatory institutions translate market power into policy capture."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.55
+    }
+  ]
+}

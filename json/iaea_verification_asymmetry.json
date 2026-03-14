@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "iaea_verification_asymmetry",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "iaea"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "IAEA Verification Asymmetry in Nuclear Non-Proliferation",
+    "topic_domain": "international_security/nuclear_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nuclear_weapons_states",
+      "iaea_institutional_authority"
+    ],
+    "victims": [
+      "non_nuclear_states",
+      "verification_transparency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Non-Nuclear State Under Inspection",
+      "comment": "PERSPECTIVE 1: NON-NUCLEAR STATE UNDER INSPECTION (SNARE) \u2014 Subject to intrusive IAEA inspections with no reciprocal verification rights over weapons states. Trapped by NPT commitments with no exit without reputational/security cost. Full extraction: inspected but not inspecting; disarmed but not reciprocally verified."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Threshold State (Ambiguous Nuclear Capacity)",
+      "comment": "PERSPECTIVE 2: THRESHOLD STATE (TANGLED ROPE) \u2014 Constrained by verification regime but also benefits from ambiguity it creates; can maintain deterrent effect while ostensibly compliant. High suppression (inspection pressure) but genuine coordination benefit (security stability). Extraction with asymmetric burden-sharing."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Nuclear Weapons State",
+      "comment": "PERSPECTIVE 3: NUCLEAR WEAPONS STATE (ROPE) \u2014 Benefits from IAEA as coordination mechanism that legitimizes weapons possession while appearing to restrict proliferation. No meaningful inspections of arsenals. Experiences constraint as coordination: NPT framework stabilizes the nuclear order while preserving their advantage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "IAEA as Institutional Actor",
+      "comment": "PERSPECTIVE 4: IAEA INSTITUTIONAL ACTOR (TANGLED ROPE) \u2014 Mandated to verify non-weapons-state compliance while structurally unable to verify weapons states (no authority, no access, no political will). Genuine coordination function (detecting diversion in peaceful programs) layered with extractive enforcement burden (asymmetric inspection pressure). Active enforcement required; benefits member states that control the board."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Safeguards Theater",
+      "comment": "PERSPECTIVE 5: SAFEGUARDS THEATER (PITON) \u2014 The IAEA inspection ritual is substantially performative: sophisticated states can conceal weapons programs (Iran, North Korea historical cases), and inspections cannot prevent weapons development (only detect diversion). The ritual persists through institutional inertia and legitimacy theater \u2014 countries participate because non-participation signals hostile intent, not because inspections reliably prevent proliferation. High theater ratio reflects the gap between stated verification goal and actual detection capacity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Structural Asymmetry View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / STRUCTURAL ASYMMETRY VIEW (MOUNTAIN) \u2014 From a civilizational timescale, the asymmetry appears as a natural law of international relations: you cannot simultaneously maintain a weapons monopoly AND have credible verification of weapons elimination without reciprocal inspection. The NPT's core contradiction is structural, not contingent. The asymmetry is inherent to any regime that permits some states to retain weapons. However, this classification risks naturalizing what is a political choice: the five permanent Security Council members deliberately constructed a regime that protects their advantage. The engine will flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "reciprocal_inspection_feasibility",
+      "question": "Could weapons states' arsenals be verified via IAEA inspections without compromising strategic military security?",
+      "resolution_mechanism": "Technical analysis of warhead verification protocols; comparison with arms control regimes (START treaties) that achieved non-NPT verification; assessment of transparency vs. military operational security tradeoffs",
+      "impact": "If feasible: asymmetry is political choice, not structural necessity \u2014 classification stays Tangled Rope/Snare. If infeasible: asymmetry reflects genuine verification limits \u2014 Mountain classification gains structural grounding.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical feasibility of reciprocal arsenal verification"
+    },
+    {
+      "id": "inspection_detection_reliability",
+      "question": "What is the true detection rate of IAEA safeguards for clandestine weapons programs in non-weapons states?",
+      "resolution_mechanism": "Post-incident analysis (Iran, North Korea, Iraq) of what was detected vs. what was concealed; assessment of detection confidence intervals; comparison with baseline false positive/negative rates for complex technical verification",
+      "impact": "If high (>80%): safeguards are functionally meaningful coordination, extraction is moderate (Tangled Rope confirmed). If low (<50%): safeguards are theater (Piton elevated), extraction is effective (Snare confirmed for victims).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Actual detection reliability of IAEA safeguards"
+    },
+    {
+      "id": "npt_exit_cost_structure",
+      "question": "What are the true security, economic, and reputational costs for a non-weapons state to withdraw from the NPT?",
+      "resolution_mechanism": "Case studies of withdrawal threats (Iran, North Korea) and their consequences; modeling of security spiral if withdrawal threshold is crossed; assessment of whether costs are structural or contingent on current geopolitical distribution",
+      "impact": "If costs are catastrophic and unavoidable: exit is truly 'trapped' (d~0.95). If costs are severe but calculable: exit is 'constrained' (d~0.70). This determines whether the classification shifts from Snare (trapped) to Tangled Rope (constrained).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "True exit costs for NPT withdrawal"
+    },
+    {
+      "id": "weapons_state_incentive_divergence",
+      "question": "Do all five weapons states benefit equally from the NPT asymmetry, or do some face hidden costs that offset the verification advantage?",
+      "resolution_mechanism": "Analysis of proliferation threats to each weapons state; assessment of whether the NPT asymmetry actually prevents the specific threats each faces; identification of states for whom a reciprocal verification regime might be strategically preferable",
+      "impact": "If some weapons states would prefer a reciprocal regime: NPT appears as coordination mechanism constrained by path dependence, not as pure extraction (Rope/Tangled Rope distinction). If all benefit equally: asymmetry is pure privilege (Snare from non-weapons state perspective confirmed).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether weapons states uniformly benefit from NPT asymmetry"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The IAEA verification regime creates a structural asymmetry at the core of non-proliferation governance: non-weapons states accept intrusive inspections of their civilian nuclear programs while the five recognized weapons states (NPT Article IX signatories) retain arsenals without reciprocal verification. This constraint exhibits multiple DR types depending on the observer's structural position. To non-nuclear states, it is a Snare \u2014 trapped by the regime with no exit option that avoids security isolation. To the IAEA, it is a Tangled Rope \u2014 genuine coordination function (detecting diversion in peaceful programs) layered with asymmetric enforcement burden. To weapons states, it appears as Rope \u2014 coordination that stabilizes the nuclear order while preserving their monopoly. The theater ratio (0.64) reflects the performative character of safeguards: sophisticated proliferators can evade detection (Iran, North Korea historical cases), and IAEA inspections cannot prevent weapons development (only detect diversion in declared facilities). The regime's extractiveness has increased over the 20-year interval (0.35 \u2192 0.58) as threshold states have developed indigenous enrichment capabilities while remaining nominally compliant, forcing IAEA into deeper verification procedures that increase theater and suppression without proportionally increasing transparency.",
+    "key_agents": [
+      "Non-Nuclear States: Primary victim (powerless/trapped) \u2014 subject to intrusive inspections, unable to reciprocally verify weapons states, trapped by NPT commitments with security consequences for exit",
+      "Threshold States: Secondary actor (moderate/constrained) \u2014 constrained by verification regime but benefit from ambiguity it maintains; can develop dual-use capacity while claiming compliance",
+      "Nuclear Weapons States: Primary beneficiary (institutional/arbitrage) \u2014 retain arsenals without reciprocal inspection; use NPT framework to legitimize weapons possession while restricting proliferation",
+      "IAEA Institutional Authority: Primary enforcer (institutional/constrained) \u2014 mandated to verify non-weapons-state compliance but structurally unable to verify weapons states; benefits from institutional authority while facing verification burden",
+      "Verification Transparency: Diffuse victim (powerless/trapped) \u2014 abstract public good of knowledge about nuclear weapons programs; cannot organize or exit; bears full cost of asymmetric information"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The asymmetry extracts significant political and security advantage for weapons states, but the extraction is not maximal (0.70+) because threshold states can maintain ambiguity, and some non-weapons states derive security benefits from the NPT framework (normalization of non-weapons status, access to civilian nuclear technology). The value reflects that the extraction mechanism \u2014 mandatory inspection + inability to exit \u2014 is real but operates within a framework that provides some countervailing coordination benefits. Suppression (0.68): High. Multiple suppression mechanisms: (1) institutional \u2014 IAEA has inspection authority backed by Security Council; (2) reputational \u2014 withdrawal from NPT signals hostile intent and triggers sanctions/isolation; (3) material \u2014 weapons development is technically difficult and costly; (4) cognitive \u2014 normalization of non-weapons identity makes proliferation psychologically distant. Theater ratio (0.64): Moderate-high. The IAEA safeguards regime performs significant legitimacy theater \u2014 inspections are publicized as preventing weapons, but detection rates for clandestine programs are uncertain, and the regime cannot prevent a determined state with sufficient technical capacity. However, theater is not maximal (0.70+) because some actual information is generated: inspections do detect diversion when it occurs, and the regime creates friction that slows (if not prevents) proliferation.",
+    "perspectival_gap": "The widest perspectival gap is between the non-nuclear state (Snare) and the weapons state (Rope). Both experience the same institutional structure, but extraction flows in opposite directions. From the weapons state's view, the NPT is a coordination mechanism that solves the collective action problem of preventing proliferation while preserving their security advantage. From the non-nuclear state's view, it is a trap: accept inspections or face military/economic consequences, with no reciprocal rights. The IAEA's institutional perspective (Tangled Rope) is caught between: genuine coordination function (detecting diversion) requires active enforcement (inspections, intrusions), which falls asymmetrically on non-weapons states. The threshold state's perspective (Tangled Rope) is distinctive: constrained by the regime but benefits from the opacity the regime permits \u2014 can develop weapons capability while nominally compliant. The analytical observer risks seeing the asymmetry as an immutable structural feature (Mountain) \u2014 you cannot have a weapons monopoly and reciprocal verification simultaneously \u2014 but this naturalizes a political choice: the weapons states deliberately constructed a regime that protects their advantage, and alternative regimes (universal disarmament, reciprocal verification, graduated weapon elimination) are technically feasible but politically rejected.",
+    "directionality_logic": "Directionality (d) values: Non-nuclear states experience high d (~0.88) because they are pure targets of inspection/suppression with minimal beneficiary status; their exit options are trapped (withdrawal triggers security consequences). Weapons states experience low d (~0.18) because they are net beneficiaries of the asymmetry; their exit options are arbitrage (they can maintain or expand arsenals with minimal verification cost). The IAEA experiences moderate d (~0.65) because it is structurally constrained between mandated verification (which targets non-weapons states) and institutional pressure from weapons states (which shield themselves from verification). The threshold state experiences moderate d (~0.52) because it bears inspection burden but benefits from the ambiguity the regime permits. These directionality values are derived from the explicit beneficiary/victim declarations: weapons states and IAEA institutional authority are beneficiaries; non-nuclear states and verification transparency are victims. The derived d values feed into the sigmoid f(d) to produce experienced extractiveness chi that varies across perspectives.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the mandatrophy through perspectival relativism: all six types are legitimate readings from different structural positions. The non-nuclear state experiences Snare (pure extraction with no exit). The weapons state experiences Rope (coordination mechanism). The IAEA experiences Tangled Rope (mixed coordination-extraction). The threshold state experiences Tangled Rope (constrained with ambiguity benefit). The safeguards theater is Piton (performative ritual maintained by institutional inertia). The analytical observer experiences Mountain risk (naturalizing a political choice as structural law). No single type is 'correct' \u2014 the constraint's actual structure is the presheaf of all perspectival readings. The mandatrophy is resolved by showing that the asymmetry is neither pure coordination (Rope would require symmetric burden-sharing) nor pure extraction (Snare would require zero coordination benefit for victims), but a hybrid where coordination benefits some agents while extracting from others, with active enforcement required to maintain the asymmetry. The increased theater ratio over time (0.42 \u2192 0.64) and extractiveness (0.35 \u2192 0.58) indicate a degradation toward Snare/Piton classification: as weapons states develop more sophisticated concealment and non-weapons states develop dual-use capacity, the original coordination function (preventing proliferation) becomes harder to verify (theater rises) while the extraction mechanism (mandatory inspection of non-weapons states) becomes more intrusive (extractiveness rises)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "nuclear_threshold_state_ambiguity",
+      "iaea_technical_safeguards_limits",
+      "npt_compliance_reporting_asymmetry"
+    ],
+    "dual_formulation_note": "The IAEA verification asymmetry is downstream of the NPT's structural architecture and affects multiple related constraints: the technical limits of safeguards detection (can inspections reliably find clandestine programs?), the strategic behavior of threshold states (how do they exploit the ambiguity?), and the compliance reporting regime (how asymmetric is disclosure?). Each has its own extractiveness value reflecting different empirical status. The verification asymmetry story focuses on the regime's directional extraction; the safeguards limits story focuses on technical detection reliability."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.65
+    }
+  ]
+}

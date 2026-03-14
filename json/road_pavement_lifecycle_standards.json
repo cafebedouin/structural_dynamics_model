@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "road_pavement_lifecycle_standards",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rpls"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Road Pavement Lifecycle Standards and Maintenance Extraction",
+    "topic_domain": "infrastructure_policy/civil_engineering",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "asphalt_contractors",
+      "aggregate_suppliers",
+      "equipment_manufacturers"
+    ],
+    "victims": [
+      "vehicle_operators",
+      "public_taxpayers",
+      "long_term_infrastructure_quality"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Commuter and Taxpayer",
+      "comment": "PERSPECTIVE 1: COMMUTER/TAXPAYER (SNARE) \u2014 Trapped between mandatory road usage and mandatory tax contributions. Cannot exit the road system. Bears all costs: vehicle damage from poor surfaces, fuel inefficiency, repair bills, and taxes that fund cycles of premature failure and repeated resurfacing. No alternatives in most jurisdictions. Maximum experienced extraction with no coordination benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Asphalt Contractor",
+      "comment": "PERSPECTIVE 2: ASPHALT CONTRACTOR (ROPE) \u2014 Benefits from standards that mandate regular resurfacing cycles independent of actual pavement condition. Early replacement requirements create reliable revenue streams. Can arbitrage between jurisdictions with different enforcement levels. Sees the constraint as coordination mechanism: standards specify project scope, timing, and material requirements. Net beneficiary experiencing minimal extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Municipal Transportation Engineer",
+      "comment": "PERSPECTIVE 3: MUNICIPAL ENGINEER (TANGLED ROPE) \u2014 Constrained by state-mandated pavement lifecycle standards that specify resurfacing intervals. Experiences genuine coordination: standards eliminate uncertainty about acceptable maintenance schedules. But also experiences extraction: standards often require more frequent (and expensive) resurfacing than structural condition warrants. Career pressures align with compliance over cost optimization. Mixed extraction and coordination function."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Performance-Based Pavement Coalition",
+      "comment": "PERSPECTIVE 4: PERFORMANCE-BASED COALITION (SCAFFOLD) \u2014 Organized movement toward condition-based maintenance (measuring actual surface condition rather than age) represents sunset clause for rigid lifecycle standards. Sees standards as temporary scaffolding that enabled systematic maintenance but should decline as data-driven monitoring improves. Coalition includes transportation researchers, forward-looking municipalities, and technology providers developing pavement sensors. Sunset timeline: 15-25 years for condition-based systems to replace age-based standards."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State Department of Transportation",
+      "comment": "PERSPECTIVE 5: STATE DOT (PITON) \u2014 State transportation agencies maintain rigid pavement lifecycle standards nominally for safety and longevity but functionally through institutional inertia. The standards were created decades ago when data collection was poor and engineering uncertainty was high. Modern pavement monitoring technology makes age-based standards obsolete, yet agencies continue enforcing them. Theater ratio is high: inspection protocols are performative (inspectors rate pavements as 'failed' based on age-arrived-at rather than measured condition). Standards persist because changing them requires political capital and threatens contractor relationships, not because they optimize infrastructure outcomes."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Equipment Manufacturer",
+      "comment": "PERSPECTIVE 6: EQUIPMENT MANUFACTURER (TANGLED ROPE) \u2014 Large manufacturers of resurfacing equipment and materials benefit from standardized replacement cycles (predictable demand). But also coordinate supply chains and equipment specifications globally. Extraction is moderate because manufacturers have mobility (can shift supply to different markets) and genuine role in coordinating procurement and equipment standards. Experience is mixed: real coordination function plus extraction through standardized specifications favoring established products."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law View (False Summit)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a naive engineering perspective, pavement has inherent degradation rates and lifecycles that cannot be escaped \u2014 materials fail, surfaces crack, bases weaken. This perspective sees lifecycle standards as describing immutable properties of asphalt itself. However, the structural data (extractiveness 0.52, suppression 0.58, theater 0.68) contradicts pure naturalization. Modern condition-based monitoring demonstrates that pavement lifecycles are not fixed properties but contingent on use, climate, and maintenance strategy. This is a false summit: the constraint is institutional (enforceable standards) naturalizing what appears to be a law of materials."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "condition_measurement_feasibility",
+      "question": "Can condition-based monitoring systems (pavement sensors, automated imaging, acoustic testing) actually measure pavement condition with sufficient accuracy and cost-effectiveness to replace age-based lifecycle standards?",
+      "resolution_mechanism": "Deployment pilot programs comparing condition-based vs age-based maintenance scheduling; cost and accuracy analysis of monitoring technologies across diverse climate and traffic regimes",
+      "impact": "If feasible: scaffold sunset is real and timeline can be estimated. If infeasible: condition-based coalition is aspirational and lifecycle standards will persist as piton rather than temporary scaffolding.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether condition-based monitoring can replace age-based standards"
+    },
+    {
+      "id": "optimal_resurfacing_interval",
+      "question": "What is the economically and structurally optimal resurfacing interval for pavement given specific climate, traffic, and base conditions? Does it match current state-mandated lifecycle standards or deviate systematically?",
+      "resolution_mechanism": "Life-cycle cost analysis comparing age-based maintenance schedules to condition-based recommendations; analysis of long-term infrastructure condition data across jurisdictions with different standards",
+      "impact": "If optimal interval > mandated interval: standards create unnecessary extraction. If optimal < mandated: standards provide genuine safety margin. If heterogeneous: one-size-fits-all standards are always suboptimal and extraction varies by jurisdiction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Optimal resurfacing interval vs mandated standards"
+    },
+    {
+      "id": "contractor_influence_on_standards",
+      "question": "To what degree are state-mandated pavement lifecycle standards shaped by contractor lobbying vs independent engineering analysis?",
+      "resolution_mechanism": "Historical analysis of standard-setting processes; comparison of standards across states with different regulatory structures and contractor concentration; expert elicitation of engineers' versus contractors' preferred intervals",
+      "impact": "If contractor influence > 40%: standards are primarily extraction mechanisms (snare/tangled_rope from commuter perspective is accurate). If < 20%: standards reflect genuine engineering consensus (rope/mountain perspectives gain credibility).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Contractor influence on lifecycle standards"
+    },
+    {
+      "id": "pavement_quality_outcomes",
+      "question": "Do rigid age-based lifecycle standards produce better long-term pavement quality (fewer failures, longer asset life) compared to condition-based or minimal-intervention approaches?",
+      "resolution_mechanism": "Comparative analysis of pavement condition data, failure rates, and long-term asset value across jurisdictions and time periods; controlled experiments with pilot programs using different maintenance strategies",
+      "impact": "If age-based outperforms: justifies extraction as coordination cost (tangled_rope authenticity). If condition-based or minimal equal or exceed: standards extract without coordination benefit (snare/extraction diagnosis confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Quality outcomes: age-based vs condition-based pavement maintenance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Road pavement lifecycle standards (typically mandating resurfacing every 15-25 years depending on jurisdiction) create a structural tension between legitimate infrastructure coordination and extractive industry incentives. The standards specify when pavements must be resurfaced based primarily on age rather than condition, creating guaranteed work streams for contractors and manufacturers. While age-based standards reduced uncertainty in infrastructure planning during the 20th century when monitoring capacity was limited, modern pavement condition monitoring technology makes rigid lifecycle standards obsolete. The constraint exhibits tangled coordination (reducing planning uncertainty for municipalities and providing equipment manufacturers with predictable demand) alongside extraction (commuters bear costs of premature resurfacing; taxpayers fund unnecessary replacement). The theater ratio of 0.68 reflects that inspection protocols are increasingly performative: pavement rated as 'failed' based on chronological age rather than measured condition. Extractiveness has increased from 0.38 to 0.52 over the interval as standards have been enforced more strictly and monitoring technology has revealed how often age-based scheduling diverges from actual pavement condition. The rising theater ratio (0.52 to 0.68) indicates that the gap between functional and performative maintenance has widened \u2014 agencies continue enforcing standards while acknowledging they no longer represent optimal engineering practice.",
+    "key_agents": [
+      "Commuters and Vehicle Operators: Primary victims (powerless/trapped) \u2014 bear vehicle damage costs, fuel inefficiency, and repair expenses from poor surface conditions during resurfacing cycles",
+      "Taxpayers: Primary victims (powerless/trapped) \u2014 mandatory funding for resurfacing regardless of pavement condition; cannot opt out of road system funding",
+      "Asphalt Contractors: Primary beneficiaries (institutional/arbitrage) \u2014 receive guaranteed work streams from age-based resurfacing; can arbitrage between jurisdictions with different enforcement",
+      "Aggregate Suppliers and Equipment Manufacturers: Secondary beneficiaries (powerful/mobile) \u2014 standardized specifications create predictable demand; can arbitrage globally",
+      "Municipal Transportation Engineers: Mixed agent (moderate/constrained) \u2014 genuinely coordinate with standards but also experience extraction through inflexible replacement schedules",
+      "State Department of Transportation: Institutional actor (institutional/arbitrage) \u2014 maintains standards through inertia; sees own inspection protocols as performative but continues enforcement",
+      "Performance-Based Pavement Coalition: Organized alternative (organized/constrained) \u2014 researchers, forward-looking municipalities, technology providers advocating condition-based maintenance with sunset clause"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Age-based lifecycle standards create guaranteed work streams for contractors independent of actual pavement condition, representing extraction from commuters and taxpayers. However, extractiveness is not extreme because legitimate coordination benefits exist: standards eliminate uncertainty in maintenance planning and enable long-term budget forecasting. The constraint has become more extractive over time (0.38\u21920.52) because pavement monitoring technology now reveals systematic overtreatment \u2014 many pavements rated as 'failed' by age criteria are structurally sound. Suppression (0.58): Moderate-high. Commuters cannot exit road systems; taxation is mandatory. Municipal engineers face state mandates and contractor relationships that constrain alternative approaches. But suppression is not total \u2014 some jurisdictions are piloting condition-based systems, and research alternatives exist. Theater ratio (0.68): High and rising. Inspection protocols are increasingly performative: inspectors apply age-based failure criteria rather than measuring actual surface condition. As condition monitoring technology improves, the gap between performative inspection (visual assessment using age cutoffs) and actual measurement widens. The theater has increased over the interval as the gap between what standards pretend to measure (objective pavement condition) and what they actually measure (calendar age) has become visible.",
+    "perspectival_gap": "The constraint demonstrates a sharp perspectival divide between beneficiaries and victims. Asphalt contractors and equipment manufacturers see the standards as pure coordination (Rope perspective) \u2014 they describe lifecycle standards as necessary predictability mechanisms. Commuters and taxpayers see pure extraction (Snare perspective) \u2014 mandatory funding for unnecessary resurfacing with no exit option. Municipal engineers experience the mixed reality (Tangled Rope perspective) \u2014 standards do coordinate planning but override cost optimization. The organized performance-based coalition sees a temporary problem with a sunset (Scaffold perspective) \u2014 condition-based systems are emerging to replace age-based rigidity. The state DOT sees its own standards as degraded (Piton perspective) \u2014 maintaining them through institutional inertia despite knowing they no longer optimize outcomes. The analytical observer risks naturalizing the standards as inherent properties of pavement degradation (Mountain perspective), but structural data reveals this as a false summit: the constraint is institutional, not physical.",
+    "directionality_logic": "Commuters and taxpayers derive high d (\u21920.95) from being trapped victims with no exit options. Contractors derive low d (\u21920.10) from being beneficiaries with arbitrage options. Municipal engineers derive moderate d (\u21920.55) from being constrained victims who also benefit from coordination. Equipment manufacturers derive low-moderate d (\u21920.35) from being beneficiaries with global mobility. State DOT derives institutional d (\u21920.05) from beneficiary status (standards justify agency existence) and arbitrage options (can modify standards). The piton classification derives from the theater gate: state DOT maintains standards that it perceives as degraded, indicating performative enforcement rather than functional optimization.",
+    "mandatrophy_analysis": "The constraint resolves the mandatrophy by showing how the same institutional arrangement (pavement lifecycle standards) serves genuine coordination functions while enabling extraction. The standards coordinate municipal budget planning, equipment procurement, and contractor workflows \u2014 real benefits that justify some rigidity. But they also extract through premature resurfacing, unnecessary taxpayer spending, and commuter vehicle damage costs \u2014 real harms that contradict pure coordination. The mandatrophy is resolved by the tangled_rope classification: both elements are structurally authentic. The rising extractiveness (0.38\u21920.52) and rising theater (0.52\u21920.68) indicate that the coordination function is degrading while extraction persists \u2014 the ratio between real benefit and pure cost is shifting unfavorably. The scaffold perspective (condition-based sunset) reveals why the constraint is not a permanent snare: genuine alternatives exist and are technically feasible, meaning the extraction is contingent on institutional inertia rather than structural inevitability."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "municipal_transportation_budgeting",
+      "construction_industry_rent_seeking"
+    ],
+    "dual_formulation_note": "Road pavement lifecycle standards decompose into two structurally distinct constraints: (1) age-based scheduling (extractive, \u03b5\u22480.52) and (2) condition-based monitoring infrastructure (coordination, \u03b5\u22480.15). This story addresses the dominant age-based constraint. The monitoring alternative is a separate constraint that affects the sunset timeline."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

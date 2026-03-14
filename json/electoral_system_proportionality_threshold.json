@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "electoral_system_proportionality_threshold",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "elec_prop"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Electoral System Proportionality Threshold",
+    "topic_domain": "political_systems/electoral_mechanics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "established_parties",
+      "plurality_winners"
+    ],
+    "victims": [
+      "minor_parties",
+      "electoral_representation_accuracy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Minor Party Voter",
+      "comment": "PERSPECTIVE 1: MINOR PARTY VOTER (SNARE) \u2014 Structurally trapped by the proportionality threshold. A voter supporting a sub-threshold party faces a choice: vote for a preferred party and contribute zero legislative seats (wasted vote), or strategically vote for a threshold-viable party they do not prefer. The voter cannot exit; withdrawal from participation is the only option, and participation withdrawal carries its own political cost."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Sub-Threshold Movement",
+      "comment": "PERSPECTIVE 2: SUB-THRESHOLD MOVEMENT (SNARE) \u2014 A political movement below the proportionality threshold cannot convert electoral support into legislative power. The constraint extracts the movement's voter base (siphoning votes to major parties through strategic voting) and provides no exit: growing large enough to breach the threshold requires crossing a discontinuity that the threshold itself prevents. Maximum extraction with no alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regional Minority Party",
+      "comment": "PERSPECTIVE 3: REGIONAL MINORITY PARTY (TANGLED ROPE) \u2014 A party with strong regional concentration (e.g., Welsh Plaid Cymru, Basque ETA successor parties) may clear the proportionality threshold in their region while failing nationally. They benefit from the coordination function (local representation is aggregated into national power) but bear extraction costs (their votes are discounted at the national scale and their coalition power is constrained by their sub-threshold national standing). Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Established Party (Above Threshold)",
+      "comment": "PERSPECTIVE 4: ESTABLISHED PARTY (ROPE) \u2014 A party reliably above the proportionality threshold experiences the constraint as a coordination mechanism: it reliably converts vote share to seat share, enabling coalition formation and government construction. The threshold solves the collective action problem of government formation (too many tiny parties makes governance difficult). Net beneficiary \u2014 the constraint subsidizes their seat representation relative to raw vote share."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Governing Coalition",
+      "comment": "PERSPECTIVE 5: GOVERNING COALITION (ROPE) \u2014 The threshold enables stable majorities by suppressing splinter parties. A coalition above the threshold experiences the constraint as governance-enabling coordination: it simplifies legislative arithmetic, reduces veto players, and makes coalition agreements feasible. The threshold is a coordination solution to a genuine problem (too many parties makes government formation intractable)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Electoral Reform Coalition",
+      "comment": "PERSPECTIVE 6: ELECTORAL REFORM COALITION (SCAFFOLD) \u2014 Organized actors (civil society organizations, small parties, some academics) see the proportionality threshold as a temporary coordination problem with a structural sunset. Mixed-member proportional systems, lower thresholds, or regional representation systems create alternative pathways. The reform coalition has agency (they can change the law) and a visible exit: restructured electoral mechanics. Low effective extraction because the constraint is perceived as changeable by organized action."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Electoral Commission",
+      "comment": "PERSPECTIVE 7: ELECTORAL COMMISSION (PITON) \u2014 The proportionality threshold is largely performative at the administrative level. The electoral commission enforces the threshold mechanically (counting votes, computing seat allocation) but this administrative function is not why the threshold persists. It persists through institutional inertia: changing thresholds requires legislative action, which major parties above the threshold have no incentive to support. The commission's role is degraded ritual \u2014 procedural enforcement of a constraint that majors parties maintain for coordination benefits, not because the commission's function requires it."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a civilizational/universal perspective, some threshold effect is inherent to representative democracy itself: any electoral system with finite legislative seats and continuous voter distributions must map a continuum of votes onto a discrete number of seats, creating a discontinuity. This perspective risks naturalizing the specific threshold value (3%, 5%, 10%) as an inherent property of governance. However, the structural data reveals this as a false summit: the threshold value is politically contingent; the discontinuity is not."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "threshold_level_optimality",
+      "question": "Is the specific threshold level (3%, 5%, 10% depending on jurisdiction) optimized for governance stability or calibrated to protect incumbent parties?",
+      "resolution_mechanism": "Comparative analysis across democracies: correlate threshold level with government stability (coalition count, legislative duration) and identify whether thresholds were raised historically in response to party fragmentation or incumbent anxiety",
+      "impact": "If optimized for stability: lower thresholds remain feasible if compensated with stronger coalition-formation norms. If calibrated to protect incumbents: the threshold is pure extraction disguised as coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether threshold is optimized for governance or incumbent protection"
+    },
+    {
+      "id": "strategic_voting_magnitude",
+      "question": "How much of the sub-threshold vote is genuine supporter preference vs. forced strategic voting?",
+      "resolution_mechanism": "Exit polling and ballot-choice analysis: compare stated preferences in confidential surveys to actual ballots cast; correlation between threshold proximity and vote switching",
+      "impact": "If strategic voting dominates: the true sub-threshold support is higher than observed votes (extraction is larger). If preference is genuinely aligned with threshold parties: the observed distribution is genuine.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Strategic voting as hidden vote suppression"
+    },
+    {
+      "id": "coalition_formation_feasibility",
+      "question": "Do lower-threshold electoral systems (e.g., 2% vs 5%) actually produce ungovernable legislatures or do alternative coalition-formation norms (multi-party coalitions, confidence-and-supply) enable stable governance?",
+      "resolution_mechanism": "Longitudinal governance stability analysis: compare government duration, legislative productivity, and executive-legislative conflict across electoral systems with different thresholds; control for external factors (party-system fragmentation, regional polarization)",
+      "impact": "If alternative norms work: the threshold is not necessary for coordination (extraction is not justified). If lower thresholds destabilize: the threshold is necessary coordination overhead.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether lower thresholds remain governable under alternative norms"
+    },
+    {
+      "id": "representation_accuracy_measurement",
+      "question": "What is the normative threshold for acceptable electoral distortion? At what vote-to-seat disparity does a threshold cease to be coordination overhead and become undemocratic extraction?",
+      "resolution_mechanism": "Democratic theory specification: formalize acceptable proportionality ranges and assess whether achieved distortion exceeds them; international comparison against best-practice proportionality metrics",
+      "impact": "If distortion exceeds norms: threshold is definitively extractive. If within acceptable range: threshold remains deniable as coordination cost.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Normative threshold for acceptable electoral distortion"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Electoral system proportionality thresholds create a structural tension between the genuine need for government-formation simplicity (coordination function) and the systematic suppression of political alternatives (extraction function). A proportionality threshold\u2014a minimum vote share required to gain parliamentary seats\u2014operates as pure coordination from the perspective of established parties (it simplifies coalition arithmetic and ensures governable majorities), but as pure extraction from the perspective of sub-threshold parties and their voters (their votes are discounted or wasted regardless of their preference intensity). The constraint exhibits tangled-rope structure: it coordinates government formation (genuine function) while extracting from minorities (asymmetric harm). The theater ratio (0.48) reflects that the threshold maintains moderate performative legitimacy through the language of 'governing stability' and 'preventing fragmentation,' but these are contestable claims about the necessity of the specific threshold level\u2014lower thresholds in other democracies demonstrate feasibility with alternative coalition norms. The extractiveness has increased over the 40-year interval as party fragmentation has accelerated, raising the effective suppression without changing the formal threshold.",
+    "key_agents": [
+      "Minor Party Voter: Trapped victim (powerless/trapped) \u2014 faces strategic voting pressure or vote waste; no exit option",
+      "Sub-Threshold Movement: Trapped victim (powerless/trapped) \u2014 cannot convert support into legislative power; cannot grow without first clearing discontinuity",
+      "Regional Minority Party: Moderate beneficiary-victim (moderate/constrained) \u2014 may clear threshold regionally; mixed coordination (local aggregation) and extraction (national discounting)",
+      "Established Party (Above Threshold): Primary beneficiary (institutional/arbitrage) \u2014 reliably converts vote share to seat share; experiences threshold as governance-enabling coordination",
+      "Governing Coalition: Primary beneficiary (institutional/arbitrage) \u2014 threshold simplifies coalition math and enables stable majorities; experiences constraint as coordination solution",
+      "Electoral Reform Coalition: Organized challenger (organized/constrained) \u2014 sees threshold as temporary and changeable through mixed-member systems or lower thresholds; has structural agency",
+      "Electoral Commission: Institutional manager (institutional/arbitrage) \u2014 mechanically enforces threshold; maintains performative legitimacy but does not drive persistence",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing the threshold value as inherent to representative democracy when only the discontinuity (not the level) is inevitable"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The threshold creates a discontinuous penalty for sub-threshold parties\u2014their votes are entirely discounted below the threshold (100% vote-to-seat conversion failure), while above-threshold parties receive disproportionate seat gains. Over the 40-year measurement interval, extractiveness has increased from 0.35 to 0.58 as party-system fragmentation has accelerated: more parties now fall below the threshold, and the extraction from each trapped party grows. Suppression (0.62): Moderate-high. Sub-threshold voters face genuine barriers to independent party participation (strategic voting pressure, explicit discouragement, media blackout of non-viable parties) and face no exit\u2014withdrawal from participation is costly, and alternative votes are preempted. But suppression is not total; voters can still vote for preferred parties at the cost of vote waste, and periodic movements do cross thresholds through mobilization surges. Theater ratio (0.48): Moderate. The threshold's legitimacy claim rests on 'governing stability' and 'preventing fragmentation'\u2014claims about why thresholds are necessary. But these claims are contestable: lower-threshold systems (e.g., 2%) exist in functioning democracies (Netherlands, Denmark), and their governance is stable under multi-party coalition norms. The performative element is moderate: the threshold has real effects (it does simplify coalition arithmetic) but the specific level is not determined by mechanical governance requirements.",
+    "perspectival_gap": "The major perspectival gap separates threshold-beneficiaries (Rope perspectives: established parties, coalitions) from threshold-victims (Snare perspectives: minor parties, sub-threshold voters). Both groups perceive the same structural object (the threshold), but their classifications differ by two constraint types\u2014four steps on the severity scale. This gap reveals the constraint's core tension: what established parties experience as coordination (simplifying coalition math) is what sub-threshold parties experience as extraction (suppressing their alternatives). The reform coalition's Scaffold perspective occupies a structural middle ground\u2014they acknowledge the threshold's current function (temporary coordination burden) while asserting its changeability (sunset via electoral reform). The piton and mountain perspectives reveal how institutional inertia and naturalizing analysis enable the extraction to persist: the commission maintains it mechanically, and analytical observers risk explaining it as inevitable.",
+    "directionality_logic": "Directionality values (d) are derived from the agent's structural position relative to the threshold. Agents above the threshold (institutional parties, governing coalitions) have low d (they are beneficiaries\u2014the constraint subsidizes their representation). Agents below the threshold (minor party voters, sub-threshold movements) have high d (they are victims\u2014the constraint extracts from them through vote suppression). Regional parties have intermediate d (they are simultaneously beneficiaries regionally and victims nationally). Organized reformers have lower d despite their reformist stance because they possess agency and exit options. The electoral commission has low d (institutional beneficiary status through proximity to enforcement) despite their performative role. The analytical observer has d \u2248 0.72 (observer canonical d) but risks an identity lock if their academic identity becomes fused with the 'governing stability' narrative (explaining why thresholds are necessary rather than questioning the specific threshold level).",
+    "mandatrophy_analysis": "The mandatrophy of electoral thresholds is the tension between genuine coordination function and systematic extraction. The constraint would be pure Rope if (1) the threshold level were optimized for governance stability rather than incumbent protection, and (2) lower thresholds produced ungovernably fragmented legislatures. It would be pure Snare if the governance-stability claim were entirely pretextual. The tangled-rope classification reflects ambiguity: some threshold effect IS necessary for coordination (the discontinuity forces choices that prevent infinite fragmentation), but the specific level (3%, 5%, 10%) is politically chosen and biased toward protecting majors. The omega variables operationalize this: if research confirms that lower thresholds remain governable (omega 3), the extraction case strengthens. If research confirms that strategic voting is suppressing sub-threshold votes beyond their true preference (omega 2), the extraction is larger than vote counts reveal. The constraint avoids false naturalization (mountain) by centering the contingency of the threshold value while acknowledging the inevitability of some discontinuity in vote-to-seat mapping."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "strategic_voting_behavioral_lock",
+      "political_fragmentation_stabilization",
+      "coalition_formation_bottleneck"
+    ],
+    "dual_formulation_note": "The proportionality threshold decomposes into two structurally distinct constraints: (1) the geometric discontinuity inherent to mapping a vote continuum onto discrete seats (inevitable coordination problem, low \u03b5), and (2) the specific threshold level chosen to resolve that discontinuity (politically contingent, extraction-prone, higher \u03b5). This story addresses the combined constraint. Upstream influences include party-system fragmentation and coalition-formation norms; downstream effects include strategic voting dynamics and voter suppression."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    }
+  ]
+}

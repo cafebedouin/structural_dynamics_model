@@ -1,0 +1,228 @@
+{
+  "header": {
+    "constraint_id": "demand_destruction_policy",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "demand_destroy"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Demand Destruction Policy as Coordination-Extraction Hybrid",
+    "topic_domain": "economic_policy/inflation_control",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "creditor_class",
+      "asset_holders",
+      "inflation_hawks"
+    ],
+    "victims": [
+      "wage_earners",
+      "small_business_owners",
+      "unemployed_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Wage Earner",
+      "comment": "PERSPECTIVE 1: WAGE EARNER (SNARE) \u2014 Trapped by income dependence and inability to exit labor markets. Bears full extraction through unemployment risk, wage suppression, and reduced bargaining power. No exit option; maximum experienced extraction. Suppression mechanisms include reserve army of the unemployed and restricted credit access."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Small Business Owner",
+      "comment": "PERSPECTIVE 2: SMALL BUSINESS OWNER (SNARE) \u2014 Trapped by debt obligations and inability to exit credit markets during contraction. Bears extraction through falling revenues, inability to service debt, and loss of collateral value. Suppression includes rising borrowing costs and lack of alternative financing sources."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Central Bank",
+      "comment": "PERSPECTIVE 3: CENTRAL BANK (ROPE) \u2014 Coordinates inflation control across the macroeconomy through rate adjustment. Views demand destruction as legitimate coordination mechanism: painful but necessary to restore price stability. Benefits from institutional mandate fulfillment and credibility restoration. Has exit option (stop tightening) and uses it strategically."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Creditor Class",
+      "comment": "PERSPECTIVE 4: CREDITOR CLASS (ROPE) \u2014 Experiences demand destruction as coordination mechanism that restores their real asset values and purchasing power. Benefits from deflation of debtor incomes and restoration of interest margin. Has exit option (lending terms) and exercises it with selectivity. Nets positive from constraint \u2014 extraction flows toward them."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Coalition",
+      "comment": "PERSPECTIVE 5: LABOR COALITION (TANGLED ROPE) \u2014 Organized but constrained by capital mobility and political fragmentation. Benefits from potential inflation control (real wage protection) but bears asymmetric extraction through unemployment targeting. Has some agency (unionization, strikes) but faces structural coordination problems. Mixed extraction-coordination hybrid."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Unemployed Worker",
+      "comment": "PERSPECTIVE 6: UNEMPLOYED WORKER (TANGLED ROPE) \u2014 Constrained by job search costs and skill degradation. Experiences demand destruction as primary mechanism for inflation control (surplus labor dampens wage inflation). Moderate power through labor market participation when reemployed. Mixed: benefits from eventual price stability but bears full extraction cost during unemployment phase."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Inflationist Reform Coalition",
+      "comment": "PERSPECTIVE 7: INFLATIONIST REFORM COALITION (SCAFFOLD) \u2014 Advocates for alternative inflation-control mechanisms (wage-price coordination, supply-side policy, international coordination). Sees demand destruction as temporary tool to be replaced by better coordination. Views the policy as having natural sunset once inflation normalizes and alternative mechanisms mature. Low effective extraction because coalition has exit path and mobility."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Neoliberal Consensus",
+      "comment": "PERSPECTIVE 8: NEOLIBERAL CONSENSUS (PITON) \u2014 Demand destruction has become the default institutional response to inflation despite contested theoretical justification and degraded empirical performance. Theater ratio reflects performative consensus among policymakers, central bankers, and economists despite growing dissent. The mechanism persists through institutional inertia and ideological capture rather than proven effectiveness. Constraint maintained by narrative rather than function."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 9: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational scope, some demand destruction appears inherent to inflation control: reducing aggregate demand is a thermodynamic necessity when nominal spending exceeds real production capacity. However, the structural data reveals this as a false summit \u2014 demand destruction is one institutional choice among multiple policy pathways (wage-price coordination, supply expansion, money velocity adjustment). The 'natural law' framing masks distributional choices."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "demand_destruction_necessity",
+      "question": "Is demand destruction an inherent requirement for inflation control, or a contingent institutional choice among alternatives?",
+      "resolution_mechanism": "Comparative institutional analysis: countries using wage-price coordination, supply-side policy, or international coordination achieve inflation control without proportional demand destruction. Evidence of alternative causal pathways to price stability.",
+      "impact": "If inherent: classification approaches mountain (natural constraint). If contingent: classification confirms tangled_rope (institutional hybrid with extractive overlay). Affects whether policy can be reformed vs. must be accepted.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether demand destruction is inherent or contingent to inflation control"
+    },
+    {
+      "id": "extraction_incidence_measurement",
+      "question": "What proportion of demand destruction's costs fall on wage earners vs. distributed across all income classes?",
+      "resolution_mechanism": "Income distribution analysis: wages vs. asset values during contraction; unemployment rate targeting relative to income distribution; real purchasing power changes by decile.",
+      "impact": "If concentrated on lower incomes: confirms snare classification for wage earners (high d). If distributed: reclassifies as more symmetric tangled_rope. Determines whether suppression is structural inequality or coordinated sacrifice.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Incidence of demand destruction costs across income distribution"
+    },
+    {
+      "id": "alternative_mechanism_availability",
+      "question": "Do realistic institutional alternatives to demand destruction (wage-price accords, import competition management, productivity acceleration) have materially lower transaction costs?",
+      "resolution_mechanism": "Institutional economics: transaction costs of coordinating wage-price agreements vs. unemployment costs; comparative analysis of countries using alternative inflation-control regimes; simulation of multi-mechanism coordination.",
+      "impact": "If alternatives have lower costs: demand destruction is rent-extraction (snare classification confirmed). If alternatives have higher costs: coordination necessity is real (tangled_rope confirmed). Affects whether the constraint can be reformed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Transaction costs of alternative inflation-control mechanisms"
+    },
+    {
+      "id": "creditor_power_asymmetry",
+      "question": "Does demand destruction systematically advantage creditors (fixed income, asset holders) over debtors (wage earners, small businesses)?",
+      "resolution_mechanism": "Financial incidence analysis: real return on bonds vs. equities during contraction; creditor concentration in financial sector vs. small business debt distribution; distributional outcome measurements.",
+      "impact": "If yes: confirms extraction mechanism (snare/tangled_rope from victims' perspectives). If symmetric: reclassifies constraint as more balanced coordination. Determines whether beneficiary list is complete.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Asymmetric advantage to creditors from demand destruction"
+    },
+    {
+      "id": "unemployment_targeting_justification",
+      "question": "Is unemployment targeting (using joblessness to suppress wage inflation) justified by economic necessity or by distributional preference for creditor interests?",
+      "resolution_mechanism": "Counterfactual analysis: inflation outcomes under alternative suppression mechanisms (wage controls, price controls, import opening); NAIRU validity testing; evidence of explicit unemployment targeting vs. incidental effect.",
+      "impact": "If justified: validates tangled_rope classification (mixed coordination-extraction). If preference-driven: confirms snare classification (pure extraction disguised as necessity). Affects policy reform viability.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Justification for unemployment targeting as suppression mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "Demand destruction policy represents a macroeconomic constraint wherein central banks intentionally reduce aggregate demand (through rate increases, quantitative tightening, and contractionary fiscal coordination) to control inflation. The policy creates a structural tension: inflation control is a genuine coordination problem requiring reduced nominal spending, but the specific institutional mechanism selected \u2014 targeting unemployment and suppressing wages through labor market slack \u2014 distributes costs asymmetrically onto wage earners while distributing benefits toward creditors and asset holders. The constraint exhibits tangled_rope characteristics: it solves a real coordination problem (excess aggregate demand) while simultaneously extracting from powerless agents (wage earners, small business owners) through suppression mechanisms (unemployment risk, credit restriction). The theater ratio reflects that demand destruction justification relies on contested theoretical frameworks (Phillips curve, NAIRU) and naturalizes contingent institutional choices as economic necessity.",
+    "key_agents": [
+      "Wage Earners: Primary victims (powerless/trapped) \u2014 bear extraction through unemployment risk, wage suppression, and reduced bargaining power",
+      "Small Business Owners: Secondary victims (powerless/trapped) \u2014 bear extraction through falling revenues, rising borrowing costs, collateral value loss",
+      "Central Bank: Primary institutional beneficiary (institutional/arbitrage) \u2014 coordinates inflation control; benefits from mandate fulfillment and credibility restoration",
+      "Creditor Class: Secondary institutional beneficiary (institutional/arbitrage) \u2014 benefits from deflation of debtor incomes and restoration of real asset values",
+      "Labor Coalition: Organized secondary agent (organized/constrained) \u2014 benefits from inflation control but bears asymmetric extraction through unemployment targeting",
+      "Unemployed Workers: Tertiary victims (moderate/constrained) \u2014 bear full extraction during unemployment phase but benefit from eventual price stability",
+      "Inflationist Reform Coalition: Alternative agent (organized/mobile) \u2014 advocates for sunset through alternative mechanisms (wage-price coordination, supply policy)",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent policy choice as economic law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The policy does solve a real coordination problem (excess aggregate demand during inflation) but uses a specific mechanism that asymmetrically extracts from wage earners and small business owners. The extraction is not maximal (0.75+) because some agents benefit from inflation control and the mechanism has genuine coordination function. The measurement shows increase over 4 years (0.42\u21920.58) as policy duration extends and unemployment accumulates, indicating extraction accumulation over time. Suppression (0.65): High. Multiple suppression mechanisms operate: unemployment threat reduces labor bargaining power; credit restriction limits business investment; reduced purchasing power limits consumption choices; political economy structures prevent alternative inflation-control mechanisms from being tried. Theater ratio (0.48): Moderate. Demand destruction justification relies on theoretical frameworks (Phillips curve, NAIRU, output gap) that are increasingly contested empirically. The constraint is partially functional (excess demand does need to be reduced) but partially performative (the specific unemployment-targeting mechanism is justified by ideology as much as economics). Theater increases slightly over 4 years (0.35\u21920.48) as performance costs accumulate without proportional inflation reduction.",
+    "perspectival_gap": "Each perspective's classification follows from its structural position. Powerless trapped agents see snare (pure extraction) because they experience only costs. Institutional arbitrage agents see rope (pure coordination) because they experience net benefit. Organized constrained agents see tangled rope (mixed) because they have some agency but face extraction. The perspectival gap reveals that no single classification is correct \u2014 the presheaf of classifications IS the analysis. The gap between institutional perspectives (central bank rope vs. creditor rope) shows that institutional agents with different beneficiary status still converge on rope classification, but directionality values differ. The mountain perspective exposes false naturalization: 'inflation control requires demand destruction' is a misstatement of thermodynamic law \u2014 it conflates 'reducing aggregate demand' (necessary) with 'targeting unemployment' (contingent institutional choice).",
+    "directionality_logic": "Directionality is derived from the structural position of each agent relative to this specific constraint. Wage earners (trapped, victim) have d \u2248 0.95 (full target), producing maximum f(d) \u2248 1.42. This translates to experienced extractiveness \u03c7 = 0.58 \u00d7 1.42 \u00d7 1.0 \u2248 0.82 at national scope. Central banks (arbitrage, beneficiary) have d \u2248 0.10 (near-beneficiary), producing f(d) \u2248 -0.01, translating to \u03c7 \u2248 -0.01 (or clamped to ~0.0). Creditors (arbitrage, beneficiary) have d \u2248 0.15, producing f(d) \u2248 0.02, translating to \u03c7 \u2248 0.01. Organized labor (constrained, mixed) has d \u2248 0.60 (symmetric), producing f(d) \u2248 0.65, translating to \u03c7 \u2248 0.38. The directionality logic shows why the same base extractiveness (0.58) appears as snare to the trapped, rope to the beneficiary, and tangled rope to organized agents \u2014 each experiences different effective extraction based on structural position.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: Demand destruction policy resolves mandatrophy by explicit declaration of coordination function (inflation control) paired with asymmetric extraction (unemployment targeting). The constraint is tangled rope, not pure snare or pure rope. The coordination function (reducing nominal spending to match productive capacity) is genuine and necessary. The extraction (concentrating adjustment costs onto wage earners and small businesses while benefiting creditors) is not necessary but is a distributional choice embedded in the institutional design. Alternative inflation-control mechanisms exist (wage-price coordination, supply expansion, international coordination, velocity management) that would solve the same coordination problem with different or lower extraction. The mandatrophy is resolved by showing that the classification as tangled rope is stable under all reasonable observables: whether measured by unemployment incidence, real wage changes, or wealth distribution, the constraint shows both coordination function and asymmetric extraction. No reformulation of the measurement basis would collapse this to pure rope or pure snare \u2014 the hybrid classification is robust."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "unemployment_targeting_mechanism",
+      "wage_suppression_via_slack",
+      "creditor_advantage_in_deflation"
+    ],
+    "dual_formulation_note": "Demand destruction policy can be decomposed into multiple structurally distinct constraints: (1) inflation_control_mechanism \u2014 the genuine coordination problem of excess aggregate demand (\u03b5\u22480.15, Rope) \u2014 and (2) unemployment_targeting_extraction \u2014 the specific institutional choice to suppress wages through joblessness (\u03b5\u22480.68, Snare). This story focuses on the hybrid constraint that includes both. The decomposition shows that the coordination problem (excess demand) has \u03b5\u22480.15, but the extraction overlay (unemployment targeting) raises effective \u03b5 to 0.58."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.6
+    }
+  ]
+}

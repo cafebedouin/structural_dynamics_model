@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "fda_enforcement_capacity_bottleneck",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fda_enf"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "FDA Enforcement Capacity Bottleneck",
+    "topic_domain": "regulatory_affairs/pharmaceutical_and_food_safety",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_pharmaceutical_manufacturers",
+      "compliant_food_producers"
+    ],
+    "victims": [
+      "small_manufacturers",
+      "public_health_safety",
+      "resource_constrained_compliance"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Small Manufacturer Caught in Capacity Gap",
+      "comment": "PERSPECTIVE 1: SMALL MANUFACTURER (SNARE) \u2014 Faces enforcement uncertainty as a trapped victim. Limited resources mean inability to navigate regulatory complexity or weather enforcement actions. Cannot exit the regime. Maximum extraction through regulatory arbitrage: large competitors can absorb compliance costs; small manufacturers cannot."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Public Health Safety System",
+      "comment": "PERSPECTIVE 2: PUBLIC HEALTH SAFETY (TANGLED ROPE) \u2014 Constrained by resource limitations and political pressure. Genuine coordination function (FDA protects public through inspection and enforcement) coexists with asymmetric extraction: enforcement capacity shortage creates perverse incentives for regulatory capture. High suppression reflects inability to coordinate across fragmented food and pharma systems."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Large Compliant Manufacturer",
+      "comment": "PERSPECTIVE 3: LARGE COMPLIANT MANUFACTURER (ROPE) \u2014 Experiences the constraint as genuine coordination. Large firms can absorb compliance costs and benefit from reduced competition as enforcement gaps weed out non-compliant small competitors. Arbitrage exit: can shift production across jurisdictions or product lines. Net beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Regulatory Reform Coalition",
+      "comment": "PERSPECTIVE 4: REGULATORY REFORM COALITION (SCAFFOLD) \u2014 Organized actors (consumer advocacy, industry associations, congressional oversight) recognize enforcement bottleneck as a temporary coordination failure with a sunset. Proposed solutions: user fees, third-party auditing, risk-based prioritization, and automated compliance systems. Sunset logic: capacity expansion and modernization reduce extraction mechanism over 10-15 year horizon."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "FDA Inspectorate as Institutional Inertia",
+      "comment": "PERSPECTIVE 5: FDA INSPECTORATE (PITON) \u2014 Field inspections follow ritualized protocols with low functional verification. Routine facility inspections cannot detect systemic manufacturing problems, data falsification, or supply chain contamination. The inspection theater persists through institutional tradition despite limited real-world efficacy. Theater ratio reflects gap between inspection performance and claimed enforcement capacity. Maintained through political stability and litigation fear, not through functional verification."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (False Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a civilizational perspective, enforcement capacity bottlenecks appear immutable: complex regulatory domains always have verification gaps, and perfect oversight is mathematically impossible. This perspective risks naturalizing what is actually a contingent institutional choice (budget allocation, staffing levels, inspection frequency). The engine will classify this as a false summit, revealing that the 'inherent to governance' framing obscures political and budgetary decisions."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "capacity_vs_political_will",
+      "question": "Is the enforcement bottleneck primarily a resource shortage or a political choice to under-enforce?",
+      "resolution_mechanism": "Comparison of actual FDA budget vs budget justified by workload analysis; audit of prioritization decisions showing whether neglected areas receive lowest priority due to capacity or due to political pressure from regulated industry.",
+      "impact": "If primarily resource shortage: snare perspective is mitigated by capacity expansion potential. If primarily political choice: snare is structural and extraction is deliberate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether bottleneck is resource constraint or political choice"
+    },
+    {
+      "id": "user_fee_capture_risk",
+      "question": "Would user-fee financing of FDA enforcement reduce or entrench capture by regulated industry?",
+      "resolution_mechanism": "Comparative analysis of user-fee regimes in other regulatory domains (FAA, SEC fees); assessment of fee-setting mechanisms and industry influence on prioritization.",
+      "impact": "If fees reduce capture: scaffold perspective's sunset is realistic. If fees entrench capture: user-fee reform would shift the constraint from bottleneck snare to capture tangled_rope without reducing extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether user-fee financing would reduce or entrench regulatory capture"
+    },
+    {
+      "id": "third_party_audit_efficacy",
+      "question": "Can delegated third-party auditing provide enforcement coverage equivalent to FDA direct inspection?",
+      "resolution_mechanism": "Analysis of delegated inspection programs (ISO accreditation, state health departments); measurement of audit quality, contamination detection rates, and industry incentive alignment.",
+      "impact": "If equivalent: bottleneck can be resolved through delegation and scaffold sunset is achievable. If inferior: bottleneck shifts from capacity to verification quality, and snare extraction intensifies.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether third-party auditing can replace FDA direct inspection"
+    },
+    {
+      "id": "supply_chain_complexity_growth",
+      "question": "Is enforcement bottleneck growing faster than capacity expansion can address due to supply chain globalization and product complexity?",
+      "resolution_mechanism": "Longitudinal analysis of FDA workload growth vs capacity growth; measurement of average facility inspection intervals and their trend over 10-20 years; correlation with product complexity indicators.",
+      "impact": "If complexity growth exceeds capacity growth: bottleneck is self-reinforcing and scaffold sunset may be unrealistic without radical process redesign. If capacity can catch up: scaffold outlook is feasible.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether supply chain complexity growth outpaces capacity expansion"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The FDA enforcement capacity bottleneck represents a structural constraint where the regulatory agency lacks sufficient resources and personnel to inspect manufacturing facilities, investigate complaints, and enforce compliance at rates necessary to prevent systematic regulatory arbitrage. This bottleneck creates extraction opportunities for large manufacturers who can absorb compliance costs while small competitors face disproportionate enforcement risk due to resource constraints. The constraint exhibits mixed coordination (genuine public health function) and extraction (asymmetric enforcement burden and regulatory capture). As supply chain complexity has grown and manufacturing has globalized, the gap between FDA's nominal enforcement mandate and actual inspection capacity has widened, increasing both the theater_ratio (inspections become performative theater rather than functional verification) and extractiveness (small manufacturers face unpredictable enforcement while large competitors exploit the gaps). The constraint is not immutable \u2014 it is maintained through political-budgetary decisions \u2014 but represents a tangled hybrid where coordination function (food and drug safety) coexists with significant extraction mechanisms (asymmetric burden, regulatory capture).",
+    "key_agents": [
+      "Small Manufacturers: Primary victims (powerless/trapped) \u2014 face unpredictable enforcement and cannot absorb compliance costs; no exit options from the regime",
+      "Large Compliant Manufacturers: Primary beneficiaries (institutional/arbitrage) \u2014 can absorb compliance costs; benefit from reduced competition as enforcement gaps disadvantage small competitors",
+      "Public Health Safety Function: Secondary victim (moderate/constrained) \u2014 suffers from enforcement gaps, contamination detection delays, and perverse incentives for regulatory capture",
+      "FDA Inspectorate: Institutional actor (institutional/arbitrage) \u2014 maintains ritualized inspection protocols; sees own capacity as degraded (piton perspective)",
+      "Regulatory Reform Coalition: Organized agents (organized/mobile) \u2014 consumer advocates, industry associations, congressional oversight building alternative enforcement pathways through user fees, third-party auditing, and risk-prioritization",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing budgetary/political choices as inherent limits to governance"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The enforcement bottleneck creates real extraction opportunities for large manufacturers through reduced competition and regulatory arbitrage. However, the extraction is not as severe as a pure snare because some enforcement occurs and the bottleneck stems from resource constraint rather than deliberate targeting. The upward trend (0.35\u21920.58 over 15 years) reflects supply chain globalization outpacing FDA capacity growth. Suppression (0.62): Moderate-high. Significant barriers to alternative compliance pathways include regulatory uncertainty, limited third-party audit availability, and complexity of pharmaceutical/food manufacturing. Yet suppression is not total \u2014 some manufacturers find workarounds, and regulatory reform advocacy creates exit narratives. Theater ratio (0.68): High. FDA facility inspections follow standardized protocols that cannot detect systemic manufacturing problems, data falsification, or sophisticated supply chain risks. The inspection ritual persists through institutional tradition and legal compliance theater, not through demonstrated efficacy. Theater has increased over time as manufacturing complexity has outpaced inspection methodology modernization.",
+    "directionality_logic": "Directionality values are derived from structural positions: large manufacturers with arbitrage options experience low d (beneficiaries escaping extraction); small manufacturers with trapped status experience high d (full targets). The FDA itself occupies an institutional position with arbitrage options (can shift priorities, propose budget increases, coordinate with state regulators) but is captured by political constraints that limit enforcement intensity. The public health function is abstract and institutionalized but faces high d because it bears the cost of enforcement gaps. Beneficiary/victim declarations map to real extraction flows: large manufacturers benefit from reduced competition; small manufacturers and public health bear costs. The asymmetry in exit options drives the perspectival gap: what looks like coordination to the large manufacturer looks like snare to the small one.",
+    "perspectival_gap": "This constraint demonstrates how indexical position determines experienced classification. Large compliant manufacturers see Rope (genuine coordination solving legitimate public health problems, with manageable compliance burden). The regulatory reform coalition sees Scaffold (temporary capacity crisis being solved through user fees, third-party auditing, and modernization with a 10-15 year sunset). The FDA inspectorate sees Piton (degraded inspection protocols maintained through institutional inertia rather than efficacy). Small manufacturers see Snare (trapped in enforcement uncertainty, bearing disproportionate burden, no exit). Public health safety sees Tangled Rope (mixed coordination and extraction, constrained by political and resource limits). The analytical observer risks seeing Mountain (enforcement bottlenecks inherent to complex regulation) but the structural data reveals this as false naturalization: budget allocation and staffing levels are political choices, not immutable laws.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The tangled_rope classification resolves the ambiguity by acknowledging that genuine coordination function (food and drug safety) coexists with asymmetric extraction (enforcement burden distributed unequally by manufacturer size). The constraint is NOT pure coordination (large manufacturers experience real benefits) and NOT pure extraction (public health function creates genuine collective good). The mandatrophy is resolved by the required_active_enforcement flag and the beneficiary/victim distinction: active enforcement maintains both the coordination function and enables the extraction mechanism. Removing enforcement entirely would eliminate extraction but also eliminate coordination. The constraint's purpose is legitimate (public health) but its implementation embeds extraction through capacity limits that disproportionately affect powerless actors."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "pharmaceutical_supply_chain_fragility",
+      "food_contamination_outbreak_response_lag",
+      "regulatory_capture_in_pharma_industry"
+    ],
+    "dual_formulation_note": "The enforcement bottleneck is upstream of specific product safety failures and regulatory capture dynamics. The bottleneck's extractiveness feeds into capture opportunities and supply chain fragility; decomposition would create separate stories for each downstream effect with inherited network relationships."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.58
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "synthetic_information_reliability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "synth_info"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Synthetic Information Reliability Constraint",
+    "topic_domain": "information_systems/epistemic_infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "synthetic_content_producers",
+      "scaling_beneficiaries"
+    ],
+    "victims": [
+      "information_ecosystem",
+      "end_users",
+      "knowledge_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Information Ecosystem",
+      "comment": "PERSPECTIVE 1: INFORMATION ECOSYSTEM (SNARE) \u2014 The epistemic commons cannot exit the reliability crisis. As synthetic content proliferates, distinguishability between authentic and generated information degrades irreversibly within the ecosystem. No mechanism exists to purify or recover signal after contamination. Maximum extraction from the collective knowledge base with no exit option."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "End Users and Information Consumers",
+      "comment": "PERSPECTIVE 2: END USERS (SNARE) \u2014 Consumers face irreducible uncertainty. They cannot distinguish synthetic from authentic information at point of consumption without external verification infrastructure they do not control. Cost of verification is borne individually; benefits of efficient communication accrue to producers. Trapped in asymmetric information environment with no credible exit mechanism."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Synthetic Content Producers",
+      "comment": "PERSPECTIVE 3: SYNTHETIC CONTENT PRODUCERS (ROPE) \u2014 Primary beneficiaries experience the constraint as enabling coordination: distributed generation of content at scale solves real communication and knowledge problems. The constraint (reliability gap) subsidizes their ability to produce at marginal cost. Net extraction flows toward this group; they experience the constraint as coordination that subsidizes their operation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Verification and Detection Services",
+      "comment": "PERSPECTIVE 4: VERIFICATION SERVICES (TANGLED ROPE) \u2014 Constrained by resource requirements and accuracy limits of detection technologies, but also benefit from the reliability gap they are hired to close. Real coordination function (detecting synthetic content), but extraction embedded: as verification improves, the market for verification expands; as detection becomes commoditized, the service layer extracts value from uncertainty itself. Cannot exit without degrading their own business model."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regulatory and Standards-Setting Bodies",
+      "comment": "PERSPECTIVE 5: REGULATORY BODIES (SCAFFOLD) \u2014 Organized actors (EU AI Act, Content Authentication Technical Community, digital provenance standards) view the reliability gap as a temporary coordination failure with built-in sunset. Synthetic content labeling, cryptographic provenance, and interoperable authentication standards are establishing alternative pathways that bypass the traditional trust-in-source model. Low effective extraction because regulators see both agency and exit path."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Verification Institutions",
+      "comment": "PERSPECTIVE 6: LEGACY INSTITUTIONS (PITON) \u2014 Traditional gatekeepers (editorial boards, fact-checkers, journalistic standards) maintain performative authority over synthetic content classification despite degraded actual function. The ritual persists through institutional inertia and credential monopolies rather than because verification processes work. Theater ratio (0.68) reflects the sustained performative claim to authority while actual functional verification capability lags reality. These institutions see their own process as degraded."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Information Theoretic View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN VIEW) \u2014 From a civilizational/information-theoretic perspective, the reliability gap between synthetic and authentic information is treated as inherent to computational communication: any finite verification process can be defeated by sufficiently advanced synthesis. This perspective sees the constraint as an immutable property of information systems themselves. However, structural data contradicts the mountain classification \u2014 the engine's false summit detector will identify this as naturalization of what is actually a contingent institutional arrangement shaped by incentive structures and verification investment levels."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "verification_budget_vs_sophistication_arms_race",
+      "question": "Can verification budget scale fast enough to match synthesis sophistication, or is the arms race structurally unwinnable?",
+      "resolution_mechanism": "Empirical tracking of detection capability vs synthesis capability over 5-10 year horizon; measurement of error rates in synthetic detection systems as synthesis models improve; cost-benefit analysis of verification infrastructure scaling",
+      "impact": "If verification scalable: constraint is temporary coordination problem (Scaffold from more perspectives, shorter sunset). If unwinnable arms race: constraint approaches immutable (Mountain-like extractiveness at scale), and regulatory solutions must shift from detection to provenance/attestation.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether verification can keep pace with synthesis sophistication"
+    },
+    {
+      "id": "provenance_infrastructure_adoption_rate",
+      "question": "Will cryptographic content authentication and digital provenance standards achieve sufficient adoption to make synthetic-authentic distinction observable at scale?",
+      "resolution_mechanism": "Tracking adoption of standards (C2PA, media provenance protocols) across major platforms and content generators; measurement of verification coverage (percentage of global information flows with cryptographic provenance); economic analysis of adoption incentives",
+      "impact": "If adoption reaches critical mass (>60% of major platforms): scaffold sunset becomes operational \u2014 the reliability gap is solvable through infrastructure, not inherently extractive. If adoption stalls: constraint remains structural, and end-users remain trapped in reliability asymmetry.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Critical mass adoption of content provenance standards"
+    },
+    {
+      "id": "extraction_vs_coordination_decomposition",
+      "question": "How much of the reliability constraint's 'extraction' is genuine coordination cost (real burden of verification) vs rent-seeking behavior (artificial scarcity from actors blocking infrastructure)?",
+      "resolution_mechanism": "Comparative analysis of verification costs in systems with cryptographic provenance vs systems relying on detection; measurement of institutional resistance to provenance standards adoption; cost accounting for true verification infrastructure vs defensive gatekeeping overhead",
+      "impact": "If coordination cost dominates (\u03b5_actual ~0.25): constraint is Rope with performative theater, not Tangled Rope. Beneficiary/victim distinction dissolves. If extraction dominates (\u03b5_actual ~0.65): constraint is closer to Snare, and the regulatory scaffold is aspirational rather than structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "True coordination cost vs institutional extraction in reliability gap"
+    },
+    {
+      "id": "identity_lock_in_producer_incentives",
+      "question": "Are synthetic content producers structurally dependent on reliability gaps (trapped), or identity-locked in business models that require them (cannot imagine alternatives)?",
+      "resolution_mechanism": "Analysis of business model evolution as provenance infrastructure matures; whether producers transition to authenticated models or resist adoption; measurement of switching costs (technical vs identity/institutional)",
+      "impact": "If trapped: producers will exit as infrastructure removes gaps. If identity-locked: resistance to provenance standards persists even after barriers are technically removed, because producer identity and market positioning have fused with synthetic-as-scalable narrative.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether producer reliance on reliability gaps is structural or identity-based"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The synthetic information reliability constraint models the structural extraction that emerges when synthetic content production outpaces verifiable authentication of that content. As generative systems (LLMs, synthetic media, deepfakes) proliferate, the information ecosystem faces irreducible uncertainty about source authenticity and content reliability. This creates asymmetric benefits: producers of synthetic content can scale communication and knowledge generation at marginal cost; consumers and the epistemic commons bear verification burden and contamination risk. The constraint exhibits all six DR types from different perspectives. From the ecosystem's view, it is a snare \u2014 irreversible contamination with no exit. From producers' view, it is rope \u2014 coordination that enables scale. From organized regulatory actors, it is a scaffold with sunset \u2014 cryptographic provenance and digital authentication standards offer genuine exit paths. From legacy verification institutions, it is a piton \u2014 performative authority with degraded actual function. The analytical observer risks seeing a mountain \u2014 information-theoretic inevitability \u2014 but structural data reveals this as naturalization of contingent institutional choices.",
+    "key_agents": [
+      "Synthetic Content Producers: Primary beneficiary (institutional/arbitrage) \u2014 capture scaling benefits and marginal-cost economics during reliability gap window",
+      "Information Ecosystem: Primary victim (powerless/trapped) \u2014 epistemic commons suffers irreversible contamination as signal-to-noise ratio degrades",
+      "End Users/Consumers: Victim (powerless/trapped) \u2014 bear verification cost individually; asymmetric information disadvantage at point of consumption",
+      "Verification and Detection Services: Secondary beneficiary/victim (moderate/constrained) \u2014 profit from the gap they are hired to close; business model depends on uncertainty persistence",
+      "Regulatory and Standards Bodies: Organized actor (organized/constrained) \u2014 EU AI Act, C2PA, content authentication communities building alternative pathways",
+      "Legacy Verification Institutions: Institutional actor (institutional/arbitrage) \u2014 editorial boards, fact-checkers, journalistic authority maintaining performative function despite degraded capability",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent incentive structures as immutable information-theoretic limits"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The constraint measures 0.28 at baseline (2020-21, early synthetic content scaling) and rises to 0.58 by endpoint (2025-26, deployment of advanced generative systems at scale). The extraction reflects the asymmetry between producers' ability to generate content at scale and consumers' inability to verify source and authenticity without external infrastructure. The rising trajectory indicates that as synthesis capability advances, verification burden increases faster than verification capability, widening the extraction gap. Suppression (0.62): High. Significant barriers include: (1) technical irreducibility \u2014 no finite verification process can prove non-synthesis; (2) epistemic barriers \u2014 consumers lack access to verification tools at point of consumption; (3) institutional barriers \u2014 legacy verification mechanisms (journalism, academia, editorial authority) are degrading faster than alternative infrastructure matures; (4) economic barriers \u2014 distributed verification is more expensive than centralized production. Theater ratio (0.68): High and rising. Legacy gatekeepers (fact-checkers, editorial boards, journalistic standards) maintain performative claims to authority over synthetic content classification despite demonstrably degraded actual verification function. The ritual persists through institutional inertia, credential monopolies, and lack of credible alternatives. As synthesis becomes more sophisticated, the gap between claimed verification capacity and actual capability widens, driving theater ratio higher. The theatrical component is the sustained authority claim despite reduced functional verification.",
+    "perspectival_gap": "The perspectival gap reveals the constraint's extractive structure. Beneficiaries perceive coordination; victims perceive extraction. The divergence between producer (Rope) and ecosystem (Snare) perspectives is maximal \u2014 same structural phenomenon, opposite classifications. This gap is diagnostic: it indicates that the constraint maintains itself through asymmetric information (victims cannot see the full structure from their position) and power difference (beneficiaries can enforce the constraint despite victim opposition). The piton perspective indicates that legacy institutions maintain the reliability constraint not through function but through performative authority \u2014 they claim to solve the problem (verification) while actually maintaining it (by blocking alternative authentication infrastructure). The scaffold perspective indicates that this performative authority is not inevitable \u2014 regulatory bodies and standards communities are building exit paths through cryptographic provenance and distributed authentication, which would reduce theater and eventually collapse the extractive structure.",
+    "directionality_logic": "Directionality is determined by structural position relative to the extraction flow. Synthetic producers (beneficiaries) have arbitrage exit \u2014 they can leave synthetic content production and return to other domains if reliability infrastructure undermines their current model. They experience low effective extraction (\u03c7) because they benefit from the gap. End users (victims) have trapped exit \u2014 they cannot access information without navigating the reliability gap. They experience high \u03c7 because the constraint extracts from them (verification cost, contamination risk) without compensation. Verification services (victims/beneficiaries hybrid) have constrained exit \u2014 they profit from verification but cannot exit because their business model depends on the gap persisting. They experience moderate \u03c7. Regulatory bodies (organized victims) have constrained exit \u2014 they cannot escape responsibility for managing the constraint but can invest in alternatives (provenance infrastructure), giving them agency and reducing their experienced extraction. The analytical observer (analytical position) faces the oracle gap: their native instruments (information theory, computational limits) cannot see the institutional contingency that cross-position analysis reveals. The identity_locked status appears implicitly in the producer beneficiary group \u2014 their identity and market positioning have fused with 'synthetic as scalable', making exit conceptually difficult even as technical barriers to transition are being removed.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the mandatrophy by demonstrating that the classification depends critically on observational position and exit structure, not on a single 'true' type. The same structural phenomenon (synthetic-authentic gap) classifies as Snare from the powerless ecosystem, Rope from the institutional producer, and Scaffold from the organized regulator. The mandatrophy would arise if we demanded a single type \u2014 but DR's indexical classification resolves it by showing that all six readings are legitimate from their respective positions. The false summit (mountain classification) is the analytical observer's naturalization of what is contingent institutional structure. Once recognized, the scaffold perspective becomes operative: provenance infrastructure offers genuine exit, which means the constraint is not a mountain (immutable) but a temporary coordination problem with built-in obsolescence. The theater ratio (0.68) indicates that legacy verification institutions are maintaining extractive claims through performative authority, not functional verification. As alternative infrastructure matures, theater and extraction should both decline. The measurement trajectory shows both theater and extractiveness rising, which indicates the constraint is in active disequilibrium and deteriorating \u2014 the gap between claimed and actual verification function is widening, a sign that legacy institutions are losing functional capacity."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "deepfake_detection_arms_race",
+      "content_authentication_infrastructure",
+      "epistemic_commons_contamination"
+    ],
+    "dual_formulation_note": "The synthetic information reliability constraint decomposes into three downstream constraints: (1) deepfake_detection_arms_race \u2014 the empirical verification challenge at the technical level; (2) content_authentication_infrastructure \u2014 the institutional/regulatory layer building provenance solutions; (3) epistemic_commons_contamination \u2014 the knowledge-system-level damage from reliability collapse. This constraint story focuses on the holistic extraction structure. The three downstream constraints have their own \u03b5 values reflecting their specific domains."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.42
+    }
+  ]
+}

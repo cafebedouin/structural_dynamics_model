@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "feudal_hierarchy",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "feudal"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Feudal Hierarchy and Serfdom",
+    "topic_domain": "political/economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nobility",
+      "crown"
+    ],
+    "victims": [
+      "peasant_serfs",
+      "urban_laborers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Bound Serf",
+      "comment": "PERSPECTIVE 1: THE BOUND SERF (SNARE) \u2014 A peasant bound to land they do not own, with no legal right to exit, facing severe punishment (death, mutilation, enslavement) for attempting flight. Extraction is maximized: the serf provides labor, tribute, and military service with no reciprocal protection beyond bare subsistence. Suppression is total \u2014 legal prohibition, military enforcement, geographic isolation, and identity loss make exit structurally impossible. This is the primary target perspective."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Urban Laborer",
+      "comment": "PERSPECTIVE 2: THE URBAN LABORER (SNARE) \u2014 Guild systems and urban craft hierarchies create similar structures: journeymen cannot advance without master approval; masters control access to tools, materials, and markets; fleeing a guild incurs severe penalties. While nominally more mobile than serfs, urban laborers face comparable extraction through legal barriers (guild monopolies), market control, and organized suppression of wage competition."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Noble Landowner",
+      "comment": "PERSPECTIVE 3: THE NOBLE LANDOWNER (ROPE) \u2014 The noble experiences the hierarchy as a coordination mechanism: serf labor creates wealth, military hierarchy secures defense, ritual vassalage creates alliance networks. The noble can exit (sell lands, seek higher patronage) or arbitrage (claim service from multiple serf cohorts, shift allegiance between competing lords). For the beneficiary, the constraint appears as functional coordination with benefits; extraction is directed toward them, not away. Net experience is pure coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Lesser Vassal",
+      "comment": "PERSPECTIVE 4: THE LESSER VASSAL (TANGLED ROPE) \u2014 Vassals occupy a hybrid position: they provide military service, fealty oaths, and tribute to overlords, but also receive land grants (fiefs), military protection, and dispute arbitration. Exit is costly but possible (seek new patronage, flee to frontier, join the Church). Suppression is significant but not total. The vassal experiences genuine coordination (mutual defense, dispute settlement) alongside asymmetric extraction (labor and military service flow upward, land and protection flow downward, but asymmetrically). Active enforcement maintains the oath system; both parties accept the arrangement as partially legitimate."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Crown and Church Institutional Legacy",
+      "comment": "PERSPECTIVE 5: THE CROWN/CHURCH INSTITUTIONAL VIEW (PITON) \u2014 The feudal hierarchy's original function was coordination: dispersed political authority (no central state capacity) required delegation through vassal networks; warfare and banditry required militarized villages (serfs could not flee to safer lands). By the late medieval period, this coordination function has atrophied. The hierarchy persists through institutional inertia: succession law, property claims, church authority over marriage and inheritance. The theater ratio is high (ritual oaths, heraldry, chivalric codes) but the functional coordination is largely replaced by emerging national states and market mechanisms. The institution sees itself as degraded."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The Merchant Class and Urban Expansion",
+      "comment": "PERSPECTIVE 6: THE MERCHANT CLASS (SCAFFOLD) \u2014 Emerging merchant networks, chartered towns, and guilds represent alternative institutional pathways. These create temporary extraction (tolls, market monopolies, apprenticeship restrictions) but with visible sunset: as markets expand and national states consolidate taxation, the feudal extraction mechanism loses force. Exit pathways multiply (urban migration, colonial expansion, legal incorporation). High suppression wanes as alternatives proliferate. This perspective sees the feudal hierarchy as a transitional constraint that is being replaced by market mechanisms and nation-states \u2014 a sunset is visible."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalization View)",
+      "comment": "PERSPECTIVE 7: THE ANALYTICAL OBSERVER (MOUNTAIN CLAIM) \u2014 A civilizational view might frame feudalism as an immutable response to pre-industrial scarcity: without central state capacity, without markets, without transportation, hierarchical delegation and inherited status are the only feasible governance structures. From this perspective, the hierarchy is a natural law of pre-industrial societies. However, the base properties contradict this: extractiveness (0.68), suppression (0.75), and a theater ratio (0.65) indicate that significant enforcement is required \u2014 a natural law would not need enforcement. This is a false summit, revealing that feudalism naturalized contingent institutions."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "serf_exit_vs_slave",
+      "question": "Is the serf economically and structurally distinguishable from a chattel slave, or does the distinction collapse under analysis?",
+      "resolution_mechanism": "Comparative institutional analysis: property rights in serfs' labor vs. property rights in slave bodies; inheritance of status; freedom to marry, own property, or gain manumission; legal recourse against lord violence.",
+      "impact": "If distinction holds: snare classification is correct \u2014 mixed extraction and coordination maintain some nominal reciprocal obligation. If distinction collapses: serf is chattel slave under different terminology \u2014 extractiveness should be 0.85+, suppression 0.95+.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether serfdom is structurally distinct from slavery"
+    },
+    {
+      "id": "vassal_protection_credibility",
+      "question": "How much of the lord's protection obligation is genuinely provided vs. held as contingent on serf compliance?",
+      "resolution_mechanism": "Historical analysis of lord response to external threat (raids, invasion) vs. internal threat (serf rebellion); documentation of protection withdrawal as punishment; comparison with mercenary or professional military alternatives.",
+      "impact": "If protection is genuine and unconditional: tangled rope classification is accurate \u2014 real coordination exists. If protection is largely contingent or illusory: the lesser vassal perspective should reclassify as snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Credibility of reciprocal lord protection in vassal relationships"
+    },
+    {
+      "id": "necessity_vs_choice_in_delegation",
+      "question": "Did pre-industrial societies require feudal hierarchy out of structural necessity (population density, transportation limits, no alternative governance), or was feudalism a contingent choice by elites to concentrate power?",
+      "resolution_mechanism": "Comparative analysis of pre-industrial societies that adopted vs. rejected feudal hierarchy; examination of alternative governance structures in similar material conditions; analysis of elite deliberation and choice points.",
+      "impact": "If necessity: mountain perspective gains credibility \u2014 feudalism is partially a natural law response. If contingent choice: mountain is a false summit \u2014 elite choice naturalized as structural inevitability.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether feudal hierarchy was structurally necessary or contingent elite choice"
+    },
+    {
+      "id": "merchant_exit_timing",
+      "question": "At what point did merchant/market alternatives become genuinely available as exits from feudal extraction, and did this availability reduce feudal suppression?",
+      "resolution_mechanism": "Timeline mapping: charter grants to towns, development of trade routes, expansion of urban opportunity; correlation with serf flight rates, reduction in punishment severity, or lord concessions.",
+      "impact": "If exits became available early and suppression reduced: scaffold classification confirmed and sunset timing can be estimated. If exits were restricted or suppression increased despite alternatives: feudal elites actively maintained monopoly \u2014 snare classification strengthened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline of merchant/market alternatives and their impact on feudal suppression"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 400,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 400,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 400
+  },
+  "commentary": {
+    "narrative_context": "Feudal hierarchy represents a structural constraint on mobility, labor allocation, and resource extraction that governed European societies from approximately the 9th to the 15th centuries. The system organized society into a pyramid: serfs (bound to land), peasants (tenants with some mobility), craftspeople and merchants (guild-controlled), lesser nobility and vassals (bound by oaths and fiefs), and crown/high nobility (de jure at the apex, de facto competing for power). This constraint exhibits characteristics across all six DR types, revealing how a single institutional structure appears radically differently depending on the observer's structural position. The serf sees pure extraction (Snare); the merchant sees an alternative pathway with a sunset (Scaffold); the lesser vassal sees mixed coordination and extraction (Tangled Rope); the institutional legacy sees its own degraded ritual (Piton); the noble beneficiary sees coordination (Rope); and the civilizational observer risks naturalizing contingent arrangements as immutable law (Mountain). The trajectory of extractiveness and theater ratio over the interval (0-400 years) reflects institutional intensification: as population growth reduced frontier escape options and market competition increased, feudal lords enforced hierarchy more strictly and relied increasingly on performative ritual (oaths, chivalry, divine right) to maintain legitimacy.",
+    "key_agents": [
+      "Peasant Serfs: Primary victims (powerless/trapped) \u2014 comprise 80-90% of population; bound to land with legal prohibition on exit; face severe punishment (execution, mutilation, enslavement) for flight. Provide labor, produce tribute, military conscription with minimal reciprocal protection. Extracted maximum.",
+      "Urban Laborers and Craftspeople: Secondary victims (powerless/trapped/constrained) \u2014 organized into guilds that control access to tools, materials, and markets; face legal penalties for guild violation; exit to cities partially available but restricted by guild monopolies and urban privileges.",
+      "Nobility and Landowners: Primary beneficiaries (institutional/arbitrage) \u2014 extract labor, produce, and military service from serfs; capture surplus; control dispute resolution and property law in their interest. Experience hierarchy as coordination mechanism with high benefit.",
+      "Crown and Central Authority: Secondary beneficiary (institutional/arbitrage) \u2014 claims ultimate property right to all land; extracts taxes, military service, and loyalty oaths from nobility; maintains legal system that enforces hierarchy. Benefits from consolidation of power at apex.",
+      "Lesser Vassal Class: Mixed position (institutional/constrained) \u2014 bound by oath and feudal obligation to provide military service and tribute; receive fiefs and protection in return. Occupy hybrid role: simultaneously extracted from and beneficiary. More exit options than serfs but costly.",
+      "Merchant and Charter Towns: Nascent alternative (organized/mobile) \u2014 represent emerging pathway outside feudal extraction; chartered towns provide legal protection independent of feudal hierarchy; guilds monopolize but also enable economic mobility; visible exit route as market mechanisms expand."
+    ],
+    "logic_rationale": "Extractiveness (0.68): High, reflecting the core mechanism of feudal extraction \u2014 serfs produce surplus that is captured through legal prohibition, military enforcement, and ideological naturalization (divine right, natural hierarchy). The value is not maximal (0.85+) because: (1) serfs receive subsistence and protection (however inadequate), creating nominal reciprocal obligation; (2) lesser vassals genuinely participate in the coordination function (defense, dispute settlement); (3) merchant alternatives were increasingly available from 1200 onward, reducing effective extraction for agents with mobility. Suppression (0.75): High, reflecting severe barriers to exit \u2014 legal prohibition on serf movement, punishment infrastructure (gallows, mutilation), ideological capture (religious sanction of hierarchy), geographic isolation, military enforcement, and identity loss (serfs often lack patronymic surnames, treated as property extensions). Suppression is not total (0.95+) because: (1) some serf mobility occurred through urban flight, colonization, or gradual manumission; (2) lesser vassals could negotiate fiefs or seek alternative patronage; (3) Church offered partial escape (monasticism, priesthood). Theater ratio (0.65): Moderate-high, reflecting the increasing performative content of feudal hierarchy by the high medieval period. Rituals (knighthood, homage ceremonies, heraldic codes, chivalric romances) proliferated as the original coordination functions (defense, dispute settlement, population stabilization) were increasingly performed by alternatives (national armies, royal courts, market mechanisms). Theater increased over the interval as the system aged \u2014 institutional inertia required more ritual to maintain legitimacy.",
+    "perspectival_gap": "Maximum gap between powerless/trapped and institutional/arbitrage perspectives. The serf perceives Snare with chi \u2248 0.95 (high extraction, total suppression, zero exit). The noble perceives Rope with chi \u2248 -0.12 (coordination mechanism, extraction flows toward them). This gap is not measurement error \u2014 it reflects real structural difference. The serf's experience of maximized extraction is not contradicted by the noble's experience of coordination; both are true from their respective positions. The gap reveals the constraint's core function: transfer of resources from one structural position to another.",
+    "directionality_logic": "Directionality (d) flows from structural position relative to extraction. Serfs occupy d \u2248 0.98 (trapped victims, maximum d \u2192 maximum f(d) \u2248 1.42 \u2192 high experienced extraction chi). Nobility occupy d \u2248 0.05 (beneficiaries with arbitrage options, minimum d \u2192 negative f(d) \u2248 -0.12 \u2192 extraction flows toward them, negative chi). Lesser vassals occupy d \u2248 0.50 (hybrid position: constrained but with some agency and genuine benefit; symmetric costs/benefits \u2192 f(d) \u2248 0.65 \u2192 moderate chi). Urban merchants occupy d \u2248 0.40 (victims of guild restrictions but with exit options, moderate d \u2192 moderate f(d) \u2248 0.40). The analytical observer at civilizational scope might attempt d \u2248 0.72 (attempting universal position, but this risks false naturalization). The engine's derivation chain prioritizes: (1) explicit beneficiary/victim declarations (serfs are victims, nobility are beneficiaries); (2) exit options (trapped \u2192 high d, arbitrage \u2192 low d, constrained \u2192 medium d); (3) power level (powerless \u00d7 trapped \u2192 highest d, institutional \u00d7 arbitrage \u2192 lowest d). The perspectival gap emerges because different observers have radically different exit options and beneficiary status, producing divergent d values and thus divergent chi values despite identical base_properties metrics.",
+    "mandatrophy_analysis": "The feudal hierarchy exemplifies how mandatrophy resolution requires multiple perspectives. The system is not 'really' a Snare, or 'really' a Rope, or 'really' a Scaffold \u2014 it is genuinely all of them from different structural positions. The mandatrophy is resolved by recognizing that feudalism is a **presheaf structure**: the classification depends on the observer's position in the hierarchy. From the serf position, it is extractive Snare. From the merchant position, it is a degrading Scaffold. From the noble position, it is functional Rope. From the civilizational position, it appears (falsely) as Mountain. The analytical resolution: there is no single 'true' type; the indexed family of classifications across all perspectives is the complete description. The false summit (Mountain) is particularly instructive: the attempt to view feudalism as a natural law of pre-industrial governance is a naturalization of elite choice. The high suppression (0.75) is the key diagnostic: natural laws do not require suppression. Mountain classification is eliminated by the existence of significant enforcement overhead."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "divine_right_monarchy",
+      "serfdom_escape_pipeline",
+      "guild_monopoly_control"
+    ],
+    "dual_formulation_note": "Feudal hierarchy is a macro-level constraint decomposable into structural components: serfdom (extraction mechanism, \u03b5\u22480.82), vassalage (coordination mechanism, \u03b5\u22480.45), guild control (urban extraction, \u03b5\u22480.58), and ideological naturalization via divine right (theater mechanism, \u03b5\u22480.72). The present story models the integrated system; decomposed stories would reveal that different social strata operate under distinct constraints with distinct \u03b5 values. The macro \u03b5=0.68 is a weighted average over these strata."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

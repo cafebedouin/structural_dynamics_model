@@ -1,0 +1,191 @@
+{
+  "header": {
+    "constraint_id": "email_deliverability_bottleneck",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "email_deliv"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Email Deliverability Bottleneck in Digital Communication Infrastructure",
+    "topic_domain": "digital_infrastructure/communication_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "major_mailbox_providers",
+      "spam_filtering_vendors"
+    ],
+    "victims": [
+      "legitimate_senders",
+      "small_business_operators",
+      "nonprofit_communicators",
+      "email_accessibility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Legitimate Small Sender",
+      "comment": "PERSPECTIVE 1: LEGITIMATE SMALL SENDER (SNARE) \u2014 Individual businesses, nonprofits, and community organizations cannot escape the deliverability trap. They lack sender reputation, IP infrastructure, and institutional leverage to negotiate with mailbox providers. Emails are filtered or throttled despite compliance with technical standards. No viable exit: switching email providers does not solve the reputation problem, and building sender reputation requires months of volume at costs they cannot afford. Bears maximum extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Market Sender",
+      "comment": "PERSPECTIVE 2: MID-MARKET SENDER (TANGLED ROPE) \u2014 Medium-sized organizations benefit from email coordination (reaching customers, distributing content) while facing moderate extraction. They can invest in sender authentication (SPF, DKIM, DMARC) and reputation management but at significant cost. Exit is constrained by switching costs and the need to maintain email as a communication channel. Mixed experience: genuine coordination function alongside asymmetric extraction through reputation gatekeeping."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Major Mailbox Provider",
+      "comment": "PERSPECTIVE 3: MAJOR MAILBOX PROVIDER (ROPE) \u2014 Gmail, Outlook, Yahoo mail coordinate email delivery and filtering through reputation systems and content inspection. These actors benefit from the bottleneck (control over sender access, data on email patterns, leverage over email marketing). But they also genuinely solve a coordination problem: filtering spam and phishing protects users. Net beneficiary with high agency and arbitrage options (can switch allegiances, adjust algorithms, broker partnerships). Experiences the constraint as coordination."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Email Standards Coalition",
+      "comment": "PERSPECTIVE 4: EMAIL STANDARDS COALITION (SCAFFOLD) \u2014 Organized bodies (IETF DMARC working group, M3AAWG, email authentication advocates) are building alternative verification pathways (authenticated domain claims, reputation infrastructure, DKIM/SPF hardening). These pathways aim to reduce the gatekeeper power of mailbox providers by distributing reputation signals. Sunset logic: as DMARC adoption matures and decentralized reputation systems develop, the bottleneck should weaken. Constrained because coordination requires ongoing standards maintenance, but organized enough to maintain agency."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Email Filtering Ritual",
+      "comment": "PERSPECTIVE 5: LEGACY EMAIL FILTERING RITUAL (PITON) \u2014 Traditional email filtering rules (content scanning, domain whitelisting, sender reputation scoring) are substantially performative. Algorithms have become black-box theater: senders comply with published guidelines (authentication, list management, content patterns) yet fail to reach inboxes. The ritual persists through institutional inertia and lack of transparent alternatives, not because it effectively separates legitimate from spam. Theater ratio is high because compliance with stated rules does not predict delivery outcomes."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some filtering bottleneck is inherent to email as a system: open SMTP architecture creates an incentive structure where volume-based spamming is cheaper than legitimate sending. The tragedy of the commons in email means filtering lag is structural and inevitable. However, this perspective risks naturalizing contingent institutional design (centralized mailbox provider gatekeeping) as immutable law. The engine's false summit detector will flag this as misplaced naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "authentication_adoption_threshold",
+      "question": "At what DMARC/DKIM/SPF adoption rate does the bottleneck cease to function as an extraction mechanism?",
+      "resolution_mechanism": "Empirical measurement of deliverability rates for authenticated vs unauthenticated senders; correlation with adoption rates over time; regression analysis of authentication adoption and filtering severity",
+      "impact": "If threshold < 40% adoption: current bottleneck persists despite authentication scaling. If threshold > 70% adoption: narrow path to sunset visible within 5-10 years as standards mature.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Authentication adoption threshold for bottleneck weakening"
+    },
+    {
+      "id": "mailbox_provider_algorithm_opacity",
+      "question": "Does the opacity of mailbox provider filtering algorithms reflect genuine technical necessity or institutional capture of sender access control?",
+      "resolution_mechanism": "Comparison of transparent filtering systems (user-configurable rules, published algorithms) vs black-box systems; measurement of false positive rates in each; analysis of whether transparency reduces gatekeeper rent extraction",
+      "impact": "If technical necessity: filtering opacity is unavoidable; scaffold perspective is aspirational. If capture: transparency mechanisms could dramatically reduce bottleneck extractiveness; scaffold perspective identifies real sunsets.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether algorithm opacity is technical necessity or institutional capture"
+    },
+    {
+      "id": "decentralized_reputation_sufficiency",
+      "question": "Can decentralized reputation systems (DNSWL, reputation APIs, blockchain-based sender scores) provide spam filtering effectiveness comparable to centralized mailbox provider control?",
+      "resolution_mechanism": "Technical benchmarking of decentralized reputation systems against centralized filtering on spam detection rates, false positive rates, and resistance to gaming; pilot deployments with alternative mail infrastructure",
+      "impact": "If sufficient: decentralized alternatives are architecturally viable; mountain perspective is false summit. If insufficient: centralized gatekeeper control remains structurally necessary; constraint reclassifies toward mountain.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether decentralized reputation can replace centralized filtering"
+    },
+    {
+      "id": "legitimate_sender_coalition_formation",
+      "question": "Can legitimate senders (nonprofits, small business, community organizations) organize collectively to demand deliverability standards or negotiate with mailbox providers?",
+      "resolution_mechanism": "Historical analysis of coalition-building efforts (Email Sender & Provider Coalition, Messaging Malware Mobile Anti-Abuse Working Group); measurement of collective bargaining power; tracking of policy changes driven by organized legitimate senders",
+      "impact": "If coalition feasible: powerless agents become organized; snare perspective shifts toward tangled rope. If impossible: powerless fragmentation persists; snare classification remains stable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Coalition formation feasibility for legitimate senders"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Email deliverability has become a structural bottleneck in digital communication, where legitimate senders face systematic filtering and throttling by centralized mailbox providers (Gmail, Outlook, Yahoo Mail). While spam filtering solves a genuine coordination problem (protecting users from malicious content), the implementation concentrates control over sender access in the hands of a small number of institutional actors with strong incentives to extract value from senders. The constraint exhibits the full spectrum of DR classifications depending on observer position: small senders experience a snare (trapped, no exit), medium-market actors experience tangled rope (mixed coordination and extraction), major providers experience rope (coordination with side benefit of control), organized standards bodies experience scaffold (building sunset alternatives), legacy filtering experiences piton (performative theater), and civilizational analysis risks falsely naturalizing contingent design as immutable law. The theater_ratio (0.68) reflects that email filtering compliance (sender authentication, list hygiene, content rules) has become substantially performative: senders follow published guidelines yet fail to reach inboxes, and filtering algorithms remain opaque despite published standards.",
+    "key_agents": [
+      "Major Mailbox Providers (Gmail, Outlook, Yahoo): Institutional beneficiaries (institutional/arbitrage) \u2014 control sender access, extract value through reputation gatekeeping, benefit from network effects",
+      "Legitimate Small Senders (nonprofits, small business, individuals): Primary victims (powerless/trapped) \u2014 no reputation capital, no technical infrastructure, no leverage; cannot exit email as communication channel",
+      "Mid-Market Senders (established organizations): Secondary victims (moderate/constrained) \u2014 can invest in infrastructure but at significant cost; face constrained exit options",
+      "Email Standards Bodies (IETF DMARC working group, M3AAWG): Organized coalition (organized/constrained) \u2014 building alternative authentication and reputation pathways; maintain agency through standards development",
+      "Spam Filtering Vendors (Barracuda, Proofpoint, etc.): Secondary beneficiaries (institutional/arbitrage) \u2014 profit from opacity; maintain gatekeeper role through proprietary reputation systems",
+      "Email Accessibility (epistemic reliability of email as communication medium): Victim collective (powerless/trapped) \u2014 inability to deliver legitimate email undermines email's function as reliable communication channel",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing centralized gatekeeping as inherent to email rather than contingent institutional design"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Mailbox providers extract value through sender reputation gatekeeping, forced infrastructure investment (authentication, list management), and opaque algorithmic filtering that creates switching costs and compliance uncertainty. The extraction is not as severe as pure gatekeeper monopoly (0.75+) because legitimate senders can eventually build reputation through persistence and some alternative channels (authentication, reputation services) exist. But the extraction is significant because small senders lack the resources to build sender reputation and lack viable alternatives. Suppression (0.65): High. Significant structural barriers include: (1) technical requirements (SPF, DKIM, DMARC setup) that exceed small sender technical capacity, (2) reputation lag (new senders must build volume gradually), (3) blacklist inclusion creating near-total communication failure, (4) lack of transparency (filtering rules are not published; senders cannot diagnose delivery failures), and (5) no meaningful appeal process (getting delisted is informal and slow). Suppression is not absolute (some workarounds exist; medium-market actors can solve it through investment) but is very high for resource-constrained senders. Theater ratio (0.68): High and increasing. Compliance with published email standards (authentication, list management, content rules) does not reliably predict inbox delivery. Senders follow guidelines yet fail to reach inboxes; mailbox providers publish best practices that do not guarantee compliance. The ritual of email filtering has become substantially performative \u2014 the theater increased over the interval (2015-2025) as algorithmic opacity increased and senders were forced into ever-more-complex compliance theater.",
+    "directionality_logic": "Directionality values derive from the agent's structural position relative to the bottleneck. Mailbox providers (beneficiaries with arbitrage options) have d \u2248 0.10 (low extraction experienced), deriving low chi and rope classification. Small senders (victims with trapped exit) have d \u2248 0.92 (high extraction experienced), deriving high chi and snare classification. Mid-market senders (victims with constrained exit) have d \u2248 0.68 (moderate-high extraction experienced), deriving moderate chi and tangled rope classification. Standards coalition (organized with constrained exit building alternatives) have d \u2248 0.55 (moderate extraction with exit path visible), deriving moderate chi and scaffold classification. The analytical observer (analytical position at civilizational scope) risks d \u2248 0.70 (high extraction from a bird's-eye view) that naturalizes contingent institutional choices as law, producing false summit classification.",
+    "perspectival_gap": "The constraint demonstrates stark perspectival disagreement. Mailbox providers see rope \u2014 they coordinate email delivery while legitimately filtering spam. Small senders see snare \u2014 they are trapped without agency or exit, bearing full cost of deliverability infrastructure investment. Standards bodies see scaffold \u2014 DMARC, DKIM, and alternative reputation systems are building toward reduced provider gatekeeper power. Spam filtering technology (considered as an institutional actor) sees piton \u2014 the ritual persists through inertia (senders comply with rules, filters check compliance) even though the predictive power of rule-compliance for spam detection is low. The civilizational analytical observer risks seeing mountain (email filtering lag is inherent to open SMTP) but the structural data reveals contingent institutional design: the bottleneck strengthens and weakens with mailbox provider policy choices, not with immutable technical constraints.",
+    "mandatrophy_analysis": "DIAGNOSTIC EXEMPLAR: This constraint resolves mandatrophy by recognizing that the bottleneck is a genuine hybrid of two structurally distinct mechanisms: (1) a coordination function (spam filtering protects users), and (2) an extraction mechanism (mailbox providers use filtering opacity to maintain sender gatekeeper control). The tangled rope classification holds both simultaneously. The snare classification from the small sender perspective is not a contradiction but a perspectival truth \u2014 from their position, the extraction dominates and coordination benefit is invisible. The scaffold perspective identifies a real structural pathway: DMARC and decentralized reputation systems are weakening provider gatekeeper power. The piton perspective correctly identifies that much email filtering compliance is performative theater. The false summit (mountain) reveals the analytical risk: treating institutional design as law. The mandatrophy is resolved by accepting that all perspectives are structurally correct \u2014 the presheaf over observer positions IS the answer."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "sender_reputation_asymmetry",
+      "email_authentication_standardization",
+      "mailbox_provider_monopoly"
+    ],
+    "dual_formulation_note": "The email deliverability bottleneck is a composite constraint family. Upstream constraints include sender reputation asymmetry (powerless senders cannot build reputation capital; institutional senders can) and mailbox provider monopoly (Gmail/Outlook control >80% of inboxes). The deliverability bottleneck emerges from the interaction of these structural constraints. Downstream constraint: email authentication standardization (whether DMARC/DKIM actually reduces the gatekeeper effect) is contingent on this bottleneck's strength."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

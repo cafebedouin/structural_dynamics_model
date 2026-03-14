@@ -1,0 +1,224 @@
+{
+  "header": {
+    "constraint_id": "quantum_error_correction_overhead",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "qec"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Quantum Error Correction Overhead and Resource Asymmetry",
+    "topic_domain": "quantum_computing/physical_implementation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "fault_tolerant_qubit_manufacturers",
+      "quantum_software_vendors",
+      "theoretical_advantage_claimants"
+    ],
+    "victims": [
+      "resource_constrained_laboratories",
+      "near_term_quantum_utility_research",
+      "measurement_precision_budgets"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Resource-Constrained Laboratory",
+      "comment": "PERSPECTIVE 1: RESOURCE-CONSTRAINED LABORATORY (SNARE) \u2014 Trapped by the overhead paradox: error correction requires order-of-magnitude more qubits than the logic problem itself, yet the overhead is presented as inevitable physics rather than a contingent architectural choice. Lab cannot exit without abandoning quantum computing entirely. Extraction mechanism: overhead requirements exhaust budgets and force dependence on well-funded institutions that have solved the overhead problem."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Near-Term Quantum Utility Research Community",
+      "comment": "PERSPECTIVE 2: NEAR-TERM QUANTUM UTILITY RESEARCH (TANGLED ROPE) \u2014 Constrained by both overhead requirements and career incentive misalignment (fault tolerance papers get citations while near-term utility gets dismissed as 'NISQ'). But also benefits from theoretical frameworks and error mitigation techniques developed under overhead-driven research. Mixed extraction and coordination \u2014 the same overhead that constrains enables measurement of quantum advantage."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Fault-Tolerant Qubit Manufacturers",
+      "comment": "PERSPECTIVE 3: FAULT-TOLERANT QUBIT MANUFACTURERS (ROPE) \u2014 Experiences overhead as pure coordination problem: larger addressable market for their products. Overhead requirement creates demand for their engineering solutions. Net beneficiary with arbitrage exit \u2014 can shift to alternative markets if quantum computing fails."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Quantum Software and Compiler Vendors",
+      "comment": "PERSPECTIVE 4: QUANTUM SOFTWARE VENDORS (ROPE) \u2014 Overhead creates technical problems that require software solutions: error correction code optimization, qubit allocation strategies, compilation overhead reduction. Pure coordination from this perspective \u2014 the overhead is real physics, and solving it creates market for their services."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Quantum Computing Standards Community",
+      "comment": "PERSPECTIVE 5: QUANTUM COMPUTING STANDARDS COMMUNITY (TANGLED ROPE) \u2014 Organized agents (IEEE, ISO working groups, industry consortia) benefit from overhead clarification efforts and standardization work, but also face extraction pressure: overhead measurements and benchmarking become complex political instruments. As organized actors with substantial agency (mobile exit to other computing domains), they experience moderate extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Error Mitigation and Hybrid Algorithm Research",
+      "comment": "PERSPECTIVE 6: ERROR MITIGATION RESEARCH (SCAFFOLD) \u2014 Emerging hybrid approaches (error mitigation, QAOA without full fault tolerance, variational algorithms) represent temporary scaffold structures: they reduce overhead requirements while fault tolerance research matures. Lower extraction because agents see a genuine exit path \u2014 as classical simulation improves or hybrid methods mature, the full-overhead requirement becomes optional rather than mandatory. Sunset clause is implicit: classical simulation limits will establish when hybrid approaches become equivalent to full quantum advantage."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Surface Code Orthodoxy in Research Communities",
+      "comment": "PERSPECTIVE 7: SURFACE CODE ORTHODOXY (PITON) \u2014 Surface codes have become the institutionalized default error correction framework despite only modest theoretical advantages over other codes in many regimes. Research communities maintain surface code focus through inertia, publication patterns, and tool availability rather than continuous optimization. Theater ratio high because alternative codes are systematically underdeveloped despite theoretical promise. Piton classification: functional but degraded, maintained through institutional momentum."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Threshold Theorem View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / THRESHOLD THEOREM (MOUNTAIN) \u2014 From civilizational/universal perspective, quantum error correction overhead is an immutable consequence of the threshold theorem: any quantum computer with error rates below threshold can achieve arbitrarily long computations through recursive error correction. This appears as natural law. However, structural data reveals this as false summit: the threshold theorem is a mathematical truth about ideal architectures, not about implementable systems. The contingent architecture choice (surface codes, qubit overhead scaling laws, interconnect topology) naturalizes what could be otherwise. The mountain classification instantiates the oracle gap."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "threshold_vs_practical_overhead",
+      "question": "Is the observed overhead driven by fundamental threshold requirements or by engineering choices in specific implementations?",
+      "resolution_mechanism": "Comparative analysis across different error correction codes and qubit technologies; measurement of overhead in theoretical vs practical threshold regimes; decomposition of overhead into threshold-driven and architecture-driven components",
+      "impact": "If threshold-driven (70%+): mountain classification is justified; overhead is immutable physics. If architecture-driven (70%+): overhead is contingent; snare and tangled_rope classifications dominate; alternative architectures could reduce extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold theorem necessity vs. engineering choice in overhead"
+    },
+    {
+      "id": "resource_constrained_alternatives",
+      "question": "Can near-term quantum utility provide measurable advantage without crossing into fault-tolerance overhead regimes?",
+      "resolution_mechanism": "Empirical demonstration of quantum advantage in hybrid or error-mitigated regimes; classical simulation limits for specific application classes; comparison of resource requirements (space and time) for hybrid vs fully fault-tolerant approaches on same benchmarks",
+      "impact": "If yes: scaffold perspective is correct; near-term research has genuine exit path; overhead extraction can be bypassed. If no: all quantum computing requires full overhead; snare classification is structural; trapped agent assessment is correct.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether hybrid approaches can achieve advantage without full overhead"
+    },
+    {
+      "id": "code_selection_optimality",
+      "question": "Are surface codes optimal for the dominant implementation modalities, or does their dominance reflect institutional momentum rather than theoretical superiority?",
+      "resolution_mechanism": "Comparative implementation studies of surface codes vs alternatives (topological codes, concatenated codes, LDPC codes) on equivalent hardware; citation and funding analysis showing research allocation to surface codes vs alternatives; cost-benefit analysis across different physical platforms (superconducting, trapped-ion, photonic)",
+      "impact": "If optimal: piton classification is incorrect; surface codes are justified choice. If institutional: piton confirmed; research communities are maintaining degraded orthodoxy; alternative codes could reduce overhead with equivalent theoretical grounding.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Surface code dominance as optimality vs institutional momentum"
+    },
+    {
+      "id": "measurement_precision_tradeoff",
+      "question": "Does the stringency of overhead reduction targets (e.g., 1000:1 logical:physical qubit ratios) reflect physical necessity or arbitrary safety margins?",
+      "resolution_mechanism": "Historical analysis of overhead targets; correlation between target stringency and measured implementations; failure mode analysis separating genuine failure points from conservative engineering margins; benchmark analysis showing quantum advantage achieved at different overhead ratios",
+      "impact": "If arbitrary margins: targets are extractive theater (agency could reduce them). If necessary: targets reflect genuine physics constraint. Affects interpretation of suppression metric and theater_ratio.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Overhead targets as physical necessity vs engineering conservatism"
+    },
+    {
+      "id": "interconnect_topology_constraint",
+      "question": "Are measured overhead costs primarily determined by qubit-to-qubit coupling requirements (hardware topology) or by information-theoretic demands of error correction?",
+      "resolution_mechanism": "Detailed cost accounting of overhead: syndrome extraction bandwidth, qubit connectivity requirements, gate fidelity requirements vs information-theoretic bounds; comparison across different topologies (2D surface, 3D, high-dimensional codes, percolation structures); analysis of how much overhead reduction comes from improved connectivity vs improved code theory",
+      "impact": "If topology-dominated: hardware engineering could substantially reduce overhead through better interconnect designs (extraction can be bypassed). If information-theoretic: overhead is structural (extraction is built into physics). Affects directionality of hardware vs software vendors in extraction pipeline.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Overhead driven by hardware topology vs information-theoretic bounds"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.33
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Quantum error correction imposes an overhead cost \u2014 additional qubits, gates, and time cycles \u2014 to achieve fault tolerance. The constraint structure is whether this overhead is an immutable physical law or a contingent architectural choice susceptible to engineering optimization. This distinction determines whether resource-constrained laboratories are trapped by fundamental limits or by technology choices that concentrate quantum computing power in well-funded institutions. The overhead requirement presents as distributed burden (all quantum computers must pay it) but benefits accrue asymmetrically: manufacturers of fault-tolerant qubits, software vendors, and institutions with sufficient capital capture rent from the overhead requirement. Near-term quantum utility research is constrained by the overhead argument even though hybrid and error-mitigated approaches could provide practical advantage without crossing into fault-tolerance regimes. The constraint exhibits tangled rope structure (genuine coordination problem of error correction combined with asymmetric extraction of research priority and resource allocation) with false mountain overlay (threshold theorem invoked as natural law when architectural choices are contingent). Theater ratio is low (0.35) because the overhead problem is technically real, not performative, but the framing of overhead as inevitable rather than optimizable introduces performative content.",
+    "key_agents": [
+      "Resource-Constrained Laboratories: Primary victim (powerless/trapped) \u2014 cannot perform quantum computing research without overhead resources they lack; trapped in dependence on well-funded institutions that have solved overhead engineering.",
+      "Near-Term Quantum Utility Research: Secondary victim (moderate/constrained) \u2014 research agenda distorted away from practical advantage demonstration toward long-term fault-tolerance prerequisite work; benefit from overhead frameworks but face extraction via misdirected incentives.",
+      "Fault-Tolerant Qubit Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 overhead requirement creates direct market for their engineering solutions; can exit to classical computing or other domains if quantum fails.",
+      "Quantum Software and Compiler Vendors: Secondary beneficiary (institutional/arbitrage) \u2014 overhead creates demand for optimization software and compilation strategies; arbitrage exit available.",
+      "Standards and Benchmarking Community: Mixed (organized/mobile) \u2014 benefit from clarity on overhead measurement standards but also experience extraction pressure as overhead becomes political instrument in competitive benchmarking.",
+      "Error Mitigation Research Community: Organized agent with exit path (organized/constrained) \u2014 developing scaffold structures (hybrid approaches, variational methods) that bypass full overhead while fault tolerance matures.",
+      "Surface Code Research Establishment: Institutional inertia (institutional/arbitrage) \u2014 maintains surface code orthodoxy through research momentum, tool ecosystems, and publication patterns; piton classification reflects degraded function maintained through momentum rather than continuous optimization.",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent architecture (surface codes, qubit scaling assumptions) as immutable threshold theorem physics."
+    ],
+    "logic_rationale": "Extractiveness (0.52): The overhead requirement creates genuine asymmetry in resource allocation. Manufacturing and software vendors benefit from the requirement existing; resource-constrained labs bear the cost. The value reflects that this is a real coordination problem (error correction genuinely necessary for fault tolerance) layered with contingent extraction (overhead could be reduced through different architectural choices, but those choices concentrate power). The trajectory (0.35 \u2192 0.52 over 15 years) reflects growing recognition that overhead can be engineered down but is being maintained artificially high through research focus allocation. Suppression (0.48): Moderate. Labs have genuine barriers to entry (capital requirements for qubit systems, expertise in error correction, computational resources for benchmarking) but not absolute barriers \u2014 alternative approaches (hybrid, error-mitigated) exist and are being developed. Suppression would be higher if alternatives were truly blocked, but the emergence of scaffold structures (error mitigation research) shows some mobility. Theater ratio (0.35): Low. The overhead problem is technically real \u2014 error correction does impose costs \u2014 but there is performative content in how overhead is framed as immutable destiny rather than optimizable engineering problem. The low ratio reflects that the constraint is mostly about real physics and engineering, not about theatrical mechanisms.",
+    "perspectival_gap": "The magnitude of perspectival gap reveals the constraint structure. The snare (resource-constrained lab) classifies overhead as immutable extraction. The rope (manufacturers) classify it as pure coordination. The tangled_rope (utility researchers, standards community) experience mixed burden and benefit. The scaffold (error mitigation community) see temporary overhead with exits. The piton (surface code orthodoxy) see degraded ritual. The mountain (analytical/threshold theorem view) risks naturalizing contingency. The gap is not disagreement about facts (all perspectives agree overhead exists) but about whether it is mutable or immutable, beneficial or extractive, necessary or contingent. This is the signature of a constraint where architecture choices have been naturalized as physical law.",
+    "directionality_logic": "Qubit manufacturers derive d \u2248 0.08\u20130.12 from beneficiary status + arbitrage exit + institutional power. They experience the constraint as pure coordination (rope) because they benefit and can exit. Resource-constrained labs derive d \u2248 0.92\u20130.98 from victim status + trapped exit + powerless status. They experience the constraint as extraction (snare) because they bear costs and cannot exit. Near-term utility researchers derive d \u2248 0.60\u20130.70 from victim status + constrained exit + moderate power. They experience mixed burden (tangled_rope) because they have some agency but real barriers. The directionality pipeline correctly produces perspectival gaps: same constraint, vastly different d values, different classifications. No overrides needed \u2014 the structural data produces the correct distribution.",
+    "mandatrophy_analysis": "ENTANGLEMENT RESOLUTION: The mandatrophy here is 'Is overhead physical law or engineering contingency?' The threshold theorem (mountain) is a true mathematical fact: any quantum computer with error rates below threshold can achieve arbitrary depth through recursive error correction. But the theorem is about idealized architectures, not implementable systems. The actual overhead burden (overhead being measured, institutional momentum around surface codes, resource asymmetry) is tangled_rope structure, not mountain. The mountain classification appears only at the analytical/civilizational/universal perspective \u2014 the framework correctly identifies this as a false summit because structural data (extractiveness 0.52, suppression 0.48, theater 0.35, beneficiaries explicitly declared, victims explicitly declared) contradicts mountain thresholds. The engine's false summit detector will flag this. The resolution: threshold theorem is true but local (applies to asymptotic fault-tolerance regimes); the observed overhead is contingent (depends on qubit choice, error correction code, interconnect topology, safety margins). Near-term quantum utility research can likely achieve advantage without crossing into full-overhead regimes using hybrid approaches (error mitigation, variational algorithms) \u2014 the scaffold perspective is structurally accurate, not aspirational."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "quantum_advantage_timeline",
+      "near_term_quantum_utility",
+      "fault_tolerant_architecture_choices"
+    ],
+    "dual_formulation_note": "Quantum error correction overhead decomposes into at least three structurally distinct constraints: (1) information-theoretic overhead required by any error correction code (\u03b5 \u2248 0.15, mountain-like), (2) engineering overhead in current implementations (\u03b5 \u2248 0.45, tangled_rope), and (3) research priority asymmetry favoring fault tolerance over near-term utility (\u03b5 \u2248 0.65, snare-like for constrained agents). These are related but distinct constraints with different beneficiaries, victims, and measurable extraction mechanisms. The present story aggregates them at \u03b5 = 0.52 (weighted toward engineering/priority extraction). Decomposition is recommended for fine-grained policy analysis."
+  },
+  "directionality_overrides": []
+}

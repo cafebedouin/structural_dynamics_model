@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "utility_cost_recovery",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "util"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Utility Cost Recovery in Public Service Infrastructure",
+    "topic_domain": "economic_policy/infrastructure_finance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "utility_operators",
+      "infrastructure_investors"
+    ],
+    "victims": [
+      "low_income_consumers",
+      "price_sensitive_demand"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Disconnected Household",
+      "comment": "PERSPECTIVE 1: LOW-INCOME CONSUMER (SNARE) \u2014 Trapped by essential service dependency and geographic immobility. No alternative water, electricity, or natural gas suppliers exist. Rising cost recovery rates force choice between utility access and other necessities. Suppression is high: debt penalties, disconnection threats, credit reporting create cascading barriers to exit. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Middle-Income Household",
+      "comment": "PERSPECTIVE 2: MIDDLE-INCOME CONSUMER (TANGLED ROPE) \u2014 Constrained but not trapped. Can reduce consumption through efficiency, relocate if rates become intolerable, or switch to alternative fuels/providers where available. Benefits from reliable infrastructure coordination (genuine service provision coordination exists). Bears extraction through above-inflation rate increases and cost-shifting. Mixed experience: genuine coordination benefit with asymmetric cost allocation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Utility Operator",
+      "comment": "PERSPECTIVE 3: UTILITY OPERATOR (ROPE) \u2014 Experiences cost recovery as a coordination mechanism: transparent rate-setting methodology allocates shared infrastructure costs across user base. Benefits from regulatory certainty and assured cost recovery. Exit options: can adjust capital spending, pursue efficiency gains, or seek regulatory approval for rate mechanisms. Perceives constraint as enabling sustainable service provision."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Commission",
+      "comment": "PERSPECTIVE 4: REGULATORY AUTHORITY (TANGLED ROPE) \u2014 Organized actors balancing multiple constituencies: consumer protection, utility financial sustainability, infrastructure investment requirements, and political pressure. Genuine coordination function (rate-setting mechanisms, cost allocation rules, fairness standards). Also extraction: captures administrative authority, sets agendas, determines what counts as 'reasonable' cost recovery. Constrained by legal mandates, political limits, and judicial review."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Cost-of-Service Regulatory Model",
+      "comment": "PERSPECTIVE 5: REGULATORY MODEL (PITON) \u2014 Traditional cost-of-service ratemaking (Revenue Requirement = Operating Expenses + Depreciation + Return on Equity) has become largely performative. The model assumes transparent, auditable cost accounting, but utilities have significant discretion in cost allocation, depreciation schedules, and capital structure decisions. Theater ratio (0.35) reflects that substantial regulatory process (rate cases, expert testimony, commission deliberation) produces predetermined outcomes under political economy constraints. The model persists through institutional inertia despite alternatives (performance-based ratemaking, revenue decoupling) existing."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, cost recovery for essential infrastructure is an immutable requirement: someone must pay for pipes, wires, and treatment facilities, and that cost is inescapable. This perspective risks naturalizing a contingent institutional design (monopoly utility operators with cost-of-service regulation) as a law of nature. The engine's false summit detector will identify this as misclassification \u2014 alternative delivery models (municipal utilities, cooperatives, regional authorities) show cost recovery is feasible under different institutional arrangements."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cost_accounting_elasticity",
+      "question": "How much of the cost burden genuinely reflects unavoidable infrastructure costs versus allocations influenced by regulatory discretion and accounting choices?",
+      "resolution_mechanism": "Comparative cost accounting across utilities with different regulatory frameworks and ownership structures; detailed audit of cost allocation methodologies; counterfactual analysis of alternative depreciation schedules and capital cost assumptions",
+      "impact": "If unavoidable costs are 70%+: cost recovery is necessary coordination with limited extraction; snare classification downgraded. If unavoidable costs are <50%: cost recovery mechanism is primarily extractive; snare classification upheld and piton theater increases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of cost burden driven by unavoidable infrastructure versus regulatory discretion"
+    },
+    {
+      "id": "demand_substitution_feasibility",
+      "question": "Can consumers exit utility dependence through alternative technologies (distributed solar, rainwater harvesting, liquefied natural gas, neighborhood microgrids) faster than regulatory cost recovery increases?",
+      "resolution_mechanism": "Tracking adoption curves for distributed technologies relative to utility rate increase timelines; cost comparison analysis between utility service and alternatives across income levels; longitudinal data on voluntary disconnection and off-grid switching",
+      "impact": "If alternatives mature faster: exit_options shift from trapped to constrained for low-income consumers; snare downgraded to tangled rope. If utilities maintain technological lock-in: trapped status persists and extraction mechanisms strengthen.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility and speed of consumer exit through distributed alternatives"
+    },
+    {
+      "id": "regulatory_capture_mechanism",
+      "question": "Are regulatory commissions captured by utility interests, such that cost recovery mechanisms consistently bias cost allocation toward utility benefit and away from consumer protection?",
+      "resolution_mechanism": "Analysis of rate case outcomes: percentage of utility requests approved unchanged vs modified vs rejected; longitudinal tracking of commission composition and career paths of commissioners; stakeholder influence mapping (expert testimony frequencies, lobbying spend, revolving-door employment)",
+      "impact": "If capture is high: regulatory commission shifts from tangled_rope to snare for consumers; extraction mechanisms intensify and cost recovery becomes pure institutional extraction. If capture is low: regulatory commission maintains genuine coordination function and cost recovery classifications remain mixed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree of regulatory capture by utility interests in cost recovery proceedings"
+    },
+    {
+      "id": "cross_subsidy_direction",
+      "question": "Do cost recovery mechanisms redistribute from high-consumption to low-consumption households, or from low-income to high-income households?",
+      "resolution_mechanism": "Household-level analysis of rate structures and burden: fixed charges, volumetric rates, tiered pricing; correlation of rate burden with income, consumption, and household demographics; comparison of affordability metrics across income deciles",
+      "impact": "If subsidies flow to low-income: cost recovery partially resolves equity tension; snare classification weakened. If subsidies flow away from low-income (common under flat rate designs): extractive mechanism is strengthened and snare classification confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Direction and magnitude of cross-subsidies within rate structure"
+    },
+    {
+      "id": "infrastructure_necessity_threshold",
+      "question": "What portion of utility infrastructure costs are necessary to provide basic service, and what portion represents luxury/redundancy/wasteful practices?",
+      "resolution_mechanism": "Engineering analysis of system components (pipes, treatment, distribution); benchmarking against utilities operating at lower cost per unit; identification of deferred maintenance vs overbuilding; comparative study of service reliability vs cost across operators",
+      "impact": "If necessity threshold is 80%+: cost recovery burden is mostly required; extraction component is limited. If threshold is <60%: substantial costs reflect inefficiency or wasteful practice; cost recovery mechanism is capturing inefficiency-induced rent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Necessity threshold for utility infrastructure costs versus discretionary spending"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Utility cost recovery mechanisms determine how the costs of water, electricity, natural gas, and wastewater treatment infrastructure are distributed across consumer populations. The constraint exhibits genuine coordination functions \u2014 multiple users must share fixed infrastructure costs, and transparent mechanisms allocate these costs fairly \u2014 alongside extractive dynamics where cost recovery methodologies systematically shift burdens to price-sensitive, low-income consumers. The constraint's extractiveness has risen over the measurement interval (0.35 \u2192 0.52) as aging infrastructure has increased replacement costs and climate-driven service demands (drought-resistant distribution, flood-resilient systems, renewable integration) have expanded capital requirements. Theater ratio remains low (0.35) because cost-of-service regulation produces relatively transparent rate-setting processes with documented methodologies; however, the predictability of outcomes within a range of discretionary choices (depreciation schedules, capital cost assumptions, allocative formulas) creates performative legitimacy for distributions that are substantially driven by regulatory power rather than unavoidable cost structures.",
+    "key_agents": [
+      "Low-Income Household: Primary victim (powerless/trapped) \u2014 no exit options due to service necessity; faces disconnection risk and debt accumulation as rates rise above income growth",
+      "Middle-Income Household: Secondary victim (moderate/constrained) \u2014 constrained by consumption options but can relocate or reduce demand; bears cost increases but with flexibility",
+      "Utility Operator: Primary beneficiary (institutional/arbitrage) \u2014 benefits from assured cost recovery and regulatory certainty; can optimize capital spending and efficiency gain allocation",
+      "Regulatory Commission: Organized actor (organized/constrained) \u2014 maintains coordination function but also exercises allocative power; constrained by political economy and legal mandates",
+      "Infrastructure Investors: Secondary beneficiary (institutional/arbitrage) \u2014 benefit from stable returns on utility infrastructure investment; capture dividends from cost recovery guarantees",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing monopoly utility regulation as inevitable rather than contingent institutional design"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Cost recovery captures genuine coordination value (infrastructure must be paid for) but also reflects regulatory discretion in cost allocation. Utilities have measurable discretion over what counts as 'necessary' cost (capital depreciation rates, return-on-equity targets, cost allocation across customer classes). The rising trend (0.35 \u2192 0.52) reflects both real infrastructure aging and rent-seeking behavior as regulatory capture increases the proportion of costs classified as recoverable. Suppression (0.48): Moderate. Barriers to exit exist (essential service, geographic monopoly, switching costs) but are not absolute \u2014 distributed alternatives (solar, water recycling) are technically feasible and increasingly cost-competitive. Suppression reflects institutional lock-in (regulatory barriers to alternative providers, grid dependency) rather than pure impossibility. Theater ratio (0.35): Low-moderate. Cost-of-service ratemaking involves genuine rate cases with documented evidence, expert testimony, and commission deliberation. The process is not purely performative because outcomes do vary with evidence and advocacy. However, the theater index reflects that regulatory discretion (how depreciation is calculated, what return-on-equity is 'fair') predetermined within political economy constraints produces predictable distributions. The trend (0.28 \u2192 0.35) reflects increasing procedural complexity and legitimation theater as regulatory capture intensifies.",
+    "perspectival_gap": "Why does the utility operator see rope while the low-income consumer sees snare? Directional difference: the operator benefits (beneficiary + arbitrage exit = low d \u2192 negative \u03c7); the consumer bears costs (victim + trapped exit = high d \u2192 high \u03c7). Same structural mechanism, opposite effective directions. Why does the regulatory commission see tangled rope rather than rope? Because the commission exercises allocative power (extraction) while performing coordination (allocation). The gap reveals the power distribution: the commission's power to define 'reasonable' cost recovery is deployed to benefit operators, not consumers. The false mountain at the civilizational scale represents the biggest gap: the analytical view that cost recovery is inherent to infrastructure naturalizes the specific institutional choice (monopoly utility regulation) as inevitable, missing that municipal utilities, cooperatives, and public authorities show cost recovery is compatible with different power distributions and beneficiary classes.",
+    "directionality_logic": "Directionality values (d) flow from structural position: low-income consumers are victims with trapped exit (d \u2248 0.95), experiencing maximum f(d) \u2248 1.42. Utility operators are beneficiaries with arbitrage exit (d \u2248 0.05), experiencing f(d) \u2248 -0.12 (negative effective extraction \u2014 they benefit). Middle-income consumers are mixed (constrained exit, d \u2248 0.70, f(d) \u2248 1.00). Regulatory commissions face asymmetric power: they are nominally neutral (d \u2248 0.50) but structurally captured by utility interests, so effective d should be overridden higher (d \u2248 0.65) to reflect that commission power is deployed in utility favor. The scope modifier \u03c3(S) applies: national scope (\u03c3=1.0) means extraction is not amplified by scope (unlike global infrastructure where \u03c3=1.2). However, within-region concentration of low-income consumers in specific service territories creates effective local scope (\u03c3=0.8 locally) where suppression is higher and alternatives fewer.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by distinguishing coordination from extraction within a single institutional mechanism. Cost recovery is genuinely necessary coordination \u2014 infrastructure has costs that must be allocated. The mandatrophy arises because the cost-of-service regulatory model claims to be transparent allocation (rope) while functionally operating as an asymmetric extraction mechanism (snare for low-income consumers). The tangled rope classification captures this: genuine coordination function (cost allocation) exists alongside asymmetric extraction (burden shifted to trapped consumers via regulatory discretion). The regulatory commission is where the extraction-coordination boundary is enforced or violated: a captured regulator sees cost recovery as pure coordination (rope) and legitimizes allocative choices that benefit utilities; an independent regulator sees mixed coordination-extraction (tangled rope) and constrains allocative power to protect vulnerable consumers. The piton perspective (degraded model) and the mountain perspective (naturalized as immutable) both represent failure modes: the piton sees the regulatory process as theater divorced from substantive outcomes; the mountain sees cost recovery as inevitable law, missing that alternative institutional designs are feasible."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "energy_poverty",
+      "water_access_equity",
+      "stranded_asset_risk",
+      "regulatory_capture_utilities"
+    ],
+    "dual_formulation_note": "Utility cost recovery is upstream of energy poverty and water access equity constraints \u2014 the cost recovery mechanism creates the extraction conditions that manifest as poverty traps. Cost recovery is downstream of stranded asset risk: utilities seek cost recovery for legacy infrastructure (coal plants, aging pipes) that may be made obsolete by distributed alternatives, creating a coupling where cost recovery mechanisms actively suppress the exit pathways that would otherwise resolve the snare. Regulatory capture mechanisms are orthogonal: capture drives the boundary between coordination and extraction in cost recovery allocation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.65
+    }
+  ]
+}

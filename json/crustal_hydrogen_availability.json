@@ -1,0 +1,153 @@
+{
+  "header": {
+    "constraint_id": "crustal_hydrogen_availability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "crust_h"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.03,
+    "theater_ratio": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Crustal Hydrogen Availability and Distribution",
+    "topic_domain": "geochemistry/planetary_science",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Hydrogen-Dependent Industrial Sectors",
+      "comment": "PERSPECTIVE 1: HYDROGEN-DEPENDENT SECTORS (MOUNTAIN) \u2014 Aggregate planetary crustal hydrogen availability is a fixed physical limit. No industrial process can escape the constraint. The distribution of hydrogen isotopes and their geochemical availability are immutable at the civilizational timescale. Total crustal hydrogen is finite; reorganization cannot create new supply. Extraction and cost shifts are possible, but the absolute ceiling is an unchangeable natural law."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Energy Sector Policy Makers",
+      "comment": "PERSPECTIVE 2: ENERGY SECTOR POLICY (MOUNTAIN) \u2014 Hydrogen availability as a planetary constraint is invariant across all policy frameworks and technological approaches. Whether nations pursue hydrogen economy, ammonia synthesis, desulfurization, or petrochemical feedstock strategies, they face the same finite crustal reservoir. Exit via technological arbitrage (fuel cells, alternative sources, synthetic biology) does not change the constraint \u2014 it merely shifts which forms of hydrogen extraction they employ. The ceiling remains immutable."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Geochemical Limitation)",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 Crustal hydrogen availability is determined by stellar nucleosynthesis history and planetary formation. The total inventory of hydrogen in the crust (approximately 1.5-2.5% by mass in hydrous minerals, water, and organics) is set by the initial composition of the accretion disk and has only marginally changed over 4.5 billion years via outgassing and solar wind implantation. This is a natural law of planetary composition. No observer position can relativize the absolute bound."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Extraction Timescale)",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER / EXTRACTION TIMESCALE (MOUNTAIN) \u2014 Hydrogen removal via industrial extraction, ocean water splitting, or atmospheric processes operates at timescales (decades to centuries) vastly shorter than hydrogen replenishment via weathering, metamorphic dehydration, or mantle outgassing (millions of years). The effective extraction rate relative to replenishment rate is negligible over human timescales, creating a de facto depletion ceiling. This asymmetry is rooted in geochemical reaction kinetics \u2014 a natural law of planetary chemistry."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "mantle_hydrogen_influx_rate",
+      "question": "What is the quantitative rate of hydrogen delivery to the crust from mantle outgassing and metamorphic dehydration, and how does it compare to modern extraction rates?",
+      "resolution_mechanism": "Geochemical models of volatile cycling; isotopic tracer analysis of mantle-derived fluids; quantitative mass balance across plate boundaries and subduction zones",
+      "impact": "If influx significantly exceeds extraction: the constraint may be weakly binding in the long term (reclassify toward rope/scaffold at multi-generational timescales). If influx is negligible: crustal hydrogen is effectively non-renewable at human timescales, strengthening mountain classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Rate of hydrogen replenishment from deep Earth sources"
+    },
+    {
+      "id": "hydrogen_accessibility_variability",
+      "question": "Does the geographic and depth-dependent variability in hydrogen availability create functionally distinct sub-constraints with different extractiveness values, or is crustal hydrogen adequately modeled as a single unified limit?",
+      "resolution_mechanism": "Spatial analysis of hydrogen-bearing mineral deposits and water resources; evaluation of extraction cost functions by region; determination of whether local depletion (low accessibility) differs structurally from global depletion",
+      "impact": "If sub-constraints are structurally distinct: decompose into separate stories (crustal_hydrogen_global_inventory vs regional_hydrogen_scarcity). If unified: single mountain constraint is appropriate.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether crustal hydrogen is one constraint or multiple by geography"
+    },
+    {
+      "id": "technological_hydrogen_recycling_ceiling",
+      "question": "Can closed-loop hydrogen recycling and synthetic regeneration approaches fundamentally change the effective constraint, or do they merely redistribute existing crustal hydrogen?",
+      "resolution_mechanism": "Energy accounting for hydrogen recycling systems; analysis of whether synthetic hydrogen production (from electricity and water) circumvents crustal depletion or creates secondary energy constraints; thermodynamic limits on recycling efficiency",
+      "impact": "If recycling enables genuine supply multiplication: the constraint may reclassify as rope (coordination of recycling infrastructure) at institutional timescales. If recycling merely conserves finite stock: mountain classification remains valid.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether hydrogen recycling circumvents or merely manages the crustal limit"
+    },
+    {
+      "id": "water_as_hydrogen_proxy",
+      "question": "Is crustal hydrogen availability best modeled as a direct physical limit, or is it primarily a function of water accessibility and desalination technology?",
+      "resolution_mechanism": "Comparative analysis of hydrogen extraction from water vs other sources; technological roadmaps for desalination and electrolysis; determination of whether water, not hydrogen atoms, is the binding constraint",
+      "impact": "If water is the binding constraint: the story should decompose and link to a constraint on freshwater access. If hydrogen specifically is limiting: mountain classification is appropriate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the constraint is on hydrogen atoms or on water molecules as hydrogen sources"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.18
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "Crustal hydrogen availability represents a fundamental geochemical limit on human civilization's ability to extract and utilize hydrogen as an energy carrier or chemical feedstock. The constraint emerges from planetary formation history and stellar nucleosynthesis: Earth's crustal inventory of hydrogen (distributed among water, hydrous silicates, carbonates, and organic compounds) is finite and fixed over human timescales. Extraction rates from water splitting, hydrocarbon processing, and mineral leaching are negligible relative to total crustal inventory (~1.5-2.5% of crustal mass), but they operate at timescales orders of magnitude faster than natural hydrogen replenishment via mantle outgassing or weathering. This creates an asymmetry: the absolute crustal hydrogen ceiling is immutable (mountain), while policies, technologies, and institutional arrangements can only redistribute or conserve the fixed stock. No observational position can escape this constraint because it is rooted in the physical fact of planetary composition.",
+    "key_agents": [
+      "Industrial hydrogen consumers (powerless/trapped): Fertilizer synthesis, petroleum refining, steelmaking, desulfurization \u2014 all depend on crustal hydrogen availability; cannot exit the constraint",
+      "Energy sector policy makers (institutional/arbitrage): Can choose hydrogen pathways vs alternatives but face the same absolute ceiling; arbitrage is possible within the constraint, not around it",
+      "Hydrogen economy advocates (organized/constrained): Technological optimists pushing fuel cell infrastructure; can shift which forms of hydrogen they extract but cannot exceed crustal limits",
+      "Geochemical science community (analytical/analytical): Measures and models crustal hydrogen inventory; observes the constraint as a law of planetary composition"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low. The crustal hydrogen inventory is vast relative to current industrial consumption (~110 million tonnes of pure hydrogen annually equivalent). The effective extraction rate is <0.001% per century of total crustal reserves. The constraint is not currently binding in the sense of creating immediate scarcity, so base extractiveness reflects not current pressure but the eventual ceiling imposed by planetary finite stock. Suppression (0.03): Minimal. The constraint operates transparently \u2014 all agents understand that hydrogen must come from water, hydrocarbons, or minerals. There is no coercive or informational suppression; the limit is simply physical. Theater ratio (0.05): Minimal. The constraint exhibits no performative content. Hydrogen availability is directly measurable via geochemistry; there is no ritual or proxy needed to verify it. Accessibility collapse (0.92): Very high. The constraint is accessible to verification via direct geochemical measurement, isotopic analysis, and mass balance accounting. No observer position can deny the finiteness of crustal hydrogen. Resistance (0.08): Very low. The constraint emerges from fundamental planetary physics; no technological, policy, or institutional arrangement can resist it. Adaptation (substitution with other energy vectors) is possible; resistance to the constraint itself is not.",
+    "perspectival_gap": "All four perspectives classify the constraint as mountain because the constraint is truly invariant across observational positions. The hydrogen-dependent industrial sectors perceive an immutable ceiling; policy makers perceive the same ceiling regardless of strategy choice; analytical observers perceive the constraint as a law of planetary composition. There is no perspectival gap because the constraint has zero degrees of freedom \u2014 it is equally binding from all power levels, timescales, and exit options. This uniformity is itself diagnostic: when a natural-language concept produces identical classification from powerless/trapped, institutional/arbitrage, and analytical/analytical perspectives at the civilizational timescale, the constraint is likely a true mountain, not a contingent institutional arrangement. The constraint cannot be reclassified by changing the observation method because the observation method (geochemical mass balance) is the correct one.",
+    "directionality_logic": "Directionality derivation is not applicable to mountain constraints. No beneficiary or victim structure exists because the constraint does not extract from or benefit specific agents \u2014 it is universally binding. The entire human economy operates within a finite hydrogen budget set by planetary chemistry. This is the defining characteristic of a mountain: it is not a mechanism of inter-agent extraction but a structural limit that all agents face identically.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy trivially because it is a mountain \u2014 there is no risk of misclassifying coordination as extraction (or vice versa) since no coordination function exists. The constraint is a pure limit, not a mechanism. The analytical observer cannot naturalize contingent institutional arrangements as laws of nature because the constraint genuinely is a law of nature (planetary composition). The constraint is invariant across all observables and measurement methodologies \u2014 the total crustal hydrogen inventory is the same whether measured via direct geochemistry, isotopic tracing, or remote sensing. This stability across observables is the \u03b5-invariance principle: no alternative measurement basis can change the classification."
+  },
+  "network": {
+    "affects_constraints": [
+      "industrial_hydrogen_production_cost",
+      "green_hydrogen_scaling_timescale",
+      "ammonia_synthesis_availability"
+    ],
+    "dual_formulation_note": "Crustal hydrogen availability is upstream of multiple downstream constraints in the energy and chemical economy. Industrial hydrogen production costs reflect both the crustal availability ceiling and technological access costs. Green hydrogen scaling is constrained both by the crustal hydrogen ceiling and by electricity availability. Ammonia synthesis availability depends on both the hydrogen input constraint and the nitrogen fixation constraint. This story models the geochemical ceiling; downstream stories model institutional and technological mediations of that ceiling."
+  }
+}

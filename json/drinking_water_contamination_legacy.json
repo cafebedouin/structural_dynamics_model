@@ -1,0 +1,246 @@
+{
+  "header": {
+    "constraint_id": "drinking_water_contamination_legacy",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dwcl"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Drinking Water Contamination Legacy",
+    "topic_domain": "environmental_health/public_infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [],
+    "victims": [
+      "low_income_residents",
+      "marginalized_communities",
+      "future_generations",
+      "public_health_commons"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Low-Income Residents in Contaminated Areas",
+      "comment": "PERSPECTIVE 1: LOW-INCOME RESIDENTS (SNARE) \u2014 Residents cannot exit due to economic constraints (cannot afford to relocate, renting without mobility). Bears full extraction burden: health costs, shortened lifespan, cognitive development damage in children, chronic disease. No alternatives to contaminated water without extreme cost. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Marginalized Communities (Structural Vulnerability)",
+      "comment": "PERSPECTIVE 2: MARGINALIZED COMMUNITIES (SNARE, GENERATIONAL) \u2014 Generational entrapment: contamination clusters in communities with historical disinvestment. Residents face cumulative extraction across generations \u2014 contamination exposure in childhood predicts worse economic mobility, perpetuating the geographic trap. Exit options for future generations are pre-determined by present contamination and resulting socioeconomic outcomes."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Environmental Justice Advocates",
+      "comment": "PERSPECTIVE 3: ENVIRONMENTAL JUSTICE ADVOCATES (TANGLED ROPE) \u2014 Organized groups coordinate risk information sharing and legal action, achieving some collective power. But constrained by resource limits, litigation timelines, and regulatory capture. Some benefit from visibility and funding, but primary function is mobilization for powerless groups. Moderate extraction with genuine coordination role."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Water Utility Companies",
+      "comment": "PERSPECTIVE 4: WATER UTILITY COMPANIES (TANGLED ROPE) \u2014 Benefit from deferred infrastructure replacement costs and regulatory forbearance (arbitrage: can delay upgrades at low near-term cost). Also coordinate essential service delivery. But faces extraction too: long-term liability, regulatory pressure, infrastructure debt snowball. Hybrid position \u2014 some extraction outflow to residents, some benefit inflow to shareholders."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Environmental Regulation Apparatus",
+      "comment": "PERSPECTIVE 5: ENVIRONMENTAL REGULATION APPARATUS (PITON) \u2014 The Safe Drinking Water Act and EPA oversight remain performative theater: compliance measured by technical parameters (lead levels in samples), not health outcomes. Enforcement concentrated on large systems with capacity to comply; small/rural systems evade enforcement. The regulatory apparatus maintains surveillance appearance while functional verification of actual water safety remains minimal. Theater ratio reflects performative compliance testing."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Municipal Governments",
+      "comment": "PERSPECTIVE 6: MUNICIPAL GOVERNMENTS (PITON) \u2014 Aware that infrastructure replacement is necessary but politically impossible (costs \u2248 entire municipal budgets). Maintain theatrical urgency without action. Budget cycles and election timelines prevent long-term infrastructure investment. The constraint persists through institutional inertia \u2014 replacement would require financing mechanisms that exceed municipal capacity."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "Wealthy Residents (Bottled Water Alternative)",
+      "comment": "PERSPECTIVE 7: WEALTHY RESIDENTS (ROPE) \u2014 Can purchase alternative water supply (bottled water, filters, relocation). No meaningful extraction experienced \u2014 the constraint affects them minimally. Coordination function: public systems still serve them even if unused. Low effective extraction because exit is accessible and low-cost."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Infrastructure Decay as Natural Law)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (FALSE MOUNTAIN) \u2014 Risk naturalizing as inevitable: aging infrastructure decays, replacement is expensive, political cycles prevent long-term investment. This perspective treats the contamination legacy as an immutable constraint of aging infrastructure. However, comparative analysis (Netherlands, Germany) shows that sustained political commitment and progressive taxation can solve this at scale. The mountain classification is a false summit \u2014 naturalization of a contingent political choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "lead_exposure_causality_chain",
+      "question": "How much of the observed health damage in contaminated communities is directly attributable to water contamination vs. confounded by poverty, food insecurity, pollution, and healthcare access disparities?",
+      "resolution_mechanism": "Longitudinal cohort studies controlling for socioeconomic factors; instrumental variable analysis using geographic water quality variation; comparison of health outcomes between adjacent communities with different water systems",
+      "impact": "If primarily water-driven: snare classification is overdetermined by the data. If primarily confounded: extraction may be lower than measured, though multi-factor cumulative harm remains. If mixed: extraction persists even after controlling for poverty (indicates water-specific mechanism).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causality attribution for health damage in contaminated communities"
+    },
+    {
+      "id": "infrastructure_replacement_financial_feasibility",
+      "question": "At what tax rate and over what timeline can municipalities finance full lead service line replacement without regressive burden on poor residents?",
+      "resolution_mechanism": "Comparative analysis of water infrastructure financing models (public banking, progressive taxation, federal bonds); modeling of household burden by income decile for various financing structures",
+      "impact": "If feasible with progressive taxation (< 5% of median household income): the constraint is a political choice (snare from policy), not technical inevitability. If requiring > 15% burden: genuine infrastructure poverty trap exists (snare from economics).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Financial feasibility of equitable infrastructure replacement"
+    },
+    {
+      "id": "regulatory_capture_depth",
+      "question": "To what degree do water utilities influence EPA and state environmental regulations on safe lead levels, compliance testing protocols, and enforcement timelines?",
+      "resolution_mechanism": "Regulatory history analysis: timeline of lead level changes and scientific basis; revolving-door tracking (EPA staff to utilities); lobbying expenditure correlation with regulatory decisions; comparative analysis of countries with strict lead standards and no utility veto",
+      "impact": "If capture is deep (utilities block tighter standards): snare classification is reinforced by extractive regulatory dynamics. If minimal: snare is driven by technical complexity alone (lower confidence in extraction claim).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of regulatory capture by water utilities"
+    },
+    {
+      "id": "intergenerational_mobility_link",
+      "question": "Do children exposed to lead-contaminated water as a cohort show reduced educational attainment and earnings relative to unexposed cohorts, net of initial family income?",
+      "resolution_mechanism": "Longitudinal administrative data linking childhood water quality to school performance, graduation, college attendance, and adult earnings; causal inference using geographic discontinuities in water system quality",
+      "impact": "If strong intergenerational link: the constraint mechanically perpetuates poverty (snare across generations, not just current exposure). If weak link: health damage is localized to exposure cohort (snare remains but not transgenerational).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Intergenerational mobility consequences of lead exposure"
+    },
+    {
+      "id": "theater_ratio_measurement_validity",
+      "question": "Is the observed theater_ratio (0.58) accurate, or does EPA compliance testing underestimate actual contamination through sampling bias (testing from flushed taps vs. first-draw water)?",
+      "resolution_mechanism": "Independent residential water quality audits in compliance-passing systems; comparison of EPA-reported lead levels vs. independently measured levels in same homes; analysis of sampling protocol effects",
+      "impact": "If independent testing shows higher contamination: theater_ratio should increase (actual compliance theater higher than measured), snare classification strengthens. If EPA data accurate: theater_ratio is correctly calibrated.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Validity of regulatory compliance testing in measuring true water quality"
+    },
+    {
+      "id": "exit_option_availability_for_trapped_agents",
+      "question": "What percentage of low-income residents in contaminated areas have actual capacity to relocate (employment mobility, credit access, family networks) vs. appearing trapped due to structural barriers?",
+      "resolution_mechanism": "Survey data on housing market access, employment geography, rental discrimination, family support systems; comparison with exit rates in neighborhoods with improved water quality",
+      "impact": "If exit is truly impossible: trapped exit_options are correct (d approaches 1.0). If significant hidden mobility: some agents could exit at high but surmountable cost (reclassify as constrained, not trapped; lowers d slightly).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. perceived exit barriers for low-income residents"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "dwcl_extractiveness_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62,
+      "id_override": "dwcl_extractiveness_t15"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68,
+      "id_override": "dwcl_extractiveness_t30"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "dwcl_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48,
+      "id_override": "dwcl_theater_t15"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58,
+      "id_override": "dwcl_theater_t30"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.71,
+      "id_override": "dwcl_extractiveness_t45"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.62,
+      "id_override": "dwcl_theater_t45"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 45
+  },
+  "commentary": {
+    "narrative_context": "The drinking water contamination legacy \u2014 primarily lead in aging pipe infrastructure \u2014 creates a structural extraction mechanism targeting powerless populations. Unlike acute industrial contamination events, the legacy operates through deferred replacement costs, regulatory forbearance, and geographic concentration of poverty. Residents in contaminated areas cannot exit due to economic mobility barriers; utilities and municipalities benefit from deferring infrastructure replacement; the environmental regulation apparatus operates as theater (compliance testing without enforcement of actual health protection). The constraint exhibits all hallmarks of a snare: high extraction (health costs, reduced lifespan, cognitive damage), high suppression (economic immobility, regulatory capture), and asymmetric burden placement on powerless agents. The extractiveness has increased from 0.42 to 0.68 over the 45-year measurement interval as scientific understanding of lead toxicity has deepened while replacement efforts remain stalled \u2014 the extraction magnitude is now undeniable even as infrastructure debt accumulates. Theater ratio has risen from 0.35 to 0.58 as the regulation apparatus shifts from 'problem not yet recognized' to 'problem recognized and performatively addressed through compliance testing that does not drive actual replacement.'",
+    "key_agents": [
+      "Low-Income Residents: Primary victim (powerless/trapped) \u2014 economically immobile, cannot relocate, bear full health extraction burden",
+      "Marginalized Communities: Primary victim class (powerless/trapped, generational) \u2014 cumulative extraction across generations, geographic entrapment perpetuates poverty",
+      "Future Generations: Secondary victim (powerless/identity_locked) \u2014 pre-determined extraction through inherited geographic/economic status and cognitive development damage",
+      "Water Utility Companies: Beneficiary/extractor (institutional/arbitrage) \u2014 defer replacement costs to maximize near-term shareholder value; constrained by long-term liability",
+      "Municipal Governments: Beneficiary/co-extractor (institutional/constrained) \u2014 defer replacement to manage impossible budget constraints; trapped by political economy of municipal finance",
+      "EPA/Regulatory Apparatus: Theater performer (institutional/arbitrage) \u2014 maintains compliance appearance without enforcement; captured by industry and budget constraints",
+      "Environmental Justice Advocates: Organized victims (organized/constrained) \u2014 coordinate resistance but face resource limitations and regulatory capture",
+      "Wealthy Residents: Non-victims (powerful/mobile) \u2014 can purchase alternative water supply; no meaningful extraction experienced",
+      "Analytical Observer: Risk of false mountain (analytical/analytical) \u2014 tempted to naturalize as inevitable aging infrastructure problem"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and increasing. The constraint extracts health costs, reduced cognitive development, shortened lifespan, and chronic disease burden from powerless populations. As scientific evidence accumulates (lead causality now established at ppb levels below EPA action threshold), the extraction becomes more undeniable. The trend from 0.42 to 0.68 reflects not worsening contamination but rather improved measurement and causality evidence \u2014 the extraction was always present, now measured more accurately. Suppression (0.72): High. Residents trapped by economic immobility (cannot relocate, cannot afford bottled water indefinitely, cannot afford medical care for lead exposure effects). Regulatory capture limits enforcement. Utilities use informational asymmetry to obscure replacement necessity. Widespread false belief that 'lead is no longer a problem' (theater effect) reduces political pressure. Theater ratio (0.58): Moderate-high and increasing. EPA compliance testing focuses on technical compliance (sampling protocol) rather than actual health outcomes. Lead detection shifted from universal testing to passive response \u2014 only systems detected exceeding threshold face remediation pressure. Regulatory language ('action level') obscures that 'action level' is not a health standard but a treatment threshold, creating theatrical distinction from actual public health thresholds. Increasing theater reflects the system's shift toward performative rather than functional response as costs become undeniable.",
+    "perspectival_gap": "Low-income residents perceive snare (trapped, maximum extraction). Wealthy residents perceive rope (mobile, minimal extraction). Environmental advocates perceive tangled_rope (organized but constrained, mixed coordination and extraction). Municipalities perceive piton (know the problem, maintain theater). EPA perceives piton (performative compliance). Analytical observer risks mountain (naturalizing contingent political failure). The engine classifies this as snare at the canonical analytical level (analytical power, global scope, analytical exit) \u2014 snare classification is preserved and justified. The piton and rope perspectives are perceptually valid from within those agents' frames but do not contradict snare as the structural type when evaluated from the canonical analytical position.",
+    "directionality_logic": "Directionality values are derived from structural relationship to extraction flow. Low-income residents are full victims (trapped exit + victim status + powerless power \u2192 d \u2248 0.95 \u2192 f(d) \u2248 1.42 \u2192 high \u03c7). Water utilities are partial beneficiaries (arbitrage exit + beneficiary through deferred costs + institutional power \u2192 d \u2248 0.15 \u2192 f(d) \u2248 -0.01 \u2192 low \u03c7, or even negative). Environmental justice advocates are constrained organized agents (organized power + constrained exit + partial victim status \u2192 d \u2248 0.45 \u2192 f(d) \u2248 0.50 \u2192 moderate \u03c7). The piton perspectives (EPA, municipalities) have arbitrage exits but face institutional constraint \u2014 they derive d from their enforcer role (partial beneficiary, partial victim) \u2192 d \u2248 0.35 \u2192 f(d) \u2248 0.30 \u2192 low-moderate \u03c7. Scope modifier: most perspectives use local or regional scope (\u03c3 \u2248 0.8-0.9, dampening \u03c7 slightly), but analytical observer uses universal scope (\u03c3 = 1.0), meaning their false mountain is evaluated with standard scaling. No directionality overrides needed \u2014 structural derivation produces accurate d values.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED via specification of mechanism. The constraint is definitively snare (not misclassified coordination): (1) Legitimate coordination could reduce lead contamination through information-sharing about tap safety and replacement priority. But this coordination is precisely what is suppressed \u2014 residents lack information about actual contamination in their water. (2) Beneficiaries exist (utilities deferring costs, municipalities avoiding budget crisis), but their benefit is not from coordination value; it is from extraction. If the primary function were coordination (establishing safe water standards and monitoring), the constraint would be rope or tangled_rope. But the primary function is extraction (capturing the surplus value of deferred replacement). The mandatrophy is resolved by identifying what function maintains the constraint: it is not 'coordinating water safety' but 'deferring replacement costs.' This is extraction, not coordination. The constraint could be replaced by genuine coordination (progressive taxation for universal replacement, transparent testing, regulatory enforcement) without loss of function. The snare classification is stable and justified."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "industrial_lead_emissions_legacy",
+      "soil_contamination_urban_agriculture",
+      "cognitive_development_inequality"
+    ],
+    "dual_formulation_note": "The drinking water contamination legacy is downstream of historical industrial pollution and urban spatial segregation but represents a distinct constraint with its own extractiveness and suppression metrics. The upstream constraints (industrial emissions, segregation policy) created the conditions; this constraint operates the extraction mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.32
+    }
+  ]
+}

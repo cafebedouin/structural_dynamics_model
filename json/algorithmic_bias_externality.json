@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "algorithmic_bias_externality",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "algbias"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Algorithmic Bias Externality in Automated Decision Systems",
+    "topic_domain": "technology/AI_ethics/social_equity",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "algorithm_deployers",
+      "cost_minimizing_organizations"
+    ],
+    "victims": [
+      "marginalized_demographic_groups",
+      "equal_opportunity_principle"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Discriminated Algorithm Subject",
+      "comment": "PERSPECTIVE 1: DISCRIMINATED ALGORITHM SUBJECT (SNARE) \u2014 Lacks exit options from algorithmic decisions in hiring, lending, criminal justice, housing. Cannot opt out of automated systems that govern access to employment, credit, or liberty. Trapped by system opacity and inability to contest or escape. Maximum extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Civil Rights Advocacy Organization",
+      "comment": "PERSPECTIVE 2: CIVIL RIGHTS ADVOCACY ORGANIZATION (TANGLED ROPE) \u2014 Benefits from algorithmic efficiency improvements and transparency mechanisms while bearing costs of ongoing discrimination detection and remediation work. Constrained by resource limitations and institutional barriers to algorithm auditing. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "Technology Company Deploying Algorithm",
+      "comment": "PERSPECTIVE 3: TECHNOLOGY COMPANY DEPLOYING ALGORITHM (ROPE) \u2014 Experiences the constraint as coordination: bias mitigation protocols, fairness metrics, and transparency reports coordinate with regulatory requirements and stakeholder expectations. Benefits from efficiency gains while paying modest compliance costs. High exit optionality through arbitrage across jurisdictions."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regulatory and Standards Bodies",
+      "comment": "PERSPECTIVE 4: REGULATORY AND STANDARDS BODIES (SCAFFOLD) \u2014 Organized actors (EU AI Act, NIST AI Risk Management, algorithmic impact assessments) are building sunset provisions into algorithmic governance: mandatory audits, fairness certifications, and transparency requirements are designed to phase out or constrain high-bias systems over 5-10 year horizons. Extraction decreases as regulatory standards mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Algorithmic Fairness Theater",
+      "comment": "PERSPECTIVE 5: ALGORITHMIC FAIRNESS THEATER (PITON) \u2014 Fairness metrics, bias audits, and diversity statements persist through institutional inertia despite limited actual impact on discriminatory outcomes. Organizations deploy fairness theater (debiasing reports, diversity dashboards) that create appearance of addressing bias while preserving core extraction mechanisms. Theater ratio high because compliance activities diverge from actual system behavior."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational scale, algorithmic bias is both a genuine coordination problem (automating decisions at scale requires standards) and an extraction mechanism (automation amplifies historical bias and distributes costs to marginalized groups while concentrating benefits in deploying institutions). The constraint persists because it solves coordination problems for deployers while externalizing discrimination costs onto victims."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fairness_metric_capture",
+      "question": "Do algorithmic fairness metrics genuinely constrain bias or enable organizations to claim fairness while perpetuating discrimination through metric selection?",
+      "resolution_mechanism": "Longitudinal comparison of fairness metric scores vs. actual outcome disparities post-deployment; analysis of metric selection patterns by industry and demographic group",
+      "impact": "If metrics genuinely constrain: classification shifts toward Rope (fairness mechanisms work). If metrics enable gaming: classification confirms Snare (theater disguises extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether fairness metrics constrain bias or enable metric gaming"
+    },
+    {
+      "id": "bias_source_causality",
+      "question": "Is observed outcome disparity caused by algorithmic bias amplification of historical data patterns, by human decision-making that the algorithm amplifies, or by structural inequality that the algorithm merely reflects?",
+      "resolution_mechanism": "Counterfactual analysis comparing algorithmic decisions to human-only decisions on identical cases; causal decomposition of outcome variance",
+      "impact": "If algorithm amplifies: suppression is primarily technical and remediable (shift to Scaffold). If algorithm reflects structural inequality: suppression is socially embedded and remediation requires systemic change (Snare persists).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal source of observed outcome disparities"
+    },
+    {
+      "id": "regulatory_effectiveness_lag",
+      "question": "Can regulatory frameworks (audit requirements, transparency mandates, fairness certifications) adapt at sufficient speed to constrain bias in rapidly evolving algorithmic systems?",
+      "resolution_mechanism": "Comparative analysis of regulatory implementation timelines vs. algorithmic deployment cycles in high-bias domains (criminal justice, hiring, lending); tracking of regulatory capture by technology industry",
+      "impact": "If regulations keep pace: Scaffold sunset mechanism is real. If regulations lag: Piton theater persists and Snare extraction continues unconstrained.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory frameworks can keep pace with algorithmic evolution"
+    },
+    {
+      "id": "victim_coalition_viability",
+      "question": "Can marginalized demographic groups organize collective resistance to discriminatory algorithms, or are individual victims too dispersed to coordinate?",
+      "resolution_mechanism": "Historical analysis of successful algorithmic discrimination lawsuits, class action formations, and advocacy coalition effectiveness; network analysis of victim coordination capacity",
+      "impact": "If coalition formation viable: powerless agent power level could upgrade to organized, changing classification. If dispersed: powerless agents remain trapped.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether victims can form effective coalitions against algorithmic discrimination"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Algorithmic bias externality describes the structural constraint in which automated decision systems trained on historical data systematize and amplify existing discrimination while distributing costs to marginalized groups and concentrating benefits in deploying organizations. The constraint exhibits both genuine coordination functions (automating decisions at scale requires standardization; fairness requirements do improve outcomes for some) and extraction mechanisms (organizations externalize discrimination costs; regulatory compliance remains largely performative; affected populations lack exit options). The constraint's evolution over 2015-2025 shows increasing extractiveness (algorithms deployed across more high-stakes domains) and rising theater ratio (fairness disclosures, bias audits, and diversity statements proliferate while actual outcome disparities persist). This is a diagnostic exemplar of regulatory capture applied to emerging technology: initial fairness mechanisms (audits, transparency) function as coordination at low theater. As deployment scales and organizational interest in concealing bias rises, theater increases faster than actual fairness improvements, shifting the constraint toward Piton. Simultaneously, regulatory frameworks (EU AI Act, algorithmic impact assessments) represent Scaffold sunset mechanisms \u2014 if effective, they would constrain extraction over 5-10 year horizons. The empirical question is whether regulation adapts fast enough to prevent Snare classification.",
+    "key_agents": [
+      "Marginalized demographic groups (powerless/trapped) \u2014 subjected to discriminatory algorithmic decisions in hiring, lending, criminal justice; cannot exit or contest; bear full cost of discrimination externality",
+      "Technology companies deploying algorithms (institutional/arbitrage) \u2014 benefit from automation cost reductions; experience compliance requirements as modest coordination overhead; high exit options through jurisdictional arbitrage",
+      "Civil rights organizations (moderate/constrained) \u2014 limited resources for algorithm auditing and discrimination detection; benefit from increased transparency but constrained by institutional barriers",
+      "Regulatory bodies (organized/constrained) \u2014 building algorithmic governance frameworks with sunset logic; constrained by industry pressure and technical complexity",
+      "Fairness researchers and auditors (moderate/constrained) \u2014 produce fairness metrics and bias detection tools; constrained by access to proprietary algorithms and deployment data",
+      "Equal opportunity principle (powerless/trapped) \u2014 abstract collective good; primary victim; cannot organize or exit; bears externalized discrimination costs"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Substantial but not maximal. Organizations deploying algorithms capture efficiency gains (cost reduction, faster decisions, operational scale) that are worth 0.30-0.40 in pure extraction value. However, fairness mechanisms and regulatory pressure impose compliance costs that reduce net extraction to ~0.58. The value is high because extraction is concentrated and persistent, but not in the maximum range because some fairness constraints are working. Suppression (0.62): High. Marginalized groups face structural barriers to exit: algorithmic decisions in employment, lending, and criminal justice are mandatory or effectively unavoidable. Opacity of algorithmic logic prevents understanding of or contesting discrimination. However, suppression is not total (0.95+) because some individuals can appeal decisions, litigation exists, and media attention creates modest constraints on flagrant bias. Theater ratio (0.68): High and rising. Organizations deploy fairness audits, bias mitigation reports, diversity statements, and fairness metrics that create appearance of addressing discrimination. These activities are partially functional (they do detect some bias) but substantially performative (metric selection biases toward favorable results; audits often do not change deployment decisions). Theater has increased over the measurement interval because organizational incentives to demonstrate fairness compliance have risen faster than genuine fairness improvements.",
+    "perspectival_gap": "The constraint manifests as fundamentally different types depending on the observer's structural position. The deployed algorithm's organization experiences Rope \u2014 fairness compliance is a coordination mechanism for managing stakeholder expectations and regulatory risk. The marginalized group subjected to discrimination experiences Snare \u2014 no coordination benefit, only extraction, no exit. The analytical observer sees Tangled Rope \u2014 genuine coordination problems (automating high-stakes decisions requires standards; some fairness mechanisms work) coexist with extraction mechanisms (bias amplification; cost externalization; regulatory capture). The regulatory body sees Scaffold \u2014 algorithmic governance frameworks are being built with sunset logic. The fairness theater perspective (Piton) reveals institutional degradation: bias audits and fairness metrics persist through compliance inertia even when they fail to prevent discrimination. The perspectival gaps reveal that the constraint is not a simple extraction system but a hybrid coordination-extraction mechanism where the coordination functions primarily serve the deployers while the extraction costs are borne by marginalized groups.",
+    "directionality_logic": "Directionality values are derived from beneficiary/victim relationships and exit options. Technology companies (institutional/arbitrage) are beneficiaries with high exit optionality \u2014 they can relocate operations, change algorithms, or lobby for favorable regulations. The pipeline computes d \u2248 0.15, producing low effective extractiveness chi from their perspective (they experience the constraint as coordination, not extraction). Marginalized demographic groups (powerless/trapped) are victims with zero exit optionality \u2014 they cannot opt out of algorithmic decisions in employment, lending, or criminal justice. The pipeline computes d \u2248 0.95, producing high effective extractiveness chi. Civil rights organizations (moderate/constrained) are secondary victims with high but not zero exit costs \u2014 they could redirect resources away from algorithmic fairness work, but this would abandon affected populations. The pipeline computes d \u2248 0.70. Regulatory bodies (organized/constrained) are neither pure beneficiaries nor victims \u2014 they coordinate standard-setting while bearing enforcement costs. The pipeline computes d \u2248 0.50. These derived directionality values produce the perspectival gap: same constraint, six different experienced extraction intensities based on structural position.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by explicitly declaring both coordination and extraction functions. Genuine coordination exists: automating decisions at scale requires standardization; fairness metrics improve outcomes for some groups; regulatory frameworks are building better governance. Genuine extraction exists: discriminatory algorithms amplify historical bias; costs are externalized to marginalized groups; deploying organizations benefit from efficiency gains and bear modest compliance costs. The constraint is Tangled Rope because both are true and persistent. The mandate to classify it would fail if forced to choose between 'pure coordination' (Rope) and 'pure extraction' (Snare) \u2014 the constraint is structurally hybrid. The analytical observer's Tangled Rope classification reflects this hybridity. The Piton perspective (fairness theater) reveals how the hybrid nature creates degradation risk: if compliance activities become entirely performative, the coordination function atrophies and the constraint slides toward Snare. The Scaffold perspective reveals a path forward: if regulatory sunset mechanisms work, the constraint could transition to genuine coordination at lower extraction. The empirical question is which trajectory \u2014 degradation toward Snare or maturation toward Scaffold \u2014 will dominate over the next 5-10 years."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "criminal_risk_assessment_automation",
+      "predictive_policing_deployment",
+      "hiring_algorithm_gatekeeping",
+      "lending_discrimination_amplification"
+    ],
+    "dual_formulation_note": "Algorithmic bias externality is upstream of domain-specific deployments (criminal justice, hiring, lending). Each domain has its own constraint story reflecting domain-specific bias sources and regulatory contexts. This story captures the general structural constraint; domain stories capture manifestations with different epsilon values reflecting differing levels of transparency and regulatory maturity."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.22
+    }
+  ]
+}

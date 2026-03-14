@@ -1,0 +1,205 @@
+{
+  "header": {
+    "constraint_id": "random_number_generator_security",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rng_sec"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Random Number Generator Security Constraint",
+    "topic_domain": "cryptography/computer_security",
+    "requires_active_enforcement": false,
+    "victims": [
+      "cryptographic_system_users",
+      "information_security_infrastructure"
+    ],
+    "beneficiaries": [
+      "rng_implementation_architects"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Cryptographic System User",
+      "comment": "PERSPECTIVE 1: CRYPTOGRAPHIC SYSTEM USER (SNARE) \u2014 End users depend on RNG quality without ability to verify it. They cannot audit entropy sources, test statistical properties, or detect bias without specialized expertise. Trapped by dependence on upstream security assumptions they cannot inspect or exit. Maximum extraction: their security posture is compromised by RNG flaws they cannot detect or escape."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Information Security Infrastructure",
+      "comment": "PERSPECTIVE 2: INFORMATION SECURITY INFRASTRUCTURE (SNARE) \u2014 The entire cryptographic ecosystem rests on RNG quality. Systemic weakness in RNG functions (hardware/software implementation, entropy sources, seeding mechanisms) compromises all dependent systems simultaneously. No alternative exists at infrastructure scale. Trapped in absolute dependence. The collective cannot exit \u2014 must trust the RNG implementation or abandon cryptography entirely."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "RNG Implementation Architects",
+      "comment": "PERSPECTIVE 3: RNG IMPLEMENTATION ARCHITECTS (TANGLED ROPE) \u2014 Designers of RNG systems benefit from the constraint through: (a) concentration of expertise authority (only specialists can verify correctness), (b) lock-in effects (switching RNG implementations is costly), (c) plausible deniability (RNG failure blamed on entropy sources, not design). Also provide genuine coordination function: designing algorithms that minimize extraction from entropy sources. Asymmetric benefit despite coordination contribution."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Security Standards Bodies",
+      "comment": "PERSPECTIVE 4: SECURITY STANDARDS BODIES (ROPE) \u2014 NIST, ISO, international bodies provide coordination function (standardizing RNG algorithms, requiring testing procedures, establishing entropy requirements) with minimal extraction. Their role is genuinely coordinating field activity. Exit is constrained by regulatory obligation and institutional legitimacy, but the coordination benefits justify the constraint. Low extractiveness despite institutional power."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Post-Quantum Cryptography Transition",
+      "comment": "PERSPECTIVE 5: POST-QUANTUM CRYPTOGRAPHY TRANSITION (SCAFFOLD) \u2014 Organized effort to migrate cryptographic infrastructure to quantum-resistant algorithms creates alternative RNG pathways. The constraint is temporary: quantum-resistant standards (lattice-based, hash-based) require different entropy properties and may bypass legacy RNG vulnerabilities. Sunset clause: as post-quantum adoption matures (estimated 10-15 years), legacy RNG constraints lose force. High suppression acceptable because exit path exists and is being built."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "Legacy Hardware RNG Implementations",
+      "comment": "PERSPECTIVE 6: LEGACY HARDWARE RNG IMPLEMENTATIONS (PITON) \u2014 Older RNG designs (thermal noise-based, oscillator-based) persist in systems long after superior alternatives emerge, maintained through institutional inertia. The original functions are largely degraded: cheaper entropy sources now available, algorithms improved, but older implementations remain embedded in deployed systems. Theater ratio high because the RNG persists for regulatory compliance rather than effectiveness. Exit is low-cost (replace with modern implementation) but rarely executed."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal perspective, some degree of entropy verification requirement is inherent to cryptography: any cryptographic system requires indistinguishable randomness, and verifying indistinguishability requires statistical testing against observable patterns. The irreducibility appears as a natural law: cryptographic security fundamentally depends on unpredictability, which cannot be proven, only tested probabilistically. The engine will detect this as a false summit \u2014 the 'unprovability' is mathematical, not institutional, but is often naturalized to justify weak empirical verification standards."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "entropy_source_verification_impossibility",
+      "question": "Can entropy sources be verified independent of the RNG algorithm, or are entropy and RNG algorithm mutually coupled in verification?",
+      "resolution_mechanism": "Adversarial testing framework where entropy sources are evaluated in isolation vs integrated with RNG algorithms; identification of algorithm-entropy dependencies",
+      "impact": "If decoupled: entropy verification is transparent and extraction can be minimized. If coupled: RNG architects can obscure failures through entropy source claims, maintaining high extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether entropy sources can be verified independently of RNG algorithm"
+    },
+    {
+      "id": "statistical_test_sufficiency",
+      "question": "Do standard statistical tests (NIST SP 800-22, diehard, testU01) actually detect cryptographically relevant bias, or do they miss systematic weaknesses that matter for cryptanalysis?",
+      "resolution_mechanism": "Post-mortem analysis of RNG failures: correlation between passing statistical tests and actual cryptanalytic exploits; identification of test-resistant bias patterns",
+      "impact": "If tests are sufficient: RNG security can be empirically verified, reducing asymmetric information extraction. If insufficient: implementation architects maintain privileged knowledge, justifying high suppression.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether statistical tests detect cryptographically relevant RNG bias"
+    },
+    {
+      "id": "hardware_entropy_cost_asymmetry",
+      "question": "Is the cost differential between high-quality entropy generation and cryptographic-grade RNG design truly required, or do RNG architects inflate complexity to justify lock-in?",
+      "resolution_mechanism": "Comparative cost analysis of entropy-only systems vs RNG+entropy stacks; implementation of simpler RNG designs with same security guarantees",
+      "impact": "If costs are truly asymmetric: suppression is structural (legitimate barrier). If cost inflation is architected: suppression includes extractive design choices that could be avoided.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether RNG complexity cost is necessary or architected for lock-in"
+    },
+    {
+      "id": "side_channel_attack_prevalence",
+      "question": "How often do RNG vulnerabilities emerge from algorithmic bias vs timing/power side-channels in implementation?",
+      "resolution_mechanism": "Catalog of disclosed RNG vulnerabilities by category; prevalence analysis of algorithm flaws vs implementation flaws",
+      "impact": "If algorithmic: suppliers can claim plausible deniability. If implementation-focused: suppliers bear responsibility for quality control, reducing extraction potential.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Prevalence of algorithmic vs implementation RNG vulnerabilities"
+    },
+    {
+      "id": "quantum_resistant_rng_contingency",
+      "question": "Do proposed post-quantum RNG designs actually solve the entropy verification problem, or do they displace it to new domains (lattice-based entropy, hash-based state)?",
+      "resolution_mechanism": "Analysis of post-quantum RNG designs for retained dependencies on unverifiable entropy sources; comparison of verification requirements across quantum and post-quantum landscapes",
+      "impact": "If problem is solved: scaffold perspective confirmed \u2014 post-quantum transition is real exit path. If displaced: constraint persists under new formulation, and scaffold is aspirational rather than structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether post-quantum RNG designs resolve entropy verification problem"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Random number generator security represents a structural constraint where dependence on cryptographic randomness creates asymmetric information between RNG architects (who understand entropy sources, algorithm design, implementation details) and users (who cannot verify quality without specialized expertise). The constraint combines elements of coordination (RNG design genuinely solves the problem of scaling deterministic systems to produce unpredictable outputs) and extraction (complexity and information asymmetry enable capture and lock-in). The increasing extractiveness trajectory reflects: (1) growing dependence on cryptographic systems across all digital infrastructure, (2) concentration of RNG expertise in smaller populations, (3) emergence of new attack surfaces (side-channel attacks, weak entropy sources) that users cannot detect independently, (4) regulatory capture where standards bodies incorporate assumptions favoring incumbent suppliers. The theater ratio indicates that verification activity (statistical testing, auditing, certification) is partially performative \u2014 tests may pass while cryptographically relevant bias remains undetected.",
+    "key_agents": [
+      "Cryptographic System Users: Primary victims (powerless/trapped) \u2014 depend on RNG quality without ability to verify; cannot exit without abandoning cryptography",
+      "Information Security Infrastructure: Collective victim (powerless/trapped) \u2014 systemic dependence on RNG correctness across all deployed systems; coordinated failure mode",
+      "RNG Implementation Architects: Primary beneficiary (powerful/mobile) \u2014 control technical specification; authority asymmetry enables extraction through complexity and lock-in",
+      "Security Standards Bodies: Coordinating institution (organized/constrained) \u2014 NIST, ISO provide genuine coordination function with modest extraction",
+      "Post-Quantum Cryptography Transition: Organized exit pathway (organized/constrained) \u2014 building alternative RNG designs and entropy sources that may bypass legacy constraints",
+      "Legacy Hardware RNG: Institutional residue (institutional/arbitrage) \u2014 older implementations persist through regulatory inertia despite superior alternatives",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent architectural choices as inherent cryptographic limits"
+    ],
+    "logic_rationale": "Extractiveness (0.62): High-moderate. RNG architects benefit from: (a) expertise asymmetry (only specialists understand entropy sources, algorithm design, implementation security), (b) switching costs (replacing RNG implementations requires full system redesign), (c) plausible deniability (failures can be attributed to entropy sources rather than design), (d) regulatory leverage (RNG certification creates lock-in). However, extraction is not total because: (1) RNG design does solve genuine coordination problems (scaling from physical entropy to usable randomness), (2) standards bodies maintain oversight, (3) open-source implementations partially reduce information asymmetry. The trajectory from 0.45 to 0.62 reflects increasing extraction as digital systems scale \u2014 broader dependence makes RNG lock-in more valuable. Suppression (0.68): High. Barriers to exit are substantial: (1) no alternative to RNG for cryptographic systems, (2) entropy verification is mathematically non-trivial, (3) implementation flaws are latent (side-channel attacks), (4) expertise barriers prevent independent auditing, (5) regulatory capture (standards favor incumbent suppliers). Theater ratio (0.55): Moderate-high. Verification activity is partly performative: statistical tests (NIST SP 800-22, diehard) may pass while cryptographically relevant bias persists; implementation audits cannot detect all side-channel vulnerabilities; certification processes emphasize procedural compliance over empirical verification. The increasing theater trajectory reflects growing gap between testing procedures and actual cryptanalytic threat models.",
+    "directionality_logic": "Beneficiary identification: RNG architects and their organizations (Intel, Qualcomm, cryptographic library maintainers) are primary beneficiaries \u2014 they benefit from expertise asymmetry, lock-in, and regulatory leverage. Victims identification: all users of cryptographic systems and the collective security infrastructure are victims \u2014 they depend on RNG quality without ability to verify. Secondary beneficiaries: standards bodies benefit modestly through coordinating role and authority, but their benefit is proportional to genuinely provided coordination value, not extraction. The beneficiary/victim structure drives the directionality computation: beneficiaries with mobile/arbitrage exit options derive low d values (0.15-0.30); victims with trapped exit options derive high d values (0.90+). The result is \u03c7 divergence: users experience effective extraction near ceiling; architects experience near-zero or negative effective extraction.",
+    "perspectival_gap": "This constraint demonstrates how information asymmetry alone can drive maximum perspectival divergence. All perspectives observe the same structural fact: RNG implementation requires unverifiable entropy sources. But their interpretation depends on structural position: (1) Users interpret this as entrapment (Snare) \u2014 they cannot verify what they fundamentally depend on. (2) Architects interpret this as legitimate specialization (Tangled Rope) \u2014 they provide coordination value for verifying the unverifiable. (3) Standards bodies interpret this as manageable risk (Rope) \u2014 coordinated testing and certification reduce verification burden. (4) The transition to post-quantum (Scaffold) \u2014 reframes as temporary problem with known exit path. (5) Legacy systems (Piton) \u2014 show that the constraint persists through inertia, not necessity. (6) The civilizational view (Mountain) \u2014 risks declaring entropy verification fundamentally impossible, naturalizing what is actually an architectural choice. The perspectival gap is not about disagreement on facts but about how structural position determines what facts are salient and how they are weighted.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that RNG security constraint combines genuine coordination function (solving the problem of generating cryptographic-grade randomness from physical entropy) with extractive architecture (concentrating verification authority and creating lock-in). The constraint is NOT purely coordinating (would be Rope) because asymmetric information persists despite standards efforts. It is NOT purely extractive (would be Snare) because RNG design does provide genuine value. The Snare classification from the powerless user perspective is correct \u2014 they experience pure extraction. The Tangled Rope classification from architects' perspective is correct \u2014 they provide coordination while capturing informational rents. The constraint resolves the mandatrophy by being legitimately different things from different structural positions. The analytical perspective's Mountain view is a false summit \u2014 the constraint appears inevitable only if one naturalizes the specific architectural choices (centralized verification, supplier lock-in, opacity of entropy sources) as inherent to cryptography. Alternative architectures (transparent entropy sources, distributed verification, standardized entropy interfaces) could reduce extraction while maintaining coordination, demonstrating that the constraint is not a natural law but a contingent institutional arrangement."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "cryptographic_key_generation",
+      "side_channel_attack_vectors"
+    ],
+    "dual_formulation_note": "RNG security decomposes into: (1) entropy_source_quality (\u03b5 \u2248 0.35, Rope) \u2014 physical randomness generation, (2) random_number_generator_security (\u03b5 \u2248 0.62, Snare) \u2014 algorithm design and verification, (3) implementation_timing_attacks (\u03b5 \u2248 0.68, Snare) \u2014 cryptographic implementation security. The main story focuses on RNG architectural extraction; upstream entropy constraint is separate; downstream timing vulnerabilities form a distinct extraction mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

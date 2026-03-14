@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "plebeian_political_participation_systems",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pleb_part"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Plebeian Political Participation Systems",
+    "topic_domain": "political_economy/democratic_institutions",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "electoral_gatekeepers",
+      "party_apparatus",
+      "institutional_politicians"
+    ],
+    "victims": [
+      "non_elite_voters",
+      "political_voice_equity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Disenfranchised Voter",
+      "comment": "PERSPECTIVE 1: DISENFRANCHISED VOTER (SNARE) \u2014 Participates in electoral system with minimal effective influence over outcomes. Structural barriers include ballot access requirements, voter registration systems, polling place accessibility, gerrymandering, and information asymmetries. No viable exit: political voice is essential to citizenship. Maximum experienced extraction \u2014 participation becomes an obligation without meaningful agency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Organized Community Group",
+      "comment": "PERSPECTIVE 2: ORGANIZED COMMUNITY GROUP (TANGLED ROPE) \u2014 Genuine coordination benefit: collective participation builds political power, enables advocacy campaigns, develops civic capacity. But also subject to extraction: must navigate gatekeeping mechanisms, absorb organizational costs, face co-optation pressure and incorporation into party structures that dilute autonomous voice. Constrained exit \u2014 withdrawing from participation system costs political influence, but participation incurs coordination costs and agency loss."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Political Party Apparatus",
+      "comment": "PERSPECTIVE 3: POLITICAL PARTY APPARATUS (ROPE) \u2014 Experiences the participation constraint as coordination mechanism: aggregating plebeian votes into electoral blocs solves collective action problem for the party. Can arbitrage between constituencies, shift positions, and rotate power. Net beneficiary \u2014 extraction flows toward the party, which captures electoral value, donor access, and legislative power."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Democratic Reform Coalition",
+      "comment": "PERSPECTIVE 4: DEMOCRATIC REFORM COALITION (SCAFFOLD) \u2014 Sees participation system as temporary problem with sunset: expanded suffrage, campaign finance reform, redistricting commissions, participatory budgeting, and digital participation tools are building alternative pathways that bypass traditional gatekeeper extraction. Organized agents (civil society, election monitoring, voter mobilization networks) perceive this as a coordination failure being solved by institutional redesign. Sunset clause is real: as voting-age population expands and inclusion norms mature, the exclusionary barrier mechanisms lose legitimacy and enforcement capacity."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Electoral Ritual System",
+      "comment": "PERSPECTIVE 5: ELECTORAL RITUAL SYSTEM (PITON) \u2014 The machinery of voting \u2014 polling places, ballot design, procedural voting requirements, counting and certification \u2014 persists through institutional inertia. Much of the contemporary electoral process is performative: voting day rituals, civic mythology around 'the power of your vote,' candidate debates with predetermined formats. Actual agenda-setting often occurs outside formal electoral participation (lobbying, media gatekeeping, donor influence). Theater ratio high because the ritual persists despite reduced functional verification of voter preferences."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some collective action problem in political coordination is inherent: any system aggregating diverse preferences faces Arrow's impossibility result, strategic voting, and preference revelation problems. Plebeian participation systems always involve some extraction of voice into institutional forms. This perspective sees the bottleneck as a structural limit of democratic aggregation itself. However, the base properties contradict this \u2014 the constraint is contingent institutional arrangement, not natural law. The mountain classification is a false summit that naturalizes what is actually a distributional choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "gatekeeping_mechanism_taxonomy",
+      "question": "Is suppression of plebeian participation primarily via structural barriers (registration, access, ballot design) or via elite preference aggregation (media, donor influence, agenda-setting)?",
+      "resolution_mechanism": "Comparative analysis of participation rates after removing each barrier class; measurement of agenda difference between elite and mass preferences pre/post participation channels",
+      "impact": "If structural: focused reform on access removes extraction (Rope emerges from more perspectives). If aggregation-based: structural reform fails to transfer voice unless preference aggregation mechanisms change.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Taxonomy of gatekeeping mechanisms in plebeian participation"
+    },
+    {
+      "id": "voice_transfer_fidelity",
+      "question": "Does plebeian participation in electoral systems actually transmit voter preferences to policy outputs, or does institutional filtering decouple voting from outcomes?",
+      "resolution_mechanism": "Policy congruence analysis: correlation between voter preferences (pre-election polls, referenda, issue surveys) and actual policy decisions by elected representatives; tracking of campaign promises vs implementation",
+      "impact": "High fidelity (\u03c1 > 0.7): participation is genuine coordination, classification shifts toward Rope from more perspectives. Low fidelity (\u03c1 < 0.3): participation is performative extraction, Snare classification spreads.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Fidelity of voice transfer from participation to policy"
+    },
+    {
+      "id": "comparative_system_extractiveness",
+      "question": "Is high extractiveness in this participation system attributable to universal structural properties of democratic aggregation or to contingent institutional design choices?",
+      "resolution_mechanism": "Cross-national comparison of extractiveness measures between systems with different institutional designs (proportional vs first-past-the-post, centralized vs local, party-gatekept vs direct-democracy hybrid)",
+      "impact": "If universal: mountain classification has merit, extractiveness is inherent. If contingent: extractiveness correlates with specific institutional choices, reform is feasible and constraint is Tangled Rope or Scaffold rather than Mountain.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether extractiveness is universal or contingent on institutional design"
+    },
+    {
+      "id": "exit_option_availability",
+      "question": "What constitutes genuine exit from the political participation constraint for powerless agents? Is exit possible (mobile/arbitrage) or are barriers truly insurmountable (trapped)?",
+      "resolution_mechanism": "Measurement of political exit costs: relocation burden, citizenship loss, alternative political systems availability, cost of permanent disengagement (taxation without representation impact)",
+      "impact": "High-cost exit (>50% of lifetime earnings): trapped classification justified, Snare perspective accurate. Low-cost exit: mobile classification applies, higher d value, lower experienced chi, classification shifts toward Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Availability of genuine exit options from political participation systems"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.41
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Plebeian political participation systems create a structural tension between the democratic promise of popular sovereignty and the institutional reality of elite gatekeeping, information asymmetries, and strategic preference aggregation. Voters are encouraged to participate as an exercise of political voice, yet the mechanisms translating that voice into policy outputs are substantially controlled by institutional actors with independent incentives. This constraint exhibits all six DR types from different perspectives. The same structural phenomenon \u2014 the aggregation of millions of individual preferences into binding policy \u2014 appears as an immutable law of democratic aggregation (mountain), a genuine coordination mechanism enabling collective voice (rope), a mixed coordination-extraction hybrid with gatekeeping (tangled rope), a temporary institutional failure being solved by reform (scaffold), a degraded ritual persisting through inertia (piton), or pure extraction with minimal voice fidelity (snare), depending on the observer's structural position. The constraint's theater_ratio (0.68) reflects that contemporary electoral participation involves substantial performative elements: voting day rituals, civic mythology, candidate theater debates, and symbolic empowerment narratives that obscure the reality of agenda-setting power concentrated outside formal participation channels.",
+    "key_agents": [
+      "Non-Elite Voters: Primary victim (powerless/trapped) \u2014 subject to participation obligations with minimal effective influence; bear costs of gatekeeping and suppression",
+      "Political Voice Equity: Primary victim (powerless/trapped) \u2014 abstract collective good; extractive participation systems degrade democratic legitimacy and representation quality",
+      "Party Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 captures electoral value, donor access, legislative power; can arbitrage between constituencies and shift positions",
+      "Electoral Gatekeepers: Primary beneficiary (institutional/arbitrage) \u2014 control ballot access, voter registration, information flow, agenda-setting; extract rents from participation monopoly",
+      "Organized Community Groups: Secondary actor (moderate/constrained) \u2014 benefit from collective participation power but subject to extraction via co-optation and institutional incorporation",
+      "Democratic Reform Coalition: Organized agents (organized/mobile) \u2014 civil society, election monitoring, voter mobilization networks building alternative participation pathways with generational sunset",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional gatekeeping as inherent limit of democratic aggregation"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The gatekeeper apparatus captures substantial value \u2014 electoral power, media attention, donor access, agenda control \u2014 during the participation cycle. But the extraction is not maximal because genuine coordination also occurs: electoral competition does constrain some elite behavior, voters do punish incumbent failures at margins, and alternative participation channels (organizing, protest, media, direct democracy) partially bypass formal gatekeeping. The value reflects both the real benefits of participation (voice amplification through collective aggregation) and the real costs (gatekeeping extraction, voice filtering). Suppression (0.65): Moderate-high. Significant barriers include voter registration requirements and delays, polling place accessibility gaps, ballot design complexity, gerrymandering, information asymmetries, and media gatekeeping. However, suppression is not total \u2014 millions do participate effectively, and suppression mechanisms are increasingly visible and contestable. Theater ratio (0.68): Moderately high. Electoral participation involves substantial performative elements: voting day rituals, media spectacle around candidates, predetermined debate formats, victory narratives. Actual policy agenda-setting often occurs in less participatory forums (lobbying, board rooms, regulatory capture). The theater has increased over the interval (0.42 to 0.68) as electoral competition has intensified while agenda-setting power has concentrated.",
+    "directionality_logic": "Each perspective's directionality derives from the agent's structural relationship to the gatekeeping apparatus. Voters with no exit options (trapped) face maximum extraction \u2014 the gatekeepers control when, where, and how voting occurs, and voters bear the participation costs. Party gatekeepers with arbitrage options (institutional/arbitrage) experience extraction flowing toward them \u2014 they aggregate votes into power and can shift positions. Organized community groups with some mobility (moderate/constrained) face mixed directionality \u2014 they benefit from participation coordination but lose autonomy through institutional incorporation. The reform coalition with mobile options sees this as a solvable institutional problem, not extractive fate. The beneficiary classification differentiates institutional gatekeepers (arbitrage capacity) from powerful but non-gatekeeping actors.",
+    "perspectival_gap": "This constraint demonstrates substantial perspectival diversity. The non-elite voter sees pure extraction (Snare) \u2014 participation obligations with minimal voice fidelity. The community organization sees mixed coordination-extraction (Tangled Rope) \u2014 collective participation amplifies power but gatekeeper incorporation reduces autonomy. The party apparatus sees coordination (Rope) \u2014 voters solve their collective action problem by channeling voice through the party. The reform coalition sees a solvable institutional problem (Scaffold) \u2014 expanding suffrage, decentralizing agenda-setting, and building participatory budgeting create alternative pathways. The electoral ritual system sees its own degradation (Piton) \u2014 voting day theater persists despite agenda-setting occurring elsewhere. The civilizational observer risks seeing immutable democratic limits (Mountain) \u2014 Arrow's impossibility and collective action problems are inherent. This last perspective is a false summit: the structural barriers are institutional, not mathematical.",
+    "mandatrophy_analysis": "DIAGNOSTIC: This constraint demonstrates mandatrophy by showing that the six types are legitimate readings of the same participation system from different structural positions. The constraint does not resolve to a single 'true' type but rather shows how the same formal participation institution generates different extractiveness experiences depending on the actor's power level and exit options. The mountain perspective naturalizes what is actually a distributional choice (gatekeeping design). The rope perspective sees only the coordination benefit while ignoring extraction. The snare perspective sees only extraction while ignoring genuine voice amplification. The tangled rope perspective is most accurate from the analytical observer's position \u2014 plebeian participation systems genuinely coordinate collective voice while simultaneously extracting via gatekeeping. The scaffold and piton perspectives are real structural features of contemporary systems (reform movements and electoral theater). The mandatrophy is resolved by recognizing that the indexical tuple fully determines which type is experientially accurate from that position."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "voter_preference_aggregation",
+      "democratic_representation_fidelity",
+      "electoral_gatekeeping_power"
+    ],
+    "dual_formulation_note": "Plebeian political participation systems decompose into multiple structurally distinct constraints: formal voting mechanisms (\u03b5\u22480.55, Tangled Rope), information aggregation via media (\u03b5\u22480.62, Snare), agenda-setting concentration (\u03b5\u22480.71, Snare), and voice-policy translation fidelity (\u03b5\u22480.58, Tangled Rope). This story models the integrated system; specific institutional components should be analyzed as separate constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "header": {
+    "constraint_id": "large_language_model_training_attribution",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "llm_attr"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.64,
+    "claimed_type": "snare",
+    "human_readable": "LLM Training Data Attribution and Consent Extraction",
+    "topic_domain": "artificial_intelligence/intellectual_property/labor",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "llm_developers"
+    ],
+    "victims": [
+      "training_data_creators",
+      "content_copyright_holders",
+      "future_displaced_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Training Data Creator",
+      "comment": "PERSPECTIVE 1: TRAINING DATA CREATOR (SNARE) \u2014 Writers, artists, coders whose work was scraped without consent and used to train commercial models. Trapped by the structural reality that all digital content is now implicit training data. No viable exit: choosing not to publish online is no longer economically viable; retracting published work does not remove derivatives already ingested into trained models. Maximum suppression: retroactive consent is unenforceable; no mechanism to opt out of derivative training. Extraction is maximal \u2014 intellectual property value flows unidirectionally to model developers."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Copyright Holder",
+      "comment": "PERSPECTIVE 2: COPYRIGHT HOLDER (SNARE) \u2014 Publishers, film studios, music labels whose copyrighted material was ingested into training sets without licensing fees. Trapped between legal uncertainty (fair use doctrine applied to massive scale is contested), technical infeasibility (cannot practically verify what's in a trained model), and asymmetric power (individual rights holders vs. consolidated model developers). Suppression is extreme: legal remedies are slow, expensive, and uncertain; technical detection is nearly impossible. The extraction is pure: licensing revenue flows to developers via model value, not to rights holders."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Professional Worker in Displaced Sector",
+      "comment": "PERSPECTIVE 3: DISPLACED SECTOR WORKER (TANGLED ROPE) \u2014 Programmers, copywriters, illustrators whose labor market is being automated by LLM-trained models. Constrained by retraining costs, geographic mobility limits, and credential barriers in adjacent fields. Some coordination function exists: open-source model development and collaborative AI research create new roles. But asymmetric extraction dominates: the professional class faces wage compression and deskilling while model developers capture productivity gains. The tension between coordination (shared infrastructure) and extraction (asymmetric capture of value) is the defining feature."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The LLM Developer",
+      "comment": "PERSPECTIVE 4: LLM DEVELOPER (ROPE) \u2014 Training data aggregation from public sources is framed as technical coordination: sourcing the diverse, high-quality training signal needed to build effective models. This perspective experiences the constraint as enabling cooperation \u2014 without consolidated training corpora, no single developer could build competitive models. The arbitrage exit (can choose which training sources to include/exclude, can develop alternative models) makes extraction appear minimized from this view. But this reading ignores that coordination benefits concentrate while extraction costs disperse globally."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Copyright and Attribution System",
+      "comment": "PERSPECTIVE 5: COPYRIGHT/ATTRIBUTION REGIME (PITON) \u2014 Intellectual property and creator attribution systems were designed for a world of scarcity (printing, distribution costs). They operated through licensing (permissions) and detection (enforcement). In the LLM era, detection is technically infeasible (weights are opaque) and licensing is structurally impossible (cannot retroactively license training data at inference time). The regime persists through legal theater (copyright claims against model developers, fair use litigation) and institutional inertia (publishers and studios maintain IP enforcement apparatus) even though the functional capacity to enforce attribution has largely vanished. Theater ratio elevated by the performative nature of enforcement efforts against technically undetectable derivative use."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Consent and Licensing Reform Movement",
+      "comment": "PERSPECTIVE 6: CONSENT/LICENSING REFORM COALITION (SCAFFOLD) \u2014 Organized efforts (artist collectives, labor unions, creator guilds, regulatory bodies) to mandate opt-in training data licensing, model auditability, and creator compensation. Constrained by incumbent developer power and the technical infeasibility of retroactive enforcement. But this coalition has real agency and a sunset logic: mandatory licensing frameworks (EU AI Act, proposed US regulation) are creating alternative pathways where model developers pay for training data access and creators maintain consent control. As legal enforcement mechanisms mature and technical verification improves, the extraction mechanism loses force. Sunset estimated: 5-10 years for licensing norms to crystallize in regulated jurisdictions."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Scale Invariance View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN CANDIDATE) \u2014 From a civilizational/universal view, large-scale pattern extraction from distributed sources appears as a natural law of intelligence: all learning (human and machine) requires aggregating training signal from accessible sources. The scale of LLM training (billions of examples) is simply the quantitative extension of natural learning. This perspective risks naturalizing what is actually a contingent institutional choice: the option to aggregate without consent exists only because attribution tracking and licensing infrastructure for digital training data was never built. The mountain reading is a false summit \u2014 structural data reveals the constraint is a Snare/Piton hybrid, not an immutable law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technical_attribution_feasibility",
+      "question": "Is it technically feasible to audit which specific training examples contributed to LLM outputs, and if so, would attribution be practically enforceable?",
+      "resolution_mechanism": "Development of reliable influence functions, integrated gradients, or other attribution methods; empirical testing against adversarial source manipulation; cost analysis of enforcement",
+      "impact": "If feasible and cost-effective: enables licensing and creator compensation; reclassifies from Snare to Tangled Rope (extraction persists but with consent and flow-through). If infeasible: attribution remains performative theater; extraction mechanism is permanent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether technical LLM attribution methods are practically enforceable"
+    },
+    {
+      "id": "fair_use_doctrine_scope",
+      "question": "Will courts apply fair use doctrine narrowly (training is transformative use) or broadly (scale and market displacement negate fair use protection)?",
+      "resolution_mechanism": "Litigation outcomes; regulatory guidance from Copyright Office; international harmonization of training data exceptions",
+      "impact": "Narrow fair use = Snare persists. Broad fair use = developers retain extraction but within legal bounds, reclassifying to Tangled Rope or Rope depending on compensation mechanisms. Licensing required = Scaffold succeeds, extraction mechanism collapses.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Court interpretation of fair use for LLM training"
+    },
+    {
+      "id": "consent_mechanism_viability",
+      "question": "Can a practical consent and licensing mechanism be built for training data that avoids tragedy-of-the-commons and free-rider problems?",
+      "resolution_mechanism": "Pilot licensing frameworks; data cooperatives; blockchain-based attribution registries; empirical measurement of licensing overhead costs",
+      "impact": "If viable and affordable: enables creator agency; transforms Snare to cooperative Rope or constrained Tangled Rope. If mechanisms break down: extraction persists, but now with performative consent (theater ratio increases).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Viability of practical training data consent mechanisms"
+    },
+    {
+      "id": "labor_market_displacement_timeline",
+      "question": "At what rate will LLM capability gains translate into labor market displacement for writing, coding, creative work, and when will reskilling become economically infeasible?",
+      "resolution_mechanism": "Wage impact studies; labor displacement tracking; reskilling cost analysis; comparison to historical automation waves",
+      "impact": "Slow displacement (>20 years) with accessible reskilling: Tangled Rope remains manageable. Fast displacement (<5 years) with reskilling infeasibility: reclassifies to Snare for displaced worker perspective. Determines whether Tangled Rope is stable or degrading.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Timeline and feasibility of labor market adjustment to LLM displacement"
+    },
+    {
+      "id": "open_source_vs_proprietary_extraction",
+      "question": "Do open-source LLM training practices exhibit materially lower extraction than proprietary models, or does openness merely shift extraction from creators to training compute infrastructure providers?",
+      "resolution_mechanism": "Comparison of training data sourcing practices; analysis of value capture across open vs proprietary stacks; attribution auditing of open models",
+      "impact": "If open-source exhibits lower extraction: Scaffold perspective valid \u2014 can bypass proprietary Snare. If extraction merely shifts: Scaffold is aspirational; underlying Snare mechanism persists in infrastructure layer.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether open-source training practices reduce extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "LLM training data attribution represents a structural extraction mechanism where the consent and attribution infrastructure built over centuries for intellectual property (copyright, licensing, royalty systems) has been functionally disabled by the scale and opacity of machine learning. Training data creators \u2014 writers, programmers, artists, researchers \u2014 have had their work incorporated into commercial models without consent, compensation, or attribution. The constraint exhibits Snare characteristics (high extraction, high suppression, trapped exit for creators) combined with institutional piton dynamics (copyright enforcement is performatively maintained but technically infeasible against opaque weights) and reform scaffold dynamics (regulatory frameworks mandating licensing and auditability). The extractiveness has increased from 0.35 to 0.58 over six years as model scale expanded, training data acquisition accelerated, and the value differential between model developers and content creators widened. Theater ratio increased from 0.42 to 0.64 as enforcement efforts (copyright litigation, fair use claims) became more performative relative to actual constraint on model development.",
+    "key_agents": [
+      "Training Data Creators: Primary victims (powerless/trapped) \u2014 writers, programmers, artists whose work was scraped without consent; no exit from being part of digital commons",
+      "Content Copyright Holders: Primary victims (powerless/trapped) \u2014 publishers, studios, music labels unable to prevent or license derivative training use",
+      "Displaced Sector Workers: Secondary victims (moderate/constrained) \u2014 professionals in writing, coding, creative work facing wage compression and automation",
+      "LLM Developers: Primary beneficiaries (institutional/arbitrage) \u2014 access to free training signal; ability to choose data sources and model architectures",
+      "Copyright and Attribution Regime: Institutional actor (institutional/arbitrage) \u2014 legal and enforcement systems maintaining performative copyright protection despite technical infeasibility",
+      "Consent and Licensing Reform Movement: Organized challengers (organized/constrained) \u2014 unions, creator guilds, regulatory bodies building alternative licensing and compensation mechanisms",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional choices (no attribution infrastructure) as immutable laws of learning"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Training data developers capture substantial value from access to unpaid training data. The value is real but not total extraction \u2014 some creators benefit indirectly from improved model capabilities (open-source developers, researchers using LLMs for their own work). The 0.58 value reflects that extraction is significant but constrained by the technical difficulty of attribution and the availability of some alternative data sources (synthetic, licensed). Suppression (0.72): Very high. Structural barriers to exit include: (1) retroactive consent is impossible for already-published work, (2) technical infeasibility of identifying which specific works influenced model outputs, (3) asymmetric legal resources (individual creators vs consolidated developers), (4) economic necessity of digital publishing (cannot opt out without abandoning professional platforms), (5) collective action problems (hard to coordinate across millions of creators globally). Theater ratio (0.64): Moderate-high. The constraint combines real functional extraction with significant performative elements. Enforcement (copyright litigation, fair use doctrine application, regulatory pressure) is structurally slow and uncertain. Meanwhile, the actual constraint (lack of attribution and consent infrastructure) is a technical problem that litigation cannot solve. The rise in theater ratio reflects increasing regulatory and legal theater without proportional increase in functional constraint on model development.",
+    "perspectival_gap": "The core gap: creators and rights holders perceive maximum Snare (trapped, powerless, global scope) while developers perceive Rope (institutional, arbitrage, immediate horizon, global scope). The same data flow (training examples \u2192 model training \u2192 model outputs) is experienced as pure extraction by powerless victims and as necessary coordination by institutional beneficiaries. The reform movement's Scaffold perspective is neither Snare nor Rope but a genuinely different structural reading: this is a temporary institutional failure with a real sunset (regulatory enforcement + technical attribution maturation = extraction mechanism collapses). The analytical observer's Mountain is a false summit: 'learning requires training data' is true, but 'learning requires untraceable, unlicensed, unconsentted training data' is a contingent choice, not a law of nature.",
+    "directionality_logic": "The constraint's extraction asymmetry is structural, not perspectival. Creators are victims + trapped \u2192 high d \u2248 0.95 \u2192 f(d) \u2248 1.42 \u2192 experienced \u03c7 very high. Developers are beneficiaries + arbitrage \u2192 low d \u2248 0.15 \u2192 f(d) \u2248 -0.01 \u2192 experienced \u03c7 near-zero or negative (they perceive the constraint as enabling, not extractive). At global scope \u03c3 = 1.2, the formula \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) produces dramatically different effective extractiveness depending on position. Creator's \u03c7 \u2248 0.58 \u00d7 1.42 \u00d7 1.2 \u2248 0.99 (Snare territory). Developer's \u03c7 \u2248 0.58 \u00d7 (-0.01) \u00d7 1.2 \u2248 -0.01 (Rope or negative). The same base extraction (0.58) yields opposite classifications from opposite positions. This is diagnostic: the constraint is a Snare viewed from below and a Rope viewed from above.",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION RESOLUTION: This constraint could misclassify as pure extraction (Snare) OR as legitimate coordination (Rope), depending on which perspective dominates. The mandatrophy is resolved by recognizing that the constraint is genuinely a Snare from victims' perspectives and a Rope from developers' perspectives \u2014 not because one is wrong, but because directionality captures real structural asymmetry. The false summit risk is in the Mountain perspective: 'learning requires training data' could naturalize the extraction as immutable law. The schema's tests catch this: the Mountain classification requires emerges_naturally = true, accessibility_collapse \u2265 0.85, resistance \u2264 0.15. But the structural data contradicts this \u2014 the constraint has high suppression (0.72) and moderate theater (0.64), indicating institutional enforcement and institutional inertia, not natural law. The engine flags this as a false summit: the naturalization fails validation. The true classification is Snare (primary) with Scaffold resolution pathway, not Mountain."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "copyright_enforcement_computational_opacity",
+      "labor_market_automation_displacement",
+      "data_licensing_infrastructure"
+    ],
+    "dual_formulation_note": "LLM training attribution is part of a constraint family: (1) Copyright enforcement against opaque neural networks (upstream piton: legal regime unable to enforce attribution); (2) Training data licensing infrastructure (structural prerequisite: how to build attribution-aware data markets); (3) Labor displacement in creative sectors (downstream snare: workers facing wage compression from model-generated outputs). The attribution constraint is the mechanism linking upstream copyright failure to downstream labor displacement. Each story has distinct epsilon: copyright enforcement as piton (high theater, low functional extraction), attribution mechanism as snare (high extraction but via institutional absence, not active coercion), labor displacement as tangled rope (mixed coordination and extraction)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

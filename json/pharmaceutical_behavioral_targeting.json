@@ -1,0 +1,231 @@
+{
+  "header": {
+    "constraint_id": "pharmaceutical_behavioral_targeting",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pharma_behav"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Pharmaceutical Behavioral Targeting and Prescription Influence",
+    "topic_domain": "healthcare/pharmaceutical_marketing",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharmaceutical_manufacturers",
+      "digital_marketing_platforms",
+      "healthcare_data_brokers"
+    ],
+    "victims": [
+      "prescribing_physicians",
+      "patient_autonomy",
+      "healthcare_cost_control"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Patient Epistemic Closure",
+      "comment": "PERSPECTIVE 1: PATIENT EPISTEMIC CLOSURE (SNARE) \u2014 Patients cannot escape pharmaceutical targeting because it operates through mechanisms they cannot detect or audit: algorithmic ad personalization, physician-directed marketing that influences prescribing decisions, and behavioral data collection integrated into healthcare delivery itself. The patient is trapped in the extraction without visibility into how their behavioral data drives treatment recommendations. Exit requires abandoning access to healthcare systems, which is not viable."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Prescribing Physician",
+      "comment": "PERSPECTIVE 2: PRESCRIBING PHYSICIAN (SNARE) \u2014 Physicians face professional targeting through continuing medical education (CME), sponsored research, speaker programs, and now algorithmic ad campaigns deployed through healthcare portals and electronic health records (EHR) systems. They experience suppression through information asymmetry: pharmaceutical companies have better data on drug efficacy and safety than many practicing physicians do. Exit is constrained (career dependence on CME, research collaboration, patient demand shaped by direct-to-consumer marketing) but not fully trapped. High experienced extraction from this perspective."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Pharmaceutical Manufacturer (Structural Beneficiary)",
+      "comment": "PERSPECTIVE 3: PHARMACEUTICAL MANUFACTURER (ROPE) \u2014 Experiences the targeting system as coordination: identifying physicians likely to prescribe, matching patients to drugs through behavioral inference, and automating the personalization of marketing. Net beneficiary with high exit optionality (can shift to different platforms, adjust strategy, leverage regulatory arbitrage across jurisdictions). The manufacturer sees the constraint as solving a market efficiency problem \u2014 connecting the right drug to the right customer. From this position, it is coordination with asymmetric information advantage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Healthcare Payer / Insurance System",
+      "comment": "PERSPECTIVE 4: HEALTHCARE PAYER (TANGLED ROPE) \u2014 Insurance companies and pharmacy benefit managers (PBMs) benefit from behavioral targeting (it helps them route patients to formulary drugs) but also bear costs (higher premiums when expensive on-patent drugs are preferentially prescribed; moral hazard from targeting unhealthy populations into high-cost treatment paths). They have some exit options (formulary tiers, prior authorization, negotiating rebates) but are locked into the behavioral data ecosystem to compete. Mixed extraction and coordination \u2014 the constraint serves both functions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Physician Advocacy Groups and Medical Associations",
+      "comment": "PERSPECTIVE 5: PHYSICIAN ADVOCACY GROUPS (TANGLED ROPE) \u2014 Medical societies and physician organizations have some agency (can establish prescribing guidelines, push for transparency in pharma relationships, lobby for regulation) but are partly captured by pharmaceutical relationships (research funding, conference sponsorship, CME underwriting). The constraint includes coordination functions (establishing medical standards) alongside extraction (being leveraged as proxies for pharma influence). Organized agents see both dimensions \u2014 they have agency but face structural asymmetry in resources and information."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Regulatory Framework (FDA / FTC Oversight)",
+      "comment": "PERSPECTIVE 6: REGULATORY OVERSIGHT (PITON) \u2014 FDA and FTC regulation of pharmaceutical marketing is substantially degraded and performative. Regulations exist (restrictions on direct-to-consumer advertising, physician relationship transparency rules like Physician Payments Sunshine Act) but enforcement is weak and the rules were written before algorithmic behavioral targeting existed. The regulatory system maintains theater (compliance documentation, transparency reporting) while the extraction mechanisms (behavioral data, EHR-integrated targeting, algorithmic CME placement) evolve beyond the framework's reach. Piton classification derives from high theater_ratio and atrophied functional capacity."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Structural View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational/global perspective, pharmaceutical behavioral targeting is a pure extraction mechanism disguised as healthcare optimization. Patients cannot opt out (healthcare is mandatory for livability). Physicians cannot opt out (professional credentialing and income depend on participating in the system). The beneficiary (pharmaceutical manufacturers) has perfect information advantage and active enforcement through data collection integrated into healthcare infrastructure itself. Analytical perspective sees the constraint as a snare with maximal suppression and no genuine coordination function \u2014 the 'efficiency' framing is false naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "behavioral_targeting_detection_gap",
+      "question": "Can patients and physicians detect and audit how their behavioral data influences prescription decisions?",
+      "resolution_mechanism": "Transparency testing: request algorithmic impact assessments from EHR vendors and pharmaceutical data brokers; track correlation between behavioral profiles and prescription recommendations; longitudinal audit of prescribing patterns before/after behavioral data access",
+      "impact": "If detection gap persists: suppression is structural and constrains both patients and physicians. If detection becomes routine: some suppression mechanism weakens and exit options improve (constrained rather than trapped). The snare classification depends on this gap.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether patients and physicians can detect algorithmic prescription influence"
+    },
+    {
+      "id": "physician_autonomy_substitution",
+      "question": "Does behavioral targeting of physicians constitute evidence-based information sharing or evidence-obscuring extraction?",
+      "resolution_mechanism": "Comparison of pharma-targeted vs non-targeted physicians: prescribing variance, outcomes, adherence to guideline-recommended drugs vs on-patent alternatives; analysis of CME content sponsored vs unsponored; pharmacovigilance data for targeting-driven prescribing errors",
+      "impact": "If targeted physicians prescribe evidence-based drugs at equivalent rates: the coordination function is real and the rope/tangled_rope classifications gain weight. If targeted physicians show systematic bias toward expensive/on-patent drugs regardless of evidence: the snare classification is confirmed and extraction dominates.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether pharmaceutical targeting drives evidence-based prescribing or evidence-obscuring extraction"
+    },
+    {
+      "id": "regulatory_capture_depth",
+      "question": "Is FDA/FTC inability to regulate behavioral targeting a resource constraint or a structural capture of regulatory agencies by pharmaceutical industry?",
+      "resolution_mechanism": "Historical analysis of regulatory rule-making timelines vs technological development; audit of FDA/FTC advisory board composition and pharmaceutical funding patterns; comparative analysis of behavioral targeting enforcement across different regulatory jurisdictions (EU vs US)",
+      "impact": "If resource constraint: piton classification is accurate (degraded but potentially remediable). If structural capture: the regulatory framework is itself a snare mechanism (apparent oversight masks actual facilitation). The constraint would extend upward to include the regulatory agency as a controlled actor.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory degradation is resource-constrained or structurally captured"
+    },
+    {
+      "id": "data_broker_intermediation_necessity",
+      "question": "Is the involvement of healthcare data brokers a necessary coordination layer or pure extractive intermediation?",
+      "resolution_mechanism": "Analysis of data flow: do data brokers enable genuine coordination between payers, providers, and patients, or merely multiply extraction points without coordination benefit? Comparison of healthcare outcomes in jurisdictions with different data broker regulations",
+      "impact": "If necessary coordination: beneficiaries may include patients (through better matched treatments) and the constraint classification shifts toward tangled rope from more perspectives. If pure intermediation: the data broker layer is pure extraction rent and suppression is higher than measured (hidden via intermediation).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether healthcare data brokers provide coordination or pure extraction"
+    },
+    {
+      "id": "direct_to_consumer_demand_generation",
+      "question": "How much of patient behavioral targeting operates through direct-to-consumer (DTC) advertising driving patient demand vs through physician targeting driving supply?",
+      "resolution_mechanism": "Decompose behavioral targeting into patient-side (DTC ads, social media targeting) and physician-side (CME, EHR-integrated ads, peer influence); measure relative extraction contribution from each pathway",
+      "impact": "If patient-side dominates: constraint involves identity_locked patient agent (patient identity/health narrative is captured by pharmaceutical framing). If physician-side dominates: constraint is primarily professional capture. The decomposition may indicate need for separate constraint stories per pathway.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative contribution of patient-side vs physician-side behavioral targeting"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.53
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Pharmaceutical behavioral targeting represents a structural extraction mechanism that operates through multiple coupled channels: algorithmic ad delivery targeting prescribing physicians, patient behavioral profiling integrated into healthcare delivery systems, and data brokerage that monetizes health information. Unlike traditional pharmaceutical marketing (sales representatives, journal advertising, sponsored conferences), behavioral targeting operates at scale through opaque algorithmic systems that patients and physicians cannot audit or exit. The constraint combines pure extraction (snare) with some coordination functions (information efficiency for payers and manufacturers) and regulatory theater (rules that existed before algorithmic systems evolved). The extractiveness has accelerated over the interval (0.35 \u2192 0.68 over 10 years) as behavioral data sources have integrated into electronic health records and advertising platforms have achieved fine-grained physician and patient profiling. The theater_ratio has also increased (0.30 \u2192 0.58) as regulatory compliance becomes more performative relative to actual oversight capacity.",
+    "key_agents": [
+      "Patients: Primary victims (powerless/trapped) \u2014 cannot detect or audit behavioral targeting; healthcare is not optional; exit requires abandoning access to care system",
+      "Prescribing Physicians: Secondary victims (moderate/constrained) \u2014 face professional targeting through CME, speaker programs, algorithmic ad placement in EHRs; career dependence constrains exit",
+      "Pharmaceutical Manufacturers: Primary beneficiaries (institutional/arbitrage) \u2014 capture marketing efficiency gains, higher prescription rates for on-patent drugs regardless of clinical evidence; high exit optionality across platforms and regulatory jurisdictions",
+      "Healthcare Payers / PBMs: Complex position (powerful/mobile) \u2014 benefit from some targeting efficiency but bear costs from preferential prescribing of expensive drugs; tangled rope from cost control vs efficiency tension",
+      "Healthcare Data Brokers: Secondary beneficiaries (institutional/arbitrage) \u2014 monetize patient and physician behavioral data; pure intermediation role",
+      "Regulatory Agencies (FDA/FTC): Institutional actors (institutional/arbitrage) \u2014 enforcement capacity degraded relative to technological evolution; piton classification from regulatory theater",
+      "Physician Advocacy Groups: Organized agents (organized/constrained) \u2014 partly captured by pharmaceutical relationships; have some agency (guidelines, lobbying) but face structural asymmetry",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees pure extraction mechanism disguised as healthcare optimization"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. Pharmaceutical manufacturers extract significant value through behavioral targeting by achieving higher prescription rates for on-patent (high-cost) drugs and by consolidating price power through demand generation and physician influence. The value extraction is not maximal (0.90+) because some targeting genuinely improves treatment matching, but the dominant function is capture of prescribing decisions independent of clinical necessity. Suppression (0.72): Very high. Patients cannot detect algorithmic influence on treatment recommendations embedded in healthcare delivery. Physicians face information asymmetry (manufacturers have better efficacy/safety data than many practitioners). Data flows are opaque \u2014 behavioral profiles are built without consent frameworks that provide real transparency. Regulatory rules (Sunshine Act, DTC advertising restrictions) create theater but do not constrain algorithmic targeting. Exit is blocked by structural dependence on healthcare systems. Theater ratio (0.58): Moderate-high and increasing. FDA/FTC oversight exists (compliance documentation, transparency reporting) but rules predate algorithmic systems and enforcement is weak. The therapy itself (behavioral targeting optimization) involves high theater \u2014 the framing as 'healthcare efficiency' masks extraction. The constraint has accelerated extraction (from 0.35 to 0.68) as data integration deepened and theater increased (from 0.30 to 0.58) as regulatory response lagged.",
+    "perspectival_gap": "Pharmaceutical manufacturers perceive rope (coordination) because from their position the system solves a real problem (matching products to customers efficiently). Physicians perceive tangled rope (mixed coordination and professional capture) because they experience both coordination benefit (better information for prescribing) and extraction (bias toward expensive drugs, career dependence on pharmaceutical relationships). Patients perceive snare (pure extraction) because they have no agency in the system and cannot audit how behavioral profiles influence treatment. The analytical observer perceives snare with high confidence because from a civilizational perspective the extraction mechanism is clear: patients are trapped in healthcare dependence, physicians are professionally captured, and the system funnels them toward high-cost medications independent of clinical evidence. The gap between beneficiary perception (rope/coordination) and victim perception (snare/extraction) is the core diagnostic of this constraint.",
+    "directionality_logic": "Each agent's experienced extractiveness chi is computed from base extractiveness (\u03b5 = 0.68), their directionality d (derived from structural position), and scope modifier (\u03c3 = 1.0 for national scope). Pharmaceutical manufacturers are beneficiaries with high exit optionality (arbitrage) \u2014 their d \u2248 0.10, giving f(d) \u2248 -0.05, so chi \u2248 -0.03 (negative extraction, they benefit). Prescribing physicians are constrained targets \u2014 their d \u2248 0.70, giving f(d) \u2248 1.00, so chi \u2248 0.68 (experience full base extraction). Patients are trapped \u2014 their d \u2248 0.95, giving f(d) \u2248 1.40, so chi \u2248 0.95 (experience amplified extraction beyond base). The snare classification depends on both high base extraction \u03b5 and high d for trapped agents producing high chi \u2014 the numerical structure enforces the snare type because suppression is high and victims are trapped.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: This constraint resolves the mandatrophy (false natural law risk) by distinguishing between coordination and extraction through structural analysis. The 'healthcare optimization' framing naturalizes pharmaceutical behavioral targeting as inevitable efficiency. But the structural data reveals contingency: the system benefits pharmaceutical manufacturers, extraction targets patients and physicians, suppression is high, and victims are trapped with no exit options. The mandatrophy is resolved by showing that the apparent coordination (efficiency) is asymmetric extraction. A true coordination mechanism would benefit all parties (rope) or explicitly trade off benefits and costs with transparent negotiation (tangled rope with agency). Here, transparency is minimal, exit is blocked, and asymmetry favors manufacturers. The snare classification is therefore correct and the natural law framing is false. The mandatrophy is further resolved by the regulatory piton perspective \u2014 rules exist (theater) but do not constrain the mechanism, indicating that the 'oversight solves the problem' narrative is also false. The constraint requires structural change, not just regulatory tinkering."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "drug_pricing_monopoly",
+      "direct_to_consumer_pharmaceutical_advertising",
+      "physician_professional_capture"
+    ],
+    "dual_formulation_note": "Pharmaceutical behavioral targeting decomposes into patient-side (DTC advertising, social media targeting, health data profiling) and physician-side (CME targeting, EHR-integrated ads, professional relationship capture) constraints. This story addresses the integrated system; decomposition into separate stories may be warranted if the two pathways show significantly different \u03b5 values."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ]
+}

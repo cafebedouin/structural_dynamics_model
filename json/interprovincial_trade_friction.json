@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "interprovincial_trade_friction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "iptf"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Interprovincial Trade Friction and Non-Tariff Barriers",
+    "topic_domain": "economic/political/regulatory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_provincial_producers",
+      "provincial_regulatory_agencies"
+    ],
+    "victims": [
+      "interprovincial_commerce",
+      "consumer_access",
+      "competing_provincial_producers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Out-of-Province Producer",
+      "comment": "PERSPECTIVE 1: OUT-OF-PROVINCE PRODUCER (SNARE) \u2014 Faces cumulative regulatory and certification barriers that make market entry prohibitively expensive. Cannot exit or arbitrage; must accept local producer protection as immutable constraint. Bears full extraction cost through market exclusion."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Interprovincial Consumer",
+      "comment": "PERSPECTIVE 2: INTERPROVINCIAL CONSUMER (TANGLED ROPE) \u2014 Experiences both coordination and extraction. Coordination: provincial regulations establish baseline safety/quality standards that benefit all consumers. Extraction: non-tariff barriers limit choice and raise prices relative to single-market alternatives. Exit is costly but possible (move provinces, substitute goods)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Incumbent Provincial Producer",
+      "comment": "PERSPECTIVE 3: INCUMBENT PROVINCIAL PRODUCER (ROPE) \u2014 Primary beneficiary. Experiences the constraint as coordination: fragmented markets require local adaptation, supply-chain development, and regulatory alignment \u2014 genuine coordination value. Net benefits through reduced competition outweigh coordination costs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Provincial Regulatory Agency",
+      "comment": "PERSPECTIVE 4: PROVINCIAL REGULATORY AGENCY (TANGLED ROPE) \u2014 Organized institutional actor. Genuine coordination function: protecting public health, ensuring product safety, maintaining local environmental standards. Extraction function: protecting constituent producers from interprovincial competition through certification delays, proprietary testing requirements, origin labeling mandates. Both functions are real and active."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Interprovincial Trade Commission",
+      "comment": "PERSPECTIVE 5: INTERPROVINCIAL TRADE COMMISSION (PITON) \u2014 Formal dispute-resolution body for trade friction exists with established protocols and arbitration rules. Theater ratio high: commission reviews complaints, issues rulings, provinces nominally comply, barriers persist. Functional authority has degraded \u2014 provinces find workarounds (tighter local standards, extended certification periods) that technically comply with rulings while maintaining barriers. Theater_ratio reflects ritualized compliance."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law Frame)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW FRAME (MOUNTAIN) \u2014 From a civilizational perspective, some regulatory fragmentation is inherent to federal systems: provinces have constitutional authority over trade within their borders, and safety/environmental standards legitimately vary by local conditions. This perspective naturalizes trade friction as an unavoidable feature of federalism. However, the structural data reveals this as a false summit \u2014 the extraction mechanisms (strategic regulatory tightening, certification delays) are contingent institutional choices, not constitutional necessities."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "regulatory_legitimacy_vs_protectionism",
+      "question": "What proportion of provincial non-tariff barriers reflects genuine regulatory diversity vs deliberate protectionist design?",
+      "resolution_mechanism": "Comparative analysis: regulatory stringency in provinces with competitive local producers vs provinces without; correlation between regulatory tightness and import volume; testimony from regulatory agencies about barrier intent",
+      "impact": "If majority is genuine diversity: constraint moves toward Rope (coordination). If majority is strategic: constraint remains Tangled Rope or Snare depending on implementation cost.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of regulatory barriers that are protectionist vs legitimately diverse"
+    },
+    {
+      "id": "certification_cost_structure",
+      "question": "Are certification and testing cost barriers imposed equally on interprovincial and interprovincial producers, or are out-of-province producers systematically charged higher rates or required to repeat already-completed tests?",
+      "resolution_mechanism": "Cost audit: compare certification fees and duplication burden for producers at different interstate positions; interview regulatory agencies about cost allocation methodology",
+      "impact": "If equal treatment: barriers are legitimate coordination costs. If discriminatory: barriers constitute direct extraction mechanism.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether certification costs are applied equally or discriminatorily"
+    },
+    {
+      "id": "constitutional_trade_mandate_enforceability",
+      "question": "Does the constitutional framework (e.g., Canadian Charter of Rights and Freedoms Section 6, mobility of goods clauses) create an enforceable ceiling on provincial trade restrictions, or is enforcement so weak that the ceiling functions only symbolically?",
+      "resolution_mechanism": "Legal analysis of rulings and compliance rates; comparison of trade commission rulings vs actual barrier persistence; estimation of enforcement cost relative to barrier benefit",
+      "impact": "If enforceable: mountain classification is false (constitutional mandate overrides local interest). If unenforced: provinces face no meaningful constraint (snare persists). If partially enforced: tangled rope holds.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Enforceability of constitutional trade mandates"
+    },
+    {
+      "id": "consumer_awareness_feedback",
+      "question": "Do consumers recognize interprovincial trade barriers as deliberate protectionism, or do they interpret price and choice differences as natural market variation or quality differences?",
+      "resolution_mechanism": "Consumer survey and focus groups in provinces with significant trade barriers; measurement of brand recognition and price sensitivity for interprovincial vs domestic alternatives; analysis of consumer complaint patterns",
+      "impact": "If recognized: political pressure for barrier reduction likely. If unrecognized: constraint persists through invisibility (theater mask sustains extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether consumers perceive trade barriers as deliberate protectionism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Interprovincial trade friction in federalist systems (Canada, Australia, USA) emerges from the structural tension between provincial constitutional authority over local commerce and the federal mandate for internal market integration. Provinces deploy non-tariff barriers \u2014 certification requirements, origin labeling, health/safety standards, procurement preferences \u2014 ostensibly to protect consumers and local environments, but functionally to protect incumbent producers from out-of-province competition. The constraint exhibits genuine coordination elements (safety standards, environmental protection) layered with extraction elements (protectionist intent, competitive barrier). It is not pure protectionism masquerading as safety regulation, nor pure safety regulation that happens to have protectionist effects. Both functions are active and intentional. The extractiveness has risen from 0.38 to 0.52 over two decades as provinces have become more sophisticated in barrier design \u2014 moving from explicit tariffs (which are prohibited) to regulatory complexity that achieves the same effect through higher compliance costs. Theater ratio has risen from 0.42 to 0.55 as dispute-resolution mechanisms (trade commissions, inter-governmental negotiation) have formalized without reducing barriers, creating the appearance of accountability without the substance.",
+    "key_agents": [
+      "Out-of-Province Producers: Structurally trapped victims (powerless/trapped) \u2014 face cumulative regulatory barriers that make market entry prohibitively expensive; no exit option; bear full extraction cost through market exclusion",
+      "Interprovincial Consumers: Moderate agents (moderate/constrained) \u2014 benefit from genuine safety/quality standards but pay higher prices and face reduced choice; exit possible but costly (move provinces, substitute goods)",
+      "Incumbent Provincial Producers: Primary beneficiaries (institutional/arbitrage) \u2014 experience constraints as legitimate coordination necessary for local market function; net gain through reduced competition",
+      "Provincial Regulatory Agencies: Organized institutional actors (organized/constrained) \u2014 maintain genuine safety/environmental functions while executing protectionist intent through regulatory design; have both coordination and extraction authority",
+      "Interprovincial Trade Commission: Institutional arbiter (institutional/arbitrage) \u2014 maintains formal dispute-resolution role that has become increasingly performative; rulings issued but barriers persist through regulatory workarounds",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing federalism's regulatory fragmentation as immutable constitutional feature, obscuring deliberate protectionist design"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, with upward trend. Base value 0.38 at t=0 reflects that barriers existed but were less sophisticated (explicit tariffs, transparent quotas). Modern barriers are predominantly regulatory complexity: multi-stage certification for out-of-province products, origin-of-materials verification, duplication of testing already completed in origin province. Extractiveness rises as provinces become more sophisticated in concealing protectionism behind legitimate regulatory intent. Trend from 0.38 to 0.52 shows accumulation of barriers over time, reflecting both growing protectionist intent and institutional learning about regulatory design. Suppression (0.48): Moderate. Out-of-province producers face high barriers but not absolute prohibition \u2014 some cross-border trade occurs, though constrained. Exit options exist but are costly (relocating to target province, abandoning product line, paying for duplicate certifications). Suppression reflects the cost structure of the barriers rather than their absoluteness. Theater ratio (0.55): Moderate-high. Interprovincial Trade Commission exists, holds hearings, issues rulings that provinces ostensibly comply with. But compliance is nominal \u2014 provinces find regulatory workarounds that technically comply while maintaining barriers. Theater has risen as formal dispute mechanisms have proliferated without reducing actual barriers, creating an appearance of accountability. The theater is not performative ritual with zero function (piton-level) but rather formalized process that generates compliance theater while permitting continued extraction.",
+    "perspectival_gap": "The fundamental gap is between incumbent producers' rope perception and out-of-province producers' snare perception. Both are structurally justified: the incumbent genuinely experiences coordination value from regulatory fragmentation, while the competitor genuinely experiences systematic extraction. The gap reveals that the constraint's function depends entirely on observer position. The regulatory agency's tangled_rope classification is the institution's native view \u2014 they execute both coordination (safety) and extraction (protection) simultaneously and intentionally. The trade commission's piton classification reveals the institutional decay: dispute mechanisms have become performative theater while barriers persist. The mountain classification from the analytical observer is a false summit: federalism's structural decentralization is claimed as natural law, concealing the active protectionist regulatory design that accumulates over time.",
+    "directionality_logic": "Directionality values derive from structural position relative to extraction flow. Out-of-province producers are victims with trapped exit (d \u2248 0.95) \u2014 maximum extraction. Incumbent producers are beneficiaries with arbitrage exit (d \u2248 0.15) \u2014 negative extraction. Regulatory agencies occupy the complex middle: they are both beneficiaries (protected constituency) and constraint-enforcing institutions (d \u2248 0.40-0.50). Interprovincial consumers are trapped between beneficiary position (safety standards) and victim position (reduced choice/higher prices), creating d \u2248 0.50 (symmetric). The analytical observer at civilizational scope occupies the canonical d \u2248 0.72 for analytical position, derived from the false summit tendency (inability to see that naturalized federalism conceals active protectionist choices).",
+    "mandatrophy_analysis": "The mandatrophy is resolved through the institutional decomposition: the constraint contains genuine coordination (safety, environmental standards) plus genuine extraction (protectionist barriers). It is not 'is this a coordination mechanism?' but 'at what cost does the coordination function operate, and who bears that cost?' The incumbent producer's rope perspective reflects the coordination value they genuinely experience. The competitor's snare perspective reflects the extraction they genuinely experience. The regulatory agency's tangled_rope perspective reflects the dual function they intentionally execute. The consumer's tangled_rope perspective reflects the genuine safety benefit plus genuine cost (reduced choice/higher prices). The trade commission's piton perspective reveals institutional decay \u2014 the dispute mechanism has become theater as provinces learn to maintain barriers while technically complying with rulings. The analytical observer's mountain is a false summit: naturalizing federalism as constitutional necessity obscures the active protectionist regulatory design that accumulates barriers over time. Mandatrophy is resolved: this is genuinely a tangled rope with strong piton elements and a false summit naturalizing it as constitutional inevitability."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture_provincial_agencies",
+      "supply_chain_fragmentation_domestic"
+    ],
+    "dual_formulation_note": "Interprovincial trade friction is distinct from pure regulatory capture (which would focus on agency-industry alignment) and supply-chain fragmentation (which would focus on logistics complexity). This story focuses on the structural tension between constitutional decentralization and market integration, where regulatory authority is used to maintain market fragmentation. Upstream stories would address specific barrier mechanisms (certification requirements, labeling mandates); downstream stories would address economic consequences (price differentials, innovation drag)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "academic_journal_peer_review_gatekeeping",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ajprg"
+  },
+  "base_properties": {
+    "extractiveness": 0.54,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Academic Journal Peer Review Gatekeeping",
+    "topic_domain": "academic_publishing/institutional_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "established_research_groups",
+      "journal_editors",
+      "major_publishers"
+    ],
+    "victims": [
+      "early_career_researchers",
+      "outsider_researchers",
+      "research_quality_epistemic_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Early-Career Researcher",
+      "comment": "PERSPECTIVE 1: EARLY-CAREER RESEARCHER (SNARE) \u2014 Career advancement is locked behind journal publication in top venues. No viable exit: preprints do not count for tenure, metrics are entirely journal-dependent, and rejection cycles consume years. Trapped by institutional requirements, bears maximum cost of gatekeeping delays and desk rejections. Experiences pure extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "label": "The Outsider Researcher",
+      "comment": "PERSPECTIVE 2: OUTSIDER RESEARCHER (SNARE) \u2014 Structurally mobile (could publish in lower-tier journals or preprints) but identity-locked into aspirational affiliation with top-tier venues. The researcher's identity is constituted through the pursuit of prestige publication \u2014 the constraint is binding because it has been internalized as what legitimate research requires. Exit from top-tier pursuit would require abandoning professional identity as a 'serious researcher.' Bears extraction through delayed publication, higher rejection rates, and citation disadvantage from non-prestigious venues."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Field's Research Community",
+      "comment": "PERSPECTIVE 3: FIELD'S RESEARCH COMMUNITY (TANGLED ROPE) \u2014 Genuinely coordinates through peer review (error-checking, quality filtering, priority establishment). Also extracts: gatekeeping delays research dissemination, creates citation advantage for established groups, and suppresses methodological heterodoxy. Communities at major universities have constrained exit (can publish elsewhere at career cost); resource-poor communities face higher barriers. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Established Research Group",
+      "comment": "PERSPECTIVE 4: ESTABLISHED RESEARCH GROUP (ROPE) \u2014 Experiences the constraint as pure coordination. Top venues are calibrated to their standards; their graduate students have networks with editors; their grants support publication costs; rejection rates are low. They can arbitrage: maintain high-prestige publication while also publishing in specialized venues. Net beneficiary \u2014 gatekeeping advantage runs in their direction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Major Publisher",
+      "comment": "PERSPECTIVE 5: MAJOR PUBLISHER (ROPE) \u2014 Gatekeeping sustains their market position and subscription revenue. Experiences the constraint as pure coordination: peer review maintains journal prestige, prestige attracts submissions, submissions generate content that justifies subscription fees. No exit needed \u2014 the mechanism benefits them directly. Zero experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Open Science Movement",
+      "comment": "PERSPECTIVE 6: OPEN SCIENCE MOVEMENT (TANGLED ROPE) \u2014 Organized alternative (preprints, overlay journals, open peer review) with mobile exit: researchers can publish via arXiv or decentralized platforms. The movement experiences genuine coordination (distributed peer review) alongside extraction by traditional journals through citation disadvantage and institutional non-recognition. Sees a pathway forward but faces institutional suppression (universities don't count preprints toward tenure). Moderate organized power with mobile exit produces tangled rope classification."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Peer Review Institution Itself",
+      "comment": "PERSPECTIVE 7: PEER REVIEW INSTITUTION (PITON) \u2014 The double-blind review ritual is largely performative. Reviewers are notoriously biased by author reputation, institutional affiliation, and novelty aversion. The anonymity is frequently pierced. The review timeline is theater \u2014 decisions often reflect gut reactions, not careful evaluation. The institution persists through inertia: it is the established way things are done, and alternatives have not fully replaced it. High theater ratio (0.68) reflects this performative maintenance."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some quality filtering is inherent to scientific communication: not all claims can be published; not all voices carry equal weight; legitimacy requires consensus-building. This perspective naturalizes the gatekeeping system as a law of knowledge production. However, structural data contradicts the mountain gate \u2014 the constraint exhibits active enforcement, clear beneficiaries and victims, and suppression above 0.05. The analytical observer risks false summitry: naturalizing a contingent institutional arrangement as an immutable feature of knowledge itself."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_vs_extraction_boundary",
+      "question": "How much of peer review's extraction is necessary cost of coordination versus unnecessary gatekeeping extraction?",
+      "resolution_mechanism": "Comparative analysis of pre-publication dissemination timelines across disciplines with different review cultures; citation impact correlation with review rigor metrics; researcher survey data on whether review quality justifies delays",
+      "impact": "If coordination cost is 60%+ of observed extraction: classification shifts toward Rope for more perspectives. If coordination cost is <30%: classification shifts toward Snare for more perspectives, revealing pure gatekeeping.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of peer review delay that reflects necessary quality control versus unnecessary gatekeeping"
+    },
+    {
+      "id": "prestige_signal_functionality",
+      "question": "Does journal tier actually predict research quality and impact, or is prestige self-perpetuating through citation bias and institutional affiliation loops?",
+      "resolution_mechanism": "Longitudinal citation analysis controlling for author reputation and institutional affiliation; comparison of citation trajectories for identical research published in high vs low-prestige venues; measurement of prestige decay when same author publishes in non-prestigious venues",
+      "impact": "If prestige predicts quality: peer review gatekeeping serves genuine coordination function (more Rope classifications). If prestige is self-perpetuating: gatekeeping is pure extraction mechanism (more Snare classifications). If mixed: Tangled Rope persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether journal prestige correlates with research quality or represents self-perpetuating bias"
+    },
+    {
+      "id": "identity_lock_mechanism_specificity",
+      "question": "For outsider researchers using identity_locked exit option: is the identity lock primarily internalized prestige aspiration, career ecosystem requirement, or epistemic framework capture?",
+      "resolution_mechanism": "Qualitative research on researcher decision-making around publication venue; correlation between cultural/institutional prestige messaging and individual publication strategy choices; analysis of researchers who have successfully broken identity lock and the triggers for reframing",
+      "impact": "If primarily aspirational internalization: identity_locked classification is correct, and reframing intervention could shift exit_options to mobile. If primarily career ecosystem requirement: trapped classification is more accurate, and exit requires systemic change. If epistemic capture: constraint persists even after institutional barriers fall.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Mechanism binding outsider researchers to prestige publication through identity rather than external barriers"
+    },
+    {
+      "id": "alternative_verification_sufficiency",
+      "question": "Do alternative peer review models (arXiv overlay journals, decentralized peer review, post-publication open commentary) achieve equivalent or superior error-detection compared to traditional journals?",
+      "resolution_mechanism": "Comparison of retraction/correction rates between traditional journals and overlay journals for equivalent papers; measurement of quality assessment accuracy in decentralized vs centralized review; user surveys on trust and citation behavior",
+      "impact": "If alternatives are equivalent or superior: open science exit is genuine, and the Scaffold perspective's sunset is real. If alternatives show systematic quality deficits: traditional gatekeeping retains functional justification (Rope shifts upward in strength).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative peer review systems provide equivalent quality filtering to traditional journals"
+    },
+    {
+      "id": "early_career_career_path_malleability",
+      "question": "Can early-career researchers successfully exit traditional journal gatekeeping (pursue alternative venues, preprints, non-academic careers) without sacrificing long-term career prospects?",
+      "resolution_mechanism": "Longitudinal career tracking of researchers who publish primarily in non-prestige venues or preprints; measurement of tenure/hiring success rates; analysis of salary and prestige outcomes after 5-10 years",
+      "impact": "If exit is genuinely possible without cost: early-career researchers are constrained, not trapped (shift to constrained exit_options, reduce Snare pressure). If exit consistently carries career penalty: trapped classification is accurate, and suppression remains high.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether early-career researchers can exit traditional publishing without career penalty"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.54
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Academic journal peer review gatekeeping is a constraint that coordinates quality assurance for scientific publishing while simultaneously extracting career advantages for established researchers and institutional prestige benefits for major publishers. The system exhibits all markers of Tangled Rope: genuine coordination (error-checking, priority establishment, quality filtering) is mixed with asymmetric extraction (publication delays, suppression of outsider voices, citation advantage for established groups). The constraint's extractiveness has increased over 40 years (0.38 \u2192 0.54) as journal prestige has become more concentrated, university rankings have become more dependent on publication metrics, and early-career researchers face increasing publication pressure for career advancement. Theater ratio has similarly increased (0.48 \u2192 0.68) as the performative aspects of peer review (reviewer bias, anonymity that is easily pierced, desk rejections based on perceived fit) have become more visible, while the coordination function remains justified. The constraint demonstrates how indexical classification reveals the same structural system from eight distinct observational positions: as pure extraction (snare) from powerless perspectives, as pure coordination (rope) from beneficiary perspectives, as mixed (tangled rope) from moderate community and organized alternative perspectives, as performative ritual (piton) from the institution's own view, and as a false natural law (mountain from analytical) that risks naturalizing contingent institutional arrangements.",
+    "key_agents": [
+      "Early-Career Researchers: Primary victims (powerless/trapped) \u2014 career advancement locked behind journal publication; no viable exit; bear maximum cost of gatekeeping delays and desk rejections",
+      "Outsider Researchers: Secondary victims (powerless/identity_locked) \u2014 structurally mobile but identity-fused with prestige publication; cannot exercise exit because their identity is constituted through pursuit of top-tier venue publication",
+      "Research Community (Field-Level): Mixed beneficiary-victim (moderate/constrained) \u2014 genuinely benefits from peer review coordination but also constrained by gatekeeping extraction; cannot fully exit without career cost",
+      "Established Research Groups: Primary beneficiaries (institutional/arbitrage) \u2014 gatekeeping advantage runs in their direction; can arbitrage multiple publication venues; low rejection rates; network access to editors",
+      "Major Publishers: Primary beneficiaries (institutional/arbitrage) \u2014 gatekeeping sustains market position, prestige, subscription revenue; experiences constraint as pure coordination",
+      "Open Science Movement: Organized alternative agents (organized/mobile) \u2014 building alternative verification pathways (preprints, overlay journals, open peer review); mobile exit available but faces institutional suppression",
+      "Peer Review Institution: Performative actor (institutional/arbitrage) \u2014 maintains itself through inertia; recognizes own degradation (piton); alternatives have not fully replaced traditional review",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks false summitry by naturalizing gatekeeping as immutable feature of knowledge production rather than contingent institutional arrangement"
+    ],
+    "logic_rationale": "Extractiveness (0.54): Moderate-high. The constraint extracts career advantages for established researchers during the 2-7 year publication-to-career-credit pipeline, and extract prestige/revenue for major publishers. However, extractiveness is not as extreme as a pure snare (0.66+) because genuine coordination occurs \u2014 peer review catches errors, establishes priority, and filters quality. The value reflects that the system does coordinate while also gatekeeping. Suppression (0.65): High. Early-career researchers face significant barriers: publication timelines of 1-3 years per cycle, career penalties for non-prestige venues, metrics that devalue preprints and open review, funding that privileges high-impact publication history, and institutional prestige that depends on high-tier journal publication. Outsider researchers face additional suppression through desk rejections, reviewer bias against non-mainstream approaches, and citation disadvantage. Theater ratio (0.68): High. Peer review contains substantial performative elements: double-blind anonymity is frequently pierced; reviewer assessments are notoriously biased by author reputation, institutional affiliation, and intuition about novelty; desk rejections are based on editorial fit rather than careful review; reviewer turnaround reflects availability rather than quality assessment. The performative content has increased as review workload has increased and reviewer compensation has remained zero. Measurements show both theater_ratio and base_extractiveness increasing over 40 years, indicating Goodhart drift \u2014 prestige metrics have become more dominant, creating incentive for performative gatekeeping rather than functional quality control.",
+    "perspectival_gap": "This constraint demonstrates maximal perspectival divergence across the six classification types. Early-career researchers (powerless/trapped) experience it as a Snare \u2014 pure extraction with no coordination benefit they can access before their career commitment window closes. Outsider researchers (powerless/identity_locked) also experience Snare, but the binding mechanism is internal identity fusion rather than external barriers \u2014 this distinction is diagnostically crucial because it identifies where reframing intervention could shift exit options. The established research group (institutional/arbitrage) experiences it as Rope \u2014 they are solving the genuine problem of validating research through peer scrutiny, and gatekeeping advantage accrues in their direction. The field-level community (moderate/constrained) experiences it as Tangled Rope \u2014 the constraint both coordinates (necessary quality filtering) and extracts (gatekeeping delay and prestige advantage). The open science movement (organized/mobile) also experiences Tangled Rope but with greater agency and a visible exit pathway. The peer review institution itself (institutional/arbitrage) experiences it as Piton \u2014 recognizing that the review ritual is largely performative but unable to fully exit because alternatives have not completely replaced it. The civilizational analytical observer (analytical/analytical) risks Mountain classification \u2014 naturalizing gatekeeping as an immutable law of knowledge production \u2014 but the structural data (active enforcement, beneficiaries, victims, suppression, increasing extractiveness) contradicts the mountain gate and reveals this as a false summit.",
+    "directionality_logic": "Directionality (d) is computed from each agent's structural position relative to the constraint. Early-career researchers are victims without exit options (trapped) \u2192 high d \u2192 high f(d) \u2192 high experienced extractiveness (\u03c7). Outsider researchers are victims but with structural mobility that is blocked by identity lock (identity_locked exit) \u2192 derived d \u2248 0.89 (between trapped and constrained, reflecting that structural exit exists but identity frame prevents exercising it) \u2192 high f(d) \u2248 1.28 \u2192 high \u03c7. Established researchers are beneficiaries with arbitrage options \u2192 low d \u2248 0.05-0.15 \u2192 negative/near-zero f(d) \u2248 -0.12 to 0.00 \u2192 negative or minimal \u03c7 (they experience the constraint as net positive). Publishers are beneficiaries with arbitrage (can adjust journal portfolios, subscription models) \u2192 low d \u2192 negative f(d) \u2192 negative \u03c7. The field community with constrained exit and mixed beneficiary/victim status \u2192 moderate d \u2248 0.50-0.55 \u2192 moderate f(d) \u2248 0.65-0.75 \u2192 moderate \u03c7. The open science movement with mobile exit \u2192 higher d (they can exit the traditional system but face institutional suppression) \u2248 0.55 \u2192 moderate-high f(d) \u2248 0.75 \u2192 moderate \u03c7 reflecting both their agency and institutional resistance. The directionality chain produces the perspectival gap: same constraint, same \u03b5 (0.54), but radically different experienced \u03c7 based on position (d) and time horizon.",
+    "mandatrophy_analysis": "Mandatrophy resolution: This constraint resolves the false choice between 'coordination' and 'extraction' by showing that both mechanisms are simultaneously present and structurally independent. The coordination function (peer review catches errors, filters quality, establishes priority) is real and significant. The extraction function (gatekeeping delays publication, suppresses outsider voices, advantages prestige-network members) is also real and significant. Tangled Rope is precisely the category for constraints where both functions coexist and neither is reducible to the other. The extractiveness (0.54) is partially explained by the extraction mechanism (victim-side delay, network advantage) and partially by the coordination function's implementation cost (reviewer time, editorial overhead, revision cycles). The theater ratio (0.68) reveals that much of the formal gatekeeping apparatus is performative rather than functional \u2014 the coordination is real, but the mechanism by which it is performed has become decoupled from its function. Mandatrophy is NOT resolved here by claiming 'it's really just coordination' (false Rope classification) or 'it's really just extraction' (false Snare classification). Rather, it is resolved by recognizing that Tangled Rope is the structural reality: a genuine coordination mechanism that has accumulated extractive overlay and performative theater, creating a hybrid that does coordinate but at high cost. The measurement trajectory (extractiveness 0.38 \u2192 0.54, theater 0.48 \u2192 0.68) shows Goodhart drift: as prestige metrics have become more central to institutional evaluation, the extraction and performance components have grown while the coordination component has remained relatively constant. This is the signature of a Tangled Rope degrading toward Snare \u2014 the constraint is accumulating extraction without losing its coordination function, making it a prime candidate for structural reform (unbundle coordination from extraction through alternative peer review models) rather than abandonment."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "research_funding_prestige_concentration",
+      "university_ranking_metric_gaming",
+      "early_career_researcher_precarity"
+    ],
+    "dual_formulation_note": "Academic journal gatekeeping can be decomposed into two structurally distinct constraints: (1) quality_filtering_coordination (\u03b5\u22480.15, pure Rope) \u2014 the genuine error-checking and priority-establishment function of peer review; and (2) prestige_extraction_mechanism (\u03b5\u22480.58, pure Snare) \u2014 the gatekeeping delay and citation-advantage extraction that has accumulated over 40 years. The unified 'peer review gatekeeping' story (\u03b5=0.54) represents the empirically observable mixed constraint. Decomposition would require separate stories for pure coordination vs pure extraction, each with different measurement trajectories. The current story models them as an integrated Tangled Rope rather than decomposing, because they operate through the same institutional apparatus (the journal review system) and cannot be cleanly separated without institutional reform."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.72
+    }
+  ]
+}

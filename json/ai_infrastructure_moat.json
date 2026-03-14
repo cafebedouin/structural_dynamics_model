@@ -1,0 +1,237 @@
+{
+  "header": {
+    "constraint_id": "ai_infrastructure_moat",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ai_moat"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.38,
+    "claimed_type": "snare",
+    "human_readable": "AI Infrastructure Moat: Capital Concentration and Competitive Lock-In",
+    "topic_domain": "technology/economics/governance",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "large_ai_developers",
+      "semiconductor_manufacturers",
+      "cloud_infrastructure_providers"
+    ],
+    "victims": [
+      "smaller_ai_companies",
+      "academic_researchers",
+      "developing_nation_ai_development",
+      "open_source_ecosystem",
+      "market_competition"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Excluded Competitor",
+      "comment": "PERSPECTIVE 1: EXCLUDED COMPETITOR (SNARE) \u2014 Startups and smaller AI companies face insurmountable capital barriers (>$1B for competitive training infrastructure). No exit option exists; cannot enter the market without access to the very infrastructure controlled by incumbents. Full extraction with no alternatives."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Academic Researcher",
+      "comment": "PERSPECTIVE 2: ACADEMIC RESEARCHER (SNARE) \u2014 Must negotiate API access, face rate limits, pricing barriers, and proprietary model constraints. Cannot build independent computational capacity. High exit costs (years of retraining, loss of established work) create effective lock-in despite theoretical mobility."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Large AI Developer",
+      "comment": "PERSPECTIVE 3: LARGE AI DEVELOPER (SNARE) \u2014 Appears to have arbitrage (could theoretically build own infrastructure) but faces structural lock-in: proprietary compute architectures, supply chain control, and network effects create insurmountable switching costs. This perspective reveals the snare operates even at the powerful level through infrastructure coupling."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Coalition of Open-Source Projects",
+      "comment": "PERSPECTIVE 4: OPEN-SOURCE COALITION (SNARE) \u2014 Organized but systematically disadvantaged. Model weights locked behind proprietary licensing, compute hardware controlled by commercial vendors, training data access restricted. Organization provides no exit path \u2014 collective action cannot overcome structural resource barriers."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Developing Nation AI Initiatives",
+      "comment": "PERSPECTIVE 5: DEVELOPING NATION AI INITIATIVES (SNARE) \u2014 Geopolitical barriers compound infrastructure barriers. Cannot access cutting-edge chips (export controls), cannot afford training costs (economic dependency), cannot build independent ecosystems (network effects favor incumbents). Structured exclusion from competitive participation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent AI Platform",
+      "comment": "PERSPECTIVE 6: INCUMBENT AI PLATFORM (ROPE) \u2014 Experiences infrastructure as enabling coordination: APIs enable ecosystem development, standardized interfaces reduce fragmentation, integrated stacks solve real multi-party coordination problems. Extraction flows toward the incumbent through network lock-in and switching costs, but genuine coordination functions exist."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Government Regulatory Bodies",
+      "comment": "PERSPECTIVE 7: REGULATORY BODIES (PITON) \u2014 Institutions designed to prevent monopolistic gatekeeping (antitrust authorities, competition regulators) are largely performative regarding AI infrastructure. Hearings and statements lack enforcement capacity or meaningful remedies. Theater ratio high because the regulatory mechanisms persist despite ineffectiveness."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (TANGLED_ROPE) \u2014 From civilizational scope, infrastructure moat exhibits genuine coordination (standardization, reliability, ecosystem development) alongside asymmetric extraction (concentrated rents, barrier to entry, ecosystem control). The constraint is not pure extraction but hybrid: coordination without which modern AI systems cannot operate, extraction through market power enforcement. Classification accounts for chi formula scaling by scope and power."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "natural_capital_concentration",
+      "question": "Is the infrastructure moat an inevitable consequence of physical/economic laws (declining marginal cost of scale, network effects, R&D capital intensity) or a contingent institutional choice (IP protection regime, procurement policies, export controls)?",
+      "resolution_mechanism": "Comparative analysis of alternative governance structures: public compute utilities, open-source foundation-governed infrastructure, international AI research commons. Empirical evidence that alternative models can sustain competitive capability.",
+      "impact": "If inevitable (natural): classification remains Snare \u2014 no policy intervention can change structural extraction. If contingent (institutional): classification changes to Tangled Rope under policy intervention scenarios \u2014 extraction could be decoupled from coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether infrastructure concentration is natural law or institutional choice"
+    },
+    {
+      "id": "capability_floor_requirement",
+      "question": "What minimum infrastructure scale is genuinely necessary for competitive AI capability development? Is the $1B+ barrier economically justified or artificially enforced?",
+      "resolution_mechanism": "Analysis of successful smaller-scale deployments: TinyML, federated learning, efficient model architectures. Historical precedent from other computing paradigms (cloud infrastructure consolidation, GPU markets). Cost analysis of minimum viable training runs.",
+      "impact": "If floor is $500M+: barrier reflects genuine economic constraint, extraction is unavoidable, policy can only manage redistribution. If floor is $100M or lower: current barriers are rent-seeking overhead, moat is artificial, alternatives exist.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Minimum capital requirement for competitive AI capability"
+    },
+    {
+      "id": "geopolitical_fragmentation_risk",
+      "question": "Does the AI infrastructure moat increase or decrease risk of geopolitical fragmentation into incompatible AI ecosystems (US/China/EU)?",
+      "resolution_mechanism": "Monitoring of alternative large-language model architectures, training data silos, compute hardware divergence. Analysis of whether monopolistic incumbents or fragmented competition produces compatibility layers.",
+      "impact": "If moat reduces fragmentation risk (incumbents maintain interoperability): extraction is the cost of global coordination. If moat increases risk (lock-in forces regional isolation): extraction compounds geopolitical harm.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Impact of infrastructure moat on geopolitical fragmentation"
+    },
+    {
+      "id": "open_source_viability_threshold",
+      "question": "Can open-source AI development maintain competitive parity with closed proprietary systems if infrastructure barriers are removed? Or does the moat reflect fundamental advantages (data access, compute efficiency optimization, real-world feedback loops)?",
+      "resolution_mechanism": "Longitudinal tracking of open-source model capabilities vs proprietary systems controlling for: (a) compute budget differences, (b) training data quality/quantity, (c) engineering optimization investment. Hypothesis test whether capability gaps are hardware-driven or algorithmic.",
+      "impact": "If open-source can compete with equal resources: moat is rent-extraction, not quality advantage. If open-source systematically lags: moat reflects real technical superiority, extraction is payment for capability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether open-source AI can achieve parity with equal resources"
+    },
+    {
+      "id": "suppression_mechanism_durability",
+      "question": "Is the high suppression (0.72) primarily structural (genuinely difficult to overcome barriers) or internalized (market participants believe barriers are insurmountable when alternatives exist)?",
+      "resolution_mechanism": "Post-intervention analysis: if policy reduces capital requirements (public compute funding, export control relaxation) or technology breakthrough (more efficient training), do excluded agents actually enter market? Or does suppression persist due to internalized belief that moat is unbreakable?",
+      "impact": "If structural: suppression remains even after barriers are theoretically removed \u2014 policy interventions must include psychological reframing. If internalized: suppression drops rapidly once barriers are actually removed.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized belief"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "The AI infrastructure moat represents a structural barrier to competitive entry in advanced AI capability development. Large-scale GPU clusters, specialized semiconductors, proprietary training pipelines, and accumulated model weights create cumulative advantages that prevent new market entrants, smaller companies, academic researchers, and developing nations from achieving competitive capability parity. The constraint operates through both material barriers (capital requirements exceeding $1B, semiconductor supply controlled by few vendors) and structural suppression (network effects, data exclusivity, proprietary formats). The moat has intensified over the 2020-2026 interval as training compute requirements have doubled roughly every 18-24 months (Chinchilla scaling laws), pushing capital barriers higher and increasing consolidation. Unlike previous computing infrastructure monopolies (mainframes, cloud computing), the AI infrastructure moat exhibits qualitatively higher switching costs because the trained model weights, fine-tuned systems, and proprietary datasets are not interoperable. An organization switching between OpenAI, Google, and Anthropic loses all accumulated investment in model-specific optimization. This non-interoperability is partly economic (different optimization targets) and partly enforced through licensing restrictions. The constraint exhibits characteristics of pure extraction (Snare) from excluded agents' perspectives but includes genuine coordination functions (standardized APIs, reliable service, ecosystem stability) from the beneficiary's perspective.",
+    "key_agents": [
+      "Large AI Developers (OpenAI, Google, Anthropic, Meta): Primary beneficiaries (institutional/arbitrage) \u2014 capture licensing revenue, investment capital concentration, exclusive data access, and first-mover advantage in capability development",
+      "Semiconductor Manufacturers (NVIDIA, TSMC, Intel): Secondary beneficiaries (institutional/arbitrage) \u2014 control GPU/TPU supply chains, maintain vendor lock-in, extract rents through scarcity pricing",
+      "Cloud Infrastructure Providers (AWS, Azure, GCP): Secondary beneficiaries (institutional/arbitrage) \u2014 operate training infrastructure monopolies, charge premium rates for GPU access",
+      "Smaller AI Companies (<$100M funding): Primary victims (powerless/trapped) \u2014 cannot access capital for independent training, cannot negotiate favorable terms for API access, cannot build proprietary models, systematically excluded from competitive capability development",
+      "Academic Researchers: Secondary victims (moderate/constrained) \u2014 restricted access through API rate limits and pricing, cannot afford training-from-scratch, dependent on proprietary model availability, face publication restrictions",
+      "Open-Source AI Communities: Tertiary victims (organized/constrained) \u2014 cannot access training data or compute at competitive scale, systematically disadvantaged against proprietary models, model weights and fine-tuning restricted by licensing",
+      "Developing Nation AI Initiatives: Structural victims (organized/constrained) \u2014 face geopolitical barriers (export controls on chips, sanctions), economic barriers (cannot afford training costs), capacity barriers (lack engineering talent due to brain drain to incumbents)",
+      "Global AI Capability Competition: Abstract victim (powerless/trapped) \u2014 concentrated capability reduces competitive dynamism, innovation concentrated in 3-5 firms, alternative approaches and diverse paradigms starved of resources"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and rising. The constraint extracts in multiple forms: (1) Licensing rents \u2014 proprietary model access costs, API pricing with no commodity alternatives. (2) Capital concentration \u2014 funding flows to incumbents at 10:1 ratios vs competitors. (3) Talent hoarding \u2014 top researchers concentrated at well-capitalized labs, reducing outside capability. (4) Data monopolization \u2014 training data access restricted or proprietary. The trajectory shows acceleration: extractiveness was 0.35 in 2020 (when multiple firms could field competitive models with $100M budgets), reached 0.52 by 2023 (Chinchilla scaling doubled capital requirements), and stands at 0.68 by 2026 (frontier models require $500M-$1B+ training budgets). Suppression (0.72): Very high. Multiple independent barriers compound: (a) Capital barrier is absolute \u2014 under $1B, cannot fund competitive training from scratch. (b) Semiconductor supply is controlled \u2014 cannot order sufficient GPUs without government approval or years-long waiting lists. (c) Talent is unavailable \u2014 top researchers command $500K-$2M+ compensation only afforded by well-capitalized firms. (d) Data is proprietary \u2014 web-scale training data hoarded or licensed at monopoly prices. (e) Regulatory barriers are high \u2014 export controls on chips, AI export restrictions. No single barrier is surmountable by individual excluded agents. Theater ratio (0.38): Moderate. Less performative than some constraints because the underlying extraction mechanism (infrastructure scarcity) is genuine and functional. The constraint does deliver real coordination (APIs work, models are stable, ecosystems develop) and real capability (frontier models at the moat are genuinely more capable). Theater arises primarily in regulatory/policy layers: antitrust authorities produce reports and statements with minimal enforcement; promises of 'open AI' persist despite increasing proprietary lock-in; public-private partnership rhetoric masks unidirectional extraction toward incumbents.",
+    "directionality_logic": "The constraint's directionality varies sharply by agent power and exit options. Smaller competitors occupy d\u22480.98 (trapped, powerless, full victim status) \u2014 they face absolute barriers and no exit path. Academic researchers occupy d\u22480.75 (constrained, moderate, high victim status) \u2014 they could theoretically exit academic AI research entirely but face high costs (retraining, career disruption). Incumbents appear to occupy low d values (arbitrage exit, institutional power, beneficiary status, d\u22480.10-0.25) \u2014 they control the infrastructure and can extract rents. However, even incumbents show some upward pressure on d through competitive coupling: if competitor infrastructure improves (open-source, foreign alternatives, public compute utilities), incumbents face displacement risk. The analytical observer's perspective invokes scope effects: at local scope (single lab), the moat is a coordination mechanism (rope). At global scope, the moat is concentrated extraction (snare). The scope \u03c3(S)=1.2 modifier amplifies extractiveness for constraints measured at global scale, which is appropriate here \u2014 the infrastructure moat's harm is precisely that it prevents global competitive alternatives.",
+    "perspectival_gap": "The excluded competitor sees a pure snare \u2014 they are systematically locked out with no remedies. The large incumbent sees coordination and ecosystem development (rope perspective) \u2014 they built the infrastructure and see it enabling genuine multi-party innovation. The analytical observer at civilizational scope recognizes the constraint as hybrid: genuine coordination functions (standardized APIs, model stability, ecosystem reliability) coupled with asymmetric extraction (concentrated rents, barriers to entry, lock-in effects). The perspectival gap reveals the structural tension: the coordination functions are real and valuable, but they are being delivered in a way that concentrates benefits and blocks alternatives. A public compute utility delivering the same coordination with open access would exhibit lower extractiveness (0.25-0.35) and higher theater (more regulatory theatrics, but actual coordination without lock-in).",
+    "mandatrophy_analysis": "The mandatrophy in the AI infrastructure moat is: 'Is this pure extraction or coordination-with-extraction?' The snare classification is accurate from excluded agents' perspectives (no exit, high extraction). The rope classification from incumbents' perspectives is also accurate (genuine coordination functions exist). The analytical observer's tangled-rope classification synthesizes: the constraint DOES coordinate (provides reliable infrastructure, enables ecosystem) AND DOES extract (concentrates rents, prevents entry, maintains lock-in). The constraint is not mislabeled \u2014 it genuinely has both functions. The mandatrophy is resolved by recognizing that 'coordination and extraction are not mutually exclusive.' An infrastructure can efficiently coordinate AND inefficiently extract. The question is not 'which is it?' but 'what proportion of the extracted value is justified as coordination cost vs. rent-seeking overhead?' The analytical framework suggests the answer: compare extractiveness under alternative governance structures. If a public compute utility can deliver the same coordination (reliability, standardization, ecosystem stability) at extractiveness 0.25, then the difference (0.68 - 0.25 = 0.43) is unjustified rent extraction, not necessary coordination cost. The current moat's 0.68 extractiveness includes genuine coordination overhead (~0.20-0.25) plus unjustified rent extraction (~0.40-0.45)."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure",
+    "boltzmann_floor_override": 0.22
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_research_equity_access",
+      "semiconductor_supply_chain_bottleneck",
+      "model_weights_licensing_regime",
+      "ai_capability_concentration"
+    ],
+    "dual_formulation_note": "The AI infrastructure moat decomposes into four structurally distinct constraints: (1) ai_infrastructure_moat (this story, \u03b5=0.68): the capital and hardware barriers to training-from-scratch. (2) ai_research_equity_access (\u03b5=0.55): the disparity in API access, data access, and compute allocation between institutions. (3) semiconductor_supply_chain_bottleneck (\u03b5=0.42): the NVIDIA/TSMC duopoly in GPU/AI-chip manufacturing. (4) model_weights_licensing_regime (\u03b5=0.60): the proprietary licensing constraints on trained models and fine-tuning. These are linked: removing any single constraint reduces but does not eliminate the overall moat. Each story has different beneficiaries, victims, and resolution mechanisms. The moat as an integrated system is stronger than the sum of its parts."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.82
+    }
+  ]
+}

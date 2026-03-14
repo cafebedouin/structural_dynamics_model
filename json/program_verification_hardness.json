@@ -1,0 +1,85 @@
+{
+  "header": {
+    "constraint_id": "program_verification_hardness",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "progver"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.03,
+    "theater_ratio": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Program Verification Hardness",
+    "topic_domain": "computer_science/mathematical_logic",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Software Engineer",
+      "comment": "PERSPECTIVE 1: SOFTWARE ENGINEER (MOUNTAIN) \u2014 From the position of one tasked with verifying program correctness, the hardness of formal verification appears as an immutable constraint. No amount of effort, resources, or innovation removes the fundamental barrier: proving program correctness requires more formal proof steps than the program itself contains (proof expansion problem). The engineer cannot exit this constraint through cleverness or investment \u2014 it is a law of formal logic, not a policy choice."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Theoretical Computer Scientist",
+      "comment": "PERSPECTIVE 2: THEORETICAL COMPUTER SCIENTIST (MOUNTAIN) \u2014 Verification hardness is a mathematical necessity. The undecidability of the Halting Problem, the PSPACE-completeness of bounded model checking, and the proof expansion theorems constitute natural law. These results are formal mathematical facts, not engineering trade-offs. The constraint exists independent of any observer's preferences and cannot be negotiated, circumvented, or re-framed. It is immutable across all possible computational frameworks within Church-Turing equivalence."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "label": "The Safety-Critical System Authority",
+      "comment": "PERSPECTIVE 3: SAFETY-CRITICAL SYSTEM AUTHORITY (MOUNTAIN) \u2014 Organizations responsible for certifying airplanes, medical devices, or nuclear systems experience verification hardness as a natural law that defines the boundary of what they can claim to have certified. They cannot exit this constraint by choice or funding. They can only work within it: selecting subclasses of programs that are tractable to verify (e.g., finite-state systems, synchronous designs), investing in proof automation and theorem provers, or accepting residual risk. The constraint is immutable; only the agent's strategy within its bounds changes."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "label": "The Formal Methods Research Community",
+      "comment": "PERSPECTIVE 4: FORMAL METHODS RESEARCH COMMUNITY (MOUNTAIN) \u2014 The research community collectively experiences verification hardness as an immutable obstacle that shapes their entire research agenda. Bounded model checking, abstraction refinement, parametric verification, and automated theorem proving are all responses to hardness, not solutions that overcome it. The constraint is generational \u2014 it has persisted through 70 years of computer science and will persist for the foreseeable future. Exit options are constrained: researchers can work within the hardness by developing better approximations, but they cannot eliminate the underlying barrier."
+    }
+  ],
+  "omegas": [],
+  "measurements": [],
+  "interval": {
+    "start": 1936,
+    "end": 2026
+  },
+  "commentary": {
+    "narrative_context": "Program verification hardness is a fundamental constraint arising from the mathematical structure of formal proof and computation. It manifests as multiple interlocking barriers: the Halting Problem's undecidability makes general program termination verification impossible; proof expansion theorems show that formal proofs can require exponentially more symbols than the theorems they prove; and bounded model checking is PSPACE-complete, making verification of even small bounded traces computationally intractable. This constraint is invariant across all observers, all time horizons, and all technological contexts within Church-Turing equivalence. It is not a policy choice, an institutional arrangement, or a contingent engineering trade-off. It is a law of formal logic.",
+    "key_agents": [
+      "Software Engineers: Powerless/trapped \u2014 must verify correctness of programs they write but face immutable barriers to complete verification",
+      "Theoretical Computer Scientists: Analytical/analytical \u2014 recognize and formalize the mathematical structure of the hardness",
+      "Safety-Critical System Authorities: Institutional/arbitrage \u2014 must work within the constraint by restricting to tractable subclasses of programs",
+      "Formal Methods Research Community: Organized/constrained \u2014 develops strategies (abstraction, approximation, automation) to mitigate hardness without overcoming it"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Very low. Verification hardness does not extract value from any agent for the benefit of others. It is a mathematical barrier that affects all agents symmetrically \u2014 it constrains capability universally without creating asymmetric benefit flows. The modest non-zero value reflects that some agents (researchers developing workarounds, tool vendors, consultants) may capture marginal economic benefit from the existence of the problem. But this is incidental to the constraint's structure, not its primary mechanism. Suppression (0.03): Minimal. The constraint operates through logical necessity, not through the suppression of alternatives. No agent is forced to pretend the constraint does not exist; all acknowledge its mathematical reality. Accessibility collapse (0.92): Very high. There is no accessible alternative to the constraint. No agent can choose a different computational model or logical framework that avoids undecidability and proof expansion \u2014 these are properties of all known models within Church-Turing equivalence. The constraint is logically inescapable. Resistance (0.08): Very low. The constraint meets no resistance from agents because all agents recognize its mathematical inevitability. There is no struggle against verification hardness as an unjust imposition; there is only acceptance of a mathematical fact and adaptation to it. Theater ratio (0.05): Minimal. The constraint is purely functional \u2014 verification truly is hard. There is almost no performative element. Some organizations may perform compliance with formal methods practices that do not actually improve verification (theater), but this is distinct from the constraint itself.",
+    "perspectival_gap": "There is no perspectival gap. All four perspectives converge on the same classification: mountain. The software engineer, the theoretical computer scientist, the safety authority, and the research community all experience and understand verification hardness as an immutable constraint. This invariance across all observer positions is the signature of a true natural law. When all perspectives agree on the same classification from the same constraint, the system has found a genuine invariant of the domain.",
+    "directionality_logic": "Directionality logic does not apply to mountain constraints. Mountains are invariant across all observer positions and all directionality parameters. Verification hardness is not a constraint that benefits some agents at the cost of others. It is a constraint that affects all agents uniformly \u2014 it restricts capability across the entire landscape of computation. There is no beneficiary, no victim, no asymmetric extraction. The constraint is symmetric in its impact."
+  },
+  "boltzmann": {},
+  "network": {
+    "affects_constraints": [
+      "program_synthesis_limitation",
+      "formal_specification_incompleteness",
+      "automated_theorem_proving_decidability_ceiling"
+    ]
+  },
+  "directionality_overrides": []
+}

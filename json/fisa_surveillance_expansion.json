@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "fisa_surveillance_expansion",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fisa"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.75,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "FISA Surveillance Expansion Authority",
+    "topic_domain": "national_security/governance/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "intelligence_agencies",
+      "executive_branch",
+      "law_enforcement_apparatus"
+    ],
+    "victims": [
+      "domestic_populations",
+      "civil_liberties_protection",
+      "democratic_accountability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Surveilled Citizen",
+      "comment": "PERSPECTIVE 1: SURVEILLED CITIZEN (SNARE) \u2014 Ordinary persons have no exit from FISA surveillance once enacted. Cannot refuse participation, cannot challenge data collection through normal legal channels (FISA court is non-adversarial), cannot opt out. Bears full extraction cost with zero escape option. Suppression is maximal: the surveillance is invisible, legally classified, and technically inaccessible for independent verification. No alternative coordination pathway exists."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Civil Liberties Advocacy Organizations",
+      "comment": "PERSPECTIVE 2: CIVIL LIBERTIES ADVOCATES (TANGLED ROPE) \u2014 Organizations like CAIR, ACLU experience both extraction and coordination function. They are trapped by resource constraints and doctrinal barriers (litigation standing, state secrets privilege) but also benefit from the surveillance expansion itself as a mobilizing issue that enables fundraising, coalition building, and legal precedent-setting. Extraction is real but not absolute \u2014 they have constrained exit through litigation and public advocacy, though these cost-bearing exits face institutional barriers. The constraint does coordinate: intelligence agencies and civil society both orient around FISA's rules, even when opposing them."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Intelligence Agencies",
+      "comment": "PERSPECTIVE 3: INTELLIGENCE AGENCIES (ROPE) \u2014 FBI, NSA, CIA experience the FISA expansion as pure coordination with benefits. They gain legal authority to expand collection and retain data according to statutory rules rather than ad hoc authority. The constraint solves a real coordination problem: enabling agencies to operate with legislative authorization rather than executive fiat. Agencies have arbitrage exit (can pivot to emergency authorities, can request fresh expansion) and experience net benefit. From their perspective, the theater is low \u2014 the FISA court provides the appearance of judicial review, which is what coordinates agencies around statutory authority rather than unilateral presidential action."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Congressional Intelligence Committees",
+      "comment": "PERSPECTIVE 4: CONGRESSIONAL OVERSIGHT (TANGLED ROPE) \u2014 Congress has formal authority to expand or restrict FISA but faces significant coordination-extraction hybrid. The genuine coordination function: rules for authorization and disclosure enable legislative oversight in principle. The extraction: real barriers to exercising this authority. Surveillance programs receive only cursory briefing, classified documents are compartmentalized preventing meaningful review, members voting on expansions cannot discuss details with staff or constituents. Congress has constrained exit (can theoretically limit FISA, but faces political costs and information asymmetry) while appearing to coordinate (formal authorization votes). Theater is moderate-high: voting on classified programs they cannot fully understand creates performative democratic accountability."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Transparency and Oversight Reform Movements",
+      "comment": "PERSPECTIVE 5: TRANSPARENCY/REFORM COALITION (SCAFFOLD) \u2014 Civil society coalitions built around declassification, warrant requirements, and transparency provisions treat FISA expansion as a temporary problem with a sunset. They advocate for statutory sunset clauses, mandatory transparency reports, and periodic reauthorization requiring affirmative vote. This perspective sees the constraint as removable through legislative reform over a 5-10 year horizon. The coalitions have mobile exit (can pivot strategies, dissolve and reform around new legislation) and explicit temporal thinking. Theater is moderate: transparency advocates use FISA expansion as a mobilizing issue precisely because the theater value (claimed oversight mechanisms) is incomplete. As transparency and declassification succeed, the expansion's functional justification weakens."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The FISA Court Institution",
+      "comment": "PERSPECTIVE 6: FISA COURT INSTITUTION (PITON) \u2014 The FISA court maintains a performative function while its actual gatekeeping capacity has degraded. Historically, the court approved ~99% of government applications; recent years show slightly higher denial rates (0.5-1%) on specific applications but near-universal approval for bulk programs and reauthorizations. The court performs judicial review \u2014 written opinions, adversarial procedures \u2014 but lacks genuine adversarial function (government presents, court approves). The theater persists through institutional inertia: the FISA court continues as the formal oversight mechanism because alternatives haven't fully replaced it, not because it functions as originally conceived. The institution is maintained by arbitrage: intelligence agencies want formal authorization, and the court provides it; the court's institutional survival depends on agencies' continued reliance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Democratic Governance View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, FISA expansion represents a genuine coordination-extraction hybrid in democratic governance. The coordination function is real: democratic societies need rules for surveillance authorization that balance security and privacy through legislative and judicial processes. The extraction is real: the expansion increases government power over domestic populations asymmetrically. This perspective classifies as tangled rope, not mountain, because surveillance expansion is contingent institutional choice, not immutable necessity. The engine's classification should reflect that FISA expansion is a tractable political problem, not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fisa_court_gatekeeper_capacity",
+      "question": "Does the FISA court function as a genuine check on surveillance expansion, or is it institutionally incapable of meaningful denial at scale?",
+      "resolution_mechanism": "Longitudinal analysis of denial rates across application types; comparison of denied applications to approved applications; analysis of whether reauthorizations receive genuine individual evaluation or bulk approval",
+      "impact": "If court has capacity: classification shifts toward Rope (pure coordination with judicial review). If court lacks capacity: classification solidifies as Tangled Rope (theatrical review masking expansion).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether FISA court provides genuine surveillance gatekeeping or performative review"
+    },
+    {
+      "id": "intelligence_necessity_asymmetry",
+      "question": "How much of FISA expansion is justified by genuine security coordination needs versus how much is driven by bureaucratic expansion and scope creep?",
+      "resolution_mechanism": "Comparative analysis of surveillance volume before/after expansion; correlation between expansion and identified threats; audit of actual intelligence production from expanded authorities versus claimed necessity",
+      "impact": "If security needs dominant: extractiveness should decrease to ~0.45, reclassify toward Rope. If scope creep dominant: extractiveness should increase to ~0.75, reclassify toward Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether FISA expansion reflects genuine security needs or bureaucratic expansion"
+    },
+    {
+      "id": "democratic_reform_viability",
+      "question": "Can democratic institutions meaningfully constrain surveillance expansion, or are the informational and political asymmetries irreversible?",
+      "resolution_mechanism": "Analysis of successful surveillance restrictions in comparable democracies; tracking of legislative reform proposals through Congress; assessment of public engagement levels and voting patterns on FISA reauthorizations",
+      "impact": "If constrainable: scaffold perspective is structural (sunset is viable). If irreversible: constraint trends toward Snare as suppression increases and exit capacity decreases.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether democratic mechanisms can effectively constrain surveillance expansion"
+    },
+    {
+      "id": "adversarial_proceedings_necessity",
+      "question": "Would addition of genuine adversarial representation in FISA court proceedings (government vs. privacy advocate) fundamentally alter surveillance expansion dynamics?",
+      "resolution_mechanism": "Comparative study of jurisdictions with adversarial warrant proceedings; analysis of FISA court denial rates under rule changes allowing government to hear opposition; modeling of how adversarial presentation affects application design",
+      "impact": "If adversarial proceedings substantially increase denials: theater_ratio decreases, chi decreases, classification shifts toward Rope/Scaffold. If minimal effect: theater_ratio persists, Tangled Rope/Piton classifications confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether adversarial FISA proceedings would reduce surveillance expansion"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.56
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The Foreign Intelligence Surveillance Act (FISA) surveillance expansion represents a core tension in democratic governance: the institutional coordination need for legal authorization of surveillance versus the asymmetric extraction this creates for surveilled populations. Enacted in 1978 as a mechanism to constrain ad hoc executive surveillance, FISA created a statutory framework and FISA court for warrant authorization. Successive expansions \u2014 Section 215 (bulk records collection), Section 702 (foreign-targeting with domestic incidental collection), and periodic reauthorizations \u2014 have transformed FISA from a constraints regime into an enablement regime. The constraint exhibits complex perspectival structure: intelligence agencies experience it as pure coordination (rules replacing arbitrary authority), surveil citizens experience it as pure extraction (invisible, inescapable), oversight bodies experience it as mixed coordination-extraction, and the FISA court institution has degraded from gatekeeping to performative approval. Extractiveness has increased over time (0.35 \u2192 0.62 across the interval) as scope expanded and theater has increased (0.52 \u2192 0.68) as reauthorizations moved to bulk, classified processing replacing individual warrant review.",
+    "key_agents": [
+      "Intelligence Agencies (FBI/NSA/CIA): Primary beneficiaries (institutional/arbitrage) \u2014 gain statutory authority for expanded collection, retain and expand authorities through reauthorization cycles",
+      "Domestic Populations: Primary victims (powerless/trapped) \u2014 no exit from surveillance once enacted, cannot challenge collection through normal legal channels, suppression is near-total through classification and technical inaccessibility",
+      "Congressional Intelligence Committees: Mixed role (organized/constrained) \u2014 formal oversight authority but constrained by compartmentalization, classified briefings, and political asymmetry favoring security narratives",
+      "Civil Liberties Organizations: Secondary beneficiaries through mobilization (moderate/constrained) \u2014 constrained by litigation barriers and state secrets privilege, but benefit from expansion as rallying issue",
+      "FISA Court Institution: Institutional performer (institutional/arbitrage) \u2014 maintains formal gatekeeping appearance while approving >99% of applications, sustained by intelligence agency reliance",
+      "Reform Coalitions: Mobile reformers (organized/mobile) \u2014 treat expansion as solvable through transparency, sunset clauses, adversarial proceedings; see scaffold pathway"
+    ],
+    "logic_rationale": "Extractiveness (0.62): Moderate-high, driven by core asymmetry \u2014 intelligence agencies gain authority to collect and retain data on domestic populations without individual consent or knowledge, while populations bear maximum cost and bear zero exit option. The 0.62 value reflects that some surveillance is genuinely coordinated (warrants, oversight structures exist) but much occurs in bulk collection modes where individual evaluation is illusory. Theater ratio (0.68): High and increasing. The FISA court performs judicial review (written opinions, formal procedures) but lacks genuine gatekeeping (approval rates ~99%). Bulk reauthorizations receive theatrical review but no individualized examination. The theater has increased as expansion has moved surveillance from targeted warrants to bulk authorities processed in classified batch mode. Suppression (0.75): Very high. Surveillance is invisible to subjects, technical access to underlying data is classified, FISA court proceedings are one-sided (no adversarial representation), and legal challenges are blocked by state secrets privilege and lack of standing. Citizens cannot verify they are surveilled, cannot challenge collection, cannot access data about themselves. The measured extractiveness (0.62) plus suppression (0.75) yields a snare classification from the powerless perspective; moderate perspectives see extraction with some coordination function (tangled rope) because some oversight exists, even if ineffective.",
+    "perspectival_gap": "Maximum perspectival gap driven by asymmetric information and structural position. Beneficiaries (intel agencies) see the constraint as enabling legal coordination. Victims (surveilled publics) see invisible extraction. Oversight (Congress) sees formal authority they cannot exercise. The court sees performative gatekeeping. Reformers see a removable problem. The analytical observer sees a genuine hybrid. The gap is not measurement error \u2014 it is structural. The constraint genuinely produces different reality for each position.",
+    "directionality_logic": "Directionality derivation follows power, exit, and beneficiary/victim structure. Intelligence agencies: institutional power + arbitrage exit + beneficiary status = low d (0.15-0.25) \u2192 negative \u03c7 component. They experience coordination, not extraction. Surveilled citizens: powerless + trapped + victim status = high d (0.95+) \u2192 maximum f(d) \u2248 1.42 \u2192 high \u03c7. They experience maximum extraction. Congressional committees: organized power + constrained exit + mixed beneficiary/victim = moderate d (0.45-0.55) \u2192 moderate \u03c7. They see real extraction despite formal authority. Civil liberties orgs: moderate power + constrained exit + victim status (advocacy on behalf of publics) = moderate-high d (0.60-0.75) \u2192 high \u03c7 from their perspective, but beneficiary status through mobilization creates tension. FISA court: institutional power + arbitrage exit (survival depends on agency use) + paradoxical position (appears to control surveillance, actually approves most applications) = low d nominally but theta-capture effect (the court's interests align with expansions) makes directionality analysis complex. The override table captures this through the institution's actual structural relationship (beneficiary through reliance, victim through mission creep).",
+    "mandatrophy_analysis": "FISA expansion resolves mandatrophy through explicit tangled rope classification: the constraint simultaneously coordinates (enables legal surveillance authority replacing ad hoc executive action) and extracts (asymmetric collection affecting domestic populations without consent). The coordination is real: FISA did displace purely presidential surveillance decisions and created statutory rules. The extraction is real: those rules enable bulk collection affecting millions with zero individual notice or consent. Neither classification (pure coordination, pure extraction) is accurate. The analytical observer's perspective confirms: this is a tractable political problem, not a natural law. The classification prevents false mountains (naturalizing surveillance as inherent to security) and false ropes (claiming pure coordination when extraction is clear). The theater (FISA court's performative gatekeeping) is correctly identified as Piton from the institution's own view, indicating degradation from the original constraining function."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "state_secrets_privilege_doctrine",
+      "fourth_amendment_standing_doctrine",
+      "national_security_classification_system"
+    ],
+    "dual_formulation_note": "FISA expansion is downstream of several legal/doctrinal constraints that make challenge difficult. State secrets privilege prevents litigation discovery; fourth amendment standing doctrine prevents individual standing for surveillance; classification system prevents public knowledge of actual programs. These constraints are upstream \u2014 they enable FISA expansion by blocking the normal exit pathways (litigation, political mobilization based on disclosed information) available to victims."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

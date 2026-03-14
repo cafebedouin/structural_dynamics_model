@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "regulatory_capture_dynamic",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "regcap"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Regulatory Capture Dynamic",
+    "topic_domain": "political_economy/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "regulated_industry"
+    ],
+    "victims": [
+      "public_interest",
+      "competitive_entrants",
+      "consumer_welfare"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Consumer/Public Interest",
+      "comment": "PERSPECTIVE 1: PUBLIC INTEREST (SNARE) \u2014 Citizens cannot exit the regulated market; bear extraction via higher prices, reduced innovation, and restricted choice. No exit mechanism for trapped agents. Maximum experienced extraction. The public interest is abstract and unorganized \u2014 cannot coordinate collective action or regulatory pressure. Pure extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Competitive Entrant",
+      "comment": "PERSPECTIVE 2: COMPETITIVE ENTRANT (SNARE) \u2014 Potential competitors face regulatory barriers constructed by incumbent industry; trapped by permitting delays, compliance costs, and discretionary enforcement. No realistic exit short of abandoning market entry. Regulatory apparatus used explicitly for exclusion. High suppression, minimal coordination benefit. Pure extraction mechanism."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Regulated Industry",
+      "comment": "PERSPECTIVE 3: REGULATED INDUSTRY (ROPE) \u2014 Industry benefits from regulatory barriers that exclude competition; possesses arbitrage exit options (can influence regulatory design, relocate to favorable jurisdictions, or shift to unregulated markets). Experiences the constraint as coordination mechanism: stabilized market conditions, predictable pricing, protected margins. Net beneficiary with genuine exit capacity \u2014 low or negative effective extraction from this perspective."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Captured Regulator",
+      "comment": "PERSPECTIVE 4: CAPTURED REGULATOR (TANGLED ROPE) \u2014 Regulatory agency experiences mixed coordination and extraction. Genuine coordination function: industry stability supports economy, market predictability aids planning. But agency also extracted from: dependence on industry expertise, career incentives (post-regulatory employment), epistemic capture (internalized industry worldview). Constrained exit \u2014 regulator cannot easily break captured role without institutional upheaval. High suppression (internal and institutional), active enforcement required. Both coordination and asymmetric extraction present."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Framework",
+      "comment": "PERSPECTIVE 5: REGULATORY FRAMEWORK (PITON) \u2014 Formal regulatory apparatus persists despite degraded function. The published rules (antitrust law, consumer protection standards, transparency requirements) exist on paper but are not enforced with vigor against captured regulated industry. Theater ratio (0.68) reflects performative compliance: agencies conduct reviews, hold hearings, publish reports \u2014 activities that create appearance of regulation while substantive protection erodes. Framework maintained through institutional inertia; exit mechanism blocked by political economy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, regulatory capture is a structural feature of delegation: whenever government delegates authority to regulate an industry, the regulated entity has incentives and capacity to shape regulation in its favor. Genuine coordination function (industry compliance with baseline safety/environmental/labor standards) coexists with systematic extraction (above-market rents, exclusion of competition, consumer surplus transfer). The constraint is simultaneously necessary and extractive. Theater ratio rises as agencies perform legitimacy while effectiveness declines."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "capture_mechanism_identity_lock",
+      "question": "Is the captured regulator experiencing material constraints (constrained exit) or cognitive/identity capture (identity_locked exit)?",
+      "resolution_mechanism": "Counterfactual analysis: if institutional incentives were inverted (post-regulatory employment prospects tied to aggressive enforcement), would personnel behavior change? If yes, capture is material-constrained. If no, capture is partly identity-fused (regulators have internalized industry worldview).",
+      "impact": "If material-constrained: capture is a standard institutional design problem solvable by structural incentive realignment. If identity-locked: personnel would need to reconstruct professional identity to break capture; remediation is slower and requires cultural change, not just rule changes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory capture operates through material constraints or identity fusion"
+    },
+    {
+      "id": "coordination_function_necessity",
+      "question": "How much of the regulatory apparatus's baseline function (e.g., environmental monitoring, safety inspection, consumer complaint investigation) is genuinely necessary coordination vs performative theater?",
+      "resolution_mechanism": "Comparative analysis: jurisdictions with different capture levels but similar industries; measurement of actual enforcement action rates vs published rules; correlation between regulatory stringency and industry outcomes.",
+      "impact": "If high necessity (> 60% core function required): tangled_rope classification justified \u2014 coordination + extraction. If low necessity (< 30% core function required): constraint slides toward snare \u2014 extraction masquerading as coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "What fraction of regulation is necessary coordination vs theater"
+    },
+    {
+      "id": "public_interest_organization_potential",
+      "question": "Could the public interest (currently powerless/trapped) achieve organized status through collective action?",
+      "resolution_mechanism": "Historical cases of successful public interest mobilization (environmental movements, consumer advocacy coalitions); measurement of coordination capacity and exit options when organization exists.",
+      "impact": "If organizability > 0.6: powerless perspective could shift to organized, moving from snare to snare-with-coalition-threat. This would create dynamic tension and potentially force reclassification toward tangled_rope or scaffold (if sunset conditions emerge).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether public interest can organize to challenge capture"
+    },
+    {
+      "id": "alternative_regulatory_models",
+      "question": "Do alternative governance structures (independent agencies, elected regulators, user-run systems, decentralized protocols) produce lower capture rates?",
+      "resolution_mechanism": "Comparative institutional analysis across regulatory domains and governance models; measurement of capture indicators (price-cost margins, innovation rates, consumer satisfaction) as proxy for effectiveness.",
+      "impact": "If alternatives show meaningfully lower capture: current structure is contingent choice, not natural law. Scaffold or rope perspectives become viable \u2014 sunset to alternative model is structurally possible.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether alternative regulatory models reduce capture"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Regulatory capture represents a structural constraint that arises when regulatory agencies designed to protect the public interest become systematically oriented toward benefiting the regulated industry. The constraint exhibits a tangled coordination-extraction hybrid: genuine regulatory function coexists with systematic extraction of consumer surplus and competitive opportunity. The classic mechanism involves asymmetric information (regulated industry knows more about operations than regulators), asymmetric stakes (industry has concentrated incentives; public has dispersed interests), asymmetric access (industry has resources for lobbying; public has limited capacity), and asymmetric careers (regulators have post-regulatory employment opportunities in industry). Over time, the constraint intensifies: initial regulatory function declines as agencies accumulate captured personnel, rules become less enforced, and theater increases (agencies perform legitimacy while effectiveness erodes). The dynamics create a structural tension between the coordination function (necessary baseline environmental/safety/consumer protection) and the extraction function (above-market rents, exclusion of competition, consumer welfare loss). The constraint cannot be classified as pure extraction (snare) because some public protection occurs; cannot be classified as pure coordination (rope) because asymmetric extraction is systematic and substantial.",
+    "key_agents": [
+      "Regulated Industry: Primary beneficiary (institutional/arbitrage) \u2014 captures extracted consumer surplus, receives market protection through regulatory barriers, shapes regulatory rules in favorable direction",
+      "Public Interest / Consumers: Primary victim (powerless/trapped) \u2014 cannot exit regulated markets, bear extraction via higher prices and reduced choice, diffuse interests prevent collective action",
+      "Competitive Entrants: Secondary victim (powerless/trapped) \u2014 face regulatory barriers to market entry constructed to exclude competition, cannot overcome permitting obstacles or compliance costs",
+      "Captured Regulator: Institutional actor (institutional/constrained) \u2014 experiences mixed coordination and extraction; constrained by career incentives, institutional dependence on industry expertise, post-regulatory employment prospects",
+      "Regulatory Framework: Institutional apparatus (institutional/constrained) \u2014 maintains performative legitimacy (published rules, formal procedures) while substantive enforcement declines",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees capture as structural delegation problem inherent to regulatory design, not contingent failure"
+    ],
+    "logic_rationale": "Extractiveness (0.58): The constraint exhibits moderate-to-high extraction. The regulated industry captures substantial economic rents via higher prices, protected market share, and exclusion of competition. However, extraction is not maximal (not snare-level 0.66+) because some genuine regulatory function persists: environmental compliance is higher than without regulation, safety standards are enforced at baseline levels, and consumer protection mechanisms exist (though weakened). The measurement trajectory shows extraction increasing from 0.32 to 0.58 as captured personnel accumulate and enforcement atrophies. Suppression (0.65): High. Multiple barriers prevent exit or challenge: citizens cannot exit regulated markets (trapped), competitors face regulatory barriers to entry (trapped), regulators are constrained by institutional incentives and career paths, and political economy blocks reform (organized industry lobbying vs diffuse public interest). Suppression reflects structural barriers, not just coercion \u2014 the problem is partially internalized (regulators have adopted industry worldview). Theater ratio (0.68): Moderate-high. The regulatory apparatus maintains performative legitimacy \u2014 agencies conduct reviews, hold hearings, publish reports, enforce some rules \u2014 creating appearance of protection while substantive capacity erodes. The increase from 0.40 to 0.68 over 20 time units reflects accumulating theater as agencies become more captured and rely increasingly on legitimacy performance rather than functional protection.",
+    "directionality_logic": "Directionality derives from structural position in the extraction flow. The regulated industry holds institutional power and arbitrage exit options (can influence regulation, relocate, access alternative markets) \u2014 they are beneficiaries with escape capacity, producing low or negative effective extraction from their perspective (rope classification). The public interest holds powerless status and trapped exit options (cannot exit regulated markets, cannot organize effectively) \u2014 they are victims with no escape, producing high effective extraction from their perspective (snare classification). Competitive entrants are trapped like the public but with moderate potential power if organized (powerless/trapped produces snare). The captured regulator is institutional but constrained (cannot easily break dependency without institutional crisis) and is both victim and perpetrator (extracted from by career incentives, extracting from public through weak enforcement) \u2014 producing tangled rope classification. The regulatory framework is institutional but constrained by political economy, maintained through inertia despite degraded function (piton classification). The analytical observer at civilizational scope sees the capture as structural to delegation itself (tangled rope \u2014 necessary coordination coexists with inevitable extraction).",
+    "perspectival_gap": "The widest perspectival gap exists between the regulated industry (rope \u2014 sees coordination benefit, net beneficiary) and the public interest (snare \u2014 experiences pure extraction, trapped). The captured regulator occupies the middle ground (tangled rope) \u2014 neither pure beneficiary nor pure victim, but extracted from and extracting. This gap reveals that 'regulation' is not a unified phenomenon: for the industry it solves coordination problems (market stabilization, predictable rules); for the public it solves coordination problems (baseline protection) but also creates extraction (consumer welfare loss, innovation suppression); for the regulator it provides career coordination but also identity capture. The piton perspective (degraded regulatory framework) observes that the published rules no longer function effectively \u2014 they persist through institutional inertia. The analytical observer's tangled rope classification differs from the public's snare perspective because the analytical view recognizes genuine coordination function coexisting with extraction, whereas the trapped agent only experiences the extraction.",
+    "mandatrophy_analysis": "The regulatory capture dynamic resolves the mandatrophy by showing that tangled rope is the correct canonical classification: the constraint simultaneously coordinates industry stability (genuine function) and extracts consumer surplus (systematic asymmetry). The industry would not persist in complex coordination if there were no genuine baseline function \u2014 but the function is substantially smaller than the extracted rent suggests. This is the diagnostic signature of tangled rope: both axes are active (coordination and extraction), neither is negligible, and organized interests benefit while diffuse interests bear costs. The snare perspective (from the powerless public) represents legitimate experiential truth \u2014 the public does experience pure extraction \u2014 but captures only one side of the structural reality. The rope perspective (from the beneficiary) is aspirational: the industry frames the relationship as pure coordination, but asymmetric extraction is measurable. The analytical observer's tangled rope classification prevents mislabeling this as either pure coordination (false) or pure extraction (incomplete): the constraint genuinely requires both coordinates to explain."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "asymmetric_information_barrier",
+      "public_choice_problem",
+      "incumbent_advantage_lock"
+    ],
+    "dual_formulation_note": "Regulatory capture is downstream of structural features (asymmetric information, asymmetric stakes, asymmetric access) but constitutes its own constraint with distinct extractiveness (0.58) reflecting the degree of industry influence over regulatory rules. The upstream constraints have their own \u03b5 values reflecting information asymmetry; the capture dynamic has its own \u03b5 reflecting extraction measured through price-cost margins and competitive entry barriers."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

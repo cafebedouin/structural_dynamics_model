@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "victorian_advertising_market",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.52,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Victorian Advertising Market Constraint",
+    "topic_domain": "economic/media/social_history",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "newspaper_proprietors",
+      "advertising_agencies",
+      "luxury_goods_merchants"
+    ],
+    "victims": [
+      "working_class_consumers",
+      "advertising_truth_standards"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Deceived Worker",
+      "comment": "PERSPECTIVE 1: DECEIVED WORKER (SNARE) \u2014 Working-class consumers cannot verify advertising claims (literacy barriers, no regulatory body, no alternative information source). Faces maximum extraction: wages diverted to ineffective patent medicines and fraudulent schemes advertised in newspapers. No exit option \u2014 consumer credit systems lock them into purchasing recommended products. Theater is high (elaborate testimonials, medical authority simulation) but functional extraction is severe."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Middle-Class Reader",
+      "comment": "PERSPECTIVE 2: MIDDLE-CLASS READER (TANGLED ROPE) \u2014 Partially mobile and educated; can recognize some fraudulent claims but remains vulnerable to sophisticated appeals (credible-looking medical testimonials, class-aspirational marketing). Experiences genuine coordination benefit (newspapers provide product information, market pricing signals) alongside asymmetric extraction (advertising premium embeds unverifiable quality claims). Constrained exit: switching newspapers is costly and competitors use same advertising model."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Newspaper Proprietor",
+      "comment": "PERSPECTIVE 3: NEWSPAPER PROPRIETOR (ROPE) \u2014 Primary beneficiary (institutional/arbitrage). Experiences advertising market as pure coordination: advertisements fund newspaper operations, readers benefit from cheap press, advertisers reach consumers. Proprietor has arbitrage option (can exit to alternative revenue models \u2014 subscriptions, political patronage). The constraint solves their genuine business problem: how to finance expanding circulation. Extraction is incidental to coordination function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Patent Medicine Manufacturer",
+      "comment": "PERSPECTIVE 4: PATENT MEDICINE MANUFACTURER (TANGLED ROPE) \u2014 Powerful actor (mobile) with high exit options \u2014 can switch advertising channels, reduce advertising spend, compete on price. Yet benefits from genuine coordination function: advertising creates markets for products that have real (if modest) efficacy for common ailments. Extraction mechanism is asymmetric: manufacturers extract via unverifiable health claims while consumers extract real value (placebo + minor therapeutic effect). Theater is high (elaborate formulations, medical testimonials) but both sides benefit from the market coordination."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Journalistic Ethics Norm",
+      "comment": "PERSPECTIVE 5: JOURNALISTIC ETHICS NORM (PITON) \u2014 Ideal of editorial independence from advertiser pressure is theoretically present (some editors refuse obviously fraudulent ads) but functionally degraded. Theater ratio high: publishers perform editorial integrity (selective ad rejection, implicit vouching) while economic reality is full dependence on ad revenue. The norm persists through institutional inertia despite systematic violation \u2014 replaced later by advertising codes and regulatory oversight."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Information Asymmetry View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, information asymmetry between advertiser and consumer is a structural feature of all markets where quality cannot be inspected before purchase. The Victorian advertising market is thus an expression of an inherent constraint: unverifiable claims always have extraction potential in asymmetric information environments. However, this perspective risks naturalizing what is actually a contingent institutional choice \u2014 the absence of regulatory verification, advertising standards, and consumer legal recourse."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "literacy_barrier_quantification",
+      "question": "What proportion of suppression is literacy-driven (unable to read fine print, medical terminology) versus institutional (regulatory absence)?",
+      "resolution_mechanism": "Comparison of claim-verification rates between literate and illiterate cohorts; analysis of how technical language in advertisements targeted different classes",
+      "impact": "If mostly literacy: suppression is endogenous to consumer education, not extractive institutional design. If mostly institutional: suppression is deliberately maintained through complex language and regulatory gaps.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of suppression attributable to literacy barriers vs. institutional absence"
+    },
+    {
+      "id": "patent_medicine_efficacy_distribution",
+      "question": "What proportion of advertised patent medicines had detectable therapeutic effect (beyond placebo) versus pure fraud?",
+      "resolution_mechanism": "Chemical analysis of preserved patent medicine formulations; historical clinical trial data where available; correlation between advertised ingredients and pharmacologically active compounds",
+      "impact": "If high efficacy: extraction is partial (consumers receive real value alongside premium pricing). If low efficacy: extraction is near-total (premium pricing for inert or harmful substances). Affects whether tangled_rope classification holds or degrades toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Therapeutic efficacy distribution of advertised patent medicines"
+    },
+    {
+      "id": "newspaper_revenue_alternative_viability",
+      "question": "Could Victorian newspapers have sustained operations without advertising revenue through subscriptions, political patronage, or other models?",
+      "resolution_mechanism": "Financial reconstruction of non-advertising-dependent newspapers (party organs, subscription journals); modeling of circulation costs and pricing elasticity",
+      "impact": "If viable alternatives existed: advertising market is extractive choice by proprietors, not structural necessity (snare classification stronger). If no alternatives: advertising market is genuine coordination necessity (rope classification more appropriate).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Viability of non-advertising newspaper revenue models"
+    },
+    {
+      "id": "consumer_awareness_of_fraud",
+      "question": "What proportion of working-class consumers believed advertised patent medicine claims versus recognized them as exaggerated or false?",
+      "resolution_mechanism": "Analysis of working-class diaries, letters, trial testimony; correlation between repeated advertising and consumer purchasing patterns; identification of naive vs. sophisticated repeat purchasers",
+      "impact": "If high awareness: suppression is lower (constrained choice), extraction is acknowledged. If low awareness: suppression is higher (trapped), extraction operates through deception.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Consumer awareness of advertising fraud"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.64
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "commentary": {
+    "narrative_context": "The Victorian advertising market (1837\u20131901) represents a constraint where newspapers, advertisers, and consumers negotiate the terms of information distribution and commercial persuasion in an environment of limited regulatory oversight and asymmetric literacy. The constraint exhibits genuine coordination value (newspapers need revenue, merchants need distribution, consumers gain access to product information) alongside significant extraction (false health claims, unverifiable quality assertions, intentional deception targeting the less educated). The extractiveness value (0.58) reflects that the market simultaneously solves a real collective action problem (how to fund newspapers serving mass audiences) and enables systematic overreach (unregulated health claims that cause documented harm). The suppression value (0.52) captures the structural barriers to exit: working-class consumers cannot easily verify claims, no regulatory body enforces truth standards, and alternative information sources are scarce. Theater ratio (0.68) reflects that the legitimacy of the advertising market rests heavily on ritualized displays of journalistic integrity, editorial selectivity, and implied advertiser vetting \u2014 performances that are often inconsistent with economic reality.",
+    "key_agents": [
+      "Working-Class Consumers: Primary victims (powerless/trapped) \u2014 vulnerable to health fraud due to literacy barriers and absence of verification mechanisms; wages diverted to ineffective remedies",
+      "Middle-Class Readers: Secondary victims (moderate/constrained) \u2014 educated but still subject to sophisticated appeals; can identify some fraud but constrained by switching costs",
+      "Newspaper Proprietors: Primary beneficiaries (institutional/arbitrage) \u2014 depend on advertising revenue for profitability; experience constraint as coordination mechanism enabling cheap mass press",
+      "Patent Medicine Manufacturers: Beneficiaries with mixed extraction (powerful/mobile) \u2014 benefit from unverifiable health claims but also provide products with modest therapeutic effects; mobile enough to diversify channels",
+      "Advertising Agencies: Emerging intermediaries (institutional/arbitrage) \u2014 commission-driven; incentive to maximize advertiser claims regardless of truth",
+      "Editorial Standards: Idealized but degraded institutional function (institutional/arbitrage) \u2014 perform selectivity while economically dependent on advertiser revenue"
+    ],
+    "logic_rationale": "Extractiveness (0.58): The market has genuine coordination value \u2014 advertising funds newspaper expansion, merchants reach new customers, consumers access product information. But extraction is substantial: patent medicines often contain inert or toxic ingredients marketed with false health claims; working-class wages are diverted to ineffective remedies; truth-in-advertising norms are absent. The value reflects that extraction is neither maximal (some products work, some claims are legitimate) nor minimal (systematic deception of less educated consumers). Suppression (0.52): Significant barriers to consumer exit include literacy gaps, no legal recourse for fraudulent claims, limited alternative information sources, and working-class economic dependence on recommended products. Barriers are not total (middle-class readers can identify fraud) but are structural and intentionally maintained (complex medical language, appeals to false authority). Theater ratio (0.68): The legitimacy of the Victorian advertising market depends on ritualized signals of editor integrity \u2014 explicit rejection of 'obviously fraudulent' ads, implicit vouching for advertiser credibility, and performance of ethical discrimination. These signals persist despite economic dependence on advertiser revenue. Theater increases over the interval as competitive pressure drives increasingly elaborate advertising formats (medical testimonials, doctor endorsements, scientific-looking testimonies).",
+    "directionality_logic": "Directionality (d) values derive from each agent's structural position relative to extraction flow. Newspaper proprietors are beneficiaries with arbitrage options (low d, negative chi) \u2014 the constraint solves their fundamental business problem. Patent medicine manufacturers are beneficiaries with mobility (moderate d, moderate chi) \u2014 they extract through false claims but also provide products with real effects. Working-class consumers are victims with no exit (high d, high chi) \u2014 they bear maximum extraction through literacy barriers and economic dependence. Middle-class readers are victims with constrained exit (moderate-high d, moderate chi) \u2014 educated enough to recognize some fraud but locked into the advertising-dependent newspaper model. The proprietor's arbitrage exit option (could theoretically fund newspapers through subscriptions or patronage) is rarely exercised, indicating the constraint has structural advantages \u2014 advertising revenue is more profitable than alternatives, making the proprietor's nominal exit option functionally unavailable.",
+    "perspectival_gap": "The constraint demonstrates divergent classification across structural positions. Proprietors experience coordination (Rope) \u2014 advertising solves their genuine revenue problem. Patent medicine manufacturers experience mixed extraction-coordination (Tangled Rope) \u2014 unverifiable claims create markets while some products have real effects. Middle-class readers also experience tangled dynamics (Tangled Rope) \u2014 some information benefit, some deception cost. Working-class consumers experience pure extraction (Snare) \u2014 maximum asymmetry, literacy barriers, no verification mechanism. The editorial ethics norm is institutionally present but functionally degraded (Piton) \u2014 selective ad rejection persists as performance despite economic dependence. The analytical observer risks seeing information asymmetry as a law of markets (Mountain) but this naturalizes the contingent choice to create no regulatory body, no truth standards, and no legal recourse.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint's classification depends on which agent's structural position is being measured. The proprietor legitimately experiences coordination (Rope) \u2014 advertising funds newspaper operations that serve the public good of information distribution. The working-class consumer legitimately experiences extraction (Snare) \u2014 systematic deception through literacy asymmetry. Neither is 'the real' classification; both are true. The tangled_rope classification at the moderate (middle-class) level represents the modal experience \u2014 genuine coordination benefits alongside extractive deception. The piton classification recognizes that editorial ethics persists as performance rather than function. The mountain classification is a false summit: information asymmetry is not inherent to all markets, but rather a consequence of the specific choice to create no regulatory body and no legal accountability for false health claims. The constraint dissolves as a mountain when regulatory frameworks (the Food and Drugs Act [1906], subsequent advertising codes) are established \u2014 what appeared inherent to the market was actually a contingent institutional absence."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "patent_medicine_regulation",
+      "newspaper_economic_dependence"
+    ],
+    "dual_formulation_note": "The Victorian advertising market decomposes into distinct constraints: (1) newspaper_economic_dependence (\u03b5 \u2248 0.30, Tangled Rope) \u2014 coordination need to fund mass press alongside extractive dependence on advertiser preferences; (2) patent_medicine_fraud (\u03b5 \u2248 0.72, Snare) \u2014 systematic health claims fraud targeting illiterate consumers; (3) advertising_standards_absence (\u03b5 \u2248 0.45, Piton) \u2014 degraded editorial ethics norm. This story treats the bundled market-level constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.58
+    }
+  ]
+}

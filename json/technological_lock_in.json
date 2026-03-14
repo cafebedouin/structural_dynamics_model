@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "technological_lock_in",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "techlock"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Technological Lock-In: Path Dependency and Switching Costs",
+    "topic_domain": "technology/economics/infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_technology_provider",
+      "network_effects_beneficiary"
+    ],
+    "victims": [
+      "trapped_users",
+      "superior_alternative_technologies"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Locked-In User",
+      "comment": "PERSPECTIVE 1: TRAPPED USER (SNARE) \u2014 Individual users or organizations cannot exit without catastrophic switching costs: data incompatibility, lost productivity during migration, retraining burden, ecosystem dependencies. The constraint extracts maximum value from this agent with minimal coordination benefit. No meaningful alternative exists at acceptable cost. The user bears the full burden of path dependency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Organizational Technology Adopter",
+      "comment": "PERSPECTIVE 2: ORGANIZATIONAL ADOPTER (TANGLED ROPE) \u2014 Organizations experience both genuine coordination benefits (ecosystem maturity, workforce familiarity, supplier integration) and asymmetric extraction (vendor lock-in, upgrade costs, limited negotiating power). Exit is theoretically possible but at substantial cost. The constraint both solves collective action problems AND extracts rent."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Technology Provider",
+      "comment": "PERSPECTIVE 3: INCUMBENT PROVIDER (ROPE) \u2014 The dominant platform provider experiences the constraint as pure coordination: network effects solve the chicken-and-egg problem of ecosystem adoption. Users adopt because others use it; suppliers integrate because users are there. This perspective sees lock-in as a successful coordination mechanism that justifies their privileged position. Effective exit (to another platform) is costless for the provider."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Rival Technology Competitor",
+      "comment": "PERSPECTIVE 4: RIVAL COMPETITOR (TANGLED ROPE) \u2014 A well-resourced competitor sees the dominant lock-in as both a coordination mechanism that establishes market legitimacy AND a barrier to entry that must be overcome through coordinated alternative ecosystem investment. They must simultaneously acknowledge the incumbent's coordination function while fighting asymmetric extraction that benefits the incumbent. Mobile exit options but high transition cost for all ecosystem participants."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Standards Coalition",
+      "comment": "PERSPECTIVE 5: OPEN STANDARDS COALITION (SCAFFOLD) \u2014 Industry consortia, open-source projects, and standards bodies (organized agents) view lock-in as a temporary coordination failure being addressed through interoperability standards, API standardization, and data portability mandates. These agents see a sunset clause: as standards mature and tool ecosystems become interoperable, switching costs decline. Theater is moderate because the coalition's solution (standards development) requires performative consensus-building but produces genuine technical artifacts."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Legacy Institutional Holdout",
+      "comment": "PERSPECTIVE 6: LEGACY INSTITUTIONAL HOLDOUT (PITON) \u2014 Some institutional actors (regulatory bodies, legacy enterprises, government agencies) are formally locked into older technology by policy, inertia, or prior investment but continue to maintain symbolic commitment to alternatives they will never actually adopt. The constraint persists through institutional theater despite degraded function \u2014 the institution performs evaluation and exploration of alternatives while remaining committed to the lock-in. High theater ratio indicates performative rather than genuine exit possibility."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some degree of path dependency in technology adoption is inherent to network effects: the coordination benefit of shared standards naturally prevents switching, regardless of institutional design. This perspective risks naturalizing what is actually contingent institutional lock-in as an immutable property of how technologies scale. The natural law framing masks extractive surplus extraction that depends on particular choices about interoperability, data portability, and API openness."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "switching_cost_measurement_ambiguity",
+      "question": "Are measured switching costs technical (genuine incompatibilities) or institutional (policy/business model choices that could be changed)?",
+      "resolution_mechanism": "Counterfactual analysis: comparison of switching costs under different API policies, data portability laws, or interoperability mandates; historical examples of forced migration (regulatory mandate, acquisition)",
+      "impact": "If mostly technical: lock-in is closer to mountain (inherent property of technology). If mostly institutional: lock-in is extractive snare (policy choice that concentrates extraction). Classification could shift from tangled_rope to snare or to pure rope depending on ratio.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Technical vs institutional components of switching costs"
+    },
+    {
+      "id": "network_effects_coordination_vs_extraction",
+      "question": "Do network effects primarily generate genuine coordination benefits (lower cost for all users) or primarily concentrate extraction (incumbent monopoly rent)?",
+      "resolution_mechanism": "Cost-benefit analysis: comparison of user welfare under lock-in vs hypothetical fragmented ecosystem; empirical study of price trajectories and feature innovation after lock-in reaches critical mass",
+      "impact": "If coordination-dominated: classification remains tangled_rope (genuine benefit + extraction). If extraction-dominated: classification shifts toward snare (minimal coordination, maximum extraction). If benefit marginal: shifts toward pure piton (theater with degraded function).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether network effects primarily benefit users or concentrate incumbent rents"
+    },
+    {
+      "id": "interoperability_sunset_reality",
+      "question": "Is the open standards / interoperability sunset clause (scaffold perspective) structurally achievable or aspirational theater?",
+      "resolution_mechanism": "Technical feasibility analysis of proposed interoperability standards; timeline projection based on historical standards adoption rates; monitoring of incumbent resistance to API standardization",
+      "impact": "If achievable: scaffold classification confirmed, theater_ratio justified, lock-in has genuine exit path. If not achievable: scaffold is aspirational theater, and true classification is snare with no exit. Mandatrophy turns on this question.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether interoperability standards sunset is technically and politically feasible"
+    },
+    {
+      "id": "incumbent_provider_intentionality",
+      "question": "Is the incumbent's lock-in mechanism an emergent consequence of coordination incentives or an intentional extraction strategy?",
+      "resolution_mechanism": "Historical analysis of API design choices, documentation accessibility, migration tool provision; comparison with incumbents that chose high-interoperability strategies; testimony from internal product/platform decisions",
+      "impact": "Intentionality affects mandatrophy framing but not classification: tangled_rope remains appropriate regardless. However, intentionality affects whether the constraint should be classified as snare (deliberate trap) or rope+extraction byproduct (coordination with side effects). This determines narrative framing and policy response.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether lock-in emerges from coordination or deliberate extraction strategy"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "Technological lock-in occurs when users or organizations become unable or unwilling to switch from an incumbent technology platform despite the availability of superior or equivalent alternatives, due to switching costs, network effects, data incompatibility, or ecosystem dependencies. This constraint exhibits the full spectrum of DR classifications depending on observer position. The same structural phenomenon \u2014 network effects that prevent switching \u2014 appears as a coordination mechanism solving the platform bootstrap problem (rope from the incumbent perspective), a genuine hybrid of coordination and asymmetric extraction (tangled rope from organizational and rival perspectives), an immutable property of how technologies scale (false mountain from the analytical perspective), a temporary problem being solved by interoperability standards (scaffold from the coalition perspective), or pure extraction with no exit (snare from individual trapped users). The constraint's extractiveness has increased over time (0.30\u21920.58) as network effects mature and switching costs accumulate, while theater_ratio has also increased (0.35\u21920.55), indicating that as the lock-in solidifies, institutional actors increasingly perform exploration of alternatives rather than genuinely pursuing exit.",
+    "key_agents": [
+      "Locked-In Users: Primary victims (powerless/trapped) \u2014 face catastrophic switching costs including data conversion, workflow retraining, lost ecosystem integrations, incompatibility with collaborators' systems",
+      "Organizational Adopters: Secondary victims and partial beneficiaries (moderate/constrained) \u2014 experience coordination benefits from ecosystem maturity but also face extraction through vendor lock-in pricing and limited switching options",
+      "Incumbent Technology Provider: Primary beneficiary (institutional/arbitrage) \u2014 captures network effects and switching costs; can set prices and control ecosystem evolution with minimal threat of displacement",
+      "Rival Technology Competitors: Strategic actors (powerful/mobile) \u2014 must overcome coordination barriers while acknowledging legitimate network effects; invest in alternative ecosystems to break lock-in",
+      "Open Standards Coalition: Organized agents (organized/constrained) \u2014 industry consortia, open-source communities, standards bodies pursuing interoperability and data portability as lock-in escape mechanisms",
+      "Legacy Institutional Holdouts: Inertial actors (institutional/analytical) \u2014 continue using deprecated technology due to prior investment, regulatory constraints, or capability gaps; perform evaluation of alternatives without executing migration",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements (API design choices, data formats, business models) as immutable properties of technological networks"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and increasing. Lock-in begins with genuine coordination benefit (network effects solve the platform bootstrap problem), but as adoption reaches critical mass, the incumbent captures surplus value through pricing power, limited feature innovation, and vendor lock-in. The increasing trajectory (0.30\u21920.58) reflects accumulation of switching costs over the technology's lifecycle. Extraction is not maximal (0.58 not 0.75+) because the incumbent still must provide competitive baseline features and face periodic threat from rival ecosystems, particularly for new deployment decisions. Suppression (0.65): Moderate-high. Multiple barriers prevent switching: technical incompatibilities, data lock-in, ecosystem dependencies, workflow familiarity, organizational inertia, switching cost uncertainty, and network effects. However, suppression is not total because some users do successfully migrate (to open-source alternatives, new platforms, or interoperable competitors), and regulatory interventions (interoperability mandates, data portability laws) are lowering barriers. Theater ratio (0.55): Moderate. The constraint includes both genuine coordination functions (ecosystem maturity providing real benefits) and performative elements (institutional actors exploring alternatives they never adopt, standards committees performing consensus while incumbents maintain de facto control). Theater has increased over time as path dependency solidifies and exit becomes more performative (institutions study alternatives) than real (actual migration).",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence from a single set of structural parameters. The incumbent provider sees pure coordination (Rope) \u2014 network effects are solving a genuine collective action problem. Organizational adopters see mixed benefits and extraction (Tangled Rope) \u2014 they receive coordination benefits but pay extraction tax. Locked-in individual users see pure extraction with no exit (Snare) \u2014 switching costs are insurmountable relative to their resources. Organized coalitions see a temporary problem with sunset (Scaffold) \u2014 interoperability standards and open-source alternatives are building exit paths. Legacy institutions see degraded ritual (Piton) \u2014 they continue using the technology due to inertia while symbolically evaluating alternatives. The civilizational observer risks seeing natural law (false Mountain) \u2014 but the structural data reveals this as a naturalization of contingent choices about API design, data formats, and business models.",
+    "directionality_logic": "Directionality (d) is computed from each agent's structural relationship to the lock-in mechanism. Trapped users with no arbitrage options derive d \u2248 0.95 (maximum target status) producing high f(d) \u2248 1.42 and high chi. Institutional beneficiaries with arbitrage options (the incumbent) derive d \u2248 0.05 (full beneficiary status) producing low f(d) \u2248 -0.12 and negative chi (they experience the constraint as subsidy). Organizational adopters with constrained exit options derive d \u2248 0.60 (moderate target) producing moderate f(d) \u2248 0.75. The scaffold coalition with organized status and constrained but visible exit options derives d \u2248 0.40, reflecting that they can drive change but face incumbent resistance. These directionality values drive the perspectival gap: the same \u03b5 value (0.58) produces radically different \u03c7 values depending on d, explaining why the beneficiary perceives rope while victims perceive snare.",
+    "mandatrophy_analysis": "RESOLUTION: The mandatrophy in technological lock-in is resolved by recognizing that the constraint genuinely combines coordination and extraction functions. The incumbent provider is solving a real bootstrap problem (network effects are necessary for platform viability); simultaneously, the incumbent is extracting surplus through switching costs and reduced competitive pressure. Both functions are real, not one masking the other. The tangled_rope classification is correct, not a failure of the framework to distinguish pure types. The mandatrophy appears when observers ask 'is this cooperation or coercion?' The answer is: both, structurally. The coordination function (solving network effects bootstrap) is real and valuable. The extraction function (leveraging accumulated network effects to limit competition) is also real and costly. The policy question is not whether to eliminate the lock-in entirely (which would destroy the coordination benefit) but whether to reduce extraction while preserving coordination (interoperability, data portability, API standards, rival ecosystem support). The false mountain perspective (this is inherent to how technology works) naturalizes contingent design choices (closed APIs, proprietary data formats) as immutable laws. Unmasking this false summit clarifies that lock-in's severity is policy-sensitive, not technology-determined."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_ecosystem_power_imbalance",
+      "interoperability_standards_fragmentation",
+      "data_portability_barriers"
+    ],
+    "dual_formulation_note": "Technological lock-in decomposes into at least three distinct constraints with different \u03b5 values: (1) network_bootstrap_coordination (\u03b5\u22480.15, pure Rope) \u2014 the genuine coordination problem lock-in solves; (2) switching_cost_accumulation (\u03b5\u22480.58, Tangled Rope) \u2014 the extraction mechanism that emerges from matured network effects; (3) incumbent_rent_extraction (\u03b5\u22480.75, Snare) \u2014 pure extraction when switching costs are weaponized through pricing. Each has different measurement properties and policy interventions. This story models the composite constraint system where all three interact."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.35
+    }
+  ]
+}

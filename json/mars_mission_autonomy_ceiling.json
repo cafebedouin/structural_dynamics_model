@@ -1,0 +1,206 @@
+{
+  "header": {
+    "constraint_id": "mars_mission_autonomy_ceiling",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "marsaut"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Mars Mission Autonomy Ceiling: Communication Lag and Decision Authority",
+    "topic_domain": "space_operations/human_autonomy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mission_control_authority",
+      "earth_based_agencies"
+    ],
+    "victims": [
+      "mars_crew_agency",
+      "mission_objectives"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Mars Crew Member",
+      "comment": "PERSPECTIVE 1: MARS CREW (SNARE) \u2014 Trapped by distance (22-minute one-way light lag). Cannot execute time-critical decisions without violating protocol. Faces extraction: career accountability for deviations, emergency response delays that may cause mission failure or crew harm. No exit option \u2014 the communication physics is immutable. Maximum experienced constraint."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Mars Mission Operations Team",
+      "comment": "PERSPECTIVE 2: MARS OPERATIONS TEAM (TANGLED ROPE) \u2014 Experiences genuine coordination function: Earth-Mars protocol coordination prevents catastrophic misalignment. Also experiences extraction: protocol enforcement prevents crew from optimizing for local conditions; decision authority concentrated in Earth-based control. Constrained exit \u2014 teams could theoretically request authority transfer but face institutional and career barriers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Mission Control Authority",
+      "comment": "PERSPECTIVE 3: MISSION CONTROL AUTHORITY (ROPE) \u2014 Primary beneficiary (institutional/arbitrage). Maintains decision authority and liability protection. Experiences constraint as pure coordination: Earth control communicates mission priorities and safety protocols. Can exit arbitrage if needed \u2014 delegation decisions are available. Net beneficiary from current arrangement."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Space Agencies (Institutional Players)",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL SPACE AGENCIES (TANGLED ROPE) \u2014 Coordination function: unified mission protocol prevents conflicting national priorities from fracturing Mars operations. Extraction function: agencies with larger Earth infrastructure (NASA, ESA, Roscosmos) preserve decision authority over smaller partners. Constrained exit \u2014 agencies could theoretically build independent Mars programs but face cost barriers and coordination failure risks."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Autonomous Operations Research Community",
+      "comment": "PERSPECTIVE 5: AUTONOMOUS OPERATIONS RESEARCH (SCAFFOLD) \u2014 Sees the autonomy ceiling as a temporary technical and policy constraint. AI/ML systems for autonomous Mars operations are advancing rapidly; distributed decision trees and local optimization protocols can reduce Earth dependency. Sunset logic: within 10-15 years, sufficient autonomous capacity may be available to justify decentralized decision authority. Currently constrained by policy and validation requirements, but exit is visible."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Mission Safety Protocols (Institutional Theater)",
+      "comment": "PERSPECTIVE 6: MISSION SAFETY PROTOCOLS (PITON) \u2014 The procedural apparatus around Earth-Mars command authority has grown substantially beyond its functional core. Risk assessments, contingency hierarchies, and escalation procedures create theater \u2014 extensive documentation and approval chains that provide reassurance of control rather than increasing actual safety margins. Theater ratio high because: (1) many procedures are redundant with others, (2) Earth cannot actually respond to emergencies (lag precludes real-time intervention), (3) procedures are maintained for institutional legitimacy rather than functional safety. Piton classification: maintained through inertia and liability aversion, not robust safety function."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Physical Limit View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / PHYSICAL LIMIT VIEW (MOUNTAIN) \u2014 From a civilizational perspective focused on physics, the light-speed delay (22 minutes one-way) creates an immutable constraint on real-time control. No technology can overcome relativistic communication limits. However, this perspective naturalizes what is actually a policy choice \u2014 whether to enforce Earth-centered decision authority or permit local Mars autonomy within delegated parameters. The physical constraint (communication lag) is real; the institutional constraint (centralized control) is contingent."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "autonomy_threshold_definition",
+      "question": "At what level of autonomous capability does delegation of Earth control become justified rather than reckless?",
+      "resolution_mechanism": "Comparative analysis of Mars mission failure modes with/without Earth control; validation data from Earth-orbit autonomous operations; AI system reliability metrics correlated with mission-critical decision rates",
+      "impact": "If threshold is reachable with current tech: scaffold perspective validated; policy change is feasible. If threshold requires breakthrough: piton perspective confirmed; control structure persists through technical necessity, not institutional inertia.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Operational threshold for justifying autonomous Mars decision authority"
+    },
+    {
+      "id": "liability_vs_safety_gap",
+      "question": "Does Earth-centered decision authority improve actual mission safety outcomes, or primarily reduce institutional liability exposure for mission control?",
+      "resolution_mechanism": "Regression analysis: mission outcomes correlated with decision lag; comparison of failure rates under full Earth control vs. pre-authorized local autonomy; analysis of historical decisions where Earth authority prevented vs. enabled mission-critical failures",
+      "impact": "If authority improves safety: snare classification is overstated; tangled rope is more accurate. If authority primarily protects liability: snare classification confirmed; safety theater is driving piton classification.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether Earth control improves safety or primarily reduces institutional liability"
+    },
+    {
+      "id": "political_coordination_necessity",
+      "question": "Does centralized Earth control serve genuine international coordination of Mars activities, or is it primarily a legacy of Cold War space competition protocols?",
+      "resolution_mechanism": "Historical comparison of international Mars cooperation under centralized control vs. decentralized models; analysis of actual conflicts prevented by centralized authority; examination of institutional incentives for maintaining control independent of coordination function",
+      "impact": "If coordination is genuine: tangled rope classification validated; both extraction and coordination functions are real. If control is vestigial Cold War structure: piton classification shifted; institution maintains authority through path dependence rather than functional necessity.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether Earth-centered control serves genuine international coordination or vestigial protocols"
+    },
+    {
+      "id": "crew_identity_lock_vs_external_barriers",
+      "question": "To what extent is crew acceptance of Earth control due to internalized hierarchical identity (identity_locked) versus external barriers to delegation (trapped)?",
+      "resolution_mechanism": "Qualitative analysis of crew interviews pre- and post-mission; examination of crew proposals for expanded autonomy; comparison of crew risk tolerance with actual physical constraints; simulation of expanded authority scenarios to detect identity-based vs. practical objections",
+      "impact": "If identity_locked dominates: crew perception of constraint as immutable exceeds structural reality; reframing could increase effective agency without physical changes. If trapped dominates: crew perception is accurate; only technical solutions (better autonomous systems) enable real agency expansion.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether crew constraint is identity-based or materially structural"
+    },
+    {
+      "id": "autonomous_system_failure_mode_parity",
+      "question": "Do autonomous Mars decision systems have failure modes symmetrical to or substantially worse than Earth-based control failure modes?",
+      "resolution_mechanism": "Failure analysis: types of errors produced by centralized Earth control (slow response, incomplete information, policy rigidity) vs. autonomous systems (optimization errors, environmental blindness, goal-misalignment); simulation comparison of outcome distributions",
+      "impact": "If failure modes are parity or autonomous advantage: scaffold perspective strengthened; autonomous delegation can be justified. If autonomous systems have systemic advantages in specific failure modes: piton theater tag shifts \u2014 Earth control persists to avoid asymmetric risks, not to improve outcomes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Comparative failure mode analysis of autonomous vs. Earth-controlled Mars operations"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The autonomy ceiling in Mars missions represents a structural tension between the physical reality of light-speed communication delay (22-minute one-way lag) and the institutional choice to enforce centralized Earth-based decision authority. This constraint operates at multiple levels: it is simultaneously a physical limit (immutable), a coordination mechanism (preventing mission-fracturing conflicts), an extraction mechanism (concentrating decision authority and liability protection in Earth-based agencies), a degraded institutional ritual (safety protocols that provide reassurance without functional improvement), and a temporary technical constraint being addressed by autonomous systems research. The constraint's extractiveness (0.58) reflects that mission control authority captures career and institutional benefits while Mars crew face accountability for deviations and operational paralysis during time-critical events. The theater ratio (0.65) reflects that safety procedures around Earth-Mars command have grown beyond their functional core \u2014 risk documentation and approval chains provide institutional legitimacy and liability protection rather than improving actual mission outcomes.",
+    "key_agents": [
+      "Mars Crew: Primary victim (powerless/trapped) \u2014 cannot execute time-critical decisions; faces career accountability and mission failure risk from communication lag constraints",
+      "Mission Control Authority: Primary beneficiary (institutional/arbitrage) \u2014 maintains decision authority, liability protection, and career advancement through control preservation; can delegate if needed",
+      "Mars Operations Team: Secondary victim (moderate/constrained) \u2014 experiences both genuine coordination function and extraction through protocol enforcement; faces barriers to requesting authority transfer",
+      "International Space Agencies: Institutional actors (powerful/constrained) \u2014 coordination function genuine (unified protocol prevents national conflicts); extraction function real (larger agencies preserve decision authority over smaller partners)",
+      "Autonomous Operations Research Community: Organized agents (organized/mobile) \u2014 see autonomy ceiling as temporary technical/policy constraint with visible sunset; advancing AI/ML can justify decentralization",
+      "Mission Safety Protocols: Institutional structure (institutional/arbitrage) \u2014 performative apparatus providing reassurance of control; maintained through inertia and liability aversion rather than functional safety improvement",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing policy choice (centralized control) as physical necessity (communication lag)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Mission control captures institutional and career benefits from centralized authority \u2014 preserves liability protection, career advancement opportunities, and prestige through decision control. The crew faces offsetting harms: accountability for deviations, operational paralysis, reduced autonomy. However, the extraction is not maximal because some genuine coordination benefits exist (preventing conflicting national missions), and the gap itself creates legitimate first-mover safety concerns. Measurement trajectory shows increasing extractiveness (0.42\u21920.58) as international missions have layered more authorization procedures and complexity. Suppression (0.72): High. Barriers to crew autonomy are substantial: communication physics (immutable 44-minute round-trip lag), institutional policy (Earth-centered authority), liability structures (mission control bears formal responsibility), and technological constraints (current autonomous systems cannot match human decision-making for all mission classes). These barriers are not total \u2014 crew can execute pre-authorized responses and some local optimization \u2014 but they are severe enough that crew cannot effectively override control protocols. Theater ratio (0.65): Moderate-high. Safety procedures have expanded significantly beyond their functional core. Many contingency protocols are redundant; escalation procedures create reassurance theater because Earth cannot actually execute real-time intervention (lag precludes response). Procedures are maintained primarily for institutional legitimacy (boards, oversight, liability protection) rather than functional safety improvement. Unlike piton (theater \u22650.70), the constraint still retains significant coordination function, preventing classification as pure theatrical maintenance.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from structural position within the constraint. Mission Control (institutional/arbitrage) experiences d \u2248 0.10 (beneficiary with high exit options) producing low effective extraction. Mars crew (powerless/trapped) experience d \u2248 0.95 (victim with no exit) producing maximum effective extraction per f(d). Operations teams (moderate/constrained) experience d \u2248 0.65 (victim with high but surmountable exit costs) producing moderate-high extraction. International agencies (powerful/constrained) experience d \u2248 0.40-0.50 depending on agency size and partnership role \u2014 larger agencies have lower d (more benefit from coordination control), smaller agencies higher d (more extraction from authority concentration). The gap between beneficiary d and victim d is the perspectival signal: large gap indicates asymmetric extraction; small gap indicates genuine coordination.",
+    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon yields different classifications depending on observer position. Mission control sees rope \u2014 they are solving the legitimate coordination problem of preventing conflicting national Mars agendas and ensuring mission safety. Crew see snare \u2014 they bear maximum constraint without meaningful benefit, facing accountability for response delays and operational paralysis. Operations teams see tangled rope \u2014 genuine coordination benefits mixed with extraction through protocol enforcement. Autonomous research community sees scaffold \u2014 the constraint is technical/policy temporary with visible sunset as AI autonomy improves. The institutional safety apparatus sees itself as piton \u2014 degraded ritual maintained through inertia. The analytical observer risks seeing mountain \u2014 naturalizing the policy choice (centralized control) as a physical necessity (communication lag). The perspectival gap reveals that the constraint's type is genuinely observer-relative; no single classification is 'correct' independent of position.",
+    "mandatrophy_analysis": "CRITICAL CASE: The autonomy ceiling resolves apparent mandatrophy (how can this be both coordination and extraction?) by showing that it IS genuinely both. Mission control coordination function is real: Earth-based authority does prevent conflicting national missions and ensures unified safety protocols. Extraction function is also real: the coordination could be achieved through looser authority structures with pre-authorized crew autonomy, but current structure concentrates decision authority and benefits in Earth agencies. The mandatrophy dissolves when you recognize that coordination and extraction are not mutually exclusive \u2014 the constraint coordinates while extracting. This is precisely the tangled rope structure. The false summit detector (mountain perspective) correctly flags that the 'physical limit' framing naturalizes a policy choice. The communication lag IS immutable; centralized decision authority is NOT. The analytical observer's error is treating the physical constraint as the entire explanation for the institutional constraint."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "mars_habitat_self_repair_authority",
+      "emergency_medical_autonomy"
+    ],
+    "dual_formulation_note": "The autonomy ceiling constraint family includes three distinct structural claims decomposed by domain: (1) mars_mission_autonomy_ceiling \u2014 overall decision authority and communication lag; (2) mars_habitat_self_repair_authority \u2014 operational maintenance and repair decisions; (3) emergency_medical_autonomy \u2014 crew health decisions under communication lag. Each has different \u03b5 values reflecting domain-specific extractiveness. The master constraint affects both subordinate constraints through network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

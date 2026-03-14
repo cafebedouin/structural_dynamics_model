@@ -1,0 +1,204 @@
+{
+  "header": {
+    "constraint_id": "student_debt_accumulation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "stdbt"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Student Debt Accumulation as Extractive Constraint",
+    "topic_domain": "economic/educational",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "lending_institutions",
+      "loan_servicers",
+      "education_credential_gatekeepers"
+    ],
+    "victims": [
+      "student_borrowers",
+      "future_economic_mobility"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Debtor Student",
+      "comment": "PERSPECTIVE 1: DEBTOR STUDENT (SNARE) \u2014 Structurally trapped. Educational credential is essential for viable labor market entry; debt is the only documented pathway to that credential in the contemporary system. Student cannot exit without abandoning credential pursuit entirely. Suppression is maximal: income-driven repayment creates perpetual obligation; collection mechanisms are aggressive; bankruptcy protection is statutorily unavailable. Extraction runs fully toward lenders. No coordination benefit is perceived from the borrower's position \u2014 the debt mechanism purely extracts."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Lending Institution",
+      "comment": "PERSPECTIVE 2: LENDING INSTITUTION (ROPE) \u2014 Benefits from the debt accumulation constraint through risk-adjusted returns, government guarantees, and fee structures. Experiences the constraint as a coordination mechanism: loan origination, servicing, and collection are genuinely coordinated functions. From the lender's structural position, the constraint solves the problem of how to monetize educational futures. Exit options are abundant (arbitrage into other credit products). Extraction runs toward this institution."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Parent Co-Signer",
+      "comment": "PERSPECTIVE 3: PARENT CO-SIGNER (TANGLED ROPE) \u2014 Structurally constrained by family obligation and implicit expectations. Has genuine incentive to coordinate (child's education) but bears asymmetric extraction (parental income garnishment, credit score damage). Cannot easily exit without violating kinship norms. Experiences both coordination function (enabling child's education) and extraction (parental obligation structure)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Debt Relief Coalition",
+      "comment": "PERSPECTIVE 4: DEBT RELIEF COALITION (SCAFFOLD) \u2014 Organized agents (debt cancellation advocates, student unions, progressive legislators) perceive the student debt constraint as a temporary institutional arrangement with a sunset. Debt forgiveness programs, free college proposals, and public service loan forgiveness represent alternative pathways. Organized agents have agency and exit strategies. Extraction experienced is moderate because the exit pathway is visible and politically contestable. Theater is present (income-driven repayment plans create illusion of flexibility) but not dominant."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Education Funding System",
+      "comment": "PERSPECTIVE 5: EDUCATION FUNDING SYSTEM (PITON) \u2014 The shift from state-funded public higher education to individual debt-financing is a degraded institutional arrangement maintained through inertia. The original function \u2014 ensuring broad access to education \u2014 has atrophied. The system persists because alternative funding mechanisms (progressive taxation, public investment) have been politically defunded, leaving debt as the only remaining pathway. Theater is moderate (financial aid offices, income-driven repayment, public service forgiveness) masking the systematic withdrawal of public support. The piton classification derives from theater_ratio and the atrophy of public funding function."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational/global view, student debt accumulation functions as a mechanism of wealth extraction and intergenerational constraint. The constraint suppresses career mobility, family formation, housing access, and wealth accumulation for debtor cohorts. Exit is analytically available only through political economy shifts (debt cancellation, public investment, alternative credentialing). The analytical perspective reveals the structure as a snare: borrower populations are trapped by credential necessity, suppressed by collection mechanisms and bankruptcy restrictions, with asymmetric extraction toward lenders and away from debtors."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "credential_necessity_threshold",
+      "question": "Is educational credential truly necessary for viable labor market participation, or is this a socially constructed barrier maintained by credentialing institutions?",
+      "resolution_mechanism": "Labor market analysis comparing wage trajectories and employment access for credentialed vs non-credentialed workers controlling for ability/productivity; examination of credential inflation over time; analysis of alternative certification pathways (apprenticeships, portfolios, demonstrated competence)",
+      "impact": "If credential is genuinely necessary: exit_options for students are legitimately trapped, supporting snare classification. If credential is socially constructed barrier: the trap is contingent rather than structural, and constraint reclassifies as Tangled Rope with higher leverage for escape through alternative credentialing systems.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether educational credentials are structurally necessary or socially enforced"
+    },
+    {
+      "id": "default_rate_true_incidence",
+      "question": "What proportion of student debt defaults represent borrower inability to repay vs deliberate non-payment due to perceived unfairness or predatory lending terms?",
+      "resolution_mechanism": "Survey data on borrower motivation for default; comparison of default rates across loan terms (federal vs private, fixed vs variable); analysis of default clustering by debt-to-income ratio; examination of borrower perceptions of loan legitimacy and fairness",
+      "impact": "If defaults are inability-driven: suppression operates through material economic barriers (low income, job loss) and classification remains snare. If defaults are deliberate non-payment: suppression is maintained through enforcement mechanisms (credit scoring, wage garnishment) against borrower resistance, suggesting active extraction enforcement and stronger snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether defaults represent inability to pay or deliberate resistance"
+    },
+    {
+      "id": "intergenerational_wealth_extraction",
+      "question": "Does student debt accumulation function as a mechanism that systematically extracts wealth from younger cohorts to older wealth-holders through mechanisms of time-value-of-money and compounding interest?",
+      "resolution_mechanism": "Cohort wealth analysis comparing net worth trajectories for pre-debt-expansion cohorts vs post-1980s cohorts controlling for education level; interest payment analysis showing cumulative wealth transfer from borrowers to lenders; modeling of lifetime earnings differential lost to debt service",
+      "impact": "If wealth extraction is systematic and intergenerational: classification is robust snare. If wealth extraction is incidental to legitimate educational financing: classification shifts toward tangled_rope with weaker extraction component. This determines whether the constraint's primary function is education coordination vs wealth transfer.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether student debt systematically extracts wealth across generations"
+    },
+    {
+      "id": "lender_surplus_capture",
+      "question": "What proportion of student loan profit accrues to lenders as pure surplus (extraction) vs legitimate financing cost and risk compensation?",
+      "resolution_mechanism": "Financial analysis of lending institution loan portfolios; comparison of student loan profit margins to other credit products; analysis of loan origination costs and risk-adjusted returns; examination of federal guarantees and how much risk is actually borne by private lenders",
+      "impact": "If profit is primarily surplus: supports high extractiveness (0.68) and snare classification. If profit reflects legitimate cost and risk: extractiveness should be lower (0.35-0.45) and constraint reclassifies as Tangled Rope. The gap between actual and legitimate profit is the rent-seeking component.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "What portion of lender profit represents surplus vs legitimate cost recovery"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Student debt accumulation functions as a structural extraction mechanism that has progressively tightened since the late 1970s. The constraint operates through credential necessity (students cannot access viable labor markets without educational credentials) combined with suppression mechanisms (limited bankruptcy protections, aggressive collection, income-based repayment that extends obligation indefinitely) and theatrical legitimation (financial aid rhetoric, income-driven repayment plans that create illusion of flexibility). The system extracts from powerless student borrowers toward lending institutions and education gatekeepers, while organized debt relief coalitions perceive it as a temporary problem with political exit pathways. From a civilizational analytical perspective, the constraint represents a fundamental shift from state-funded public education to individual debt-financed credentialing\u2014a degradation of public infrastructure masked by financial services rhetoric.",
+    "key_agents": [
+      "Student Borrowers: Primary victims (powerless/trapped) \u2014 require credentials for labor market access; cannot exit debt without abandoning education; bear full extraction cost through decades of repayment",
+      "Lending Institutions: Primary beneficiaries (institutional/arbitrage) \u2014 capture risk-adjusted returns, government guarantees, and fee structures; experience constraint as coordination mechanism for monetizing educational futures",
+      "Federal Student Loan Servicers: Secondary beneficiaries (institutional/arbitrage) \u2014 extract servicing fees, default collection premiums, and origination fees; maintain extraction infrastructure",
+      "Education Credential Gatekeepers: Beneficiaries (institutional/arbitrage) \u2014 universities benefit from tuition extraction and loan-enabled enrollment inflation; have no incentive to reduce credential barriers",
+      "Parent Co-Signers: Secondary victims (moderate/constrained) \u2014 bear parental obligation to support borrowing; experience joint liability and credit score damage; cannot easily exit kinship expectations",
+      "Future Cohorts: Systemic victims (powerless/trapped) \u2014 early debt accumulation constrains family formation, wealth accumulation, housing access, and intergenerational mobility for younger generations",
+      "Debt Relief Coalition: Organized agents (organized/constrained) \u2014 perceive constraint as temporary and contestable through policy change; advocate sunset pathways (debt cancellation, free college, public investment)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 reveals extraction mechanism and systematic wealth transfer from younger to older cohorts; identifies atrophy of public education funding as root cause"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and increasing. Student debt has grown from ~$35 billion (1993) to ~$1.7 trillion (2023), with extractiveness increasing as debt-to-income ratios have risen and repayment timelines have lengthened. The measurement trajectory shows extractiveness rising from 0.35 (1993: basic loan financing) to 0.68 (2023: systemic wealth extraction mechanism). Suppression (0.72): Very high. Multiple mechanisms suppress alternatives: (1) educational credential necessity creates structural necessity for borrowing; (2) bankruptcy law (2005 BAPCPA) effectively eliminated discharge of private student loans, removing fundamental safety valve; (3) income-driven repayment extends obligations indefinitely, trapping borrowers in perpetual extraction; (4) collection mechanisms (wage garnishment, tax offset, social security garnishment for borrowers 65+) are exceptionally aggressive compared to other credit products. Theater ratio (0.58): Moderate-high and increasing. Income-driven repayment plans (PAYE, REPAYE, INCOME-CONTINGENT) create theatrical illusion of flexibility while actually extending repayment periods and increasing interest accrual. Financial aid packaging creates illusion of institutional support masking systematic shift of funding burden to students. Public service loan forgiveness program (PSLF) has 99% rejection rate in early years, functioning as theater rather than genuine relief. Theater has increased as the system has become more extractive\u2014more performative mechanisms are needed to legitimize the constraint.",
+    "perspectival_gap": "This constraint demonstrates the sharp perspectival gap between powerless trapped agents (maximum snare perception) and institutional beneficiaries (rope perception) and organized challengers (scaffold perception). The gap reveals that the constraint's classification is observer-relative: the same mechanism appears as immovable snare from the borrower's position but as contestable scaffold from the debt relief coalition's position. This is not because the constraint has two natures, but because exit capacity and agency differ across structural positions. The analytical observer sees the constraint as pure snare because the analytical position can see the full extraction mechanism and its political contingency\u2014the constraint could be unmade through policy, but isn't, which makes the extraction mechanism visible.",
+    "directionality_logic": "Student borrowers: high d (~0.92) derived from powerless + trapped + victim status \u2192 f(d) \u2248 1.38 \u2192 high experienced extraction. Lending institutions: low d (~0.08) derived from institutional + arbitrage + beneficiary status \u2192 f(d) \u2248 -0.08 \u2192 negative/subsidy-like experienced extraction (benefit flow). Debt relief coalition: moderate d (~0.58) derived from organized + constrained + partial victim status (representing future borrowers) \u2192 f(d) \u2248 0.75 \u2192 moderate extraction, but with agency and exit visibility that lowers effective constraint. Analytical observer: moderate-high d (~0.75) derived from analytical position + systemic victim framing \u2192 f(d) \u2248 1.15 \u2192 high extraction in abstract terms, but mediated through analytical distance. No directionality overrides are needed\u2014the structural data generates appropriate d values through the derivation chain.",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION WITH ORGANIZATIONAL QUALIFICATION: The primary classification (snare) is robust across powerless, moderate, and analytical perspectives. However, the 'Dynamic Coalition' extension (corpus update) suggests that the snare classification may be subject to power upgrade if the coalition of powerless agents (student borrowers) achieves sufficient organization. Current student debt activism (debt strikes, loan forgiveness advocacy) shows signs of coalition formation. If the powerless agent power is upgraded to 'organized' based on critical mass of active participants, the effective extraction coefficient (\u03c7) would decrease, potentially shifting the constraint from snare toward tangled_rope. This does not invalidate the snare classification\u2014it reflects the structural reality that snares can degrade when trapped agents achieve sufficient coordination. The mandatrophy is resolved by noting that the snare classification is contingent on the absence of organized borrower resistance; the presence of coalition activity suggests the constraint is actively being contested and may degrade over the measurement interval."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wage_stagnation",
+      "intergenerational_wealth_inequality",
+      "housing_affordability_crisis",
+      "credential_inflation",
+      "family_formation_delay"
+    ],
+    "dual_formulation_note": "Student debt accumulation is downstream of the broader constraint 'state-funded_education_defunding' (higher \u03b5 as pure policy choice) and upstream of multiple economic constraints it enables (housing access, wealth inequality, family formation timing). The network reflects causal and structural coupling: debt accumulation is not primarily a financial services constraint, but a policy constraint downstream of the decision to privatize education funding."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.95
+    }
+  ]
+}

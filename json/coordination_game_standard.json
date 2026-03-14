@@ -1,0 +1,156 @@
+{
+  "header": {
+    "constraint_id": "coordination_game_standard",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cgs"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.12,
+    "theater_ratio": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "Coordination Game Standard",
+    "topic_domain": "game_theory/coordination/information_standards",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "all_coordinating_parties"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Individual Participant (Peer Perspective)",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL PARTICIPANT (ROPE) \u2014 Any single actor can theoretically exit the standard and defect, but doing so is costly only to themselves (loss of coordination benefit). From the individual's biographical perspective, the standard is negotiable. From generational view, the standard becomes immutable \u2014 the participant is embedded in a coordination infrastructure maintained by thousands of prior agreements. Low suppression because defection is structurally possible; low extraction because the standard does not extract FROM the individual, it extracts the coordination benefit FOR them."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Coordinating Coalition",
+      "comment": "PERSPECTIVE 2: COORDINATING COALITION (ROPE) \u2014 Organized actors (firms, governments, standards bodies) experience the constraint as pure coordination: the standard solves a collective action problem. Exit is costly for large coalitions (shifting millions of users to a new standard) but not impossible. The coalition benefits uniformly from the standard's existence. Suppression derives from coordination lock-in (high switching costs) rather than coercion, and is therefore classified as constraint rather than trapped."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "label": "Standards-Setting Institution",
+      "comment": "PERSPECTIVE 3: STANDARDS-SETTING INSTITUTION (ROPE) \u2014 The institution that maintains or evolves the standard (ISO, IETF, IEEE, etc.) has maximum arbitrage: they can propose new standards, migrate populations, or broker transitions. They see the coordination game as their function \u2014 no extraction, pure coordination benefit. The institution benefits from the standard's existence and adoption, but this is alignment with their stated purpose, not extraction. Very low theater because the standard's function (enabling coordination) is entirely transparent."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (ROPE) \u2014 From civilizational/universal scope, the coordination game standard is pure coordination. No agent extracts from others; all benefit from successful coordination. The standard solves an irreducible collective action problem: without shared expectations, coordination fails and all parties suffer. Extraction is zero; suppression is low (no coercion); theater is near-zero (function is transparent). This constraint is a canonical rope \u2014 pure coordination mechanism with minimal overhead."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "latecomer_asymmetry",
+      "question": "Do latecomers to an established standard bear asymmetric costs compared to first movers?",
+      "resolution_mechanism": "Historical analysis of technology adoption curves; comparison of switching costs across temporal cohorts; measurement of migration friction in network effects",
+      "impact": "If true: standard may contain embedded extraction (early adopters benefit disproportionately). If false: standard is pure coordination with uniform benefit distribution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether network effects create latecomer asymmetry"
+    },
+    {
+      "id": "lock_in_vs_coordination",
+      "question": "Is suppression measured by switching costs a legitimate coordination constraint or disguised extraction?",
+      "resolution_mechanism": "Decompose switching costs into: (a) coordination lock-in (inherent to multi-party systems), vs (b) artificial switching barriers (proprietary formats, predatory licensing, vendor lock-in). Measure each separately.",
+      "impact": "If dominated by coordination lock-in: rope classification confirmed. If dominated by artificial barriers: reclassify as snare or tangled_rope.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Distinguish genuine coordination lock-in from extractive switching barriers"
+    },
+    {
+      "id": "standards_capture",
+      "question": "Can dominant firms or coalitions capture the standards-setting process to extract rents from subordinate adopters?",
+      "resolution_mechanism": "Institutional analysis of standards bodies; tracking of voting power, proposal influence, and patent licensing terms; comparison of standards-setting governance across ISO, IETF, de facto (industry), and open-source models",
+      "impact": "If common: standards are tangled_rope or snare disguised as rope. If rare: rope classification is robust.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Prevalence of standards-setting body capture"
+    },
+    {
+      "id": "pareto_frontier_selection",
+      "question": "Do multiple Pareto-optimal equilibria exist, and if so, which gets selected as the standard?",
+      "resolution_mechanism": "Game-theoretic analysis of equilibrium set; historical examination of standards adoption (Bell System vs competitors, Intel vs AMD, VHS vs Betamax, etc.); identification of selection mechanisms (path dependence, power, luck)",
+      "impact": "If multiple optima with power-driven selection: reclassify as tangled_rope. If single optimum or neutral selection: rope confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Structure of equilibrium set and selection mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.07
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "A coordination game standard is a shared convention, protocol, or format that solves a collective action problem by providing focal points for distributed decisions. Examples include: technical standards (ISO 8601 for date formats, TCP/IP for networking), measurement units (SI system, Gregorian calendar), social norms (driving on the left or right), market conventions (currency denominations), and communication protocols (written language orthography). The constraint operates at the intersection of game theory and institutional economics. Each participant faces an incentive structure where their payoff depends on matching others' choices. Without a standard, coordination fails \u2014 actors choose incompatibly and all suffer. The standard solves this by providing mutual expectations. Extractiveness is minimal (0.08) because the standard's function is pure alignment \u2014 no agent extracts surplus from others; all benefit from successful coordination. Suppression (0.12) reflects switching costs and path dependence: once established, standards are difficult to change, and latecomers face higher adoption costs. Theater (0.15) reflects the minimal performative layer \u2014 standards require ceremonial reaffirmation and maintenance, but their core function is transparent. This constraint is a canonical Rope: pure coordination mechanism with low coercion, low extraction, and low theatrical overhead.",
+    "key_agents": [
+      "All Coordinating Parties: Uniform beneficiaries (organized/constrained) \u2014 all benefit from successful coordination; none extract from others",
+      "Standards-Setting Institution: Primary actor managing evolution (institutional/arbitrage) \u2014 ISO, IETF, open-source communities, or dominant firm setting de facto standards",
+      "Individual Participants: Embedded actors (powerless/mobile at biographical, locked at generational) \u2014 make coordination decisions within infrastructure maintained by prior generations",
+      "Latecomer Cohorts: Secondary actors (moderate/constrained) \u2014 face higher switching costs than pioneers but benefit from standard once adopted",
+      "Analytical Observer: Civilizational viewpoint (analytical/analytical) \u2014 sees the standard as pure coordination solving an irreducible collective action problem"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Minimal. The coordination game standard extracts nothing from any participant \u2014 its entire function is to align expectations so all parties benefit. Any extractiveness above zero derives from: (1) transition costs for latecomers (measurement as 0.02-0.03), and (2) minimal administrative overhead to maintain and evolve the standard (0.03-0.04). These are coordination costs, not extraction. If the measured extractiveness included proprietary licensing fees, vendor lock-in, or gatekeeping by dominant firms, the constraint would reclassify as tangled_rope or snare \u2014 but the pure coordination game standard has no such mechanisms. Suppression (0.12): Low-moderate. Switching costs are real: migrating a large population from one standard to another is costly, and individuals embedded in the standard infrastructure cannot easily opt out at biographical timescale. But suppression derives from coordination lock-in (inherent to multi-party systems) rather than coercion or threat. Defection is theoretically possible; the cost is self-inflicted loss of coordination benefit, not external punishment. Theater ratio (0.15): Low. The standard's function is transparent: enable coordination. There is minimal performative layer \u2014 standards bodies do engage in ceremonial ratification and periodic review, but these are genuinely functional (ensuring the standard evolves with technology and use cases) rather than theatrical. The near-zero theater distinguishes this from a piton, where function has atrophied and theater sustains the form.",
+    "perspectival_gap": "All four perspectives converge on the Rope classification, indicating a uniform-type constraint. The perspectival gap emerges not in classification type but in experienced constraint strength. Individual participants experience low suppression at biographical timescale (they can theoretically defect) but high suppression at generational timescale (they are embedded in infrastructure they did not build). Organized coalitions experience constraint at intermediate timescale (migration is costly but achievable). Standards-setting institutions experience minimal constraint \u2014 they have arbitrage (proposing new standards, brokering transitions). The analytical observer sees no extraction, constraint, or coercion at any timescale \u2014 the standard is pure coordination. These gaps are perspectival rather than classificatory: all agree the mechanism is rope, but the experienced immutability varies by power and time horizon.",
+    "directionality_logic": "Directionality (d) is uniformly low across all perspectives because there is no extraction flow: beneficiaries and victims are the same set (all coordinating parties). The derivation chain computes: all agents are beneficiaries (d lowered), none are victims (d not raised), exit options vary (biographical mobile \u2192 lower d; generational constrained \u2192 higher d; arbitrage \u2192 very low d; analytical \u2192 neutral). The sigmoid f(d) produces near-zero effective extraction (chi) because the base extraction (epsilon) is minimal and d is near 0.5 or below across all perspectives. This is the diagnostic signature of pure coordination: directionality is not driven by power asymmetry but by temporal embeddedness.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by observing that all six types would misrepresent the coordination game standard. Mountain would falsely naturalize a contingent social/institutional arrangement. Tangled_rope would require both genuine coordination AND asymmetric extraction \u2014 this constraint has coordination but no asymmetry (unless captured, per omega_3). Snare would require suppression \u2265 0.60 and \u03c7 \u2265 0.66 \u2014 extractiveness here is 0.08. Scaffold would require \u03c7 \u2264 0.30 and theater \u2264 0.70 \u2014 true, but scaffold implies a sunset, whereas coordination game standards persist (they evolve, but do not sunset). Piton would require theater \u2265 0.70 \u2014 but theater here is low (function is transparent). Only Rope fits: \u03c7 \u2264 0.35, base extraction \u03b5 \u2264 0.45, suppression \u2265 0.40. The constraint's metrics satisfy the rope gate precisely because it is pure coordination: low extraction, low suppression (coordination lock-in is not coercion), and all perspectives agree."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "directionality_overrides": []
+}

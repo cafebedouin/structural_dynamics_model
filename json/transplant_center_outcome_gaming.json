@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "transplant_center_outcome_gaming",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "transplant"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Transplant Center Outcome Gaming Under Risk-Adjusted Mortality Metrics",
+    "topic_domain": "healthcare/organ_transplantation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_performing_centers",
+      "elite_surgeons"
+    ],
+    "victims": [
+      "high_risk_patients",
+      "organ_allocation_equity",
+      "transplant_system_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The High-Risk Patient",
+      "comment": "PERSPECTIVE 1: HIGH-RISK PATIENT (SNARE) \u2014 Structurally trapped. Cannot refuse a risky transplant (waiting list offers limited organs). Cannot exit the allocation system. Center outcome gaming directly harms this agent: risk-averse centers reject their cases, creating artificial scarcity. Maximum experienced extraction with no alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Modest-Performing Center",
+      "comment": "PERSPECTIVE 2: MODEST-PERFORMING CENTER (TANGLED ROPE) \u2014 Constrained by competitive pressure and regulatory oversight. Faces both coordination (genuine need to report outcomes for system-wide learning) and extraction (reporting metrics creates liability for risk-taking). Benefits from participating in the transplant network; bears cost through transparency burden and risk-aversion incentives."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Elite Transplant Center",
+      "comment": "PERSPECTIVE 3: ELITE TRANSPLANT CENTER (ROPE) \u2014 Institutional actor with arbitrage options (reputation, selectivity). Experiences the constraint as pure coordination: risk-adjusted reporting enables centers to share methods and patient selection protocols. Can avoid high-risk cases and maintain favorable outcomes. Net beneficiary \u2014 the outcome metric system subsidizes their reputation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Body (UNOS/CMS)",
+      "comment": "PERSPECTIVE 4: REGULATORY BODY (TANGLED ROPE) \u2014 Coordinating the entire transplant system while managing outcome transparency. Faces extraction from elite centers (who resist public reporting) and compression from powerless patients (who need access). Enforces the metric system actively but cannot fully resolve the coordination-extraction tension. Constrained by political pressure and industry lobbying."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Clinical Outcomes Literature",
+      "comment": "PERSPECTIVE 5: CLINICAL OUTCOMES LITERATURE (PITON) \u2014 Risk-adjusted mortality reporting (UNOS Kaplan-Meier risk models) was originally designed to enable fair center comparison. But the literature has become theater: centers invest in gaming the metrics (patient selection, selective non-reporting) rather than improving actual outcomes. The original coordination function (benchmarking) has atrophied; the metric persists through institutional inertia and regulatory mandate despite degraded informational value."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Goodhart's Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational perspective, outcome gaming is an immutable feature of any measurement-based allocation system: when a metric becomes a target, it ceases to be a good metric (Goodhart's Law). The constraint appears as a law of organizational behavior, unchangeable through policy refinement. However, structural data reveals this as false naturalization \u2014 the gaming mechanism is contingent on specific incentive design (individual center accountability, public reporting, scarce organ allocation) and could be restructured."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "risk_adjustment_validity",
+      "question": "Are current risk-adjustment models (UNOS Kaplan-Meier) sufficiently accurate to distinguish center quality from patient case-mix?",
+      "resolution_mechanism": "External validation: independent re-analysis of center outcomes using alternative risk models and prospective prediction studies; assessment of model calibration across risk strata",
+      "impact": "If models invalid: outcome metrics reflect patient selection, not center quality \u2014 gaming is rational response to bad measurement. If valid: gaming indicates centers are consciously distorting allocation for reputation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Validity of risk-adjustment models for distinguishing center quality"
+    },
+    {
+      "id": "counterfactual_organ_allocation",
+      "question": "If outcome metrics were not reported or not visible to centers, would organ allocation patterns change and would actual patient outcomes improve?",
+      "resolution_mechanism": "Randomized policy experiment or natural experiment (compare allocation patterns pre/post metric publication); track both gaming indicators (patient selection strictness) and actual outcomes (graft survival, patient mortality)",
+      "impact": "If allocation improves: metrics are the extraction mechanism \u2014 removing them is structural solution. If allocation worsens: metrics enable necessary accountability despite gaming.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Counterfactual impact of outcome metrics on allocation and outcomes"
+    },
+    {
+      "id": "gaming_detection_completeness",
+      "question": "How much transplant center outcome gaming is currently undetected because it operates through patient exclusion (declining high-risk cases) rather than overt outcome manipulation?",
+      "resolution_mechanism": "Audit of case-decline patterns: track rates at which centers refuse cases by patient risk profile; compare against clinical contraindication rates; identify systematic differences between centers in accepting marginal cases",
+      "impact": "If high undetected gaming: suppression metric understates true constraint strength. If low: current detection mechanisms are adequate and the constraint is more transparent than perceived.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Extent of undetected patient exclusion gaming"
+    },
+    {
+      "id": "interdependence_of_extraction_mechanisms",
+      "question": "Do the three gaming mechanisms (patient selection, case reporting delay, selective transplantation) operate independently or are they coupled such that preventing one escalates others?",
+      "resolution_mechanism": "Analysis of center behavior under targeted interventions: (1) strict reporting requirements, (2) case review audits, (3) outcome transparency policies; measure whether centers shift gaming to non-targeted mechanisms",
+      "impact": "If coupled (likely): suppressing one mechanism cascades to others \u2014 extraction is structurally persistent. If independent: targeted policy can reduce total gaming.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Coupling of outcome gaming mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Transplant centers in the United States operate under risk-adjusted mortality metrics (UNOS/CMS reporting systems) designed to enable fair comparison of surgical quality across centers with different patient case-mixes. This constraint creates a structural problem: centers have strong incentives to game outcomes by selecting lower-risk patients, delaying reports of poor outcomes, and avoiding marginal cases. The genuine coordination function \u2014 enabling the system to identify underperforming centers and distribute organs efficiently \u2014 coexists with a perverse extraction function: high-performing centers and elite surgeons capture reputational benefits and patient volume by gaming metrics, while high-risk patients and the system's equity objective bear the costs. This is a prototypical tangled rope: the constraint solves a real coordination problem (how to compare centers fairly) while simultaneously enabling asymmetric extraction (risk-averse centers exclude marginalized patients). The theater_ratio (0.68) reflects that outcome reporting has evolved into a performative ritual \u2014 centers invest heavily in statistical gaming and patient selection rather than genuine outcome improvement, and the clinical literature increasingly documents risk stratification rather than actual quality variation.",
+    "key_agents": [
+      "High-Risk Patients (Powerless/Trapped): Structurally excluded from transplant lists by gaming \u2014 bear full cost of adverse selection",
+      "Elite Transplant Centers (Institutional/Arbitrage): Primary beneficiaries \u2014 capture reputation, patient selectivity, and funding through favorable metrics; can avoid high-risk cases",
+      "Modest-Performing Centers (Moderate/Constrained): Secondary victims \u2014 face competitive pressure and regulatory liability from gaming; constrained by need to participate in metrics",
+      "UNOS/CMS Regulatory Bodies (Institutional/Constrained): Enforcer of the outcome metric system; constrained by political pressure from both high-performing centers (lobbying against transparency) and patient advocates (demanding access)",
+      "Organ Allocation Equity Objective (Powerless/Trapped): Abstract system value that cannot organize or exit; bears cost of distorted allocation patterns",
+      "Transplant System Integrity (Powerless/Trapped): Epistemic commons damaged by selective reporting and outcome inflation"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. The metric system creates real incentives for patient selection and outcome gaming. Elite centers gain reputational and financial benefits during the measurement period (typically 3-year rolling windows). However, the extraction is not maximal (not 0.75+) because some genuine quality variation is real, some gaming is constrained by medical ethics, and the system does enable some centers to improve. The trajectory shows increasing gaming over time as centers refine their strategies. Suppression (0.65): High. Multiple barriers lock actors into the gaming dynamic: (1) high-risk patients have no alternative organ sources, (2) modest centers cannot exit the competitive metric system without losing reputation, (3) regulators cannot discontinue reporting without political backlash, (4) the clinical literature is locked into risk-stratification framing. Suppression has persisted even as awareness of gaming has increased. Theater ratio (0.68): High and increasing. Early UNOS reporting (1990s) focused on genuine outcome comparison. By 2010s-2020s, centers have become highly sophisticated at gaming: careful patient selection based on risk models, delays in reporting complications, selective non-transplantation of marginal organs, and aggressive statistical management of outcomes. The performative content has increased because centers invest more in gaming than in actual outcome improvement.",
+    "directionality_logic": "The directionality derivation flows from each agent's structural relationship to the extraction flow. High-risk patients are pure targets (d=0.95): they bear costs and have no exit. Elite centers are beneficiaries (d=0.10): they gain from gaming and have arbitrage options (reputation, patient selectivity). Modest centers are mixed (d=0.55): constrained exit options (cannot opt out of competition), both benefits (network participation) and costs (liability for risk-taking). The regulatory body is constrained between extraction from above (lobbying by elite centers) and extraction from below (political pressure from patient advocates) \u2014 effectively a secondary victim despite institutional power. The analytical perspective risks seeing gaming as a law of organizational behavior (Goodhart's Law as mountain), but the structural data reveals it as a contingent feature of specific incentive design.",
+    "perspectival_gap": "The constraint demonstrates a sharp perspectival gap between beneficiaries and victims. Elite centers experience the metric system as enabling (Rope): they use risk-adjustment to justify their selectivity and benchmark their practice. High-risk patients experience it as extractive (Snare): they are systematically excluded from consideration. Regulatory bodies experience mixed pressure (Tangled Rope): enforcing transparency while facing lobbying from elite centers. The modest-performing centers are squeezed between these poles. The theater is created by the gap itself: elite centers invest in reputation management (gaming) precisely because they can afford to; high-risk patients bear the cost because they cannot. The analytical observer risks naturalizing this as immutable organizational behavior, but the structure is contingent on metric visibility and allocation scarcity.",
+    "mandatrophy_analysis": "RESOLVES VIA MECHANISM DECOMPOSITION: This constraint resolves mandatrophy by distinguishing three separable gaming mechanisms: (1) patient selection (legitimate quality assessment tool hijacked for exclusion), (2) outcome reporting delay (pure extraction with no coordination function), and (3) selective non-transplantation (rational response to perverse incentives). The coordination function (fair center comparison) is genuine and necessary. The extraction function (risk-averse selection amplifies disparity) is equally real. The tangled rope classification is correct because removing the metric system would harm the genuine coordination while removing the extraction \u2014 this is the defining tension of a hybrid constraint. The piton classification of the clinical literature reflects that the original purpose (identifying underperformers) has atrophied \u2014 literature now documents risk stratification as unavoidable fact rather than as problematic gaming."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "organ_allocation_equity",
+      "transplant_center_selective_reporting"
+    ],
+    "dual_formulation_note": "Outcome gaming is upstream of two related constraints: equity in organ allocation (which experiences gaming as a distorting force) and selective outcome reporting (which represents one gaming mechanism in isolation). The network captures how the same base metric system cascades into multiple structural problems depending on the observational angle."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.6
+    }
+  ]
+}

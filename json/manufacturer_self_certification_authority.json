@@ -1,0 +1,220 @@
+{
+  "header": {
+    "constraint_id": "manufacturer_self_certification_authority",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mfg_cert"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Manufacturer Self-Certification Authority",
+    "topic_domain": "regulatory_governance/product_safety",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "product_manufacturers",
+      "regulatory_agencies"
+    ],
+    "victims": [
+      "consumers",
+      "third_party_verifiers",
+      "safety_standards_integrity"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Consumer",
+      "comment": "PERSPECTIVE 1: CONSUMER (SNARE) \u2014 Trapped by asymmetric information and legal structures that shield manufacturers from liability when they self-certify. Consumer bears full cost of product failures but has no exit option from the market. Cannot verify claims independently; must trust manufacturer attestation enforced by regulatory theater."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Standards Integrity",
+      "comment": "PERSPECTIVE 2: STANDARDS INTEGRITY (SNARE) \u2014 Abstract collective good that cannot organize or exit. Self-certification creates moral hazard: manufacturers have incentive to minimize compliance cost. Over time, the standard itself degrades through selective non-compliance and normalization of corner-cutting. The epistemic commons erodes \u2014 future generations inherit weakened safety frameworks."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Third-Party Verifiers",
+      "comment": "PERSPECTIVE 3: THIRD-PARTY VERIFIERS (TANGLED ROPE) \u2014 Face constrained exit: regulatory capture or market exclusion if they oppose self-certification regimes. Benefit from coordination function (their testing reduces overall uncertainty) but also bear extraction through margin compression and loss of market share. Genuine coordination with embedded asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Product Manufacturers",
+      "comment": "PERSPECTIVE 4: PRODUCT MANUFACTURERS (ROPE) \u2014 Primary beneficiary (institutional/arbitrage). Experience the constraint as pure coordination: self-certification enables rapid market entry, reduces compliance cost, and allows manufacturers to manage liability through attestation rather than independent testing. Net position is highly favorable. Coordination function exists (manufacturers communicate compliance status) alongside asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Regulatory Agencies",
+      "comment": "PERSPECTIVE 5: REGULATORY AGENCIES (ROPE) \u2014 Secondary beneficiary (institutional/arbitrage). Self-certification reduces administrative burden and cost of direct testing. Agencies coordinate through manufacturer attestation rather than performing verification themselves. Experiences extraction as minimal or inverted (the burden is deflected outward). Can arbitrage between delegating to manufacturers vs. directly testing based on resource constraints."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Historical Regulatory Theater",
+      "comment": "PERSPECTIVE 6: HISTORICAL REGULATORY THEATER (PITON) \u2014 Self-certification frameworks often persist through institutional inertia despite documented failures. Regulatory agencies maintain the appearance of oversight (inspection regimes, compliance documentation, periodic audits) that is substantially performative when manufacturers have every incentive to cheat. Theater ratio reflects that compliance verification is largely based on manufacturer-supplied documentation rather than independent testing. The machinery persists because alternatives are politically costly, not because it functions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational perspective, self-certification serves genuine coordination function (rapid market feedback, manufacturer expertise applied to their own products) while extracting through information asymmetry, liability shielding, and regulatory capture. The system coordinates on speed and cost at the expense of consumer protection and standards integrity. Classification reflects both real coordination benefit and measurable extraction cost."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "manufacturer_incentive_alignment",
+      "question": "Under what conditions do manufacturer self-certification incentives align with actual product safety?",
+      "resolution_mechanism": "Empirical analysis of product failure rates correlated with manufacturer certification rigor; comparison of failure rates between self-certified vs. independently tested products; longitudinal tracking of manufacturer attestation accuracy",
+      "impact": "If incentives align in most cases: classification shifts from Snare toward Rope; suppression metric drops significantly. If alignment is rare or context-dependent: Snare and Tangled Rope classifications confirmed; extraction is structural, not contingent.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Alignment of manufacturer incentives with actual safety outcomes"
+    },
+    {
+      "id": "regulatory_capture_depth",
+      "question": "Has the regulatory agency been captured by manufacturers such that self-certification is enforced primarily in service of manufacturer interests rather than public safety?",
+      "resolution_mechanism": "Historical analysis of regulatory decisions; documentation of close personnel relationships between agency officials and industry; review of enforcement actions and cost-benefit analyses; comparison of agency rhetoric vs. enforcement outcomes",
+      "impact": "If capture is deep: beneficiary classification of regulatory agencies confirmed; their arbitrage option is illusory (they cannot meaningfully exit). If capture is limited: agencies genuinely coordinate rather than extract; rope classification for agency perspective becomes more plausible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of regulatory capture by manufacturers"
+    },
+    {
+      "id": "standard_degradation_mechanism",
+      "question": "Does self-certification produce measurable degradation of safety standards over time, or does market reputation maintain compliance pressure?",
+      "resolution_mechanism": "Longitudinal analysis of standard revisions; comparison of early-period requirements vs. contemporary requirements; documentation of industry-driven relaxations or exemptions; tracking of non-compliance rate changes",
+      "impact": "If degradation is present: standards integrity is a genuine victim; snare classification confirmed for perspectives 2 and 3. If market reputation sustains standards: snare classification becomes questionable; extraction may be lower than measured.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether self-certification produces measurable standard degradation"
+    },
+    {
+      "id": "consumer_exit_cost_measurement",
+      "question": "What are the real exit costs for consumers who wish to opt out of markets relying on manufacturer self-certification?",
+      "resolution_mechanism": "Market analysis of alternative products with independent certification; cost comparison; accessibility analysis (geographic, economic, informational); tracking of market share shifts toward higher-assurance alternatives",
+      "impact": "If exit costs are high and persistent: consumer classification as trapped is justified; Snare confirmed. If exit options emerge: consumers migrate to verified alternatives; effective extraction drops; some perspectives may shift toward Rope or Scaffold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Real exit costs for consumers avoiding self-certified products"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.63
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Manufacturer self-certification authority \u2014 the delegation of compliance verification to the manufacturer rather than independent third parties \u2014 creates a structural constraint that solves a genuine coordination problem (rapid market feedback, manufacturer expertise) while enabling systematic extraction through information asymmetry and liability shielding. The manufacturer has superior knowledge of their own production process and design choices but also has primary incentive to minimize compliance cost. Regulatory agencies delegate testing authority to reduce their own administrative burden, creating a two-level coordination that benefits institutional actors while imposing trapped status on consumers and degrading standards integrity over time. This constraint exhibits the full cycle of extraction accumulation: initial implementation as coordination (manufacturers and agencies solve the problem of expensive, slow centralized testing), gradual normalization of corner-cutting (moral hazard compounds), institutional capture (agencies defend the system against criticism), and erosion of standards (the epistemic commons degrades). The theater ratio (0.68) reflects substantial performative regulatory activity: inspection regimes, audit documentation, and compliance certifications that create appearance of oversight while actual verification is delegated to the interested party.",
+    "key_agents": [
+      "Product Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 capture cost and liability advantages; can self-certify to regulatory minimums without independent testing",
+      "Consumers: Primary victim (powerless/trapped) \u2014 asymmetric information; cannot verify claims independently; bear full cost of failures through injury, loss, or death",
+      "Standards Integrity: Victim (powerless/trapped) \u2014 abstract epistemic commons that cannot organize; degrades through normalized corner-cutting and selective non-compliance",
+      "Third-Party Verifiers: Secondary victim (moderate/constrained) \u2014 excluded from market by self-certification regimes; face regulatory capture if they challenge the system",
+      "Regulatory Agencies: Secondary beneficiary (institutional/arbitrage) \u2014 reduce administrative burden by delegating verification; can arbitrage between enforcement levels",
+      "Analytical Observer: Witnesses both coordination function (rapid adaptation, expertise application) and extraction mechanism (information asymmetry, liability shielding, moral hazard)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Manufacturer self-certification creates asymmetric cost: consumers bear risk; manufacturers bear testing cost. The constraint extracts by shifting testing burden from manufacturers to consumers (through increased safety risk) and from regulatory agencies (through delegated verification). But extraction is not maximal because genuine coordination function exists \u2014 manufacturers do know their products well, and rapid feedback does enable faster safety improvements than centralized testing. The value reflects partial extraction alongside coordination. Suppression (0.62): Moderate-high. Consumers cannot exit because alternative products are either unavailable (single-certification regime is mandatory) or more expensive (alternatives with independent testing command premium pricing). Manufacturers have incentive to downplay failures. Regulatory capture ensures that challenging self-certification creates professional cost. Information asymmetry suppresses consumer alternatives. Theater ratio (0.68): High. Regulatory inspections, compliance documentation, and periodic audits create appearance of oversight, but actual verification is performed by the manufacturer or their contracted testers with known conflicts of interest. The machinery of regulatory theater masks that real independent verification is minimal. Over time (T=0 to T=20), both extractiveness and theater ratio increased: as self-certification became normalized (T=0 to T=10), manufacturers reduced testing rigor; as failures accumulated and awareness grew, regulatory agencies added performative oversight machinery (T=10 to T=20) to defend the system without fundamentally changing it.",
+    "perspectival_gap": "The gap is extreme: beneficiaries (manufacturers, agencies) see coordination and efficiency (Rope); victims (consumers, standards) see extraction with no exit (Snare). Third-party verifiers experience the hybrid \u2014 they participate in the coordination but are excluded and extracted from by the self-certification regime (Tangled Rope). The analytical observer sees the full structure: genuine coordination function that has been captured by manufacturers and defended through regulatory theater. The piton perspective (historical theater) notes that regulatory inspection machinery persists despite low verification efficacy \u2014 the apparatus serves to defend the system's legitimacy rather than improve actual safety. Each perspective is structurally coherent; the gap reveals that self-certification distributes benefits to institutional actors and extraction costs to powerless agents.",
+    "directionality_logic": "Directionality is determined by the structural relationship to the extraction flow. Manufacturers benefit and have low friction exit (arbitrage option: they can self-certify globally, switch regulators, or adjust product lines based on market feedback) \u2014 low d (beneficiary). Regulatory agencies benefit and have arbitrage options (enforce self-certification or perform their own testing) \u2014 low d (secondary beneficiary). Consumers bear costs and have trapped exit (cannot opt out of markets relying on self-certification; alternatives are unavailable or prohibitively expensive) \u2014 high d (victim). Standards integrity is an abstract collective that has no agency or exit mechanism \u2014 maximum d (structural victim). Third-party verifiers face constrained exit: exclusion from the market if they don't compete on cost by accepting manufacturer-dominated testing; professional risk if they challenge the system \u2014 moderate-high d (victim of extraction, participant in coordination). The piton perspective (institutional/arbitrage) derives low d despite performative activity because the institution can choose enforcement levels based on resource and political constraints.",
+    "mandatrophy_analysis": "UNRESOLVED. The constraint does not yet meet the mandatrophy resolution criteria (extractiveness > 0.70) but exhibits the conditions that would push it toward mandatrophy if extraction accumulates further. The measurement trajectory shows consistent increase in both extractiveness and theater ratio, indicating degradation toward pure extraction as standards erode and regulatory theater expands. Mandatrophy would be triggered if: (1) extractiveness crosses 0.70 (currently trending toward 0.65-0.72 if the trajectory continues), (2) suppression approaches full normalization such that consumers cannot conceptualize alternatives, or (3) the coordination function collapses entirely (regulatory agencies can no longer defend the system, manufacturers stop even pretending to verify). The resolution path depends on whether the coordination function can be preserved \u2014 if independent verification can be reintroduced as a coordination mechanism (e.g., distributed consumer testing, third-party certification as a market norm, regulatory agency testing as a check), the constraint could be reclassified downward. The four omegas identify empirical tests that would clarify whether extraction is structural or contingent on misaligned incentives."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture_supply_chain",
+      "information_asymmetry_product_markets",
+      "liability_exculpation_mechanisms"
+    ],
+    "dual_formulation_note": "Manufacturer self-certification is downstream of regulatory capture and information asymmetry constraints; those constraints create the preconditions for delegated verification. It also affects the structure of liability systems (manufacturers can claim compliance based on self-attestation). Linked as a network to show how institutional design in one domain propagates extraction into consumer product markets."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

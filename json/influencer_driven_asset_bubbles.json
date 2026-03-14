@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "influencer_driven_asset_bubbles",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "influencer_bubble"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.81,
+    "claimed_type": "snare",
+    "human_readable": "Influencer-Driven Asset Bubbles",
+    "topic_domain": "financial_markets/social_dynamics",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "early_influencers_and_insiders"
+    ],
+    "victims": [
+      "retail_investors",
+      "late_adopters",
+      "market_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Retail Investor",
+      "comment": "PERSPECTIVE 1: RETAIL INVESTOR (SNARE) \u2014 Trapped by information asymmetry, FOMO-driven market dynamics, and lack of exit capacity once committed. Bears full extraction cost as bubble inflates and collapses. No meaningful coordination benefit; the constraint exists only to extract wealth upward."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Late Adopter",
+      "comment": "PERSPECTIVE 2: LATE ADOPTER (SNARE) \u2014 Structurally constrained by social pressure, availability cascades, and algorithmic amplification. Can exit but faces significant costs: social exclusion, fear of missing gains, reputational damage within peer groups. High extraction with limited coordination benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Early Influencer",
+      "comment": "PERSPECTIVE 3: EARLY INFLUENCER (ROPE) \u2014 Benefits from first-mover advantage, audience growth, and arbitrage opportunities. Experiences the constraint as coordination: influencers aggregate audiences, provide information (albeit skewed), and enable market participation. Net beneficiary; extraction runs toward this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Regulatory Coalition",
+      "comment": "PERSPECTIVE 4: REGULATORY COALITION (TANGLED ROPE) \u2014 Organized agents (SEC, financial regulators, social platforms) see this as a hybrid: genuine coordination problem (how do markets incorporate distributed information?) coupled with asymmetric extraction (bad-faith influencer coordination, insider trading). Mobile exit options but constrained by institutional capture and regulatory arbitrage."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Market Structure Apparatus",
+      "comment": "PERSPECTIVE 5: MARKET STRUCTURE APPARATUS (PITON) \u2014 Listing standards, circuit breakers, disclosure requirements persist through institutional inertia. These mechanisms are largely performative for social-media-driven bubbles \u2014 they were designed for institutional trading, not for virality-driven coordination. Theater ratio high; functional verification low."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Platform Architecture Lock)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE with IDENTITY_LOCKED COMPONENT) \u2014 The analytical observer faces cognitive capture through the very architecture being analyzed. Platform algorithms that create bubbles also structure the observer's information access. Identity-locked because the analytical framework itself is constituted through participation in the attention economy. Sees snare but cannot fully escape it."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intention_detection_threshold",
+      "question": "At what point does influencer information-sharing become coordinated market manipulation vs. authentic community building?",
+      "resolution_mechanism": "Analysis of influencer communication patterns: private coordination channels, timing of disclosures, post-hoc analysis of influencer asset holding and sale timing relative to public promotion",
+      "impact": "If high threshold: most bubbles appear as coordination failure (Rope from more perspectives). If low threshold: bubbles appear as deliberate extraction schemes (Snare confirmed from all perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing coordinated manipulation from community building"
+    },
+    {
+      "id": "algorithmic_amplification_agency",
+      "question": "How much of the bubble extraction results from influencer intent vs. algorithmic feedback loops that amplify engagement regardless of influencer strategy?",
+      "resolution_mechanism": "Comparative analysis of bubble dynamics on platforms with different recommendation algorithms; A/B testing of algorithm dampening vs. amplification; influencer intent analysis (private messages, deleted content)",
+      "impact": "If primarily algorithmic: suppression mechanisms shift from human intent to platform architecture (changes victim classification). If primarily intentional: snare classification confirmed with high confidence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative contribution of influencer intent vs. algorithmic amplification"
+    },
+    {
+      "id": "retail_investor_exit_feasibility",
+      "question": "Do retail investors actually face material barriers to exiting bubble positions, or is their 'trappedness' primarily a result of cognitive biases and identity lock?",
+      "resolution_mechanism": "Analysis of transaction costs, liquidity windows, holding period distributions, and post-bubble retrospective interviews with participants about why they didn't exit earlier",
+      "impact": "If material barriers dominant: exit_options correctly classified as 'trapped'. If cognitive/identity factors dominant: exit_options should be 'identity_locked' and perspectives require recalibration.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether retail investor trappedness is material or cognitive"
+    },
+    {
+      "id": "market_integrity_victim_agency",
+      "question": "Can 'market integrity' organize and exercise collective power, or is it a purely abstract victim incapable of structural response?",
+      "resolution_mechanism": "Historical analysis of market reform movements following bubbles; effectiveness of circuit breakers and circuit-breaker-like mechanisms in different jurisdictions; social coordination among dispersed retail participants",
+      "impact": "If market integrity can organize: victim classification changes from powerless to organized (changes classification from Snare toward Tangled Rope). If purely abstract: powerless classification confirmed.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether market integrity can exercise collective agency"
+    },
+    {
+      "id": "platform_complicity_threshold",
+      "question": "At what level of platform knowledge and algorithmic optimization for engagement do platforms become beneficiaries (and thus complicit in extraction) vs. neutral infrastructure?",
+      "resolution_mechanism": "Internal platform documentation regarding algorithm design for engagement and retention; platform revenue flows during bubbles; correlation between platform feature updates and bubble intensity",
+      "impact": "If platforms are knowing beneficiaries: they belong in beneficiaries array and perspectives should include platform-as-institutional-beneficiary. If neutral: early_influencers_and_insiders is the primary beneficiary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Platform complicity in bubble extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.81
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Influencer-driven asset bubbles represent a structural constraint where social proof amplification mechanisms create asymmetric extraction between early-mover influencers and later-entering retail investors. The constraint emerges from the intersection of three structural elements: (1) algorithmic amplification of engaging content regardless of accuracy, (2) information asymmetry between influencers with large platforms and dispersed retail participants, and (3) identity fusion dynamics where participation becomes a marker of social belonging or investment sophistication. The bubble cycle exhibits a clear temporal progression: low extractiveness during the accumulation phase (0-3 time points), rapid escalation as FOMO drives retail adoption (3-6 time points), and eventual collapse when new supply of retail capital exhausts. Theater ratio tracks the performative content of market justifications: early bubble narratives cite fundamental value changes; late-stage narratives become purely narrative speculation with minimal connection to underlying assets. This constraint classifies as Snare from most perspectives because the suppression mechanisms (algorithmic promotion, social proof cascades, identity lock) are primarily coercive rather than coordinative.",
+    "key_agents": [
+      "Early Influencers and Insiders: Primary beneficiary (institutional/arbitrage) \u2014 capture disproportionate gains during accumulation and early promotion phases; able to exit with arbitrage windows before collapse",
+      "Retail Investors: Primary victim (powerless/trapped) \u2014 enter during high-extraction phases; lack information asymmetry compensation and face material barriers to exit once committed",
+      "Late Adopters: Secondary victim (moderate/constrained) \u2014 face social pressure and FOMO; structurally constrained but not fully trapped; exit options exist but carry reputational costs",
+      "Market Integrity: Tertiary victim (powerless/trapped) \u2014 abstract collective victim incapable of organizing or exiting; bears long-term costs of reduced trust and regulatory burden",
+      "Regulatory Coalition: Organized actor (organized/mobile) \u2014 sees mixed coordination and extraction; can exit through regulatory intervention but faces institutional capture",
+      "Platform Infrastructure: Implicit beneficiary (institutional/arbitrage) \u2014 profits from engagement and transaction volume during bubble phases; largely escapes extraction cost allocation",
+      "Analytical Observer: Self-regarding actor (analytical/identity_locked) \u2014 structurally capable of modeling bubbles but identity-locked by participation in attention economy; cannot fully exit analytical frame without abandoning primary analytical tools"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint systematically transfers wealth from later-entering cohorts to earlier-entering cohorts through information asymmetry exploitation and coordinated amplification. Early influencers (and their insiders) achieve 10-100x returns while median retail participants experience 40-80% losses. This is classic extraction: value transfer without production. The value is not created by influencer activity \u2014 it's transferred from later buyers to earlier buyers through amplification and coordination. Suppression (0.72): Very high. Suppression operates through multiple mechanisms: (1) algorithmic amplification that creates availability cascades (most visible assets are promoted assets), (2) social proof dynamics that make exit costly in identity terms, (3) information asymmetry that prevents accurate risk assessment, (4) platform architecture that obscures influencer financial interests in promoted assets. Exiting is theoretically possible but practically suppressed through psychological and structural mechanisms. Theater ratio (0.81): Very high and escalating. Early-stage bubble justifications cite market fundamentals, technology adoption curves, and comparative valuations \u2014 these carry performative content but some connection to real analysis. Late-stage justifications are pure narrative: 'this asset is going up because everyone knows it's going up.' Market-making mechanisms (circuit breakers, listing standards, disclosure requirements) are performative theater \u2014 designed for institutional markets, they provide minimal protection against virality-driven bubbles. The theatrical ratio increases over the measurement interval as the constraint matures from coordination problem (early, \u03b5=0.15) to pure extraction (late, \u03b5=0.68).",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence. Early influencers and insiders experience coordination (Rope perspective) \u2014 they're aggregating audiences and enabling participation in emerging asset classes. Retail investors experience pure extraction (Snare perspective) \u2014 they're entering at peak extraction, with no coordination benefit. Regulatory observers see a hybrid (Tangled Rope perspective) \u2014 genuine market participation coordination coupled with bad-faith insider coordination. The analytical observer faces a critical identity-lock problem: the tools used to analyze bubbles (social network analysis, sentiment tracking, algorithmic auditing) are themselves structured by the attention economy being analyzed, creating a U\u2084 paradox. The market apparatus (Piton perspective) sees performative compliance \u2014 circuit breakers and disclosure requirements generate the ritual of market protection while remaining blind to virality-driven extraction. This perspectival gap is not a classification error; it's the diagnostic signature of a Snare: different agents genuinely perceive the constraint as serving different functions depending on their structural position.",
+    "directionality_logic": "Directionality values reflect each agent's structural relationship to the extraction flow. Early influencers with arbitrage exit options derive d \u2248 0.08 (full beneficiary), producing negative experienced extractiveness \u2014 the constraint subsidizes them. Retail investors who are trapped derive d \u2248 0.95 (full target), producing maximum experienced extractiveness through the sigmoid f(d). Regulatory observers who are organized but constrained by institutional capture derive d \u2248 0.50-0.60 (mixed position), producing moderate-high experienced extractiveness. The analytical observer with identity-locked exit options derives d \u2248 0.78 (victim with cognitive entanglement), producing high extractiveness that includes the additional cost of analytical capture. Platform infrastructure nominally derives d as a beneficiary (d \u2248 0.15) but faces under-specification in the beneficiaries array \u2014 this is an omega variable, as platform complicity is empirically uncertain and policy-dependent.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that Snare is the only classification consistent with the base properties and all perspectives. The early-influencer Rope perspective is a genuinely-experienced perspective (they do benefit from coordination), but it does not override the Snare classification for the system as a whole because: (1) the extracted value is not produced by the coordination (value is transferred from later to earlier, not created), (2) suppression mechanisms operate primarily on victims, not beneficiaries, and (3) the constraint would not exist but for the extraction incentive \u2014 if removed, information coordination would still occur (through other mechanisms), but the extraction cascade would not. The Rope perspective is a local beneficiary perception, not a structural refutation of Snare classification. The Tangled Rope perspective for regulators is also legitimate but subordinate \u2014 they experience mixed effects because they are organizationally outside the direct extraction channel. The mandatrophy is resolved: Snare is the canonical type; other perspectives represent sub-structures within the Snare, not alternative classifications."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "retail_investor_financial_vulnerability",
+      "platform_algorithmic_amplification",
+      "regulatory_arbitrage_in_asset_markets"
+    ],
+    "dual_formulation_note": "Influencer-driven bubbles decompose into three structurally distinct constraints: (1) information_standard coordination (how market participants aggregate dispersed signals), (2) algorithmic_amplification mechanism (how platforms structure visibility and attention), (3) retail_investor_vulnerability (how participation structures create trappedness). This story focuses on the combined constraint; downstream stories model individual mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.22
+    }
+  ]
+}

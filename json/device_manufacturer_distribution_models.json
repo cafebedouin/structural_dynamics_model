@@ -1,0 +1,226 @@
+{
+  "header": {
+    "constraint_id": "device_manufacturer_distribution_models",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "devdist"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Device Manufacturer Distribution Models",
+    "topic_domain": "economic/industrial/technology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "manufacturer_ecosystem",
+      "authorized_distributors"
+    ],
+    "victims": [
+      "independent_retailers",
+      "consumer_price_discovery",
+      "supply_chain_transparency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Independent Retailers",
+      "comment": "PERSPECTIVE 1: INDEPENDENT RETAILERS (SNARE) \u2014 Face severe barriers to obtaining devices through manufacturer channels. Exclusive distribution agreements lock them out; purchasing from secondary markets incurs penalties (warranty denial, account termination). Cannot exit without abandoning their retail operation entirely. Maximum extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Regional Distributors",
+      "comment": "PERSPECTIVE 2: REGIONAL DISTRIBUTORS (TANGLED ROPE) \u2014 Participate in genuine distribution coordination (inventory management, logistics, regional demand forecasting) alongside asymmetric extraction. Manufacturers capture margin through exclusive territorial agreements; distributors bear market risk while manufacturers set prices and allocate inventory. High switching costs but some agency in regional operations."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Device Manufacturers",
+      "comment": "PERSPECTIVE 3: DEVICE MANUFACTURERS (ROPE) \u2014 Primary beneficiary. Control brand positioning, pricing, inventory allocation. Experiences the constraint as coordination: managing geographic coverage, maintaining distribution standards, ensuring retailer compliance. Can exit distribution model entirely by transitioning to direct-to-consumer. Net beneficiary \u2014 extraction flows toward this actor."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Large Retail Chains",
+      "comment": "PERSPECTIVE 4: LARGE RETAIL CHAINS (TANGLED ROPE) \u2014 Benefit from manufacturer price guarantees and exclusive product bundles (coordination function) while bearing constraints on promotional autonomy and margin structures (extraction). Significant scale gives negotiating power but exclusivity agreements limit inventory sourcing alternatives. Mixed extraction and coordination at organizational timescale."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Consumer Price Discovery",
+      "comment": "PERSPECTIVE 5: CONSUMER PRICE DISCOVERY (SNARE) \u2014 Abstract victim. Geographic price fragmentation, opacity around margin structures, and resale restrictions prevent transparent cross-channel pricing. Consumers cannot identify where devices are cheapest or why prices vary. No advocate, no exit mechanism, no organized response capacity. Extraction through information asymmetry maintained by distribution model enforcement."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Vertical Integration Theater",
+      "comment": "PERSPECTIVE 6: VERTICAL INTEGRATION THEATER (PITON) \u2014 The formal justification for exclusive distribution (supply chain efficiency, quality control, customer support) has degraded as direct-to-consumer logistics have matured. Manufacturers maintain exclusive distribution frameworks through institutional inertia despite logistics improvements that render the theatrical justifications obsolete. Theater ratio reflects that much of the enforcement (authorized dealer verification, territorial exclusivity) is performative \u2014 maintained because the alternative hasn't fully displaced it, not because it functions optimally."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Platform Aggregators and Direct-to-Consumer",
+      "comment": "PERSPECTIVE 7: PLATFORM AGGREGATORS (SCAFFOLD) \u2014 Organized actors (Amazon, online marketplaces, manufacturer direct channels) are building alternative distribution pathways that bypass exclusive dealer agreements. Sunset mechanism: as direct-to-consumer logistics mature and platform aggregators establish supply relationships, the traditional exclusive distribution model loses enforcement capacity. Constrained because some manufacturers still enforce geographic restrictions, but visible exit path creating lower chi even with moderate extraction."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Naturalized Logistics)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 Risk of naturalizing contingent institutional arrangements as inherent logistical limits. Some analytical frames treat exclusive distribution as an immutable feature of hardware supply chains \u2014 framing the problem as 'devices are inherently complex and require specialized dealer expertise.' However, the structural data reveals this as false summit: digital devices now ship through commodity logistics (same-day delivery, automated warehouses, remote technical support), and the specialized dealer infrastructure persists through organizational inertia rather than technical necessity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "authorized_dealer_necessity",
+      "question": "Does the 'authorized dealer' requirement genuinely serve coordination functions (quality control, customer support, inventory management) or is it primarily an enforcement mechanism for margin protection?",
+      "resolution_mechanism": "Comparative analysis: authorized dealer service quality vs. manufacturer direct-to-consumer support satisfaction scores; warranty claim resolution rates and costs between channels; inventory turnover and waste metrics.",
+      "impact": "If coordination-dominant: classification shifts toward pure Rope; suppression score decreases. If enforcement-dominant: confirms Tangled Rope with high extraction component; validates snare perspective for excluded retailers.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether authorized dealer structure serves genuine coordination vs enforcement"
+    },
+    {
+      "id": "platform_displacement_timeline",
+      "question": "At what adoption rate does direct-to-consumer and platform aggregator distribution displace exclusive dealer channels as the dominant model?",
+      "resolution_mechanism": "Market share tracking across device categories; time-series analysis of manufacturer price consistency across channels; measurement of exclusive distribution enforcement intensity over time.",
+      "impact": "If timeline < 5 years: scaffold sunset is imminent, extractiveness decreasing. If timeline > 15 years: scaffold is aspirational rather than structural, and constraint remains snare-like for years.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for direct-to-consumer dominance over exclusive distribution"
+    },
+    {
+      "id": "geographic_market_divergence",
+      "question": "Does the distribution constraint operate uniformly across developed, emerging, and least-developed markets, or does it bifurcate based on logistics infrastructure maturity?",
+      "resolution_mechanism": "Mapping of distribution model enforcement by geography; analysis of manufacturer policy consistency across regions; identification of markets where exclusive distribution has already collapsed.",
+      "impact": "If uniform: constraint affects all spatial scopes equally. If divergent: regional scope constraints are weaker (direct-to-consumer options available) while developing-market scopes remain trapped (logistics unavailable). Requires constraint decomposition by geographic region.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether distribution constraint operates uniformly across geographic markets"
+    },
+    {
+      "id": "resale_price_maintenance_enforcement",
+      "question": "What enforcement mechanisms actually prevent retailers from pricing below manufacturer-recommended retail price (MRRP), and how durable are they against organized discount channels?",
+      "resolution_mechanism": "Case studies of manufacturers pursuing retailer litigation or account termination for pricing violations; analysis of discount retailer survival rates and their workarounds (bundling, territory exclusions, online restrictions).",
+      "impact": "If enforcement is durable: extraction mechanism is stable, snare classification for independent retailers is robust. If enforcement is eroding: suppression score decreases, classification shifts toward constrained rather than trapped.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Enforceability of resale price maintenance in distribution models"
+    },
+    {
+      "id": "supply_chain_transparency_coordination",
+      "question": "Could a publicly transparent inventory-allocation system achieve the same coordination benefits as exclusive distribution while reducing extraction?",
+      "resolution_mechanism": "Pilot projects in tech and consumer electronics where manufacturers share inventory forecasts publicly; analysis of whether transparent allocation reduces need for exclusive dealer lock-in while maintaining supply chain efficiency.",
+      "impact": "If transparency achieves coordination: entire constraint shifts toward pure Rope or Scaffold (temporary enforcement during transition); extractiveness decreases significantly. If transparency fails: confirms that extraction component is necessary to maintain coordination.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether transparent allocation could replace exclusive distribution coordination"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.39
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 16
+  },
+  "commentary": {
+    "narrative_context": "Device manufacturer distribution models create a structural constraint that coordinates genuine supply-chain functions (inventory management, geographic coverage, technical support standardization) alongside asymmetric extraction (margin capture, price control, market access gatekeeping). The constraint exhibits perspectival divergence across six DR types: manufacturers and large retail chains experience it as coordination, independent retailers as extraction, consumers as information opacity, and organized platform aggregators as a temporary problem with visible sunset mechanisms. The extractiveness metric (0.58) reflects moderate-to-high economic rents captured by manufacturers through distribution lock-in, while suppression (0.65) captures both material barriers (exclusive agreements, resale restrictions, warranty penalties) and institutional inertia preventing alternative channels. The theater ratio (0.48) indicates that roughly half the enforcement activity is performative \u2014 maintaining dealer standards and geographic exclusivity through ritual rather than functional necessity, as direct-to-consumer logistics have matured sufficiently to reduce the genuine coordination costs that originally justified exclusive distribution. The constraint is decomposable into separate stories by device category (smartphones show near-complete direct-to-consumer dominance; industrial equipment remains locked in exclusive distribution; consumer electronics exist in transition), but at the level of the general model, it functions as a Tangled Rope with significant snare characteristics for excluded retailers.",
+    "key_agents": [
+      "Device Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 control brand positioning, margin structures, inventory allocation; can exit to direct-to-consumer without loss of function",
+      "Authorized Distributors/Dealers: Secondary beneficiary (moderate/constrained) \u2014 enjoy exclusive territorial rights but bear inventory risk and margin constraints; significant switching costs",
+      "Large Retail Chains: Mixed actor (moderate/constrained) \u2014 benefit from exclusive product bundles and pricing guarantees; constrained by promotional restrictions and inventory sourcing limits",
+      "Independent Retailers: Primary victim (powerless/trapped) \u2014 locked out of manufacturer channels; face warranty denial and account termination for secondary-market sourcing; cannot exit without abandoning retail operation",
+      "Consumers (price discovery): Abstract victim (powerless/trapped) \u2014 lack transparent pricing across channels; cannot identify optimal purchasing location; no organized mechanism for cross-channel price comparison",
+      "Platform Aggregators: Organized agents (organized/constrained) \u2014 Amazon, online marketplaces, manufacturer direct channels creating alternative distribution pathways; constrained by remaining geographic restrictions but building sunset mechanism",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as inherent logistical requirements"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, reflecting the significant economic rents manufacturers capture through exclusive distribution control. The value increased from 0.42 to 0.58 over the measurement interval, indicating strengthening enforcement and margin capture as digital devices became commodity-like and manufacturers could no longer justify lock-in through technical necessity \u2014 yet continued enforcement anyway. Suppression (0.65): High. Multiple interlocking barriers prevent independent retailers from accessing devices: exclusive distribution agreements (legal enforcement), warranty penalties (economic punishment), account termination threats (business viability threat), and restricted resale (contract enforcement). These barriers are material and institutional, not merely coordinated preferences. Theater ratio (0.48): Moderate. Roughly half the enforcement infrastructure \u2014 authorized dealer verification, territorial exclusivity maintenance, promotional restriction policing \u2014 serves genuine coordination (ensuring geographic coverage, maintaining service standards). The other half is purely extractive (preventing margin competition, protecting manufacturer pricing power). The theater ratio has increased slightly over time as logistics matured (reducing genuine coordination needs) while extraction enforcement intensified.",
+    "perspectival_gap": "The largest perspectival divergence is between manufacturers (who see pure coordination benefit) and independent retailers (who see pure extraction with no benefit). This 180-degree divergence indicates asymmetric extraction is the constraint's core function. The secondary gap is between regional distributors (who see mixed coordination and extraction) and independent retailers (who see extraction only). This divergence reveals that the distribution model's coordination benefits are concentrated among authorized participants \u2014 the 'coordination' exists only among parties the manufacturer has granted access. For excluded retailers, the constraint is extraction without coordination. The Piton perspective (institutional inertia) and Mountain perspective (false summit) both identify risk of naturalizing this extractive arrangement. The analytical observer must explicitly flag that 'supply chain efficiency through exclusive distribution' is the theatrical justification masking organizational lock-in and margin protection.",
+    "directionality_logic": "Manufacturers occupy the low-d beneficiary position (d \u2248 0.15): their arbitrage exit options (direct-to-consumer, platform relationships, regional variations) and beneficiary status (distribution lock-in extracts toward them) produce low f(d) and potentially negative \u03c7 from their perspective \u2014 they experience the constraint as enabling power, not constraint. Independent retailers occupy the high-d victim position (d \u2248 0.95): trapped exit options and victim status (extracted from) produce high f(d) and positive \u03c7 \u2014 maximum experienced extraction. Regional distributors occupy the middle position (d \u2248 0.60): constrained exit and mixed beneficiary/victim status produce moderate f(d) and mixed \u03c7. The piton perspective derives not from high \u03c7 but from the theater gate (theater ratio 0.48, approaching 0.70 threshold) \u2014 the enforcement infrastructure is increasingly performative as logistics alternatives emerge. Platform aggregators see low \u03c7 because their exit options are mobile/arbitrage (they can build alternative channels) and their victim status is temporary (sunset visible) \u2014 classification as Scaffold rather than Snare despite suppression \u2265 0.40.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by revealing that 'distribution coordination' and 'distribution extraction' are not mutually exclusive \u2014 the same institutional arrangement serves both functions simultaneously for different agents. Manufacturers genuinely need distributed inventory and geographic coverage (coordination function = Rope). But they capture this coordination as a vehicle for price control and market access gatekeeping (extraction function = Snare from retailer perspective). The Tangled Rope classification is not a compromise between Rope and Snare; it is the accurate type that captures both functions operating simultaneously for different participants. The mandatrophy dissolves when we recognize that coordination and extraction can be perfectly coupled in the same constraint \u2014 the extraction mechanism IS the coordination mechanism (exclusive distribution coordinates supply while extracting retailer margins). The key diagnostic: if the coordination function could be preserved while removing the extraction, the constraint would split into two types; but attempt to preserve manufacturer coordination (geographic coverage, inventory management) without exclusive distribution reveals that the coordination genuinely does require asymmetric enforcement \u2014 agents will free-ride on inventory availability while refusing to pay margin. Thus the Tangled Rope is stable, not decomposable."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_aggregator_gatekeeper_power",
+      "consumer_electronics_pricing_opacity"
+    ],
+    "dual_formulation_note": "Device manufacturer distribution models decompose by device category (smartphone distribution differs structurally from industrial equipment distribution) and by geographic market (developed-market direct-to-consumer dominance vs. emerging-market exclusive dealer lock-in). Each decomposition maintains separate \u03b5 values reflecting market maturity. This story aggregates across categories and geographies; constraint families by market-segment would provide higher precision."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.28
+    }
+  ]
+}

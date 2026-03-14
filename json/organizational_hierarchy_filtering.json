@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "organizational_hierarchy_filtering",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ohf"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Organizational Hierarchy Filtering: Information Control and Asymmetric Power",
+    "topic_domain": "organizational_behavior/institutional_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "senior_management",
+      "gatekeeping_middle_management"
+    ],
+    "victims": [
+      "frontline_workers",
+      "organizational_learning_capacity",
+      "adaptive_responsiveness"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Frontline Worker",
+      "comment": "PERSPECTIVE 1: FRONTLINE WORKER (SNARE) \u2014 Trapped by economic dependency and lack of alternative employment. Information filtered through layers of hierarchy prevents direct voice. Career advancement requires conformity to gatekeepers' interpretations. Cannot exit the constraint without abandoning livelihood. Experiences maximum extraction with minimal benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Ambitious Middle Manager",
+      "comment": "PERSPECTIVE 2: AMBITIOUS MIDDLE MANAGER (TANGLED ROPE) \u2014 Constrained by career path dependency and performance metrics tied to span of control. Benefits from filtering: controlling information flow expands their perceived indispensability and authority. Also bears costs: held accountable for problems they filtered upward that later emerge. Mixed coordination (they genuinely aggregate and synthesize information) with embedded extraction (they control what senior leadership sees)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Executive Leadership",
+      "comment": "PERSPECTIVE 3: EXECUTIVE LEADERSHIP (ROPE) \u2014 Experiences hierarchy filtering as coordination mechanism: delegation requires filtering to prevent information overload; compression of data into actionable summaries is a genuine coordination function. Mobility to exit (can restructure, flatten, or change information systems) makes this institutional actor perceive the constraint as solving a real problem with manageable side effects."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Organizational Learning System",
+      "comment": "PERSPECTIVE 4: ORGANIZATIONAL LEARNING SYSTEM (TANGLED ROPE) \u2014 The organization's collective capacity to learn from frontline observations is both coordinated and constrained. Hierarchy enables structure for knowledge synthesis, but filtering creates systematic blindness. Organizations learn slowly because ground truth is distorted by each filtering layer. Genuine coordination function (structure) coupled with extraction (loss of data fidelity)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Traditional Command-and-Control Paradigm",
+      "comment": "PERSPECTIVE 5: COMMAND-AND-CONTROL PARADIGM (PITON) \u2014 Hierarchical filtering persists through institutional inertia despite emergence of flat organizations, networked teams, and real-time information systems that bypass traditional filtering. The theater of reporting structures and formal chains of command remains functionally degraded \u2014 information flows through Slack, email, and informal networks while the org chart maintains theatrical authority. High theater ratio reflects performative org charts."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 The hierarchy filtering constraint is genuinely hybrid. It performs the coordination function of information compression and decision clarity. It simultaneously extracts through asymmetric power: those who filter control those who are filtered. The extraction is not eliminable without losing the coordination function entirely. Organizations cannot scale without some filtering; they cannot be just without reducing filtering. This is the core structural tension that makes Tangled Rope the canonical classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "filtering_necessity_threshold",
+      "question": "What organizational scale makes information filtering structurally necessary versus merely convenient for gatekeepers?",
+      "resolution_mechanism": "Comparative analysis across organization sizes: flat organizations (< 50 people) vs hierarchical (> 500 people). Measurement of decision latency and information fidelity at different scales.",
+      "impact": "If filtering is necessary above 100 people: Tangled Rope holds at scale. If hierarchy is optional above 500 people: more extraction is attributable to gatekeeping than to coordination necessity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Organizational scale at which filtering becomes structurally necessary"
+    },
+    {
+      "id": "gatekeeper_incentive_alignment",
+      "question": "Are middle managers filtering information to protect organizational learning (coordination) or to protect their own power (extraction)?",
+      "resolution_mechanism": "Analysis of what information is filtered: data that reduces senior leadership's comfort level (extraction signal) vs data that increases decision quality (coordination signal). Behavioral tracking across reorganizations or after transparency initiatives.",
+      "impact": "If filtering prioritizes leader comfort: extraction component is dominant, pushing toward Snare. If filtering reflects genuine complexity management: coordination component is dominant, solidifying Tangled Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether filtering serves learning or power protection"
+    },
+    {
+      "id": "alternative_information_architecture_feasibility",
+      "question": "Can flat organizations, real-time dashboards, or radical transparency actually replace hierarchical filtering without creating information overload at leadership level?",
+      "resolution_mechanism": "Post-implementation studies of organizations that removed filtering layers (holocracy, flat startups, transparency initiatives). Measurement of decision quality, leadership stress, and organizational response time.",
+      "impact": "If alternatives work: filtering is extractive convention, not coordination necessity. Constraint shifts toward Snare. If alternatives fail: filtering is genuine necessity, Tangled Rope confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether flat information architectures can replace hierarchical filtering"
+    },
+    {
+      "id": "suppression_measurement_ambiguity",
+      "question": "Is the measured suppression (0.65) structural (people genuinely cannot access information) or internalized (people believe information is not theirs to access)?",
+      "resolution_mechanism": "Exit trajectory analysis: if suppression persists after formal information barriers are removed (e.g., town halls, open dashboards), it is internalized rather than structural.",
+      "impact": "If internalized: constraint's effective suppression is higher than measured \u2014 the target carries the suppression with them. If structural: suppression is accurately measured; removing barriers directly reduces it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Organizational hierarchy filtering is the structural mechanism by which information flows upward through layers of gatekeeping, each filtering layer controlling what reaches the next level. This constraint exhibits the core tension of all institutional hierarchies: it performs a genuine coordination function (preventing leadership from drowning in noise) while simultaneously extracting asymmetric power (those who filter control those who are filtered). The constraint is neither purely coordination nor purely extraction, but an inseparable hybrid. The theater ratio (0.68) reflects that organizational reporting structures maintain performative authority while actual information flows through informal channels, dashboards, and direct communication that bypass formal hierarchy. The extractiveness trajectory (0.35 \u2192 0.58 over the interval) shows accumulating extraction as hierarchies age: initial filtering serves coordination, but over time, gatekeepers entrench filtering to protect their own authority and shield leadership from uncomfortable truths.",
+    "key_agents": [
+      "Senior Management: Primary beneficiary (institutional/arbitrage) \u2014 enjoys information compression and insulation from operational chaos; mobility to change systems",
+      "Middle Management: Mixed beneficiary-victim (moderate/constrained) \u2014 benefits from control over information flow; constrained by accountability for emergent problems",
+      "Frontline Workers: Primary victim (powerless/trapped) \u2014 no voice in hierarchy; information about their conditions filtered through gatekeepers; trapped by economic dependency",
+      "Organizational Learning System: Victim (moderate/constrained) \u2014 the collective capacity to learn from ground truth is systematically degraded by filtering",
+      "Adaptive Responsiveness: Victim (moderate/constrained) \u2014 organizations become slow to respond to emerging problems because information is delayed by filtering layers",
+      "Analytical Observer: Neutral (analytical/analytical) \u2014 sees the inevitable trade-off between coordination necessity and extraction risk"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The original research baseline treated hierarchy filtering as primarily extractive, but the analytical frame recognizes genuine coordination necessity. Real organizations above ~100 people cannot scale without information compression. However, extractiveness remains elevated (not pure rope at 0.35) because middle managers reliably filter information to protect their own authority and because leadership relies on filtered data that prevents them from seeing problems. The trajectory shows this dynamic: initial filtering (0.35) is justifiable compression; later filtering (0.58) is accumulating gatekeeping rent-seeking. Suppression (0.65): High. Frontline workers face structural barriers to voice (formal hierarchy, power differential, career risk) and internalized barriers (belief that their observations don't matter, that hierarchy is natural). Suppression includes both mechanisms. Theater ratio (0.68): Moderate-high. Org charts remain legally significant and symbolically important, but actual information flows through informal networks, email, and digital tools. The reporting structure is a theatrical performance of authority that persists because it legitimates hierarchy, even as information bypasses it.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from their structural position: whether they benefit or bear costs, and whether they can exit. Senior management has low d (they are beneficiaries with high mobility, so f(d) is negative or near-zero \u2014 they experience coordination benefit). Frontline workers have very high d (they are trapped victims, so f(d) is high \u2014 they experience maximum extraction). Middle managers have intermediate d around 0.55 (they benefit from control but are constrained by accountability, creating mixed directionality). The organizational learning system has d around 0.70 (it is a victim \u2014 ground truth is lost \u2014 with no exit option). The institutional power atoms modulate how much each agent experiences the constraint: powerless agents with trapped exit experience raw f(d); institutional agents with arbitrage options experience dampened or negative f(d). The perspectival gap reveals that the constraint's structural nature is identical for all observers, but experienced extractiveness differs by structural position.",
+    "perspectival_gap": "The executive leadership sees Rope (pure coordination) because they experience the constraint as solving the information overload problem. Frontline workers see Snare (pure extraction) because they experience the constraint as silencing and disempowering them. Middle managers see Tangled Rope (hybrid) because they genuinely perform information synthesis (coordination) while also protecting their own authority (extraction). The organizational learning system sees Tangled Rope (hybrid) because the hierarchy enables structure but degrades information fidelity. The traditional command-and-control paradigm is Piton (degraded ritual) because the formal reporting structure persists despite the rise of flat teams and real-time information systems. The analytical observer sees Tangled Rope as the stable classification because the constraint cannot be eliminated without losing coordination capacity at scale. This is not a perspectival disagreement about the same constraint, but a genuine structural difference in how different agents experience an asymmetric system.",
+    "mandatrophy_analysis": "The Tangled Rope classification resolves the mandatrophy by rejecting the false choice between 'hierarchy is just coordination' (Rope) and 'hierarchy is pure extraction' (Snare). The constraint is genuinely both. Information compression at organizational scale requires filtering \u2014 this is the coordination function. But filtering creates power asymmetry \u2014 those who filter control what gets communicated upward and how it is framed \u2014 this is the extraction. Neither function is eliminable without destroying the constraint's viability. An organization cannot scale to hundreds or thousands of people without some hierarchical filtering. It also cannot do so without creating gatekeeping positions where people accumulate power through controlling information. The Tangled Rope classification insists that both the coordination and extraction components are structural, not artifacts of poor management or lack of transparency. Better management and more transparency reduce extractiveness (the trajectory could have been flatter), but they do not eliminate the fundamental hybrid nature. This is what separates Tangled Rope from Rope (which lacks the victim/extraction component) and from Scaffold (which has a sunset clause \u2014 hierarchical filtering does not have a built-in sunset, only external threats to it)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "gatekeeping_bias_accumulation",
+      "organizational_inertia_through_hierarchy",
+      "information_asymmetry_in_power_delegation"
+    ],
+    "dual_formulation_note": "Organizational hierarchy filtering is downstream of institutional governance structures but represents a distinct constraint. The upstream constraint is the coordination necessity at organizational scale; the filtering mechanism is the specific structural implementation. Separate constraint stories may analyze hierarchy's role in specific domains (e.g., healthcare hierarchy filtering in medical decision-making, military hierarchy filtering in tactical information) \u2014 each would have its own \u03b5 value reflecting domain-specific extractiveness."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

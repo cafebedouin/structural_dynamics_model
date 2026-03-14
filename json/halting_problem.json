@@ -1,0 +1,138 @@
+{
+  "header": {
+    "constraint_id": "halting_problem",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "halt"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "The Halting Problem: Logical Undecidability in Computation",
+    "topic_domain": "mathematical_logic/computability_theory",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Programmer Seeking General Verification",
+      "comment": "PERSPECTIVE 1: POWERLESS AGENT (MOUNTAIN) \u2014 A programmer wishing to verify that arbitrary programs terminate encounters an absolute logical barrier. No algorithm exists that can solve the general halting problem. This constraint is unchangeable at all time horizons and across all exit options \u2014 trapped universally."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "label": "The Theoretical Computer Scientist",
+      "comment": "PERSPECTIVE 2: MODERATE AGENT (MOUNTAIN) \u2014 Even with domain expertise and access to restricted classes of programs, the fundamental undecidability persists. The constraint applies equally to specialists. High accessibility collapse \u2014 the constraint is always present once the domain is fully understood."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "label": "The Software Verification Institution",
+      "comment": "PERSPECTIVE 3: INSTITUTIONAL OBSERVER (MOUNTAIN) \u2014 Formal verification systems, static analysis tools, and theorem provers can solve the halting problem for restricted domains and finite executions, but the general undecidability remains structural and inescapable. No amount of institutional resources or methodological sophistication eliminates the fundamental limit."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Civilizational View)",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 The halting problem's undecidability is a proven theorem in computability theory (Turing 1936). It emerges logically from the definition of computation itself \u2014 any Turing-complete system that could solve its own halting problem would generate a contradiction. The constraint is a mathematical necessity, not a contingent institutional limitation."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "physical_substrate_independence",
+      "question": "Is the halting problem's undecidability independent of physical implementation details, or could non-classical computation (quantum, hypercomputation) escape the logical barrier?",
+      "resolution_mechanism": "Formal analysis of hypercomputation models and their relationship to standard Turing completeness; empirical exploration of quantum computational limits; axiomatic examination of what 'computation' means in non-classical substrates",
+      "impact": "If truly substrate-independent: halting problem remains mountain across all possible computational frameworks. If substrate-dependent: specific implementations may achieve decidability within physical constraints, downgrading from universal mountain to domain-restricted rope/scaffold.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether halting problem undecidability transcends physical substrate"
+    },
+    {
+      "id": "practical_verification_adequacy",
+      "question": "For practical software systems, do restricted-domain halting solvers (temporal bounds, state-space limits, type systems) provide sufficient verification even though the general problem is undecidable?",
+      "resolution_mechanism": "Empirical assessment of real-world software verification success rates using bounded model checking and static analysis; cost-benefit analysis of practical verification vs absolute proof",
+      "impact": "If adequate: the constraint's practical impact is lower than its theoretical status suggests \u2014 practitioners may treat halting verification as solved within acceptable bounds. If inadequate: the mountain classification remains functionally binding on real systems.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether practical halting solvers provide adequate real-world verification"
+    },
+    {
+      "id": "definition_sensitivity",
+      "question": "Does the undecidability depend on the specific definition of 'halting' (finite termination vs reaching a stable state vs satisfying a property), or is it invariant across reasonable interpretations?",
+      "resolution_mechanism": "Formal analysis of generalized halting problems and their decidability; examination of partial halting solutions and their scope",
+      "impact": "If definition-sensitive: some interpretations might be decidable, creating escape routes from the mountain. If invariant: undecidability is robust across reasonable problem formulations.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether undecidability depends on specific halting definition"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The halting problem is Turing's foundational result (1936) proving that no algorithm can determine whether an arbitrary program terminates or runs forever. This is a pure logical constraint \u2014 a mathematical limit on what computation itself can achieve. The constraint exhibits zero degrees of freedom: it is unchangeable across all observers, all exit options, all time horizons, and all spatial scopes. No agent benefits from the halting problem's existence; no agent bears extractive cost from another's action. The constraint is not institutional, contingent, or negotiable. It is a structural feature of any Turing-complete system, proven by contradiction \u2014 a hypothetical halting-solver would generate a paradox identical to the liar's sentence. This constraint serves as a diagnostic exemplar for mountain classification: emerges naturally from axioms, exhibits complete accessibility collapse (once understood, it cannot be escaped), generates zero suppression (the barrier is logical, not coercive), and produces zero extractiveness (no agent extracts value from the constraint's existence).",
+    "key_agents": [
+      "Programmers and engineers: powerless/trapped \u2014 cannot use a general halting solver; must bound search spaces or accept incompleteness",
+      "Theoretical computer scientists: moderate/constrained \u2014 can work around the constraint in restricted domains but cannot eliminate it",
+      "Software verification institutions: institutional/arbitrage \u2014 develop bounded verification tools that sidestep the problem but do not solve it",
+      "Analytical observer: analytical/analytical \u2014 recognizes the constraint as a proven mathematical theorem, invariant across contexts"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Near-zero. The halting problem does not extract resources from any agent. It is not a mechanism through which some group gains at another's expense. The minimal non-zero value reflects that practical software development must allocate resources to work around the undecidability (bounded checking, static analysis, testing), but these are costs of adaptation, not extraction by a beneficiary. Suppression (0.02): Near-zero. No agent suppresses alternatives to the halting problem constraint. The undecidability is not maintained by coercion or obscurity \u2014 it follows logically and is publicly known. Theater ratio (0.05): Minimal. The halting problem's existence is not performed or maintained through ritual. It is stated once, proven once, and thereafter requires no theatrical reinforcement. The minimal value reflects only that any practical instantiation of the constraint (a program that fails to terminate) involves some observational performance.",
+    "directionality_logic": "Directionality (d) is undefined for mountain constraints. The halting problem has no beneficiary and no victim. The constraint does not flow from one agent to another. All agents experience identical structural relationship to the undecidability: they encounter it as an external, unchangeable limit. The engine derives d from beneficiary/victim declarations, but mountains require no such declarations because the constraint is not extractive. The canonical d value for this constraint is 0.50 (symmetric) or undefined (non-relational), because the constraint is a property of the computational system itself, not of any dyadic interaction.",
+    "perspectival_gap": "There is no perspectival gap. All four perspectives \u2014 powerless programmer, moderate specialist, institutional verifier, and analytical observer \u2014 classify the constraint identically as mountain. The agent_power and exit_options parameters do not shift the classification because the constraint is invariant across all observable positions. This uniformity is the diagnostic signature of a true mountain: independent agents with different power levels and different exit routes all encounter the same unchangeable barrier.",
+    "mandatrophy_analysis": "The halting problem resolves mandatrophy by being a genuine mountain rather than a false summit. The constraint exhibits all four mountain gates: base extractiveness \u2264 0.25 (actual: 0.08), suppression \u2264 0.05 (actual: 0.02), accessibility_collapse \u2265 0.85 (actual: 0.92), resistance \u2264 0.15 (actual: 0.08), and emerges_naturally = true (proven theorem). There is no risk of misclassification as pure extraction (Snare) because no victims exist and no suppression mechanism maintains the constraint. There is no coordination function to confuse with extraction (ruling out Tangled Rope or Rope). The constraint is logically, not institutionally, determined."
+  },
+  "boltzmann": {},
+  "network": {}
+}

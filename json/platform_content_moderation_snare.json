@@ -1,0 +1,227 @@
+{
+  "header": {
+    "constraint_id": "platform_content_moderation_snare",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pcm"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Platform Content Moderation Snare",
+    "topic_domain": "digital_platforms/content_moderation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators"
+    ],
+    "victims": [
+      "content_creators",
+      "marginalized_communities",
+      "public_discourse_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Suspended Creator",
+      "comment": "PERSPECTIVE 1: SUSPENDED CONTENT CREATOR (SNARE) \u2014 Cannot appeal removal decisions or migrate audience. Faces permanent account deletion without recourse. No alternative platform has equivalent reach. Trapped by network effects; suppression is total because the creator's audience, reputation, and livelihood are platform-locked. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Marginalized Communities",
+      "comment": "PERSPECTIVE 2: MARGINALIZED COMMUNITIES (SNARE) \u2014 Over-moderated due to keyword filtering and proxy enforcement. Their speech norms and cultural references are misclassified as violations. No mechanism to contest mass removals or bias in moderation systems. Cannot migrate to alternative platforms at scale. Trapped by both network effects and algorithmic opacity. Suppression through both de facto removal and epistemic exclusion."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Independent Content Moderators",
+      "comment": "PERSPECTIVE 3: INDEPENDENT CONTENT MODERATORS (TANGLED ROPE) \u2014 Benefit from platform commission structures and audience monetization, but face inconsistent content policies, rapid policy changes, and algorithmic demotion. Can migrate to competing platforms at moderate cost. Experience both coordination (platform provides distribution) and extraction (platform controls visibility and revenue terms). Suppression is significant but not total \u2014 some agency exists."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Platform Operator",
+      "comment": "PERSPECTIVE 4: PLATFORM OPERATOR (ROPE) \u2014 Benefits from moderation infrastructure: establishes community standards, controls discourse shape, eliminates regulatory liability, and monetizes content filtering decisions. Experiences moderation as coordination: communicating standards enables user autonomy within boundaries. Net beneficiary. High arbitrage options \u2014 can adjust policies, outsource moderation, or deploy AI systems. Extraction flows toward this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Civil Rights and Public Discourse Coalition",
+      "comment": "PERSPECTIVE 5: CIVIL RIGHTS AND PUBLIC DISCOURSE COALITION (TANGLED ROPE) \u2014 Organized pressure groups benefit from platform content policies that reduce harassment and disinformation, but suffer extraction through algorithmic suppression of advocacy content and lack of transparency. Have some agency through regulatory pressure and public campaigns. Cannot fully exit because they need platform reach to advocate. Mixed experience: genuine coordination function (safer communities) alongside asymmetric extraction (visibility control)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Public Discourse Commons",
+      "comment": "PERSPECTIVE 6: PUBLIC DISCOURSE COMMONS (SNARE) \u2014 Abstract collective good that cannot organize or exit. Faces extraction through algorithmic amplification of engagement-maximizing content, suppression of consensus-building discourse, and platform control of the information environment. Bears the cost of polarization, viral misinformation, and erosion of shared epistemic foundations. No mechanism for collective voice or exit. Suppression is total because the commons has no institutional representation."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regulatory and Compliance Apparatus",
+      "comment": "PERSPECTIVE 7: REGULATORY AND COMPLIANCE APPARATUS (PITON) \u2014 Content moderation policies are partially performative: platforms deploy compliance theater (transparency reports, oversight boards, community guidelines) while maintaining algorithmic opacity and user-unfavorable policies. The regulatory apparatus sees its own process as degraded \u2014 enforcement mechanisms exist but are unevenly applied. Theater ratio high because stated policies diverge from actual enforcement. Piton classification reflects institutional inertia masked by cosmetic governance."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, content moderation constraints appear as immutable features of any mass communication system: some filtering is inherent to managing information flow at scale, conflict between speech freedom and harm prevention is unavoidable, and algorithmic bias is inherent to automation. This perspective risks naturalizing contingent institutional choices (profit-maximizing engagement algorithms, opacity by design, asymmetric appeal mechanisms) as laws of nature. The engine will flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "moderation_scale_tradeoff",
+      "question": "Is the scale of wrongful suspensions (error rate) fundamentally inevitable due to volume, or is it a result of under-investment in appeal mechanisms and human review?",
+      "resolution_mechanism": "Comparative analysis of platforms with different appeal infrastructure investment; correlation between moderation error rates and resources allocated to human review and appeals",
+      "impact": "If inevitable: extraction is incidental to coordination function. If discretionary: platforms are choosing extraction via under-investment in fairness mechanisms. Classification implications: if discretionary under-investment, the snare classification strengthens; if truly inevitable, some snare aspects reclass as mountain.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether moderation errors are inevitable at scale or discretionary under-investment"
+    },
+    {
+      "id": "algorithmic_transparency_ceiling",
+      "question": "Can algorithmic content moderation ever be transparent enough to enable meaningful appeals, or is opacity intrinsic to the technical architecture?",
+      "resolution_mechanism": "Technical feasibility analysis of interpretable moderation systems; empirical testing of whether creators can predict or understand removal decisions across platforms with varying transparency policies",
+      "impact": "If transparency is technically feasible but withheld: suppression is deliberate (snare confirmed). If transparency is technically impossible: some suppression is inherent to the coordination function (snare downgrade possible).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether algorithmic moderation can achieve meaningful transparency"
+    },
+    {
+      "id": "alternative_platform_viability",
+      "question": "Are network effects sufficient to permanently trap creators, or are alternative platforms (decentralized, federated, or specialized) capturing escape velocity?",
+      "resolution_mechanism": "Longitudinal tracking of creator migration; comparison of user acquisition rates and retention for alternative platforms; analysis of whether critical mass thresholds are achievable for alternatives",
+      "impact": "If alternatives are viable: exit_options upgrade from trapped to constrained for some creators, potentially downgrading snare to tangled_rope. If network effects are permanent: trap is structural, snare classification confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative platforms can break network effect lock-in"
+    },
+    {
+      "id": "marginalized_community_suppression_mechanism",
+      "question": "Are marginalized communities disproportionately suspended due to algorithmic bias, cultural misunderstanding by moderators, or deliberate policy targeting?",
+      "resolution_mechanism": "Audit studies comparing suspension rates by demographic/linguistic markers; analysis of policy application to similar content from different user communities; qualitative research on moderation guideline interpretation",
+      "impact": "If algorithmic bias: technical fix possible (though not implemented). If moderation mismatch: training required. If deliberate targeting: policy change required. Each mechanism suggests different remediation and reveals different aspects of the extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Root cause of disparate suspension rates for marginalized communities"
+    },
+    {
+      "id": "governance_theater_substitution",
+      "question": "Do platforms' transparency reports, content appeals boards, and oversight mechanisms meaningfully constrain moderation decisions, or are they substitutes for actual accountability?",
+      "resolution_mechanism": "Analysis of platform response rates to oversight board recommendations; empirical correlation between published policies and actual enforcement; tracking of policy changes driven by external governance vs internal optimization",
+      "impact": "If genuine constraint: governance structures are real coordination (snare downgrade possible). If theater: governance legitimates extraction without constraining it (snare confirmation, theater_ratio upgrade).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether governance structures meaningfully constrain moderation extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.53
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.46
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 8
+  },
+  "commentary": {
+    "narrative_context": "Platform content moderation creates a structural snare: users depend entirely on centralized platforms for audience reach and discourse participation, platforms wield unilateral suspension authority with minimal recourse, and the mechanisms of suppression (algorithmic opacity, asymmetric appeals, network lock-in) prevent organized exit or negotiation. The constraint exhibits asymmetric extraction masked by coordination rhetoric: platforms claim moderation creates safe communities (a genuine coordination function), but the infrastructure simultaneously enables maximized extraction through visibility control, data harvesting, and content monetization. Content creators, marginalized communities, and the public discourse commons bear the costs of both moderation errors and algorithmic amplification bias; the platform captures the benefits. The theater ratio (0.58) reflects the substantial gap between stated moderation policies and actual implementation, amplified by compliance theater (transparency reports, oversight boards) that create appearance of accountability without commensurate actual constraint. Extractiveness has risen from 0.48 to 0.68 over the interval as platforms have strengthened enforcement mechanisms, increased algorithmic filtering opacity, and expanded suspension authority without proportional appeals infrastructure.",
+    "key_agents": [
+      "Content Creators: Primary victims (powerless/trapped) \u2014 suspended without recourse; audience and income platform-locked; cannot negotiate or exit at scale",
+      "Marginalized Communities: Primary victims (powerless/trapped) \u2014 over-moderated by keyword filtering and cultural misunderstanding; suppressed through both removal and algorithmic demotion; no collective voice",
+      "Public Discourse Commons: Structural victim (powerless/trapped) \u2014 abstract collective good that cannot organize; bears cost of polarization and misinformation amplification; no mechanism for exit or voice",
+      "Platform Operator: Primary beneficiary (institutional/arbitrage) \u2014 controls visibility, monetizes content, eliminates liability, shapes discourse; experiences moderation as coordination that enables their business model",
+      "Independent Creators and Moderators: Secondary actors (moderate/constrained) \u2014 benefit from platform distribution but face extraction through algorithmic control and policy unpredictability",
+      "Civil Rights and Regulatory Coalitions: Organized pressure (organized/constrained) \u2014 benefit from harm-reduction policies but suffer from extraction via suppression of advocacy and lack of transparency",
+      "Compliance Apparatus: Institutional theater (institutional/constrained) \u2014 performs accountability while actual enforcement remains opaque; sees own mechanisms as degraded"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and rising. Platforms extract through multiple mechanisms: (1) visibility control via algorithmic ranking, which creators cannot predict or contest; (2) data harvesting from user engagement; (3) asymmetric monetization of creator content; (4) suspension authority with minimal appeals infrastructure. The rising trajectory reflects platform strengthening of enforcement mechanisms (increasing from 0.48 to 0.68 over 8 years) without proportional appeals infrastructure expansion. Suppression (0.72): High. Victims face multiple binding constraints: network effects (no alternative platform has equivalent reach), algorithmic opacity (cannot understand or predict removal decisions), asymmetric appeals (platform judges own cases), and account termination finality (no recourse). For marginalized communities, suppression is compounded by algorithmic bias and cultural misunderstanding in moderation. Theater ratio (0.58): Moderate-high. Transparency reports are published but show minimal actual policy change; content appeals boards exist but demonstrate low constraint on platform decisions; community guidelines diverge significantly from actual enforcement. Theater has risen as platforms have added governance structures while maintaining operational opacity. The gap between stated protections and actual user experience reveals the performative nature of compliance.",
+    "perspectival_gap": "This constraint demonstrates how the same structural data produces radically different classifications depending on the observer's position. The platform operator sees rope: moderation creates communities, enables safe discourse, and coordinates user behavior within beneficial boundaries. Organized civil society sees tangled_rope: genuine safety benefits exist alongside asymmetric extraction via suppression and opacity. Independent creators see tangled_rope: distribution benefits coexist with extraction via algorithmic control. Marginalized communities and suspended creators see snare: maximum extraction with no benefits and no exit. The public discourse commons sees snare: bears costs of misinformation and polarization amplification with no mechanism for voice or exit. The regulatory apparatus sees piton: moderation policies are maintained through inertia and theater rather than actual function. The civilizational observer risks seeing mountain: content moderation appears as an inevitable feature of mass communication systems. The analytical observer's mountain is a false summit \u2014 it naturalizes contingent choices (profit-maximizing algorithms, opacity by design, asymmetric appeal mechanisms) as laws of nature rather than recognizing them as deliberate architectural choices.",
+    "directionality_logic": "Directionality values derive from structural relationships: beneficiaries with arbitrage options (platform operators) experience low or negative effective extraction; trapped victims with no exit (suspended creators, marginalized communities, public commons) experience maximum extraction; constrained agents with some options (organized civil rights groups, independent creators) experience moderate extraction. The platform operator's d-value is near zero (full beneficiary with escape options) \u2014 they can adjust policies, deploy alternative moderation systems, or moderate less stringently; extraction flows toward them. Suspended creators and marginalized communities face d-values near 1.0 (full target, no exit) \u2014 their only option is to accept suspension or abandon the platform entirely, losing audience and income. The organized civil rights coalition has d-value around 0.55 (constrained but organized) \u2014 they have some agency through regulatory pressure and public campaigns but cannot fully exit because they need platform reach. The public discourse commons has d-value near 1.0 (full target, no exit, no collective voice) \u2014 an abstract collective good with no mechanism to negotiate or escape.",
+    "mandatrophy_analysis": "The snare classification resolves the mandatrophy by disambiguating coordination function from extraction mechanism. Platform moderation genuinely coordinates some user behaviors: it reduces harassment, removes certain categories of abuse, and maintains community standards. These are real coordination benefits. Simultaneously, the same infrastructure enables asymmetric extraction: visibility control, data harvesting, and suspension authority with minimal recourse. The mandatrophy arises from conflating these two functions. The resolution: they are both real. The snare classification confirms that the coordination benefits (which might otherwise justify calling it rope or tangled_rope) are outweighed by the asymmetric extraction for the victims (suspended creators, marginalized communities, public commons). The beneficiary's experience (rope or pure benefit) and the victim's experience (snare) are both accurate from their structural positions. The constraint is a snare because the asymmetric extraction mechanism is a *constitutive feature* of the system design, not an incidental side effect \u2014 platforms deliberately maintain opacity, design asymmetric appeals, and leverage network effects to maximize extraction while providing coordination benefits as justification. Without the extraction, the coordination function could be achieved through transparent, symmetric, decentralized mechanisms."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_amplification_bias",
+      "platform_data_extraction",
+      "creator_economic_dependency"
+    ],
+    "dual_formulation_note": "Content moderation is downstream of platform design choices (algorithmic amplification, data extraction, creator monetization). This story focuses on the moderation constraint itself as a snare. The upstream constraints have their own extractiveness values reflecting algorithmic bias (moderate-high), data extraction (very high), and economic lock-in (high). The moderation snare is structurally interdependent with these upstream constraints \u2014 the snare is enabled by opacity and lock-in built into the platform architecture."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.35
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "header": {
+    "constraint_id": "freshwater_depletion",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fresh"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Freshwater Depletion as Structural Extraction",
+    "topic_domain": "environmental/hydrological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "industrial_agriculture",
+      "fossil_fuel_extraction",
+      "urban_development_interests",
+      "irrigation_intensive_industries"
+    ],
+    "victims": [
+      "rural_subsistence_farmers",
+      "indigenous_communities",
+      "groundwater_dependent_ecosystems",
+      "future_generations",
+      "downstream_riparian_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Rural Subsistence Farmer",
+      "comment": "PERSPECTIVE 1: RURAL SUBSISTENCE FARMER (SNARE) \u2014 Trapped by geographic location and livelihood dependence on groundwater. Aquifer depletion removes the material basis of survival with no exit option. Zero degrees of freedom: relocation costs exceed income capacity, alternative livelihoods unavailable, legal protections absent. Bears extraction of water rights and land value with no compensation mechanism. Maximum perceived extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "label": "Indigenous Community (Long-Term View)",
+      "comment": "PERSPECTIVE 2: INDIGENOUS COMMUNITY \u2014 GENERATIONAL (SNARE) \u2014 Structurally trapped by territorial rights that are systematically violated through upstream water extraction. Identity locked into place-based lifeways dependent on watershed integrity. Suppression operates through legal frameworks that privilege prior appropriation rights over indigenous sovereignty. The constraint destroys not just water availability but cultural reproduction across generations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Irrigation-Dependent Agricultural Producer",
+      "comment": "PERSPECTIVE 3: IRRIGATION-DEPENDENT PRODUCER (TANGLED ROPE) \u2014 Faces significant exit costs (capital invested in irrigation infrastructure, market lock-in, production contracts) but benefits from access to subsidized water through extraction of common resource. Genuine coordination function exists (water distribution networks enable aggregate production) but is asymmetrically coupled with extraction from common pool. Can exit by shifting to rainfed crops, but cost is substantial relative to income."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Agricultural Commodity Trader",
+      "comment": "PERSPECTIVE 4: AGRICULTURAL COMMODITY TRADER (ROPE) \u2014 Benefits from low-cost water-intensive crop production without bearing depletion costs (externalizes to source regions). Experiences constraint as pure coordination mechanism: trade networks require stable commodity flows. Can easily arbitrage to alternative sourcing regions. Extraction flows away from this actor toward water-stressed source communities."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Municipal Water Authority",
+      "comment": "PERSPECTIVE 5: MUNICIPAL WATER AUTHORITY (TANGLED ROPE) \u2014 Organized actor with genuine coordination function (urban water supply distribution) but operates through extraction from rural/upstream communities. Exit option exists (water recycling, desalination, demand reduction) but capital transition is expensive and politically resisted. Demonstrates inter-institutional dynamic: municipal authority benefits while being organized, but has exit pathway that is currently suppressed by cost and political inertia."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Groundwater-Dependent Ecosystems",
+      "comment": "PERSPECTIVE 6: AQUIFER ECOSYSTEMS (SNARE) \u2014 Cannot perceive or exit constraints. Systematic extraction of groundwater triggers cascade failures: springs dry, riparian zones collapse, biodiversity crashes. Suppression is absolute \u2014 no mechanism for ecosystem adaptation or negotiation. Abstract collective victim with zero agency."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Water Policy Reform Coalition",
+      "comment": "PERSPECTIVE 7: WATER POLICY REFORM COALITION (SCAFFOLD) \u2014 Organized agents (conservation NGOs, regional governance bodies, indigenous sovereignty movements) see depletion as a temporary institutional failure with exit pathway: water pricing reform, extraction limits, alternative crop selection, infrastructure investment. Coalition has agency and perceives sunset clause: adaptive governance frameworks with hard caps on extraction are structurally feasible. Effective extraction is low because coalition can exit via policy reform. Theater ratio is moderate \u2014 some enforcement is real, some is performative."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Agricultural Extension Service",
+      "comment": "PERSPECTIVE 8: AGRICULTURAL EXTENSION (PITON) \u2014 Institutional actor tasked with promoting productivity, now performing compatibility maintenance between increasing extraction and sustainability rhetoric. Extension agencies continue recommending water-intensive crops while simultaneously promoting 'water-smart' practices \u2014 performative greenwashing. Theater ratio is high; original coordination function (knowledge transfer for yield improvement) has been subordinated to extraction maintenance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 9: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Civilizational-scale analysis reveals freshwater depletion as a hybrid constraint: genuine coordination function (water distribution networks, agricultural intensification solving nutrition security) exists alongside systematic extraction from powerless agents and ecosystems. Exit pathways are technically feasible (renewable water management, crop diversification, alternative livelihoods) but require redistributing costs currently externalized to trapped populations. High suppression reflects institutional lock-in and cost avoidance by beneficiaries."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "aquifer_recovery_feasibility",
+      "question": "Can depleted aquifers be restored within a human lifetime (biographical horizon) through managed recharge and extraction reduction, or are they functionally exhausted at timescales that matter to current users?",
+      "resolution_mechanism": "Hydrological modeling of recharge capacity vs historical extraction rates; comparison of depletion trajectories to recharge potential across major aquifer systems (Ogallala, Indus, North China Plain)",
+      "impact": "If recoverable: constraint is Scaffold (temporary with sunset) from more perspectives. If irreversible at biographical timescale: constraint is Snare (permanent extraction) for all powerless perspectives. Determines whether exit pathways are genuine or illusory.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether aquifer depletion is reversible within human timescales"
+    },
+    {
+      "id": "alternative_production_viability",
+      "question": "Do agronomically and economically viable alternatives to water-intensive crops exist for regions currently dependent on such production, or is high-extraction agriculture the only economically rational option given current markets and infrastructure?",
+      "resolution_mechanism": "Comparative analysis of crop profitability, market stability, and labor requirements across water-intensive vs alternative production systems; analysis of transition costs and regional feasibility",
+      "impact": "If alternatives viable: constrained exit is real; moderate/organized agents can shift production. If alternatives limited: exit suppression is structural and severe; constraint is closer to snare for agricultural producers. Affects classification of irrigation-dependent perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether economically viable alternatives to water-intensive agriculture exist"
+    },
+    {
+      "id": "subsidy_architecture_necessity",
+      "question": "Does water-intensive agricultural production depend on explicit subsidies (water price caps, extraction rights allocation) or would it collapse without them, revealing the constraint's extractive mechanism?",
+      "resolution_mechanism": "Cost-benefit analysis of water-intensive agriculture with full-price water; comparison of profitability when extraction costs include actual depletion damage and ecosystem service loss",
+      "impact": "If subsidy-dependent: the constraint is an enforcement mechanism disguised as coordination. Removal of subsidies would reveal extraction as the primary function, not ancillary. If economically self-sustaining: extraction may be embedded in resource quality/location rather than policy distortion.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether water-intensive agriculture depends on subsidies or genuine comparative advantage"
+    },
+    {
+      "id": "groundwater_commons_governance",
+      "question": "Can common-pool groundwater resources be governed through nested polycentric institutions without state-level extraction-maximization incentives, or does aquifer depletion require centralized control that systematically favors organized beneficiaries?",
+      "resolution_mechanism": "Comparative study of successful and failed groundwater governance regimes (Spanish huertas, Nepalese aquifer management, Rwandan water councils); analysis of institutional design requirements for sustainable commons management",
+      "impact": "If decentralized governance viable: constraint's suppression is contingent on institutional choice; policy reform pathway is real. If centralization necessary: constraint is more structural and harder to exit; suppression persists across institutional designs. Affects whether scaffold perspective is realistic.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether sustainable groundwater governance requires centralized state control"
+    },
+    {
+      "id": "ecosystem_collapse_feedback",
+      "question": "At what depletion threshold does groundwater extraction trigger irreversible ecosystem cascades (spring dry-out \u2192 riparian collapse \u2192 groundwater recharge failure \u2192 permanent aquifer loss), and how near is that threshold in major depletion zones?",
+      "resolution_mechanism": "Hydro-ecological modeling of threshold dynamics; paleoclimate analysis of past aquifer failures and recovery timescales; monitoring of early warning indicators (spring emergence decline, aquifer pressure head reduction)",
+      "impact": "If thresholds are imminent: suppression is amplified by ecological lock-in; constraint approaches mountain status (irreversible). If thresholds are distant: policy windows remain open; scaffold perspective retains viability. Affects how victims perceive their exit options (trapped vs constrained).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proximity to irreversible ecosystem collapse thresholds in major aquifer zones"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Freshwater depletion creates a structural constraint where users with high water consumption and low sensitivity to depletion costs extract from common aquifer resources, transferring costs to populations without exit options and to ecosystems. The constraint exhibits properties of a pure snare for powerless trapped agents and a tangled rope for organized beneficiaries. Extractiveness has risen from 0.35 to 0.68 over the 20-year interval as depletion accelerates and policy responses remain performative. The theater ratio (0.55) reflects that water sustainability discourse has grown substantially while actual extraction restrictions remain weak \u2014 conservation rhetoric performs commitment to sustainability without requiring sacrifice from major beneficiaries. The constraint is maintained through legal/institutional structures (prior appropriation doctrine, extraction rights allocation, subsidy architecture) that are enforcement mechanisms disguised as natural resource management.",
+    "key_agents": [
+      "Rural subsistence farmers: Primary victims (powerless/trapped) \u2014 depend on groundwater for survival, cannot relocate, bear extraction through livelihood collapse",
+      "Indigenous communities: Primary victims (powerless/trapped) \u2014 identity-locked to watersheds, suffer cultural reproduction failure, possess legal sovereignty that is systematically violated",
+      "Agricultural producers: Secondary beneficiaries (moderate/constrained) \u2014 benefit from access to cheap water through infrastructure and extraction rights, face exit costs from infrastructure switching",
+      "Commodity traders: Primary beneficiaries (institutional/arbitrage) \u2014 profit from low-cost water-intensive commodities without bearing depletion costs, can arbitrage to alternative sourcing",
+      "Municipal water authorities: Secondary beneficiaries (organized/mobile) \u2014 coordinate urban supply but maintain extraction model; possess exit pathways (recycling, desalination) that are suppressed by cost and political resistance",
+      "Groundwater-dependent ecosystems: Structural victims (powerless/trapped) \u2014 no agency, zero exit options, systematic extraction triggers cascade failures",
+      "Water policy reform coalition: Organized challengers (organized/mobile) \u2014 perceive policy sunset clause and exit pathway; lack enforcement power but represent institutional pressure point",
+      "Agricultural extension: Institutional supporter (institutional/constrained) \u2014 performs compatibility maintenance between extraction and sustainability rhetoric; enforces through knowledge transfer that legitimates water-intensive production"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint transfers water wealth from trapped populations and ecosystems to organized beneficiaries through institutional mechanisms (prior appropriation law, infrastructure monopoly, subsidy structure). The 20-year trajectory shows accelerating extraction as depletion deepens and consequences intensify. Suppression (0.72): High. Material barriers include capital costs of alternative irrigation systems, market lock-in to water-intensive crop contracts, and geographic immobility of affected populations. Institutional barriers include legal structures that subordinate riparian rights to prior appropriation, exclusion of indigenous sovereignty from water governance, and difficulty organizing powerless scattered farmers. Barriers to policy reform include concentrated benefits among organized agriculture and diffuse costs to powerless victims. Theater ratio (0.55): Moderate-high. Water conservation discourse (Smart Agriculture, Efficient Irrigation, Blue Water Footprinting) performs commitment to sustainability while actual extraction constraints remain minimal for major users. Government reporting emphasizes efficiency gains rather than absolute reduction. Internationally-brokered water-sharing agreements (Jordan River, Indus Waters Treaty) have maintained formal coordination while extraction has continued rising.",
+    "perspectival_gap": "This constraint demonstrates maximal perspectival divergence. The rural farmer perceives snare: no exit, extraction is total, suppression is absolute. The commodity trader perceives rope: coordination mechanism enables their profitability. The municipal authority perceives tangled rope: genuine coordination function (urban supply) alongside extraction (from upstream communities). The organized water coalition perceives scaffold: policy sunset is technically feasible via extraction limits and crop diversification. The agricultural extension perceives routine coordination: knowledge transfer for productivity improvement. The analytical observer perceives snare underlying the facade: the coordination functions are real but subordinated to extraction logic; exit pathways are theoretically available but suppressed by cost and institutional lock-in. The piton perspective observes that the water system has become increasingly performative as genuine coordination (connecting supply to demand) is replaced by extraction maintenance (maximizing water removal regardless of consequence). The ecosystem perspective is unmeasurable but structurally decisive: cascade failure at depletion thresholds eliminates all other perspectives.",
+    "directionality_logic": "Directionality (d) values are derived from structural position relative to the extraction flow. Rural subsistence farmers are structurally victimized (d \u2248 0.98: full targets) with zero exit options; the sigmoid f(d) produces maximum experienced extraction. Commodity traders are beneficiaries with arbitrage mobility (d \u2248 0.10); they experience negative effective extraction (the constraint subsidizes them). Municipal authorities occupy a middle position: they coordinate urban supply (beneficiary function) but extract from rural groundwater (victim role), giving a split directionality reflected in the tangled rope classification. Indigenous communities have d \u2248 0.95 (full targets) despite potential governance authority because their sovereignty is systematically violated by upstream extraction \u2014 structural position dominates nominal legal status. Agricultural producers have constrained exit (d \u2248 0.65), reflecting that they face real switching costs but can exit (unlike subsistence farmers) if extraction becomes unprofitable. The water reform coalition has mobile exit (d \u2248 0.55) because they can influence policy architecture but cannot unilaterally end extraction.",
+    "mandatrophy_analysis": "Freshwater depletion resolves mandatrophy through the snare/tangled rope distinction. The constraint is NOT pure coordination (rope) because withdrawal does not benefit powerless victims \u2014 it transfers their water wealth to organized beneficiaries. The constraint is NOT a transient policy problem (scaffold) because aquifer depletion is thermodynamically irreversible at timescales relevant to trapped populations \u2014 policy reform would need to be immediate and severe, which suppression mechanisms prevent. The constraint IS a snare for powerless agents: extraction is coercive (you cannot refuse to lose access to groundwater when upstream users deplete aquifers), operates through suppression (geographic and economic barriers prevent relocation or alternative livelihoods), and provides no coordination benefit to victims. For organized beneficiaries, it is tangled rope: water-intensive agriculture does serve coordination function (feeding populations, maintaining rural livelihoods during transition), but this function is systematically subordinated to extraction maximization \u2014 water is extracted beyond what nutrition security requires, for commodity export profits. The constraint cannot be decomposed into a pure coordination function with minimal extraction cost. The theater ratio rising from 0.32 to 0.55 shows that as physical depletion accelerates, institutional discourse increasingly emphasizes efficiency and sustainability while maintaining extraction rates \u2014 the constraint is degrading into piton (performative sustainability rhetoric without functional change)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "agricultural_productivity_dependence",
+      "climate_migration_pressure",
+      "groundwater_infrastructure_lock_in",
+      "riparian_ecosystem_collapse"
+    ],
+    "dual_formulation_note": "Freshwater depletion is decomposable into distinct constraints: (1) aquifer extraction as an enforcement mechanism (this story); (2) water pricing architecture that enables below-cost withdrawal; (3) agricultural commodity markets that create demand for water-intensive exports; (4) irrigation infrastructure as capital lock-in. Each has different \u03b5 and structural properties. This story focuses on the extraction mechanism itself; downstream constraints capture how extraction effects propagate through agricultural systems, migration pressure, and ecosystem collapse. The upstream constraint is water pricing architecture (constrains prices below cost of groundwater depletion damage)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.72
+    }
+  ]
+}

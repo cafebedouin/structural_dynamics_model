@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "nba_franchise_valuation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nbafv"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "NBA Franchise Valuation and Expansion Pricing Asymmetry",
+    "topic_domain": "sports_economics/asset_valuation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_franchise_owners",
+      "nba_league_office"
+    ],
+    "victims": [
+      "prospective_owners",
+      "player_salary_mobility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Prospective Owner Without Incumbent Status",
+      "comment": "PERSPECTIVE 1: PROSPECTIVE OWNER (SNARE) \u2014 Faces NBA expansion fees ($2.5B+) with no legitimate alternative path to NBA ownership. Cannot create parallel league, cannot negotiate entry price downward, cannot exit without abandoning ownership aspiration. Bears full cost of artificial scarcity while incumbent owners capture monopoly rents. Maximum suppression through exclusive league control."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Competing Sports League Operator",
+      "comment": "PERSPECTIVE 2: COMPETING SPORTS LEAGUE (TANGLED ROPE) \u2014 Could theoretically create alternative professional basketball league (XBA, ABA model), but faces significant coordination barriers: player acquisition costs, arena infrastructure gaps, media distribution constraints. Constrained exit with genuine but surmountable costs. Experiences both extraction (NBA scarcity premium inflates franchise values) and coordination benefit (NBA's established market infrastructure, talent pipeline). Asymmetric: NBA extracts from league operators through market dominance while providing coordination through established legitimacy."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Incumbent Franchise Owner",
+      "comment": "PERSPECTIVE 3: INCUMBENT FRANCHISE OWNER (ROPE) \u2014 Experiences constraint as pure coordination: league governance, revenue sharing, scheduling, media distribution, player draft system. All mechanisms that create value through collective organization. Net beneficiary through expansion fees (each new franchise increases league value, enabling capital appreciation for existing franchises). Arbitrage exit available through secondary market sale. Low experienced extraction \u2014 the constraint subsidizes this agent."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The NBA League Office",
+      "comment": "PERSPECTIVE 4: NBA LEAGUE OFFICE (ROPE) \u2014 Functions as both coordinator and beneficiary. Coordinates franchises' competitive balance, revenue sharing, labor relations, media rights. Also captures expansion fees and growth in league valuation as expansion increases total market size. Arbitrage exit through commission-based governance model. Sees constraint as legitimate coordination with self-interested administration \u2014 not zero-sum extraction, but net positive value creation through unified governance."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Players' Collective (Union/Association)",
+      "comment": "PERSPECTIVE 5: PLAYERS' COLLECTIVE (SCAFFOLD) \u2014 Experiences franchise valuation constraint as mixed: existing high valuations increase team revenue (improving salary cap room), but expansion pricing artificially inflates total league valuation, which can be used to justify lower player percentage-of-revenue allocation. Constrained exit through collective bargaining. Sees the constraint as a temporary negotiation point with sunset logic: if expansion pauses or franchise scarcity diminishes, valuation leverage shifts. Theater component: franchise valuation metrics (Forbes valuations) are partially performative, used to justify labor negotiations rather than reflecting operational cash flow."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Secondary Market / Investment Banking System",
+      "comment": "PERSPECTIVE 6: SECONDARY MARKET & INVESTMENT BANKING (PITON) \u2014 Traditional valuation models for sports franchises (comparable transaction multiples, revenue capitalization, growth projections) persist largely through institutional inertia despite poor predictive power for non-traded assets. Banking fees and advisory economics drive continued use of these models even as alternative metrics (streaming rights value, arena asset value, brand licensing) become more relevant. The constraint appears as degraded institutional practice: valuation theater maintained because the system benefits from continued mystification of franchise value. Theater ratio high because actual franchise value is difficult to compute independently."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/global perspective, franchise scarcity and valuation asymmetry might appear as natural economic constraints: limited number of metropolitan areas can support NBA-caliber franchises, network effects create natural monopoly, capital requirements create inherent barriers to entry. This perspective naturalizes contingent institutional arrangements (league exclusivity, expansion fee setting, relocation restrictions) as immutable economic laws. However, the structural data reveals this as a false summit \u2014 the 'natural scarcity' is actively maintained through governance decisions, not inherent to sports commerce itself."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "franchise_scarcity_exogeneity",
+      "question": "Is NBA franchise scarcity a natural property of metropolitan market size or an artificially maintained governance constraint?",
+      "resolution_mechanism": "Comparative analysis of sports leagues with different expansion policies; simulation of alternative league structures with higher franchise density; historical analysis of expansion decisions relative to qualified ownership applicants",
+      "impact": "If natural: constraint approaching mountain classification, legitimizing scarcity premium. If artificial: constraint is pure extraction mechanism (snare) maintained by incumbent gatekeeping, reducing to higher chi values and stronger victim categorization.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether NBA franchise scarcity is natural or maintained"
+    },
+    {
+      "id": "expansion_fee_capitalization",
+      "question": "Does the NBA expansion fee ($2.5B+) represent genuine value creation (new market entry, league revenue increase) or extraction from prospective owners?",
+      "resolution_mechanism": "Pre- vs. post-expansion financial modeling of league-wide revenue growth; attribution of revenue growth to expansion franchise vs. existing franchises; analysis of whether expansion increases total league value beyond the fee amount collected",
+      "impact": "If genuine value creation: constraint is primarily Rope (coordination through expansion), reducing victim characterization. If extraction mechanism: constraint is primarily Snare for prospective owners and Tangled Rope overall.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether expansion fees represent value creation or extraction"
+    },
+    {
+      "id": "player_salary_ceiling_mechanism",
+      "question": "Does franchise valuation constraint operate as a ceiling on player salary growth through revenue justification narratives, even when actual team profitability permits higher compensation?",
+      "resolution_mechanism": "Analysis of salary cap growth rate vs. franchise valuation growth rate; franchise profitability comparison across valuation tiers; player-side perception data on whether franchise valuation metrics are used in labor negotiations",
+      "impact": "If yes: constraint generates secondary extraction channel (players bear opportunity cost of suppressed wages justified by valuation metrics), elevating victim impact and extractiveness. If no: player impact is primarily through salary cap coordination rather than valuation-driven extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether franchise valuation constrains player salary growth"
+    },
+    {
+      "id": "relocation_threat_extraction",
+      "question": "Does the threat of franchise relocation function as an extraction mechanism on host cities through stadium financing demands and tax concessions?",
+      "resolution_mechanism": "Analysis of public subsidies requested during franchise ownership transitions; comparison of relocation threat intensity to subsidy amounts; historical cases where threat credibility changed outcome",
+      "impact": "If relocation threat is credible extraction: constraint extends to municipal governments as secondary victims, significantly broadening victim scope and increasing systemic extractiveness chi values.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether relocation threats extract from host cities"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "NBA franchise valuation operates as a structural constraint on capital formation in professional sports. The constraint couples artificial scarcity (limited franchise licenses), market dominance (NBA's near-monopoly on elite basketball competition), and extraction mechanisms (expansion fees, relocation threats) into a system that creates asymmetric wealth capture. Incumbent owners benefit from appreciation driven by league growth; prospective owners face artificial entry barriers; players face suppressed wage growth justified by valuation metrics; host cities face relocation extraction. The same institutional arrangement appears as legitimate coordination from the league office and incumbent owner perspectives, but as pure extraction from prospective owner and city government perspectives. The theater component reflects that franchise valuations (especially Forbes annual rankings) are partially performative metrics used to justify governance decisions and labor negotiations rather than precise reflections of operational value.",
+    "key_agents": [
+      "Incumbent Franchise Owners: Primary beneficiaries (institutional/arbitrage) \u2014 capture capital appreciation and monopoly rents through league scarcity, can arbitrage ownership interests",
+      "Prospective Owners: Primary victims (powerless/trapped) \u2014 face $2.5B+ expansion fees with no legitimate alternative path to NBA ownership, cannot negotiate entry price or create parallel competition",
+      "NBA League Office: Institutional beneficiary (institutional/arbitrage) \u2014 captures expansion fees, manages collective coordination, benefits from league appreciation",
+      "Players' Collective: Constrained agents (organized/constrained) \u2014 benefit from higher team revenues but face suppressed wage growth justified by valuation metrics",
+      "Competing Sports Operators: Constrained secondary actors (powerful/constrained) \u2014 could theoretically create alternatives but face significant coordination barriers",
+      "Host City Governments: Secondary victims (moderate/trapped in relocation negotiations) \u2014 face extraction through stadium financing demands using relocation threat as leverage",
+      "Secondary Market / Investment Banking: Institutional degraded actors (institutional/arbitrage) \u2014 maintain performative valuation theater through modeling inertia"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint generates genuine extraction: prospective owners pay artificial scarcity premiums ($2.5B+ expansion fees), players have suppressed salary growth partially justified through valuation narratives, host cities pay relocation extraction through stadium deals. But extraction is not maximal because expansion does create some genuine value (new market entry, league-wide revenue increase, established infrastructure benefits). The extractiveness has increased from 0.38 to 0.58 over the 20-year interval as expansion fees have risen and franchise valuations have grown faster than operational metrics justify. Suppression (0.65): Moderate-high. Barriers to entry include: exclusive NBA license (cannot create parallel legitimate competition), capital requirements ($2.5B+), market scarcity (limited metropolitan areas support NBA franchises), league governance control (can reject ownership applicants), relocation control (franchise movement used as leverage). However, suppression is not total \u2014 wealthy entrepreneurs can pay expansion fees, alternative leagues have historically emerged (ABA), public pressure has forced some expansion. Theater ratio (0.68): Moderately high. Forbes franchise valuations function partly as performance theater \u2014 used to justify governance decisions and labor negotiations but based on non-standardized methodologies that differ significantly from actual cash flow analysis. The theater has increased as valuation metrics become decoupled from operational data.",
+    "perspectival_gap": "The constraint shows distinct gaps between perspectives. Beneficiary perspectives (incumbent, league office) see Rope; organized perspectives with options (competing leagues, players' union) see Tangled Rope or Scaffold; trapped perspectives (prospective owners) see Snare. The gap width indicates strong extraction asymmetry \u2014 the same constraint structure produces fundamentally different classification outcomes based on the observer's structural position relative to the extraction flow.",
+    "directionality_logic": "Directionality (d) flows from power level, exit options, and beneficiary/victim status. Incumbent owners with arbitrage exits and beneficiary status get low d (~0.15) producing negative effective extraction (chi < 0). Prospective owners with trapped status and victim position get high d (~0.92) producing high effective extraction. League office with arbitrage and beneficiary position gets low d (~0.10). Players' union with constrained status and mixed victim/beneficiary gets moderate d (~0.55). The constraint's asymmetry reflects that exit options and structural position determine experienced extractiveness independent of nominal power level \u2014 a powerless prospective owner experiences higher chi than a powerful competing league operator with exit options.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint is genuinely Tangled Rope: it provides coordination value (unified league governance, revenue sharing, competitive balance) while extracting asymmetrically (artificial scarcity premium on expansion franchises, relocation threat extraction on cities, suppressed wage growth for players). The beneficiary perspectives (Rope) correctly identify the coordination function; the victim perspective (Snare) correctly identifies the extraction mechanism; the organized observer perspective (Scaffold) correctly identifies that the constraint has governance sunset potential (expansion pause would reduce scarcity premium). No single classification is 'correct' \u2014 the constraint legitimately exhibits both coordination and extraction functions, with asymmetric distribution of burden."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "player_salary_cap_negotiation",
+      "stadium_public_subsidy_extraction",
+      "sports_league_competitive_balance"
+    ],
+    "dual_formulation_note": "NBA franchise valuation is downstream of league governance structure and upstream of labor negotiation and municipal finance constraints. The scarcity premium mechanism connects league monopoly control to player wage suppression and public subsidy extraction through shared metric (franchise valuation)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.68
+    }
+  ]
+}

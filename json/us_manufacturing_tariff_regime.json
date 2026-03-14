@@ -1,0 +1,245 @@
+{
+  "header": {
+    "constraint_id": "us_manufacturing_tariff_regime",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tariff"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "US Manufacturing Tariff Regime",
+    "topic_domain": "economic_policy/trade",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "protected_domestic_manufacturers",
+      "tariff_revenue_government"
+    ],
+    "victims": [
+      "import_dependent_consumers",
+      "downstream_manufacturers",
+      "trading_partner_economies"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Wage-Earning Consumer",
+      "comment": "PERSPECTIVE 1: WAGE-EARNING CONSUMER (SNARE) \u2014 Bears tariff costs through higher prices on imported goods and downstream products with no viable exit. Cannot arbitrage or relocate consumption patterns at scale. Suppression is structural: price floors created by tariff enforcement, no accessible substitute supply chains. Maximum extraction experienced."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Downstream Manufacturer",
+      "comment": "PERSPECTIVE 2: DOWNSTREAM MANUFACTURER (SNARE) \u2014 Depends on imported intermediate goods and raw materials; tariffs increase input costs and production overhead. Exit requires relocation to tariff-advantaged jurisdictions (constrained by capital, workforce retraining, supply chain reestablishment). No coordination benefit \u2014 constraint is pure extraction from this position."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Protected Manufacturer",
+      "comment": "PERSPECTIVE 3: PROTECTED MANUFACTURER (ROPE) \u2014 Benefits from tariff-created price floor and reduced import competition. Experiences the constraint as coordination: tariff regime enforces an orderly market that enables pricing power and capital investment certainty. Net beneficiary. Can arbitrage: relocate production, adjust supply chains, leverage tariff schedule complexity. Low experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Multinational Corporation",
+      "comment": "PERSPECTIVE 4: MULTINATIONAL CORPORATION (TANGLED ROPE) \u2014 Can arbitrage tariff regimes through transfer pricing, offshoring, and global supply chain optimization. Also benefits from tariff protection in US market segments. Extraction mixed with coordination benefit \u2014 the regime constrains but also creates profitable market structures. Mobile exit options but leveraging tariff complexity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The US Government",
+      "comment": "PERSPECTIVE 5: US GOVERNMENT (TANGLED ROPE) \u2014 Extracts tariff revenue and coordinates industrial policy through tariff schedules (coordination function). But constrained by: WTO obligations, retaliatory tariffs from trading partners, domestic political economy requiring constant tariff renegotiation. Extraction from tariff revenue; coordination from industrial policy leverage. Suppression comes from retaliation cycles and institutional rigidity."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "label": "The Trading Partner Economy",
+      "comment": "PERSPECTIVE 6: TRADING PARTNER ECONOMY (SNARE) \u2014 Faces US tariff barriers on export goods; retaliatory tariffs trigger counter-sanctions; trapped in bilateral negotiation asymmetry favoring the larger US market. No exit except through costly trade disputes or market substitution. Suppression via US market access dependence."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The WTO Trading System",
+      "comment": "PERSPECTIVE 7: WTO TRADING SYSTEM (PITON) \u2014 Tariff regimes nominally constrained by WTO rules, but enforcement is weak and member states routinely circumvent via exceptions (national security, infant industry, etc.). The WTO architecture persists through institutional inertia despite limited enforcement capacity. Theater ratio high: tariff justifications invoke WTO compliance while actual behavior violates GATT principles. System has degraded from original coordination function."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Free Trade Coalition",
+      "comment": "PERSPECTIVE 8: FREE TRADE COALITION (SCAFFOLD) \u2014 Organized non-state actors (import-dependent industry groups, consumer advocates, academic economists) pushing alternative arrangements (bilateral free trade agreements, sectoral liberalization, supply chain diversification). See tariff regime as temporary barrier to eventual liberalization. Has exit vision: progressive tariff reduction, global supply chain reintegration. Sunset logic applies: trade agreements can unwind tariffs over negotiated timescales."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law View (Comparative Advantage)",
+      "comment": "PERSPECTIVE 9: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, tariff regimes contradict comparative advantage and produce aggregate welfare loss (Ricardian economics). The argument: tariffs are inherently distortionary, creating deadweight loss that exceeds any localized benefit. However, this perspective naturalizes a contestable economic theory (comparative advantage assumes perfect capital mobility, perfect information, zero adjustment costs) as a law of nature. The engine will flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "infant_industry_legitimacy",
+      "question": "Do tariff protections for emerging industries actually enable industrial development and eventual competitiveness, or do they create permanent dependency and rent-seeking?",
+      "resolution_mechanism": "Historical analysis of tariff-protected industries: track whether protected sectors achieved sustained competitiveness after tariff removal (South Korea steel, semiconductor infant industry protection); compare to sectors that never achieved competitiveness despite long protection (certain agricultural sectors)",
+      "impact": "If protection enables competitiveness: tariff regime has genuine coordination function (Rope or Tangled Rope at industry level). If protection creates dependency: regime is extraction mechanism with theater (Snare or Piton). Classification shifts substantially.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether infant industry protection enables eventual competitiveness"
+    },
+    {
+      "id": "national_security_scope_creep",
+      "question": "How much of current tariff enforcement is justified by genuine national security concerns (energy, semiconductors, rare earth metals) versus pretext for general protectionism?",
+      "resolution_mechanism": "Distinguish tariff schedule items by: (a) dual-use technology classification, (b) supply chain concentration metrics, (c) geopolitical dependency risk assessments. Compare security-justified tariff rates to general manufacturing tariff rates.",
+      "impact": "If genuine security concern: tariff regime has legitimate coordination function for strategic industrial capacity. If mostly pretext: theater_ratio should be higher (~0.80+), regime reclassifies toward Piton or Snare. Affects suppression characterization and victim identification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of security justification versus protectionist pretext in tariff enforcement"
+    },
+    {
+      "id": "retaliation_asymmetry",
+      "question": "Does US market size and diversification create structural asymmetry in tariff retaliation capacity, where trading partners cannot match US tariff impact?",
+      "resolution_mechanism": "Quantitative analysis of retaliatory tariff impact: measure price inflation in US imports vs equivalent tariff rate applied by trading partner; assess relative welfare loss as percentage of GDP",
+      "impact": "If asymmetry confirmed: US government has institutional power advantage, trading partners trapped (higher d for trading partner victims). If symmetric: trading partners have more exit capacity. Affects whether trading partner perspective is Snare or Tangled Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether US market size creates asymmetric retaliation capacity"
+    },
+    {
+      "id": "tariff_incidence_empirical",
+      "question": "What is the empirical incidence of tariffs: do protected manufacturers pass through costs to consumers, absorb in margins, or invest in productivity?",
+      "resolution_mechanism": "Econometric analysis of producer and consumer price indices by tariff schedule; measure cost pass-through rates; compare productivity growth in protected vs unprotected sectors",
+      "impact": "If high pass-through: consumer extraction is high (suppression gate confirmed). If manufacturers absorb: distributes costs toward capital holders. If productivity investment: coordination benefit emerges. Affects whether extractiveness should be 0.58 or lower/higher.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Empirical incidence of tariff costs across manufacturer, consumer, and productivity"
+    },
+    {
+      "id": "supply_chain_lock_in",
+      "question": "Do downstream manufacturers face lock-in costs (switching suppliers, tooling, inventory adjustments) that exceed exit costs of relocation, making tariff-driven cost increases effectively irreversible?",
+      "resolution_mechanism": "Case studies of downstream manufacturers responding to tariff changes: measure time and capital required to source alternative inputs, relocate production, or accept tariff cost burden",
+      "impact": "If lock-in is high: exit_options should be 'trapped' not 'constrained'; suppression higher. Downstream manufacturers move from Snare(constrained) to Snare(trapped), increasing experienced extraction. If low: exit is genuinely available.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Supply chain lock-in costs relative to relocation costs"
+    },
+    {
+      "id": "comparative_institutional_advantage",
+      "question": "Does US political system's protectionist bias (geographically concentrated manufacturing lobbies in swing states) represent a genuine institutional constraint on liberalization, or a contingent policy choice?",
+      "resolution_mechanism": "Political economy analysis: track tariff schedule changes under administrations with different trade philosophies; assess whether tariff patterns correlate with electoral college significance of manufacturing regions",
+      "impact": "If institutional constraint: regime is more rigid (higher suppression). If contingent choice: policy is reversible faster (lower suppression, higher exit options for government actor). Affects government's exit classification and scenic scope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether protectionist bias is structural institutional constraint or contingent policy choice"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The US manufacturing tariff regime is a hybrid coordination-extraction constraint operating between domestic protected manufacturers (beneficiaries), consumers and downstream manufacturers (victims), and trading partner economies (victims). The regime exhibits genuine industrial policy coordination (maintaining domestic manufacturing capacity and negotiating leverage) alongside extraction (price floors, input cost inflation, lost consumer surplus). Extractiveness has increased from 0.35 to 0.58 over the measurement interval as tariff schedules have expanded and enforcement has intensified. Theater ratio has increased from 0.52 to 0.68 as security justifications (national security, critical supply chains) have been invoked with increasing frequency to justify protectionist schedules. The constraint is characterized by: (1) Active enforcement through Customs and Border Protection; (2) Multiple institutional actors (US government, protected manufacturers, downstream industries, trading partners) with conflicting structural positions; (3) Retaliatory dynamics that create cascading suppression; (4) An aspirational free trade alternative (bilateral agreements, sectoral liberalization) that suggests Scaffold logic at the organized coalition level; (5) A false summit risk where comparative advantage is naturalized as economic law rather than understood as a contestable theoretical framework dependent on assumptions about capital mobility and adjustment costs.",
+    "key_agents": [
+      "Protected Domestic Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 Steel, automotive, agricultural sectors protected by tariff schedules; benefit from price floors and reduced import competition; can arbitrage tariff complexity",
+      "Wage-Earning Consumers: Primary victim (powerless/trapped) \u2014 Bear tariff costs through higher prices on imported goods, clothing, electronics; no viable exit; trapped by geography and income constraints",
+      "Downstream Manufacturers: Secondary victim (moderate/constrained) \u2014 Automotive parts suppliers, apparel manufacturers, electronics assemblers depending on imported inputs; face cost increases and capital relocation barriers",
+      "US Government: Institutional actor (institutional/constrained) \u2014 Extracts tariff revenue; coordinates industrial policy; constrained by WTO obligations, retaliation, and political economy of protected regions",
+      "Trading Partner Economies: Secondary victim (moderate/trapped) \u2014 Face tariff barriers on exports; subject to retaliation risk; trapped in bilateral negotiation asymmetry",
+      "Free Trade Coalition: Organized agents (organized/mobile) \u2014 Import-dependent industry groups, consumer advocates, academic economists; pushing alternative arrangements with sunset vision",
+      "Multinational Corporations: Powerful actor (powerful/mobile) \u2014 Can arbitrage tariff regimes through supply chain optimization and transfer pricing; experience mixed coordination benefit and constraint",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 Risks naturalizing comparative advantage theory as economic law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, increased from 0.35 over interval. The regime extracts from consumers and downstream manufacturers through price floors and input cost inflation. But extraction is not maximal because: (1) protected manufacturers genuinely benefit from orderly markets (coordination value exists), (2) some downstream manufacturers can absorb costs through productivity improvements, (3) some consumers can arbitrage through imports or substitutes (though limited). The increase over time reflects expanded tariff schedules and tightened enforcement. Suppression (0.65): Moderate-high. Consumers face structural price floors with no exit; downstream manufacturers face supply chain lock-in; trading partners face market access dependence. Suppression is not maximal because tariff schedules have some transparency (published rates, predictable implementation) and political contestability (lobby pressure, electoral consequences). Theater ratio (0.68): Moderate-high. National security and infant industry justifications are invoked to legitimize protectionist tariff schedules whose economic rationale is general protectionism. The performative element increased over the interval as security framing expanded.",
+    "directionality_logic": "Directionality for each agent derives from their power level, exit options, and relationship to the extraction flow. Protected manufacturers (institutional/arbitrage) experience low d: they are beneficiaries with exit capacity (can relocate, leverage tariff complexity). Consumers (powerless/trapped) experience high d: they bear costs with no exit. Downstream manufacturers (moderate/constrained) experience intermediate d: they bear costs but can exit at capital cost. Trading partners (moderate/trapped) experience high d: structurally dependent on US market access. Government (institutional/constrained) experiences moderate d: extracts revenue but constrained by WTO obligations and retaliation. The analytical observer (analytical/analytical) risks low d through false naturalization: if comparative advantage is seen as natural law, the observer positions themselves as outside the constraint's structure, failing to see how tariff regime distributes power asymmetrically.",
+    "perspectival_gap": "This constraint exhibits maximum perspectival divergence. The protected manufacturer sees coordination (Rope) \u2014 the tariff regime solves the problem of market ordering and capital investment certainty. The consumer sees pure extraction (Snare) \u2014 they bear costs with no benefit and no exit. The downstream manufacturer sees mixed extraction-coordination (Tangled Rope) \u2014 they both benefit from supplier stability and suffer from input cost increases. The trading partner sees extraction (Snare) \u2014 they are trapped in bilateral asymmetry. The government sees mixed revenue extraction and industrial policy coordination (Tangled Rope) \u2014 they extract tariff revenue and coordinate strategic capacity. The free trade coalition sees a temporary barrier with a sunset (Scaffold) \u2014 progressive liberalization is the identified exit path. The WTO system sees its own degraded function (Piton) \u2014 tariff regimes nominally constrained by WTO rules but routinely circumvented. The analytical observer risks seeing natural economic law (Mountain) but this is a false summit: the regime is a contingent institutional arrangement, not a law of nature.",
+    "mandatrophy_analysis": "RESOLUTION: The mandatrophy is resolved by recognizing that the tariff regime is genuinely a hybrid coordination-extraction system, not a misclassification. The coordination function is real: the regime does maintain domestic manufacturing capacity, does create stable investment environments for protected sectors, and does provide negotiating leverage on geopolitical supply chains. The extraction is equally real: consumers bear definite costs without compensation, downstream manufacturers face input cost inflation, and trading partners bear bilateral asymmetry. Both functions coexist. The classification as Tangled Rope is robust because: (1) Beneficiaries exist (protected manufacturers) who benefit from genuine coordination (market ordering), (2) Victims exist (consumers, downstream manufacturers) who bear extraction costs, (3) Active enforcement is required to maintain tariff schedules against liberalization pressure, (4) Suppression is structural (price floors, market access barriers), (5) Theater is moderate-high (security justifications expand). The constraint is neither pure coordination (Rope) nor pure extraction (Snare) \u2014 it is an intentionally mixed system where protected sectors are privileged to maintain strategic capacity at the cost of broad consumer and downstream manufacturer extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "supply_chain_concentration",
+      "semiconductor_manufacturing_capacity",
+      "agricultural_subsidy_regime",
+      "retaliatory_tariff_cycles"
+    ],
+    "dual_formulation_note": "The US tariff regime decomposes into multiple structurally distinct constraints: sector-specific tariff schedules (steel, automotive, agriculture) each have different \u03b5 values and different beneficiary/victim structures. National security-justified tariffs (semiconductors, rare earth metals) have different suppression mechanisms than general manufacturing tariffs. The regime-level story captures the aggregate structure; sector-level stories would reveal that protection is selectively distributed rather than uniform. Link upstream to specific supply chain constraints (semiconductor capacity, rare earth dependency) that the tariff regime claims to protect."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.58
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "comparative_advantage_assumption",
+      "wto_enforcement_mechanism"
+    ]
+  }
+}

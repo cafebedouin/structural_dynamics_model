@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "energy_sufficiency_norm",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "esn"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Energy Sufficiency Norm and Extraction",
+    "topic_domain": "energy_policy/subsistence/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "energy_producers",
+      "industrial_capital"
+    ],
+    "victims": [
+      "energy_poor_populations",
+      "future_generation_carbon_budget"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Energy Poor",
+      "comment": "PERSPECTIVE 1: ENERGY POOR (SNARE) \u2014 Trapped by material dependency on fossil fuel systems with no feasible exit. Cannot reduce consumption below subsistence levels, cannot access alternatives, and face extraction through both price volatility and infrastructure control. Maximum experienced extractiveness \u2014 structurally immobile, bearing all costs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Middle-Income Consumers",
+      "comment": "PERSPECTIVE 2: MIDDLE-INCOME CONSUMERS (TANGLED ROPE) \u2014 Benefit from energy access enabling employment, transportation, heating; also bear extraction through utility monopolies, price controls that prevent market adjustment, and hidden carbon costs. Can reduce consumption at significant lifestyle cost. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Energy Producers and Industrial Capital",
+      "comment": "PERSPECTIVE 3: ENERGY PRODUCERS (ROPE) \u2014 Institutional beneficiaries experiencing the norm as pure coordination: provision of adequate energy supply to enable economic function. Low perceived extraction because the norm defines their role as positive contribution. Arbitrage options (shift to renewables, invest in grids) allow exit if incentives change."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Climate Stabilization Movement",
+      "comment": "PERSPECTIVE 4: CLIMATE STABILIZATION MOVEMENT (PITON) \u2014 Sees the energy sufficiency norm as a degraded institutional framework maintained by inertia. The norm once solved real coordination problems (enable development, prevent destitution) but now persists despite recognition that the coordination function is being replaced by renewable infrastructure. Theater ratio high because much political effort goes to narrative maintenance ('reliable baseload') rather than solving actual grid problems. The movement has mobility but faces strong institutional resistance."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Renewable Energy Transition Coalition",
+      "comment": "PERSPECTIVE 5: RENEWABLE ENERGY TRANSITION (SCAFFOLD) \u2014 Sees the current energy sufficiency framework as temporary, solvable through technology and norms shift. The constraint has a genuine sunset: distributed renewables, battery storage, demand flexibility create alternative pathways. Active enforcement (grid regulations, renewable mandates) is being redirected toward transition architecture. Extraction persists during transition but with explicit end date. Constraint-relative time horizon is generational because transition takes 15-30 years; exit options are constrained by lock-in and stranded assets."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Energy Policy Institutions (Captured)",
+      "comment": "PERSPECTIVE 6: ENERGY POLICY INSTITUTIONS (TANGLED ROPE) \u2014 Institutional actors charged with balancing sufficiency, affordability, and sustainability. Experience the norm as both coordination mechanism (grid stability, universal access) and extractive constraint (regulatory capture by incumbent producers, path dependency in infrastructure investment, identity fusion with fossil fuel paradigm). Constrained exit because policy frameworks are locked into existing utility structures and carbon-intensive supply chains."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Natural Law Interpretation (False Summit)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 Risks viewing energy sufficiency as inherent to human civilization rather than as a contingent institutional arrangement. The temptation: 'Humans need energy, therefore sufficiency norms are natural.' But the structural data contradicts this. The extractiveness (0.58), suppression (0.65), and active enforcement (true) indicate a contingent institutional choice, not a law of nature. This perspective instantiates the oracle gap: the analytical observer's own conceptual frame naturalizes what decomposed analysis reveals as extractive."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "sufficiency_threshold_definition",
+      "question": "What energy consumption level constitutes 'sufficiency' \u2014 is it defined by basic needs, by competitive parity with high-consumption societies, or by infrastructure capacity?",
+      "resolution_mechanism": "Cross-national comparative analysis of energy consumption patterns, welfare outcomes, and stated adequacy; identification of consumption threshold where wellbeing gains plateau",
+      "impact": "If defined by basic needs (e.g., 2000 kWh/person/year): current global average is overconsumption, extraction is lower, and renewable transition is feasible. If defined by competitive parity (8000+ kWh/person/year): global sufficiency requires 3x current production, extraction is actually a coordination mechanism, and the snare classification collapses.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Definition of what constitutes adequate energy sufficiency"
+    },
+    {
+      "id": "carbon_internalization_mechanism",
+      "question": "Are future-generation climate costs being structurally suppressed from current decision-making, or is the energy sufficiency norm operating with honest accounting of carbon externalities?",
+      "resolution_mechanism": "Comparison of energy infrastructure investment decisions under different carbon price scenarios; analysis of whether carbon cost internalization changes the energy sufficiency optimum",
+      "impact": "If carbon costs are suppressed: the future-generation victim group is real but invisible, suppression value should be higher, and the snare classification is validated. If carbon costs are honestly priced in current decisions: the extraction is lower than measured, and the constraint becomes more like a legitimate rope with environmental tradeoffs.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether carbon costs are properly internalized in energy policy"
+    },
+    {
+      "id": "technological_lock_in_reversibility",
+      "question": "Is the fossil fuel infrastructure lock-in structurally irreversible or merely high-cost to reverse?",
+      "resolution_mechanism": "Comparative analysis of jurisdiction transition costs (coal to renewable, gas to electric, etc.); identification of sunk assets and stranded investments; timeline and cost analysis for infrastructure replacement",
+      "impact": "If irreversible: the trapped classification for energy-poor populations is structurally justified, and renewable transition prospects are overstated. If reversible at acceptable cost: scaffold perspective is validated, and the constraint has genuine sunset.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Reversibility of fossil fuel infrastructure lock-in"
+    },
+    {
+      "id": "renewables_intermittency_coordination_cost",
+      "question": "Does renewable infrastructure genuinely reduce coordination costs compared to fossil fuel centralization, or does it merely shift coordination problems from production to distribution and demand management?",
+      "resolution_mechanism": "Comparative analysis of grid management complexity and cost under different energy mixes; study of real-world operational constraints in high-renewable grids (Denmark, South Australia, Costa Rica)",
+      "impact": "If renewables reduce net coordination cost: the rope classification for producers is actually shifted toward snare as the coordination benefit erodes. If renewables shift but don't reduce costs: the energy sufficiency norm persists under renewable infrastructure, and the scaffold's sunset claim is weakened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether renewables reduce overall grid coordination costs"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The energy sufficiency norm represents a global institutional arrangement defining adequate energy access as a basic right while simultaneously creating asymmetric extraction mechanisms that concentrate benefits among producers and industrial capital while suppressing alternatives and externalizing future costs. The constraint originated as a coordination mechanism solving real problems: preventing energy poverty, enabling economic development, and distributing resources across populations. Over decades, the norm has accumulated extractive functions layered atop the original coordination goal. Incumbent fossil fuel producers benefit from regulatory frameworks built around sufficiency narratives that lock in their centrality. Energy-poor populations remain trapped by infrastructure designed for centralized production and consumption patterns. Policy institutions experience identity fusion with fossil fuel paradigms. Meanwhile, renewable alternatives are being framed as threats to 'sufficiency' rather than as solutions, creating theatrical enforcement of outdated infrastructure. The constraint now exhibits all characteristics of a tangled rope: genuine coordination function (stable, universal energy access is real and valuable) combined with asymmetric extraction (benefits concentrated, costs externalized, alternatives suppressed).",
+    "key_agents": [
+      "Energy-poor populations: Primary victims (powerless/trapped) \u2014 structurally immobile, bearing full cost of high prices and infrastructure dependency, no exit options",
+      "Energy producers and fossil fuel companies: Primary beneficiaries (institutional/arbitrage) \u2014 capture rents from sufficiency frameworks, regulatory protection, and carbon externality subsidies",
+      "Middle-income energy consumers: Secondary actors (moderate/constrained) \u2014 benefit from access but constrained by costs, utility monopolies, and inability to shift to alternatives",
+      "Climate stabilization movement: Organized challengers (organized/mobile) \u2014 see the norm as degraded, pushing for recognition that renewable alternatives solve the coordination problem",
+      "Renewable energy transition coalition: Organized beneficiaries of change (organized/constrained) \u2014 pushing sunset clause through technology and norms shift",
+      "Energy policy institutions: Institutional mediators (institutional/constrained) \u2014 captured by incumbent interests while nominally responsible for balancing multiple goals",
+      "Future generations: Structural victims (powerless/trapped) \u2014 bearing carbon costs that current energy sufficiency frameworks suppress from accounting"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Elevated moderate-to-high. The energy sufficiency norm has evolved from a pure coordination mechanism into a hybrid structure. The coordination function remains real: universal energy access prevents destitution and enables economic participation. But extraction has accumulated through several mechanisms: (1) regulatory capture that locks in fossil fuel centrality, (2) pricing structures that allow monopoly rents, (3) suppression of alternatives (decentralized renewables, demand management), (4) externalization of carbon costs onto future generations, (5) narrative framing that naturalizes fossil fuel dependency as inherent to 'sufficiency.' The extractiveness trajectory shows increasing accumulation over the measured interval (0.32 \u2192 0.58), consistent with regulatory capture dynamics where extraction layers accumulate over time. Suppression (0.65): High. Victims face multiple suppression mechanisms: (1) infrastructure lock-in (switching costs are high), (2) information suppression (renewable alternatives are narratively positioned as unreliable), (3) economic barriers (energy-poor cannot access alternatives even when technically available), (4) institutional barriers (policy favors incumbent producers), (5) cognitive suppression (the sufficiency narrative naturalizes the current system as necessary). Theater ratio (0.48): Moderate, indicating that roughly half of institutional activity is performative. Energy policy discourse contains significant theater: endless summit rhetoric about 'reliable baseload' and 'baseload necessity' despite technical evidence that renewable grids can be stable; performance of public consultation while decisions are predetermined; narrative maintenance of fossil fuel framing despite acknowledged climate imperatives. But some theater is lower than in degraded piton constraints because the coordination function is genuinely operational \u2014 the grid does need to function, sufficiency problems are real. The theater reflects capture and path dependency rather than pure institutional decay.",
+    "directionality_logic": "Directionality (d) is derived from each agent's structural position relative to extraction flow. Energy producers: high institutional power, arbitrage options, net beneficiary position \u2192 low d (0.10-0.20) \u2192 negative f(d) \u2192 low or negative experienced extraction \u03c7. They perceive the constraint as rope because the extraction flows toward them. Energy-poor populations: low power, trapped exit \u2192 high d (0.90-0.95) \u2192 high f(d) \u2192 high \u03c7. They perceive snare because they experience maximum extraction with no exit. Middle-income consumers: moderate power, constrained exit \u2192 intermediate d (0.55-0.65) \u2192 moderate f(d) \u2192 moderate \u03c7. They perceive tangled rope because they both benefit (access) and pay costs (prices, restricted alternatives). Policy institutions: institutional power but identity-locked into fossil fuel paradigms, constrained exit from policy legacy \u2192 intermediate d (0.45-0.55) \u2192 moderate f(d) \u2192 moderate \u03c7. They experience the constraint as tangled rope from their own perspective (both coordinate and extract) while being external extractors from the energy-poor perspective. Analytical observer at civilizational scope risks false summit by naturalizing the contingent institutional arrangements (d=0.72 canonical \u2192 mountain classification) but the structural data contradicts this: beneficiaries exist, victims exist, enforcement is active \u2014 all disqualify mountain.",
+    "perspectival_gap": "The most severe perspectival gap is between the energy-poor (snare) and the energy producers (rope). The same constraint \u2014 the energy sufficiency norm \u2014 appears as pure predation from the powerless perspective and as pure coordination from the institutional perspective. This gap reflects real structural asymmetry: the norm solves the producer's problem (how to maintain centralized, profitable production) while creating the victim's problem (how to survive on inadequate access or high cost). The policy institutions occupy a middle position, experiencing genuine coordination function (grid stability, universal access is hard) but also experiencing extraction (locked into fossil fuel infrastructure, pressured by incumbent interests). The renewable transition coalition sees the constraint as piton (degraded ritual) while producers still see it as rope (living coordination), revealing that the coordination function is eroding but not yet dead. The climate-aware observer at civilizational scale risks naturalizing these arrangements as inevitable (mountain) rather than recognizing them as contingent institutional choices. The analytical oracle gap is sharp here: from outside the global energy system, 'sufficiency' appears as a necessity of civilization; from inside positions of extraction, it is a contingent power arrangement.",
+    "mandatrophy_analysis": "The energy sufficiency norm resolves the mandatrophy through structural differentiation by agent position and time horizon. Short-term perspectives dominated by immediate energy access needs (biographical or immediate) classify the constraint as snare (powerless) or rope (producers) \u2014 the extraction is real and present. Longer-term perspectives (generational, civilizational) can accommodate the scaffold view (transition is possible via renewable infrastructure, which has genuine sunset potential) or the piton view (the coordination function is eroding). The false summit (mountain) appears when the observer conflates the historical necessity of the sufficiency norm with its current contingency \u2014 the norm WAS a response to physical constraints (scarcity, capital requirements, centralization economies) but those constraints have shifted with renewable technology. The mandate trap is the temptation to see 'sufficiency' as inherently requiring fossil fuels, when the coordination problem (ensuring universal access to adequate energy) is technically solvable through distributed renewables. The classification portfolio confirms that the constraint is genuine tangled rope: it coordinates real access while extracting through lock-in, monopoly, and externalization."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "carbon_externality_suppression",
+      "energy_infrastructure_lock_in",
+      "utility_monopoly_pricing"
+    ],
+    "dual_formulation_note": "The energy sufficiency norm is upstream of three structurally distinct constraints: (1) carbon_externality_suppression (how climate costs are excluded from energy pricing, \u03b5\u22480.42), (2) energy_infrastructure_lock_in (stranded asset dynamics and switching costs, \u03b5\u22480.55), (3) utility_monopoly_pricing (rent extraction through regulatory protection, \u03b5\u22480.65). The norm influences all three by naturalizing the incumbent fossil fuel system as the baseline against which alternatives are evaluated. Each downstream constraint has its own extractiveness but shares the upstream sufficiency framing that makes them appear necessary rather than contingent."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.48
+    }
+  ]
+}

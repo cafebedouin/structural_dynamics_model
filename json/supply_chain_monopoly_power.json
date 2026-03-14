@@ -1,0 +1,191 @@
+{
+  "header": {
+    "constraint_id": "supply_chain_monopoly_power",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "scmp"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Supply Chain Monopoly Power Extraction",
+    "topic_domain": "economic/industrial_organization",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "monopoly_controller"
+    ],
+    "victims": [
+      "dependent_suppliers",
+      "downstream_consumers",
+      "competitive_market_participants"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dependent Supplier",
+      "comment": "PERSPECTIVE 1: DEPENDENT SUPPLIER (SNARE) \u2014 Supplier locked into monopoly buyer relationship with no viable alternatives. Cannot exit without bankruptcy or forced pivot to incompatible markets. Bears full extraction cost through margin compression, exclusivity demands, and payment term manipulation. Maximum suppression: customer concentration risk, switching costs, asset specificity, and information asymmetry create immobilizing barriers."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The End Consumer",
+      "comment": "PERSPECTIVE 2: END CONSUMER (SNARE) \u2014 Faces reduced choice and elevated prices due to monopoly-driven supply constraints and reduced competitive pressure. Exit is theoretically possible but constrained by high switching costs, product differentiation lock-in, and geographic concentration of alternative sources. Bears extraction through pricing power and reduced quality innovation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Monopoly Controller",
+      "comment": "PERSPECTIVE 3: MONOPOLY CONTROLLER (ROPE) \u2014 Experiences the constraint as a coordination mechanism: centralized control of critical inputs enables efficient production orchestration and reduces redundancy. Benefits from margin extraction, first-mover advantage, and network effects. Has maximal exit optionality through arbitrage (can divest, reposition, or dissolve without structural cost). Perceives constraint as natural outcome of superior efficiency and integration."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Competing Market Participants",
+      "comment": "PERSPECTIVE 4: COMPETING MARKET PARTICIPANTS (TANGLED ROPE) \u2014 Face both coordination barriers and extraction. Genuine coordination problem exists: monopoly control reduces unpredictable supply fluctuations and quality variance, benefiting downstream producers who compete with each other. Simultaneously, the monopoly extracts through price markup and supply rationing. Organizations constrained by regulatory, capital, and time barriers to building alternative supply chains. Experience mixed benefit (coordination) and cost (extraction)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Regulatory Authority",
+      "comment": "PERSPECTIVE 5: REGULATORY AUTHORITY (SCAFFOLD) \u2014 Maintains antitrust frameworks and supply chain resilience mandates as temporary coordination mechanisms with sunset logic. High mobility (can reshape enforcement, mandate divestitures, alter regulations). Perceives constraint as remediable through enforcement and market redesign. Theater remains low (enforcement is functional, not merely performative). Sunset implicit in regulatory powers: market concentration can be forced to decline through active intervention."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Global Trade Regime",
+      "comment": "PERSPECTIVE 6: GLOBAL TRADE REGIME (PITON) \u2014 Maintains formal neutrality toward supply chain concentration through most-favored-nation principles and free-trade norms, but these norms have degraded as mechanisms for preventing monopoly power. Trade agreements no longer functionally prevent concentration; they mostly perform legitimacy. High theater ratio reflects the performative status of trade institutions as regulators of concentration. The primary function (preventing monopoly power) has atrophied; the institutional form persists through inertia."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Efficiency Narrative)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / EFFICIENCY NARRATIVE (MOUNTAIN) \u2014 From civilizational/universal scope, some supply chain concentration is inherent to economic efficiency: larger integrated systems can achieve lower transaction costs, faster innovation cycles, and higher reliability than fragmented alternatives. This perspective naturalizes monopoly as immutable law of industrial organization. However, the structural data contradicts mountain classification \u2014 the extracted-from agents have alternatives (though costly), suppression is maintained by enforcement and information control (not physical law), and the 'efficiency imperative' framing naturalizes what is actually a contingent power distribution."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "efficiency_vs_extraction_threshold",
+      "question": "At what margin/utilization ratio does centralized supply control transition from efficiency coordination to pure extraction?",
+      "resolution_mechanism": "Comparative efficiency metrics (input costs, inventory turnover, innovation velocity) for monopoly-controlled vs competitive supply chains in same sector; correlation between margin expansion and consumer welfare changes",
+      "impact": "If efficiency threshold is high (monopoly controller's margins can reach 0.50+ before efficiency gains are outweighed): constraint reclassifies toward rope for more perspectives. If threshold is low (monopoly controller's margins above 0.25-0.30 consistently exceed efficiency gains): constraint remains snare across all non-beneficiary perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold separating efficiency gains from extraction"
+    },
+    {
+      "id": "substitution_cost_availability",
+      "question": "Do viable substitute supply sources exist at costs that would enable competitive market structure, or are barriers to entry inherently prohibitive?",
+      "resolution_mechanism": "Cost analysis of new entrant supply chains; geographic/technical barriers to alternative sourcing; capital requirements for backward integration by dependent suppliers",
+      "impact": "If substitutes available at modest cost premium (< 15%): dependent suppliers are constrained rather than trapped; reclassify to constrained exit, reducing d and experienced extraction. If substitutes unavailable or prohibitively expensive (> 40% cost premium): trap is structural, confirm powerless/trapped classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether viable substitutes exist at accessible cost"
+    },
+    {
+      "id": "regulatory_capture_extent",
+      "question": "To what extent have monopoly controllers captured antitrust enforcement and trade regime institutions, converting scaffold/piton into snare?",
+      "resolution_mechanism": "Analysis of regulatory enforcement patterns, revolving-door personnel flows, lobbying expenditure correlations with enforcement weakness; comparison of enforcement intensity across jurisdictions and historical periods",
+      "impact": "If capture is high: regulatory authority perspective should shift from scaffold to constrained institutional view, reducing their agency. If capture is low: regulatory capacity is genuine and sunset mechanism is real, confirming scaffold classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of regulatory capture by monopoly controllers"
+    },
+    {
+      "id": "information_asymmetry_persistence",
+      "question": "Can dependent suppliers or end consumers access sufficient cost/quality/sourcing information to evaluate alternatives, or is information control itself a suppression mechanism?",
+      "resolution_mechanism": "Audit of information availability (supplier cost transparency, alternative source quality metrics, total-cost-of-ownership calculators); correlation between information access and supplier/consumer switching rates",
+      "impact": "If information control is severe: suppression derives partly from epistemic barriers, increasing effective suppression beyond structural barriers alone. Reinforces snare classification for powerless perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Information asymmetry as suppression mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Supply chain monopoly power arises when control of a critical input or production node concentrates in a single actor who uses that control to extract rents from dependent suppliers and downstream consumers. This constraint operates across multiple structural levels: direct supplier extraction through margin compression and unfair payment terms; consumer extraction through pricing power and reduced innovation incentives; competitive suppression through controlled supply rationing; and institutional extraction through regulatory capture that prevents antitrust enforcement. The constraint's theater_ratio (0.35) remains consistently low because monopoly extraction relies on structural barriers and direct economic coercion, not performative legitimacy. Unlike degraded institutions (pitons), supply chain monopoly power is a functioning extraction mechanism that does not require theatrical maintenance. The extractiveness trajectory (0.38 \u2192 0.68 over the interval) reflects progressive margin accumulation and supply control intensification as the monopoly controller internalizes more of the supply chain and consolidates market position. Dependent suppliers face trapped exit (specific investments, customer concentration, switching costs), end consumers face constrained exit (product lock-in, high switching friction), and competitive participants face constrained exit (capital barriers to building alternative supplies). The regulatory authority retains genuine mobility and can reshape the constraint through enforcement and market restructuring, making the scaffold perspective viable. The global trade regime, by contrast, has become largely performative in preventing concentration\u2014it legitimizes free-trade principles while those principles no longer functionally prevent monopoly formation.",
+    "key_agents": [
+      "Monopoly Controller: Primary beneficiary (institutional/arbitrage) \u2014 captures margin extraction, supply control premiums, and first-mover advantages; can pivot or divest at low cost",
+      "Dependent Suppliers: Primary victim (powerless/trapped) \u2014 locked into buyer relationship with no viable alternatives; face margin compression, exclusivity demands, payment term manipulation",
+      "End Consumers: Secondary victim (powerless/constrained) \u2014 face reduced choice, elevated prices, reduced quality innovation; can theoretically exit but switching costs and product lock-in constrain mobility",
+      "Competitive Market Participants: Tertiary victim (organized/constrained) \u2014 face both coordination benefits (reduced supply variance through monopoly) and extraction costs (supply rationing, pricing markup); capital and regulatory barriers prevent building competing supply chains",
+      "Regulatory Authority: Institutionalized constraint modifier (powerful/mobile) \u2014 maintains antitrust frameworks and can reshape concentration through enforcement and mandates; retains genuine exit optionality",
+      "Global Trade Regime: Degraded constraint legitimizer (institutional/arbitrage) \u2014 maintains formal free-trade norms while those norms have degraded as prevention mechanisms; persists through institutional inertia"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and rising. The monopoly controller captures margin extraction through pricing power, supply control premiums, and reduced competitive pressure. Initial extractiveness (0.38) reflects pre-monopoly competitive conditions; final value (0.68) reflects full monopoly consolidation. The rising trajectory reflects progressive margin accumulation and supply control intensification as the monopoly internalizes more supply chain nodes. Suppression (0.72): High. Multiple suppression mechanisms operate: (1) structural barriers\u2014specialized assets, customer concentration, switching costs create immobilizing investment; (2) information asymmetry\u2014monopoly controller controls cost data, quality metrics, and sourcing alternatives; (3) regulatory capture\u2014antitrust enforcement is weakened by institutional capture, reducing exit mechanism credibility; (4) network effects\u2014the monopoly's scale creates benefits (supply reliability, quality consistency) that raise opportunity cost of exit. Theater ratio (0.35): Low and stable. Monopoly extraction functions through direct economic coercion and structural barriers, not performative legitimacy. No need for theatrical maintenance\u2014the constraint is visibly extractive and suppresses alternatives directly. Low theater distinguishes this from piton (degraded) or rope (legitimized coordination), confirming snare classification.",
+    "perspectival_gap": "The dependent supplier sees pure snare (trapped, maximum extraction, no exit). The end consumer sees snare but with slightly higher perceived exit optionality (constrained rather than trapped). The monopoly controller sees rope (coordination mechanism, legitimate efficiency gains, arbitrage exit). Competing market participants see tangled rope (mixed coordination benefit from supply stability + extraction cost from pricing). The regulatory authority sees scaffold (remediable through enforcement, genuine sunset logic via antitrust mandates). The global trade regime sees itself as rope (free-trade coordination) but the analytical observer diagnoses it as piton (degraded, performative). The civilizational analytical observer risks falsely naturalizing this as mountain (efficiency imperative of industrial organization), but structural data reveals this as false summit: the monopoly is maintained by enforcement and institutional dynamics, not physical law. The perspectival gap reveals that the 'efficiency' framing is a naturalizing narrative deployed to justify extraction that would otherwise appear clearly unjust.",
+    "directionality_logic": "Beneficiaries (monopoly_controller) receive low d values due to arbitrage exit optionality and net benefit flow. Victims (dependent_suppliers, downstream_consumers, competitive_market_participants) receive high d values due to trapped or constrained exit and net cost flow. The derived d feeds the sigmoid f(d), which scales extractiveness experienced by each agent based on their structural position relative to the constraint. A dependent supplier with d \u2248 0.92 (victim + trapped) experiences f(d) \u2248 1.38, amplifying the base extractiveness (0.68) to experienced \u03c7 \u2248 0.72\u20130.94 depending on scope. The monopoly controller with d \u2248 0.08 (beneficiary + arbitrage) experiences f(d) \u2248 -0.12, producing negative experienced extraction (they benefit from the constraint). The competitive participant with d \u2248 0.58 (victim + constrained, with some coordination benefit) experiences f(d) \u2248 0.75, producing moderate experienced extraction. These directionality values are derived from structural data (exit costs, beneficiary/victim relationship) and require no override."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "industrial_vertical_integration",
+      "buyer_power_asymmetry",
+      "information_asymmetry_supply_chains"
+    ],
+    "dual_formulation_note": "Supply chain monopoly power is upstream of multiple sectoral constraints (semiconductor bottlenecks, rare earth dependency, pharmaceutical supply concentration). Each sector-specific monopoly should be modeled as a separate constraint story with its own \u03b5 and perspectives, linked via network.affects_constraints to this general supply chain mechanism. This story captures the structural mechanism; sector stories capture observable instances."
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "expert_authority_asymmetry",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "eaa"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Expert Authority Asymmetry",
+    "topic_domain": "epistemic/governance/institutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "credentialed_experts",
+      "knowledge_gatekeepers"
+    ],
+    "victims": [
+      "lay_decision_makers",
+      "non_expert_stakeholders",
+      "alternative_knowledge_systems"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Lay Decision-Maker",
+      "comment": "PERSPECTIVE 1: LAY DECISION-MAKER (SNARE) \u2014 Dependent on expert judgment for critical life decisions (medical, financial, legal, environmental) yet cannot verify expert claims. No meaningful exit: must defer or face catastrophic consequences from uninformed choices. Trapped by asymmetric information and structural prohibition on operating without expert sanction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Professional Non-Expert",
+      "comment": "PERSPECTIVE 2: PROFESSIONAL NON-EXPERT (TANGLED ROPE) \u2014 Constrained by credentialism requirements and professional licensing standards that require deference to experts. Benefits from the expertise system through access to vetted knowledge; bears extraction through restricted professional mobility and mandatory compliance with expert authority. Can exit only at high career cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Credentialed Expert",
+      "comment": "PERSPECTIVE 3: CREDENTIALED EXPERT (ROPE) \u2014 Experiences expert authority as coordination mechanism: peer review, professional standards, and disciplinary gatekeeping solve genuine epistemic problems (verification, quality control, liability). Net beneficiary \u2014 extraction runs toward this agent through deference, licensing requirements, and monopoly on recognized knowledge claims."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Alternative Knowledge Community",
+      "comment": "PERSPECTIVE 4: ALTERNATIVE KNOWLEDGE COMMUNITY (TANGLED ROPE) \u2014 Organized agents (indigenous knowledge holders, participatory science networks, craft practitioners) coordinate real knowledge production outside credentialist frameworks. Extraction occurs through institutional devaluation and legal prohibition on unlicensed practice; coordination occurs through shared epistemology and mutual recognition. Constrained by regulatory barriers that prevent market-testing alternative approaches."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Credentialist Institution",
+      "comment": "PERSPECTIVE 5: CREDENTIALIST INSTITUTION (PITON) \u2014 Licensing boards, professional associations, and academic institutions maintain the credential barrier through performative rituals (thesis defenses, certification exams, peer review committees) whose primary function has atrophied relative to their ceremonial overhead. Theater ratio high (0.65): much institutional activity is reputation-maintenance rather than actual knowledge verification. Persists through inertia and mutual institutional protection rather than demonstrated epistemic superiority."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational scope, some epistemic authority asymmetry is inherent to knowledge production: specialized domains have irreducible complexity that makes lay judgment unreliable, and verification requires training. This perspective risks naturalizing what is actually a contingent institutional arrangement maintained by credential gatekeeping. Engine false summit detection should flag this as attempted naturalization of extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "specialization_necessity_threshold",
+      "question": "What proportion of expert authority is necessary specialization vs. artificially maintained credential barrier?",
+      "resolution_mechanism": "Comparative analysis of barrier effects: contrast credential-requiring domains (medicine, law, engineering) with low-barrier high-stakes domains (investment advisory, journalism) and high-barrier low-stakes domains (cosmetology, barber licensing); measure adverse outcome rates and public satisfaction across credential tightness",
+      "impact": "If threshold > 0.70 necessary: most expert authority is justified specialization (mountain gates marginally). If threshold < 0.40 necessary: most authority is credential maintenance (snare classification becomes dominant across perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of expert authority that is necessary specialization vs. artificial barrier"
+    },
+    {
+      "id": "alternative_epistemic_viability",
+      "question": "Do alternative knowledge systems (indigenous, participatory science, craft expertise) produce measurably comparable or superior outcomes when not suppressed by regulatory prohibition?",
+      "resolution_mechanism": "Comparative outcome measurement in domains where alternatives have market access (e.g., agricultural practices, traditional medicine outcomes in permissive jurisdictions); identify whether suppression is epistemically justified or economically motivated",
+      "impact": "If alternatives produce superior outcomes: expert authority asymmetry is pure extraction (snare from lay perspective). If alternatives produce comparable outcomes: asymmetry is coordination with residual extraction (tangled rope). If alternatives produce worse outcomes: asymmetry is justified necessity (mountain gates apply).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Comparative viability of alternative knowledge systems"
+    },
+    {
+      "id": "credential_signal_decay",
+      "question": "Do academic credentials and professional licenses actually signal competence or have they become pure signals of credential-acquisition capacity?",
+      "resolution_mechanism": "Regression analysis of credential status on actual performance; compare performance predictiveness of credentials vs. demonstrated work portfolio; measure credential inflation over time (grade inflation, degree proliferation, certification creep)",
+      "impact": "If signal decay > 0.60: credentials function as pure barrier maintenance (piton + snare). If decay < 0.30: credentials remain valid knowledge signals (rope justification holds). Medium decay: mixed mechanism (tangled rope confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether credentials signal competence or credential-acquisition capacity"
+    },
+    {
+      "id": "verification_accessibility_engineering",
+      "question": "Is expert authority inherently unverifiable to lay agents, or is unverifiability engineered through technical opacity and jargon gatekeeping?",
+      "resolution_mechanism": "Experimental comparison: present expert claims in technical language vs. simplified explanation to comparable lay audiences; measure comprehension rates and quality of reasoning; identify which aspects of complexity are epistemic necessity vs. artificial obscuration",
+      "impact": "If engineered > 0.60: suppression is artificial (snare strengthened). If engineered < 0.30: complexity is genuine (mountain gates stronger). Medium engineering: suppression is partially structural (tangled rope confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether expert authority unverifiability is structural or engineered"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Expert authority asymmetry operates as a structural constraint across all knowledge-intensive domains: medicine, law, finance, science, engineering, environmental policy. The constraint creates systematic extraction from lay decision-makers who depend on expert judgment but cannot verify claims, while simultaneously coordinating genuine epistemic functions (knowledge verification, quality control, liability management). The tension between legitimate specialization and artificial credential maintenance generates six distinct experienced realities: powerless agents trapped in mandatory deference (snare), moderate professionals constrained by licensing requirements (tangled rope), experts benefiting from gatekeeping (rope), alternative knowledge communities suppressed by regulation (tangled rope), credentialist institutions maintaining performative rituals (piton), and civilizational observers tempted to naturalize extraction as inherent complexity (false summit). The theater ratio has increased from 0.40 to 0.68 over the interval, indicating credential inflation and proliferation of certifications whose epistemic content has decayed relative to their gatekeeping function.",
+    "key_agents": [
+      "Lay Decision-Makers: Primary victim (powerless/trapped) \u2014 dependent on expert judgment for medical, financial, legal, environmental decisions; cannot verify claims; no exit option",
+      "Credentialed Experts: Primary beneficiary (institutional/arbitrage) \u2014 capture deference monopoly, licensing rents, and epistemic authority; experience constraint as legitimate coordination",
+      "Professional Non-Experts: Secondary victim (moderate/constrained) \u2014 face licensing requirements and deference mandates; benefit from credential access but constrained by expert gatekeeping",
+      "Alternative Knowledge Communities: Secondary victim (organized/constrained) \u2014 produce competing knowledge (indigenous practices, participatory science, craft expertise); suppressed through regulatory prohibition and institutional devaluation",
+      "Credentialist Institutions: Institutional actor (institutional/arbitrage) \u2014 licensing boards, professional associations, academic institutions maintain credential barriers through performative rituals; experience constraint as inertial maintenance",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent extraction as inherent epistemic complexity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The original research group captures career and funding benefits during the verification window, but this assessment reflects genuine tension between justified specialization and artificial gatekeeping. The extractiveness value reflects the net extraction after accounting for real coordination benefits of professional standards. The upward trajectory (0.35 \u2192 0.62) indicates credential inflation outpacing epistemic necessity. Suppression (0.62): High. Multiple barriers prevent lay agents from operating without expert sanction: legal prohibition on unlicensed practice, technical opacity, epistemological incompleteness (lay agents cannot access sufficient information to verify), reputational penalties for expert challenge, and institutional gatekeeping. However, some barriers are epistemic necessities (surgical complexity) while others are artificial (professional jargon, licensing requirement expansion). Theater ratio (0.65): Moderate-high. Institutional credentialism exhibits significant performative content: degree inflation (degrees now required for positions previously requiring on-the-job training), certification proliferation (each credential adds bureaucratic layer without clear competence improvement), and professional ritual maintenance (board exams, thesis defenses, peer review ceremonies that function primarily for credential-holder signaling rather than knowledge verification). The trajectory indicates theater ratio increasing faster than extractiveness, diagnostic of piton dynamics: institutional function degrading while ceremonial overhead increases.",
+    "perspectival_gap": "Maximum perspectival divergence across structural perspectives. Expert experiences rope (legitimate coordination of knowledge verification); lay agent experiences snare (mandatory deference with no exit); non-expert professional experiences tangled rope (mixed coordination benefit and constraint); alternative knowledge system experiences tangled rope with suppression (competitors systemically devalued); institution experiences piton (performative ritual maintenance); analytical observer risks mountain (naturalizes contingent extraction). The gap reveals that expert authority asymmetry is not a natural law but a contingent institutional arrangement with growing extraction component (theater ratio trajectory) and declining epistemic necessity justification (credential inflation).",
+    "directionality_logic": "Directionality values (d) are derived from each agent's structural position relative to the extraction flow. Lay decision-makers are trapped victims with no exit (d \u2248 0.95, f(d) \u2248 1.42) experiencing maximum extraction chi. Credentialed experts are beneficiaries with arbitrage options (d \u2248 0.05, f(d) \u2248 -0.12) experiencing negative extraction (they are the extraction beneficiaries). Professional non-experts are constrained victims (d \u2248 0.65, f(d) \u2248 1.00) experiencing moderate extraction. Alternative knowledge communities are organized but constrained (d \u2248 0.55, f(d) \u2248 0.75) experiencing moderate-high extraction from regulatory suppression. Credentialist institutions are beneficiary arbitragers (d \u2248 0.15, f(d) \u2248 -0.01) with extracted rents flowing toward them. The piton classification derives from theater gate (theater_ratio \u2265 0.70) rather than high chi at generational timescale.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that all six types are legitimate perspectival readings until the credential inflation dynamics are measured. The base case shows mixed tangled rope (coordination + extraction at institutional level) and snare (pure extraction from lay perspective). The temporal measurement trajectory (theater ratio 0.40 \u2192 0.68, extractiveness 0.35 \u2192 0.62) shows theater increasing faster than extractiveness, diagnostic of piton emergence: the constraint is degrading from tangled rope toward piton as credentialism becomes more performative. The analytical observer's mountain classification is a false summit: from civilizational timescale, expertise does require specialization, but the credential inflation trajectory reveals that the constraint's primary function is increasingly institutional self-maintenance rather than epistemic necessity. The mandatrophy resolves by tracking measurement divergence: if theater and extractiveness remained coupled (both rising proportionally), the constraint would remain tangled rope. Their divergence indicates piton transition, revealing that institutional credentialism is increasingly extractive theater masquerading as necessary specialization."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "professional_licensure_rent_seeking",
+      "epistemic_closure_institutional",
+      "alternative_knowledge_suppression"
+    ],
+    "dual_formulation_note": "Expert authority asymmetry decomposes into three downstream constraints: professional licensure as rent-seeking mechanism, epistemic closure enabling institutional capture, and institutional suppression of alternative knowledge systems. Each has distinct epsilon values and structural dynamics. This story captures the aggregate constraint; downstream stories model specific mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

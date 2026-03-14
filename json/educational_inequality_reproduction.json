@@ -1,0 +1,230 @@
+{
+  "header": {
+    "constraint_id": "educational_inequality_reproduction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "edineq"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Educational Inequality Reproduction Mechanism",
+    "topic_domain": "education/social_stratification",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_socioeconomic_status_families",
+      "credential_gatekeepers",
+      "resource_concentrated_institutions"
+    ],
+    "victims": [
+      "low_socioeconomic_status_students",
+      "first_generation_learners",
+      "structurally_marginalized_communities"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Low-Income Student",
+      "comment": "PERSPECTIVE 1: LOW-INCOME STUDENT (SNARE) \u2014 Trapped by resource barriers, neighborhood school quality, family capital constraints, and belief in individual meritocracy. No exit option from the constraint: schooling is legally mandatory and economically necessary, yet the institution itself reproduces inequality. Maximum experienced extraction without proportional benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "First-Generation College Seeker",
+      "comment": "PERSPECTIVE 2: FIRST-GENERATION COLLEGE SEEKER (TANGLED ROPE) \u2014 Structurally mobile (can in principle attend college) but constrained by lack of cultural capital, institutional navigation barriers, and financial burden. Benefits from education's coordination function (skill development, credential value) while bearing disproportionate costs (greater time-to-degree, higher debt, navigation labor). Significant extraction alongside genuine upskilling."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Elite Educational Institution",
+      "comment": "PERSPECTIVE 3: ELITE EDUCATIONAL INSTITUTION (ROPE) \u2014 Experiences education as coordination: signaling quality, credentialing students, producing social capital networks. Net beneficiary through arbitrage (can shift enrollment patterns, credential value, selection criteria) without incurring extraction overhead. Views the system as legitimate meritocratic sorting."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Teachers in Under-resourced Schools",
+      "comment": "PERSPECTIVE 4: TEACHERS IN UNDER-RESOURCED SCHOOLS (TANGLED ROPE) \u2014 Organized collectively through unions/professional bodies. Coordinate educational delivery to disadvantaged students while bearing extraction: low wages, inadequate resources, responsibility for outcome gaps they cannot individually close. Genuine commitment to coordination coexists with structural exploitation of labor and emotional care."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Standardized Testing Apparatus",
+      "comment": "PERSPECTIVE 5: STANDARDIZED TESTING APPARATUS (PITON) \u2014 SAT/ACT/standardized achievement testing persists as a degraded sorting mechanism. Functionally, the apparatus measures socioeconomic status and family educational background; it has low correlation with college success beyond freshman year and near-zero correlation with professional achievement. Theater ratio is high: testing is maintained through institutional inertia, credential tradition, and investment sunk in testing infrastructure. The apparatus serves as a proxy for family advantage, not as a functional assessment device."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Progressive Education Policy Reform Movement",
+      "comment": "PERSPECTIVE 6: PROGRESSIVE EDUCATION REFORM (SCAFFOLD) \u2014 Organized agents (education policy advocates, equity researchers, community organizers) frame inequality reproduction as a temporary coordination failure solvable through policy intervention: equitable funding, culturally responsive pedagogy, affirmative action, universal pre-K. These reforms reduce theater (lower performativity, higher function) and lower effective extraction through structural access changes. Sunset logic applies if: universal Pre-K + adequately funded schools + equitable wealth redistribution eliminate the inequality pipeline. Estimated sunset if reforms materialize: 25-40 years (requires political will and sustained funding)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Inequality as Natural Law)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some stratification by inherited advantage is treated as an immutable property of human social organization. Educational inequality is reframed as an inherent consequence of family investment disparities, genetic variation in abilities, or market-driven credential value. This perspective naturalizes contingent institutional arrangements (funding allocation models, credential monopolies, cultural capital weighting in assessment) as laws of social nature. The engine will likely flag this as a false summit \u2014 the structural data reveals these are design choices, not natural laws."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "High-SES Family",
+      "comment": "PERSPECTIVE 8: HIGH-SOCIOECONOMIC STATUS FAMILY (TANGLED ROPE) \u2014 Institutional-level agent (family as organizing unit) benefits from advantaged access while experiencing education as genuine coordination (child development, social integration, credential positioning). Constrained by the need to maintain credential value through continued investment and institutional positioning. Both benefits from extraction (unequal advantage) and perceives the system as fair (meritocratic). Identity partially locked into belief in earned advantage."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "family_capital_causation",
+      "question": "Is educational inequality primarily caused by family capital differences, or do institutional design choices (funding models, assessment practices, cultural bias in curriculum) actively reproduce inequality independently of family factors?",
+      "resolution_mechanism": "Comparative analysis of inequality trajectories across countries with different funding and assessment models; longitudinal tracking of students matched on family capital across different school resource environments; natural experiments (school funding reforms, assessment changes)",
+      "impact": "If family capital is primary driver: constraint may be rope or mountain (coordination/immutable). If institutional design is primary driver: constraint is snare/tangled rope (extractive/remediable).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether inequality is driven by family capital or institutional design"
+    },
+    {
+      "id": "credential_signaling_function",
+      "question": "Does the educational credential primarily signal human capital acquired in school, or does it primarily sort by inherited socioeconomic status and family background?",
+      "resolution_mechanism": "Employer demand analysis \u2014 do employers value specific skills taught in school or the credential as status marker? Comparative earnings analysis within credentials across family backgrounds; test whether credential premium persists when controlling for actual skill measures vs family SES",
+      "impact": "If credential signals skill: education is genuine coordination mechanism (Rope). If credential primarily sorts by background: education is extraction mechanism with minimal function (Snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether education credentials signal skills or sort by background"
+    },
+    {
+      "id": "intergenerational_mobility_threshold",
+      "question": "What percentage of low-income students must reach middle-class outcomes for the constraint to shift from snare/tangled rope to scaffold (problem-being-solved)?",
+      "resolution_mechanism": "Historical intergenerational mobility data; comparison across decades and policy regimes; identification of critical mass thresholds in mobility rates that trigger institutional reform vs constraint degradation",
+      "impact": "If mobility increases > 30% within generation: scaffold perspective validated. If mobility stagnates or declines: snare/piton perspectives confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Intergenerational mobility rate threshold for constraint type shift"
+    },
+    {
+      "id": "identity_lock_mechanism",
+      "question": "For high-SES families and credential gatekeepers, is belief in meritocratic education an identity lock (earned advantage narrative) or an external enforced constraint?",
+      "resolution_mechanism": "Cognitive interviews and ethnographic study of belief formation; comparison of meritocratic belief strength across credential gatekeepers in different inequality contexts; analysis of whether belief persists when shown counterevidence",
+      "impact": "If identity lock: high-SES agents see rope/coordination even when structural data shows snare (perspectival gap validates identity_locked exit). If external enforcement: agents' perception is contingent on institutional arrangement, not identity fusion.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether meritocratic belief is identity-fused or externally enforced"
+    },
+    {
+      "id": "reform_efficacy_boundary",
+      "question": "Is education policy able to overcome inequality reproduction through school-based reforms alone, or does inequality require wealth redistribution and social policy beyond education sector?",
+      "resolution_mechanism": "Meta-analysis of education policy interventions (equitable funding, culturally responsive pedagogy, affirmative action, universal Pre-K) with/without accompanying social policy; comparison of inequality trends across countries with different policy mixes",
+      "impact": "If school-based reforms sufficient: scaffold sunset is achievable through education sector alone. If wealth redistribution required: scaffold sunset requires multi-sectoral coordination, extending timeline and uncertainty.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether education policy alone can overcome inequality reproduction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.7
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "commentary": {
+    "narrative_context": "Educational inequality reproduction is a structurally hybrid constraint that functions simultaneously as coordination mechanism (credential signaling, skill development, social integration) and extraction mechanism (sorting by inherited advantage, wealth concentration in elite institutions, legitimation of stratification). The constraint demonstrates the full range of DR types from different structural positions: powerless students experience snare (trapped in a system that reproduces their disadvantage); first-generation seekers experience tangled rope (genuine skill acquisition alongside disproportionate cost and navigation burden); elite institutions experience rope (credential coordination without extraction overhead); teachers experience tangled rope (commitment to education coexisting with labor exploitation); standardized testing experiences piton degradation (high theater, low function); progressive reformers experience scaffold (temporary problem solvable through policy sunset); analytical observers risk false summit (naturalizing institutional design choices as immutable laws); high-SES families experience tangled rope with potential identity lock (simultaneous benefit and belief in meritocracy). The constraint's extractiveness has increased from 0.42 to 0.58 over 60 years (likely representing the period from 1965-2025), while theater has increased from 0.48 to 0.70. The rising theater ratio indicates that institutional focus has shifted from actual equalization of opportunity toward performative gestures (diversity initiatives, aspirational rhetoric) that maintain theatrical function while extraction mechanisms persist unchanged. The rising extractiveness reflects that inequality gaps have persisted or widened despite policy interventions, suggesting the constraint's reproduction mechanisms are more robust than reform efforts have been able to address.",
+    "key_agents": [
+      "Low-Income Students: Primary victim (powerless/trapped) \u2014 structurally locked in through legal requirement, economic necessity, and neighborhood assignment; experience snare with maximal extraction",
+      "First-Generation College Seekers: Secondary victim (moderate/constrained) \u2014 structurally mobile but face cultural capital, navigation, and financial constraints; experience tangled rope with significant extraction",
+      "Elite Educational Institutions: Primary beneficiary (institutional/arbitrage) \u2014 concentrate resources, control credential monopoly, arbitrage enrollment and outcome definitions; experience rope with minimal extraction overhead",
+      "High-SES Families: Secondary beneficiary (institutional/constrained) \u2014 gain advantaged access while maintaining identity belief in meritocracy; experience tangled rope with identity lock",
+      "Teachers in Under-Resourced Schools: Organized secondary victim (organized/constrained) \u2014 coordinate educational delivery while bearing extraction through low wages, inadequate resources, and impossible outcome expectations",
+      "Credential Gatekeepers (Colleges, Employers): Institutional beneficiary (institutional/arbitrage) \u2014 maintain monopoly on credential valuation and hiring gatekeeping; experience rope",
+      "Standardized Testing Industry: Institutional actor (institutional/arbitrage) \u2014 maintains piton through institutional inertia; testing infrastructure persists despite low functional value",
+      "Progressive Reform Movement: Organized secondary actor (organized/constrained) \u2014 frame inequality as solvable through policy; experience scaffold with sunset logic if reforms materialize"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, reflecting that education both genuinely develops human capital (coordination function) and significantly sorts by inherited advantage (extraction function). The value is not higher (0.70+) because education does produce legitimate benefits across SES levels \u2014 the constraint is hybrid, not pure extraction. The 16-percentage-point increase from 0.42 to 0.58 over 60 years reflects institutional concentration: as cost of higher education has risen and funding inequality between school districts has increased, extraction relative to coordination has grown. Suppression (0.68): High. Barriers to educational mobility include: unequal school funding (neighborhood wealth determining resources), unequal access to test preparation and cultural capital, credential signaling that sorts by background rather than skill, belief in meritocratic justification that prevents recognition of systemic barriers, and resource concentration in elite institutions. However, suppression is not absolute (0.85+) because educational mobility is possible and some institutional access exists across SES levels. Theater ratio (0.64): Moderate-high. Standardized testing, diversity initiatives, and aspiration-focused messaging represent significant theatrical components that do not correspond to functional equalization. But not all institutional activity is theater \u2014 curriculum, teacher instruction, and credentialing do have real educational function. The 22-percentage-point increase in theater from 0.48 to 0.70 reflects that policy discourse has increasingly emphasized aspirational rhetoric (individual responsibility, meritocratic ideology) that masks unchanged extraction mechanisms.",
+    "directionality_logic": "The constraint exhibits strong directionality asymmetry across structural positions. Low-income students have d \u2248 0.95 (full targets, trapped exit) producing f(d) \u2248 1.42, making effective extraction \u03c7 extremely high from their perspective. First-generation seekers have d \u2248 0.75 (victims, constrained exit) producing f(d) \u2248 1.10, moderate effective extraction. Elite institutions have d \u2248 0.05 (beneficiaries, arbitrage exit) producing f(d) \u2248 -0.12, negative effective extraction (they experience subsidy, not cost). High-SES families have d \u2248 0.20 (beneficiaries with constraints) producing f(d) \u2248 0.02, minimal effective extraction experienced. Teachers have d \u2248 0.60 (mixed victim/partial-beneficiary, constrained exit) producing f(d) \u2248 0.95, moderate-high experienced extraction. The perspectival gap is maximal: beneficiaries experience coordination (rope), targets experience extraction (snare), and mixed agents experience hybrid dynamics (tangled rope). The scope multiplier \u03c3(S) = 1.0 (national) does not magnify extraction as much as global scope would, indicating this is a within-nation stratification constraint rather than global economic exploitation.",
+    "perspectival_gap": "This constraint generates a fundamental perspectival conflict. High-SES families and elite institutions perceive education as pure coordination (rope) \u2014 it genuinely develops human capital, creates social bonds, and produces credential value. They benefit from the system and can point to their children's real learning as evidence of function. Low-income students perceive education as extraction (snare) \u2014 the system sorts them into lower-status positions, concentrates resources away from their schools, and offers credentials with lower value despite identical credentials. Teachers perceive the hybrid (tangled rope) \u2014 they provide genuine education while being exploited and scapegoated for outcome gaps driven by resource inequality. The analytical observer risks perceiving a natural law (mountain) \u2014 inequality is inherent to human variation, and education merely sorts naturally distributed abilities. This would be a false summit: the structural data shows that funding inequality, credential monopoly, and cultural capital weighting in assessment are institutional design choices, not natural facts. The perspective gap reveals that this constraint is legitimated through one group's genuine experience (elite families' real educational benefits) combined with a false universalization of that experience (meritocratic ideology) that naturalizes institutional structures benefiting that group.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by clarifying that the coordination function is REAL but UNEQUALLY DISTRIBUTED. Education does produce genuine human capital development, social integration, and credential signaling value. The mandatrophy error would be concluding either that (a) education is pure extraction (snare) and therefore should be eliminated, or (b) education is pure coordination (rope) and therefore cannot have inequality-reproducing effects. The correct analysis recognizes that the SAME INSTITUTIONAL STRUCTURE produces coordination benefits for advantaged students (rope perspective) and extraction costs for disadvantaged students (snare perspective). The constraint is tangled rope because it has BOTH genuine coordination function AND asymmetric extraction, not because it is ambiguously one or the other. The extraction arises not from education itself but from the institutional design: unequal funding, credential monopolies, cultural bias in assessment, and neighborhood-based school assignment. These are policy choices, not necessary features of education. Reforms addressing these structural features (equitable funding, multiple credentialing pathways, culturally responsive assessment, school choice or integration) would reduce extraction without eliminating coordination \u2014 moving the constraint toward rope or scaffold. The false summits (mountain perspectives) that naturalize these institutional choices as inevitable should be rejected: the framework shows these are contingent design patterns, not laws of nature."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "labor_market_credentialism",
+      "wealth_intergenerational_transfer",
+      "residential_segregation_reinforcement"
+    ],
+    "dual_formulation_note": "Educational inequality reproduction is downstream of housing market inequality (neighborhood school assignment is endogenous to residential segregation) and upstream of labor market credentialism (education credentials determine access to income-generating occupations). This story focuses on the educational institution itself as a constraint; separate stories track residential segregation effects and credential-income coupling."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

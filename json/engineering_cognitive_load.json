@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "engineering_cognitive_load",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "engcl"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "snare",
+    "human_readable": "Engineering Cognitive Load Extraction",
+    "topic_domain": "labor/organizational/cognitive_science",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "project_managers",
+      "organizational_leadership"
+    ],
+    "victims": [
+      "individual_engineers",
+      "design_quality",
+      "safety_margins"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Individual Engineer",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL ENGINEER (SNARE) \u2014 Trapped by employment structure, specialized skill set, and economic dependency. No realistic exit from cognitive overload: declining tasks reduces compensation and career trajectory; leaving the firm requires relocation and credential-specific job search. Maximum suppression: formal expectations (scheduling) plus informal culture (response-time norms, 'passion for the work'). Extraction is severe: cognitive resources diverted from design quality toward deadline compliance and interruption management."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Engineering Discipline",
+      "comment": "PERSPECTIVE 2: ENGINEERING DISCIPLINE (TANGLED ROPE) \u2014 At the discipline level, excessive cognitive load extracts from design quality, safety margins, and long-term reliability. But the discipline also benefits from the coordination function: complex projects require distributed cognition across teams. The extraction is genuine (degraded designs, accumulated technical debt, safety vulnerabilities), but coordination is also necessary. Constrained exit: moving away from deadline-driven development requires industry-wide norm shift, not individual action."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Project Management and Organizational Leadership",
+      "comment": "PERSPECTIVE 3: PROJECT MANAGEMENT / LEADERSHIP (ROPE) \u2014 Experiences the constraint as coordination: allocating tasks and deadlines solves the legitimate problem of distributing work across a team. Net beneficiary position: extraction flows toward leadership through productivity gain, schedule compression, and risk transfer. Arbitrage exit available: can relocate cognitive load to contractors, offshore teams, or automated tooling without personal cost. For this agent, the constraint appears as pure coordination with asymmetric benefit."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "AI-Assisted Development Movement",
+      "comment": "PERSPECTIVE 4: AI-ASSISTED DEVELOPMENT MOVEMENT (SCAFFOLD) \u2014 Organized agents (tool developers, forward-thinking engineering firms, standards bodies) view cognitive load as a temporary coordination failure with a sunset: AI code generation, automated testing, and intelligent documentation are building alternative pathways that distribute cognitive burden away from individual engineers. Low effective extraction because organized actors see exit paths and have agency to build them. Sunset timeline: 10-15 years for AI tools to mature sufficiently to shift baseline expectations."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Formal Agile/Scrum Process",
+      "comment": "PERSPECTIVE 5: FORMAL AGILE PROCESS (PITON) \u2014 Agile ceremonies (standups, sprint planning, retrospectives) are substantially performative in high-load environments. The rituals maintain appearance of controlled delivery while engineers work nights and weekends to absorb actual load. Theater ratio reflects: formal process allocates ~8 hours/week to Agile theater that does not reduce cognitive load; actual work persists underneath. The process persists through institutional inertia \u2014 firms maintain Agile rituals because alternatives haven't replaced them, not because the rituals effectively distribute load."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal view, cognitive load in engineering is inherent to complex system design: managing multiple interacting components requires distributed knowledge that cannot be fully centralized, and humans have fixed working memory limits. This perspective sees the bottleneck as an immutable property of cognition itself. However, the structural data contradicts this classification \u2014 the engine will compute this as a false summit, revealing that 'human cognitive limits are natural law' naturalizes what is actually a contingent organizational choice to concentrate deadline pressure on individual engineers rather than distribute it across time or team size."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cognitive_load_measurement_ambiguity",
+      "question": "Is measured cognitive load a property of the task complexity or of the organizational structure?",
+      "resolution_mechanism": "Comparative study of same projects across different organizational structures (distributed deadlines vs compressed schedules, larger teams vs tight teams, async vs synchronous workflows). If load varies significantly across structures for identical technical work, the load is extractive structure, not inherent complexity.",
+      "impact": "If structural: the constraint is a Snare of organizational design, not a Mountain of inherent cognition. Classification upgrades from mountain-defense to snare-mitigation strategies.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether cognitive load derives from task complexity or organizational structure"
+    },
+    {
+      "id": "cognitive_load_safety_correlation",
+      "question": "Does high cognitive load causally reduce safety margins and design quality, or do low-quality projects generate higher load retrospectively?",
+      "resolution_mechanism": "Longitudinal study tracking cognitive load metrics against safety incident rates, design review findings, and technical debt accumulation. Cross-project analysis controlling for project complexity and team experience.",
+      "impact": "If causal: cognitive load extraction directly degrades safety \u2014 classification remains Snare. If correlational: poor projects attract more work; extraction mechanism is different; management visibility into causal direction affects remedy design.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal direction between cognitive load and safety degradation"
+    },
+    {
+      "id": "ai_tool_cognitive_displacement",
+      "question": "Do AI code generation and automated testing reduce engineer cognitive load or merely relocate it to AI system verification and prompt engineering?",
+      "resolution_mechanism": "Time-use studies pre- and post-AI tool adoption. Measurement of mental effort distribution across code writing, testing, verification, and tool management. Surveys of engineer subjective cognitive burden.",
+      "impact": "If reduces: AI is genuine sunset mechanism (Scaffold perspective validated). If relocates: AI may reduce certain load types while creating new ones; sunset timeline extends.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether AI tools reduce or relocate cognitive load"
+    },
+    {
+      "id": "organizational_incentive_alignment",
+      "question": "Are tight deadlines and high cognitive load driven by genuine competitive necessity or by organizational preference for deadline-based discipline?",
+      "resolution_mechanism": "Historical analysis of firms that successfully adopted distributed-deadline and reduced-load organizational structures. Measurement of market share, profitability, and product quality outcomes. Case studies of deadline relaxation experiments.",
+      "impact": "If preference: the constraint is purely extractive (Snare confirmed) and readily reformable. If necessity: the constraint has coordination function (Tangled Rope more accurate); remedies must preserve deadline coordination while reducing cognitive load.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether tight deadlines derive from competitive necessity or organizational design choice"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Engineering cognitive load extraction occurs when organizational structures (deadline compression, task distribution, responsiveness expectations) concentrate cognitive burden on individual engineers beyond their working memory and attention capacity. This constraint exhibits multiple classification types from different structural positions. From the individual engineer's perspective, it is a Snare: trapped by economic dependency with no realistic exit, suppressed by both formal expectations and informal culture norms, experiencing severe extraction of cognitive resources that would otherwise support design quality and safety. From organizational leadership's perspective, it is a Rope: they experience the constraint as pure coordination (allocating tasks) with asymmetric benefit. From the discipline's perspective, it is Tangled Rope: genuine coordination function (complex projects require distributed work) exists alongside extraction (degraded designs, safety vulnerabilities). The constraint's extractiveness has increased from 0.32 to 0.58 over the measurement interval as project complexity has outpaced team scaling and deadline pressure has intensified. Theater ratio (0.48) reflects that formal processes like Agile and project management ceremonies provide an appearance of controlled work distribution while actual cognitive load persists underneath. The analytical observer risks seeing this as a natural law of cognition (humans have fixed working memory limits) when it is actually a contingent choice to concentrate deadline pressure on individuals rather than distribute it across time, team size, or tooling.",
+    "key_agents": [
+      "Individual Engineers: Primary victim (powerless/trapped) \u2014 bears cognitive load extraction through employment structure and economic dependency",
+      "Project Managers and Organizational Leadership: Primary beneficiary (institutional/arbitrage) \u2014 captures productivity gain and schedule compression benefit",
+      "Engineering Discipline: Secondary victim (moderate/constrained) \u2014 collective good (design quality, safety margins) degraded by individual load extraction",
+      "AI-Assisted Development Movement: Organized actor (organized/constrained) \u2014 building alternative verification pathways with sunset logic",
+      "Formal Agile Process: Institutional actor (institutional/arbitrage) \u2014 maintains performative ceremonies that mask underlying cognitive load",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent organizational choices as inherent human limits"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High. The constraint extracts cognitive resources from individual engineers through deadline compression, task multitasking, and expectation for rapid context-switching and availability. This is not fair compensation for legitimate skill deployment \u2014 the extraction is asymmetric (engineers bear full cognitive cost while organizational benefits concentrate in leadership). The measurement trajectory (0.32 \u2192 0.58) reflects increasing project complexity and deadline intensity over the interval. Suppression (0.65): High. Significant barriers to exit include employment structure (quitting requires finding another job in a specialized field), cultural norms ('passionate engineers work hard'), formal scheduling (response-time expectations, on-call duties), and economic dependency (mortgage, benefits, stock vesting). Some engineers can negotiate reduced load (senior, specialized skills, job-market advantage), but most face real suppression. Theater ratio (0.48): Moderate. Formal Agile ceremonies and project management processes allocate visible structure and checkpoints but do not proportionally reduce actual cognitive load when the underlying deadline intensity is high. The theater has increased from 0.28 to 0.48 as more firms adopt process formalism while maintaining deadline compression.",
+    "directionality_logic": "The pipeline computes directionality (d) from the agent's structural relationship to the constraint. Engineers classified as powerless/trapped have high d (near 1.0) \u2014 they experience maximum extraction because they cannot exit. Organizational leadership classified as institutional/arbitrage have low d (near 0.0\u20130.15) \u2014 they experience the constraint as pure coordination with benefit. Project managers classified as moderate may have d around 0.50\u20130.65 depending on whether they can negotiate extended deadlines with leadership or whether they are themselves trapped in deadline escalation from above. The engineering discipline as a collective has no single d value \u2014 it aggregates the d values of all agents plus the externality of degraded designs and safety margins, which affects all future projects. The analytical observer's d is around 0.72 (observer position), which drives their classification through the false-summit detection gate.",
+    "perspectival_gap": "The primary perspectival gap is between engineers (Snare: trapped, high extraction) and leadership (Rope: coordination with benefit). Engineers perceive the constraint as purely extractive because they bear the cognitive cost and cannot exit. Leadership perceives it as coordination because allocating tasks solves the legitimate problem of distributing work across a team and generates productivity benefit. Secondary gaps emerge between the Agile process (Piton: degraded ritual) and the AI movement (Scaffold: temporary problem with sunset). The Agile perspective sees existing formal structures as mostly performative \u2014 they maintain appearance of control without reducing load. The AI perspective sees cognitive load as solvable through tooling and distributed cognition \u2014 a temporary problem that will sunset as AI maturity increases. The discipline perspective (Tangled Rope) bridges these: coordination is necessary, but extraction is real and measurable as degraded safety margins and accumulated technical debt.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that cognitive load extraction is genuine (not pure coordination) but is not a pure Snare \u2014 it does perform a coordination function (task allocation) that is necessary for complex projects. The Tangled Rope classification (from the discipline perspective) is the most structural: coordination function (distributing work across a large team) is real; extraction (degraded design quality, safety margins, engineer wellbeing) is also real and measurable. The individual engineer's Snare perspective is their subjective reality: they experience only extraction because they cannot see the coordination benefit and cannot exit. Leadership's Rope perspective is their subjective reality: they experience only coordination because the extraction cost flows away from them. The false-summit detector on the analytical observer (Mountain) prevents naturalizing organizational design choices as cognitive law. The constraint's reality is that it is a Tangled Rope with a scaffold path opening through AI tooling and distributed deadline structures \u2014 it is not immutable but is not trivially solvable within existing power structures."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "technical_debt_accumulation",
+      "engineering_burnout_cycle",
+      "safety_margin_degradation"
+    ],
+    "dual_formulation_note": "Engineering cognitive load is upstream of three distinct constraints: technical debt accumulation (the long-term legacy of rushed designs), engineering burnout (the individual psychological cost), and safety margin degradation (the collective harm). Each has its own extractiveness value reflecting its specific measurement domain. The cognitive load constraint is the structural mechanism linking all three."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

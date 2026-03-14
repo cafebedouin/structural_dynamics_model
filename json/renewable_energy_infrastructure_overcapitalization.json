@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "renewable_energy_infrastructure_overcapitalization",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "renew_overcap"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.52,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Renewable Energy Infrastructure Overcapitalization",
+    "topic_domain": "energy/economic_policy/climate_finance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "equipment_manufacturers",
+      "project_developers",
+      "financial_intermediaries",
+      "grid_operators"
+    ],
+    "victims": [
+      "electricity_ratepayers",
+      "grid_reliability",
+      "systems_optimization"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Electricity Ratepayer",
+      "comment": "PERSPECTIVE 1: ELECTRICITY RATEPAYER (SNARE) \u2014 Trapped in jurisdictional electricity market with no exit option. Bears the cost of overcapitalized infrastructure through rates that exceed actual operational need. Cannot opt out or switch to competitor systems. Maximum extraction from powerless agent with no alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Grid Operator",
+      "comment": "PERSPECTIVE 2: GRID OPERATOR (TANGLED ROPE) \u2014 Experiences genuine coordination function: managing variable renewable sources requires operational flexibility, reserve capacity, and investment in grid modernization. Also experiences extraction: policy mandates for capacity installation exceed optimization requirements, forcing costly over-deployment. Constrained exit due to regulatory obligations and infrastructure lock-in."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Equipment Manufacturer",
+      "comment": "PERSPECTIVE 3: EQUIPMENT MANUFACTURER (ROPE) \u2014 Primary beneficiary (institutional/arbitrage). Experiences the constraint as pure coordination: installation targets align perfectly with profitable deployment. Can arbitrage between markets with different overcapitalization thresholds. Net beneficiary with maximum exit agency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Green Finance Coalition",
+      "comment": "PERSPECTIVE 4: GREEN FINANCE COALITION (TANGLED ROPE) \u2014 Organized institutional actors (development banks, climate funds, ESG investors) see genuine coordination benefit: mobilizing private capital for climate transitions requires clear investment signals and volume targets. Also extract: overcapitalization drives inflated returns on deployed capital and extends project timelines, creating fee opportunities. Constrained because coalition members depend on policy mandates continuing."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Renewable Energy Mandate",
+      "comment": "PERSPECTIVE 5: RENEWABLE ENERGY MANDATE (PITON) \u2014 Original function was carbon reduction coordination. Current operation is substantially performative: numerical targets (e.g., 50% renewable by 2035) are measured by installed capacity, not by actual energy production or grid effectiveness. Mandate persists through regulatory inertia. Theater ratio high because compliance is staged through visible construction rather than measured by efficiency outcomes. Actual carbon reduction per installed watt has declined as capacity additions have saturated."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Systems Optimization Approach",
+      "comment": "PERSPECTIVE 6: SYSTEMS OPTIMIZATION APPROACH (SCAFFOLD) \u2014 Analytical perspective recognizing overcapitalization as a temporary problem with a sunset. Grid modeling, demand-response, energy storage, and advanced forecasting are creating alternative mechanisms for managing variable renewable sources without excess capacity. As these technologies mature, overcapitalization will become economically irrational. Sunset estimated at 10-15 years as storage costs decline and smart grid infrastructure deploys."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "overcapitalization_threshold_ambiguity",
+      "question": "What level of installed renewable capacity constitutes optimization vs. overcapitalization for a given grid?",
+      "resolution_mechanism": "Grid simulation modeling: compare actual energy production, demand coverage, and reliability outcomes across grids with different capacity-to-demand ratios",
+      "impact": "If threshold lower than policy assumes: constraint is snare (extraction confirmed). If threshold higher: constraint is rope (apparent overcapitalization is necessary coordination buffer).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Threshold distinguishing necessary grid capacity from overcapitalization"
+    },
+    {
+      "id": "policy_mandate_intent_divergence",
+      "question": "Was the original renewable capacity mandate designed to achieve carbon reduction or to establish a growing market for equipment manufacturers?",
+      "resolution_mechanism": "Historical policy analysis: comparison of stated carbon reduction goals vs actual deployment patterns; examination of whether alternative mechanisms (carbon pricing, demand-reduction) were considered and rejected",
+      "impact": "If carbon-reduction intent: overcapitalization is unintended rent-seeking failure (tangled rope). If market-creation intent: overcapitalization is coordination mechanism (rope).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether policy mandate aimed at carbon reduction or market creation"
+    },
+    {
+      "id": "storage_technology_timeline",
+      "question": "Will grid-scale energy storage (battery, thermal, mechanical) reach cost parity with overcapitalized renewable capacity within the estimated 10-15 year sunset window?",
+      "resolution_mechanism": "Technology cost curve analysis: battery price trends, competing storage modalities, learning curve slopes; comparison against baseline renewable capacity cost curves",
+      "impact": "If yes: scaffold sunset is real and overcapitalization will become economically irrational. If no: overcapitalization persists longer, extending extraction period.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of storage-based grid optimization within sunset timeline"
+    },
+    {
+      "id": "financial_intermediary_extraction_vs_coordination",
+      "question": "Do financial intermediaries extract economic rents through overcapitalized project financing, or do they coordinate capital mobilization that would not occur without overcapitalization incentives?",
+      "resolution_mechanism": "Comparative project analysis: returns-on-capital for optimally-sized vs overcapitalized projects; identification of whether financing mechanisms could incentivize optimal deployment at lower capacity levels",
+      "impact": "If rents: intermediaries are extractive beneficiaries (increases chi). If coordination: intermediaries are necessary coordinating agents (decreases chi, increases rope classification).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Role of financial intermediaries in overcapitalization mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.53
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Renewable energy infrastructure overcapitalization arises from the combination of binding policy targets for installed capacity, financial incentive structures that reward deployment volume over optimization, and the absence of clear performance metrics tied to actual carbon reduction or grid reliability. The constraint exhibits extraction masquerading as climate coordination. Policymakers set binding renewable energy targets (e.g., '50% renewable energy by 2035') measured in installed capacity rather than actual energy production or system efficiency. Equipment manufacturers, project developers, and financial intermediaries benefit from this measurement choice because capacity targets decouple from real operational requirements \u2014 grids are incentivized to install more than is optimal given actual demand, storage capacity, and grid characteristics. Electricity ratepayers bear the cost through inflated rates. Grid operators face extraction (forced overcapitalization) alongside genuine coordination challenges. The constraint's theater ratio has increased as compliance becomes increasingly about visible construction projects rather than measured climate outcomes. Open challenges are whether this is rational portfolio insurance against uncertain future demand, or whether it is pure rent extraction. The scaffold perspective recognizes that advanced grid technologies (storage, demand-response, forecasting) are creating alternative mechanisms that will make overcapitalization economically irrational within 10-15 years.",
+    "key_agents": [
+      "Equipment Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 directly benefit from capacity installation targets; can exit through market arbitrage between jurisdictions",
+      "Project Developers: Primary beneficiary (institutional/arbitrage) \u2014 benefit from deployment volume incentives; can arbitrage across regulatory jurisdictions",
+      "Financial Intermediaries: Secondary beneficiary (institutional/constrained) \u2014 extract through project financing; constrained by regulatory framework",
+      "Grid Operators: Mixed role (organized/constrained) \u2014 face genuine coordination challenges (variable renewable management) alongside extraction (forced overcapitalization); constrained by grid stability obligations and regulatory requirements",
+      "Electricity Ratepayers: Primary victim (powerless/trapped) \u2014 bear cost of overcapitalized infrastructure through rates; trapped in jurisdictional monopoly electricity markets with no exit option",
+      "Systems Optimization Future: Emerging actor (analytical/analytical) \u2014 grid modeling and technology advancement creating alternative coordination mechanisms with lower cost structures",
+      "Green Finance Coalition: Beneficiary-victim hybrid (organized/constrained) \u2014 benefits from volume targets and deployment incentives; constrained by dependence on policy mandates continuing"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, reflecting accumulating overcapitalization costs. The initial 0.32 reflects a genuine climate coordination need in 2010s when policy targets were first set. As installed capacity has grown beyond optimization requirements (measured 0.58 in current period), extraction has increased \u2014 ratepayers pay for capacity they do not use, while beneficiaries profit from excess deployment. Suppression (0.52): Moderate. Ratepayers have structural barriers to exit (monopoly electricity markets, geographic immobility, essential service), but some capacity exists for demand-side response and rooftop solar adoption. Grid operators face regulatory suppression (mandates) but retain operational flexibility. Theater ratio (0.64): High and increasing. Renewable energy targets are measured by installed megawatts, not by actual energy production, emissions reduction, or grid reliability outcomes. This creates systematic misalignment between measured compliance and climate/grid outcomes. A grid that installs 100 GW but generates only 30% of annual energy from renewables (due to capacity factor, curtailment, and variable production patterns) appears compliant while producing minimal incremental carbon reduction. Theater has grown as policy targets have approached saturation and distinction between capacity and productivity has widened.",
+    "directionality_logic": "The directionality derivation maps each agent's structural relationship to the constraint. Beneficiaries (equipment manufacturers, project developers) have institutional power and arbitrage exit options \u2014 they derive low d values (~0.10-0.20), experiencing negative effective extraction (the constraint subsidizes them). Ratepayers have powerless position and trapped exit \u2014 they derive high d values (~0.95), experiencing maximum effective extraction from the constraint. Grid operators occupy a hybrid position: they are both coordinators (managing variable renewable integration is a genuine coordination function) and victims (forced overcapitalization is extraction). Their moderate power level and constrained exit produce mid-range d values (~0.55-0.65), yielding tangled rope classification at the agent's structural position. Financial intermediaries are organized beneficiaries with constrained rather than arbitrage exit \u2014 they derive moderate d values (~0.30-0.40), producing rope classification. The perspectival gap emerges because beneficiaries see coordination (Rope) while victims and the analytical observer see mixed coordination-extraction (Tangled Rope) or pure extraction (Snare).",
+    "perspectival_gap": "The constraint exhibits strong perspectival divergence reflecting asymmetric extraction. Equipment manufacturers see Rope (pure coordination: capacity targets create predictable demand for equipment, enabling rational capacity planning). Project developers see Rope (capacity targets create deployable investment opportunities). Ratepayers see Snare (forced cost burden with no exit). Grid operators see Tangled Rope (genuine coordination function \u2014 managing variable renewable sources \u2014 alongside forced overcapitalization costs). Financial intermediaries see Rope (volume targets guarantee project pipeline and financing opportunities). The green finance coalition sees Tangled Rope (genuine climate coordination alongside rent extraction). The mandate itself appears as Piton to the civilizational analytical observer \u2014 its original function (carbon reduction) has atrophied while it persists through regulatory inertia, measured by performative capacity targets. The systems optimization perspective sees a Scaffold (temporary problem with a sunset as technology advances). The perspectival gap reveals the core extraction mechanism: the constraint's beneficiaries experience it as pure coordination (Rope from their perspectives), while its victims experience it as forced cost (Snare from powerless perspectives) or mixed coordination-extraction (Tangled Rope from moderate positions).",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by identifying the specific measurement asymmetry that creates extraction. The tension is not between 'is this coordination or extraction?' but 'at what spatial and temporal scale should we measure success?' At the policy level, success is measured as 'percentage of electricity from renewable sources' or 'installed renewable capacity.' At the grid operations level, success should be measured as 'total emissions reduction per dollar invested' or 'grid reliability and resilience metrics.' These measurements frequently diverge: a jurisdiction can reach 50% installed renewable capacity while actually producing 30-35% of annual electricity from renewables (due to capacity factors, curtailment, and variable production patterns). The mandatrophy resolution requires measuring whether the policy's stated goal (carbon reduction, climate stabilization) is actually achieved by its claimed mechanism (capacity installation targets). Comparative analysis across grids with different policies would show that some jurisdictions achieve equivalent or superior climate outcomes with lower capacity installation levels through demand-side management, storage deployment, and grid optimization. This reveals that overcapitalization is not necessary for the policy's stated goal \u2014 it is profitable for beneficiaries but not optimal for the climate objective. The constraint is therefore Tangled Rope (not pure Rope): it coordinates capital deployment for renewable energy while simultaneously extracting through enforced overcapitalization relative to actual climate needs."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "grid_stability_reserve_margin",
+      "electricity_rate_structure",
+      "renewable_energy_subsidy_capture"
+    ],
+    "dual_formulation_note": "Renewable energy infrastructure overcapitalization is downstream of policy target-setting mechanisms but represents a distinct structural constraint. The upstream constraints involve policy design and subsidy allocation; this constraint addresses the capital deployment mechanism those policies trigger. Decomposed from broader 'renewable energy incentive architecture' constraint because the \u03b5 values differ significantly (0.58 here vs. 0.35-0.42 for pure policy design)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

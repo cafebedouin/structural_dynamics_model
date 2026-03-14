@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "union_density_decline",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "udd"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Union Density Decline and Wage Extraction",
+    "topic_domain": "labor_economics/industrial_relations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "capital_owners",
+      "management_class",
+      "regulatory_agencies"
+    ],
+    "victims": [
+      "wage_workers",
+      "labor_collective_power"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Individual Worker (Atomized)",
+      "comment": "PERSPECTIVE 1: ATOMIZED WORKER (SNARE) \u2014 Without union membership, individual workers face barriers to exit: high switching costs, wage-setting unilaterally by employers, no collective bargaining power. The constraint is extraction without meaningful coordination benefit from the worker's perspective. Trapped: cannot organize alone; exit is costly relative to staying in exploitative terms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Remaining Union Membership",
+      "comment": "PERSPECTIVE 2: REMAINING UNION MEMBERSHIP (TANGLED ROPE) \u2014 Unions provide genuine coordination (wage negotiation, workplace safety, grievance procedures) alongside extraction pressure from employers (concessions, wage restraint, job losses to outsourcing). Constrained exit: workers could decertify but face retaliation, loss of job protections, and destruction of negotiating capacity. Organized power enables some agency but not full mobility."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Employer/Capital Class",
+      "comment": "PERSPECTIVE 3: CAPITAL CLASS (ROPE) \u2014 Benefits from union density decline through lower labor costs and reduced workplace regulation. The constraint is pure coordination: decertifying unions or withholding recognition reduces regulatory overhead and enables wage suppression via labor market competition. Arbitrage exit available: can relocate production, automate, or source from non-union suppliers."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Management Cohort",
+      "comment": "PERSPECTIVE 4: MID-MANAGEMENT (TANGLED ROPE) \u2014 Mid-managers coordinate between capital and labor: they benefit from union decline via promotion opportunities and wage compression above non-union baseline, but also bear extraction costs (increased workload, erosion of job security as outsourcing intensifies, loss of institutional protocols that protected their position). Constrained: organizational dependence and labor market devaluation of mid-management skills make exit costly."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Labor Rights Movement (Alternative Organizing)",
+      "comment": "PERSPECTIVE 5: LABOR RIGHTS MOVEMENT (SCAFFOLD) \u2014 Organized advocates (worker centers, sectoral bargaining campaigns, card-check legislation efforts) see union density decline as a temporary coordination failure with potential sunset: alternative models (sectoral bargaining like Scandinavia, gig-worker organizing, industry-wide standards) offer pathways to restore labor power without traditional union structure. Mobile exit: these organizations are building parallel institutions. Sunset logic: if sectoral bargaining or worker-power models scale, the current extraction mechanism becomes obsolete."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Regulatory Labor State",
+      "comment": "PERSPECTIVE 6: REGULATORY LABOR STATE (PITON) \u2014 Federal and state labor agencies maintain performative institutional roles (NLRB rulings, labor board reviews, enforcement structures) that have largely degraded as capacities atrophied and anti-union legislative hostility intensified. The regulatory state sees itself as diminished: it maintains the machinery of labor adjudication but lacks resources, political support, or will to enforce collective bargaining. Theater ratio is high: labor law enforcement is substantially symbolic."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Market Competition Natural Law",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (FALSE SUMMIT) \u2014 Market economics frames union density decline as inevitable: competitive labor markets automatically suppress wages toward reservation price, union rents are economically inefficient, and decline is a natural law of labor commodification. This perspective risks naturalizing contingent policy choices (Taft-Hartley Section 14b, right-to-work laws, aggressive NLRB reversals) as market forces. The engine's false summit detector reveals this as naturalization of political choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "causality_direction_ambiguity",
+      "question": "Does union decline cause wage suppression, or does wage competition cause union decline?",
+      "resolution_mechanism": "Econometric analysis of state-level right-to-work adoption; instrumental variable estimation using legislative timing; cross-national comparison with sectoral bargaining models",
+      "impact": "If causality runs decline\u2192suppression: snare classification dominates (extraction mechanism). If causality runs suppression\u2192decline: rope classification (competition coordination) dominates.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Direction of causality between union decline and wage suppression"
+    },
+    {
+      "id": "sectoral_bargaining_feasibility",
+      "question": "Can sectoral bargaining (Scandinavian model) be implemented in the US labor market, or are structural factors preventing it?",
+      "resolution_mechanism": "Comparative institutional analysis; interviews with labor economists and sectoral bargaining practitioners; assessment of employer coordination capacity and worker mobilization in key sectors",
+      "impact": "If feasible: scaffold sunset is real \u2014 alternative coordination exists. If infeasible: scaffold is aspirational \u2014 current extraction mechanism has no realistic exit path.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether sectoral bargaining models are feasible alternatives in US context"
+    },
+    {
+      "id": "gig_worker_organizing_viability",
+      "question": "Can gig-worker organizing and worker centers achieve labor power equivalent to traditional unions?",
+      "resolution_mechanism": "Tracking of wage outcomes and employment stability for organized gig workers vs non-organized; cost of organizing per worker; comparison to traditional union organizing costs and outcomes",
+      "impact": "If viable: scaffold perspective gains credibility \u2014 alternative models can restore worker power. If not viable: worker power loss becomes more permanent; snare extraction persists.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether alternative worker organizing models can achieve traditional union outcomes"
+    },
+    {
+      "id": "regulatory_state_capacity_restoration",
+      "question": "Can federal labor regulation capacity be restored through political action, or is NLRB degradation structural?",
+      "resolution_mechanism": "Analysis of budget allocation trends; assessment of NLRB staffing and case backlogs; legislative history of labor regulation funding; comparison to administrative capacity in peer democracies",
+      "impact": "If restorable: piton is transitional \u2014 regulatory capacity can be rebuilt and enforcement strengthened. If structural: piton becomes permanent institutional feature.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether NLRB capacity can be restored through political will"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 1950,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "Union density decline in the United States from 35% (1950s) to 10% (2024) represents a structural transition from coordinated wage-setting to atomized labor market competition. The constraint exhibits high suppression (0.72) because worker exit options have systematically narrowed: right-to-work laws, aggressive employer anti-union campaigns, NLRB capacity degradation, and outsourcing threats create cascading barriers to collective organizing. The extractiveness value (0.58) reflects genuine coordination losses (unions provided workplace safety, grievance procedures, training structures) alongside wage suppression asymmetries favoring capital. The theater ratio (0.68) captures the performative role of residual labor institutions: NLRB reviews, labor board hearings, and formal grievance procedures persist while enforcement capacity and outcome enforcement have atrophied. The constraint is Tangled Rope at base level because capital benefits from genuine coordination (elimination of union wage premiums, predictability of labor costs, reduced regulatory friction) alongside extraction. However, the perspectival gap is profound: powerless atomized workers experience pure Snare; remaining unionized workers experience mixed Tangled Rope (protection + vulnerability); capital experiences Rope (coordination benefit); the regulatory state experiences Piton (degraded institutions); and organized labor movements see Scaffold (alternative models with sunset potential).",
+    "key_agents": [
+      "Individual non-union workers: Primary victims (powerless/trapped) \u2014 face wage suppression, unstable employment, no bargaining power, high exit costs",
+      "Remaining union membership: Secondary victims (organized/constrained) \u2014 retain some bargaining power but under asymmetric pressure; constrained by threat of further job loss or decertification",
+      "Capital owners and employers: Primary beneficiaries (institutional/arbitrage) \u2014 capture wage suppression, lower regulatory burden, increased flexibility; arbitrage available (offshoring, automation, union avoidance)",
+      "Mid-management class: Mixed actor (institutional/constrained) \u2014 benefits from wage compression below union baseline and promotion opportunities, but bears extraction costs (intensified workload, reduced job security, loss of institutional protocols)",
+      "Labor rights advocates and worker centers: Organized agents (organized/mobile) \u2014 building alternative organizing models with perceived sunset to current extraction mechanism",
+      "Federal labor regulatory agencies: Institutional degradation (institutional/arbitrage) \u2014 maintain performative labor enforcement structures with minimal capacity; see own role as compromised (piton perspective)",
+      "Analytical observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent policy choices (right-to-work laws, Section 14b, NLRB reversals) as inevitable market forces"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The measure reflects wage suppression relative to counterfactual unionized baseline, estimated at 15-25% wage discount for non-union workers controlling for skill and industry. The value increased from 0.22 (1950) to 0.58 (2024) as union density declined and de-unionized sectors (retail, fast food, logistics, care work) expanded. Extractiveness is not higher because: (1) some coordination benefits were genuinely lost (safety standards, training pathways), so measured extraction overstates pure rent-taking; (2) labor productivity gains partially offset wage suppression; (3) capital faces its own costs (reduced worker stability, higher turnover, loss of institutional knowledge transfer). Suppression (0.72): High. Barriers to worker exit from low-wage atomized conditions include: structural (geographic immobility, credential barriers, family care dependencies), legal (right-to-work laws reduce union organizing capacity), economic (outsourcing threats, plant closures punish unionization attempts), and psychological (union narrative degradation, individualization ideology). Suppression did not increase over time (remained ~0.70 throughout) because barriers were structural from 1950 onward \u2014 what changed was union coordination presence that partly overcame barriers. Theater ratio (0.68): High. NLRB processes, labor arbitration hearings, formal grievance procedures, and labor board reviews consume significant resources and time but increasingly yield weak enforcement outcomes. Theater increased from 0.35 (1950s, when unions had enforcement capacity and employers faced real bargaining power) to 0.68 (2024, when formal processes persist but lack enforcement muscle). The performative character is visible in: case backlogs (exceeding 5 years at many regional NLRB offices), weak remedies (back pay without job reinstatement), employer retaliation despite legal prohibition, and minimal frequency of successful union elections relative to organizing attempts.",
+    "perspectival_gap": "The perspectival gap exposes the constraint as fundamentally asymmetric rather than universal. The analytical mountain perspective (market forces make decline inevitable) is a false summit \u2014 the causality runs through policy choices and institutional design, not inevitability. The snare perspective (atomized workers) is the most structurally vulnerable: no coordination, no exit, maximum extraction. The tangled rope perspectives (unions, mid-managers) show asymmetric extraction with genuine but insufficient coordination. The rope perspective (capital) shows pure coordination benefit. The scaffold perspective shows real alternative pathways. The piton perspective reveals degraded institutional enforcement. No single type captures the constraint \u2014 the perspectival presheaf is the answer.",
+    "directionality_logic": "Directionality values derive from each agent's structural position. Atomized workers: victim status + trapped exit \u2192 d \u2248 0.95 \u2192 f(d) \u2248 1.42 (maximum experienced extraction). Remaining unions: victim status + constrained exit \u2192 d \u2248 0.75 \u2192 f(d) \u2248 1.10 (high extraction, some agency). Capital: beneficiary status + arbitrage exit \u2192 d \u2248 0.10 \u2192 f(d) \u2248 -0.05 (negative experienced extraction, pure coordination benefit). Mid-management: mixed beneficiary-victim status + constrained exit \u2192 d \u2248 0.55 \u2192 f(d) \u2248 0.75 (moderate extraction, mixed benefit). Labor advocates: organized agent + mobile exit \u2192 d \u2248 0.40 \u2192 f(d) \u2248 0.40 (perceived low extraction; building alternatives). Regulatory state: institutional + arbitrage \u2192 d \u2248 0.05 \u2192 f(d) \u2248 -0.12 (appears beneficiary but actually degraded; piton rather than rope). The chi formula \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) yields: atomized workers experience \u03c7 \u2248 0.58 \u00d7 1.42 \u00d7 1.0 = 0.82 (severe extraction at national scope); capital experiences \u03c7 \u2248 0.58 \u00d7 (-0.05) \u00d7 1.0 = -0.03 (negative extraction, coordination subsidy). This differentiation explains why classification diverges: same base constraint, same \u03b5, but different \u03c7 across positions, producing different experienced types.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that union density decline IS a Tangled Rope at the systemic level (genuine coordination function + asymmetric extraction), but perspectival readings range from Snare (atomized workers) to Rope (capital) to Scaffold (labor movements) to Piton (regulatory state). The false summit (analytical mountain) is the key diagnostic: naturalizing decline as market necessity is the mechanism through which the extraction is sustained. The constraint's primary function is coordination (setting wages, establishing standards, creating predictability), but this coordination has been systematically skewed to benefit capital at the expense of labor. The empirical question (causality_direction_ambiguity omega) determines whether decline causes extraction (snare logic) or extraction causes decline (rope logic) \u2014 current econometric evidence favors the latter, supporting the rope classification for capital's perspective. Alternative models (sectoral bargaining, worker centers) exist and function elsewhere, so the constraint is not immutable \u2014 it is a contestable institutional choice. The theater ratio increase (0.35 to 0.68) indicates that institutional labor regulation is increasingly performative, a pattern consistent with Piton degradation."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wage_stagnation",
+      "income_inequality_growth",
+      "workplace_safety_deregulation",
+      "labor_market_precarity"
+    ],
+    "dual_formulation_note": "Union density decline decomposes into multiple structurally distinct constraints: (1) wage-setting coordination failure (\u03b5\u22480.30, Tangled Rope), (2) legal/regulatory capacity erosion (\u03b5\u22480.55, Piton), (3) worker organizing barriers (\u03b5\u22480.45, Snare), (4) alternative model viability (\u03b5\u22480.25, Scaffold). These stories share temporal causality but distinct mechanisms. Union density decline is the macro-level phenomenon; the component stories identify which mechanism dominates in which context."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

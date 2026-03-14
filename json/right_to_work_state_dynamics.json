@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "right_to_work_state_dynamics",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rtw"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Right-to-Work State Labor Constraint Dynamics",
+    "topic_domain": "labor_law/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "employers_low_wage_sectors",
+      "union_avoidant_management"
+    ],
+    "victims": [
+      "organized_labor",
+      "non_union_workers_benefit_recipients"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Non-Union Worker in RTW State",
+      "comment": "PERSPECTIVE 1: NON-UNION WORKER (SNARE) \u2014 Trapped in labor market with suppressed wages (RTW prevents collective bargaining scale) and no exit beyond relocation. Benefits from union contract negotiations are available but worker cannot force cost-sharing through union membership. Experiences pure extraction: free-ride incentive structure combines with wage suppression from weakened collective bargaining. Maximum directional extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Organized Labor Movement",
+      "comment": "PERSPECTIVE 2: ORGANIZED LABOR (ROPE) \u2014 Constrained by RTW legal framework but retains organizing power and voice capacity. Sees the constraint as coordination problem (how to sustain union formation when free-riding is legal). Some agency; cannot exit without abandoning members. Moderate extraction \u2014 union suffers revenue and membership loss but can still function and negotiate."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "Employers in RTW States",
+      "comment": "PERSPECTIVE 3: EMPLOYERS (TANGLED ROPE) \u2014 Genuine coordination function (RTW enables talent mobility, reduces hiring rigidity). Also asymmetric extraction benefit: wage suppression from weakened unions, reduced strike risk, lower labor organizing costs. Can relocate but have invested in RTW infrastructure; mobile exit but constrained by sunk capital. Both coordination and extraction present."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Anti-Union Political Coalition",
+      "comment": "PERSPECTIVE 4: ANTI-UNION POLITICAL COALITION (TANGLED ROPE) \u2014 Coordinates political strategy (state-by-state RTW adoption) while extracting union political power and funding capacity. Arbitrage exit: can shift policy focus between states. Coordination function (RTW enables labor market fluidity narrative) plus asymmetric extraction (union political defeat and revenue loss). Active enforcement: requires sustained legislative and judicial effort."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Pro-Union Democratic Coalition",
+      "comment": "PERSPECTIVE 5: PRO-UNION COALITION (ROPE) \u2014 Coordinates labor advocacy across state lines. Sees RTW as pure coordination problem: how to rebuild union capacity given legal constraints. Lower extraction than union's direct view because coalition has political resources and long time horizon. Constrained by federalism and electoral cycles."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer - False Natural Law View",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (FALSE MOUNTAIN) \u2014 Risk perspective that naturalizes RTW as inevitable consequence of labor mobility theory or property rights ('workers should be free to not join unions'). This perspective treats the constraint as immutable law of economics. Engine detects false summit: the base properties show active enforcement requirement, beneficiaries, victims, and theater_ratio < 0.70. The 'naturalness' is ideological, not structural."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "free_riding_equilibrium_stability",
+      "question": "Is the non-union free-rider equilibrium stable, or does it collapse without active enforcement?",
+      "resolution_mechanism": "Historical analysis of RTW state union density trajectory post-adoption; comparison with pre-RTW baseline and control states; measurement of enforcement mechanisms (right-to-work litigation, legislative renewal frequency)",
+      "impact": "If equilibrium is self-sustaining: RTW reduces to Rope (coordination around market mechanism). If equilibrium requires sustained enforcement: RTW is Snare or Tangled Rope. Current evidence suggests ongoing enforcement via political advocacy and litigation is necessary.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Stability of free-rider equilibrium without active enforcement"
+    },
+    {
+      "id": "wage_suppression_causation_chain",
+      "question": "Is wage suppression in RTW states caused by RTW law itself, or by confounding factors (regional economic structure, cost of living, industry composition)?",
+      "resolution_mechanism": "Difference-in-differences analysis comparing wage trajectories in adopting vs non-adopting border counties; instrumental variable estimation using historical union density; matching analysis controlling for industry and regional factors",
+      "impact": "If RTW is causal driver: extractiveness > 0.55 is justified. If RTW is spurious (regional economics drive both RTW adoption and wages): extractiveness should be lower (0.35-0.45). Affects beneficiary/victim classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal attribution of wage suppression to RTW law"
+    },
+    {
+      "id": "coordination_gain_magnitude_claim",
+      "question": "How much genuine labor market coordination benefit does RTW actually generate (vs political mythology)?",
+      "resolution_mechanism": "Measurement of labor mobility rates, job-switching costs, hiring velocity, and skill-matching efficiency in RTW vs union-majority states; analysis of whether coordination gains accrue to workers or solely to employers",
+      "impact": "If genuine coordination gains are large: Tangled Rope classification is validated. If gains are mythological: constraint should classify as pure extraction (Snare) from non-union worker perspective. Current evidence suggests modest mobility gains concentrated at firm level, not worker level.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude and incidence of RTW coordination benefits"
+    },
+    {
+      "id": "enforcement_sustainability",
+      "question": "Can RTW enforcement be sustained indefinitely without escalating political costs, or does the constraint trend toward revision?",
+      "resolution_mechanism": "Tracking of pro-union political movements in RTW states; measurement of union organizing success rates post-RTW; analysis of whether younger cohorts show different preference patterns; longitudinal survey of worker attitudes toward RTW and unionism",
+      "impact": "If enforcement costs escalate: scaffold sunset may apply. If political entrenchment is durable: Tangled Rope or Snare persists. If worker preferences shift: constraint may face reclassification within 2-3 decades.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Long-term sustainability of RTW political enforcement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Right-to-work (RTW) laws prohibit union security agreements that require workers to pay union dues as a condition of employment. In RTW states, all workers benefit from union contract negotiations (wages, benefits, working conditions) but can legally opt out of dues payments. This creates a free-rider problem: rational non-union workers capture union gains without supporting union operations, which weakens union finances and political power. The constraint exhibits genuine coordination (enabling labor mobility and reducing hiring rigidity) alongside asymmetric extraction (employers and anti-union coalitions benefit from union weakening; non-union workers free-ride on union gains while facing suppressed wages from weakened collective bargaining). The constraint requires active enforcement: RTW must be continuously defended through litigation against union challenges, legislative action against pro-union efforts, and political messaging ('right to work' freedom narrative). Theater ratio remains below 0.70 because enforcement is substantive (legal, political, economic consequences) rather than purely performative. Extractiveness has increased over the 20-year interval from 0.38 to 0.58 as RTW has spread to more states and as union density has declined in RTW jurisdictions, making non-union workers more vulnerable to wage suppression.",
+    "key_agents": [
+      "Non-Union Workers in RTW States (powerless/trapped): Free-ride on union benefits but face suppressed wages from weakened collective bargaining; cannot exit labor market without relocation",
+      "Organized Labor Movement (moderate/constrained): Constrained by RTW legal framework; retains organizing capacity but suffers revenue and membership loss from free-riding",
+      "Employers in RTW States (powerful/mobile): Benefit from union weakening (lower wage floors, reduced organizing risk); have invested in RTW infrastructure but can mobile if needed",
+      "Anti-Union Political Coalition (powerful/arbitrage): Coordinates RTW expansion; can shift focus between states; benefits from union political defeat",
+      "Pro-Union Democratic Coalition (organized/constrained): Coordinates defensive effort across states; constrained by federalism and electoral cycles",
+      "Analytical Observer (analytical/analytical): Risks naturalizing RTW as inherent to labor economics rather than contingent political arrangement"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint creates measurable extraction: union members subsidize non-members through contract negotiations (union labor costliness increases employer wage offers); non-members capture benefits without paying dues; employers gain negotiating leverage from union weakness. The value reflects that extraction is substantial but not total \u2014 genuine coordination benefits (mobility, hiring flexibility) exist, and unions retain some bargaining power even in RTW states. The upward trend from 0.38 to 0.58 reflects increasing RTW adoption and declining union density, which has amplified the extraction mechanism. Suppression (0.65): Moderate-high. Workers in RTW states face barriers to union formation (free-rider logic reduces organizing feasibility), limited collective bargaining coverage, and reduced worker voice. But suppression is not total \u2014 organizing remains possible and some RTW states maintain pockets of union strength. Theater ratio (0.48): Below piton threshold. Enforcement is substantive (legal prohibition has real consequences) rather than purely performative. The ratio has increased slightly as political rhetoric around 'right to work' freedom has become more theatrical, but the enforcement mechanism remains grounded in law and political power rather than empty ritual.",
+    "perspectival_gap": "The core perspectival gap is between the non-union worker (who sees pure extraction\u2014Snare) and the employer (who sees mixed coordination and extraction\u2014Tangled Rope). Both agree on the facts: non-union workers free-ride on union gains while facing wage suppression. But the non-union worker emphasizes the suppression (maximum experienced extraction), while the employer emphasizes the coordination benefit (labor market efficiency). This gap is diagnostic: it reveals that the constraint genuinely coordinates labor mobility while also extracting from organized labor and non-union workers. The gap between pro-union coalition (Rope) and organized labor (Rope) is subtle but important: both see coordination, but the coalition has more political distance and longer time horizon, producing lower experienced extraction. The analytical observer's false mountain is the greatest gap: naturalizing RTW as inevitable law of economics rather than recognizing it as enforced political choice.",
+    "directionality_logic": "Directionality is derived from structural position. Non-union workers are victims with trapped exit options (high d \u2192 maximum f(d)). Organized labor is victimized but has organizing capacity and political resources (moderate d). Employers are beneficiaries with mobile exit options (low d \u2192 negative f(d)). Anti-union coalition is beneficiary with arbitrage exit (very low d). Pro-union coalition has political resources but is constrained by federalism (moderate d). The analytical observer at civilizational scope has analytical exit and sees all positions (d \u2248 0.72, high f(d), but context-dependent). Beneficiary/victim declarations drive the directionality computation: employers and anti-union coalition are identified as beneficiaries; organized labor and non-union workers as victims. The engine derives that beneficiaries experience low/negative \u03c7 while victims experience high \u03c7.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The constraint satisfies all three required gates for Tangled Rope classification. (1) Beneficiaries declared: employers_low_wage_sectors and union_avoidant_management. (2) Victims declared: organized_labor and non_union_workers_benefit_recipients. (3) Requires active enforcement: true (RTW must be continuously defended through litigation, legislation, and political mobilization). The mandatrophy is resolved by recognizing that the constraint is neither pure coordination (Rope) nor pure extraction (Snare) but a hybrid. The coordination function (labor mobility, hiring flexibility) is genuine but asymmetrically distributed \u2014 employers gain mobility benefits while non-union workers face mobility barriers (wage suppression increases cost of geographic relocation). The extraction function (union weakening, wage suppression) is genuine but not absolute \u2014 unions retain organizing capacity and political power in some RTW states. The active enforcement requirement indicates that the hybrid equilibrium requires sustained political and legal effort to maintain; without enforcement, the constraint would shift toward either Rope (if employers retained mobility gains) or collapse (if union movement regained power). The theater ratio remains low because enforcement is substantive, not theatrical. If theater ratio were to exceed 0.70, the constraint would reclassify as Piton (degraded Tangled Rope maintained through institutional inertia)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "union_density_decline_mechanism",
+      "wage_suppression_regional_dynamics"
+    ],
+    "dual_formulation_note": "RTW state dynamics is downstream of the free-rider problem in collective bargaining (which has its own constraint story with different \u03b5 values reflecting theoretical vs empirical free-rider severity). RTW is also upstream of specific sectoral wage suppression effects and regional labor mobility patterns. This story focuses on the institutional enforcement mechanism and perspectival structure; downstream stories address specific sectoral and regional impacts."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.3
+    }
+  ]
+}

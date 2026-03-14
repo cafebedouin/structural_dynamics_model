@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "financial_repression_mechanism",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "finrep"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Financial Repression Mechanism",
+    "topic_domain": "economic_policy/monetary_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "government_treasury",
+      "large_incumbent_financial_institutions"
+    ],
+    "victims": [
+      "savers_retail_investors",
+      "currency_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Retail Saver",
+      "comment": "PERSPECTIVE 1: RETAIL SAVER (SNARE) \u2014 Trapped by currency monopoly and capital controls. Real interest rates held below inflation (negative real returns). Cannot exit national currency system; domestic savings systematically extracted via financial repression. No arbitrage available without violating capital controls or incurring severe tax penalties. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Small Business Owner",
+      "comment": "PERSPECTIVE 2: SMALL BUSINESS OWNER (TANGLED ROPE) \u2014 Constrained by borrowing requirements and currency exposure. Benefits from access to artificially cheap credit (coordination function: credit allocation), but bears costs through inflation, negative real returns on savings, and currency debasement. High exit cost (relocation, foreign currency exposure, regulatory friction). Mixed extraction and coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Government Treasury",
+      "comment": "PERSPECTIVE 3: GOVERNMENT TREASURY (ROPE) \u2014 Primary beneficiary. Experiences financial repression as pure coordination: eroding the real value of debt, reducing debt service burden, and directing credit to government-favored projects. Can arbitrage through seigniorage (central bank money creation), debt restructuring, and deficit financing. Net beneficiary \u2014 extraction runs toward this agent."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Incumbent Banking Sector",
+      "comment": "PERSPECTIVE 4: INCUMBENT BANKING SECTOR (ROPE) \u2014 Secondary beneficiary. Benefits from financial repression through: (a) guaranteed demand for government debt (capital requirements), (b) spreads between administered rates and market rates, (c) protection from non-bank financial competition through capital controls and regulatory barriers. Can arbitrage by extracting spread differential. Experiences as coordination mechanism for credit supply."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The International Investment Community",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL INVESTMENT COMMUNITY (TANGLED ROPE) \u2014 Organized but constrained by currency devaluation and capital flight restrictions. Benefits from access to yield-hungry international capital seeking returns above repressed domestic rates (coordination function: cross-border capital allocation). Bears costs through currency depreciation, default risk, and political capital controls. Can exit via divestment but faces significant losses. Mixed extraction and coordination at the border."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (FALSE SUMMIT) \u2014 Civilizational perspective risks classifying financial repression as a natural law: 'government must manage debt; interest rate suppression is inevitable for fiscal sustainability; savers must bear the burden.' This natural law framing naturalizes what is actually a political choice enforced through legal restrictions on capital mobility, interest rate administered-pricing, and monetary policy. The structural data reveals this is not a mountain but a tangled rope sustained through active enforcement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "voluntary_vs_coercive_participation",
+      "question": "What proportion of saver participation in the financial repression regime is voluntary (accepting negative real returns for stability or convenience) versus coercive (legal prohibition on alternatives)?",
+      "resolution_mechanism": "Comparative analysis of savings behavior when capital controls are relaxed or eliminated; measurement of actual versus latent demand for foreign currency holdings; survey data on saver awareness of negative real returns",
+      "impact": "If mostly voluntary: classification shifts toward Rope (savers see coordination benefits). If mostly coercive: classification remains Snare (coercive extraction). If mixed: confirms Tangled Rope for moderate-power agents (constrained choice) and Snare for powerless agents (trapped).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of voluntary vs coercive participation in negative real returns"
+    },
+    {
+      "id": "fiscal_sustainability_necessity",
+      "question": "Is financial repression a necessary instrument for fiscal sustainability in a given context, or is it primarily a rent-extraction mechanism benefiting incumbent actors?",
+      "resolution_mechanism": "Counterfactual analysis: modeling alternative fiscal paths (spending restraint, tax reform, default) and comparing their distributional consequences to the financial repression path; analysis of whether repression revenue exceeds what would be generated by market-rate borrowing plus spending adjustment",
+      "impact": "If necessary: suppression should be reclassified as lower (legitimate fiscal constraint rather than coercive extraction). If primarily extractive: suppression remains high and confirmed as rent-seeking. This directly affects the claimed_type classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether financial repression is fiscally necessary or primarily extractive"
+    },
+    {
+      "id": "inflation_channel_ambiguity",
+      "question": "Is the extraction mechanism primarily interest rate suppression, inflation tax (seigniorage), or the combination of both? How much extraction flows through each channel?",
+      "resolution_mechanism": "Decomposition of real return erosion into components: (1) nominal rate below inflation (interest rate channel), (2) unexpected inflation above forecasts (surprise inflation tax), (3) expected inflation priced into rates (no extraction, just redistribution). Measurement of ex-post vs ex-ante returns.",
+      "impact": "If mostly unexpected inflation: extraction is maximal and highly salient (powerless agents experience Snare). If mostly expected: agents adjust expectations and experience lower effective extraction (Tangled Rope even for moderate-power agents). Changes the actual chi values experienced across perspectives.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Decomposition of extraction between interest rate suppression and inflation tax channels"
+    },
+    {
+      "id": "alternative_equilibrium_stability",
+      "question": "If financial repression were removed (capital controls lifted, interest rates liberalized), what equilibrium would emerge? Would it be more or less stable than the current repressed equilibrium?",
+      "resolution_mechanism": "Historical comparisons with countries that have ended financial repression (Chile 1973-1989, Poland 1989-1991, South Korea 1998 post-crisis liberalization); modeling of currency stability, inflation dynamics, and savings allocation under liberalization; measurement of whether initial capital flight stabilizes into new equilibrium",
+      "impact": "If stable liberalized equilibrium exists: the mountain perspective (repression is necessary) is false \u2014 removal is feasible. Supports Tangled Rope classification over Mountain. If liberalization triggers currency collapse or hyperinflation: mountain perspective gains plausibility, and repression appears more structurally necessary. Affects mandatrophy resolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether liberalized equilibrium is stable and more efficient than repressed equilibrium"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Financial repression is a set of policy tools \u2014 interest rate suppression below inflation, mandatory holding of government debt, capital controls, currency monopoly enforcement, and regulatory barriers to non-bank financial intermediation \u2014 that together extract resources from savers (primarily retail investors and small businesses with limited arbitrage options) and transfer them to governments and incumbent financial institutions. The constraint exhibits genuine coordination elements (directing credit to government priority projects, stabilizing debt-to-GDP ratios, maintaining currency monopoly that enables monetary policy) alongside asymmetric extraction (negative real returns imposed on captive savers, redistribution from creditors to debtors). The mechanism is maintained through active enforcement (capital controls, reserve requirements, administered interest rates, regulatory licensing). Theater ratio has increased over the interval as central banks have developed more sophisticated transmission mechanisms and explanatory narratives, disguising the extractive component as technical necessity ('financial stability,' 'macroprudential policy,' 'emergency measures'). The constraint's classification as Tangled Rope reflects that no single perspective views it as pure coordination (Rope) or pure extraction (Snare) \u2014 different agents experience it differently based on their exit options and structural position.",
+    "key_agents": [
+      "Government Treasury: Primary beneficiary (institutional/arbitrage) \u2014 extracts real resources through seigniorage, debt-to-GDP reduction, and deficit financing at below-market rates",
+      "Savers (Retail & Small Investors): Primary victim (powerless/trapped) \u2014 trapped by currency monopoly, capital controls, and administered interest rates; experience systematic negative real returns",
+      "Incumbent Banking Sector: Secondary beneficiary (institutional/arbitrage) \u2014 benefits from spread protection, capital requirements forcing debt demand, and barriers to non-bank competition",
+      "Small Business Owners: Secondary victim (moderate/constrained) \u2014 constrained by credit rationing, borrowing requirements, and currency debasement; also benefit from access to cheap credit",
+      "International Investors: Mixed (organized/constrained) \u2014 organized agents seeking yields but constrained by currency depreciation and capital flight risk; benefit from access to repressed-regime debt yields",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent policy as inevitable economic law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Retail savers experience negative real returns averaging 2-5% annually in repressive regimes (nominal rates 2-4% while inflation runs 5-8%). This is a direct extraction mechanism. However, the figure is lower than pure extraction (0.70+) because the government's debt servicing constraint is genuine (fiscal sustainability is a real coordination problem) and some benefits (currency stability, credit availability) are distributed to moderate-power actors (small business). The trajectory shows extractiveness growing from 0.32 to 0.58 over the interval, reflecting deepening of repressive measures as fiscal pressures mount. Suppression (0.62): Moderate-high. Significant barriers to exit include legal capital controls (penalties up to 50% of transfers in some regimes), currency monopoly enforcement, reserve requirements, licensing restrictions on foreign currency accounts, and tax penalties on foreign investment. But suppression is not total (0.90+) because some arbitrage is available to wealthy agents (smuggling, foreign property, political capital for exemptions) and suppression varies across national regimes. Theater ratio (0.55): Moderate. Central banks have developed increasingly sophisticated framing (macroprudential policy, financial stability, countercyclical policy) to justify what are fundamentally administered interest rates and capital rationing. But the theater is not yet high (0.70+) because the basic extraction mechanism (negative real returns) is viscerally obvious to savers. Theater has been rising as transmission mechanisms have become more complex.",
+    "directionality_logic": "Each agent's experienced extractiveness (chi) derives from their structural position in the constraint. Government and incumbent banks derive d \u2248 0.05-0.20 (beneficiaries with arbitrage options): they experience low or negative chi \u2014 the constraint subsidizes them. Retail savers derive d \u2248 0.90-0.95 (trapped victims with no exit): they experience maximum chi \u2014 the constraint directly extracts from them. Small business owners derive d \u2248 0.50-0.65 (moderate agents, mixed position): they benefit from credit access but bear inflation and currency costs \u2014 experienced chi is moderate, placing them in Tangled Rope rather than Snare. International investors derive d \u2248 0.60-0.70 (organized but constrained): they can exit via divestment but face currency losses, placing them in Tangled Rope. The directionality chain produces a perspectival spread from Rope (beneficiaries) through Tangled Rope (moderate/organized agents) to Snare (trapped savers), all from the same base properties. This spread is the signature of a successfully operative extraction regime.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence from identical base properties. The government treasury sees Rope: interest rate suppression and debt-to-GDP reduction are coordination solutions to genuine fiscal sustainability problems. The banking sector sees Rope: regulatory protection and spread benefits from the system are valuable coordination. Small business owners see Tangled Rope: they benefit from credit access but suffer inflation erosion. International investors see Tangled Rope: yield opportunities attract capital but currency depreciation and capital controls constrain exit. Retail savers see Snare: trapped by currency monopoly, systematic extraction via negative real returns, no meaningful exit. The civilizational analytical observer risks seeing Mountain: 'government must manage debt; interest rate suppression is necessary for fiscal stability; savers are bearing their fair share of burden.' The structural data reveals this Mountain perspective as a false summit \u2014 financial repression is a contingent political choice enforced through legal mechanisms (capital controls, administered pricing), not a law of nature.",
+    "mandatrophy_analysis": "Financial repression resolves the mandatrophy by showing that Tangled Rope classification is correct precisely because the constraint contains genuine coordination (fiscal stability, credit direction) AND asymmetric extraction (negative real returns). The constraint cannot be classified as pure Rope because savers systematically lose (victimization is structural). It cannot be classified as pure Snare because governments genuinely solve a fiscal coordination problem and some moderate-power agents benefit from credit access. The mandatrophy is resolved by recognizing that the 'necessity' framing (fiscal sustainability requires repression) is partial truth: repression is ONE solution to fiscal problems, not the ONLY solution. Alternative paths (spending constraint, tax reform, default restructuring) exist but involve different distributional consequences. Financial repression is chosen because it benefits government and incumbent institutions while imposing costs on diffuse, powerless savers. The Tangled Rope classification captures this exactly: coordination function (fiscal stabilization, credit allocation) co-exists with extraction (savers bear negative real returns)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "currency_monopoly_enforcement",
+      "capital_controls_regime",
+      "inflation_targeting_framework"
+    ],
+    "dual_formulation_note": "Financial repression operates as a bundle of policy instruments (interest rate suppression, capital controls, inflation taxation, mandatory debt holdings). These instruments are often analyzed separately, but they form a single structural constraint when viewed from the saver's perspective \u2014 the extraction mechanism requires enforcement across all channels. Decomposition into separate constraints by instrument (interest_rate_suppression, capital_controls, seigniorage) would artificially separate mechanisms that are strategically linked and mutually reinforcing."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "header": {
+    "constraint_id": "dublin_newspaper_circulation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dublin_circ"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.48,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dublin Newspaper Circulation Distribution System",
+    "topic_domain": "media/distribution/urban_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "major_newspaper_publishers",
+      "distribution_wholesalers"
+    ],
+    "victims": [
+      "independent_newsagents",
+      "newspaper_accessibility_in_periphery"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Independent Newsagent in Outer Dublin",
+      "comment": "PERSPECTIVE 1: INDEPENDENT NEWSAGENT (SNARE) \u2014 Trapped in distribution system with no alternatives. Forced to stock through major wholesalers at unfavorable terms or lose customer access. Cannot coordinate with other newsagents due to competition. Bears full cost of supply chain inefficiency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Secondary Newsagents Network",
+      "comment": "PERSPECTIVE 2: SECONDARY NEWSAGENTS (TANGLED ROPE) \u2014 Constrained by capital requirements and franchise agreements but also benefit from the distribution infrastructure. Can exit by closing shops but face significant sunk costs and employee layoffs. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Major Newspaper Publishers",
+      "comment": "PERSPECTIVE 3: MAJOR PUBLISHERS (ROPE) \u2014 Benefit from guaranteed distribution network without managing logistics directly. Can arbitrage between platforms (digital, print, subscriptions). See circulation as coordination: the distribution system solves the problem of reaching dispersed readers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Distribution Wholesalers",
+      "comment": "PERSPECTIVE 4: WHOLESALERS (ROPE) \u2014 Institutional beneficiary with high arbitrage. Control the bottleneck between publishers and retailers. Can shift to digital distribution or expand to adjacent markets. Experience the system as coordination for publishers but extraction from retailers."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Print Newspaper Industry Standard",
+      "comment": "PERSPECTIVE 5: PRINT INDUSTRY STANDARD (PITON) \u2014 The same-day physical distribution requirement is increasingly theatrical as digital platforms dominate. The constraint persists through institutional inertia \u2014 publishers maintain expensive print distribution partly from habit, partly from advertisers who still demand print reach metrics. Theater_ratio high because much of the activity (early morning distribution, retail shelf placement) exists to maintain the appearance of reach rather than to satisfy actual reader demand."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Media Transition)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, the Dublin newspaper circulation system coordinates information distribution to a dispersed urban population while simultaneously extracting rents from independent retailers who have no alternatives. The system provides genuine coordination benefit (readers get newspapers, publishers reach audiences) alongside genuine extraction (retailers bear capital costs, suppliers bear inventory risk, suburbs are under-served). The constraint is not natural law but a contingent institutional arrangement that is both functional and extractive."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "digital_transition_timeline",
+      "question": "What is the effective timeline for digital distribution to fully replace physical newspaper circulation in Dublin?",
+      "resolution_mechanism": "Tracking circulation decline rates by demographic, monitoring publisher digital subscription growth, observing retailer revenue collapse thresholds",
+      "impact": "If < 5 years: the constraint degrades rapidly to piton. If > 15 years: extraction persists longer, enabling rent accumulation by wholesalers. Affects classification stability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for digital replacement of physical circulation"
+    },
+    {
+      "id": "cooperative_newsagent_viability",
+      "question": "Could independent newsagents form a cooperative distribution network that bypasses major wholesalers?",
+      "resolution_mechanism": "Cost analysis of cooperative logistics infrastructure; case studies from other cities (UK, Scandinavia); retailer willingness-to-participate surveys",
+      "impact": "If viable: trapped exit option becomes constrained, reducing suppression and \u03c7. Snare reclassifies as tangled_rope. If not viable: suppression confirmed as structural, snare classification stable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of cooperative newsagent distribution networks"
+    },
+    {
+      "id": "suburban_underservice_causation",
+      "question": "Is suburban under-service a consequence of the extraction mechanism (wholesalers deprioritize low-margin zones) or of market efficiency (low demand justifies sparse distribution)?",
+      "resolution_mechanism": "Price discrimination analysis; comparison of suburban circulation rates under cooperative vs wholesale distribution in pilot programs; demographic demand studies",
+      "impact": "If extraction-driven: victims category expands to include suburban communities; suppression increases. If market-driven: underservice is not extractive, beneficiary/victim categories shift.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Root cause of suburban newspaper under-service"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Dublin newspaper circulation system is a distribution constraint that coordinates information flow to a dispersed urban population while simultaneously extracting rents from independent newsagents who operate as the final-mile distribution nodes. Major publishers (Irish Independent, Irish Times, etc.) benefit from a guaranteed retail presence without managing street-level logistics; wholesalers (Easons, other distributors) control the bottleneck between publishers and retailers; independent newsagents bear the structural cost of maintaining inventory, managing returns, and accepting unfavorable terms because they have no alternatives. The system exhibits tangled rope characteristics: genuine coordination function (newspapers reach readers through a reliable distribution network) alongside significant extraction (independent retailers are margin-squeezed, suburbs are under-served, entry barriers prevent competitive alternatives). Over the 2010-2024 interval, extractiveness has increased (digital transition has made physical distribution less valuable to publishers but they maintain it through institutional momentum, shifting costs to retailers) while theater has risen (much of the early-morning distribution activity now functions to maintain the appearance of print reach rather than to serve actual reader demand). The constraint is increasingly unstable: publishers have digital alternatives that reduce their dependence on the physical system, while independent newsagents have no exit and face inventory shrinkage as circulation declines.",
+    "key_agents": [
+      "Major Newspaper Publishers (Irish Independent, Irish Times, Herald): Institutional beneficiaries (arbitrage exit) \u2014 capture reach metrics and advertising benefits; can arbitrage to digital",
+      "Distribution Wholesalers (Easons primary): Institutional beneficiary-beneficiary (arbitrage exit) \u2014 control margin between publishers and retailers; can shift to adjacent distribution categories",
+      "Independent Newsagents: Primary victims (powerless/trapped) \u2014 no alternatives to wholesale supply; bear inventory risk, capital costs, and margin pressure from circulation decline",
+      "Suburban/Peripheral Communities: Secondary victims (constrained) \u2014 under-served by distribution network because low margins make their zones unprofitable for wholesalers",
+      "Print Newspaper Industry Practice: Institutional inertia (constrained) \u2014 the same-day physical distribution requirement persists through habit and advertiser expectations despite declining reader reliance",
+      "Analytical Observer: Civilizational perspective \u2014 can see the system as both coordination (solves information distribution problem) and extraction (rents concentrated with wholesalers, costs distributed to retailers)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, trending upward. The system extracts from independent retailers through forced wholesale participation and margin compression, but extraction is not total \u2014 retailers can theoretically exit (by closing shops). The extractiveness has increased over the interval because digital transition has made physical distribution less valuable to publishers (reducing their willingness to fund competitive alternatives) while retailers remain locked in through sunk capital costs and lack of coordination mechanisms. Suppression (0.48): Moderate. Barriers to exit include capital requirements for retail operations, lack of alternative distribution channels, and geographic isolation of suburban retailers from coordination opportunities. But suppression is not absolute \u2014 some newsagents have successfully pivoted to convenience-store models or closed voluntarily. Theater ratio (0.65): Moderate-high. Early-morning newspaper delivery now functions partly as theater \u2014 the distribution activity maintains the appearance of print reach to advertisers and publishers even as reader demand declines. The theater has increased because the coordination function (reliable distribution) is now provided equally well by digital platforms, making the physical ritual increasingly performative. Claimed_type (Tangled Rope) reflects the analytical observer's perspective that the system provides both genuine coordination (information distribution to dispersed population) and genuine extraction (rent concentration, margin squeeze, alternative suppression).",
+    "perspectival_gap": "The most significant gap is between the publisher/wholesaler rope perspective (coordination) and the newsagent snare perspective (extraction). This gap reveals that the same constraint \u2014 the wholesale distribution system \u2014 is experienced as a coordination mechanism by beneficiaries and as an extraction mechanism by trapped retailers. The piton perspective (print industry standard) is aspirational \u2014 it rationalizes the constraint as a necessary standard while the functional analysis suggests it is increasingly theatrical. The analytical tangled rope perspective resolves the gap by showing that both readings are correct: the system does coordinate and does extract.",
+    "directionality_logic": "Publishers and wholesalers are beneficiaries with institutional power and arbitrage exit options \u2014 they benefit from the constraint and can shift to adjacent markets or digital platforms if physical circulation becomes unprofitable. Their directionality d is low (0.1-0.2), producing negative or minimal \u03c7 because the constraint flows extraction toward them, not away. Independent newsagents are victims with powerless agency and trapped exit options \u2014 they depend on the wholesale system for their business model and cannot exit without closing shops. Their directionality d is high (0.85-0.95), producing high \u03c7 because the constraint extracts from them with minimal options. The analytical observer at the civilizational/global context uses the structural decomposition of coordination vs extraction to assign a moderate d (0.5-0.65), reflecting that the system is mixed \u2014 some benefits (newspapers distributed), some costs (retailers marginalized).",
+    "mandatrophy_analysis": "RESOLUTION: The mandatrophy is resolved by decomposing the constraint into its coordination and extraction components. The coordination function is genuine but increasingly provided by digital alternatives (reducing its necessity). The extraction function is genuine and depends on the institutional lock-in of independent retailers who have no alternatives. As digital distribution grows, the coordination benefit declines while extraction persists \u2014 the system becomes progressively more purely extractive (moving toward snare). The tangled rope classification captures the current state (mixed), but the trajectory predicts motion toward pure snare as coordination necessity declines and extraction lock-in persists. The mandatrophy resolution is that the constraint is not mislabeled but is undergoing structural degradation \u2014 the rope component is eroding while the snare component is strengthening."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "irish_media_consolidation",
+      "retail_digital_transition"
+    ],
+    "dual_formulation_note": "Dublin newspaper circulation is a downstream constraint from broader Irish media consolidation (which produced the publisher oligopoly) and is upstream of the retail digital transition (which threatens the physical distribution model). Decomposed from Irish media system constraints to focus on the specific extractive distribution mechanism rather than the publishing market structure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

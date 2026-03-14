@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "female_labor_market_bargaining_power",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "flmbp"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Female Labor Market Bargaining Power Asymmetry",
+    "topic_domain": "economic/labor/gender",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "employers_using_wage_suppression",
+      "male_workers_with_reduced_competition"
+    ],
+    "victims": [
+      "female_workers",
+      "household_economic_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Female Worker Without Exit",
+      "comment": "PERSPECTIVE 1: FEMALE WORKER (SNARE) \u2014 Faces compounded barriers: occupational segregation, wage gap despite equal work, childcare penalties, domestic labor expectations, and constrained geographic mobility due to family structure. Cannot exit labor market (must earn income) or negotiate effectively within it. Experiences the constraint as pure extraction with suppression of alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Educated Female Worker With Options",
+      "comment": "PERSPECTIVE 2: EDUCATED FEMALE WORKER (TANGLED ROPE) \u2014 University degree and professional credentials provide some negotiating capacity and alternative employment options. Still experiences wage gap (80-95 cents per dollar male peer) and motherhood penalty. Constraint provides coordination (professional norms, market access) alongside asymmetric extraction. Can exit specific arrangements but at career cost; faces identity-based constraints (motherhood expectations) alongside material ones."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Employer Beneficiary",
+      "comment": "PERSPECTIVE 3: EMPLOYER BENEFICIARY (ROPE) \u2014 Benefits from wage suppression and access to compliant workforce. Experiences the constraint as pure coordination: occupational segregation and unequal bargaining reduce competition for positions, stabilize labor supply, and reduce wage pressure. Can arbitrage between female and male workers to suppress overall wage bill. Net beneficiary with high agency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Union (Bifurcated Position)",
+      "comment": "PERSPECTIVE 4: LABOR UNION (TANGLED ROPE) \u2014 Historically organized around male breadwinner model; union seniority systems and wage scales protected male workers while excluding female members from apprenticeships and skilled trades. Union benefits male workers (rope function) while either excluding or extracting from female workers (snare/tangled rope function). Modern unions attempting to coordinate across both groups face internal tension \u2014 old protections become capture mechanisms if expanded to include female workers at equal rates."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Policy Reform Coalition",
+      "comment": "PERSPECTIVE 5: POLICY REFORM COALITION (SCAFFOLD) \u2014 Organized actors (pay equity legislation, childcare support mandates, anti-discrimination enforcement) are building alternative bargaining structures. Equal Pay Acts and comparable worth frameworks attempt to bypass the occupational segregation constraint. Childcare subsidies and parental leave policy address the motherhood penalty. These interventions have sunset logic: as norms shift toward gender-neutral expectations and structural childcare support matures, the bargaining power asymmetry should decline. Current extraction reflects transition period where enforcement is incomplete and norms are contested."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Occupational Segregation Legacy System",
+      "comment": "PERSPECTIVE 6: OCCUPATIONAL SEGREGATION (PITON) \u2014 Historical sexual division of labor (women in care, education, service; men in trades, management, technology) persists despite legal equality. The segregation is maintained through institutional inertia and cultural performance rather than active enforcement. Hiring networks, credential requirements, and cultural fit narratives reproduce gendering without explicit gatekeeping. Theater ratio reflects that much of the segregation's persistence is performative ('women don't want these jobs,' 'men aren't suited for care work') rather than structurally enforced."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From the civilizational perspective, female labor market bargaining asymmetry solves genuine coordination problems (household division of labor, childcare arrangements, workplace scheduling) while simultaneously extracting value from female workers through wage suppression, occupational segregation, and domestic burden concentration. The constraint has both functional (coordination) and extractive (asymmetric cost distribution) dimensions. Effective extraction chi is moderate-high when scaled by scope and directionality."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "domestic_burden_externality",
+      "question": "How much of the female labor market wage gap reflects genuine occupational choice vs externalized domestic labor burden?",
+      "resolution_mechanism": "Counterfactual analysis: wage gap for never-married women without children vs married women with children; accounting for hours of unpaid domestic/care labor; comparing to male workers with equivalent domestic labor obligations",
+      "impact": "If gap reflects choice: moderate extraction, agent agency exists. If gap reflects externalized burden: high extraction, suppression mechanism is structural (motherhood makes exit from domestic obligation impossible). Classification type may shift from tangled_rope to snare for mothers.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Attribution of wage gap to choice vs externalized domestic burden"
+    },
+    {
+      "id": "comparable_worth_feasibility",
+      "question": "Can comparable worth frameworks (equal pay for work of equal value across occupations) actually be implemented without collapsing occupational segregation?",
+      "resolution_mechanism": "Case studies of jurisdictions implementing comparable worth; measurement of whether segregation persists post-implementation; analysis of wage compression effects",
+      "impact": "If feasible: policy intervention can reduce extraction without solving structural segregation (scaffold perspective strengthened). If infeasible: wage floors alone cannot address bargaining asymmetry; segregation must be directly tackled. Classification may shift from tangled_rope to snare if policy solutions prove unworkable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of comparable worth as extraction-reducing mechanism"
+    },
+    {
+      "id": "male_bargaining_consensus",
+      "question": "Do male workers benefit from female wage suppression as a group, or does organized labor's historical protection of male wages function as a separate constraint from female exclusion?",
+      "resolution_mechanism": "Historical wage analysis: male wages in contexts with vs without female labor market integration; modeling whether male worker consensus on female wage suppression is active or passive; identifying institutional actors enforcing male-protective seniority systems",
+      "impact": "If active male consensus: snare has explicit beneficiary with agency (men as a class). If passive/institutional inertia: extraction persists without active maintenance (piton). Affects how labor coalition building might overcome the constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether male workers actively benefit from female wage suppression"
+    },
+    {
+      "id": "childcare_coordination_vs_burden",
+      "question": "Does childcare coordination in the household represent genuine joint optimization or an extraction mechanism disguised as necessity?",
+      "resolution_mechanism": "Cross-cultural comparison: childcare arrangements in gender-egalitarian societies vs patriarchal ones; measurement of whether unequal childcare burden exists even when female partner earns more; analysis of whether couples with subsidized childcare show convergence toward equal domestic labor",
+      "impact": "If genuine optimization: childcare is coordination problem, not extraction mechanism \u2014 constraint is occupational segregation, not domestic division. If extraction: childcare concentration on women is enforced despite alternatives being available and affordable \u2014 constraint includes household-level extraction mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether childcare allocation is optimized coordination or gendered extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Female labor market bargaining power asymmetry is a tangled_rope constraint that combines genuine coordination functions (household labor division, workforce segmentation by occupational preference) with systematic extraction from female workers through wage suppression, occupational segregation, occupational verticalization (glass ceiling), and externalization of domestic labor burden onto women. The constraint exhibits a perspectival range from snare (powerless women without childcare alternatives) to rope (employers benefiting from compliant, lower-wage workforce) to scaffold (policy interventions with sunset logic). The extractiveness score (0.58) reflects that the constraint both coordinates household labor arrangements and labor market segmentation while extracting value through wage gaps (16-23% average), motherhood penalties (5-10% per child), and occupational segregation costs (foregone lifetime earnings from occupational crowding). Theater ratio (0.48) indicates that cultural narratives about gender-neutral occupational choice and biological suitability perform significant legitimizing function \u2014 much of the segregation is maintained through hiring networks and identity narratives rather than explicit legal barriers.",
+    "key_agents": [
+      "Female workers (powerless/trapped or moderate/constrained): primary victims bearing wage suppression, motherhood penalty, occupational segregation, and externalized domestic labor",
+      "Employers (institutional/arbitrage): primary beneficiaries extracting wage suppression and docile workforce; experience constraint as coordination",
+      "Male workers (moderate/constrained or organized/arbitrage): secondary beneficiaries through reduced wage competition and household labor supply; historically organized around male-protective seniority systems",
+      "Labor unions (organized/constrained): bifurcated position \u2014 historically protected male workers while excluding or subordinating female members; modern unions attempting to bridge but facing internal capture dynamics",
+      "Policy reform coalition (organized/constrained): governments, women's organizations, labor standards agencies building alternative structures (comparable worth, childcare subsidy, anti-discrimination enforcement) with generational sunset logic",
+      "Occupational segregation legacy system (institutional/arbitrage): historical sexual division of labor maintained through institutional inertia, cultural performance, and network effects rather than explicit enforcement"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Female workers earn systematically less than male peers for equivalent work (16-23% wage gap depending on context), face motherhood penalties (5-10% per child), and experience occupational segregation that concentrates women in lower-wage sectors (care, service, education vs trades, management, technology). The extraction is neither minimal (\u03b5 > 0.45) nor maximal (no biological constraint prevents female employment). The rising trajectory (0.42 \u2192 0.58 over interval) reflects that explicit wage suppression has been reduced by legislation, but occupational segregation and motherhood penalties have actually increased as women entered workforce \u2014 the extraction mechanism shifted from wage discrimination to structural barriers. Suppression (0.65): High. Female exit options are constrained by: compounded childcare responsibility, occupational segregation creating credential and network barriers, wage gap making single-income viability difficult, identity-based expectations that women prioritize caregiving, and geographic immobility due to household structure. Childcare is the primary suppression mechanism \u2014 without subsidized alternatives, women face choice between employment and childcare, making labor market participation conditional on household arrangement. Theater ratio (0.48): Moderate-low and declining. Cultural narratives about gender-neutral occupational choice ('women don't want these jobs,' 'women aren't suited for management') perform significant legitimizing function, but declining over interval as legislative and cultural shifts reduce plausibility of purely cultural explanation. The decline reflects that occupational segregation is increasingly recognized as structurally enforced (network effects, credential pathways, hiring discrimination) rather than expressed preference.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence across indexical positions. The powerless female worker trapped in occupational segregation with childcare burden sees a snare \u2014 no exit option, maximum experienced extraction, no coordination benefit. The educated female worker with organizational resources and childcare options sees tangled_rope \u2014 real coordination (professional norms, market access) alongside extraction (wage gap, motherhood penalty). The employer sees rope \u2014 pure coordination (workforce segmentation reduces wage pressure, occupational segregation stabilizes labor supply). The policy reform coalition sees scaffold \u2014 temporary extraction that can be reduced through legislative intervention and norm change. The occupational segregation system sees piton \u2014 the historical sexual division of labor persists through cultural performance and institutional inertia despite legal equality. The analytical observer at civilizational scale sees tangled_rope \u2014 the constraint solves real coordination problems while simultaneously distributing costs asymmetrically. The perspectival gap reveals that 'choice' and 'market preference' explanations collapse when examined from the powerless position: without subsidized childcare and occupational desegregation, 'choice' is exercised under duress.",
+    "directionality_logic": "Directionality derives from structural position in the extraction flow. Female workers with trapped exit options and no childcare alternatives experience high d (0.85-0.95) \u2014 full target status, high f(d), high experienced extraction. Female workers with education, professional credentials, and childcare resources experience moderate d (0.55-0.65) \u2014 both victim and partial beneficiary of professional labor markets, experienced extraction moderate. Employers benefit from the constraint (low d, 0.15-0.25) with arbitrage options \u2014 can exit by hiring male workers, but profit from female labor suppression. Male workers experience d around 0.45-0.50 depending on union membership and whether they benefit from occupational segregation protecting higher wages. The piton perspective's directionality (institutional/arbitrage) derives d around 0.20 \u2014 the legacy system benefits from its own persistence and has arbitrage options (could reform but doesn't). The analytical perspective derives d around 0.72 \u2014 the observer has no exit option from the constraint's reality, experiences it as structurally binding.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by clarifying that female labor market bargaining asymmetry is genuinely tangled_rope: it coordinates household labor arrangements and labor market segmentation (coordination function exists) while extracting value through wage suppression, occupational segregation, and motherhood penalties (asymmetric extraction exists). The mandatrophy trap was asking 'is this pure coordination or pure extraction?' when the answer is 'both.' The constraint cannot be classified as rope (no extraction) because wage gaps and motherhood penalties are empirically significant and asymmetric. It cannot be classified as snare (no coordination) because occupational segmentation does solve household labor coordination problems. The tangled_rope classification holds because both functions are structurally necessary: removing the coordination function (collapsing occupational segmentation) requires building alternative childcare and household labor coordination mechanisms, which is exactly what policy reform is attempting via childcare subsidies, parental leave, and comparative worth frameworks."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "occupational_segregation_mechanism",
+      "motherhood_penalty_dynamics",
+      "household_labor_division_norm",
+      "childcare_access_bottleneck"
+    ],
+    "dual_formulation_note": "Female labor market bargaining power is upstream of occupational segregation and motherhood penalty mechanisms but downstream of childcare access constraints. The constraint family includes: (1) childcare_access_bottleneck (\u03b5=0.52, barrier mechanism), (2) occupational_segregation_mechanism (\u03b5=0.48, credential/network effect), (3) motherhood_penalty_dynamics (\u03b5=0.61, household obligation externalization), (4) female_labor_market_bargaining_power (\u03b5=0.58, aggregate effect). Each has distinct metrics but shares structural dependence on gendered household labor expectations."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.48
+    }
+  ]
+}

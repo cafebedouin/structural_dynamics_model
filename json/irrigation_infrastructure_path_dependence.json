@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "irrigation_infrastructure_path_dependence",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "irrig"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Irrigation Infrastructure Path Dependence",
+    "topic_domain": "water/agriculture/economics/infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_landholders",
+      "canal_bureaucracy",
+      "established_agricultural_interests"
+    ],
+    "victims": [
+      "smallholder_farmers",
+      "downstream_communities",
+      "future_water_users",
+      "alternative_agricultural_systems"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Smallholder Farmer",
+      "comment": "PERSPECTIVE 1: SMALLHOLDER FARMER (SNARE) \u2014 Structurally dependent on canal water for subsistence; trapped by land tenure arrangements, debt cycles, and lack of alternative water sources. Cannot exit the irrigation system without abandoning livelihood. The canal bureaucracy controls water allocation and timing, creating maximum extraction with minimal coordination benefit. No alternative technologies or resources available."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Downstream Community",
+      "comment": "PERSPECTIVE 2: DOWNSTREAM COMMUNITY (SNARE) \u2014 Trapped by geographic position and historical water rights allocation that prioritizes upstream users. Bears costs of reduced water flow, seasonal scarcity, and ecosystem degradation. No meaningful exit option or voice in allocation decisions. Extraction is multigenerational \u2014 water scarcity compounds across time."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Canal Bureaucracy",
+      "comment": "PERSPECTIVE 3: CANAL BUREAUCRACY (TANGLED ROPE) \u2014 Coordinates water distribution, maintenance, and conflict resolution (genuine coordination function). Simultaneously extracts through fees, water rationing, and institutional dependency. Requires active enforcement to maintain allocation rules. Benefits from the system's persistence through budgets and institutional continuity; constrained by political pressure and maintenance costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Large Landholder",
+      "comment": "PERSPECTIVE 4: LARGE LANDHOLDER (ROPE) \u2014 Primary beneficiary with historical water rights and preferential allocation. Experiences the constraint as pure coordination \u2014 infrastructure enables their productivity. Maintains arbitrage options (can invest in alternative technologies, switch crops, negotiate directly with authorities). Faces minimal suppression; benefits are clear and continuous."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Reform Coalition",
+      "comment": "PERSPECTIVE 5: REFORM COALITION (SCAFFOLD) \u2014 Environmental NGOs, water rights advocates, and progressive agricultural economists see the irrigation path dependence as a temporary institutional arrangement with a sunset clause. Groundwater depletion, climate change, and alternative water technologies (drip irrigation, rainwater harvesting) create pressure for system redesign. Emergence of water markets and efficiency standards offers exit pathways. Theater is moderate \u2014 reform rhetoric persists even when implementation lags."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Colonial Water Allocation Legacy",
+      "comment": "PERSPECTIVE 6: COLONIAL WATER ALLOCATION LEGACY (PITON) \u2014 Historical water rights hierarchies established during colonial periods persist through institutional inertia despite changed ecological conditions and population distributions. The formal water allocation rules are maintained through ritual and legal precedent, but actual water availability has degraded. Theater is high \u2014 the system performs legitimacy through administrative processes while material coordination has largely failed. Maintenance is driven by elite institutional interests with vested power, not by functional necessity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Irreversibility View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / IRREVERSIBILITY (MOUNTAIN) \u2014 From a civilizational view, once large-scale irrigation infrastructure is constructed, the economic sunk costs and institutional coordination create path dependence that appears nearly irreversible at the civilizational timescale. Reallocation of water rights, infrastructure redesign, or technological transition all face massive institutional resistance. The constraint appears as a natural law of infrastructure economics \u2014 sunk costs lock systems into trajectories. However, this masks the contingency: the path dependence is institutional and political, not thermodynamic."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "groundwater_depletion_rate_threshold",
+      "question": "At what rate of groundwater depletion does the irrigation system transition from path-dependent (hard to change) to irreversible (impossible to maintain)?",
+      "resolution_mechanism": "Hydrogeological modeling of aquifer recharge rates vs extraction rates; historical precedents of irrigation system collapse or forced transformation",
+      "impact": "If threshold < 20 years: systems are already in crisis phase and must transform rapidly, making extraction mechanisms less stable. If threshold > 50 years: path dependence remains effective and extraction mechanisms persist through the measurement interval.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Critical timeline for irrigation system viability given groundwater depletion"
+    },
+    {
+      "id": "alternative_technology_adoption_barriers",
+      "question": "Are barriers to drip irrigation, rainwater harvesting, or other water-efficient technologies primarily technical, economic, institutional, or identity-based?",
+      "resolution_mechanism": "Comparative analysis of adoption rates across regions with similar water scarcity but different institutional/cultural contexts; controlled trials of technology adoption with varying support mechanisms",
+      "impact": "If primarily technical/economic: path dependence can be overcome through investment and policy. If primarily institutional/identity: breaking path dependence requires cultural and political transformation, making constraints more durable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Nature of barriers to alternative agricultural technologies"
+    },
+    {
+      "id": "water_rights_reallocation_feasibility",
+      "question": "Can historical water rights be reallocated without triggering acute conflict or institutional collapse?",
+      "resolution_mechanism": "Case studies of water rights redistribution (India's inter-state water disputes, California water markets, Middle Eastern agreements); analysis of legal mechanisms for reallocation",
+      "impact": "If feasible: scaffold sunset clause is real, and system can transform without catastrophic extraction. If infeasible: path dependence is reinforced and extraction mechanisms remain stable.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Political feasibility of reallocating historical water rights"
+    },
+    {
+      "id": "institutional_inertia_vs_ecological_necessity",
+      "question": "Does the canal bureaucracy maintain the current allocation system primarily to preserve institutional power or because genuine coordination problems would emerge from rapid change?",
+      "resolution_mechanism": "Comparative analysis of system performance with and without bureaucratic control; study of community-managed irrigation systems; examination of whether bureaucratic interests align with or diverge from coordination requirements",
+      "impact": "If primarily institutional inertia: the piton classification is accurate and theater ratio is high. If partially genuine coordination: tangled rope classification is more accurate and some extraction is legitimately coordination cost.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether bureaucratic maintenance reflects genuine coordination needs or pure institutional inertia"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Irrigation infrastructure creates structural path dependence when historical investment, institutional arrangements, and legal water rights allocations lock systems into specific configurations even as ecological conditions, population distributions, and technological capabilities change. The constraint exhibits a tangled rope character: the infrastructure genuinely coordinates water distribution (enabling agriculture that would be impossible under rainfall alone), yet simultaneously extracts through monopolistic control of allocation, rent-seeking by large landholders, suppression of alternative water systems, and intergenerational cost transfer to downstream communities and future water users. The extractiveness has grown from 0.32 to 0.58 over 40 years as groundwater depletion has reduced system flexibility and intensified allocation conflicts. Theater has risen from 0.38 to 0.58 as administrative processes increasingly serve legitimacy functions rather than actual coordination. The constraint demonstrates how historical infrastructure investments create institutional dependencies that persist long after the underlying conditions have changed.",
+    "key_agents": [
+      "Smallholder farmers: Primary victims (powerless/trapped) \u2014 dependent on canal access for subsistence, face water cutoffs and bureaucratic rationing with no alternatives",
+      "Downstream communities: Secondary victims (powerless/trapped) \u2014 geographic position locks them into receiving residual water after upstream users; generations of reduced flow and ecosystem damage",
+      "Canal bureaucracy: Institutional actor (institutional/constrained) \u2014 maintains allocation system; benefits from continuous budgets and institutional continuity; constrained by maintenance costs and political pressure",
+      "Large landholders: Primary beneficiaries (organized/arbitrage) \u2014 hold historical water rights and preferential allocation; can invest in alternatives and negotiate directly; captured early benefits of infrastructure",
+      "Reform coalition: Organized actors (organized/mobile) \u2014 see institutional path dependence as temporary problem with solution pathways through technology and policy",
+      "Analytical observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing institutional path dependence as irreversible law of infrastructure economics"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The infrastructure provides genuine coordination value (enabling irrigation on a large scale) but the allocation mechanism extracts through monopolistic control. Large landholders captured the highest-value water rights during construction and maintain these through institutional hierarchy. Smallholders and downstream communities bear costs of scarcity and rationing. The rising trajectory reflects that as water becomes scarcer, the same allocation rules produce higher extraction \u2014 scarcity increases the value of controlled access. Suppression (0.62): Moderate-high. Legal water rights frameworks entrench allocation patterns; lack of alternative water sources for smallholders; information asymmetries about hydrological conditions favor bureaucracy and large landholders; debt and land tenure trap smallholders into dependence. Yet suppression is not total \u2014 some smallholders have organized for reform, some communities have invested in boreholes, some states have begun reallocating rights. Theater (0.58): Moderate and rising. Canal maintenance and allocation management have real coordination function, but as system degrades, performance increasingly depends on administrative ritual rather than actual water delivery. Administrative fees and licensing requirements serve more to maintain bureaucratic power than to coordinate allocation efficiently. The theater rise from 0.38 to 0.58 tracks the growing gap between the system's formal legitimacy and its actual performance.",
+    "perspectival_gap": "The most dramatic perspectival gap is between the large landholder's Rope (coordination mechanism enabling productivity) and the smallholder farmer's Snare (pure extraction with no benefit). Both perspectives measure the same infrastructure from radically different structural positions. The canal bureaucracy's Tangled Rope view legitimates continued control by emphasizing coordination function \u2014 a partially true claim that obscures the asymmetric extraction. The reform coalition's Scaffold view is prospective: it sees the path dependence eroding through technology and climate pressure, but this sunset clause depends on institutional choices not yet made. The piton view of colonial water rights reveals how historical allocations persist as institutional theater long after material conditions have changed. The mountain view risks naturalizing contingent institutional arrangements as irreversible laws of infrastructure economics.",
+    "directionality_logic": "Large landholders have high historical water rights, minimal resource barriers to exit (can shift crops, invest in alternatives, negotiate directly), and derive clear benefits \u2014 their d value is low (~0.10-0.20), yielding negative or minimal effective extraction (\u03c7). The canal bureaucracy has constrained exit (embedded in institutional structure, dependent on state budgets) and mixed benefits (institutional continuity and budgets, but facing political pressure) \u2014 d value moderate (~0.45-0.55), yielding moderate \u03c7. Smallholder farmers have trapped exit (no alternative water sources, debt-dependent, land tenure constraints) and are victims \u2014 d value high (~0.85-0.95), yielding high \u03c7. Downstream communities similarly trapped \u2014 d value high (~0.88), yielding high \u03c7. The directionality calculation shows that extraction flows from those with trapped exit options to those with arbitrage options, mediated through institutional hierarchy.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that the tangled rope classification is diagnostically correct: the system performs genuine coordination (enables large-scale irrigation) while simultaneously extracting (asymmetric allocation of benefits and costs). Distinguishing the two functions is essential to understanding the constraint's durability. The coordination function is real \u2014 rapid transition away from the system would create agricultural crisis and threaten food security for the regions dependent on it. Yet the extraction is also real \u2014 the allocation mechanism systematically favors large landholders and penalizes smallholders and downstream users. The constraint cannot be analyzed as pure coordination (Rope) because the extraction is structural and intergenerational. It cannot be analyzed as pure extraction (Snare) because the infrastructure does enable productivity that would be impossible under rainfall alone. The tangled rope classification holds both truths: the system is both necessary and exploitative. Reform requires not dismantling the coordination function but restructuring the allocation mechanism to distribute its benefits more equitably \u2014 exactly the mandate that path dependence prevents."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "groundwater_depletion_crisis",
+      "water_rights_legal_hierarchy",
+      "agricultural_technology_lock_in"
+    ],
+    "dual_formulation_note": "The irrigation infrastructure path dependence is upstream of specific water scarcity crises and technology adoption barriers. The constraint represents the meta-institutional structure that coordinates and extracts through allocation rules, while specific physical constraints (aquifer depletion) and technology constraints (adoption barriers) represent downstream effects and potential escape routes."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.5
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "metabolic_phenotype_individualization",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "metab"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Metabolic Phenotype Individualization in Personalized Medicine",
+    "topic_domain": "biomedical/medical_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "precision_medicine_companies",
+      "genomic_testing_industry",
+      "metabolic_research_institutions"
+    ],
+    "victims": [
+      "patients_without_genetic_data",
+      "socioeconomically_disadvantaged_populations",
+      "medical_standardization"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Excluded Patient",
+      "comment": "PERSPECTIVE 1: EXCLUDED PATIENT (SNARE) \u2014 Cannot afford metabolic phenotyping; health outcomes increasingly depend on individualized metabolic profiling that is inaccessible. Trapped by cost barriers and information asymmetry. As personalized medicine becomes standard, exclusion from phenotyping becomes a material health disadvantage with no alternative pathway."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Moderately-Resourced Patient",
+      "comment": "PERSPECTIVE 2: MODERATELY-RESOURCED PATIENT (TANGLED ROPE) \u2014 Has partial access to metabolic phenotyping through insurance or out-of-pocket cost-sharing. Experiences genuine coordination benefit (better treatment matching) alongside extraction (ongoing profiling costs, data ownership asymmetry, algorithmic opaqueness). Mixed experience with real constraints but also real agency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Precision Medicine Company",
+      "comment": "PERSPECTIVE 3: PRECISION MEDICINE COMPANY (ROPE) \u2014 Experiences metabolic phenotyping as pure coordination infrastructure. The constraint solves the market problem: how to match patients to treatments efficiently. The company has full arbitrage options (pivot to different personalization metrics, switch biomarker suites, license technology). Net beneficiary but genuinely coordinating \u2014 the system works for them."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Clinical Practice Guidelines Authority",
+      "comment": "PERSPECTIVE 4: CLINICAL PRACTICE GUIDELINES AUTHORITY (TANGLED ROPE) \u2014 Faces pressure to incorporate metabolic phenotyping into standard of care (coordination function: improving treatment matching). Simultaneously constrained by evidence gaps, cost-benefit ambiguity, and institutional capture by precision medicine industry. Active enforcement required to maintain dual guidance (when to individualize, when to standardize). Genuine coordination conflict with asymmetric interests."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Population-Level Epidemiology",
+      "comment": "PERSPECTIVE 5: POPULATION-LEVEL EPIDEMIOLOGY (PITON) \u2014 The shift toward metabolic phenotyping degrades population-level public health data collection. Public health surveillance systems are built on standardized metabolic measures (BMI, fasting glucose, lipid panels). Individualized phenotyping creates a two-tiered system: detailed phenotypes for those with access, degraded population statistics for public health planning. The constraint is maintained through institutional inertia \u2014 standard measures persist despite being analytically inferior to individual phenotypes \u2014 because alternatives haven't fully replaced them for population-level purposes."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational scope, metabolic phenotyping coordination is real (better treatment matching, reduced trial-and-error) but asymmetrically distributed (concentrated among high-income populations and research-intensive regions). The constraint exhibits genuine coordination function alongside asymmetric extraction and information control. The engine's classification matches the structural data: requires active enforcement, has clear beneficiaries and victims, demonstrates both coordination and extraction at meaningful scale."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "phenotype_universality_threshold",
+      "question": "At what percentage population coverage does individualized phenotyping cease to be extractive and become coordinated population medicine?",
+      "resolution_mechanism": "Coverage data analysis; comparison of treatment outcomes in high-coverage vs low-coverage populations; identification of equity threshold where phenotyping becomes universal rather than stratified access good",
+      "impact": "If threshold < 60%: current state remains extractive (snare/tangled rope). If threshold > 85%: phenotyping could transition to rope classification if access barriers fall. Impacts policy implications for mandating coverage expansion.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Coverage threshold for phenotyping to shift from extraction to coordination"
+    },
+    {
+      "id": "phenotype_evidence_sufficiency",
+      "question": "Does the empirical evidence justify phenotyping-based treatment personalization at current scale, or does the evidence base primarily support narrow clinical contexts (rare genetic conditions, specific cancer subtypes) extrapolated to general populations?",
+      "resolution_mechanism": "Systematic review of randomized controlled trials with phenotype stratification; meta-analysis of treatment outcome improvements attributable to metabolic phenotyping vs unmeasured confounders; comparison of predicted vs actual benefit in diverse populations",
+      "impact": "If evidence is narrow: phenotyping expansion is justified by market incentives more than clinical necessity \u2014 snare/extraction frame correct. If evidence is broad: genuine coordination function is larger than extraction \u2014 tangled rope frame correct.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Evidence base for phenotyping-guided treatment across populations"
+    },
+    {
+      "id": "data_ownership_asymmetry",
+      "question": "Can phenotypic data be held in patient-controlled repositories with real algorithmic portability, or is data lock-in an inherent feature of precision medicine business models?",
+      "resolution_mechanism": "Analysis of data transfer agreements; identification of technical barriers vs business-model barriers to portability; case studies of patient data portability attempts across precision medicine platforms",
+      "impact": "If data is genuinely portable: extraction mechanism is weakened \u2014 tangled rope can evolve toward rope. If lock-in is systematic: data ownership creates permanent victim status \u2014 snare classification strengthened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of patient-controlled metabolic data portability"
+    },
+    {
+      "id": "standardization_feedback_loop",
+      "question": "Does successful metabolic phenotyping in high-resource contexts create pressure to standardize phenotypes, or does individualization create irreversible path dependency toward ever-finer stratification?",
+      "resolution_mechanism": "Historical analysis of other medical standardization cycles (from individualized bloodletting to standardized transfusion protocols); predictive modeling of phenotype standardization adoption in lower-resource regions",
+      "impact": "If standardization pressure dominates: phenotyping constraint is temporary \u2014 scaffold classification becomes more appropriate. If stratification path dependency dominates: the constraint becomes entrenched \u2014 snare/tangled rope classification hardens.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether phenotyping creates momentum toward standardization or irreversible stratification"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Metabolic phenotype individualization represents a shift in medicine from population-level standardized metrics to individual-level metabolic profiling. This constraint arises from the tension between legitimate clinical coordination (better treatment matching through personalized metabolic understanding) and extractive stratification (tiered access creating health inequity, data lock-in, algorithmic opacity). The constraint exhibits both genuine coordination benefits and asymmetric extraction mechanisms, making it a canonical tangled rope. Theater ratio (0.55) reflects moderate performative content: while some phenotyping genuinely improves outcomes, significant portions involve marketing-driven phenotyping in contexts with weak evidence, algorithm opaqueness obscuring whether improvements are from better personalization or from behavioral selection effects (patients with access to phenotyping are often those with resources and adherence capacity). The extractiveness trajectory (0.28 \u2192 0.52 over 6 years) shows rapid accumulation as phenotyping integration into standard of care creates path dependency \u2014 patients lacking phenotypic data face increasing disadvantage. Suppression (0.48) reflects moderate barriers: cost barriers are real but not absolute for many populations; information asymmetry is structured (algorithm opaqueness, data ownership); alternative pathways exist (population-level medicine, equipoise-based trial design) but face institutional headwinds.",
+    "key_agents": [
+      "Precision Medicine Companies: Primary beneficiary (institutional/arbitrage) \u2014 generate revenue from phenotyping services, biomarker licensing, algorithmic platforms. Have full exit capacity (can pivot to different personalization metrics). Net beneficiary without constraints.",
+      "Patients Without Genetic Data or Resources: Primary victim (powerless/trapped) \u2014 cannot afford phenotyping; as individualization becomes standard, excluded patients face deteriorating health outcomes relative to phenotyped populations. No exit pathway; trapped by cost barriers and information asymmetry.",
+      "Moderately-Resourced Patients: Secondary victim (moderate/constrained) \u2014 partial access through insurance or cost-sharing; benefit from some phenotyping but face ongoing expense, data ownership loss, algorithmic opacity. Can exit by refusing phenotyping but at cost of suboptimal treatment matching.",
+      "Clinical Practice Guidelines Bodies: Institutional actor (institutional/constrained) \u2014 must decide when to require vs recommend phenotyping; constrained by evidence gaps, industry pressure, and conflicting outcomes research. Active enforcement required to maintain dual guidance.",
+      "Population-Level Public Health: Degraded institutional actor (institutional/constrained) \u2014 epidemiology systems built on standardized measures face degradation as phenotyping creates two-tiered data collection. Constrained by the piton mechanism: maintain old standards despite being suboptimal, because individualized replacements haven't fully scaled.",
+      "Analytical Observer: Sees the constraint as coordinating with extractive overlay \u2014 genuine personalization benefit coexisting with asymmetric access and data control structures."
+    ],
+    "logic_rationale": "Extractiveness (0.52): Above the 0.46 threshold that triggers tangled rope territory. The metric reflects that metabolic phenotyping creates significant asymmetric returns: precision medicine companies capture value through data ownership and algorithmic licensing; excluded populations bear health disadvantage; treatment matching benefits are distributed unevenly. The upward trajectory (0.28 \u2192 0.52) indicates path dependency \u2014 as phenotyping becomes incorporated into standard care, non-participation creates cumulative disadvantage. Suppression (0.48): Moderate but structured. Cost barriers are primary (phenotyping often costs $500-$5000 per individual, often out-of-pocket). Information asymmetry is significant (algorithms are proprietary, phenotype selection is often opaque, benefit claims are often marketing-driven). Institutional barriers are real (guidelines still accommodate both phenotyped and non-phenotyped care, but with implicit assumptions favoring phenotyped patients). Theater ratio (0.55): Mid-range. A substantial portion of phenotyping \u2014 perhaps 40-50% \u2014 involves genuine personalization that improves outcomes (some genetic variations do affect drug metabolism, some biomarkers do predict response). The remaining 45-60% exhibits theatrical properties: marketing claims exceed evidence, algorithm opaqueness prevents verification of improvement attribution, phenotyping becomes a status good and insurance optimality signal independent of actual clinical value. Claimed type: Tangled rope because (1) genuine coordination function exists (matching treatments to metabolic capacity), (2) asymmetric extraction is structurally embedded (access concentrated by income), (3) active enforcement required (guidelines bodies must decide when to individualize vs standardize).",
+    "perspectival_gap": "The gap between excluded patients (snare) and precision medicine companies (rope) is stark: excluded patients see pure extraction with no escape; companies see pure coordination with full arbitrage. The moderately-resourced patient sees the true structure (tangled rope) \u2014 real benefit alongside real extraction. The clinical guidelines authority sees the enforcement problem (tangled rope at institutional scale) \u2014 how to individualize where it helps while protecting access equity. The epidemiology perspective sees degradation (piton) \u2014 population-level data systems losing function as individualization fragments standardization. The analytical observer confirms tangled rope: the structural data matches the classification \u2014 beneficiaries are concentrated, victims are dispersed, enforcement is contested, coordination function coexists with extraction. If perspectives converged on rope, the constraint would be non-extractive; if all converged on snare, the constraint would be pure extraction with no coordination claim. The perspectival diversity itself is the diagnostic signal of tangled rope.",
+    "directionality_logic": "Directionality derives from agent power and structural relationship to the phenotyping flow. Precision medicine companies (institutional/arbitrage) experience low d (~0.15): they are beneficiaries with exit capacity, so the sigmoid f(d) produces near-zero or negative chi. Excluded patients (powerless/trapped) experience high d (~0.95): they are victims with no exit, so f(d) produces maximum chi. Moderately-resourced patients (moderate/constrained) experience d ~0.55: they are both somewhat victimized (extraction happens) and somewhat benefited (treatment matching), with constrained exit (can exit phenotyping but at health cost). Clinical guidelines authority (institutional/constrained) experiences d ~0.45: they have institutional power but are constrained by the tangled rope structure itself \u2014 they must enforce dual guidance (when to individualize, when to standardize) even though the structural incentives pull toward individualization. The variability in d across perspectives is not noise \u2014 it is the measured heterogeneity of the extraction mechanism. The constraint does not extract uniformly; it extracts from those with low exit capacity and concentrated benefit in those with high exit capacity.",
+    "mandatrophy_analysis": "MANDATE ATROPHY RISK: The constraint contains the classical setup for mandate collapse \u2014 a genuine coordination problem (treatment matching) masked by extraction asymmetry (access stratification). If guidelines bodies mandate phenotyping without addressing access barriers, the mandate becomes a coercive asymmetry: those who can afford phenotyping are required to phenotype; those who cannot are implicitly excluded from standard-of-care treatment pathways. If guidelines bodies refuse to mandate phenotyping despite accumulating evidence, the coordination function remains suboptimal. The resolution is not to collapse the mandate but to restructure the constraint: either (1) make phenotyping universally accessible (converting snare \u2192 rope), (2) develop parallel personalization pathways that don't require expensive phenotyping (reducing extraction), or (3) establish equity gates that prevent phenotyping from becoming a stratification mechanism. The analytical observer's tangled rope classification is correct and stable across the interval if and only if the enforcement body continues to acknowledge both the coordination function AND the extraction asymmetry. If enforcement becomes purely celebratory (phenotyping is always better), the constraint degrades into a false rope and the extraction hardens into a hidden snare."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "medical_data_ownership_asymmetry",
+      "algorithmic_opacity_in_clinical_decision_making",
+      "health_equity_stratification_by_income"
+    ],
+    "dual_formulation_note": "Metabolic phenotyping is downstream of both genomic sequencing capability (which determines what can be phenotyped) and precision medicine business model (which determines access and pricing). The phenotyping constraint is distinct from these upstream constraints: it represents the coordination-extraction hybrid at the clinical decision layer, whereas upstream constraints have different epsilon values reflecting the empirical/technical and economic layers."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ]
+}

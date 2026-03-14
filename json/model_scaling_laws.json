@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "model_scaling_laws",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "msl"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Model Scaling Laws as Coordination-Extraction Hybrid",
+    "topic_domain": "machine_learning/computational_science",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "frontier_ai_labs",
+      "compute_wealthy_institutions"
+    ],
+    "victims": [
+      "resource_constrained_researchers",
+      "field_knowledge_diversity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Resource-Constrained Researcher",
+      "comment": "PERSPECTIVE 1: RESOURCE-CONSTRAINED RESEARCHER (SNARE) \u2014 Trapped by the empirical reality that achieving state-of-the-art performance requires massive compute budgets. Cannot exit without abandoning relevance. Scaling laws became predictive law of the field, forcing participation in the arms race. Maximum extraction: locked into dependence on compute-wealthy institutions for any credible work."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Funded Research Group",
+      "comment": "PERSPECTIVE 2: FUNDED RESEARCH GROUP (TANGLED ROPE) \u2014 Moderate power with constrained exit. Benefits from scaling laws as a research strategy (clear roadmap for improvement, predictable returns on compute investment). But also bears extraction: must continuously scale to remain competitive; funding flows concentrate at frontier labs; mid-tier groups face choice between abandoning scaling pursuit or competing with unequal resources. Genuine coordination (shared understanding of performance curves) embedded with asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Frontier AI Lab",
+      "comment": "PERSPECTIVE 3: FRONTIER AI LAB (ROPE) \u2014 Institutional actor with arbitrage options (can exit scaling pursuit and switch domains without career cost). Experiences scaling laws as pure coordination: the laws provide transparent prediction of performance gains, enable reproducible research, and create a shared epistemic framework. Net beneficiary with ability to shape the terms of engagement. Low experienced extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open-Science and Efficiency Coalition",
+      "comment": "PERSPECTIVE 4: OPEN-SCIENCE COALITION (SCAFFOLD) \u2014 Organized agents (efficient scaling research, parameter-sharing protocols, federated learning) building alternative pathways around the scaling arms race. See the current scaling regime as temporary: better algorithms, sparsity, mixture-of-experts, and distributed training will eventually decouple capability from raw compute. Sunset mechanism: as efficiency techniques mature, the raw-compute extraction mechanism loses force. Structured sunset clause in terms of technological trajectory."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Scaling Law as Prediction Framework",
+      "comment": "PERSPECTIVE 5: SCALING LAW PREDICTION FRAMEWORK (PITON) \u2014 The original Kaplan et al. (2020) and Hoffmann et al. (2022) scaling laws have become largely performative in current usage. Used as ritual justification for ever-larger models, but the framework's predictive power has degraded: contradictions accumulate (instruction tuning breaks predicted laws, emergence breaks monotonicity, multimodal scaling differs from language-only), yet the framework persists through institutional inertia. The scaling law invocation maintains its force through theater rather than empirical precision. Theater ratio reflects this \u2014 scaling laws are cited as law rather than subjected to continuous empirical questioning."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Computational Limit View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / COMPUTATIONAL LIMIT VIEW (MOUNTAIN) \u2014 From a computational complexity perspective, some scaling relationship between parameters, data, and compute is fundamental: no architecture can escape the information-theoretic constraint that capacity requires dimensionality. Viewing scaling laws as discoverable natural structure of the universe of functions. This perspective risks naturalizing what is actually a contingent regime (the specific power-law form discovered in the 2020s for transformer architectures at specific scales)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "scaling_law_universality",
+      "question": "Are empirically discovered scaling laws universal properties of neural computation or regime-specific artifacts of transformer architectures and current training datasets?",
+      "resolution_mechanism": "Comparative analysis across architectures (CNNs, RNNs, mixture-of-experts), training regimes (reinforcement learning, unsupervised), and scales (from parameters=10^6 to 10^13). If laws hold across all settings, universality claim is supported; if they break at architectural or scale boundaries, they are regime-specific.",
+      "impact": "If universal: constraint is closer to mountain (immutable). If regime-specific: constraint is contingent institutional arrangement that will shift as architectures evolve; classification is tangled_rope or snare depending on distribution of exit options.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether scaling laws are universal or regime-specific"
+    },
+    {
+      "id": "emergence_and_predictability",
+      "question": "Do emergent capabilities (in-context learning, reasoning, code generation) follow predictable scaling curves, or do they appear discontinuously, breaking the monotonic scaling hypothesis?",
+      "resolution_mechanism": "High-resolution scaling measurements tracking performance on tasks with known emergence phenomena (few-shot learning, arithmetic). Statistical tests for discontinuities. Replication across model families.",
+      "impact": "If monotonic and predictable: scaling laws provide genuine coordination framework. If discontinuous: predictability breaks at critical points, reducing extraction-enabling power of the framework. Scaling law perspective shifts from mountain toward rope (less deterministic, more sensitive to specific choices).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether emergent capabilities follow predictable scaling"
+    },
+    {
+      "id": "efficiency_alternative_viability",
+      "question": "Can scaling law alternatives (sparse models, mixture-of-experts, algorithmic improvements, training efficiency) achieve equivalent frontier capability at 10-100x lower compute cost within 5 years?",
+      "resolution_mechanism": "Longitudinal tracking of capability-per-unit-compute for sparse and efficient methods. Comparison of resource requirements for equivalent task performance. Cost trajectory analysis.",
+      "impact": "If viable: scaffold perspective confirmed \u2014 sunset is real and structural. Scaling law extraction mechanism loses force as alternatives mature. If not viable: scaling laws remain lock-in constraint for 10+ years. Extract mechanism persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of efficiency-based alternatives to raw scaling"
+    },
+    {
+      "id": "compute_concentration_causality",
+      "question": "Do scaling laws cause compute concentration (because frontier performance requires frontier compute), or do institutional incentives cause both scaling pursuit and compute concentration independently?",
+      "resolution_mechanism": "Historical analysis of funding flows, institutional incentives, and capability distribution. Counterfactual: would compute have concentrated without scaling laws? Mechanistic analysis of alternative research strategies in absence of scaling prediction.",
+      "impact": "If scaling laws cause concentration: they are the primary extraction mechanism (snare from resource-constrained view). If coincident with institutional incentives: scaling laws are a rationalization layer on top of pre-existing extraction mechanisms. Affects whether solving scaling law problem would solve extraction problem.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether scaling laws cause or rationalize compute concentration"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "Scaling laws in machine learning describe the empirical relationship between model parameters, training data, and compute, and the resulting performance improvements. Originating from Kaplan et al. (2020) and systematized by Hoffmann et al. (2022), these laws have become the dominant framework for predicting AI capability development and justifying compute investment. This constraint exhibits the full spectrum of DR classification because scaling laws simultaneously serve as a genuine coordination mechanism (shared prediction framework enabling reproducible research), a contingent institutional arrangement (creating compute concentration and exclude resource-constrained researchers), and a potential false summit (naturalizing what may be regime-specific artifacts as universal laws). The constraint's extractiveness (0.38) reflects that scaling laws encode both real coordination value and asymmetric extraction through compute concentration. Theater ratio (0.65) indicates that scaling laws are increasingly cited as law rather than as empirical hypothesis subject to continuous falsification \u2014 the performative invocation has grown as architectural variations and instruction tuning have introduced complications the original framework did not predict.",
+    "key_agents": [
+      "Frontier AI Labs: Primary beneficiaries (institutional/arbitrage) \u2014 directly control compute resources needed to validate scaling laws and extract research priority; can exit scaling pursuit without career cost",
+      "Resource-Constrained Researchers: Primary victims (powerless/trapped) \u2014 cannot access compute budgets needed for scaling experiments; trapped in credibility gap where non-frontier work is discounted as less advanced",
+      "Funded Research Groups: Secondary victims (moderate/constrained) \u2014 face increasing pressure to engage in scaling competitions with unequal resource access; benefit from scaling framework but at unsustainable cost",
+      "Field Knowledge Diversity: Victim collective (powerless/trapped) \u2014 areas of AI research not amenable to large-scale compute (cognitive science connections, human-aligned methods, domain-specific efficiency) are devalued as research focus shifts toward scaling",
+      "Open-Science and Efficiency Coalition: Organized beneficiary-victims (organized/constrained) \u2014 building alternatives; see sunset mechanism in algorithmic improvement and sparse methods",
+      "Analytical Observer: Risk of false summit (analytical/analytical) \u2014 may naturalize contingent architectural regime (transformer + dense training) as universal law"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. Scaling laws provide genuine predictive value \u2014 performance improvements follow measured curves with high empirical support across a range of conditions. But extractiveness is not negligible because the framework justifies unlimited compute spending and creates a coordination problem (arms race) in which resource-constrained agents cannot participate. The moderate value reflects the balance: real coordination value (~0.15 at t=0) plus growing extraction through compute concentration (~0.13 added by t=4). Suppression (0.48): Moderate-high. Significant barriers include capital requirements for compute, specialized infrastructure knowledge, and the framing of scaling as 'the' path to capability (reducing perceived legitimacy of alternative approaches). But suppression is not total \u2014 some groups can collaborate with compute-wealthy institutions, and alternative methods are emerging. Theater ratio (0.65): Moderate-high and increasing. Early scaling law papers (2020-2021) were carefully empirical, testing predictions against new data. Current usage increasingly invokes 'scaling laws' as justification without empirical specificity \u2014 the theater has grown as complications (instruction tuning, multimodal scaling, emergent capabilities) have accumulated but been rhetorically managed rather than forcing framework revision. The trajectory from 0.35 to 0.65 captures this drift toward performative usage.",
+    "perspectival_gap": "Resource-constrained researchers and frontier labs occupy opposite positions in the scaling law extraction mechanism. The frontier lab's low-extraction rope view and the powerless researcher's high-extraction snare view are not arbitrary perspectives on the same invariant phenomenon \u2014 they are readings of a structurally asymmetric arrangement where beneficiaries control the terms of engagement. The piton perspective (scaling law framework as degraded ritual) emerges because the framework's predictive precision has declined (instruction tuning, emergence, multimodal regimes break the original laws) but its institutional force has increased (cited as law rather than hypothesis). This is diagnostic of piton dynamics: the mechanism persists through inertia and performative invocation rather than through empirical accuracy. The scaffold perspective (efficiency coalition building alternatives) is not aspirational but structural \u2014 sparse models, mixture-of-experts, and algorithmic improvements are showing 2-10x efficiency gains, establishing a real alternative pathway. The mountain perspective risks false summit: computational limits are real, but the specific power-law form discovered in the 2020s is regime-specific, not universal. If the analytical observer naturalizes this regime as law, the framework becomes an ideological lock-in.",
+    "directionality_logic": "Directionality (d) values derive from the agent's structural position in the extraction flow. Frontier labs (beneficiary + arbitrage) have low d ~0.10 \u2014 they experience negative or zero effective extraction because scaling laws align with their interests and resources. Resource-constrained researchers (victim + trapped) have high d ~0.92 \u2014 they bear maximum extraction because they are excluded from the mechanism that defines progress. Funded research groups (mixed + constrained) have moderate d ~0.65 \u2014 they participate in scaling but at unsustainable cost relative to frontier labs. The efficiency coalition (organized + constrained) has lower d ~0.45 because they have agency and a perceived exit path (algorithmic improvement trajectory). These d values feed into f(d) sigmoid, producing the effective extractiveness chi experienced by each agent. The tangled_rope classification follows because the constraint has genuine coordination value (d-independent) and asymmetric extraction (d-dependent distribution of costs).",
+    "mandatrophy_analysis": "RESOLVED: The mandatrophy is dissolved by recognizing that scaling laws satisfy both Rope and Snare criteria from different observation sites. For frontier actors, scaling laws are Rope (coordination without excessive coercion); for resource-constrained researchers, they are Snare (extraction without coordination). The constraint is Tangled Rope at the field level because (a) genuine coordination value exists (shared prediction framework, reproducible research trajectories), (b) asymmetric extraction exists (compute-wealthy institutions extract capability primacy from resource-constrained ones), and (c) active enforcement exists (the field's consensus that scaling is the primary path to progress). The piton observation shows degradation: the framework is increasingly cited as law rather than continually empirically tested. The scaffold trajectory shows structural sunset: efficiency-based alternatives are maturing. No single type is 'correct' \u2014 the presheaf of observations reveals that scaling laws are a hybrid mechanism with different extraction profiles depending on institutional position."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "compute_concentration_in_ai",
+      "research_accessibility_barriers"
+    ],
+    "dual_formulation_note": "Scaling laws can be decomposed into two structurally distinct constraints: (1) scaling_law_as_empirical_discovery (\u03b5\u22480.08, mountain from scientific perspective) and (2) scaling_law_as_institutional_enforcement (\u03b5\u22480.48, tangled_rope from field perspective). The current story models the institutional enforcement regime; the empirical discovery claim should be treated as upstream constraint. Decomposition follows \u03b5-invariance principle: different observables (whether to measure scalings laws as mathematical properties or as field-enforcing institutional mechanisms) yield different \u03b5 values, indicating different constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

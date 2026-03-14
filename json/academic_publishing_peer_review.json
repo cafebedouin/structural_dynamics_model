@@ -1,0 +1,205 @@
+{
+  "header": {
+    "constraint_id": "academic_publishing_peer_review",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "acapub"
+  },
+  "base_properties": {
+    "extractiveness": 0.54,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Academic Publishing Peer Review System",
+    "topic_domain": "academic/knowledge_production",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "journal_publishers",
+      "established_researchers",
+      "editorial_gatekeepers"
+    ],
+    "victims": [
+      "early_career_researchers",
+      "research_integrity",
+      "knowledge_access"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Early Career Researcher",
+      "comment": "PERSPECTIVE 1: EARLY CAREER RESEARCHER (SNARE) \u2014 Trapped within the peer review system as the only recognized pathway to academic legitimacy and employment. Faces extraction through unpaid labor (manuscript review), career gatekeeping (rejection), delayed publication, and reviewer bias. No viable alternative for establishing credibility. Maximum experienced extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Active Research Community",
+      "comment": "PERSPECTIVE 2: ACTIVE RESEARCH COMMUNITY (TANGLED ROPE) \u2014 Experiences both genuine coordination (quality filtering, reputation signaling) and asymmetric extraction (unpaid review labor, publication delays, access paywalls). Constrained by career incentives and disciplinary norms. Some agency through preprints and alternative venues, but significant costs to exit dominant system."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Journal Publisher",
+      "comment": "PERSPECTIVE 3: JOURNAL PUBLISHER (ROPE) \u2014 Benefits substantially from the peer review system which provides free labor for editorial and review functions while enabling subscription and access control. Experiences the constraint as pure coordination mechanism: filtering, quality assurance, and distribution. Net beneficiary with arbitrage capacity\u2014can switch business models (open access) while maintaining institutional position."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Open Access Movement",
+      "comment": "PERSPECTIVE 4: OPEN ACCESS MOVEMENT (SCAFFOLD) \u2014 Organized agents (arXiv, preprint servers, open-access mandates, alternative journals) see peer review as a temporary coordination problem with a clear sunset. Distributed review, post-publication scrutiny, and transparent commenting systems are building alternative verification pathways. Mobile exit options and sunset logic\u2014as norms shift and funding mandates require open access, the traditional paywall-dependent peer review loses extraction power."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Peer Review Ritual Itself",
+      "comment": "PERSPECTIVE 5: PEER REVIEW RITUAL (PITON) \u2014 The formal peer review process is largely performative theater: reviewers often cannot verify data, lack domain expertise for novel work, have insufficient time, and face no accountability. The ritual persists through institutional inertia and credentialing tradition rather than demonstrated effectiveness. High theater ratio (0.68) indicates the core function (error detection) has degraded while performative elements (authority assignment) remain."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, peer review appears as an immutable natural constraint on knowledge production: some verification mechanism is always necessary, and distributed expert evaluation is inherent to quality assurance. This perspective naturalizes what the structural data reveals as contingent institutional arrangements. The engine's false summit detector will flag this as naturalization rather than genuine natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "review_quality_vs_throughput_tradeoff",
+      "question": "Is the peer review system extractive because of inherent quality-throughput tradeoff, or because current institutional incentives prioritize speed and output metrics over review depth?",
+      "resolution_mechanism": "Comparative analysis of review quality in systems with different incentive structures (slow selective journals vs high-volume venues); measurement of actual error detection rates against post-publication corrections and retraction data",
+      "impact": "If inherent tradeoff: classification stabilizes as Tangled Rope with moderate extractiveness. If incentive-driven: extractiveness could decrease significantly with structural reform, reclassifying as Rope or Scaffold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether review quality-throughput tradeoff is inherent or incentive-driven"
+    },
+    {
+      "id": "reviewer_expertise_scarcity",
+      "question": "Does reviewer expertise scarcity necessitate the current gatekeeping structure, or could decentralized expertise networks (post-publication review, transparent commenting) detect errors equally well?",
+      "resolution_mechanism": "Empirical comparison of error detection rates: traditional pre-publication peer review vs arXiv post-publication comment systems; analysis of which error categories each system catches",
+      "impact": "If scarcity is genuine constraint: peer review is closer to Mountain (unavoidable bottleneck). If decentralized networks prove effective: scaffold classification confirmed, extraction is institutional rather than structural.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether specialized reviewer scarcity necessitates centralized gatekeeping"
+    },
+    {
+      "id": "publication_bias_causality",
+      "question": "Does peer review's suppression of negative results stem from the review process itself, or from downstream publication biases in journal selection and researcher incentives?",
+      "resolution_mechanism": "Tracking manuscript rejection rates for null results in peer review vs acceptance rates when same studies submitted to journals with explicit null-result policies; analysis of whether reviewers themselves reject null results or whether researchers preemptively filter",
+      "impact": "If peer review-driven: suppression is intrinsic to system, validates snare/tangled rope classification. If downstream-driven: peer review is partial cause, reform of publication incentives could reduce total suppression significantly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether publication bias stems from peer review process or downstream incentives"
+    },
+    {
+      "id": "alternative_verification_scalability",
+      "question": "Can transparent post-publication review and distributed expert commentary scale to verify the entire volume of contemporary research output?",
+      "resolution_mechanism": "Pilot implementation analysis (arXiv, bioRxiv communities); measurement of review velocity, coverage, and error detection rates as volume increases; identification of failure points in decentralized systems",
+      "impact": "If not scalable: decentralized approaches are supplement only, peer review remains necessary structural element. If scalable: scaffold perspective is realistic, sunset is achievable.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether distributed review can scale to full research volume"
+    },
+    {
+      "id": "career_incentive_coupling_plasticity",
+      "question": "Can the extraction component be decoupled from the coordination component by modifying career incentive structures (hiring, promotion, funding decisions) without dismantling peer review itself?",
+      "resolution_mechanism": "Analysis of institutions implementing alternative evaluation metrics (publication-free hiring, open-science bonuses); measurement of whether decoupled incentives reduce extraction while maintaining quality filtering",
+      "impact": "If decoupling possible: system could transform from Tangled Rope to Rope via institutional reform. If tight coupling: the extraction and coordination are structurally inseparable.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether extraction can be decoupled from coordination through incentive reform"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.54
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "The academic publishing peer review system represents a global knowledge-production constraint that blends genuine coordination (error detection, quality filtering, reputation signaling) with substantial extraction (unpaid labor, gatekeeping, access restriction, publication bias). Over the past 40 years, the theater ratio has increased from 0.42 to 0.68 as the volume of submitted manuscripts has exploded while reviewer capacity has remained flat, forcing peer review to rely increasingly on proxy signals (author reputation, institutional affiliation, novelty claims) rather than actual manuscript verification. Simultaneously, journal publishers have captured increasing economic rent through subscription paywalls and article processing fees, while the unpaid labor of reviewers has become more extractive as review cycles lengthen and desk rejections proliferate. The constraint exhibits all six DR types from different perspectives, revealing deep structural tension between its coordination function (quality filtering) and its extraction function (gatekeeping, access control, career surveillance). Early career researchers experience it as a snare\u2014trapped without alternatives and bearing extraction costs through unpaid review labor, submission fees, and gatekeeping. Established researchers experience it as tangled rope\u2014genuine benefits (reputation, priority signaling) mixed with extraction (mandatory review service, subscription costs). Publishers experience it as pure rope\u2014free quality control and distribution. Open-access advocates see a scaffold with sunset\u2014preprints, registered reports, and post-publication review are building alternative pathways that will eventually bypass the traditional paywall system. The peer review ritual itself has become a piton\u2014maintained through institutional inertia despite degraded function. The analytical observer risks naturalizing peer review as an immutable law of knowledge production, when it is actually a contingent institutional arrangement.",
+    "key_agents": [
+      "Early Career Researchers: Primary victims (powerless/trapped) \u2014 forced participation, unpaid labor, gatekeeping bias, career dependence on publication outcomes",
+      "Journal Publishers: Primary beneficiaries (institutional/arbitrage) \u2014 extract economic rent through subscriptions, access control, and article processing fees; receive free editorial and review labor",
+      "Established Researchers: Secondary beneficiaries (moderate/constrained) \u2014 benefit from reputation filtering and priority signaling; bear costs through mandatory review service and publication delays",
+      "Research Integrity: Victim-collective (powerless/trapped) \u2014 publications with flawed peer review contaminate knowledge base; no mechanism for systematic correction",
+      "Knowledge Access: Victim-collective (powerless/trapped) \u2014 paywalls restrict access to publicly-funded research; peer review legitimacy justifies access restrictions",
+      "Open Access Movement: Organized actors (organized/mobile) \u2014 arXiv, preprint servers, open journals building alternative verification pathways with generational sunset",
+      "Peer Review Ritual: Institutional performance (institutional/arbitrage) \u2014 maintains credentialing function while actual error-detection capacity has degraded"
+    ],
+    "logic_rationale": "Extractiveness (0.54): Moderate-high. The system extracts through multiple mechanisms: (1) unpaid reviewer labor estimated at billions annually, (2) publisher capture of economic rent ($25B+ annual subscription revenue for non-open-access journals), (3) gatekeeping that concentrates publication in high-prestige venues, (4) publication bias against null results and replication studies. The 0.54 value reflects that genuine quality filtering does occur (coordination function), but the distribution of benefits is highly asymmetric. Over the 40-year interval, extractiveness has increased as manuscript volume grew exponentially while review capacity remained flat, forcing reviews to become more superficial. Suppression (0.62): Moderate-high. Barriers to exit include: (1) publication requirement for academic employment and funding, (2) limited alternative credentialing systems, (3) network effects (researchers cite journal-published work, creating citation advantage for gatekept venues), (4) disciplinary norms enforcing journal hierarchy, (5) asymmetric information about review criteria. Theater ratio (0.68): High and increasing. The formal peer review process relies heavily on proxy signals: reviewer identity and reputation, author institutional affiliation, journal prestige, novelty framing. Actual manuscript verification is limited by reviewer time constraints, disciplinary expertise boundaries, and inability to access raw data. The theater has increased as complexity of research has outpaced reviewer capacity. Open-access preprints bypass much of this theater by using distributed post-publication commentary, revealing that the performative element was not intrinsic to quality filtering.",
+    "directionality_logic": "Directionality (d) values are derived from structural position within the extraction flow. Publishers as beneficiaries with arbitrage capacity have low d (approximately 0.15), experiencing negative effective extraction \u03c7\u2014the system subsidizes their institutional position. Early career researchers as victims trapped without alternatives have high d (approximately 0.95), experiencing maximum f(d) multiplier and maximum \u03c7\u2014every structural element of peer review extracts from them. Established researchers as moderate-power victims with constrained exit have mid-range d (approximately 0.65), experiencing moderate \u03c7\u2014they extract value through reputation filtering but bear costs through review service. The analytical observer treating peer review as natural law has canonical d for analytical position (approximately 0.73), but the false summit detector flags this as naturalization\u2014the mountain classification is revealed as a perspectival frame rather than structural necessity.",
+    "perspectival_gap": "This constraint demonstrates maximal perspectival divergence. The early career researcher sees extraction without exit (Snare). The established researcher sees mixed coordination and extraction (Tangled Rope) because they benefit from the filtering while also bearing service costs. The publisher sees pure coordination with no extraction (Rope) because the system is designed for their benefit. The open access movement sees a temporary institutional arrangement with a clear sunset (Scaffold) as preprints and registered reports create alternatives. The peer review ritual itself is recognized as degraded and performative (Piton)\u2014maintained through credentialing tradition rather than functional necessity. The analytical observer risks seeing natural law (Mountain) when the structural data reveals contingent institutional arrangements. The perspectival gap is so pronounced that single-index analysis (treating the system as one type) produces severe classification error.",
+    "mandatrophy_analysis": "RESOLUTION PATHWAY: The peer review constraint resolves mandatrophy by decomposing into two structurally distinct claims: (1) COORDINATION CLAIM: Some expert evaluation of research quality is necessary and unavoidable (true, approaches Mountain). (2) INSTITUTIONAL CLAIM: The current journal-gated peer review system is the only or optimal mechanism (false, approaches Snare/Tangled Rope). The system conflates these by naturalizing institutional arrangements as coordination necessities. The scaffold perspective shows that distributed post-publication review (arXiv, bioRxiv, open commenting) provides quality filtering with lower theater ratio, lower extraction, and lower suppression. The piton perspective reveals that the performative component of peer review (authority assignment through anonymous review ritual) can be decoupled from the filtering component (error detection). Reform pathways: (A) Decouple coordination from extraction by changing incentives: require open-science practices, deweight publication metrics in hiring, pay reviewers, open access all research. (B) Replace journal gatekeeping with decentralized review: preprints + transparent post-publication commentary + discipline-specific reputation systems. (C) Partial replacement: use peer review for high-stakes claims only (medical interventions, policy recommendations); use lightweight filtering for exploratory research. Under pathway A, classification shifts toward Rope. Under pathway B, classification shifts toward Scaffold with sunset. Under pathway C, system splits into domain-specific stories with different \u03b5 values."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "research_funding_allocation",
+      "academic_hiring_and_promotion",
+      "journal_subscription_economics"
+    ],
+    "dual_formulation_note": "The peer review system is composed of three structurally distinct constraints: (1) verification_quality_filtering (\u03b5\u22480.25, approaches Rope), (2) journal_economic_gatekeeping (\u03b5\u22480.72, approaches Snare), (3) career_publication_requirement (\u03b5\u22480.60, Tangled Rope). The integrated system has \u03b5\u22480.54 (Tangled Rope) but can be decomposed for more precise analysis. Publishers benefit primarily from constraint 2; researchers bear costs primarily from constraint 3; knowledge access is damaged by constraint 2; research integrity is damaged by constraint 1 through publication bias."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ]
+}

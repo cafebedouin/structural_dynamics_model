@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "political_speech_criminalization",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "psc"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.82,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Political Speech Criminalization",
+    "topic_domain": "political/legal/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "regime_incumbent"
+    ],
+    "victims": [
+      "political_dissidents",
+      "opposition_parties",
+      "civil_society",
+      "press_freedom"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Political Dissident",
+      "comment": "The dissident cannot exit the jurisdiction without abandoning livelihood, family, and community. Speech criminalization forces silence or clandestinity. No legal recourse exists within the system. Maximum extraction \u2014 the constraint strips political voice while forcing physical presence."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Opposition Party",
+      "comment": "Opposition parties face prosecution risk, asset seizure, and imprisonment of candidates and supporters. Exit is theoretically possible (relocate abroad, disband) but extremely costly. Constrained exit with asymmetric enforcement creates effective suppression. The opposition perceives pure extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "The State Security Apparatus",
+      "comment": "Security officials may be structurally mobile (could resign, relocate) but are identity-fused with the enforcement role. Career identity, professional status, and institutional loyalty make exit unthinkable despite knowing the mechanism is extractive. This is cognitive capture, not material constraint. The apparatus maintains the snare while being partially captured by it."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Incumbent Regime",
+      "comment": "The regime benefits from suppression of opposition speech (coordination of consent manufacturing) AND extraction of political control. Genuine coordination function exists: managing the messaging environment to sustain legitimacy. But the mechanism is asymmetrically extractive \u2014 opposition bears all costs. Active enforcement required. Effective extraction benefits the regime while costs are borne by dissidents and opposition."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The International Judicial System",
+      "comment": "International courts (ICC, regional human rights bodies) nominally regulate speech criminalization through laws against persecution. But enforcement is weak, selective, and rarely capable of preventing domestic enforcement. The international legal framework has high theater (tribunals, convictions of leaders in absentia) and minimal functional power to stop the constraint. Piton classification: degraded institution maintained by aspiration and inertia rather than effectiveness."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "The analytical observer from civilizational scale sees political speech criminalization as a persistent constraint across historical regimes and geographic contexts. From this perspective, the pattern is observable as a structural mechanism: regimes reliably use selective prosecution to eliminate competitive speech when electoral or consensus-based legitimacy fails. The structure emerges across diverse cultural and legal systems, suggesting deep extractive function rather than contingent policy choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "enforcement_selectivity_threshold",
+      "question": "At what level of enforcement selectivity does speech criminalization transition from content-neutral law enforcement to political persecution?",
+      "resolution_mechanism": "Statistical analysis of prosecution patterns: is prosecution rate for opposition speech statistically consistent with application to regime-supporting speech? Comparative prosecution timelines and conviction rates.",
+      "impact": "If selectivity is high (opposition disproportionately prosecuted): the constraint is pure extraction (Snare confirmed). If selectivity is low (consistent enforcement across political spectrum): reclassify as tangled_rope with coordination function for rule of law.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Enforcement selectivity threshold for content-based persecution"
+    },
+    {
+      "id": "statutory_vagueness_mechanism",
+      "question": "Does speech criminalization operate through vague statutes (sedition, extremism, national security) that grant discretionary enforcement power, or through explicitly targeted criminal codes?",
+      "resolution_mechanism": "Legal text analysis; comparison of statutory language breadth; review of prosecutorial discretion in statutes vs explicit targeting mechanisms.",
+      "impact": "If vague: discretionary power IS the constraint mechanism \u2014 extraction is maximized and regime retains flexibility. If explicit: constraint is transparent and potentially vulnerable to international pressure and organized opposition.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether criminalization uses vague statutes or explicit targeting"
+    },
+    {
+      "id": "identity_lock_reversibility",
+      "question": "Can security apparatus members exit the enforcement role if regime changes or alternative career structures become available, or is the identity lock structurally irreversible?",
+      "resolution_mechanism": "Post-regime-change analysis: transition and de-commissioning patterns when authoritarian regimes collapse; examination of whether security officials can be retrained or reintegrated into democratic systems.",
+      "impact": "If reversible: identity lock is temporary and agents will exit given structural opportunity \u2014 enabling rapid regime transition. If irreversible: security apparatus will resist regime change actively \u2014 increasing civil conflict risk.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Reversibility of security apparatus identity lock"
+    },
+    {
+      "id": "suppression_internalization",
+      "question": "Is suppression of political speech primarily structural (legal risk, imprisonment threat) or internalized (agents self-censor even without immediate enforcement threat)?",
+      "resolution_mechanism": "Measurement of speech frequency pre- and post-removal of enforcement threat; analysis of clandestine speech patterns; longitudinal data on self-censorship decay after regime change.",
+      "impact": "If primarily structural: removing enforcement mechanism reduces suppression quickly. If internalized: suppression persists after enforcement removal \u2014 constraint has become cognitive, and exit requires identity frame shift, not just legal reform.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Suppression mechanism: structural vs internalized"
+    },
+    {
+      "id": "regime_legitimacy_dependency",
+      "question": "Is political speech criminalization functionally necessary for regime survival, or is it path-dependent institutional choice that persists despite alternative legitimacy sources?",
+      "resolution_mechanism": "Comparative analysis of regimes that maintain political legitimacy without speech criminalization; analysis of regime stability before and after introduction of speech criminalization statutes.",
+      "impact": "If necessary: constraint reflects genuine coordination problem (regime continuity requires suppression) \u2014 reclassify as tangled_rope. If path-dependent: constraint is pure extraction with theatrical legitimacy function \u2014 snare confirmed.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether speech criminalization is functionally necessary for regime legitimacy"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Political speech criminalization represents a regime's systematic use of criminal law to eliminate competitive political speech and suppress opposition. The constraint operates through selective prosecution of dissidents, opposition parties, and civil society under vague statutes (sedition, extremism, national security threats). Extractiveness increases over time as regimes layer additional criminal codes and expand prosecutorial discretion. Theater ratio remains moderate because the criminalization is partially legalized \u2014 statutes exist, trials occur, formal procedures are followed \u2014 but the content-selectivity of enforcement reveals the theatrical nature. The regime experiences this as legitimate coordination (managing the political environment), dissidents experience it as pure extraction (voice suppression without legal recourse), and security apparatus members experience identity fusion with the enforcement role. The international legal system observes but cannot effectively intervene, making its regulatory function degraded (piton). This constraint exhibits mandatrophy resolution: it is unambiguously extractive from the dissident perspective (snare) but could superficially appear as coordination from the regime perspective if the analysis stops at the beneficiary's experience. The full analytical view confirms snare as the dominant classification because the coordination function (regime legitimacy management) is subordinate to extraction (suppression of voice), not coordinate with it.",
+    "key_agents": [
+      "Political Dissidents: Primary victims (powerless/trapped) \u2014 cannot exit without material loss; face imprisonment, asset seizure, and permanent political exclusion",
+      "Opposition Parties: Secondary victims (moderate/constrained) \u2014 face prosecution risk; exit requires disbanding or relocation; constrained mobility",
+      "State Security Apparatus: Institutional enforcer (institutional/identity_locked) \u2014 structurally mobile but identity-fused with enforcement role; enable the constraint through prosecutorial discretion",
+      "Incumbent Regime: Primary beneficiary (institutional/arbitrage) \u2014 maintains political monopoly through suppression; benefits from opposition silence and consolidated message control",
+      "Civil Society: Tertiary victim (moderate/constrained) \u2014 faced with self-censorship pressure; organizations risk prosecution; mobility constrained by association costs",
+      "International Judicial System: Nominal regulator (institutional/arbitrage) \u2014 theoretically oversees human rights; functionally degraded due to weak enforcement power; maintains theater of legitimacy",
+      "Analytical Observer: Structural analyst (analytical/analytical) \u2014 observes pattern as persistent mechanism across historical regimes and geographic contexts; identifies extractive structure independent of regime justifications"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The regime captures monopoly control over political messaging and eliminates competitive threats through suppression. The extraction increases over the timeline (0.35 \u2192 0.68) as additional criminal statutes are introduced and prosecutorial discretion expands. The metric reflects that dissidents lose political voice entirely while the regime gains consolidated legitimacy control. Suppression (0.82): Very high. Structural barriers to opposition speech are extreme: imprisonment threat, asset seizure, torture risk, family targeting. Self-censorship becomes internalized as dissidents and opposition parties learn that speech carries existential personal costs. Theater ratio (0.58): Moderate. Criminalization is partially legalized \u2014 statutes exist and are enforced through formal judicial processes \u2014 but selective prosecution for political content reveals the performative nature. The regime maintains the appearance of rule of law while operating pure discretionary extraction. The theater increases (0.42 \u2192 0.58) as regimes add procedural legitimacy (trials, appeals) to mask selective enforcement.",
+    "perspectival_gap": "The regime and dissident perspectives differ not only in classification (tangled_rope vs snare) but in the very meaning of 'rule of law.' The regime interprets speech criminalization statutes as legitimate law enforcement \u2014 content-neutral application of criminal codes against national security threats. The dissident perceives selective prosecution unrelated to statutory text: opposition speeches prosecuted under sedition statutes while regime-supporting speeches using identical language go unpunished. This perspectival gap is empirically resolvable through enforcement statistics (omega variable: selectivity threshold), but the perspectives themselves remain incommensurable from within their own frames. The regime cannot see the selectivity as unjust because it perceives the opposition speeches as genuinely threatening (identity lock). The dissident cannot accept regime claims of neutrality because enforcement patterns prove selective application (victim perspective on mechanism). The security apparatus bridges but doesn't reconcile: they execute the regime's legal interpretation while often knowing the selectivity is real, creating cognitive dissonance that enables some apparatus members to exit during regime transitions.",
+    "directionality_logic": "Each perspective's directionality (d) derives from their position relative to the extraction flow. Dissidents are full targets: trapped exit + victim status \u2192 d \u2248 0.95 \u2192 f(d) \u2248 1.42 (powerless experience maximum extractiveness chi). Opposition parties are constrained targets: constrained exit + victim status \u2192 d \u2248 0.75 \u2192 f(d) \u2248 0.95 (moderate power reduces but doesn't eliminate extraction). The regime is a beneficiary: arbitrage exit + institutional power \u2192 d \u2248 0.10 \u2192 f(d) \u2248 -0.05 (negative chi, the constraint subsidizes the regime). Security apparatus members have high nominal power but identity-locked exit: identity_locked + institutional power \u2192 d \u2248 0.40 (intermediate because they're structurally mobile but cognitively trapped). The directionality chain reveals that identity lock in security apparatus is not equivalent to powerlessness \u2014 they have capacity to exit that they cannot exercise due to identity fusion. This is diagnostically important: identity-locked agents can be mobilized for regime transition if their identity frame can be shifted (evidence of regime crimes, alternative professional identity pathways).",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION (extractiveness > 0.70): Political speech criminalization could be misclassified as a coordination mechanism (tangled rope or even rope) if analysis stops at the regime's perspective \u2014 the regime genuinely needs to coordinate political messaging to maintain legitimacy, and speech criminalization serves that coordination function. But the structural data confirms snare as the dominant classification because: (1) Suppression is asymmetric and extreme (0.82) \u2014 only opposition speech faces criminalization, not regime speech. Pure coordination would apply uniformly. (2) Beneficiaries (regime) and victims (dissidents) are clearly differentiated in structural extraction, not in coordination benefit. True tangled rope requires that both beneficiary and victim perceive genuine coordination value alongside extraction costs. Dissidents perceive zero coordination value \u2014 they get only suppression. (3) The regime's coordination problem (legitimacy maintenance) is not inherent to speech itself but to the regime's low public support. A more legitimate regime doesn't need speech criminalization. This means the 'coordination' function is actually the regime's contingent legitimacy crisis, not a genuine shared coordination problem. The mandatrophy is resolved by recognizing that the regime's perspective is structurally privileged (institutional power, arbitrage exit) and uses its position to reframe pure extraction as necessary coordination. The analytical observer must look beyond the beneficiary's self-justification to the actual structural distribution of costs and benefits. CONFIRMED: Snare."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "press_freedom_constraint",
+      "opposition_party_legality",
+      "civil_society_association_rights"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.4
+    }
+  ]
+}

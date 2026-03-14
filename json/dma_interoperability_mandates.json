@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "dma_interoperability_mandates",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dma"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.52,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "DMA Interoperability Mandates and Platform Gating",
+    "topic_domain": "digital_markets/regulation/platform_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "competing_platforms",
+      "eu_regulatory_authority",
+      "small_application_developers"
+    ],
+    "victims": [
+      "gatekeeper_platforms",
+      "integration_complexity_costs"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "label": "The Trapped Developer",
+      "comment": "PERSPECTIVE 1: TRAPPED DEVELOPER (SNARE) \u2014 Small developers in the EU face compulsory interoperability requirements that appear liberating but create new extraction mechanisms. They must implement costly technical integration with gatekeeper platforms to remain viable, effectively transferring development burden to them while gatekeepers capture network effects. No exit: participate in the DMA ecosystem or exit the market entirely."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Competing Platform",
+      "comment": "PERSPECTIVE 2: COMPETING PLATFORM (TANGLED ROPE) \u2014 Medium-sized platforms benefit from mandatory interoperability (access to gatekeeper user bases) but face high compliance costs and coordinated enforcement overhead. Real coordination function: interoperability enables multi-platform markets. Real extraction: gatekeepers retain control over technical standards, data formats, and integration timing, forcing competitors into constant reactive adaptation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The EU Regulatory Authority",
+      "comment": "PERSPECTIVE 3: EU REGULATORY AUTHORITY (ROPE) \u2014 Sees the mandate as pure coordination: solving the market failure of platform lock-in through rule specification. Extraction runs toward regulatory authority (legitimacy, jurisdiction expansion), not away. No victim declared from this perspective \u2014 regulatory function appears costless because enforcement costs are externalized to platforms."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Gatekeeper Platform",
+      "comment": "PERSPECTIVE 4: GATEKEEPER PLATFORM (PITON) \u2014 Acknowledges that interoperability mandates constrain their business model but observes that the mandate's enforcement has become primarily theatrical: compliance demonstrations, legal interpretations, and regulatory navigation consume resources without shifting underlying network effects. The platform can exit the EU market (mobile exit) but chooses to comply because the cost of non-compliance (regulatory retaliation) exceeds compliance cost. Theater ratio driven by performative compliance documentation rather than functional market change."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Open Standards Coalition",
+      "comment": "PERSPECTIVE 5: OPEN STANDARDS COALITION (SCAFFOLD) \u2014 Organized developer communities, interop advocates, and smaller platforms see the DMA mandate as a temporary support structure with a sunset: open standards maturation and technical decoupling will eventually obviate forced interoperability requirements. Sunset logic: as industry adopts open protocols (ActivityPub-style federation, open identity standards), the regulatory mandate becomes redundant. Constrained exit (building alternatives takes time and coordination), but sunset is genuine \u2014 technologies for true decoupling exist."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Lock-in Inevitability View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some degree of platform network lock-in is inherent to digital markets: users prefer consolidated ecosystems with rich feature integration, and decentralization creates coordination costs that users actively avoid. The mandate fights a natural law of platform economics rather than solving a contingent regulatory failure. However, this naturalization risks obscuring that lock-in magnitude is policy-dependent: different regulatory regimes and technical standards produce measurably different levels of switching cost."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "interop_technical_feasibility",
+      "question": "How technically feasible is genuine interoperability without degrading user experience or platform functionality?",
+      "resolution_mechanism": "Comparative analysis of interoperability implementations (message federation, data portability, API standardization); measurement of feature parity loss and latency introduction in interoperable vs native workflows",
+      "impact": "If highly feasible: mandate is pure coordination with low inherent suppression (reduces chi). If fundamentally constrained: mandate forces suboptimal technical choices onto platforms, and suppression derives from technical necessity rather than regulatory choice.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Technical feasibility of interoperability without functionality loss"
+    },
+    {
+      "id": "gatekeeper_control_persistence",
+      "question": "Do interoperability mandates genuinely reduce gatekeeper control over data flow and user switching costs, or do gatekeepers retain effective control through technical standards, API design, and timing?",
+      "resolution_mechanism": "Longitudinal measurement of switching costs pre- and post-DMA for cross-platform user migration; analysis of gatekeeper control over API specifications, rate limits, data formats; tracking of developer burden for integration vs native development",
+      "impact": "If mandates reduce switching costs: classification shifts toward Rope. If gatekeepers retain control: classification shifts toward Snare (victims) and Piton (theater-driven compliance).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether mandates reduce gatekeeper control or enable control through standards"
+    },
+    {
+      "id": "open_standards_maturation_timeline",
+      "question": "How long will it realistically take for open standards and decentralized protocols to mature sufficiently to make regulatory interoperability mandates redundant?",
+      "resolution_mechanism": "Technical roadmap analysis of federation protocols (ActivityPub, Matrix, DID standards); measurement of adoption rates among platforms; assessment of feature parity between open and proprietary solutions",
+      "impact": "If < 5 years: scaffold sunset is credible and near-term exit pathway exists. If > 15 years: scaffold classification is aspirational; the mandate may become permanent structural feature.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Timeline for open standards maturation to obsolete mandates"
+    },
+    {
+      "id": "regulatory_cost_incidence",
+      "question": "Who ultimately bears the compliance costs: gatekeepers (reducing their rents), smaller platforms (increasing their costs), or users (through reduced feature quality or increased prices)?",
+      "resolution_mechanism": "Cost accounting: platform spending on compliance infrastructure, developer hiring for integration work; measurement of feature velocity pre- and post-DMA; pricing analysis for premium features and data access",
+      "impact": "If gatekeepers absorb costs: mandate achieves extraction goals and classification shifts toward rope. If smaller platforms or users bear costs: mandate becomes a subsidy to gatekeepers and classification shifts toward snare for victims.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Incidence of DMA compliance costs across stakeholders"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "The Digital Markets Act (DMA) interoperability mandates represent a foundational attempt by EU regulators to break platform lock-in through forced technical interoperability. The constraint exhibits characteristic Tangled Rope structure: a genuine coordination problem (users locked into single platforms, alternatives unable to compete) exists alongside asymmetric extraction (gatekeepers retain control through technical standards, API design, and integration timing). The extractiveness has increased from 0.35 to 0.58 over the initial implementation period as platforms discovered that interoperability compliance can be engineered to preserve gating functions while appearing to comply with regulatory intent. Theater ratio has risen from 0.28 to 0.48 as compliance documentation and regulatory interpretation have become increasingly performative \u2014 platforms demonstrate technical interoperability while retaining functional control. The constraint operates across six distinct structural perspectives simultaneously: powerless developers experience it as a new extraction mechanism (Snare), competing platforms as mixed coordination and constraint (Tangled Rope), regulators as pure coordination (Rope), gatekeepers as degraded but manageable theater (Piton), open-standards advocates as a temporary support with a sunset (Scaffold), and theoretical observers risk naturalizing platform lock-in as inherent to digital markets (Mountain).",
+    "key_agents": [
+      "EU Regulatory Authority: Primary beneficiary (institutional/arbitrage) \u2014 establishes jurisdiction over global platforms, expands regulatory authority, legitimacy for future market intervention",
+      "Gatekeeper Platforms: Constrained victims (institutional/constrained) \u2014 face compliance costs and reduced gating capacity, but retain technical control through standards specification",
+      "Competing Platforms: Secondary victim and beneficiary (moderate/constrained) \u2014 gain access to gatekeeper user bases but absorb high integration costs; face reactive adaptation to platform changes",
+      "Small Application Developers: Powerless victims (powerless/trapped) \u2014 must implement costly interoperability to remain viable; trapped between market access (requiring DMA compliance) and development burden",
+      "Open Standards Coalition: Organized agents (organized/constrained) \u2014 building alternative decentralized platforms; see mandate as temporary scaffold enabling transition to open protocols",
+      "Users: Diffuse beneficiaries (powerless/mobile) \u2014 nominally benefit from reduced lock-in but may experience reduced feature quality or degraded user experience from interoperability overhead"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The mandate demonstrates genuine market coordination (breaking lock-in, enabling multi-platform competition) alongside asymmetric extraction (gatekeepers retain control of integration timing, data formats, API quality). The extractiveness reflects that gatekeepers can comply with letter while subverting spirit \u2014 they control the technical standards through which interoperability occurs. Initial extractiveness (0.35) was lower because the mandate's effects were uncertain; realized extractiveness increased as platforms demonstrated that technical interoperability compliance preserves market power. Suppression (0.52): Moderate. Barriers to exit include EU regulatory jurisdiction (platforms cannot ignore DMA without losing market access), technical switching costs (users cannot easily migrate to interoperable alternatives), and developer dependency (smaller platforms must implement integrations even under unfavorable terms). Suppression is not total \u2014 platforms have exit options (exit EU market entirely, lobby for regulatory change, build proprietary alternatives outside jurisdiction). Theater ratio (0.48): Moderate-low. Interoperability requirements have genuine technical content and create real operational changes. However, 48% of compliance effort is performative: regulatory documentation, technical interpretation disputes, and staged compliance demonstrations consume resources without shifting underlying competitive dynamics. Theater has risen from 0.28 to 0.48 as platforms learned to engineer compliant-appearing solutions that preserve substantive gating.",
+    "perspectival_gap": "This constraint exhibits maximum perspectival variance. The same regulation appears as: (A) pure coordination solving lock-in (regulator view), (B) constrained victim status with managed theater (gatekeeper view), (C) mixed coordination and extraction burden (competing platform view), (D) new extraction mechanism replacing old (powerless developer view), (E) temporary support scaffolding (open standards coalition view), (F) naturalized platform economics (analytical observer view). The gap is diagnostic: if all perspectives produced the same type, the classification would be trivial; the fact that the same structural phenomenon produces six different classifications indicates that the constraint's form varies across structural positions \u2014 it IS genuinely different constraints depending on where you stand. This is not subjectivity; it is legitimate structural variance.",
+    "directionality_logic": "Directionality values (d) flow from structural position relative to extraction. Gatekeepers appear as beneficiaries (arbitrage exit, institutional power) but are constrained victims of the mandate \u2014 their d is overridden upward from the canonical 0.00 beneficiary value (low d) to 0.40-0.50 (constrained victim) because they bear suppression costs. EU regulators genuinely benefit from the mandate (regulatory expansion, jurisdiction, legitimacy) with arbitrage exit (can revise mandate if ineffective) \u2014 their d remains low (0.10-0.15), producing negative \u03c7 (net coordination benefit to regulator). Competing platforms have mixed directionality: they benefit from access (d lowered) but bear compliance costs (d raised). Small developers are trapped victims with no arbitrage \u2014 d approaches 1.0, producing high \u03c7 (high experienced extraction). The beneficiary and victim declarations capture that the mandate's extraction flow runs from powerless developers and (partly) from gatekeepers toward competing platforms and regulators.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The mandate demonstrates genuine coordination function (breaking lock-in, enabling multi-platform markets) alongside asymmetric extraction (gatekeepers retain control through technical standards). The mandatrophy resolves when analyzing: (1) Beneficiaries are real: competing platforms gain actual market access, small developers gain regulatory protection, regulators gain jurisdiction expansion. (2) Victims are real: gatekeepers absorb compliance costs and regulatory constraint, small developers absorb integration burden, users may experience feature degradation. (3) Enforcement is active: ongoing regulatory interpretation, compliance audits, and technical specification updates. The classification is neither pure coordination (Rope) nor pure extraction (Snare) because both functions operate simultaneously. The Tangled Rope classification prevents the false natural law (Mountain) of 'platform consolidation is inevitable' and prevents the false coordination (Rope) of 'mandates solve lock-in without cost.' The actual structure is: regulatory coordination enables market entry that gatekeepers resist through technical sophistication, producing a constraint that is genuinely both mechanisms."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_data_portability_mandates",
+      "app_store_sideloading_requirements",
+      "algorithmic_recommendation_transparency"
+    ],
+    "dual_formulation_note": "DMA interoperability mandates share a regulatory domain with data portability, sideloading, and algorithmic transparency requirements. Each constraint has distinct \u03b5 values reflecting different extractiveness mechanisms. Interoperability mandates extract primarily through integration burden and compliance costs (\u03b5=0.58); data portability extracts through information asymmetry navigation (\u03b5=0.42); sideloading extracts through security/liability frameworks (\u03b5=0.35). These constraints form a regulatory family upstream of which gatekeeper platforms coordinate response strategies. Network decomposition links them as affects_constraints rather than merging them, because each has distinct resolution mechanisms and temporal dynamics."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ]
+}

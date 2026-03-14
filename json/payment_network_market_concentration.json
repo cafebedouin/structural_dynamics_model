@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "payment_network_market_concentration",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pnmc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Payment Network Market Concentration",
+    "topic_domain": "economic/infrastructure/financial_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_payment_networks",
+      "financial_system_stability"
+    ],
+    "victims": [
+      "competing_payment_providers",
+      "merchants",
+      "underbanked_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Underbanked Merchant",
+      "comment": "PERSPECTIVE 1: UNDERBANKED MERCHANT (SNARE) \u2014 Trapped in payment network dependency with no viable alternatives. High transaction fees (2-4% for card payments), forced acceptance of major networks, no ability to negotiate terms. Bears full extraction cost with zero exit capacity. Network effects make refusing Visa/Mastercard economically unviable."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Unbanked Population",
+      "comment": "PERSPECTIVE 2: UNBANKED POPULATION (SNARE) \u2014 Structurally excluded from formal payment networks. Cannot build credit history, access digital payments, or participate in mainstream commerce without network access. Trapped by infrastructure concentration and verification requirements. Maximum extraction through exclusion."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Competing Payment Provider",
+      "comment": "PERSPECTIVE 3: COMPETING PAYMENT PROVIDER (TANGLED ROPE) \u2014 Constrained by network effects and interoperability barriers. Benefits from standardized payment infrastructure that enables any provider to participate; also bears extraction through gatekeeping fees and switching costs imposed by incumbents. Some agency through regulatory arbitrage and niche markets, but exit from network participation is not viable."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Visa/Mastercard Network Operators",
+      "comment": "PERSPECTIVE 4: VISA/MASTERCARD NETWORK OPERATORS (ROPE) \u2014 Primary beneficiaries. Experience the constraint as pure coordination: connecting merchants, cardholders, and banks creates genuine mutual benefit and solves the double-coincidence problem. Net beneficiary of concentration \u2014 market power enables coordination subsidies and infrastructure investment. Exit options via arbitrage (currency switching, regulatory jurisdiction selection)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Merchant Associations and Retail Coalitions",
+      "comment": "PERSPECTIVE 5: MERCHANT ASSOCIATIONS (TANGLED ROPE) \u2014 Organized groups with some negotiating power but structurally trapped. Benefits from standardized, interoperable payment infrastructure; extraction occurs through mandatory acceptance rules and rising interchange fees. Coalition organization creates agency for negotiation but exit from network participation remains economically unfeasible for members."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Digital Currency and Open Infrastructure Movements",
+      "comment": "PERSPECTIVE 6: OPEN INFRASTRUCTURE MOVEMENTS (SCAFFOLD) \u2014 Distributed ledger technologies (Bitcoin, Ethereum), CBDC initiatives, and open payment standards (ISO 20022) represent alternatives to incumbent networks. Currently lower market share but rising. Sees traditional payment concentration as temporary coordination problem being solved by decentralized protocols. Sunset mechanism: as distributed alternatives mature and regulatory frameworks clarify, incumbent network dominance declines. Estimated sunset: 15-30 years depending on regulatory adoption."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Regulatory Oversight Bodies",
+      "comment": "PERSPECTIVE 7: REGULATORY OVERSIGHT (PITON) \u2014 Traditional regulation treats payment networks as natural monopolies requiring rate oversight, but regulation itself has become largely performative. Regulatory caps on interchange fees exist in many jurisdictions (EU, India) yet market concentration persists and extraction continues through alternative mechanisms (network fees, member assessments). Theater ratio high because regulation appears to constrain networks while actual extraction continues. Regulators maintain oversight apparatus but see it as degraded \u2014 concentration persists despite regulatory intervention."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 Risk of naturalizing contingent arrangements: 'Payment networks are naturally monopolistic due to network effects.' This framing treats market concentration as an inherent property of payment infrastructure. However, structural data reveals this as potential false summit \u2014 the concentration is maintained through switching costs, interoperability barriers, and regulatory capture, not as immutable law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "network_effects_magnitude",
+      "question": "What portion of current market concentration derives from genuine network effects vs switching costs and regulatory barriers?",
+      "resolution_mechanism": "Empirical analysis of alternative payment network adoption rates; comparison of consumer switching friction across jurisdictions; measurement of value proposition differences between incumbents and challengers",
+      "impact": "If dominated by genuine network effects: concentration may be inherently stable (Mountain-like). If dominated by switching costs: concentration is maintainable extraction (Snare/Tangled Rope). Classification shifts between Mountain and Snare depending on answer.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which market concentration reflects network effects vs switching costs"
+    },
+    {
+      "id": "incumbent_innovation_subsidy",
+      "question": "Do incumbent payment networks leverage extraction rents to subsidize infrastructure innovation that competitors cannot match, creating a sustainable competitive advantage?",
+      "resolution_mechanism": "Financial analysis of incumbent R&D spending, fraud prevention infrastructure costs, and cross-subsidy patterns; comparison with challenger capabilities; measurement of whether network improvements require incumbents' scale",
+      "impact": "If yes: extraction may be welfare-improving (rents fund public goods). If no: extraction is pure rent-seeking with negligible innovation benefit. Shifts classification between justified Tangled Rope and extractive Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether incumbent scale subsidizes innovation that benefits ecosystem"
+    },
+    {
+      "id": "distributed_alternative_scalability",
+      "question": "Can distributed payment infrastructure (blockchain, CBDC) scale to global transaction volumes while maintaining decentralization and security guarantees?",
+      "resolution_mechanism": "Technical analysis of throughput, latency, energy consumption, and attack surface for distributed vs centralized networks; real-world stress testing under peak load; security audit comparisons",
+      "impact": "If scalable: Scaffold sunset is plausible within generational timescale. If not: distributed alternatives remain niche, concentration persists. Determines validity of Scaffold perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether distributed alternatives can scale to replace incumbent networks"
+    },
+    {
+      "id": "regulatory_arbitrage_exhaustion",
+      "question": "As major jurisdictions impose interchange fee caps and interoperability mandates, can incumbent networks maintain extraction through regulatory arbitrage?",
+      "resolution_mechanism": "Comparative analysis of network profitability across regulatory regimes (EU vs US vs Asia); tracking of alternative extraction mechanisms post-regulation; measurement of capital flight to less-regulated jurisdictions",
+      "impact": "If arbitrage exhausted: extraction declines under regulatory pressure (Scaffold/Piton trajectory). If arbitrage continues: concentration and extraction persist despite regulation (Piton/Snare persistence). Determines long-term classification stability.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regulatory arbitrage can sustain incumbent extraction"
+    },
+    {
+      "id": "unbanked_population_accessibility",
+      "question": "What structural barriers (identity verification, minimum balance, device access, literacy) are inherent to financial inclusion vs maintainable through incumbent gatekeeping?",
+      "resolution_mechanism": "Decomposition of unbanked exclusion factors; measurement of inclusion rates in jurisdictions with alternative infrastructure; analysis of mobile money and informal payment system accessibility patterns",
+      "impact": "If barriers inherent: unbanked Snare classification reflects unavoidable coordination cost. If maintainable gatekeeping: exclusion is extraction mechanism (Snare from extraction rather than technical necessity). Shifts interpretation of victim status.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which financial exclusion reflects technical necessity vs incumbent gatekeeping"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Payment network market concentration represents a structural constraint on global commerce where two networks (Visa and Mastercard) control approximately 83% of card payment volume worldwide. The constraint exhibits genuine coordination function (solving merchant-customer matching, managing fraud, maintaining settlement reliability) alongside asymmetric extraction through interchange fees, mandatory participation rules, and network switching costs. The same structural phenomenon appears as essential infrastructure coordination (Rope perspective from beneficiaries), intolerable extraction (Snare perspective from powerless merchants and unbanked populations), temporary problem with decentralized solutions (Scaffold perspective from emerging alternative infrastructure), mixed coordination and gatekeeping (Tangled Rope from constrained competitors and organized merchant coalitions), and degraded regulatory theater (Piton perspective from oversight bodies). The constraint's history shows extractiveness rising over 20 years (from 0.35 to 0.58) as payment processing has become more essential and switching costs have hardened, while theater ratio (regulatory oversight) remains modest (0.48), indicating that regulation has not substantially reduced underlying extraction mechanisms.",
+    "key_agents": [
+      "Visa and Mastercard: Primary beneficiaries (institutional/arbitrage) \u2014 capture dominant market share, set interchange fee rules, control interoperability standards. Net extraction flow toward these agents.",
+      "Underbanked Merchants: Primary victims (powerless/trapped) \u2014 absorb 2-4% transaction fees with no negotiating power. Forced into payment network participation for economic survival.",
+      "Unbanked Populations: Primary victims (powerless/trapped) \u2014 structurally excluded from formal payment networks; cannot access credit, build financial history, or participate in digital commerce.",
+      "Competing Payment Providers: Secondary victims (powerful/constrained) \u2014 confined to niche markets; limited interoperability, high switching costs, face gatekeeping by incumbent networks.",
+      "Merchant Associations: Organized secondary victims (organized/constrained) \u2014 negotiate collectively but remain structurally dependent on incumbent networks. Some agency but exit remains economically unfeasible.",
+      "Digital Currency and Open Infrastructure Movements: Alternative pathway providers (organized/constrained) \u2014 blockchain, distributed ledgers, CBDCs represent technical routes around incumbent concentration. Currently niche but scaling.",
+      "Financial Regulators: Institutional oversight (institutional/arbitrage) \u2014 maintain interchange fee caps and interoperability mandates but see regulation as increasingly degraded. Theater ratio reflects performative oversight.",
+      "Central Banks and Treasury Departments: Policy actors (institutional/arbitrage) \u2014 CBDC initiatives and regulatory frameworks being developed as long-term alternatives to incumbent networks."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The constraint extracts substantial rents through interchange fees (averaging 1.5-2.5% of transaction value in developed markets, higher in developing markets), mandatory network participation, and switching costs. Extraction is not as severe as pure Snare would suggest because genuine coordination benefits exist (fraud prevention, settlement reliability, merchant-customer matching). The trajectory (0.35\u21920.58 over 20 years) reflects increasing reliance on digital payments and hardening of switching costs as payment networks become infrastructure. Suppression (0.65): High. Multiple barriers prevent exit: network effects (merchants must accept where customers expect to pay), interoperability barriers (lack of open standards), regulatory fragmentation (different rules per jurisdiction), and technological switching costs (merchant terminal equipment, software integration). These barriers are structural rather than legal, making them harder to regulate directly. Theater ratio (0.48): Moderate. Regulatory oversight (interchange caps, interoperability mandates) is visible and material but has not substantially reduced underlying extraction. The theater reflects that regulation targets specific mechanisms (interchange fees) while extraction continues through alternative mechanisms (network assessment fees, compliance costs, premium network pricing). Regulation maintains appearance of control without achieving structural change.",
+    "directionality_logic": "Directionality (d) for each perspective derives from the agent's structural position within the payment network. Beneficiaries of market concentration (Visa, Mastercard) have arbitrage exit options and derive d \u2248 0.05-0.15, producing low or negative effective extraction. Trapped agents (unbanked populations, underbanked merchants with no payment alternative) have d \u2248 0.95, producing maximum experienced extraction. Constrained agents (competing payment providers, merchant coalitions) have intermediate d \u2248 0.55-0.70, experiencing moderate-high extraction with some agency. Organized agents (regulatory bodies, CBDC initiatives) have d \u2248 0.50-0.65, reflecting mixed beneficiary/victim status \u2014 they see both coordination value and extraction mechanisms. The Analytical observer uses canonical d \u2248 0.73 for analytical power. Suppression scaling: suppression is unscaled (0.65 raw). Effective extractiveness \u03c7 scales suppression via scope: \u03c3(national) = 1.0, \u03c3(global) = 1.2. Global-scope victims experience \u03c7 \u2248 0.58 \u00d7 f(d) \u00d7 1.2, amplifying the felt extraction at planetary scale.",
+    "perspectival_gap": "The core perspectival gap lies between beneficiaries and victims. Visa/Mastercard classify the constraint as pure Rope from the institutional/arbitrage perspective: they solve the double-coincidence problem, enable commerce, and invest in fraud prevention and security. This perspective is not wrong \u2014 the coordination function is real. Unbanked populations classify the same constraint as Snare: they are excluded entirely, cannot participate, and cannot exit the exclusion. Underbanked merchants classify as Snare: they must accept the networks, cannot negotiate, and have no alternative. Competing providers classify as Tangled Rope: they benefit from the open payment standard but are gatekept by interoperability barriers and switching costs. Merchant coalitions classify as Tangled Rope: they coordinate with the networks on standardization while extracting from interchange fees. Regulators classify as Piton: they maintain oversight and rate-setting authority, but the regulation appears performative \u2014 concentration and extraction persist despite regulatory intervention. The Analytical observer at civilizational scale risks classifying as Mountain: 'Payment networks are naturally monopolistic due to network effects.' But the structural data reveals this as a false summit \u2014 the concentration is maintained through contingent institutional arrangements (switching costs, regulatory frameworks, interoperability barriers) rather than inherent physical or mathematical law.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing how genuine coordination coexists with real extraction, validating the Tangled Rope classification as analytically central. The beneficiary perspective (Rope) observes the coordination function truthfully \u2014 payment networks do solve genuine problems. The victim perspective (Snare) observes the extraction mechanism truthfully \u2014 mandatory participation and high switching costs are real constraints. Neither perspective is lying; they are observing different aspects of the same structure. The mandatrophy is resolved not by choosing one type over another but by recognizing that the constraint simultaneously coordinates and extracts, and that the ratio between these functions varies by agent. From the beneficiary's position, coordination dominates (Rope classification). From the powerless agent's position, extraction dominates (Snare classification). From positions of moderate power and constrained exit (competitors, merchant associations), both functions are structurally present and neither dominates (Tangled Rope classification). The analytical observer at civilizational scale must resist the Mountain temptation \u2014 treating network effects as natural law \u2014 and instead recognize that the observed concentration is structurally sustained by institutional choices (regulatory framework, technical standards, interoperability requirements) that are changeable."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "merchant_fee_extraction",
+      "credit_card_interest_rate_structure",
+      "cross_border_remittance_pricing"
+    ],
+    "dual_formulation_note": "Payment network market concentration is upstream of multiple sectoral extraction constraints. Merchant fee extraction (interchange fees specifically), credit card interest structures (enabled by network switching costs and merchant lock-in), and cross-border remittance pricing (where incumbent networks extract rents from international transfers) are all downstream consequences of the primary concentration constraint. Each has its own extractiveness value reflecting domain-specific mechanisms, but all depend on the fundamental market structure established by network concentration."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

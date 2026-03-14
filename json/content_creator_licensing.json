@@ -1,0 +1,207 @@
+{
+  "header": {
+    "constraint_id": "content_creator_licensing",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ccl"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Content Creator Licensing and Platform Gatekeeping",
+    "topic_domain": "digital_media/platform_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "incumbent_creators"
+    ],
+    "victims": [
+      "emerging_creators",
+      "audience_access_diversity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Aspiring Creator",
+      "comment": "PERSPECTIVE 1: ASPIRING CREATOR (SNARE) \u2014 Trapped in licensing requirements with no meaningful exit. Cannot access platform without verification; verification gates require existing audience or institutional backing. Zero degrees of freedom. Platform controls the primary distribution channel; creator bears full cost of gatekeeping apparatus."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Established Creator",
+      "comment": "PERSPECTIVE 2: ESTABLISHED CREATOR (TANGLED ROPE) \u2014 Constrained by licensing requirements but also protected by them. High barrier to entry benefits existing creators (coordination function) while simultaneously extracting from those trying to enter (asymmetric extraction). Active enforcement maintains duopoly. Some exit options via alternative platforms, but migration costly."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATOR (ROPE) \u2014 Experiences licensing as coordination mechanism: reduces spam, enforces liability compliance, coordinates creator-audience matching. Net beneficiary with arbitrage options (can modify standards globally). Licensing enables network effects that platforms exploit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Creator Union",
+      "comment": "PERSPECTIVE 4: CREATOR UNION / COALITION (TANGLED ROPE) \u2014 Organized actors (creator collectives, content guilds) can negotiate licensing terms, but remain constrained by platform dependence. Coalition benefits some members (leverage in negotiation) while excluding others (those outside coalition). Active enforcement of licensing preserves union's negotiating position against individual creator competition."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Copyright Regime",
+      "comment": "PERSPECTIVE 5: COPYRIGHT REGULATORY FRAMEWORK (PITON) \u2014 Traditional copyright licensing has become largely performative in digital distribution. The original function (incentivizing creation through legal protection) is diluted by platform-level access control; the licensing apparatus now primarily serves platform rent extraction. Theater ratio high (DMCA notices, licensing metadata, format restrictions with minimal enforcement efficacy). Function atrophied; maintained through institutional inertia and legal precedent rather than actual copyright enforcement at content creator level."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some vetting mechanism is structurally necessary: platforms cannot operate at scale without filtering mechanisms; some creators will inevitably fail to meet objective standards (technical quality, legal compliance, behavioral norms). The mountain view naturalizes licensing as inherent to any distributed publishing system. However, this risks conflating the necessity of *some* vetting (legitimate) with the necessity of *concentrated platform control* over licensing criteria (contingent institutional choice). The engine's false summit detector will flag this naturalization."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Decentralized Protocol Coalition",
+      "comment": "PERSPECTIVE 7: DECENTRALIZED PROTOCOL COALITION (SCAFFOLD) \u2014 Organized agents (Mastodon, ActivityPub, IPFS communities, blockchain-based platforms) building alternative licensing pathways with low gate control. Sunset logic applies: as distributed protocols mature, platform-controlled licensing loses monopoly power. High suppression currently (technical barriers, user adoption friction) but declining as protocols mature. Coalition agents see temporary coordination problem with visible exit path."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "spam_versus_gatekeeping_conflation",
+      "question": "How much of current licensing suppression is legitimate spam/abuse prevention versus illegitimate market gatekeeping?",
+      "resolution_mechanism": "Comparative analysis of platform licensing enforcement: measure rejection rates for content meeting objective criteria (technical quality, legal compliance) vs subjective criteria (brand alignment, algorithmic preference). Correlation with demographic characteristics of rejected creators.",
+      "impact": "If suppression is mostly spam prevention: justify higher threshold for legitimate extraction (legitimate coordination overhead). If mostly gatekeeping: classification shifts toward pure Snare for emerging creators.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of licensing enforcement devoted to spam prevention vs market gatekeeping"
+    },
+    {
+      "id": "alternative_platform_viability",
+      "question": "Do decentralized and alternative platforms provide genuine functional substitutes for mainstream platform licensing, or do they remain niche?",
+      "resolution_mechanism": "Audience reach analysis: measure growth trajectories, creator monetization parity, and network effects in decentralized platforms vs mainstream platforms over 5-10 year horizon.",
+      "impact": "If decentralized platforms achieve parity: emerging creators have real exit options (reclassify from trapped to constrained). Scaffold sunset becomes concrete. If niche persists: trapped classification remains valid; mountain naturalization is exposed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of decentralized platforms as functional alternatives"
+    },
+    {
+      "id": "licensing_standard_convergence",
+      "question": "Are platform licensing standards converging toward objective criteria (technical, legal) or diverging toward subjective brand control?",
+      "resolution_mechanism": "Comparative analysis of licensing criteria across platforms: measure overlap in technical requirements, behavioral norms, and content policies. Track evolution of criteria specificity over time.",
+      "impact": "If converging toward objective standards: coordination function is strengthened (legitimate Rope/Tangled Rope). If diverging toward subjective control: extraction function is strengthened (shift toward Snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether platform licensing standards converge or diverge"
+    },
+    {
+      "id": "identity_lock_in_creator_dependence",
+      "question": "To what extent do creators become identity-locked to platforms (professional identity fused with platform presence) versus merely constrained by economic dependency?",
+      "resolution_mechanism": "Qualitative analysis: track creator statements about 'staying' on platforms despite unfavorable licensing terms. Measure whether exit consideration is framed as identity loss vs economic cost. Post-deplatforming trajectory analysis: do creators reconstruct identity on alternative platforms or perceive identity destruction?",
+      "impact": "If identity-locked: exit_options should shift from constrained to identity_locked for established creators. Cyclical measurement pattern expected (identity maintenance cycles vs exit deliberation cycles). If economic constraint only: constrained classification remains appropriate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of identity fusion versus economic constraint in creator platform dependence"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Content creator licensing on digital platforms operates as a hybrid coordination-extraction mechanism. Platforms justify licensing requirements as spam prevention, legal liability management, and quality assurance (legitimate coordination functions). However, licensing criteria are often opaque, unevenly enforced, and serve to concentrate distribution power among incumbent creators and platform operators. The constraint exhibits all six classification types depending on observer position: licensing appears as an immutable necessity (mountain) to those who naturalize platform gatekeeping; as pure extraction (snare) to creators trapped outside the system; as protective coordination (rope) to platforms and established creators; as mixed extraction with negotiating power (tangled rope) to organized creator coalitions; as degraded ritual (piton) to the copyright regime that licensing nominally serves; and as a temporary problem with visible exit paths (scaffold) to decentralized platform advocates. The extractiveness trajectory shows cumulative capture: as platforms tightened licensing criteria (responding to regulatory pressure and advertiser demands), extractiveness increased from 0.32 to 0.58. Theater ratio remained relatively stable (0.35 to 0.48), indicating the licensing apparatus is primarily extractive rather than performative, though the copyright compliance theater is persistent.",
+    "key_agents": [
+      "Emerging Creators: Primary victims (powerless/trapped) \u2014 face absolute licensing barriers with no meaningful appeal process or alternative distribution channels",
+      "Established Creators: Primary beneficiaries (moderate/constrained) \u2014 benefit from licensing duopoly that protects market position while also constrained by platform terms",
+      "Platform Operators: Secondary beneficiary (institutional/arbitrage) \u2014 extract rents through licensing gatekeeping; possess full arbitrage control over licensing criteria",
+      "Creator Coalitions & Unions: Organized actors (organized/constrained) \u2014 negotiate licensing terms collectively but remain dependent on platform infrastructure",
+      "Copyright & Regulatory Framework: Institutional actor (institutional/arbitrage) \u2014 nominally justifies platform licensing through copyright enforcement; actual enforcement is theatrical",
+      "Decentralized Protocol Communities: Organized builders (organized/mobile) \u2014 constructing alternative platforms with lower licensing barriers; medium-term exit pathway"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Platform licensing concentrates distribution control, creating real economic extraction from emerging creators (lost monetization, limited reach). But extraction is not maximal (0.72+) because: (1) emerging creators retain option to produce content outside platforms (with reduced reach), (2) alternative platforms are slowly maturing, (3) some creators successfully navigate licensing with effort. The trajectory shows extraction accumulation from 0.32 to 0.58 as platforms tightened criteria in response to regulatory pressure and advertiser preferences. Suppression (0.65): Moderate-high. Barriers to entry include: opaque licensing criteria, no transparent appeal mechanisms, requirements for existing audience or institutional backing, technical compliance demands (encoding formats, metadata standards), behavioral compliance (content policies that vary by geography and advertiser sensitivity). Suppression is high but not total (0.90+) because some creators do clear hurdles, alternative platforms exist (albeit small), and regulatory/legislative pressure occasionally forces platform concessions. Theater ratio (0.48): Moderate. Licensing is primarily extractive (actual gatekeeping function) rather than performative, but significant theater exists: DMCA compliance notices, licensing metadata standards, copyright warning systems that appear functional but execute inconsistently. The moderate theater reflects that platforms use licensing language strategically (framing extraction as copyright protection) but actual enforcement is mission-driven extraction, not ritual.",
+    "directionality_logic": "Directionality (d) for each perspective is determined by the agent's benefit/cost relationship to licensing and their exit capacity. Emerging creators (d \u2248 0.95) experience maximum extraction \u2014 they bear full cost of licensing barriers with minimal benefit; trapped exit provides no escape. Established creators (d \u2248 0.45) experience moderate extraction \u2014 they benefit from licensing duopoly (competitive moat) but pay the cost of compliance; constrained exit gives them some negotiating position. Platforms (d \u2248 0.05) experience negative extraction \u2014 they are net beneficiaries; licensing apparatus extracts FOR them, not FROM them; arbitrage exit means they control licensing criteria. Creator coalitions (d \u2248 0.55) experience moderate extraction \u2014 collective organizing provides some leverage but fundamental dependence remains. Decentralized protocol communities (d \u2248 0.35) experience moderate benefit \u2014 low licensing barriers are a feature they're building, but current small scale means limited extraction benefit to realize. The sigmoid f(d) applied to each d value produces the experienced chi (effective extractiveness) for each perspective.",
+    "perspectival_gap": "The constraint demonstrates a sharp perspectival divide. Platforms and established creators see Rope (coordination mechanism enabling quality assurance and network effects). Emerging creators see Snare (pure extraction with no escape). Organized creator coalitions see Tangled Rope (mixed extraction and coordination, with some negotiating power). The copyright framework sees Piton (its original licensing function has atrophied; licensing now serves platform rent extraction rather than incentivizing creation). Decentralized protocol builders see Scaffold (temporary coordination problem with visible 10-20 year sunset as alternative platforms mature). The analytical observer risks seeing Mountain (naturalizing licensing as inherent to scale), but the structural data reveals this as false: the specific concentrations of control and opacity of criteria are contingent institutional choices, not physical laws. The perspectival gap is maximal between trapped emerging creators and institutional platform operators.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating how the same base properties (\u03b5=0.58, suppression=0.65) produce different classifications depending on structural position. The platform sees coordination (Rope) \u2014 licensing enables trust and quality. The emerging creator sees extraction (Snare) \u2014 licensing prevents access. Both observations are structurally correct; they describe the constraint from different positions in the extraction flow. Mandatrophy is resolved by recognizing that the constraint's type is NOT singular but perspectival. The engine's task is not to declare 'the true type' but to compute the classification for each position and identify the perspectival gap. For corpus classification, the claimed_type (Tangled Rope) reflects the analytical consensus: licensing simultaneously enables coordination (quality assurance, legal compliance, spam prevention) AND extracts asymmetrically (barriers disproportionately harm emerging creators while protecting incumbents). The high suppression and moderate-high extractiveness are consistent with this hybrid function."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_algorithmic_ranking",
+      "copyright_enforcement_asymmetry",
+      "creator_dependent_labor"
+    ],
+    "dual_formulation_note": "Content creator licensing is downstream of broader platform gatekeeping (which includes algorithmic ranking and content policy). The licensing constraint has its own extractiveness reflecting institutional gatekeeping; upstream constraints reflect how gatekeeping is distributed across multiple mechanisms (licensing, algorithmic suppression, policy enforcement). Decomposition into separate stories allows each mechanism's \u03b5 to be measured independently."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

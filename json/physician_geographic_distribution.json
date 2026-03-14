@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "physician_geographic_distribution",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "phys_geo"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Physician Geographic Distribution Constraint",
+    "topic_domain": "healthcare_policy/health_equity",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "urban_medical_institutions",
+      "high_income_regions"
+    ],
+    "victims": [
+      "rural_populations",
+      "low_income_regions",
+      "patient_health_equity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Rural Communities",
+      "comment": "PERSPECTIVE 1: RURAL COMMUNITIES (SNARE) \u2014 Cannot exit the geographic constraint. Structural barriers to physician access are immutable from this position: lack of infrastructure, low population density, limited economic opportunity, geographic isolation. Rural residents bear the extraction (delayed care, preventive medicine gaps, health outcome disparities) with no genuine exit option and minimal coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Physicians in Rural Practice",
+      "comment": "PERSPECTIVE 2: RURAL PHYSICIANS (TANGLED ROPE) \u2014 Constrained by income differential, geographic isolation, limited specialty backup, educational disadvantages for children, and career advancement barriers. Simultaneously benefit from rural practice through autonomy, patient continuity, and community embeddedness. Extraction is asymmetric but real; coordination is genuine but unequal."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Urban Medical Centers",
+      "comment": "PERSPECTIVE 3: URBAN MEDICAL INSTITUTIONS (ROPE) \u2014 Experience the constraint as coordination: geographic concentration enables specialization, research infrastructure, teaching hospitals, and economic efficiency. Net beneficiaries of the distribution pattern. Can exit through relocation decisions with minimal cost \u2014 possess arbitrage options unavailable to rural populations."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Health Policy Reform Coalition",
+      "comment": "PERSPECTIVE 4: POLICY REFORM ADVOCATES (SCAFFOLD) \u2014 Organized agents (medical associations, health equity networks, telehealth advocates, loan forgiveness programs) perceive the constraint as a solvable coordination failure with built-in sunset mechanisms. Telehealth, physician assistants, nurse practitioners, and loan forgiveness programs create alternative access pathways. Suppression is declining as policy interventions mature \u2014 this is low effective extraction because the coalition perceives and is building exit mechanisms."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Medical Licensing and Credentialing System",
+      "comment": "PERSPECTIVE 5: MEDICAL LICENSING SYSTEM (PITON) \u2014 The MD/licensing requirement perpetuates the geographic constraint through institutionalized credentialism. State licensure, specialty board certification, and hospital credentialing rules maintain high barriers to task-shifting and alternative provider models, even when those alternatives could deliver equivalent care in underserved regions. The system performs legitimacy (quality assurance) but much of its effect is theatrical \u2014 the actual function (ensuring competence) could be achieved with lower geographic friction. Institutional inertia maintains barriers that would not survive scrutiny."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some geographic maldistribution is inherent to economic incentive structures: physicians allocate to high-income regions through rational economic choice. This perspective naturalizes the distribution as an immutable consequence of capitalism and human nature. However, empirical evidence contradicts the mountain classification \u2014 countries with universal healthcare, salary equalization, and state placement systems achieve far more equitable geographic distribution, revealing the maldistribution as contingent on institutional design, not natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "income_substitution_adequacy",
+      "question": "Would income equalization (salary parity across regions) be sufficient to achieve geographic distribution without coercive placement?",
+      "resolution_mechanism": "Natural experiments comparing jurisdictions with and without salary equalization; longitudinal tracking of physician location choices pre/post compensation reform",
+      "impact": "If sufficient: constraint is primarily economic extraction (snare); policy solution is loan forgiveness + salary parity. If insufficient: constraint reflects deeper factors (lifestyle preferences, family considerations, perception of professional opportunity) requiring different intervention levers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether income equalization alone drives geographic redistribution"
+    },
+    {
+      "id": "telehealth_access_sufficiency",
+      "question": "Can telehealth plus distributed mid-level providers (NPs, PAs) adequately substitute for onsite physicians in rural areas, or do certain patient populations and conditions require geographic colocation?",
+      "resolution_mechanism": "Clinical outcome comparison: remote-enabled care vs in-person-only care by condition type and patient demographic; identification of care domains where colocation is irreplaceable",
+      "impact": "If substitution is sufficient: scaffold sunset is viable \u2014 policy can phase MD concentration toward alternative delivery models. If insufficient: constraint remains structurally necessary (mountain/rope) and reform must focus on recruitment/retention rather than task-shifting.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether telehealth and mid-level providers can substitute for onsite physicians"
+    },
+    {
+      "id": "coercive_placement_sustainability",
+      "question": "Can government-mandated physician placement in underserved areas maintain compliance and quality of care over time, or does coercion generate silent non-compliance and clinical shortcuts?",
+      "resolution_mechanism": "Longitudinal outcome tracking in jurisdictions with mandatory placement programs; measurement of provider satisfaction, retention, disciplinary incidents, and patient outcomes; comparison to volunteer incentive models",
+      "impact": "If sustainable: coercive enforcement is viable policy (Snare classification is mitigated by stronger policy enforcement). If unsustainable: suppression persists even under enforcement, revealing the constraint as deeper than policy levers can address (stronger snare classification).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether mandatory physician placement can sustain compliance and care quality"
+    },
+    {
+      "id": "extraction_beneficiary_clarity",
+      "question": "Who actually benefits from the current geographic maldistribution? Is it primarily urban medical institutions, or is the extraction more diffuse (urban patients, pharmaceutical companies, specialist networks, academic researchers)?",
+      "resolution_mechanism": "Network analysis of institutional coupling and financial flows; identification of which actors accumulate resources under the current distribution; measurement of economic rents captured by urban medicine sector",
+      "impact": "If benefits are concentrated: snare targeting specific institutional actors is tractable (regulatory intervention on urban concentration). If benefits are diffuse: constraint is more complex than pure snare \u2014 it may be multiple overlapping extraction mechanisms requiring different policy levers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Clarity on which institutions actually benefit from geographic maldistribution"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Physician geographic distribution \u2014 the systematic concentration of medical professionals in urban, high-income regions and the corresponding deficit in rural and low-income areas \u2014 operates as a tangled coordination-extraction hybrid. On the coordination side, the constraint reflects genuine economic efficiency: urban centers have larger patient populations, greater disease complexity, and better infrastructure for specialized and research medicine. On the extraction side, the same distribution mechanism deprives rural populations of basic healthcare access, forcing travel for routine care and accepting elevated health outcome disparities as the cost of medical professionalization. The constraint exhibits different structural characters from different positions: to rural communities it is a snare with no exit; to urban medicine it is rope with substantial benefits; to reform advocates it is a solvable problem with policy sunset mechanisms; to the medical licensing system it is an inertial piton; to the civilizational observer it risks appearing as a natural law of economics. The extractiveness has risen from 0.42 to 0.58 over the measurement interval (20 years) as specialization has deepened and urban centers have consolidated advantages, while policy interventions (loan forgiveness, telehealth) have remained piecemeal. The theater ratio (0.58) reflects that much of the justification invokes professional quality standards and infrastructure requirements, but significant portions of these arguments are performative \u2014 sufficient care could be delivered in rural areas with lower credentialism and task-shifting, yet credentialing rules and specialty board monopolies maintain artificial barriers.",
+    "key_agents": [
+      "Rural Populations: Primary victim (powerless/trapped) \u2014 bear health outcome disparities with no exit option; lack infrastructure, population density, economic opportunity to attract physicians",
+      "Urban Medical Institutions: Primary beneficiary (institutional/arbitrage) \u2014 concentrate specialist resources, research funding, teaching infrastructure; possess arbitrage options unavailable to rural counterparts",
+      "Rural Physicians: Secondary victim (moderate/constrained) \u2014 face income penalty, isolation, specialty backup limitations, family education barriers; also benefit from autonomy and continuity",
+      "Policy Reform Coalition: Organized agents (organized/constrained) \u2014 telehealth advocates, loan forgiveness programs, health equity networks perceive solvable problem with sunset mechanisms",
+      "Medical Licensing and Credentialing System: Institutional actor (institutional/arbitrage) \u2014 maintains task-shifting barriers and specialty monopolies through credentialism; perpetuates constraint through inertia",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing maldistribution as immutable consequence of market economics or human nature"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint concentrates physician resources and the attendant professional status, research opportunities, and income into urban centers, depriving rural populations. The extraction is asymmetric and persistent. However, extractiveness is not as severe as pure snare (0.70+) because some coordination function is genuine \u2014 urban concentration does enable specialization and efficiency. The rise from 0.42 to 0.58 over the interval reflects increasing specialization and consolidation of urban advantages, while rural alternatives (telehealth, mid-level providers) remain nascent. Suppression (0.62): Significant. Barriers to rural physician distribution include: income differential ($50-150k less in rural practice), geographic isolation, limited specialty backup, school quality differences, spouse employment limitations, perception of limited professional growth. These are high-friction but not absolutely immutable \u2014 physicians can choose rural practice, but at substantial cost. Suppression would be higher (0.75+) if barriers were total; it is moderate because some physicians do choose rural practice despite constraints. Theater ratio (0.58): Moderate-high. Professional quality standards and infrastructure requirements are partially legitimate but partially performative. Much of the credentialing infrastructure (specialty board certification, hospital credentialing, state licensure variance) maintains artificial barriers that don't track actual clinical competence. Task-shifting to NPs and PAs demonstrates that many services require lower credentialism than current monopolistic restrictions demand. Theater has risen slightly over the interval as specialization increases and credentialing becomes more elaborate.",
+    "perspectival_gap": "The perspectival gap is extreme. Rural communities experience a snare (pure extraction with no exit). Urban institutions experience rope (coordination with benefits). Policy advocates experience scaffold (temporary problem being solved). The medical licensing system experiences piton (degraded ritual maintained through inertia). Rural physicians experience tangled rope (mixed coordination and extraction). The analytical observer risks mountain (naturalizing as economic necessity). This gap reveals that the constraint is not a uniform phenomenon \u2014 it is multiple overlapping mechanisms: genuine economic efficiency coordination, extractive credentialing monopoly, institutional inertia in licensing systems, rational individual choice aggregating to collective harm, and policy-solvable maldistribution. No single classification captures all mechanisms.",
+    "directionality_logic": "Directionality is determined by agent position relative to the extraction flow. Rural populations (powerless/trapped) experience full extraction \u2014 high d, high f(d), high chi. Urban institutions (institutional/arbitrage) are beneficiaries \u2014 low d, negative or low f(d), low chi. Rural physicians (moderate/constrained) are partly trapped and partly benefiting \u2014 moderate d, moderate f(d), moderate chi. Policy reformers (organized/constrained) have agency and see exit pathways \u2014 lower d despite constraint, moderate f(d). The licensing system (institutional/arbitrage) is net beneficiary of the constraint's perpetuation \u2014 low d. The analytical observer (analytical/analytical) derives d from the structural relationship \u2014 if seeing the constraint as natural law, d is high (trapped by nature); if seeing as policy-solvable, d is moderate (constrained by contingent arrangements). The perspectival gap shows different d values for the same structural phenomenon, revealing that directionality is genuinely relative to observer position, not an absolute property of the constraint.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that all six types are legitimate perspectival readings of overlapping but distinct mechanisms. The snare (pure extraction from rural populations) is real from their position. The rope (coordination with urban benefits) is real from that position. The scaffold (policy-solvable problem) is real for reform advocates with agency and exit pathways. The piton (inertial credentialing system) is real as an institutional phenomenon. The tangled rope (mixed extraction/coordination for moderate rural physicians) is real for that actor. The mountain (natural law of economics) is a false summit \u2014 the analytical observer risks naturalizing contingent institutional design. The constraint is not 'actually' one type; it is the presheaf of all six types over different observer positions. Understanding this prevents false solutions: you cannot solve a snare with scaffold policy tools if the victims remain trapped; you cannot justify doing nothing if the analytical observer's mountain classification is a false summit."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "healthcare_access_disparity",
+      "medical_licensing_monopoly",
+      "rural_hospital_closure"
+    ],
+    "dual_formulation_note": "Physician geographic distribution is downstream of medical credentialing monopolies and upstream of healthcare access disparities. The constraint's extractiveness depends partly on whether alternative provider models (NPs, PAs, community health workers) are permitted \u2014 if task-shifting is allowed, extractiveness drops and scaffold perspective strengthens. Current decomposition treats geographic distribution as primary; alternative decomposition would separate credentialing barriers (piton) from distribution outcomes (tangled rope) as distinct constraints in a family."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

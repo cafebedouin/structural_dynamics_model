@@ -1,0 +1,123 @@
+{
+  "header": {
+    "constraint_id": "stress_concentration_factor",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "scf"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Stress Concentration Factor in Material Mechanics",
+    "topic_domain": "mechanical_engineering/materials_science",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Universal Mechanical Principle",
+      "comment": "Stress concentration factor is an irreducible physical consequence of elastic field theory. Geometric discontinuities (notches, holes, fillets) create stress singularities that cannot be eliminated through design revision without removing the discontinuity itself. The stress amplification follows deterministically from the Navier equations. Zero degrees of freedom across all indices."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Material Scientist",
+      "comment": "From the perspective of materials innovation, stress concentration is an immutable constraint that must be worked around rather than eliminated. Different material systems (ductile vs brittle, composite vs monolithic) respond differently to stress concentration, but the mathematical relationship itself does not change. Every material engineer accepts this as a fixed feature of the design landscape."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Engineering Standards Body",
+      "comment": "Stress concentration factors are codified in ASME, ISO, and DNV standards not as regulatory choices but as factual descriptions of physical phenomena. The standards encode experimental and theoretical data about stress concentration; they do not create the concentration. Standards bodies cannot change this constraint through policy \u2014 they can only document it more accurately."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "elastic_vs_elastoplastic_regime",
+      "question": "Does stress concentration factor K_t (elastic) meaningfully predict fatigue life under elastoplastic deformation?",
+      "resolution_mechanism": "Correlation analysis between elastic stress concentration predictions and observed fatigue crack initiation in ductile materials across yield limits",
+      "impact": "If elastic K_t remains predictive: Mountain classification confirmed across material regimes. If elastoplastic redistribution makes K_t non-predictive: The constraint's binding force shifts from elastic mechanics to material plasticity \u2014 potentially opening degrees of freedom in the constraint structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether elastic stress concentration governs elastoplastic fatigue behavior"
+    },
+    {
+      "id": "gradient_effects_and_scale_dependence",
+      "question": "Is stress concentration factor truly scale-invariant, or do gradient effects at microscale and manufacturing tolerance effects introduce functional degrees of freedom?",
+      "resolution_mechanism": "Systematic study of stress concentration factors across length scales (1mm to 1\u03bcm); investigation of how manufacturing tolerances on fillet radius affect measured stress concentration",
+      "impact": "If truly scale-invariant: Mountain classification holds. If scale-dependent: The constraint becomes technically bounded but practically mobile \u2014 design can exploit scale effects to reduce functional concentration.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scale and gradient dependence of stress concentration factor"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Stress concentration factor (K_t) represents the amplification of nominal stress at geometric discontinuities relative to the far-field stress value. When a smooth bar under tension is replaced with a notched bar of the same cross-sectional area, the peak stress at the notch root exceeds the nominal stress by a factor K_t that depends purely on the geometry of the discontinuity and the material's elastic properties. This is not a regulatory artifact, design choice, or institutional arrangement \u2014 it is a direct consequence of how elastic fields behave around singularities. The constraint is invariant across all engineering disciplines (mechanical, civil, aerospace), all material systems (metals, composites, ceramics), and all time scales within the elasticity regime. It emerges naturally from the Navier equations and cannot be engineered away without eliminating the discontinuity.",
+    "key_agents": [
+      "Material Scientists: Powerful/mobile \u2014 work within this constraint; accept it as a fixed feature of the design landscape and focus on material selection to tolerate concentration rather than eliminating it",
+      "Design Engineers: Institutional/arbitrage \u2014 codify stress concentration factors in iterative design processes; benefit from standardized K_t values that enable rapid preliminary calculations",
+      "Standards Bodies (ASME, ISO, DNV): Institutional/arbitrage \u2014 document and validate stress concentration factors empirically; derive authority from accuracy of documentation, not from creating the constraint",
+      "Analytical Observer: Analytical/analytical \u2014 recognizes stress concentration as a universal consequence of elastic mechanics"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Minimal. Stress concentration represents a loss of load-carrying capacity \u2014 nominal stress values underestimate actual peak stresses, so designers must apply safety factors or use lower nominal stresses than the nominal cross-section would permit. The 'extraction' is the difference between theoretical and actual capacity, but this is not extraction in the sense of one agent benefiting at another's expense. It is a pure loss inherent to geometry. Suppression (0.03): Minimal. The constraint permits complete exit through design revision: eliminate the discontinuity, use tapered transitions, or employ stress-relief geometry. No agent is locked into accepting stress concentration \u2014 it is simply the consequence of particular design choices. Theater ratio (0.15): Very low. Stress concentration calculations are entirely functional \u2014 K_t values are measured, tabulated, and applied deterministically without ritual or performance. The slight non-zero value (0.15 vs 0.0) reflects that empirical validation of K_t involves test standards and documentation practices, which have minor performative components, but the core function is purely technical.",
+    "perspectival_gap": "This constraint exhibits remarkable uniformity across all perspectives \u2014 all three declare Mountain classification because the binding mechanism is identical from all structural positions. The universal applicability is diagnostic evidence that this is a genuine natural law within elasticity theory, not a contingent institutional arrangement. Even the beneficiary perspective (standards bodies that derive authority from documenting K_t) does not argue that the constraint is anything other than a fixed fact. The absence of perspectival gap \u2014 the fact that beneficiaries, victims, and analysts all agree on the classification \u2014 is itself the signature of a true Mountain.",
+    "directionality_logic": "This constraint involves no extraction in the technical sense because it does not flow from one agent to another. Stress concentration is a loss relative to theoretical capacity, but no specific agent captures that loss as a benefit. Standards bodies document K_t but do not benefit from the concentration itself \u2014 they benefit from the authority of accurate documentation. Material scientists must design around the concentration but view it as a fixed parameter, not as a transferred resource. The absence of directional flow (no identifiable beneficiary extracting from identifiable victims) is consistent with the Mountain classification \u2014 natural laws do not have directionality in the extraction sense."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": []
+  }
+}

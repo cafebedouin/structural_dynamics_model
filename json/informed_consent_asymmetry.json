@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "informed_consent_asymmetry",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ica"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Informed Consent Asymmetry in Decision Authority Relationships",
+    "topic_domain": "institutional/medical/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "decision_authority",
+      "institutional_providers"
+    ],
+    "victims": [
+      "consent_bearer",
+      "epistemic_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Consent Bearer",
+      "comment": "PERSPECTIVE 1: CONSENT BEARER (SNARE) \u2014 Structurally dependent on decision authority for essential services (healthcare, employment, institutional access). No real exit option; refusal of consent results in deprivation of the service itself. Bears full extraction cost through constrained choices and forced trade-offs between autonomous decision-making and access to necessity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Informed Consumer",
+      "comment": "PERSPECTIVE 2: INFORMED CONSUMER (TANGLED ROPE) \u2014 Has some exit capacity (can seek alternative providers, negotiate terms) but faces high costs (time, financial, relational). Experiences genuine coordination function (legitimate need to disclose risks) alongside asymmetric extraction (information asymmetry exploited for institutional benefit). Moderate agency combined with real constraint."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Healthcare Institution",
+      "comment": "PERSPECTIVE 3: HEALTHCARE INSTITUTION (ROPE) \u2014 Experiences consent as coordination mechanism: disclosure enables shared decision-making and reduces medical error. Net beneficiary through liability protection and operational efficiency. Can arbitrage between regulatory regimes and exit through policy compliance."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Patient Advocacy Coalition",
+      "comment": "PERSPECTIVE 4: PATIENT ADVOCACY COALITION (SCAFFOLD) \u2014 Organized agents (patient unions, legal aid, informed consent advocacy) building alternative verification pathways through consent literacy programs, standardized form requirements, and right-to-explanation mandates. See informed consent asymmetry as temporary problem solvable through distributed oversight and transparency standards. Sunset clause: as digital decision-support tools mature and patient portals normalize informed choice, the asymmetry diminishes."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Consent Ritual",
+      "comment": "PERSPECTIVE 5: CONSENT RITUAL (PITON) \u2014 The signature consent form persists through institutional inertia despite substantial performative content. Institutions maintain forms to satisfy regulatory theater rather than to enable genuine informed decision-making. The ritual demonstrates degraded function: most consent recipients cannot comprehend or retain the disclosed information; most institutions do not adapt consent materials to individual literacy or language capacity. Maintained through legal liability concerns, not through verification function."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Asymmetry as Natural Law)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal perspective, some informed consent asymmetry may appear inherent to professional authority relationships: the expert necessarily knows more than the layperson, creating an irreducible information gap. This perspective risks naturalizing what the structural data shows is a contingent institutional arrangement exploitable through systemic design choices. Engine false summit detection flags this as naturalized institutional asymmetry."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "comprehension_vs_disclosure",
+      "question": "Is the primary barrier to informed consent the volume/complexity of disclosed information, or the consent bearer's capacity to comprehend and retain it?",
+      "resolution_mechanism": "Empirical comprehension testing: measure information retention and decision quality after standardized consent disclosures vs simplified, literacy-matched disclosures",
+      "impact": "If volume/complexity: the solution is information design and materiality standards (organizational reform). If comprehension capacity: the problem may be intractable without changing the relationship structure itself (shifting from expert paternalism to shared decision-making protocols).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether asymmetry stems from information volume or comprehension capacity"
+    },
+    {
+      "id": "power_differential_irreducibility",
+      "question": "Is the power differential in expert-layperson relationships a structural necessity or a design choice?",
+      "resolution_mechanism": "Comparative analysis of relationship models: participatory medicine vs paternalistic medicine; informed consent protocols in jurisdictions with mandatory shared decision-making vs those with minimal requirements",
+      "impact": "If structural necessity: the constraint is a mountain (asymmetry inherent to expertise). If design choice: the constraint is institutional extraction (asymmetry is maintained because it benefits decision authorities).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether expert-layperson power differential is irreducible"
+    },
+    {
+      "id": "institutional_incentive_misalignment",
+      "question": "Do institutional incentives reward genuine informed consent (shared decision-making) or merely documented consent (liability protection)?",
+      "resolution_mechanism": "Institutional audit: analyze quality metrics, performance incentives, and resource allocation for consent literacy programs vs compliance documentation systems",
+      "impact": "If genuine informed consent incentivized: institutions will invest in comprehension and adaptive disclosure. If documentation incentivized: institutions will maintain performative ritual (piton path). Current data suggests documentation incentivization dominates.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether institutions incentivize genuine vs documented consent"
+    },
+    {
+      "id": "digital_literacy_substitution",
+      "question": "Can digital decision-support tools (interactive interfaces, personalized risk calculators, AI-assisted comprehension) effectively substitute for human explanation in complex medical decisions?",
+      "resolution_mechanism": "RCT comparing patient comprehension, decision quality, and satisfaction across human explanation, digital tool, and hybrid approaches; longitudinal tracking of decision regret",
+      "impact": "If effective substitution: scaffold sunset is real \u2014 digital tools reduce asymmetry and exit from institutional theater. If incomplete: human explanation remains essential and asymmetry persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether digital tools can substitute for human explanation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Informed consent asymmetry describes the structural gap between the disclosure of information by a decision authority (healthcare provider, employer, institution) and the comprehension and autonomous choice capacity of the consent bearer. The constraint operates across medical, employment, research, and institutional domains wherever expert authority must obtain explicit agreement from a dependent party. The asymmetry is not inherent to the need for disclosure itself \u2014 that serves genuine coordination and risk-sharing functions \u2014 but to the systematic exploitation of information imbalance, comprehension limits, and dependency to extract compliance independent of genuine understanding or volition. The constraint exhibits all six DR types from different perspectives, making it diagnostically rich for how institutional asymmetries can be simultaneously necessary coordination mechanisms and extractive devices.",
+    "key_agents": [
+      "Consent Bearer: Primary victim (powerless/trapped) \u2014 depends on decision authority for essential services; refusal of consent results in service deprivation; no real exit option; bears full cost through constrained choices",
+      "Decision Authority: Primary beneficiary (institutional/arbitrage) \u2014 captures institutional efficiency, liability protection, and behavioral compliance during the consent ritual; can arbitrage between regulatory regimes",
+      "Healthcare/Employment Institution: Secondary beneficiary (institutional/arbitrage) \u2014 benefits from documented compliance, reduced legal liability, and operational standardization; maintains performative consent ritual",
+      "Patient Advocacy Coalition: Organized agent (organized/constrained) \u2014 building alternative verification pathways through consent literacy, standardized forms, right-to-explanation mandates; sees sunset clause in digital decision-support",
+      "Informed Consumer: Secondary agent (moderate/constrained) \u2014 has partial exit capacity through alternative providers; experiences mixed coordination (legitimate risk disclosure) and extraction (information asymmetry exploitation)",
+      "Analytical Observer: Civilizational context (analytical/analytical) \u2014 risks naturalizing contingent institutional asymmetry as irreducible feature of expertise"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts through information asymmetry (what is disclosed is selected and framed by the decision authority), comprehension capture (complex information presented in formats chosen by institutions rather than optimized for understanding), and dependency leverage (refusal of consent results in service deprivation). The extraction is not maximal because some genuine coordination function exists (legitimate need to disclose material risks) and some consent bearers can navigate alternatives. Suppression (0.65): High. Structural barriers include: literacy requirements that exclude significant populations; time constraints that prevent careful deliberation; cognitive burden of complex technical information; power asymmetry that discourages questioning; professional authority framing that positions the expert as trustworthy rather than as having conflicting interests; dependency on the institution for essential services. Theater ratio (0.68): High. Consent rituals are substantially performative: most institutions use standardized forms disconnected from individual literacy levels or decision capacity; many consent bearers cannot accurately recall or comprehend disclosed information; institutions rarely adapt material based on comprehension testing; the ritual satisfies legal liability concerns rather than enabling genuine informed choice. Trajectory: theater ratio and extractiveness both increase over the interval as institutional compliance documentation expands (more forms, longer disclosures) without corresponding improvement in comprehension outcomes. The performative content accumulates as institutions layer regulatory compliance without redesigning for actual understanding.",
+    "directionality_logic": "Directionality values derive from each agent's structural position relative to the information and power flows. The consent bearer (powerless/trapped) experiences maximum extraction: they depend on the institution, cannot exit without losing essential services, and have minimal capacity to verify claims or push back against framing. The institutional beneficiary (institutional/arbitrage) experiences low extraction: they control the disclosure, can arbitrage between regulatory regimes, and benefit from both the coordination function (legitimate risk-sharing) and the extraction mechanism (liability protection, behavioral compliance). The informed consumer (moderate/constrained) experiences moderate extraction: they have some exit capacity (can seek alternative providers) but face high switching costs, and experience genuine coordination alongside exploitation of information asymmetry. The organized coalition (organized/constrained) has reduced extraction through multiple actors providing verification and advocacy, reducing any single institution's control.",
+    "perspectival_gap": "This constraint demonstrates perspectival divergence across power levels and exit capacity. The consent bearer sees pure extraction (Snare) \u2014 their dependence and lack of alternatives mean the asymmetry is weaponized. The informed consumer sees mixed coordination and extraction (Tangled Rope) \u2014 they benefit from risk disclosure but experience manipulation of comprehension and framing. The institutional beneficiary sees coordination (Rope) \u2014 they experience consent as an efficient mechanism for shared decision-making and liability management. The patient advocacy coalition sees a temporary problem with a sunset (Scaffold) \u2014 digital decision-support and consent literacy are gradually reducing asymmetry. The institutional ritual itself appears degraded (Piton) \u2014 maintained through legal requirement rather than function. The civilizational analytical observer risks seeing an immutable feature of expertise (Mountain) \u2014 but structural data reveals this as naturalized institutional choice. The perspectival gap reveals that informed consent asymmetry is not a natural law but a design choice maintainable only through continued institutional control of information framing.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that informed consent operates as a genuine coordination mechanism AND as an extraction device simultaneously. The coordination function (legitimate disclosure of material risks enabling better decision-making) is real and necessary. The extraction mechanism (exploitation of information asymmetry, comprehension limits, and dependency) is also real and maintainable through institutional design choices. The constraint is not a false mountain (not a natural law) nor a false rope (not pure coordination). It is genuinely tangled: the institutional benefit from the coordination function would justify modest extractiveness, but measured extractiveness (0.58) substantially exceeds the coordination cost floor, indicating that institutional incentives favor documentation over comprehension, liability protection over genuine autonomy. The falseness detector flags the mountain perspective as naturalization of design choice."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "medical_error_prevention",
+      "institutional_liability_externalization",
+      "healthcare_access_dependency"
+    ],
+    "dual_formulation_note": "Informed consent asymmetry is upstream of specific consent-dependent practices (clinical trials, surgical procedures, employment contracts) but represents a distinct structural constraint. Different consent domains may have different \u03b5 values reflecting domain-specific power imbalances and exit options; this story represents the general constraint across domains."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

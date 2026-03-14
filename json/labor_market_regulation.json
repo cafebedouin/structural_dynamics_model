@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "labor_market_regulation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "labor"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Labor Market Regulation and Wage Extraction",
+    "topic_domain": "economic_policy/labor_relations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_employers",
+      "regulatory_agencies"
+    ],
+    "victims": [
+      "precarious_workers",
+      "market_entrants",
+      "wage_growth_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Precarious Worker",
+      "comment": "PERSPECTIVE 1: PRECARIOUS WORKER (SNARE) \u2014 Trapped by credential requirements, geographic immobility, and absence of viable alternatives. Minimum wage floors exist nominally but enforcement is weak; licensing restrictions prevent lateral job mobility; regulatory compliance costs are shifted to worker schedules and unpaid training. No exit available within biographical timeframe. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Market Entrant",
+      "comment": "PERSPECTIVE 2: MARKET ENTRANT (TANGLED ROPE) \u2014 Constrained by credential accumulation requirements and network barriers. Regulation provides genuine coordination (standardized hiring practices, transparency requirements for job postings, apprenticeship pathways) alongside asymmetric extraction (entry wages depressed by oversupply managed through credentialing, opportunity cost of credential accumulation borne by entrant). High suppression but not total \u2014 some pathways exist, coordination mechanisms are functional."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Incumbent Employer",
+      "comment": "PERSPECTIVE 3: INCUMBENT EMPLOYER (ROPE) \u2014 Benefits from regulation as coordination mechanism: standardized wage floors, credential requirements, and non-compete enforcement reduce recruitment uncertainty and lock in workforce stability. Exit via offshoring or automation available but costly. Net beneficiary \u2014 regulation solves workforce coordination problems at scale."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Union Coalition",
+      "comment": "PERSPECTIVE 4: LABOR UNION COALITION (SCAFFOLD) \u2014 Organized agents (unions, worker advocacy organizations) see regulation as a temporary scaffolding mechanism with sunset: collective bargaining, sectoral agreements, and portable benefits systems are building alternative coordination pathways that reduce dependence on state-mandated wage floors and licensing cartels. Regulation has high theater (performative minimum-wage announcements without enforcement) but union strategy anticipates replacement with negotiated standards. Sunset estimated at 20-30 years if sectoral bargaining expands."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Administration",
+      "comment": "PERSPECTIVE 5: REGULATORY ADMINISTRATION (PITON) \u2014 Labor market regulation persists through institutional inertia despite degraded function. Minimum wage enforcement is weak (compliance costs exceed penalties); licensing boards are captured by incumbents; wage-and-hour divisions lack capacity to investigate complaints. The regulatory apparatus maintains theater (annual updates to wage schedules, licensing renewals) while primary function (protecting worker welfare, enforcing wage standards) has atrophied. Piton classification reflects high theater_ratio and low functional output."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some wage regulation is inherent to coordinating labor supply and demand: without baseline standards (maximum hours, minimum safety), markets produce race-to-the-bottom dynamics. This perspective sees labor regulation as an immutable prerequisite to stable labor markets. However, this naturalizes what is actually a contingent institutional arrangement \u2014 the specific form of regulation (state-mandated floors without enforcement capacity) is not inherent; alternatives (sectoral bargaining, portable benefits, cooperative ownership) coordinate labor markets differently. The engine will identify this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "enforcement_capacity_gap",
+      "question": "Is the extractiveness gap between nominal wage floors and actual worker compensation driven by enforcement failure or by rational regulatory design?",
+      "resolution_mechanism": "Comparative analysis of enforcement-to-violation ratios across jurisdictions; cost-benefit analysis of full enforcement vs. selective enforcement; historical correlation between enforcement investment and wage compliance",
+      "impact": "If enforcement failure: regulatory scope should expand (higher effective suppression). If rational design: extraction is structural feature of regulation (higher baseline extractiveness required). Classification shifts if enforcement capacity is revealed as intentionally constrained.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether wage floor enforcement gap is intentional or incidental"
+    },
+    {
+      "id": "credential_rent_vs_worker_protection",
+      "question": "Do occupational licensing requirements primarily protect public safety or create economic rents by restricting labor supply?",
+      "resolution_mechanism": "Cross-jurisdiction licensing variation analysis; correlation between licensing stringency and wage premiums vs. safety outcomes; worker mobility and income stability under different licensing regimes",
+      "impact": "If primarily rents: licensing is pure extraction mechanism (snare classification for entrants appropriate). If primarily safety: licensing has genuine coordination function (tangled rope classification appropriate). If mixed: ratio determines whether rope or snare dominates.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether licensing protects safety or restricts supply"
+    },
+    {
+      "id": "sectoral_bargaining_viability",
+      "question": "Can sectoral collective bargaining (union-employer agreements covering entire industries) provide comparable labor protections and wage coordination at lower extraction cost than state regulation?",
+      "resolution_mechanism": "Comparative analysis of wage growth, worker mobility, job quality, and enforcement mechanisms in sectoral bargaining systems (German model, Nordic model) vs. state-regulated systems; institutional preconditions for sectoral bargaining expansion",
+      "impact": "If viable: scaffold sunset is structural and realistic (regulation would be replaced by bargaining frameworks). If not viable: regulation persists not as temporary scaffold but as permanent necessity (reclassify toward piton or persistent tangled rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether sectoral bargaining can replace state wage regulation"
+    },
+    {
+      "id": "wage_floor_behavioral_incidence",
+      "question": "When state-mandated wage floors are implemented without enforcement, who bears the extraction cost: workers (foregone employment), employers (reduced hiring), or consumers (higher prices)?",
+      "resolution_mechanism": "Empirical labor supply elasticity analysis; employment effects of minimum wage changes; pass-through of wage floors to prices in competitive vs. concentrated markets",
+      "impact": "If workers bear cost: extraction is borne by precarious agents (snare classification justified). If employers bear cost and pass to consumers: extraction is diffused. If employers reduce hiring: extraction takes form of opportunity cost (affects entrants more than incumbents). Distribution of incidence determines who the true victim group is.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Incidence of unenforced wage floors on workers, employers, and consumers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Labor market regulation creates a structural tension between genuine coordination functions (standardized hiring practices, minimum safety standards, transparency requirements) and asymmetric extraction mechanisms (credential gatekeeping, weak wage-floor enforcement, monopsony power concentration). The constraint exhibits tangled rope structure at the analytical level: regulation coordinates labor supply and demand while simultaneously protecting incumbent employers and credentialed workers from competitive pressure, extracting welfare from precarious workers and market entrants. Theater_ratio has risen from 0.48 to 0.64 over the interval, reflecting the divergence between nominal regulatory scope (comprehensive wage/hours/safety rules) and actual enforcement capacity (stagnant inspector budgets, rising non-compliance rates). Base extractiveness has increased from 0.38 to 0.52, indicating that the coordination function has degraded relative to extraction \u2014 wage floors are announced but poorly enforced; licensing requirements proliferate without safety justification. The constraint's future depends on whether sectoral collective bargaining can replace state regulation (scaffold sunset) or whether the current hybrid persists through institutional inertia (piton trajectory).",
+    "key_agents": [
+      "Precarious Workers: Primary victim (powerless/trapped) \u2014 lack credentials and geographic mobility; trapped in low-wage segments with weak regulatory protection",
+      "Market Entrants: Secondary victim (moderate/constrained) \u2014 face credential accumulation barriers and network-based hiring discrimination; can exit but at high opportunity cost",
+      "Incumbent Employers: Primary beneficiary (institutional/arbitrage) \u2014 capture stable workforce at regulated wage floor with exit available via offshoring; benefit from credential gatekeeping",
+      "Regulatory Agencies: Secondary beneficiary (institutional/arbitrage) \u2014 budget-dependent on wage regulation enforcement; incentivized to maintain regulatory scope",
+      "Labor Union Coalition: Organized agents (organized/constrained) \u2014 advocate for replacement of state regulation with sectoral bargaining; have partial exit via alternative coordination mechanisms",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangement as inherent to labor markets"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Labor market regulation does create coordination benefits (hiring clarity, workplace standards, wage floors prevent race-to-the-bottom) but the coordination functions have degraded over the interval while extraction mechanisms have strengthened. Wage floor enforcement requires 1 inspector per 10,000 workers but most jurisdictions employ 1 per 50,000+, rendering nominal floors largely performative. Licensing requirements have expanded beyond safety-relevant occupations into low-skill sectors (security guards, florists in some jurisdictions), indicating rent-seeking rather than protection. The extractiveness value reflects this asymmetry: genuine coordination exists, but extraction exceeds pure coordination cost. Suppression (0.58): Moderate-high. Barriers to worker mobility include non-compete clauses (enforceable in many jurisdictions despite harm evidence), licensing reciprocity gaps between states, credential requirements that exceed functional skill needs, and employer collusion on wage suppression (documented in silicon valley, fast food). These barriers are not absolute (workers can relocate, pursue retraining) but the costs are significant. Theater_ratio (0.64): High. Regulatory theater is substantial: minimum wage announcements receive media coverage but enforcement is token (penalties < wages owed); licensing boards conduct renewals but don't investigate complaints; wage-and-hour divisions issue reports on violations but lack resources to collect damages. The theater has increased because the gap between announced regulation and actual enforcement has widened \u2014 wages have stagnated despite regulatory scope expansion, signaling performative rather than functional enforcement.",
+    "directionality_logic": "Directionality differs sharply by agent position. Precarious workers (victim + trapped) derive d \u2248 0.95 \u2192 high f(d) \u2192 experience \u03c7 amplified by scope. Market entrants (victim + constrained) derive d \u2248 0.65-0.75 depending on sector and credential path. Incumbent employers (beneficiary + arbitrage) derive d \u2248 0.05-0.15 \u2192 low or negative f(d) \u2192 regulation reduces their costs (coordination of workforce, predictable wage structure, reduced turnover). Labor unions (organized + constrained) derive d \u2248 0.40-0.50 depending on whether sectoral bargaining options are available. The analytical observer (neutral + analytical) derives d \u2248 0.72, producing the perspectival gap: beneficiaries see rope (coordination solves their problem), trapped agents see snare (extraction without exit), organized agents see scaffold with sunset, degraded institutions see piton. No single type captures the full constraint.",
+    "perspectival_gap": "The precarious worker and incumbent employer experience completely different constraints from the same regulatory architecture. The worker experiences snare: minimum wage floors exist but are unenforced; licensing prevents job mobility; credential costs are borne individually. The employer experiences rope: regulation provides stable, predictable workforce; wage floors set floor for all competitors (eliminating race-to-the-bottom); credential gatekeeping reduces recruitment costs. The market entrant experiences tangled rope: regulation enables formal pathways (apprenticeships, credential programs) but extraction occurs through credential costs and wage depression during entry period. The organized labor coalition experiences scaffold: recognizing that state regulation has degraded and anticipating replacement with sectoral bargaining (unions + employers at industry level negotiating portable benefits, mobility standards, wage scales). The regulatory administration experiences piton: maintaining performative enforcement and regulation expansion while primary function (wage protection, labor mobility) has atrophied. The analytical observer risks seeing mountain (labor regulation inherent to any market economy) but the structural data shows this is false \u2014 alternative coordination mechanisms (sectoral bargaining, cooperative hiring networks, skills guilds) coordinate labor markets without the same extraction mechanisms.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that labor market regulation IS genuinely a hybrid \u2014 coordination and extraction are structurally entangled. The regulation that solves the incumbent employer's workforce coordination problem (stable supply, predictable wage) creates extraction mechanisms for precarious workers (wage suppression, credential gatekeeping, enforcement gaps). No pure-coordination alternative exists that delivers coordination benefits without also creating extraction risks. The scaffold perspective (union coalition) claims a sunset path via sectoral bargaining, which would disaggregate wage-setting from state regulation and ground it in employer-union negotiation. If sectoral bargaining expands, the current regulation degrades from tangled rope to piton (maintained through inertia only). The mandatrophy is not resolved by proving one type is 'correct' but by mapping how the classification changes as institutional conditions shift \u2014 if sectoral bargaining remains marginal, tangled rope persists; if it expands, state regulation becomes piton."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "occupational_licensing_supply_restriction",
+      "monopsony_wage_suppression",
+      "sectoral_collective_bargaining_viability"
+    ],
+    "dual_formulation_note": "Labor market regulation decomposes into multiple structurally distinct constraints: (1) wage floor enforcement (\u03b5 \u2248 0.52, tangled rope), (2) occupational licensing (\u03b5 \u2248 0.68, snare), (3) non-compete enforceability (\u03b5 \u2248 0.61, snare). This story models the aggregate regulation; linked constraints model specific mechanisms. Each mechanism has different beneficiary/victim distributions and different sunset conditions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

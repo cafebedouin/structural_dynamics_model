@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "ai_surveillance_sensor",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aisurveil"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "AI Surveillance Sensor Infrastructure",
+    "topic_domain": "technology/governance/privacy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "surveillance_apparatus_operators",
+      "data_aggregation_platforms"
+    ],
+    "victims": [
+      "surveilled_populations",
+      "privacy_commons"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Surveilled Citizen",
+      "comment": "PERSPECTIVE 1: SURVEILLED CITIZEN (SNARE) \u2014 Cannot exit the sensor infrastructure without abandoning basic civic participation (banking, transportation, employment, healthcare). Bears full extraction cost through behavioral modification, manipulation, and loss of privacy. Trapped by material dependence on surveilled systems with no viable alternatives."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "label": "The Normalized Digital Native",
+      "comment": "PERSPECTIVE 2: NORMALIZED DIGITAL NATIVE (SNARE) \u2014 Structurally mobile but identity-locked through primary socialization within surveillance infrastructure. Cannot imagine privacy as a lived state; their identity is constituted through trackable digital presence. Exit would require abandoning not just the system but their self-concept as a connected, documented person. Suppression is partially internalized."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Surveillance Apparatus Operator",
+      "comment": "PERSPECTIVE 3: SURVEILLANCE APPARATUS OPERATOR (ROPE) \u2014 Benefits directly from sensor deployment through data access, operational efficiency, and threat identification. Experiences the constraint as coordination: real-time situational awareness solves genuine coordination problems (traffic management, public safety response, infrastructure monitoring). Net beneficiary with institutional capacity and arbitrage options."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Privacy Rights Coalition",
+      "comment": "PERSPECTIVE 4: PRIVACY RIGHTS COALITION (TANGLED ROPE) \u2014 Organized agent (constrained, not trapped) facing resource limits and legal barriers but retaining agency. Experiences mixed coordination (sensor data does enable some public safety functions) and extraction (scope creep, data misuse, normalization of total surveillance). Can mobilize but cannot fully exit; works within and against the system simultaneously."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Framework",
+      "comment": "PERSPECTIVE 5: REGULATORY FRAMEWORK (PITON) \u2014 Data protection regulations (GDPR, state privacy laws) persist as ceremonial compliance theater. Collection and retention vastly exceed what regulations formally permit, but technical enforcement is weak. The regulatory framework has become degraded apparatus \u2014 maintained through institutional inertia despite known inadequacy. Theater ratio high because the rules are visibly flouted without consequences."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Data Aggregation Platform",
+      "comment": "PERSPECTIVE 6: DATA AGGREGATION PLATFORM (TANGLED ROPE) \u2014 Commercial actor with mobile exit options (can relocate operations, can shift business models) but deeply integrated into surveillance infrastructure. Benefits from sensor data feed. Provides coordination function (targeted emergency alerts, fraud prevention, legitimate service personalization) alongside extraction (behavioral targeting, manipulation at scale, shadow profile construction). Powerful agent with genuine exit capacity but choosing deepened integration."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational/universal view, AI surveillance sensors represent systematic extraction from populations through technical means that exceed transparency capacity and regulatory capacity. The constraint is snare-like at all scales: individual sensor events aggregate to permanent records; individual consent exceptions aggregate to universal monitoring. No exit except disconnection from modern infrastructure. High suppression because the technical and informational asymmetries prevent meaningful resistance."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "consent_fictiveness",
+      "question": "Is individual consent to sensor data collection meaningful when the alternative is exclusion from essential systems?",
+      "resolution_mechanism": "Empirical measurement of actual consent rates; analysis of genuine exit capacity (can individuals refuse without material harm?); comparison with coerced consent models in other domains",
+      "impact": "If consent is fictive: suppression metric should be higher (~0.85), pushing classification toward maximum snare. If consent is meaningful: suppression could be lower (~0.60), potentially allowing tangled rope classification from some perspectives.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether consent mechanisms are functionally meaningful or purely performative"
+    },
+    {
+      "id": "scope_creep_inevitability",
+      "question": "Is the expansion of surveillance scope (from stated security use to commercial profiling to political control) a contingent institutional failure or inherent to sensor architecture?",
+      "resolution_mechanism": "Comparative analysis of surveillance systems with strong data governance vs. weak governance; identification of technical barriers vs. policy barriers to scope creep; historical trajectory analysis",
+      "impact": "If contingent: regulation and governance reform could reduce extractiveness to rope/scaffold range. If inherent: extractiveness ~0.68 is structural minimum; no policy reform can fix fundamental architecture.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether surveillance scope creep is contingent or architecturally necessary"
+    },
+    {
+      "id": "identity_lock_mechanism_interpersonal",
+      "question": "For digital natives, is the identity lock driven by genuine preference (they prefer transparent living) or by internalized suppression (they cannot imagine privacy)?",
+      "resolution_mechanism": "Longitudinal psychological study of privacy attitudes across generational cohorts; analysis of stated preferences vs. revealed preferences (how people respond when offered genuine privacy); cross-cultural comparison with low-surveillance societies",
+      "impact": "If genuine preference: identity_locked classification is incorrect; should be constrained or mobile. If internalized suppression: identity_locked is accurate; indicates extraction mechanism operates through cognitive capture rather than just material barriers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether digital native identity lock reflects preference or internalized suppression"
+    },
+    {
+      "id": "regulatory_capture_depth",
+      "question": "Are data protection regulators captured by surveillance apparatus operators (intentional capture) or simply outmatched by technical complexity (structural capture)?",
+      "resolution_mechanism": "Analysis of regulator hiring patterns; correlation between regulator enforcement and operator lobbying; comparative strength of regulators in jurisdictions with strong independence norms vs. weak independence",
+      "impact": "If intentional capture: piton classification is accurate \u2014 regulations are deliberately made performative. If structural capture: regulations could theoretically be strengthened; piton theater_ratio might be lower with better technical capacity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory capture is intentional or structural"
+    },
+    {
+      "id": "alternative_infrastructure_viability",
+      "question": "Can decentralized, privacy-preserving sensor networks perform equivalent coordination functions (public safety, traffic management, emergency response) as centralized AI surveillance?",
+      "resolution_mechanism": "Technical comparison of distributed vs. centralized sensor architectures; pilot programs testing privacy-preserving alternatives; analysis of coordination problems that require centralization vs. those that don't",
+      "impact": "If viable alternatives exist: extractiveness could drop to ~0.35 (rope range) through architectural substitution. If centralization is necessary: extractiveness ~0.68 is inescapable structural feature.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether viable alternatives to centralized surveillance exist"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "AI surveillance sensor infrastructure represents a structural constraint that extracts behavioral control and privacy from populations while providing genuine but asymmetric coordination functions (public safety, infrastructure management, emergency response). The constraint exhibits characteristics of pure extraction (snare) from the perspective of surveilled populations with no viable exit; mixed coordination and extraction (tangled rope) from organized resistance movements; and coordination (rope) from surveillance apparatus operators. The extractiveness metric (0.68) reflects that the surveillance function, while operationally effective, extracts information asymmetrically and enables manipulation at scale. The suppression metric (0.72) reflects multiple reinforcing barriers: technical (surveillance is hidden), legal (weak data protection), informational (citizens cannot assess exposure), and internalized (normalization for digital natives). The constraint has degraded over the 15-year measurement interval as scope creep accumulates (security \u2192 commercial profiling \u2192 political targeting) and regulatory theater (GDPR, state privacy laws) proves ineffective at preventing data misuse. The theater ratio increase (0.32 \u2192 0.58 \u2192 0.68) reflects growing gap between regulatory appearance and operational reality.",
+    "key_agents": [
+      "Surveilled populations: Primary victims (powerless/trapped) \u2014 cannot exit without abandoning essential civic/economic participation; bear full extraction cost",
+      "Surveillance apparatus operators: Primary beneficiaries (institutional/arbitrage) \u2014 police, intelligence agencies, military; benefit from data access and operational efficiency",
+      "Data aggregation platforms: Secondary beneficiaries (powerful/mobile) \u2014 commercial actors extracting behavioral data for targeting and manipulation; provide some coordination (fraud detection) alongside extraction",
+      "Privacy rights organizations: Organized victims (organized/constrained) \u2014 ACLU, EFF, international privacy coalitions; can mobilize but cannot fully exit or prevent deployment",
+      "Digital natives: Special victim class (powerless/identity_locked) \u2014 primary socialization within surveillance infrastructure; identity fused with trackable presence",
+      "Regulatory agencies: Degraded institutional actors (institutional/arbitrage) \u2014 maintain legal framework that is systematically violated; captured or outmatched by operators",
+      "Analytical observer: Civilizational perspective (analytical/analytical) \u2014 sees constraint as snare at all scales; exit capacity approaches zero for modern populations"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and increasing. Initial deployment (t=0, \u03b5\u22480.38) focused on genuine security/safety coordination with moderate extraction. Mid-period (t=5, \u03b5\u22480.52) shows scope creep toward commercial use and behavioral profiling. Current state (t=10-15, \u03b5\u22480.68-0.72) reflects systematic expansion beyond stated purposes, shadow profile construction, manipulation at scale, and political applications. The metric reflects not technical capability alone but the extractive use of that capability. Suppression (0.72): High and stable. Technical suppression (hidden sensors, opaque algorithms), legal suppression (weak enforcement of existing rules), informational suppression (citizens cannot assess their own exposure), and psychological suppression (normalization, particularly for digital natives). Theater ratio (0.32 \u2192 0.68): Sharply increasing. Regulatory framework (GDPR, state privacy laws, transparency reports) provides appearance of control while collection and use vastly exceed formal permissions. The gap between regulatory theater and operational reality has widened as AI capabilities and scope have expanded.",
+    "directionality_logic": "Directionality values (d) are derived from structural position within the extraction flow. Surveilled powerless populations with trapped exit (no viable alternative to surveilled systems) occupy d \u2248 0.92-0.98 (near-maximum target). Surveillance operators with institutional power and arbitrage options occupy d \u2248 0.08-0.15 (near-maximum beneficiary). Privacy coalitions that are organized but constrained occupy d \u2248 0.55-0.65 (moderate target, some agency). Data platforms that are powerful but intentionally integrated occupy d \u2248 0.35-0.45 (moderate extraction despite exit capacity). Digital natives with identity lock occupy d \u2248 0.85-0.90 (high target status despite structural mobility, because identity fusion prevents meaningful exit). The regulatory framework, despite nominal institutional power, has experienced d-creep: captured by operators, it functions as a tool of the extractive apparatus rather than as a counterbalance. Effective d for regulators is high (~0.70) despite formal power.",
+    "perspectival_gap": "Maximum perspectival divergence: Surveillance operators experience rope (coordination function for public safety; data enables legitimate threat detection and emergency response). Surveilled populations experience snare (no exit, maximum extraction, behavioral modification through asymmetric information). Privacy coalitions experience tangled rope (real coordination benefits mixed with real extraction; can organize but cannot prevent deployment). Regulatory agencies experience piton (maintain ceremonial compliance framework that everyone knows is inadequate; enforcement is degraded). Digital natives experience snare with internalized suppression (cannot imagine exit; have fused their identity with transparent surveillance). Analytical observer experiences snare at all scales (aggregation of individual sensors creates panopticon; no exit except disconnection from modern infrastructure). The gap between beneficiary and victim perspectives is near-maximal: operators see valuable coordination; populations see pure extraction.",
+    "mandatrophy_analysis": "RESOLVED MANDATROPHY (extractiveness > 0.70): The constraint classifies as snare despite genuine coordination functions (public safety, infrastructure management, emergency response) because the extractive mechanism (behavioral control, manipulation, political targeting, information asymmetry) has become dominant and structural. The coordination is real but insufficient to offset the extraction. Snare classification is appropriate because: (1) victims (surveilled populations) have no meaningful exit; (2) suppression is high and multifaceted (technical, legal, informational, psychological); (3) existence relies on suppressing privacy alternatives (decentralized/private-preserving architectures remain underfunded and deliberately marginalized); (4) beneficiaries (surveillance apparatus, data platforms) have strong incentives to expand scope and deepen extraction; (5) regulatory framework designed to limit extraction has been rendered performative. The false-summit risk (classification as mountain \u2014 surveillance is inherent to complex societies) is rejected: surveillance infrastructure is contingent institutional choice, not natural law. The false-coordination risk (classification as tangled rope or rope) is rejected: the coordination benefits are real but are overwhelmed by extractive mechanisms. The constraint is snare."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_identity_infrastructure",
+      "behavioral_data_commodification",
+      "state_capacity_centralization"
+    ],
+    "dual_formulation_note": "AI surveillance sensor infrastructure is upstream of downstream constraints: behavioral targeting relies on sensor data; political control via digital surveillance feeds upstream extraction. The sensor infrastructure itself can be decomposed into technical coordination function (hardware/software for legitimate monitoring) vs. extractive function (scope creep, commercial use, political targeting). This story models the integrated constraint; technical architecture decomposition would be separate."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.72
+    }
+  ]
+}

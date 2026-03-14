@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "senior_tech_dependence",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "std"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Senior Technology Dependence and Digital Exclusion",
+    "topic_domain": "social/economic/technology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "tech_platforms",
+      "digital_service_providers",
+      "younger_caregivers"
+    ],
+    "victims": [
+      "older_adults",
+      "low_tech_literacy_seniors"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Digitally Isolated Senior",
+      "comment": "PERSPECTIVE 1: DIGITALLY ISOLATED SENIOR (SNARE) \u2014 Trapped by cognitive decline, economic dependency on digital-only services (banking, healthcare, social benefits), and physical mobility constraints. Cannot exit the digital ecosystem without sacrificing essential services. High suppression due to lack of alternatives and cognitive barriers to learning new systems. No genuine coordination benefit \u2014 extraction is pure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Tech-Competent Senior",
+      "comment": "PERSPECTIVE 2: TECH-COMPETENT SENIOR (TANGLED ROPE) \u2014 Has developed digital literacy but faces constant platform redesigns, mandatory updates, and feature deprecation. Experiences both coordination (access to services, social connection) and extraction (forced obsolescence, privacy extraction, attention capture). Exit options are constrained by necessity of digital access but moderately available through alternative platforms."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Digital Platform",
+      "comment": "PERSPECTIVE 3: DIGITAL PLATFORM (ROPE) \u2014 Benefits from senior userbase growth and monetization through behavioral data, attention capture, and service lock-in. Experiences the constraint as coordination: platforms standardize digital access infrastructure, solve collective action problems of service delivery. Net beneficiary with high exit optionality \u2014 can pivot business models, leave markets, alter service terms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Family Caregivers",
+      "comment": "PERSPECTIVE 4: FAMILY CAREGIVERS (TANGLED ROPE) \u2014 Organize around providing digital support to aging parents/relatives. Benefit from services (remote monitoring, communication) but bear extraction costs (unpaid support labor, emotional burden, responsibility for managing seniors' digital security and privacy). Active enforcement of 'helping with tech' creates asymmetric care work."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Support Infrastructure",
+      "comment": "PERSPECTIVE 5: LEGACY SUPPORT INFRASTRUCTURE (PITON) \u2014 Telephone hotlines, in-person banking, paper mail, customer service representatives are increasingly performative. Appear to exist for senior support but operate with reduced staffing, longer wait times, and constant pressure to push users toward digital alternatives. Theater ratio indicates ritual compliance rather than functional support. Maintained through regulatory requirement and institutional inertia, not genuine effectiveness."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some digital divide is inherent to technological change: cognitive capacities differ, neuroplasticity declines with age, and technological fluency has always required generational adaptation. This perspective risks naturalizing what is actually a contingent policy choice \u2014 the decision to digitize services without maintaining non-digital alternatives. The constraint is presented as immutable but is architecturally contingent."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cognitive_decline_mechanism",
+      "question": "Is measured suppression due to biological cognitive decline in aging, or due to designed platform complexity that could be reduced?",
+      "resolution_mechanism": "Comparative usability testing between seniors and younger users on simplified vs standard interfaces; cross-national analysis of countries with mandatory accessible design standards",
+      "impact": "If biological: constraint is closer to mountain (immutable limit). If designed complexity: constraint is snare (extractive by choice). This determines whether addressing senior tech dependence requires accommodation (treating decline as given) or design justice (treating complexity as choice).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is biological or designed"
+    },
+    {
+      "id": "service_digitalization_reversibility",
+      "question": "What proportion of senior-essential services (banking, healthcare, benefits, social contact) could realistically operate non-digital alternatives if policy required it?",
+      "resolution_mechanism": "Cost-benefit analysis of maintaining parallel digital/non-digital service pathways; historical case studies (countries that maintain phone banking, paper billing, in-person application processes)",
+      "impact": "If reversible: the constraint is policy-contingent and classification depends on willingness to maintain alternatives. If irreversible: digitalization is structural and exit from digital ecosystem entails loss of essential services \u2014 pure snare from the trapped senior perspective.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether digital-only service provision is economically reversible"
+    },
+    {
+      "id": "family_caregiver_identity_lock",
+      "question": "Do family caregivers experience tech support labor as identity-locked (constituted through family role, filial obligation) or as constrained (high-cost unpaid work they could delegate if alternatives existed)?",
+      "resolution_mechanism": "Qualitative interviews with family caregivers; analysis of language use regarding obligation vs choice; comparison with paid tech support professionals regarding burden and identity fusion",
+      "impact": "If identity-locked: family caregiver extraction is cultural/relational, not economic. Classification remains Tangled Rope but with different mechanisms. If constrained: family caregiver burden could be relieved through paid support infrastructure \u2014 constraint is economic, not relational.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether family caregiver tech support is identity-locked or constrained"
+    },
+    {
+      "id": "platform_simplicity_tradeoff",
+      "question": "Do platforms design for complexity to maximize engagement and data extraction, or does feature richness genuinely serve user needs better than simplified alternatives?",
+      "resolution_mechanism": "Comparative analysis of platform feature usage by age cohort; A/B testing simplified vs standard interfaces; measurement of user satisfaction and task completion time",
+      "impact": "If designed for extraction: platforms actively maintain suppression through complexity \u2014 snare from all non-institutional perspectives. If genuine feature value: complexity is coordination overhead \u2014 tangled rope is correctly classified.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether platform complexity serves user needs or extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The digitalization of essential services creates a structural extraction mechanism targeting older adults with lower digital literacy. The constraint exhibits a perspectival range from mountain (naturalized technological change) to snare (pure extraction of trapped seniors) to rope (coordination function for platforms). The tension arises because genuine coordination benefits (platforms enable service delivery, reduce transaction costs, increase accessibility for digitally fluent users) coexist with asymmetric extraction (forced obsolescence, complexity-driven exclusion, unpaid digital support labor displaced onto family caregivers). Theater ratio growth (0.35 to 0.55) reflects increasing performativity of legacy support channels \u2014 phone banking lines, in-person services, and paper alternatives are maintained as theatrical gestures while policy and infrastructure actively push digitalization. Extractiveness growth (0.35 to 0.58) reflects accumulating extraction mechanisms: initial mandatory adoption, then platform redesigns, then algorithmic opacity, then privacy extraction through behavioral data harvesting.",
+    "key_agents": [
+      "Digitally Isolated Seniors: Primary victims (powerless/trapped) \u2014 face biological cognitive decline, economic dependency on digital services, and zero alternatives for essential services like banking and healthcare benefits",
+      "Tech-Competent Seniors: Secondary victims (moderate/constrained) \u2014 navigate forced updates, platform redesigns, and algorithmic changes; have exit options through alternative platforms but not from digital ecosystem itself",
+      "Tech Platforms: Primary beneficiaries (institutional/arbitrage) \u2014 monetize senior userbase through behavioral data harvesting, attention capture, service lock-in; have complete exit optionality and can alter terms unilaterally",
+      "Family Caregivers: Secondary beneficiaries and victims (organized/constrained) \u2014 benefit from remote monitoring and communication but bear unpaid support labor and emotional burden of managing seniors' digital safety",
+      "Legacy Support Infrastructure: Performative actors (institutional/arbitrage) \u2014 telephone hotlines and in-person services maintained for regulatory compliance while resources shift to digital channels",
+      "Analytical Observer: Risks naturalizing contingent choices as immutable technological progress"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Measured at high-moderate level. The constraint exhibits genuine coordination benefits (platforms enable service delivery that would otherwise be infeasible) alongside asymmetric extraction (complexity barriers, forced adoption, behavioral data harvesting, unpaid family support labor). The value reflects the mixed nature. Measurement trajectory (0.35 \u2192 0.58 over interval) shows accumulation of extraction mechanisms as platforms mature and legacy alternatives fade. Suppression (0.68): High suppression reflects multiple barriers to exit: cognitive decline reduces learning capacity, economic dependency makes digital access mandatory, physical mobility constraints limit in-person alternatives, lack of alternative service providers creates lock-in. Suppression is not absolute (some seniors adapt, some platforms offer accessibility features) but substantial. Theater ratio (0.55): Moderate theater reflects that legacy support infrastructure is increasingly performative while policy/infrastructure actively digitalize. Not high theater (which would indicate completely abandoned ritual) but substantial (phone support lines exist but are underfunded and encourage digital alternatives). Growth trajectory (0.35 \u2192 0.55) shows increasing gap between apparent support and actual capacity.",
+    "perspectival_gap": "The beneficiary (institutional platform) experiences rope \u2014 solving the coordination problem of service delivery, reducing infrastructure costs, enabling global scale. The trapped victim experiences snare \u2014 mandatory adoption with no alternatives and no escape. The moderate victim experiences tangled rope \u2014 has adapted to digital ecosystem but faces constant friction from redesigns and complexity. Family caregivers experience tangled rope \u2014 both enabled by services and burdened by unpaid support labor. Legacy support infrastructure appears as piton \u2014 performative gestures of support while functional capacity transfers to digital channels. The analytical observer risks seeing mountain \u2014 naturalizing digitalization as inevitable technological progress rather than examining contingent policy choices.",
+    "directionality_logic": "Directionality values (d) derive from structural position in the extraction flow. Trapped seniors (victims with zero exit options) have d \u2248 0.95, experiencing nearly full extraction. Tech-competent seniors (victims with moderate exit options) have d \u2248 0.70, experiencing substantial but not maximum extraction. Family caregivers (organized agents bearing unpaid labor) have d \u2248 0.65, experiencing moderate-high extraction mixed with coordination benefits. Platforms (beneficiaries with complete arbitrage options) have d \u2248 0.10, experiencing negative extraction (extraction flows toward them). Legacy support infrastructure (institutional beneficiaries with performance requirements) have d \u2248 0.05. The analytical observer (analytical position) has canonical d \u2248 0.73. These values feed into the sigmoid f(d) to produce effective extractiveness chi for each perspective, generating the full range of classifications from snare to rope.",
+    "mandatrophy_analysis": "Mandatrophy is NOT fully resolved (mandatrophy_resolved: false) because the constraint exhibits genuine coordination functions that could be emphasized to argue for rope classification, while also showing clear asymmetric extraction that supports snare classification. The resolution depends on which structural question is prioritized: (1) Are platforms genuinely solving coordination problems that have no alternative? (2) Are platforms actively maintaining suppression through design complexity to maximize extraction? If (1) is primary, the constraint is rope with extraction overlay = tangled rope. If (2) is primary, the constraint is snare disguised as coordination. The omega variables identify the empirical resolutions: simplified interface testing, service reversibility analysis, and platform feature utility measurement. Until these are resolved, both interpretations remain plausible. The mandatrophy indicates a real structural ambiguity, not a classification error \u2014 the constraint legitimately contains both coordination and extraction, and different perspectives weight them differently."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_divide_access",
+      "caregiving_labor_extraction",
+      "behavioral_data_harvesting"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.65
+    }
+  ]
+}

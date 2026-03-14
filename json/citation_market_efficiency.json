@@ -1,0 +1,231 @@
+{
+  "header": {
+    "constraint_id": "citation_market_efficiency",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cme"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Citation Market Efficiency Constraint",
+    "topic_domain": "academic_epistemology/incentive_structures",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_citation_authors",
+      "citation_aggregators",
+      "institutional_rankings"
+    ],
+    "victims": [
+      "field_methodological_diversity",
+      "citation_outliers",
+      "interdisciplinary_bridging"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Methodological Outsider",
+      "comment": "A researcher using heterodox, computationally expensive, or cross-disciplinary methods cannot generate citations at rates matching mainstream approaches. Trapped in citation scarcity; the methodology itself becomes a barrier to professional advancement. No exit without abandoning research identity."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "label": "Interdisciplinary Bridger",
+      "comment": "A researcher whose work bridges fields generates low citation impact in each field individually (divided citation pool) but cannot consolidate impact across disciplines. Professional identity fused with bridging work; exit would require disciplinary specialization and identity abandonment. Structurally mobile (could specialize) but identity-locked in the bridge role."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Field-Embedded Researcher",
+      "comment": "Embedded in an established research field with citations as coordination signal but also experiencing extraction through citation cartel effects: high-status labs set citation norms that others must follow. Benefits from field coordination; constrained by asymmetric citation power. Mixed experience."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "High-Citation Research Group",
+      "comment": "Institutions and individual researchers with established citation momentum experience citations as pure coordination: their work sets citation standards, their contributions get cited, their students benefit from citation network effects. Arbitrage position \u2014 can migrate between fields while maintaining citation advantage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Citation Aggregators and Ranking Systems",
+      "comment": "Publishers (Web of Science, Scopus), university rankings (QS, Shanghai), funding agencies benefit from citation concentration and amplification. Experience the constraint as coordination (measuring research quality) with extraction benefit (control of visibility and reputation allocation). Active enforcement of citation norms through index design."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Displaced Quality Metrics",
+      "comment": "Impact factor, h-index, and citation counts were designed as descriptive metrics of research impact. Their primary function (measuring research visibility) has been largely achieved and degraded into performative proxies. The actual quality signal has attenuated (gaming via citation networks, self-citation cartels, citation manipulation), but the metrics persist through institutional inertia. Theater ratio high because the metrics continue as quality proxies despite reduced discriminatory power."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Open Science and Alternative Metrics Coalition",
+      "comment": "Organized efforts (preprint servers, open-source peer review, altmetrics, code citation) are building alternative verification pathways that bypass or supplement citation impact. These see the citation market constraint as temporary and transitional. The coalition has agency and perceives a sunset: as alternative metrics mature and tool interoperability improves, citation concentration's extractive power declines. Sunset clause: 15-25 years as field diversification and transparent metrics normalize."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "The analytical observer at civilizational scope risks seeing citation dynamics as an immutable property of knowledge dissemination: any system that measures influence will create influence hierarchies; any hierarchy creates advantage concentration. This naturalizes what is actually a contingent design choice in how citations are counted, weighted, and aggregated. The engine will flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "citation_quality_signal_decay",
+      "question": "Has citation frequency decoupled from research quality due to gaming, cartel effects, and methodological irrelevance?",
+      "resolution_mechanism": "Longitudinal correlation analysis between citation counts and subsequent replications/confirmations; comparison of highly-cited vs moderately-cited papers in post-publication validation studies",
+      "impact": "If decoupling is high: citation efficiency is primarily extractive (snare classification strengthens). If correlation persists: citation efficiency retains genuine coordination function (rope/tangled_rope classification).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Citation quality signal decay from gaming and methodological irrelevance"
+    },
+    {
+      "id": "methodological_diversity_suppression_mechanism",
+      "question": "Is the suppression of non-mainstream methodologies structural (genuine difficulty publishing divergent approaches) or internalized (researchers self-censor to avoid citation penalties)?",
+      "resolution_mechanism": "Meta-analysis of rejection rates for heterodox vs mainstream methods controlling for quality; interviews with rejected researchers on perceived vs actual barriers",
+      "impact": "If structural: suppression is external, citation market extraction is high. If internalized: researchers carry suppression with them even when barriers are removed; effective suppression is higher than measured.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs internalized suppression of non-mainstream methods"
+    },
+    {
+      "id": "citation_cartel_detectability",
+      "question": "Are self-citation and citation cartels (coordinated citation between collaborating labs) detectable and distinguishable from legitimate field development?",
+      "resolution_mechanism": "Network analysis of citation patterns; statistical models of expected vs observed co-citation rates; investigation of citation behavior following funder audits or journal policy changes",
+      "impact": "If cartels are detectable: enforcement mechanisms can be tightened (increasing suppression but reducing extraction). If undetectable: cartels persist as hidden extraction mechanism (snare classification).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Detectability of citation cartels vs legitimate field coordination"
+    },
+    {
+      "id": "interdisciplinary_citation_pool_fragmentation",
+      "question": "Is the low citation impact of interdisciplinary work due to citation pool fragmentation (legitimate divided audience) or citation market failure (inability to recognize cross-disciplinary contributions)?",
+      "resolution_mechanism": "Field delineation analysis; comparison of citation impact for interdisciplinary papers vs field-specific papers controlling for novelty and quality metrics; tracking citations across disciplinary boundaries",
+      "impact": "If pool fragmentation: constraint is coordination problem (interdisciplinary work genuinely harder to cite due to audience size). If market failure: constraint is extractive (citation system fails to recognize value, extracting from bridging researchers).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Citation pool fragmentation vs interdisciplinary market failure"
+    },
+    {
+      "id": "identity_lock_formation_rate",
+      "question": "How rapidly do researchers internalize citation-optimization as professional identity, making exit from mainstream paths psychologically impossible even when materially feasible?",
+      "resolution_mechanism": "Longitudinal career tracking; qualitative research on researcher self-concept; analysis of career transitions following citation metric failures or methodology shifts",
+      "impact": "High identity-lock rate strengthens identity_locked classification and indicates deeper extractive mechanism (internalized suppression). Low rate suggests exit is more available than trapped/identity_locked perspectives suggest.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Rate of identity-lock formation in citation-optimization professionals"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The citation market constraint operates at the boundary between legitimate scientific coordination (using citations to signal relevance and build knowledge networks) and extractive hierarchy formation (using citation concentration to allocate career and funding advantages). Over the 30-year observation interval, the constraint has shifted from modest coordination mechanism (extractiveness 0.32, theater 0.42) to a mixed tangled-rope system with increasing extractive character (extractiveness 0.58, theater 0.68). The shift reflects three structural changes: (1) citation metrics became linked to funding and hiring decisions, creating financial incentives to game citations; (2) research has become increasingly specialized and siloed, making genuine cross-disciplinary citation rarer and hence citation scarcity more acute in outlier fields; (3) citation aggregators (publishers, ranking agencies) have centralized control of citation visibility, enabling selective amplification. The constraint is not uniformly experienced: high-citation researchers in mainstream fields see citations as pure coordination (rope), citation aggregators see them as tools for deserved influence allocation (institutional arbitrage), but researchers using non-standard methods or bridging disciplines see citations as an extractive mechanism from which they cannot exit. The theater ratio increase (0.42 \u2192 0.68) reflects that citation counts increasingly serve as performance metrics decoupled from research quality \u2014 the counting ritual persists even when the signal has degraded.",
+    "key_agents": [
+      "High-Citation Authors and Established Labs: Primary beneficiary (institutional/arbitrage) \u2014 benefit from citation network effects and norm-setting power; can set citation standards others follow",
+      "Field Methodological Outsiders: Primary victim (powerless/trapped) \u2014 cannot generate citations at rates matching mainstream approaches; trapped by methodological choice",
+      "Interdisciplinary Bridgers: Primary victim (powerless/identity_locked) \u2014 structurally mobile but identity-fused with bridging work; exit requires disciplinary specialization and identity abandonment",
+      "Field-Embedded Researchers: Secondary victim (moderate/constrained) \u2014 benefit from field coordination but experience extraction through citation cartel effects and norm hierarchies",
+      "Citation Aggregators: Institutional beneficiary (institutional/arbitrage) \u2014 control visibility and reputation allocation; benefit from citation concentration through rankings and index power",
+      "Open Science Coalition: Organized agents (organized/constrained) \u2014 building alternative metrics and verification pathways; see citation extraction as temporary and transitional",
+      "Quality Metric Infrastructure: Piton actor (powerful/mobile) \u2014 measures like h-index and impact factor were designed as descriptive tools but degrade into performative proxies maintained by institutional inertia",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent citation design choices as immutable properties of knowledge dissemination"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, reflecting significant asymmetric benefit accumulation. High-citation researchers and institutional actors benefit disproportionately; outlier methodologies and interdisciplinary work bear costs. The constraint extracts through cartel effects (coordinated citation among collaborators), self-citation optimization, and metric gaming. However, extractiveness is not at snare levels (>0.66) because citations also retain genuine coordination function \u2014 they do signal relevance and enable field development. Suppression (0.65): High. Barriers to exit include institutional hiring practices linked to citation metrics, funding agency reliance on citation profiles, journal prestige hierarchies driven by citation indices, and the self-reinforcing nature of citation advantage (cited authors' subsequent work gets cited more, creating path dependence). Suppression is both structural (external metrics and hiring systems) and internalized (researchers self-censor to avoid low-citation risk). Theater ratio (0.68): High. Citation metrics are increasingly performative \u2014 researchers optimize citation counts through strategic collaborations, self-citation, citation cartels, and metric gaming rather than pursuing research quality. The performative content has grown as researchers' understanding of citation dynamics has improved. Claimed type (tangled_rope): Justified by presence of genuine coordination function (citations enable field development and network formation) alongside significant asymmetric extraction (citation concentration determines career and funding outcomes).",
+    "perspectival_gap": "The gap between beneficiary rope and victim snare classifications reveals that citation efficiency is not uniformly experienced. The same constraint produces opposite classifications depending on structural position. This gap is diagnostic: if all perspectives produced tangled_rope, the constraint would be genuinely mixed. But snare dominates for trapped/identity_locked victims while rope dominates for arbitrage beneficiaries, revealing that the constraint's primary function is not coordination but distribution of hierarchical advantage. The gap is bridged by the open science scaffold: as alternative metrics and institutional diversification proceed, the constraint shifts from pure extraction toward genuine coordination or toward piton degradation.",
+    "directionality_logic": "Directionality values flow from structural position: beneficiaries (high-citation authors, aggregators) with arbitrage options experience low d (0.05-0.20), yielding low or negative effective extraction. Victims (methodological outsiders, bridgers) with trapped or identity_locked options experience high d (0.85-0.95), yielding high effective extraction. Field-embedded researchers with constrained options experience moderate d (0.55-0.65). The sigmoid f(d) amplifies these differences via the chi formula: beneficiary d \u2248 0.15 \u2192 f(d) \u2248 -0.01 \u2192 low chi; victim d \u2248 0.90 \u2192 f(d) \u2248 1.35 \u2192 high chi. The unified institutional perspective (aggregators) differs from field-embedded researchers despite both being nominal moderates because their structural positions differ: aggregators set citation rules (arbitrage), field researchers follow rules (constrained). The engine computes separate d values for each structural position.",
+    "mandatrophy_analysis": "The mandatrophy resolution here hinges on distinguishing citation efficiency as a coordination mechanism (pure rope) from citation efficiency as a wealth/status extraction mechanism (tangled_rope or snare). The temptation is to classify it as pure rope: 'Citations coordinate scientific work by signaling relevance and enabling cumulative knowledge building.' This is true but incomplete. The constraint ALSO enables extraction: citation concentration determines funding, hiring, prestige, and career outcomes in asymmetric ways that trap non-mainstream researchers. The classification must capture both functions. Tangled rope is correct at the moderate institutional level because genuine coordination coexists with asymmetric extraction. But the perspectival frame is critical: from the high-citation group's view, the extraction is not experienced (rope); from the outsider's view, the extraction is all they experience (snare). The engine resolves mandatrophy by showing that all three types (rope, tangled_rope, snare) are structurally legitimate perspectives on the same constraint. The false mountain perspective (natural law of knowledge dissemination) is correctly flagged: citation hierarchy concentration is a contingent institutional choice, not an immutable property."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "research_funding_allocation",
+      "academic_hiring_practices",
+      "journal_prestige_hierarchy",
+      "knowledge_siloization"
+    ],
+    "dual_formulation_note": "Citation market efficiency is upstream of and interdependent with research funding allocation and academic hiring. These constraints share beneficiaries (high-citation institutions and researchers) and victims (non-mainstream methodologies and interdisciplinary work). Network edges represent causal dependency: citation metrics feed into funding decisions (downstream) and hiring practices (downstream), which in turn reinforce citation concentration through resource allocation. Decomposition into separate stories is not needed \u2014 the citation market is the primary constraint; funding and hiring are enforcement mechanisms downstream."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ]
+}

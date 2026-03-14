@@ -1,0 +1,205 @@
+{
+  "header": {
+    "constraint_id": "digital_preservation_standardization",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "digpres"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Digital Preservation Standardization Regime",
+    "topic_domain": "cultural_heritage/information_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "standards_bodies",
+      "institutional_repositories",
+      "commercial_preservation_vendors"
+    ],
+    "victims": [
+      "small_archives",
+      "community_collections",
+      "marginalized_cultural_producers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Small Community Archives",
+      "comment": "PERSPECTIVE 1: SMALL COMMUNITY ARCHIVES (SNARE) \u2014 Trapped by lack of technical capacity and funding. Forced to adopt standards they did not design and cannot modify. No alternative preservation pathways available. Maximum extraction: comply with expensive standards or lose digital materials to bit rot. No coordination benefit \u2014 the standards exist to serve institutional repositories, not to solve community-level problems."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Mid-Scale Cultural Institutions",
+      "comment": "PERSPECTIVE 2: MID-SCALE CULTURAL INSTITUTIONS (TANGLED ROPE) \u2014 Genuinely benefit from standardization: interoperability with other institutions, shared tooling, reduced reinvention cost. BUT face significant extraction: expensive compliance audits, vendor lock-in through proprietary implementations of standards, forced upgrades. Exit is constrained by dependency on preserved materials and institutional reputation \u2014 cannot abandon preservation without losing collections."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Standards Bodies and Large Repositories",
+      "comment": "PERSPECTIVE 3: STANDARDS BODIES AND LARGE REPOSITORIES (ROPE) \u2014 Primary beneficiaries. Set standards that advantage their own technical infrastructure. Experience the constraint as pure coordination: standardization enables interoperability that benefits them directly. Arbitrage option allows them to shift between standards if needed. Net positive extraction flow."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Open Preservation Movement",
+      "comment": "PERSPECTIVE 4: OPEN PRESERVATION MOVEMENT (SCAFFOLD) \u2014 Organized agents (NDIIPP, Internet Archive, community digitization projects) see standardization as a temporary problem with a sunset: open-source preservation tools, decentralized storage, and lightweight alternative standards are creating exit pathways. Theater low because this perspective values functional redundancy over compliance theater. Sunset mechanism: maturation of federated, non-commercial preservation infrastructure in 15-25 years."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Standards Committees",
+      "comment": "PERSPECTIVE 5: LEGACY STANDARDS COMMITTEES (PITON) \u2014 Obsolete standards (OAIS, MIAOU) persist through institutional inertia despite being superseded by practice. Committees maintain standards that nobody actually implements fully, generating compliance theater. Low extractiveness because the standards have lost functional force, but high theater because institutional actors continue performing compliance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Commercial Preservation Vendors",
+      "comment": "PERSPECTIVE 6: COMMERCIAL PRESERVATION VENDORS (TANGLED ROPE) \u2014 Provide genuine coordination function: technical capacity that cash-poor institutions cannot develop internally. BUT extract through proprietary implementations, vendor lock-in, and perpetual licensing. Arbitrage option means they can shift to other market sectors; extraction is profitable but not total. They benefit from standardization because it creates compliance demand."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, standardization appears immutable: coordinating diverse preservation systems requires shared formats and protocols; this is an unavoidable constraint on any complex information system. However, the base properties contradict the mountain classification \u2014 the constraint exhibits suppression (0.42), theater (0.58), and active enforcement, all of which point to institutional contingency rather than natural law. The engine will detect this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "decentralization_viability",
+      "question": "Can fully decentralized preservation (no central standards, federated redundancy) maintain data integrity and findability at scale?",
+      "resolution_mechanism": "Empirical testing of community-operated decentralized archives; comparison of bit-rot rates, metadata preservation, and discovery effectiveness against centralized standardized systems over 10+ years",
+      "impact": "If viable: scaffold perspective confirmed \u2014 standardization regime is temporary, and sunset mechanism is real. If not viable: standardization appears more structurally necessary, and open preservation movement's exit pathway is aspirational rather than realistic.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether fully decentralized preservation infrastructure can maintain integrity at scale"
+    },
+    {
+      "id": "compliance_vs_functionality",
+      "question": "What proportion of institutional preservation labor goes to compliance theater (audits, documentation, format migration) versus actual bit-preservation and access functions?",
+      "resolution_mechanism": "Cost accounting analysis across 20+ institutions of staff time allocation: compliance/audit vs. storage/maintenance vs. access/discovery. Correlation between audit rigor and actual preservation success rates.",
+      "impact": "If compliance >> functionality: theater ratio is understated, and piton classification is stronger. If compliance \u2248 functionality: theater is legitimately justified, and standard implementations have lower performance cost than assessed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of preservation effort devoted to compliance vs. actual preservation"
+    },
+    {
+      "id": "proprietary_standard_lock_in",
+      "question": "Are commercial implementations of open preservation standards genuinely interoperable, or do they fragment into incompatible proprietary dialects that entrench vendor lock-in?",
+      "resolution_mechanism": "Compatibility testing across vendor implementations; cost analysis of migrating between vendors; frequency of de facto standard fragmentation (where vendors implement different subsets or extensions).",
+      "impact": "If genuine interoperability: extraction mechanism is weaker than assessed, and tangled_rope classification is appropriate. If fragmentation: extraction through lock-in is higher, and snare classification may be more accurate for mid-scale institutions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether commercial implementations maintain genuine interoperability or fragment into proprietary variants"
+    },
+    {
+      "id": "format_obsolescence_cascades",
+      "question": "Do digital preservation standards themselves become obsolete faster than the materials they preserve? Is the standard-compliance cycle a permanent treadmill or a temporary calibration phase?",
+      "resolution_mechanism": "Historical analysis of standard lifespans (OAIS, MIAOU, etc.); measurement of format migration frequency vs. material preservation timescale; analysis of cumulative compliance cost across standard generations.",
+      "impact": "If standards obsolete faster than materials: the constraint itself becomes unstable, and scaffold/piton dynamics dominate. If standards provide stable long-term framework: extraction through compliance treadmill is genuine, and snare classification may be understated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether preservation standards become obsolete faster than the materials they preserve"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "commentary": {
+    "narrative_context": "Digital preservation standardization emerged in the 1990s-2000s as a genuine coordination response to the challenge of maintaining digital materials across technical obsolescence, format migration, and organizational change. OAIS (Open Archival Information System), MIAOU, and subsequent standards provided frameworks for describing preservation metadata, storage architectures, and integrity checking. However, over the past 15 years, the standardization regime has accumulated extraction mechanisms: compliance audits that measure theater rather than preservation success, vendor lock-in through proprietary implementations of open standards, vendor consolidation that reduces choice, and perpetual standard upgrades that force institutional rearchitecture. Simultaneously, decentralized alternatives have emerged (federated storage, content-addressed archives, community-operated preservation networks) that challenge the assumption that standardization is structurally necessary. The constraint now exhibits a hybrid character: genuine coordination value (institutions do benefit from interoperability and shared tooling) layered with asymmetric extraction (standards designed to advantage large institutional repositories and commercial vendors while imposing disproportionate compliance burden on small and community-operated archives). Theater ratio has risen from 0.35 (functional preservation focus) to 0.58 (compliance-audit focus) over 14 years, indicating that the regime has drifted from solving preservation problems toward maintaining the standardization infrastructure itself.",
+    "key_agents": [
+      "Standards Bodies (institutional/arbitrage): Set preservation standards; primary beneficiaries of regime; design standards that advantage their own infrastructure",
+      "Large Institutional Repositories (institutional/arbitrage): Benefit from interoperability and shared development costs; have capacity to implement standards; can shift between standards if needed",
+      "Commercial Preservation Vendors (powerful/arbitrage): Provide technical capacity; extract through proprietary implementations and vendor lock-in; genuine coordination function but also genuine extraction",
+      "Mid-Scale Cultural Institutions (moderate/constrained): Benefit from standardization but face expensive compliance; constrained by dependency on preserved materials; cannot easily exit",
+      "Small Community Archives (powerless/trapped): Lack technical and financial capacity; forced to comply with standards designed by and for larger institutions; trapped by absence of alternative preservation pathways",
+      "Marginalized Cultural Producers (powerless/identity_locked): Culturally specific archival practices may not map onto standardized preservation categories; identity-fused with non-standardized preservation methods; standards implicitly encode dominant-culture preservation practices",
+      "Open Preservation Movement (organized/mobile): Internet Archive, NDIIPP, community digitization projects; see standardization as temporary problem with exit pathways; building decentralized alternatives",
+      "Analytical Observer: Risks naturalizing contingent institutional standardization as immutable requirement for preserving digital materials"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint combines genuine coordination benefits (interoperability, shared tools, reduced reinvention) with real extraction mechanisms (vendor lock-in, compliance theater, design bias toward large institutions). The intermediate value reflects that beneficiaries experience net positive flow while victims experience net negative flow. Extractiveness has risen over the interval (0.22 \u2192 0.38) as vendor consolidation and compliance bureaucracy have grown relative to functional preservation benefits. Suppression (0.42): Moderate. Barriers to independent preservation include technical expertise requirements, storage infrastructure costs, and implicit assumption that preservation requires compliance with formal standards. However, suppression is not total \u2014 some communities operate effective alternative preservation systems (community digitization projects, federated storage, lightweight standards). Suppression is structural but not inevitable. Theater ratio (0.58): High and rising. Much institutional preservation labor goes to compliance documentation, audit preparation, and format conformance verification \u2014 activities that measure standardization adherence rather than actual preservation success (bit integrity, access longevity, discovery effectiveness). The rise from 0.35 to 0.58 indicates drift from solving preservation problems toward performing compliance with the standardization regime. Standard implementations are increasingly complex, generating professional specialization (preservation engineers) that depends on the regime's continued authority.",
+    "perspectival_gap": "The seven perspectives span the full classification spectrum because different agents have radically different structural relationships to the same constraint. The beneficiaries (standards bodies, large repositories, vendors) see coordination value and net positive flow. The mid-scale institutions see mixed coordination and extraction. The victims (small archives, marginalized communities) see extraction with minimal coordination benefit. The organized alternatives movement sees a temporary structure with a viable exit pathway. The legacy standards committees see their own work as partially degraded through obsolescence and institutional inertia. The civilizational analytical observer risks naturalizing a contingent institutional arrangement as an immutable requirement. The perspectival gap is diagnostic: it reveals that 'digital preservation standardization' is not a single structural phenomenon but an asymmetric extraction regime layered on top of a genuine coordination need. Coordination (interoperability benefits) is real and benefits large institutions. Extraction (compliance burden, design bias, vendor lock-in) is also real and harms small and marginalized institutions. Both perspectives are empirically justified.",
+    "directionality_logic": "Directionality values are derived from beneficiary/victim declarations and exit options using the standard pipeline. Standards bodies and large repositories are beneficiaries with arbitrage exit options: d \u2248 0.15-0.20 (low, negative effective extraction). Mid-scale institutions are both beneficiary and victim with constrained exit: d \u2248 0.50-0.55 (symmetric). Small archives are victims with trapped exit: d \u2248 0.85-0.95 (high, maximum effective extraction from their perspective). Marginalized cultural producers add identity_locked exit option (d \u2248 0.88-0.92, identity-locked victims cannot exercise structural exit because doing so would require abandoning culturally-specific preservation practices). Open preservation movement is organized with mobile exit: d \u2248 0.45-0.55 (moderate). These directionality values feed the sigmoid f(d) to produce effective extractiveness chi = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S). For victims with trapped exit (d \u2248 0.90), f(d) \u2248 1.35, so chi \u2248 0.38 \u00d7 1.35 \u00d7 1.0 \u2248 0.51 (snare range). For beneficiaries with arbitrage (d \u2248 0.15), f(d) \u2248 -0.01, so chi \u2248 0.38 \u00d7 (-0.01) \u00d7 1.0 \u2248 -0.004 (rope range). For analysts, chi \u2248 0.38 \u00d7 1.15 \u00d7 1.0 \u2248 0.44 (tangled rope range). The directionality pipeline explains why the same base extractiveness produces snare for victims, rope for beneficiaries, and tangled rope for analytical observers.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy through perspectival decomposition. The mandatrophy question is 'Is standardization primarily a coordination mechanism or primarily extraction?' The answer is: both, for different agents. For large institutional repositories and standards bodies, standardization is primarily coordination (Rope from their perspective). For small archives and marginalized cultural producers, standardization is primarily extraction (Snare from their perspective). For vendors, it is profitable coordination (Tangled Rope). For the open preservation movement, it is a temporary structure being obsoleted by decentralized alternatives (Scaffold). The resolution is not to declare one perspective correct and the others wrong, but to recognize that the constraint is genuinely hybrid in structure: it provides coordination value that large institutions benefit from, while imposing extraction burden that small and marginalized institutions bear. The 'resolution' of the mandatrophy is to design the standardization regime to distribute coordination benefits more broadly and extraction burden more proportionally \u2014 to shift from benefiting large institutions at the expense of small institutions toward a more symmetric structure. This is a policy recommendation, not a classification correction."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_format_obsolescence",
+      "institutional_repository_consolidation",
+      "vendor_lock_in_preservation_services"
+    ],
+    "dual_formulation_note": "Digital preservation standardization decomposes into three structurally distinct constraints with different \u03b5 values: (1) the genuine coordination problem (formats, metadata, integrity checking) which is necessary and relatively stable; (2) the vendor lock-in extraction mechanism which arises through proprietary implementations of open standards; (3) the compliance theater drift which accumulates as legacy standards persist through inertia. This story addresses the hybrid tangled_rope at the aggregate level. Upstream: format obsolescence (external constraint driving standardization demand). Downstream: institutional consolidation and vendor market concentration (consequences of standardization regime)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.52
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "dublin_wage_suppression",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dws"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dublin Wage Suppression via Rental Extraction",
+    "topic_domain": "economic/labor/housing",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "landlord_class",
+      "real_estate_investors",
+      "property_development_sector"
+    ],
+    "victims": [
+      "dublin_workers",
+      "service_sector_employees"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Dublin Service Sector Worker",
+      "comment": "PERSPECTIVE 1: DUBLIN SERVICE WORKER (SNARE) \u2014 Trapped in Dublin labor market by employment location; faces extraction through high rental costs that consume 45-60% of wages. No real exit: geographic relocation breaks career/social networks; remote work unavailable in hospitality/retail sectors. Suppression operates through housing scarcity and planning restrictions that artificially limit supply. Maximum experienced extraction \u2014 zero degrees of freedom."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Organized Labor (Union-Adjacent)",
+      "comment": "PERSPECTIVE 2: ORGANIZED LABOR (TANGLED ROPE) \u2014 Constrained by sector fragmentation and geographic mobility costs. Benefits from labor coordination mechanisms and some wage negotiation leverage in tourism/hospitality. But wage gains are systematically extracted through rental inflation \u2014 nominal wage increases translate to zero real income growth. Mixed experience: some coordination function (collective bargaining) alongside asymmetric extraction (housing rents rising faster than negotiated wages)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Property Development Sector",
+      "comment": "PERSPECTIVE 3: PROPERTY DEVELOPER (ROPE) \u2014 Experiences the constraint as pure coordination: planning frameworks, housing permits, and development incentives solve the genuine collective problem of housing supply. But the coordination is asymmetric \u2014 developers capture long-term value extraction through scarcity rents and land appreciation. Net beneficiary with low experienced extraction (they are extractors, not targets)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Dublin City Council (Planning Authority)",
+      "comment": "PERSPECTIVE 4: DUBLIN CITY COUNCIL (PITON) \u2014 Maintains planning restrictions ostensibly to preserve character and manage growth, but these same restrictions artificially constrain housing supply and drive rents up. The planning ritual persists through institutional inertia; the original coordination function (controlled urban development) has atrophied while the extraction mechanism (scarcity rents) remains. Theater ratio reflects performative consultation processes that lack real power to expand housing stock."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Community Housing Advocates",
+      "comment": "PERSPECTIVE 5: COMMUNITY HOUSING ADVOCATES (TANGLED ROPE) \u2014 Organized agents (housing charities, tenant unions, policy groups) see genuine coordination function: co-housing models, community land trusts, and social housing coordinate resource allocation. But these alternatives face extraction through underinvestment, political marginalization, and regulatory friction. The constraint contains both a coordination mechanism they're trying to build (affordable housing) and the extraction mechanism that suppresses it (market rents outpacing community options)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Housing First Policy Advocates",
+      "comment": "PERSPECTIVE 6: HOUSING FIRST / POLICY REFORMERS (SCAFFOLD) \u2014 See the wage suppression as a temporary institutional problem with an exit path: rent controls, property taxes on non-primary residences, vacant property levies, and rapid social housing deployment can bypass the extraction mechanism within 10-15 year window. Low effective extraction because this coalition perceives and is acting on a sunset clause \u2014 if reforms succeed, the constraint's extraction power collapses. Theater ratio lower here because policy intervention is outcome-oriented rather than performative."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Market Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / MARKET NATURAL LAW (MOUNTAIN) \u2014 From a civilizational perspective, the constraint could be read as an immutable natural law: cities generate scarcity rents; land supply is finite; property values rise with population density. However, this naturalizes contingent institutional arrangements (planning restrictions, zoning regulations, investment tax policy, foreign capital inflows) as laws of physics. The engine's false summit detector will flag this \u2014 wage suppression in Dublin is not natural law but political economy."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "planning_restriction_justification",
+      "question": "How much of Dublin's housing scarcity reflects genuine preservation needs vs. regulatory capture by existing property owners?",
+      "resolution_mechanism": "Comparative analysis: cities with similar architectural/heritage value but different planning regimes; cross-national density/rent correlations; analysis of planning objection source data",
+      "impact": "If genuine: constraint may shift toward rope (coordination problem). If regulatory capture: constraint remains snare/tangled_rope with high extraction. Determines whether planning reform is feasible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether planning restrictions serve heritage preservation or property owner capture"
+    },
+    {
+      "id": "wage_elasticity_to_housing_cost",
+      "question": "Are Dublin nominal wages depressed *because* of high housing costs, or do high housing costs simply consume pre-existing wage levels?",
+      "resolution_mechanism": "Time-series analysis of wage growth vs rent growth; comparison with equivalent workers in lower-rent cities; survey of employer wage-setting rationales",
+      "impact": "If causal (high rents suppress wages): extraction is multiplicative \u2014 workers lose both to rent and to lower nominal wages. If consumption (wages are independent; rents consume them): extraction is additive \u2014 rental extraction only.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal direction between rental costs and wage suppression"
+    },
+    {
+      "id": "foreign_capital_role",
+      "question": "What proportion of Dublin property ownership is foreign/non-resident capital vs. domestic landlords? Does this affect extraction mechanism?",
+      "resolution_mechanism": "Ownership registry analysis; corporate structure tracing; comparison of rent extraction rates by owner type; capital flow tracing",
+      "impact": "If predominantly foreign: extraction is capital flight (rents leave Ireland). If domestic: extraction is wealth redistribution within local system. If mixed: determines dual pathology (labor exploitation + capital flight).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion and role of foreign capital in Dublin property extraction"
+    },
+    {
+      "id": "identity_lock_housing_aspiration",
+      "question": "To what extent does housing aspiration (owner-occupancy as identity goal) bind workers to accepting wage suppression?",
+      "resolution_mechanism": "Survey: what percentage of Dublin workers see home ownership as central to identity/social standing? Compare with cities where renting is de-stigmatized. Measure willingness to relocate if renting is viewed as temporary vs. permanent.",
+      "impact": "If high identity fusion with ownership: workers accept suppressed wages to save for down payments; identity lock is additional suppression mechanism. If low: workers more mobile and more likely to exit. Determines whether reform must address identity framing or just material barriers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Identity fusion between homeownership aspiration and wage suppression acceptance"
+    },
+    {
+      "id": "supply_elasticity_timing",
+      "question": "How long would it take for housing supply to respond to price signals if planning restrictions were removed? What is the realistic sunset timeline?",
+      "resolution_mechanism": "Construction industry capacity analysis; permitting timelines; land assembly costs; comparison with rapid housing deployments in other cities (Seoul, Singapore, Vienna)",
+      "impact": "If short timeline (3-5 years): scaffold perspective is accurate, sunset clause is real. If long timeline (15+ years): scaffold is aspirational, extraction persists across generational horizon.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Supply response timeline and realism of housing-reform sunset clause"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Dublin's wage suppression operates through a tangled coordination-extraction hybrid: housing supply constraints create artificial scarcity rents that consume worker income faster than nominal wages can rise, while planning restrictions and development incentive structures ostensibly coordinate urban growth but actually concentrate wealth extraction in the property sector. Workers face suppressed real wages (nominal increases consumed by rental inflation), landlords and developers benefit from scarcity rents and land appreciation, and policy authorities maintain planning theaters that produce the appearance of growth management while enabling extraction. The constraint is neither pure coordination (genuine housing-supply problem exists) nor pure extraction (some actors genuinely benefit from coordinated development frameworks), but rather a hybrid where coordination mechanisms have been captured and repurposed for asymmetric extraction. Extractiveness has risen from 0.38 to 0.58 over the measurement interval as rental inflation accelerated faster than wage growth.",
+    "key_agents": [
+      "Dublin Service Sector Workers: Primary victims (powerless/trapped) \u2014 hospitality, retail, care workers earning \u20ac25k-35k/year while median rent is \u20ac1,600/month; geographic immobility due to sector location requirements",
+      "Property Owners and Developers: Primary beneficiaries (institutional/arbitrage) \u2014 capture appreciation and rental extraction; benefit from planning frameworks that limit competition",
+      "Dublin City Council and Planning Authority: Secondary institutional actor (institutional/arbitrage) \u2014 maintains planning restrictions; sees coordination function but enables extraction through scarcity",
+      "Organized Labor Unions: Secondary actors (organized/constrained) \u2014 achieve nominal wage gains that are immediately consumed by rental inflation; constrained by sector fragmentation",
+      "Community Housing Advocates: Organized challengers (organized/constrained) \u2014 building alternative coordination models (co-housing, CLTs, social housing) but face extraction through market pressure and underinvestment",
+      "Policy Reform Coalition: Institutional reformers (organized/constrained) \u2014 see scaffold exit path through rent controls, vacant property levies, rapid social housing; represent genuine alternative coordination"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts through rental inflation that outpaces wage growth; this extraction is material and measurable. The value reflects that this is not total extraction (workers can survive, some save, some negotiate modest raises) but substantial enough that real income stagnates despite nominal wage increases. The upward trajectory (0.38\u21920.58) reflects accelerating Dublin rents outpacing service-sector wage growth. Suppression (0.68): High. Multiple reinforcing barriers prevent exit: sector workers face geographic immobility (hospitality jobs are location-specific), career switching costs, social network ties to Dublin, and the aspiration to own property (identity-lock component). Planning restrictions artificially limit housing supply, making relocation to cheaper cities also difficult (same scarcity-rent dynamics replicate across Irish regional capitals). Theater ratio (0.52): Moderate. Planning consultations and development boards create performative appearance of coordinated growth management, but actual decisions track investment incentives and existing-owner preferences. The theater is not high (actual planning does occur, some projects are blocked, some limits are enforced) but sufficient to obscure the extraction mechanism.",
+    "perspectival_gap": "The gap between worker and developer perspectives is maximal: 0.95 d-value (snare) vs 0.15 d-value (rope). Both experience the same constraint (Dublin housing scarcity, planning restrictions, rental costs) but through completely different structural relationships. The worker's real income stagnates; the developer's wealth appreciates. The worker cannot exit; the developer can exit or arbitrage. The planning authority's perspective reveals the piton mechanism: the planning apparatus maintains a coordination fiction (managing growth) while enabling extraction (concentrating land appreciation). The reformer's scaffold perspective hinges on the omega variable about supply elasticity \u2014 if housing can be deployed quickly post-reform, the sunset is real; if not, the scaffold is aspirational theater. The mountain perspective represents the risk of naturalizing political economy (scarcity rents, planning capture, land value concentration) as natural laws of urban economics.",
+    "directionality_logic": "Directionality flows from structural position. Workers are primary targets (beneficiary/victim declarations: victim status; exit_options trapped). Landlords/developers are primary beneficiaries (beneficiary status; exit_options arbitrage \u2192 low d \u2192 negative effective extraction). Organized labor occupies middle position (victim status due to wage suppression; exit_options constrained \u2192 moderate d \u2192 moderate f(d)). Planning authorities are secondary beneficiaries in their institutional capacity (arbitrage via rent extraction to connected parties; though individual planners may not benefit). The derivation produces high d for trapped agents, low d for institutional beneficiaries, and moderate d for constrained agents. The directionality_overrides array is empty because the structural derivation captures the true relationships: workers bear extraction via high d, beneficiaries experience low/negative extraction via low d.",
+    "mandatrophy_analysis": "Dublin wage suppression resolves mandatrophy by clarifying that tangled rope classification captures what pure classification types would miss: this is neither 'just coordination' (planning frameworks do address real housing-supply issues) nor 'just extraction' (the rental extraction is enabled by a coordination mechanism, not independent of it). The mandatrophy resolution shows that the tangled rope is the correct type because: (1) genuine coordination function exists (planning manages density, preserves character, coordinates infrastructure); (2) asymmetric extraction exists (landlords/developers capture appreciation; workers bear scarcity costs); (3) active enforcement is required (planning permission blocks alternatives; zoning prevents development; tax incentives favor investment property). The piton perspective on planning authorities is diagnostically important: it reveals that enforcement itself has become performative \u2014 planning rituals produce the appearance of coordination while the extraction mechanism remains. The scaffold perspective identifies the key mandatrophy resolution: if Housing First policies succeed, the constraint's extractiveness collapses because the artificial scarcity that enables both the coordination fiction and the extraction mechanism is removed. The mountain perspective is correctly flagged as false summit \u2014 market scarcity is not natural law but political economy."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "irish_housing_affordability_crisis",
+      "service_sector_wage_stagnation_eu",
+      "planning_regulatory_capture"
+    ],
+    "dual_formulation_note": "Dublin wage suppression decomposes into three structurally linked constraints: (1) housing_scarcity_extraction (\u03b5=0.62, snare from worker perspective), (2) planning_regulatory_capture (\u03b5=0.55, piton), (3) investment_property_subsidies (\u03b5=0.48, rope from developer perspective). Each has distinct \u03b5 and metrics but they are coupled through the housing market. This story represents the integrated system; downstream constraints represent structural components."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "medium_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "irish_housing_affordability_crisis"
+    ]
+  }
+}

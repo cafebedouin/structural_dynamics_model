@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "antiarrhythmic_guideline_compliance",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "antiarr"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Antiarrhythmic Guideline Compliance in Clinical Practice",
+    "topic_domain": "clinical_medicine/cardiology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "guideline_publishing_organizations",
+      "hospital_administration",
+      "device_manufacturers"
+    ],
+    "victims": [
+      "clinical_discretion",
+      "patient_individualization",
+      "resource_constrained_facilities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Resource-Constrained Facility",
+      "comment": "PERSPECTIVE 1: RESOURCE-CONSTRAINED FACILITY (SNARE) \u2014 Trapped by liability doctrine and accreditation requirements to follow guidelines regardless of local capacity. Cannot afford specialized equipment or staff training mandated by guidelines; bears cost of compliance without ability to negotiate or exit. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Bedside Cardiologist",
+      "comment": "PERSPECTIVE 2: BEDSIDE CARDIOLOGIST (TANGLED ROPE) \u2014 Constrained by malpractice liability, licensure boards, and institutional credentialing to follow guidelines. Genuine coordination benefit: guidelines reduce decision paralysis and distribute risk. But also bears extraction: rigid protocols undermine clinical judgment for edge cases; administrative burden increases with each new guideline version; time spent on documentation rather than patient care."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Guideline Publishing Organization",
+      "comment": "PERSPECTIVE 3: GUIDELINE PUBLISHING ORGANIZATION (ROPE) \u2014 Benefits from guideline adoption (institutional prestige, influence over practice, research funding tied to guideline implementation). Experiences constraint as coordination: disseminating evidence-based standards solves the collective action problem of heterogeneous treatment practices. Net beneficiary with arbitrage exit (can publish competing guidelines, shift specialty focus)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Device Manufacturer",
+      "comment": "PERSPECTIVE 4: DEVICE MANUFACTURER (TANGLED ROPE) \u2014 Coordinates market through guideline recommendations (predictable demand for approved devices). Also extracts: guidelines accelerate market consolidation, favor branded solutions over generic alternatives, create adoption lock-in. Powerful agents with exit through regulatory arbitrage (international markets, off-label indications)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Clinical Evidence Synthesis Movement",
+      "comment": "PERSPECTIVE 5: CLINICAL EVIDENCE SYNTHESIS MOVEMENT (SCAFFOLD) \u2014 Organized agents (academic centers, open-science consortia) developing machine learning-based real-time guideline synthesis that bypasses traditional guideline rigidity. Low extraction because the coalition sees exit: continuous evidence updates and individualized risk models could replace static guidelines. Sunset clause: as AI-driven decision support matures, guideline-dependent compliance becomes unnecessary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Joint Commission and Accreditation Bodies",
+      "comment": "PERSPECTIVE 6: JOINT COMMISSION AND ACCREDITATION (PITON) \u2014 Maintains guideline compliance as a core accreditation metric through institutional inertia. Theater ratio is high: accreditation inspectors audit documentation of guideline adherence, not patient outcomes. The real verification mechanism (outcome tracking) is decoupled from the performative requirement (documented compliance). Accreditation bodies benefit from the clarity guidelines provide but the compliance theater persists because the institutional machinery is locked in."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, medical standardization might appear as an inherent requirement of scaling clinical care: complex knowledge cannot be transmitted without protocols, and variance in treatment undermines learning. However, this naturalizes a contingent institutional choice (static guidelines + liability-driven compliance) as a natural law. The false summit detector will identify this as inappropriate naturalization \u2014 alternative mechanisms (continuous evidence synthesis, outcome-driven local protocols, shared decision-making frameworks) demonstrate that standardization need not require guideline rigidity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "guideline_evidence_lag",
+      "question": "How much extraction is driven by the 3-5 year lag between clinical evidence publication and guideline updating versus the coordination value of standardization?",
+      "resolution_mechanism": "Retrospective analysis of guideline recommendations versus contemporary evidence quality; tracking of outdated recommendations causing harm; correlation between guideline lag time and practice variance",
+      "impact": "If lag is minimal: guidelines coordinate effectively and extraction is low. If lag is severe: guidelines become instruments of ossification, extracting from clinicians who cannot deviate to incorporate new evidence.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Lag between clinical evidence publication and guideline updating"
+    },
+    {
+      "id": "liability_versus_discretion",
+      "question": "To what extent does guideline rigidity reflect genuine medical uncertainty requiring standardization versus medico-legal risk transfer (shifting liability from institutions to individual clinicians who deviate)?",
+      "resolution_mechanism": "Analysis of malpractice litigation outcomes comparing guideline adherence versus deviation; expert review of cases where deviation produced better outcomes; comparison with legal systems with lower malpractice liability (Europe, Canada)",
+      "impact": "If liability is primary driver: guidelines are extractive mechanisms disguised as coordination. If genuine uncertainty: guidelines coordinate necessary standardization.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Liability doctrine as driver of guideline rigidity versus medical necessity"
+    },
+    {
+      "id": "individualization_suppression",
+      "question": "What proportion of clinician suppression stems from explicit guideline restrictions versus internalized professional identity with guidelines (identity_locked)?",
+      "resolution_mechanism": "Survey of clinician deviation patterns in low-surveillance settings versus high-surveillance settings; analysis of clinician attitudes toward deviation (regulatory fear versus professional norm internalization); observation of guideline adherence changes when liability threat is reduced",
+      "impact": "If identity-locked dominates: suppression is internalized and persists even after institutional barriers are removed. If explicit restriction dominates: suppression declines when oversight is reduced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Identity-locked versus explicit regulatory suppression in guideline compliance"
+    },
+    {
+      "id": "outcome_correlation",
+      "question": "Do strict guideline-compliant practices produce better patient outcomes than clinician-discretion-based practices, controlling for patient selection?",
+      "resolution_mechanism": "Comparative outcomes research: guideline-strict facilities versus discretion-permitting facilities; propensity matching for patient risk; long-term mortality and arrhythmia recurrence tracking",
+      "impact": "If outcomes strongly favor guideline compliance: guidelines deliver genuine coordination value. If outcomes are equivalent or favor individualization: guidelines extract without functional benefit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Patient outcome correlation with guideline compliance versus clinical discretion"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Antiarrhythmic guideline compliance represents a hybrid constraint that simultaneously coordinates clinical practice and extracts from clinician discretion and patient individualization. The institutional ecosystem surrounding clinical practice guidelines \u2014 medical associations publish guidelines, hospitals adopt them as accreditation requirements, courts treat guideline deviation as prima facie negligence, device manufacturers design products around guideline recommendations \u2014 creates a coercive standardization mechanism. From the bedside cardiologist's perspective, the constraint delivers genuine coordination value: guidelines reduce decision paralysis, distribute liability risk, and align practice. From a resource-constrained rural facility's perspective, the same constraint is a snare: rigid protocols mandate expensive equipment and specialist training with no flexibility for local circumstances. The theater ratio (0.68) reflects that guideline compliance verification focuses on documentation audit rather than outcome tracking \u2014 accreditation inspectors verify that charts show guideline adherence, not that patients improved. The constraint's extractiveness (0.58) reflects genuine tension: some guidelines reduce harmful variance and coordinate necessary standardization; others ossify outdated practices and prevent beneficial individualization. The three-phase temporal progression (extractiveness 0.42\u21920.50\u21920.58\u21920.62) suggests increasing rigidity as guideline density increases and organizational compliance theater expands.",
+    "key_agents": [
+      "Guideline Publishing Organizations (institutional/arbitrage): Coordinate practice and benefit from institutional prestige; arbitrage by publishing competing guidelines or specialty shifts",
+      "Hospital Administration (institutional/arbitrage): Coordinate care delivery and satisfy accreditation requirements; arbitrage through selective guideline emphasis",
+      "Device Manufacturers (powerful/arbitrage): Benefit from guideline recommendations creating predictable device demand; arbitrage through regulatory geography and off-label indications",
+      "Bedside Cardiologists (moderate/constrained): Constrained by liability and credentialing; benefit from reduced decision uncertainty; extract through guideline ossification and documentation burden",
+      "Resource-Constrained Facilities (powerless/trapped): Trapped by accreditation requirements to comply with guidelines they cannot financially implement; no exit options",
+      "Patient Individualization (powerless/trapped): Abstract collective good bearing cost of rigid protocols that prevent beneficial individualization; cannot organize or negotiate",
+      "Clinical Evidence Synthesis Movement (organized/constrained): Building alternative mechanisms (continuous evidence updates, individualized risk models) that could replace static guidelines; constrained by inertia of existing guideline infrastructure"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Guidelines deliver coordination value (reduced variance, liability distribution, clarity in complex clinical decisions) but also extract through rigidity (prevent beneficial individualization, ossify evidence, lock in expensive device requirements). The measurement trajectory shows increasing extractiveness over time, suggesting that as guideline density increases and organizational compliance machinery expands, the extraction component grows faster than the coordination component. Suppression (0.65): High. Clinicians face strong barriers to deviation: malpractice liability, credentialing board enforcement, hospital privileging restrictions, and documentation requirements. These are structural barriers, not merely regulatory framing. Theater ratio (0.68): High and increasing. Compliance verification focuses on documentation audit (do charts show guideline adherence?) rather than outcome tracking (did patients improve?). The theater increases over time as accreditation bodies add more compliance metrics, making administrative compliance more performative than clinical verification.",
+    "perspectival_gap": "This constraint demonstrates classification diversity driven by structural position. The guideline publisher's rope classification reflects their genuine experience of solving a coordination problem. The bedside cardiologist's tangled rope reflects their genuine experience of both coordination (decision support) and extraction (discretion loss). The resource-constrained facility's snare reflects their trapped position with only compliance costs. The scaffold perspective reflects the organized agents building alternative mechanisms. The piton perspective reflects institutional degradation where compliance has become theatrical. The analytical false summit warns against naturalizing institutional choices as medical inevitability. No single type is 'correct' \u2014 the perspectival presheaf reveals different aspects of the same structural phenomenon.",
+    "directionality_logic": "Directionality derives from each agent's structural position relative to the compliance constraint. Guideline publishers and hospital administration occupy beneficiary positions with arbitrage exit \u2014 they can shift focus, publish competing guidelines, or modify compliance emphasis. Device manufacturers occupy powerful beneficiary positions with arbitrage exit through regulatory geography. Bedside cardiologists occupy moderate victim positions with constrained exit \u2014 they face genuine barriers (liability, credentialing) but retain some discretion through interpretation of guideline boundaries. Resource-constrained facilities occupy powerless victim positions with trapped exit \u2014 no financial ability to comply with guideline-mandated equipment and no alternative credentialing path. The clinical evidence movement occupies an organized victim position with constrained exit \u2014 they have agency to build alternative systems but operate within the shadow of entrenched guideline infrastructure. Guideline publishers show the lowest directionality (d \u2248 0.10, high institutional position + arbitrage + beneficiary status); resource-constrained facilities show the highest (d \u2248 0.92, powerless position + trapped + victim status).",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The constraint genuinely coordinates clinical practice (reduces harmful variance, distributes liability, provides decision support) while asymmetrically extracting from clinician discretion and patient individualization. The tangled rope gate requires beneficiaries (guideline publishers, hospital administration, device manufacturers \u2014 present), victims (clinical discretion, patient individualization, resource-constrained facilities \u2014 present), and active enforcement (liability doctrine, accreditation requirements, credentialing boards \u2014 present). All three conditions are met. The constraint is not pure extraction disguised as coordination; it is genuine hybrid with asymmetric distribution. The mandatrophy dissolves when we recognize that both the coordination and extraction are real and that different agents experience the ratio differently. The bedside cardiologist's tangled rope is not a misclassification of snare; it is the accurate perspectival reading from their structural position. The false summit at the analytical level alerts that naturalizing this as medical necessity rather than institutional choice would be an error."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "clinical_liability_doctrine",
+      "medical_device_market_consolidation",
+      "clinician_professional_identity_formation"
+    ],
+    "dual_formulation_note": "Antiarrhythmic guideline compliance is downstream of both clinical evidence synthesis and institutional liability doctrine. The constraint's extractiveness depends on the lag between guideline publication and clinical evidence updates (upstream) and the severity of liability enforcement (cross-cutting). Device market consolidation reinforces guideline adoption, creating feedback loops. Clinician professional identity formation absorbs guideline compliance into professional norms, potentially creating identity_locked suppression."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

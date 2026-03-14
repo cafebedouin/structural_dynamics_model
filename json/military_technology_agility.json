@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "military_technology_agility",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mta"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Military Technology Agility Constraint",
+    "topic_domain": "defense/strategic_capability/institutional_structure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "procurement_bureaucracy",
+      "incumbent_defense_contractors",
+      "military_leadership_hierarchy"
+    ],
+    "victims": [
+      "operational_effectiveness",
+      "field_commanders",
+      "rapid_innovation_teams",
+      "emerging_defense_startups"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Field Commander",
+      "comment": "PERSPECTIVE 1: FIELD COMMANDER (SNARE) \u2014 Operational units in theater face multi-year procurement cycles while adversaries iterate rapidly. Trapped by acquisition timelines and authorization chains; cannot adapt doctrine or equipment faster than bureaucratic approval permits. Bears full cost of technological obsolescence with no exit option."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Incumbent Defense Contractor",
+      "comment": "PERSPECTIVE 2: INCUMBENT DEFENSE CONTRACTOR (TANGLED ROPE) \u2014 Benefits from long procurement cycles (protection from competition) and established supply chain advantages (coordination value). Simultaneously bears extraction: must maintain specialized workforce capacity for years between contract wins, invest in lengthy compliance certification, and absorb R&D costs upfront with uncertain return. Mixed extraction and genuine coordination function."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Procurement Bureaucracy",
+      "comment": "PERSPECTIVE 3: PROCUREMENT BUREAUCRACY (ROPE) \u2014 Benefits from lengthy approval cycles (budget stability, predictable staffing, institutional continuity). Experiences the constraint as coordination: manages risk by enforcing oversight, documentation, and testing phases. Net beneficiary \u2014 the constraint allocates resources and authority toward this institutional actor."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Emerging Defense Startup",
+      "comment": "PERSPECTIVE 4: EMERGING DEFENSE STARTUP (SNARE) \u2014 Barred from rapid deployment despite superior capability by security clearance delays, compliance requirements, and established contractor preference in RFP processes. High cost to participate in military market; trapped by regulatory complexity even if technology is superior. Suppression via certification and preferential access rather than overt prohibition."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Strategic Long-Cycle Planning System",
+      "comment": "PERSPECTIVE 5: STRATEGIC PLANNING SYSTEM (PITON) \u2014 The multi-year acquisition planning cycle (FYDP, Future Years Defense Program) was designed for force structure stability but now functions largely as theater: planning horizons are outdated before they execute, yet the ritual persists through inertia. High performance of planning document production (theater_ratio ~0.65) with degraded actual strategic foresight. Maintained because alternatives haven't fully replaced it."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Defense Innovation Reform Coalition",
+      "comment": "PERSPECTIVE 6: DEFENSE INNOVATION REFORM COALITION (SCAFFOLD) \u2014 Organized actors (DARPA, Defense Innovation Unit, SpaceForce rapid acquisition authorities) see the bottleneck as a temporary institutional failure with sunset mechanisms: rapid prototyping cycles (OTA authority), streamlined security clearances, and agile software development practices are building parallel acquisition pathways that bypass traditional FYDP timelines. Low effective extraction because organized agents see agency and exit path toward compressed timelines."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, the constraint exhibits both genuine coordination (risk management, interoperability standards, supply chain coherence) and extractive dynamics (protecting incumbent market position, suppressing disruptive entrants, enforcing approval hierarchies that prioritize bureaucratic stability over operational need). The tension is structural: some procurement friction is legitimate; the degree embedded in current practice is excessive."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "risk_mitigation_threshold",
+      "question": "What level of procurement friction is legitimate risk management versus extractive bureaucratic self-protection?",
+      "resolution_mechanism": "Comparative analysis of acquisition timelines across allied militaries; correlation between approval cycle length and operational outcomes (success rate of fielded systems); audit of failed or delayed programs to identify risk-mitigation value versus institutional gatekeeping",
+      "impact": "If most friction is legitimate risk management: constraint reclassifies toward Rope; extraction is coordination cost. If significant fraction is self-protective: constraint remains Tangled Rope; extraction is institutional rent-seeking.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold between legitimate risk management and extractive bureaucratic friction"
+    },
+    {
+      "id": "adversary_iteration_parity",
+      "question": "Do peer adversaries operate under comparable technological agility constraints, or does asymmetric agility create strategic vulnerability for the constrained side?",
+      "resolution_mechanism": "Comparative intelligence assessment of adversary acquisition timelines; analysis of operational technology refresh cycles in peer militaries; historical case studies of technological surprise or obsolescence",
+      "impact": "If adversaries face similar friction: constraint is symmetric (may be extractive but not strategically dangerous). If adversaries iterate faster: constraint creates asymmetric vulnerability, elevating extraction severity and justifying reform.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether adversaries face comparable agility constraints"
+    },
+    {
+      "id": "reform_sustainability",
+      "question": "Do rapid acquisition authorities (DARPA OTA, DIU, SpaceForce rapid prototyping) represent a sustainable sunset to traditional FYDP timelines, or are they niche exemptions that preserve the primary constraint?",
+      "resolution_mechanism": "Longitudinal tracking of budget share in rapid-cycle programs versus traditional acquisition; analysis of whether rapid programs graduate to mainstream or remain exception; assessment of whether traditional procurement actors are actively constraining rapid program success",
+      "impact": "If rapid programs scale sustainably: scaffold sunset is real; constraint is genuinely temporary. If rapid programs remain niche: scaffold is aspirational; constraint persists as primary institutional structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether rapid acquisition authorities provide sustainable alternative to traditional timelines"
+    },
+    {
+      "id": "interoperability_necessity",
+      "question": "How much of the procurement cycle friction is genuinely required for interoperability and compatibility across service branches and allied forces?",
+      "resolution_mechanism": "Analysis of interoperability failures and their causes; assessment of whether failed interoperability stems from insufficient testing or from other sources (doctrine, training, command structure); case studies of rapid deployments and their interoperability outcomes",
+      "impact": "If interoperability is primary driver: much friction is legitimate coordination (Rope classification increases). If other factors dominate: friction is extractive overhead (Tangled Rope classification holds).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of procurement cycle required for interoperability coordination"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The military technology agility constraint describes the structural friction between the speed at which operational environments change and the speed at which institutional procurement systems can field new capabilities. Modern peer adversaries (China, Russia) operate with shorter innovation-to-deployment cycles than traditional U.S. military acquisition allows, creating asymmetric technological vulnerability. The constraint manifests as a bureaucratic extraction mechanism embedded in institutional risk management, procurement oversight, security certification, and budget planning cycles. It exhibits all six DR types depending on observer position: field commanders experience it as a snare (no exit, operational obsolescence); defense contractors experience coordination and extraction (long cycles protect from competition but impose carrying costs); the procurement bureaucracy benefits (budget stability, institutional authority); emerging startups see a snare (barred by regulatory friction); the strategic planning system is a piton (multi-year FYDP planning is theater); and organized reform coalitions (DARPA, DIU) see a scaffold with sunset mechanisms (rapid acquisition authorities and streamlined OTA processes). Extractiveness has increased over the 15-year measurement interval (0.35 \u2192 0.62) as the pace of technological change has accelerated beyond procurement system response time, while theater_ratio has remained moderate (0.38 \u2192 0.52), indicating the constraint retains genuine coordination functions alongside extraction.",
+    "key_agents": [
+      "Field Commanders: Primary victims (powerless/trapped) \u2014 operational units in theater face multi-year timelines; no control over acquisition decisions; bear obsolescence cost",
+      "Procurement Bureaucracy: Primary beneficiary (institutional/arbitrage) \u2014 controls approval processes; benefits from budget predictability and institutional authority; sees constraint as legitimate risk management",
+      "Incumbent Defense Contractors: Secondary beneficiary (powerful/mobile) \u2014 protected from competition by high barriers to entry; benefit from long contract timelines; also bear carrying costs of idle capacity",
+      "Emerging Defense Startups: Secondary victim (moderate/constrained) \u2014 superior technology barred by security clearance delays and compliance requirements; high cost of market participation; trapped by regulatory friction",
+      "Strategic Planning System: Institutional actor (institutional/constrained) \u2014 maintains FYDP theater; sees own process as degraded but institutionally persistent",
+      "Defense Innovation Coalition: Organized actors (organized/mobile) \u2014 DARPA, DIU, SpaceForce rapid acquisition; building alternative pathways with shortened timelines"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The constraint extracts through two mechanisms: (1) market protection for incumbents (high barriers suppress competition), and (2) operational obsolescence (field units cannot adapt faster than bureaucracy permits). Initial extractiveness (0.35) reflects that early-2010s geopolitical context had less aggressive peer competition; rising to 0.62 reflects acceleration of adversary innovation cycles outpacing U.S. institutional response. The trend is asymmetric: U.S. adversaries have not improved their agility; U.S. institutions have failed to keep pace. Suppression (0.62): High. Barriers to rapid innovation deployment include: security clearance timelines (6-24 months), IP/classification restrictions limiting startup access, compliance certification requirements (18-36 months), acquisition regulation complexity, and congressional budget oversight cycles. These are real but not absolute \u2014 DARPA/DIU bypass some via OTA authority. Theater ratio (0.48): Moderate. The FYDP planning process is substantially performative \u2014 multi-year plans are obsolete before execution \u2014 but planning documents do inform resource allocation and interoperability coordination. Less theater than traditional review processes (0.48 vs 0.70+) because some actual capability decisions flow from the planning cycle. Measurement trajectory shows rising extractiveness and theater as the pace of change has accelerated, suggesting the constraint is increasingly extractive relative to its coordination function.",
+    "perspectival_gap": "The field commander and emerging startup see snares (no viable exit). The procurement bureaucracy sees ropes (legitimate coordination and authority allocation). The defense contractor sees tangled rope (mixed protection and carrying cost). The strategic planning system is a piton (theater without function). The reform coalition sees a scaffold (temporary, solvable via rapid acquisition authorities). The analytical observer sees tangled rope (both genuine coordination and extractive inefficiency coexist). The perspectival gap is wide because the constraint has genuinely moved over time: in 2010 when peer competition was less acute, the same procurement friction was more defensible as risk management; in 2025 with peer agility accelerating, the same friction is increasingly extractive. The false summit would be naturalizing this as an immutable law of military organizations \u2014 the constraint is contingent on institutional choices about acceptable risk, not inevitable.",
+    "directionality_logic": "Directionality values are derived from structural position: (1) Field commanders are victims with no exit (trapped) \u2192 high d \u2192 high f(d) \u2192 they experience high \u03c7. (2) Procurement bureaucracy are beneficiaries with discretionary authority (arbitrage) \u2192 low d \u2192 negative f(d) \u2192 they experience negative \u03c7 (net benefit). (3) Defense contractors are beneficiaries with some exit (mobile) \u2192 low d \u2192 moderate f(d) \u2192 they experience low-to-moderate \u03c7 (net benefit despite carrying costs). (4) Emerging startups are victims with constrained exit (high barriers but technically feasible) \u2192 moderate-high d \u2192 moderate f(d) \u2192 they experience moderate \u03c7. (5) The analytical observer computes d from victim/beneficiary composition across all agents, weighted by scope (national scope \u03c3=1.0) \u2192 derives d \u2248 0.60 (mixed, leaning toward victim) \u2192 moderate-high f(d) \u2192 moderate \u03c7. The tangled rope classification depends on the presence of both coordination (genuine interoperability, risk management) and asymmetric extraction (market protection, operational constraint). Both are present in the structural data.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by exhibiting genuine temporal dynamics: the constraint's type changed over the measurement interval. In 2010 (t=0, \u03b5=0.35), the constraint was closer to Rope \u2014 the extraction existed but was justified by lower-pace technological change and less aggressive peer competition. By 2025 (t=15, \u03b5=0.62), the constraint has become Tangled Rope because the extraction is now unjustified by the coordination benefit it provides. The same institutional structures (FYDP, security clearances, compliance requirements) were defensible when adversary innovation cycles were similarly slow; they become extractive when adversaries accelerate. This is not about mislabeling coordination as extraction (the classic mandatrophy risk), but about recognizing that the ratio of coordination to extraction shifted over time. The defense innovation reform coalition's scaffold perspective shows that the constraint is not immutable \u2014 alternative acquisition authorities have already proven faster cycles are possible and compatible with security/interoperability requirements. Therefore, the current FYDP constraint cannot hide behind 'this is necessary for safe military technology management' \u2014 the existence of DARPA/DIU fast-cycle programs proves it is not necessary, only institutionally entrenched."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "adversary_technology_parity",
+      "military_workforce_modernization",
+      "defense_industrial_base_consolidation"
+    ],
+    "dual_formulation_note": "Military technology agility is upstream of specific capability constraints (adversary tech parity, workforce modernization) and downstream of defense industrial structure (consolidation, supply chain lock-in). The agility constraint is distinct from these because it focuses on institutional timelines rather than specific technological claims, but it causally affects whether particular capability gaps are resolved."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.55
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "header": {
+    "constraint_id": "labor_market_automation_uncertainty",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lmau"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Labor Market Automation Uncertainty",
+    "topic_domain": "labor_economics/technological_disruption",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "capital_owners",
+      "technology_firms",
+      "high_skill_workers"
+    ],
+    "victims": [
+      "low_skill_workers",
+      "middle_skill_workers",
+      "regional_communities"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Displaced Manufacturing Worker",
+      "comment": "PERSPECTIVE 1: DISPLACED MANUFACTURING WORKER (SNARE) \u2014 Faces irreversible skill displacement. Retraining programs are underfunded and misaligned with available positions. Cannot migrate (family obligations, community ties, housing market friction). Cannot organize effectively (geographic dispersion, precarity). Experiences pure extraction: wages compressed, pension promises eliminated, community infrastructure dissolves. No coordination benefit \u2014 automation provided no surplus to this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Service Sector Worker",
+      "comment": "PERSPECTIVE 2: SERVICE SECTOR WORKER (TANGLED ROPE) \u2014 Partially benefits from automation in agriculture and manufacturing (cheaper goods, some new service job creation). But also constrained by wage suppression and precarity as displaced workers flood service sector. High suppression: oversupply of labor, declining bargaining power, gig economy fragmentation prevents collective action. Mixed coordination and extraction \u2014 benefits from automation elsewhere, bears extraction here."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Capital Owners and Technology Firms",
+      "comment": "PERSPECTIVE 3: CAPITAL OWNERS AND TECHNOLOGY FIRMS (ROPE) \u2014 Clear beneficiaries. Experience automation as coordination mechanism: productivity gains, cost reduction, competitive advantage. Exit is effortless (capital mobility, profit arbitrage across jurisdictions). The constraint enables their interests. Suppression is high (policy enforces intellectual property, subsidizes R&D) but experienced as coordination because they control the mechanism."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Labor Organizers and Social Policy Coalition",
+      "comment": "PERSPECTIVE 4: LABOR ORGANIZERS AND POLICY COALITION (SCAFFOLD) \u2014 Organized agents seeing automation uncertainty as a temporary coordination failure solvable through policy: universal basic income, sectoral retraining funds, wealth redistribution, worker ownership models. Suppression exists (political capture, corporate lobbying) but coalition perceives an exit path through democratic organization and generational norm change. Theater is present (rhetorical commitment to 'helping workers transition') but coalition is building alternative mechanisms with potential sunset: if redistributive policy succeeds, the extraction mechanism loses leverage."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Labor Market Transition Programs",
+      "comment": "PERSPECTIVE 5: LABOR MARKET TRANSITION PROGRAMS (PITON) \u2014 Government retraining, displaced worker assistance, community adjustment funds persist as institutional actors despite low demonstrated effectiveness. Theater is high (60-80% don't lead to comparable employment; wage replacement is partial; timing misaligns with disruption cycles). Programs maintain themselves through political necessity and institutional inertia rather than functional verification. Beneficiaries are program administrators, consultants, and universities; victims are workers whose expectations are managed rather than materially supported."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Technological Imperative View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / TECHNOLOGICAL IMPERATIVE VIEW (MOUNTAIN) \u2014 From civilizational scope, some wage pressure from automation is a natural law of technological progress: capital substitutes for labor, marginal product of unskilled labor declines, competitive equilibrium drives wages down. This perspective naturalizes automation dynamics as immutable. But structural data contradicts mountain classification: policy choices (IP protection, tax treatment of automation, retraining investment, union suppression) are contingent, not natural laws. Engine computes false summit, revealing naturalization of policy artifacts."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "displacement_vs_restructuring",
+      "question": "Is observed unemployment structural displacement or equilibrium wage adjustment in expanding service sectors?",
+      "resolution_mechanism": "Longitudinal wage tracking of cohorts 5-10 years post-displacement; sector-specific labor demand forecasts; comparison of displaced-worker outcomes across high-automation vs low-automation regions with similar initial conditions",
+      "impact": "If structural displacement dominates: snare/tangled rope classifications correct, extractive dynamics persist. If equilibrium adjustment: rope perspective underestimates coordination benefits, and policy interventions may be unnecessary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether displacement is permanent structural shift or temporary reallocation"
+    },
+    {
+      "id": "retraining_effectiveness_threshold",
+      "question": "What retraining completion rates and wage recovery levels would constitute genuine coordination (scaffold with real exit path) vs performative theater (piton)?",
+      "resolution_mechanism": "Benchmark wage recovery: if 70%+ of participants achieve pre-displacement wage in 3-5 years \u2192 scaffold credible. If <40% achieve comparable wages after 10+ years \u2192 piton. Measure program cost relative to income replacement achieved.",
+      "impact": "If scaffold: policy framework can resolve extraction through organized labor and redistributive mechanisms. If piton: programs are covering story for wage suppression; resolution requires different structural interventions (bargaining power, wealth redistribution, unconditional support).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Threshold effectiveness metrics distinguishing functional from performative retraining"
+    },
+    {
+      "id": "geographic_mobility_constraints",
+      "question": "Are worker migration barriers primarily material (housing costs, family obligations) or identity-locked (community attachment, resistance to displacement as identity threat)?",
+      "resolution_mechanism": "Qualitative interviews + quantitative housing availability/affordability analysis in high-growth regions; measure migration rates against relocation incentives and support; distinguish barriers to physical migration from barriers to psychological identification with new communities",
+      "impact": "If material: targeted housing vouchers, family support, infrastructure investment in displaced regions could materially increase mobility and reduce snare classification. If identity-locked: material barriers are secondary to cognitive/identity binding; reframing may be required alongside material support.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether geographic immobility is material or identity-based"
+    },
+    {
+      "id": "capital_substitution_rate",
+      "question": "Is automation pace economically determined (constant rate of capital-labor substitution at steady-state productivity growth) or policy-driven (accelerated by IP protection, R&D subsidies, automation tax treatment)?",
+      "resolution_mechanism": "Comparative analysis of automation rates across jurisdictions with different IP regimes, R&D incentives, and labor cost structures; econometric decomposition of substitution elasticity into market vs policy components",
+      "impact": "If economically determined: mountain perspective has credibility \u2014 some wage pressure is natural. If policy-driven: suppression is primarily institutional (not inevitable); extraction can be redirected through tax/subsidy mechanisms without blocking beneficial innovation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether automation pace is market-determined or policy-driven"
+    },
+    {
+      "id": "collective_action_barriers",
+      "question": "What specific mechanisms prevent low-skill workers from organizing collectively to capture gains from productivity improvements (unionization, sectoral bargaining, cooperative models)?",
+      "resolution_mechanism": "Historical analysis of union decline timing vs automation acceleration; comparison of sectors with high collective bargaining (public sector, strong unions) vs low bargaining (gig economy, service) in automation exposure; measurement of legal and institutional barriers to new organizing models",
+      "impact": "If barriers are legal/institutional (right-to-work laws, contractor classification, anti-union enforcement): these are policy artifacts and can be changed. If barriers are structural (workers too dispersed to coordinate, capital too mobile to pressure): stronger redistributive mechanisms may be necessary.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Specific mechanisms preventing worker collective action on automation gains"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Labor market automation represents a structural constraint on worker income and bargaining power that exhibits radically different classifications depending on the observer's position within labor markets. The constraint combines genuine coordination benefits (productivity gains, cheaper goods, new service job creation) with asymmetric extraction (wage suppression, skill obsolescence, community collapse in automation-exposed regions). Measured extractiveness has increased from 0.22 (early 2000s, when automation effects were dispersed and policy uncertainty high) to 0.58 (2026, after three decades of sustained technological displacement, declining union power, and failure of retraining systems). Theater ratio has simultaneously risen from 0.35 to 0.68, indicating that retraining and transition programs have become increasingly performative \u2014 they manage political expectations while failing to restore displaced workers' material position. The constraint's structure encompasses multiple organizational levels: individual workers experience snare-type entrapment; service sector workers experience tangled rope (benefits from automation elsewhere, extraction here); capital owners experience rope-type coordination; organized labor and policy coalitions perceive a scaffolding structure with potential exits through redistributive policy; institutions maintain degraded transition programs (piton); and analysts risk naturalizing policy artifacts as technological inevitability (false mountain). The core extraction mechanism is suppression: geographic mobility barriers, skill mismatch between displaced workers and available jobs, weak collective bargaining power (union decline from 35% to 10% of workforce), and political capture that channels productivity gains toward capital rather than broad-based compensation adjustment.",
+    "key_agents": [
+      "Low-skill and middle-skill workers: Primary victims (powerless/trapped) \u2014 face permanent or long-term displacement, no viable retraining pathways, geographic immobility. Suppression from weak bargaining power and oversupply of labor.",
+      "Capital owners and technology firms: Primary beneficiaries (institutional/arbitrage) \u2014 capture productivity gains through automation, maintain ability to relocate and arbitrage across jurisdictions. Suppression is high but experienced as enabling coordination.",
+      "Service sector workers: Secondary victims (moderate/constrained) \u2014 partially benefit from cheaper goods and some job creation, but increasingly bear wage suppression as displaced workers flood service markets.",
+      "Labor unions and worker organizations: Organized agents (organized/constrained) \u2014 perceive automation uncertainty as resolvable through collective bargaining power, sectoral investment, and redistributive policy, but face institutional obstacles (right-to-work laws, gig economy contractor status).",
+      "Government transition programs: Institutional actors (institutional/arbitrage) \u2014 maintain retraining, displacement assistance, and community adjustment mechanisms primarily through political necessity and administrative inertia; actual effectiveness is low (theater_ratio=0.68).",
+      "Regional communities: Victim-class aggregate (powerless/trapped) \u2014 bear infrastructure collapse, tax base erosion, and population flight as automation hollows out manufacturing regions.",
+      "Analytical observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent policy choices (IP protection, tax treatment, union suppression, R&D subsidies) as technological inevitability."
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate, measured at current state (2026). The constraint extracts from low-skill and middle-skill workers through wage suppression (manufacturing wages down 15-25% in real terms since 2000 in automation-exposed sectors), skill obsolescence (retraining programs achieve only 35-45% wage replacement), and geographic immobility (housing costs in high-growth regions eliminate relocation as viable exit option). But extraction is not as severe as a pure snare would suggest because: (1) some productivity gains have diffused as cheaper goods (consumers benefit), (2) capital owners do not completely extract all surplus (they must reinvest to maintain automation advantage), (3) service sector expansion has created new jobs (lower-wage than displaced manufacturing, but not zero jobs). Suppression (0.65): High. Multiple non-price barriers prevent workers from competing for automation gains. Union density collapsed from 35% (1950s) to 10% (2026), eliminating primary mechanism for workers to capture productivity. Right-to-work laws, gig economy contractor classification, and geographic dispersion prevent new organizing. Retraining programs lack sufficient funding and timing alignment (lag 2-5 years behind displacement waves). Housing market friction and family obligations prevent geographic mobility. Theater ratio (0.68): High and rising. Government transition programs have increasingly become performative. Evidence: 60-75% of participants in retraining programs fail to secure comparable employment within 5 years; wage replacement averages 45-55% of pre-displacement levels; program spending per worker has increased while outcomes have declined; political rhetoric about 'helping workers transition' persists despite low functionality. The rise of theater (0.35 \u2192 0.68 over 30 years) reflects the accumulation of policy patches that manage political pressure without materializing material support.",
+    "perspectival_gap": "This constraint demonstrates the utility of indexical classification for exposing structural divergence. The snare perspective (displaced worker) and the rope perspective (capital owner) are not two opinions about the same phenomenon \u2014 they are two different structural realities. The constraint IS extraction for the powerless/trapped agent and IS coordination for the institutional/arbitrage agent simultaneously because their relationship to the surplus flow is opposite. The scaffold perspective (organized labor) and the piton perspective (government programs) both correctly perceive high theater, but scaffold sees it as temporary (exit path exists through policy change) while piton sees it as structural (inertia dominates). The mountain perspective's false summit is the most dangerous: if policymakers naturalize automation as technological inevitability, they stop examining policy levers (IP, tax, union law, housing, education spending) that would shift the distribution of automation gains. The analytical observer's job is to show which levers are available and what policies would shift from snare/piton toward rope/scaffold/tangledRope.",
+    "directionality_logic": "Directionality derivation priority for this constraint: (1) Explicit beneficiary/victim declarations \u2192 feed into structural d computation. Capital owners are declared beneficiaries; displaced workers are declared victims. (2) Power atom + exit options \u2192 modulate d magnitude. Institutional beneficiaries with arbitrage options get low d (0.05-0.15); powerless victims with trapped exit get high d (0.85-0.95); moderate constrained agents get medium d (0.50-0.65). (3) Canonical fallback for analytical perspective (d \u2248 0.72-0.73 from standard analytical canonical value). No directionality overrides needed \u2014 derivation chain captures the true relationships. The temporal progression in d-values (rising d for workers, falling d for capital) is captured in the measurements section: as extractiveness rises over the 30-year interval, the implicit directionality of capital's advantage has increased (capital's effective d decreases \u2192 more favorable position) while workers' d increases (less favorable \u2192 more maximum-extraction outcome).",
+    "mandatrophy_analysis": "CONSTRAINT FAMILY DECOMPOSITION REQUIRED. The label 'labor market automation uncertainty' conflates three structurally distinct constraints with different \u03b5 values: (1) Technological substitution dynamics (\u03b5 \u2248 0.15): The pure physics/economics of capital replacing labor when automation technology becomes available. Base extraction is low; this is partially coordinate-able. (2) Institutional extraction through wage suppression (\u03b5 \u2248 0.65): Policy-mediated redistribution of automation gains toward capital through union suppression, IP protection, tax subsidies, and suppression of alternative organizing models. Base extraction is high; this is the primary snare mechanism. (3) Transition program ineffectiveness (\u03b5 \u2248 0.52, primarily theater): Government retraining and displacement assistance that persist despite low functionality, managing political expectations without delivering material outcomes. These are three separate constraints with different observables, different beneficiaries, different policy levers, and different classification types. The mandatrophy in this single story is resolved by acknowledging that the claimed_type (tangled_rope) is correct for the aggregate phenomenon but masks structural heterogeneity. The engine's classification will reflect the institutional suppression mechanism (\u03b5 \u2248 0.65) because that is the dominant extraction visible in labor market aggregates. But a precise analysis would decompose into three stories: technological_substitution (\u03b5 \u2248 0.15, rope-type), labor_market_extraction_via_policy (\u03b5 \u2248 0.65, snare/tangled rope-type), and government_transition_theater (\u03b5 \u2248 0.52, piton-type). The present story captures the aggregate phenomenon and its most visible extraction mechanism; policy analysis would require the decomposed family."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wage_stagnation",
+      "income_inequality",
+      "union_suppression",
+      "geographic_immobility"
+    ],
+    "dual_formulation_note": "Labor market automation is an aggregate phenomenon decomposable into technological substitution (low extraction, coordinate-able) and institutional extraction through policy (high extraction, snare-type). The present story captures the institutional extraction mechanism because it dominates observable labor market outcomes. Decomposition into technological_substitution and labor_market_extraction_via_policy would clarify which policy levers (union law, tax, IP, housing, education) most directly address the constraint."
+  },
+  "directionality_overrides": []
+}

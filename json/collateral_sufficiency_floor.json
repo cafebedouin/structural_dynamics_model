@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "collateral_sufficiency_floor",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "csf"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Collateral Sufficiency Floor in Credit Markets",
+    "topic_domain": "economic/financial/credit",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "lenders",
+      "collateral_pricing_authorities"
+    ],
+    "victims": [
+      "borrowers_with_illiquid_assets",
+      "economically_marginalized_groups"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Trapped Borrower",
+      "comment": "PERSPECTIVE 1: TRAPPED BORROWER (SNARE) \u2014 Cannot meet collateral floor requirements despite having real asset value. Faced with binary choice: accept predatory terms, use alternative high-cost lending (payday loans, pawn shops), or exit credit market entirely. No negotiation leverage. Bears full cost of collateral floor enforcement while lender captures rate premium for assumed risk."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Marginalized Borrower",
+      "comment": "PERSPECTIVE 2: MARGINALIZED BORROWER (TANGLED ROPE) \u2014 Can theoretically satisfy collateral floor by liquidating secondary assets or accepting higher rates, but faces significant friction costs. The constraint coordinates genuine risk management (lender needs assurance of repayment ability) while extracting through asymmetric valuation of collateral. Constrained by high switching costs and limited alternative sources."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Commercial Lender",
+      "comment": "PERSPECTIVE 3: COMMERCIAL LENDER (ROPE) \u2014 The collateral floor is experienced as coordination mechanism: protecting against default risk while enabling credit extension. The lender has exit options (different collateral standards, different borrower segments, collateral swaps in secondary markets). Experiences the constraint as enabling rather than restricting. Pure beneficiary with agency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Authority",
+      "comment": "PERSPECTIVE 4: REGULATORY AUTHORITY (TANGLED ROPE) \u2014 Maintains collateral sufficiency standards for genuine systemic stability (coordination function: preventing cascade failures, maintaining credit flow). But also uses collateral floors to channel lending toward preferred sectors and away from high-risk populations, creating asymmetric extraction. Active enforcement required; sunset absent but periodic regulatory review creates tactical constraint."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Collateral Valuation Apparatus",
+      "comment": "PERSPECTIVE 5: COLLATERAL VALUATION APPARATUS (PITON) \u2014 The specific models and procedures for setting collateral sufficiency floors (Basel III, LTV ratios, haircut schedules) have become largely performative. Originally designed to reflect true default risk, these models now function primarily as ritualistic legitimation for extraction decisions already made on other grounds. Theater ratio high because the apparatus is maintained through regulatory inertia despite degraded predictive power \u2014 modern correlations (human capital, ecosystem assets, digital rights) are poorly captured by traditional collateral models."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, collateral requirements are seen as immutable features of credit markets themselves: lenders must have assurance of recovery, and this assurance inherently requires seizeable assets. This perspective naturalizes collateral floors as logical necessities. However, the structural data contradicts the mountain classification \u2014 alternative credit models (relationship banking, group guarantees, reputation systems) exist and function without traditional collateral sufficiency floors, revealing that this 'natural law' is actually a contingent institutional choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "collateral_measurement_arbitrage",
+      "question": "Are collateral valuation disparities (price gaps between bank appraisal and market value) the result of genuine information asymmetries or systematic extraction through undervaluation?",
+      "resolution_mechanism": "Comparative analysis of collateral valuations across institutional types (community banks, credit unions, fintech lenders) and asset classes; temporal tracking of haircut changes relative to actual default rates",
+      "impact": "If genuine information asymmetry: collateral floors are legitimate risk pricing. If systematic undervaluation: collateral floors are extraction mechanism masked as risk management.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether collateral valuation disparities reflect information asymmetries or systematic extraction"
+    },
+    {
+      "id": "alternative_credit_sufficiency",
+      "question": "Do alternative credit models without traditional collateral sufficiency floors (group guarantee lending, relationship banking, microfinance reputation systems) achieve comparable default rates and systemic stability?",
+      "resolution_mechanism": "Cross-model comparison of default rates, loan performance, portfolio volatility; long-term stability analysis of credit systems using alternative sufficiency mechanisms",
+      "impact": "If comparable or superior: collateral sufficiency floors are contingent institutional choice, not natural necessity. Tangled rope and snare classifications hold. If inferior: floors are legitimate safeguard; mountain classification gains credibility.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether alternative credit models achieve comparable stability without traditional collateral floors"
+    },
+    {
+      "id": "regulatory_capture_in_floor_setting",
+      "question": "Are collateral sufficiency floors set to reflect actual systemic risk or to protect incumbent lenders from competition and favor particular asset classes?",
+      "resolution_mechanism": "Historical analysis of floor adjustments relative to actual default rates, sector profitability, and regulatory capture indicators (lobbying intensity, revolving door employment); comparison across jurisdictions with different regulatory models",
+      "impact": "If floors reflect true risk: tangled rope with legitimate coordination function. If floors protect incumbents: snare with extraction masked as stability; regulatory authority moves from constrained to arbitrage exit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether collateral floors reflect actual risk or incumbent protection"
+    },
+    {
+      "id": "theater_ratio_temporal_drift",
+      "question": "Is the theater ratio (0.48) stable or increasing? Does the collateral valuation apparatus maintain predictive power or is it becoming increasingly ritualistic?",
+      "resolution_mechanism": "Tracking collateral model prediction errors over time; analysis of whether regulatory updates to valuation models improve or degrade empirical performance; measurement of enforcement consistency (do lenders actually apply stated collateral rules uniformly?)",
+      "impact": "If theater increasing and approaching piton threshold (\u22650.70): collateral floors are degrading into pure legitimation apparatus. If theater stable: original coordination function remains functionally intact despite extraction overlay.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether collateral valuation apparatus theater ratio is increasing over time"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The collateral sufficiency floor in credit markets creates a structural tension between the legitimate lender need for repayment assurance and the systematic extraction of surplus from borrowers who hold real asset value but cannot meet institutional valuation standards. This constraint exhibits the full range of DR classification types from different structural positions. The same mechanism \u2014 requiring borrowers to pledge assets exceeding the loan amount \u2014 appears as an immutable law of lending (mountain), a coordination mechanism protecting systemic stability (rope), a legitimate risk-adjustment mechanism with embedded extraction (tangled rope), a regulatory enforcement apparatus (tangled rope from authority perspective), or pure coercion against powerless agents (snare), depending on the observer's position in the credit hierarchy. The constraint's extractiveness (0.58) reflects that collateral sufficiency floors do coordinate genuine risk management while simultaneously enabling systematic extraction through asymmetric valuation, collateral capture, and exclusion of agents with illiquid but real asset holdings. The theater ratio (0.48) indicates that collateral valuation models, while maintaining some predictive function, increasingly operate as ritualistic legitimation for lending decisions already made on other grounds \u2014 traditional haircut schedules poorly capture modern asset classes like human capital, ecosystem services, and digital rights.",
+    "key_agents": [
+      "Trapped Borrowers: Primary victim (powerless/trapped) \u2014 cannot meet collateral requirements despite real asset value; face predatory lending alternatives or credit exclusion",
+      "Marginalized Borrowers: Secondary victim (moderate/constrained) \u2014 can theoretically meet floors but face asymmetric valuation and high friction costs; partially dependent on credit for economic mobility",
+      "Commercial Lenders: Primary beneficiary (institutional/arbitrage) \u2014 use collateral floors to price risk and access capital; have full exit options and leverage in negotiations",
+      "Collateral Pricing Authorities: Secondary beneficiary (institutional/arbitrage) \u2014 set floors to manage systemic risk; have regulatory leverage and exit options",
+      "Regulatory Authority: Mixed (organized/constrained) \u2014 enforces collateral sufficiency for systemic stability while using it as tool for sectoral control; constrained by political pressure and international coordination requirements",
+      "Collateral Valuation Apparatus: Institutional infrastructure (institutional/arbitrage) \u2014 maintains predictive models that are increasingly ceremonial; persists through regulatory inertia"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Collateral sufficiency floors do perform genuine risk management \u2014 lenders cannot credibly extend credit without assurance of recovery value. However, the extractiveness is elevated above pure risk pricing because: (1) collateral valuations are systematically conservative for certain asset classes (illiquid assets, ecosystem services, human capital), (2) lenders capture collateral through foreclosure at recovery values well below market prices, (3) the constraint excludes entire populations from credit access, and (4) regulatory authorities use floors to channel credit toward preferred sectors. The 0.58 value reflects this mixed coordination-extraction profile. Suppression (0.62): High. Multiple mechanisms suppress alternatives: (1) regulatory standardization of collateral models prevents experimentation with alternative sufficiency mechanisms, (2) capital requirements tied to collateral floors create institutional path dependency, (3) reputational barriers to lenders who deviate from standard collateral practices, and (4) lack of competitive pressure (relationship banking and group guarantee models are legally/functionally marginalized). Theater ratio (0.48): Moderate. The collateral valuation apparatus maintains some genuine predictive power \u2014 collateral does correlate with default risk, and lenders benefit from models that improve accuracy. However, the theater has increased over the measurement interval (0.35 \u2192 0.48) because: (1) traditional asset class models (real estate LTV, inventory turnover) are increasingly applied to novel asset types (digital rights, human capital, environmental assets) where they have weak predictive power, (2) regulatory compliance audits measure adherence to standardized procedures rather than actual risk performance, and (3) enforcement of collateral standards has become decoupled from realized default outcomes in some market segments.",
+    "directionality_logic": "Each perspective's directionality value (d) is derived from the agent's structural position relative to the constraint. Trapped borrowers with no exit options occupy d \u2248 0.95 (full target); the sigmoid f(d) produces high experienced extractiveness. Institutional lenders with arbitrage options occupy d \u2248 0.10 (full beneficiary); f(d) produces negative effective extraction. Marginalized borrowers with constrained but available exits occupy d \u2248 0.60 (mixed); f(d) produces moderate extraction. The regulatory authority is structurally mixed: they are a beneficiary (collateral floors stabilize credit systems under their jurisdiction) but also constrained by international coordination requirements and political pressure; d \u2248 0.45 yields tangled rope classification. The collateral valuation apparatus is institutional with arbitrage options (can adjust haircuts, can service multiple jurisdictions); d \u2248 0.15 yields rope classification from its perspective.",
+    "perspectival_gap": "This constraint demonstrates a sharp perspectival divergence between powerless and institutional agents. The trapped borrower sees pure extraction (snare) because the collateral floor is an absolute barrier \u2014 there is no negotiation, no coordination benefit, only the choice between acceptance and exclusion. The lender sees pure coordination (rope) because the collateral floor enables credit extension that wouldn't otherwise occur \u2014 from their perspective, the constraint solves the problem of asymmetric information. The regulatory authority sees both: coordination (systemic stability requires collateral assurance) and extraction (floors can be weaponized to favor incumbent sectors). The trapped and lender perspectives are both structurally accurate \u2014 they are measuring different extraction flows. The trapped borrower's 'extraction' is the lender's 'risk adjustment.' The gap reveals that collateral sufficiency floors are not neutral mechanisms but transfers of surplus that appear as coordination to beneficiaries and coercion to targets.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The apparent contradiction between 'collateral floors enable credit (Rope/coordination benefit)' and 'collateral floors exclude borrowers (Snare/pure extraction)' is resolved by recognizing that these are legitimate readings from different structural positions. The beneficiary's rope is the victim's snare. Both classifications are correct \u2014 they measure different extraction flows. The constraint's extractiveness (0.58) reflects that the coordination function is real but asymmetrically distributed: coordination benefits accrue to lenders and solvent borrowers with sufficient collateral; extraction costs fall on borrowers with real assets but inadequate collateral and excluded populations. The tangled rope classification from the moderate and organizational perspectives captures this hybrid nature. The mandatrophy dissolves when we recognize that 'pure coordination' is a beneficiary's perspective, not an objective property of the constraint."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "loan_rate_asymmetry",
+      "collateral_foreclosure_bias",
+      "credit_market_exclusion"
+    ],
+    "dual_formulation_note": "Collateral sufficiency floor is a parent constraint affecting loan pricing asymmetries and foreclosure mechanisms. Upstream constraints (lender capital requirements, regulatory framework for asset classification) determine what collateral standards are enforced; downstream constraints (specific collateral valuation models, haircut schedules) implement the floor. All three stories in this family should be linked via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.45
+    }
+  ]
+}

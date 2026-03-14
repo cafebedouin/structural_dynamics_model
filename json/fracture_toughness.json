@@ -1,0 +1,145 @@
+{
+  "header": {
+    "constraint_id": "fracture_toughness",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ft"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Fracture Toughness as Material Property Limit",
+    "topic_domain": "materials_science/mechanics",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "Materials Subjected to Stress",
+      "comment": "PERSPECTIVE 1: MATERIALS UNDER STRESS (MOUNTAIN) \u2014 Fracture toughness is an immutable material property. No material can escape the fundamental constraint that stress concentration at crack tips creates irreducible physical limits on resistance to crack propagation. The relationship between atomic bonding, crystal defects, and fracture mechanics is invariant across all testing methodologies and time horizons."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Universal Physics)",
+      "comment": "PERSPECTIVE 2: ANALYTICAL OBSERVER / UNIVERSAL VIEW (MOUNTAIN) \u2014 Fracture toughness emerges from fundamental material physics: stress concentration at crack tips, atomic bonding strength, dislocation dynamics, and grain boundary properties. These are structural features of matter itself, not contingent institutional arrangements. The constraint is independent of measurement methodology, observer position, or social context. Fracture toughness represents a natural law of mechanics."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Materials Engineers and Designers",
+      "comment": "PERSPECTIVE 3: MATERIALS ENGINEERS (MOUNTAIN) \u2014 Even with full research resources, design authority, and the ability to select or modify materials, engineers cannot escape fracture toughness constraints. At the material selection phase, toughness-strength tradeoffs are immutable. At the design phase, stress concentration geometries still obey mechanics. The constraint is invariant across all engineering methodologies."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Materials Research Institutions",
+      "comment": "PERSPECTIVE 4: MATERIALS RESEARCH INSTITUTIONS (MOUNTAIN) \u2014 Even with institutional resources devoted to materials discovery and characterization, fracture toughness remains an immutable property. Research institutions can measure it, optimize material selection, design around it, or develop new materials with better toughness-strength balances \u2014 but they cannot repeal the fundamental constraint that finite atomic bonding creates limits."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "measurement_methodology_equivalence",
+      "question": "Do different fracture toughness measurement standards (K_IC from ASTM E399, J-integral from ASTM E813, etc.) measure the same intrinsic material property or different properties sensitive to sample geometry and loading rate?",
+      "resolution_mechanism": "Cross-validation: measure the same material using multiple standards; verify that results correlate despite different geometries and loading rates; check whether theoretical fracture mechanics predicts the observed relationships",
+      "impact": "If equivalent: measurement disagreement is instrumental/procedural noise; the constraint is a single material property (Mountain confirmed). If not equivalent: different measurement standards may reveal different aspects of fracture behavior; the constraint might decompose into geometry-dependent and rate-dependent components (potential multi-story decomposition).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether different fracture toughness measurement standards measure the same property"
+    },
+    {
+      "id": "scale_invariance_of_fracture_mechanics",
+      "question": "Does continuum fracture mechanics (linear elastic fracture theory) remain valid across all material scales from bulk engineering materials to nanostructured materials, or do quantum effects and small-scale deviations require fundamentally different descriptions?",
+      "resolution_mechanism": "Theoretical review of quantum effects in atomic-scale crack propagation; empirical test of LEFM predictions for nanocrystalline, amorphous, and single-crystal materials at submicron scales",
+      "impact": "If invariant: fracture toughness is a true natural law across all scales (Mountain confirmed universally). If scale-dependent: the constraint may decompose into bulk, mesoscale, and atomic regimes with different governing principles (potential multi-story decomposition).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scale invariance of fracture mechanics principles"
+    },
+    {
+      "id": "toughness_strength_tradeoff_immutability",
+      "question": "Is the apparent toughness-strength tradeoff an immutable constraint or a contingent feature of current material families that could be overcome through future materials engineering?",
+      "resolution_mechanism": "Historical survey of materials discovered since the formalization of the tradeoff (1960s); check whether new materials (high-entropy alloys, composites, metamaterials) have expanded the feasible region or merely explored it more densely; theoretical analysis of whether quantum mechanics permits simultaneous high strength and high toughness",
+      "impact": "If immutable: the tradeoff is a fundamental constraint on possible materials (Mountain confirmed). If contingent: future discoveries might overcome it (potential degradation to Rope as knowledge improves).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether toughness-strength tradeoff is immutable or contingent"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.18
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "commentary": {
+    "narrative_context": "Fracture toughness is the material property that quantifies resistance to crack propagation under stress. It emerges from fundamental physics: atomic bonding strength, crystal structure, dislocation dynamics, and defect populations create irreducible limits on how much energy a material can absorb while developing a macroscopic crack. This constraint is invariant across all observers, all measurement methodologies, and all time horizons. Unlike coordination mechanisms (ropes) or extractive arrangements (snares), fracture toughness is not contingent on institutional arrangement, power asymmetry, or information manipulation. It is a natural law of materials mechanics. All four perspectives converge on the mountain classification because the constraint's structure is independent of observer position.",
+    "key_agents": [
+      "Materials subjected to stress: Universal victims of fracture toughness limits; cannot escape via exit options (trapped)",
+      "Materials engineers and designers: Powerful agents (institutional/mobile); must work within toughness limits despite full design authority",
+      "Materials research institutions: Institutional beneficiaries of toughness knowledge (arbitrage exit); can optimize selection and design but cannot repeal the constraint",
+      "Analytical observer: Universal perspective (civilizational/analytical); recognizes immutable physics underlying the constraint"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low. Fracture toughness is not extractive \u2014 no agent extracts value from another. Rather, the constraint represents a structural limit imposed by physics. The value is elevated from zero only to reflect that the constraint *does* impose costs on agents who must design around it, but these are costs of living in a physical universe, not extraction in the DR sense. Suppression (0.03): Minimal. There are no suppressive mechanisms needed because fracture toughness is not a coordination problem requiring enforcement or coercion. Agents are 'suppressed' only by physics, not by institutional arrangements. Theater ratio (0.15): Very low. Fracture toughness testing and evaluation are highly functional and directly measurable. ASTM standards specify exact procedures, sample geometries, and measurement protocols. The constraint can be characterized with high precision and low ritualism. The slight non-zero value reflects minor procedural variations across different measurement methodologies (K_IC vs J-integral vs fracture energy), but these are methodological choices, not theater.",
+    "perspectival_gap": "There is no perspectival gap in this constraint. All four perspectives classify as mountain because fracture toughness is genuinely invariant across agent positions, time horizons, and spatial scopes. A materials engineer and a quantum physicist, a local laboratory and a global research community, an observer at immediate scales and one at civilizational scales all perceive the same constraint: finite atomic bonding creates irreducible limits on crack resistance. This uniform classification confirms the natural law status.",
+    "directionality_logic": "Directionality is undefined for this constraint because there is no extraction flow, no beneficiary-victim asymmetry, and no coordination problem. All agents stand in the same structural relationship to fracture toughness: they live within its limits. The constraint has no directionality axis in the usual sense. This absence of asymmetry is itself the diagnostic signature of a mountain."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "materials_strength_limits",
+      "engineering_safety_margins"
+    ]
+  },
+  "directionality_overrides": []
+}

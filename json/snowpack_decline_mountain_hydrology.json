@@ -1,0 +1,173 @@
+{
+  "header": {
+    "constraint_id": "snowpack_decline_mountain_hydrology",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "snowpack"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.38,
+    "claimed_type": "snare",
+    "human_readable": "Snowpack Decline and Mountain Hydrology Constraint",
+    "topic_domain": "environmental/hydrology/climate",
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
+    "victims": [
+      "downstream_agricultural_communities",
+      "urban_water_systems",
+      "alpine_ecosystems",
+      "summer_baseflow_dependent_infrastructure"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Agricultural Community",
+      "comment": "PERSPECTIVE 1: DOWNSTREAM AGRICULTURAL COMMUNITIES (SNARE) \u2014 Face declining summer water availability with no viable exit. Trapped by geographic dependence on snowpack-fed baseflow; irrigation requirements cannot be met as spring snowmelt shifts earlier and volume declines. High suppression: limited water rights transfers, entrenched agricultural leases, capital investment in irrigation infrastructure. Extraction mechanism operates through temporal mismatch \u2014 traditional irrigation schedules misalign with compressed snowmelt window."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Urban Water Systems",
+      "comment": "PERSPECTIVE 2: URBAN WATER SYSTEMS (SNARE) \u2014 Municipal utilities dependent on snowpack for summer baseflow experience declining water availability. Constrained by existing infrastructure (reservoirs built for historical snowpack levels), population growth projections, and political barriers to conservation mandates. Some exit options available (groundwater mining, desalination, inter-basin transfers) but at high capital and political cost. Suppression manifests through locked-in infrastructure and growth expectations."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Alpine Ecosystems",
+      "comment": "PERSPECTIVE 3: ALPINE ECOSYSTEMS (SNARE) \u2014 Have no exit options and bear maximum extraction. Compressed snowmelt window reduces habitat suitability for snow-adapted species; earlier spring flow disrupts reproductive cycles of aquatic organisms; late-summer drought stress increases. No self-advocacy mechanism; ecosystem services (water storage, carbon sequestration, biodiversity) are externalities to the extraction logic. Powerless victim with zero degrees of freedom."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Summer Baseflow Infrastructure",
+      "comment": "PERSPECTIVE 4: SUMMER BASEFLOW-DEPENDENT INFRASTRUCTURE (SNARE) \u2014 Hydropower facilities, fish hatcheries, minimum-flow requirements for ecosystem health, and industrial cooling systems all depend on reliable summer baseflow. The constraint extracts from these systems through temporal scarcity \u2014 the infrastructure was engineered for historical snowpack patterns and cannot flex as those patterns shift. Suppression: locked-in physical infrastructure, regulatory minimum flows that become unachievable."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Physical Law View)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, snowpack decline follows from the laws of thermodynamics and atmospheric physics: warming atmospheric temperatures shift precipitation phases from snow to rain and accelerate snowmelt timing. This is a natural consequence of climate forcing, not an institutional arrangement. However, the EXTRACTION MECHANISM \u2014 who bears costs and who benefits \u2014 is not natural. The misalignment between historical infrastructure and shifting hydrology is a contingent institutional fact."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "attribution_anthropogenic_vs_natural",
+      "question": "What proportion of observed snowpack decline is attributable to anthropogenic climate forcing versus natural climate variability?",
+      "resolution_mechanism": "Climate attribution studies isolating forced signal from natural modes (PDO, ENSO); comparison of observed trends to climate model ensembles with and without anthropogenic forcing",
+      "impact": "If >80% anthropogenic: the constraint is a forced extraction mechanism with minimal agency for adaptation. If <50% anthropogenic: natural variability dominates, and the constraint appears more like a natural disaster than a snare. The \u03b5 value depends on the agency question \u2014 institutional arrangements can mitigate natural variability but not override forced change.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of snowpack decline attributable to anthropogenic forcing"
+    },
+    {
+      "id": "adaptive_capacity_reservoir_storage",
+      "question": "Can expanded reservoir storage or inter-basin water transfers effectively decouple downstream demand from snowpack timing and volume?",
+      "resolution_mechanism": "Engineering feasibility analysis; cost-benefit assessment of storage expansion; environmental impact evaluation of new infrastructure; political economy of interstate water transfers",
+      "impact": "If yes: the constraint is solvable at high cost, reducing \u03b5 from 0.68 to ~0.35 (tangled rope with coordination function). If no: the constraint is irreversible within current institutional frameworks, confirming snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether storage expansion can decouple demand from snowpack timing"
+    },
+    {
+      "id": "demand_reduction_political_feasibility",
+      "question": "Can downstream water demand be reduced to match declining snowpack supply through conservation, agricultural transition, or population management?",
+      "resolution_mechanism": "Historical analysis of water conservation adoption rates; cost of agricultural transition to less water-intensive crops; political economy of regional growth constraints",
+      "impact": "If politically feasible: demand-side adaptation is available as exit option, moving constrained agents toward mobile. If infeasible: trapped agents remain trapped; suppression persists.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Political feasibility of demand reduction matching supply decline"
+    },
+    {
+      "id": "temporal_compression_ecosystem_threshold",
+      "question": "Is there a critical threshold of snowmelt window compression below which alpine ecosystems experience irreversible state shifts?",
+      "resolution_mechanism": "Ecological time-series data; species-specific phenological analysis; threshold crossing detection in ecosystem productivity and diversity metrics",
+      "impact": "If threshold exists and is being approached: alpine ecosystems face extinction risk, confirming powerless victim status. If thresholds are adaptive: some ecosystem transitions are reversible, reducing extraction severity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ecosystem collapse threshold exists for snowmelt compression"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 1970,
+    "end": 2020
+  },
+  "commentary": {
+    "narrative_context": "Snowpack decline in mountain regions constrains downstream water availability through a mechanism combining forced climate change with locked-in institutional infrastructure. As atmospheric warming shifts precipitation from snow to rain and accelerates snowmelt timing, downstream agricultural communities, urban water systems, and alpine ecosystems face declining water supply during the critical growing and dry seasons. The constraint operates as a pure extraction mechanism (snare) because: (1) the physical mechanism (thermodynamically-forced hydrological shift) cannot be negotiated; (2) downstream users have no viable exit options \u2014 agriculture cannot relocate, urban systems cannot substitute fundamentally different water sources at scale, ecosystems have no geographic escape; (3) suppression is high \u2014 water rights are locked into historical allocations based on historical snowpack, infrastructure was engineered for conditions that no longer exist, and transitioning to alternative sources or demand reduction faces political barriers. The extractiveness value (0.68) reflects the gap between historical water availability and projected supply under continued climate forcing, measured as a fraction of demand that cannot be met. The theater ratio (0.38) is low, indicating that the constraint is primarily functional (physical) rather than performative, though some institutional theater exists around water allocation rituals and conservation theater that distracts from the underlying supply crisis.",
+    "key_agents": [
+      "Downstream Agricultural Communities: Primary victim (powerless/trapped, regional scope) \u2014 depend on summer baseflow for irrigation; no geographic exit; water rights are senior but insufficient",
+      "Urban Water Systems: Secondary victim (moderate/constrained, national scope) \u2014 face growing demand and declining supply; some exit options (desalination, inter-basin transfer) but at high cost",
+      "Alpine Ecosystems: Primary victim (powerless/trapped, regional scope) \u2014 abstract collective victim with no self-advocacy; experience ecosystem stress and phenological mismatch",
+      "Summer Baseflow Infrastructure: Tertiary victim (powerless/trapped, national scope) \u2014 hydropower, fish hatcheries, industrial cooling all dependent on summer flow; locked into historical hydrological patterns",
+      "Climate System: Non-agent driver \u2014 atmospheric warming forcing the constraint through physical mechanisms"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts through a widening gap between historical water availability (on which all downstream institutions are optimized) and projected supply under warming. The measurement trajectory shows extractiveness increasing from 0.32 (1970s, early climate signal not yet clear) through 0.48 (1990s-2000s, observational confirmation) to 0.68 (2010s-2020, accelerating decline). The increase is monotonic because the physical forcing (greenhouse gas accumulation) is monotonic and because infrastructure adaptation lags behind hydrological change. Suppression (0.72): High. Multiple binding mechanisms prevent exit: (1) Water law is based on historical flow \u2014 riparian rights and prior appropriation doctrines allocate water based on 20th-century snowpack norms; (2) Infrastructure investment is massive and sunk \u2014 dams, irrigation systems, and urban water networks are built for historical hydrology; (3) Agricultural communities lack substitutes \u2014 transitioning to rain-fed crops or relocating farms is economically ruinous; (4) Urban growth is politically locked \u2014 regions have invested in growth expecting water availability; (5) Ecosystem redistribution would require managed migration across vast distances, which is institutionally infeasible. Theater ratio (0.38): Low-moderate. The constraint is substantially functional (water is genuinely scarce) but some institutional theater exists: water allocation negotiations, conservation campaigns that focus on individual behavior rather than supply mismatch, and projections based on outdated hydroclimatic assumptions.",
+    "perspectival_gap": "The analytical observer at civilizational scale risks classifying snowpack decline as a mountain (immutable natural law). The atmospheric physics are indeed immutable \u2014 warming drives the hydrological shift. But the EXTRACTION MECHANISM is contingent: it arises because infrastructure was built for different conditions, because water law encodes historical flows, because demand growth is locked in, and because ecosystem constraints are not binding in current allocation rules. The powerless victim (agriculture, ecosystems) experiences the constraint as snare \u2014 no exit, high suppression, high extraction. The moderate agent (urban systems) experiences snare with slightly more agency (constrained exit through desalination or inter-basin transfer, though expensive). If the analytical observer conflates physical law with institutional constraint, they will miss that mitigation pathways exist: demand reduction (politically hard), infrastructure redesign (expensive but feasible), water rights reform (politically locked but structurally possible), and ecosystem prioritization (requires valuation change).",
+    "directionality_logic": "No beneficiaries exist for this constraint. All identified agents are victims. The directionality values (d) derive from the structural constraint of being dependent on snowpack in a warming climate: (1) Agricultural communities: trapped exit (d \u2248 0.95) \u2014 cannot leave without economic collapse; (2) Urban systems: constrained exit (d \u2248 0.75) \u2014 can substitute but at high cost; (3) Alpine ecosystems: trapped exit (d = 1.0) \u2014 zero degrees of freedom; (4) Infrastructure: trapped exit (d = 0.90) \u2014 physical capital cannot be relocated. The high d values across all victims produce high f(d) values, scaling extractiveness upward. The absence of beneficiaries is diagnostic: this is pure extraction, not a mixed coordination-extraction hybrid. The climate system that forces the constraint is not an agent with interests \u2014 it is a mechanism producing the extraction.",
+    "mandatrophy_analysis": "RESOLVED BY STRUCTURAL CLARITY: Snowpack decline is unambiguously a snare (not a rope or tangled rope) because: (1) it has no coordination function \u2014 the extraction is a side effect of climate physics applied to locked-in institutions, not a mechanism coordinating multiple agents' interests; (2) it has asymmetric extraction \u2014 victims have no corresponding beneficiaries; (3) it has high suppression \u2014 exit is blocked by both physical law (climate forcing) and institutional law (water rights, sunk infrastructure). The mandatrophy is resolved by observing that the constraint's primary function is not coordination but constraint on water supply. The mountain perspective is a false summit \u2014 yes, atmospheric physics is immutable, but the extraction mechanism (the mismatch between infrastructure and hydrology) is not natural law, it is institutional lag. The snare classification stands across all perspectives that account for the structural relationships of dependence, not just the physical forcing."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "western_water_law_prior_appropriation",
+      "agricultural_irrigation_demand_lock",
+      "alpine_ecosystem_phenological_mismatch",
+      "reservoir_capacity_hydrological_obsolescence"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "police_use_of_force_authority",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pufa"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Police Use of Force Authority",
+    "topic_domain": "law_enforcement/criminal_justice/state_violence",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "law_enforcement_agencies",
+      "municipal_governments"
+    ],
+    "victims": [
+      "civilian_populations",
+      "marginalized_communities",
+      "low_income_neighborhoods"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Citizen Under Police Discretion",
+      "comment": "PERSPECTIVE 1: CITIZEN UNDER POLICE DISCRETION (SNARE) \u2014 No exit capacity. Citizens cannot refuse police encounters, cannot reliably predict force thresholds, cannot effectively contest use of force in real time. Suppression is extreme: legal recourse is structural fiction (qualified immunity, burden of proof on victim, trauma barriers to litigation). Extracted continuously through fear, compliance demand, and asymmetric violence risk."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Marginalized Community",
+      "comment": "PERSPECTIVE 2: MARGINALIZED COMMUNITY (SNARE) \u2014 Structurally constrained. Cannot exit geographic location without economic displacement. Police encounters are higher frequency, force thresholds lower, and consequences more severe due to criminalization overlap. Constrained exit at financial/relocation cost. Extraction is systematic and documented."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Police Department",
+      "comment": "PERSPECTIVE 3: POLICE DEPARTMENT (ROPE) \u2014 Institutional beneficiary with maximum arbitrage (can redefine threats, reinterpret force levels, reclassify incidents). Experiences the constraint as coordination mechanism: force authority enables crime response, suspect control, officer safety. The institution perceives the authority as functional necessity, not extraction. Net beneficiary \u2014 authority flows toward police agencies."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Police Reform Movement",
+      "comment": "PERSPECTIVE 4: POLICE REFORM MOVEMENT (TANGLED ROPE) \u2014 Organized resistance with genuine power but constrained exit. Reform movements benefit from the constraint's visibility (generates coalition organizing, legal precedents, policy momentum) while also bearing its costs (violence escalation during protests, surveillance targeting, institutional resistance). Mixed extraction and coordination function."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Accountability Mechanism",
+      "comment": "PERSPECTIVE 5: ACCOUNTABILITY MECHANISM (SCAFFOLD) \u2014 Independent oversight, civilian review boards, body cameras, and use-of-force reporting represent temporary interventions with sunset clauses. These mechanisms show low theater (direct measurement vs performative ritual) and have sunset logic: as transparency norms mature, external accountability mechanisms decentralize from formal boards to distributed scrutiny (body camera footage, social media review, community patrols). Suppression should decline over time if mechanisms become generational."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Criminal Justice Legitimacy Ritual",
+      "comment": "PERSPECTIVE 6: CRIMINAL JUSTICE LEGITIMACY RITUAL (PITON) \u2014 The constraint persists through institutional inertia and theatrical maintenance (due process rituals, court procedures, legal appeals) despite degraded function. The ritual of legal accountability no longer meaningfully constrains police discretion due to qualified immunity, evidentiary standards favoring police testimony, and victim trauma barriers. Theater_ratio remains high because the legal machinery performs justice without delivering it."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational horizon, police force authority appears as an immutable prerequisite of state function: all societies require mechanisms for enforcing law and securing monopoly on legitimate violence. From this view, the constraint is unchangeable \u2014 a natural law of political organization. However, this naturalizes what is a contingent institutional choice. The divergence between this and the snare/piton perspectives reveals false naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "force_threshold_discretion_ambiguity",
+      "question": "Is the constraint's extraction driven by structural authority asymmetry or by individual officer discretion in force threshold application?",
+      "resolution_mechanism": "Comparative analysis of force incident rates and severity across jurisdictions with identical legal authority but different training, accountability, and demographic composition. High variance across jurisdictions indicates discretion dominance; low variance indicates structural authority.",
+      "impact": "If discretion-driven: constraint can be addressed through training/accountability changes (scaffold logic). If authority-driven: constraint requires legal restructuring (deeper snare). Classification shifts from snare/scaffold to pure snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether extraction flows from structural authority or individual discretion"
+    },
+    {
+      "id": "qualified_immunity_causal_role",
+      "question": "How much of the suppression (victim inability to seek recourse) flows from qualified immunity doctrine vs. from underlying force authority?",
+      "resolution_mechanism": "Jurisdictional comparison between US states with qualified immunity and those without (Illinois, New Mexico); incident outcome tracking and litigation costs before/after immunity removal.",
+      "impact": "If immunity is primary: removing it addresses suppression without changing force authority (moderate reform possible). If immunity is secondary to structural authority: removing it merely shifts costs without changing extraction (snare persists).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is driven by immunity doctrine or structural authority"
+    },
+    {
+      "id": "alternative_law_enforcement_models",
+      "question": "Do social worker response models, community policing, or decentralized enforcement show comparable effectiveness at crime reduction without force asymmetry?",
+      "resolution_mechanism": "Controlled comparison of response outcomes in jurisdictions piloting alternative models; crime rate, community safety, and force incident tracking; community satisfaction surveys.",
+      "impact": "If effective: force authority is not structurally necessary \u2014 classification shifts from mountain/rope to snare (contingent institutional choice). If ineffective: force authority has genuine function \u2014 snare classification confirmed but with coordination component acknowledged.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative enforcement models can replace force-based authority"
+    },
+    {
+      "id": "community_identity_lock_mechanism",
+      "question": "Do some communities internalize police authority as legitimate or 'just how things are' through identity fusion (identity_locked) rather than structural entrapment?",
+      "resolution_mechanism": "Survey and interview analysis distinguishing structural barriers to mobility (trapped), financial costs to exit (constrained), and internalized legitimacy framing (identity_locked). Longitudinal tracking of community organizing responses across different psychological bases.",
+      "impact": "If identity_locked is significant: changing structural authority alone insufficient \u2014 must address internalized legitimacy narratives. If primarily trapped/constrained: structural changes (reform, accountability) address the constraint.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Extent to which communities internalize police authority through identity fusion"
+    },
+    {
+      "id": "escalation_cycle_mechanism",
+      "question": "Is police use of force increasing over time due to changing threat environment, changing police training/norms, or changing community resistance patterns?",
+      "resolution_mechanism": "Longitudinal tracking of force incident severity, incident type, and officer training doctrine across decades. Analysis of threat environment (weapons prevalence, serious crime rates) vs. force escalation trends.",
+      "impact": "If threat-driven: force may be responding to genuine safety problems (constrained by external factors). If training/norm-driven: force is institutional choice (modifiable). If resistance-driven: force is responsive to contestation (indicates constraint's visibility).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Primary driver of force escalation over time"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Police use of force authority represents a structural constraint where state agents (police) are granted legal discretion to apply violence within defined parameters, creating inherent asymmetry between enforcer and enforced-upon. The constraint exhibits multiple decomposable mechanisms: (1) the structural authority itself (who can apply force and under what circumstances), (2) the suppression of victim recourse (qualified immunity, evidentiary burdens, trauma barriers), (3) the discretion in force threshold application (officer-by-officer variation), and (4) the legitimacy narrative that treats force authority as natural law. Citizens, particularly those in marginalized communities, are trapped within this constraint: they cannot exit the jurisdiction without economic displacement, cannot predictably avoid force encounters, and cannot effectively contest force through available legal remedies. Police departments are primary beneficiaries, experiencing the constraint as functional coordination for crime response and officer safety. Reform movements occupy an intermediate position where they benefit from the constraint's visibility for organizing while bearing its costs through escalation. The analytical challenge is to distinguish whether the constraint's extractiveness derives from the structural authority itself (immutable for state function) or from contingent institutional arrangements (reform-addressable). The theater_ratio decline (0.65 \u2192 0.52) reflects increasing video evidence and accountability pressure reducing the performative content of police justifications, while base extractiveness has increased (0.52 \u2192 0.68) as awareness of harm has grown despite accountability reforms.",
+    "key_agents": [
+      "Citizens and Civilian Populations: Primary victims (powerless/trapped) \u2014 subjected to police discretion with no exit capacity and suppressed legal recourse",
+      "Marginalized Communities: Secondary victims (moderate/constrained) \u2014 higher force encounter frequency, lower force thresholds, constrained geographic exit, systematic extraction",
+      "Law Enforcement Agencies: Primary beneficiaries (institutional/arbitrage) \u2014 gain authority to apply force, control threat definitions, reinterpret force levels, benefit from victim suppression",
+      "Municipal Governments: Secondary beneficiaries (institutional/arbitrage) \u2014 avoid accountability costs, maintain monopoly on legitimate violence, benefit from police legitimacy claims",
+      "Police Reform Movements: Organized challengers (organized/constrained) \u2014 benefit from constraint visibility for organizing while facing escalation risk and institutional resistance",
+      "Oversight and Accountability Bodies: Intermediate institutional actors (organized/constrained) \u2014 designed to constrain force authority but often lack enforcement power (piton dynamics)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional choices as immutable features of state function"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. Police use of force authority creates systematic extraction from civilians through multiple channels: direct harm (injury/death from force), fear tax (behavioral modification to avoid force), opportunity cost (time/resources devoted to police interaction), and identity tax (internalized criminalization by marginalized communities). The 0.68 value reflects that the constraint is primarily extractive rather than coordinative \u2014 while police legitimately need some force capacity for violent crime response, the documented evidence shows force is applied far beyond genuine threat response, disproportionately against low-threat populations (traffic stops, mental health crises, protest situations). Suppression (0.75): Very high. Multiple suppression mechanisms operate in parallel: (1) legal suppression through qualified immunity, evidentiary standards favoring police testimony, and tort liability caps; (2) institutional suppression through police union contracts protecting accused officers and restricting discipline; (3) psychological suppression through trauma barriers to formal complaints and litigation; (4) informational suppression through police control of incident narratives and evidence. Theater ratio (0.58): Moderate-high. Criminal justice ritual (arrest, booking, court procedures, sentencing) performs accountability but with degraded function \u2014 most use-of-force cases never reach trial, police testify credibly despite body camera contradictions due to testimony hierarchies, and conviction rates for police violence are near-zero nationally. The theater_ratio decline in measurements indicates accountability mechanisms (body cameras, civilian review) are reducing performative content by making force visible, creating pressure for actual constraint. Claimed type (Snare) driven by: \u03b5 \u2265 0.46, suppression \u2265 0.60, and \u03c7 \u2265 0.66 with multiple perspectives experiencing maximal extraction and minimal alternatives.",
+    "perspectival_gap": "The constraint demonstrates how the same structural authority produces opposite classifications depending on structural position. The beneficiary (police) perceives coordination; the victim perceives extraction. This is not disagreement about facts but disagreement about whose interests the constraint serves. The perspectival gap reveals the constraint's asymmetry rather than resolving it.",
+    "directionality_logic": "Directionality values are determined by structural position. Police departments (institutional/arbitrage) are full beneficiaries with ability to exit (arbitrage to different jurisdictions, regulatory frameworks). Citizens (powerless/trapped) are full targets with zero exit capacity. The sigmoid f(d) scales the effective extraction chi upward as agents move from beneficiary to victim positions. Police experience low or negative chi (the authority benefits them); citizens experience maximum chi (the authority extracts from them). Marginalized communities occupy intermediate d due to constrained exit (higher cost than arbitrage but lower cost than physical/legal trapping) \u2014 they experience high chi but not maximal. The directionality derivation explains why a single institutional arrangement (police force authority) classifies as both Rope (police perspective) and Snare (civilian perspective) \u2014 it is genuinely asymmetric, and the asymmetry is structural rather than perspectival.",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION CONFIRMED: The constraint satisfies snare gates across multiple dimensions. Extractiveness (0.68) exceeds snare threshold (\u22650.46). Suppression (0.75) exceeds snare requirement (\u22650.60). The constraint requires active enforcement (police personnel, training, legal authority delegation). The victims are identifiable and numerous (civilians in police-jurisdiction areas). The beneficiaries are identifiable (police departments, municipal governments). The chi formula produces \u03c7 \u2265 0.66 for the powerless/trapped agent: with d \u2248 0.95 (full target), f(d) \u2248 1.42, and \u03c3(national) = 1.0, chi \u2248 0.68 \u00d7 1.42 \u00d7 1.0 \u2248 0.96. The constraint is not a false snare (coordination masquerading as extraction) \u2014 it has genuine extractive content that exceeds any coordination function for the victimized population. The polymorph (multiple perspectives yielding different types) does not contradict the snare classification; it reveals the constraint's asymmetry. The snare is asymmetric \u2014 it functions as rope for the beneficiary and snare for the victim \u2014 which is exactly how extractive constraints maintain themselves."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "qualified_immunity_doctrine",
+      "police_union_power",
+      "criminalization_machinery",
+      "community_distrust_feedback"
+    ],
+    "dual_formulation_note": "Police use of force authority decomposes into multiple structurally distinct constraints: (1) the structural authority itself (force_authority_grant), (2) the suppression of recourse (qualified_immunity_doctrine), (3) the discretion application (officer_force_threshold_discretion), and (4) the legitimacy narrative (force_naturalization_myth). This story focuses on the integrated constraint; decomposed stories should separate empirical (force incident data) from conceptual (legitimacy framing) and structural (legal authority) dimensions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.58
+    }
+  ]
+}

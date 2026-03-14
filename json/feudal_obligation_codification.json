@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "feudal_obligation_codification",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "feud"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Feudal Obligation Codification",
+    "topic_domain": "political/economic/historical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "aristocratic_landowning_class"
+    ],
+    "victims": [
+      "peasant_serf_class",
+      "merchant_intermediaries",
+      "independent_craftspeople"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Bound Serf",
+      "comment": "PERSPECTIVE 1: BOUND SERF (SNARE) \u2014 The peasant is trapped by law, custom, and geography. Exit is legally prohibited; escape carries severe punishment. Obligations are absolute and inherited. The serf experiences maximum extraction with no alternative pathways. Suppression is structural (legal prohibition + control of subsistence resources)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "label": "The Serf's Generational Identity",
+      "comment": "PERSPECTIVE 2: SERF GENERATIONAL IDENTITY (SNARE) \u2014 Across generational time, the serf's identity becomes constituted through obligation: 'a peasant is one who owes.' The binding mechanism shifts from purely structural (legal/economic barriers) to cognitive (identity fusion). The serf cannot imagine an alternative social position. The constraint appears not as a law imposed from outside but as the natural order of things. Suppression includes internalized norms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Merchant Intermediary",
+      "comment": "PERSPECTIVE 3: MERCHANT INTERMEDIARY (TANGLED ROPE) \u2014 Independent merchants face constraints (monopoly on certain trades reserved for nobility, tariff obligations, service levies) but also benefit from the codified system. The obligation structure coordinates resource flows that enable their commerce. They experience genuine coordination alongside asymmetric extraction. Exit is costly (relocation, loss of trading network access) but possible. Suppression is high but surmountable."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Aristocratic Landowning Class",
+      "comment": "PERSPECTIVE 4: ARISTOCRATIC LANDOWNING CLASS (ROPE) \u2014 From the beneficiary's perspective, feudal obligation is a coordination mechanism solving the problem of extracting surplus and maintaining social hierarchy without constant military coercion. The code of chivalry and obligation creates legitimacy. The landowner experiences the constraint as reciprocal: they owe protection and justice in exchange for obligation. This is genuine coordination from their position. They have exit options (migration to other fiefs, military authority) that reduce experienced extraction. Net beneficiary position."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Guild Organization Movement",
+      "comment": "PERSPECTIVE 5: GUILD ORGANIZATION MOVEMENT (SCAFFOLD) \u2014 Organized crafts and merchant guilds gradually develop alternative coordination mechanisms (apprenticeship standards, quality controls, collective bargaining) that reduce dependence on feudal obligation. These are temporary scaffolds with sunset clauses \u2014 as they mature, feudal extraction loses force because alternative status pathways emerge. Organized agents see the constraint as a temporary obstacle being bypassed through institutional innovation."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Late Feudal Ritual System",
+      "comment": "PERSPECTIVE 6: LATE FEUDAL RITUAL SYSTEM (PITON) \u2014 By the late medieval period, feudal obligation has become largely performative in many regions. The actual military/economic functions have degraded; the rituals persist through institutional inertia. Homage ceremonies, written obligations, and formal hierarchies continue despite low functional coordination. Theater ratio rises as the real function declines. The system sees itself as degraded \u2014 acknowledged even by participants as archaic."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational perspective, feudal obligation codification is a pure extraction mechanism disguised as natural social order. High extractiveness (0.68), high suppression (0.72), low theater relative to extraction (0.55). The constraint persists through legal enforcement and identity lock, not through genuine coordination function. Mandatrophy resolved: this is verifiably snare, not rope or mountain."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "reciprocal_obligation_authenticity",
+      "question": "Is the reciprocal obligation on the lord (protection, justice) functionally equivalent to the peasant's obligation (labor, service, tribute)?",
+      "resolution_mechanism": "Historical analysis of enforcement patterns: frequency of lord prosecution for breach vs peasant punishment; comparison of material benefit flowing to lord vs serf; examination of dispute resolution when both parties claim breach.",
+      "impact": "If genuinely reciprocal: constraint is Tangled Rope from both positions (coordination + extraction). If asymmetric enforcement: constraint is Snare; reciprocity is cover story.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether reciprocal obligation is functionally symmetric or asymmetrically enforced"
+    },
+    {
+      "id": "exit_option_availability",
+      "question": "How many serfs actually attempted escape in a given period and what fraction succeeded in establishing alternative social position?",
+      "resolution_mechanism": "Historical records: flight rates from manorial records, town migration registers, monastic refuge patterns; longitudinal tracking of escapee outcomes; comparison to theoretical population turnover if exit were freely chosen.",
+      "impact": "If <1% succeed and <5% attempt: trapped classification confirmed. If >10% succeed: exit_options should be reclassified from trapped to constrained.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Escape success rate and exit option availability for bound peasants"
+    },
+    {
+      "id": "identity_lock_internalization_mechanism",
+      "question": "At what generational depth does peasant identity become fused with obligation status, such that alternative social position becomes unthinkable rather than merely prohibited?",
+      "resolution_mechanism": "Historical sources: peasant narratives, confessional records, court testimony; linguistic analysis of how peasants describe their own status; transmission of expectations across generations in family documents.",
+      "impact": "If identity lock emerges by generation 2: suppression becomes internalized and more stable. If never fully internalized: constraint remains dependent on external enforcement.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Generational timeline for identity lock in feudal obligation"
+    },
+    {
+      "id": "alternative_coordination_function_loss",
+      "question": "What specific coordination functions did feudal obligation perform that could not be performed by markets, contracts, or other mechanisms once those alternatives emerged?",
+      "resolution_mechanism": "Historical analysis of what breaks down in early-modern transition away from feudalism; identification of coordination gaps that required new institutions (state revenue systems, labor markets, legal codes); comparison of efficiency metrics before and after transition.",
+      "impact": "If functions were genuinely irreplaceable: classification as rope becomes more defensible. If easily replaced: classification as snare confirmed; codification was extraction dressed as coordination.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Uniqueness of coordination functions provided by feudal obligation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 300,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 300,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 300
+  },
+  "commentary": {
+    "narrative_context": "Feudal obligation codification represents a structural constraint that binds peasant populations to land and labor obligations through law, custom, and internalized identity. From the 9th through 15th centuries, what began as negotiated reciprocal relationships (protection in exchange for service) hardened into codified, heritable, asymmetrically enforced obligations. The constraint exhibits pure extraction characteristics (high extractiveness, suppression, mandated enforcement) masked by coordination rhetoric and reciprocal framing. The analytical observer classifies it as snare; victims experience it as imprisonment; beneficiaries experience it as legitimate coordination; organized actors develop alternatives (guilds, town charters) that create sunset pathways. The constraint's extractiveness rises initially (0.55 to 0.72) as codification becomes more elaborate and enforcement more systematic, then begins to decline (0.72 to 0.68) as alternative institutions (markets, states, guilds) emerge. Theater ratio rises throughout (0.38 to 0.62) as the functional coordination mechanisms degrade and the rituals become increasingly performative \u2014 late feudalism maintains the forms of obligation without the original functions.",
+    "key_agents": [
+      "Peasant Serf Class: Primary victims (powerless/trapped at immediate, identity_locked at generational time) \u2014 experience maximum extraction with no legal exit; obligations are heritable and absolute",
+      "Aristocratic Landowning Class: Primary beneficiary (institutional/arbitrage) \u2014 captures surplus labor, military service, and status legitimacy; experiences constraint as reciprocal coordination",
+      "Merchant Intermediaries: Secondary victims (moderate/constrained) \u2014 face monopoly restrictions, tariff obligations, service levies; also benefit from codified trade regulations",
+      "Guild Organizations: Organized actors (organized/constrained) \u2014 develop alternative coordination mechanisms (apprenticeship, quality standards) that gradually reduce feudal extraction dependence",
+      "Church/Monastic Institutions: Secondary beneficiary and complicating actor \u2014 benefit from feudal obligations while also serving as escape route for some peasants; legitimize the system through theological justification",
+      "Town Charter Movements: Organized exit agents (organized/mobile) \u2014 establish alternative legal frameworks that free residents from feudal obligation; create sunset pathways",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees the constraint as verifiable snare, not rope; identifies reciprocity rhetoric as legitimation cover"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The peasant's obligation to provide labor, service, and tribute with minimal reciprocal protection creates sustained asymmetric extraction. Measurement trajectory shows initial rise (codification increasing extractiveness from 0.55 to 0.72) then slight decline (0.72 to 0.68) as alternatives emerge. High extractiveness is the definition; reciprocal obligations do not lower this because enforcement is asymmetric \u2014 peasants bear punishment for breach; lords rarely face equivalent consequences. Suppression (0.72): High. Multiple overlapping mechanisms prevent exit: legal prohibition on peasant mobility, control of subsistence resources (land access conditional on obligation), geographic isolation, armed enforcement, and crucially, internalized identity lock by the generational perspective. Suppression mechanisms include structural (legal/economic) and cognitive (identity fusion). Theater ratio (0.55): Moderate, rising. Early feudalism (t=0) has lower theater because genuine military/economic coordination functions exist; the obligation serves real purposes. By late feudalism (t=300), theater rises (0.62) as military and economic functions have been replaced by markets and states, yet the ceremonial forms persist \u2014 homage rituals, written obligations, status hierarchies continue as institutional inertia. Mandatrophy is resolved: this is verifiably snare. The reciprocal framing ('the lord owes protection') is not sufficient to make it rope, because (a) enforcement is asymmetric \u2014 breach by peasant is criminal, breach by lord is not, and (b) alternatives exist. By the comparative standard, true coordination mechanisms survive when alternatives emerge; feudal obligation requires suppression to persist. Therefore, snare.",
+    "directionality_logic": "Directionality (d) values derive from structural position relative to extraction flow. The peasant is structurally trapped (no legal exit, economic dependency on land access) and is the target of extraction (owes labor/service/tribute), yielding d \u2248 0.95, producing high f(d) \u2248 1.42, resulting in maximum experienced extractiveness \u03c7. At generational time with identity_locked exit, d \u2248 0.89, producing f(d) \u2248 1.28, still very high \u03c7. The identity lock adds perceptual entrenchment to structural entrenchment. The aristocratic beneficiary has institutional power and arbitrage exit options (can migrate to other fiefs, has military authority), yielding d \u2248 0.05, producing f(d) \u2248 -0.12, negative \u03c7 \u2014 they experience the constraint as benefiting them without extraction cost. The merchant has moderate power and constrained exit (relocation is costly but possible), yielding d \u2248 0.50, producing moderate f(d) \u2248 0.65, moderate \u03c7. Guild organizations have organizational power and constrained exit (guild restrictions can be escaped by joining a town charter movement), yielding d \u2248 0.45, producing f(d) \u2248 0.40, lower \u03c7 \u2014 they see alternatives.",
+    "perspectival_gap": "The constraint produces maximum perspectival divergence. From the serf's trapped position, feudal obligation is pure snare \u2014 extraction with no exit and no coordination benefit. From the identity_locked generational perspective, it remains snare but with an additional dimension: the binding is internalized, making the constraint appear natural rather than imposed. From the merchant's constrained position, it is tangled rope \u2014 genuine coordination (trade rules, commercial protocols) exists alongside extraction (monopoly restrictions, levies). From the aristocratic beneficiary's perspective, it is rope \u2014 a coordination mechanism solving the problem of maintaining surplus extraction while providing reciprocal legitimacy. From the guild organization's perspective, it is a scaffold with sunset \u2014 a temporary obstacle being replaced by guild coordination mechanisms. From the late feudal ritual system's perspective, it is piton \u2014 the functions have atrophied but the ceremonies persist. The analytical observer sees verifiable snare: extractiveness is high, suppression is high, and the constraint persists through enforcement, not through genuine coordination function (which has been replaced by markets and states).",
+    "mandatrophy_analysis": "Mandatrophy is resolved by verifying snare classification: (1) Extractiveness 0.68 \u2265 0.46 threshold. (2) Suppression 0.72 \u2265 0.60 threshold. (3) Chi computation: primary victim perspective (powerless/trapped/local) yields d \u2248 0.95, f(d) \u2248 1.42, \u03c3(local) = 0.8, \u03c7 \u2248 0.68 \u00d7 1.42 \u00d7 0.8 \u2248 0.77 \u2265 0.66 threshold. (4) Primary beneficiary perspective (institutional/arbitrage/continental) yields d \u2248 0.05, f(d) \u2248 -0.12, \u03c3(continental) = 1.1, \u03c7 \u2248 0.68 \u00d7 (-0.12) \u00d7 1.1 \u2248 -0.09. Negative chi confirms beneficiary. (5) Constraint persists through enforcement and suppression, not through coordination benefit. All beneficiaries are institutional; all victims are powerless or moderate. No beneficiary at powerless level; no victim at institutional level (guild organizations are organized, not powerless). This asymmetry is diagnostic of snare. Rope would require balanced perspectives where the same agents experience both coordination and extraction benefit; snare has beneficiaries who experience pure benefit and victims who experience pure extraction. Mandatrophy resolved: this is snare."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "guild_charter_emergence",
+      "peasant_revolt_movements",
+      "merchant_class_ascendancy"
+    ],
+    "dual_formulation_note": "Feudal obligation codification is upstream of three constraint families: guild charter emergence (alternative coordination mechanism), peasant revolt movements (organized exit attempt), and merchant class ascendancy (structural replacement of feudal extraction with market mechanisms). Each downstream constraint has higher extractiveness or lower suppression, reflecting the decay of feudal extraction as alternatives mature."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.5
+    }
+  ]
+}

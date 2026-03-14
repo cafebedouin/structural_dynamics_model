@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "creator_income_concentration",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cic"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Creator Income Concentration",
+    "topic_domain": "economic/digital_labor/cultural_production",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "algorithmic_curators",
+      "capital_holders"
+    ],
+    "victims": [
+      "non_featured_creators",
+      "middle_tier_creators",
+      "emerging_creators"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Emerging Creator",
+      "comment": "PERSPECTIVE 1: EMERGING CREATOR (SNARE) \u2014 Trapped by platform dependence, algorithm opacity, and lack of alternative distribution channels. Bears full cost of income concentration with no exit mechanism. Career viability depends on algorithms they cannot see or influence. Maximum extraction experienced."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Middle-Tier Creator",
+      "comment": "PERSPECTIVE 2: MIDDLE-TIER CREATOR (TANGLED ROPE) \u2014 Constrained by platform switching costs, audience lock-in, and income dependency, but benefits from some platform coordination functions (audience discovery, payment infrastructure). Mixed extraction and coordination \u2014 significant agency but substantial costs to exit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATOR (ROPE) \u2014 Net beneficiary. Experiences the constraint as coordination of creator labor and audience attention. Can exit or restructure terms with minimal friction. Benefits flow predictably toward platform; creator income concentration is profitable feature, not costly bug."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Creator Cooperative Movement",
+      "comment": "PERSPECTIVE 4: CREATOR COOPERATIVE MOVEMENT (SCAFFOLD) \u2014 Organized agents (creator unions, open-source platforms, creator DAOs) are building alternative distribution and payment mechanisms with explicit sunset logic. See the concentration as a temporary coordination failure being replaced by decentralized models. Low experienced extraction because they perceive and are building alternatives."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Traditional Media Institution",
+      "comment": "PERSPECTIVE 5: TRADITIONAL MEDIA INSTITUTION (PITON) \u2014 Once-dominant distribution mechanism now largely performative. Studio gatekeeping and talent management exist primarily as theatrical legitimacy mechanisms, no longer as real bottlenecks. Maintained through institutional inertia and IP portfolio value rather than functional necessity. Theater ratio high because legitimacy theater persists despite reduced functional distribution control."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Pareto Distribution View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a mathematical perspective, Pareto/power-law distributions of attention and income are emergent properties of attention economies with low-cost replication. Creator income concentration appears as a consequence of scale-free network dynamics \u2014 an inherent law of attention markets. However, this naturalizes what is structurally a contingent institutional arrangement: platform algorithm design, payment structure, and discovery mechanisms that concentrate rather than distribute."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "algorithmic_opacity_mechanism",
+      "question": "Is income concentration driven by genuine algorithmic constraints on discovery or by opaque ranking that serves platform interests?",
+      "resolution_mechanism": "Algorithm transparency analysis: comparison of actual discovery mechanics against platform stated objectives; study of whether transparent ranking systems reduce concentration",
+      "impact": "If genuine constraint: concentration reflects attention limitations, less extractive. If opaque design: concentration reflects engineered outcome, more extractive and more suppressive.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether concentration is algorithmic constraint or engineered outcome"
+    },
+    {
+      "id": "creator_awareness_and_exit",
+      "question": "Do creators understand the concentration mechanism and their exit options, or is the suppression substantially internalized through cognitive capture?",
+      "resolution_mechanism": "Survey of creator knowledge of algorithm mechanics, alternative platforms, and perceived viability of exit; correlation with actual exit behavior when alternatives become visible",
+      "impact": "If awareness low and trapped: suppress value near 0.68. If awareness high but exit costs prohibitive: constrained agents outnumber trapped; snare classification weakens to tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Creator understanding and perceived exit viability"
+    },
+    {
+      "id": "network_effect_lock_in_degree",
+      "question": "How much of platform lock-in is network effect necessity versus switching cost extraction?",
+      "resolution_mechanism": "Historical analysis of platform fragmentation and migration events; comparison of migration rates when alternatives offer feature parity without network effect advantages; study of niche platforms with lower concentration",
+      "impact": "If network effect dominant: lock-in is genuine coordination benefit, tangled_rope stronger. If switching costs dominant: lock-in is extractive, snare stronger.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Network effect necessity versus artificial lock-in"
+    },
+    {
+      "id": "cooperative_platform_viability",
+      "question": "Can decentralized creator cooperatives and open platforms actually replace platform concentration, or is the scaffold sunset aspirational?",
+      "resolution_mechanism": "Analysis of existing cooperative platform adoption, creator switching behavior, and comparative transaction costs; longitudinal tracking of whether cooperative platforms reduce individual creator income concentration",
+      "impact": "If viable: scaffold perspective confirmed, extractiveness declining as alternatives mature. If unviable: scaffold is aspirational only, snare classification persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of creator cooperative alternatives"
+    },
+    {
+      "id": "suppression_internalization",
+      "question": "Is measured suppression (0.68) structural (platform design barriers) or substantially internalized through creator identity fusion and aspirational thinking?",
+      "resolution_mechanism": "Post-exit analysis: if creators exit platforms but retain belief in inevitability of concentration, suppression is internalized. Measurement of creator narratives about career viability before and after exposure to alternative models.",
+      "impact": "If internalized: constraint persists in creator belief systems even absent platform mechanisms; effective suppression higher than structural measure. Identity-locked exit option applies to subset of creators.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized suppression mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Creator income concentration describes the structural mechanism by which digital platforms concentrate compensation toward a small fraction of creators while maintaining the appearance of open opportunity. The constraint exhibits high extractiveness (0.62) and high suppression (0.68), indicating a genuine snare mechanism from the powerless creator perspective. The system combines platform network effects (real coordination function), algorithmic curation (opaque mechanism that concentrates or distributes depending on design choices), and career path dependence (creators accrue audience capital on specific platforms). The theater ratio (0.58) reflects that platforms maintain legitimacy narratives around meritocracy and opportunity while engineering algorithms that concentrate outcomes. Emerging creators face trapped structural position: platform dependence is mandatory for reach, algorithm mechanics are opaque, and alternative distribution channels have high friction. Income concentration increases over the measurement interval (0.35 \u2192 0.62), indicating that extraction mechanisms are accumulating rather than correcting. Theater ratio also increases, suggesting platforms are investing more in legitimacy maintenance as concentration becomes visible.",
+    "key_agents": [
+      "Emerging Creators: Primary victims (powerless/trapped) \u2014 lack independent audience, capital, or exit options; bear full cost of platform income concentration mechanism",
+      "Middle-Tier Creators: Secondary victims (moderate/constrained) \u2014 have developed partial audience independence and some platform alternatives, but remain substantially constrained by audience lock-in and switching costs",
+      "Platform Operators: Primary beneficiaries (institutional/arbitrage) \u2014 extract value through commission structure, data ownership, and algorithmic curation that directs attention to promoted creators; can restructure or exit mechanism with no friction",
+      "Algorithmic Curators: Secondary beneficiaries (institutional/arbitrage) \u2014 benefit from concentration through promotion of favored creators, access to creator data, and attention concentration",
+      "Capital Holders: Tertiary beneficiaries (institutional/arbitrage) \u2014 fund platforms and benefit from creator labor extraction; no direct exposure to creator economics",
+      "Creator Cooperative Movement: Organized actors (organized/constrained) \u2014 building alternatives (Patreon-like models, creator DAOs, open-source platforms); perceive concentration as temporary coordination problem being solved",
+      "Traditional Media Institutions: Institutional actors (institutional/arbitrage) \u2014 once controlled creator distribution; now reduced to legitimacy theater and IP portfolio management",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing platform concentration as emergent property of attention economies"
+    ],
+    "logic_rationale": "Extractiveness (0.62): High. The income concentration mechanism extracts from creators through multiple channels: platform commission structures (typically 30-50%), algorithmic demotion (creators not in algorithmic favor lose visibility), and data extraction (creator content generates training data and behavioral insights). The platform is the beneficiary of all three extraction mechanisms. Measurement progression (0.35 \u2192 0.62) shows extraction accumulating as platforms optimize discovery algorithms toward concentration and as platform dependency deepens. Suppression (0.68): Very high. Barriers to creator exit include: mandatory platform presence for reach (no viable alternative distribution), algorithmic opacity preventing optimization, audience lock-in (audiences expect creators on major platforms), career path dependence (building an audience takes years), and lack of portability (audience cannot move with creator). Theater ratio (0.58): Moderate-high. Platforms maintain extensive legitimacy theater around meritocracy, opportunity, and creator support, while engineering algorithms that concentrate outcomes. The theater serves suppression by preventing creators from recognizing the concentration as extractive rather than inevitable. Claimed type (Snare): High extraction, high suppression, asymmetric enforcement. Platform maintains the constraint actively (algorithmic design choices), suppresses alternatives (exclusive agreements, algorithm dampening of external links), and derives clear benefit from concentration.",
+    "directionality_logic": "Directionality (d) measures each agent's structural position in the extraction flow. Emerging creators occupy d \u2248 0.95 (full targets): powerless agents facing trapped exit with no alternatives, bearing maximum experienced extraction through f(d) \u2248 1.42. Middle-tier creators occupy d \u2248 0.70 (victims with some agency): moderate power and constrained exit options produce d \u2248 0.70, f(d) \u2248 1.00, moderate experienced extraction. Platform operators occupy d \u2248 0.10 (full beneficiaries): institutional power and arbitrage exit options produce low d, negative f(d), clear benefit flow. The perspectival gap reflects these different d values: emerging creators see snare (high extraction), middle-tier creators see tangled rope (mixed), platforms see rope (coordination benefit). No override needed \u2014 structural derivation accurately captures different agent positions.",
+    "perspectival_gap": "This constraint demonstrates how identical structural mechanisms appear as different types depending on the agent's structural position. Platform operators see pure coordination (Rope) \u2014 they are solving the real problem of connecting creators with audiences. Creator cooperatives see a temporary problem with alternatives emerging (Scaffold) \u2014 blockchain, open-source platforms, and union organizing are building exit paths. Traditional media see their own degradation (Piton) \u2014 gatekeeping legitimacy persists but no longer controls distribution. Middle-tier creators see mixed extraction and coordination (Tangled Rope) \u2014 platforms genuinely enable reach but extract heavily. Emerging creators see pure extraction (Snare) \u2014 the system takes their labor output and channels income toward others with no alternative. The analytical observer risks seeing concentration as an immutable law of attention economies (Mountain) \u2014 power laws are inevitable, so concentration must be inevitable. But the structural data reveals this as a false summit: algorithm design choices, payment structures, and platform policies that concentrate rather than distribute are contingent institutional arrangements, not laws of nature.",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION CONFIRMED by structural metrics and perspectival convergence. The constraint meets all three Snare gates: extractiveness (0.62 \u2265 0.46), suppression (0.68 \u2265 0.60), effective extraction \u03c7 \u2265 0.66 for powerless creators (\u03b5=0.62 \u00d7 f(d\u22480.95)\u22481.42 \u00d7 \u03c3(global\u22481.2) \u2248 1.05, though \u03c7 is capped at effective range). Mandatrophy resolved by: (1) Clear victim identification (emerging creators, non-featured creators bear measurable extraction), (2) Asymmetric enforcement (platform actively engineers concentration through algorithm design), (3) Suppression of alternatives (exclusive agreements, algorithm dampening of external platforms), (4) Network closure (creators cannot exit without losing audience). The platform benefits from concentration, not from creators' improved outcomes. This is not a coordination mechanism being misread as extraction \u2014 coordination functions exist (audience discovery, payment processing) but are subordinate to the extraction mechanism. The extraction is active and intentional (algorithm design that concentrates), not incidental. False summit risk: the Mountain perspective naturalizes concentration as inevitable law of attention. Structural data contradicts this \u2014 comparison of platforms with different algorithm designs shows different concentration distributions, proving concentration is contingent on design choices, not inevitable."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_lock_in",
+      "algorithmic_opacity",
+      "creative_labor_exploitation"
+    ],
+    "dual_formulation_note": "Creator income concentration is downstream of and interconnected with platform lock-in (structural network effect dependence), algorithmic opacity (mechanism that concentrates or distributes depending on design), and creative labor exploitation (extraction mechanism). Each of these constraints has its own \u03b5 value and perspectival structure; network links show structural dependencies."
+  },
+  "directionality_overrides": []
+}

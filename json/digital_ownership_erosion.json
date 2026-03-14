@@ -1,0 +1,215 @@
+{
+  "header": {
+    "constraint_id": "digital_ownership_erosion",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "digow"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Digital Ownership Erosion",
+    "topic_domain": "technology/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "content_distribution_networks",
+      "subscription_service_providers"
+    ],
+    "victims": [
+      "end_users",
+      "independent_developers",
+      "cultural_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The End User",
+      "comment": "PERSPECTIVE 1: END USER (SNARE) \u2014 Trapped. Once integrated into platform ecosystems, users cannot extract their data, social graphs, or digital artifacts without catastrophic loss. Technical barriers (API deprecation, proprietary formats) and legal barriers (terms of service, DMCA enforcement) combine to make exit impossible. No meaningful alternatives exist at scale. Maximum extraction: users bear labor costs (data generation, attention), platform captures value."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Independent Developer",
+      "comment": "PERSPECTIVE 2: INDEPENDENT DEVELOPER (SNARE) \u2014 Trapped by dependency on platform APIs. Initial access enables ecosystem participation; subsequent API changes, rate limiting, or deprecation (announced with minimal notice) destroy application functionality. Third-party developers have no contractual protections, no representation in platform governance, and no exit except abandonment of investment. Platform captures all rents once ecosystem dependency is established."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Content Creator",
+      "comment": "PERSPECTIVE 3: CONTENT CREATOR (TANGLED ROPE) \u2014 Constrained by network effects. Platform provides distribution, discovery, and monetization mechanisms that have genuine coordination value. But creators have no ownership rights to their content repository, audience data, or algorithmic reach. Platform can demonetize, suppress distribution, or delete accounts unilaterally. Extraction is real (asymmetric control of audience and revenue) but mixed with genuine coordination benefit (access to distribution infrastructure creators could not build independently)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 4: PLATFORM OPERATOR (ROPE) \u2014 Experiences the constraint as coordination. Network effects and switching costs are genuine coordination mechanisms \u2014 they solve the problem of maintaining critical mass for platform utility. Lock-in is a feature, not a bug, from the beneficiary's perspective. The platform captures value asymmetrically, but this is framed as compensation for infrastructure provision and risk capital. Exit via acquisition or IPO provides exit options."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Source Coalition",
+      "comment": "PERSPECTIVE 5: OPEN SOURCE COALITION (TANGLED ROPE) \u2014 Organized but structurally constrained. Building decentralized alternatives (federation protocols, blockchain-based ownership, distributed social networks) provides coordination benefits but faces chicken-and-egg problems: users won't migrate without critical mass, but critical mass requires millions of users to coordinate a migration. Coordination function is real (these systems can reduce platform lock-in); extraction persists because the coordination pathway requires overcoming switching costs that only decentralized infrastructure can solve. Active enforcement required to overcome network effect stickiness."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Regime",
+      "comment": "PERSPECTIVE 6: REGULATORY REGIME (PITON) \u2014 Data protection regulations (GDPR, CCPA) and interoperability mandates claim to restore user agency and reduce platform lock-in. But enforcement is weak, compliance costs are bundled into TOS updates that users cannot negotiate, and the regulatory theater (data download portability buttons, privacy dashboards) provides perceived agency without functional ownership restoration. Theater ratio: high. The constraint persists because legal mechanisms cannot scale to the complexity of data extraction and reconstruction without coordination mechanisms that regulations alone cannot provide."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, network effects are a fundamental property of information systems. Value increases with scale, switching costs are mathematically inherent to multi-agent systems, and the dynamics of lock-in appear as immutable laws. This perspective risks naturalizing what is actually a contingent policy choice: the current legal regime (copyright, DMCA, terms of service enforceability) is not a law of physics but a set of institutional arrangements that could be restructured to preserve network benefits while enabling interoperability and data portability."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "network_effect_vs_artificial_lock_in",
+      "question": "How much of measured platform lock-in stems from genuine network effects versus artificial switching costs created by legal restrictions (DMCA, copyright enforcement, TOS)?",
+      "resolution_mechanism": "Comparative case study: network effects in interoperable systems (email, web) versus walled gardens (proprietary mobile platforms). Analysis of switching costs in jurisdictions with strong interoperability mandates versus weak ones.",
+      "impact": "If lock-in is primarily artificial: extractiveness drops significantly (\u03b5 \u2192 0.35-0.42), classification shifts from Snare to Tangled Rope for powerless agents. If primarily network-effect-driven: classification holds, but enables targeted intervention (remove legal lock-in rather than attempt to break network effects).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of lock-in from network effects versus legal restrictions"
+    },
+    {
+      "id": "data_portability_sufficiency",
+      "question": "Can technically enabling data export and transfer (data portability rights) actually restore user agency if the coordination problem (finding where to migrate to) remains unsolved?",
+      "resolution_mechanism": "Post-GDPR implementation analysis: measure proportion of users who export data and successfully migrate to alternative services versus those who export but never use the data. Track cost barriers (time to configure alternative, training, data format incompatibility).",
+      "impact": "If data portability alone restores agency: Regulatory Piton becomes functional (theater drops, classification could become Scaffold). If portability fails to overcome coordination barriers: interoperability mandates on API level are required, and purely regulatory approaches are insufficient.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether data portability alone enables meaningful exit"
+    },
+    {
+      "id": "decentralized_alternative_viability",
+      "question": "Can federated/decentralized social networks achieve critical mass sufficient to compete with incumbents, or do network effects guarantee permanent lock-in regardless of technical alternatives?",
+      "resolution_mechanism": "Monitor growth trajectories of Mastodon, Bluesky, ActivityPub-based networks, and blockchain-based alternatives. Compare user retention and feature parity against network growth rates. Identify whether adoption accelerates (positive feedback) or plateaus (lock-in floor).",
+      "impact": "If decentralized platforms achieve 10%+ market share within 5 years: network effects are not immutable, lock-in can be overcome, Open Source Coalition perspective validated (Scaffold outcome). If they plateau below 5%: network effects are the binding constraint, structural change requires legal or market intervention beyond technical innovation.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether decentralized alternatives can achieve critical mass"
+    },
+    {
+      "id": "platform_cost_of_lock_in_maintenance",
+      "question": "What proportion of platform operational cost is devoted to maintaining lock-in (API changes, deprecation cycles, data format proprietary constraints) versus genuine infrastructure provision?",
+      "resolution_mechanism": "Platform engineering audit: measure engineering effort spent on interoperability features and data export versus effort spent on lock-in maintenance. Compare against platforms operating with weaker lock-in (email services, web protocols).",
+      "impact": "If lock-in maintenance represents >40% of operational cost: platforms have economic incentive to erect barriers (extraction is economically rational). If <20%: lock-in is a policy choice rather than a cost necessity, and regulatory intervention has lower collateral damage risk.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Economic cost of maintaining versus removing lock-in mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.53
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Digital ownership erosion describes the structural shift from consumer ownership of digital artifacts (software, data, media) to leasehold models where users access functionality through restricted licenses and terms of service. The constraint operates through platform stickiness, API lock-in, proprietary data formats, legal barriers (DMCA, copyright enforcement), and network effects. This generates a matrix of structural relationships across six constraint types: end users face a snare (trapped in platform ecosystems with no exit); independent developers face snares (API deprecation destroys invested capital); content creators face tangled ropes (genuine coordination benefit mixed with asymmetric control); platform operators experience ropes (network effects as coordination); organized alternative builders face tangled ropes (genuine decentralization potential constrained by switching-cost coordination barriers); regulators maintain pitons (enforcement theater); analytical observers risk false summits (naturalizing network effects as immutable law). The constraint's theater ratio (0.58) reflects the gap between nominal user agency (privacy controls, data portability rights, account settings) and functional agency (these controls rarely enable meaningful exit).",
+    "key_agents": [
+      "End Users: Primary victims (powerless/trapped) \u2014 cannot extract data, social graphs, or digital artifacts; all alternatives require coordinated migration",
+      "Independent Developers: Secondary victims (powerless/trapped) \u2014 depend on platform APIs; API changes destroy application value with no compensation mechanism",
+      "Content Creators: Mixed victims/beneficiaries (moderate/constrained) \u2014 benefit from distribution platform but lack ownership of audience data and algorithmic reach",
+      "Platform Operators: Primary beneficiaries (institutional/arbitrage) \u2014 capture all network value; switching costs and API lock-in are coordinated benefits to them",
+      "Open Source Coalition: Organized actors (organized/constrained) \u2014 building decentralized alternatives but face coordination problem (critical mass) that is itself the constraint to solve",
+      "Regulatory Bodies: Institutional actors (institutional/arbitrage) \u2014 implement data protection and interoperability mandates; enforcement is theatrical and insufficient to restore functional agency",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing network effects and treating lock-in as inevitable rather than policy-contingent"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Platforms capture asymmetric value from user-generated data and attention while users cannot exit without coordinating alternatives. However, users do receive genuine service value (search, social connectivity, content discovery), preventing the constraint from reaching pure extraction (\u03b5 > 0.70). The measurement trajectory shows erosion: early platforms competed on openness (0.32 at t=0); as network effects accumulated, lock-in mechanisms increased (0.58 at t=20). Suppression (0.62): High. Multiple enforcement mechanisms operate: technical (API changes, proprietary formats), legal (DMCA, copyright), contractual (TOS with unilateral modification rights), and economic (switching costs amplified by network effects). But not absolute \u2014 some API documentation exists, data export is technically possible (though incomplete), and alternative platforms exist (though at scale disadvantage). Theater ratio (0.58): Moderate-high. Regulatory responses (GDPR data downloads, privacy dashboards, interoperability mandates) provide visible user-control mechanisms but fail to translate into functional ownership restoration because the coordination problem (where to migrate to) remains unsolved. User agency over data is nominally protected but practically constrained.",
+    "directionality_logic": "Platform operators benefit asymmetrically from lock-in; their d value is low (0.15-0.25, derived from beneficiary + arbitrage exit options). End users are pure targets; their d value is high (0.95, derived from victim + trapped exit). Content creators derive mixed value; their d is moderate (0.60-0.70, derived from mixed beneficiary/victim status + constrained exit). The analytical observer treats network effects as natural, producing d \u2248 0.73 from canonical analytical fallback. The regulatory regime has institutional power but limited functional enforcement capacity, producing d \u2248 0.50-0.55 from institutional + constrained exit.",
+    "perspectival_gap": "The perspectival gap reflects different structural positions' incommensurable experiences. End users experience pure extraction (snare) \u2014 they are locked in with no functional exit. Platform operators experience coordination (rope) \u2014 network effects solve the problem of maintaining critical mass. The gap is not empirical disagreement but structural difference: lock-in functions as extraction for trapped agents and as genuine coordination benefit for beneficiaries. Content creators occupy the middle ground (tangled rope): they perceive both coordination value and extraction asymmetry simultaneously. The analytical observer risks collapsing the gap by treating network effects as natural laws (mountain) rather than policy-contingent institutional arrangements. Regulators maintain theatrical solutions (piton) that appear to address the problem without solving the coordination barrier. The decentralized alternative coalition perceives a different problem entirely: not lock-in but the coordination problem of critical-mass transition (tangled rope), solvable in principle through protocol standardization but constrained by switching-cost barriers that only a coordinated migration can overcome.",
+    "mandatrophy_analysis": "RESOLUTION: Digital ownership erosion resolves the mandatrophy by distinguishing genuine coordination (network effects, platform interoperability) from artificial lock-in (legal barriers, API deprecation cycles, data format proprietary constraints). The constraint contains both: platform operators genuinely solve network-assembly problems (coordination value), but they also erect barriers designed to prevent exit (extraction mechanism). The mandatrophy is resolved by decomposing the constraint into two components: (1) network_coordination_value (\u03b5 \u2248 0.15-0.25, Rope) \u2014 genuine value of platform infrastructure; (2) lock_in_extraction_mechanism (\u03b5 \u2248 0.35-0.50, Snare/Tangled Rope) \u2014 artificial barriers preventing exit and enabling rent extraction. Current policy treats them as unified, which prevents effective intervention. The piton classification of regulatory responses reflects that data portability mandates and interoperability requirements address lock-in mechanically without solving the coordination problem that makes lock-in sticky: users have no obvious place to migrate to. The scaffold perspective (Open Source Coalition) identifies this: decentralization is solvable in principle through protocol coordination, but requires overcoming switching-cost barriers that constitute a second-order coordination problem."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_algorithmic_control",
+      "data_extractivism",
+      "interoperability_stickiness"
+    ],
+    "dual_formulation_note": "Digital ownership erosion decomposes into multiple structurally distinct constraints: (1) network effect coordination (genuine platform value), (2) API lock-in mechanisms (artificial barriers), (3) data extraction and asymmetric ownership (extraction asymmetry), (4) regulatory theater (piton maintenance). This story addresses the unified phenomenon; downstream constraints address specific mechanisms. Each has different \u03b5 values and different intervention points."
+  },
+  "directionality_overrides": []
+}

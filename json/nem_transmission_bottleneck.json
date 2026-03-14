@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "nem_transmission_bottleneck",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nem_trans"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "National Electricity Market Transmission Bottleneck",
+    "topic_domain": "energy/infrastructure/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_generators_in_uncongested_regions",
+      "network_operator"
+    ],
+    "victims": [
+      "renewable_generators_constrained_by_lines",
+      "remote_consumers",
+      "system_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Remote Renewable Generator",
+      "comment": "PERSPECTIVE 1: REMOTE RENEWABLE GENERATOR (SNARE) \u2014 Wind and solar farms in congestion-prone regions cannot exit the constraint. Built infrastructure is immobile; output curtailment is mandated by network operator; alternative markets require transmission upgrades they cannot fund. Maximum extraction through forced curtailment: renewable generators lose 15-40% of potential output while bearing no compensation for lost revenue. Suppression is structural: physical grid topology, regulatory design, and capital requirements for alternative transmission all create insurmountable exit barriers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Network Operator (Transmission System Operator)",
+      "comment": "PERSPECTIVE 2: NETWORK OPERATOR (ROPE) \u2014 Manages system stability through congestion pricing and curtailment. Benefits from rent extraction via congestion charges (absorbed by all consumers) while experiencing the constraint as a coordination mechanism: managing supply-demand balance at transmission nodes is their core function. Exit option is arbitrage \u2014 they can trade off different congestion management strategies, regulatory frameworks, and investment signals. Net beneficiary through fee accumulation and operational control."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Consumer in Congested Region",
+      "comment": "PERSPECTIVE 3: CONSUMER IN CONGESTED REGION (TANGLED ROPE) \u2014 Pays congestion charges embedded in electricity prices (coordination cost) while bearing asymmetric extraction: cheaper renewable supply cannot reach them, forcing reliance on more expensive incumbent generation. Constrained exit: can relocate or shift consumption patterns only at significant cost. Mixed experience: genuine coordination problem (balancing supply and demand) overlaid with asymmetric extraction (higher prices due to congestion rent)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Incumbent Coal/Gas Generator in Uncongested Region",
+      "comment": "PERSPECTIVE 4: INCUMBENT GENERATOR (PITON) \u2014 Structurally benefits from transmission bottlenecks that prevent cheaper renewable competitors from reaching market. However, this benefit is increasingly theatrical: coal/gas generation is declining in market share and economic viability regardless of transmission constraints. The constraint's extraction function persists through regulatory inertia and sunk asset protection (coal plants write down over decades) even as its primary beneficiary class atrophies. The generator experiences the constraint as a necessary market design feature, but its functional role (protecting stranded assets) is degraded."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Grid Modernization Coalition",
+      "comment": "PERSPECTIVE 5: GRID MODERNIZATION COALITION (SCAFFOLD) \u2014 Policy advocates, renewable developers, and forward-looking network operators see transmission bottlenecks as temporary coordination failures with a structural sunset. Grid modernization investments (HVDC lines, advanced switching, distributed generation) are creating alternative pathways that bypass traditional bottlenecks. The coalition has mobile exit options (invest in alternative infrastructure, shift regulatory incentives, develop storage) and sees the current constraint as time-limited. High suppression during the transition (upgrades cost $50B+ and take 10-15 years) but with a clear sunset horizon."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Physical Limits View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / PHYSICAL LIMITS (MOUNTAIN) \u2014 From a civilizational perspective, transmission constraints appear to be immutable laws of physics: the power flow equations (Ohm's law, Kirchhoff's laws) create hard limits on how much current any wire can carry. The bottleneck is inherent to electromagnetic reality, not a policy choice. However, this perspective naturalizes what are actually contingent engineering and regulatory decisions: wire capacity, grid topology, voltage standards, and investment signals are all within human design space. The analytical observer risks false summits by treating infrastructure architecture as physical law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "curtailment_baseline_ambiguity",
+      "question": "How much renewable curtailment is legitimate demand-side balancing vs. rent extraction by incumbent generators?",
+      "resolution_mechanism": "Counterfactual analysis: model expected curtailment in a grid with (a) current transmission topology + current incentive structure, and (b) optimized topology + cost-reflective pricing. Difference isolates extractive curtailment.",
+      "impact": "If extractive portion > 30%: snare classification solidifies. If < 10%: constraint reclassifies as pure rope (coordination) and suppression metric drops to 0.35-0.45.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of curtailment attributable to extraction vs. legitimate balancing"
+    },
+    {
+      "id": "transmission_investment_cycle",
+      "question": "Does the current regulatory framework adequately incentivize transmission upgrades, or do bottlenecks persist partly through perverse incentives?",
+      "resolution_mechanism": "Analysis of regulatory rate-of-return mechanisms, capital cost recovery timelines, and comparison with jurisdictions using alternative investment models (merchant transmission, performance-based regulation, public investment).",
+      "impact": "If incentive structure is adequate: bottleneck reflects genuine physical/coordination challenge (rope from more perspectives). If inadequate: regulatory design is part of the extraction mechanism (tangled_rope confirmed; extractiveness rises to 0.65+).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regulatory framework adequately incentivizes transmission expansion"
+    },
+    {
+      "id": "storage_bypass_feasibility",
+      "question": "Could distributed battery storage (behind-the-meter or utility-scale) functionally bypass transmission bottlenecks without full grid upgrades?",
+      "resolution_mechanism": "Techno-economic modeling: cost comparison of localized storage + generation clustering vs. traditional transmission upgrades. Real-world pilot data from grids implementing storage-first strategies.",
+      "impact": "If storage bypass is feasible at <20% cost premium: scaffold sunset accelerates; constraint becomes temporary coordination problem (Scaffold from powerless perspective). If infeasible or cost-prohibitive: transmission upgrade becomes mandatory, suppression persists longer.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether storage can functionally bypass transmission constraints"
+    },
+    {
+      "id": "congestion_rent_measurement",
+      "question": "What is the total annual economic value extracted via congestion pricing and curtailment, and who captures it?",
+      "resolution_mechanism": "Detailed accounting of congestion charges, curtailment compensation shortfalls, and ancillary service revenue flows. Network operator accounting + generator profit analysis.",
+      "impact": "If captured rent > $5B annually in large markets: extractiveness is understated (raise \u03b5 to 0.65-0.70). If < $1B: extraction is primarily efficiency cost, not rent (lower \u03b5 to 0.40-0.45).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Total economic rent extracted via congestion and curtailment mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "commentary": {
+    "narrative_context": "Transmission bottlenecks in the National Electricity Market (NEM) are structural constraints on power flow created by the physical limits of existing transmission lines, combined with regulatory and investment frameworks that determine when and how those limits are expanded. The constraint emerges from the coupling of geography (renewable resources are concentrated in specific regions far from load centers), physics (transmission wire capacity is fixed by Ohm's law and material properties), and economics (transmission upgrades cost billions of dollars and take 10-15 years to plan and build). This creates a temporal gap: renewable generators built in high-solar or high-wind regions often exceed the transmission capacity of lines connecting them to demand centers. During high renewable output periods, network operators must curtail (reduce) renewable generation to prevent line overloads. Curtailed generators receive partial or no compensation, while consumers in congested regions pay higher electricity prices (congestion charges). The constraint exhibits all six DR types from different positions: trapped remote renewables see snare extraction; incumbent generators in uncongested regions benefit without effort (piton); the network operator coordinates system stability (rope); grid modernization advocates see a solvable 15-year temporary problem (scaffold); the analytical observer risks naturalizing engineering choices as physical law (false mountain). The extractiveness value has been rising (0.42 \u2192 0.58 over 14 years) as renewable penetration increases and physical constraints tighten, while theater ratio rises as the constraint becomes more central to market design narratives.",
+    "key_agents": [
+      "Remote Renewable Generators: Primary victims (powerless/trapped) \u2014 wind and solar farms located in high-resource regions with limited transmission capacity; lose 15-40% of potential output via curtailment; cannot relocate infrastructure or access alternative markets",
+      "Network Operator (Transmission System Operator): Primary beneficiary (institutional/arbitrage) \u2014 manages congestion through pricing and curtailment; captures congestion rents; controls operational decisions and investment signals",
+      "Incumbent Coal/Gas Generators: Secondary beneficiary (organized/constrained) \u2014 located in uncongested regions; face reduced competition from renewables during congestion events; benefit from higher market prices; but benefit is declining as coal retires (piton effect)",
+      "Consumers in Congested Regions: Moderate victim (moderate/constrained) \u2014 pay congestion surcharges; cannot access cheaper renewable supply; face electricity price increases of 5-15% during peak demand periods",
+      "Grid Modernization Coalition: Organized advocates (organized/mobile) \u2014 renewable developers, forward-looking utilities, policy advocates; see constraint as temporary problem; building alternative infrastructure (HVDC, distributed storage, microgrids)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks treating transmission physics as immutable natural law rather than contingent engineering choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): The constraint shows moderate-high extractiveness that has grown over 14 years as renewable penetration increased. The base extractiveness was 0.42 when renewable capacity was lower; it is now 0.58 as more renewable generators compete for limited transmission. This is not speculative \u2014 it reflects measurable curtailment rates (15-40% in worst-affected regions) and measurable congestion charges (5-15% price premiums). However, not all of this is pure extraction: some curtailment is legitimate demand-side balancing (genuine coordination cost), and some congestion charging reflects the cost of temporary supply-demand mismatch. Omega variable 'curtailment_baseline_ambiguity' flags that 30-50% of measured curtailment may be legitimate coordination rather than extraction. Conservative estimate keeps \u03b5 at 0.58 rather than 0.70. Suppression (0.68): High. Barriers to exit are substantial: renewable generators cannot move their plants (infrastructure is immobile); cannot access alternative markets without transmission upgrades costing billions; cannot collectively fund those upgrades (individual generator revenue is too small). Network operators' regulatory framework creates suppression through: (a) obligation to curtail to prevent line overloads (physical safety requirement), (b) lack of adequate compensation mechanisms for curtailment (generators bear most cost), and (c) slow investment cycles (10-15 years to plan and build upgrades). Consumers in congested regions face suppression from price floors (cannot reduce electricity consumption much, as it is essential service) and lack of alternative suppliers (congestion isolates them from cheaper regions). Theater ratio (0.55): Moderate. The constraint has performative elements \u2014 congestion pricing is partly real economic signal and partly theatrical rent mechanism. Network operator communications about 'essential reliability work' and 'grid stability' are partly justified (transmission does provide stability) and partly narrative cover for rent extraction. Grid studies claiming transmission 'must' be expanded at specified rates include genuine engineering assessment mixed with modeling assumptions that favor incumbent technologies. However, the theater is not dominant (as in piton, where theater \u2265 0.70) because the core constraint is structurally real: transmission wires have finite capacity, and renewable output sometimes exceeds that capacity.",
+    "perspectival_gap": "The constraint demonstrates sharp perspectival divergence. Remote renewable generators (powerless/trapped) see snare \u2014 they are unambiguously extracted from via forced curtailment without adequate compensation. The network operator (institutional/arbitrage) sees rope \u2014 they experience the constraint as a coordination mechanism they manage daily, with some rent as a side benefit. Incumbent generators see piton \u2014 the extraction benefit they receive from reduced renewable competition is becoming theatrical as coal retires and renewables dominate new capacity. Consumers in congested regions see tangled_rope \u2014 they benefit from the coordination function (stable electricity supply) overlaid with extraction (higher prices). The grid modernization coalition sees scaffold \u2014 they frame the bottleneck as a temporary 10-15 year problem with a clear exit pathway (transmission upgrades + storage + distributed generation). The analytical observer risks false mountain \u2014 treating transmission physics as immutable law when the actual constraint combines physics (wire capacity) with economics (investment cycles) and regulation (curtailment rules). The perspectival gap widens along the powerless-institutional axis: powerless agents cannot see exit; institutional agents control investment decisions and have arbitrage options.",
+    "directionality_logic": "Directionality (d) is derived from beneficiary/victim status and exit options. Remote renewable generators are victims with trapped exit \u2192 d approaches 1.0 \u2192 high f(d) \u2192 high experienced extraction. Network operator is beneficiary with arbitrage exit \u2192 d approaches 0.0 \u2192 low f(d) \u2192 low/negative experienced extraction (extraction runs toward them). Consumers are victims with constrained exit (high cost to relocate or reduce consumption) \u2192 d \u2248 0.75-0.85 \u2192 high f(d). Incumbent generators are beneficiaries with constrained exit (retirements are planned decades ahead) \u2192 d \u2248 0.25-0.35 \u2192 moderate f(d). The scope modifier \u03c3(S) is national (\u03c3=1.0), so \u03c7 = \u03b5 \u00d7 f(d) \u00d7 1.0. For the trapped remote generator, \u03c7 \u2248 0.58 \u00d7 1.42 \u2248 0.82 (snare territory). For the network operator, \u03c7 \u2248 0.58 \u00d7 (-0.12) \u2248 -0.07 (rope \u2014 negative effective extraction, they are subsidized by the constraint). This perspectival gap in \u03c7 is the diagnostic: same \u03b5 (0.58), same suppression (0.68), but wildly different experienced extractiveness (0.82 vs -0.07) because the structural position differs.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy through perspectival decomposition. The mandatrophy question is: 'Is transmission bottleneck a coordination problem (rope) or extraction problem (snare)?' The answer is both \u2014 it depends on whose perspective you inhabit. The network operator sees pure coordination (rope) \u2014 their experience is managing complex supply-demand balancing. The remote generator sees pure extraction (snare) \u2014 they are forced to reduce output with minimal compensation. Consumers see mixed (tangled_rope) \u2014 coordination for reliability, extraction for price. The analytical view risks false mountain by naturalizing the constraint as a consequence of physics alone. The actual resolution: the constraint IS a real coordination problem (transmission capacity is finite, balancing is necessary) OVERLAID with an extraction mechanism (who bears the cost of balancing, who captures the benefit). Disentangling requires asking: (1) Would the same coordination function (keeping the grid stable) require the same distribution of costs if compensation mechanisms were different? (2) If yes, then some extractiveness is unavoidable coordination cost. (3) If no, then the extraction is contingent on the regulatory design. Omega variable 'transmission_investment_cycle' tests exactly this: if regulatory incentives were reformed to accelerate transmission upgrades, would extractiveness decline? Affirmative answer indicates the extraction is regulatory, not physical."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "renewable_curtailment_exposure",
+      "electricity_price_volatility",
+      "grid_stability_cycling"
+    ],
+    "dual_formulation_note": "NEM transmission bottleneck decomposes into two structurally distinct constraints: (1) transmission_capacity_physics \u2014 the hard physical limit of existing wires (mountain, \u03b5\u22640.10), and (2) transmission_investment_underinvestment \u2014 the regulatory and financial barriers preventing adequate capacity expansion (tangled_rope, \u03b5=0.58). This story addresses the combined effect. Separate stories can isolate the physics-only constraint from the institutional failure constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.3
+    }
+  ]
+}

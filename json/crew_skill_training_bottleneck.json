@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "crew_skill_training_bottleneck",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "crew_train"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Crew Skill Training Bottleneck",
+    "topic_domain": "labor_economics/organizational_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_employers",
+      "credentialing_gatekeepers"
+    ],
+    "victims": [
+      "entry_level_workers",
+      "displaced_workforce",
+      "skill_market_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Entry-Level Worker",
+      "comment": "PERSPECTIVE 1: ENTRY-LEVEL WORKER (SNARE) \u2014 Trapped by training barriers, licensing requirements, and industry gatekeeping. Cannot acquire skills without employer sponsorship or expensive private training. No exit path: formal routes are closed by cost and time requirements; informal routes are suppressed by legal restrictions on unlicensed practice. Bears full cost of the bottleneck through exclusion and wage suppression."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Incumbent Worker",
+      "comment": "PERSPECTIVE 2: INCUMBENT WORKER (TANGLED ROPE) \u2014 Experiences mixed extraction and coordination. Training bottleneck limits new entrants (protecting wage premium), but also constrains their own skill advancement and retraining options if displaced. Genuine coordination function exists: formal training ensures baseline safety and competency. But asymmetric extraction protects incumbent wages at expense of new entrants. Constrained exit: can switch jobs but retraining barriers limit mobility."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Employer",
+      "comment": "PERSPECTIVE 3: EMPLOYER (ROPE) \u2014 Experiences the constraint as coordination: formal training programs ensure consistent quality and reduce liability. Benefits from restricted labor supply (lower wage pressure). Can arbitrage: substitute internal training, use apprenticeships, or lobby for training tax credits. Net beneficiary \u2014 gains wage suppression and workforce quality assurance simultaneously."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Credentialing Institution",
+      "comment": "PERSPECTIVE 4: CREDENTIALING INSTITUTION (TANGLED ROPE) \u2014 Genuinely coordinates safety and baseline competency (coordination function). But also extracts through gatekeeping: maintains monopoly on credential production, sets barriers to entry, captures rents from licensing fees. Constrained by regulatory environment and accreditation requirements, but actively enforces training bottleneck through credential scope expansion and credential bundling."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Reform Coalition",
+      "comment": "PERSPECTIVE 5: REFORM COALITION (SCAFFOLD) \u2014 Labor unions, workforce development agencies, and community colleges see the bottleneck as a temporary problem with a sunset: competency-based credentials, stackable micro-credentials, apprenticeships, and employer-led training are building alternative pathways. Low effective extraction because organized agents have leverage and perceive clear exit path. Genuine coordination function (skill verification) is being decoupled from gatekeeping extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Traditional Apprenticeship Model",
+      "comment": "PERSPECTIVE 6: TRADITIONAL APPRENTICESHIP MODEL (PITON) \u2014 Once the primary training mechanism in craft trades; now largely theatrical. Formal apprenticeships persist through regulatory requirement and institutional inertia despite being a small fraction of actual skill transfer (mostly on-the-job learning). Theater ratio high: programs spend time on compliance documentation, classroom instruction, and credential rituals while actual skill transfer happens informally. Primary function (skill transmission) has atrophied; constraint persists because institutions have invested in maintenance."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some training lag is inherent to skill acquisition: complex competencies require time and practice, and the gap between entry and mastery is unavoidable. This perspective risks naturalizing the bottleneck as an immutable feature of labor markets. However, the structural data contradicts the mountain classification \u2014 comparable countries with lower training barriers achieve faster skill acquisition, indicating the bottleneck is contingent, not natural."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "credentialing_function_genuine",
+      "question": "Is credential-based training genuinely necessary for safety/competency, or is much of the credential requirement extractive gatekeeping?",
+      "resolution_mechanism": "Cross-country analysis of credential requirements vs competency outcomes; incident rates in jurisdictions with lower credentialing barriers vs high-barrier regions",
+      "impact": "If genuine: tangled rope classification correct; suppression primarily functional. If extractive: snare classification more appropriate; suppression primarily non-functional gatekeeping.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether credential requirements serve genuine safety/competency function or primarily gatekeep labor supply"
+    },
+    {
+      "id": "employer_incentive_alignment",
+      "question": "Do employers benefit more from training bottleneck (wage suppression, restricted labor supply) or from accessible training (larger labor pool, lower turnover)?",
+      "resolution_mechanism": "Employer hiring speed data in high-barrier vs low-barrier regions; correlation between credential restrictions and productivity/profitability",
+      "impact": "If restricted supply benefit outweighs: rope classification dominates. If accessible training benefit outweighs: constraint reclassifies as scaffold/temporary, not stable rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Employer net benefit from training bottleneck vs accessible training"
+    },
+    {
+      "id": "alternative_credentialing_viability",
+      "question": "Can competency-based credentials, micro-credentials, or employer-led training deliver equivalent skill verification without current bottleneck?",
+      "resolution_mechanism": "Pilot data on alternative credential acceptance; employer hiring patterns for alternative-credential holders; incident/competency outcomes",
+      "impact": "If viable: scaffold perspective validated, sunset is real, constraint classifies as temporary. If not viable: traditional credentialing is irreplaceable, snare/tangled rope classification confirmed as stable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of alternative credentialing models to replace traditional bottleneck"
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_intentional",
+      "question": "Is suppression (0.68) primarily structural (training genuinely requires time/cost) or primarily intentional (institutions actively restrict access to maintain scarcity)?",
+      "resolution_mechanism": "Institutional analysis of credential scope evolution; interviews with credentialing bodies on access policy; comparison of barrier heights across comparable jurisdictions",
+      "impact": "If structural: tangled rope correct; suppression reflects genuine complexity. If intentional: snare classification more appropriate; high suppression indicates active gatekeeping.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether suppression is structural necessity or active gatekeeping mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The crew skill training bottleneck creates a structural extraction mechanism where access to professional competency is controlled through credential gatekeeping. This constraint exhibits the full range of DR types across different structural positions: incumbent employers and credentialing institutions benefit from restricted labor supply and gatekeeping power; entry-level workers are trapped by access barriers; moderate workers experience mixed coordination and extraction; organized reform coalitions perceive a temporary problem with viable alternatives; traditional apprenticeship persists as theater; and the civilizational analyst risks naturalizing a contingent institutional arrangement as an immutable feature of labor markets. Extractiveness has increased from 0.35 to 0.52 over the interval as credentialing scope has expanded and credential requirements have bundled, raising barriers to entry. Theater ratio has increased from 0.48 to 0.64 as formal training programs have grown more focused on compliance documentation and less on actual skill transfer, with on-the-job learning carrying ever more of the functional weight.",
+    "key_agents": [
+      "Entry-Level Workers: Primary victims (powerless/trapped) \u2014 excluded by cost, time requirements, and gatekeeping; cannot acquire entry-level skills through formal channels",
+      "Incumbent Workers: Secondary victims and beneficiaries (moderate/constrained) \u2014 benefit from wage protection but constrained by retraining barriers if displaced",
+      "Employers: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from restricted labor supply and liability protection; can arbitrage through internal training or lobbying",
+      "Credentialing Institutions: Primary beneficiaries (institutional/constrained) \u2014 extract through gatekeeping and credential scope expansion; genuinely coordinate competency verification",
+      "Reform Coalition: Organized actors (organized/mobile) \u2014 labor unions, workforce developers, community colleges building alternative pathways with sunset logic",
+      "Traditional Apprenticeship System: Institutional actor (institutional/arbitrage) \u2014 maintains performative function through regulatory inertia despite atrophied skill-transfer role",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as inherent labor market limits"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The training bottleneck extracts through restricted labor supply (wage suppression for new entrants), gatekeeping rents (credentialing fees), and enforced credential bundling that increases cost beyond functional requirement. However, extraction is not total because genuine coordination function exists: formal training does reduce liability and ensures baseline competency. The trajectory from 0.35 to 0.52 reflects scope creep in credentialing \u2014 once-specialized credentials have been bundled with general work permits, raising barriers. Suppression (0.68): High. Entry barriers are substantial: cost of formal training (often $5k-$25k+), time requirements (6 months to 4 years), and legal restrictions on unlicensed practice prevent informal skill acquisition and on-the-job learning. Suppression is maintained through credential scope expansion, legal title protection, and employer collusion on hiring standards. Theater ratio (0.64): High and increasing. Formal training programs spend significant time on compliance documentation, classroom instruction disconnected from practice, and credential rituals, while actual skill transfer happens primarily through informal on-the-job learning. The theater has increased as training institutions have grown larger and more focused on credential output metrics rather than competency development.",
+    "perspectival_gap": "The perspectival gap separates beneficiaries from victims along clear structural lines. Employers and credentialing institutions experience the bottleneck as coordination with secondary benefits. Entry-level workers experience it as pure extraction. The reform coalition perceives a solvable problem. Traditional apprenticeship experiences itself as necessary ritual (piton). The crucial gap is between the beneficiary view (rope: rational coordination) and the victim view (snare: impossible barrier). This gap reveals that the bottleneck functions as a wealth transfer from entry-level workers to incumbents and gatekeepers, dressed in the language of safety and competency. The theater ratio increase (0.48 \u2192 0.64) indicates that as the barrier persists, less actual skill transfer happens through formal routes and more happens informally, reducing the functional justification for the formal constraint while the extraction mechanism persists.",
+    "directionality_logic": "Directionality is determined by each agent's structural position. Entry-level workers are pure victims with no exit path (d \u2248 0.95 \u2192 high f(d) \u2192 high experienced extraction). Incumbent workers are mixed (d \u2248 0.55 \u2192 moderate f(d)): they benefit from wage protection but bear costs of retraining barriers. Employers are beneficiaries with exit options (d \u2248 0.10 \u2192 low f(d) \u2192 negative effective extraction, meaning they gain). Credentialing institutions are beneficiaries with constrained exit (d \u2248 0.20 \u2192 slightly negative f(d)): they genuinely extract through gatekeeping but are also constrained by regulatory requirements and accreditation standards. The reform coalition has high agency and perceives exit paths (d \u2248 0.40 \u2192 moderate f(d)): organized actors can leverage alternative approaches. The traditional apprenticeship system has arbitrage-level exit (d \u2248 0.05 \u2192 negative f(d)): maintains extraction power through inertia despite low functional necessity.",
+    "mandatrophy_analysis": "Mandatrophy resolution: The constraint exhibits genuine coordination function (safety verification, baseline competency) alongside asymmetric extraction (gatekeeping, wage suppression, credential bundling). The tangled rope classification is correct because both functions are structural and active, not because one is illusory. However, the trajectory matters: as theater increases (compliance documentation replacing skill transfer), the coordination function weakens while extraction persists, creating a mandatrophy risk \u2014 the constraint could degrade toward snare if the bottleneck persists but credentials become purely ceremonial. The reform coalition's scaffold perspective identifies this: the sunset mechanism exists (alternative credentials) but requires active transition, not passive naturalizing of the current system as inevitable. The analytical observer's mountain perspective naturalizes what should be recognized as institutional choice \u2014 comparable jurisdictions achieve better outcomes with lower barriers, falsifying the 'inherent to labor markets' framing."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "labor_supply_restriction_mechanisms",
+      "intergenerational_mobility_barriers"
+    ],
+    "dual_formulation_note": "The crew skill training bottleneck is structurally linked to broader labor market constraints. It is downstream of institutional decisions about credentialing scope and credential bundling, but represents a distinct extraction mechanism through access restriction. Related constraints share the same root cause (institutional gatekeeping) but have different target populations (skilled workers vs entry-level vs displaced workers)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

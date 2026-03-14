@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "procedural_justice_deficit",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "procjust"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Procedural Justice Deficit in Administrative Systems",
+    "topic_domain": "governance/administrative_law/institutional_fairness",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "administrative_bureaucrats",
+      "resource_concentrators"
+    ],
+    "victims": [
+      "procedurally_excluded_claimants",
+      "institutional_accountability_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Excluded Claimant",
+      "comment": "PERSPECTIVE 1: EXCLUDED CLAIMANT (SNARE) \u2014 Faces absolute barriers to contesting administrative decisions: no right to hearing, no standing to appeal, no access to discovery mechanisms. Procedural exclusion is structural and enforced. Bears full extraction cost with no exit capacity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Organized Advocacy Coalition",
+      "comment": "PERSPECTIVE 2: ORGANIZED ADVOCACY COALITION (TANGLED ROPE) \u2014 Constrained by resource requirements and political capture, but also benefits from procedural deficits that create ongoing demand for legal services and advocacy infrastructure. Mixed: genuine coordination function (protecting rights through collective action) coexists with asymmetric extraction (capturing a portion of remedy-seeking for institutional gatekeepers)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Administrative Bureaucracy",
+      "comment": "PERSPECTIVE 3: ADMINISTRATIVE BUREAUCRACY (ROPE) \u2014 Benefits from procedural flexibility: can allocate resources, prioritize cases, and manage caseload without binding procedural constraints. Experiences constraint as enabling coordination (efficiency in resource-scarce administrative systems). Net beneficiary with maximum exit capacity."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Procedural Reform Movement",
+      "comment": "PERSPECTIVE 4: PROCEDURAL REFORM MOVEMENT (SCAFFOLD) \u2014 Organized agents (civil rights groups, administrative law scholars, judicial activism) see procedural deficits as a temporary institutional gap with clear remedies: right to hearing, discovery, written findings, appeal pathways. High agency and an identifiable exit path through legal reform. Theater declining as alternative accountability mechanisms mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Due Process Rhetoric",
+      "comment": "PERSPECTIVE 5: DUE PROCESS RHETORIC (PITON) \u2014 Administrative systems invoke due process language and fairness principles while maintaining procedural exclusions. The rhetoric persists through institutional inertia \u2014 courts and administrators profess commitment to fairness while enforcing structural barriers to procedural access. Theater ratio high because performance of justice exceeds actual procedural functionality."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Institutional Necessity View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / INSTITUTIONAL NECESSITY VIEW (MOUNTAIN) \u2014 From a civilizational analytical position, some procedural shortcuts are inherent to large-scale administration: complete individual hearings for every decision would paralyze systems. This perspective naturalizes resource constraints as immutable features of governance. However, the structural data contradicts this \u2014 procedural exclusion is a policy choice, not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "administrative_capacity_threshold",
+      "question": "At what scale does administrative capacity become genuinely insufficient to provide individualized procedural access, versus being a choice to exclude?",
+      "resolution_mechanism": "Comparative institutional analysis: systems that provide full procedural access at comparable scales; measurement of actual administrative burden from procedural inclusion in expanded systems",
+      "impact": "If capacity genuinely insufficient: reclassify from Snare to Scaffold (temporary until systems scale). If choice: confirms Tangled Rope / Snare structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Administrative capacity threshold for procedural inclusion"
+    },
+    {
+      "id": "suppression_internalization_mechanism",
+      "question": "How much of the suppression is structural (legal barriers to access) versus internalized (claimants believe they have no standing or don't deserve a hearing)?",
+      "resolution_mechanism": "Post-reform measurement: do claimants exercise access when procedures are guaranteed? Tracking belief systems pre- and post-procedural reform implementation",
+      "impact": "If highly internalized: suppression persists after legal barriers fall. If structural: suppression declines with procedural access reform.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of suppression that is structural vs. internalized"
+    },
+    {
+      "id": "advocacy_capture_feedback_loop",
+      "question": "Does organized advocacy for procedural access inadvertently capture the issue, creating incentive to maintain deficit in order to sustain advocacy need?",
+      "resolution_mechanism": "Historical analysis of advocacy group positions during windows of procedural reform opportunity; tracking whether reforms are pursued or delayed",
+      "impact": "If captured: advocacy coalition becomes partial beneficiary, sustaining extraction. Tangled Rope classification confirmed with stronger extractive component.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether advocacy infrastructure becomes capture-resistant to procedural deficit"
+    },
+    {
+      "id": "theater_vs_function_threshold",
+      "question": "What ratio of procedural theater to actual substantive review constitutes a constraint crossing from Rope (functional coordination) to Tangled Rope (performative extraction)?",
+      "resolution_mechanism": "Audit trail analysis: proportion of administrative decisions with documented reasoning and binding review vs. pro forma decisions with minimal review; measurement of actual revision rates from appeals",
+      "impact": "If theater high and revisions low: Tangled Rope or Snare confirmed. If theater lower and revisions meaningful: Rope or Scaffold.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Theater-to-function ratio threshold for classification boundary"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Procedural justice deficits arise when administrative systems exclude affected parties from meaningful participation in decisions that allocate resources, restrict rights, or impose burdens. These deficits exist at multiple institutional scales \u2014 from immigration adjudication to welfare determination to regulatory permitting \u2014 and operate through both explicit procedural exclusion (no right to hearing, no access to evidence) and subtle forms (compressed timeframes, high burden of proof, opaque decision criteria). The constraint creates a structural tension between administrative efficiency (achieved through procedural shortcuts) and institutional legitimacy (which requires meaningful access). From different positions, this manifests as pure extraction (for the excluded party), coordination with asymmetric benefits (for moderately organized groups), enabling flexibility (for administrators), and a solvable temporary problem (for reformers). The constraint's theater ratio (0.68) reflects the gap between rhetoric of procedural fairness and actual procedural exclusion: administrative systems profess commitment to due process while enforcing structural barriers.",
+    "key_agents": [
+      "Excluded Claimants: Primary victims (powerless/trapped) \u2014 face procedural barriers with no exit capacity; cannot contest decisions affecting them",
+      "Administrative Bureaucracy: Primary beneficiaries (institutional/arbitrage) \u2014 benefits from procedural flexibility; can allocate resources and manage caseloads without binding procedural constraints",
+      "Organized Advocacy Coalition: Secondary actor (moderate/constrained) \u2014 mobilizes excluded parties but may develop incentive to maintain deficit as source of advocacy need",
+      "Procedural Reform Movement: Organized reformers (organized/constrained) \u2014 civil rights advocates and legal scholars with agency and clear reform pathways",
+      "Institutional Accountability Capacity: Distributed victim \u2014 the system's ability to detect and correct errors degrades under procedural exclusion",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing administrative efficiency as immutable constraint"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The benefit flow is asymmetric \u2014 excluded claimants bear decision burdens; administrators capture flexibility benefits. However, the extraction is not maximal (0.66+) because some procedural access exists (administrative appeal, judicial review in some jurisdictions), and procedural expansion is politically feasible. The trajectory shows accumulation: as case complexity increases, procedural shortcuts become more extractive, while rhetoric of fairness persists. Suppression (0.65): High. Suppression operates through multiple mechanisms: legal standing requirements, resource barriers to accessing procedures, temporal pressure (compressed decision windows), epistemic barriers (opaque decision criteria), and internalization (claimants believe they have no right to contest). Suppression is both structural and internalized \u2014 legal barriers combine with cultural acceptance that 'administration knows best.' Theater ratio (0.68): High and rising. Administrative systems maintain extensive procedural rhetoric (administrative procedure acts, appeals processes, written findings requirements) while systematically excluding claimants from meaningful access. The performance of procedural fairness masks actual exclusion, and this performance gap has widened as caseloads increased and expertise became more concentrated.",
+    "directionality_logic": "Directionality (d) tracks who bears extraction relative to each agent's structural position. Powerless, trapped agents derive maximum d (\u22480.95) as victims of pure exclusion. Institutional beneficiaries with arbitrage options derive low d (\u22480.15) from beneficiary status. Organized moderates with constrained exit derive intermediate d (\u22480.60) \u2014 they benefit from some coordination function but also face extraction through resource barriers. The administrative bureaucracy's arbitrage options produce negative effective extraction (they experience the constraint as enabling). The scaffold perspective's organized agents with constrained exit and a clear reform pathway produce moderate d (\u22480.50) reflecting both agency and current barriers.",
+    "perspectival_gap": "This constraint demonstrates how procedural justice operates asymmetrically across power levels. Excluded claimants see an absolute barrier to contesting decisions (Snare \u2014 pure extraction, no escape). Organized advocacy groups see a problem with solutions and a role for themselves (Tangled Rope \u2014 mixed coordination and extraction). Administrators see coordination enabler (Rope \u2014 the constraint solves the problem of processing high caseloads). Reformers see a solvable problem with sunset (Scaffold \u2014 procedural expansion and transparency create exit from the current system). The due process rhetoric layer sees persistent performance of fairness divorced from function (Piton \u2014 the talk persists through institutional inertia). The civilizational view risks naturalizing procedural exclusion as inherent to scale (Mountain \u2014 false summit). The gap reveals that procedural justice is not a natural constraint but a policy choice.",
+    "mandatrophy_analysis": "RESOLVED STRUCTURE: The mandatrophy resolves through clarity on what constitutes 'procedural justice coordination.' From the beneficiary (administrator) perspective, the constraint genuinely coordinates a resource allocation problem \u2014 without procedural shortcuts, systems could not function at scale. From the victim perspective (excluded claimants), there is no coordination function, only extraction. The Tangled Rope classification holds both: genuine coordination (resource management) genuinely coexists with asymmetric extraction (procedural exclusion). The classification is stable when both coordination and extraction are explicitly present in the base properties. The false mountain (institutional necessity view) naturalizes what is actually a policy choice \u2014 comparative institutional analysis shows systems with full procedural access at comparable scales, contradicting the 'immutable limit' framing. The Scaffold perspective confirms that alternatives exist: procedural expansion through administrative procedure acts, judicial review expansion, and transparency mechanisms are real institutional pathways with identifiable costs."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "administrative_legitimacy_deficit",
+      "rights_enforcement_gap"
+    ],
+    "dual_formulation_note": "Procedural justice deficit decomposes into structural exclusion mechanisms (legal standing, procedural barriers) with \u03b5\u22480.58 and rhetorical fairness performance (due process framing) with \u03b5\u22480.72. This story models the hybrid \u2014 the constraint as administered system with both functional and performative components. The pure extraction from procedural exclusion (Snare) and pure performance of fairness (Piton) are decomposed into separate constraint stories."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.55
+    }
+  ]
+}

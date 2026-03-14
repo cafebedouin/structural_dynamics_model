@@ -1,0 +1,220 @@
+{
+  "header": {
+    "constraint_id": "geopolitical_water_conflict",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "geowater"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Geopolitical Water Conflict as Coordination-Extraction Hybrid",
+    "topic_domain": "geopolitics/resource_governance/environmental",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "upstream_riparian_state",
+      "industrial_water_users",
+      "hydroelectric_power_operators"
+    ],
+    "victims": [
+      "downstream_riparian_state",
+      "subsistence_farmers",
+      "fishing_communities",
+      "regional_ecosystem_health"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Downstream Subsistence Communities",
+      "comment": "PERSPECTIVE 1: DOWNSTREAM SUBSISTENCE COMMUNITIES (SNARE) \u2014 Trapped by geographic dependence on river flow. No alternative water sources, no exit option. Bears full extraction cost through reduced irrigation, seasonal droughts, ecosystem collapse. Powerless to negotiate or exit. Suppression is structural: water is non-substitutable, geography is fixed, alternatives require massive capital investment. Maximum experienced extractiveness."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Downstream National Government",
+      "comment": "PERSPECTIVE 2: DOWNSTREAM RIPARIAN STATE (TANGLED ROPE) \u2014 Constrained by diplomatic costs of conflict escalation and economic dependency on trade with upstream state. Also benefits from coordination: joint water management treaties enable predictable planning, flood control benefits, and irrigation scheduling. Genuine coordination function (joint dams, information sharing) exists alongside asymmetric extraction (upstream state controls flow). Significant agency but high exit costs (military conflict, economic sanctions, resource warfare). Moderate experienced extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Water Treaty Framework",
+      "comment": "PERSPECTIVE 3: INTERNATIONAL WATER TREATIES & ARBITRAGE (ROPE) \u2014 Treaty bodies (UN Watercourses Convention, bilateral frameworks) experience the constraint as pure coordination: sharing hydrological data, establishing dispute resolution, managing seasonal variation. These actors have arbitrage options (switch between mediation frameworks, invoke international law). Net beneficiary position: treaty regimes gain legitimacy and enforcement mandates. Extracted value flows toward institutional maintenance. Low experienced extraction because arbitrage options reduce lock-in."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Upstream Riparian State",
+      "comment": "PERSPECTIVE 4: UPSTREAM RIPARIAN STATE (TANGLED ROPE) \u2014 Primary beneficiary but also constrained by international law, downstream state's potential military response, and long-term coalition pressure (other upstream states with shared aquifers). Genuine coordination function: seasonal flow agreements, flood warning systems, joint development of water resources. Active enforcement: dam operations, allocation protocols, dispute resolution mechanisms. Mixed position: net extraction but structured through treaties that provide coordination benefits to both sides. Constrained exit (cannot unilaterally breach treaties without regional instability)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Climate Adaptation & Desalination Coalition",
+      "comment": "PERSPECTIVE 5: CLIMATE ADAPTATION & DESALINATION COALITION (SCAFFOLD) \u2014 Organized technical actors (water technology firms, climate adaptation funds, development banks) see the conflict as a temporary coordination failure with a structural sunset: desalination, water recycling, agricultural efficiency improvements, and managed aquifer recharge offer exit pathways. These technologies have scaling costs and energy requirements, but they are improving. Sunset logic: as alternatives mature (10-30 year horizon), the zero-sum allocation constraint loses force. Low theater (technical solutions are measurable). Exit is mobile for organized actors \u2014 they can pivot to alternative technologies."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Colonial Water Law Legacy",
+      "comment": "PERSPECTIVE 6: COLONIAL WATER LAW LEGACY (PITON) \u2014 The constraint is partly maintained by historical treaties (Nile Waters Agreement 1959, Indus Waters Treaty 1960) that were imposed during colonialism and persist through institutional inertia. These treaties persist not because they remain functionally optimal but because renegotiating them risks conflict escalation. Theater is high: diplomatic rituals around 'consultation,' 'cooperation frameworks,' and 'basin committees' perform cooperation while actual allocation remains locked in legacy terms. The institutional structure persists despite low functional maintenance. Piton classification: high theater (0.55), low functional coordination relative to the institutional theater."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Scarcity as Natural Law)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / SCARCITY NATURAL LAW (MOUNTAIN) \u2014 From a civilizational/universal perspective, freshwater scarcity appears as a natural constraint: finite supply, inelastic demand, fixed geography. Climate change and population growth amplify the appearance of immutability. This perspective risks naturalizing the constraint as an unavoidable law of physics rather than a product of allocation institutions, technological choices, and historical power distribution. The engine's false summit detector should flag this: the 'immutable scarcity' framing obscures contingent institutional arrangements."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Upstream Hydroelectric & Industrial Users",
+      "comment": "PERSPECTIVE 8: UPSTREAM INDUSTRIAL WATER USERS (TANGLED ROPE) \u2014 Powerful actors (hydroelectric operators, industrial manufacturers) are primary beneficiaries but also embedded in supply chain networks. Exit options are mobile: they can invest in water efficiency, recycling, or relocation (but not without cost). Genuine coordination: industrial ecosystems benefit from stable water supply and predictable seasonal variation (for power generation). Extraction: they capture economic rents from water access at below-market prices. Constrained but mobile: they have resources to adapt but strong incentives to maintain the current allocation regime."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "hydropolitical_coalition_threshold",
+      "question": "At what scale of water scarcity do downstream states coalesce into counter-coalition powerful enough to force renegotiation?",
+      "resolution_mechanism": "Historical analysis of water conflict escalation trajectories; comparison of cases where downstream coalition formation succeeded vs failed; modeling of critical mass threshold for military/economic retaliation capacity",
+      "impact": "If threshold is low (early coalition): snare perspective transitions to tangled_rope (victims gain agency). If threshold is high (delayed coalition): snare classification persists longer, enabling extraction to accumulate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for downstream coalition formation and renegotiation power"
+    },
+    {
+      "id": "technology_substitution_feasibility",
+      "question": "Are desalination and water recycling genuinely capable of replacing upstream allocation control, or do energy costs and environmental effects create new extraction mechanisms?",
+      "resolution_mechanism": "Long-term cost curves for desalination; energy source decarbonization requirements; brine disposal and environmental impact assessment; comparison of lifecycle water costs via technology vs via traditional allocation",
+      "impact": "If feasible: scaffold sunset is real, extraction declines as alternatives scale. If infeasible: scaffold perspective is aspirational theater masking continued extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether technology can substitute for geopolitical allocation"
+    },
+    {
+      "id": "treaty_enforcement_mechanism",
+      "question": "Does the international water treaty framework actually enforce equal treatment between riparian states, or does it embed upstream advantage through procedural channels?",
+      "resolution_mechanism": "Analysis of dispute resolution outcomes (arbitration awards, ICJ cases); comparison of water allocation changes before/after treaty invocation; assessment of which party typically prevails in disputes",
+      "impact": "If enforced equally: rope perspective is accurate, international institutions provide genuine neutral coordination. If embedded asymmetry: rope perspective is naive, treaty framework is capture mechanism for institutional power.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether water treaties enforce equal treatment or embed upstream advantage"
+    },
+    {
+      "id": "climate_variability_masking",
+      "question": "Does upstream state attribute water flow reductions to climate variability and thereby obscure deliberate allocation cutbacks?",
+      "resolution_mechanism": "Cross-year analysis of dam release patterns vs precipitation data; identification of discretionary allocation periods; comparison of upstream/downstream climate impact narratives",
+      "impact": "If masking occurs: suppression metric underestimates cognitive component; theater ratio increases; extractiveness classification shifts upward. Constraint becomes less tractable because victim accountability is obscured.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether climate variability attribution masks deliberate allocation reductions"
+    },
+    {
+      "id": "regional_power_dynamics_shift",
+      "question": "Does shifts in regional military balance (weapons capability, alliance formation) alter the extractiveness experienced by downstream state?",
+      "resolution_mechanism": "Historical correlation between military balance shifts and water allocation changes; analysis of negotiation outcomes after regional power transitions; modeling of deterrence credibility against upstream state",
+      "impact": "If military balance is decisive: downstream coalition formation becomes viable, tangled_rope classification becomes stable. If military balance is irrelevant: downstream state remains trapped regardless of military capability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regional military balance shifts alter water negotiation outcomes"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Geopolitical water conflict represents a constraint that coordinates legitimate shared interests (seasonal flow management, flood control, joint infrastructure) while extracting asymmetric benefits toward upstream riparian states and away from downstream populations and ecosystems. The constraint exhibits genuine coordination value \u2014 unilateral water management is more dangerous and less productive than negotiated treaties \u2014 yet operates through power asymmetry rooted in geography and history. The theater ratio (0.55) reflects significant performative content: diplomatic rituals (basin committees, cooperation frameworks) maintain the appearance of joint governance while actual allocation remains locked into historically determined patterns. Extractiveness has increased over the interval (0.35 \u2192 0.58) as climate variability and population growth tighten the scarcity margin, making the asymmetry more severe. The constraint is downstream of upstream national interests (energy production, industrial development) but feeds into geopolitical stability concerns across the region.",
+    "key_agents": [
+      "Downstream Subsistence Communities: Primary victim (powerless/trapped) \u2014 Geographic dependence, non-substitutable water, no alternative sources. Bears full extraction cost through seasonal drought and ecosystem degradation.",
+      "Downstream Riparian State: Moderate victim (moderate/constrained) \u2014 Diplomatic and trade dependencies constrain response options despite state-level power. Benefits from coordination (flood warning, scheduled releases) but net victim of allocation asymmetry.",
+      "Upstream Riparian State: Primary beneficiary (institutional/constrained) \u2014 Controls water supply and extraction flow. Constrained by international law, downstream military capacity, and regional coalition pressure. Benefits from both extraction rents and coordination benefits.",
+      "Upstream Industrial & Hydroelectric Users: Secondary beneficiary (powerful/mobile) \u2014 Capture below-market water prices and reliable supply. Mobile but invested in current regime.",
+      "International Water Treaty Institutions: Arbitrage beneficiary (institutional/arbitrage) \u2014 Gain legitimacy and enforcement mandates through dispute resolution. Experience constraint as pure coordination.",
+      "Climate Adaptation Coalition: Organized agents (organized/mobile) \u2014 See constraint as temporary with technology sunset. Building alternative pathways (desalination, efficiency) that could dissolve the zero-sum allocation problem.",
+      "Colonial Water Law Legacy: Institutional persistence (institutional/arbitrage) \u2014 Historical treaties persist through inertia despite suboptimal allocation terms. Theater-driven maintenance."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The upstream state captures significant economic and strategic rents through water control, but the extraction is not total \u2014 downstream state retains some agency through treaty negotiation and implicit threat of conflict escalation. The value reflects growth from 0.35 to 0.58 over the interval as climate variability tightens the margin and makes allocation decisions higher-stakes. Suppression (0.68): High. Structural barriers to exit include: geography is fixed, water is non-substitutable (biological requirement), alternative sources require massive capital investment, and military conflict risks escalate costs beyond negotiation. Cognitive suppression includes climate variability attribution (upstream state can obscure deliberate cuts by blaming drought) and naturalization of scarcity as immutable. Theater ratio (0.55): Moderate. The constraint has genuine coordination content (joint dams, flood management, seasonal planning) but also significant performative content (basin committees that lack enforcement power, cooperation declarations that precede unilateral action). Theater has increased over the interval as gap between declared cooperation and actual allocation has widened.",
+    "perspectival_gap": "The constraint demonstrates how the same structural phenomenon (upstream state controls allocation, downstream state has no alternative) produces radically different classifications depending on observer position. The downstream victim sees extraction with no coordination benefit (snare from their perspective). The upstream beneficiary sees coordination that enables more efficient water management (tangled rope from their perspective \u2014 genuine joint benefit exists, but extraction is asymmetric). The international institution sees pure coordination (rope perspective). The technology coalition sees the constraint as temporarily necessary but obsolete in 20-30 years (scaffold). The colonial law legacy sees institutional ritual that maintains legitimacy (piton). The analytical observer risks naturalizing allocation asymmetry as immutable scarcity (false mountain). The perspectival gaps reveal that classification depends critically on exit options and structural position, not just on the nominal 'fact' of water allocation.",
+    "directionality_logic": "Each agent's experienced extractiveness depends on their structural relationship to the allocation flow. Upstream state (beneficiary + constrained exit by treaties) derives d \u2248 0.35, producing f(d) \u2248 0.25 \u2192 chi \u2248 0.58 \u00d7 0.25 \u00d7 1.0 (regional scope) \u2192 \u03c7 \u2248 0.15 (perceived as rope or low tangled rope). Downstream state (victim + constrained exit by geography/diplomacy) derives d \u2248 0.72, producing f(d) \u2248 1.15 \u2192 chi \u2248 0.58 \u00d7 1.15 \u00d7 1.0 \u2192 \u03c7 \u2248 0.67 (perceived as snare or high tangled rope). Subsistence communities (victim + trapped exit) derive d \u2248 0.95, producing f(d) \u2248 1.42 \u2192 chi \u2248 0.58 \u00d7 1.42 \u00d7 1.0 \u2192 \u03c7 \u2248 0.82 (pure snare). International institutions (beneficiary + arbitrage exit) derive d \u2248 0.15, producing f(d) \u2248 -0.01 \u2192 chi \u2248 0.58 \u00d7 (-0.01) \u00d7 1.0 \u2192 \u03c7 \u2248 -0.006 (rope, negative extraction). The directionality computation explains why the same constraint produces different classifications: not because observers are biased, but because they occupy genuinely different structural positions with different exit costs and different extraction flows.",
+    "mandatrophy_analysis": "The mandatrophy is resolved through perspectival decomposition: the constraint is Tangled Rope from the institutional/international treaty perspective (genuine coordination function + asymmetric extraction + active enforcement). From victim perspectives it appears as Snare (no coordination benefit perceived, pure extraction). From beneficiary perspectives it appears as Rope (coordination benefit dominates perception, extraction is seen as fair reward for management). From technology coalition it appears as Scaffold (coordination is temporary, sunset via technology). The mandatrophy question is not 'which type is correct?' but 'how do different structural positions experience this single constraint?' The tangled rope classification at the institutional power level (international treaties perspective) is the canonical type because it captures both the genuine coordination function and the asymmetric extraction simultaneously. The snare and rope classifications are perspectival reductions based on whether the observer experiences more extraction or more coordination benefit."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "transboundary_aquifer_depletion",
+      "hydroelectric_dam_deployment",
+      "regional_security_alliance_cohesion"
+    ],
+    "dual_formulation_note": "Geopolitical water conflict is the institutional-level constraint that aggregates multiple downstream effects: specific bilateral allocation disputes (Nile, Indus, Mekong, Jordan) have their own constraint stories with narrower scope and sometimes different \u03b5 values. This story represents the general pattern across all transboundary water systems. The network links indicate that changes in this general constraint affect specific bilateral disputes and also feed into broader regional security dynamics."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "header": {
+    "constraint_id": "ecological_carrying_capacity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ecc"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.03,
+    "theater_ratio": 0.12,
+    "claimed_type": "mountain",
+    "human_readable": "Ecological Carrying Capacity of Earth",
+    "topic_domain": "environmental_systems/ecology",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Non-Human Ecosystems",
+      "comment": "PERSPECTIVE 1: NON-HUMAN ECOSYSTEMS (MOUNTAIN) \u2014 Ecosystems have no exit options from the carrying capacity constraint. Species composition, migration patterns, and population dynamics are bound by finite nutrient cycling, water availability, and energy flux. The constraint is natural law: exceed carrying capacity and collapse follows with certainty."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Human Subsistence Populations",
+      "comment": "PERSPECTIVE 2: SUBSISTENCE POPULATIONS (MOUNTAIN) \u2014 Populations dependent on direct resource extraction (small-scale agriculture, fishing, hunting) experience carrying capacity as immutable physical reality. Exceeding local carrying capacity produces starvation, resource depletion, and migration \u2014 immediate material constraints, not institutional arrangements that could be negotiated."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Biogeochemical View)",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a biogeochemical perspective, carrying capacity emerges from immutable physical laws: photosynthetic efficiency bounds primary productivity; nutrient cycling rates are determined by microbial metabolism and geological processes; energy dissipation follows thermodynamic limits. The constraint is universal and irreducible."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Industrial Economies (Decoupling View)",
+      "comment": "PERSPECTIVE 4: INDUSTRIAL ECONOMIES / DECOUPLING AGENTS (TANGLED ROPE) \u2014 From the perspective of institutional actors claiming relative decoupling of GDP from material throughput, carrying capacity appears as a manageable constraint rather than immutable law. Beneficiaries (capital-intensive, technology-intensive sectors) experience the constraint as coordination problem: optimize resource efficiency to sustain extraction flows. Victims (low-income populations bearing environmental externalities) experience it as snare. This perspective's tangled structure reflects the genuine coordination of technological efficiency alongside asymmetric extraction of environmental rent."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "State Actors (Resource Sovereignty View)",
+      "comment": "PERSPECTIVE 5: STATE ACTORS / RESOURCE SOVEREIGNTY (MOUNTAIN) \u2014 States experience carrying capacity as constraint on national resource availability, but frame it through sovereignty and extraction logic rather than as law of nature. Yet from the state's perspective: territorial carrying capacity for timber, fish, minerals is treated as naturally immutable \u2014 you can only extract what the territory contains. This perspective maintains the mountain classification despite the institutional mediation of 'sovereignty'."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Climate and Conservation Science Consensus",
+      "comment": "PERSPECTIVE 6: CLIMATE AND CONSERVATION SCIENCE (MOUNTAIN) \u2014 From the consensus scientific perspective, planetary carrying capacity is a rock-solid mountain: we have exceeded it measurably. The constraint is now manifesting as climate disruption, biodiversity loss, nutrient cycle saturation, and ocean acidification. Scientists see no negotiable exits from these biophysical realities \u2014 the physics is immutable, the time to mitigation is constrained, and exceeded boundaries have consequences that cannot be negotiated away."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "carrying_capacity_measurability",
+      "question": "Is carrying capacity a precise, measurable quantity or a fuzzy ecological concept whose boundaries depend on observational scope and definition?",
+      "resolution_mechanism": "Comparison of carrying capacity estimates across different measurement methodologies (planetary boundaries framework, ecological footprint, net primary productivity models, nutrient cycling models). Analysis of whether different methods converge on a single value or produce ranges that differ by factors of 2-10.",
+      "impact": "If carrying capacity is precisely measurable: mountain classification is secure \u2014 the constraint is a definite physical boundary. If fuzzy: carrying capacity functions more like a negotiable boundary in institutional contexts, potentially reclassifying perspectives as tangled_rope or rope depending on institutional power and technological capacity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether carrying capacity is a precise boundary or fuzzy ecological concept"
+    },
+    {
+      "id": "technological_escape_feasibility",
+      "question": "Can technological innovation fundamentally alter carrying capacity (e.g., through energy transition, synthetic agriculture, closed-loop materials cycles), or does technology merely shift which resources become the binding constraint?",
+      "resolution_mechanism": "Longitudinal analysis of historical technological transitions (Haber-Bosch, Green Revolution, renewable energy scaling). Measurement of whether technology increased absolute carrying capacity or merely deferred the constraint to different resource types (phosphorus after nitrogen, rare earths after fossil fuels).",
+      "impact": "If technology can escape carrying capacity: industrial decoupling perspective becomes valid, reclassifying as tangled_rope from institutional perspective with genuine upside to coordination. If technology merely shifts constraint: mountain remains unchanged \u2014 we are not transcending limits, just moving them.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether technology can fundamentally alter carrying capacity or merely shift constraints"
+    },
+    {
+      "id": "planetary_boundary_coupling",
+      "question": "Are the nine planetary boundaries (climate, biodiversity, land use, freshwater, nutrient cycles, ocean acidification, ozone, aerosol, chemical pollution) independently binding constraints, or are they coupled such that breaching one causes cascade failures in others?",
+      "resolution_mechanism": "Earth system modeling; empirical tracking of correlation between boundary exceedances; analysis of whether reducing one boundary violation (e.g., carbon emissions) improves others (e.g., biodiversity loss) or leaves them independent.",
+      "impact": "If independent: carrying capacity is modular \u2014 we might stay within some boundaries while exceeding others. If coupled: exceeding any boundary triggers cascades that compress the remaining carrying capacity, making the constraint more severe than single-boundary models suggest.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether planetary boundaries are independent or coupled constraints"
+    },
+    {
+      "id": "equity_vs_aggregate_capacity",
+      "question": "Does carrying capacity distribute equally across the human population, or do institutional arrangements concentrate carrying capacity consumption among high-income actors, thereby reducing effective capacity for others?",
+      "resolution_mechanism": "Comparative analysis of per-capita resource consumption (carbon, water, land, minerals) by income decile; calculation of how many Earths would be required if global population consumed at high-income levels; measurement of whether redistribution toward equity shrinks aggregate capacity or reallocates existing capacity.",
+      "impact": "If equal distribution possible: carrying capacity is fundamentally about per-capita limits, and institutional arrangements are secondary. If extraction concentrates capacity: carrying capacity is a constraint on total human flourishing, with current institutional arrangements already representing a compressed effective capacity for lower-income populations.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether carrying capacity distributes equally or concentrates through institutional extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 200
+  },
+  "commentary": {
+    "narrative_context": "Ecological carrying capacity represents the maximum population size and material throughput that Earth's renewable and non-renewable resources can sustain indefinitely. The constraint is classified as mountain \u2014 a natural law of biogeochemical systems \u2014 from nearly all perspectives because it emerges from immutable physical principles: photosynthetic efficiency bounds primary productivity; nutrient cycling rates are determined by microbial metabolism and geological timescales; energy dissipation follows thermodynamic limits. The constraint exists at multiple scales (local carrying capacity for a forest, regional capacity for a watershed, planetary capacity for human civilization) but the indexical classification treats planetary-scale capacity as the primary story. Humanity has measurably exceeded planetary carrying capacity on multiple dimensions: carbon emission rates exceed sequestration, biodiversity loss exceeds speciation, nutrient runoff exceeds biogeochemical cycling capacity, and freshwater withdrawal exceeds sustainable recharge. The constraint manifests not as a negotiable institutional limit but as planetary dysregulation: climate disruption, ecosystem collapse, soil degradation, ocean dead zones. The exceptional perspective comes from institutional actors and technological optimists who frame carrying capacity as a manageable coordination problem rather than a natural law \u2014 this tangled_rope perspective represents genuine coordination (efficiency optimization) alongside extraction (differential bearing of environmental costs), but it operates under the structural reality that the underlying mountain constraint remains unchanged.",
+    "key_agents": [
+      "Non-human ecosystems (powerless/trapped): Experience carrying capacity as immutable physical reality determining population dynamics and species viability",
+      "Subsistence populations (powerless/trapped): Direct resource dependence makes carrying capacity constraint appear as immediate material scarcity and starvation risk",
+      "Industrial economies (institutional/arbitrage): Claim technological decoupling from material throughput; experience constraint as coordination problem rather than law",
+      "Capital-intensive sectors (institutional/arbitrage): Primary beneficiaries of resource extraction systems; experience carrying capacity as constraint on scale, not on feasibility",
+      "Low-income and dependent populations (powerless/constrained): Bear disproportionate environmental costs through pollution exposure, resource scarcity, and climate impacts while bearing least responsibility for excess",
+      "State actors (powerful/constrained): Experience carrying capacity through territorial resource availability and sovereignty claims over extraction",
+      "Climate and conservation science consensus (organized/constrained): Institutional measurement and modeling consensus that carrying capacity has been exceeded on multiple dimensions",
+      "Analytical observer (analytical/analytical): Universal perspective recognizing carrying capacity as emergent from thermodynamic and biogeochemical fundamentals"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Very low, but non-zero. The constraint itself is not extractive \u2014 it is a natural law. The low score reflects that no agent extracts from others through the constraint itself. However, extractiveness is not zero because human institutions *respond* to carrying capacity constraints through unequal distribution of burden: wealthy actors externalize environmental costs onto poor ones, and current systems concentrate resource consumption among high-income deciles. This represents institutional extraction operating *within* the natural constraint. As a pure natural law, extractiveness should be near zero; the 0.18 reflects measurement of institutional overlay. Suppression (0.03): Minimal. The constraint cannot be suppressed \u2014 it operates universally. The low score reflects that there is no coercive apparatus maintaining the constraint; it maintains itself through physics. Theater ratio (0.12): Very low. The constraint is functionally pure \u2014 no performative activity generates the limit. However, it is non-zero because some institutional responses to carrying capacity (carbon accounting, sustainability certifications, ESG metrics) have performative elements. This indicates that human institutions layering on top of the constraint introduce theater, but the constraint itself is theater-free. Accessibility collapse (0.92): Very high. The carrying capacity constraint permits no escape routes or alternative trajectories \u2014 it is universally binding. This is the hallmark mountain signature. Resistance (0.08): Very low. The constraint is not resisted through force or negotiation because it cannot be. It is accepted universally once understood.",
+    "directionality_logic": "Directionality (d) for natural law constraints is undefined in the classical sense because there are no beneficiaries or victims within the constraint mechanism itself \u2014 the constraint is not extraction. However, the institutional *response* to carrying capacity creates differential directionality: wealthy agents with technological access and arbitrage options (d \u2248 0.15, 'arbitrage') experience lower effective extraction of their resource access. Powerless agents trapped in subsistence dependence (d \u2248 0.95, 'trapped') experience the carrying capacity constraint as immediate material scarcity with no alternatives. The slope of directionality becomes a measure of institutional inequality in bearing the cost of the natural constraint. This is not a flaw in the mountain classification \u2014 it is a demonstration that mountains constrain all agents, but institutional arrangements create unequal burden distribution *around* the constraint.",
+    "perspectival_gap": "The perspectives divide into two groups. Mountain perspectives (ecosystems, subsistence populations, science consensus, analytical observer) recognize carrying capacity as immutable physical law. The tangled_rope institutional perspective (industrial economies claiming decoupling) introduces a alternative framing: carrying capacity is a coordination problem to be managed through technological efficiency and resource reallocation. This perspective is structurally tangled because it contains genuine coordination (efficiency gains reduce resource throughput per unit output) alongside extraction (institutional actors concentrated in high-income deciles bear less of the climate and ecological cost). The gap is real and diagnostic: the institutional perspective is not wrong about efficiency gains or technological innovation, but it is incomplete \u2014 it cannot escape the underlying mountain. Technology can shift which resources become binding constraints; it cannot transcend carrying capacity itself. The analytical observer's mountain perspective is strengthened by noting that all five institutional perspectives operate within the same biogeochemical bounds.",
+    "mandatrophy_analysis": "NO MANDATROPHY PRESENT. This constraint is a canonical mountain: it exhibits no confusion between coordination and extraction because no beneficiaries or victims exist at the level of the constraint mechanism itself. The constraint is a natural law, not an institutional arrangement. The institutional responses to carrying capacity (resource distribution, pollution, climate impacts) create secondary constraints (inequality, environmental injustice) that are tangled ropes or snares, but these are *responses to* carrying capacity, not carrying capacity itself. The classification is singular across observational methodologies \u2014 this is the diagnostic signature of a true mountain. No mandate reduction is necessary; the constraint's type is invariant."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_stability_boundary",
+      "biodiversity_loss_rate",
+      "freshwater_depletion",
+      "nutrient_cycle_saturation",
+      "land_use_conversion"
+    ],
+    "dual_formulation_note": "Ecological carrying capacity is the parent constraint; specific boundary transgressions (climate change, biodiversity loss, nutrient runoff) are downstream manifestations of the single universal constraint. Each planetary boundary can be analyzed as a separate constraint story with its own extractiveness and institutional overlay, linked to this parent story through network dependencies."
+  },
+  "directionality_overrides": []
+}

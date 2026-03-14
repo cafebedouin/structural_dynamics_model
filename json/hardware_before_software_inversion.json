@@ -1,0 +1,228 @@
+{
+  "header": {
+    "constraint_id": "hardware_before_software_inversion",
+    "version": "1.0",
+    "generated_date": "2025-02-27",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hbsi"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.78,
+    "claimed_type": "snare",
+    "human_readable": "Hardware-Before-Software Inversion in Autonomous Vehicle Production",
+    "topic_domain": "technology_governance/automotive_industry/autonomous_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "tesla_shareholders_short_term",
+      "executive_compensation_structure"
+    ],
+    "victims": [
+      "early_adopters",
+      "regulatory_agencies",
+      "public_road_safety",
+      "competing_manufacturers"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Early Adopter",
+      "comment": "PERSPECTIVE 1: EARLY ADOPTER (SNARE) \u2014 Purchased vehicle based on promised autonomous capability (FSD) that does not exist at claimed safety levels. Cannot exit: vehicle depreciation, sunk cost of $8k-$15k FSD package, no refund mechanism, contractual arbitration clauses prevent class action. Bears full crash risk (currently 4x human baseline) with no manual fallback for core promised function. Maximum extraction: paid for capability that may never materialize at safe levels."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Agency",
+      "comment": "PERSPECTIVE 2: REGULATORY AGENCY (SNARE) \u2014 NHTSA and state DMVs face asymmetric information: manufacturer controls crash data, software updates occur without approval, and regulatory frameworks assume human-driven vehicles. Constrained exit: cannot ban vehicles already sold, cannot force recalls without proving imminent hazard (high evidentiary bar), political pressure from innovation narrative. Experiences extraction through enforcement costs, crash investigation burden, and reputational damage when failures occur under their watch."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Competing Manufacturer",
+      "comment": "PERSPECTIVE 3: COMPETING MANUFACTURER (TANGLED ROPE) \u2014 Traditional automakers (GM, Ford, Mercedes) face coordination problem: if one manufacturer ships hardware-before-software and captures market share, others must follow or lose competitive position. But also victims: the inversion normalizes unsafe deployment practices, creating regulatory race-to-bottom pressure and reputational contamination when any autonomous system fails. Mixed extraction: benefits from accelerated autonomous vehicle adoption timeline, but bears cost of degraded safety standards and public trust erosion."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Shareholder (Short-Term)",
+      "comment": "PERSPECTIVE 4: SHAREHOLDER SHORT-TERM (ROPE) \u2014 Benefits from production volume, revenue recognition, and market valuation based on promised future capability rather than current function. Arbitrage exit: can sell shares at any time, capturing gains from the promise without bearing the liability risk. Experiences constraint as coordination: the hardware-before-software model solves the capital efficiency problem of R&D-then-production by monetizing the development process itself. Low effective extraction because extraction flows toward this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Shareholder (Long-Term)",
+      "comment": "PERSPECTIVE 5: SHAREHOLDER LONG-TERM (TANGLED ROPE) \u2014 Institutional investors and index funds cannot easily exit (constrained by portfolio requirements, fiduciary duty, market impact of large sales). Experience mixed extraction: benefit from near-term revenue and valuation, but bear long-term liability risk if FSD never achieves safety parity and mass tort litigation materializes. The inversion creates genuine coordination value (capital efficiency) but also asymmetric risk distribution (liability concentrates as time passes without safety achievement)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The Safety Advocacy Coalition",
+      "comment": "PERSPECTIVE 6: SAFETY ADVOCACY COALITION (SCAFFOLD) \u2014 Consumer Reports, IIHS, trial lawyers, and insurance actuaries see the inversion as a temporary regulatory gap with a sunset: either FSD achieves safety parity (resolving the extraction) or mass litigation and regulatory intervention force recall/refund (collapsing the model). Organized agents with mobile exit (can shift advocacy focus) experience low extraction because they see a resolution path. The constraint is temporary because the hardware-before-software model is unsustainable \u2014 the gap between promise and delivery must close or the model collapses."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The NHTSA Voluntary Reporting Framework",
+      "comment": "PERSPECTIVE 7: NHTSA VOLUNTARY REPORTING (PITON) \u2014 The existing autonomous vehicle regulatory framework is largely theatrical: manufacturers self-report crashes, no pre-deployment safety certification required, software updates bypass approval. The framework persists through institutional inertia despite providing minimal actual safety verification. High theater ratio: the reporting ritual creates appearance of oversight without enforcement mechanism. NHTSA sees its own process as degraded but cannot exit (constrained by statutory authority limits and political pressure to avoid 'stifling innovation')."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, the hardware-before-software inversion represents a genuine innovation in capital-efficient R&D (coordination function: monetize development process, distribute risk across early adopters who accept it). But it also represents asymmetric extraction: the model transfers safety risk and financial loss to buyers while concentrating gains with manufacturers and short-term shareholders. The analytical classification is Tangled Rope because both functions are structurally real \u2014 this is not pure extraction (snare) nor naturalized law (false mountain), but a hybrid where coordination and extraction are inseparable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fsd_safety_achievability",
+      "question": "Can Tesla FSD achieve human-parity safety (1x crash rate) within the vehicle lifetime of current production units (10-15 years)?",
+      "resolution_mechanism": "Longitudinal crash rate data with statistical significance; independent safety certification; comparison to Waymo/Cruise geofenced performance extrapolated to general driving",
+      "impact": "If achievable within 3-5 years: extraction window is temporary, scaffold perspective confirmed. If unachievable or requires 10+ years: snare classification hardens, early adopters bear permanent loss. If fundamentally unachievable with current sensor suite: constraint becomes fraud rather than extractive coordination.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether FSD can achieve safety parity within vehicle lifetime"
+    },
+    {
+      "id": "liability_distribution_mechanism",
+      "question": "When FSD-involved crashes occur, does liability fall on the driver (current legal default) or the manufacturer (product liability)?",
+      "resolution_mechanism": "Tort litigation outcomes; insurance industry loss allocation; regulatory guidance on autonomous system liability",
+      "impact": "If driver liability persists: extraction from early adopters is maximal (they paid for the system AND bear the crash risk). If manufacturer liability: extraction partially internalizes, changing shareholder risk profile and potentially forcing recall/refund.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Legal liability allocation for autonomous system failures"
+    },
+    {
+      "id": "regulatory_capture_depth",
+      "question": "Is NHTSA's voluntary reporting framework a temporary regulatory gap or evidence of deep capture preventing mandatory safety certification?",
+      "resolution_mechanism": "Analysis of NHTSA-industry personnel flows; lobbying expenditure correlation with regulatory forbearance; comparison to EU autonomous vehicle regulatory stringency",
+      "impact": "If temporary gap: scaffold perspective for regulatory framework is valid. If deep capture: the piton perspective hardens, and the constraint's suppression score should be revised upward (regulatory exit is blocked, not just constrained).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory forbearance is temporary or structural capture"
+    },
+    {
+      "id": "competitive_contagion_threshold",
+      "question": "At what market share does hardware-before-software deployment by one manufacturer force competing manufacturers to adopt the same model?",
+      "resolution_mechanism": "Market share analysis; competitor deployment timeline correlation; investor pressure on traditional automakers to match Tesla's capital efficiency",
+      "impact": "If threshold is low (10-15% market share): the tangled rope perspective for competing manufacturers hardens \u2014 they are structurally coerced into the inversion. If threshold is high (30%+): competitors retain agency to pursue safety-first deployment, reducing their victim status.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Market share threshold for competitive deployment pressure"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.65,
+      "id_override": "hbsi_theater_2020"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.7,
+      "id_override": "hbsi_theater_2022"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.75,
+      "id_override": "hbsi_theater_2024"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.78,
+      "id_override": "hbsi_theater_2026"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52,
+      "id_override": "hbsi_extract_2020"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.58,
+      "id_override": "hbsi_extract_2022"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.64,
+      "id_override": "hbsi_extract_2024"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68,
+      "id_override": "hbsi_extract_2026"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The hardware-before-software inversion in autonomous vehicle production represents a structural reversal of traditional product development: manufacturing and selling vehicles whose core promised function (autonomous operation) does not yet exist at claimed safety levels, with no manual fallback for that function. Tesla began producing vehicles with 'Full Self-Driving' hardware in 2016, selling the FSD software package ($8k-$15k) as a future capability. As of February 2026, FSD crash rates remain approximately 4x human baseline, and independent safety certification does not exist. The constraint exhibits high extraction (0.68) because early adopters paid for a capability that may never materialize at safe levels, bearing both financial loss and crash risk. Suppression is high (0.72) because exit options are blocked: vehicle depreciation, sunk FSD costs, contractual arbitration clauses, and no refund mechanism. Theater ratio is high (0.78) because the regulatory framework (NHTSA voluntary reporting) provides appearance of oversight without enforcement, and the 'beta' label on FSD creates legal cover while implying imminent completion. The constraint's measurements show monotonic increase in both theater and extraction over the 2020-2026 interval as the gap between promise and delivery has widened rather than closed.",
+    "key_agents": [
+      "Early Adopters: Primary victims (powerless/trapped) \u2014 paid for non-existent capability, bear crash risk, cannot exit due to sunk costs and contractual barriers",
+      "Regulatory Agencies: Secondary victims (moderate/constrained) \u2014 NHTSA and state DMVs face asymmetric information, high evidentiary bars for intervention, political pressure against 'stifling innovation'",
+      "Tesla Shareholders (Short-Term): Primary beneficiaries (institutional/arbitrage) \u2014 capture gains from production volume and market valuation based on promised future capability, can exit at any time",
+      "Tesla Shareholders (Long-Term): Mixed position (institutional/constrained) \u2014 benefit from near-term revenue but bear long-term liability risk if FSD never achieves safety parity",
+      "Competing Manufacturers: Mixed position (moderate/constrained) \u2014 face competitive pressure to adopt hardware-before-software model but also bear reputational cost of degraded safety standards",
+      "Safety Advocacy Coalition: Organized agents (organized/mobile) \u2014 Consumer Reports, IIHS, trial lawyers see temporary regulatory gap with sunset (either FSD achieves safety or litigation collapses the model)",
+      "Public Road Safety: Abstract victim (powerless/trapped) \u2014 collective good that cannot organize or exit; bears crash risk from all autonomous system deployments"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. Early adopters paid $8k-$15k for FSD capability that does not exist at safe levels (4x human crash rate as of Feb 2026). The financial extraction is compounded by crash risk transfer: buyers bear the safety cost of an incomplete system. The value reflects that this is not maximum extraction (buyers did receive a vehicle with some autonomous features, even if not at promised safety levels) but is severe extraction (core promised function may never materialize safely). Suppression (0.72): High. Exit barriers include: vehicle depreciation (cannot sell without loss), sunk FSD cost (no refund mechanism), contractual arbitration clauses (prevent class action), and information asymmetry (manufacturer controls crash data and software updates). Regulatory exit is also suppressed: NHTSA cannot force recall without proving imminent hazard (high evidentiary bar), and political pressure frames intervention as 'stifling innovation'. Theater ratio (0.78): High. Multiple theatrical elements: (1) NHTSA voluntary reporting framework provides appearance of oversight without enforcement, (2) 'beta' label on FSD creates legal cover while implying imminent completion (has been in beta for 6+ years), (3) over-the-air updates create perception of continuous improvement without independent safety certification, (4) crash reporting is manufacturer-controlled and selective. The theater has increased over time as the gap between promise and delivery has widened.",
+    "directionality_logic": "Early adopters are victims with trapped exit options, yielding high d (0.92) and maximum experienced extraction. They paid for a capability that does not exist at safe levels and cannot exit due to sunk costs and contractual barriers. Regulatory agencies are victims with constrained exit (cannot easily ban or recall), yielding moderately high d (0.78). They bear enforcement costs and reputational damage but have some agency. Competing manufacturers are mixed: victims of competitive pressure and reputational contamination, but also beneficiaries of accelerated autonomous adoption timeline. Their constrained exit and mixed position yields moderate d (0.55). Short-term shareholders are beneficiaries with arbitrage exit, yielding low d (0.08) and negative experienced extraction \u2014 they capture gains from the promise without bearing liability risk. Long-term shareholders are beneficiaries with constrained exit (cannot easily sell large positions), yielding low-moderate d (0.28) \u2014 they benefit from revenue but bear long-term liability risk. The safety advocacy coalition is organized with mobile exit, yielding moderate d (0.48) \u2014 they see a resolution path (either safety achievement or litigation collapse) and can shift focus if needed. The analytical observer sees both coordination function (capital-efficient R&D model) and extraction (asymmetric risk transfer), yielding moderate d (0.58) for the tangled rope classification.",
+    "perspectival_gap": "The constraint demonstrates extreme perspectival divergence. Early adopters experience pure extraction (snare) \u2014 they are trapped in a vehicle whose core promised function may never safely exist. Short-term shareholders experience coordination (rope) \u2014 the hardware-before-software model solves capital efficiency problems and they can exit at any time. Competing manufacturers experience mixed coordination and extraction (tangled rope) \u2014 they face competitive pressure to adopt the model but also bear reputational costs. The safety advocacy coalition sees a temporary problem with a sunset (scaffold) \u2014 either FSD achieves safety or litigation collapses the model. Regulatory agencies experience extraction (snare) but from a constrained rather than trapped position. The analytical observer sees tangled rope \u2014 both the coordination function (capital efficiency) and the extraction (risk transfer) are structurally real and inseparable. The gap reveals that 'innovation' framing naturalizes what is actually asymmetric risk distribution: those who capture gains (shareholders) can exit, while those who bear risks (buyers, public) cannot.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by demonstrating that the hardware-before-software inversion is neither pure coordination (it transfers crash risk and financial loss to buyers) nor pure extraction (it does solve genuine capital efficiency problems in R&D-intensive industries). The analytical classification is tangled rope because both functions are structurally real. The coordination function: monetizing the development process distributes R&D costs across early adopters who accept the risk, enabling faster iteration than traditional safety-first deployment. The extraction function: the model transfers safety risk to buyers while concentrating gains with manufacturers and short-term shareholders, with no mechanism to internalize liability if the promised capability never safely materializes. The perspectival gap is diagnostic: those with exit options (shareholders, safety advocates) see coordination or temporary problems; those without exit options (early adopters, public road safety) experience pure extraction. The mandatrophy resolution is that the constraint IS both things simultaneously \u2014 the presheaf over observation sites captures this irreducible multiplicity rather than forcing a single classification."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture_nhtsa",
+      "liability_shield_beta_label",
+      "over_the_air_update_bypass"
+    ],
+    "dual_formulation_note": "The hardware-before-software inversion is upstream of several related constraints: regulatory capture at NHTSA (which enables the voluntary reporting framework), liability shielding via beta labels (which transfers crash risk to drivers), and over-the-air update regulatory bypass (which allows software changes without approval). Each of these constraints has its own extractiveness value, but they form a constraint family where the inversion is the structural foundation enabling the others."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.55
+    }
+  ]
+}

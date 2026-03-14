@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "semiconductor_supply_chain_bottleneck",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "semisupply"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Semiconductor Supply Chain Bottleneck",
+    "topic_domain": "industrial/economic/technology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_fabs",
+      "fab_equipment_suppliers",
+      "logistics_intermediaries"
+    ],
+    "victims": [
+      "downstream_device_manufacturers",
+      "emerging_fabs",
+      "global_tech_accessibility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Device Manufacturer (Supply-Dependent)",
+      "comment": "PERSPECTIVE 1: DEVICE MANUFACTURER (SNARE) \u2014 Trapped by geographic fab concentration and long lead times. No alternative sourcing available at scale or cost. Experiences pure extraction: cannot exit, cannot negotiate, cannot build redundancy within biographical timeframe. Maximum suppression."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Emerging Domestic Fab",
+      "comment": "PERSPECTIVE 2: EMERGING DOMESTIC FAB (TANGLED ROPE) \u2014 Constrained by capital requirements and incumbent resistance, but also benefits from government subsidies and long-term supply security narratives. Mixed coordination (supply reliability assurance) and extraction (incumbent gatekeeping). Exit options exist but carry high cost (relocation, competing against entrenched supply chains)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Fab Operator",
+      "comment": "PERSPECTIVE 3: INCUMBENT FAB OPERATOR (ROPE) \u2014 Experiences the bottleneck as coordination benefit: capacity scarcity justifies premium pricing, long-term contracts ensure demand stability. Can arbitrage across geographies and customers. Net beneficiary \u2014 extraction flows toward this agent. Suppression maintains premium pricing but coordination function is genuine (capacity allocation under constraint is real problem)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Government Industrial Policy Actor",
+      "comment": "PERSPECTIVE 4: GOVERNMENT INDUSTRIAL POLICY (SCAFFOLD) \u2014 Organized agents (CHIPS Act, EU Chips Act, subsidy programs) see the bottleneck as temporary supply coordination failure with a generational sunset. Investing in new fab capacity and supply diversification to replace concentrated supply. Constraint has sunset clause (10-15 year estimate for new capacity to mature). Low effective extraction because this actor has agency and clear exit pathway through capacity investment."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Supply Chain Theater",
+      "comment": "PERSPECTIVE 5: SUPPLY CHAIN THEATER (PITON) \u2014 Elaborate risk mitigation theater (strategic reserves, inventory requirements, long-term contracts, supply chain diversification initiatives) persists despite limited impact on actual availability. Theater ratio (0.48) reflects substantial performative activity: emergency stockpiles, resilience reporting, supplier qualification protocols \u2014 much maintains institutional legitimacy rather than solving underlying capacity constraint. The mechanism persists through inertia and insurance logic."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Physics Limit View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / PHYSICS LIMIT (MOUNTAIN) \u2014 From a civilizational timeframe, semiconductor manufacturing complexity creates inherent verification and validation bottlenecks: process nodes require billions in R&D, multi-year qualification cycles, and irreducible manufacturing defect rates. Some supply constraint is immutable physics. However, the structural data contradicts pure mountain classification \u2014 the current bottleneck is artificial scarcity created by incumbent consolidation and capacity underinvestment, not physical limits. This is a false summit: naturalizing a policy-contingent constraint as physical law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "incumbent_collusion_vs_coordination",
+      "question": "Are incumbent fabs maintaining supply constraint through collusion/coordination of capacity withholding, or through legitimate supply-demand coordination?",
+      "resolution_mechanism": "Antitrust analysis; capacity utilization data vs announced capacity; pricing correlation with slack capacity; investment patterns during demand surges",
+      "impact": "If collusion: snare classification applies to all perspectives; extraction is deliberate rent-seeking. If coordination: rope classification applies more broadly; extraction is legitimate scarcity pricing. Changes \u03c7 values for all victim perspectives by 0.15-0.25.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether supply constraint is collusive or legitimate scarcity"
+    },
+    {
+      "id": "new_capacity_realistic_timeline",
+      "question": "Can government-subsidized new fab capacity meaningfully reduce bottleneck within 10-15 year horizon, or will foundry consolidation persist as structural feature?",
+      "resolution_mechanism": "Tracking announced fab construction timelines, yield ramp-up rates, and market capture of new fabs; comparison to Intel foundry, TSMC expansion, Samsung foundry historical performance; cost trajectory for nodes below 5nm",
+      "impact": "If realistic: scaffold sunset is real, constraint lifecycle ends generationally. If unrealistic: bottleneck persists indefinitely despite investment; scaffold reclassifies to failed-sunset tangled_rope. Changes theater_ratio and measurement trajectory.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether new fab capacity can resolve bottleneck on subsidized timeline"
+    },
+    {
+      "id": "geographic_dependency_irreducibility",
+      "question": "Is concentration of advanced fab capacity in Asia (Taiwan, South Korea, Japan) a temporary artifact of capital allocation or a fundamental feature of semiconductor physics/economics?",
+      "resolution_mechanism": "Historical analysis of fab geography shifts (1990s US vs 2010s Asia); cost modeling for advanced nodes in different regions; supply chain feedback loops favoring concentration; talent and ecosystem dependency analysis",
+      "impact": "If temporary: diversification efforts will succeed; bottleneck is policy-solvable. If fundamental: geographic concentration will persist despite subsidies; bottleneck is structural; emerging fabs remain constrained indefinitely. Changes classificatory confidence for all perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether fab concentration is temporary or structural"
+    },
+    {
+      "id": "device_substitution_availability",
+      "question": "Can device manufacturers substitute older-node semiconductors or alternative architectures for newer-node designs in 70% of use cases?",
+      "resolution_mechanism": "Application-by-application analysis of performance requirements; cost modeling for older-node alternatives; design flexibility survey of major device manufacturers; architectural substitution case studies",
+      "impact": "If high substitution: many victims can exit bottleneck without capacity expansion; snare classification weakens to tangled_rope for moderate fraction of affected manufacturers. If low substitution: trapped classification holds; snare persists. Changes measurement trajectory and victim group composition.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether device manufacturers can substitute older process nodes"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The semiconductor supply chain bottleneck emerged post-2020 as a structural constraint on global manufacturing and technology access. The constraint combines genuine capacity scarcity with incumbent gatekeeping, geographic concentration, and long lead times for fab construction. Extractiveness increased from 0.35 (2020, perceived as temporary) to 0.61 (2022, peak scarcity) and has stabilized at 0.58 (2026) as government subsidies begin supporting new capacity while incumbent advantages persist. Theater ratio (0.48) reflects moderate performative activity: emergency stockpiling, supply chain diversification announcements, and resilience protocols address symptoms without solving structural capacity constraint. The constraint exhibits all six DR types from different structural positions: powerless device manufacturers face a snare; emerging domestic fabs navigate a tangled coordination problem; incumbent fabs experience rope benefits; government actors deploying subsidies see a scaffold with sunset; the supply chain ritual maintains piton theater; and analytical observers risk mistaking policy-contingent scarcity for physical law.",
+    "key_agents": [
+      "Incumbent Fab Operators (TSMC, Samsung, Intel Foundry): Primary beneficiaries (institutional/arbitrage) \u2014 capture premium pricing, demand security, and negotiating advantage during scarcity. Extract through capacity withholding and long-term contract terms.",
+      "Device Manufacturers (Apple, automotive suppliers, IoT manufacturers): Primary victims (powerless/trapped) \u2014 no alternative sourcing at required scale/cost/lead time. Experience maximum suppression through geographic dependency and qualification requirements.",
+      "Fab Equipment Suppliers (ASML, Tokyo Electron, Applied Materials): Secondary beneficiaries (institutional/arbitrage) \u2014 benefit from new fab capacity investment and upgrade cycles driven by scarcity premium.",
+      "Emerging Domestic Fabs (Intel Foundry, Samsung US expansion, TSMC Arizona): Mixed-position actors (moderate/constrained) \u2014 constrained by capital requirements and yield ramp challenges but benefiting from government subsidies and strategic importance narratives.",
+      "Government Industrial Policy Actors (CHIPS Act, EU subsidies, Japan semiconductors strategy): Organized agents (organized/constrained) \u2014 deploying capital to build alternative supply, viewing bottleneck as temporary with generational sunset.",
+      "Logistics and Supply Chain Intermediaries: Secondary beneficiaries (institutional/arbitrage) \u2014 extract through inventory management, customs brokerage, and allocation services during scarcity.",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent incumbent consolidation as immutable physics of chip manufacturing"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. The bottleneck creates genuine scarcity \u2014 fab capacity genuinely cannot meet demand at all price points simultaneously \u2014 but the scarcity is amplified by incumbent consolidation and underinvestment. Base extractiveness reflects that capacity constraint is real; the value is not higher because government capacity investment is reducing artificial scarcity. The trajectory shows extractiveness peaked at 0.61 in 2022 (maximum scarcity perception) and declined as subsidized capacity came online. Suppression (0.65): Moderately high. Barriers to exit include: geographic fab concentration (Taiwan, South Korea); 2-3 year fab construction timelines; 1-2 year process qualification cycles; billion-dollar capital requirements; incumbent long-term contracts locking access; supply chain opacity and information asymmetry. However, suppression is not total (0.90+) because government subsidies, alternative suppliers, and demand substitution reduce absolute barriers. Theater ratio (0.48): Moderate. Supply chain theater includes: strategic inventory reserves, supply chain diversification announcements, resilience protocols, supplier qualification tiering, emergency response plans. These address symptoms and build institutional legitimacy but do not directly increase available capacity. Theater has increased from 0.32 (early bottleneck period, purely demand shock) to 0.48 (mature bottleneck period, substantial institutional response). Theater remains below 0.50 because genuine capacity constraint remains \u2014 the rituals are not yet purely performative.",
+    "directionality_logic": "Incumbent fabs are structural beneficiaries: scarcity increases their margin and contracts secure demand. Their d-value is low (~0.15), yielding negative or minimal effective extraction (they experience \u03c7 as coordination benefit). Device manufacturers are structural victims with trapped exit options: d-value is high (~0.90), yielding maximum f(d) and experienced \u03c7. Government actors have constrained exit (cannot instantly build fabs) but agency (can deploy capital to reduce scarcity), yielding moderate d (~0.50) and moderate \u03c7, classified as scaffold because they have sunset pathway. The logistics intermediaries benefit from allocation friction, similar to incumbents but with slightly higher d due to less direct control. The bottleneck's beneficiary/victim structure is asymmetric: benefits concentrate on incumbents and suppliers; costs distribute widely across device manufacturers and end-user sectors. This asymmetry drives the tangled_rope classification: genuine coordination function (scarcity pricing equilibrates demand) coexists with extractive incumbent gatekeeping.",
+    "perspectival_gap": "The gap between beneficiary and victim perspectives is substantial. Incumbent fabs see rope \u2014 the constraint solves a real coordination problem (matching demand to limited capacity via price and contract terms). Device manufacturers see snare \u2014 the constraint offers no coordination benefit, only extraction and trap. Government actors see scaffold \u2014 the constraint is temporary policy problem being solved through capacity investment with clear timeline. The analytics view risks mountain \u2014 'chip manufacturing is intrinsically complex and capacity-constrained' \u2014 but this naturalizes what is actually a contingent industrial structure. The field's epistemic reliability perspective (absent but structurally important) would see snare: the global technology ecosystem is trapped in dependency on concentrated suppliers with no exit pathway.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by disambiguating genuine scarcity from incumbent extraction. The genuine scarcity (rope function): fab capacity truly is limited; complex node transitions require years; capital is genuinely scarce. The extraction mechanism (snare overlay): incumbents maintain pricing power and contract terms that exceed what pure scarcity would require; geographic concentration creates artificial barriers; capacity underinvestment during demand surges reflects strategic gatekeeping. The constraint is tangled_rope because both elements are structurally real. If the analysis had focused only on coordination (genuine capacity scarcity matching demand), the classification would underestimate extraction. If focused only on extraction (incumbent gatekeeping), it would overestimate because genuine scarcity contributes to the problem. The mandatrophy resolution: acknowledge both functions, measure their relative contribution (extractiveness 0.58 means extraction contributes more to constraint force than pure coordination would), and track the sunset pathway (government capacity investment should reduce both genuine scarcity AND extractive gatekeeping over 10-15 year horizon)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "device_manufacturing_lead_time_uncertainty",
+      "emerging_fab_capital_requirement",
+      "geopolitical_technology_dependency"
+    ],
+    "dual_formulation_note": "The semiconductor bottleneck decomposes into multiple structurally distinct constraints: (1) fab capacity scarcity (resource_allocation coordination problem); (2) incumbent consolidation and gatekeeping (extraction mechanism); (3) geographic dependency (geopolitical constraint). This story integrates all three as a tangled_rope. Upstream constraints in the family include the physics of process node scaling (immutable, but not the bottleneck driver) and downstream constraints include device manufacturer supply chain risk (derivative of this bottleneck)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

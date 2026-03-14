@@ -1,0 +1,217 @@
+{
+  "header": {
+    "constraint_id": "policy_design_under_false_equilibrium_assumptions",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pdfea"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Policy Design Under False Equilibrium Assumptions",
+    "topic_domain": "political_economy/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "policy_establishment",
+      "incumbent_economic_interests"
+    ],
+    "victims": [
+      "policy_adapters",
+      "system_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Frontline Implementation Actor",
+      "comment": "PERSPECTIVE 1: FRONTLINE IMPLEMENTATION ACTOR (SNARE) \u2014 Field workers, street-level bureaucrats, and local administrators tasked with implementing policies designed under false equilibrium assumptions face a structural trap. They must execute policies that assume static conditions in dynamic environments. When policies fail due to changed conditions or violated assumptions, implementation actors bear reputational and career cost. No exit \u2014 they cannot refuse implementation, and they have no authority to revise the underlying policy frame. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Affected Stakeholder",
+      "comment": "PERSPECTIVE 2: AFFECTED STAKEHOLDER (SNARE) \u2014 Businesses, individuals, and communities targeted by policy suffer from policy failures cascading from false equilibrium assumptions. High exit costs: relocating, changing business models, or adapting to repeated policy revisions. Suppression is structural \u2014 they are regulated targets with limited legal recourse. The constraint extracts from them through instability, misdirected incentives, and adaptation costs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Policy Reform Coalition",
+      "comment": "PERSPECTIVE 3: POLICY REFORM COALITION (TANGLED ROPE) \u2014 Professional economists, think tanks, and advocacy groups push for more rigorous policy design. They coordinate on better methodology (dynamic stochastic general equilibrium, agent-based modeling, empirical behavioral evidence). But they are also captured by the same false equilibrium logic \u2014 they publish in journals that reward novelty over robustness, they compete for funding based on theoretical innovation, and they face suppression when their findings threaten incumbent interests. Mixed: genuine coordination on improving policy methodology alongside extraction through gatekeeping and epistemic authority."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Policy Establishment",
+      "comment": "PERSPECTIVE 4: POLICY ESTABLISHMENT (ROPE) \u2014 Central banks, treasury departments, and regulatory agencies design and defend equilibrium-based frameworks. They experience the constraint as coordination: the equilibrium assumption simplifies communication, enables delegation of authority, and reduces political controversy ('we follow the science'). High exit optionality \u2014 they can shift methodologies without personal cost. Benefits from the constraint through legitimacy and centralized control."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Incumbent Economic Interest",
+      "comment": "PERSPECTIVE 5: INCUMBENT ECONOMIC INTEREST (ROPE) \u2014 Large firms, financial institutions, and rent-seeking actors benefit from policies designed under false equilibrium assumptions because these assumptions lock in existing relative positions. Incumbent firms can lobby for assumptions that preserve their margins; new entrants face false regulatory constraints. The incumbent sees the constraint as a coordination mechanism that stabilizes their position through policy legitimacy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The International Policy Adopter",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL POLICY ADOPTER (TANGLED ROPE) \u2014 Developing nations and policy-learning jurisdictions copy equilibrium-based frameworks from leading economies, gaining apparent methodological legitimacy. But the imported frameworks are calibrated to different structural conditions (different demographics, institutions, asset bases). Policy failure cascades from the mismatch. Exit is mobile at the global level (adopt different frameworks) but constrained domestically (IMF conditionality, capital flow dependence, domestic elite capture). Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Equilibrium Theoretical Tradition",
+      "comment": "PERSPECTIVE 7: EQUILIBRIUM THEORETICAL TRADITION (PITON) \u2014 The intellectual apparatus (Walrasian equilibrium, rational expectations hypothesis, perfect competition benchmarks) persists through institutional inertia despite substantive empirical failures. Textbooks present equilibrium models as pedagogical scaffolds but practitioners treat them as descriptive reality. The constraint is maintained by career incentives (modeling equilibrium is publishable; documenting disequilibrium is seen as data description not theory), not by function. Theater ratio is high: the ritual of equilibrium analysis persists because alternatives have not fully replaced it and because the ritual confers authority."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational frame, some degree of model simplification is inherent to policy design: all models are wrong, policymakers must choose between competing imperfect representations. The equilibrium assumption is presented as a necessary simplification, not a contingent choice. However, the structural data contradicts this naturalization \u2014 the constraint is maintained by career incentives, institutional authority, and incumbent interest protection, not by inherent analytical limits. The engine will flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "assumption_vs_description_boundary",
+      "question": "Are equilibrium assumptions presented as necessary simplifications or as accurate descriptions of actual economic dynamics?",
+      "resolution_mechanism": "Textual analysis of policy documents and academic presentations: frequency of caveats, explicit statements of model limitations, and contradiction between stated assumptions and policy justification",
+      "impact": "If assumptions are explicitly caveated: constraint is lower-extractiveness coordination (Rope with justified simplification). If assumptions are presented as fact: extractiveness is higher (Snare, because false beliefs suppress adaptive policymaking).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether equilibrium assumptions are framed as simplifications or descriptions"
+    },
+    {
+      "id": "policy_failure_attribution_mechanism",
+      "question": "When equilibrium-based policies fail, are failures attributed to violated assumptions (opening learning) or to implementation/exogenous shocks (preserving assumption set)?",
+      "resolution_mechanism": "Post-hoc analysis of policy failure case studies; tracking of attribution statements in policy review documents and media coverage",
+      "impact": "If failures trigger assumption revision: constraint enables adaptive policymaking (lower extractiveness, Rope dominant). If failures are externalized: constraint traps policymakers in iterative failure (higher extractiveness, Snare/Tangled Rope dominant).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Attribution mechanism for policy failure"
+    },
+    {
+      "id": "methodological_alternative_viability",
+      "question": "Do epistemologically rigorous alternatives to equilibrium-based policy design exist and are they technically feasible?",
+      "resolution_mechanism": "Survey of agent-based modeling, dynamic stochastic modeling, empirical behavioral frameworks; assessment of computational feasibility and predictive accuracy on historical policy problems",
+      "impact": "If alternatives are viable: policy establishment's adherence to equilibrium is choice, not necessity; extractiveness and suppression are higher. If alternatives are incomplete: some degree of equilibrium assumption may be justified structural simplification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of alternatives to equilibrium-based policy design"
+    },
+    {
+      "id": "career_incentive_capture",
+      "question": "To what degree does the persistence of equilibrium-based policy design reflect genuine analytical necessity versus career/institutional incentives for mathematical elegance and theoretical closure?",
+      "resolution_mechanism": "Analysis of publication patterns in economics and policy journals; comparison of citation rates for equilibrium-based versus non-equilibrium policy work; tracking of funding and promotion patterns",
+      "impact": "If primarily necessary: constraint is legitimate theoretical choice (lower extraction framing). If primarily incentive-driven: constraint is institutional lock-in (higher extraction, piton characteristics).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Role of career incentives in equilibrium framework persistence"
+    },
+    {
+      "id": "distributional_incidence_visibility",
+      "question": "Are the distributional consequences of equilibrium-based policy design (who bears adaptation costs, who benefits from stability assumptions) explicitly modeled and communicated?",
+      "resolution_mechanism": "Analysis of policy impact assessments; presence/absence of distributional tables; comparison of beneficiary vs victim groups' access to policy design processes",
+      "impact": "If highly visible: stakeholders can organize counter-pressure (lower suppression, higher exit options). If obscured: suppression is higher and beneficiary/victim asymmetry persists unchallenged.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Visibility of distributional consequences in policy design"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Policy design under false equilibrium assumptions creates a structural tension between the technical requirements of governance and the institutional incentives that preserve analytically questionable models. When policymakers design using equilibrium frameworks that assume no systematic disequilibrium, and conditions change or assumptions are violated, the policy fails to adapt \u2014 not because of implementation errors, but because the underlying model assumes away the very mechanisms that drive policy failure. This constraint exhibits Tangled Rope characteristics: there is genuine coordination function (equilibrium simplification does enable delegation and political communication) alongside asymmetric extraction (implementation actors and affected stakeholders bear costs of policy mismatch; policy establishment and incumbent interests benefit from stability assumptions). The constraint's theater ratio (0.68) reflects that equilibrium methodology persists as ritual in many policy contexts despite documented empirical failures \u2014 the methodology conveys authority and simplicity, which policymakers value even when the models make poor predictions. The core extraction mechanism is distributional: policies designed under false assumptions lock relative positions (incumbent firms maintain market share, established sector advantages persist) while imposing adaptation costs on non-incumbents and frontline implementers.",
+    "key_agents": [
+      "Policy Establishment: Primary beneficiary (institutional/arbitrage) \u2014 central banks, treasuries, regulatory agencies; benefits from equilibrium assumption's simplicity and legitimating power; high exit optionality",
+      "Incumbent Economic Interests: Primary beneficiary (institutional/arbitrage) \u2014 large firms, rent-seeking sectors; benefit from policies that lock relative positions through false stability assumptions",
+      "Frontline Implementation Actors: Primary victim (powerless/trapped) \u2014 bureaucrats, field workers; must execute policies based on violated assumptions; bear reputational and career cost of policy failure; no exit authority",
+      "Affected Stakeholders: Secondary victim (moderate/constrained) \u2014 businesses, individuals, communities targeted by policy; face adaptation costs from policy misdirection; high exit barriers",
+      "Policy Reform Coalition: Mixed (organized/constrained) \u2014 economists, think tanks, researchers; coordinate on improved methodology but captured by same institutional incentives for theoretical elegance",
+      "International Policy Adopters: Mixed (moderate/mobile) \u2014 developing nations copying frameworks calibrated to different structural conditions; mobile globally but constrained domestically",
+      "Equilibrium Theoretical Tradition: Institutional (institutional/arbitrage) \u2014 intellectual apparatus persisting through inertia; careers built on equilibrium methodology; piton classification",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing institutional choice as analytical necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts by imposing adaptation costs on non-incumbents while locking incumbent positions through stability assumptions. The extraction is not total (some policy learning occurs; incumbent advantage is not absolute) but structural and systematic. Theater ratio (0.68): High and rising. Equilibrium analysis in policy is substantially performative \u2014 it confers authority and enables delegation despite documented empirical failures. The ratio has increased over the interval as policy complexity has risen while equilibrium models have become less adequate descriptively. Suppression (0.62): Moderate-high. Structural barriers to exit include: (a) institutional inertia (central banks continue equilibrium frameworks because alternatives require new staffing and retraining), (b) political barriers (shifting from equilibrium to non-equilibrium models appears to concede that prior policymakers were wrong), (c) epistemic barriers (non-equilibrium policy design is genuinely harder methodologically), (d) incumbent lobbying against frameworks that would expose distributional consequences. Suppression is not total \u2014 dissent exists and alternative frameworks are developing.",
+    "directionality_logic": "Directionality d values reflect structural position relative to extraction flow. Frontline implementers are fully trapped (d \u2248 0.95) \u2014 they have no authority to revise policy and bear full cost of failure. Affected stakeholders face high barriers to exit but some options exist (d \u2248 0.75). The reform coalition is organized but captured (d \u2248 0.40 \u2014 they benefit from methodological innovation but lose out to incumbent capture). Policy establishment and incumbents are full beneficiaries (d \u2248 0.10 \u2014 extraction flows toward them). International adopters face mobile exit globally but constrained domestically (d \u2248 0.55). The analytical observer experiences no material extraction but faces identity lock if their professional reputation is built on equilibrium methodology (d \u2248 0.70 if identity-locked, but this perspective uses analytical exit). The chi formula \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) produces variation: frontline implementers experience highest chi (high d, high f(d)); beneficiaries experience lowest; organized reformers experience moderate chi despite moderate d because of global scope amplification.",
+    "perspectival_gap": "This constraint demonstrates large perspectival gaps across structural positions. The policy establishment sees primarily coordination (Rope) \u2014 equilibrium simplifies communication and legitimizes technocratic authority. Incumbent interests see coordination (Rope) \u2014 the assumption of stable competitive positioning. Frontline implementers see extraction (Snare) \u2014 they must execute policies that fail because assumptions are violated, and they bear the cost. Affected stakeholders see extraction (Snare) or mixed dynamics (Tangled Rope depending on sector). The reform coalition sees mixed dynamics (Tangled Rope) \u2014 they coordinate on better methodology but are suppressed by institutional incentives. International adopters see tangled dynamics \u2014 benefits from apparent methodological legitimacy alongside extraction from framework mismatch. The equilibrium tradition itself appears as piton (degraded institutional ritual). The civilizational analytical observer risks seeing natural law (Mountain \u2014 'all models are simplifications') but structural data reveals this as false naturalization: the persistence is institutional choice, not logical necessity.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy through demonstrating how different perspectives on the same extractive structure are legitimate: the policy establishment genuinely solves a coordination problem (how to communicate complex analysis to political actors); frontline implementers genuinely face extraction (bearing cost of policy mismatch). Both are true simultaneously. The mandatrophy resolution is that the *beneficiaries* see primarily coordination because they are positioned to benefit from it, while *victims* see primarily extraction because they bear the cost. The constraint is not 'is this coordination or extraction?' but 'how is the coordination benefit distributed?' Tangled Rope classification captures this: genuine coordination function (yes, equilibrium simplification does enable delegation) alongside asymmetric extraction (yes, the benefits concentrate on incumbents and policymakers while costs disperse to implementers and adapters). The false mountain perspective (naturalizing equilibrium as necessary simplification) is unmasked by examining whether the institutional choices (who benefits, who pays cost) are analytically necessary or contingent on institutional design. They are contingent \u2014 alternative policy methodologies exist, but career incentives and incumbent interests preserve the current framework."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "macroeconomic_stabilization_bias",
+      "regulatory_capture_equilibrium_defense",
+      "incumbent_advantage_lock_in"
+    ],
+    "dual_formulation_note": "Policy design under false equilibrium assumptions is upstream of specific policy failures (interest rate policy, labor regulation, financial stability frameworks). Each downstream constraint has its own extractiveness reflecting the particular domain; this story models the general structural mechanism by which equilibrium assumptions concentrate extraction. Decomposition: generic policy design constraint (this story, \u03b5=0.58) vs domain-specific instantiations (macroeconomic stabilization \u03b5=0.65, regulatory capture \u03b5=0.72, incumbent lock-in \u03b5=0.48)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "wikipedia_editing_authority",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "wikiedit"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Wikipedia Editing Authority and Notability Gatekeeping",
+    "topic_domain": "information_governance/digital_commons",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "established_editors",
+      "institutional_knowledge_holders"
+    ],
+    "victims": [
+      "marginalized_contributors",
+      "emerging_perspectives",
+      "non_english_speakers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Marginalized Contributor",
+      "comment": "PERSPECTIVE 1: MARGINALIZED CONTRIBUTOR (SNARE) \u2014 A person with legitimate knowledge (local historian, non-Western scholar, practitioner from underrepresented community) attempts to edit Wikipedia but faces deletion of work, hostile talk-page encounters, accusation of conflict-of-interest, and arbitrary application of 'notability' standards that privilege English-language academic and media sources. No appeal mechanism that works. The victim bears full cost of exclusion from the knowledge commons."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Occasional Contributor",
+      "comment": "PERSPECTIVE 2: OCCASIONAL CONTRIBUTOR (TANGLED ROPE) \u2014 Benefits from Wikipedia's coordination function (access to collective knowledge editing, collaborative article improvement, learning from established editors) but faces friction from notability gatekeeping, edit-warring dynamics, and the cost of learning implicit norms. Can contribute but at significant friction cost. Mixed extraction and coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Established Editor (Admin/Expert)",
+      "comment": "PERSPECTIVE 3: ESTABLISHED EDITOR (ROPE) \u2014 Experienced Wikipedia contributors and administrators experience the notability standards and editing authority structures as coordination mechanisms that enable their work: they set boundaries, maintain article quality, prevent vandalism, and establish reputation within the knowledge hierarchy. Net beneficiary with arbitrage options (can edit across projects, leverage Wikipedia reputation elsewhere)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Institutional Knowledge Holder (Academia/Media)",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL KNOWLEDGE HOLDER (TANGLED ROPE) \u2014 University presses, academic journals, major news outlets, and think tanks experience Wikipedia as both a coordination mechanism (distribution of knowledge, public credibility) and an extraction point (their institutional legitimacy is required to pass notability tests; their publications are citations required for inclusion). High coordination value but structured asymmetry: Wikipedia depends on their sources for legitimacy; they depend on Wikipedia for reach. Mixed but asymmetric."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Wikipedia Governance Structure",
+      "comment": "PERSPECTIVE 5: WIKIPEDIA GOVERNANCE STRUCTURE (PITON) \u2014 The notability standards (requiring substantial coverage in secondary sources, preferring English-language media, privileging academic citation) were appropriate coordination rules when Wikipedia was young and faced vandalism and spam. They persist through institutional inertia despite the knowledge base maturing. The editing authority system is maintained through performative community consensus and deletion review processes that are largely theater \u2014 they feel rigorous but often reinforce the original bias. Theater ratio 0.64 reflects that much gatekeeping activity is procedural maintenance rather than active quality control."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal/civilizational scale, any collaborative knowledge system must have some boundary-setting mechanism and some way of distinguishing notable from trivial. Some gatekeeping is inherent to the problem of collective knowledge curation. However, the specific mechanisms (notability standards, citation hierarchies, English-language bias) are contingent institutions, not natural laws. The engine should identify this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "notability_standard_neutrality",
+      "question": "Are notability standards (requiring secondary coverage) neutral coordination rules or mechanisms that systematically privilege certain types of knowledge and sources?",
+      "resolution_mechanism": "Comparative analysis of article survival rates by: (a) author background (academic vs practitioner vs community member), (b) topic geographic origin, (c) language of available sources, (d) media coverage patterns by region/topic. Quantitative bias audit of deletion decisions.",
+      "impact": "If neutral: notability standards are coordination mechanisms (Rope from more perspectives). If biased: standards are extraction mechanisms that systematically exclude non-institutional voices (Snare from more perspectives).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether notability standards are neutral or biased toward institutional sources"
+    },
+    {
+      "id": "expertise_vs_consensus_authority",
+      "question": "When established editors suppress a contribution, is the authority grounded in expertise/quality judgment or in social status within the editing hierarchy?",
+      "resolution_mechanism": "Analysis of deletion discussions: frequency of explicit quality/accuracy rationale vs invocation of notability/precedent. Follow-up: do suppressed articles re-emerge credibly (in other contexts, other platforms, or after editor turnover) with unmodified content?",
+      "impact": "If expertise-grounded: suppression is legitimate quality gatekeeping (Rope). If status-grounded: suppression is extraction (Snare/Tangled Rope with downward direction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether editing authority is grounded in expertise or social status"
+    },
+    {
+      "id": "alternative_curation_effectiveness",
+      "question": "Do alternative collaborative knowledge platforms (Wikidata, community wikis, decentralized models) solve the notability gatekeeping problem or recreate it at different scales?",
+      "resolution_mechanism": "Comparative analysis of article inclusion rates, diversity of contributor backgrounds, and knowledge coverage by platform. Assessment of whether non-platform solutions (local knowledge repositories, oral tradition documentation) achieve equivalent coordination without gatekeeping extraction.",
+      "impact": "If alternatives are effective: Wikipedia's constraints are contingent, not universal (scaffold sunset possible). If alternatives recreate gatekeeping: the problem is structural to collaborative knowledge curation itself (mountain or unavoidable rent-seeking).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative platforms solve or recreate notability gatekeeping"
+    },
+    {
+      "id": "english_language_source_privilege",
+      "question": "How much of Wikipedia's notability bias toward English-language academic/media sources reflects genuine knowledge accessibility vs systematic exclusion of non-English epistemologies?",
+      "resolution_mechanism": "Comparative citation analysis: what percentage of Wikipedia articles cite sources in languages other than English? What proportion of deleted articles had non-English primary sources available? Analysis of whether non-English-speaking editors' contributions survive at different rates than English-speakers with similar knowledge credentials.",
+      "impact": "If accessibility-driven: bias is coordination cost (higher verification in minority languages). If exclusionary: bias is extractive (Snare targeting non-English-speaking contributors).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether English source privilege reflects accessibility or exclusion"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "commentary": {
+    "narrative_context": "Wikipedia's editing authority structure \u2014 embodied in notability standards, administrative gatekeeping, and the requirement for secondary-source citations \u2014 presents as a coordination mechanism for maintaining article quality and preventing vandalism. However, empirical analysis reveals systematic extraction: the authority structure privileges established editors, institutional knowledge holders (academia, major media), and English-language sources while suppressing marginalized contributors, non-Western epistemologies, and voices lacking institutional legitimacy. The constraint exhibits both genuine coordination (collaborative article improvement, knowledge aggregation, spam prevention) and asymmetric extraction (gatekeeping that advantages certain contributors over others). The theater ratio has increased from 0.45 to 0.64 over 14 years, reflecting that deletion review processes and notability arbitration are increasingly performative \u2014 they feel rigorous but often reinforce existing power structures rather than enforcing objective quality standards. The extractiveness has risen from 0.35 to 0.52, showing that the gatekeeping mechanism has become more extractive relative to its coordination function as the Wikipedia knowledge base has matured and the resource of editing authority has become more valuable.",
+    "key_agents": [
+      "Marginalized Contributors: Primary victims (powerless/trapped) \u2014 face deletion, hostile gatekeeping, exclusion from knowledge commons despite legitimate expertise",
+      "Occasional Contributors: Secondary victims (moderate/constrained) \u2014 experience friction and learning barriers but can contribute at cost",
+      "Established Editors/Administrators: Primary beneficiaries (institutional/arbitrage) \u2014 maintain authority hierarchy, control article direction, build reputation within Wikipedia ecosystem",
+      "Institutional Knowledge Holders: Secondary beneficiaries (powerful/mobile) \u2014 academic institutions, news outlets, think tanks whose sources are privileged in notability standards; experience both coordination benefits and structural advantage",
+      "Wikipedia Governance Structure: Institutional actor (organized/constrained) \u2014 maintains notability standards and editing authority through inertial institutional processes; sees own gatekeeping as degraded (piton perspective) but continues it",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing the specific historical gatekeeping mechanisms as universal properties of collaborative knowledge curation"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Wikipedia's authority structures do extract value asymmetrically \u2014 they grant power to established editors, privilege institutional knowledge sources, and exclude marginalized voices. However, the extraction is not total because the coordination function is genuine: Wikipedia does aggregate knowledge effectively, prevent vandalism, and create usable commons. The rise from 0.35 to 0.52 reflects that as Wikipedia matured, the gatekeeping became more selective and the extraction more conscious (editors defending notability standards explicitly rather than accidentally). Suppression (0.58): Moderate-high. Multiple suppression mechanisms operate: the notability standard itself (requires institutional legitimacy), the edit-war social cost, the deletion review process (biased toward deletion when in doubt), the requirement to learn implicit norms, and language barriers. These are not total (contributors can and do get articles through) but substantial. Theater ratio (0.64): Moderate-high. Much of Wikipedia's deletion and notability arbitration process is performative. Deletion discussions cite policy language but often serve as status maintenance for established editors. The process feels rigorous (formal consensus-building, clear procedures) but outcomes are highly correlated with editor power and social position, not with objective quality measures. Theater has increased as the community has professionalized its procedures without increasing actual accountability to excluded voices.",
+    "directionality_logic": "The constraint creates asymmetric directionality across perspectives. Established editors occupy low-d positions (beneficiaries with arbitrage exit) \u2014 they experience the authority structure as coordination that enables their work. Marginalized contributors occupy high-d positions (victims with trapped exit) \u2014 they experience it as pure extraction, unable to contest gatekeeping decisions. Occasional contributors occupy middle-d positions (constrained exit with mixed costs and benefits). Institutional knowledge holders occupy complex positions: they appear as beneficiaries (their sources are privileged) but are also partly dependent (they need Wikipedia to distribute their knowledge). This asymmetry is the core feature of the tangled rope classification: genuine coordination function coexists with asymmetric extraction, with different actors experiencing opposite ends of the same mechanism.",
+    "perspectival_gap": "The most significant perspectival gap is between established editors (who see Rope) and marginalized contributors (who see Snare). To an established editor with high reputation, the notability standards are sensible quality gates and the authority structure is legitimate expertise-based hierarchy. To a marginalized contributor with local knowledge but no institutional backing, the same standards are arbitrary gatekeeping that excludes knowledge without good reason. The Wikipedia governance system sees itself as maintaining degraded coordination (Piton) \u2014 administrators know that notability standards were designed for a different context and suppress work that they sometimes privately believe is valuable, but continue the system because alternatives are unclear. The institutional knowledge holder (academic presses, news outlets) sees mixed benefits (their work is privileged but Wikipedia depends on them, creating mutual rather than one-way extraction). The false summit perspective naturalizes all gatekeeping as inherent to collaborative knowledge \u2014 the engine should identify this as naturalization of contingent institutional arrangements.",
+    "mandatrophy_analysis": "This constraint clearly resolves the mandatrophy by showing that the classification depends critically on the observer's structural position within the editing hierarchy. The Snare perspective is the victim's experience \u2014 a real structural reality for marginalized contributors. The Rope perspective is the beneficiary's experience \u2014 equally real for established editors. The Piton perspective captures the institutional system's own sense of degradation. The Tangled Rope primary classification represents the constraint's full structure: coordination (Wikipedia does aggregate knowledge) overlays extraction (that aggregation process privileges certain voices). The false summit (naturalizing all gatekeeping as inevitable) is correctly diagnosed as a misclassification. The mandatrophy is resolved by accepting that all perspectives are empirically accurate descriptions of different positions within the same constraint structure, and that the extraction component is not inevitable but contingent on the specific notability standards and authority mechanisms chosen."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "knowledge_source_hierarchy",
+      "english_language_bias_digital",
+      "institutional_epistemology_privilege"
+    ],
+    "dual_formulation_note": "Wikipedia editing authority is part of a constraint family with upstream structural biases in knowledge legitimacy (source hierarchy, English-language privilege, institutional epistemology) and downstream consequences for knowledge representation (coverage gaps, non-Western epistemologies underrepresented). Each story in the family has distinct extractiveness values reflecting its specificity."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

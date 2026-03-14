@@ -1,0 +1,193 @@
+{
+  "header": {
+    "constraint_id": "multiple_comparisons_problem",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mcp"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Multiple Comparisons Problem in Statistical Inference",
+    "topic_domain": "statistics/science_methodology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "positive_result_claimants",
+      "career_incentivized_researchers"
+    ],
+    "victims": [
+      "field_statistical_integrity",
+      "replication_researchers",
+      "null_result_bearers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Field's Statistical Integrity",
+      "comment": "PERSPECTIVE 1: FIELD STATISTICAL INTEGRITY (SNARE) \u2014 The epistemic commons cannot exit the false positive contamination problem. As researchers conduct multiple comparisons without correcting alpha thresholds, spurious correlations accumulate in the published literature. The field bears the full cost: literature contamination, wasted replication effort, cascading methodological distrust. No exit option exists for the collective; suppression is structural \u2014 alternative statistical procedures exist but career incentives suppress their adoption."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Replication Groups and Null Result Researchers",
+      "comment": "PERSPECTIVE 2: REPLICATION & NULL RESULT RESEARCHERS (SNARE) \u2014 Trapped by publication bias and career penalties. When attempting replication, they encounter false positives from the literature and bear the cost of negative or null results. Career advancement, grant funding, and publication opportunities penalize null findings. No exit without career sacrifice. Suppression is institutional: journals deprioritize replication work, funding agencies reward novelty over confirmation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Career-Incentivized Researchers (Single-Study Perspective)",
+      "comment": "PERSPECTIVE 3: CAREER-INCENTIVIZED RESEARCHERS (ROPE) \u2014 From immediate time horizon, the multiple comparisons constraint is experienced as enabling coordination: testing multiple hypotheses is scientifically useful. They can exit by moving to fields with pre-registration norms or by adopting Bonferroni corrections voluntarily. Net beneficiary: citation advantage for surprising positive results, career acceleration through publication velocity. Sees the constraint as natural scientific freedom rather than extractive mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Methodologically Aware Mid-Career Researchers",
+      "comment": "PERSPECTIVE 4: METHODOLOGICALLY AWARE MID-CAREER RESEARCHERS (TANGLED ROPE) \u2014 Face real costs of proper statistical correction (reduced statistical power, harder to reach publication threshold) but also benefit from the coordination function (genuine hypothesis testing is enabled). High suppression: adopting stricter alpha corrections reduces probability of positive findings, threatening career continuation. Constrained by resource and career limitations, but some agency to implement corrections. Mixed experience of coordination benefit and extraction cost."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Open Science and Pre-Registration Coalition",
+      "comment": "PERSPECTIVE 5: OPEN SCIENCE COALITION (SCAFFOLD) \u2014 Pre-registration platforms (OSF, AsPredicted), registered report protocols, and replication networks (Many Labs, Psychological Science Accelerator) create alternative verification pathways with sunset logic. Organized agents see the multiple comparisons problem as a temporary coordination failure being solved through structural reform. As pre-registration norms mature, the ability to claim spurious positives through hidden multiple testing declines. Suppression decreases as norms embed. Exit path is visible and structured \u2014 sunset estimated at 15-20 years for full norm internalization in psychology; longer in biology and physics."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Journal Editorial Gatekeeping Systems",
+      "comment": "PERSPECTIVE 6: JOURNAL EDITORIAL SYSTEMS (PITON) \u2014 The editorial process claims to enforce statistical rigor through peer review, but in practice applies correction standards inconsistently. The ritual persists (desk rejects for 'lack of novelty' of replication studies, positive bias in acceptance) despite reduced functional verification power. Theater ratio high: editors maintain the performance of methodological gatekeeping while actual correction enforcement remains patchy. Institutional inertia maintains the performative gate."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, the multiple comparisons problem appears as an immutable mathematical truth: when testing N independent hypotheses at alpha=0.05, expected false positives approach N\u00d70.05 as N grows. This perspective naturalizes the constraint as an inherent property of statistical inference itself. However, the structural data contradicts mountain classification \u2014 the false positive accumulation is not a mathematical law but a contingent consequence of choices about alpha correction, publication norms, and career incentives. The engine detects this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "alpha_correction_adoption_threshold",
+      "question": "What adoption rate of proper alpha correction (Bonferroni, FDR, pre-registration) would functionally eliminate the multiple comparisons extraction mechanism?",
+      "resolution_mechanism": "Survey of statistical practice across fields; tracking of pre-registration adoption rates and their correlation with replication success; empirical measurement of false positive rates in journals before and after correction norm adoption",
+      "impact": "If threshold < 30% adoption: correction remains niche practice, extraction persists. If threshold > 60% adoption: extraction mechanism degrades substantially. Below 30%, the problem is structural; above 60%, the problem becomes non-compliance rather than design.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Adoption threshold for alpha correction eliminating extraction"
+    },
+    {
+      "id": "publication_bias_persistence",
+      "question": "Does publication bias (preferential acceptance of positive results) persist even when researchers adopt pre-registration and proper multiple comparison corrections?",
+      "resolution_mechanism": "Meta-analysis of registered report acceptance rates vs rejection rates by result type (significant/null/negative); longitudinal tracking of null result acceptance rates before and after pre-registration norm adoption",
+      "impact": "If bias persists post-correction: the multiple comparisons problem is secondary to a deeper extraction mechanism (publication bias) \u2014 constraint should decompose. If bias substantially declines: scaffold perspective confirmed \u2014 pre-registration addresses the core extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether publication bias persists post-correction"
+    },
+    {
+      "id": "effect_size_inflation_independence",
+      "question": "Is the problem fundamentally about false positives from multiple testing, or is it also about effect size inflation in the studies that do produce positive results due to publication selection?",
+      "resolution_mechanism": "Comparison of effect sizes in published positive results vs pre-registered replications; meta-analysis of effect size distributions in confirmatory vs exploratory research; measurement of correlation between number of comparisons tested and magnitude of reported effect sizes",
+      "impact": "If primarily multiple testing false positives: current constraint formulation is accurate. If effect size inflation is equally important: constraint should decompose into 'multiple comparisons false positives' (\u03b5\u22480.35) and 'effect size inflation via publication selection' (\u03b5\u22480.55).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether effect size inflation is independent mechanism"
+    },
+    {
+      "id": "field_specific_norm_divergence",
+      "question": "Why do some fields (psychology, genetics) show rapid pre-registration adoption while others (physics, chemistry) show minimal adoption despite equivalent statistical risks?",
+      "resolution_mechanism": "Qualitative analysis of field cultures, funder mandates, and journal policies; historical tracking of adoption rates by field; surveys of researcher perceptions of pre-registration burden and value",
+      "impact": "If due to technical barriers: constraint mechanics are field-universal. If due to cultural factors: the constraint is partially contingent on field-specific norms \u2014 some fields may resolve the extraction via cultural reform faster than others.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Field-specific divergence in pre-registration adoption"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The multiple comparisons problem is a structural constraint in statistical inference where researchers conducting multiple hypothesis tests face a dilemma: either apply alpha level corrections that reduce statistical power and make positive findings harder to achieve, or conduct uncorrected tests and accumulate false positive results in the literature. This creates an asymmetric extraction mechanism: researchers who conduct multiple comparisons without correction benefit from easier paths to publication and positive career outcomes, while the field's epistemic integrity and researchers attempting replication bear the costs of false positive contamination. The constraint exhibits tangled rope structure: genuine coordination function (testing multiple hypotheses is scientifically necessary) exists alongside asymmetric extraction (career incentives suppress adoption of proper statistical correction). Theater ratio (0.68) reflects that editorial peer review claims to enforce statistical rigor but inconsistently applies correction standards \u2014 the gatekeeping ritual persists while actual correction enforcement remains patchy. Pre-registration and open science norms represent a sunset pathway, creating a scaffold perspective where organized agents are building alternative verification mechanisms.",
+    "key_agents": [
+      "Career-Incentivized Researchers: Primary beneficiaries (institutional/arbitrage) \u2014 accrue citation advantage and publication velocity from positive results obtained through uncorrected multiple testing; can exit to pre-registered research but face opportunity costs",
+      "Field Statistical Integrity: Primary victim (powerless/trapped) \u2014 abstract collective good bearing accumulated false positive contamination; no exit option, no advocates, bears costs across generations",
+      "Replication & Null Result Researchers: Secondary victims (powerless/trapped) \u2014 encounter false positives from literature, face career penalties for null findings; publication bias and career structure trap them in low-status research",
+      "Methodologically Aware Mid-Career Researchers: Moderate/constrained agents \u2014 benefit from hypothesis testing coordination but bear costs of proper statistical correction; constrained by resource limitations and career risk",
+      "Open Science Coalition: Organized agents (organized/constrained) \u2014 pre-registration platforms, registered reports, replication networks building alternative pathways with sunset logic; see exit path as structured and visible",
+      "Journal Editorial Systems: Institutional gatekeeper (institutional/arbitrage) \u2014 maintains performative statistical rigor through inconsistent correction enforcement; benefits from appearance of methodological gatekeeping while actual enforcement remains weak"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The multiple comparisons problem creates real asymmetry: uncorrected testing without correction is easier and faster than properly corrected testing, creating career incentives for the former. The extraction is not total (pre-registration and correction methods exist) but is substantial because the default career path (maximize positive findings) aligns with the exploitative direction. The measurement trajectory shows increasing extractiveness over the interval (0.35\u21920.58) as hypothesis testing has become more routine and computational power has enabled mining larger datasets for correlations without pre-specification. Suppression (0.65): High. Multiple barriers suppress adoption of proper correction: reduced statistical power under Bonferroni or FDR corrections makes publications harder; pre-registration imposes upfront planning costs; journals and funding agencies reward novelty and positive results over methodological rigor. Publication bias against null results creates career risk for replication researchers. These barriers are institutional and psychological, not material \u2014 agents could theoretically exit, but at high cost. Theater ratio (0.68): High. Editorial peer review claims to enforce statistical standards (alpha correction, multiple comparison awareness) but in practice applies these standards inconsistently. Positive results pass through with minimal correction scrutiny; replication studies face desk rejection for 'lack of novelty'; methodological rigor is discussed but not reliably enforced. The gatekeeping ritual persists despite reduced functional capacity to distinguish true signals from noise in exploratory studies.",
+    "perspectival_gap": "The tangled rope classification hinges on a genuine perspectival gap: the same structural feature (freedom to test multiple hypotheses) appears as enabling coordination to the researcher and as false positive contamination to the field. The researcher sees hypothesis testing as inherently multi-pronged and iterative \u2014 part of the scientific process. The field sees post-hoc multiple testing as mining for noise. Both perspectives are empirically grounded. The resolution is not to eliminate hypothesis testing (coordination function is real) but to separate exploratory testing (acknowledging multiple comparisons) from confirmatory testing (with proper alpha correction). Pre-registration achieves this separation structurally. The scaffold perspective shows this is achievable \u2014 organized agents are building norms and institutions that preserve the coordination function while suppressing the extraction mechanism.",
+    "directionality_logic": "Career-incentivized researchers with institutional power and arbitrage options (can move to pre-registered fields or adopt corrections voluntarily without career-ending costs) experience low effective extraction despite moderate base extractiveness, because they have exit options and perceive the constraint as coordination. Replication researchers and null-result bearers with powerless status and trapped options (no exit without career sacrifice) experience maximum extraction, because they face both the costs of false positive contamination and publication bias penalties. Methodologically aware mid-career researchers with moderate power and constrained options experience moderate extraction \u2014 they recognize the problem and can implement corrections, but face real costs in statistical power and publication prospects. The directionality derivation flows from beneficiary/victim designation and exit options: those who benefit from uncorrected testing without incurring correction costs are net beneficiaries (low d); those who bear costs without capturing benefits are net victims (high d).",
+    "mandatrophy_analysis": "The tangled rope classification successfully resolves the mandatrophy by showing that the constraint has BOTH a genuine coordination function (testing multiple hypotheses is how science advances) AND an asymmetric extraction mechanism (uncorrected testing creates false positive bias that benefits some researchers and harms field integrity). Neither pure coordination (rope) nor pure extraction (snare) captures the constraint's structure. The coordination function cannot be eliminated without eliminating hypothesis testing; the extraction cannot be eliminated without proper alpha correction. The constraint is fundamentally hybrid. Pre-registration and open science norms represent not elimination of the constraint but structural separation: the coordination function (hypothesis testing) is preserved, the extraction mechanism (hidden multiple testing) is suppressed through pre-commitment. The sunset logic is real \u2014 as pre-registration norms mature, the extraction gradient flattens because the ability to profit from uncorrected testing declines."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "publication_bias_in_peer_review",
+      "p_hacking_and_garden_of_forking_paths",
+      "file_drawer_problem"
+    ],
+    "dual_formulation_note": "The multiple comparisons problem is upstream of three related statistical constraints. Publication bias (downstream) amplifies the extraction effect by penalizing null results. P-hacking and researcher degrees of freedom (downstream) are the behavioral mechanism by which researchers exploit the multiple comparisons freedom. The file drawer problem (downstream) is the publication outcome of false positive accumulation. Each has its own extractiveness value reflecting its structural role: multiple comparisons problem (\u03b5=0.58) provides the opportunity; p-hacking (\u03b5=0.62) is the behavioral exploitation; publication bias (\u03b5=0.70) is the institutional amplifier."
+  },
+  "directionality_overrides": []
+}

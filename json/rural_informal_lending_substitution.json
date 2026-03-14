@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "rural_informal_lending_substitution",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rils"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Rural Informal Lending Substitution Trap",
+    "topic_domain": "economic/financial/social",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "moneylender_networks"
+    ],
+    "victims": [
+      "small_farmers",
+      "agricultural_laborers",
+      "village_poor"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Indebted Farmer",
+      "comment": "PERSPECTIVE 1: INDEBTED FARMER (SNARE) \u2014 Trapped by debt cycle with no exit. Faces seasonal cash-flow crises requiring emergency loans at 48-120% annual rates. Collateral demands (land, future harvests) create multi-generational entanglement. Cannot access formal banking due to lack of collateral, credit history, or documentation. Extraction is maximal and inescapable within the biographical horizon."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Agricultural Laborer",
+      "comment": "PERSPECTIVE 2: AGRICULTURAL LABORER (SNARE) \u2014 Trapped across generations. Advances from moneylender (often employer-coincident) create debt bondage. Wages are suppressed by informal loan repayment obligations. Cannot exit the region without forfeiting debt claims or facing enforcement through social networks. Intergenerational transmission of debt status to children."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Moneylender Network",
+      "comment": "PERSPECTIVE 3: MONEYLENDER NETWORK (ROPE) \u2014 Experiences the constraint as a coordination mechanism. They solve the genuine problem of rural liquidity shortage by providing credit where formal banks do not. High interest rates reflect real enforcement costs, information asymmetry, and default risk. They have exit options (shift capital to other regions, invest in formal finance) and benefit from the constraint structure. The constraint coordinates rural credit supply; that it extracts is secondary to their perspective."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Rural Development NGOs and Microfinance Advocates",
+      "comment": "PERSPECTIVE 4: RURAL DEVELOPMENT NGOS (TANGLED ROPE) \u2014 Organized agents addressing rural credit access see both genuine coordination function (closing credit gap) and embedded extraction (high-cost debt traps). They are constrained by the political economy of formal banking: banks avoid rural lending due to transaction costs and perceived risk. NGOs must navigate social networks, moneylender resistance, and farmer cultural trust (borrowers often prefer known moneylenders to impersonal institutions). They benefit from donor funding focused on rural finance but bear costs of institutional friction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Agricultural Banks and Formal Finance Sector",
+      "comment": "PERSPECTIVE 5: FORMAL FINANCE SECTOR (TANGLED ROPE) \u2014 They have coordination function (expanding rural credit access) but also extract through operational costs, collateral demands, and regulatory compliance overhead. They can exit rural lending (shift to urban/commercial credit) and often do, leaving the field to informal lenders. Their relative market absence enables moneylender dominance. The constraint traps formal finance in a coordination role it partially abandons, creating the extraction void."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Government Agricultural Credit Schemes",
+      "comment": "PERSPECTIVE 6: GOVERNMENT AGRICULTURAL CREDIT SCHEMES (PITON) \u2014 Formal subsidized credit programs (crop loans, agricultural lines of credit) exist but are largely theatrical: take-up rates are low despite subsidized rates, bureaucratic documentation is prohibitive for illiterate farmers, and loan amounts often don't match seasonal cash-flow needs. These schemes persist through policy inertia and donor pressure, not because they function \u2014 theater_ratio here is high. Real credit flows remain informal despite formal programs."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Informational Asymmetry View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, rural informal lending appears as an inevitable natural law: absence of formal credit in dispersed populations requires high-information, relationship-based lending. Information asymmetry about farmer creditworthiness is inherent; high interest rates reflect real risk. But the structural data contradicts mountain: this 'natural law' is maintained by policy choices (banks' decision to exit rural markets), institutional design (formal schemes' bureaucratic inaccessibility), and suppression mechanisms (moneylender enforcement through social networks). The constraint is contingent, not natural."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "credit_accessibility_collapse",
+      "question": "Is the extractive interest rate (48-120% annually) a fair risk premium for genuine default risk, or an exploitative markup over true default probability?",
+      "resolution_mechanism": "Comparison of actual default rates in informal lending against comparable formal sector risk premiums; analysis of interest rate variation by borrower type and loan purpose",
+      "impact": "If rates are risk-calibrated: reclassify as tangled rope (coordination with significant but justified cost). If rates exceed true risk: snare classification strengthens (pure extraction disguised as risk pricing).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Calibration of interest rates to actual default risk"
+    },
+    {
+      "id": "exit_option_availability",
+      "question": "Do microfinance institutions, agricultural cooperative credit systems, or bank linkage schemes actually provide functional exit options for trapped borrowers, or do they merely recreate informal lending under different institutional branding?",
+      "resolution_mechanism": "Longitudinal tracking of borrowers who transition from moneylender to formal/semi-formal credit; measurement of interest rate reduction, debt cycle interruption, and intergenerational transmission cessation",
+      "impact": "If alternatives provide genuine exit: constraint is structurally escapable (reclassify exit_options as constrained rather than trapped). If alternatives fail: exit options remain illusory and the constraint strengthens as snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether alternative credit systems provide real exit"
+    },
+    {
+      "id": "suppression_mechanism_social_networks",
+      "question": "How much of the measured suppression (0.72) is structural (lack of alternative credit) versus socially enforced (moneylender reputation damage, community pressure, family honor dynamics)?",
+      "resolution_mechanism": "Ethnographic analysis of enforcement mechanisms; measurement of borrowers' stated reasons for non-exit; comparison of suppression across regions with varying social network density",
+      "impact": "If primarily structural: formal finance expansion reduces suppression directly. If primarily social: formal finance alone is insufficient \u2014 cultural reframing of default is required.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative contribution of structural vs. social suppression"
+    },
+    {
+      "id": "moneylender_monopoly_fragility",
+      "question": "Is the moneylender network a stable, intentionally maintained monopoly, or a fragile equilibrium dependent on formal finance abstention?",
+      "resolution_mechanism": "Historical analysis of regional markets where formal banking expanded or withdrew; simulation of credit market outcomes under varying assumptions about bank entry thresholds",
+      "impact": "If stable monopoly: policy must directly target moneylender behavior. If dependent on formal finance exit: policy should focus on incentivizing bank rural expansion.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Stability and maintenance of moneylender market dominance"
+    },
+    {
+      "id": "generational_transmission_mechanism",
+      "question": "Does debt transmission across generations occur through formal legal mechanisms (debt inheritance) or through social mechanisms (family obligation, cultural internalization)?",
+      "resolution_mechanism": "Documentation of legal frameworks for debt inheritance; comparison of debt transmission rates where legal inheritance is prohibited vs. where it is permitted; analysis of borrowers' stated motives for assuming parent debt",
+      "impact": "If legal: policy intervention (debt forgiveness, inheritance prohibition) directly interrupts transmission. If social: policy must address cultural narratives about filial debt obligation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Mechanism of intergenerational debt transmission"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Rural informal lending represents a structural trap where the absence of formal financial services creates an extraction opportunity that informal moneylenders efficiently occupy. The constraint operates across local and regional scales, binding small farmers and agricultural laborers into high-cost debt cycles through suppression mechanisms rooted in both material necessity (lack of alternative credit) and social enforcement (reputation networks, family obligation). The constraint demonstrates how a coordination function (providing credit where formal banking refuses) can mask and justify extraction. The theater ratio has increased over the measurement interval as formal government credit schemes have proliferated without reducing informal lending prevalence \u2014 formal schemes remain largely inaccessible due to documentation requirements and misaligned loan amounts, creating a facade of credit availability without functional substitution. This is the core insight: rural informal lending substitution is a snare, not because coordination fails, but because the 'coordination' of providing credit is structurally impossible to disentangle from extraction.",
+    "key_agents": [
+      "Small farmers and agricultural laborers: Primary victims (powerless/trapped) \u2014 face seasonal liquidity crises with no alternative credit access; debt cycle creates multi-generational entanglement",
+      "Moneylender networks: Primary beneficiaries (institutional/arbitrage) \u2014 capture surplus through interest rate premiums and collateral claims; can exit to other regions or forms of capital deployment",
+      "Microfinance institutions and rural NGOs: Secondary actors (organized/constrained) \u2014 attempt to provide alternative credit but face moneylender resistance, borrower cultural preference for known lenders, and difficulty achieving scale",
+      "Formal agricultural banks: Institutional actors (powerful/mobile) \u2014 have exited or marginalized rural lending due to transaction costs and perceived risk; their absence enables moneylender dominance",
+      "Government agricultural credit schemes: Institutional theater (institutional/arbitrage) \u2014 formal programs exist but suffer from bureaucratic barriers, illiteracy/documentation requirements, and misalignment with seasonal borrowing needs"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The moneylender system captures substantial surplus through interest rates of 48-120% annually, collateral claims on land and future harvests, and wage suppression (when moneylender is also employer). The extraction has grown over the interval as farmers' debt stocks accumulate and formal finance remains absent. However, extractiveness is not 1.0 because genuine credit provision does occur and some borrowers perceive the service as necessary (reflecting the coordination function). Suppression (0.72): High. Trapped farmers face severe barriers to exit: no alternative credit sources, collateral dependencies, social network enforcement (reputation damage, community pressure), and intergenerational debt transmission. Suppression is not higher because some borrowers do occasionally exit through migration, NGO intervention, or formal scheme access \u2014 the barriers are severe but not absolute. Theater ratio (0.58): Moderate-high and rising. Government credit schemes are substantially theatrical: they exist in policy and budget documents but have low farmer participation and do not displace informal lending. The formal programs' failure to substitute is itself performative \u2014 they create appearance of formal credit availability without functional delivery. The rising theater reflects increasing policy proliferation without penetration.",
+    "perspectival_gap": "The farmer and moneylender live in inverted worlds. For the farmer, this is a snare: they are trapped in a debt cycle they cannot escape. For the moneylender, this is a rope: they are solving the legitimate problem of providing credit where formal banks refuse, and the high interest rate is a fair return for the genuine risks they bear (information asymmetry, enforcement costs, default). The NGO perspective (tangled rope) recognizes both: the coordination function is real but the extraction is also real. The formal finance perspective reveals the key structural fact: banks can and do exit rural markets, treating rural lending as insufficiently profitable. Their exit is not forced (they have arbitrage options) \u2014 it is chosen. The analytical observer's temptation (mountain: rural credit 'naturally' requires high rates) naturalizes this choice as inevitable. The structural data shows it is not.",
+    "directionality_logic": "Directionality values (d) flow from beneficiary/victim declarations and exit options. Trapped farmers with no alternatives experience d approaching 1.0 (full target), producing maximum experienced extractiveness. Moneylenders with arbitrage options and beneficiary status experience d near 0.0 (full beneficiary), producing negative effective extraction from their perspective (the constraint subsidizes them). NGOs and formal banks occupy middle positions with constrained/mobile options and mixed beneficiary/victim status \u2014 they experience moderate extraction. The derivation shows why formal finance's absence sustains the snare: as long as banks can exit rural lending without cost, the extracted surplus remains entirely with the trapped borrowers. If policy forced formal finance to price rural credit accurately (including true risk) rather than avoid it, the extraction would become visible as a coordination problem requiring redistribution rather than as a natural interest rate.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by distinguishing between the coordination function (providing credit in rural markets) and the extraction mechanism (suppression through debt and social enforcement). The moneylender network does coordinate credit supply \u2014 this is not mere extraction theater. But the coordination is parasitic on suppression: without trapped borrowers and social enforcement, the high-interest coordination would collapse as borrowers exited to alternatives. The snare classification is appropriate because the extraction (high interest rates + debt accumulation + intergenerational transmission) is what makes the coordination possible, not a side effect. If you removed the suppression, the coordination would not persist \u2014 moneylenders would exit and formal banks would enter only if forced by policy. The mandatrophy is resolved by recognizing that 'rural credit is hard to provide' (true) does not mean 'rural credit requires debt traps' (false) \u2014 the latter is a policy choice, not a coordination requirement."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.2
+  },
+  "network": {
+    "affects_constraints": [
+      "agricultural_land_fragmentation",
+      "rural_wage_suppression",
+      "agricultural_cooperative_failure"
+    ],
+    "dual_formulation_note": "Rural informal lending substitution decomposes into three structurally distinct constraints: (1) the moneylender credit supply mechanism (this story, \u03b5=0.68, Snare), (2) land collateral dependencies that create leverage for debt enforcement (upstream, lower \u03b5 but enables suppression), and (3) intergenerational debt transmission as cultural/legal practice (downstream, operates through identity-locked mechanisms not captured in the lending story). Each has different \u03b5 values and resolution pathways. This story focuses on the lending mechanism itself; the family structure story would address identity-locked dynamics in debt acceptance."
+  },
+  "directionality_overrides": []
+}

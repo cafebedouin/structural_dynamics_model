@@ -1,0 +1,135 @@
+{
+  "header": {
+    "constraint_id": "period_doubling_universality",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.09,
+    "suppression": 0.02,
+    "theater_ratio": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Period Doubling Route to Chaos \u2014 Feigenbaum Universality",
+    "topic_domain": "dynamical_systems/chaos_theory",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Forced Oscillator",
+      "comment": "The dynamical system itself cannot escape period-doubling bifurcations. Any one-parameter family of smooth maps traversing control parameter space MUST exhibit this cascade. No alternative pathway exists."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "label": "The Experimental Physicist",
+      "comment": "Observing period-doubling in a physical system (laser dynamics, fluid instability, chemical oscillator) cannot escape the phenomenon. The bifurcation cascade appears with Feigenbaum's universal constant (\u03b4 \u2248 4.669...) across wildly different physical substrates. This is not a law the experimenter can negotiate with or avoid."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Observer",
+      "comment": "From the vantage of dynamical systems theory, period-doubling is a universal property of smooth maps in one-parameter families. Logistic map, tent map, sine map, physical systems \u2014 all exhibit the same cascade structure with the same universal constant. This is a theorem, not a contingent empirical pattern."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "renormalization_conjecture_vs_proof",
+      "question": "Is period-doubling universality a theorem (proven within the smooth-map framework) or a mathematical conjecture validated empirically across domains?",
+      "resolution_mechanism": "Review status of renormalization-group proofs in rigorous analysis; check Lanford, Eckmann, Wittwer results for completeness and scope of rigor.",
+      "impact": "If fully proven: universality is mountain (zero degrees of freedom, logically immutable). If conjectural: universality is rope with very high suppression (nearly all observed systems comply, but the mechanism is not fully understood).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether Feigenbaum universality is a proven theorem or empirically validated conjecture"
+    },
+    {
+      "id": "smoothness_assumption_boundary",
+      "question": "Does universality hold for non-smooth maps, discontinuous systems, or stochastic perturbations?",
+      "resolution_mechanism": "Comparative analysis of period-doubling cascades in piecewise-linear maps, discontinuous systems, and maps with noise; identify where Feigenbaum constant breaks down.",
+      "impact": "If universality requires smoothness: the constraint is contingent on a mathematical assumption (mountain with caveats). If universality persists in non-smooth cases: the constraint is more fundamental than the smooth-map proof suggests.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether universality persists beyond smooth one-parameter families"
+    },
+    {
+      "id": "physical_substrate_exception_search",
+      "question": "Are there any physical systems that undergo period-doubling bifurcations WITHOUT exhibiting Feigenbaum's universal constant and cascade structure?",
+      "resolution_mechanism": "Systematic review of period-doubling observations in experimental systems; quantitative measurement of bifurcation point spacing and convergence to \u03b4 \u2248 4.669 across domains.",
+      "impact": "If exceptions found: universality is not truly universal (mountain classification fails). If none found after 50+ years of testing: universality is empirically universal (mountain confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether all physical period-doubling systems exhibit Feigenbaum's universal constant"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.09
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.09
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Period-doubling universality describes a phenomenon in which one-parameter families of smooth dynamical maps exhibit a universal cascade of bifurcations leading from fixed-point stability to chaos. The bifurcations occur at parameter values whose spacing contracts by a universal factor (Feigenbaum's constant \u03b4 \u2248 4.669...), independent of the map's functional form. This property was discovered empirically in the logistic map by Mitchell Feigenbaum (1978), subsequently observed in dozens of physical systems (fluid instabilities, lasers, chemical oscillators, electronic circuits), and rigorously understood through renormalization-group analysis in dynamical systems theory. The constraint is the impossibility of avoiding this cascade: any smooth one-parameter family sufficiently close to a 2-to-1 map MUST exhibit period-doubling bifurcations with the universal constant. There is no experimental, computational, or design pathway to circumvent the phenomenon \u2014 only to recognize and exploit it.",
+    "key_agents": [
+      "The Dynamical System: The mathematical object itself (smooth map in one-parameter family) \u2014 trapped in the bifurcation structure",
+      "Physical Systems: Experimental realizations (lasers, fluids, oscillators) \u2014 powerless to avoid the cascade, yet universally exhibit the same constant",
+      "Chaos Theorists: Analytical observers (Feigenbaum, Lanford, Eckmann, Wittwer) \u2014 perceive the universality as a mathematical necessity, not a contingent pattern"
+    ],
+    "logic_rationale": "Extractiveness (0.09): Minimal. The constraint does not extract from any agent because there is no agent-beneficiary asymmetry \u2014 period-doubling is a natural property of dynamical evolution. No power asymmetry, no suppression, no coercion. The low value reflects that this is a description of natural law, not an institutional arrangement. Suppression (0.02): Near zero. The phenomenon operates without coercion or alternative suppression. Physical systems follow their dynamics; there is no 'other choice' being blocked. Theater ratio (0.05): Negligible. The constraint describes a mathematical theorem, not a social performance. The minimal theater reflects that understanding period-doubling requires no ritualistic or performative component \u2014 the mathematics is transparent.",
+    "perspectival_gap": "All three perspectives classify identically as Mountain. This is a uniform-type constraint \u2014 no perspectival gap. The forced oscillator cannot escape bifurcation. The experimenter observes the universal constant. The mathematician proves the universality. These are not conflicting views of the same phenomenon; they are the same phenomenon viewed from different epistemic positions, all arriving at the same conclusion: this is an immutable property of smooth dynamical systems.",
+    "directionality_logic": "No beneficiary/victim structure exists for a mountain-type constraint. Directionality derivation is bypassed \u2014 there is no agent-relative extraction to measure. The constraint does not benefit or harm any party; it is a logical/mathematical necessity. The apparent 'powerlessness' of the dynamical system is not oppression but mathematical inevitability.",
+    "mandatrophy_analysis": "NO MANDATROPHY PRESENT. Period-doubling universality exhibits zero tension between coordination and extraction. The constraint is logically immutable (all perspectives agree on Mountain) and mathematically transparent (theater_ratio \u2248 0.05). There is no risk of mislabeling coordination as extraction or vice versa because the constraint is neither \u2014 it is a natural law of dynamical evolution. The absence of mandatrophy confirms the mountain classification: the constraint is what it appears to be."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "chaos_onset_universality",
+      "renormalization_group_fixed_points"
+    ],
+    "dual_formulation_note": "Period-doubling universality is upstream of more specific chaos-theoretic constraints. The abstract universality of Feigenbaum's constant influences constraints about the onset of chaotic dynamics in specific physical systems. Related but distinct constraint: renormalization-group fixed points (\u03b5 \u2248 0.06, also Mountain), which provide the theoretical foundation for understanding why universality emerges."
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "header": {
+    "constraint_id": "care_home_quality_crisis",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "careh"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Care Home Quality Crisis and Resident Extraction",
+    "topic_domain": "healthcare/elder_care/social_welfare",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "care_home_operators",
+      "private_equity_owners",
+      "management_consultants"
+    ],
+    "victims": [
+      "elderly_residents",
+      "frontline_care_workers",
+      "families_of_residents"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Elderly Resident",
+      "comment": "PERSPECTIVE 1: ELDERLY RESIDENT (SNARE) \u2014 Physically, cognitively, and legally trapped in the facility. No viable exit: alternatives cost more or don't exist in their region. Bears full extraction: understaffing means poor nutrition, missed medications, neglect of dignity. Maximum suppression enforced by physical dependency and cognitive decline. The constraint extracts time, health, and dignity."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Care Worker",
+      "comment": "PERSPECTIVE 2: CARE WORKER (SNARE) \u2014 Constrained by economic dependency and lack of alternative employment. Works understaffed shifts under time pressure, bearing emotional labor and stress. Suppression high: wage stagnation, no union protection in many regions, threat of termination. Benefits minimally from coordination function; experiences extraction through exploitation of their labor scarcity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Family Member",
+      "comment": "PERSPECTIVE 3: FAMILY MEMBER (TANGLED ROPE) \u2014 Constrained by lack of alternatives (no parent in the home, long-term care facility unavoidable). Experiences genuine coordination: the facility coordinates care tasks that the family cannot provide. But also experiences extraction: fees rise faster than quality, information asymmetry prevents monitoring, emotional manipulation (facility controls resident contact) creates dependency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Care Home Operator",
+      "comment": "PERSPECTIVE 4: CARE HOME OPERATOR (ROPE) \u2014 Institutional actor with multiple exit options: relocate to higher-reimbursement regions, convert to private-pay model, exit to real estate speculation, sell to private equity. Perceives the constraint as coordination: standardizing care protocols, managing regulatory compliance, filling beds efficiently. Arbitrage options mean effective extraction is scaled downward relative to structural position."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Regulatory Regulator",
+      "comment": "PERSPECTIVE 5: REGULATORY INSPECTOR (PITON) \u2014 Inspections are largely performative: facilities improve temporarily before inspection, revert afterward. Theater ratio high (0.65): compliance checklists are satisfied without improvement in actual resident outcomes. The regulatory system persists through institutional inertia (licensure is required) but has lost functional connection to quality assurance. Inspectors see their own role as degraded."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Advocacy Coalition",
+      "comment": "PERSPECTIVE 6: ADVOCACY COALITION (TANGLED ROPE) \u2014 Family councils, worker unions, elder rights organizations see the crisis as solvable through policy reform: mandatory staffing ratios, wage floors, independent ombudsmen. Organized agents with real political voice but constrained by regulatory capture (operators lobby aggressively) and political economy (elder care is low-priority spending). Experience mixed: genuine coordination function (advocacies create accountability pressure) combined with asymmetric extraction (their labor is volunteer-subsidized)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FALSE NATURAL LAW (MOUNTAIN) \u2014 From a civilizational view, aging populations require care infrastructure, and infrastructure has costs; some tension between quality and cost is inherent. This framing naturalizes profit motive as inevitable. However, the structural data contradicts the mountain classification \u2014 the crisis is not inherent to care provisioning but to financialization and regulatory capture. The engine will flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "inherent_versus_structural_quality_cost",
+      "question": "Is care home quality degradation inherent to the economics of elder care, or is it a contingent result of profit-maximization incentives and regulatory capture?",
+      "resolution_mechanism": "Cross-national comparison: jurisdictions with public or not-for-profit care sector dominance; correlation between operator profit margins and measured quality metrics (staffing, wound care, medication accuracy)",
+      "impact": "If inherent: quality crisis is mountain (immutable constraint). If contingent: crisis is tangled_rope (solvable through policy reform).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether quality degradation is inherent to care economics or contingent on profit incentives"
+    },
+    {
+      "id": "regulatory_capture_mechanism",
+      "question": "Do care home operators successfully lobby for regulatory leniency, or does regulation reflect genuine cost-benefit tradeoffs?",
+      "resolution_mechanism": "Lobbying expenditure tracking; correlation between operator contributions to politicians and subsequent regulatory changes; analysis of inspection failure rates vs documented violations in subsequent audits",
+      "impact": "If capture is strong: regulatory system is piton (degraded and inert). If capture is weak: regulation could improve quality via enforcement tightening.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Strength of regulatory capture by care home operators"
+    },
+    {
+      "id": "worker_exit_threshold",
+      "question": "At what wage and staffing level would care worker exit rates drop below turnover that destabilizes resident care?",
+      "resolution_mechanism": "Comparative analysis of staffing ratios and worker tenure across high-wage and low-wage jurisdictions; correlation between wage increases and stability metrics",
+      "impact": "If threshold is achievable: worker constraint is constrained\u2192mobile (policy intervention could unlock mobility). If threshold is economically unviable: worker constraint is trapped (structural immobility).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Wage level required to stabilize care worker retention"
+    },
+    {
+      "id": "private_equity_extraction_mechanism",
+      "question": "Are private equity acquisitions in care increasing extraction rates through debt-leveraging and cost-cutting, or do they improve efficiency and redirect savings to residents?",
+      "resolution_mechanism": "Longitudinal tracking of quality metrics pre and post PE acquisition; debt load analysis; comparison of fee structures and staffing levels before and after takeover",
+      "impact": "If extraction increases: PE model is pure snare for residents. If efficiency gains materialize: model could be rope (coordination with incidental profits).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether private equity acquisitions increase extraction or improve efficiency"
+    },
+    {
+      "id": "alternative_care_model_viability",
+      "question": "Do public, cooperative, or not-for-profit care models produce measurably higher quality at similar cost, or do they face different trade-offs?",
+      "resolution_mechanism": "Matched comparison of quality metrics, cost per resident, worker wages, and sustainability across public/nonprofit vs private operators in same region",
+      "impact": "If alternatives work: current snare classification reflects policy failure, not necessity. If alternatives have different but not better trade-offs: constraint is genuine tangled_rope with no escape route.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative ownership models achieve better quality-cost trade-offs"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.64
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The care home quality crisis represents a structural tension between the coordination function of elder care provisioning and the extraction incentives created by financialization and regulatory capture. Elderly residents require 24/7 care that families cannot provide independently; care homes coordinate this essential service. However, the constraint exhibits strong snare dynamics: residents are trapped by physical and legal dependency; families are trapped by lack of alternatives; workers are trapped by economic dependency and wage stagnation; operators extract through understaffing, fee escalation, and cost-cutting. The constraint's extractiveness (0.68) and suppression (0.72) have increased over the measurement interval as private equity consolidation intensifies cost-cutting and regulatory inspection becomes increasingly performative (theater_ratio rising from 0.48 to 0.65). This constraint demonstrates the transformation of a coordination mechanism into an extraction regime through profit-maximization incentives and regulatory capture.",
+    "key_agents": [
+      "Elderly Residents: Primary victims (powerless/trapped) \u2014 physically and legally dependent; no exit options; bear full extraction through understaffing, neglect, dignity loss",
+      "Care Workers: Secondary victims (moderate/constrained) \u2014 economically dependent; constrained by wage stagnation and lack of alternatives; bear extraction through labor exploitation",
+      "Families: Tertiary victims (moderate/constrained) \u2014 constrained by lack of alternatives; experience mixed coordination (care is provided) and extraction (fees, information asymmetry, emotional manipulation)",
+      "Care Home Operators: Primary beneficiaries (institutional/arbitrage) \u2014 multiple exit options enable cost externalization; perceive constraint as coordination; arbitrage options minimize experienced extraction",
+      "Private Equity Owners: Secondary beneficiaries (institutional/arbitrage) \u2014 debt-leverage model extracts value; multiple portfolio exits available; maximize extraction through understaffing and fee increases",
+      "Regulatory Inspectors: Institutional actor (powerful/mobile) \u2014 inspection system is performative; see their own role as degraded (piton perspective)",
+      "Advocacy Coalition: Organized agents (organized/constrained) \u2014 politically constrained by regulatory capture; see problem as solvable but face structural barriers to policy change"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and increasing. The trend from 0.42 to 0.68 over the measurement interval reflects intensifying cost-externalization as private equity consolidation increases leverage and cash flow extraction. Suppressions (0.72): Correspondingly high. Trapped elderly have absolute dependency; workers face wage stagnation and threat of termination; families face information asymmetry and regulatory capture preventing exit to quality alternatives. Theater ratio (0.65): Moderate-high and increasing. Regulatory inspections are largely performative \u2014 facilities can temporarily meet compliance standards without improving actual resident care (nutrition, medication accuracy, dignity preservation). The ratio has increased as the gap between compliance theater and actual resident outcomes has widened. The measurement trajectory shows systematic degradation: extractiveness and theater both rising, indicating the constraint is becoming more extractive and more performative simultaneously.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence: residents see snare (pure extraction with no coordination benefit); operators see rope (pure coordination with incidental profit); families see tangled_rope (mixed coordination and extraction); workers see snare (extraction through labor scarcity); advocacy sees tangled_rope (coordination plus solvable asymmetry); regulator sees piton (performative ritual divorced from function); analyst sees false mountain (naturalizing contingent financial arrangements). This divergence reflects the extreme asymmetry in exit options and the use of dependent relationships to extract.",
+    "directionality_logic": "Directionality (d) is derived from structural position: residents and workers are victims with trapped/constrained exit \u2192 high d \u2192 high f(d) \u2192 experience maximum extraction; operators are beneficiaries with arbitrage exit \u2192 low d \u2192 low f(d) \u2192 experience minimal effective extraction despite extracting much. The asymmetry is structural: the same institutional arrangement extracts heavily from trapped agents and extracts lightly from mobile agents. For the advocacy coalition: organized agents with constrained exit (regulatory capture limits their political options even though they have organizational capacity) \u2192 moderate d \u2192 moderate f(d) \u2192 experience real but not maximal extraction. For the regulator: institutional power but mobile exit (can shift roles) combined with analytical distance (sees process as performative) \u2192 low-moderate d \u2192 sees constraints as solvable rather than binding.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by disaggregating the constraint family: the care home system contains two structurally distinct constraints. First: essential care coordination (\u03b5 \u2248 0.10, pure rope) \u2014 coordinating 24/7 care across multiple residents genuinely solves a collective action problem with minimal coercion. Second: profit extraction through understaffing and regulatory capture (\u03b5 \u2248 0.68, pure snare) \u2014 the extraction mechanism depends entirely on suppression of alternatives and exit options. These should be decomposed into separate stories. The combined view (current snare classification) is correct for the empirical state but obscures the structural decomposition. A post-reform scenario would see the coordination function persist at \u03b5 \u2248 0.10 (rope, solved through public/nonprofit provision) while the extraction regime would be eliminated. The snare classification correctly identifies that currently extraction dominates, but should be paired with network links to the underlying coordination constraint and the profit extraction constraint separately."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "elder_care_resource_scarcity",
+      "wage_suppression_in_care_sectors",
+      "regulatory_capture_in_healthcare"
+    ],
+    "dual_formulation_note": "The care home quality crisis should be decomposed into: (1) care_coordination_function (\u03b5\u22480.10, rope) \u2014 essential scheduling and logistics coordination. (2) profit_extraction_through_understaffing (\u03b5\u22480.68, snare) \u2014 financial mechanism. The current story represents the empirical combined state but obscures the structural decomposition. The network links to elder_care_resource_scarcity (upstream, affects availability of alternative placements), wage_suppression_in_care_sectors (coupled mechanism, both cause and effect), and regulatory_capture_in_healthcare (enables suppression of exit options)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

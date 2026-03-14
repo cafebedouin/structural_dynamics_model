@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "voting_system_exclusion",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "voteexcl"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Voting System Exclusion Mechanisms",
+    "topic_domain": "political/electoral",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_political_interests"
+    ],
+    "victims": [
+      "excluded_voter_populations",
+      "electoral_legitimacy"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Excluded Voter",
+      "comment": "PERSPECTIVE 1: EXCLUDED VOTER (SNARE) \u2014 Trapped by legal barriers (residency requirements, citizenship restrictions, felony disenfranchisement, registration deadlines). Cannot exit without physical relocation, legal status change, or restoration of rights. Experiences maximum extraction: participation rights are conditionally withheld, and suppression mechanisms (documentation requirements, polling place accessibility, language barriers) ensure continued exclusion even when technical eligibility exists."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Disenfranchised Community",
+      "comment": "PERSPECTIVE 2: DISENFRANCHISED COMMUNITY (SNARE) \u2014 Faces systemic barriers across generations: intergenerational poverty traps, educational access constraints, geographic isolation from voting locations. While some individuals can overcome individual barriers through sustained effort, the community as a whole cannot exit the exclusionary structure without coalitional action and resources. Experiences high extraction: political power is systematically unrepresented, policy preferences are ignored, and the exclusion mechanism reproduces across generations."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Incumbent Power Coalition",
+      "comment": "PERSPECTIVE 3: INCUMBENT POWER COALITION (ROPE) \u2014 Benefits from exclusion through reduced mobilization costs and predictable electoral outcomes. Experiences the constraint as coordination: exclusion mechanisms select the voter pool that will support existing power structures. The constraint solves a coordination problem for incumbents (maintaining power without policy responsiveness). Net beneficiary \u2014 extraction runs toward this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Voting Rights Coalition",
+      "comment": "PERSPECTIVE 4: VOTING RIGHTS COALITION (TANGLED ROPE) \u2014 Organized agents (civil rights groups, voter registration drives, legal advocates) experience both coordination and extraction. The constraint coordinates their mobilization (voting rights campaigns focus on overcoming exclusion mechanisms) while extracting through persistent barriers that resist removal. The coalition benefits from heightened organization and donor support during enfranchisement campaigns, but the constraint persists because exclusion mechanisms are actively maintained by incumbent interests. Low effective extraction experienced by the coalition because they have resources and agency, but high extraction imposed on victim populations they represent."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Electoral Administration System",
+      "comment": "PERSPECTIVE 5: ELECTORAL ADMINISTRATION SYSTEM (PITON) \u2014 Maintenance of voting eligibility rules (residency, citizenship, registration deadlines, felony restrictions) is largely performative theater. The stated justification (preventing fraud, ensuring residency, maintaining integrity) masks extraction mechanisms that disproportionately remove poor, mobile, minority, and formerly incarcerated populations from voting rolls. The administrative system sees its own processes as degraded \u2014 exclusion persists through institutional inertia and path dependence rather than active design. Piton classification derives from theater ratio (0.55): significant portion of administrative effort is performative legitimation of exclusionary outcomes rather than functional anti-fraud mechanisms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational/global perspective, voting exclusion mechanisms coordinate state capacity (verification of voter eligibility, prevention of multiple voting) while extracting through asymmetric application favoring incumbent-aligned populations. Comparative analysis reveals that exclusion mechanisms with identical stated justifications produce dramatically different exclusion rates across jurisdictions (felony disenfranchisement affects 5.2% of US population but up to 21% of Black male population; voter ID requirements exclude 11% of citizens nationwide but 25% of Black citizens). This perspectival gap reveals extraction disguised as coordination."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fraud_prevention_vs_access_tradeoff",
+      "question": "Do documented voter fraud rates justify the exclusion mechanisms employed, or do exclusion rates far exceed fraud rates?",
+      "resolution_mechanism": "Empirical comparison: documented voter fraud cases vs persons disenfranchised by each mechanism. Analysis of fraud types actually prevented vs theoretical fraud prevented.",
+      "impact": "If fraud justifies exclusion: mechanisms may be necessary coordination cost (Rope). If fraud rates are negligible while exclusion is systematic: mechanisms are extraction disguised as coordination (Snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether voter fraud rates justify exclusion mechanism scale"
+    },
+    {
+      "id": "intentionality_vs_disparate_impact",
+      "question": "Are exclusion mechanisms intentionally designed to suppress specific populations, or do they produce disparate impact through neutral application?",
+      "resolution_mechanism": "Historical documentation of mechanism design and intent; comparison of exclusion outcomes across demographic groups; analysis of policy alternatives that would achieve stated goals with lower exclusion.",
+      "impact": "If intentional: extraction is deliberate (Snare confirmed). If neutral with disparate impact: classification may shift to Tangled Rope if incumbents genuinely perceive mechanisms as coordination rather than extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether exclusion is intentional design or disparate impact"
+    },
+    {
+      "id": "remediation_cost_allocation",
+      "question": "Who bears the cost of remediation if exclusion mechanisms produce errors (e.g., eligible voters blocked by faulty registration databases)?",
+      "resolution_mechanism": "Analysis of restoration procedures: administrative burden on individual voter vs institutional cost to election administrators. Tracking of wrongly excluded voters and time to restoration.",
+      "impact": "If remediation burden falls on excluded voters: suppression mechanism confirmed (high chi). If institutional burden: extraction cost is partially internalized by beneficiary, reducing net chi.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Allocation of remediation costs for exclusion mechanism errors"
+    },
+    {
+      "id": "temporal_exclusion_lock_in",
+      "question": "Do exclusion mechanisms create temporal lock-in: once excluded, are voters permanently removed from rolls or re-blocked at each election cycle?",
+      "resolution_mechanism": "Longitudinal tracking of excluded voter registration status across 2-4 election cycles; analysis of automatic re-registration mechanisms.",
+      "impact": "If permanent removal: suppression is high (trapped gate confirmed). If re-blocking each cycle: suppression is sustained through ongoing mechanism operation (snare confirmed). If automatic re-registration exists: suppression may be lower than measured.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether exclusion is one-time or recurring mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Voting system exclusion mechanisms operate through layered barriers that prevent segments of the population from exercising electoral participation rights. These include residency requirements, citizenship documentation, felony disenfranchisement, registration deadlines, voter ID requirements, polling place accessibility, and language barriers. The constraint exhibits strong extraction from the perspective of excluded populations and high suppression through legal and administrative barriers. The primary beneficiary is the incumbent political coalition whose electoral outcomes are secured by selective participation. The theater ratio reflects that much of the justification language (fraud prevention, administrative integrity, residency verification) provides legitimation for mechanisms whose primary function is exclusion-based power consolidation. Extractiveness has increased over the measured interval as mechanisms have become more sophisticated and their application more targeted.",
+    "key_agents": [
+      "Excluded Voter Populations: Primary victims (powerless/trapped) \u2014 bear full cost of participation barriers; inability to exit through individual action",
+      "Incumbent Political Interests: Primary beneficiary (institutional/arbitrage) \u2014 maintain power through reduced opposition turnout and predictable electorate",
+      "Electoral Administration System: Institutional actor (institutional/arbitrage) \u2014 maintains and enforces exclusion mechanisms; benefits from reduced administrative complexity",
+      "Voting Rights Coalition: Secondary organized actor (organized/constrained) \u2014 mobilizes against exclusion but constrained by resource limitations and institutional resistance",
+      "Electoral Legitimacy: Abstract victim (powerless/trapped) \u2014 reduced by systematic exclusion; cannot organize or exit"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. Exclusion mechanisms directly transfer political power from targeted populations to incumbent beneficiaries. The extraction is not merely the opportunity cost of non-participation but the active suppression of competitive electoral dynamics. The measured increase from 0.45 to 0.68 over 40 years reflects cumulative mechanism sophistication and application intensity. Suppression (0.72): High. Multiple overlapping barriers operate simultaneously: legal eligibility requirements, administrative registration barriers, physical accessibility constraints, and information asymmetries. Suppression mechanisms are structurally embedded (residency requirements, citizenship documentation cannot be overcome by individual effort alone) and deliberately maintained (states actively resist federal voting rights enforcement). Theater ratio (0.55): Moderate-high. Approximately 55% of the institutional discourse around voting eligibility is performative: fraud prevention language masks exclusionary function; administrative integrity justifications obscure selective application; integrity of elections framing legitimates mechanisms whose primary effect is demographic targeting. Real fraud rates are negligible (documented at <0.0001% in most jurisdictions) while exclusion rates reach 5-21% depending on demographic group. The theater has increased as mechanisms have become more technically sophisticated, allowing greater precision in demographic targeting while maintaining plausible denial of intentionality.",
+    "directionality_logic": "Excluded populations experience maximum extraction through trapped exit options: they cannot relocate to different jurisdictions without abandoning their social/economic bases; cannot change citizenship status through individual action; cannot restore felony disenfranchisement without navigating opaque restoration processes. Incumbent beneficiaries experience extraction as coordination: selectivity of the voter pool solves the power consolidation problem, and the mechanism requires minimal enforcement cost because it is embedded in routine administrative processes. The Voting Rights Coalition occupies an intermediate position: constrained (they can mobilize and seek legal remedies) but facing systematic institutional resistance that prevents escape. The Electoral Administration System benefits from arbitrage: it can enforce rules selectively while claiming neutrality. The Analytical Observer sees the perspectival gap: coordination language for beneficiaries vs extraction reality for victims reveals the constraint as pure extraction (snare) rather than coordination.",
+    "perspectival_gap": "This constraint demonstrates dramatic perspectival divergence. Incumbent beneficiaries experience coordination (rope perspective): the mechanism solves the problem of maintaining power without policy responsiveness. Electoral administrators experience routine administration (piton perspective): the rules persist through path dependence and institutional inertia. The Voting Rights Coalition sees mixed dynamics (tangled rope perspective): genuine coordination of voting rights infrastructure alongside persistent extraction barriers. Excluded populations see pure extraction (snare perspective): participation rights are systematically withheld with no benefit and no exit option. The analytical observer sees the false naturalization: voting exclusion is sometimes presented as inherent to elections administration or as necessary to prevent fraud, but comparative and historical analysis reveals these mechanisms as contingent policy choices with demonstrably lower-cost alternatives that would achieve stated goals (fraud prevention, administrative integrity) without demographic targeting.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating that voting exclusion is structurally a snare (extraction without coordination benefit) rather than rope (coordination with minimal extraction). The mandatrophy resolution shows: (1) exclusion mechanisms do not solve a genuine coordination problem \u2014 they solve the incumbent power consolidation problem; (2) alternative mechanisms exist that would achieve fraud prevention and administrative integrity with 95%+ lower exclusion rates; (3) the persistence of exclusion mechanisms despite available alternatives indicates extraction rather than necessary coordination; (4) the discrepancy between stated justification (fraud prevention at rates <0.0001%) and scale of exclusion (5-21% of target populations) reveals the theater ratio as legitimation of extraction rather than functional necessity. The classification as snare (not tangled rope) follows from the absence of genuine coordination benefit: excluded populations receive zero benefit from the mechanism, and the mechanism's primary function is not solving a shared coordination problem but redistributing political power."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "electoral_representation_disparity",
+      "ballot_access_restrictions"
+    ],
+    "dual_formulation_note": "Voting system exclusion operates through distinct mechanisms with different \u03b5 values. Registration-based exclusion (\u03b5\u22480.55) and felony disenfranchisement (\u03b5\u22480.72) are separate constraints sharing common beneficiaries but operating through different suppression channels. They are linked here as components of a constraint family but could be decomposed into separate stories if mechanism-specific analysis is required."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.85
+    }
+  ]
+}

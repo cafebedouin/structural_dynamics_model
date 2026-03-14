@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "social_stigma_suppression",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "stigma"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.75,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Social Stigma Suppression Mechanism",
+    "topic_domain": "social/psychological/institutional",
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
+    "victims": [
+      "stigmatized_individuals",
+      "stigmatized_communities",
+      "epistemic_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Stigmatized Individual",
+      "comment": "PERSPECTIVE 1: STIGMATIZED INDIVIDUAL (SNARE) \u2014 Faces overwhelming social and institutional barriers to exit or challenge the stigma. Identity fusion with the stigmatized category makes exit conceptually unthinkable. Maximum suppression: economic discrimination, social isolation, internalized shame, institutional exclusion. No meaningful exit options; extraction is total."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "The Stigmatized Community",
+      "comment": "PERSPECTIVE 2: STIGMATIZED COMMUNITY (SNARE) \u2014 Community identity is constituted through the shared stigma. Collective exit would require abandoning group identity and historical/cultural continuity. High suppression: limited economic opportunity, educational barriers, health disparities, political marginalization. Identity lock creates structural entrapment despite some organizational capacity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Proximate Non-Stigmatized Peer",
+      "comment": "PERSPECTIVE 3: PROXIMATE NON-STIGMATIZED PEER (TANGLED ROPE) \u2014 Faces coordination problem: maintaining social distance while cooperating in shared institutions (workplace, school, healthcare). Also extracts status and opportunities through the stigma hierarchy. Benefits from stigma's suppression of competition; constrained by effort required to maintain the boundary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Status-Benefiting Institution",
+      "comment": "PERSPECTIVE 4: STATUS-BENEFITING INSTITUTION (ROPE) \u2014 Benefits from stigma's social ordering function. Hospitals benefit from capacity to exclude certain patients; employers benefit from ability to underpay or exclude workers; schools benefit from stratification. Coordination function: stigma enables rapid sorting without explicit negotiation. High arbitrage \u2014 can switch status allocation to new target categories."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Epistemic Commons",
+      "comment": "PERSPECTIVE 5: EPISTEMIC COMMONS (SNARE) \u2014 Stigma suppresses knowledge production about the stigmatized category: research is blocked by access barriers, institutional review boards restrict studies, stigmatized voices are excluded from knowledge production. The commons loses empirical understanding of health, wellbeing, and social dynamics in stigmatized populations. No exit mechanism; the suppression is structural."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Destigmatization Institution",
+      "comment": "PERSPECTIVE 6: DESTIGMATIZATION INSTITUTION (PITON) \u2014 Formal anti-stigma efforts (advocacy organizations, educational programs, legal protections) have low functional impact relative to performative effort. Theater ratio high: awareness campaigns, diversity statements, DEI programs perform commitment while structural extraction persists. Institutions maintain destigmatization theater to appear progressive while preserving underlying status hierarchies."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "identity_lock_vs_constrained_boundary",
+      "question": "For stigmatized individuals, is the binding mechanism internalized identity fusion (identity_locked) or external structural barriers (constrained/trapped)?",
+      "resolution_mechanism": "Longitudinal analysis of post-exit trajectories: individuals who exit stigmatized contexts and sustain psychological distress show identity lock; those whose distress resolves show structural trapping. Survey data on perceived barriers (internal shame vs external discrimination).",
+      "impact": "If primarily identity_locked: intervention requires identity reframing and cognitive work. If primarily trapped: intervention requires removing external barriers. Classification differs materially \u2014 same individual may appear trapped initially, identity_locked after partial barrier removal.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether stigma binding is identity fusion or structural barriers"
+    },
+    {
+      "id": "suppression_internalization_residue",
+      "question": "Does suppression persist after stigmatized individuals exit the social context (internalized suppression), or is it entirely context-dependent (structural suppression)?",
+      "resolution_mechanism": "Comparative study of post-exit populations: measured internalized shame, self-efficacy, and coping in individuals who have relocated/changed identity vs those remaining in stigma context. Persistence of suppression effects post-exit indicates internalization.",
+      "impact": "If internalized: effective suppression is higher than structural measure suggests \u2014 the constraint travels with the agent. If context-dependent: suppression declines sharply after exit, indicating fully structural binding.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is internalized or context-dependent"
+    },
+    {
+      "id": "status_extraction_vs_coordination_necessity",
+      "question": "Does institutional reliance on stigma-based sorting serve genuine coordination functions or is the status extraction primary with coordination as cover story?",
+      "resolution_mechanism": "Intervention analysis: institutions required to implement identity-blind sorting mechanisms show operational efficiency losses (if coordination is real) or maintain efficiency (if status extraction was primary). Comparative case studies: labor markets, healthcare systems, educational institutions.",
+      "impact": "If coordination is primary: stigma is tangled rope (mixed coordination/extraction). If extraction is primary: stigma is snare (pure extraction with coordination narrative as theater). Classification differs across multiple institutional perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether stigma-based sorting is coordination or status extraction"
+    },
+    {
+      "id": "epistemic_suppression_reversibility",
+      "question": "If stigma were removed, could the epistemic commons recover knowledge about the formerly stigmatized population, or is knowledge loss permanent?",
+      "resolution_mechanism": "Historical analysis of destigmatization outcomes (post-Jim Crow medicine, post-homosexuality-pathologization psychiatry, post-disability institutionalization): comparison of knowledge recovery rates and remaining epistemic gaps. Timeline for knowledge production to normalize.",
+      "impact": "If recoverable: epistemic damage is temporary; snare classification holds but with sunset potential. If permanent: knowledge loss compounds extraction; snare classification intensifies.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether epistemic suppression is reversible post-destigmatization"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Social stigma suppression is a constraint that operates through the simultaneous application of multiple mechanisms: institutional discrimination (direct extraction), social exclusion (enforced isolation), identity fusion (cognitive capture), and knowledge suppression (epistemic damage). The constraint manifests differently across power positions, making it a crucial case for understanding how extraction mechanisms operate at the social level. Stigmatized individuals and communities experience the constraint as a snare with maximum suppression and minimal exit options. Non-stigmatized peers and institutions benefit through status allocation and reduced competition. Destigmatization institutions maintain performative efforts that preserve underlying hierarchies. The epistemic commons loses access to knowledge about the stigmatized population. The theater ratio has increased over the measurement interval (0.35 to 0.55) as formal anti-stigma efforts have become more visible while structural extraction persists \u2014 a signature pattern of institutional Goodhart drift where metric optimization (appearing progressive) decouples from outcome improvement (actual inclusion).",
+    "key_agents": [
+      "Stigmatized Individuals: Primary victims (powerless/trapped) \u2014 face total suppression through discrimination, exclusion, and internalized shame; no meaningful exit options",
+      "Stigmatized Communities: Primary victims (moderate/identity_locked) \u2014 community identity constituted through shared stigma; collective extraction through economic/political marginalization",
+      "Non-Stigmatized Peers: Secondary beneficiaries (moderate/constrained) \u2014 benefit from status hierarchy while bearing coordination costs of maintaining social distance",
+      "Status-Benefiting Institutions: Primary beneficiaries (institutional/arbitrage) \u2014 extract status allocation and capacity sorting benefits; can switch target categories",
+      "Epistemic Commons: Victim (analytical/analytical) \u2014 suppressed knowledge production about stigmatized populations; no self-correction mechanism",
+      "Destigmatization Institutions: Theater maintainers (institutional/constrained) \u2014 perform commitment to inclusion while preserving status structures"
+    ],
+    "logic_rationale": "Extractiveness (0.62): High. The constraint extracts significantly from stigmatized individuals and communities through multiple channels: economic discrimination (reduced income/employment), health disparities (reduced access to quality care), social exclusion (reduced social capital), and epistemic suppression (excluded from knowledge production). The extraction is not maximal (0.72+) because some institutional pathways provide partial exit (relocation, identity change, organizational protection) and some destigmatization efforts have modest effects. The upward trajectory (0.48 to 0.62 over 30 years) reflects increasing extraction despite formal anti-stigma efforts \u2014 suggesting institutional capture of destigmatization language. Suppression (0.75): Very high. The binding is enforced through institutional discrimination, social shunning, economic penalty, and internalized shame. Barriers to exit are severe: relocating requires capital and carries identity rupture costs; challenging the stigma requires institutional power and social capital the stigmatized lack; legal protections exist but carry enforcement costs. Suppression operates both structurally (external barriers) and through identity lock (internal binding). Theater ratio (0.55): Moderate-high. The constraint increasingly operates through performative anti-stigma work (diversity initiatives, awareness campaigns, protected-category language) while structural extraction persists. The theater has grown as a proportion of apparent anti-stigma effort over the interval, indicating Goodhart drift \u2014 institutions optimize for appearing progressive while preserving underlying status hierarchies.",
+    "perspectival_gap": "The fundamental gap is between those who benefit from the constraint (non-stigmatized peers, status-benefiting institutions) who perceive the constraint as a coordination mechanism (Rope or Tangled Rope) \u2014 necessary sorting for social organization \u2014 and those harmed by it (stigmatized individuals, epistemic commons) who perceive it as pure extraction (Snare) with no coordination benefit. The institutional perspective shows a third gap: status-benefiting institutions genuinely believe they coordinate necessary functions while extracting status; destigmatization institutions genuinely believe they're reducing extraction while actually performing a theater that enables its persistence. The epistemic commons perspective reveals knowledge suppression that neither the beneficiaries nor the victims may fully recognize \u2014 stigma operates partly through preventing the stigmatized from producing knowledge about themselves, and preventing non-stigmatized researchers from accessing data. The analytical observer risks naturalizing the stigma as inevitable social ordering when it is actually a contingent institutional arrangement.",
+    "directionality_logic": "Directionality values flow from beneficiary/victim declarations and exit options. Stigmatized individuals classified as powerless/trapped experience maximum directionality toward victimhood (d \u2248 0.95), producing high f(d) \u2248 1.42. Non-stigmatized peers with moderate power and constrained exit experience mixed directionality (d \u2248 0.45), producing f(d) \u2248 0.45. Status-benefiting institutions with institutional power and arbitrage options experience low directionality toward victimhood (d \u2248 0.10), producing f(d) \u2248 -0.08 (beneficiary sign). Identity-locked communities experience different directionality than trapped individuals despite similar power levels \u2014 the identity lock keeps d \u2248 0.89 (victim of identity constraint) rather than 0.95 (purely structural trap), reflecting that identity reframing could in principle create exit, even though it is cognitively blocked. This differentiation enables the engine to show that identity-locked agents have hidden degrees of freedom that trapped agents do not.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating how the same structural phenomenon (social ordering through stigma) appears as pure extraction to the victims, mixed extraction/coordination to the beneficiaries, and performative coordination to institutions claiming to reduce it. The mandatrophy is not 'is stigma extraction or coordination?' but 'who experiences it as what, and why?' The perspective from powerless/trapped agents reveals that the coordination narrative is a cover story \u2014 the constraint primarily functions to extract status and capacity without solving a genuine collective action problem. The institutional perspective reveals that the beneficiaries sincerely believe they are coordinating necessary functions (hospitals sorting patients, schools stratifying learners, employers allocating roles) while extracting asymmetric value. The analytical perspective must resist naturalizing this as inevitable \u2014 the 'natural sorting' narrative is itself a key mechanism that sustains extraction by making the constraint appear unchangeable. The piton perspective (destigmatization institutions) reveals the critical mechanism: the constraint persists not through force but through performative theater that creates appearance of change while preserving underlying extraction. Theater ratio increase (0.35 to 0.55) is the diagnostic signal that mandatrophy resolution is failing \u2014 institutions have learned to package extraction as inclusion efforts."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "institutional_discrimination",
+      "health_access_stratification",
+      "epistemic_exclusion",
+      "status_hierarchy_persistence"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

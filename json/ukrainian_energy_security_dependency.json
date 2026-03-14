@@ -1,0 +1,216 @@
+{
+  "header": {
+    "constraint_id": "ukrainian_energy_security_dependency",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ukr_energy"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Ukrainian Energy Security Dependency on Russian Gas and Coal Supplies",
+    "topic_domain": "geopolitical/energy_security",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "russian_energy_exporters",
+      "russian_state_revenues"
+    ],
+    "victims": [
+      "ukrainian_consumers",
+      "ukrainian_industrial_base",
+      "ukrainian_state_budget"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Ukrainian Household and Industrial Consumers",
+      "comment": "PERSPECTIVE 1: UKRAINIAN CONSUMERS (SNARE) \u2014 Trapped in energy dependency by geography, infrastructure design, and lack of capital for alternative sources. No meaningful exit options. Bears full cost of supply disruption, price volatility, and political leverage. Maximum experienced extraction from the powerless position."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Ukrainian State and Energy Sector Workers",
+      "comment": "PERSPECTIVE 2: UKRAINIAN STATE INFRASTRUCTURE (SNARE) \u2014 Constrained by debt service requirements, infrastructure lock-in, and the generation-scale investment horizon for energy transition. Exit is technically possible but costs exceed available capital. Structural extraction through rent capture by pipeline operators and energy traders."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Russian Energy Export State",
+      "comment": "PERSPECTIVE 3: RUSSIAN ENERGY STATE (ROPE) \u2014 Experiences the constraint as a coordination mechanism for maintaining export markets and state revenue. Can arbitrage between supply routes (Europe, Asia), production levels, and price targeting. Net beneficiary with high agency. Extraction runs toward this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "European Energy Consumers and States",
+      "comment": "PERSPECTIVE 4: EUROPEAN ENERGY ACTORS (TANGLED ROPE) \u2014 Powerful but energy-dependent on Russian supply routes that pass through Ukraine. Benefit from low energy costs maintained by Russian monopoly pricing; bear risk of supply disruption. Have exit options (LNG, renewables, conservation) but at significant short-term cost. Mixed coordination (reliable supply) and extraction (price leverage, geopolitical vulnerability)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "EU Energy Transition Mandate and Alternative Supply Coalition",
+      "comment": "PERSPECTIVE 5: EU ENERGY TRANSITION COALITION (SCAFFOLD) \u2014 Organized actors (EU Green Deal, renewable energy mandates, LNG import agreements) are building alternative pathways with explicit sunset: renewable capacity expansion, liquified natural gas terminals, energy efficiency. High theater in political commitment; genuine structural changes reduce extraction over time. Sunset clause is approximately 10-15 years for energy independence targets."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Soviet-Era Pipeline Infrastructure",
+      "comment": "PERSPECTIVE 6: SOVIET INFRASTRUCTURE LEGACY (PITON) \u2014 The pipeline network is largely performative now, maintained through inertia and contractual obligation rather than necessity. Transit agreements, capacity utilization, and pipeline maintenance have become increasingly theatrical as energy flows shift and alternatives emerge. The infrastructure persists not because it efficiently solves a problem but because replacement has not yet occurred. Theater ratio high because maintenance and operation continue despite declining functional necessity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Geographic Immutability View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / GEOGRAPHIC DETERMINISM VIEW (MOUNTAIN) \u2014 From the civilizational perspective, energy dependency appears as an immutable feature of geography: Ukraine's location between energy reserves (east) and consuming markets (west) makes it structurally a transit zone. This perspective risks naturalizing what is actually a contingent infrastructure choice and geopolitical power asymmetry."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "alternative_supply_feasibility",
+      "question": "Can Ukraine achieve energy independence through renewable capacity and alternative imports within 10 years, or are capital constraints binding?",
+      "resolution_mechanism": "Capital requirement analysis; comparison of available financing vs required investment; timeline for renewable deployment and LNG terminal construction",
+      "impact": "If feasible: scaffold sunset is real, extraction window closes. If constrained: escape from snare requires external actors (EU, US) to fund transition; Ukraine remains trapped in dependency during implementation period.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of Ukrainian energy independence timeline"
+    },
+    {
+      "id": "supply_weaponization_mechanism",
+      "question": "Is the extraction mechanism primarily economic rent extraction (monopsony pricing) or geopolitical leverage (threat of supply disruption), or are they structurally inseparable?",
+      "resolution_mechanism": "Correlation analysis: price movements vs political events; counterfactual pricing under pure commercial terms; comparison to alternative supplier pricing in non-dependent markets",
+      "impact": "If primarily economic: renegotiation and diversification reduce extraction. If primarily geopolitical: diversification alone insufficient without political realignment. If inseparable: snare classification is robust even under alternative supply.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Decomposition of economic vs geopolitical extraction mechanisms"
+    },
+    {
+      "id": "transit_rent_capture_stability",
+      "question": "Are Ukraine's gas transit revenues from mediating European imports structurally stable, or are they subject to sudden elimination through pipeline rerouting?",
+      "resolution_mechanism": "Analysis of pipeline route optimization; feasibility and timeline for alternative routes; historical precedent for rerouting decisions",
+      "impact": "If unstable: Ukraine's budget dependency on transit revenues is unstable, creating secondary snare. If stable: transit revenues provide legitimate coordination function. Piton classification of pipeline infrastructure depends on this assessment.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Stability of Ukrainian transit revenue model"
+    },
+    {
+      "id": "eu_energy_transition_credibility",
+      "question": "Is the EU energy transition mandate a genuine structural commitment with binding capacity requirements, or is it aspirational policy that collapses under price pressure?",
+      "resolution_mechanism": "Analysis of legislative mandate strength; budget allocation; comparison of stated targets vs actual implementation rates; correlation between energy prices and policy pressure",
+      "impact": "If genuine: scaffold sunset is credible, creates exit pathway for European actors and spillover support for Ukrainian alternatives. If aspirational: European energy actors remain partially trapped in Russian dependency, reducing their ability to fund Ukrainian transition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "EU energy transition mandate credibility and binding nature"
+    },
+    {
+      "id": "identity_locked_policy_dependence",
+      "question": "Has Ukrainian energy policy become identity-locked to European integration frameworks in ways that prevent pragmatic negotiation with alternative suppliers or energy independence pathways?",
+      "resolution_mechanism": "Policy analysis of Ukrainian energy strategy alignment with EU directives; assessment of whether EU membership requirements prevent otherwise viable energy partnerships; historical precedent for policy shifts when EU frameworks change",
+      "impact": "If identity-locked: Ukraine's exit options are further constrained than trapped classification suggests \u2014 the state cannot imagine alternatives to EU-aligned energy policy. If structurally constrained: policy flexibility exists but carries political cost (EU relations). Affects whether state actors can exercise arbitrage options.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Institutional identity-lock in Ukrainian energy policy to EU frameworks"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Ukrainian energy security dependency on Russian gas and coal supplies represents a classic snare constraint: a geopolitical-economic extraction mechanism maintained through infrastructure lock-in, capital constraints, and explicit supply weaponization. From 2000 through 2022, this constraint operated as a pure extraction mechanism (high \u03c7, high suppression, minimal coordination benefit) through which Russia captured economic rents and maintained geopolitical leverage. The constraint exhibits the full DR typology depending on observer position: Ukrainian consumers and the state experience it as a snare (trapped, powerless); Russian energy exporters experience it as rope (beneficial coordination); European actors experience tangled rope (mixed benefits and extraction risk); organized EU energy transition actors frame it as a temporary scaffold with sunset through renewable deployment; the legacy Soviet pipeline infrastructure itself has become increasingly piton-like (maintained through inertia rather than necessity); and the analytical observer risks naturalizing what is a contingent infrastructure and power arrangement as an immutable geographic law. The 2022 invasion and subsequent energy pivot have accelerated European exit pathways (LNG imports, renewable acceleration) but Ukraine remains structurally trapped. The measuring interval (0-10 years) represents the period from roughly 2015 through 2025, capturing the escalation of the constraint (extractiveness rising from 0.42 to 0.68) as geopolitical weaponization became explicit and Ukraine's exit options contracted.",
+    "key_agents": [
+      "Ukrainian Households and Industry: Primary victims (powerless/trapped) \u2014 bear fuel costs, risk supply disruption, endure voltage rationing. No exit capacity.",
+      "Ukrainian State and Energy Infrastructure: Secondary victim (powerless/constrained) \u2014 budget extracted through high energy costs; infrastructure locked into Soviet-era design; debt constraints prevent transition investment.",
+      "Russian Energy State: Primary beneficiary (institutional/arbitrage) \u2014 captures economic rents through monopoly pricing; maintains geopolitical leverage; can arbitrage between markets and pipelines.",
+      "European Energy Consumers and States: Secondary beneficiary/victim (powerful/mobile) \u2014 benefit from low energy costs maintained by Russian supply; bear geopolitical risk of supply disruption; have high-cost exit options (LNG, renewables).",
+      "EU Energy Transition Coalition: Organized actor (organized/constrained) \u2014 building alternative supply pathways with explicit decarbonization mandates; faces resource constraints but has political and financial leverage.",
+      "Soviet Pipeline Infrastructure: Institutional actor (institutional/arbitrage) \u2014 maintains operational status through legacy inertia; transit agreements with declining functional necessity.",
+      "Analytical Observer: External perspective (analytical/analytical) \u2014 risks naturalizing power asymmetry as geographic immutability."
+    ],
+    "logic_rationale": "Base extractiveness (0.68): High, reflecting the magnitude of economic rent extraction through monopoly pricing and supply weaponization. The constraint generates measurable transfers: Ukraine paid approximately 2-3x market prices for Russian gas during peak extraction periods; this represents a direct wealth transfer to Russian exporters and the Russian state. The extractiveness value reflects that this transfer is substantial and non-consensual (Ukraine lacks alternatives). Suppression (0.72): Very high. Multiple barriers prevent exit: (1) Infrastructure lock-in \u2014 90%+ of Soviet-era pipeline infrastructure runs from east to west through Ukrainian territory, designed for one-way flow; (2) Capital constraints \u2014 energy transition investment ($100B+ over 10 years) exceeds available Ukrainian financing and requires external funding; (3) Time horizon mismatch \u2014 renewable buildout requires 5-10 years while demand is immediate; (4) Political constraints \u2014 EU integration pathway creates path-dependence on EU-aligned energy policy. Theater ratio (0.55): Moderate. While the constraint operates through real economic mechanisms, a significant portion of the extraction mechanism is theatrical: pipeline maintenance agreements with declining necessity, capacity utilization protocols that don't reflect actual flows, invoicing disputes that are partially performance rather than substantive. The theater increased during the measurement interval as political disputes came to dominate technical negotiations.",
+    "perspectival_gap": "The critical gap is between the Ukrainian trapped perspective (snare: 'we cannot escape') and the EU transition coalition perspective (scaffold: 'this is a temporary problem we are solving'). These agents are looking at the same constraint structure but with radically different time horizons, exit capacities, and resource access. The gap is not in analysis but in structural position. To close the gap requires: (1) capital transfer (EU funds Ukrainian energy transition), (2) supply diversification (LNG terminals, alternative pipeline routes), and (3) time (5-10 years for renewable buildout). Without these, the gap is unbridgeable \u2014 Ukraine remains in snare while Europe transitions toward rope. The Russian perspective (rope: 'this is a profitable supply network') is incompatible with the Ukrainian perspective (snare: 'this is extraction') but both are accurate descriptions of structural relationships. The incompatibility is the point \u2014 it reveals the asymmetry that defines the snare.",
+    "directionality_logic": "Directionality (d) varies by agent power and exit options. Ukrainian powerless agents with trapped exit options derive d \u2248 0.92-0.95 (maximum target), producing \u03c7 magnification through the sigmoid f(d) \u2248 1.42. These agents bear maximum effective extraction. Russian institutional agents with arbitrage exit derive d \u2248 0.08-0.15 (strong beneficiary), producing negative or minimal f(d) \u2248 -0.10 to 0.02. The energy flow runs toward Russian actors. European powerful agents with mobile exit derive d \u2248 0.55-0.65 (near-symmetric but slightly burdened), producing f(d) \u2248 0.75-1.00, moderate experienced extraction. The directionality asymmetry captures the real structural difference: Ukrainian consumers cannot leave, Russian exporters can redirect supply, European states can develop alternatives. The scaffold perspective reflects organized actors with constrained exit (high cost but possible), deriving d \u2248 0.45-0.55, producing moderate \u03c7 \u2248 0.15-0.25 because these actors see the constraint as temporary and solvable. No directionality overrides are necessary \u2014 the structural derivation captures the relationships accurately.",
+    "mandatrophy_analysis": "This constraint demonstrates how mandatrophy is resolved through perspectival decomposition. The apparent contradiction \u2014 'Is this an immutable geographic constraint (mountain) or a fixable geopolitical extraction mechanism (snare)?' \u2014 is not a logical error but an observational asymmetry. The Ukrainian powerless trapped agent perceives immutability (cannot change their energy source within their time horizon). The analytical observer at civilizational scale risks projecting this local immutability onto geography itself. But the Russian beneficiary, the European transition coalition, and the organized energy actors all perceive mutability (change is possible through different mechanisms and time horizons). The mandatrophy dissolves when we recognize that immutability is local to position: Ukrainian consumers at biographical scale experience the constraint as unchangeable (mountain-like); the same constraint at generational scale with external support (EU funding, alternative suppliers) becomes mutable (tangled rope \u2192 scaffold \u2192 rope as alternatives mature). The false summit (analytical mountain) is diagnosed through the structural data: if the constraint were truly immutable, Russia would not need to threaten supply disruption (the threat would be meaningless); the threat itself reveals that the constraint is maintained through active extraction, not natural law. The mandatrophy resolves to: the constraint appears as mountain from the trapped powerless perspective at biographical scale; it is actually snare/tangled rope/scaffold depending on power and horizon; the analytical mountain is naturalization of what is a contingent institutional arrangement."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "european_energy_security",
+      "russian_state_budget_dependency",
+      "ukrainian_political_sovereignty"
+    ],
+    "dual_formulation_note": "Ukrainian energy dependency decomposes into three structurally distinct constraints: (1) supply security (pipelines, price volatility) \u2014 extractiveness \u2248 0.68 (this story); (2) infrastructure modernization (Soviet legacy capital replacement) \u2014 extractiveness \u2248 0.35, higher theater from performative maintenance; (3) geopolitical leverage (threat of cutoff as political weapon) \u2014 extractiveness \u2248 0.81, lower theater because threat is explicit. These three stories share the same interval and some agents but have distinct \u03b5 values and measurement trajectories. This story focuses on the supply constraint; the others examine infrastructure debt and political leverage separately."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "soviet_infrastructure_lock_in",
+      "russian_energy_monopoly"
+    ]
+  }
+}

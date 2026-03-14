@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "hong_kong_press_freedom_suppression",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hkpfs"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Hong Kong Press Freedom Suppression",
+    "topic_domain": "political/media_freedom",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "hong_kong_government",
+      "beijing_central_authority"
+    ],
+    "victims": [
+      "independent_journalists",
+      "pro_democracy_media_outlets",
+      "public_information_access"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Independent Journalist",
+      "comment": "PERSPECTIVE 1: INDEPENDENT JOURNALIST (SNARE) \u2014 Faces maximum extraction through legal jeopardy, self-censorship pressure, and declining economic viability. Exit options are severely constrained: fleeing Hong Kong means abandoning livelihood, sources, and identity; remaining means accepting criminalization risk under national security laws. Experiences the constraint as pure extraction with no coordination benefit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Pro-Democracy Media Outlet",
+      "comment": "PERSPECTIVE 2: PRO-DEMOCRACY MEDIA OUTLET (SNARE) \u2014 Operates under existential threat: advertising revenue dries up due to political pressure, printing facilities face closure through regulatory pretexts, senior editors face prosecution. Self-censorship becomes operational necessity. No exit path within Hong Kong; closure or relocation overseas is the only alternative. Extraction is maximal and asymmetric."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Hong Kong Government Administration",
+      "comment": "PERSPECTIVE 3: HONG KONG GOVERNMENT (ROPE) \u2014 Experiences the suppression apparatus as a coordination mechanism: the constraint solves a governance problem from their structural position. Unified control of information flow reduces criticism and resistance. Benefits from the constraint through unchallenged policy implementation and stable political control. Has arbitrage options (can relax enforcement if central authority permits). Perceives the constraint as enabling effective governance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "International News Organizations",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL NEWS ORGANIZATIONS (TANGLED ROPE) \u2014 Face significant constraints (visa denials, reporting restrictions, legal threats to local staff) but also benefit from residual access and the ability to transmit information to global audiences. Constrained by cost of maintaining bureau operations in hostile environment but not trapped \u2014 can relocate or reduce presence. Experience both extraction (operational costs, access denial) and coordination benefits (information-gathering infrastructure)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Press Freedom Regulatory Framework",
+      "comment": "PERSPECTIVE 5: PRESS FREEDOM REGULATORY FRAMEWORK (PITON) \u2014 The formal institutional framework for press freedom (Basic Law Article 27, common law traditions) persists as a vestigial structure: nominally protective but functionally disabled by national security legislation and enforcement capture. Theater ratio high \u2014 regulatory review boards, press councils, and appeals mechanisms operate but produce predetermined outcomes. The framework is maintained to signal legitimacy internationally while being systematically hollowed by enforcement."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From a global/civilizational view, the constraint extracts information asymmetrically from Hong Kong society while suppressing alternative narratives. Functions as a control mechanism without offsetting coordination benefits for the suppressed population. Unlike some snares, offers no redemptive framing (no safety or efficiency gained by the victims). Pure extraction with maximum visibility to external analysis."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "self_censorship_threshold",
+      "question": "At what point does legal threat severity cause self-censorship to become the dominant suppression mechanism rather than legal enforcement?",
+      "resolution_mechanism": "Comparative analysis of actual prosecutions vs. withdrawal of coverage and outlets; measurement of chilling effect magnitude vs. enforcement magnitude",
+      "impact": "If legal threat is primary driver: suppression value (0.78) is accurate. If self-censorship is primary: the measured suppression underestimates the internalized constraint \u2014 victims police themselves even without enforcement. Classification may shift from Snare (external enforcement) to include identity_locked mechanisms.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Relative magnitude of legal threat vs. self-censorship in suppression mechanism"
+    },
+    {
+      "id": "hong_kong_exceptionalism",
+      "question": "Is Hong Kong press suppression a structurally distinct constraint from mainland Chinese media control, or a continuation of the same system with different enforcement tempo?",
+      "resolution_mechanism": "Comparative institutional analysis: degree of institutional autonomy remaining in Hong Kong judiciary, regulatory bodies, and media ownership; timeline of convergence with mainland practices",
+      "impact": "If structurally distinct: separate story for Hong Kong constraint with regional scope. If continuation: should be modeled as part of larger China_media_control constraint family. Affects network decomposition and comparative analysis.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether Hong Kong suppression is autonomous constraint or regional manifestation of broader system"
+    },
+    {
+      "id": "international_audience_circulation",
+      "question": "Does the ability of suppressed information to circulate internationally through diaspora networks and VPNs constitute a functional exit option for journalists, or does the primary audience loss (local readers) render this option insignificant?",
+      "resolution_mechanism": "Measurement of audience reach and economic viability for outlets with international-only circulation; tracking of career alternatives for journalists targeting international audiences",
+      "impact": "If meaningful exit option: some journalists have true mobility rather than trapped status \u2014 classification shifts from universal powerlessness to mixed powerless/moderate perspectives. If insignificant: trapped status confirmed, universal Snare from victim perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether international information circulation provides viable exit alternative"
+    },
+    {
+      "id": "central_authority_coordination_vs_extraction",
+      "question": "From Beijing's structural perspective, does press suppression serve a coordination function (unified messaging for governance) or is it pure extraction (controlling narrative for political control without governance benefit)?",
+      "resolution_mechanism": "Analysis of Beijing's communications strategy; measurement of whether suppressed outlets' closure reduces policy implementation difficulty or merely reduces criticism",
+      "impact": "If coordination function: Beijing might perceive as Rope; Snare classification is victim-perspective rather than universal. If extraction: Beijing's position is extractive even from its own governance standpoint \u2014 contradiction revealing institutional dysfunction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether press suppression serves coordination or pure extraction from Beijing authority perspective"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.49
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "Hong Kong's press freedom suppression represents a shift from institutional constraint (prior regulatory capture within democratic-adjacent framework) to structural snare following 2020 National Security Law implementation. The constraint extracts control of narrative asymmetrically from journalists and pro-democracy media outlets while providing no offsetting coordination benefit to the victims. Extractiveness has risen from 0.38 (2019, during mass protest period with greater pluralism) to 0.68 (2026, post-NSL enforcement acceleration) as legal jeopardy, economic pressure, and self-censorship have compounded. Theater ratio has increased from 0.35 to 0.55, indicating that formal press freedom institutions (press councils, regulatory review mechanisms, appeals processes) have become increasingly performative as enforcement outcomes are predetermined by political priorities. The constraint operates at regional scope (affects Hong Kong residents and organizations) but is directed from civilizational/global scope (Beijing central authority exporting institutional control models). This creates a perspectival gap: the suppression appears as necessary governance from the institutional beneficiary perspective and pure extraction from the victim perspectives.",
+    "key_agents": [
+      "Independent Journalists: Primary victims (powerless/trapped) \u2014 face prosecution risk, economic collapse, forced emigration as only exit option",
+      "Pro-Democracy Media Outlets: Primary victims (powerless/trapped) \u2014 face closure through legal/regulatory pretexts, advertising pressure, facility access denial",
+      "Hong Kong Government: Primary beneficiary (institutional/arbitrage) \u2014 implements suppression; has discretion to relax enforcement within bounds set by central authority",
+      "Beijing Central Authority: Secondary beneficiary (institutional/arbitrage) \u2014 sets enforcement policy and strategic direction; benefits from unified messaging control across Hong Kong",
+      "International News Organizations: Constrained actors (institutional/constrained) \u2014 face operational barriers but retain some reporting capacity and external audience access",
+      "Press Freedom Institutional Framework: Degraded structure (institutional/arbitrage) \u2014 formal protections (Basic Law, press councils) persist but are hollowed by enforcement capture; maintains legitimacy theater",
+      "Public Information Access: Structural victim (powerless/trapped) \u2014 Hong Kong residents face information asymmetry and curated narratives; no organizing capacity"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The suppression mechanism extracts informational control and narrative authority from independent journalists and media outlets. The measurement trajectory shows steady acceleration from 0.38 (2019) to 0.68 (2026) as legal tools (NSL articles, sedition prosecutions, visa denials) have been applied. The extraction is not maximal (0.95+) because some residual journalism continues through self-censorship and international outlets, but the trend is toward tightening. Suppression (0.78): Very high. Multiple barriers prevent exit and alternatives: legal jeopardy creates immediate costs; visa denials and facility access restrictions create structural barriers; economic collapse of ad-supported outlets creates financial traps; emigration requires abandoning sources, professional networks, and identity. The suppression is sustained by active enforcement (NSL prosecutions, licensing denials) and structural barriers (equipment confiscation, advertising pressure from government-aligned firms). Theater ratio (0.55): Moderate-high. Formal press freedom institutions exist (Press Freedom Index submissions, regulatory review boards, appeals mechanisms) but operate with predetermined outcomes. Theater has increased as the constraint has shifted from regulatory capture (where some real negotiation occurred) to overt suppression (where procedures are performative).",
+    "perspectival_gap": "Hong Kong Government (institutional/arbitrage) sees Rope: the suppression mechanism enables governance through information control. They experience benefits without costs \u2014 the constraint 'coordinates' messaging across government agencies and reduces harmful opposition. Beijing Central Authority (institutional/arbitrage) sees similar Rope: press control enables civilizational-scale political stability messaging. Independent Journalists (powerless/trapped) see Snare: pure extraction with legal jeopardy, economic collapse, and forced emigration. Pro-Democracy Media (powerless/trapped) see Snare: existential threat without offsetting benefit. International News Organizations (institutional/constrained) see Tangled Rope: constrained operations but retain some reporting capacity and external audience reach. The piton perspective reveals institutional decay \u2014 formal press freedom framework persists but is hollowed out. The analytical perspective confirms Snare: from a global/civilizational scope, the constraint extracts information asymmetrically without providing goods/services justifying the extraction cost to victims.",
+    "directionality_logic": "Directionality derivation traces from beneficiary/victim structure and exit options. Independent journalists are victims with trapped exit (no viable alternatives within Hong Kong or viable emigration options maintaining livelihood) \u2014 high d value (~0.92) \u2192 f(d) \u2248 1.38 \u2192 high experienced chi. Hong Kong Government benefits from arbitrage exit (can adjust enforcement within Beijing bounds) \u2014 low d value (~0.18) \u2192 f(d) \u2248 0.08 \u2192 negative chi (benefit). Public information access is a victim with trapped exit \u2014 high d \u2192 high chi. International organizations are constrained rather than trapped \u2014 moderate d (~0.62) \u2192 moderate f(d) \u2248 0.95 \u2192 moderate chi. The directionality structure confirms Snare classification: asymmetric extraction from powerless/trapped victims toward institutional beneficiaries.",
+    "mandatrophy_analysis": "Mandatrophy is resolved by recognizing that this constraint is a Snare from the victim and analytical perspectives, while appearing as Rope from the beneficiary perspective (Hong Kong Government, Beijing Central Authority). The constraint exhibits the classic snare signature: base extractiveness \u2265 0.46, suppression \u2265 0.60, \u03c7 \u2265 0.66, and multiple perspectives classifying as Snare. The false summit risk (naturalizing suppression as inherent to governance) is addressed by the analytical perspective, which identifies the constraint as a contingent institutional choice rather than a law of nature or inevitable coordination problem. The piton perspective provides diagnostic signal that formal press freedom institutions have become performative theater \u2014 they no longer function as constraints on power but as legitimacy-maintaining rituals. Resolution: Snare classification is correct. The constraint exists to extract political control, not to provide coordination goods. Beneficiaries perceive coordination (Rope) due to information control benefits, but this is perspectival asymmetry, not evidence that the constraint serves coordination. The constraint persists because it serves the interests of those with power to enforce it, not because it solves a genuine collective action problem for the suppressed population."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "china_media_control_system",
+      "hong_kong_political_autonomy_erosion"
+    ],
+    "dual_formulation_note": "Hong Kong press suppression is downstream of China's broader media control system but exhibits distinct structural features: the suppression has accelerated post-2020 NSL following a prior period of greater pluralism. Separately modeled to capture the trajectory from institutional capture (2000-2019) to structural snare (2020-2026). The upstream China constraint operates at civilizational/global scope; this constraint operates at regional scope with global institutional observation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.22
+    }
+  ]
+}

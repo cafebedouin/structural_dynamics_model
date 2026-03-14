@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "electoral_system_fragmentation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "esf"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Electoral System Fragmentation",
+    "topic_domain": "political/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "establishment_parties",
+      "electoral_administrators"
+    ],
+    "victims": [
+      "minor_parties",
+      "voter_participation_quality",
+      "democratic_representation"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Minor Party Activist",
+      "comment": "PERSPECTIVE 1: MINOR PARTY ACTIVIST (SNARE) \u2014 Trapped by structural barriers: ballot access requirements, debate thresholds, winner-take-all mechanics, and funding disadvantages. Cannot exit the political system without abandoning democratic participation entirely. Bears full cost of fragmentation: votes wasted, resources diverted to compliance, organizational energy consumed by institutional navigation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Voter at System Boundaries",
+      "comment": "PERSPECTIVE 2: VOTER AT SYSTEM BOUNDARIES (TANGLED ROPE) \u2014 Constrained by coordination failure: electoral fragmentation genuinely solves coalition-building problems for parties (they don't need internal agreement on all issues), but this same fragmentation locks voters into two-party coalition choices or strategic voting. Constrained exit: can abstain (high political cost) or switch parties (identity/alignment cost). Mixed experience: legitimate coordination function alongside extraction of voter agency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Establishment Party",
+      "comment": "PERSPECTIVE 3: ESTABLISHMENT PARTY (ROPE) \u2014 Benefits from fragmentation through reduced coalition discipline burden and vote concentration from third-party spoilage effects. Experiences the constraint as coordination: fragmentation allows the party to maintain internal heterogeneity without formal schism. Net beneficiary with arbitrage: can influence electoral rules, field candidates strategically, leverage complexity for advantage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Electoral Reform Coalition",
+      "comment": "PERSPECTIVE 4: ELECTORAL REFORM COALITION (TANGLED ROPE) \u2014 Organized agents (NGOs, civic groups, election scientists) see fragmentation as a solvable coordination problem (ranked choice voting, proportional representation, open primaries). They benefit from fragmentation as a legitimating crisis that justifies their intervention, but are constrained by establishment party control of rule-making. Active enforcement required to maintain fragmentation against reform pressure."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Electoral Administration Apparatus",
+      "comment": "PERSPECTIVE 5: ELECTORAL ADMINISTRATION APPARATUS (PITON) \u2014 Maintains complex ballot access requirements, counting procedures, and regulation enforcement that sustain fragmentation through inertia. The apparatus treats this complexity as inherent to electoral legitimacy (theater: 'we must verify all candidates, follow all procedures'), but the primary function has atrophied \u2014 fragmentation persists because the regulatory structure is locked in, not because the rules serve their stated purpose. Theater ratio high: procedures justify themselves rather than achieving stated coordination goals."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Proportional Representation Movement",
+      "comment": "PERSPECTIVE 6: PROPORTIONAL REPRESENTATION MOVEMENT (SCAFFOLD) \u2014 Sees fragmentation as temporary institutional failure with clear sunset mechanism: adoption of proportional representation, ranked choice voting, or open primary systems. Movement has real agency (state-level electoral reforms occurring), clear exit path (policy change), and genuine benefit to broader participation. Low theater because the proposed alternatives are substantive, not performative. Sunset is estimated 15-25 years in North American context as norms shift toward representation equity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law View (Duverger's Law)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / DUVERGER'S LAW (MOUNTAIN) \u2014 From a civilizational/universal perspective, fragmentation appears as immutable natural law: Duverger's Law predicts that first-past-the-post electoral systems inevitably collapse toward two-party equilibrium, and this collapse mechanism cannot be escaped by design choice alone. However, structural data contradicts the mountain classification: countries with FPTP systems have maintained multi-party competition through institutional arrangements (primary systems, candidate discipline rules, coalition incentives). The apparent natural law conceals contingent institutional choices."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "duvergers_law_mechanism",
+      "question": "Is Duverger's Law a mechanical necessity of first-past-the-post systems or a contingent outcome dependent on specific institutional configurations?",
+      "resolution_mechanism": "Comparative analysis of FPTP democracies with varying party system outcomes (Canada multi-party vs US two-party); investigation of institutional variables that permit multi-party persistence despite FPTP incentives",
+      "impact": "If mechanical necessity: constraint approaches mountain (\u03b5 \u2192 0.15). If contingent: constraint remains tangled_rope (\u03b5 \u2248 0.55-0.65) with identifiable institutional targets for reform.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Duverger's Law is mechanical or contingent"
+    },
+    {
+      "id": "strategic_voting_prevalence",
+      "question": "What proportion of voters engage in strategic voting rather than sincere preference voting, and how does this vary with system fragmentation level?",
+      "resolution_mechanism": "Survey data on voter intent vs reported vote; exit polling on candidate preference vs ballot choice; correlational analysis with fragmentation metrics across electoral cycles",
+      "impact": "If strategic voting > 40%: suppression metric increases (voter agency constraint is severe). If strategic voting < 20%: suppression may be overstated, constraint shifts toward rope (coordination without coercion).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Prevalence of strategic voting behavior"
+    },
+    {
+      "id": "reform_adoption_trajectory",
+      "question": "Are electoral reforms (ranked choice, proportional representation) actually being adopted and implemented, and do they substantially reduce fragmentation effects?",
+      "resolution_mechanism": "Tracking of ballot initiatives and legislative votes on electoral reform; pre/post analysis of jurisdictions adopting alternatives (Maine, Alaska, select international cases); measurement of voter participation and representation quality changes",
+      "impact": "If adoption accelerating: scaffold perspective confirmed, sunset is real (constraint may degrade to rope or dissolution within 20 years). If adoption stalled: scaffold is aspirational, constraint may intensify toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Electoral reform adoption and effectiveness"
+    },
+    {
+      "id": "voter_disengagement_causality",
+      "question": "Does electoral fragmentation cause voter disengagement and declining participation, or does participation decline cause fragmentation to become more visible as a problem?",
+      "resolution_mechanism": "Time series analysis of voter participation rates vs fragmentation indices; causal inference from natural experiments (electoral reform implementation); cross-national comparison of participation trends in proportional vs FPTP systems",
+      "impact": "If fragmentation causes disengagement: suppression metric is justified (\u03b5 \u2265 0.58). If causality reversed: suppression may reflect manifestation of prior disengagement, constraint may be secondary to other political constraints.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Causal direction between fragmentation and participation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Electoral system fragmentation creates a structural constraint where the organizational incentives of establishment parties, the technical complexity of ballot access and candidate qualification, and the mathematical properties of voting systems interact to generate barriers against new political entrants and minority representation. The constraint exhibits all major DR types from different structural positions, making it a diagnostic case for institutional extraction. Minor parties face trapped positions with wasted votes and high compliance costs. Voters experience constrained choice and strategic voting pressure. Establishment parties benefit from coordination without internal discipline. Electoral administrators maintain complex regulatory apparatus through inertia. Reform movements see a solvable problem with clear sunset mechanisms. From a civilizational perspective, the constraint appears as natural law (Duverger's Law), but international evidence contradicts this \u2014 countries with similar electoral mechanics have maintained viable multi-party systems through institutional design choices. The constraint's theater_ratio (0.68) reflects that much of electoral administration consists of procedural legitimacy maintenance rather than achieving stated coordination goals. The extractiveness trajectory (0.42 \u2192 0.58) documents the progressive tightening of fragmentation barriers as establishment parties adapt to challenge.",
+    "key_agents": [
+      "Minor Party Activists: Primary victims (powerless/trapped) \u2014 face ballot access barriers, debate thresholds, funding disadvantages, institutional lock-in",
+      "Voters at Coalition Boundaries: Mixed agents (moderate/constrained) \u2014 experience coordination benefits alongside agency constraint through strategic voting pressure",
+      "Establishment Parties: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from vote concentration, reduced coalition discipline burden, favorable rule interpretation",
+      "Electoral Reform Coalition: Organized advocates (organized/constrained) \u2014 see fragmentation as solvable problem but constrained by establishment party control of electoral rules",
+      "Electoral Administration Apparatus: Institutional actor (institutional/arbitrage) \u2014 maintains fragmentation through regulatory complexity maintained by procedural inertia",
+      "Proportional Representation Movement: Reform actors (organized/mobile) \u2014 have achieved state-level victories, possess clear alternative design, building path to sunset",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional choices as mechanical inevitability"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Elevated. The primary extraction mechanism is the concentration of political voice: establishment parties capture disproportionate representation through vote multiplication effects and ballot access barriers, while minority viewpoints face suppression through strategic voting incentives and low-threshold exclusion. The extraction is not maximal (snare territory \u2265 0.66) because genuine coordination functions exist \u2014 the two-party structure does solve coalition-building problems. The intermediate value reflects that extraction occurs within a functional coordination system. Suppression (0.62): Moderate-high. Barriers to minor party entry and voter preference expression are substantial: ballot access requirements, debate participation thresholds, winner-take-all mechanics, and psychological strategic voting costs. However, suppression is not total \u2014 minor parties do emerge, voters do participate, and reform has occurred in some jurisdictions. The value reflects significant structural barriers without complete entrenchment. Theater ratio (0.68): Moderate-high. Electoral administration consists substantially of procedural legitimacy maintenance: complex ballot access procedures, voter verification processes, and vote counting protocols justify themselves as necessary for electoral integrity, but much of this complexity persists through institutional inertia rather than necessity. Jurisdictions with simpler procedures (open primaries, proportional systems) report comparable or superior integrity without the procedural theater. Theater has increased from 0.52 to 0.68 as the system has become more administratively complex while serving the same coordination goals.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival divergence. Establishment parties (Rope) perceive fragmentation as legitimate coordination mechanism solving coalition discipline problems. Voters (Tangled Rope) experience both coordination benefit (forced coalition formation) and extraction (constrained choice, strategic voting). Minor party activists (Snare) experience pure extraction and institutional lock-in. The reform movement (Scaffold) sees a temporary problem with clear policy solutions and momentum. Electoral administration (Piton) sees its own degraded procedures as inherent necessity. The natural law perspective (Mountain) risks naturalizing contingent institutional choices as mechanical inevitability. The largest gap: between the establishment party's experience (Rope \u2014 low extraction) and the minor party activist's experience (Snare \u2014 high extraction) emerges from the same constraint, revealing that fragmentation extracts asymmetrically based on institutional position. This gap is the central diagnostic signal: when the same constraint generates snare vs rope divergence, the extraction is systemic.",
+    "directionality_logic": "Directionality values flow from structural position relative to the extraction mechanism. Establishment parties with arbitrage exit options experience low or negative directionality (d \u2248 0.10-0.20) \u2014 they can manipulate ballot access rules, interpret regulations favorably, and leverage fragmentation strategically. Voters face constrained exit (switching parties, strategic voting, abstention all carry costs), resulting in moderate directionality (d \u2248 0.55-0.70). Minor party activists face trapped exit (abandoning democratic participation entirely), resulting in high directionality (d \u2248 0.90-0.95). Electoral administrators have institutional arbitrage options (procedure modification, rule interpretation), resulting in low directionality (d \u2248 0.15-0.25). The reform coalition has mobile exit (can exit through policy change implementation), resulting in moderate directionality (d \u2248 0.45-0.60). These derived d values feed the sigmoid function to produce experienced chi: low d beneficiaries see low chi, high d victims see high chi, all from the same constraint."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "political_polarization",
+      "voter_participation_decline",
+      "campaign_finance_concentration"
+    ],
+    "dual_formulation_note": "Electoral system fragmentation is upstream of several political constraints: polarization intensifies as parties must appeal to narrower coalitions, participation declines as strategic voting suppresses sincere preferences, and campaign finance concentrates as minor parties require disproportionate resources for ballot access. Each downstream constraint has its own \u03b5 value; network edges establish causal dependency."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

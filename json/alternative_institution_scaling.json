@@ -1,0 +1,203 @@
+{
+  "header": {
+    "constraint_id": "alternative_institution_scaling",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "altinst"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Alternative Institution Scaling Constraint",
+    "topic_domain": "institutional_economics/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_institutional_providers",
+      "network_gatekeepers"
+    ],
+    "victims": [
+      "alternative_institutional_innovators",
+      "resource_constrained_communities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Innovative Alternative Provider",
+      "comment": "PERSPECTIVE 1: INNOVATIVE ALTERNATIVE PROVIDER (SNARE) \u2014 Faces systemic barriers: regulatory capture favoring incumbents, network effects locking users into legacy systems, capital requirements for infrastructure replication, and talent drain to established institutions. Cannot exit without abandoning the mission. Experiences maximum extraction through forced inefficiency and slow scaling despite superior design."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Underserved Community",
+      "comment": "PERSPECTIVE 2: UNDERSERVED COMMUNITY (SNARE) \u2014 Structurally dependent on incumbent institutions that provide poor service at monopoly prices. Geographic isolation, lack of alternatives, and switching costs create lock-in. Cannot exit; bears full cost of incumbent inefficiency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Institution",
+      "comment": "PERSPECTIVE 3: INCUMBENT INSTITUTION (ROPE) \u2014 Benefits from regulatory moats, network effects, and switching costs. Experiences scaling constraints as coordination opportunities: expanding geographic reach, adding service lines, standardizing processes. The constraint enables profitable growth management."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Distributed Alternative Network",
+      "comment": "PERSPECTIVE 4: DISTRIBUTED ALTERNATIVE NETWORK (TANGLED ROPE) \u2014 Organized coalition of alternative providers and community advocates. Experiences genuine coordination function (resource sharing, protocol standardization) alongside asymmetric extraction: larger platforms within the network capture disproportionate growth and funding, creating hierarchy within the 'alternative' space."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Regulatory Reform Coalition",
+      "comment": "PERSPECTIVE 5: REGULATORY REFORM COALITION (SCAFFOLD) \u2014 Organized agents (policy advocates, open-source communities, development NGOs) view scaling constraints as temporary regulatory artifacts with a sunset clause. Interoperability mandates, right-to-port regulations, and data portability requirements represent explicit exits from lock-in. Theater is low because the coordination problem (enabling alternative entry) is functionally real."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Regulatory Framework",
+      "comment": "PERSPECTIVE 6: LEGACY REGULATORY FRAMEWORK (PITON) \u2014 Formal sector regulations (licensing, compliance, network infrastructure rules) were designed for incumbent institutional scale and centralized control. The framework persists through institutional inertia despite being functionally misaligned with alternative models. High theater: compliance requirements exist nominally but enforcement is inconsistent, creating performative compliance rather than actual risk."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, scaling constraints appear inherent to institutional change: network effects, coordination problems, and switching costs are mathematical properties of multi-agent systems, not contingent policy choices. This perspective risks naturalizing what are actually designed incentive structures and regulatory choice points."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "incumbent_co_optation_vs_displacement",
+      "question": "Do alternative institutions scale by displacing incumbents or by being absorbed into incumbent ecosystems?",
+      "resolution_mechanism": "Long-term tracking of successful alternative institution trajectories: identify rate of full displacement vs acquisition/integration vs permanent market segmentation",
+      "impact": "If displacement dominates: classification tilts toward Snare (alternatives genuinely trapped until critical mass reached). If co-optation dominates: classification tilts toward Rope (integrated into incumbent coordination logic, reducing experienced extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether scaling success means displacement or absorption into incumbent institutions"
+    },
+    {
+      "id": "network_effect_reversibility",
+      "question": "Are network effects that lock in incumbents structurally reversible (given sufficient alternative adoption) or do they create persistent first-mover advantages?",
+      "resolution_mechanism": "Analysis of successful protocol/platform transitions (IPv4\u2192IPv6, TCP/IP adoption, social network migrations); measurement of switching cost reduction over time as alternatives mature",
+      "impact": "If reversible: suppression decreases as alternatives mature, mountain classification becomes false summit. If irreversible: suppression persists indefinitely, snare classification is stable.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether network lock-in is structurally reversible"
+    },
+    {
+      "id": "coordination_cost_parity",
+      "question": "At what scale do alternative institutions achieve cost parity with incumbents in core coordination functions?",
+      "resolution_mechanism": "Comparative cost accounting: measure per-unit coordination cost for incumbents vs alternatives across service categories at equivalent scale",
+      "impact": "If parity achievable at regional/national scale: alternatives escape extraction trap at a reachable point (scaffold with real sunset). If parity requires global scale: alternatives remain trapped indefinitely (snare classification stable).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scale at which alternative institutions achieve cost parity with incumbents"
+    },
+    {
+      "id": "regulatory_arbitrage_sustainability",
+      "question": "Can alternative institutions sustainably operate via regulatory arbitrage (choosing friendly jurisdictions) or do incumbents successfully lobby for harmonized restrictions?",
+      "resolution_mechanism": "Tracking of regulatory alignment over time; measurement of incumbent lobbying spend; analysis of cross-border regulatory coordination attempts",
+      "impact": "If arbitrage sustainable: alternatives maintain escape routes (constrained exit, not trapped). If harmonization succeeds: arbitrage closes, suppression increases, extraction becomes inescapable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory arbitrage remains available as an exit route"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Alternative institutions \u2014 peer-to-peer networks, cooperative platforms, open-source governance systems, distributed decision-making structures \u2014 face systematic scaling constraints that appear natural but are actually constructed through regulatory capture, network effects exploitation, and incumbent coordination. The constraint exhibits hybrid classification: genuine coordination problems exist (how do you scale distributed systems? how do you maintain quality at scale? how do you handle network externalities?), but these are layered with extractive mechanisms (regulatory moats protect incumbents, switching costs lock in users, talent drain to established institutions). The theater ratio (0.48) reflects that regulatory compliance requirements ostensibly designed for safety/quality are often performative barriers to entry rather than functionally necessary. Measured extractiveness has increased over the interval (0.38\u21920.58) as incumbents have deployed more sophisticated lock-in strategies while appearing to embrace 'innovation' rhetoric.",
+    "key_agents": [
+      "Innovative Alternative Provider: Primary victim (powerless/trapped) \u2014 faces regulatory barriers, capital requirements, network effects; cannot scale without overcoming systemic lock-in",
+      "Underserved Community: Secondary victim (powerless/trapped) \u2014 dependent on incumbent institutions providing poor service; geographically or economically isolated from alternatives",
+      "Incumbent Institution: Primary beneficiary (institutional/arbitrage) \u2014 profits from regulatory moats, network effects, and switching costs; experiences scaling as coordination opportunity",
+      "Distributed Alternative Network: Organized agent (organized/constrained) \u2014 coalition of alternative providers; experiences both genuine coordination function and internal hierarchy/extraction",
+      "Regulatory Reform Coalition: Organized agent (organized/mobile) \u2014 policy advocates and open-source communities building interoperability standards and regulatory exit pathways",
+      "Legacy Regulatory Framework: Institutional structure (institutional/arbitrage) \u2014 formal compliance rules that evolved for centralized incumbents; persists through inertia despite misalignment",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing regulatory choices as mathematical inevitabilities"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, rising over interval. The constraint extracts from alternatives through multiple mechanisms: regulatory capture (formal rules favor incumbent structure), network effects (switching costs increase with incumbent size), capital requirements (infrastructure investment barriers), and information asymmetry (incumbents control data and switching processes). The increase from 0.38 to 0.58 reflects sophistication in lock-in strategies \u2014 incumbents are becoming more deliberate about maintaining moats while using open-source rhetoric. Not yet maximum extraction (0.70+) because alternatives retain some arbitrage routes and the constraint is visibly contested. Suppression (0.62): High. Multiple structural barriers prevent exit: geographic lock-in (only incumbent serves the area), switching costs (data portability barriers, training costs), regulatory lock-in (formal licensing advantage), and psychological lock-in (normalized incumbent superiority). But suppression is not absolute \u2014 regulatory arbitrage (choosing favorable jurisdictions), capital raising for infrastructure (venture funding), and talent mobility (experienced technologists joining alternatives) provide partial escape routes. Theater ratio (0.48): Moderate. Regulatory requirements have substantial performative content \u2014 they are presented as safety/quality necessities but often function as entry barriers. However, some theater is legitimate (actual coordination challenges exist at scale). The increase from 0.35 to 0.48 reflects that compliance theater is becoming more sophisticated as incumbents deploy complexity as a barrier.",
+    "perspectival_gap": "This constraint demonstrates the full range of DR classification from a single structural phenomenon. At the immediate timescale with powerless victims and no exit, alternatives see Snare \u2014 they are trapped in scaling hell. At the generational timescale with organized reform, advocates see Scaffold \u2014 the constraint has a sunset as interoperability rules deploy. At the immediate timescale from the incumbent perspective, they see Rope \u2014 scaling is a coordination problem they are successfully solving. Within the alternative network itself, distribution of benefits is asymmetric (Tangled Rope) \u2014 larger platforms capture more value. The legacy regulatory framework persists (Piton) \u2014 compliance theater masks diminished function. The analytical observer risks naturalizing all of this as inevitable (Mountain) \u2014 but the structural data shows this is contingent on current regulatory choices and incumbent strategy, not a law of nature.",
+    "directionality_logic": "Directionality (d) varies by structural position relative to the scaling constraint. Incumbents with arbitrage exit options and concentrated benefits derive low d (they experience coordination benefits and can exit lock-in at will \u2014 if threatened, they can deploy anti-trust settlement or targeted innovation). Alternative providers trapped by switching costs, regulatory barriers, and capital requirements derive high d (they experience extraction fully, with minimal exit paths at individual level). Organized alternatives with coalition resources and regulatory leverage derive moderate d (they have exit paths through advocacy and interoperability standards, but face significant short-term constraints). The pipeline computes chi = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) for each perspective: beneficiaries (d\u22480.15) experience low chi despite high \u03b5; trapped alternatives (d\u22480.90) experience high chi; organized reformers (d\u22480.55) experience moderate chi even though they have better power than individual alternatives.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: This constraint resolves the coordination-vs-extraction ambiguity by showing that both are genuinely present in the structure. The tangled rope classification is correct: genuine coordination problems exist (how do you scale distributed systems? how do you maintain quality? how do you handle network externalities?), but these are exploited by incumbent actors who have regulatory/capital advantages that prevent symmetric solution. The constraint is not 'pure coordination labeled as extraction' (would be false snare) nor 'pure extraction labeled as coordination' (would be false rope). It is hybrid \u2014 real coordination need, asymmetric extraction mechanism, high enforcement cost to maintain the lock-in. Mandatrophy resolves when the analytical observer recognizes that the 'inevitable' scaling costs are actually distributed costs that fall asymmetrically on alternatives while being captured asymmetrically by incumbents. The scaffold perspective resolves this further: interoperability regulations and data portability mandates reduce the legitimate coordination cost while eliminating the asymmetric extraction mechanism. This is not reducing coordination to zero (would make it Snare or Mountain) but rebalancing it symmetrically (would make it Rope under the new regulatory regime)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "network_effects_lock_in",
+      "regulatory_capture_incumbent_advantage",
+      "talent_drain_alternative_institutions"
+    ],
+    "dual_formulation_note": "Alternative institution scaling is upstream of specific sectoral constraints (e.g., fintech scaling, cooperative platform governance). This story models the general institutional constraint; sector-specific constraints have their own \u03b5 values reflecting domain-specific lock-in mechanisms but share the common scaling structure modeled here."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.52
+    }
+  ]
+}

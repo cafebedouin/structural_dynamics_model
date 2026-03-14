@@ -1,0 +1,179 @@
+{
+  "header": {
+    "constraint_id": "protest_risk_premium_political_participation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "prpp"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Protest Risk Premium in Political Participation",
+    "topic_domain": "political_economy/civil_resistance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_political_elites",
+      "status_quo_preservers"
+    ],
+    "victims": [
+      "marginalized_constituencies",
+      "political_dissidents"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Marginalized Dissident",
+      "comment": "PERSPECTIVE 1: MARGINALIZED DISSIDENT (SNARE) \u2014 Faces imprisonment, police violence, employment blacklisting, family harassment. No meaningful alternatives to suppress dissent. The risk premium is absolute and unavoidable. Structural exit is materially impossible; cognitive exit is identity-locked for committed activists. Maximum experienced extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Moderate Citizen Activist",
+      "comment": "PERSPECTIVE 2: MODERATE CITIZEN ACTIVIST (TANGLED ROPE) \u2014 Faces real but surmountable costs: social stigma, workplace friction, legal fees for minor charges, relationship strain. Genuine coordination function exists \u2014 collective action changes policy \u2014 but extraction is asymmetric: costs borne by participants, benefits distributed widely (including to free-riders). Significant suppression but with agency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The State Security Apparatus",
+      "comment": "PERSPECTIVE 3: STATE SECURITY APPARATUS (ROPE) \u2014 Experiences protest suppression as a coordination mechanism: maintains order, demonstrates state capacity, signals boundaries of acceptable dissent. Net beneficiary \u2014 extracts compliance from marginalized agents. Low effective extraction from its own position because it has maximal exit options and controls the enforcement apparatus."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Elite Opposition Party",
+      "comment": "PERSPECTIVE 4: ELITE OPPOSITION PARTY (TANGLED ROPE) \u2014 Benefits from grassroots protest energy mobilizing voters and generating media coverage. But also constrained by protest risk premium \u2014 street-level violence risks tainting electoral brand; association with radical activists alienates centrist donors. Coordinates with grassroots while extracting their labor for elite electoral gain. Has exit options (negotiation, electoral focus only) but strategically maintains protest ecosystem."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The International Human Rights Framework",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL HUMAN RIGHTS FRAMEWORK (PITON) \u2014 Nominally protects freedom of assembly and protest. But enforcement is theatrical \u2014 condemnations issued, reports filed, monitors deployed. Actual constraints on state suppression remain minimal. The framework persists through institutional legitimacy (NGOs, UN bodies, treaty language) despite low functional capacity to prevent protest risk premiums. Theater ratio reflects the gap between rights-on-paper and rights-in-practice."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some cost to collective action is inherent: organizing requires time and resources; visibility to authorities is inevitable; punishment for norm violation is built into how societies maintain order. This perspective naturalizes the protest risk premium as an immutable feature of political systems. The engine's false summit detector will identify this as misclassification \u2014 the premium is contingent on state capacity and institutional design, not lawful."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "suppression_mechanism_type",
+      "question": "Is suppression primarily structural (legal barriers, police capacity, economic dependency) or internalized (anticipated punishment, identity-based self-censorship, normalized fear)?",
+      "resolution_mechanism": "Longitudinal surveys measuring stated vs actual participation constraints; analysis of participation changes following decriminalization or police withdrawal; cognitive interviews with non-participants about barrier types",
+      "impact": "If primarily structural: escape requires institutional reform. If primarily internalized: escape persists after institutional barriers removed \u2014 constraint becomes identity-locked despite mobile exit options. Mixed composition means post-exit suppression persists partially.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs internalized suppression mechanism in protest participation"
+    },
+    {
+      "id": "elite_extraction_intentionality",
+      "question": "Do incumbent elites deliberately engineer the protest risk premium to suppress participation, or does it emerge as an incidental byproduct of security apparatus institutional incentives?",
+      "resolution_mechanism": "Historical analysis of protest policy formation; internal security doctrine review; cross-regime comparison of suppression intensity vs opposition party coordination patterns; media analysis of elite framing of protest risks",
+      "impact": "If deliberate: state apparatus classifies as intentional snare. If incidental: suppression is institutional byproduct, classification shifts toward scaffold (temporary coordination failure) or piton (degraded institutional logic). Affects remediation strategy \u2014 institutional reform vs structural accountability.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether elite suppress protest intentionally or through institutional incentive drift"
+    },
+    {
+      "id": "coordination_function_authenticity",
+      "question": "Does the protest risk premium genuinely coordinate collective action (protest reaches critical mass despite suppression) or does it primarily extract consent through fear (suppression prevents coordination)?",
+      "resolution_mechanism": "Time-series analysis of protest size vs suppression intensity; comparison of regimes with different suppression strategies; measurement of successful vs failed collective action campaigns under varying risk conditions",
+      "impact": "If authentic coordination: snare classification is incorrect \u2014 should be tangled_rope or even rope (high-cost coordination). If primarily extraction: snare is confirmed \u2014 suppression dominates, coordination function is cover story.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether protest risk premium coordinates action or primarily extracts consent"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The protest risk premium creates a structural barrier to political participation by imposing differential costs on those who dissent relative to those who accept the status quo. Marginalized constituencies and political dissidents face imprisonment, violence, employment discrimination, and social stigma for public dissent, while incumbent elites and passive citizens incur minimal costs. This constraint exhibits the defining characteristic of tangled rope: a genuine coordination function (collective action can change policy) is embedded within an asymmetric extraction mechanism (costs borne by powerless participants, benefits distributed broadly including to free-riders and elites). The constraint operates through state security apparatus enforcement, elite political strategy, and internalized fear. Extractiveness has risen from 0.38 to 0.58 over the measurement interval, reflecting both increased police capacity and expanding surveillance. Theater ratio remains moderate (0.48) because suppression operates through actual enforcement (police action, imprisonment, violence) rather than purely performative deterrence, distinguishing it from constraints maintained primarily through institutional theater.",
+    "key_agents": [
+      "Marginalized Dissidents: Primary victims (powerless/trapped) \u2014 face maximal suppression with minimal exit options; identity-locked to political activism",
+      "Moderate Citizen Activists: Secondary victims (moderate/constrained) \u2014 face significant but surmountable costs; have genuine agency but face suppression",
+      "State Security Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 extracts compliance and demonstrates state capacity; has maximal exit options and enforcement control",
+      "Elite Opposition Parties: Tertiary beneficiary (powerful/mobile) \u2014 benefit from grassroots mobilization energy while constraining radical association; coordinate with activists while extracting labor",
+      "Incumbent Political Elites: Quaternary beneficiary (institutional/arbitrage) \u2014 benefit from suppression of dissent and preservation of status quo",
+      "International Human Rights Framework: Institutional observer (institutional/arbitrage) \u2014 nominally protects assembly rights but enforcement is theatrical; monitors and reports without capacity to constrain state action",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional suppression as immutable law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The protest risk premium extracts significant costs from participants \u2014 imprisonment duration ranges from days (minor protest) to years (sedition charges); employment discrimination is documented; family harassment is systematic in some regimes. But extraction is not maximal (snare threshold: 0.66) because: (1) coordination genuinely happens despite suppression (protests do change policy at baseline rates); (2) some participation is voluntary (identity-locked agents choose to participate accepting costs); (3) benefits are distributed widely including to supporters who bear no cost (free-rider problem indicates coordination, not pure extraction). Suppression (0.65): High. State security apparatus has multiple suppression tools: criminal law, police violence, intelligence surveillance, employment blacklisting, social stigma. Barriers to exit are severe \u2014 marginalized agents cannot 'opt out' of targeted categories (ethnicity, political affiliation). Moderate agents face real costs but can reduce participation or shift to legal advocacy. Theater ratio (0.48): Moderate. The constraint operates substantially through actual enforcement (people are actually imprisoned, beaten, blacklisted) rather than performative deterrence. But institutional theater exists: governments claim suppression is necessary for order; rights frameworks claim suppression will be addressed; opposition elites claim they oppose suppression while tacitly benefiting from it. The theater is lower than piton-level constraints because material consequences dominate the suppression mechanism.",
+    "directionality_logic": "Directionality varies sharply across agent types. Marginalized dissidents (powerless + trapped) derive d ~0.95 \u2014 they are full extraction targets with no exit. Moderate activists (moderate + constrained) derive d ~0.65 \u2014 they bear significant extraction but retain some agency and partial exit. Elite security apparatus (institutional + arbitrage) derives d ~0.10 \u2014 beneficiary with maximal exit options. Opposition parties (powerful + mobile) derive d ~0.35 \u2014 partial beneficiaries with exit options but strategically maintaining protest ecosystem. This variation produces perspectival gap: the same constraint is experienced as snare by powerless agents, tangled_rope by moderate agents, and rope by institutional beneficiaries. The chi formula scales these differently: powerless agents experience \u03c7 \u2248 0.58 \u00d7 f(0.95) \u00d7 \u03c3(national) \u2248 0.58 \u00d7 1.42 \u00d7 1.0 \u2248 0.82 (high effective extraction). Institutional beneficiaries experience \u03c7 \u2248 0.58 \u00d7 f(0.10) \u00d7 \u03c3(national) \u2248 0.58 \u00d7 -0.01 \u00d7 1.0 \u2248 -0.006 (negative effective extraction / net benefit). The perspectival gap is extreme because directionality varies widely: high-power agents and low-power agents occupy opposite structural positions relative to this extraction flow.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. Marginalized dissidents see pure snare: the risk premium is absolute, extraction is maximal, no genuine coordination benefit reaches them (benefits accrue to opposition elites and satisfied citizens). Moderate activists see tangled_rope: genuine coordination (protests do produce policy change) is embedded in extraction (costs borne by participants, benefits to free-riders). Opposition elites see rope: the protest ecosystem coordinates mobilization and generates electoral advantage. The security apparatus sees rope: the suppression mechanism coordinates order and state capacity signaling. The human rights framework sees its own performative role (piton) \u2014 issued condemnations and reports without enforcement. The civilizational analyst risks seeing mountain (immutable law of political systems) but structural data reveals this as naturalizing contingent institutional suppression. The perspectival gap reveals that observed constraint type is entirely position-dependent: powerless \u2192 snare, moderate \u2192 tangled_rope, powerful beneficiary \u2192 rope, institutional executor \u2192 rope, international observer \u2192 piton, analytical transcendent \u2192 mountain. All readings are valid from their positions; none is 'correct' in isolation.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The protest risk premium is genuine tangled_rope (not snare, not rope) because it simultaneously coordinates collective action AND extracts asymmetric costs. The mandatrophy \u2014 mislabeling coordination as extraction or vice versa \u2014 is resolved by declaring both structural functions explicitly: beneficiaries (incumbent elites, status quo preservers) benefit from suppressed participation AND from the perception that participation is 'free' (opposite of true). Victims (marginalized constituencies, dissidents) bear extraction costs AND contribute to collective action that produces public goods. The extraction is not incidental to coordination; it is embedded in the coordination structure. The coordination is not incidental to extraction; it is the mechanism through which extraction gains legitimacy ('people are free to participate if they accept the costs'). This is the defining signature of tangled_rope: both functions are essential to the constraint's operation. Removing suppression changes the coordination function fundamentally (protest becomes low-cost, participation surges, policy responsiveness increases or decreases depending on regime design). Removing the coordination benefit (preventing protests from producing policy change) collapses the constraint toward snare (pure suppression with no function except fear). The tangled_rope classification affirms that the constraint is neither natural law nor pure extraction \u2014 it is a contingent institutional arrangement that could be reformed by adjusting suppression or coordination terms independently."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "electoral_participation_suppression",
+      "civil_society_capacity_constraints",
+      "authoritarian_institutional_inertia"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

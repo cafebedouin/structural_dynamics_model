@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "renewable_energy_integration",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "renew"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Renewable Energy Integration into Existing Grid Infrastructure",
+    "topic_domain": "energy_infrastructure/regulatory_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_fossil_fuel_operators",
+      "grid_operators_with_coordination_function"
+    ],
+    "victims": [
+      "renewable_developers",
+      "grid_stability_as_public_good",
+      "ratepayers_with_distributed_solar"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Distributed Solar Developer",
+      "comment": "PERSPECTIVE 1: DISTRIBUTED SOLAR DEVELOPER (SNARE) \u2014 Small solar installers and homeowners face interconnection queues spanning 3-7 years, technical studies mandated by incumbent utilities, and unilateral cost allocation (standby charges, distribution upgrades borne by developers). No meaningful exit: cannot bypass grid, cannot appeal technical requirements, cannot recover study costs if project is rejected. Maximum suppression via procedural barriers."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Utility Scale Renewable Developer",
+      "comment": "PERSPECTIVE 2: UTILITY-SCALE RENEWABLE DEVELOPER (TANGLED ROPE) \u2014 Can appeal regulatory decisions, has resources for legal challenge, benefits from capacity auctions and power purchase agreements (coordination function), but faces transmission bottlenecks, interconnection cost barriers, and curtailment requirements during grid stress. Constrained exit \u2014 can build elsewhere but faces similar barriers region-to-region. Mixed extraction and coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Grid Operator (Coordination Function)",
+      "comment": "PERSPECTIVE 3: GRID OPERATOR / ISO (ROPE) \u2014 Genuinely solves collective action problem: manages real-time demand-supply matching, frequency regulation, voltage stability. Experiences renewable integration as a coordination challenge requiring new mechanisms (faster ramping, demand response, storage coordination). Net beneficiary through mandated cost recovery plus new coordination services revenue. Sees extraction as technical fee, not coercive overhead."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Incumbent Utility",
+      "comment": "PERSPECTIVE 4: INCUMBENT FOSSIL-FUEL UTILITY (TANGLED ROPE) \u2014 Benefits from regulatory asset base guarantees and cost-of-service recovery (coordination with ratepayers on rate structure). Simultaneously faces stranded asset risk and declining thermal generation revenues. Experiences renewable integration as extraction (lost margin) plus coordination obligation (must maintain reliability). Constrained exit \u2014 cannot abandon franchise territory. Asymmetric extraction targeting renewable developers."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The Regional Transmission Organization (RTO Reform Coalition)",
+      "comment": "PERSPECTIVE 5: RTO REFORM COALITION (SCAFFOLD) \u2014 Organized stakeholders (renewable trade associations, state regulators, environmental groups) see interconnection bottleneck as a temporary coordination failure with a sunset clause: Order 2023-B (FERC) mandates three-year timeline for interconnection queue reforms, cost allocation reforms, and interconnection service agreements standardization. High agency, clear exit path. Theater remains high during reform transition (still performative queue processing) but declining as reforms take effect. Sunset: 5-10 years as reforms mature and distributed generation integration mechanisms standardize."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Grid Reliability Rhetoric",
+      "comment": "PERSPECTIVE 6: GRID RELIABILITY JUSTIFICATION (PITON) \u2014 'Grid reliability requires incumbent dominance' framing persists through institutional inertia despite contradictory evidence: Denmark and Germany achieve 60%+ renewable penetration without sacrificing reliability. The reliability argument is mostly performative cover for incumbent protection. Theater ratio high (0.68) \u2014 the argument is ritualized and repeated but functionally decoupled from actual reliability mechanisms. Piton classification reflects degraded justification, not high extraction magnitude."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Physical Constraints View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / PHYSICAL LIMITS (MOUNTAIN) \u2014 From a civilizational/universal perspective, some grid coordination overhead is immutable: frequency regulation, voltage stability, and demand-supply matching are physics-based constraints regardless of generation source. This perspective risks naturalizing contingent institutional arrangements (interconnection queues, cost allocation rules, regional balkanization) as inherent physical necessity. Engine false-summit detection should flag this as naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "incumbent_extraction_vs_coordination_cost",
+      "question": "How much of the utility's cost-recovery claim reflects genuine grid coordination burden vs. extraction rent protection?",
+      "resolution_mechanism": "Comparative cost analysis: transmission/distribution costs in high-renewables regions (Denmark, Australia) vs. incumbent-dominated regions; correlation between renewable penetration and claimed reliability costs",
+      "impact": "If genuine coordination cost > 0.30: extractiveness drops to 0.35, classification shifts toward rope. If <0.15: extractiveness rises to 0.65, classification shifts toward snare from incumbent perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Decomposing utility cost recovery into coordination vs. extraction"
+    },
+    {
+      "id": "interconnection_queue_bottleneck_intentionality",
+      "question": "Are interconnection queue delays structural (caused by technical complexity and limited study resources) or intentional (used as gatekeeping mechanism)?",
+      "resolution_mechanism": "Comparative study: queue delays in jurisdictions with FERC Order 2023-B reforms vs. pre-reform baselines; correlation between queue length and incumbent market power; cost-benefit analysis of accelerated study timelines",
+      "impact": "If structural: suppression reduces to 0.30, classification shifts toward rope/scaffold for all developers. If intentional: suppression increases to 0.65, classification shifts toward snare for distributed solar.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether interconnection delays are structural constraint or gatekeeping mechanism"
+    },
+    {
+      "id": "storage_and_demand_response_substitutability",
+      "question": "Do battery storage and demand-response mechanisms provide genuine alternatives to incumbent-controlled frequency regulation, or are they complementary rather than substitutes?",
+      "resolution_mechanism": "Technical analysis: comparing ramping rates and frequency response capabilities of distributed storage+demand response vs. conventional generation; field trials in high-renewables regions",
+      "impact": "If substitutes: grid operator's monopoly on coordination weakens, extractiveness drops to 0.35, opens Rope classification. If complementary: incumbent retains coordination bottleneck, extractiveness remains 0.50+.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether distributed storage/demand-response substitute for incumbent frequency services"
+    },
+    {
+      "id": "regulatory_capture_depth_in_puc",
+      "question": "To what extent do state Public Utility Commissions make interconnection and cost-allocation decisions independent of incumbent utility preferences?",
+      "resolution_mechanism": "Historical analysis: PUC decisions on contested interconnection cases; cross-state variance in approval rates and timelines; funding/revolving-door analysis of commissioners",
+      "impact": "If independent: extractiveness drops to 0.38, incumbent power downgraded. If captured: extractiveness rises to 0.62, institutional actors experience identity_locked constraint rather than constrained.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of regulatory capture in PUC interconnection decisions"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The renewable energy integration constraint manifests as a structural tension between incumbent utility business models (guaranteed cost recovery) and distributed generation economics. The constraint exhibits mixed coordination and extraction: grid operators genuinely solve the technical problem of demand-supply matching across diverse renewable sources, while incumbent utilities use interconnection queuing, cost-allocation rules, and reliability rhetoric to protect thermal generation revenues. The extractiveness trajectory (0.38\u21920.52) reflects increasing rent-seeking behavior as renewable penetration threatens incumbent margins. Theater ratio increase (0.42\u21920.58) indicates growing performative justification \u2014 the 'reliability requirement' framing intensifies as the technical case for incumbent dominance weakens (demonstrated by Denmark, Germany success at high penetration). FERC Order 2023-B and state-level queue reforms represent genuine sunset mechanisms: three-year timelines for standardized interconnection procedures, cost allocation reforms, and distributed generation integration. However, the constraint remains tangled because incumbent utilities retain coordination function (transmission operation, frequency regulation, voltage control) alongside their extractive rent-seeking. The constraint cannot be classified as pure Rope (coordination exists) or pure Snare (extraction is real but not total). The scaffold perspective captures the reform trajectory, but this is not yet the dominant experience for small distributed solar developers, who remain trapped in multi-year queues.",
+    "key_agents": [
+      "Incumbent Fossil-Fuel Utility: Primary beneficiary (institutional/constrained) \u2014 extracts margin protection through interconnection barriers; also provides genuine coordination function",
+      "Distributed Solar Developer: Primary victim (powerless/trapped) \u2014 faces 3-7 year interconnection queues and unilateral cost allocation",
+      "Grid Operator / ISO: Institutional beneficiary (institutional/arbitrage) \u2014 genuinely solves coordination problem, recovers costs through mandated fees",
+      "Utility-Scale Renewable Developer: Secondary victim (moderate/constrained) \u2014 can appeal and litigate but faces regional transmission bottlenecks",
+      "Public Utility Commission: Regulatory institution (institutional/constrained) \u2014 theoretically independent but subject to incumbent influence and capture risk",
+      "RTO Reform Coalition: Organized reformers (organized/mobile) \u2014 state regulators, renewable industry, environmental groups pushing FERC Order 2023-B implementation with sunset timeline",
+      "Grid Reliability Justification: Rhetorical actor (institutional/arbitrage) \u2014 maintains performative cover for incumbent protection despite contradictory international evidence"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, and rising over the interval. The constraint extracts margin protection from distributed generators via interconnection gatekeeping (distributed solar faces 3-7 year queues; utility-scale faces transmission bottlenecks). The rising trajectory reflects increasing incumbent rent-seeking as renewable penetration threatens thermal generation revenues. However, extractiveness is not at snare levels (0.66+) because: (1) grid operators provide genuine coordination value, (2) utility-scale developers have negotiating capacity and PPA access, (3) international evidence (Denmark 80% renewables, Germany 60%+) proves reliability is achievable at high penetration, (4) reform mechanisms (FERC 2023-B) are creating structured exit paths. Suppression (0.48): Moderate. Interconnection queue delays, technical study mandates, and cost-allocation rules create real barriers to entry, but they are not total: some projects succeed, appeals exist, and regulatory forums can override utility decisions. Theater ratio (0.58): Moderate-high. The 'grid reliability requires incumbent dominance' argument is increasingly performative: actual reliability outcomes in high-penetration jurisdictions contradict the claim. Theater has grown from 0.42 to 0.58 as contradictions accumulate and the rhetorical burden increases. This rising theater ratio combined with moderating extractiveness is diagnostic of a constraint in transition: reform mechanisms are reducing actual extraction (developers finding alternative paths) while incumbent rhetoric intensifies to justify the remaining extraction.",
+    "perspectival_gap": "The constraint exhibits a clean perspectival stratification by power level and exit capacity. Powerless/trapped agents (distributed solar) see pure extraction (Snare) \u2014 procedural barriers are insurmountable. Moderate/constrained agents (utility-scale developers) see mixed coordination and extraction (Tangled Rope) \u2014 they have resources to negotiate but face real limitations. Institutional agents with arbitrage (grid operators, utilities benefiting from new coordination) see pure coordination (Rope). Organized/mobile agents (reform coalition) see a temporary problem with a real sunset (Scaffold) \u2014 FERC timelines and state regulatory windows provide structured exit paths. Piton classification (institutional/arbitrary perspective) reflects that the 'grid reliability' justification persists through inertia despite international evidence that high renewable penetration is compatible with reliability. The mountain classification (analytical/universal) represents the false summit risk: naturalizing incumbent-specific coordination requirements (frequency regulation, voltage control) as physics-based barriers immutable to any organization structure.",
+    "directionality_logic": "Directionality derives from each agent's structural position: who benefits, who bears costs, and at what exit capacity. Incumbent utilities are beneficiaries with constrained exit (cannot abandon franchise) \u2014 derived d \u2248 0.35-0.45 (beneficiary status lowers d; constrained exit moderates this). Distributed solar developers are victims with trapped exit \u2014 derived d \u2248 0.92 (victim + trapped \u2192 maximum d \u2192 maximum f(d) \u2248 1.42). Grid operators are beneficiaries with arbitrage (can shift to different coordination mechanisms or privatize) \u2014 derived d \u2248 0.10-0.15 (beneficiary + arbitrage \u2192 very low d). Utility-scale developers are victims with constrained exit \u2014 derived d \u2248 0.75 (victim + constrained). The reform coalition is organized with mobile exit (can push regulation, can invest in alternative structures) \u2014 derived d \u2248 0.40-0.50 (organized + mobile moderates both victim and beneficiary signals). The directionality signature reveals the asymmetry: victims are either fully trapped (distributed) or significantly constrained (utility-scale), while beneficiaries have exit options. This asymmetry is the mechanism driving extraction.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by showing that all six types are legitimate perspectival readings but the scaffold and piton perspectives capture the structural transformation. The snare perspective (powerless/trapped distributed solar) is accurate from that agent's position but not representative of the whole constraint. The rope perspective (grid coordination) is accurate but ignores the extraction layered on top. The tangled rope classification (claimed type) is the appropriate analytical reading because it acknowledges both genuine coordination function (grid operators solving real technical problems) and asymmetric extraction (interconnection barriers protecting incumbent revenues). The scaffold perspective validates that reform mechanisms (FERC 2023-B, state queue reforms) are real and structurally consequential \u2014 this is not aspirational; it is a structured sunset with regulatory teeth. The piton perspective (grid reliability rhetoric) is functionally true \u2014 the 'reliability requires incumbents' framing is increasingly disconnected from operational reality as high-penetration jurisdictions prove reliability is independent of generation source mix. The mountain perspective (analytical) represents a real risk: the constraint can appear as an immutable physics problem (frequency regulation, voltage stability) when it is actually a contingent institutional arrangement. The mandatrophy is resolved by recognizing that the constraint is transitioning from snare/tangled-rope (incumbent extraction with coordination overlay) toward scaffold (temporary coordination problem being solved). This transition is driven by: (1) FERC regulatory action, (2) evidence from high-penetration regions, (3) distributed storage and demand-response providing alternative coordination mechanisms, and (4) incumbent utilities themselves investing in renewables. The analytical observer's task is to measure whether the transition is real or performative \u2014 are interconnection queues actually shortening, or is theater increasing to cover stagnation?"
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "grid_frequency_regulation_monopoly",
+      "transmission_congestion_pricing",
+      "stranded_asset_protection_regulatory_capture"
+    ],
+    "dual_formulation_note": "Renewable integration decomposes into three structurally distinct constraints: (1) GRID FREQUENCY REGULATION \u2014 technical coordination problem (low \u03b5, rope); (2) INTERCONNECTION QUEUE GATEKEEPING \u2014 incumbent protection mechanism (high \u03b5, snare from distributed perspective); (3) STRANDED ASSET RECOVERY \u2014 regulatory capture of cost-allocation rules (high \u03b5, tangled rope). This story addresses the aggregate constraint; downstream stories model the specific mechanisms separately."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.38
+    }
+  ]
+}

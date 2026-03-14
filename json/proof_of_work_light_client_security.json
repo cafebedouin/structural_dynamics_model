@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "proof_of_work_light_client_security",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "powlcs"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Proof-of-Work Light Client Security Trade-off",
+    "topic_domain": "blockchain_cryptography/distributed_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "full_node_operators",
+      "mining_pools",
+      "protocol_core_developers"
+    ],
+    "victims": [
+      "light_client_users",
+      "resource_constrained_devices",
+      "network_security_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Light Client User",
+      "comment": "PERSPECTIVE 1: LIGHT CLIENT USER (SNARE) \u2014 Constrained by device resources (mobile, embedded hardware) with no material exit. Forced to trust assumptions about consensus validity that may not hold. Vulnerable to long-range attacks, timestamp manipulation, and censorship via block withholding. No capacity to verify underlying PoW or reorganize the trust model."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The SPV-Capable User",
+      "comment": "PERSPECTIVE 2: SPV-CAPABLE USER (TANGLED ROPE) \u2014 Can run simplified payment verification but faces bandwidth and latency costs. Benefits from the PoW security model (legitimate verification of work) alongside extraction: vulnerable to Sybil attacks on block header relay, susceptible to eclipse attacks that control information flow. High cost to switch verification models but not impossible."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Full Node Operator",
+      "comment": "PERSPECTIVE 3: FULL NODE OPERATOR (ROPE) \u2014 Operates the verification backbone with full PoW validation capability. Primary beneficiary from the light client security model: light clients' acceptance of PoW proofs elevates full nodes' structural importance and their ability to set consensus rules. Can arbitrage to different consensus mechanisms or exit by running alternative chains."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Mining Pool Operator",
+      "comment": "PERSPECTIVE 4: MINING POOL OPERATOR (ROPE) \u2014 Benefits from light client acceptance of header-only validation: pools can maintain consensus on longest chain without light clients verifying individual transactions. Coordination function is genuine (pools solve the variance reduction problem). Mobile exit (can switch consensus mechanisms or redirect hash power)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Light Client Protocol Coalition",
+      "comment": "PERSPECTIVE 5: LIGHT CLIENT PROTOCOL COALITION (SCAFFOLD) \u2014 Organized development of stateless clients, light sync protocols, and proof systems aiming to replace or augment PoW security assumptions. Low effective extraction because the coalition has agency and a sunset clause: as proof systems mature (SNARKs, STARKs for execution), the dependency on full PoW validation can diminish. Coordination function: advancing scalable verification."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy PoW Assumption Framework",
+      "comment": "PERSPECTIVE 6: LEGACY POW ASSUMPTION FRAMEWORK (PITON) \u2014 The assumption that light clients can achieve 'good enough' security by verifying only block headers against cumulative work persists as institutional practice despite known failure modes (selfish mining in header-only verification, timestamp malleability). Theater ratio 0.48: the framework performs security verification rituals (checking header work, validating signatures) but does not catch sophisticated attacks that exploit light client blindness to transaction selection and ordering. Maintained through inertia as alternatives (full validation, proof systems) are not yet mature or ubiquitous."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Information-Theoretic Bound)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / INFORMATION-THEORETIC VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, any verification method that does not process the full state has bounded security: information not observed cannot be verified. Light clients by definition discard transaction data, so their security margin against state-manipulation attacks is structurally bounded by the work required to reorganize headers alone. This appears as a natural law. However, this perspective risks naturalizing what is contingent: the choice to use PoW headers rather than cryptographic proofs (SNARKs) for light client validation is institutional, not inevitable. The engine's false summit detector will flag this classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "selfish_mining_light_client_relevance",
+      "question": "Do selfish mining attacks on header-only light clients represent a practical threat or a theoretical edge case given realistic network parameters and adversary capabilities?",
+      "resolution_mechanism": "Empirical attack simulation: run selfish mining against synthetic light client networks with realistic network delay, hash distribution, and eclipse attack prevalence. Measure success rates at 20%, 33%, and 50% hash power thresholds.",
+      "impact": "If practical threat: extractiveness increases to 0.68+ (snare classification shifts for moderate agents). If theoretical: extractiveness remains ~0.58 (tangled_rope stable). Classification hinges on empirical adversary model, not theoretical bounds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Practical threat level of selfish mining against light clients"
+    },
+    {
+      "id": "proof_system_maturity_timeline",
+      "question": "When will succinct proofs (SNARKs/STARKs) for PoW/PoS consensus achieve production-grade security and efficiency sufficient to replace PoW header verification in light clients?",
+      "resolution_mechanism": "Track proof system development: circuit complexity, prover time, verifier time, and formal security audits. Identify the point at which client libraries integrate succinct verification as primary method. Historical precedent: ECC hardening took 15-20 years from theory to standard practice.",
+      "impact": "If before 2035: scaffold sunset is real and high-confidence \u2014 extractiveness decays to 0.25+ over next decade. If after 2045: scaffold is aspirational, extractiveness remains stable or rises. Classification depends on architectural path-dependency.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Timeline for succinct proof system maturity in light client applications"
+    },
+    {
+      "id": "device_capability_distribution_shift",
+      "question": "As device computational capacity grows and bandwidth expands globally, what fraction of 'light client' users actually need lightweight verification versus simply preferring it for convenience?",
+      "resolution_mechanism": "Cohort analysis: stratify light client users by device class (embedded, mobile, desktop) and network conditions. Measure what fraction could run full clients at acceptable UX cost. Project forward 10 years.",
+      "impact": "If most 'light clients' are convenience users with capacity for full validation: suppression metric is overstated, extractiveness drops to ~0.42 (rope becomes stable). If significant cohort is structurally trapped: suppression remains 0.65+, snare classification for powerless agents is robust.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fraction of light client users with actual versus perceived resource constraints"
+    },
+    {
+      "id": "full_node_decentralization_sustainability",
+      "question": "Can full node operators maintain sufficiently high decentralization to prevent consensus takeover while relying on light client adoption to justify the resource investment?",
+      "resolution_mechanism": "Network topology analysis: measure active full node count, geographic distribution, and Nakamoto coefficient. Run centralization attack scenarios assuming light clients migrate to proof systems or exit. Identify minimum full node count for security.",
+      "impact": "If full nodes become too scarce without light client economic support: the constraint is symbiotic (genuine tangled rope coordination). If full nodes remain numerous from intrinsic incentives: light client security dependency is lower, extraction softens.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Sustainability of full node decentralization under changing light client dynamics"
+    },
+    {
+      "id": "header_validation_attack_surface_clarity",
+      "question": "Are the actual attack vectors against light client header validation well-understood and disclosed to users, or obscured by PoW ritualism?",
+      "resolution_mechanism": "Conduct systematic documentation: enumerate all attack classes (long-range, timestamp, Sybil, eclipse, selfish mining variants). Map each to detection difficulty and success probability. Audit how many major light client implementations warn users about each class.",
+      "impact": "If attacks are well-disclosed and mitigated: theater_ratio drops to ~0.35, piton classification becomes marginal. If attacks are obscured or underestimated: theater_ratio rises to 0.55+, piton classification strengthens.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Clarity and disclosure of light client attack surface"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.46
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Light client security in proof-of-work blockchains creates a structural tension between accessibility (clients with limited resources need to verify transactions without downloading and validating the entire blockchain) and security assurance (full verification requires access to complete state and transaction history). The constraint requires light clients to trust cryptographic proofs of work without validating the work's relevance to transaction ordering or state validity. This creates extractive capacity: full node operators and mining pools benefit from light clients' acceptance of header-only verification, which elevates the structural importance of full nodes and enables mining pools to maintain consensus on longest-chain without transaction-level visibility. Simultaneously, the constraint exhibits genuine coordination function: the PoW mechanism does solve the Byzantine consensus problem, and light clients do achieve probabilistic security guarantees against certain attack classes. However, these guarantees degrade rapidly against adversaries with modest hash power or network-level capabilities. The constraint is tangled: coordination exists, extraction is real, and suppression (barriers to full verification) is high due to device and bandwidth constraints.",
+    "key_agents": [
+      "Light Client Users: Primary victim (powerless/trapped) \u2014 resource-constrained devices with no practical exit; vulnerable to attacks exploiting header-only validation",
+      "SPV-Capable Users: Secondary victim (moderate/constrained) \u2014 can implement simplified payment verification at bandwidth/latency cost; face eclipse and Sybil attack risks",
+      "Full Node Operators: Primary beneficiary (institutional/arbitrage) \u2014 elevated structural importance from light client dependency; can arbitrage to alternative consensus mechanisms",
+      "Mining Pools: Secondary beneficiary (organized/mobile) \u2014 coordinate with full nodes to maintain consensus; benefit from light client acceptance of header validation",
+      "Light Client Protocol Coalition: Organized actor (organized/constrained) \u2014 developing stateless clients and proof systems to reduce PoW dependency; represent sunset pathway",
+      "Legacy PoW Framework: Institutional practice (institutional/arbitrage) \u2014 perpetuates header-only verification through inertia; seen as degraded by protocol developers",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing the PoW header dependency as information-theoretic inevitability"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Light clients systematically underestimate the cost of their security model by not validating transaction selection, ordering, or timestamp validity. The 2-3 year measurement trajectory shows increasing extractiveness as attack sophistication (selfish mining, eclipse attacks) becomes better understood in the research literature, but is not yet widely mitigated in deployed light clients. Suppression (0.65): High. Device resource constraints (memory, bandwidth, CPU) are real and non-trivial to overcome. However, the suppression includes an internalized component: users accept 'good enough' security through narrative rather than from structural necessity alone. Theater ratio (0.48): Moderate. PoW header validation performs genuine cryptographic checks (difficulty adjustment, signature verification) but does not execute transaction verification or state validation \u2014 the core functions that would prevent double-spend attacks against light clients. The theater has remained stable because the performance model has not changed, though attack surface understanding has improved. The constraint exhibits increasing extractiveness paired with stable theater, indicating that the extraction is becoming more salient rather than more theatrical.",
+    "perspectival_gap": "The snare-to-rope gap reveals the core extraction mechanism. Light client users (snare) perceive immutable constraint at biographical timescale: they cannot transition to full client validation within a single career/device lifecycle without significant cost. Full node operators (rope) perceive the constraint as changeable coordination: they can always migrate to other consensus mechanisms or adjust PoW parameters. This gap is not merely perceptual \u2014 it reflects real structural asymmetry. The trapped user has limited agency; the institutional operator has multiple exit routes. The piton perspective adds a diagnostic insight: the PoW validation ritual is theater because it checks work-proofs without validating work relevance to transaction selection. Reviewers (full nodes) see signatures and difficulty but cannot verify whether the miner actually followed transaction ordering rules or timestamp constraints. The ritual persists through institutional inertia \u2014 alternative verification models (proof systems, staking) are not yet mature enough to replace it.",
+    "directionality_logic": "Extracted from base_properties beneficiary/victim declarations and structural analysis. Full node operators: beneficiary + arbitrage exit \u2192 d \u2248 0.15 \u2192 f(d) \u2248 -0.01 \u2192 negative/near-zero chi. Mining pools: beneficiary + mobile exit \u2192 d \u2248 0.18 \u2192 f(d) \u2248 0.03 \u2192 near-zero chi. Light client users: victim + trapped exit \u2192 d \u2248 0.93 \u2192 f(d) \u2248 1.40 \u2192 high chi (amplified by global scope \u03c3=1.2 to \u03c7 \u2248 0.97). SPV users: victim + constrained exit + moderate power \u2192 d \u2248 0.68 \u2192 f(d) \u2248 1.08 \u2192 moderate-high chi. Protocol coalition: beneficiary (of improved verification) + constrained exit \u2192 d \u2248 0.45 \u2192 f(d) \u2248 0.50 \u2192 low-moderate chi. Piton classification derives from theater_ratio \u2265 0.70 gate failure (0.48 < 0.70), not from high chi \u2014 piton is appropriate here because the constraint is institutionally maintained but empirically degraded.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint is genuinely tangled: it coordinates consensus (rope function) while extracting security margin (snare function). No single type subsumes the others. The beneficiary perspective (rope) is correct about the coordination aspect \u2014 PoW does solve Byzantine consensus. The victim perspective (snare) is correct about the extraction aspect \u2014 light clients bear unavoidable risk from unvalidated state. The analytical observer who sees 'information-theoretic mountain' is partially correct about structural bounds but risks naturalizing what is actually a contingent choice (PoW headers rather than proofs) as inevitable. The scaffold perspective resolves the mandatrophy by identifying the sunset pathway: as proof systems mature, the dependency on PoW header verification becomes optional rather than immutable. The piton perspective observes that the current framework is becoming theater \u2014 performing security rituals that do not catch sophisticated attacks \u2014 which is diagnostically accurate and distinct from the coordination-vs-extraction debate."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "proof_of_work_consensus_centralization",
+      "blockchain_scalability_trilemma",
+      "sybil_attack_economic_cost"
+    ],
+    "dual_formulation_note": "Light client security is downstream of the PoW consensus model but represents a distinct structural constraint. Upstream constraint (proof_of_work_consensus_centralization) addresses mining concentration; light client security addresses verification accessibility. These are linked: as mining concentrates, the trust assumptions underlying light client verification degrade."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.22
+    }
+  ]
+}

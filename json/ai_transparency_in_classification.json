@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "ai_transparency_in_classification",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aitc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AI Transparency in Classification Systems",
+    "topic_domain": "algorithmic_governance/machine_learning_accountability",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "deploying_organizations",
+      "algorithm_developers"
+    ],
+    "victims": [
+      "classified_individuals",
+      "affected_communities",
+      "regulatory_bodies"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Classified Subject",
+      "comment": "PERSPECTIVE 1: CLASSIFIED SUBJECT (SNARE) \u2014 Individual subject to algorithmic classification (credit risk, criminal risk, hiring suitability) with no meaningful exit option. Cannot understand or challenge the classification. Suppression is total: appeal mechanisms are opaque, algorithms are proprietary, and challenging the system risks triggering higher scrutiny. Zero degrees of freedom."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Agency",
+      "comment": "PERSPECTIVE 2: REGULATORY AGENCY (TANGLED ROPE) \u2014 Must coordinate with deploying organizations to enforce transparency requirements while also bearing enforcement costs. Benefits from partial compliance (reduces liability pressure) but faces sustained extraction through: (a) technical complexity that exceeds agency capacity, (b) industry lobbying to weaken requirements, (c) requirement to prove harm when opacity itself is the mechanism preventing harm discovery. Moderate agency with significant cost asymmetry."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Deploying Organization",
+      "comment": "PERSPECTIVE 3: DEPLOYING ORGANIZATION (ROPE) \u2014 Experiences transparency requirement as coordination mechanism: ability to defend classifications publicly enables regulatory compliance, reduces litigation risk, and maintains customer trust. Arbitrage available through technical workarounds (opaque feature engineering, model interpretability theater). Net beneficiary during the period when opacity is valuable but compliance is mandated."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Affected Communities Advocacy Coalition",
+      "comment": "PERSPECTIVE 4: AFFECTED COMMUNITIES ADVOCACY (TANGLED ROPE) \u2014 Organized agents (civil rights groups, algorithmic justice organizations) benefit from transparency requirements as a coordination mechanism for collective advocacy: documented algorithmic bias patterns enable legal action and political mobilization. Constrained by resource requirements to conduct technical audits and regulatory expertise. Also bears extraction through: (a) regulatory capture where industry dominates standard-setting, (b) transparency theater (releasing interpretability reports without functional redress mechanisms), (c) retaliation risk in some jurisdictions."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The Progressive Regulatory Regime",
+      "comment": "PERSPECTIVE 5: PROGRESSIVE REGULATORY REGIME (SCAFFOLD) \u2014 Jurisdictions like EU (GDPR/AI Act framework) implementing mandatory transparency with explicit sunset logic: as AI systems mature and standardized interpretability methods emerge, performance of opaque systems will be benchmarked against transparent alternatives. When transparent models match opacity performance, the compliance burden of opacity increases relative to its utility, creating natural exit from opacity as deployment strategy. Temporary enforcement regime with built-in obsolescence."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Explainability Compliance Theater",
+      "comment": "PERSPECTIVE 6: EXPLAINABILITY COMPLIANCE THEATER (PITON) \u2014 The industry response to transparency mandates has largely been performative: LIME/SHAP explanations that explain predictions without revealing training data patterns, post-hoc rationalization documents that satisfy compliance without enabling challenge, 'model cards' that describe without constraining. The primary function (actual transparency enabling oversight) has atrophied; the theatrical function (regulatory compliance signaling) persists through institutional inertia. Measured theater_ratio 0.68 reflects substantial compliance ritual without functional disclosure."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Computational Opacity View",
+      "comment": "PERSPECTIVE 7: COMPUTATIONAL OPACITY / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, the constraint reflects an immutable feature of statistical learning: complex models (neural networks, ensemble methods) achieve better predictive accuracy precisely because they operate at levels of abstraction where human interpretation is impossible. The transparency-accuracy tradeoff is presented as a law of mathematics. However, structural data reveals this as false naturalization: the opacity is contingent on deployment choices (model selection, data sourcing, optimization objective) that could be constrained to maintain interpretability. Accuracy-optimizing culture is naturalized as natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "transparency_definition_ambiguity",
+      "question": "What constitutes meaningful transparency: understanding individual predictions, understanding aggregate model behavior, or enabling challenge/redress of classification outcomes?",
+      "resolution_mechanism": "Comparative analysis of transparency frameworks (GDPR right to explanation, FCRA dispute procedures, technical interpretability standards) and actual usage patterns; measurement of whether transparency access enables substantive challenge",
+      "impact": "If transparency = prediction explanation: current explanations (LIME/SHAP) may be sufficient, reducing extraction classification. If transparency = enabling redress: post-hoc explanations are insufficient, confirming snare classification for subjects. If transparency = aggregate bias detection: current practice is minimal theater.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Definition of meaningful transparency in classification context"
+    },
+    {
+      "id": "accuracy_opacity_empirical_claim",
+      "question": "Is the accuracy-opacity tradeoff an empirical regularity or a modeling artifact shaped by optimization pressures and data practices?",
+      "resolution_mechanism": "Systematic comparison of accuracy metrics for interpretable models (decision trees, linear models, rule-based systems) vs opaque models across diverse domains, controlling for optimization effort and computational budget allocation",
+      "impact": "If tradeoff is empirical law: opacity is structurally necessary, mountain classification valid for accuracy-optimizing constraints. If artifact: opacity is choice, enabling scaffold/rope classifications where transparency is mandated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether accuracy-opacity tradeoff is inherent or artifact"
+    },
+    {
+      "id": "interpretability_theater_prevalence",
+      "question": "How widespread is post-hoc explainability theater (explanations that predict but don't reveal model logic) as a regulatory compliance strategy?",
+      "resolution_mechanism": "Audit of deployed explanation systems: test whether users/regulators can identify and challenge model bias using provided explanations; comparison of bias detection rates with and without formal explanations",
+      "impact": "If theater is dominant: piton classification confirmed, suppression value should increase as theater deepens. If genuine explanations deployed: snare classification downgrades, rope/tangled_rope upgrade.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Prevalence of post-hoc explainability as compliance theater"
+    },
+    {
+      "id": "regulatory_capture_timeline",
+      "question": "At what point do deploying organizations capture the standards-setting process, converting mandatory transparency into procedural compliance with minimal functional constraint?",
+      "resolution_mechanism": "Historical analysis of standard-setting bodies (NIST AI RMF, ISO 42001, industry consortia); measure industry vs civil society representation and outcome bias in interpretability standards",
+      "impact": "If capture occurs <5 years: scaffold sunset fails, constraint devolves to piton. If capture delayed >10 years: scaffold timeline valid, genuine transition to constrained opacity possible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline of regulatory capture in transparency standards"
+    },
+    {
+      "id": "identity_lock_in_affected_communities",
+      "question": "Do affected communities internalize algorithmic decision-making as inevitable/legitimate, reducing mobilization capacity below structural constraint level would suggest?",
+      "resolution_mechanism": "Survey of challenge rates among classified subjects; qualitative analysis of perceived legitimacy of algorithmic vs human decisions; measurement of organizational capacity for collective action against algorithmic harm",
+      "impact": "If identity lock strong: organized perspectives (advocacy coalition) should downgrade from tangled_rope to constrained/trapped, reducing effective mobilization. If weak: coalition power confirmed.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Identity fusion with algorithmic legitimacy among affected communities"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "AI transparency in classification systems creates a structural conflict between the deploying organizations' interest in opacity (accuracy maximization, competitive advantage, reduced auditability) and the classified subjects' interest in understanding and challenging decisions that affect credit access, criminal risk assessment, hiring, housing, and benefits eligibility. The constraint combines genuine coordination problems (how to explain complex statistical decisions) with extractive mechanisms (opacity maintained after transparency is technically feasible). The theater_ratio trajectory (0.35 \u2192 0.68) reveals regulatory capture dynamics: early transparency mandates (GDPR, algorithmic impact assessments) were framed as requiring genuine disclosure, but industry response has been to deploy post-hoc explainability methods (LIME, SHAP, model cards) that satisfy compliance paperwork without enabling substantive challenge. The constraint is tangled_rope at its core: deploying organizations genuinely need coordination mechanisms to communicate model behavior, but the enforcement of transparency has evolved into a ritual that preserves opacity while signaling compliance. Classified subjects remain trapped with no meaningful redress even when explanations are provided, because the explanations reveal correlations without enabling identification of discriminatory patterns or grounds for challenge.",
+    "key_agents": [
+      "Classified Individuals: Primary victims (powerless/trapped) \u2014 subject to algorithmic classification with no understanding, challenge rights, or exit; bear maximum suppression",
+      "Deploying Organizations: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from opacity during compliance window; can deploy explainability theater to satisfy mandates while maintaining opacity",
+      "Regulatory Bodies: Secondary agent (moderate/constrained) \u2014 must enforce transparency but lack technical capacity; face sustained extraction through complexity and lobbying",
+      "Affected Communities Advocacy Coalition: Organized agents (organized/constrained) \u2014 can mobilize around documented bias but face regulatory capture and coordination problems",
+      "Progressive Regulatory Jurisdictions: Temporary actor (powerful/mobile) \u2014 implementing genuinely constraining transparency regimes with sunset logic",
+      "Standards-Setting Bodies: Institutional actors (institutional/arbitrage) \u2014 vulnerable to regulatory capture; currently weighted toward industry",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing accuracy-opacity tradeoff as law rather than modeling choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The deploying organization captures disproportionate benefits during the transparency window \u2014 they control what is explained, how explanations are framed, and what evidence qualifies as 'auditing.' Post-hoc explanations are technically feasible but withheld; when provided, they explain predictions without revealing training data or feature importance that would enable bias detection. The extraction is not maximal (0.72+) because genuine coordination problems exist and some transparency gains have occurred, but the primary function of regulatory compliance is to signal rather than enable oversight. Suppression (0.65): High. Multiple suppression mechanisms: (a) technical complexity exceeding subject and regulator capacity, (b) proprietary claims blocking access to model internals, (c) appeal procedures that do not address algorithmic opacity, (d) procedural compliance theater replacing substantive redress, (e) chilling effects where subjects internalize algorithmic decisions as legitimate/inevitable. Theater ratio (0.68): High-moderate. Explainability reports, model cards, and post-hoc interpretability methods are substantially performative \u2014 they create the appearance of transparency while preserving the opacity that enables extraction. As transparency mandates have spread, industry response has been to weaponize interpretability: deploy just enough explanation to pass compliance audits, structure explanations to be technically accurate but strategically opaque about discriminatory patterns. The trajectory (0.35 \u2192 0.68) shows theater increasing as compliance pressure increases, following classic Goodhart's law \u2014 the compliance metric (providing some explanation) substitutes for the actual function (enabling challenge).",
+    "perspectival_gap": "This constraint demonstrates a stark perspectival divergence based on structural position. Classified subjects experience pure extraction (Snare) \u2014 they bear costs with no understanding or exit. Regulatory bodies experience mixed coordination-extraction (Tangled Rope) \u2014 they are ostensibly solving the transparency problem but are starved of resources and capacity. Deploying organizations experience coordination (Rope) \u2014 they frame transparency as solving a genuine problem (how to explain ML) while maintaining opacity through post-hoc methods. Organized advocacy groups experience extraction embedded in seeming coordination (Tangled Rope) \u2014 transparency exists as a lever for mobilization, but regulatory capture undermines leverage. Progressive regulatory regimes see a temporary problem with a solution path (Scaffold) \u2014 as interpretable models mature and accuracy parity improves, opacity becomes indefensible. The compliance theater system sees its own degradation (Piton) \u2014 explainability methods persist through institutional inertia (regulatory satisfaction) despite low functional value. The analytical observer risks naturalizing the accuracy-opacity tradeoff as computational law rather than a choice shaped by optimization culture and deployment incentives. This perspectival range reveals that the same constraint is experienced as five different types simultaneously \u2014 the classification outputs are not inconsistent, they are perspectival.",
+    "directionality_logic": "Directionality values are derived from structural position relative to the extraction flow. Classified subjects (powerless/trapped) receive d \u2248 0.95 (maximum target status): they are trapped by suppression, cannot exit, and bear extraction with no counter-leverage. Regulatory bodies (moderate/constrained) receive d \u2248 0.65 (high target status): they nominally govern the constraint but face technical barriers and lobbying pressure that reduce their capacity to enforce genuine transparency. Deploying organizations (institutional/arbitrage) receive d \u2248 0.10 (strong beneficiary status): they control what transparency means, have arbitrage options (post-hoc methods, jurisdiction shopping, technical sophistication), and capture most regulatory benefit. Advocacy coalitions (organized/constrained) receive d \u2248 0.50 (symmetric with organizing potential): they have no direct extraction target but can mobilize around documented harm; leverage is constrained by regulatory capture. The progressive regulatory regime (powerful/mobile) receives d \u2248 0.35 (beneficiary-leaning): they have resource and enforcement capacity to implement genuine constraints, but limited timeline before capture. The explainability compliance theater is classified at institutional/arbitrage (d \u2248 0.10), capturing the insider role of industry-led standards without experiencing external extraction.",
+    "mandatrophy_analysis": "TANGLED ROPE CONFIRMATION: This constraint resolves mandatrophy by showing genuine coordination function (explaining complex model behavior) embedded in asymmetric extraction (opacity maintained through complexity despite transparency mandates). The key diagnostic: (1) Deploying organizations sincerely need to communicate model behavior to regulators, which is a real coordination problem \u2014 transparency addresses this. (2) But the industry solution to transparency mandates is post-hoc explainability theater \u2014 technically compliant but functionally preserving opacity. (3) Classified subjects have no meaningful increase in understanding or challenge capacity despite mandates. (4) The constraint requires active enforcement (regulatory oversight of explainability methods), confirming tangled_rope gate requirement. Mandatrophy arises when the constraint could be misclassified as pure Rope (genuine coordination, no extraction) if one focuses only on the formal mandate. But the structural data shows active asymmetry: deploying organizations capture the definition of transparency, control what is explained and how, and maintain opacity despite technical feasibility of greater disclosure. This is not pure coordination; it is coordination captured by the beneficiary to serve extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_bias_in_hiring",
+      "credit_risk_assessment_opacity",
+      "criminal_risk_prediction_systems",
+      "content_moderation_decision_making"
+    ],
+    "dual_formulation_note": "AI transparency in classification is upstream of specific domain applications (hiring, credit, criminal justice, content moderation). Each domain-specific constraint has its own extractiveness value reflecting empirical outcomes in that domain, but all share the same structural transparency constraint at the meta level. The decomposition is necessary because opacity effects vary by domain: criminal risk assessment opacity creates life-altering extraction, while content moderation opacity creates speech harms. The transparency constraint story models the general mechanism; domain-specific stories model empirical effects."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

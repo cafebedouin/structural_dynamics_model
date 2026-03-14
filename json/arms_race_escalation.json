@@ -1,0 +1,207 @@
+{
+  "header": {
+    "constraint_id": "arms_race_escalation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "arms"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Arms Race Escalation Dynamic",
+    "topic_domain": "geopolitical/military/security",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "defense_contractors",
+      "military_establishments"
+    ],
+    "victims": [
+      "civilian_populations",
+      "economic_development_capacity",
+      "global_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Civilian Population Under Escalation",
+      "comment": "PERSPECTIVE 1: CIVILIAN POPULATION (SNARE) \u2014 Bears full cost of escalation through military spending diversion, nuclear risk, and resource scarcity. No exit option; cannot opt out of living in a militarizing world. Maximum extraction with suppression via threat perception and geopolitical framing."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Global Stability (Abstract Collective)",
+      "comment": "PERSPECTIVE 2: GLOBAL STABILITY COMMONS (SNARE) \u2014 Abstract collective good with no agent to represent it; no exit from the escalation logic. Bears cost of reduced predictability, increased accident risk, and resource depletion. Trapped on a civilizational timescale."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Allied Military Establishment",
+      "comment": "PERSPECTIVE 3: ALLIED MILITARY ESTABLISHMENT (TANGLED ROPE) \u2014 Simultaneously experiences coordination (deterrence function) and extraction (funding, institutional power, autonomy). Exit is constrained by treaty obligations and threat perception. Benefits from arms race through budgetary increase and geopolitical relevance, but also bears cost of maintaining readiness and risk escalation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Defense Contracting Sector",
+      "comment": "PERSPECTIVE 4: DEFENSE CONTRACTORS (ROPE) \u2014 Primary beneficiary; experiences the constraint as pure coordination. Solves the problem of supplying military capability; extracts value through contracts and sustained demand. Arbitrage exit option \u2014 can shift production to non-military supply if political conditions change. Net beneficiary position."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "label": "Adversary State Apparatus",
+      "comment": "PERSPECTIVE 5: ADVERSARY STATE APPARATUS (TANGLED ROPE, IDENTITY-LOCKED) \u2014 Experiences both coordination (genuine security deterrence against perceived threats) and extraction (institutional autonomy, diversion of resources, geopolitical status). Exit is constrained not by material barriers but by identity fusion: the state's legitimacy narrative is constituted through security positioning. Cannot exit escalation without redefining state identity."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Mutual Assured Destruction Doctrine",
+      "comment": "PERSPECTIVE 6: MAD DOCTRINE (PITON) \u2014 Cold War-era strategic logic that persists through institutional inertia despite reduced empirical basis (more actors, more instability, more accident risk). Theater ratio high (0.58) \u2014 doctrinal rehearsal, strategic communication, and threat narratives constitute much of the constraint's functional content. Genuine deterrence function degraded; institutional maintenance remains."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Security Dilemma View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / SECURITY DILEMMA NATURAL LAW (MOUNTAIN) \u2014 From civilizational scale, the arms race escalation appears as an immutable feature of international anarchy: without a central authority, actors cannot credibly commit to non-escalation, so mutual escalation becomes rational. This perspective risks naturalizing what is actually a contingent institutional-political arrangement. The engine's false summit detector will identify whether this classification survives structural scrutiny."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "security_dilemma_empirical_necessity",
+      "question": "Is escalation an inevitable consequence of international anarchy, or a choice enabled by institutional structures that could be reformed?",
+      "resolution_mechanism": "Comparative historical analysis of de-escalation successes (Cold War end, arms control agreements); identification of structural conditions that permit mutual restraint vs those that force escalation",
+      "impact": "If inevitable (natural law): mountain classification sustained; policy optimization focuses on stability within escalation. If contingent: snare classification from analytical perspective; policy optimization focuses on structural reform to permit de-escalation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether arms race escalation is structurally inevitable or contingent on institutional choice"
+    },
+    {
+      "id": "defense_spending_fungibility",
+      "question": "What proportion of military spending diversion from civilian sectors is extractive overhead vs legitimate security investment?",
+      "resolution_mechanism": "Cost-benefit analysis of actual military capabilities vs stated deterrence functions; measurement of security improvement per dollar spent; comparison to civilian infrastructure ROI",
+      "impact": "If primarily extractive (>70%): victimization of civilian populations confirmed, snare classification strengthened. If primarily legitimate (>50% genuine security): tangled rope classification more appropriate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "What fraction of military spending is extractive overhead vs legitimate security"
+    },
+    {
+      "id": "adversary_perception_calibration",
+      "question": "To what degree does escalation reflect accurate threat perception vs identity-locked threat inflation by state apparatus?",
+      "resolution_mechanism": "Intelligence assessment of actual adversary capabilities vs stated threat levels; measurement of threat narrative consistency with classified intelligence; analysis of domestic political incentives for threat inflation",
+      "impact": "If accurate perception: tangled rope with genuine coordination function. If substantially inflated: snare with suppression via manufactured fear; identity_locked classification gains empirical support.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether threat perception driving escalation is accurate or inflated by institutional interests"
+    },
+    {
+      "id": "de_escalation_coordination_feasibility",
+      "question": "Can mutual de-escalation be achieved through institutional mechanisms without unilateral vulnerability, or is escalation irreversible once initiated?",
+      "resolution_mechanism": "Game-theoretic analysis of de-escalation pathways; historical precedent analysis (Soviet collapse, INF Treaty); negotiation simulation under asymmetric information",
+      "impact": "If feasible: scaffold perspective gains reality (sunset is possible); policy recommendation shifts to de-escalation coordination. If infeasible: snare classification confirmed; only mitigation strategies available.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether de-escalation is institutionally achievable or irreversible"
+    },
+    {
+      "id": "technological_acceleration_floor",
+      "question": "Is there a technological advancement speed threshold beyond which escalation dynamics become deterministic rather than choice-based?",
+      "resolution_mechanism": "Analysis of AI, autonomous weapons, and precision strike acceleration rates; measurement of decision timescales vs technological timescales; identification of critical threshold where human control is effectively lost",
+      "impact": "If threshold approaching: mountain classification from technological perspective (immutable physics of acceleration). If threshold distant: snare classification sustained (political choice remains).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether technological acceleration creates deterministic escalation threshold"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The arms race escalation dynamic represents a structural trap where rational individual actor choices (military establishments securing deterrence capability, defense contractors meeting demand, states protecting sovereignty) collectively produce irrational aggregate outcomes (resource diversion, instability increase, accident risk). The constraint exhibits dual extraction pathways: direct (funding capture by military-industrial complex) and indirect (suppression of alternative security models through threat inflation and identity lock). The extractiveness score (0.68) reflects sustained institutional capture of government resources, but with some reversibility \u2014 historical examples (Cold War de-escalation, arms control treaties) demonstrate that escalation is not immutable. Theater ratio (0.58) indicates that significant portions of defense spending constitute performative signaling (doctrine rehearsal, threat communication, strategic ambiguity maintenance) rather than functional capability. The constraint multiplies across multiple time horizons: biographical (immediate threat perception drives citizen compliance), generational (military industrial complex becomes institutionalized), civilizational (international anarchy framing naturalizes escalation as inevitable). Perspectives diverge sharply: beneficiaries (defense contractors, military establishments) experience rope or tangled rope (coordination with extraction); victims (civilian populations, global stability) experience snare (pure extraction with no exit); analytical observers risk mountain classification (security dilemma as natural law) which may be a false summit.",
+    "key_agents": [
+      "Civilian Populations: Primary victims (powerless/trapped) \u2014 bear cost of military spending diversion, nuclear risk, and resource scarcity with no exit option",
+      "Defense Contractors: Primary beneficiary (institutional/arbitrage) \u2014 capture sustained demand and government funding; can exit if political conditions change",
+      "Military Establishments: Secondary beneficiary (organized/constrained) \u2014 gain budgetary increase and geopolitical relevance; constrained by alliance obligations and threat perception",
+      "Adversary State Apparatus: Mixed actor (organized/identity_locked) \u2014 experiences coordination (genuine deterrence) and extraction (institutional autonomy); cannot exit without identity redefinition",
+      "Global Stability Commons: Victim (powerless/trapped) \u2014 abstract collective good bearing cost of increased unpredictability and accident risk",
+      "Analytical Observer: Risk naturalization (analytical/analytical) \u2014 security dilemma framing risks treating contingent institutional choices as inevitable natural law"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and rising. Base extraction reflects sustained institutional capture of government resources by defense sector and military establishments. The measurement trajectory (0.35 \u2192 0.68 over 30 years) shows accumulation consistent with institutional drift \u2014 as military-industrial complex becomes more entrenched, more spending becomes structurally justified. The extracted value flows to defense contractors (contracts), military establishments (budget increase, autonomy), and state apparatus (geopolitical positioning). Civilian populations and economic development capacity bear the cost. Suppression (0.72): Very high. Escalation logic is maintained through multiple suppression mechanisms: (1) threat narrative inflation by state apparatus and military establishments, (2) identity lock preventing alternative security models from being imagined, (3) technological determinism framing (acceleration as inevitable), (4) rationality justification (security dilemma makes escalation 'rational'), (5) temporal distribution (immediate threat perception vs long-term instability cost). Theater ratio (0.58): Moderate-high. Significant portions of military spending constitute performative activity: doctrine rehearsal, strategic communication, threat signaling, military posturing. But some genuine deterrence function exists, preventing full piton classification. The rising theater trajectory (0.42 \u2192 0.58) indicates increasing performative content relative to functional capability \u2014 doctrinal theater substitutes for actual force readiness in signaling deterrence.",
+    "perspectival_gap": "This constraint shows maximum perspectival divergence. Defense contractors (institutional/arbitrage) see Rope \u2014 solving the coordination problem of supplying deterrence capability. Military establishments (organized/constrained) see Tangled Rope \u2014 genuine deterrence coordination mixed with institutional capture. Adversary state apparatus (organized/identity_locked) also see Tangled Rope but with critical difference: their exit is blocked not by material barriers but by identity fusion with security positioning; their classification at identity_locked differs from the military establishment's constrained exit. Civilian populations (powerless/trapped) and global stability (powerless/trapped) see Snare \u2014 pure extraction with no exit option. The analytical observer at civilizational scale risks seeing Mountain (security dilemma as inevitable natural law) \u2014 but this is a false summit if empirically, historical de-escalation and institutional reform are feasible. The perspectival gap reveals how the same structural phenomenon (military capability building) is experienced as coordination by beneficiaries, mixed coordination-extraction by military establishments with institutional interests, and pure extraction by victims. The identity_locked classification for adversary state is critical: this actor cannot exit through arbitrage (like contractors) because their state identity is constituted through security positioning.",
+    "directionality_logic": "Directionality values (d) are derived from each agent's structural relationship to the constraint: beneficiary status (low d), victim status (high d), and exit options. Defense contractors are beneficiaries with arbitrage exit (d \u2248 0.05) \u2014 they experience negative effective extraction (constraint subsidizes them). Military establishments are beneficiary-victims with constrained exit (d \u2248 0.45) \u2014 they benefit from institutional autonomy and budget, but are partially trapped by alliance obligations and threat perception (moderate extraction). Adversary state apparatus is identity-locked; structural derivation would place them as constrained/mixed (d \u2248 0.55), but identity lock prevents exercising arbitrage exit \u2014 they cannot redefine state security position without identity dissolution. Civilian populations are victims with trapped exit (d \u2248 0.95) \u2014 maximum extraction, maximum suppression. The piton classification derives not from high d but from theater_ratio gate (0.58 \u2265 0.70 threshold not met, but close); MAD doctrine persists through institutional inertia despite degraded deterrence function.",
+    "mandatrophy_analysis": "SNARE AS DOMINANT CLASSIFICATION: The constraint resolves mandatrophy by identifying defense contractors as primary beneficiaries with genuine arbitrage exit (not trapped), and civilian populations as primary victims with no exit. This satisfies snare gates: extractiveness (0.68 \u2265 0.46), suppression (0.72 \u2265 0.60), \u03c7 projected \u2265 0.66. The tangled rope perspectives (military establishments, adversary state) represent secondary positions with mixed extraction-coordination functions; these do not override the snare classification because snare gates are satisfied from the primary victim perspective. IDENTITY LOCK DIAGNOSIS: The adversary state apparatus classification at identity_locked (rather than constrained) is diagnostically critical. If the state were merely constrained, they could exit through arbitrage \u2014 negotiated de-escalation, arms control treaties, diplomatic settlement. But identity_locked indicates the state's legitimacy narrative cannot tolerate appearing to back down or accept reduced security positioning. This makes de-escalation coordination difficult (requires identity reframing, not just cost-benefit recalculation). INSTITUTIONAL CAPTURE: The military-industrial complex satisfies tangled rope criteria from the military establishment perspective (coordination + extraction + enforcement), not rope, because significant extraction occurs and suppression is high. From defense contractor perspective, the constraint is pure rope (no enforcement needed, voluntary participation). PITON RISK: The theater_ratio (0.58) is approaching piton threshold (0.70). If doctrine theater rises above 0.70 while actual deterrence function declines, the constraint would reclassify as piton (institutional inertia maintaining degraded ritual). Historical precedent: Cold War MAD doctrine became increasingly performative in final years as Soviet capacity to maintain credible deterrence declined, yet escalation continued through doctrinal inertia."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "military_industrial_complex_capture",
+      "nuclear_proliferation_dynamics",
+      "defense_budget_fungibility_constraint"
+    ],
+    "dual_formulation_note": "Arms race escalation decomposes into three structurally distinct constraints: (1) military-industrial complex institutional capture (\u03b5 \u2248 0.65, snare from contractor perspective, tangled rope from military perspective), (2) nuclear proliferation as separate escalation driver (\u03b5 \u2248 0.58, with different beneficiary structure), (3) defense budget competition with civilian development (\u03b5 \u2248 0.60, zero-sum resource allocation). This constraint story focuses on the systemic escalation dynamic; network links to the domain-specific instantiations."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ]
+}

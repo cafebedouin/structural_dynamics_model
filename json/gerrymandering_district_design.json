@@ -1,0 +1,204 @@
+{
+  "header": {
+    "constraint_id": "gerrymandering_district_design",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gerrymander"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Gerrymandering and District Design Constraint",
+    "topic_domain": "political_system/electoral_mechanics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_party_apparatus",
+      "partisan_cartographers"
+    ],
+    "victims": [
+      "minority_voters",
+      "competitive_districts",
+      "electoral_accountability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Minority Voters in Packed/Cracked Districts",
+      "comment": "PERSPECTIVE 1: MINORITY VOTERS (SNARE) \u2014 Trapped by district boundaries that either pack them into non-competitive districts (supermajority waste) or crack them across multiple districts where their voting power is diluted below meaningful influence. Cannot exit the constraint; their vote's effective power is structurally diminished. Zero degrees of freedom. Maximum extraction: political voice is appropriated for the benefit of the incumbent party while maintaining formal democratic appearance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Competitive District Voters (Mobile Persuadables)",
+      "comment": "PERSPECTIVE 2: COMPETITIVE DISTRICT VOTERS (TANGLED ROPE) \u2014 Genuinely compete for influence in a small number of swing districts designed to be marginal. Their votes drive electoral outcomes (coordination function: the system aggregates preferences through competitive districts). However, they are also extracted from \u2014 the majority of districts are pre-determined, meaning their individual votes outside competitive zones are rendered performative. Mixed extraction and coordination depending on whether they live in competitive or non-competitive districts."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Incumbent Party Apparatus",
+      "comment": "PERSPECTIVE 3: INCUMBENT PARTY APPARATUS (ROPE) \u2014 Direct beneficiary with arbitrage options. The constraint solves the coordination problem: how to aggregate scattered supporters into districts where they constitute voting majorities. The party perceives the constraint as enabling \u2014 district design translates voter preferences into reliable legislative seats, creating supermajorities from relatively balanced statewide popular votes. Net beneficiary. Can always re-gerrymander after census if performance declines, so exit options remain viable."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Opposition Party (Out of Power)",
+      "comment": "PERSPECTIVE 4: OPPOSITION PARTY OUT OF POWER (TANGLED ROPE) \u2014 Constrained: cannot exit the electoral system but also faces the coordination problem of assembling majorities within the existing district map. If gerrymandered against, they experience high extraction. But they also benefit from the same district-based coordination logic \u2014 if they win the statewide popular vote decisively, they can convert that into legislative control despite the incumbent's map advantage. Asymmetric extraction: one side benefits more depending on current partisan alignment."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Redistricting Reform Advocates",
+      "comment": "PERSPECTIVE 5: REDISTRICTING REFORM ADVOCATES (SCAFFOLD) \u2014 Organized actors (Common Cause, Fair Districts coalitions, courts) see the constraint as temporary and solvable through: (1) independent redistricting commissions, (2) algorithmic fairness constraints, (3) constitutional amendment. Their perspective frames gerrymandering as a contingent institutional practice vulnerable to reform. They possess agency and a visible exit pathway (sunset via commissions or software), so experienced extraction is lower \u2014 the constraint is perceived as changeable within the biographical horizon. Has clear sunset: roughly 10-20 years as commission model spreads and judicial intervention increases."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "State Election Administration",
+      "comment": "PERSPECTIVE 6: STATE ELECTION ADMINISTRATION (PITON) \u2014 Institutions responsible for implementing district maps experience the constraint as degraded ritual. The administrative machinery (census, redistricting commissions, precinct assignment) persists through legal requirement and historical precedent, but its function has atrophied as gerrymandering has evolved. The constraint is maintained through institutional inertia \u2014 election commissions and secretaries of state manage the process, but the optimization happens outside the administrative apparatus (private consultants, partisan groups). Theater ratio is moderate-high: substantial administrative performance (hearings, public comment, statutory reviews) with limited actual constraint on partisan optimization."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Implicit Majoritarian Trap)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / IMPLICIT MAJORITARIAN TRAP (MOUNTAIN) \u2014 From a civilizational view, district-based representation may appear as an immutable structural requirement: to aggregate geographically distributed populations into collective decision units, some form of spatial clustering is necessary. Geographic representation creates an inherent tension between proportionality and representation. This perspective risks naturalizing the contingent choice of district-based apportionment (rather than proportional or other systems) as a natural law of federalism. However, the structural data reveals this as false summit: the choice of district-based representation is institutional, not natural \u2014 other democracies use proportional or mixed systems with lower gerrymandering extractiveness."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "proportionality_threshold",
+      "question": "What deviation from proportional representation (state popular vote to legislative seat share) constitutes extractive gerrymandering vs. natural variance from district-based representation?",
+      "resolution_mechanism": "Comparative analysis: seat-vote curves across states with different redistricting regimes; cross-national comparison with proportional systems; statistical simulation of random district assignments",
+      "impact": "If threshold < 5%: many legitimately compact districts misclassified as extraction. If threshold > 15%: significant partisan asymmetry passes unchallenged as 'natural' variance.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Threshold for distinguishing extraction from natural variance in district-based representation"
+    },
+    {
+      "id": "compactness_vs_optimization_tradeoff",
+      "question": "Can computationally optimal (minimal partisan asymmetry) district maps be visually compact, or does minimizing partisan advantage require sacrificing traditional compactness criteria?",
+      "resolution_mechanism": "Algorithmic generation of minimally partisan maps; evaluation against historical compactness metrics; judicial precedent analysis of compactness as antidote to gerrymandering",
+      "impact": "If achievable: compactness can serve as constraint on partisan optimization (rope coordination tool). If not achievable: compactness is theater masking partisan intent (piton degradation).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether compactness and partisan fairness are compatible optimization targets"
+    },
+    {
+      "id": "minority_vote_dilution_mechanism",
+      "question": "Does vote dilution of minority voters in packed/cracked districts occur primarily through intentional partisan targeting or as inevitable byproduct of district-based systems with geographic segregation?",
+      "resolution_mechanism": "Comparative mapping: districts drawn with and without partisan data; analysis of pre- vs post-Voting Rights Act minority representation; cross-national comparison of minority representation under different electoral systems",
+      "impact": "If primarily intentional: gerrymandering is malicious extraction (snare). If primarily structural: minority representation problem persists even under 'neutral' redistricting (tangled rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether minority vote dilution is intentional targeting or structural byproduct"
+    },
+    {
+      "id": "commission_independence_achievability",
+      "question": "Can independent redistricting commissions achieve genuine partisan neutrality, or do they inevitably reproduce partisan outcomes through seemingly neutral criteria (compactness, communities of interest)?",
+      "resolution_mechanism": "Comparative analysis of commission-drawn maps vs partisan-drawn maps for seat-vote curves; historical tracking of commission performance across states; mechanism analysis of how 'neutral' criteria encode partisan preference",
+      "impact": "If achievable: scaffold sunset is structurally sound \u2014 commissions represent genuine exit from extraction. If not achievable: scaffold is theater masking persistent partisan control through procedural neutrality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether independent commissions can achieve genuine partisan neutrality"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Gerrymandering \u2014 the deliberate manipulation of electoral district boundaries to achieve partisan advantage \u2014 exhibits the core tension between coordination and extraction. District-based representation inherently requires aggregating geographically distributed voters into collective units; gerrymandering exploits this by manipulating where those boundaries fall. The constraint solves a genuine coordination problem (how to convert scattered voter preferences into legislative outcomes) while simultaneously extracting through asymmetric benefit to the party controlling redistricting. It is neither pure coordination (rope) nor pure extraction (snare), but a hybrid (tangled rope) where the coordination function is inseparable from the asymmetric extraction. The extractiveness has increased over the measurement interval as computational mapping techniques have enabled more precise partisan targeting. Theater ratio has risen as the administrative machinery (commissions, public hearings, statutory reviews) has elaborated while actual constraint on partisan optimization has declined \u2014 the performance of neutral redistricting has grown while the function has atrophied. The constraint demonstrates how all six DR types are legitimate perspectival readings: gerrymandering appears as an immutable natural consequence of geographic representation (mountain, falsely), as necessary coordination for party aggregation (rope, from incumbent perspective), as temporary problem solvable through commissions (scaffold), as degraded ritual (piton), as mixed coordination-extraction (tangled rope, from swing voter perspective), and as pure extraction (snare, from trapped minority voter perspective).",
+    "key_agents": [
+      "Minority Voters: Primary victims (powerless/trapped) \u2014 experience vote dilution through packing (supermajority waste) or cracking (sub-threshold dispersal); cannot exit or organize effective remedy",
+      "Competitive District Voters: Secondary victims/beneficiaries (moderate/constrained) \u2014 swing voters whose preferences determine elections, but outnumbered by voters in non-competitive districts rendered performative",
+      "Incumbent Party Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 controls redistricting process and captures asymmetric legislative advantage; can re-optimize after census",
+      "Opposition Party Out of Power: Constrained victim (powerful/constrained) \u2014 faces gerrymandered map but also benefits from same district coordination if they win statewide majority decisively",
+      "Redistricting Reform Advocates: Organized agent (organized/constrained) \u2014 court systems, voting rights groups, independent commission coalitions building alternative institutional pathways",
+      "State Election Administration: Institutional maintainer (institutional/arbitrage) \u2014 executes redistricting process through legal/administrative machinery increasingly decoupled from actual partisan optimization",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing district-based representation as immutable rather than contingent institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high and rising. Gerrymandering extracts political voice from disfavored voters through asymmetric district design, converting relatively balanced statewide popular votes into lopsided legislative majorities. The extraction has increased over the interval as mapping technology has enabled more precise partisan targeting \u2014 early redistricting (t=0) was cruder, allowing more unintended competitive districts; modern redistricting (t=6) uses precinct-level microtargeting to optimize partisan advantage. Suppression (0.65): Moderately high. Minority voters face substantial barriers to remedying their diluted vote: changing residency is expensive, litigation is lengthy and uncertain, ballot initiatives for commissions face partisan opposition, federal Voting Rights Act protections have been weakened by recent Court decisions. Theater ratio (0.48): Moderate. The administrative machinery of redistricting (census, hearings, public comment, statutory reviews) creates appearance of neutral technical process, but the actual optimization happens through proprietary mapping software controlled by partisan actors. The growth from 0.32 to 0.48 reflects increasing disconnect between administrative ritual and partisan outcome optimization.",
+    "perspectival_gap": "The constraint's perspectival gap reveals how the same structural mechanism (district boundary design) produces fundamentally different classifications. The incumbent party sees rope \u2014 coordination that enables representation. The opposition sees tangled rope \u2014 mixed coordination and extraction depending on whether the map favors them. Minority voters see snare \u2014 pure extraction with no escape route. Reform advocates see scaffold \u2014 temporary extractive practice vulnerable to sunset through commissions and algorithms. The electoral administration sees piton \u2014 a degraded ritual maintained through procedural precedent despite atrophied coordination function. The analytical observer risks seeing mountain \u2014 naturalizing geographic representation's inherent geometry as immutable. The perspectival range (snare to rope to mountain) for identical structural data demonstrates that classification is indexical: it depends on the observer's structural position and available exits. No single type is 'the' answer; the presheaf over observation positions is.",
+    "directionality_logic": "The beneficiary/victim structure drives directionality computation. Incumbent parties are declared beneficiaries \u2014 they capture the legislative advantage. Minority voters and non-competitive general voters are declared victims \u2014 their votes are rendered sub-threshold or supermajority-waste. Electoral accountability (the principle that legislative outcome should reflect voter preference distribution) is a victim \u2014 gerrymandering breaks this feedback. This structure produces high d for victims (trapped exit \u2248 0.95), low d for beneficiaries (arbitrage exit \u2248 0.15), and intermediate d for constrained actors (opposition parties \u2248 0.55). The sigmoid f(d) translates these to experienced extractiveness values consistent with the perspectival classifications. No directionality overrides are required \u2014 the derivation chain produces coherent assignments.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing how multiple classifications coexist as legitimate perspectival readings of the same base properties. The snare classification (from minority voter perspective) is not 'wrong' because the tangled rope or scaffold classifications also apply from other perspectives. Rather, the framework explains why these coexist: gerrymandering genuinely solves a coordination problem (representing geographically distributed populations) while simultaneously enabling asymmetric extraction (concentrating power in the gerrymandering party). Both functions are real. The snare perspective emphasizes the extraction; the rope perspective emphasizes the coordination. The mandate is not to choose one, but to understand the constraint as a hybrid that cannot be decomposed into pure coordination or pure extraction without losing structural accuracy. The false summit risk (mountain classification) is flagged by noting that other electoral systems (proportional representation, mixed systems) produce lower extractiveness while solving similar coordination problems. Geographic representation is institutional choice, not natural law. The scaffold classification is empirically grounded: independent commissions and algorithmic fairness constraints are demonstrably reducing partisan advantage in some states, giving real sunset structure to the constraint."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "campaign_finance_asymmetry",
+      "voter_suppression_targeting",
+      "minority_representation_gap"
+    ],
+    "dual_formulation_note": "Gerrymandering is downstream of the structural choice to use district-based representation rather than proportional or mixed systems. The upstream constraint is the electoral system choice itself; gerrymandering is the extractive exploitation of that system's geometry. The campaign finance constraint shares beneficiaries (incumbent party apparatus) and is causally linked: gerrymandering reduces competitive districts, reducing the cost of maintaining power. The voter suppression targeting constraint can be deployed selectively against minorities in packed/cracked districts. The minority representation gap is a direct outcome of gerrymandering."
+  },
+  "directionality_overrides": []
+}

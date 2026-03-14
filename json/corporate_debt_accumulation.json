@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "corporate_debt_accumulation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "corpdebt"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Corporate Debt Accumulation and Shareholder-Creditor Extraction",
+    "topic_domain": "financial_economics/corporate_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "equity_holders",
+      "corporate_management",
+      "financial_intermediaries"
+    ],
+    "victims": [
+      "creditors",
+      "employees",
+      "taxpayers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Trapped Creditor",
+      "comment": "PERSPECTIVE 1: TRAPPED CREDITOR (SNARE) \u2014 Bondholders and lenders face seniority dilution, covenant erosion, and refinancing risk with minimal recourse. Once capital is deployed, exit is costly and illiquid. Asymmetric information favors management; debt terms are set ex-ante and cannot adjust as leverage increases. The constraint appears as pure extraction: management captures surplus through leverage arbitrage while creditors absorb tail risk."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Implicit Guarantor (Taxpayers)",
+      "comment": "PERSPECTIVE 2: IMPLICIT GUARANTOR / TAXPAYERS (SNARE) \u2014 Creditors are often protected by implicit government guarantees ('too big to fail'). When leverage becomes unsustainable, taxpayers absorb losses through bailouts or defaults that cascade through the financial system. Taxpayers cannot exit this constraint \u2014 they are trapped by their status as citizens. Their extraction is structurally involuntary and uncompensated."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Incumbent Employee",
+      "comment": "PERSPECTIVE 3: INCUMBENT EMPLOYEE (TANGLED ROPE) \u2014 Workers benefit from firm coordination (stable employment, wage income, skill development) but also bear wage suppression, reduced investment in productivity growth, and layoff risk as debt service claims resources. They have some exit optionality (labor market mobility) but face real costs: relocation, retraining, opportunity loss. The constraint is mixed: genuine coordination (the firm exists) combined with extraction (leverage-driven austerity)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Equity Holder / Management",
+      "comment": "PERSPECTIVE 4: EQUITY HOLDER / MANAGEMENT (ROPE) \u2014 Shareholders and managers benefit from leverage: increased returns on equity through financial engineering, tax deductibility of interest, ability to sustain distributions while underlying business deteriorates. Exit is costless (sell shares or change roles). The constraint appears as pure coordination from this perspective: debt enables capital allocation and risk management. Extraction runs toward this agent, not away."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Financial Intermediary",
+      "comment": "PERSPECTIVE 5: FINANCIAL INTERMEDIARY (ROPE) \u2014 Banks, bond underwriters, and private equity firms profit from originating debt, arranging refinancing, and capturing spreads. They have exit via mark-to-market and portfolio hedging. The constraint is coordination: debt markets enable capital reallocation and liquidity provision. From their view, accumulated leverage is functional complexity, not extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Macroeconomic View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 At the system level, debt accumulation has genuine coordination functions: it smooths consumption over time, finances productive capital, and allocates risk to agents with highest tolerance. But accumulated leverage also creates fragility, financial contagion risk, and endogenous procyclicality. The constraint is mixed because both functions coexist: coordination infrastructure + extraction mechanism. Whether the system is fragile or resilient depends on debt composition, rollover rates, and macro conditions."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "productivity_vs_extraction_distinction",
+      "question": "Does debt finance productive capital investment (coordination) or does it primarily enable distribution extraction and financial engineering (extraction)?",
+      "resolution_mechanism": "Decompose debt by use: capex financing vs share buybacks vs dividend distributions vs refinancing prior debt. Calculate IRR on debt-financed capex vs distribution flows.",
+      "impact": "If productive: more leverage is functional and constraint is closer to Rope. If extractive: leverage primarily extracts from creditors and employees, constraint is closer to Snare. Ambiguity is the core mandatrophy issue.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether accumulated debt finances productive investment or enables distribution extraction"
+    },
+    {
+      "id": "rollover_and_fragility_threshold",
+      "question": "At what leverage threshold does rollover risk become endogenous? When does debt composition matter more than debt level for systemic stability?",
+      "resolution_mechanism": "Historical analysis of corporate default cascades; model debt maturity structure and refinancing risk; identify leverage levels at which credit spreads become nonlinear.",
+      "impact": "If threshold is high: corporations have significant borrowing capacity before fragility emerges; extraction is suppressed by market discipline. If threshold is low: current leverage levels are already creating hidden fragility; extraction is masked by low current rates but will materialize in downturns.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Leverage threshold at which rollover risk becomes endogenous"
+    },
+    {
+      "id": "tax_subsidy_magnitude",
+      "question": "Does the tax deductibility of interest constitute a subsidy to leverage, and if so, at what magnitude? Is this subsidy rational tax policy or does it distort capital structure?",
+      "resolution_mechanism": "Calculate effective marginal tax rate on debt vs equity financing; model comparative capital structure if debt were not tax-advantaged; assess whether tax treatment reflects risk-adjusted policy or path-dependent artifact.",
+      "impact": "If subsidies are significant: debt accumulation is partially policy-driven extraction from taxpayers; constraint is partially manufactured. If subsidies are incidental: debt is market-driven; constraint reflects real incentive misalignment rather than fiscal distortion.",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "Whether tax deductibility of interest constitutes distortionary subsidy to leverage"
+    },
+    {
+      "id": "implicit_guarantee_scope",
+      "question": "For which corporations does the 'too big to fail' implicit guarantee apply? Is it a formal covenant or an emergent market expectation?",
+      "resolution_mechanism": "Compare credit spreads and borrowing costs for large vs small corporations; model expected bailout probability using market pricing and historical intervention patterns; assess regulatory statements on systemicity thresholds.",
+      "impact": "If guarantee is broad: leverage is subsidized and moral hazard is severe; extraction from taxpayers is structural and large. If guarantee is narrow: market discipline constrains leverage; extraction is limited to creditors and employees.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scope and magnitude of implicit government guarantee for corporate debt"
+    },
+    {
+      "id": "covenant_degradation_mechanism",
+      "question": "Do existing debt covenants actually constrain additional leverage, or have they been systematized away (cov-lite bonds, cash sweep removal, leverage ratchets)?",
+      "resolution_mechanism": "Empirical analysis of covenant presence and tightness over time; study cases where leveraged buyouts and dividend recaps violated covenant spirit but not letter; assess whether creditor sophistication has been offset by covenant erosion.",
+      "impact": "If covenants are effective: creditor protection is structural; extraction is limited. If covenants have been systematized away: creditor protections are theatrical; extraction is high and ongoing.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether debt covenants actually constrain additional leverage"
+    },
+    {
+      "id": "employee_voice_and_wage_suppression",
+      "question": "Do corporations deliberately suppress wages or defer investment to service debt, or is austerity an inevitable macro constraint?",
+      "resolution_mechanism": "Comparative analysis of wage and capex trajectories in firms with different leverage levels, holding sector and size constant; interview evidence on management debt-service priorities; cross-country comparison of leverage norms and wage dynamics.",
+      "impact": "If deliberate: employees are intentional victims; extraction is structural. If macro constraint: employees suffer incidentally; extraction is unintentional side effect of financial sustainability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether corporations deliberately suppress wages to service debt"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Corporate debt accumulation represents a structural constraint that operates at multiple levels: individual firm capital structure, sectoral financial risk, and macroeconomic fragility. The constraint exhibits the core mandatrophy problem in financial economics: debt is simultaneously a coordination mechanism (enabling capital allocation and temporal smoothing) and an extraction mechanism (concentrating returns on equity while distributing risk to creditors, employees, and taxpayers). The indexical framework resolves the ambiguity by showing that different agents genuinely experience different constraint types: equity holders and managers see coordination (Rope); creditors and taxpayers see pure extraction (Snare); employees see mixed coordination-extraction (Tangled Rope); and the analytical macroeconomic view sees both functions operating simultaneously (Tangled Rope). The constraint's evolution is measured through increasing extractiveness (0.35 \u2192 0.58 over 20 periods) and moderately increasing theater ratio (0.32 \u2192 0.45), suggesting that the coordination function is eroding and the extraction mechanism is becoming more prominent over time.",
+    "key_agents": [
+      "Equity Holders / Management: Primary beneficiaries (institutional/arbitrage) \u2014 capture leverage-driven returns, tax subsidies, and financial engineering gains; have costless exit via share sales or role changes",
+      "Debt Holders / Creditors: Primary victims (powerless/trapped) \u2014 face covenant erosion, seniority dilution, refinancing risk, and adverse selection in debt markets; locked into positions once capital deployed",
+      "Taxpayers / Implicit Guarantors: Secondary victims (powerless/trapped) \u2014 provide implicit insurance for systemic failures; absorb losses in crisis but receive no compensation; cannot exit membership in guarantee set",
+      "Incumbent Employees: Mixed victims (moderate/constrained) \u2014 benefit from firm stability but experience wage suppression, reduced capex, and layoff risk; have labor market exit but at substantial cost",
+      "Financial Intermediaries: Secondary beneficiaries (institutional/arbitrage) \u2014 profit from debt origination, underwriting, and refinancing; have full market exit via hedging and mark-to-market",
+      "Analytical Observer: System-level view (analytical/analytical) \u2014 recognizes both coordination (liquidity provision, capital allocation) and extraction (fragility, moral hazard, procyclicality) functions operating simultaneously"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint exhibits significant extraction mechanisms \u2014 creditors absorb tail risk and face seniority dilution; taxpayers provide implicit insurance with no compensation; employees experience wage suppression and underinvestment. However, extractiveness is not extreme (0.70+) because some leverage is genuinely productive (financing capital investment) and market discipline does constrain excessive leverage in normal times. The trajectory (0.35 \u2192 0.58) reflects increasing leverage ratios and tightening credit conditions that make refinancing risk endogenous. Suppression (0.68): High. Multiple barriers prevent agents from exiting: creditors face illiquidity and seniority erosion; employees face labor market friction; taxpayers face collective action problems and implicit guarantees that prevent contractual exit; governments face systemic consequences of allowing failures. The suppression has increased as debt ratios have risen and refinancing windows have narrowed. Theater ratio (0.45): Moderate. The constraint has significant performative elements (covenant engineering, ratings inflation, 'covenant lite' bonds, management guidance) but is not primarily theatrical \u2014 underlying financial mathematics and default risk are real. The theater has increased as sophisticated debt instruments have proliferated, offsetting the tightening credit conditions.",
+    "perspectival_gap": "The perspectival gap is maximal between institutional beneficiaries (Rope) and powerless victims (Snare). This gap is diagnostic: it shows that the constraint has asymmetric effects that cannot be reconciled by a single classification. The Tangled Rope claim at the analytical level reflects that both genuine coordination and genuine extraction coexist \u2014 the gap is real, not an artifact of measurement. The moderate agent (Employee) perspective shows mixed classification (Tangled Rope), which is structurally appropriate: they are neither pure extractors nor pure victims, but participants in both coordination and extraction.",
+    "directionality_logic": "Directionality is derived from structural position in the extraction flow. Equity holders occupy the beneficiary position: low base extraction \u03b5, beneficiary status, arbitrage exit \u2192 low d value (0.15 range) \u2192 negative or low f(d) \u2192 negative or low effective extraction \u03c7. They experience the constraint as favorable. Creditors occupy the victim position: high base extraction \u03b5, victim status, trapped exit \u2192 high d value (0.95 range) \u2192 high f(d) \u2248 1.42 \u2192 high effective extraction \u03c7. They experience extraction acutely. Employees occupy the mixed position: moderate extraction, mixed beneficiary/victim (benefit from firm but absorb wage suppression), constrained exit \u2192 moderate d (0.65 range) \u2192 moderate f(d) \u2248 1.0 \u2192 proportional \u03c7. Taxpayers occupy the pure victim position with no contractual relationship: trapped exit, implicit liability, no benefit \u2192 high d \u2192 high \u03c7. The directionality computation automatically captures that the same constraint produces opposite experienced extraction for different agents.",
+    "mandatrophy_analysis": "MANDATROPHY: The core ambiguity is whether accumulated corporate debt is primarily a coordination mechanism (enabling capital allocation and risk distribution \u2014 Rope logic) or an extraction mechanism (concentrating returns on equity while distributing risk to creditors and taxpayers \u2014 Snare logic). The resolution emerges from examining the temporal trajectory and sectoral variation. When leverage finances productive capital investment (capex, R&D, working capital), the constraint is closer to Tangled Rope with coordination function dominant. When leverage finances share buybacks, dividend recaps, and financial engineering without corresponding productivity gains, the constraint is closer to Snare with extraction function dominant. The increasing extractiveness trajectory (0.35 \u2192 0.58) suggests a shift toward extraction dominance \u2014 as leverage ratios increase and refinancing windows narrow, the productivity-to-extraction ratio is declining. The moderate theater ratio (0.45) indicates that some performance metrics (covenants, credit ratings) are becoming theater, but the underlying financial mathematics remains real. The mandatrophy resolves at the firm and sector level: productive sectors with genuine capex will classify closer to Tangled Rope; financial engineering and LBO-heavy sectors will classify closer to Snare. A system-level story requires showing both \u2014 some corporate debt is coordination (productive), some is extraction (financial engineering). This story reflects the constraint at the aggregated level where both coexist."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "financial_fragility_and_procyclicality",
+      "private_equity_leverage_extraction",
+      "wage_suppression_through_financial_engineering"
+    ],
+    "dual_formulation_note": "Corporate debt accumulation at the firm level (capital structure optimization) should be decomposed from debt accumulation at the sectoral level (competitive leverage race) and macroeconomic level (systemic fragility). Each has different \u03b5 values and different victim/beneficiary structures. This story represents the multi-level aggregate constraint; downstream stories address specific sectoral manifestations."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "header": {
+    "constraint_id": "organizational_productivity_ceiling",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "orgprod"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Organizational Productivity Ceiling",
+    "topic_domain": "organizational_dynamics/management_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "management_layer",
+      "coordination_infrastructure"
+    ],
+    "victims": [
+      "frontline_workers",
+      "output_quality",
+      "worker_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Frontline Worker",
+      "comment": "PERSPECTIVE 1: FRONTLINE WORKER (SNARE) \u2014 Trapped by employment dependency and skill-area specialization. Faces escalating productivity metrics, performance monitoring, and output quotas with no meaningful exit option. Bears the full cost of ceiling maintenance through intensified work demands, reduced autonomy, and surveillance overhead. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Middle Manager",
+      "comment": "PERSPECTIVE 2: MIDDLE MANAGER (TANGLED ROPE) \u2014 Constrained by career dependence on the metrics they enforce and relocation costs of seeking other roles. Experiences both genuine coordination (translating strategy into execution, resource allocation) and asymmetric extraction (pressured to hit targets through worker intensification rather than systems improvement). Moderate agency with significant extraction pressure."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Executive Leadership",
+      "comment": "PERSPECTIVE 3: EXECUTIVE LEADERSHIP (ROPE) \u2014 Benefits from the productivity ceiling architecture. Experiences the constraint as pure coordination: the metrics system enables reporting, benchmarking, and optimization decisions. High mobility \u2014 can reposition to different organizations or roles if this constraint becomes unfavorable. Net beneficiary with low experienced extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Organization",
+      "comment": "PERSPECTIVE 4: LABOR ORGANIZATION (SCAFFOLD) \u2014 Organized agents (unions, worker advocacy groups) perceive the productivity ceiling as a temporary coordination failure with policy sunset potential. See alternative pathways: four-day weeks, output-based (vs. time-based) compensation, worker co-governance of metrics. Constraint has structural exit: labor norms are shifting toward discretionary work models that bypass the ceiling architecture. This is a genuine scaffold \u2014 high suppression is tolerated only because the coalition sees a deadline for the mechanism's obsolescence (15-25 years)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Metrics Bureaucracy",
+      "comment": "PERSPECTIVE 5: METRICS BUREAUCRACY (PITON) \u2014 The performance measurement infrastructure (KPIs, dashboards, quarterly reviews) is substantially performative. Theater ratio (0.58) reflects that much of the measurement activity is about demonstrating performance rather than enabling improvement. The bureaucracy persists through institutional inertia \u2014 it has become an end in itself, disconnected from actual productivity impact. Metrics are maintained because 'this is how we manage' rather than because they work."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law View (Goodhart Ceiling)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, Goodhart's Law creates a structural ceiling on productivity: as metrics become targets, they cease to be good metrics. The measurement system inevitably degrades into optimization for the metric rather than for the underlying goal. This perspective sees the ceiling as an immutable law of any measurement-based management system. However, the structural data reveals this as a false summit \u2014 the extractive layer and suppression mechanisms are contingent institutional choices, not laws of measurement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "genuine_productivity_vs_metric_gaming",
+      "question": "How much of measured productivity gains represent genuine output improvement versus metric optimization and reporting artifacts?",
+      "resolution_mechanism": "Longitudinal comparison of reported metrics vs. customer satisfaction scores, product quality measures, and repeat business rates; analysis of metric revision frequency and direction",
+      "impact": "If genuine gains dominate: constraint enables real coordination (higher rope classification). If gaming dominates: constraint is primarily extractive cover for reduced actual output (higher snare classification). Current data suggests 60/40 split gaming/genuine.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Genuine productivity gains versus metric gaming"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the measured suppression (0.65) structural (legal/economic barriers to exit) or internalized (workers have internalized the productivity culture as legitimate)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: track workers after leaving the organization \u2014 do suppression patterns persist (internalized) or dissipate (structural)? Compare quit rates during economic downturns (structural pressure) vs. baseline (internalization degree).",
+      "impact": "If structural dominates: workers retain agency and can exit at cost. If internalized dominates: suppression travels with the worker \u2014 the constraint has captured identity/values. Higher internalization shifts piton classification (degraded) toward snare (extraction with cognitive capture).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized"
+    },
+    {
+      "id": "alternative_coordination_viability",
+      "question": "Do alternative coordination mechanisms (trust-based autonomy, outcome-only metrics, worker-governed target-setting) produce comparable coordination efficiency to the current ceiling architecture?",
+      "resolution_mechanism": "Comparative case studies from organizations using alternative models (Spotify, Gore-Tex, Basecamp); measurement of coordination failure rates, communication overhead, and execution fidelity across models",
+      "impact": "If alternatives are viable: scaffold sunset is real and the constraint is temporary (15-25 year horizon credible). If alternatives fail: the ceiling is structurally necessary for large-scale coordination (constraint becomes more mountain-like, less scaffold-like).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Viability of alternative coordination mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The organizational productivity ceiling emerges from the structural tension between the need to coordinate large-scale human effort and the tools available for measurement-based management. As organizations grow beyond direct supervision capacity, they adopt metrics-based performance management to maintain coherence. This creates a compound constraint: (1) genuine coordination of complex interdependencies requires shared visibility into output and capacity, and (2) the measurement system itself incentivizes gaming, report optimization, and intensity escalation that extract value from workers while degrading actual productivity. The constraint manifests as a ceiling because organizations discover that pushing metrics-based productivity targets eventually produces zero or negative returns on actual business output \u2014 the measurement infrastructure consumes resources, worker autonomy declines, quality degrades, and turnover rises. Yet the constraint persists because the executive layer experiences it as pure coordination and the metrics bureaucracy maintains itself through institutional inertia. Theater ratio (0.58) reflects that measurement infrastructure spends 58% of its effort on performance demonstration rather than performance improvement \u2014 dashboards, review meetings, compliance documentation, and reporting all create theater rather than enabling action.",
+    "key_agents": [
+      "Frontline Workers: Primary victims (powerless/trapped) \u2014 bear escalating productivity demands and surveillance; trapped by employment dependency with no organizational exit option",
+      "Middle Managers: Secondary victims (moderate/constrained) \u2014 enforce metrics while constrained by career dependence on those same metrics; experience both coordination and extraction",
+      "Executive Leadership: Primary beneficiaries (institutional/arbitrage) \u2014 capture organizational coherence gains and can reposition if the constraint becomes unfavorable; arbitrage exits available",
+      "Labor Organizations: Organized agents (organized/constrained) \u2014 see the ceiling as temporary and building alternative coordination pathways with clear sunset",
+      "Metrics Bureaucracy: Institutional infrastructure (institutional/arbitrage) \u2014 self-maintaining performance measurement system experiencing piton degradation",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing measurement-based coordination failures as inherent laws rather than contingent architectural choices"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The productivity ceiling extracts value through intensified work demands, reduced autonomy, and time spent on performance reporting rather than actual output. However, extractiveness is not as high as a pure snare (0.66+) because the system does produce genuine coordination value for large organizations \u2014 middle managers and executives experience real benefits in planning and decision-making. The extraction is a side effect of the coordination mechanism, not its primary function, though the mechanism is heavily exploited for extraction. Suppression (0.65): High. Barriers to exit and alternative arrangements include: employment dependency (health insurance, savings, mortgage), labor market concentration in the region or sector, legal constraints on employment terms, and internalized productivity culture. Suppression is not total (0.75+) because workers retain some negotiation capacity and alternative employers exist, but suppression is substantial. Theater ratio (0.58): Moderate. The metrics infrastructure involves genuine performance measurement (dashboards reflecting actual output) mixed with performative compliance (metrics reviews, standardized reports, compliance documentation that demonstrate rather than enable improvement). The ratio has increased from 0.35 (six time periods ago) as organizations layer new measurement tools on top of existing ones without retiring old systems \u2014 accretion rather than refinement.",
+    "directionality_logic": "Directionality values (d) capture each actor's structural position relative to the extraction flow. Frontline workers with trapped exit options and victim status have d \u2248 0.95, producing maximum f(d) and maximum experienced chi \u2014 they bear the full ceiling weight. Middle managers with constrained exits and mixed beneficiary/victim status have d \u2248 0.55, producing moderate chi \u2014 they enforce the ceiling but also suffer under it. Executives with arbitrage exits and beneficiary status have d \u2248 0.15, producing low or negative chi \u2014 they experience the ceiling as enabling, not burdening. The labor organization with constrained exits but organized power has d \u2248 0.40, producing moderate chi that reflects their organized resistance capacity. The directionality derivation is supported by the structural relationship declarations: executives clearly benefit from metrics visibility and coordination infrastructure; frontline workers clearly bear extraction through intensified demands. This asymmetry is the analytical center of the constraint.",
+    "perspectival_gap": "The perspectival gap between the frontline worker (Snare) and executive leadership (Rope) is the core diagnostic feature. The same productivity ceiling infrastructure appears as pure extraction (Snare) to the trapped worker and as pure coordination (Rope) to the arbitrage-mobile executive. This gap is structurally real \u2014 the infrastructure genuinely enables executive coordination and genuinely extracts from workers. The tangled rope classification (claimed type) represents the analytical position that the constraint is primarily hybrid: genuine coordination function mixed with systematic extraction. The piton classification (metrics bureaucracy perspective) reveals that much of the performance measurement infrastructure is degraded and maintained through institutional inertia rather than functional necessity. The scaffold classification (labor organization) is crucial \u2014 it indicates that workers with organized power perceive a genuine sunset horizon and are building alternative coordination mechanisms (autonomy-based, outcome-only, co-governed metrics) that can replace the current architecture within a generation.",
+    "mandatrophy_analysis": "This constraint avoids mandatrophy by explicitly acknowledging both the genuine coordination function and the asymmetric extraction. The tangled rope classification does not collapse into either pure rope (implying coordination-only) or pure snare (implying extraction-only). The measurement evidence supports the hybrid classification: theater ratio (0.58) shows mixed performative/functional content; extractiveness (0.52) is elevated but not snare-level (0.66+); suppression (0.65) is high but reflects both structural and internalized components. The scaffold perspective confirms that alternative coordination mechanisms exist and are becoming viable \u2014 this is not an immutable constraint but a temporary institutional arrangement. The piton perspective identifies the measurement bureaucracy as degraded infrastructure maintained through inertia. The mountain perspective (Goodhart's Law as immutable) is explicitly flagged as a false summit \u2014 measurement-based coordination has inherent challenges, but the ceiling is not an unchangeable law. The constraint resolves mandatrophy by distinguishing between unavoidable measurement challenges (real but manageable) and contingent institutional choices (removable through deliberate redesign)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "worker_autonomy_erosion",
+      "metrics_gaming_feedback_loop",
+      "middle_management_role_strain"
+    ],
+    "dual_formulation_note": "The organizational productivity ceiling decomposes into three structurally distinct constraints: (1) worker_autonomy_erosion (\u03b5\u22480.58) \u2014 direct extraction of discretion; (2) metrics_gaming_feedback_loop (\u03b5\u22480.65) \u2014 measurement system that incentivizes report optimization; (3) middle_management_role_strain (\u03b5\u22480.48) \u2014 conflicted position enforcing metrics while experiencing their burden. Each has distinct beneficiaries and exit pathways. This story captures the aggregate constraint; decomposed stories address individual mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

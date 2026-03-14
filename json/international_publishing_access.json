@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "international_publishing_access",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pubaccess"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "International Publishing Access Constraint",
+    "topic_domain": "academic/publishing/global_knowledge_distribution",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "legacy_publishers",
+      "wealthy_institutions"
+    ],
+    "victims": [
+      "researchers_low_resource_institutions",
+      "global_south_scientific_communities",
+      "knowledge_accessibility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Researcher at Low-Resource Institution",
+      "comment": "PERSPECTIVE 1: RESEARCHER AT LOW-RESOURCE INSTITUTION (SNARE) \u2014 Cannot access published research due to subscription costs ($3,000+ per journal annually); trapped by institutional budget constraints with no alternative access mechanism. Bears full extraction cost; no meaningful exit options within the formal publishing system."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Global South Scientific Communities",
+      "comment": "PERSPECTIVE 2: GLOBAL SOUTH SCIENTIFIC COMMUNITIES (SNARE) \u2014 Structural inability to participate in global research conversation; publication fees ($2,500+ per article) exclude researchers from publishing their own work; subscription barriers prevent accessing others' research. Creates generational suppression \u2014 entire regions systematically excluded from knowledge commons."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Academic Publishers",
+      "comment": "PERSPECTIVE 3: LEGACY ACADEMIC PUBLISHERS (ROPE) \u2014 Experience the constraint as coordination: managing peer review, copyediting, indexing, and distribution infrastructure for the global research community. Capture subscription revenue and author processing fees. Net beneficiary with exit options (can transition pricing models, negotiate licenses) \u2014 extraction runs toward this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Well-Resourced University Library",
+      "comment": "PERSPECTIVE 4: WELL-RESOURCED UNIVERSITY LIBRARY (TANGLED ROPE) \u2014 Constrained by rising subscription costs (budget increases 5-7% annually while publication volume grows); benefits from access to full journal portfolio; partially extractive relationship where libraries subsidize publisher profits through license agreements. Some agency through consortial negotiation but significant cost escalation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Open Access Movement Coalition",
+      "comment": "PERSPECTIVE 5: OPEN ACCESS MOVEMENT COALITION (TANGLED ROPE) \u2014 Organized agents (arXiv, PubMed Central, Creative Commons, funder mandates) building alternative distribution pathways; benefits from coordination mechanisms (shared infrastructure, author incentives); constrained by publisher control of prestige/peer review and institutional inertia favoring legacy systems. Ongoing active enforcement struggle with some coordination function emerging."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Copyright and Intellectual Property Framework",
+      "comment": "PERSPECTIVE 6: COPYRIGHT AND IP FRAMEWORK (PITON) \u2014 The legal architecture (copyright extension, Digital Millennium Copyright Act, licensing restrictions) that maintains publisher extraction persists through institutional inertia despite functional arguments for open access. Theater ratio high: elaborate legal frameworks create appearance of necessity while actual knowledge transfer cost is minimal. Degraded system maintained by formal apparatus rather than genuine function."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer - Naturalizing Frame",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN RISK) \u2014 From civilizational perspective, risks naturalizing the constraint as inevitable: 'peer review always requires gatekeepers,' 'quality control requires filtering,' 'distribution infrastructure always has costs.' However, structural data reveals these are contingent institutional choices, not laws of nature. False summit alert: the constraint appears unchangeable only when alternative coordination mechanisms are ignored."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "peer_review_necessity",
+      "question": "Is peer review gatekeeping essential for research quality or a contingent institutional filter that could be replaced by distributed post-publication scrutiny?",
+      "resolution_mechanism": "Comparative analysis of preprint arXiv communities vs journal-gated research; tracking error correction rates and citation impact; identifying domains where post-publication review is functionally equivalent",
+      "impact": "If gatekeeping essential: peer review as coordination function justified (higher base coordination cost, lower extractiveness). If contingent: gatekeeping is pure extraction mechanism, extractiveness increases to 0.68+",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether peer review gatekeeping is structurally necessary or contingent"
+    },
+    {
+      "id": "real_distribution_costs",
+      "question": "What are actual per-article distribution and curation costs versus captured subscription revenue ($10,000-50,000 per journal annually from universities)?",
+      "resolution_mechanism": "Direct cost accounting from open-access publishers; comparison with publisher claimed infrastructure costs; analysis of digital distribution overhead in information age",
+      "impact": "If real costs 5-10% of revenue: extractiveness confirmed at high level (0.58+). If real costs approach 50% of revenue: base extractiveness should be reduced to 0.35-0.40 (higher legitimate coordination cost)",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Actual per-article distribution costs versus subscription revenue"
+    },
+    {
+      "id": "global_south_participation_ceiling",
+      "question": "Is the exclusion of Global South researchers from publishing/access a suppression mechanism of the constraint or a separate structural inequality with different \u03b5?",
+      "resolution_mechanism": "Decomposition analysis: separate story for global inequality vs. publishing access constraint; correlation between access barriers and systemic resource inequality",
+      "impact": "If integrated: suppression is 0.65 as measured (Global South bears disproportionate cost). If separate: publishing access constraint may have lower suppression (0.50) and global inequality is distinct constraint family member",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether Global South exclusion is intrinsic to publishing constraint or separate inequality"
+    },
+    {
+      "id": "open_access_sustainability",
+      "question": "Can distributed open-access infrastructure (arXiv, preprint servers, institutional repositories, open-journal platforms) sustainably replace legacy publisher functions at comparable quality and permanence?",
+      "resolution_mechanism": "Long-term viability analysis of OA platforms; funding stability of community infrastructure; comparison of archival reliability and discovery mechanisms; adoption curves in different disciplines",
+      "impact": "If sustainable replacement possible: scaffold perspective confirmed with clear sunset (extractiveness trajectory declining as OA matures). If OA models fragile: current alternative architecture unreliable, scaffold sunset is aspirational not structural (extractiveness remains sustained)",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sustainability of open-access infrastructure as legacy publisher replacement"
+    },
+    {
+      "id": "prestige_as_coordination_vs_extraction",
+      "question": "Is journal prestige and impact factor a coordination mechanism enabling quality signaling or primarily an extraction mechanism enabling artificial scarcity?",
+      "resolution_mechanism": "Citation analysis of preprint vs journal versions of same work; comparison of discovery efficiency in prestige vs non-prestige journals; correlation between prestige and actual research quality vs. prestige and author institution status",
+      "impact": "If primarily coordination: justifies moderate suppression and base extractiveness. If primarily extraction: prestige is theater masking scarcity mechanism, increases theater_ratio understanding and may justify extractiveness increase",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether journal prestige functions as quality coordination or artificial scarcity extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The international publishing access constraint creates a structural asymmetry between knowledge producers in resource-rich institutions and those in low-resource or Global South contexts. Legacy academic publishers maintain control over global knowledge distribution through subscription-based access, creating extraction that flows from researchers, libraries, and institutions toward publisher profit centers. Simultaneously, the system coordinates legitimate peer review, quality filtering, and curation functions \u2014 making it a hybrid coordination-extraction mechanism (Tangled Rope) rather than pure extraction. The constraint exhibits all six types from different perspectives. The powerless researcher at an underfunded institution sees pure extraction (Snare): $3,000+ annual journal subscriptions are unaffordable, creating systematic exclusion. The Global South scientific community experiences generational suppression (Snare) \u2014 both participation barriers (publication fees) and access barriers (subscription walls) create systematic exclusion across decades. Legacy publishers experience coordination (Rope) \u2014 they genuinely solve problems of peer review, copyediting, indexing, and distribution infrastructure. Well-resourced universities experience mixed coordination and extraction (Tangled Rope) \u2014 they benefit from access but face escalating costs that squeeze other budgets. The open access coalition sees a temporary problem with an exit path (Scaffold) \u2014 arXiv, PubMed Central, and open-access mandates are building alternative distribution mechanisms with a generational sunset. The copyright and IP legal framework appears functionally necessary but is increasingly performed theater (Piton) \u2014 elaborate licensing restricts digitally-copyable information to justify artificial scarcity. The analytical observer risks naturalizing this as inherent to knowledge governance (Mountain) \u2014 treating publisher gatekeeping as immutable \u2014 but the structural data reveals contingent institutional arrangements. Theater ratio (0.68) reflects substantial performance: impact factor manipulation, peer review theater, prestige signaling, and copyright enforcement create impression of necessity for arrangements whose actual digital distribution costs are minimal. Base extractiveness (0.58) reflects sustained revenue capture that has accelerated as journal prices increase 5-7% annually while publication volume grows \u2014 an extraction trajectory. Suppression (0.65) reflects systematic barriers to access and participation concentrated on resource-poor actors.",
+    "key_agents": [
+      "Researchers at Low-Resource Institutions: Primary victims (powerless/trapped) \u2014 cannot afford subscription access; systematic exclusion from knowledge commons",
+      "Global South Scientific Communities: Primary victims (powerless/trapped, generational horizon) \u2014 face both publication cost barriers and access barriers; creates regional scientific capacity collapse",
+      "Knowledge Commons Itself: Secondary victim (powerless/trapped) \u2014 abstract collective good that cannot organize; bears cost of fragmentary knowledge distribution",
+      "Legacy Academic Publishers: Primary beneficiaries (institutional/arbitrage) \u2014 capture subscription revenue, author processing fees, and control over prestige signaling",
+      "Well-Resourced Universities: Secondary beneficiary constrained victim (institutional/constrained) \u2014 benefit from access but experience cost escalation; partially extractive relationship through license agreements",
+      "Open Access Coalition: Organized challengers (organized/constrained) \u2014 building alternative distribution pathways; experience constraint as temporary with exit mechanism",
+      "Copyright/IP Legal Framework: Institutional architecture (institutional/arbitrage) \u2014 maintains extraction through legal apparatus; increasingly performative"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Publishers capture significant margin beyond real distribution costs; subscription revenue growth (5-7% annually) exceeds publication volume growth and inflation. The omega on real distribution costs is critical \u2014 if digital distribution costs are 10% of subscription revenue, extractiveness is justified at 0.58+; if costs are 30%, extractiveness may be inflated. Suppression (0.65): High. Multiple barriers reduce access: subscription costs, publication fees ($2,500+ per article), lack of institutional bandwidth for negotiation, copyright restrictions on sharing, and technical barriers to discovery in Global South. Global South researchers face geographic, economic, and linguistic suppression integrated into the system. Theater ratio (0.68): High-moderate. Peer review is genuine coordination function but increasingly performs secondary role in prestige gatekeeping and artificial scarcity maintenance. Impact factor manipulation, prestige signaling, and copyright enforcement apparatus create elaborate theater around what is fundamentally an information distribution problem with minimal real cost in digital age.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence. Powerless researchers trapped at underfunded institutions perceive pure extraction (Snare) with no exit options \u2014 they pay high costs or forgo knowledge access. Publishers perceive genuine coordination (Rope) \u2014 they solve real problems of peer review, editorial curation, and quality control. Well-resourced universities perceive mixed experience (Tangled Rope) \u2014 they benefit from access but experience extraction through escalating costs. The open access coalition perceives a temporary problem with a clear exit path (Scaffold) \u2014 alternative distribution mechanisms are maturing. The copyright framework appears necessary by design (legal theater, Piton). The civilizational analytical observer risks the false summit of seeing this as immutable (Mountain) \u2014 treating publisher gatekeeping as inherent to knowledge governance rather than contingent institutional arrangement. The perspectival gap reveals that the constraint's classification depends entirely on the observer's structural position: access and power, not objective truth about what publishing requires.",
+    "directionality_logic": "Directionality derivation maps structural positions to effective extractiveness experienced. Publishers as beneficiaries with arbitrage options (can shift pricing models, transition to hybrid OA) experience low directionality d \u2248 0.15-0.20, producing negative or minimal effective extraction \u03c7. They are net extractors from the system. Powerless trapped researchers at low-resource institutions experience maximum directionality d \u2248 0.95, producing maximum effective extraction \u03c7. They are the extraction targets. Well-resourced universities as constrained institutional actors experience mid-range d \u2248 0.60, moderate extraction \u03c7. The open access coalition as organized agents with some exit capacity experience lower d \u2248 0.45, experiencing the constraint as solvable rather than immutable. The copyright framework as institutional infrastructure with institutional arbitrage options experiences low d \u2248 0.15-0.25. The Global South scientific community as powerless trapped agents at civilizational timescale experiences d \u2248 0.92, maximum extraction. This directionality structure reflects that the constraint systematically extracts from those least able to resist and least able to exit.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by showing genuine coordination function within an extractive architecture. The legitimate coordination services (peer review, editorial curation, indexing, global distribution) are not illusory \u2014 they are real and necessary. But the constraint's extractiveness (0.58) cannot be explained by coordination function alone. The base extractiveness far exceeds what legitimate peer review and distribution infrastructure cost in the digital age. The mandatrophy dissolves when we recognize: (1) Coordination function is real (justifying some suppression and cost); (2) Extraction mechanism is also real (subscription pricing and artificial scarcity extraction beyond coordination cost); (3) Both coexist because the coordination function provides legitimate justification for the extraction apparatus. The architecture captures value from powerless agents by bundling essential services (peer review, quality filtering) with exploitative pricing. Preventing mandatrophy misclassification requires the tangled_rope classification to specify both the coordination function (peer review that cannot be easily replicated) and the asymmetric extraction (pricing power that bears no relationship to actual cost). The piton classification of the legal framework reveals that copyright apparatus is increasingly performative theater maintaining artificial scarcity rather than serving legitimate IP protection."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "research_reproducibility_verification",
+      "global_scientific_capacity_inequality",
+      "academic_career_prestige_signaling"
+    ],
+    "dual_formulation_note": "International publishing access constrains three distinct downstream constraints: (1) reproducibility verification (blocked by paywall access to methods/data); (2) scientific capacity in Global South (participation barriers exclude researchers from capability development); (3) prestige signaling in academia (artificial scarcity maintained through journal gatekeeping). Each downstream constraint has distinct \u03b5 and should be analyzed separately while understanding this upstream constraint as causal factor."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

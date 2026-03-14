@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "small_business_coverage_gaps",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sbcg"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Small Business Insurance Coverage Gaps",
+    "topic_domain": "economic/regulatory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_insurers",
+      "regulatory_agencies"
+    ],
+    "victims": [
+      "small_business_owners",
+      "uninsured_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Uninsurable Small Business",
+      "comment": "PERSPECTIVE 1: UNINSURABLE SMALL BUSINESS (SNARE) \u2014 Structurally trapped by minimum premium requirements, risk pooling logic, and lack of market alternatives. Cannot exit the insurance system entirely (legally required in most states) but cannot afford or qualify for coverage. Bears full cost of the gap: legal penalties, catastrophic financial exposure, inability to contract. Zero degrees of freedom."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Marginal Small Business",
+      "comment": "PERSPECTIVE 2: MARGINAL SMALL BUSINESS (TANGLED ROPE) \u2014 Constrained by high premiums and coverage limits but benefits from partial coordination: group purchasing programs, industry pools, state high-risk pools provide some access. Extraction is significant (premiums 2-4x larger peer groups) but not absolute \u2014 some exit options exist at substantial cost. Mixed experience of coordination mechanism (risk sharing) with asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Large Insurer",
+      "comment": "PERSPECTIVE 3: LARGE INSURER (ROPE) \u2014 Benefits from coordination of risk pooling across portfolios. Gap in small business coverage is solved by their internal solution: exclude high-risk segments and concentrate on profitable segments. Experiences the constraint as efficient market coordination \u2014 separation of risk pools is natural and functional. Arbitrage available through reinsurance and hedging."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "State Insurance Commissioner & Coverage Mandate Coalition",
+      "comment": "PERSPECTIVE 4: STATE REGULATOR & MANDATE COALITION (SCAFFOLD) \u2014 Organized agents (state insurance commissioners, small business advocacy groups) see the gap as a temporary coordination failure with a sunset: mandatory coverage expansions, small business health exchanges, and subsidized pools create alternative pathways. Sunset clause: as ACA exchanges mature and small group markets expand, traditional gap diminishes. Sees enforcement of coverage mandates as declining pressure once alternatives mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Employment-Based Insurance System",
+      "comment": "PERSPECTIVE 5: EMPLOYMENT-BASED INSURANCE SYSTEM (PITON) \u2014 The constraint is sustained by institutional inertia: tax incentives for employer-provided coverage (established 1943 via wage controls exemption) create path dependency that benefits large firms with HR infrastructure but excludes small businesses. The system persists through performative compliance with historical incentive structure, not because it efficiently solves the coordination problem. Theater ratio high because the mechanism (tax break) produces coverage gaps while claiming to solve them."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Adverse Selection View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / ADVERSE SELECTION NATURAL LAW (MOUNTAIN) \u2014 From a mathematical/economic perspective, small business insurance gaps reflect an immutable property of insurance markets: adverse selection makes low-risk small businesses subsidize high-risk ones, creating a natural threshold below which pooling breaks down. This perspective sees the coverage gap as inherent to information asymmetry and actuarial mathematics. However, structural data contradicts the mountain classification \u2014 gaps persist even where information is symmetric and pooling is feasible, revealing that contingent regulatory/tax arrangements, not natural law, produce the gap."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "adverse_selection_necessity",
+      "question": "Is the coverage gap a structural consequence of adverse selection (information asymmetry) or a contingent outcome of regulatory/tax arrangements?",
+      "resolution_mechanism": "Comparative analysis of small business insurance access across regulatory regimes (US state-to-state, international comparisons); examine markets with symmetric information (mandatory disclosure, health screenings) vs. opaque markets; measure separating equilibria in pooled vs. risk-stratified markets.",
+      "impact": "If adverse selection is primary: gap is near-universal and policy solutions face fundamental constraints. If regulatory arrangements are primary: gap is contingent and policy leverage is high. Classification hinges on whether the mountain view is accurate (accessibility_collapse \u2265 0.85) or naturalization of contingent arrangements.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether coverage gaps are inherent to information asymmetry or contingent on regulatory structure"
+    },
+    {
+      "id": "small_business_risk_distribution",
+      "question": "Do small business health risks genuinely cluster in higher-risk categories, or is the apparent risk concentration an artifact of selection bias in underwriting data?",
+      "resolution_mechanism": "Population-level health surveys comparing uninsured small business owners to insured peers, controlling for self-selection; actuarial analysis of actual claims experience in pools with mandatory small business inclusion vs. voluntary pools; outcome tracking for small businesses forced into high-risk pools.",
+      "impact": "If risk is genuinely higher: high premiums reflect actuarial reality, extraction is lower than snare classification suggests. If risk distribution is similar: high premiums are extractive markup on symmetrically-distributed risk, supporting snare classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether high small business risk is genuine or selection artifact"
+    },
+    {
+      "id": "sunset_pathway_feasibility",
+      "question": "Do state-level insurance exchanges and subsidized small business pools actually reduce coverage gaps to the point where the scaffold sunset is achieved?",
+      "resolution_mechanism": "Tracking enrollment in ACA small business exchanges (SHOP), subsidized pool utilization, and coverage rates among eligible small businesses over 15-20 year horizon; identification of remaining gaps and whether they reflect new selection pressure or initial gap persistence.",
+      "impact": "If sunset is feasible: scaffold perspective is structurally sound; gaps are temporary. If sunset fails: scaffold is aspirational; constraints remain snare or tangled rope permanently.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether state exchange expansion achieves coverage gap sunset"
+    },
+    {
+      "id": "tax_incentive_path_dependence",
+      "question": "Could the coverage gap be solved by eliminating or redirecting the 1943 employer tax exemption for health insurance, or does path dependence lock in the current system indefinitely?",
+      "resolution_mechanism": "Policy analysis of alternative incentive structures (individual market subsidies, tax-neutral coverage equivalents, portable benefits); case studies of prior reform attempts and political constraints; modeling of transition costs vs. long-term efficiency gains.",
+      "impact": "If path dependence is breakable: piton classification is temporary; the institutional inertia can be reformed. If path dependence is locked: piton is indefinite; the tax code constraint sustains the gap structurally.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether tax incentive path dependence is breakable or locked"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Small business insurance coverage gaps represent a structural tension between actuarial risk management, regulatory mandates, and economic viability. The constraint operates across multiple levels: individual small business owners unable to afford or qualify for coverage, state regulators attempting to expand access, large insurers optimizing portfolio composition, and the broader employment-based insurance system maintaining historical tax-incentive structures. The gap has widened over the 20-year interval as premiums have increased faster than small business revenues, even as mandates theoretically expanded coverage. The theater ratio has remained relatively stable (0.35 to 0.48) but increased, reflecting growing performative compliance with coverage mandates while actual access gaps persist. The extractiveness increase (0.42 to 0.58) reflects both rising premiums and tightening coverage limits. The constraint exhibits tangled rope structure because genuine coordination functions (risk pooling, premium sharing) coexist with asymmetric extraction (disproportionate premiums, coverage exclusions, profit extraction by large insurers). Different perspectives classify the gap as immutable natural law (adverse selection), temporary problem (scaffold sunset), institutional inertia (piton), or pure extraction (snare), depending on structural position.",
+    "key_agents": [
+      "Small Business Owners: Primary victims (powerless/trapped) \u2014 legally required to carry coverage but unable to afford or qualify; face legal penalties and financial exposure from uncovered liabilities",
+      "Uninsured Workers in Small Firms: Secondary victims (powerless/trapped) \u2014 no access to coverage through employer; face health-related financial catastrophe",
+      "Large Insurers: Primary beneficiaries (institutional/arbitrage) \u2014 exclude small business segment and concentrate premiums on profitable segments; arbitrage by exiting unprofitable niches",
+      "State Insurance Commissioners & Advocacy Groups: Organized actors (organized/constrained) \u2014 push mandatory coverage expansions and create subsidized pools as alternative pathways with sunset logic",
+      "Employers in Large Firms: Secondary beneficiaries (powerful/mobile) \u2014 benefit from stable, underpriced group coverage due to risk pooling with low-risk segments",
+      "Tax Code Architects (Historical): Institutional designers (institutional/arbitrage) \u2014 created 1943 exemption for employer-provided coverage; designed system optimizes for large-firm administrative capacity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high, reflecting upward trend. The constraint extracts in multiple ways: (1) small businesses pay 2-4x higher per-employee premiums than large firms due to small group rating factors; (2) coverage limits and exclusions shift risk from insurers to small business owners; (3) regulatory compliance costs (documentation, reporting) are fixed and therefore proportionally higher for small firms. The value reflects meaningful extraction without the 0.66+ threshold of pure snare. Suppression (0.65): High. Barriers to exit include: legal mandates in most states requiring coverage, minimum premium thresholds below which insurers will not underwrite, lack of alternative risk mechanisms (self-insurance restricted for small firms), geographic isolation in markets with few underwriters, and information asymmetry (small business owners cannot easily assess true actuarial risk or alternatives). Theater ratio (0.48): Moderate. Some performative content in compliance reporting and risk documentation, but the mechanism is more functional than theatrical \u2014 premium structures do respond to actual risk factors, and coverage exclusions do reflect underwriting logic. Not as high as institutional systems relying primarily on ritual maintenance.",
+    "perspectival_gap": "The uninsurable small business sees pure extraction (snare) \u2014 they are trapped with no exit and bear maximum costs. The marginal small business sees mixed coordination and extraction (tangled rope) \u2014 they benefit from partial risk pooling but pay extractive premiums. The large insurer sees efficient coordination (rope) \u2014 risk segmentation and portfolio optimization are natural market functions solving the coordination problem of heterogeneous risk. The state regulator and mandate coalition see a temporary problem (scaffold) \u2014 new exchange mechanisms and subsidized pools create a sunset clause where traditional gaps diminish. The employment-based system sees institutional inertia (piton) \u2014 the tax code structure persists through historical path dependence, performing its original function while producing coverage gaps as a side effect. The analytical observer risks seeing immutable natural law (mountain) \u2014 adverse selection creates an apparently inevitable gap \u2014 but structural data reveals this as naturalization: gaps persist even in symmetric-information contexts and are contingent on regulatory/tax arrangements. The perspectival gap reflects that the same extractive structure appears necessary, efficient, temporary, degraded, or immutable depending on structural position.",
+    "directionality_logic": "Large insurers experience low or negative directionality (d \u2248 0.15-0.25, beneficiaries with arbitrage) \u2014 they have exit options (reinsurance, portfolio diversification, market segmentation) and benefit from the gap (exclude high-risk segments). Small business owners experience high directionality (d \u2248 0.85-0.95, trapped victims) \u2014 no exit options, bear full extraction cost. State regulators experience moderate directionality (d \u2248 0.45-0.55, organized actors with constrained exit) \u2014 they face political pressure and institutional resistance to mandate expansion but have agency through regulatory tools. The d derivation chain computes effective extraction (chi) from baseline extractiveness (\u03b5=0.58) scaled by these directionality values and scope modifier (\u03c3=1.0 for national): large insurers see \u03c7 \u2248 \u03b5 \u00d7 f(0.20) \u00d7 1.0 \u2248 -0.01 (net benefit); small business owners see \u03c7 \u2248 \u03b5 \u00d7 f(0.90) \u00d7 1.0 \u2248 0.75 (high extraction); regulators see \u03c7 \u2248 \u03b5 \u00d7 f(0.50) \u00d7 1.0 \u2248 0.38 (moderate extraction). The directionality structure explains the perspectival gap without additional axes.",
+    "mandatrophy_analysis": "RESOLVED: The tangled rope classification requires both coordination function (beneficiaries present) and asymmetric extraction (victims present). Large insurers benefit from risk pooling (coordination benefit) while small business owners bear disproportionate costs (asymmetric extraction). This is not pure rope (which would require \u03c7 \u2264 0.35) nor pure snare (which would require all perspectives to classify as snare). The beneficiary/victim split is structural: those who benefit from market segmentation (large insurers, large-firm employers) are distinct from those who bear the gap (small business owners, uninsured workers). The active enforcement requirement is satisfied: state mandates, coverage requirements, and regulatory oversight actively sustain the structure. The mandatrophy is avoided by recognizing that the apparent naturalness of adverse selection covers a contingent institutional arrangement (tax incentives for employer coverage, licensing requirements favoring large insurers, regulatory barriers to alternative mechanisms)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "healthcare_access_inequality",
+      "business_regulatory_compliance_burden"
+    ],
+    "dual_formulation_note": "Small business coverage gaps are downstream of the employment-based insurance system (tax incentive structure) and adverse selection dynamics in risk pooling. Three structurally related but distinct constraints: (1) tax_code_path_dependence (\u03b5\u22480.12, Mountain) \u2014 the 1943 exemption creates path-dependent lock-in; (2) small_business_coverage_gaps (\u03b5\u22480.58, Tangled Rope) \u2014 empirical insurance market gap produced by incentive structure; (3) uninsured_worker_health_outcomes (\u03b5\u22480.72, Snare) \u2014 health consequences of coverage gaps. Each has distinct beneficiaries and victims."
+  },
+  "directionality_overrides": []
+}

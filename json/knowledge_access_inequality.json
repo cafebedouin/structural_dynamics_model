@@ -1,0 +1,186 @@
+{
+  "header": {
+    "constraint_id": "knowledge_access_inequality",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "kai"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Knowledge Access Inequality",
+    "topic_domain": "education/information/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "credential_gatekeepers",
+      "information_monopolists",
+      "established_knowledge_holders"
+    ],
+    "victims": [
+      "knowledge_seekers_without_means",
+      "peripheral_communities",
+      "epistemic_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Economically Excluded Knowledge Seeker",
+      "comment": "PERSPECTIVE 1: ECONOMICALLY EXCLUDED KNOWLEDGE SEEKER (SNARE) \u2014 Faces insurmountable barriers to accessing knowledge: paywalled journals, expensive textbooks, credential requirements, geographic isolation. Cannot participate in educational or epistemic systems. Zero degrees of freedom; extraction is total and unavoidable. Bears full cost of knowledge inequality."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Constrained Learner",
+      "comment": "PERSPECTIVE 2: CONSTRAINED LEARNER (TANGLED ROPE) \u2014 Faces high but surmountable barriers: partial access through public libraries, free-tier resources, informal learning networks. Genuine coordination function exists (knowledge sharing, community education) but extraction mechanisms overlay it (credential premiums, labor market gatekeeping). Can acquire knowledge at significant time/cost/opportunity sacrifice."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Knowledge Institution (Publisher/University)",
+      "comment": "PERSPECTIVE 3: KNOWLEDGE INSTITUTION (ROPE) \u2014 Primary beneficiary. Operates access-control systems that generate revenue while coordinating legitimate knowledge distribution functions (peer review, curation, certification). Experiences the constraint as pure coordination with net benefit flow toward this agent. Can arbitrage between access-restricted and open models."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Knowledge Movement",
+      "comment": "PERSPECTIVE 4: OPEN KNOWLEDGE MOVEMENT (SCAFFOLD) \u2014 Organized agents (Creative Commons, open-access journals, Wikipedia, Khan Academy, OpenStax) are building alternative knowledge distribution pathways with explicit sunset logic: as open resources mature and accumulate critical mass, the closed-access extraction mechanism loses competitive advantage. Low effective extraction because organized agents see and are actively building exit paths."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Credential System (Degraded Function)",
+      "comment": "PERSPECTIVE 5: CREDENTIAL SYSTEM (PITON) \u2014 Educational credentials once coordinated genuine skill certification; now largely performative in many domains. Expensive degrees signal market-conformity and network access more than knowledge. Theater-heavy ritual (tuition, years of seat-time, accreditation theater) persists through institutional inertia despite cheaper alternatives (online courses, bootcamps, portfolio-based assessment). Declining functional coordination, maintained by regulatory capture and employer lock-in."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The False Natural Law View",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / FALSE NATURAL LAW (MOUNTAIN) \u2014 Risk of naturalizing knowledge access inequality as inherent to education: 'knowledge has always been scarce,' 'curation requires exclusion,' 'credentials must be expensive to mean something.' These framings naturalize what is actually contingent institutional choice. The structural data contradicts the mountain classification \u2014 this is not a law of nature but an arrangement of incentives and enforcement mechanisms that the open knowledge movement is actively disrupting."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "free_access_quality_tradeoff",
+      "question": "Does free/open knowledge access reduce epistemic quality through loss of peer review and curation functions, or is the quality loss negligible compared to access gains?",
+      "resolution_mechanism": "Comparative analysis of citation impact, error rates, and replicability: open-access journals vs paywalled journals; Wikipedia articles vs proprietary encyclopedias; open textbooks vs commercial textbooks. Long-term validation through field-specific outcome metrics.",
+      "impact": "If quality cost is high: open knowledge movement represents coordination loss (reclassify toward Snare from some perspectives). If negligible: open knowledge movement is pure coordination gain (confirm Scaffold/Rope classification).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether open knowledge access incurs significant quality costs"
+    },
+    {
+      "id": "credential_signaling_vs_skill_transfer",
+      "question": "What proportion of credential value derives from skill transfer vs pure signaling (network access, employer filtering, social legitimacy)?",
+      "resolution_mechanism": "Employer hiring data comparing credential-holders vs portfolio-demonstrated practitioners; wage premiums attributable to skill vs credential; field-specific analysis (software engineering, nursing, trades vs research fields).",
+      "impact": "If signaling > 70%: credentials are extractive theater (piton classification confirmed). If signaling < 40%: credentials retain genuine coordination function (reclassify toward Rope). Impacts whether credential systems themselves are separable constraints or inseparable from knowledge access inequality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Signaling vs skill-transfer proportion in credential value"
+    },
+    {
+      "id": "information_monopoly_sustainability",
+      "question": "Can journal paywalls and textbook pricing maintain extraction rents as digital reproduction costs approach zero and alternative curation mechanisms mature?",
+      "resolution_mechanism": "Market analysis: journal subscription revenue trends, publisher profitability, author flight to open-access venues, institutional subscription cancelations. Correlation with open-access resource maturation.",
+      "impact": "If monopoly rents erode: scaffold sunset is real (extraction declines over generational timescale). If rents stabilize: institutional capture of credentials/accreditation sustains the constraint indefinitely (reclassify toward Snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Sustainability of information monopoly rents in digital era"
+    },
+    {
+      "id": "identity_lock_in_credentials",
+      "question": "For knowledge seekers with internalized beliefs about credential legitimacy ('real knowledge requires expensive degrees'), is exit capacity constrained by cognitive capture rather than material barriers?",
+      "resolution_mechanism": "Comparative outcome analysis: learners with material access to open resources who do not use them vs learners who overcome identity/prestige barriers to use them. Psychological/narrative analysis of credential belief persistence post-access.",
+      "impact": "If cognitive capture is significant: some victims experience identity_locked exit rather than trapped/constrained. Reclassifies the constraint's suppression mechanism as partially internalized. Mandatrophy analysis shifts: the constraint's power partly depends on victim belief, not just on material gatekeeping.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether credential internalization creates identity-lock beyond material barriers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Knowledge access inequality is the structural constraint that gatekeeps participation in epistemic and educational commons through price, credential requirement, geographic isolation, and institutional monopoly. This constraint exhibits tangled coordination and extraction: genuine knowledge distribution and curation functions exist alongside systematic extraction from those with least capacity to pay. The constraint operates across multiple institutional levels \u2014 from journal paywalls and textbook pricing (information monopoly) to credential gatekeeping (labor market exclusion) to institutional capture of accreditation systems (theatrical legitimation). The rising theater_ratio (0.35 \u2192 0.48) reflects that credential systems are increasingly performative: tuition and time investment signal conformity and network access more than transferable skill, while actual knowledge acquisition increasingly happens through free channels (YouTube, Wikipedia, open courseware). The rising extractiveness (0.42 \u2192 0.58) reflects layered rent-seeking: as digital reproduction costs approach zero, information gatekeepers have raised prices and barriers rather than lowered them, capturing policy and institutional structures to sustain extraction. Simultaneously, the open knowledge movement (Creative Commons, open-access publishing, Wikipedia, Khan Academy, OpenStax) is building alternative pathways with genuine sunset logic: as free resources reach critical mass and employer acceptance of portfolio-based credentials grows, the closed-access extraction mechanism loses comparative advantage.",
+    "key_agents": [
+      "Knowledge Seekers Without Means: Primary victim (powerless/trapped) \u2014 faces paywalls, credential barriers, geographic isolation; cannot access epistemic systems without sacrifice beyond reasonable means",
+      "Peripheral Communities: Secondary victim (powerless/trapped) \u2014 geographic, linguistic, or economic isolation from knowledge infrastructure; bears disproportionate extraction",
+      "Epistemic Commons: Tertiary victim (powerless/trapped) \u2014 abstract collective good representing the universal human capacity for understanding; contaminated by knowledge scarcity and gatekeeping",
+      "Credential Gatekeepers: Primary beneficiary (institutional/arbitrage) \u2014 universities, professional boards, accrediting bodies that control access to labor markets; benefit from credential extraction while appearing neutral",
+      "Information Monopolists: Primary beneficiary (institutional/arbitrage) \u2014 journal publishers, textbook companies, data providers; extract rent from knowledge that has marginal reproduction cost near zero",
+      "Established Knowledge Holders: Secondary beneficiary (institutional/arbitrage) \u2014 academics, professionals already credentialed; benefit from gatekeeping that protects market position and prestige",
+      "Open Knowledge Movement: Organized agent (organized/constrained) \u2014 Creative Commons, open-access journals, Wikipedia editors, OpenStax; building alternative pathways; sees constraint as temporary coordination failure with sunset"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts through multiple mechanisms: information monopoly rents (journals, textbooks), credential premium inflation, market signaling requirements, and institutional gatekeeping. The value is not at maximum (0.66+) because genuine coordination functions persist (knowledge curation, peer review, educational structure, labor market signaling), and because open-knowledge alternatives are eroding extraction capacity. Suppression (0.62): High. Barriers to knowledge access include: paywall economics (knowledge legally behind price walls), credential requirements (structural gatekeeping), geographic/linguistic isolation, time/opportunity costs, internalized beliefs about legitimate knowledge sources, and institutional regulatory capture. Suppression is not total because free alternatives exist (libraries, internet, self-education networks) and suppression is eroding. Theater ratio (0.48): Moderate. Traditional credential systems are increasingly theater-heavy: tuition signals market-conformity more than skill; accreditation theater justifies institutional gatekeeping; research paywalls perform peer review legitimacy while mostly serving publisher extraction. But theater is not at piton levels (0.70+) because genuine educational and epistemic functions persist \u2014 some credentials do transfer skill; peer review does catch some errors; curation does add value. The rising trajectory reflects increasing theatrical overlay on real functions.",
+    "perspectival_gap": "The gap between the powerless victim (Snare) and the institutional beneficiary (Rope) is structural, not perceptual. Both are correctly reading the same constraint: one experiences extraction because they are the target; the other experiences coordination because they are the beneficiary. The gap persists because exit options differ fundamentally \u2014 the victim is trapped and cannot leave; the beneficiary can arbitrage between access-restricted and open models. The scaffold perspective (organized agents building alternatives) is crucial: it shows that the Rope/Snare gap is not inherent but historically contingent. As alternatives mature, the snare mechanism (prevention of exit paths) weakens, and victims gain the constrained/mobile exit options necessary to reclassify their perspective. The piton perspective (theatrical credentials) is not separate from the tangled rope \u2014 it is the credential layer of the knowledge access constraint. Theater ratio rising while extractiveness rises indicates that the constraint is maintaining itself increasingly through legitimacy theater rather than through direct functional coordination.",
+    "directionality_logic": "Beneficiaries (credential gatekeepers, information monopolists) have institutional power and arbitrage options: they can choose between closed and open models, between gatekeeping and alternative curation. Their derived d is low (~0.10-0.15), producing negative or near-zero \u03c7. They experience the constraint as beneficial. Victims (powerless knowledge seekers) are trapped with no arbitrage options: they cannot choose between paywalled and open because they have no means to access paywalled knowledge and may not know about open alternatives. Their derived d is high (~0.90-0.95), producing high \u03c7. They experience the constraint as pure extraction. The organized open knowledge movement has power to create alternatives (d ~0.35-0.45), producing moderate \u03c7 \u2014 they incur costs in building alternatives but have real agency and visible exit paths. The analytical observer at global/civilizational scope sees the full structure (d ~0.72), producing high \u03c7 \u2014 the observer recognizes that the constraint is maintained by institutional choice, not natural law. These d values can be confirmed or overridden by directionality_overrides if domain knowledge suggests the automatic derivation is incorrect. For this constraint, no overrides are necessary: the beneficiary/victim structure and exit options clearly determine d.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: This constraint avoids mandatrophy by explicitly maintaining the tension between genuine coordination and asymmetric extraction. Knowledge curation, peer review, educational structure, and credentialing do coordinate real functions \u2014 the constraint is not pure Snare. But the distribution of benefits is asymmetric \u2014 gatekeepers capture rents while knowledge seekers pay. The beneficiaries/victims/enforcement declarations establish that this is not coordination masquerading as extraction or extraction masquerading as coordination. It is genuinely both: Tangled Rope. The open knowledge movement's perspective (Scaffold) provides the mandatrophy resolution: the constraint's viability depends on information monopoly rents and credential gatekeeping, which are not inherent to education or knowledge distribution but rather contingent institutional arrangements. As alternatives mature, the rents erode and the true coordination function (knowledge sharing, skill transfer, credible certification) can separate from the extraction apparatus (paywalls, credential inflation, institutional theater). The generational sunset logic confirms that this is coordination with embedded extraction, not extraction with coordination theater. If it were pure extraction (Snare), sunset would be impossible \u2014 the constraint would need to prevent alternative pathways from forming. Instead, it is actively being displaced by superior coordination mechanisms."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "credential_gatekeeping",
+      "information_monopoly",
+      "epistemic_commons_degradation"
+    ],
+    "dual_formulation_note": "Knowledge access inequality is upstream of multiple institutional constraints. Credential gatekeeping and information monopoly are decomposable as separate constraints with their own \u03b5 values and perspectives, but they are structurally coupled through the same institutional mechanisms (paywalls, accreditation capture, market signaling). Each story in this family should link via network.affects_constraints to show the institutional coupling."
+  },
+  "directionality_overrides": []
+}

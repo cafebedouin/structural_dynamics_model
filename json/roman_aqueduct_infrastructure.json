@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "roman_aqueduct_infrastructure",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aqua"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Roman Aqueduct Infrastructure: Coordination and Extraction in Water Distribution",
+    "topic_domain": "infrastructure/political_economy/engineering",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "urban_elites",
+      "imperial_administration",
+      "military_water_users"
+    ],
+    "victims": [
+      "provincial_populations",
+      "rural_water_access",
+      "maintenance_labor"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Provincial Rural Populations",
+      "comment": "PERSPECTIVE 1: PROVINCIAL RURAL POPULATIONS (SNARE) \u2014 Water diverted to urban centers through aqueduct infrastructure eliminates local water autonomy. Rural communities trapped by resource dependency; cannot exit or organize collective resistance. Full extraction with minimal coordination benefit \u2014 water infrastructure serves distant urban centers, not local populations. Suppression enforced through administrative control and military power."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Maintenance and Slave Labor",
+      "comment": "PERSPECTIVE 2: MAINTENANCE AND SLAVE LABOR (SNARE) \u2014 Aqueduct construction and maintenance demands massive labor force, sustained through slavery and corv\u00e9e obligations. Workers trapped in perpetual maintenance duty with no exit option and minimal benefit. Pure extraction \u2014 labor extracted for infrastructure benefiting others. High suppression through legal status and coercive punishment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Urban Non-Elite Populations",
+      "comment": "PERSPECTIVE 3: URBAN NON-ELITE POPULATIONS (TANGLED ROPE) \u2014 Urban commons benefit from aqueduct-supplied water \u2014 public fountains, bathing facilities \u2014 enabling public health and social coordination. Genuine coordination function exists. But extraction embedded: access controlled through magistrates, water rights commodified, poor populations distant from premium water distribution. Constrained exit \u2014 without aqueduct infrastructure, urban living becomes infeasible; cannot opt out. Mixed benefit and cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "Imperial Administration and Urban Elites",
+      "comment": "PERSPECTIVE 4: IMPERIAL ADMINISTRATION AND URBAN ELITES (ROPE) \u2014 Aqueducts are perceived as pure coordination: solving the engineering problem of water supply to cities, enabling urban growth, supporting military logistics, facilitating tax collection and administrative control. Net beneficiaries with arbitrage options \u2014 can redirect aqueducts, reallocate water, reposition power. Experience the constraint as coordination mechanism, not extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "Provincial Elites and Municipalities",
+      "comment": "PERSPECTIVE 5: PROVINCIAL ELITES AND MUNICIPALITIES (TANGLED ROPE) \u2014 Local elites benefit from prestige aqueduct projects and enhanced urban status but are constrained by imperial direction of resources and water allocation. Genuine coordination with asymmetric extraction \u2014 local elites gain authority and population concentration but remain subordinate to imperial water policy. Mobile exit options (can relocate, build alternative infrastructure) but strategically constrained by imperial authority."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Post-Imperial Technical Inertia",
+      "comment": "PERSPECTIVE 6: POST-IMPERIAL TECHNICAL INERTIA (PITON) \u2014 From civilizational perspective, Roman aqueducts persist through institutional inertia long after the administrative system they served collapses. Medieval populations maintain aqueducts not for imperial water policy but because the infrastructure exists and carries water \u2014 the functional purpose degrades into performative maintenance. Theater ratio rises in post-imperial period as maintenance becomes ritualized rather than effective."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Natural Law View: Hydraulic Necessity",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, gravity-fed water distribution through engineered channels is an immutable natural law of hydraulic engineering: moving water from source to distant sink requires understanding gradient, pressure, and friction loss. This perspective risks naturalizing the contingent political arrangements (who controls the water, who pays, who benefits) as inherent to 'what infrastructure is.' The engine will flag this as false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "water_rights_ownership_ambiguity",
+      "question": "Is water treated as a natural commons with customary access rights, or as imperial property subject to administrative allocation?",
+      "resolution_mechanism": "Analysis of provincial water law, edicts on water rights, litigation records over water access disputes; comparison of written law vs local practice",
+      "impact": "If commons: extractiveness lower (0.25-0.30), rope classification more legitimate. If imperial property: extractiveness higher (0.55-0.65), snare classification dominant.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether water is commons or imperial property"
+    },
+    {
+      "id": "coordination_benefit_distribution",
+      "question": "How much public health and sanitation benefit flows to non-elite urban populations vs private villa supply for elites?",
+      "resolution_mechanism": "Archaeological survey of aqueduct terminus points, water storage capacity, fountain location mapping; epidemiological data on water-borne disease rates in supplied vs non-supplied areas",
+      "impact": "If benefit concentrated (>70% to elites): tangled rope classification confirmed at snare intensity. If distributed (40-60%): genuine tangled rope with more legitimate coordination component.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Distribution of public health benefits across social strata"
+    },
+    {
+      "id": "labor_coercion_mechanism_intensity",
+      "question": "What proportion of aqueduct maintenance labor is enslaved vs free wage labor vs corv\u00e9e obligation?",
+      "resolution_mechanism": "Analysis of construction records, labor inscriptions, manumission data, correlation of aqueduct expansion with slave import rates and military campaigns",
+      "impact": "If >80% enslaved: maintenance labor is pure snare (0.85+ extractiveness). If >50% free/wage: labor becomes more constrained than trapped, shifting to tangled rope (0.45-0.55).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of enslaved vs free labor in aqueduct maintenance"
+    },
+    {
+      "id": "provincial_water_access_baseline",
+      "question": "What water access did provincial populations have before aqueduct construction in their region?",
+      "resolution_mechanism": "Geological survey of local water sources, settlement patterns pre- and post-aqueduct, changes in population distribution, analysis of alternative water technology (wells, cisterns, local channels)",
+      "impact": "If robust local access displaced: strong victimization narrative. If aqueduct enabled settlement in water-poor regions: genuine coordination function emerges, tangled rope classification strengthened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Pre-aqueduct water access baseline in provinces"
+    },
+    {
+      "id": "imperial_vs_local_control_boundary",
+      "question": "What degree of local control do municipalities exercise over aqueduct routing, water allocation, and maintenance priorities?",
+      "resolution_mechanism": "Analysis of municipal charters, aqueduct management records, provincial edicts on water policy; case studies of conflicts between imperial procurators and local magistrates over water",
+      "impact": "If imperial control absolute: provincial elites experience snare (0.70+). If meaningful local authority: provincial elites experience tangled rope (0.40-0.60) or even rope (0.20-0.35).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Degree of municipal autonomy in aqueduct management"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 200
+  },
+  "commentary": {
+    "narrative_context": "Roman aqueduct infrastructure represents a foundational case study in how a single coordination mechanism becomes embedded with asymmetric extraction across different social strata. The aqueducts genuinely solved an engineering problem \u2014 moving water across long distances using gravity and engineered channels \u2014 and this solution enabled urban concentration, public health improvements, and military logistics. But the same infrastructure that coordinates water distribution also extracts value from rural populations (water diversion), from enslaved laborers (permanent maintenance duty), and from non-elite urban populations (controlled access through magistrates). The constraint exhibits all six DR types depending on observation position: pure extraction for trapped laborers and rural populations, mixed coordination-extraction for moderate urban dwellers, pure coordination for imperial administration, degraded ritual for post-imperial populations. The theater ratio rises dramatically in the late imperial and post-imperial periods as the political-administrative system that justified the infrastructure collapses, yet the physical structures persist through institutional inertia.",
+    "key_agents": [
+      "Imperial Administration: Primary beneficiary (institutional/arbitrage) \u2014 controls water allocation, uses aqueducts for military logistics, tax collection, and demonstrating imperial power",
+      "Urban Elites (patricians, wealthy merchants): Primary beneficiary (powerful/arbitrage) \u2014 secure reliable water supply, prestige projects, control over local water distribution and pricing",
+      "Provincial Rural Populations: Primary victim (powerless/trapped) \u2014 water sources diverted to urban centers; no alternative access; cannot exit regional dependency",
+      "Enslaved Labor and Corv\u00e9e Workers: Primary victim (powerless/trapped) \u2014 supply perpetual maintenance labor; trapped in legal status; no exit option",
+      "Urban Non-Elite Populations: Secondary actor (moderate/constrained) \u2014 benefit from public water access (coordination function) but face controlled distribution and cannot opt out of urban dependency",
+      "Provincial Municipalities and Local Elites: Secondary beneficiary-victim (powerful/mobile) \u2014 benefit from prestige and urban growth but constrained by imperial water policy directives",
+      "Post-Imperial Communities: Institutional actor (institutional/arbitrage) \u2014 inherit aqueduct infrastructure; maintain through inertia after coordination function degrades"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint exhibits genuine coordination (solving water distribution engineering problem, enabling urban sanitation) but embeds systematic extraction (diversion of rural water, unpaid maintenance labor, control of public water access through elites). The mid-range value reflects that neither pure coordination nor pure extraction accurately describes the constraint. Extractiveness rises from 0.22 at the constraint's origin (early imperial period, when coordination function dominates and infrastructure is novel) to 0.41-0.45 in later periods as administrative overhead and rent-extraction accumulate. Suppression (0.52): Moderate-high. Significant barriers to exit include administrative control over water allocation, legal status of enslaved laborers, geographic dependence on aqueduct-supplied regions, and military enforcement of imperial property claims. But suppression is not absolute \u2014 some alternative water technologies (wells, local channels) persist, and some populations can relocate. Theater ratio (0.35): Low-moderate in classical period (infrastructure is functionally maintained, genuinely solves coordination problem), but rises to 0.72 in post-imperial period (maintenance becomes ritualized, functional purpose degraded to preserving inherited structure).",
+    "perspectival_gap": "The original research group sees coordination (Rope) \u2014 they are solving the legitimate problem of communicating findings. The open science coalition sees a temporary problem with a sunset (Scaffold) \u2014 arXiv and registered reports are building alternative pathways. The journal editorial system sees its own degraded ritual (Piton) \u2014 peer review persists through inertia, not function. Replication groups see mixed coordination and extraction (Tangled Rope) \u2014 the system both enables and constrains their work. The field's epistemic reliability sees pure extraction (Snare) \u2014 premature claims contaminate the literature with no self-correction mechanism. The civilizational analytical observer risks seeing an immutable natural law (Mountain) \u2014 verification lag is inherent to science \u2014 but the structural data reveals this as a false summit: the contingent institutional arrangements (career incentives, funding concentration, publication bias) are not laws of nature.",
+    "directionality_logic": "Directionality values (d) are derived from structural position. Enslaved laborers are full victims with no exit: d \u2248 0.95 \u2192 high extraction experienced. Rural populations are victims with trapped exit: d \u2248 0.92 \u2192 high extraction. Urban non-elites are partial beneficiaries but constrained: d \u2248 0.55 \u2192 moderate extraction. Provincial elites are partial beneficiaries with mobile exit: d \u2248 0.48 \u2192 near-symmetric experience. Imperial administration are full beneficiaries with arbitrage options: d \u2248 0.05 \u2192 minimal/negative extraction (coordination benefits them). The perspectival gap between enslaved laborers (d \u2248 0.95) and imperial administration (d \u2248 0.05) is 0.90 \u2014 the maximum possible range. This generates the full spectrum of classification types from a single constraint.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that tangled rope classification is correct at the aggregate level precisely because the constraint contains genuine coordination (water distribution engineering, public sanitation) alongside systematic extraction (labor coercion, water diversion, access control). The mandatrophy error would be to classify this as pure rope (ignoring the extraction) or pure snare (ignoring the coordination benefit). The tangled rope classification correctly models that the same infrastructure that solves a real coordination problem simultaneously enables asymmetric extraction from different social strata. The false mountain perspective (naturalizing water engineering as immutable law) is explicitly revealed as false because the coordination function depends entirely on contingent political arrangements (imperial control, administrative allocation) that could be organized differently."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "roman_military_logistics",
+      "provincial_tribute_extraction",
+      "urban_sanitation_public_health"
+    ],
+    "dual_formulation_note": "Roman aqueduct infrastructure operates as a unified physical system but contains three structurally distinct constraints: (1) water engineering coordination (\u03b5 \u2248 0.08, rope), (2) resource allocation to elites (\u03b5 \u2248 0.55, snare), and (3) labor extraction for maintenance (\u03b5 \u2248 0.72, snare). This story represents the aggregate constraint (tangled rope, \u03b5 = 0.38) that emerges from these components. Full decomposition into separate constraint stories would enable precise tracking of how the coordination function and extraction mechanisms evolved independently over the 200-year interval."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    }
+  ]
+}

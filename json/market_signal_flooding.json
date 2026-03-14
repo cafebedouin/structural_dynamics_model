@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "market_signal_flooding",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "msf"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Market Signal Flooding and Information Asymmetry",
+    "topic_domain": "economics/financial_markets",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_frequency_traders",
+      "market_makers_with_latency_advantage",
+      "data_analytics_firms"
+    ],
+    "victims": [
+      "retail_investors",
+      "price_discovery_mechanism",
+      "market_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Retail Investor",
+      "comment": "PERSPECTIVE 1: RETAIL INVESTOR (SNARE) \u2014 Faces overwhelming signal volume with no capacity to filter meaningful information from noise. Trapped by capital requirements and cognitive limitations; cannot compete with algorithmic signal processing. Maximum extraction: pays bid-ask spreads inflated by information asymmetry, executes at disadvantageous prices due to signal flooding, and bears all costs of information disadvantage with no exit option."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Institutional Asset Manager",
+      "comment": "PERSPECTIVE 2: INSTITUTIONAL ASSET MANAGER (TANGLED ROPE) \u2014 Constrained by fiduciary duties and regulatory requirements, but also benefits from market liquidity and signal ecosystem. Can access expensive data services and employ teams of analysts, yet still bears extraction costs through bid-ask spreads and signal latency disadvantages relative to HFT. Mixed experience: genuine coordination (liquidity provision) alongside asymmetric extraction (latency extraction)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The High-Frequency Trader",
+      "comment": "PERSPECTIVE 3: HIGH-FREQUENCY TRADER (ROPE) \u2014 Primary beneficiary. Experiences signal flooding as a coordination mechanism that enables their arbitrage strategy. Lower latency, superior signal processing, and market-making capacity allow profitable extraction of bid-ask spreads. The constraint solves their primary problem: identifying microsecond-scale mispricings that generate revenue. Net beneficiary with full arbitrage exit optionality."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulatory Coalition",
+      "comment": "PERSPECTIVE 4: REGULATORY COALITION (SCAFFOLD) \u2014 Organized actors (SEC, market surveillance systems, academic researchers) view signal flooding as a temporary coordination failure with policy solutions: circuit breakers, quote stuffing prohibitions, latency rules, and transparency mandates. Sunset logic: as regulation matures and spreads, the extraction mechanism (information asymmetry via signal flooding) loses force. Estimated sunset: 10-15 years as international regulatory harmonization occurs."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Market Surveillance Theater",
+      "comment": "PERSPECTIVE 5: MARKET SURVEILLANCE THEATER (PITON) \u2014 Traditional market monitoring and compliance mechanisms are substantially performative: regulators cannot detect the majority of microstructure manipulation, spoofing, or signal flooding tactics in real time. Surveillance persists through institutional mandate despite degraded detection capability. Theater ratio rises as tactics evolve faster than detection rules. The surveillance theater maintains itself through regulatory inertia and audit theater (showing that monitoring occurred) rather than actual problem-solving."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Information Asymmetry View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some information asymmetry in markets is inherent: perfect information is impossible, processing capacity is limited, and advantage flows to those with better technology or access. This perspective views signal flooding as an immutable property of competitive markets. However, structural data contradicts the mountain classification \u2014 information asymmetry is contingent on technological choices (co-location rules, latency structures, data access barriers), not on laws of nature or logic. The engine will identify this as false summit: naturalization of policy decisions as physical limits."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "signal_utility_threshold",
+      "question": "What proportion of market signals contain economically useful information vs pure noise generated for tactical advantage?",
+      "resolution_mechanism": "Signal attribution analysis: track which quoted orders result in executed trades vs are withdrawn; measure correlation between signal volume and realized price discovery vs speculative oscillation",
+      "impact": "If >50% useful: signal flooding is primarily coordination mechanism (Rope from more perspectives). If <30% useful: flooding is extractive tactic (Snare from more perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of market signals providing economic utility"
+    },
+    {
+      "id": "latency_threshold_arbitrage",
+      "question": "What is the minimum latency threshold below which signal-based arbitrage becomes impossible for human-managed portfolios?",
+      "resolution_mechanism": "Empirical measurement of liquidity provision success rates at different latency deciles; identification of threshold where HFT extraction accelerates discontinuously",
+      "impact": "If threshold is 10ms: large institutional managers retain significant agency. If threshold is 100\u03bcs: most institutional actors are trapped by technological barriers.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Latency threshold below which algorithmic arbitrage dominates"
+    },
+    {
+      "id": "regulatory_compliance_cost_allocation",
+      "question": "Does compliance burden for signal flooding regulations fall proportionally on beneficiaries (HFT firms) or is it distributed across the market?",
+      "resolution_mechanism": "Analysis of regulatory cost incidence: monitoring expenditure, compliance system costs, surveillance infrastructure funding sources",
+      "impact": "If costs borne by beneficiaries: regulatory scaffold has genuine extraction reversal. If costs socialized: scaffold collapses (extraction persists while burden multiplies).",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Allocation of regulatory compliance costs"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "To what extent is market signal flooding suppression internalized (retail investors have learned to expect disadvantage and withdrawn from markets) vs structural (technological barriers)?",
+      "resolution_mechanism": "Retail participation trends; surveys on perceived fairness; comparison of retail trading volume before/after major signal flooding events; measurement of irrational trading behavior persistence",
+      "impact": "If highly internalized: suppression persists even if barriers are removed (identity lock). If purely structural: barrier removal reverses suppression immediately.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs internalized suppression in retail participation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Market signal flooding represents a structural constraint embedded in modern financial markets where algorithmic trading systems generate massive volumes of quotes, orders, and cancellations that overwhelm the information processing capacity of human traders and retail investors. The constraint exhibits all six Deferential Realism types from different structural positions. For retail investors trapped without signal-processing capacity, it is a snare \u2014 pure extraction via information asymmetry with no exit option. For institutional asset managers with constrained resources, it is tangled rope \u2014 they benefit from market liquidity while suffering extraction from latency disadvantage. For high-frequency traders with superior latency and signal processing, it is rope \u2014 a pure coordination mechanism solving the problem of microsecond arbitrage. For regulatory coalitions building surveillance systems, it is scaffold \u2014 a temporary coordination failure addressable through circuit breakers and transparency rules. For traditional market surveillance, it is piton \u2014 a degraded ritual where detection lags behind evasion tactics. From a civilizational analytical view, it risks being naturalized as an immutable property of competition, but the constraint is actually contingent on policy choices (co-location rules, latency structures, data access fees) that could be restructured.",
+    "key_agents": [
+      "High-Frequency Traders: Primary beneficiaries (institutional/arbitrage) \u2014 capture microsecond-scale mispricings through superior latency and signal processing; experience constraint as pure coordination mechanism",
+      "Retail Investors: Primary victims (powerless/trapped) \u2014 face overwhelming signal volume with no processing capacity; pay extraction costs via inflated bid-ask spreads and adverse execution prices",
+      "Price Discovery Mechanism: Abstract victim (powerless/trapped) \u2014 signal flooding obscures genuine price signals; creates oscillations that don't reflect underlying value fundamentals",
+      "Institutional Asset Managers: Secondary victims (moderate/constrained) \u2014 constrained by capital and regulatory requirements; benefit from liquidity but bear extraction costs from latency disadvantage",
+      "Market Makers: Secondary beneficiaries (powerful/mobile) \u2014 profit from bid-ask spreads widened by signal uncertainty; can access data services and employ specialist teams",
+      "Regulatory Agencies: Organized actors (organized/constrained) \u2014 building alternative verification pathways (circuit breakers, quote-stuffing rules, transparency mandates); see constraint as addressable through policy",
+      "Market Surveillance Systems: Institutional observers (institutional/arbitrage) \u2014 maintain performative monitoring rituals that lag behind evasion tactics; theater persists through regulatory mandate rather than effectiveness"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Substantial but not extreme. Signal flooding creates persistent information asymmetry that extracts from retail and institutional traders through bid-ask spreads, adverse selection, and mispricings during episodes of high signal volume. The measurement shows growth from 0.35 to 0.58 over the interval as algorithmic trading volume has accelerated. Extractiveness is not 0.75+ because genuine market liquidity is provided (bid-ask spreads would be wider without HFT) and some price discovery occurs despite signal noise. Suppression (0.62): Moderate-high. Retail investors face significant barriers to competing with signal-based trading: capital requirements for data services ($10K+/year), latency requirements (microsecond-scale infrastructure not accessible to individuals), algorithmic expertise, and regulatory knowledge. But suppression is not total \u2014 retail traders can participate at reduced sophistication levels, and some self-directed investors do hire professional execution. Theater ratio (0.68): High. Market surveillance and compliance mechanisms perform substantial monitoring theater: regulatory reports, trade reviews, surveillance alerts, and audit compliance demonstrating that monitoring occurs. Yet detection and prevention of spoofing, quote stuffing, and signal flooding tactics lags significantly behind tool sophistication. The theater increases as tactics evolve faster than detection rules.",
+    "directionality_logic": "Beneficiaries (high-frequency traders, market-making firms) have arbitrage exit options: they can enter or exit market segments at millisecond timescales, and their profitability depends on maintaining signal-processing advantage. Their directionality (d) is low: they derive direct extraction benefit from the constraint. Victims (retail investors, price discovery) have trapped exit options: retail participation is constrained by cognitive and capital limits, and the price discovery mechanism cannot exit markets. Their directionality (d) is high: they bear costs with minimal compensating benefit. Institutional asset managers occupy intermediate position: they have constrained exits (can shift to different asset classes or passive strategies but not without cost), constrained power (larger than retail but smaller than HFT), and mixed benefits (they profit from bid-ask as buyers but pay extractions as sellers). The engine derives d from these structural positions and applies the sigmoid f(d) to produce chi values that reflect experienced extractiveness.",
+    "perspectival_gap": "The perspectival gap is maximal in this constraint. High-frequency traders see rope \u2014 a pure coordination mechanism solving real liquidity provision problems. Retail investors see snare \u2014 pure extraction with no compensating coordination benefit. Institutional managers see tangled rope \u2014 both benefits (liquidity, lower execution cost than manual trading) and extraction (adverse selection, latency disadvantage). The regulatory coalition sees scaffold \u2014 a temporary problem with policy solutions. Market surveillance sees piton \u2014 a degraded ritual where the theatrical act of monitoring has decoupled from actual detection capability. The civilizational analyst risks seeing mountain \u2014 competition inherently generates information asymmetry \u2014 but this is false summit: signal flooding is contingent on technological and policy choices, not on immutable properties of markets or competition.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that the perspectival types are all accurate readings of different aspects of the same structural phenomenon. The mandate is NOT to identify 'the true type' but to recognize that signal flooding is simultaneously a coordination mechanism (HFT perspective), extraction mechanism (retail perspective), mixed mechanism (institutional perspective), and policy problem (regulatory perspective). The false summit (mountain) appears when analysis naturalizes the information asymmetry as inherent to competition. The engine's false summit detector identifies this by checking whether the structural data (beneficiaries, victims, enforcement requirements) are consistent with natural law classification. They are not \u2014 signal flooding requires active enforcement (algorithmic systems, data feeds, latency infrastructure) rather than emerging naturally. The mandatrophy resolution is achieved through perspectival completion: all six types are valid, and the constraint is fully characterized only by the presheaf of perspectives over the observation site."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "bid_ask_spread_widening",
+      "retail_market_participation_decline",
+      "flash_crash_systemic_risk"
+    ],
+    "dual_formulation_note": "Market signal flooding decomposes into three structurally distinct constraints: (1) quote-based signal flooding (high-frequency quote generation with low execution probability) \u2014 \u03b5\u22480.52, (2) order-based manipulation (spoofing, layering, cancellation tactics) \u2014 \u03b5\u22480.68, (3) data access barrier (alternative market data feeds accessible only at cost) \u2014 \u03b5\u22480.35. Each has different suppression mechanisms and different regulatory pathways. This story treats the overarching coordination/extraction hybrid; the three decomposed constraints would have distinct enforcement profiles and sunset timelines."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.42
+    }
+  ]
+}

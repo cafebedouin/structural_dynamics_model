@@ -1,0 +1,220 @@
+{
+  "header": {
+    "constraint_id": "routing_protocol_gatekeeping",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rpg"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Routing Protocol Gatekeeping in Internet Infrastructure",
+    "topic_domain": "telecommunications/internet_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "protocol_standardization_bodies",
+      "incumbent_router_manufacturers",
+      "large_isp_operators"
+    ],
+    "victims": [
+      "emerging_protocol_developers",
+      "edge_providers",
+      "network_innovation_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Emerging Protocol Developer",
+      "comment": "PERSPECTIVE 1: EMERGING PROTOCOL DEVELOPER (SNARE) \u2014 New routing protocols cannot gain deployment without approval from standardization bodies (IETF, IEEE) controlled by incumbent firms. Developer has no exit: must either conform to gatekeeping or remain undeployed. Trapped by both structural (deployment infrastructure is monopolized) and suppressive (standards process favors incumbent interests) mechanisms. Zero degrees of freedom."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Edge Network Provider",
+      "comment": "PERSPECTIVE 2: EDGE NETWORK PROVIDER (TANGLED ROPE) \u2014 Small ISP or regional carrier derives genuine coordination benefit from standardized routing (ensures interoperability with backbone infrastructure) but faces extraction through gatekeeping: cannot deploy optimized protocols for their region without standards approval. Constrained exit \u2014 can self-deploy but loses peering relationships and global reach. Mixed experience: real coordination need + asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Standards Body (IETF/IEEE)",
+      "comment": "PERSPECTIVE 3: STANDARDS BODY (ROPE) \u2014 Genuine coordination function: standardized routing protocols solve collective action problem (interoperability, scale, reliability). From the standards body's view, gatekeeping is necessary and legitimate oversight. Net beneficiary position: controls the approval process, benefits from the legitimacy of standards role. Arbitrage exit \u2014 can threaten to fragment standards if pressured, so maintains independent power."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Router Manufacturer",
+      "comment": "PERSPECTIVE 4: INCUMBENT ROUTER MANUFACTURER (ROPE) \u2014 Captures coordination benefits of standardized protocols (guaranteed market demand, interoperability requirements increase hardware sales). Gatekeeping benefits them: can delay competing protocol adoption, lock in existing hardware designs. Arbitrage exit \u2014 can switch protocol support if standards shift, so maintains strategic mobility despite gatekeeping role."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Open-Source Routing Coalition",
+      "comment": "PERSPECTIVE 5: OPEN-SOURCE ROUTING COALITION (SCAFFOLD) \u2014 Organized developers (Linux kernel, OpenDaylight, ONAP communities) are building parallel routing validation pathways: open-source routers can test and deploy protocols independently of standards approval. This creates a sunset path: as open hardware routing matures, the standards gatekeeping mechanism loses force. Temporary constraint with exit visible to organized agents."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Large ISP Operator",
+      "comment": "PERSPECTIVE 6: LARGE ISP OPERATOR (TANGLED ROPE) \u2014 Major carriers (AT&T, Verizon, China Telecom) both benefit from and perpetuate gatekeeping. Genuine coordination need: standardized routing ensures backbone stability and vendor interoperability. But they also benefit from gatekeeping \u2014 it prevents competitors from deploying optimized regional protocols. Mobile exit (can lobby standards bodies, build proprietary overlay networks) but strategically chooses to maintain gatekeeping. Mixed beneficiary-target position: benefits from coordination, profits from extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Network Innovation Capacity",
+      "comment": "PERSPECTIVE 7: NETWORK INNOVATION CAPACITY (SNARE) \u2014 Abstract collective good (the rate and diversity of routing protocol innovation) is trapped and bears maximum extraction. Gatekeeping suppresses alternative protocols even when they have superior properties (latency, energy efficiency, convergence speed). The innovation capacity has no voice, no exit, no organized representation. Structural victim of the constraint."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal scope, standardization is inherent to networked systems: any global-scale coordination problem requires some gatekeeper function to prevent chaos and ensure universal interoperability. This perspective risks naturalizing what is actually a contingent institutional arrangement (which body controls the gate, whose interests it serves). The engine's false summit detector will flag this \u2014 network standardization could operate under different governance models."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technical_merit_vs_gatekeeping_incentive",
+      "question": "Do standards bodies reject protocols primarily on technical merit or on alignment with incumbent manufacturer interests?",
+      "resolution_mechanism": "Comparative analysis: protocol rejection rates by technical category; correlation between rejection reason (performance, compatibility, security) and incumbent manufacturer impact; post-deployment security/performance data on rejected vs approved protocols",
+      "impact": "If rejection rate highly correlates with incumbent harm: gatekeeping is primarily extractive. If rejection aligns with genuine technical risk: gatekeeping is primarily coordination. Currently shows mixed signal.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether rejections reflect technical merit or incumbent interests"
+    },
+    {
+      "id": "open_source_viability_as_alternative",
+      "question": "Can open-source routers and software-defined networking genuinely displace proprietary standards gatekeeping?",
+      "resolution_mechanism": "Market adoption analysis: deployment share of open-source routing (Linux kernel, ONAP, OpenDaylight) vs standards-approved proprietary protocols; cost trajectories and feature parity; peering agreements that accept open-source routing",
+      "impact": "If open-source achieves 30%+ deployment: scaffold sunset is real and extractiveness ceiling is 0.45. If open-source remains niche: gatekeeping persists and extractiveness remains 0.58+. Current estimate: 15-20% adoption in data center, 5% in ISP backbone.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Viability of open-source routing as escape from standards gatekeeping"
+    },
+    {
+      "id": "network_effects_unavoidability",
+      "question": "Is the gatekeeping-like centralization of routing standards inevitable due to network effects, or is it a contingent institutional choice?",
+      "resolution_mechanism": "Comparative case study: internet routing vs other complex multi-vendor domains (electricity grids, telecommunications standards) with different governance models; simulation of alternative standards governance structures",
+      "impact": "If inevitable: mountain classification correct (gatekeeping is inherent to networked systems). If contingent: false summit \u2014 institution is treating a policy choice as natural law.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether gatekeeping is inevitable network effect or contingent institutional choice"
+    },
+    {
+      "id": "incumbent_manufacturer_dependency",
+      "question": "Could large ISPs and edge providers deploy alternative protocols at scale if they chose to, or are they actually dependent on incumbent manufacturer compliance?",
+      "resolution_mechanism": "Technical capability audit: which ISPs have in-house routing expertise and hardware sourcing alternatives; case studies of past ISP attempts to deploy non-standard protocols; network simulation showing protocol diversity without manufacturer support",
+      "impact": "If ISPs have technical capacity: victim status is choice rather than structural (exit_options upgrade from trapped to constrained or mobile for sophisticated operators). If dependent: gatekeeping is truly suppressive and extractiveness increases to 0.65+.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ISPs are dependent on incumbent manufacturers or have exit capacity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Routing protocol gatekeeping represents a structural constraint in internet infrastructure where the approval and standardization of routing algorithms is controlled by formal standards bodies (primarily IETF and IEEE) whose governance and incentive structures favor incumbent router manufacturers and large ISP operators. This creates a hybrid coordination-extraction dynamic: genuine need for standardized protocols to ensure global interoperability coexists with asymmetric extraction where emerging developers and edge providers cannot deploy superior protocols without standards approval. The constraint demonstrates all eight perspectives, revealing how the same structural phenomenon appears as coordination (standards body view), pure extraction (trapped emerging developer), mixed experience (edge provider), temporary problem (open-source coalition), and false natural law (analytical view). Extractiveness has increased from 0.42 to 0.58 over the measurement interval as standards approval timelines have lengthened and incumbent interests have consolidated. Theater ratio remains moderate (0.48) because the standards process, while politically influenced, maintains genuine technical evaluation rather than pure performative theater.",
+    "key_agents": [
+      "Emerging Protocol Developer: Primary victim (powerless/trapped) \u2014 cannot deploy new routing protocols without standards approval; no alternative deployment pathway available",
+      "Edge Network Provider: Secondary victim (moderate/constrained) \u2014 derives coordination benefit from standards but faces extraction through regional protocol suppression; constrained exit (can self-deploy but loses peering)",
+      "Standards Body (IETF/IEEE): Primary beneficiary (institutional/arbitrage) \u2014 controls gatekeeping mechanism; maintains legitimate coordination function but benefits from incumbent influence",
+      "Incumbent Router Manufacturer: Primary beneficiary (institutional/arbitrage) \u2014 locks in hardware designs through standards; can delay competing protocols",
+      "Large ISP Operator: Ambiguous (powerful/mobile) \u2014 both benefits from coordination (backbone stability) and profits from gatekeeping (suppresses regional competitors); chooses to maintain extraction",
+      "Open-Source Routing Coalition: Organized exit-builder (organized/mobile) \u2014 building parallel validation and deployment pathways with sunset logic; visible exit for organized agents",
+      "Network Innovation Capacity: Structural victim (powerless/trapped) \u2014 abstract collective good of routing innovation is suppressed; has no voice or exit mechanism"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The standards gatekeeping mechanism does perform genuine coordination (ensures interoperability, prevents chaos), but the extraction component is substantial. Emerging developers face 2-4 year standardization timelines even for technically superior protocols. Alternative deployments without standards approval lose 40-60% of potential adoption due to peering restrictions. The extractiveness has increased over the interval as standards timelines have lengthened and incumbent consolidation has strengthened. Suppression (0.65): Moderate-high. Suppression includes both structural barriers (deployment infrastructure controlled by standard-compliant vendors) and procedural barriers (RFC approval process, RFC editor selection biases, voting structures that favor incumbent interests). Emerging developers have limited technical barriers to protocol design but face insurmountable institutional barriers to deployment. Theater ratio (0.48): Moderate-low. The standards process does include genuine technical evaluation of routing protocol correctness, security, and performance. However, political evaluation (alignment with incumbent interests) is also significant. Theater is lower than peer review in academic publishing or regulatory review in finance, suggesting that technical merit is genuinely contested alongside political interests.",
+    "directionality_logic": "Directionality values (d) reflect each agent's structural position relative to the extraction flow. Emerging developers are pure targets (d=0.95): no power, no exit, bear full institutional suppression cost. Edge providers are moderate targets (d=0.65): constrained exit (self-deployment costs them peering), moderate power (regional leverage), but genuine coordination need. Standards body and incumbent manufacturers are beneficiaries (d=0.05-0.15): institutional power, arbitrage exit (can lobby standards changes), capture coordination legitimacy. Large ISPs are ambiguous beneficiaries (d=0.30-0.50): powerful (can influence standards), mobile exit (can build overlays), but strategically choose extraction. Open-source coalition is organized but has mobile exit (d=0.45), reducing experienced extraction through visible alternative pathway. The network innovation capacity is abstract victim (d=0.98): structurally trapped, no representation, maximum suppression.",
+    "perspectival_gap": "This constraint demonstrates fundamental perspectival divergence. The standards body and incumbent manufacturers see Rope \u2014 legitimate coordination mechanism ensuring global interoperability. The emerging developer sees Snare \u2014 trapped by gatekeeping with no exit. The edge provider sees Tangled Rope \u2014 genuine coordination need mixed with asymmetric extraction. The open-source coalition sees Scaffold \u2014 temporary problem being solved by alternative deployment pathways. The large ISP sees Tangled Rope but with beneficiary weighting (benefits from coordination, profits from gatekeeping, maintains strategic control over which protocols compete). The civilizational analytical observer risks seeing Mountain (standardization is inherent to networked systems) but structural data reveals this as false summit \u2014 alternative governance models exist (federated standards, guild-based approval, competitive protocol ecosystems with graceful degradation). The perspectival gaps reveal that all six DR types are simultaneously true from different structural positions.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: This constraint resolves mandatrophy by demonstrating why Tangled Rope (not pure Rope) is the correct classification. Pure Rope would require minimal asymmetric extraction (victims absent or minimal). But emerging protocol developers and network innovation capacity are genuine victims bearing substantial costs. The coordination function is also genuine \u2014 standards do solve interoperability problems. The constraint exhibits both: (1) active enforcement (standards bodies police deployment of non-compliant routing), (2) beneficiaries (incumbent manufacturers, large ISPs), (3) victims (emerging developers, edge providers, innovation capacity), and (4) significant suppression (institutional barriers, timeline delays, peering restrictions). Mandate loop prevented: false classification as pure Rope (merely coordination) would hide the extraction component; false classification as Snare (merely extraction) would hide the genuine coordination benefit. Tangled Rope captures the hybrid structure accurately."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "bgp_hijacking_vulnerability",
+      "internet_routing_centralization",
+      "protocol_innovation_bottleneck"
+    ],
+    "dual_formulation_note": "Routing protocol gatekeeping is upstream of specific vulnerabilities (BGP hijacking, routing centralization) and the broader innovation bottleneck in networking. Each downstream constraint has its own \u03b5 value reflecting its specific empirical status; the gatekeeping constraint represents the institutional mechanism that produces the bottleneck."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.35
+    }
+  ]
+}

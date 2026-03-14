@@ -1,0 +1,206 @@
+{
+  "header": {
+    "constraint_id": "rural_logistics_access",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rla"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Rural Logistics Access Constraint",
+    "topic_domain": "economic/infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "urban_logistics_operators",
+      "consolidated_retailers",
+      "centralized_distributors"
+    ],
+    "victims": [
+      "rural_merchants",
+      "remote_communities",
+      "small_farm_operators"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Rural Merchant",
+      "comment": "PERSPECTIVE 1: RURAL MERCHANT (SNARE) \u2014 Trapped by geographic isolation and lack of alternative suppliers. Cannot negotiate logistics costs; bears full burden of distance penalty. No exit: relocation economically impossible, alternative supply chains nonexistent. Maximum extraction experienced."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Small Farm Operator",
+      "comment": "PERSPECTIVE 2: SMALL FARM OPERATOR (TANGLED ROPE) \u2014 Constrained by transport cost burden and dependence on centralized distributors, but also benefits from coordinated supply chain access and bulk purchasing leverage they could not achieve independently. Extraction is asymmetric but coordination is genuine \u2014 the constraint solves a real collective action problem (aggregating dispersed demand) while extracting margins."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Urban Logistics Operator",
+      "comment": "PERSPECTIVE 3: URBAN LOGISTICS OPERATOR (ROPE) \u2014 Primary beneficiary with arbitrage options. Experiences the constraint as coordination: consolidating rural demand and routing through hub-and-spoke networks solves genuine logistics optimization problems. Net beneficiary through margin capture, but the mechanism is coordinative \u2014 without the constraint, the logistics problem remains unsolved."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regional Government",
+      "comment": "PERSPECTIVE 4: REGIONAL GOVERNMENT (TANGLED ROPE) \u2014 Constrained by infrastructure funding scarcity and political demand for rural service maintenance. Also benefits from centralized logistics networks reducing redundancy. Faces extraction (bearing cost of infrastructure maintenance) and coordination incentive (need to maintain supply access) simultaneously. Active enforcement required to maintain subsidy mechanisms."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Rural Cooperative System",
+      "comment": "PERSPECTIVE 5: RURAL COOPERATIVE SYSTEM (PITON) \u2014 Historical coordination mechanism for aggregating rural demand, now largely theatrical. Maintains formal structure and member loyalty but has been functionally displaced by centralized logistics networks. Theater ratio high (0.65+): annual meetings, governance ceremonies, member newsletters persist while actual logistics functions have been outsourced to urban operators. Preserved through institutional inertia and identity attachment rather than functional necessity."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Digital Logistics Coalition",
+      "comment": "PERSPECTIVE 6: DIGITAL LOGISTICS COALITION (SCAFFOLD) \u2014 Organized agents (platform cooperatives, last-mile startups, autonomous delivery initiatives) view the constraint as a temporary market failure being solved through technology. Decentralized routing, rural drone delivery, micro-fulfillment centers create alternative pathways with lower transaction costs. High suppression tolerated because coalition sees clear sunset: technology deployment reducing distance penalty over 15-20 year horizon. Has_sunset_clause rationale: as automation and distributed fulfillment mature, the geographic distance penalty becomes a choice variable rather than a structural constraint."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, geographic distance creates inherent transportation cost differentials: supplying a remote location will always cost more than supplying urban centers due to physics and spatial geometry. This perspective naturalizes the constraint as an immutable property of logistics. However, the base_properties contradicts the mountain classification: the extractiveness (0.52) and suppression (0.68) values indicate institutional choices, not physical laws. The analytical observer's mountain is a false summit, revealing that naturalizing distance as destiny obscures the contingent institutional arrangements (centralized distribution, margin capture, infrastructure neglect) that create the actual constraint."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "distance_penalty_vs_institutional_markup",
+      "question": "What portion of rural logistics cost premium is inherent to distance (physical/fuel costs) versus institutional markup (margin extraction, neglected competition)?",
+      "resolution_mechanism": "Cost decomposition analysis: fuel/time cost modeling vs actual retail price differential. Comparison to rural logistics costs in high-competition markets (e.g., Nordic countries with cooperative infrastructure) vs consolidated markets.",
+      "impact": "If institutional markup is >40%: constraint is primarily extractive (snare/tangled_rope confirmed, mountain false). If markup is <20%: constraint has larger natural law component (mountain plausible). Threshold determines whether rural subsidy policy addresses market failure or institutional extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of cost premium from distance vs institutional extraction"
+    },
+    {
+      "id": "cooperative_viability_threshold",
+      "question": "What minimum rural population density sustains independent logistics cooperatives without external subsidy?",
+      "resolution_mechanism": "Comparative analysis of cooperative viability across density gradients in multiple regions. Identification of break-even density thresholds where cooperative overhead becomes unsustainable.",
+      "impact": "If threshold > existing density: piton classification confirmed (cooperatives are inertial, not functional). If threshold < existing density: cooperatives are viable but captured (tangled_rope for regional government). Determines whether sunset requires technology or policy intervention.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Minimum population density for viable independent cooperatives"
+    },
+    {
+      "id": "last_mile_automation_feasibility",
+      "question": "Can autonomous/drone-based last-mile logistics achieve cost parity with centralized hub-and-spoke networks in rural contexts within the proposed 15-20 year horizon?",
+      "resolution_mechanism": "Comparative cost modeling: autonomous delivery infrastructure deployment (drones, micro-fulfillment) vs centralized logistics over technology maturation timeline. Regulatory and terrain feasibility analysis.",
+      "impact": "If feasible: scaffold perspective confirmed (sunset is structural, not aspirational). If infeasible: scaffold is theatrical aspiration; constraint persists beyond sunset horizon. Affects confidence in digital coalition's exit pathway.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether autonomous last-mile logistics can achieve cost parity"
+    },
+    {
+      "id": "rural_agent_coalition_emergence",
+      "question": "Under what conditions do powerless rural merchants organize into coalitions capable of renegotiating logistics terms?",
+      "resolution_mechanism": "Historical analysis of successful rural collective action (successful cooperative models, producer unions, platform cooperatives). Identification of prerequisites: communication infrastructure, charismatic leadership, external support, collective identity.",
+      "impact": "If conditions rare/absent: snare classification sustained (powerless remain trapped). If conditions present/emerging: potential for classification shift from snare to organized tangled_rope. Affects mandatrophy resolution pathway.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Conditions for powerless agents to form renegotiating coalitions"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Rural logistics access represents a structural constraint where geographic distance combines with institutional consolidation to create asymmetric extraction from rural producers and merchants. The constraint operates at multiple scales \u2014 individual merchant transactions, regional supply chains, national distribution networks \u2014 and exhibits different classificatory properties depending on the observer's structural position. Urban logistics operators experience the constraint as a solved coordination problem (rope): consolidating dispersed rural demand into hub-and-spoke networks reduces transport inefficiency and enables scale economies. Rural merchants experience the constraint as inescapable extraction (snare): geographic isolation and lack of alternative suppliers force acceptance of distance-premium pricing. Intermediate actors like small farm operators and regional governments experience mixed coordination and extraction (tangled rope): the centralized system solves genuine aggregation problems while extracting asymmetric margins. Degraded rural cooperatives that once provided alternative logistics channels now serve primarily theatrical functions (piton), maintained through institutional inertia rather than utility. Digital logistics technologies and platform cooperatives represent emerging alternative pathways with genuine sunset logic (scaffold): automation, distributed fulfillment, and decentralized routing reduce the inherent cost penalty of distance over a 15-20 year horizon. The constraint demonstrates how seemingly natural (immutable geographic distance) and institutional (margin capture, infrastructure neglect, regulatory choices) components intertwine, risking false naturalization by analytical observers who treat the constraint as a law of physics rather than a contingent institutional arrangement.",
+    "key_agents": [
+      "Rural Merchants: Primary victim (powerless/trapped) \u2014 bear full distance premium cost with no exit options or negotiating power",
+      "Small Farm Operators: Secondary victim (moderate/constrained) \u2014 face high transport costs but benefit from some aggregation coordination; can potentially exit through cooperative reformation or direct-to-consumer channels at significant cost",
+      "Urban Logistics Operators: Primary beneficiary (institutional/arbitrage) \u2014 capture margin through consolidation; experience constraint as solved coordination problem; arbitrage options enable escape if political pressure mounts",
+      "Regional Government: Secondary actor (institutional/constrained) \u2014 bears infrastructure maintenance costs and maintains rural service politically while also benefiting from efficient centralized networks; enforcement required to sustain subsidy mechanisms",
+      "Rural Cooperative System: Institutional actor (institutional/arbitrage) \u2014 formerly functional coordination mechanism, now largely theatrical; maintained through member identity attachment rather than logistics utility",
+      "Digital Logistics Coalition: Organized actors (organized/mobile) \u2014 startups, platform cooperatives, automation firms with exit pathways and technology-based sunset mechanisms",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as immutable geographic laws"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The rural logistics cost premium comprises both genuine geographic cost (fuel, distance, time) and institutional markup (margin capture by consolidated operators, infrastructure underinvestment, regulatory barriers to competition). The 0.52 value reflects that institutional extraction is substantial but not total \u2014 some operators do serve rural markets at lower margins, indicating the market failure is not absolute. The value increased from 0.38 to 0.52 over the measurement interval as consolidation deepened and cooperative alternatives atrophied. Suppression (0.68): High. Significant barriers to exit include geographic isolation (cannot relocate suppliers), lack of alternatives (consolidation eliminated competitors), information asymmetry (rural agents unaware of real cost structure), and regulatory barriers (license/permit costs higher in rural contexts). Suppression is structural (external barriers) rather than internalized \u2014 rural merchants perceive the extraction clearly but cannot escape it. Theater ratio (0.35): Low. The constraint is functionally genuine: real logistics optimization problems exist, genuine coordination gaps exist, transport costs are real. Theater appears primarily in the rural cooperative system (maintained through ceremony and identity attachment rather than function) and in policy narratives that naturalize distance-based pricing as inevitable rather than contingent. The low theater ratio indicates the constraint's core mechanism is extractive logistics, not performative ritual.",
+    "perspectival_gap": "Gap between snare (rural merchant, trapped) and rope (urban operator, arbitrage) is maximum: both see the same constraint, but the powerless see extraction, the beneficiary sees coordination. Gap between tangled rope (farm operator, constrained) and rope (urban operator, arbitrage) reflects the exit option differential: constrained agents experience both extraction and coordination benefit; arbitrage agents experience pure coordination benefit. Gap between piton (cooperative system) and snare (merchant) reflects institutional obsolescence: the cooperative was once a rope (genuine coordination) but is now theatrical (abandoned function, maintained identity). Gap between scaffold (digital coalition, organized/mobile) and snare (merchant, powerless/trapped) reflects asymmetric awareness of exit pathways: organized agents see technology-based sunset routes; powerless agents see no exit. Gap between mountain (analytical, civilizational) and snare (merchant, biographical) reflects the false naturalization: the analytical observer risks treating contingent institutional arrangements (centralization, margin extraction, infrastructure neglect) as immutable geographic laws. This gap is the diagnostic signal for false summits \u2014 when the analytical observer's classification (mountain) contradicts the primary victim's (snare) and beneficiary's (rope) lived experience, the analytical frame has naturalized institutional choices.",
+    "directionality_logic": "Directionality derivation flows from agent power level, exit options, and beneficiary/victim status. Urban logistics operators have institutional power, arbitrage exit options, and beneficiary status \u2014 derived d \u2248 0.08 (full beneficiary with escape routes), producing negative effective extraction (they benefit from the constraint). Rural merchants have powerless status, trapped exit options, and victim status \u2014 derived d \u2248 0.95 (full target with no escape), producing maximum experienced extraction. Small farm operators have moderate power, constrained exit (can relocate to urban supply chains at significant cost, can attempt cooperative reformation with high coordination barriers), and victim-beneficiary duality (benefit from supply aggregation, pay extraction premium) \u2014 derived d \u2248 0.55, producing moderate experienced extraction. Regional government has institutional power, constrained exit (cannot ignore rural supply policy politically but can offload costs to consolidation), and mixed victim-beneficiary status (benefits from efficient networks, bears subsidy costs) \u2014 derived d \u2248 0.50. The digital coalition has organized power, mobile exit options (can scale technology or exit market), and beneficiary status (capturing value from logistics efficiency gains) \u2014 derived d \u2248 0.35. These differentials are captured through the beneficiary/victim declarations and exit_options vectors; the directionality overrides are not needed (derivation chain produces accurate d values from structural data).",
+    "mandatrophy_analysis": "The mandatrophy is resolved through perspectival decomposition. The constraint is genuinely tangled rope at the core (beneficiaries exist who experience coordination; victims exist who bear asymmetric extraction; active enforcement maintains the regime). The snare classification at the powerless perspective reflects accurate lived experience: trapped agents with no exit do experience the constraint as pure extraction, and for them the classification is correct. The rope classification at the institutional beneficiary perspective also reflects accurate lived experience: beneficiaries with arbitrage options do experience coordination benefit. The piton and scaffold perspectives reveal institutional evolution: the cooperatives have atrophied to theater (piton), and new technology-based alternatives are emerging (scaffold). The mountain perspective is a false summit: the analytical observer risks naturalizing the constraint as immutable distance-based cost when structural data (the tangled rope core with enforced asymmetry) reveals it as contingent institutional arrangement. The resolution prevents the mandatrophy trap where 'which is the true type?' paralysis occurs: all six types are legitimate readings of the same structure from different perspectives. The tangled rope is the analytical consensus (benefits and costs are both real, coordination and extraction are both present, enforcement is active). The snare and rope are the perspectival extremes (what the most exploited and most benefited agents actually experience). The piton and scaffold are historical/technological trajectories. The mountain is a cautionary example of how false naturalization obscures institutional contingency."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "agricultural_supply_chain_consolidation",
+      "rural_infrastructure_underinvestment",
+      "small_business_margin_squeeze"
+    ],
+    "dual_formulation_note": "Rural logistics access decomposes into multiple structurally distinct constraints: (1) supply_chain_consolidation (\u03b5\u22480.45, tangled_rope) \u2014 institutional extraction through margin capture; (2) transport_cost_asymmetry (\u03b5\u22480.35, rope) \u2014 genuine geometric/physical coordination problem; (3) infrastructure_maintenance_burden (\u03b5\u22480.40, tangled_rope) \u2014 regional government bears subsidy cost while central operators capture efficiency gains. This story treats the unified constraint; decomposition into substrate constraints is available for higher granularity analysis. Links show how rural logistics access cascades into agricultural consolidation and small business margin compression."
+  },
+  "directionality_overrides": []
+}

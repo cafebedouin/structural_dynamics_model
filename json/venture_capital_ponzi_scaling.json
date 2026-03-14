@@ -1,0 +1,229 @@
+{
+  "header": {
+    "constraint_id": "venture_capital_ponzi_scaling",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "vcps"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.81,
+    "claimed_type": "snare",
+    "human_readable": "Venture Capital Ponzi Scaling Mechanism",
+    "topic_domain": "finance/technology/institutional_economics",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "early_stage_venture_firms",
+      "founder_insiders",
+      "exit_liquidity_buyers"
+    ],
+    "victims": [
+      "later_stage_investors",
+      "employee_equity_holders",
+      "debt_creditors"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Late-Stage Employee with Equity Lock-In",
+      "comment": "PERSPECTIVE 1: LATE-STAGE EMPLOYEE (SNARE) \u2014 Hired at Series B/C with four-year vesting schedule and acceleration triggered by exit event. Cannot exit without losing unvested equity; cannot liquidate held equity without company acquisition or IPO. Suppression is structural: golden handcuffs, information asymmetry about burn rate, contractual lock-in. Trapped agent experiencing pure extraction \u2014 the valuation multiplier benefits early insiders, not later employees. Maximum experienced extractiveness."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Series C Institutional Investor",
+      "comment": "PERSPECTIVE 2: SERIES C INSTITUTIONAL INVESTOR (SNARE) \u2014 Invested at $2B valuation expecting exit in 5-7 years. Compounding dilution and follow-on rounds at 3x-5x valuations create downside protection illusion (SAFEs, liquidation preferences) but trap capital at risk. High suppression: information asymmetry about burn rate, opacity of cap table, social pressure to follow or lose portfolio signaling. Exit is constrained not trapped \u2014 investor can exit via secondary markets or write-down, but at significant cost. Significant experienced extraction through dilution and timelock."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Early-Stage Venture Fund",
+      "comment": "PERSPECTIVE 3: EARLY-STAGE VENTURE FUND (ROPE) \u2014 Seed and Series A investors have massive returns (100x-1000x) if exits occur at later valuations. The mechanism (raising capital at ever-higher valuations to create downstream returns) is perfectly functional from this position. Arbitrage via follow-on rounds and secondary sales. Suppression is low for this actor \u2014 they control information flow and pricing. Experiences the constraint as efficient capital allocation, not extraction. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Founder and Company Leadership",
+      "comment": "PERSPECTIVE 4: FOUNDER/LEADERSHIP (TANGLED ROPE) \u2014 Genuine coordination function: capital raise enables hiring, product development, market expansion. Real benefits to founder (equity upside, company resources, status). But also asymmetric extraction: founder/insiders capture board control, information advantage, liquidation preference ordering. Later employees and investors bear cost of dilution while founder benefits from both capital and control. Mixed coordination-extraction hybrid."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Venture Capital Market Structure",
+      "comment": "PERSPECTIVE 5: VENTURE CAPITAL MARKET STRUCTURE (PITON) \u2014 The institutional machinery of VC funding (pitch decks, SAFEs, term sheets, valuation formulas) persists through inertia and incumbent advantage despite degraded function. Theater ratio extremely high: metrics like 'TAM size,' 'unit economics,' 'burn rate' are presented as precision forecasts but are largely fictional. The entire apparatus maintains itself because alternative capital allocation mechanisms haven't fully matured (SPACs, crowdfunding, equity streaming). Functionally degraded but sustained by institutional lock-in."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer - Institutional Inertia View",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (PITON) \u2014 At civilizational scale, the VC Ponzi structure persists because: (1) it generates real innovations (genuine coordination function), (2) distributed decision-making opacity masks the extraction at early stages (early returns look real), (3) legitimate uncertainty about startup outcomes provides epistemic cover for false confidence. Theater ratio high because the entire VC discourse (unicorn narratives, founder mythology, exponential growth stories) performs as motivation/legitimation rather than as accurate forecasting. Degraded but persistent through narrative power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Secondary Debt Creditors (Banks and Lenders)",
+      "comment": "PERSPECTIVE 7: SECONDARY DEBT CREDITORS (TANGLED ROPE) \u2014 Banks extend credit against inflated equity valuations and unprofitable burn rates. Genuine coordination function: capital availability enables company operations. Asymmetric extraction: senior debt priority, collateral requirements, personal guarantees from founders shift downside to junior creditors. Organized actors (banking sector) constrained by regulatory requirements and competitive pressure to lend. Mixed coordination (funding necessary) and extraction (subordinated to equity holders)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "valuation_signal_collapse",
+      "question": "At what trigger point do late-stage investors recognize that valuation escalation is uncoupled from financial viability?",
+      "resolution_mechanism": "Empirical analysis of acquirer valuations vs VC round valuations for down rounds and acquihires; comparison of public market multiples vs private market multiples for comparable companies",
+      "impact": "If trigger is hit (acquisition price < Series B valuation): massive downside realization for C/D round investors. Snare classification confirmed empirically. If never hit: constraint operates as pure Ponzi (indefinite valuation escalation).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Valuation signal collapse point for late-stage investors"
+    },
+    {
+      "id": "exit_liquidity_availability",
+      "question": "Is there sufficient downstream liquidity (acquirers, IPO capacity, secondaries) to absorb exit demand at claimed valuations?",
+      "resolution_mechanism": "Ratio of VC-backed startup acquisition volume to VC capital deployed; IPO pre-revenue company count and valuations; secondary market transaction sizes and prices relative to latest round valuations",
+      "impact": "If liquidity insufficient: winners are determined by exit timing (who exits before cascade). If liquidity adequate: extraction is temporary and lower than base estimate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Exit liquidity sufficiency for VC-backed companies"
+    },
+    {
+      "id": "burn_rate_forecasting_accuracy",
+      "question": "What is the accuracy of VC-backed startup burn rate forecasts submitted to Series B+ investors vs actual realized burn?",
+      "resolution_mechanism": "Comparison of submitted financial models vs actual cash consumption for cohort of companies; analysis of forecast error distribution and bias direction",
+      "impact": "If forecast accuracy > 80%: information asymmetry is lower, suppression overstated. If accuracy < 40%: forecasts are essentially fiction, suppression and extraction are higher than base estimate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Accuracy of startup burn rate forecasting"
+    },
+    {
+      "id": "founder_insider_alignment",
+      "question": "Do founder financial incentives (salary, liquidation preferences, board control) align with later investor interests?",
+      "resolution_mechanism": "Analysis of founder compensation relative to employee compensation; liquidation preference ordering; board seat allocation vs equity ownership",
+      "impact": "If misaligned: tangled rope classification confirmed, extraction mechanism is hidden in preference ordering. If aligned: coordination function is more genuine, Tangled Rope moves toward Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Founder-investor incentive alignment"
+    },
+    {
+      "id": "alternative_capital_structures_maturity",
+      "question": "How mature are alternative capital allocation mechanisms (equity crowdfunding, revenue-based financing, equity streaming) relative to traditional VC?",
+      "resolution_mechanism": "Comparison of deployment volume, company success rates, investor returns, and time-to-exit for alternative structures vs VC-backed cohorts",
+      "impact": "If alternatives mature: piton classification strengthens (VC persists through inertia). If alternatives remain marginal: VC structure may be genuinely optimal despite high theater.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Maturity of alternative capital structures"
+    },
+    {
+      "id": "syndication_herding_mechanism",
+      "question": "Do follow-on round co-investors coordinate actual due diligence or copy lead investor signals?",
+      "resolution_mechanism": "Analysis of due diligence patterns in follow-on rounds; correlation between lead and syndicate valuations; identification of syndicate participation after lead signal vs independent evaluation",
+      "impact": "If herding: suppression is higher (information asymmetry maintained through signaling cascade). If independent: suppression lower, though still present.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Investor syndication herding vs independent evaluation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.81
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "Venture capital Ponzi scaling is a structural mechanism where capital is deployed at exponentially increasing valuations, creating returns for early-stage investors that depend on finding later-stage investors willing to pay higher prices, independent of underlying cash generation or profitability. The constraint exhibits high suppression (opacity of cap tables, burn rates, and financial forecasts), high theater (narrative emphasis on TAM size, founder mythology, and exponential growth stories), and asymmetric extraction (early investors capture most upside while later investors and employees absorb downside risk). The extractiveness has increased from 0.35 to 0.68 over the measurement interval as the venture ecosystem has matured, capital concentration has increased, and valuation inflation has accelerated. This constraint is classified as a Snare from the perspectives of trapped employees and constrained late-stage investors, but as Rope from early-stage funds, Tangled Rope from founders (mixed coordination and extraction), and Piton from institutional observers (degraded but persistent through narrative power).",
+    "key_agents": [
+      "Early-Stage Venture Funds: Primary beneficiary (institutional/arbitrage) \u2014 capture 100x-1000x returns if exits occur at later valuations; control information flow and pricing",
+      "Founder and Company Leadership: Mixed actor (powerful/arbitrage) \u2014 genuine coordination function (enable hiring, product, market expansion) but also asymmetric extraction (board control, liquidation preferences, information advantage)",
+      "Late-Stage Employees: Primary victim (powerless/trapped) \u2014 equity locked by vesting, information asymmetry about burn rate, no liquidity pathway except acquisition or IPO",
+      "Series C+ Institutional Investors: Secondary victim (moderate/constrained) \u2014 trapped by dilution, follow-on round pressure, information opacity; can exit via secondary markets but at significant cost",
+      "Secondary Debt Creditors (Banks): Structural victim (organized/constrained) \u2014 extend credit against inflated valuations, subordinated to equity in downside, regulatory constrained",
+      "Venture Capital Market Structure: Institutional actor (institutional/arbitrage) \u2014 persists through inertia despite high theater; alternative capital structures haven't fully matured",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing valuation escalation as inevitable market efficiency rather than contingent institutional arrangement"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and increasing. Early-stage investors require later investors to sustain exponentially rising valuations, creating a funding pyramid where sustainability depends on continuous capital inflow at inflated prices. The extractiveness has grown from 0.35 to 0.68 over the measurement interval because: (1) capital concentration has increased (mega-funds have more power to set valuations), (2) unicorn narrative saturation has increased theater-driven capital deployment, (3) employee populations have grown (more trapped agents), (4) M&A acquirer valuations have decoupled from VC round prices (signal collapse). Suppression (0.72): Very high. Cap table opacity is endemic (investors often don't know their dilution until year 2-3 of holding period). Burn rate forecasts in pitch decks bear minimal relationship to actual cash consumption. Senior liquidation preferences are buried in term sheets. Personal guarantees from founders are hidden from other investors. Information asymmetry is maintained through institutional design: lead investors have access to detailed financials while syndicate co-investors see summary metrics. Theater ratio (0.81): Extremely high and increasing. VC discourse relies almost entirely on narrative: founder mythology ('visionary founder who will overcome all obstacles'), TAM size (often fictional or based on SAM confusion), unit economics (presented with high precision despite massive uncertainty), burn rate trajectory (submitted forecasts vs actual). The entire pitch-deck-and-term-sheet apparatus is performative \u2014 it motivates capital deployment while obscuring the fundamental question: are downstream acquirers willing to pay exit prices that deliver promised returns? Theater has increased from 0.55 to 0.81 because the narrative complexity has increased (ARR metrics, cohort retention, land-and-expand models) while the underlying forecasting accuracy has declined.",
+    "perspectival_gap": "Early-stage beneficiaries perceive Rope (efficient coordination, clear incentives). Late-stage victims perceive Snare (pure extraction, no exit). Founders perceive Tangled Rope (real capital enabling real work, but also control asymmetry). Market structure perceives Piton (degraded ritual sustained by inertia). The gap reveals the fundamental extraction mechanism: early investors need later investors to sustain valuations, so the entire institutional apparatus (SAFEs, liquidation preferences, term sheets, pitch-deck metrics) is engineered to extract from later investors and pass returns to earlier ones. The mechanism is hidden in preference ordering, cap table opacity, and information asymmetry \u2014 not in explicit coercion. This is why suppression is so high: the extraction is legalized and normalized through institutional design rather than enforced through coercion.",
+    "directionality_logic": "Beneficiaries (early-stage funds, founders-as-early-insiders): low d, experience negative or low effective extraction through the chi formula. They capture upside without downside lock-in. Victims (late-stage investors, employees, debt creditors): high d, experience high effective extraction. They face dilution, lock-in, and limited exit paths. The preference ordering in cap tables (senior liquidation preferences to early investors, subordination of employee equity and debt) encodes the extraction mathematically. This is extracted through institutional design rather than explicit coercion \u2014 the terms are 'reasonable' (VC gets preference because they take early-stage risk), but the cumulative effect across rounds is to transfer wealth from later to earlier investors.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED (extractiveness 0.68 > 0.70 threshold). The classification as Snare is robust: (1) High suppression (0.72) \u2014 information asymmetry, buried terms, opacity of burn rates and cap tables prevent victims from recognizing extraction until after lock-in. (2) High extractiveness (0.68) \u2014 early investors require later investors to sustain valuations; extraction is baked into the preference ordering. (3) Low coordination function \u2014 the mechanism generates innovation (genuine coordination of capital to productive uses) but this is a byproduct, not the primary function from the extraction perspective. The mandatrophy is resolved by recognizing that the VC Ponzi operates as TWO SEPARATE CONSTRAINTS: (a) Capital allocation for startup innovation (genuine coordination problem, Rope from social perspective), and (b) Valuation escalation to create early-investor returns (pure extraction mechanism, Snare from late-investor perspective). The two constraints are operationally linked but have different \u03b5 values. Write separate stories and link via network.affects_constraints: venture_capital_innovation_coordination (\u03b5=0.25, Rope) upstream of venture_capital_ponzi_scaling (\u03b5=0.68, Snare). The first is a real social benefit; the second is the institutional mechanism that captures that benefit for early investors at later investors' cost."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "startup_burn_rate_opacity",
+      "employee_equity_illiquidity",
+      "venture_capital_innovation_coordination"
+    ],
+    "dual_formulation_note": "VC Ponzi scaling decomposes into two structurally distinct constraints: (1) venture_capital_innovation_coordination (\u03b5=0.25, Rope) \u2014 genuine coordination of capital to productive innovation; (2) venture_capital_ponzi_scaling (\u03b5=0.68, Snare) \u2014 valuation escalation mechanism that extracts from later investors to reward early ones. The Ponzi constraint is DOWNSTREAM of innovation coordination in the causal chain: capital coordination enables company building, which enables exit opportunities, which sustains the Ponzi mechanism. Measure (1) as a standalone Rope with beneficiaries=[founders, employees, society] and no victims. Measure (2) as this Snare with beneficiaries=[early_investors, founders_as_insiders] and victims=[late_investors, employees, creditors]. The decomposition reveals that the social benefit (innovation) is uncoupled from the extraction mechanism (valuation escalation), and that the Ponzi could be replaced by alternative capital structures without destroying the innovation function."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.4
+    }
+  ]
+}

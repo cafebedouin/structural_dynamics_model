@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "cryptocurrency_velocity_dynamics",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "crypto_vel"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Cryptocurrency Velocity Dynamics Constraint",
+    "topic_domain": "monetary_economics/blockchain",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_frequency_traders",
+      "exchange_operators",
+      "liquidity_providers"
+    ],
+    "victims": [
+      "long_term_holders",
+      "price_stability",
+      "network_utility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Long-Term Holder",
+      "comment": "Long-term cryptocurrency holders experience the velocity constraint as extractive entrapment. High transaction velocity (speculation, arbitrage, flash trading) creates price volatility that directly erodes purchasing power for holders. They cannot exit without realizing losses; they are trapped in a system where their stored value depreciates due to mechanisms they cannot control or avoid."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Merchant Accepting Crypto",
+      "comment": "Merchants accepting cryptocurrency as payment face genuine coordination benefits (borderless, low-friction settlement) alongside significant extraction costs (price volatility between acceptance and conversion, double-spend risk management, compliance burden). They are constrained by infrastructure dependencies and regulatory uncertainty, not purely trapped. The coordination function is real; the asymmetric extraction is also real."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Exchange Operator",
+      "comment": "Exchange operators benefit from velocity dynamics through transaction fees, market-making spreads, and order flow. They experience the constraint as pure coordination: velocity equals transaction volume equals revenue. They have arbitrage optionality (can exit, pivot to other assets, diversify). Net experience is beneficial coordination without extraction bearing down on them."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Payment Protocol Developer",
+      "comment": "Payment protocol developers (Lightning Network, Solana, Roll-ups, stablecoins) see velocity constraints as a temporary coordination problem with architectural sunset. Layer-2 solutions reduce velocity pressure by enabling faster settlement without on-chain transaction costs. As these mature, the velocity bottleneck's extraction force diminishes. Organized agents can implement exits; high suppression is tolerated because the sunset is real."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Hodl Narrative",
+      "comment": "The 'HODL' (hold) ethos persists as theatrical performance despite diminishing functional utility. It originated as coordination for network effects but has become identity-protective narrative for holders experiencing extraction. The narrative maintains itself through community reinforcement and institutional inertia, not because it solves the velocity problem. Theater ratio reflects this performative maintenance of meaning."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Macro View)",
+      "comment": "From a civilizational analytical perspective, velocity dynamics appear as immutable monetary economics: high velocity reduces price stability; low velocity reduces utility as medium of exchange. The constraint appears as an irreducible trade-off inherent to commodity-based money. However, structural data reveals this as false summitry \u2014 the velocity dynamics are contingent on institutional architecture (exchange design, layer-1 throughput, stablecoin supply), not natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "velocity_measurement_definition",
+      "question": "What constitutes 'velocity' in a system where multiple tokens, layers, and timeframes exist? Is on-chain velocity different from economic velocity?",
+      "resolution_mechanism": "Operationalize velocity across different layers (L1/L2), token types (native/wrapped/stablecoin), and timeframes. Compare on-chain transaction frequency to economic transaction frequency using merchant data.",
+      "impact": "If velocity is L1-only: constraint may be overstated for systems with robust L2 adoption. If economic velocity includes L2: current extractiveness (0.52) may understate the constraint's actual functionality.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Definition and measurement scope for velocity in multi-layer systems"
+    },
+    {
+      "id": "stablecoin_substitution",
+      "question": "Do stablecoins resolve the velocity-stability trade-off by decoupling velocity from volatility, or do they externalize instability to the underlying layer and collateral?",
+      "resolution_mechanism": "Analyze stablecoin depegging events, collateral concentration, and velocity patterns in stablecoin vs native token markets. Track whether velocity externalities propagate to collateral assets.",
+      "impact": "If stablecoins resolve: velocity constraint for native tokens becomes a choice (Scaffold perspective strengthened, partial sunset). If externalized: the constraint shifts rather than resolves (Piton perspective confirmed \u2014 problem persists via institutional arrangement change).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether stablecoins resolve or externalize the velocity-stability constraint"
+    },
+    {
+      "id": "extraction_mechanism_attribution",
+      "question": "Is high velocity extraction driven by speculator activity extracting from long-term holders, or by legitimate network effects and price discovery?",
+      "resolution_mechanism": "Separate transaction types: legitimate retail payments vs high-frequency trading activity vs arbitrage. Measure wealth redistribution per transaction type. Analyze price impact of HFT on merchant adoption rates.",
+      "impact": "If primarily speculation: extraction is parasitic (Snare from holder perspective, Rope from trader perspective confirmed). If primarily price discovery: extraction is a coordination cost (Tangled Rope perspective shifts to higher coordination component).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of extraction to speculation vs legitimate price discovery"
+    },
+    {
+      "id": "layer2_adoption_sufficiency",
+      "question": "Do layer-2 solutions actually reduce velocity-driven extraction, or do they fragment liquidity and create new coordination problems?",
+      "resolution_mechanism": "Track merchant adoption, settlement finality, and cross-layer composability. Measure whether velocity pressure migrates to L2 or genuinely dissipates.",
+      "impact": "If L2 solutions are sufficient: Scaffold sunset is real, extractiveness will decline as L2 adoption matures (Piton perspective confirms temporary nature). If L2 fragments: new Tangled Rope constraints emerge between layers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sufficiency of layer-2 solutions for reducing velocity extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Cryptocurrency velocity dynamics create a structural tension between two incompatible roles: cryptocurrency-as-store-of-value (requiring price stability and low velocity) and cryptocurrency-as-medium-of-exchange (requiring high velocity and transaction throughput). This tension generates extraction mechanisms where high-frequency traders and exchange operators benefit from volatility while long-term holders and merchants bear costs. The constraint exhibits classical Tangled Rope structure: genuine coordination function (enabling peer-to-peer transactions without intermediaries), genuine beneficiary class (traders capturing volatility spreads), genuine victim class (holders experiencing price erosion), and active enforcement (exchange market structures, fee incentives, transaction ordering). However, layer-2 solutions and stablecoin adoption represent genuine alternatives with sunset logic, making this a Scaffold from the perspective of organized developers. The increasing theater ratio (0.35 \u2192 0.58) reflects the growth of 'HODLing' narrative (identity maintenance for holders experiencing extraction) rather than functional utility increase.",
+    "key_agents": [
+      "Long-Term Holders: Primary victims (powerless/trapped) \u2014 experience extractive volatility; cannot exit without losses",
+      "High-Frequency Traders: Primary beneficiaries (institutional/arbitrage) \u2014 extract value from velocity spreads",
+      "Exchange Operators: Secondary beneficiaries (institutional/arbitrage) \u2014 capture transaction fees, market-making spreads",
+      "Liquidity Providers: Secondary beneficiaries (institutional/arbitrage) \u2014 earn velocity-driven trading spreads",
+      "Merchants: Mixed position (moderate/constrained) \u2014 gain coordination benefits but suffer extraction from volatility",
+      "Payment Protocol Developers: Organized exit builders (organized/constrained) \u2014 constructing layer-2 and L3 alternatives",
+      "HODL Community: Institutional performers (institutional/arbitrage) \u2014 maintain narrative theater"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, trending upward. The constraint increases as HFT activity and professional trading dominate transaction volume relative to retail payments. Initial extractiveness (0.28) reflects early adoption period where speculation and network effects were balanced. Current value (0.52) reflects professional extraction from holders during maturation phase. Suppression (0.48): Moderate. Barriers to exit include opportunity cost of missing appreciation, sunk investments in mining/staking infrastructure, psychological commitment to early adoption, and network effects (moving to competing systems incurs friction). But suppression is not total \u2014 holders can partially exit, hedge, or diversify into stablecoins. Theater ratio (0.58): Moderately high and rising. The HODL narrative persists despite declining functional utility as a payment mechanism; it performs identity work for holders experiencing extraction rather than solving the velocity problem.",
+    "directionality_logic": "Directionality values are computed from beneficiary/victim status and exit options. Traders with arbitrage exit (d \u2248 0.15) experience low or negative effective extraction. Long-term holders trapped by opportunity cost and sunk psychology (d \u2248 0.90) experience maximum extraction. Merchants with some exit optionality but transaction risk constraints (d \u2248 0.65) experience moderate extraction. Exchange operators with full arbitrage (d \u2248 0.05) experience negative extraction (they benefit). Protocol developers with exit pathways (d \u2248 0.45) experience moderate extraction but see the Scaffold sunset. The perspectival gap between powerless holders (snare) and institutional traders (rope) directly reflects the directionality range: identical constraint, opposite classification, due to structural position in the extraction flow.",
+    "perspectival_gap": "This constraint demonstrates maximal perspectival divergence. The long-term holder sees pure extraction (Snare) \u2014 velocity dynamics directly erode their purchasing power. The trader sees coordination (Rope) \u2014 they are solving the price discovery problem and providing liquidity. The merchant sees mixed (Tangled Rope) \u2014 they gain payment infrastructure but suffer volatility risk. The protocol developer sees a solvable problem with sunset (Scaffold) \u2014 layer-2 solutions are building alternatives. The HODL narrative sees its own degradation (Piton) \u2014 identity performance replacing functionality. The analytical observer risks false summitry (Mountain) \u2014 seeing velocity-stability trade-offs as inherent to monetary economics rather than contingent on current layer-1 architecture. The perspectival divergence precisely tracks the directionality derivation: beneficiaries with exit options diverge maximally from trapped victims.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing genuine coordination function (price discovery, liquidity provision, settlement) coexisting with genuine extraction (holder wealth flowing to traders through volatility capture). Tangled Rope classification is robust: chi \u2248 0.70 (extractiveness 0.52 \u00d7 f(d) \u2248 1.35 \u00d7 scope modifier 1.2), meeting the 0.66 threshold. The classification is not a false compromise \u2014 it accurately captures that the system is both coordination and extraction. The Scaffold perspective adds critical insight: payment layer alternatives (Lightning, Solana, roll-ups) represent genuine sunset pathways where organized actors are constructing ways around the velocity extraction. The Piton perspective (HODL narrative) identifies that maintaining the current holder-as-victim structure increasingly depends on performative community identity work rather than functional role. The false mountain (analytical view) naturalizes contingent architecture \u2014 velocity-stability trade-offs are real only for monolithic layer-1 systems; they are architectural choices, not natural law."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "stablecoin_collateral_dependency",
+      "exchange_market_structure",
+      "network_effect_lock_in"
+    ],
+    "dual_formulation_note": "Cryptocurrency velocity dynamics decompose into three linked constraints: (1) on-chain velocity-stability trade-off (this story, \u03b5=0.52, Tangled Rope), (2) stablecoin collateral fragility (downstream, \u03b5=0.68, Snare), (3) layer-2 liquidity fragmentation (parallel, \u03b5=0.38, Scaffold). Each has distinct beneficiary/victim structure and exit options. Stories are linked via network edges because stablecoin depegging cascades to layer-1 velocity extraction, and L2 adoption reduces L1 transaction volume, changing the constraint's extractiveness over the interval."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.65
+    }
+  ]
+}

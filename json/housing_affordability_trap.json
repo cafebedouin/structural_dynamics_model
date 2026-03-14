@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "housing_affordability_trap",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "haf"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Housing Affordability Trap",
+    "topic_domain": "economic/urban_policy/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "landlord_capital",
+      "development_finance",
+      "property_speculation"
+    ],
+    "victims": [
+      "low_income_renters",
+      "first_time_buyers",
+      "younger_generations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Low-Income Renter Household",
+      "comment": "PERSPECTIVE 1: LOW-INCOME RENTER HOUSEHOLD (SNARE) \u2014 Trapped by structural factors: inadequate wages relative to rent burden, no capital for down payment, credit barriers, and geographic immobility (employment is local). Cannot exit the rental market or access homeownership. Bears maximum extraction through rent capture with no meaningful coordination benefit. Theater is low here \u2014 the extraction is straightforward, not performative."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "First-Time Homebuyer (Aspirant)",
+      "comment": "PERSPECTIVE 2: FIRST-TIME HOMEBUYER (TANGLED ROPE) \u2014 Constrained by down payment requirements, mortgage qualification criteria, and wage stagnation relative to property price escalation. Experiences genuine coordination function (mortgage lending enables access to housing) alongside asymmetric extraction (borrower captures leverage; lender captures most of the total gain). Higher agency than trapped renters but significant extraction and suppression of alternatives. Can theoretically exit through inheritance, dual-income, or geographic relocation, but costs are substantial."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Development Finance & Landlord Capital",
+      "comment": "PERSPECTIVE 3: DEVELOPMENT FINANCE & LANDLORD CAPITAL (ROPE) \u2014 Primary beneficiaries. Experience the housing constraint as pure coordination: aggregating capital for development, standardizing mortgage terms, enabling property markets. The constraint solves a genuine coordination problem (matching renters with housing supply). These actors have full exit optionality \u2014 capital arbitrages to other markets if housing returns deteriorate. Net beneficiary position. The constraint appears as Rope from their perspective because they genuinely coordinate housing allocation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Existing Homeowner (Asset-Rich)",
+      "comment": "PERSPECTIVE 4: EXISTING HOMEOWNER / ASSET-RICH (TANGLED ROPE) \u2014 Mixed position. Benefits from property appreciation (asset capture). Also bears costs through property tax, maintenance, and exposure to rate shocks. Has meaningful exit optionality (can sell, relocate, downsize). Experiences the constraint as mixed coordination-extraction: property markets coordinate housing allocation, but pricing dynamics extract from new market entrants and renters, which indirectly extracts from this agent's future heirs and from community members they know. Perspectival gap arises from temporal asymmetry: current benefit, future intergenerational cost."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Housing Policy Reform Coalition",
+      "comment": "PERSPECTIVE 5: HOUSING POLICY REFORM COALITION (SCAFFOLD) \u2014 Organized agents (advocacy groups, progressive legislators, housing rights movements) see the affordability trap as a temporary institutional failure with policy sunset: zoning reform, public housing expansion, rent stabilization, down-payment assistance, and inclusionary zoning are building alternative housing pathways. This perspective sees low effective extraction because the coalition has agency and identifies clear policy interventions with sunsets. Theater is low (direct policy mechanisms, not performative). Suppression is high (regulatory and incumbent resistance), but declining over time as public pressure builds."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Real Estate Investment Trust (REIT) Infrastructure",
+      "comment": "PERSPECTIVE 6: REIT INFRASTRUCTURE & SECURITIZATION (PITON) \u2014 Institutional apparatus (mortgage-backed securities, REITs, rating agencies) maintains the housing extraction through performative stability claims. The apparatus is substantially degraded: it relies on rating agency theater (AAA ratings on mortgage pools with embedded risk), securitization complexity that obscures actual risk, and regulatory theater (stress tests that don't stress test). The mechanism persists through inertia despite low functional purpose \u2014 it primarily transfers housing from an asset to an investment product, enabling extraction without coordination function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational scope, housing coordination is both genuine and extractive. Genuine coordination: markets allocate housing to where demand is highest, creating price signals that guide investment. Extractive layering: speculative dynamics, zoning constraints, financialization, and wage suppression generate extraction above coordination cost. The chi formula captures this mix. Theater is moderate (policy theater around 'market efficiency,' 'supply-side solutions' that don't increase actual supply). The analytical perspective sees tangled rope, not mountain, because the extraction is structurally contingent, not natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "wage_productivity_decoupling",
+      "question": "Is the housing affordability crisis primarily a wage stagnation problem (wages decoupled from productivity gains) or a housing supply/zoning problem (restricted supply driving price escalation)?",
+      "resolution_mechanism": "Cross-national comparison: countries with high productivity growth but also high wage growth (Germany, Nordic states) show different affordability trajectories than US-style wage stagnation despite productivity growth. Decompose housing cost inflation into supply-driven vs demand-driven components via econometric analysis.",
+      "impact": "If wage-driven: extraction model shifts upstream to labor market constraints (separate constraint story). If supply-driven: zoning and NIMBY coalitions are primary extractors. If both: tangled rope classification holds; neither alone explains the trap.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Wage stagnation vs supply constraint as root cause"
+    },
+    {
+      "id": "speculation_vs_fundamentals",
+      "question": "How much of housing price escalation is speculative capital seeking returns vs fundamentals (population growth, construction costs, land scarcity)?",
+      "resolution_mechanism": "Empirical analysis of price-to-rent ratios across markets; correlation between institutional capital inflows (REIT growth, foreign investment) and price acceleration relative to local fundamentals; historical comparison of pre-financialization (1970s-1990s) vs post-financialization (2000s+) housing price dynamics.",
+      "impact": "If primarily speculative: REIT infrastructure perspective (piton) is key extraction mechanism; policy can constrain financialization. If primarily fundamental: extraction is coordination artifact, not exploitative overlay; policy options limited.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Speculative capital vs fundamental drivers of price escalation"
+    },
+    {
+      "id": "zoning_reform_feasibility",
+      "question": "Can zoning reform (upzoning, eliminating single-family zoning) produce affordability gains, or does capital simply capture the value created by density allowances?",
+      "resolution_mechanism": "Natural experiments: Minneapolis zoning reform (eliminated single-family zoning 2019), Oregon statewide reform (2019), California duplex legalization (2022). Track housing supply growth, price impacts, affordability outcomes 5-10 years post-reform. Compare to cities that did not reform.",
+      "impact": "If zoning reform works: scaffold perspective is substantive; affordability trap has policy sunset. If capital captures zoning value: zoning reform reduces one suppression mechanism but leaves extraction intact; deeper intervention (public housing, rent control, land value taxation) required.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether zoning reform produces durable affordability gains"
+    },
+    {
+      "id": "intergenerational_wealth_transfer",
+      "question": "Is the housing trap primarily extractive (current generations extracting from younger generations) or a coordination mechanism that distributes the wealth transfer problem across time?",
+      "resolution_mechanism": "Historical asset value analysis: what fraction of current real estate value is attributable to scarcity/regulation vs genuine improvements? Intergenerational wealth transfer modeling: does early homeownership enable wealth accumulation that benefits children, or does it concentrate wealth among lucky cohorts (those who bought before price escalation)?",
+      "impact": "If extractive transfer: the constraint is snare-like from younger generations' perspective; policy must address asset redistribution. If coordination artifact: the constraint is rope-like; policy can work within it by enabling earlier access.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether housing is extractive transfer or wealth coordination"
+    },
+    {
+      "id": "public_housing_viability",
+      "question": "Is large-scale public housing production capable of delivering affordability at scale without degrading to low-quality, segregated provision?",
+      "resolution_mechanism": "Historical review of public housing provision in different regimes: Vienna social housing (30% of city supply, mixed-income integration), Singapore HDB (80% of population, high quality), post-WWII UK council housing, US public housing failures. Isolate factors driving success vs degradation.",
+      "impact": "If viable: scaffold sunset is real; policy can exit the trap through institutional alternatives. If not viable: trap is structurally deeper; market provision may be irreplaceable despite its extraction.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether public housing can deliver affordability at scale"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.33
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The housing affordability trap is a structural constraint where coordination mechanisms for housing allocation (mortgage markets, property development, rental systems) have become overlaid with extractive mechanisms (speculative capital, zoning restrictions, wage suppression, financialization) that concentrate benefits on existing property owners and financial intermediaries while imposing escalating costs on renters and aspiring homebuyers. The constraint exhibits both genuine coordination (housing must be allocated somewhere; mortgage lending enables access) and asymmetric extraction (property appreciation captures value from future market entrants without proportional labor or capital contribution). The rising extractiveness (0.28 \u2192 0.58 over 20 years) reflects financialization of housing markets and decoupling of housing prices from local wages. The low theater ratio (0.45) indicates the extraction is relatively direct and transparent, not hidden behind performative mechanisms. This distinguishes it from constraints like securitized mortgage infrastructure (piton-adjacent), which use rating agency and regulatory theater to obscure risk. The housing affordability trap is tangled rope at the analytical level because it genuinely coordinates housing allocation while simultaneously extracting from economically powerless agents (renters, first-time buyers) through mechanisms that beneficiaries experience as pure coordination.",
+    "key_agents": [
+      "Low-Income Renters: Primary victims (powerless/trapped) \u2014 economically immobilized by wage insufficiency, no capital for exit, geographic lock to employment",
+      "First-Time Buyers: Secondary victims (moderate/constrained) \u2014 face down payment barriers, mortgage qualification restrictions, wage stagnation relative to prices; some agency through dual-income or inheritance but high cost",
+      "Landlord Capital & Development Finance: Primary beneficiaries (institutional/arbitrage) \u2014 capture appreciation gains, mortgage spreads, rental income; full exit optionality; experience the constraint as pure coordination",
+      "Existing Homeowners (Asset-Rich): Mixed position (powerful/mobile) \u2014 benefit from appreciation; indirectly extract from younger generations; some suppression from property tax and rate risk but high exit optionality",
+      "Housing Reform Coalition: Organized actors (organized/constrained) \u2014 advocate for zoning reform, public housing, rent stabilization, down-payment assistance; see the trap as policy-solvable with sunset timeline",
+      "REIT & Securitization Infrastructure: Institutional actors (institutional/arbitrage) \u2014 maintain extraction through opacity and complexity; substantially performative (rating agencies, regulatory theater); persist through inertia",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees tangled rope classification; genuine coordination layered with contingent extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, rising over the measurement interval. At t=0 (approximately 2004, post-housing bubble but pre-financial crisis), housing extraction was 0.28 \u2014 primarily wage-based (affordable rents for those employed in growing metros). By t=20 (approximately 2024), extraction has escalated to 0.58 through three mechanisms: (1) financialization and REIT capital seeking housing returns independent of local fundamentals; (2) zoning restrictions and NIMBY coalitions restricting supply, creating scarcity rents; (3) wage stagnation in many sectors despite productivity gains, reducing renter purchasing power. Suppression (0.68): High and structural. Renters face multiple suppression mechanisms: lack of capital for down payment (no exit path to ownership), inadequate wages (no exit through income growth), employment concentration (no exit through relocation), and credit barriers. First-time buyers face mortgage qualification criteria, down payment requirements, and wage inadequacy. Existing homeowners have some suppression (property tax, rate risk) but high exit optionality. Theater ratio (0.45): Moderate and stable. Housing extraction is relatively transparent \u2014 price escalation is observable, wage stagnation is documented, zoning restrictions are explicit policy. There is policy theater around 'market efficiency' and 'supply-side solutions,' but the core mechanisms are not hidden. Compare to securitized mortgage theater (ratings, complexity), which would produce theater_ratio > 0.70.",
+    "perspectival_gap": "The gap between Snare (powerless/trapped) and Rope (institutional/arbitrage) is the maximal possible gap (opposite classifications from the same constraint). This reveals that the constraint's classification depends entirely on structural position \u2014 there is no objective classification independent of perspective. The gap arises from (1) opposite beneficiary/victim status, (2) opposite exit optionality (trapped vs arbitrage), and (3) opposite power levels (powerless vs institutional). Each of these independently would produce different classifications; together they produce maximum divergence. The analytical observer's Tangled Rope classification is the key diagnostic: it says 'this is not Rope everywhere and Snare nowhere; it is genuinely both, with the split determined by power and exit.' The false summit risk is high: someone might claim the constraint is 'really' Rope because markets do coordinate, or 'really' Snare because extraction is severe for renters. The truth is both. The constraint's function depends on which agent you ask.",
+    "directionality_logic": "Directionality (d) follows from structural position, not abstract power. Low-income renters: beneficiary status is absent, victim status is high, exit is trapped \u2192 d \u2248 0.95 (full target). Landlord capital: beneficiary status is high, victim status absent, exit is arbitrage \u2192 d \u2248 0.10 (full beneficiary). First-time buyers: mixed (both victim from price barriers and beneficiary if they eventually own) + constrained exit \u2192 d \u2248 0.55 (symmetric). Existing homeowners: beneficiary from appreciation + some victim from future cost + mobile exit \u2192 d \u2248 0.45 (slight beneficiary). The sigmoid f(d) converts these to experienced extractiveness amplification: trapped agents face f(d) \u2248 1.42 (max amplification); arbitrage actors face f(d) \u2248 -0.12 (negative, subsidy); symmetric agents face f(d) \u2248 0.65 (moderate). Scope modifier \u03c3(S) at national scope is 1.0 (no amplification; national markets are standard scope). The chi formula produces: trapped renters experience \u03c7 \u2248 0.58 \u00d7 1.42 \u00d7 1.0 = 0.82 (high effective extraction); landlords experience \u03c7 \u2248 0.58 \u00d7 (-0.12) \u00d7 1.0 = -0.07 (subsidy/benefit); first-time buyers experience \u03c7 \u2248 0.58 \u00d7 0.65 \u00d7 1.0 = 0.38 (moderate extraction). This directionality structure explains why trapped agents see Snare while beneficiaries see Rope: the same base extractiveness (0.58) produces radically different experienced extraction (0.82 vs -0.07) depending on structural position.",
+    "mandatrophy_analysis": "RESOLVED: The housing affordability trap resolves the mandatrophy by demonstrating that Tangled Rope is the correct analytical classification and that the perspectival gap (Snare vs Rope) is diagnostic information, not a mistake. The constraint genuinely coordinates housing allocation (Rope function: matching supply to demand, enabling access through lending). The constraint also genuinely extracts (Snare function: prices rise above coordination cost due to scarcity, speculation, wage suppression). The mandatrophy asks: 'Is this extraction or coordination?' Answer: 'Both, with the ratio determined by structural position.' Low-income renters experience extraction because they cannot exit; landlord capital experiences coordination because it can arbitrage. Neither is wrong. The engine should classify this as Tangled Rope, not as a single type viewed from different angles. The scaff perspective (policy reform coalition) is key to mandatrophy resolution: it identifies that the current extraction overlay (financialization, zoning restriction) is policy-contingent, not fundamental. If zoning were liberalized and public housing were expanded, the chi value could shift from 0.58 to 0.30 (lower extractiveness while maintaining coordination). This proves the extraction is not natural law; it is institutional choice. The analytical observer's classification as Tangled Rope (not Mountain) confirms this: the constraint is tangled rope because it remains policy-solvable, not a mountain because it is not fundamental limit."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wage_stagnation_labor_market",
+      "zoning_supply_restriction",
+      "mortgage_securitization_financialization"
+    ],
+    "dual_formulation_note": "Housing affordability is downstream of multiple structural constraints: wage stagnation in labor markets sets renter/buyer purchasing power; zoning and NIMBY coalitions restrict supply; mortgage securitization and REIT capital enable speculative overlays. The housing affordability trap story captures the hybrid constraint that emerges when all three upstream constraints are active simultaneously. Decomposition into separate upstream stories (one per mechanism) would produce \u03b5 values ranging from 0.25 (zoning as pure coordination failure) to 0.45 (wage stagnation) to 0.65 (securitization financialization). The housing story captures the combined effect."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

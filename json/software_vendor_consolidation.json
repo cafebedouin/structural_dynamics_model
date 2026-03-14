@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "software_vendor_consolidation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "svc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.52,
+    "claimed_type": "snare",
+    "human_readable": "Software Vendor Consolidation and Lock-in",
+    "topic_domain": "technology/software_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dominant_software_vendors"
+    ],
+    "victims": [
+      "enterprise_customers",
+      "small_business_users",
+      "software_ecosystem_freedom"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Enterprise Customer Locked in Proprietary Stack",
+      "comment": "PERSPECTIVE 1: ENTERPRISE CUSTOMER (SNARE) \u2014 Once integrated into a vendor's ecosystem (Windows + Office + Azure, or Salesforce + related tools), switching costs become prohibitive. Data migration, training, workflow redesign, and vendor-specific skill sets create structural lock-in. The customer faces maximum extraction with minimal exit options \u2014 trapped at global scope for a biographical time horizon."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Small Business Developer",
+      "comment": "PERSPECTIVE 2: SMALL BUSINESS DEVELOPER (SNARE) \u2014 Small firms building on proprietary platforms (iOS-only development, AWS-dependent architectures, Salesforce plugins) face significant switching costs but retain some mobility through multi-platform strategies. Exit is costly but not impossible. Experiences extraction at moderate power level with constrained options \u2014 trapped at lower severity than enterprise customers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Dominant Software Vendor",
+      "comment": "PERSPECTIVE 3: DOMINANT SOFTWARE VENDOR (ROPE) \u2014 From the vendor's perspective, the consolidation solves a genuine coordination problem: achieving ecosystem lock-in requires integrated products and services that work seamlessly. The extraction is incidental to the coordination function of building a unified platform stack. Vendor experiences this as pure coordination (Rope) \u2014 beneficiary with arbitrage options."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Open Source and Alternative Platform Coalition",
+      "comment": "PERSPECTIVE 4: OPEN SOURCE COALITION (TANGLED ROPE) \u2014 Organized actors (Linux Foundation, Apache, CNCF, open-source communities) have built alternative platforms that provide both coordination benefits and some escape from proprietary lock-in. The coalition sees the constraint as partially resolvable through generational adoption of open standards. Experiences both the extraction (vendor lock-in affects their users) and the coordination (their own platforms enable coordination). Constrained exit options at organized power level."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Software Licensing Regime",
+      "comment": "PERSPECTIVE 5: LEGACY LICENSING REGIME (PITON) \u2014 Traditional software licensing (perpetual licenses, seat-based pricing, vendor-enforced compliance audits) persists largely through institutional inertia and contractual entrenchment. The enforcement mechanism (license keys, digital rights management, compliance tracking) is increasingly performative \u2014 customers work around restrictions, vendors deploy crackware or move to subscription models. Theater ratio is moderate because vendors still actively enforce, but the function (preventing copying) is largely lost to cloud distribution and subscription economics. Piton classification derives from theater gate and degraded function."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, software consolidation might appear as a natural law of technology: larger platforms achieve scale advantages and network effects; consolidation follows from competition and efficiency logic. However, the structural data contradicts this naturalization \u2014 the constraint is maintained through deliberate licensing restrictions, API gatekeeping, data format lock-in, and anti-competitive practices, not through immutable physical or logical limits. The engine will detect this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "switching_cost_measurement",
+      "question": "Are empirically observed switching costs primarily structural (data migration, training, infrastructure rebuild) or artificially imposed (licensing restrictions, proprietary formats, API limitations)?",
+      "resolution_mechanism": "Cost-of-migration analysis comparing open-source alternatives (Linux, LibreOffice, PostgreSQL) to proprietary equivalents; measurement of actual migration time and expense vs vendor-imposed friction",
+      "impact": "If primarily structural: constraint is closer to Mountain (inherent to software complexity). If primarily imposed: constraint is Snare (artificial lock-in). Affects whether switching costs are legitimate coordination costs or extraction overhead.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether switching costs are structural or artificially imposed"
+    },
+    {
+      "id": "proprietary_data_format_lock_in",
+      "question": "To what degree is vendor lock-in maintained through proprietary data formats vs actual platform superiority?",
+      "resolution_mechanism": "Case studies of successful migrations; analysis of de facto format standards (Office Open XML, Adobe PDF) and open format adoption rates; customer surveys on decision drivers",
+      "impact": "If formats are open-compatible: switching is primarily about retraining and workflow adjustment \u2014 moderate extraction. If formats are deliberately obscured: switching is technically infeasible \u2014 maximum extraction. Shifts classification from Tangled Rope to pure Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which proprietary formats enforce lock-in"
+    },
+    {
+      "id": "antitrust_intervention_effectiveness",
+      "question": "Can regulatory intervention (interoperability mandates, API standards, forced data portability) meaningfully reduce vendor lock-in, or does technical complexity always favor incumbent consolidation?",
+      "resolution_mechanism": "Outcomes of existing antitrust cases (Microsoft antitrust, Apple App Store restrictions); effectiveness of interoperability requirements (GDPR data portability, DMA gatekeeping mandates); comparative analysis of regulated vs unregulated markets",
+      "impact": "If regulation effective: constraint can transition to Scaffold with clear sunset. If regulation ineffective: constraint is structural Mountain reframed as regulatory. Determines whether the consolidation is resolvable through policy intervention.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether regulatory intervention can address vendor consolidation lock-in"
+    },
+    {
+      "id": "network_effect_inevitability",
+      "question": "Is software ecosystem consolidation a natural consequence of network effects (more valuable when more people use it), or is consolidation enforced through artificial lock-in mechanisms?",
+      "resolution_mechanism": "Historical analysis of software platforms that achieved dominance through pure network effects vs those using lock-in; comparison of fragmented (open-source) vs consolidated (proprietary) ecosystems on user value and innovation metrics",
+      "impact": "If network effects are primary: consolidation is partially inevitable \u2014 constraint is Mountain/Rope hybrid. If lock-in is primary: consolidation is contingent \u2014 constraint is Snare. Affects whether escape is possible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether consolidation is driven by network effects or lock-in mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Software vendor consolidation creates a structural trap where customers become progressively locked into proprietary ecosystems through interconnected products, data formats, and vendor-specific skills. Over the past decade (2016-2026), consolidation has accelerated as cloud vendors (Amazon, Microsoft, Google) integrated infrastructure, platforms, and applications into unified stacks; as smartphone manufacturers (Apple, Google) created closed or semi-closed app economies; and as enterprise software vendors (Salesforce, Adobe, ServiceNow) acquired complementary products to prevent customer switching. The constraint exhibits characteristics of pure extraction (Snare) at the enterprise customer level \u2014 once integrated, exit costs are prohibitive. From the vendor perspective, consolidation solves genuine coordination problems: unified platforms deliver seamless workflows and economies of scale that fragmented alternatives cannot match. This hybrid structure \u2014 real coordination benefits alongside asymmetric extraction \u2014 makes the constraint a diagnostic exemplar of how consolidation dynamics differ across stakeholder positions.",
+    "key_agents": [
+      "Dominant Software Vendors (Microsoft, Google, Amazon, Apple, Salesforce): Primary beneficiaries (institutional/arbitrage) \u2014 capture increased switching costs, expand TAM (total addressable market) through bundling, achieve market dominance through lock-in",
+      "Enterprise Customers: Primary victims (powerless/trapped) \u2014 face maximum switching costs; data locked in proprietary formats; entire workflow infrastructure dependent on vendor ecosystem",
+      "Small Business and Developer Communities: Secondary victims (moderate/constrained) \u2014 face significant but surmountable switching costs; greater mobility through cloud-agnostic architectures and open-source alternatives",
+      "Open Source and Alternative Platform Coalition: Organized agents (organized/constrained) \u2014 building escape routes through Linux, open-source databases, cloud-native architectures, containerization (Docker, Kubernetes)",
+      "Software Licensing System: Institutional actor (institutional/arbitrage) \u2014 perpetual licenses, subscription models, compliance tracking maintain vendor extraction mechanisms",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing consolidation as inevitable network effect rather than engineered lock-in"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High but not maximum. Vendor consolidation extracts through lock-in, but legitimate coordination benefits exist (integrated platforms do provide efficiency, security, and user experience advantages that fragmented alternatives struggle to match). The 0.58 value reflects that the extraction is real and growing but not as severe as a pure monopoly would be. Suppression (0.68): High. Barriers to exit include: data migration costs, skill retraining, workflow redesign, contractual lock-in (multi-year commitments), and absence of viable alternatives in some categories (Office productivity for enterprise). However, suppression is not total \u2014 open-source alternatives exist for many categories, cloud-agnostic architectures are becoming feasible, and regulatory pressure is increasing. Theater ratio (0.52): Moderate. The licensing and compliance regime includes performative elements (license audits, DRM that many users work around, seat-based pricing in an era of cloud distribution), but vendors actively enforce restrictions and customers generally comply. Theater has remained relatively stable over the decade because enforcement mechanisms (licensing audits, legal liability, cloud credential tracking) have evolved alongside avoidance techniques.",
+    "perspectival_gap": "This constraint demonstrates how the same market structure can appear as Rope (coordination), Snare (pure extraction), Tangled Rope (mixed), and Piton (degraded ritual) depending on observer position. The vendor's Rope reflects their genuine coordination function. The customer's Snare reflects their genuine structural entrapment. The coalition's Tangled Rope reflects the reality that both extraction and alternative pathways coexist. The licensing regime's Piton reflects that enforcement persists through inertia even as technical necessity diminishes. The mountain classification is a false summit: consolidation appears 'natural' only when lock-in mechanisms are naturalized rather than recognized as deliberate design choices.",
+    "directionality_logic": "Directionality (d) for each perspective reflects the agent's structural position relative to extraction flow. Dominant vendors are beneficiaries with arbitrage options: low d (0.05-0.15), producing negative effective extraction \u2014 consolidation benefits them structurally. Enterprise customers are victims with trapped exit: high d (0.90+), producing maximum f(d) \u2248 1.40+ \u2014 they bear full extraction cost. Small businesses are victims with constrained exit: moderate-high d (0.75-0.85), producing high f(d) \u2248 1.10+ \u2014 they experience significant extraction but retain some agency through alternative strategies. The open-source coalition is an organized victim with constrained exit: moderate d (0.55-0.65), producing moderate f(d) \u2248 0.70-0.80 \u2014 they experience extraction but have institutional capacity to build exit routes.",
+    "mandatrophy_analysis": "The mandatrophy resolves by distinguishing between legitimate network effects (which would support Mountain or Rope classification) and artificial lock-in (which supports Snare classification). The empirical evidence points strongly to artificial lock-in: proprietary data formats that could be open (Office documents, Salesforce configurations), API gatekeeping that serves no coordination function (preventing alternative access paths), and contractual terms designed to prevent switching (multi-year commitments, licensing audits, vendor-enforced compliance). However, genuine coordination benefits also exist \u2014 integrated platforms do provide workflow efficiency and security that fragmented alternatives struggle to match. The constraint is legitimately Tangled Rope or Snare depending on measurement context: if measuring from the customer's lock-in burden, it's Snare; if measuring from the vendor's coordination benefits, it's Rope; the ground truth is that both are real. Measured extractiveness (0.58) reflects this middle position \u2014 high extraction but with some coordination function. The mandatrophy does not resolve to a single type; it resolves to the observation that consolidation dynamics support multiple legitimate type classifications, and the ground truth is the presheaf over all perspectives rather than any single type."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "software_interoperability_standards",
+      "data_portability_regulation",
+      "open_source_ecosystem_viability"
+    ],
+    "dual_formulation_note": "Software vendor consolidation decomposes into multiple structurally distinct constraints: (1) proprietary data format lock-in (\u03b5 \u2248 0.65, Snare), (2) ecosystem integration benefits (\u03b5 \u2248 0.15, Rope), (3) regulatory intervention effectiveness (\u03b5 \u2248 0.45, Scaffold with sunset). This story treats consolidation as a unified phenomenon; decomposition into separate stories by mechanism is warranted if high-precision analysis of specific lock-in vectors is needed."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

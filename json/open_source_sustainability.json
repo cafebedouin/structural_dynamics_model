@@ -1,0 +1,228 @@
+{
+  "header": {
+    "constraint_id": "open_source_sustainability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "oss"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Open Source Sustainability Constraint",
+    "topic_domain": "technology_economics/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "corporate_users",
+      "platform_companies",
+      "downstream_integrators"
+    ],
+    "victims": [
+      "core_maintainers",
+      "ecosystem_reliability",
+      "software_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Unpaid Maintainer",
+      "comment": "PERSPECTIVE 1: UNPAID MAINTAINER (SNARE) \u2014 Core maintainers are trapped: they cannot exit without abandoning projects they have invested years building. Exit costs include loss of professional identity, community standing, and inability to influence the software's future. Suppression is structural: no viable income stream from maintenance work, burnout-driven attrition, and lack of alternatives. Maximum extraction \u2014 volunteer labor subsidizes corporate dependency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Corporate Integrator",
+      "comment": "PERSPECTIVE 2: CORPORATE INTEGRATOR (ROPE) \u2014 Benefits from cost-free access to critical infrastructure. Experiences the constraint as pure coordination: using open source solves legitimate problems of standardization and code reuse. Can arbitrage: they can fork, maintain internally, or switch to proprietary alternatives. Net beneficiary with high structural agency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Dependent Open Source Developer",
+      "comment": "PERSPECTIVE 3: DEPENDENT DEVELOPER (TANGLED ROPE) \u2014 Constrained by career incentives: contributing to open source builds professional reputation but does not generate income. Face meaningful costs to exit (lost community standing, career disruption) but retain some agency. Benefits from network effects and collaborative learning; also extracted from through unpaid labor expectations."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Sustainability Initiative Coalition",
+      "comment": "PERSPECTIVE 4: SUSTAINABILITY COALITION (SCAFFOLD) \u2014 Organized agents (sponsorship programs, GitHub funding, open-source foundations) see the unsustainability as a temporary coordination failure with visible exit pathways. Programs like GitHub Sponsors, OpenCollective, and foundation grants are creating alternative funding mechanisms. Suppression is declining as institutional recognition grows. Sunset clause: as formal funding mechanisms mature, the pure extraction mechanism (free labor) loses force."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Open Source Ideology Framework",
+      "comment": "PERSPECTIVE 5: OPEN SOURCE IDEOLOGY (PITON) \u2014 The cultural narrative of open source as 'collaborative gift economy' persists despite being substantially degraded. The ideology performed a real coordination function in the 1990s-2000s when software commodification was novel. Now it primarily masks extraction: maintainers continue unpaid work because they have internalized that 'real hackers code for love.' The performative element (the 'meritocratic community' story) has become decoupled from material reality. Theater ratio is high because maintaining the ideology requires constant ritual affirmation despite obvious structural contradictions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Platform Company (Structural View)",
+      "comment": "PERSPECTIVE 6: PLATFORM COMPANY (TANGLED ROPE from structural view) \u2014 At larger time horizons and from a structural perspective recognizing platform dependency, major tech companies occupy an ambiguous position. They benefit enormously from open source infrastructure (genuine coordination function: standardization, code reuse, security through transparency). But they also face structural extraction: dependency on projects they don't control creates supply-chain risk, forcing them to invest in sponsorship and hiring to secure maintenance pipelines. This is a genuine tangled rope: real coordination gain bundled with real extraction risk. Mobile exit options (fork, maintain internally, switch) but substantial switching costs create structured mobility constraints."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, some degree of asymmetry between users and maintainers appears inherent to software: every use has beneficiaries (users) and costs (maintenance). The constraint could be viewed as an immutable property of complex software systems. However, the structural data reveals this as false naturalization: the asymmetry is not inherent but contingent on institutional arrangements (copyright law, property norms, funding structures). This is a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "maintenance_burden_measurability",
+      "question": "Is the maintenance burden on core maintainers accurately captured by labor hours, or is there unmeasured psychic cost (identity burden, community accountability) that exceeds the extractiveness score?",
+      "resolution_mechanism": "Longitudinal interviews with long-term maintainers; correlation between stated burnout levels and formal time commitments; analysis of maintenance work that is invisible (moderation, conflict resolution, institutional memory)",
+      "impact": "If psychic cost is substantial: actual extractiveness > 0.58; snare classification strengthens. If primarily labor-measurable: current score is accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether maintenance burden is fully captured by measurable labor metrics"
+    },
+    {
+      "id": "alternative_funding_mechanism_effectiveness",
+      "question": "Do emerging funding mechanisms (GitHub Sponsors, Open Collective, foundation grants) actually redirect material resources to maintainers at scale sufficient to reduce extraction, or do they primarily create visibility theater?",
+      "resolution_mechanism": "Analysis of funding flow distribution: what percentage of active maintainers receive material support? Average annual support per maintainer? Correlation between funding receipt and reported burnout reduction.",
+      "impact": "If >30% of maintainers receive >$10k annual: scaffold sunset is real. If <10% coverage or token amounts: funding mechanisms are piton-like theater, and snare classification persists.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether formal funding mechanisms provide sufficient material support to reduce extraction"
+    },
+    {
+      "id": "corporate_dependency_asymmetry",
+      "question": "Is the extraction relationship genuinely symmetric between corporate users and individual maintainers, or do scale differences (millions of users vs. handful of maintainers) create structural asymmetry that the tangled_rope classification underestimates?",
+      "resolution_mechanism": "Mapping of corporate revenue derived from open source infrastructure vs. total resources returned to maintainers; analysis of power asymmetry in setting maintenance agendas (do corporate users' needs drive roadmaps?)",
+      "impact": "If corporate extraction exceeds maintainer extraction: snare classification may be more accurate than tangled_rope for corporate perspective. If roughly balanced: tangled_rope holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether corporate-maintainer extraction relationship is actually symmetric"
+    },
+    {
+      "id": "identity_lock_vs_constrained",
+      "question": "For core maintainers, is the binding mechanism primarily identity-locked (self-concept constituted through the project) or constrained (high-cost exit with material barriers)?",
+      "resolution_mechanism": "Analysis of exit patterns: do maintainers leave when funded externally? When identity investment shifts? Post-exit behavior: do they rebuild similar projects? Can they articulate reasons for staying beyond 'this is who I am'?",
+      "impact": "If identity-locked: perspective classification changes to identity_locked exit option; suggests cognitive capture mechanism. If constrained: trapped classification more accurate; suggests material dependency.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether maintainer binding is identity-based or material-constraint-based"
+    },
+    {
+      "id": "institutional_capture_risk",
+      "question": "Are major open-source projects experiencing regulatory or institutional capture, where corporate funding creates de facto control over governance without formal authority?",
+      "resolution_mechanism": "Comparative governance analysis: Linux Foundation, Apache Foundation, Rust Foundation governance structures; analysis of decision-making when funder interests diverge from community interests; historical cases of captured projects",
+      "impact": "If capture is widespread: the corporate perspective shifts from rope to snare (they capture governance, extracting community labor through direction-setting). If governance remains distributed: rope classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether institutional capture is occurring in major open-source projects"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.63
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Open source software represents a structural tension between genuine coordination benefits (code reuse, standardization, security through transparency) and profound extraction of maintenance labor from core developers. The constraint manifests as a tangled rope: corporations and platforms benefit enormously from cost-free access to critical infrastructure, while individual maintainers bear unbounded maintenance costs with minimal financial compensation. The theater ratio has increased from 0.35 to 0.75 over thirty years as the 'open source gift economy' ideology has become increasingly performative \u2014 the narrative persists despite contradicting material reality. The extractiveness has increased from 0.32 to 0.58 as projects have become mission-critical to global infrastructure, concentrating maintenance burdens on smaller groups while expanding user bases and value capture elsewhere. This constraint exhibits all six DR types from different observational positions: core maintainers experience snare conditions (trapped, no viable exit); corporate integrators experience rope (beneficial coordination with high agency); dependent developers experience tangled rope (mixed benefits and extraction); sustainability initiatives see a scaffold with emerging sunset mechanisms; the open source ideology framework appears as a piton (degraded ritual persisting through inertia); and both the platform company and analytical observer face classification ambiguity that reveals false naturalization.",
+    "key_agents": [
+      "Core Maintainers: Primary victims (powerless/trapped) \u2014 bear unbounded maintenance labor with minimal income; identity-locked or deeply constrained; experience maximum extraction.",
+      "Corporate Users: Primary beneficiaries (institutional/arbitrage) \u2014 access cost-free critical infrastructure; face minimal friction costs; experience pure coordination benefit.",
+      "Downstream Developers: Secondary beneficiaries (moderate/constrained) \u2014 depend on maintained projects; experience both benefit from stability and extraction through unmet maintenance demands.",
+      "Ecosystem Reliability: Victim (powerless/trapped) \u2014 abstract collective good that cannot organize; vulnerable to abandonment when maintainers burn out; bears cost of supply-chain risk.",
+      "Sustainability Coalition: Organized actor (organized/constrained) \u2014 sponsorship programs, foundations, funding platforms building alternative mechanisms with sunset trajectories.",
+      "Open Source Ideology: Institutional narrative (institutional/arbitrage) \u2014 performative framework that masks extraction; persists through cultural inertia despite contradicting material reality.",
+      "Platform Companies: Structural ambiguity (powerful/mobile) \u2014 simultaneously beneficiary and dependent; face supply-chain risk from projects they don't control; investing in sponsorship to secure pipelines."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. Core maintainers extract enormous value for users (billions of dollars in user value) while bearing unbounded maintenance costs compensated at near-zero rates. The value asymmetry is stark: a single critical project maintained by 3 people can serve millions of users generating trillions in derived value. The extractiveness is not at snare-level (0.66+) because some maintainers receive partial compensation, some projects have sustainable funding, and the structure is theoretically reformable. But the default condition is extraction. Theater ratio (0.68): High and increasing. The open source ideology ('meritocratic gift economy,' 'community-driven development,' 'hackers coding for love') performs a critical narrative function: it obscures the extraction by framing it as voluntary contribution rather than uncompensated labor. The performative element has increased because the ideology has become decoupled from reality \u2014 projects are now critical infrastructure, not hobby communities. Suppression (0.62): High. Multiple mechanisms suppress maintainer exit: (a) identity lock \u2014 many maintainers cannot imagine themselves outside their projects; (b) community shame \u2014 abandoning a project triggers guilt and reputation damage; (c) lack of alternatives \u2014 few funding models exist for open source maintenance; (d) FOSS licensing itself creates path dependency \u2014 forking requires duplicating maintenance burdens. The interval shows increasing theater and extractiveness, consistent with increasing maturity (larger user base, more mission-critical role) without corresponding increases in sustainable funding.",
+    "directionality_logic": "Each agent's directionality (d) is computed from their structural relationship: who benefits from the extraction flow and with what costs to exit. Beneficiaries with high agency (corporate users, arbitrage exit) get low d values (0.05 for institutional arbitrage). Victims with high exit costs (core maintainers, trapped) get high d values (0.95). The sigmoid f(d) maps these to experienced extraction multipliers ranging from -0.12 (for beneficiaries) to 1.42 (for victims). Applied to global scope (\u03c3(S) = 1.2), this produces effective extraction (\u03c7) ranging from near-zero for corporate users to near-unity for maintainers, explaining the perspectival gap.",
+    "perspectival_gap": "The constraint demonstrates maximal perspectival divergence: the same structural arrangement is rope (pure coordination benefit) from the corporate perspective, snare (pure extraction) from the maintainer perspective, and tangled rope (mixed) from the developer and platform perspectives. The gap reflects genuine structural asymmetry in exit options and value capture \u2014 not measurement ambiguity but real difference in lived experience. The maintainer sees themselves as trapped unpaid laborers subsidizing corporate profits. The corporate user sees standard vendor relationships where upstream handles maintenance and they integrate into their stack. Both are accurate descriptions of their own structural position; they are incompatible descriptions only if forced into a single perspective. The analytical observer's mountain classification is a false summit: it naturalizes what is contingent institutional arrangement (copyright law, funding norms, property allocation). The constraint is not immutable; it is contingently structured by policy choices about software ownership, funding mechanisms, and labor compensation.",
+    "mandatrophy_analysis": "The constraint satisfies mandatrophy requirements by demonstrating genuine coordination function (code reuse, standardization, security benefits) bundled with asymmetric extraction (unpaid maintenance labor). The beneficiary/victim declarations are material: corporations and platforms genuinely benefit from cost-free access; core maintainers genuinely bear unbounded labor costs. The alternative analyses reveal: (1) the snare classification from the maintainer perspective is not an error but an accurate description of their structural position; (2) the rope classification from the corporate perspective is accurate for their position; (3) the tangled rope analytical classification encompasses both through the \u03c7 formula (different d values yield different effective extraction despite identical base properties); (4) the piton classification diagnoses performative ideology maintenance despite degraded function; (5) the scaffold classification identifies real alternative mechanisms with sunset properties. Mandatrophy is resolved by accepting perspectival legitimacy: the constraint truly exhibits multiple types because agents genuinely occupy different structural positions relative to the extraction flow."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "software_supply_chain_security",
+      "digital_commons_sustainability",
+      "tech_worker_extraction"
+    ],
+    "dual_formulation_note": "Open source sustainability is upstream of supply-chain security and digital commons stability. The unsustainability of maintainer compensation creates cascading risk for dependent projects. Decomposable into: (1) individual maintainer sustainability (labor economics story, \u03b5\u22480.72), (2) project governance sustainability (institutional capture story, \u03b5\u22480.55), (3) ecosystem diversity maintenance (commons stability story, \u03b5\u22480.48). This story captures the aggregate constraint; see linked stories for domain-specific decompositions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.5
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "medium_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "software_commodification",
+      "digital_labor_extraction"
+    ]
+  }
+}

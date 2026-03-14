@@ -1,0 +1,191 @@
+{
+  "header": {
+    "constraint_id": "cantillon_effect_distribution",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cantillon"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Cantillon Effect Distribution: Asymmetric Access to New Money Creation",
+    "topic_domain": "monetary_economics/financial_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "primary_money_recipients",
+      "financial_institutions",
+      "asset_holders"
+    ],
+    "victims": [
+      "wage_earners",
+      "savers_with_fixed_income",
+      "price_adjusting_lag_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Fixed-Income Wage Earner",
+      "comment": "PERSPECTIVE 1: FIXED-INCOME WAGE EARNER (SNARE) \u2014 Structurally trapped within the monetary system. Receives newly created money only after it has cascaded through financial institutions and asset markets, experiencing maximum price inflation impact before income adjustment. No meaningful exit from this exposure \u2014 employment requires accepting wages denominated in the depreciating medium. Full extraction without coordination benefit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Savers with Fixed Nominal Returns",
+      "comment": "PERSPECTIVE 2: SAVERS WITH FIXED NOMINAL RETURNS (SNARE) \u2014 Structurally trapped by savings contracts denominated in depreciating currency. New money creation systematically transfers their accumulated purchasing power to asset holders without mechanism for recourse. No exit option except liquidating savings into inflation-exposed consumption. Pure extraction with no coordination function."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Central Bank and Primary Money Recipients",
+      "comment": "PERSPECTIVE 3: CENTRAL BANK AND PRIMARY RECIPIENTS (ROPE) \u2014 Perceives new money creation as coordination mechanism: directing capital to investment, stabilizing financial system, enabling economic function. Primary recipients (banks, government, large corporations) receive fresh liquidity at creation moment before inflation cascades outward. Experiences constraint as beneficial coordination with arbitrage access to other monetary systems if needed."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Small Business and Wage Workers in Productive Sectors",
+      "comment": "PERSPECTIVE 4: SMALL BUSINESS AND PRODUCTIVE WAGE EARNERS (TANGLED ROPE) \u2014 Receive new money after financial sector but before price stabilization; experience mixed coordination and extraction. Benefit from increased nominal demand for goods and services (coordination element) but face inflation in inputs and wage rigidity (extraction element). Constrained by employment lock and business debt, but not trapped \u2014 can partially hedge through pricing or relocation if sufficiently organized."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Regulatory and Economic Policy Establishment",
+      "comment": "PERSPECTIVE 5: REGULATORY ESTABLISHMENT (PITON) \u2014 Officially maintains that monetary policy operates through symmetric aggregate effects; publishes models treating all agents as identical. Reality shows cascading distributional effects and first-mover advantages. Regulatory theater persists through institutional inertia despite extensive academic documentation of Cantillon effects. Maintains equipoise with published data while structurally benefiting from asymmetric distribution. Theater ratio high due to theoretical framework that obscures actual mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer: Monetary System Architecture",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational view, new money creation serves genuine coordination function (enabling exchange, facilitating investment, preventing deflationary collapse) but structurally embeds extractive distribution determined by proximity to money creation point. The constraint is not eliminable without redesigning monetary plumbing, yet current architecture is contingent (chosen, not inherent). Classification as tangled rope reflects genuine coordination need alongside unavoidable extraction asymmetry."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "inflation_measurement_basis",
+      "question": "What constitutes 'inflation' for assessing when different agents experience price impact? CPI, asset-price inflation, or sector-specific deflation?",
+      "resolution_mechanism": "Empirical tracking of price changes across consumption baskets (wage earner vs asset holder) and timeline analysis of when price adjustments occur in different sectors following monetary expansion",
+      "impact": "If CPI properly captures all agents' experience: extraction may be overstated. If asset-price inflation is excluded from standard measures: extraction is understated. Determines whether measured extractiveness of 0.58 should shift toward 0.42 or 0.68.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Measurement methodology for inflation experience across agent types"
+    },
+    {
+      "id": "wage_adjustment_lag_mechanism",
+      "question": "Is the lag between money creation and wage adjustment a structural feature of labor markets or an extractive lock-in mechanism maintained by institutional suppression?",
+      "resolution_mechanism": "Comparative analysis of labor negotiation power and wage-setting mechanisms across periods of high vs low monetary expansion; study of jurisdictions with more frequent wage indexation vs implicit annual review",
+      "impact": "If structural: wages eventually adjust and extraction is temporary. If institutional suppression: adjustment lag is deliberately extended and extraction is systematic. Determines whether classification shifts from tangled rope to pure snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Nature of wage adjustment lag in response to monetary expansion"
+    },
+    {
+      "id": "substitution_capacity_for_savers",
+      "question": "Can savers meaningfully shift to alternative stores of value (commodities, foreign currency, crypto-assets) sufficient to constitute an exit option from currency depreciation?",
+      "resolution_mechanism": "Empirical analysis of substitution barriers (transaction costs, regulatory restrictions, counterparty risk, volatility), measurement of actual substitution rates during high-inflation periods, accessibility by income level",
+      "impact": "If substitution is available and low-cost: exit options shift from trapped to constrained or mobile, reducing effective extraction. If substitution is blocked or unaffordable: trapped classification confirmed and extraction remains high.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Availability of meaningful exit options for savers through alternative value stores"
+    },
+    {
+      "id": "distribution_intentionality",
+      "question": "Is the Cantillon asymmetry a necessary technical feature of modern monetary systems or a policy choice that could be restructured?",
+      "resolution_mechanism": "Analysis of alternative monetary architectures (equal-distribution helicopter money, universal basic income with reserve-backed currency, distributed ledger alternatives), empirical testing of whether asymmetric distribution is inevitable or contingent",
+      "impact": "If necessary: constraint is closer to mountain (structural limit of any money creation system). If contingent: constraint is squarely tangled rope \u2014 genuine coordination with structurally avoidable extraction. Determines whether reform is realistic or futile.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether asymmetric distribution is inherent to monetary systems or contingently designed"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The Cantillon Effect describes the asymmetric distributional consequence of new money creation: agents positioned closest to the money creation point (central banks, primary dealers, large financial institutions, governments) receive newly created money before inflation cascades outward and erodes purchasing power for everyone else. This creates a systematic wealth transfer from savers and wage earners to asset holders and financial institutions, independent of productivity or merit. The constraint exhibits the full Deferential Realism spectrum because it genuinely coordinates monetary function (preventing deflationary collapse, enabling investment) while structurally embedding asymmetric extraction (first-mover advantage in newly created purchasing power). The classification as tangled rope reflects this dual character: the coordination function is real and necessary; the extraction is also real and unnecessary but deeply embedded in how modern central banking operates.",
+    "key_agents": [
+      "Wage Earners and Fixed-Income Populations: Primary victims (powerless/trapped) \u2014 last to receive new money, first to experience inflation; locked into system by employment and currency denomination",
+      "Savers with Fixed Nominal Returns: Primary victims (powerless/trapped) \u2014 systematic purchasing power erosion through currency depreciation; no exit short of liquidation",
+      "Central Banks and Primary Dealers: Primary beneficiaries (institutional/arbitrage) \u2014 receive new money at creation point; can arbitrage across systems; perceive constraint as pure coordination",
+      "Financial System: Institutional beneficiary (institutional/arbitrage) \u2014 cascades money creation through asset markets before reaching wage economy; captures spread between creation and distribution",
+      "Asset Holders: Secondary beneficiaries (moderate to powerful/mobile) \u2014 benefit from asset price inflation driven by new liquidity; can exit into alternative assets",
+      "Small Business: Mixed role (moderate/constrained) \u2014 benefits from demand stimulus but faces input inflation and wage rigidity",
+      "Regulatory Establishment: Institutional actor (institutional/arbitrage) \u2014 maintains theoretical framework that obscures distributional effects; benefits from Cantillon extraction while denying its existence"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint systematically transfers purchasing power from wage earners and savers to asset holders and financial institutions. The magnitude is neither maximal (like predatory lending at 0.72) nor minimal (like coordination overhead at 0.15) because the transfer is real but partially offset by genuine monetary coordination benefits and the heterogeneity of agents experiencing different phases of the distribution cascade. The measurement trajectory (0.35 \u2192 0.48 \u2192 0.58) shows accumulation over the interval, reflecting increasing recognition and documentation of Cantillon effects in economic literature. Suppression (0.65): High. The suppression mechanisms include: (1) Theoretical suppression \u2014 standard macroeconomic models treat monetary expansion as having symmetric aggregate effects, obscuring distributional analysis; (2) Institutional suppression \u2014 central banks and finance ministries publish data on aggregate inflation but rarely break out Cantillon-style distributional timelines; (3) Cognitive suppression \u2014 the cascade is distributed across years and sectors, making causal chains psychologically illegible to most wage earners; (4) Exit suppression \u2014 no meaningful alternative to holding currency or employment; (5) Narrative suppression \u2014 'inflation is everyone's problem' obscures that timing and asset composition determine winners and losers. Theater ratio (0.48): Moderate. Central bank communications emphasize aggregate economic management and price stability targets while remaining silent on distribution mechanisms. However, the actual coordination work of monetary policy (preventing deflationary spirals, enabling credit) is substantially real, not purely theatrical \u2014 hence theater ratio is moderate rather than high. Academic economics increasingly documents Cantillon effects, reducing the theater component.",
+    "perspectival_gap": "The Cantillon Effect reveals a structural tension between aggregate monetary coordination and distributional extraction. From the perspective of central banks and primary recipients, new money creation is pure coordination \u2014 it prevents deflationary collapse and enables investment. From the perspective of wage earners and savers, the same process is pure extraction \u2014 they bear the purchasing power cost without receiving the creation benefit. This gap is not resolvable through a single 'true' classification because both perspectives are accurate within their structural contexts. The tangled rope classification reflects this: the constraint simultaneously solves a genuine coordination problem (preventing money shortage) and embeds a systematic extraction mechanism (cascading distribution favoring proximity to creation). The analytical observer's tangled rope classification emphasizes that the extraction is structurally avoidable \u2014 equal-distribution alternatives exist in principle, making this a policy design problem, not a natural law.",
+    "directionality_logic": "Directionality values are derived from each agent's structural position in the money creation cascade and their substitution options. Central banks and primary money recipients occupy d \u2248 0.0-0.15 positions: they are full beneficiaries (receive money at creation) with arbitrage options (can operate across jurisdictions). Wage earners in non-financial sectors occupy d \u2248 0.85-0.95: they are full targets (receive money only after inflation cascades) with trapped exit options. Savers with fixed returns occupy d \u2248 0.90-1.00: pure targets with systematically eroding purchasing power and no realistic exit. Small business and productive sectors occupy d \u2248 0.55-0.70: they receive new money after financial sector but before complete price adjustment, receiving some benefit before the full extraction hits. Regulatory institutions benefit from the arrangement (low d through arbitrage options on policy knowledge) but officially deny the mechanism exists. The directional asymmetry is the quantitative expression of the Cantillon insight: distance from money creation point determines the direction and magnitude of the wealth transfer.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint performs two functions simultaneously: (1) Genuine coordination \u2014 new money creation prevents deflationary collapse and enables efficient capital allocation, a necessary function; (2) Systematic extraction \u2014 the mechanics of how new money enters the system create first-mover advantages that systematically favor asset holders over wage earners. These are not conflicting classifications; they are dual aspects of the same structural arrangement. The tangled rope type captures this duality: the constraint cannot be classified as pure rope (coordination only) because the extraction is real and systematic, not noise. It cannot be classified as pure snare (extraction only) because the monetary coordination function is genuine, not theatrical. The mandate is resolved by showing that both aspects are accurate from their respective structural positions, and the disagreement reflects real asymmetries in the system, not observational error. The constraint would become pure rope only if new money were distributed equally to all agents (helicopter money) \u2014 the coordination function would remain, but the extraction would disappear. This shows that extraction is contingent on the distribution mechanism, not necessary for monetary function."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "financial_asset_inflation",
+      "wage_lag_persistence",
+      "wealth_inequality_dynamics"
+    ],
+    "dual_formulation_note": "The Cantillon Effect decomposes into three distinct constraints with different \u03b5 values: (1) monetary_creation_coordination (\u03b5 \u2248 0.15, Rope) \u2014 the actual coordination function of new money creation; (2) asymmetric_distribution_mechanism (\u03b5 \u2248 0.68, Snare) \u2014 the specific institutional choice to cascade money through finance sector first; (3) cantillon_effect_distribution (\u03b5 \u2248 0.58, Tangled Rope) \u2014 the combined system as currently implemented. This story addresses the combined system. Upstream: monetary_creation_coordination. Downstream: wage_lag_persistence, financial_asset_inflation, wealth_inequality_dynamics."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

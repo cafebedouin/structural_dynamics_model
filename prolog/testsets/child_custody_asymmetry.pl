@@ -1,0 +1,301 @@
+% ============================================================================
+% CONSTRAINT STORY: child_custody_asymmetry
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_child_custody_asymmetry, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: child_custody_asymmetry
+ *   human_readable: Child Custody Asymmetry in Family Dissolution
+ *   domain: family_law/interpersonal
+ *
+ * SUMMARY:
+ *   Child custody asymmetry in family dissolution creates a structural
+ *   constraint that combines genuine coordination functions (allocating
+ *   decision-making authority, establishing stable residence, resolving
+ *   parental disputes) with asymmetric extraction (non-custodial parent bears
+ *   legal/economic costs and relationship restrictions; child extracted from
+ *   through relational gatekeeping; all parties bear performance overhead).
+ *   The constraint exhibits the full Deferential Realism spectrum across
+ *   different perspectives: pure coordination (custodial parent), mixed
+ *   coordination-extraction (child, court system, non-custodial parent),
+ *   degraded institutional ritual (custody law infrastructure), and false
+ *   naturalization (analytical observer's natural law view). The measurements
+ *   show theater ratio rising as custody arrangements stabilize (initial
+ *   crisis period has lower performance requirements; stable arrangements
+ *   accumulate evaluation, supervision, and compliance theater).
+ *   Extractiveness rises sharply in the first 2 years post-separation, then
+ *   stabilizes as identity-lock and institutional habituation set in. The
+ *   constraint is mandatrophy-resolved: the taxonomy distinguishes between
+ *   genuine child-welfare coordination functions and extractive overhead,
+ *   preventing mislabeling of all custody law as either pure coordination or
+ *   pure predation.
+ *
+ * KEY AGENTS:
+ *   - Non-Custodial Parent: Primary target (powerless/trapped and identity_locked variants) — bears legal liability, economic extraction via child support, relationship restrictions, and internalized identity barriers. Structural mobility exists in some cases (relocation, alternative custody arrangements) but is blocked by cognitive identity lock.
+ *   - Child: Secondary victim (moderate/constrained) — genuinely benefits from custodial stability but extracted from through relational manipulation, gatekeeping, and emotional labor of managing parental conflict.
+ *   - Custodial Parent: Primary beneficiary (institutional/arbitrage) — extracts through decision-making authority, child support collection, and leverage in disputes. Also genuinely coordinates child welfare.
+ *   - Family Court System: Institutional actor (institutional/constrained) — coordinates legitimate dispute resolution and child protection while extracting through performance overhead (evaluations, supervised visitation, compliance theater). Locked into institutional machinery despite recognizing extractive costs.
+ *   - Custody Law Infrastructure: Institutional artifact (institutional/arbitrage) — the formal apparatus of sole custody, support formulas, and evaluation protocols persists through inertia. Alternative coordination mechanisms (equal parenting presumption, mediation, collaborative frameworks) exist but require institutional change.
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent legal arrangements (sole custody as developmentally necessary) as inherent properties of child development.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(child_custody_asymmetry, 0.58).
+domain_priors:suppression_score(child_custody_asymmetry, 0.68).
+domain_priors:theater_ratio(child_custody_asymmetry, 0.64).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(child_custody_asymmetry, extractiveness, 0.58).
+narrative_ontology:constraint_metric(child_custody_asymmetry, suppression_requirement, 0.68).
+narrative_ontology:constraint_metric(child_custody_asymmetry, theater_ratio, 0.64).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(child_custody_asymmetry, tangled_rope).
+narrative_ontology:human_readable(child_custody_asymmetry, "Child Custody Asymmetry in Family Dissolution").
+narrative_ontology:topic_domain(child_custody_asymmetry, "family_law/interpersonal").
+
+domain_priors:requires_active_enforcement(child_custody_asymmetry).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(child_custody_asymmetry, custodial_parent).
+narrative_ontology:constraint_beneficiary(child_custody_asymmetry, family_court_system).
+narrative_ontology:constraint_victim(child_custody_asymmetry, non_custodial_parent).
+narrative_ontology:constraint_victim(child_custody_asymmetry, child_relational_network).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: NON-CUSTODIAL PARENT (SNARE) — Faces structural entrapment through dual barriers: legal (custody orders enforced by court apparatus with threat of incarceration for non-compliance), economic (child support obligations extracted regardless of access rights), and identity (internalized paternal/maternal guilt and social stigma making exit conceptually unthinkable). Theater ratio high because compliance performances (supervised visitation, drug tests) are required even when unrelated to actual parenting capacity. Suppression manifests as asymmetric legal burden — non-custodial parent bears extraction with minimal coordination benefit or voice in decisions affecting the child.
+constraint_indexing:constraint_classification(child_custody_asymmetry, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 2: THE CHILD (TANGLED ROPE) — Structurally constrained by court-ordered custody allocation; genuinely benefits from custodial stability and coordinated caregiving BUT also extracted from through manipulation of relationship with non-custodial parent (alienation narratives, gatekeeping, leverage in disputes). The constraint coordinates legitimate child welfare functions (consistent residence, parental responsibility) alongside extraction of emotional labor (managing parental conflict, loyalty binds, triangulation). Exit options constrained by age, legal status, and emotional dependence on both parents.
+constraint_indexing:constraint_classification(child_custody_asymmetry, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: CUSTODIAL PARENT (ROPE) — Primary beneficiary. Experiences the constraint as coordination: legal custody provides stability, decision-making authority, and protection from external interference. Also extracts economically through child support collection and leverage in custody disputes. However, the custodial parent also genuinely coordinates child welfare — the constraint solves a real problem (resolving parental disputes, establishing stable residence). From this position, the constraint appears primarily as a coordination mechanism with incidental beneficiary status.
+constraint_indexing:constraint_classification(child_custody_asymmetry, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 4: FAMILY COURT SYSTEM (TANGLED ROPE) — Genuinely coordinates dispute resolution and child welfare protection (coordination function: allocating custody to minimize risk). Simultaneously extracts through performance requirements (evaluations, supervised visitation, compliance theater) that inflate costs for all parties. Suppression mechanism: the court's authority is backed by state violence (contempt, incarceration). Theater ratio high because much of the apparatus (parental capacity evaluations, psychological testing, supervision protocols) serves evidentiary theater rather than genuine child protection — assessments often cannot predict parenting quality. Constrained because court system is locked into the institutional machinery even when recognizing its extractive overhead.
+constraint_indexing:constraint_classification(child_custody_asymmetry, tangled_rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: NON-CUSTODIAL PARENT (IDENTITY-LOCKED VARIANT) — Some non-custodial parents are structurally mobile (income sufficient to relocate, alternative custody arrangements available) but identity-locked by internalized narratives of failure, unworthiness as a parent, or relinquished identity. The binding mechanism is cognitive — the parent cannot imagine themselves as a full parent outside the custodial framework, has absorbed social/legal framing that marks them as the 'visiting' parent, or has constructed identity around the constraint itself (the struggle, the sacrifice, the ongoing fight for access). Exit would require not just legal change but identity reconstruction. This perspective reveals that some of the suppression operates internally, not through external barriers.
+constraint_indexing:constraint_classification(child_custody_asymmetry, snare,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(identity_locked),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 6: CUSTODY LAW INFRASTRUCTURE (PITON) — The apparatus of sole custody, child support quantification formulas, and custody evaluation protocols persists largely through institutional inertia. The underlying coordination problem (resolving custody disputes in the child's interest) could be addressed through mediation, collaborative co-parenting frameworks, or presumptive equal parenting. The institutional form (adversarial court determination, winner-take-most allocation, unilateral decision-making authority) is maintained despite recognition of its extractive costs — theater ratio elevated by performative compliance mechanisms that persist unchanged for decades despite empirical evidence that they do not improve outcomes.
+constraint_indexing:constraint_classification(child_custody_asymmetry, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(national))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, some parental asymmetry is inherent: the biological mother's role during gestation and lactation creates an irreducible initial asymmetry; young children require continuity of primary care; someone must make decisions when parents disagree. This perspective naturalizes what appears to be a law of child development. However, the structural data reveals this as a false summit: the degree of asymmetry in modern legal custody (sole decision-making authority, restricted visitation, leverage extraction through child support enforcement) far exceeds what biological or developmental necessity requires. The mountain classification is a naturalization of contingent institutional arrangements.
+constraint_indexing:constraint_classification(child_custody_asymmetry, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(child_custody_asymmetry_tests).
+
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(child_custody_asymmetry, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(child_custody_asymmetry, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(child_custody_asymmetry, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(child_custody_asymmetry, TR),
+    TR >= 0.70.
+
+:- end_tests(child_custody_asymmetry_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness (0.58): Moderate-high. The constraint extracts substantially from the non-custodial parent through dual mechanisms: legal custody concentration (unilateral decision-making authority, restricted access) and economic extraction (child support obligations decoupled from access rights). The measurement is refined from initial appearance of 0.72 because much of what appears as extraction is genuine coordination cost — the constraint does solve the real problem of allocating authority when two parents disagree. However, the degree of asymmetry (sole versus presumptively equal) exceeds what coordination necessity requires. Suppression (0.68): High. Non-custodial parents face multiple barriers to exit: legal (court orders, contempt enforcement), economic (ongoing financial obligations), and psychological/identity-based (internalized guilt, social stigma, identity fusion with the parental role). The suppression mechanism is particularly effective because it combines external barriers with internalized constraints — even when legal barriers are lowered, many non-custodial parents remain behaviorally suppressed through identity lock. Theater ratio (0.64): Moderate-high. Custody evaluation protocols, parental capacity assessments, supervised visitation, and drug testing serve both epistemic functions (providing information about parenting capacity) and performance functions (demonstrating compliance, signaling fitness to the court). The theater ratio has increased over time as the apparatus has accumulated evaluation and compliance requirements, many of which persist despite uncertain predictive validity for child welfare outcomes.
+ *
+ * PERSPECTIVAL GAP:
+ *   The key perspectival gap is between the custodial parent (rope) and non-custodial parent (snare) — identical constraint structure but opposite classifications due to power and exit options. This gap reveals that the constraint's extractiveness is not uniformly distributed: it flows from the powerless/trapped (non-custodial parent) toward the institutional (custodial parent). The identity-locked variant of the non-custodial perspective is analytically crucial because it distinguishes structural from cognitive suppression — a non-custodial parent with genuine alternative custody options may remain suppressed through identity lock (internalized unworthiness, fused identity with the custodial role loss, absorbed social stigma). The piton perspective reveals that the current custody asymmetry is partially contingent: the degree of concentration in sole custody exceeds developmental necessity and could shift toward presumptive equal parenting with maintained child welfare. The mountain perspective is a false summit — what appears as natural law of child development is actually institutional design choice.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   The non-custodial parent's high d (0.93 for trapped variant, 0.89 for identity_locked variant) derives from victim status (bears costs of custody loss, legal liability, support obligations) combined with zero or illusory exit options. The trappedness is legal (court orders enforceable through incarceration), economic (ongoing obligations), and psychological (identity lock). The custodial parent's low d (0.15) derives from beneficiary status (receives child support, decision-making authority, default residence) and high exit optionality (could agree to equal custody, mediation, or shared arrangements). The child's moderate-high d (0.72) reflects mixed position: genuinely benefits from stable custodial arrangement (beneficiary aspect lowers d) but faces relational extraction through gatekeeping and cannot exit (trapped aspect raises d). The court system's d (0.58) reflects genuine coordination function (dispute resolution, child protection) balanced against extractive overhead (performance requirements, compliance theater). Beneficiary/victim declarations: custodial parent and court system are beneficiaries (extract authority, control, legitimacy from the constraint); non-custodial parent and child are victims (bear costs of asymmetry and relational manipulation).
+ *
+ * MANDATROPHY ANALYSIS:
+ *   MANDATROPHY RESOLVED: The 2×2 matrix of [coordination function × extractive overhead] clarifies the apparent contradiction. The constraint genuinely coordinates child welfare (solves the problem of allocating authority when parents disagree, establishes stable residence, protects children from parental conflict). It simultaneously extracts through asymmetric legal authority, economic obligations decoupled from access rights, and performance overhead. The tangled rope classification correctly captures both functions, preventing the false choice between 'custody law is pure coordination' (rope) and 'custody law is pure predation' (snare). The piton perspective reveals that the institutional form has atrophied: presumptive equal parenting provides equal or better child outcomes with lower extractiveness, yet the sole-custody apparatus persists through institutional inertia and professional/judicial path dependence. The mountain false summit is detected by observing that the degree of asymmetry far exceeds what developmental necessity requires — biological asymmetry during gestation/infancy does not necessitate legal sole custody throughout childhood and adolescence. The presheaf over observation sites (beneficiary/victim/court/child/analyst perspectives) IS the answer: each sees a real structural feature, and mislabeling any single perspective as 'the' correct classification would hide critical extraction mechanisms.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    identity_lock_persistence,
+    'What proportion of non-custodial parents'' suppression is structural (legal/economic barriers) versus internalized (identity-based self-exclusion)?',
+    'Post-custody-reform cohort analysis: tracking non-custodial parents'' engagement patterns after custody modifications that remove legal barriers; comparing sustained disengagement patterns across different legal regimes (sole custody vs presumptive equal parenting jurisdictions)',
+    'If primarily internalized (>60%): the constraint''s extractiveness is lower than measured — the binding mechanism persists even after formal barrier removal, indicating identity lock. If primarily structural (<40%): legal reform alone would sharply reduce extraction. If mixed: suppression has both external and internal components, and therapeutic/identity-reconstruction support is as important as legal change.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(identity_lock_persistence, empirical, 'Structural vs. internalized components of non-custodial parent suppression').
+
+omega_variable(
+    child_alienation_mechanism,
+    'Is relationship alienation a byproduct of separation (natural consequence of disrupted daily contact) or an extraction mechanism (deliberately engineered by custodial parent for leverage)?',
+    'Comparative analysis of aliena­tion patterns in mediated co-parenting arrangements versus adversarial custody battles; temporal tracking of relationship quality versus litigation intensity; intervention studies on supported contact mechanisms',
+    'If primarily byproduct (>70%): the constraint''s extraction component is overstated — separation itself explains the outcome. If primarily engineered (>50%): the constraint functions as a relational extraction mechanism, and the ''child as victim'' classification is strengthened. If mechanism-dependent (varies by jurisdiction/parental cooperation): the extraction emerges from institutional rules that enable gatekeeping, not from separation inherently.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(child_alienation_mechanism, empirical, 'Whether relationship alienation is inevitable consequence or extraction mechanism').
+
+omega_variable(
+    court_evaluation_predictive_validity,
+    'Do custody evaluation protocols (parental capacity assessments, psychological testing, home studies) actually predict child welfare outcomes better than random assignment or mediator recommendations?',
+    'Longitudinal follow-up studies comparing custody determination method (court-ordered evaluation vs mediation vs random assignment) against child welfare metrics 5-10 years post-custody; effect size analysis of custody evaluator recommendations on court decisions versus outcomes',
+    'If evaluations have predictive validity (r > 0.40): theater ratio is overstated — the apparatus serves epistemic function. If no predictive validity (r < 0.15): theater ratio is accurately measured — the custody evaluation apparatus is pure performance, inflating costs without improving outcomes. Classification may shift from Tangled Rope (mixed coordination-extraction) to Snare (pure extraction) for the court system perspective.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(court_evaluation_predictive_validity, empirical, 'Custody evaluation predictive validity for child outcomes').
+
+omega_variable(
+    presumptive_equal_parenting_feasibility,
+    'Would presumptive equal parenting (starting point: equal custody and decision-making, burden of proof on parent seeking restriction) reduce extractiveness without degrading child welfare?',
+    'Comparative analysis of jurisdictions with presumptive equal parenting versus sole custody defaults; child welfare metrics, extractiveness measures, parental conflict duration, and financial costs across legal regimes; implementation studies in transition jurisdictions',
+    'If feasible (comparable outcomes, reduced extractiveness): the current custody asymmetry is revealed as contingent institutional choice, not structural necessity — piton classification is confirmed. If infeasible (worse outcomes for mobile children, conflict escalation): current asymmetry is partially justified — tangled rope classification weighted toward coordination. The presheaf structure remains the answer, but the weighting of perspectives shifts.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(presumptive_equal_parenting_feasibility, empirical, 'Feasibility and outcomes of presumptive equal parenting legal frameworks').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(child_custody_asymmetry, 0, 6).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(cca_tr_t0, child_custody_asymmetry, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(cca_tr_t2, child_custody_asymmetry, theater_ratio, 2, 0.48).
+narrative_ontology:measurement(cca_tr_t4, child_custody_asymmetry, theater_ratio, 4, 0.64).
+narrative_ontology:measurement(cca_tr_t6, child_custody_asymmetry, theater_ratio, 6, 0.62).
+
+% Extraction over time
+narrative_ontology:measurement(cca_be_t0, child_custody_asymmetry, base_extractiveness, 0, 0.32).
+narrative_ontology:measurement(cca_be_t2, child_custody_asymmetry, base_extractiveness, 2, 0.48).
+narrative_ontology:measurement(cca_be_t4, child_custody_asymmetry, base_extractiveness, 4, 0.58).
+narrative_ontology:measurement(cca_be_t6, child_custody_asymmetry, base_extractiveness, 6, 0.56).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(child_custody_asymmetry, attachment_coordination).
+narrative_ontology:boltzmann_floor_override(child_custody_asymmetry, 0.12).
+narrative_ontology:affects_constraint(child_custody_asymmetry, child_support_enforcement_asymmetry).
+narrative_ontology:affects_constraint(child_custody_asymmetry, parental_access_gatekeeping).
+narrative_ontology:affects_constraint(child_custody_asymmetry, post_separation_relational_alienation).
+
+% DUAL FORMULATION NOTE:
+% Child custody asymmetry decomposes into three structurally distinct constraints: (1) custody allocation (coordination of child residence and decision authority), (2) child support enforcement (economic extraction mechanism), and (3) relational gatekeeping (emotional/relational extraction through access control). Each has different ε values and different beneficiary/victim structures. This story addresses the aggregate constraint; the downstream constraints in network.affects_constraints provide fine-grained analysis of specific extraction mechanisms.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(child_custody_asymmetry, moderate, 0.72).
+constraint_indexing:directionality_override(child_custody_asymmetry, organized, 0.58).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

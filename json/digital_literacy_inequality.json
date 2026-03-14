@@ -1,0 +1,203 @@
+{
+  "header": {
+    "constraint_id": "digital_literacy_inequality",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "diglit"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "snare",
+    "human_readable": "Digital Literacy Inequality and Economic Exclusion",
+    "topic_domain": "economic/social/technological",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "tech_platform_corporations",
+      "credential_gatekeepers",
+      "high_literacy_workers"
+    ],
+    "victims": [
+      "low_literacy_populations",
+      "elderly_adults",
+      "rural_communities",
+      "informal_sector_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Low-Literacy Adult",
+      "comment": "PERSPECTIVE 1: LOW-LITERACY ADULT (SNARE) \u2014 Structurally trapped by employment barriers, financial services gatekeeping, and inability to access governmental/medical/educational systems. No exit option from dependence on intermediaries. Digital skill gaps translate directly to income loss and life-outcome constraints. Maximum extraction experienced."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Rural Small Business Owner",
+      "comment": "PERSPECTIVE 2: RURAL SMALL BUSINESS OWNER (TANGLED ROPE) \u2014 Experiences both genuine coordination benefit (digital platforms enable market access) and asymmetric extraction (platform fees, algorithmic opacity, data harvesting). Constrained by cost of digital infrastructure and training. Cannot exit platform dependence without losing market reach, but also cannot compete without digital sophistication."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Tech Platform Corporation",
+      "comment": "PERSPECTIVE 3: TECH PLATFORM CORPORATION (ROPE) \u2014 Experiences the constraint as coordination: connecting users to services, aggregating supply and demand, providing infrastructure. Net beneficiary with full arbitrage capacity. For this agent, the constraint is functional (coordination problem solved by platform) rather than extractive. Can exit or modify constraints without structural penalty."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Public Library and Community College System",
+      "comment": "PERSPECTIVE 4: PUBLIC LIBRARY AND COMMUNITY COLLEGE (SCAFFOLD) \u2014 Organized agents providing temporary support infrastructure (free digital access, training programs). See the constraint as temporary and solvable through education and infrastructure investment. Have sunset logic: as digital literacy becomes universal norm, specialized bridging programs can sunset. Currently constrained by funding and access gaps."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Digital Divide Narrative Institution",
+      "comment": "PERSPECTIVE 5: DIGITAL DIVIDE DISCOURSE INSTITUTION (PITON) \u2014 Policy frameworks, research agendas, and funding mechanisms organized around 'bridging the digital divide.' Theater ratio (0.48) reflects that much activity is performative: report publication, program announcements, training statistics. Actual impact on earnings and opportunity differentials is modest. The narrative persists through institutional inertia and funding cycle dependency."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Technological Determinism View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / TECHNOLOGICAL DETERMINISM (MOUNTAIN) \u2014 Risk of naturalizing digital literacy inequality as an inevitable feature of technological progress: 'some people will always lag behind,' 'new technologies create temporary disruption that resolves through generational turnover.' This framing misses the structural extraction. The engine's false summit detector will flag this as naturalization of contingent institutional inequality (unequal access to training, credit, infrastructure, time)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "skill_acquisition_ceiling",
+      "question": "Is digital literacy ceiling determined by age-cohort effects or by structural barriers to training access?",
+      "resolution_mechanism": "Longitudinal tracking of adult learner outcomes; comparison of completion rates between subsidized comprehensive programs vs. self-directed learning; measurement of retention and transfer to employment outcomes",
+      "impact": "If primarily age cohort: extractiveness decreases as generations turn over (temporary constraint). If primarily structural barriers: extractiveness persists indefinitely and requires active intervention. Classification impacts: trap\u2192mountain (natural law) vs trap\u2192snare (extractive institutional design).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Skill acquisition ceiling determination: age vs structural barriers"
+    },
+    {
+      "id": "platform_necessity_vs_monopoly",
+      "question": "Are digital platforms genuinely necessary coordination infrastructure or monopolistic gatekeepers enforcing artificial dependency?",
+      "resolution_mechanism": "Measurement of switching costs for users; analysis of alternative platform ecosystems; assessment of data portability and interoperability requirements; examination of incumbent platform barriers to entry",
+      "impact": "If genuinely necessary infrastructure: constraint is rope or tangled_rope (coordination with extraction). If monopolistic gatekeeping: constraint is snare or tangled_rope (extraction with coordination cover). Changes beneficiary/victim classification and directionality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Platform necessity vs monopolistic gatekeeping"
+    },
+    {
+      "id": "intergenerational_transmission",
+      "question": "Does digital literacy inequality transmit across generations through parental education/income or through diminishing public education resources?",
+      "resolution_mechanism": "Cohort analysis of first-generation digital learners from low-literacy households; comparison of digital skill development in well-resourced vs under-resourced schools; measurement of home internet access correlation with student outcomes controlling for parental education",
+      "impact": "If parental transmission dominates: scaffold programs must target households and early childhood. If resource inequality dominates: public infrastructure investment is primary lever. Affects whether scaffold sunset is realistic.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Intergenerational transmission mechanism: parental vs resource-based"
+    },
+    {
+      "id": "identity_locked_digital_exclusion",
+      "question": "For some populations, is digital exclusion partly structural (access barriers) and partly identity-locked (self-concept incompatible with 'digital person' identity)?",
+      "resolution_mechanism": "Qualitative analysis of narratives from adult learners; measurement of completion vs dropout rates controlling for access barriers; tracking of learner identity shift ('I'm not a tech person' \u2192 'I can do this'); post-program skill persistence vs employment outcome correlation",
+      "impact": "If identity-locked: lowered exit_options threshold; powerless\u2192identity_locked shifts classification from snare\u2192mountain (mountain-like intransigence) to snare\u2192rope (perceived mutability). Affects long-term extraction persistence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Identity-locked digital exclusion mechanism"
+    },
+    {
+      "id": "extraction_vs_coordination_ratio",
+      "question": "What proportion of platform value extraction is genuine coordination cost vs. surplus capture (platform fee, data harvesting, algorithmic opacity)?",
+      "resolution_mechanism": "Comparative analysis of platform revenue models; measurement of user welfare gains from platform access vs. platform profit extraction; studies of alternative cooperative/public platform models and their cost structures",
+      "impact": "If coordination cost dominates: platforms are rope (high genuine value). If extraction dominates: platforms are snare. Affects beneficiary/victim classification for institutional actors and chi computation for platform perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Platform extraction vs genuine coordination cost ratio"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Digital literacy inequality creates a structural extraction mechanism through which economic and institutional systems increasingly mandate digital competency as gatekeeping requirement. The constraint operates across multiple levels: individual employment barriers, household financial service access (banking, insurance, credit), governmental service access (tax, benefits, licensing), and educational/professional credentialing. Unlike historical literacy inequality, digital literacy inequality is compounded by rapid technological change, algorithm opacity, and platform monopolization that limits exit options. The low-literacy populations experiencing maximum extraction (powerless/trapped) cannot avoid the constraint \u2014 it is embedded in essential services \u2014 but also cannot easily acquire the skills to overcome it due to suppression (cost of training, time poverty, age-cohort barriers, identity-locked self-concepts). The constraint has intensified over the measurement interval (\u03b5 0.35\u21920.58) as platforms have become more monopolistic and digital-first service delivery has expanded. Theater ratio remains relatively low (0.48), indicating that the extraction is only partially obscured by performative bridge programs \u2014 the constraint is relatively visible in wage gaps, access denial, and service friction.",
+    "key_agents": [
+      "Low-literacy populations (powerless/trapped): Primary victims \u2014 employed in jobs requiring increasing digital skills; excluded from better-paying digital-native roles; dependent on platform intermediaries for service access",
+      "Elderly adults (powerless/constrained): Secondary victims \u2014 aging out of workforce due to digital skill requirements; healthcare and financial service access increasingly mandates digital competency",
+      "Rural communities (moderate/constrained): Secondary victims \u2014 geographically isolated from training resources; business competitiveness depends on digital platforms; broadband access is prerequisite",
+      "Tech platform corporations (institutional/arbitrage): Primary beneficiaries \u2014 extract value through user data, fees, algorithmic control, and lock-in effects; digitalization of services increases platform dependency",
+      "Credential gatekeepers (institutional/arbitrage): Secondary beneficiaries \u2014 universities, certification programs, professional licensing bodies; digital skills certifications become rent-extraction mechanisms",
+      "High-literacy knowledge workers (powerful/mobile): Beneficiaries \u2014 increased relative economic returns; more job options; lower cost of platform adoption",
+      "Public library and community college system (organized/constrained): Scaffold agents \u2014 providing temporary training infrastructure; constrained by funding; see sunset as education institutions close the skills gap",
+      "Analytical observer (analytical/analytical): Risk of naturalizing inequality as inevitable feature of technological progress rather than contingent institutional extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts through multiple channels: wage penalty for low-digital-skill workers (~15-25% lifetime earnings reduction), platform fee extraction from informal sector and low-literacy populations using digital services, access denial from essential services (government, financial), and time/money costs of remedial training. The value is not at maximum (0.70+) because some genuine coordination benefit exists \u2014 platforms do enable market access and service delivery \u2014 and some institutional support (libraries, government training) provides partial mitigation. Suppression (0.65): High. Barriers to digital skill acquisition are substantial: cost of devices and internet, time poverty of working-poor populations, cognitive barriers for older adults, spatial isolation in rural areas, and for some populations, identity-locked perception ('I'm not a tech person'). Suppression is high but not total because some escape routes exist (public libraries, community programs, motivated self-learning). Theater ratio (0.48): Moderate-low. The constraint is relatively transparent \u2014 the digital skill gap translates directly to visible wage gaps, employment barriers, and service access denial. While performative components exist (training statistics, program announcements, bridge program rhetoric), the underlying extraction is not heavily obscured by false coordination claims.",
+    "perspectival_gap": "The gap between powerless/trapped (snare) and institutional/arbitrage (rope) is maximal \u2014 the same constraint appears as pure extraction vs pure coordination. This gap reveals the structural role-dependence of classification: the platform's experienced coordination genuinely solves problems for them (user aggregation, value creation). The victim's experienced extraction genuinely constrains them (wage penalty, access denial). Neither perspective is wrong \u2014 both are accurate descriptions of their structural position. The gap is diagnostic: it shows that beneficiary and victim populations experience fundamentally different structures and that 'solving the problem' (from the platform perspective) does not require solving the victim's extraction (from the victim perspective). The scaffold and piton perspectives show institutional responses to this gap: scaffold attempts to bridge via education, piton shows how the bridge program itself becomes performative theater.",
+    "directionality_logic": "Directionality derives from power level, exit options, and beneficiary/victim status. Powerless/trapped victims experience maximum d (~0.95), producing high f(d) and high chi due to no exit capacity and full victim status. Institutional/arbitrage platform corporations experience low d (~0.15) due to beneficiary status and full arbitrage exit \u2014 they can restructure or exit without penalty. Organized scaffold agents experience moderate d (~0.50) due to constrained exit and mixed beneficiary/victim status (they benefit from the constraint's existence as it justifies their educational missions, but they also bear victim status through institutional mission to remediate). The moderate small business owner experiences moderate-high d (~0.65) due to constrained exit (platform dependence) and mixed beneficiary/victim status (benefits from platform reach but victim to platform extraction).",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by distinguishing institutional coordination (platforms enabling markets, services, communication) from extraction (concentration of surplus, monopolistic gatekeeping, data harvesting). The beneficiary perspective (rope) identifies genuine coordination benefit. The victim perspective (snare) identifies genuine extraction. The tangled_rope perspective identifies the hybrid: platforms provide real coordination value AND extract asymmetrically. The analytical observer's risk is naturalizing this hybrid as inevitable ('technology always creates winners and losers') rather than recognizing it as a choice about how to structure digital institutions. The constraint's classification resolves around whether digital platforms are designed as public coordination infrastructure (lower extraction, more rope-like) or as proprietary monopolistic gatekeepers (higher extraction, more snare-like). Current trajectory (\u03b5 increasing from 0.35 to 0.58) suggests increasing extractive design rather than increasing coordination efficiency."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_opacity_in_job_matching",
+      "financial_service_gatekeeping_through_digital_identity",
+      "credential_inflation_in_technical_roles"
+    ],
+    "dual_formulation_note": "Digital literacy inequality decomposes into three structurally distinct constraints with different \u03b5 values: (1) skill-wage mismatch (\u03b5\u22480.40, coordination problem causing temporary wage gap), (2) platform monopoly gatekeeping (\u03b5\u22480.65, snare-like extraction through access control), (3) identity-locked exclusion (\u03b5\u22480.50, moderate snare with partial identity-lock mechanism). This story treats the aggregate constraint. Downstream stories address specific institutional mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

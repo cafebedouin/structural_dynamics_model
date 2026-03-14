@@ -1,0 +1,183 @@
+{
+  "header": {
+    "constraint_id": "ministerial_accountability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "minac"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Ministerial Accountability Constraint",
+    "topic_domain": "political_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "executive_power_holders",
+      "party_leadership"
+    ],
+    "victims": [
+      "public_welfare_outcomes",
+      "affected_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Affected Public",
+      "comment": "PERSPECTIVE 1: AFFECTED PUBLIC (SNARE) \u2014 Citizens subject to ministerial decisions have no mechanism to exit the jurisdiction or hold individual ministers accountable. Parliamentary procedures are opaque to direct participation. The constraint extracts compliance without reciprocal accountability, leaving the public bearing costs of failed policies with no direct recourse."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Opposition Legislators",
+      "comment": "PERSPECTIVE 2: OPPOSITION LEGISLATORS (TANGLED ROPE) \u2014 Constrained by minority status and procedural rules that limit questioning. But also benefit from accountability mechanisms (interrogations, question periods) that provide political capital and media attention. High cost to exercising accountability (limited time, government control of agenda) alongside real coordination function (public scrutiny, policy debate)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Parliamentary Institution",
+      "comment": "PERSPECTIVE 3: PARLIAMENTARY INSTITUTION (ROPE) \u2014 The institution itself coordinates between executive accountability and governmental stability. Parliament genuinely solves the coordination problem: how to scrutinize ministers while maintaining functional government. Benefits from the constraint through legitimacy and oversight function."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Government Ministers",
+      "comment": "PERSPECTIVE 4: GOVERNMENT MINISTERS (ROPE) \u2014 Ministers benefit from the constraint through procedural protections (confidence votes require majorities, individual ministers cannot be removed without government collapse). The accountability mechanism is formalized and predictable. Ministers experience the constraint as coordination: they submit to interrogation in exchange for protection from ad-hoc removal."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Party Leadership (Whip System)",
+      "comment": "PERSPECTIVE 5: PARTY LEADERSHIP (PITON) \u2014 The whip system and party discipline enforce accountability theater: MPs vote as directed regardless of constituent concerns. The accountability mechanism (question time, debates) is performative when underlying party discipline prevents real legislative consequences. Theater ratio reflects that parliamentary procedures produce appearance of accountability without corresponding decision-making power at individual minister level."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Structural analysis reveals ministerial accountability simultaneously coordinates three distinct functions: (1) legitimation of executive power through parliamentary consent, (2) periodic policy scrutiny, and (3) extraction of public compliance without effective recourse. All three mechanisms operate through the same institutional apparatus. The constraint is neither pure coordination nor pure extraction \u2014 it is hybrid, requiring active enforcement (party discipline) to maintain the mix."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "confidence_vote_threshold",
+      "question": "Do confidence vote requirements genuinely constrain executive power or merely ratify predetermined party decisions?",
+      "resolution_mechanism": "Historical analysis of confidence vote outcomes; correlation between parliamentary dissent and actual government survival; comparison of confidence vote vulnerability across majority/minority governments",
+      "impact": "If genuinely constraining: accountability is rope-level (real coordination). If ratification only: accountability is piton-level (performative). Shifts classification from tangled_rope toward piton.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether confidence votes provide real executive constraint"
+    },
+    {
+      "id": "question_period_policy_impact",
+      "question": "Do parliamentary question periods produce measurable changes in ministerial decisions or are they performative ritual?",
+      "resolution_mechanism": "Tracking of questions asked vs policy reversals; analysis of legislative record following high-profile interrogations; interview data on ministerial decision-making process",
+      "impact": "If questions cause policy change: accountability has coordination function (rope). If purely ritualistic: accountability is theater (piton). Determines whether tangled_rope classification holds or collapses toward piton.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether questioning produces genuine ministerial accountability"
+    },
+    {
+      "id": "party_discipline_binding_mechanism",
+      "question": "Is party discipline structural (threatens career/nomination/funding) or internalized (identity fusion with party ideology)?",
+      "resolution_mechanism": "Analysis of defection patterns and consequences; study of backbench revolts and MP exits; distinction between external career pressure and ideological commitment",
+      "impact": "If structural: extraction runs through institutional mechanism (snare classification for powerless agents holds). If internalized: victims are identity_locked rather than trapped (classification shifts in biographical horizon for opposition).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether party discipline is structural or ideological"
+    },
+    {
+      "id": "sunset_mechanism_credibility",
+      "question": "Do regular elections function as a genuine sunset clause for ministerial accountability constraint, or do they embed it further through normalize it?",
+      "resolution_mechanism": "Analysis of whether electoral cycles produce alternating power; tracking of policy reversals post-election; assessment of whether non-governing party uses accountability mechanisms differently than governing party",
+      "impact": "If genuine sunset: accountability could reclassify as scaffold (temporary coordination with real exit point). If embedding: elections ratify rather than constrain, maintaining tangled_rope or snare classifications.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether elections provide genuine constraint reset"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Ministerial accountability is the institutional constraint governing whether elected ministers remain responsible to legislative bodies and ultimately to the public. This constraint coordinates legitimate accountability functions (scrutiny of policy, constraint on arbitrary power) with extraction mechanisms (citizens bear policy costs without recourse; opposition parties have limited leverage). The constraint operates through parliamentary procedures (question periods, confidence votes, committee investigations), party discipline (whip system enforcing voting compliance), and electoral cycles. It is neither pure coordination (the accountability mechanisms are substantially performative) nor pure extraction (genuine oversight and policy scrutiny do occur). The theater ratio increasing from 0.52 to 0.68 reflects degradation: parliamentary procedures increasingly resemble ritual as party discipline hardens, reducing the correlation between questioning and policy change. The extractiveness rising from 0.42 to 0.58 reflects that without effective accountability mechanisms, ministers retain decision-making power while populations remain subject to their choices.",
+    "key_agents": [
+      "Affected Public: Primary victim (powerless/trapped) \u2014 subject to ministerial decisions with no direct exit or accountability mechanism",
+      "Opposition Legislators: Secondary victim (moderate/constrained) \u2014 possess formal accountability tools (questions, motions) but limited by minority status and procedural constraints",
+      "Parliamentary Institution: Primary beneficiary (institutional/arbitrage) \u2014 benefits from coordination function; legitimacy derived from accountability role",
+      "Government Ministers: Secondary beneficiary (institutional/arbitrage) \u2014 benefit from procedural protections; confident that accountability is formalized and bounded",
+      "Party Leadership: Institutional actor (powerful/mobile) \u2014 uses party discipline to enforce voting compliance, reducing substantive accountability",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees the hybrid structure: genuine coordination function + extraction mechanism maintained together"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. Ministers make consequential decisions affecting populations without requirement to reverse course based on public opposition or legislative dissent. The extractiveness is not absolute (some reversals occur; some scrutiny is effective) but substantial \u2014 the public cannot exit the jurisdiction and has limited mechanisms to compel accountability. The increasing trajectory reflects hardening party discipline and reduced effectiveness of opposition oversight. Suppression (0.62): Moderately high. Mechanisms exist to hold ministers accountable (parliamentary procedures, electoral accountability) but face significant barriers: party discipline overrides individual questioning; procedural limitations restrict opposition time; media coverage is often concentrated; electoral intervals are fixed (citizens cannot call immediate recall). Suppression is institutional, not purely coercive. Theater ratio (0.68): High. Parliamentary question periods, debates, and committee hearings are performed regularly but often with limited impact on ministerial decisions. Ministers prepare scripted responses; government controls parliamentary agenda; party discipline ensures voting compliance regardless of questioning effectiveness. The rituals maintain legitimacy (parliament can claim it is accountable; public can observe procedures) while actual decision-making power remains concentrated. Rising trajectory reflects increasing professionalization of political theater and hardening of party discipline.",
+    "perspectival_gap": "The affected public perceives a snare (trapped without recourse), while government ministers perceive a rope (accountable but protected). Opposition legislators perceive a tangled rope (genuine accountability function but constrained by minority status). The party leadership perceives a piton (accountability rituals maintained through discipline). The parliamentary institution itself perceives a rope (successfully coordinates accountability with governance). The analytical observer perceives a tangled rope (hybrid mechanism maintaining both coordination and extraction). The perspectival gap reveals that the same institutional apparatus produces genuinely different outcomes depending on structural position: for those benefiting from executive power, the constraint is manageable and coordinating; for those subject to executive decisions, it is inadequate and extractive. The gap is not bridgeable by better procedures alone \u2014 it reflects asymmetric stakes in the accountability outcome.",
+    "directionality_logic": "Directionality (d) is derived from structural position within the accountability mechanism. Citizens and opposition legislators are victims without exit options (d approaching 1.0 \u2192 high f(d) \u2192 high chi). They experience the full extraction flow: bear costs of policy without power to reverse it. Government ministers and party leadership are beneficiaries with substantial exit options (d approaching 0.0 \u2192 low f(d) \u2192 negative chi). They benefit from the constraint through protection and predictability. The parliamentary institution occupies a middle position (d \u2248 0.5) \u2014 it coordinates accountability (genuine function) while also enabling executive power (extraction mechanism). The directionality mapping explains why opposition sees snare while government sees rope: opposite positions in the extraction flow, identical institutional apparatus.",
+    "mandatrophy_analysis": "Ministerial accountability exemplifies the mandatrophy at moderate extractiveness levels. The constraint simultaneously appears as: (1) essential democratic coordination mechanism (rope: parliament needs to coordinate executive accountability), (2) extraction mechanism (snare: citizens pay costs without recourse), and (3) degraded ritual (piton: procedures maintained despite reduced effectiveness). No single classification captures the structural reality. The resolution is perspectival: the classification depends on where you stand in the institutional hierarchy and whether you benefit from or pay the cost of executive decision-making. The tangled rope classification at the analytical level reflects this irreducible hybridity \u2014 the constraint genuinely coordinates accountability while also extracting compliance and maintaining asymmetric power. The increasing theater ratio signals mandatrophy risk: if parliamentary procedures become pure ritual without corresponding policy impact, the constraint risks collapsing from tangled rope (mixed coordination and extraction) toward piton (theatrical maintenance of degraded function) or even snare (extraction without pretense of accountability)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "parliamentary_representation",
+      "executive_power_concentration",
+      "electoral_legitimacy"
+    ],
+    "dual_formulation_note": "Ministerial accountability is structurally distinct from legislative representation (which coordinates diverse constituent voices into collective decision) and executive authority (which concentrates decision-making). This story focuses on the accountability mechanism that bridges executive power and parliamentary oversight. Upstream constraints include electoral legitimacy (whether elections produce representative outcomes); downstream constraints include regulatory capture (whether executive becomes captured by regulated industries) and party discipline effects (whether whip systems undermine individual accountability)."
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,207 @@
+{
+  "header": {
+    "constraint_id": "pastoral_commons_enclosure",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pce"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Pastoral Commons Enclosure and Land Access Restriction",
+    "topic_domain": "economic/political/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "enclosing_landowners",
+      "commercial_agricultural_interests"
+    ],
+    "victims": [
+      "traditional_pastoralist_communities",
+      "subsistence_herders",
+      "commons_dependent_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Dispossessed Pastoralist",
+      "comment": "PERSPECTIVE 1: DISPOSSESSED PASTORALIST (SNARE) \u2014 Trapped by legal exclusion from ancestral grazing lands, economic dependency on pastoral production, and lack of alternative livelihood pathways. Suppression is structural: formal title law, enforcement by constabulary, lack of political voice. Bears maximum extraction \u2014 loss of subsistence, cultural displacement, economic impoverishment. No meaningful exit options."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Enclosing Landowner",
+      "comment": "PERSPECTIVE 2: ENCLOSING LANDOWNER (ROPE) \u2014 Experiences the constraint as coordination: formal title, legal exclusivity, and enforceable boundaries enable productive land use, capital investment, and agricultural coordination. Benefits from state enforcement of property rights. Arbitrage exit \u2014 can always switch land use or lease rights. Net beneficiary; extraction flows toward this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Agricultural State",
+      "comment": "PERSPECTIVE 3: AGRICULTURAL STATE (TANGLED ROPE) \u2014 State benefits from enclosure through tax revenue, increased agricultural output, and reduced collective-action enforcement costs (enclosed lands are easier to administer than commons). But state also bears coordination burden: must maintain enforcement infrastructure, manage pastoral grievances, prevent poaching and trespass. Mixed extraction and coordination \u2014 enforcement is both productive (stabilizes property) and coercive (excludes pastoralists)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Marginal Pastoral Household",
+      "comment": "PERSPECTIVE 4: MARGINAL PASTORAL HOUSEHOLD (SNARE) \u2014 Constrained, not trapped: has some mobility (can migrate to other regions, attempt sedentarization, seek wage labor), but costs are high (loss of pastoral identity, social exile, economic precarity in wage labor). Suppression is both structural (legal barrier, armed enforcement) and cultural (community identity fused with pastoral practice). Experiences extraction as primary; some agency but limited. Asymmetry is severe."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Imperial Land Survey System",
+      "comment": "PERSPECTIVE 5: IMPERIAL LAND SURVEY SYSTEM (PITON) \u2014 Colonial and post-colonial land formalization systems (cadastral surveying, title registration, property law codification) present enclosure as technical and neutral \u2014 'bringing order to the frontier.' The theater ratio is high: formal title appears as law, but the real function (transferring control from commons users to wealthy landowners and the state) is obscured behind neutral bureaucratic procedure. The survey system persists through institutional inertia; alternatives (commons formalization, usufruct registration) exist but are marginalized."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Pastoralist Coalition",
+      "comment": "PERSPECTIVE 6: PASTORALIST COALITION (TANGLED ROPE) \u2014 When pastoralist communities organize (through associations, unions, political advocacy), they can negotiate partial commons restoration, seasonal access rights, and grazing corridors. Organization reduces powerlessness but does not eliminate extraction \u2014 state and landowners still capture most surplus. Negotiated access is constrained and conditional, not restored. Coordinating collective action is difficult (pastoral populations dispersed, seasonal), creating persistent organizational asymmetry."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (False Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FALSE NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal/analytical perspective, enclosure might appear as an inevitable stage of land-use intensification: 'commons are overexploited, enclosed lands are more productive, therefore enclosure is necessary and natural.' This naturalizes a contingent political outcome. The engine's false summit detector will identify this as naturalization of an institutional choice, not a law of nature. Enclosure serves extractive interests; alternatives (commons formalization, negotiated access) are politically foreclosed, not structurally impossible."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "commons_productivity_baseline",
+      "question": "Do enclosed lands produce higher sustained yields than well-managed commons, or does the productivity advantage depend on measuring only immediate output while excluding ecological costs?",
+      "resolution_mechanism": "Long-term yield comparison between enclosed and commons management in comparable ecosystems; inclusion of ecological parameters (soil health, forage regeneration, climate resilience)",
+      "impact": "If enclosed yields are genuinely higher at all timescales: enclosure produces real coordination benefits (reclassifies toward Tangled Rope for the state). If productivity advantage disappears at 30+ year horizons: enclosure is pure wealth transfer, higher extraction classification justified.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether enclosed lands provide sustained productivity advantages over commons"
+    },
+    {
+      "id": "pastoralist_exit_cost_distribution",
+      "question": "Are dispossessed pastoralists truly trapped (no realistic exit options) or constrained (exit is possible at high cost)?",
+      "resolution_mechanism": "Historical tracking of post-enclosure household trajectories: what proportion achieve sedentarization, wage employment, or migration vs. poverty persistence? At what cost (asset loss, social status, child mortality)?",
+      "impact": "If trapped (< 10% achieve sustainable alternative): classification as Snare is confirmed, suppression \u2265 0.75 justified. If constrained (30-50% achieve alternatives): reclassify as Tangled Rope for victims, suppression \u2264 0.60, exit_options changes to 'constrained'.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether pastoralists are trapped or constrained by enclosure"
+    },
+    {
+      "id": "state_enforcement_intentionality",
+      "question": "Does the state enforce enclosure primarily to stabilize property markets and increase tax revenue (active extraction) or to prevent commons overgrazing and ecological degradation (genuine coordination)?",
+      "resolution_mechanism": "Analysis of colonial and post-colonial administrative records: enforcement priorities (protecting property boundaries vs. managing pastoral access and forage sustainability); investment patterns (survey infrastructure vs. pastoral development infrastructure)",
+      "impact": "If primary motivation is property enforcement: state classification as Tangled Rope confirmed, beneficiary status justified. If primary motivation is ecological management: reclassify toward Scaffold with sunset (ecological restoration alternatives), beneficiary status becomes secondary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Primary motivation for state enforcement of enclosure"
+    },
+    {
+      "id": "commons_governance_capacity",
+      "question": "Are commons truly vulnerable to tragedy-of-the-commons dynamics, or can they be managed sustainably with institutional design?",
+      "resolution_mechanism": "Comparative analysis of commons collapse vs. sustainability outcomes; identification of governance mechanisms (rotational grazing, seasonal closure, herd quotas) that prevent overexploitation",
+      "impact": "If commons are inherently unstable: enclosure framing as necessary coordination is vindicated, theater_ratio decreases. If commons can be sustainably governed: enclosure is revealed as choice to concentrate wealth and control, not ecological necessity, theater_ratio increases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether commons can be sustainably managed without enclosure"
+    },
+    {
+      "id": "identity_lock_in_pastoralism",
+      "question": "Is pastoral identity constituted through land access such that enclosure forces not just economic displacement but identity dissolution, or is pastoral identity separable from specific land?",
+      "resolution_mechanism": "Ethnographic and historical analysis: do dispossessed pastoralists maintain identity and cultural continuity in displacement, or does loss of pastoral practice/land result in identity erasure? What role does intergenerational transmission play?",
+      "impact": "If identity is inseparable from land access: exit_options should be 'identity_locked' not 'trapped', indicating cognitive/identity binding rather than purely material barriers. Classification remains Snare but with identity-lock mechanism. If identity persists in displacement: material trap dominates, 'trapped' exit_options confirmed.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether pastoral identity is constituted through land access"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Pastoral commons enclosure represents the large-scale transfer of grazing lands from collective use to private or state control, driven by agricultural intensification, colonial administrative systems, and capitalist land markets. Across global contexts \u2014 from the Scottish Highlands to East African pastoral zones to Inner Asian steppes \u2014 enclosure produces a consistent structural pattern: formal property rights concentration, suppression of traditional access, and extraction from subsistence communities toward commercial and state interests. The constraint exhibits all six classification types from different perspectives, making it a diagnostic exemplar of how the same institutional practice appears as natural law (to those naturalizing it), pure extraction (to those bearing its costs), necessary coordination (to beneficiaries), and degraded theater (to institutions maintaining it through inertia). The extractiveness has increased over a twenty-year measurement interval as enclosure boundaries have hardened, markets have integrated, and alternative pastoral livelihoods have contracted. Theater ratio remains moderate \u2014 enclosure is presented as law and economic progress rather than as political choice \u2014 but has not risen to high levels because the coercive mechanism is visible (armed enforcement, legal exclusion) and not fully obscured by bureaucratic procedure.",
+    "key_agents": [
+      "Traditional Pastoralist Communities: Primary victims (powerless/trapped) \u2014 bear full extraction through land loss, subsistence reduction, cultural displacement, economic impoverishment",
+      "Enclosing Landowners: Primary beneficiaries (institutional/arbitrage) \u2014 capture land rents, productivity surplus, and capital appreciation from property consolidation",
+      "Commercial Agricultural Interests: Secondary beneficiaries (powerful/mobile) \u2014 benefit from access to enclosed lands, reduced competition from commons users, price stability from enclosed supply chains",
+      "The State: Mixed beneficiary and enforcer (institutional/arbitrage) \u2014 gains tax revenue, administrative simplification, and political power through land control; bears coordination costs of enforcement",
+      "Pastoral Coalitions: Organized agents (organized/constrained) \u2014 when they form, can negotiate partial restoration of access; constrained by power asymmetry and organizational difficulty",
+      "Land Survey and Registry Systems: Institutional actor (institutional/arbitrage) \u2014 perpetuates enclosure through bureaucratic procedure and formalization; benefits from continued property registration activity",
+      "Analytical Observer: Universal perspective (analytical/analytical) \u2014 risks naturalizing contingent political outcome as inevitable economic law"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint concentrates control of productive land from dispersed commons users to centralized owners and the state. The surplus extraction is substantial \u2014 pastoral communities lose subsistence production, cultural identity, and intergenerational wealth accumulation. The value reflects that extraction is not total (some communities retain marginal grazing, negotiated seasonal access), but the primary flow is clearly from pastoralists to beneficiaries. The measurement trajectory (0.35 \u2192 0.68 over 20 years) reflects increasing enclosure penetration and market integration, tightening the extraction mechanism. Suppression (0.75): High. Barriers to pastoralist exit include legal title law, enforcement by state or private security, cultural displacement consequences, lack of alternative livelihood infrastructure, and economic dependency on pastoral production. Suppression is both structural (legal/material barriers) and cultural/psychological (identity fusion, community displacement). The high value reflects that exit is materially difficult and psychologically catastrophic. Theater ratio (0.35): Moderate-low. Enclosure is not heavily obscured \u2014 the legal and coercive mechanisms are visible, and the wealth transfer is apparent to those experiencing extraction. Theater reflects the presentation of enclosure as inevitable economic progress rather than political choice, and the bureaucratic formalization (survey, registration) that makes the transfer appear neutral and technical. The moderate value reflects that enclosure uses less performative cover than some constraints (not dressed as natural law or safety mechanism), but still employs institutional legitimacy and inevitability framing.",
+    "perspectival_gap": "Maximum gap exists between the trapped pastoralist (Snare classification) and the beneficiary landowner (Rope classification) \u2014 one sees pure extraction and immovable barrier, the other sees beneficial coordination and mobility. The analytical observer's false mountain reveals that what appears as natural economic law is actually a reversible institutional choice. The pastoral coalition's constrained-position Tangled Rope sits between pure extraction and beneficiary rope, capturing the partial agency that organization provides without reaching genuine coordination parity.",
+    "directionality_logic": "Power atoms are derived from structural position in the extraction mechanism. Pastoralists are powerless because they have been excluded from the political process and lack alternatives. Landowners are institutional because they control the means of production and have state backing. The state is institutional and arbitrage because it controls enforcement and can switch policy. Pastoral coalitions are organized because they represent collective agency, but constrained because they operate within state-defined parameters. The land survey system is institutional because it maintains bureaucratic authority over formalization. The analytical observer is analytical because they hold no structural position in the constraint but can see across all positions.",
+    "mandatrophy_analysis": "This constraint demonstrates classification coherence across perspectives when beneficiary/victim positions are clearly declared. The mandatrophy is not present \u2014 the six types are consistent with a single underlying structure. The Snare (victims' experience), Rope (beneficiaries' experience), Tangled Rope (state experience), and Piton (institutional degradation) all resolve consistently when directionality is computed from explicit beneficiary/victim declarations and exit options. The false mountain at the analytical level is a true positive: it reveals that naturalizing enclosure as inevitable economic law is a false summit created by omitting the political choice from the analysis. When all perspectives are weighted according to power and access to reality-testing (the analytical observer's privileged position), the constraint resolves as Snare with Piton-level theater \u2014 a high-extraction mechanism dressed in neutral institutional language."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "pastoral_livelihood_dependency",
+      "state_pastoral_policy_capture",
+      "commons_governance_institutional_capacity"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.48
+    }
+  ]
+}

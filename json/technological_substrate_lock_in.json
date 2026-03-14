@@ -1,0 +1,214 @@
+{
+  "header": {
+    "constraint_id": "technological_substrate_lock_in",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "techlock"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Technological Substrate Lock-In",
+    "topic_domain": "technology_policy/infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_platform_vendors",
+      "network_effect_winners"
+    ],
+    "victims": [
+      "alternative_technology_developers",
+      "ecosystem_diversity",
+      "future_innovation_pathways"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Locked-Out Developer",
+      "comment": "PERSPECTIVE 1: LOCKED-OUT DEVELOPER (SNARE) \u2014 Individual developer or startup attempting to build on alternative substrate (e.g., non-AWS cloud, non-Intel CPU, non-Chrome browser engine) faces insurmountable coordination costs. Trapped: cannot migrate users without ecosystem participation they cannot access; cannot build ecosystem without users. Maximum experienced extraction \u2014 no exit path."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Downstream Integrator",
+      "comment": "PERSPECTIVE 2: DOWNSTREAM INTEGRATOR (TANGLED ROPE) \u2014 System integrators, regional cloud providers, or enterprise IT teams experience genuine coordination benefit (standard interfaces, tool ecosystem, training availability) alongside asymmetric extraction (lock-in pricing, mandatory upgrades, data portability costs). Constrained by switching costs and ecosystem dependency, but some agency through negotiation and internal compatibility layers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Platform Vendor",
+      "comment": "PERSPECTIVE 3: INCUMBENT PLATFORM VENDOR (ROPE) \u2014 Experiences the substrate lock-in as pure coordination: standardizing on their architecture solves collective action problems (developers want one target, users want one ecosystem, enterprises want compatibility). Net beneficiary through arbitrage optionality \u2014 can leverage dominance to extract or to coordinate depending on market dynamics."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Interoperability Coalition",
+      "comment": "PERSPECTIVE 4: INTEROPERABILITY COALITION (SCAFFOLD) \u2014 Organized actors (open standards bodies, RISC-V consortium, WebAssembly advocates, open-source foundations) recognize substrate lock-in as a solvable coordination problem. Sunset clause: standardized APIs, container technologies, and vendor-neutral runtimes (WASM, containerization, Linux kernel abstraction) are creating exit pathways. Effective extraction is lower because organized agents have agency and see a functional exit strategy."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Apparatus",
+      "comment": "PERSPECTIVE 5: REGULATORY APPARATUS (PITON) \u2014 Antitrust authorities, data protection frameworks, and interoperability mandates (DMA, GDPR, right-to-repair) attempt to govern substrate lock-in but become largely performative. Theater ratio high: compliance measures create appearance of choice without addressing underlying switching costs. Regulators see their own interventions as degraded \u2014 mandatory APIs exist, but network effects render them functionally weak."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From civilizational/universal scope, network effects and switching costs appear as immutable laws of technology: larger networks have increasing returns to scale, heterogeneous systems are harder to coordinate than homogeneous ones, and compatibility requires standardization. This perspective risks naturalizing what is actually a contingent institutional arrangement (investor structures, intellectual property norms, data portability economics). The engine's false summit detector identifies this as naturalization of market structure, not technological inevitability."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "switching_cost_arbitrage_boundary",
+      "question": "At what switching cost threshold does network effect dominance become structurally irreversible vs. strategically contingent?",
+      "resolution_mechanism": "Empirical analysis of historical substrate transitions (Intel to ARM in mobile, gasoline to electric vehicles, SQL to NoSQL databases); measurement of switching cost ratios relative to lifetime user value; comparison of coordinated transitions (government mandate) vs. organic competition (superior alternative emerges)",
+      "impact": "If threshold low (< 20% of lifetime value): lock-in is contingent on competitive dynamics \u2014 strong alternative can break dominance. If threshold high (> 60%): lock-in is quasi-structural \u2014 incumbents have near-permanent advantage regardless of alternative quality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Switching cost threshold distinguishing contingent from structural lock-in"
+    },
+    {
+      "id": "open_standard_viability",
+      "question": "Can genuinely open standards (WASM, Linux, open-source ecosystems) reduce substrate lock-in sufficiently to create real exit pathways, or do they recapitulate lock-in at a different layer?",
+      "resolution_mechanism": "Longitudinal comparison of actual developer migration rates to open alternatives; analysis of whether open standards themselves become platforms with new lock-in (e.g., WASM locks to browser runtimes; Linux locks to particular distributions)",
+      "impact": "If viable: scaffold perspective is correct \u2014 open alternatives create genuine sunset. If not viable: lock-in is recursive \u2014 exits lead to new lock-in at different layers, and tangled rope properly captures the hybrid extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether open standards provide functional exit from platform lock-in"
+    },
+    {
+      "id": "regulatory_mandate_effectiveness",
+      "question": "Do interoperability mandates (mandatory APIs, data portability requirements, sideloading permissions) actually reduce switching costs and enable genuine exit, or do they create theater without structural change?",
+      "resolution_mechanism": "Post-DMA analysis of European tech market: measurement of actual user switching rates to regulated alternatives; analysis of whether mandatory APIs have identical switching costs as before (costs moved from technical to business layer); comparison of regulatory compliance (APIs exist) vs. functional interoperability (APIs are usable)",
+      "impact": "If effective: piton perspective is incorrect \u2014 regulation can break the theater. If theater: piton classification confirmed \u2014 regulation creates appearance of choice while underlying network effects persist.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of regulatory mandates in reducing substrate lock-in"
+    },
+    {
+      "id": "incompatibility_as_feature",
+      "question": "Is substrate incompatibility deliberately maintained as an extraction mechanism, or does it emerge from legitimate technical and coordination constraints?",
+      "resolution_mechanism": "Comparative analysis of vendor API design choices: measurement of incompatibility prevalence in competitive vs. monopolistic markets; analysis of whether incompatibility aligns with documented vendor incentives (vendor lock-in value) vs. technical necessity (genuine interoperability costs); examination of deliberate compatibility choices (e.g., AWS compatible APIs) when the vendor chose not to lock",
+      "impact": "If largely deliberate: extraction is voluntary, and alternatives are suppressed by active enforcement (snare/tangled rope). If largely technical: lock-in is genuine coordination cost (rope), and extraction is secondary effect of legitimate network effects.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether substrate incompatibility is deliberate extraction mechanism or technical necessity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.53
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.63
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Technological substrate lock-in describes the structural constraint that emerges when an incumbent technology platform achieves dominance such that network effects, switching costs, and ecosystem density make alternatives economically or operationally infeasible for developers, integrators, and end-users. The constraint exhibits characteristics of both genuine coordination (standards reduce fragmentation; established ecosystems provide tools, training, and compatibility) and asymmetric extraction (incumbents capture rents through pricing power, mandatory upgrades, and suppression of alternative pathways). The extractiveness value has risen from 0.35 to 0.58 over the measurement interval as vendors have actively leveraged platform dominance to extract value beyond coordination costs, and the theater ratio has risen from 0.42 to 0.68 as regulatory and open-source responses have become increasingly performative (APIs exist but switching costs persist, open standards are adopted but new layers of lock-in emerge). The constraint is generational in its scope \u2014 individual developers face biographical trap, but technological transitions (infrastructure platform changes) operate on 10-30 year timescales. This makes it particularly amenable to scaffold framing: sunset clauses exist (containerization, WASM, Linux abstraction layers, open standards) but their effectiveness depends on whether they genuinely reduce switching costs or merely displace lock-in to new technical layers.",
+    "key_agents": [
+      "Locked-Out Developer / Startup: Powerless/trapped (local scope) \u2014 individual trying to build alternative; faces coordination costs too large to overcome without existing market position",
+      "Alternative Technology Projects: Powerless/identity_locked (global scope) \u2014 RISC-V, open-source hardware, alternative clouds; motivated by ideology of openness but functionally trapped by network effects even when technology is superior",
+      "Downstream Integrators: Moderate/constrained (national to global) \u2014 enterprises, system integrators, regional cloud providers; benefit from ecosystem stability but bear costs of mandatory upgrades and locked-in data migration",
+      "Incumbent Platform Vendors: Institutional/arbitrage (global) \u2014 AWS, Intel, Apple, Google, Microsoft; primary beneficiaries experiencing constraint as coordination problem; have optionality to leverage or cooperate",
+      "Interoperability Coalition: Organized/constrained (global) \u2014 standards bodies, open-source foundations, Linux Foundation, RISC-V; see substrate lock-in as solvable through open standards; building alternative pathways with generational sunset logic",
+      "Regulatory Authorities: Institutional/arbitrage (global) \u2014 antitrust, DMA, FTC; attempting to govern through interoperability mandates but becoming increasingly performative",
+      "Ecosystem Diversity: Powerless/trapped (universal) \u2014 abstract future innovation space; constrained by current platform dominance preventing exploration of alternative technological pathways"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The constraint exhibits both genuine coordination function (ecosystem density provides value) and extraction (pricing power, upgrade requirements, data lock-in). The rising trajectory reflects deliberate vendor moves to monetize dominance beyond coordination costs. Suppression (0.65): High. Multiple barriers: switching costs (technical retraining, API migration, data migration); network effects (users/developers where the ecosystem is already established); ecosystem lock-in (tools, libraries, training for incumbent platform); switching risk (integration failures, performance penalties, support gaps). But suppression is not total \u2014 organized actors can build alternatives (Linux, open standards) and governments can mandate interoperability. Theater ratio (0.68): High. Regulatory mandates (APIs, data portability) and open-source alternatives create appearance of choice without addressing underlying economics of ecosystem dominance. Compliance theater increases as alternatives are adopted but prove insufficient to overcome network effects. Claimed type is tangled_rope because the constraint combines genuine coordination (solved technical heterogeneity) with asymmetric extraction (rents captured by incumbents) and active enforcement (vendor strategies to maintain dominance).",
+    "perspectival_gap": "This constraint demonstrates how the same technological arrangement produces fundamentally different experienced constraints depending on structural position. The vendor sees coordination (rope); the developer sees trap (snare); the integrator sees mixed (tangled_rope); the open-source movement sees solvable problem (scaffold); the regulator sees degraded intervention (piton). The analytical observer risks seeing immutable law (mountain) \u2014 'larger networks have increasing returns, therefore centralized platforms are inevitable' \u2014 but the structural data contradicts this: the constraint's properties (extractiveness rising, theater rising) reflect deliberate vendor moves to maintain dominance, not technological inevitability.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from their structural position relative to extraction flow. Incumbent vendors (beneficiaries with arbitrage exit) have low d (~0.10), experiencing weak effective extraction because they can leverage dominance or cooperate flexibly. Downstream integrators (both beneficiary and victim aspects, constrained exit) have moderate d (~0.55), experiencing mixed extraction through lock-in costs and dependency. Locked-out developers (victims with trapped exit) have high d (~0.95), bearing maximum extraction. The open-source coalition (organized agents with constrained exit but agency) have moderate d (~0.40) despite victim classification because their organizational power reduces experienced extraction. The regulatory apparatus (institutional beneficiary of compliance theater, arbitrage exit) has low d (~0.15) but high chi because the theater_ratio is high, reflecting that regulatory visibility is decoupled from functional effect.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that substrate lock-in is neither pure coordination (rope) nor pure extraction (snare), but a genuine hybrid (tangled_rope) where the coordination function and extraction mechanism are structurally coupled. The incumbent's platform coordination solves real problems AND enables extraction through network effects. The exit paths being built (open standards, containerization, regulatory mandates) address the coordination function without addressing the extraction mechanism (network effects persist even after technical interoperability is achieved). True resolution requires either (a) breaking the network effects through regulatory intervention powerful enough to overcome switching costs (difficult empirically), (b) building superior alternatives with stronger network effects (rare \u2014 most alternatives remain marginalized), or (c) accepting the tangled rope as a permanent feature of technological development with periodic substrate transitions (generational timescale). The piton perspective (regulatory theater) and scaffold perspective (open standards sunset) both represent attempts at mandatrophy resolution, but their effectiveness remains empirically contested in the omega variables."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_monopoly_power",
+      "innovation_pathway_suppression",
+      "vendor_lock_in_pricing"
+    ],
+    "dual_formulation_note": "Technological substrate lock-in is upstream of platform monopoly effects and innovation suppression. The substrate lock-in constraint creates the structural conditions enabling monopoly pricing and pathway closure. Downstream constraints inherit the suppression and network effect properties of their upstream technological substrate."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "labor_market_wage_suppression",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lwsup"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Labor Market Wage Suppression via Coordination and Asymmetric Extraction",
+    "topic_domain": "economic/labor",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "employers_concentrated_market_power",
+      "capital_holders"
+    ],
+    "victims": [
+      "low_skilled_workers",
+      "workers_without_mobility",
+      "workers_geographically_constrained"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Immobilized Low-Wage Worker",
+      "comment": "PERSPECTIVE 1: IMMOBILIZED LOW-WAGE WORKER (SNARE) \u2014 Workers in economically depressed regions or with family obligations cannot exit the labor market; face suppressed wages with no realistic alternative. Geographic constraint + economic dependency create structural entrapment. Experiences maximum extraction with no coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mobile But Cost-Burdened Worker",
+      "comment": "PERSPECTIVE 2: MOBILE BUT COST-BURDENED WORKER (TANGLED ROPE) \u2014 Can relocate or acquire skills, but faces high costs (housing, education, relocation). Experiences both coordination (labor matching, skill development infrastructure) and extraction (suppressed starting wages, credential requirements). Exit possible at significant personal cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Monopsonistic Employer",
+      "comment": "PERSPECTIVE 3: MONOPSONISTIC EMPLOYER (ROPE) \u2014 Large firms or concentrated industries experience wage suppression as a coordination mechanism: stabilized labor costs enable predictable capital allocation and workforce planning. Benefits from wage floor suppression while maintaining the fiction that 'market forces' determine wages. High mobility in capital markets \u2014 can relocate production, offshore, or arbitrage labor across regions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Union Movement",
+      "comment": "PERSPECTIVE 4: UNION MOVEMENT (TANGLED ROPE) \u2014 Organized labor benefits from the coordination infrastructure (collective bargaining frameworks, labor standards enforcement) but is itself suppressed by legal and economic barriers (right-to-work laws, capital mobility, gig economy fragmentation). Seeks to exit suppression through collective action but faces escalating costs as employers respond with outsourcing and automation."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Progressive Policy Coalition",
+      "comment": "PERSPECTIVE 5: PROGRESSIVE POLICY COALITION (SCAFFOLD) \u2014 Minimum wage policies, labor standards enforcement, and sectoral bargaining represent temporary support structures with implicit sunset clauses. Effective only if underlying political will persists; vulnerable to capture and degradation. Sees wage suppression as a solvable policy problem with specific temporal horizons (legislation requiring periodic renewal)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Neoclassical Economics Consensus",
+      "comment": "PERSPECTIVE 6: NEOCLASSICAL ECONOMICS CONSENSUS (PITON) \u2014 Competitive labor market theory predicts wages equal marginal product of labor; wage suppression is theorized as either temporary or evidence of low worker productivity. The theory persists despite persistent counterevidence (monopsony power, information asymmetries, structural immobility). Theater ratio high because the theory is frequently invoked to justify suppression while failing to predict or prevent it. Institutional inertia maintains the framework despite degraded explanatory power."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilization-scale analytical perspective, some wage suppression reflects inherent limits on worker bargaining power in any large-scale labor market: information asymmetries, employer collective action, and capital mobility create structural floors on worker compensation. However, the magnitude of suppression observed in data contradicts the mountain classification \u2014 the engine will flag this as a false summit, revealing that 'inherent to market dynamics' naturalizes what is actually a contingent institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "monopsony_vs_competition_threshold",
+      "question": "What market concentration threshold transitions labor markets from competitive to monopsonistic wage suppression?",
+      "resolution_mechanism": "Labor market concentration index (HHI) correlation with wage growth; cross-industry analysis of wage suppression vs. employer concentration ratios",
+      "impact": "If threshold crossed, classification shifts from Rope (market coordination) to Snare (pure extraction) for affected workers. Current evidence suggests many regional labor markets exceed monopsony thresholds, but there is no consensus threshold definition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Market concentration threshold for monopsonistic wage suppression"
+    },
+    {
+      "id": "geographic_mobility_barriers_quantification",
+      "question": "What proportion of wage suppression is attributable to worker geographic immobility vs. employer monopsony power?",
+      "resolution_mechanism": "Cross-regional wage differential analysis; worker migration elasticity studies; counterfactual modeling of wage outcomes under increased mobility",
+      "impact": "If mobility barriers dominant: worker classification shifts toward trapped. If employer power dominant: classification shifts toward snare independent of mobility. Current evidence suggests both mechanisms operate with unclear relative magnitudes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative contribution of mobility barriers vs. monopsony power"
+    },
+    {
+      "id": "alternative_wage_coordination_sufficiency",
+      "question": "Do sectoral bargaining, profit-sharing, and cooperative ownership models provide genuine alternatives to suppression, or do they merely redistribute suppression across different worker classes?",
+      "resolution_mechanism": "Longitudinal wage growth comparison: countries/sectors with sectoral bargaining vs. those with decentralized labor markets; analysis of wage distribution within alternative models",
+      "impact": "If genuine alternatives exist: scaffold perspective confirmed with real sunset pathway. If suppression persists: scaffold may be aspirational rather than structural, and alternative models shift suppression rather than eliminate it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative wage coordination models eliminate or redistribute suppression"
+    },
+    {
+      "id": "capital_mobility_constraint_looseness",
+      "question": "What is the true elasticity of capital relocating in response to wage demands \u2014 how mobile is capital actually?",
+      "resolution_mechanism": "Empirical study of production relocation in response to labor cost changes; sector-by-sector analysis of offshoring propensity; automation investment elasticity",
+      "impact": "If capital truly mobile (low relocation cost): employer arbitrage option is structural and suppression is inescapable. If capital constrained (high relocation cost): suppression mechanisms become negotiable through political action.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Capital mobility elasticity in response to wage demands"
+    },
+    {
+      "id": "identity_locked_labor_commitment",
+      "question": "To what degree is suppression maintained by workers' internalized commitment to labor market participation and identity fusion with employment, vs. by structural barriers to exit?",
+      "resolution_mechanism": "Post-pandemic labor market dynamics analysis; worker preference surveys regarding work-life tradeoffs; cross-cultural analysis of labor participation identity",
+      "impact": "If identity-locked: classification includes identity_locked exit options for some worker perspectives. If structural barriers dominant: classification remains trapped/constrained. Current evidence suggests both mechanisms operate in different demographic groups.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Identity-fusion vs. structural-barrier mechanisms in labor market participation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.28
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Labor market wage suppression is a structural constraint operating through multiple simultaneous mechanisms: monopsony employer power in concentrated industries, geographic immobility of workers, information asymmetries about wage norms and job opportunities, and asymmetric capital mobility that allows employers to credibly threaten offshoring or automation. The constraint exhibits genuine coordination functions (job matching, skill development, capital allocation) alongside asymmetric extraction (systematically suppressed wages below marginal product of labor, concentrated wealth capture). The extractiveness has increased over the measurement interval (0.35 \u2192 0.58) as employer concentration has increased and union density has declined. Theater ratio remains low (0.38) because wage suppression operates through structural economic mechanisms rather than performative rituals \u2014 the suppression is real rather than theatrical. The constraint classifies as Tangled Rope at the analytical level: it possesses both coordination function (matching workers to jobs, incentivizing skill development) and asymmetric extraction (wealth flows disproportionately to capital holders). From different structural positions, the same constraint appears as pure extraction (Snare) to immobilized workers, mixed coordination-extraction (Tangled Rope) to mobile but cost-burdened workers, pure coordination (Rope) to employers, organized resistance (Tangled Rope) to unions, solvable policy problem (Scaffold) to progressive coalitions, and degraded economic theory (Piton) to the neoclassical consensus.",
+    "key_agents": [
+      "Low-skilled workers without geographic mobility: Primary victim (powerless/trapped) \u2014 face suppressed wages with no realistic exit options",
+      "Mobile but cost-burdened workers: Secondary victim (moderate/constrained) \u2014 can exit but face high costs (relocation, education, credential acquisition)",
+      "Monopsonistic employers and concentrated industries: Primary beneficiary (institutional/arbitrage) \u2014 capture suppression benefits while maintaining capital mobility",
+      "Union movement: Secondary actor (organized/constrained) \u2014 fights suppression through collective action but faces structural barriers",
+      "Progressive policy coalition: Organized agent (organized/constrained) \u2014 implements temporary scaffolding (minimum wage, labor standards)",
+      "Neoclassical economics consensus: Institutional frame (institutional/arbitrage) \u2014 naturalizes suppression as market equilibrium",
+      "Analytical observer: Civilizational view (analytical/analytical) \u2014 risks treating contingent institutional arrangements as natural laws"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Wage suppression has quantifiable economic impact: studies show workers in concentrated labor markets earn 5-15% below competitive rates. The measurement interval shows growth from 0.35 to 0.58, reflecting increasing employer concentration and declining union density. Not maximal (0.80+) because some coordination function is genuine \u2014 labor matching and skill development infrastructure do create value. Suppression (0.72): High. Multiple mechanisms reduce worker exit options: geographic immobility (relocation costs, family obligations, housing markets), credential requirements (education, licensing), information asymmetries about wage norms and alternatives, weak unemployment insurance, and employer collective action (wage suppression agreements, non-compete clauses). Capital mobility creates a credible threat of offshoring or automation, further suppressing outside options. Theater ratio (0.38): Moderate-low. Wage suppression operates through structural economic mechanisms rather than performative ones. Markets are real, employer power is real, worker constraints are real. This is not theatrical suppression \u2014 workers are not deceived about extraction; they experience it directly. Theater appears in the theoretical justifications (neoclassical consensus) rather than in the suppression mechanism itself.",
+    "directionality_logic": "Directionality values (d) differ substantially across perspectives because agents have different structural relationships to the extraction. Trapped workers experience d \u2248 0.95 (full targets), generating high f(d) \u2248 1.42. Cost-burdened mobile workers experience d \u2248 0.65-0.75 (significant extraction but with some agency), generating f(d) \u2248 1.00. Employers experience d \u2248 0.15-0.20 (net beneficiaries), generating negative f(d) \u2248 -0.01 to 0.02. Unions experience d \u2248 0.70 (targets of employer action but organized), generating f(d) \u2248 1.10. Policy coalitions experience d \u2248 0.50 (symmetric pressure \u2014 fighting suppression but facing political limits), generating f(d) \u2248 0.65. The Tangled Rope classification holds because the constraint possesses both genuine coordination (d_beneficiary approaches 0, indicating coordination benefit) and asymmetric extraction (d_victim approaches 1.0, indicating victimization). The scope modifier \u03c3(S) = 1.0 (national scope) reflects that suppression is primarily a national labor market phenomenon, though global supply chains enable international arbitrage.",
+    "perspectival_gap": "The constraint demonstrates maximal perspectival divergence. Immobilized workers classify it as Snare (pure extraction, no coordination benefit). Employers classify it as Rope (coordination of labor supply). Unions classify it as Tangled Rope (genuine labor coordination alongside extraction of union power). Progressive policy sees Scaffold (temporary support with political sunset). Neoclassical economists see Piton (degraded theory maintained by institutional inertia). The analytical observer risks seeing Mountain (inherent limit on worker bargaining in any large market). These gaps reflect genuine structural differences: the constraint creates different experiences and exit options for different agents. The largest gap is between the employer's Rope (wage suppression enables predictable labor cost management) and the trapped worker's Snare (no exit, pure extraction). The medium gap is between the policy coalition's Scaffold (temporary, solvable) and the analytical observer's Mountain (inherent to market dynamics).",
+    "mandatrophy_analysis": "RESOLVED via perspectival indexing. The mandatrophy is not 'is wage suppression Rope or Snare?' but 'from which structural position and with what exit options?' The constraint genuinely coordinates labor supply and matches workers to jobs (Rope functions). It simultaneously extracts wealth asymmetrically from low-bargaining-power workers (Snare mechanisms). Both are true simultaneously. The Tangled Rope classification at the analytical level captures this: the constraint requires active enforcement (employers must enforce no-poaching agreements, suppress union organizing, maintain geographic fragmentation) and possesses both beneficiaries (employers, capital holders) and victims (suppressed workers). The false summit occurs in the Piton perspective (neoclassical theory) and the Mountain perspective (natural law). The engine will flag these as misclassifications, revealing that 'this is how competitive markets work' and 'worker bargaining power is inherent to markets' are naturalizations of contingent institutional arrangements (employer concentration, capital mobility credibility, worker immobility, union decline). The true classification holds across structural positions: Tangled Rope at the analytical level with substantial perspectival variation."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "gig_economy_labor_classification",
+      "union_power_degradation",
+      "monopsony_employer_concentration"
+    ],
+    "dual_formulation_note": "Wage suppression is upstream of specific sectoral constraints (gig economy classification, union power decline) and represents a general labor market mechanism. Decomposition is possible: monopsony power in specific industries (e.g., nursing, meat processing, retail) exhibits higher extractiveness (0.70+); coordinated labor markets (e.g., Germanic sectoral bargaining) exhibit lower extractiveness (0.15-0.25). This story represents the aggregate national pattern."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.7
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "header": {
+    "constraint_id": "oncology_resource_allocation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "onc_res"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Oncology Resource Allocation Constraint",
+    "topic_domain": "healthcare/oncology/resource_distribution",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "wealthy_patients",
+      "high_revenue_cancer_types",
+      "pharmaceutical_manufacturers",
+      "institutional_hospitals"
+    ],
+    "victims": [
+      "low_income_patients",
+      "rare_cancer_populations",
+      "rural_access_communities",
+      "healthcare_equity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Uninsured Cancer Patient",
+      "comment": "PERSPECTIVE 1: UNINSURED CANCER PATIENT (SNARE) \u2014 Trapped by economic barriers to treatment access. Cannot exit the constraint through insurance pathways, treatment delays, or geographic mobility. Experiences maximum extraction: resource allocation systematically excludes them from treatment options. No coordination benefit perceived \u2014 only exclusion and delayed care."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Rural Cancer Patient",
+      "comment": "PERSPECTIVE 2: RURAL CANCER PATIENT (SNARE) \u2014 Trapped by geographic isolation and absence of specialized oncology infrastructure in rural regions. Cannot access treatment facilities without relocation or extended travel. Bears full cost of resource allocation bias toward urban centers. No alternative pathways; suppression is structural and total."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Insured Patient with Rare Cancer",
+      "comment": "PERSPECTIVE 3: INSURED PATIENT WITH RARE CANCER (TANGLED ROPE) \u2014 Partially benefits from insurance and healthcare access but faces constraints: drug development and clinical trial prioritization favor high-incidence cancers with larger markets. Coordination benefit exists (insurance system, basic infrastructure) but is substantially extracted away through underinvestment in rare cancer research and treatment protocols."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Pharmaceutical Manufacturers",
+      "comment": "PERSPECTIVE 4: PHARMACEUTICAL MANUFACTURERS (ROPE) \u2014 Experience the constraint as pure coordination: oncology resource allocation ensures market incentives align with drug development priorities. They benefit from the system that channels R&D toward high-revenue cancer types. Can arbitrage globally \u2014 shift production, pricing, and market access based on profitability. Net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Major Academic Medical Centers",
+      "comment": "PERSPECTIVE 5: MAJOR ACADEMIC MEDICAL CENTERS (ROPE) \u2014 Urban research hospitals benefit from concentrated resources, patient volume for clinical trials, and funding concentration. Can arbitrage through patient selection (higher-SES populations, common cancers). Coordination is genuine: the system allocates resources to centers with capacity to utilize them. Network effects amplify this benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Community Hospitals and Rural Providers",
+      "comment": "PERSPECTIVE 6: COMMUNITY HOSPITALS AND RURAL PROVIDERS (TANGLED ROPE) \u2014 Face dual pressure: resource allocation system extracts through concentration of funding in academic centers, yet they also coordinate patients toward specialized care. Constrained by referral requirements and limited capital for oncology infrastructure. Some coordination benefit (patient referral networks) alongside substantial extraction (resource deprivation)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Insurance and CMS Reimbursement Systems",
+      "comment": "PERSPECTIVE 7: INSURANCE AND CMS REIMBURSEMENT SYSTEMS (PITON) \u2014 The resource allocation mechanism is substantially performative: coding systems, prior authorization theater, and 'coverage with evidence development' create appearance of equity control while actual allocation follows profit/volume incentives. Theater ratio elevated (0.55) as reimbursement policies perform equity while preserving market-driven resource concentration. The system is maintained through regulatory inertia despite recognized inequities."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Patient Advocacy and Equity Organizations",
+      "comment": "PERSPECTIVE 8: PATIENT ADVOCACY AND EQUITY ORGANIZATIONS (TANGLED ROPE) \u2014 Organized agents perceive genuine coordination function (resource standards, treatment protocols, patient support networks) but also identify extraction mechanisms: resource gaps by race, insurance status, and geography. Constrained by institutional dependencies but increasingly mobilizing collective action to redistribute resources and create parallel support pathways."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Value-Based Care and Alternative Payment Models",
+      "comment": "PERSPECTIVE 9: VALUE-BASED CARE INITIATIVES (SCAFFOLD) \u2014 Emerging alternative models (bundled payments, capitation, value-based care networks) represent sunset mechanisms for fee-for-service extraction. Organized agents (health systems, payers) see restructuring of incentives as achievable within 10-15 years. Scaffolding has limited enforcement now but growing structural support. Theater is declining as accountability metrics replace prior authorization ritual."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Scarcity View)",
+      "comment": "PERSPECTIVE 10: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational scope, cancer treatment is inherently scarce: expertise, specialized facilities, and high-cost drugs are necessarily limited. Some resource inequality is inevitable \u2014 an immutable feature of medicine under scarcity. However, the base properties contradict mountain classification. The constraint is contingent on market structure, insurance design, and policy choices, not on scarcity itself. False summit: naturalizes institutional choices as laws of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "equity_metric_ambiguity",
+      "question": "What baseline defines equitable oncology resource allocation \u2014 equal access to all treatments, equal outcomes across groups, or proportional resource allocation by disease prevalence?",
+      "resolution_mechanism": "International comparison of healthcare systems with different equity baselines; analysis of how metrics change when baseline shifts from access to outcomes to prevalence-adjusted distribution",
+      "impact": "Different baselines yield different extraction measurements. Equal access baseline may show lower extraction than outcomes baseline. Constraint type may shift from Snare to Tangled Rope depending on which equity model is adopted.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Ambiguity in defining baseline for equitable resource allocation"
+    },
+    {
+      "id": "profit_driven_extraction_structural",
+      "question": "Is pharmaceutical market concentration (high-revenue cancers receive 80% of R&D) structural extraction or efficient market response to risk and prevalence?",
+      "resolution_mechanism": "Comparative analysis of public-sector R&D allocation vs market allocation; measurement of therapeutic gaps between market priority and disease burden; evaluation of counter-factual: how would allocation differ under non-profit research paradigm",
+      "impact": "If structural extraction: suppression metric is justified at 0.68; constraint is genuinely Snare for powerless agents. If efficient market response: suppression and extraction scores should be lower; constraint reclassifies toward Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether profit-driven R&D concentration is extraction or efficiency"
+    },
+    {
+      "id": "coordination_benefit_distribution",
+      "question": "Do powerless agents perceive any genuine coordination benefit from centralized oncology resource systems, or is the entire system experienced as pure extraction?",
+      "resolution_mechanism": "Qualitative research with patients in low-resource settings; measurement of treatment access trajectories pre/post insurance enrollment; analysis of patient outcomes from decentralized vs centralized oncology networks",
+      "impact": "If powerless agents perceive coordination benefit: constraint is Tangled Rope from all perspectives, suppression may be lower. If purely extraction: strengthens Snare classification; supports suppression \u2265 0.68.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether marginalized populations experience coordination benefits from centralized systems"
+    },
+    {
+      "id": "alternative_supply_feasibility",
+      "question": "Can decentralized or community-based oncology capacity genuinely replace centralized high-cost infrastructure, or do high-incidence cancers inherently require specialized centers?",
+      "resolution_mechanism": "Analysis of treatment outcomes by care setting; measurement of complication and mortality rates for distributed vs concentrated care; evaluation of training capacity for community oncologists",
+      "impact": "If decentralized care is feasible: scaffold perspective is strengthened; exit options for trapped agents shift from 'trapped' to 'constrained' or 'mobile'. If impossible: mountain perspective gains credibility; extraction concentration becomes justified by necessity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of distributed oncology care as alternative to centralization"
+    },
+    {
+      "id": "insurance_reform_causal_pathway",
+      "question": "Would shifting from fee-for-service to capitated payment models actually reduce resource extraction to low-income populations, or would extraction simply take different forms (rationing, access restrictions)?",
+      "resolution_mechanism": "Longitudinal analysis of health systems that have transitioned payment models; measurement of resource allocation equity before/after transitions; analysis of capitated systems showing persistent equity gaps",
+      "impact": "If payment model change is sufficient: scaffold sunset logic is viable; constraint will naturally degrade as incentives align. If extraction persists: current institutional structure may not be the binding constraint; extraction rooted in deeper structural factors.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether payment model reform addresses root extraction mechanisms"
+    },
+    {
+      "id": "suppression_internalization_mechanism",
+      "question": "To what extent is the suppression (0.68) structural (external barriers: insurance, geography, facility access) vs internalized (patients believe treatment is unavailable, don't seek care, accept delays as inevitable)?",
+      "resolution_mechanism": "Pre/post intervention studies measuring care-seeking behavior when barriers are removed; qualitative analysis of internalized vs structural barriers in different populations; measurement of suppression persistence after structural interventions",
+      "impact": "If predominantly structural: barriers can be removed; exit options shift from 'trapped' toward 'constrained' or 'mobile'. If predominantly internalized: suppression is deeper; constraint persists even when formal barriers are removed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of structural vs internalized suppression mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "commentary": {
+    "narrative_context": "Oncology resource allocation is a constraint that operationalizes the tension between market-driven healthcare (profit maximization) and equity imperatives (equal access). The constraint works through multiple interlocking mechanisms: pharmaceutical companies prioritize high-incidence, high-revenue cancers; insurance systems reimburse based on market prices rather than need; specialized cancer centers concentrate in urban, high-SES regions; clinical trials recruit from accessible populations; and patient support infrastructure follows investment capital. The extractiveness has increased over the measurement interval (0.35 \u2192 0.58) as concentration in oncology care has grown and drug prices have risen despite efficacy plateaus. Theater ratio (0.55) reflects that insurance prior authorization, value-based care metrics, and equity initiatives are increasingly performative \u2014 policies announce equity while actual allocation remains market-driven. This constraint exhibits all major types from different structural perspectives: pure extraction (Snare) for uninsured and rural patients, mixed coordination-extraction (Tangled Rope) for insured patients with rare cancers and for community providers, pure coordination (Rope) for pharmaceutical manufacturers and major academic centers, degraded institutional ritual (Piton) for reimbursement systems, and emerging alternatives (Scaffold) in value-based care initiatives. The analytical observer risks naturalizing market-driven allocation as an immutable scarcity law, when it is actually a contingent policy choice.",
+    "key_agents": [
+      "Powerless/Trapped Patients: Uninsured, rural, and low-income patients facing maximum resource barriers. Primary victims bearing full extraction cost.",
+      "Moderate/Constrained Patients: Insured patients with rare cancers or geographic constraints. Experience mixed coordination and extraction.",
+      "Pharmaceutical Manufacturers: Institutional/Arbitrage beneficiaries. Experience constraint as coordination that aligns incentives with R&D priorities.",
+      "Major Academic Medical Centers: Institutional/Arbitrage beneficiaries. Urban research hospitals concentrating resources and patient volume.",
+      "Community Hospitals: Powerful/Constrained actors experiencing extraction through resource concentration while coordinating referrals.",
+      "Patient Advocacy Organizations: Organized/Constrained agents mobilizing collective action to redistribute resources and challenge extraction mechanisms.",
+      "Insurance and CMS Systems: Institutional/Arbitrage actors maintaining performative equity controls while preserving market-driven allocation.",
+      "Value-Based Care Initiatives: Organized/Constrained scaffold agents building alternative payment and allocation models with sunset logic.",
+      "Analytical Observer: Risks naturalizing market structure as scarcity law rather than policy choice."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Elevated and increasing. The constraint extracts through multiple mechanisms: (1) pharmaceutical price concentration in high-revenue cancer types (80% of oncology R&D for ~20% of cancers by prevalence), (2) insurance reimbursement following market prices rather than need or efficacy, (3) geographic concentration of specialized care, (4) clinical trial recruitment from accessible populations, (5) systemic delays in access for uninsured patients. The growth from 0.35 to 0.58 over 14 years reflects consolidation in oncology care (fewer, larger centers), increasing drug prices, and widening outcome disparities by SES and insurance status. Suppression (0.68): High and structural. Barriers include insurance eligibility, out-of-pocket costs, geographic distance to specialists, information asymmetries, and clinical trial eligibility criteria. Suppression operates at multiple levels: economic (cost barriers), informational (knowledge gaps), structural (facility availability), and regulatory (insurance prior authorization). Theater ratio (0.55): Moderate and increasing. Prior authorization processes, value-based care metrics, health equity initiatives, and diversity programs in oncology create performative appearance of equity while actual allocation remains driven by profit incentives and market concentration. The theater increased from 0.42 to 0.55 as regulatory and social pressure generated more policy theater without proportional structural change.",
+    "directionality_logic": "Directionality (d) is computed from each agent's structural position relative to the extraction flow. Uninsured/rural patients: d \u2248 0.95 (full victims, trapped exit) \u2192 high f(d) \u2248 1.42 \u2192 maximum experienced extraction. Insured rare-cancer patients: d \u2248 0.60 (partial victims, constrained exit) \u2192 moderate f(d) \u2248 0.90 \u2192 moderate extraction. Pharmaceutical manufacturers: d \u2248 0.05 (beneficiaries, arbitrage exit) \u2192 f(d) \u2248 -0.12 \u2192 negative extraction (subsidized). Major academic centers: d \u2248 0.10 (beneficiaries, arbitrage exit) \u2192 f(d) \u2248 -0.05 \u2192 minimal extraction. Community providers: d \u2248 0.65 (partial victims, constrained exit) \u2192 f(d) \u2248 1.00 \u2192 high extraction. Patient advocacy: d \u2248 0.55 (organized victims) \u2192 f(d) \u2248 0.75 \u2192 moderate extraction. Insurance systems: d \u2248 0.15 (beneficiaries, arbitrage exit) \u2192 f(d) \u2248 -0.01 \u2192 minimal extraction. Scope modifier \u03c3(national) = 1.0 applies uniformly.",
+    "perspectival_gap": "The constraint produces maximal perspectival divergence. Powerless trapped agents (Snare) experience the constraint as pure coercion with no coordination benefit \u2014 delayed or denied treatment, no exit options. Beneficiary institutions (Rope) experience it as coordination that works: resources flow to them, incentives align, networks function. Moderate constrained agents (Tangled Rope) experience both: the system provides some benefit (insurance coverage, clinical trials) while systematically extracting away resources. Community providers experience extraction through concentration while maintaining coordination function (referral networks). Patient advocacy (organized Tangled Rope) sees the same structural extraction as powerless agents but with agency and collective power to challenge it. Reimbursement systems (Piton) see their own processes as degraded \u2014 prior authorization theater without matching outcomes. Value-based care (Scaffold) sees a structural pathway out: payment model reform with a 10-15 year sunset. The analytical observer (Mountain) risks naturalizing all of this as inevitable scarcity, misidentifying a policy structure as a law of nature.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy through explicit institutional causation. The constraint is NOT 'cancer treatment is inherently scarce' (which would be mountain). It is 'pharmaceutical and healthcare institutional structures create artificial scarcity and concentrate resources.' These are categorically different. The mountain perspective commits a category error: it naturalizes institutional choices (profit-driven R&D, market-based reimbursement, geographic consolidation) as inevitable limits of medical science. The actual structural data reveals that oncology resource allocation is a contingent policy choice: countries with different healthcare systems (NHS, universal single-payer, multi-payer with equity mandates) show different resource distributions, different extraction patterns, and different outcome equity. The constraint is Tangled Rope at the institutional level because it simultaneously (a) coordinates care delivery (genuine clinical networks, referral systems, treatment protocols) AND (b) extracts asymmetrically through market mechanisms. The Snare classification from powerless perspectives is accurate \u2014 they experience pure extraction with no perceived benefit. The Rope classification from beneficiary perspectives is accurate \u2014 they experience coordination with net benefit. The scaffold classification is real \u2014 value-based care and alternative payment models represent genuine structural alternatives that would shift the constraint's character if adopted. The mandatrophy is resolved by refusing the false mountain: this is a policy-embedded constraint, not a law of nature, and its classification depends on institutional structure, not on physical or logical limits."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "pharmaceutical_pricing_constraint",
+      "clinical_trial_recruitment_bias",
+      "healthcare_insurance_design",
+      "cancer_research_prioritization"
+    ],
+    "dual_formulation_note": "Oncology resource allocation is upstream of specific treatment access constraints and downstream of healthcare financing structure. The extractiveness of resource allocation (0.58) depends on the broader insurance design and pharmaceutical pricing mechanisms that feed into it. Decomposition into separate constraint stories is appropriate for (a) pharmaceutical pricing as a distinct extractive mechanism with higher \u03b5, (b) clinical trial recruitment bias as a distinct epistemic constraint, and (c) insurance design as the policy substrate enabling allocation extraction."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    }
+  ]
+}

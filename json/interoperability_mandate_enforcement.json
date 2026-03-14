@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "interoperability_mandate_enforcement",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "interop"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Interoperability Mandate Enforcement in Digital Platforms",
+    "topic_domain": "technology_policy/antitrust",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "competing_platforms",
+      "application_developers",
+      "end_users"
+    ],
+    "victims": [
+      "dominant_platform_operator",
+      "proprietary_ecosystem_control"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Locked-In User",
+      "comment": "PERSPECTIVE 1: LOCKED-IN USER (SNARE) \u2014 User cannot exit dominant platform ecosystem without losing network effects and social capital. Forced to accept interoperability compliance standards that are still controlled by the dominant operator through implementation details, data formats, and timing. No real choice; extraction via forced participation in mediated ecosystem."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Competing Platform Provider",
+      "comment": "PERSPECTIVE 2: COMPETING PLATFORM PROVIDER (SNARE) \u2014 Must implement interoperability standards set by dominant operator or face regulatory penalties. High compliance costs with limited benefit \u2014 cannot compete on differentiation if forced to expose proprietary methods. Extraction flows from dominant platform to regulatory burden on competitors. Exit requires abandoning market entirely."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Dominant Platform Operator",
+      "comment": "PERSPECTIVE 3: DOMINANT PLATFORM OPERATOR (TANGLED ROPE) \u2014 Interoperability mandate serves genuine coordination function: enables ecosystem of third-party apps and developers. But mandate also enables competitors and reduces monopoly rents. Asymmetric extraction: operator bears costs of exposing APIs, data standards, and system architecture while competitors gain access at lower cost. Can lobby for implementation delays and technical exemptions \u2014 mobile exit options through regulatory capture."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Open Standards Body",
+      "comment": "PERSPECTIVE 4: OPEN STANDARDS BODY (ROPE) \u2014 Sees interoperability mandate as pure coordination problem requiring neutral governance. Benefits from increased technical standardization, reduced fragmentation, and expanded scope of work. Can arbitrage between multiple platforms needing their standards. Low experienced extraction \u2014 role is enabling ecosystem function."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Regulatory Enforcement Agency",
+      "comment": "PERSPECTIVE 5: REGULATORY ENFORCEMENT AGENCY (PITON) \u2014 Enforcement apparatus persists through institutional inertia. Compliance verification is largely theater: checking API existence, documentation, and nominal data format support. Actual interoperability outcomes are difficult to measure. Enforcement bureaucracy grows to justify its existence while real platform control mechanisms (algorithm opacity, network effects, data advantage) remain untouched. Theater ratio high because enforcement focuses on observable technical proxies rather than actual competitive impact."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Transitional View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / TRANSITIONAL VIEW (SCAFFOLD) \u2014 From civilizational perspective, interoperability mandates are temporary structural supports for an industry transitioning from monopolistic control to competitive ecosystem. Theater is high because enforcement mechanisms are learning-by-doing \u2014 regulations haven't yet developed sophisticated metrics for measuring real competitive impact. Sunset clause: as decentralized architectures mature and alternative platforms gain scale, mandatory interoperability becomes less critical because users have genuine exit options. Estimated timeline: 10-20 years until decentralized social/messaging infrastructure is competitive with centralized platforms."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "api_compliance_vs_competitive_parity",
+      "question": "Does technical API interoperability mandate actually enable competitive parity or merely expose interface while preserving dominant operator advantage through data access, algorithm control, and network effects?",
+      "resolution_mechanism": "Longitudinal market share analysis of competing platforms pre- and post-mandate; measurement of user switching rates; analysis of whether API-compliant competitors gain market share or remain perpetual margins",
+      "impact": "If mandates enable parity: classification shifts toward Rope (pure coordination). If mandates fail to enable parity: classification stays Snare/Tangled Rope (extraction with performative compliance). This determines whether mandate is structural or theatrical.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether API compliance translates to competitive parity"
+    },
+    {
+      "id": "regulatory_capture_timeline",
+      "question": "How long before dominant platform operators capture the regulatory enforcement process and convert interoperability mandates into competitive barriers against non-compliant competitors?",
+      "resolution_mechanism": "Analysis of enforcement action patterns; observation of whether enforcement focuses on competitors or dominant operator; tracking of exemption requests and their approval rates",
+      "impact": "If capture occurs early: mandate reverts to Snare (extraction via regulation). If capture is prevented: mandate stabilizes as Tangled Rope or Scaffold. Timeline determines whether mandate is durable or transitional.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline and likelihood of regulatory capture"
+    },
+    {
+      "id": "decentralized_architecture_feasibility",
+      "question": "Can decentralized interoperable platforms (federation, blockchain-based, mesh networks) achieve network effects parity with centralized monopolists within the scaffold timeframe?",
+      "resolution_mechanism": "Technical capability assessment; user growth trajectories for decentralized alternatives; comparison of friction/latency/UX between centralized and decentralized options",
+      "impact": "If feasible: scaffold sunset is real and mandate becomes temporary. If infeasible: mandate persists indefinitely, and classification shifts from Scaffold toward permanent Tangled Rope or Snare. This determines whether extractive mechanism is structural or transitional.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Technical feasibility of decentralized platform scaling"
+    },
+    {
+      "id": "theater_maintenance_vs_coordination",
+      "question": "Is enforcement bureaucracy maintaining theater to justify its existence or actually monitoring real competitive outcomes?",
+      "resolution_mechanism": "Analysis of enforcement metrics: are they measuring API technical compliance (theater proxy) or actual competitive impact, user switching, innovation rate, and market structure?",
+      "impact": "If theater focus: extractiveness likely understated; true suppression higher. If outcome focus: extractiveness accurate; mandate approaching genuine coordination. This affects whether base extractiveness of 0.58 is conservative or inflated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether enforcement focuses on technical proxies vs competitive outcomes"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Interoperability mandate enforcement represents a regulatory attempt to constrain monopolistic platform control by requiring technical integration between competing services. The mandate exhibits contradictory structural properties: it coordinates genuine ecosystem functions (enabling third-party developers, reducing fragmentation, preventing lock-in) while simultaneously extracting through compliance costs, regulatory uncertainty, and asymmetric burden distribution. The constraint's theater_ratio (0.64) reflects that enforcement focuses on observable technical compliance (API existence, data format documentation) rather than measured competitive outcomes (market share shift, user switching, innovation rate). This creates a performative dimension: platforms can declare interoperability while preserving real control mechanisms (algorithm opacity, data access asymmetry, network effects). The theater has increased over the interval as enforcement bureaucracy has grown without proportional impact on actual market structure, suggesting institutional drift toward Piton (degraded constraint maintained through inertia).",
+    "key_agents": [
+      "Locked-in Users: Primary victim (powerless/trapped) \u2014 cannot exit dominant platform without losing network effects; forced to participate in mediated interoperability",
+      "Competing Platform Operators: Secondary victim (moderate/constrained) \u2014 face high compliance costs with limited competitive benefit; unable to differentiate on proprietary features",
+      "Dominant Platform Operator: Primary beneficiary/target (powerful/mobile) \u2014 benefits from coordination function but experiences extraction through forced exposure of proprietary architecture; can lobby for exemptions and compliance delays",
+      "Open Standards Bodies: Institutional beneficiary (organized/arbitrage) \u2014 expand scope and authority through standardization work; benefit from multiple platforms needing their standards",
+      "Regulatory Enforcement Agency: Institutional actor (institutional/constrained) \u2014 maintains enforcement apparatus; sees own compliance metrics as proxies for competitive impact rather than measuring real market effects",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 identifies mandate as temporary structural support during platform ecosystem transition"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The mandate creates asymmetric burdens: dominant operators must expose proprietary architecture (high cost) while competitors gain access at regulatory-enforced rates (lower cost than they would pay for equal access). However, extractiveness is not as high as pure monopoly enforcement (0.75+) because the mandate does create genuine coordination functions \u2014 third-party developers gain real access, and ecosystem fragmentation is reduced. The rising trajectory (0.35 \u2192 0.58) reflects that initial mandate implementation enabled genuine interoperability gains, but over time dominant operators have learned to comply with technical letter while preserving real control (algorithm opacity, data access restrictions, timing delays). Suppression (0.65): Moderate-high. Significant barriers to exercising interoperability: high compliance costs for smaller competitors, regulatory uncertainty about scope, technical burden of integration, and inability to exit if the user base demands platform presence. Suppression is not total because some well-resourced competitors have complied and gained market access. Theater ratio (0.64): Moderate-high. Enforcement focuses on technical compliance proxies (API exists, data formats documented) rather than measuring real competitive impact. An API can be technically compliant yet functionally useless if the dominant operator controls data quality, timing, or algorithmic selection. Theater has risen over the interval as enforcement bureaucracy has grown and focused increasingly on process metrics rather than outcome measurement.",
+    "directionality_logic": "The dominant platform operator derives d \u2248 0.55 (victim of exposure mandate) but experiences significant mobile exit options (regulatory lobbying, technical exemptions, implementation delays, decentralization hedging). Competitors and users experience high d (0.75-0.95) with constrained or trapped exit. The constraint flows extraction FROM dominant operator (exposed architecture cost) TO beneficiary groups (third-party developers, competing platforms). But the dominant operator's powerful position and mobile exit options mean they experience less effective chi than the structural d alone would suggest. The piton perspective reflects that enforcement apparatus sees high theater (compliance documentation) without proportional competitive impact.",
+    "perspectival_gap": "The dominant operator sees Tangled Rope \u2014 genuine coordination function (enabling developers, reducing fragmentation) mixed with asymmetric exposure costs (architecture must be revealed, timing controlled by regulator). Competing platforms see Snare \u2014 high compliance costs with limited competitive gain because dominant operator's network effects remain intact. Locked-in users see Snare \u2014 forced participation in system designed and controlled by the same dominant operator, with interoperability as a cosmetic addition that doesn't change underlying lock-in. Open standards bodies see Rope \u2014 pure coordination problem requiring neutral governance. The regulatory agency sees Piton \u2014 compliance theater divorced from competitive impact. The analytical observer sees Scaffold \u2014 temporary structural support during ecosystem transition, with sunset when decentralized platforms mature.",
+    "mandatrophy_analysis": "The mandate resolves mandatrophy by acknowledging both its genuine coordination function AND its extractive asymmetry. It is NOT pure coordination (Rope) because the burden is asymmetrically distributed \u2014 dominant operators bear exposed architecture cost while competitors gain access at regulated rates. It is NOT pure extraction (Snare) because third-party developers genuinely gain access to platforms they could not previously integrate with, reducing ecosystem fragmentation. The Tangled Rope classification is precise: the mandate coordinates ecosystem functions while enabling asymmetric extraction through compliance cost distribution. The rising theater ratio signals risk of mandate degradation (Piton) \u2014 if enforcement becomes purely process-focused (API exists, documentation complete) without measurement of real competitive outcomes, the mandate could become institutional theater while real control mechanisms (algorithm opacity, data advantage, network effects) remain unchanged. The scaffolding perspective's sunset logic provides a durable exit path: if decentralized interoperable platforms mature sufficiently, mandatory interoperability becomes unnecessary because users have genuine platform choice, converting the constraint from extractive to optional."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_algorithm_opacity",
+      "data_portability_rights",
+      "app_store_monopoly_enforcement"
+    ],
+    "dual_formulation_note": "Interoperability mandate enforcement is downstream of specific antitrust findings but represents a distinct structural constraint. Technical interoperability (API standards, data formats) is a necessary but insufficient condition for platform competition. Upstream constraints (algorithm opacity, data access asymmetry, network effects) must also be addressed for the mandate to achieve competitive parity rather than merely cosmetic integration."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

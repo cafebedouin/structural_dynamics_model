@@ -1,0 +1,145 @@
+{
+  "header": {
+    "constraint_id": "weak_law_large_numbers",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "wlln"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Weak Law of Large Numbers",
+    "topic_domain": "probability_theory/mathematics",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Empirical Observer",
+      "comment": "PERSPECTIVE 1: EMPIRICAL OBSERVER (MOUNTAIN) \u2014 Any agent attempting to rely on finite samples without the averaging principle faces divergence. The constraint is unchangeable from this position: samples must be drawn independently and identically distributed, and sample means must converge to the population mean in probability as n\u2192\u221e. No escape from these requirements."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Statistical Practitioner",
+      "comment": "PERSPECTIVE 2: STATISTICAL PRACTITIONER (MOUNTAIN) \u2014 From the viewpoint of someone designing experiments or quality control systems, the WLLN is an unavoidable constraint on what conclusions can be drawn from finite data. Increases in sample size are the only mechanism to reduce sampling error; this is immutable across all practical contexts (manufacturing, medicine, polling, finance)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Foundation",
+      "comment": "PERSPECTIVE 3: MATHEMATICAL FOUNDATION (MOUNTAIN) \u2014 The WLLN is a theorem derived from the definition of independent and identically distributed random variables and the definition of convergence in probability. Its truth is constitutive of what we mean by probability and independence. No institution, market, or power can alter this logical relationship."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From the highest abstraction level, the WLLN is a statement about convergence of averages to expectations under well-defined mathematical conditions. It is logically invariant, empirically universal, and admits zero degrees of freedom for any index. Perfect mountain signature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "iid_assumption_realizability",
+      "question": "In real-world applications, can true independence and identical distribution be verified or are they always working hypotheses?",
+      "resolution_mechanism": "Empirical analysis of violations: temporal correlation in financial time series, systematic bias in measurement instruments, population heterogeneity in survey data. Classification of when WLLN becomes inapplicable vs. approximately applicable.",
+      "impact": "If IID is always an assumption, not a fact: the WLLN's universality is conditional rather than absolute. However, the logical structure of the WLLN itself remains mountain \u2014 the constraint is that IF conditions hold, convergence is guaranteed. The conditionality is not a weakness in the constraint but its precise specification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether IID assumption can be verified in practice or remains a working hypothesis"
+    },
+    {
+      "id": "finite_sample_deviation_bounds",
+      "question": "What are the tightest possible bounds on finite-sample deviation from the limiting distribution, and do these bounds have universal form or depend on unknown parameters?",
+      "resolution_mechanism": "Concentration inequalities (Chebyshev, Hoeffding, empirical Bernstein bounds); comparison of bound tightness across different distributions and sample sizes; investigation of whether universal bounds require distribution-specific tightening.",
+      "impact": "The WLLN itself (convergence in probability) is mountain-level certain. But practical applications require finite-sample bounds. If bounds are loose or distribution-dependent, the practical applicability of the WLLN degrades while the theorem remains true.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Tightness and universality of finite-sample convergence bounds"
+    },
+    {
+      "id": "dependent_sequences_applicability",
+      "question": "How far can the central limit theorem and law of large numbers be extended to weakly dependent sequences (Markov chains, time series with autocorrelation)?",
+      "resolution_mechanism": "Analysis of mixing conditions for dependent sequences; empirical testing on financial returns, climate data, and other serially correlated data; measurement of mixing time and impact on convergence rate.",
+      "impact": "Extensions to weakly dependent sequences exist (mixing conditions, martingale differences) but require additional assumptions. The original WLLN remains mountain; extensions become tangled ropes or snares depending on the strength of dependence.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Extension of WLLN to dependent sequences and mixing conditions"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 200
+  },
+  "commentary": {
+    "narrative_context": "The Weak Law of Large Numbers (WLLN) is a foundational theorem in probability theory stating that the sample mean converges to the expected value in probability as the sample size increases. Given a sequence of independent and identically distributed random variables X\u2081, X\u2082, ... with finite expected value \u03bc, for any \u03b5 > 0, the probability that the sample mean deviates from \u03bc by more than \u03b5 approaches zero as n \u2192 \u221e. This constraint exhibits the archetypal signatures of a mountain: it emerges necessarily from the definitions of probability and independence; it admits zero degrees of freedom; its truth is invariant across all observing positions; no agent can negotiate with it or exit from it. The theorem has remained unchanged in its essential form since Chebyshev's proof in the 19th century, and no mathematical, institutional, or practical development has altered its logical structure. The theater_ratio is low (0.15) and has remained stable because the WLLN requires no performative maintenance \u2014 its proof is constructive and its application is mechanical. The slight increase in theater_ratio over the interval reflects only the growing complexity of finite-sample bounds and concentration inequalities that practitioners use in lieu of the asymptotic result.",
+    "key_agents": [
+      "The Empirical Observer: Any agent measuring finite samples and drawing inferences; structurally powerless against the constraint",
+      "The Statistical Practitioner: Institutional users (quality control, clinical trials, survey methodology, finance) who must design experiments accounting for sampling variance",
+      "Mathematical Community: Institutional gatekeepers of logical truth; experience the WLLN as immutable definition",
+      "The Analytical Observer: Civilizational perspective viewing the theorem as constitutive of probability itself"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Minimal. The WLLN does not extract anything from any agent \u2014 it is a statement about convergence, not about transfer of resources or welfare. The small nonzero value reflects only the practical cost of applying the theorem (designing experiments, collecting samples, computing statistics) which is coordination overhead, not extraction. Suppression (0.02): Negligible. The constraint does not suppress alternatives because it is a theorem, not an enforcement mechanism. Agents understand the WLLN's logical basis and accept it as true. Theater ratio (0.15): Very low. The theorem requires minimal performative maintenance. Its proof is constructive; its application is mechanical. The slight theater derives from the gap between the asymptotic limit and finite-sample practice \u2014 practitioners use concentration bounds and approximations whose computation is somewhat theatrical. Accessibility collapse (0.92): Very high. The WLLN is logically compact; once you understand independence and probability, the constraint is fully intelligible. The only barrier is mathematical literacy, which is a question of cognitive access, not of structural evasion. Resistance (0.08): Very low. No agent resists the WLLN because its truth is independent of preference or power. The logical proof is airtight; empirical violation would require the premises (independence, identical distribution) to be false.",
+    "perspectival_gap": "There is no meaningful perspectival gap for the WLLN. All four perspectives classify it identically as mountain because the constraint's structure is invariant across all observation positions. The empirical observer, the practitioner, the mathematical community, and the analytical observer all confront the same logical necessity. The WLLN is the gold-standard case of a uniform-type constraint where the presheaf collapses to a single type. This uniformity is the defining characteristic of mathematical natural laws.",
+    "directionality_logic": "Directionality is not applicable to mountain-type constraints. The WLLN does not have beneficiaries or victims \u2014 it is a structural law that all agents must obey equally. There is no asymmetric extraction or coordination function that favors some agents over others. The constraint is imposed by logic, not by power."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "central_limit_theorem",
+      "law_of_large_numbers_strong",
+      "convergence_in_probability"
+    ]
+  }
+}

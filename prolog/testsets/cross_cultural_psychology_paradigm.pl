@@ -1,0 +1,309 @@
+% ============================================================================
+% CONSTRAINT STORY: cross_cultural_psychology_paradigm
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_cross_cultural_psychology_paradigm, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: cross_cultural_psychology_paradigm
+ *   human_readable: Cross-Cultural Psychology Paradigm and Knowledge Extraction
+ *   domain: psychology/epistemology/postcolonial_studies
+ *
+ * SUMMARY:
+ *   Cross-cultural psychology emerged as a systematic field in the mid-20th
+ *   century with the stated goal of identifying universal psychological
+ *   principles by comparing behavior across cultural contexts. The constraint
+ *   this analysis examines is the institutional paradigm that treats Western
+ *   psychology (predominantly North American and European) as the universal
+ *   baseline against which all other psychologies are measured as variations
+ *   or deviations. This constraint operates through multiple mechanisms:
+ *   journal gatekeeping (English-language publication barriers), funding
+ *   concentration (Western institutions control research budgets), citation
+ *   politics (Western-authored work accumulates authority regardless of
+ *   quality), and epistemic framing (Western constructs are labeled as
+ *   objective measurements of underlying universals; non-Western frameworks
+ *   are labeled as cultural factors that distort measurement). The paradigm
+ *   extracts intellectual labor from non-Western researchers and indigenous
+ *   knowledge holders while gatekeeping access to the legitimacy required to
+ *   advance careers or influence policy. It simultaneously coordinates
+ *   genuine international comparison and enables resource-sharing among
+ *   institutions. The constraint exhibits all six classification types
+ *   depending on observer position, making it a diagnostic exemplar for how
+ *   institutional epistemic power operates through the appearance of
+ *   neutrality.
+ *
+ * KEY AGENTS:
+ *   - Western Academic Psychology: Primary beneficiary (institutional/arbitrage) — controls journal publication, funding allocation, theoretical authority; experiences constraint as enabling coordination
+ *   - Non-Western Researchers: Primary victim (powerless/trapped) — must adopt Western frameworks to participate; face career barriers without Western credentials; cannot exit without losing scientific legitimacy
+ *   - Indigenous Knowledge Holders and Communities: Primary victim (powerless/identity_locked) — knowledge extracted without reciprocity or recognition; epistemic inferiority internalized through educational systems; exit would require abandoning identity as knowers within any recognized system
+ *   - Global South Institutions: Secondary victim (powerful/mobile) — benefit from access to Western research infrastructure but dependent on Western funding and citation systems; resource constraints limit capacity to build alternatives
+ *   - Decolonial Psychology Movements: Organized agents (organized/constrained) — building exit pathways through indigenous-centered, African-centered, feminist, and culturally-grounded psychology; constrained by institutional resource barriers but increasingly visible
+ *   - Cross-Cultural Psychology Field: Institutional inertia actor (organized/constrained) — maintains performative universalism despite theoretical fragmentation; persists through career incentives and infrastructure lock-in
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(cross_cultural_psychology_paradigm, 0.58).
+domain_priors:suppression_score(cross_cultural_psychology_paradigm, 0.52).
+domain_priors:theater_ratio(cross_cultural_psychology_paradigm, 0.65).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(cross_cultural_psychology_paradigm, extractiveness, 0.58).
+narrative_ontology:constraint_metric(cross_cultural_psychology_paradigm, suppression_requirement, 0.52).
+narrative_ontology:constraint_metric(cross_cultural_psychology_paradigm, theater_ratio, 0.65).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(cross_cultural_psychology_paradigm, tangled_rope).
+narrative_ontology:human_readable(cross_cultural_psychology_paradigm, "Cross-Cultural Psychology Paradigm and Knowledge Extraction").
+narrative_ontology:topic_domain(cross_cultural_psychology_paradigm, "psychology/epistemology/postcolonial_studies").
+
+domain_priors:requires_active_enforcement(cross_cultural_psychology_paradigm).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(cross_cultural_psychology_paradigm, western_academic_psychology).
+narrative_ontology:constraint_beneficiary(cross_cultural_psychology_paradigm, english_language_publishers).
+narrative_ontology:constraint_beneficiary(cross_cultural_psychology_paradigm, affluent_psychology_departments).
+narrative_ontology:constraint_victim(cross_cultural_psychology_paradigm, non_western_researchers).
+narrative_ontology:constraint_victim(cross_cultural_psychology_paradigm, indigenous_knowledge_systems).
+narrative_ontology:constraint_victim(cross_cultural_psychology_paradigm, global_south_institutions).
+narrative_ontology:constraint_victim(cross_cultural_psychology_paradigm, psychological_pluralism).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: NON-WESTERN RESEARCHER (SNARE) — Trapped within a paradigm that treats Western psychology as universal baseline. Must adopt Western frameworks to publish, secure funding, or advance careers. The constraint extracts their intellectual labor (research, data, insights) while gatekeeping access to legitimacy and resources. No exit without abandoning scientific credibility in the dominant system.
+constraint_indexing:constraint_classification(cross_cultural_psychology_paradigm, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: INDIGENOUS KNOWLEDGE HOLDERS (SNARE / IDENTITY-LOCKED) — Structurally trapped by colonial research ethics that extract knowledge without reciprocity. Identity-locked through internalized epistemic inferiority — the constraint's framing has constituted indigenous psychology as non-scientific. Communities perceive themselves as subjects of study rather than knowledge producers. Exit would require abandoning identity as knowers within Western epistemic terms, yet accepting those terms to participate at all.
+constraint_indexing:constraint_classification(cross_cultural_psychology_paradigm, snare,
+    context(agent_power(powerless),
+            time_horizon(generational),
+            exit_options(identity_locked),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: MINORITY-WORLD PSYCHOLOGIST (TANGLED ROPE) — Constrained by journal gatekeeping and citation politics but also benefits from international collaboration networks and access to global research infrastructure. The constraint both enables (cross-cultural comparison, publication opportunity) and extracts from them (cultural translation burden, citation disadvantage, tokenization pressure).
+constraint_indexing:constraint_classification(cross_cultural_psychology_paradigm, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: WESTERN PSYCHOLOGY DEPARTMENTS (ROPE) — Experience the constraint as pure coordination: standardizing research methods and theoretical frameworks enables international comparison and cumulative science. Net beneficiaries — the paradigm legitimizes their institutional authority and channels research attention toward their institutions. Publishing volume and citation metrics concentrate in English-language venues they control.
+constraint_indexing:constraint_classification(cross_cultural_psychology_paradigm, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: CROSS-CULTURAL PSYCHOLOGY FIELD (PITON) — The field's central claim — that psychological phenomena can be measured against a universal Western baseline via 'objective' comparison — is increasingly recognized as theoretically incoherent (the baseline itself is culturally embedded). Yet the field persists through institutional inertia: career structures, journal infrastructure, conference circuits, and funding mechanisms are built on this now-degraded paradigm. Theater ratio (0.65) reflects the gap between the field's performative universalism claims and the actual theoretical fragmentation beneath.
+constraint_indexing:constraint_classification(cross_cultural_psychology_paradigm, piton,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: GLOBAL SOUTH INSTITUTIONS (TANGLED ROPE) — Institutions in non-Western regions experience genuine coordination benefit (access to global measurement tools, publication networks, funding sources) alongside asymmetric extraction (brain drain, dependency on Western funding, subordinate research agenda-setting). Mobile enough to build alternatives but constrained by resource asymmetries and citation politics.
+constraint_indexing:constraint_classification(cross_cultural_psychology_paradigm, tangled_rope,
+    context(agent_power(powerful),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 7: DECOLONIAL ALTERNATIVES (SCAFFOLD) — Organized movements (indigenous psychology, African psychology, feminist psychology, cultural psychology) are building exit pathways by redefining psychology as fundamentally plural. These alternatives have sunset logic: as indigenous, African, and feminist psychological frameworks mature and gain institutional legitimacy, the Western-universal framing becomes optional rather than mandatory. Theater ratio drops as genuine pluralism replaces performative universalism.
+constraint_indexing:constraint_classification(cross_cultural_psychology_paradigm, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 8: ANALYTICAL OBSERVER (TANGLED ROPE) — From a civilizational epistemic perspective, the constraint is a tangled hybrid: it genuinely coordinates empirical comparison (rope function) while simultaneously enacting epistemic injustice through source exclusion and interpretive hermeneutical dominance (snare function). The extractiveness is moderate-to-high (0.58) because the paradigm's gate-keeping is active and structural, not incidental. The theater (0.65) reflects the performative claim to universalism masking contingent Western epistemic practices.
+constraint_indexing:constraint_classification(cross_cultural_psychology_paradigm, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(cross_cultural_psychology_paradigm_tests).
+
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(cross_cultural_psychology_paradigm, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(cross_cultural_psychology_paradigm, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(cross_cultural_psychology_paradigm, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(cross_cultural_psychology_paradigm, TR),
+    TR >= 0.70.
+
+:- end_tests(cross_cultural_psychology_paradigm_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness (0.58): Moderate-to-high, increasing over time. The paradigm extracts non-Western researchers' intellectual labor (conceptual innovation, empirical data collection, cultural insights) while gatekeeping access to publication, funding, and epistemic authority. The extractiveness has increased from 0.35 (1960s, when comparison was more truly mutual) to 0.58 (present, as Western psychology has formalized its authority and excluded competing frameworks). The increase reflects not just changing conditions but the paradigm's success in consolidating power — more extraction requires less explicit coercion. Suppression (0.52): Moderate. Non-Western researchers face material barriers (English-language publication, funding concentration, visa restrictions, citation disadvantage) but not insurmountable ones — some alternatives exist, some researchers succeed within the system, some funding sources outside Western institutions are emerging. The suppression operates through gatekeeping and opportunity cost rather than explicit prohibition. Theater ratio (0.65): Moderate-to-high, increasing from 0.42 to 0.65. Cross-cultural psychology increasingly performs universalism through statistical sophistication, methodology papers, and large N studies, even as the theoretical foundations have become unstable. The field knows its central claim (psychological phenomena are measurable against a Western baseline) is contested, yet replicates the institutional forms that preserve this claim. Theater has increased because the paradigm must work harder to maintain legitimacy as alternatives become visible.
+ *
+ * PERSPECTIVAL GAP:
+ *   The constraint produces maximum perspectival divergence when comparing the Western institutional perspective (Rope, sees genuine coordination benefit) against the non-Western powerless perspective (Snare, sees pure extraction). This gap is not a measurement problem — it reflects a real structural asymmetry. The same institutional mechanisms (English publication requirement, Western theoretical baselines, citation metrics favoring Western authors) coordinate valuable global comparison for Western institutions while extracting labor and epistemic authority from non-Western researchers. The gap widens when including the identity-locked perspective: indigenous knowledge holders experience not just extraction but cognitive capture — they perceive non-Western psychology as less legitimate even when they practice it. This internalized inferiority is the deepest binding mechanism. The analytical observer's perspective identifies this asymmetry as epistemic injustice — a structural configuration that systematically excludes certain knowers and knowledge forms from legitimacy while claiming neutrality. The piton perspective reveals that the field itself recognizes the theoretical incoherence but maintains the institutional forms through inertia.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   The directionality logic reveals why institutional power operates through the appearance of neutral coordination. When a beneficiary occupies the institutional power position and controls both the theoretical framing and the measurement methodology, they can genuinely experience the constraint as Rope (coordination with themselves as a beneficiary) while powerless agents experience Snare (extraction). The same mechanism produces opposite phenomenologies. This is not coincidental — institutional power operates precisely by making beneficial-to-institutions arrangements appear as universal principles. The Western psychology department benefits from the paradigm (d ≈ 0.05, experiences negative extraction/subsidy) and teaches the paradigm as universal science, not as an institutional interest. Non-Western researchers pay the cost (d ≈ 0.95, experiences high extraction) and learn to see this as the necessary cost of participating in legitimate science. The identity lock on indigenous knowledge holders (d ≈ 0.92) operates by internalizing this framing — they come to believe their own knowledge is less legitimate before they face any material barriers. The constraint's power comes from achieving phenomenological inversion: those who benefit see coordination; those who are extracted from see natural hierarchy.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The cross-cultural psychology paradigm demonstrates how mandatrophy operates at the level of institutionalized knowledge production. The question 'Is this Rope or Snare?' cannot be resolved by choosing an observer position — it depends on position. The Western institutional perspective correctly sees Rope (genuine coordination benefit). The non-Western researcher correctly sees Snare (genuine extraction with barriers to exit). The decolonial movement correctly sees Scaffold (institutional arrangement with a sunset as alternatives mature). These are not conflicting answers — they are structurally incompatible perspectives that cannot be unified into a single type. Mandatrophy is resolved not by selecting the true type but by recognizing that the constraint's existence depends on this perspectival incoherence. The paradigm persists because it can simultaneously be Rope to its beneficiaries and Snare to its victims, with each group experiencing their classification as objective fact. Unification would require either (a) dismantling the institutional power asymmetry that produces the perspectival gap, or (b) building institutional pluralism where multiple psychological frameworks are legitimate simultaneously. Option (b) is the decolonial scaffold's explicit design — plural paradigms coexist, each internally coherent, rather than one paradigm claiming universality. The theater ratio (0.65) indicates the paradigm is increasingly performing its own coherence rather than achieving it — the gap between the claim to universalism and the evidence of particularity is visible, but the institutional forms persist.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    baseline_universalism_validity,
+    'Is Western psychology actually measuring universal psychological principles, or is it measuring Western-specific constructs that happen to be labeled as universal?',
+    'Structural replication: compare variance explained by Western psychological constructs against locally-derived constructs in the same population; examine whether theoretical predictions reverse when baseline assumptions change; meta-analysis of failed cross-cultural replications',
+    'If universal: paradigm is Rope (coordination mechanism). If Western-specific: paradigm is Snare (masked extraction). The empirical evidence increasingly suggests Western-specific, elevating the snare classification.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(baseline_universalism_validity, empirical, 'Whether Western psychology measures universal or culturally-contingent principles').
+
+omega_variable(
+    epistemic_injustice_mechanism,
+    'Is the extraction mechanism primarily structural gatekeeping (journal access, funding control) or hermeneutical domination (the reigning concepts cannot name or recognize non-Western psychological phenomena)?',
+    'Analysis of citation patterns and research agenda-setting; tracking which non-Western concepts are absorbed vs excluded from mainstream psychology; identifying phenomena that remain unmeasurable within Western frameworks',
+    'If structural gatekeeping dominates: constraint is primarily Snare with potential for reform through access mechanisms. If hermeneutical domination dominates: constraint is more profound Snare requiring conceptual decolonization, not just access change.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(epistemic_injustice_mechanism, empirical, 'Whether extraction operates through gatekeeping or hermeneutical domination').
+
+omega_variable(
+    indigenous_psychology_sustainability,
+    'Can indigenous-centered and decolonial psychology alternatives achieve institutional legitimacy and funding parity with Western paradigm, or will they remain marginal despite intellectual merit?',
+    '20-year longitudinal tracking of institutional expansion, funding allocation, and citation patterns for decolonial psychology; examination of whether resource constraints limit alternative paradigm growth even if theoretically superior',
+    'If alternatives can achieve parity: scaffold sunset is realistic, constraint classification shifts toward Rope. If alternatives remain institutionally marginal despite merit: constraint is Snare with limited exit option — the extraction mechanism is too embedded in power structures.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(indigenous_psychology_sustainability, empirical, 'Whether decolonial alternatives can achieve institutional legitimacy').
+
+omega_variable(
+    identity_lock_depth,
+    'For indigenous knowledge holders, is the identity lock cognitive (internalized epistemic inferiority) or structural (material dependency on Western academic pathways for survival)?',
+    'Post-exit analysis: communities that reject Western psychology frameworks and build alternatives — does suppression persist after exit, or does it disappear? If suppression persists, it is internalized; if it disappears, it was structural.',
+    'If primarily cognitive: constraint includes genuine identity-lock mechanism (identity_locked exit applies). If primarily structural: constraint is simpler trapped/constrained dynamic. Affects both classification and intervention strategy.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(identity_lock_depth, empirical, 'Whether indigenous knowledge holder suppression is internalized or structural').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(cross_cultural_psychology_paradigm, 0, 90).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(ccpp_tr_t0, cross_cultural_psychology_paradigm, theater_ratio, 0, 0.42).
+narrative_ontology:measurement(ccpp_tr_t30, cross_cultural_psychology_paradigm, theater_ratio, 30, 0.58).
+narrative_ontology:measurement(ccpp_tr_t60, cross_cultural_psychology_paradigm, theater_ratio, 60, 0.65).
+narrative_ontology:measurement(ccpp_tr_t90, cross_cultural_psychology_paradigm, theater_ratio, 90, 0.65).
+
+% Extraction over time
+narrative_ontology:measurement(ccpp_be_t0, cross_cultural_psychology_paradigm, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(ccpp_be_t30, cross_cultural_psychology_paradigm, base_extractiveness, 30, 0.48).
+narrative_ontology:measurement(ccpp_be_t60, cross_cultural_psychology_paradigm, base_extractiveness, 60, 0.58).
+narrative_ontology:measurement(ccpp_be_t90, cross_cultural_psychology_paradigm, base_extractiveness, 90, 0.58).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(cross_cultural_psychology_paradigm, identity_coordination).
+narrative_ontology:affects_constraint(cross_cultural_psychology_paradigm, english_language_hegemony_in_science).
+narrative_ontology:affects_constraint(cross_cultural_psychology_paradigm, citation_metrics_and_authorship_bias).
+narrative_ontology:affects_constraint(cross_cultural_psychology_paradigm, postcolonial_institutional_dependency).
+
+% DUAL FORMULATION NOTE:
+% The cross-cultural psychology paradigm decomposes into structurally distinct constraints: (1) English-language publication gatekeeping (ε≈0.52, Snare), (2) Theoretical universalism claims (ε≈0.58, Tangled Rope), (3) Citation politics and authorship bias (ε≈0.48, Snare). These are linked as a constraint family. The current story models the integrated paradigm at ε=0.58. Upstream constraints (institutional dependency, colonialism, epistemological hierarchies) drive the specific form this paradigm takes. Downstream constraints (specific psychological concepts, measurement tools, research agendas) are shaped by the paradigm's structure.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(cross_cultural_psychology_paradigm, institutional, 0.08).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

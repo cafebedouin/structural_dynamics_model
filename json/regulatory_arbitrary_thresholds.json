@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "regulatory_arbitrary_thresholds",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "regthresh"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Regulatory Arbitrary Thresholds",
+    "topic_domain": "regulatory_policy/economic_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_firms",
+      "regulatory_agencies"
+    ],
+    "victims": [
+      "compliant_small_firms",
+      "market_entrants",
+      "consumer_welfare"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Marginal Firm",
+      "comment": "PERSPECTIVE 1: MARGINAL FIRM (SNARE) \u2014 A small compliant firm just below an arbitrary regulatory threshold experiences total extraction without exit. Cannot relocate jurisdiction without losing market access; cannot grow without triggering disproportionate compliance costs that exceed revenue gains. The threshold functions as a trap door: firms below it pay moderate compliance costs; firms above it face exponential cost increases. The firm is structurally trapped \u2014 exit means business failure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Competitor Sized Firm",
+      "comment": "PERSPECTIVE 2: COMPETITOR SIZED FIRM (TANGLED ROPE) \u2014 A firm operating above the arbitrary threshold bears significant extraction (escalated compliance costs) but also benefits from genuine coordination: the threshold prevents a race-to-the-bottom on safety/environmental standards. The constraint has real function (maintains minimum standards) and real asymmetric extraction (favors incumbents already above the threshold). Exit is constrained but possible \u2014 the firm could relocate or shrink, at moderate cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Incumbent Industry",
+      "comment": "PERSPECTIVE 3: INCUMBENT INDUSTRY (ROPE) \u2014 Established firms already operating above the threshold experience the constraint as pure coordination: the threshold protects them from new competition and preserves their market share. The threshold generates barriers to entry that reduce competitive pressure. For incumbents, the constraint is coordination that locks in their position. They can exit by relocating or shrinking, but do not need to \u2014 arbitrage options are abundant."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Regulatory Agency",
+      "comment": "PERSPECTIVE 4: REGULATORY AGENCY (PITON) \u2014 The agency views the threshold as a clear, defensible policy instrument and sees its enforcement as necessary coordination. However, the threshold's original justification (e.g., 'protect public health above 500 units per year') has become decoupled from the actual technical justification \u2014 the threshold persists through institutional inertia and is now theater. The agency maintains the performance of threshold-based compliance checking even though the underlying logic that justified the specific number has become opaque or outdated. The agency has arbitrage options (change the threshold) but does not exercise them."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Reform Coalition",
+      "comment": "PERSPECTIVE 5: REFORM COALITION (SCAFFOLD) \u2014 Consumer advocates, small-business associations, and progressive regulators see arbitrary thresholds as a temporary coordination failure with a clear sunset: adaptive regulation (risk-based standards, performance metrics) can replace rigid thresholds. This perspective sees the constraint as temporary scaffolding around an older regulatory model. Sunset logic is explicit: as risk-based regulation matures, threshold-based logic becomes obsolete. The coalition has agency (can lobby for reform) but constrained \u2014 changing entrenched regulatory structures takes decades."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Administrative Necessity View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a civilizational view, any large-scale regulatory system must use some form of decision boundary to sort compliance from non-compliance. The threshold appears to be an immutable feature of administrative systems: you cannot regulate without drawing lines. However, the structural data reveals this as a false natural law \u2014 the specific thresholds chosen are contingent (not derived from physics or logic), and risk-based alternatives exist. The mountain classification naturalizes what is actually an institutional choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "threshold_origin_opacity",
+      "question": "Is the arbitrary threshold truly arbitrary (set by bureaucratic path-dependence) or does it reflect hidden technical justification that is no longer explicitly stated?",
+      "resolution_mechanism": "Historical analysis of threshold-setting decisions; interviews with original regulators; comparison of stated rationale vs technical literature at time of adoption",
+      "impact": "If truly arbitrary: threshold functions as pure extraction mechanism (higher snare classification). If hidden technical logic exists: threshold functions as imperfect-but-genuine coordination (higher rope classification for incumbent perspective).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether arbitrary threshold has hidden technical justification"
+    },
+    {
+      "id": "risk_based_alternative_feasibility",
+      "question": "Are risk-based alternatives to arbitrary thresholds technically and administratively feasible for this regulatory domain, or would they create new coordination problems?",
+      "resolution_mechanism": "Pilot programs implementing adaptive regulation; comparative study of risk-based systems in other jurisdictions; measurement of compliance cost variation under risk-based vs threshold-based approaches",
+      "impact": "If feasible: scaffold sunset is real and extraction is temporary (10-20 year timeline). If infeasible: threshold persists indefinitely and becomes de facto mountain (immutable feature of the regulatory system).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of risk-based regulatory alternatives"
+    },
+    {
+      "id": "compliance_cost_distribution_measurement",
+      "question": "What is the actual distribution of compliance costs across firm sizes? Does it follow the claimed threshold structure or reveal hidden step functions?",
+      "resolution_mechanism": "Empirical survey of compliance costs by firm size; identification of actual cost discontinuities (e.g., accounting requirements, inspection frequency, documentation burdens); comparison to stated threshold effects",
+      "impact": "If costs follow threshold: extraction mechanism is transparent. If hidden step functions exist (e.g., inspection frequency jumps at 50% above threshold): extraction is more severe than metrics indicate, and suppression should be upgraded.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Actual compliance cost distribution across firm sizes"
+    },
+    {
+      "id": "incumbent_coordination_genuineness",
+      "question": "Does the threshold provide genuine coordination benefit (preventing race-to-the-bottom) or is it primarily a barrier-to-entry that benefits incumbents?",
+      "resolution_mechanism": "Counterfactual analysis: remove threshold and measure whether standards would decline; study of jurisdictions without thresholds; measurement of competitive intensity before/after threshold adoption",
+      "impact": "If genuine coordination: tangled_rope and rope classifications are correct, constraint has legitimate function. If primarily barrier-to-entry: rope becomes snare, and the constraint is pure extraction dressed as coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether threshold provides genuine coordination or primarily creates barriers to entry"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Regulatory arbitrary thresholds \u2014 bright-line rules (e.g., 'firms with > 50 employees must implement X,' 'operations > 100 units/day require Y certification') \u2014 create a structural extraction mechanism disguised as neutral administration. The thresholds serve genuine coordination functions (preventing race-to-the-bottom, establishing minimum standards) but systematize extraction from firms caught just below the threshold and from new entrants. The constraint exhibits all six types from different perspectives: incumbent firms see pure coordination (rope); marginal firms see inescapable extraction (snare); the regulatory agency sees institutional performance (piton); reform coalitions see temporary scaffolding (scaffold); analysts risk naturalizing contingent choices as administrative necessity (mountain); moderate firms see mixed coordination and extraction (tangled rope). The theater_ratio increase (0.52 to 0.68 over 20 years) indicates the threshold has become progressively more performative \u2014 its original technical justification has atrophied while the enforcement ritual persists. The extractiveness increase (0.42 to 0.58) reflects accumulated regulatory creep: new requirements layer onto the threshold without adjusting its level, creating a ratchet effect that concentrates extraction on marginal firms.",
+    "key_agents": [
+      "Incumbent Firms: Primary beneficiary (institutional/arbitrage) \u2014 protected from new competition by threshold-based entry barriers; can arbitrage by relocating or adjusting scale but choose not to",
+      "Marginal Compliant Firms: Primary victim (powerless/trapped) \u2014 caught at suboptimal scale below threshold; cannot grow without triggering exponential compliance cost increases; cannot relocate without losing market access",
+      "Market Entrants: Secondary victim (powerless/trapped) \u2014 must clear the threshold immediately to operate; prohibitive startup costs create barriers to entry",
+      "Consumer Welfare: Abstract victim (powerless/trapped) \u2014 pays higher prices from reduced competition; bears innovation cost from reduced competitive pressure",
+      "Regulatory Agency: Institutional actor (institutional/arbitrage) \u2014 maintains threshold enforcement as core institutional identity; sees the threshold as legitimate policy instrument while losing sight of original justification",
+      "Reform Coalition: Organized actor (organized/constrained) \u2014 consumer advocates, small-business groups, progressive regulators pushing for adaptive/risk-based regulation; constrained by entrenched institutional resistance",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks accepting threshold-based regulation as immutable feature of administrative systems"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The threshold creates asymmetric compliance cost burden \u2014 firms below the threshold operate at suboptimal scale to avoid triggering escalated requirements; firms above it have locked in their advantage. The extraction is not maximal because some genuine coordination function persists (prevents complete regulatory collapse), and some firms benefit from threshold-based predictability. Suppression (0.65): High. Significant barriers to exit: regulatory capital requirements are jurisdiction-specific (cannot easily relocate), regulatory switching costs are high, and political resistance to deregulation is entrenched. However, suppression is not total \u2014 some jurisdictions have reformed thresholds, and arbitrage (relocating operations) is possible at substantial cost. Theater ratio (0.68): High. The threshold persists not because it is technically optimal but because it provides administrative clarity. As regulators accumulate new requirements without re-calibrating the threshold level, the threshold becomes progressively detached from its original technical justification. The enforcement ritual (checking if a firm crosses the threshold) is now mostly theater \u2014 the underlying logic that justified the specific number has become opaque or outdated.",
+    "directionality_logic": "Directionality (d) is derived from each agent's structural relationship to the extraction flow. Incumbent firms have low d (beneficiaries with arbitrage options) \u2014 they experience the constraint as coordination that protects their position. Marginal firms have high d (victims with no exit) \u2014 they experience maximum extraction from the threshold trap. The regulatory agency has low-moderate d (institutional beneficiary that maintains the constraint) \u2014 the agency benefits from threshold-based administrative clarity and has arbitrage options (change the threshold) but does not exercise them. The reform coalition has moderate-high d (constrained agent bearing extraction cost of reform resistance) \u2014 they are victimized by the constraint's persistence but have some agency through organizing. The analytical observer has moderate d (can see the constraint from outside but cannot easily change it). The sigmoid f(d) amplifies these differences: victims with trapped exit experience maximum f(d) \u2248 1.42; beneficiaries with arbitrage experience minimum f(d) \u2248 -0.12.",
+    "perspectival_gap": "The constraint exhibits extreme perspectival fragmentation. Incumbents see rope (coordinated market protection). Marginal firms see snare (inescapable trap). The agency sees piton (institutional ritual). The reform coalition sees scaffold (temporary problem with solution pathway). The analyst risks seeing mountain (administrative necessity). The perspectival gap is driven by directionality: beneficiaries with exit options classify the same constraint as pure coordination; victims with no exit classify it as pure extraction. The gap reveals that the constraint's 'type' is not intrinsic but perspective-dependent, and the baseline metrics (\u03b5=0.58, suppression=0.65) reflect an average across this fragmented landscape.",
+    "mandatrophy_analysis": "RESOLUTION: This constraint resolves the mandatrophy by revealing that arbitrary thresholds systematize extraction while maintaining a coordination cover story. The genuine coordination function (preventing race-to-the-bottom) justifies the existence of some threshold; the arbitrary choice of the specific threshold level enables extraction. The tangled_rope classification is correct at the aggregate level: the constraint has both a coordination function and asymmetric extraction. The two are inseparable \u2014 the coordination benefit to incumbents is achieved precisely through extracting from marginal firms. No reform can fully separate them without addressing the underlying political economy: if the threshold is set at a level that does not create entry barriers, it loses its effectiveness as coordination (incumbents lose protection). The sunset logic (scaffold perspective) is real but contingent: risk-based regulation can replace arbitrary thresholds, but doing so requires political will to dismantle incumbent protection systems. The falseness of the mountain classification (analytical observer) is the key diagnostic: administrative systems do not require arbitrary thresholds \u2014 they require decision boundaries, which can be drawn via risk-based criteria, continuous functions, or adaptive mechanisms. The mountain view naturalizes the specific choice of arbitrariness."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture_incumbent_protection",
+      "barrier_to_entry_market_concentration"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

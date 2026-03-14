@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "border_apprehension_rates",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "border"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Border Apprehension Rate Optimization Constraint",
+    "topic_domain": "immigration_policy/border_enforcement",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "enforcement_agency",
+      "political_leadership"
+    ],
+    "victims": [
+      "migrant_communities",
+      "humanitarian_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Apprehended Migrant",
+      "comment": "PERSPECTIVE 1: APPREHENDED MIGRANT (SNARE) \u2014 Faces physical confinement, legal barriers to exit (immigration proceedings), economic dependency during detention, and information asymmetry about rights and processes. No meaningful alternatives to the apprehension-detention-processing pipeline. Maximum extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Border Community Residents",
+      "comment": "PERSPECTIVE 2: BORDER COMMUNITY RESIDENTS (TANGLED ROPE) \u2014 Communities gain some coordination benefits (security infrastructure, employment in enforcement agencies) alongside extraction costs (strain on humanitarian services, school system capacity, healthcare resources). Exit is possible but costly (relocation). Mixed coordination and extraction with genuine agency constraints."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Immigration Enforcement Agency",
+      "comment": "PERSPECTIVE 3: IMMIGRATION ENFORCEMENT AGENCY (ROPE) \u2014 Primary beneficiary. Apprehension metrics directly fund agency operations, staff positions, and budget justification. The constraint solves a genuine coordination problem: processing migrant flows requires standardized procedures and metrics. Agency experiences this as functional coordination with career and resource benefits."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Political Leadership",
+      "comment": "PERSPECTIVE 4: POLITICAL LEADERSHIP (ROPE) \u2014 Secondary beneficiary. Apprehension statistics serve as measurable performance indicators for electoral accountability and policy justification. Generates constituency demand for enforcement action and visible enforcement results. Net beneficiary with broad policy discretion."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Humanitarian Capacity System",
+      "comment": "PERSPECTIVE 5: HUMANITARIAN CAPACITY SYSTEM (SNARE) \u2014 Abstract system (NGOs, legal aid, medical services, shelter networks) cannot exit constraint despite bearing extraction costs. Apprehension rates directly drive demand for humanitarian services beyond sustainable capacity. No mechanism to reduce demand or refuse service without violating humanitarian mandates. Theater: much humanitarian work is grant-dependent performance reporting rather than impact delivery."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (System Drift)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (PITON) \u2014 The apprehension rate metric has drifted toward purely performative use. Originally conceived as a measure of enforcement effectiveness, it now functions as a proxy for political will and agency capacity rather than actual border security or humanitarian outcome improvement. Theater ratio reflects that apprehension numbers are reported to demonstrate activity and commitment, not to correlate with actual unauthorized entry prevention, organized trafficking disruption, or humanitarian outcomes. Classification as Piton indicates degraded function maintained through institutional inertia."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "apprehension_rate_measurement_validity",
+      "question": "Do apprehension rates measure what they claim to measure \u2014 border security effectiveness \u2014 or do they primarily reflect enforcement effort intensity independent of security outcomes?",
+      "resolution_mechanism": "Regression analysis: correlation between apprehension rates and (a) actual unauthorized entries detected, (b) trafficking organizations disrupted, (c) security incident prevention. Time-series decomposition separating enforcement effort from effectiveness.",
+      "impact": "If highly correlated with outcomes: snare classification may be overstated; coordination function is real. If uncorrelated: apprehension rate is pure metric theater, and the snare is maintained through performative reporting rather than structural necessity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether apprehension rates measure border security effectiveness or enforcement effort"
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is migrant suppression of exit attempts primarily structural (physical barriers, legal/detention), or do internalized norms (belief in futility, identity as deportable, trauma-based learned helplessness) contribute equally?",
+      "resolution_mechanism": "Post-apprehension behavior tracking: willingness to attempt crossing again, help-seeking, community resilience patterns. Comparison of structural barriers vs reported psychological factors in migrant interviews.",
+      "impact": "If structural dominates: suppression declines when barriers are reduced. If internalized: suppression persists as trauma even after release; constraint is partially cognitive capture requiring different intervention.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized"
+    },
+    {
+      "id": "metric_substitution_drift",
+      "question": "Has the apprehension rate metric substituted for actual border security and humanitarian outcome goals (Goodhart drift), where agencies optimize the metric rather than the underlying objectives?",
+      "resolution_mechanism": "Analysis of agency incentive structures, performance evaluation criteria, and resource allocation patterns. Interview data on agency staff goals and success indicators.",
+      "impact": "If drift confirmed: theater ratio increases, extractiveness is maintained through metric theater rather than material processing necessity, and the piton classification is correct \u2014 function has atrophied but metric enforcement persists.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether apprehension rate metric has substituted for actual security goals"
+    },
+    {
+      "id": "enforcement_capacity_constraint",
+      "question": "What fraction of apprehension extraction results from genuine physical/legal capacity limits versus deliberate enforcement throttling based on political/budgetary objectives?",
+      "resolution_mechanism": "Comparative analysis across jurisdictions with different political contexts. Estimation of unused processing capacity during low-apprehension periods vs surge periods.",
+      "impact": "If primarily capacity constraint: the tangled rope and snare classifications reflect unavoidable coordination costs. If primarily political throttling: suppression is more contingent and the constraint is more purely extractive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether enforcement capacity or political choices drive apprehension rates"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.71
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Border apprehension rate constraints embody a fundamental tension between coordination necessity and extractive optimization. Governments must process migrant flows at borders \u2014 this is a genuine coordination problem requiring standardized procedures, resource allocation, and performance measurement. However, the metric used to measure this function (apprehension rates) has increasingly substituted for the underlying objectives (security, humanitarian capacity, effective intake processing). The constraint exhibits genuine mixed coordination (enforcement agencies standardize procedures, allocate resources across jurisdictions) alongside asymmetric extraction (migrants and humanitarian systems bear costs disproportionately to benefits received). The theater ratio (0.68) reflects that apprehension numbers are reported as performance indicators demonstrating political commitment to enforcement, with limited correlation to actual security outcomes or humanitarian effectiveness. The extractiveness trajectory (0.42 \u2192 0.58 over 15 years) indicates accumulation: initial coordination function has been layered with political performance pressure, metric gaming, and capacity extraction from humanitarian systems.",
+    "key_agents": [
+      "Apprehended Migrants: Primary victims (powerless/trapped) \u2014 face physical confinement, legal barriers, information asymmetry, economic dependency during processing",
+      "Humanitarian Systems: Secondary victims (powerless/trapped) \u2014 NGOs, legal aid, medical services, shelter networks bear demand costs without service refusal option",
+      "Border Communities: Mixed (moderate/constrained) \u2014 gain security infrastructure and enforcement employment; bear strain on services, schools, healthcare",
+      "Immigration Enforcement Agency: Primary beneficiary (institutional/arbitrage) \u2014 apprehension metrics fund operations, staff positions, budget justification, career advancement",
+      "Political Leadership: Secondary beneficiary (institutional/arbitrage) \u2014 apprehension statistics provide measurable performance, electoral accountability narrative, visible enforcement credibility",
+      "Analytical Observer: System perspective (analytical/analytical) \u2014 sees drift from coordination function toward pure metric performance and theater maintenance"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint creates asymmetric costs: migrants and humanitarian systems bear suppression and detention costs; enforcement agencies capture budget and career benefits. The original coordination function (processing migrants at borders) is real but increasingly subordinated to metric optimization. Suppression (0.65): High. Multiple suppression mechanisms: physical detention, legal barriers during processing, information asymmetry about rights, economic dependency, geographic isolation at borders, learned helplessness from previous crossing attempts. Theater ratio (0.68): High. Apprehension reporting emphasizes political performance and agency capability rather than outcomes (actual security improvements, humanitarian capacity enhancement, or successful integration). The gap between reported metrics and actual measured security outcomes indicates substitution of metric performance for real function. Claimed type (Tangled Rope): Genuine coordination function (standardized procedures, resource allocation) exists alongside asymmetric extraction (migrants detained, humanitarian systems strained). Requires active enforcement (border operations are highly staffed and intensive).",
+    "perspectival_gap": "The constraint produces divergent classifications across perspectives due to differential power and exit options. Apprehended migrants (powerless/trapped) experience maximum extraction with minimal coordination benefit \u2014 snare classification. Enforcement agencies (institutional/arbitrage) experience coordination and career benefits \u2014 rope classification. Border communities (moderate/constrained) experience mixed benefits and costs \u2014 tangled rope. Humanitarian systems (powerless/trapped) experience pure extraction with no exit \u2014 snare. Political leadership (institutional/arbitrage) experience metric utility and electoral benefits \u2014 rope. The analytical observer (civilizational scope) sees that the original coordination function has been degraded and largely replaced by metric theater \u2014 piton classification. The perspectival gap reveals that the constraint simultaneously functions as coordination (for beneficiaries), extraction (for victims), and theater (for measurement systems).",
+    "directionality_logic": "Beneficiaries (enforcement_agency, political_leadership) are institutional actors with arbitrage exit options \u2014 they can reallocate enforcement effort or policy focus with minimal cost. Structural derivation produces low directionality (d \u2248 0.15-0.20 for arbitrage institutional) and negative effective extraction from their perspective \u2014 they benefit. Victims (migrant_communities, humanitarian_capacity) are trapped or powerless with no exit options \u2014 they cannot reduce enforcement demand or refuse service. Structural derivation produces high directionality (d \u2248 0.90-0.95 for trapped powerless) and high effective extraction from their perspective. Border communities are constrained (moderate cost to relocate) and mixed (both benefit and cost) \u2014 they experience moderate directionality (d \u2248 0.55-0.65). The suppression value (0.65) applies equally across all perspectives \u2014 it is a structural property of the constraint, not scaled by power or scope. Only effective extraction (chi) is scaled by f(d) and \u03c3(S).",
+    "mandatrophy_analysis": "The apprehension rate constraint resolves mandatrophy by showing how a single metric can sustain multiple structurally distinct constraint types depending on perspective. The snare perspective (trapped victims) is the authentic structural reality \u2014 migrants experience maximum extraction with suppression and no exit. The rope perspective (institutional beneficiaries) is also structurally valid \u2014 they genuinely coordinate and benefit. The piton perspective (analytical/civilizational) reveals that the original coordination function has been substantially replaced by metric theater and performance reporting. The tangled rope classification (claimed type) correctly identifies that genuine coordination exists (standardized procedures, resource allocation) alongside genuine asymmetric extraction (migrant suppression, humanitarian strain). The mandatrophy is resolved by recognizing that all four perspectives are simultaneously true: the constraint IS a coordination mechanism AND an extraction mechanism AND a performance theater \u2014 the debate about which is 'real' mistakes the structure for a classification error. The theater ratio (0.68) and rising extractiveness trajectory (0.42 \u2192 0.58) together indicate Goodhart drift: the metric has increasingly substituted for the underlying coordination function."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "migrant_detention_facility_capacity",
+      "humanitarian_service_funding_adequacy",
+      "asylum_processing_speed_bottleneck"
+    ],
+    "dual_formulation_note": "Border apprehension rates represent a constraint family decomposable into: (1) apprehension_rates as metric performance (this story, \u03b5=0.58, Tangled Rope), (2) actual_border_security_outcomes as coordination problem (\u03b5=0.15, Rope \u2014 genuine security coordination with low extraction), (3) migrant_suppression_mechanism as pure extraction (\u03b5=0.78, Snare \u2014 the human cost of enforcement). The high extractiveness value (0.58) reflects the metric-level constraint; actual security coordination is lower extraction."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

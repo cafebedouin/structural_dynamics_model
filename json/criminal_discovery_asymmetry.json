@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "criminal_discovery_asymmetry",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "crda"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Criminal Discovery Asymmetry in Adversarial Justice",
+    "topic_domain": "law/criminal_procedure/institutional_asymmetry",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "prosecution_state_apparatus"
+    ],
+    "victims": [
+      "defendant_access_to_exculpatory_evidence",
+      "defense_resource_parity",
+      "trial_fairness_principle"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Indigent Defendant",
+      "comment": "PERSPECTIVE 1: INDIGENT DEFENDANT (SNARE) \u2014 Structurally trapped: cannot exit the criminal process, cannot afford private counsel with investigative resources, cannot compel discovery or challenge suppression without legal expertise. Bears maximum extraction: denied access to exculpatory evidence, faces conviction based on incomplete information, constrained by state resource asymmetry. The constraint operates as pure extraction with minimal coordination benefit \u2014 the defendant experiences only the coercive machinery."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Adequately Resourced Defendant",
+      "comment": "PERSPECTIVE 2: ADEQUATELY RESOURCED DEFENDANT (TANGLED ROPE) \u2014 Constrained by legal risk and costs but has resources to hire investigators, discovery specialists, and appellate counsel. Can partially access exculpatory evidence through discovery motions and expert analysis. Experiences genuine coordination (adversarial process functions when both sides can participate) alongside asymmetric extraction (prosecution retains investigative and withholding advantages). Mixed structure: some extraction, some coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Prosecution State Apparatus",
+      "comment": "PERSPECTIVE 3: PROSECUTION STATE APPARATUS (ROPE) \u2014 Experiences the discovery asymmetry as coordination mechanism: the unequal information access enables state prosecutors to conduct efficient criminal investigation without the overhead of sharing all findings. Arbitrage exit: state can appeal to different jurisdictions, negotiate charges, or shift resources. Net beneficiary of the constraint \u2014 extraction flows toward state apparatus. From this perspective, the asymmetry solves a real coordination problem: investigative resource concentration and prosecutorial discretion."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Criminal Defense Bar and Reform Movement",
+      "comment": "PERSPECTIVE 4: CRIMINAL DEFENSE BAR AND REFORM MOVEMENT (SCAFFOLD) \u2014 Organized agents (public defender associations, innocence projects, criminal justice reform coalitions) perceive discovery asymmetry as a temporary institutional failure with a sunset. Brady and Giglio precedents establish reciprocal discovery obligations; digital evidence preservation, open-source forensics, and prosecutorial discipline mechanisms create pathways toward parity. Reform organizations see the asymmetry as a degraded state of an otherwise viable system, with structural solutions emerging: open case files, conviction integrity units, data exoneration databases. Constrained by legal precedent but have agency through legislation and norm-setting."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Discovery Disclosure Ritual",
+      "comment": "PERSPECTIVE 5: DISCOVERY DISCLOSURE RITUAL (PITON) \u2014 The formal discovery process (Brady disclosures, discovery rules, prosecutor obligations) is substantially performative. Prosecutors can comply with discovery rules while withholding exculpatory evidence through classification, discretionary framing ('not material'), or simple delay. The ritual persists through institutional inertia \u2014 court calendars, practice habits, bar association training \u2014 despite low functional effectiveness at equalizing information access. High theater: formal compliance without substantive parity. Primary function has atrophied (ensuring fair trial) while the ritual form remains."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some investigative asymmetry may appear inherent to the criminal justice structure itself: the state has subpoena power, arrest authority, and forensic resources that private defendants cannot replicate. Information asymmetry could be naturalized as an immutable structural feature of state-vs-individual dynamics. However, the structural data contradicts this mountain classification \u2014 empirical examples of more equitable discovery systems (Japan, Germany, many Commonwealth jurisdictions) demonstrate that investigative asymmetry is contingent, not immutable. The mountain framing naturalizes a particular institutional choice, not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "exculpatory_materiality_definition",
+      "question": "What standard determines whether withheld evidence is materially exculpatory? Does the Giglio/Brady materiality threshold enable prosecutors to withhold evidence that would change outcomes in specific cases?",
+      "resolution_mechanism": "Empirical analysis of case outcomes when withheld evidence is later disclosed; comparison of conviction rates under different materiality standards across jurisdictions; DNA exoneration database correlation with discovery violations",
+      "impact": "If materiality threshold is too high: prosecutors can withhold evidence under color of compliance, maintaining asymmetry. If threshold is lower: discovery obligations meaningfully constrain state advantage.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Materiality standard for exculpatory evidence disclosure"
+    },
+    {
+      "id": "prosecutorial_discipline_effectiveness",
+      "question": "Do existing disciplinary mechanisms (bar sanctions, case dismissal, Brady sanctions) actually deter prosecutorial discovery violations, or are penalties too weak relative to the extraction benefit?",
+      "resolution_mechanism": "Analysis of prosecutor discipline records; correlation between penalty severity and violation frequency; comparison of jurisdictions with strong vs weak discovery enforcement",
+      "impact": "If discipline is ineffective: extraction mechanism persists despite formal rules. If effective: constraint may be transitioning from Snare to Scaffold as enforcement improves.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether prosecutorial discipline mechanisms deter discovery violations"
+    },
+    {
+      "id": "resource_parity_threshold",
+      "question": "What level of defense resource investment achieves meaningful discovery parity with prosecution, and what percentage of defendants can afford it?",
+      "resolution_mechanism": "Cost accounting of adequate defense investigation; correlation between defense spending and trial outcomes; accessibility analysis of public defender funding vs private counsel spending",
+      "impact": "If parity requires high spending: discovery asymmetry persists as class-based extraction. If parity is achievable with moderate spending: reform mechanisms could address through public defender funding.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Resource investment required for discovery parity"
+    },
+    {
+      "id": "plea_pressure_mechanism",
+      "question": "To what degree does discovery asymmetry function as a plea-bargaining coercion mechanism? Do defendants accept guilty pleas because they cannot assess the evidence against them rather than because the evidence is strong?",
+      "resolution_mechanism": "Comparative analysis of plea rates under different discovery regimes; defendant interviews on plea decision factors; study of outcomes when defendants gain full discovery access before plea negotiations",
+      "impact": "If discovery asymmetry drives plea coercion: constraint mechanism is primarily extractive suppression, not legitimate prosecution coordination. If plea decisions are independent of discovery access: extraction component is lower than measured.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether discovery asymmetry functions as plea coercion mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Criminal discovery asymmetry in adversarial justice systems creates a structural tension between the state's investigative authority and the defendant's right to access exculpatory evidence. The prosecution possesses institutional advantages in evidence gathering (subpoena power, forensic resources, law enforcement access), evidence analysis (crime laboratories, expert networks), and evidence withholding (prosecutorial discretion, classification authority). The defendant, especially if indigent, cannot match these investigative resources and depends on the state to provide access to exculpatory evidence through discovery obligations. This constraint exhibits characteristics of a Tangled Rope: genuine coordination need exists (adversarial process requires both sides to present evidence for truth-seeking) alongside asymmetric extraction (prosecution benefits from information advantage and can withhold evidence under weak materiality standards). The theater ratio reflects that formal discovery compliance (Brady disclosures, discovery rules) creates the appearance of fairness without ensuring information parity \u2014 prosecutors can comply formally while withholding substantively through classification, timing, or materiality disputes. The constraint's extractiveness has increased over the measurement interval as case complexity has grown and public defender funding has stagnated relative to prosecution resources.",
+    "key_agents": [
+      "Prosecution State Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 retains investigative advantage, evidence-withholding discretion, and prosecutorial charging leverage",
+      "Indigent Defendant: Primary victim (powerless/trapped) \u2014 cannot afford investigative resources, cannot compel discovery, constrained by state information asymmetry",
+      "Adequately Resourced Defendant: Secondary victim (moderate/constrained) \u2014 can hire investigators and challenge discovery but faces higher costs and legal risk than prosecution",
+      "Trial Fairness Principle: Structural victim (powerless/trapped) \u2014 abstract ideal of adversarial truth-seeking that cannot organize or exit; undermined by asymmetric evidence access",
+      "Defense Resource Parity: Victim category (powerless/trapped) \u2014 practical goal of ensuring defendants can assess evidence against them; constrained by funding and expertise asymmetry",
+      "Criminal Defense Bar: Organized reform agent (organized/constrained) \u2014 advocates for discovery reform through Brady precedents, innocence projects, and conviction integrity mechanisms",
+      "Analytical Observer: Civilization view (analytical/analytical) \u2014 risks naturalizing prosecutorial advantage as inherent to state-individual dynamics rather than institutional design choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The prosecution captures significant extraction through information advantage, evidence withholding discretion, and plea bargaining leverage enabled by discovery asymmetry. However, the extraction is not absolute \u2014 defense counsel with adequate resources can access substantial evidence through discovery motions, expert analysis, and appeals. The asymmetry is structural rather than total. Suppression (0.68): Moderate-high. Significant barriers to defense access include: resource requirements for independent investigation, discovery rules that enable prosecutorial withholding under materiality standards, case complexity outpacing public defender capacity, and plea pressure that forecloses trial where discovery gaps would become visible. But suppression is not total \u2014 appellate review, Brady precedents, and reform organizations are reducing barriers. Theater ratio (0.64): Moderate-high. Formal discovery compliance (Brady disclosures, discovery scheduling orders, prosecutor certifications) creates appearance of fairness without ensuring substantive parity. Prosecutors can comply with discovery rules while withholding through classification, framing, or delay. The ritual persists through legal procedure and practice norms despite low functional effectiveness at equalizing evidence access.",
+    "directionality_logic": "The prosecution's structural position yields low directionality (d \u2248 0.15-0.25): beneficiary status with institutional power and arbitrage exit options means the state experiences negative effective extraction \u2014 the asymmetry flows toward the state as benefit. The indigent defendant's position yields high directionality (d \u2248 0.90-0.95): victim status with powerless position and trapped exit options (cannot exit the criminal process) means maximum experienced extraction \u2014 the asymmetry flows away from the defendant as cost. The adequately resourced defendant occupies a middle position (d \u2248 0.60-0.70): victim status but with constrained rather than trapped exit (can hire counsel, appeal) and moderate power (can pay for investigation). The discovery asymmetry creates perspectival gaps: the prosecution sees coordination (necessity of state efficiency), the defense bar sees a solvable temporary problem (scaffold with reform sunset), and the indigent defendant sees pure extraction with no escape.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival disagreement on type classification. The prosecution experiences the asymmetry as a coordination mechanism enabling efficient investigation \u2014 from their perspective, discovery rules balance the need to investigate without compromising ongoing cases. The adequately resourced defendant experiences mixed coordination and extraction \u2014 the adversarial process works when both sides have investigative resources, but the asymmetry still favors prosecution. The indigent defendant experiences pure extraction \u2014 they cannot assess evidence against them, cannot mount a defense, and face conviction based on incomplete information. The reform bar sees a degraded but solvable system: Brady precedents, innocence projects, and open-file policies represent a sunset for discovery asymmetry, with structural solutions emerging. The discovery ritual itself (formal Brady compliance, discovery scheduling) is largely performative \u2014 it creates legal appearance of fairness while allowing substantive withholding. The analytical observer risks naturalizing prosecutorial advantage as inherent to state power rather than a contingent institutional design choice.",
+    "mandatrophy_analysis": "Criminal discovery asymmetry resolves the mandatrophy by showing that classification depends entirely on the observer's structural position relative to the extraction flow and their power to shape outcomes. The prosecution's rope classification reflects genuine coordination need: adversarial truth-seeking requires both sides to present evidence. The indigent defendant's snare classification reflects structural reality: they cannot exit, cannot compel discovery, and bear full cost of information asymmetry. The scaffold perspective identifies real structural reform (open-file policies, conviction integrity units, prosecutorial discipline) that would reduce extraction as norms mature. The piton perspective correctly identifies performative compliance (formal discovery rules that enable informal withholding). The mountain perspective is a false summit: it naturalizes institutional choice (prosecutorial discretion, case complexity, resource inequality) as inherent to criminal justice rather than recognizing these as design variables subject to reform. The mandatrophy is not resolved by picking a single type but by recognizing that discovery asymmetry is genuinely a Tangled Rope \u2014 it coordinates adversarial truth-seeking while extracting from defendants with asymmetric resources."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "plea_bargaining_coercion",
+      "indigent_defense_underfunding",
+      "prosecutorial_discretion_concentration"
+    ],
+    "dual_formulation_note": "Criminal discovery asymmetry is structurally upstream of plea bargaining coercion (discovery asymmetry enables plea pressure) and prosecutorial discretion concentration (discovery asymmetry enables selective prosecution). Distinct from indigent defense underfunding (which is a separate resource allocation constraint) but causally linked: discovery asymmetry is worse when defense resources are scarce."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

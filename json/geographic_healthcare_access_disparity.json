@@ -1,0 +1,194 @@
+{
+  "header": {
+    "constraint_id": "geographic_healthcare_access_disparity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "geo_healthcare"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Geographic Healthcare Access Disparity",
+    "topic_domain": "health/economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "urban_healthcare_providers",
+      "pharmaceutical_companies",
+      "medical_equipment_distributors"
+    ],
+    "victims": [
+      "rural_populations",
+      "geographically_isolated_communities",
+      "low_income_mobile_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Rural Patient",
+      "comment": "PERSPECTIVE 1: RURAL PATIENT (SNARE) \u2014 Trapped in geographic location by employment, property ownership, family ties, or economic dependency. No viable exit options. Bears full cost of healthcare disparity: higher travel burden, delayed diagnoses, preventable mortality, lack of specialist access. Maximum experienced extraction with no alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Rural Healthcare Worker",
+      "comment": "PERSPECTIVE 2: RURAL HEALTHCARE WORKER (TANGLED ROPE) \u2014 Constrained by limited job opportunities outside healthcare, professional licensure tied to location, and cultural ties to community. Experiences genuine coordination problem (rural communities need local healthcare) alongside extraction (low reimbursement rates, long hours, limited specialist backup, workforce burnout). Benefits from coordination of care delivery and community trust, but bears asymmetric extraction through inadequate compensation and professional isolation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Urban Healthcare Providers and Hospital Systems",
+      "comment": "PERSPECTIVE 3: URBAN HEALTHCARE PROVIDERS (ROPE) \u2014 Primary beneficiaries. Experiences the constraint as coordination: concentration of resources in urban centers enables specialized care, teaching hospitals, and research infrastructure. Low extraction experienced because they control the allocation mechanism. Net beneficiary \u2014 extraction flows toward them. Arbitrage options available: can expand services, consolidate markets, or relocate operations."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Telemedicine and Digital Health Coalition",
+      "comment": "PERSPECTIVE 4: TELEMEDICINE AND DIGITAL HEALTH COALITION (SCAFFOLD) \u2014 Organized actors (telehealth platforms, community health networks, digital health startups) see the geographic disparity as a solvable coordination problem with technological sunset. Remote diagnosis, asynchronous specialist consultation, and distributed care coordination reduce the geographic extraction. Coalition has agency and exit strategy: digital infrastructure can eventually bypass traditional geographic constraints. Effective extraction decreases as digital pathways mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Rural Hospital System (Inertial Form)",
+      "comment": "PERSPECTIVE 5: RURAL HOSPITAL SYSTEM (PITON) \u2014 Many rural hospitals persist as institutional zombies: maintained through federal subsidies, regulatory protections, and community identity despite declining functionality. Theater ratio high (50-70%): staff spend time documenting compliance, maintaining accreditation, and navigating regulatory requirements that exceed actual service capacity. Primary function (provide local care) has atrophied; institutional shell persists through inertia. Arbitrage options exist but are constrained by community dependency and regulatory barriers to consolidation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Public Health Agencies and Policy Actors",
+      "comment": "PERSPECTIVE 6: PUBLIC HEALTH AGENCIES (TANGLED ROPE) \u2014 Organized institutional actors that both coordinate and extract. They coordinate genuine public health goals (universal access, disease prevention, equity) but simultaneously maintain extractive structures (reimbursement formulas that disadvantage rural providers, regulatory barriers to task-shifting, centralized procurement systems that increase rural costs). Constrained by budget cycles, political economy of healthcare systems, and institutional lock-in. Experience both the coordination function and asymmetric extraction simultaneously."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Structural View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational/global scope, geographic healthcare disparity is not natural or inevitable but a structural extraction mechanism maintained by political economy of healthcare markets. Capital concentration in urban centers, reimbursement structures that favor high-volume procedures, licensing regulations that restrict provider mobility, and market consolidation all actively create and sustain the disparity. The constraint classifies as snare from the analytical perspective: the extraction is neither incidental nor coordinate-dependent, but structurally central to how contemporary healthcare systems allocate resources and concentrate wealth."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "natural_vs_constructed_disparity",
+      "question": "Is the geographic healthcare disparity a natural consequence of population density and economic efficiency, or a constructed extraction mechanism?",
+      "resolution_mechanism": "Historical comparison of healthcare systems with different geographic allocation policies; analysis of countries with stronger rural healthcare investment and their outcomes; examination of whether disparity persists when reimbursement formulas are equalized",
+      "impact": "If natural: constraint classifies as Mountain (immutable feature of healthcare economics). If constructed: constraint classifies as Snare (extractive maintenance of disparity). Current evidence suggests constructed but with genuine coordination components.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether disparity is natural or constructed"
+    },
+    {
+      "id": "telehealth_true_capability",
+      "question": "Can telemedicine and digital health infrastructure genuinely replace geographic proximity for most healthcare functions, or are specialized/emergency functions irreducibly tied to physical location?",
+      "resolution_mechanism": "Comparative outcomes analysis: telehealth vs in-person for rural populations; identification of care functions that cannot be delivered remotely; analysis of whether digital infrastructure reduces mortality differentials",
+      "impact": "If capable: scaffold perspective is accurate, sunset is real. If limited: telehealth provides marginal improvement but does not resolve the core geographic constraint. Current data suggests mixed: effective for chronic disease management and specialist consultation, inadequate for emergency surgery, trauma, and complex in-person diagnostics.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether telemedicine can replace geographic proximity"
+    },
+    {
+      "id": "extraction_or_rational_allocation",
+      "question": "Do economies of scale and specialization justify resource concentration in urban centers, or does the allocation mechanism extract beyond rational efficiency?",
+      "resolution_mechanism": "Cost-benefit analysis of urban concentration vs distributed capacity; examination of whether concentrated systems achieve better health outcomes per capita; identification of where concentration increases costs without improving outcomes",
+      "impact": "If rational: constraint is coordination problem with minor extraction overhead (Rope). If excessive: constraint is primarily extractive with efficiency justifications as cover (Tangled Rope or Snare). Evidence suggests both: some concentration is efficient, but current levels exceed efficiency gains and include extractive elements.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether concentration allocation is rational or extractive"
+    },
+    {
+      "id": "suppression_mechanism_identity_lock",
+      "question": "Is rural healthcare access disparity suppressed primarily through material barriers (cost, distance, equipment), structural barriers (licensing, reimbursement), or internalized acceptance (rural populations accepting healthcare inequality as inevitable)?",
+      "resolution_mechanism": "Survey data on rural population health literacy and expectations; analysis of rural activism for healthcare access vs acceptance; longitudinal tracking of suppression levels when material barriers are removed",
+      "impact": "If material/structural: removing barriers changes outcomes. If internalized: rural populations may not seek access even when barriers are removed. True suppression likely combines all three \u2014 material barriers create conditions for internalized acceptance, which reinforces structural barriers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Suppression mechanism: material, structural, or internalized"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Geographic healthcare access disparity refers to the structural gap between healthcare availability and quality in urban vs rural regions. This constraint operates as a hybrid coordination-extraction mechanism: genuine coordination problems exist (rural communities need local healthcare, economies of scale justify some concentration), but the allocation system simultaneously extracts from rural populations through reimbursement structures, licensing restrictions, regulatory burdens, and market consolidation that preserve geographic inequality. The disparity is not immutable (it varies dramatically across countries with different healthcare policies) nor is it incidental (it is actively maintained by institutional mechanisms). The constraint exhibits all perspectives from snare (for trapped rural patients with no exit) to rope (for urban beneficiaries) to scaffold (for digital health alternatives with sunset logic). The theater ratio (0.55) reflects that rural healthcare systems spend significant effort maintaining compliance and institutional legitimacy despite declining functional capacity \u2014 many rural hospitals are inertially maintained through subsidies and regulatory protection rather than genuine service provision.",
+    "key_agents": [
+      "Rural Patients: Primary victim (powerless/trapped) \u2014 geographically immobilized by employment, family, or property; bear full cost of disparity through delayed care, preventable mortality, and travel burden",
+      "Rural Healthcare Workers: Secondary victim (moderate/constrained) \u2014 constrained by limited job mobility and professional ties; experience genuine coordination (communities need care) alongside extraction (inadequate compensation, isolation, burnout)",
+      "Urban Healthcare Providers: Primary beneficiary (institutional/arbitrage) \u2014 concentrate resources, capture specialist market, control allocation mechanisms; experience constraint as coordination rather than extraction",
+      "Telemedicine Coalition: Organized alternative actors (organized/mobile) \u2014 building technological pathways to bypass geographic constraints; represent sunset mechanism",
+      "Rural Hospital Systems: Inertial institutional forms (institutional/arbitrage) \u2014 maintain zombie functionality through subsidies and regulatory protection; high theater ratio indicating degraded primary function",
+      "Public Health Agencies: Coordinating institutions (organized/constrained) \u2014 simultaneously coordinate public health goals and maintain extractive allocation structures; locked into budget cycles and political economy"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts from rural populations through multiple mechanisms: (1) reimbursement formulas that provide less revenue per capita to rural providers, (2) licensing and regulatory barriers that restrict provider mobility, (3) pharmaceutical/medical device supply chains optimized for urban economies of scale, (4) concentration of specialized care and research infrastructure in urban centers. The extraction is systematic rather than accidental \u2014 it emerges from healthcare market structures and is maintained by institutional incentives. However, extraction is not total because some coordination functions are genuine (economies of scale are real, specialization requires concentration, some geographic variation is efficient). Suppression (0.68): High. Multiple suppression mechanisms operate: (1) material barriers (distance, travel cost, time burden), (2) structural barriers (reimbursement limits rural provider supply, licensing restricts task-shifting, regulatory compliance burden exceeds rural hospital capacity), (3) internalized acceptance (rural populations often accept healthcare inequality as inevitable), (4) political economy (rural areas have less political power to demand resource allocation). Theater ratio (0.55): Moderate. Rural healthcare systems spend significant effort on compliance documentation, accreditation maintenance, and regulatory navigation that exceeds their functional capacity. Many rural hospitals persist as institutional shells through subsidies rather than service viability. However, theater is not dominant (>0.70) because actual care delivery still occurs \u2014 the zombie hospitals do provide services, just inadequately. The theater has increased over the interval (0.38 \u2192 0.55) as regulatory complexity increased without corresponding capacity growth.",
+    "perspectival_gap": "Maximum gap between powerless victim (Snare) and institutional beneficiary (Rope). The victim experiences the constraint as purely extractive with no coordination benefit. The beneficiary experiences coordination (solving the genuine problem of specialization and economy of scale). The gap reveals that the classification depends entirely on structural position: are you bearing costs without benefits (Snare), or capturing benefits while externalizing costs (Rope)? The rural patient cannot see the coordination function because they only experience extraction. The urban provider cannot see the extraction because they only experience coordination. The analytical observer can see both: coordination functions are real, but they are asymmetrically distributed \u2014 benefits concentrate in urban centers while costs concentrate in rural areas.",
+    "directionality_logic": "Each perspective's directionality (d) is derived from power level, exit options, and structural relationship to extraction flow. Trapped rural patients with no exit (d \u2248 0.95) experience maximum f(d) \u2248 1.42, producing high experienced extraction (\u03c7 \u2248 0.82). Urban institutional beneficiaries with arbitrage options (d \u2248 0.05) experience negative f(d) \u2248 -0.12, producing negative \u03c7 \u2014 they see the system as enabling rather than extracting. Constrained rural healthcare workers (d \u2248 0.75) experience moderate f(d) \u2248 1.15. Organized actors with mobile options (d \u2248 0.60) experience moderate f(d) \u2248 0.75. The directionality derivation captures how institutional position determines experienced extractiveness: the same constraint system produces vastly different \u03c7 values depending on whether the agent is trapped, constrained, or has arbitrage options.",
+    "mandatrophy_analysis": "STRUCTURE: This constraint resolves the mandatrophy by showing that geographic healthcare disparity operates as a genuine tangled rope \u2014 it coordinates real functions (specialization, economies of scale, research infrastructure) while simultaneously extracting from dispersed populations (rural patients, rural workers) through institutional mechanisms that preserve geographic inequality. The constraint is neither pure coordination (rope) nor pure extraction (snare), but a hybrid where coordination and extraction are inseparable. BENEFICIARY-VICTIM: Urban healthcare providers and specialized facilities benefit from concentration (capturing specialist market, economies of scale, research funding concentration). Rural populations bear costs (delayed care, preventable mortality, higher out-of-pocket burden, professional isolation for rural workers). PUBLIC HEALTH COORDINATION: The coordination function is real \u2014 concentrating specialized care improves outcomes for complex cases, reduces per-case costs for high-volume procedures, enables research infrastructure and teaching. However, this coordination is not the only possible arrangement: countries with more distributed healthcare systems (Germany's regional hospital networks, Japan's distributed specialist capacity, Cuba's community health worker model) achieve comparable or better outcomes while reducing geographic extraction. INSTITUTIONAL ENFORCEMENT: The constraint is actively enforced through reimbursement formulas, licensing regulations, and market consolidation \u2014 it is not a passive outcome of efficiency. This active enforcement distinguishes Tangled Rope (requires enforcement) from Rope (self-sustaining coordination). SUNSET TEST: The constraint shows no sunset trajectory. Unlike scaffolds, which have explicit sunset clauses and declining theater ratios, geographic healthcare disparity has stable or increasing extraction over time. The telemedicine coalition represents a potential sunset mechanism, but current evidence suggests this will create a hybrid (some telehealth for routine care, continued geographic concentration for specialized/emergency) rather than full replacement. THEATER: Moderate but rising (0.55), indicating some performative elements in rural hospital maintenance but not dominant dysfunction. Theater is lower than piton thresholds because rural hospitals do provide actual care, albeit inadequately."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "healthcare_workforce_brain_drain",
+      "rural_hospital_closure_cascade",
+      "maternal_mortality_geographic_gap"
+    ],
+    "dual_formulation_note": "Geographic healthcare access disparity decomposes into multiple constraint families: (1) resource allocation disparity (\u03b5=0.58, Tangled Rope) \u2014 this story; (2) healthcare workforce brain drain (\u03b5=0.62, Snare) \u2014 incentive structure pulling healthcare workers from rural areas; (3) rural hospital closure cascade (\u03b5=0.51, Tangled Rope) \u2014 institutional feedback loop where low reimbursement causes closures which increase disparity which reduces reimbursement; (4) maternal mortality geographic gap (\u03b5=0.72, Snare) \u2014 specific health outcome disparity with irreducible geographic component. Each has different \u03b5 and requires separate analysis, but all are downstream of the underlying geographic allocation structure."
+  },
+  "directionality_overrides": []
+}

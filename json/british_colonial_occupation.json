@@ -1,0 +1,194 @@
+{
+  "header": {
+    "constraint_id": "british_colonial_occupation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.85,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "British Colonial Occupation and Extractive Governance",
+    "topic_domain": "political/economic/historical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "british_crown",
+      "colonial_trading_companies",
+      "settler_colonists"
+    ],
+    "victims": [
+      "indigenous_populations",
+      "colonized_territories",
+      "local_economies"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Indigenous Population Under Occupation",
+      "comment": "PERSPECTIVE 1: INDIGENOUS POPULATIONS (SNARE) \u2014 Trapped by military occupation, legal prohibition of resistance, economic dependency created through land seizure and taxation, and suppression of alternative social structures. No exit options available. Maximum extraction \u2014 resources, labor, and sovereignty extracted without corresponding benefits. Suppression maintained through coercive force and institutional control."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Local Colonial Administrator",
+      "comment": "PERSPECTIVE 2: LOCAL COLONIAL ADMINISTRATOR (TANGLED ROPE) \u2014 Constrained by career dependence on empire and limited independent power. Experiences both coordination (maintaining order, infrastructure) and extraction (enforcing unfair taxation, suppressing dissent). Has some agency through administrative role but cannot fundamentally alter the system. Moderate to high extraction relative to their power level."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "British Crown and Trading Companies",
+      "comment": "PERSPECTIVE 3: BRITISH CROWN AND TRADING COMPANIES (ROPE) \u2014 Experiences occupation as pure coordination and governance structure. Net beneficiary through trade monopolies, resource extraction, and territorial expansion. High arbitrage capacity \u2014 can deploy capital, withdraw investment, or reallocate governance structure. Extraction flows toward these actors; they perceive the system as solving collective action problems (trade standardization, territorial control)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Colonial Administrative Apparatus",
+      "comment": "PERSPECTIVE 4: COLONIAL ADMINISTRATIVE APPARATUS (PITON) \u2014 The elaborate bureaucratic structure (viceroys, district officers, census systems, legal codes) maintains theater of legitimacy and rational governance. Much of this apparatus is performative: formal equality before colonial law that masks extraction, census classifications that serve taxation rather than justice, legal codes borrowed from British common law but deployed for occupation. Institutional inertia maintains the apparatus after its extractive function is questioned."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Naturalizing Rhetoric of Civilization",
+      "comment": "PERSPECTIVE 5: NATURALIZING RHETORIC (FALSE SUMMIT) \u2014 Metropolitan observers and the occupation's ideological defenders frame occupation as an immutable feature of global hierarchies: 'some peoples are civilized, others require civilizing'; 'occupation is the natural order of international power'; 'extraction benefits the colonized through development.' This perspective mistakes a contingent institutional arrangement (enforced extraction backed by military power) for a natural law. The false summit reveals how naturalizing rhetoric disguises snare as mountain."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Organized Resistance Movements",
+      "comment": "PERSPECTIVE 6: ORGANIZED RESISTANCE (SNARE) \u2014 Indigenous and local organized groups face maximum extraction and suppression despite organizational capacity. Military asymmetry, international non-interference norms, and imperial control of communication channels constrain exit options from 'trapped' to 'constrained.' The constraint is Snare, not Mountain, because it is contingent \u2014 withdrawal of military occupation would change the classification immediately."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "implicit_consent_illusion",
+      "question": "Is the suppression of dissent a mechanism for maintaining legitimacy or evidence that the occupation lacks genuine consent?",
+      "resolution_mechanism": "Analysis of what dissent occurs when suppression mechanisms are removed (independence movements post-WWII); comparison of support for occupation in suppressed vs non-suppressed populations",
+      "impact": "If suppression reveals overwhelming opposition: confirms snare classification. If genuine support exists under suppression: suggests tangled_rope with misclassified dissent.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether suppression masks lack of genuine consent"
+    },
+    {
+      "id": "development_claim_validity",
+      "question": "Do the infrastructure investments (roads, ports, schools) in occupied territories represent genuine coordination benefits or mechanisms to facilitate extraction?",
+      "resolution_mechanism": "Cost-benefit analysis of infrastructure investment vs resource extraction; analysis of infrastructure design (does it serve local population or extraction logistics?); comparison with investment rates in equivalent British domestic territories",
+      "impact": "If benefits genuinely exceed extraction: reclassify as Tangled Rope. If infrastructure serves extraction: confirms Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether colonial infrastructure development justifies extraction claims"
+    },
+    {
+      "id": "alternative_trajectory_counterfactual",
+      "question": "What would have been the development path of colonized territories absent occupation?",
+      "resolution_mechanism": "Comparison with non-colonized territories at similar development stages; analysis of pre-occupation economic structures and technological adoption rates; reconstruction of indigenous institutional capacity",
+      "impact": "If occupied territories developed slower than non-colonized equivalents: strengthens snare classification. If development was accelerated: suggests tangled rope framing has merit.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Counterfactual development trajectory without occupation"
+    },
+    {
+      "id": "settler_colonial_sublayer",
+      "question": "Does settler-colonial extraction (land seizure, demographic replacement) represent a separate constraint or intensification of occupation extraction?",
+      "resolution_mechanism": "Structural analysis of settler vs non-settler occupations; measurement of extraction rates in settler-dominant vs trader-dominant colonies; analysis of indigenous population displacement patterns",
+      "impact": "If separate: create new constraint story for settler_colonial_land_seizure. If intensification: settler dynamics raise extractiveness floor for occupation constraint.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether settler colonialism is distinct from occupation extraction"
+    },
+    {
+      "id": "post_independence_institutional_inheritance",
+      "question": "Do newly independent states inherit colonial institutional structures that continue extraction even after formal sovereignty is restored?",
+      "resolution_mechanism": "Analysis of post-independence institutional continuity (legal codes, bureaucratic structure, economic dependency); measurement of extraction flow persistence post-independence; comparison of institutional design choices in countries that retained vs rejected colonial structures",
+      "impact": "If inheritance is substantial: create new constraint story for colonial_institutional_persistence. This reveals that occupation constraint has a temporal shadow extending beyond formal end of occupation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Institutional inheritance of colonial extraction post-independence"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.81
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "British colonial occupation created a systematic extraction mechanism operating across multiple geographic and temporal scales. The constraint combines military coercion, legal frameworks designed to concentrate extraction, and elaborate rhetorical naturalization that frames occupation as civilization, governance, or inevitable hierarchy. The occupied territories faced suppression of alternative institutions, forced economic integration into British trade networks, and extraction of resources and labor without reciprocal benefit. The extractiveness increased over the interval as imperial bureaucracy elaborated mechanisms to capture more territory and deepen resource extraction. Theater ratio increased significantly as the occupation developed more elaborate administrative and cultural justifications (civil service examinations, legal codes, 'civilizing mission' rhetoric) while the actual extraction mechanisms remained coercive. The constraint demonstrates how extractive systems deploy coordination language (infrastructure development, standardized law, rational administration) to disguise and legitimize snare mechanisms.",
+    "key_agents": [
+      "Indigenous Populations: Primary victims (powerless/trapped) \u2014 face military occupation, legal prohibition of independent governance, economic seizure through taxation and land dispossession, and cultural suppression",
+      "British Crown and Trading Companies: Primary beneficiaries (institutional/arbitrage) \u2014 capture monopoly profits from trade, territorial sovereignty, resource extraction, and labor control; can reallocate investment or withdraw governance at will",
+      "Colonial Administrators: Secondary actors (moderate/constrained) \u2014 implement extraction mechanisms; constrained by career dependence but have some local discretion; experience mixed coordination and extraction",
+      "Settler Colonists: Secondary beneficiaries (powerful/mobile) \u2014 benefit from land seizure and labor access; have more power than indigenous populations but less than metropolitan authority",
+      "Organized Resistance Movements: Organized victims (organized/constrained) \u2014 face maximum suppression despite organizational capacity; military asymmetry prevents exit",
+      "Naturalizing Rhetorical Frame: Ideological apparatus (analytical/analytical) \u2014 presents occupation as natural law or inevitable development; false summit masks contingent extraction system"
+    ],
+    "logic_rationale": "Extractiveness (0.78): Very high. The occupation systematically extracts resources (minerals, agricultural products, trade monopolies), labor (taxation, corv\u00e9e labor, indentured servitude), and sovereignty (political power concentrated in British hands). The extraction is asymmetric \u2014 resources flow to Britain while costs are borne by colonized populations. Suppression (0.85): Very high. Indigenous governance structures are prohibited. Dissent is met with military force. Alternative economic institutions are suppressed to enforce trade monopoly. Legal codes forbid resistance. Mobility is restricted through pass systems and border controls. The population is trapped with no legitimate exit. Theater ratio (0.68): High and increasing. The occupation deployed elaborate administrative structures (civil service, legal codes, census systems) that presented occupation as rational governance rather than extraction. Colonial rhetoric emphasized 'civilizing mission,' 'development,' and 'orderly administration' while these served extraction. The theater ratio increased over time as the bureaucratic apparatus became more elaborate and refined its legitimating narratives.",
+    "perspectival_gap": "This constraint's perspectival gap is between those with exit options and those without. The beneficiary perspective (Rope) sees occupation as coordination because they can exercise arbitrage \u2014 deploy capital elsewhere, adjust trade terms, withdraw governance if unprofitable. The victim perspective (Snare) sees occupation as pure extraction because they cannot exit \u2014 their mobility is restricted, alternative livelihoods are prohibited, and coercive power ensures compliance. The administrator's perspective (Tangled Rope) is intermediate \u2014 they have some agency through their role but are ultimately constrained by their dependence on the occupation system. The analytical perspective risks naturalizing occupation as an immutable feature of international hierarchies (false summit), which the structural data contradicts \u2014 withdrawal of military enforcement would change the classification immediately.",
+    "directionality_logic": "Directionality values (d) are derived from beneficiary/victim status and exit options. Occupied populations have no exit (trapped) and bear all extraction costs (victims) \u2192 d approaches 1.0 \u2192 maximum f(d) \u2192 highest experienced extractiveness. British institutions have full arbitrage capacity (can withdraw, reallocate, reduce extraction) and are beneficiaries \u2192 d approaches 0.0 \u2192 negative f(d) \u2192 negative experienced extractiveness (net benefit). Administrators are constrained (career dependence on occupation system) but have some discretion \u2192 d \u2248 0.5-0.6 \u2192 moderate f(d) \u2192 moderate experienced extraction. Organized resistance has constrained exit (organizational capacity is meaningless against military asymmetry) and victim status \u2192 d \u2248 0.85 \u2192 high f(d). The directionality derivation reveals that power asymmetry is the key structural determinant: the occupying power has exit options (can leave); the occupied population does not.",
+    "mandatrophy_analysis": "RESOLVED: The mandatrophy is resolved by recognizing that the six perspectives represent genuine structural positions relative to the extraction mechanism, not alternative framings of a single underlying claim. The beneficiary's Rope is not a 'true' classification that reframing would reveal \u2014 it is their genuine experience of a system that generates stable profit from coordinated trade. The victim's Snare is their genuine experience of a system that extracts without reciprocal benefit and prohibits exit. The administrator's Tangled Rope is their genuine experience of a system that requires some coordination work but serves extraction. The resistance movement's Snare (constrained variant) reflects the structural reality that organization cannot overcome military asymmetry. The false summit reveals that naturalizing rhetoric mistakes contingency (occupation is maintained by military force) for necessity (occupation reflects natural hierarchy). The mandatrophy demonstrates that classification depends on structural position \u2014 there is no single 'true' type, only perspectival truths relative to indexed positions. This is precisely the design of indexical classification: different agents genuinely experience the same constraint differently because they occupy different structural positions within it."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "colonial_resource_extraction",
+      "settler_colonial_land_seizure",
+      "colonial_institutional_persistence"
+    ],
+    "dual_formulation_note": "British colonial occupation is an upstream constraint that affects downstream mechanisms: resource extraction targeting (separate story), settler colonialism in specific territories (separate story), and post-independence institutional inheritance (separate story). Each downstream constraint has its own extractiveness value reflecting its specific mechanism; occupation is the structural prerequisite enabling all three."
+  },
+  "directionality_overrides": []
+}

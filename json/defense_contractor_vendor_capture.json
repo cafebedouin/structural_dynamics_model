@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "defense_contractor_vendor_capture",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dvc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Defense Contractor Vendor Capture and Supply Chain Lock-in",
+    "topic_domain": "defense/procurement/industrial_organization",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_defense_contractors",
+      "qualified_vendor_oligopoly"
+    ],
+    "victims": [
+      "military_procurement_efficiency",
+      "competing_vendors",
+      "taxpayers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The New Vendor Competitor",
+      "comment": "PERSPECTIVE 1: NEW VENDOR COMPETITOR (SNARE) \u2014 Cannot exit the qualification barrier; faces sunk costs in compliance infrastructure with no guarantee of access. Qualification processes, security clearances, technical certifications, and bonding requirements create a captured market where entrants cannot credibly exit. Experiences maximum extraction through artificially high barrier rents captured by incumbents."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Competing Vendor Coalition",
+      "comment": "PERSPECTIVE 2: COMPETING VENDOR COALITION (TANGLED ROPE) \u2014 Organized groups of non-incumbents benefit from the procurement system's coordination function (standardized specifications, transparent requirements, known timelines) while bearing extraction through qualification gatekeeping and preference for incumbents. Can coordinate within submarkets and sometimes challenge incumbent dominance through legislative/regulatory channels, but faces significant barriers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Incumbent Defense Contractor",
+      "comment": "PERSPECTIVE 3: INCUMBENT DEFENSE CONTRACTOR (ROPE) \u2014 Primary beneficiary with strong exit options through subsidiary networks and work-around contracts. Experiences the constraint as pure coordination: supplier relationships, technical standards, and procurement schedules enable efficient supply chain management. Benefits from qualification lock-in without bearing its costs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Military Procurement Authority",
+      "comment": "PERSPECTIVE 4: MILITARY PROCUREMENT AUTHORITY (TANGLED ROPE) \u2014 Powerful actor with nominally mobile exit options (can change qualification standards, open new vendor categories, consolidate supply chains). Benefits from the coordination function (stable supplier relationships, known technical baselines, predictable availability). Bears extraction through locked supply chain costs, constrained competition driving up unit prices, and reduced ability to innovate through supplier diversity. Technically mobile but institutionally constrained by sunk relationships and congressional pressure."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Taxpayers and Procurement Efficiency",
+      "comment": "PERSPECTIVE 5: TAXPAYERS AND PROCUREMENT EFFICIENCY (SNARE) \u2014 Diffuse, powerless agent bearing the cost of vendor lock-in through inflated defense budgets. Cannot exit the extraction mechanism; benefits only indirectly if military capability is genuinely improved (contestable). Suppressed from organizing through information asymmetries and political disconnection from procurement details."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Qualification Ritual System",
+      "comment": "PERSPECTIVE 6: QUALIFICATION RITUAL SYSTEM (PITON) \u2014 The formal procurement architecture (FAR regulations, security clearance protocols, technical certifications) is partially performative. Many requirements persist not because they genuinely screen for capability but because changing them requires interagency coordination, congressional notification, and defense-industry consensus. The system is maintained through institutional inertia despite recognized opportunities for streamlining."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Acquisition Reform Coalition",
+      "comment": "PERSPECTIVE 7: ACQUISITION REFORM COALITION (SCAFFOLD) \u2014 Reform initiatives (modular procurement, category management, supplier diversity mandates) aim to reduce lock-in through structural sunset: as alternative supply chains mature and technical specifications become modular, the coordination function can be decoupled from incumbent dependency. Organized actors (small business advocates, Congress) see the constraint as temporary, solvable through policy reform with a clear exit pathway."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "security_clearance_necessity",
+      "question": "How much of the vendor qualification barrier reflects genuine security requirements vs. captured regulatory overhead?",
+      "resolution_mechanism": "Comparative analysis of security incident rates among cleared vs. unclearedcontractors; assessment of whether cleared-status requirements correlate with actual risk factors or serve as pure entry gatekeeping",
+      "impact": "If 80%+ genuine: qualification lock-in is justified coordination cost. If <50% genuine: lock-in is primarily extractive theater, supporting snare classification for entrants.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Legitimacy of security clearance barriers in qualification"
+    },
+    {
+      "id": "technical_modularity_trajectory",
+      "question": "Are defense procurement specifications becoming more modular and interoperable, enabling supplier switching, or consolidating around incumbent designs?",
+      "resolution_mechanism": "Longitudinal analysis of specification documents (5-10 year horizon); inventory of modular vs. bespoke component requirements; tracking of supplier switching costs over time",
+      "impact": "If modularity increasing: scaffold perspective is correct; vendor capture is temporary with visible sunset. If consolidating around incumbents: lock-in is structural and worsening; tangled rope is more stable than scaffold suggests.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Trajectory of technical specification modularity in defense procurement"
+    },
+    {
+      "id": "incumbent_efficiency_premium",
+      "question": "Do incumbent suppliers deliver measurable efficiency or capability gains that justify lock-in costs, or is the premium purely extractive rent?",
+      "resolution_mechanism": "Cost-benefit analysis comparing incumbent-only supply chains to counterfactual competitive scenarios; measurement of actual vs. theoretical cost trajectories; analysis of performance metrics (on-time delivery, quality, innovation)",
+      "impact": "If genuine efficiency premium exists: vendor capture provides real coordination value, supporting rope classification from military perspective. If no premium: extraction is pure, supporting snare classification for military authority and taxpayers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether incumbent vendors deliver efficiency gains or pure extraction"
+    },
+    {
+      "id": "congressional_rent_capturing",
+      "question": "To what extent are congressional district protections of incumbent vendors a structural feature of the constraint vs. an external political overlay?",
+      "resolution_mechanism": "Analysis of appropriations language, earmarks, and congressional district distribution of defense contracts; tracking of voting patterns on acquisition reform; interviews with congressional staff",
+      "impact": "If structural (built into FAR/DFARS): vendor capture is institutionally stabilized at civilizational scale. If overlay (political preference, not regulatory requirement): constraint could dissolve with congressional reorientation, supporting scaffold sunset logic.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Congressional role in stabilizing vendor capture"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Defense contractor vendor capture represents a structural constraint where military procurement processes create an oligopolistic supply chain lock-in mechanism. The system coordinates legitimate military supply chain requirements \u2014 standardization, security, technical interoperability, reliability \u2014 while simultaneously extracting rents from excluded competitors and taxpayers. The constraint exhibits both genuine coordination function (military requirements for stable, cleared suppliers) and systematic extraction (qualification barriers that exceed technical necessity, incumbent preference embedded in procurement culture, congressional protection of incumbent locations). The increasing extractiveness trajectory (0.42 \u2192 0.58 over 20 years) suggests accumulating rent-seeking layers without corresponding increases in functional requirements, indicating Goodhart degradation (procurement metrics being gamed by incumbents rather than tracking real capability needs). The low theater ratio (0.45) reflects that procurement documentation and qualification processes are substantive, not purely performative, but rising theater trajectory suggests ritual creep.",
+    "key_agents": [
+      "New Vendor Competitors: Primary victims (powerless/trapped) \u2014 face qualification barriers with sunk costs and no credible exit pathway; trapped in demand to prove capability without access to revenue that would enable capability investment",
+      "Competing Vendor Coalition: Secondary victim (organized/constrained) \u2014 can coordinate through industry associations and legislative channels but face systematic preference for incumbents in contracting decisions",
+      "Incumbent Defense Contractors: Primary beneficiary (institutional/arbitrage) \u2014 capture rents through qualification lock-in and switching costs; have multiple exit options (subsidiaries, civilian work, relationship arbitrage across military branches)",
+      "Military Procurement Authority: Mixed actor (powerful/mobile) \u2014 benefits from stable supplier relationships but bears costs of reduced competition and constrained technical innovation; nominally mobile but institutionally constrained by sunk relationships and political pressure",
+      "Taxpayers and Procurement Efficiency: Diffuse victim (powerless/trapped) \u2014 pay inflated defense budgets driven by reduced competition; cannot organize or exit; benefits only if capability improvements justify costs (contestable)",
+      "Congressional Representatives: Institutional beneficiaries (institutional/arbitrage) \u2014 protect incumbent vendors located in their districts through appropriations language and oversight; have arbitrage options through committee assignments and district economic politics"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The qualification barrier creates genuine capture: new vendors face 2-5 year qualification timelines, security clearances requiring 6-12 months, technical certifications requiring product-specific testing, and bonding/insurance requirements. These accumulate into sunk costs. The barrier is partially justified (military genuinely requires cleared suppliers), but analysis of incident data suggests requirement scope has expanded beyond necessity. Rising extractiveness over time (0.42 \u2192 0.58) indicates that qualification costs are increasing faster than functional requirements, supporting rent accumulation interpretation. Suppression (0.68): High. Barriers to exit include: (a) sunk qualification costs that cannot be recovered if contract is lost; (b) information asymmetry about true qualification requirements vs. actual gatekeeping preferences; (c) difficulty organizing competing vendors (geographically dispersed, competitive with each other, lack transparency on incumbent advantage mechanisms); (d) political opacity (congressional protection of incumbents is informal, not documented in procurement rules). Theater ratio (0.45): Moderate-low. Procurement documentation is substantive (technical specs, security requirements, performance metrics exist and are measurable), but rising trajectory suggests creeping performativity: specs are increasingly tailored to incumbent capabilities rather than military requirements, requiring re-competition processes that incumbents dominate by default (current source preference).",
+    "perspectival_gap": "Why do different actors see fundamentally different constraints? Because they have different structural relationships to the extraction mechanism. The incumbent sees a coordination problem solved: 'We need stable suppliers with security clearances and technical capability \u2014 the qualification system provides exactly that.' The competing vendor sees a gatekeeping mechanism: 'We could perform as well or better, but the qualification barrier is too expensive and the incumbent preference is too strong.' The military authority sees both: 'We genuinely need cleared suppliers, AND we're paying too much because we've locked ourselves into limited competition.' The taxpayer sees pure extraction: 'Defense costs are higher than they should be due to vendor lock-in, and I have no way to exit or influence the outcome.' The scaffold coalition sees all of these as solvable through structural reform: 'The lock-in persists only because qualification is monolithic; modular procurement, open-source technical standards, and rotating-source contracts could maintain security/stability while enabling competition.' The piton perspective recognizes that much of the qualification infrastructure persists not because it's optimal but because changing it requires interagency consensus and congressional alignment \u2014 the ritual is maintained through inertia.",
+    "directionality_logic": "Directionality computation for this constraint deviates from canonical forms because of institutional heterogeneity. Incumbents derive d \u2248 0.10 (beneficiary + arbitrage = low d, negative \u03c7) \u2014 they experience the constraint as enabling, not costly. Competing vendors derive d \u2248 0.92 (victim + trapped = high d, high \u03c7). The military procurement authority derives d \u2248 0.55\u20130.65 depending on whether their institutional commitment to incumbent relationships is treated as institutional identity lock (identity_locked exit, higher d) or as constrained mobility (constrained exit, lower d). The analytical observer would estimate d \u2248 0.72 (analytical observer canonical). Congressional representatives have no direct d calculation but function as distributed institutional beneficiaries, deriving d \u2248 0.08 (beneficiary + arbitrage through district politics). The tangled rope classification reflects that the constraint simultaneously coordinates (stable supplier relationships, technical standards, qualified sourcing) and extracts (lock-in rents, reduced competition, inflated costs for excluded vendors and taxpayers).",
+    "mandatrophy_analysis": "This constraint avoids mandatrophy by correctly decomposing coordination function (real: security, technical standards, supplier stability) from extraction mechanism (real: lock-in rents, qualification gatekeeping, incumbent preference). The tangled rope classification affirms both: the constraint provides genuine coordination value for military procurement while simultaneously extracting rents from competing vendors and taxpayers. The measurement trajectory (extractiveness rising faster than theater ratio) supports the tangled rope over rope classification: if pure coordination were occurring, extractiveness should remain stable as theater declines (coordinate value increases, extraction stays constant). Instead, extractiveness is rising, indicating that extraction is accumulating independently of coordination value. This separates vendor capture from pure coordination mechanisms like technical standards or security requirements. The omega variables address where the boundary sits: if genuine security requirements account for 80%+ of qualification costs, the constraint is closer to rope (high-cost coordination). If <50%, it's closer to snare (extraction with coordination cover story). The acquisition reform perspectives (scaffold, piton) address the temporal dimension: is lock-in a stable institutional feature (piton, civilizational maintenance) or a temporary coordination problem with visible sunset pathways (scaffold, biographical exit)?"
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "military_procurement_complexity",
+      "defense_industrial_base_concentration"
+    ],
+    "dual_formulation_note": "Vendor capture is downstream of broader procurement complexity and upstream of specific weapons system supply chain constraints. The distinction from pure oligopoly (economic) is that vendor capture is structurally maintained through regulatory requirements (security clearances, technical certifications, FAR compliance), not just market concentration. This is why it resists standard antitrust remedies \u2014 breaking up incumbents does not reduce qualification barriers or congressional protection."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

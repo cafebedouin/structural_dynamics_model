@@ -1,0 +1,211 @@
+{
+  "header": {
+    "constraint_id": "fossil_fuel_subsidy_phase_out",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ffs"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Fossil Fuel Subsidy Phase-Out Constraint",
+    "topic_domain": "economic_policy/energy_transition",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "renewable_energy_producers",
+      "climate_vulnerable_populations",
+      "future_generations"
+    ],
+    "victims": [
+      "fossil_fuel_extractors",
+      "fossil_fuel_workers",
+      "energy_poor_consumers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Coal Miner",
+      "comment": "PERSPECTIVE 1: COAL MINER (SNARE) \u2014 Trapped in a resource-dependent region with no alternative employment. Subsidy phase-out directly eliminates livelihood with no genuine transition pathway. Cannot exit without geographic relocation or skill retraining with uncertain outcomes. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Energy-Poor Consumer",
+      "comment": "PERSPECTIVE 2: ENERGY-POOR CONSUMER (TANGLED ROPE) \u2014 Bears disproportionate costs of subsidy phase-out through energy price increases. However, also benefits from coordinated transition that builds renewable infrastructure and reduces long-term energy costs. Significant extraction during transition window, but potential long-term benefit creates coordination component."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Renewable Energy Producer",
+      "comment": "PERSPECTIVE 3: RENEWABLE ENERGY PRODUCER (ROPE) \u2014 Experiences subsidy phase-out as coordination mechanism. Removal of fossil fuel advantages enables cost-competitive deployment. Has arbitrage options (global market access, technology arbitrage). Net beneficiary \u2014 extraction runs toward this agent."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Climate Coalition",
+      "comment": "PERSPECTIVE 4: CLIMATE COALITION (SCAFFOLD) \u2014 International climate agreements (Paris Agreement, G20 commitments) frame subsidy phase-out as temporary coordination scaffolding with explicit sunset: goals include 'ending inefficient subsidies' by defined dates. Organized agents (UNEP, climate ministries) see exit path through renewable dominance. Theater_ratio is moderate \u2014 significant performative commitment without immediate enforcement."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Oil & Gas Corporation",
+      "comment": "PERSPECTIVE 5: OIL & GAS CORPORATION (TANGLED ROPE) \u2014 Faces genuine coordination problem: subsidy phase-out requires coordinated global action to prevent competitive disadvantage. Also bears extraction through reduced rent extraction and forced operational adaptation. Has mobility (capital reallocation, geographic arbitrage across jurisdictions with persistent subsidies). Mixed coordination benefit (global price stability) and extraction cost (reduced margins)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Subsidy Bureaucracy",
+      "comment": "PERSPECTIVE 6: SUBSIDY BUREAUCRACY (PITON) \u2014 Historical accumulation of energy subsidies embedded in tax codes, price controls, and regulatory preferences now operates largely on institutional inertia. Formal commitments to phase out coexist with continued subsidy expansion (IMF data: global subsidies increased 2000-2022). Theater_ratio reflects performative announcements without functional reform. Degraded through conflict between stated goals and institutional incentive structure."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational timescale, some subsidy lag appears inevitable: political economy logic suggests governments will always subsidize energy for electoral reasons. This perspective naturalizes subsidy persistence as a law of political economy. However, structural data reveals this as false summit \u2014 subsidy phase-out is achievable through coordination (counterexample: Germany's energy transition), suggesting contingent institutional arrangements rather than natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "just_transition_credibility",
+      "question": "Are announced 'just transition' programs genuine alternative pathways or performative theater masking extraction?",
+      "resolution_mechanism": "Empirical comparison: retraining program completion rates, employment outcomes for former fossil fuel workers, wage replacement in alternative sectors vs. historical employment",
+      "impact": "If credible (>70% employment retention): suppression falls to 0.40-0.50, multiple perspectives shift to Scaffold. If theater (>40% failed transitions): suppression stays high, snare perspective confirmed for workers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Credibility of just transition programs as genuine vs performative"
+    },
+    {
+      "id": "subsidy_fungibility",
+      "question": "Do fossil fuel subsidies eliminated in wealthy countries simply migrate to developing nations via capital flows, or does global phase-out reduce total subsidy rent?",
+      "resolution_mechanism": "Capital flow analysis; subsidy growth rates in jurisdictions vs. countries with phase-out; time-series correlation between phase-out commitment and global subsidy trends",
+      "impact": "If migration (high probability): global extraction redistribution rather than elimination; classification shifts from snare->rope to snare->tangled_rope. If reduction: constraint achieves stated coordination function; scaffold sunset becomes credible.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Geographic redistribution vs. total reduction of subsidy rents"
+    },
+    {
+      "id": "coordination_benefit_allocation",
+      "question": "Do benefits of subsidy phase-out (lower long-term energy costs, climate stabilization) accrue to those bearing costs (workers, energy-poor), or do they concentrate among renewable energy investors and high-income consumers?",
+      "resolution_mechanism": "Benefit incidence analysis; tracking of renewable investment returns vs. energy price impacts by income decile; climate risk exposure reduction by wealth category",
+      "impact": "If concentrated (likely): extraction component dominates coordination component; most perspectives shift toward snare/tangled_rope. If distributed (unlikely): genuine coordination function; multiple perspectives shift to rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distribution of coordination benefits vs. costs across income groups"
+    },
+    {
+      "id": "coal_to_renewables_substitutability",
+      "question": "Are coal-dependent regional economies genuinely substitutable by renewable energy infrastructure, or is the substitution incomplete (geospatial mismatch, skill-base mismatch)?",
+      "resolution_mechanism": "Regional employment studies post-phase-out; renewable deployment patterns vs. former coal regions; wage differential between replacement sectors and original fossil fuel employment",
+      "impact": "If substitutable: energy-poor and worker perspectives shift toward scaffold. If incomplete: trapped exit options confirmed; snare classification held; suppression remains high.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regional coal-to-renewables substitution is achievable"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The fossil fuel subsidy phase-out constraint represents a global energy transition mechanism designed to redirect capital flows from hydrocarbon extraction toward renewable energy infrastructure. This constraint exhibits classic tangled rope structure: genuine coordination function (preventing competitive subsidy races, stabilizing energy markets, enabling capital reallocation) coexists with asymmetric extraction (concentrated costs on workers and energy-poor populations, concentrated benefits among renewable investors and high-income consumers). The constraint is enforced through international agreements (Paris Agreement, G20 commitments), national legislation, and market mechanisms, yet effectiveness is contested: global fossil fuel subsidies increased from $412 billion (2010) to $7 trillion when including externalities (2022, IMF data). The theater_ratio trend shows declining performativity over the interval as actual phase-out commitments materialize in wealthy nations, though subsidy fungibility into developing markets suggests geographic redistribution rather than total elimination. The extractiveness increase reflects accumulating costs on trapped populations (coal workers, energy-poor) as renewable transition accelerates without proportional just transition implementation.",
+    "key_agents": [
+      "Coal miners and fossil fuel workers: Primary victims (powerless/trapped) \u2014 bear direct employment and regional economic loss with uncertain transition pathways",
+      "Energy-poor consumers: Primary victims (moderate/constrained) \u2014 face energy price increases during phase-out transition; benefit long-term from lower renewable costs",
+      "Renewable energy producers: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from subsidy reallocation and cost-competitive technology deployment",
+      "Oil & gas corporations: Mixed agent (powerful/mobile) \u2014 face extraction through reduced subsidies but also benefit from coordinated global phase-out preventing subsidy races",
+      "Climate-vulnerable populations: Secondary beneficiaries (powerless/trapped) \u2014 benefit from climate stabilization but not compensated during transition; climate benefits are diffuse and delayed",
+      "Fossil fuel-dependent nations: Secondary agent (organized/constrained) \u2014 face budget pressure from subsidy removal; also face climate risk from continued subsidization",
+      "Climate Coalition: Organized agent (organized/constrained) \u2014 orchestrates coordination through international agreements; has sunset logic through renewable dominance targets"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint creates measurable rent extraction from fossil fuel producers (subsidy removal reduces their implicit income) and significant cost imposition on workers and energy-poor (through employment loss and price increases). However, extraction is not as severe as a pure snare would be (0.66+) because the constraint includes genuine coordination function and transition mechanisms reduce total economic loss. The trend shows increasing extractiveness (0.35\u21920.58) as transition accelerates and costs concentrate on less-organized populations. Suppression (0.68): High. Multiple barriers prevent exit: workers cannot easily relocate or retrain; energy-poor cannot reduce consumption without welfare loss; fossil fuel corporations cannot exit without capital write-down. However, suppression is not total (0.80+) because some jurisdictions permit subsidy persistence and corporate mobility across jurisdictions partially alleviates constraint. Theater ratio (0.55): Moderate. International commitments have real enforcement mechanisms (financial commitments, regulatory implementation) reducing pure theater, but significant gap persists between announced phase-out targets and actual subsidy trends (global subsidies increased despite phase-out commitments). Theater decline from 0.62\u21920.55 reflects increasing enforcement credibility, though subsidy fungibility suggests continued performative commitments in some jurisdictions.",
+    "perspectival_gap": "Perspectival gap is maximum across this constraint. Renewable energy producers experience coordination (Rope) \u2014 subsidy reallocation solves market distortion. Coal workers experience pure extraction (Snare) \u2014 no coordination benefit, only cost. Energy-poor consumers see mixed extraction and long-term coordination (Tangled Rope) \u2014 costs now, benefits later if distributed fairly. Fossil fuel corporations see both extraction (subsidy loss) and coordination benefit (stable global energy pricing prevents subsidy races) \u2014 mixed Tangled Rope experience. The analytical observer risks falsely naturalizing subsidy persistence as political-economic law (Mountain), but structural data shows contingent institutional choice (counterexample: Germany's 40% renewable electricity achieved through deliberate phase-out). The constraint identity itself is contested: beneficiaries frame it as natural climate requirement; victims frame it as industrial policy favoring renewables; corporations frame it as necessary coordination to prevent subsidy wars.",
+    "directionality_logic": "Directionality (d) values span the full range, producing the widest perspectival gap in the corpus. Coal miners (powerless/trapped victim) derive d \u2248 0.95, producing maximum f(d) \u2248 1.42 effective extractiveness. Energy-poor consumers (moderate/constrained victim) derive d \u2248 0.70, producing f(d) \u2248 1.00 \u2014 experienced extraction equals nominal base extraction. Renewable producers (institutional/arbitrage beneficiary) derive d \u2248 0.10, producing f(d) \u2248 -0.01 \u2014 experienced extraction is negative (they benefit). Oil & gas corporations (powerful/mobile victim+beneficiary) derive d \u2248 0.55, producing f(d) \u2248 0.75 \u2014 mixed extraction reflecting both costs (subsidy removal) and benefits (global coordination preventing subsidy races). The directionality spread reflects genuine structural differences in who bears and who benefits from the constraint.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by clearly separating coordination function from extraction mechanism. The coordination function is real: subsidy phase-out solves the prisoners' dilemma in energy policy (countries want to eliminate distortionary subsidies but fear capital flight if acting alone). This is genuine rope-type coordination benefit. The extraction is equally real: costs concentrate on workers and energy-poor during transition, while benefits concentrate among renewable investors. Neither function subsumes the other \u2014 the constraint REQUIRES both enforcement (making it harder to exit) and coordination (making collective action beneficial). This is the defining characteristic of Tangled Rope. The mandatrophy is resolved by explicitly declaring: (1) What is the coordination problem being solved? (Answer: subsidy race prevention and capital reallocation.) (2) Who is the asymmetric extraction targeting? (Answer: fossil fuel producers, workers, energy-poor.) (3) Is the extraction necessary to solve the coordination problem? (Partial: yes for redirecting capital, but not for the magnitude of worker displacement, suggesting excessive extraction beyond coordination requirement.)"
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "renewable_energy_deployment_barriers",
+      "just_transition_infrastructure",
+      "climate_stabilization_imperative"
+    ],
+    "dual_formulation_note": "Fossil fuel subsidy phase-out decomposes into multiple structural constraints with distinct \u03b5 values: (1) Capital reallocation coordination (\u03b5\u22480.25, Rope) \u2014 pure market mechanism redirecting investment flows; (2) Worker transition extraction (\u03b5\u22480.68, Snare) \u2014 concentration of employment costs without adequate compensation; (3) Energy price stabilization (\u03b5\u22480.40, Tangled Rope) \u2014 genuine coordination of energy markets with asymmetric price impacts. This story integrates all three, which is analytically justified because they are causally coupled (subsidy phase-out triggers all three mechanisms simultaneously). However, if analysis requires isolating the pure coordination benefit from the distributional extraction, decomposition into separate stories is warranted."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

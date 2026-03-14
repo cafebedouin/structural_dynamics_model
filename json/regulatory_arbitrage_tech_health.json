@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "regulatory_arbitrage_tech_health",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "regtech"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Regulatory Arbitrage in Health Technology Development",
+    "topic_domain": "healthcare_technology_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "technology_firms",
+      "jurisdictions_with_light_regulation"
+    ],
+    "victims": [
+      "patients_subject_to_approval_gaps",
+      "regulatory_coherence"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Patients in Low-Regulatory Jurisdictions",
+      "comment": "PERSPECTIVE 1: PATIENTS IN LOW-REGULATORY JURISDICTIONS (SNARE) \u2014 Trapped by geography and health need. Device or drug approved under minimal standards in jurisdiction A arrives in jurisdiction B with no pathway for retroactive standards alignment. Patient has no exit option; bears full cost of approval gap. Maximum experienced extraction \u2014 the constraint extracts from this agent's safety margin."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regulatory Agencies",
+      "comment": "PERSPECTIVE 2: REGULATORY AGENCIES (TANGLED ROPE) \u2014 Constrained by sovereignty and resource limitations. Must coordinate with international standards bodies and clinical communities (rope function) while simultaneously facing pressure from tech firms threatening to exit to lighter-regulation jurisdictions (extraction mechanism). Genuine coordination need exists alongside asymmetric extraction \u2014 the threat of regulatory arbitrage extracts policy concessions."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Technology Firms",
+      "comment": "PERSPECTIVE 3: TECHNOLOGY FIRMS (ROPE) \u2014 Primary beneficiary. Experiences constraint as pure coordination: by designing to meet the lowest applicable standard, firms optimize global commercialization and coordinate manufacturing, supply chain, and marketing. The arbitrage IS the coordination solution \u2014 exploit regulatory variance to achieve harmonized go-to-market at the lowest common denominator. Net benefit to this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Low-Regulation Jurisdictions",
+      "comment": "PERSPECTIVE 4: LOW-REGULATION JURISDICTIONS (TANGLED ROPE) \u2014 Constrained by competition for tax revenue and innovation centers. Coordination function: lighter regulatory standards enable faster device/drug commercialization and biotech cluster formation. Extraction mechanism: other jurisdictions' standards drift downward as firms threaten exit, creating a regulatory race to the bottom. Both beneficiary (attracts firms and tax revenue) and victim (standards externality imposed on trading partners)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Mutual Recognition Agreements",
+      "comment": "PERSPECTIVE 5: MUTUAL RECOGNITION AGREEMENTS (PITON) \u2014 Formal bilateral/multilateral agreements to recognize each other's device/drug approvals are theater masking the underlying arbitrage. MRAs are supposed to harmonize standards; instead they provide institutional cover for approval-gap laundering. The ritual of MRA negotiation persists despite low functional coordination \u2014 each jurisdiction retains approval authority but exercises it under extraction pressure. Theater ratio high because the MRA mechanism produces negotiation activity and diplomatic engagement that mimics standard-setting without constraining arbitrage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational/global perspective, the constraint exhibits genuine coordination function (enabling faster global drug/device access, reducing product fragmentation) alongside clear asymmetric extraction (safety standards drift toward the permissive, externalities imposed on regulated jurisdictions and vulnerable patients). The constraint persists because the coordination benefit is real and unevenly distributed \u2014 firms benefit immediately, harm to patient cohorts accumulates over time and is dispersed across populations."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "approval_gap_harm_quantification",
+      "question": "What proportion of adverse events in high-regulation jurisdictions are attributable to devices/drugs approved in low-regulation jurisdictions under materially different standards?",
+      "resolution_mechanism": "Pharmacovigilance data linking device failures or adverse drug reactions to approval history in originating jurisdiction; case-control analysis of harm rates by approval pathway",
+      "impact": "If harm rate > 5%: snare classification for patient victims is correct; extraction is severe. If harm rate < 1%: extraction mechanism is overstated; constraint may be more rope-like (legitimate standards variance rather than approval gap).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantifying patient harm from approval standard gaps"
+    },
+    {
+      "id": "regulatory_race_threshold",
+      "question": "At what point do mutual recognition agreements cease to enforce meaningful standards convergence and become mere arbitrage laundering?",
+      "resolution_mechanism": "Time-series analysis of device/drug approval criteria divergence before and after MRA signing; comparison of rejection rates across jurisdictions for same product classes",
+      "impact": "If MRAs maintain standards within 10%: coordination function preserved. If standards diverge beyond 30%: MRA is theater, extraction mechanism dominates.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for MRA functional degradation"
+    },
+    {
+      "id": "firm_exit_threat_credibility",
+      "question": "How many firms actually relocate R&D or manufacturing to low-regulation jurisdictions when faced with higher approval standards?",
+      "resolution_mechanism": "Comparative analysis of R&D location decisions; survey data on regulatory burden perception; econometric study of approval standard tightness vs. firm location choice",
+      "impact": "If exit threat > 30% credible: extraction pressure on regulators is real; tangled rope from regulatory agency perspective confirmed. If threat < 10% credible: regulators have more bargaining power; constraint approaches rope-only.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Credibility and frequency of firm exit threats"
+    },
+    {
+      "id": "patient_harm_versus_access_tradeoff",
+      "question": "What is the net health impact of faster global access enabled by regulatory arbitrage versus harm from approval-gap safety failures?",
+      "resolution_mechanism": "Health economic model comparing lives saved by faster access to life-saving devices/drugs versus lives harmed by safety failures; disability-adjusted life years (DALYs) accounting for both benefit and harm populations",
+      "impact": "If benefit > harm: constraint is net beneficial coordination mechanism; may reclassify toward rope. If harm > benefit: constraint is net extractive; snare classification for patient victims is diagnostically correct.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Net health impact of approval-gap arbitrage"
+    },
+    {
+      "id": "jurisdictional_capacity_asymmetry",
+      "question": "Are low-regulation jurisdictions choosing permissive standards strategically (to attract biotech investment) or due to resource constraints and regulatory capacity limitations?",
+      "resolution_mechanism": "Qualitative analysis of regulatory agency resources and expertise; comparison of standards stringency vs. regulatory budget; interviews with regulatory decision-makers about constraint drivers",
+      "impact": "If strategic choice: low-regulation jurisdictions are extractive beneficiaries; constraint is designed. If capacity-limited: harm is structural/unintended; may suggest capacity-building interventions rather than arbitrage suppression.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether regulatory permissiveness is strategic or capacity-driven"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Regulatory arbitrage in health technology creates a structural incentive for technology firms to design and manufacture to the lowest applicable standard across multiple jurisdictions, exploiting differences in approval rigor for devices and drugs. The constraint exhibits the full spectrum of DR classification depending on the observer's structural position. Technology firms see pure coordination \u2014 achieving global market access while minimizing product variants. Regulatory agencies experience mixed coordination and extraction \u2014 they genuinely need to cooperate internationally, but the threat of firm exit to lighter jurisdictions extracts policy concessions. Patients in low-regulation jurisdictions are trapped \u2014 they receive devices and drugs approved under permissive standards with no pathway for standards alignment. The constraint's extractiveness has increased over the interval as the number of jurisdictions with delegitimized regulatory capacity has grown and as firms have become more skilled at leveraging regulatory variance. Theater ratio has also risen, indicating that formal mutual recognition agreements have become increasingly performative \u2014 negotiated as if they harmonize standards while actually laundering approval-gap devices into regulated markets.",
+    "key_agents": [
+      "Technology Firms: Primary beneficiary (institutional/arbitrage) \u2014 capture global market access by designing to lowest applicable standard; face minimal compliance cost across jurisdictions",
+      "Patients in Low-Regulation Jurisdictions: Primary victim (powerless/trapped) \u2014 receive devices and drugs approved under materially lower safety standards; cannot exit; bear direct health risk",
+      "High-Regulation Jurisdictions: Constrained victim (institutional/constrained) \u2014 face competitive pressure to lower standards or watch firms and investment relocate; MRA obligations force recognition of foreign approvals made under lower standards",
+      "Low-Regulation Jurisdictions: Mixed beneficiary/victim (institutional/constrained) \u2014 attract biotech investment and tax revenue through permissive standards; also export approval-gap products to trading partners and absorb their externalities",
+      "Regulatory Agencies: Constrained actors (institutional/constrained) \u2014 must coordinate with international bodies and maintain domestic standards while facing exit threats from firms; mutual recognition agreements structure this constraint",
+      "Mutual Recognition Agreements: Institutional mechanism (institutional/arbitrage) \u2014 provide formal cover for arbitrage while mimicking standard-setting activity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts from patients and health systems in two ways: (1) direct harm from devices/drugs approved under lower standards (safety failures, off-label use, inadequate post-market surveillance); (2) indirect harm from standards drift \u2014 high-regulation jurisdictions face competitive pressure to weaken approval criteria to retain biotech industry. The value of 0.58 reflects that extraction is real but not total \u2014 many devices approved under low standards are safe, and firms do maintain quality levels above the minimum. Suppression (0.65): High. Barriers to exit and alternatives include: (a) patients cannot choose their jurisdiction; (b) regulatory agencies cannot unilaterally reject foreign approvals without breaching trade agreements; (c) firms face no penalty for designing to low standards; (d) adverse event data linking harms to approval-gap devices is fragmented across jurisdictions and underreported. Theater ratio (0.68): High and rising. Mutual recognition agreements create substantial performative activity \u2014 technical committees, negotiation cycles, diplomatic engagement \u2014 that mimics standard harmonization without constraining the underlying arbitrage mechanism. The ratio has increased because MRAs now cover more device classes and more jurisdictions, expanding the theater footprint while approval standards continue to diverge. Claimed type is Tangled Rope: genuine coordination function (enabling faster global access, reducing product fragmentation) exists alongside clear asymmetric extraction (standards drift, externalities imposed on regulated jurisdictions).",
+    "perspectival_gap": "The perspectival gap between beneficiary and victim is stark and persistent. Technology firms see coordination \u2014 the constraint enables them to design once and deploy globally. Regulatory agencies see mixed constraint \u2014 genuine international coordination need exists but is exploited to extract concessions. Patients see pure extraction \u2014 trapped by geography, subject to approval-gap devices with no recourse. Low-regulation jurisdictions see partial benefit masked by externalities \u2014 attracting investment but exporting harm. High-regulation jurisdictions see competitive pressure, not coordination \u2014 forced to recognize foreign approvals or lose industry. The analytical observer sees tangled rope \u2014 real coordination function (global access) coupled with real extraction (standards externality). The crucial gap is temporal: firm benefits are immediate and concentrated; patient harms accumulate over time and are dispersed across populations, creating a natural political economy where extraction persists despite net harm.",
+    "directionality_logic": "Directionality (d) represents each agent's structural position in the extraction flow. Technology firms (beneficiary + arbitrage exit) derive low d \u2192 negative \u03c7 \u2014 they experience the constraint as enabling their preferred outcome. Patients (victim + trapped exit) derive high d \u2192 high f(d) \u2192 high \u03c7 \u2014 they experience maximum extraction with no escape. Regulatory agencies (mixed role + constrained exit) derive moderate d reflecting their position between coordination need and exit threat. Low-regulation jurisdictions (beneficiary + constrained exit) derive moderate d because they benefit financially but cannot easily exit the competitive dynamics driving race-to-the-bottom. The directionality pipeline computes these values from the structural declarations, not from nominal power levels \u2014 two institutional actors have equal nominal power but drastically different structural positions within this specific constraint.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the mandatrophy because it exhibits genuine coordination function (enabling global device/drug access, reducing product variants, supporting international trade) alongside genuine asymmetric extraction (safety standards externality, concentrated benefits vs dispersed harms, patient trapping). Neither pure coordination nor pure extraction alone captures the constraint's structure. The tangled rope classification reveals that: (1) eliminating the constraint entirely would harm global access and delay life-saving devices; (2) leaving it uncontrolled extracts unacceptably from patients and regulatory autonomy; (3) the resolution lies in reforms that preserve coordination while constraining extraction (mutual recognition agreements with real teeth, global minimum standards, post-market surveillance harmonization, liability frameworks that penalize approval-gap products). The mandatrophy is resolved not by choosing a single type but by analyzing the constraint's dual function and designing interventions that preserve benefits while suppressing extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "pharmaceutical_approval_fragmentation",
+      "medical_device_classification_variance",
+      "post_market_surveillance_gaps"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.28
+    }
+  ]
+}

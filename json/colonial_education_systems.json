@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "colonial_education_systems",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Colonial Education Systems as Extractive Epistemic Control",
+    "topic_domain": "political/educational/postcolonial",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "colonial_metropole",
+      "settler_administrative_class"
+    ],
+    "victims": [
+      "colonized_populations",
+      "indigenous_knowledge_systems",
+      "local_epistemic_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Colonized Student",
+      "comment": "PERSPECTIVE 1: COLONIZED STUDENT (SNARE) \u2014 Faces mandatory education in colonial language and epistemology with no alternative pathway to formal credential. Exit from the system means economic exclusion and social marginalization. The constraint extracts cultural capital, linguistic competence, and identity while presenting as opportunity. Suppression is total at local scope: alternatives are systematically dismantled."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "Indigenous Knowledge Holders",
+      "comment": "PERSPECTIVE 2: INDIGENOUS KNOWLEDGE HOLDERS (SNARE/IDENTITY_LOCKED) \u2014 Structurally mobile (could teach outside colonial schools) but identity-locked by generational enforcement of the colonial epistemic frame. The younger generation has internalized the colonial hierarchy of knowledge \u2014 indigenous languages are 'backwards,' traditional ecological knowledge is 'unscientific.' The binding mechanism is cognitive capture through childhood education. Suppression operates through institutional delegitimation of alternatives."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Colonial Metropole Administration",
+      "comment": "PERSPECTIVE 3: COLONIAL METROPOLE (ROPE) \u2014 Experiences the constraint as pure coordination: standardized education across colonies solves administrative coherence and legitimacy problems. The metropole extracts labor, loyalty, and tax capacity from educated colonials. This perspective sees the constraint as beneficial coordination, not extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Settler Intermediate Class",
+      "comment": "PERSPECTIVE 4: SETTLER INTERMEDIATE CLASS (TANGLED_ROPE) \u2014 Small traders, junior administrators, educators themselves. They benefit from education access but remain subordinate to metropole interests. Suppression is moderate \u2014 they have constrained mobility, some access to credentials, but face glass ceiling limiting advancement. Mixed extraction and coordination: education is both opportunity and control mechanism."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Post-Colonial Educational Infrastructure",
+      "comment": "PERSPECTIVE 5: POST-COLONIAL INSTITUTIONAL RESIDUE (PITON) \u2014 After decolonization, the educational apparatus persists through institutional inertia. The curriculum, languages of instruction, institutional structure, and epistemic hierarchy were products of colonial extraction, but they remain embedded in post-colonial states. Theater ratio is high: education is performed as 'national development' while reproducing colonial knowledge hierarchies. The functional extraction has degraded (no direct metropole drain) but the constraint persists as theatrical maintenance."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Global Epistemic Harm)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational scope, colonial education systems represent systematic epistemic harm: the destruction of alternative knowledge systems, the devaluation of indigenous languages as vehicles of thought, and the imposition of a single epistemic hierarchy across territories with no alternatives. This is pure extraction at civilizational scale \u2014 knowledge commons are depleted, alternatives are eliminated, and the colonized bear the full cost."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "identity_lock_durability",
+      "question": "Is the epistemic capture of indigenous knowledge holders permanent (constitutive of postcolonial identity) or reversible through counter-education?",
+      "resolution_mechanism": "Longitudinal study of decolonial education movements (such as language revitalization programs, indigenous curriculum development) to measure whether students raised in counter-hegemonic contexts recover indigenous knowledge frames or remain locked in colonial hierarchy",
+      "impact": "If permanent: the snare classification is strengthened, and exit requires civilizational-scale identity reformation. If reversible: alternative pathways exist, elevating the constraint from Snare toward Tangled Rope for those with organized support.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether indigenous knowledge suppression is reversible through counter-education"
+    },
+    {
+      "id": "functional_extraction_magnitude",
+      "question": "How much of the measurable economic extraction (wage differential, opportunity cost, resource drain) is attributable to colonial education systems versus other colonial institutions (land tenure, labor regulation, taxation)?",
+      "resolution_mechanism": "Counterfactual analysis comparing colonies with varying educational penetration; econometric decomposition of colonial-era wealth extraction into components",
+      "impact": "If education is dominant extraction mechanism (>40% of total): extractiveness estimate is accurate. If secondary (<20%): extractiveness should be revised downward to 0.45-0.55, elevating some perspectives from Snare to Tangled Rope.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Proportion of colonial extraction attributable to education systems"
+    },
+    {
+      "id": "postcolonial_autonomy_gap",
+      "question": "To what extent do post-colonial states reconstitute educational sovereignty versus remaining institutionally dependent on former metropole models and epistemic standards?",
+      "resolution_mechanism": "Comparative curriculum analysis (decolonization of content, languages of instruction, epistemological frameworks) across post-colonial states; measurement of pedagogical dependency on imported materials/methods",
+      "impact": "If most states achieve full epistemic autonomy (>70%): the constraint degrades from Snare to Piton in the post-colonial period. If dependency persists (>50% institutional reliance on metropole frameworks): the Snare classification holds into post-colonial era.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of post-colonial educational autonomy from metropole models"
+    },
+    {
+      "id": "suppression_mechanism_variation",
+      "question": "Does suppression of indigenous knowledge systems operate uniformly through curriculum exclusion, teacher training, institutional hierarchy, or through differential internalization by age cohorts?",
+      "resolution_mechanism": "Ethnographic analysis of how suppression manifests across different institutional sites and age groups; measurement of indigenous language retention by generation and educational pathway",
+      "impact": "If primarily institutional (curriculum/hierarchy): exit is possible with alternative schools. If primarily internalized (identity_locked): exit requires cognitive reframing and escape is structurally harder even without institutional barriers.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether suppression operates through institutional or internalized mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Colonial education systems represent a paradigmatic extractive constraint: the imposition of metropolitan epistemic hierarchies on colonized populations through mandatory schooling in colonial languages, colonial curricula, and colonial institutional structures. The constraint operates across two temporal regimes \u2014 the colonial period proper (active extraction with direct metropole benefit) and the post-colonial era (institutional persistence through inertia and internalized capture). The constraint is a snare because it combines maximal suppression (alternatives are systematically dismantled) with high extractiveness (cultural capital, labor capacity, epistemic resources flow toward the metropole and settler classes) and minimal coordination function (the constraint does not solve a mutual coordination problem; it solves the metropole's problem of controlling colonized populations and resources). The theater ratio increases over the colonial period as the system becomes normalized and ritualized, and remains high post-colonially as educational institutions continue to reproduce colonial epistemic hierarchies under the rhetoric of 'development' and 'modernization.'",
+    "key_agents": [
+      "Colonized populations (students, families): Primary victims (powerless/trapped) \u2014 subject to mandatory education that extracts cultural identity and epistemic autonomy while presenting as opportunity",
+      "Indigenous knowledge holders and elders: Secondary victims (powerless/identity_locked) \u2014 structurally capable of teaching alternatives but psychologically convinced of the superiority of colonial knowledge through their own education",
+      "Colonial metropole administration: Primary beneficiary (institutional/arbitrage) \u2014 extracts labor capacity, political loyalty, and resource access through standardized educated colonial subjects",
+      "Settler intermediate class (teachers, administrators, traders): Secondary beneficiary (moderate/constrained) \u2014 gain access and upward mobility relative to colonized populations but remain subordinate to metropole interests",
+      "Post-colonial state educational apparatus: Institutional carrier (institutional/arbitrage) \u2014 maintains colonial structures through inertia despite formal decolonization; reproduces epistemic hierarchy under nationalist rhetoric",
+      "Analytical observer: Sees civilizational-scale epistemic destruction and knowledge commons depletion"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High, reflecting that the primary function of colonial education is knowledge extraction and epistemic control rather than knowledge creation or genuine skill development. Measurement trajectory shows increase from 0.55 to 0.68 as the system matures and deepens its institutional embedding. Suppression (0.72): Very high. Indigenous schools are dismantled, indigenous languages are delegitimized, indigenous teachers are excluded from formal institutions, and alternatives are not merely suppressed but rendered invisible and 'unthinkable.' Suppression is structural and enforced. Theater ratio (0.58): Moderate-high and rising. During early colonialism, the educational function is relatively transparent \u2014 it is clearly a tool of control. By late colonialism and post-colonially, the theater increases as education is performed as 'civilization,' 'development,' 'progress,' and 'nation-building' while the underlying epistemic extraction persists. The claimed type is Snare because: (1) extractiveness >= 0.46 \u2713, (2) suppression >= 0.60 \u2713, (3) Chi will be >= 0.66 for trapped/powerless perspectives \u2713, (4) minimal coordination function \u2014 colonized populations would be better off with alternative systems, and the constraint exists only because exit has been blocked.",
+    "perspectival_gap": "Colonial education systems exemplify how the same institutional structure can be legitimately classified as a coordination mechanism (Rope) from the metropole's perspective and pure extraction (Snare) from the colonized perspective. This gap reflects genuine structural reality, not subjective difference: the constraint solves the metropole's coordination problem while creating the colonized population's extraction problem. Post-colonially, the constraint persists not because it solves any coordination function (the metropole is no longer present to benefit) but through institutional inertia and internalized epistemic hierarchy \u2014 the constraint becomes Piton. This trajectory (Snare \u2192 Piton) is a typical pattern for extractive constraints that outlive their extraction engine.",
+    "directionality_logic": "Directionality values range from 0.95 (colonized student as full target/trapped) to 0.05 (colonial metropole as full beneficiary/arbitrage). The colonized student's high d reflects that they are structurally trapped with no exit option and bear maximal extraction. The metropole's low d reflects that they are the primary beneficiary of the extraction mechanism. The indigenous knowledge holder's d is moderately high (~0.80) despite having structural mobility (could choose to teach outside schools) because identity_locked exit options are much higher cost than the canonical trapped/constrained distinction captures \u2014 breaking from internalized belief in epistemic hierarchy requires identity reformation, not just material costs. The settler intermediate class's d is moderate (~0.55) because they are partially victimized (constrained to subaltern positions) but also partially beneficial (gain access to credentials). These directionality values produce the perspectival gap: beneficiaries experience low effective extraction, victims experience high effective extraction, and the analytical observer sees the sum.",
+    "mandatrophy_analysis": "SNARE RESOLUTION: Colonial education systems are unambiguously extractive snares, not coordination mechanisms masquerading as extraction. The six perspectives confirm this: no perspective legitimately classifies the constraint as pure coordination. The metropole's Rope classification is from the metropole's beneficiary position, not from the constraint's actual function \u2014 the constraint does not solve a mutual coordination problem; it solves the metropole's problem of extracting resources and loyalty from colonized populations. The presence of a Rope perspective does not indicate mandatrophy; it indicates structural inequality. The absence of a Rope perspective from the colonized population's standpoint confirms that the constraint is not coordination. Mandatrophy would appear if: (1) all perspectives classified the constraint as Snare without exception, OR (2) the beneficiary perspective classified it as Rope but the empirical evidence showed mutual benefit \u2014 neither condition is met. The constraint legitimately exhibits perspectival variance because perspectives from different structural positions experience fundamentally different constraint functions. This variance is diagnostic, not problematic."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "linguistic_hegemony",
+      "indigenous_land_dispossession",
+      "postcolonial_dependency_structures"
+    ],
+    "dual_formulation_note": "Colonial education systems are part of a larger epistemic extraction apparatus that includes language policy, curriculum standards, and institutional legitimacy. The three downstream constraints represent specific mechanisms through which the educational constraint operates: linguistic hegemony enforces the use of colonial languages; land dispossession eliminates the material basis for indigenous knowledge transmission; postcolonial dependency perpetuates metropolitan epistemic standards even after formal political decolonization. Each downstream constraint has higher extractiveness (0.72-0.75) reflecting that education is a foundational mechanism enabling the others."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    }
+  ]
+}

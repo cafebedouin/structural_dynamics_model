@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "aquaculture_expansion_china",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aqua"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Aquaculture Expansion in China",
+    "topic_domain": "environmental/economic/regulatory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "aquaculture_producers",
+      "export_market_operators",
+      "government_fisheries_revenue"
+    ],
+    "victims": [
+      "wild_fish_stocks",
+      "coastal_ecosystems",
+      "small_scale_fishers",
+      "environmental_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Displaced Artisanal Fisher",
+      "comment": "PERSPECTIVE 1: DISPLACED ARTISANAL FISHER (SNARE) \u2014 Structurally trapped by geographic dependency and lack of alternative livelihood skills. Aquaculture expansion depletes wild stocks and contaminates fishing grounds, eliminating income source. No exit options: cannot retrain easily, cannot relocate without severing community ties. Bears full cost of expansion with zero coordination benefit. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Coastal Ecosystem Commons",
+      "comment": "PERSPECTIVE 2: COASTAL ECOSYSTEM COMMONS (SNARE) \u2014 Cannot organize, cannot exit. Bears pollution (nutrient runoff, antibiotics, escaped farmed fish) and habitat degradation. Abstract collective good with no representation in expansion decisions. Suppression is structural: ecosystem degradation is irreversible on short timescales; recovery requires halting expansion, which is politically costly."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regional Government",
+      "comment": "PERSPECTIVE 3: REGIONAL GOVERNMENT (TANGLED ROPE) \u2014 Constrained by revenue dependency and central mandates for food security and export earnings. Aquaculture provides real coordination function: cheap protein production, rural employment, export revenue. But also enforces extraction from environment and fishers. Faces pressure from Beijing for production targets and from local fishers for livelihood protection. Has some agency (can impose environmental standards) but limited exit (depends on aquaculture revenues; cannot pivot quickly to alternative economies)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Aquaculture Producer Industry",
+      "comment": "PERSPECTIVE 4: AQUACULTURE PRODUCER INDUSTRY (ROPE) \u2014 Primary beneficiary. Experiences constraint as coordination mechanism: government support for land access, exemptions from environmental enforcement, subsidized feed grain, export market preference. Net flow of benefits runs toward this actor. Can arbitrage between regions (relocate operations if one area enforces standards). Low experienced extraction \u2014 this actor benefits from the constraint's enforcement."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Central Government/Ministry of Agriculture",
+      "comment": "PERSPECTIVE 5: CENTRAL GOVERNMENT (TANGLED ROPE) \u2014 Drives expansion through production mandates and export growth targets (coordination function: food security, rural income). Simultaneously constrained by international reputation costs (pollution incidents cause export bans) and domestic environmental pressure. Benefits from expansion revenues but also bears cost of ecosystem collapse and international criticism. Has enforcement authority but faces political costs of stopping growth. Active enforcement required to maintain the constraint."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Environmental Compliance Theater",
+      "comment": "PERSPECTIVE 6: ENVIRONMENTAL COMPLIANCE SYSTEM (PITON) \u2014 Environmental impact assessments, coastal zone management regulations, and pollution limits are largely performative. Facilities routinely exceed permitted feed input, antibiotics, and discharge limits; inspections are infrequent and penalties are negotiable. Theater ratio is high (0.58) because regulatory machinery persists despite low enforcement effectiveness. Constraint is maintained through inertia (regulations exist on paper) rather than functional verification. Theatrical compliance provides political cover for expansion while permitting actual environmental degradation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Natural Law)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN \u2014 FALSE SUMMIT) \u2014 From a biological/thermodynamic perspective, aquaculture's resource intensity (feed conversion ratios, waste concentration) creates structural friction that appears immutable: producing 1kg of farmed fish requires 2-3kg of feed grain, generating concentrated waste. This can seem like a natural law of aquaculture. But the structural data reveals this as contingent institutional choice: alternative practices (lower stocking density, polyculture, feed optimization) reduce but don't eliminate the constraint. The 'immutability' is actually policy choice (maximizing output over sustainability) naturalized as biology."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "feed_source_substitutability",
+      "question": "Can aquaculture's feed grain dependency be fundamentally reduced through alternative feed sources (insects, algae, plant-based) or is high extraction inherent?",
+      "resolution_mechanism": "Comparative lifecycle analysis of alternative feed systems; market adoption rates and scaling feasibility; cost differential vs conventional grain",
+      "impact": "If alternatives scale: constraint moves from Snare (trapped ecosystem) to Scaffold (temporary problem with technological sunset). If locked into grain: extraction mechanism is structural and permanent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative feed sources can reduce aquaculture resource intensity"
+    },
+    {
+      "id": "ecosystem_recovery_reversibility",
+      "question": "Are pollution impacts and coastal ecosystem degradation reversible within generational timescales if aquaculture halts, or is the constraint creating permanent environmental trajectory change?",
+      "resolution_mechanism": "Longitudinal ecosystem monitoring in areas where aquaculture has ceased; sediment core analysis for contaminant persistence; fish stock recovery timelines post-closure",
+      "impact": "If reversible (10-20 years): suppression is high but not absolute; constraint could shift to Scaffold with sunset. If irreversible: suppression approaches 1.0; Snare classification solidifies for coastal ecosystems and wild stocks.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether coastal ecosystem damage from aquaculture is reversible"
+    },
+    {
+      "id": "artisanal_fisher_coalition_formation",
+      "question": "Can displaced artisanal fishers overcome collective action barriers to organize politically, or are they individually locked into compliance?",
+      "resolution_mechanism": "Historical analysis of fisher organizing movements in China and globally; measurement of coalition coordination costs vs individual adaptation costs; policy responsiveness to organized fisher pressure",
+      "impact": "If coalition forms: powerless/trapped agents potentially upgrade to organized/constrained, changing classification perspectives and creating pressure on regional governments. If they remain atomized: constraint persists as Snare for this population.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether artisanal fishers can form political coalitions against aquaculture expansion"
+    },
+    {
+      "id": "central_mandate_enforcement_credibility",
+      "question": "Do central government environmental mandates reflect genuine commitment to ecosystem limits or are they performative signals that regional governments are expected to work around?",
+      "resolution_mechanism": "Analysis of enforcement patterns: inspection frequency, penalty magnitude, production growth despite stated limits; cross-province comparison of enforcement stringency; official guidance documents to regional authorities",
+      "impact": "If mandates are genuine: environmental suppression is real structural constraint, limiting expansion and potentially shifting piton toward rope (functional compliance). If performative: theater ratio interpretation is correct; mandates serve as political cover without constraining production.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether central environmental mandates are enforced or performative"
+    },
+    {
+      "id": "international_market_standard_internalization",
+      "question": "Do export market sustainability standards (EU, Japan import rules) create genuine external pressure that modifies producer behavior, or do Chinese producers arbitrage between markets (meeting standards for high-price markets, violating for lower-standard buyers)?",
+      "resolution_mechanism": "Documentation of certification patterns; pricing differentials by market; audit failure rates and remediation; traceability system compliance verification",
+      "impact": "If standards bite: external constraints shift power balance toward environmental compliance; Tangled Rope classifications become more rope-like (more coordination, less extraction). If arbitraged: standards are pure theater; beneficiary power remains concentrated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether international sustainability standards constrain or are arbitraged by Chinese aquaculture producers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "China's aquaculture sector has expanded from 27% of global production in 2000 to over 60% by 2025, driven by government mandates for food security and export revenue. This expansion creates a structural constraint that simultaneously coordinates legitimate functions (rural employment, protein production, export earnings) while extracting from coastal ecosystems and displacing traditional fishers. The constraint exhibits a full perspectival spectrum: for aquaculture producers, it appears as pure coordination (Rope); for coastal ecosystems and displaced fishers, it appears as pure extraction (Snare); for regional governments and central authorities, it appears as mixed coordination-extraction (Tangled Rope); for environmental regulators, it appears as a performative compliance theater (Piton). The extractiveness value (0.58) reflects moderate-to-high asymmetric extraction partially obscured by genuine coordination benefits. The suppression value (0.65) reflects structural barriers to both exit and voice: artisanal fishers cannot retrain or relocate; ecosystems cannot organize; environmental officials face political costs for enforcement. The theater ratio (0.58) reflects that environmental compliance machinery exists but is substantially performative \u2014 facilities violate limits, inspections are sporadic, penalties are negotiable. Over the 10-year measurement interval, both extractiveness and theater have increased, indicating growing reliance on enforcement theater to mask ecological deterioration.",
+    "key_agents": [
+      "Aquaculture Producers: Primary beneficiary (institutional/arbitrage) \u2014 capture government support, land access exemptions, export market preference; can relocate operations if one region enforces standards",
+      "Artisanal Fishers: Primary victim (powerless/trapped) \u2014 displaced by wild stock depletion and coastal pollution; geographically bound, lacking alternative skills; no collective organizing mechanism",
+      "Coastal Ecosystems: Primary victim (powerless/trapped) \u2014 abstract collective good; cannot organize; bears pollution, habitat degradation, escape impacts; degradation is partially irreversible",
+      "Regional Governments: Institutional beneficiary and constraint bearer (institutional/constrained) \u2014 revenue dependent; subject to central mandates; can impose local standards but face central pressure and producer resistance",
+      "Central Government/Ministry of Agriculture: Institutional driver (institutional/constrained) \u2014 mandates expansion for food security and export growth; benefits from revenues; constrained by international reputation costs and domestic environmental pressure",
+      "Environmental Compliance System: Institutional theater (institutional/constrained) \u2014 regulations exist but enforcement is sporadic; permits routine violations; provides political cover for expansion",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent policy choices (maximizing output) as inherent biological limits"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, reflecting the asymmetric distribution of benefits and costs. Aquaculture producers and export markets capture substantial economic benefits during the expansion phase. Coastal ecosystems and wild fish stocks bear costs that are diffuse, delayed, and partially irreversible. Artisanal fishers face immediate income loss but lack political voice to demand compensation. The extractiveness value reflects that this is not pure coordination (which would show \u03b5 \u2264 0.35) nor pure extraction (which would show \u03b5 \u2265 0.70). The coordination component is genuine \u2014 aquaculture does produce protein and rural employment \u2014 but it is achieved through asymmetric distribution of environmental and livelihood costs. Suppression (0.65): Reflects multiple interlocking barriers to exit and voice. Artisanal fishers cannot exit fishing (no alternative livelihoods, geographic dependency, cultural identity); cannot voice (atomized, unorganized, politically marginalized). Ecosystems cannot exit or voice. Regional governments cannot exit (revenue dependency, central mandates) but have some voice (can implement local standards). Producers face some suppression (pollution incidents cause export bans; international sustainability standards) but have high exit capacity (can relocate). Theater ratio (0.58): Environmental compliance machinery is partially performative. Impact assessments and pollution monitoring exist but are often rubber-stamped. Penalties for violations are typically negotiable and do not exceed profit margins. Facility inspections are infrequent and often pre-announced. The theater has increased over the measurement interval as environmental opposition has grown, requiring more elaborate legitimation mechanisms (certifications, reports, official statements) while actual enforcement has not strengthened proportionally.",
+    "perspectival_gap": "The constraint exhibits maximal perspectival divergence. The beneficiary (aquaculture industry) sees Rope: pure coordination of legitimate protein production and export value. The victim populations (artisanal fishers, coastal ecosystems) see Snare: pure extraction with no coordination benefit, only displacement and degradation. The regional government sees Tangled Rope: genuine coordination benefits (employment, revenue) alongside real extraction costs (environmental management, fisher displacement pressure) with limited agency. The central government sees Tangled Rope at a different level: driving expansion (coordination) while constrained by reputation costs and internal pressure (extraction). The environmental compliance system sees Piton: maintains performative machinery (inspections, reports, standards) despite low functional effectiveness. The analytical observer risks seeing Mountain: viewing resource intensity limits as immutable biological laws rather than as outcomes of policy choice (maximizing output over sustainability). This perspectival spectrum reveals that the constraint's 'type' is not intrinsic but depends entirely on the observer's structural position within it.",
+    "directionality_logic": "Directionality derivation follows the structural relationship chain. Aquaculture producers are beneficiaries with arbitrage exit options (can relocate to less regulated regions or countries); derivation yields low d, negative chi \u2014 this agent benefits from the constraint. Artisanal fishers are victims with trapped exit options (geographic and skill binding); derivation yields high d, high chi \u2014 this agent bears maximal extraction. Regional governments are simultaneously beneficiary (revenue) and victim (enforcement costs, ecosystem damage liability); structural derivation yields moderate-high d reflecting their constrained position. The central government drives expansion (low extraction-bearing d) but faces international and domestic pressure (higher d than pure beneficiary status). Environmental systems have no exit options, only extraction \u2014 highest d in the system. The pipeline computes chi from d, applying the sigmoid f(d) and scope modifier \u03c3(S). Regional scope (\u03c3=0.9) dampens chi slightly compared to global scope (\u03c3=1.2), reflecting that national-level environmental accountability is weaker than global trade standard accountability.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint simultaneously coordinates legitimate functions AND extracts from powerless agents. This is the defining structure of Tangled Rope: genuine coordination (food security, rural employment, export earnings) paired with asymmetric extraction (environmental degradation, livelihood displacement, suppressed alternative pathways). The misclassification risk is treating aquaculture expansion as pure coordination (Rope) because the coordination benefits are real and politically salient. The mandatrophy flag reveals that this framing conceals the extraction structure: the beneficiaries are concentrated (producers, exporters, regional officials), while the costs are diffuse (ecosystem commons, unorganized fishers, future generations). The Snare classifications (for powerless agents) and Piton classification (for theater) are not contradictions of the primary Tangled Rope diagnosis but rather perspectival readings that reveal what the aggregate Tangled Rope obscures. The central government's Tangled Rope classification at generational timescale reflects that expansion appears sustainable when evaluated only at immediate/biographical scales (coordination benefits outweigh visible costs) but becomes unsustainable at generational scale (ecosystem collapse, wild stock depletion, social friction)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wild_fish_stock_collapse_southeast_asia",
+      "coastal_pollution_china",
+      "artisanal_fisher_displacement"
+    ],
+    "dual_formulation_note": "Aquaculture expansion in China is a single integrated constraint with multiple victim populations and beneficiary streams. Related constraints (wild stock collapse, coastal pollution, fisher displacement) are causal downstream effects that should be decomposed into separate stories per the \u03b5-invariance principle. Wild fish stock collapse has its own extractiveness value reflecting the biological dynamics and trade in wild-caught fish; coastal pollution has its own value reflecting ecosystem degradation rates; artisanal displacement has its own story reflecting labor market dynamics. All three are causally downstream of and structurally linked to aquaculture expansion via network.affects_constraints edges."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

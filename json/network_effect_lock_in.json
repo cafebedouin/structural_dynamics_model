@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "network_effect_lock_in",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "netlock"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Network Effect Lock-In",
+    "topic_domain": "economics/technology/platform_dynamics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_platform_operator"
+    ],
+    "victims": [
+      "locked_in_users",
+      "potential_competitors",
+      "interoperability_advocates"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Locked-In User",
+      "comment": "PERSPECTIVE 1: LOCKED-IN USER (SNARE) \u2014 User has migrated social capital, data, and contacts to the platform. Exit costs are severe: losing access to the network of other users, sacrificing accumulated data and history, abandoning network-dependent applications. The user perceives the constraint as unchangeable within biographical time horizon. Maximum extraction experienced."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Competing Platform",
+      "comment": "PERSPECTIVE 2: COMPETING PLATFORM (SNARE) \u2014 New entrants face an asymmetric coordination problem: they must achieve critical mass without the network that attracts users. Suppression is severe \u2014 users won't migrate without the alternative being established, but the alternative can't be established without users. High extraction via market foreclosure despite structural mobility (competitor could theoretically exit the market entirely)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Interoperability Coalition",
+      "comment": "PERSPECTIVE 3: INTEROPERABILITY COALITION (TANGLED ROPE) \u2014 Coalition of users, competitors, and regulators sees genuine coordination function: the network itself provides value by connecting users. But this coordination is now extraction-heavy because the incumbent controls both the coordination mechanism and the extraction of value. Organized agents see exit path through regulatory intervention and open-standard infrastructure (generational timeline). Constrained in present, mobile in future."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Platform Operator",
+      "comment": "PERSPECTIVE 4: INCUMBENT PLATFORM OPERATOR (ROPE) \u2014 Experiences the constraint as pure coordination mechanism: the network effect solves the problem of user acquisition. The operator benefits from the same network that locks in users. Arbitrage options exist: can exit to adjacent markets (cloud services, advertising, payment processing) while maintaining platform dominance. Effective extraction runs toward this agent."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Regulatory Intervention Coalition",
+      "comment": "PERSPECTIVE 5: REGULATORY INTERVENTION COALITION (SCAFFOLD) \u2014 Regulatory actors (antitrust authorities, interoperability mandates, data portability laws) see the lock-in as a temporary coordination failure with a sunset. Interventions like EU's Digital Markets Act and Data Portability Regulations are designed to reduce suppression and create exit pathways within a generational timeframe. Theater is moderate (compliance costs are real but enforcement mechanism is being built), and sunset is explicit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational horizon, network effects are simultaneously a genuine coordination mechanism and an extraction device. The same property that makes the network valuable (everyone else is here) becomes the lock-in mechanism. The constraint cannot be dissolved without destroying the coordination benefit. Genuine ambiguity: is the extraction parasitic on coordination or intrinsic to it?"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_extraction_boundary",
+      "question": "Is the extractive portion of network lock-in parasitic on a genuine coordination function, or is extraction intrinsic to how network effects operate?",
+      "resolution_mechanism": "Counterfactual analysis: design an interoperable network architecture and measure whether users migrate if given costless exit. If they remain (preferring the incumbent's feature set), extraction is lower than measured. If they leave immediately, extraction is intrinsic to the network effect mechanism itself.",
+      "impact": "If parasitic: constraint can be decomposed into coordination (rope) plus extraction overlay. Regulatory intervention can separate the two. If intrinsic: extraction cannot be removed without destroying the coordination value \u2014 lock-in is a feature of network effects, not a bug. Constraint remains tangled_rope regardless.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether lock-in extraction is parasitic on coordination or intrinsic"
+    },
+    {
+      "id": "critical_mass_threshold_enforcement",
+      "question": "What minimum user base is required for a competing platform to achieve credible network parity, and is this threshold enforced by the incumbent or by the mathematics of network effects?",
+      "resolution_mechanism": "Empirical: examine historical platform migrations (e.g., MySpace\u2192Facebook, Twitter\u2192Bluesky migration failure) and measure the incumbent's defensive actions (pricing, feature bundling, exclusive agreements) vs. organic user retention. If incumbent's defensive actions are necessary to prevent migration, suppression is institutional. If users remain even without defensive action, suppression is structural.",
+      "impact": "If institutional suppression dominates: constraint is primarily tangled_rope (requires active enforcement). Regulatory intervention on that enforcement can reduce lock-in. If structural suppression dominates: network math creates lock-in without incumbent effort. Constraint approaches snare for locked-in users. Exit requires either: (a) superior features that overcome network disadvantage, or (b) coordinated mass migration (difficult to organize).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Source of suppression: incumbent actions or network mathematics"
+    },
+    {
+      "id": "interoperability_cost_viability",
+      "question": "Can interoperability standards (open APIs, data portability, protocol federation) achieve cost parity with proprietary networks, or do they require permanent subsidy or regulatory mandate?",
+      "resolution_mechanism": "Cost accounting: compare infrastructure costs of operating a fully interoperable network (accounting for routing, synchronization, security overhead) against proprietary single-operator architecture. Historical comparison: email (federated, open) vs. WhatsApp (proprietary). If email-style architecture shows inherent cost disadvantage, interoperability sunset clause is at risk.",
+      "impact": "If cost-viable: scaffold perspective is strong \u2014 regulatory mandates can transition to sustainable interoperable architecture. If cost-prohibitive: scaffold is aspirational theater \u2014 interoperability requires permanent subsidy or becomes unstable. Constraint remains tangled_rope indefinitely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Long-term viability of interoperable architecture"
+    },
+    {
+      "id": "switching_cost_perception_gap",
+      "question": "To what extent is perceived switching cost higher than actual switching cost? Are users identity-locked to the platform (identity fusion) or materially trapped (data loss, contact loss)?",
+      "resolution_mechanism": "Behavioral analysis: measure user perceptions of exit cost via survey, then compare to actual data recovery and contact-rebuilding costs in practice. Examine users who do migrate: did they recover contacts/history easily? Did identity expectations shift post-migration? Identity lock shows persistent framing of the platform as 'not replaceable' even after successful migration. Material trap shows users cite data loss and contact loss as the barriers.",
+      "impact": "If primarily identity-locked: constraint can be partially decomposed into a cognitive/identity story separate from the material network effect. Reframing campaigns might reduce experienced extraction. If primarily material trap: constraint is purely structural, resistant to cognitive intervention. Exit requires technical solutions (data portability, contact federation).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Switching cost: perception vs. material reality"
+    },
+    {
+      "id": "regulatory_intervention_spillover",
+      "question": "Does regulatory intervention to reduce lock-in in one jurisdiction (e.g., EU's interoperability mandate) create competitive pressure that forces global compliance, or do incumbents fragment the product to maintain platform-specific lock-in in non-regulated markets?",
+      "resolution_mechanism": "Longitudinal analysis: 3-5 years post-intervention, measure whether: (a) interoperability mandate is adopted globally by incumbent, (b) incumbent fragments product (EU vs. non-EU versions), (c) competitors successfully migrate users from EU to alternative platforms, (d) alternative platforms emerge that are interoperable from launch.",
+      "impact": "If spillover occurs: regulatory intervention becomes effective globally \u2014 scaffold sunset is achievable. If fragmentation occurs: constraint remains tangled_rope \u2014 incumbents reduce extraction in regulated markets but maintain it elsewhere. Network effects are still leveraged for lock-in, just with regional differentiation.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether regulatory intervention has global spillover effects"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Network effect lock-in represents a constraint where the mechanism of coordination (connecting users at scale) becomes inseparable from the mechanism of extraction (capturing value from that coordination and preventing switching). The constraint exhibits tangled rope structure: genuine coordination benefits exist (users value being on a network with many participants) alongside asymmetric extraction (the platform operator captures disproportionate value and can restrict or degrade service). The suppression mechanism is dual: structural (exit requires achieving competing network elsewhere) and institutional (platform operators use contractual restrictions, API closures, and feature bundling to maintain lock-in). The theater ratio is moderate (0.48) because actual coordination happens, but significant theatrical compliance exists around false interoperability claims and staged regulatory compliance. The constraint's extractiveness has grown over the interval (0.35 \u2192 0.58) as platforms have accumulated user data and expanded their extraction mechanisms beyond primary services. This growth mirrors the shift from genuine coordination problems (matching users on a network) to rent-seeking behaviors (data extraction, surveillance, forced participation in advertising and payment services).",
+    "key_agents": [
+      "Locked-In Users: Primary victims (powerless/trapped) \u2014 have migrated social capital, contacts, and data to platform; exit costs are severe and perceived as insurmountable",
+      "Incumbent Platform Operator: Primary beneficiary (institutional/arbitrage) \u2014 captures value from network effects; has exit options to adjacent markets; benefits from same coordination mechanism that locks in users",
+      "Competing Platforms: Secondary victims (moderate/constrained) \u2014 face asymmetric coordination problem (critical mass paradox); cannot attract users without network, but network won't form without users; suppression is structural",
+      "Interoperability Coalition: Organized victims (organized/constrained) \u2014 coalition of users, competitors, regulators seeking to reduce lock-in through open standards and data portability; sees generational path to exit",
+      "Regulatory Intervention Coalition: Organized actors (organized/mobile) \u2014 antitrust authorities and data protection regulators; treating lock-in as temporary coordination failure with explicit sunset (EU Digital Markets Act, Data Portability Regulations)",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 recognizes genuine coordination function underlying the extraction; sees fundamental tension between network value and exit option"
+    ],
+    "logic_rationale": "Extractiveness (0.58): The platform operator captures increasing rents from user data, forces participation in bundled services, and prevents users from taking their social capital and data elsewhere. The value extracted has grown as platforms expanded from connectivity coordination into surveillance, advertising, and financial services. The measurement trajectory (0.35 \u2192 0.58) reflects this accumulation. Not as high as pure snare (0.66+) because users do derive genuine value from being on a large network \u2014 the coordination benefit is real. Suppression (0.65): High and multifaceted. Structural suppression: users cannot easily rebuild their network elsewhere (critical mass problem). Institutional suppression: platform actively prevents interoperability (API restrictions, data lock-in, account linking requirements). Psychological suppression: users believe exit is impossible even when technically feasible (identity lock). Theater ratio (0.48): Moderate. Actual coordination happens \u2014 the network does connect users at scale. But significant theater exists: fake interoperability claims, staged regulatory compliance, elaborate terms-of-service theater that obscures actual extraction mechanisms. Theater is lower than in pure piton because the coordination function is not degraded \u2014 it remains genuinely functional, just extraction-heavy.",
+    "perspectival_gap": "Perspectival gap is maximal between the locked-in user (snare: trapped exit, powerless, biographical horizon) and the incumbent operator (rope: arbitrage exit, institutional, immediate horizon). The gap reveals that the constraint is simultaneously a coordination mechanism (rope from incumbent's view) and a lock-in device (snare from user's view) because they occupy opposite positions in the extraction flow. The scaffold perspective (regulatory intervention) claims to resolve the gap by introducing an explicit sunset, but this assumes regulators can successfully decouple the coordination benefit from the extraction mechanism \u2014 an assumption the analytical observer questions.",
+    "directionality_logic": "Directionality (d) for each agent is derived from beneficiary/victim status and exit options. Locked-in users are victims with trapped exit (d \u2248 0.95 \u2192 high f(d) \u2192 high \u03c7). Incumbent operator is beneficiary with arbitrage exit (d \u2248 0.05 \u2192 negative f(d) \u2192 negative \u03c7, meaning low experienced extraction from this agent's perspective \u2014 they experience the constraint as enabling, not extractive). Competing platforms are victims with constrained exit (d \u2248 0.85 \u2192 high f(d)), but their effective \u03c7 is dampened by their organized power status (can lobby regulators, build coalitions). Interoperability coalition is organized victims with constrained exit but organized power (d \u2248 0.70 \u2192 f(d) moderate), giving them agency despite extraction. This produces the perspectival divergence: the same constraint has d \u2248 0.95 for powerless users and d \u2248 0.05 for the institutional operator, creating completely different experienced extractiveness values from the two perspectives.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that network effects create a structural condition where coordination and extraction become inseparable from the incumbent operator's perspective. The mandatrophy question: 'Is this coordination that extracts value, or extraction disguised as coordination?' cannot be answered abstractly \u2014 it depends on whether the extraction is parasitic on the coordination (removable via regulation) or intrinsic to it (removal would destroy the network benefit). The analytical observer's tangled_rope classification flags this ambiguity explicitly: the constraint contains both genuine coordination and genuine extraction, and their relative weights depend on counterfactual analysis (what would happen if users could exit costlessly?). The scaffold perspective's sunset clause presupposes that the two can be decoupled \u2014 that open-standard interoperability can preserve coordination while removing extraction. This is empirically testable: if email-style federated networks achieve feature parity with proprietary platforms, the decoupling succeeded. If not, the extraction is intrinsic. Current evidence is mixed: email remains decentralized but social networking has never successfully remained fully federated (Mastodon is decentralized but lacks Facebook's feature set; Signal remains closed-source despite openness claims). The mandatrophy resolution requires explicit tracking of whether regulatory interventions successfully separate coordination from extraction, or merely transfer the extraction mechanism to a new architectural form."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_switching_cost",
+      "data_portability_technical_constraint"
+    ],
+    "dual_formulation_note": "Network effect lock-in decomposes into two structurally distinct constraints: (1) the coordination mechanism (matching users at scale), which is genuinely valuable and has low extractiveness; and (2) the institutional lock-in (preventing users from leaving), which has high extractiveness. These should be written as separate stories (coordination_network_formation with \u03b5\u22480.15 as rope, and institutional_platform_lock_in with \u03b5\u22480.62 as snare). The present story treats them as inseparable because they operate on the same technical substrate, but their \u03b5 values differ by a factor of four, suggesting decomposition into a constraint family linked by network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.68
+    }
+  ]
+}

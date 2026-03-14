@@ -1,0 +1,217 @@
+{
+  "header": {
+    "constraint_id": "cryptographic_custody_risk",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "crypt_cust"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Cryptographic Custody Risk and Key Management Asymmetry",
+    "topic_domain": "digital_security/cryptography/institutional_dependency",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "custodial_institutions",
+      "key_management_vendors"
+    ],
+    "victims": [
+      "asset_holders",
+      "cryptographic_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Individual Asset Holder",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL ASSET HOLDER (SNARE) \u2014 Structurally trapped by the requirement to delegate custody of cryptographic keys to institutional intermediaries due to technical complexity, operational risk, and social pressure. Cannot exit without abandoning asset access entirely. Bears full suppression cost: key loss, institutional default, or regulatory seizure \u2014 all create total asset loss with no recourse. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Technically Sophisticated User",
+      "comment": "PERSPECTIVE 2: TECHNICALLY SOPHISTICATED USER (TANGLED ROPE) \u2014 Constrained by operational burden of self-custody (hardware wallet management, backup procedures, social engineering risk). Genuine coordination benefit exists: custody infrastructure reduces individual operational failure. But asymmetric extraction persists: institutional fee capture, regulatory lock-in (forced to use licensed custodians for accounts), and information asymmetry (users cannot audit key handling practices). Moderate exit cost \u2014 can self-custody but faces ongoing vigilance burden."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Custodial Institution",
+      "comment": "PERSPECTIVE 3: CUSTODIAL INSTITUTION (ROPE) \u2014 Experiences the constraint as pure coordination: managing custody infrastructure for heterogeneous clients solves a genuine problem (operational risk aggregation, insurance pooling, regulatory compliance). Benefits from fee capture and network effects. Has arbitrage options: can exit by shutting down, relocating, or adopting new protocols. Net beneficiary \u2014 extraction flows toward this agent."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Framework",
+      "comment": "PERSPECTIVE 4: REGULATORY FRAMEWORK (PITON) \u2014 Custody regulations (AML, KYC, segregated asset requirements) were designed to prevent fraud and money laundering but now function primarily as theater that legitimates institutional custody and creates barrier to entry for non-custodial alternatives. The theater has increased as regulatory burden has escalated without demonstrable improvement in security outcomes. Regulations persist through inertia even as their original function has atrophied \u2014 alternatives (decentralized custody, threshold cryptography, on-chain governance) operate outside the regulatory frame entirely."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Institutional Investor",
+      "comment": "PERSPECTIVE 5: INSTITUTIONAL INVESTOR (TANGLED ROPE) \u2014 Large allocators are constrained by fiduciary duty, audit requirements, and institutional risk frameworks that mandate third-party custody for regulatory acceptance. Genuine coordination benefit: custody aggregation enables risk pooling, insurance, and operational efficiency. But asymmetric extraction persists: fee capture, lock-in through regulatory requirements, and information asymmetry about key handling. Powerful agent with constrained exit options \u2014 can negotiate terms but cannot fully exit without abandoning asset class."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Non-Custodial Alternative Coalition",
+      "comment": "PERSPECTIVE 6: NON-CUSTODIAL ALTERNATIVE COALITION (SCAFFOLD) \u2014 Organized developers (threshold signature protocols, multi-sig wallets, decentralized custody networks, hardware wallet manufacturers) are building technical pathways that reduce dependency on institutional custodians. These alternatives have genuine sunset logic: as threshold cryptography becomes more accessible, as multi-sig standards mature, and as non-custodial infrastructure improves, the structural dependency on institutional custody diminishes. Mobile exit options become available as technical barriers lower. The constraint's extraction mechanism loses force as alternatives proliferate."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some custody risk is inherent to cryptographic asset management: key loss results in permanent asset loss by mathematical necessity, and the complexity of key management creates irreducible operational risk. This perspective sees custody dependency as a natural law of cryptographic systems \u2014 inescapable without violating the mathematical properties that make the system secure. However, the structural data reveals false summit: the constraint includes significant institutional, regulatory, and fee-capture components that are contingent, not inherent."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technical_competence_distribution",
+      "question": "What proportion of asset holders could realistically self-custody with acceptable operational risk given sufficient tooling and education?",
+      "resolution_mechanism": "Empirical studies of self-custody failure rates (key loss, accidental exposure, social engineering) across different user populations; comparison to institutional custody failure rates",
+      "impact": "If >50% could self-custody: trapped exit option is misclassified, constraint is weaker than measured. If <10% could self-custody: technical barriers are the binding constraint, not institutional lock-in. If 20-40%: institutional dependency is genuine for most agents but not universal.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distribution of technical competence required for self-custody"
+    },
+    {
+      "id": "regulatory_mandate_necessity",
+      "question": "Do institutional custody requirements (AML/KYC, segregated assets, capital adequacy) actually reduce systemic risk or primarily serve as regulatory theater that legitimates institutional intermediation?",
+      "resolution_mechanism": "Comparative analysis of institutional custody failure rates vs non-custodial protocols; examination of whether regulatory requirements correlate with improved security outcomes or primarily with reduced competition",
+      "impact": "If regulations improve outcomes: they represent genuine coordination, constraint is rope from regulatory perspective. If regulations are primarily theater: they represent extractive lock-in, constraint is snare from regulatory perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether custody regulations improve security outcomes or serve as competitive moat"
+    },
+    {
+      "id": "technical_maturity_of_alternatives",
+      "question": "Are threshold cryptography, multi-sig standards, and decentralized custody protocols technically mature enough to replace institutional custody at scale, or are they still in development with unresolved failure modes?",
+      "resolution_mechanism": "Security audits of non-custodial protocols; adoption rates among institutional investors; incident analysis comparing self-custody losses to institutional custody losses at comparable scales",
+      "impact": "If mature: scaffold sunset is real and the constraint will degrade as alternatives proliferate. If immature: alternatives pose new risks without eliminating institutional dependency, and the constraint's structure persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical maturity of non-custodial custody alternatives"
+    },
+    {
+      "id": "fee_extraction_vs_coordination_cost",
+      "question": "What proportion of institutional custody fees represents genuine operational cost (insurance, compliance, infrastructure) vs rent extraction (lock-in, information asymmetry, network effects)?",
+      "resolution_mechanism": "Cost accounting analysis of custody operations; comparison of fee levels across competitive markets vs regulated monopolies; analysis of fee sustainability if non-custodial alternatives reach parity in convenience",
+      "impact": "If >70% operational: extraction component is smaller than measured, constraint is more rope-like. If <30% operational: extraction component is larger, constraint is more snare-like.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Decomposition of custody fees into operational cost vs rent extraction"
+    },
+    {
+      "id": "asset_holder_preference_vs_forced_custody",
+      "question": "How much of the institutional custody dependency reflects genuine user preference for delegation vs regulatory coercion?",
+      "resolution_mechanism": "Surveys of custody users in regulated vs unregulated environments; comparison of self-custody adoption rates before and after regulatory restrictions; analysis of users who maintain both custodial and self-custody positions",
+      "impact": "If preference-driven: suppression is lower than measured, agents have more agency than trapped classification suggests. If coercion-driven: suppression is correctly measured, trapped is appropriate.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether custody dependency reflects genuine preference or regulatory coercion"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Cryptographic custody risk creates a structural asymmetry between asset holders who require key management and custodial institutions that control access to those keys. The constraint exhibits all six DR types from different perspectives, revealing how the same technical risk is experienced as irreducible natural law by some observers, pure coordination by others, and extractive lock-in by still others. The technical fact \u2014 private key loss results in permanent asset loss \u2014 creates genuine operational risk. But the institutional arrangement \u2014 mandatory delegation to custodians, regulatory lock-in, and information asymmetry about key handling practices \u2014 layers extraction on top of this technical necessity. The constraint's theater_ratio (0.48) reflects that custody regulations serve partly as genuine risk management and partly as competitive moat that excludes non-custodial alternatives and legitimates institutional dependency.",
+    "key_agents": [
+      "Individual Asset Holders: Primary victims (powerless/trapped) \u2014 structurally dependent on custodians due to technical complexity and regulatory requirements; bear full loss if custodian fails",
+      "Technically Sophisticated Users: Secondary victims (moderate/constrained) \u2014 can self-custody but face operational burden; benefit from custody infrastructure but constrained by fees and lock-in",
+      "Custodial Institutions: Primary beneficiaries (institutional/arbitrage) \u2014 capture fees and network effects; can arbitrage between regulatory jurisdictions and exit if necessary",
+      "Institutional Investors: Powerful constrained (powerful/constrained) \u2014 derive genuine coordination benefit from custody aggregation but experience asymmetric extraction via fees and regulatory lock-in",
+      "Regulatory Framework: Theater maintainers (institutional/constrained) \u2014 regulations persist through inertia; serve dual function as risk management and competitive moat",
+      "Non-Custodial Alternative Coalition: Organized agents (organized/mobile) \u2014 building technical pathways that reduce institutional dependency; represent sunset mechanism for the constraint",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as inherent cryptographic limits"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Institutional custodians capture significant fees (0.5%-2% annually) and benefit from regulatory lock-in that prevents non-custodial alternatives from reaching parity. However, extraction is not maximal because genuine coordination benefits exist: custody aggregation enables insurance pooling, operational risk reduction, and regulatory compliance that individual asset holders cannot achieve alone. The extractiveness has increased over the interval (0.35 \u2192 0.58) as regulatory requirements have tightened, forcing more agents into custodial dependency and raising barriers to non-custodial alternatives. Suppression (0.72): High. Structural barriers to exit include: (1) technical complexity of key management, (2) regulatory requirements that mandate custodial institutions for fiduciary accounts and regulated entities, (3) social pressure that positions self-custody as irresponsible, (4) operational friction (insurance, audit trails) that custodial institutions provide. Suppression is high but not total \u2014 some agents can and do self-custody, and regulatory requirements vary by jurisdiction. Theater ratio (0.48): Moderate. Custody regulations (AML/KYC, segregated assets, capital adequacy) serve dual functions: genuine risk management and competitive moat. The theater has increased as regulatory burden has escalated without proportional improvement in security outcomes \u2014 regulations now primarily serve to legitimize institutional custody and exclude non-custodial alternatives, rather than to prevent actual fraud.",
+    "directionality_logic": "Each perspective's directionality (d) reflects the agent's structural position relative to extraction flow. Individual asset holders are trapped victims with no exit options and no ability to organize collectively (powerless/trapped) \u2014 d approaches 1.0, producing maximum experienced extraction. Technically sophisticated users are constrained victims who can exit but at high operational cost (moderate/constrained) \u2014 d \u2248 0.70. Custodial institutions are beneficiaries with arbitrage options who can exit the market if necessary (institutional/arbitrage) \u2014 d approaches 0.0, experiencing negative effective extraction (the constraint subsidizes them). Institutional investors are powerful but constrained by fiduciary duty and regulatory requirements (powerful/constrained) \u2014 d \u2248 0.55, experiencing moderate extraction. The regulatory framework appears as institutional actor with constrained options (institutional/constrained) \u2014 d \u2248 0.50, but derives classification from theater ratio rather than from directionality. Non-custodial coalition are organized agents with mobile exit options who are building alternatives (organized/mobile) \u2014 d approaches 0.30, experiencing low extraction because they have real agency to bypass the constraint.",
+    "perspectival_gap": "This constraint demonstrates significant perspectival divergence. The custodial institution sees pure coordination (Rope) \u2014 managing custody solves a genuine problem of operational risk aggregation. The non-custodial coalition sees temporary extraction with a sunset (Scaffold) \u2014 technical alternatives are maturing and will reduce institutional dependency. The regulatory framework sees its own degraded function (Piton) \u2014 custody rules persist through inertia and competitive lock-in rather than proven security benefit. Technically sophisticated users see mixed coordination and extraction (Tangled Rope) \u2014 custody infrastructure provides genuine benefit but with asymmetric fee capture. Individual asset holders see extractive trap (Snare) \u2014 they have no real exit option and bear full loss if custodian fails. The analytical observer risks seeing a natural law (Mountain) \u2014 key loss results in permanent asset loss by mathematics \u2014 but the structural data reveals false summit: the constraint includes significant contingent institutional and regulatory components.",
+    "mandatrophy_analysis": "The mandatrophy resolves by distinguishing technical necessity (inescapable custody risk inherent to cryptography) from institutional arrangement (mandatory delegation to custodians with asymmetric information and fee capture). The technical layer is rope-adjacent (genuine coordination to manage operational risk). The institutional layer is snare-adjacent (regulatory lock-in, fee extraction, no real exit options for powerless agents). The constraint's tangled rope classification reflects the hybrid: genuine coordination function (custody aggregation reduces operational risk) coupled with asymmetric extraction (institutional capture of fees and regulatory advantages). The false mountain perspective reveals that the 'inherent limitation' framing naturalizes what is actually a choice about institutional design. Threshold cryptography, multi-sig, and decentralized custody protocols demonstrate that the technical risk can be managed without institutional intermediaries \u2014 the extraction component depends on maintaining regulatory barriers and operational complexity that make non-custodial alternatives appear riskier than they are."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_lock_in_fintech",
+      "institutional_information_asymmetry",
+      "decentralized_custody_infrastructure"
+    ],
+    "dual_formulation_note": "Cryptographic custody risk decomposes into three structurally distinct constraints: (1) technical custody risk (asset loss from key management failure), (2) institutional custody dependency (regulatory and operational lock-in to custodial intermediaries), and (3) information asymmetry (asset holders cannot audit custodian key handling practices). This story focuses on the constraint that combines all three \u2014 the institutional arrangement that makes custody dependency structurally necessary. Alternative stories would isolate the technical layer (lower \u03b5, more rope-like) and the information asymmetry layer (higher \u03b5, more snare-like)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

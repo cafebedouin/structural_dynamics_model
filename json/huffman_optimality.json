@@ -1,0 +1,145 @@
+{
+  "header": {
+    "constraint_id": "huffman_optimality",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "huff"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Huffman Optimality Theorem",
+    "topic_domain": "information_theory/computer_science",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.05
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "Any Optimal Prefix Code",
+      "comment": "PERSPECTIVE 1: OPTIMAL PREFIX CODE \u2014 Cannot escape the optimality bound. Any prefix-free code attempting to achieve average codeword length shorter than the Huffman code for a given probability distribution will necessarily violate the instantaneous decodability constraint or fail to preserve the probability ordering. The optimality is inescapable \u2014 mathematically determined."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Information Theorist",
+      "comment": "PERSPECTIVE 2: INFORMATION THEORIST \u2014 Huffman codes minimize expected length among all uniquely decodable codes for any probability distribution. This is not contingent on implementation, application, or measurement basis. The theorem holds across all observable framings of code design. The optimality persists regardless of whether the coder is aware of it or whether the probability distribution is discrete or continuous (in the limit)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "universal",
+      "label": "The Systems Designer",
+      "comment": "PERSPECTIVE 3: SYSTEMS DESIGNER \u2014 Even with full agency, resources, and alternative encoding schemes available, cannot achieve better expected compression than Huffman for any fixed probability distribution. The optimality bound is indifferent to power level or implementation flexibility. The constraint is equally immutable from a position of maximum agency."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Data Compression Industry",
+      "comment": "PERSPECTIVE 4: DATA COMPRESSION INDUSTRY \u2014 Huffman optimality means no arbitrage opportunity exists in prefix-code design for fixed distributions. All implementations converge toward the same optimality bound. Competition cannot create advantage; institutional power cannot escape mathematical constraints. The industry benefits from the theorem's stability, not from any extractive position."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "probability_distribution_specification",
+      "question": "Does the optimality constraint change if the probability distribution is unknown or dynamic?",
+      "resolution_mechanism": "Formal analysis of adaptive Huffman codes and universal coding theorems (Lempel-Ziv); comparison of optimal expected length for known vs unknown distributions",
+      "impact": "If distributions are truly fixed and known: mountain classification holds absolutely. If distributions are unknown or adaptive: the constraint shifts to a generalized form (Gallager/Shannon coding bounds) with different optimality characteristics. The core mountain persists but its scope narrows.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Scope of optimality under unknown or dynamic probability distributions"
+    },
+    {
+      "id": "continuous_versus_discrete_formulation",
+      "question": "Does Huffman optimality extend to continuous-alphabet sources, or is it fundamentally a discrete constraint?",
+      "resolution_mechanism": "Analysis of Shannon source coding theorem and uniform quantization; whether the discrete Huffman result is a special case of continuous information theory or a structurally distinct constraint",
+      "impact": "If purely discrete: mountain classification is sharp. If generalizable to continuous: the constraint is a special case of a broader natural law. Either way, the classification remains mountain.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether Huffman optimality generalizes to continuous alphabets"
+    },
+    {
+      "id": "non_prefix_free_codes",
+      "question": "Is the restriction to prefix-free (uniquely decodable) codes essential to the optimality claim, or can non-prefix codes achieve the same average length?",
+      "resolution_mechanism": "Formal comparison of Huffman codes with optimal uniquely decodable codes and optimal variable-length codes without the prefix-free constraint; proof that no code class can asymptotically beat Huffman",
+      "impact": "If prefix-free restriction is binding: optimality is specific to that constraint class. If true across all decodable codes: mountain classification is even more robust. The Kraft inequality suggests the former, but verification confirms the logical structure.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether optimality is specific to prefix-free codes or generalizes"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Huffman's algorithm, published in 1952, yields a prefix-free binary code that minimizes expected codeword length for any probability distribution. The theorem is one of the clearest examples of a natural law in information science: no algorithm, no matter how clever or resource-rich, can produce a prefix-free code with lower average length than the Huffman code for a given set of symbol frequencies. The optimality is absolute, universal, and indifferent to the observer's perspective or agency. It is a structural ceiling, not a negotiable boundary.",
+    "key_agents": [
+      "Any Prefix-Free Code: Target (universal/trapped) \u2014 must satisfy the optimality bound; cannot escape through any encoding scheme",
+      "The Huffman Code: Benchmarks (analytical/analytical) \u2014 defines the immutable optimality frontier",
+      "Systems Designers: Powerful agents (powerful/mobile) \u2014 even with maximal agency and resources cannot exceed the bound",
+      "The Information Science Community: Institutional observer (institutional/arbitrage) \u2014 benefits from the stability and universality of the theorem; no extractive position available"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Minimal. Huffman optimality imposes no extraction from any party; it is a pure structural ceiling. The constraint arises from the mathematics of prefix-free codes and Shannon entropy, not from any agent's agenda. Base extraction is near-zero because there is no beneficiary asymmetrically exploiting anyone. Suppression (0.02): Negligible. The only 'suppression' is the mathematical fact that codes cannot beat the bound \u2014 this is not suppression of alternatives but elimination of false possibilities. Theater ratio (0.15): Very low. Huffman codes have transparent functional content; verification is straightforward algorithmic implementation. The small theater component reflects only the minimal gap between the theoretical optimality guarantee and practical implementation details (tie-breaking, symbol ordering). Accessibility collapse (0.92): Very high. The optimality bound cannot be circumvented through any clever measurement, reformulation, or extended context. The constraint is equally inaccessible from every direction. Resistance (0.05): Minimal. There is no meaningful resistance to the constraint \u2014 the constraint is not imposed by anyone or any group, so resistance would mean rejecting mathematical fact itself.",
+    "perspectival_gap": "This is a uniform-type mountain constraint. All perspectives produce Mountain classification. The gap across perspectives is not in classification type but in the meaning of 'mountain' from each viewpoint. The powerless agent sees an absolute immovable law. The analytical observer sees the same law revealed through proof. The powerful agent sees an inviolable limit on their agency. The institutional observer sees stable, predictable behavior. There is no perspectival disagreement about the type \u2014 all perspectives agree this is a natural law. The disagreement would be about whether the constraint *feels* like limitation (from the trapped agent's view) vs elegant structure (from the analytical view) vs boundary condition (from the systems designer's view). But structurally, all are recognizing the same immutable fact.",
+    "directionality_logic": "Directionality is not applicable to mountain-only constraints. There is no extraction flow, no beneficiary-victim relationship, and no asymmetric power dynamics. The constraint is equally binding on all agents regardless of their structural position. All agents experience d approaching 1.0 (maximum immutability) because no agent has the power to escape the constraint. However, this d-value does not translate to high extractiveness \u2014 it reflects that the constraint is inescapable, not that it extracts. The chi formula produces near-zero \u03c7 because \u03b5 is near-zero, dominating any f(d) factor."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "shannon_source_coding_theorem",
+      "kraft_inequality"
+    ],
+    "dual_formulation_note": "Huffman optimality is a special case (achievable lower bound) of the Shannon source coding theorem, which establishes the information-theoretic limit. Kraft's inequality provides the necessary and sufficient condition for the existence of prefix-free codes. All three constraints are linked: Kraft inequality defines feasibility space \u2192 Huffman algorithm achieves Shannon's bound in that space. Huffman is the concrete algorithmic instantiation of the abstract theorem."
+  }
+}

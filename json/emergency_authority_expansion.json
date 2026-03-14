@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "emergency_authority_expansion",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "emerg"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Emergency Authority Expansion",
+    "topic_domain": "political/governance",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "executive_leadership",
+      "security_apparatus"
+    ],
+    "victims": [
+      "civil_liberties",
+      "legislative_oversight",
+      "ordinary_citizens"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Ordinary Citizen Under Emergency Powers",
+      "comment": "PERSPECTIVE 1: ORDINARY CITIZEN (SNARE) \u2014 Faces maximum extraction with no exit option. Subject to expanded surveillance, detention authority, movement restrictions, and property seizure with minimal due process. Cannot challenge the constraint or exit the jurisdiction during emergency. Suppression is structural: emergency powers explicitly suspend or constrain normal legal protections."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Legislator or Civil Society Actor",
+      "comment": "PERSPECTIVE 2: LEGISLATOR / CIVIL SOCIETY (TANGLED ROPE) \u2014 Constrained by genuine emergency conditions (external threat or crisis) that create real coordination need for rapid response. But also extracted from: legislative capacity is suspended or bypassed, civil society scrutiny is dampened, and institutional memory of emergency powers' abuse creates career/reputational risk for those who resist. Mixed extraction and coordination \u2014 genuine emergency function alongside asymmetric power concentration."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Executive Leadership",
+      "comment": "PERSPECTIVE 3: EXECUTIVE LEADERSHIP (ROPE) \u2014 Primary beneficiary. Experiences emergency powers as pure coordination: the constraint enables rapid response to crisis that would be impossible under normal deliberative procedures. Has arbitrage exit (can declare emergency end, invoke alternative coordination mechanisms). Benefits from authority expansion far outweigh costs \u2014 extracts significant capacity with minimal personal exposure."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Constitutional Courts or International Oversight",
+      "comment": "PERSPECTIVE 4: CONSTITUTIONAL COURTS / INTERNATIONAL OVERSIGHT (SCAFFOLD) \u2014 Organized agents with independent authority see emergency expansion as a temporary measure with explicit sunset. Possess capacity to review, constrain, and terminate emergency powers. Have mobile exit options (can escalate to international bodies, invoke constitutional limits). Theater_ratio is moderate because some genuine oversight occurs alongside the performative aspect of declaring emergency 'temporary' while mechanisms persist. Sunset is real if institutional actors maintain independence \u2014 real constraint on extension if courts enforce time limits."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Legal-Institutional Apparatus",
+      "comment": "PERSPECTIVE 5: LEGAL-INSTITUTIONAL APPARATUS (PITON) \u2014 The formal legal structure (constitutional articles on emergency, statutory emergency powers, procedural requirements) persists long after the original crisis has passed. Theater_ratio is moderate because the apparatus performs 'emergency justification' rituals even when the original rationale has atrophied. Courts review claims without reversing expansions; legislatures reassert authority without reclaiming suspended powers; citizens accept restrictions as 'temporary' while they persist indefinitely. Institutional inertia maintains the constraint despite degraded emergency function."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 From civilizational scope, emergency authority expansion appears as an immutable feature of political organization: every state faces crises that require rapid response, and no state can survive without emergency mechanisms. The constraint appears inherent to governance itself \u2014 the structural need for executive agility during crisis. However, this perspective risks naturalizing what is actually a contingent institutional choice: the extent of authority expansion, the duration, the oversight mechanisms, and the procedural safeguards are all variable. Different states with different constitutional designs show vastly different extraction profiles during emergencies \u2014 the constraint is not mountain-shaped from a comparative institutional perspective."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "emergency_definition_scope",
+      "question": "What events qualify as genuine emergencies justifying authority expansion? Where is the boundary between legitimate crisis response and pretext for power consolidation?",
+      "resolution_mechanism": "Comparative institutional analysis: what types of events do different constitutional systems classify as emergencies? Which events actually required expanded executive authority to resolve effectively vs which could have been managed through normal processes?",
+      "impact": "If emergency definition is narrow and tightly enforced: constraint approaches Rope (genuine coordination for narrow crises). If definition expands over time or is loosely enforced: constraint becomes Snare (extraction disguised as emergency response).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Definition and scope of genuine emergencies"
+    },
+    {
+      "id": "sunset_clause_enforcement",
+      "question": "Do sunset clauses actually terminate emergency powers, or do they persist through re-declaration cycles, legislative extension, or institutional inertia?",
+      "resolution_mechanism": "Historical tracking of emergency powers: what percentage are actually terminated at sunset vs renewed/extended/replaced with permanent legislation? Timeline of power persistence vs crisis duration.",
+      "impact": "If sunset clauses are enforced: constraint is genuinely Scaffold with time-limited extraction. If routinely renewed or replaced: constraint becomes Snare or Piton (temporary framing conceals permanent extraction).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether sunset clauses actually terminate emergency powers"
+    },
+    {
+      "id": "oversight_effectiveness",
+      "question": "Does institutional oversight (courts, legislatures, international bodies) actually constrain emergency authority expansion, or do oversight institutions themselves become coopted or sidelined during emergencies?",
+      "resolution_mechanism": "Institutional capacity analysis: how many emergency measures are actually struck down by courts? How much legislative scrutiny occurs vs rubber-stamp approval? What happens to institutional independence during prolonged emergencies?",
+      "impact": "If oversight is effective: constraint is Tangled Rope or Scaffold. If oversight is bypassed or coopted: constraint becomes Snare (maximum extraction with minimal accountability).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether institutional oversight constrains emergency authority"
+    },
+    {
+      "id": "normalization_trajectory",
+      "question": "Do emergency powers normalize into permanent institutional features? What is the typical trajectory from temporary measure to permanent apparatus?",
+      "resolution_mechanism": "Historical analysis of emergency powers that became permanent: mass surveillance after 9/11, preventive detention frameworks, military command authority, etc. Timeline from emergency declaration to full normalization.",
+      "impact": "If normalization is systematic: the constraint's true classification is masked by the temporary framing \u2014 it is actually Snare pretending to be Scaffold. Theater_ratio reveals this (moderate values suggest performative 'sunset' claims).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Normalization of emergency powers into permanent institutions"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "Emergency authority expansion creates a structural constraint where the genuine need for rapid crisis response becomes a mechanism for extracting civil liberties and centralizing political power. The constraint exhibits temporal drift: extractiveness increases from 0.35 at emergency declaration to 0.62 as emergency powers persist and normalize. Theater_ratio also increases (0.25 to 0.55), indicating growing performative justification as the original crisis urgency fades but the institutional expansion remains. The tension between Scaffold (temporary coordination mechanism with sunset) and Snare (permanent extraction dressed as temporary) is the central analytic question \u2014 most emergency powers begin with genuine coordination function but drift toward extraction through normalization and institutional inertia. Different perspectives reveal this duality: the executive sees pure coordination (Rope), citizens experience pure extraction (Snare), legislatures and courts see mixed function (Tangled Rope), oversight institutions maintain the fiction of sunset (Scaffold), the legal apparatus performs outdated justifications (Piton), and the civilizational observer risks naturalizing the arrangement as inevitable (false Mountain).",
+    "key_agents": [
+      "Executive Leadership: Primary beneficiary (institutional/arbitrage) \u2014 captures authority expansion with minimal personal cost; can declare emergency end at will",
+      "Security Apparatus: Secondary beneficiary (institutional/arbitrage) \u2014 gains expanded surveillance, detention, and enforcement capacity with reduced oversight",
+      "Ordinary Citizens: Primary victim (powerless/trapped) \u2014 subject to suspension of normal legal protections with no exit option or ability to challenge expansion",
+      "Legislative Bodies: Secondary victim (moderate/constrained) \u2014 oversight capacity suspended or bypassed; career risk for those who resist emergency measures",
+      "Civil Society and Media: Secondary victim (moderate/constrained) \u2014 scrutiny dampened, organizing capacity restricted, reporting subject to state control claims",
+      "Constitutional Courts: Organized arbiter (organized/mobile) \u2014 possess capacity to review and terminate emergency powers but face pressure not to appear obstructionist during crisis",
+      "International Bodies: Organized arbiter (organized/mobile) \u2014 can invoke pressure on member states but limited enforcement capacity during national emergencies"
+    ],
+    "logic_rationale": "Extractiveness (0.62): Moderate-high. Emergency authority expansion creates significant extraction from civil liberties, due process, and democratic participation. However, extraction is not maximal (0.80+) because genuine emergency coordination needs create some legitimate justification, and oversight mechanisms (even if degraded) retain some capacity to constrain. The intermediate value reflects the Tangled Rope reality: real coordination function mixed with asymmetric extraction. Suppression (0.68): Moderate-high. Emergency powers explicitly suspend or constrain normal legal protections, restrict movement and assembly, enable detention without normal due process, and expand surveillance. Suppression is structural, not internalized. Theater_ratio (0.55): Moderate-high, increasing over time. The constraint operates through performative justifications: declaring measures 'temporary,' invoking 'sunset clauses' that are renewed or replaced, maintaining oversight rituals that lack enforcement capacity. As the original crisis fades, the theater increases because institutional expansion persists without genuine emergency rationale.",
+    "directionality_logic": "Directionality values derive from each agent's structural relationship to the extraction flow. Executive leadership and security apparatus benefit from authority expansion and can exit at will (arbitrage) \u2014 low d values, negative or low chi. Ordinary citizens are trapped by emergency jurisdiction and possess zero exit options \u2014 maximum d, maximum chi. Legislatures and civil society actors face constrained exit (high career/political cost to resistance) and bear costs while deriving some benefit from stability \u2014 moderate d, moderate chi. Courts and international bodies have mobile exit (can escalate, can invoke legal limits) and face reputational incentives to maintain constraint-limiting credibility \u2014 lower d than the trapped actors. The scaffolding perspective (courts, international oversight) sees the constraint as genuinely temporary if they maintain independence \u2014 mobile exit option produces lower effective extraction. The piton perspective (legal apparatus) experiences constrained exit because the institutional apparatus perpetuates the formal structure even when original rationale atrophies.",
+    "perspectival_gap": "The constraint demonstrates maximum perspectival divergence across structural positions. The executive sees pure coordination (Rope) \u2014 emergency measures genuinely solve the crisis-response problem that normal procedures cannot handle. The citizen sees pure extraction (Snare) \u2014 civil liberties suspended with no reciprocal benefit or exit option. The legislator sees mixed function (Tangled Rope) \u2014 some genuine emergency coordination but also displacement of democratic authority. Courts see temporary extraction (Scaffold) \u2014 if they enforce sunset clauses, the constraint is time-limited; if they don't, the 'temporary' framing becomes theater. The legal apparatus sees its own degradation (Piton) \u2014 formal procedures persist for ritual compliance while emergency powers bypass them. The civilizational observer risks seeing immutable necessity (false Mountain) \u2014 but the gap between this naturalization and the structured extraction visible from other perspectives reveals the false summit: emergency authority expansion is a contingent institutional choice, not a natural law.",
+    "mandatrophy_analysis": "This constraint demonstrates the core mandatrophy problem: is emergency authority expansion a genuine coordination mechanism (Rope/Scaffold) or a disguised extraction mechanism (Snare/Piton)? The classification depends entirely on whether sunset clauses are enforced and whether oversight institutions maintain independence. The theater_ratio drift (0.25 \u2192 0.55) suggests that the original coordination function (rapid crisis response) is being replaced with performative justification (maintaining expanded authority without genuine emergency need). The measured extractiveness increase (0.35 \u2192 0.62) confirms this drift: as crisis urgency fades, extraction becomes visible. Resolution requires empirical investigation of omega variables: Do sunset clauses actually terminate powers, or are they renewed in perpetuity? Do courts enforce constitutional limits, or do they defer to executive claims of continuing emergency? If sunset clauses are routinely renewed and courts defer, the constraint is fundamentally Snare dressed as Scaffold \u2014 the mandatrophy is resolved by recognizing the temporal dynamics: Scaffold at t=0 (genuine temporary mechanism), Piton at t=5+ (degraded apparatus maintained by institutional inertia), Snare overall (asymmetric extraction disguised by sunset theater)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "civil_liberties_suspension",
+      "democratic_accountability_constraint",
+      "surveillance_normalization"
+    ],
+    "dual_formulation_note": "Emergency authority expansion is upstream of constraints on civil liberties and democratic accountability. The structural mechanism (suspension of normal oversight) is the same across all three \u2014 they are decomposed by observable and affected actor rather than by fundamental epsilon difference."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

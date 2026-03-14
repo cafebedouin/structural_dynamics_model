@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "training_data_integrity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tdi"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Training Data Integrity Constraint in Machine Learning Systems",
+    "topic_domain": "machine_learning/data_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "model_deployers",
+      "data_labeling_contractors"
+    ],
+    "victims": [
+      "downstream_users",
+      "training_data_subjects",
+      "model_reliability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Training Data Subject",
+      "comment": "PERSPECTIVE 1: TRAINING DATA SUBJECT (SNARE) \u2014 Individuals whose data is used to train models without meaningful consent or control. No exit option from the data pipeline once their information is harvested. Bears full cost of model bias, privacy breaches, and downstream harms. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Downstream User",
+      "comment": "PERSPECTIVE 2: DOWNSTREAM USER (SNARE) \u2014 End-users affected by models trained on degraded data. Cannot audit training sets. Trapped in systems where data quality problems are hidden by model deployments. Bears full extraction cost through biased, unreliable, or harmful model behavior."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Data Labeling Contractor",
+      "comment": "PERSPECTIVE 3: DATA LABELING CONTRACTOR (TANGLED ROPE) \u2014 Low-wage workers performing annotation work. Constrained by economic dependency and information asymmetry. Benefits from participation in data ecosystem (employment, income) while bearing extraction (low wages, no quality oversight, repetitive cognitive labor). Genuine coordination function exists (annotation enables model training) alongside asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Model Deployer",
+      "comment": "PERSPECTIVE 4: MODEL DEPLOYER (ROPE) \u2014 Benefits from access to cheap, abundant training data. Experiences the constraint as a coordination mechanism: data sourcing, labeling standardization, and quality assurance enable model development. Net beneficiary \u2014 extraction flows toward this agent. High exit optionality (can switch data sources, relabel, retrain)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Regulatory Regime",
+      "comment": "PERSPECTIVE 5: REGULATORY REGIME (TANGLED ROPE) \u2014 Governs data governance (GDPR, CCPA, etc.) yet benefits from economic productivity gains of unencumbered data use. Must coordinate privacy protection with innovation incentives. Suppression manifests as enforcement gaps, regulatory arbitrage between jurisdictions, and technical complexity obscuring violations. Mobile exit options but politically constrained by industry lobbying."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Data Quality Audit Function",
+      "comment": "PERSPECTIVE 6: DATA QUALITY AUDIT FUNCTION (PITON) \u2014 Formal auditing, data sheets, model cards, and quality benchmarks are largely performative. Organizations publish data documentation as a ritual (showing compliance) while actual data sourcing practices remain opaque. Theater ratio high \u2014 the audit apparatus has atrophied as a functional mechanism, maintained through institutional inertia. Deployers benefit from the appearance of quality assurance without bearing actual verification costs."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN \u2014 FALSE SUMMIT) \u2014 From a civilizational view, one might naturalize training data quality problems as inherent to machine learning: scaling to billions of data points mathematically requires statistical sampling and annotation error is unavoidable. This perspective risks treating contingent institutional choices (cost minimization, opacity, weak enforcement) as natural laws. The engine's false summit detector will flag this as naturalization of extractive arrangements."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "annotation_error_vs_intentional_degradation",
+      "question": "What proportion of training data quality problems stem from inherent annotation error vs intentional cost-cutting and suppression of quality signals?",
+      "resolution_mechanism": "Comparative analysis of audit data quality vs actual data quality in same systems; correlation between cost minimization pressure and measured error rates; investigation of whether higher-cost labeling produces proportionally better outcomes.",
+      "impact": "If primarily annotation error: constraint is Rope (coordination problem). If primarily cost-driven degradation: constraint is Snare (extraction mechanism). Mixed split determines Tangled Rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether data quality problems are from unavoidable annotation error or deliberate cost-cutting"
+    },
+    {
+      "id": "consent_feasibility_boundary",
+      "question": "Is meaningful informed consent for training data use technologically and economically feasible at scale, or is it fundamentally impossible given data collection realities?",
+      "resolution_mechanism": "Analysis of opt-in vs opt-out consent mechanisms in practice; correlation between consent friction and data availability; investigation of whether granular consent reduces model performance or viability.",
+      "impact": "If feasible: data subjects have exit option (mobile/constrained rather than trapped). Classification shifts from Snare toward Tangled Rope or Rope. If infeasible: trapped exit is structural; Snare classification is correct and consent framing is false.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether meaningful consent is technologically/economically feasible for training data"
+    },
+    {
+      "id": "regulatory_arbitrage_persistence",
+      "question": "Can regulatory regimes establish enforcement mechanisms that prevent jurisdictional arbitrage (training on GDPR-compliant EU data by routing through non-EU intermediaries), or is arbitrage fundamentally unmanageable at global scale?",
+      "resolution_mechanism": "Analysis of actual enforcement actions; tracking of data flows across jurisdictions; assessment of whether technical data masking/pseudonymization defeats regulatory intent or creates enforceable audit trails.",
+      "impact": "If arbitrage preventable: regulatory regime has real teeth; mobile exit becomes constrained. If arbitrage inevitable: regulatory suppression metric drops (regulators cannot enforce) but extractive freedom increases (deployers have arbitrage exits regulators cannot police).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether global regulatory arbitrage for training data can be prevented"
+    },
+    {
+      "id": "audit_effectiveness_vs_theater",
+      "question": "Do formal data audits, model cards, and data documentation genuinely improve training data quality, or are they primarily performative compliance with minimal functional impact?",
+      "resolution_mechanism": "Longitudinal comparison of model behavior before/after audit implementation; correlation between audit results and measured model bias; investigation of whether organizations change practices based on audit findings.",
+      "impact": "If effective: audit function is Rope or Tangled Rope; coordination mechanism works. If performative: classification is Piton; inertial institutional structure.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether data auditing actually improves quality or is primarily theater"
+    },
+    {
+      "id": "data_subject_awareness_and_exit",
+      "question": "To what extent do training data subjects know their data is being used, and would this knowledge change their behavior if they did?",
+      "resolution_mechanism": "Survey data on awareness levels; analysis of opt-out behavior when choices are available; investigation of whether information disclosure reduces data availability or alters annotation quality.",
+      "impact": "High awareness + exit availability: subjects shift from trapped to constrained or mobile. Low awareness: subjects remain trapped. If awareness causes data withdrawal: suppression metric rises for deployers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether training data subjects know/could act on their inclusion in datasets"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 8
+  },
+  "commentary": {
+    "narrative_context": "The training data integrity constraint operates as a hybrid coordination-extraction mechanism where the need to source, label, and validate billions of data points creates genuine coordination problems (standardizing annotation, managing quality assurance, preventing data duplication) while simultaneously enabling systematic extraction from data subjects, labeling contractors, and downstream users. The constraint exhibits all defining characteristics of Tangled Rope: a real coordination function (models cannot be trained without reliable data) exists alongside asymmetric extraction (deployers capture value while subjects and contractors bear costs). The theater ratio (0.65) reflects that formal governance structures (data sheets, model cards, audit frameworks) create performative compliance without proportional functional improvement in actual data quality. The extractiveness trajectory (0.32 \u2192 0.58 over 8 time periods) shows how cost-cutting pressures have intensified extraction as the scale of model training has accelerated \u2014 the same coordination function is now deployed at larger scale with lower verification overhead. This constraint family decomposes into three structurally distinct claims: (1) data collection and annotation as a coordination problem (Rope), (2) training data as an extractive value-capture mechanism (Snare for data subjects), and (3) regulatory governance of data integrity (Tangled Rope at the regime level). The analytical observer risks naturalizing what are contingent institutional choices (opacity in sourcing, cost minimization, weak enforcement) as inherent properties of machine learning.",
+    "key_agents": [
+      "Model Deployers: Primary beneficiary (institutional/arbitrage) \u2014 capture value from cheap, abundant data; have multiple data sourcing options and high exit optionality",
+      "Data Subjects: Primary victim (powerless/trapped) \u2014 individuals whose data is harvested without meaningful control or compensation; cannot exit once included",
+      "Downstream Users: Secondary victim (powerless/trapped) \u2014 affected by biased/degraded models; cannot audit training data or exercise quality control",
+      "Data Labeling Contractors: Mixed agent (moderate/constrained) \u2014 economically dependent on annotation work; participate in ecosystem but with low wages and no quality oversight",
+      "Regulatory Regime: Institutional actor (powerful/mobile) \u2014 governs data governance but benefits from extractive practices; politically constrained by industry lobbying",
+      "Data Quality Auditing Function: Institutional actor (institutional/arbitrage) \u2014 performs formal auditing; benefits from appearance of oversight without bearing functional responsibility",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent arrangements as inherent properties"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Model deployers capture significant value from training data through reduced labeling costs, access to proprietary corpora, and avoidance of consent friction. The extraction is not total (0.70+) because some coordination benefits are genuine \u2014 data standardization and quality assurance create real value. The 8-period trajectory (0.32 \u2192 0.58) reflects intensifying cost-cutting as model scale has grown. Suppression (0.62): High. Multiple suppression mechanisms: (1) data subjects lack knowledge of inclusion, (2) labeling contractors face economic dependency and limited information, (3) regulatory enforcement gaps allow arbitrage, (4) technical opacity obscures data sourcing practices, (5) downstream users cannot audit training sets. Theater ratio (0.65): Moderate-high. Formal audit structures (data sheets, model cards, model governance) are increasingly performative \u2014 organizations publish documentation as compliance ritual while actual data practices remain opaque. The ratio has increased over the interval as regulatory pressure has driven documentation without proportional enforcement.",
+    "perspectival_gap": "The constraint produces maximum perspectival gap. Data subject (Snare): 'I cannot exit, I bear all costs, extraction is total.' Model deployer (Rope): 'I am solving a coordination problem, I benefit, I have alternatives.' Labeling contractor (Tangled Rope): 'I benefit economically but am exploited through low wages and opacity.' Regulatory regime (Tangled Rope): 'I must coordinate protection and innovation while industry circumvents my enforcement.' Audit function (Piton): 'We perform governance ritual; actual quality improvement is limited.' Analytical observer (false Mountain): 'Data quality lag is inherent to ML; we cannot fundamentally solve this.' The gap reveals that what appears as an immutable property of machine learning is actually a contingent institutional arrangement where cost-cutting drives extraction and opacity enables suppression.",
+    "directionality_logic": "Directionality (d) is computed from each agent's structural position: their power level, exit options, and beneficiary/victim status. Data subjects + trapped exit + victim status = d approaching 1.0, f(d) \u2248 1.42, maximum experienced extraction. Downstream users + trapped exit + victim status = similar maximum extraction. Labeling contractors + constrained exit + mixed beneficiary/victim = d \u2248 0.55-0.65, f(d) \u2248 0.75-1.00, moderate-high extraction but with some benefit participation. Model deployers + arbitrage exit + beneficiary status = d approaching 0.05-0.15, f(d) \u2248 -0.12 to -0.01, negative or minimal extraction (they benefit). Regulatory regime + mobile exit but politically constrained + enforcer role = d \u2248 0.55-0.65, f(d) \u2248 0.75-1.00, moderate extraction from the constraint (enforcement burden, political opposition). Audit function + arbitrage exit + beneficiary status = d \u2248 0.15, f(d) \u2248 -0.01, minimal effective extraction (they benefit from the ritual). The scope modifier \u03c3(S) = 1.2 (global) amplifies chi for all perspectives, reflecting that data flows cross borders and create global-scale extraction.",
+    "mandatrophy_analysis": "MANDATROPHY TRIGGER: Extractiveness 0.58 > 0.46 requires omega variables and measurement data (present). Does not require full mandatrophy resolution (0.70+) but the classification is fragile. The constraint resolves the mandatrophy by decomposing into its three sub-constraints: (1) DATA SOURCING COORDINATION (Rope): the genuine problem of finding, obtaining, and standardizing data sources. (2) DATA SUBJECT EXTRACTION (Snare): the asymmetric harvesting of personal data without meaningful consent or compensation. (3) LABELING CONTRACTOR EXPLOITATION (Tangled Rope): economic participation mixed with extraction. Each has different \u03b5 and requires different policy responses. The integrated story is Tangled Rope because all three are entangled \u2014 deployers solve the coordination problem by externalizing costs onto trapped subjects and constrained contractors. The mandatrophy is resolved by recognizing that the constraint family has three members with increasing extraction intensity, linked by network edges, not by forcing a single classification to represent them all."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "model_bias_and_fairness",
+      "data_subject_privacy_rights",
+      "labeling_contractor_labor_standards"
+    ],
+    "dual_formulation_note": "Training data integrity decomposes into three structurally distinct constraints: (1) data_sourcing_coordination (\u03b5 \u2248 0.25, Rope) \u2014 standardizing sources, preventing duplication, managing scale; (2) data_subject_extraction (\u03b5 \u2248 0.75, Snare) \u2014 harvesting without consent/compensation; (3) labeling_contractor_exploitation (\u03b5 \u2248 0.55, Tangled Rope) \u2014 economic participation mixed with wage suppression. This integrated story represents the Tangled Rope classification where all three are entangled. Upstream effects on model_bias_and_fairness (low-quality training data produces biased models) and downstream effects on data_subject_privacy_rights and labeling_contractor_labor_standards."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.62
+    }
+  ]
+}

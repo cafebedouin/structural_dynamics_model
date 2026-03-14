@@ -1,0 +1,138 @@
+{
+  "header": {
+    "constraint_id": "traveling_salesman_routing_hardness",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tsr"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Traveling Salesman Routing Hardness",
+    "topic_domain": "computational_complexity/mathematics",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Route Optimizer",
+      "comment": "PERSPECTIVE 1: ROUTE OPTIMIZER (MOUNTAIN) \u2014 Any algorithm attempting to find optimal routes among n cities faces a fundamental computational barrier. The NP-hardness constraint is not a policy or institutional artifact but a structural limit of the problem itself. No exit exists; the constraint is immutable across all possible solution approaches. The optimizer cannot escape the exponential growth in computational complexity as n increases."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 2: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From the civilizational/universal analytical position, the TSP hardness is a mathematical fact derivable from complexity theory. The problem's NP-completeness is proven (via reduction from Hamiltonian Cycle); no algorithm can guarantee optimal solutions in polynomial time unless P=NP (which is conjectured but not proven). This constraint emerges naturally from the mathematical structure of permutation enumeration and is independent of implementation, measurement methodology, or observer position."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Complexity Theorist",
+      "comment": "PERSPECTIVE 3: COMPLEXITY THEORIST (MOUNTAIN) \u2014 The hardness emerges from the fundamental combinatorial structure: with n cities, there are (n-1)!/2 distinct tours to evaluate. This enumeration space grows faster than any polynomial in n. The constraint is not due to algorithm design limitations or insufficient computing power, but to the intrinsic mathematical structure of the permutation space. Accessibility to optimal solutions collapses as n grows; resistance to computational attack remains minimal (we know the space is fully enumerable, just infeasibly so)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "p_vs_np_status",
+      "question": "Is P equal to NP?",
+      "resolution_mechanism": "Proof or disproof of the P vs NP conjecture by mathematical research",
+      "impact": "If P=NP: TSP hardness collapses to computational fact, not mathematical law; polynomial algorithms would exist. If P\u2260NP (conjectured): TSP hardness remains a mountain with zero degrees of freedom.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The P vs NP conjecture determines whether TSP hardness is fundamental or contingent"
+    },
+    {
+      "id": "approximation_sufficiency",
+      "question": "Do polynomial-time approximation algorithms (e.g., 1.5-approximation via Christofides) provide practically sufficient solutions for real-world routing?",
+      "resolution_mechanism": "Empirical analysis of approximation algorithm performance across industrial routing instances; cost-benefit analysis of exact vs approximate solutions",
+      "impact": "If approximations are sufficient in practice: the mountain is empirically irrelevant to real routing systems (they don't need optimal solutions). If insufficient: hardness remains a binding constraint even for industrial applications.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether polynomial approximations satisfy practical routing requirements"
+    },
+    {
+      "id": "quantum_advantage_feasibility",
+      "question": "Can quantum algorithms (e.g., quantum annealing, gate-based TSP solvers) achieve exponential speedup for TSP?",
+      "resolution_mechanism": "Scalability studies of quantum TSP implementations; comparison of quantum vs classical solve times for n > 50 cities",
+      "impact": "If quantum advantage is real and scalable: hardness shifts from mathematical to quantum-classical substrate boundary (new constraint family). If quantum advantage does not scale: hardness remains a mountain for all known computational substrates.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether quantum computing provides exponential speedup for TSP"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The Traveling Salesman Problem represents a fundamental computational constraint: finding the shortest route visiting n cities exactly once is NP-complete. This means no known algorithm can solve the problem in polynomial time for arbitrary instances, and the problem is conjectured to be inherently hard (unless P=NP). Unlike institutional or policy constraints, TSP hardness emerges from pure mathematical structure \u2014 the combinatorial explosion of permutation enumeration (n-1)!/2 possible tours grows faster than any polynomial function. This constraint exhibits zero degrees of freedom across all observation contexts: the hardness is invariant across algorithm designs, hardware platforms, and observer positions. It is a natural law of computation.",
+    "key_agents": [
+      "Route Optimizers: Any system attempting to find provably optimal solutions (logistics companies, delivery networks, circuit design) \u2014 encounters the hardness as a fundamental barrier with no exit",
+      "Algorithms and Solvers: Theoretical algorithms, heuristics, and approximation methods \u2014 constrained by the NP-completeness proof; no algorithm can guarantee optimality in polynomial time",
+      "Approximation Methods: Polynomial-time heuristics (nearest neighbor, Christofides) \u2014 trade optimality for computational tractability; accept suboptimal solutions to escape the hardness",
+      "Quantum Computing: Hypothetical quantum substrate \u2014 may or may not achieve exponential speedup; hardness may shift rather than dissolve",
+      "Analytical Observer: Civilizational view \u2014 sees TSP hardness as a proven mathematical fact independent of substrate, implementation, or practical use case"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Very low. The TSP hardness is not extractive in the sense of benefiting one agent at the expense of another \u2014 it is a constraint on ALL agents equally. No one benefits from the hardness; it imposes costs on all route-finding systems. The value 0.12 reflects that the constraint limits optimization capacity but does not create asymmetric advantage. Suppression (0.03): Minimal. The constraint does not suppress alternatives \u2014 alternatives exist (approximation algorithms, heuristics, quantum candidates). The suppression metric is near zero because the constraint does not prevent exploration of solution approaches; it merely proves that one specific approach (polynomial-time exact solving) is blocked. Theater ratio (0.05): Minimal. The TSP hardness is not performative or theatrical. The NP-completeness proof is constructive and verifiable; the hardness is not maintained through ritual or appearance but through mathematical necessity. No one performs the hardness; it exists whether anyone acknowledges it or not.",
+    "perspectival_gap": "There is minimal perspectival gap because TSP hardness classifies identically (mountain) from all structural positions. The route optimizer, the complexity theorist, and the analytical observer all perceive the same immutable constraint. This uniformity is characteristic of mathematical natural laws \u2014 the constraint's binding force does not depend on power level, exit options, or observation scope. A powerless agent and an institutional agent face the same combinatorial barrier. An agent with immediate time horizon and one with civilizational horizon both encounter the same hardness. This universal invariance is diagnostic of a genuine mountain.",
+    "directionality_logic": "Directionality (d) is not meaningfully defined for mountains because there is no beneficiary or victim structure. The constraint does not extract from one agent to benefit another \u2014 it limits all agents equally. If a d value were computed, it would approach 0.5 (symmetric \u2014 equal cost to all), but this is not useful for understanding the constraint's classification. Mountains are defined by zero degrees of freedom, not by directionality. The constraint persists regardless of who benefits or who bears costs because it emerges naturally from mathematical structure, not from human agreement or institutional enforcement."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "hamiltonian_cycle_hardness",
+      "subset_sum_np_completeness",
+      "three_dimensional_bin_packing"
+    ],
+    "dual_formulation_note": "TSP is part of the family of NP-complete problems. Its hardness is not independent but interconnected via polynomial reduction chains. The TSP family includes: decision TSP (is there a tour shorter than k?), optimization TSP (find the shortest tour), and variants (asymmetric TSP, Euclidean TSP). All share the same fundamental hardness, though some restrictions (e.g., Euclidean metric) admit approximation algorithms with guaranteed bounds. The core constraint story is TSP hardness itself; variants and restrictions form a network of related but distinct constraints."
+  }
+}

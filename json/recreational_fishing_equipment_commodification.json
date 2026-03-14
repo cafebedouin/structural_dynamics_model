@@ -1,0 +1,185 @@
+{
+  "header": {
+    "constraint_id": "recreational_fishing_equipment_commodification",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "recfish"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Recreational Fishing Equipment Commodification",
+    "topic_domain": "commercial/outdoor_leisure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "fishing_equipment_manufacturers",
+      "retail_distributors",
+      "tackle_shops"
+    ],
+    "victims": [
+      "recreational_anglers",
+      "fishing_access_equity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Budget-Constrained Angler",
+      "comment": "PERSPECTIVE 1: BUDGET-CONSTRAINED ANGLER (SNARE) \u2014 Trapped by equipment cost barriers and forced obsolescence cycles. Cannot exit without abandoning the activity entirely. Minimal coordination benefit from the commodification system; maximum extraction through price escalation, brand-lock, and seasonal replacement pressure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Traditional Angler Community",
+      "comment": "PERSPECTIVE 2: TRADITIONAL ANGLER COMMUNITY (TANGLED ROPE) \u2014 Genuine coordination function: standardized equipment enables shared knowledge, compatible tackle systems, and community standards. But constrained by entry costs, licensing requirements, and vendor lock-in to specific brands. Extraction occurs through price inflation on foundational equipment; coordination benefit exists in inter-angler compatibility and knowledge sharing."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Fishing Equipment Manufacturers",
+      "comment": "PERSPECTIVE 3: FISHING EQUIPMENT MANUFACTURERS (ROPE) \u2014 Primary beneficiaries experiencing the constraint as pure coordination mechanism. Standardized equipment protocols enable supply chain efficiency, market segmentation, and innovation cycles. Exit options abundant: manufacturers can shift production, relocate supply chains, develop new product categories. Net extraction flows toward this agent."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Secondhand and DIY Fishing Communities",
+      "comment": "PERSPECTIVE 4: SECONDHAND AND DIY FISHING (SCAFFOLD) \u2014 Organized countermovement providing temporary alternative pathways (used equipment markets, community tool-sharing, DIY tackle crafting). Sees commodification constraint as temporary due to sunset via alternative technology adoption and community-scale production. Theater remains moderate as DIY communities establish legitimacy."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "Legacy Tackle Shops",
+      "comment": "PERSPECTIVE 5: LEGACY TACKLE SHOPS (PITON) \u2014 Independent local shops persist through institutional inertia despite pressure from online retailers and big-box stores. Maintain the cultural ritual of 'the tackle shop experience' with minimal functional differentiation from digital alternatives. Theater ratio elevated by performative expertise and community gathering space that duplicates online information."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "State Fisheries Management Agencies",
+      "comment": "PERSPECTIVE 6: FISHERIES MANAGEMENT AGENCIES (TANGLED ROPE) \u2014 Institutional constraint from regulatory asymmetry. Must enforce fishing regulations (coordination function: sustainable stock management) but lack authority to regulate equipment commodification (extraction mechanism: manufactures drive demand, overconsumption, waste). Constrained by federal commerce law and political pressure from equipment industry; actual regulatory tools limited to licensing and catch limits."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "essential_equipment_threshold",
+      "question": "What constitutes essential vs aspirational fishing equipment \u2014 and does this threshold shift through manufacturer innovation or angler preference?",
+      "resolution_mechanism": "Historical analysis of equipment categories: fishing rods, reels, line, hooks, lures (essential core) vs electronics, specialized lures, premium materials (aspirational). Temporal tracking of which categories manufacturers push into premium/new offerings vs which remain commodified.",
+      "impact": "If threshold stable: extraction is measurable via cost inflation on essential core. If threshold shifting upward (manufacturer-driven): extraction increases through aspirational creep \u2014 baseline equipment costs rise as manufacturers redefine 'necessary' categories.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether essential equipment threshold is stable or manufacturer-driven upward"
+    },
+    {
+      "id": "secondhand_market_viability",
+      "question": "Do secondhand and DIY fishing communities represent genuine scaffold (exit option with sunset trajectory) or are they being absorbed into the commodification system (vintage market, 'heritage brands,' DIY as leisure commodity)?",
+      "resolution_mechanism": "Tracking of used equipment price trajectories, DIY community growth rates, platform emergence (online used-tackle markets), and manufacturer responses (heritage lines, 'retro' products). Determine whether secondhand prices track original prices (viability) or whether commodification extends into used/DIY (absorption).",
+      "impact": "If genuine scaffold: exit path is real and theater will decline as alternatives mature. If absorption: the constraint extends into the countermovement; scaffold classification becomes aspirational rather than structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether secondhand markets provide genuine exit or are being commodified"
+    },
+    {
+      "id": "regulatory_capture_extent",
+      "question": "Have fisheries management agencies been captured by equipment manufacturers and tourism interests, constraining their ability to regulate consumption-driven overfishing?",
+      "resolution_mechanism": "Analysis of agency funding sources (state budgets, license revenue, manufacturer partnerships), policy positions on equipment standards vs catch limits, and advocacy group influence on regulation. Comparison of agencies with/without manufacturer partnerships.",
+      "impact": "If captured: fisheries agencies shift from powerful/analytical to institutional/constrained, and the constraint classification moves from tangled_rope (coordination + extraction in balance) toward snare (extraction-dominant). Overfishing becomes unsustainable.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Extent of regulatory capture by equipment manufacturers"
+    },
+    {
+      "id": "nostalgia_theater_sustainability",
+      "question": "How long can legacy tackle shops sustain piton classification through nostalgic cultural practice vs online retail efficiency advantages?",
+      "resolution_mechanism": "Longitudinal tracking of legacy shop closures vs openings by region, customer demographics by shop type, and revenue patterns. Measure whether nostalgia-driven traffic generates sustainable margins or merely delays structural obsolescence.",
+      "impact": "If nostalgia sustainable: piton persists indefinitely as cultural inertia mechanism. If unsustainable: shops transition to snare (anglers trapped in expensive legacy channel) or scaffold (community fishing cooperatives emerge). Theater_ratio declines if functional alternatives become accessible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sustainability of legacy shop model through nostalgia theater"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Recreational fishing equipment commodification describes the structural constraint wherein equipment manufacturers and retail distributors have created escalating equipment costs, forced obsolescence cycles, and brand-lock mechanisms that extract wealth from recreational anglers while maintaining a coordination function around standardized, compatible tackle systems. The constraint exhibits the defining feature of a tangled rope: genuine coordination (standardized rods, reels, line weights, lure sizes enable inter-angler compatibility and knowledge transfer) coexists with asymmetric extraction (manufacturers drive price inflation, seasonal replacement pressure, aspirational product categories). The theater ratio remains moderate (0.35) because the coordination function is real \u2014 equipment standardization genuinely enables community practices. But extractiveness has risen from 0.28 to 0.52 over two decades as manufacturers have progressively transformed aspirational categories (electronics, premium materials, specialized lures) into 'essential' purchases. The constraint operates across multiple institutional contexts: manufacturers (beneficiaries with arbitrage options), retail distribution (coordinators with moderate extraction), traditional tackle shops (pitons maintained by nostalgia), secondhand/DIY communities (scaffolds with sunset potential), budget-constrained anglers (snare victims), and fisheries management agencies (constrained institutional actors facing regulatory asymmetry).",
+    "key_agents": [
+      "Fishing Equipment Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 set design standards, drive product innovation cycles, control supply chains; maximum exit optionality",
+      "Retail Distributors and Tackle Shops: Secondary beneficiary (institutional/constrained) \u2014 benefit from equipment commodification but face pressure from online retailers and big-box stores; moderate exit optionality",
+      "Budget-Constrained Recreational Anglers: Primary victim (powerless/trapped) \u2014 face escalating entry costs, forced equipment replacement, brand-lock; cannot exit without abandoning the activity",
+      "Traditional Angler Communities: Secondary victim (moderate/constrained) \u2014 benefit from coordination mechanisms but constrained by entry costs and vendor lock-in; some exit optionality through secondhand markets",
+      "Secondhand Equipment and DIY Communities: Organized countermovement (organized/mobile) \u2014 providing alternative access pathways; driving scaffold dynamics with sunset trajectory as alternatives mature",
+      "Legacy Tackle Shops: Institutional inertia actor (powerful/mobile) \u2014 maintaining cultural ritual through nostalgia theater despite structural pressure from digital alternatives",
+      "State Fisheries Management Agencies: Institutional regulator (institutional/constrained) \u2014 must enforce sustainable fishing (coordination) but lack regulatory authority over equipment commodification (extraction); constrained by federal commerce law and political pressure"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high and rising. The constraint extracts through price escalation (equipment costs have outpaced inflation by 2-3\u00d7 over the interval), forced replacement cycles (new materials, electronics, and designs rendered older equipment 'suboptimal'), and aspirational category expansion (what was once luxury becomes 'necessary'). The extraction is not maximal because genuine coordination function exists \u2014 equipment standards do enable inter-angler knowledge and compatibility. Suppression (0.48): Moderate. Budget-constrained anglers face real barriers: equipment costs (rod/reel/line combo: $80-400+), licensing fees, travel costs, spatial access restrictions. But suppression is not total \u2014 secondhand equipment markets, DIY alternatives, and community sharing reduce barriers for motivated participants. Theater ratio (0.35): Low-moderate. The constraint maintains a genuinely functional coordination component \u2014 standardized equipment scales do matter for practice. But theater is rising as manufacturers create pseudo-functional categories (cosmetic variations, 'new generation' designs) with minimal performance improvement, and legacy tackle shops perform cultural community gathering that duplicates online information. Claimed type: Tangled Rope. Both genuine coordination (standardized equipment systems) and asymmetric extraction (price inflation, brand-lock, forced obsolescence) are present and structurally inseparable.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from structural position: beneficiary vs victim, exit options, and power level. Manufacturers face zero extraction due to arbitrage exits and beneficiary status (d \u2248 0.05). Retail institutions face moderate extraction due to beneficiary status but constrained exit (d \u2248 0.35). Constrained traditional anglers face moderate-high extraction due to victim status and constrained exit (d \u2248 0.65). Powerless budget-constrained anglers face maximum extraction due to victim status and trapped exit (d \u2248 0.95). Organized DIY communities face lower extraction due to mobile exit options despite victim status (d \u2248 0.40). Institutional fisheries agencies face moderate extraction due to constrained regulatory exit despite power level (d \u2248 0.58 due to identity_constrained position: they are designed to regulate, but commerce law prevents regulation of equipment commodification). Beneficiary/victim declarations feed directly into these derivations; the engine computes f(d) from these baseline d values. Regional scope (\u03c3=0.9) moderately dampens \u03c7 relative to global scale, reflecting that commodification operates primarily at national/regional retail levels.",
+    "perspectival_gap": "The constraint demonstrates clear perspectival gaps across power positions. Manufacturers perceive rope (pure coordination enabling supply chain efficiency and market segmentation) with minimal extraction experienced. Budget-constrained anglers perceive snare (price escalation with no exit except abandoning the activity) with maximum extraction. Traditional anglers perceive tangled rope (genuine coordination benefits from standardized systems alongside real extraction via price inflation). Organized DIY communities perceive scaffold (temporary constraint with sunset as secondhand markets and community production mature). Legacy tackle shops perceive piton (their own cultural role as degraded but sustained through nostalgia). Fisheries agencies perceive tangled rope with constrained exit (must coordinate sustainable fishing but lack regulatory tools for equipment commodification). The perspectival gap reveals that beneficiary (manufacturer) and victim (powerless angler) experiences are structurally incompatible \u2014 they perceive nearly opposite constraint types from the same base properties.",
+    "mandatrophy_analysis": "Mandatrophy resolution: This constraint resolves by recognizing that the six-type presheaf over observation positions is the correct model, not a single type. The manufacturer's rope is their genuine experience (equipment standards coordinate supply). The budget-constrained angler's snare is their genuine structural reality (they cannot exit without abandoning the activity). The traditional angler's tangled rope captures the hybrid coordination-extraction reality. The DIY community's scaffold is their aspirational exit path (secondhand markets and community production can reduce extraction if adoption accelerates). The tackle shop's piton is their genuine institutional inertia (performing cultural role while structural pressures mount). The fisheries agency's tangled rope reflects their actual position (coordinating sustainability while constrained from regulating commodification). No single type is 'correct' \u2014 the multipositioned analysis reveals that the constraint is simultaneously pure extraction for the powerless, pure coordination for the beneficiary, and hybrid for the moderate-power agents caught between. The false summit risk is the manufacturer's rope perspective \u2014 if treated as universal (the constraint is 'just coordination'), the extraction on powerless agents becomes invisible."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "fishing_access_equity",
+      "recreational_vs_commercial_fishing_regulation",
+      "equipment_waste_environmental_cost"
+    ],
+    "dual_formulation_note": "Recreational fishing equipment commodification decomposes into three structurally distinct constraints: (1) retail market coordination (genuine rope, \u03b5\u22480.15), (2) forced obsolescence and price escalation (extraction mechanism, \u03b5\u22480.55), (3) environmental waste externalization (snare on ecosystem agents, \u03b5\u22480.68). This story aggregates all three; network links enable separate analysis of each component."
+  },
+  "directionality_overrides": []
+}

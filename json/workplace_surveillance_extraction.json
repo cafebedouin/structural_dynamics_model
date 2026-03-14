@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "workplace_surveillance_extraction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "wksurveil"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Workplace Surveillance as Extraction and Control Mechanism",
+    "topic_domain": "labor/organizational_power/technology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "management_hierarchy",
+      "surveillance_technology_vendors"
+    ],
+    "victims": [
+      "hourly_workers",
+      "remote_workers",
+      "worker_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Monitored Hourly Worker",
+      "comment": "PERSPECTIVE 1: HOURLY WORKER (SNARE) \u2014 Trapped by economic dependency and the normalization of surveillance as employment condition. No meaningful exit: job loss means loss of healthcare, housing stability, and income. Full surveillance without consent or ability to negotiate. Maximum coercion with minimal coordination benefit \u2014 the worker experiences extraction without any genuine advantage from the constraint."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Salaried Knowledge Worker",
+      "comment": "PERSPECTIVE 2: SALARIED KNOWLEDGE WORKER (TANGLED ROPE) \u2014 Constrained by career mobility costs and professional reputation risk, but possesses some exit options and some control over their surveillance footprint. Experiences both genuine coordination (productivity measurement enables resource allocation) and asymmetric extraction (invasive monitoring of non-work activity, email surveillance, activity logging). Can negotiate remote-work arrangements or job change but at career cost. Mixed experience of coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Management and Organization",
+      "comment": "PERSPECTIVE 3: MANAGEMENT/ORGANIZATION (ROPE) \u2014 Experiences surveillance as pure coordination: task assignment, performance measurement, resource allocation, and quality control. The constraint solves legitimate collective action problems (ensuring work occurs, detecting bottlenecks, preventing theft). No coercion perceived from this perspective \u2014 the mechanism is seen as neutral measurement infrastructure. Maximum benefit, minimal extraction cost."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Surveillance Technology Industry",
+      "comment": "PERSPECTIVE 4: SURVEILLANCE TECHNOLOGY VENDORS (PITON) \u2014 The industry has evolved from functional purpose (task tracking) to performative expansion (keystroke logging, video monitoring, behavior prediction, mood detection). Theater ratio high: much of the infrastructure measures activity proxies rather than actual productivity, creating a market for increasingly invasive tools justified by 'security' and 'efficiency' narratives. The primary function (coordination) has atrophied; the surveillance apparatus persists through vendor incentives and organizational inertia despite evidence that invasive monitoring decreases productivity and increases turnover."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Worker Rights and Privacy Advocacy",
+      "comment": "PERSPECTIVE 5: WORKER RIGHTS ADVOCACY (SCAFFOLD) \u2014 Organized labor, privacy advocates, and regulatory bodies see surveillance constraints as temporary institutional arrangements with a sunset trajectory. GDPR, emerging US state privacy laws, and worker organizing are building alternative coordination mechanisms (algorithmic transparency, consent requirements, surveillance audits, collective bargaining on monitoring terms) that will reduce the extractive overlay while maintaining legitimate productivity coordination. Organized agents have agency and see a legislative/organizing exit path. Classified as scaffold because suppression is declining and the constraint is being actively reshaped."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational scope, workplace surveillance coordinates legitimate functions (task assignment, quality assurance, safety compliance) while enabling asymmetric extraction (behavioral control beyond work requirements, psychological pressure through constant observation, digital panopticon effects). The constraint has a genuine coordination function but is systematically layered with extractive mechanisms that serve no coordination purpose. The classification remains tangled_rope because both dimensions are structurally present and causally relevant."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "productivity_measurement_validity",
+      "question": "Do invasive surveillance mechanisms (keystroke logging, video monitoring, application tracking) actually improve productivity measurement or do they merely create an illusion of control through behavioral compliance?",
+      "resolution_mechanism": "Comparison of productivity outcomes in organizations with varying surveillance intensity; meta-analysis of controlled studies on monitoring and performance; measurement of 'presenteeism' vs actual output quality",
+      "impact": "If surveillance improves measurement: constraint is rope (coordination mechanism). If surveillance is performative: constraint is piton (degraded ritual). If surveillance decreases productivity: constraint is snare (pure extraction mechanism).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether invasive surveillance improves or degrades actual productivity"
+    },
+    {
+      "id": "consent_collapse_boundary",
+      "question": "At what level of surveillance pervasiveness does worker consent become structurally impossible (trapped transition point)?",
+      "resolution_mechanism": "Analysis of labor market elasticity: proportion of workers with realistic exit options as surveillance intensity increases; longitudinal tracking of job changes correlated with surveillance implementation; worker survey on experienced coercion thresholds",
+      "impact": "If collapse point is near current levels: majority of workers are trapped, classification shifts uniformly to snare. If collapse point is far higher: most workers remain constrained (not trapped), classification depends on worker type.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold where worker consent becomes structurally impossible"
+    },
+    {
+      "id": "technology_neutral_substitutes",
+      "question": "Can coordination functions (task assignment, quality measurement, resource allocation) be achieved through non-surveillance means (transparency, worker autonomy, outcome-based metrics) without recreating the extraction mechanism?",
+      "resolution_mechanism": "Case studies of organizations using alternative coordination: outcome-based management, worker-directed scheduling, transparent algorithms; comparison of extractiveness and worker autonomy outcomes",
+      "impact": "If substitutes work: surveillance is contingent institutional choice, not necessary coordination mechanism \u2014 supports scaffold sunset. If substitutes fail: surveillance may be inevitable coordination cost \u2014 supports rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether non-surveillance coordination mechanisms can replace current surveillance infrastructure"
+    },
+    {
+      "id": "regulatory_capture_in_privacy_law",
+      "question": "Will emerging privacy regulations (GDPR, state laws, worker protections) create genuine constraints on surveillance extraction or will they become captured by corporate influence, resulting in surveillance-washing (performative compliance)?",
+      "resolution_mechanism": "Analysis of regulatory enforcement: number of enforcement actions, fines relative to corporate gains, regulatory agency resource levels; tracking of regulatory gaps created by corporate lobbying; measurement of actual behavioral change in organizations post-regulation",
+      "impact": "If regulations are enforced: scaffold sunset is real and constraint will transition to rope. If regulations are captured: constraint remains tangled_rope or snare with theatrical compliance layer.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether privacy regulations will constrain surveillance or be captured"
+    },
+    {
+      "id": "psychological_suppression_internalization",
+      "question": "Is the suppression experienced by workers primarily structural (economic barriers to exit, legal employment terms) or internalized (workers accept constant monitoring as normal, necessary, deserved)?",
+      "resolution_mechanism": "Worker surveys on perceived agency and consent; analysis of post-exit psychological adjustment (do workers continue self-monitoring after employment ends); comparison of suppression levels across cultural contexts with different surveillance norms",
+      "impact": "If structural: removing barriers (job alternatives, legal restrictions) reduces suppression immediately. If internalized: suppression persists after exit; requires cognitive reframing; constraint's true suppression is higher than structural measures suggest.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized in worker psychology"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Workplace surveillance has evolved from task-based monitoring (measuring deliverables, attendance, task completion) into comprehensive behavioral surveillance that extends far beyond work coordination: keystroke logging, email content scanning, video monitoring, application tracking, location monitoring, mood detection via facial analysis, and predictive behavioral profiling. This constraint exhibits the full spectrum of DR classification types depending on structural position. For management and the organization, surveillance is rope (pure coordination). For hourly workers with no job alternatives, it is snare (pure extraction). For salaried workers with some mobility, it is tangled_rope (mixed coordination and extraction). For the surveillance technology industry, it is piton (degraded ritual justified by performative expansion). For organized labor and privacy advocates, it is scaffold (temporary institutional arrangement with a legislative sunset). The constraint's extractiveness has increased from 0.28 to 0.58 over the measurement interval (approximately 10 years, 2016-2026) as surveillance technology has become cheaper, more invasive, and more normalized. The theater ratio has increased from 0.35 to 0.64, indicating that the proportion of monitoring activity that serves no actual coordination function has nearly doubled \u2014 much current surveillance is maintained for psychological compliance (visible monitoring that increases behavioral conformity) rather than functional productivity measurement.",
+    "key_agents": [
+      "Hourly and Precarious Workers: Primary victims (powerless/trapped) \u2014 economic dependency creates structural inability to refuse surveillance conditions; bear full extraction cost without coordination benefit",
+      "Salaried Knowledge Workers: Secondary victims (moderate/constrained) \u2014 face career mobility costs and negotiation asymmetry; experience mixed coordination and extraction",
+      "Management and Organization Leadership: Primary beneficiary (institutional/arbitrage) \u2014 leverage surveillance for task coordination, resource allocation, and behavioral control; perceive only coordination function",
+      "Surveillance Technology Vendors: Secondary beneficiary (institutional/arbitrage) \u2014 profit from expanding surveillance capabilities; maintain piton classification through performative feature expansion ('security', 'wellness', 'predictive analytics')",
+      "Worker Rights Advocates and Labor Organizers: Organized agent (organized/constrained) \u2014 building alternative coordination mechanisms and regulatory constraints; pursuing scaffold sunset through legislation and collective bargaining",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 identifies tangled_rope classification: genuine coordination function layered with extraction mechanisms that serve only control"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts significant value from workers in the form of behavioral control (compliance beyond work requirements), psychological pressure (panopticon effect), and labor intensification (monitored activity is inherently more exhausting). However, it is not at maximum (\u22650.70) because management's coordination interest is partially genuine \u2014 surveillance does provide real information about task completion and resource utilization. The value reflects the asymmetry: management benefits from both coordination AND extraction, while workers bear extraction costs with minimal coordination benefit. Suppression (0.68): High. Multiple reinforcing barriers prevent exit: economic dependency (healthcare, housing, income), normalization of surveillance as employment condition, legal employment-at-will doctrine in most US jurisdictions, and information asymmetry (workers often unaware of surveillance extent). Suppression has increased as surveillance has become ubiquitous \u2014 workers can no longer vote with their feet by choosing less invasive employers. Theater ratio (0.64): Moderate-high. Significant portion of current workplace surveillance is performative: keystroke monitoring does not measure actual productivity (users learn to appear busy while accomplishing little); video monitoring creates psychological compliance without improving output quality; mood detection and predictive analytics are primarily performative security theater with minimal actual fraud/safety detection. The theater has increased as the industry has monetized invasive capability expansion rather than functional improvement.",
+    "perspectival_gap": "This constraint demonstrates the full range of DR types from power-related divergence, not observational ambiguity. The divergence is not about how to measure surveillance (it is directly observable) but about structural position's effect on experienced constraint type. A worker with identical surveillance exposure classifies the constraint as snare (pure extraction) while their manager classifies it as rope (pure coordination). Both are empirically accurate descriptions of their structural experience. The gap reveals how the constraint's function differs by position: it genuinely coordinates some management activities while genuinely extracting from worker autonomy. The tangled_rope classification at the analytical level captures this structural duality \u2014 the constraint is NOT a rope that some mistake for a snare, nor a snare that some rationalize as rope. It is authentically both, and the perspectival distribution reflects its true hybrid nature.",
+    "directionality_logic": "Each perspective's directionality (d) flows from structural position. Beneficiaries (management, vendors) have low d (around 0.15-0.25 for institutional actors with arbitrage options) \u2014 surveillance subsidizes their interests. Trapped workers have maximum d (~0.95) \u2014 they bear extraction costs without exit. Constrained workers have moderate d (~0.65-0.75) \u2014 they have some exit options but at significant cost. Organized advocates have moderate d (~0.55-0.65) \u2014 they have agency through collective action and legislative influence, but the constraint still affects them structurally. The sigmoid f(d) maps these values to experienced extractiveness: trapped workers experience \u03c7 approaching maximum (1.42), constrained workers experience moderate \u03c7 (~1.00), beneficiaries experience negative \u03c7 (\u2248-0.01), institutional advocates experience moderate \u03c7 (~0.75). The directionality computation reveals the extraction asymmetry: the constraint runs FROM workers TO management/vendors, not bidirectionally.",
+    "mandatrophy_analysis": "RESOLVED TANGLED ROPE: This constraint is tangled_rope rather than rope or snare because it exhibits THREE critical properties simultaneously: (1) Genuine coordination function \u2014 surveillance enables real task assignment, quality measurement, and resource allocation that management legitimately needs. Removing all monitoring would create actual coordination problems. (2) Asymmetric extraction \u2014 the surveillance apparatus extracts behavioral compliance, psychological pressure, and labor intensification that exceed what coordination requires. No-monitoring alternatives (transparent task outcomes, worker autonomy in scheduling, outcome-based metrics) could achieve coordination without the extraction component. (3) Requires active enforcement \u2014 the constraint persists because management actively enforces it and the technology industry actively expands it. It is not naturally arising; it is actively maintained. Mandatrophy is resolved by distinguishing the coordination component (legitimate) from the extraction component (contingent institutional choice) in the commentary, establishing that both are structurally present and causally relevant, not that one is mislabeled as the other."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "labor_market_power_asymmetry",
+      "digital_panopticon_normalization",
+      "workplace_autonomy_degradation"
+    ],
+    "dual_formulation_note": "Workplace surveillance operates as a unified constraint but its effects decompose into distinct downstream constraints: labor market power (surveillance increases dependency on current employer, reducing exit capacity), normalization (constant monitoring changes expectations about privacy and consent), and autonomy degradation (monitored work becomes inherently more controlling). These downstream constraints share the upstream surveillance mechanism but have independent extractiveness signatures reflecting different agent populations and time horizons."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

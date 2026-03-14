@@ -1,0 +1,217 @@
+{
+  "header": {
+    "constraint_id": "shipping_emissions_cap_allocation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "shec"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Shipping Emissions Cap Allocation System",
+    "topic_domain": "environmental_policy/maritime_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_large_shipowners",
+      "european_regulatory_bodies"
+    ],
+    "victims": [
+      "developing_nation_fleets",
+      "small_independent_operators",
+      "coastal_communities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Developing Nation Shipping Fleet",
+      "comment": "PERSPECTIVE 1: DEVELOPING NATION SHIPPING FLEET (SNARE) \u2014 Cannot exit global shipping routes; trapped by capital constraints and vessel age. Must bear disproportionate compliance costs while operating older, less-efficient vessels. No alternative income source or mode switch possible. Maximum experienced extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Small Independent Operators",
+      "comment": "PERSPECTIVE 2: SMALL INDEPENDENT OPERATORS (TANGLED ROPE) \u2014 High barriers to exit: ship retrofitting is capital-intensive; alternative fuels require infrastructure not yet widely deployed; must maintain routes for economic viability. Cap system does coordinate global emissions reduction, reducing commons tragedy. But asymmetric extraction: smaller operators face steeper per-vessel costs than consolidated competitors. Benefits from coordination exist but are swamped by compliance burden."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Incumbent Large Shipowners",
+      "comment": "PERSPECTIVE 3: INCUMBENT LARGE SHIPOWNERS (ROPE) \u2014 Primary beneficiaries of cap allocation system. Can achieve compliance through fleet efficiency improvements and fuel switching at lower per-tonne cost than competitors. Have arbitrage options: can trade excess caps, invest in zero-emission vessels, exit unprofitable routes. Experience system as coordination of collective action problem with incidental benefit (cap windfall if efficient). Net positive extraction running toward this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "European Regulatory Bodies and EU-affiliated Shipping Industry",
+      "comment": "PERSPECTIVE 4: EUROPEAN REGULATORY BODIES / EU SHIPPING INDUSTRY (TANGLED ROPE) \u2014 Primary enforcer and beneficiary. EU shipowners dominate flag registries and have capital to comply. Regulatory bodies benefit from coordination narrative (climate action) while extracting rents through cap allocation privileges. Active enforcement required to maintain asymmetry. Both coordination (global emissions standard) and extraction (disproportionate benefit to northern operators) present."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Coastal Communities and Port Operators",
+      "comment": "PERSPECTIVE 5: COASTAL COMMUNITIES AND PORT OPERATORS (TANGLED ROPE) \u2014 Face coordination benefit (reduced local air pollution from shipping) alongside extraction (port infrastructure costs shift to local governments; shipping diversion to less-regulated ports increases in peripheral regions). Some capacity to influence through port authority decisions but constrained by international shipping requirements."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International Green Shipping Coalition",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL GREEN SHIPPING COALITION (SCAFFOLD) \u2014 Organized NGO and progressive shipowner coalition. Sees cap system as temporary coordination mechanism with sunset: as alternative fuel infrastructure matures and zero-emission vessel technology commercializes, the cap-and-trade architecture should transition to performance mandates. Currently accepts extraction burden as necessary short-term cost for system legitimacy. Has exit path through emerging regulatory regimes. Sunset clause rationale: 10-15 year horizon for alternative fuels infrastructure to mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Maritime Organization",
+      "comment": "PERSPECTIVE 7: INTERNATIONAL MARITIME ORGANIZATION (PITON) \u2014 Formally responsible for global shipping standards but politically captured by shipping industry. The cap allocation system is performative: high theater of international cooperation, but actual enforcement delegated to regional bodies (EU, China) with conflicting incentives. IMO maintains narrative authority while abdicating functional enforcement. Theater derives from consensus requirement and flag-state discretion undermining cap integrity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Thermodynamic Constraint View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / THERMODYNAMIC VIEW (MOUNTAIN) \u2014 From civilizational/universal lens, some carbon budget constraint is thermodynamically immutable: global shipping emissions cannot stay constant while global cargo volumes grow. Any allocation system must triage cargo or carbon. This perspective risks naturalizing the specific cap allocation regime as inherent to decarbonization, obscuring that alternative allocation schemes (per-nautical-mile, per-tonne-cargo, per-crew) would produce different distributions of extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "baseline_year_gaming",
+      "question": "How sensitive is extraction distribution to the choice of baseline year for cap allocation?",
+      "resolution_mechanism": "Counterfactual cap allocation under alternative baseline years (2018, 2019, 2020, 2021); analysis of how fleet composition shifts affect which operators receive surplus or deficit caps",
+      "impact": "If baseline sensitivity is high: the cap allocation is meaningfully arbitrary, and extraction is contingent on political choice, not natural law. If low: baseline choice has only marginal effect on distribution.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Sensitivity of cap allocation to baseline year choice"
+    },
+    {
+      "id": "fuel_switching_cost_asymmetry",
+      "question": "Do compliance costs scale linearly with vessel age and flag state, or do structural factors create non-linear cost curves that systematically advantage large operators?",
+      "resolution_mechanism": "Cost-benefit analysis of fuel-switching technologies (LNG retrofit, biofuel adoption, zero-emission propulsion) disaggregated by vessel age, size, and operator capital access; identification of scale thresholds where per-tonne compliance cost drops",
+      "impact": "If non-linear with strong scale effects: extraction mechanism is structural (small operators face step-change cost increase). If linear: extraction is recompensable through financial transfers.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Cost asymmetry in fuel-switching across vessel classes"
+    },
+    {
+      "id": "leakage_rate_observability",
+      "question": "What proportion of shipping traffic diverts to unregulated or less-regulated jurisdictions (flag-hopping, transshipment gaming), and how does this leakage correlate with operator size and capital access?",
+      "resolution_mechanism": "Tracking of vessel flag changes and transshipment hub utilization pre- and post-cap implementation; analysis of diversion patterns by operator size and geographic origin",
+      "impact": "If leakage is high and concentrated among developing operators: cap system fails functionally (emissions reduction illusory) and extraction is severe (costs imposed without benefit). If leakage is low and distributed: system is functioning, extraction is moderate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Leakage rate and distribution of flag-hopping behavior"
+    },
+    {
+      "id": "alternative_fuel_infrastructure_readiness",
+      "question": "What is the trajectory of alternative fuel (green methanol, ammonia, hydrogen) infrastructure maturation, and does it align with the scaffold perspective's 10-15 year sunset horizon?",
+      "resolution_mechanism": "Infrastructure development tracking: bunkering port buildout, production capacity scaling, cost curve learning rates; comparison with infrastructure needs for full fleet transition",
+      "impact": "If infrastructure matures ahead of schedule: scaffold sunset is realistic, extraction timeline is compressible. If infrastructure lags: sunset is aspirational, extraction persists longer than acknowledged.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Maturation timeline of alternative fuel infrastructure"
+    },
+    {
+      "id": "redistribution_mechanism_effectiveness",
+      "question": "Are the financial transfers from cap revenue actually flowing to developing-nation operators for compliance support, or do institutional capture and transaction costs prevent redistribution?",
+      "resolution_mechanism": "Tracking of cap trading revenue and how it is allocated; measurement of funds actually reaching compliance assistance programs for small and developing operators; institutional analysis of transfer bureaucracies",
+      "impact": "If redistribution is effective: extraction is partially mitigated and system moves toward rope. If redistribution fails: extraction is confirmed and system remains snare/tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Actual redistribution of cap trading revenue to developing operators"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The International Maritime Organization's Energy Efficiency Existing Ship Index (EEDI) and subsequent Carbon Intensity Indicator (CII) regulations create a global shipping emissions cap allocation system that coordinates decarbonization while extracting rents from smaller operators and developing nations. The constraint exhibits tangled-rope characteristics: genuine coordination function (prevents commons tragedy of carbon emissions racing to bottom) combined with asymmetric extraction (capital-rich, efficient operators gain windfall cap allocations while capital-poor operators face steep retrofit costs). The system distributes initial cap allocations based on historical emissions, which preserves existing market dominance. Suppression is structural: developing-nation fleets are locked into global shipping routes by economic dependence and capital constraints; compliance costs are passed through to ports and cargo customers, not absorbed by the regulation's designers. Theater ratio reflects IMO's formal authority combined with functional capture by shipping industry interests; EU implementation has higher functional content (actual enforcement) but narrower scope (EU-flagged vessels only), creating leakage to less-regulated registries. The constraint demonstrates how a coordination mechanism (global emissions standard) can embed extraction through allocation rule design.",
+    "key_agents": [
+      "Developing Nation Shipping Fleets: Primary victim (powerless/trapped) \u2014 operates older vessels, cannot exit, faces disproportionate per-tonne compliance costs",
+      "Small Independent Operators: Secondary victim (moderate/constrained) \u2014 high retrofit capital requirements, limited access to alternative fuel infrastructure, constrained route choices",
+      "Incumbent Large Shipowners: Primary beneficiary (institutional/arbitrage) \u2014 dominate efficient vessel market, receive windfall cap allocations, can fund fuel-switching, have arbitrage options",
+      "European Regulatory Bodies: Co-beneficiary and enforcer (powerful/arbitrage) \u2014 EU shipowners benefit from cap system, EU maintains regulatory authority, active enforcement by EU ports and member states",
+      "Coastal Communities: Secondary victim (moderate/constrained) \u2014 benefit from reduced shipping pollution but face port infrastructure costs and shipping diversion to less-regulated jurisdictions",
+      "International Maritime Organization: Institutional actor (institutional/arbitrage) \u2014 maintains formal regulatory authority but functionally captured; enforcement delegated to regional bodies",
+      "Green Shipping Coalition: Organized observers (organized/mobile) \u2014 support system as temporary scaffold with sunset through technology transition; have exit path via alternative regulation regimes"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The cap allocation system genuinely reduces global commons tragedy by setting binding emissions ceilings, justifying baseline \u03b5 contribution. But the allocation rule\u2014based on historical emissions\u2014systematically advantages operators with efficient fleets and penalizes operators locked into older tonnage. Compliance costs are non-linear with operator scale, creating scale economies that benefit large operators. The 0.58 value reflects that extraction is structural (baked into allocation formula) but not total (alternative fuel pathways exist, albeit expensive). Suppression (0.62): Moderate-high. Developing operators face suppression through capital constraints (can't afford retrofit), path dependence (locked into older vessels), and global route dependence (shipping is essential, can't relocate). IMO's consensus-based governance and flag-state discretion suppress enforcement, allowing leakage. But suppression is not total\u2014ports and flag states have enforcement levers, and some operators can escape through technology access or route optimization. Theater ratio (0.48): Moderate. IMO maintains formal narrative authority, which is performative (consensus requirement, flag-state escape hatches). But EU implementation shows functional content\u2014actual enforcement through port state control and flag control. Theater has increased slightly as IMO's role has become more ceremonial relative to regional enforcement.",
+    "perspectival_gap": "Developing-nation victims perceive snare (trapped, no exit, pure extraction). Incumbent beneficiaries perceive rope (mobile, arbitrage options, coordination benefit). Moderate operators perceive tangled rope (some exit, mixed coordination and extraction). Green coalition perceives scaffold (organized, mobile, sunset visible). IMO perceives piton (formal authority, functional degradation). Analytical observer risks mountain (naturalizing contingent allocation rule). The perspectival gap is maximized between trapped and arbitrage actors\u2014same constraint, opposite experiences.",
+    "directionality_logic": "Large shipowners (d \u2248 0.15): Beneficiaries with arbitrage exit. Low directionality \u2192 low f(d) \u2248 0.0 \u2192 experienced \u03c7 is suppressed. Developing operators (d \u2248 0.92): Victims with trapped exit. High directionality \u2192 high f(d) \u2248 1.35 \u2192 experienced \u03c7 is amplified. Moderate operators (d \u2248 0.60): Mixed victims/partial beneficiaries with constrained exit. Mid-range d \u2192 mid-range f(d) \u2248 0.70 \u2192 experienced \u03c7 is moderate. The global scope (\u03c3=1.2) scales all \u03c7 values upward, reflecting that cap evasion and arbitrage operate at international scale, making enforcement harder and extraction easier.",
+    "mandatrophy_analysis": "The constraint resolves the mandatrophy by distinguishing the genuine coordination function (emissions ceiling) from the contingent extraction mechanism (allocation rule favoring incumbents). The claim 'this is necessary coordination' is true; the claim 'this specific allocation rule is necessary' is false. Alternative allocation schemes (per-nautical-mile, per-tonne-cargo, per-crew, grandfathering with transfer windows) would maintain coordination while changing extraction distribution. The tangled-rope classification correctly asserts that the constraint contains BOTH coordination and extraction, not that one can be eliminated without the other. The scaffold perspective shows the transition path: as technology maturity increases, the cap system can phase into performance mandates, reducing the extraction component without losing the coordination function. The false mountain classification from the analytical observer is a diagnostic signal: claims that 'allocation is necessary to science' are often cover stories for institutional preferences about whose carbon counts."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "maritime_fuel_decarbonization_infrastructure",
+      "port_state_control_enforcement",
+      "flag_registry_competition"
+    ],
+    "dual_formulation_note": "The shipping emissions cap allocation is downstream of the broader maritime decarbonization constraint but represents a distinct structural mechanism. The upstream constraint has \u03b5 reflecting the physical impossibility of maintaining current emissions while growing cargo; this constraint has \u03b5 reflecting the institutional choice to allocate caps based on historical emissions rather than other possible criteria. The two constraints are linked: the cap system's extractiveness depends on alternative fuel infrastructure maturity (affects_constraints entry)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

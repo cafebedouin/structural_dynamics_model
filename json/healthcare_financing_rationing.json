@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "healthcare_financing_rationing",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hfr"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Healthcare Financing Rationing",
+    "topic_domain": "healthcare/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "healthcare_administrators",
+      "pharmaceutical_manufacturers",
+      "insurance_underwriters",
+      "wealthy_patients"
+    ],
+    "victims": [
+      "low_income_patients",
+      "chronically_ill_populations",
+      "elderly_populations",
+      "rural_communities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Uninsured Patient",
+      "comment": "PERSPECTIVE 1: UNINSURED PATIENT (SNARE) \u2014 No structural exit from the rationing constraint. Faces total exclusion from expensive treatments, bankruptcy from emergency care, or death from untreated conditions. Cannot arbitrage out, cannot pay out-of-pocket, cannot negotiate. Maximum suppression via economic barrier and legal framework. Trapped agents perceive immutable mountain-like constraint; engine computes high chi from trapped exit + victim status."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Insured Working-Class Patient",
+      "comment": "PERSPECTIVE 2: INSURED WORKING-CLASS PATIENT (TANGLED ROPE) \u2014 Mixed coordination and extraction. Insurance provides genuine coordination benefit (pooled risk, predictable costs) but also enforces extraction through high deductibles, prior authorization requirements, and denial of expensive treatments. Can theoretically exit by changing jobs or paying out-of-pocket, but costs are punitive. Experiences both rope (mutual protection) and snare (forced participation, restricted access) simultaneously."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Healthcare Administrators and Insurers",
+      "comment": "PERSPECTIVE 3: HEALTHCARE ADMINISTRATORS / INSURERS (ROPE) \u2014 Experience the rationing system as coordination mechanism for managing collective resources. Genuine coordination function: without rationing rules, system would collapse under infinite demand. Benefit from arbitrage exit (can shift costs to other payers, shift risk to patients, influence policy). Experience minimal suppression because they help define the constraint. Engine derives low d from institutional power + arbitrage exit + beneficiary status."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Wealthy Patients",
+      "comment": "PERSPECTIVE 4: WEALTHY PATIENTS (TANGLED ROPE) \u2014 Genuine coordination benefit from insurance for routine care, but can exit the rationing constraint entirely for expensive treatments through private medicine, international care arbitrage, or direct payment. Some suppression via regulatory restrictions on direct-pay options, but mobile exit options mean suppression is surmountable. Experience genuine coordination (health insurance system) with optional extraction (can leave when costs get high). Moderately experienced extraction but with exit optionality."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Healthcare Reform Movements",
+      "comment": "PERSPECTIVE 5: HEALTHCARE REFORM MOVEMENTS (SCAFFOLD) \u2014 Organized agents (patient advocacy groups, public health advocates, labor unions) see rationing as a temporary institutional failure with a sunset. Single-payer systems, universal coverage models, and managed competition represent alternative pathways that reduce rationing through coordination redesign rather than accepting scarcity as inherent. Theater ratio is moderate (rationing is presented as medical necessity, but political choices drive actual allocation). Organized power gives these agents exit pathway even if slow."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Prior Authorization Ritual",
+      "comment": "PERSPECTIVE 6: PRIOR AUTHORIZATION SYSTEM (PITON) \u2014 Substantial portion of the rationing constraint operates through degraded institutional ritual. Prior authorization was designed to ensure medical necessity but has become largely performative: insurers use it primarily to delay treatment and encourage abandonment of claims, not to prevent medically unnecessary care. The ritual persists through institutional inertia despite poor health outcomes. Theater ratio in this sub-mechanism reaches 0.75+. Actors recognize it as theater but maintain it because alternatives haven't fully replaced it."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Resource Scarcity View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / SCARCITY VIEW (MOUNTAIN) \u2014 From universal perspective, some health rationing is inherent to scarcity: finite budgets, finite skilled providers, finite equipment mean that not all possible treatments can be provided to all people. This perspective sees rationing as an immutable law of economics \u2014 any system must allocate scarce resources somehow. However, the structural data reveals this as false naturalization: most wealthy nations provide vastly more treatment access at lower per-capita cost, suggesting the 'inherent scarcity' framing obscures political choices about funding levels and allocation mechanisms."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "scarcity_level_ambiguity",
+      "question": "Is the measured rationing driven by absolute resource scarcity or by political choices about funding levels and allocation mechanisms?",
+      "resolution_mechanism": "Comparative analysis of healthcare outcomes and spending across OECD nations with similar GDP per capita but different funding models. Cross-national mapping of rationing severity vs total health spending.",
+      "impact": "If driven by scarcity: mountain classification gains plausibility. If driven by political choice: rationing is contingent institutional arrangement, not law of nature. Changes classification of analytical perspective from mountain to tangled_rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether rationing reflects absolute scarcity or political funding choices"
+    },
+    {
+      "id": "prior_authorization_functionality",
+      "question": "Does prior authorization prevent medically unnecessary care at rates justifying its administrative burden, or does it primarily function as a barrier to access and claims abandonment?",
+      "resolution_mechanism": "Empirical audit: comparison of denial rates vs clinical guidelines; analysis of appeal success rates; correlation between prior authorization delay duration and treatment abandonment; longitudinal health outcomes for claims initially denied but later approved.",
+      "impact": "If functionally protective: rationing has legitimate coordination component. If primarily a barrier: prior authorization is extractive theater masquerading as clinical gatekeeping. Affects piton vs snare sub-classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether prior authorization provides clinical value or functions as access barrier"
+    },
+    {
+      "id": "identity_locked_patient_compliance",
+      "question": "Do patients rationally accept rationing as necessary medical practice, or has rationing framing become internalized such that patients suppress their own demands despite structural mobility to seek alternative care?",
+      "resolution_mechanism": "Comparative analysis: patient behavior when constraints are transparent vs when framed as medical necessity. Ethnographic study of post-denial care-seeking behavior. International survey: do patients in universal-coverage systems report different perceived necessity of rationing?",
+      "impact": "If identity-locked: suppression is partially internalized; constraint is harder to disrupt because targets have become invested in the rationing narrative. If rational acceptance: suppression is purely structural (cost barriers); constraint could be disrupted by reducing costs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether patient acceptance of rationing reflects identity fusion or rational cost response"
+    },
+    {
+      "id": "insurance_mandate_necessity",
+      "question": "Does mandatory insurance participation solve a genuine coordination problem (adverse selection, cost spreading) or primarily extracts rents by forcing participation and restricting exit?",
+      "resolution_mechanism": "Natural experiments: compare health outcomes and costs in jurisdictions with vs without insurance mandates; analysis of market outcomes under voluntary insurance with high-quality transparency; study of voluntary participation systems.",
+      "impact": "If coordination problem real: insurance mandate is justified rope-type constraint. If primarily extractive: mandate is snare-type constraint. Affects baseline classification and directionality for all insured-patient perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether insurance mandates solve coordination problems or impose extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Healthcare financing rationing creates a structural tension between legitimate collective resource management and asymmetric extraction favoring wealthy patients and institutional gatekeepers. The constraint operates simultaneously as a coordination mechanism (pooling risk through insurance), a rationing device (allocating scarce resources), and an extraction apparatus (concentrating denial and delay on low-income populations while preserving access for high-income populations). The rise in extractiveness over the interval (0.45 to 0.62) reflects increasing use of prior authorization, narrow networks, and out-of-pocket cost-shifting to concentrate costs on patients rather than spreading them. The theater ratio rise (0.38 to 0.55) reflects that much rationing is presented as medical necessity when it reflects political choices about funding levels. The constraint exhibits all six types from different structural positions, with organized reform movements offering a scaffold exit path and prior authorization operating as performative piton ritual.",
+    "key_agents": [
+      "Uninsured Patients: Primary victims (powerless/trapped) \u2014 face total exclusion or bankruptcy; no exit options from rationing constraint",
+      "Insured Working-Class Patients: Secondary victims (moderate/constrained) \u2014 benefit from insurance coordination but constrained by high deductibles, prior authorization, and restricted networks",
+      "Wealthy Patients: Partial victims (powerful/mobile) \u2014 experience genuine insurance coordination but can exit rationing entirely through private medicine and international arbitrage",
+      "Healthcare Administrators and Insurers: Primary beneficiaries (institutional/arbitrage) \u2014 define and enforce rationing rules; benefit from arbitrage exit and cost-shifting",
+      "Pharmaceutical and Device Manufacturers: Beneficiaries (institutional/arbitrage) \u2014 participate in rationing through pricing power; influence which treatments get rationed through lobbying",
+      "Healthcare Reform Movements: Organized actors (organized/constrained) \u2014 offer scaffold exit through alternative systems; constrained by political barriers but have pathway forward",
+      "Prior Authorization System: Institutional ritual (institutional/arbitrage) \u2014 maintains degraded gatekeeping function; theater has increased as insurers use it primarily for claim denial rather than clinical assessment",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing political funding choices as inherent scarcity limits"
+    ],
+    "logic_rationale": "Extractiveness (0.62): High-moderate. The constraint concentrates benefits on administrators and wealthy patients while concentrating costs on low-income and chronically ill populations. The 17-point increase over 15 years reflects deterioration: shift from coverage-based rationing (which spreads costs) to cost-based rationing (which concentrates costs on vulnerable populations through prior authorization, network narrowing, and deductible increases). The constraint is not maximal extraction because some genuine coordination function (insurance pooling, risk spreading) persists. Suppression (0.68): High. Multiple barriers to exit: legal mandate to participate in insurance, regulatory restrictions on direct-pay options, lack of price transparency, information asymmetry about treatment quality, professional licensing restrictions on alternative providers. Suppression is both structural (legal/economic barriers) and internalized (patients have absorbed framing that rationing is medical necessity, not political choice). Theater ratio (0.55): Moderate-high. Prior authorization is presented as clinical gatekeeping but functions primarily as administrative barrier and claims-delay mechanism. Coverage denials are framed as 'not medically necessary' when in fact they reflect cost ceilings. Rationing itself is presented as inherent to healthcare when it actually reflects political choices about funding levels relative to other OECD nations.",
+    "perspectival_gap": "The perspectival gap reveals that healthcare rationing is not a single constraint with uniform effect, but rather a presheaf structure where classification depends entirely on structural position. From below (uninsured), it is snare. From middle (insured working-class), it is tangled_rope. From above (wealthy), it is rope with exit. From within administration, it is rope pure. From organized reform perspective, it is scaffold (temporary, solvable). From degraded ritual perspective (prior authorization), it is piton. From analytical distance, it appears mountain (resource scarcity) but structural comparison with other OECD nations reveals this as false naturalization of a political choice.",
+    "directionality_logic": "Directionality is determined by structural position: power level, exit options, and beneficiary/victim status. Uninsured patients (powerless + trapped + victim) derive maximum d \u2248 0.95, producing f(d) \u2248 1.42, maximum experienced extraction. Working-class insured (moderate + constrained + victim) derive d \u2248 0.65, producing f(d) \u2248 1.00, high experienced extraction. Wealthy patients (powerful + mobile + partial victim/beneficiary) derive d \u2248 0.45, producing f(d) \u2248 0.55, moderate experienced extraction. Healthcare administrators (institutional + arbitrage + beneficiary) derive d \u2248 0.10, producing f(d) \u2248 -0.05, negative experienced extraction (they benefit from the constraint's enforcement). Scope modifier \u03c3(national) = 1.0 applies without amplification. The engine's chi calculation multiplies base extractiveness \u00d7 f(d) \u00d7 \u03c3(S) for each perspective: uninsured patient experiences \u03c7 \u2248 0.62 \u00d7 1.42 \u00d7 1.0 = 0.88; administrator experiences \u03c7 \u2248 0.62 \u00d7 (-0.05) \u00d7 1.0 = -0.03. Directionality overrides are unnecessary: structural derivation from beneficiary/victim declarations and exit options captures the true relationships.",
+    "mandatrophy_analysis": "Healthcare financing rationing resolves the mandatrophy by showing that all six types are legitimate readings of the same structural phenomenon. The mandatrophy is not 'is healthcare rationing rope or snare?' but rather 'from which structural position are you measuring?' The false summit occurs when the analytical observer naturalizes political funding choices as inherent scarcity limits (mountain). The correct analytical view is tangled_rope: genuine coordination function (insurance pooling) combined with asymmetric extraction (concentration of rationing burden on low-income populations, wealthy escape options, administrative gatekeeping). The mandatrophy resolution requires showing that (1) the coordination function is real (insurance does pool risk and spread costs better than markets do), (2) the extraction is real (rationing concentrates harm on powerless agents while preserving access for powerful agents), and (3) the theatrical component is real (rationing is presented as medical necessity when it reflects political choices about funding levels). None of these truths contradicts the others. The constraint is correctly classified as tangled_rope at the analytical level because it exhibits both genuine coordination (insurance mechanism) and genuine asymmetric extraction (whose access gets rationed)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "pharmaceutical_pricing_power",
+      "medical_bankruptcy_debt_trap",
+      "provider_network_narrowing",
+      "health_insurance_mandate_enforcement"
+    ],
+    "dual_formulation_note": "Healthcare financing rationing is a constraint family that decomposes into multiple structurally distinct mechanisms: (1) insurance pooling (genuine coordination, low \u03b5), (2) prior authorization delays (theatrical extraction, high theater ratio), (3) network narrowing (exclusion mechanism, high extraction), (4) cost-shifting via deductibles (direct victim targeting, high extraction). Each mechanism has different \u03b5 values and different temporal dynamics. The measured extractiveness (0.62) represents a mix of these mechanisms weighted by their prevalence in typical US healthcare encounters. Decomposition into separate stories would distinguish the coordination function (insurance pooling, \u03b5 \u2248 0.10) from the extraction mechanisms (prior authorization, network narrowing, cost-shifting, \u03b5 \u2248 0.70-0.85). This story models them as an integrated system because they co-evolve: increases in extraction (prior authorization, cost-shifting) are justified by appeals to coordination necessity (controlling costs to keep insurance viable)."
+  },
+  "directionality_overrides": []
+}

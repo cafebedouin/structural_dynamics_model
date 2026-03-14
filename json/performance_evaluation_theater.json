@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "performance_evaluation_theater",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "perf"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.78,
+    "claimed_type": "snare",
+    "human_readable": "Performance Evaluation Theater in Organizations",
+    "topic_domain": "organizational/labor",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "management_hierarchy"
+    ],
+    "victims": [
+      "evaluated_workers",
+      "organizational_productivity",
+      "worker_wellbeing"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Evaluated Worker",
+      "comment": "PERSPECTIVE 1: EVALUATED WORKER (SNARE) \u2014 Trapped by employment dependence and legal obligation to participate in evaluations. Bears full cost of the performative system: time spent preparing narratives, psychological stress from arbitrary judgment, career consequences from ratings unrelated to actual performance. No realistic exit without job loss. Maximum extraction experienced through legitimated surveillance and judgment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Collective Workforce",
+      "comment": "PERSPECTIVE 2: COLLECTIVE WORKFORCE (TANGLED ROPE) \u2014 Constrained by limited job mobility, industry-wide standardization of evaluation practices, and reputational damage from refusing participation. Benefits from some coordination functions (feedback mechanisms, career pathway clarity) alongside significant extraction. Moderate agency through unionization and collective action, but normative expectations constrain exit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Management Hierarchy",
+      "comment": "PERSPECTIVE 3: MANAGEMENT HIERARCHY (ROPE) \u2014 Benefits from evaluation theater as coordination mechanism: provides documented basis for pay decisions, terminations, and promotion selections. Experiences constraint as enabling institutional function. Can arbitrage to alternative systems (e.g., flat hierarchies) but benefits from existing structure outweigh costs. Net beneficiary with high agency."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Human Resources Department",
+      "comment": "PERSPECTIVE 4: HUMAN RESOURCES DEPARTMENT (PITON) \u2014 Maintains performative evaluation rituals (forms, metrics, calibration sessions) that persist through institutional inertia despite acknowledged failure to predict performance or improve outcomes. Theater ratio (0.78) reflects that evaluation infrastructure is largely ceremonial: calibration meetings confirm existing biases, metrics measure effort not impact, ratings correlate more with likeability than actual contribution. HR sees the system as degraded but continues it because no replacement has gained institutional acceptance."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Organizational Reform Movement",
+      "comment": "PERSPECTIVE 5: ORGANIZATIONAL REFORM MOVEMENT (SCAFFOLD) \u2014 Organized actors (management consultants, tech companies pioneering alternative systems, worker advocacy groups) are building temporary scaffolding around evaluation theater: peer feedback systems, skill-based mobility, manager training in reducing bias. These are explicit interventions with sunset logic \u2014 once internalized as norms, evaluation theater's extraction mechanism loses force. Low effective extraction because these agents see an exit path with defined timeline."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal perspective, some performance evaluation is inherent to any hierarchical organization: distributed information problem requires some mechanism for comparing and selecting agents. This perspective risks naturalizing contingent institutional arrangements (standardized metrics, documented ratings, annual cycles) as immutable features of organizational life. Engine false summit detection applies."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "measurement_validity_ambiguity",
+      "question": "Do performance metrics measure actual worker contribution or primarily reflect manager perception, likeability, and conformity?",
+      "resolution_mechanism": "Longitudinal correlation analysis: ratings vs. actual productivity metrics (output quality, customer satisfaction, innovation measures); comparison of within-manager consistency (same performance rated differently across employees) vs. actual performance differences",
+      "impact": "If metrics have >0.5 correlation with objective performance: evaluation provides real information (reduces to Tangled Rope from worker perspective). If <0.3 correlation: ratings are pure status signal (confirms Snare classification).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether performance metrics measure actual contribution or managerial perception"
+    },
+    {
+      "id": "alternative_system_viability",
+      "question": "Can non-hierarchical evaluation systems (peer feedback, skill-based mobility, outcome-only assessment) actually replace annual ratings at scale?",
+      "resolution_mechanism": "Case studies of organizations that eliminated traditional ratings; measurement of worker satisfaction, retention, and productivity under alternative systems; identification of organizational conditions under which alternatives fail",
+      "impact": "If viable: scaffold perspective is structural (sunset is real, extraction will decline). If not viable: organizations will revert to traditional theater (extraction is immutable, snare classification confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether viable alternatives to traditional evaluation exist at scale"
+    },
+    {
+      "id": "suppression_internalization",
+      "question": "Is measured suppression (0.65) primarily external (legal/career barriers to exit) or internalized (workers accept evaluation as legitimate and necessary)?",
+      "resolution_mechanism": "Post-departure worker interviews; measurement of psychological reactance in organizations; correlation of internalization levels with pre-existing identification with organizational values",
+      "impact": "If primarily internalized: constraint's effective suppression persists beyond structural removal (workers will self-regulate even without formal evaluation); workers carry internalized suppression to new organizations. If primarily external: eliminating formal evaluation will substantially reduce suppression.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized in worker psychology"
+    },
+    {
+      "id": "management_genuine_benefit",
+      "question": "Does evaluation theater actually provide management with decision-quality information, or is it entirely performative from their perspective too?",
+      "resolution_mechanism": "Analysis of manager decision-making in organizations with/without formal ratings; examination of post-evaluation personnel decisions to determine whether ratings influenced outcomes or were post-hoc justifications; manager interview data on rating confidence and utility",
+      "impact": "If genuinely useful to management: constrains reclassification as Tangled Rope (both parties experience coordination alongside extraction). If entirely performative: confirms Snare (management extracts legitimacy from theater without actual benefit).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether formal ratings provide management with genuine decision-quality information"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Performance evaluation theater in organizations represents a structural constraint where legitimated surveillance and arbitrary judgment mechanisms extract compliance, psychological labor, and conformity from workers while providing minimal coordination benefit. The constraint operates through a combination of structural suppression (employment dependence, legal mandate to participate, career consequences) and internalized suppression (workers internalize the validity of evaluation, accept ratings as legitimate judgment of their worth, and self-regulate according to perceived evaluation criteria). The theater_ratio has increased from 0.62 to 0.78 over the measurement interval, indicating that the formal evaluation infrastructure has become increasingly performative as actual measurement validity has declined \u2014 evaluation cycles elaborate ritual content while predictive validity for job performance remains low. The constraint exhibits all six classification types depending on observer position, with the primary tension between management's benign view of evaluation as coordination mechanism (Rope) and workers' experience of it as pure extraction (Snare). The increasing theater_ratio combined with stable or rising extractiveness indicates metric substitution (Goodhart drift): the system optimizes for evaluation ritual completion rather than worker performance improvement.",
+    "key_agents": [
+      "Evaluated Workers: Primary victims (powerless/trapped) \u2014 bear full cost of performative system through time expenditure, psychological stress, and arbitrary judgment with career consequences",
+      "Management Hierarchy: Primary beneficiary (institutional/arbitrage) \u2014 extracts legitimacy for personnel decisions, documented basis for terminations and pay adjustments, and organizational control mechanism",
+      "Human Resources Department: Institutional gatekeeper (institutional/arbitrage) \u2014 maintains and elaborates performative infrastructure; benefits from continued relevance and job security; sees own system as degraded but continues it through inertia",
+      "Organizational Reform Movement: Organized reformers (organized/mobile) \u2014 building alternative systems (peer feedback, skill-based mobility, continuous feedback) with sunset logic; reducing extraction through system replacement rather than demand reduction",
+      "Collective Workforce: Secondary victim/moderate agent (moderate/constrained) \u2014 benefits from some coordination functions (career clarity, feedback mechanisms) while bearing extraction costs; constrained by collective action problems and industry standardization",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as immutable organizational requirements"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The evaluation system extracts compliance (mandatory participation), psychological labor (stress and identity work around ratings), conformity (self-regulation according to perceived evaluation criteria), and material consequences (pay adjustments, termination justifications, mobility blocking). The value reflects that extraction is substantial but not absolute \u2014 some workers successfully navigate evaluations, and the system provides some legitimate feedback. The increase from 0.48 to 0.58 reflects metric substitution: as objective performance measurement has become harder (organizational complexity increased, individual contribution more distributed), the system has elaborated performative content to maintain legitimacy while actual measurement validity has declined. Suppression (0.65): Moderate-high. External suppression includes employment dependence, legal mandate to participate, career consequences of non-compliance, and lack of alternatives within the organization. Internalized suppression includes workers' acceptance of evaluation as legitimate judgment of their worth, internalized need for managerial approval, and identity fusion with performance ratings. The combined suppression creates high barriers to exit: workers cannot leave the organization without material cost, and even if they could, many have internalized the constraint as a valid organizational practice. Theater ratio (0.78): High and rising. Evaluation infrastructure has become increasingly elaborate and performative: calibration sessions that formalize existing biases, metrics that measure effort and conformity rather than impact, annual cycles that create artificial urgency, and documentation that serves legal defense rather than performance improvement. The rise from 0.62 indicates that as measurement validity has declined, ritual elaboration has increased \u2014 the system maintains legitimacy through performative content when actual measurement fails.",
+    "perspectival_gap": "The primary perspectival gap is between management's experience of evaluation as coordinate mechanism (Rope) and workers' experience of it as pure extraction (Snare). This gap reveals the structural dependence of perspectival classification on exit options and directionality. Management has arbitrage options (can implement alternative evaluation systems, can exit to organizations with different practices) and benefits from the system, producing low directionality (d \u2248 0.10) and low experienced extractiveness. Workers have trapped or constrained exit options (cannot exit without job loss or career damage) and bear costs, producing high directionality (d \u2248 0.90) and high experienced extractiveness. The perspectival gap is not mere disagreement but structural: the two parties occupy fundamentally different positions relative to the constraint. The gap also reveals how internalized suppression sustains the asymmetry: workers who accept evaluation as legitimate (internalized suppression) are less likely to organize collective action to exit, despite having numerical majority. Management benefits from this internalization because it reduces the likelihood that workers will demand constraint removal.",
+    "directionality_logic": "Worker directionality is high (d \u2248 0.90): trapped agents bearing extraction costs with no exit option. Management directionality is low (d \u2248 0.10): beneficiaries with arbitrage options who can shift evaluation systems if needed. The sigmoid f(d) maps these to strongly asymmetric experienced extractiveness: workers experience chi \u2248 0.85 (high effective extraction), management experiences chi \u2248 -0.05 (negative effective extraction \u2014 they benefit from the constraint). The collective workforce has intermediate directionality (d \u2248 0.60) reflecting their constrained but not trapped position: they cannot exit without career cost, but collective action provides some leverage. HR's directionality is low (d \u2248 0.15) \u2014 they benefit from continued use of the system even though they see it as degraded. This directionality structure explains why the constraint persists despite being widely acknowledged as ineffective: the beneficiaries (management, HR) have low d and experience low or negative chi, while the victims have high d and experience high chi. The system is stable because those who could change it experience it as beneficial or at worst neutral.",
+    "mandatrophy_analysis": "RESOLVED THROUGH PERSPECTIVAL SPECIFICATION. The mandatrophy question is 'Is evaluation theater coordination or extraction?' The answer is 'both, for different parties.' Management sees and experiences it as coordination: the constraint solves their information problem (comparing worker contributions, documenting promotion decisions, providing legal defense for terminations). This is genuine coordination function \u2014 without some evaluation mechanism, hierarchical organizations cannot make personnel decisions. Workers see and experience it as extraction: the constraint imposes arbitrary judgment, psychological stress, and conformity demands with minimal coordination benefit to them (feedback quality is poor, decisions are often predetermined, career paths are opaque). This is genuine extraction \u2014 workers bear costs without corresponding benefit. The classification solution is to specify the perspective: from management's institutional position with arbitrage options, it is Rope (coordination). From workers' powerless trapped position, it is Snare (pure extraction). From the HR perspective, it is Piton (performative ritual maintained through inertia). From the reform movement's organized position with sunset logic, it is Scaffold (temporary coordination with declining extraction). The mandatrophy resolves by recognizing that neither management nor workers has a privileged view of 'what evaluation theater really is' \u2014 the constraint genuinely exhibits different structural properties depending on the observer's position within it. The analytical perspective that naturalizes evaluation as an immutable organizational law (Mountain) fails the false summit test: alternatives exist (peer-based evaluation, skill-based mobility, outcome-only assessment), and the constraint persists through institutional choice rather than natural necessity."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "workplace_surveillance",
+      "management_legitimacy",
+      "worker_identity_commitment"
+    ],
+    "dual_formulation_note": "Performance evaluation theater is downstream of the resource allocation problem (who gets resources, advancement, and rewards in hierarchical organizations) and upstream of worker identity dynamics (workers internalize evaluation as legitimate judgment of their worth). The three-constraint family maps the causal chain: resource allocation creates need for evaluation mechanisms (parent) \u2192 evaluation theater provides performative solution (this constraint) \u2192 worker internalization of evaluation criteria sustains the system (child). Each constraint has distinct epsilon and classification."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

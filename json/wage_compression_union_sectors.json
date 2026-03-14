@@ -1,0 +1,207 @@
+{
+  "header": {
+    "constraint_id": "wage_compression_union_sectors",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "wagec"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Wage Compression in Unionized Sectors",
+    "topic_domain": "labor_economics/industrial_relations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "low_wage_workers",
+      "union_negotiating_teams"
+    ],
+    "victims": [
+      "high_skill_senior_workers",
+      "merit_based_advancement"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Senior Skilled Worker",
+      "comment": "PERSPECTIVE 1: SENIOR SKILLED WORKER (SNARE) \u2014 Trapped in a compressed wage schedule that caps their earning potential despite higher skills and seniority. Exit requires leaving the sector entirely, which carries high costs (loss of pension vesting, seniority rights, specialized skill value). The constraint extracts value from this agent's productivity surplus by preventing market-rate compensation. Maximum experienced extraction with no meaningful exit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Entry-Level Union Member",
+      "comment": "PERSPECTIVE 2: ENTRY-LEVEL UNION MEMBER (TANGLED ROPE) \u2014 Benefits from compression's wage floor (protected from market-rate underbidding) but pays opportunity cost if their skills and performance exceed the compression band. Significant coordination function: wage compression prevents undercutting and wage-floor collapse. Constrained exit (could move to non-union sector but face variable job quality and benefits). Mixed coordination benefit and extraction loss."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Union Negotiating Leadership",
+      "comment": "PERSPECTIVE 3: UNION NEGOTIATING LEADERSHIP (ROPE) \u2014 Benefits from compression through simplification of negotiations, reduced internal conflict, and demonstrable gains for majority membership (wage floor protection). The constraint is their primary coordination mechanism for preventing wage-floor collapse and race-to-the-bottom dynamics. Arbitrage options: can exit via leadership transition or sector shift. Experiences the constraint as pure coordination with net benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Employer/Industry",
+      "comment": "PERSPECTIVE 4: EMPLOYER / INDUSTRY (TANGLED ROPE) \u2014 Benefits from wage compression (predictable labor costs, reduced payroll variance, simplified HR administration). Enforces compression through collective bargaining agreements and grievance procedures. But faces extraction pressure: high-skill worker retention suffers, creating hidden costs (training, turnover, recruitment). Constrained exit (abandoning union contracts creates legal and reputation costs). Mixed institutional coordination and extraction avoidance."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Seniority Ritual",
+      "comment": "PERSPECTIVE 5: THE SENIORITY RITUAL (PITON) \u2014 From a long-term perspective, seniority-based wage progression is largely performative: it provides a visible 'fairness' mechanism while actually protecting union leadership from the harder problem of merit-based advancement and skill differentiation. The theater persists through institutional inertia \u2014 union contracts maintain seniority language even as actual value accrual shifts to benefits and pension protection. Theater ratio increased as real wage gains have slowed but seniority protections remain contractually entrenched."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universalizing perspective, wage compression appears as an immutable feature of collective bargaining: any mechanism that protects a wage floor for dispersed workers must suppress individual variation (otherwise high-wage workers would poach all negotiating power). The constraint appears unavoidable \u2014 a mathematical consequence of coalition formation. However, the structural data contradicts this: actual mechanisms (seniority schedules, step increases, classification systems) are contingent institutional designs, not logical necessities. The mountain classification is a false summit naturalizing a choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "skill_detection_mechanism",
+      "question": "Can skill differentiation be credibly measured and rewarded within union frameworks without collapsing the wage-floor coordination function?",
+      "resolution_mechanism": "Comparative analysis of sectors with skill-based pay (nursing, trades) vs rigid compression (manufacturing, public service). Measurement of whether skill-based systems maintain lower-wage floors or whether they compress to zero.",
+      "impact": "If credible skill measurement exists: compression is contingent choice, not structural necessity \u2014 more perspectives shift to lower extraction classifications. If skill measurement fails or collapses wage floors: compression is revealed as necessary for stability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether skill-differentiated pay can coexist with wage-floor protection"
+    },
+    {
+      "id": "coalition_stability_threshold",
+      "question": "What wage-spread ratio (highest/lowest paid in a unit) is the actual threshold for coalition breakdown, and how does it vary by sector and workforce heterogeneity?",
+      "resolution_mechanism": "Historical analysis of union contract negotiations; tracking of when unions formally split into pay tiers; wage-ratio measurements at contract renewal thresholds.",
+      "impact": "If threshold is tight (e.g., max/min \u2264 3x): compression is structurally necessary to maintain coalition. If threshold is wide (max/min \u2264 5-10x): compression is chosen preference, not structural requirement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Coalition stability threshold for wage differentiation"
+    },
+    {
+      "id": "exit_cost_trajectory",
+      "question": "As manufacturing moves offshore and union sectors shrink, do exit costs for senior workers increase or decrease? Is compression becoming more extractive as the sector contracts?",
+      "resolution_mechanism": "Longitudinal tracking of pension portability, skill transferability, and wage differentials for workers exiting union sectors. Comparison of exit costs across decades of sector contraction.",
+      "impact": "If exit costs rising: suppression is increasing over time, making compression more snare-like. If exit costs stable or falling: suppression may be declining as alternative sectors become viable.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "How exit costs change as unionized sectors contract"
+    },
+    {
+      "id": "internal_union_pressure",
+      "question": "How much internal pressure exists within unions to break compression (high-skill workers advocating for differentiation) and how is it managed or suppressed?",
+      "resolution_mechanism": "Analysis of union election platforms, grievance data, strike votes, and leadership opposition. Tracking of when compression issues surface as internal union conflict.",
+      "impact": "If high pressure + heavy suppression: this reveals active enforced extraction within the coalition. If low pressure: high-wage workers have accepted or internalized compression (identity_locked). If negotiated breaks: legitimacy of compression is higher.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Internal union pressure for wage differentiation"
+    },
+    {
+      "id": "identity_lock_vs_material_trapped",
+      "question": "For senior workers in compressed schedules, is their constraint primarily structural (material barriers to exit) or cognitive (identity-fused with union membership and seniority culture)?",
+      "resolution_mechanism": "Post-union-exit interviews and career transitions; measurement of whether former union members retain seniority-based identity frames and whether they successfully transition to skill-market roles.",
+      "impact": "If identity-locked: exit_options should be identity_locked rather than trapped \u2014 classification shifts to Rope from identity-locked perspective. If purely material: trapped is correct, and exit costs are the primary constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether wage compression constraint is material or identity-based for senior workers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Wage compression in unionized sectors represents a structural constraint that simultaneously coordinates a wage floor and extracts value from high-skill senior workers. The constraint emerges from the collective-bargaining requirement that negotiated wages apply uniformly across a classification (e.g., all production workers, all teachers with the same years of service). This creates a tension: the compression mechanism prevents a race-to-the-bottom for entry-level workers, but it also caps the earnings of workers whose skills or seniority might command higher market rates. The constraint is actively enforced through union contracts and grievance procedures that prevent individual wage-rate deviation. It exhibits genuine coordination (wage-floor protection, prevention of undercutting) alongside asymmetric extraction (high-skill workers subsidizing wage-floor protection). Over the past two decades, the extractiveness has increased as sector contraction has raised exit costs for senior workers while technological change has increased the skill premium for high-performing workers within the sector.",
+    "key_agents": [
+      "Entry-Level Union Members: Primary beneficiary (moderate/constrained) \u2014 protected from market-rate underbidding; wage floor guaranteed by compression mechanism",
+      "Senior Skilled Workers: Primary victim (powerless/trapped) \u2014 highest-paid within compressed band but capped below market rate for their skill; exit is costly due to pension vesting and sector contraction",
+      "Union Negotiating Leadership: Institutional beneficiary (organized/arbitrage) \u2014 uses compression to simplify negotiations and demonstrate gains to majority membership; avoids contentious merit-based allocation",
+      "Employers/Industry: Institutional mixed (institutional/constrained) \u2014 benefit from predictable labor costs and simplified administration; face hidden costs from high-skill worker retention and turnover",
+      "Union Membership as Collective: Secondary beneficiary (organized/constrained) \u2014 wage compression maintains internal solidarity and prevents highest-wage members from capturing all negotiating power",
+      "Analytical Observer: Sees false summit (analytical/analytical) \u2014 risks naturalizing contingent institutional design (seniority schedules) as inevitable feature of collective bargaining"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high and rising. The constraint genuinely redistributes income from high-skill to low-skill workers within the union. Extractiveness is not as severe as pure Snare because (a) coordination benefits (wage-floor protection) are real, (b) the beneficiary group is large, and (c) the extraction mechanism is transparent rather than hidden. However, extractiveness has increased over 20 years as (1) sector contraction increased exit costs, (2) technological change increased the skill premium, and (3) real wages stagnated while compression ratios tightened. Suppression (0.48): Moderate. Significant barriers to exit include pension vesting (5-10 year cliffs), skill specialization, union contract enforcement, and regional sector concentration. But suppression is not total \u2014 skilled workers can and do exit to non-union sectors or into management tracks within firms. Some workers accept compression as part of union solidarity (internalized, not purely structural). Theater ratio (0.35): Low. The compression mechanism is not particularly performative \u2014 it actually implements the stated goal (wage floor protection). Seniority progression carries some theater (visible fairness) but is substantive (pension and benefit accrual follow seniority). Theater is lower than institutional constraints with more visible ritual.",
+    "directionality_logic": "Directionality is determined by each agent's structural relationship to the extraction flow. Entry-level workers (beneficiary, constrained exit) have low d \u2014 they experience the constraint as net benefit. Senior workers (victim, trapped exit) have high d \u2014 they bear the extraction cost and cannot escape. Union leadership (beneficiary through coalition simplification, arbitrage options in leadership transition) has low d \u2014 they experience the constraint as coordination mechanism that solves their core problem (avoiding internal wage conflict). Employers (mixed: benefit from cost predictability but lose high-skill retention) have intermediate d around 0.5 \u2014 they both benefit and bear costs. The key structural point: the beneficiaries are a large group (majority of union membership) with moderate power; the victims are a smaller group (high-skill senior workers) with lower power within the union. This asymmetry is exactly what makes the constraint extractive \u2014 the majority can enforce compression against the preference of the minority without the minority having effective exit.",
+    "perspectival_gap": "The perspectival range spans from pure coordination (union leadership view) to pure extraction (senior worker view). Union leadership sees Rope \u2014 they are solving the legitimate problem of maintaining coalition stability. Entry-level members see Rope \u2014 they are receiving genuine wage-floor protection. Senior workers see Snare \u2014 they are trapped in a compressed schedule with no meaningful exit and no voice in union decisions. Employers see Tangled Rope \u2014 they benefit from cost stability but pay hidden costs in turnover and skill loss. The piton perspective (seniority ritual as theater) represents the long-term observation that union contracts maintain seniority language even as its substantive value has declined relative to pension and benefit protection. The analytical false summit (compression as immutable feature) naturalizes what is actually a choice about how to allocate negotiating gains within a coalition.",
+    "mandatrophy_analysis": "This constraint demonstrates how mandatrophy resolves via perspectival composition. The union leadership and majority membership genuinely benefit from compression and experience it as coordination. The senior minority genuinely suffers extraction. Both observations are structurally correct \u2014 the constraint IS simultaneously coordination and extraction from different positions. The mandatrophy dissolves when the analytical observer recognizes that the classification depends on which coalition member you are. There is no contradiction between 'compression is necessary to maintain wage-floor protection' (leadership view, Rope) and 'compression extracts from high-skill workers' (senior worker view, Snare) \u2014 both are true from their respective structural positions. The resolution is not to pick one classification but to recognize that the constraint's behavior depends on power asymmetry within the coalition. If high-skill workers had equal voting power in union decisions, the classification would shift \u2014 they could negotiate breaks in compression for themselves. The mandatrophy reveals the actual extraction mechanism: concentration of negotiating power in the hands of majority-vote union democracy, which allows the majority to impose compression on a constrained minority."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "skilled_worker_exit_propensity",
+      "union_internal_wage_conflict",
+      "manufacturing_sector_contraction"
+    ],
+    "dual_formulation_note": "Wage compression in unionized sectors can be decomposed into two structurally distinct constraints: (1) wage_floor_coordination (the mechanism that prevents race-to-the-bottom and maintains entry-level protections), and (2) wage_ceiling_extraction (the mechanism that caps high-skill earnings). The coordination function (Rope) is the primary constraint's focus here; the extraction mechanism (Snare from senior worker perspective) is revealed by indexical variation. Separate stories could track each function's evolution independently."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.25
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "header": {
+    "constraint_id": "nature_based_carbon_sink_displacement",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nbcsd"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Nature-Based Carbon Sink Displacement",
+    "topic_domain": "climate_policy/environmental_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "agricultural_commodity_producers",
+      "forest_industrial_operators",
+      "carbon_credit_financial_intermediaries"
+    ],
+    "victims": [
+      "indigenous_land_stewards",
+      "biodiverse_ecosystems",
+      "climate_mitigation_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Indigenous Land Stewards and Biodiversity",
+      "comment": "PERSPECTIVE 1: INDIGENOUS STEWARDS & BIODIVERSE ECOSYSTEMS (SNARE) \u2014 Cannot exit the carbon-sink displacement regime. Lands managed for millennia with high carbon sequestration and biodiversity are converted to commodity production or monoculture plantations, then credited as 'nature-based solutions.' Stewards face legal dispossession, cultural erasure, and resource extraction with no meaningful consent mechanisms. Trapped in a system that extracts the carbon credit value while destroying the actual ecological function. Maximum extraction, high suppression via property law and capitalist land markets."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Small Farmers and Local Communities",
+      "comment": "PERSPECTIVE 2: SMALL FARMERS & LOCAL COMMUNITIES (TANGLED ROPE) \u2014 Face constrained choice: participate in carbon credit schemes or lose land access entirely. The constraint coordinates genuine land-use decisions (which crops, forestry rotation, conservation intensity) but extracts by transferring carbon value ownership to external financial actors. Some agents benefit from carbon payments; others face debt traps when commodity prices fall and credit terms tighten. Mixed extraction and coordination with significant asymmetry."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Carbon Credit Financial Intermediaries",
+      "comment": "PERSPECTIVE 3: CARBON CREDIT INTERMEDIARIES (ROPE) \u2014 Financial actors, offset platforms, and carbon credit traders experience the constraint as pure coordination. They aggregate land-use data, verify carbon accounting, and facilitate credit sales. Net beneficiaries capturing rent between commodity producers and climate-concerned capital. Exit via arbitrage: if verification standards tighten or carbon prices fall, they pivot to different instruments. Effective extraction runs toward these actors, but they perceive it as legitimate transaction services."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Agricultural and Forest Industrial Operators",
+      "comment": "PERSPECTIVE 4: COMMODITY PRODUCERS & FOREST OPERATORS (TANGLED ROPE) \u2014 Coordinate land-use intensity and carbon sequestration with financial incentives. Also extract by converting high-biodiversity natural ecosystems to managed monocultures, then receiving carbon credits for 'reforestation' or 'conservation.' Mobile actors \u2014 can exit by selling land or shifting to different commodities. Beneficiaries overall, but constrained by carbon accounting rules and compliance verification. Mixed perspective: coordination of land management + extraction of ecosystem value."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Climate Verification and Certification Standards Bodies",
+      "comment": "PERSPECTIVE 5: STANDARDS & VERIFICATION BODIES (SCAFFOLD) \u2014 Organized actors (VCS, Gold Standard, compliance agencies) see the carbon-sink displacement as a temporary coordination problem being solved through better additionality verification, baseline-setting standards, and indigenous land rights recognition. Standards for free, prior, and informed consent (FPIC), biodiversity safeguards, and permanence requirements are building alternative pathways with a sunset: as standards mature and enforcement tightens, displacement mechanisms lose legitimacy. Low effective extraction because these actors have agency and see a technical solution path with institutional backing."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Carbon Accounting Ritual and Governance Theater",
+      "comment": "PERSPECTIVE 6: CARBON ACCOUNTING THEATER (PITON) \u2014 The carbon-accounting apparatus (IPCC methodologies, national greenhouse gas inventories, carbon credit registries) persists largely through institutional inertia. These systems perform climate mitigation without necessarily achieving it \u2014 a ton of carbon displaced from a biodiversity hotspot is credited as a ton mitigated, even though the ecosystem function was destroyed. The ritual persists because alternatives (carbon taxes, binding emission caps) are politically infeasible. Theater ratio is high because the accounting system measures a metric (carbon stored) that is decoupled from the actual ecological outcome (ecosystem health, indigenous rights, mitigation integrity)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Climate Mitigation Integrity (Analytical Observer)",
+      "comment": "PERSPECTIVE 7: CLIMATE MITIGATION INTEGRITY (SNARE) \u2014 From a civilizational/universal perspective, the carbon-sink displacement constraint extracts from the actual climate mitigation goal. Ecosystem-based carbon storage is credited as mitigation, but if the storage is temporary, non-additional, or displaces emissions-reduction obligations elsewhere, the mitigation is illusory. The constraint locks the climate system into a false solution pathway where carbon-credit financialization substitutes for real emissions reductions. Powerless victim position \u2014 climate goals cannot exit the constraint; they are bound by the accounting rules that permit displacement to persist."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "additionality_verification_gap",
+      "question": "Can carbon credit schemes reliably verify that carbon sequestration is additional (would not have occurred without the credit incentive)?",
+      "resolution_mechanism": "Counterfactual land-use analysis: compare reforestation rates and intensities in carbon credit vs non-credit regions with similar initial conditions. Temporal analysis of land-use change timing relative to credit scheme implementation.",
+      "impact": "If additionality is < 40% verified: most carbon credits represent displaced rather than mitigated carbon, making the constraint a snare for climate integrity. If > 70% verified: constraint is genuine coordination with non-trivial extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fraction of carbon credits representing genuinely additional sequestration"
+    },
+    {
+      "id": "permanence_and_reversal_risk",
+      "question": "How often do nature-based carbon sinks reverse (due to fire, drought, land-use change) within timescales relevant to climate goals, and are these reversals factored into credit issuance?",
+      "resolution_mechanism": "Satellite monitoring of carbon-sink permanence; longitudinal tracking of project sites 10-30 years post-credit issuance. Comparison of actual reversal rates to permanence assumptions in credit accounting.",
+      "impact": "If reversal rate > 30% within 30-year horizon and credits are not discounted: effectively all credits are illusory. If < 10%: permanence assumption holds.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Permanence of nature-based carbon sequestration and reversal risk"
+    },
+    {
+      "id": "ecosystem_equivalence_assumption",
+      "question": "Is a carbon-credit-issued monoculture forest ecologically equivalent to the biodiverse ecosystem it displaced, and should they receive equivalent climate credit?",
+      "resolution_mechanism": "Biodiversity monitoring (species richness, functional diversity); carbon sequestration comparison; water cycle and soil health assessment; indigenous-defined ecosystem function metrics.",
+      "impact": "If monoculture forests store equivalent carbon but <20% equivalent biodiversity: the accounting system is extracting ecosystem value while crediting carbon, making the constraint snare-like. If high biodiversity and carbon equivalence: constraint is genuinely coordination.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether credit-eligible ecosystems are functionally equivalent to displaced ecosystems"
+    },
+    {
+      "id": "indigenous_consent_enforcement",
+      "question": "What fraction of nature-based carbon projects have genuine free, prior, and informed consent (FPIC) from indigenous stewards, and is consent withdrawal enforced?",
+      "resolution_mechanism": "Third-party audit of FPIC processes; legal enforcement tracking; documented cases where indigenous groups initiated project cessation and result (credit cancellation vs continued issuance).",
+      "impact": "If FPIC is <50% genuine and withdrawal is not honored: constraint is snare for indigenous stewards. If >80% genuine with enforced withdrawal: constraint approaches tangled rope for this actor.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Authenticity and enforceability of indigenous consent in carbon projects"
+    },
+    {
+      "id": "leakage_and_displacement_boundaries",
+      "question": "Does carbon credit issuance for conservation in one location cause displacement of extractive activity to unmonitored locations, creating zero-sum or negative mitigation?",
+      "resolution_mechanism": "Spatial econometric analysis of land-use change patterns; tracking of commodity production shifts to non-credit regions; global commodity flow analysis for agricultural and timber products.",
+      "impact": "If leakage rate > 50%: carbon credits are reducing cumulative emissions by <50% or potentially zero. If < 20%: additionality holds at acceptable level.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Rate of emissions leakage and activity displacement to unmonitored regions"
+    },
+    {
+      "id": "baseline_setting_as_extraction_mechanism",
+      "question": "Are carbon credit baselines (the counterfactual 'business as usual' scenario) systematically set at higher emission intensities than actual baseline practices, enabling higher credit issuance and extraction?",
+      "resolution_mechanism": "Baseline audit: compare declared baselines to historical land-use and emissions intensity data for same regions. Statistical analysis of baseline inflation over time.",
+      "impact": "If baselines are systematically inflated by >20%: the constraint is snare-like (extraction via inflated baselines). If baseline accuracy is <5% error: accounting holds.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Baseline inflation as an extraction mechanism in carbon accounting"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 21,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 21,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 21
+  },
+  "commentary": {
+    "narrative_context": "Nature-based carbon sink displacement describes a structural constraint where carbon credit mechanisms, designed to incentivize ecosystem conservation and restoration, systematically extract value from indigenous land stewards and biodiverse ecosystems while displacing emissions-reduction obligations elsewhere. The constraint operates through a hybrid mechanism: genuine coordination (carbon accounting coordinates land-use decisions with financial incentives) overlaid with asymmetric extraction (carbon value flows to financial intermediaries and commodity producers; ecosystem value and rights flow away from indigenous stewards). The extractiveness has increased from 0.38 to 0.62 over the measurement interval as carbon markets have scaled, verification standards have become more gameable, and displacement mechanisms have become more sophisticated. The theater ratio (rising from 0.52 to 0.71) reflects that carbon accounting procedures increasingly measure metrics (carbon stored) decoupled from ecological outcomes (ecosystem health, indigenous sovereignty, permanence). This constraint exhibits all six DR types from different observation points, making it a diagnostic exemplar for how indexical classification reveals competing claims about the same structural phenomenon.",
+    "key_agents": [
+      "Indigenous Land Stewards: Primary victim (powerless/trapped) \u2014 dispossessed, their land converted to commodity production or monoculture plantations, no meaningful consent or benefit-sharing",
+      "Biodiverse Ecosystems: Primary victim (powerless/trapped) \u2014 abstract but real entity, unable to organize, bearing full cost of displacement via ecosystem degradation",
+      "Climate Mitigation Integrity: Victim at civilizational scope (analytical/snare) \u2014 locked into false solution pathway where credits substitute for emissions reductions",
+      "Small Farmers and Local Communities: Secondary victim (moderate/constrained) \u2014 constrained choice between participation in schemes (with debt risk) or land loss",
+      "Carbon Credit Financial Intermediaries: Primary beneficiary (institutional/arbitrage) \u2014 capture rent between land-use actors and climate-concerned capital; arbitrage to different instruments if carbon prices fall",
+      "Agricultural and Forest Industrial Operators: Secondary beneficiary (powerful/mobile) \u2014 convert high-biodiversity ecosystems to managed monocultures, receive carbon credits, capture commodity value; mobile actors with exit options",
+      "Verification and Standards Bodies: Organized actors (organized/constrained) \u2014 developing higher standards (FPIC, permanence, additionality) as sunset mechanism for the displacement constraint",
+      "Carbon Accounting Ritual: Institutional actor (institutional/arbitrage) \u2014 maintains performative accounting that measures carbon stored while ignoring ecosystem health and indigenous rights"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts via multiple mechanisms: (1) carbon credit financialization captures ecosystem value and transfers it to external actors; (2) baseline-setting inflation enables higher credit issuance than real additionality warrants; (3) leakage and displacement move emissions to unmonitored regions, creating zero-sum or negative net mitigation. The extraction is not total (some genuine conservation occurs, some communities benefit from payments) but is substantial and systematic. Suppression (0.62): High. Indigenous stewards are suppressed through property law (land titles and capitalist markets), information asymmetry (complex carbon accounting methodologies), and political power (weak representation in carbon credit governance). Commodity producers suppress indigenous resistance through legal mechanisms and capital power. Theater ratio (0.68): High and rising. The carbon accounting system measures carbon stored (the official metric) while ignoring ecosystem health, indigenous rights, permanence, and additionality \u2014 the metrics that matter for climate integrity. The ritual persists because it provides governments and corporations with a mechanism to claim climate action while avoiding binding emissions reductions.",
+    "perspectival_gap": "The constraint's perspectival gap is extreme because the structural relationship differs radically between actors. Indigenous stewards experience maximal extraction (snare). Financial intermediaries experience profitable coordination (rope). Commodity producers experience mixed coordination-extraction (tangled rope). Standards bodies experience a solvable temporary problem (scaffold). The accounting system experiences itself as degraded but inertially persistent (piton). Climate integrity experiences entrapment in a false solution (snare). These are not measurement ambiguities or observer-dependent framings \u2014 they reflect genuine structural asymmetries. The constraint simultaneously coordinates land-use decisions with financial incentives (a real coordination function) and extracts carbon value from powerless actors (a real extraction function). The mandatrophy is resolved by recognizing that this constraint is genuinely tangled rope from the beneficiary's perspective and genuinely snare from the victim's perspective. The tension is not resolvable by picking one type \u2014 it requires acknowledging the perspectival plurality.",
+    "directionality_logic": "The directionality chain maps structural position to experienced extractiveness. Indigenous stewards (trapped, victim) derive d \u2248 0.95, producing f(d) \u2248 1.42 \u2014 maximum experienced extraction. Financial intermediaries (arbitrage, beneficiary) derive d \u2248 0.08, producing f(d) \u2248 -0.12 \u2014 they experience negative extraction (profitable surplus). Commodity producers (mobile, mixed) derive d \u2248 0.50, producing f(d) \u2248 0.65 \u2014 moderate experienced extraction. Community actors (constrained, victim) derive d \u2248 0.85, producing f(d) \u2248 1.15 \u2014 high experienced extraction. The analytical observer's snare classification treats climate goals as trapped victims (d \u2248 0.90), reflecting that the mitigation system is locked into a false solution. These derived values track the real structural power asymmetries in the constraint: value flows toward financial intermediaries and commodity producers; costs flow toward indigenous stewards and climate integrity.",
+    "mandatrophy_analysis": "TANGLED ROPE WITH SNARE COMPONENTS: This constraint resolves the mandatrophy by demonstrating that tangled rope and snare are not contradictory \u2014 they describe the same constraint from different structural positions. From the beneficiary's perspective (financial intermediaries, commodity producers), the constraint is tangled rope: it coordinates land-use decisions with financial incentives (coordination function) while extracting carbon value (asymmetric extraction). From the victim's perspective (indigenous stewards, climate integrity), it is snare: pure extraction with no coordination benefit and no exit. The constraint is both types simultaneously because it is a hybrid mechanism with asymmetric structural positions. The mandatrophy is resolved by accepting that the classification differs by perspective, not by revising the constraint metrics. The theater ratio rising from 0.52 to 0.68 is diagnostic: the constraint's coordination function (land-use incentives) is becoming increasingly decoupled from its stated outcome (climate mitigation), indicating that the tangled rope is shifting toward piton (degraded institutional ritual). If this trajectory continues and standards enforcement tightens, the constraint may bifurcate: genuine coordination mechanisms (higher standards, FPIC, permanence verification) emerge as scaffold replacements, while the performative accounting system degrades into piton."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "carbon_credit_accounting_games",
+      "indigenous_land_dispossession",
+      "baseline_inflation_mechanism",
+      "emissions_leakage_and_substitution"
+    ],
+    "dual_formulation_note": "Nature-based carbon sink displacement is a constraint family linking multiple structurally distinct phenomena: (1) the coordination of land-use intensity with financial incentives (genuine coordination problem); (2) the extraction of ecosystem value via credit financialization; (3) the accounting theater that measures carbon while ignoring permanence, additionality, and indigenous rights. Each family member has distinct \u03b5 and classification depending on the observable. Decomposition enables diagnostic clarity: the constraint exists at the intersection of these mechanisms, and only the presheaf over all observables reveals its true structure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

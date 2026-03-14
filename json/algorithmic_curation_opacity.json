@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "algorithmic_curation_opacity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "algcur"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Algorithmic Curation Opacity in Content Distribution Platforms",
+    "topic_domain": "digital_platform_governance/information_asymmetry",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "algorithmic_optimization_incentives"
+    ],
+    "victims": [
+      "content_creators",
+      "platform_users",
+      "information_quality"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Content Creator",
+      "comment": "PERSPECTIVE 1: CONTENT CREATOR (SNARE) \u2014 Trapped by platform dependence for audience reach. No viable alternative with equivalent distribution. Extraction mechanism: algorithm penalizes content that doesn't maximize engagement metrics; creators optimize for algorithmic preferences rather than substantive value. Exit barrier is the network effect \u2014 leaving means losing accumulated audience and algorithmic training. Suppression operates through opacity: creators cannot inspect how their content is ranked, cannot predict algorithmic preferences reliably, and cannot exit without catastrophic audience loss."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The User / Information Consumer",
+      "comment": "PERSPECTIVE 2: USER / INFORMATION CONSUMER (SNARE) \u2014 Trapped by network effects and switching costs. The platform's social graph, content library, and recommendation infrastructure make exit prohibitively costly. Extraction mechanism: users bear the cognitive cost of navigating opacity while platform captures behavioral data and attention. Suppression is high: algorithmic ranking is not transparent, users cannot predict what they will see, and cannot exercise meaningful choice without leaving the platform entirely."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATOR (ROPE) \u2014 Experiences opacity as pure coordination mechanism. Algorithm must be opaque to prevent gaming and manipulation. The opacity constraint coordinates competing goals: maximizing engagement, preventing spam, controlling viral misinformation, and maintaining platform stability. From the platform's structural position (institutional power, arbitrage exit \u2014 could theoretically disclose algorithms but chooses not to), the constraint appears as necessary coordination. Net beneficiary position allows this operator to see the constraint as serving legitimate technical functions rather than extractive."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Advertiser",
+      "comment": "PERSPECTIVE 4: ADVERTISER (TANGLED ROPE) \u2014 Partially constrained but also partially enabled by opacity. Benefits from algorithmic targeting that reaches specific audience segments; constrained by inability to inspect why ads show to certain users or predict algorithmic performance. Some leverage through budget control (can arbitrage between platforms), but significant extraction through algorithmic opacity: advertisers pay premiums for opaque targeting, cannot fully verify ROI, and face algorithmic changes that destabilize campaigns. Mixed experience of coordination (audience selection works) and extraction (opaque metrics, performance variability)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulatory Coalition",
+      "comment": "PERSPECTIVE 5: REGULATORY COALITION (SCAFFOLD) \u2014 Organized agents (EU regulators, digital rights advocates, open-source protocol developers) view algorithmic opacity as a temporary structural problem with a sunset clause. Regulation (DSA, AI Act), technical standards (open recommendation systems), and decentralized alternatives are creating pathways toward transparency and interoperability. Constraint sees itself as time-bounded: as regulatory pressure increases and alternative platforms emerge, the opacity-extraction mechanism loses force. Low effective extraction from regulatory perspective because this agent has institutional power and sees clear exit paths (mandated algorithm transparency, forced interoperability, alternative platforms)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Content Moderation Theater",
+      "comment": "PERSPECTIVE 6: CONTENT MODERATION THEATER (PITON) \u2014 Platform moderation relies substantially on algorithmic opacity as a performative mechanism: platforms claim to have 'policies' and 'standards' but enforce them through opaque algorithms that operators themselves do not fully understand (machine-learning black boxes). Theater ratio (0.65) reflects that moderation claims far exceed actual transparency or consistency. The institutional system maintains the theater through inertia \u2014 full transparency would expose inconsistency and bias, so opacity is maintained as protective fiction. Operators have arbitrage exit (could theoretically increase transparency) but maintain opacity to preserve the moderation narrative."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From the civilizational perspective, algorithmic opacity serves two structurally distinct functions: genuine coordination (preventing gaming, spam, adversarial manipulation) and extractive asymmetry (capturing user attention and behavioral data without consent or compensation). The constraint is not purely coordination because beneficiaries extract rent from opacity, nor is it pure extraction because some opacity does solve real coordination problems. The classification remains tangled rope: both functions are real, both require enforcement, and the opacity mechanism enables both simultaneously. The challenge for analysis is decomposing which portion serves which function."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "opacity_necessity_threshold",
+      "question": "What level of algorithmic transparency can be maintained while preventing adversarial gaming and manipulation without destroying the coordination function?",
+      "resolution_mechanism": "Empirical testing of transparency interventions: partial disclosure trials (EU regulators, platform transparency initiatives), open-source recommendation systems, and comparative performance metrics between opaque and semi-transparent algorithms",
+      "impact": "If high transparency is possible (>80%): current opacity is primarily extractive; classify as Snare from user/creator perspectives. If transparency requires operational compromise (<40%): opacity is primarily coordination; classify as Rope from platform perspective. If threshold is intermediate (40-80%): current opacity exceeds necessity (Tangled Rope confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold of algorithmic transparency compatible with platform function"
+    },
+    {
+      "id": "alternative_platform_viability",
+      "question": "Do decentralized or federated platforms (Mastodon, Bluesky, open protocols) represent genuine structural alternatives to monopolistic platforms, or do they face inherent trade-offs (scalability, user experience, content quality) that reintroduce opacity as necessary?",
+      "resolution_mechanism": "Comparative analysis of transparency levels across alternative platforms; user adoption barriers; scalability constraints; content moderation effectiveness; long-term sustainability of open-source alternatives",
+      "impact": "If alternatives are truly viable: scaffold sunset is credible (regulatory pathways plus technical alternatives enable exit). If alternatives face inherent constraints: trap persists because even 'alternatives' require opacity; victims are constrained rather than completely trapped but exit remains costly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative platforms provide genuine escape from opacity constraints"
+    },
+    {
+      "id": "user_comprehension_asymmetry",
+      "question": "Do most platform users understand that algorithmic curation is occurring and that their information diet is filtered? Or is the opacity sufficiently deep that users experience the platform as 'natural' reality?",
+      "resolution_mechanism": "User studies on algorithmic literacy; survey data on user awareness of recommendation systems; behavioral analysis of how users respond when shown their algorithmic filter (e.g., through transparency features)",
+      "impact": "If users are unaware (>70% don't understand curation): suppression is high (users cannot perceive the constraint); classification as Snare is correct. If users are aware: suppression is lower (users understand the mechanism) but may still be trapped by exit costs; suppress might moderate toward Tangled Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "User awareness of algorithmic curation mechanisms"
+    },
+    {
+      "id": "platform_black_box_authenticity",
+      "question": "Do platform operators genuinely not understand their own algorithms (machine-learning systems so complex they cannot predict outputs), or is this claimed opacity a strategic fiction?",
+      "resolution_mechanism": "Analysis of platform technical documentation, academic literature on algorithmic interpretability, evidence of internal model auditing capabilities, comparison between platforms that claim opacity vs those that implement interpretability tools",
+      "impact": "If genuine black box: the opacity cannot be lifted without platform rebuild; extraction is structurally high because unavoidable. If strategic fiction: opacity could be eliminated through architectural choices; extraction is intentional and higher than necessary. Either way, confirms Tangled Rope (both coordination and extraction occur), but directs intervention strategy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether algorithmic opacity is genuine (unavoidable) or strategic (chosen)"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Algorithmic curation opacity in major content distribution platforms represents a structurally dual constraint: it simultaneously solves genuine coordination problems (preventing spam, gaming, adversarial manipulation) and enables extractive asymmetries (capturing user attention and behavioral data without transparency or consent). The opacity is not incidental to the platform's function \u2014 it is central to how the platform achieves scale. Yet the opacity also prevents users and creators from understanding how their content is ranked, why certain information is visible or hidden, and what behavioral data is collected. The constraint exhibits Tangled Rope structure: beneficiaries (platform operators) maintain the opacity through active enforcement of algorithmic secrecy; victims (content creators, users, information quality) are trapped by network effects and switching costs; some agents (advertisers, regulators) experience mixed extraction and coordination. The theater ratio (0.65) reflects that platforms increasingly make public claims about algorithmic fairness and transparency while maintaining operational opacity \u2014 moderation is performed as a ritual rather than executed transparently. The extractiveness trajectory (0.35 \u2192 0.58 over the interval) shows increasing extraction as platforms have become more centralized, more reliant on engagement-maximization algorithms, and more resistant to transparency demands.",
+    "key_agents": [
+      "Platform Operators: Primary beneficiary (institutional/arbitrage) \u2014 control algorithmic ranking and capture user attention; benefit from opacity because transparency would reduce flexibility for engagement optimization",
+      "Content Creators: Primary victim (powerless/trapped) \u2014 depend on algorithmic distribution; cannot inspect ranking mechanisms; forced to optimize for opaque algorithmic preferences rather than substantive quality",
+      "Platform Users: Primary victim (powerless/trapped) \u2014 trapped by network effects and social graphs; manipulated by opaque algorithmic ranking; cannot make informed choices about information diet",
+      "Information Quality: Systemic victim (powerless/trapped) \u2014 abstract collective good; damaged by creator incentives to optimize for algorithmic engagement rather than truth value; no mechanism for correction",
+      "Advertisers: Secondary beneficiary/victim (moderate/constrained) \u2014 benefit from opaque targeting but constrained by inability to inspect or predict algorithmic behavior",
+      "Regulatory Coalition: Organized agent (organized/constrained) \u2014 EU DSA, AI Act, digital rights advocates building regulatory pressure for transparency; sees opacity as temporary problem with sunset clause",
+      "Content Moderation System: Institutional actor (institutional/arbitrage) \u2014 maintains moderation theater; relies on algorithmic opacity to avoid revealing inconsistencies and biases in enforcement"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The platform captures significant value through algorithmic opacity: attention capture, behavioral data extraction, ability to manipulate information flow for engagement metrics or advertising revenue. The extraction is not maximal (0.70+) because some platforms do allow limited transparency features, users retain basic agency (can search, follow specific accounts), and regulatory pressure is creating compliance costs. The increase from 0.35 to 0.58 reflects consolidation of platforms (fewer competitors), increased sophistication of engagement-optimization algorithms, and accumulation of behavioral data assets that make platforms more extractive. Suppression (0.68): High. The mechanisms maintaining opacity are substantial: (1) algorithmic complexity makes true transparency technically difficult or costly, (2) platforms claim business secret protection for algorithms, (3) users face high exit costs (network effects, data portability friction), (4) creators have no viable alternative platforms at scale, (5) information about algorithmic behavior is deliberately restricted. Theater ratio (0.65): High and increasing. Platform claims about 'algorithmic fairness', 'content moderation standards', and 'transparency reports' far exceed operational reality. The gap between public transparency commitments and actual opacity suggests theater is central to the constraint \u2014 platforms perform compliance and fairness without restructuring the opacity that enables extraction.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence. The platform operator sees a coordination mechanism (Rope) \u2014 algorithmic opacity prevents gaming and enables technical function at scale. The content creator sees pure extraction (Snare) \u2014 they are trapped by algorithmic dependence and cannot inspect the ranking mechanism. The user sees extraction masked as curation (Snare) \u2014 algorithmic filtering of their information diet is not transparent. The advertiser sees mixed extraction and coordination (Tangled Rope) \u2014 they benefit from algorithmic targeting but are constrained by opacity in campaign optimization. The regulatory coalition sees a sunset problem (Scaffold) \u2014 DSA transparency requirements, AI Act algorithmic auditing, and alternative platforms are building pathways to reduced opacity. The moderation system sees theater (Piton) \u2014 claims of fairness and standards persist through opacity, not through actual consistent implementation. The analytical observer sees Tangled Rope with high mandatrophy risk \u2014 distinguishing the genuine coordination function from extractive asymmetry requires decomposing which portion of opacity serves which purpose.",
+    "directionality_logic": "Directionality values (d) follow from structural positions: platform operators are beneficiaries with arbitrage options (low d, negative chi experienced as 'coordination works'), content creators and users are victims with trapped exit options (high d, high chi experienced as extraction). Advertisers are ambiguous (benefit from targeting but constrained by opacity, moderate d). The regulatory coalition has organized power and sees clear exits (regulatory mandates, alternative platforms, reduced d). The moderation system appears institutional but is captured by operator interests (low d from operator perspective, but this is misleading \u2014 the moderation system is serving extractive rather than truth-seeking functions). The analytical perspective integrates all positions and recognizes that d varies by agent even within the same constraint: the same opacity mechanism produces low chi for beneficiaries and high chi for victims, confirming Tangled Rope structure. The perspectival gap is driven by how each agent's exit options feed into d: trapped/identity-locked \u2192 high d \u2192 high f(d) \u2192 high chi; arbitrage \u2192 low d \u2192 negative f(d) \u2192 negative chi (experienced as coordination benefit).",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The constraint avoids false natural law classification by recognizing that algorithmic opacity is an architectural choice, not a law of nature. Platforms could operate with high transparency (as demonstrated by smaller or experimental platforms and regulatory compliance initiatives). The extraction component derives from platform market power and network effects, not from inherent technical necessity. The coordination component (preventing gaming, ensuring content quality at scale) is real but does not require full opacity \u2014 partial transparency is compatible with most coordination goals. The Tangled Rope classification reflects both components correctly: beneficiaries maintain opacity through enforced secrecy (active enforcement yes), some genuine coordination benefits flow to users and creators through algorithmic filtering (coordination function genuine), and asymmetric extraction occurs (victims identified: creators, users, information quality). The theater component (platforms claiming transparency while maintaining opacity) suggests the constraint is beginning to degrade (theater ratio increasing) \u2014 this may accelerate the regulatory coalition's sunset timeline. The classification is stable at Tangled Rope: not Rope because extraction is high and enforced, not Snare because genuine coordination benefits exist."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "advertising_opacity",
+      "social_media_engagement_maximization",
+      "algorithmic_bias_amplification",
+      "information_quality_degradation"
+    ],
+    "dual_formulation_note": "Algorithmic curation opacity is upstream of several secondary constraints: it enables predatory advertising (advertising_opacity), drives engagement-maximization that amplifies misinformation (engagement_maximization), concentrates platform power enabling bias amplification (algorithmic_bias), and degrades information quality through inverted incentives (information_degradation). The network shows dependency: if opacity were reduced, all downstream constraints would require restructuring."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.85
+    }
+  ]
+}

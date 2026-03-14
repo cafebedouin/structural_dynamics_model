@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "excommunication_social_exclusion",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "excomm"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Excommunication and Social Exclusion Mechanism",
+    "topic_domain": "social/institutional/religious",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "instituting_authority"
+    ],
+    "victims": [
+      "excommunicated_individual",
+      "social_network_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "label": "The Excommunicated Member",
+      "comment": "PERSPECTIVE 1: EXCOMMUNICATED MEMBER (SNARE) \u2014 Identity-locked to religious/community institution despite structural mobility. The binding is cognitive fusion: self-concept constituted through community membership, faith practice, and social role. Material barriers (social ostracism, economic isolation) reinforce the identity lock. Cannot exit without psychological death \u2014 becoming a different person. Maximum experienced extraction from the perspective of an agent whose identity is dissolved through institutional act."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Community Members (Continuing)",
+      "comment": "PERSPECTIVE 2: CONTINUING COMMUNITY MEMBERS (TANGLED ROPE) \u2014 Constrained by social conformity, family ties, and belief system alignment. Perceive genuine coordination function: boundary maintenance, norm enforcement, collective identity protection. But also experience extraction \u2014 coerced participation in ostracism, social control, epistemic constraint. Mixed experience: benefit from community cohesion alongside bearing enforcement costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Instituting Authority",
+      "comment": "PERSPECTIVE 3: INSTITUTING AUTHORITY (ROPE) \u2014 Institutional actor with arbitrage exit (can redefine doctrine, rescind decisions, shift power structure). Experiences the constraint as coordination: enforcing boundaries, maintaining institutional coherence, allocating membership status. Net beneficiary \u2014 extraction flows toward institutional authority. Low effective extraction from this perspective because they control the mechanism."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Secular/Alternative Community Frameworks",
+      "comment": "PERSPECTIVE 4: SECULAR AND ALTERNATIVE COMMUNITY FRAMEWORKS (SCAFFOLD) \u2014 Organized agents (secular institutions, alternative communities, legal protections) building exit pathways and alternative social identities. Modern secular communities, employment-based identity structures, and legal protections reduce excommunication's bite. Sunset mechanism: as institutional religion's social monopoly erodes, excommunication loses coercive power. Temporary constraint being resolved by social pluralism."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Excommunication Ritual Form",
+      "comment": "PERSPECTIVE 5: EXCOMMUNICATION RITUAL FORM (PITON) \u2014 The formal ritual of excommunication persists through institutional inertia despite reduced functional power in pluralistic societies. Theater ratio high: the ceremony, pronouncements, and formal exclusion are performative \u2014 their coercive effect depends entirely on whether the surrounding society enforces the social isolation. In societies with alternative identity structures, the ritual becomes theatrical performance rather than binding mechanism."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalization View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURALIZATION VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, social exclusion is claimed as immutable: all human groups exclude deviants; excommunication expresses a natural law of group boundary maintenance. However, this perspective naturalizes what is structurally contingent: excommunication's coercive power depends on social monopoly (religion is sole source of identity/community), legal enforcement absence, and the target's identity fusion. These are institutional arrangements, not laws of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "identity_lock_dissolving",
+      "question": "Can the identity-locked excommunicated agent dissolve the identity lock through exposure to alternative frameworks, or does the lock persist post-exit?",
+      "resolution_mechanism": "Longitudinal tracking of ex-members: psychological distress trajectories, identity reconstruction timelines, whether post-exit suppression persists without active institutional enforcement",
+      "impact": "If lock dissolves: excommunication is mainly structural oppression (high suppression but exit-dependent). If lock persists: excommunication achieves internalized permanent extraction even after institutional mechanism ceases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether identity lock persists after excommunication mechanism removal"
+    },
+    {
+      "id": "institutional_vs_social_coercion",
+      "question": "Is the coercive power of excommunication exercised by the instituting authority through formal decree, or by the surrounding community through social ostracism?",
+      "resolution_mechanism": "Comparative analysis of institutional enforcement (ex-communication decrees actively enforced by clergy) vs. community enforcement (social ostracism driven by peer belief in excommunication status). Test via scenarios where institution and community disagree.",
+      "impact": "If institutional: snare derives from formal authority. If community-driven: snare derives from collective social dynamics; more extractive if community agrees, less if community rejects.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether coercion is institutional or community-driven"
+    },
+    {
+      "id": "alternative_identity_accessibility",
+      "question": "What fraction of excommunicated individuals can access alternative identity structures (secular community, professional identity, geographic mobility)?",
+      "resolution_mechanism": "Demographic analysis of excommunicated populations: access to education, employment mobility, secular community infrastructure by time period and region",
+      "impact": "If accessible (modern secular societies): excommunication drops to Tangled Rope or Scaffold (exit options improve from identity_locked to constrained/mobile). If inaccessible (historical/theocratic contexts): excommunication remains Snare with high suppression.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Accessibility of alternative identity structures for excommunicated agents"
+    },
+    {
+      "id": "suppression_internalization_ratio",
+      "question": "What proportion of suppression acting on excommunicated agents is structural (external ostracism) vs. internalized (psychological internalization of unworthiness)?",
+      "resolution_mechanism": "Clinical/psychological assessment: do excommunicated agents maintain avoidance behaviors post-exit (structural suppression persisting) or override them (suppression externalized)? Trauma symptom persistence?",
+      "impact": "If mostly structural: suppression ends with community contact cessation. If internalized: suppression is carried by the agent and persists indefinitely, making recidivism and secondary victimization likely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression ratio"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Excommunication and social exclusion represent a constraint where institutional authority and community enforcement combine to produce identity dissolution through formal exclusion. The mechanism operates at the intersection of institutional power (formal excommunication decree), social coercion (community ostracism), and identity fusion (the target's self-concept constituted through community membership and belief practice). This constraint exhibits all six DR types from different perspectives, revealing how the same structural phenomenon appears as immutable law (mountain), coordination mechanism (rope), mixed extraction (tangled rope), pure extraction (snare), temporary problem (scaffold), or degraded ritual (piton) depending on the observer's structural position. The constraint's extractiveness (0.68) reflects that excommunication achieves asymmetric psychological extraction from the target across their remaining lifespan \u2014 the identity lock persists even after institutional enforcement ceases. Suppression (0.75) reflects high barriers to exit: social ostracism, economic isolation, family severance, and internalized unworthiness. Theater ratio (0.65) reflects that the formal ritual (pronouncements, ceremonies, official decrees) is performative \u2014 its coercive power depends entirely on whether the surrounding community believes and enforces the exclusion status.",
+    "key_agents": [
+      "Excommunicated Individual: Primary victim (powerless/identity_locked) \u2014 bears full psychological and social extraction; identity fused with institution makes exit psychologically lethal",
+      "Continuing Community Members: Secondary actors (moderate/constrained) \u2014 constrained by conformity, belief alignment, and social pressure to enforce boundaries; benefit from institutional coherence alongside bearing enforcement costs",
+      "Instituting Authority: Primary beneficiary (institutional/arbitrage) \u2014 controls boundary definition, membership allocation, and exclusion criteria; experiences constraint as coordination mechanism",
+      "Social Network Integrity: Abstract victim (powerless/trapped) \u2014 ecosystem harm from forced severing of kin/relational ties; cannot organize or exit",
+      "Secular/Alternative Community Frameworks: Organized agents (organized/mobile) \u2014 building exit pathways through employment-based identity, secular community, legal protections; reducing excommunication's coercive power over generations",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as immutable group boundary properties"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The mechanism achieves sustained psychological extraction from the target through identity dissolution and social ostracism. The value reflects that excommunication's coercive power is severe \u2014 it forces the target to either accept complete identity erasure within their social context or psychologically rupture through exit. The trajectory in measurements shows increasing extractiveness over the interval (0.45 \u2192 0.68) as social isolation intensifies and alternative identity structures become unavailable. Suppression (0.75): High. Barriers to exit are multifaceted and reinforcing: legal systems often enforce institutional authority (historical/theocratic contexts), family members participate in ostracism, economic systems tied to institutional membership, and most critically, the target's identity cannot exit without cognitive reframing that feels like self-annihilation. In modern pluralistic societies, suppression is lower because alternative identity structures exist, but in institutional monopoly contexts (historical religion, tight ideological communities, cults), suppression remains near maximum. Theater ratio (0.65): Moderate-high. The formal ritual \u2014 pronouncements, ceremonies, official decrees \u2014 is substantially performative. The coercive mechanism is not the ritual itself but the surrounding community's willingness to enforce social ostracism. In pluralistic societies with weak institutional authority, theater increases (the ritual becomes ceremony without teeth); in institutional monopoly contexts, theater decreases (the ritual is backed by real enforcement power).",
+    "perspectival_gap": "Excommunication demonstrates how the same institutional act produces six distinct classifications. The target perceives Snare (identity locked, trapped). The community perceives Tangled Rope (mixed coordination and extraction). The authority perceives Rope (coordination mechanism). Alternative frameworks perceive Scaffold (temporary, sunset). The ritual perceives Piton (its own degradation). The analyst perceives false Mountain (naturalized contingency). No single classification is correct \u2014 the presheaf over observation positions IS the structure. The perspectival gap reveals that excommunication's coercive power is not intrinsic to the mechanism but depends on social monopoly. In pluralistic contexts where the target can access alternative identity structures, the classification shifts from Snare toward Scaffold/Piton. In monopoly contexts, it remains Snare indefinitely.",
+    "directionality_logic": "Each perspective's directionality (d) is derived from structural position: power level, exit options, and relationship to the extraction flow. The excommunicated individual with identity_locked exit (structurally mobile but cognitively trapped) experiences high d because their cognitive frame prevents exit exercise \u2192 high f(d) \u2192 high chi. The continuing community members with constrained exit experience moderate d \u2014 they face conformity costs but have not internalized unworthiness. The instituting authority with arbitrage exit experiences low d because they control the mechanism \u2014 d approaches 0.0 (full beneficiary position). The organized secular frameworks with mobile exit experience low-moderate d \u2014 they have structural exit and are building alternatives, reducing extraction. The directionality overrides are not needed here because the derivation chain from beneficiary/victim + exit options produces accurate d values without correction.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing how institutional exclusion mechanisms produce all six types simultaneously. The mandatrophy is not 'which type is correct?' but 'at what social scale of monopoly?' In societies with institutional religious monopoly (medieval Christendom, theocratic states, isolated communities), excommunication is Snare across nearly all perspectives \u2014 alternative identity structures do not exist, making exit genuinely impossible. In pluralistic modern societies (secular multi-community contexts), excommunication degrades across perspectives: the target can access alternative identities (Scaffold), continuing members face loosening conformity pressure (Rope shifts toward Tangled Rope), and the ritual itself becomes theatrical (Piton). The analytical observer's false summit (Mountain) \u2014 that excommunication is immutable group law \u2014 is revealed as such by the constraint's obvious change across historical contexts. This is not a natural law but a contingent institutional arrangement whose coercive power collapses when alternative identity structures become available. The mandatrophy is diagnostic: it shows that institutional exclusion mechanisms are Snare under monopoly conditions and scaffold/piton under pluralistic conditions. The transition between these states is historically observable."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "cult_member_binding",
+      "employment_at_will_termination",
+      "asylum_seeker_legal_exclusion"
+    ],
+    "dual_formulation_note": "Excommunication operates through institutional authority + community enforcement. The constraint family includes cult member binding (identity_coordination within closed groups), employment termination (weaker identity lock, stronger structural exit), and asylum exclusion (state authority + community enforcement but lower identity fusion). Each story has different \u03b5 reflecting how identity lock and alternative identity accessibility vary."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "network_effect_critical_mass",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "neteff"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Network Effect Critical Mass Threshold",
+    "topic_domain": "platform_economics/coordination_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "first_mover_platform",
+      "incumbent_network_owner"
+    ],
+    "victims": [
+      "late_entrant_competitors",
+      "user_switching_friction"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Locked-In User Base",
+      "comment": "PERSPECTIVE 1: LOCKED-IN USER BASE (SNARE) \u2014 Users face switching costs that exceed the benefit threshold for moving to superior alternative platforms. Network effects trap users in suboptimal equilibria. No exit path exists once critical mass is breached \u2014 the user's social/economic connections are embedded in the incumbent network. Pure extraction: the incumbent captures surplus through lock-in, with minimal coordination benefit once the network is established."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Late Entrant Competitor",
+      "comment": "PERSPECTIVE 2: LATE ENTRANT COMPETITOR (SNARE) \u2014 Cannot compete on network effects once incumbents cross critical mass. New entrants face a structural barrier: users won't join a new platform until it reaches critical mass, but critical mass won't arrive until users join. The constraint enforces monopolistic or duopolistic equilibria by making entry prohibitively expensive. Even superior technology cannot overcome network lock-in. The late entrant bears the full cost of this structural asymmetry."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The First-Mover Platform",
+      "comment": "PERSPECTIVE 3: FIRST-MOVER PLATFORM (ROPE) \u2014 Experiences the critical mass threshold as a coordination mechanism: reaching the threshold solves the adoption problem and creates a self-reinforcing cycle. The network effect is a genuine coordination benefit \u2014 users want to join the largest network, platforms want to serve the largest user base. The first-mover captures asymmetric rewards but these derive from solving a real coordination problem, not from pure extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Sophisticated Multiplatform User",
+      "comment": "PERSPECTIVE 4: SOPHISTICATED MULTIPLATFORM USER (TANGLED ROPE) \u2014 Users with sufficient resources/expertise can maintain presence on multiple platforms or arbitrage between them. They benefit from network effects (liquidity, features improve with scale) but also bear costs (fragmented communication, coordination overhead across platforms). Some extraction occurs through data harvesting and attention capture, but substantial coordination value exists. These agents have partial exit capacity through multiplatform strategies."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Interoperability Coalition",
+      "comment": "PERSPECTIVE 5: INTEROPERABILITY COALITION (SCAFFOLD) \u2014 Regulatory bodies, open-source movements, and competing platforms organize to build interoperability standards (ActivityPub, data portability requirements, federated protocols). These create bridges across critical mass boundaries, enabling users to maintain identity/data across platforms without full switching. Interoperability standards have a sunset logic: if adopted, they dissolve the critical mass constraint by removing switching costs. Theater ratio is low \u2014 the constraint's mechanism is structural, not performative."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Incumbent Frame",
+      "comment": "PERSPECTIVE 6: REGULATORY INCUMBENT FRAME (PITON) \u2014 Incumbent platforms have become the default regulatory target and institutional interface for oversight. Regulatory frameworks (GDPR, DMA, antitrust review) treat network effect concentration as inevitable rather than as a contingent outcome of policy choices. The regulatory discourse maintains the constraint through performative compliance reviews and half-measures, theater that preserves network concentration while appearing to address it. The constraint persists through institutional inertia rather than genuine structural necessity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, network effects are an inherent feature of systems with positive feedback \u2014 larger networks generate more value, attracting more users. This appears as a law of economics: scale advantages in networks are natural and inevitable. However, the structural data reveals this as a false summit: the critical mass threshold is contingent on coordination failures, absent interoperability, and policy choices that enforce compatibility lock-in. The mountain classification naturalizes policy contingencies."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "critical_mass_threshold_definition",
+      "question": "What constitutes the 'critical mass' threshold at which network effects become self-reinforcing? Is it absolute (fixed user count) or relative (percentage of addressable market)?",
+      "resolution_mechanism": "Longitudinal analysis of adoption curves across different platforms and markets; identification of inflection points where user growth shifts from exogenous to endogenous; cross-market comparison of threshold percentages",
+      "impact": "If threshold is fixed: extractiveness is determined by market size and adoption progress. If relative: extractiveness is determined by competitive positioning and market fragmentation. Different \u03b5 values result depending on resolution.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Definition and measurement of critical mass threshold"
+    },
+    {
+      "id": "interoperability_feasibility",
+      "question": "Can interoperability standards (ActivityPub, data portability, federated identity) actually reduce switching costs enough to dissolve the critical mass barrier, or do network externalities persist even with technical interoperability?",
+      "resolution_mechanism": "Comparative analysis of federated platforms (Mastodon, Signal) vs centralized incumbents (Twitter, WhatsApp); measurement of actual user switching rates after interoperability features are deployed; analysis of whether users remain on largest instance/platform despite interoperability availability",
+      "impact": "If feasible: scaffold perspective is structural, sunset is real, extractiveness can decline toward 0.30 range. If infeasible: network effects persist despite technical interoperability, suggesting coordination problem is deeper than switching costs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether interoperability standards can dissolve critical mass barriers"
+    },
+    {
+      "id": "user_heterogeneity_in_network_value",
+      "question": "Do all users contribute equally to network value, or do highly heterogeneous user cohorts (power users, influencers, enterprise customers) disproportionately drive critical mass perception?",
+      "resolution_mechanism": "Network analysis of influence distribution; measurement of user engagement distribution; analysis of platform growth rate correlation with acquisition of specific user cohorts; comparison of platform growth before and after major influencer/enterprise adoption",
+      "impact": "If heterogeneous: critical mass is driven by acquiring the 'right' users rather than absolute numbers; extractiveness is higher for late entrants who must compete for scarce power-user attention. If homogeneous: critical mass is pure scale, symmetric across user types.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Heterogeneity of network value contribution across user types"
+    },
+    {
+      "id": "enforcement_mechanism_authenticity",
+      "question": "Is the critical mass lock-in enforced by genuine switching costs and user externalities, or by artificial platform-imposed friction (making data export difficult, restricting API access, social pressure)?",
+      "resolution_mechanism": "Experimental measurement of switching costs with and without platform-imposed friction; analysis of user exit behavior when friction is removed (e.g., GDPR data portability compliance); comparison of platforms with high vs low data portability commitment",
+      "impact": "If genuine: critical mass reflects real coordination problems, extractiveness is ~0.52 or higher due to network topology. If artificial: much of the suppression (0.58) is policy-controlled and reversible; extractiveness could fall to ~0.25 with policy changes.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether lock-in is enforced by genuine switching costs or artificial friction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The critical mass constraint in network-effect platforms creates a structural barrier to competition and user exit that appears simultaneously as a coordination mechanism (solving the problem of user heterogeneity in value), an extraction mechanism (capturing asymmetric rewards for first movers), and a regulatory artifact (policy choices that enforce or dissolve lock-in). The constraint is not a law of nature but a product of specific design choices, policy frameworks, and coordination failures. As network effects strengthen during the lifecycle (extractiveness rising from 0.15 at launch to 0.52 at maturity), the theatrical component remains low (0.35), indicating that the extraction mechanism is structurally real rather than performative. The critical mass threshold represents the inflection point where network effects shift from exogenous (growth driven by marketing/funding) to endogenous (growth driven by the network itself). Late entrants face a prisoner's dilemma: their platform has superior technology but no users; users won't join because there are no users. The incumbent's advantage is not technological but topological \u2014 they crossed the threshold first. Interoperability standards (ActivityPub, portable identity, open protocols) offer a structural escape route by reducing switching costs to near zero, potentially dissolving the critical mass barrier entirely. Regulatory frameworks (DMA interoperability requirements, GDPR data portability) are attempting to force this solution, but actual uptake suggests network effects persist even with technical interoperability \u2014 users cluster on the largest instance/platform regardless of compatibility.",
+    "key_agents": [
+      "Locked-In User Base: Primary victim (powerless/trapped) \u2014 users embed social/economic capital in incumbent network; switching costs exceed benefit threshold; no exit path",
+      "Late Entrant Competitors: Primary victim (moderate/constrained) \u2014 face structural barrier to market entry; cannot achieve critical mass without users; cannot attract users without critical mass",
+      "First-Mover Platform: Primary beneficiary (institutional/arbitrage) \u2014 captures topological advantage; controls user interface and data; benefits from path dependence and lock-in",
+      "Sophisticated Multiplatform Users: Secondary actor (powerful/mobile) \u2014 maintain presence across platforms; arbitrage between them; benefit from network effects but experience fragmentation costs",
+      "Interoperability Coalition: Organized actor (organized/constrained) \u2014 regulators, open-source projects, competing platforms; building bridges across critical mass barriers; attempting sunset logic",
+      "Incumbent Regulatory Frame: Institutional actor (institutional/arbitrage) \u2014 maintains incumbent advantage through regulatory theater; performs compliance while preserving concentration",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent policy choices as inevitable network economics"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The critical mass constraint extracts value from late entrants (who cannot compete) and locked-in users (who face switching costs). However, the extraction is not as severe as pure predatory extraction because the first-mover genuinely solved a coordination problem \u2014 reaching critical mass was difficult and risky. The 0.52 value reflects that much of the first-mover's reward is fair return on innovation risk, while some derives from enforcement of lock-in. The measurement trajectory (0.15 \u2192 0.52) shows extractiveness increasing as network effects strengthen. Suppression (0.58): Moderate-high. Switching costs for users include: social graph lock-in (all contacts are on the incumbent), data lock-in (years of messages/connections embedded), interoperability absent (cannot access the incumbent network from alternative platforms), and artificial friction (difficult data export, API restrictions). However, suppression is not absolute \u2014 multiplatform users demonstrate partial escape; interoperability standards lower switching costs; users can maintain multiple accounts. Theater ratio (0.35): Low. The extraction mechanism is structurally real, not performative. Users genuinely cannot switch without losing value; competitors genuinely cannot enter without reaching critical mass first. This is not theatrical constraint but topological constraint. The low theater ratio distinguishes this from piton-type degradation.",
+    "directionality_logic": "Directionality varies sharply by agent structural position. Locked-in users (powerless/trapped) experience high d \u2248 0.95 (full targets of extraction), yielding high f(d) \u2248 1.42 and high \u03c7. Late entrants (moderate/constrained) experience d \u2248 0.70 (victims with some options), yielding f(d) \u2248 1.02 and moderate-high \u03c7. First-movers (institutional/arbitrage) experience d \u2248 0.10 (beneficiaries with exit options), yielding f(d) \u2248 -0.05 and negative \u03c7 (net recipients of extraction flow). Scope modifier \u03c3(global) = 1.2 amplifies \u03c7 across the board \u2014 network effects are planetary-scale coordination problems, so their effective extraction is amplified relative to local constraints. The global scope enables the constraint to operate at high extractiveness despite moderate base extractiveness \u2014 the scope multiplication is critical to \u03c7 \u2265 0.66 in the snare perspectives.",
+    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon produces radically different classifications depending on the observer's position. The locked-in user sees a snare: they are trapped in a suboptimal equilibrium with no escape. The late entrant competitor sees a snare: the market is closed to them by topology, not by law or technology. The first-mover sees rope: the network effect is solving the real coordination problem of user heterogeneity. The multiplatform user sees tangled rope: they benefit from scale (features improve with users) but bear costs (fragmentation, attention capture). The interoperability coalition sees a scaffold: technical and regulatory solutions can dissolve the critical mass barrier. The incumbent regulatory frame sees a piton: the constraint persists through institutional inertia, not genuine structural necessity. The analytical observer risks seeing a mountain: critical mass effects are inherent to networks, inevitable features of positive feedback systems. The perspectival gap reveals that the constraint's type is not fixed but perspectival \u2014 it is a snare only from the locked-in user's view, a rope only from the first-mover's view. The engine's classification of tangled_rope is the meta-perspectival reading: the constraint contains both genuine coordination and asymmetric extraction, simultaneously.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint is correctly classified as tangled_rope because it possesses BOTH a coordination function (solving the user heterogeneity problem, genuinely creating value through network effects) AND asymmetric extraction (late entrants cannot compete, locked-in users cannot exit). The coordination function is real \u2014 networks are more valuable at scale, and reaching critical mass is a genuine coordination achievement. The extraction is real \u2014 the first-mover captures disproportionate reward, and the topology prevents competition. Neither can be reduced to the other. The false-summit risk is the natural-law perspective that treats critical mass as inevitable. The resolution is to recognize that critical mass is contingent on: (1) absent interoperability (switching costs high), (2) policy choices that enforce lock-in (API restrictions, data portability absent), and (3) first-mover advantage that is real but time-bound. The constraint transitions from tangled_rope to scaffold once interoperability is deployed \u2014 the coordination function remains but extraction falls as switching costs approach zero. The constraint transitions from tangled_rope to rope once regulatory enforcement dissolves lock-in mechanisms. The apparent inevitability of network effects is actually the inevitability of lock-in given current policy frameworks, not inevitability of the network effects themselves."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_data_lock_in",
+      "social_graph_monopoly",
+      "api_gatekeeping"
+    ],
+    "dual_formulation_note": "The critical mass constraint is upstream of specific platform-level lock-in mechanisms (data lock-in, social graph capture, API gatekeeping). These downstream constraints have their own extractiveness values reflecting domain-specific extraction mechanisms; the critical mass threshold represents the topological prerequisite that enables those mechanisms to operate effectively. Decomposition: critical_mass_threshold (\u03b5=0.52, Tangled Rope) \u2192 platform_data_lock_in (\u03b5=0.65, Snare) \u2192 api_gatekeeping (\u03b5=0.48, Tangled Rope)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

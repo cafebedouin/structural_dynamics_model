@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "cross_group_economic_mobility",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cgem"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Cross-Group Economic Mobility Constraint",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_economic_elites",
+      "credential_gatekeepers"
+    ],
+    "victims": [
+      "lower_income_group_members",
+      "structurally_excluded_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Structurally Excluded Worker",
+      "comment": "PERSPECTIVE 1: STRUCTURALLY EXCLUDED WORKER (SNARE) \u2014 No viable exit from low-income constraint. Faces compounding barriers: limited access to quality education, geographic immobility due to cost, credential requirements that require prior capital investment, and social networks that don't connect to opportunity. Experiences extraction as complete: resources flow upward through tuition, licensing fees, and unequal access to capital, with minimal opportunity for escape. Zero degrees of freedom within the constraint."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Aspiring Upwardly Mobile Agent",
+      "comment": "PERSPECTIVE 2: ASPIRING UPWARDLY MOBILE AGENT (TANGLED ROPE) \u2014 Constrained by high costs and systemic barriers but can exit at significant personal cost (debt, delayed family formation, geographic relocation, intensive credentialing). Benefits from coordination mechanisms (public education, labor market structure, credit availability) while simultaneously bearing extraction through tuition inflation, credential inflation, and opportunity cost. Mixed experience of both genuine mobility pathways and asymmetric cost allocation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Credential Institution",
+      "comment": "PERSPECTIVE 3: CREDENTIAL INSTITUTION (ROPE) \u2014 Universities and credentialing bodies experience the constraint as pure coordination: sorting labor market candidates, certifying competence, creating signaling mechanisms. Net beneficiary through tuition revenue, endowment support, and institutional prestige. Can arbitrage between high demand and limited supply. Experiences minimal suppression \u2014 institution has full agency to set policies and requirements."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Economic Elite Beneficiary",
+      "comment": "PERSPECTIVE 4: ECONOMIC ELITE BENEFICIARY (ROPE) \u2014 Incumbent wealth and elite networks benefit from constrained mobility: children inherit advantages without competition, credential value remains high, labor pools remain stratified by origin rather than merit. Experiences constraint as pure coordination (maintaining social stability through managed mobility lanes) with no suppression \u2014 full agency and arbitrage options."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Rights Coalition",
+      "comment": "PERSPECTIVE 5: LABOR RIGHTS COALITION (TANGLED ROPE) \u2014 Organized agents (unions, civil rights organizations, education advocacy groups) see both coordination function (workplace protections, credential standardization enabling broad hiring) and asymmetric extraction (mobility barriers concentrated on lower-income groups). Have agency to negotiate but constrained by political economy. Moderate extraction because organization provides exit pathways and can shift the constraint through policy."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Meritocratic Ideology",
+      "comment": "PERSPECTIVE 6: MERITOCRATIC IDEOLOGY (PITON) \u2014 The institutional narrative that 'opportunity exists for all who work hard' persists as largely performative theater despite structural barriers. Credential inflation, wealth inheritance, and social capital concentration have degraded the mechanism's actual function. The ideology serves primarily to justify existing inequality and suppress dissent, with minimal honest meritocratic sorting. Theater ratio high because the constraint's primary function is now narrative maintenance rather than actual mobility provision."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (CIVILIZATIONAL) \u2014 From a civilizational perspective, the constraint exhibits genuine coordination function (labor market sorting, skill certification, social stability management) embedded within asymmetric extraction (barriers designed into credential and capital access systems, inheritance of advantage, geographic and social network entrenchment). The constraint is not a natural law but a deliberately maintained institutional structure balancing coordination benefit against extractive revenue. Analytically, this is the core structure: who benefits from limiting mobility, who enforces those limits, and how coordination serves as the legitimating cover for extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "meritocracy_measurement_ambiguity",
+      "question": "To what degree is measured mobility actually meritocratic sorting versus inherited advantage laundering?",
+      "resolution_mechanism": "Longitudinal tracking of intergenerational mobility by family wealth, parental education, and social network access; controlled comparison of mobility rates for identical credentials by family origin; analysis of how much mobility is credential-driven versus capital/network-driven.",
+      "impact": "If meritocratic sorting dominates: constraint is primarily Rope with embedded Scaffold (temporary barriers). If inheritance dominates: constraint is primarily Snare with theatrical meritocratic cover (extractive system masquerading as coordination).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which measured mobility reflects meritocratic sorting versus inheritance effects"
+    },
+    {
+      "id": "credential_inflation_driver",
+      "question": "Is credential inflation driven by legitimate skill requirements or by competitive signaling dynamics and institutional rent-seeking?",
+      "resolution_mechanism": "Skill requirements analysis for entry-level positions over time; correlation between credential inflation and actual job task complexity; comparison of credential requirements across firms with similar productivity metrics; analysis of credential inflation acceleration coinciding with institution revenue pressures.",
+      "impact": "If skill-driven: credential barriers are legitimate coordination mechanisms (Rope perspective strengthened). If signaling/rent-seeking driven: credential barriers are extraction mechanisms (Snare perspective strengthened).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether credential inflation reflects skill requirements or competitive signaling"
+    },
+    {
+      "id": "social_capital_transmission_mechanism",
+      "question": "How much of differential mobility is explained by inherited social networks versus measurable skill differences?",
+      "resolution_mechanism": "Network analysis of hiring patterns; tracking of identical-credential applicants by family origin; analysis of 'weak tie' network strength by socioeconomic origin; study of how much information about opportunities flows through family versus public channels.",
+      "impact": "If networks dominate: social capital inheritance is a primary extraction mechanism, making the constraint structurally Snare for those without inherited access. If skills dominate: the constraint functions more as Rope or Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative importance of inherited social networks versus measurable skills in mobility outcomes"
+    },
+    {
+      "id": "institutional_reform_capacity",
+      "question": "Can credential institutions meaningfully reduce mobility barriers without losing signaling and sorting functions?",
+      "resolution_mechanism": "Historical analysis of credential institution reforms (open admissions, sliding-scale tuition, alternative credentialing); measurement of sorting quality post-reform; identification of which institutional changes maintained coordination function while reducing barriers.",
+      "impact": "If high reform capacity: the constraint contains Scaffold elements (solvable with policy change). If low reform capacity: barriers are structurally entrenched (Snare or Piton).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether credential institutions can reduce barriers while maintaining sorting function"
+    },
+    {
+      "id": "geographic_mobility_constraint_source",
+      "question": "Are geographic mobility barriers primarily economic (housing costs, job density) or social (network entrenchment, cultural capital)?",
+      "resolution_mechanism": "Analysis of migration patterns by income level; study of cost-benefit ratios for relocation by origin; comparison of success rates for geographically mobile versus origin-bound agents; identification of information barriers and uncertainty in geographic mobility decisions.",
+      "impact": "If economic barriers dominate: policy can address through housing and infrastructure. If social barriers dominate: constraint requires cultural/network intervention and has higher structural stickiness.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Primary source of geographic immobility: economic versus social barriers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.43
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Cross-group economic mobility constraints create a structural tension between the coordination function of credential systems and labor market sorting, and the asymmetric extraction of upward mobility barriers concentrated on lower-income and structurally excluded populations. The constraint operates through multiple reinforcing mechanisms: tuition inflation and student debt, credential inflation (requiring ever-higher credentials for equivalent positions), geographic immobility due to housing costs and job geography, social network entrenchment, and the inheritance of both financial capital and cultural/social capital. The meritocratic ideology that 'anyone can rise through effort' serves as the primary theatrical function, legitimating the barrier system while suppressing recognition that mobility barriers are distributed unequally by family origin. Base extractiveness has increased from 0.35 to 0.58 over the 30-year interval, driven by credential and housing inflation outpacing wage growth. Theater ratio has risen from 0.40 to 0.55, reflecting increasing emphasis on meritocratic narratives and diversity messaging despite stagnating actual mobility rates. The constraint exhibits all characteristics of a Tangled Rope: genuine coordination function (credential sorting, labor market efficiency, social stability) embedded within asymmetric extraction (barriers designed to concentrate mobility benefits upward). Active institutional enforcement through credential gatekeeping, credit access control, housing policy, and labor market stratification maintains the constraint.",
+    "key_agents": [
+      "Structurally Excluded Populations: Primary victims (powerless/trapped) \u2014 confined to low-mobility segments; bear extraction through debt, credential barriers, geographic immobility, and network exclusion",
+      "Lower-Income Group Members: Affected populations (moderate/constrained) \u2014 can achieve upward mobility at high cost (debt, delayed family formation, relocation); structurally disadvantaged in credential and capital access",
+      "Incumbent Economic Elites: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from constrained mobility that protects wealth inheritance and maintains elite network value",
+      "Credential Gatekeepers: Institutional beneficiaries (institutional/arbitrage) \u2014 universities, licensing bodies, certification systems; capture revenue and prestige through credential inflation and scarcity",
+      "Labor Rights Coalition: Organized agents (organized/constrained) \u2014 unions, civil rights organizations, education advocates; have agency to shift constraints through policy and collective action",
+      "Financial System Intermediaries: Secondary beneficiaries (institutional/arbitrage) \u2014 capture wealth through student debt, mortgage lending structured by creditworthiness tied to family background",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees constraint as deliberately maintained institutional structure balancing genuine coordination against extractive revenue capture"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts through multiple channels: credential inflation creates tuition revenue streams and credential scarcity rents; geographic immobility enables local wage suppression and housing cost capture; social network entrenchment enables insider hiring and wage compression for outsiders. Extraction is not total (mobility occurs, though at high cost) but is substantial and concentrated. The progression from 0.35 to 0.58 reflects acceleration of credential inflation and housing cost growth outpacing wage growth \u2014 the machinery of extraction has been tightened. Suppression (0.62): Moderate-high. Barriers to upward mobility are significant: tuition debt, credential requirements, geographic relocation costs, discrimination and bias in hiring, and weak information flows about opportunity. But suppression is not total \u2014 public education exists, some mobility pathways operate, and some institutional reforms have reduced barriers. Theater ratio (0.55): Moderate. The meritocratic narrative ('anyone can rise through effort and merit') is substantially performative given the empirical concentration of mobility barriers by family origin. However, some genuine meritocratic sorting occurs alongside the inherited advantage laundering, so theater is elevated but not dominant. The rise to 0.55 reflects intensification of diversity and meritocracy messaging even as actual mobility has stagnated.",
+    "perspectival_gap": "This constraint's perspectival gap reveals the machinery of legitimation. The beneficiary perspectives see no extraction at all \u2014 they see a coordination mechanism that efficiently sorts talent and maintains economic incentives. The victim perspectives see pure extraction with no coordination benefit. The meritocratic ideology perspective sees the constraint as having degraded into theater, maintained through narrative rather than function. The analytical observer sees the full structure: the constraint is deliberately designed to provide coordination benefits (labor market sorting, credential signaling) while distributing those benefits unequally and extracting asymmetrically from those with the least structural power. The gap between 'this is pure coordination' (elite/institutional perspectives) and 'this is pure extraction' (powerless perspectives) is the diagnostic signal that legitimacy is doing work \u2014 the same constraint is narratively reconstructed completely differently depending on whether you benefit from it.",
+    "directionality_logic": "Directionality (d) is derived from structural position: beneficiaries of the constraint (elites, credential institutions, financial intermediaries) have low d (0.05-0.20), experiencing the constraint as beneficial or neutral. Victims (lower-income populations, excluded groups) have high d (0.80-0.95), bearing maximum extraction. Moderate agents (aspiring mobile workers) occupy the middle range (d \u2248 0.55-0.65), experiencing mixed costs and benefits. The organized labor coalition has moderate d (0.45-0.55) because organization provides agency and exit options. The analytical observer has high d (0.72) but with full information, making the constraint transparent rather than binding. The sigmoid f(d) function maps these d values to effective power modifiers: beneficiaries get negative \u03c7 (constraint subsidizes them), victims get maximum \u03c7 (extraction runs fully toward them), moderate agents get positive \u03c7 (moderate experienced extraction). Scope modifier \u03c3(national) = 1.0 applies unchanged across all perspectives because the constraint operates nationally. The derived \u03c7 values support the Tangled Rope classification: enough beneficiary coordination (reducing effective extraction) that some perspectives see Rope, enough victim extraction that the powerless perspective sees Snare, and the overall structure shows both functions simultaneously.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint has BOTH genuine coordination function AND asymmetric extraction, and that the meritocratic ideology serves to obscure this hybrid structure. The coordination function is real: credentials do carry information about ability, labor markets do become more efficient when sorted, and some degree of barrier to entry is necessary for credentialing to have meaning. The extraction is equally real: barriers are concentrated on lower-income origins through multiple mechanisms (tuition debt, geographic immobility, network exclusion, discrimination), inheritance of advantage shields elites from competition, and the entire system is actively maintained through institutional enforcement of credential requirements and credential inflation. The meritocratic ideology ('anyone can rise through effort') prevents recognition that extraction is concentrated \u2014 it naturalizes barriers as legitimate ('high standards require high barriers') and suggests that those who don't rise simply didn't try hard enough. This is the classical mandatrophy resolution: the constraint is Tangled Rope, genuinely hybrid, and the theatrical elevation of meritocratic narrative to piton-level (0.55 and rising) is what prevents recognition of the asymmetric extraction and enables the system to persist despite measurable mobility stagnation."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wealth_inheritance",
+      "education_access",
+      "housing_affordability",
+      "labor_market_segmentation"
+    ],
+    "dual_formulation_note": "Cross-group economic mobility is a meta-constraint affected by and affecting four domain-specific constraints: wealth inheritance (intergenerational capital transmission), education access (credential system barriers), housing affordability (geographic immobility driver), and labor market segmentation (wage compression for outsiders). Each has its own epsilon value reflecting specific extraction mechanisms. This story captures the structural coordination-extraction hybrid at the level of the overall system; domain-specific stories capture mechanism-specific details."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

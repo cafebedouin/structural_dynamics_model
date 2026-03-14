@@ -1,0 +1,216 @@
+{
+  "header": {
+    "constraint_id": "model_hallucination_scaling",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "halluc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Model Hallucination Scaling: Coordination of Training-Deployment Asymmetry with Asymmetric Extraction",
+    "topic_domain": "machine_learning/language_models",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "model_deployers",
+      "end_users_at_scale"
+    ],
+    "victims": [
+      "downstream_information_consumers",
+      "model_builders_bearing_reputation_cost"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Downstream Information Consumer",
+      "comment": "PERSPECTIVE 1: DOWNSTREAM INFORMATION CONSUMER (SNARE) \u2014 No practical exit from hallucinated outputs at scale. Cannot distinguish confident false claims from true ones without expert verification unavailable to most users. Trapped by accessibility of the interface and absence of reliable signaling. Bears full extraction cost: epistemic harm, wasted time, downstream decision errors. Maximum suppression: the mechanism producing hallucinations is opaque, the rate is variable and context-dependent, and no alternative channel for the same information exists at comparable scale."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The AI Safety Researcher",
+      "comment": "PERSPECTIVE 2: AI SAFETY RESEARCHER (TANGLED ROPE) \u2014 Faces genuine coordination problem: hallucination is a systems-level phenomenon requiring shared measurement frameworks, training data transparency, and evaluation protocols. Also faces extraction: gains career visibility from publishing hallucination research but bears asymmetric cost of implementing mitigation while deployers capture value from improved models. Constrained exit: can switch domains but carries reputational/skill capital in this problem space. Genuinely serves coordination function (developing better evaluation metrics) while being extracted (deployers benefit more than researchers from improvements)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Model Deployer",
+      "comment": "PERSPECTIVE 3: MODEL DEPLOYER (ROPE) \u2014 Experiences hallucination scaling as pure coordination problem at immediate time horizon. Scaling requires solving hallucination to serve users reliably. Net beneficiary through arbitrage: can deploy larger models despite hallucination costs if those models serve new markets or reduce deployment overhead. Extraction runs toward this agent. Exit options abundant \u2014 can switch to smaller models, closed-domain systems, or alternative architectures. Sees the constraint as a technical problem requiring shared investment in evaluation and mitigation."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulatory Coalition",
+      "comment": "PERSPECTIVE 4: REGULATORY COALITION (SCAFFOLD) \u2014 Organized agents (AI safety institutes, auditing bodies, proposed regulatory frameworks) see hallucination as a temporary coordination failure with a clear sunset: better training protocols, constitutional AI methods, and external fact-checking infrastructure are building alternative verification pathways. High suppression initially (industry resists reporting metrics, metrics are contested, deployment moves faster than standards) but declining as sunset mechanisms mature. Effective extraction is low because organized agents perceive exit pathways and see timeline for their obsolescence."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The User Interface Theater",
+      "comment": "PERSPECTIVE 5: USER INTERFACE THEATER (PITON) \u2014 The discourse around 'hallucination as a distinct phenomenon' is substantially performative. Models hallucinate because they were trained to predict next tokens, not because of a separable bug. The term 'hallucination' is itself performative \u2014 it anthropomorphizes a mathematical artifact, enabling deployers to market confident false outputs as a charming limitation rather than a systematic flaw. The theater_ratio reflects this: much public discussion is about mitigating or detecting hallucinations rather than addressing their root in the training objective. Theater persists through institutional inertia \u2014 the 'hallucination' frame has become embedded in safety discourse, product marketing, and academic framing. Functional verification (distinguishing true from false outputs) remains unresolved; institutional processes around the term persist despite this."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Model Builder Organization",
+      "comment": "PERSPECTIVE 6: MODEL BUILDER ORGANIZATION (TANGLED ROPE) \u2014 Faces asymmetric extraction through reputational cost while the constraint serves genuine coordination function. Deployers benefit from model capability improvements that reduce hallucination; model builders bear reputational cost of failure cases. Extraction asymmetry: deployers can disown hallucinations ('the model made it up') while model builders remain associated with the model's outputs. Coordination function: publishing training methods, evaluation protocols, and failure analysis drives field-wide improvement. Organized power allows coalition formation but constrained by competitive dynamics \u2014 open publication of flaws risks market disadvantage. This is the core tangled_rope: genuine coordination function (field improvement) wrapped in asymmetric extraction (reputational cost flows to builder, capability benefits flow to deployer)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (FALSE SUMMIT) \u2014 From a universal/civilizational perspective, the temptation is to classify this as a mountain: next-token prediction inevitably produces confident false outputs, therefore hallucination is inherent to the architecture, therefore it is immutable. However, the structural data contradicts this false summit. The constraint is not hallucination itself (a mathematical artifact) but the institutional arrangement that deploys hallucinating systems at scale without compensating downstream consumers, without transparent reporting mechanisms, and without activated exit pathways. The immutability framing naturalizes the contingent institutional arrangement. This classification is a diagnostic marker that the mountainization attempt is itself an extraction mechanism \u2014 claiming the problem is inherent justifies continuing the extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "hallucination_measurement_definition",
+      "question": "What distinguishes a hallucination from an artifact of the next-token prediction objective, and how should it be quantified?",
+      "resolution_mechanism": "Comparative analysis of hallucination rates under different evaluation protocols; investigation of whether hallucination frequency tracks training data distribution or task-specific failure modes; examination of whether the term 'hallucination' refers to a replicable phenomenon or an anthropomorphic label for mathematical behavior",
+      "impact": "If hallucination is a distinct, measurable phenomenon: the constraint is real and extractiveness estimates are grounded. If hallucination is an inevitable artifact of the architecture: extractiveness reflects an institutional choice to deploy systems known to produce confident false outputs, strengthening snare classification. If hallucination is definitional ambiguity: the theater_ratio rises and piton classification is strengthened.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether hallucination is a distinct phenomenon or an artifact of the training objective"
+    },
+    {
+      "id": "suppression_mechanism_transparency",
+      "question": "Are hallucination rates and failure modes systematically under-reported by deployers, and does this suppression stem from competitive incentives or technical measurement difficulty?",
+      "resolution_mechanism": "Comparison of reported vs independently-measured hallucination rates; analysis of disclosure patterns correlating with competitive position; examination of whether transparency barriers are technical (metrics genuinely hard to compute) or institutional (benefits of non-disclosure exceed costs)",
+      "impact": "If systematic under-reporting: suppression is strategic and extractive, raising chi and snare classification for powerless agents. If measurement difficulty: suppression is coordination problem and tea may be lower. If competitive incentives dominate: supports tangled_rope classification for organized players.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which hallucination rates are systematically under-reported"
+    },
+    {
+      "id": "alternative_architecture_viability",
+      "question": "Do alternative architectures (retrieval-augmented generation, symbolic systems, hybrid approaches) provide viable exits from the hallucination scaling problem, or do they trade hallucination for other failure modes?",
+      "resolution_mechanism": "Comparative failure analysis of RAG vs autoregressive vs hybrid systems on the same domains; measurement of whether users can practically switch to alternatives given deployment constraints; assessment of whether alternative failures (context irrelevance, latency, cost) are preferable to hallucination from downstream consumer perspective",
+      "impact": "If viable exits exist: classification shifts from snare (trapped) toward tangled_rope (constrained) for users. If tradeoffs are severe: snare classification is strengthened. If deployment path dependency makes switching costly: suppression increases and extraction effect amplifies.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of architectural alternatives to avoid hallucination scaling"
+    },
+    {
+      "id": "constitutional_ai_effectiveness",
+      "question": "Do training-time interventions (constitutional AI, chain-of-thought, uncertainty quantification) actually reduce hallucination rates or do they primarily reduce user perception of hallucination without changing the underlying distribution?",
+      "resolution_mechanism": "Independent evaluation of whether constitutional AI reduces false output confidence or merely redistributes it; measurement of whether uncertainty quantification enables users to successfully self-correct; comparison of hallucination rates in production vs evaluation settings",
+      "impact": "If interventions are effective: scaffold perspective is validated and sunset timeline is real. If interventions are theater: piton classification strengthens and the constraint persists despite technical improvements. If mixed effectiveness: tangled_rope classification is confirmed (genuine but incomplete progress enabling continued extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether training-time interventions reduce hallucination or redistribute it"
+    },
+    {
+      "id": "reputational_cost_asymmetry",
+      "question": "Do model builder reputations bear proportional cost to deployer reputations for hallucination failures, or is the cost asymmetrically distributed?",
+      "resolution_mechanism": "Analysis of reputational impact across model builder organizations vs deployer organizations following major hallucination-based failures; investigation of whether deployers successfully distance themselves from model failures; measurement of whether users attribute hallucinations to the deployer, the model builder, or the architecture itself",
+      "impact": "If cost is symmetric: constraint shifts toward rope classification. If asymmetric: tangled_rope classification and directionality logic are confirmed. If deployer can fully externalize cost: extraction effect amplifies and snare classification for model builders is strengthened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Asymmetry of reputational cost between model builders and deployers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.64
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Model hallucination scaling represents the structural tension between the mathematical inevitability of next-token prediction producing confident false outputs and the institutional choice to deploy such systems at scale without compensating downstream consumers or establishing transparent accountability mechanisms. The constraint exhibits tangled_rope structure: genuine coordination problems (developing better evaluation metrics, training protocols, and shared understanding of failure modes) coexist with asymmetric extraction (deployers benefit from capability improvements while bearing minimal reputational cost; model builders bear reputation risk; downstream consumers bear epistemic harm with no exit). The extractiveness has risen from 0.35 to 0.58 over the measurement interval as model scale and deployment breadth have increased without proportional improvements in hallucination detection or mitigation. The theater_ratio has simultaneously risen from 0.45 to 0.68, indicating that public discourse increasingly focuses on managing perception of hallucinations (anthropomorphic terminology, uncertainty quantification theater, constitutional AI frameworks) rather than addressing the fundamental tension between the training objective and deployment safety. This gap is diagnostic: the constraint is becoming more extractive (higher \u03c7) while its presentation becomes more performative (higher theater), which is the classic progression from tangled_rope toward snare.",
+    "key_agents": [
+      "Downstream Information Consumer: Primary victim (powerless/trapped) \u2014 no practical exit from hallucinated outputs at global scale; bears epistemic harm and wasted time with no recourse",
+      "Model Deployer: Primary beneficiary (institutional/arbitrage) \u2014 captures value from improved model capabilities while externalizing hallucination costs to users; abundant exit options enable arbitrage across architectures",
+      "Model Builder Organization: Organized victim (organized/constrained) \u2014 bears reputational cost of hallucination failures while deployers distance themselves; genuine coordination benefits from publishing methods but constrained by competitive incentives",
+      "AI Safety Researcher: Moderate coordinator (moderate/constrained) \u2014 develops evaluation metrics and mitigation strategies (coordination function) but gains less value from improvements than deployers (asymmetric extraction)",
+      "Regulatory Coalition: Organized future actor (organized/constrained) \u2014 building alternative verification pathways (auditing, certification, mandatory transparency) with sunset trajectory",
+      "User Interface Theater: Institutional theater mechanism (institutional/arbitrage) \u2014 the performative 'hallucination' discourse and anthropomorphic framing that naturalizes the extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high and rising. The constraint extracts from downstream consumers (epistemic harm, wasted time) and model builders (reputational cost) while deployers benefit through capability gains and cost externalization. The rising trajectory reflects that as model scale and deployment breadth increase, the accumulated hallucination cost to the user base grows while mitigation mechanisms remain incomplete. Extractiveness is not maximal (snare-level \u22650.66) because safety researchers are making genuine progress on detection and mitigation, and because organized players (regulatory coalition) are building alternative pathways. Suppression (0.62): High and stable. Mechanisms include: (1) measurement opacity \u2014 hallucination rates are not standardly reported; (2) mechanism opacity \u2014 users cannot reliably distinguish confident true outputs from confident false outputs; (3) absence of practical alternatives \u2014 no comparable-scale systems have solved the hallucination problem; (4) asymmetric incentives \u2014 deployers benefit from maintaining the uncertainty about hallucination severity. Theater ratio (0.68): High and rising. The anthropomorphic 'hallucination' language itself is performative \u2014 it attributes agency to a mathematical artifact. Constitutional AI and uncertainty quantification are presented as solutions while leaving the fundamental training objective unchanged. The rising ratio indicates that as critics have questioned the constraint, public discourse has become increasingly focused on perception management rather than structural change.",
+    "perspectival_gap": "The classification ranges from snare (powerless/trapped: maximum experienced extraction, no exit) through tangled_rope (organized/constrained players: mixed benefit and cost, some coordination) to rope (institutional/arbitrage deployer: net benefit, pure coordination framing) to scaffold (organized regulator: sees sunset and exit pathways) to piton (institutional theater: sees the constraint as degraded ritual) to false-summit mountain (analytical: risks naturalizing the constraint). This full range from a single set of base properties (\u03b5=0.58, suppression=0.62, theater=0.68) demonstrates that the constraint is not inherently any single type \u2014 its classification depends entirely on the observer's structural position and exit options. The gap between snare and rope is maximal: the powerless user and the institutional deployer are experiencing fundamentally different constraints despite the same underlying phenomenon.",
+    "directionality_logic": "Directionality (d) for each agent is derived from their structural position relative to extraction flow. Downstream consumers have d \u2248 0.95 (pure target, trapped, powerless): extraction flows fully toward them with no escape. Model builders have d \u2248 0.60 (mixed target-beneficiary, organized, constrained): they benefit from field advances but bear reputational cost asymmetrically. Deployers have d \u2248 0.10 (net beneficiary, institutional, arbitrage): extraction flows away from them through externalization. Safety researchers have d \u2248 0.65 (slight net target due to asymmetric benefit capture despite contribution): they contribute to solutions but see less value capture than deployers. The sigmoid f(d) transforms these into experienced extraction factors: trapped powerless consumer experiences \u03c7 \u2248 1.42 \u00d7 \u03b5; organized model builder experiences \u03c7 \u2248 0.75 \u00d7 \u03b5; institutional deployer experiences \u03c7 \u2248 -0.12 \u00d7 \u03b5 (negative because they are net beneficiaries). The global scope modifier \u03c3(global) = 1.2 amplifies these \u2014 the constraint's reach across language models deployed worldwide scales up the effective extraction for powerless agents and the effective benefit for deployers.",
+    "mandatrophy_analysis": "TANGLED ROPE GATES SATISFIED: (1) Genuine coordination function: developing evaluation metrics, training protocols, and field-wide understanding of hallucination modes is genuine coordination. (2) Asymmetric extraction: deployers capture capability benefits and externalize costs; model builders bear reputational risk; downstream consumers bear epistemic harm. (3) Requires active enforcement: maintaining the constraint requires continuing to deploy hallucinating systems without compensating consumers or establishing accountability. The mandatrophy is resolved by recognizing that the coordination function (better understanding of hallucination) and the extraction mechanism (cost externalization) are not separable \u2014 they are two faces of the same institutional arrangement. Improvements in hallucination detection do not dissolve the extraction because deployers can adopt them selectively and still externalize undetected hallucinations. The rising theater ratio indicates the constraint is approaching snare classification: as mitigation becomes performative rather than functional, the coordination function weakens and extraction becomes more apparent. Sunset scenarios (mandatory transparency, regulatory auditing, alternative architectures reaching parity) could transition this to scaffold if organized agents can enforce the sunset mechanisms; without enforcement, the constraint drifts toward snare."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "language_model_capability_deployment",
+      "ai_safety_measurement_bottleneck",
+      "training_data_curation_asymmetry"
+    ],
+    "dual_formulation_note": "Model hallucination scaling decomposes into distinct constraints depending on the observable used. The 'hallucination is inevitable given next-token prediction' claim (\u03b5 \u2248 0.10, mountain candidate) is structurally distinct from 'deploying hallucinating systems at scale without compensation is an institutional choice' (\u03b5 \u2248 0.58, tangled rope). The first focuses on mathematical inevitability; the second on institutional extraction. These are linked via network.affects_constraints: mathematical inevitability of next-token hallucination (if true) would affect the feasibility of perfect mitigation but does not determine the institutional choice to deploy at scale without accountability."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.6
+    }
+  ]
+}

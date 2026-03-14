@@ -1,0 +1,217 @@
+{
+  "header": {
+    "constraint_id": "algorithmic_curation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "algcur"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Algorithmic Curation and Content Distribution Control",
+    "topic_domain": "digital_platforms/information_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "high_engagement_content_creators"
+    ],
+    "victims": [
+      "marginalized_voices",
+      "information_seekers",
+      "algorithmic_targets"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Marginalized Voice",
+      "comment": "PERSPECTIVE 1: MARGINALIZED VOICE (SNARE) \u2014 Content creators from underrepresented communities face algorithmic suppression with no meaningful exit. Cannot reach audiences without platform access; algorithmic ranking is opaque and unappealable. Trapped within the system with no alternative distribution channels at comparable scale. Extraction is severe and coercive."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Information Seeker",
+      "comment": "PERSPECTIVE 2: INFORMATION SEEKER (TANGLED ROPE) \u2014 Users benefit from curation that filters signal from noise, but face algorithmic ranking that prioritizes engagement over accuracy. Constrained by high switching costs (network effects, switching to alternative platforms requires abandoning accumulated recommendations). Experience genuine coordination (filtering) alongside extraction (attention capture, data harvesting)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATOR (ROPE) \u2014 Experiences algorithmic curation as genuine coordination: solving the problem of content discovery at scale. Solves collective action problem (which content to show to whom) with minimal constraint on their own operations. Can exit the constraint by modifying the algorithm; benefits from the engagement it drives. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The High-Engagement Content Creator",
+      "comment": "PERSPECTIVE 4: HIGH-ENGAGEMENT CONTENT CREATOR (TANGLED ROPE) \u2014 Benefits from algorithmic amplification of content that drives engagement (viral loops, sensational claims). Extraction runs toward them through preferential ranking. Also constrained by algorithm's optimization target \u2014 must optimize for engagement metrics rather than accuracy or user benefit. Powerful enough to game the system; mobile enough to exit if algorithmic reward structure changes. Mixed coordination-extraction relationship."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulatory Framework",
+      "comment": "PERSPECTIVE 5: REGULATORY FRAMEWORK (PITON) \u2014 Content moderation policies and algorithmic transparency mandates are largely performative: platforms publish transparency reports that obscure algorithmic decision-making; compliance theater with minimal actual constraint on curation practices. Regulations persist through institutional inertia (EU DSA, US Section 230) but their functional effectiveness is degraded. Theater ratio high because compliance mechanisms don't constrain the underlying extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "label": "The Creator Identity-Locked to the Platform",
+      "comment": "PERSPECTIVE 6: CREATOR IDENTITY-LOCKED TO PLATFORM (SNARE) \u2014 Content creators whose professional identity and income stream are constituted through platform success cannot exit despite awareness of extractive dynamics. Identity as 'influencer' or 'content creator' is inseparable from algorithmic favor. Even if alternative platforms exist, exit would require abandoning the identity and audience built within this constraint. Structurally mobile (could delete account) but functionally trapped by identity fusion. High extraction experienced through dependency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational scope, algorithmic curation performs genuine coordination function (content discovery) while embedding asymmetric extraction (attention capture, behavioral prediction, engagement optimization for platform benefit). Both functions are real and structural. Classification reflects hybrid nature: genuine coordination benefit with genuine extraction cost."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "algorithmic_transparency_gap",
+      "question": "Is algorithmic opacity a technical necessity or a deliberate design choice to enable extraction?",
+      "resolution_mechanism": "Comparative analysis of fully-transparent curation systems (e.g., chronological feeds) vs opaque optimization; user behavior and platform revenue correlation",
+      "impact": "If technical necessity: suppression is lower than measured (opacity is coordination cost). If design choice: extraction is higher (opacity enables behavioral capture). Current evidence suggests deliberate design.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether algorithmic opacity is necessary or chosen for extraction"
+    },
+    {
+      "id": "engagement_optimization_vs_utility_alignment",
+      "question": "Do algorithms optimize for user-reported preference or for engagement metrics that diverge from user utility?",
+      "resolution_mechanism": "A/B testing: chronological feed vs engagement-optimized feed vs user-preference-aligned feed; satisfaction metrics; long-term vs short-term preference revelation",
+      "impact": "If aligned: constraint classifies as rope (pure coordination). If divergent: constraint is snare with hidden extraction. Evidence shows strong divergence.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Alignment between algorithmic optimization target and user utility"
+    },
+    {
+      "id": "marginalized_voice_visibility_floor",
+      "question": "What proportion of algorithm-suppressed content is suppressed due to platform-enforced policies vs emergent from engagement-optimization?",
+      "resolution_mechanism": "Content analysis of suppressed posts by creator demographic; correlation with policy violations vs engagement metrics; measurement of algorithmic visibility by creator verification status and follower count",
+      "impact": "If mostly policy-enforced: suppression is justified coordination. If mostly engagement-emergent: suppression is structural extraction targeting marginalized creators. Evidence shows emergence dominates.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Source of suppression for marginalized voice content"
+    },
+    {
+      "id": "identity_lock_reversibility",
+      "question": "Can creators locked into platform identity successfully transition to alternative platforms without losing audience and revenue?",
+      "resolution_mechanism": "Historical data on creator transitions (YouTube to Rumble, Twitter to Bluesky); audience retention and revenue recovery rates; network effects measurement",
+      "impact": "If reversible: exit_options should be constrained not trapped. If irreversible: true identity lock exists. Current evidence shows high switching costs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Reversibility of creator platform identity lock"
+    },
+    {
+      "id": "coordination_vs_extraction_proportion",
+      "question": "What fraction of algorithmic curation cost is genuine coordination overhead vs extractive optimization for platform benefit?",
+      "resolution_mechanism": "Cost accounting: infrastructure required for content discovery vs infrastructure used for behavioral profiling and attention capture; user satisfaction with curation quality vs platform revenue from engagement data",
+      "impact": "High coordination proportion: rope or scaffold. High extraction proportion: snare or piton. Current measurement suggests 40% coordination, 60% extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of curation cost attributable to coordination vs extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Algorithmic curation on digital platforms creates a structural constraint that appears simultaneously as a coordination mechanism (solving content discovery at scale), an extractive apparatus (capturing user attention and behavioral data), and a gatekeeping system (marginalizing voices that don't optimize for engagement metrics). The constraint embeds genuine coordination function \u2014 distributing relevant content to billions of users requires automated selection \u2014 alongside asymmetric extraction: platforms benefit from engagement optimization while users and non-privileged creators bear costs. The extractiveness has increased over the decade as algorithms have become more sophisticated at behavioral prediction and engagement capture, while the theater ratio has risen as regulatory compliance theater (transparency reports, content moderation policies) has proliferated without constraining underlying curation mechanics. The constraint exhibits strong perspectival divergence: high-engagement creators see pure coordination (Rope), while marginalized voices see extraction (Snare). Identity-locked creators experience the constraint as traplike despite structural mobility. The analytical observer sees the hybrid nature: genuine coordination infrastructure with genuine extraction embedded within it.",
+    "key_agents": [
+      "Platform Operators: Institutional beneficiary (institutional/arbitrage) \u2014 control algorithmic parameters, benefit from engagement-driven business model, can modify constraints unilaterally",
+      "Marginalized Voices: Primary victim (powerless/trapped) \u2014 face algorithmic suppression, lack alternative distribution channels, have no recourse within platform systems",
+      "Information Seekers: Secondary victim (moderate/constrained) \u2014 benefit from filtering but constrained by engagement optimization that diverges from preference, face network-effect switching costs",
+      "High-Engagement Content Creators: Beneficiary (powerful/mobile) \u2014 capture algorithmic amplification, can adapt to optimization targets, have resource to engage alternative platforms",
+      "Creator Identity-Locked to Platform: Victim (powerless/identity_locked) \u2014 professional identity and income constituted through platform success, cannot exit despite awareness",
+      "Regulatory Framework: Institutional actor (institutional/constrained) \u2014 maintains performative compliance theater, constrained by platform design to ineffectual implementation",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 observes both genuine coordination and genuine extraction functions"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Measured as the proportion of curation infrastructure optimized for platform benefit (engagement capture, behavioral profiling, attention economics) rather than user utility alignment. Measured at 0.32 ten years ago when engagement optimization was less sophisticated; increased to 0.58 as machine learning enabled finer behavioral prediction. Not maximal (0.70+) because genuine coordination function persists \u2014 content discovery at scale genuinely requires algorithmic selection. Suppression (0.65): Measured as barriers to alternative platforms (network effects, switching costs, audience lock-in) plus algorithmic opacity (users cannot understand or appeal ranking decisions). High because marginalized creators face both platform-enforced policy suppression and emergent suppression from engagement-optimization. Theater ratio (0.68): Measured as ratio of performative compliance (transparency reports, content moderation policy pages) to actual constraint on curation. Rising over time as regulatory pressure has increased but algorithmic behavior has not substantively changed. High theater reflects that compliance mechanisms obscure rather than constrain underlying extraction.",
+    "perspectival_gap": "Platform operators (Rope) perceive algorithmic curation as solving a coordination problem they control. Marginalized voices (Snare) perceive the same curation as extractive gatekeeping with no recourse. Information seekers (Tangled Rope) perceive both filtering benefit and attention capture. High-engagement creators (Tangled Rope) perceive the algorithm as rewarding their work while constraining content choices. Identity-locked creators (Snare via identity_locked) perceive extraction but cannot exit because their identity is constituted through platform success. The regulatory framework (Piton) perceives its own policy implementation as performative theater \u2014 compliance exists but doesn't change curation behavior. The analytical observer (Tangled Rope) perceives that the perspectival gap itself is the diagnostic signal: the constraint performs genuine coordination while embedding asymmetric extraction.",
+    "directionality_logic": "Platform operators benefit from algorithmic curation with arbitrage-level exit options (can modify algorithm at will, not bound by its outputs). Derived d \u2248 0.05. High-engagement creators benefit from engagement optimization and have mobile exit (can build audience elsewhere or modify content strategy). Derived d \u2248 0.30. Information seekers bear coordination costs (limited choice) and extraction costs (attention capture) but benefit from filtering; have constrained exit (network effects). Derived d \u2248 0.55. Marginalized voices bear pure extraction through algorithmic suppression and have trapped exit (no alternative platforms at comparable scale). Derived d \u2248 0.95. Creators identity-locked to platform have structurally mobile exit but are functionally trapped by identity fusion; bear extraction while identity depends on platform success. Derived d \u2248 0.85 (high extraction experienced, but cognitive mechanism makes exit unthinkable). The directionality pipeline correctly differentiates these positions: beneficiaries with exit get low d, victims with exit restrictions get high d.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The constraint avoids false classification through perspectival clarity. The temptation is to classify as pure Rope (it's coordination infrastructure) or pure Snare (it's clearly extractive). The tangled rope classification captures that BOTH are true: algorithms genuinely solve content discovery (a coordination problem) while genuinely optimizing for platform benefit over user preference (extraction). The theater ratio rising alongside extractiveness (both increasing over the interval) suggests the constraint is drifting toward Snare + Piton hybrid (more extraction + more performative compliance). The perspectival gap is diagnostic: if all perspectives saw Rope, the classification would be false. The snare experiences from marginalized voices confirm the extraction is real, not illusory. The piton perspective on regulatory compliance confirms that enforcement theater doesn't reduce extraction. Mandatrophy is resolved by insisting on both the coordination function AND the extraction asymmetry in the same story, rather than trying to force a single-function classification."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "attention_economy",
+      "platform_monopoly",
+      "behavioral_prediction"
+    ],
+    "dual_formulation_note": "Algorithmic curation decomposes into three structurally distinct constraints: (1) content_discovery_coordination (\u03b5\u22480.15, pure Rope\u2014the genuine technical problem), (2) engagement_optimization_extraction (\u03b5\u22480.62, Snare\u2014the behavioral capture mechanism), (3) marginalized_voice_suppression (\u03b5\u22480.75, Snare\u2014the systematic exclusion). These three stories are linked by network effects: engagement optimization drives marginalized voice suppression; both require coordination infrastructure. The present story represents the unified constraint viewed from multiple perspectives rather than decomposed into its structural components."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "attention_economy",
+      "platform_monopoly"
+    ]
+  }
+}

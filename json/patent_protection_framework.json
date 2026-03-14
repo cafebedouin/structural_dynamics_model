@@ -1,0 +1,193 @@
+{
+  "header": {
+    "constraint_id": "patent_protection_framework",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "patent"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Patent Protection Framework",
+    "topic_domain": "intellectual_property/innovation_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "patent_holders",
+      "large_technology_firms",
+      "pharmaceutical_companies"
+    ],
+    "victims": [
+      "generic_drug_manufacturers",
+      "developing_nation_populations",
+      "open_source_developers",
+      "subsequent_innovators"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Generic Drug Manufacturers in Least-Developed Nations",
+      "comment": "PERSPECTIVE 1: GENERIC DRUG MANUFACTURERS (SNARE) \u2014 Trapped by patent enforcement mechanisms that prevent production of life-saving medications at affordable costs. Suppression operates through legal enforcement (TRIPS agreements), economic barriers to patent challenges, and geographic scope of enforcement. No meaningful exit option; bear full cost of monopoly pricing while population health deteriorates. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Subsequent Innovators and Small Technology Firms",
+      "comment": "PERSPECTIVE 2: SUBSEQUENT INNOVATORS (TANGLED ROPE) \u2014 Constrained by patent landscapes that require design-around costs, patent searches, and licensing fees. But also benefit from the patent system's protection of their own future innovations. Mixed extraction and coordination: the system both enables and blocks their work depending on whose patents dominate their domain."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Patent Holders and Large Technology Firms",
+      "comment": "PERSPECTIVE 3: PATENT HOLDERS (ROPE) \u2014 Experience the patent system as pure coordination: it establishes who owns what innovation, enables licensing revenue, and provides legal standing against competitors. Net beneficiary. Arbitrage options allow selective enforcement and licensing strategies."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Open Source and Knowledge Commons Movements",
+      "comment": "PERSPECTIVE 4: OPEN SOURCE COALITION (TANGLED ROPE) \u2014 Organized actors (Creative Commons, GPL advocates, scientific societies) see patents as coordination through reciprocal licensing (GPL copyleft) while simultaneously experiencing extraction through patent thickets that block novel implementation approaches. Constrained by patent enforcement; benefit from building alternative coordination norms (open-source copyleft, creative commons)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Patent Office Administration",
+      "comment": "PERSPECTIVE 5: PATENT OFFICE SYSTEM (PITON) \u2014 The patent examination and enforcement apparatus is substantially degraded: examination backlogs are severe, prior art searches are incomplete, obvious patents are regularly issued, and defense against invalid patents requires expensive litigation. Theater ratio (0.48) reflects that the system appears to perform rigorous quality control while actual verification is weak. The system persists through institutional inertia and because alternatives (copyright alternatives, trade secret reliance) haven't fully replaced it."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some protection mechanism for innovation incentives appears inherent to markets: without exclusivity, copying becomes immediate and innovation underinvests. This perspective sees patent systems as natural law \u2014 inevitable under any innovation economy. However, the structural data reveals this as a false summit: the contingent choice to grant TIME-LIMITED monopolies (patent protection) naturalizes what is actually a policy instrument with many alternatives (prizes, open-source subsidies, trade-secret protection)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "innovation_incentive_threshold",
+      "question": "What patent term length and enforcement strength actually maximize innovation output vs. what term length maximizes incumbent rent extraction?",
+      "resolution_mechanism": "Econometric analysis of R&D investment vs. patent term length across jurisdictions; comparison of innovation rates pre- and post-TRIPS harmonization; measurement of generic entry delays post-expiration",
+      "impact": "If optimal term is 7 years: current 20-year terms extract rent beyond innovation incentive. If term is 20 years: current enforcement is appropriate and victims' constraints are justified by innovation benefits.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relationship between patent term length and actual innovation output"
+    },
+    {
+      "id": "cumulative_innovation_vs_blocking",
+      "question": "Do patent thickets in complex technologies (semiconductors, biotechnology) block cumulative innovation more than they incentivize it?",
+      "resolution_mechanism": "Citation analysis of blocking patents; comparison of innovation cycles in patent-heavy vs patent-light domains; measurement of design-around costs as percentage of R&D budget",
+      "impact": "If blocking > incentivizing: patent system is net negative for innovation in complex tech \u2014 reclassifies toward Snare. If incentivizing > blocking: patent system is net positive \u2014 reclassifies toward Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether patents block or incentivize cumulative innovation"
+    },
+    {
+      "id": "alternative_coordination_mechanisms",
+      "question": "Can open-source copyleft, prize systems, or trade-secret protection achieve equivalent innovation incentives with lower suppression?",
+      "resolution_mechanism": "Comparison of innovation output in copyleft domains (Linux, open-source toolchains) vs patent-protected domains; measurement of prize-funded vs patent-funded innovation outcomes; analysis of trade-secret reliance across industries",
+      "impact": "If alternatives are viable: patent system is a contingent choice, not natural law \u2014 suppression values should increase (ratified extraction). If alternatives fail: patent system is necessary cost \u2014 suppression values are justified.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of alternative innovation incentive mechanisms"
+    },
+    {
+      "id": "development_nation_compulsory_license_effectiveness",
+      "question": "Can compulsory licensing (TRIPS Article 31) and Doha flexibilities actually reduce extraction for generic drug manufacturers and developing nations?",
+      "resolution_mechanism": "Analysis of successful compulsory license cases (India, Thailand, South Africa); measurement of access improvement post-license; comparison of generic drug availability and cost changes",
+      "impact": "If effective: exit option exists (mobile), reclassifies toward Tangled Rope. If ineffective (firms refuse to operate under compulsory terms): exit option is illusory, reclassifies toward Snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Effectiveness of TRIPS compulsory licensing in reducing extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The patent protection framework exists as a globally-enforced constraint on knowledge use, designed to incentivize innovation by granting time-limited monopolies to inventors. The system has evolved from national frameworks toward international harmonization (TRIPS, bilateral trade agreements) that create a unified global enforcement mechanism. It exhibits a fundamental tension: patents genuinely coordinate ownership claims and licensing relationships (rope function), but simultaneously extract from those who cannot afford licensed access or who face blocking patents in complex technology domains (snare and tangled-rope functions). The constraint's extractiveness (0.58) and suppression (0.62) reflect this hybrid character. Base extractiveness has risen from 0.35 (20 years ago) to 0.58 as patent terms have extended, enforcement mechanisms have strengthened, and patent thickets have accumulated in critical technology domains. Theater ratio (0.48) indicates the patent examination process maintains an appearance of rigorous quality control while actual verification of novelty and non-obviousness is weak \u2014 increasing backlogs and declining examination depth mean many invalid patents issue and persist through litigation risk rather than merit.",
+    "key_agents": [
+      "Patent Holders: Primary beneficiary (institutional/arbitrage) \u2014 capture monopoly rents during patent term, establish licensing revenue streams, gain competitive advantage through exclusion",
+      "Generic Drug Manufacturers: Primary victim (powerless/trapped) \u2014 cannot produce life-saving medications at cost-effective prices; face legal enforcement, economic barriers to patent challenges, geographic scope limitations",
+      "Subsequent Innovators: Secondary victim (moderate/constrained) \u2014 face patent thickets, design-around costs, licensing fees; also benefit from protecting their own future innovations",
+      "Developing Nation Populations: Structural victim (powerless/trapped) \u2014 face pricing barriers to essential medicines; lack political power to negotiate compulsory licensing effectively",
+      "Open Source Coalition: Organized secondary actor (organized/constrained) \u2014 benefits from copyleft reciprocal licensing; constrained by patent enforcement in implementation domains",
+      "Patent Office System: Institutional actor (institutional/arbitrage) \u2014 maintains examination apparatus; sees its own process as degraded (piton perspective)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent policy choice as inevitable law of innovation economics"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, rising over the observation interval. The patent system's base extraction has increased because: (1) patent terms have extended (pharmaceutical term extensions, design patent duration increases); (2) enforcement mechanisms have strengthened (TRIPS implementation, bilateral enforcement provisions); (3) patent thickets have accumulated in biotechnology and semiconductors, raising blocking risk; (4) litigation costs for patent defense have increased, raising barriers to exit for small firms. The rise from 0.35 to 0.58 reflects that what began as a reasonable innovation incentive has accumulated into a rent-extraction apparatus. Suppression (0.62): Moderate-high and stable. Suppression operates through legal enforcement mechanisms (TRIPS Article 61, criminal penalties), economic barriers (cost of patent challenges, licensing fees), and geographic barriers (enforcement varies by jurisdiction but tends toward harmonized global enforcement). Barriers to exit include legal prohibitions on manufacturing patented products, costs of design-around, and reduced licensing availability in developing nations. Theater ratio (0.48): Moderate and slightly rising. Patent examination claims to assess novelty, non-obviousness, and enabling disclosure but operates with severe constraints: examination backlogs (200,000+ pending applications in USPTO), declining examination hours per patent, limited prior-art search depth, and weak technological expertise in examiners. The system maintains theater through formal procedures while actual verification of patent quality is weak. The rise from 0.40 to 0.48 reflects increasing examination burden and declining rigor.",
+    "perspectival_gap": "The most significant perspectival gap exists between patent holders (Rope) and generic manufacturers (Snare). Patent holders genuinely see the system as solving coordination \u2014 'who owns this innovation?' \u2014 and experience no extraction because they benefit. Generic manufacturers genuinely see the system as blocking access to essential goods \u2014 'why can't we manufacture this drug at cost?' \u2014 and experience maximum extraction because they are powerless and trapped. The analytical observer's natural law perspective (Mountain) is a false summit: it naturalizes the contingent choice to grant monopolies by treating it as inherent to innovation. The open-source coalition perspective (Tangled Rope) reveals that copyleft licensing can provide both coordination (establishing reciprocal obligations) and partial extraction (restricting closed-source implementations). The subsequent innovators perspective (Tangled Rope) shows that the same patent system simultaneously incentivizes and blocks innovation depending on patent density in their domain. The patent office perspective (Piton) reveals that the system's actual function (quality control of patents) is degraded while its formal procedure (examination process) maintains theater.",
+    "directionality_logic": "Each agent's directionality (d) is derived from their structural position relative to the patent system. Patent holders have low d (0.05-0.15) because they are beneficiaries with arbitrage options \u2014 they can choose when to patent, when to license, when to enforce, when to abandon patents. Generic manufacturers have high d (0.90-0.98) because they are trapped victims with no legal exit option \u2014 manufacturing a patented drug is criminalized. Subsequent innovators have moderate d (0.55-0.70) because they are constrained victims with partial exit options \u2014 they can design around, pay licensing fees, or wait for expiration. Open-source coalitions have moderate d (0.45-0.60) because they are organized actors with some agency \u2014 they can choose copyleft strategies, work in open domains, or build alternative mechanisms. The piton classification for the patent office derives from theater ratio (0.48) being non-trivial but less than 0.70, combined with the system's fundamental weakness (low verification), making it a degraded institution maintained through inertia.",
+    "mandatrophy_analysis": "The mandatrophy in patent protection is resolved by recognizing that the system performs MULTIPLE structurally distinct functions simultaneously, and these functions have different extractiveness profiles. (1) Coordination function (Rope): Patents establish clear ownership claims and enable licensing. This is coordination at base extraction ~0.10-0.15 with minimal suppression. (2) Incentive function (Tangled Rope): Patents motivate innovation by promising temporary monopoly rents. This is coordination + extraction at base extraction ~0.30-0.50 with moderate suppression. (3) Blocking function (Snare): Patents prevent subsequent innovation in crowded technology domains through patent thickets. This is pure extraction at base extraction ~0.60-0.80 with high suppression. The observation interval shows all three functions operating simultaneously, with the blocking function (Snare) increasingly dominant as patent density has accumulated. The mandatrophy resolves by showing that the claimed type (Tangled Rope, extractiveness 0.58) correctly represents the AGGREGATE effect of all three functions operating together: coordination + extraction + blocking = tangled rope at this aggregation level."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "drug_pricing_monopoly",
+      "open_source_patent_thickets",
+      "technology_transfer_barriers"
+    ],
+    "dual_formulation_note": "Patent protection framework decomposes into three structurally distinct claims with different extractiveness profiles: (1) patent_coordination (\u03b5=0.12, Rope) \u2014 establishing ownership and licensing; (2) innovation_incentive_function (\u03b5=0.35, Tangled Rope) \u2014 motivating R&D through monopoly rents; (3) patent_thicket_blocking (\u03b5=0.75, Snare) \u2014 preventing downstream innovation through densely overlapping claims. The aggregate framework combines all three functions simultaneously. Upstream: ehrenfest_phase_space (foundational intellectual property concept); Downstream: drug_pricing_monopoly (pharmaceutical application), open_source_patent_thickets (technology domain application)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "gaza_humanitarian_access_blockade",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gaza"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.92,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Gaza Humanitarian Access Blockade",
+    "topic_domain": "geopolitical/humanitarian_access/conflict",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "occupying_military_apparatus",
+      "blockade_enforcing_states"
+    ],
+    "victims": [
+      "civilian_population_gaza",
+      "humanitarian_organizations",
+      "medical_infrastructure"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Civilian Population",
+      "comment": "PERSPECTIVE 1: CIVILIAN POPULATION (SNARE) \u2014 Completely trapped within geographic boundaries with no exit capacity. Bears full costs of blockade: acute food insecurity, medical supply scarcity, contaminated water access, structural collapse of social services. Maximum experienced extraction with zero degrees of freedom. Suppression is absolute \u2014 physical confinement, legal restrictions on movement, military enforcement."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Humanitarian Organizations",
+      "comment": "PERSPECTIVE 2: HUMANITARIAN ORGANIZATIONS (SNARE) \u2014 Face extreme barriers to delivering aid despite nominal access agreements. Suppression mechanisms: approval delays, route restrictions, cargo confiscation, facility damage, security threats. High exit costs \u2014 organizations that withdraw lose operational presence and access; those that remain operate under severe constraints with minimal effective aid distribution. Significant asymmetric extraction: their resources flow to managing blockade compliance rather than direct service delivery."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "Neighboring States (Egypt, Israel)",
+      "comment": "PERSPECTIVE 3: NEIGHBORING STATES (TANGLED ROPE) \u2014 Experience the blockade as both a coordination mechanism (controlling border flow, managing refugee pressure, security buffer) and an extraction mechanism (leveraging humanitarian need for political concessions, restricting market competition, maintaining geopolitical leverage). Have structural mobility and can adjust enforcement; experience costs and benefits simultaneously. Active enforcement required; extraction is real but paired with coordination function."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Donor States",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL DONOR STATES (ROPE) \u2014 Primarily benefit from coordination function: blockade maintains predictable security environment, enables geopolitical positioning, extracts minimal cost from donors themselves. Donors negotiate humanitarian access frameworks that align with their strategic interests while maintaining humanitarian reputation. Low effective extraction relative to beneficiaries \u2014 they have full exit capacity (can withdraw aid, redirect resources) and experience the constraint as coordination."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Civil Society",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL CIVIL SOCIETY (SNARE) \u2014 Organized agents (NGOs, humanitarian networks, media) face suppression through access denial, narrative control, data blockade. Cannot exit (withdrawal abandons vulnerable population) but constrained in effectiveness through documentation barriers, infrastructure destruction, and systematic obstruction. Experience extraction: their advocacy capacity is severely limited; resources devoted to circumventing blockade rather than addressing root causes."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Natural Law Risk)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN CLASSIFICATION AT RISK) \u2014 From civilizational view, blockades might appear as natural law of conflict: 'military powers always restrict enemy logistics.' However, structural data contradicts natural law signature. The blockade requires continuous active enforcement, political negotiation, and institutional maintenance. It is not an inevitable feature of geopolitical reality but a specific policy choice with measurable costs and alternatives. Engine will flag this as false summit \u2014 naturalization of a contingent institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "humanitarian_vs_security_framing",
+      "question": "Is the blockade framed as security necessity or humanitarian restriction, and does this framing hide the extraction mechanism?",
+      "resolution_mechanism": "Comparative analysis of stated security justifications against documented humanitarian impacts; assessment of whether stated security objectives require blockade intensity or whether intensity exceeds security requirements",
+      "impact": "If framing hides extraction: classification remains snare. If security necessity is genuine: classification shifts toward tangled_rope with legitimate (if tragic) coordination component.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether blockade framing obscures underlying extraction"
+    },
+    {
+      "id": "alternative_mechanism_availability",
+      "question": "Are there alternative security mechanisms that would achieve stated security objectives with significantly lower humanitarian cost?",
+      "resolution_mechanism": "Comparative case analysis: blockaded vs non-blockaded conflict zones with similar security contexts; modeling of alternative enforcement mechanisms (targeted restrictions, intelligence-based monitoring, demilitarization protocols)",
+      "impact": "If alternatives exist: blockade intensity reveals extraction motive beyond security \u2014 higher classification as pure snare. If no alternatives: snare classification is justified but with reduced confidence in pure extraction framing.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternatives to blockade exist for security objectives"
+    },
+    {
+      "id": "exit_option_empirical_assessment",
+      "question": "Can civilians physically exit Gaza through any pathway, and at what structural cost?",
+      "resolution_mechanism": "Documentation of crossing availability, permit processes, financial requirements, destination capacity constraints; tracking of exit applications and approval rates",
+      "impact": "If exit is nominally possible but practically impossible: maintains 'trapped' classification. If significant exit is feasible: downgrades to 'constrained' and shifts snare toward tangled_rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether civilian exit from Gaza is structurally possible"
+    },
+    {
+      "id": "aid_diversion_and_leakage_rates",
+      "question": "What proportion of authorized humanitarian aid reaches intended civilian beneficiaries versus diverts to alternative uses?",
+      "resolution_mechanism": "Independent tracking studies, cross-organizational audits, recipient-side assessment of aid receipt rates, documentation of aid confiscation or rerouting",
+      "impact": "If diversion exceeds 40%: blockade functions as extraction mechanism even for authorized aid. If diversion < 20%: aid flow is functionally constrained rather than wholly captured.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Proportion of aid reaching intended beneficiaries"
+    },
+    {
+      "id": "temporal_blockade_reversibility",
+      "question": "Is the blockade structure designed for permanent control or temporary security response, and what evidence supports either interpretation?",
+      "resolution_mechanism": "Historical institutional analysis: when was blockade instituted, what were stated endpoints, what infrastructure investments suggest permanence vs temporality, what policy frameworks govern potential lifting",
+      "impact": "If permanent structure: pure snare. If reversible framework: opens scaffold or tangled_rope interpretation with potential sunset.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether blockade is structured as permanent or temporary"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Gaza humanitarian access blockade represents a constraint where military occupying powers restrict physical access to essential resources (food, medicine, fuel, water) and humanitarian services through a combination of legal restrictions, border control, infrastructure destruction, and selective aid authorization. The blockade operates across multiple institutional levels: occupying military command, neighboring states, international donor states, and humanitarian organizations. The constraint exhibits the characteristic signature of a Snare: high extractiveness (0.78), extreme suppression (0.92), and moderate theater ratio (0.58). The extractiveness reflects that the blockade's primary function is to extract compliance and concessions from the civilian population and international actors by leveraging control over survival resources. The suppression is near-maximal because the trapped civilian population has zero exit capacity and faces multi-layered enforcement (military, legal, administrative). The theater ratio is moderate rather than high because while some humanitarian access frameworks create performative legitimacy, the underlying blockade mechanism is functionally real \u2014 aid is genuinely restricted and humanitarian need genuinely unmet. Unlike a pure theater-based piton, the blockade would collapse immediately if enforcement mechanisms were removed.",
+    "key_agents": [
+      "Civilian Population of Gaza: Primary victim (powerless/trapped) \u2014 2+ million people with no exit capacity; bear full humanitarian costs of blockade through food insecurity, medical deprivation, water contamination, infrastructure collapse",
+      "Humanitarian Organizations: Secondary victims (moderate/constrained) \u2014 face suppression through approval delays, route restrictions, cargo confiscation; high costs to continuing operations but higher costs to exit",
+      "Occupying Military Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 maintains security control through resource leverage; can adjust enforcement parameters without facing exit costs",
+      "Neighboring States (Israel, Egypt): Institutional beneficiaries (powerful/mobile) \u2014 coordinate blockade enforcement; experience both coordination function (security buffer, border control) and extraction (leveraging humanitarian need for political concessions)",
+      "International Donor States: Secondary beneficiaries (institutional/arbitrage) \u2014 benefit from predictable security environment and geopolitical leverage; donate humanitarian aid while avoiding direct responsibility for blockade enforcement",
+      "International Civil Society: Tertiary victims (organized/constrained) \u2014 advocacy organizations face narrative suppression and access denial; cannot exit (withdrawal abandons population) but experience extraction through constrained effectiveness",
+      "Analytical Observer: Observes risk of false natural law framing (analytical/analytical) \u2014 must distinguish between blockade as immutable military necessity vs contingent policy choice"
+    ],
+    "logic_rationale": "Extractiveness (0.78): Very high. The blockade's primary mechanism is extraction \u2014 forcing compliance through resource control. The occupying power extracts political concessions, intelligence cooperation, and stability of dominance from the trapped population by withholding food, medicine, and fuel. Extractiveness has risen from 0.55 to 0.78 over the measurement interval as blockade intensity has increased and humanitarian alternatives have been progressively eliminated. Suppression (0.92): Near-maximal. Multiple enforcement layers: (1) Physical confinement \u2014 sealed borders with military checkpoints; (2) Legal restrictions \u2014 residence permits, travel bans, citizenship categories; (3) Administrative delays \u2014 aid approval processes, clearing procedures; (4) Infrastructure destruction \u2014 hospitals, water systems, power generation; (5) Resource scarcity \u2014 cumulative effect of all above. The trapped population has zero exit capacity and no alternative survival strategies. Theater ratio (0.58): Moderate. Some components are performative: humanitarian access frameworks, periodic aid announcements, international monitoring mechanisms create legitimacy theater. But the underlying resource restriction is functionally real \u2014 people actually die from medical deprivation and hunger. Theater has increased from 0.42 to 0.58 as international pressure has required nominal humanitarian frameworks while blockade intensity persists.",
+    "directionality_logic": "Directionality values derive from agent structural positions. Trapped civilians have d = 0.95 (maximum target status) \u2014 they experience the full force of f(d) \u2248 1.42 producing maximum chi. Constrained humanitarians have d \u2248 0.85 producing f(d) \u2248 1.15 because they can nominally exit but face severe costs. Institutional occupiers have d \u2248 0.10 (beneficiary status with arbitrage exit) producing f(d) \u2248 -0.01 \u2014 negative effective extraction because the extraction flows toward them. Neighboring states have d \u2248 0.50 (mixed coordination-extraction) producing f(d) \u2248 0.65. Donor states have d \u2248 0.05 (pure beneficiary status) producing f(d) \u2248 -0.12. The perspectival gap emerges because the power axis separates these structural positions: the powerless experience maximum extraction; the institutional actors experience coordination benefit.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence across power levels. The trapped civilian experiences Snare \u2014 pure extraction with zero alternatives. The constrained humanitarian organization experiences Snare with more agency \u2014 can theoretically exit but faces costs that approach trapped status. The institutional occupier experiences Rope or Tangled Rope \u2014 the blockade solves legitimate security coordination problems while benefiting them. Neighboring states experience Tangled Rope \u2014 security coordination paired with political extraction (leveraging humanitarian need). Donor states experience Rope \u2014 the blockade maintains a predictable regional security environment that protects their interests. International civil society experiences Snare \u2014 trapped in advocacy role with constrained effectiveness. The analytical observer risks seeing Mountain (natural law of conflict) but structural data reveals this as false summit \u2014 the blockade requires active maintenance and faces realistic alternatives.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED through seven-perspective analysis: The snare classification is confirmed from the powerless perspective (trapped civilians, trapped civil society) and strongly from the constrained perspective (humanitarian organizations). The tangled rope appears at the regional state level because these actors coordinate security while extracting geopolitical advantage. The rope appears at the international donor level because donors experience pure coordination benefit with minimal personal cost. The false mountain appears at the civilizational analytical level where blockades might seem inevitable but are revealed as contingent policy. The classification variance is not error but perspectival legitimacy \u2014 different power positions produce different experienced constraint types. The mandatrophy resolves by showing that Snare is dominant but not universal: institutional actors experience genuine coordination alongside extraction; analytical observers risk naturalizing contingency. This is precisely the DR framework's function \u2014 to disambiguate which type is operative from which position."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "palestinian_administrative_authority_autonomy",
+      "regional_arms_supply_chains",
+      "international_refugee_system"
+    ],
+    "dual_formulation_note": "The Gaza blockade decomposes into structurally distinct constraints: (1) military_siege_mechanism (\u03b5=0.85, pure snare) \u2014 direct resource restriction; (2) international_aid_coordination (\u03b5=0.35, tangled rope) \u2014 humanitarian frameworks paired with donor leverage; (3) regional_security_architecture (\u03b5=0.50, tangled rope) \u2014 security coordination by neighboring states. This story addresses the primary siege mechanism. The international aid coordination and regional security perspectives are downstream constraints benefiting from the siege but maintaining their own structural logic."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.72
+    }
+  ]
+}

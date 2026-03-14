@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "regulatory_capacity_asymmetry",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "regcap"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Regulatory Capacity Asymmetry Between Large Firms and Regulators",
+    "topic_domain": "regulatory_economics/institutional_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_regulated_firms",
+      "regulatory_agencies"
+    ],
+    "victims": [
+      "small_competitors",
+      "public_interest_beneficiaries",
+      "regulatory_legitimacy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Small Competitor",
+      "comment": "PERSPECTIVE 1: SMALL COMPETITOR (SNARE) \u2014 Lacks resources to hire compliance expertise, engage in rulemaking comment processes, or litigate regulatory interpretations. Trapped by regulatory barriers to entry that large firms navigate easily. Experiences the constraint as pure extraction: compliance costs are fixed, so regulatory burden falls disproportionately on small firms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Large Regulated Firm",
+      "comment": "PERSPECTIVE 2: LARGE REGULATED FIRM (TANGLED ROPE) \u2014 Has sufficient scale to maintain compliance teams, shape regulatory interpretation through comment letters and lobbying, and arbitrage across jurisdictions. Experiences the constraint as mixed: genuine coordination function (firms need clear rules), but also asymmetric extraction (small competitors face higher burden). Benefits from the regulatory apparatus while bearing less of its cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Regulatory Agency",
+      "comment": "PERSPECTIVE 3: REGULATORY AGENCY (ROPE) \u2014 Views regulation as coordination mechanism: establishing standards, preventing externalities, enabling market function. Has arbitrage options (regulatory capture provides career pathways to industry; budget authority over enforcement). Experiences the constraint as pure coordination \u2014 the asymmetry is a resource problem (underfunding), not an extraction mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Sized Firm",
+      "comment": "PERSPECTIVE 4: MID-SIZED FIRM (TANGLED_ROPE) \u2014 Has some compliance capacity but less than giants. Can engage regulatory process but at higher cost relative to revenue. Experiences mixed dynamics: genuine coordination benefit (regulations prevent predatory competitors), but extraction cost that large firms don't bear. Constrained by the burden but cannot exit the regulated sector."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Public Interest Commons",
+      "comment": "PERSPECTIVE 5: PUBLIC INTEREST COMMONS (SNARE) \u2014 Environmental protection, consumer safety, market competition all depend on effective enforcement, but enforcement capacity concentrates on large firms' concerns. The commons is trapped in the asymmetry: cannot exit, cannot organize, bears the full cost of regulatory capture without voice. The constraint prevents the public good from being delivered."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory System Itself",
+      "comment": "PERSPECTIVE 6: REGULATORY SYSTEM ITSELF (PITON) \u2014 The formal regulatory apparatus persists through institutional inertia despite degraded function. Theater ratio is high: compliance rituals (comment periods, environmental reviews, public hearings) are performed extensively but enforcement capacity is too thin to ensure substantive compliance. The system is maintained because formal alternatives haven't replaced it, not because it delivers the intended regulatory function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED_ROPE) \u2014 From civilizational scope, regulatory capacity asymmetry is a genuine coordination mechanism with embedded extraction. Firms need clear rules (coordination function); the asymmetry arises because enforcement capacity is insufficient and concentrates on large-firm interactions (extraction mechanism). The constraint is not a natural law or pure extraction, but a structurally hybrid system with both real functions and real asymmetries."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "capacity_vs_capture_causality",
+      "question": "Is the asymmetry primarily caused by regulatory underfunding (capacity problem) or by regulatory capture (extraction mechanism)?",
+      "resolution_mechanism": "Comparative analysis of underfunded but independent regulatory systems vs. well-funded but captured ones. Historical track record of enforcement actions against large firms vs. small firms controlling for violation severity.",
+      "impact": "If primarily capacity: classify perspectives toward Rope (coordination with resource constraint). If primarily capture: classify toward Snare (intentional extraction mechanism). This determines whether asymmetry is fixable (additional funding) or structural (misaligned incentives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether asymmetry is caused by resource constraints or regulatory capture"
+    },
+    {
+      "id": "small_firm_exit_viability",
+      "question": "Can small firms realistically exit the regulated sector, or is regulatory compliance a true barrier to entry with no exit option?",
+      "resolution_mechanism": "Analysis of startup formation rates pre-and post-regulation; comparison of compliance cost as percentage of revenue across firm sizes; survey of firms citing regulatory burden as exit reason.",
+      "impact": "If exit is possible: small firms should be reclassified from 'trapped' to 'constrained' (high cost, not impossible). If exit is impossible: confirms mountain-like immutability of barrier. Affects whether powerless agent perspective should use 'trapped' or 'constrained'.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether exit from regulated sector is viable for small firms"
+    },
+    {
+      "id": "enforcement_concentration_intentionality",
+      "question": "Is enforcement concentration on large firms intentional (large-firm benefit maximizes regulatory effectiveness, small firms inherently lower-priority) or unintentional (capacity constraints create triage bias)?",
+      "resolution_mechanism": "Analysis of regulatory budgets and staff allocation across firm-size cohorts; interviews with enforcement agency leadership on priority-setting; comparison of fine-to-violation ratios across firm sizes.",
+      "impact": "If intentional: enforcement system is designed to enable regulatory capture (Snare strengthened). If unintentional: reflects genuine capacity limits (Rope with resource constraint). Determines whether the constraint is structural or incidental.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether enforcement concentration is intentional or capacity-driven"
+    },
+    {
+      "id": "regulatory_arbitrage_scope",
+      "question": "How much of large-firm advantage comes from arbitraging across jurisdictions vs. gaining preferential treatment within jurisdictions?",
+      "resolution_mechanism": "Analysis of firm behavior: percentage of regulatory savings from multi-jurisdictional arbitrage vs. negotiated compliance standards within single jurisdiction. Case studies of large firms' regulatory strategy.",
+      "impact": "If arbitrage dominates: problem is global institutional fragmentation (Rope at global scope). If preferential treatment dominates: problem is capture (Tangled Rope at national scope). Scope assignment depends on this decomposition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether large-firm advantage derives from arbitrage or preferential treatment"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.53
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Regulatory capacity asymmetry emerges when regulatory agencies lack sufficient resources or independence to enforce rules uniformly across firms of different sizes and sophistication. Large firms can afford specialized compliance teams, hire regulatory consultants, participate in rulemaking processes, and arbitrage across jurisdictions; small firms cannot. This creates a two-layer system: formal regulations apply universally, but effective compliance requirements differ dramatically by firm size. The constraint exhibits both genuine coordination function (regulations prevent market failures and externalities) and genuine extraction (large firms benefit from the asymmetry through reduced effective burden and reduced competition from entry-constrained small firms). Theater ratio is elevated (0.64) because regulatory compliance rituals\u2014public comment periods, environmental reviews, safety certifications\u2014are performed extensively even as enforcement capacity is too thin to ensure substantive compliance, especially for small violators that cannot afford litigation.",
+    "key_agents": [
+      "Small Competitors: Primary victim (powerless/trapped) \u2014 cannot afford compliance infrastructure; regulatory barriers become effective barriers to entry",
+      "Large Regulated Firms: Primary beneficiary (powerful/arbitrage) \u2014 maintain compliance teams; shape regulatory interpretation; arbitrage across jurisdictions",
+      "Regulatory Agencies: Secondary institutional actor (institutional/arbitrage) \u2014 designed for coordination function but underfunded relative to regulated sector complexity; gatekeepers with career mobility to industry",
+      "Mid-Sized Firms: Secondary victim (moderate/constrained) \u2014 have some compliance capacity but higher cost burden than large firms; cannot exit sector",
+      "Public Interest Commons: Collective victim (powerless/trapped) \u2014 environmental protection, consumer safety, market competition all depend on effective enforcement; enforcement capacity concentrates on large-firm concerns",
+      "Regulatory System Itself: Institutional actor (institutional/constrained) \u2014 performs extensive theater (comment periods, reviews) but enforcement is too thin; persists through institutional inertia"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint exhibits genuine extraction\u2014large firms benefit from reduced effective burden while small competitors face inflated compliance costs relative to firm size. However, extractiveness is not maximal because the coordination function is real: regulations do prevent externalities and enable market function. The extraction is a side effect of asymmetric capacity, not the primary function. Suppression (0.58): Moderate-high. Small firms face significant barriers to exit\u2014regulatory compliance is mandatory in most sectors\u2014but not insurmountable. Some firms do exit regulated sectors, and entrepreneurship persists despite regulatory burden. Barriers are real and external but not absolute. Theater ratio (0.64): Elevated and rising. Regulatory compliance rituals are performed extensively (comment periods, safety reviews, environmental assessments) but enforcement capacity is thin relative to the number of regulated entities. The rise over the measurement interval reflects growing complexity of regulated sectors (pharmaceuticals, environmental protection, financial services) without corresponding increases in enforcement staffing. At time zero, enforcement could reasonably keep up; by time 20, formal compliance theater exceeds substantive capacity.",
+    "perspectival_gap": "The gap between large-firm and small-firm perspectives is the diagnostic core. Both face the same regulations, but their experienced extractiveness (chi) differs dramatically because exit options differ. The large firm's arbitrage option (can shift compliance strategy across jurisdictions, can afford regulatory expertise to negotiate interpretations, can exit if burden becomes unacceptable) reduces their experienced extraction even though they benefit from asymmetry. The small firm's trapped option (must comply with same rules at higher proportional cost, cannot afford expertise to negotiate, cannot exit without abandoning market opportunity) increases their experienced extraction even though the formal rules apply uniformly. The gap reveals that chi depends not just on the rule's design but on the agent's structural position relative to it.",
+    "directionality_logic": "Directionality is determined by structural position relative to the asymmetry. Large firms with arbitrage options derive d from beneficiary status + arbitrage exit: they can walk away or shift jurisdiction, so their structural position is low-cost. Small firms with no exit option derive d from victim status + trapped exit: they bear compliance costs without escape. Regulatory agencies derive d from their coordination function\u2014they see the system as solving problems, not creating extraction\u2014but their arbitrage option (career mobility to industry) slightly raises d from the canonical institutional baseline, reflecting partial capture. The mid-sized firm's moderate power derives from having some compliance capacity (reducing constraint experience) but still being trapped in the sector (cannot exit). The public commons has no exit option and no organized voice, so d is maximal\u2014the abstract collective cannot negotiate.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by distinguishing the coordination function (genuine) from the extraction mechanism (genuine but incidental). Regulatory capacity asymmetry is NOT pure extraction (Snare universally) because the regulations do coordinate real problems: preventing externalities, enabling market function, protecting consumers and the environment. But it is NOT pure coordination (Rope universally) because the enforcement asymmetry creates private benefit for large firms\u2014they benefit from the rules themselves AND from the asymmetry in enforcement burden. The tangled rope classification at the analytical level captures this: both functions are real, and both are structurally necessary given the constraint's origin (regulatory agencies are genuinely underfunded relative to sector complexity). The constraint could be simplified to Rope if enforcement capacity were sufficient to apply rules uniformly, or degraded to Snare if the asymmetry were intentional capture rather than incidental triage. Current state: hybrid, requiring active enforcement to maintain the coordination function while the extraction mechanism persists as a structural artifact of capacity limits."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture_in_finance",
+      "small_business_compliance_burden",
+      "enforcement_agency_budget_constraint"
+    ],
+    "dual_formulation_note": "Regulatory capacity asymmetry is downstream of enforcement agency underfunding (budget constraint) and upstream of specific sector-level capture dynamics (e.g., financial regulation, pharmaceutical approval). The constraint represents a structural pattern that manifests across multiple regulatory domains."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.42
+    }
+  ]
+}

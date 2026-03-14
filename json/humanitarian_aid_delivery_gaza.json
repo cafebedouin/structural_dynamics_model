@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "humanitarian_aid_delivery_gaza",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aid_gaza"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Humanitarian Aid Delivery Constraint in Gaza",
+    "topic_domain": "humanitarian_affairs/geopolitical_conflict",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "aid_logistics_intermediaries",
+      "international_ngos",
+      "checkpoint_gatekeepers"
+    ],
+    "victims": [
+      "gaza_civilian_population",
+      "humanitarian_sector_credibility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Gaza Civilian Population",
+      "comment": "PERSPECTIVE 1: GAZA CIVILIANS (SNARE) \u2014 Trapped by geographic confinement and total dependency on aid flows. No exit options; cannot leave territory or secure independent supply chains. Bears maximum extraction: aid is withheld as political leverage, humanitarian access is conditioned on military objectives, supply ceilings are set below survival requirements. Experiences aid as coercive control mechanism rather than assistance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Local Health and Humanitarian Workers",
+      "comment": "PERSPECTIVE 2: LOCAL HUMANITARIAN WORKERS (TANGLED ROPE) \u2014 Constrained by employment dependency, visa restrictions, and security threat. Benefit from aid operations through employment and organizational resources, but also experience extraction: forced to facilitate population control through aid distribution mechanisms, bear security risk disproportionately, and face coercion to prioritize politically favored distribution. Mixed coordination (sustaining healthcare systems) and extraction (using aid as control infrastructure)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International NGOs and UN Agencies",
+      "comment": "PERSPECTIVE 3: INTERNATIONAL NGOS/UN AGENCIES (ROPE) \u2014 Experience aid delivery as coordination function: mobilizing logistics, allocating scarce resources, establishing equity protocols. Benefit from funding legitimacy tied to emergency response and humanitarian mandate. Have exit options (withdraw operations, relocate programs) and international legal protections. Extraction is minimal from their perspective \u2014 they see themselves as solving coordination problems despite constraints."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Regional Host States and Neighboring Countries",
+      "comment": "PERSPECTIVE 4: REGIONAL HOST STATES (TANGLED ROPE) \u2014 Bear coordination burden (refugee camps, overflow hospitals, border logistics) while experiencing extraction (donor conditionality, political leverage, security externalities from conflict escalation). Organized power but constrained by geopolitical dependence on conflict parties and international donors. Genuine coordination function mixed with asymmetric extraction of resources and sovereignty."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Humanitarian System",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL HUMANITARIAN SYSTEM (PITON) \u2014 The formal apparatus of neutral humanitarian access, impartiality principles, and coordination mechanisms has substantially atrophied. Performance metrics (tonnage delivered, beneficiaries reached) dominate actual impact measures; theater of humanitarian neutrality persists despite deep politicization. The system maintains legitimacy through procedural compliance rather than functional effectiveness. High theater ratio reflects ritualized access negotiations that prioritize demonstrating neutrality over securing actual need-based distribution."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Structural View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From structural analysis, the aid constraint functions as a coercive control mechanism layered atop humanitarian necessity. The conditioning of survival resources on political compliance, the deliberate creation of supply ceilings below minimum caloric requirements, and the use of aid access to enforce population movement and registration constitute extraction disguised as assistance. Unlike the mountain false summit, the snare classification is justified by structural data: the constraint exists to extract compliance, not to solve a genuine coordination problem."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "humanitarian_necessity_vs_political_conditioning",
+      "question": "Are observed aid delivery constraints caused by logistical bottlenecks inherent to emergency response, or by deliberate political conditioning of survival resources?",
+      "resolution_mechanism": "Comparative analysis: (1) documented access demands vs. granted access across aid categories; (2) supply ceiling justifications vs. minimum survival requirements by commodity; (3) correlation between aid denial and geopolitical demands; (4) internal communications from checkpoint authorities regarding conditionality.",
+      "impact": "If logistical: constraint reclassifies as Rope/Scaffold \u2014 primarily coordination function with extraction as byproduct. If political: classification stands as Snare/Tangled Rope \u2014 extraction is primary mechanism, humanitarian function is theater.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether aid constraints reflect logistics or deliberate political conditioning"
+    },
+    {
+      "id": "checkpoint_gatekeeping_extraction",
+      "question": "What fraction of aid delivery delay/diversion occurs due to humanitarian logistics coordination vs. institutional gatekeeping designed to extract political compliance or commercial profit?",
+      "resolution_mechanism": "Tracking data: (1) aid-in-motion vs. aid-at-destination timelines for different checkpoint configurations; (2) cross-border comparative analysis (different checkpoints, same logistics challenges); (3) pattern analysis of conditional demands vs. operational necessity; (4) documentation of unofficial fees, bribes, or prerequisite conditions.",
+      "impact": "If primarily logistics: suppression metric should be lower (0.40-0.50 range) and snare classification becomes tangled_rope. If primarily extraction: suppression metric justified and snare classification confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fraction of aid delays attributable to gatekeeping extraction vs. logistics"
+    },
+    {
+      "id": "ngo_complicity_in_control_infrastructure",
+      "question": "To what degree do international NGOs function as independent aid providers vs. as administrative extensions of conflict parties' population control infrastructure?",
+      "resolution_mechanism": "Organizational independence analysis: (1) funding source tracking and conditional funding restrictions; (2) distribution priorities set independently vs. imposed; (3) beneficiary targeting based on humanitarian need vs. geopolitical/military criteria; (4) ability to refuse operations without organizational collapse.",
+      "impact": "If independent: NGO perspective as Rope is accurate. If substantially captured: NGO perspective should reclassify toward Tangled Rope, and complicity omega should be created.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "NGO organizational independence vs. incorporation into control infrastructure"
+    },
+    {
+      "id": "humanitarian_theater_functionality",
+      "question": "Does the performative apparatus of humanitarian access (negotiation cycles, documentation, coordination meetings, neutral messaging) serve genuine coordination function or primarily legitimize extraction?",
+      "resolution_mechanism": "Process effectiveness analysis: (1) outcome changes attributable to formal negotiation vs. enforcement changes; (2) correlation between theater intensity (frequency of meetings, documentation layers) and actual access improvement; (3) counterfactual: what happens if theater is reduced (coordination fails vs. extraction continues unimpeded)?",
+      "impact": "If functional: theater_ratio should be lower and Piton classification overstated. If primarily legitimizing: theater_ratio validated and Piton perspective confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether humanitarian access theater serves coordination or legitimization"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Humanitarian aid delivery in Gaza operates under a constraint structure that combines genuine coordination challenges (logistics, resource scarcity, population dispersal) with extractive mechanisms (political conditioning of aid, supply ceilings below minimum requirements, use of aid access to enforce compliance). The constraint exhibits characteristics of both Tangled Rope and Snare depending on the observer's structural position. International humanitarian actors experience coordination problems to solve; Gaza civilians experience a control mechanism. The constraint's theater ratio (0.65) reflects the performative apparatus of humanitarian access negotiations, which maintain the institutional fiction of neutral humanitarian assistance while operating within a framework where aid is deliberately weaponized. Over the measurement interval, both theater_ratio and extractiveness have increased, indicating drift from coordination toward pure extraction mechanism.",
+    "key_agents": [
+      "Gaza Civilian Population: Primary victim (powerless/trapped) \u2014 bears maximum extraction; no exit options or alternative supply sources",
+      "Local Health and Humanitarian Workers: Secondary victims (moderate/constrained) \u2014 constrained by employment and security dependence; benefit from aid operations but forced to facilitate control mechanisms",
+      "International NGOs and UN Agencies: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from funding and operational legitimacy; have exit options and international protections",
+      "Regional Host States: Secondary beneficiaries (organized/constrained) \u2014 bear coordination burden while extracting political leverage; constrained by geopolitical dependence",
+      "Checkpoint Gatekeepers: Tertiary beneficiaries (organized/mobile) \u2014 extract through conditionality and diversion; have discretion to modify access",
+      "International Humanitarian System: Institutional actor (institutional/arbitrage) \u2014 maintains performative apparatus; benefits from legitimacy while functionality atrophies"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint exhibits significant extraction through (1) deliberate supply ceilings below minimum survival requirements, (2) conditioning of aid on political compliance and population movement, (3) diversion and gatekeeping, (4) use of aid access to enforce registration systems. However, the extraction is not maximal (0.72+) because some aid does reach populations through multiple pathways and humanitarian organizations retain some functional independence. The interval trajectory (0.42\u21920.58) reflects increasing sophistication of extraction mechanisms and erosion of humanitarian space. Suppression (0.72): Very high. Barriers to independent supply include geographic confinement, blockade, prohibition of imports, requirement for aid to flow through authorized checkpoints, documentation requirements that delay delivery, and military objectives that take precedence over humanitarian access. The suppression is not total (0.85+) because some informal supply channels persist and occasional breaches occur, but formal suppression is near-total. Theater ratio (0.65): Moderate-high. Humanitarian access operates through highly formalized negotiation cycles (coordination meetings, approval processes, documentation) whose primary function is increasingly to legitimize predetermined access decisions rather than to facilitate genuine humanitarian need assessment. The formal apparatus persists because withdrawal would delegitimize the system entirely, but its actual impact on access decisions is minimal.",
+    "perspectival_gap": "The constraint demonstrates maximal perspectival gap: international humanitarian organizations and conflict parties themselves perceive the system as solving coordination problems (resource allocation, logistics, equity); Gaza civilians experience the same system as a coercive control mechanism that withholds survival resources contingent on compliance. The international NGO perspective as Rope is their genuine experience \u2014 they are solving real logistical problems \u2014 but this is coherent only from an extractive framing: the logistics exist specifically because access is restricted, and NGOs function as administrators of the restriction. The piton perspective (international humanitarian system) captures the institutional dimension: the formal apparatus persists through inertia and legitimacy needs even as its functional coordination role atrophies. The analytical observer's snare classification correctly identifies the primary structural function (extraction of compliance through aid conditionality) while acknowledging the mixed reality: some genuine coordination occurs within an extractive frame.",
+    "directionality_logic": "Directionality for each perspective derives from structural position relative to the aid flow: (1) Trapped civilians with no exit: high d, experience maximum f(d), full snare; (2) Constrained local workers: moderate d (they benefit from employment but face coercion), tangled rope; (3) International NGOs with arbitrage options: low d (they benefit and can withdraw), rope; (4) Regional states: moderate-high d (constrained by geopolitical dependence despite organized power), tangled rope; (5) Analytical observer: high d (sees extraction as primary mechanism), snare. The directionality overrides are not needed \u2014 the beneficiary/victim declarations and exit options produce accurate d values.",
+    "mandatrophy_analysis": "STRUCTURAL RESOLUTION: The mandatrophy is resolved by recognizing that this constraint is simultaneously coordination and extraction at different structural levels. At the operational level (NGO logistics), the constraint solves genuine coordination problems \u2014 allocating scarce resources, coordinating cross-border logistics, managing supply chains. At the strategic level (geopolitical power), the constraint implements extraction \u2014 using aid access to enforce compliance, maintain population control, and extract political concessions. The Tangled Rope classification correctly captures this duality: genuine coordination function (beneficiaries: aid logistics intermediaries, international NGOs) coexists with asymmetric extraction (victims: civilians, humanitarian sector credibility). The Snare classifications from powerless and analytical perspectives reveal the extractive function that the Rope perspective obscures. The mandatrophy is resolved not by declaring one type correct but by recognizing that the constraint is genuinely tangled: it coordinates AND extracts, and the perspectival gap reveals which structural function dominates from each position."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "gaza_blockade_enforcement",
+      "checkpoint_control_systems",
+      "international_aid_funding_conditionality"
+    ],
+    "dual_formulation_note": "The aid delivery constraint is downstream of multiple structural constraints: the blockade that creates scarcity (upstream), checkpoint control systems that enforce gatekeeping (peer), and international funding conditionality that incentivizes NGO compliance (upstream). The aid constraint represents the operational manifestation of strategic extraction mechanisms. Separate stories model the blockade (supply restriction) and checkpoint enforcement (access control); this story models the aid delivery mechanism that instantiates both."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

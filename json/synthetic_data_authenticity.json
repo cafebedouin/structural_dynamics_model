@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "synthetic_data_authenticity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "synth_auth"
+  },
+  "base_properties": {
+    "extractiveness": 0.54,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Synthetic Data Authenticity Verification Constraint",
+    "topic_domain": "data_science/machine_learning/AI_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "synthetic_data_producers",
+      "model_developers_using_synthetic_data"
+    ],
+    "victims": [
+      "downstream_model_users",
+      "regulatory_compliance_bodies",
+      "data_integrity_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The End-User Model Consumer",
+      "comment": "PERSPECTIVE 1: END-USER MODEL CONSUMER (SNARE) \u2014 Consumer of models trained on synthetic data has no capacity to verify authenticity or detect distribution shifts between claimed synthetic data characteristics and actual training data composition. Trapped by informational asymmetry and inability to audit training pipelines. Bears full extraction cost: models degrade silently in production; accountability flows nowhere."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Compliance Auditor",
+      "comment": "PERSPECTIVE 2: COMPLIANCE AUDITOR (TANGLED ROPE) \u2014 Regulatory body or internal audit function must verify synthetic data authenticity but faces high cost to conduct statistical audits. Genuine coordination function exists (auditors ensure data quality standards are maintained), but the enforcement mechanism itself becomes extractive: auditors can demand audits indefinitely, creating compliance burden asymmetry. High suppression through demanding resource-intensive verification procedures."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Synthetic Data Producer",
+      "comment": "PERSPECTIVE 3: SYNTHETIC DATA PRODUCER (ROPE) \u2014 Primary beneficiary experiences the constraint as coordination mechanism: declaring synthetic data authenticity enables market exchange, builds trust, and creates value. Producer can arbitrage between markets (sell same synthetic data schema to multiple clients). Net beneficiary through information asymmetry and first-mover trust establishment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Model Developer Community",
+      "comment": "PERSPECTIVE 4: MODEL DEVELOPER COMMUNITY (TANGLED ROPE) \u2014 Organized resistance (open-source verification frameworks, audit consortia) sees the constraint as solvable through collective action but faces resource constraints and competitive pressure to ship faster than audits can proceed. Gains coordination benefit (trustworthy synthetic data enables collaboration) but bears asymmetric extraction cost (compliance burden distributed unequally \u2014 startups vs enterprises)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Data Provenance Certification Ritual",
+      "comment": "PERSPECTIVE 5: DATA PROVENANCE CERTIFICATION RITUAL (PITON) \u2014 Traditional approaches to synthetic data certification (data sheets, model cards, attestation documents) are largely performative. Producers fill templates; auditors check compliance with templates; nobody verifies the actual statistical properties of the synthetic data. The ritual persists through institutional convention (conferences, funding agencies, regulatory templates) despite low functional verification content. Theater ratio high because certification labor is extensive but detection of authenticity violations is rare."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Fundamental Verification Limit)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / FUNDAMENTAL LIMIT VIEW (MOUNTAIN) \u2014 From a theoretical perspective, the authenticity constraint may appear immutable: synthetic data is, by definition, generated not sampled, so perfect fidelity to claimed distribution is mathematically infeasible under resource constraints. Compression loss is inherent to any finite synthetic dataset. This perspective risks naturalizing what is actually a tradeoff between fidelity cost and verification effort, not an immutable law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "statistical_indistinguishability_threshold",
+      "question": "What statistical distance (Wasserstein, KL divergence, MMD) between claimed and actual synthetic data distribution constitutes acceptable vs extractive?",
+      "resolution_mechanism": "Empirical audits comparing claimed synthetic data characteristics to actual distributions; analysis of distribution shift impact on downstream model performance",
+      "impact": "If threshold is strict (< 0.01): most synthetic data producers fail certification, market contracts; extraction mechanism evident. If threshold is loose (> 0.10): producers evade accountability, snare mechanism persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for acceptable distribution divergence"
+    },
+    {
+      "id": "audit_cost_asymmetry",
+      "question": "Is the suppression mechanism structural (cost of auditing is genuinely high) or institutional (audits could be cheaper but certification standards are set to advantage incumbents)?",
+      "resolution_mechanism": "Comparison of audit costs across organizations; analysis of whether audit burden correlates with firm size or with actual data complexity",
+      "impact": "If structural: suppression reflects real technical limits; tangled rope classification stands. If institutional: suppression is rent-seeking; classification shifts toward snare for smaller actors.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether audit cost asymmetry is structural or institutional"
+    },
+    {
+      "id": "synthetic_data_mission_creep",
+      "question": "Are producers using 'synthetic data' labels for data that is actually real but anonymized, or real data with minor perturbations, thereby conflating distinct authenticity problems?",
+      "resolution_mechanism": "Audit of synthetic data provenance documentation; classification of datasets by generation method (fully synthetic vs anonymized real vs augmented real)",
+      "impact": "If mission creep is common: authenticity verification breaks down entirely (impossibility of distinguishing categories); extraction mechanism succeeds through categorical ambiguity. If categories are clear: verification problem is tractable; tangled rope classification confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Label ambiguity between synthetic and anonymized/augmented data"
+    },
+    {
+      "id": "open_source_verification_viability",
+      "question": "Can open-source statistical verification frameworks (e.g., synthetic data validating libraries) actually detect distribution drift at production scale, or do they create false confidence through theater?",
+      "resolution_mechanism": "Comparison of audit results from open-source tools vs specialized audit firms; longitudinal tracking of models trained on 'verified' synthetic data for distribution shift incidents",
+      "impact": "If viable: scaffold perspective emerges; distributed auditing could create sunset path for extraction. If theater: open-source tools become compliance theater, increasing suppression.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Effectiveness of open-source synthetic data verification"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The synthetic data authenticity constraint governs the structural relationship between producers claiming data is synthetic (generated, not sampled) and consumers relying on those claims for model training, deployment, and regulatory compliance. This constraint combines genuine coordination (trustworthy synthetic data enables data-sharing and privacy-preserving ML) with asymmetric extraction (producers benefit from information opacity; consumers bear verification cost and distributional drift risk). The constraint exhibits tangled rope structure across multiple perspectives: producers and model developers coordinate through synthetic data standards, but enforcement mechanisms create compliance burden asymmetry. The theater ratio (0.68) reflects that certification labor (data cards, documentation, attestation) is extensive but detection of authenticity violations is rare \u2014 the ritual persists through institutional convention rather than functional verification. Extractiveness has increased from 0.28 (early synthetic data adoption, high trust, minimal auditing) to 0.54 (mature market, discovery of distribution divergence cases, rising audit burden) as the gap between claimed and actual data fidelity became measurable.",
+    "key_agents": [
+      "Synthetic Data Producers: Primary beneficiary (institutional/arbitrage) \u2014 capture trust premium and market first-mover advantage through authenticity claims; can shift production cost to consumers via audit burden",
+      "End-User Model Consumers: Primary victim (powerless/trapped) \u2014 cannot verify synthetic data authenticity; suffer silent model degradation when distribution drift occurs; no mechanism for accountability",
+      "Compliance Auditors: Secondary victim (moderate/constrained) \u2014 must verify authenticity but face resource asymmetry; auditing demands are effectively unlimited; can withdraw audits but face regulatory pressure",
+      "Model Developer Community: Secondary victim (organized/constrained) \u2014 benefits from synthetic data as coordination mechanism but faces unequal compliance burden distribution (startups bear higher proportional cost)",
+      "Regulatory Bodies: Institutional stakeholder (institutional/arbitrage) \u2014 ostensibly verify authenticity but often rely on producer attestations; maintain theater through certification requirements",
+      "Data Integrity Commons: Abstract victim (powerless/trapped) \u2014 field of ML/AI science accumulates models trained on misspecified synthetic data; systematic bias propagates; no mechanism to identify or correct"
+    ],
+    "logic_rationale": "Extractiveness (0.54): Moderate-high. Producers systematically benefit from authenticity claims they cannot be forced to verify. The asymmetry emerges at scale \u2014 early adoption had high trust and low verification cost; mature market reveals distribution divergence cases where producers claimed fidelity they didn't achieve. The extraction is not maximal (0.70+) because open-source alternatives and audit consortia provide some producer discipline and some consumer protection. Suppression (0.62): Moderate-high. Multiple barriers prevent consumers from detecting or redressing authenticity violations: (1) statistical verification requires specialized expertise and expensive audits; (2) distribution drift manifests through model performance decay, not transparent signals; (3) attribution is nearly impossible \u2014 which training data source caused the degradation?; (4) legal/contractual frameworks for recourse are underdeveloped. Theater ratio (0.68): High. Data cards and model documentation are labor-intensive compliance artifacts, but empirical studies show they are often filled without reference to actual data characteristics. Certification bodies may not conduct statistical audits; they check documentation completeness. The performative content is high relative to the verification content. The trajectory from 0.42 to 0.68 reflects institutional response to early authenticity concerns: rather than developing robust verification methods, the field added documentation requirements, creating theater that simulates rigor without achieving it.",
+    "perspectival_gap": "The primary gap is between producers (who see coordination and value creation) and consumers (who see asymmetric extraction). Secondary gap is between auditors (who see enforceable standards) and developers (who see compliance theater). Tertiary gap is between institutional observers (who see performative certification) and analytical observers (who risk naturalizing verification limits). The gaps are bridged by open-source verification frameworks and audit consortia, which enable organized developers to see a scaffold structure \u2014 the constraint appears temporarily solvable through collective action with a sunset as verification methods mature and become standard practice.",
+    "directionality_logic": "Directionality values (d) reflect each agent's structural position relative to the extraction flow. Producers with arbitrage options (can sell to multiple markets, shift audit costs) have low d (0.10-0.20) \u2014 they are net beneficiaries. End-users with no alternatives have high d (0.90+) \u2014 they are net targets. Auditors with constrained exit (regulatory pressure forces them to audit; cannot refuse) have high d (0.75-0.85). The derived chi values show why producers experience rope/low extraction: low d produces low f(d), dampening their experienced extractiveness. Consumers experience high chi due to high d and trapped exit. The perspectival gap widens as spatial scope increases: at local scope (single organization, closed dataset), verification is feasible and extraction is low; at global scope, verification becomes impossible and extraction approaches maximal. The scope modifier \u03c3(S) scales extractiveness from \u03c3(local)=0.8 to \u03c3(global)=1.2, explaining why global synthetic data markets show higher extraction than local corporate uses.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by demonstrating that the coordination function (trustworthy synthetic data enables data-sharing) is genuine but embedded in an asymmetric extraction mechanism (producers benefit from opacity, consumers bear verification cost). The tangled rope classification is not a mislabeling \u2014 it correctly captures that both functions exist. The piton perspective identifies institutional inertia: certification theater persists because stakeholders have not yet coordinated on robust statistical verification standards. The scaffold perspective identifies the exit path: as open-source verification tools mature and audit consortia establish baseline statistical thresholds, the theater ratio should decline and extraction should shift from snare toward rope for consumers. The false summit mountain perspective illustrates how analytical reasoning can naturalize institutional arrangements: 'synthetic data authenticity is fundamentally unverifiable' is a rationalization of current weak enforcement, not a mathematical law. Stronger enforcement regimes (mandatory third-party audits, legal recourse for distribution drift, standardized statistical thresholds) would shift the constraint toward rope. The mandatrophy is resolved by recognizing that the perceived immutability is institutional, not physical."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "model_training_data_provenance",
+      "ai_regulatory_compliance_audit"
+    ],
+    "dual_formulation_note": "The synthetic data authenticity constraint is upstream of model training data provenance (specific claims about data composition) and downstream of AI regulatory compliance frameworks (which mandate verification). This story addresses the intermediate verification bottleneck; upstream story (model_training_data_provenance) addresses the specific authenticity claims; downstream story (ai_regulatory_compliance_audit) addresses institutional enforcement mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

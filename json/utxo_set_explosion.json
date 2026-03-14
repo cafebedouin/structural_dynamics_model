@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "utxo_set_explosion",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "utxo"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UTXO Set Explosion in Bitcoin and Blockchain Systems",
+    "topic_domain": "cryptocurrency/blockchain_scalability",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "exchange_operators",
+      "mining_pools",
+      "full_node_operators_with_resources"
+    ],
+    "victims": [
+      "solo_miners",
+      "light_client_users",
+      "micropayment_services",
+      "blockchain_accessibility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Solo Miner",
+      "comment": "PERSPECTIVE 1: SOLO MINER (SNARE) \u2014 Cannot economically maintain a full UTXO index or efficiently mine without it. Extraction is maximal: forced to either (a) consolidate funds into exchange wallets (surrendering custody), (b) use mining pools (surrendering block discovery rewards), or (c) operate at severe disadvantage. No viable exit path within Bitcoin protocol constraints."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Light Client User",
+      "comment": "PERSPECTIVE 2: LIGHT CLIENT USER (TANGLED ROPE) \u2014 Constrained by bandwidth and storage limits; must trust external servers for transaction verification. The constraint provides genuine coordination (SPV proofs, Bloom filters enable scalable participation) but with embedded extraction: reliance on third-party infrastructure, vulnerability to eclipse attacks, delayed confirmations. Moderate extraction with some benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Exchange Operator",
+      "comment": "PERSPECTIVE 3: EXCHANGE OPERATOR (ROPE) \u2014 Benefits from UTXO set explosion through barriers to entry: only institutions with capital to maintain full nodes can operate exchanges efficiently. Experiences the constraint as pure coordination: managing user withdrawals, building batching logic, optimizing fee structures. Net beneficiary \u2014 extraction runs toward this agent through network consolidation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Mining Pool Operator",
+      "comment": "PERSPECTIVE 4: MINING POOL OPERATOR (TANGLED ROPE) \u2014 Provides coordination (pooled variance reduction, payment distribution logic) while extracting fees (1-4% of rewards). Constrained by UTXO set burden: must maintain efficient indexing to serve miners, but pool operation itself creates many small UTXOs, exacerbating the problem. Active enforcement through stratum protocol standardization."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Layer-2 Protocol Developers",
+      "comment": "PERSPECTIVE 5: LAYER-2 PROTOCOL DEVELOPERS (SCAFFOLD) \u2014 Lightning Network, sidechains, rollups create alternative verification pathways that reduce reliance on the base-layer UTXO set. The constraint is temporary: as Layer-2 transactions mature and establish custodial norms, settlement to Layer-1 can batch millions of transactions into single UTXOs. Sunset clause is genuine: if 90% of payments move to Layer-2, base-layer UTXO burden becomes manageable for ecosystem nodes."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Consensus Rule Enforcement",
+      "comment": "PERSPECTIVE 6: CONSENSUS RULE ENFORCEMENT (PITON) \u2014 The 'no pruning without hard fork' norm is substantially performative. Full nodes could prune UTXOs without consensus validity (only archival nodes would break), but institutional inertia preserves the fiction that every node must carry the entire UTXO set. Theater arises from the design principle's nobility (decentralization through full verifiability) persisting despite its practical abandonment (most nodes now use SPV or delegated verification). Theater ratio high despite low actual functional demand."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Information-Theoretic View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / INFORMATION-THEORETIC VIEW (MOUNTAIN) \u2014 From a universalizable perspective, UTXO set growth is inherent to any immutable transaction ledger: if users create many outputs and spend them slowly, the UTXO set grows polynomially. This perspective risks naturalizing contingent design choices (Bitcoin's UTXO model, no built-in pruning) as immutable laws of distributed systems. However, the structural data contradicts this \u2014 the constraint is a *design tradeoff* (Byzantine-robust verification vs scalability), not a natural law. Engine will flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "utxo_growth_linearity",
+      "question": "Is UTXO set growth fundamentally linear in the number of users, or does it scale with transaction velocity?",
+      "resolution_mechanism": "Historical analysis of UTXO set growth correlated with active user growth, transaction frequency, and output consolidation patterns. Projection models comparing stable-state UTXO size under different transaction velocity assumptions.",
+      "impact": "If linear in users: the constraint is inherent and immutable for any peer-to-peer currency. If sublinear under consolidation: extraction mechanism depends on user behavior incentives (batching, UTXOs per user), enabling Layer-2 or protocol-level mitigations.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether UTXO growth is inherent to user count or contingent on transaction patterns"
+    },
+    {
+      "id": "hardware_catch_up",
+      "question": "Will storage and I/O hardware improvements outpace UTXO set growth, rendering the bottleneck obsolete?",
+      "resolution_mechanism": "Moore's Law analysis for SSD capacity and random-access speed; projection of UTXO set size in 2035-2040 vs typical full node hardware; cost-per-byte trend extrapolation.",
+      "impact": "If hardware catches up: constraint becomes piton (maintained by norm, not by structural necessity). If UTXO grows faster: extraction mechanism persists and may strengthen.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether hardware improvements will make UTXO set manageable"
+    },
+    {
+      "id": "layer2_adoption_threshold",
+      "question": "What Layer-2 adoption percentage makes base-layer UTXO consolidation sufficient for solo mining viability?",
+      "resolution_mechanism": "Economic analysis: break-even point where mining reward covers UTXO-set maintenance cost. Transaction velocity models under different Layer-2 adoption scenarios (10%, 50%, 90%). Measurement of actual full node operating costs in dollar terms per transaction verified.",
+      "impact": "If threshold < 50%: scaffold sunset is realistic, constraint becomes temporary. If threshold > 80%: Layer-2 adoption alone cannot solve the constraint; protocol-level changes required.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Layer-2 adoption threshold for UTXO consolidation viability"
+    },
+    {
+      "id": "dust_attack_persistence",
+      "question": "Are dust outputs (very small UTXOs) structural attacks on the full node ecosystem, or market artifacts of fee miscalibration?",
+      "resolution_mechanism": "Analysis of dust UTXO creation rates before and after fee-bumping wallets; correlation with transaction volume; measurement of deliberate vs accidental dust creation.",
+      "impact": "If structural attacks: suppression mechanism is adversarial (requires active defense). If fee artifacts: suppression mechanism is temporary (resolves with better fee markets). Changes classification from snare to more temporary extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether dust outputs are attacks or market artifacts"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The UTXO (Unspent Transaction Output) set explosion in Bitcoin and related blockchain systems creates a structural tension between decentralization (all nodes maintaining full state) and scalability (managing ever-growing transaction history). As transaction volume increases and users create many small outputs, the UTXO set \u2014 the set of all unspent outputs \u2014 grows without bound, increasing memory, I/O, and computational requirements for full node operation. This constraint exhibits classic Tangled Rope characteristics: genuine coordination function (decentralized consensus verification) combined with asymmetric extraction (those who can afford full nodes capture value from those who cannot). The constraint is neither pure extraction (snare) nor pure coordination (rope) \u2014 it is a hybrid mechanism where coordination requirements are leveraged to enforce an extractive barrier to entry.",
+    "key_agents": [
+      "Solo Miners: Powerless/trapped (institutional/arbitrage, but trapped exit at blockchain level) \u2014 cannot economically maintain UTXO index; forced into pool membership or custodial exchanges",
+      "Light Client Users: Moderate/constrained (moderate/constrained) \u2014 can participate but must trust external infrastructure; face bandwidth and synchronization delays",
+      "Exchange Operators: Institutional/arbitrage (institutional/arbitrage) \u2014 benefit from full-node requirements; operate efficient infrastructure; control custody",
+      "Mining Pool Operators: Organized/constrained (organized/constrained) \u2014 provide coordination (variance pooling) while extracting fees; exacerbate UTXO growth through output fragmentation",
+      "Layer-2 Protocol Developers: Organized/constrained (organized/constrained) \u2014 build alternative pathways (Lightning, rollups); perceive constraint as temporary with sunset logic",
+      "Consensus Rule Enforcement: Institutional/arbitrage (institutional/arbitrage) \u2014 maintains 'full node must carry all UTXOs' norm through institutional inertia despite technical feasibility of pruning",
+      "Analytical Observer: Analytical/analytical (analytical/analytical) \u2014 risks naturalizing contingent design (UTXO model) as immutable law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The UTXO set burden creates barriers to independent full node operation. Entry cost (hardware, bandwidth, disk I/O) excludes solo miners and forces retail participation through custodial or light-client models. However, extractiveness is not 0.75+ (snare threshold) because: (1) Layer-2 alternatives genuinely reduce reliance on base-layer UTXO set, (2) hardware improvements tangibly lower absolute costs over time, (3) the mechanism incentivizes batching and consolidation, which partially self-regulate UTXO growth. The constraint is extractive but not purely so. Suppression (0.72): High. Suppression arises from protocol-level irreversibility (UTXO set growth is structurally inherent to immutable ledgers) combined with institutional lock-in (hard fork to add pruning faces coordination failure risk). Exit costs are very high: solo miners cannot cheaply switch to alternative blockchains (they have sunk mining capital in Bitcoin-specific hardware). Theater ratio (0.35): Low-moderate. The constraint is substantially functional \u2014 UTXO set indexing is genuinely necessary for transaction validation. Theater increases slightly over time as the 'decentralization through full nodes' ideal persists despite empirical concentration of full nodes among institutions.",
+    "directionality_logic": "Directionality values derive from agent structural position relative to UTXO burden. Solo miners (powerless/trapped) experience maximum d \u2248 0.95, yielding f(d) \u2248 1.42 \u2014 they bear full extractive force and cannot exit. Exchange operators (institutional/arbitrage) experience minimal d \u2248 0.05, yielding f(d) \u2248 -0.12 \u2014 they benefit from the barrier and can arbitrage alternatives (custodial, sidechains, competitors). Light client users (moderate/constrained) experience moderate d \u2248 0.65, yielding f(d) \u2248 1.00 \u2014 they bear cost but have exit options (hardware upgrade, Layer-2 services). Layer-2 developers (organized/constrained) experience lower d \u2248 0.40 due to their ability to bypass the constraint entirely through protocol design. The beneficiary-victim split is clear: those who control infrastructure (institutional power + arbitrage exit) benefit; those without capital or technical resources (powerless + trapped exit) bear costs.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. The solo miner sees a snare (pure extraction, no escape). The light client sees tangled rope (some coordination benefit through SPV, but constrained by trust and latency). The exchange operator sees rope (genuine coordination, net benefit from ecosystem). The Layer-2 developer sees scaffold (temporary constraint being actively solved by protocol alternatives). The consensus rule enforcer sees piton (the 'full node' ideal persists through norm despite practical abandonment). The analytical observer risks seeing mountain (UTXO growth as inherent to immutable ledgers) but the structural data reveals this as a false summit \u2014 the constraint is a *design choice* (UTXO model vs account model, no built-in pruning) that could be altered by protocol amendment. The perspectival gap reveals that 'UTXO set explosion' is not a single constraint but a bundle of design decisions that different stakeholders experience with radically different extraction profiles.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint avoids false labeling by acknowledging that genuine coordination (Byzantine-robust verification through full nodes) is real AND that extraction (barriers to entry from hardware requirements) is real. The tangled_rope classification captures this hybrid: coordination function (validating transactions requires distributed state) exists alongside asymmetric extraction (only well-resourced actors can participate fully). The false mountain in the analytical perspective demonstrates precisely why cross-position analysis matters \u2014 a single observer might conclude UTXO growth is an immutable property of distributed systems, missing that the Bitcoin design could have used account models (like Ethereum), pruning windows (like some alternative chains), or dynamic state commitment schemes. The scaffold perspective from Layer-2 developers is crucial for mandatrophy resolution: it shows that the constraint is *temporary* rather than fundamental. If Layer-2 systems successfully absorb transaction velocity while batching settlements, the UTXO set can stabilize despite continued user growth. This temporal distinction separates snare (permanent extraction) from tangled_rope (extractive coordination that can be sunset through alternative design)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "blockchain_full_node_centralization",
+      "mining_pool_concentration",
+      "layer2_custody_consolidation"
+    ],
+    "dual_formulation_note": "UTXO set explosion is downstream of Bitcoin's core design choice (UTXO model + immutable ledger). It is upstream of full node centralization (UTXO burden forces nodes to consolidate in data centers) and mining pool concentration (solo mining becomes uneconomical). The upstream constraints (design choices) have their own extractiveness reflecting how immutable those choices are; downstream constraints (centralization outcomes) have their own extractiveness reflecting how reversible consolidation is through market or protocol changes. This story focuses on the UTXO set constraint itself as the causal link between design and centralization."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

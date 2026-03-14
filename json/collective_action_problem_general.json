@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "collective_action_problem_general",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cap"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.42,
+    "theater_ratio": 0.38,
+    "claimed_type": "rope",
+    "human_readable": "Collective Action Problem: Coordination Failure and Free-Rider Extraction",
+    "topic_domain": "economics/political_economy/game_theory",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "free_riders",
+      "defectors"
+    ],
+    "victims": [],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Individual Contributor",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL CONTRIBUTOR (ROPE) \u2014 Sees the constraint as a coordination problem where personal defection is individually rational but collectively disastrous. Constrained by cost of contribution and fear of free-riding by others. Experiences the constraint as coordination overhead necessary to maintain collective good, not as extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Organized Coalition",
+      "comment": "PERSPECTIVE 2: ORGANIZED COALITION (ROPE) \u2014 Organized groups with capacity to enforce norms see collective action problems as solvable through coordination mechanisms: monitoring, reputation systems, graduated sanctions. Mobilized agents experience the constraint as tractable coordination, not extraction. Mobile exit options reflect ability to relocate or reformulate coalition boundaries."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Local Community Member",
+      "comment": "PERSPECTIVE 3: LOCAL COMMUNITY MEMBER (SNARE) \u2014 In small-scale commons (local water management, neighborhood maintenance), defection is individually rational and observationally apparent. Trapped members experience the constraint as pure extraction: they invest in collective maintenance while others free-ride, with no exit option (relocation is costly, collective is mandatory). Experiences suppression through social obligation and geographic dependence."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Institutional Coordinator",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL COORDINATOR (TANGLED ROPE) \u2014 Government agencies, NGOs, or platform operators that intermediate collective action have genuine coordination function (solving the problem) but also extract rents through enforcer discretion, fee collection, and agenda-setting. Arbitrage options enable switching between coordination mechanisms. Experiences the constraint as both functional and extractive."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Degraded Enforcement System",
+      "comment": "PERSPECTIVE 5: DEGRADED ENFORCEMENT SYSTEM (PITON) \u2014 Legacy institutional enforcement (state mandates, union membership requirements, corporate compliance departments) persists through inertia long after informal coordination mechanisms would be more efficient. Theater ratio (0.52 at scale level) reflects performative compliance, monitoring theater, and procedural rituals. Enforcement system sees itself as degraded \u2014 maintained because alternatives haven't fully replaced it."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (ROPE) \u2014 From civilizational scope, collective action problems are fundamental coordination challenges with well-understood solution architectures: repetition, reputation, graduated sanctions, polycentric institutions (Ostrom). Classified as rope because the constraint is solvable through coordination mechanisms with minimal coercion. The problem is real but not inherently extractive \u2014 extraction emerges only when coordination breaks down or intermediaries capture the mechanism."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "defection_threshold_ambiguity",
+      "question": "Does the apparent individual rationality of defection reflect true material incentives or equilibrium selection failure?",
+      "resolution_mechanism": "Empirical measurement of payoff matrices in field settings; comparison of stated preferences vs revealed behavior when monitoring is transparent; analysis of trust dynamics in repeated games with known interaction futures",
+      "impact": "If true material incentive: defection is rational and coordination requires enforcement. If equilibrium selection failure: reframing or cheap signals can shift to cooperative equilibrium without enforcement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether defection is materially rational or result of equilibrium selection"
+    },
+    {
+      "id": "group_size_threshold_extraction",
+      "question": "At what group size does the constraint transition from pure coordination (Rope) to mixed extraction (Tangled Rope) to pure extraction (Snare)?",
+      "resolution_mechanism": "Cross-scale comparative analysis: small-group commons (< 50 members), medium associations (50-1000), large institutional contexts (> 1000); measure enforcement overhead and free-rider detection costs as function of group size",
+      "impact": "If threshold \u2264 100: large-scale collective action inherently contains extraction dimension. If threshold > 500: extraction is contingent on institutional design choice, not size.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Group size threshold for transition from coordination to extraction"
+    },
+    {
+      "id": "institutional_intermediation_necessity",
+      "question": "Is institutional intermediation (formal enforcement, fee collection, agenda-setting) necessary for solving large-scale collective action or does it primarily create rents?",
+      "resolution_mechanism": "Comparison of decentralized coordination mechanisms (social media networks, open-source communities, Wikipedia) with formally mediated ones (government agencies, NGOs, regulated industries) on efficiency, equity, and sustainability metrics",
+      "impact": "If necessary: intermediation is functional overhead, tangled_rope classification justified. If contingent: intermediation is rent-seeking, reclassify as snare at large scale.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether institutional intermediation is necessary or rent-seeking"
+    },
+    {
+      "id": "technology_disruption_trajectory",
+      "question": "Are monitoring and enforcement costs declining asymptotically toward zero (making large-scale cooperation possible) or bottlenecking at irreducible costs (making enforcement intermediaries permanent)?",
+      "resolution_mechanism": "Time series analysis of coordination cost reduction: communications technology (email \u2192 Slack \u2192 AI-mediated), verification (manual audits \u2192 automated monitoring \u2192 cryptographic proof), enforcement (legal systems \u2192 reputation algorithms \u2192 smart contracts)",
+      "impact": "If declining: future expects rope classification at large scale (pure coordination without extraction). If bottlenecking: extraction mechanism remains permanent feature.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Trajectory of monitoring and enforcement cost reduction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "Collective action problems represent a fundamental tension between individual rationality and collective welfare. The constraint arises whenever group members face incentives to free-ride on others' contributions while benefiting from the collective good. This is distinct from pure extraction or pure coordination \u2014 it contains elements of both, depending on the observer's structural position and the institutional context. The constraint manifests identically across domains (environmental commons, public goods funding, labor unions, open-source projects, public health cooperation) but exhibits radically different classifications from different perspectives. The analytical universalization as 'rope' reflects that collective action problems are structurally solvable through coordination mechanisms; however, the empirical manifestations in specific contexts often degrade toward snare or tangled_rope as group size increases, institutional intermediaries capture rents, or enforcement mechanisms calcify into theater.",
+    "key_agents": [
+      "Individual Contributors: Powerless/constrained participants bearing costs of contribution and uncertainty of others' compliance",
+      "Free-Riders: Beneficiaries of collective goods without bearing proportionate costs; captured by institutional coordination mechanisms",
+      "Organized Coalitions: Mobile agents with capacity to enforce norms and coordinate; experience constraint as tractable problem",
+      "Local Communities: Trapped members of geographically or socially bounded commons with mandatory participation; experience highest suppression",
+      "Institutional Intermediaries: Gatekeepers of coordination mechanisms (governments, NGOs, platforms) extracting rents through enforcer discretion and fee collection",
+      "Analytical Observer: Universal perspective recognizing coordination solutions while noting that institutional capture transforms pure coordination into hybrid extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.35): Moderate. The free-rider problem itself is not primarily extractive\u2014it is a coordination failure where individual rationality diverges from collective welfare. However, extractiveness emerges when: (1) monitoring costs create enforcer overhead, (2) institutional intermediaries capture rent from providing coordination services, (3) power asymmetries allow some agents to free-ride while others are forced to contribute. At pure coordination level (unmediated small groups), extractiveness approaches 0.10. At institutionally mediated scale, it reaches 0.45+. Base value 0.35 reflects average across institutional contexts. Suppression (0.42): Moderate-high. The constraint operates through social obligation, reputational pressure, mandatory participation rules, and in some contexts legal enforcement. Suppression is not absolute\u2014exit options exist (relocation, group dissolution, defection followed by sanctions) but are costly. Theater ratio (0.38): Moderate. Institutional enforcement systems (government agencies, compliance departments, NGO monitoring) dedicate significant resources to performative activity: audits, reporting, certification, public accountability theater. Theater increases with scale and bureaucratization; lowest in small repeated-game contexts where reputation mechanisms suffice.",
+    "directionality_logic": "Directionality (d) in collective action problems is determined by each agent's structural relationship to the free-riding temptation and enforcement mechanism. Free-riders (beneficiaries with arbitrage options) derive d \u2248 0.15\u2014they experience low effective extraction because their exit option (non-compliance followed by relocation or reformation of the group) is viable. Contributors (powerless/trapped) derive d \u2248 0.85\u2014they bear maximum extraction because they must contribute regardless of others' defection. Organized groups with enforcement capacity derive d \u2248 0.40\u2014mixed position as both coordinators and potential exploiters of the mechanism. The analytical observer (d \u2248 0.72) sees the structure clearly but cannot resolve the empirical ambiguity about which institutional arrangements are solving coordination vs capturing rents.",
+    "perspectival_gap": "The constraint exhibits stark perspectival divergence. Individual contributors see extraction (Snare at local scale); organized coalitions see coordination (Rope). Institutional intermediaries see both functions simultaneously (Tangled Rope)\u2014they genuinely solve the problem AND extract rents. The analytical observer sees a fundamental coordination challenge with solution architectures (Rope at civilizational scale), but empirical instantiations often degrade toward snare or piton depending on institutional design choices and scale. The perspectival gap reveals that collective action problems are not inherently extractive\u2014extraction is a contingent feature of how coordination mechanisms are designed and captured. Pure peer-to-peer coordination (small groups, repetition, transparent payoffs) stays Rope. Institutional intermediation (large scale, delegated enforcement, opaque fees) tends toward Tangled Rope or Snare.",
+    "mandatrophy_analysis": "The mandatrophy resolution for collective action problems centers on disambiguating coordination function from extraction mechanism. The constraint is genuinely solvable as pure coordination (Rope): Ostrom's work on polycentric institutions, Hirschman's exit-voice framework, and field experiments on graduated sanctions all demonstrate coordination architectures that minimize extraction overhead. However, empirical instantiations frequently degrade toward extraction because: (1) scale defeats peer-to-peer monitoring, (2) institutional intermediaries develop vested interests in enforcement theater, (3) power asymmetries allow privileged actors to free-ride or enforce selectively, (4) information asymmetries about true payoff structures sustain false equilibria. The mandatrophy is resolved not by declaring a single type but by clarifying: at what scale and under what institutional design is this constraint pure coordination (Rope) vs mixed (Tangled Rope) vs extraction (Snare)? The analytical observer's universal rope classification is correct for the abstract problem but insufficient for empirical diagnosis\u2014the real constraint is institutional design choice, not the problem itself."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "tragedy_of_commons",
+      "prisoner_dilemma_iterated",
+      "public_goods_contribution",
+      "regulatory_capture_commons"
+    ],
+    "dual_formulation_note": "Collective action problem is a meta-constraint that instantiates differently across specific domains (commons management, public goods, labor organization). This story models the general structural pattern; domain-specific instantiations (tragedy_of_commons, public_goods_contribution) have their own extractiveness values and decompose this general pattern into context-specific mechanisms. The general problem enables free-riding extraction only when institutional design permits it\u2014alternative architectures maintain pure coordination."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

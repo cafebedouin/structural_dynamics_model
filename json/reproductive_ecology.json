@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "reproductive_ecology",
+    "version": "1.0",
+    "generated_date": "2026-02-27",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "repro_ecol"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Reproductive Ecology: Life History Trade-offs and Resource Allocation",
+    "topic_domain": "evolutionary_biology/ecology",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Organism's Energy Budget",
+      "comment": "PERSPECTIVE 1: ORGANISM'S ENERGY BUDGET (MOUNTAIN) \u2014 The organism is constrained by fundamental thermodynamic limits on energy allocation. Every unit invested in reproduction is unavailable for somatic growth or maintenance. This trade-off is immutable: no organism can simultaneously maximize reproduction, growth, and longevity given finite energy uptake. The constraint emerges from basic bioenergetics and applies universally across taxa."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "label": "The Population Under Selection",
+      "comment": "PERSPECTIVE 2: POPULATION UNDER SELECTION (MOUNTAIN) \u2014 From a population perspective, life history evolution is constrained by the cost of reproduction. Increased reproductive effort reduces survival or growth, directly reducing future reproductive potential. This trade-off cannot be escaped \u2014 it is a structural consequence of finite resources and the mathematics of population growth. Selection cannot eliminate the trade-off; it can only optimize allocation across it."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Biological Necessity)",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 The reproductive ecology constraint is a fundamental law of biology, not a contingent institutional arrangement. It follows from the second law of thermodynamics, the finiteness of resources, and the mathematics of life history evolution. The constraint exhibits zero degrees of freedom: no evolutionary trajectory, no environmental condition, no technological intervention can eliminate the core trade-off between reproduction and other fitness components. This is a natural law of biology."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "phenotypic_plasticity_scope",
+      "question": "Do organisms with high phenotypic plasticity actually escape the fundamental trade-off, or do they merely shift its expression?",
+      "resolution_mechanism": "Experimental analysis of plastic life history responses under resource limitation; measurement of actual energy allocation across conditions",
+      "impact": "If truly escaped: classification should be Rope (coordination with environment). If shifted: classification remains Mountain (trade-off persists, only its form changes).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether phenotypic plasticity constitutes escape from reproductive ecology trade-offs"
+    },
+    {
+      "id": "bet_hedging_universality",
+      "question": "Do bet-hedging strategies (variable reproductive effort across time) represent a genuine alternative strategy or merely a context-dependent solution to uncertainty that still obeys the fundamental trade-off?",
+      "resolution_mechanism": "Long-term demographic analysis of bet-hedging populations; comparison of lifetime reproductive success against constant-allocation strategies across environmental regimes",
+      "impact": "If genuine alternative: some organisms may achieve higher lifetime fitness by violating apparent trade-offs through temporal variation. If context-dependent: the trade-off holds at the lifetime level even if violated in any single season.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether bet-hedging strategies escape or reframe the reproductive ecology constraint"
+    },
+    {
+      "id": "metabolic_level_universality",
+      "question": "Does metabolic level (resting metabolic rate) itself represent a fundamental constraint that determines life history trajectory, or is it itself a life history trait subject to the same allocation constraints?",
+      "resolution_mechanism": "Comparative analysis of metabolic rates and life history variation across clades; experimental manipulation of metabolic demand and measurement of life history evolution",
+      "impact": "If metabolic rate is fundamental: it creates a meta-constraint that some organisms cannot escape (affects classification interpretability). If it is itself a trait: the trade-off operates at a deeper level but the meta-constraint dissolves.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether metabolic rate is a fundamental constraint or a derived life history trait"
+    },
+    {
+      "id": "technological_transcendence",
+      "question": "Could human technological intervention \u2014 environmental control, energy subsidies, genetic modification \u2014 allow organisms to escape the fundamental reproductive ecology trade-off?",
+      "resolution_mechanism": "Analysis of domesticated and agriculturally managed organisms; measurement of reproductive traits under unlimited resource conditions; synthetic biology experiments testing resource allocation under artificial energy abundance",
+      "impact": "If transcendence possible: the constraint is contingent on energy scarcity (demotes to Rope or Tangled Rope). If impossible: the constraint remains Mountain even under artificial conditions (reflects fundamental biological organization).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether the reproductive ecology constraint can be technologically transcended"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.18
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 2000
+  },
+  "commentary": {
+    "narrative_context": "Reproductive ecology describes the set of constraints organisms face when allocating finite resources among reproduction, growth, and survival. The core constraint is that every unit of energy or material invested in current reproduction cannot be allocated to somatic maintenance, future growth, or future reproductive capacity. This constraint emerges from fundamental bioenergetic principles and the mathematics of resource allocation under scarcity. It is universal across all sexually reproducing organisms and has remained invariant since the origin of multicellular life. The constraint is not enforced by any external agent; it arises from the physical and thermodynamic limits of biological systems. No organism has ever evolved the capacity to exceed its energy budget or to allocate the same resource to multiple competing demands simultaneously. The constraint is immutable: it cannot be eliminated by natural selection, technological intervention, or environmental change. It can only be navigated \u2014 evolution tunes the allocation ratio based on ecological context, but the underlying trade-off persists.",
+    "key_agents": [
+      "Individual Organism: Powerless structural agent (trapped by bioenergetic limits) \u2014 must allocate finite energy across competing demands with no escape mechanism",
+      "Population Under Selection: Moderate structural agent (constrained by demographic mathematics) \u2014 evolution optimizes life history allocation but cannot eliminate the trade-off",
+      "Evolutionary Lineage: Analytical observer (civilizational scope) \u2014 sees the constraint as a fundamental law of biology that applies universally and unchangeably"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Very low. The reproductive ecology constraint does not extract value from any agent to benefit another \u2014 it is a fundamental limit on resource allocation, not a mechanism for asymmetric gain. The value is above zero only because the constraint imposes costs (energy spent on reproduction cannot be spent on growth), and these costs are 'extracted' by the constraint itself (the thermodynamic limit) rather than by any external actor. Base extraction is low because there is no parasitic agent receiving the extracted value. Suppression (0.03): Minimal. The constraint operates through transparent physical limits, not through coercion or obscured alternatives. Organisms cannot exit the constraint because no alternatives exist, but this is not suppression in the sense of blocked information or artificially restricted options \u2014 it is the absence of alternatives as a structural fact. Theater ratio (0.15): Minimal. The constraint is functionally transparent \u2014 life history evolution responds directly to the trade-off with no performative component. Fitness consequences of allocation decisions are immediately observable (in reproduction, growth, or survival), not masked by ritual or institutional theater.",
+    "perspectival_gap": "All three perspectives converge on the Mountain classification. The organism experiences the constraint as immutable resource limits. The population experiences it as inescapable selection pressure. The analytical observer sees it as a natural law. There is no perspectival gap here \u2014 the constraint is invariant across observation positions. This is the defining property of a true Mountain: it appears the same from all positions because it is genuinely universal and unchanging.",
+    "directionality_logic": "No directionality computation is needed for this constraint because there are no beneficiaries or victims. The reproductive ecology constraint does not involve extraction from one agent to benefit another. It is a fundamental limitation on all agents equally, albeit with different consequences depending on ecological context. The constraint is not enforced by power; it is enforced by physics and thermodynamics. Every organism is equally 'constrained' \u2014 there is no asymmetry of position that would generate a directionality value. This absence of directionality is itself diagnostic of a true Mountain.",
+    "mandatrophy_analysis": "This constraint presents no mandatrophy because it is not candidates for misclassification. It does not exhibit coordination function that might be mistaken for extraction (no agent benefits disproportionately). It does not involve enforcement that might be mistaken for natural law (it is genuinely natural, not contingently enforced). The constraint is stably classified as Mountain from all perspectives because it is a natural law, not a contingent institutional arrangement. The analytical observer is not at risk of naturalizing a contingent mechanism \u2014 the mechanism IS natural."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "sexual_selection_dynamics",
+      "parental_care_evolution",
+      "senescence_evolution"
+    ]
+  }
+}

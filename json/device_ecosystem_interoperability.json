@@ -1,0 +1,181 @@
+{
+  "header": {
+    "constraint_id": "device_ecosystem_interoperability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "deveco"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Device Ecosystem Interoperability Constraint",
+    "topic_domain": "technology/standards/economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ecosystem_platform_owner",
+      "proprietary_software_vendors"
+    ],
+    "victims": [
+      "consumer_choice_diversity",
+      "independent_developers",
+      "cross_ecosystem_users"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Locked-In Consumer",
+      "comment": "PERSPECTIVE 1: LOCKED-IN CONSUMER (SNARE) \u2014 Once invested in a proprietary ecosystem (Apple, Google, Samsung), switching costs are prohibitive: purchased apps, device collections, account histories, payment methods, and social network are ecosystem-specific. Cannot migrate without losing digital property. Maximum extraction experienced through forced upgrades and forced purchasing within the walled garden."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Independent Developer",
+      "comment": "PERSPECTIVE 2: INDEPENDENT DEVELOPER (TANGLED ROPE) \u2014 Must certify with platform gatekeepers (App Store approval, Google Play review) to reach users. This provides coordination function: standardized APIs enable rapid deployment. But the gatekeeping extracts rent through mandatory revenue sharing, approval delays, and arbitrary rule changes. Constrained by career dependence on platform ecosystems and the user reach they provide."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Ecosystem Platform Owner",
+      "comment": "PERSPECTIVE 3: ECOSYSTEM PLATFORM OWNER (ROPE) \u2014 Experiences the constraint as pure coordination: unified hardware/software stacks enable seamless user experience, feature parity, and security guarantees. Network effects reward their control of the stack. Can exit anytime through licensing or opening APIs without meaningful loss. Net beneficiary with maximal exit capacity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Standards Body Coalition",
+      "comment": "PERSPECTIVE 4: STANDARDS BODY COALITION (TANGLED ROPE) \u2014 Organized actors (USB-IF, Open Connectivity Foundation, IETF) have created interoperable standards (USB-C, Bluetooth, Matter protocol) that reduce lock-in but operate within constraints set by ecosystem owners. These actors both coordinate (enable cross-device communication) and extract (standardization processes slow innovation and favor incumbents). Organized power gives them constrained agency to push for open standards."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Apparatus",
+      "comment": "PERSPECTIVE 5: REGULATORY APPARATUS (PITON) \u2014 Governments (EU Digital Markets Act, right-to-repair mandates) have attempted to mandate interoperability, but enforcement is weak and compliance theater high. Companies publish compatibility claims while maintaining hidden incompatibilities or deprecating open standards. The regulatory constraint persists through mandatory compliance documents and audit rituals that lack teeth. Theater ratio high because regulatory compliance is largely performative rather than functionally enabling interoperability."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational view, device interoperability is a genuine coordination problem: unified ecosystems deliver real benefits (seamless UX, integrated security, feature parity). But the current solution embeds asymmetric extraction: platform owners capture the coordination benefits while locking in consumers and dependent developers. Alternative architectures (modular open standards, API-first design) could preserve coordination while reducing extraction, but incumbents resist because extraction is their primary revenue source relative to marginal coordination value."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "network_effects_vs_extraction",
+      "question": "How much of the observed lock-in is due to genuine network effects (users value having friends/colleagues on the same platform) versus artificial lock-in created by interoperability barriers?",
+      "resolution_mechanism": "Cross-ecosystem user behavior analysis: track switching rates when alternative platforms offer feature parity; measure network effect magnitude through user churn when social reach is controlled for; compare to eras with higher interoperability (e.g., pre-smartphone era with multiple competing messaging standards)",
+      "impact": "If network effects >> artificial barriers: constraint is more Rope than Snare (users choose lock-in rationally). If artificial barriers >> network effects: constraint is Snare (users trapped despite lower genuine value from network effects).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative magnitude of network effects versus artificial interoperability barriers"
+    },
+    {
+      "id": "openness_performance_tradeoff",
+      "question": "Does genuine technical tradeoff exist between tightly integrated proprietary ecosystems and interoperable open ecosystems in user experience quality?",
+      "resolution_mechanism": "Comparative UX metrics between proprietary (iOS, watchOS integration) and open (Android ecosystem) implementations; performance benchmarks for unified stacks versus layered standards; user satisfaction surveys controlling for network effects and installed base switching costs",
+      "impact": "If strong tradeoff exists: tight integration is functionally necessary, not just extractive theater; extractiveness should decrease to 0.35-0.40 (Rope/Tangled Rope boundary). If tradeoff is marginal: tight integration is primarily extractive, not coordinating; extractiveness should increase to 0.65-0.70 (strong Snare tendency).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether performance/UX genuinely requires proprietary integration or whether tradeoff is overstated"
+    },
+    {
+      "id": "regulatory_mandate_enforceability",
+      "question": "Can EU-style interoperability mandates (Digital Markets Act, Right to Repair) be enforced with sufficient force to actually reduce consumer lock-in, or do they remain performative compliance theater?",
+      "resolution_mechanism": "Longitudinal tracking of enforcement action effectiveness; measurement of actual cross-ecosystem migration rates post-regulation; audit of manufacturer compliance claims against actual interoperability functionality; historical comparison to other technical standard mandates (USB standardization, network neutrality)",
+      "impact": "If enforceable: regulatory perspective becomes Scaffold with a real sunset (interoperability mandates gradually reduce extraction). If theater: regulation remains Piton (enforced compliance documents without functional change). Constrains mandatrophy resolution pathway.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether regulatory interoperability mandates can be enforced or remain theater"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Device ecosystem interoperability represents a structural tension between the genuine coordination benefits of unified hardware/software stacks and the extractive lock-in created by preventing cross-ecosystem communication. Apple's closed ecosystem, Google's Android gatekeeping, and Samsung's proprietary layers all deliver real user experience benefits through tight integration. But these same mechanisms prevent consumers from mixing devices across ecosystems (an iPhone user cannot seamlessly share data with Android devices), trap developers into platform-specific certification processes, and lock consumers into upgrade cycles within a single ecosystem. The constraint exhibits genuine hybrid characteristics: platform owners provide coordination infrastructure (standardized APIs, security guarantees, feature parity) while simultaneously extracting rent through lock-in mechanisms. Extractiveness has risen from 0.35 to 0.58 over the interval as ecosystem owners have actively reduced interoperability (deprecating open APIs, fragmenting standards like Bluetooth implementations, monetizing formerly free cross-platform services). Theater ratio has risen from 0.25 to 0.48 as regulatory pressure (EU Digital Markets Act, right-to-repair mandates) has forced compliance theater without functional change.",
+    "key_agents": [
+      "Locked-in Consumers: Primary victims (powerless/trapped) \u2014 trapped in proprietary ecosystems with prohibitive switching costs and forced upgrade cycles",
+      "Independent Developers: Secondary victims (moderate/constrained) \u2014 must navigate platform gatekeeping, approval delays, and revenue extraction to reach users",
+      "Ecosystem Platform Owners: Primary beneficiaries (institutional/arbitrage) \u2014 capture lock-in rents and control the coordination infrastructure",
+      "Proprietary Software Vendors: Secondary beneficiaries (organized/mobile) \u2014 benefit from platform gatekeeping that reduces competition and enables price discrimination",
+      "Standards Body Coalition: Intermediate (organized/constrained) \u2014 have created interoperable standards but operate within constraints set by ecosystem owners; neither pure beneficiary nor victim",
+      "Regulatory Apparatus: Enforcer (institutional/arbitrage) \u2014 attempts to mandate interoperability but enforcement is weak; compliance largely theater",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees that genuine coordination exists alongside genuine extraction; mandatrophy requires distinguishing which portion of the unified stack is coordinating versus which portion is extractive"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. Platform owners extract substantial rent through lock-in (consumers cannot migrate without losing app purchases, account data, payment methods; developers cannot reach users without platform approval). The extraction is not maximal (0.80+) because genuine network effects exist \u2014 users do value having friends and colleagues on the same platform \u2014 and consumers could, in principle, switch at the cost of losing legacy data. The measurement shows a rising trend (0.35\u21920.58) reflecting ecosystem owners actively reducing interoperability through API deprecation, hidden incompatibilities, and fragmenting of standards like Bluetooth. Suppression (0.65): High. Consumers face substantial barriers to exiting lock-in: switching costs (digital property loss, social network disruption), technical friction (incompatible device standards), and psychological lock-in (years of ecosystem investment). Developers face approval delays, opaque review criteria, and rule changes that risk their app survival. Theater ratio (0.48): Moderate and rising. The constraint involves genuine coordination infrastructure (APIs, standards, integration) but increasingly supplemented by performative compliance theater in response to regulation. The rise from 0.25 to 0.48 reflects EU mandates (Digital Markets Act) forcing companies to publish interoperability commitments while actual functionality remains restricted through technical barriers and compliance theater.",
+    "perspectival_gap": "The locked-in consumer experiences pure Snare (maximum extraction, high suppression, no exit). The ecosystem owner experiences pure Rope (coordination infrastructure with arbitrage exit). The independent developer occupies the middle as Tangled Rope \u2014 the platform provides genuine coordination (APIs, user reach) alongside extraction (approval delays, revenue sharing, rule changes). The standards body coalition is also Tangled Rope but with organized power to push for open standards. The regulatory apparatus appears as Piton \u2014 governments have mandated interoperability compliance but enforcement is weak, creating theater compliance without functional change. The analytical observer must avoid a false mountain (naturalizing the unified stack as inherently necessary) and instead recognize that the unified stack provides genuine benefits while embedding unnecessary extraction through deliberate interoperability barriers.",
+    "directionality_logic": "Directionality varies sharply across agent positions. Platform owners are pure beneficiaries with arbitrage exit (d \u2248 0.05) \u2014 they control the constraint and can change it without meaningful loss. Locked-in consumers are pure victims with trapped exit (d \u2248 0.95) \u2014 they bear maximum extraction from a position of helplessness. Independent developers are partial victims with constrained exit (d \u2248 0.70) \u2014 they can develop for multiple platforms but incur approval and revenue-sharing costs for each. Standards bodies have moderate institutional power with constrained exit (d \u2248 0.50) \u2014 they can propose open standards but face resistance from ecosystem owners who benefit from interoperability barriers. This spread in d values explains the perspectival gap: the beneficiary sees rope (low d \u2192 negative \u03c7) while the victim sees snare (high d \u2192 high \u03c7). Regulatory actors have institutional power with arbitrage exit (d \u2248 0.15) but their enforcement capacity is weak, explaining the piton classification \u2014 they appear to regulate but lack teeth.",
+    "mandatrophy_analysis": "Mandatrophy resolution: The constraint is legitimately Tangled Rope (from the analytical perspective) because the unified ecosystem genuinely coordinates device features (seamless integration, synchronized services, unified security model) while simultaneously extracting through lock-in (prevented cross-ecosystem communication, app ecosystem gatekeeping, forced upgrade cycles). The coordination function is real; the extraction function is real. The mandatrophy is resolved by disaggregating: what portion of the tight integration is functionally necessary for coordination, and what portion is deliberately designed to prevent exit? The rising extractiveness (0.35\u21920.58) and rising theater (0.25\u21920.48) suggest that ecosystem owners are actively shifting the balance from coordination toward extraction by deprecating open standards (Bluetooth fragmentation) and creating compliance theater in response to regulation. The constraint is not a false snare (mislabeled pure extraction) because genuine coordination exists. It is not a false rope (mislabeled pure coordination) because deliberate interoperability barriers extract rent beyond what coordination logic requires. Tangled Rope correctly identifies both functions and requires active enforcement (the platform gatekeeping that maintains lock-in)."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "app_store_gatekeeping",
+      "data_portability_friction",
+      "proprietary_charging_standards"
+    ],
+    "dual_formulation_note": "Device ecosystem interoperability is upstream of multiple more specific constraints: app store review processes, data migration barriers, and proprietary hardware standards (charging, wireless, mechanical) all implement the broader interoperability barrier. Each specific constraint has its own extractiveness value; the ecosystem interoperability story captures the structural pattern they all instantiate."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

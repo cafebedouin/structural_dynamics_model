@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "behavioral_commitment_mechanisms",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "behav_commit"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Behavioral Commitment Mechanisms as Coordination and Extraction",
+    "topic_domain": "behavioral_economics/social_psychology/organizational_behavior",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mechanism_designer",
+      "commitment_beneficiary"
+    ],
+    "victims": [
+      "committed_agent",
+      "alternative_preference_holders"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Committed Agent",
+      "comment": "PERSPECTIVE 1: THE COMMITTED AGENT (SNARE) \u2014 An agent whose future behavior has been locked in through mechanism design, sunk costs, or public commitment. Trapped by past decisions that constrain present options. Cannot exit the commitment without severe reputational, financial, or psychological cost. Experiences the mechanism as pure extraction \u2014 their autonomy is structured away."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Partially Aware Agent",
+      "comment": "PERSPECTIVE 2: THE PARTIALLY AWARE AGENT (TANGLED ROPE) \u2014 Aware that commitment mechanisms serve coordination functions (e.g., pledges enable group projects) but also recognizes extraction risk. Exit is costly but possible (reputation damage, financial penalty, relational friction). Sees both genuine coordination benefit AND asymmetric extraction layered on top. Mixed perception reflects mixed structural reality."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Mechanism Designer",
+      "comment": "PERSPECTIVE 3: THE MECHANISM DESIGNER (ROPE) \u2014 Organization, platform, or system designer that implements commitment mechanisms (precommitment apps, pledge systems, loyalty programs, employment contracts). Benefits from commitment structures that solve collective action problems. Experiences extraction flow toward them. High exit optionality \u2014 can redesign, pivot, or exit the market. Net beneficiary at low cost."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Countercommitment Coalition",
+      "comment": "PERSPECTIVE 4: THE COUNTERCOMMITMENT COALITION (SCAFFOLD) \u2014 Social movements, labor organizing, consumer protection advocates building alternative commitment structures (union contracts with exit clauses, consumer right-to-cancel laws, ethical AI design principles). Organized, constrained by institutional resistance, but have clear sunset logic: as alternatives mature (portable benefits, universal basic income, liquid labor markets), the extractive commitment mechanisms lose leverage. Temporary coordination function with declining suppression."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Traditional Loyalty Apparatus",
+      "comment": "PERSPECTIVE 5: THE TRADITIONAL LOYALTY APPARATUS (PITON) \u2014 Older commitment structures (lifetime employment contracts, brand loyalty through inertia, family obligation systems) persist through institutional inertia despite declining functional coordination benefit. Theater ratio high: much of the perceived commitment is performative maintenance of outdated norms. The mechanism 'works' but primarily through habit and ritual rather than through effective coordination or genuine incentive alignment."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law View",
+      "comment": "PERSPECTIVE 6: THE NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, all social coordination requires some commitment mechanism \u2014 precommitment is a fundamental feature of any society that must solve temporal consistency problems. Commitment mechanisms are inevitable structural features of human coordination, not contingent institutional arrangements. This perspective risks naturalizing what are actually designed, contestable mechanisms as immutable laws of social organization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_vs_extraction_boundary",
+      "question": "How much of the commitment mechanism's function is genuine coordination (solving collective action problems) vs extractive control (locking agents into terms that benefit designers)?",
+      "resolution_mechanism": "Counterfactual analysis: would the coordination problem be solved by alternative mechanisms with lower commitment intensity? Comparison of commitment depth required vs commitment depth actually imposed.",
+      "impact": "If primarily coordination: classify as Rope or Scaffold (depending on sunset presence). If primarily extraction: classify as Snare or Tangled Rope (depending on mixed presence). This distinction determines whether commitment mechanisms are socially necessary vs socially parasitic.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether commitment mechanisms primarily serve coordination or extraction"
+    },
+    {
+      "id": "internalization_vs_coercion_suppression",
+      "question": "Is the measured suppression (0.62) structural (external barriers to exit) or internalized (the agent believes exit is shameful, disloyal, or identity-breaking)?",
+      "resolution_mechanism": "Post-exit behavior tracking: if agents who exit the commitment mechanism continue to behave as though committed (guilt, identity disruption, self-imposed penalties), suppression is partially internalized. Exit trajectory analysis distinguishes structural from psychological barriers.",
+      "impact": "If internalized: effective suppression is higher than the structural measure suggests \u2014 agents carry the commitment mechanism with them after formal exit. If structural: suppression drops with exit. Distribution between internalized and structural suppression determines whether countercommitment work must focus on structural alternatives (Scaffold pathway) or identity/psychological liberation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized"
+    },
+    {
+      "id": "commitment_mechanism_temporal_asymmetry",
+      "question": "Do commitment mechanisms impose different constraints at different temporal horizons? (e.g., contract locks immediate behavior but not civilizational norms; conversely, social shame is weak at immediate but powerful at biographical/generational horizons)",
+      "resolution_mechanism": "Comparative temporal analysis: measure exit barriers at immediate vs biographical vs generational horizons. Some commitment mechanisms lose power if agent can endure short-term penalty; others only work if backed by civilizational norm structures.",
+      "impact": "If temporal asymmetry exists: the constraint's classification should vary by time_horizon perspective (which it does in the perspectival set). The mechanism's extractiveness may be high at biographical but low at immediate or vice versa. This affects whether Scaffold exits are viable \u2014 some alternatives work only for longer time horizons.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Temporal asymmetry in commitment mechanism strength"
+    },
+    {
+      "id": "designer_agency_vs_structural_inevitability",
+      "question": "Are commitment mechanisms designed choices by identifiable beneficiaries, or are they emergent features of coordination that arise regardless of designer intent?",
+      "resolution_mechanism": "Historical and comparative analysis: do societies without explicit commitment mechanism designers develop commitment constraints anyway? Are extractive features explicable as designer intent or as unintended consequences of coordination structures?",
+      "impact": "If designed choice: responsibility and accountability lie with designers; alternatives are possible through institutional redesign. If structural inevitability: commitment extraction may be unavoidable cost of coordination; policy focus shifts to mitigation rather than elimination.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether commitment mechanisms are designed or inevitable"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Behavioral commitment mechanisms are devices, systems, or social structures that lock agents into future courses of action by raising the cost of deviation. These range from contracts and pledges to reputation systems, sunk-cost deployments, and social norms. The constraint exhibits the full spectrum of DR types depending on the observer's structural position. A commitment mechanism is simultaneously a solution to coordination problems (enabling agents to commit to group projects), a source of extraction (locking agents into terms favorable to designers), a performative ritual whose power has degraded (piton), a target of organized resistance (scaffold), and arguably an inevitable feature of any society solving temporal consistency problems (mountain). The extractiveness trajectory (0.35 \u2192 0.58) reflects accumulation of extraction mechanisms onto what began as pure coordination structures. The theater ratio (0.45 \u2192 0.68) shows how commitment mechanisms increasingly rely on performative maintenance rather than functional necessity as alternatives mature.",
+    "key_agents": [
+      "Committed Agent: Primary victim (powerless/trapped) \u2014 locked into commitment structures by sunk costs, reputation, and psychological identity fusion; cannot exit without severe cost",
+      "Partially Aware Agent: Secondary victim (moderate/constrained) \u2014 aware of both coordination benefits and extraction risks; faces costly exit but can exercise it",
+      "Mechanism Designer: Primary beneficiary (institutional/arbitrage) \u2014 creates and maintains commitment structures; captures value from commitment-locked agents; high exit optionality",
+      "Commitment Beneficiary: Secondary beneficiary \u2014 party who benefits from target agent's committed behavior (employer, creditor, group coordinator)",
+      "Countercommitment Coalition: Organized resistance (organized/constrained) \u2014 labor unions, consumer advocates, alternative platform designers building exit pathways and lower-commitment alternatives",
+      "Traditional Loyalty Apparatus: Institutional inertia (institutional/arbitrage) \u2014 older commitment systems maintained through routine despite reduced functional necessity",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as inevitable laws of human coordination"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. Commitment mechanisms impose significant constraints on agents' behavioral freedom. The value reflects that extraction is real and substantial (behavioral locking, opportunity cost, psychological cost) but not maximally severe \u2014 some agents can exit at high but surmountable cost, and some commitment mechanisms do solve genuine coordination problems. The trajectory (0.35 \u2192 0.58) shows extraction accumulation: mechanisms initially introduced as coordination solutions have layers of extraction added as designers learn to exploit commitment logic. Suppression (0.62): High. Multiple barriers prevent exit: financial penalties, reputational damage, psychological identity fusion, institutional lock-in, and often legal constraints. Committed agents experience limited alternatives, though not total closure. Theater ratio (0.68): High and increasing. Much of commitment mechanism operation is performative: status signaling, ritual reaffirmation of identity, maintenance of credibility through public displays. The ratio's increase reflects that as technology enables lower-cost exit (gig economy, instant switching), traditional commitment mechanisms increasingly rely on theater (brand identity, social proof, aspirational identity) rather than structural lock-in to maintain force.",
+    "directionality_logic": "Each perspective derives its directionality from agent power, exit options, and beneficiary/victim status. The committed agent (powerless/trapped) experiences maximum extraction flow toward designers \u2014 high d value, high f(d). The mechanism designer (institutional/arbitrage) experiences low or negative extraction \u2014 they are the beneficiary, low d, negative f(d). The partially aware agent (moderate/constrained) occupies the middle ground \u2014 higher d than designers but lower than trapped agents. The countercommitment coalition (organized/constrained) has organized power that moderates experienced extraction despite constrained exit. Directionality is derived structurally from these position parameters; the beneficiary/victim declarations (mechanism_designer and commitment_beneficiary as beneficiaries; committed_agent and alternative_preference_holders as victims) anchor the pipeline to empirical relationships.",
+    "perspectival_gap": "This constraint demonstrates perspectival divergence from identical base metrics. The mechanism designer sees coordination (Rope) \u2014 they are solving temporal consistency problems and enabling collective action. The countercommitment coalition sees a temporary problem with clear sunset (Scaffold) \u2014 portable benefits, universal basic income, and liquid labor markets are creating alternative coordination pathways that do not require commitment locking. The traditional loyalty apparatus sees its own degraded ritual (Piton) \u2014 lifetime employment, brand loyalty, and family obligation systems persist through habit despite weakened functional necessity. The partially aware agent sees mixed coordination and extraction (Tangled Rope) \u2014 commitment mechanisms do enable some group projects but also lock them into unfavorable terms. The committed agent sees pure extraction (Snare) \u2014 their freedom has been structured away with minimal coordination benefit flowing to them. The civilizational observer risks seeing a natural law (Mountain) \u2014 'all coordination requires commitment' \u2014 but the structural data reveals this as naturalization of contestable design choices.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that commitment mechanisms are genuinely hybrid structures: they coordinate AND extract simultaneously. The Tangled Rope classification is not a compromise or average of Rope and Snare but a description of the actual structure \u2014 the mechanism solves a real coordination problem (agents need ways to commit to group projects) AND creates extraction opportunities (designers profit from locking agents in). Both elements are essential. The perspectival gap is not a sign of ambiguity but of structural reality: from the designer's perspective, the coordination function dominates (Rope); from the committed agent's perspective, the extraction dominates (Snare); from a balanced institutional view (Tangled Rope), both are visible. The theater ratio (0.68) indicates that the mechanism increasingly operates through performative maintenance rather than structural necessity, but this does not change the underlying hybrid structure \u2014 performance of commitment is still a form of coordination, just less efficient and more theater-laden."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "sunk_cost_fallacy_institutional",
+      "reputation_system_lock_in",
+      "psychological_identity_fusion_binding"
+    ],
+    "dual_formulation_note": "Behavioral commitment mechanisms decompose into three downstream constraints: (1) sunk_cost_fallacy_institutional \u2014 the structural logic of cost-irrelevance that nonetheless psychologically binds agents; (2) reputation_system_lock_in \u2014 the mechanism by which public commitment creates exit barriers; (3) psychological_identity_fusion_binding \u2014 the identity-level locking where the commitment becomes constitutive of the agent's self-concept. Each has different \u03b5 and different measurement profiles. The present story models the unified constraint; downstream stories model the component mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

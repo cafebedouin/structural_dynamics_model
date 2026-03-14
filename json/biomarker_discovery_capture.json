@@ -1,0 +1,203 @@
+{
+  "header": {
+    "constraint_id": "biomarker_discovery_capture",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "biomark"
+  },
+  "base_properties": {
+    "extractiveness": 0.54,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Biomarker Discovery Capture in Precision Medicine",
+    "topic_domain": "biomedical_research/diagnostic_innovation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "early_discovery_groups",
+      "diagnostic_device_manufacturers"
+    ],
+    "victims": [
+      "patient_populations",
+      "clinical_validation_infrastructure",
+      "competing_research_groups"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Patient Population",
+      "comment": "PERSPECTIVE 1: PATIENT POPULATION (SNARE) \u2014 Patients cannot exit reliance on biomarkers claimed in early discovery phase. Marketing hype creates expectation that unvalidated markers will guide treatment decisions. Trapped by asymmetric information and clinical authority. Bear full extraction cost through delayed access to truly validated diagnostics and exposure to false positive management."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Competing Research Groups",
+      "comment": "PERSPECTIVE 2: COMPETING RESEARCH GROUPS (TANGLED ROPE) \u2014 Constrained by publication bias toward positive findings and funding concentration in early-discovery labs. Also benefit from coordination: early-published biomarkers provide reference standards and validation targets for broader cohort studies. Significant extraction but partial access to coordination benefits."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Early Discovery Research Group",
+      "comment": "PERSPECTIVE 3: EARLY DISCOVERY RESEARCH GROUP (ROPE) \u2014 Benefits from first-mover publication advantage, citation inflation, and premium funding access. Experiences the constraint as coordination: communicating biomarker candidates enables follow-up research and clinical translation. Net beneficiary with high agency and multiple exit options (replication, commercial licensing, method licensing)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Diagnostic Device Industry",
+      "comment": "PERSPECTIVE 4: DIAGNOSTIC DEVICE INDUSTRY (TANGLED ROPE) \u2014 Depends on early-stage biomarker claims for product development pipeline. Organizes coordinated validation efforts (MultiHub consortia, FDA premarket review). Also benefits from marketing hype during early adoption phase. Constrained by regulatory timelines and clinical outcome accountability. Mixed extraction and coordination."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Publication Peer Review System",
+      "comment": "PERSPECTIVE 5: PUBLICATION PEER REVIEW SYSTEM (PITON) \u2014 Biomarker discovery papers are largely performative in validation terms: reviewers assess statistical novelty and mechanistic plausibility but cannot verify patient cohort homogeneity, confounding variable control, or reproducibility in independent cohorts. The review process persists through institutional inertia (career incentives tied to journal impact) despite low functional verification capability. Theater ratio high because the ritual certifies discovery without establishing clinical utility."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Clinical Validation Infrastructure",
+      "comment": "PERSPECTIVE 6: CLINICAL VALIDATION INFRASTRUCTURE (SCAFFOLD) \u2014 Multi-site prospective cohort studies, biobanks, and federated patient registries are building alternative verification pathways with explicit sunset: as biomarkers mature through validation, clinical integration protocols replace the discovery-phase hype cycle. Organized agents (NIH biobanks, EHR-linked registries) have agency and see exit path. Suppression declines as validation infrastructure matures."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational scale, biomarker discovery always precedes clinical validation \u2014 the gap is inherent to how medicine advances. No agent can exit the replication lag. But structural data contradicts: the extraction is contingent on publication incentives, funding concentration, and marketing dynamics. Engine will compute false summit, revealing naturalization of contingent institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "validation_timeline_adequacy",
+      "question": "What prospective validation timeline suffices to establish clinical utility versus extractive hype?",
+      "resolution_mechanism": "Longitudinal outcomes data: correlation between early-discovery biomarker claims and long-term patient outcomes in independent cohorts; time-to-clinical-integration distribution analysis",
+      "impact": "If adequacy threshold < 2 years: many legitimate discoveries misclassified as extraction. If threshold > 7 years: extractive unvalidated markers persist in clinical use.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Timeline threshold for clinically actionable biomarker validation"
+    },
+    {
+      "id": "confounding_variable_saturation",
+      "question": "Are competing biomarker claims genuinely measuring distinct biological processes or redundantly measuring shared confounding variables (age, comorbidity, treatment history)?",
+      "resolution_mechanism": "Multivariate decomposition in independent cohorts; correlation matrix analysis of competing biomarker claims against clinical and demographic variables; mediation analysis",
+      "impact": "If distinct: biomarker pluralism is coordination (Rope). If confounded: most competing claims are extraction mechanisms targeting different funding pools.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether competing biomarkers represent distinct or confounded biological processes"
+    },
+    {
+      "id": "commercial_incentive_attenuation",
+      "question": "Do device manufacturer licensing agreements attenuate early-discovery group publication bias or amplify withholding of negative results and competing markers?",
+      "resolution_mechanism": "Analysis of publication timing relative to patent filing and licensing events; comparison of positive vs negative result publication rates before and after commercial licensing; investigation of concurrent unreplicated markers in non-licensed research",
+      "impact": "If attenuated: commercial integration accelerates validation. If amplified: commercial structure becomes extraction mechanism, victims expand to include scientific commons and competing researchers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether commercial licensing increases or decreases publication bias in biomarker discovery"
+    },
+    {
+      "id": "federated_validation_efficacy",
+      "question": "Can federated clinical validation networks (EHR-linked registries, biobanks) actually replicate biomarker claims at scale, or do they face insurmountable data quality and phenotyping variance issues?",
+      "resolution_mechanism": "Prospective replication studies in multi-site federated networks; success rates of biomarkers passing independent validation; systematic comparison of centralized vs federated validation outcomes",
+      "impact": "If efficacious: scaffold perspective confirmed\u2014validation infrastructure will eventually replace discovery-phase hype. If inadequate: validation infrastructure becomes performative, scaffold degraded to piton.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether federated clinical networks can effectively replicate biomarker discoveries"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "Biomarker discovery capture describes the structural asymmetry between early-stage biomarker identification in research cohorts and the multi-year validation process required to establish clinical utility. Discovery groups publish candidate biomarkers based on association studies in convenience samples; regulatory and clinical translation requires prospective validation in diverse populations with long follow-up. This creates a temporal extraction window: early-published markers capture journal visibility, funding priority, and clinical authority through media and physician adoption long before independent validation. The constraint exhibits mixed coordination (genuine need to communicate biomarker candidates) and extraction (capital concentration in early discovery, withholding of negative results, marketing hype exceeding evidence). Theater ratio increases over time as complexity of claims outpaces capability of review processes. Measurements show partial recovery as federated validation infrastructure matures, suggesting scaffold rather than permanent snare.",
+    "key_agents": [
+      "Early Discovery Research Groups: Primary beneficiary (institutional/arbitrage) \u2014 capture publication priority, citation inflation, and premium funding access during discovery window",
+      "Diagnostic Device Manufacturers: Secondary beneficiary (organized/constrained) \u2014 depend on early-stage claims for product pipeline; benefit from marketing hype during early adoption but constrained by regulatory accountability",
+      "Patient Populations: Primary victim (powerless/trapped) \u2014 exposed to unvalidated biomarker claims through clinical hype and media coverage; trapped by asymmetric information and clinical authority framing",
+      "Competing Research Groups: Secondary victim (moderate/constrained) \u2014 face publication bias against negative findings and funding concentration in early-discovery labs; also benefit from early biomarker claims as reference standards",
+      "Clinical Validation Infrastructure: Organized actors (organized/mobile) \u2014 multi-site cohort studies, biobanks, EHR-linked registries building alternative verification pathways with sunset logic",
+      "Publication Peer Review System: Institutional actor (institutional/arbitrage) \u2014 maintains performative certification of biomarker discovery; cannot verify patient cohort homogeneity or long-term clinical outcomes (piton perspective)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing replication lag as inherent to medicine rather than contingent on publication incentives and funding structures"
+    ],
+    "logic_rationale": "Extractiveness (0.54): Moderate-high. Early discovery groups capture career and funding benefits during 3-6 year validation window. The extraction is substantial but not maximal because much of the benefit is legitimate first-mover reward for high-risk research identifying genuinely novel signals. Publication hype and media coverage amplify extraction beyond what basic citation advantage would produce. The value reflects that extraction is real (patients are harmed by unvalidated claims) but partially offset by coordination value (early biomarkers do enable follow-up research). Suppression (0.62): Moderate-high. Significant barriers to independent validation include requirement for large prospective cohorts, long follow-up periods, access to biospecimens, data integration complexity, and publication bias against negative findings. But barriers are not absolute \u2014 federated validation infrastructure is reducing them. Suppression value reflects institutional constraints rather than total prevention. Theater ratio (0.68): High and increasing. Early peer review for biomarker papers assesses statistical novelty and mechanistic plausibility but cannot verify patient cohort quality, confounding control, or reproducibility in diverse populations. The performative content increases as biomarker complexity outpaces reviewer capacity. Measurement trajectory (0.45\u21920.68) reflects growing gap between discovery-phase standards and validation-phase requirements. Partial decline at t=9 (0.62) reflects emerging federated validation infrastructure beginning to provide alternative non-performative verification.",
+    "directionality_logic": "Each perspective's structural position determines directionality. Early discovery groups with arbitrage exit options (can license to manufacturers, commercialize, or establish themselves as field leaders) experience low effective extraction. Institutional beneficiaries with multiple exit paths face low d values. Competing moderate-power research groups constrained by publication bias experience high d values reflecting their victim status, partially offset by coordination benefits from early biomarker claims (reference standards). Patients with no exit options and no information advantage experience maximum d (trapped). Clinical validation infrastructure with organizational capacity and real exit paths (building alternative verification systems) experiences lower d reflecting agency. The device industry's mixed position (beneficiary of marketing hype but constrained by regulatory and clinical outcome liability) produces intermediate d reflecting their organized but constrained position. Publication system's arbitrage position (benefits from high-impact submissions, maintains career incentive structure) produces low d despite its performative dysfunction\u2014the system itself is not trapped, even though it perpetuates theater.",
+    "perspectival_gap": "The constraint demonstrates perspectival divergence across power and exit dimensions. Early discovery groups see coordination (Rope) \u2014 they solve legitimate problem of communicating biomarker candidates to enable follow-up research. Device manufacturers see mixed coordination and constraint (Tangled Rope) \u2014 genuine need to develop diagnostics but constrained by regulatory timelines and clinical outcome accountability. Competing research groups see extraction (Tangled Rope) \u2014 publication bias and funding concentration disadvantage them despite coordination benefits. Clinical validation infrastructure sees temporary coordination failure with sunset (Scaffold) \u2014 prospective validation protocols and federated networks are building verification pathways that will eventually replace discovery-phase hype. Patients see pure extraction (Snare) \u2014 they are trapped by clinical authority framing and unvalidated claims with no ability to assess or exit. Publication system sees its own ritual as performative (Piton) \u2014 maintains certification process despite low verification capability. Analytical observer risks seeing natural law (Mountain) \u2014 'biomarker discovery precedes validation in medicine' \u2014 but structural data reveals this as naturalized institutional choice: extraction is contingent on publication incentives, funding concentration, and marketing dynamics, not inherent to scientific progress.",
+    "mandatrophy_analysis": "This constraint demonstrates mandatrophy resolution through perspectival presheaf. The apparent conflict between coordination and extraction resolves by recognizing that both are real but at different scales. At the research communication scale (early discovery group perspective), the constraint is largely coordination (Rope) \u2014 sharing biomarker candidates enables follow-up research. At the patient access scale (patient perspective), the same constraint is extraction (Snare) \u2014 unvalidated claims are marketed as clinical guidance, delaying access to validated alternatives. At the validation infrastructure scale (clinical validation perspective), the constraint is temporary coordination failure with sunset (Scaffold) \u2014 federated networks will eventually provide independent verification. The mandatrophy dissolves by accepting that the constraint is Tangled Rope at the institutional level (mixing genuine coordination of biomarker candidates with asymmetric extraction of benefit during validation window) AND that the analytical observer's 'natural law' reading is a false summit\u2014the replication lag is not inherent but contingent on institutional structures. The resolution: measure extractiveness as the extraction component of the tangled coordination, acknowledge the sunset structure in validation infrastructure development, and flag the publication/review system's performative theater as a secondary piton degradation. All six perspectives are epistemically legitimate readings of the same constraint from different structural positions."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "clinical_trial_phase_duration_capture",
+      "pharmaceutical_regulatory_capture"
+    ],
+    "dual_formulation_note": "Biomarker discovery capture is downstream of specific biomarker claims but represents a distinct structural constraint on research incentive alignment. Upstream constraints have extractiveness values reflecting empirical status of specific biomarkers; this constraint has extractiveness reflecting institutional structures (publication incentives, funding concentration, marketing dynamics) that apply across all biomarker research."
+  },
+  "directionality_overrides": []
+}

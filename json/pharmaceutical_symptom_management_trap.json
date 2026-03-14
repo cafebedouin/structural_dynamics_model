@@ -1,0 +1,184 @@
+{
+  "header": {
+    "constraint_id": "pharmaceutical_symptom_management_trap",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pharm"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Pharmaceutical Symptom Management Trap",
+    "topic_domain": "healthcare/pharmaceutical_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharmaceutical_manufacturers",
+      "prescribing_physicians"
+    ],
+    "victims": [
+      "chronic_disease_patients",
+      "healthcare_system_sustainability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Chronic Disease Patient",
+      "comment": "PERSPECTIVE 1: CHRONIC DISEASE PATIENT (SNARE) \u2014 Trapped by physiological dependence, symptom management necessity, and medical gatekeeping. No exit option without accepting disability or untreated suffering. Bears full cost of the extraction mechanism: medication dependence, side effect burden, escalating dosages, iatrogenic complications. The constraint appears as medical necessity but functions as extraction lock."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Primary Care Physician",
+      "comment": "PERSPECTIVE 2: PRIMARY CARE PHYSICIAN (TANGLED ROPE) \u2014 Faces genuine coordination problem: patients need symptom management. But also extracts through prescribing patterns that perpetuate dependence. Constrained by insurance reimbursement structures (favor acute symptom treatment over root-cause intervention), pharmaceutical marketing, and liability concerns. Both benefits from and contributes to the constraint."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Pharmaceutical Manufacturer",
+      "comment": "PERSPECTIVE 3: PHARMACEUTICAL MANUFACTURER (ROPE) \u2014 Genuine coordination function: producing medications that alleviate acute suffering. But structured to benefit maximally from the symptom-management frame: chronic dosing generates recurring revenue, symptom escalation justifies dose increases and combination therapies, side effects justify additional medications. Net beneficiary with arbitrage exits \u2014 can transition to other markets or drug classes as needed."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Prevention-Oriented Public Health Coalition",
+      "comment": "PERSPECTIVE 4: PREVENTION-ORIENTED PUBLIC HEALTH COALITION (SCAFFOLD) \u2014 Organized agents (public health departments, preventive medicine advocates, lifestyle intervention programs) perceive the symptom-management trap as a temporary institutional failure with a sunset clause. Root-cause interventions (diet, exercise, stress reduction, environmental modification) address underlying pathology rather than masking symptoms. As prevention infrastructure matures and reimbursement models shift toward outcomes-based payment, the symptom-management extraction mechanism loses force. Sunset timeline: 15-25 years for prevention-based approaches to compete with pharmaceutical symptom management in reimbursement and medical education."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Insurance and Healthcare Administration",
+      "comment": "PERSPECTIVE 5: INSURANCE AND HEALTHCARE ADMINISTRATION (PITON) \u2014 The reimbursement machinery that enforces symptom-management prioritization is substantially performative. Insurance companies track 'medication adherence' and 'symptom control metrics' as proxies for health outcomes, but these metrics decouple from actual health improvement over long timescales. The administrative theater persists through institutional inertia \u2014 alternatives (outcome-based reimbursement, root-cause intervention funding) have higher initial complexity costs. The system sees its own metrics as degraded but maintains them because the transition costs are high and revenue depends on activity volume."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, acute symptom management is a fundamental biological reality: chronic disease symptoms cause suffering, and pharmacological intervention is a natural response to biological constraint. This perspective risks naturalizing what is actually a contingent institutional choice: the exclusive focus on symptom management rather than root-cause intervention, the reimbursement structures that incentivize chronic medication regimens, and the medical training that prioritizes pharmacological tools. The engine's false summit detector will identify this as naturalization of institutional arrangements."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "symptom_vs_disease_progression_boundary",
+      "question": "At what point does symptom management transition from treating disease to treating iatrogenic side effects?",
+      "resolution_mechanism": "Longitudinal outcome tracking: years on medication regimen vs actual disease progression; correlation between medication burden and disability-adjusted life years; analysis of medication addition patterns triggered by previous medication side effects",
+      "impact": "If transition occurs early (< 5 years): the constraint is primarily extractive from year 1. If late (> 15 years): symptom management has genuine therapeutic value for extended periods before becoming extraction-dominant. Timeline threshold determines at what point the classification shifts from tangled_rope to snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Boundary between therapeutic symptom management and iatrogenic extraction"
+    },
+    {
+      "id": "root_cause_intervention_feasibility",
+      "question": "Are root-cause interventions (lifestyle modification, environmental change, psychological intervention) actually accessible and effective for the majority of chronic disease patients, or are they accessible only to high-income populations?",
+      "resolution_mechanism": "Comparative effectiveness studies across socioeconomic strata; accessibility analysis of prevention programs; cost-outcome analysis comparing pharmaceutical management vs root-cause intervention by income level",
+      "impact": "If root-cause interventions are truly accessible and effective broadly: the scaffold perspective is structural and the sunset timeline is realistic. If limited to high-income populations: the prevention-oriented coalition is aspirational, and the pharmaceutical trap persists as structural necessity for economically constrained patients. This determines whether the constraint is temporary (scaffold) or permanent (snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether root-cause interventions are broadly accessible and effective"
+    },
+    {
+      "id": "physician_incentive_alignment",
+      "question": "Do reimbursement structures and pharmaceutical marketing create genuine misalignment between physician incentives and patient root-cause intervention, or do physicians choose symptom management due to legitimate efficiency constraints?",
+      "resolution_mechanism": "Analysis of prescribing patterns when reimbursement incentives are altered (e.g., value-based care pilots); comparison of prescribing patterns across systems with different marketing restrictions; physician surveys on barriers to lifestyle-intervention prescription",
+      "impact": "If misalignment is primary: the pharmaceutical trap is partially extractive (beneficiaries deliberately structure physician incentives). If efficiency constraints are primary: the trap is more coordination-failure than extraction. Determines the classification stability of the physician perspective across different regulatory contexts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether physician incentive misalignment is structural or contingent"
+    },
+    {
+      "id": "patient_agency_in_treatment_preference",
+      "question": "Do patients prefer pharmaceutical symptom management because the system constrains their awareness of alternatives, or because they genuinely prefer pharmaceutical management when alternatives are presented?",
+      "resolution_mechanism": "Patient surveys in systems with robust prevention alternatives and patient education; comparison of treatment choice patterns before and after introduction of integrated lifestyle-intervention programs; analysis of patient agency in contexts with symmetric information about pharmaceutical side effects",
+      "impact": "If preference is largely awareness-constrained: suppression is primarily informational (reducible through education). If preference persists despite awareness: suppression involves deeper structural traps (economic, time, complexity). Determines whether the suppression metric should be adjusted downward or remains accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Patient agency in treatment preference formation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The pharmaceutical symptom management trap describes a structural constraint in healthcare systems where chronic disease treatment focuses exclusively on symptomatic relief rather than addressing root causes, creating nested extraction mechanisms: pharmaceutical manufacturers benefit from recurring medication demand; physicians are constrained by reimbursement structures that reward acute symptom treatment; patients become locked into medication regimens that address symptoms but not underlying pathology, generating iatrogenic complications that justify additional medications. The constraint exhibits all six DR types from different perspectives. Extractiveness has risen from 0.32 to 0.58 over the interval as polypharmacy becomes standard and medication-induced side effects accumulate. Theater ratio (0.68) reflects that pharmaceutical efficacy is measured through symptom reduction proxies (blood pressure readings, pain scores) rather than through functional outcome improvement or disease-progression halting. The constraint functions as a genuine coordination mechanism (patients need acute symptom relief) combined with extractive lock-in (chronic dependence on medications that do not address root causes). The prevention-oriented public health coalition represents a structural alternative pathway with genuine sunset logic: as lifestyle-intervention infrastructure matures and reimbursement models shift toward value-based outcomes, pharmaceutical symptom management loses its monopoly on disease management. However, root-cause interventions remain economically and socially inaccessible for many populations, potentially creating a bifurcated system where prevention is available to high-income populations while symptom management trap persists for economically constrained patients.",
+    "key_agents": [
+      "Chronic Disease Patients: Primary victim (powerless/trapped) \u2014 physiologically dependent on medications, no exit option without disability or untreated suffering",
+      "Pharmaceutical Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 structure medications and marketing to maximize chronic dosing and polypharmacy, capturing recurring revenue",
+      "Primary Care Physicians: Mixed actor (moderate/constrained) \u2014 genuine coordination need (symptom management) combined with extraction (prescribing patterns that perpetuate dependence); constrained by reimbursement, marketing, and liability",
+      "Insurance and Healthcare Administration: Institutional actor (institutional/arbitrage) \u2014 maintain reimbursement machinery that prioritizes acute symptom treatment over root-cause intervention; perform efficacy measurement through symptom proxies rather than functional outcomes",
+      "Prevention-Oriented Public Health Coalition: Organized agents (organized/mobile) \u2014 build alternative pathway (lifestyle intervention, environmental modification) that addresses root causes; see symptom-management approach as temporary institutional failure",
+      "Healthcare System Sustainability: Abstract victim (powerless/trapped) \u2014 bears cost of escalating medication complexity and iatrogenic complication burden; no self-correction mechanism within symptom-management frame"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. The constraint demonstrates genuine coordination function (patients need symptom relief) combined with extractive lock-in (chronic medication dependence without addressing root causes). The extraction increases over time as patients accumulate medications and iatrogenic side effects justify additional pharmaceutical interventions. Suppression (0.62): Moderately high. Significant barriers to root-cause intervention include: economic dependency on continued healthcare utilization, information asymmetry about alternative approaches, social and professional constraints on lifestyle modification, medical gatekeeping of treatment options, and pharmaceutical marketing that shapes both physician and patient preferences. However, suppression is not total \u2014 some patients and physicians do pursue root-cause approaches, and prevention infrastructure is emerging. Theater ratio (0.68): High and increasing. Pharmaceutical efficacy is increasingly measured through symptom reduction metrics (blood pressure, pain scores, A1c levels) that decouple from actual functional improvement over longer timescales. Medication 'adherence' is tracked and rewarded as a proxy for health outcomes, but adherence to a 15-drug regimen may indicate system failure rather than health success. The theater masks the distinction between treating disease and treating treatment side effects.",
+    "directionality_logic": "Each perspective's directionality derives from the agent's structural position relative to the extraction flow. Pharmaceutical manufacturers benefit directly and have exit options (arbitrage); their d is low (~0.15), producing negative chi. Physicians benefit from reimbursement but are constrained by medical training and patient expectations; their d is moderate (~0.55), producing moderate chi. Patients are trapped targets; their d is high (~0.92), producing maximum chi (~1.42 with f(d)). The insurance system maintains the constraint structure to preserve reimbursement volume; their d is low (~0.20) but their structural power is high, making them institutional beneficiaries despite their role in enforcement.",
+    "perspectival_gap": "The physician perspective (tangled_rope) reveals the critical gap: physicians experience genuine coordination need (symptom management) but are structurally incentivized to optimize for symptom metrics rather than root-cause intervention. The constraint appears to them as mixed coordination-extraction rather than pure coordination or pure extraction. The pharmaceutical manufacturer perspective (rope) sees only coordination: they are solving the legitimate problem of symptom relief. The patient perspective (snare) sees pure extraction: the entire system functions to lock them into medication dependence. The prevention coalition perspective (scaffold) sees a temporary institutional failure with an exit route: as outcomes-based reimbursement and prevention infrastructure mature, the symptom-management monopoly decays. The analytical observer risks seeing an immutable natural law (mountain) \u2014 treating disease symptoms is inherent to medicine \u2014 but the structural data reveals this as naturalization of a specific institutional arrangement (reimbursement for acute symptom treatment, pharmaceutical marketing, medical education focused on pharmacological tools).",
+    "mandatrophy_analysis": "The pharmaceutical symptom management trap resolves mandatrophy by distinguishing the genuine coordination function (acute symptom relief) from the extraction mechanism (chronic lock-in without root-cause intervention). The tangled_rope classification is stable across multiple justifications: (1) pharmaceutical manufacturers genuinely solve the coordination problem of symptom management; (2) patients genuinely benefit from acute symptom relief; (3) physicians are genuinely constrained by reimbursement and training structures. But the constraint also extracts: (1) medications treat symptoms without addressing root causes; (2) medication side effects justify additional medications; (3) the system is structured to maximize chronic medication use rather than to achieve health outcomes. The classification is not 'either coordination or extraction' but 'coordination mechanism that has been structurally bent toward extraction.' The scaffold perspective (prevention coalition) shows that this is not immutable \u2014 alternative coordination mechanisms exist that solve the same coordination problem (symptom management plus root-cause intervention) with lower extraction overhead. The timeline to scaffold realization depends on overcoming institutional lock-in (medical training, reimbursement structures, pharmaceutical marketing influence) \u2014 this is a real constraint but not a fundamental law of medicine."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "pharmaceutical_marketing_information_asymmetry",
+      "healthcare_reimbursement_acute_bias",
+      "iatrogenic_complication_cascade"
+    ],
+    "dual_formulation_note": "The pharmaceutical symptom management trap is downstream of healthcare reimbursement structures and pharmaceutical marketing practices. Separate constraint stories model the information asymmetry mechanism (pharmaceutical marketing constraints) and the reimbursement bias mechanism (healthcare payment structure constraints). This story focuses on the patient-level lock-in mechanism \u2014 the structural features that make symptom-management-only treatment appear necessary rather than contingent."
+  },
+  "directionality_overrides": []
+}

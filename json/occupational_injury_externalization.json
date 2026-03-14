@@ -1,0 +1,229 @@
+{
+  "header": {
+    "constraint_id": "occupational_injury_externalization",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "oie"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Occupational Injury Externalization",
+    "topic_domain": "labor_economics/occupational_health",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "cost_externalizing_employers",
+      "liability_avoiding_contractors"
+    ],
+    "victims": [
+      "injured_workers",
+      "public_health_system",
+      "disability_safety_net"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Injured Worker",
+      "comment": "PERSPECTIVE 1: INJURED WORKER (SNARE) \u2014 Trapped by medical debt, job loss, and lack of alternative employment during recovery. Cannot exit the constraint; bears full cost of injury externalization through lost wages, out-of-pocket medical expenses, and disability. Maximum experienced extraction with zero degrees of freedom."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Informal/Gig Worker",
+      "comment": "PERSPECTIVE 2: INFORMAL/GIG WORKER (SNARE) \u2014 Constrained by precarious employment status and lack of worker protections. Faces high costs to exit: retraining, relocation, or formal employment search. Injury externalization falls disproportionately on this group; few alternatives exist in labor market with comparable flexibility and immediate income. High experienced extraction with nominal but costly exit routes."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Cost-Externalizing Employer",
+      "comment": "PERSPECTIVE 3: COST-EXTERNALIZING EMPLOYER (ROPE) \u2014 Benefits from coordination of workplace hazard management with minimal internal cost absorption. Uses subcontracting, misclassification, and regulatory arbitrage across jurisdictions to shift injury costs to workers and public systems. Experiences the constraint as a beneficial coordination mechanism that allocates injury risk to those with fewest resources to resist."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Industry Standard-Setting Body",
+      "comment": "PERSPECTIVE 4: INDUSTRY STANDARD-SETTING BODY (TANGLED ROPE) \u2014 Coordinates workplace safety norms while simultaneously enabling cost externalization through weak enforcement and high compliance ambiguity. Genuine coordination function (industry members cooperate on safety standards) exists alongside asymmetric extraction (externalization permitted under ambiguous 'reasonable care' standards). Active enforcement required to maintain both the coordination facade and the extraction mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Agency",
+      "comment": "PERSPECTIVE 5: REGULATORY AGENCY (TANGLED ROPE) \u2014 Coordinates workplace safety through inspection, standard-setting, and penalty assessment while constrained by industry capture and inadequate enforcement resources. Genuine coordination function (workplace safety standards exist and are communicated) coexists with systematic under-enforcement that permits cost externalization to continue. Active enforcement nominally required but systematically degraded."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Liability Avoidance Framework",
+      "comment": "PERSPECTIVE 6: LIABILITY AVOIDANCE FRAMEWORK (PITON) \u2014 Workers' compensation systems, contractor misclassification, and jurisdictional arbitrage create a performative liability structure. The framework maintains the appearance of injury cost internalization (employer insurance requirements, regulatory oversight) while systematically permitting externalization through legal structures. Theater ratio high: much institutional activity (audits, training programs, insurance purchases) is disconnected from actual injury cost absorption. Original function (internalize injury costs to incentivize safety) has atrophied; constraint persists through institutional inertia."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Public Health System",
+      "comment": "PERSPECTIVE 7: PUBLIC HEALTH SYSTEM (SNARE) \u2014 Bears disproportionate cost of occupational injuries through uncompensated emergency care, chronic disease management, and disability support for workers excluded from formal injury compensation. Cannot exit the constraint; absorbs costs externalized by employers and contractors. Trapped by universal healthcare mandate and inability to deny care to injured persons."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalization Risk)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (FALSE SUMMIT) \u2014 From a civilizational/universal perspective, occupational injury externalization may appear as an immutable property of market economies: workers cannot absorb injury costs, employers minimize liability through legal structures, and some injuries will always escape compensation. This perspective risks naturalizing what is actually a contingent institutional arrangement enforced through regulatory capture and asymmetric information. Engine will flag as false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "contractor_misclassification_mechanism",
+      "question": "Are contractors systematically misclassified to avoid workers' compensation liability, or is the classification genuinely ambiguous across employment types?",
+      "resolution_mechanism": "Longitudinal tracking of classification disputes; correlation between contractor status and injury reporting rates; analysis of wage/benefit patterns for workers in the same role classified as employees vs contractors",
+      "impact": "If systematic misclassification: constraint is primarily extractive (snare). If genuine ambiguity: some extraction is institutional overhead (tangled rope). Classification affects whether the constraint is intentional policy or unintended consequence of employment law ambiguity.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether contractor misclassification is systematic or genuinely ambiguous"
+    },
+    {
+      "id": "regulatory_capture_depth",
+      "question": "To what extent does industry influence over regulatory agencies prevent enforcement of existing injury cost internalization rules?",
+      "resolution_mechanism": "Comparison of penalty rates across jurisdictions and industries; analysis of inspection frequency and violation citation rates; longitudinal tracking of regulatory flexibility changes following industry lobbying",
+      "impact": "If capture is high: regulatory agency classification shifts further toward tangled rope / snare. If capture is low: agency retains genuine coordination function and constraint is primarily snare (workers and public bear costs). Affects whether solution is regulatory reform or structural decomposition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of industry capture over injury regulatory enforcement"
+    },
+    {
+      "id": "informal_sector_injury_visibility",
+      "question": "What proportion of occupational injuries in the informal economy are invisible to both employers and public health measurement systems?",
+      "resolution_mechanism": "Household surveys in informal sectors; comparison of self-reported injury rates to administrative injury records; analysis of healthcare-seeking behavior and barriers in informal worker populations",
+      "impact": "If invisibility is high: measured extractiveness (0.58) is severe underestimate \u2014 true externalization is higher. If invisibility is low: measurement captures most externalization. Affects whether constraint is accurately classified or systematically understated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of informal sector occupational injuries invisible to measurement systems"
+    },
+    {
+      "id": "jurisdictional_arbitrage_scope",
+      "question": "Do multinational employers systematically locate dangerous operations in low-regulation jurisdictions, or are location decisions driven by other factors with injury externalization as secondary effect?",
+      "resolution_mechanism": "Analysis of workplace hazard levels vs jurisdiction regulation stringency; comparison of injury rates for same employer across different jurisdictions; tracking of facility closures and relocations following regulatory changes",
+      "impact": "If systematic: constraint is intentional and globally coordinated extraction. If secondary: constraint is more localized institutional failure. Affects scope classification and whether solution requires global coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether multinational employers systematically use regulatory arbitrage for injury externalization"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the measured suppression (0.68) structural (legal barriers, economic dependency) or internalized (workers believe injury risk is their responsibility, accept externalization as inevitable)?",
+      "resolution_mechanism": "Surveys of worker beliefs about injury responsibility and employer liability; analysis of workers' compensation claim rates vs self-reported injury rates; comparison of claim behavior when legal counsel provided vs without",
+      "impact": "If structural: suppression persists in reformed systems if barriers remain. If internalized: suppression carries forward even after legal reform \u2014 workers maintain beliefs about responsibility. Affects sustainability of policy interventions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of injury claims is structural or internalized"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Occupational injury externalization is a structural mechanism by which employers, labor contractors, and intermediary institutions shift the costs of workplace injuries from those who control work conditions to workers, public health systems, and disability support mechanisms. The constraint operates through multiple channels: contractor misclassification to avoid workers' compensation coverage, regulatory arbitrage across jurisdictions, weak enforcement of safety standards by captured regulatory agencies, and information asymmetry that prevents workers from accurately assessing injury risk. The extractiveness (0.58) reflects that employers and contractors capture substantial cost avoidance through these mechanisms, while suppression (0.68) is high because workers face trapped or severely constrained exit options. The theater ratio (0.55) indicates that significant institutional activity\u2014safety training programs, insurance purchases, regulatory inspections, compliance audits\u2014creates an appearance of injury cost internalization while permitting systematic externalization to continue. The constraint exhibits all six DR types from different structural positions, making it a diagnostic exemplar for how extraction is constituted through institutional arrangements rather than direct coercion.",
+    "key_agents": [
+      "Injured Workers: Primary victims (powerless/trapped) \u2014 bear medical and income costs of injuries; lack exit alternatives during recovery",
+      "Informal/Gig Workers: Secondary victims (moderate/constrained) \u2014 face high barriers to alternative employment; concentrated in sectors with highest externalization",
+      "Public Health System: Tertiary victim (powerless/trapped) \u2014 absorbs uncompensated emergency care and chronic disease management; universal care mandate prevents cost-shifting back to workers",
+      "Cost-Externalizing Employers: Primary beneficiaries (institutional/arbitrage) \u2014 capture cost avoidance through subcontracting, misclassification, and regulatory arbitrage",
+      "Industry Standard-Setting Body: Secondary beneficiary (powerful/constrained) \u2014 coordinates safety norms while enabling externalization through weak enforcement; enforces appearance of compliance without substance",
+      "Regulatory Agency: Mixed institutional actor (powerful/constrained) \u2014 nominally coordinates workplace safety but systematically under-enforces due to industry capture and resource constraints",
+      "Liability Avoidance Framework: Institutional mechanism (institutional/arbitrage) \u2014 perpetuates performative structures (workers' comp insurance, safety training) disconnected from actual injury cost absorption",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing externalization as inevitable feature of market economies"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Employers and contractors capture substantial cost avoidance through multiple mechanisms: workers' compensation insurance costs are lower than actual injury costs in high-hazard sectors, contractor misclassification eliminates insurance requirements entirely, and regulatory arbitrage permits dangerous operations in low-enforcement jurisdictions. The measurement captures the flow of injury costs from employers to workers and public systems. The trajectory from 0.38 to 0.58 reflects increasing externalization as precarious employment grows and regulatory enforcement declines. Suppression (0.68): High. Trapped workers lack alternatives during injury recovery; constrained workers face significant retraining and relocation costs; informal workers have no workers' compensation safety net. Information asymmetry (workers cannot assess injury risk; employers hide hazard data) maintains suppression through cognitive mechanisms. Theater ratio (0.55): Moderate. Substantial institutional activity\u2014OSHA inspections, safety training mandates, workers' comp insurance requirements, industry safety committees\u2014creates an appearance of injury cost internalization. But effectiveness is low: inspection frequency is insufficient to deter violations; training compliance is decoupled from actual hazard reduction; insurance premiums are uncoupled from injury rates; industry committees set weak standards. The theater ratio rising from 0.35 to 0.55 reflects increasing formalization of safety apparatus without corresponding increase in actual hazard control.",
+    "directionality_logic": "Directionality values are derived from each agent's structural relationship to the extraction flow. Injured workers (powerless/trapped) have d \u2248 0.95 (full targets of extraction) \u2014 they bear maximum cost and have zero exit options. Informal workers (moderate/constrained) have d \u2248 0.85 \u2014 they bear high costs but have nominal exit routes (job search, retraining) at significant cost. Employers (institutional/arbitrage) have d \u2248 0.05 (full beneficiaries) \u2014 they capture cost avoidance and can exit the constraint by relocating to compliant jurisdictions or shifting to fully compliant employment models. Regulatory agencies (powerful/constrained) have d \u2248 0.60 \u2014 they are nominally responsible for cost internalization (coordination function) but constrained by capture and resources, making them partial targets of the extraction. Public health systems (powerless/trapped) have d \u2248 0.98 \u2014 they are trapped by universal care mandates and cannot refuse to treat occupational injuries; they absorb costs that should have been internalized upstream. The perspectival gap reflects that the beneficiary (employer) sees coordination while all victims see extraction.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. The injured worker sees a snare: trapped by medical debt and job loss, with zero alternatives. The informal worker sees a snare: constrained by precarious employment status, with high-cost exits. The employer sees a rope: coordination mechanism that efficiently allocates injury risk and enables production. The industry body sees a tangled rope: genuine coordination of safety norms alongside asymmetric extraction through weak enforcement. The regulatory agency sees a tangled rope: nominal coordination of standards alongside systematic under-enforcement due to capture and resource constraints. The liability framework sees a piton: performative safety apparatus (insurance, training, inspections) disconnected from actual injury cost absorption. The public health system sees a snare: trapped by universal care mandate, absorbing costs externalized by employers. The analytical observer risks a false summit: naturalizing externalization as inevitable market outcome, obscuring that it is constituted through specific institutional arrangements (workers' comp design, contractor misclassification laws, regulatory capture) that could be reformed. The perspectival gap reveals that externalization is not a law of nature but a structure maintained through institutional power differentials.",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION RESOLUTION: The constraint is classified as snare because it exhibits high extractiveness (0.58), high suppression (0.68), and high effective extraction \u03c7 \u2248 1.15 (from trapped/powerless agent perspective). This classification distinguishes occupational injury externalization from mere coordination failure. The snare classification resolves the mandatrophy by showing that the constraint is not a failed coordination problem (which might be salvageable through better standards or enforcement) but a functioning extraction mechanism. Employers benefit; workers and public systems bear costs; the structure is maintained through regulatory capture and information asymmetry. The tangled rope perspectives (industry body, regulatory agency) describe the coordination facade \u2014 the institutional structures that create the appearance of injury cost internalization \u2014 but the snare classification from the victim perspective (injured worker, public health system) reveals the underlying extraction. The piton perspective (liability avoidance framework) captures the theatrical dimension: much institutional activity is disconnected from actual injury cost reduction. The false summit perspective (analytical observer) represents the risk of naturalizing this structure as inevitable, obscuring that it is constitutively dependent on specific institutional choices."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture_labor_standards",
+      "contractor_misclassification_tax_avoidance",
+      "informal_sector_exclusion"
+    ],
+    "dual_formulation_note": "Occupational injury externalization is upstream of specific labor market outcomes (wage depression, informal sector expansion, disability support demands) and downstream of regulatory capture mechanisms and workers' compensation system design. Separate stories track contractor misclassification (with its own \u03b5 reflecting tax and liability avoidance) and informal sector exclusion (with its own \u03b5 reflecting access barriers); the injury externalization story captures the aggregate extraction mechanism that links these institutional arrangements."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.62
+    }
+  ]
+}

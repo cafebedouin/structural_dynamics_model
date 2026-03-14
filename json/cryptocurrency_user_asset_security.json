@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "cryptocurrency_user_asset_security",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "crypto_sec"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Cryptocurrency User Asset Security and Key Management Constraint",
+    "topic_domain": "financial/technology/digital_asset_custody",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "exchange_platforms",
+      "custody_service_providers",
+      "security_software_vendors"
+    ],
+    "victims": [
+      "retail_cryptocurrency_users",
+      "asset_recovery_capability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Retail Cryptocurrency User",
+      "comment": "PERSPECTIVE 1: RETAIL USER (SNARE) \u2014 Users face irreversible asset loss from stolen keys or lost recovery phrases with zero recovery mechanism. No institutional safety nets, no insurance, no customer protection. Trapped by the irreversibility of blockchain transactions and the technical complexity of self-custody. Extraction flows entirely toward users \u2014 they bear all loss risk while platforms extract transaction fees and data value."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Security-Conscious User",
+      "comment": "PERSPECTIVE 2: SECURITY-CONSCIOUS USER (TANGLED ROPE) \u2014 Users who invest in hardware wallets and security practices benefit from reduced theft risk (coordination function) while still bearing the full cost of key loss or human error. Constrained by the requirement to manage security themselves; also benefit from the security ecosystem's coordination around standards. Mixed experience \u2014 genuine coordination value but asymmetric extraction of the control burden."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Institutional Custody Adopter",
+      "comment": "PERSPECTIVE 3: INSTITUTIONAL CUSTODY (ROPE) \u2014 Large institutional investors can organize alternatives: multi-signature custody, insurance arrangements, regulatory oversight. Mobile exit options \u2014 can choose between custodians or migrate to blockchain systems with built-in security features. Experience the constraint as pure coordination: delegated security with insurable risk. Low extraction because institutional actors have agency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Exchange Platform",
+      "comment": "PERSPECTIVE 4: EXCHANGE PLATFORM (TANGLED ROPE) \u2014 Platforms benefit from user deposits (access to transaction fees, trading volume, and investment in infrastructure). They provide genuine coordination (consolidated security, user interface, trading liquidity) while simultaneously extracting through platform-specific lock-in, custody risk concentration, and asymmetric fee structures. Active enforcement of user dependency through terms of service and technical architecture."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulatory Framework",
+      "comment": "PERSPECTIVE 5: REGULATORY FRAMEWORK (PITON) \u2014 Securities regulations, KYC/AML requirements, and custody standards were designed for traditional finance assets. Applied to cryptocurrency, they create theater: compliance activities (KYC, reserves attestation, wallet whitelisting) that perform security assurance without directly preventing the key loss or theft that actually harms users. Regulatory regime persists through institutional inertia despite low functional protection for the primary harm vector."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Cryptographic Immutability View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / IMMUTABILITY VIEW (MOUNTAIN) \u2014 From a cryptographic/physical perspective, blockchain's core feature is irreversible transaction finality \u2014 no authority can reverse a confirmed transaction. This immutability is foundational to decentralization but makes user error or key theft permanently destructive. This perspective risks naturalizing the architecture as immutable law rather than recognizing it as an engineered tradeoff. The mountain classification here is a false summit: irreversibility is a choice of system design, not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "self_custody_vs_delegated_tradeoff",
+      "question": "Is the extraction mechanism inherent to decentralization (self-custody irreversibility) or contingent to current custody architecture (platform lock-in + risk concentration)?",
+      "resolution_mechanism": "Comparative analysis of security outcomes across custody models: self-custody loss rates vs institutional custody breach costs vs hybrid multi-signature arrangements. Measurement of actual asset recovery rates by custody type.",
+      "impact": "If inherent: security constraint is a mountain-like tradeoff unavoidable in decentralized systems. If contingent: current architecture unnecessarily concentrates risk and extraction, and alternative designs (threshold signatures, social recovery, time-locked reversibility) could reduce extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether extraction is inherent to decentralization or contingent to custody design"
+    },
+    {
+      "id": "insurance_feasibility_ceiling",
+      "question": "Can insurance or bonding mechanisms scale to cover cryptocurrency asset theft/loss for retail users, or are loss rates inherently uninsurable at current scale?",
+      "resolution_mechanism": "Actuarial analysis: historical loss rates by category (private key theft, user error, platform breach, network-level attacks); comparison to insurable loss categories in traditional finance; assessment of risk concentration in small custodian pool.",
+      "impact": "If feasible: insurance could transform the snare into a rope (coordinated risk transfer). If uninsurable: the security constraint remains extractive because the risk cannot be socialized or transferred, concentrating on users.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of insurance for cryptocurrency asset loss"
+    },
+    {
+      "id": "key_recovery_mechanism_design",
+      "question": "Can social recovery, time-locked reversibility, or other recovery mechanisms be implemented without compromising the security properties users rely on?",
+      "resolution_mechanism": "Security analysis of proposed recovery mechanisms against canonical attack vectors (private key theft, account compromise, transaction malleability). Measurement of security parameter degradation in hybrid recovery designs.",
+      "impact": "If recoverable: recovery mechanisms could reduce trapped-user extraction by enabling legitimate reversal of user error/theft while maintaining security against consensus-level attacks. If unrecoverable: architecture remains locked into permanent irreversibility.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Design feasibility of reversible transaction mechanisms"
+    },
+    {
+      "id": "platform_custody_concentration_necessity",
+      "question": "Is the concentration of retail user assets on centralized platforms a necessary coordination efficiency, or a lock-in mechanism that could be replaced by distributed custody alternatives?",
+      "resolution_mechanism": "Adoption metrics of non-custodial solutions (hardware wallets, self-sovereign identity systems, decentralized exchanges); user retention correlation with custody options; transaction cost comparison between platform trading and decentralized alternatives.",
+      "impact": "If necessary: platform custody is a rope-like coordination tradeoff. If lock-in: it's an extractive snare mechanism, and adoption of distributed custody alternatives would reduce extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether platform custody concentration is necessary or contingent"
+    },
+    {
+      "id": "technical_literacy_barrier_malleability",
+      "question": "Is the high technical barrier to secure self-custody an immutable property of public key cryptography, or a contingent feature of current UI/UX design that could be lowered through better tools?",
+      "resolution_mechanism": "Comparative study of security outcomes in systems with different UI/UX complexity: bare key management vs hardware wallets vs smart contract wallets with social recovery. Measurement of user error rates and loss attribution by system complexity.",
+      "impact": "If immutable: users will always face high cognitive load managing keys, justifying platform delegation. If contingent: better tools could enable self-custody security at lower cognitive cost, reducing platform lock-in.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Malleability of technical barriers to self-custody security"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 8
+  },
+  "commentary": {
+    "narrative_context": "Cryptocurrency asset security presents a fundamental structural tension between decentralization's irreversibility guarantee and users' need for protection against theft, loss, and human error. The constraint emerges from the architectural requirement that blockchain transactions be irreversible (necessary for decentralization and consensus finality) colliding with the reality that users \u2014 especially retail participants \u2014 lack the technical sophistication to manage cryptographic keys safely. This creates a structural extraction opportunity: platforms and custody providers capture value by offering convenience and (limited) security while users bear the full cost of key loss or theft. The constraint exhibits all six types from different perspectives. Retail users experience it as a pure snare: irreversible asset loss with no recovery path. Institutional actors experience it as manageable coordination: they can hire security expertise and arrange insurance. Regulators experience it as theater: KYC and reserves attestation create the appearance of security assurance without preventing the primary harm vectors (private key theft, user error). Platforms experience it as hybrid coordination-extraction: they provide genuine trading liquidity and security infrastructure (coordination) while simultaneously extracting through platform lock-in and asymmetric custody risk (extraction). The constraint's theater ratio (0.65) reflects that regulatory security theater (KYC, compliance attestation) is increasing faster than actual user security protection.",
+    "key_agents": [
+      "Retail Cryptocurrency Users: Primary victim (powerless/trapped) \u2014 bear full cost of irreversible asset loss; no recovery mechanisms; no insurance",
+      "Security-Conscious Users: Secondary agent (moderate/constrained) \u2014 invest in hardware wallets and security practices; benefit from coordination but bear responsibility for key management",
+      "Exchange Platforms: Primary beneficiary (institutional/arbitrage) \u2014 extract transaction fees, trading volume, and data value; provide coordination through consolidated security and liquidity",
+      "Institutional Custody Providers: Secondary beneficiary (organized/mobile) \u2014 offer insurable custody with exit options; competitive market discipline",
+      "Security Software Vendors: Beneficiary (institutional/arbitrage) \u2014 extract value through hardware wallet sales, key management tools, and security services",
+      "Regulatory Framework: Secondary actor (institutional/constrained) \u2014 applies traditional financial regulations; creates theater without addressing primary harms",
+      "Analytical Observer: Universal view (analytical/analytical) \u2014 risks naturalizing irreversibility as an immutable property rather than recognizing it as an engineered tradeoff"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, increasing over time. The base extraction reflects the asymmetry between platform/vendor benefits (transaction fees, trading volume, data, security tool sales) and user costs (irreversible loss exposure, key management burden, limited recovery options). The trajectory shows increasing extractiveness as platforms consolidate market share and users accumulate assets on centralized exchanges \u2014 the constraint's extraction mechanism becomes more valuable as the trapped user base grows. At time 0 (early cryptocurrency era), users were more aware of self-custody risks and held smaller balances; by time 8 (current period), retail participation has grown without corresponding security literacy, increasing the extraction gradient. Suppression (0.72): High and stable. Multiple barriers prevent users from exiting: technical complexity of self-custody, platform lock-in through trading liquidity and user interface, regulatory uncertainty around decentralized custodians, lack of practical recovery mechanisms for lost keys, and asymmetric information (users unaware of custody risks until loss occurs). Theater ratio (0.65): Moderate-high and increasing. Regulatory security theater (KYC verification, platform reserves attestation, wallet whitelisting) creates the appearance of security assurance without addressing the primary harm vector \u2014 private key loss and theft. As regulation increases, theater rises while actual user protection remains low. The theater serves regulators (demonstrating oversight) and platforms (demonstrating security consciousness) more than users.",
+    "directionality_logic": "The extraction gradient concentrates on powerless agents (retail users) because they occupy the weakest position in exit capacity. A retail user with 10,000 USD on an exchange faces trapped circumstances: accessing the asset requires holding custody through the platform (lock-in), moving it to self-custody requires technical expertise (barrier), and losing the key results in permanent loss (irreversibility). The user's d value is near 1.0 (full victim). An institutional actor with the same balance at the same platform has d near 0.2: they can hire security expertise, arrange custody insurance, or reallocate to alternatives. The platforms and vendors have d near 0.0 to negative: they benefit from every transaction and from the general ecosystem growth driven by user adoption. The exchange platform's institutional actor status is critical \u2014 it provides the arbitrage option (exit to competitors or decentralized trading) that gives it low d despite beneficiary status. The constraint's extraction mechanism relies on the gap: platforms can offer convenience at the cost of irreversible loss risk because users lack the exit capacity to refuse.",
+    "perspectival_gap": "This constraint shows maximum perspectival divergence between trapped and mobile agents. The retail user (powerless/trapped/global) sees a snare \u2014 permanent asset loss with no appeal. The platform (institutional/arbitrage/global) sees a rope \u2014 efficient coordination of trading and custody. The regulatory framework (institutional/constrained/national) sees theater \u2014 compliance activities that satisfy audit trails without preventing losses. Institutional custody providers (organized/mobile/global) see manageable tangled rope because they can exit platform lock-in and have insurance options. The falsest summit is the cryptographic immutability mountain: irreversibility is often presented as inherent to blockchain when it is actually a design choice. Systems like Ethereum smart contracts already implement reversibility through upgradeable contracts and multi-sig controls; some layer-2 systems provide transaction rollback windows. The mountain classification falsely naturalizes a contingent architecture choice.",
+    "mandatrophy_analysis": "RESOLUTION OF MANDATROPHY: This constraint resolves by recognizing that extraction and coordination are genuinely both present in the same structure. The platforms provide real coordination (consolidated security, trading liquidity, user interface, regulatory compliance) \u2014 users genuinely benefit from access to these services. Simultaneously, the platforms extract through lock-in (users cannot easily move assets to competitors), through asymmetric custody risk (platforms control key management but don't fully bear asset loss), and through opacity (users are often unaware of their actual custody exposure). The tangled rope classification is the correct synthesis: the constraint cannot be reduced to pure coordination (rope) because the extraction is real and asymmetric; cannot be reduced to pure extraction (snare) because users genuinely benefit from the coordination function. The theater ratio indicates that regulatory attempts to resolve mandatrophy through security theater (KYC, reserves attestation) are increasing \u2014 creating the appearance of safety without addressing the core mechanism. True resolution would require either (a) engineering mechanisms for key recovery that don't compromise decentralization (omega variable 3), (b) insurable custody that socializes losses (omega variable 2), or (c) user adoption of distributed custody alternatives that reduce platform dependence (omega variable 4). The current trajectory shows theater increasing (ratio 0.48 \u2192 0.65) while extraction also increases (0.42 \u2192 0.58), indicating that mandatrophy is being masked rather than resolved."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "cryptocurrency_exchange_systemic_risk",
+      "decentralized_finance_smart_contract_security",
+      "regulatory_custody_standards_divergence"
+    ],
+    "dual_formulation_note": "User asset security decomposes into distinct constraints: (1) private key management and self-custody irreversibility (\u03b5\u22480.65, snare/tangled rope), (2) platform custody and counterparty risk (\u03b5\u22480.48, tangled rope), (3) regulatory custody standards (\u03b5\u22480.35, piton). Each has different base extraction metrics but they share the underlying tension between irreversibility guarantees and user protection requirements. This story focuses on the integrated user experience constraint; sister stories address platform systemic risk and regulatory arbitrage separately."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

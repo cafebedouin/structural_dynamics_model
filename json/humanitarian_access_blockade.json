@@ -1,0 +1,215 @@
+{
+  "header": {
+    "constraint_id": "humanitarian_access_blockade",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "Humanitarian Access Blockade in Conflict Zones",
+    "topic_domain": "geopolitical/humanitarian",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "blockading_state_military",
+      "blockading_coalition_leadership"
+    ],
+    "victims": [
+      "civilian_population",
+      "humanitarian_organizations",
+      "medical_infrastructure"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Blockaded Civilian Population",
+      "comment": "PERSPECTIVE 1: CIVILIAN POPULATION (SNARE) \u2014 Trapped within geographic boundaries with no exit. Cannot obtain food, medicine, or fuel. Bears maximum extraction cost with zero agency or alternatives. The blockade is enforced through military control of all entry/exit points. Classification emerges from complete structural immobility: civilians cannot negotiate, organize, or escape."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Humanitarian Organization",
+      "comment": "PERSPECTIVE 2: HUMANITARIAN ORGANIZATION (TANGLED ROPE) \u2014 Constrained by military authorization requirements, security risks, and bureaucratic access negotiations, yet coordinates essential survival logistics. Benefits from operational legitimacy and partial access granted by blockading authority; simultaneously bears extraction through fees, delays, conditional access, and mission compromise. Moderate power enables some negotiation; constrained exit means costs of withdrawal are high (organizational mission failure, staff safety liability) but theoretically possible."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Blockading Military Command",
+      "comment": "PERSPECTIVE 3: BLOCKADING MILITARY COMMAND (ROPE) \u2014 Experiences the constraint as pure coordination of military logistics. The blockade enforces territorial control and denies resources to adversaries. From this perspective, it is a coordination mechanism for war strategy: communicating capability (blockade is enforced), maintaining supply lines, and preventing enemy resupply. Institutional power and arbitrage exit (can revoke blockade at strategic discretion) produce the rope classification."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Organized Resistance Movement",
+      "comment": "PERSPECTIVE 4: ORGANIZED RESISTANCE (SNARE) \u2014 Underground supply networks face constant military interdiction. Organized enough to coordinate black-market relief but constrained by severe enforcement action (arrest, execution). The blockade simultaneously attempts to suppress and is suppressed by organized resistance. Chi remains high despite organized power because suppression is equally severe \u2014 enforcement mechanisms match organizational capacity."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The International Sanctions Regime",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL SANCTIONS REGIME (SCAFFOLD) \u2014 Blockade functions as enforcement mechanism for broader sanctions architecture; has explicit sunset clause tied to political settlement negotiations. Sanctions are framed as temporary coercive measure to force diplomatic capitulation, with declared endpoint (peace agreement, regime change, or policy concession). Organized international actors see exit pathway and sunset timeline, reducing experienced extraction relative to civilians' view."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The International Legal Framework",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL LEGAL FRAMEWORK (PITON) \u2014 Blockade persists despite significant International Humanitarian Law violations (collective punishment, destruction of medical infrastructure, food denial). The legal framework exists (Geneva Conventions, UN Charter) but has degraded enforcement capacity. Theater ratio is high (statements of concern, UN resolutions, humanitarian appeals) while functional constraint enforcement is low (blockade continues without enforcement action). The framework maintains legitimacy through performative compliance declarations while the underlying violation persists."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Strategic Necessity View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / STRATEGIC NECESSITY VIEW (MOUNTAIN) \u2014 From civilizational perspective, some actors claim the blockade is immutable law of war: successful military campaigns require denying adversary resources; this is structural necessity, not contingent policy choice. However, structural data reveals this as false naturalization \u2014 blockades are chosen policy instruments with alternative strategies available (surgical strikes, targeted sanctions, territorial control without collective punishment)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "blockade_strategic_necessity",
+      "question": "Is the blockade a necessary military tactic or a policy choice with available alternatives?",
+      "resolution_mechanism": "Comparative analysis of comparable conflicts: which achieve military objectives without full blockades? What is the actual military payoff of blocking civilian goods vs. only blocking military supplies?",
+      "impact": "If necessary: classification shifts toward mountain (immutable constraint). If policy choice: snare classification is correct (contingent extractive mechanism). Determines whether blockade is reframeable as coordination problem or inherent to conflict structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether blockade is strategic necessity or policy choice"
+    },
+    {
+      "id": "humanitarian_access_negotiation_leverage",
+      "question": "Does humanitarian access conditionality create negotiating leverage for the blockading power or does it primarily extract humanitarian resources?",
+      "resolution_mechanism": "Analysis of humanitarian negotiations: do conditions imposed by blockading power result in documented policy concessions? Or do they primarily delay aid without strategic payoff?",
+      "impact": "If leverage is genuine: blockade has coordination function (tangled rope strengthens). If leverage is primarily performative: extraction dominates and snare classification deepens.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether humanitarian conditionality creates negotiation leverage"
+    },
+    {
+      "id": "civilian_death_extraction_mechanism",
+      "question": "Is civilian mortality a side effect of blockade enforcement or a deliberate extraction mechanism (collective punishment incentivizing political capitulation)?",
+      "resolution_mechanism": "Documentation analysis: do blockading forces document civilian impact assessments? Evidence of intentionality from military communications or policy statements. Comparative analysis: does mortality rate exceed what would occur from military operations alone?",
+      "impact": "If side effect: extractiveness remains high but suppression may be reframed as war cost rather than extraction. If deliberate: snare classification confirmed with maximal moral weight \u2014 extraction is explicitly coercive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether civilian mortality is side effect or deliberate extraction"
+    },
+    {
+      "id": "black_market_threshold_sustainability",
+      "question": "At what blockade enforcement intensity does black-market supply become structurally unable to sustain civilian population?",
+      "resolution_mechanism": "Economic modeling: ratio of black-market supply capacity to population demand; comparison across historical blockades (Leningrad, Warsaw Ghetto, Gaza, Yemen). Identification of critical enforcement thresholds.",
+      "impact": "If black markets can sustain population indefinitely: exit option exists (constrained rather than trapped). If black markets collapse under enforcement: trapped classification confirmed, snare deepens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Black-market sustainability threshold"
+    },
+    {
+      "id": "humanitarian_organization_mission_compromise",
+      "question": "Does humanitarian organization participation in blockade-managed access constitute aid delivery or legitimization of extraction?",
+      "resolution_mechanism": "Post-conflict analysis: do humanitarian organizations' presence reduce net harm or enable blockade persistence by providing veneer of legitimacy? Organizational exit analysis: what happens if organizations withdraw?",
+      "impact": "If organizations reduce harm: tangled rope justified (genuine coordination function alongside extraction). If organizations enable extraction: classification should shift toward snare for organizations (their exit option is mobile/higher power, but their choice to participate extends blockade).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether humanitarian participation legitimizes blockade"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 18
+  },
+  "commentary": {
+    "narrative_context": "The humanitarian access blockade in conflict zones represents a structural mechanism that extracts maximum cost from civilian populations while maintaining military strategic rationale. The constraint exhibits snare characteristics from the perspective of trapped civilians with zero exit options, while appearing as coordination (rope) from the blockading military perspective and mixed coordination-extraction (tangled rope) from humanitarian organizations that mediate access. The blockade enforces territorial control by denying civilians food, medicine, fuel, and other essentials, simultaneously denying these resources to organized resistance. The extractiveness has increased over time (0.45 to 0.68) as enforcement mechanisms intensify, while theater ratio remains moderate (0.35 to 0.45) because the blockade's operation is relatively transparent \u2014 the enforcement is visible rather than hidden. The constraint's suppression (0.78) reflects severe barriers to exit: civilians cannot leave the geographic area under blockade, underground resistance networks face lethal enforcement, humanitarian organizations face authorization gatekeeping. The blockade functions simultaneously as military strategy (coordination from the blockading power's perspective) and as collective punishment (extraction from civilians' perspective), making it a diagnostic case for perspectival classification and the mandatrophy problem.",
+    "key_agents": [
+      "Civilian Population: Primary victim (powerless/trapped) \u2014 cannot exit geographic boundaries, cannot negotiate access to essentials, zero agency in blockade design or enforcement",
+      "Blockading Military Command: Primary beneficiary (institutional/arbitrage) \u2014 maintains territory control, denies resources to adversaries, can revoke blockade at strategic discretion",
+      "Humanitarian Organization: Secondary actor (moderate/constrained) \u2014 coordinates survival logistics under military authorization; benefits from operational legitimacy; bears extraction through fees, delays, conditional access, mission compromise",
+      "Organized Resistance Movement: Secondary victim (organized/constrained) \u2014 coordinates underground supply networks; faces severe enforcement action but retains organizational agency",
+      "International Sanctions Regime: Institutional framework (organized/mobile) \u2014 blockade as enforcement mechanism for broader sanctions; has explicit sunset clause tied to political settlement",
+      "International Legal Framework: Institutional observer (institutional/arbitrage) \u2014 International Humanitarian Law framework exists but enforcement capacity is degraded; maintains performative compliance"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and increasing. The blockade imposes maximum cost on civilians (food denial, medical supply denial, fuel scarcity) while the blockading power captures strategic benefits (territorial control, adversary degradation, negotiation leverage). The trajectory shows accumulation: initial blockade (0.45) tightens enforcement over time, increasing civilian impact. Suppression (0.78): Very high. Enforcement mechanisms are severe: military control of all entry/exit points, lethal interdiction of black-market supply, arrest and execution of resistance participants. Civilians have no practical exit option \u2014 the only alternatives are displacement (internal) or death. Theater ratio (0.45): Low-moderate. The blockade is operationally transparent \u2014 its enforcement is visible, not hidden. However, some performative content exists: humanitarian appeals, UN resolutions, and legal framework statements create theater around enforcement. The theater is lower than institutional blockades that maintain legitimacy through deception; the blockade is often defended explicitly as necessary military tactic. Claimed type (Snare): From civilians' perspective, this is maximal extraction with no coordination benefit. The blockade does not solve a collective action problem for civilians \u2014 it imposes one-way cost extraction.",
+    "perspectival_gap": "The snare perspective (civilians) and rope perspective (military command) represent maximum divergence in experienced classification. Both perspectives measure the same constraint (resource denial via military enforcement) but with opposite directionality. Civilians experience extraction because d approaches 1.0 (full target). Military command experiences coordination because d approaches 0.0 (full beneficiary). The tangled rope perspective (humanitarian organizations) represents the moderate middle ground where both coordination (logistics management) and extraction (conditionality, fees) occur simultaneously. The scaffold perspective (international sanctions regime) introduces time: blockade appears temporary with sunset clause, reducing experienced extraction. The piton perspective (international legal framework) reveals degradation: the framework exists (Geneva Conventions prohibit collective punishment) but enforcement is performative. The analytical mountain perspective risks naturalizing a policy choice as immutable law of war.",
+    "directionality_logic": "Beneficiary directionality (blockading military): Low d (0.05-0.20), deriving from institutional power + arbitrage exit + beneficiary status. The military command can exit the blockade at strategic discretion; they benefit from its continuation. Victim directionality (civilians): High d (0.92-0.98), deriving from powerless status + trapped exit + victim status. Civilians cannot exit; they bear extraction cost. Humanitarian organization directionality (moderate): Medium d (0.50-0.65), deriving from moderate power + constrained exit + mixed beneficiary/victim status. Organizations benefit from operational legitimacy but bear extraction through conditionality. Organized resistance directionality (organized): High d (0.75-0.85) despite organized power, because suppression is equally severe (enforcement matches organizational capacity). The engine computes chi = epsilon \u00d7 f(d) \u00d7 sigma(scope), amplifying extraction experienced by trapped/powerless agents while dampening extraction experienced by beneficiaries with arbitrage exits.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: This constraint demonstrates the mandatrophy's core issue \u2014 whether a constraint that extracts severely is extractive by nature or by political choice. The civilian perspective sees snare (inherent extraction). The military perspective sees rope (inherent coordination). Both cannot be simultaneously correct about the constraint's objective type \u2014 one is false naturalization. The resolution: the constraint IS a snare from the civilian's structural position (trapped, powerless, zero exit, zero coordination benefit). The military's rope perspective is false naturalization (claiming strategic necessity as immutable law). The Snare classification prevails because it captures the constraint from the perspective of those most constrained by it. The mandatrophy is resolved by recognizing that indexical classification is not about finding 'the true type' but about measuring what the constraint actually is from each structural position. The snare is the most honest read because it acknowledges the asymmetry: civilians cannot exit, cannot coordinate, cannot negotiate. The rope is a perspective manufactured by power asymmetry, not a structural feature of the constraint itself."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "territory_control_mechanism",
+      "organized_resistance_suppression"
+    ],
+    "dual_formulation_note": "The humanitarian access blockade is upstream of both territory control mechanisms (which depend on blockade enforcement) and organized resistance suppression (which depends on blockade's denial of supply lines). The blockade is a structural mechanism enabling both parent constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.78
+    }
+  ]
+}

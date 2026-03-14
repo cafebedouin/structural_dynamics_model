@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "tax_haven_capital_flight",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "taxhaven"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Tax Haven Capital Flight and Revenue Extraction",
+    "topic_domain": "economic_policy/taxation",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "multinational_corporations",
+      "wealth_concentrators",
+      "financial_intermediaries"
+    ],
+    "victims": [
+      "sovereign_states",
+      "public_services",
+      "low_income_citizens"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Tax Base (Trapped Citizen)",
+      "comment": "PERSPECTIVE 1: TRAPPED TAX BASE \u2014 Individual citizens and small domestic businesses cannot exit the domestic tax system without emigrating. They face full tax obligation on earned income while witnessing capital flight reduce the tax base, forcing higher rates or service cuts. Experiences extraction as snare: trapped in system, no alternatives, maximum experienced coercion."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Sovereign State",
+      "comment": "PERSPECTIVE 2: SOVEREIGN STATE (CONSTRAINED) \u2014 Cannot easily exit the system without eliminating source of capital, yet can only constrain capital flight at high cost (capital controls, brain drain acceleration). Faces genuine extraction: revenue loss, service reduction, fiscal pressure. Cannot adopt competitive tax policy without race-to-bottom dynamics."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Multinational Corporation",
+      "comment": "PERSPECTIVE 3: MULTINATIONAL CORPORATION (ROPE) \u2014 Experiences the constraint as coordination mechanism: transfer pricing and haven strategies allocate capital efficiently across jurisdictions, minimize global tax drag. Benefits from first-mover advantage in structuring. Experiences constraint as pure coordination with no coercion \u2014 full arbitrage optionality."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Coalition of Nation-States",
+      "comment": "PERSPECTIVE 4: COALITION OF NATION-STATES (ORGANIZED) \u2014 Sees capital flight as both coordination problem (need harmonized minimum tax rates) and extraction mechanism (enforcement cost, race-to-bottom pressure). OECD/G20 coalitions perceive genuine coordination function (Pillar Two agreements) alongside asymmetric extraction from smaller states unable to enforce higher rates. Constrained by defection incentives."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The International Tax Architecture",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL TAX ARCHITECTURE (PITON) \u2014 Post-WW2 legal framework (arm's-length principle, permanent establishment doctrine) designed for industrial-era manufacturing is now largely ceremonial for digital capital. Regulatory theater persists (transfer pricing documentation, BEPS initiatives) but functional efficacy is degraded \u2014 the architecture cannot prevent capital flight from digital services, data flows, or IP licensing. Maintained through institutional inertia despite acknowledged inadequacy."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Fundamental Asymmetry View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From universal perspective, capital is mobile and taxation is territorial: there is an irreducible structural tension between the mobility of wealth and the territorial basis of taxation. This perspective risks naturalizing a contingent institutional arrangement (the nation-state tax system) as a law of nature. However, the structural data (high suppression, behavioral extraction, coordination by some agents) contradicts full mountain classification \u2014 the engine will detect this as false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "capital_flight_voluntary_exit",
+      "question": "Is capital flight structurally unavoidable (inherent to global financial systems) or is it an artifact of deliberate institutional design and enforcement choices?",
+      "resolution_mechanism": "Comparative analysis of tax compliance rates in jurisdictions with strong enforcement vs weak enforcement; modeling counterfactual of fully global minimum tax enforcement with blockchain tracking",
+      "impact": "If unavoidable: mountain perspective justified \u2014 constraint is natural limit of taxation. If contingent: snare classification sustained \u2014 extraction mechanism can be prevented by coordinated enforcement.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether capital flight is structurally unavoidable or contingent on enforcement"
+    },
+    {
+      "id": "wealth_concentration_feedback",
+      "question": "Does capital flight reinforce wealth concentration in ways that create secondary extraction mechanisms (political capture, regulatory influence)?",
+      "resolution_mechanism": "Longitudinal analysis of campaign finance, lobbying intensity, and regulatory capture correlating with capital gains from tax havens; measurement of wealth concentration elasticity to tax haven availability",
+      "impact": "If feedback loop confirmed: snare is part of larger constraint family (tax_haven_political_capture); extractiveness may be understated at 0.68. If feedback weak: snare is isolated extraction mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether capital flight creates secondary political extraction feedback"
+    },
+    {
+      "id": "pillar_two_enforcement_credibility",
+      "question": "Can OECD Pillar Two (15% global minimum tax) create stable coordination without defection incentives, or does it require ongoing costly enforcement?",
+      "resolution_mechanism": "Monitoring of tax haven defection from Pillar Two commitments; measurement of effective minimum tax rates across jurisdictions post-implementation; analysis of resource required for compliance verification",
+      "impact": "If coordination succeeds: constraint shifts from snare toward tangled_rope or scaffold (sunset via harmonization). If defection emerges: coalition constraint becomes extraction mechanism for compliant states.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Pillar Two creates stable coordination or requires ongoing enforcement"
+    },
+    {
+      "id": "digital_versus_physical_capital",
+      "question": "Is capital flight fundamentally different for digital/IP-based capital vs physical/manufacturing capital, suggesting two distinct constraints?",
+      "resolution_mechanism": "Decomposition of capital flight flows by sector; comparative analysis of tax avoidance rates for digital services vs manufacturing; measurement of enforcement capacity differential",
+      "impact": "If structurally distinct: write separate constraint stories (tax_haven_digital_capital_flight vs tax_haven_manufacturing_capital_flight). Current story conflates observables with different \u03b5 values.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether digital and physical capital flight are structurally distinct constraints"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Tax haven capital flight operates as a snare for trapped domestic taxpayers and constrained sovereign states, extracting revenue from the base while benefiting multinational corporations with arbitrage optionality. The constraint exhibits the full range of DR types across observer positions: trapped citizens experience pure extraction (snare); nation-states experience constrained extraction with some coordination function (tangled rope); multinationals experience coordination (rope); coalitions like OECD perceive both coordination and extraction (tangled rope); the international tax architecture sees its own performative role degraded (piton); the analytical observer risks naturalizing a contingent institutional arrangement as inherent to capital mobility (false mountain). The theater ratio (0.58) reflects regulatory theater \u2014 BEPS initiatives, transfer pricing documentation, country-by-country reporting \u2014 that creates appearance of enforcement while capital flight continues through legal structures. Extractiveness has increased over 20 years (0.42 \u2192 0.68) as digital capital and IP licensing have outpaced enforcement mechanisms. The suppression value (0.72) captures the high barriers to exit for trapped citizens (emigration required) and the policy race-to-bottom for constrained states (competitive pressure against capital controls or rate increases).",
+    "key_agents": [
+      "Domestic Citizens and Small Businesses: Primary victims (powerless/trapped) \u2014 cannot exit tax system without emigrating, face increasing tax burden as capital flies",
+      "Sovereign States: Secondary victims (moderate/constrained) \u2014 cannot easily enforce higher rates without capital flight acceleration; face fiscal squeeze and service cuts",
+      "Multinational Corporations: Primary beneficiaries (institutional/arbitrage) \u2014 capture tax avoidance through transfer pricing, IP licensing, and haven structures; experience constraint as coordination",
+      "Wealth Concentrators: Secondary beneficiaries (powerful/arbitrage) \u2014 benefit from capital mobility and tax avoidance strategies unavailable to salaried workers",
+      "Financial Intermediaries: Tertiary beneficiaries (institutional/arbitrage) \u2014 earn fees from tax haven structures, estate planning, and capital flight facilitation",
+      "Coalition of Nation-States: Organized agent (organized/constrained) \u2014 perceives both coordination problem (harmonized rates) and extraction pressure from defection incentives",
+      "Analytical Observer: Civilizational context (analytical/analytical) \u2014 risks seeing capital mobility as natural law rather than contingent institutional arrangement"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts significant revenue from domestic tax bases \u2014 estimates suggest $21-32 trillion in offshore wealth and $427-605 billion annual tax loss. The extraction is not total (some capital remains, some multinationals accept higher tax burdens) but substantial and growing. The 20-year trajectory (0.42 \u2192 0.68) reflects digitalization outpacing enforcement \u2014 IP licensing, data flows, and software licensing are easier to relocate than manufacturing facilities. Suppression (0.72): High. Multiple barriers prevent exit: citizens must emigrate to escape domestic tax obligation; states face capital flight if they raise rates unilaterally; multinationals face political pressure and reputational cost for havens (increasingly), but the barriers remain surmountable through legal structuring. The suppression reflects both legal constraints (tax treaties that facilitate capital mobility) and practical constraints (enforcement costs). Theater ratio (0.58): Moderate-high. Significant regulatory theater: BEPS initiatives generate compliance documents, transfer pricing documentation creates appearance of scrutiny, country-by-country reporting mandates create data flows \u2014 but functional enforcement remains limited. Digital capital flows through IP licensing and data licensing in ways that legal documentation cannot effectively track or prevent. The theater has increased over time as regulators respond to capital flight with more documentation requirements rather than structural changes.",
+    "perspectival_gap": "Multinational corporations (institutional/arbitrage) see rope because the constraint solves their coordination problem: how to legally minimize global tax liability while satisfying multiple jurisdictional requirements. They experience low suppression (legal structures are available, compliance cost is manageable). Trapped citizens (powerless/trapped) see snare because the constraint forces them to bear increasing fiscal burden with no escape. They experience maximum suppression (cannot exit without emigration). Constrained states (moderate/constrained) see tangled rope because capital flight creates both a coordination problem (need harmonized minimum rates) and an extraction mechanism (small states forced to compete with revenue reductions). The OECD coalition (organized/constrained) bridges these: they perceive the coordination problem clearly (Pillar Two as solution) but face extraction from defection incentives (small states or havens that break ranks). The piton perspective reveals that regulatory theater (BEPS, transfer pricing) has replaced functional enforcement: states create documentation and reporting requirements that satisfy political constituencies (appearing to 'do something') while the underlying capital mobility remains unchanged.",
+    "directionality_logic": "Directionality d is determined by whether agents are net beneficiaries or victims of capital flight. Multinationals with arbitrage optionality derive low d (0.1-0.2): they benefit from the constraint and have high exit optionality (can relocate operations, change structures). Trapped citizens derive high d (0.90-0.98): they bear extraction cost and cannot exit without emigration. Constrained states derive moderate-high d (0.65-0.75): they bear significant extraction cost (revenue loss, service cuts) but have some agency (can attempt enforcement, negotiate coalitions). The directionality chain feeds into chi = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S): beneficiaries experience low \u03c7 (extraction runs toward them); victims experience high \u03c7 (extraction runs away from them). At global scope, \u03c3(S)=1.2 amplifies extractiveness for all agents, reflecting that capital flight is a planetary-scale coordination failure.",
+    "mandatrophy_analysis": "RESOLVED MANDATROPHY: The constraint genuinely exhibits snare classification when examined from the perspective of trapped victims (citizens, states bearing extraction cost). The coordination function perceived by beneficiaries (multinationals) is real but not dominant \u2014 it is coordination that benefits the extractors while harming the extracted-from. This is precisely what tangled rope describes: genuine coordination (capital allocation, efficient global structuring) alongside asymmetric extraction (revenue loss, fiscal squeeze). The piton element (regulatory theater) reflects degradation: when BEPS and transfer pricing standards fail to prevent capital flight, enforcement shifts to documentation and reporting (theater) rather than structural change. The analytical observer's mountain (naturalizing capital mobility as inherent to capital) is a false summit \u2014 the structural data shows high suppression and behavioral extraction, not immutability. If capital mobility were truly immutable, we would see: (1) equal capital flight from all tax regimes (we don't \u2014 countries with strong enforcement and political will see less flight), (2) zero effectiveness of Pillar Two negotiations (unclear \u2014 implementation ongoing), (3) no variation by sector (we see variation: digital capital more mobile than manufacturing). The mountain perspective naturalizes a contingent institutional arrangement (asymmetric enforcement, weak international coordination) as inherent to globalization."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "sovereign_debt_sustainability",
+      "wealth_inequality",
+      "regulatory_capture_by_finance"
+    ],
+    "dual_formulation_note": "Tax haven capital flight is upstream of both sovereign debt crises (states compensate lost revenue through borrowing) and political capture (multinationals lobby against enforcement). Digital capital flight (IP/data licensing) and physical capital flight (manufacturing relocation) have distinct \u03b5 values and should be decomposed into separate stories if precision is required: tax_haven_digital_capital_flight (higher \u03b5, harder to enforce) and tax_haven_manufacturing_capital_flight (lower \u03b5, some enforcement success)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.85
+    }
+  ]
+}

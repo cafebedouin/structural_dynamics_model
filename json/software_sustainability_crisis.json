@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "software_sustainability_crisis",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "softsusr"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Software Sustainability Crisis: Dependency Lock and Extraction",
+    "topic_domain": "software_engineering/digital_infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "commercial_dependency_extractors",
+      "dominant_platform_maintainers"
+    ],
+    "victims": [
+      "downstream_developers",
+      "open_source_maintainers",
+      "end_users",
+      "software_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Downstream Developer",
+      "comment": "PERSPECTIVE 1: DOWNSTREAM DEVELOPER (SNARE) \u2014 Trapped in dependency chains with no meaningful exit. Migration costs are prohibitive; fragmentation of ecosystems creates lock-in; security vulnerabilities force continued exposure. The developer cannot walk away without rebuilding entire systems. Bears full extraction cost with minimal alternatives."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Open Source Maintainer",
+      "comment": "PERSPECTIVE 2: OPEN SOURCE MAINTAINER (SNARE) \u2014 Trapped in unpaid maintenance of critical infrastructure. Social obligation, reputation lock, and ecosystem dependency prevent exit. Bearing full cost of security patches, compatibility work, and burnout without compensation. No viable exit path short of complete abandonment."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The End User / Enterprise Adopter",
+      "comment": "PERSPECTIVE 3: END USER / ENTERPRISE ADOPTER (SNARE) \u2014 Constrained by high switching costs and supply chain dependencies. Forced to maintain aging systems with unmaintained dependencies or undertake expensive migrations. Bears security and stability risks without control over the underlying ecosystem."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Commercial Dependency Extractor",
+      "comment": "PERSPECTIVE 4: COMMERCIAL DEPENDENCY EXTRACTOR (ROPE) \u2014 Institutional actor controlling critical dependencies (logging frameworks, package managers, cloud SDKs). Benefits from ecosystem lock-in, vendor lock patterns, and the necessity of integration. Experiences the constraint as coordination mechanism that routes value toward them."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Source Governance Coalition",
+      "comment": "PERSPECTIVE 5: OPEN SOURCE GOVERNANCE COALITION (SCAFFOLD) \u2014 Organized agents (Linux Foundation, Software Heritage, supply-chain security initiatives) see sustainability as a solvable coordination problem with sunset logic. Funding models, stewardship programs, and formalized maintenance pathways are building alternatives to volunteer burnout. High suppression tolerated because coalition perceives declining extraction as norms mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Traditional Open Source Ethos",
+      "comment": "PERSPECTIVE 6: TRADITIONAL OPEN SOURCE ETHOS (PITON) \u2014 The volunteer maintenance model persists through institutional inertia and cultural mythology ('the gift economy,' 'intrinsic motivation') despite clear systemic failure signals (burnout epidemiology, abandoned critical packages, security catastrophes). The ethos maintains itself performatively through narrative (celebrating 'heroes,' emphasizing 'passion') while actual maintenance work is increasingly stratified and precarious. Theater ratio reflects the gap between the communitarian narrative and the extractive reality."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From the full system perspective, software sustainability contains genuine coordination: interoperability standards, shared security infrastructure, and collaborative dependency management create real positive externalities. Simultaneously, extraction operates at scale: vendor lock-in, unpaid maintenance subsidizing commercial products, and platform monopolies. The constraint is both coordination and asymmetric extraction, requiring both frameworks to understand."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "volunteer_vs_precarious_labor",
+      "question": "Are open source maintainers trapped by genuine social obligation and identity lock, or by economic precarity (no alternative stable income in their jurisdiction)?",
+      "resolution_mechanism": "Longitudinal study of maintainer exit patterns; correlation between maintenance persistence and (a) identity fusion with project, (b) available alternative employment, (c) geographic location and economic mobility. Post-exit economic outcomes analysis.",
+      "impact": "If identity-locked: classification as Snare remains; suppression is internalized cognitive capture. If economically precarious: reclassify suppression mechanism as structural economic constraint; implications for policy intervention differ sharply.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether maintainer trap is identity-based or economic"
+    },
+    {
+      "id": "coordinated_ecosystem_vs_monolithic_lock",
+      "question": "Is the dependency ecosystem a coordination mechanism (interoperable components solving genuine technical problems) or a lock-in mechanism (monolithic suppliers controlling upgrade paths)?",
+      "resolution_mechanism": "Network analysis of dependency graphs: measure modularity vs centralization. Case studies comparing ecosystems with distributed governance (npm ecosystem fragments) vs concentrated governance (Java frameworks under single vendor). Exit cost analysis for different dependency structures.",
+      "impact": "If coordinated: Rope and Tangled Rope classifications dominate; suppression is coordination cost. If lock-in: Snare and Scaffold classifications dominate; suppression is extractive barrier.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ecosystem is coordination or lock-in mechanism"
+    },
+    {
+      "id": "sustainability_funding_viability",
+      "question": "Can formalized sustainability models (Linux Foundation, OpenSSF funding, corporate stewardship programs) actually sunset the volunteer extraction, or are they insufficient proxies that maintain the mythology while concentrating control?",
+      "resolution_mechanism": "Longitudinal tracking of funded projects: measure maintainer burnout, security incident rates, and vendor lock-in evolution. Comparison of sustainability outcomes between funded and unfunded critical packages. Analysis of corporate stewardship programs for hidden extraction.",
+      "impact": "If viable: Scaffold perspective confirmed \u2014 true sunset pathway exists. If insufficient: Scaffold is aspirational; the piton perspective (maintenance through theater) is more accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether sustainability funding models can resolve the constraint"
+    },
+    {
+      "id": "supply_chain_security_vs_centralization_risk",
+      "question": "Do supply-chain security measures (SBOMs, provenance tracking, vulnerability scanning) reduce real risk or increase concentration of control in fewer security-auditing entities, creating new extraction points?",
+      "resolution_mechanism": "Analysis of security incident outcomes before/after major supply-chain initiatives. Mapping of control concentration in SBOMs, provenance systems, vulnerability databases. Case studies of how security requirements shift lock-in from technical to compliance domains.",
+      "impact": "If risk-reducing: Scaffold and coordinated Rope perspectives correct. If centralizing: security becomes a new extraction mechanism; Snare classification shifts from technical lock-in to security compliance lock-in.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether supply-chain security reduces or concentrates risk"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 16
+  },
+  "commentary": {
+    "narrative_context": "The software sustainability crisis represents a structural extraction mechanism emerging from the collision between free labor contributions (open source maintenance) and concentrated commercial benefit (corporate dependency on unpaid infrastructure). The constraint exhibits the classic snare signature: downstream actors (developers, end users, maintainers) face escalating costs and decreasing exit options as software ecosystems mature and dependencies proliferate. Simultaneously, the constraint possesses coordination functions (interoperability standards, shared security infrastructure, collaborative problem-solving) that justify some extraction as transaction cost. The theater ratio (0.65) reflects the gap between the mythology of open source altruism ('gift economy,' 'intrinsic motivation') and the extractive reality (vendor lock-in, unpaid maintenance subsidizing commercial products, burnout epidemiology). Organized agents are building alternative pathways (Linux Foundation stewardship, OpenSSF funding, supply-chain security initiatives) with genuine sunset logic, but these are threatened by capture and by security compliance measures that may substitute technical lock-in with regulatory lock-in.",
+    "key_agents": [
+      "Downstream Developers: Primary victim (powerless/trapped) \u2014 locked into dependency chains; migration prohibitively costly; no exit option without system rebuild",
+      "Open Source Maintainers: Primary victim (powerless/trapped) \u2014 unpaid maintenance of critical infrastructure; social obligation and reputation lock prevent exit; bearing full burnout cost",
+      "End Users / Enterprises: Secondary victim (moderate/constrained) \u2014 high switching costs; forced to maintain aging systems or undertake expensive migrations; security/stability risk exposure without ecosystem control",
+      "Commercial Dependency Extractors: Primary beneficiary (institutional/arbitrage) \u2014 controlling critical dependencies; benefiting from vendor lock-in; capturing value through ecosystem necessity",
+      "Open Source Governance Coalition: Organized actors (organized/constrained) \u2014 Linux Foundation, Software Heritage, OpenSSF building alternative sustainability models; perceiving sunset pathway",
+      "Traditional Open Source Ethos: Institutional maintenance (institutional/arbitrage) \u2014 volunteer model persists through cultural mythology despite systemic failure; theater maintained through narrative celebration",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees both genuine coordination functions and asymmetric extraction; recognizes the tangled rope structure"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate and rising. The constraint captures significant value through lock-in mechanisms: dependencies become harder to replace as ecosystems mature, commercial vendors build layers atop unpaid open source infrastructure, and supply-chain complexity raises switching costs. The trajectory from 0.28 (when ecosystems were smaller and exit was more feasible) to 0.58 (current state of monolithic dependency graphs) reflects increasing capture. The value is not extraction of wealth but extraction of labor (maintenance cost shifted to unpaid volunteers) and control (vendor lock-in). Suppression (0.68): High. Multiple barriers prevent exit: technical switching costs (reimplementation, testing, migration), market lock-in (ecosystem standardization on dominant dependencies), social pressure (reputation cost of forking or abandoning), and economic precarity (developers in lower-income regions have fewer alternative income options). Theater ratio (0.65): Moderate-high and rising. The gap between open source mythology ('merit-based,' 'volunteer,' 'community-driven') and reality (corporate vendors extracting value, individual burnout, precarious maintenance) has widened. Funding campaigns, sustainability narratives, and 'hero maintainer' coverage perform coordination while obscuring structural extraction. The theater increased from 0.35 to 0.65 as sustainability rhetoric became more elaborate precisely as systemic problems (zero-days in critical packages, major library abandonment) escalated.",
+    "directionality_logic": "Each perspective's directionality (d) is derived from its structural position in the extraction flow. Trapped developers and maintainers experience maximum d \u2248 0.95 (full extraction targets). Constrained enterprises experience moderate-high d \u2248 0.70-0.85 depending on alternative platform options. Institutional beneficiaries with arbitrage exit experience low d \u2248 0.10-0.20 (they can walk away or capture more value from alternatives). The analytical observer is positioned at d \u2248 0.72 (seeing the full structure from outside the principal extraction mechanisms). The scaffold coalition's d \u2248 0.60 reflects that while they bear suppression (building alternatives is costly), they have agency and perceive declining extraction through their sunset pathway.",
+    "perspectival_gap": "The constraint generates a large perspectival gap between trapped victims and institutional beneficiaries. Downstream developers and maintainers perceive pure extraction (Snare) with no coordination benefit \u2014 they experience only the suppression and lock-in costs. Commercial vendors perceive coordination (Rope) \u2014 they are solving genuine technical integration problems, and the dependency ecosystem does route value efficiently to them. The organized coalition perceives a solvable problem (Scaffold) \u2014 open source stewardship, formalized funding, and supply-chain security are building pathways to reduce extraction. The traditional open source ethos maintains itself through Piton mechanisms \u2014 the volunteer model is culturally sustained despite clear failure signals. The analytical observer sees the full hybrid structure (Tangled Rope) \u2014 genuine coordination functions exist alongside asymmetric extraction, and the classification depends on whether the observer emphasizes the coordination (rope-leaning) or the extraction (snare-leaning).",
+    "mandatrophy_analysis": "This constraint requires mandatrophy resolution at extractiveness > 0.70. The mandatrophy is: 'Is this a coordination mechanism that routes software reusability efficiently (Rope/Tangled Rope) or an extraction mechanism that colonizes volunteer labor for commercial benefit (Snare)?' The answer depends on perspective and time horizon. At the individual developer level (biographical), the constraint appears as pure Snare \u2014 the victim is locked in with no exit and no coordination benefit. At the institutional level (immediate), it appears as Rope or Tangled Rope \u2014 vendors genuinely do coordinate their dependencies and benefit from the ecosystem. At the civilizational level (generational), it appears as Scaffold if sustainability initiatives succeed, or Piton if they fail to replace volunteer extraction with formalized funding. The mandatrophy resolves by showing that the six-type perspectival presheaf accurately models the constraint's structural ambiguity \u2014 it IS coordination to institutional beneficiaries, it IS pure extraction to trapped developers, and it IS a solvable problem to organized governance coalitions. No single classification is 'correct' because the constraint genuinely operates as different types from different structural positions."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "open_source_maintenance_burnout",
+      "vendor_lock_in_digital_infrastructure",
+      "supply_chain_security_concentration"
+    ],
+    "dual_formulation_note": "Software sustainability constraint family has three downstream stories: (1) maintenance_burnout focuses on the psychological and labor dimensions of unpaid work (\u03b5\u22480.72); (2) vendor_lock_in focuses on technical switching costs and ecosystem lock (\u03b5\u22480.55); (3) supply_chain_security focuses on how security compliance can substitute or reinforce lock-in (\u03b5\u22480.48). Each story has its own base_properties, beneficiary/victim declarations, and measurements. The parent story (software_sustainability_crisis, \u03b5=0.58) coordinates across all three mechanistic domains."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

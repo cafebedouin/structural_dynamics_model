@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "cooperative_member_retention",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "coop_ret"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Cooperative Member Retention Constraint",
+    "topic_domain": "economic/organizational",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "established_member_base",
+      "cooperative_governance_structure"
+    ],
+    "victims": [
+      "potential_new_members",
+      "departing_members"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Trapped New Member",
+      "comment": "PERSPECTIVE 1: TRAPPED NEW MEMBER (SNARE) \u2014 A member drawn into a cooperative by initial benefits but facing high exit costs: social ostracism, loss of access to cooperative resources, reputation damage within tight-knit membership. Exit barriers include sunk capital contributions, loss of accumulated equity share, and psychological identification with group. Minimal coordination benefit perceived; extraction appears maximal."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Conflicted Active Member",
+      "comment": "PERSPECTIVE 2: CONFLICTED ACTIVE MEMBER (TANGLED ROPE) \u2014 Member experiences both genuine coordination benefits (shared purchasing power, collective decision-making, risk pooling) and asymmetric extraction (labor burden concentrated on active minority, governance structures that favor long-term incumbents, capital lock-in). Exit is possible but costly: loses accumulated equity, social bonds, and cooperative benefits. Mixed experience reflects real hybrid structure."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Established Membership Coalition",
+      "comment": "PERSPECTIVE 3: ESTABLISHED MEMBERSHIP COALITION (ROPE) \u2014 Long-term members with accumulated equity and governance influence see the constraint as pure coordination: retaining member commitment preserves the collective's scale and capital base. Exit options abundant (market alternatives, geographic mobility) but unnecessary \u2014 arbitrage options are available within the structure. Extraction appears minimal from this perspective; constraint functions as binding mechanism for mutual benefit."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Cooperative Federation",
+      "comment": "PERSPECTIVE 4: COOPERATIVE FEDERATION (SCAFFOLD) \u2014 Regional or national cooperative federation networks see member retention enforcement as a temporary coordination mechanism with structural sunset. As digital platforms reduce transaction costs and inter-cooperative networks mature, individual cooperative boundaries become less critical to member value capture. Retention mechanisms are strategically enforced but understood to be transitional \u2014 expect shift toward looser federated models. High visibility of sunset logic."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Legacy Cooperative Governance",
+      "comment": "PERSPECTIVE 5: LEGACY COOPERATIVE GOVERNANCE (PITON) \u2014 Traditional board structures and membership committees enforce retention mechanisms (capital lockup, exit fees, governance restrictions) that were functionally necessary in pre-digital cooperative environments. These mechanisms persist through institutional inertia and cultural tradition despite reduced functional need. Theater ratio reflects that enforcement is increasingly performative \u2014 member retention is driven more by habit and social cohesion than by structural necessity. The governance apparatus maintains the constraint not because it works optimally but because alternative structures haven't fully replaced it."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational scope, the constraint exhibits genuine hybrid function. Retention mechanisms coordinate member commitment (necessary for collective capital and risk pooling) while extracting labor asymmetry and capital immobility from newer/marginal members. Both functions are structurally real. The constraint's persistence reflects this genuine coordination necessity, not pure extraction or false naturalness. Mandatrophy resolved: the mechanism serves dual coordination-extraction function simultaneously."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "exit_cost_mechanism_ambiguity",
+      "question": "Are high exit costs structural necessities for cooperative function or extractive gatekeeping mechanisms?",
+      "resolution_mechanism": "Cross-cooperative comparison: high-exit-cost cooperatives vs low-exit-cost federated networks; measurement of member retention rates, satisfaction, and capital efficiency across models",
+      "impact": "If structural necessity: tangled_rope classification confirmed; suppression \u2265 0.40 represents coordination cost. If extractive gatekeeping: snare from broader perspective; suppression reduces to 0.25\u20130.35.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether exit costs are structural necessity or extractive gatekeeping"
+    },
+    {
+      "id": "labor_asymmetry_inevitability",
+      "question": "Is concentration of labor burden on active minority an inevitable coordination consequence or a choice-dependent extraction pattern?",
+      "resolution_mechanism": "Comparative analysis of cooperatives with distributed labor rotation vs delegated management; measurement of participation rates, burnout metrics, and succession stability",
+      "impact": "If inevitable: extractiveness is a necessary cost of democratic coordination. If choice-dependent: extractiveness can be reduced through structural design, revising classification toward pure rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether labor asymmetry is inevitable or choice-dependent"
+    },
+    {
+      "id": "member_identity_fusion_depth",
+      "question": "To what degree is member retention driven by identity fusion (person sees self primarily as member) vs material incentive (person rationally calculates benefits)?",
+      "resolution_mechanism": "Ethnographic study; exit interviews documenting stated reasons for departure; measurement of identity-locked vs constrained exit cost perception",
+      "impact": "If primarily identity-fused: suppression mechanism is partly internalized; identity_locked exit option appropriate for some members; effective suppression higher than structural metrics suggest. If primarily material: trapped and constrained exit options account for observed retention.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Depth of member identity fusion with cooperative"
+    },
+    {
+      "id": "digital_platform_substitution_timeline",
+      "question": "How quickly will digital platforms and inter-cooperative networks reduce the functional necessity of individual member retention enforcement?",
+      "resolution_mechanism": "Tracking adoption of cooperative e-commerce platforms, federated networks, and digital governance tools; measurement of member switching costs over time",
+      "impact": "If substitution occurs in 5\u201310 years: scaffold classification confirmed, sunset mechanism is real. If longer: scaffold is aspirational; current retention structure may persist indefinitely as piton.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Timeline for platform-driven substitution of retention enforcement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Cooperative member retention represents a structural constraint where the mechanism for maintaining collective commitment exhibits simultaneous coordination and extraction functions. Cooperatives depend on stable membership to sustain collective capital, risk pooling, and democratic governance. However, the enforcement mechanisms that prevent exit (capital lockup, equity restrictions, social enforcement) also create barriers that concentrate benefits on established members while imposing costs on newcomers and marginal participants. The constraint exhibits all six DR types across different observer positions, revealing how the same structural phenomenon appears as coordination necessity, extractive trap, temporary scaffold, degraded ritual, or hybrid depending on observer power and exit capacity. The extractiveness has increased over the measured interval (0.22 \u2192 0.38) as digital alternatives have reduced functional exit costs while institutional retention mechanisms have remained constant, increasing the discrepancy between structural lock-in and functional necessity. Theater ratio has also increased (0.15 \u2192 0.35) as governance enforcement increasingly appears performative rather than necessary to coordination function.",
+    "key_agents": [
+      "Trapped New Members: Primary victims (powerless/trapped) \u2014 face high exit costs, social ostracism, capital loss; minimal perceived coordination benefit",
+      "Active Core Members: Secondary victims and beneficiaries (moderate/constrained) \u2014 experience both coordination benefits and labor asymmetry extraction",
+      "Established Membership Coalition: Primary beneficiaries (institutional/arbitrage) \u2014 accumulated equity, governance control; experience constraint as pure coordination",
+      "Cooperative Federation Networks: Organized layer (organized/constrained) \u2014 building digital infrastructure and inter-cooperative alternatives that provide sunset mechanism",
+      "Legacy Governance Structures: Institutional maintenance (institutional/arbitrage) \u2014 enforce retention mechanisms through tradition and structural momentum",
+      "Analytical Observer: Civilizational position (analytical/analytical) \u2014 perceives genuine hybrid structure requiring both coordination and extraction functions"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. Member retention mechanisms extract labor asymmetry, limit capital mobility, and create information asymmetries that favor incumbents. But extraction is not severe \u2014 genuine coordination benefits (purchasing power, risk pooling, democratic input) exist and are real. The intermediate value reflects true hybrid structure. Suppression (0.42): Moderate-high. Barriers to exit include sunk capital contributions, loss of accumulated equity share, social ostracism within tight-knit membership, and loss of specialized cooperative benefits. But suppression is not total \u2014 market alternatives exist, geographic mobility is possible, and some cooperatives have reduced exit costs. The moderate-high value captures both real barriers and available workarounds. Theater ratio (0.35): Moderate. Governance enforcement mechanisms (board approval of exits, capital lockup periods, equity restrictions) are partly functional (managing collective capital) and partly performative (maintaining incumbent control). The ratio has increased as digital alternatives have reduced functional necessity while institutional enforcement persists. Claimed type (Tangled Rope): Correct classification requires demonstrating both genuine coordination function (member commitment is necessary for collective scale) and asymmetric extraction (exit costs and labor burdens fall disproportionately on newer members and passive participants). Both are empirically present.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence. The trapped new member sees pure extraction (Snare) because they perceive exit costs but no coordination benefit \u2014 they joined for promised benefits, now face high barriers. The active member sees mixed coordination and extraction (Tangled Rope) because they both contribute to and benefit from collective function but experience labor burden asymmetry. The established member sees pure coordination (Rope) because they have accumulated equity, low effective exit costs through arbitrage, and perceive retention as mutual benefit preservation. The federation sees temporary coordination (Scaffold) because they understand member-level retention barriers as functionally obsolete given emerging inter-cooperative networks and digital platforms. The legacy governance sees degraded ritual (Piton) because enforcement mechanisms are maintained through tradition despite reduced functional necessity. The analytical observer sees genuine hybrid (Tangled Rope) because both coordination and extraction functions are structurally real and necessary to account for observed member retention patterns and dissatisfaction. The perspectival gap reveals that the constraint's true nature depends on observer power and exit capacity \u2014 and that the mandatrophy resolution lies in accepting the genuine coexistence of both functions rather than attempting to classify as pure coordination or pure extraction.",
+    "directionality_logic": "Directionality values vary by agent structural position within the constraint. Trapped new members (powerless + trapped exit) experience d \u2248 0.95, producing high f(d) and high experienced extraction. Active members (moderate power + constrained exit) experience d \u2248 0.60, producing moderate f(d) and mixed extraction. Established members (institutional power + arbitrage exit) experience d \u2248 0.10, producing low f(d) and minimal extraction. The federation and analytical observers experience d \u2248 0.72 (observer position with constrained/analytical exit), perceiving extraction at the structural level but not experiencing it as personal extraction. These varying d values are derived from: (1) beneficiary/victim declarations (established members are beneficiaries; new and departing members are victims); (2) power level (constraint-relative); (3) exit options (arbitrage vs trapped vs constrained). No directionality overrides are needed \u2014 the derivation chain produces appropriate differentiation.",
+    "mandatrophy_analysis": "RESOLUTION: The constraint exhibits genuine coexistence of coordination and extraction functions at multiple structural levels. Mandatrophy is resolved by recognizing that the constraint must simultaneously: (1) coordinate member commitment to sustain collective capital and function (requiring retention mechanisms), and (2) asymmetrically extract from newer/marginal members to concentrate benefits on established members (using those same retention mechanisms as extraction tools). The two functions are structurally entangled \u2014 you cannot remove the extraction without eliminating the coordination capacity, and the coordination cannot function without creating asymmetric burdens. This is not a case of mislabeled pure extraction; it is a case of genuinely hybrid mechanism. The mandatrophy classification (Tangled Rope) is confirmed by: (a) presence of beneficiaries (established members); (b) presence of victims (new and departing members); (c) active enforcement required to maintain both functions; (d) perspectival gap showing that different observers with different power/exit relationships perceive different classification types. The constraint is not a hidden snare (pure extraction) nor a hidden rope (pure coordination) \u2014 it is legitimately tangled. The analytical resolution moves from 'which is the real nature?' to 'how are these two functions structurally coupled and what trade-offs exist between them?'"
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "cooperative_capital_formation",
+      "democratic_governance_scaling"
+    ],
+    "dual_formulation_note": "Member retention is downstream of capital formation mechanisms (how members accumulate and lose equity) and governance scaling (how collectives maintain decision-making as size increases). These constraints have their own extractiveness values reflecting capital structure and voting dilution dynamics; member retention constraint captures the enforcement side of these upstream structural constraints."
+  },
+  "directionality_overrides": []
+}

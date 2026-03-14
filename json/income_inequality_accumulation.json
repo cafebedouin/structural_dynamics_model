@@ -1,0 +1,191 @@
+{
+  "header": {
+    "constraint_id": "income_inequality_accumulation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ineq"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Income Inequality Accumulation Trap",
+    "topic_domain": "economic/structural",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "capital_owners",
+      "high_wealth_cohort"
+    ],
+    "victims": [
+      "wage_earners",
+      "precariat_workers",
+      "intergenerational_mobility_trapped"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Precariat Worker",
+      "comment": "PERSPECTIVE 1: PRECARIAT WORKER (SNARE) \u2014 Wage earners face structural immobility. Income goes to subsistence; wealth accumulation is impossible despite full-time work. Exit requires capital acquisition but extraction prevents accumulation. No arbitrage available \u2014 geographic, sectoral, and credential mobility all require upfront capital the worker cannot access. Captures maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Professional Salaried Class",
+      "comment": "PERSPECTIVE 2: PROFESSIONAL SALARIED CLASS (TANGLED ROPE) \u2014 Possesses credentials and income for partial wealth accumulation. Experiences genuine coordination function: progressive taxation funds infrastructure that enables economic function. Simultaneously experiences asymmetric extraction: returns on capital far exceed returns on labor; wealth accumulation inequality diverges from income inequality. Can exit via entrepreneurship or capital deployment but faces barriers of capital requirement, time cost, and risk."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Capital Ownership Class",
+      "comment": "PERSPECTIVE 3: CAPITAL OWNERSHIP CLASS (ROPE) \u2014 Net beneficiary. Experiences the constraint as coordination mechanism: capital returns, reinvestment cycles, and wealth concentration mechanisms function smoothly. Tax policy, capital markets, and inheritance law coordinate to enable wealth accumulation. Experiences extraction as flowing toward them, not away. High-mobility arbitrage: can reallocate capital across jurisdictions, sectors, and asset classes."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Union Movement",
+      "comment": "PERSPECTIVE 4: LABOR UNION MOVEMENT (PITON) \u2014 Historically functioned as collective bargaining coordinator and redistribution mechanism. Now largely degraded institutional actor: union density declined from 35% (1950s) to 10% (2020s) in US. Retains performative role in wage negotiation but has lost structural power to constrain capital mobility or redirect accumulated wealth. Theater ratio high \u2014 ritualized collective bargaining persists despite reduced worker leverage. Organization remains but functional power atrophied."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Progressive Tax and Transfer Coalition",
+      "comment": "PERSPECTIVE 5: PROGRESSIVE TAX AND TRANSFER COALITION (SCAFFOLD) \u2014 Organized agents (union remnants, progressive policy coalitions, UBI advocates) perceive inequality accumulation as a solvable coordination problem with structural sunset mechanisms. Progressive taxation, wealth taxes, inherited wealth caps, and universal basic income represent alternative coordination pathways that could stabilize inequality at lower levels. These agents have agency and envision realistic exit from the accumulation trap. Theater ratio moderate \u2014 actual redistribution occurs (unemployment insurance, social security, EITC) alongside performative debate. Classification turns on whether sunset clause is credible."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, inequality accumulation might appear as an immutable mathematical law: compound returns on capital necessarily diverge from linear wage growth; if r > g (capital return rate > growth rate), wealth concentration is inevitable. Piketty's framework naturalizes inequality as following from deep economic laws. However, the base properties contradict mountain classification \u2014 suppression (0.65) and extractiveness (0.68) are too high, beneficiary/victim structure is clearly designed, and resistance to redistribution policy is institutional not logical. The mountain reading is false naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "capital_return_rate_assumption",
+      "question": "Does the r > g dynamic reflect unchangeable mathematics or contingent policy choices (capital gains tax, inheritance law, corporate governance)?",
+      "resolution_mechanism": "Historical comparison across tax regimes and countries; periods where r was constrained and g elevated via policy; counterfactual modeling of alternative tax/governance structures",
+      "impact": "If mathematical: inequality accumulation is mountain-class inevitable. If contingent: constraints are institutional policy choices, reclassifying as snare or tangled_rope amenable to design alternatives.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether r > g reflects mathematics or policy contingency"
+    },
+    {
+      "id": "intergenerational_mobility_bottleneck",
+      "question": "Is low intergenerational mobility a consequence of inequality accumulation or a separable structural constraint? Can capital accumulation be decoupled from dynastic wealth transfer?",
+      "resolution_mechanism": "Analysis of mobility trajectories in high-inequality vs lower-inequality economies; mechanisms specific to wealth transfer vs wage accumulation; feasibility of inheritance-tax alternatives",
+      "impact": "If decoupled: wealth concentration is snare but mobility remains possible with policy (scaffold exit). If coupled: both wealth and mobility are trapped (full snare with no mitigation).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether intergenerational mobility can be decoupled from wealth accumulation"
+    },
+    {
+      "id": "alternative_coordination_feasibility",
+      "question": "Do alternative wealth allocation mechanisms (UBI, wealth taxes, cooperative ownership, stakeholder capitalism) constitute genuine coordination alternatives or theater masking continued extraction?",
+      "resolution_mechanism": "Pilot program data on UBI and wealth tax efficacy; comparative institutional analysis of cooperative vs. capitalist wage-setting; mechanisms by which alternative coordination could fail or degrade",
+      "impact": "If genuine alternatives exist: scaffold perspective confirmed, sunset credible, policy escape routes real. If theater: all alternatives collapse or get captured, snare is inescapable, mountain false naturalization fails.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative wealth allocation mechanisms are viable"
+    },
+    {
+      "id": "labor_supply_elasticity_constraint",
+      "question": "How much of wage suppression reflects genuine scarcity of low-skill jobs vs. deliberate labor supply creation through welfare policy, immigration control, and credential inflation?",
+      "resolution_mechanism": "Comparison of wage trajectories across job market tightness; policy counterfactuals (universal job guarantee, open immigration, credential reform); measurement of actual vs. constructed labor scarcity",
+      "impact": "If scarcity is genuine: wage floors are constrained by fundamentals (mountain-like). If constructed: suppression is policy-designed (snare, fully extractive). Mix of both shifts extraction balance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent to which low-wage labor scarcity is constructed vs. genuine"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Income inequality accumulation represents a structural constraint where wealth compounds asymmetrically relative to wage income, creating self-reinforcing extraction from wage earners to capital owners. The constraint exhibits Snare properties at the powerless level (workers trapped in wage stagnation despite full-time employment) while manifesting as Rope (coordination function) for beneficiaries and as a potentially soluble Scaffold problem for organized reform coalitions. The theater ratio has increased over the interval (0.35 to 0.58) reflecting the proliferation of performative discourse about inequality \u2014 rising awareness, policy proposals, and public debate \u2014 without corresponding structural redistribution. Base extractiveness has risen from 0.42 to 0.68 as wealth concentration has accelerated, particularly since 2000 as capital gains have dramatically outpaced wage growth and tax rates on capital have declined relative to wage taxes. Suppression (0.65) is high due to structural barriers: workers face high cost of capital acquisition, educational credentialing as gating mechanism, geographic immobility tied to housing costs, and deliberate weakening of collective bargaining institutions.",
+    "key_agents": [
+      "Wage Earners and Precariat Workers: Primary victims (powerless/trapped) \u2014 face structural inability to accumulate capital despite labor income; subsistence consumption leaves no savings capacity; wage suppression via labor oversupply and union decline.",
+      "Capital Owners and High-Wealth Cohort: Primary beneficiaries (institutional/arbitrage) \u2014 capture asymmetric returns on invested capital; can deploy capital across jurisdictions and asset classes; benefit from capital-favorable tax policy and inheritance mechanisms.",
+      "Professional Salaried Class: Secondary actor (moderate/constrained) \u2014 possess credentials for partial wealth accumulation; experience mixed coordination (progressive infrastructure funding) and extraction (diverging returns on capital vs. labor); can exit via entrepreneurship but face capital barriers.",
+      "Labor Union Movement: Institutional degradation exemplar (organized/constrained) \u2014 historically coordinated wage compression and redistribution; now diminished from 35% to 10% union density; retains theatrical presence but lost structural power.",
+      "Progressive Tax and Transfer Coalition: Reform coalition (organized/constrained) \u2014 advocates for alternative coordination via progressive taxation, wealth taxes, UBI, and inheritance reform; have agency but face organized capital opposition.",
+      "Analytical Observer: Civilizational frame (analytical/analytical) \u2014 risks naturalizing policy-contingent inequality as mathematical inevitability; r > g framework can become false summit."
+    ],
+    "logic_rationale": "Extractiveness (0.68): High, reflecting strong asymmetry between capital returns and wage growth. Real wage growth has stagnated since 1980s while capital returns have compounded at 5-8% annually, creating divergence that is policy-contingent (tax treatment, governance rules, labor law) not mathematical necessity. Suppression (0.65): Moderate-high, reflecting multiple structural barriers to worker exit: (1) capital requirement for upward mobility creates catch-22 (need wealth to earn capital returns but need returns to accumulate wealth); (2) credential inflation (college degree now required for jobs previously accessible to high school graduates); (3) housing costs anchoring workers geographically; (4) deliberate labor supply management via welfare policy and immigration controls; (5) union decline removing collective bargaining capacity. Theater ratio (0.58): Moderate-high and increasing. Policy debate about inequality has proliferated (media attention, UBI pilots, wealth tax proposals) while actual redistribution has stalled (top 1% share rose from 10% to 20% over interval). Theater reflects disconnect between problem recognition and structural change. Claimed type (Snare): High-extractiveness constraint where primary exit mechanism is unavailable \u2014 cannot exit wage-labor trap without capital accumulation, but capital accumulation is precisely what the extraction prevents.",
+    "perspectival_gap": "The perspectival gap reveals that income inequality accumulation is not a unitary phenomenon but a presheaf of structural positions. From the precariat perspective it is a Snare (pure extraction with no exit). From the capital owner perspective it is a Rope (beneficial coordination). From the reform coalition perspective it is a Scaffold (temporary problem with policy solutions). From the analyst perspective it risks appearing as a Mountain (mathematical inevitability). Each reading is locally coherent within its structural position but globally incompatible \u2014 the same constraint cannot simultaneously be inescapable extraction, beneficial coordination, a solvable problem, and a natural law. This logical inconsistency is diagnostic: it indicates that the base properties reflect policy choices (tax code, labor law, inheritance rules, credential gatekeeping) that different actors experience from incompatible structural positions. The gap is not measurement error but structural. Resolving it requires moving beyond single-perspective analysis to acknowledge that inequality accumulation IS a design choice \u2014 institutions could be reorganized to produce lower inequality trajectories with different distributional outcomes for each perspective.",
+    "directionality_logic": "Directionality values are derived from structural position relative to the extraction flow. Wage earners (powerless/trapped) occupy maximum d \u2248 0.95: all barriers to exit are material (capital requirement, time cost, credential gatekeeping), and the extraction flow runs entirely toward capital owners. Capital owners (institutional/arbitrage) occupy minimum d \u2248 0.05: they are beneficiaries with high mobility (can reallocate capital, relocate to favorable tax jurisdictions, switch sectors). The professional class (moderate/constrained) occupies middle d \u2248 0.60: can exit via entrepreneurship or capital deployment but face significant barriers (capital requirement, time/risk cost, opportunity cost of lost salaried income). The reform coalition (organized/constrained) occupies d \u2248 0.55: organized enough to create alternative coordination pathways but constrained by organized capital opposition and institutional stickiness. The piton union (organized/constrained) occupies d \u2248 0.70: ostensibly working for workers but structurally captured by institutional decline, unable to exert genuine constraint on capital accumulation despite formal labor-representation role. The sigmoid function f(d) amplifies the experienced extractiveness for trapped and constrained agents (high d produces high f(d) \u2248 1.2-1.4) while compressing it for beneficiaries (low d produces low f(d) \u2248 -0.12 to 0.02).",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves by acknowledging that all six classifications are correct from their respective structural positions. The Snare classification for workers is real \u2014 they are trapped in a structure that extracts from them without exit. The Rope classification for capital owners is real \u2014 they benefit from smoothly functioning wealth accumulation mechanisms. The Tangled Rope for professionals is real \u2014 they experience both coordination benefits and extraction. The Scaffold for reformers is real \u2014 alternative institutional designs exist with credible sunset clauses (UBI could replace means-tested benefits, wealth tax could replace income tax, cooperative ownership could replace shareholder primacy). The Piton for unions is real \u2014 once-functional coordination institutions have degraded. The risk of false Mountain (natural law) is real \u2014 the r > g framework naturalizes what is policy contingent. The mandatrophy is not resolved by choosing 'the correct type' but by recognizing that inequality accumulation is a **policy-design presheaf**: different tax codes, labor laws, inheritance rules, and corporate governance structures produce different inequality trajectories. The Snare is not inevitable; it is designed by choices to suppress labor bargaining power, structure capital-favorable tax policy, and weaken redistribution institutions. An analytical observer who moves across structural positions discovers that the 'natural law' reading (Mountain) is a false summit \u2014 the constraint naturalizes what could be otherwise designed."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "wage_stagnation_structural",
+      "capital_gains_prioritization",
+      "educational_credential_inflation",
+      "housing_cost_immobility"
+    ],
+    "dual_formulation_note": "Income inequality accumulation is upstream of multiple structural constraints. Wage stagnation, capital gains tax preferences, credential inflation as labor gatekeeping, and housing-cost-driven geographic immobility are all mechanistically downstream of the core inequality accumulation dynamic. Each has its own \u03b5 value reflecting measurement-specific aspects, but all are coupled to the primary inequality constraint through the wealth concentration mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.7
+    }
+  ]
+}

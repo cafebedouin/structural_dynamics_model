@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "perovskite_solar_cell_certification_gap",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pero"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Perovskite Solar Cell Certification Gap",
+    "topic_domain": "renewable_energy/materials_science",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_silicon_manufacturers",
+      "test_certification_bodies"
+    ],
+    "victims": [
+      "perovskite_developers",
+      "grid_decarbonization_timeline"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Perovskite Development Teams",
+      "comment": "PERSPECTIVE 1: PEROVSKITE DEVELOPERS (SNARE) \u2014 Trapped by certification requirements designed for silicon cells but applied uniformly to perovskite. Cannot exit the certification regime without losing market access. High extraction: certification costs consume 15-25% of development budgets; testing protocols are mismatched to material physics (silicon aging models don't apply to ion migration); timeline delays of 3-5 years block commercialization. Suppression is maximal \u2014 without IEC certification, no pathway to grid deployment."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Incumbent Silicon Manufacturers",
+      "comment": "PERSPECTIVE 2: SILICON MANUFACTURERS (ROPE) \u2014 Benefit from certification bottleneck that delays perovskite competition. Perceived constraint is coordination (communication of reliability standards). Arbitrage exit: can migrate to tandem cells or perovskite internally without loss. Low experienced extraction \u2014 the bottleneck protects their market position while appearing as a legitimate safety requirement."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "IEC Certification Bodies",
+      "comment": "PERSPECTIVE 3: CERTIFICATION BODIES (TANGLED ROPE) \u2014 Genuinely coordinate standardization (coordination function) but also extract through monopoly on testing authority. Constrained by institutional reputation: relaxing standards risks credibility; maintaining mismatched standards avoids the cost of developing perovskite-specific protocols. Active enforcement: certification procedures are mandated by regulators; the gap persists because revising standards requires consensus among competing test labs and manufacturers."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Standards Development Coalitions",
+      "comment": "PERSPECTIVE 4: STANDARDS COALITIONS (SCAFFOLD) \u2014 Emerging perovskite-specific standards (ISOS protocols, PVLAB methodologies) create alternative certification pathways with explicit sunset: once perovskite performance is validated over 10-year cycles and degradation mechanisms are understood, silicon-based testing becomes irrelevant. Organized agents (NREL, Fraunhofer, industry consortia) see the gap as a temporary coordination failure being solved. Low theater in new protocols \u2014 they measure actual degradation mechanisms rather than proxy reliability."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Regulatory Mandate Legacy",
+      "comment": "PERSPECTIVE 5: REGULATORY MANDATE LEGACY (PITON) \u2014 Grid connection standards cite IEC 61646 (module performance) as a fixed requirement, but the citation persists through institutional inertia rather than technical necessity. The regulatory reference has become performative: regulators cite it to demonstrate due diligence, not because it accurately measures perovskite safety. Theater ratio high (0.68) \u2014 compliance is theater, not verification. The mandate persists because changing it requires bureaucratic coordination across multiple agencies, not because the standard functions."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Natural Law View (Material Physics Constraints)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 From a materials physics perspective, some certification gap is inherent: perovskite ion migration, halide segregation, and moisture sensitivity require fundamentally different test protocols than silicon's thermal and mechanical fatigue. The gap reflects irreducible differences in material behavior, not contingent institutional choice. However, this perspective risks naturalizing what is actually a reversible institutional arrangement \u2014 perovskite-specific certification is technically feasible and being implemented; the gap is not a law of nature but a coordination failure."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "silicon_bias_in_standards",
+      "question": "To what extent does the certification gap reflect genuine perovskite technical uncertainty versus deliberate incumbency protection dressed as safety?",
+      "resolution_mechanism": "Compare actual field failure rates for certified silicon vs pre-commercial perovskite under identical environmental exposure; analyze certification body meeting minutes for technical reasoning vs market protection language",
+      "impact": "If technical: gap is legitimate (mountain/scaffold). If deliberate: gap is pure extraction (snare/tangled rope). Mixed case likely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of silicon bias versus legitimate technical uncertainty in certification standards"
+    },
+    {
+      "id": "perovskite_degradation_reversibility",
+      "question": "Are perovskite degradation modes (ion migration, halide segregation) reversible through encapsulation and operating protocol, or do they represent irreducible limits?",
+      "resolution_mechanism": "Long-term field deployment studies (5-10 years) comparing encapsulated perovskites under controlled vs real-world conditions; analysis of ion migration reversibility under thermal cycling",
+      "impact": "If reversible: certification can be outcome-based (performance guarantees) rather than process-based (silicon-mimicking tests). If irreversible: silicon-derived protocols remain partially justified.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether perovskite degradation modes are reversible or irreducible"
+    },
+    {
+      "id": "certification_cost_vs_market_barrier",
+      "question": "What fraction of perovskite commercialization delay is attributable to certification cost/timeline versus technical uncertainty, supply chain immaturity, or market competition from silicon?",
+      "resolution_mechanism": "Survey of perovskite companies on certification bottleneck ranking; comparison of time-to-market for perovskite in certification-exempt markets (military, space, academic) vs regulated markets",
+      "impact": "If certification is dominant barrier: extraction is severe (snare). If supply/market factors dominate: extraction is overstated (rope/scaffold).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Relative contribution of certification versus other commercialization barriers"
+    },
+    {
+      "id": "standards_coalition_effectiveness",
+      "question": "Will ISOS and other perovskite-specific protocols actually achieve regulatory acceptance and replace IEC requirements, or will they remain parallel alternatives indefinitely?",
+      "resolution_mechanism": "Track regulatory citations of perovskite protocols in major markets (EU, US, China) over next 5-10 years; measure adoption rate in industry projects",
+      "impact": "If accepted: scaffold sunset is real, extraction declines to zero. If not accepted: scaffold is aspirational, extraction persists indefinitely (constraint reclassifies as snare).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether new perovskite standards will achieve regulatory acceptance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Perovskite solar cells (PSCs) have demonstrated laboratory efficiency (>30%) exceeding silicon cells (22-23%) over the past decade, yet remain absent from large-scale grid deployment. A primary structural barrier is the certification gap: IEC standards (IEC 61646, IEC 61730) were designed for crystalline silicon and apply identical testing protocols to perovskites. This constraint exhibits tangled rope structure: legitimate coordination function (communicating reliability requirements) combined with asymmetric extraction (certification costs and timeline delays that disproportionately disadvantage PSC developers). The beneficiary is incumbent silicon manufacturers, who gain extended market protection while certification bodies maintain institutional authority through mismatched standards. Victims include perovskite development teams facing 15-25% budget consumption on certification, and the broader decarbonization timeline (delayed PSC deployment delays grid transformation). Theater ratio (0.68) reflects that compliance with silicon-derived protocols has become partially performative \u2014 test results do not reliably predict perovskite real-world performance because the material physics is fundamentally different. Emerging perovskite-specific protocols (ISOS, PVLAB) create a sunset pathway, making this a tangled rope with scaffold alternative rather than pure snare.",
+    "key_agents": [
+      "Perovskite Development Teams: Primary victims (powerless/trapped) \u2014 startups and research groups locked into certification regime; face budget absorption (15-25% of R&D spending) and 3-5 year commercialization delays",
+      "Incumbent Silicon Manufacturers: Primary beneficiaries (institutional/arbitrage) \u2014 Sunwatt, JinkoSolar, First Solar; experience bottleneck as market protection; can exit through internal tandem research without loss",
+      "IEC Certification Bodies: Institutional enforcer (institutional/constrained) \u2014 T\u00dcV S\u00fcd, Intertek, JET; coordinate standardization but extract through monopoly testing authority; constrained by institutional reputation",
+      "Standards Development Coalitions: Organized alternative (organized/constrained) \u2014 NREL, Fraunhofer-ISE, ISOS consortium; building perovskite-specific protocols with explicit sunset horizon (10-15 years)",
+      "Grid Regulators: Authority gatekeeper (institutional/arbitrage) \u2014 cite IEC standards in grid connection codes without evaluating perovskite-specific requirements; maintain bottleneck through regulatory reference",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangement as material physics inevitability"
+    ],
+    "logic_rationale": "Extractiveness (0.48): Moderate-high. Certification cost (\u20ac50k-300k per device type), timeline (3-5 years to certification vs 18-24 months for new silicon variants), and performance measurement misalignment (IEC protocols measure degradation modes irrelevant to perovskites) create significant extraction. However, extractiveness is not maximal (0.70+) because some testing is genuine coordination (communicating safety standards); the excess above coordination cost represents the incumbency rent. Suppression (0.62): High. Complete prohibition on grid deployment without IEC certification creates hard suppression (no alternative pathways until ISOS adoption); no voluntary exit option. But suppression is not maximal (1.0) because alternative standards are being developed and some markets (military, space) operate without grid codes. Theater ratio (0.68): High. Silicon-derived protocols are substantially performative for PSCs \u2014 they measure damp-heat resistance (silicon fatigue mode) and thermal cycling rather than ion migration, halide segregation, and moisture intrusion (PSC actual failure modes). The theater has increased as PSC complexity has outpaced silicon-model applicability. The measurement trajectory (0.50 \u2192 0.68) shows degradation: earlier certification bodies performed genuine testing; current application has become more theatrical as misapplication of silicon protocols to perovskite has calcified.",
+    "directionality_logic": "Directionality (d) is computed from each agent's structural position: their power level, exit capacity, and flow of extraction. Perovskite developers are trapped with no exit (d=0.95) \u2014 high f(d) \u2192 high experienced chi. Silicon manufacturers have arbitrage exit (d=0.05) \u2014 low f(d) \u2192 negative chi (they perceive coordination). Certification bodies are constrained but beneficiary-adjacent (d=0.40) \u2014 medium f(d). Standards coalitions have exit pathway (scaffold sunset, d=0.35) \u2014 lower f(d). Regulatory gatekeepers have institutional arbitrage (can cite alternative standards without cost, d=0.10) \u2014 very low f(d). The analytical observer at civilizational scale (d=0.72) experiences moderate extraction from the complexity opacity.",
+    "perspectival_gap": "The perovskite developer sees snare: certification is an extractive hurdle with no coordination benefit for their specific material. Silicon manufacturers see rope: certification is legitimate coordination that happens to protect their market (perceived as natural competitive advantage). Certification bodies see tangled rope: genuine coordination (standardization) mixed with the rent of monopoly testing authority. The standards coalition sees scaffold: the bottleneck is temporary, being solved by perovskite-specific protocols with explicit sunset. Regulatory gatekeepers see piton: the IEC citation persists through institutional inertia (bureaucratic cost of changing regulations exceeds perceived benefit). The analytical observer risks seeing mountain: material physics dictates perovskite requires different protocols (true) and therefore the gap is natural/inevitable (false \u2014 the gap is a reversible institutional choice). The perspectival gap reveals that the constraint is not a law of nature but a coordination failure with a known exit path.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by distinguishing genuine coordination (communicating reliability standards) from extraction (monopoly testing authority + incumbency protection). IEC certification boards do coordinate (they produce standards that enable inter-lab communication). But the standards they produce are mismatched to perovskite physics, creating asymmetric extraction. The tangled rope classification captures this hybrid: coordination function + extraction overhead. The scaffolding of ISOS protocols demonstrates that perovskite-specific certification is technically feasible and not prohibited by material physics \u2014 the gap is institutional, not natural. The false summit risk (mountain perspective) occurs when analysts naturalize the current misalignment as inevitable given material differences. It is not inevitable: it is a reversible institutional choice that persists due to regulatory inertia and incumbency incentives. The mandatrophy is resolved by the scaffold: the sunset clause (perovskite validation over 10-year cycles) creates a clear endpoint where the gap closes and extraction falls to zero."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "silicon_tandem_hybrid_certification",
+      "grid_decarbonization_timeline_constraint",
+      "materials_science_verification_bottleneck"
+    ],
+    "dual_formulation_note": "The certification gap can be decomposed into two structurally distinct constraints: (1) perovskite technical validation (whether material survives 25-year lifetime), \u03b5~0.15 (rope/mountain) and (2) certification monopoly (institutional gatekeeping of testing authority), \u03b5~0.52 (snare/tangled rope). This story combines both. Upstream: materials_science_verification_bottleneck (generic replication lag, \u03b5~0.40). Downstream: silicon_tandem_hybrid_certification (transition technologies facing dual standards)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

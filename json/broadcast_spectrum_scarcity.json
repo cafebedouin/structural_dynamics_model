@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "broadcast_spectrum_scarcity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bss"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Broadcast Spectrum Scarcity and Regulatory Allocation",
+    "topic_domain": "telecommunications/regulatory_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_broadcasters",
+      "regulatory_authority"
+    ],
+    "victims": [
+      "new_market_entrants",
+      "public_spectrum_access",
+      "emergency_services"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Excluded Entrepreneur",
+      "comment": "PERSPECTIVE 1: NEW MARKET ENTRANT (SNARE) \u2014 Faces absolute barrier to spectrum access; cannot broadcast without license; regulatory allocation mechanism is opaque and favors incumbents. No exit option exists within the constraint. Maximum suppression experienced \u2014 trapped by regulatory gate and lack of capital to challenge established players."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Public Interest Coalition",
+      "comment": "PERSPECTIVE 2: PUBLIC INTEREST / EMERGENCY SERVICES (TANGLED ROPE) \u2014 Experiences both coordination benefits (spectrum prevents chaos and interference) and extraction (spectrum scarcity limits emergency communication capacity and public interest broadcasting). Can advocate for policy change but faces organized incumbent resistance. High suppression, moderate agency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Incumbent Broadcaster",
+      "comment": "PERSPECTIVE 3: INCUMBENT BROADCASTER (ROPE) \u2014 Holds valuable spectrum license; experiences the constraint as coordination: clear frequency allocation prevents interference and enables profitable operation. Can arbitrage regulatory relationships to maintain position. Benefits from scarcity itself \u2014 license value increases as spectrum remains constrained."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Regulatory Authority",
+      "comment": "PERSPECTIVE 4: REGULATORY AUTHORITY (ROPE) \u2014 Manages spectrum as a public resource but operates through allocation mechanism that concentrates benefits with incumbents and creates regulatory capture risk. Primary coordination function: preventing interference. Experiences low extraction because authority maintains power through rule definition. Theater ratio reflects performative consultation with public."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Legacy Broadcast Industry",
+      "comment": "PERSPECTIVE 5: LEGACY BROADCAST INDUSTRY (PITON) \u2014 Historically dominant coordinating function (preventing interference) has been largely displaced by digital technologies and software-defined radio, yet regulatory protections for spectrum allocation remain through institutional inertia. Theater ratio is high because much regulatory activity around broadcast spectrum is now primarily performative \u2014 the technical problem was solved decades ago, but incumbent protections persist."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Spectrum scarcity is partially natural law (finite radio frequency bandwidth) and partially manufactured constraint (regulatory allocation mechanism). From a civilizational view, this is a hybrid: genuine coordination function (interference prevention) embedded in extractive regulatory capture. The natural scarcity of spectrum is real; the artificial scarcity created by spectrum licensing is contingent and increasingly unjustified by technological change."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "natural_vs_regulatory_scarcity",
+      "question": "How much of the observed spectrum scarcity is physical law vs. regulatory choice?",
+      "resolution_mechanism": "Technical analysis of spectrum utilization rates; comparison of licensed vs. unlicensed band efficiency; measurement of actual interference rates in dense spectrum use scenarios (e.g., WiFi, Bluetooth coexistence in unlicensed bands). Dynamic spectrum access systems that reallocate in real-time provide empirical upper bound on spectrum reuse potential.",
+      "impact": "If regulatory choice dominates: constraint classification shifts toward Snare (manufactured scarcity enables extraction). If physical law dominates: classification remains Tangled Rope (genuine coordination with embedded extraction). Current evidence suggests 60-70% regulatory, 30-40% physical.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of scarcity attributable to physics vs. regulatory mechanism"
+    },
+    {
+      "id": "incumbent_protection_vs_public_benefit",
+      "question": "Does incumbent broadcaster protection serve genuine interference prevention or primarily extract economic rent?",
+      "resolution_mechanism": "Historical analysis of interference incidents before and after deregulation in other markets (e.g., mobile spectrum auctions, unlicensed band opening). International comparison of spectrum efficiency in regulated vs. lightly-regulated regimes. Measurement of public interest broadcasting output under incumbent-protective vs. competitive allocation models.",
+      "impact": "If genuine public benefit: suppression justified, classification remains Tangled Rope. If primarily rent extraction: suppression unjustified, classification degrades toward Snare. Current evidence suggests mixed: coordination benefit real but modest compared to extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether incumbent protections serve coordination or extraction"
+    },
+    {
+      "id": "technology_substitution_timeline",
+      "question": "Will software-defined radio, cognitive radio, and dynamic spectrum access technologies eliminate the scarcity constraint entirely within this regulatory regime's lifetime?",
+      "resolution_mechanism": "Technical roadmap assessment; deployment timelines for spectrum-sharing technologies; measurement of spectrum utilization in experimental testbeds. Regulatory adoption timeline for technologies that would render traditional allocation obsolete.",
+      "impact": "If technologies mature rapidly: constraint is a Scaffold with sunset (technological disruption will force reallocation). If regulatory inertia prevents adoption: constraint persists as Piton (degraded but maintained through institutional resistance).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline and feasibility of technology-driven spectrum constraint elimination"
+    },
+    {
+      "id": "regulatory_capture_depth",
+      "question": "Is the regulatory authority captured by incumbents, or does it maintain genuine independence in serving the public interest?",
+      "resolution_mechanism": "Analysis of licensing decisions against stated criteria; comparison of incumbent renewal rates vs. challenger approval rates; measurement of regulatory responsiveness to public interest petitions vs. incumbent lobbying. Cross-national comparison of regulatory capture in spectrum allocation.",
+      "impact": "If heavily captured: extractiveness increases, Snare perspective becomes more salient. If independent: Rope perspective is accurate, coordination function is genuine. Current evidence suggests significant but incomplete capture in most jurisdictions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of regulatory capture by incumbent broadcasters"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Broadcast spectrum is a finite physical resource managed through regulatory allocation. The constraint operates at the intersection of natural scarcity (only a limited portion of the electromagnetic spectrum is suitable for terrestrial broadcasting) and regulatory choice (government agencies grant exclusive licenses to specific frequency bands). This creates a structural hybrid: genuine coordination function (preventing interference between transmitters) layered with extractive mechanisms (incumbent protection, rent extraction through licensing scarcity). The constraint exhibits classic tangled rope structure: beneficiaries (incumbent broadcasters and the regulatory authority) depend on the allocation mechanism for coordination and profit; victims (new entrants, public interest broadcasters, emergency services) face suppression through barriers to spectrum access. Over the measurement interval, extractiveness and theater ratio have increased, reflecting the divergence between technical capability (digital technologies enable much higher spectrum reuse) and regulatory choice (allocation mechanisms remain locked to legacy analog-era assumptions). The piton perspective reflects that traditional broadcast television's technical coordination problem (interference prevention between analog transmitters) has been substantially solved by digital technologies and spectrum-sharing systems, yet regulatory protections persist through institutional inertia.",
+    "key_agents": [
+      "Incumbent Broadcasters: Primary beneficiaries (institutional/arbitrage) \u2014 hold exclusive spectrum licenses with indefinite renewal; profits depend on spectrum scarcity; arbitrage regulatory relationships",
+      "New Market Entrants: Primary victims (powerless/trapped) \u2014 blocked from spectrum access by regulatory barriers and incumbent consolidation; cannot exit or compete within the constraint",
+      "Public Interest Broadcasters: Secondary victims (moderate/constrained) \u2014 limited spectrum access restricts community broadcasting and public interest content; can advocate but face organized incumbent opposition",
+      "Emergency Services: Secondary victims (moderate/constrained) \u2014 spectrum scarcity constrains emergency communication capacity during crises; face coordination challenges with civilian broadcast systems",
+      "Regulatory Authority: Institutional actor (institutional/arbitrage) \u2014 manages spectrum allocation; maintains power through rule definition; captures rents from licensing; experiences low extraction because authority defines the constraints",
+      "Legacy Broadcast Industry: Organized institutional actor (organized/constrained) \u2014 collective incumbent interest in maintaining regulatory protections; sees technical coordination problem as solved but supports preservation of allocation mechanism",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 observes hybrid of natural law (finite spectrum) and manufactured constraint (regulatory allocation); identifies increasingly unjustified suppression as technology enables spectrum sharing"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and increasing. Initial extractiveness (0.35) reflected genuine coordination costs in managing terrestrial broadcast interference. Current extractiveness (0.58) reflects significant rent extraction through artificial scarcity. The incumbent broadcaster captures economic rents from exclusive spectrum access; new entrants face insurmountable barriers; public interest broadcasting is constrained by limited allocation. The increase over time reflects growing divergence between technical capability and regulatory choice \u2014 digital technologies have eliminated most technical scarcity, but regulatory mechanisms preserve artificial scarcity to protect incumbent value. Suppression (0.68): High. Barriers to spectrum access include: (a) regulatory licensing gate controlled by agency with incumbent capture risk, (b) high capital cost of competing against established broadcasters, (c) technical standards that favor incumbent technology choices, (d) political economy: incumbent broadcasters have organized lobbying capacity that new entrants lack. These barriers are enforced through legal penalties for unlicensed broadcasting. Theater ratio (0.55): Moderate and increasing. Regulatory processes (frequency reallocation studies, public consultation periods, environmental assessments) are partially performative. Many regulatory activities address technical problems that are already solved by software-defined radio and spectrum-sharing technologies. Theater has increased as the gap widens between what regulation claims to do (prevent interference, serve public interest) and what it actually does (protect incumbent rents, preserve administrative simplicity).",
+    "perspectival_gap": "The gap between incumbent broadcaster and new entrant perspectives is maximal. The incumbent sees coordination, safety (interference prevention), and beneficial scarcity. The entrant sees barriers, exclusion, and unjust scarcity. This gap reflects genuine disagreement about the constraint's function \u2014 is spectrum scarcity an immutable coordination problem or a manufactured barrier? The piton classification signals that the legacy broadcasting system has experienced technological obsolescence: software-defined radio and spectrum-sharing systems have solved the interference problem that originally justified spectrum allocation, yet regulatory protections persist. The analytical observer's tangled rope classification reframes the disagreement as a factual question: how much of the scarcity is physics vs. regulatory choice? As technology advances, the manufactured component increases, and the constraint should shift toward Snare classification unless regulatory reform decouples scarcity from allocation.",
+    "directionality_logic": "Directionality (d) values determine experienced extractiveness for each agent through the sigmoid f(d). Incumbent broadcasters derive d from beneficiary status + arbitrage exit options \u2192 low d (~0.15) \u2192 negative or minimal f(d) \u2192 they experience low effective extraction, benefiting from the constraint. Regulatory authority derives d from beneficiary status + arbitrage exit options \u2192 low d (~0.15) \u2192 they maintain power through rule definition and low experienced extraction. New entrants derive d from victim status + trapped exit options \u2192 high d (~0.95) \u2192 high f(d) (~1.42) \u2192 they experience maximum effective extraction. Public interest/emergency services derive d from victim status + constrained exit options \u2192 high d (~0.85) \u2192 high f(d) (~1.15) \u2192 they experience significant effective extraction. The analytical observer derives d from neutral position + analytical exit options \u2192 d (~0.72) \u2192 moderate f(d) (~1.15) \u2192 sees the structure holistically but cannot resolve the natural vs. regulatory scarcity question from structural data alone.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by clarifying that 'spectrum scarcity' conflates two structurally distinct phenomena: (1) Natural electromagnetic scarcity (finite bandwidth suitable for terrestrial broadcasting), and (2) Regulatory artificial scarcity (exclusive licensing that restricts access below technical capacity). The constraint story integrates both: the natural scarcity justifies coordination (Rope classification from some perspectives), but the regulatory mechanism enables extraction (Snare classification from victim perspectives). The increasing theater ratio and extractiveness over the measurement interval reflects the growing gap between technical capability (spectrum-sharing technologies) and regulatory choice (unchanged allocation mechanism). Mandatrophy resolves by noting that the constraint's classification is not fixed \u2014 as technology enables spectrum reuse, the justified suppression component decreases and the extractive component increases. Current classification (Tangled Rope) is accurate but unstable: either regulation must modernize to enable spectrum sharing (sunset the artificial scarcity, shift toward Scaffold or Rope), or the constraint will degrade further toward Snare as the natural law justification evaporates."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "wireless_device_ecosystem",
+      "internet_access_inequality",
+      "emergency_communication_reliability"
+    ],
+    "dual_formulation_note": "Broadcast spectrum scarcity is a constraint family with three members: (1) broadcast_spectrum_scarcity (this story) \u2014 regulatory allocation mechanism, (2) wireless_device_ecosystem \u2014 how spectrum constraints drive mobile technology monopolies, (3) emergency_communication_reliability \u2014 how spectrum allocation affects public safety. Each has distinct \u03b5 value reflecting different measurement observable: regulatory extraction, technological lock-in, and emergency system capacity respectively."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.28
+    }
+  ]
+}

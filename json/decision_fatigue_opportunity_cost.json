@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "decision_fatigue_opportunity_cost",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dfoc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Decision Fatigue Opportunity Cost",
+    "topic_domain": "cognitive_economics/behavioral_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "choice_architects",
+      "attention_extractors"
+    ],
+    "victims": [
+      "decision_makers",
+      "rational_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Overwhelmed Decision Maker",
+      "comment": "PERSPECTIVE 1: OVERWHELMED DECISION MAKER (SNARE) \u2014 Individual agents face exponential growth in choice complexity without proportional increase in cognitive capacity. Trapped by biological limits and environmental demands; bears full extraction cost as decision quality degrades and autonomy collapses. No viable exit option within the constraint."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Conscious Consumer/Worker",
+      "comment": "PERSPECTIVE 2: CONSCIOUS CONSUMER/WORKER (TANGLED ROPE) \u2014 Experiences both coordination benefit (genuine need for choice frameworks to navigate complex markets) and extraction (architecture of choice sets influences behavior toward extractors' interests). Can exit at cost (reduced consumption, suboptimal career choices); experiences meaningful constraint but not total capture."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Choice Architect Institution",
+      "comment": "PERSPECTIVE 3: CHOICE ARCHITECT (ROPE) \u2014 Platform designers, user interface engineers, policy designers experience the constraint as pure coordination: solving the genuine problem of organizing complex choice environments. Net beneficiary; can exit if capacity shifts (strategic retreat from markets). Interprets constraint as benign design problem, not extraction mechanism."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulatory Coalition",
+      "comment": "PERSPECTIVE 4: REGULATORY COALITION (SCAFFOLD) \u2014 Regulatory agents (consumer protection bodies, data privacy regulators, accessibility standards) see decision fatigue as a temporary coordination failure being solved through mandatory simplification frameworks: choice limits, complexity reduction mandates, attention-cost transparency. Sunset logic applies: as regulation matures, default architecture improves, and decision fatigue naturally declines."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Cognitive Science Consensus",
+      "comment": "PERSPECTIVE 5: COGNITIVE SCIENCE CONSENSUS (PITON) \u2014 The psychological research documenting decision fatigue (ego depletion, choice overload, attention scarcity) persists as institutional consensus and organizational justification (meeting culture, process overhead, complexity budgets) despite contested empirical status. Theater ratio reflects performative invocations of 'cognitive limits' to justify inefficiency; the underlying constraint may be weaker than institutional narratives suggest. Degraded from functional description to theater."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, human cognitive capacity is bounded: any sufficiently complex environment will produce fatigue, and the gap between environmental complexity and individual processing capacity is structurally inevitable. This perspective risks naturalizing what may be a contingent institutional arrangement \u2014 exponential choice proliferation and attention capture are not laws of nature but design decisions. The engine will likely flag this as a false summit revealing naturalization of contingent extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "ego_depletion_replication_crisis",
+      "question": "Is decision fatigue (ego depletion) a robust psychological phenomenon or a statistical artifact from underpowered studies and publication bias?",
+      "resolution_mechanism": "Pre-registered replication studies with large sample sizes and registered protocols; meta-analysis of effect sizes across high-quality studies; separation of foundational ego depletion claims from downstream applications",
+      "impact": "If robust: decision fatigue is a real structural constraint (extractiveness remains 0.55+). If artifact: much of the perceived extraction is theater, and extractiveness should be downgraded to 0.25-0.35 (regulatory scaffold + coordinated simplification is sufficient).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether ego depletion is a robust phenomenon or statistical artifact"
+    },
+    {
+      "id": "choice_overload_threshold_identification",
+      "question": "What is the actual cognitive load threshold at which choice overload becomes extractive rather than simply complex? Does it vary by domain, agent sophistication, or choice architecture?",
+      "resolution_mechanism": "Controlled studies varying choice complexity while holding agent expertise constant; longitudinal tracking of decision quality as complexity increases across domains (medical, financial, consumer, organizational)",
+      "impact": "If threshold is low (>7-10 choices): most modern environments exceed it, and extractiveness is high (0.60+). If threshold is high (>50-100 choices): extraction is concentrated in specific domains, and extractiveness is lower (0.35-0.45).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Identification of actual cognitive load threshold for decision overload"
+    },
+    {
+      "id": "intentional_choice_architecture_extraction",
+      "question": "To what degree is decision fatigue deliberately engineered by choice architects (dark patterns, hidden complexity, attention extraction) versus incidental to legitimate system complexity?",
+      "resolution_mechanism": "Forensic analysis of user interface design decisions; A/B testing of simplified vs. complex choice environments; documentation of design intent in product teams (if accessible); comparison of internal complexity in user-facing vs. internal tools",
+      "impact": "If primarily intentional: extractiveness should increase to 0.65-0.75 (snare dynamics). If primarily incidental: extractiveness should decrease to 0.40-0.50 (rope with asymmetric side effects).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of intentional design extraction in choice architecture"
+    },
+    {
+      "id": "cognitive_capacity_expansion_feasibility",
+      "question": "Can decision fatigue be genuinely mitigated through education, cognitive training, tool-mediated decision support, or regulatory simplification, or does it reflect a hard ceiling on human processing?",
+      "resolution_mechanism": "Longitudinal intervention studies: cognitive training programs, decision support tool adoption, regulatory simplification in test markets; measurement of decision quality and fatigue resistance post-intervention",
+      "impact": "If capacity is expandable/improvable: scaffold sunset is real, and the constraint is temporary. If capacity is fixed: constraint is mountain-like and extractiveness is intrinsic. If capacity expands but architects add complexity faster: arms race dynamics, and extractiveness increases over time.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether cognitive capacity for decision-making can be expanded or is fixed"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the measured suppression (0.62) primarily structural (actual cognitive limits, information access barriers) or internalized (agents have accepted cognitive limits as inevitable and stopped seeking alternatives)?",
+      "resolution_mechanism": "Post-intervention suppression trajectory: if regulatory simplification or cognitive training reduces complexity, do agents re-engage with decision-making or remain disengaged? If disengagement persists after barriers removed, suppression is partially internalized.",
+      "impact": "If structural: reducing complexity directly improves decision autonomy. If internalized: agents continue delegating decisions even when capacity becomes available; constraint persists through cognitive capture.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized cognitive acceptance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Decision fatigue represents a structural constraint operating at the intersection of cognitive psychology, institutional design, and economic extraction. The constraint emerges from the mismatch between exponentially growing choice complexity in modern environments (digital platforms, healthcare systems, financial products, organizational hierarchies) and the bounded cognitive capacity of individual decision-makers. This mismatch creates both a genuine coordination problem (how do we organize complex choice environments so decision-making remains feasible?) and an extraction opportunity (those who architect choice sets can influence behavior toward their interests by exploiting fatigue-induced heuristics and defaults). The constraint exhibits all six DR types from different perspectives, making it a diagnostic case for cognitive capture and institutional theater. The theater ratio (0.45 currently, rising to 0.72 by measurement endpoint) reflects increasing invocation of 'cognitive limits' as organizational justification for overhead and complexity that may not serve decision-maker interests. The extractiveness trajectory (0.35 \u2192 0.58) shows accumulation of extraction through layered complexity in digital platforms and financial products designed to exploit decision fatigue.",
+    "key_agents": [
+      "Decision Maker (Individual): Primary victim (powerless/trapped) \u2014 faces exponential growth in choice complexity without proportional increase in cognitive capacity; bears full cost as autonomy degrades",
+      "Choice Architects (Platform/UX/Policy Designers): Primary beneficiary (institutional/arbitrage) \u2014 solve genuine coordination problem but also profit from predictable behavioral biases induced by fatigue; can exit markets if less complex competitors emerge",
+      "Conscious Consumer/Worker: Secondary victim (moderate/constrained) \u2014 aware of choice architecture effects but constrained by resource costs of optimizing decisions or switching platforms",
+      "Attention Extractors (Tech Platforms, Financial Services): Secondary beneficiary (institutional/arbitrage) \u2014 exploit fatigue-induced defaults and simplified heuristics to capture attention and revenue",
+      "Regulatory Coalition (Consumer Protection, Data Privacy, Accessibility Standards): Organized reformers (organized/constrained) \u2014 building regulatory alternatives to choice simplification and transparency mandates; sunset logic applies as regulation matures",
+      "Cognitive Science Establishment: Institutional consensus-holder (institutional/arbitrage) \u2014 maintains theoretical framework explaining cognitive fatigue; benefits from invocations of cognitive limits to justify institutional complexity and overhead",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as immutable cognitive laws"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint exhibits genuine extraction: choice architects benefit from fatigue-induced defaults and simplified heuristics that steer behavior toward their interests. However, extraction is not maximal because legitimate coordination problems (organizing complex choice environments) create genuine benefits that partially offset extraction cost. The trajectory from 0.35 to 0.58 reflects accumulation of extractive design layers in digital platforms and financial products. Suppression (0.62): Moderate-high. Significant barriers include cognitive limits (real, though contested), information asymmetries (intentional choice architecture), and internalized acceptance of 'cognitive overload' as inevitable. Suppression is not total because regulatory frameworks and simplified interface design are showing that complexity can be managed, suggesting barriers are partially contingent rather than immutable. Theater ratio (0.45 rising to 0.72): Rising. Early invocations of 'cognitive limits' reflected genuine psychological research; current invocations increasingly serve as organizational justification for overhead and complexity. The theater ratio rise indicates performative use of fatigue narratives to justify institutional designs that may not serve decision-maker interests. The constraint is tangled_rope not snare because legitimate coordination problems (how to organize complex choice sets) exist alongside extraction, and the institutional beneficiaries (choice architects) do solve real problems while capturing surplus.",
+    "perspectival_gap": "The gap between the choice architect's rope (genuine coordination) and the powerless agent's snare (exploitation via fatigue) reveals that the constraint has dual properties. From the beneficiary's view, they are solving a real problem (how to present complex information). From the victim's view, they are being steered by exploitation of predictable cognitive limitations. Both perspectives are structurally accurate \u2014 the constraint coordinates information presentation while extracting through fatigue-induced defaults. This is the defining feature of tangled_rope: simultaneous presence of genuine coordination function and asymmetric extraction.",
+    "directionality_logic": "Each perspective's directionality value (d) is determined by structural position. Choice architects with arbitrage exit options (can move to less complex markets) experience low d \u2192 negative effective extraction. Decision-makers with trapped status experience high d \u2192 high effective extraction. Conscious consumers with constrained exit (can exit at cost but not freely) experience moderate d. Regulatory coalition with organized power and constrained exit experiences moderate d with declining pressure as scaffold sunset approaches. The key directionality signal: choice architects benefit from fatigue (d \u2248 0.10 for institutional beneficiary), but decision-makers bear costs (d \u2248 0.95 for powerless victim). This asymmetry (factor of 10) is the signature of tangled_rope, not pure rope or pure snare.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by distinguishing coordination from extraction: The coordination function (organizing complex choice environments) is real and benefits all agents. The extraction function (exploiting fatigue-induced defaults) is real and benefits only architects. The constraint is not 'is this coordination or extraction?' but 'how much of the measured suppression is coordination overhead versus extractive exploitation?' The theater ratio rising from 0.25 to 0.45 indicates increasing performative invocation of 'cognitive limits' to justify complexity that may serve architects more than decision-makers. The regulatory coalition's scaffold perspective identifies a genuine sunset path: simplification mandates, complexity limits, and transparency requirements reduce extraction while preserving coordination function. The mountain perspective (naturalizing cognitive limits) is a false summit revealed by the structural data: extractiveness is driven by choice architecture design decisions, not immutable cognitive laws. If cognitive limits were truly immutable, simplification mandates and regulatory interventions would be ineffective \u2014 but evidence suggests they work, indicating that much extraction is contingent on architectural choices rather than inherent to cognition."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "attention_extraction_asymmetry",
+      "default_option_behavioral_capture",
+      "information_complexity_barrier"
+    ],
+    "dual_formulation_note": "Decision fatigue operates as a constraint family with three structurally distinct mechanisms: (1) resource_allocation coordination (genuine problem of organizing choice complexity), (2) behavioral_capture via fatigue-induced defaults (extraction mechanism), (3) internalized cognitive acceptance of limits (suppression mechanism). Each mechanism has its own \u03b5 value and should be decomposed into separate constraint stories if empirical measurement requires independent observation. This story models the integrated phenomenon; downstream constraints model specific mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

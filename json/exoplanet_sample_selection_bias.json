@@ -1,0 +1,174 @@
+{
+  "header": {
+    "constraint_id": "exoplanet_sample_selection_bias",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "exoplanet"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Exoplanet Sample Selection Bias in Discovery and Characterization",
+    "topic_domain": "astronomy/exoplanet_science",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "detection_method_developers",
+      "institutional_survey_leaders"
+    ],
+    "victims": [
+      "actual_planetary_population_knowledge",
+      "overlooked_detection_methods"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The True Exoplanet Population",
+      "comment": "PERSPECTIVE 1: TRUE EXOPLANET POPULATION (SNARE) \u2014 Cannot advocate or self-correct. The actual distribution of exoplanet properties (orbital periods, masses, architectures) remains unmeasured. Bias accumulates without feedback mechanism. Maximum extraction: our models of planetary formation are systematically distorted by selection effects we cannot escape without abandoning current detection methods."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Alternative Detection Communities",
+      "comment": "PERSPECTIVE 2: ALTERNATIVE DETECTION COMMUNITIES (TANGLED ROPE) \u2014 Modest-scale teams using radial velocity, direct imaging, or timing variations face resource constraints and publication bias against negative results. They benefit from the shared exoplanet catalog and collaborative data access, but their methods are systematically underweighted in population statistics. Mixed extraction and coordination \u2014 some benefits, significant constraints."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Transit Survey Leaders (Kepler, TESS)",
+      "comment": "PERSPECTIVE 3: TRANSIT SURVEY LEADERS (ROPE) \u2014 Experiences the constraint as pure coordination: dominating the discovery census enables follow-up science, community engagement, and continued funding. The selection bias is their selection criterion \u2014 instrumental and methodological advantage. Net beneficiary. The constraint solves a real coordination problem: where should we look, and with what priority?"
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Statistical Correction Initiatives",
+      "comment": "PERSPECTIVE 4: STATISTICAL CORRECTION INITIATIVES (SCAFFOLD) \u2014 Organized projects (Exoplanet Catalog, occurrence rate frameworks, Bayesian hierarchical models) are building debiasing methods with a sunset trajectory. As statistical techniques mature and machine learning improves detection completeness characterization, the hard selection bias can be converted to a knowable, correctable systematic. The scaffold sunset is real: in 10-15 years, direct imaging and other methods may break the transit dominance."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Publication and Priority Systems",
+      "comment": "PERSPECTIVE 5: PUBLICATION AND PRIORITY SYSTEMS (PITON) \u2014 The journal impact hierarchy and career reward structure for 'big discovery' announcements persist through institutional inertia. High-profile exoplanet discoveries (habitable-zone transiting planets) receive disproportionate visibility, reinforcing funding flows to transit methods. The ritual is performative \u2014 it maintains a narrative of 'breakthrough discovery' divorced from statistical understanding of the population."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Detection Physics Limit View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational view, some selection bias is inherent to observational astronomy: any detection method (transit, radial velocity, direct imaging, microlensing) is sensitive only to certain planetary property regimes. This perspective naturalizes selection bias as an immutable constraint of observational physics. However, the structural data contradicts this mountain classification \u2014 the bias is not inherent to physics but to the current resource allocation and institutional prioritization favoring transit methods."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "bias_correction_sufficiency",
+      "question": "Can statistical debiasing methods adequately correct for transit-method dominance, or do unknown unknowns in detection physics render the correction incomplete?",
+      "resolution_mechanism": "Comparison of occurrence rates computed via statistical correction against direct surveys using alternative methods (e.g., direct imaging completeness, radial velocity population inference) when they reach comparable sample sizes",
+      "impact": "If correction is sufficient: scaffold perspective confirmed, selection bias is a temporary institutional problem with a real sunset. If incomplete: the constraint persists as snare-like extraction despite correction efforts because underlying structural asymmetry remains.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether statistical debiasing adequately corrects for transit-method dominance"
+    },
+    {
+      "id": "alternative_method_breakthrough",
+      "question": "Will alternative detection methods (direct imaging, timing variations, astrometry via Gaia) achieve comparable or larger sample sizes in the next 10-15 years, disrupting transit-method dominance?",
+      "resolution_mechanism": "Tracking of exoplanet discovery rates by method over time; analysis of funding allocation and telescope time distribution across methods; emergence of new major survey capabilities (e.g., ELT, next-generation direct imaging instruments)",
+      "impact": "If breakthrough occurs: scaffold sunset is real, extraction mechanism loses force. If transit dominance persists: snare classification is correct, the constraint is structurally locked despite correction efforts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative detection methods will disrupt transit dominance"
+    },
+    {
+      "id": "career_incentive_structure",
+      "question": "Does the journal impact and career reward system for 'big exoplanet discoveries' create independent institutional pressure favoring transit-method stories, independent of scientific merit?",
+      "resolution_mechanism": "Citation analysis and career trajectory analysis: comparison of citation success and career advancement for papers discovering transit planets via major surveys vs papers advancing population-level understanding via debiasing methods; editorial desk-reject rates for low-statistical-significance but methodologically rigorous studies",
+      "impact": "If independent institutional pressure exists: the piton is not just performative ritual but an active reinforcer of selection bias. If career incentives are method-agnostic: the bias is more purely methodological (mountain-like) than institutionally reinforced.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether career reward structures independently reinforce transit-method bias"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Exoplanet sample selection bias represents a structural constraint where the dominant detection method (transit photometry via Kepler, TESS) creates a systematically skewed census of the planetary population. The bias is not random error but a deterministic function of the detection method's sensitivity to short-orbital-period planets, large planets, and planets orbiting small stars. This constraint exhibits multiple classification types depending on structural position: for the actual planetary population, the bias is a snare (unmeasured, unrepresented, bearing costs of misunderstanding formation); for institutional survey leaders, it is coordination (their dominance solves where-to-look problems); for statistical correction efforts, it is a scaffold with a sunset (debiasing methods are maturing). The extractiveness value (0.52) reflects that the transit method's dominance captures career and funding benefits while also creating genuine scientific value \u2014 not pure extraction but a mixed arrangement where institutional benefits accrue asymmetrically to transit method developers and leaders. Theater ratio (0.68) reflects that much of the 'discovery narrative' in exoplanet astronomy emphasizes headline-grabbing individual planets rather than population-level statistical understanding.",
+    "key_agents": [
+      "True Exoplanet Population: Primary victim (powerless/trapped) \u2014 unmeasured, unrepresented, cannot self-correct; bears cost of systematic bias in formation theory",
+      "Transit Survey Leaders (Kepler, TESS collaborations): Primary beneficiary (institutional/arbitrage) \u2014 dominant discovery census, funding concentration, sustained institutional priority",
+      "Alternative Detection Communities (RV, direct imaging, timing): Secondary victim (moderate/constrained) \u2014 face resource barriers, publication bias against null results, systematic underweighting in population statistics",
+      "Statistical Correction and Debiasing Projects: Organized agents (organized/mobile) \u2014 actively building debiasing methods and occurrence rate frameworks; see the problem as solvable with a sunset trajectory",
+      "Journal and Career Reward System: Institutional actor (institutional/arbitrage) \u2014 maintains performance hierarchy favoring 'big discoveries' (individual new exoplanet announcements) over population-level methodological advances",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing transit-method selection bias as inherent to observational astronomy rather than contingent institutional arrangement"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The transit method's dominance captures disproportionate funding, publication visibility, and career advancement opportunities. But the extraction is not maximal because (a) the method also produces genuine scientific discoveries enabling follow-up characterization, (b) collaborative data access benefits the entire community, and (c) alternative methods still function and contribute (though underweighted). The 0.38 \u2192 0.52 progression reflects accumulation of institutional lock-in as transit-dominant surveys become the default reference. Suppression (0.58): Moderate-high. Barriers to detecting bias include: (1) the bias is 'invisible' unless explicitly modeled\u2014many astronomers work within the transit census as given; (2) resource asymmetry makes alternative methods difficult to sustain; (3) publication bias against null results (failed searches, non-detections) hides the incompleteness; (4) career risk of challenging dominant methods. Theater ratio (0.68): Moderate-high, trending upward. The 'exoplanet discovery' narrative emphasizes individual headline planets (habitable-zone candidates, Earth analogues) over population statistics. This performative content has increased as social media amplifies discovery announcements. Statistical debiasing papers, while methodologically rigorous, receive less attention than individual-planet discovery papers.",
+    "directionality_logic": "Directionality (d) is computed from each agent's structural position. Transit survey leaders (beneficiaries with arbitrage options) experience low d, negative f(d), and therefore low or negative experienced extraction\u2014the constraint subsidizes them. Alternative method communities (victims with constrained exit) experience moderate-high d and therefore moderate extraction. Statistical correction groups (organized with mobile options) experience lower d because they have alternative pathways (methodological innovation, international collaboration) and are not structurally dependent on a single funding stream. The true planetary population (powerless, trapped) has maximum d and maximum extraction. The publication system (beneficiary with arbitrage) experiences low d. The piton classification for the publication system derives from theater ratio (0.68) exceeding 0.70 threshold trajectory, not from high experienced extraction.",
+    "perspectival_gap": "The constraint demonstrates a stark perspectival divergence. Transit survey leaders see pure coordination (Rope) \u2014 they solve the legitimate problem of prioritizing sky surveys. Statistical debiasing projects see a temporary problem with a methodological sunset (Scaffold) \u2014 as corrective techniques mature, the hard bias becomes a knowable systematic. The publication system sees its own performative ritual (Piton) \u2014 individual planet announcements drive engagement and visibility despite low contribution to population-level understanding. Alternative method communities experience mixed benefits and constraints (Tangled Rope) \u2014 they benefit from collaborative data but face resource asymmetry. The true planetary population experiences pure extraction (Snare) \u2014 its actual properties remain unknown and unmeasured. The analytical observer risks seeing a natural law (Mountain) \u2014 selection bias is inherent to observational astronomy \u2014 but the structural data reveals this as false naturalization: the bias is contingent on institutional funding allocation and career reward structures.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by disambiguating physical inevitability from institutional contingency. All detection methods have selection effects (true physical limit) but only transit-method dominance is institutional contingency. The mountain perspective ('selection bias is inherent') conflates these. The scaffold perspective correctly identifies the institutional problem as solvable: (1) statistical debiasing improves over time, (2) alternative methods mature and diversify, (3) funding allocation can be rebalanced. The snare perspective correctly identifies that the unknown true population bears the cost and has no self-correction mechanism within current institutions. The tangled rope perspective correctly identifies that alternative methods both benefit from shared data access and suffer from resource asymmetry. The mandatrophy is resolved by showing that the constraint is NOT immutable physics but a solvable institutional problem with a known sunset pathway via statistical sophistication and method diversification."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "habitable_zone_planet_frequency",
+      "super_earth_formation_theory",
+      "hot_jupiter_prevalence_puzzle"
+    ],
+    "dual_formulation_note": "Exoplanet sample selection bias is upstream of specific planetary population claims. Individual discoveries (habitable-zone candidates, super-Earth formation efficiency, hot Jupiter prevalence) each inherit the selection bias but represent distinct downstream constraints with their own extractiveness values."
+  },
+  "directionality_overrides": []
+}

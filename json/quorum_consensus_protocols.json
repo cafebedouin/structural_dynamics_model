@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "quorum_consensus_protocols",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "quorum"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Quorum Consensus Protocols in Distributed Systems",
+    "topic_domain": "computer_science/distributed_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "protocol_designers",
+      "system_operators"
+    ],
+    "victims": [
+      "minority_participants",
+      "latency_constrained_nodes"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Minority Partition Node",
+      "comment": "PERSPECTIVE 1: MINORITY PARTITION NODE (SNARE) \u2014 A node in a network partition below quorum threshold cannot participate in consensus, cannot propose transactions, and cannot update state. It is structurally trapped: exit requires rejoining the network topology, which is not under the node's control. The node bears full cost of unavailability while the majority partition extracts consensus authority. No coordination benefit accrues to this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Latency-Constrained Participant",
+      "comment": "PERSPECTIVE 2: LATENCY-CONSTRAINED PARTICIPANT (TANGLED ROPE) \u2014 Nodes in high-latency regions must accept message delays and potential exclusion from fast quorum rounds. They experience genuine coordination benefit (agreement is reached, state is consistent) alongside asymmetric extraction: their voting power is discounted by round-trip latency, and they bear the cost of slower confirmation times. Constrained because they can migrate infrastructure but face significant capital and operational costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The System Operator",
+      "comment": "PERSPECTIVE 3: SYSTEM OPERATOR (ROPE) \u2014 Benefits from quorum protocols: they solve the genuine Byzantine fault tolerance coordination problem, enable distributed state consistency, and provide clear governance rules. The operator can arbitrage across protocol variants (BFT, Raft, Paxos) based on application requirements. Experiences the protocol as pure coordination with minimal extraction overhead."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Blockchain Community",
+      "comment": "PERSPECTIVE 4: BLOCKCHAIN COMMUNITY (SCAFFOLD) \u2014 Organized agents in decentralized systems (consensus protocol researchers, node operators, governance DAOs) see quorum requirements as a temporary coordination mechanism with a sunset clause: Byzantine fault tolerance is necessary during the transition to economically-incentivized consensus (Proof-of-Stake) and distributed validator sets. As economic incentives mature and validator pools decentralize, the extractive overhead of quorum-based gatekeeping declines. Sunset: 5-10 years as staking mechanisms mature and threshold signatures enable lower-quorum consensus."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Byzantine Fault Tolerance Dogma",
+      "comment": "PERSPECTIVE 5: BYZANTINE FAULT TOLERANCE DOGMA (PITON) \u2014 The theoretical requirement for (n/3)+1 quorum thresholds to guarantee Byzantine fault tolerance under synchrony assumptions has become partially performative in modern systems. Many real deployments operate with weaker quorum assumptions (supermajority rather than strict BFT threshold) and rely on reputation/collateral rather than protocol-level Byzantine guarantees. The formal BFT requirement persists as institutional inertia despite being relaxed in practice \u2014 maintained for theoretical purity rather than empirical necessity. Theater ratio is moderate (0.35) because the coordination function is still real, but the gap between BFT guarantee and actual operational security is growing."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Large Token Holder (Proof-of-Stake Context)",
+      "comment": "PERSPECTIVE 6: LARGE TOKEN HOLDER (TANGLED ROPE) \u2014 In delegated quorum systems (staking-based consensus), large token holders or delegated validators have voting power concentrated in proportion to stake. They experience coordination benefit (protocol security, finality guarantees) alongside asymmetric extraction: the quorum requirement creates a threshold effect where validators below ~30% stake have minimal influence regardless of participation. Constrained because exit requires unstaking (capital lockup, opportunity cost) but exit is possible at a price."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some quorum requirement is inherent to Byzantine fault tolerance: you cannot reach consensus with fewer than 2f+1 participants in a system with f faulty nodes (FLP impossibility result). This perspective sees quorum thresholds as immutable laws of distributed computing. However, the structural data contradicts the mountain classification \u2014 modern systems achieve lower effective quorum through economic incentives and reputation \u2014 revealing that the 'inherent to Byzantine fault tolerance' framing naturalizes what is actually a contingent choice about which fault model to defend against."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "synchrony_assumption_validity",
+      "question": "Do modern network conditions satisfy the synchrony assumptions required for formal BFT quorum correctness, or has network heterogeneity invalidated these assumptions?",
+      "resolution_mechanism": "Empirical measurement of message delivery times across geographic regions; statistical analysis of latency distributions; comparison against synchrony bounds in BFT proofs",
+      "impact": "If assumptions hold: quorum thresholds are necessary (mountain elements valid). If violated: quorum thresholds are contingent governance choices (extraction elements increase, classification shifts toward Snare/Tangled Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether synchrony assumptions in BFT proofs hold in practice"
+    },
+    {
+      "id": "economic_incentive_sufficiency",
+      "question": "Do economic incentives (slashing, staking rewards) in modern consensus systems provide equivalent Byzantine fault tolerance to protocol-enforced quorum thresholds?",
+      "resolution_mechanism": "Historical analysis of attacks on systems with economic incentives vs protocol-enforced quorum; measurement of actual slashing frequency and deterrence effect; modeling of rational adversary incentives",
+      "impact": "If sufficient: quorum thresholds can be relaxed without losing security (Scaffold sunset accelerates). If insufficient: formal quorum remains necessary (Piton persistence confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether economic incentives replace protocol-enforced quorum"
+    },
+    {
+      "id": "minority_partition_necessity",
+      "question": "Does the exclusion of minority partitions below quorum threshold serve a necessary safety function, or is it extractive gatekeeping justified only by BFT formalism?",
+      "resolution_mechanism": "Comparison of safety violations in systems that enforce strict quorum vs systems with relaxed thresholds; analysis of actual partition scenarios in deployed networks; cost-benefit analysis of minority exclusion vs data inconsistency risk",
+      "impact": "If necessary: minority exclusion is coordination cost (mountain/rope elements valid). If extractive: minority nodes are victims of protocol design choice (Snare elements confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether minority partition exclusion serves necessary safety function"
+    },
+    {
+      "id": "latency_discrimination_mechanism",
+      "question": "Does latency-based quorum slowness represent inherent physics/network properties or extractive protocol design that privileges low-latency nodes?",
+      "resolution_mechanism": "Analysis of latency impact on quorum reachability; comparison across protocol designs (synchronous vs asynchronous consensus); measurement of quorum size vs confirmation time trade-offs in deployed systems",
+      "impact": "If inherent: latency constraints are mountain elements (physics-imposed). If protocol design: constraints are Tangled Rope elements (extractive structure disclosed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether latency discrimination is inherent or protocol-design extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Quorum consensus protocols are coordination mechanisms that enable distributed systems to reach agreement despite faults or malicious participants. A quorum is a threshold number of participants whose agreement is necessary and sufficient for consensus \u2014 typically more than half (majority) or more than two-thirds (supermajority) in Byzantine fault tolerant systems. The constraint exhibits Tangled Rope structure: protocols solve a genuine coordination problem (Byzantine agreement in distributed systems) while simultaneously creating asymmetric extraction: minority partitions below the quorum threshold lose all voice, latency-constrained nodes are systematically disadvantaged, and protocol designers accumulate gatekeeping authority over consensus rules. The extractiveness value (0.38) reflects moderate asymmetry \u2014 the coordination function is real and necessary, but the extractive overhead has grown as systems have decentralized and as economic incentives have made formal BFT guarantees partially redundant. Theater ratio (0.35) is relatively low because the coordination logic is transparent and functional, but it is increasing as systems maintain Byzantine fault tolerance theorems as institutional inertia even when economic mechanisms could provide equivalent security at lower quorum cost.",
+    "key_agents": [
+      "Minority Partition Nodes: Primary victims (powerless/trapped) \u2014 cannot participate below quorum threshold; bear full cost of exclusion with no exit option",
+      "Latency-Constrained Participants: Secondary victims (moderate/constrained) \u2014 experience slower confirmation times and quorum inclusion risk; face significant infrastructure migration costs",
+      "System Operators: Primary beneficiaries (institutional/arbitrage) \u2014 can select protocol variants; benefit from clear consensus rules and fault tolerance guarantees",
+      "Protocol Designers: Secondary beneficiaries (institutional/arbitrage) \u2014 accumulate authority over quorum threshold rules; can adjust extraction through parameter changes",
+      "Blockchain Community: Organized agents (organized/constrained) \u2014 see quorum requirements as temporary mechanism with sunset clause as economic incentives mature",
+      "Formal BFT Tradition: Institutional inertia (institutional/arbitrage) \u2014 maintains Byzantine fault tolerance dogma as performative ritual despite economic incentives providing equivalent security",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent quorum choices as inherent limits of distributed consensus"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate-high. The quorum requirement creates genuine asymmetry: nodes below the threshold have zero influence, while nodes at or above the threshold have decision authority. However, extractiveness is not maximal because operators can adjust quorum parameters based on application needs, and the coordination benefit is substantial. The value reflects that the extraction is real but bounded by the genuine coordination function. Suppression (0.42): Moderate. Suppression mechanisms include: protocol-enforced exclusion (high), latency-based discrimination (moderate), capital lockup in stake-based systems (moderate), and network partition failures (high). But suppression is not total \u2014 nodes can upgrade infrastructure, delegate stake, or migrate to lower-quorum systems. Theater ratio (0.35): Low-moderate. The coordination logic is transparent: consensus algorithms are well-understood, proofs are formal, and implementations are auditable. But theater is increasing as systems maintain Byzantine fault tolerance theorems despite economic mechanisms relaxing their necessity. The theater growth reflects Goodhart drift: the formal guarantee ('Byzantine fault tolerance') is becoming a goal in itself rather than a means to system safety.",
+    "directionality_logic": "Directionality values (d) differ across agents based on their power level, exit options, and beneficiary/victim status. Minority partition nodes are full victims (d \u2248 0.95) with no exit \u2014 maximum experienced extraction. Latency-constrained participants are partial victims (d \u2248 0.65) with exit possible at significant cost. System operators are beneficiaries (d \u2248 0.15) with full arbitrage across protocol variants. Protocol designers are beneficiaries (d \u2248 0.10) with lowest experienced extraction due to institutional power to adjust rules. Blockchain community members are organized victims (d \u2248 0.45) with exit paths through protocol upgrades and stake delegation. The analytical observer derives d from their structural position relative to the constraint (d \u2248 0.72) \u2014 they can document the structure but cannot directly influence protocol parameters.",
+    "perspectival_gap": "This constraint demonstrates how the same structural coordination mechanism appears as pure extraction (Snare) to minority nodes, mixed coordination-extraction (Tangled Rope) to latency-constrained participants, pure coordination (Rope) to benefiting operators, and as a temporary problem with a sunset (Scaffold) to organized blockchain communities. The analytical observer risks classifying the quorum requirement as immutable (Mountain) based on FLP impossibility results, but this naturalizes the choice of which fault model to defend against \u2014 choosing to defend against Byzantine faults rather than accepting a weaker consistency model. The Piton perspective reveals that formal BFT requirements are increasingly performative: many deployed systems achieve equivalent security through economic incentives at lower quorum cost, but maintain the Byzantine fault tolerance dogma as institutional inertia.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating that 'quorum consensus' labels a family of structurally distinct mechanisms: (1) protocol-enforced Byzantine fault tolerance (Mountain/Piton elements), (2) coordination for distributed state consistency (Rope elements), (3) extraction through latency-based discrimination and minority exclusion (Snare elements), and (4) temporary governance mechanism during transition to economic incentives (Scaffold elements). No single type captures all perspectives. The mandatrophy resolution shows that the extractiveness value itself is the key finding: extractiveness (0.38) confirms that moderate asymmetric extraction exists within a genuine coordination function. The canonical classifier's Tangled Rope gate requires beneficiaries + victims + active enforcement \u2014 all three are present. The extraction is real but bounded by the coordination necessity, making this a textbook Tangled Rope rather than a mislabeled Snare or false Rope."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "byzantine_fault_tolerance_limits",
+      "network_partition_tolerance",
+      "latency_sensitive_consensus"
+    ],
+    "dual_formulation_note": "Quorum consensus protocols decompose into three structurally distinct constraints: (1) Byzantine Fault Tolerance Lower Bounds (\u03b5=0.08, Mountain) \u2014 FLP impossibility and protocol correctness proofs; (2) Quorum-Based Consensus Coordination (\u03b5=0.28, Rope) \u2014 the genuine distributed agreement function; (3) Minority Exclusion Extraction (\u03b5=0.62, Snare) \u2014 the asymmetric gatekeeping. This story focuses on the hybrid (Tangled Rope) view. Upstream constraints are the mathematical limits; downstream constraints are the extraction mechanisms that quorum gatekeeping enables."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

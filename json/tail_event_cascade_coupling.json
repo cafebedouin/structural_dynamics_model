@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "tail_event_cascade_coupling",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tail"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Tail Event Cascade Coupling: Systemic Risk Hidden in Correlation Assumptions",
+    "topic_domain": "financial_systems/risk_modeling/systemic_collapse",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "risk_model_vendors",
+      "financial_institutions_with_hedging_capacity"
+    ],
+    "victims": [
+      "retail_investors",
+      "pension_funds",
+      "systemic_financial_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Retail Investor",
+      "comment": "PERSPECTIVE 1: RETAIL INVESTOR (SNARE) \u2014 Holds diversified portfolio based on correlation assumptions embedded in standard risk models. During tail events, correlations collapse to 1.0, eliminating diversification benefit. Cannot exit before the cascade hits; bears full loss during systemic downturn. No way to detect the coupling risk from available public data."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Pension Fund Manager",
+      "comment": "PERSPECTIVE 2: PENSION FUND MANAGER (SNARE) \u2014 Manages long-term liabilities (30+ years) based on volatility estimates that assume tail event correlation holds. When coupling occurs, losses cascade across asset classes simultaneously. Can attempt hedging but cannot fully escape \u2014 hedging costs exhaust returns during normal years. Suppressed from acknowledging the risk because doing so would require admitting liability estimates are understated."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Risk Model Vendor",
+      "comment": "PERSPECTIVE 3: RISK MODEL VENDOR (ROPE) \u2014 Sells variance-covariance models, Value-at-Risk algorithms, and correlation matrices to financial institutions. The coupling constraint is a coordination mechanism: it coordinates expectations about tail risk (however incorrectly) and enables pricing consistency across the financial system. Vendor benefits from the ongoing subscription model and cannot be held liable for tail events (models include disclaimers). Experiences coordination, not extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Systemically Important Bank",
+      "comment": "PERSPECTIVE 4: SYSTEMICALLY IMPORTANT BANK (TANGLED ROPE) \u2014 Genuinely coordinates systemic credit flows and settlement infrastructure; also extracts through asymmetric exposure management. The bank has sophisticated understanding of tail coupling but cannot disclose it without triggering panic. Suppression operates through regulatory compliance and reputation management. The constraint has both coordination function (enabling credit markets to operate) and asymmetric extraction (the bank's exposure management advantage)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Framework",
+      "comment": "PERSPECTIVE 5: REGULATORY FRAMEWORK (PITON) \u2014 Stress testing, capital requirements, and risk disclosure rules are theater: they assume tail correlations remain below 1.0 and that diversification provides the promised risk reduction. Regulators know the models are incomplete but maintain them because alternatives (individual bank-by-bank assessment, subjective reserves) require unacceptable regulatory discretion. The framework persists through institutional inertia despite known limitations. Theater ratio (0.55) reflects that the regulatory process has real functions but performance is hollow \u2014 the rules test for scenarios that don't capture the true coupling mechanism."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational view, the coupling is a real structural feature of interconnected financial systems: correlations DO collapse to 1.0 in tail events because common causes (liquidity squeeze, credit spread widening, margin calls) trigger forced selling across all asset classes simultaneously. This is not theater \u2014 it's a genuine structural fact. But the analytical observer sees that the constraint operates as a snare because the suppression (nobody can profitably disclose or price the true risk) means the coupling remains hidden until cascade occurs."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "tail_correlation_mechanism",
+      "question": "Is tail correlation collapse driven by market microstructure (liquidity evaporation, forced selling) or by genuine economic commonality across asset classes?",
+      "resolution_mechanism": "Causal analysis of cascade events: timeline of liquidations, margin calls, credit spread widening; comparison of exogenous shocks (rate changes, geopolitical events) to endogenous contagion (forced selling) in each cascade",
+      "impact": "If microstructure-driven: correlation collapse is partially avoidable through market design changes (circuit breakers, liquidity requirements). If commonality-driven: correlations are structural and unavoidable; only containment is possible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Mechanism driving tail correlation collapse"
+    },
+    {
+      "id": "model_vendor_knowledge",
+      "question": "Do major risk model vendors know that their models underestimate tail correlation and suppress this knowledge, or do they genuinely believe the models are adequate?",
+      "resolution_mechanism": "Internal documentation review; comparison of models sold to institutional clients vs models used for vendor's own risk management; interview evidence of what assumptions vendors made about tail coupling",
+      "impact": "If vendors know and suppress: the coupling is intentional snare maintained through asymmetric information. If vendors genuinely believe: the coupling is a coordination failure (Rope) with unintended extraction consequences. Classification shifts from Snare to Tangled Rope.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Vendor knowledge of model limitations"
+    },
+    {
+      "id": "regulatory_constraint_binding",
+      "question": "Can financial institutions actually implement more sophisticated tail-risk management within current regulatory constraints, or do regulations actively prevent prudent hedging for tail coupling?",
+      "resolution_mechanism": "Regulatory compliance analysis: capital charge for tail-hedging positions, liquidity requirements, Basel III constraints on derivative usage; comparison of institutional risk limits to actual tail hedges in use during stable periods",
+      "impact": "If regulations prevent hedging: suppression is structural (regulatory enforcement). If hedging is permitted but not used: suppression is epistemic (vendors don't offer products, institutions don't demand them). Different resolution pathways.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regulations enable or prevent tail-risk hedging"
+    },
+    {
+      "id": "measurement_basis_circularity",
+      "question": "Does tail event cascade coupling exist as a structural property or only as a measurement artifact of variance-covariance models that assume normality?",
+      "resolution_mechanism": "Alternative measurement frameworks: copula models, extreme value theory, realized correlation in actual cascade events; test whether non-normal models show persistent tail coupling or whether coupling is an artifact of normal-distribution assumption",
+      "impact": "If structural: coupling is real and snare classification holds. If artifact: the constraint is really a Piton (degraded risk model persisting through inertia). This is the \u03b5-invariance test \u2014 if changing measurement basis changes whether coupling exists, decompose into two stories.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether tail coupling is structural or measurement artifact"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.43
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Tail event cascade coupling is a structural constraint in modern financial systems where the correlation assumptions embedded in standard risk models break down precisely when most needed \u2014 during systemic crises. When volatility spikes, previously low correlations between asset classes collapse toward 1.0 as common causes (liquidity evaporation, margin calls, credit spread widening) trigger forced selling across all positions simultaneously. This eliminates the diversification benefit that portfolios rely on for risk management. The constraint operates as a snare because: (1) the coupling is suppressed from public awareness through model vendor disclaimers and regulatory theater, (2) no individual actor can profitably exit or disclose the risk without triggering the cascade itself, and (3) the beneficiaries (model vendors, systemically important banks with hedging capacity) have incentives to maintain the fiction that diversification works as advertised. The extractiveness measurement shows increasing severity (0.35 to 0.68 over a 20-year interval) as financial leverage increased, interconnectedness deepened, and tail events became more correlated. Theater ratio increased moderately (0.40 to 0.55) reflecting growing gap between what regulatory stress tests claim to measure and what actually happens in market dislocations.",
+    "key_agents": [
+      "Risk Model Vendors: Primary beneficiaries (institutional/arbitrage) \u2014 sell models that earn subscription fees and consulting revenue; protected from liability by disclaimers; benefit from assumption that models are adequate",
+      "Systemically Important Banks: Secondary beneficiaries (institutional/constrained) \u2014 can afford sophisticated hedging; can exit trades faster than retail investors; extract through information asymmetry about true tail coupling",
+      "Retail Investors: Primary victims (powerless/trapped) \u2014 hold diversified portfolios based on false correlation assumptions; cannot detect coupling from public data; bear losses when correlations collapse; cannot exit before cascade hits",
+      "Pension Funds: Secondary victims (moderate/constrained) \u2014 manage long-term liabilities that assume tail risk is lower than true coupling would suggest; constrained from hedging by cost drag; suppressed from disclosing liability underestimation",
+      "Systemic Financial Stability: Tertiary victim (powerless/trapped) \u2014 the abstract institutional framework that sustains credit flows; contaminated by hidden tail coupling; no mechanism for collective self-correction",
+      "Regulatory Framework: Institutional performer (institutional/arbitrage) \u2014 maintains theater of stress testing and capital requirements; knows models are incomplete; cannot admit this without triggering panic; persists through inertia"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The coupling extracts from retail and pension investors through hidden tail risk that standard models fail to price. When correlations collapse, losses compound across all asset classes, eliminating diversification protection. The extraction is not externally coercive but structural: it operates through the financial system's own mechanics once tail coupling occurs. Measurement shows increase from 0.35 (20 years ago, lower leverage and interconnection) to 0.68 (today, higher leverage and tighter coupling across global markets). Suppression (0.72): Very high. Multiple barriers prevent disclosure of true tail coupling risk: (1) vendor liability concerns, (2) regulatory framework that assumes models are adequate, (3) institutional reluctance to admit leverage and exposure calculations are understated, (4) market design that punishes early disclosure (liquidation runs), (5) epistemological issue that sophisticated tail-risk hedging requires admitting ordinary diversification doesn't work. Theater ratio (0.55): Moderate. Regulatory stress tests and capital requirements have real functions (they do identify some forms of systemic risk and require buffer capital) but are theater regarding tail coupling because they assume correlations during extreme stress remain below what actually occurs. The theater has increased moderately as the gap between model assumptions and market behavior widened.",
+    "perspectival_gap": "The vendor sees rope (coordination mechanism enabling consistent risk pricing across the financial system). The bank sees tangled rope (coordinates credit while extracting through hedging advantage). The regulatory framework sees piton (maintains theater for stability). The retail investor and pension fund see snare (trapped by false diversification assumption). The analytical observer from civilizational view sees snare (real structural feature \u2014 tail coupling IS real, and the suppression mechanism ensures losses are maximized when coupling occurs). The perspectival gap reveals that the coupling constraint operates as a redistribution mechanism: wealth flows from powerless agents (retail, pensions) who cannot hedge tail risk to institutional agents (banks, model vendors) who can. This redistribution is not coordinated extraction through explicit policy but emerges from the structure of asymmetric knowledge and exit options.",
+    "directionality_logic": "The directionality derivation places powerless retail investors at d=0.95 (full targets) because they lack exit capacity and hold victim status in the coupling mechanism. Pension funds are moderate/constrained at d=0.65 (victims with some capacity to manage but constrained by liability structure and regulatory requirements). Model vendors are institutional/arbitrage at d=0.15 (beneficiaries with full exit capacity \u2014 they can change models or disclose limitations at any time). Banks are institutional/constrained at d=0.40-0.50 (they benefit from the status quo but face regulatory constraints and systemic contagion risk if coupling becomes widely known). The beneficiary/victim declarations map directly: retail and pensions are victims because they bear losses during tail events; vendors and banks are beneficiaries because they profit from the coupling's suppression. The f(d) sigmoid maps these into effective extraction values that show asymmetry: what the vendor experiences as low extraction (they profit from stable arrangements) the retail investor experiences as very high extraction (they bear tail losses).",
+    "mandatrophy_analysis": "The snare classification avoids the mandatrophy by correctly identifying that this constraint has minimal genuine coordination function \u2014 risk models do provide some signal about ordinary volatility (which helps coordination), but the primary function is to organize extraction by hiding tail coupling from the victims. The tangled rope perspective (for banks) correctly includes both coordination (systemic credit) and extraction (tail hedging advantage), which requires active enforcement (regulatory capital rules) to maintain the bank's privileged position. The piton perspective (for regulatory framework) correctly identifies performative activity: stress tests maintain the fiction that models capture tail risk while knowing they don't. The snare perspectives (retail, pension, analytical) correctly identify extraction with minimal coordination benefit \u2014 diversification supposedly coordinates risk across portfolios but fails at the moment of need. The constraint is not naturally a rope (pure coordination) because it has no beneficiary who is NOT extracting value from suppression. Even the banks extract through information asymmetry, not through coordination benefit. This rules out rope classification and confirms snare as the dominant type."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "portfolio_margin_mechanics",
+      "liquidity_provision_procyclicality",
+      "credit_default_interconnection"
+    ],
+    "dual_formulation_note": "Tail coupling has two structurally distinct manifestations: (1) mathematical/statistical feature of extreme-value distributions (very high \u03b5, near-mountain properties \u2014 tail events have real structural commonality), and (2) market mechanism feature of forced liquidations and margin calls (behavioral/economic \u03b5, snare properties \u2014 the coupling is amplified by institutional constraints). These could be decomposed into separate stories: tail_event_correlation_structure (mathematical mountain) and tail_event_cascade_forced_selling (institutional snare). This story treats them as a single constraint because the suppression mechanism operates on the economic consequence, not the mathematical fact."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.42
+    }
+  ]
+}

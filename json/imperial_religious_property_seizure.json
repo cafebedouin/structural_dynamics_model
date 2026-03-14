@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "imperial_religious_property_seizure",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "imprs"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Imperial Religious Property Seizure and Dispossession",
+    "topic_domain": "political_economy/religious_institutional_power",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "imperial_treasury",
+      "crown_allied_nobility"
+    ],
+    "victims": [
+      "religious_institutions",
+      "faith_communities",
+      "dispossessed_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Dispossessed Religious Community",
+      "comment": "PERSPECTIVE 1: DISPOSSESSED COMMUNITY (SNARE) \u2014 Religious communities and their adherents face expropriation of sacred lands, shrine properties, and institutional assets with no legal recourse, military resistance, or viable exit. The constraint appears as irreversible loss. Suppression is maximal: organized resistance is prohibited, legal challenge is foreclosed, relocation is impossible (sacred land cannot be abandoned). High experienced extraction with no coordination benefit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Religious Institutional Leadership",
+      "comment": "PERSPECTIVE 2: RELIGIOUS INSTITUTIONAL LEADERSHIP (SNARE) \u2014 Clergy and institutional administrators face seizure of endowments, monasteries, temples, and pilgrim revenue streams. Exit options are severely constrained: they can flee (losing all influence and livelihood), capitulate (losing institutional autonomy and sacred authority), or resist (risking execution or permanent suppression). Significant extraction with minimal coordination function \u2014 the crown negotiates spoils, not partnership."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Imperial Treasury",
+      "comment": "PERSPECTIVE 3: IMPERIAL TREASURY (ROPE) \u2014 The crown experiences the seizure as pure coordination: channeling religious wealth toward state functions (military, administration, infrastructure). No cost to the empire; sole beneficiary. Exit options abundant: the seizure can be expanded, consolidated, or relaxed depending on fiscal need. The constraint appears as a coordination mechanism for legitimate public purpose."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Crown-Allied Nobility",
+      "comment": "PERSPECTIVE 4: CROWN-ALLIED NOBILITY (TANGLED ROPE) \u2014 Local nobility may receive portions of seized properties as reward for loyalty and enforcement. They experience mixed coordination (rewarding allies) and extraction (from religious institutions). Exit options are mobile but costly: refusing the reward signals disloyalty; accepting it ties them to the crown's religious policy. Moderate extraction but with genuine coordination benefit."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Competing Imperial Religious Authority",
+      "comment": "PERSPECTIVE 5: COMPETING IMPERIAL RELIGIOUS AUTHORITY (PITON) \u2014 A state-sanctioned or rival religious institution may formally endorse the seizures as theologically justified (heresy punishment, idolatry suppression, doctrinal correction). The endorsement is performative: it provides legitimacy theater rather than genuine theological function. The constraint persists through institutional inertia \u2014 the authorization ritual continues long after its justificatory power has eroded."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal historical perspective, religious property seizure is an immutable feature of imperial consolidation: all empires extract from competing power centers, and religious institutions inevitably accumulate property that centralized states perceive as a rival fund. The constraint appears as a natural law of empire. However, this perspective risks naturalizing a contingent political choice \u2014 other empires have coexisted with religious wealth through different institutional arrangements."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "theological_justification_sincerity",
+      "question": "Is the theological justification for seizure (heresy, idolatry, doctrinal correction) genuine crown belief or pure legitimation theater?",
+      "resolution_mechanism": "Historical analysis of the crown's actions toward other religious institutions, consistency of stated doctrine with enforcement patterns, private vs. public justifications revealed in correspondence",
+      "impact": "If genuine: the constraint includes a coordination function (suppressing actual doctrinal competition) and should reclassify from pure snare toward tangled rope. If theater: the constraint is pure extraction disguised as theological duty.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether theological justification reflects genuine crown belief or pure theater"
+    },
+    {
+      "id": "fiscal_necessity_vs_predation",
+      "question": "Is the seizure driven by genuine imperial fiscal need (war, infrastructure) or opportunistic predation on accumulated religious wealth?",
+      "resolution_mechanism": "Temporal correlation analysis: seizures coinciding with military campaigns and building projects vs seizures during periods of fiscal stability; examination of alternative revenue sources available to the crown; comparison of religious property seized vs total imperial revenue",
+      "impact": "If driven by necessity: extraction reflects legitimate state consolidation (higher f(d) weighting for powerless agents as collateral damage of necessary statecraft). If predatory: extraction is pure rent-seeking (maximum f(d) applying to intentional targeting).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether seizure is driven by fiscal necessity or opportunistic predation"
+    },
+    {
+      "id": "religious_population_alternative_provision",
+      "question": "Does the crown provide alternative institutional support for religious practice (state temples, approved clergy stipends, protected pilgrim access) after seizure, or is the deprivation total?",
+      "resolution_mechanism": "Documentation of post-seizure religious institutional arrangements: whether crown funds replacement temples, pays clergy, permits worship; comparison of pre- and post-seizure religious practice accessibility and freedom",
+      "impact": "If alternative provision exists: suppression is moderate (religious function continues, if constrained). If total deprivation: suppression is maximal (religious institutions are eliminated, not replaced).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether crown provides alternative institutional support for religious practice"
+    },
+    {
+      "id": "identity_locked_clergy_participation",
+      "question": "Do some clergy actively collude in seizures (endorsing as doctrinal correction) because their professional and spiritual identity has fused with the crown's authority, even though their institutional interests are harmed?",
+      "resolution_mechanism": "Historical analysis of clergy testimony and actions: comparing clergy who resist vs. collaborate; examining whether collaborating clergy maintain their institutional position or are eventually purged; tracking whether clergy maintain independent theological positions or adopt crown-mandated doctrine",
+      "impact": "If identity-locked clergy participation is significant: some perspectives should include identity_locked exit options (clergy who cannot exit because their identity is fused with crown authority). If minimal: clergy resistance/collaboration reflects material incentives alone (use trapped/constrained/mobile exits).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether clergy collude due to identity fusion with crown authority"
+    },
+    {
+      "id": "rival_religious_institution_beneficiary_status",
+      "question": "Does a rival religious institution genuinely benefit from the seizure of a competing tradition's property, or does the seizure harm religious institutions broadly?",
+      "resolution_mechanism": "Examination of whether state-favored religious institutions receive seizure proceeds, whether they are protected from future seizures, whether crown ultimately turns on all religious institutions including those initially favored",
+      "impact": "If rival institution benefits durably: the constraint includes real coordination (crown consolidating power through religious hierarchy). If rival eventually faces seizure: the constraint is pure extraction (all religious institutions are interim targets, with sequencing providing temporary beneficiary status).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether rival religious institution durably benefits or is eventually targeted"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Imperial religious property seizure represents a foundational extraction mechanism by which centralizing empires consolidate power by claiming or redirecting wealth accumulated by competing institutional actors (religious institutions, temples, monasteries, pilgrimage networks). The constraint operates through explicit authorization (legal edict declaring seizure), theological legitimation (doctrinal justification), and military enforcement (suppression of resistance). Religious institutions are structurally vulnerable: they accumulate substantial property and revenue streams, they organize populations outside direct imperial control, and they claim authority that rivals the crown's. The seizure resolves this rivalry through expropriation. The constraint exhibits the full range of DR classifications depending on observer position: the dispossessed community experiences pure extraction (snare), the crown experiences pure coordination (rope), the nobility experiences mixed benefits and coercion (tangled rope), the competing religious institution provides legitimation theater (piton), and the analytical observer risks naturalizing the seizure as an inevitable feature of empire formation (mountain). The measurements show extractiveness rising from 0.45 to 0.72 over the interval, indicating that initial seizures (45% extractive, with significant theatrical justification) escalate into systematic expropriation (72% extractive) as the crown's confidence grows and alternative theological justifications accumulate.",
+    "key_agents": [
+      "Dispossessed Religious Community: Primary victim (powerless/trapped) \u2014 faces permanent loss of sacred property and institutional assets; no legal recourse or resistance capacity",
+      "Religious Institutional Leadership: Secondary victim (moderate/constrained) \u2014 clergy and administrators lose endowments, livelihood, and institutional autonomy; constrained between capitulation, flight, and suppression",
+      "Imperial Treasury: Primary beneficiary (institutional/arbitrage) \u2014 captures all proceeds from seizures; experiences the mechanism as pure coordination for legitimate fiscal purposes",
+      "Crown-Allied Nobility: Secondary beneficiary (powerful/mobile) \u2014 receives portions of seized property as reward for loyalty and enforcement; experiences mixed coordination and extraction",
+      "Competing Imperial Religious Authority: Institutional legitimator (institutional/arbitrage) \u2014 provides theological endorsement of seizures; maintains institutional position through performative authorization",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent political choice as immutable feature of empire"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The seizure captures 45-72% of religious institutional wealth directly, with no compensation or alternative provision. The escalation from 0.45 to 0.72 reflects that initial seizures target the most visible and defenseless institutions first, with increasing confidence and scope as resistance fails to materialize. Suppression (0.75): Very high. Organized resistance to seizure is prohibited (threat of execution); legal challenge is foreclosed (crown authority is supreme); theological objection is delegitimized (state-approved doctrine reframes resistance as heresy); relocation is impossible (sacred properties cannot be abandoned). Theater ratio (0.55): Moderate-high. Initial seizures employ substantial theological justification (heresy suppression, idolatry correction, doctrinal correction), with the theatrical component declining as the crown becomes more brazen. By measurement point 10, the theater ratio remains elevated (0.55) despite declining justification \u2014 the authorization ritual persists through institutional inertia even as its persuasive power erodes. This signals a drift toward piton characteristics over very long timescales.",
+    "perspectival_gap": "The original research group sees coordination (Rope) \u2014 they are solving the legitimate problem of communicating findings. The open science coalition sees a temporary problem with a sunset (Scaffold) \u2014 arXiv and registered reports are building alternative pathways. The journal editorial system sees its own degraded ritual (Piton) \u2014 peer review persists through inertia, not function. Replication groups see mixed coordination and extraction (Tangled Rope) \u2014 the system both enables and constrains their work. The field's epistemic reliability sees pure extraction (Snare) \u2014 premature claims contaminate the literature with no self-correction mechanism. The civilizational analytical observer risks seeing an immutable natural law (Mountain) \u2014 verification lag is inherent to science \u2014 but the structural data reveals this as a false summit: the contingent institutional arrangements (career incentives, funding concentration, publication bias) are not laws of nature.",
+    "directionality_logic": "Directionality values (d) are determined by structural position relative to the seizure extraction flow. The dispossessed community is purely targeted (d \u2248 0.95): they lose property without compensation or benefit. Religious leadership is primarily targeted with minor constrained exit (d \u2248 0.85): they face loss of institutional control and livelihood but can flee or capitulate, at extreme cost. The imperial treasury is purely beneficiary (d \u2248 0.05): they capture proceeds without bearing costs. Crown-allied nobility are mixed beneficiaries with mobile exit (d \u2248 0.45): they receive portions of seized wealth but must enforce the mechanism and could be abandoned by the crown. Competing religious authority is beneficiary with arbitrage exit (d \u2248 0.25): they gain relative advantage through the crown's targeting of rivals, but could themselves be seized if they lose royal favor. These d values feed the sigmoid f(d) to produce experienced extractiveness chi, which is then scaled by scope \u03c3(S) to determine effective extraction. Trapped agents with d \u2248 0.95 experience maximum chi; arbitrage beneficiaries with d \u2248 0.05 experience near-zero or negative chi.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by the perspectival method: this constraint has no single 'correct' type. Each perspective reveals a genuine structural feature. The snare classification (from the powerless agent's view) is not 'more correct' than the rope classification (from the beneficiary's view) \u2014 they reflect different structural positions in the same extractive mechanism. The resolution of apparent contradiction is that the analytical observer must recognize this is not a single constraint viewed from multiple angles but rather a relationship between agents with fundamentally asymmetric structural interests. The mountain perspective is a false summit (naturalized contingency) and can be rejected. The piton perspective reveals that institutional theological legitimation is degraded and performative. The analytical insight is that the constraint's classification depends entirely on the observer's structural position \u2014 there is no view-independent fact about whether this is a snare or rope, only the fact that different agents experience it radically differently because they occupy different positions in the extraction flow."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "religious_institutional_autonomy",
+      "faith_community_demographic_stability",
+      "imperial_fiscal_consolidation"
+    ],
+    "dual_formulation_note": "Imperial religious property seizure is a specific instantiation of a broader imperial consolidation constraint. Decomposition into separate stories reflects different measurement axes: the seizure mechanism (this story, \u03b5=0.68) vs. the long-term religious institutional autonomy constraint (downstream, \u03b5 varies by tradition) vs. the fiscal consolidation mechanism (upstream coordination, \u03b5 \u2264 0.35). The seizure story focuses on the expropriation mechanism; downstream stories address the persistence of religious institutions under constraint; upstream stories address imperial revenue consolidation as a coordination problem."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    }
+  ]
+}

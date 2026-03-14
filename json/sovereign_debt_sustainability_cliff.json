@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "sovereign_debt_sustainability_cliff",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sdc"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Sovereign Debt Sustainability Cliff",
+    "topic_domain": "macroeconomics/sovereign_finance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "creditor_institutions",
+      "external_lenders",
+      "international_financial_institutions"
+    ],
+    "victims": [
+      "debtor_nation_population",
+      "public_service_capacity",
+      "domestic_fiscal_autonomy"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Debtor Nation Population",
+      "comment": "PERSPECTIVE 1: DEBTOR NATION POPULATION (SNARE) \u2014 Citizens of a sovereign defaulting regime face domestic austerity, currency collapse, and loss of access to international markets. No exit mechanism; cannot leave the nation's fiscal trajectory. Bears maximum extraction through reduced social services, unemployment, and wealth destruction. Suppression is structural and comprehensive."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Public Service Capacity",
+      "comment": "PERSPECTIVE 2: PUBLIC SERVICE CAPACITY (SNARE) \u2014 Healthcare, education, and infrastructure deteriorate under debt servicing burden. Constrained by revenue capture demands; degradation is slow but inevitable. Can be partially arrested through external grants or debt forgiveness, but these come with enforcement conditions that recreate the constraint. Generational horizon reveals compounding damage."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Creditor Institutions",
+      "comment": "PERSPECTIVE 3: CREDITOR INSTITUTIONS (ROPE) \u2014 From immediate perspective, debt servicing is coordination: capital flows are reciprocated through scheduled payments. Arbitrage options abundant: creditors can diversify, demand collateral, restructure terms, or exit through secondary markets. Net beneficiary experiencing the constraint as beneficial coordination mechanism. High effective negative extraction (subsidy)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Financial System Stability",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL FINANCIAL SYSTEM STABILITY (TANGLED ROPE) \u2014 The global financial system has genuine coordination interest in sustainable debt trajectories \u2014 contagion and cascading defaults harm all participants. But this coordination interest coexists with asymmetric extraction: IMF/World Bank impose structural adjustment conditionality, requiring privatization, labor deregulation, and social service reduction. Organized actors (central banks, multilateral institutions) benefit from enforcement; debtor nations bear costs. Constraints binding through treaty obligations and market access dependencies."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "Regional Debt Restructuring Coalition",
+      "comment": "PERSPECTIVE 5: REGIONAL DEBT RESTRUCTURING COALITION (SCAFFOLD) \u2014 Organized coalitions (Paris Club, Brady Plan countries, ASEAN initiatives) represent temporary coordination mechanisms with genuine sunset clauses. Restructuring agreements are time-bound; conditionality is meant to be temporary. But empirically, restructuring often recreates similar constraints with different lenders \u2014 the scaffold persists. Classified as scaffold because the organizing logic is temporary relief, not permanent extraction, even though the empirical outcome often shows recurrence."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Gold Standard Debt Servicing Norm",
+      "comment": "PERSPECTIVE 6: GOLD STANDARD DEBT SERVICING NORM (PITON) \u2014 The institutional mandate that sovereign debts must be serviced regardless of domestic welfare cost persists through inertia. Empirically, many sovereigns have successfully defaulted and recovered without compliance to external enforcement; the norm is no longer functionally necessary. But multilateral institutions and creditors maintain the theatrical assertion that non-payment is unthinkable, supported by market access denial. Theater ratio reflects the gap between the ritual assertion of absolute obligation and the empirical reality of successful debt forgiveness and restructuring. Piton classification derives from high theater, not from high experienced extraction per se."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, debt sustainability appears as a mathematical law: interest accumulation at rates above growth creates inevitable default. This naturalizes a contingent institutional arrangement (creditor-favoring contract terms, capital flight, currency denomination dependency) as an immutable economic fact. The engine's false summit detector will flag this as naturalization. Debt sustainability is not a law of nature but a property of political relationships, interest rates, and currency regimes \u2014 all contingent."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "creditor_enforcement_capacity",
+      "question": "What enforcement mechanisms actually prevent sovereign default, and how robust are they to coalitional defection?",
+      "resolution_mechanism": "Historical analysis of successful defaults vs. enforced repayment; correlation between enforcement threats and payment behavior; empirical estimation of creditor loss under non-compliance scenarios",
+      "impact": "If enforcement capacity is robust: snare classification is accurate. If creditors can be defected from: the trap has exit routes, reclassifying toward tangled_rope or scaffold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Creditor enforcement capacity and creditor coalition robustness"
+    },
+    {
+      "id": "debt_servicing_welfare_tradeoff",
+      "question": "At what ratio of debt service to GDP does optimal sovereign policy shift from payment to default?",
+      "resolution_mechanism": "Empirical estimation of welfare-maximizing debt service thresholds; comparison of long-term outcomes for nations that serviced vs. defaulted at different ratios; analysis of conditional debt forgiveness effectiveness",
+      "impact": "If threshold is low (< 20% of revenue): snare classification is firm \u2014 payment obligation creates unambiguous welfare loss. If threshold is high (> 40%): payment may be rational welfare choice, weakening snare and suggesting constrained/tangled_rope dynamics.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Welfare-optimal debt service vs. payment threshold"
+    },
+    {
+      "id": "structural_adjustment_conditionality_effectiveness",
+      "question": "Do IMF/World Bank structural adjustment conditions actually improve long-term fiscal sustainability, or do they reduce short-term extraction surface without changing underlying dynamics?",
+      "resolution_mechanism": "Longitudinal comparison of post-adjustment outcomes; analysis of debt recurrence following restructuring; estimation of whether conditionality reduces or redistributes extraction",
+      "impact": "If conditions improve sustainability: tangled_rope classification confirmed (genuine coordination + extraction). If conditions are theater: reclassify toward piton (performative enforcement with degraded function).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Structural adjustment conditionality effectiveness for sustainability"
+    },
+    {
+      "id": "currency_regime_exit_availability",
+      "question": "Can a sovereign meaningfully exit debt servicing obligations through currency regime change (dollarization, hyperinflation, monetary sovereignty)?",
+      "resolution_mechanism": "Historical analysis of currency regimes and debt default patterns; estimation of exit costs vs. servicing costs; analysis of dollarized economies and their debt trajectories",
+      "impact": "If currency exit is available and low-cost: exit_options upgrade from trapped to constrained/mobile, reclassifying from snare toward tangled_rope. If currency is locked (dollarization, reserve currency dependency): trap remains firm.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Currency regime flexibility for debt exit"
+    },
+    {
+      "id": "capital_flight_extraction_interaction",
+      "question": "Does the debt sustainability constraint enable or require capital flight, and does flight itself constitute a primary extraction mechanism separate from debt servicing?",
+      "resolution_mechanism": "Estimation of capital flight volumes relative to debt service; tracking of wealth transfers during debt crises; analysis of whether capital flight precedes or follows debt constraint binding",
+      "impact": "If flight is endogenous to the constraint: extractiveness may be understated (flow includes both debt service + capital flight). If flight is exogenous: constraint is narrower than appears. Classification may shift toward snare if extraction is higher than estimated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Capital flight as endogenous vs. exogenous extraction mechanism"
+    },
+    {
+      "id": "collective_default_coalition_formation",
+      "question": "Under what conditions do debtor sovereigns successfully form coalitions to reject creditor enforcement?",
+      "resolution_mechanism": "Historical analysis of debtor cartels and default coordination; estimation of creditor losses under coalition scenarios; tracking of coalition formation dynamics during debt crises",
+      "impact": "If coalitions are feasible and low-cost to form: snare shifts toward tangled_rope (extraction persists but victims have exit option through coordination). If coalition formation is suppressed: snare is confirmed.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Debtor coalition capacity for coordinated default"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Sovereign debt sustainability creates a structural asymmetry where creditor institutions capture benefits from capital flows while debtor nations bear risks of fiscal constraint, austerity, and service interruption. The constraint operates through the interaction of three mechanisms: (1) creditor enforcement threats (market access denial, asset seizure, legal suits), (2) denominated currency dependency (foreign currency debt amplifies sovereignty loss), and (3) capital flight (wealth holders exit in advance of fiscal crisis, leaving the nation bearing net liability). The sustainability cliff is not a fixed mathematical property but emerges from political relationships between creditors (who can restructure, demand collateral, or accept losses) and debtors (who cannot unilaterally exit the creditor relationship). The theater ratio (0.58) reflects that institutional claims of absolute payment obligation coexist with historical patterns of successful default and debt forgiveness \u2014 the constraint persists through maintained fiction that payment is non-negotiable, not through enforcement mechanisms that make non-payment impossible.",
+    "key_agents": [
+      "Debtor Nation Population: Primary victim (powerless/trapped) \u2014 bears austerity, service reduction, currency collapse; no exit mechanism from national fiscal trajectory",
+      "Public Service Capacity: Structural victim (moderate/constrained) \u2014 healthcare, education, infrastructure deteriorate under servicing burden; constrained by revenue capture demands",
+      "Creditor Institutions: Primary beneficiary (institutional/arbitrage) \u2014 capture interest returns, restructuring fees, asset sales during crises; mobile through diversification and secondary markets",
+      "International Financial System: Organized beneficiary (organized/constrained) \u2014 has genuine stability coordination interest but enforces asymmetric conditionality; both benefits from coordination and extracts through structural adjustment",
+      "Regional Restructuring Coalitions: Temporary relief organizers (organized/mobile) \u2014 Paris Club, Brady agreements represent organizational attempts to create sunset mechanisms; empirically often recreate similar constraints",
+      "Gold Standard Debt Servicing Norm: Institutional theatrical actor (institutional/arbitrage) \u2014 maintains fiction of absolute payment obligation; persists through inertia despite empirical counterexamples of successful default",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing political relationships (creditor power, currency regime, capital flight) as immutable mathematical laws"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High, reflecting strong asymmetry in who benefits vs. who bears costs. Creditor institutions capture returns and restructuring value; debtor populations bear austerity and welfare loss. The value increases over time (0.38 \u2192 0.68) as debt accumulates and servicing crowds out public spending. This is not a fixed constraint but an accumulating one \u2014 extraction intensity rises as the sustainability cliff approaches. Suppression (0.72): Very high. Mechanisms include: (a) legal/treaty binding (debt contracts are internationally enforceable through creditor legal actions), (b) market access denial (non-payment triggers capital markets closure), (c) currency dependency (foreign-denominated debt makes local monetary sovereignty partial), (d) capital flight (wealthy holders exit in advance, concentrating losses on general population). No single mechanism is absolute, but collectively they are comprehensive. Theater ratio (0.58): Moderate-high, reflecting the gap between the institutional theater of absolute payment obligation and the empirical reality of successful defaults (Argentina 2001, Greece 2010s, Ecuador 2008). The theater maintains institutional credibility through selective enforcement (some debtors are punished, others forgiven) and the 'exceptional circumstance' framing (claiming each default is unique rather than predictable from structural conditions). The theater increases over time (0.42 \u2192 0.58) as the gap between payment fiction and default reality widens.",
+    "directionality_logic": "Directionality (d) is determined by the agent's structural relationship to the constraint. Creditor institutions derive d from beneficiary status + arbitrage exit options \u2192 low d \u2192 negative f(d) \u2192 negative \u03c7 (they experience subsidy). Debtor populations derive d from victim status + trapped exit options \u2192 high d \u2192 high f(d) \u2192 high \u03c7 (maximum experienced extraction). Organized coalitions (international financial system, regional restructuring groups) have mixed d values: they benefit from coordination (low d from beneficiary side) but also extract through enforcement conditions (high d from victim side) \u2014 this is the tangled rope directionality. The scope modifier \u03c3(S) also matters: national-scope measurement (single debtor nation) understates extraction because it misses the global creditor coordination benefits; global-scope measurement correctly shows the asymmetry (creditors coordinate across nations while each debtor is isolated).",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence. Creditor institutions see coordination (Rope) \u2014 capital flows are beneficial, reciprocated through scheduled payments, diversifiable through secondary markets. Debtors see extraction (Snare) \u2014 payments are mandatory, non-negotiable, and force welfare reduction. The international financial system sees both \u2014 genuine coordination interest in stability coexists with enforcement extraction. Organized debtor coalitions see a solvable problem (Scaffold) \u2014 temporary restructuring can reset dynamics. But the gold standard servicing norm sees an inert ritual (Piton) \u2014 the assertion that non-payment is unthinkable persists despite historical counterexamples. The civilizational analytical view risks false mountain classification, treating the constraint as a mathematical law of debt accumulation, which naturalizes what are actually political relationships (creditor enforcement capacity, currency regime choice, capital flight regulation). The perspectival gap reveals the constraint is not a law but a contingent institutional arrangement sustained by maintained fiction.",
+    "mandatrophy_analysis": "RESOLVED MANDATROPHY: This constraint resolves the tension between classification as pure extraction (snare) vs. coordination (rope) by showing that both are legitimate perspectival readings. The mandatrophy is resolved through multi-perspective indexing: the snare classification is the debtor population's structural reality; the rope classification is the creditor institution's structural reality; the tangled rope is the international financial system's mixed interest; the scaffold reflects debtor coalition organizing; the piton reveals institutional inertia in enforcement theater; the mountain is a false summit (naturalization of political relationships as mathematical laws). No single type 'solves' the constraint \u2014 the constraint exists because the perspectives are incommensurable. Creditors benefit from the current structure; debtors do not. No reformulation of the constraint resolves this asymmetry within the existing institutional framework. This is why the constraint is classified as a snare from the powerless perspective \u2014 it is not resolvable through better coordination or information, only through redistribution of bargaining power (debt forgiveness, creditor loss acceptance, debtor coalition formation)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "capital_flight_suppression",
+      "currency_sovereignty_subordination",
+      "structural_adjustment_enforcement"
+    ],
+    "dual_formulation_note": "The sovereign debt sustainability cliff decomposed into three downstream constraints: (1) capital_flight_suppression (wealth extraction mechanism independent of debt servicing), (2) currency_sovereignty_subordination (loss of monetary policy autonomy through foreign-denominated debt), (3) structural_adjustment_enforcement (conditionality extraction layer imposed during restructuring). Each has distinct \u03b5; this story captures the aggregate constraint. Network linkage enables contamination propagation: if one constraint (e.g., currency_sovereignty) is relaxed, pressure shifts to others."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

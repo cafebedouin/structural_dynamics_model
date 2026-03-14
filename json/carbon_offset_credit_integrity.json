@@ -1,0 +1,220 @@
+{
+  "header": {
+    "constraint_id": "carbon_offset_credit_integrity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "offset"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Carbon Offset Credit Integrity Verification and Market Asymmetries",
+    "topic_domain": "environmental_economics/climate_finance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "offset_project_developers",
+      "carbon_credit_traders",
+      "high_emission_corporations"
+    ],
+    "victims": [
+      "climate_mitigation_integrity",
+      "global_emissions_accounting",
+      "vulnerable_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Global Emissions Accounting System",
+      "comment": "PERSPECTIVE 1: GLOBAL EMISSIONS ACCOUNTING \u2014 Cannot exit verification failures; bears full cost of phantom credits. The integrity of the global carbon ledger is powerless, trapped in a system where false claims accumulate without remedy. No exit option except through collapse of the credit system itself."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Developing Nation Forest Programs",
+      "comment": "PERSPECTIVE 2: DEVELOPING NATION FOREST PROGRAMS (TANGLED ROPE) \u2014 Constrained by dependency on offset revenue for conservation funding, but also genuinely coordinating reforestation efforts. Faces extraction: must demonstrate additionality under conditions where verification is expensive and asymmetric. Also benefits from market access and climate finance flows. High suppression due to capacity constraints in monitoring and verification."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Carbon Offset Project Developers",
+      "comment": "PERSPECTIVE 3: CARBON OFFSET PROJECT DEVELOPERS (ROPE) \u2014 Institutional actors with arbitrage options. Experience the constraint as coordination mechanism: standardized verification, methodologies, and registries enable market participation and finance access. Net beneficiaries during favorable conditions. Can shift between markets, methodologies, and regulatory regimes."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "High-Emission Corporations Purchasing Offsets",
+      "comment": "PERSPECTIVE 4: HIGH-EMISSION CORPORATIONS (TANGLED ROPE) \u2014 Powerful agents using offsets for compliance and reputation management. Benefit from ability to purchase cheap credits rather than reducing emissions. Also constrained by regulatory requirements and reputational pressure to demonstrate decarbonization. Experience the constraint as both enabling (market access to offsets) and extracting (costs of verification, market volatility, regulatory risk)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Carbon Verification Standards Bodies",
+      "comment": "PERSPECTIVE 5: VERIFICATION STANDARDS BODIES (PITON) \u2014 Gold Standard, Verra, and similar bodies maintain elaborate certification rituals that primarily demonstrate institutional legitimacy rather than preventing fraud at scale. Theater ratio high: certification methodologies are complex and performative, creating impression of rigor without ensuring credit integrity. Constrained by path dependency \u2014 existing methodologies are entrenched, alternatives struggle for adoption."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Climate NGOs and Verification Coalitions",
+      "comment": "PERSPECTIVE 6: ORGANIZED CLIMATE NGOS (TANGLED ROPE) \u2014 Organized actors attempting to enforce integrity standards through monitoring, auditing, and public pressure. Mobile: can shift focus between markets, methodologies, and regulatory landscapes. Both coordinate genuine verification improvements and extract regulatory rents through standard-setting. Genuine coordination function: independent auditing does catch some frauds. Asymmetric extraction: standards bodies benefit from credentialing role."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Civilizational analysis reveals this as a genuine hybrid: offset markets do coordinate climate finance (beneficiaries and victims both need the mechanism) while simultaneously enabling asymmetric extraction (high-emission actors can purchase cheap credits instead of reducing emissions; developing nations bear verification burden). The constraint persists because it solves a coordination problem (mobilizing climate finance) while creating an extraction problem (shifting abatement costs toward vulnerable populations)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "additionality_verification_impossibility",
+      "question": "Can additionality be verified ex-post when the counterfactual (what would have happened without the project) is inherently unobservable?",
+      "resolution_mechanism": "Comparison of project-attributed emissions reductions against matched control regions and historical trajectories; detection of systematic bias in additionality claims via statistical comparison of claimed vs actual outcomes",
+      "impact": "If additionality is fundamentally unverifiable: all credits are phantom to some degree, making the constraint a pure Snare with no genuine coordination function. If verifiable at statistical bounds: the constraint is genuine Tangled Rope with measurable but non-zero fraud margin.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Fundamental verifiability of additionality claims"
+    },
+    {
+      "id": "leakage_attribution_boundary",
+      "question": "How should leakage (emissions reductions in one location causing increased emissions elsewhere) be attributed and compensated? Where do project boundaries end?",
+      "resolution_mechanism": "Spatial analysis of emissions flows; detection of systematic underestimation of leakage in existing methodologies; comparison of claimed vs empirical leakage rates across project types",
+      "impact": "If leakage is systematically underestimated by >20%: base extractiveness should increase to 0.68+ (Snare from more perspectives). If leakage accounting is reasonable: supports Tangled Rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proper attribution of leakage across project boundaries"
+    },
+    {
+      "id": "developer_moral_hazard_incentives",
+      "question": "Do the financial incentives for offset developers systematically bias them toward claiming credits where verification is weakest and fraud risk is highest?",
+      "resolution_mechanism": "Analysis of credit distribution across project types and verification rigor; comparison of fraud detection rates across methodologies; tracking of developer revenue correlation with verification difficulty",
+      "impact": "If systematic bias confirmed: extraction component increases (developers extracting rent via fraud), suppression increases (asymmetric information advantages developers). Classification may shift toward Snare from developer perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Moral hazard in offset developer incentives"
+    },
+    {
+      "id": "permanent_vs_reversible_storage_accounting",
+      "question": "How should credits for reversible abatement (e.g., forest conservation subject to logging risk, soil carbon subject to disturbance) be accounted relative to permanent abatement (e.g., industrial efficiency)?",
+      "resolution_mechanism": "Historical analysis of reversal rates for carbon storage projects; empirical comparison of permanence across project types; development of risk-adjusted credit accounting methodology",
+      "impact": "If reversal rates are substantial and unmeasured: base extractiveness should increase (fake permanence equals fake credits). Theater ratio may be systematically understated if methodologies ignore reversibility risk.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Accounting for reversibility and permanence in carbon storage projects"
+    },
+    {
+      "id": "north_south_verification_asymmetry",
+      "question": "Are offset credits from low-capacity developing nations systematically less verifiable than credits from high-capacity regions, creating a structural North-South extraction dynamic?",
+      "resolution_mechanism": "Comparative analysis of verification rigor, fraud detection rates, and credit invalidation across regions; cost analysis of verification burden relative to project scale; attribution of invalidated credits by developer nation",
+      "impact": "If asymmetry confirmed: geographic dimension of extraction becomes central; constraint shows North-South extraction pattern. Developing nation perspectives should classify higher on extraction scale. Suppression may reflect capacity barriers rather than choice.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "North-South asymmetry in verification capacity and integrity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "The carbon offset credit system represents a structural attempt to coordinate global climate finance by creating tradeable credits for verified emissions reductions. However, the system exhibits persistent asymmetries: developers face incentives to inflate credit claims, verification is expensive and unevenly distributed, developing nations bear disproportionate verification burden, and high-emission corporations can purchase cheap offsets instead of reducing emissions. The extractiveness has increased from 0.32 to 0.58 over the measurement interval as the system has grown and fraud patterns have accumulated. The theater ratio has risen from 0.48 to 0.72, indicating that verification methodologies are increasingly performative \u2014 complex certification frameworks create legitimacy impression without preventing systematic fraud. This constraint exhibits all features of Tangled Rope: genuine coordination function (mobilizing climate finance for conservation, renewable energy, efficiency projects in developing nations) combined with asymmetric extraction (offsetters escape abatement costs, developers capture rents, verification bodies profit from standard complexity). The suppression is high (0.65) because verification is technically difficult, information asymmetries favor developers and offsetters, and developing nations have limited capacity to audit projects or prove fraud.",
+    "key_agents": [
+      "Global Emissions Accounting System: Primary victim (powerless/trapped) \u2014 cannot exit or correct systematic credit inflation; bears full cost of phantom offsets",
+      "Developing Nation Forest Programs: Secondary victim and partial beneficiary (moderate/constrained) \u2014 constrained by revenue dependency on offset sales and verification cost barriers; also genuinely coordinating reforestation",
+      "Carbon Offset Project Developers: Primary beneficiary (institutional/arbitrage) \u2014 capture rents through credit inflation and methodological arbitrage; can shift between markets and regulatory regimes",
+      "High-Emission Corporations: Powerful users (powerful/mobile) \u2014 benefit from ability to purchase cheap offsets; also constrained by compliance requirements and reputational pressure",
+      "Verification Standards Bodies: Institutional maintainers (institutional/constrained) \u2014 benefit from credentialing role while theater ratio increases; constrained by path dependency of established methodologies",
+      "Climate NGOs: Organized enforcers (organized/mobile) \u2014 attempt to enforce integrity standards; both coordinate genuine auditing improvements and extract regulatory legitimacy",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees the constraint as necessarily hybrid because offset markets solve a coordination problem (mobilizing climate finance) that would otherwise be harder to address"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high and rising. The baseline value of 0.32 reflected the system's early-stage design intent: coordinate climate finance for development-compatible emissions reductions. The current value (0.58) reflects accumulated evidence that the system enables substantial asymmetric extraction: (1) Additionality is weakly verifiable, creating room for phantom credits; (2) Developers have incentives to maximize credit claims rather than verify rigor; (3) High-emission actors purchase cheap offsets instead of reducing emissions; (4) Developing nations bear verification burden without capacity; (5) Methodological complexity creates arbitrage opportunities. The rise to 0.62 at the end reflects recent scandals revealing large-scale fraud (e.g., forest protection projects that weren't actually protecting forests). Suppression (0.65): High and stable. Verification is technically difficult (counterfactuals are unobservable), information asymmetries favor developers and offsetters, developing nations have limited audit capacity, and the sheer scale of the market (billions of dollars, millions of projects) outpaces monitoring. Theater ratio (0.68, rising to 0.72): Moderate-high. Certification methodologies are elaborate and create legitimate impression without preventing fraud. Complex frameworks (CDM methodologies, Verra standards) require specialized expertise, creating barriers to public scrutiny and developer compliance claims that are technically defensible even when substantially false. The rise reflects increasing complexity of standards as methodologies attempt to close loopholes, which paradoxically increases theater while fraud continues.",
+    "perspectival_gap": "Perspectival gaps emerge along two dimensions: (1) Power asymmetry: powerful actors (corporations, developers) experience the constraint as coordinating mechanism; powerless agents (accounting integrity) experience it as extraction. (2) Verification burden distribution: high-capacity regions and wealthy offsetters have capacity to navigate complex methodologies; low-capacity developing nations and forest communities bear verification cost without capacity. The gap between the developer's Rope and the global ledger's Snare is the constraint's structural core.",
+    "directionality_logic": "The directionality pipeline computes d from beneficiary/victim status, power level, and exit options. Developers benefit from market access and credit inflation (beneficiary status with arbitrage options \u2192 low d \u2192 negative effective extraction from their perspective). High-emission corporations benefit from cheap offset purchases (beneficiary status with mobile options \u2192 low d). Developing nations are both beneficiaries of climate finance and victims of verification burden (mixed d \u2248 0.55). The global emissions accounting system is a pure victim with no exit (victim status trapped \u2192 d \u2248 0.95). This produces the perspectival gap: same \u03b5 = 0.58, same suppression = 0.65, but dramatically different classifications depending on observer position.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: This constraint resolves the mandatrophy between 'is this coordination or extraction?' by showing that it is genuinely both. The offset market coordinates global climate finance that would otherwise be difficult to mobilize. Developing nations would have fewer conservation projects without offset revenue. The coordination function is real. Simultaneously, the constraint enables systematic asymmetric extraction: high-emission actors escape abatement costs, developers inflate credit claims, and the global accounting system accumulates phantom offsets. Both are true. The Tangled Rope classification reflects this: \u03c7 (effective extraction) = 0.58 \u00d7 f(d) \u00d7 \u03c3(S) varies across perspectives because d and the coordination function vary. For developers, the coordination benefit and low d make \u03c7 modest or negative. For the global system, the victim status and high d make \u03c7 extreme. For developing nations, the mixture of benefit and burden produces moderate \u03c7. The constraint cannot be classified as pure Rope (genuine coordination exists) or pure Snare (extraction does exist). It is Tangled Rope because it solves a real coordination problem (mobilizing climate finance) while creating real extraction asymmetry (shifting abatement burden toward weaker actors)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "corporate_decarbonization_theater",
+      "developing_nation_adaptation_finance_access",
+      "carbon_leakage_displacement"
+    ],
+    "dual_formulation_note": "The carbon offset constraint family decomposes into three structurally distinct claims: (1) whether offset projects genuinely reduce emissions (empirical, offset_project_additionality, \u03b5 \u2248 0.45); (2) whether offset markets coordinate climate finance (structural, carbon_offset_credit_integrity, \u03b5 \u2248 0.58, this story); (3) whether offset purchases enable corporate climate claims (narrative, corporate_decarbonization_theater, \u03b5 \u2248 0.62). Each story has different base properties, different victim groups, and different measurement signatures. Upstream: additionality verification constrains credit legitimacy. Downstream: corporate theater depends on offset market opacity."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.42
+    }
+  ]
+}

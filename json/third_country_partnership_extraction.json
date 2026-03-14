@@ -1,0 +1,226 @@
+{
+  "header": {
+    "constraint_id": "third_country_partnership_extraction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tcp"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "Third Country Partnership Extraction in Trade and Investment Networks",
+    "topic_domain": "economic/political/trade",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "developed_economy_firms",
+      "advanced_capital_exporters"
+    ],
+    "victims": [
+      "third_country_labor",
+      "third_country_environment",
+      "developing_economy_governments"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Third Country Worker",
+      "comment": "PERSPECTIVE 1: THIRD COUNTRY WORKER (SNARE) \u2014 Trapped in partnership agreements that channel external capital to local infrastructure but extract labor at suppressed wages. No meaningful exit: local employment alternatives are absent, migration barriers are high, and contract terms are non-negotiable. Maximum experienced extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Third Country Environment",
+      "comment": "PERSPECTIVE 2: THIRD COUNTRY ENVIRONMENT (SNARE) \u2014 Environmental costs (pollution, resource depletion, habitat loss) are externalized into the hosting jurisdiction while capital profits flow to external investors. The constraint is enforced through property rights that prioritize investor returns over local environmental governance. No exit path for ecological commons."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Developing Country Government",
+      "comment": "PERSPECTIVE 3: DEVELOPING COUNTRY GOVERNMENT (TANGLED ROPE) \u2014 Experiences mixed effects. Partnership agreements provide infrastructure investment and tax revenue (coordination benefit) but also impose policy constraints (investor protections, regulatory caps) that subordinate local public interest to external capital returns. Exit is costly \u2014 rejecting partnerships means foregone infrastructure investment, but accepting them means surrendering regulatory autonomy. Moderate power with genuine constraints on agency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Developed Economy Investor",
+      "comment": "PERSPECTIVE 4: DEVELOPED ECONOMY INVESTOR (ROPE) \u2014 Experiences the partnership as coordination: legal frameworks and investor protections enable capital allocation. Arbitrage exit is available \u2014 investors can redirect capital to alternative markets if returns are insufficient. Net beneficiary. The constraint appears as a functional coordination mechanism from this vantage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Multinational Corporation",
+      "comment": "PERSPECTIVE 5: MULTINATIONAL CORPORATION (TANGLED ROPE) \u2014 Highly mobile (can relocate operations to more favorable jurisdictions) but also genuinely coordinates local supply chain integration and technology transfer. Experiences the constraint as mixed: legitimate coordination benefit (supply chain efficiency) layered with extractive power (wage suppression, environmental externalization). Extraction runs through this agent toward third country workers and environments, but the corporation also invests capital and accepts some operational risk."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The International Development Institution",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL DEVELOPMENT INSTITUTION (PITON) \u2014 Ostensibly supports third country development through partnership facilitation and loan guarantees. The functional activity (vetting partnerships, monitoring compliance) is substantially performative \u2014 institutions lack enforcement power over multinational behavior and rely on third country governments to regulate, which creates a coordination failure. Theater ratio is high because the performance of development support masks a structural inability to prevent extraction. Piton classification reflects this degradation: the institution was designed to prevent extractive partnerships but has become a ceremonial validator of them."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, capital mobility and wage arbitrage across borders are immutable features of integrated global markets. The extraction of third country labor and environmental resources is treated as an inherent consequence of market integration, not a contingent institutional choice. However, this perspective naturalizes policy arrangements (capital mobility protections, weak environmental regulation, suppressed labor standards) as laws of economics, which the structural data reveals as institutional choices vulnerable to reformation."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "investor_protection_vs_host_autonomy",
+      "question": "Are investor-state dispute settlement (ISDS) mechanisms genuine protection of legitimate investments or mechanisms for extractive constraint on third country regulatory autonomy?",
+      "resolution_mechanism": "Analysis of ISDS case outcomes: frequency of claims against labor/environmental regulations vs claims against expropriation; ratio of awards to developing-country governments vs multinational claimants; correlation between ISDS-initiated cases and subsequent regulatory rollback",
+      "impact": "If genuine protection: partnership structure is legitimate coordination (shifts snare classifications toward tangled rope). If primarily extractive constraint: ISDS is enforcement mechanism for rent extraction (confirms snare classification).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether ISDS protections legitimate partnerships or enforce extraction"
+    },
+    {
+      "id": "wage_suppression_structural_or_competitive",
+      "question": "Are suppressed wages in third country partnerships a structural result of unequal bargaining power or a competitive equilibrium in global labor markets?",
+      "resolution_mechanism": "Comparative wage analysis: third country wages in multinational operations vs domestic non-partnership firms in same sector; wage convergence or divergence over 10-year periods; correlation between partnership entry and local wage growth in comparable regions",
+      "impact": "If structural inequality: suppression is enforced asymmetry (snare classification confirmed). If competitive equilibrium: suppression reflects scarcity, not constraint (reclassifies toward tangled rope for workers).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether wage suppression is structural or competitive"
+    },
+    {
+      "id": "exit_cost_for_developing_governments",
+      "question": "How real is the constraint on developing country governments? Can governments reject partnerships or renegotiate terms without catastrophic capital flight or credit downgrades?",
+      "resolution_mechanism": "Historical case analysis: governments that rejected or renegotiated partnership agreements; outcomes (capital flight magnitude, credit rating impact, alternative funding sources); time to recovery of investment and governance autonomy",
+      "impact": "If exit costs are catastrophic (>5% of GDP, multi-year sovereign downgrades): developing government classification remains trapped (tangled rope at best). If exit costs are manageable (<2% of GDP, recovery in 2-3 years): exit options upgrade toward constrained or mobile, reducing snare/tangled rope classifications.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether developing governments can realistically exit partnerships"
+    },
+    {
+      "id": "technology_transfer_actualization",
+      "question": "Do partnership agreements actually deliver promised technology transfer and knowledge spillovers to third country firms, or is technology transfer rhetoric a performance mask for labor and resource extraction?",
+      "resolution_mechanism": "Longitudinal analysis of third country firm capabilities pre- and post-partnership: patent development, productivity growth, export competitiveness, human capital accumulation; correlation with partnership terms and enforcement records",
+      "impact": "If genuine transfer: tangled rope classification (real coordination function) confirmed. If nominal or prevented: piton or snare classification (performance mask) confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether technology transfer occurs or is rhetorical"
+    },
+    {
+      "id": "environmental_externalization_pricing",
+      "question": "What are the actual environmental costs (pollution remediation, health impacts, resource depletion) of partnership operations, and are they accurately priced into partnership agreements or externalized?",
+      "resolution_mechanism": "Environmental accounting: full-cost assessment of partnership operations including external costs; comparison with partnership-stated environmental provisions; post-partnership remediation costs borne by third country governments vs corporate settlement amounts",
+      "impact": "If externalized: environment is classic snare victim (extraction with no exit, no compensation). If priced in: environmental costs are coordination expenses, not pure extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether environmental costs are externalized or internalized"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.71
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Third country partnership extraction occurs when developed-economy investors and multinational corporations establish commercial relationships in developing countries through bilateral or trilateral agreements that ostensibly coordinate capital investment, technology transfer, and economic development. In practice, these partnerships frequently generate asymmetric extraction: external investors capture returns on capital while third country populations bear labor suppression, environmental externalization, and regulatory constraint. The constraint is enforced through investor protections (ISDS mechanisms, capital mobility rights) that prioritize external capital returns over host-country labor standards, environmental governance, and democratic autonomy. The partnership framework appears as legitimate coordination from the investor perspective and as pure extraction from the third country worker and environment perspectives. Over the 15-year interval, extractiveness has increased from 0.35 to 0.62 as partnerships have accumulated extractive provisions (stricter investor protections, broader regulatory carve-outs) while theater has risen from 0.52 to 0.71, indicating that the development and sustainability performance narrative has grown more elaborate even as actual coordination function has degraded. The constraint exhibits all six DR types from different structural positions.",
+    "key_agents": [
+      "Third Country Workers: Primary victims (powerless/trapped) \u2014 labor extraction with no exit options; wages suppressed to investor return requirements",
+      "Third Country Environment: Primary victim (powerless/trapped) \u2014 environmental costs externalized; no governance mechanism to prevent or price damage",
+      "Developing Country Government: Secondary actor (moderate/constrained) \u2014 experiences mixed coordination (infrastructure investment) and extraction (regulatory autonomy subordinated to investor rights)",
+      "Multinational Corporation: Beneficiary-and-coordinator (powerful/mobile) \u2014 invests capital and integrates supply chains (genuine coordination) while extracting through wage suppression and environmental externalization (extraction)",
+      "Developed Economy Investor: Primary beneficiary (institutional/arbitrage) \u2014 structures partnerships to capture returns; can redirect capital to alternative jurisdictions if returns insufficient",
+      "International Development Institution: Ceremonial validator (institutional/arbitrage) \u2014 ostensibly monitors and facilitates development outcomes but lacks enforcement power; performance of development support masks inability to prevent extraction",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing policy choices (capital mobility protections, regulatory carve-outs) as immutable market laws"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High and increasing. Third country partnerships extract labor (wage suppression below alternative-market equilibrium), environmental resources (externalized cleanup costs), and fiscal capacity (foregone tax revenue through special economic zones). The 0.35\u21920.62 trajectory reflects that extractive provisions have accumulated over time as investors have learned to structure agreements to maximize return certainty. At time 0, partnerships were newer and less optimized for extraction; by time 15, contractual sophistication has increased extraction. Suppression (0.65): High. Third country workers face trapped conditions: employment alternatives in home countries are sparse (rural underemployment, subsistence agriculture); migration barriers to developed economies are high (visa restrictions, language/credential barriers); contract terms are non-negotiable (take-it-or-leave-it, no collective bargaining). Environmental commons has zero bargaining power and no exit. Developing governments face high cost to exit (capital flight, credit downgrades, loss of infrastructure investment). Theater ratio (0.68, increasing): Development institutions, corporate sustainability reporting, and partnership frameworks produce elaborate performance of commitment to labor standards, environmental protection, and knowledge transfer. The gap between stated commitments and enforced outcomes is substantial. ISDS mechanisms are framed as investor protection but function as regulatory extraction enforcement. Sustainability reporting is voluminous but auditing and enforcement are weak.",
+    "perspectival_gap": "Third country workers experience snare (trapped, no exit, net extraction with no coordination benefit). Developed investors experience rope (beneficiary, exit available, coordination function visible). Developing governments experience tangled rope (infrastructure benefit but regulatory subordination). The gap between worker-snare and investor-rope is maximal (5 classification types apart), revealing that partnership arrangements distribute benefits and costs asymmetrically. Workers see pure extraction; investors see pure coordination. Both are correct from their positions \u2014 the asymmetry IS the constraint. Development institutions experience piton (performing development while lacking enforcement capacity) \u2014 a degradation from their mandate to prevent extractive arrangements. The analytical observer risks mountain (naturalizing policy choices as economic necessity), which is false \u2014 partnerships are restructurable policy arrangements, not laws of physics.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from beneficiary/victim status and exit options. Third country workers are victims with trapped exit \u2192 d \u2248 0.95 \u2192 f(d) \u2248 1.42, maximum experienced extractiveness. Third country environment is victim with zero exit \u2192 d = 1.0 \u2192 f(d) \u2248 1.50, maximum extraction but no agent power to negotiate. Developing government is victim with constrained exit (high cost but possible) \u2192 d \u2248 0.60 \u2192 f(d) \u2248 0.80, moderate-high experienced extraction. Multinational is mixed (beneficiary from labor extraction, bear some coordination costs) \u2192 d \u2248 0.45 \u2192 f(d) \u2248 0.55, moderate experienced extraction. Investor is beneficiary with arbitrage exit \u2192 d \u2248 0.05 \u2192 f(d) \u2248 -0.12, negative experienced extraction (constraint subsidizes this agent). Development institution is ceremonial beneficiary (derives legitimacy from association) with arbitrage exit \u2192 d \u2248 0.10 \u2192 f(d) \u2248 -0.03, near-zero experienced extraction. Scope modifier: global partnerships at global scope (\u03c3 = 1.2) amplify extraction across all indices.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that classification depends on structural position, not on whether the partnership 'really' is coordination or extraction. From the investor (beneficiary, arbitrage exit), it is coordination (rope). From the worker (victim, trapped exit), it is extraction (snare). From the government (mixed, constrained exit), it is mixed (tangled rope). The mandatrophy is resolved by acknowledging that all classifications are structurally correct from their respective positions. The question is not 'Is third country partnership extraction coordination or pure extraction?' but 'Whose structural position are you analyzing?' The falsifiable claim is that investors genuinely benefit (rope perspective is correct from that position) and workers genuinely suffer net extraction (snare perspective is correct from that position). The piton classification for development institutions reveals that the ceremonial narrative (development support, partnership facilitation, monitoring) masks institutional inability to prevent or sanction extraction. The analytical mountain is a false summit \u2014 it naturalizes policy choices as inevitable economics."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "capital_flight_prevention",
+      "developing_country_debt_sustainability",
+      "labor_standard_harmonization"
+    ],
+    "dual_formulation_note": "Third country partnership extraction is a distinct constraint from its component mechanisms (labor extraction, environmental externalization, regulatory subordination). Each component has its own \u03b5 value and classification. This story models the integrated partnership framework; decomposition into labor_extraction (\u03b5 \u2248 0.72), environmental_externalization (\u03b5 \u2248 0.68), and regulatory_subordination (\u03b5 \u2248 0.55) would yield three separate stories linked by network.affects_constraints for deeper analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "international_trade_asymmetry"
+    ]
+  }
+}

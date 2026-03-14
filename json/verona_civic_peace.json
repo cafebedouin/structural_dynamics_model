@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "verona_civic_peace",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Verona Civic Peace: Factional Coordination Under Threat",
+    "topic_domain": "medieval_political/urban_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "merchant_guilds",
+      "della_scala_signoria"
+    ],
+    "victims": [
+      "minor_families",
+      "popular_classes",
+      "civic_freedoms"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Popular Classes (Popolo)",
+      "comment": "PERSPECTIVE 1: POPOLO / MINOR FAMILIES (SNARE) \u2014 Trapped within the city walls and dependent on guild-controlled labor markets. The civic peace constrains factional violence but mandates submission to della Scala authority. Cannot exit without abandoning livelihood and protection. Maximum suppression: armed enforcement and economic dependency. Minimal coordination benefit \u2014 the peace serves the dominant faction's interest in monopolizing coercive power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Minor Magnate Families",
+      "comment": "PERSPECTIVE 2: MINOR MAGNATE FAMILIES (TANGLED ROPE) \u2014 Constrained by della Scala's military superiority and threat of exile or property confiscation. But also benefit from the peace \u2014 it prevents the internecine feuding that would exhaust their resources. Moderate extraction: forced submission to Scala arbitration and restricted private military. Genuine coordination function: the peace settles competing claims over land, water rights, and succession. Active enforcement required: Scala police and podest\u00e0 courts."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Merchant Guilds (Arti Maggiori)",
+      "comment": "PERSPECTIVE 3: MERCHANT GUILDS (ROPE) \u2014 Primary beneficiary. The civic peace enables commerce by suppressing factional violence and providing predictable dispute resolution. Guilds arbitrage between della Scala (security provider) and the popolo (labor force). Minimal extraction experienced \u2014 guilds see the constraint as solving their genuine coordination problem: stable trade requires stable factionalism. Low suppression from the guilds' perspective: they participate in the podest\u00e0 councils and influence policy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Della Scala Signoria",
+      "comment": "PERSPECTIVE 4: DELLA SCALA SIGNORIA (TANGLED ROPE) \u2014 Powerful but constrained by the need to maintain the peace fiction without appearing tyrannical. Genuine coordination function: managing the competing claims of magnate families. Significant extraction: the peace gives della Scala monopoly on violence and arbitration, generating revenue through fines, confiscations, and appointments. Mobile exit option because della Scala can migrate (exile, relocation of power base) or dissolve the peace if control erodes. The constraint requires active enforcement through the podest\u00e0 system and threat credibility."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Podest\u00e0 Bureaucracy",
+      "comment": "PERSPECTIVE 5: PODEST\u00c0 BUREAUCRACY (PITON) \u2014 The formal legal machinery of the civic peace. Theater ratio high (0.58): podest\u00e0 courts perform justice rituals, oath-taking ceremonies, and formal arbitration that convey legitimacy but often serve della Scala's political interests rather than genuine conflict resolution. The bureaucracy persists through institutional inertia \u2014 it is the visible mechanism of peace, maintained because alternatives (direct Scala tyranny or descent into civil war) are worse. Primary function has attenuated: the real power lies in della Scala's threat capacity, not the court's wisdom."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Church and Religious Confraternities",
+      "comment": "PERSPECTIVE 6: CHURCH AND CONFRATERNITIES (TANGLED ROPE) \u2014 Organized actors with genuine coordination function (spiritual legitimation of the peace, mediation of disputes, poor relief to buy social stability). Constrained by della Scala's ability to revoke privileges and control appointments. Benefit from the peace (predictable land holdings, tithe collection, political influence). Experience moderate extraction: Scala appropriates some ecclesiastical resources and demands political loyalty framed as spiritual authority. Active enforcement: threatening excommunication or removal of clerics disloyal to the peace."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal perspective, some concentration of enforcement capacity is inherent to any multi-faction urban system. The peace appears as an immutable property of state formation: you cannot have both equality between armed factions and stability. However, structural data contradicts this mountain classification \u2014 the specifics of Verona's peace (della Scala monopoly, guild privilege, popular suppression) are contingent institutional arrangements, not natural law. False summit: the naturalizing move mistakes a particular power concentration for a necessary feature of peace itself."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "equilibrium_versus_hegemony",
+      "question": "Does the civic peace represent genuine multi-faction equilibrium or unilateral della Scala hegemony disguised as consent?",
+      "resolution_mechanism": "Historical analysis of treaty enforcement asymmetries; comparison of penalties imposed on della Scala agents vs minor families; examination of council voting patterns and whether minority factions could block majority decisions",
+      "impact": "If equilibrium: classification shifts toward Rope (coordination with balanced enforcement). If hegemony: classification shifts toward Snare (rule by threat with fiction of consent). Current assessment assumes significant hegemonic element (tangled rope with high extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the peace is equilibrium or hegemonic suppression"
+    },
+    {
+      "id": "alternative_coordination_feasibility",
+      "question": "Could Verona's factions maintain city stability through distributed, non-hierarchical coordination (rotating councils, mutual defense pacts, merchant-led arbitration) without della Scala hegemony?",
+      "resolution_mechanism": "Comparative analysis of Italian cities: Venice's council system, Florence's guild republic, other Lombard communes; examination of whether Verona tried non-hierarchical models before della Scala consolidation",
+      "impact": "If feasible: della Scala peace is contingent arrangement masquerading as necessity (false summit confirmed). If infeasible: the mountain perspective gains credibility \u2014 some hierarchy may be inherent. Current assessment: Venice and Florence models suggest feasibility, supporting false summit diagnosis.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether non-hierarchical coordination could maintain stability"
+    },
+    {
+      "id": "popular_class_identity_lock",
+      "question": "Do the popolo accept della Scala rule as legitimate (identity-locked) or resist it structurally but are materially trapped?",
+      "resolution_mechanism": "Analysis of popular revolts and their framing; examination of religious and civic rituals celebrating della Scala; comparison of overt resistance to structural barriers to exit",
+      "impact": "If identity-locked: suppression measure understates the binding mechanism \u2014 the popolo carry the constraint with them even if they escape physically. If trapped: suppression is structural (economic dependency, physical barriers). Classification implications: identity-locked suggests higher theater ratio; trapped suggests higher actual extraction beneath the performative layer.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether popular-class acceptance is internalized or material"
+    },
+    {
+      "id": "della_scala_succession_fragility",
+      "question": "How dependent is the peace on della Scala's particular dynasty vs the hegemonic structure itself?",
+      "resolution_mechanism": "Historical analysis of succession crises and civil unrest; examination of whether peace persisted through changes in Scala leadership; comparison with successor regimes",
+      "impact": "If dependent on dynasty: peace has sunset clause built in (Scaffold perspective gains credibility). If structural: peace persists independent of leadership and must be analyzed as permanent hegemony. Current assessment: multiple Scala signori maintained the system, suggesting structural rather than personality-dependent, but succession fragility is measurable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether peace depends on dynasty or hegemonic structure"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The Verona Civic Peace (established early 14th century under della Scala rule) presents a structural constraint that coordinates multi-faction urban coexistence while concentrating coercive and extractive power in the signoria. The constraint exhibits the full taxonomy of DR classification depending on observer position. For the merchant guilds and della Scala, the peace solves the genuine coordination problem of maintaining trade networks and preventing internecine feuding that would exhaust all factions. For minor magnate families, the peace constrains private military ambitions but provides predictable arbitration and land security. For the popular classes, the peace imposes suppression through legal enforcement (podest\u00e0 courts, guild monopolies) and economic dependency (guild-controlled labor markets). The constraint's theater ratio (0.58) reflects performative elements: oath-taking ceremonies, formal trials, and ecclesiastical legitimation that convey justice while serving della Scala's political interests. The extractiveness trajectory (0.35 \u2192 0.52 over 50 years) shows accumulation: initial coordination gains degrade as della Scala uses the peace machinery to consolidate monopoly power and extract rents through fines, confiscations, and appointments.",
+    "key_agents": [
+      "Della Scala Signoria: Primary beneficiary (powerful/mobile) \u2014 monopolizes coercive capacity and arbitration authority; extracts through fines, confiscations, appointments; maintains hegemony through threat credibility",
+      "Merchant Guilds (Arti Maggiori): Secondary beneficiary (institutional/arbitrage) \u2014 benefit from stable trade environment and guild privilege; minimize extraction cost through council participation and price-setting authority",
+      "Minor Magnate Families: Constrained victim (moderate/constrained) \u2014 lose private military independence and face threat of exile; gain predictable dispute resolution and land security; moderate extraction through forced arbitration and Scala taxation",
+      "Popular Classes (Popolo): Primary victim (powerless/trapped) \u2014 trapped by guild-controlled labor markets and economic dependency; face suppression through legal enforcement; minimal coordination benefit; maximum extraction through taxes, fines, and forced labor obligations",
+      "Podest\u00e0 Bureaucracy: Institutional actor (institutional/arbitrage) \u2014 performs justice functions that legitimate della Scala rule; maintains inertia despite functional degradation; benefits from appointments and prestige",
+      "Church and Confraternities: Organized mediator (organized/constrained) \u2014 provide legitimation rituals and social stability services; constrained by della Scala's control of appointments; benefit from guaranteed land holdings and tithe collection",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent power concentration as immutable feature of state formation"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Della Scala captures significant rents through monopolized arbitration and threat credibility, but much of this is legitimate first-mover reward for providing genuine coordination service (suppressing faction violence that would paralyze trade). The trajectory from 0.35 to 0.52 reflects extraction accumulation as della Scala uses the peace machinery to consolidate power beyond the initial coordination function. The base value reflects the mixture: genuine coordination need explains why no faction exits entirely; della Scala's accumulation explains why extraction increases over time. Suppression (0.65): Moderate-high. Structural barriers to exit are significant: the popolo cannot exit the city without abandoning economic livelihood; minor families face military and property loss through exile threats; guild membership is required for trade participation. But suppression is not total (0.90+) because some escape routes exist (migration to other cities, rural retreat, hidden economic activity). Theater ratio (0.58): Moderate. The podest\u00e0 courts and ceremonial legitimation create performative content, but the underlying coercive structure is real and functional. Unlike pure piton constraints (0.70+), the Verona peace does coordinate genuine problems \u2014 the theater is a supplement to real enforcement, not a substitute for function.",
+    "perspectival_gap": "The constraint manifests maximum perspectival divergence across power positions. The della Scala signoria (powerful/mobile/institutional) classifies as Tangled Rope \u2014 they genuinely coordinate factional settlement while accumulating hegemonic power. The merchant guilds (institutional/arbitrage) classify as Rope \u2014 they experience coordination benefit with minimal extraction cost. The minor families (moderate/constrained) classify as Tangled Rope \u2014 caught between coordination benefit (dispute settlement) and extraction cost (lost autonomy). The popolo (powerless/trapped) classify as Snare \u2014 pure extraction with suppression maintained through legal enforcement and economic dependency. The podest\u00e0 (institutional/arbitrage) classify as Piton \u2014 the formal legal machinery persists as legitimating theater despite functional degradation. The church (organized/constrained) classify as Tangled Rope \u2014 genuine coordination function (spiritual legitimation, poor relief) alongside constrained extraction (threat to clerical appointments). The analytical observer (analytical/analytical) risks classifying as Mountain \u2014 naturalizing the concentration of power as immutable feature of urban stability \u2014 but the structural data reveals this as a false summit: Venice and Florence maintained stability with distributed power, proving the Verona model is contingent.",
+    "directionality_logic": "Each perspective's classification derives from its structural relationship (beneficiary/victim + exit options + power level) to the constraint. Della Scala as beneficiary with mobile exit options (can migrate, consolidate, or dissolve) experiences low directionality (d \u2248 0.22): they benefit from the constraint and retain agency. This produces low effective extraction (\u03c7) despite moderate base extraction (\u03b5 = 0.52) \u2014 the formula \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) dampens extraction for mobile beneficiaries. Merchant guilds as institutional beneficiaries with arbitrage options experience even lower d (\u2248 0.12): they capture benefits while maintaining trade alternatives. Minor families as moderate-power victims with constrained exit (threat of exile, property loss, but some military capacity) experience moderate d (\u2248 0.58): they are partially trapped but retain structural position and power. The popolo as powerless victims trapped by economic dependency experience maximum d (\u2248 0.92): all of their structural position is occupied by the constraint. The podest\u00e0 bureaucracy as institutional actors with arbitrage (can serve successor regimes) experience low d (\u2248 0.20): they benefit from appointments and prestige regardless of which faction dominates. The analytical observer experiences d \u2248 0.73 (high but not maximum, reflecting observer position rather than engagement).",
+    "mandatrophy_analysis": "CONSTRAINT FAMILY RECOGNITION: Verona's civic peace should be decomposed into at least two structurally distinct constraints with different \u03b5 values: (1) faction_violence_coordination (\u03b5 \u2248 0.15, Rope) \u2014 the genuine coordination problem of suppressing internecine feuding that all factions benefit from solving, and (2) della_scala_hegemony (\u03b5 \u2248 0.68, Snare) \u2014 the monopolization of coercive power and extraction of rents through the peace machinery. These constraints are linked via network.affects_constraints: the hegemony is downstream of and parasitic on the coordination function. The current story conflates them into tangled_rope, which is analytically correct for the composite system but obscures the decomposition. However, for corpus completeness, the tangled rope classification is retained here to demonstrate the hybrid case where coordination and extraction are genuinely intertwined in a single institutional arrangement (unlike the BGS case where they decompose cleanly). The mandatrophy is resolved by recognizing that della Scala's perspective (Tangled Rope) reflects the genuine hybridity: they do solve coordination while extracting, and the two functions cannot be separated without destroying the system. The popolo's perspective (Snare) is not contradicted \u2014 they experience pure extraction because the coordination benefit has negative value for them (they are constrained by the peace machinery itself, not liberated by it)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "faction_violence_coordination",
+      "della_scala_hegemony"
+    ],
+    "dual_formulation_note": "The Verona Civic Peace conflates two structurally distinct constraints: (1) faction_violence_coordination (\u03b5 \u2248 0.15, Rope) \u2014 the genuine shared problem of preventing internecine feuding, and (2) della_scala_hegemony (\u03b5 \u2248 0.68, Snare) \u2014 the monopolization and rent extraction. This story presents the composite tangled_rope classification showing their interdependence. Decomposed stories would show pure coordination (Rope) and pure extraction (Snare) separately, linked via affects_constraints to reveal the parasitic relationship."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.52
+    }
+  ]
+}

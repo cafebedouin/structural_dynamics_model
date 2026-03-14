@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "feedback_loop_delay_oscillation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fbld"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Feedback Loop Delay Oscillation",
+    "topic_domain": "systems_theory/control_dynamics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "system_controller",
+      "feedback_delay_maintainers"
+    ],
+    "victims": [
+      "system_stability",
+      "end_users"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Destabilized End User",
+      "comment": "PERSPECTIVE 1: END USERS (SNARE) \u2014 Trapped in oscillating system behavior with no capacity to exit. Experiences extraction through repeated corrective cycles, wasted effort, resource drain. Cannot change the feedback loop structure that governs their experience. Maximum extraction, full suppression \u2014 all coping mechanisms remain within the oscillation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The System Operator",
+      "comment": "PERSPECTIVE 2: SYSTEM OPERATOR (TANGLED ROPE) \u2014 Constrained by technical barriers and institutional procedures but also benefits from the feedback structure's coordination function: it does provide eventual corrective action, even if delayed. Can manage within bounds but at cost. Mixed experience \u2014 genuine coordination need meets asymmetric extraction burden."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Control System Designer",
+      "comment": "PERSPECTIVE 3: CONTROL SYSTEM DESIGNER (ROPE) \u2014 Sees the feedback loop as a coordination mechanism solving the engineering problem of maintaining system stability over distance/time. Benefits from the delay as a buffer against over-correction; experiences the oscillation as a manageable trade-off. Can arbitrage between competing design goals."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Predictive Control Coalition",
+      "comment": "PERSPECTIVE 4: ADVANCED CONTROL RESEARCH COMMUNITY (SCAFFOLD) \u2014 Organized agents (model predictive control, machine learning-based optimization) are developing alternative feedback mechanisms that anticipate system state rather than react to it, reducing inherent delay. See oscillation as a temporary coordination problem with a sunset: as predictive systems mature, reactive delay-dependent oscillation becomes obsolete."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Feedback Architecture",
+      "comment": "PERSPECTIVE 5: LEGACY FEEDBACK ARCHITECTURE (PITON) \u2014 Traditional time-delayed feedback (sensor \u2192 controller \u2192 actuator \u2192 sensor) persists through institutional inertia: maintenance budgets preserve it, personnel are trained in it, replacement costs are high. The structure continues despite recognition that it creates oscillation; theater ratio reflects that much effort goes into 'managing' oscillation through fine-tuning rather than resolving the root architectural constraint."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal/civilizational view, feedback delay and resulting oscillation appear as an immutable physical/informational law: causality requires time for signals to propagate, sensing latency is inherent to measurement, control action takes time to propagate through physical systems. These constraints seem unchangeable. However, the structural data contradicts full mountain classification \u2014 delay can be compensated through predictive models and real-time optimization, revealing the naturalization of a contingent technological architecture as inherent physical limit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "delay_source_ambiguity",
+      "question": "Is the feedback delay primarily physical/causal (signal propagation, sensing latency, actuation lag) or institutional/technical (measurement processing, decision procedures, communication protocols)?",
+      "resolution_mechanism": "Temporal decomposition: measure each component of the delay chain separately; distinguish hardware latency from software processing from human decision time",
+      "impact": "If primarily physical: oscillation is near-immutable (mountain closer to true). If primarily institutional: delay is architecturally contingent (tangled_rope or scaffold better fit); can be reduced through system redesign.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Physical vs institutional sources of feedback delay"
+    },
+    {
+      "id": "oscillation_function_ambiguity",
+      "question": "Does the oscillation serve any stabilizing or regulatory function (e.g., prevents overshoot, distributes load, dampens transients), or is it purely parasitic extraction with no coordination benefit?",
+      "resolution_mechanism": "Comparative analysis: simulate removal of delay component while preserving other feedback mechanisms; measure stability, overshoot, and resource utilization with and without oscillatory behavior",
+      "impact": "If functional: tangled_rope confirmed (genuine coordination + extraction). If purely parasitic: classification shifts toward snare (pure extraction, no coordination benefit).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether oscillation provides stabilizing function or is purely parasitic"
+    },
+    {
+      "id": "predictive_compensation_feasibility",
+      "question": "Can model-based predictive control reliably compensate for feedback delay, or does prediction error and system nonlinearity prevent closure of the loop?",
+      "resolution_mechanism": "Testing of predictive control implementations across system classes; measurement of residual oscillation and failure modes when prediction diverges from reality",
+      "impact": "If feasible: scaffold perspective confirmed, sunset is real, organizational replacement pathways exist. If infeasible: predictive approach fails at complexity/uncertainty scales, oscillation persists as constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of predictive compensation for feedback delay"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Feedback loop delay oscillation is a fundamental constraint arising from the temporal gap between sensing system state, computing corrective action, and applying that action back to the system. This constraint is ubiquitous across engineered systems (process control, power grids, network congestion, thermostat cycles, biological homeostasis) and exhibits the full spectrum of Deferential Realism types depending on observer position. The constraint creates a characteristic oscillatory behavior: the system overshoots setpoint, feedback corrects, overcorrects, oscillates around equilibrium. End users experience this as instability and wasted resources (heating-cooling cycles, network latency swings, supply chain bullwhip effects). System designers experience it as a coordination mechanism \u2014 the delay and oscillation actually prevent catastrophic overshoot in many contexts. Advanced control researchers see it as a solvable technical problem with emerging alternatives (predictive control, real-time optimization, distributed sensing). Legacy systems see it as an unchangeable feature, maintaining expensive compensatory mechanisms rather than redesigning the feedback architecture.",
+    "key_agents": [
+      "End Users: Primary victims (powerless/trapped) \u2014 experience oscillating system behavior with no capacity to modify underlying feedback structure; bear extraction cost of repeated corrective cycles",
+      "System Operators: Secondary actors (moderate/constrained) \u2014 constrained by technical barriers and standard operating procedures; also benefit from feedback's eventual corrective action",
+      "Control System Designers: Primary beneficiaries (institutional/arbitrage) \u2014 design feedback loops that balance multiple objectives; delay-induced oscillation is a feature, not a bug, from their perspective",
+      "Predictive Control Research Community: Organized agents (organized/constrained) \u2014 developing alternative feedback architectures (model predictive control, machine learning optimization) that reduce delay through anticipation rather than reaction",
+      "Legacy System Maintainers: Institutional actors (institutional/arbitrage) \u2014 preserve existing feedback-based control through maintenance budgets and operating procedures; benefit from stability through inertia",
+      "Analytical Observer: Theoretical perspective (analytical/analytical) \u2014 risks naturalizing a contingent technological constraint as an immutable physical law"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The feedback delay creates genuine extraction for end users (wasted energy in heating cycles, increased network latency, supply chain amplification), but the extraction is not maximal because the feedback mechanism also provides coordination benefit \u2014 it does eventually stabilize the system. Over the 6-unit interval, extractiveness increases from 0.18 to 0.38 as more compensatory mechanisms are added to manage oscillation (fine-tuning gains, damping, buffering), each adding overhead. Suppression (0.42): Moderate. End users and operators face barriers to exit: the feedback loop is structurally embedded in the system. However, suppression is not total \u2014 higher-cost alternatives (predictive control, redesign) exist but require organizational investment. Theater ratio (0.55): Moderate-high. Much effort in legacy systems goes into managing oscillation through gain adjustment, filter tuning, buffer allocation, safety margins \u2014 activities that are performative (appear to solve the problem) rather than addressing root cause (the delay itself). As systems mature, theater increases as fine-tuning returns diminish. Claimed type: Tangled Rope. The constraint provides genuine coordination (feedback mechanism stabilizes systems) alongside asymmetric extraction (end users bear oscillation costs while controllers gain from delay as an overshoot buffer). Requires active enforcement: true \u2014 the controller must continuously adjust parameters to maintain stability within acceptable oscillation bounds.",
+    "directionality_logic": "Directionality values are determined by each agent's structural relationship to the extraction flow. End users are trapped victims with no arbitrage options \u2014 they experience maximum d (0.95+), producing high f(d) and visible chi. System designers are institutional beneficiaries with arbitrage options \u2014 they experience low d (0.15-0.20), producing low or negative f(d). Operators are moderately constrained \u2014 their d is mid-range (0.55-0.65), reflecting both victim status (they must manage oscillation) and partial benefit status (they gain from coordination). The organized control research community has exit options (they can deploy new control paradigms) and constrained options within legacy systems, producing moderate d. The piton perspective reflects institutional inertia: the legacy feedback architecture maintains itself through organizational entropy and replacement cost, not because it produces low chi.",
+    "perspectival_gap": "This constraint demonstrates how a single structural phenomenon produces divergent classifications. The end user sees a snare \u2014 pure extraction with no escape. The designer sees a rope \u2014 coordination mechanism solving a genuine problem. The researcher sees a scaffold \u2014 temporary problem being solved by predictive control with sunset in 5-10 years. The legacy system sees a piton \u2014 performative management of oscillation through endless fine-tuning. The civilizational analyst risks seeing a mountain \u2014 delay and oscillation appear as immutable laws of physics and information. The gap reveals that 'immutable' is perspectival: from the designer's vantage, the delay is a feature; from the end user's vantage, it's an extraction mechanism. Predictive control bridges this gap by removing the need for reactive feedback delay altogether.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the mandatrophy by showing that feedback delay oscillation is structurally a Tangled Rope (coordination + asymmetric extraction) seen from the system level, but appears as pure extraction (Snare) to powerless end users and pure coordination (Rope) to institutional designers. The mandatrophy is resolved by recognizing these are not contradictory \u2014 they are different perspectives on the same constraint. The analytical observer's mountain (delay is immutable law) is revealed as a false summit: predictive control shows that anticipation can replace reaction, demonstrating that the delay and oscillation are contingent on reactive architecture, not inherent to feedback itself. The scaffold perspective provides the exit path: as predictive systems mature and deployment costs drop, legacy reactive-delay systems can be replaced by proactive-anticipation systems with lower oscillation and extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "supply_chain_bullwhip",
+      "thermostat_overcorrection",
+      "network_congestion_cycling"
+    ],
+    "dual_formulation_note": "Feedback loop delay oscillation is a general structural constraint that manifests domain-specifically in supply chains (bullwhip effect), thermal systems (heating/cooling cycles), network systems (congestion control), and biological homeostasis. Each domain has its own constraint story with domain-specific \u03b5 values, but all share the core mechanism of delay-induced overshoot and oscillation. This story provides the general framework; domain-specific stories decompose the concrete extraction mechanisms (inventory cascades, energy waste, packet loss, metabolic cost)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

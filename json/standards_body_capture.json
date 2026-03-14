@@ -1,0 +1,185 @@
+{
+  "header": {
+    "constraint_id": "standards_body_capture",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "stdbody"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Standards Body Capture by Dominant Firms",
+    "topic_domain": "economic/governance/technical_standards",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dominant_technology_firms",
+      "incumbent_standard_controllers"
+    ],
+    "victims": [
+      "competitive_market_entrants",
+      "consumer_welfare",
+      "interoperability_access"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Market Entrant",
+      "comment": "PERSPECTIVE 1: MARKET ENTRANT (SNARE) \u2014 Startups and smaller firms cannot avoid standards compliance; they must adopt incumbent standards or face market exclusion. Patent licensing, royalty structures, and participation requirements extract value while offering no exit option. Trapped: compliance is mandatory, costs are asymmetric, and alternatives are unavailable or equally controlled."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Regional Standards Committee",
+      "comment": "PERSPECTIVE 2: REGIONAL STANDARDS COMMITTEE (TANGLED ROPE) \u2014 Mid-tier participants benefit from standardization (coordinating interoperability across regional markets) but are constrained by resource limitations and influence concentration. Dominant firms fund committee operations, control voting blocs, and set agenda priorities. Mixed extraction and coordination: genuine interoperability function exists alongside asymmetric influence."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Dominant Technology Firm",
+      "comment": "PERSPECTIVE 3: DOMINANT TECHNOLOGY FIRM (ROPE) \u2014 Experiences the standards body as pure coordination mechanism: aligning their proprietary ecosystem with an open standard creates lock-in and cross-licensing revenue. Can exit (develop proprietary standard) but arbitrage value (controlling open standard definitions) makes exit irrational. Net beneficiary \u2014 extraction flows toward this actor."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Standards Coalition",
+      "comment": "PERSPECTIVE 4: OPEN STANDARDS COALITION (SCAFFOLD) \u2014 Organized actors (open-source communities, consumer advocacy, competitors' consortia) see the capture as a temporary institutional failure with structural exits: alternative standards bodies (IETF vs ITU historical competition), open-source implementations that ignore patents (Linux bypassing cellular patent pools), and regulation (EU interoperability mandates). Low effective extraction because coalition has agency and sunset paths."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Standards Body Apparatus",
+      "comment": "PERSPECTIVE 5: STANDARDS BODY APPARATUS (PITON) \u2014 The formal standards body (ISO, ITU, IEEE, 3GPP) maintains elaborate procedural rituals (voting rules, technical committees, public comment periods) that appear to democratize but are largely performative. Dominant firms have already aligned on the technical direction through pre-committee consensus; formal votes ratify decisions made in private. Theater persists because alternatives haven't fully replaced it, not because it functions. High theater_ratio reflects gap between procedural appearance and actual influence distribution."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some concentration of standard-setting power is inevitable: technical complexity requires expertise, expertise concentrates resources, and dominant firms have the most resources. This view naturalizes capture as an inescapable feature of complex systems governance. However, this is a false summit \u2014 the structural data shows that capture is contingent on regulatory architecture, not inherent to standardization itself."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "patent_licensing_necessity",
+      "question": "Are patent restrictions on standard implementations inherent to innovation incentives or contingent policy choice?",
+      "resolution_mechanism": "Comparative analysis of standards with and without patent pools (e.g., WiFi with mandatory licensing vs Linux kernel without patent enforcement); measurement of innovation rates in each regime",
+      "impact": "If inherent: extraction is justified cost of innovation (rope classification valid). If contingent: extraction is policy choice that could be reversed (snare classification confirmed).",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether patent licensing in standards is necessary or chosen"
+    },
+    {
+      "id": "dominant_firm_necessity_for_coordination",
+      "question": "Could standards bodies achieve the same interoperability coordination with equal participant power distribution, or does dominance by coordinating firms reduce friction?",
+      "resolution_mechanism": "Historical case analysis of standards developed by truly distributed consortia (e.g., W3C design vs WLAN standards design); measurement of time-to-completion, participant satisfaction, technical quality",
+      "impact": "If dominance reduces friction: coordination function genuinely benefits from concentration (rope from moderate perspective valid). If distributed models work equally well: dominance is pure extraction (snare confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether dominant firm coordination is necessary for standards efficiency"
+    },
+    {
+      "id": "alternative_standards_viability",
+      "question": "Do open-standards coalitions and competitors' alternative standards bodies represent credible exit paths, or are they capturing subordinate segments that ultimately depend on dominant standards?",
+      "resolution_mechanism": "Market share tracking of alternative standards; analysis of whether alternative implementations achieve meaningful interoperability without licensing dominant-firm patents; customer switching costs if alternative standards gain adoption",
+      "impact": "If alternatives are viable: exit options are genuinely mobile/constrained for many actors (scaffold perspective valid). If alternatives fail: no real exit (snare confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative standards bodies offer genuine exits"
+    },
+    {
+      "id": "regulatory_capture_feedback",
+      "question": "Does standards body capture enable dominant firms to shape regulation in their favor, or are regulators genuinely independent?",
+      "resolution_mechanism": "Analysis of regulatory filings referencing standards; tracking of whether regulators adopt standards that benefit dominant firms vs competing interests; examination of when regulators override or mandate alternative standards",
+      "impact": "If feedback loop exists: capture is amplified across institutions (snare tightens). If regulators are independent: capture is bounded to standards body (scaffold perspective viable).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether standards capture amplifies through regulatory feedback"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Standards bodies \u2014 formal institutions like ISO, ITU, IEEE, 3GPP, and W3C \u2014 coordinate technical interoperability across industries and markets. They provide genuine coordination function: without standards, firms cannot interoperate, and fragmentation reduces network value for all. However, dominant technology firms systematically capture standards bodies to embed their proprietary designs into 'open' standards, extract licensing revenue from competitors and new entrants, and lock markets against disruption. The constraint exhibits characteristics of tangled rope: real coordination function (interoperability) paired with asymmetric extraction (patent licensing, voting control, agenda-setting). The theater_ratio (0.68) reflects elaborate procedural rituals \u2014 public comment periods, diverse committee representation, transparent voting \u2014 that create appearance of democratic process while actual influence concentrates through dominant firms' funding control, pre-committee consensus, and technical expertise dominance. The extractiveness trajectory (0.35\u21920.58 over the measurement interval) shows how capture accumulates: early standards capture lower rents as alternative standards remain viable; later extraction rises as the captured standard becomes mandatory for market participation.",
+    "key_agents": [
+      "Dominant Technology Firms: Primary beneficiary (institutional/arbitrage) \u2014 control voting blocs, fund committee operations, embed proprietary designs, extract patent licensing revenue",
+      "Market Entrants (Startups/Regional Competitors): Primary victim (powerless/trapped) \u2014 must comply with captured standards, pay licensing fees, cannot influence technical direction",
+      "Consumer Welfare / Interoperability Access: Secondary victim (powerless/trapped) \u2014 benefits from nominal standardization but pays hidden extraction via licensing fees embedded in prices",
+      "Regional Standards Committees: Secondary actor (moderate/constrained) \u2014 benefit from interoperability coordination but constrained by dominant firm influence and resource dependence",
+      "Open Standards Coalition: Organized competitors (organized/constrained) \u2014 seek alternative standards, open-source implementations, and regulatory exits; building sunset pathways",
+      "Standards Body Apparatus: Institutional actor (institutional/arbitrage) \u2014 maintains procedural theater; benefits from membership fees and dominant firm funding; sees own process as degraded (piton perspective)",
+      "Regulatory Authorities: Institutional actor (institutional/mobile) \u2014 have capacity to mandate interoperability or override captured standards but often lack political will or technical understanding to exercise it"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Dominant firms extract value through multiple mechanisms: patent licensing royalties on competing implementations, ability to bundle proprietary services with standards-compliant products, and market exclusion of non-compliant entrants. However, extraction is not total (0.75+) because: (1) some standardization genuinely benefits dominators (interoperability increases market size), (2) open-source implementations sometimes work around patent pools, and (3) regulators occasionally mandate interoperability, reducing extraction. The trajectory shows accumulation: as the captured standard becomes mandatory for market participation, extraction increases. Suppression (0.65): High. Barriers to escaping the captured standard include network effects (switching costs increase with installed base), patent licensing requirements (essential patents are mandatory to license), technical complexity (competing with dominant-firm-embedded designs requires equivalent resources), and market concentration (few alternatives exist for many critical standards). Suppression is not total (0.80+) because regulatory intervention and alternative standards bodies offer bounded exits. Theater ratio (0.68): High. The standards body maintains elaborate procedural appearance \u2014 public comment periods, diverse national representation, technical committee structures, transparent voting \u2014 while actual influence concentrates through three mechanisms: (1) dominant firms fund committee operations and travel, (2) proprietary technical details and patent portfolios are pre-aligned in private before formal votes, (3) voting rules favor established players. The theater has increased over time as procedures have become more elaborate while actual decision-making has moved further into private pre-committee alignment.",
+    "perspectival_gap": "Why do the perspectives diverge so sharply? The dominant firm's rope classification reflects their genuine experience: the constraint solves coordination problems (reducing negotiation overhead), creates revenue opportunities (licensing essential patents), and builds switching costs (lock-in). From their position, extraction is minimal or directed toward them as beneficiaries. The market entrant's snare classification reflects equal structural reality: they face mandatory compliance (cannot exit), asymmetric costs (licensing fees they must pay but dominant firms avoid), and no beneficial coordination (the standard was designed before they entered, optimized for incumbents). Neither perspective is wrong \u2014 both are measuring the same constraint from structurally incompatible positions. The gap reveals the constraint's mixed character (tangled rope) precisely because no single classification fits all perspectives. If all perspectives produced snare, the constraint would be pure extraction. If all produced rope, it would be pure coordination. The gap between rope (beneficiary) and snare (victim) is diagnostic of asymmetric extraction layered onto coordination function.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from the agent's structural position relative to extraction flow. Dominant firms are beneficiaries with arbitrage options (can exit by creating proprietary standards but arbitrage value makes exit irrational) \u2192 low d \u2192 negative or minimal chi. Market entrants are victims with trapped status (must comply, cannot escape, cannot influence) \u2192 high d \u2192 high chi. Moderate-power regional committees are mixed (benefit from coordination but constrained by influence asymmetry) \u2192 mid-range d \u2192 moderate chi. The analytical perspective uses the civilization-scale scope that tends toward naturalizing institutional arrangements as laws, creating the false summit risk. The canonical d derivation applies: beneficiary + arbitrage \u2192 d\u22480.05, victim + trapped \u2192 d\u22480.95, moderate + constrained \u2192 d\u22480.65. These map to f(d) values that modulate the experienced extractiveness. The directionality overrides are not needed \u2014 the structural data (beneficiaries, victims, exit options) produces accurate d values through the standard derivation chain.",
+    "mandatrophy_analysis": "This constraint avoids mandatrophy through explicit declaration of both beneficiary (dominant_technology_firms) and victim (market_entrants, consumer_welfare) groups in base_properties. The tangled_rope classification requires three gates: (1) beneficiaries present (\u2713 dominant technology firms benefit from coordination and licensing), (2) victims present (\u2713 entrants bear asymmetric extraction costs), (3) requires_active_enforcement true (\u2713 patent licensing, voting rule enforcement, committee operations require ongoing institutional maintenance). The analytical perspective (mountain) is flagged as a false summit by the constraint compiler because the structural data contradicts the natural law framing: capture results from policy choices (patent licensing regimes, funding models, voting architectures) not from physical or logical limits. The mandatrophy is resolved by the perspectival multiplicity itself: the constraint is legitimately different types from different positions, and this polymorphism is the signature of tangled rope (asymmetric extraction hidden within coordination function). The false summit mountain perspective is explanatory \u2014 it shows how dominant actors naturalize contingent institutional arrangements \u2014 but it is explicitly rejected by the engine's false natural law detector."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "patent_pool_licensing",
+      "regulatory_capture_feedback",
+      "open_source_technology_sustainability"
+    ],
+    "dual_formulation_note": "Standards body capture is downstream of specific technical standardization decisions (WiFi, cellular, USB, etc.) but represents a distinct structural constraint on the governance mechanisms themselves. Each technical standard has its own extractiveness reflecting the empirical control distribution; standards body capture represents the meta-level constraint that enables such control to accumulate."
+  },
+  "directionality_overrides": []
+}

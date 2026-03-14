@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "suffering_reduction_technology",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "srt"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.52,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Suffering Reduction Technology Access and Distribution",
+    "topic_domain": "healthcare/technology/ethics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "technology_developers",
+      "wealthy_populations",
+      "institutional_healthcare_systems"
+    ],
+    "victims": [
+      "low_income_populations",
+      "global_south_populations",
+      "chronically_ill_without_access"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Chronically Ill Without Access",
+      "comment": "PERSPECTIVE 1: CHRONICALLY ILL WITHOUT ACCESS (SNARE) \u2014 Trapped by economic barriers and geographic location. Technology that reduces suffering exists but is priced or distributed such that access is impossible. No exit from the constraint: cannot exit poverty, cannot relocate, cannot access healthcare infrastructure. Bears full extraction cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Middle-Income Populations",
+      "comment": "PERSPECTIVE 2: MIDDLE-INCOME POPULATIONS (TANGLED ROPE) \u2014 Face high but surmountable costs to access. Genuine coordination function: the constraint organizes how technology is produced and distributed at scale. But asymmetric extraction: those with resources can access; those without face rationing or delay. Some agency through alternative financing or advocacy, but significant costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Technology Developers and Pharmaceutical Companies",
+      "comment": "PERSPECTIVE 3: TECHNOLOGY DEVELOPERS (ROPE) \u2014 Beneficiaries with arbitrage options. Experience the constraint as coordination: property rights, patent mechanisms, and regulatory approval processes enable investment in innovation. High margins for early adopters. Can arbitrage between markets (high price in developed nations, lower in others). Net beneficiary position."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "National Healthcare Systems",
+      "comment": "PERSPECTIVE 4: NATIONAL HEALTHCARE SYSTEMS (TANGLED ROPE) \u2014 Constrained by budget limitations and political pressure. Genuinely coordinate allocation of scarce resources: budget constraints force prioritization. But also extract through gatekeeping: rationing access, delaying approval, limiting coverage. Some agency (can negotiate prices, can lobby for funding) but significant structural constraint."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Global Health Movements and NGOs",
+      "comment": "PERSPECTIVE 5: GLOBAL HEALTH MOVEMENTS (SCAFFOLD) \u2014 Organized agents (M\u00e9decins Sans Fronti\u00e8res, WHO initiatives, open-source drug development) perceive the constraint as a temporary coordination failure with sunset logic. Patent pooling, technology transfer agreements, and compulsory licensing are building pathways to universal access. Low effective extraction because these agents have agency and see clear exit mechanisms. Theater low because they are building functional alternatives."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Intellectual Property Framework",
+      "comment": "PERSPECTIVE 6: INTELLECTUAL PROPERTY FRAMEWORK (PITON) \u2014 Patents and IP protection for suffering-reduction technology are nominally justified as incentivizing innovation, but the framework persists largely through institutional inertia even as its innovation function atrophies. Compulsory licensing, technology transfer, and open-source alternatives demonstrate that innovation can proceed without IP restrictions. The IP framework is maintained through regulatory habit and lobbying rather than demonstrated necessity. Theater ratio high: performative justification of necessity without functional proof."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Scarcity View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / SCARCITY VIEW (MOUNTAIN) \u2014 From a universal scope, some distribution constraint is inherent: manufacturing capacity, trained personnel, and resource allocation are always finite. The bottleneck appears immutable\u2014civilization cannot allocate infinite resources to every health need. However, structural data reveals this as false naturalization: real-world scarcity is far less binding than institutional pricing mechanisms suggest. The mountain classification represents a naturalizing narrative that obscures contingent choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "manufacturing_capacity_threshold",
+      "question": "What is the actual manufacturing capacity constraint versus the artificial scarcity created by pricing and distribution models?",
+      "resolution_mechanism": "Comparative analysis of production capacity in high-patent-enforcement vs patent-free regimes; historical comparison with generic drug markets; modeling of potential capacity scaling",
+      "impact": "If manufacturing constraint is primary: distribution problem is coordination (stronger Rope/Scaffold classification). If pricing/IP constraint is primary: distribution problem is extraction (stronger Snare/Tangled Rope classification).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Manufacturing capacity vs. institutional scarcity creation"
+    },
+    {
+      "id": "innovation_incentive_mechanism",
+      "question": "How much innovation is driven by intellectual property protection versus other incentives (prestige, mission, public funding, altruism)?",
+      "resolution_mechanism": "Historical innovation rate comparison across patent-protected vs patent-free domains; funding source analysis for breakthrough technologies; patent citation analysis of non-incremental advances",
+      "impact": "If IP is essential to innovation: technology developers' beneficiary status is justified. If innovation proceeds through other mechanisms: IP extraction is uncompensated, and piton classification is confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "IP protection necessity for innovation in medical technology"
+    },
+    {
+      "id": "access_expansion_trajectory",
+      "question": "Are patent-free and compulsory-licensing regimes actually increasing access at rates that justify considering the constraint solved or sunset?",
+      "resolution_mechanism": "Longitudinal tracking of access rates in regions with patent enforcement vs those without; cost trajectory analysis for technologies under different IP regimes; WHO/NGO access database analysis",
+      "impact": "If access rates are improving substantially: scaffold perspective is structural. If access remains stagnant despite alternatives: scaffold is aspirational only.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Patent-free access expansion trajectory"
+    },
+    {
+      "id": "identity_lock_in_developers",
+      "question": "Are technology developers locked into IP-protection business models by identity fusion with 'innovation requires property rights' framing?",
+      "resolution_mechanism": "Analysis of developer/company transitions to open-source models; interview data on barriers to model switching; historical analysis of companies that abandoned IP protections",
+      "impact": "If identity-locked: developers could exit but cannot see exit from within their frame. If structurally trapped: IP protection is genuinely necessary for business viability.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Identity fusion in technology developer commitment to IP models"
+    },
+    {
+      "id": "global_south_bargaining_asymmetry",
+      "question": "Is the distribution constraint primarily a result of asymmetric bargaining power between developed-nation purchasers and manufacturers, versus genuine resource scarcity?",
+      "resolution_mechanism": "Comparative pricing analysis across regions; negotiation history documentation; modeling of counterfactual bargaining positions with unified global demand",
+      "impact": "If bargaining asymmetry is primary: victims are constrained rather than trapped, and coordination is possible. If resource scarcity is primary: extraction is structurally necessary.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Global South bargaining power in technology access"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Suffering reduction technologies\u2014from pain management medications to advanced surgical techniques to mental health interventions\u2014create a structural tension between the legitimate incentive to fund innovation and the humanitarian imperative to distribute life-changing treatments to all who need them. The constraint exhibits genuine coordination (organizing resource allocation and funding mechanisms) alongside significant asymmetric extraction (pricing, rationing, and access barriers that concentrate benefit among wealthy populations and technology developers). The extractiveness has increased over the interval as drug prices have risen faster than incomes in most populations, and as intellectual property frameworks have strengthened globally. The theater ratio remains moderate and stable\u2014IP protection is defended as innovation incentive rather than maintained purely through ritual, unlike the peer review piton. The constraint is neither pure coordination nor pure extraction but a true hybrid with genuine sunset logic emerging through patent pooling initiatives, compulsory licensing, and open-source drug development.",
+    "key_agents": [
+      "Technology Developers and Pharmaceutical Companies: Primary beneficiaries (institutional/arbitrage) \u2014 capture extended monopoly rents through IP protection; can exit the constraint through licensing or voluntary price reduction but have no external pressure to do so",
+      "Chronically Ill Without Access: Primary victims (powerless/trapped) \u2014 cannot exit poverty, geographic isolation, or lack of infrastructure; suffer from technologies that exist but are inaccessible",
+      "Low and Middle-Income Populations: Secondary victims (moderate/constrained) \u2014 face high costs but some agency through advocacy, illegal generics, or alternative treatments; constrained but not fully trapped",
+      "National Healthcare Systems: Institutional mediators (institutional/constrained) \u2014 genuinely coordinate resource allocation but also extract through gatekeeping and rationing; constrained by budgets and political pressure",
+      "Global Health Movements and NGOs: Organized agents (organized/constrained) \u2014 MSF, WHO, M\u00e9decins du Monde building alternative distribution pathways with clear sunset logic through patent pools and technology transfer",
+      "Intellectual Property Framework: Institutional structure (institutional/arbitrage) \u2014 maintains justification as innovation incentive while functioning as extraction mechanism; persists through regulatory habit (piton characteristics)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Technology developers capture significant margin through IP protection and can exclude competitors. But extraction is not maximal because: (1) some technologies eventually go generic, (2) charitable programs exist, (3) some countries have compulsory licensing. The extraction increases over the interval (0.35\u21920.58) as real prices have risen and IP protections have strengthened globally. Suppression (0.52): Moderate-high. Barriers to access include patent enforcement, regulatory approval processes, manufacturing concentration, poverty, geographic isolation, and lack of healthcare infrastructure. But suppression is not total\u2014black markets in generics exist, some countries have compulsory licensing, and some NGOs reduce barriers. Theater ratio (0.48): Moderate. IP protection is justified as necessary for innovation (not purely performative), but the justification is increasingly questioned by evidence of innovation outside IP-protected regimes. The theater is lower than the IP piton's because the constraint still has real coordination function, unlike pure ritual maintenance.",
+    "perspectival_gap": "The constraint demonstrates how the same structural phenomenon\u2014technology pricing and access control\u2014appears as coordination (Rope) to beneficiaries, as extraction (Snare) to the powerless, as a sunset problem (Scaffold) to movements, as mixed extraction-coordination (Tangled Rope) to mediators, as degraded ritual (Piton) to the IP framework, and as immutable scarcity (Mountain) to observers who naturalize contingent choices. The gap is not about disagreement on facts but about structural position within the constraint. The beneficiary sees the necessity of IP protection; the victim sees only the suffering it causes. The movement sees the path to universal access; the developer sees the threat to innovation incentives. No single perspective captures the full structure\u2014the presheaf over all positions is the answer.",
+    "directionality_logic": "Directionality (d) is derived from each agent's structural relationship to the constraint. Technology developers have arbitrage exit options and are beneficiaries\u2014they experience low d (0.05-0.20), producing negative or low effective extraction. Trapped populations are victims with no exit\u2014high d (0.90-1.00), experiencing maximum extraction. Constrained populations are victims with partial exit\u2014moderate d (0.70-0.80), experiencing substantial but not maximal extraction. Institutional actors (healthcare systems) face complex positioning: they are both mediators and constrained\u2014moderate d (0.50-0.60). Organized movements have exit pathways and can arbitrage\u2014lower d (0.40-0.50). The IP framework, maintaining itself through habit, shows institutional beneficiary positioning\u2014low d (0.10-0.20). The divergent d values across perspectives explain why the constraint classifies as six different types from different positions.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint genuinely coordinates some functions (organizing innovation funding, managing resource allocation) while genuinely extracting in others (concentrating benefit among wealthy populations, creating artificial scarcity). The constraint is not 'really' a Rope being mislabeled as extraction, nor 'really' a Snare pretending to be coordination. It is authentically both. The extraction increases over time (0.35\u21920.58) as the coordination function remains stable, suggesting that the coordinate mechanism (patents, approval processes) is being repurposed toward pure extraction through rent-seeking behavior (price increases unrelated to innovation). The scaffold perspective and global movements provide exit logic: patent pools and open-source development reduce the coordination value that IP protection provides, enabling a gradual sunset where the coordination function survives (funding innovation) while the extraction mechanism (pricing control) is dismantled. This represents mandatrophy resolution through structural change rather than through resolving whether the constraint is 'really' Rope or Snare\u2014it is transitioning from a true Tangled Rope to a gradually sunsetting Scaffold."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "pharmaceutical_pricing_mechanisms",
+      "healthcare_access_inequality",
+      "patent_system_extraction"
+    ],
+    "dual_formulation_note": "Suffering reduction technology access decomposes into three structurally distinct constraints: (1) pharmaceutical_pricing_mechanisms (\u03b5\u22480.52) \u2014 pricing dynamics and profit maximization; (2) healthcare_access_inequality (\u03b5\u22480.61) \u2014 structural barriers to care including poverty and geography; (3) patent_system_extraction (\u03b5\u22480.48) \u2014 IP protection as mechanism for controlling market access. Each has different beneficiaries, victims, and sunset logic. The present story integrates all three as a single constraint focused on the coordination-extraction hybrid; decomposition is justified when analyzing specific mechanisms in isolation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

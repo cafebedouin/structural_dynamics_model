@@ -1,0 +1,185 @@
+{
+  "header": {
+    "constraint_id": "cost_segregation_depreciation_strategy",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "costseg"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Cost Segregation Depreciation Strategy in Real Estate Investment",
+    "topic_domain": "tax_policy/real_estate_finance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_real_estate_investors",
+      "cost_segregation_consulting_firms",
+      "property_developers"
+    ],
+    "victims": [
+      "federal_tax_revenue",
+      "small_property_owners",
+      "rental_tenants"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Small Property Owner",
+      "comment": "PERSPECTIVE 1: SMALL PROPERTY OWNER (SNARE) \u2014 Cannot access cost segregation benefits due to lack of capital to hire specialized consultants ($15,000-$50,000 per engagement). Trapped in standard depreciation schedules. Extraction occurs through tax code asymmetry: large investors use accelerated depreciation while small owners cannot, creating competitive disadvantage in property acquisition and financing. No meaningful exit option."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Mid-Sized Real Estate Company",
+      "comment": "PERSPECTIVE 2: MID-SIZED REAL ESTATE COMPANY (TANGLED ROPE) \u2014 Faces high barrier to cost segregation access ($30,000-$50,000 consulting fees reduces ROI significantly). Can access strategy but with substantial cost burden. Constrained by capital requirements and need for specialized expertise. Experiences both coordination benefit (ability to optimize tax position through better asset classification) and extraction (must share substantial fees with consultants; loses competitive advantage to larger firms that negotiate bulk consulting rates). Mixed position."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Large Real Estate Fund",
+      "comment": "PERSPECTIVE 3: LARGE REAL ESTATE FUND (ROPE) \u2014 Institutional actor with scale enabling direct deployment of cost segregation across portfolio. Negotiates consulting fees at bulk rates (10-30% of typical per-property costs). Benefits from coordination function: cost segregation organizes capital recovery timing to match actual asset economic lives. Primary beneficiary experiencing constraint as enabling mechanism rather than extractive. Arbitrage optionality across multiple properties and jurisdictions."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Cost Segregation Consulting Firm",
+      "comment": "PERSPECTIVE 4: COST SEGREGATION CONSULTING FIRM (ROPE) \u2014 Benefits from structural asymmetry in information and technical expertise. Coordinates legitimate asset classification and accelerated depreciation timing. Primary income stream flows from extracting consulting fees, but the service provides real value: accurate asset classification, defensible IRS positions, optimized depreciation schedules. Arbitrage optionality across industries (real estate, manufacturing, hospitality). Pure beneficiary with low suppression experienced by this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "The Federal Tax Authority",
+      "comment": "PERSPECTIVE 5: FEDERAL TAX AUTHORITY (TANGLED ROPE) \u2014 Faces genuine coordination problem: assets DO have different useful lives (HVAC systems 10-15 years, structural components 40+ years), and depreciation schedules should reflect economic reality. Cost segregation solves this coordination problem through more accurate asset classification. However, the IRS simultaneously experiences extraction: intentional acceleration of depreciation timing shifts revenue forward, and the gap between intended useful lives and aggressive cost segregation estimates reduces effective tax collection. The constraint requires active enforcement (IRS audits, regulations) to maintain. Institutional beneficiary that also bears costs through lost revenue."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Legislative Framework",
+      "comment": "PERSPECTIVE 6: LEGISLATIVE FRAMEWORK (PITON) \u2014 The MACRS depreciation system (Modified Accelerated Cost Recovery System) persists as institutional framework despite substantial evolution of deployment methods. Legislative intent was cost recovery efficiency; modern practice emphasizes tax optimization through aggressive segregation. The framework maintains itself through regulatory complexity and lobbying pressure from beneficiary industries. Theater ratio reflects performative regulatory compliance (cost segregation studies look rigorous but incorporate subjective allocation assumptions). Sunset unlikely \u2014 framework maintained through inertia and institutional lock-in."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "allocation_methodology_objectivity",
+      "question": "Are cost segregation allocation methodologies based on objective economic recovery periods or on tax optimization conventions that diverge from actual asset useful lives?",
+      "resolution_mechanism": "Comparative analysis: allocated useful lives in cost segregation studies vs. actual observed asset replacement cycles in comparable properties. IRS audit patterns and adjustment rates across similar property types.",
+      "impact": "If methodology is objective: constraint is pure coordination (Rope). If methodology is tax-optimization convention: constraint is extractive (Snare/Tangled Rope). The distinction determines whether cost segregation represents legitimate economic accuracy or intentional depreciation acceleration.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether cost segregation allocation follows economic facts or tax optimization conventions"
+    },
+    {
+      "id": "alternative_verification_feasibility",
+      "question": "Could regulatory authorities cost-effectively audit cost segregation claims at scale, or is the strategy effective precisely because verification costs exceed typical exposure?",
+      "resolution_mechanism": "Analysis of IRS audit capacity and frequency for cost segregation claims; cost-benefit model of audit risk for taxpayers; historical adjustment rates. Comparison to verification capacity in other complex tax areas.",
+      "impact": "If verification is feasible: suppression is high but surmountable (taxpayers could face meaningful audit risk). If verification is cost-prohibitive: suppression is structural \u2014 strategy persists because IRS cannot realistically enforce disallowance. Affects classification from tax authority perspective.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regulatory verification of cost segregation claims is feasible at scale"
+    },
+    {
+      "id": "capital_scale_threshold_discontinuity",
+      "question": "At what property acquisition size does cost segregation consulting become economically accessible (breakeven consulting fees against tax savings)?",
+      "resolution_mechanism": "Analysis of typical consulting costs ($15K-$50K) against tax savings across property values ($500K-$500M+). Identify threshold where ROI becomes positive. Historical data on property sizes accessing cost segregation.",
+      "impact": "If threshold is low (<$5M): access is relatively democratized (Rope perspective more universal). If threshold is high (>$50M): access gap is severe (Snare/Tangled Rope for most property owners). Identifies whether the constraint is scale-proportional or scale-exclusive.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Capital scale threshold for economically viable cost segregation deployment"
+    },
+    {
+      "id": "regulatory_enforcement_trajectory",
+      "question": "Is the IRS increasing audit frequency and adjustment rates for cost segregation claims, or declining (budget/capacity constraints)?",
+      "resolution_mechanism": "IRS audit statistics by tax form and strategy (Form 3115 audit rates, adjustment rates on cost segregation audits). Trend analysis over 10-year window. Budget and FTE allocation to complex real estate examinations.",
+      "impact": "If enforcement is increasing: suppression may decline and strategy may face tighter constraints (toward Scaffold with sunset). If enforcement is declining: suppression remains high and strategy effectiveness persists (toward pure Snare for tax revenue). Indicates future classification trajectory.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Trajectory of IRS enforcement of cost segregation strategies"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Cost segregation depreciation strategy represents a hybrid coordination-extraction constraint within real estate taxation. The constraint simultaneously coordinates legitimate economic depreciation (different asset classes have different useful lives and should be depreciated accordingly) while enabling asymmetric extraction through scale-dependent access barriers. Large institutional investors benefit from accelerated depreciation timing while small property owners lack capital to access specialized consulting required to deploy the strategy. The federal tax system experiences this as both coordination (more accurate asset classification) and extraction (accelerated revenue loss). The constraint's theater ratio reflects that cost segregation studies produce detailed technical allocations that appear rigorous and defensible while incorporating subjective assumptions that drive tax optimization outcomes. Over the 20-year interval, both extractiveness and theater ratio have increased as the strategy has matured from niche tax optimization technique to standardized practice in large real estate deals, with consulting methodologies becoming more sophisticated and cost segregation becoming expected practice for institutional investors.",
+    "key_agents": [
+      "Large Real Estate Funds: Primary beneficiary (institutional/arbitrage) \u2014 deploy cost segregation across portfolios with economies of scale; negotiate bulk consulting rates; capture accelerated depreciation benefits",
+      "Cost Segregation Consulting Firms: Primary beneficiary (institutional/arbitrage) \u2014 earn consulting fees; coordinate legitimate asset allocation; benefit from information asymmetry and technical expertise barriers",
+      "Federal Tax Authority (IRS): Mixed victim/beneficiary (institutional/constrained) \u2014 loses revenue through accelerated depreciation but benefits from more accurate asset classification; faces capacity constraints in enforcement",
+      "Small Property Owners: Primary victim (powerless/trapped) \u2014 cannot afford consulting costs; stuck in standard depreciation; face competitive disadvantage against larger investors; cannot exit the disadvantage",
+      "Mid-Sized Real Estate Companies: Secondary victim (moderate/constrained) \u2014 can theoretically access strategy but face high capital barriers; high consulting costs reduce strategy ROI; constrained by capital limitations",
+      "Rental Tenants: Secondary victim (powerless/trapped) \u2014 indirectly affected through higher property prices and rents driven by investor demand for large assets with cost segregation potential; cannot organize or exit"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The strategy produces measurable tax savings (15-30% acceleration of depreciation schedules over 5-7 year window) that flow disproportionately to large-scale investors. The extraction is legitimate economic recovery optimization at the margin but operates through systematic capital scale exclusion. Over the 20-year interval, extractiveness has increased from 0.35 to 0.58 as consulting practices have matured and deployment has become expected for institutional investors, suggesting the strategy has shifted from marginal optimization to core business practice. Suppression (0.65): Moderate-high. Barriers to independent deployment include technical complexity (requires specialized engineering and accounting expertise), regulatory risk (IRS challenge potential), and capital requirements for consulting. However, suppression is not total \u2014 information about the strategy is widely available, and large investors routinely deploy it. The suppression primarily excludes small property owners through capital barriers rather than legal prohibition. Theater ratio (0.58): Moderate. Cost segregation studies appear technically rigorous with detailed asset-by-asset cost allocation, engineering reports, and useful-life justifications. The theater derives from subjective allocation assumptions (what percentage of building cost is HVAC vs. structural? 25% vs. 35% produces significantly different tax outcomes) that can be defended as reasonable but are not uniquely determined. Over 20 years, theater ratio has increased as methodologies have become more sophisticated and studies have evolved to present more detailed technical justification.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival gap. Small property owners see pure extraction (Snare) \u2014 they are systematically disadvantaged with no accessible exit. Mid-sized companies see mixed coordination-extraction (Tangled Rope) \u2014 they can theoretically access benefits but face capital barriers that reduce net benefit. Large institutional investors see coordination (Rope) \u2014 the strategy solves their legitimate problem of accurate asset classification and accelerated capital recovery. Cost segregation firms see coordination (Rope) \u2014 they provide valuable technical service that deserves compensation. The IRS sees mixed coordination-extraction (Tangled Rope) \u2014 legitimate asset classification benefit offset by revenue loss and audit capacity constraints. The legislative framework sees its own degraded ritual (Piton) \u2014 the MACRS system persists despite significant evolution in deployment sophistication, maintained through regulatory complexity and lobbying. The gap between the powerless small owner's experience (Snare) and the institutional beneficiary's experience (Rope) reveals the constraint's true structure: it is extraction that uses coordination as its mechanism.",
+    "directionality_logic": "Directionality computation flows from beneficiary/victim status combined with exit options. Large investors classified as institutional/arbitrage have low d values (~0.10-0.20) because they benefit from the constraint and have exit options (they can deploy other tax strategies if cost segregation becomes unavailable). Small property owners classified as powerless/trapped have high d values (~0.90-1.00) because they bear costs and have no exit. Mid-sized companies classified as moderate/constrained have intermediate d values (~0.60-0.70) because they experience mixed effects and face high-cost exit (abandoning property investments). The federal tax authority classified as institutional/constrained has intermediate d values (~0.55-0.65) because it experiences both revenue loss and coordination benefit, with constrained rather than arbitrage exit options (cannot simply abandon tax administration). Cost segregation consulting firms classified as institutional/arbitrage have low d values (~0.15-0.25) because they are primary beneficiaries with exit optionality. The presheaf reveals that what appears symmetric at the policy level (MACRS is available to all taxpayers) operates asymmetrically in practice (only capital-intensive actors can afford to deploy advanced depreciation strategies).",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by revealing that cost segregation is genuinely BOTH coordination AND extraction. It coordinates the legitimate economic fact that different asset classes have different useful lives \u2014 an HVAC system with 10-year life should not be depreciated over 40 years like the building structure. However, it simultaneously extracts through scale-dependent access barriers that create systematic disadvantage for small-capital actors. The coordination function is real (IRS audits confirm that better asset classification produces more economically accurate depreciation). The extraction function is also real (only large-scale investors can afford the consulting to deploy it optimally). The mandatrophy resolution: this is a Tangled Rope from the analytical perspective \u2014 it REQUIRES both coordination benefit and asymmetric extraction to classify as Tangled Rope, and both are present. The false summit is any perspective that claims cost segregation is 'just coordinate asset classification' (beneficiary view) or 'just extraction' (small owner view). The structural reality is the hybrid."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "real_estate_capital_formation_asymmetry",
+      "tax_code_complexity_barrier",
+      "institutional_investor_market_dominance"
+    ],
+    "dual_formulation_note": "Cost segregation depreciation strategy is downstream of capital formation asymmetries in real estate (large institutional pools vs. individual capital) and upstream of market concentration effects (large investors acquire properties at scale, creating competitive disadvantage for small owners). The strategy's extractiveness amplifies capital-scale asymmetries that already exist."
+  },
+  "directionality_overrides": []
+}

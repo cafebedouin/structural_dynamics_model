@@ -1,0 +1,186 @@
+{
+  "header": {
+    "constraint_id": "predator_prey_arms_race",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pparms"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Predator-Prey Arms Race Constraint",
+    "topic_domain": "evolutionary_biology/ecology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "predator_population",
+      "prey_population"
+    ],
+    "victims": [
+      "prey_individual_welfare",
+      "ecosystem_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Individual Prey Organism",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL PREY (SNARE) \u2014 The prey organism faces escalating predator adaptations with no exit option. Each generation must evolve defensive traits or perish. The arms race is an extractive cycle with no off-ramp: faster predators require faster prey, sharper senses require sharper prey senses, all driven by survival pressure. Maximum suppression (trapped) and high experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Individual Predator Organism",
+      "comment": "PERSPECTIVE 2: INDIVIDUAL PREDATOR (SNARE) \u2014 Symmetrically trapped. The predator must escalate hunting adaptations or starve as prey defenses improve. No exit from the evolutionary treadmill. Both predator and prey experience the constraint as pure coercion: invest in weaponry or be eliminated. High extraction from both branches of the arms race."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Predator Population",
+      "comment": "PERSPECTIVE 3: PREDATOR POPULATION (TANGLED ROPE) \u2014 At the population level, the arms race coordinates predator adaptive evolution (genuine coordination function: hunting efficiency selects for viable predators) while extracting from individual predator organisms (generations of individuals invest in costly weapons with diminishing returns as prey defenses scale). The population benefits from the arms race dynamic; individuals suffer."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Prey Population",
+      "comment": "PERSPECTIVE 4: PREY POPULATION (TANGLED ROPE) \u2014 Prey populations coordinate defensive innovation (genuine coordination function: survival pressure selects for viable prey), while extracting from individual prey organisms (generations of individuals invest in costly defenses). Population-level benefit masks individual-level suffering. Constrained exit: prey cannot leave the ecological niche without extinction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Ecological System",
+      "comment": "PERSPECTIVE 5: ECOLOGICAL SYSTEM (TANGLED ROPE) \u2014 The ecosystem benefits from the arms race (genuine coordination: predator-prey dynamics stabilize population cycles, preventing overgrazed collapse). But the constraint also extracts from system stability through resource intensification: escalating weaponry requires increased energy flows, metabolic costs accumulate, and the system becomes fragile to perturbation. The system has some mobility (alternative equilibria exist) but is constrained by evolutionary path-dependency."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Darwinian Selection)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / DARWINIAN VIEW (MOUNTAIN) \u2014 From a universal civilizational view, the predator-prey arms race appears as an immutable law of natural selection. Any predator-prey system must generate selective pressure for escalating adaptations\u2014this is inherent to differential reproduction. The constraint emerges naturally from reproductive fitness logic with no exit option visible. However, the structured data contradicts the mountain classification: the arms race is contingent on specific ecological configurations, not universal. Alternative equilibria exist (coevolutionary stasis, niche separation). The mountain perspective risks naturalizing a contingent dynamic."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "arms_race_exit_pathway",
+      "question": "Do coevolutionary stasis, niche partitioning, or mutually-assured predation create genuine exits from the arms race escalation, or are these merely temporary pauses before renewed escalation?",
+      "resolution_mechanism": "Long-term paleontological and ecological data on predator-prey systems that achieved stable equilibrium vs those that show continuous escalation; identification of cases where arms race halted without extinction",
+      "impact": "If exits exist: constraint is Tangled Rope from all perspectives (constrained rather than trapped). If no exits: constraint approaches Mountain (trapped at all levels). Classification sensitivity is high.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether predator-prey arms races have genuine exit pathways or equilibrium states"
+    },
+    {
+      "id": "extraction_mechanism_identity",
+      "question": "Is the extraction in the arms race the *actual genetic/metabolic cost* of weapon escalation, or is it the *opportunity cost* of energy not invested in reproduction or survival of non-competitive individuals?",
+      "resolution_mechanism": "Comparative energetics analysis: measure actual metabolic burden of evolved defensive/offensive traits vs baseline phenotype; distinguish between absolute cost and relative fitness cost",
+      "impact": "If extraction is absolute cost: suppression \u2265 0.70 (Mountain-adjacent). If extraction is relative fitness: suppression \u2248 0.55 (Tangled Rope confirmed). This determines whether individuals are genuinely trapped or constrained.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether arms race cost is absolute metabolic burden or relative fitness trade-off"
+    },
+    {
+      "id": "predator_prey_asymmetry",
+      "question": "Is the arms race symmetric (predator gains = prey loss, zero-sum) or asymmetric (predator gains more energy from successful hunt than prey loses from evolutionary defense investment)?",
+      "resolution_mechanism": "Energy accounting: compare caloric cost of predator adaptations to caloric benefit of successful predation vs caloric cost of prey defensive adaptations to probability of predator capture prevention",
+      "impact": "If symmetric: extraction flows equally bidirectional. If asymmetric toward predators: predators are net beneficiaries (institutional/arbitrage in population view). If asymmetric toward prey: prey evolution imposes larger absolute costs. Directionality derivation depends on this asymmetry.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Energy flow asymmetry in predator-prey arms race"
+    },
+    {
+      "id": "human_intervention_constraint_topology",
+      "question": "When humans intervene in arms races (introducing invasive predators, culling prey, hunting predators), does the intervention exit the constraint or create a new extractive constraint on top of the existing one?",
+      "resolution_mechanism": "Case study analysis: invasive cane toads, rabbit myxomatosis control, trophy hunting systems, predator reintroduction programs; tracking of constraint topology pre/post-intervention",
+      "impact": "If intervention exits: constraint is contingent, not universal. If intervention creates new extraction: humans become institutional beneficiaries (using prey as resource or predator control as tool) while populations bear cost. Scaffold perspective with sunset may be analytically relevant.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether human intervention can exit or only restructure predator-prey arms races"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The predator-prey arms race is a coevolutionary constraint where escalating predatory adaptations (speed, sensory acuity, lethal efficiency) drive corresponding escalations in prey defenses (escape velocity, detection mechanisms, protective morphology). This constraint operates across ecological scales\u2014from individual organisms bearing the cost of weapon development to populations coordinating adaptive innovation to ecosystems managing the energy intensity of the arms race. The constraint is neither purely coordinative (it creates mutual entrapment) nor purely extractive (both parties benefit at population level from the selective dynamic). It exhibits tangled rope characteristics: genuine coordination function (population fitness improves through arms race selection) paired with asymmetric extraction (individuals bear costs of weapon development with diminishing returns). The theater ratio reflects that the mechanism is not performative\u2014the arms race is a direct, material coercive dynamic, not an institutional ritual or narrative construct. Evolutionary biologists have historically viewed this constraint as a natural law (Mountain), but structured analysis reveals it as contingent on specific ecological configurations: niche overlap, reproductive timescales, energy availability, and absence of alternative equilibria.",
+    "key_agents": [
+      "Individual Prey Organisms: Primary victims (powerless/trapped) \u2014 face escalating predator lethality with no exit; each generation must evolve faster/sharper/tougher or die",
+      "Individual Predator Organisms: Primary victims (powerless/trapped) \u2014 face escalating prey defenses with no exit; starvation pressure drives costlier hunting adaptations",
+      "Prey Populations: Organized beneficiary (organized/constrained) \u2014 benefit from selection for viable defensive traits; population fitness improves through arms race dynamic",
+      "Predator Populations: Organized beneficiary (organized/constrained) \u2014 benefit from selection for viable hunting traits; population fitness improves through arms race dynamic",
+      "Ecological System: Powerful beneficiary (powerful/mobile) \u2014 benefits from stable predator-prey cycles preventing population collapse; experiences extraction through energy intensification",
+      "Analytical Observer: Civilizational observer (analytical/analytical) \u2014 risks naturalizing a contingent dynamic as universal law"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate-high. The arms race imposes real metabolic and reproductive costs on individuals\u2014weapon development requires energy, time, and genetic allocation that cannot be invested in reproduction. The cost escalates over evolutionary time as each generation must outpace the previous adaptive step. However, extractiveness is not extreme (0.70+) because the constraint does provide genuine selective benefit at the population level: prey that fail to evolve defenses are eliminated, predators that fail to evolve hunting capability starve. Both parties survive through the arms race dynamic, suggesting some net benefit despite individual suffering. Suppression (0.65): High. Exit options are severely limited. Individual organisms cannot opt out of the evolutionary arms race\u2014their fitness is directly tied to weapon capability. Populations cannot partition the niche without behavioral or morphological change that itself requires investment. The constraint is enforced by immediate reproductive/survival pressure: organisms that fail to compete are removed from the population. However, suppression is not absolute (0.85+) because alternative equilibria theoretically exist: niche separation, coevolutionary stasis, mutually-assured predation. The fact that these alternatives are rarely achieved suggests they are unstable rather than impossible. Theater ratio (0.35): Low. This is a material, non-performative constraint. The arms race mechanism is direct: predators catch prey or starve, prey evade predators or die. There is no narrative substitution (as in piton), no institutional ritual (as in tangled rope enforcement mechanisms), no aspirational signal (as in scaffold). The mechanism is transparent and immediate. The theater ratio has increased over evolutionary time (from 0.15 to 0.35) not because the mechanism has become performative, but because secondary mechanisms have emerged: behavioral innovation, signaling displays, population-level density effects, and ecosystem-mediated indirect effects. These add complexity without replacing the core material dynamic.",
+    "perspectival_gap": "This constraint exhibits a profound perspectival split between individual and population levels. Individual prey and predators see pure extraction (Snare)\u2014they are trapped on an evolutionary treadmill with no exit. Predator and prey populations see tangled rope\u2014the arms race coordinates adaptive evolution (genuine benefit) while extracting from individuals. The ecological system sees tangled rope at a larger scale\u2014population-level stability benefits are paired with resource intensification extraction. The analytical observer risks seeing mountain\u2014naturalizing the constraint as inevitable outcome of natural selection\u2014but the structural data reveals this as a false summit. Real predator-prey systems have achieved coevolutionary stasis, niche separation, and alternative equilibria. The universality of arms races is contingent, not necessary. The perspectival gap reveals a critical insight: naturalization of contingent dynamics as universal laws is itself an extraction mechanism. It justifies individual suffering as inevitable and prevents innovation seeking alternatives.",
+    "directionality_logic": "Directionality is complex in this constraint because both predator and prey are simultaneously beneficiaries (at population level) and victims (at individual level). The constraint's structure creates role asymmetry despite functional symmetry. From the perspective of individual organisms: both are trapped targets (d \u2248 0.95 for both), experiencing high extraction. From the perspective of populations: both are beneficiaries of the selective dynamic (d \u2248 0.20 for both), experiencing low extraction because population fitness improves through arms race. From the ecosystem perspective: predators and prey are jointly coordinating stable dynamics (d \u2248 0.45, symmetric), but the ecological system bears extraction costs through energy intensification (d \u2248 0.75 for ecosystem stability as victim). The no canonical power atom captures this multi-level complexity. The constraint demonstrates why single-perspective analysis fails: the same organism is both beneficiary and victim depending on which timeframe and organizational level is analyzed.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by clarifying that the six types are not competing answers but valid descriptions at different analytical levels. The constraint is not 'really' a Mountain being falsely called Tangled Rope\u2014it is Mountain at the universal civilizational level if we condition on 'predator-prey systems with complete ecological overlap.' It is Snare at the individual organism level. It is Tangled Rope at the population level. It is Mountain-adjacent (almost naturally immutable) but not actually Mountain because genuine alternative equilibria exist. The mandatrophy resolution is: specify the level of analysis explicitly. The constraint cannot be classified without declaring whether we are analyzing individual organisms, populations, ecosystems, or hypothetical alternative configurations. Once the level is specified, a unique classification follows."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "evolutionary_fitness_treadmill",
+      "ecological_stability_energy_costs"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.45
+    }
+  ]
+}

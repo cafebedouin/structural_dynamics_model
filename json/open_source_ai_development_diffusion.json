@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "open_source_ai_development_diffusion",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "osaid"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Open Source AI Development Diffusion",
+    "topic_domain": "artificial_intelligence/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_ai_companies",
+      "academic_research_institutions",
+      "cloud_infrastructure_providers"
+    ],
+    "victims": [
+      "developing_country_ai_capacity",
+      "independent_researchers",
+      "open_source_maintainers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Independent Open Source Developer",
+      "comment": "PERSPECTIVE 1: INDEPENDENT OPEN SOURCE DEVELOPER (SNARE) \u2014 Trapped in a coordination structure ostensibly open but requiring massive computational resources (GPU clusters, training infrastructure) that only well-funded entities can afford. Bears full cost of maintaining compatibility with proprietary ecosystems while receiving no institutional support. Cannot exit: the AI development paradigm has become synonymous with resource-intensive training."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Developing Country AI Sovereignty",
+      "comment": "PERSPECTIVE 2: DEVELOPING COUNTRY AI SOVEREIGNTY (SNARE) \u2014 Open source rhetoric promises AI democratization but the practical requirement for massive compute infrastructure locks developing nations into dependency on cloud providers and API-based models owned by wealthy countries. Training a competitive foundation model requires resources beyond most national budgets. The open source framing obscures this structural trap."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Academic Research Group",
+      "comment": "PERSPECTIVE 3: ACADEMIC RESEARCH GROUP (TANGLED ROPE) \u2014 Benefits from open source models (reduced development overhead, ability to publish on top of shared foundations) while bearing extraction costs (dependency on proprietary infrastructure, limited ability to customize for non-commercial use cases, pressure to contribute improvements without compensation). Constrained by career incentives that reward published results more than systems maintenance."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Large AI Company",
+      "comment": "PERSPECTIVE 4: LARGE AI COMPANY (ROPE) \u2014 Captures genuine coordination benefits: open source models provide training data annotation, architectural innovation, and competitive pressure that improves internal capabilities. Also captures asymmetric advantage: can fine-tune released models with proprietary datasets, deploy at scale with infrastructure advantages, and absorb open source innovation into closed products. Arbitrage exit: can shift between open and closed strategies based on market conditions."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Cloud Infrastructure Provider",
+      "comment": "PERSPECTIVE 5: CLOUD INFRASTRUCTURE PROVIDER (ROPE) \u2014 Benefits from open source ecosystem requiring computational resources; entire market for fine-tuning, inference, and custom deployment depends on their infrastructure. Coordination function is genuine: open source models drive demand for compute services. Can arbitrage between supporting open source (cheap labor in model development) and proprietary solutions (margins on closed services)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Observes genuine coordination function (distributed development, rapid iteration, broad access to models) alongside asymmetric extraction (resource barriers prevent most agents from training competitive models, open source contribution provides free labor that benefits well-resourced entities, cloud platforms capture infrastructure rent). Neither pure coordination nor pure extraction: both mechanisms operate simultaneously with different beneficiaries."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "resource_democratization_counterfactual",
+      "question": "Would decentralized compute infrastructure (proof-of-work, federated learning, distributed training) materially reduce resource barriers to model training, or are centralized data centers inherently more efficient?",
+      "resolution_mechanism": "Empirical comparison of decentralized vs centralized training efficiency; cost per FLOP for competitive models; adoption rates of distributed training frameworks",
+      "impact": "If decentralized infrastructure is viable at comparable cost: snare classification weakens to tangled_rope (exit becomes available). If centralized dominates: snare classification strengthens and becomes structural rather than contingent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether decentralized compute can compete with centralized infrastructure"
+    },
+    {
+      "id": "open_source_labor_substitution",
+      "question": "Do open source contributions substitute for proprietary R&D labor, or do they primarily supplement internal development (hence not extractive)?",
+      "resolution_mechanism": "Comparison of development velocity for open models vs closed models; correlation between open source commits and corresponding closed-product improvements; wage differential analysis for similar work in open vs proprietary contexts",
+      "impact": "If substitute: extraction of developer labor is real and suppression is enforced by job market dynamics (identification_locked for many developers). If supplement: open source creates genuine value addition without labor extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether open source contributions substitute for proprietary labor"
+    },
+    {
+      "id": "model_weight_accessibility_paradox",
+      "question": "Does releasing model weights without computational resources for inference actually democratize AI or merely create the appearance of democratization?",
+      "resolution_mechanism": "Cost analysis: ratio of model weight release cost to inference infrastructure cost; usability metrics for users attempting to deploy released models; tracking of actual deployment distribution (who actually runs released models vs who only accesses via proprietary APIs)",
+      "impact": "If appearance without substance: entire constraint is theater masking resource concentration (theater_ratio should be higher). If weights enable genuine decentralized deployment: suppression is lower than measured and exit becomes more available.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether model weight release enables genuine accessibility or creates theatrical democratization"
+    },
+    {
+      "id": "licensing_enforcement_gap",
+      "question": "Can open source licenses (MIT, Apache, GPL) effectively prevent proprietary incorporation of open models, or do they function as requests rather than binding constraints?",
+      "resolution_mechanism": "Analysis of license violation prevalence; cost of enforcement vs cost of violation; tracking of proprietary product improvement from licensed materials without attribution",
+      "impact": "If enforcement is real: licensing creates meaningful constraints on extraction (suppression higher than measured). If enforcement is symbolic: licenses provide moral cover for appropriation, increasing effective extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Enforceability of open source licensing constraints"
+    },
+    {
+      "id": "capability_overhang_distribution",
+      "question": "When a foundation model release outpaces most practitioners' ability to productize it, does the overhang accumulate rent-extraction potential for well-resourced entities, or does distribution of that potential matter for classification?",
+      "resolution_mechanism": "Timeline analysis: lag between model release and typical productive deployment by different classes of actors; correlation between resource availability and capability-to-use ratio",
+      "impact": "If overhang is systematically exploited by well-resourced entities: extractiveness should be higher. If overhang distributes randomly: extraction is lower than measured.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distribution of capability overhang in AI model diffusion"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 8
+  },
+  "commentary": {
+    "narrative_context": "Open source AI development presents a constraint structure where the rhetoric of democratization masks asymmetric access to computational resources required for competitive model training. The constraint exhibits characteristics of a tangled rope: genuine coordination mechanisms (distributed development, rapid architectural innovation, broad model access) coexist with extraction mechanisms (resource barriers that concentrate training capability, free labor absorption into proprietary products, infrastructure rent concentration). The diffusion of open source models is constrained not by licensing or access controls but by the massive computational requirements for training competitive foundation models, which only well-resourced entities can afford. This creates a structural dependency where open source contribution appears voluntary but occurs within a framework that systematically advantages well-capitalized actors. The theater ratio is moderate (0.48) \u2014 the constraint involves genuine technical coordination but also performative elements where model releases create appearance of democratization while practical deployment remains concentrated.",
+    "key_agents": [
+      "Large AI Companies: Primary beneficiaries (institutional/arbitrage) \u2014 capture architectural innovation from open source, use it to improve proprietary products, deploy at scale with infrastructure advantages",
+      "Cloud Infrastructure Providers: Secondary beneficiaries (institutional/arbitrage) \u2014 infrastructure rent extracted from model training and inference workloads driven by open source ecosystem",
+      "Independent Open Source Developers: Primary victims (powerless/trapped) \u2014 provide free labor maintaining compatibility layers and implementing community contributions with no institutional support",
+      "Developing Country AI Capacity: Primary victims (powerless/trapped) \u2014 locked out of competitive model training by resource requirements despite open source rhetoric of democratization",
+      "Academic Research Groups: Secondary victims/partial beneficiaries (moderate/constrained) \u2014 benefit from access to models but bear costs of dependency on proprietary infrastructure and limited ability to customize",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees both genuine coordination and structural extraction operating simultaneously"
+    ],
+    "logic_rationale": "Extractiveness (0.58): The constraint shows increasing extraction over time. Initially (0.32) open source was primarily coordination with modest resource requirements. Over 8 years, as foundation models have grown larger and more resource-intensive, extractiveness has increased as a growing gap emerges between access to code and access to computational resources for training. Current extractiveness reflects the systematic barrier created by scaling requirements. Suppression (0.62): High. Meaningful barriers prevent most independent developers and developing nations from training competitive models: cost of GPU infrastructure ($millions for competitive training), data acquisition and licensing complexity, tacit knowledge concentrated in large labs, and career incentives that reward proprietary work over open maintenance. Theater ratio (0.48): Moderate. The constraint involves genuine technical coordination (distributed development, architectural innovation) but includes performative elements: model releases that require massive compute to use, democratization rhetoric that masks resource concentration, licensing that appears to constrain but often does not prevent proprietary incorporation.",
+    "perspectival_gap": "Large AI companies perceive open source as enabling coordination that accelerates their internal development (Rope perspective). Independent developers perceive extraction combined with lack of viable exit options (Snare perspective). Developing nations perceive structural lock-in despite open source framing (Snare perspective). Academic researchers perceive mixed coordination benefits and infrastructure dependency (Tangled Rope perspective). Cloud providers perceive pure coordination that drives their infrastructure business (Rope perspective). The analytical observer recognizes both genuine coordination and systematic extraction operating on different axes \u2014 neither dominates completely, defining the tangled rope classification.",
+    "directionality_logic": "Directionality is determined by each actor's structural position relative to resource concentration. Large AI companies and cloud providers (beneficiaries with arbitrage exit) experience low or negative directionality \u2014 the constraint flows toward them, subsidizing their operations with free architectural innovation and development labor. Independent developers and developing nations (victims trapped by resource barriers) experience high directionality \u2014 they bear costs of contribution without corresponding benefit. Academic researchers (constrained by infrastructure dependency) experience moderate-to-high directionality reflecting partial extraction despite some benefits. The constraint's effectiveness depends on suppression of alternatives to centralized model training, which is maintained through both technical barriers (scaling efficiency of centralized infrastructure) and institutional factors (publication incentives, career structures, cloud platform pricing structures).",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy tension between coordination and extraction by showing that both mechanisms are structurally real. The coordination function (distributed development, rapid iteration, broad model access) is genuine and beneficial. The extraction function (resource concentration, labor absorption, infrastructure rent) is also genuine and systematic. Neither can be dismissed as appearance or secondary effect. The constraint is tangled rope precisely because mislabeling would obscure critical dynamics: calling it pure rope would miss the structural lock-in that prevents developing nations and independent developers from training competitive models; calling it pure snare would miss the real coordination benefits that accelerated AI development for all participants. The mandatrophy resolves by accepting that both mechanisms coexist and that the perspectival gap reveals which agents experience which mechanism as primary. The constraint is extractive when viewed from powerless perspectives and coordinative when viewed from beneficiary perspectives \u2014 and both are true descriptions of the same structure."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_compute_concentration",
+      "developing_nation_technology_sovereignty",
+      "open_source_contribution_labor_extraction"
+    ],
+    "dual_formulation_note": "Open source AI development is downstream of broader compute infrastructure concentration (affects_constraints: ai_compute_concentration). The constraint can be partially decomposed: genuine architectural coordination (higher \u03b5, lower suppression) operates separately from infrastructure barriers to deployment (lower \u03b5, higher suppression). However, the \u03b5-invariance principle suggests these are aspects of a single constraint where the observable is 'can a typical developer train a competitive model' \u2014 this observable determines both extractiveness and suppression values, so they should not be decomposed into separate stories."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "header": {
+    "constraint_id": "electricity_grid_decarbonization_timeline",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "elec_decarbonize"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Electricity Grid Decarbonization Timeline Constraint",
+    "topic_domain": "energy_policy/infrastructure/climate",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_fossil_fuel_generators",
+      "natural_gas_infrastructure_operators",
+      "grid_stability_operators"
+    ],
+    "victims": [
+      "climate_mitigation_goals",
+      "renewable_energy_developers",
+      "energy_ratepayers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Climate Mitigation Goals",
+      "comment": "PERSPECTIVE 1: CLIMATE MITIGATION COMMITMENTS (SNARE) \u2014 Nations and scientific bodies committed to net-zero targets by 2050 face a structural trap: the decarbonization timeline is physically constrained by grid infrastructure lifespans (30-40 years for fossil plants, 20-30 for transmission), yet political economy pressures systematically extend asset life through license renewal, retrofitting, and reliability arguments. The victims cannot exit\u2014the climate commitment is existential. Maximum extraction: delay compounds in time, making later action exponentially more costly."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Renewable Energy Developers",
+      "comment": "PERSPECTIVE 2: RENEWABLE ENERGY DEVELOPERS (TANGLED ROPE) \u2014 These agents both benefit from decarbonization mandates (which create market demand) and bear extraction through grid interconnection delays, transmission bottlenecks, and curtailment requirements. They have moderate agency through project development and regulatory advocacy, but face real constraints: capital requirements, permitting complexity, and grid operator gatekeeping. The constraint is hybrid\u2014coordination function (integrating renewables into grid) exists alongside asymmetric extraction (developers bear integration costs while fossil generators receive capacity guarantees)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Incumbent Fossil Fuel Generators",
+      "comment": "PERSPECTIVE 3: INCUMBENT FOSSIL FUEL GENERATORS (ROPE) \u2014 From their perspective, the decarbonization timeline is a coordination mechanism that structures market transitions. They benefit from stranded-asset compensation, extended operation windows, capacity payment guarantees, and natural gas transition pathways. They experience the constraint as beneficial negotiation\u2014extracting value through claims of grid reliability requirements and transition smoothness. Exit options include asset sales, geographic arbitrage to deregulated markets, or diversification into gas infrastructure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Grid Operator Consortia",
+      "comment": "PERSPECTIVE 4: GRID OPERATOR CONSORTIA (TANGLED ROPE) \u2014 System operators coordinate legitimate technical requirements (ramping, reserve capacity, frequency stability) while also enforcing incumbent preferences through interconnection standards and dispatch rules. These organizations have coordination function (genuine grid stability requirements exist) but also extract through gatekeeping: slow permitting, restrictive technical standards, and reliability arguments that protect fossil generation. Constrained exit\u2014operators cannot simply adopt alternative rules without regulatory authorization."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Distributed Energy and Storage Coalition",
+      "comment": "PERSPECTIVE 5: DISTRIBUTED ENERGY + STORAGE COALITION (SCAFFOLD) \u2014 Organized actors (battery manufacturers, distributed solar providers, microgrid developers) are building alternative decentralized architectures that bypass traditional grid operator gatekeeping. They see the centralized decarbonization timeline as a temporary coordination failure with sunset: as battery costs collapse and distributed resources mature, the traditional transmission + fossil baseload model becomes economically obsolete. Timeline to sunset: 15-20 years as distributed storage reaches grid-scale economics. Temporary suppression (high upfront costs, regulatory barriers) is tolerated because exit path is visible."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "Coal Plant Retirement Ritual",
+      "comment": "PERSPECTIVE 6: COAL PLANT RETIREMENT RITUAL (PITON) \u2014 Individual coal plant retirements are increasingly theatrical: announced retirements are delayed, operations are extended through temporary waivers, and decommissioning timelines are indefinitely postponed. The ritual of 'planned transition' persists through institutional inertia (regulatory frameworks built around coal capacity, union agreements, community economic dependence) despite the economic reality that new coal plants are uncompetitive. Piton derives from theater_ratio: the performative content of retirement planning exceeds its functional content. The constraint remains due to sunk-cost narratives and political path dependence, not operational necessity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Thermodynamic Natural Law View",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / THERMODYNAMIC VIEW (MOUNTAIN) \u2014 From a purely thermodynamic perspective, the decarbonization timeline is constrained by physical limits: renewable generation is intermittent (requiring storage or dispatchable backup), dispatchable zero-carbon sources are limited (nuclear, geothermal, hydroelectric), and energy storage has round-trip efficiency losses (~70-85% for lithium batteries). This view treats the timeline constraint as emergent from thermodynamic reality. However, structural data (suppression, theatrical retirement planning, incumbent gatekeeping) reveals this as false summit: the binding constraint is not thermodynamics but political economy. Contemporary storage + renewable economics demonstrate technical feasibility for 80%+ decarbonization by 2035 in many regions; delay is extractive, not thermodynamic."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "grid_stability_requirement_authenticity",
+      "question": "How much of the claimed grid stability requirement for fossil fuel baseload is genuine technical necessity vs. incumbent-driven regulatory construct?",
+      "resolution_mechanism": "Comparative analysis: blackout/stability incidents in high-renewable grids (Denmark 80% wind, California 50%+ renewables) vs fossil-dependent grids; controlled experiments with demand-side response and advanced storage; engineering studies on required reserve margins with modern control systems",
+      "impact": "If genuine: suppression values rise (justified technical constraints); decarbonization timeline is physically constrained. If constructed: suppression values fall; timeline is extractive delay, not technical requirement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether grid stability claims reflect genuine or constructed requirements"
+    },
+    {
+      "id": "transmission_bottleneck_origin",
+      "question": "Is slow transmission buildout a natural consequence of engineering complexity and planning cycles, or an incumbent gatekeeping mechanism?",
+      "resolution_mechanism": "Historical analysis of transmission approval timelines pre/post-deregulation; comparison of approval speed for fossil-plant-serving vs renewable-serving lines; regulatory process tracing for denials and delays; cost analysis of alternative faster-build technologies",
+      "impact": "If natural: renewable extraction timeline is honest constraint. If gatekeeping: transmission delays are extractive tool; alternative technologies and faster processes could exist.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether transmission bottlenecks are technical or institutional"
+    },
+    {
+      "id": "distributed_storage_maturity_timeline",
+      "question": "Will distributed battery + solar architectures reach grid-scale cost parity and reliability with centralized generation fast enough to enable true decarbonization by 2035-2040?",
+      "resolution_mechanism": "Tracking battery cost curves against grid-service price points; pilot projects demonstrating full-day renewable coverage with storage; market adoption rates in competitive regions (Australia, Chile, California)",
+      "impact": "If yes: scaffold perspective is structurally sound, sunset is real. If no: centralized grid coordination remains necessary longer, timeline constraint is binding, decarbonization is slower.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Timeline for distributed storage cost-competitiveness"
+    },
+    {
+      "id": "coal_community_economic_lock",
+      "question": "How much of coal plant lifecycle extension is driven by community economic lock-in vs incumbent leverage and rent-seeking?",
+      "resolution_mechanism": "Comparative case studies of coal plant closures with/without just transition investment; political analysis of retirement delay justifications; tracking of community economic rebound in successful transition regions",
+      "impact": "If lock-in dominant: suppression is justified; slower timeline needed for social transition. If incumbent rent-seeking dominant: suppression is extractive; faster timeline is feasible with adequate transition support.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of coal plant extension to economic lock-in vs incumbent leverage"
+    },
+    {
+      "id": "natural_gas_transition_trap",
+      "question": "Is natural gas framed as 'transition fuel' a genuine bridge technology or a 30-year lock-in mechanism that re-entrench fossil infrastructure?",
+      "resolution_mechanism": "Tracking of natural gas infrastructure buildout vs retirement timelines; comparison of actual gas-plant retirements to planned dates; economic analysis of gas stranded-asset risk if 2035-2040 decarbonization targets are met",
+      "impact": "If genuine bridge: gas plants can retire on decarbonization timeline. If lock-in: gas infrastructure creates sunk-cost inertia, extending fossil generation 10-15 years beyond optimal.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether natural gas serves as transition bridge or lock-in mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The electricity grid decarbonization timeline constraint structures the political economy of energy transition across most developed economies. Nations have committed to net-zero emissions by 2050, with intermediate targets (EU 2030, US 2035 for power sector), but actual decarbonization rates lag targets by 5-10 years. This gap is not primarily thermodynamic\u2014modern grid simulations demonstrate that 80%+ renewable grids are technically feasible with storage and demand response. Instead, the gap is extractive: incumbent fossil fuel generators, natural gas infrastructure operators, and grid operators benefit from slow timelines that extend asset life, delay competition, and preserve regulatory arrangements. Renewable energy developers and climate mitigation goals bear costs through delayed markets, interconnection barriers, and transmission bottlenecks. The constraint exhibits all features of tangled rope: genuine grid coordination requirements coexist with asymmetric extraction. The coal plant retirement ritual (piton perspective) shows theater_ratio rising from 0.48 to 0.72 over 15 years\u2014announced retirements are repeatedly delayed, creating performative transition narratives that substitute for actual decarbonization. The distributed energy coalition (scaffold perspective) sees a sunset path: battery costs have fallen 90% in 15 years; at current trends, distributed storage reaches grid-scale cost parity by 2035-2040, making centralized fossil baseload economically obsolete. The thermodynamic natural law view is a false summit\u2014the binding constraint is political economy, not physics.",
+    "key_agents": [
+      "Incumbent Fossil Fuel Generators: Primary beneficiaries (institutional/arbitrage) \u2014 capture value through extended asset life, capacity payments, and delayed competition",
+      "Natural Gas Infrastructure Operators: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from framing gas as 'transition fuel' and building long-lived infrastructure",
+      "Climate Mitigation Goals: Primary victim (powerless/trapped) \u2014 scientific and political commitments cannot exit; delay compounds exponentially in required decarbonization speed",
+      "Renewable Energy Developers: Secondary victim (moderate/constrained) \u2014 face interconnection delays, transmission bottlenecks, curtailment; also benefit from decarbonization mandates that create market",
+      "Grid Operators: Institutional gatekeeper (organized/constrained) \u2014 enforce reliability standards that protect fossil generation; constrained by regulatory framework",
+      "Distributed Energy + Storage Coalition: Organized disruptors (organized/mobile) \u2014 building alternative architectures with visible sunset path as costs collapse",
+      "Energy Ratepayers: Diffuse victim (powerless/trapped) \u2014 bear costs of delayed transition through higher electricity prices from extended coal/gas operation and inefficient infrastructure",
+      "Coal Community Workers: Secondary victim (powerless/trapped) \u2014 community economic lock-in compounds individual retirement decisions"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The primary extraction mechanism is timeline delay\u2014each 5-year postponement of fossil plant retirement extends sunk-cost infrastructure, forces higher costs in later rapid decarbonization, and generates $100B+ in windfall value to incumbent generators (avoided early retirement, extended capacity payments). The extractiveness is not total because genuine grid stability requirements exist and some renewable deployment occurs even within delayed timelines. Suppression (0.62): High. Multiple mechanisms suppress alternatives: (1) Regulatory gatekeeping\u2014grid operators control interconnection and dispatch rules; (2) Financial barriers\u2014renewables face higher capital costs despite lower operating costs; (3) Incumbent lobbying\u2014fossil generators fund regulatory capture and anti-renewable framing; (4) Sunk-cost narratives\u2014existing infrastructure creates path dependence in planning. Suppression rises over time as incumbent interests consolidate and incumbent plants are retrofitted for extended life. Theater ratio (0.68): High. Coal plant retirement announcements are increasingly theatrical\u2014lifespans are repeatedly extended through waivers and temporary operations. Grid reliability arguments provide a veneer of technical necessity, but comparative analysis (Denmark, California) shows high-renewable grids are stable. Decarbonization 'plans' proliferate without binding implementation timelines. The theater increases over the measurement interval as the gap between announced and actual retirements grows.",
+    "directionality_logic": "Directionality derives from each agent's position in the extraction flow. Incumbent generators are beneficiaries (d \u2248 0.10-0.20): they benefit from timeline delay and have high exit optionality (asset sales, geographic arbitrage to deregulated markets, gas conversion). Their effective extraction chi is negative\u2014the constraint transfers value to them. Renewable developers are victims (d \u2248 0.60-0.70): they depend on decarbonization timelines for markets but face gatekeeping barriers; constrained exit (capital-intensive, location-specific). Climate goals are pure victims (d \u2248 0.95): maximum extraction\u2014each year of delay increases decarbonization costs exponentially; no exit option. Grid operators occupy a hybrid position (d \u2248 0.40): they enforce rules that protect incumbents (extracting from renewables) while also coordinating genuine technical requirements (some benefit flows from stability coordination). Energy ratepayers are diffuse victims (d \u2248 0.85): they cannot organize collectively but bear cost of extended fossil operation. The analytical observer at civilizational scale risks d \u2248 0.72 (pure observer) but risks misclassifying the constraint as natural law rather than extractive political economy.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence: incumbent generators see rope (beneficial coordination enabling transition), renewables see tangled rope (mixed coordination and extraction), climate goals see snare (locked in, no exit), grid operators see tangled rope (genuine technical coordination + incumbent gatekeeping), distributed energy coalition see scaffold (temporary problem with visible sunset), coal plant retirement sees piton (performative ritual), and analytical observer risks mountain (false summit). The perspectival gap is diagnostic: the beneficiary perspective (rope) and victim perspective (snare/trapped) diverge on the same structural facts. This divergence reveals that the constraint is not naturally coordinated\u2014it is extractive political economy masquerading as technical necessity.",
+    "mandatrophy_analysis": "RESOLVING MANDATROPHY: The classification cannot resolve between pure coordination and pure extraction by examining base properties alone because the constraint genuinely contains both. The mandatrophy resolves through perspectival composition: (1) Does the constraint solve a genuine collective action problem? YES\u2014grid stability and phase-in of renewables present legitimate coordination challenges. (2) Does it distribute costs asymmetrically? YES\u2014fossil generators benefit from timeline delay while climate goals and renewables bear costs. (3) Is there active enforcement maintaining the asymmetry? YES\u2014regulatory gatekeeping, interconnection delays, and dispatch rules systematically favor incumbents. Therefore, tangled rope is the correct classification. The false mountain perspective (thermodynamic necessity) is detected through network contradiction: contemporary grid simulations show 80%+ renewable grids are physically feasible; the timeline constraint is enforced politically, not thermodynamically. The piton perspective (theatrical retirement) shows that the constraint's functional content has degraded relative to its performative content\u2014a diagnostic sign of inertial maintenance."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "renewable_interconnection_bottleneck",
+      "natural_gas_stranded_assets",
+      "electricity_price_suppression",
+      "coal_community_economic_lock"
+    ],
+    "dual_formulation_note": "The decarbonization timeline is upstream of multiple domain-specific constraints. Renewable interconnection bottlenecks are downstream\u2014they depend on whether grid operators enforce gatekeeping rules. Natural gas infrastructure buildout is a parallel extraction mechanism with shared beneficiaries (fossil fuel operators). Coal community lock-in is a secondary victim mechanism amplifying suppression. Price suppression results from extended fossil generation displacing renewables. All are linked by incumbent extraction strategy."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

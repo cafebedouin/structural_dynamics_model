@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "fact_checker_resource_scarcity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fcrs"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Fact Checker Resource Scarcity and Epistemic Gatekeeping",
+    "topic_domain": "information_infrastructure/epistemology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_fact_checkers",
+      "platform_corporations"
+    ],
+    "victims": [
+      "public_epistemic_commons",
+      "independent_fact_checkers",
+      "marginal_information_sources"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Public Epistemic Commons",
+      "comment": "PERSPECTIVE 1: PUBLIC EPISTEMIC COMMONS (SNARE) \u2014 Trapped in a verification crisis with no exit. The public cannot verify information independently; must defer to scarce, concentrated fact-checking resources. Bears full cost of false positives (misinformation circulates) and false negatives (true information suppressed). Zero agency, maximal extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Independent Fact Checkers (Global South Focus)",
+      "comment": "PERSPECTIVE 2: INDEPENDENT FACT CHECKERS \u2014 GLOBAL SOUTH (SNARE) \u2014 Trapped by resource scarcity, funding concentration in Western institutions, and platform gatekeeping. Cannot scale verification work; must defer to well-resourced institutional fact checkers. Marginalized from epistemic authority structures. Bears extraction through epistemic invisibility."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Mid-Tier Regional Fact Checkers",
+      "comment": "PERSPECTIVE 3: MID-TIER REGIONAL FACT CHECKERS (TANGLED ROPE) \u2014 Constrained by funding competition and platform algorithm dependency. Experience genuine coordination benefit (collaborative databases, shared verification protocols) alongside asymmetric extraction (underfunded relative to verification demand, dependent on platform referrals). Can exit to alternative platforms at high career cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Major Institutional Fact-Checking Networks",
+      "comment": "PERSPECTIVE 4: MAJOR INSTITUTIONAL FACT CHECKERS (ROPE) \u2014 Primary beneficiaries. Experience the constraint as coordination: resource scarcity gives their verification authority outsized weight. Network effects strengthen with scale. Exit options high (can launch independent platform, secure foundation funding). Net beneficiary \u2014 extraction flows toward this agent."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Platform Corporations",
+      "comment": "PERSPECTIVE 5: PLATFORM CORPORATIONS (ROPE) \u2014 Outsource verification labor to underfunded fact-checking ecosystem while capturing epistemic authority. Resource scarcity means platforms can control which facts are checked and how. Coordination function (information quality gates) coexists with extraction (free labor sourcing). High exit optionality (can modify algorithms, internalize fact-checking, partner selectively)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Journalistic Fact-Checking",
+      "comment": "PERSPECTIVE 6: LEGACY JOURNALISTIC FACT-CHECKING (PITON) \u2014 Traditional newspaper fact-checking (NYT, Guardian, BBC) persists through institutional inertia and prestige authority, but is substantially performative relative to verification demand. The actual verification work has shifted to specialized networks and platform systems; legacy fact-checking is maintained as a symbolic good-housekeeping certification. Theater ratio high, functional extraction low."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Open-Source Verification Infrastructure",
+      "comment": "PERSPECTIVE 7: OPEN-SOURCE VERIFICATION INFRASTRUCTURE (SCAFFOLD) \u2014 Organized agents (Wikimedia, OpenFact, distributed verification networks) see resource scarcity as a temporary coordination failure with a sunset: decentralized verification tools, crowdsourced fact-checking, and blockchain-based provenance systems are building alternative verification pathways. Suppression is moderate (barrier to adoption, platform resistance) but not total; agents perceive an exit path within generational timeframe."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational scope, the constraint exhibits genuine coordination (verification is a public good requiring shared infrastructure) alongside structural extraction (resource concentration enables gatekeeping). No single type adequately captures the structure; tangled rope reflects the coexistence of coordination and asymmetric extraction at the system level."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "verification_demand_growth_rate",
+      "question": "Does information production (volume of claims requiring verification) grow faster than fact-checking capacity can expand?",
+      "resolution_mechanism": "Longitudinal measurement: ratio of new information claims (social media, news, user-generated content) to fact-checker person-hours allocated; growth rate comparison over 5-10 year periods",
+      "impact": "If demand grows faster: resource scarcity is structural and self-reinforcing (more scarcity \u2192 higher extraction \u2192 scaffold becomes aspirational). If capacity growth matches demand: scarcity is temporary and snare classification is overstated.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether information production outpaces fact-checking capacity"
+    },
+    {
+      "id": "platform_gatekeeping_necessity",
+      "question": "Is platform gatekeeping (platform selection of which facts get checked) a necessary feature of resource scarcity or a contingent choice by platform corporations?",
+      "resolution_mechanism": "Comparative institutional analysis: platforms with algorithmic fact-checking recommendation vs distributed user-driven fact-checking requests. Measurement of verification coverage difference.",
+      "impact": "If necessary: platform gatekeeping is inherent to the constraint (snare classification for public). If contingent: platforms are extracting value by restricting access (snare changes to tangled_rope with victims gaining agency).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether platform gatekeeping is necessary or extractive"
+    },
+    {
+      "id": "global_south_capacity_ceiling",
+      "question": "Can regional fact-checking networks in Global South and Global East achieve verification capacity parity with Western-funded networks, or are systemic factors (language barriers, funding concentration, platform prioritization) insurmountable?",
+      "resolution_mechanism": "Comparative funding analysis, verification coverage per capita, platform amplification measurement, training pipeline analysis for 10+ years",
+      "impact": "If parity achievable: independent fact-checkers can exit scarcity (snare \u2192 tangled_rope). If ceiling exists: structural marginalization (snare classification confirmed).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether global verification capacity can equalize"
+    },
+    {
+      "id": "decentralized_verification_viability",
+      "question": "Can crowdsourced, decentralized, or blockchain-based verification systems achieve comparable accuracy to institutional fact-checking without centralized gatekeeping?",
+      "resolution_mechanism": "Pilot program measurement: accuracy rates, consensus quality, false positive/negative rates for decentralized vs institutional systems on shared verification tasks",
+      "impact": "If viable: scaffold sunset is real and resource scarcity becomes transitional (piton classification instead of snare). If ineffective: decentralization is aspirational and current concentration is necessary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether decentralized verification can match institutional quality"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Fact-checking resource scarcity creates a structural bottleneck in epistemic verification. The public requires independent verification of information claims, but fact-checking capacity is concentrated in well-resourced institutional networks, primarily in wealthy Western jurisdictions. This scarcity empowers institutional fact-checkers and platform corporations to gatekeep which claims get verified, how, and according to which standards. The constraint exhibits the full range of DR classifications: powerless agents (public, independent checkers) experience it as a snare with no exit; moderate agents (regional fact-checkers) experience tangled coordination-and-extraction; institutional agents experience it as coordination that strengthens their authority; and organized coalitions see it as a temporary problem with decentralized solutions. The theater ratio reflects the performative character of legacy fact-checking (symbolic certification without proportional verification work) and the increasing use of fact-checking for reputation management rather than epistemic improvement.",
+    "key_agents": [
+      "Public Epistemic Commons: Primary victim (powerless/trapped) \u2014 depends on scarce fact-checking resources; cannot verify independently",
+      "Independent Fact Checkers (Global South): Primary victim (powerless/trapped) \u2014 marginalized by funding concentration and platform prioritization",
+      "Mid-Tier Regional Fact Checkers: Secondary victim (moderate/constrained) \u2014 experience both coordination benefits and asymmetric extraction",
+      "Major Institutional Fact-Checking Networks: Primary beneficiary (institutional/arbitrage) \u2014 capture epistemic authority and gate verification labor",
+      "Platform Corporations: Primary beneficiary (institutional/arbitrage) \u2014 control algorithm-driven verification; extract labor from underfunded fact-checkers",
+      "Legacy Journalistic Fact-Checking: Institutional actor (institutional/arbitrage) \u2014 maintains prestige authority but performs diminishing verification work (piton)",
+      "Open-Source Verification Infrastructure: Organized coalitions (organized/constrained) \u2014 building decentralized alternatives with sunset logic"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The constraint exhibits increasing extraction over the measurement interval (0.35 \u2192 0.61), reflecting intensifying information production that outpaces fact-checking capacity expansion. Resource scarcity is not static; it is self-reinforcing. More unverified claims \u2192 higher scarcity premium \u2192 stronger gatekeeping \u2192 greater extraction. The measurement trajectory shows the trap: scarcity increases faster than capacity can respond. Suppression (0.62): High. Barriers to independent verification include: specialized expertise requirements, funding concentration in Western institutions, platform algorithm gatekeeping, career risk for challenging institutional consensus, and linguistic/geographic barriers for Global South fact-checkers. These barriers are substantial but not absolute \u2014 some verification occurs outside institutional channels. Theater ratio (0.68 and rising): Moderate-high. Legacy fact-checking (newspapers, traditional institutions) increasingly serves a symbolic function \u2014 establishing institutional credibility rather than proportionally increasing verification coverage. The theater has increased over time as demand outpaced capacity, creating performative substitution: publish fact-check reports that create appearance of comprehensive verification coverage while actual verification remains bottlenecked.",
+    "directionality_logic": "The primary beneficiaries (institutional fact-checkers, platforms) have low directionality (d \u2248 0.10-0.20) \u2014 they gain from the constraint and have high exit optionality. The primary victims (public, independent checkers) have high directionality (d \u2248 0.90-0.95) \u2014 they bear costs and have minimal exit options. Mid-tier regional fact-checkers occupy the intermediate position: they benefit from verification coordination infrastructure but are constrained by funding dependency and platform referral requirements. The global analytical observer at civilizational scope computes tangled_rope because both genuine coordination (shared verification standards, collaborative databases, information quality infrastructure) and clear extraction (resource concentration, gatekeeping, epistemic marginalization) are structurally real. No single type captures both functions; tangled rope is the appropriate classification.",
+    "perspectival_gap": "The constraint demonstrates sharp perspectival divergence. Institutional fact-checkers see coordination and authority enhancement (rope); platforms see cost externalization and agenda-setting leverage (rope); but the public and independent checkers experience epistemic entrapment (snare). Mid-tier checkers occupy an ambiguous middle \u2014 genuinely benefiting from infrastructure coordination while being squeezed by resource competition. The open-source coalition sees the scarcity as temporary and solvable, projecting a decentralization pathway (scaffold). Legacy journalism sees its own role as degraded and threatened (piton), maintaining authority rituals (prestigious bylines, editorial standards) while actual verification work migrates elsewhere. The analytical observer at the civilizational level cannot reduce this to a single type because the structure itself is dual: there is real coordination in the verification infrastructure, and there is real extraction in the resource concentration and gatekeeping. This irreducible duality is the mark of tangled rope.",
+    "mandatrophy_analysis": "RESOLUTION: The mandatrophy is resolved by recognizing that fact-checking resource scarcity is genuinely a tangled rope with dual function. The coordination function (verification infrastructure, shared standards, collaborative checking protocols) is real and valuable; the extraction function (gatekeeping, authority concentration, labor externalization) is equally real and harmful. The constraint cannot be reduced to pure coordination (rope) because institutional fact-checkers benefit asymmetrically and gatekeeping actively constrains alternatives. It cannot be reduced to pure extraction (snare) because some verification coordination genuinely occurs and the infrastructure provides public goods. The tension between these functions is structural and persistent. The scaffold perspective (decentralized verification sunset) offers a possible resolution path, but the timeline is unclear and platform resistance is substantial. The piton perspective (legacy journalism degradation) indicates that some institutional forms are losing function while maintaining theatrical authority \u2014 this is a real diagnostic signal that the current arrangement is under stress."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_content_moderation",
+      "epistemic_authority_concentration",
+      "misinformation_supply_chain"
+    ],
+    "dual_formulation_note": "Fact-checker resource scarcity is upstream of platform content moderation (which depends on fact-checking capacity) and downstream of information production capacity (which creates verification demand). The constraint has distinct \u03b5 values if measured by journalistic fact-checking (\u03b5 \u2248 0.42, more rope-like) vs platform-driven fact-checking (\u03b5 \u2248 0.68, more snare-like). This story captures the system-level constraint; decomposition into institutional forms may be warranted for detailed analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

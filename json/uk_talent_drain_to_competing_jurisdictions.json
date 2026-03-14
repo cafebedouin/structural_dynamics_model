@@ -1,0 +1,221 @@
+{
+  "header": {
+    "constraint_id": "uk_talent_drain_to_competing_jurisdictions",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "uktalent"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.52,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UK Talent Drain to Competing Jurisdictions",
+    "topic_domain": "economic_policy/labor_migration/human_capital",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "competing_jurisdictions",
+      "multinational_employers",
+      "uk_high_earner_emigrants"
+    ],
+    "victims": [
+      "uk_public_services",
+      "uk_innovation_capacity",
+      "uk_domestic_labor_market"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "UK Public Service Workers",
+      "comment": "PERSPECTIVE 1: UK PUBLIC SERVICE WORKERS (SNARE) \u2014 Trapped in understaffed NHS, education, and research institutions by lack of resources and overseas competition. Cannot exit without sacrificing career in their field. Bearing full cost of talent drain while having no mechanism to exit or recover."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "UK Mid-Career Professionals",
+      "comment": "PERSPECTIVE 2: UK MID-CAREER PROFESSIONALS (TANGLED ROPE) \u2014 Constrained by visa restrictions, social ties, and housing markets, but genuinely mobile. Benefit from UK education and early career networks; face high exit cost (visa sponsorship, relocation, social disruption) but not insurmountable. Experience both coordination (labor market signaling) and extraction (brain drain tax through upskilled workforce loss)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Competing Jurisdictions (US, Canada, Singapore)",
+      "comment": "PERSPECTIVE 3: COMPETING JURISDICTIONS (ROPE) \u2014 Benefit from active talent recruitment and visa liberalization. Experience the constraint as pure coordination: attracting skilled workers solves their labor market needs. Net beneficiary position; extraction flows toward these actors."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "UK Government and Institutions",
+      "comment": "PERSPECTIVE 4: UK GOVERNMENT AND INSTITUTIONS (TANGLED ROPE) \u2014 Constrained by treaty obligations (freedom of movement legacy, trade agreements), fiscal pressure, and political economy of immigration policy. Must enforce visa restrictions and salary caps; simultaneously loses high-value workers. Mixed experience: genuine coordination function (managing labor supply) overlaid with extraction (brain drain taxes innovation capacity)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "UK Professional Networks and Diaspora Orgs",
+      "comment": "PERSPECTIVE 5: UK PROFESSIONAL NETWORKS AND DIASPORA ORGANIZATIONS (SCAFFOLD) \u2014 Organized actors (alumni networks, professional associations, returning talent programs) see talent drain as a temporary coordination failure with sunset potential. High mobility and agency; see exit path through circular migration norms, remote work, and repatriation incentives. Theater is low \u2014 actual value creation through network effects."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "UK Immigration Policy Framework",
+      "comment": "PERSPECTIVE 6: UK IMMIGRATION POLICY FRAMEWORK (PITON) \u2014 Post-Brexit points-based immigration system is substantially performative: ostensibly manages talent acquisition but largely reactive to market shortages rather than proactive development. Framework persists through institutional inertia despite evidence that visa restrictions harm both competitiveness and public services. Theater ratio high because policy ritual (points calculation, visa categories) has decoupled from actual talent flow outcomes."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational/global perspective, talent mobility is partially coordination (efficient allocation of human capital) and partially extraction (concentration of opportunity in wealthy jurisdictions, loss of public goods provision in origin countries). The constraint exhibits genuine coordination function alongside asymmetric distribution of benefits. Tangled Rope classification reveals that brain drain is neither pure market efficiency nor pure extraction, but hybrid mechanism embedding both."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "talent_quality_threshold",
+      "question": "What skill/qualification threshold defines 'talent drain' versus normal labor mobility?",
+      "resolution_mechanism": "Comparative analysis of emigration rates by education level and field; identification of which sectors experience disproportionate loss; correlation with measurable output metrics (research output, innovation, public service capacity)",
+      "impact": "If threshold set low: classify constraint as affecting broad labor market (Snare). If threshold high: constraint affects only elite knowledge workers (Rope from some perspectives). Determines scope and severity of extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Skill threshold defining talent drain severity"
+    },
+    {
+      "id": "salary_differential_causality",
+      "question": "How much of talent emigration is driven by salary differentials versus lifestyle, work environment, and visa accessibility?",
+      "resolution_mechanism": "Econometric analysis of emigration decisions; qualitative interviews with recent emigrants; comparison of salary-adjusted emigration rates; analysis of emigration from high-paying UK sectors versus low-paying sectors",
+      "impact": "If salary-dominant: constraint is extraction mechanism (Snare from victim perspective). If multi-causal with visa as primary barrier: constraint is institutional artifact (Piton). If lifestyle-driven: constraint reflects values alignment (Rope from beneficiary perspective).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal drivers of talent emigration"
+    },
+    {
+      "id": "circular_migration_potential",
+      "question": "Can UK rebuild 'pull' factors sufficient to enable circular migration rather than permanent brain drain?",
+      "resolution_mechanism": "Tracking of return migration rates; analysis of countries with successful circular migration (Germany, Canada); assessment of remote work and distributed team viability; identification of policy changes that could increase repatriation",
+      "impact": "If high circular migration potential: scaffold sunset is real (constraint is temporary). If low potential: drain is permanent extraction (Snare classification dominates). Determines whether constraint has natural sunset or requires active policy intervention.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of circular migration to reverse brain drain"
+    },
+    {
+      "id": "public_goods_replacement_cost",
+      "question": "What is the economic cost of replacing lost NHS doctors, university researchers, and skilled educators through recruitment, training, or service reduction?",
+      "resolution_mechanism": "Cost accounting of public service vacancies; comparison of salary/recruitment costs to replacement training costs; measurement of service quality degradation; estimation of innovation loss in research sectors",
+      "impact": "If replacement cost exceeds salary differential: talent drain is net extraction (Snare from victim perspective). If replacement cost lower than keeping uncompetitive workers: drain is efficiency mechanism (Rope). Determines whether suppression is structural (economic necessity) or institutional (policy choice).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Economic cost of replacing lost talent in public services"
+    },
+    {
+      "id": "institutional_identity_lock",
+      "question": "To what degree does UK identity (as 'world capital of finance/research') depend on retaining domestic talent versus attracting global talent?",
+      "resolution_mechanism": "Historical analysis of UK competitive advantage; identification of threshold where talent concentration becomes identity critical; analysis of reputation effects of public service degradation",
+      "impact": "If identity-dependent: UK institutions are identity_locked into visa restrictions that harm them (institutional agents cannot perceive mutability). If instrumental: institutions can adapt policy pragmatically. Determines whether institutional perspectives are captured or strategic.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Institutional identity dependence on talent retention"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The UK talent drain to competing jurisdictions represents a structural extraction mechanism embedded within what appears as natural labor market equilibrium. Higher-skilled workers (healthcare professionals, researchers, financial specialists) migrate to jurisdictions offering superior salaries, work environments, visa accessibility, and career opportunities. This creates cascading costs: NHS and university staffing crises, innovation capacity loss, and reduced public goods provision. The constraint is not zero-sum \u2014 competing jurisdictions benefit from talent acquisition, UK emigrants benefit from higher salaries and mobility, multinational employers benefit from labor arbitrage \u2014 but these benefits are asymmetric. UK public services and the domestic innovation ecosystem bear extraction costs while having limited exit options or recovery mechanisms. The constraint exhibits genuine coordination function (efficient allocation of skilled labor across global markets) overlaid with asymmetric distribution of costs and benefits (extraction flowing from less-developed public sectors to more-developed private sectors and competitive jurisdictions). Post-Brexit institutional changes (points-based immigration system, visa fee increases, reduced EU free movement) have hardened the constraint structure, increasing both extractiveness and theater (immigration policy appears to manage talent flow but actually accelerates it).",
+    "key_agents": [
+      "UK Public Service Sector: Primary victim (powerless/trapped) \u2014 NHS, education, research institutions unable to compete with private sector and international opportunities; no mechanism to recover lost talent or exit constraints",
+      "UK Mid-Career Professionals: Secondary victim (moderate/constrained) \u2014 structurally mobile but face visa barriers, relocation costs, social ties; experience both coordination benefits (early-career UK training) and extraction (salary differential, opportunity limitation)",
+      "Competing Jurisdictions: Primary beneficiary (institutional/arbitrage) \u2014 US, Canada, Singapore, Australia benefit from active talent recruitment; experience constraint as pure coordination mechanism",
+      "Multinational Employers: Beneficiary (institutional/arbitrage) \u2014 access labor arbitrage and global talent pools; benefit from visa restrictions that create mobility barriers for competing employers",
+      "UK Government and Institutions: Conflicted institutional actor (institutional/constrained) \u2014 bound by treaty obligations, fiscal constraints, and political economy of immigration policy; simultaneously constrained by and enforcing the extraction mechanism",
+      "Professional Networks and Diaspora Organizations: Organized agents (organized/mobile) \u2014 see talent drain as temporary coordination problem with sunset potential through circular migration and repatriation incentives",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 identifies constraint as hybrid coordination-extraction mechanism rather than natural market outcome"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint exhibits significant extraction \u2014 UK public services lose high-skill workers without compensation, innovation capacity declines, and salary differentials create persistent incentive asymmetry. However, extractiveness is not maximal because the constraint operates through genuine market mechanisms (salary competition) rather than coercion, and both parties (emigrant and destination) benefit from the migration. The value reflects that this is a market-driven extraction mechanism, not predatory. Extractiveness has increased from 0.35 to 0.58 over the measurement interval, indicating that salary differentials have widened and visa barriers have hardened post-Brexit, making emigration more attractive and more costly to reverse. Suppression (0.52): Moderate. Multiple barriers constrain UK workers' alternatives: visa sponsorship requirements (high cost), social ties and housing market integration (high cost), repatriation bias (cultural perception that emigration is permanent), and institutional inertia in UK salary structures (public sector wage caps). Barriers are not insurmountable (many workers do emigrate, so suppression is not total), but they are significant and asymmetric \u2014 easier to emigrate than to return. Theater ratio (0.48): Moderate, below piton threshold. Post-Brexit immigration policy exhibits moderate theater \u2014 the points-based system is performatively rigorous but functionally reactive. However, the constraint's primary mechanism is not theatrical (it is market-driven) and the theater ratio remains below 0.70, so piton classification does not apply. The theater reflects policy ritual (visa categories, points calculations) that obscures actual talent flow dynamics.",
+    "perspectival_gap": "The perspectival gap between public service workers and competing jurisdictions is maximal: both experience the same structural phenomenon (skilled worker migration), but the worker-beneficiary gap produces opposite classifications (Snare vs. Rope). This gap reveals that the constraint's existence depends entirely on asymmetric structural position \u2014 it appears natural or inevitable only from the beneficiary perspective. From the victim perspective, the constraint is extraction without coordination. From the organized actor perspective (diaspora networks), the constraint is temporary. The gap is diagnostic: if all perspectives produced the same classification, the constraint would be natural law (mountain); the perspectival divergence proves it is institutional (tangled rope at the analytical level).",
+    "directionality_logic": "Directionality d values are derived from the structural pipeline. Competing jurisdictions (beneficiary + arbitrage mobility) \u2192 d \u2248 0.10 \u2192 f(d) \u2248 -0.08 \u2192 experienced as net coordination, not extraction (rope). UK public services (victim + trapped) \u2192 d \u2248 0.95 \u2192 f(d) \u2248 1.42 \u2192 experienced as high extraction (snare). Mid-career professionals (victim + constrained) \u2192 d \u2248 0.68 \u2192 f(d) \u2248 1.05 \u2192 experienced as moderate-high extraction with some benefit (tangled rope). UK institutions (mixed: enforcer of policy + victim of outcomes) \u2192 d \u2248 0.45-0.55 (split) \u2192 experienced as tangled coordination-extraction (tangled rope). The analytical observer (observer with global scope) \u2192 d \u2248 0.72 (canonical analytical) \u2192 experiences the constraint as tangled rope because the global view reveals both coordination (efficient labor allocation) and extraction (asymmetric cost/benefit distribution). Scope \u03c3(S) slightly dampens national-scope perspectives (\u03c3=0.9) and amplifies global-scope beneficiary perspectives (\u03c3=1.2), which increases the perspectival gap.",
+    "mandatrophy_analysis": "DIAGNOSTIC: The constraint has high extractiveness (0.58) but is not a mandatrophy case because it does NOT resolve as pure Snare (extraction \u2265 0.66, suppression \u2265 0.60). The suppression value (0.52) is below the Snare gate (\u2265 0.60), indicating that the constraint operates through market mechanisms (salary differentials) rather than coercion, and that exit is technically possible though costly. This classification as Tangled Rope (not Snare) from the analytical perspective is correct: the constraint has genuine coordination function (efficient global labor allocation, matching skilled workers to opportunities) overlaid with asymmetric extraction (loss of public goods provision, innovation capacity loss in origin countries). The mandatrophy resolves by recognizing that 'brain drain' is not pure extraction but hybrid: beneficial globally (workers + destination employers), harmful to origin public goods (extraction), benefiting destination and source workers. The theater ratio (0.48, below 0.70) confirms this is not Piton (degraded function) but Tangled Rope (hybrid but functional). The constraint exhibits real coordination function, so it cannot be degraded (Piton) or pure extraction (Snare) \u2014 it is genuinely tangled."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "nhs_staffing_crisis",
+      "university_research_funding",
+      "uk_innovation_competitiveness",
+      "post_brexit_labor_market_adjustment"
+    ],
+    "dual_formulation_note": "The UK talent drain decomposes into sector-specific constraints (NHS staffing crisis, university brain drain, financial sector talent mobility) with different \u03b5 values. The umbrella constraint (talent drain to competing jurisdictions) has \u03b5=0.58 and represents the aggregate extraction mechanism. Downstream constraints have higher \u03b5 (NHS crisis \u03b5\u22480.72) reflecting more severe extraction in specific sectors."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.48
+    }
+  ]
+}

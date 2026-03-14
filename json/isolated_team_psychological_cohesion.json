@@ -1,0 +1,216 @@
+{
+  "header": {
+    "constraint_id": "isolated_team_psychological_cohesion",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "itpc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Isolated Team Psychological Cohesion",
+    "topic_domain": "organizational_psychology/group_dynamics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "leadership_hierarchy"
+    ],
+    "victims": [
+      "individual_team_members",
+      "collective_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Individual Team Member",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL TEAM MEMBER (SNARE) \u2014 Trapped by psychological dependency on group approval, social isolation from outside reference groups, and economic necessity. Exit costs include loss of community, identity dissolution, and material survival concerns. No external exit mechanism; internal psychological bonds are primary suppression mechanism. Maximum extraction experienced."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Mid-Level Team Coordinator",
+      "comment": "PERSPECTIVE 2: MID-LEVEL TEAM COORDINATOR (TANGLED ROPE) \u2014 Constrained by career dependence and social pressure, but also benefits from leadership role and information access. Coordination function is genuine (team scheduling, communication relay); extraction is asymmetric (labor without control). Experiences both cohesion benefits and subordination costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Leadership Structure",
+      "comment": "PERSPECTIVE 3: LEADERSHIP STRUCTURE (ROPE) \u2014 Benefits from psychological cohesion as a coordination tool. Sees the constraint as solving a genuine collective action problem: isolated teams need internal coordination mechanisms to function under stress and separation. Leadership experiences low extraction cost \u2014 they possess exit options (relocation, organizational mobility) and capture disproportionate benefits (control, resource allocation, identity prestige)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Parent Organization",
+      "comment": "PERSPECTIVE 4: PARENT ORGANIZATION (TANGLED ROPE) \u2014 Institutionally constrained by operational necessity and liability frameworks. Coordination function: teams must cohere to function in isolation. Extraction: organization benefits from cohesion-induced compliance, reducing need for external monitoring. Has enforcement capacity but also shares risk if cohesion mechanisms become psychologically destructive."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Organizational Culture Industry",
+      "comment": "PERSPECTIVE 5: ORGANIZATIONAL CULTURE INDUSTRY (PITON) \u2014 Team-building consultants, cohesion workshops, and psychological assessment tools form an institutional ecosystem that maintains discourse around 'team cohesion' as essential. The theater ratio reflects that much organizational cohesion work is performative (team retreats, bonding exercises) rather than functionally necessary. Organized actors in this space benefit from maintaining the belief that cohesion requires professional intervention, even as the primary function has degraded or been replaced by informal coordination."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a sufficiently abstract perspective, psychological cohesion in isolated groups appears as a universal requirement of human organization: any group separated from larger social systems must develop internal bonds to survive. This perspective naturalizes what are actually contingent psychological mechanisms (attachment, loyalty, shared threat perception) as inevitable laws of group dynamics. However, the base properties contradict this naturalization \u2014 the constraint is enforced, not emergent; suppression is high, not minimal; theater is substantial, not absent."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "identity_lock_mechanism",
+      "question": "Is the suppression mechanism primarily structural (physical isolation, economic dependency) or primarily internalized (identity fusion with the group)?",
+      "resolution_mechanism": "Post-isolation longitudinal tracking: Do team members retain cohesion-derived psychological patterns after isolation ends and external reference groups become accessible? If patterns persist, suppression is internalized; if they dissipate, suppression was structural.",
+      "impact": "If internalized: the constraint's effective suppression is higher than the measured value suggests \u2014 the binding persists after barrier removal. Classification of individual members shifts from trapped (structural) toward identity_locked (cognitive). If structural: isolation itself is the suppression; removing isolation removes the constraint's force.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether team cohesion suppression is structural or internalized"
+    },
+    {
+      "id": "functional_necessity_threshold",
+      "question": "What minimum level of cohesion is genuinely required for isolated team function, versus what level is leadership-imposed for control?",
+      "resolution_mechanism": "Comparative analysis of high-function isolated teams with minimal bonding rituals vs. low-function teams with intensive cohesion programs. Measurement of operational outcomes (task completion, safety, resource efficiency) as function of measured cohesion level.",
+      "impact": "If functional necessity is low (\u03b5 < 0.20): cohesion is primarily extraction mechanism, classification shifts toward Snare for all non-leadership perspectives. If functional necessity is high (\u03b5 > 0.50): coordination function is genuine, Tangled Rope classification justified. Current estimate (\u03b5 = 0.58) assumes mixed functional/extractive content.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Functional necessity threshold for team cohesion"
+    },
+    {
+      "id": "exit_option_authenticity",
+      "question": "Do team members actually have exit options (constrained or mobile), or is their situation genuinely trapped? Are exit options merely theoretical (geographic/economic barriers prevent actual departure)?",
+      "resolution_mechanism": "Survey data on exit attempts and actual barriers. Comparison of stated exit costs with realized costs for members who did leave. Analysis of opportunity cost of exit (employment alternatives, relocation feasibility) within geographic and sectoral constraints.",
+      "impact": "If exits are genuinely constrained: current classification (constrained \u2192 moderate extraction) is accurate. If exits are theoretical but practically impossible: all member perspectives shift from constrained/mobile to trapped, extractiveness increases to 0.70+, classification becomes Snare across all non-leadership perspectives.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether team member exit options are genuine or theoretical"
+    },
+    {
+      "id": "leadership_enforcement_intentionality",
+      "question": "Is the cohesion-building structure (shared rituals, psychological dependency, isolation from outside contact) deliberately engineered for control, or an incidental consequence of isolation?",
+      "resolution_mechanism": "Document analysis: organizational communication, training materials, leadership guidance on team management. Comparative case analysis: teams where leadership actively discourages external contact vs. teams where external contact is incidental to geographic isolation.",
+      "impact": "If deliberate: requires_active_enforcement = true is justified, Tangled Rope is correct classification. If incidental: extraction is unintended consequence, extractiveness value may be overstated, constraint may degrade toward Rope. If incidental but leadership exploits it: worst case \u2014 Snare with plausible deniability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether cohesion engineering is deliberately enforced or incidental"
+    },
+    {
+      "id": "psychological_harm_reversibility",
+      "question": "Are psychological patterns induced by cohesion constraints (trauma bonding, anxious attachment, identity fusion) reversible after team dispersal, or do they constitute permanent modifications to individual psychology?",
+      "resolution_mechanism": "Longitudinal mental health tracking post-isolation; comparison with baseline pre-isolation psychological assessments; clinical evaluation for PTSD, complex trauma, attachment disorder persistence.",
+      "impact": "If reversible: constraint is classified by its active phase (Snare/Tangled Rope while active). If irreversible: suppression was not merely behavioral manipulation but neuropsychological restructuring \u2014 extractiveness should be rated higher (0.65+), constraint potentially reclassified as Snare even from moderate perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Reversibility of psychological patterns induced by cohesion constraints"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 8
+  },
+  "commentary": {
+    "narrative_context": "Isolated team psychological cohesion is a constraint that emerges when groups are structurally separated from larger social systems and develop internal bonding mechanisms to maintain function and collective identity. The constraint exhibits characteristics of both coordination (teams genuinely need internal cohesion to function under stress and separation) and extraction (leadership benefits from cohesion-induced compliance, psychological dependency reduces exit costs, and normative pressure suppresses individual autonomy). This story examines isolated teams across diverse contexts: remote research stations, military units, space missions, offshore platforms, and other environments where geographic or operational separation creates forced interdependence. The constraint's extractiveness has increased over the measurement interval (0.35 \u2192 0.58) as theater ratio has risen (0.35 \u2192 0.64), indicating that performative cohesion rituals have increasingly substituted for functional coordination. Early in isolation, bonding serves genuine coordination needs; over time, the constraint becomes increasingly theatrical as leadership uses cohesion mechanisms for control rather than function.",
+    "key_agents": [
+      "Individual Team Members: Primary victims (powerless/trapped) \u2014 psychologically dependent on group approval; socially isolated from external reference groups; face exit barriers both material and psychological",
+      "Leadership Hierarchy: Primary beneficiary (institutional/arbitrage) \u2014 captures compliance benefits, reduces monitoring costs, maintains control through psychological mechanisms; possesses exit options and geographic/organizational mobility",
+      "Mid-Level Coordinators: Secondary victims/beneficiaries (moderate/constrained) \u2014 bear coordination labor but receive status and information access; experience mixed extraction and benefit; constrained by career dependence",
+      "Parent Organization: Institutional stakeholder (institutional/constrained) \u2014 operationally dependent on team cohesion but shares liability risk if cohesion mechanisms become destructive; constrained by duty of care frameworks",
+      "Organizational Culture Industry: Organized institutional actor (organized/mobile) \u2014 maintains and profits from cohesion discourse; promotes team-building interventions; benefits from naturalizing cohesion as essential and requiring professional expertise",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent psychological mechanisms as universal laws of group dynamics"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint begins with legitimate coordination function (teams need internal cohesion under isolation) but increasingly serves leadership control. The measured value reflects that genuine coordination (perhaps 0.25-0.35 at t=0) has been overlaid with extractive mechanisms (theater rising to 0.64 by t=8). By interval end, approximately 40% is functional coordination, 60% is performative control or psychological dependency engineering. Suppression (0.68): High. Individual team members face multiple suppression layers: (1) geographic isolation reducing external reference groups; (2) economic/material dependency on team resources; (3) information control by leadership; (4) psychological mechanisms (attachment, shared threat perception) that become self-reinforcing. Exit barriers are both material (geographic, financial) and psychological (identity fusion with team identity). Theater ratio (0.64): Moderate-high. Cohesion rituals (team meetings, bonding exercises, shared symbols, loyalty ceremonies) are partially functional (real information sharing, genuine relationship maintenance) but increasingly theatrical (performative displays of loyalty, ritualized conflict resolution, mandatory participation in bonding activities). The rise in theater over time indicates Goodhart drift: cohesion metrics (attendance at rituals, verbal expressions of solidarity) become targets, substituting for actual functional coordination.",
+    "perspectival_gap": "Leadership perceives Rope (coordination mechanism); members perceive Snare (extraction mechanism). This gap is the canonical signal of successful extraction masquerading as coordination. The parent organization occupies an intermediate position (Tangled Rope) \u2014 operationally dependent on cohesion but increasingly aware of its extractive dynamics. The analytical observer's mountain classification is a false summit: the naturalizing narrative ('human groups always develop cohesion under isolation') obscures the specific engineered mechanisms (selective information control, facilitated attachment, normalized dependency) that create the extraction. The piton perspective (culture industry) reveals that cohesion itself is becoming theater \u2014 the industry profits from justifying cohesion as essential while the actual functional requirements have stabilized or declined.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from the agent's structural position relative to the extraction flow. Leadership (institutional/arbitrage) has low d \u2248 0.10-0.15: they are beneficiaries with high exit mobility, so f(d) is negative, producing negative effective extraction (they capture more than they pay). Individual members (powerless/trapped) have high d \u2248 0.92: they are victims with no exit options, so f(d) \u2248 1.42, producing maximum experienced extraction. Mid-level coordinators (moderate/constrained) have d \u2248 0.65: they are both victims and partial beneficiaries with exit barriers, producing f(d) \u2248 1.00, moderate extraction. The parent organization (institutional/constrained) has d \u2248 0.45: they are structurally dependent on the cohesion mechanism but increasingly constrained by liability frameworks, producing f(d) \u2248 0.50. The culture industry (organized/mobile) has d \u2248 0.35: they profit from the constraint but have exit options, producing f(d) \u2248 0.35. The analytical observer (analytical/analytical) has canonical d \u2248 0.73, producing f(d) \u2248 1.15. These d values feed into the chi formula with scope modifier \u03c3(local=0.8 at perspective 1, regional=0.9 at perspective 2-4, global=1.2 for the industry perspective). The direction of benefit flow is from individual members \u2192 leadership hierarchy, mediated through the organization and reinforced by the culture industry.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: This constraint satisfies the tangled rope gate by possessing three required elements: (1) genuine coordination function \u2014 isolated teams require internal communication and collective decision-making to operate under geographic/operational separation; (2) asymmetric extraction \u2014 leadership captures disproportionate benefits (control, resource allocation, prestige) while members bear disproportionate costs (psychological dependency, exit barriers); (3) active enforcement \u2014 the constraint is deliberately engineered and maintained through organizational structures, communication controls, and psychological mechanisms. The mandatrophy is resolved by recognizing that the coordination function is real but degrading (theater rising from 0.35 to 0.64) and the extraction is increasing (base_extractiveness rising from 0.35 to 0.58). The constraint is not becoming pure extraction (Snare) because the coordination function never fully disappears \u2014 isolated teams genuinely need communication mechanisms. But it is becoming increasingly extractive as leadership uses cohesion-building mechanisms beyond their functional necessity, and the theater ratio indicates that performative ritual is substituting for actual functional coordination. The mandatrophy dissolves the false choice between 'cohesion is purely necessary coordination' and 'cohesion is purely exploitative control' \u2014 it is legitimately both, and the ratio between them is shifting over time in the direction of extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "organizational_information_control",
+      "leadership_authority_legitimacy"
+    ],
+    "dual_formulation_note": "Team cohesion decomposes into structurally distinct constraints in different contexts. (1) Coordination cohesion (\u03b5 \u2248 0.25, Rope) \u2014 genuine functional bonding required for remote team operations; (2) Psychological extraction cohesion (\u03b5 \u2248 0.72, Snare) \u2014 deliberate engineering of dependency for control. This story integrates both and measures the shift over time. Upstream constraints: geographic isolation, organizational separation, external communication barriers. Downstream constraints: organizational information control (leadership leverage derived from cohesion monopoly), leadership authority legitimacy (cohesion-derived authority becomes generalized organizational legitimacy)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.42
+    }
+  ]
+}

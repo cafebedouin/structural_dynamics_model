@@ -1,0 +1,226 @@
+{
+  "header": {
+    "constraint_id": "pandemic_supply_disruption",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pand"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Pandemic Supply Chain Disruption and Extraction",
+    "topic_domain": "economic/logistics/public_health",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_integrated_manufacturers",
+      "supply_chain_consolidators",
+      "logistics_intermediaries"
+    ],
+    "victims": [
+      "small_manufacturers",
+      "developing_economy_suppliers",
+      "end_consumers",
+      "emergency_sector_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dependent Small Manufacturer",
+      "comment": "PERSPECTIVE 1: DEPENDENT SMALL MANUFACTURER (SNARE) \u2014 Trapped in supply dependency with no alternative sourcing. Bears full extraction cost through forced price increases, allocation priority to larger buyers, and inability to secure inventory. Cannot exit manufacturing sector or secure alternative supply without destroying production capacity. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Developing Economy Supplier",
+      "comment": "PERSPECTIVE 2: DEVELOPING ECONOMY SUPPLIER (SNARE) \u2014 Geographically trapped by lack of alternative export markets and capital to diversify. Faces forced price cuts from logistics consolidators despite input cost increases. Cannot exit the supply chain structure or renegotiate terms without losing only reliable revenue source. Suppression includes currency devaluation, border closure, and reputational damage from non-delivery."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Emergency Sector Worker",
+      "comment": "PERSPECTIVE 3: EMERGENCY SECTOR WORKER (SNARE) \u2014 Healthcare and essential workers trapped in supply shortage. Forced to work with inadequate PPE, equipment, and medication supplies during peak demand. No exit option: cannot abandon sector during crisis without abandoning duty. Suppression includes job security threat, regulatory pressure, and moral coercion."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Large Integrated Manufacturer",
+      "comment": "PERSPECTIVE 4: LARGE INTEGRATED MANUFACTURER (TANGLED ROPE) \u2014 Genuine coordination function: consolidating fragmented suppliers reduces transaction costs and enables faster mobilization during crisis. But also captures extraction benefit through priority allocation, price leverage, and market consolidation. Benefits from crisis shock that accelerates supplier consolidation. Mobile exit option but benefits from constraint persistence."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Supply Chain Consolidator",
+      "comment": "PERSPECTIVE 5: SUPPLY CHAIN CONSOLIDATOR (ROPE) \u2014 Net beneficiary with arbitrage exit. Coordination function: acts as broker reducing information asymmetry between suppliers and manufacturers. Captures value spread through inventory control and timing arbitrage. Can exit constraint by switching to non-pandemic logistics or long-term contracts. Experiences constraint as profitable coordination."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Supply Resilience Initiative",
+      "comment": "PERSPECTIVE 6: SUPPLY RESILIENCE INITIATIVE (SCAFFOLD) \u2014 Organized response (government procurement standards, supplier diversity mandates, regional stockpiling) creates temporary coordination with sunset logic. Crisis drives adoption of redundancy, localization, and decentralization. As these mature, the constraint's extraction mechanism weakens \u2014 distributed inventory and backup suppliers reduce consolidator leverage. Estimated sunset: 5-10 years for alternative supply architecture to mature."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Public Health Authority",
+      "comment": "PERSPECTIVE 7: PUBLIC HEALTH AUTHORITY (TANGLED ROPE) \u2014 Constrained by reliance on private supply chains for emergency goods. Genuine coordination need: mobilizing distributed supply requires institutional coordination. But authority also bears extraction cost: must accept inflated prices, accept allocation triage, lose autonomy over supply decisions. Requires active enforcement of allocation directives against consolidator preference for profit-maximizing distribution."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Just-in-Time Doctrine",
+      "comment": "PERSPECTIVE 8: JUST-IN-TIME DOCTRINE (PITON) \u2014 Supply-chain ideology persists despite demonstrated failure. Theater: firms continue JIT performance metrics and consultant advocacy despite knowing fragility. The constraint is maintained through institutional inertia and consultant capture, not because JIT works during disruption. Theater_ratio high: firms perform compliance with efficiency metrics even as they secretly build emergency buffer stock."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 9: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 Risk of misclassifying the disruption as immutable: 'global supply chains are inherently fragile, pandemics necessarily cause shortage.' Risks naturalizing what is actually a contingent choice between JIT efficiency and distributed resilience. The constraint appears as a natural law of globalization rather than as a policy equilibrium that could be restructured."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "crisis_opportunism_vs_coordination",
+      "question": "To what extent is consolidator price-gouging opportunistic rent-seeking versus legitimate coordination fee for managing crisis complexity?",
+      "resolution_mechanism": "Price analysis comparing pandemic-period markups to pre-pandemic and post-pandemic margins; correlation between actual supply restoration speed and prices charged; comparison to alternative supply coordination mechanisms (government procurement, cooperative pooling)",
+      "impact": "If primarily opportunistic: constraint is pure Snare from consolidator perspective. If legitimate: constraint is Tangled Rope. The classification hinges on whether the price premium reflects genuine scarcity rent or extractive markup.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether consolidator extraction is opportunistic or legitimate scarcity coordination"
+    },
+    {
+      "id": "alternative_supply_feasibility",
+      "question": "Were alternative supply pathways (government stockpiles, regionalized manufacturing, cooperative supplier pools) structurally available during the disruption or only available with sufficient advance preparation?",
+      "resolution_mechanism": "Retrospective analysis of government capacity to mobilize domestic production; assessment of feasibility of emergency alternative sourcing; comparison of countries with advance preparation versus reactive mobilization",
+      "impact": "If alternatives were available: constraint represents policy choice (structure can be redesigned). If alternatives required years of preparation: constraint approaches immutability during crisis period, and classification becomes temporal-dependent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative supply structures were available or required advance preparation"
+    },
+    {
+      "id": "suppression_mechanism_durability",
+      "question": "Is the measured suppression (0.68) structural (geography, capital barriers, regulatory restrictions) or temporary (crisis-specific panic, hoarding, allocation controls)?",
+      "resolution_mechanism": "Post-pandemic suppression trajectory: measurement of actual supplier barriers after crisis abates; assessment of whether barriers persist or dissipate; correlation between initial suppression and lasting competitive damage",
+      "impact": "If structural: small suppliers face enduring extraction. If temporary: constraint's suppression overestimated and actual extractiveness lower than measured. Informs whether victims experience lasting harm or recover capacity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or crisis-temporary"
+    },
+    {
+      "id": "consolidation_irreversibility",
+      "question": "Is the pandemic-driven consolidation of supply chains into fewer, larger players reversible or does it create path-dependent lock-in?",
+      "resolution_mechanism": "Analysis of supplier exit rates post-pandemic; measurement of market concentration reversal or persistence; assessment of re-entry barriers for exited suppliers",
+      "impact": "If reversible: scaffold sunset is real and constraint classification converges toward Rope over time. If irreversible: consolidation becomes permanent structural feature and constraint classification becomes durable Tangled Rope or Snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether pandemic consolidation is reversible or creates lock-in"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The pandemic supply disruption represents a structural clash between just-in-time manufacturing efficiency and distributed resilience, activated by crisis. The constraint exhibits a classic Tangled Rope signature: legitimate coordination function (consolidating fragmented suppliers reduces transaction costs and enables rapid crisis mobilization) layered with asymmetric extraction (consolidators capture disproportionate benefits through price leverage, priority allocation, and market consolidation). The same institutional mechanism \u2014 supply chain consolidation \u2014 appears beneficial from the consolidator's perspective (reducing friction, enabling mobilization) and extractive from the trapped supplier's perspective (eliminated alternatives, forced price acceptance, allocation subordination). Extractiveness peaks at 2-4 years into the crisis as consolidation solidifies; theater increases as firms perform compliance with efficiency metrics while building secret buffer inventory. The constraint exhibits path-dependent dynamics: initial disruption is temporary (crisis-driven), but consolidation of supplier base into fewer players creates durable extraction mechanism that persists even as supply normalizes. Suppression is high (0.68) because barriers include geography, capital constraints, regulatory restrictions, and reputational damage from non-delivery \u2014 these are structural rather than temporary. Small manufacturers face forced choice between accepting unfavorable consolidator terms or exiting market entirely.",
+    "key_agents": [
+      "Small Manufacturers: Primary victims (powerless/trapped) \u2014 dependent on consolidated supply chains, face allocation subordination and forced price acceptance",
+      "Developing Economy Suppliers: Primary victims (powerless/trapped) \u2014 geographically dependent, lack alternative export markets, forced into price cuts despite input costs",
+      "Emergency Sector Workers: Secondary victims (powerless/trapped) \u2014 trapped by duty, forced to work with inadequate supplies, no exit option",
+      "Large Integrated Manufacturers: Primary beneficiary (powerful/mobile) \u2014 benefits from consolidation, captures market share from failed competitors, gains strategic supplier control",
+      "Supply Chain Consolidators: Primary beneficiary (institutional/arbitrage) \u2014 profit from intermediation spreads, control allocation, exit via switching to post-pandemic logistics",
+      "Supply Resilience Initiative: Organized actor (organized/constrained) \u2014 government and cooperative responses building alternative supply structures with sunset trajectory",
+      "Public Health Authority: Secondary beneficiary-victim (institutional/constrained) \u2014 gains coordination authority but loses autonomy, forced to accept consolidator pricing and allocation",
+      "Just-in-Time Doctrine: Institutional narrative (institutional/arbitrage) \u2014 maintained through consultant capture and inertia despite demonstrated failure",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent policy equilibrium as law of global economics"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The pandemic initially creates legitimate scarcity rents that consolidators capture. But measurements reveal that extractiveness peaks at 2-4 years (0.52) and declines toward 0.48 by year 6, indicating that acute disruption (legitimate coordination problem) moderates as supply normalizes. However, consolidation persists \u2014 the constraint shifts from acute crisis to structural lock-in. The 0.52 value reflects that extractiveness is genuine but not maximal: large manufacturers also bear supply costs and visibility losses; consolidators face reputational exposure and regulatory scrutiny. Suppression (0.68): Moderate-high and structural. Small suppliers face geographic lock-in, capital constraints preventing alternative sourcing, regulatory barriers to import diversification, and reputational/financial penalty for non-delivery. Developing suppliers face currency devaluation and market concentration. These barriers are not temporary crisis effects but structural features of the global supply architecture. Theater ratio (0.55): Moderate. Supply-chain management exhibits significant performative content: firms maintain JIT efficiency metrics and performance bonuses while secretly building emergency buffer stock. Consultants advocate efficiency despite knowing fragility. But theater is not dominant \u2014 actual supply decisions do reflect efficiency-resilience tradeoff, not pure performance for appearances. Measurements show theater increasing from 0.35 to 0.58 as crisis becomes normalized and firms internalize conflicting signals.",
+    "perspectival_gap": "The most diagnostic gap is between consolidators (Rope/Tangled Rope) and trapped suppliers (Snare). Consolidators perceive the constraint as beneficial coordination with manageable extraction. Trapped suppliers perceive it as pure extraction with forced submission. Both are measuring the same structural constraint, but their position within it (beneficiary with exit vs victim without exit) produces incompatible classifications. The organized actors (Scaffold) perspective provides the key diagnostic: they see a sunset path to restructured supply (decentralization, redundancy, regionalization). The piton perspective reveals the constraint's persistence mechanism: just-in-time ideology maintains JIT metrics performatively even as they prove false \u2014 the doctrine persists through consultant capture, not empirical success. The analytical mountain perspective risks false summit: naturalizing the efficiency-resilience tradeoff as law of economics rather than as policy choice.",
+    "directionality_logic": "Consolidators have high exit mobility (arbitrage option) and benefit from the constraint \u2014 their directionality d is low (approximately 0.15-0.25), producing negative or very low f(d) \u2192 low experienced extraction \u03c7. They experience the constraint as coordination opportunity (Rope). Small manufacturers have zero effective exit (trapped) and bear all extraction costs \u2014 their d is high (approximately 0.90-0.95), producing maximum f(d) \u2192 maximum \u03c7. They experience constraint as Snare. Developing suppliers have geographic/capital traps limiting exit (d \u2248 0.85) but some mobility through alternative industries \u2014 they experience Snare with slightly less total extraction than domestic small manufacturers. Organized actors (resilience initiatives) have constrained exit (0.40-0.50 barrier costs to building alternatives) but perceive an exit path \u2014 their d is moderate (0.50-0.60), producing moderate f(d) and Scaffold classification. The directionality spread (0.15 to 0.95) is extreme, indicating the constraint produces stark perspectival divergence.",
+    "mandatrophy_analysis": "The mandatrophy resolves through temporal decomposition. At the immediate/crisis time horizon (year 0-2), the constraint is genuinely coordinative \u2014 consolidation solves real mobilization problems and benefits emergency response. Extractiveness is moderate (0.38) and suppression reflects crisis panic rather than structural lock-in. The consolidators' Rope/Tangled Rope classification is accurate: they solve real problems. At the biographical/medium-term time horizon (year 2-6), the constraint transitions to durable extraction. Consolidation persists even as supply normalizes; small suppliers exit market or become subsidiary units of larger firms; barriers to re-entry solidify. Extractiveness peaks (0.52) and suppression becomes structural. The Snare classification for trapped suppliers becomes the primary perspectival reality. At the generational time horizon, the scaffold perspective (resilience initiatives) becomes observable: alternative structures (government procurement standards, supplier diversity mandates, regional stockpiling, cooperative pools) mature and begin to erode consolidator leverage. The constraint's classification drifts toward Scaffold as sunset approaches. The mandatrophy is resolved by recognizing that all six types are temporally valid at different horizons. The constraint is not a single type \u2014 it is a dynamical process transitioning from coordination (immediate) through extraction (biographical) toward alternative restructuring (generational), with Piton (performative JIT ideology) and Mountain-risk (false naturalization) as persistent diagnostic hazards."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "just_in_time_manufacturing",
+      "supply_chain_resilience",
+      "commodity_price_volatility"
+    ],
+    "dual_formulation_note": "The pandemic supply disruption decomposes into multiple constraints: (1) immediate scarcity coordination (legitimate crisis response), (2) consolidation lock-in (structural extraction), (3) just-in-time degradation (piton), (4) resilience alternatives (scaffold). This story tracks the hybrid evolution from coordination to extraction. Upstream constraints (just-in-time manufacturing fragility, commodity markets) create vulnerability; downstream constraints (supply-chain resilience initiatives, regulatory restructuring) emerge as response. Network linkage reflects causal propagation: JIT fragility enables consolidator extraction; resilience initiatives provide sunset mechanism."
+  },
+  "directionality_overrides": []
+}

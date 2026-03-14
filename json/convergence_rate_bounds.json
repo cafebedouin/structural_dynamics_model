@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "convergence_rate_bounds",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "conv"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Convergence Rate Bounds in Iterative Algorithms",
+    "topic_domain": "mathematics/numerical_analysis/computer_science",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Mathematical Foundation)",
+      "comment": "PERSPECTIVE 1: MATHEMATICAL OBSERVER (MOUNTAIN) \u2014 Convergence rate bounds emerge from fundamental mathematical properties of function spaces, operator norms, and topological constraints. These bounds are irreducible features of the underlying mathematics, not contingent institutional arrangements. The accessibility collapse reflects that no reformulation of the problem space eliminates the rate ceiling \u2014 it is intrinsic to the structure of iterative approximation itself."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Algorithm Designer",
+      "comment": "PERSPECTIVE 2: ALGORITHM DESIGNER (MOUNTAIN) \u2014 Even with complete freedom to restructure the algorithm, design new strategies, or change computational frameworks, the convergence rate bound remains immutable. Faster convergence requires problem-specific structure (convexity, smoothness, dimension reduction); without such structure, the bound is inescapable. This holds across all algorithmic families \u2014 gradient descent, Newton's method, conjugate gradient, or novel frameworks. The bound's immutability persists even for the most resourced and powerful actor."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Computational Community",
+      "comment": "PERSPECTIVE 3: COMPUTATIONAL COMMUNITY (MOUNTAIN) \u2014 Across generations, organized research communities have invested enormous effort in convergence acceleration: preconditioning, variance reduction, adaptive methods, quantum computing, and domain-specific architectures. Yet the fundamental bounds persist. Higher-order information (Hessians, higher derivatives) can improve rates within the structural constraints, but does not eliminate them. The bound classifies as mountain even from the perspective of a coordinated global effort with centuries of accumulated knowledge."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "label": "The Numerical Analysis Canon",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL KNOWLEDGE (MOUNTAIN) \u2014 The convergence bounds are among the most rigorously established mathematical results in numerical analysis. Decades of peer-reviewed theory, millions of computational experiments, and proof assistance systems have validated these bounds. Even institutions with access to all accumulated knowledge and unlimited resources cannot circumvent the bounds \u2014 they can only optimize within them or exploit problem structure to improve constants. The institutional perspective sees mountain-level immutability."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "problem_structure_hidden_assumption",
+      "question": "Are convergence rate bounds truly universal, or do they depend on hidden problem-structure assumptions that some problem classes might violate?",
+      "resolution_mechanism": "Formal identification of the minimal structural assumptions required for each class of bounds (smoothness, convexity, Lipschitz continuity, dimensionality). Testing whether problems failing these assumptions also fail the bounds.",
+      "impact": "If bounds are conditional on hidden assumptions: some problems might achieve better rates under alternative algorithms exploiting their specific structure. The bound becomes mountain only within a structured problem class, not universally.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether convergence bounds are universal or conditional on hidden problem structure"
+    },
+    {
+      "id": "computational_model_dependency",
+      "question": "Do convergence rate bounds depend on the computational model (classical deterministic, probabilistic, quantum, analog, biological) in ways that could render them non-universal?",
+      "resolution_mechanism": "Formal analysis of bounds under different computational models; investigation of quantum speedups for optimization; comparison of biological and engineered convergence rates in analogous tasks.",
+      "impact": "If quantum algorithms fundamentally alter convergence rates: the bounds are classical-model-specific, not universal. The mountain classification holds only for classical computation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether bounds are computational-model-independent"
+    },
+    {
+      "id": "continuous_vs_discrete_gap",
+      "question": "Is the gap between continuous-time convergence (differential equations) and discrete-time convergence (algorithms) a fundamental mathematical constraint or an artifact of discretization?",
+      "resolution_mechanism": "Asymptotic analysis of discretization error; investigation of whether continuous-time bounds hold in the limit as step size approaches zero; construction of hybrid continuous-discrete algorithms.",
+      "impact": "If the gap is fundamental: both bounds are mountain. If the gap is discretization artifact: discrete bounds might be mountain-ified versions of weaker continuous constraints.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether continuous-discrete convergence gap is fundamental or discretization artifact"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Convergence rate bounds are fundamental constraints in iterative algorithms, establishing the speed at which algorithms can reduce error as a function of iteration count. These bounds emerge from mathematical properties of function spaces and operator theory, not from institutional arrangements, technical limitations, or strategic design choices. The constraint is invariant across all observers, problem domains, and computational resources. Every perspective \u2014 from the individual algorithm designer to the global computational community to the institutional canon of numerical analysis \u2014 encounters the same immutable rate ceiling. The bounds are among the most rigorously established results in mathematics, validated by centuries of theoretical analysis, peer review, and computational verification. They represent a canonical example of a natural law constraint in the Deferential Realism framework.",
+    "key_agents": [
+      "The Algorithm Designer: Individual actor with freedom to choose algorithms and computational approaches. Even with complete autonomy, cannot escape the bounds.",
+      "The Computational Community: Organized research communities that have invested generational effort in convergence acceleration. Still constrained by the same bounds.",
+      "The Numerical Analysis Canon: Institutional knowledge accumulated across centuries of mathematics and computer science. Bounds are among the most rigorously validated results.",
+      "The Analytical Observer: Cross-position perspective viewing convergence bounds as intrinsic to iterative approximation itself."
+    ],
+    "logic_rationale": "Extractiveness (0.12): Very low. Convergence rate bounds do not extract from any agent \u2014 they simply constrain what is computationally achievable. They are not designed to benefit some actor at the expense of another; they are structural features of mathematics. Suppression (0.03): Minimal. No agent is coerced or suppressed by convergence bounds. The bounds are transparent, formally stated, and universally acknowledged. Theater ratio (0.15): Very low. Convergence bounds are among the least theatrical mathematical facts \u2014 they are stated as theorems, proven rigorously, and operationally measurable. There is no gap between the formal statement and the actual behavior. Accessibility collapse (0.92): Very high. Every reformulation of an iterative algorithm, every change in problem structure, every advancement in theory and computation eventually collides with the same rate ceilings. The problem space is topologically constrained such that escape is not possible \u2014 it is not merely difficult, it is mathematically impossible without changing the fundamental nature of the problem. Resistance (0.08): Very low. There is no meaningful resistance to convergence bounds because there is no institutional or strategic structure to resist. The bounds simply are.",
+    "perspectival_gap": "There is no perspectival gap for this constraint. All observers \u2014 individual algorithm designers, organized research communities, institutions, and analytical observers \u2014 encounter the same immutable bounds. A designer with unlimited resources sees the same constraint as a novice programmer. An organized research effort spanning centuries and billions of dollars has not altered the fundamental bounds. This uniformity across all perspectives is the diagnostic signature of a mountain constraint. The classification is invariant across the indexical tuple.",
+    "directionality_logic": "Convergence rate bounds have no directionality in the sense of extraction or beneficiary/victim structure. There is no d value because there is no agent extracting from others through the constraint. The bounds are intrinsic to the mathematical structure, not relational to actors. No agent benefits from the bounds being tight; no agent bears costs from them. The bounds constrain all equally \u2014 they are shared mathematical facts, not mechanisms of power."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "iteration_complexity_lower_bounds",
+      "sample_complexity_statistical_learning",
+      "query_complexity_black_box_optimization"
+    ],
+    "dual_formulation_note": "Convergence rate bounds are upstream of multiple constraints in optimization and numerical analysis. Lower bounds on iteration complexity, sample complexity in statistical learning, and query complexity in black-box optimization all inherit structure from fundamental convergence rate constraints. This story captures the mathematical foundation; downstream stories capture domain-specific manifestations."
+  }
+}

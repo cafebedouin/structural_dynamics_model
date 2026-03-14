@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "remittance_taxation_regime",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "remit"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Remittance Taxation Regime",
+    "topic_domain": "economic_policy/international_finance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "recipient_governments",
+      "financial_intermediaries"
+    ],
+    "victims": [
+      "migrant_workers",
+      "origin_country_development"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Migrant Worker",
+      "comment": "PERSPECTIVE 1: MIGRANT WORKER (SNARE) \u2014 Trapped by employment dependency, visa status tied to employer, and remittance taxation that reduces funds sent home. Exit options are minimal: leaving employment means visa revocation and deportation risk. Experiences taxation as pure extraction with high suppression \u2014 taxation is enforced through employer withholding and financial system surveillance with no meaningful alternative channels."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Origin Country Household",
+      "comment": "PERSPECTIVE 2: ORIGIN COUNTRY HOUSEHOLD (TANGLED ROPE) \u2014 Constrained by economic dependency on remittances but also coordinating household resource allocation through remittance flows. The taxation regime extracts a share while providing partial coordination services: monitored transfers reduce fraud risk and create financial record trails. Moderate extraction with genuine coordination benefit \u2014 not maximal snare because some households benefit from the formalization and reduced default risk."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Recipient Government",
+      "comment": "PERSPECTIVE 3: RECIPIENT GOVERNMENT (ROPE) \u2014 Experiences the regime as coordination: formalizing remittance flows through taxation creates a documented money supply, enables currency stability, and generates tax revenue for public goods. Benefits from arbitrage between formal and informal channels \u2014 can collect taxes while offering formal transfer services. Net beneficiary \u2014 extraction flows toward this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Financial Intermediary",
+      "comment": "PERSPECTIVE 4: FINANCIAL INTERMEDIARY (TANGLED ROPE) \u2014 Benefits from formal remittance channels through transaction fees and compliance infrastructure contracts. Also coordinating settlement risk reduction and compliance with global AML/KYC standards. Powerful and mobile \u2014 can arbitrage between regulatory regimes. Experiences mixed extraction and coordination: required compliance overhead is significant but captures substantial rents from the formalization process."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Alternative Remittance Coalition",
+      "comment": "PERSPECTIVE 5: ALTERNATIVE REMITTANCE COALITION (SCAFFOLD) \u2014 Organized actors (blockchain fintech, cooperative credit unions, diaspora networks) are building parallel remittance channels with lower taxation and higher efficiency. The traditional regime has a sunset clause embedded in technology \u2014 as cryptocurrency remittances mature and cross-border digital banking becomes cheaper, the extraction mechanism loses force. Low effective extraction because organized actors have exit pathways and can arbitrage toward lower-cost channels."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some taxation of cross-border flows is inherent to sovereign fiscal authority: governments must tax flows within their jurisdiction, and the gap between remitter income and recipient claim is a structural feature of international commerce. This perspective sees taxation as inevitable. However, the structural data contradicts the mountain classification \u2014 the engine will compute this as a false summit, revealing that 'sovereign taxation' naturalizes what is actually a contingent institutional choice: rates, enforcement intensity, and exemptions are policy variables, not laws of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "tax_incidence_empirical_split",
+      "question": "What proportion of remittance taxation is borne by migrants (incidence) versus absorbed by intermediaries?",
+      "resolution_mechanism": "Econometric analysis of remittance flows before/after tax implementation; comparison of wage adjustments and transfer volumes; supply-side elasticity estimates for intermediaries",
+      "impact": "If migrants bear > 80% of incidence: snare classification strengthened. If incidence splits 50/50: tangled_rope strengthened. If intermediaries absorb > 70%: rope classification for government strengthened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Tax incidence split between migrant workers and financial intermediaries"
+    },
+    {
+      "id": "informal_channel_substitution_rate",
+      "question": "At what taxation rate does informal (untracked) remittance substitution become the dominant flow mechanism?",
+      "resolution_mechanism": "Ratio of formal to informal remittances as tax rates vary across countries; hawala/underground banking volume estimates; correlation between tax regime stringency and informal flow prevalence",
+      "impact": "If substitution rate < 15% (formal remains dominant at high taxation): suppression classification sustained. If > 40%: suppression overstated \u2014 high exit to informal channels means effective suppression is lower.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Substitution threshold to informal remittance channels"
+    },
+    {
+      "id": "fintech_displacement_timeline",
+      "question": "What is the plausible sunset timeline for traditional remittance taxation as blockchain and digital banking mature?",
+      "resolution_mechanism": "Adoption rates for crypto remittances and cross-border digital banking; regulatory trajectory for decentralized finance; cost-per-transaction comparison with forecast curves",
+      "impact": "If sunset < 5 years: scaffold classification confirmed \u2014 regime is genuinely temporary. If > 20 years: scaffold classification premature \u2014 organized alternatives will take longer to mature.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Timeline for fintech displacement of traditional remittance taxation"
+    },
+    {
+      "id": "development_coordination_value",
+      "question": "Does formalized remittance documentation genuinely enable origin-country development (credit access, business capitalization) or does taxation simply redistribute to government without net development benefit?",
+      "resolution_mechanism": "Impact evaluation of formal remittance recipients: credit access rates, business formation, educational spending; comparison with informal remittance recipients matched on observable characteristics",
+      "impact": "If formal remittances generate net development benefits > tax extraction: tangled_rope confirmed (genuine coordination). If benefits < tax cost: snare classification for origin country strengthened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether formal remittance regime creates development coordination benefits"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Remittance taxation regimes create a structural tension between the legitimate coordination goal of formalizing international money flows (reducing fraud, enabling currency stability, documenting household income) and the extractive extraction of rents from workers with minimal exit options. The constraint exhibits multiple classification types from different perspectives. Migrant workers experience pure extraction (snare) because they are trapped by employment dependency and visa status. Origin-country governments experience coordination (rope) because formal remittances enable fiscal capacity and monetary control. Financial intermediaries experience mixed coordination and extraction (tangled rope) \u2014 compliance costs are real, but rents from formalization are substantial. The migrant household experiences mixed coordination and extraction (tangled rope) because formal remittance flows provide fraud protection but at the cost of taxation. Alternative remittance technologies (crypto, digital banking) create a sunset logic (scaffold) because taxation rates will inevitably decline as lower-cost channels mature. The analytical observer risks seeing taxation as inevitable (mountain) \u2014 an inherent consequence of sovereignty \u2014 but the structural data reveals this as naturalization of policy choices about rates, enforcement intensity, and exemption categories.",
+    "key_agents": [
+      "Migrant Workers: Primary victims (powerless/trapped) \u2014 earn income abroad, send remittances home, bear taxation incidence through reduced transfer amounts; no exit due to visa status dependency",
+      "Origin-Country Governments: Primary beneficiaries (institutional/arbitrage) \u2014 collect tax revenue from remittance flows; experience formalization as coordination success and currency control mechanism",
+      "Origin-Country Households: Secondary victims (moderate/constrained) \u2014 depend on remittances for household income; benefit from formal remittance documentation but bear taxation cost",
+      "Financial Intermediaries: Secondary beneficiaries (powerful/mobile) \u2014 extract rents from formal remittance processing; provide coordination service (fraud reduction, settlement); can arbitrage between regulatory regimes",
+      "Alternative Remittance Coalition: Organized agents (organized/mobile) \u2014 crypto platforms, digital banks, diaspora networks building lower-cost channels with sunset logic for traditional taxation",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing policy-contingent taxation as inherent to sovereignty"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The regime extracts a measurable share of remittances through taxation, fees, and compliance overhead \u2014 rising from 0.35 at interval start to 0.58 at interval end. The trajectory reflects tightening compliance enforcement (AML/KYC) and widening tax net as more jurisdictions formally tax remittance flows. The extraction is not maximal (0.72+) because some households voluntarily use formal channels for fraud protection benefits, and organized intermediaries can arbitrage to lower-cost jurisdictions. Suppression (0.62): Moderate-high. Significant barriers include employment visa dependency, wage withholding enforcement, financial system surveillance, and limited access to informal alternatives in developed-country origin labor markets. However, suppression is not maximal because informal channels (hawala, family transfer, cryptocurrency) provide partial escape \u2014 suppression is sustained through enforcement intensity, not absolute barrier closure. Theater ratio (0.48): Moderate-low and declining. The regime's coordination function is relatively genuine \u2014 formal remittance flows do reduce fraud risk and enable fiscal capacity \u2014 but performance is partially theater. AML/KYC compliance is partly performative (checking for terrorist financing in a system where the dominant flow is household support). The declining trajectory reflects fintech platforms and digital banking reducing the performative overhead as technology automates compliance checking.",
+    "perspectival_gap": "The migrant's snare experience diverges sharply from the government's rope experience. The government sees coordination success (monetary stability, fiscal revenue, documented flows); the migrant sees extraction (taxation + employment dependency). This gap is not a measurement error \u2014 it reflects real structural position differences. The migrant has zero negotiating power over the regime; the government designed it. The gap also reveals the constraint is partially illegitimate: if the coordination value were genuinely distributed, the migrant would perceive shared benefit, not pure extraction. The declining theater ratio (0.52 \u2192 0.48) suggests technology is making the coordination function more genuine (automated compliance instead of performative review), which paradoxically may intensify extraction perception among migrants because the performative burden is removed but the taxation remains.",
+    "directionality_logic": "Each perspective's experienced extractiveness (\u03c7) is computed from base extractiveness (\u03b5 = 0.58) \u00d7 f(d) \u00d7 \u03c3(S). Migrant workers with d \u2248 0.95 and local/regional scope experience \u03c7 in the 0.72-0.85 range (high). Government with d \u2248 0.05 and national/global scope experiences negative \u03c7 (net benefit). Households with d \u2248 0.55 experience \u03c7 in the 0.45-0.65 range (moderate). Financial intermediaries with d \u2248 0.25 experience \u03c7 in the 0.20-0.35 range (low). Organized alternatives with d \u2248 0.10 experience \u03c7 in the 0.15-0.30 range (low). The analytical observer's d \u2248 0.72 and universal scope yields \u03c7 in the 0.65-0.75 range. These derived \u03c7 values determine how each perspective's classification type (snare, rope, tangled rope, scaffold) emerges from the chi thresholds.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The constraint is classified as tangled_rope because it exhibits both genuine coordination (formal remittance flows reduce fraud, enable monetary policy) and asymmetric extraction (migrant workers bear taxation cost with minimal benefit). The coordination function is structural \u2014 not mere theater or cover story \u2014 which distinguishes this from a pure snare. Origin-country governments genuinely design the regime to formalize flows and capture tax revenue. The extraction is real \u2014 not accidental overhead \u2014 which distinguishes this from a pure rope. The mandatrophy resolves by acknowledging that the constraint solves a real coordination problem while simultaneously enabling extraction from those with no exit options. This is the core definition of tangled rope: hybrid coordination/extraction where both functions are structurally necessary to the regime's operation."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wage_suppression_enforcement",
+      "informal_economy_shadow_growth"
+    ],
+    "dual_formulation_note": "Remittance taxation is upstream of wage-suppression dynamics in labor-export economies and downstream of informal economy growth. The constraint family consists of three stories: (1) formal remittance taxation (this story, \u03b5=0.58, tangled rope), (2) informal remittance channels substitution (\u03b5=0.40, rope with theater), and (3) migrant wage suppression enabled by remittance dependency (\u03b5=0.65, snare with powerful beneficiary). Each story has different \u03b5 and different beneficiary/victim declarations; they are linked by causal dependency and institutional coupling."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

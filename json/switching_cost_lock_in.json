@@ -1,0 +1,184 @@
+{
+  "header": {
+    "constraint_id": "switching_cost_lock_in",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "switch"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Switching Cost Lock-In in Platform and Service Markets",
+    "topic_domain": "economic/institutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_provider",
+      "switching_cost_creator"
+    ],
+    "victims": [
+      "locked_in_customer",
+      "market_efficiency",
+      "consumer_choice"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Locked-In Customer",
+      "comment": "PERSPECTIVE 1: LOCKED-IN CUSTOMER (SNARE) \u2014 Customer faces prohibitive switching costs (data migration, retraining, contract penalties, compatibility barriers) with no realistic exit. Trapped by accumulated sunk costs and incompatibility with alternatives. Maximum extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Provider",
+      "comment": "PERSPECTIVE 2: INCUMBENT PROVIDER (ROPE) \u2014 Benefits from coordination function (integrating services, providing continuity) while capturing switching cost rents. Experiences constraint as pure coordination benefit \u2014 the switching cost mechanism both enables service delivery and extracts customer surplus. Net beneficiary with full exit optionality."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Competing Alternative Provider",
+      "comment": "PERSPECTIVE 3: COMPETING ALTERNATIVE PROVIDER (TANGLED ROPE) \u2014 Benefits from coordination in the broader market (interoperability standards, data portability norms) but constrained by incumbent's switching cost barriers. Faces extraction through customer unavailability despite competitive quality. Some agency (can innovate, can lower prices) but significant constraint from incumbent's lock-in mechanism."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Coalition",
+      "comment": "PERSPECTIVE 4: REGULATORY COALITION (SCAFFOLD) \u2014 Organized regulators and consumer advocates see switching costs as a temporary market failure with a policy sunset: data portability requirements, interoperability mandates, and open standards create a time-bounded exit pathway. The constraint has active enforcement requirements (incumbent compliance) that decline over the policy horizon as switching costs artificially engineered through incompatibility become illegal. Theater ratio is moderate because regulation creates genuine coordination (not purely performative)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Infrastructure Standard",
+      "comment": "PERSPECTIVE 5: LEGACY INFRASTRUCTURE STANDARD (PITON) \u2014 Decades-old technical standards (file formats, APIs, protocols) that created switching costs through inertia rather than active enforcement. The standards persist long after cheaper alternatives exist; vendors maintain backward compatibility theatrically to justify continued lock-in. Theater ratio high (theatrical legacy support) but extractiveness low (costs are sunk). The constraint is maintained through institutional habit, not because it solves a current coordination problem."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, switching costs are presented as an inevitable feature of any durable system: any service with user-specific configuration, data, or learning curve naturally creates path-dependent lock-in. This perspective naturalizes what are contingent design choices (proprietary data formats, incompatible APIs, intentional interoperability barriers). The engine's false summit detector will identify this as naturalization of institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intentional_vs_emergent_barriers",
+      "question": "What proportion of switching costs arise from intentional design choices vs emergent from legitimate coordination complexity?",
+      "resolution_mechanism": "Comparative analysis of switching cost structure across providers with different interoperability philosophies; measurement of switching friction in open-standard vs proprietary ecosystems",
+      "impact": "If mostly intentional: classification shifts toward Snare across more perspectives. If mostly emergent: classification shifts toward Rope (legitimate coordination cost) and the extraction component shrinks.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Intentional vs emergent switching cost mechanisms"
+    },
+    {
+      "id": "interoperability_feasibility",
+      "question": "Is true platform-agnostic interoperability technically achievable at acceptable cost, or does the switching cost structure reflect irreducible technical constraints?",
+      "resolution_mechanism": "Case studies of successful data migration and format conversion; analysis of failed interoperability initiatives; technical feasibility assessments from independent experts",
+      "impact": "If feasible: switching costs are extractive choices, not natural constraints. If infeasible: switching costs are partially justified and classification shifts toward legitimate coordination (Rope gains ground). If partially feasible: Tangled Rope classification is confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Technical feasibility of true interoperability"
+    },
+    {
+      "id": "customer_awareness_and_decision_quality",
+      "question": "Do customers make fully-informed switching cost calculations when selecting providers, or does switching cost lock-in exploit bounded rationality and attention constraints?",
+      "resolution_mechanism": "Customer surveys measuring switching cost awareness at point-of-purchase; comparison of stated switching costs vs actual experienced friction; analysis of contract clarity and disclosure practices",
+      "impact": "If aware and rational: extraction is compensated by service value (Rope classification more justified). If exploited by bounded rationality: suppression mechanism is stronger and classification shifts toward Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Customer awareness and decision quality in switching cost calculation"
+    },
+    {
+      "id": "regulatory_sunset_realism",
+      "question": "Can interoperability and data portability regulations (GDPR, DMA, interoperability mandates) actually achieve the policy goal of reducing switching costs, or do they face technical implementation barriers?",
+      "resolution_mechanism": "Longitudinal tracking of switching cost decline post-regulation; measurement of data portability utilization rates; analysis of compliance implementation vs regulatory intent",
+      "impact": "If effective: Scaffold classification is justified, sunset is real, and the constraint has a policy-driven endpoint. If ineffective: Scaffold perspective is aspirational and the constraint persists despite regulation (Piton gains ground).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of regulatory switching cost reduction measures"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Switching cost lock-in operates when a provider designs or exploits system features that make migration to alternatives expensive for customers, extracting economic rent beyond what competitive pricing would allow. The constraint combines genuine coordination (system integration, data persistence, learning curves) with intentional or structurally-enabled extraction (proprietary formats, incompatible APIs, contract lock-ins, high migration friction). This makes it a canonical Tangled Rope: the coordinate function is real (systems do require continuity and integration), but the extraction mechanism is asymmetric (the incumbent captures the benefit of lock-in while the customer bears the cost). The constraint varies dramatically across perspectives: the locked-in customer experiences it as a Snare with no exit; the incumbent provider experiences it as pure Rope coordination; regulators see a temporary market failure with a policy sunset; and the analytical observer risks naturalizing it as an inevitable feature of any durable system.",
+    "key_agents": [
+      "Locked-In Customer: Primary victim (powerless/trapped) \u2014 faces prohibitive switching costs with no realistic alternatives; bears full extraction cost",
+      "Incumbent Provider: Primary beneficiary (institutional/arbitrage) \u2014 captures switching cost rents; experiences constraint as coordination benefit",
+      "Competing Alternative Provider: Secondary actor (moderate/constrained) \u2014 benefits from lower overall market prices and innovating but constrained from accessing locked-in customer base",
+      "Regulatory Coalition: Organized agent (organized/constrained) \u2014 implements data portability and interoperability mandates to reduce switching costs; sees constraint as temporary market failure with sunset",
+      "Legacy Infrastructure Standard: Institutional actor (institutional/arbitrage) \u2014 maintains outdated technical standards that justify continued switching costs; benefits from inertia",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent design choices as inevitable features of durable systems"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High. The incumbent provider captures significant economic rent through switching cost mechanisms above what competitive markets would permit. Customers cannot freely exit despite potentially better alternatives because the migration cost (data conversion, system retraining, operational disruption, contractual penalties) is prohibitive. The extractiveness has risen from 0.35 to 0.58 over the interval as platforms have deepened integration and tightened proprietary lock-in, making migration technically more complex and financially more expensive. This increase reflects intentional design choices to raise switching barriers, not legitimate coordination complexity growth. Suppression (0.65): High. Multiple barriers prevent exit: technical incompatibility (proprietary data formats, API lock-in), contractual constraints (minimum terms, termination penalties), sunk investment (training, customization, data entry), and information asymmetry (switching costs not fully disclosed at point-of-purchase). The suppression is partially structural (genuine technical complexity) and partially extractive (intentional incompatibility). Theater ratio (0.48): Moderate. The incumbent may perform or exaggerate the necessity of their proprietary system to justify continued switching costs, but there is genuine coordination function \u2014 platforms do provide real integration and continuity benefits. Theater is lower than in pure Piton cases because the coordination has authentic value; it's not purely theatrical maintenance of a degraded system.",
+    "perspectival_gap": "The locked-in customer (Snare perspective) sees only extraction: they cannot leave and bear the full cost of the lock-in mechanism. The incumbent provider (Rope perspective) sees pure coordination: their system solves a real integration problem, and switching costs are a natural feature of any durable platform. The competing alternative (Tangled Rope perspective) sees mixed extraction and coordination: they can build better services but cannot access customers because switching costs trap them in the incumbent's system. Regulators (Scaffold perspective) see a temporary market failure with a policy-driven sunset: interoperability mandates and data portability requirements (GDPR, DMA, open banking standards) are constructing alternative exit pathways that will eventually dissolve the lock-in. The legacy infrastructure observer (Piton perspective) sees a degraded system maintained through inertia: the technical standards that justified switching costs are decades old, and continued incompatibility is theatrical justification for continued rent extraction. The analytical observer (Mountain perspective) risks naturalizing the constraint: 'any system creates switching costs, this is inherent to how durable platforms work,' which obscures that the magnitude and character of switching costs are design choices, not laws of nature.",
+    "directionality_logic": "The incumbent provider's directionality (d) is low \u2014 they are a beneficiary with arbitrage exit options (can raise prices, can maintain monopoly without fear of losing customers due to high switching costs). Derived d \u2248 0.15 (beneficiary + institutional power + arbitrage exit) \u2192 f(d) \u2248 -0.01 (near-zero or negative effective extraction experienced by them). The locked-in customer's directionality is high \u2014 they are a victim with trapped exit options (cannot leave without severe cost, no realistic alternatives). Derived d \u2248 0.95 (victim + powerless + trapped exit) \u2192 f(d) \u2248 1.42 (maximum extraction experienced). The competing provider's directionality is intermediate \u2014 they can exit the customer market by focusing on untapped segments, but are constrained in accessing the locked-in base. Derived d \u2248 0.60 (constrained exit, competitor position) \u2192 f(d) \u2248 0.85 (significant but not maximal extraction relative to their position).",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLVED: The constraint satisfies all three gates for Tangled Rope classification. (1) Genuine coordination function: Switching costs arise partly from legitimate system integration, data persistence, and service continuity \u2014 customers do benefit from platform coherence. (2) Asymmetric extraction: The incumbent provider captures disproportionate rent through switching cost mechanisms; customers bear costs they did not anticipate. (3) Active enforcement required: The incumbent must actively maintain incompatibility (resist standard formats, block data export, impose contractual barriers) to sustain switching costs \u2014 without active enforcement, customers would defect to cheaper alternatives. The mandatrophy is resolved by observing that this is NOT a pure Snare disguised as coordination, nor a pure Rope with accidental barriers. It is structurally both: the constraint genuinely coordinates platform services AND asymmetrically extracts customer surplus. The Snare perspective (locked-in customer) is correct from their vantage point; the Rope perspective (incumbent) is correct from theirs. The classification unifies both through Tangled Rope, which admits both coordination and extraction as structural features."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "vendor_lock_in_it_services",
+      "standards_incompatibility_extraction",
+      "data_portability_bottleneck"
+    ],
+    "dual_formulation_note": "Switching cost lock-in is an upstream constraint affecting multiple downstream market-specific instantiations: vendor lock-in in IT services (SaaS platforms, cloud services), standards incompatibility in software ecosystems, and data portability barriers in consumer platforms. Each downstream constraint has domain-specific extractiveness values reflecting sector-specific technical and regulatory realities, but all depend on the underlying switching cost mechanism."
+  },
+  "directionality_overrides": []
+}

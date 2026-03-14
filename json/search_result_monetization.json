@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "search_result_monetization",
+    "version": "1.0",
+    "generated_date": "2025-07-20",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "srm"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Search Result Monetization Through Ad-Ranking Coupling",
+    "topic_domain": "digital_economy/platform_gatekeeping",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "search_engine_operator",
+      "high_bidder_advertisers"
+    ],
+    "victims": [
+      "organic_search_result_quality",
+      "user_search_intent_fidelity",
+      "non_wealthy_advertisers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The User (Search Intent Fidelity)",
+      "comment": "The end user cannot exit search infrastructure. Trapped by device dependence and market concentration. Receives degraded search results increasingly contaminated by paid placement disguised as organic ranking. No exit mechanism \u2014 switching search engines yields identical dynamics. Maximum extraction from this perspective."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Non-Wealthy Advertisers",
+      "comment": "Small businesses and non-wealthy advertisers cannot afford competitive bidding for top placements. Trapped by auction mechanics and budget constraints. Excluded from visibility despite product relevance to search queries. Systematic extraction with no exit \u2014 cannot negotiate terms or access alternative distribution that provides equivalent reach."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Organic Content Creators",
+      "comment": "Websites and content creators face constrained options. They benefit from search traffic (coordination function) but experience degraded visibility as paid placements expand. Can technically exit by building direct audience, but costs are high. Forced to optimize for ad placement algorithms, not user intent. Mixed extraction and genuine coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "High-Bidder Advertisers",
+      "comment": "Wealthy advertisers with large marketing budgets experience the constraint as coordination mechanism. Search monetization enables customer acquisition at scale. Can arbitrage to alternative platforms (social media, affiliate networks) if search costs rise. Net beneficiary \u2014 extraction runs toward this agent. Sees genuine coordination benefit from structured bidding marketplace."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Regulatory Authorities",
+      "comment": "EU, US, UK regulators see monetization coupling as a temporary coordination failure being addressed through antitrust enforcement and transparency mandates. Digital Markets Act, FTC action, and platform transparency requirements are sunset mechanisms. If enforcement matures, disclosure requirements could separate ranking from monetization. Mobile exit \u2014 regulators can shift to new frameworks."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Search Engine Operator",
+      "comment": "Platform architect sees monetization coupling as pure coordination: connecting users with relevant offers, enabling advertisers to reach customers, solving the problem of sustainable search infrastructure. Can arbitrage to alternative revenue models (subscription, data licensing) but monetization is native to platform logic. Net beneficiary with genuine coordination function."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Vestigial Relevance Ranking)",
+      "comment": "From analytical distance, the original PageRank-style relevance-first ranking mechanism is largely theatrical and inertial. The algorithm still *claims* to rank by relevance, but monetization considerations have become dominant in practice. The relevance theater persists as institutional legitimacy mechanism \u2014 platforms assert ranking is merit-based while simultaneously ranking by willingness to pay. Algorithm transparency theater disguises extraction as optimization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "user_welfare_measurement",
+      "question": "How much of perceived search degradation is real (monetization contamination) versus user adaptation (improved ad literacy)?",
+      "resolution_mechanism": "Controlled studies comparing identical queries across advertising-restricted vs. unrestricted search; measurement of user abandonment when paid results visually indistinguishable from organic; long-term user satisfaction metrics controlled for search skill growth",
+      "impact": "If degradation > 60% real: snare classification strengthened across user perspectives. If degradation < 40% real: user extraction overstated, classification shifts toward rope for moderate users.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Actual vs perceived search degradation from monetization"
+    },
+    {
+      "id": "advertiser_auction_fairness",
+      "question": "Does quality score adjustment mechanism genuinely level playing field for under-capitalized advertisers, or does it entrench wealth advantage through quality score history lock-in?",
+      "resolution_mechanism": "Longitudinal tracking of small advertiser quality scores, cost-per-click trends, and conversion rates; analysis of whether quality score mobility follows advertiser budget growth or budget growth requires pre-existing quality scores; comparison of identical landing pages bid by well-capitalized vs under-capitalized accounts",
+      "impact": "If quality score levels field: snare for non-wealthy advertisers is overstated, moderate extraction rather than predatory. If lock-in dominates: small advertiser extraction is structural, snare classification confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether quality score adjustment mechanisms facilitate or entrench advertiser wealth stratification"
+    },
+    {
+      "id": "alternative_search_viability",
+      "question": "Are alternative search platforms (DuckDuckGo, Brave, Bing, local search) genuinely viable exits or do they reproduce the same monetization coupling due to economic necessity?",
+      "resolution_mechanism": "Analysis of alternative platform revenue models, advertiser pressure on new platforms, and whether non-monetized search can sustain infrastructure at scale; user switching costs and switching behavior data; market share elasticity to platform changes",
+      "impact": "If alternatives viable: trapped status for users understated, constrained or mobile is more accurate. If all platforms converge to monetization: trap is structural, not platform-specific.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Viability and sustainability of alternative search monetization models"
+    },
+    {
+      "id": "ranking_algorithm_opacity",
+      "question": "Is ranking algorithm opacity necessary for fraud prevention and competitive protection, or is it theater that hides extraction mechanics?",
+      "resolution_mechanism": "Comparative analysis of transparency vs proprietary models in financial markets (algorithmic trading disclosure) and scientific publishing (peer review methodology); field experiments with rule-based vs opaque ranking on user trust metrics; analysis of whether opacity actually prevents gaming or creates gaming asymmetries",
+      "impact": "If opacity necessary: platform claims justified, theater ratio lower. If theater-primary: ranking opacity is extraction mechanism itself, theater ratio higher, classification shifts toward snare.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether algorithm opacity serves fraud prevention or facilitates extraction"
+    },
+    {
+      "id": "search_intent_vs_monetization_conflict",
+      "question": "When user search intent conflicts with advertiser willingness to pay, how often does monetization win in ranking decisions, and is this discoverable from platform disclosures?",
+      "resolution_mechanism": "Manual analysis of top-ranking results for high-value queries vs low-value queries for identical intent; correlation analysis between advertiser CPC and ranking position controlling for relevance signals; FOIA requests for internal ranking documentation; user survey data on perceived ad contamination by query type",
+      "impact": "If conflict resolution systematic and monetization-favoring: extraction mechanism confirmed. If conflict resolution intent-favoring: coordination claim more credible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Frequency and directionality of search intent vs monetization conflicts in ranking"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Search result monetization through coupling of ad placement with organic ranking represents a hybrid extraction-coordination mechanism operating at the intersection of information provision, commercial distribution, and user attention. The constraint emerges from the economic necessity of sustaining search infrastructure (coordination function) while simultaneously the profit-maximization incentive structure creates systematic conflicts between user search intent and advertiser willingness to pay (extraction mechanism). From the search engine operator's perspective, monetization is a coordination solution enabling free access to global information infrastructure. From the user's perspective, it is degradation of information quality. From the non-wealthy advertiser's perspective, it is systematic exclusion through wealth-based gatekeeping. The theater ratio reflects that the ranking algorithm publicly maintains it is merit-based while internally optimizing for revenue \u2014 the performative claim of relevance-first ranking increasingly diverges from the functional reality of monetization-first ranking. The constraint's extractiveness has risen over the measurement interval as ad placement sophistication has advanced, allowing more granular integration of paid and organic results.",
+    "key_agents": [
+      "End Users: Primary victim (powerless/trapped) \u2014 cannot exit search infrastructure; receive degraded results; search intent increasingly subordinated to advertiser interests",
+      "Non-Wealthy Advertisers: Secondary victim (powerless/trapped) \u2014 systematically excluded from visibility through auction mechanics and budget constraints; no negotiating power",
+      "Organic Content Creators: Mixed victim-participant (moderate/constrained) \u2014 benefit from search traffic but experience visibility degradation as paid placements expand; forced to optimize for ranking algorithms rather than user value",
+      "High-Bidder Advertisers: Primary beneficiary (institutional/arbitrage) \u2014 gain efficient customer acquisition at scale; can arbitrage to alternative platforms if costs rise",
+      "Search Engine Operator: Institutional beneficiary (institutional/arbitrage) \u2014 sustains infrastructure through monetization; can arbitrage to alternative revenue models",
+      "Regulatory Authorities: Organized observer (institutional/mobile) \u2014 see constraint as temporary coordination failure; building regulatory sunset mechanisms (Digital Markets Act, FTC enforcement)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint systematically transfers value from users and non-wealthy advertisers to search operators and high-bidder advertisers. The extraction is not maximal because the ranking algorithm does retain genuine relevance signals \u2014 users typically find useful results despite monetization contamination. The 0.58 value reflects that monetization is a primary ranking factor alongside relevance, not the exclusive factor. This distinguishes it from predatory systems where extraction is near-total. The rising trajectory (0.35 \u2192 0.58 over interval) reflects progressive integration of monetization into ranking \u2014 early search was primarily relevance-driven with ads as sidebar; current search integrates paid and organic results, making extraction more systematic. Suppression (0.65): Moderate-high. Users have weak alternatives (concentrated market, network effects make switching costly). Advertisers face auction mechanics that entrench wealth advantage through quality score lock-in. Content creators face algorithmic opacity and ranking rules they cannot independently evaluate. High suppression reflects that exit costs are real and structural. Theater ratio (0.48): Moderate. The ranking algorithm publicly claims merit-based relevance while internally optimizing for revenue. This is theater, but not total theater \u2014 relevance signals are genuinely present alongside monetization signals. The theater ratio should be higher if the algorithm were purely fictional, but it remains moderate because platforms invest significantly in actual relevance (to maintain user trust and traffic). The rising trajectory (0.25 \u2192 0.48 over interval) reflects increasing performative content as monetization mechanisms become more sophisticated and require more rhetorical justification.",
+    "perspectival_gap": "The constraint exhibits dramatic perspectival divergence. The search operator experiences it as pure coordination (Rope) \u2014 solving the problem of matching users with relevant commercial offerings while sustaining infrastructure. High-bidder advertisers see coordination (Rope) \u2014 efficient customer acquisition. But users see snare (pure extraction with no exit), non-wealthy advertisers see snare (systematic exclusion), content creators see tangled rope (mixed benefits and extraction), and regulators see scaffold (temporary problem being solved through enforcement). The piton classification from the analytical perspective reveals the ranking algorithm's relevance theater \u2014 the claimed merit-based mechanism is increasingly inertial, maintained for legitimacy while actual ranking is driven by monetization logic. This perspectival gap instantiates the core mandatrophy: Is this coordination that allocates information to user interests (rope) or extraction that allocates user attention to advertiser interests (snare)? The answer is perspectival \u2014 both mechanisms are present, their relative weight determines classification from each observer's position.",
+    "directionality_logic": "Directionality values flow from the structural relationship to the extraction mechanism. Users are full targets (d \u2248 0.95): they are trapped with no exit options, bear full cost of ranking degradation, and receive no offsetting benefit beyond access that is increasingly contaminated. Their f(d) \u2248 1.42 \u2014 maximum experienced extraction. Non-wealthy advertisers are also near-full targets (d \u2248 0.90): their exclusion from visibility is nearly absolute, they cannot negotiate terms, cannot arbitrage meaningfully. High-bidder advertisers are full beneficiaries (d \u2248 0.10): they have exit options (alternative platforms), structurally benefit from monetization coupling, set terms through bidding power. Their f(d) \u2248 -0.01 \u2014 negative experienced extraction (they benefit). Search operators are beneficiaries (d \u2248 0.15): they control the ranking mechanism, benefit from ad revenue, have exit options through alternative monetization models. Their f(d) \u2248 0.02. Content creators occupy the mixed position (d \u2248 0.55): they benefit from search traffic (coordination), but face visibility reduction (extraction), have constrained exit options (building direct audience is costly). Their f(d) \u2248 0.75. These derived directionality values produce the observed perspectival gap: high d \u2192 high \u03c7 \u2192 snare; low d \u2192 low/negative \u03c7 \u2192 rope; intermediate d \u2192 intermediate \u03c7 \u2192 tangled rope.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint contains both a genuine coordination function (matching users with information, enabling commercial distribution, sustaining infrastructure) AND systematic asymmetric extraction (monopoly rents, user attention misallocation, advertiser wealth gatekeeping). The tangled rope classification is not a compromise between rope and snare \u2014 it is the accurate structural description: the same mechanism coordinates AND extracts, benefiting some agents (operators, high-bidder advertisers) while harming others (users, non-wealthy advertisers). The piton perspective reveals the theater mechanism: the ranking algorithm's legitimacy story (merit-based relevance ranking) is increasingly performative as monetization becomes dominant. The scaffold perspective reveals the sunset logic: regulatory enforcement, algorithmic transparency mandates, and antitrust action are building structural pathways to separate ranking from monetization, potentially converting the constraint from tangled rope toward pure rope (if extracted coordination is separated) or toward genuine coordination marketplace (if ranking becomes transparent and contestable). The mandatrophy resolves by showing that this constraint demonstrates why indexical classification across multiple perspectives is necessary \u2014 a single type (rope, snare, or tangled rope) misses the structural reality that different agents experience it fundamentally differently, and the 'true' classification emerges only from the presheaf of perspectives over the observation sites."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "advertising_market_concentration",
+      "search_engine_monopoly_rent"
+    ],
+    "dual_formulation_note": "Search result monetization is downstream of advertising market structure (keyword auction mechanics, quality score algorithms) and upstream of user search behavior adaptation. Decomposition: the keyword auction mechanism itself is a separate constraint (resource allocation with lower extractiveness); the ranking integration of monetization is the higher-extractiveness constraint analyzed here. Link both \u2014 auction is upstream coordination with lower \u03b5; monetization coupling is downstream integration with higher \u03b5 and asymmetric extraction."
+  },
+  "directionality_overrides": []
+}

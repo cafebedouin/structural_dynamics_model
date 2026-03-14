@@ -1,0 +1,194 @@
+{
+  "header": {
+    "constraint_id": "data_portability_barriers",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "datport"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Data Portability Barriers in Digital Platforms",
+    "topic_domain": "digital_economy/platform_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dominant_platforms",
+      "incumbent_service_providers"
+    ],
+    "victims": [
+      "user_switching_capacity",
+      "competitive_market_efficiency",
+      "consumer_choice"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Individual User",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL USER (SNARE) \u2014 User data accumulation over years creates switching costs that are structurally insurmountable for the individual: social graph, interaction history, trained algorithms, personalized content. Technical portability standards exist but lack practical force \u2014 exporting contact lists or posts does not reconstruct the network effect or algorithmic context. User is trapped by network dependency and data lock-in. Maximum extraction experienced through forced lock-in."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Competing Platform Entrants",
+      "comment": "PERSPECTIVE 2: COMPETING PLATFORM ENTRANTS (TANGLED ROPE) \u2014 New platforms benefit from portability mechanisms (data import APIs, OAuth integration) that enable rapid user acquisition, but face coordinated suppression from incumbent platforms (high API request costs, rate limiting, retroactive API deprecation, terms-of-service changes blocking third-party access). Genuine coordination function exists (standards like OAuth, GDPR data access rights) alongside asymmetric extraction (incumbents can block or monetize access). Constrained by both technical barriers and legal/contractual restrictions on API usage."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Dominant Platform Operators",
+      "comment": "PERSPECTIVE 3: DOMINANT PLATFORM OPERATORS (ROPE) \u2014 Extraction flows toward incumbents, but platforms experience portability constraints as a pure coordination problem from their perspective: managing data export quality, ensuring API reliability, preventing abuse of bulk data access. Network effects and switching costs are perceived as natural coordination artifacts rather than extractive mechanisms. High arbitrage options \u2014 can leverage data access for monetization or simply deny it without market consequence."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regulatory Mandate Enforcers",
+      "comment": "PERSPECTIVE 4: REGULATORY MANDATE ENFORCERS (SCAFFOLD) \u2014 Data portability regulations (EU GDPR Article 20, DMA data access requirements, proposed bills in national jurisdictions) create temporary enforcement structures with explicit sunset logic: as interoperability standards mature and become costless, the regulatory mandate should become unnecessary. Seen as a scaffolding intervention to bootstrap competitive alternatives until markets self-organize. High theater during enforcement phase (compliance theater around data formats, timeliness, completeness) that declines as standards mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Data Silos",
+      "comment": "PERSPECTIVE 5: LEGACY DATA SILOS (PITON) \u2014 Pre-smartphone data infrastructure (email, corporate databases, legacy social networks) maintains data lock-in through inertia despite reduced functional necessity. These systems persist because switching costs are high and institutional commitments are sunk, not because they actively serve coordination. Theater persists in the form of data export workflows and compliance theater, but the underlying extraction mechanism has weakened \u2014 users increasingly accept data loss as part of platform switching. Theater ratio high because the procedural export mechanisms create appearance of portability without enabling realistic switching."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Enterprise and Institutional Users",
+      "comment": "PERSPECTIVE 6: ENTERPRISE AND INSTITUTIONAL USERS (TANGLED ROPE) \u2014 Large organizations (corporations, universities, governments) have sufficient bargaining power to negotiate data portability terms directly with platforms, creating hybrid arrangements: genuine coordination through negotiated APIs and data sync protocols, alongside residual extraction (premium pricing for data access, contractual lock-in through volume discounts). Mobile exit options at institutional level but individual employees remain trapped. Organizations both benefit from and bear extraction costs depending on their scale and negotiating leverage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a systems perspective, data portability barriers simultaneously coordinate platform ecosystems (enabling specialization and vertical integration) while extracting rent from users through switching costs. The coordination function (platforms can offer specialized services because users can theoretically switch) is real but asymmetric: incumbents benefit disproportionately from reduced switching, while entrants and users bear extraction costs. The constraint is neither pure coordination nor pure extraction but a hybrid where incumbents have inverted the cost asymmetry to their advantage."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "portability_technical_vs_practical",
+      "question": "Is the observed portability gap technical (data exports are incomplete/incompatible) or behavioral (users psychologically cannot coordinate exit despite technical availability)?",
+      "resolution_mechanism": "Direct user research: offer cohorts of users perfect technical data portability (pre-formatted, pre-imported, account setup automated) and measure actual switching rates. Compare against baseline switching without technical intervention.",
+      "impact": "If technical: increasing technical standards maturity will reduce switching costs and decrease extractiveness. If behavioral: even perfect technical portability leaves extraction mechanism intact \u2014 users remain trapped by psychological switching costs and network effects. Classification may shift from Tangled Rope to Snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether portability gap is technical barriers or behavioral switching costs"
+    },
+    {
+      "id": "regulatory_extraction_substitution",
+      "question": "Does regulatory mandating of data portability reduce platform extraction or merely shift it to new mechanisms (pricing discrimination, service degradation, algorithmic de-prioritization for exporting users)?",
+      "resolution_mechanism": "Longitudinal measurement of total user welfare (price paid, service quality, feature access) before and after portability mandate; statistical decomposition of extraction mechanisms before and after regulatory change.",
+      "impact": "If extraction remains constant despite mandate: extraction mechanism is deep and adaptive (platforms can extract via alternative channels). Constraint reclassifies as Snare with theatrical compliance layer. If extraction decreases: mandate successfully disrupts extraction mechanism \u2014 Scaffold perspective validated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulation reduces or displaces platform extraction"
+    },
+    {
+      "id": "network_effect_necessity",
+      "question": "Are observed network effects inherent to social platforms or largely produced by platform design choices (feed algorithms, matching, notifications, exclusivity incentives) that could be decoupled from data portability?",
+      "resolution_mechanism": "Comparative analysis of platforms with different architectural choices: interoperable vs proprietary, algorithmic vs chronological feeds, open vs closed user graphs. Identify which network effects are structural vs contingent on design.",
+      "impact": "If effects are contingent: portability barriers are extracted rent without genuine coordination function \u2014 constraint reclassifies toward Snare. If effects are structural: network effects are real coordination phenomena that justify some portability friction \u2014 constraint remains Tangled Rope with lower extractiveness \u03b5.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether network effects are structural or design-contingent"
+    },
+    {
+      "id": "interoperability_convergence_timeline",
+      "question": "What timeline for technical and contractual interoperability standards would make regulatory scaffolding unnecessary?",
+      "resolution_mechanism": "Technology roadmap analysis: identify dependencies in standards development (API specifications, data format standardization, authentication protocols). Project convergence timeline from current state to full interoperability.",
+      "impact": "If convergence plausible within 5-10 years: Scaffold sunset clause is realistic. If convergence requires 20+ years or faces structural barriers: Scaffold is aspirational \u2014 extraction mechanism may persist indefinitely despite regulatory intent.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Timeline to technical interoperability maturity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Data portability barriers represent a structural constraint where dominant digital platforms extract economic rent through user lock-in while simultaneously providing coordination services (network infrastructure, content curation, identity management). The constraint exhibits the full tangled-rope signature: genuine coordination function (platforms enable global communication) coexists with asymmetric extraction (users bear switching costs while platforms capture network effects). The barrier manifests across technical (incompatible data formats, API restrictions), legal (terms-of-service prohibitions on data exports), and behavioral (network lock-in, habit formation) mechanisms. Regulatory interventions (GDPR Article 20, DMA requirements) attempt to scaffold the constraint toward interoperability standards, but incumbent platforms have repeatedly adapted extraction mechanisms to circumvent portability mandates. The constraint's extractiveness has increased over the measurement interval (0.35 \u2192 0.58) as platforms have developed more sophisticated lock-in mechanisms (algorithmic personalization, social graph dependency, integrated service ecosystems) despite regulatory portability requirements.",
+    "key_agents": [
+      "Individual Users: Primary victims (powerless/trapped) \u2014 locked in by network effects, data accumulation, algorithmic training, switching costs; experience maximum extraction",
+      "Competing Platforms: Organized victims (organized/constrained) \u2014 can access portability mechanisms but face coordinated suppression (API rate limiting, retroactive deprecation, contractual restrictions); experience asymmetric extraction during entry phase",
+      "Dominant Platform Operators: Primary beneficiaries (institutional/arbitrage) \u2014 extract rent through lock-in while claiming coordination role; have high arbitrage options and capacity to modify rules",
+      "Regulatory Bodies: Organized enforcers (organized/constrained) \u2014 implement scaffold structures (GDPR, DMA) to mandate portability; constrained by political feasibility and technical implementation complexity",
+      "Enterprise Users: Secondary beneficiaries (powerful/mobile) \u2014 have sufficient bargaining power to negotiate direct data access; experience mixed extraction and coordination",
+      "Standards Organizations: Institutional coordinators (institutional/arbitrage) \u2014 develop interoperability standards (OAuth, data interchange formats) that reduce friction but lack enforcement mechanisms",
+      "Analytical Observer: Civilizational analyst (analytical/analytical) \u2014 identifies constraint as hybrid extraction-coordination mechanism that resists regulatory resolution through adaptation"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high and increasing. The extraction originates from genuine switching costs (network effects, algorithmic personalization, data accumulation over time) that are structurally real but asymmetrically distributed. Platforms benefit from switching costs; users bear them. The value reflects observed user reluctance to switch despite portability options and regulatory mandates \u2014 data exports exist but do not enable realistic switching because the coordination infrastructure (social graph, interaction history, personalized content) cannot be perfectly reconstructed. Extractiveness has increased from 0.35 to 0.58 over the interval despite regulatory pushes for portability, indicating that platforms have developed countermeasures (service degradation for exporting users, algorithmic de-prioritization, feature bundling) that prevent portability mandates from reducing lock-in. Suppression (0.65): High. Barriers to exit include technical complexity of data migration, psychological sunk costs, network dependency, contractual restrictions embedded in terms-of-service, and API access controls. Suppression is structural (network effects are real) but actively maintained (platforms invest in API restriction, rate limiting, format incompatibility). Theater ratio (0.48): Moderate. Portability workflows exist and create appearance of data freedom, but their practical effectiveness is limited \u2014 users perceive data export as possible but recognize that actual platform switching remains costly. Theater is lower than in legacy systems because users have learned that regulatory portability requirements do not translate to realistic switching capacity.",
+    "perspectival_gap": "The primary perspectival gap lies between the dominant platform's Rope classification (sees portability as a coordination problem to solve) and the trapped user's Snare classification (experiences portability mandates as theater that does not enable realistic switching). The gap reveals the crux of the constraint: platforms claim that data portability solves the switching-cost problem, but users find that exportable data does not reconstruct the coordination infrastructure (social graph, algorithmic recommendations, interaction history, identity verification) that makes a platform valuable. The regulatory Scaffold perspective assumes that technical standards maturity will eventually make switching costless; the analytical Tangled Rope perspective recognizes that platforms can adapt extraction mechanisms faster than standards can close loopholes (algorithmic de-prioritization, service-tier differentiation, feature bundling). The gap between Rope and Snare, between regulation and extraction adaptation, is the diagnostic signal that the constraint is not solving but perpetuating.",
+    "directionality_logic": "Dominant platforms benefit from data portability barriers (beneficiaries with arbitrage exit options \u2192 d \u2248 0.05 \u2192 f(d) \u2248 -0.08 \u2192 negative \u03c7). Individual users are trapped by these same barriers (victims with trapped exit \u2192 d \u2248 0.95 \u2192 f(d) \u2248 1.42 \u2192 high \u03c7). The chi formula \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) correctly captures that the same barrier (network effect, data lock-in) produces negative extraction for beneficiaries and positive extraction for victims. The scope modifier \u03c3(S) amplifies this asymmetry: at global scope (\u03c3=1.2), platform benefits scale up while user costs also scale up \u2014 network effects are more powerful at global scale. This is the core directionality insight: portability barriers create asymmetric chi values for the same constraint because beneficiaries can exit (ignore portability) while victims cannot (trapped by network dependency).",
+    "mandatrophy_analysis": "RESOLUTION: The mandatrophy is resolved by recognizing that regulatory portability mandates create a genuine Scaffold intervention while the underlying Tangled Rope coordination function remains unchanged. The scaffold is real \u2014 regulatory enforcement of data access rights does temporarily reduce extraction as platforms must invest in compliance. But the scaffolding faces adaptive resistance: platforms develop secondary extraction mechanisms (algorithmic de-prioritization, service degradation, feature bundling) that are triggered when users export data. The theater ratio increase (0.32 \u2192 0.48) reflects this adaptation \u2014 portability processes become more theatrical (users perceive export options but recognize limited utility) even as technical compliance improves. The mandatrophy is not resolved by choosing between Rope and Snare but by recognizing that regulation can reduce but not eliminate extraction because the coordination function itself (network effects, algorithmic personalization) remains the source of lock-in. Full resolution would require either (a) technical interoperability standards that eliminate network switching costs (Scaffold sunset), or (b) regulatory restructuring that decouples network effects from platform ownership (breaking the Tangled Rope into separate Rope components). Current trajectory suggests neither path is progressing quickly \u2014 extractiveness is increasing despite regulatory mandates."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "network_effect_lock_in",
+      "algorithmic_recommendation_dependence",
+      "platform_ecosystem_integration"
+    ],
+    "dual_formulation_note": "Data portability barriers decompose into three structural constraints: (1) technical interoperability (data format compatibility, API access) \u2014 \u03b5 \u2248 0.30, primarily coordination problem; (2) network effect switching costs (social graph reconstruction, algorithmic training on new platform) \u2014 \u03b5 \u2248 0.62, primarily extraction problem; (3) regulatory scaffolding effectiveness (whether portability mandates reduce actual switching costs) \u2014 \u03b5 \u2248 0.58, the constraint in this story. The three stories are linked: regulatory efforts target (1) but cannot eliminate (2) without technological or structural changes."
+  },
+  "directionality_overrides": []
+}

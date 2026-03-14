@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "institutional_selection_bias",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "insb"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Institutional Selection Bias",
+    "topic_domain": "institutional_governance/organizational_dynamics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_leadership",
+      "institutional_continuity"
+    ],
+    "victims": [
+      "excluded_populations",
+      "institutional_accountability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Structurally Excluded",
+      "comment": "PERSPECTIVE 1: STRUCTURALLY EXCLUDED (SNARE) \u2014 Populations excluded by selection bias have no mechanism for institutional redress. Selection criteria are framed as neutral (meritocratic, objective, evidence-based) but systematically filter out agents who lack the social capital, educational pathway, or demographic markers that institutions privilege. Exit is impossible within the institutional context; alternatives are typically resource-constrained. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Reform Coalitions",
+      "comment": "PERSPECTIVE 2: REFORM COALITIONS (TANGLED ROPE) \u2014 Organized groups pushing for transparency, diversification, and selection bias audits benefit from coordination around shared goals (more equitable access) while bearing costs of institutional resistance. They also benefit from institutional dysfunction being exposed (career opportunities in diversity consulting, media attention, funding for research). High suppression via institutional closure, reputational risk, but they have organizational capacity and partial exit options (changing organizations, shifting focus)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Incumbent Leadership",
+      "comment": "PERSPECTIVE 3: INCUMBENT LEADERSHIP (ROPE) \u2014 Benefits from selection bias through in-group preference, cultural continuity, and reduced accountability pressure. Experiences selection mechanisms as legitimate coordination: defining who 'belongs' in the institution, maintaining institutional identity, screening for 'fit'. Low or negative experienced extraction \u2014 the constraint subsidizes this agent's position."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regulatory Mandates",
+      "comment": "PERSPECTIVE 4: REGULATORY MANDATES (SCAFFOLD) \u2014 Legal requirements for diversity reporting, blind resume review, and anti-discrimination audits create temporary coordination mechanisms with explicit sunset logic. Institutions adopt these mechanisms under compliance pressure but often without genuine commitment. If enforcement wanes, compliance rates drop sharply. The sunset is endogenous to regulatory attention cycles."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Formal Selection Procedures",
+      "comment": "PERSPECTIVE 5: FORMAL SELECTION PROCEDURES (PITON) \u2014 Documented recruitment and promotion protocols (job descriptions, interview panels, evaluation rubrics) are substantially performative. The theater of 'objective selection' masks how informal networks, cultural fit assessments, and implicit bias actually determine outcomes. Procedures persist through institutional inertia despite low predictive validity for institutional success. Theater ratio: 0.68 \u2014 a substantial fraction of the selection apparatus is ritual maintenance rather than actual decision-making."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN FALSE SUMMIT) \u2014 A naive analytical view might naturalize selection bias as an inevitable feature of human cognition: 'preference for similarity,' 'homophily,' 'in-group bias' are described as hardwired evolutionary adaptations. From this perspective, selection bias appears immutable and universal. However, the structural data reveals this as naturalization of a contingent institutional choice: institutions design selection mechanisms and can redesign them. The mountain classification is a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "selection_criteria_ostensible_vs_actual",
+      "question": "What is the causal relationship between stated selection criteria and actual institutional outcomes? Are stated criteria determining decisions, or are they post-hoc rationalization for decisions made through informal networks?",
+      "resolution_mechanism": "Audit studies using matched resumes with demographic variation; correlation analysis of stated criteria vs. actual hiring/promotion decisions; exit interviews with rejected candidates and interview training analysis",
+      "impact": "If stated criteria drive decisions: selection bias is a calibration problem (criteria need revision). If stated criteria are post-hoc rationalization: selection bias is an enforcement problem (informal networks override formal rules), and the constraint has higher effective suppression.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Causal relationship between stated and actual selection criteria"
+    },
+    {
+      "id": "exclusion_mechanism_systemic_vs_individual",
+      "question": "Is the observed pattern (exclusion of specific populations) produced by systemic institutional design, accumulated individual biases within formal procedures, or identity-locked cultural norms that defenders perceive as natural 'fit'?",
+      "resolution_mechanism": "Decomposition of bias sources: compare outcomes from blind evaluation (protocol compliance tests) vs. non-blind evaluation; analyze selection committee composition and implicit association test data; track how 'fit' language appears in decision documentation",
+      "impact": "If systemic: the constraint is designed exclusion (higher malice, higher intentional suppression). If individual: bias remediation through training should reduce bias (lower structural suppression). If identity-locked cultural norms: incumbent leadership cannot perceive bias without identity frame shift (suppression is partly internalized for beneficiaries, fully structural for victims).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Source of exclusion mechanism: systemic design, individual bias, or cultural norms"
+    },
+    {
+      "id": "diversity_benefits_realization",
+      "question": "Do institutions that diversify their selection actually realize the purported coordination benefits (better decision-making, broader perspective, reduced groupthink), or do they encounter enforcement barriers that prevent diverse cohorts from exercising their perspectives?",
+      "resolution_mechanism": "Longitudinal studies of organizations that successfully diversify vs. those that hire diverse candidates but experience high attrition/marginalization; measurement of decision quality and perspective diversity before/after selection changes; exit rates and retention satisfaction by demographic group",
+      "impact": "If benefits realized: diversity is coordination (supports tangled_rope and scaffold classifications). If benefits blocked by enforcement barriers: diversity initiatives fail to change the actual coordination mechanism, and the constraint remains a snare for excluded populations even if selection criteria formally change.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether institutional diversification realizes coordination benefits"
+    },
+    {
+      "id": "regulatory_enforcement_decay",
+      "question": "Do institutional compliance rates with diversity and anti-bias mandates persist after enforcement pressure relaxes, or do they revert to baseline selection patterns?",
+      "resolution_mechanism": "Time-series analysis of hiring/promotion diversity before, during, and after regulatory scrutiny cycles; comparison of compliance rates between high-enforcement and low-enforcement jurisdictions; measurement of institutional investment in selection infrastructure (training, blind review systems, audit capacity)",
+      "impact": "If compliance persists: selection bias constraint has internalized enforcement mechanisms (institutions have adopted new norms). If compliance reverts: scaffold perspective is accurate \u2014 regulatory mandates created temporary constraint, and sunset is endogenous to enforcement attention cycles.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory enforcement effects persist after oversight relaxes"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Institutional selection bias operates at the intersection of coordination and extraction. Institutions require mechanisms to select among candidates for positions, roles, and participation \u2014 a genuine coordination problem. But these mechanisms are designed, enforced, and interpreted by incumbents who benefit from homogeneity and have incentives to frame their in-group preference as neutral meritocracy. The constraint exhibits all six DR types depending on the observer's structural position. Structurally excluded populations experience pure extraction (snare) with no exit mechanism. Reform coalitions organize around the asymmetry and benefit from institutional accountability crises (tangled rope). Incumbent leadership experiences the bias as legitimate coordination and role definition (rope). Regulatory mandates create temporary pressure for change with explicit sunset logic (scaffold). Formal selection procedures appear objective but function primarily as theater masking informal network decisions (piton). Analytical observers risk naturalizing selection bias as an inevitable feature of cognition (false mountain). The constraint's extractiveness has increased over the interval as institutional complexity has grown \u2014 more sophisticated selection machinery produces more sophisticated screening while maintaining plausible deniability about systemic exclusion.",
+    "key_agents": [
+      "Structurally Excluded Populations: Primary victims (powerless/trapped) \u2014 lack social capital, educational pathways, or demographic markers that institutions privilege; no exit mechanism within institutional context",
+      "Incumbent Leadership: Primary beneficiary (institutional/arbitrage) \u2014 captures career security, cultural continuity, and reduced accountability through in-group preference",
+      "Reform Coalitions: Secondary actors (organized/constrained) \u2014 organized groups pushing for transparency and diversification; benefit from dysfunction exposure while bearing institutional resistance costs",
+      "Regulatory Bodies: Organized actors (organized/constrained) \u2014 mandate diversity reporting and anti-discrimination audits; create temporary enforcement pressure with decay cycles",
+      "Selection Committee Members: Individual institutional actors (moderate/constrained) \u2014 experience selection procedures as legitimate coordination while being constrained by informal norms and group dynamics",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as inherent cognitive limits"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Institutional selection bias extracts significant resources from excluded populations in the form of career denial, opportunity cost, and accumulated wealth/credential gaps. But the extraction is not total \u2014 some excluded individuals do access institutions through alternative pathways (connections, elite performance signaling, institutional diversity initiatives). The value reflects that the mechanism is strong but not absolute. Suppression (0.65): High. Multiple barriers prevent exit: excluded populations cannot easily access alternative institutions if dominant pathways are closed; formal appeals procedures are typically weak and captured by incumbent interests; social isolation from networks that enable alternative pathways; reputational risk of challenging selection outcomes. Theater ratio (0.68): High and increasing. The formalization of selection procedures (rubrics, documented criteria, interview protocols) serves primarily to legitimize decisions that were actually made through informal networks and cultural fit assessments. As institutions come under scrutiny, they invest more in selection theater \u2014 blind resume screening, structured interviews, diversity committees \u2014 often without changing actual decision mechanisms. The theater has increased over the interval as criticism of selection bias has increased institutional defensive behavior.",
+    "directionality_logic": "Incumbents with arbitrage options derive low or negative directionality (d \u2248 0.15): they benefit from the constraint and can exercise exit by moving to alternative institutions where selection bias favors them. Excluded populations with trapped exit (d \u2248 0.95) experience maximum extraction and cannot exercise alternative pathways. Reform coalitions with constrained exit but partial agency (d \u2248 0.60) experience moderate extraction but also benefit from dysfunction exposure. Regulatory bodies with enforcement power but time-limited attention (d \u2248 0.45) experience the constraint as a problem they can partially solve. The sigmoid function maps these directionalities to experienced extractiveness, producing the perspectival gap: beneficiaries see low chi (coordination), victims see high chi (extraction), and analytical observers risk missing the structural asymmetry entirely.",
+    "perspectival_gap": "The incumbent leadership's rope perspective and the excluded population's snare perspective are irreconcilable observations of the same structural mechanism. The leadership genuinely experiences selection as coordination \u2014 they are solving the problem of role definition and institutional continuity. The excluded population genuinely experiences extraction \u2014 they are locked out of opportunity through no fault of their performance. The gap is not epistemic disagreement but structural \u2014 different agents have different exit options and different relationships to the extraction flow. The reform coalition's tangled rope perspective is strategic: they identify both the coordination function (institutions do need selection) and the asymmetric extraction (but selection could be redesigned to reduce bias), creating leverage for negotiation. The regulatory mandate perspective adds sunset logic: constraints can be reformed through external pressure, but only while that pressure persists.",
+    "mandatrophy_analysis": "The mandatrophy here is the risk of conflating 'selection bias is inevitable' (a claim about human cognition) with 'this specific institutional mechanism is necessary' (a claim about institutional design). The false mountain perspective naturalizes what is actually a contingent institutional choice. The resolution is to distinguish: (1) Some degree of preference-for-similarity in human cognition may be difficult to eliminate (a true constraint on individual psychology); (2) Institutional design can drastically reduce this bias's impact through mechanism changes (blind evaluation, diverse committees, transparent criteria). The constraint's true structure is tangled rope: genuine coordination function (selection must happen) overlaid with asymmetric extraction (mechanism is designed to benefit incumbents). The mandatrophy is resolved by recognizing that the coordination problem could be solved through multiple mechanisms, and the choice to use bias-amplifying mechanisms is a design decision, not an inevitable outcome of human nature."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "glass_ceiling_dynamics",
+      "cultural_fit_gatekeeping",
+      "credentialing_system_bias"
+    ],
+    "dual_formulation_note": "Institutional selection bias is the overarching constraint. It affects three downstream constraints: glass ceiling dynamics (how selection bias compounds over career trajectories), cultural fit gatekeeping (how informal norms reinforce selection criteria), and credentialing system bias (how upstream educational barriers interact with institutional selection). Each downstream constraint has its own \u03b5 value reflecting specific mechanisms. Selection bias itself (\u03b5=0.58) represents the institutional-level coordination-with-extraction hybrid."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.6
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "header": {
+    "constraint_id": "subscriber_attention_commons",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sac"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.58,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Subscriber Attention Commons Extraction",
+    "topic_domain": "digital_media/attention_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "premium_content_creators"
+    ],
+    "victims": [
+      "subscribers",
+      "attention_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Subscriber",
+      "comment": "PERSPECTIVE 1: SUBSCRIBER (SNARE) \u2014 Trapped by subscription lock-in, algorithmic sorting that makes exit costly (loss of curated feeds, habit dependency, social integration), and minimal transparency about extraction mechanisms. Bears the cost of unlimited attention capture through notification systems, autoplay, recommendation feeds optimized for engagement rather than user welfare. No meaningful exit option without abandoning social ties and content access."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Attention-Aware User",
+      "comment": "PERSPECTIVE 2: ATTENTION-AWARE USER (TANGLED ROPE) \u2014 Constrained by switching costs and social embeddedness but capable of partial exit (reducing usage, account dormancy, or multi-platform presence). Experiences genuine coordination benefit (discovering content, connecting with communities) alongside extraction (time harvesting, behavioral data collection, dark patterns). Exit is costly but possible at a price."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATOR (ROPE) \u2014 Benefits from subscriber attention lock-in through advertising and data monetization. Experiences the constraint as a coordination mechanism: organizing subscriber attention enables content discovery, social connection, and creator monetization. Net beneficiary \u2014 extraction runs toward this agent. Can arbitrage between different subscriber segments and alternative monetization mechanisms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Premium Creator",
+      "comment": "PERSPECTIVE 4: PREMIUM CREATOR (TANGLED ROPE) \u2014 Powerful institutional agent with audience mobility options. Benefits from subscriber platform distribution and monetization infrastructure. Also extracts from subscribers through paywalled content, Patreon mechanics, or exclusive access gates. Genuine coordination function (content distribution) with asymmetric extraction (premium tier pricing, subscriber attention hoarding). Mobile exit option but costly (audience rebuilding)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulation Coalition",
+      "comment": "PERSPECTIVE 5: REGULATION COALITION (SCAFFOLD) \u2014 Organized agents (regulators, consumer advocates, open-source platforms) see subscriber attention extraction as a temporary coordination failure solvable through design mandates: opt-in notifications, algorithmic transparency, data rights, interoperability requirements. These represent sunset clauses \u2014 as regulatory frameworks mature (DSA in EU, potential US privacy legislation), the extraction mechanism loses force. Low effective extraction from this perspective because the coalition has agency and sees an exit path through norm-setting."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Notification Theater",
+      "comment": "PERSPECTIVE 6: NOTIFICATION THEATER (PITON) \u2014 Notification systems, autoplay defaults, and recommendation algorithms are largely performative from a user-welfare perspective. They ostensibly help users discover valuable content but are primarily tuned to maximize time-on-platform and click metrics. The primary function (content discovery) has atrophied; the mechanism persists through institutional inertia and opacity. Theater ratio reflects that 70% of notification value is engagement optimization rather than genuine user-requested notification. Platforms maintain the ritual because alternatives haven't fully replaced them."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Attention Scarcity View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / ATTENTION SCARCITY VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some attention allocation is inherent to digital coordination: human attention is finite, and any system organizing information must triage. This perspective sees subscriber attention extraction as an immutable natural law of information abundance. However, the structural data contradicts this mountain classification \u2014 the base metrics reveal that extraction is contingent on platform architecture choices (notification defaults, algorithmic ranking, paywall design) and institutional power asymmetries, not attention scarcity itself. The false summit reveals naturalization of design choices as inevitable laws."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "notification_value_threshold",
+      "question": "What proportion of notification content is user-requested vs algorithmically pushed engagement optimization?",
+      "resolution_mechanism": "A/B testing of opt-in notification systems; comparison of user satisfaction and content discovery rates between curated (user-requested) and algorithmic push notification cohorts",
+      "impact": "If >80% is user-requested: notification mechanism is genuine coordination (Rope from subscriber perspective). If <40% is user-requested: notification mechanism is pure extraction theater (Snare from subscriber perspective).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of notifications driven by user request vs algorithmic optimization"
+    },
+    {
+      "id": "switching_cost_magnitude",
+      "question": "What is the true cost (time, social capital, data loss) for a subscriber to switch platforms or reduce platform dependency by 50%?",
+      "resolution_mechanism": "Cohort tracking of users who exit or reduce usage; measurement of re-engagement costs, social link loss, content library access loss, and time required to rebuild comparable experience on alternative platforms",
+      "impact": "If cost < 10 hours of time: exit options should be reclassified as 'mobile' rather than 'trapped'; suppression should be reduced from 0.58 to ~0.35; constraint may reclassify as Rope or Scaffold. If cost > 50 hours: trapped classification is validated; suppression may increase.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "True cost to subscribers of platform exit or significant usage reduction"
+    },
+    {
+      "id": "algorithmic_recommendation_autonomy",
+      "question": "To what extent can subscribers customize recommendation algorithms, or are algorithmic rankings opaque and non-negotiable?",
+      "resolution_mechanism": "Audit of platform preference controls; measurement of user ability to: (1) opt out of algorithmic recommendation, (2) weight recommendation criteria, (3) access and understand ranking logic. Comparison of platforms with high vs low algorithmic transparency.",
+      "impact": "If high autonomy: suppression should decrease; exit options should shift from trapped to constrained; classification may shift from Snare to Tangled Rope. If low autonomy: suppression validated; trapping mechanism is cognitive (users internalize algorithmic ranking as 'natural' recommendations).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Subscriber autonomy over algorithmic recommendation systems"
+    },
+    {
+      "id": "identity_lock_mechanism",
+      "question": "Is subscriber lock-in driven by structural switching costs or by identity fusion with platform communities and creator relationships?",
+      "resolution_mechanism": "Survey and interview data: ask exited users whether departure was driven by technical friction (time, data loss) or identity disruption (loss of community belonging, creator-follower identity). Compare stated reasons across demographics.",
+      "impact": "If primarily structural: suppression is 0.58 (validated). If primarily identity-based: exit option should be reclassified as 'identity_locked'; suppression perception may be lower but actual immobility higher; classification from subscriber perspective becomes Rope (identity-locked agents at biographical horizon perceive constraints as changeable in principle).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether subscriber lock-in is structural or identity-based"
+    },
+    {
+      "id": "regulatory_interoperability_feasibility",
+      "question": "Can platform interoperability (data portability, algorithm switching, cross-platform messaging) be implemented at technical and business scale without degrading coordination function?",
+      "resolution_mechanism": "Technical feasibility analysis of ActivityPub protocols, data portability standards; case studies of interoperable platforms (Mastodon, Bluesky); cost analysis for implementing interoperability on incumbent platforms",
+      "impact": "If feasible: Scaffold perspective is validated \u2014 regulatory sunset is real structural mechanism. If infeasible: Scaffold is aspirational theater; constraint may degrade to Piton or stabilize as permanent Tangled Rope. Affects mandatrophy resolution for extractiveness > 0.70.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical and business feasibility of interoperable platform architecture"
+    },
+    {
+      "id": "creator_revenue_dependency",
+      "question": "What proportion of premium creators depend on subscriber platform revenue for >50% of income vs diversified revenue sources?",
+      "resolution_mechanism": "Survey of platform creators; measurement of income distribution across: platform subscriptions, direct Patreon/Substack, sponsorships, external media. Identify cohort with high platform dependency vs independent creators.",
+      "impact": "If >60% dependent: creators are co-extractors trapped in platform ecosystem (reclassify creator perspective exit from 'mobile' to 'constrained'). If <30% dependent: creators are genuinely mobile; their powerful/mobile perspective may shift classification or reduce chi. Affects directionality logic.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Creator revenue dependency on subscriber platforms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "The subscriber attention commons creates a structural extraction mechanism where digital platforms organize subscriber time and behavioral data for monetization through advertising and creator paywalls, while simultaneously providing genuine coordination benefits through content discovery and community formation. The constraint exhibits a perspectival range from pure coordination (platform view) through hybrid extraction-coordination (creator and moderate user view) to pure extraction (trapped subscriber and attention commons victim view) to degraded theater (notification systems) to aspirational sunset (regulatory coalition). Extractiveness has increased over the interval (0.35 \u2192 0.62) as platforms have intensified engagement optimization through dark patterns, autoplay, algorithmic feeds, and notification systems. Theater ratio has risen from 0.38 to 0.55, reflecting that an increasing proportion of notification and recommendation value serves platform engagement metrics rather than user welfare. The constraint is foundational to the attention economy and exhibits the key characteristic of tangled rope: genuine coordination function (connecting creators to audiences, helping users discover content) embedded within asymmetric extraction (time harvesting, behavioral data collection, paywall gatekeeping).",
+    "key_agents": [
+      "Subscribers: Primary victim (powerless/trapped) \u2014 bear extraction through attention capture, algorithmic sorting lock-in, behavioral data harvesting, and limited transparency about mechanisms",
+      "Attention Commons: Secondary victim (abstract collective, unable to organize) \u2014 the shared epistemic and social benefit of authentic content discovery and community connection, degraded by optimization for engagement metrics",
+      "Platform Operators: Primary beneficiary (institutional/arbitrage) \u2014 capture value through advertising, data monetization, and rent extraction from creators and subscribers",
+      "Premium Creators: Secondary beneficiary (powerful/mobile) \u2014 gain distribution and subscriber revenue infrastructure; also co-extract through paywalled content and tiered access",
+      "Attention-Aware Users: Moderate agent (moderate/constrained) \u2014 constrained by switching costs and social embeddedness; experience both genuine coordination benefit and extraction",
+      "Regulation Coalition: Organized agents (organized/constrained) \u2014 EU regulators (DSA), consumer advocates, open-source platforms (ActivityPub ecosystem) \u2014 building interoperability and transparency mandates with regulatory sunset logic",
+      "Notification Theater: Institutional mechanism (institutional/arbitrage) \u2014 notification systems, autoplay, and algorithmic feeds that persist through inertia and opacity despite atrophied primary function"
+    ],
+    "logic_rationale": "Extractiveness (0.62): High-moderate. Subscribers lose time (bounded by 24 hours/day but concentrated through dark patterns), behavioral data (proprietary algorithmic models), and epistemic clarity (authentic interest discovery degraded by engagement optimization). The extraction is substantial but not maximal (0.72+) because genuine coordination benefits (content discovery, community) remain real \u2014 the extraction is not pure rent-seeking but genuine value capture during value creation. Theater ratio (0.55): Moderate-high. Notification systems, autoplay, and recommendation algorithms are nominally tools for user content discovery but are primarily tuned to maximize time-on-platform and engagement metrics. About 45% of notification/recommendation value serves genuine user interests; 55% serves platform engagement optimization. This is lower than pure piton theater (which would be 0.70+) because some genuine coordination function remains \u2014 but substantial enough to flag as extractive theater. Suppression (0.58): Moderate-high. Barriers to exit include switching costs (social graph, habit, data lock-in), algorithmic sorting that creates habitual dependency, limited awareness of extraction mechanisms (opacity), and social integration (FOMO, community belonging). But suppression is not maximal because alternative platforms exist and some users do exit or reduce usage \u2014 the barrier is real but penetrable at a cost.",
+    "directionality_logic": "Beneficiary/victim flow: Platform operators benefit from subscriber attention and behavioral data (arbitrage exit, institutional power, low d). Premium creators benefit from subscriber platform distribution and revenue infrastructure (mobile exit, powerful position, moderate d). Subscribers bear extraction through time, data, and epistemic clarity loss (trapped exit, powerless position, high d). Attention commons bears the abstracted loss of coordinate authentic value discovery (no exit, no power, very high d). The derivation chain produces: Subscriber d \u2248 0.93 (trapped + victim + powerless) \u2192 f(d) \u2248 1.38 \u2192 chi \u2248 0.62 \u00d7 1.38 \u00d7 1.0 \u2248 0.85 (high effective extraction). Platform operator d \u2248 0.10 (arbitrage + beneficiary + institutional) \u2192 f(d) \u2248 -0.09 \u2192 chi \u2248 0.62 \u00d7 (-0.09) \u00d7 1.0 \u2248 -0.06 (negative \u2014 they subsidize the arrangement). Premium creator d \u2248 0.55 (mobile + mixed beneficiary/victim + powerful) \u2192 f(d) \u2248 0.75 \u2192 chi \u2248 0.62 \u00d7 0.75 \u00d7 1.2 \u2248 0.56 (moderate, scaled by continental scope of creator networks). Scope modifier \u03c3(global) = 1.2 amplifies chi for global-scope agents (platform operators, creators), slightly dampening effective beneficiary advantage.",
+    "perspectival_gap": "The trapped subscriber perceives a snare (pure extraction, no exit); the platform operator perceives rope (coordination mechanism generating value); the regulation coalition perceives a scaffold (temporary problem solvable through interoperability mandates); the notification theater is a piton (degraded ritual sustained by inertia). The civilizational analytical observer risks classifying this as a mountain (attention scarcity is inherent to information abundance) but the structural data reveals this as false naturalization \u2014 the extraction flows from platform architecture choices (algorithmic ranking, notification defaults, paywall design) and power asymmetries, not from scarcity itself. A subscriber with full algorithmic autonomy and transparent notification controls would experience dramatically lower extraction. The perspectival gap reveals that what appears as 'natural' attention economics is actually a contingent set of design choices and regulatory gaps.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The constraint avoids the mandatrophy trap by clearly separating the coordination function (genuine value creation through content discovery, community formation, creator distribution) from the extraction mechanism (time harvesting, behavioral data collection, paywall gatekeeping, algorithmic engagement optimization). The presence of both a coordination function and asymmetric extraction, along with active enforcement (algorithmic ranking, notification defaults, paywall systems), confirms the tangled rope classification. The constraint is not purely extractive (which would deny the real value coordination creates) nor purely coordinative (which would deny the asymmetric value capture). The scaffold perspective demonstrates that the constraint has contingent elements \u2014 regulatory interoperability and algorithmic transparency mandates could shift the ratio toward pure coordination or reduce suppression. The piton perspective correctly identifies degraded theater (notifications as engagement optimization rather than user-requested discovery). The mountain perspective is identified as a false summit \u2014 attention scarcity is real but extraction flows from architecture choices, not scarcity itself. The mandatrophy is resolved by recognizing that subscriber attention commons is a genuine tangled rope: coordination mechanisms (content discovery, community) captured within an extractive architecture (attention optimization, paywall gatekeeping)."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_ranking_fairness",
+      "creator_precarity_labor",
+      "data_monetization_asymmetry"
+    ],
+    "dual_formulation_note": "The subscriber attention commons is upstream of multiple structurally distinct constraints: algorithmic ranking fairness (how algorithms distribute visibility), creator precarity labor (how creator revenue dependency creates extraction), and data monetization asymmetry (how behavioral data is captured and monetized). Each downstream constraint has its own epsilon reflecting its specific empirical status and bargaining dynamics. The subscriber attention commons constrains all three through the shared attention and data flow."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.52
+    }
+  ]
+}

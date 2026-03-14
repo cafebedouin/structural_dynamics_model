@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "household_registry_system",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hrs"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.48,
+    "claimed_type": "snare",
+    "human_readable": "Household Registry System (Hukou) as Extractive Constraint on Mobility and Social Access",
+    "topic_domain": "political_economy/social_stratification",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "urban_local_governments",
+      "established_urban_residents"
+    ],
+    "victims": [
+      "rural_migrants",
+      "floating_population"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Rural Migrant Worker",
+      "comment": "PERSPECTIVE 1: RURAL MIGRANT WORKER (SNARE) \u2014 Trapped by hukou status in origin county. Cannot legally access urban education, healthcare, housing assistance, pension benefits, or childcare services. Cannot change hukou classification without extraordinary bureaucratic process (typically 5-10+ years, significant fees, proof of local employment/property ownership). Faces active enforcement through police checks, workplace raids, and housing discrimination. Bears full extraction cost with zero coordination benefit. Maximal experience of constraint as coercive mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Floating Population Family",
+      "comment": "PERSPECTIVE 2: FLOATING POPULATION FAMILY (TANGLED ROPE) \u2014 Migrant family with some coordination function: access to informal employment networks, shared housing with co-ethnics, mutual aid within diaspora community. But also subject to extraction: children cannot attend urban public schools (forcing private tutoring costs or separation from family), healthcare access restricted to emergency care, housing vulnerable to arbitrary evictions. Suppression significant but not absolute \u2014 some exit capacity through internal networks and informal economy. Mixed experience reflects both coordination benefits (diaspora cohesion) and asymmetric extraction (benefits accrue to urban employers and local governments, costs borne by migrants)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "Urban Employer",
+      "comment": "PERSPECTIVE 3: URBAN EMPLOYER (ROPE) \u2014 Coordinates workforce allocation through hukou system: legal framework guarantees that migrant workers have limited claim on city services (avoiding employer cost-shifting for healthcare, pensions, childcare). Experiences constraint as pure coordination benefit with minimal enforcement cost. Can arbitrage between migrant and urban-registered labor pools. High exit capacity \u2014 can lobby for hukou reform if labor shortage demands it."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Urban Local Government",
+      "comment": "PERSPECTIVE 4: URBAN LOCAL GOVERNMENT (TANGLED ROPE) \u2014 Coordinates urban service provision through hukou classification: legitimate coordination benefit of predictable welfare costs and population planning. But also requires active enforcement (police checks, housing control, school enrollment restrictions) that consumes bureaucratic resources and creates corruption risks. Faces generational pressure to reform (children of migrants aging into voting-age population, labor shortages in low-skill sectors). Constrained exit because hukou is entangled with property taxes, school funding, and healthcare financing \u2014 dismantling one mechanism requires reforming entire fiscal system. Benefits flow to city (property values, tax base, labor control); costs borne by migrants."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Reform Coalition",
+      "comment": "PERSPECTIVE 5: REFORM COALITION (SCAFFOLD) \u2014 Organized civil society (NGOs, lawyers, journalists), reform-oriented policy makers, and younger urban residents see hukou as temporary coordination failure being solved through targeted reforms. Point-of-need hukou relaxation in second-tier cities (Chongqing, Chengdu) and integration pilots in coastal zones create exit pathways. High agency to drive change. Sees constraint as having sunset clause: as labor market tightens and urbanization matures, fiscal decoupling and social insurance reform make hukou enforcement increasingly expensive. Suppression declining as alternative coordination mechanisms (portable social insurance, school funding decoupling) mature. Theater ratio low (enforcement is real, not performative; costs are material)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Rural Local Government",
+      "comment": "PERSPECTIVE 6: RURAL LOCAL GOVERNMENT (PITON) \u2014 Experiences hukou as degraded institution. System originally coordinated rural land tenure and commune organization during collective agriculture era. In post-reform market economy, rural hukou is largely performative: no longer controls land access (households hold nominal rights), no longer organizes production or welfare, primarily restricts urban access without providing rural services. Maintains hukou registration through inertia and because loss of hukou authority would reduce county government administrative importance. Theater ratio high \u2014 hukou enforcement exists as institutional ritual rather than functional necessity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 Risk of naturalizing hukou as an immutable feature of large-state organization: 'All nations must track population location; registration systems are inherent to modern governance.' This perspective risks treating a contingent institutional arrangement (the specific legal discrimination embedded in hukou) as a natural law. However, comparative evidence (other large nations use registration without the mobility restrictions; hukou itself has undergone major reforms in some provinces) contradicts the mountain classification. The engine will identify this as a false summit, revealing that the 'inherent to governance' framing obscures policy choices."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "enforcement_mechanism_stability",
+      "question": "Is hukou suppression primarily maintained by active enforcement (police authority, workplace inspections) or by internalized belief in legitimacy and identity-locking to origin place?",
+      "resolution_mechanism": "Comparative enforcement data during policy relaxation periods; survey data on migrant exit behavior when enforcement pressure eases; analysis of enforcement costs vs. actual compliance without enforcement",
+      "impact": "If primarily enforced: suppression declines rapidly when enforcement pauses (snare mechanism fails). If internalized: suppression persists even after enforcement eases (identity-locked mechanism); true exit requires identity frame shift, not just barrier removal.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether hukou suppression is active enforcement or internalized identity lock"
+    },
+    {
+      "id": "reform_sunset_timeline",
+      "question": "Is fiscal decoupling of social services from hukou status technically feasible and politically achievable within 15 years, or is the political commitment insufficient?",
+      "resolution_mechanism": "Analysis of existing pilot programs (Chongqing hukou reform, portable pension programs); fiscal impact modeling of full decoupling; tracking of actual hukou usage changes in liberalized zones vs. intent to liberalize nationally",
+      "impact": "If technically feasible and politically committed: scaffold perspective is correct \u2014 constraint has real sunset. If technically feasible but politically stalled: constraint reclassifies from Scaffold to Piton (maintained by political inertia despite declining function). If infeasible: constraint returns to Snare (enforcement justification shifts from administrative convenience to structural necessity).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether hukou can be fiscally decoupled from service access"
+    },
+    {
+      "id": "coordination_necessity_residual",
+      "question": "After removing the discriminatory access restrictions, what residual coordination function does hukou registration provide that cannot be replicated by portable ID systems, national health insurance portability, or mobile-friendly school enrollment mechanisms?",
+      "resolution_mechanism": "Decompose hukou functions into: (A) population tracking (solved by national ID), (B) property tax coordination (solved by property registration), (C) school funding allocation (solved by per-child funding formulas), (D) health insurance pooling (solved by portable insurance). Identify genuine residual coordination that cannot be decoupled.",
+      "impact": "If residual is substantial: tangled_rope perspective is more accurate than snare (genuine coordination function exists alongside extraction). If residual is minimal or zero: snare and piton perspectives are accurate (constraint is pure extraction or pure theater, with negligible coordination benefit).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "What coordination function survives after discriminatory restrictions are removed"
+    },
+    {
+      "id": "identity_lock_rural_attachment",
+      "question": "To what extent are rural migrants identity-locked to origin hukou through lineage, ancestral property, burial rights, and kinship obligations that make exit psychologically impossible despite legal and economic mobility?",
+      "resolution_mechanism": "Ethnographic study of hukou change behavior: migrants with legal opportunity to change hukou but choose not to; analysis of return migration patterns; comparison of barriers experienced (material cost, legal time) vs. reported psychological blocks (identity, belonging, shame)",
+      "impact": "If identity-lock is significant: many migrants are trapped not by legal barriers but by internalized frames of belonging and obligation. Even legal hukou reform would not produce exit. Suppression mechanism is more psychological than material. If identity-lock is weak: legal barriers are primary mechanism; reform that removes legal restrictions produces rapid behavioral change.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether rural migrants are identity-locked to origin hukou"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The household registry (hukou) system originated in 1953 as a population tracking mechanism to coordinate rural land tenure and urban resource allocation in the early PRC. It evolved into the primary institutional mechanism for restricting urban social access (education, healthcare, pensions, housing assistance) to migrants without local registration. The constraint operates across multiple levels: rural-to-urban migration is legally permitted, but social access is not. Enforcement occurs through police authority (detention of unregistered migrants), employer enforcement (workplace inspections), and housing discrimination (landlords verify hukou status). Over 300 million 'floating population' (migrants with rural hukou working in cities) live under this constraint. The system demonstrates all six DR types from different structural positions: snare from the powerless rural migrant's perspective (no exit, maximum extraction), tangled rope from the moderate migrant family's view (some coordination benefits mixed with extraction), rope from employers' perspective (pure coordination benefit), tangled rope from urban governments (genuine coordination mixed with enforcement costs), scaffold from reform advocates (temporary problem with fiscal solutions), piton from rural governments (degraded institution maintained by inertia), and mountain from the naturalizing analytical view (risking false summit). Base extractiveness has increased from 0.42 to 0.58 over the 20-year interval as labor market tightening and migration acceleration have made the discrimination more visible and enforcement more costly, while alternatives (portable insurance, school decoupling pilots) have emerged that reduce the apparent necessity of hukou restrictions.",
+    "key_agents": [
+      "Rural Migrant Workers: Primary victims (powerless/trapped) \u2014 cannot legally access urban education, healthcare, housing assistance, pensions; face police enforcement and workplace discrimination; bear maximum extraction cost",
+      "Floating Population Families: Secondary victims (moderate/constrained) \u2014 face barriers to children's education and family healthcare; some exit capacity through informal networks; experience mixed coordination and extraction",
+      "Urban Employers: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from labor control and cost avoidance (migrants have limited claim on employer-provided benefits); high exit capacity",
+      "Urban Local Governments: Secondary beneficiaries (institutional/constrained) \u2014 coordinate service provision and limit welfare costs; require active enforcement; constrained exit due to fiscal coupling",
+      "Reform Coalition: Organized agents (organized/mobile) \u2014 NGOs, policy reformers, younger urban residents; drive hukou liberalization in second-tier cities; see sunset path through fiscal decoupling",
+      "Rural Local Governments: Institutional observers (institutional/arbitrage) \u2014 maintain registration through inertia; theater-dominant position reflects degradation of original function",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangement as inherent to governance"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The rural migrant experiences direct deprivation in education access, healthcare, housing security, and pension eligibility while working in urban labor markets. These are not trivial costs \u2014 education and healthcare differentials compound across generations. The value reflects that extraction is structural and severe but not absolute: informal networks provide some services, enforcement has gaps, and some cities have initiated reforms. The upward trajectory over 20 years (0.42 to 0.58) reflects that as migration has accelerated and the floating population has aged into childcare-requiring and elder-care-needing cohorts, the actual extraction has intensified even as the policy language has softened. Suppression (0.72): High. Barriers are material (legal status restrictions), institutional (police authority, employer enforcement, housing discrimination), and psychological (identity-lock to origin hukou, shame, internalized inferiority). Removal of legal barriers is slow (government has initiated reform pilots but faces fiscal and political resistance), and psychological internalization means that legal reform alone may not produce rapid behavioral change. Theater ratio (0.48): Moderate-low. Hukou enforcement is substantially real and material \u2014 police conduct checks, employers lose workers to deportation, families are separated. This is not purely performative, distinguishing it from vestigial regulations that are theater-heavy. The moderate theater ratio reflects that enforcement has eroded in some city zones (coastal regions with labor shortages have relaxed hukou checks) while remaining intense in others (interior cities with surplus labor), and that the gap between official restriction and actual practice has widened. Suppression is doing more work than theater in maintaining the constraint.",
+    "directionality_logic": "The powerless/trapped agent (rural migrant) derives d \u2248 0.92 from their structural position: victimhood (high d), trapped exit (d \u2248 1.0), zero beneficiary status, and no arbitrage options. This produces f(d) \u2248 1.35, so their effective extraction \u03c7 \u2248 0.58 \u00d7 1.35 \u00d7 1.0 (national scope) \u2248 0.78 experienced extractiveness. The institutional/arbitrage agent (urban employer) derives d \u2248 0.08 from their structural position: beneficiary status (low d), arbitrage exit options, and zero victim status. This produces f(d) \u2248 -0.10, so their effective extraction \u03c7 \u2248 0.58 \u00d7 (-0.10) \u00d7 0.8 (local scope) \u2248 -0.05 \u2014 they experience the constraint as providing subsidy, not extraction. The institutional/constrained agent (urban government) derives d \u2248 0.45 from mixed beneficiary (administrative convenience) and enforcement cost (requires active bureaucratic labor). This produces f(d) \u2248 0.58, so their effective extraction \u03c7 \u2248 0.58 \u00d7 0.58 \u00d7 1.0 \u2248 0.34 \u2014 mixed experience of coordination and cost. The moderate/constrained agent (migrant family) derives d \u2248 0.65 from victim status mixed with some coordination benefit (diaspora networks). This produces f(d) \u2248 1.00, matching the legacy moderate power atom. The organized/mobile agent (reform coalition) derives d \u2248 0.35 from their structural position: partial victim status (affected communities) mixed with substantial agency and exit paths. This produces f(d) \u2248 0.40, so their effective extraction \u03c7 \u2248 0.58 \u00d7 0.40 \u00d7 1.0 \u2248 0.23 experienced extractiveness \u2014 low enough that they see the constraint as solvable rather than fundamental.",
+    "perspectival_gap": "This constraint exhibits a four-way perspectival gap. (1) The powerless/trapped agent and institutional/arbitrage agent experience opposite-sign extraction: migrants bear 0.78 extracted; employers receive -0.05 (subsidy). This is the archetypal snare gap. (2) The institutional/constrained agent (urban government) and institutional/arbitrage agent (employer) both classify as beneficiaries but experience different extraction: government sees tangled_rope (genuine coordination mixed with enforcement cost); employer sees rope (pure coordination benefit). The difference is that government must actively enforce while employer can free-ride. (3) The organized/mobile agent (reform coalition) and powerless/trapped agent see fundamentally different timelines: reform coalition sees generational/scaffold (sunset within 15 years); trapped agent sees biographical/snare (no exit within lifetime). (4) The analytical observer risks collapsing the perspectival structure into a mountain (inherent to governance), which false summit detection will reject. The perspectival gaps reveal that hukou is not a natural law but a contingent institutional arrangement with clear beneficiaries, clear victims, and clear pathways for reform.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that hukou is a genuine snare that has been partially reframed as coordination through institutional rhetoric ('population planning,' 'urban management,' 'fiscal sustainability'). The coordination function (matching welfare provision to fiscal capacity) is real but not sufficient to justify the discrimination. The separability test: Can the coordination function (population tracking, service cost control) be preserved without the extractive access restrictions? Yes \u2014 portable national insurance, school funding decoupling, and property-based taxation separate the coordination functions from the discrimination mechanism. Therefore, the snare classification is correct for the baseline perspective (powerless/trapped victim). The tangled_rope perspectives (moderate family, institutional government) capture secondary coordination functions that exist within the snare but do not redeem it. The scaffold perspective (reform coalition) reflects real structural changes (fiscal decoupling, labor shortage pressure) that are creating genuine sunset paths. The mountain perspective is a false summit and must be rejected. The piton perspective (rural government) captures the genuine degradation of the original coordination function while the enforcement mechanism persists through inertia. The comprehensive classification is: snare for trapped agents, tangled_rope for agents with mixed benefit/burden and constrained exit, rope for agents with arbitrage escape, scaffold for organized actors with generational exit paths, and piton for institutions maintaining the constraint despite functional degradation."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "urban_school_funding_stratification",
+      "migrant_healthcare_access_rationing",
+      "pension_system_portability"
+    ],
+    "dual_formulation_note": "The hukou system decomposes into three structurally distinct constraints: (1) school access coordination (education rationing by hukou), (2) healthcare access coordination (insurance pooling by hukou), and (3) pension access coordination (retirement entitlement by hukou registration location). Each has distinct \u03b5 values reflecting whether the coordination function is genuine and whether alternatives exist. The household registry system story treats hukou as a meta-constraint linking these three, with base extractiveness reflecting the average suppression across all three domains. See sister stories for domain-specific analyses."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "header": {
+    "constraint_id": "gerrymandering_entrenchment",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gerrymand"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Gerrymandering Entrenchment: Political Boundary Manipulation as Mixed Coordination-Extraction",
+    "topic_domain": "political_systems/electoral_mechanics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_party_majority",
+      "party_apparatus"
+    ],
+    "victims": [
+      "opposition_voters",
+      "electoral_competitiveness",
+      "democratic_representation"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Opposition Voters in Packed/Cracked Districts",
+      "comment": "PERSPECTIVE 1: OPPOSITION VOTERS (SNARE) \u2014 Voters in heavily gerrymandered districts experience complete suppression of electoral power. Packing (concentrating opposition voters into few districts) or cracking (dispersing them to guarantee minority status in many) removes meaningful exit: moving districts is expensive; voting differently yields no observable effect; organization is fragmented by design. Maximum extraction \u2014 the constraint prevents these voters from converting demographic support into electoral representation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regional Demographic Minorities",
+      "comment": "PERSPECTIVE 2: REGIONAL DEMOGRAPHIC MINORITIES (TANGLED ROPE) \u2014 These groups benefit from coordination on representation mechanisms (districting preserves some baseline structure for organizing political power) but bear asymmetric extraction through manipulation. Constrained exit: they cannot easily relocate and retain political voice, but can in principle organize at neighboring scales or shift coalition strategy. The constraint both enables and extracts \u2014 it coordinates around geographic identity while enabling its suppression."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Incumbent Party Apparatus",
+      "comment": "PERSPECTIVE 3: INCUMBENT PARTY APPARATUS (ROPE) \u2014 The primary beneficiary experiences gerrymandering as pure coordination: designing districts that aggregate their voters, enable coalition-building, and preserve majority control is a genuine solving of the electoral coordination problem for the party. The apparatus has arbitrage options (can abandon gerrymandering, accept competitive maps, and seek other structural advantages). Net beneficiary experiencing the constraint as coordination, not extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Redistricting Process and Theater",
+      "comment": "PERSPECTIVE 4: REDISTRICTING PROCESS (PITON) \u2014 The ostensible institutional function is to ensure equal population representation and fair district design. In practice, the process is substantially theatrical: public comment periods create appearance of input while the outcome is predetermined by the controlling party; claims about 'communities of interest' and 'compactness' are applied selectively to justify pre-planned extractions; court challenges are managed through strategic delays. The theater_ratio (0.65) reflects that the formal process maintains legitimacy through procedural performance while substantive fairness is degraded. The function has atrophied \u2014 from a coordination mechanism (fair representation through district design) to an extraction mechanism maintained by institutional inertia."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Electoral Reform Coalition (Ranked Choice, Independent Commissions)",
+      "comment": "PERSPECTIVE 5: ELECTORAL REFORM COALITION (SCAFFOLD) \u2014 Organized agents (good-government groups, voter initiatives, some state legislatures) see gerrymandering as a temporary coordination failure being addressed through structured reforms: independent redistricting commissions (removing partisan control), ranked-choice voting (reducing the need for geographic concentration), proportional representation pilots. Constrained exit but clear sunset logic \u2014 if these reforms scale, the extraction mechanism's leverage declines. The reforms are not universally implemented, but their spread creates an exit path."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Geography View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL GEOGRAPHY VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some electoral advantage to compact geography is inherent in how district-based systems work: voters distributed unevenly across space will naturally create some districts where one party concentrates. This perspective naturalizes gerrymandering as an unavoidable consequence of geography. However, the structural data contradicts this: modern gerrymandering uses algorithmic optimization and detailed voter data to produce maps far more extractive than geography alone. The mountain classification is a false summit \u2014 the 'natural' framing conceals the extent of active manipulation."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "threshold_between_packing_and_geography",
+      "question": "At what point does geographic concentration of voters become gerrymandered packing rather than natural residential clustering?",
+      "resolution_mechanism": "Comparison of algorithmic vs random district generation; historical analysis of district shapes and demographic breakpoints before/after computer-aided mapping",
+      "impact": "If threshold is high: many contemporary gerrymandered maps appear as natural geography (mountain or rope perspectives strengthen). If threshold is low: the extraction mechanism is revealed as active manipulation regardless of geographic excuse.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold distinguishing natural clustering from algorithmic packing"
+    },
+    {
+      "id": "reform_sustainability",
+      "question": "Do independent redistricting commissions and ranked-choice voting actually reduce partisan extraction, or are they captured/adapted by the controlling party?",
+      "resolution_mechanism": "Longitudinal tracking of district competitiveness and proportionality post-reform; measurement of electoral outcomes vs demographic distribution in commission-drawn vs legislatively-drawn maps",
+      "impact": "If reforms are effective: scaffold perspective is validated and extraction mechanism has genuine sunset. If reforms are captured: the constraint persists under different institutional labels (piton classification strengthens).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether electoral reforms durably reduce gerrymandering extraction"
+    },
+    {
+      "id": "voter_responsiveness_vs_entrenchment",
+      "question": "To what extent does gerrymandering prevent voter responsiveness (extraction) versus enabling legitimate geographic representation (coordination)?",
+      "resolution_mechanism": "Analysis of swing districts vs safe districts; measurement of vote-to-seat ratios in states with and without partisan gerrymandering; study of whether voters in packed opposition districts increase mobilization attempts despite low win probability",
+      "impact": "If responsiveness is severely reduced: snare and tangled_rope perspectives accurate. If geographic districts enable representation despite partisan bias: rope and piton perspectives more accurate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Balance between responsive representation and gerrymandered entrenchment"
+    },
+    {
+      "id": "institutional_path_dependence",
+      "question": "Does gerrymandering entrenchment persist because of genuine extraction mechanisms (career incentives, structural power) or because institutional actors have internalized it as normal and unchangeable?",
+      "resolution_mechanism": "Comparative analysis of jurisdictions with and without gerrymandering; interview data on legislator perceptions of redistricting necessity; measurement of how reformist candidates' positions on gerrymandering affect electability",
+      "impact": "If primarily extraction: snare and tangled_rope from victim perspectives. If primarily internalized normalcy: identity_locked dynamics and piton classification strengthen.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether gerrymandering persists via extraction or institutional internalization"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Gerrymandering entrenchment represents a structural constraint on electoral representation that combines genuine coordination (assembling voters into coherent districts) with asymmetric extraction (optimizing districts to suppress opposition power). The constraint exhibits all six DR types from different perspectives. For opposition voters, it is a snare \u2014 their electoral power is mathematically nullified through strategic packing and cracking with no meaningful exit. For the incumbent party apparatus, it is pure coordination \u2014 designing districts that preserve majority control is a straightforward solving of electoral geography. For independent redistricting reformers, it is a temporary problem with a sunset clause \u2014 new institutional mechanisms are building exit pathways. For the redistricting process itself, the theater ratio (0.65) reveals substantial performative content: public participation and formal fairness procedures mask predetermined partisan outcomes. The constraint's base extractiveness (0.58) has accumulated over two decades as mapping technology has enabled more precise targeting. Computer-aided gerrymandering with voter-level data has transformed district design from an approximate art (where some geographic randomness produced occasional unintended competitiveness) into an exact science (where nearly every district outcome is predetermined). The constraint demonstrates how a mechanism that solves one coordination problem (electoral aggregation) can simultaneously enable massive extraction against those not captured by the solution.",
+    "key_agents": [
+      "Opposition Voters in Gerrymandered Districts: Primary victims (powerless/trapped) \u2014 their electoral power is systematically nullified through packing or cracking; cannot exit or meaningfully organize",
+      "Incumbent Party Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 experiences gerrymandering as pure coordination and electoral advantage; controls redistricting process",
+      "Electoral Reform Coalition: Organized actors (organized/constrained) \u2014 good-government groups, citizen-led ballot initiatives, some state legislatures building alternative mechanisms with sunset logic",
+      "Redistricting Process and Theater: Institutional mechanism (institutional/arbitrage) \u2014 maintains appearance of fairness through formal procedures while serving partisan function; theater-driven piton degradation",
+      "Regional Demographic Minorities: Secondary victims (moderate/constrained) \u2014 benefit from geographic district structure as baseline for organization but experience manipulation within that structure",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing algorithmic extraction as inevitable consequence of geographic representation"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. Over the measurement interval (0-20 years), algorithmic sophistication and voter-level data access have increased the precision of partisan targeting, raising extractiveness from 0.35 (where geographic randomness still produced some competitive districts) to 0.58 (where nearly all outcomes are predetermined). The rise reflects genuine increase in extraction capacity, not measurement change. Suppression (0.72): High. Opposition voters in gerrymandered districts face multiple suppression mechanisms: mathematical nullification (votes don't translate to representation), organizational fragmentation (packing concentrates them into few districts; cracking isolates them), relocation barriers (moving to a competitive district is expensive), and defeatism feedback (low expected win probability reduces mobilization even when coordination would be possible). Suppression is structural rather than merely cultural \u2014 it flows from district geometry. Theater ratio (0.65): Moderate-high and rising. Redistricting processes incorporate extensive performative elements: community input periods that don't change outcomes, fairness criteria (compactness, communities of interest) applied selectively, court challenges navigated through procedural delays, and bipartisan rhetoric about 'fair representation' masking partisan design. The rise from 0.45 to 0.65 reflects increased institutional maintenance of legitimacy (greater theater) as the extraction mechanism becomes more visible.",
+    "perspectival_gap": "The gerrymandering constraint demonstrates maximum perspectival divergence. The incumbent party sees pure coordination (Rope) \u2014 they are solving the legitimate problem of assembling voters into functional districts. Opposition voters see pure extraction (Snare) \u2014 their votes are made meaningless by design. Regional minorities see mixed coordination-extraction (Tangled Rope) \u2014 the district system enables geographic representation while enabling manipulation within it. Reformers see a temporary problem (Scaffold) \u2014 new mechanisms are building exit pathways. The redistricting process itself appears as degraded (Piton) \u2014 the function (fair representation) has atrophied while the institution persists through theater. The analytical observer at civilizational scope risks seeing an immutable natural law (Mountain) \u2014 'some electoral advantage to compact geography is inherent' \u2014 but the structural data reveals algorithmic optimization far exceeding geographic necessity. The perspectival gap is driven by directionality: beneficiaries with arbitrage options experience low chi; trapped agents experience maximum chi; organized reformers experience moderate chi with exit pathways.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from the agent's structural relationship to extraction flow. The incumbent party as beneficiary (victim=false, exit=arbitrage) derives d \u2248 0.15, producing f(d) \u2248 -0.01, resulting in negative or near-zero effective extraction (they experience the constraint as a positive coordination mechanism). Opposition voters as victims (victim=true, exit=trapped) derive d \u2248 0.95, producing f(d) \u2248 1.42, resulting in high effective extraction chi \u2248 0.58 \u00d7 1.42 \u00d7 1.0 = 0.82 (national scope \u03c3=1.0). Regional minorities as constrained victims (victim=true, exit=constrained) derive d \u2248 0.75, producing f(d) \u2248 1.15, resulting in chi \u2248 0.58 \u00d7 1.15 \u00d7 1.0 = 0.67. The electoral reform coalition as organized agents with constrained exits and beneficiary status (partial) derive d \u2248 0.50, producing f(d) \u2248 0.65, resulting in chi \u2248 0.58 \u00d7 0.65 \u00d7 1.0 = 0.38. These values confirm the perspectival gap: beneficiaries see low extraction (Rope); trapped victims see high extraction (Snare); partially beneficiary organized groups see moderate extraction (Scaffold). The analytical observer at universal scope takes d \u2248 0.72 (from canonical analytical), producing f(d) \u2248 1.15, but the mountain claim is contradicted by suppression > 0.70 and active enforcement > true, failing natural law gates.",
+    "mandatrophy_analysis": "The constraint's claimed type (Tangled Rope) requires three gates: beneficiaries declared (\u2713 incumbent_party_majority, party_apparatus), victims declared (\u2713 opposition_voters, electoral_competitiveness, democratic_representation), and active enforcement required (\u2713 true). The structure satisfies tangled_rope gates. Mandatrophy arises from the false summit (Mountain from analytical perspective at civilizational scope). The analytical view claims natural geography makes some partisan advantage inevitable \u2014 this appears as an immutable law (emerges_naturally \u2248 true?). However, the base properties contradict this: suppression is 0.72 (far exceeding 0.05 natural law threshold), requires_active_enforcement is true (natural laws don't require enforcement), and theater_ratio is 0.65 (natural laws don't perform). The mountain classification is a false summit produced by conflating 'geographic differences create some partisan variation' (true, low \u03b5) with 'modern gerrymandering extracts using geographic data as cover' (true, high \u03b5). These are distinct claims \u2014 the constraint story correctly addresses the second. The analytical observer's natural law framing naturalizes the active manipulation. Mandatrophy resolution: Declare mandatrophy_resolved = false; document the false summit in omegas; rely on suppression \u2265 0.70 and theater_ratio to fail the mountain gates despite the civilizational/universal observer's framing."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "voter_mobilization_dynamics",
+      "minority_representation_voting_rights",
+      "electoral_college_entrenchment"
+    ],
+    "dual_formulation_note": "Gerrymandering entrenchment is distinct from the natural geographic variation in voter distribution (low \u03b5, mountain/rope). The constraint addresses algorithmic and partisan optimization on top of geography, producing higher extractiveness. Voter mobilization dynamics and minority representation are downstream: gerrymandering suppresses both, creating structural effects on coalition-building and voting rights enforcement."
+  },
+  "directionality_overrides": []
+}

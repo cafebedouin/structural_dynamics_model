@@ -1,0 +1,212 @@
+{
+  "header": {
+    "constraint_id": "regulatory_arbitrage_strategy",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "reg_arb"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Regulatory Arbitrage via Fait Accompli Manufacturing",
+    "topic_domain": "technology_governance/autonomous_vehicles/platform_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "tesla_regulatory_negotiating_position",
+      "first_mover_market_capture"
+    ],
+    "victims": [
+      "regulatory_process_integrity",
+      "competing_manufacturers",
+      "public_safety_verification"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Regulatory Process Integrity",
+      "comment": "PERSPECTIVE 1: REGULATORY PROCESS INTEGRITY (SNARE) \u2014 The regulatory approval process has no exit option once manufacturing creates fait accompli pressure. Cannot refuse approval without triggering economic crisis (stranded capital, job losses, supply chain disruption). Maximum extraction: the process designed to evaluate safety before deployment is inverted into post-hoc ratification under duress."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Competing Manufacturers",
+      "comment": "PERSPECTIVE 2: COMPETING MANUFACTURERS (SNARE) \u2014 Constrained by regulatory compliance requirements that the first mover bypasses. Face choice between following established approval pathways (losing market position) or imitating the arbitrage strategy (escalating regulatory crisis). High extraction: the constraint punishes compliance and rewards defection."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "State-Level Regulators",
+      "comment": "PERSPECTIVE 3: STATE-LEVEL REGULATORS (TANGLED ROPE) \u2014 Organized actors with some enforcement capacity but constrained by interstate commerce clause and federal preemption. Experience both coordination (state-level pilot programs enable incremental deployment testing) and extraction (federal exemption strategy bypasses state authority). Can exit via non-approval but face economic pressure from local manufacturing presence."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Tesla Regulatory Negotiating Position",
+      "comment": "PERSPECTIVE 4: TESLA REGULATORY NEGOTIATING POSITION (ROPE) \u2014 Primary beneficiary with arbitrage exit options (can shift production, threaten relocation, lobby for federal preemption). Experiences the constraint as coordination: manufacturing at scale demonstrates technical feasibility and creates stakeholder coalition (suppliers, workers, investors) that supports regulatory approval. Low effective extraction \u2014 the constraint works for this agent."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Public Safety Verification",
+      "comment": "PERSPECTIVE 5: PUBLIC SAFETY VERIFICATION (SNARE) \u2014 Abstract collective good with no advocate and no exit. The verification process requires controlled deployment, incremental scaling, and independent evaluation \u2014 all bypassed by fait accompli manufacturing. Trapped: cannot exit the roads where vehicles operate, cannot organize to demand verification before deployment. Maximum extraction from the epistemic commons."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International Standards Coalition",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL STANDARDS COALITION (SCAFFOLD) \u2014 ISO, UNECE, SAE working groups see the US regulatory arbitrage as a temporary coordination failure with sunset logic: international harmonization of autonomous vehicle standards will eventually constrain unilateral fait accompli strategies. Mobile exit options (can exclude non-compliant manufacturers from international markets). Low extraction because coalition has agency and sees convergence pathway."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational perspective, the strategy exhibits both coordination function (resolves chicken-egg problem of requiring proven safety before allowing deployment needed to prove safety) and asymmetric extraction (concentrates regulatory capture benefits on first mover while distributing safety risks across public). The constraint is a genuine hybrid: it solves a real coordination problem through an extractive mechanism."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "stranded_capital_threshold",
+      "question": "At what production volume does stranded capital create sufficient political pressure to force regulatory approval regardless of safety verification status?",
+      "resolution_mechanism": "Historical analysis of regulatory capitulation events; correlation between manufacturing investment scale and approval timeline compression; identification of threshold where economic disruption cost exceeds political cost of approval without verification",
+      "impact": "If threshold < 10,000 units: fait accompli strategy is reliably extractive (low capital commitment forces approval). If threshold > 100,000 units: strategy is high-risk coordination (requires genuine technical confidence to justify capital at risk).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Production volume threshold for regulatory capitulation via stranded capital pressure"
+    },
+    {
+      "id": "safety_verification_counterfactual",
+      "question": "Would traditional incremental deployment pathway (controlled pilots, independent evaluation, gradual scaling) have identified critical safety failures that fait accompli manufacturing bypasses?",
+      "resolution_mechanism": "Comparison of incident rates in jurisdictions with incremental deployment vs fait accompli approval; identification of failure modes discovered post-deployment that would have been caught in controlled pilots; analysis of whether compressed timeline reduced verification quality or merely reduced verification theater",
+      "impact": "If incremental pathway catches critical failures: extraction is real (public safety sacrificed for first-mover advantage). If incremental pathway is primarily theater: constraint is coordination (fait accompli bypasses performative process without safety cost).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether incremental deployment would catch failures that fait accompli manufacturing bypasses"
+    },
+    {
+      "id": "regulatory_capture_mechanism",
+      "question": "Is the fait accompli pressure a one-time arbitrage opportunity or a repeatable extraction mechanism that degrades regulatory capacity across technology domains?",
+      "resolution_mechanism": "Longitudinal analysis of regulatory approval timelines and capital-at-risk patterns across technology sectors; identification of whether other manufacturers adopt the strategy; measurement of regulatory agency staffing, budget, and independence metrics before and after precedent-setting approvals",
+      "impact": "If one-time: constraint is coordination with sunset (regulatory process adapts, closes loophole). If repeatable: constraint is extractive infrastructure (regulatory capture becomes standard operating procedure, agency capacity degrades).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether fait accompli strategy is one-time arbitrage or repeatable extraction mechanism"
+    },
+    {
+      "id": "international_standards_enforcement",
+      "question": "Can international standards coalitions actually exclude non-compliant manufacturers from global markets, or is enforcement theater?",
+      "resolution_mechanism": "Analysis of historical standards enforcement: WTO dispute resolution outcomes, market access denial precedents, effectiveness of non-tariff barriers based on safety standards; identification of whether standards bodies have enforcement teeth or merely advisory capacity",
+      "impact": "If enforceable: scaffold perspective confirmed (international harmonization provides real sunset). If theater: scaffold perspective is aspirational, and the constraint remains extractive at global scope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether international standards provide enforceable constraint on regulatory arbitrage"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "reg_arb_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48,
+      "id_override": "reg_arb_theater_t3"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58,
+      "id_override": "reg_arb_theater_t6"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "reg_arb_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.56,
+      "id_override": "reg_arb_extract_t3"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68,
+      "id_override": "reg_arb_extract_t6"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Tesla's strategy of manufacturing vehicles requiring federal safety exemptions (no steering wheel, no pedals) before securing regulatory approval creates a structural inversion of the technology governance process. Traditional pathway: demonstrate safety in controlled pilots \u2192 secure regulatory approval \u2192 scale manufacturing. Fait accompli pathway: commit capital to manufacturing at scale \u2192 create stranded capital pressure \u2192 force regulatory approval under economic duress. As of March 2026, Tesla has manufactured 25+ Cybercab units and announced 2M/year production targets, with zero jurisdictions approved for no-steering-wheel operation. The constraint exhibits high extraction (\u03b5=0.68) because it concentrates first-mover benefits on the manufacturer while distributing safety verification costs and regulatory process degradation across the public. Suppression is high (0.72) because competing manufacturers face asymmetric choice: follow compliance pathways and lose market position, or imitate the arbitrage strategy and escalate the regulatory crisis. Theater ratio (0.58) reflects that post-hoc regulatory review under fait accompli pressure is substantially performative \u2014 the economic disruption cost of non-approval exceeds the political cost of approval without full verification, converting safety review into ratification theater.",
+    "key_agents": [
+      "Tesla Regulatory Negotiating Position: Primary beneficiary (institutional/arbitrage) \u2014 captures first-mover market advantage and sets regulatory precedent favorable to its technical architecture",
+      "Regulatory Process Integrity: Primary victim (powerless/trapped) \u2014 designed to evaluate safety before deployment, inverted into post-hoc ratification under economic duress",
+      "Public Safety Verification: Primary victim (powerless/trapped) \u2014 abstract collective good requiring controlled deployment and independent evaluation, bypassed by fait accompli manufacturing",
+      "Competing Manufacturers: Secondary victim (moderate/constrained) \u2014 face asymmetric compliance burden and choice between losing market position or imitating extractive strategy",
+      "State-Level Regulators: Mixed position (organized/constrained) \u2014 some enforcement capacity but constrained by federal preemption and interstate commerce; experience both coordination (pilot programs) and extraction (authority bypass)",
+      "International Standards Coalition: Organized agents (organized/mobile) \u2014 ISO, UNECE, SAE working groups building harmonized standards with potential sunset logic if enforcement is real"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The strategy concentrates first-mover market capture, regulatory precedent-setting, and technical architecture lock-in benefits on Tesla while distributing safety verification costs, regulatory process degradation, and competitive disadvantage across public and competitors. The extraction is structural: manufacturing before approval inverts the governance process from 'prove safety then deploy' to 'deploy then rationalize.' Suppression (0.72): High. Competing manufacturers cannot exit the constraint \u2014 following compliance pathways means losing market position to the first mover; imitating the strategy escalates regulatory crisis and increases systemic risk. Regulatory process has no exit once capital is committed \u2014 refusing approval triggers economic disruption (stranded capital, supply chain losses, job losses) that exceeds political cost of approval. Public has no exit from roads where vehicles operate. Theater ratio (0.58): Moderate-high and rising. Initial regulatory review (t=0) had some genuine verification content, but as manufacturing scales and capital commitment increases, review becomes increasingly performative. By t=6, the economic disruption cost of non-approval dominates the safety verification function \u2014 regulators are reviewing to find reasons to approve rather than to independently verify safety. The theater is not total (some technical review occurs) but the structural incentive is toward ratification rather than evaluation.",
+    "directionality_logic": "Tesla's institutional power with arbitrage exit options (can shift production, threaten relocation, lobby for federal preemption) combined with primary beneficiary status yields low d \u2192 low/negative effective extraction. The company experiences the constraint as coordination: manufacturing demonstrates feasibility and builds stakeholder coalition supporting approval. Regulatory process integrity is powerless (abstract institutional function with no advocate) and trapped (cannot exit once capital committed), yielding maximum d \u2192 maximum effective extraction. Competing manufacturers are moderate power with constrained exit (can choose non-participation but lose market position), yielding high d \u2192 high extraction. State regulators are organized with constrained exit (can refuse approval but face federal preemption and economic pressure), yielding moderate d \u2192 moderate extraction. Public safety verification is powerless and trapped (no exit from roads, no organization capacity), yielding maximum d. International standards coalition is organized with mobile exit (can exclude non-compliant manufacturers from international markets if enforcement is real), yielding low d \u2192 low extraction.",
+    "perspectival_gap": "The constraint demonstrates the full range of DR classification based on structural position. Tesla sees coordination (Rope) \u2014 the strategy solves the chicken-egg problem of requiring proven safety before allowing the deployment needed to prove safety. International standards coalition sees temporary coordination failure with sunset (Scaffold) \u2014 harmonization will eventually constrain unilateral arbitrage. State regulators see mixed coordination and extraction (Tangled Rope) \u2014 pilot programs enable useful incremental testing, but federal exemption strategy bypasses state authority. Regulatory process integrity, competing manufacturers, and public safety verification all see pure extraction (Snare) \u2014 the constraint inverts governance, concentrates benefits, and distributes costs with no exit option. The analytical observer sees genuine hybrid (Tangled Rope) \u2014 the strategy does solve a real coordination problem (how to prove safety before deployment when deployment is required to prove safety) but solves it through an extractive mechanism (fait accompli pressure that degrades regulatory independence).",
+    "mandatrophy_analysis": "The constraint is not yet resolved for mandatrophy (extractiveness 0.68 < 0.70 threshold) but approaches the boundary. The mandatrophy question is: does the fait accompli strategy solve a genuine coordination problem (the chicken-egg dilemma of safety verification before deployment) or merely naturalize regulatory capture as 'innovation-friendly policy'? The analytical perspective identifies the hybrid structure: there IS a real coordination problem (traditional incremental deployment pathways are slow and may be partly theatrical), AND the solution mechanism is extractive (concentrates first-mover benefits while distributing safety risks and regulatory degradation). The perspectival gap is diagnostic: agents experiencing extraction (regulatory process, public safety, competitors) see Snare; agent capturing benefits sees Rope; analytical observer sees Tangled Rope. The classification prevents both false positives (dismissing all regulatory arbitrage as pure extraction when some coordination function exists) and false negatives (naturalizing fait accompli pressure as necessary innovation when extraction is real). Resolution requires empirical data on omega variables: does incremental deployment catch failures that fait accompli bypasses? Is the strategy one-time arbitrage or repeatable extraction infrastructure?"
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "hardware_software_inversion",
+      "sensor_modality_lock_in"
+    ],
+    "dual_formulation_note": "This constraint is downstream of hardware_software_inversion (the technical architecture requiring regulatory exemptions) and sensor_modality_lock_in (the vision-only approach requiring novel safety arguments). The regulatory arbitrage strategy is a distinct structural constraint with its own extractiveness reflecting the governance process inversion, separate from the technical claims' empirical status. The upstream constraints establish the technical architecture requiring exemptions; this constraint models the fait accompli manufacturing strategy used to secure those exemptions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.45
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "hardware_software_inversion",
+      "sensor_modality_lock_in"
+    ]
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "header": {
+    "constraint_id": "stimulant_dependency_escalation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "stim_dep"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Stimulant Dependency Escalation Trap",
+    "topic_domain": "neurobiology/pharmacology/addiction",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharmaceutical_manufacturers",
+      "prescribing_physicians"
+    ],
+    "victims": [
+      "dependent_users",
+      "neurobiological_self"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Dependent User",
+      "comment": "PERSPECTIVE 1: DEPENDENT USER (SNARE) \u2014 Trapped by neurobiological changes that make abstinence acutely aversive. Initial use was often voluntary (prescribed or self-administered), but the constraint mechanism ensures escalating doses are required to avoid withdrawal dysphoria. The user bears full cost: neurotoxicity, financial depletion, social isolation, organ damage. Zero coordination benefit. Maximum suppression \u2014 the body's own altered reward chemistry becomes the enforcement mechanism."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The User's Neurobiological Self",
+      "comment": "PERSPECTIVE 2: NEUROBIOLOGICAL SELF (SNARE, GENERATIONAL) \u2014 At longer timescales, the constraint operates on the user's dopaminergic and glutamatergic systems. Chronic stimulant use produces D1/D2 receptor downregulation, blunted baseline reward capacity, and enhanced sensitization to drug-associated cues. The neurobiological 'self' that would prefer lower doses or abstinence is structurally suppressed by the altered neural substrate. From this perspective, the user is not choosing escalation \u2014 the constraint enforces it through rewiring. Exit requires rebuilding reward circuitry, which takes months to years (and feels like anhedonia during that interval)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Pharmaceutical Manufacturer",
+      "comment": "PERSPECTIVE 3: PHARMACEUTICAL MANUFACTURER (ROPE) \u2014 Manufactures prescription stimulants (methylphenidate, amphetamine salts, lisdexamfetamine) nominally for ADHD treatment. The escalation dynamic is a coordinating feature: dosage titration reflects genuine therapeutic adjustment AND creates increasing dependence. Manufacturer benefits from the constraint: higher lifetime dosages = higher sales volume. The constraint appears to them as efficient market coordination \u2014 matching dose to need. Extraction runs toward them; they have full arbitrage optionality (exit by stopping production, but that is not salient because they benefit)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Prescribing Physician",
+      "comment": "PERSPECTIVE 4: PRESCRIBING PHYSICIAN (TANGLED ROPE) \u2014 Experiences the constraint as mixed coordination and extraction. Genuine coordination function: matching stimulant dosage to ADHD symptom severity benefits both physician (successful treatment) and patient (symptom relief). But escalation mechanism creates extraction: the physician's liability exposure if the patient develops dependence is limited (off-label responsibility is diffuse); their reputation and income are tied to patient satisfaction and outcome metrics that reward symptom control regardless of long-term dependency trajectory. Constrained by institutional incentives (medical liability, practice revenue, time pressure during appointments). The physician both benefits (positive outcome ratings, satisfied patients during the therapeutic window) and extracts from the patient (insufficient monitoring for dependence signs, insufficient tapering protocols)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "The ADHD Clinician Profession",
+      "comment": "PERSPECTIVE 5: ADHD CLINICIAN PROFESSION (SNARE, identity_locked) \u2014 The professional identity of ADHD clinicians is partially constituted through the stimulant-centered treatment model. Decades of training, research productivity, and professional reputation have been built on pharmacological intervention (titration protocols, dosage adjustments, symptom checklists tied to pharmaceutical response). Clinical psychology and psychiatry have internalized stimulants as THE validated approach. Exit from stimulant-first paradigms would require abandoning not just a treatment modality but the identity through which these professionals see their own expertise and success. The constraint is identity-locked: the profession *could* transition to behavioral interventions, mindfulness training, or neurofeedback-first approaches (structurally mobile), but the cognitive frame that constitutes clinical credibility makes this shift unthinkable from within. The victim here is the profession's own capacity for innovation \u2014 locked into a single-mechanism solution space."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Apparatus (FDA/DEA)",
+      "comment": "PERSPECTIVE 6: REGULATORY APPARATUS (PITON) \u2014 The FDA/DEA regulatory framework for stimulant scheduling and prescription oversight performs a theatrical compliance function rather than an effective protection mechanism. Schedule II classification theoretically prevents escalation through non-refillable prescriptions and limited quantity thresholds. But: (1) prescribers routinely circumvent limits via new prescriptions before prior ones expire, (2) the regulatory apparatus has capacity to monitor only aggregate prescribing trends, not individual dependency trajectories, (3) DEA enforcement is sparse relative to the volume of prescriptions issued. Theater ratio is high because the regulatory ritual (prescription forms, DEA numbers, periodic audits) persists despite marginal effectiveness at preventing dependency. The constraint maintains itself through institutional inertia \u2014 alternatives (real-time prescription databases, mandatory tapering protocols, addiction screening at each visit) exist but would require regulatory restructuring. The piton persists because exiting the current framework requires admitting that the existing apparatus is largely performative."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Pharmacodynamic Natural Law)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, stimulant escalation reflects immutable properties of dopaminergic pharmacology: repeated activation of D1/D2 receptors produces tolerance (receptors downregulate), requiring higher doses to achieve equivalent neural effect. This escalation is inherent to the molecule's mechanism, not contingent on institutional arrangements. The 'constraint' appears as a natural law \u2014 a mathematical consequence of receptor kinetics and adaptation, not a social extraction mechanism. However, the structural data contradicts this classification. The escalation magnitude and trajectory are heavily mediated by prescribing norms, psychiatric framing (disease model vs behavioral model), regulatory laxity, and pharmaceutical marketing. Non-human animals self-administering stimulants show escalation, but human clinical escalation is significantly faster and more severe \u2014 suggesting institutional/social amplification of the biological baseline. The analytical mountain perspective is a false summit: naturalization of what is partially contingent institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "therapeutic_vs_dependency_dosage_threshold",
+      "question": "Where is the threshold between therapeutic dosage adjustment and dependency-driven escalation? Is the same dose increase justified by ADHD symptom progression or by neurobiological tolerance?",
+      "resolution_mechanism": "Longitudinal tracking of ADHD symptom improvement vs dosage increase rates; comparison of symptom severity in patients stabilized at lower doses vs escalating patients; biomarkers of tolerance (dopamine transporter density via PET) vs therapeutic response (behavioral improvement via standardized scales)",
+      "impact": "If threshold is identifiable: escalation can be distinguished from appropriate titration, enabling prescriber oversight. If threshold is invisible: 'therapeutic need' becomes unfalsifiable cover for dependency-driven escalation, and snare classification is reinforced.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Distinction between therapeutic dosage adjustment and tolerance-driven escalation"
+    },
+    {
+      "id": "prescriber_knowledge_of_dependency_mechanism",
+      "question": "Do prescribing physicians understand the neurobiological escalation mechanism, or do they interpret dose increases as evidence of treatment effectiveness?",
+      "resolution_mechanism": "Survey of prescriber knowledge of dopamine receptor downregulation, tolerance timelines, and dependency risk; comparison of prescribing behavior between providers trained on tolerance mechanisms vs those trained on symptom-responsive dosing; analysis of whether prescribers document escalation explicitly or attribute it to symptom severity",
+      "impact": "If prescribers understand the mechanism: tangled rope classification is correct (they knowingly extract via escalation). If prescribers genuinely believe escalation reflects therapeutic need: they are unwitting conduits for the snare (captured by false framing), and the constraint has an additional layer of cognitive capture.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Prescriber understanding of pharmacological escalation mechanisms"
+    },
+    {
+      "id": "exit_possibility_without_medical_supervision",
+      "question": "Can dependent users achieve stable tapering and abstinence without medical intervention? Is medical support necessary to exit, or does the 'need for tapering protocol' constitute additional artificial suppression?",
+      "resolution_mechanism": "Comparative analysis of self-directed tapering success rates vs medically-supervised tapering; tracking of withdrawal severity and anhedonia duration in self-tapered vs supervised groups; assessment of whether medical involvement increases tapering success or merely lengthens the process",
+      "impact": "If self-directed tapering is viable: the suppression mechanism is primarily biological (withdrawal), and the constraint is high but potentially escapable. If self-directed tapering fails catastrophically: medical dependence becomes structural, and suppression is amplified by institutional gating of exit protocols.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of self-directed versus medically-supervised dependency exit"
+    },
+    {
+      "id": "identity_lock_persistence_post_profession_change",
+      "question": "If ADHD clinicians transition to non-pharmacological treatment modalities, does their professional identity require recovery, or do they adapt to new models while maintaining clinical coherence?",
+      "resolution_mechanism": "Longitudinal interviews with clinicians who transitioned from pharmacology-first to behavioral/cognitive approaches; assessment of identity continuity, professional satisfaction, and self-perceived expertise before and after transition",
+      "impact": "If identity recovery is required: the profession is genuinely identity-locked, and perspective 5 classification is validated. If identity adapts smoothly: the lock is weaker than perceived, and the snare may be partially optional (constrained rather than identity-locked).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Identity persistence through professional reorientation from pharmacological to behavioral paradigms"
+    },
+    {
+      "id": "regulatory_apparatus_actual_deterrence_capacity",
+      "question": "Do the Schedule II controls (non-refillable prescriptions, quantity limits, DEA monitoring) actually prevent escalation, or are they purely performative?",
+      "resolution_mechanism": "Analysis of prescription patterns before and after regulatory tightening (e.g., DEA scheduling changes); comparison of escalation rates in jurisdictions with tight vs loose prescription database monitoring; assessment of whether prescribers' circumvention strategies (rapid prescription cycling, multi-provider prescribing) defeat the intended control mechanism",
+      "impact": "If controls are effective: piton classification is incorrect, and the apparatus performs real constraint function (reclassify as rope or tangled rope). If controls are defeated: piton classification is validated, and the theater ratio remains high despite regulatory activity.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Effectiveness of Schedule II controls in preventing escalation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Stimulant dependency escalation is a neurobiological-institutional constraint that traps individuals through a combination of pharmacological mechanism (dopamine receptor tolerance) and institutional structures (prescription practices, clinical identity, regulatory theater) that amplify and legitimize the escalation. The constraint exhibits multiple structural forms depending on the observer's position: a natural law of pharmacodynamics (mountain, false summit), a regulatory performance ritual (piton), pure extraction from the dependent user (snare from powerless perspective), mixed coordination and extraction from the prescriber (tangled rope), identity-locked professional commitment (snare from clinical perspective), and institutional arbitrage for manufacturers (rope). The escalation dynamic is not purely biological \u2014 it is amplified by prescribing norms that treat dose increases as evidence of therapeutic appropriateness rather than warning signs of tolerance. The constraint's theater ratio (0.58) reflects that clinical symptom checklists, dosage titration protocols, and regulatory forms perform significant compliance theater without effectively preventing dependency-driven escalation. The measurements show extractiveness and theater rising together from year 0 to year 10, indicating that as the institutional apparatus for managing ADHD matured (more prescribers, refined diagnostic criteria, expanded clinical networks), the constraint's extractive grip actually tightened rather than loosened.",
+    "key_agents": [
+      "Dependent User: Primary victim (powerless/trapped) \u2014 bears full cost of escalation through neurotoxicity, financial depletion, and withdrawal suppression",
+      "Neurobiological Self: Secondary victim (powerless/trapped at generational horizon) \u2014 dopaminergic substrate is rewired, making lower-dose preference and abstinence unattainable without months of recovery",
+      "Pharmaceutical Manufacturer: Primary beneficiary (institutional/arbitrage) \u2014 captures escalation benefit through increased dosage volumes and lifetime customer value",
+      "Prescribing Physician: Mixed actor (moderate/constrained) \u2014 both coordinates genuine symptom treatment AND extracts via insufficient dependency monitoring",
+      "ADHD Clinician Profession: Secondary actor (moderate/identity_locked) \u2014 professionally constituted through stimulant-first paradigm; exit to behavioral approaches is structurally possible but identity-locked",
+      "FDA/DEA Regulatory Apparatus: Institutional actor (institutional/arbitrage) \u2014 maintains performative control structures with minimal enforcement capacity; benefits from appearance of regulation without bearing costs of actual prevention"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The dependent user experiences severe extraction \u2014 escalating doses are required to avoid withdrawal dysphoria, meaning the user must continuously increase consumption to maintain baseline functionality. The pharmacological mechanism is non-negotiable: dopamine receptors downregulate with chronic stimulation. But the extractiveness magnitude is amplified by institutional factors: prescribers are incentivized to titrate doses upward (patient satisfaction metrics, symptom-response attribution), pharmaceutical marketing normalizes high-dose treatment, and regulatory oversight is insufficient to detect and prevent individual dependency trajectories. The value reflects that roughly 30-40% of people initiating prescription stimulants develop escalation patterns exceeding clinical guidelines, and for those who do, the extraction is nearly absolute (they cannot access lower doses without severe withdrawal). Suppression (0.72): High. Multiple suppression layers: (1) Neurobiological \u2014 withdrawal dysphoria, anhedonia, and fatigue make abstinence acutely unbearable, (2) Institutional \u2014 medical models frame escalation as symptom-responsive titration rather than dependency, (3) Social \u2014 ADHD diagnosis is often necessary for academic/occupational accommodation, creating identity tie to stimulant treatment, (4) Economic \u2014 alternative treatments (behavioral therapy, coaching) are expensive and uninsured while prescriptions are subsidized. Suppression is highest at the dependent-user perspective (trapped, not merely constrained). Theater ratio (0.58): Moderate-high. Significant performative content in the clinical apparatus: symptom rating scales (ADHD Rating Scale, Connor Scale) are designed to detect symptom severity but are easily gamed by patients seeking dose increases; dosage titration protocols perform the function of therapeutic matching while actually enabling escalation; prescriber documentation often attributes dose increases to 'diagnostic confirmation' (ADHD was more severe than initially assessed) rather than to tolerance. Regulatory forms (DEA triplicate prescriptions, state prescription databases) perform control theater with minimal actual prevention \u2014 prescribers circumvent them through rapid prescription cycling or multi-provider strategies.",
+    "perspectival_gap": "The snare classification (perspectives 1-2) reflects the dependent user's and neurobiological substrate's experience: maximum suppression, zero coordination benefit, no exit option. The rope classification (perspective 3) reflects the manufacturer's experience: pure coordination benefit with low suppression cost. The tangled rope classification (perspective 4) reflects the prescriber's mixed experience: genuine symptom coordination alongside asymmetric extraction via insufficient monitoring. The snare with identity lock (perspective 5) reflects the profession's experience: the constraint is experienced as snare (pure extraction of alternative treatment pathways from the profession's cognitive toolkit) because exit is identity-locked, not because the structural barriers are materially insurmountable. The piton classification (perspective 6) reflects the regulatory apparatus's experience: the constraint persists through theatrical compliance despite functional ineffectiveness. The mountain classification (perspective 7) is a false summit \u2014 it naturalizes the escalation as pharmacological law while ignoring institutional amplification.",
+    "directionality_logic": "Directionality (d) maps each agent's structural position \u2014 their power level, exit options, and beneficiary/victim status \u2014 to their experienced extractiveness. The dependent user (powerless/trapped/victim) derives d \u2248 0.95, yielding maximum f(d) \u2248 1.42, so they experience \u03c7 = 0.68 \u00d7 1.42 \u00d7 (scope modifier) \u2014 very high effective extraction. The manufacturer (institutional/arbitrage/beneficiary) derives d \u2248 0.05, yielding f(d) \u2248 -0.12, so they experience \u03c7 = 0.68 \u00d7 (-0.12) \u00d7 1.0 \u2014 negative effective extraction (the constraint subsidizes them). The prescriber (moderate/constrained, mixed beneficiary-victim) derives d \u2248 0.50-0.55, yielding moderate f(d) \u2248 0.65-0.75, so they experience \u03c7 \u2248 0.44-0.51 \u2014 moderate extraction (they both benefit and pay). The regulatory apparatus (institutional/arbitrage despite performative function) derives d \u2248 0.00-0.10, yielding f(d) \u2248 -0.12 to 0.05, so they experience \u03c7 \u2248 -0.08 to 0.03 \u2014 near-zero or negative (their institutional position is maintained without bearing extraction costs).",
+    "mandatrophy_analysis": "SNARE RESOLUTION WITHOUT MANDATROPHY PARADOX: The constraint is classified as snare from multiple perspectives, particularly from the dependent user and profession perspectives. The mandatrophy question is: does this high-extraction constraint actually coordinate something genuine, or is it pure extraction? The answer is that it coordinates different things at different perspectives. From the manufacturer's view, it coordinates product-customer loyalty (rope). From the prescriber's view, it coordinates symptom-response matching with problematic escalation (tangled rope). From the user's view, it coordinates withdrawal prevention with increasing dependency (snare \u2014 no genuine coordination benefit to the victim). The mandatrophy is resolved by accepting that coordination and extraction are NOT inverses at the constraint level \u2014 the same mechanism (dose escalation) can be genuine therapeutic coordination from one perspective and pure extraction from another. The constraint is legitimately snare from the powerless user perspective and legitimately rope from the institutional manufacturer perspective. This is not a paradox; it is the normal state of asymmetric constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "adhd_diagnostic_criterion_expansion",
+      "pharmaceutical_marketing_directtoconsumer",
+      "prescription_database_oversight"
+    ],
+    "dual_formulation_note": "Stimulant dependency escalation is downstream of ADHD diagnostic criterion expansion (broader eligibility pool) and upstream of prescription database oversight (detection and prevention mechanisms). The three stories in this family have different \u03b5 values reflecting different observables: diagnostic expansion (\u03b5=0.45, tangled rope \u2014 genuine need coordination + asymptomatic prescribing), escalation mechanism (\u03b5=0.68, snare \u2014 neurobiological lock-in), and oversight failure (\u03b5=0.38, piton \u2014 performative regulation)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.02
+    }
+  ]
+}

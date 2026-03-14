@@ -1,0 +1,213 @@
+{
+  "header": {
+    "constraint_id": "primary_election_capture",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "prim_elec"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Primary Election Capture and Partisan Gatekeeping",
+    "topic_domain": "political/electoral",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "major_party_establishments",
+      "incumbent_officeholders",
+      "party_institutional_machinery"
+    ],
+    "victims": [
+      "primary_voters",
+      "insurgent_candidates",
+      "electoral_democratic_accountability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Disenfranchised Primary Voter",
+      "comment": "PERSPECTIVE 1: DISENFRANCHISED PRIMARY VOTER (SNARE) \u2014 The voter has no exit from the binary choice presented by party gatekeeping. Cannot vote for preferred candidate if party apparatus blocks their path. Cannot exit the duopoly without forfeiting electoral agency entirely. Suppression is total: gerrymandering, voter ID restrictions, ballot access barriers, debate thresholds, and media blackouts constrain which options reach the ballot. The voter experiences pure extraction \u2014 their preference signal is neutralized before aggregation occurs."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Insurgent Candidate",
+      "comment": "PERSPECTIVE 2: INSURGENT CANDIDATE (SNARE) \u2014 Faces massive barriers to ballot access, debate participation, funding, and media coverage. Democratic primary rules (delegate thresholds, petition signature requirements, filing fees, winner-take-all conventions) were designed and are continuously adjusted by party insiders to filter out challenges to leadership. Exit option is formally available (run as independent, switch parties, withdraw) but carries severe penalties: loss of accumulated party resources, loss of brand identification, loss of fundraising apparatus. High-cost exit produces trapped-like behavior even with technical mobility."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Primary Activist Base",
+      "comment": "PERSPECTIVE 3: PRIMARY ACTIVIST BASE (TANGLED ROPE) \u2014 Party insiders provide coordination services (organizing, messaging, resource mobilization) that activists need to influence politics. But the apparatus also constrains what insurgent candidates can communicate, which issues dominate primary discourse, and who can challenge incumbent party leadership. Genuine coordination function with asymmetric extraction: activists benefit from party machinery but their voice is systematically discounted when it diverges from leadership preferences."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Party Establishment",
+      "comment": "PERSPECTIVE 4: PARTY ESTABLISHMENT (ROPE) \u2014 Experiences the primary system as pure coordination: the apparatus solves the collective action problem of selecting a nominee. Leadership can arbitrage between state primary rules, can choose which challengers to elevate and which to suppress, can manipulate debate participation thresholds, and can extract loyalty through control of endorsements and party resources. Net beneficiary \u2014 extraction flows toward this agent."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Democratic Primary Ritual",
+      "comment": "PERSPECTIVE 5: DEMOCRATIC PRIMARY RITUAL (PITON) \u2014 The primary system contains substantial theatrical elements: debates perform candidate evaluation but are format-constrained by networks and parties; town halls and campaign appearances are stagy performances; primary night coverage is ritualistic celebration of party unity. The high theater ratio (0.68) reflects that much primary activity is performative legitimation rather than functional selection. The ritual persists through institutional inertia despite degraded function \u2014 parties maintain 'competitive primaries' while systematically filtering the competition."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Reform Coalition",
+      "comment": "PERSPECTIVE 6: REFORM COALITION (TANGLED ROPE) \u2014 Organized actors (good-government groups, election administration reformers, some incumbent challengers) see the primary system as both coordinatively necessary and corruptible. Can organize pressure for rules changes (ranked-choice voting, proportional representation, open primaries, ballot access reform). Mobile exit option: can build parallel nomination mechanisms (citizen assemblies, petition-based ballot access, super-delegates to bypass party control). But reform faces high suppression: incumbent gatekeepers fight rule changes, parties control their own nomination processes, and constitutional federalism distributes power to state legislatures controlled by major parties."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/global perspective, primary capture is naturalized as an immutable feature of democratic governance: parties must select nominees; selection requires gatekeeping; gatekeeping necessarily excludes most candidates; therefore filtering is inherent to democracy itself. This perspective sees the constraint as a law of political nature \u2014 unavoidable tension between inclusivity and decisiveness. However, empirical comparison across democracies (open primaries, citizen jury selection, ranked-choice voting in other nations) reveals that alternative mechanisms exist. The mountain classification is a false summit: the 'necessity' of party gatekeeping is contingent on U.S. electoral-legal choices, not universal law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "genuine_vs_performative_primary",
+      "question": "Does the primary system provide genuine voter influence over nominee selection, or is it primarily a legitimation ritual masking pre-determined outcomes?",
+      "resolution_mechanism": "Longitudinal analysis of primary outcomes vs party leadership preferences; measurement of correlation between voter preference and final nominee; analysis of cases where insurgent candidates actually win vs are suppressed",
+      "impact": "If genuine: classification shifts toward Rope (coordination with real agency). If performative: classification shifts toward Snare (pure extraction masked as choice).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether primaries are genuine preference aggregation or legitimation theater"
+    },
+    {
+      "id": "exit_mobility_for_insurgents",
+      "question": "What proportion of insurgent primary candidates who lose within the party apparatus successfully pivot to third-party or independent general election viability?",
+      "resolution_mechanism": "Historical tracking of primary losers who attempt independent/third-party routes; measurement of vote share, funding, media coverage, and win rates compared to major-party general election candidates",
+      "impact": "If high pivot success: exit_options should be 'mobile' rather than 'trapped'; classification becomes less severe Snare or Tangled Rope. If low pivot success: constrained or trapped is accurate; extraction severity confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Actual exit viability for insurgent candidates from major party constraints"
+    },
+    {
+      "id": "suppression_mechanism_type",
+      "question": "Is measured suppression primarily structural (rules-based barriers like ballot access requirements, debate thresholds, filing fees) or internalized (voters have internalized party loyalty, self-sorting, epistemic closure that makes them dismiss insurgent options)?",
+      "resolution_mechanism": "Comparative analysis of rule removal (open primary adoption, lowered ballot-access barriers) and measurement of whether voter behavior changes; exit polling on voter confidence in primary outcomes; analysis of media coverage patterns and voter familiarity with suppressed candidates",
+      "impact": "If primarily structural: rule reform could reduce suppression substantially. If internalized: suppression persists even after rule change; constraint requires identity-level intervention or generational shift.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized"
+    },
+    {
+      "id": "party_establishment_capture_mechanism",
+      "question": "Do party establishments actively suppress insurgent candidates through deliberate strategy, or does capture emerge from neutral structural incentives that benefit aligned candidates regardless of intent?",
+      "resolution_mechanism": "Documentary evidence of explicit gatekeeping decisions; analysis of party resource allocation and endorsement patterns; interviews with party officials about decision criteria; comparison of resource flows to challengers vs incumbents",
+      "impact": "If deliberate strategy: establishment is conscious extractor; enforcement is intentional; reform requires changing leadership incentives. If structural/emergent: no single gatekeeper has unified interest; capture is side effect; reform could target incentive structure rather than personnel.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether party capture is deliberate strategy or emergent structural phenomenon"
+    },
+    {
+      "id": "democratic_legitimacy_paradox",
+      "question": "Does primary capture actually enhance democratic legitimacy (by ensuring general election viability and party cohesion) in ways that offset the loss of primary voter agency?",
+      "resolution_mechanism": "Measurement of general election participation rates and legitimacy perceptions under closed vs open primary systems; analysis of party cohesion and governance effectiveness as functions of primary openness; cross-national comparison of legitimacy outcomes",
+      "impact": "If legitimacy enhanced: extraction is genuinely partial (tangled rope is accurate). If legitimacy degraded: extraction is more severe; false coordination cover story.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether primary gatekeeping serves legitimate democratic functions"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Primary election capture describes the structural mechanism by which major party establishments filter candidate access to primary ballots and debates, thereby controlling the set of options presented to primary voters. This constraint manifests across democratic systems but is particularly pronounced in the U.S. two-party system where primary winners are effectively guaranteed major general election ballot access. The tension between the parties' need to select viable nominees and voters' democratic expectation to influence that selection creates a coordination problem that parties have increasingly solved through gatekeeping rather than through inclusive deliberation. The constraint exhibits mixed characteristics: genuine coordination function (the apparatus does solve the collective action problem of nominee selection), significant asymmetric extraction (party leadership captures disproportionate control over candidate viability and message agenda), high suppression (voters face multiple barriers to expressing preferences for excluded candidates), and increasing theater (debates and campaign events are increasingly stage-managed performances of competition rather than genuine evaluation).",
+    "key_agents": [
+      "Primary voters: Powerless/trapped \u2014 cannot exit the binary party choice without forfeiting electoral participation; subjected to ballot access restrictions, media blackouts, and suppressed candidate information",
+      "Insurgent candidates: Powerless/constrained \u2014 face formal mobility (can run independent) but at prohibitive cost; ballot access requirements, debate thresholds, funding barriers, and party resource monopoly create high-cost exit",
+      "Primary activist base: Moderate/constrained \u2014 benefit from party coordination services but subjected to top-down control of issue agenda, messaging discipline, and candidate hierarchy",
+      "Party establishment: Institutional/arbitrage \u2014 controls debate access, endorsements, resource allocation, campaign infrastructure; experiences system as pure coordination with maximum agency",
+      "Democratic primary ritual system: Institutional/arbitrage \u2014 maintains legitimation theater through debates, town halls, primary night coverage; persists through institutional inertia despite degraded selection function",
+      "Reform coalition: Organized/mobile \u2014 pushes for rule changes (open primaries, ranked-choice voting, ballot access reform, citizen selection); can build parallel mechanisms but faces suppression from incumbent gatekeepers",
+      "Analytical observer: Analytical/analytical \u2014 risks naturalizing contingent U.S. electoral-legal arrangements as universal laws of democratic necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, increased over time. The constraint extracts from powerless voters and insurgent candidates through ballot access barriers, debate participation thresholds, media coverage concentration, and party resource monopolies. The extractiveness is not maximal because genuine coordination function exists (parties do need to solve nominee selection), and because moderate actors (primary activists) retain some agency within party structures. The trajectory shows increased extraction over 40-year interval (0.35 \u2192 0.58) reflecting professionalization of gatekeeping, increased consultant roles in candidate vetting, declining participation of grassroots candidates, and consolidation of fundraising among establishment-aligned donors. Suppression (0.65): Moderate-high. Structural barriers include ballot access requirements (varying by state, typically 5,000-15,000 petition signatures), debate participation thresholds (polling minimums excluding non-establishment candidates), filing fees, media blackout effects, and two-state primary calendar concentration that favors well-funded frontrunners. Suppression is not total because some insurgent candidates do break through (Obama 2008, Trump 2016), indicating system is not utterly rigid. Theater ratio (0.68): High. Primary debates are heavily formatted by networks and parties; town halls are staged performances; candidate announcements are carefully choreographed; primary night coverage is ritualistic celebration of party unity. The theater has increased over the interval (0.52 \u2192 0.68) as production values increased, debate formats became more constraining, and media coverage became increasingly performative rather than investigative.",
+    "perspectival_gap": "The primary gap is between the establishment's perception of coordination and the voter's perception of constraint. The establishment sees a system that works (nominees selected, parties unified, general elections competitive). Powerless voters see a system that doesn't work for them (their preferred candidates are excluded, their vote choice is binary, their voice doesn't influence selection). This gap is not due to information asymmetry \u2014 both sides perceive the same institutional rules. The gap exists because the institution serves different functions for different agents: genuine coordination for the gatekeeper, suppression for the gated. The reform coalition's perspective is crucial \u2014 they see the capture as contingent (tantalized by possibility of change) and treat it as Tangled Rope rather than immutable Snare. This perspectival gap becomes wider as extractiveness increases: as gatekeeping becomes more sophisticated (polling thresholds, media manipulation, donor concentration), the gap widens between those who benefit from precision gatekeeping and those excluded by it.",
+    "directionality_logic": "Each agent's experience of the constraint is mediated by their power position and exit options. Party establishments with arbitrage exit have low d because they can selectively enforce gatekeeping \u2014 they experience the system as a tool they wield rather than a constraint they endure. Powerless voters with trapped exit have high d because gatekeeping is total for them \u2014 they can exit only by forfeiting electoral participation. Insurgent candidates with constrained exit (technically can run independent but lose party resources) have moderately high d \u2014 they can attempt exit but at severe cost. The primary activist base has moderate d because they benefit from party machinery (coordination services) but are constrained in how they use it (message discipline, hierarchy). The reform coalition with mobile exit has low-moderate d because they can build alternatives (ranked-choice voting, open primary ballot measures) but face suppression from the incumbent system. The directionality computation shows how the same institutional structure produces radically different experienced extractiveness for different agents: the establishment experiences \u03c7 \u2248 0.08 (benign coordination), the powerless voter experiences \u03c7 \u2248 1.25 (severe extraction), the insurgent experiences \u03c7 \u2248 0.92 (high extraction), and the activist experiences \u03c7 \u2248 0.65 (mixed coordination-extraction).",
+    "mandatrophy_analysis": "MANDATROPHY DETECTED AND PARTIALLY RESOLVED: This constraint initially appears to mandate conflicting classifications. At the institutional level, the primary system is necessary for nominee selection (genuine coordination requirement) \u2014 suggesting Rope. At the voter level, it functions as pure gatekeeping (suppression without coordination benefit) \u2014 suggesting Snare. The mandatrophy is resolved by recognizing that this is genuinely a Tangled Rope: the system provides real coordination services (solving the collective action problem of nominee selection) AND delivers asymmetric extraction (party leadership captures disproportionate control). Both are structural features, not contradictions. The theater element (0.68) indicates some performative degradation \u2014 debates and campaigns have become less genuinely selective and more legitimating \u2014 which explains why extraction has increased over time without proportional governance failure. The constraint resolves mandatrophy by being honestly hybrid: it is not pure extraction pretending to be coordination (Snare masking as Rope), nor is it pure coordination with minor overhead (Rope). It is genuine coordination with embedded extraction, which is the defining structure of Tangled Rope."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "general_election_bipartisan_suppression",
+      "political_donor_concentration",
+      "media_coverage_gatekeeping"
+    ],
+    "dual_formulation_note": "Primary capture is upstream of general election constraint but represents a distinct structural mechanism. The extractiveness values differ: primary capture focuses on nominee selection gatekeeping (\u03b5=0.58), while general election bipartisan suppression focuses on ballot access barriers that affect all third-party candidates (\u03b5=0.52). Both are electoral constraints but with different beneficiaries and victim sets. Primary capture benefits major party establishments; general election suppression benefits major parties as a duopoly against external challengers."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ]
+}

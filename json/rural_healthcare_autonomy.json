@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "rural_healthcare_autonomy",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rha"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Rural Healthcare Autonomy: Coordination vs. Regulatory Extraction",
+    "topic_domain": "healthcare/rural_policy/medical_regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "urban_medical_systems",
+      "regulatory_agencies",
+      "pharmaceutical_distribution_networks"
+    ],
+    "victims": [
+      "rural_healthcare_providers",
+      "rural_patient_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Rural Patient Population",
+      "comment": "Rural patients cannot exit the healthcare system; trapped by geography, limited transportation, income constraints, and absence of alternatives. Bears full extraction cost through reduced access, delayed care, and higher mortality rates. No coordinated action possible due to dispersion and resource scarcity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Rural Healthcare Provider",
+      "comment": "Rural doctors and clinics face mixed coordination-extraction dynamics. Benefit from standardized protocols, prescription networks, and emergency referral systems (genuine coordination). But experience extraction through staffing regulations, licensing requirements, pharmaceutical pricing controls, and liability standards designed for urban contexts. High cost of compliance; constrained exit due to community dependence and limited job alternatives."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Urban Medical System",
+      "comment": "Urban hospitals and health networks experience the constraint as pure coordination: standardized protocols enable referral networks, pharmaceutical supply chains, and liability management. Net beneficiary from regulatory uniformity; can arbitrage across compliance costs through scale economies. Captures value through centralized drug purchasing and specialist referral leverage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Agency",
+      "comment": "Medical boards and health authorities coordinate essential safety standards (genuine function: prevent unsafe practice, protect patients). But also extract through: licensing gatekeeping, continuing education monopolies, costly compliance documentation, and liability standards that favor defensive medicine. Constrained by political pressure and malpractice litigation; cannot fully exit enforcement role. Active enforcement required for legitimacy."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Rural Health Advocacy Coalition",
+      "comment": "Organized rural health coalitions (state medical associations, rural health networks) see the constraint as a coordination failure with a sunset clause. Lobbying for: telehealth licensure reciprocity, scope-of-practice waivers, reduced continuing education burdens, and rural-specific liability standards. Alternative pathways (telemedicine, physician assistants, nurse practitioners) bypass traditional autonomy constraints. Exit is structurally possible through policy reform; coalition has capacity and is deploying it."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The International Medical Credentialing System",
+      "comment": "Global medical standards (MD equivalency, specialty board certification, pharmaceutical naming) are largely performative at the implementation level. Rural practitioners in wealthy countries must comply with international credentialing despite local irrelevance \u2014 the protocols persist through institutional inertia and professional prestige, not functional necessity. Theater ratio high because compliance rituals (continuing education hours, documentation) don't correlate with clinical competence in resource-constrained settings."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "From a global analytical perspective, some constraint on rural medical autonomy appears natural: medical safety requires standardization, and some loss of local autonomy is the cost of that safety. Patient protection via standardized protocols is presented as inherent, unchangeable. However, base properties contradict this \u2014 regulatory agencies require active enforcement, urban systems arbitrage the rules, and advocates are building sunset pathways. The mountain framing naturalizes what is contingent institutional design."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "safety_standardization_necessity",
+      "question": "How much of the regulatory constraint is genuinely necessary for patient safety versus how much is professional gatekeeping disguised as safety?",
+      "resolution_mechanism": "Comparative health outcome analysis between high-regulation and low-regulation rural jurisdictions; historical analysis of regulatory tightening vs. safety improvement correlation; analysis of malpractice rates in urban vs rural settings accounting for case complexity",
+      "impact": "If 70%+ necessary: constraint is Rope (coordination) for most perspectives. If <50% necessary: constraint is Snare with regulatory capture components.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of regulatory constraint driven by safety necessity vs. professional gatekeeping"
+    },
+    {
+      "id": "telehealth_capability_gap",
+      "question": "Do telemedicine and remote specialist consultation genuinely close the urban-rural capability gap or do they create new dependencies on urban infrastructure?",
+      "resolution_mechanism": "Longitudinal outcome tracking in rural clinics with telemedicine adoption; analysis of specialist availability changes and patient survival rates; measurement of downstream referral pressure and rural capacity changes",
+      "impact": "If genuine closure: scaffold perspective confirmed with strong sunset mechanism. If new dependencies: constraint shifts from physical isolation to digital infrastructure control (substitute snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether telemedicine genuinely closes the urban-rural capability gap"
+    },
+    {
+      "id": "licensure_reciprocity_implementation",
+      "question": "Can interstate/interprovincial medical licensure reciprocity be implemented without creating patient safety risks or just shifting liability between jurisdictions?",
+      "resolution_mechanism": "Comparative analysis of reciprocity regimes (US telehealth compacts, ECFMG equivalency standards); outcome tracking in high-reciprocity vs low-reciprocity jurisdictions; malpractice litigation patterns",
+      "impact": "If implementable without risk: major structural validation for scaffold sunset. If risk-shifting only: reciprocity reform is theater without functional change.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether licensure reciprocity can work without safety degradation"
+    },
+    {
+      "id": "scope_of_practice_expansion_limits",
+      "question": "What are the actual performance limits for nurse practitioners, physician assistants, and paramedics providing primary care in rural settings?",
+      "resolution_mechanism": "Outcome-based scope analysis comparing expanded vs restricted practice regions; diagnostic accuracy and patient satisfaction metrics; emergency referral patterns and case complexity",
+      "impact": "If expanded scope safe: significant autonomy recovery for rural systems. If limited: constraint persists due to genuine safety bounds rather than regulatory gatekeeping.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Performance limits for non-physician rural primary care providers"
+    },
+    {
+      "id": "pharmaceutical_access_mechanisms",
+      "question": "Is the rural pharmaceutical supply constraint due to legitimate distribution economics or artificial pricing and distribution monopolies?",
+      "resolution_mechanism": "Cost structure analysis of rural vs urban pharmacy operations; correlation between regulatory frameworks and drug availability; analysis of direct pharmaceutical supply and community pharmacy models",
+      "impact": "If legitimate economics: constraint reflects Rope (coordination of distribution). If monopolistic: constraint is Tangled Rope or Snare with extraction via pricing control.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether pharmaceutical constraints reflect economics or monopoly extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Rural healthcare autonomy presents a paradigmatic case of Tangled Rope constraint: genuine coordination functions (standardized protocols, emergency referral networks, pharmaceutical safety) are layered with regulatory extraction that concentrates power and resources in urban medical centers. Rural healthcare providers face a paradox \u2014 they require coordination with larger medical systems for specialist access and emergency referral capacity, but the regulatory framework that enables that coordination also constrains their local autonomy, staffing flexibility, and practice scope. The constraint has intensified over the past 20 years as regulatory requirements have accumulated (documentation standards, continuing education mandates, liability insurance), even as telemedicine and scope-of-practice expansions create sunset pathways toward decentralized healthcare delivery. The theater ratio (0.55) reflects that while much regulatory activity performs genuine safety functions, a significant portion consists of compliance rituals that don't materially improve patient outcomes in rural contexts \u2014 mandatory training hours, certification maintenance, and documentation requirements that are designed for complex urban environments with specialist backup.",
+    "key_agents": [
+      "Rural Patient Populations: Primary victims (powerless/trapped) \u2014 geographically immobilized, dependent on local providers, facing delayed care and higher mortality",
+      "Rural Healthcare Providers: Secondary victims and partial beneficiaries (moderate/constrained) \u2014 benefit from coordination networks but bear extraction costs of compliance",
+      "Urban Medical Systems: Primary beneficiaries (institutional/arbitrage) \u2014 capture value through centralized referral networks and drug pricing leverage",
+      "Regulatory Agencies: Institutional enforcers (institutional/constrained) \u2014 coordinate safety standards but extract through gatekeeping and licensing control; constrained by legitimate liability concerns",
+      "Rural Health Advocacy Coalition: Organized reformers (organized/mobile) \u2014 building exit pathways through telemedicine, reciprocity, and scope expansion with sunset logic",
+      "Pharmaceutical Distribution Networks: Secondary beneficiaries (institutional/arbitrage) \u2014 extract through pricing controls and distribution gatekeeping",
+      "International Medical Standards Bodies: Institutional performers (institutional/arbitrage) \u2014 maintain credentialing theater with low functional necessity in resource-constrained rural settings"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, reflecting the asymmetry between coordination benefits and regulatory burden. Rural providers genuinely depend on standardized protocols and referral networks, but the regulatory framework extracts through: licensing fees, continuing education mandates (often requiring travel to urban centers), malpractice insurance premiums calibrated to urban risk profiles, and scope-of-practice restrictions that prevent cost-effective staffing. The 20-year trajectory (0.35 \u2192 0.58) shows extraction has increased as regulatory complexity accumulated. Suppression (0.62): Moderate-high. Rural providers cannot exit the medical system (patients require licensed practitioners). Geographic dispersion prevents collective action. Limited job markets constrain career mobility. But suppression is not total \u2014 some providers have exited to telemedicine, other professions, or urban markets. Patients cannot exit the rural context but can delay care or travel for specialist care at high cost. Theater ratio (0.55): Moderate. Significant regulatory activity serves genuine functions (infection control, medication safety, diagnostic standards). But substantial portion is performative: continuing education hour counting doesn't correlate with competence; documentation requirements exceed clinical information needs; licensing ceremonies mark professional identity more than demonstrable competence.",
+    "perspectival_gap": "The analytical observer's mountain perspective is a false summit. The claim that 'medical autonomy must be constrained for safety' naturalizes a contingent institutional arrangement. The constraint persists not because safety requires it but because: (1) urban medical systems have captured regulatory power and use it to maintain referral leverage, (2) pharmaceutical companies use standardization to control distribution, (3) professional guilds use licensing to maintain prestige and restrict competition, and (4) malpractice liability creates defensive-medicine incentives. Each of these is a policy choice, not a law of nature. The scaffold perspective reveals the sunset logic: telemedicine, nurse practitioner expansion, and interstate licensure reciprocity are building real alternative pathways. Rural healthcare autonomy is constrained by institutional design, not inherent necessity.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from the agent's structural relationship to the constraint. Rural patients with no exit options (trapped) and victim status have maximum d \u2248 0.95, producing high f(d) and maximum experienced extraction. Rural providers with constrained exit and victim status have moderate-high d \u2248 0.70, producing elevated extraction. Urban systems as beneficiaries with arbitrage exit have low d \u2248 0.15, producing negative or minimal f(d) \u2014 they experience the constraint as coordination because they can arbitrage its rules. Regulatory agencies face mixed directionality: as enforcers (institutional/constrained), they have d \u2248 0.50 (symmetric), but as beneficiaries of professional prestige and gatekeeping power, they have lower effective d. This mixed status explains why they classify as Tangled Rope rather than pure Rope \u2014 they both coordinate and extract. Advocacy coalitions with organized power and mobile exit have d \u2248 0.40, producing moderate extraction experience and scaffold classification.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy through perspectival decomposition. The question 'Is this pure coordination (Rope) or extractive (Snare)?' has no single answer \u2014 it depends on where you sit. For rural patients, extraction is unambiguous. For urban systems, coordination is unambiguous. For rural providers, both are real simultaneously. The Tangled Rope classification (at the regulatory agency and rural provider perspectives) captures this hybrid structure: genuine coordination function (safety standardization, emergency referral) coexists with genuine extraction (gatekeeping, compliance burden). The mandatrophy dissolves when you recognize that perspectival classification is not indeterminacy but precision \u2014 the constraint IS tangled at the institutional level because it performs both functions. The analytical observer's temptation to see a mountain (natural law) is the final test: natural law perspectives always turn out to be false summits when examined through Deferential Realism, revealing instead contingent institutional arrangements that appear natural because their beneficiaries have framed them as such."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "medical_specialist_concentration",
+      "rural_hospital_viability",
+      "pharmaceutical_supply_chain",
+      "telemedicine_licensure_barriers"
+    ],
+    "dual_formulation_note": "Rural healthcare autonomy decomposes into multiple structurally distinct constraints: (1) specialist concentration (upstream \u2014 causes the autonomy need), (2) regulatory gatekeeping (this story), (3) pharmaceutical access (parallel extraction mechanism), and (4) telemedicine barriers (emerging sunset pathway). Each has its own extractiveness profile and temporal trajectory. The upstream constraint (specialist concentration, \u03b5=0.25) creates the coordination need that the regulatory system exploits (this constraint, \u03b5=0.58). The downstream telemedicine constraint (\u03b5=0.35, Scaffold with sunset) represents an alternative resolution pathway."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

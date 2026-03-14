@@ -1,0 +1,220 @@
+{
+  "header": {
+    "constraint_id": "supernova_early_warning_hierarchy",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sne_warn"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Supernova Early Warning Hierarchy",
+    "topic_domain": "astronomy/astrophysics/institutional_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "professional_astronomy_institutions",
+      "first_discoverers"
+    ],
+    "victims": [
+      "rapid_response_observers",
+      "amateur_astronomers",
+      "public_science_access",
+      "follow_up_research_groups"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Amateur Astronomer",
+      "comment": "PERSPECTIVE 1: AMATEUR ASTRONOMER (SNARE) \u2014 Trapped by information asymmetry and institutional gatekeeping. Amateur observers detect supernovae but cannot publish discoveries or claim priority without institutional validation. Career pathways for rapid response are blocked. Maximum experienced extraction with no exit option."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Rapid Response Observers Without Institutional Affiliation",
+      "comment": "PERSPECTIVE 2: RAPID RESPONSE OBSERVERS (SNARE) \u2014 Structurally excluded from early notification networks despite having specialized equipment and proven track records. Cannot access real-time alert hierarchies. Forced to work around institutional gatekeepers. Suppression is high \u2014 alternative detection networks are suppressed through resource concentration and publication gating."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Independent Research Groups",
+      "comment": "PERSPECTIVE 3: INDEPENDENT RESEARCH GROUPS (TANGLED ROPE) \u2014 Constrained by publication requirements and access to large survey data. Benefit from early warning coordination (follow-up science becomes possible) but pay extraction costs: delays in access to public data, dependency on institutional networks for real-time alerts, pressure to conform to publication norms controlled by professional societies. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Professional Observatories and Large Survey Collaborations",
+      "comment": "PERSPECTIVE 4: PROFESSIONAL OBSERVATORIES (ROPE) \u2014 Primary beneficiary (institutional/arbitrage). Control the alert hierarchy and first-mover advantage. Experience the constraint as coordination: organizing rapid response among professional facilities enables science. Net beneficiary \u2014 publishing priority, resource allocation authority, and prestige flow toward this agent."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "First-Discoverer Institutions",
+      "comment": "PERSPECTIVE 5: FIRST-DISCOVERER INSTITUTIONS (ROPE) \u2014 Institutional beneficiary with arbitrage exit. Benefits from priority in accessing public data, citation advantage, and control over follow-up observing time allocation. Experienced as pure coordination \u2014 the hierarchy organizes their own first-mover advantage. Low or negative extraction from their structural position."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Open Alert Networks and Decentralized Detection Communities",
+      "comment": "PERSPECTIVE 6: OPEN ALERT NETWORKS (SCAFFOLD) \u2014 Organized agents (LSST, ZTF public stream, Transient Name Server, grassroots networks) building alternative verification and alert pathways that bypass the traditional institutional hierarchy. See the bottleneck as a temporary coordination failure with sunset: distributed, public-access real-time alert systems will replace gatekeeping. Declining theater as automation moves verification to open systems. Sunset estimated within 10-15 years as public survey stream become dominant."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Supernova Classification Conventions",
+      "comment": "PERSPECTIVE 7: LEGACY CLASSIFICATION SYSTEM (PITON) \u2014 Historical naming and discovery credit conventions (supernova designations, discoverer naming rights) are largely performative and preserved through institutional inertia. Automated surveys and spectroscopic follow-up make manual classification theatricality, yet the ritual persists through convention. High theater_ratio masks diminishing functional role. Maintained by professional prestige rather than scientific necessity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, information asymmetry in detection is inherent to astronomy: distant events are causally attenuated, and the temporal ordering of discovery vs. occurrence creates irreducible uncertainty. Some hierarchy is 'natural law.' However, the structural data contradicts this \u2014 the observed suppression and theater are produced by institutional gatekeeping, not by physics. Engine will flag this as false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "institutional_vs_technical_bottleneck",
+      "question": "Is the observed hierarchy primarily an institutional gatekeeping mechanism or a genuine technical necessity for coordinating limited observing resources?",
+      "resolution_mechanism": "Comparison of alert latency with and without professional gatekeeping; analysis of whether independent observers with access to real-time data achieve equivalent follow-up science quality",
+      "impact": "If technical: reclassify as Rope (pure coordination) from multiple perspectives. If institutional: confirms Snare and Tangled Rope classifications for excluded agents.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether bottleneck is technical coordination need or institutional gatekeeping"
+    },
+    {
+      "id": "alternative_detection_sufficiency",
+      "question": "Do automated survey streams (LSST, ZTF, Pan-STARRS) provide equal detection sensitivity and speed to traditional institutional discovery pathways?",
+      "resolution_mechanism": "Detection statistics: comparison of completeness curves, latency distributions, and spectroscopic confirmation rates for automated vs. manual discovery workflows over 5-year period",
+      "impact": "If equivalent or superior: scaffold sunset is real and timeline accelerates. If inferior: institutional hierarchy serves genuine coordination function and extraction is legitimate. If complementary: constraint decomposes into separate technical and institutional stories.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether automated surveys achieve detection parity with manual pathways"
+    },
+    {
+      "id": "suppression_mechanism_structural_or_cultural",
+      "question": "Is the observed suppression (amateur discoveries blocked from priority claims) enforced through explicit policy/gatekeeping or through implicit cultural norms and resource concentration?",
+      "resolution_mechanism": "Historical analysis of amateur discovery attempts and institutional responses; comparison of discovery rates and publication success rates for institutional vs. non-institutional first observers; survey of explicit vs. implicit barriers",
+      "impact": "If explicit gatekeeping: enables targeted policy change and faster scaffold transition. If cultural: requires norm change (slower, may require generational turnover). Affects mandatrophy resolution timeline.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is explicit institutional policy or internalized cultural norm"
+    },
+    {
+      "id": "public_access_readiness",
+      "question": "Are open alert systems (Transient Name Server, LSST public data release, community spectroscopy programs) sufficiently mature to replace the traditional hierarchy without significant science loss?",
+      "resolution_mechanism": "Capability audit: real-time data latency, spectroscopic confirmation turnaround, follow-up resource coordination through open platforms vs. traditional channels",
+      "impact": "If ready: scaffold transition becomes imminent and theater_ratio should drop below 0.50. If not ready: piton classification confirmed; institution persists through necessity, not pure inertia.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Maturity of open-access alternatives to institutional hierarchy"
+    },
+    {
+      "id": "identity_locked_professional_astronomy",
+      "question": "Is the professional astronomers' stake in the hierarchy partially an identity lock (career identity, disciplinary prestige) rather than purely structural benefit?",
+      "resolution_mechanism": "Ethnographic study: interviews with early-career astronomers about perceived consequences of decentralized discovery; analysis of institutional prestige distribution as automation increases",
+      "impact": "If significant identity lock: professional resistance to scaffold transition will persist beyond technical readiness. Affects implementation timeline for open systems.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether professional identity is fused with discovery priority mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The supernova early warning hierarchy represents an institutional structure that coordinates rapid astronomical response to transient events while simultaneously extracting value from non-institutional discoverers. The hierarchy exists because coordinating follow-up observations on limited telescopes requires prioritization; however, the institutional control mechanisms have evolved beyond coordination necessity into gatekeeping that blocks access for capable independent observers. The constraint exhibits all six DR types from different perspectives: pure extraction (Snare) for excluded amateurs, mixed coordination-extraction (Tangled Rope) for independent research groups, pure coordination (Rope) for beneficiary institutions, temporary coordination problem with sunset (Scaffold) for organized open-science networks, degraded ritual (Piton) for legacy classification conventions, and potential false natural law (Mountain) for civilizational analysis. The theater_ratio (0.68) reflects that much of the institutional apparatus \u2014 naming conventions, discoverer credits, notification protocols \u2014 is now substantially performative, maintained through historical precedent even as automation and open surveys make manual gatekeeping obsolete.",
+    "key_agents": [
+      "Amateur Astronomers: Primary victims (powerless/trapped) \u2014 detect supernovae but cannot claim priority or publish without institutional validation",
+      "Rapid Response Observers: Secondary victims (powerless/trapped) \u2014 specialized equipment and expertise excluded from real-time alert networks",
+      "Independent Research Groups: Moderate victims (moderate/constrained) \u2014 benefit from early warning coordination but pay extraction costs through delays and publication gatekeeping",
+      "Professional Observatories: Primary beneficiaries (institutional/arbitrage) \u2014 control alert hierarchy, first-mover advantage, resource allocation authority",
+      "First-Discoverer Institutions: Beneficiaries (institutional/arbitrage) \u2014 publish priority, citation advantage, follow-up observing time",
+      "Open Alert Networks: Organized agents (organized/mobile) \u2014 LSST, ZTF, automated surveys building alternative pathways with eventual sunset of traditional hierarchy",
+      "Legacy Classification System: Institutional actor (institutional/arbitrage) \u2014 maintains performative naming and discoverer conventions through inertia",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as necessary laws of astronomy"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The original research group captures genuine first-mover advantage and publishing priority during the discovery-to-publication window. However, the extraction is neither total nor immutable \u2014 modern survey automation is reducing the temporal window where institutional gatekeeping has force. The value reflects current institutional control over access, not irreducible physics. Suppression (0.62): Moderate-high. Multiple barriers constrain excluded observers: institutional access to real-time alert feeds, publication norms requiring institutional affiliation for priority claims, spectroscopic confirmation gated through professional facilities, and resource concentration (limited follow-up telescope time). But suppression is not total \u2014 some independent observers have succeeded through workarounds, and open data releases are expanding available pathways. Theater ratio (0.68): High and rising. The supernova naming conventions, discoverer credits, and institutional notification protocols are substantially performative. Spectroscopic follow-up is now automated; verification is machine-readable; yet the manual discovery ritual persists through convention. Theater has increased over the interval as automated surveys (LSST, ZTF) made manual first-announcement less central to actual science.",
+    "directionality_logic": "The structural directionality differs dramatically across agents based on their power and exit options. Amateur astronomers (powerless/trapped) experience maximum extraction \u2014 they have no alternative pathway to priority claims and cannot organize alternatives. Independent researchers (moderate/constrained) face high costs for exit but can publish through alternative venues and participate in open surveys, giving them partial agency \u2014 moderate experienced extraction. Professional institutions (institutional/arbitrage) experience low or negative extraction \u2014 they benefit from the hierarchy and can choose when to engage with alternative systems, giving them full agency. The organized open-science coalition (organized/mobile) has explicit exit options through automated surveys and public data, reducing their experienced extraction to low despite the institutional suppression \u2014 they see the constraint as surmountable. The analytical observer risks naturalizing institutional arrangements as natural law, but the engine's false summit detector catches the misclassification.",
+    "perspectival_gap": "This constraint demonstrates wide perspectival divergence. The excluded observer sees pure extraction (Snare) \u2014 the hierarchy serves no coordination function for them, only gatekeeping. The independent researcher sees mixed coordination and extraction (Tangled Rope) \u2014 follow-up science genuinely requires coordination, but institutional control extracts costs. The professional institution sees pure coordination (Rope) \u2014 the hierarchy organizes their own prioritization. The open science coalition sees a temporary coordination problem with sunset (Scaffold) \u2014 automated systems will replace the institutional hierarchy within a decade. The legacy classification system sees its own degraded function (Piton) \u2014 naming conventions persist through inertia despite automation. The civilizational observer risks the false summit \u2014 naturalizing information asymmetry in astronomy as immutable. The perspectival gap reveals that the constraint's character depends entirely on structural position.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by recognizing that the institutional hierarchy serves dual functions \u2014 genuine coordination for resource-constrained follow-up observations, and gatekeeping that extracts priority from non-institutional discoverers. The constraint is legitimately Tangled Rope: it coordinates (follow-up resource allocation requires prioritization) and simultaneously extracts (exclusion from early access, publication gatekeeping, priority denial). The resolution is not a single classification but recognition of the bifurcation: as automated systems mature, the coordination function transfers to open platforms while the extraction mechanism becomes purely institutional rent-seeking. The scaffold perspective captures this trajectory \u2014 the sunset is real as automation reduces coordination necessity. The piton perspective captures the theater that will remain after sunset \u2014 legacy naming conventions will persist as pure institutional ritual. The mandatrophy is resolved by decomposing: the structural constraint (coordination of limited follow-up resources) is separable from the institutional control mechanism (gatekeeping discovery priority). Future analysis should split these into two stories: 'follow-up resource coordination' (genuine rope, low extraction) and 'discovery priority gatekeeping' (pure snare, high extraction). For now, the tangled rope classification captures the hybrid accurately."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "transient_survey_publication_lag",
+      "spectroscopic_follow_up_bottleneck",
+      "institutional_data_access_asymmetry"
+    ],
+    "dual_formulation_note": "The supernova early warning hierarchy is upstream of specific follow-up constraints (spectroscopic bottleneck, publication lag, data access asymmetry). The hierarchy has its own extractiveness reflecting institutional gatekeeping; the downstream constraints have their own extractiveness reflecting publication norms and resource barriers. Decomposition recommended: separate the genuine coordination problem (follow-up resource allocation with low \u03b5) from the institutional control mechanism (discovery gatekeeping with high \u03b5)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

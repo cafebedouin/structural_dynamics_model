@@ -1,0 +1,183 @@
+{
+  "header": {
+    "constraint_id": "coalition_fragmentation_barrier",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cfb"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Coalition Fragmentation Barrier",
+    "topic_domain": "political_economy/collective_action",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "coalition_leadership",
+      "primary_faction"
+    ],
+    "victims": [
+      "coalition_member_base",
+      "coalition_cohesion"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Ordinary Coalition Member",
+      "comment": "PERSPECTIVE 1: ORDINARY COALITION MEMBER (SNARE) \u2014 Individual members have no exit mechanism. Leaving the coalition means abandoning shared cause, social ties, and collective identity. Yet the coalition structure increasingly extracts loyalty and labor without delivering proportional benefits. Suppression is high: social ostracism for defection, sunk costs in coalition activities, and the belief that collective action requires unity even in the face of asymmetric distribution."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Organized Faction",
+      "comment": "PERSPECTIVE 2: ORGANIZED FACTION (TANGLED ROPE) \u2014 Mid-level organized subgroups within the coalition experience both coordination and extraction. The coalition framework enables collective action against external adversaries, but the internal distribution of decision-making power, resource allocation, and credit for victories is asymmetric. Exit carries costs: loss of scale, reduced bargaining power, and reputational damage from fragmentation, but alternatives exist and some factions do splinter."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Coalition Leadership",
+      "comment": "PERSPECTIVE 3: COALITION LEADERSHIP (ROPE) \u2014 Leadership experiences the coalition as a coordination mechanism that solves collective action problems and concentrates bargaining power. They experience extraction as minimal \u2014 the internal organizational hierarchy is framed as necessary for efficacy. Leadership can exit the coalition without extreme cost (move to another political movement, return to private sector, shift to different organizing), so exit_options are arbitrage. The coordination function is genuine: leadership genuinely solves the free-rider problem."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The External Observer Coalition",
+      "comment": "PERSPECTIVE 4: EXTERNAL OBSERVER COALITION (SCAFFOLD) \u2014 Allied external organizations (peer coalitions, international solidarity networks, meta-NGOs) perceive the coalition as a temporary coordination structure with an implicit sunset. They expect coalitions to fragment and reform around emergent issues, and they work within that assumption. The coalition is useful for THIS campaign or moment, but all parties know it will transform or dissolve. Low theater: the coordination function is transparent and acknowledged to be provisional."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Institutional Coalition Apparatus",
+      "comment": "PERSPECTIVE 5: INSTITUTIONAL COALITION APPARATUS (PITON) \u2014 Formal coalition structures (bureaucratic processes, standing committees, funding mechanisms) persist long after the issues that justified them have shifted. The apparatus is maintained through institutional inertia \u2014 job preservation, constituent expectations, formalized protest rituals. High theater: the apparatus performs coalition unity symbolically while actual coordination happens through informal networks. The formal structures are largely decorative."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational view, coalitions solve a genuine coordination problem (enabling collective action against powerful adversaries) while simultaneously creating an extraction structure (those who control the coalition apparatus extract power, status, and resources from the membership). Both functions are real. The constraint is neither pure coordination nor pure extraction but a hybrid that requires active enforcement to maintain. The barrier to coalition fragmentation is structural: it prevents both harmful dissolution AND protective exit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intra_coalition_power_distribution",
+      "question": "Is the asymmetry in resource distribution and decision-making authority within the coalition a necessary feature of collective efficacy or a contingent distribution that could be restructured?",
+      "resolution_mechanism": "Comparative analysis of coalition outcomes under different governance structures (rotating leadership, consensus-based decision-making, transparent fund allocation); historical case studies of coalitions with egalitarian vs hierarchical structures.",
+      "impact": "If necessary: the constraint cannot be resolved without sacrificing coalition effectiveness (defensive fragmentation is required). If contingent: the extraction is unnecessary and the constraint can transition to pure Rope through structural reform.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether power asymmetry in coalitions is structurally necessary or contingent"
+    },
+    {
+      "id": "member_exit_mechanisms",
+      "question": "What objective or perceived barriers prevent coalition members from exiting without severe penalties (social ostracism, identity loss, collective power reduction)?",
+      "resolution_mechanism": "Exit cost quantification (reputation damage, social network loss, economic impact); comparison with factions that successfully split without devastating reputational collapse; analysis of member beliefs about exit costs vs actual costs.",
+      "impact": "If barriers are primarily psychological (members believe exit is catastrophic but could survive it): reclassify as identity_locked rather than trapped, suggest reframing interventions. If barriers are material: the snare classification stands and exit requires material cost reduction (alternative organizing infrastructure, reputation protection mechanisms).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Objective vs perceived barriers to member exit from coalition"
+    },
+    {
+      "id": "coalition_fragmentation_timing",
+      "question": "Do coalitions fragment due to internal contradictions accumulating past a threshold, or due to strategic manipulation by external adversaries who have learned to exploit internal fissures?",
+      "resolution_mechanism": "Timeline analysis of fragmentation events; correspondence with internal contradiction escalation vs external pressure campaigns; member testimony on fragmentation triggers.",
+      "impact": "If internal contradictions: extractiveness is intrinsic to the coalition form and suppression arises from genuine pressure (Tangled Rope, Snare). If external manipulation: suppression is externally imposed and some perspectives might be more accurately classified as constrained-by-adversary rather than trapped-by-coalition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether coalition fragmentation is internally or externally driven"
+    },
+    {
+      "id": "leadership_capture_mechanism",
+      "question": "Does coalition leadership capture emerge from rational delegation (members rationally grant leadership authority) or from organizational lock-in (leadership positions become self-perpetuating regardless of member preference)?",
+      "resolution_mechanism": "Analysis of leadership succession patterns; member satisfaction surveys tracking attitudes toward leadership over time; comparison of leadership vision/strategy with stated member priorities.",
+      "impact": "If rational delegation: leadership extraction is a negotiated trade-off for collective efficacy (tension within Tangled Rope). If lock-in: leadership extraction is sustained through organizational inertia and propaganda (closer to Snare dynamics).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether coalition leadership capture is rational delegation or organizational lock-in"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Coalition fragmentation barriers are structural constraints that prevent member exit from collective political movements and organizations. The constraint arises from the inherent tension between the coordination function that coalitions provide (enabling collective action against powerful adversaries through scale and unity) and the extraction mechanisms embedded in coalition governance (asymmetric distribution of power, resources, and credit for victories). Members experience simultaneous benefits (collective identity, shared cause, amplified voice) and costs (loss of individual agency, labor extraction, unequal benefit distribution). The barrier to fragmentation is enforced through multiple mechanisms: social pressure and ostracism for defectors, sunk cost psychology, identity fusion with the collective project, and the genuine reduction in bargaining power that fragmented groups experience. The constraint exhibits high suppression (0.65) because exit carries severe perceived costs, and meaningful alternatives to coalition membership are structurally limited in asymmetric power environments. The theater ratio (0.48) indicates moderate performative content \u2014 coalition unity symbolism masks internal conflicts, but the coordination function is substantially real rather than purely theatrical.",
+    "key_agents": [
+      "Ordinary Coalition Members: Primary victims (powerless/trapped) \u2014 individual members have structural exit barriers; suppression operates through social ties, identity fusion, and belief in necessity of unity.",
+      "Organized Factions: Secondary participants (moderate/constrained) \u2014 mid-level organizations within coalitions negotiate between staying (for scale) and leaving (for autonomy). Face real costs to exit but have genuine alternatives.",
+      "Coalition Leadership: Primary beneficiary (institutional/arbitrage) \u2014 controls decision-making, resource allocation, and public representation. Experiences the constraint as coordination mechanism that concentrates bargaining power. Can exit without extreme cost.",
+      "External Observer Coalitions: Structural allies (organized/mobile) \u2014 peer coalitions and solidarity networks that interact with the focal coalition. See fragmentation as natural and provisional rather than catastrophic.",
+      "Coalition Apparatus: Institutional beneficiary (institutional/constrained) \u2014 formal bureaucratic structures, staffing, funding mechanisms that maintain the coalition's existence. Staff and administrators depend on the apparatus continuing.",
+      "Analytical Observer: System perspective (analytical/analytical) \u2014 sees coalitions as solving genuine collective action problems while creating extraction structures. The constraint serves essential coordination functions while extracting from membership."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Leadership systematically captures benefits disproportionate to contribution (media attention, funding, political influence, career advancement). The measurement trajectory shows extractiveness increasing over time as leadership consolidation deepens and internal distribution becomes more unequal. At the initial state (0.35), the coalition was perceived as more egalitarian and extraction was lower. By measurement point 3 (0.45), leadership consolidation was visible. By point 6 (0.58), extraction had become structural feature. The value reflects that extraction is real and significant but not absolute \u2014 most members still benefit from collective scale and identity. Suppression (0.65): High. Barriers to exit are multifaceted: social ostracism and reputation damage for defectors, deep identity fusion (members have internalized coalition identity as core self-concept), sunk costs in coalition activities and relationships, and rational perception that fragmentation reduces collective power. However, suppression is not total (some members do exit or reduce participation), suggesting that while barriers are severe, they are not insurmountable for all agents. Theater ratio (0.48): Moderate-low. Coalition activities have real coordination content (actual collective action, real threats met through collective power, genuine resource pooling) but also significant performative content (unity rituals, symbolic demonstrations, internal loyalty performances that maintain cohesion). The balance tips slightly toward real function rather than theater, but the gap is narrowing as internal contradictions force more internal consensus performances.",
+    "perspectival_gap": "The largest gap is between the powerless member (Snare: d=0.92, \u03c7 \u2248 high) and the institutional leadership (Rope: d=0.08, \u03c7 \u2248 low/negative). Both parties operate within the same structural constraint (coalition membership and coordination requirements), but their experienced extractiveness differs radically because their positions in the extraction flow are opposite. The member experiences the constraint as a net cost (snare); leadership experiences it as net benefit (rope). This is the diagnostic signature of Tangled Rope from the analytical perspective \u2014 genuine coordination function (members do gain collective power) plus asymmetric extraction (leadership captures disproportionate benefits). If the constraint were pure extraction (Snare from all perspectives), all agents would experience high \u03c7. If it were pure coordination (Rope from all perspectives), all would experience low \u03c7. The perspectival gap proves the hybrid nature.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from structural position relative to extraction flow. Ordinary members (powerless/trapped) have d \u2248 0.92 \u2014 they are victims bearing extraction with no exit option. The sigmoid f(d) produces high effective extractiveness (\u03c7) from their perspective. Leadership (institutional/arbitrage) has d \u2248 0.08 \u2014 they are beneficiaries with full exit option, so f(d) is negative, producing low or negative \u03c7. Organized factions (moderate/constrained) have d \u2248 0.58 \u2014 middle position, experiencing both extraction and benefits, with constrained (not trapped) exit. The analytical observer (analytical/analytical) has canonical d \u2248 0.73, representing neutral measurement position. Directionality overrides are not needed because the structural data (beneficiary/victim declarations + exit options + power levels) correctly captures the differentiation. Leadership benefits and has exit (arbitrage); members suffer and lack exit (trapped); factions are mixed with constrained exit. The derivation chain produces appropriate d values automatically.",
+    "mandatrophy_analysis": "The coalition fragmentation barrier avoids the mandatrophy by acknowledging that coalitions genuinely solve coordination problems (collective action against powerful adversaries is more effective at larger scale) while also genuinely extracting (leadership concentrates power and benefits disproportionately). The constraint cannot be classified as pure Rope because extraction is real and asymmetric. It cannot be classified as pure Snare because coordination benefits are real \u2014 members are not simply victims of coercion, they are participants in a structure that provides genuine collective power. The Tangled Rope classification (from the analytical perspective) and the differentiated lower-level perspectives (member sees Snare, leadership sees Rope, faction sees Tangled Rope) together resolve the mandatrophy: the constraint is legitimately hybrid, not mislabeled, and the classification accurately captures that it serves both functions."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "collective_action_free_rider_problem",
+      "leadership_accountability_mechanism",
+      "coalition_member_burnout"
+    ],
+    "dual_formulation_note": "Coalition fragmentation barrier is downstream of the free-rider problem (which it partially solves through coercive unity enforcement) and upstream of leadership accountability mechanisms (which attempt to constrain leadership extraction). The constraint family includes: collective_action_free_rider_problem (\u03b5=0.15, Rope) \u2014 the pure coordination problem coalitions solve; coalition_fragmentation_barrier (\u03b5=0.58, Tangled Rope) \u2014 the enforcement mechanism that maintains unity at extraction cost; leadership_accountability_mechanism (\u03b5=0.42, Scaffold) \u2014 attempts to constrain leadership extraction with enforcement that should sunset as internal structures mature."
+  },
+  "directionality_overrides": []
+}

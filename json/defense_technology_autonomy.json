@@ -1,0 +1,230 @@
+{
+  "header": {
+    "constraint_id": "defense_technology_autonomy",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "deftech"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Defense Technology Autonomy Constraint",
+    "topic_domain": "military/defense_technology/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "military_procurement_establishments",
+      "defense_contractors",
+      "weapons_system_developers"
+    ],
+    "victims": [
+      "civilian_populations",
+      "international_stability",
+      "democratic_oversight_mechanisms"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Civilian Populations Under Autonomous Systems",
+      "comment": "PERSPECTIVE 1: CIVILIAN POPULATIONS (SNARE) \u2014 Trapped subjects of weapons system deployment with no exit option. Cannot refuse targeting, cannot negotiate terms, cannot withdraw consent. Extreme suppression: targeting occurs without warning or recourse. Maximum extraction \u2014 bear full cost of autonomous weapon deployment with zero participation in governance decisions that enable it."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "International Community and Non-Combatants",
+      "comment": "PERSPECTIVE 2: INTERNATIONAL COMMUNITY (SNARE) \u2014 Trapped in an arms dynamics spiral. States deploying autonomous weapons create security dilemmas forcing other states to develop competing systems. Non-combatants in all states bear extraction risk. No exit from the collective action trap. Suppression maintained through security classification, technical opacity, and strategic ambiguity about deployment status."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Democratic Legislative Bodies",
+      "comment": "PERSPECTIVE 3: DEMOCRATIC LEGISLATURES (TANGLED ROPE) \u2014 Face genuine coordination problem: military capability development requires secrecy and speed, while democratic oversight requires transparency and deliberation. Constraints on disclosure limit legislatures' ability to oversee. Yet legislatures also benefit from autonomous systems' coordination function (more precise targeting, reduced operator burden). Extraction operates through technical complexity barriers and classification restrictions that prevent effective democratic deliberation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Military Procurement Establishments",
+      "comment": "PERSPECTIVE 4: MILITARY PROCUREMENT (ROPE) \u2014 Primary beneficiary. Experiences autonomy constraint as pure coordination: solves the problem of operator load, decision speed under uncertainty, and weapons system integration. Can exit the constraint through traditional systems if desired (arbitrage option via alternative procurement). Net benefit: capability gains, career advancement through modernization, strategic advantage during transition window."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Defense Contractors and Developers",
+      "comment": "PERSPECTIVE 5: DEFENSE CONTRACTORS (ROPE) \u2014 Primary beneficiary. Autonomy constraint solves market coordination problem: creating demand for cutting-edge AI/ML capabilities, justifying R&D investment, enabling premium pricing for 'intelligent' systems. Can arbitrage into other AI markets if defense market contracts. Net benefit: market creation, intellectual property value, competitive moat from defense classification."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Allied State Partners",
+      "comment": "PERSPECTIVE 6: ALLIED STATE PARTNERS (TANGLED ROPE) \u2014 Face security dilemma within alliance context. Coordination benefit: access to advanced autonomous systems through technology transfer or co-development. Extraction: dependent on primary developer state for capability updates, vulnerable to technology embargoes, constrained by alliance politics from developing independent systems. Suppression through technology control regimes (ITAR-equivalent restrictions)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Legal and Treaty Frameworks",
+      "comment": "PERSPECTIVE 7: INTERNATIONAL LAW (PITON) \u2014 Existing law of armed conflict frameworks (distinction, proportionality, precaution) persist as governance mechanisms despite their degraded function for autonomous systems. International treaties on weapons control (Convention on Certain Conventional Weapons, etc.) attempt to constrain autonomous weapons but operate through performative compliance and definitional ambiguity. Theater ratio high: treaty obligations exist but enforcement is minimal and loopholes abundant. Piton classification reflects the persistence of legal frameworks through institutional inertia despite their technical irrelevance."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Human-in-the-Loop Governance Movements",
+      "comment": "PERSPECTIVE 8: HUMAN-IN-THE-LOOP ADVOCACY (SCAFFOLD) \u2014 Organized actors (NGOs, academic coalitions, ethics boards) working to establish human meaningful control requirements and technical oversight mechanisms. See the autonomy constraint as a temporary coordination failure with potential sunset through norm-setting and verification protocols. Mobile exit options: deploy these governance mechanisms to constrain development. Sunset logic: technical standards for meaningful human control, international verification regimes, and transparency requirements could create alternative pathways that bypass military autonomy imperative."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Technology Imperative View)",
+      "comment": "PERSPECTIVE 9: ANALYTICAL OBSERVER / TECHNOLOGY IMPERATIVE (MOUNTAIN) \u2014 From civilizational/universal perspective, autonomous weapons are treated as inevitable: technology always advances, militaries always adopt best available capabilities, arms races always accelerate competitive dynamics. This view naturalizes the constraint as inherent to technological civilization. However, structural data contradicts the mountain classification \u2014 the engine detects false summit. The 'technological inevitability' framing naturalizes what is actually a contingent policy choice (funding decisions, procurement priorities, classification regimes) maintained through institutional arrangements rather than laws of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "meaningful_human_control_definition",
+      "question": "What constitutes 'meaningful human control' over autonomous weapons \u2014 is it a technical property (human decision on every lethal act) or a governance property (human responsibility for system design and deployment)?",
+      "resolution_mechanism": "International treaty negotiation outcomes; technical standards bodies (IEEE, ISO) definitions; national military doctrine adoption of human control principles",
+      "impact": "If technical (human per-shot decision required): autonomous weapons cannot legally deploy at scale, sharply constraining military extraction. If governance (designer/deployer responsibility): current architectures satisfy control requirement, extraction persists.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Definition of meaningful human control determines legal permissibility"
+    },
+    {
+      "id": "arms_race_inevitability",
+      "question": "Is autonomous weapons development inherent to military competition or a contingent choice driven by specific strategic incentives and institutional actors?",
+      "resolution_mechanism": "Historical analysis of weapons development decisions; counterfactual policy scenarios where development was constrained; comparison of military autonomy adoption across states with different governance structures and strategic doctrines",
+      "impact": "If inherent: constraint is mountain-like (ineliminable); scaffold sunset is unrealistic. If contingent: constraint is tangled_rope/snare (changeable through policy); scaffold perspective is structurally possible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether autonomous weapons development is inevitable or contingent"
+    },
+    {
+      "id": "transparency_security_tradeoff",
+      "question": "Does military security classification genuinely protect strategic advantage or primarily enable extraction by preventing democratic oversight?",
+      "resolution_mechanism": "Declassification impact analysis; comparison of capability retention across declassified vs still-classified systems; vulnerability disclosure patterns in defense contractors",
+      "impact": "If genuine security need: suppression (0.68) may be justified as coordination cost. If primarily political: suppression is an extraction mechanism; reclassify toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether classification serves security or enables extraction"
+    },
+    {
+      "id": "coalition_power_emergence",
+      "question": "Can powerless civilian populations organize effective political pressure on autonomous weapons deployment despite information barriers and security classification?",
+      "resolution_mechanism": "Tracking of advocacy movement growth, policy influence, and treaty negotiation participation; comparison of public opinion vs deployment decisions across democracies",
+      "impact": "If coalition emerges with political power: powerless perspective may upgrade to organized; snare classification could shift toward tangled_rope. If pressure remains ineffective: powerless agents remain trapped.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether powerless agents can organize effective political coalition"
+    },
+    {
+      "id": "technology_transfer_chain_extraction",
+      "question": "Does technology transfer to allied states constitute genuine coordination (allies gain capability) or embedded extraction (allies become dependent on primary developer state for updates and remain strategically subordinate)?",
+      "resolution_mechanism": "Analysis of technology transfer agreements; comparison of independent development capability across allied states pre- and post-transfer; strategic autonomy outcomes for recipient states",
+      "impact": "If genuine coordination: allied state perspective is rope. If extraction through dependency: allied state perspective is snare; revise to higher suppression in multi-state contexts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether technology transfer enables autonomy or creates dependency"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The defense technology autonomy constraint describes the structural tension between military incentives to develop autonomous weapons systems and civilian/democratic interests in maintaining human control over lethal decision-making. The constraint exhibits characteristics of all six Deferential Realism types across different observer perspectives, revealing how the same institutional phenomenon appears simultaneously as pure extraction (from civilians' view), coordination (from military procurement's view), a temporary problem with governance solutions (from human-in-the-loop advocates), a degraded legal framework (from international law's view), and potentially immutable technological necessity (from civilization-scale analysis). The extractiveness has grown from 0.35 (early development phase) to 0.58 (current deployment phase) as autonomous systems move from research to operational integration, while theater_ratio has increased from 0.52 to 0.65 as military classification and doctrinal ambiguity about autonomous deployment status have grown. Suppression is high (0.68) due to technical complexity, security classification, and the structural powerlessness of civilian populations to exit or consent to targeting regimes they cannot observe or influence.",
+    "key_agents": [
+      "Civilian Populations: Primary victims (powerless/trapped) \u2014 bear extraction risk of autonomous targeting with zero participation in governance decisions; no exit option",
+      "International Community and Non-Combatants: Secondary victims (powerless/trapped) \u2014 trapped in arms dynamics spiral; all states pressured to develop autonomous systems regardless of doctrine; security dilemma prevents collective exit",
+      "Military Procurement Establishments: Primary beneficiary (institutional/arbitrage) \u2014 solves operator load and decision speed problems; captures strategic advantage during transition window; can arbitrage to traditional systems if needed",
+      "Defense Contractors and Developers: Primary beneficiary (institutional/arbitrage) \u2014 creates new markets for AI/ML capabilities; justifies R&D investment; enables premium pricing; intellectual property value from defense classification",
+      "Democratic Legislative Bodies: Mixed position (organized/constrained) \u2014 face coordination problem requiring secrecy vs oversight; constrained by classification barriers; also benefit from capability coordination function",
+      "Allied State Partners: Mixed position (powerful/constrained) \u2014 gain autonomous system access through transfer; constrained by dependency on developer state; vulnerable to technology embargoes; face alliance politics constraints",
+      "International Legal Framework: Institutional observer (institutional/arbitrage) \u2014 maintains treaty obligations and law-of-armed-conflict frameworks despite their degraded technical relevance; persists through inertia",
+      "Human-in-the-Loop Advocacy Movements: Organized reformers (organized/mobile) \u2014 work to establish meaningful human control requirements and verification regimes; see sunset pathway through technical standards and transparency",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent policy choices as inherent technological necessities"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The constraint benefits military procurement and defense contractors through capability gains and market creation, while extracting from civilian populations who bear targeting risk without consent. The extraction increased from 0.35 to 0.58 as autonomous systems moved from research to deployment phases, reflecting the growing real-world impact. The 0.58 value reflects genuine mixed function: militaries do solve legitimate coordination problems (operator load, decision speed), but the benefits accrue asymmetrically to organizational actors while costs fall on powerless civilians. Suppression (0.68): High. Multiple suppression mechanisms operate: (1) technical complexity barriers preventing democratic understanding, (2) military classification preventing information access, (3) strategic ambiguity about deployment status, (4) structural powerlessness of civilian populations to exit or negotiate. Theater ratio (0.65): Moderate-high. Significant performative elements include treaty compliance theater (CCWC negotiations without enforcement), doctrinal ambiguity about what 'autonomous' actually means, international legal frameworks persisting despite technical irrelevance (laws of armed conflict designed for human decision-makers), and public reassurance narratives about human oversight that may not reflect operational reality. The theater has increased as classification has grown and definitional ambiguity has deepened.",
+    "directionality_logic": "Directionality (d) for each perspective reflects the agent's structural position relative to the constraint's extraction flow. Civilian populations are trapped with no exit, so d approaches 1.0 \u2014 maximum experienced extractiveness. Military procurement institutions have arbitrage exits (can choose traditional systems) and are beneficiaries, so d approaches 0.15 \u2014 low or negative experienced extractiveness. Democratic legislatures face high constraints but also benefit from coordination, so d \u2248 0.55 \u2014 moderate experienced extraction. Allied states face constraints but also gain access, so d \u2248 0.50 \u2014 mixed experience. The engine derives these from the beneficiary/victim declarations and exit options. The constraint's effective extractiveness (\u03c7) is scaled by f(d) and the spatial scope modifier \u03c3(S=global=1.2), raising the calculated \u03c7 from the base 0.58 to approximately 0.70 at global scope for powerless/trapped agents.",
+    "perspectival_gap": "This constraint demonstrates the perspectival gap through maximum distance: civilian victims and military beneficiaries experience fundamentally different realities of the same institutional system. Civilians experience snare (no exit, no coordination benefit, maximum extraction). Military procurement experiences rope (pure coordination benefit, arbitrage exits available). Democratic legislatures experience tangled rope (both coordination function and extraction through classification barriers). International law experiences piton (degraded function but institutional persistence). The human-in-the-loop coalition experiences scaffold (temporary problem with sunset pathway). The civilizational analyst risks mountain (technological inevitability) but structural data reveals false summit. These are not measurement disagreements \u2014 they are genuine structural differences in how the constraint's extraction flows toward and away from different agents.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the defense autonomy constraint simultaneously exhibits genuine coordination function (reducing operator cognitive load, improving decision speed, solving military integration problems) AND asymmetric extraction (benefits flow to institutional beneficiaries while costs and risks concentrate on powerless civilians and non-combatants). This is the defining signature of tangled_rope: both functions are real and both are structurally necessary to understand the constraint. The constraint cannot be reduced to pure extraction (snare) because military autonomy genuinely solves coordination problems that exist independently. It cannot be reduced to pure coordination (rope) because the benefits and costs are asymmetrically distributed and suppression is high. The claimed_type (tangled_rope) is analytically accurate: the constraint requires both coordination AND enforcement, both benefits AND extraction, both real functionality AND real harm. The mandatrophy is satisfied when all six perspectives are acknowledged as legitimate readings of these dual functions from different structural positions."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_weapons_development_imperative",
+      "military_classification_opacity",
+      "international_arms_control_effectiveness"
+    ],
+    "dual_formulation_note": "Defense technology autonomy is downstream of both AI capability development (which drives what military systems can do) and of institutional military incentives (which drive deployment decisions). It also affects international stability through arms race dynamics. This story focuses on the governance constraint; separate stories should address (1) AI technical capability constraints and (2) institutional military incentive structures. The network links show this constraint's influence on downstream governance challenges."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.48
+    }
+  ]
+}

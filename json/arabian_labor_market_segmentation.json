@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "arabian_labor_market_segmentation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "alms"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Arabian Labor Market Segmentation: Kafala System and Migrant Worker Extraction",
+    "topic_domain": "labor_economics/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "gulf_employers",
+      "receiving_state_governments",
+      "labor_brokers"
+    ],
+    "victims": [
+      "migrant_workers",
+      "domestic_workers",
+      "informal_sector_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Migrant Worker",
+      "comment": "PERSPECTIVE 1: MIGRANT WORKER (SNARE) \u2014 Structurally trapped by employment sponsorship system (kafala). Exit requires employer consent; contract enforcement is asymmetric; wage theft, unsafe conditions, and movement restrictions are endemic. Suppression is total: legal status depends entirely on employer's sponsorship; exit would mean deportation, debt accumulation, and permanent blacklist."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Domestic Worker",
+      "comment": "PERSPECTIVE 2: DOMESTIC WORKER (SNARE) \u2014 Even more deeply trapped than formal migrant workers. Operate outside formal labor protections; confined to employer's private space; severe isolation from community; extreme vulnerability to abuse. Suppression approaches totality: no legal recourse, complete economic and spatial control by employer, cultural and legal exclusion from worker protections."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Informal Sector Participant",
+      "comment": "PERSPECTIVE 3: INFORMAL SECTOR PARTICIPANT (TANGLED ROPE) \u2014 Construction laborers, service workers outside kafala. Experience genuine coordination: work gets done, income flows reach workers, construction projects complete. But also experience significant extraction: wage suppression through undocumented status, no benefits, high accident rates, no insurance. Can exit at cost (relocation, forgone income) but not at zero cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Employer",
+      "comment": "PERSPECTIVE 4: EMPLOYER (ROPE) \u2014 Experiences the kafala system as a coordination mechanism: labor supply is stable, workers are controllable, project timelines are predictable. Genuine coordination function exists alongside extraction. Employer has arbitrage options (can recruit from multiple labor-sending countries, can use formal vs informal channels) and can exit by relocating operations or changing labor strategies."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Receiving State Government",
+      "comment": "PERSPECTIVE 5: RECEIVING STATE GOVERNMENT (ROPE) \u2014 Benefits from kafala through labor supply control, remittance taxation (implicit through labor market suppression), political stability (migrant workers cannot organize), and reduced welfare obligations. Experiences the system as coordination: managing labor inflows, controlling urban growth, stabilizing construction sector. Has arbitrage options: can reform kafala, can shift to automation, can reduce migrant population through policy."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Labor Broker Network",
+      "comment": "PERSPECTIVE 6: LABOR BROKER NETWORK (PITON) \u2014 Maintains kafala through institutional inertia despite formal reform attempts. Theater_ratio high: governments announce reforms while brokers circumvent them; regulatory bodies exist but lack enforcement capacity; labor trafficking is formally illegal yet remains endemic. Brokers benefit from system but face increasing international pressure and reputation costs. Primarily maintains dominance through institutional embeddedness rather than active value creation."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Sending Country Government",
+      "comment": "PERSPECTIVE 7: SENDING COUNTRY GOVERNMENT (SNARE) \u2014 Depends on remittances (20-50% of GDP for some nations) flowing from Arabian labor markets. Trapped by economic necessity: workers send money home, governments collect taxes/fees on remittances, development projects depend on this flow. High extraction: workers bear the cost of unsafe conditions and wage suppression; sending countries' governments cannot effectively regulate or protect workers without risking remittance flows. Limited exit options due to economic dependency."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (False Summit)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / FALSE SUMMIT (MOUNTAIN) \u2014 Risks naturalizing kafala as an inherent feature of labor market development or regional demographic needs. The framing 'Gulf states need migrant workers; workers need income; kafala is simply how this is organized' naturalizes a contingent extractive institutional choice as a necessity. This perspective will be flagged as a false summit by the engine: the structural data shows active enforcement, high suppression, concentrated beneficiaries, and trapped victims \u2014 not natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kafala_reform_effectiveness",
+      "question": "Do recent kafala reforms (wage protection boards, labor mobility improvements) represent genuine structural change or are they theater masking continued extraction?",
+      "resolution_mechanism": "Empirical tracking: wage compliance rates post-reform, worker exit/mobility rates, accident/injury rates, actual vs declared enforcement actions by labor ministry",
+      "impact": "If reforms effective: classification shifts toward Tangled Rope or Rope across more perspectives, extraction coefficients drop. If theaters: classification remains Snare, theater_ratio increases over time as government spending on enforcement theater rises without outcome changes.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether kafala reforms reduce extraction or are performative"
+    },
+    {
+      "id": "worker_organizing_capacity",
+      "question": "Can migrant workers in Gulf labor markets organize collectively despite legal restrictions, or is the suppression total?",
+      "resolution_mechanism": "Documentation of strikes, informal collectives, mutual aid networks, cross-border organizing (via diaspora networks, sending-country unions); assessment of whether organizing has produced measurable outcome changes (wage increases, safety improvements, contract enforcement)",
+      "impact": "If organizing produces outcomes: power_atom for migrant workers upgrades from powerless to organized, classification shifts from Snare to Tangled Rope or Rope. If organizing is suppressed: power remains powerless, Snare classification is robust.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether migrant workers can organize collectively despite restrictions"
+    },
+    {
+      "id": "alternative_labor_models_feasibility",
+      "question": "Can Gulf states shift to alternative labor coordination models (automation, higher-skilled temporary migration, expanded local workforce participation) that would reduce kafala dependency?",
+      "resolution_mechanism": "Technical feasibility analysis (automation ROI in construction/service sectors), policy analysis (local hiring initiatives, visa diversification), economic modeling (labor cost impact of alternatives)",
+      "impact": "If alternatives feasible: kafala represents institutional choice (Snare/Tangled Rope, not Mountain). Receiving states have genuine exit options. If alternatives infeasible: kafala may approach Natural Law (structural necessity of labor arbitrage system for Gulf development model).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative labor models are technically and economically feasible"
+    },
+    {
+      "id": "remittance_dependency_lock",
+      "question": "Are sending-country governments locked into accepting kafala extraction because of remittance economic dependency (Snare), or do they have genuine exit options?",
+      "resolution_mechanism": "Counterfactual analysis: development indicators in sending countries with low vs high remittance dependency; tracking of whether sending countries that diversified economies reduced worker migration; assessment of actual regulatory capacity on kafala violations",
+      "impact": "If locked: sending countries should be classified as Snare victims with identity_locked exit (trapped by economic necessity). If mobile: sending countries are Constrained, not trapped. Shifts the directionality calculus for who bears which costs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether sending countries have exit options from remittance dependency"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Arabian labor market, particularly in Gulf Cooperation Council states, is structured through the kafala (sponsorship) system\u2014a labor governance regime that ties migrant workers' legal status, employment, and mobility rights to individual employers. This creates extreme power asymmetry, enabling systematic extraction of labor value through wage suppression, unsafe conditions, movement restrictions, and debt bondage. The constraint exhibits Snare characteristics for the trapped workers (powerless, biographical horizon, no exit), Tangled Rope for informal workers (moderate power, constrained exit), Rope for employers and receiving-state governments (institutional power, arbitrage options), and Piton for labor brokers maintaining the system through institutional inertia. The system has persisted and intensified over the past two decades despite formal international commitments to labor standards. Extractiveness has increased from 0.52 to 0.68 over the measurement interval, driven by growing remittance dependency in sending countries and capital intensity in receiving states. Theater has risen from 0.35 to 0.58 as governments implement formal reforms (wage protection boards, labor inspectorates, mobility provisions) while enforcement capacity remains low and de facto extraction continues.",
+    "key_agents": [
+      "Migrant Workers: Primary victims (powerless/trapped) \u2014 structurally dependent on employer sponsorship; no legal recourse; subject to wage theft, unsafe conditions, movement restrictions",
+      "Domestic Workers: Deep-structure victims (powerless/trapped) \u2014 excluded from formal labor protections; confined to private spaces; extreme vulnerability to abuse and exploitation",
+      "Gulf Employers: Primary beneficiaries (institutional/arbitrage) \u2014 access cheap, controllable labor; predictable workforce; arbitrage across labor-sending countries",
+      "Receiving State Governments: Secondary beneficiaries (institutional/arbitrage) \u2014 control labor inflows; stabilize construction and service sectors; reduce welfare obligations; maintain political stability through migration control",
+      "Labor Brokers: Tertiary beneficiaries (powerful/constrained) \u2014 extract fees from both workers and employers; maintain system through institutional embeddedness; face international pressure but maintain dominance",
+      "Sending Country Governments: Trapped beneficiaries (organized/identity_locked) \u2014 depend on remittances for development funding; cannot effectively regulate worker protection without risking income flows; locked into system through economic necessity",
+      "Informal Workers: Secondary victims (moderate/constrained) \u2014 outside formal kafala but experience similar extraction through wage suppression, no benefits, high accident rates"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The kafala system produces sustained extraction through multiple mechanisms: (1) wage suppression via oversupply and legal status dependency (workers accept below-market wages to maintain sponsorship); (2) non-payment and debt bondage (brokers and employers use recruitment debt as control mechanism); (3) movement restrictions reduce exit options and worker bargaining power; (4) working condition degradation (unsafe work, excessive hours) is enabled by powerlessness. The 0.68 value reflects that extraction is severe and systematic but not absolute \u2014 some workers do accumulate savings, some wage increases occur, and some workers successfully exit (at high cost). Suppression (0.72): Very high. Legal status is controlled by employers; workers cannot organize (strikes are illegal); cannot change employers without sponsorship transfer (often denied); cannot access courts effectively; deportation threat is existential. Suppression is structural and enforced by both state apparatus (immigration law, labor ministry with limited capacity) and market actors (brokers, employers). Theater ratio (0.58): Moderate-high. Governments announce reforms (wage boards, labor inspectorates) but enforcement is weak. Brokers operate nominally under formal regulations while circumventing them. Trafficking is formally prohibited but endemic. The theater has increased as international pressure (UN conventions, NGO reporting, media scrutiny) has forced governments to adopt formal compliance structures while actual extraction patterns persist.",
+    "perspectival_gap": "The divergence between victim and beneficiary perspectives is near-maximal. Workers classify the constraint as Snare (pure extraction, no coordination benefit, survival-level suppression). Employers classify as Rope (genuine coordination: labor supply stability, project completion, predictability). Receiving governments classify as Rope (labor management, economic growth, political stability). This perspectival gap is not a measurement error \u2014 it reflects that the kafala system's coordination function for capital and employers is built on the extraction of labor from workers. One agent's coordination benefit is another's extraction cost. The constraint is functionally extractive for workers (Snare) and coordinative for employers (Rope) simultaneously.",
+    "directionality_logic": "Directionality values (d) range across the full spectrum reflecting the power asymmetry. Migrant workers: d \u2248 0.95 (trapped, powerless, full victims). Employers: d \u2248 0.05 (institutional power, arbitrage exit, beneficiaries). Receiving state governments: d \u2248 0.10 (institutional power, arbitrage options, net beneficiaries). Sending country governments: d \u2248 0.70 (organized power but constrained by remittance dependency; both beneficiaries and victims). The sigmoid f(d) scales these to f(d) values from 1.42 (workers) to -0.12 (employers). Effective extraction \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) shows workers experiencing \u03c7 \u2248 0.97 (high extraction), employers experiencing \u03c7 \u2248 -0.08 (subsidy), and national-scope regional actors experiencing intermediate values. The massive chi gap is diagnostic: when the same constraint produces near-opposite effective extractiveness for different agents, the distributional asymmetry is structural, not noise.",
+    "mandatrophy_analysis": "The constraint resolves the mandatrophy by showing that a single structural phenomenon can be simultaneously Snare and Rope depending on perspective. This is not a classification error. The kafala system genuinely solves a coordination problem for employers and receiving-state governments (labor supply, project management, political control). It genuinely extracts from workers (wages below market value, working conditions degraded, mobility eliminated, legal status weaponized). Both truths are structural. The mandatrophy resolution: the constraint is a Snare-that-appears-as-Rope to those who benefit from it. The engine's perspectival classification captures this: the beneficiary sees Rope; the victim sees Snare. Neither is wrong. The system is a Snare because it systematically benefits some by extracting from others \u2014 that's the definition of a Snare with coordination function elements. It appears as Rope to beneficiaries because, from their position, the extraction is invisible (it looks like labor is simply cheaper in the global market). The analytical observer must see both truths simultaneously: the system works (for employers); the system extracts (from workers). Naturalizing either view alone produces false summits."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "gulf_remittance_dependency",
+      "construction_sector_cost_structure",
+      "sending_country_development_model"
+    ],
+    "dual_formulation_note": "The kafala system decomposes into multiple constraint stories with different \u03b5 values: (1) kafala_legal_framework (\u03b5=0.05, Mountain) \u2014 the formal sponsorship structure is written into law, immutable from within legal systems of receiving states; (2) kafala_enforcement_practice (\u03b5=0.72, Snare) \u2014 the operational extraction mechanism dependent on low enforcement and worker desperation; (3) kafala_alternative_coordination (\u03b5=0.15, Rope) \u2014 the coordination function (matching labor supply to employer demand) could theoretically be performed via alternative mechanisms. This story addresses the enforcement-practice level (highest \u03b5, Snare from worker perspective). The upstream legal framework story would show Mountain from receiving-state governance perspective; downstream alternative-coordination story would show that technology and formal restructuring could replace kafala."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.7
+    }
+  ]
+}

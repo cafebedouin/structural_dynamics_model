@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "labor_wage_suppression",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lwsup"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Labor Wage Suppression Through Fragmented Labor Markets",
+    "topic_domain": "labor_economics/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "capital_owners",
+      "multinational_employers"
+    ],
+    "victims": [
+      "precarious_workers",
+      "low_skill_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Precarious Worker",
+      "comment": "PERSPECTIVE 1: PRECARIOUS WORKER (SNARE) \u2014 Faces fragmented labor markets, geographic barriers to mobility, visa restrictions, skill-specificity, and family dependencies that create insurmountable exit barriers. Bears extraction through wage suppression with no viable alternative. Lacks organizational capacity to resist. Maximum experienced extraction \u2014 powerless and trapped."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Unionized Skilled Worker",
+      "comment": "PERSPECTIVE 2: UNIONIZED SKILLED WORKER (SNARE) \u2014 Despite some organizational power and constrained (rather than trapped) exit options, still experiences significant extraction. Union membership provides limited leverage against capital's mobility and global labor arbitrage. Career switching and geographic relocation are costly but possible. Suppression remains high due to threat of outsourcing and wage competition from lower-cost regions."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Multinational Employer",
+      "comment": "PERSPECTIVE 3: MULTINATIONAL EMPLOYER (ROPE) \u2014 Experiences the constraint as pure coordination: managing a global workforce requires incentive structures, credible wage-setting mechanisms, and supply-chain integration. The employer benefits from the fragmented labor market structure through arbitrage (wage differentials between regions) and mobility (ability to relocate production). Net beneficiary \u2014 extraction runs toward this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Labor Organizing Coalition",
+      "comment": "PERSPECTIVE 4: LABOR ORGANIZING COALITION (TANGLED ROPE) \u2014 International labor organizations, cross-border worker networks, and supply-chain solidarity campaigns have developed genuine coordination functions (sharing information, coordinating wage demands across regions) while simultaneously bearing extraction costs (legal repression, blacklisting, economic vulnerability during strikes). Active enforcement required \u2014 organizing is actively suppressed. See sunset potential through regulatory momentum for global labor standards and living-wage requirements."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Minimum Wage Regulation System",
+      "comment": "PERSPECTIVE 5: MINIMUM WAGE REGULATION SYSTEM (PITON) \u2014 Minimum wage laws and labor standards have become largely performative: nominal minimum wages fail to track inflation or productivity, enforcement capacity is degraded through regulatory capture and underfunding, and legal exemptions (gig economy, informal sector) have eroded coverage. The regulatory system persists through institutional inertia despite reduced functional verification of wage floors. Theater ratio elevated because compliance theater (posting minimum wage notices) substitutes for actual wage protection."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some wage compression is inherent to competitive labor markets: workers always compete with each other for scarce jobs, and the equilibrium price of labor is determined by supply and demand. This perspective sees wage suppression as an immutable property of capitalist markets themselves. However, the structural data contradicts the mountain classification \u2014 the engine will compute this as a false summit, revealing that the 'inherent to markets' framing naturalizes what is actually a contingent institutional arrangement (visa regimes, union-busting, capital mobility restrictions on labor, information asymmetries) enforced through suppression mechanisms."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "market_contestation_vs_extraction",
+      "question": "Is wage suppression an outcome of competitive market processes or an extraction mechanism actively enforced against worker resistance?",
+      "resolution_mechanism": "Historical analysis of wage trends relative to productivity; documentation of explicit anti-union policies, strike-breaking, and visa restriction enforcement; comparison of wage levels in markets with strong labor organization vs weak organization controlling for productivity",
+      "impact": "If market outcome: classification shifts toward Rope from more perspectives. If active extraction: classification confirms Snare from victim perspectives and reveals enforcement mechanisms.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether wage suppression is competitive outcome or active extraction"
+    },
+    {
+      "id": "labor_mobility_barriers_structural_vs_policy",
+      "question": "Are the barriers to worker mobility primarily structural (skill-specificity, family ties, geographic distance) or policy-enforced (visa restrictions, professional licensing, capital controls)?",
+      "resolution_mechanism": "Decomposition of mobility barriers; analysis of wage differentials before and after policy changes (visa regime liberalization, professional credential reciprocity); comparison of mobility rates between workers with vs without policy barriers",
+      "impact": "If primarily structural: suppression floor is higher, classification stable. If primarily policy-enforced: suppression is deliberate mechanism, exit options upgrade from trapped to constrained for many workers, perspectives shift toward Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs policy-enforced labor mobility barriers"
+    },
+    {
+      "id": "global_wage_floor_emergence",
+      "question": "Are rising labor standards and wage-floor regulations in developing economies evidence of constraint degradation (Piton trajectory) or emergence of genuine coordinating institutions?",
+      "resolution_mechanism": "Time-series analysis of minimum wage enforcement effectiveness; documentation of regulatory capture dynamics; comparison of nominal vs real wage floors; assessment of coverage gaps (informal sector, migrant workers, gig workers)",
+      "impact": "If genuine coordination emerging: scaffold perspective validated, sunset clause timeline strengthens. If performative degradation: piton classification confirmed, theater_ratio elevation continues.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether labor standards regulations are functional or performative"
+    },
+    {
+      "id": "collective_action_threshold_for_powerless_workers",
+      "question": "At what scale of organization can precarious workers transition from powerless/trapped to organized/constrained? Is the threshold empirically achievable?",
+      "resolution_mechanism": "Case study analysis of successful cross-border worker organizing; documentation of coalition formation and coordination mechanisms; assessment of necessary resources and legal conditions for mobilization",
+      "impact": "If threshold achievable with current resources: scaffold/tangled rope perspectives become more realistic, power upgrade pathway exists. If threshold structurally unachievable: powerless/trapped classification persists, snare becomes more stable.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Collective action threshold for precarious worker organization"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Labor wage suppression operates through a system of fragmented and asymmetric labor markets where workers face barriers to geographic, sectoral, and professional mobility while capital retains unrestricted mobility across borders. This constraint exhibits the full range of DR classifications from different structural positions. The same institutional arrangements \u2014 visa regimes, union-busting, outsourcing threats, professional licensing cartels, and wage-floor regulations with degraded enforcement \u2014 appear as a natural law of capitalist competition (mountain), pure extraction (snare), coordination mechanisms (rope), mixed coordination-extraction hybrids (tangled rope), degraded regulatory institutions (piton), or emergent worker organization (scaffold), depending on the observer's position within the labor market. The extractiveness metric has risen from 0.38 to 0.62 over the 30-year interval, reflecting the acceleration of capital mobility and the degradation of labor organizing power. The theater_ratio has similarly increased from 0.32 to 0.58, indicating that nominal labor standards (minimum wage laws, safety regulations, working-hour restrictions) have become increasingly performative \u2014 compliance theater substitutes for actual protection as enforcement capacity degrades through underfunding and regulatory capture.",
+    "key_agents": [
+      "Precarious Workers: Primary victim (powerless/trapped) \u2014 faces geographic barriers, visa restrictions, family dependencies, and skill-specificity that create exit barriers; bears extraction through suppressed wages with no viable alternatives",
+      "Low-Skill Workers: Secondary victim (moderate/constrained) \u2014 faces labor market competition and outsourcing threats; some mobility options exist but are costly",
+      "Multinational Employers: Primary beneficiary (institutional/arbitrage) \u2014 captures wage arbitrage across regions and productivity gains; maintains mobility advantage over workers",
+      "Capital Owners: Secondary beneficiary (powerful/arbitrage) \u2014 benefits from suppressed labor costs and reduced labor's bargaining power; global capital mobility preserves leverage",
+      "Labor Organizing Coalition: Organized actor (organized/constrained) \u2014 international unions, cross-border worker networks, supply-chain solidarity campaigns; developing coordination function while bearing active suppression",
+      "Government Labor Standards Bodies: Institutional actor (institutional/arbitrage) \u2014 implements regulations that are increasingly performative; maintains appearance of wage protection while enforcement capacity degrades",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as inherent properties of labor markets"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The original extraction value of 0.38 reflects the genuine coordination function \u2014 wage-setting mechanisms do solve the problem of matching workers to jobs. But extractiveness has risen to 0.62 as capital mobility has accelerated and labor organizing capacity has degraded, increasing the asymmetry between what workers earn and what their productivity generates. The 20-point increase over the interval reflects ongoing rent-seeking layered onto coordination. Suppression (0.68): High. Multiple overlapping barriers constrain worker exit: visa restrictions prevent international mobility, professional licensing creates cartels, family dependencies reduce geographic mobility, skill-specificity locks workers into declining sectors, and the threat of outsourcing constrains wage demands. Informal employment and gig economy growth have further reduced worker protections. Theater ratio (0.55): Moderate and rising. Minimum wage laws, labor safety standards, and maximum hour regulations have become increasingly performative. Nominal minimum wages fail to track inflation, enforcement budgets have been cut, and legal exemptions (gig workers, informal sector, agricultural workers) have expanded to cover majority of growth. Compliance posters substitute for actual wage protection \u2014 the ritual persists while the function degrades.",
+    "perspectival_gap": "This constraint demonstrates classification diversity across structural positions. The precarious worker and unionized skilled worker both classify as Snare but with different power/exit combinations \u2014 the precarious worker experiences maximum extraction while trapped, the unionized worker retains some leverage through organization and constrained exit. The multinational employer sees Rope \u2014 managing global labor supply is a genuine coordination problem, and the employer benefits from the fragmented structure through arbitrage. The labor organizing coalition sees Tangled Rope \u2014 they have developed real coordination functions (cross-border information sharing, coordinated wage demands) while bearing extraction costs (legal suppression, blacklisting). The minimum wage regulation system appears as Piton \u2014 institutions that once functioned now persist through inertia with degraded verification. The civilizational analytical observer risks seeing Mountain (wage suppression as inherent to labor markets) \u2014 but the structural data reveals this as naturalization of contingent institutional arrangements enforced through suppression mechanisms.",
+    "directionality_logic": "Directionality values (d) flow from structural power, exit options, and beneficiary/victim status. Precarious workers with trapped exit options and victim status experience maximum d \u2248 0.95, producing high f(d) \u2248 1.42 \u2014 their experience of extractiveness is amplified by powerlessness. Multinational employers with arbitrage exit and beneficiary status experience minimum d \u2248 0.05, producing negative f(d) \u2248 -0.12 \u2014 extraction flows toward them, reducing their experienced cost. Unionized workers at moderate power with constrained exit and victim status experience mid-range d \u2248 0.70, producing f(d) \u2248 1.05 \u2014 significant but not maximal extraction. Labor organizing coalitions with organized power and constrained exit experience d \u2248 0.55, producing f(d) \u2248 0.75 \u2014 mixed extraction and coordination function. The global scope \u03c3(S) = 1.2 amplifies extractiveness: wage suppression operates across borders and affects workers at all skill levels everywhere, making verification and resistance more difficult.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating that Snare and Tangled Rope are the stable classifications from victim perspectives, while Rope and Piton are stable from beneficiary/regulatory perspectives. The Mountain classification is revealed as a false summit \u2014 the 'inherent to markets' framing naturalizes what is actually enforced extraction. The analytical observer faces the oracle gap (U\u2084 paradox): recognizing wage suppression as structural requires adopting victim perspectives that reveal mechanisms the beneficiary perspective obscures. The labor organizing coalition represents the partial escape route \u2014 by elevating power from powerless to organized, workers can shift classification from Snare (pure extraction) to Tangled Rope (mixed coordination-extraction), creating leverage for negotiation. This is not a stable equilibrium but a dynamic oscillation: capital responds to worker power by offshoring production or casualizing employment, which re-collapses organization and re-establishes Snare conditions. The measurements show extractiveness rising despite nominal labor standards \u2014 evidence that theater_ratio growth indicates regulatory capture and degradation rather than functional protection."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "labor_market_segmentation",
+      "union_busting_mechanisms",
+      "visa_restriction_regimes"
+    ],
+    "dual_formulation_note": "Wage suppression decomposes into three structurally distinct constraints: labor market segmentation (\u03b5\u22480.35, creates barriers between segments), union-busting (\u03b5\u22480.65, active extraction through legal/violent suppression), and visa restrictions (\u03b5\u22480.52, artificial scarcity creating extraction). This story models the aggregate effect; specific causal mechanisms are isolated in downstream constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.72
+    }
+  ]
+}

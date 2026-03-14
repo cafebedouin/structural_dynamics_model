@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "bureaucratic_capture",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "burcap"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bureaucratic Capture: Regulatory Agency Mission Drift",
+    "topic_domain": "political_economy/regulatory_capture",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "regulated_industry"
+    ],
+    "victims": [
+      "public_interest",
+      "enforcement_mandate"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Regulated Population",
+      "comment": "PERSPECTIVE 1: REGULATED POPULATION (SNARE) \u2014 Citizens subject to regulatory regime have no exit option. They cannot opt out of the jurisdiction or escape the regulatory mechanism. The extraction runs entirely toward the beneficiary (regulated industry). Maximum suppression \u2014 the public cannot organize alternative regulatory structures or defect from the system."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Enforcement Staff",
+      "comment": "PERSPECTIVE 2: ENFORCEMENT STAFF (TANGLED ROPE) \u2014 Career regulators experience genuine coordination function (information gathering, standard-setting, institutional consistency) alongside asymmetric extraction. They benefit from career advancement within captured agencies but bear costs of mission drift and cognitive dissonance. Exit costs are high (sunk career investment) but not absolute (can move to NGOs, academia, or different agencies)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Regulated Industry",
+      "comment": "PERSPECTIVE 3: REGULATED INDUSTRY (ROPE) \u2014 Net beneficiary from captured agency. Experiences the constraint as pure coordination: regulatory agency provides certainty, predictability, and industry-friendly rule interpretation. Industry can arbitrage regulatory differences across jurisdictions. For regulated firms, the captured agency IS the coordination mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Reform Coalition",
+      "comment": "PERSPECTIVE 4: REFORM COALITION (TANGLED ROPE) \u2014 Organized agents (consumer advocates, environmental groups, labor unions) perceive both coordination function (multi-stakeholder regulatory process) and asymmetric extraction (access advantages favor industry). They have agency to push for reform but face structural barriers: funding disadvantages vs industry, information asymmetries, and entrenched institutional practices. High suppression through complexity and resource disparity."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Regulatory Institution",
+      "comment": "PERSPECTIVE 5: REGULATORY INSTITUTION (PITON) \u2014 The agency itself maintains the ritual of impartiality and public interest representation while actual decision-making favors regulated industry. Theater ratio high: regulatory proceedings, impact assessments, and public comment periods are performed but outcomes predetermined. The institution persists through formal legitimacy despite degraded function, sustained by legal mandate and bureaucratic inertia."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Transparency Advocates",
+      "comment": "PERSPECTIVE 6: TRANSPARENCY ADVOCATES (SCAFFOLD) \u2014 Open records mandates, FOIA requirements, and disclosed lobbying activities create temporary scaffolding that reduces capture opacity without dismantling the capture mechanism itself. High theater in transparency theater (lots of documents, little effect on outcomes), but the scaffold perception sees this as a path toward eventual accountability. Sunset logic: as disclosure mechanisms mature and digital tools enable cross-referencing, the cost of maintaining capture rises."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, regulatory capture is a recurrent structural feature of complex governance: agencies need industry expertise, industry has incentive to influence regulation, and no purely organizational mechanism prevents capture. However, the constraint is not immutable (not a mountain) because institutional redesigns (rotating personnel, transparency mechanisms, multi-stakeholder boards) demonstrably reduce capture severity. The analytical perspective sees the tangled rope structure: genuine coordination function (regulation IS needed) intertwined with structural extraction (industry dominance is not inevitable but is contingent on institutional design choices)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "capture_threshold_ambiguity",
+      "question": "At what point does agency consideration of industry preferences become regulatory capture vs. legitimate stakeholder engagement?",
+      "resolution_mechanism": "Outcome analysis: compare regulatory decisions to disclosed preferences of all stakeholder groups (industry, public interest, enforcement staff); measure deviation from median stakeholder position",
+      "impact": "If threshold is tight (strict = capture): many agencies classified as captured that see themselves as balanced. If threshold is loose (permissive = balance): capture mechanism misses cases of effective industry dominance without explicit quid pro quo.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Definitional threshold for capture vs. stakeholder engagement"
+    },
+    {
+      "id": "identity_lock_in_enforcement_staff",
+      "question": "Are regulatory staff trapped by external barriers (career cost of exit) or identity-locked (professional identity constituted within captured agency)?",
+      "resolution_mechanism": "Tracking of staff mobility and post-exit behavior: do staff who leave captured agencies change enforcement priorities? Do they report identity reorientation or just material improvement?",
+      "impact": "If mostly trapped (external barriers): reform through rotation and outside hire possible. If mostly identity-locked: staff resistance to reform will persist even after capturing influence is removed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether enforcement staff are materially trapped or identity-locked"
+    },
+    {
+      "id": "transparency_mechanism_efficacy",
+      "question": "Do disclosure mandates (lobbying records, revolving door tracking, algorithm audits) actually reduce capture or merely shift it into less visible channels?",
+      "resolution_mechanism": "Measurement of capture before/after transparency implementation; analysis of decision outcomes vs disclosed lobbying intensity; identification of shift to informal channels",
+      "impact": "If efficacy high: scaffold perspective validated \u2014 transparency is real pathway to reform. If efficacy low: transparency is pure theater, and capture persists because suppression mechanism (information asymmetry + resource disparity) remains intact.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether transparency mechanisms reduce or merely relocate capture"
+    },
+    {
+      "id": "institutional_redesign_stability",
+      "question": "Do organizational reforms that reduce capture (rotation policies, merit-based promotion, multi-stakeholder boards) persist or degrade back to captured equilibrium?",
+      "resolution_mechanism": "Longitudinal study of reformed agencies: measure capture severity 5, 10, 20 years after reform; identify variables predicting regression",
+      "impact": "If reforms persist: capture is contingent on institutional design (tangled rope structure validated). If reforms degrade: capture may be a basin attractor (mountain-like property of governance systems).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Persistence of institutional reforms against capture"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Bureaucratic capture describes the structural inversion of regulatory agency mission: an institution created to constrain an industry gradually becomes an instrument for industry preference advocacy. The constraint exhibits the full tangled rope structure \u2014 genuine regulatory coordination functions (standard-setting, information aggregation, dispute resolution) coexist with asymmetric extraction (preferential rule interpretation, selective enforcement, regulatory forbearance). The mechanism operates through three reinforcing pathways: (1) industry expertise concentration \u2014 the regulated industry holds specialized knowledge that agencies depend on, creating information asymmetry; (2) career circulation \u2014 regulatory staff rotate into industry positions, creating exit pathways and future incentives; (3) institutional inertia \u2014 regulatory processes accumulate industry-friendly precedents that constrain successors. The extractiveness value of 0.58 reflects that the mechanism is neither pure coordination (which would be rope) nor pure extraction without coordination function (which would be snare). The theater ratio of 0.68 indicates substantial performative activity: regulatory hearings, impact assessments, and public comment periods maintain the appearance of public-interest review while industry preferences effectively determine outcomes. The measurements show acceleration over the interval \u2014 both extractiveness and theater increase as the capture mechanism solidifies and requires more elaborate legitimating performance.",
+    "key_agents": [
+      "Regulated Industry: Primary beneficiary (institutional/arbitrage) \u2014 captures favorable regulatory interpretation; can arbitrage regulatory differences across jurisdictions",
+      "Regulated Population: Primary victim (powerless/trapped) \u2014 bears costs of regulatory favoritism through higher prices, reduced safety, or environmental damage; cannot exit the jurisdiction",
+      "Enforcement Staff: Secondary victim (moderate/constrained) \u2014 experience mission drift and cognitive dissonance; constrained exit (career investment); also receive benefits (stability, funding, predictability from captured equilibrium)",
+      "Reform Coalition: Organized victim (organized/constrained) \u2014 consumer advocates, environmental groups, labor unions; have organizing capacity but face funding disadvantages and information asymmetries vs. industry",
+      "Regulatory Institution: Structural mechanism (institutional/arbitrage) \u2014 maintains public legitimacy while favoring regulated industry; benefits from legitimacy of capture mechanism",
+      "Transparency Advocates: Reform agents (organized/constrained) \u2014 push for disclosure mandates and multi-stakeholder processes; constrained by political and resource barriers"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The regulated industry captures significant value through favorable regulatory interpretation, selective enforcement, and rule postponement during political windows. However, the agency must still provide genuine regulation (industry cannot operate without rules), so some coordination function persists. The measurement trajectory (0.32 \u2192 0.58) shows capture acceleration over time as informal relationships solidify and industry-friendly precedents accumulate. Suppression (0.62): Moderate-high. The public cannot exit the regulated system, enforcement staff face career barriers to resistance, and reform coalitions face resource disadvantages. However, suppression is not total \u2014 formal democratic mechanisms (electoral pressure, FOIA, public advocacy) provide some countervailing power. Theater ratio (0.68): High. Regulatory processes are substantially performative. Public comment periods are held but comments on disfavored policies are rarely determinative. Impact assessments are conducted but findings are rarely allowed to block industry-preferred outcomes. The theater has increased (0.38 \u2192 0.68) because capture requires increasingly elaborate legitimating performance as the mechanism becomes more transparent and contested.",
+    "perspectival_gap": "The beneficiary (regulated industry) perceives rope \u2014 the agency provides valuable coordination function and predictable rule environment. The trapped population perceives snare \u2014 they bear the costs of regulatory favoritism with no exit. The enforcement staff perceive tangled rope \u2014 they work on genuinely important coordination tasks but within a system designed to favor the regulated. The reform coalition perceives tangled rope \u2014 the regulatory system has coordination function but the extraction flow is asymmetric. The agency itself perceives piton \u2014 it maintains the ritual of impartial review despite knowing outcomes are predetermined. The transparency advocates perceive scaffold \u2014 disclosure mechanisms are gradually raising the cost of capture, creating a path toward reform. The analytical observer perceives tangled rope structure as recurrent but not immutable \u2014 institutional design choices (rotation policies, multi-stakeholder boards, external audits) demonstrably reduce capture severity, suggesting the constraint is contingent on institutional arrangements rather than inherent to governance.",
+    "directionality_logic": "Directionality (d) values reflect each agent's structural position relative to the extraction flow. The regulated industry benefits from capture and has high exit optionality (arbitrage across jurisdictions) \u2192 low d \u2192 negative effective extraction chi. The trapped population bears costs and has no exit \u2192 high d \u2192 high chi. The enforcement staff have constrained exit (career investment) and bear extraction costs (mission drift) but also receive benefits (stability, predictability) \u2192 moderate d. The reform coalition has agency (organizing capacity) but faces barriers (resources, information asymmetry) \u2192 moderate d but with tension between power and exit options. The analytical perspective overrides the tendency to naturalize capture as inevitable by showing that institutional designs demonstrably reduce it \u2014 this breaks the false summit logic and confirms the tangled rope structure rather than a mountain.",
+    "mandatrophy_analysis": "RESOLUTION: The constraint resolves mandatrophy by distinguishing the coordination function (genuine agency role in setting standards, aggregating information, managing disputes) from the extraction mechanism (industry capture of that coordination function). The error case would be classifying regulatory capture as either pure rope (ignoring industry dominance) or as pure snare (ignoring that regulation itself is coordination work). The tangled rope classification holds both: the agency coordinates on behalf of industry rather than the public, creating an extraction mechanism layered onto genuine coordination function. Reform strategies differ by whether they target the coordination function (strengthen multi-stakeholder processes) or the capture mechanism (rotate personnel, reduce information asymmetry, increase transparency). Mandatrophy is resolved by recognizing that institutional redesigns that modify how coordination happens WITHOUT eliminating regulatory function demonstrably reduce extractiveness, confirming that the constraint is tangled rope (redesignable) rather than mountain (immutable)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_forbearance",
+      "information_asymmetry_in_rulemaking",
+      "revolving_door_structural_bias"
+    ],
+    "dual_formulation_note": "Bureaucratic capture decomposes into three structurally distinct constraints: (1) regulatory_forbearance (\u03b5\u22480.45) \u2014 the specific policy of not enforcing rules; (2) information_asymmetry_in_rulemaking (\u03b5\u22480.38) \u2014 the structured knowledge imbalance in rule development; (3) revolving_door_structural_bias (\u03b5\u22480.52) \u2014 the career circulation mechanism. Each has different reform strategies and different measurement signatures. The parent story (this file) represents the integrated capture mechanism; the decomposed stories enable targeted analysis of specific reform pathways."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.22
+    }
+  ]
+}

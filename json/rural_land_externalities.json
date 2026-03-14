@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "rural_land_externalities",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rle"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Rural Land Use Externalities and Subsidy Coordination",
+    "topic_domain": "agricultural_economics/environmental_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_agricultural_producers",
+      "chemical_manufacturers",
+      "commodity_exporters"
+    ],
+    "victims": [
+      "small_scale_farmers",
+      "rural_groundwater_users",
+      "downstream_watershed_communities",
+      "wildlife_habitat_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Small-Scale Farmer",
+      "comment": "PERSPECTIVE 1: SMALL-SCALE FARMER (SNARE) \u2014 Trapped by land debt, commodity price volatility, and subsidy structure that incentivizes industrial monoculture. Cannot exit without abandoning generational holdings or accepting bankruptcy. Externality costs (soil degradation, water contamination) accumulate on their land while commodity price floors and fertilizer subsidies flow to large producers. Maximum extraction from this position."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Rural Groundwater User",
+      "comment": "PERSPECTIVE 2: RURAL GROUNDWATER USERS (TANGLED ROPE) \u2014 Constrained by infrastructure dependency (wells, irrigation systems tied to current land use pattern) and regulatory complexity. Genuine coordination exists: fertilizer runoff prevention benefits all users. But asymmetric extraction runs through: industrial agriculture externalizes water contamination costs onto downstream users who bear cleanup expense and risk. Some exit via relocation or remediation, but at high cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Large Agricultural Producer",
+      "comment": "PERSPECTIVE 3: LARGE AGRICULTURAL PRODUCER (ROPE) \u2014 Experiences the constraint as coordination: commodity standards, fertilizer supply chains, market infrastructure. Net beneficiary through price supports and input subsidies. Can arbitrage between regulatory jurisdictions (relocate production or source inputs from more permissive regions). The constraint enables profitable scaling while externality costs remain off-balance-sheet."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Environmental Regulation Coalition",
+      "comment": "PERSPECTIVE 4: ENVIRONMENTAL REGULATION COALITION (SCAFFOLD) \u2014 Organized agents (watershed districts, conservation nonprofits, regulatory agencies) see the current subsidy-externality structure as temporary and solvable through policy reform. Active enforcement exists (water quality standards, nutrient management plans) with explicit sunset logic: payments-for-ecosystem-services and regenerative agriculture incentive programs are building alternative pathways. Constraint is structural but declining with policy sunset clause: estimated 15-25 year transition to internalized costs."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Agricultural Support System",
+      "comment": "PERSPECTIVE 5: AGRICULTURAL SUPPORT SYSTEM (PITON) \u2014 Price support systems, crop insurance, and fertilizer subsidies persist largely through institutional inertia. Original coordination function (stabilizing rural incomes post-Depression) has been substantially replaced by rent-seeking. Theater ratio (0.68) reflects that much program activity is performative: subsidy payments maintain rural political constituency more than they support viable farming. System sees its own mechanism as degraded but maintains it for political stability rather than functional necessity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The Continental Agricultural Market",
+      "comment": "PERSPECTIVE 6: CONTINENTAL AGRICULTURAL MARKET (TANGLED ROPE) \u2014 At market scale, externality subsidy structure coordinates international commodity trading (standardized prices, stable supply) while extracting through environmental degradation that accumulates across borders. Fertilizer-intensive monoculture spreads because inputs are subsidized; watershed contamination crosses jurisdictional boundaries; soil erosion accelerates regionally. Market participants experience coordination benefits (price stability, input availability) alongside extraction costs (environmental liability, regulatory uncertainty). Organized agents can exit by relocating production or sourcing."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Ecological Limits View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / ECOLOGICAL LIMITS VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some agricultural externality is inherent to large-scale food production: monoculture always increases pest pressure, chemical inputs always run off into water systems, soil organic matter always declines under intensive use. This perspective sees the externality constraint as a natural law of agronomic systems. However, the structural data contradicts the mountain classification \u2014 the engine will identify this as false naturalization of what is actually a contingent policy choice (whether to internalize costs or externalize them)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "subsidy_necessity_ambiguity",
+      "question": "Are agricultural price supports necessary to prevent rural economic collapse, or do they maintain artificially concentrated land ownership that would otherwise consolidate further?",
+      "resolution_mechanism": "Historical analysis of rural income and land ownership patterns; comparison of regions with vs without subsidy structures; modeling of transition to cost-internalized pricing",
+      "impact": "If necessary: subsidy structure is legitimate coordination (Rope from more perspectives). If artificial: subsidies are pure rent extraction (Snare from more perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether subsidies prevent collapse or artificially concentrate ownership"
+    },
+    {
+      "id": "externality_localization",
+      "question": "Do externality costs (groundwater contamination, soil degradation, nutrient runoff) remain localized to agricultural regions or distribute globally through food trade and atmospheric/water transport?",
+      "resolution_mechanism": "Isotope tracing of nutrient pathways; mapping of contaminated watershed extent; lifecycle analysis of food system externalities across supply chain",
+      "impact": "If localized: small-farmer perspective sees regional Snare. If distributed: global commodity market perspective amplifies extraction to institutional scale.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Geographic scope of externality distribution"
+    },
+    {
+      "id": "regenerative_agriculture_scalability",
+      "question": "Can regenerative agriculture (cover crops, crop rotation, reduced tillage) achieve commodity-scale yields without subsidized chemical inputs, or is it fundamentally constrained to smaller farms?",
+      "resolution_mechanism": "Yield comparisons at scale (>500 acres); input cost analysis over 10-year rotation; carbon/soil quality metrics vs conventional farming",
+      "impact": "If scalable: scaffold sunset is real and timeline is predictable. If not: externality constraint persists regardless of policy reform.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regenerative agriculture can replace industrial monoculture at scale"
+    },
+    {
+      "id": "institutional_lock_in_mechanism",
+      "question": "Is the persistence of subsidy-externality structure driven by vested financial interest (agribusiness political power), genuine rural economic necessity, or path-dependent institutional inertia?",
+      "resolution_mechanism": "Political contribution tracking; rural income sensitivity analysis; comparative policy shifts in peer democracies; institutional history of subsidy programs",
+      "impact": "If financial vested interest dominates: piton perspective is correct \u2014 constraint persists despite dysfunction. If economic necessity: reform timeline must account for transition costs. If inertia: rapid policy change is feasible.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Primary driver of constraint persistence"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Rural land use generates structural externalities where agricultural producers benefit from subsidized inputs and commodity price supports while environmental costs (groundwater contamination, soil degradation, watershed damage) accumulate on small-scale farmers, rural water users, and downstream communities. The constraint combines genuine coordination functions (price stability for farmers, reliable commodity supply for consumers) with systematic extraction (externality costs borne by powerless agents, subsidy benefits concentrated among large producers). The subsidy-externality system has degraded over 40 years as: (1) extractiveness increased (\u03b5: 0.35\u21920.58) as fertilizer inputs intensified and subsidy programs expanded; (2) theater ratio increased (0.45\u21920.68) as subsidy programs shifted from supporting struggling farmers to maintaining consolidated industrial agriculture while performing rural stewardship. The constraint exhibits all six DR types depending on observer position: immutable ecological limits (mountain), temporary policy problem with reform pathway (scaffold), degraded institutional ritual (piton), pure extraction for trapped agents (snare), mixed coordination-extraction for moderate agents (tangled rope), and coordinating function for beneficiaries (rope).",
+    "key_agents": [
+      "Large Agricultural Producers: Primary beneficiary (institutional/arbitrage) \u2014 capture commodity price supports, fertilizer subsidies, and scale economies; externalize environmental costs",
+      "Small-Scale Farmers: Primary victim (powerless/trapped) \u2014 bear environmental degradation costs and debt burdens while subsidy structure incentivizes industrial consolidation",
+      "Rural Groundwater Users: Secondary victim (moderate/constrained) \u2014 face contamination from agricultural runoff; barriers to exit via alternative water sources or relocation",
+      "Downstream Watershed Communities: Secondary victim (moderate/constrained) \u2014 bear nutrient runoff and water quality degradation costs; constrained by infrastructure dependency",
+      "Environmental Regulation Coalition: Organized agents (organized/constrained) \u2014 propose policy reforms and regenerative agriculture incentives with generational sunset logic",
+      "Agricultural Support System: Institutional actor (institutional/arbitrage) \u2014 maintains subsidy and price support programs; sees own mechanism as degraded but persists through political inertia",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent policy choice as ecological law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The subsidy-externality structure transfers wealth to large producers while imposing environmental remediation costs on powerless agents. The extractiveness is not maximal (0.75+) because some coordination value is genuine (price stability does support some viable farming, commodity supply chains do function). The 0.58 value reflects that extraction is substantial but embedded in mixed coordination. Suppression (0.62): Moderate-high. Significant barriers to exit include: land debt and illiquidity (small farmers cannot sell without economic destruction), infrastructure lock-in (water users cannot redirect irrigation systems), regulatory complexity (policy reform requires political consensus), and path-dependent commodity systems (switching production patterns requires multi-year transition). But suppression is not total (0.80+) \u2014 some actors can exit via relocation, policy change is possible, alternative farming models exist. Theater ratio (0.68): Moderate-high. Subsidy programs perform rural support while primary function has shifted to rent extraction and political constituency maintenance. Program administration (crop insurance, price floor enforcement) is substantial but ritualistic \u2014 much effort goes to maintaining the appearance of farmer support rather than enabling viable farming. Environmental regulations create performative compliance (nutrient management plans) without necessarily reducing runoff. Theater has increased over the interval as programs shifted from stabilizing marginal farms to subsidizing consolidation.",
+    "directionality_logic": "Directionality is determined by structural position relative to the externality flow. Large producers benefit from subsidies and externalize costs \u2192 low d (full beneficiary). Small farmers are trapped with debt and land degradation \u2192 high d (full target). Groundwater users and downstream communities bear contamination costs while having some exit options (relocation, remediation) \u2192 moderate-high d. Environmental coalition members are organized and can exit via policy change \u2192 moderate d. Agricultural support system maintains subsidies despite degraded function \u2192 beneficiary position (low d) but increasingly theatrical. At civilizational analytical scope, the mountain perspective is tempting but structurally incorrect \u2014 ecological limits exist, but the constraint's extractiveness derives from institutional choice to externalize costs, not from inherent agricultural necessity.",
+    "perspectival_gap": "This constraint demonstrates perspectival inversion: the beneficiary (large producer) sees rope (coordination), the victim (small farmer) sees snare (extraction), the organized coalition sees scaffold (temporary problem with sunset), the degraded system sees piton (ritual without function), moderate agents see tangled rope (mixed coordination and extraction), and the analytical observer risks seeing mountain (false naturalization). The perspectival gaps reflect real structural differences: large producers genuinely experience the subsidy system as enabling stable commodity production (their rope experience is accurate); small farmers genuinely experience land degradation and debt accumulation without subsidy access (their snare experience is accurate); the environmental coalition genuinely sees policy levers for reform (their scaffold experience reflects real political possibility); and the support system genuinely operates through institutional momentum rather than functional necessity (the piton observation is diagnostically sound). The false mountain perspective would claim agricultural externalities are inherent to food production \u2014 but the empirical variation in externality intensity across farming methods reveals this is contingent institutional choice, not ecological law.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the mandatrophy by showing that large-scale agricultural subsidy-externality systems are neither pure coordination (rope) nor pure extraction (snare) but rather hybrid tangled ropes where: (1) genuine coordination functions exist (price stability enables some farming, commodity systems feed populations); (2) asymmetric extraction is systematic (externality costs are borne by powerless agents while subsidy benefits concentrate among large producers); (3) active enforcement is required (regulatory compliance, subsidy administration, commodity market management); (4) the coordination function is real but degraded (subsidy programs shifted from marginal-farm support to rent extraction over 40 years). The mandatrophy-resolving insight: the subsidy-externality structure coordinates commodity markets while extracting from powerless agents precisely BECAUSE it externalizes costs. The extraction mechanism IS the coordination mechanism \u2014 subsidy extraction subsidizes commodity production, which coordinates global food markets. Reducing suppression (internalizing externality costs) would require either: (a) massive subsidy expansion to compensate for cost internalization, or (b) accepting commodity system restructuring and price volatility. The constraint is tangled rope at institutional scale but appears as snare from the powerless victim's perspective and rope from the beneficiary's perspective \u2014 the mandatrophy is resolved by recognizing that all three perspectives are structurally accurate for their positions."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "agricultural_commodity_markets",
+      "groundwater_depletion",
+      "soil_carbon_accumulation",
+      "rural_population_decline"
+    ],
+    "dual_formulation_note": "Rural land externalities decompose into three structurally distinct constraints: (1) commodity market coordination (low \u03b5, rope) addressing price stability; (2) subsidy distribution (high \u03b5, snare) addressing wealth transfer; (3) environmental remediation (moderate \u03b5, tangled rope) addressing cost absorption. This story models all three as coupled components of a single constraint family. Upstream stories include agricultural commodity market price support (\u03b5\u22480.25) and downstream stories include groundwater contamination (\u03b5\u22480.72) and rural population collapse (\u03b5\u22480.68)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

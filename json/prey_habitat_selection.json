@@ -1,0 +1,136 @@
+{
+  "header": {
+    "constraint_id": "prey_habitat_selection",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "prey"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.08,
+    "claimed_type": "mountain",
+    "human_readable": "Prey Habitat Selection as Natural Law",
+    "topic_domain": "evolutionary_biology/behavioral_ecology",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Prey Individual",
+      "comment": "PERSPECTIVE 1: THE PREY INDIVIDUAL (MOUNTAIN) \u2014 Individual prey organisms have zero degrees of freedom in habitat selection once environmental fitness functions are fixed. The constraint emerges from the physics of energy intake, predation risk, and metabolic cost. No alternative pathway exists that trades survival probability against habitat choice \u2014 the organism either selects the optimal habitat or faces fitness penalties converging to zero across evolutionary time."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Evolutionary Analyst",
+      "comment": "PERSPECTIVE 2: EVOLUTIONARY ANALYST (MOUNTAIN) \u2014 From the analytical perspective examining civilizational timescales, prey habitat selection is an invariant property of selection dynamics. The constraint arises from fundamental trade-offs between resource availability, predation risk, and energy expenditure. These trade-offs are structural features of how populations evolve, not contingent institutional arrangements. The law holds across all ecosystems, taxa, and environmental conditions because it reflects underlying physical and biological constraints."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Population-Level View",
+      "comment": "PERSPECTIVE 3: POPULATION-LEVEL VIEW (MOUNTAIN) \u2014 At the generational timescale across a regional population, habitat selection constraint remains mountain-class. Individual variation in selection behavior exists, but the constraint operates through differential survival and reproduction \u2014 populations converge toward optimal habitat use or face local extinction. The mechanism is immutable across generations because it reflects invariant fitness trade-offs, not changing environmental conditions or preferences."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "habitat_optimality_definition",
+      "question": "What constitutes 'optimal' habitat selection when energy intake, predation risk, and territorial costs trade off nonlinearly?",
+      "resolution_mechanism": "Empirical fitness measurement across gradient of habitat choices; calculation of expected lifetime reproductive success for each habitat type; comparison to observed selection patterns",
+      "impact": "If observable habitat choice matches predicted optimal habitat: mountain classification confirmed. If systematic divergence exists: suggests additional constraints (behavioral inertia, information limitation, or physiological constraint) that should be modeled as separate constraints.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Definition of habitat optimality under nonlinear trade-offs"
+    },
+    {
+      "id": "phenotypic_plasticity_bounds",
+      "question": "Are constraints on habitat selection developmental/physiological (hard constraints) or learned/behavioral (soft constraints with plasticity)?",
+      "resolution_mechanism": "Cross-species comparison of habitat selection flexibility; experimental manipulation of early developmental conditions; measurement of within-individual habitat switching rates",
+      "impact": "If primarily hard constraints: mountain classification strengthened (immutable across organism lifetime). If primarily soft constraints: reclassify to rope (coordination problem between state and environment) or scaffold (plasticity provides adaptation mechanism with potential sunset).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether habitat selection constraints are physiological or behavioral"
+    },
+    {
+      "id": "environment_stationarity",
+      "question": "Over what timescale does the constraint remain invariant? Do climate change, landscape alteration, or invasive competitor dynamics render optimal habitat patterns non-stationary?",
+      "resolution_mechanism": "Long-term comparative studies of habitat selection in stable vs rapidly changing environments; modeling of evolutionary lag when environmental conditions shift faster than selection can track",
+      "impact": "If environment is stationary on generational timescale: mountain persists. If environment changes rapidly relative to prey generation time: constraint becomes non-stationary, effectively a scaffold (prey habitat selection with contingent sunset) or tangled rope (coordination with environmental change creates extraction lag).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Stationarity of environment and invariance of habitat selection constraint"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "Prey habitat selection is the behavioral and evolutionary constraint whereby prey organisms choose to occupy habitats that maximize survival probability and reproductive success subject to trade-offs between resource availability, predation risk, and energetic cost. This constraint emerges from fundamental principles of natural selection and is invariant across species, ecosystems, and timescales. The constraint manifests as an immutable law of behavioral ecology: individuals that select suboptimal habitats experience reduced fitness, and populations that fail to match habitat use to habitat quality face local extinction. No agent can 'exit' this constraint \u2014 it is a structural feature of how organisms interact with their environment, not a negotiable social arrangement. The mountainous character derives from the absence of any alternative pathway: organisms cannot survive while systematically ignoring fitness-relevant environmental variation.",
+    "key_agents": [
+      "Individual Prey Organism: The unit experiencing the constraint (powerless/trapped) \u2014 must select a habitat or face starvation or predation",
+      "Prey Population: The level at which the constraint operates across generations (organized/constrained) \u2014 populations converge toward optimal habitat use or become extinct",
+      "Evolutionary Fitness Function: The mechanism enforcing the constraint (analytical/analytical) \u2014 the invariant trade-off structure between energy intake, predation risk, and cost"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Very low. The constraint extracts nothing from prey organisms \u2014 it does not deprive them of resources, impose coercive barriers, or create asymmetric benefit flows. Rather, the constraint reflects the invariant structure of survival: organisms that make better habitat choices survive and reproduce more; those making worse choices die or leave fewer offspring. The 'extraction' is zero because the mechanism operates through differential survival, not through redistribution. Suppression (0.03): Minimal. Prey organisms face no artificial suppression of alternatives \u2014 they face only the objective consequences of their choices via predation, starvation, or reproductive failure. The suppression is a fact of ecology, not a social artifact. Theater ratio (0.08): Essentially zero. Habitat selection is a pure functional mechanism with minimal performative component. Organisms select habitats based on fitness consequences, not on ritual or signaling. The small non-zero value reflects measurement uncertainty and the possibility that some habitat choice behaviors have minor ceremonial components (territory displays, for instance), but the primary mechanism is purely functional.",
+    "perspectival_gap": "There is no meaningful perspectival gap in this constraint. All perspectives converge on mountain classification because the constraint is observer-independent. The prey individual experiences it as immutable law (trap). The population experiences it as the selection gradient (mountain across generations). The analyst sees it as a fundamental principle of evolution (universal law). No stakeholder group benefits asymmetrically; no coalition opposes the constraint; no alternative framing renders it contingent. This is the diagnostic signature of a true mountain: unanimous classification across all indexical positions.",
+    "mandatrophy_analysis": "This constraint does not require mandatrophy resolution. Prey habitat selection is not misclassified as pure extraction (snare) because there is no extraction \u2014 the mechanism operates entirely through fitness consequences to the organism. It is not misclassified as coordination (rope) because there is no coordination problem \u2014 each individual organism independently solves the habitat selection optimization problem. The constraint's mountain status is robust across all perspectives and all measurement approaches because it reflects invariant physical and biological trade-offs, not contingent social or institutional arrangements. No observer position reveals hidden coordination or extraction mechanisms."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "predator_prey_dynamics",
+      "carrying_capacity_limit"
+    ],
+    "dual_formulation_note": "Prey habitat selection is downstream of predator distribution and resource spatial patterns. It is upstream of population density, carrying capacity dynamics, and community assembly. The constraint is part of a larger ecological constraint network but is itself immutable and invariant."
+  },
+  "directionality_overrides": []
+}

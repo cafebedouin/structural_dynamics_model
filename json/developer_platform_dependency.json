@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "developer_platform_dependency",
+    "version": "1.0",
+    "generated_date": "2026-02-27",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "devplat"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Developer Platform Dependency Lock-In",
+    "topic_domain": "technology/platform_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operator",
+      "ecosystem_developers"
+    ],
+    "victims": [
+      "dependent_developers",
+      "platform_user_base"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Locked-In Developer",
+      "comment": "Developer with significant codebase built on proprietary platform APIs faces rewrite costs, client switching costs, and platform-enforced upgrade cycles. Cannot migrate without business interruption. Platform controls API evolution, pricing, and feature availability."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Coordinating Developer",
+      "comment": "Developer building on platform toolchain benefits from SDK maturity, documentation, and ecosystem network effects. Also constrained by platform policy changes, revenue share terms, and deprecation cycles. Mixed coordination (shared tools) and extraction (enforced dependency)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "Platform operator coordinates developer ecosystem through standardized APIs, shared infrastructure, and network effects. Experiences constraint as coordination problem solved by their service. Benefits from lock-in through service lock and switching costs."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Standards Coalition",
+      "comment": "Open-source alternatives, standards bodies, and multi-platform development frameworks (React Native, Flutter, cross-platform SDKs) provide exit pathways. These alternatives have sunset implications: as standards mature and developer tooling standardizes across platforms, dependency on any single platform decreases."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Developer Community",
+      "comment": "Developers maintaining legacy applications on deprecated platforms continue platform-specific practices long after superior alternatives exist. Theater of backward compatibility and compatibility layers masks atrophied core functionality. Constraint persists through institutional inertia rather than genuine necessity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "label": "The Identity-Fused Developer",
+      "comment": "Developer whose professional identity and career trajectory are constituted through deep platform expertise (iOS/Android, AWS, Salesforce, etc.). Has structural mobility (could learn alternative platforms) but cannot exercise it because identity abandonment would be required. Sees constraint as both coordination necessity and identity anchor."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "The constraint exhibits genuine coordination (shared infrastructure, standardized APIs, ecosystem benefits) alongside genuine asymmetric extraction (lock-in through switching costs, API deprecation, pricing changes, forced upgrades). Engine derives tangled_rope from structural data: beneficiaries exist (platform operator, some developers), victims exist (locked-in developers, downstream users), and active enforcement exists (API enforcement, terms of service, technical lock-in mechanisms)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_vs_lock_in_boundary",
+      "question": "At what point does shared infrastructure coordination become extractive lock-in? Is the same technical mechanism (standardized API, proprietary SDK) coordination or constraint depending on exit options?",
+      "resolution_mechanism": "Compare developer switching costs across platforms with equivalent technical maturity. Measure: rewrite cost ratio (new platform / existing platform build time), time-to-productivity ratio, ecosystem size differential. If switching costs exceed 50% of ongoing development cost and exceed alternatives by 2x, classify as lock-in rather than coordination.",
+      "impact": "If coordination dominates: constraints across platforms converge toward Rope. If lock-in dominates: platform dependency is Snare. If mixed: Tangled Rope confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Boundary between coordination and extractive lock-in in platform dependency"
+    },
+    {
+      "id": "identity_lock_persistence",
+      "question": "Is identity-locked developer constraint cognitively persistent or structurally contingent? If platform alternatives offered equivalent career path and compensation, would professional identity remain fused to platform?",
+      "resolution_mechanism": "Longitudinal study of developers transitioning between platforms during major ecosystem shifts (e.g., iOS to cross-platform, Windows to cloud-native). Measure identity self-description changes over 2-3 year transition period. Survey post-transition: degree to which professional identity remains platform-anchored.",
+      "impact": "If identity-locked persists post-transition: binding mechanism is primarily cognitive (identity fusion confirmed). If identity shifts with platform adoption: binding mechanism is primarily structural (career incentives). Determines whether exit requires identity death or merely cost absorption.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether identity lock in platform expertise persists across platform transitions"
+    },
+    {
+      "id": "ecosystem_network_effect_counterfactual",
+      "question": "How much of the platform's value to developers derives from genuine coordination (toolchain maturity, ecosystem size, documentation) versus from lock-in (switching costs, API exclusivity)? If switching costs were zero, how many developers would remain?",
+      "resolution_mechanism": "Experimental approach: measure developer satisfaction/retention across platform cohorts with varying switching costs (low-switching platforms like web frameworks vs high-switching platforms like mobile SDKs). Cross-platform comparison of developer churn rates when high-quality alternatives emerge.",
+      "impact": "If retention >> ecosystem quality: lock-in is primary driver (Snare). If retention ~= ecosystem quality: coordination is primary driver (Rope). If mixed: Tangled Rope confirmed with specific extraction proportion measurable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Platform value derived from coordination versus lock-in"
+    },
+    {
+      "id": "suppression_structural_vs_behavioral",
+      "question": "Is measured suppression (0.65) driven by structural barriers (rewrite costs, economic switching costs) or by behavioral capture (developer beliefs about platform necessity, internalized dependency)?",
+      "resolution_mechanism": "Post-exit analysis: developers who successfully migrated to alternatives and their suppression trajectories. Do developers report decreased suppression post-migration? If suppression persists after structural barriers removed, it indicates internalization. If suppression drops immediately, it indicates structural origin.",
+      "impact": "If primarily structural: escape is possible at acceptable cost for some agents (constrained exit appropriate). If primarily internalized: escape perceived as impossible despite structural mobility (identity_locked appropriate). Mixed origins would suggest decomposition into separate constraints.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized/behavioral"
+    },
+    {
+      "id": "platform_operator_genuine_coordination",
+      "question": "Does the platform operator provide genuine coordination services that would be difficult to replicate, or is the coordination function secondary to the extraction mechanism? If the platform ceased enforcing lock-in, would coordination value remain?",
+      "resolution_mechanism": "Comparative analysis: open-source alternatives and their developer retention/satisfaction. Measure: cost of equivalent functionality via open-source toolchain versus proprietary platform. Survey developers: which platform features are coordination (valued) versus enforcement (resented).",
+      "impact": "If coordination is genuine and substantial: platform operator's Rope perspective is correct, extractiveness overstated. If enforcement is primary: coordination is pretext, constraint should be reclassified as Snare from operator perspective. If balanced: Tangled Rope confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether platform operator provides genuine coordination or primary extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 7
+  },
+  "commentary": {
+    "narrative_context": "Developer platform dependency represents the structural tension between the genuine coordination benefits of standardized APIs, shared toolchains, and network effects on one side, and the extraction mechanism of switching costs, API deprecation, pricing changes, and forced upgrades on the other. This constraint exhibits the defining signature of Tangled Rope: a real coordination function exists (developers genuinely benefit from SDK maturity, ecosystem size, and shared infrastructure) alongside real asymmetric extraction (platform operator captures value through lock-in, developers bear transition costs). The constraint's extractiveness (0.58) reflects that platform operators have captured increasing rents over the interval through API pricing models, forced version upgrades, and deprecation cycles. Theater ratio (0.48) indicates moderate performative content \u2014 much platform evolution is marketed as 'developer empowerment' and 'ecosystem growth' while actually implementing stronger lock-in mechanisms. The constraint's suppression (0.65) reflects significant but not total barriers: developers face rewrite costs, client/user base switching costs, and career/reputation risks from platform transition, but exit is not impossible (open-source alternatives exist, cross-platform frameworks mature, standards stabilize). The constraint operates at global scope with differential impact: major platforms (iOS, Android, AWS, Salesforce) exhibit stronger lock-in; standards-based platforms (web, containers) exhibit weaker lock-in.",
+    "key_agents": [
+      "Dependent Developers: Primary victims (powerless/trapped or moderate/constrained depending on exit options and business model) \u2014 face high rewrite costs, switching costs, and career risk from platform migration",
+      "Platform Operator: Primary beneficiary (institutional/arbitrage) \u2014 captures value through ecosystem network effects, API pricing, and switching costs. Enforces constraint through technical and contractual mechanisms.",
+      "Platform User Base: Secondary victim (powerless/trapped) \u2014 downstream effects of platform extraction: vendors increase prices, service quality decreases, vendor lock-in cascades to end users",
+      "Ecosystem Developers: Beneficiary subgroup (moderate/mobile or arbitrage) \u2014 early adopters and specialized developers benefit from first-mover advantage and ecosystem-specific expertise",
+      "Open Standards Coalition: Organized agents (organized/constrained) \u2014 open-source alternatives, cross-platform frameworks, standards bodies providing exit pathways. See constraint as temporary problem with sunset.",
+      "Legacy Developer Community: Institutional (institutional/arbitrage) \u2014 maintains platform-specific practices long after superior alternatives exist. Theater-driven through backward compatibility requirements.",
+      "Identity-Fused Specialists: Moderate agents with cognitive lock-in (moderate/identity_locked) \u2014 professional identity constituted through platform expertise; structural mobility exists but identity abandonment perceived as required for exit",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees mixed coordination-extraction hybrid"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. Initial extractiveness (0.35) reflects coordination-heavy ecosystem with modest switching costs. Over 7 years, extractiveness increases to 0.58 as platforms implement stronger lock-in: API deprecation cycles force upgrades, new features concentrate on proprietary extensions (reducing open-source alternative viability), pricing models shift from platform-subsidized SDKs to premium API costs. The trajectory reflects cumulative rent-seeking layered onto coordination. Suppression (0.65): Significant. Developers face three suppression mechanisms: (1) Rewrite costs: rebuilding large codebase on alternative platform consumes 30-60% of development costs. (2) Switching costs: moving installed user base, maintaining dual platforms during migration, retraining teams. (3) Career/reputation costs: deep platform expertise becomes career liability on alternative platforms; developer brand becomes entangled with platform reputation. Suppression is not total because open-source alternatives and standards-based platforms do reduce barriers, but barriers remain substantial. Theater ratio (0.48): Moderate. Platform vendors market lock-in mechanisms as developer-empowering features. API deprecation is framed as 'modernization'; pricing increases are framed as 'sustainability'; forced version upgrades are framed as 'security maintenance'. The marketing narrative obscures extraction mechanism. Theater has increased slightly over interval as extraction has become more obvious and requires more rhetorical cover.",
+    "perspectival_gap": "The primary perspectival gap is between the platform operator's genuine coordination function and the dependent developer's extraction experience. Both are structurally correct: the platform does coordinate, and the platform does extract. The gap reveals that Tangled Rope is the accurate classification \u2014 the constraint is neither pure coordination (Rope) nor pure extraction (Snare), but hybrid. A secondary gap appears between identity-locked and other moderate-power agents: the identity-locked specialist perceives immobility despite structural mobility, while other moderates perceive constrained but real options. This gap indicates that identity fusion is the binding mechanism, not structural barriers. A tertiary gap appears between the scaffold (sunset logic) and piton (theatrical persistence) perspectives on legacy systems: the same technical tools are seen as transitional (open standards) or perpetual (backward compatibility theater). This gap reveals institutional inertia \u2014 the theater persists not because functionality requires it but because exit costs for large installed bases remain substantial even as alternatives improve.",
+    "directionality_logic": "Platform operators (institutional/arbitrage) derive d \u2248 0.12: clear beneficiary with flexibility to change terms, so f(d) \u2248 -0.08, producing negative effective extraction (the constraint subsidizes the operator). Dependent developers (powerless/trapped) derive d \u2248 0.95: clear victims with no exit, so f(d) \u2248 1.42, producing high effective extraction. Moderate developers (moderate/constrained) derive d \u2248 0.58: mixed position with some benefits and some costs, so f(d) \u2248 0.85, producing moderate effective extraction. Organized alternatives (organized/constrained) derive d \u2248 0.45: credible exit pathway exists, so f(d) \u2248 0.45, producing dampened effective extraction. Identity-locked specialists (moderate/identity_locked) derive d structurally as moderate-agent d \u2248 0.58, but perceive extraction higher because they cannot exercise exit options despite theoretical availability. The gap between structural d (0.58) and perceived extraction (closer to d \u2248 0.75) instantiates the identity lock mechanism.",
+    "mandatrophy_analysis": "The developer platform dependency resolves mandatrophy by showing that Tangled Rope is the structurally correct classification from the analytical perspective. The key evidence: (1) Beneficiary group exists (platform operator, ecosystem developers with first-mover advantage); (2) Victim group exists (dependent developers, downstream users); (3) Active enforcement exists (API deprecation cycles, forced upgrades, terms of service, technical lock-in); (4) Genuine coordination function exists (shared infrastructure, SDK maturity, ecosystem effects); (5) Genuine extraction exists (switching costs, rent concentration, reduced alternatives). All five gates for Tangled Rope are met. False summit detection: the platform operator's Rope perspective appears to naturalize lock-in as an inherent feature of coordination. The structural data contradicts this \u2014 lock-in is a choice (enforced via API policies, pricing, deprecation) not a necessity. If platforms competed purely on coordination value without lock-in mechanisms, developer retention would decline, confirming that extraction is the retained mechanism. The identity-locked perspective reveals cognitive capture at the individual developer level \u2014 the constraint has internalized itself through professional identity, making exit feel impossible despite structural mobility. This is a diagnostic signature of Tangled Rope: coordination mechanisms become identity-anchoring mechanisms become extraction mechanisms."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "vendor_lock_in_general",
+      "api_ecosystem_switching_costs"
+    ],
+    "dual_formulation_note": "Developer platform dependency decomposes into separate constraints along observable boundaries. SDK switching costs (\u03b5 \u2248 0.58, Tangled Rope) is distinct from ecosystem lock-in at the application level (\u03b5 \u2248 0.72, Snare). Platform technical decisions (API deprecation, pricing) have different extraction mechanisms than developer career path lock-in (identity_locked). Consider decomposing into: (1) platform_api_lock_in (\u03b5 \u2248 0.58), (2) developer_identity_lock_in (\u03b5 \u2248 0.62), (3) ecosystem_ecosystem_switching (\u03b5 \u2248 0.65). Current story uses integrated view; family decomposition may reveal distinct constraint structures."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.42
+    }
+  ]
+}

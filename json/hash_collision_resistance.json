@@ -1,0 +1,148 @@
+{
+  "header": {
+    "constraint_id": "hash_collision_resistance",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hash"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Hash Collision Resistance in Cryptographic Systems",
+    "topic_domain": "cryptography/computational_mathematics",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Attacker Seeking Collisions",
+      "comment": "PERSPECTIVE 1: ATTACKER SEEKING COLLISIONS (MOUNTAIN) \u2014 An agent attempting to find two distinct inputs that hash to the same output faces an insurmountable computational barrier. For a cryptographically secure hash (256-bit output), the birthday paradox bounds the computational cost at 2^128 operations. This is a hard natural limit \u2014 not a policy choice, not an institution, not a coordination mechanism. The attacker has zero exit options and zero agency. The constraint is immutable from all measurement methodologies."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The System Designer (All-Powerful Observer)",
+      "comment": "PERSPECTIVE 2: SYSTEM DESIGNER / ALL-POWERFUL OBSERVER (MOUNTAIN) \u2014 Even an agent with arbitrary computational power (short of solving P=NP or breaking the underlying mathematical structure) cannot circumvent hash collision resistance. A hypothetical actor with access to exascale computing, quantum computers, or advanced algorithms still faces the same fundamental barrier: the output space is bounded, and the cryptographic hash function's design ensures no shortcuts exist below exponential complexity. The constraint remains immutable even from the most powerful observational position."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Mathematical Structure)",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From the perspective of mathematical and computational theory, hash collision resistance is a provable property emergent from the pigeonhole principle and the pseudorandom distribution of cryptographic hash outputs. The constraint is logically necessary, not empirically contingent. An n-bit hash output can only be mapped to from a finite set without collision. The structure is invariant across all computational substrates and observational methodologies. This is a mathematical law, not a technological artifact."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Practical System User",
+      "comment": "PERSPECTIVE 4: PRACTICAL SYSTEM USER (MOUNTAIN) \u2014 Even from the immediate, practical perspective of a user relying on hash collision resistance for data integrity (e.g., Git commit hashes, blockchain proof-of-work), the constraint appears as an unchangeable natural law. The user cannot reduce the computational barrier; they cannot negotiate with the hash function; they cannot appeal to an authority to lower the cost. The constraint is experienced as inevitable and immutable in real time."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "quantum_supremacy_threshold",
+      "question": "Will quantum computing reach a capability threshold that significantly reduces the effective collision resistance of contemporary cryptographic hashes?",
+      "resolution_mechanism": "Demonstration of quantum algorithm (e.g., Grover's algorithm optimization) against 256-bit hash collision detection; empirical measurement of quantum computer scaling toward practical attack cost thresholds",
+      "impact": "If quantum capability reaches 2^64 effective cost (vs classical 2^128): hash collision resistance downgrades from mountain to snare for agents with quantum resources. For classical agents, remains mountain. Constraint would decompose into quantum and classical substrate stories.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether quantum computing will reduce hash collision resistance below computational mountain threshold"
+    },
+    {
+      "id": "p_equals_np_resolution",
+      "question": "Is P equal to NP? Does a polynomial-time algorithm for collision detection exist?",
+      "resolution_mechanism": "Resolution of the P vs NP problem through proof or disproof; demonstration of polynomial-time collision algorithm or proof of its impossibility",
+      "impact": "If P=NP is proven true: hash collision resistance collapses from mountain to rope or snare depending on the algorithm's constant factors. If P\u2260NP is proven or remains open: mountain classification persists indefinitely.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Resolution of the P versus NP problem and its implications for hash collision"
+    },
+    {
+      "id": "cryptanalytic_breakthrough",
+      "question": "Will a breakthrough in cryptanalysis (structural weakness, iterative exploitation, mathematical shortcut) reduce the effective collision resistance of widely-deployed hash functions below computational feasibility?",
+      "resolution_mechanism": "Discovery of non-brute-force collision algorithm; demonstration of practical collision generation against SHA-256 or SHA-3 at sub-exponential cost",
+      "impact": "If breakthrough occurs and cost drops below 2^80: hash collision resistance downgrades from mountain to snare for agents with access to the shortcut. The 'natural law' classification was based on the pseudorandom distribution property; a cryptanalytic shortcut violates that assumption.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Discovery of cryptanalytic shortcut reducing hash collision resistance below exponential barrier"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "Hash collision resistance is a mathematical and computational constraint emergent from the pigeonhole principle, the pseudorandom properties of cryptographic hash functions, and the discrete nature of finite output spaces. For a 256-bit cryptographic hash (SHA-256, SHA-3, Blake2), an attacker seeking to find two distinct inputs that hash to the same output faces a computational barrier of approximately 2^128 brute-force operations. This constraint is invariant across all observational methodologies, all agent power levels, and all time horizons. It is not a policy choice, not an institutional arrangement, not a coordination mechanism with beneficiaries and victims. It is a natural law of computational mathematics. The constraint exhibits zero degrees of freedom: there is no agent, no institution, no process that can reduce the cost below exponential complexity without breaking the fundamental mathematical assumptions underlying the hash function's design.",
+    "key_agents": [
+      "Attacker: Seeks to find collisions; faces immutable computational barrier",
+      "System Designer: Must assume collision resistance holds; has no way to weaken it without breaking the system",
+      "User: Relies on collision resistance for data integrity; cannot negotiate or appeal the constraint",
+      "Analytical Observer: Views the constraint as a logical necessity, not an empirical discovery"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Minimal. The constraint imposes a computational cost on attackers, but this cost is not extraction in the sense of the framework \u2014 there is no beneficiary capturing value from the attacker's burden. The cost is a pure barrier to a destructive capability, not a transfer of resources. Suppression (0.02): Negligible. The constraint is enforced by mathematics and physics, not by institutional suppression. An attacker cannot suppress their way around the computational barrier; they cannot find allies to lower the cost; they cannot appeal to authority. Suppression is essentially zero because there is no mechanism of coercion \u2014 only immutable physical law. Theater ratio (0.05): Negligible. The constraint operates entirely functionally. There is no performative content, no ritual maintenance, no institutional inertia. The hash function simply performs its computation; the collision resistance simply holds. The minimal non-zero value reflects measurement precision rather than substantive theater.",
+    "perspectival_gap": "There is no perspectival gap. All six classification types would collapse to mountain from every possible observation point. The powerless attacker, the powerful system designer, the analytical observer, the practical user, and any other agent or observer face the same immutable constraint. This is a rare exemplar of a uniform-type constraint \u2014 one that exhibits invariant classification across all indices. The framework accommodates this through the uniform-type exception: perspective minimum is relaxed; all perspectives classify as mountain without requiring diverse (P,T,E,S) combinations. The invariance is not a limitation of the framework but a feature: some constraints really are natural laws.",
+    "directionality_logic": "Directionality (d) is undefined for mountain constraints. The chi formula \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) does not apply because \u03b5 \u2264 0.25 and suppression \u2264 0.05 gate the classification before directionality computation. There is no beneficiary and no victim in the classical sense \u2014 the computational cost is not extracted and transferred; it is simply imposed by nature. The framework's design correctly identifies this: beneficiaries and victims are optional for mountain constraints because the constraint's binding mechanism is mathematical, not structural extraction.",
+    "mandatrophy_analysis": "NATURAL LAW / IMMUTABLE CONSTRAINT: This constraint represents a pure mountain type with zero mandatrophy risk. There is no dual classification possibility, no perspective from which the constraint would appear as extraction or coordination. The constraint is not a misnamed snare, not a naturalized institutional arrangement, not a degraded rope. It is genuinely a natural law. The framework's mountain gates (\u03b5 \u2264 0.25, suppression \u2264 0.05, accessibility_collapse \u2265 0.85, resistance \u2264 0.15, emerges_naturally: true) are all satisfied with high confidence. Mandatrophy is resolved by recognizing that some constraints are truly unchangeable, and the framework's role is to identify and isolate them from contingent institutional arrangements that pose as natural laws."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "cryptographic_key_derivation",
+      "blockchain_proof_of_work",
+      "digital_signature_security",
+      "merkle_tree_integrity"
+    ]
+  },
+  "directionality_overrides": []
+}

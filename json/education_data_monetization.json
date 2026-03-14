@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "education_data_monetization",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "edm"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Education Data Monetization Constraint",
+    "topic_domain": "education/technology/economic_extraction",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "edtech_companies",
+      "data_brokers",
+      "advertising_platforms"
+    ],
+    "victims": [
+      "students",
+      "student_privacy",
+      "educational_equity",
+      "teacher_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Student",
+      "comment": "PERSPECTIVE 1: STUDENT (SNARE) \u2014 Minors lack legal capacity to consent; trapped in institutional systems where educational access depends on data surrender. Cannot exit without abandoning education. Maximum suppression \u2014 parental consent is often unilateral, students cannot negotiate terms, and refusal blocks access to learning platforms required by schools."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The School District",
+      "comment": "PERSPECTIVE 2: SCHOOL DISTRICT (TANGLED ROPE) \u2014 Benefits from free or reduced-cost platforms and data analytics that improve outcomes; bears cost of surrendering student data and being locked into vendor ecosystems. Constrained by budget limitations and competitive pressure to adopt 'best practice' platforms. Active enforcement via licensing agreements and data-sharing clauses that appear voluntary but are structurally mandatory."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The EdTech Company",
+      "comment": "PERSPECTIVE 3: EDTECH COMPANY (ROPE) \u2014 Experiences constraint as coordination mechanism: student data enables personalized learning, better product recommendations, and market-fit analysis. Data aggregation solves genuine problems (identifying struggling learners, resource allocation). High-value arbitrage \u2014 data monetization to advertisers and insurance companies provides revenue model that makes free/cheap educational tools sustainable. Beneficiary position."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Privacy Advocacy Coalition",
+      "comment": "PERSPECTIVE 4: PRIVACY ADVOCACY COALITION (SCAFFOLD) \u2014 Organized agents (FERPA reformers, state education departments, privacy advocates) view the constraint as temporary and solvable through regulation. State-level data privacy laws (COPPA, FERPA amendments, California CCPA K-12 provisions) create sunset logic: as regulatory frameworks mature, the extraction mechanism loses force. Sees the problem as technological and institutional rather than inherent to education."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Traditional Public Education System",
+      "comment": "PERSPECTIVE 5: TRADITIONAL PUBLIC EDUCATION SYSTEM (PITON) \u2014 FERPA regulations and formal data protection policies create the appearance of student privacy protection, but enforcement is minimal and exceptions are numerous. Schools maintain the ritual of consent forms and data governance committees while systematically monetizing student data through third-party agreements. Theater ratio reflects the gap between nominal protections and actual practice. Educational function (learning) persists, but the data governance theater has become decoupled from reality."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal perspective, student data monetization appears as an inherent feature of information economics: data collection is inevitable in any digital learning environment, and monetization is a 'natural' revenue model that funds educational access for underresourced communities. This perspective naturalizes the extraction. However, the structural data reveals this as a false summit \u2014 the constraint is contingent on specific regulatory choices, business model incentives, and institutional arrangements, not on laws of information physics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "consent_validity_ambiguity",
+      "question": "Does parental consent to data monetization constitute genuine informed consent, or is it structurally coercive given the dependence on educational access?",
+      "resolution_mechanism": "Comparative analysis of consent rates when data monetization is mandatory vs optional; measurement of consent comprehension (post-consent interviews); analysis of switching costs if parent withholds consent",
+      "impact": "If consent is genuine: constraint classifies lower on extraction (Rope becomes more plausible). If coercive: consent is theater, and Snare classification is correct for student perspective.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether parental consent to data monetization is genuinely informed"
+    },
+    {
+      "id": "benefit_distribution_asymmetry",
+      "question": "Do students and school districts actually receive proportional benefit from improved educational products, or does the benefit accrue primarily to companies and advertisers?",
+      "resolution_mechanism": "Cost-benefit analysis comparing platform value to students/districts vs revenue generated; measurement of learning outcome improvements attributable to data-driven personalization vs attributable to selection effects (only engaged students use platforms)",
+      "impact": "If benefits are proportional: Tangled Rope classification for all perspectives is correct (genuine mixed coordination-extraction). If asymmetric: Snare classification becomes appropriate for student perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether data monetization benefits are proportionally distributed"
+    },
+    {
+      "id": "regulatory_sunset_feasibility",
+      "question": "Are state and federal privacy regulations actually on a path to eliminate or substantially constrain education data monetization, or is regulatory capture preventing meaningful change?",
+      "resolution_mechanism": "Analysis of FERPA amendment proposals, state-level K-12 privacy law enforcement, industry lobbying intensity for education-specific privacy carveouts; longitudinal tracking of data monetization revenue vs regulatory pressure",
+      "impact": "If sunset is real: Scaffold perspective is correct, and constraint is temporary. If regulatory capture holds: Scaffold is aspirational, constraint becomes permanent Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether privacy regulations will substantially constrain education data monetization"
+    },
+    {
+      "id": "alternative_business_model_viability",
+      "question": "Can educational platforms sustain quality and scale without data monetization revenue (via direct payment, public funding, or alternative models)?",
+      "resolution_mechanism": "Analysis of non-monetized education platforms (open-source, public-funded); cost comparison vs proprietary platforms; user retention and feature development rates in models without data monetization",
+      "impact": "If alternatives are viable: data monetization is a choice, not a necessity, and Snare classification is strengthened. If monetization is economically necessary: Rope classification becomes more plausible.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether educational platforms can sustain without data monetization"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.49
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.61
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Education data monetization creates a structural tension between genuine coordination needs (platforms need data to personalize learning and improve outcomes) and extractive incentives (data monetization to advertisers, insurers, and employers provides revenue that funds free or cheap educational access). The constraint operates across minors who cannot consent, schools with limited budgets and technical capacity, EdTech companies seeking revenue diversification, and privacy advocates pushing regulatory solutions. The theater ratio (0.61) reflects the gap between formal data protection policies (FERPA, consent forms, data governance committees) and actual practice (widespread monetization, minimal enforcement, numerous exceptions). Extractiveness has increased over the measurement interval as EdTech adoption has accelerated and data brokerage has become more sophisticated. The constraint exhibits all six DR types: Snare from the student perspective (powerless, trapped), Tangled Rope from the school district perspective (genuine coordination benefit coupled with extractive lock-in), Rope from the EdTech company perspective (data genuinely enables better products), Scaffold from the privacy coalition perspective (regulatory sunset is real), Piton from the public education system perspective (nominal protections decoupled from practice), and a false Mountain from the analytical perspective that naturalizes data monetization as inevitable.",
+    "key_agents": [
+      "Students: Primary victim (powerless/trapped) \u2014 minors lack consent capacity, cannot exit education, bear costs of privacy loss and behavioral manipulation",
+      "School Districts: Secondary victim (moderate/constrained) \u2014 benefit from reduced-cost platforms; constrained by budget and competitive pressure; bear cost of vendor lock-in and student data exposure",
+      "EdTech Companies: Primary beneficiary (institutional/arbitrage) \u2014 capture revenue from data monetization; see data aggregation as solving genuine pedagogical problems; arbitrage between free educational tools and monetized data streams",
+      "Data Brokers/Advertisers: Secondary beneficiary (institutional/arbitrage) \u2014 purchase aggregated student data for targeting and profiling; external to education system but structurally central to the constraint's economics",
+      "Privacy Advocacy Coalition: Organized agents (organized/constrained) \u2014 advocate for regulatory solutions; see the constraint as temporary and solvable through FERPA reform and state-level privacy laws",
+      "Public Education Administration: Institutional actor (institutional/arbitrage) \u2014 maintains theater of data protection while systematically monetizing student information; sees own policies as degraded (Piton perspective)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing data monetization as inherent to digital learning"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The measurement trajectory (0.32 \u2192 0.48 \u2192 0.58) reflects accelerating EdTech adoption and data brokerage sophistication. The growth is not exponential because alternative business models and regulatory pressure are creating headwinds, but the underlying extraction mechanism is strengthening. The initial value (0.32) represents a period when monetization was less systematic and data brokers had less sophisticated targeting. Suppression (0.65): High. Multiple mechanisms suppress alternatives: (1) Students cannot consent and have no exit. (2) School districts face budget pressure that makes free platforms attractive despite data costs. (3) Parents are often unaware of monetization terms or see them as inevitable costs of digital learning. (4) Regulatory exceptions (FERPA safe harbor for school officials, general student data exceptions for 'educational purpose') create legal gray zones. (5) Switching costs are high \u2014 district adoption locks in data flows and creates path dependence. Theater ratio (0.61): Moderate-high. FERPA regulations, consent forms, and data governance committees create visible structures, but enforcement is minimal (FERPA violations rarely trigger consequences), exceptions are numerous (FERPA permits sharing with 'school officials' with legitimate educational interest \u2014 a broad category), and actual data flows to third parties are often opaque to parents and students. The gap between nominal policy and actual practice has widened as platforms have become more sophisticated at data collection and monetization.",
+    "directionality_logic": "Each agent's directionality (d) is derived from their structural position relative to the extraction flow. Students and school districts are net targets (high d \u2192 high experienced extraction). EdTech companies and data brokers are net beneficiaries (low d \u2192 low/negative extraction from their perspective). The pipeline derives d from beneficiary/victim declarations plus exit options: trapped agents without alternatives experience highest d and highest chi; arbitrage-capable beneficiaries experience lowest d and may experience negative chi. The school district perspective is the critical case \u2014 classified as Tangled Rope (not Snare) because they genuinely benefit from improved platforms and have some negotiation capacity (via procurement decisions, data-sharing contracts), even though they are also victimized by lock-in and student data exposure. The perspectival gap between student (Snare) and school district (Tangled Rope) reflects that the district has partial agency that the student lacks.",
+    "perspectival_gap": "The constraint demonstrates a clear perspectival hierarchy. Students see Snare \u2014 extraction with no exit and no comprehension. School districts see Tangled Rope \u2014 genuine product benefits coupled with extractive lock-in and data surrender. EdTech companies see Rope \u2014 data aggregation is a coordination mechanism that improves learning while creating sustainable revenue. Privacy advocates see Scaffold \u2014 regulatory solutions are emerging and will sunset the extraction. Public education administrators see Piton \u2014 formal policies persist despite disconnection from actual practice. The analytical observer risks seeing Mountain \u2014 naturalizing data monetization as inherent to digital learning. Each perspective is internally coherent given the agent's structural position. The Snare classification for students is not 'wrong' from the educational platform's perspective; rather, the student's powerlessness and trapedness are facts that the platform's Rope perspective does not fully acknowledge. The perspectival gap reveals the asymmetry: the beneficiary's coordination story is real, but incomplete without acknowledging the target's extraction story.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by distinguishing genuine coordination (data-driven personalization improves learning) from extractive layering (monetization to third parties extracts value from student attention and behavioral data). The Tangled Rope classification is not avoiding the tension; it explicitly captures both. The coordination function (learning improvement) is real and benefits schools and students. The extraction (monetization) is also real and benefits companies. The classification distinguishes these rather than collapsing them into pure extraction (Snare) or pure coordination (Rope). The false Mountain perspective reveals that naturalizing data monetization as 'inevitable in digital learning' is a cover story that prevents questioning the specific institutional choices (business model, regulatory exemptions, lack of transparency) that make the extraction possible. A different set of choices (public funding models, data localization, regulatory restrictions) could preserve the coordination benefit while eliminating the extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "student_behavioral_targeting",
+      "educational_inequality_amplification",
+      "teacher_deskilling_by_algorithmic_management"
+    ],
+    "dual_formulation_note": "Education data monetization decomposes into structurally distinct constraints: (1) the core coordination problem (personalizing learning requires data), (2) the extraction mechanism (monetizing that data to third parties), and (3) the regulatory constraint (FERPA and state privacy laws). These are presented as a single story because the base properties describe the equilibrium state where coordination and extraction are coupled. Downstream constraints isolate specific consequences: student targeting isolation focuses on behavioral targeting mechanisms; inequality amplification isolates distributional effects; teacher deskilling isolates institutional erosion effects."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

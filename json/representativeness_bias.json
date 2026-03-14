@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "representativeness_bias",
+    "version": "1.0",
+    "generated_date": "2026-02-27",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "repbias"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Representativeness Bias in Decision-Making and Resource Allocation",
+    "topic_domain": "cognitive_psychology/institutional_decision_making",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pattern_matching_agents",
+      "stereotyped_category_beneficiaries",
+      "institutional_simplification_adopters"
+    ],
+    "victims": [
+      "base_rate_accurate_individuals",
+      "atypical_category_members",
+      "system_accuracy_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Misclassified Individual",
+      "comment": "PERSPECTIVE 1: MISCLASSIFIED INDIVIDUAL (SNARE) \u2014 An atypical member of a stereotyped category (e.g., a woman in STEM, a poor person applying for credit, a dark-skinned person in facial recognition) bears the extraction cost of representativeness bias without exit options. Their individual attributes are subordinated to category stereotype. Cannot escape categorization; cannot refute stereotype through individual data alone. Maximum extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Category-Typical Member",
+      "comment": "PERSPECTIVE 2: CATEGORY-TYPICAL MEMBER (TANGLED ROPE) \u2014 A member who does match the stereotype benefits from rapid, low-friction categorization (coordination benefit: faster service, lower verification burden) but is also constrained by the stereotype's ceiling. Genuine coordination (heuristic speeds decisions) but also extraction (stereotyped expectations limit opportunity). Can exit through exceptional performance but at high cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Decision-Making Institution",
+      "comment": "PERSPECTIVE 3: DECISION-MAKING INSTITUTION (ROPE) \u2014 Banks, employers, judges, diagnostic systems use representativeness heuristic to reduce cognitive load and accelerate decisions. Genuine coordination function: categorization solves the problem of decision-making under bounded rationality. Benefits from the constraint (lower processing cost, faster throughput). Can arbitrage: switch to more accurate models when cost-benefit changes, but currently arbitrage favors heuristic over accuracy."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Statistical Literacy Movement",
+      "comment": "PERSPECTIVE 4: STATISTICAL LITERACY MOVEMENT (SCAFFOLD) \u2014 Organized efforts (base-rate training, debiasing interventions, algorithmic transparency mandates) see representativeness bias as a temporary coordination failure resolvable through education and institutional redesign. The sunset logic: as statistical literacy increases and decision systems incorporate base-rate corrections, the heuristic's grip weakens. Suppression (institutional resistance to complexity) declines as automation enables accurate categorization at lower cost."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Essentialism Narrative",
+      "comment": "PERSPECTIVE 5: ESSENTIALISM NARRATIVE (PITON) \u2014 Cultural narratives and folk theories that treat stereotype-based categorization as reflecting objective category essences ('this is just how X people are') are largely performative. They persist through institutional inertia and identity fusion despite being empirically falsified. The performance maintains the heuristic: calling stereotypes 'essences' makes them feel inevitable, not contingent. Theater ratio is high because essentialism performs explanation that explains nothing."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, bounded rationality is an immutable feature of cognitive architecture: agents with finite time and computation capacity must rely on heuristics; representativeness bias is inherent to how similarity judgments work. This perspective sees the bias as a natural law of cognition. However, the structural data contradicts the mountain classification \u2014 the engine will flag this as a false summit, revealing that naturalization of a contingent cognitive habit as an immutable law obscures the institutional arrangements that maintain it."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "stereotype_accuracy_threshold",
+      "question": "At what accuracy level does a stereotype become rational (a reliable base rate) versus extractive (perpetuating false category membership)?",
+      "resolution_mechanism": "Longitudinal base-rate tracking: measure actual category distributions vs. perceived distributions over time; correlation between stereotype accuracy and decision accuracy across domains",
+      "impact": "If threshold is high (>85% accuracy required): most operational stereotypes are extractive (Snare classification confirmed). If threshold is low (>60% suffices): stereotypes can be coordination mechanisms (Rope from institutional perspective). Different thresholds imply different institutional responsibilities.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Accuracy threshold distinguishing rational categorization from extractive stereotyping"
+    },
+    {
+      "id": "debiasing_sustainability",
+      "question": "Do debiasing interventions (base-rate training, algorithmic corrections, explicit diversity mandates) produce lasting reduction in representativeness bias or do they revert under cognitive load?",
+      "resolution_mechanism": "Longitudinal measurement of bias persistence: compare immediate post-intervention accuracy with accuracy under time pressure, resource scarcity, or high-stakes decision contexts; neural imaging of stereotype activation under cognitive load",
+      "impact": "If debiasing proves sustainable: scaffold perspective is valid (sunset logic works). If debiasing reverts under load: representativeness bias is closer to natural law (mountain perspective gains force). Different outcomes imply different policy trajectories.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether debiasing interventions produce durable change or revert under pressure"
+    },
+    {
+      "id": "category_boundary_fuzziness",
+      "question": "Are categories perceived as having sharp boundaries (essentialist framing) or fuzzy membership (statistical framing)? Does perceptual framing affect extraction mechanics?",
+      "resolution_mechanism": "Experimental measurement: category boundary tasks with fuzzy vs sharp exemplars; measurement of stereotype rigidity under fuzzy vs essentialist instructions; longitudinal tracking of category fluidity in populations with different statistical literacy",
+      "impact": "If boundaries are perceived as sharp: categories support extractive essentialist narratives (Snare/Piton mechanisms strengthen). If fuzzy: categories support statistical revision (Scaffold sunset accelerates). Perceptual framing is partially learnable, suggesting institutional responsibility for framing choice.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether categories are perceived as sharp essences or fuzzy statistical distributions"
+    },
+    {
+      "id": "institutional_incentive_alignment",
+      "question": "Do institutions using representativeness bias maintain incentives to keep the bias salient (e.g., marketing, stereotyping as convenience) or do they have competing incentives to reduce it (e.g., accuracy for performance)?",
+      "resolution_mechanism": "Institutional audit: measure cost savings from heuristic-based decisions vs accuracy losses from bias; track investment in debiasing infrastructure; measure feedback loops (do institutions receive accuracy data that would incentivize correction?)",
+      "impact": "If institutions profit from bias: extraction will persist despite debiasing efforts (Snare is structural). If institutions have accuracy incentives: sunset logic is viable (Scaffold is achievable). Incentive alignment is partially controllable through regulation.",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "Whether institutional incentives support or oppose representativeness bias reduction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "Representativeness bias \u2014 the tendency to classify agents, outcomes, or entities based on similarity to prototypes rather than base-rate frequencies \u2014 creates a structural constraint that operates simultaneously as a cognitive coordination mechanism, an extraction system, a degraded ritual, and a problem under solution. The bias reduces cognitive load (coordination benefit) while systematically misclassifying atypical category members (extraction cost). The constraint exhibits perspectival variation: institutions experience it as a rational heuristic; misclassified individuals experience it as a snare; category-typical members experience mixed coordination and extraction; organized debiasing efforts experience it as a temporary problem with a sunset; folk essentialist narratives perform explanation through high theater; and the uncritical analytical observer risks naturalizing a contingent cognitive habit as an immutable law of mind. The measurement trajectory shows extractiveness and theater ratio rising together over the observation interval, indicating that as the bias becomes institutionalized (hardcoded into algorithmic systems, formalized in policy, naturalized in narratives), both the raw extraction and the performative justification intensify. Debiasing interventions create a countervailing pressure, making this a contested constraint with multiple futures.",
+    "key_agents": [
+      "Misclassified Individual: Primary victim (powerless/trapped) \u2014 atypical category members who bear extraction cost; cannot exit categorization or refute stereotype through individual data alone",
+      "Category-Typical Member: Secondary actor (moderate/constrained) \u2014 stereotyped category members who benefit from heuristic speed but are also constrained by stereotype ceiling; can exit through exceptional performance at high cost",
+      "Decision-Making Institution: Primary beneficiary (institutional/arbitrage) \u2014 banks, employers, judges, recommendation systems that reduce cognitive load and cost through category-based heuristics; can arbitrage when accuracy becomes more profitable",
+      "Statistical Literacy Movement: Organized agent (organized/constrained) \u2014 educators, regulators, algorithmic auditors building debiasing infrastructure; face institutional resistance but have sunset logic driving change",
+      "Essentialism Narrative: Institutional storyteller (institutional/arbitrage) \u2014 folk theories, marketing narratives, cultural essentialist frames that perform explanation for stereotype maintenance; maintain high theater",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks mistaking a contingent cognitive-institutional habit for a natural law of cognition"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The bias creates genuine extraction from misclassified individuals while providing genuine coordination benefit to institutions. The net is extractive because the benefits (faster decisions, lower processing cost) flow to institutions while costs (misclassification, lost opportunity) flow to individuals. The initial value (0.42) reflects the bias operating with weaker institutional embedding; the later value (0.58) reflects the bias hardcoded into algorithms and policy. Suppression (0.65): Moderate-high. Significant barriers to exit and resistance to debiasing include: cognitive automaticity (the bias is effortless), institutional path dependence (systems are built around heuristics), financial incentives (accuracy costs money relative to heuristics), identity fusion (essentialism feels like truth to those socialized into it), and feedback loops (misclassified agents often lack data to refute stereotypes). Theater ratio (0.68): Moderate-high. Folk essentialism performs a high-theater function: narrative explanations that feel satisfying ('X people are just like that') do explanatory work that doesn't survive base-rate scrutiny. Institutional policies formalize the heuristic into procedures that perform neutrality and rigor while embedding categorization bias. Algorithmic systems inherit and amplify the theater: 'the algorithm is objective' covers the fact that representativeness bias has been encoded.",
+    "perspectival_gap": "The representativeness bias exhibits full DR perspectival divergence. An institution classifies it as Rope (coordination mechanism for bounded rationality). A misclassified individual classifies it as Snare (pure extraction with no exit). A category-typical member classifies it as Tangled Rope (mixed coordination and extraction). The debiasing movement classifies it as Scaffold (temporary problem under solution with sunset). The essentialism narrative classifies it as Piton (performative function, low real verification). The uncritical analytical observer classifies it as Mountain (natural law of cognition). These are not disagreements about metrics \u2014 they are differences in structural position producing different experienced extractiveness values. The engine's falsity detector identifies the mountain as a false summit: the appeal to bounded rationality naturalizes what is actually an institutional choice to privilege heuristics despite knowing they are less accurate. Debiasing is possible; the constraint is not a law of nature.",
+    "directionality_logic": "Each perspective's directionality is derived from structural position + exit options. Misclassified individuals (powerless, trapped) occupy d \u2248 0.95, experiencing maximum extraction (f(d) \u2248 1.42). Institutions (institutional, arbitrage) occupy d \u2248 0.05, experiencing negative extraction (f(d) \u2248 -0.12) \u2014 the constraint benefits them. The perspectival gap reveals that the constraint is extractive when observed from the target's position but coordinative when observed from the beneficiary's position. This is the diagnostic signature of a Tangled Rope from the neutral analytical view: genuine coordination function (heuristics do reduce bounded-rationality costs) coupled with asymmetric extraction (benefits accrue to institutions, costs to misclassified individuals).",
+    "mandatrophy_analysis": "The mandatrophy for representativeness bias is resolved by indexing all six perspectives and showing how each one captures a genuine structural feature: (1) The Snare from the victim's view (pure extraction, no exit) is their lived experience. (2) The Rope from the institution's view (coordination mechanism) is the genuine cognitive function. (3) The Tangled Rope from the analytical view combines both: coordination function + asymmetric extraction. (4) The Scaffold from the debiasing coalition (temporary, sunset logic) reflects real institutional change trajectories. (5) The Piton from the essentialist narrative (performative, degraded) reflects how folk theory maintains the heuristic. (6) The Mountain from the uncritical observer (natural law) is a false summit \u2014 the constraint is institutionally contingent, not cognitively inevitable. The mandatrophy is not 'which type is correct?' but 'which perspectives do we activate in policy?' The analytical observer's responsibility is to specify all six and argue for institutional design that reduces the Snare experience (victim's view) without destroying the genuine Rope coordination benefit."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "base_rate_neglect",
+      "stereotyping_in_criminal_justice",
+      "algorithmic_bias_amplification"
+    ],
+    "dual_formulation_note": "Representativeness bias is upstream of specific domain implementations (criminal justice risk assessment, hiring algorithms, medical diagnosis systems, credit scoring). Each domain has its own constraint story with domain-specific \u03b5 and beneficiary/victim declarations. This story represents the general cognitive mechanism; downstream stories represent institutional embeddings."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

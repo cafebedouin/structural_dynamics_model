@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "remote_closing_friction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rcf"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Remote Closing Friction in Real Estate Transactions",
+    "topic_domain": "economic/institutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "title_companies",
+      "escrow_agents",
+      "remote_service_providers"
+    ],
+    "victims": [
+      "remote_buyers",
+      "remote_sellers",
+      "transaction_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Remote Buyer",
+      "comment": "PERSPECTIVE 1: REMOTE BUYER (SNARE) \u2014 Trapped by geography and transaction urgency; cannot relocate to in-person closing. Bears full cost of friction through extended timelines, additional fees for remote notarization, compliance overhead, and coordination burden. No viable exit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Remote Seller",
+      "comment": "PERSPECTIVE 2: REMOTE SELLER (TANGLED ROPE) \u2014 Constrained by property sale urgency and inability to delay closing. Experiences genuine coordination benefit (funds transfer enabled by escrow) alongside extraction (higher closing costs, timeline delays, documentation burden). Can exit by refusing sale or traveling in-person, but at significant cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Title Company and Escrow Agent",
+      "comment": "PERSPECTIVE 3: TITLE COMPANY AND ESCROW AGENT (ROPE) \u2014 Primary beneficiary of the constraint. Experiences closing friction as a coordination mechanism that generates legitimate service demand. Can arbitrage between jurisdictions, adjust fee structures, and shift friction costs onto buyers/sellers. Extraction flows toward this actor; they perceive the constraint as enabling their business model."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "State Real Estate Regulators",
+      "comment": "PERSPECTIVE 4: STATE REAL ESTATE REGULATORS (TANGLED ROPE) \u2014 Constrained by statutory requirements for in-person witnessing and notarization in many states. Experiences genuine coordination benefit (fraud prevention, consumer protection) alongside institutional extraction (regulatory authority maintenance, fee control). Can exit by harmonizing remote closing standards, but faces political and consumer protection pressure."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Remote Closing Technology Coalition",
+      "comment": "PERSPECTIVE 5: REMOTE CLOSING TECHNOLOGY COALITION (SCAFFOLD) \u2014 Organized actors (eMortgage platforms, blockchain-based closing solutions, eSignature providers) are building alternative closing pathways that reduce friction. See the constraint as temporary, solvable through technology and regulation harmonization. Low effective extraction because coalition has agency and clear sunset path: digital notarization standards and remote closing parity."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Traditional In-Person Closing Ritual",
+      "comment": "PERSPECTIVE 6: TRADITIONAL IN-PERSON CLOSING RITUAL (PITON) \u2014 The ceremonial closing table (all parties present, physical documents signed, notary witnessing) persists through institutional inertia despite degraded functional necessity. Many aspects are purely performative: signatures on documents that are already digitally signed, notary presence when video verification would suffice, in-person coordination when asynchronous workflows would work. Theater ratio high; function low. Maintained because alternatives haven't fully displaced it, not because the ritual is optimal."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, some closing friction is inherent to property transfer: assets must be authenticated, ownership transferred under law, parties must consent. The gap between parties' locations and the legal requirement for authorized witnessing is a structural feature of real estate law. However, the structural data contradicts this \u2014 the friction is institutional (state licensing requirements) not physical law. The analytical observer risks naturalizing what is contingent."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fraud_prevention_necessity",
+      "question": "How much of the closing friction is genuinely necessary for fraud prevention versus performative compliance?",
+      "resolution_mechanism": "Comparative analysis of fraud rates in jurisdictions with in-person closing requirements vs remote closing-enabled jurisdictions; classification of each friction element by fraud-prevention necessity",
+      "impact": "If high necessity: constraint is primarily coordination (Rope from more perspectives). If low necessity: constraint is primarily extraction theater (Snare/Piton prevalence).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether closing friction components are fraud-prevention-necessary or performative"
+    },
+    {
+      "id": "technology_sufficiency_threshold",
+      "question": "Do existing remote closing technologies (eSignature, video notarization, blockchain verification) provide equivalent legal and security assurance as in-person closing?",
+      "resolution_mechanism": "Litigation data on remote closing disputes vs in-person closing disputes; state regulatory acceptance of remote closing technologies; fraud detection rates by closing method",
+      "impact": "If equivalent: scaffold perspective confirmed \u2014 remote closing sunset is real, constraint will degrade to piton then extinct. If inferior: piton perspective confirmed \u2014 in-person requirement persists as legitimate safeguard, not theater.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether remote closing technology provides equivalent legal assurance"
+    },
+    {
+      "id": "interstate_regulatory_harmonization",
+      "question": "Will state real estate licensing and notarization requirements harmonize to enable remote closing, or will jurisdiction fragmentation persist indefinitely?",
+      "resolution_mechanism": "Tracking of state legislative adoption of remote closing enabling statutes; regulatory commission working group progress; professional organization standards convergence",
+      "impact": "If harmonization: scaffold sunset is mechanistic (regulatory change removes friction). If fragmentation persists: constraint becomes entrenched piton or institutional snare.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether state regulatory frameworks will harmonize for remote closing"
+    },
+    {
+      "id": "beneficiary_extraction_motive",
+      "question": "Do title companies and escrow agents actively lobby to preserve closing friction, or does the friction persist through regulatory inertia independent of industry preference?",
+      "resolution_mechanism": "Analysis of industry lobbying records, position statements on remote closing enabling; comparison of service fees in remote-capable vs remote-restricted jurisdictions",
+      "impact": "If active preservation: snare dynamics confirmed \u2014 beneficiary actively suppresses alternatives. If passive inertia: tangled rope confirmed \u2014 extraction is byproduct of coordination function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether title industry actively preserves or passively maintains closing friction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.57
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Remote closing friction in real estate transactions creates a structural tension between the legal requirement for authorized witnessing and notarization (designed to prevent fraud and ensure informed consent) and the practical friction imposed when buyers and sellers are geographically separated. This constraint exhibits tangled rope dynamics: genuine coordination benefits (escrow ensures funds transfer, notarization ensures signature authenticity) coexist with asymmetric extraction (title companies and escrow agents capture the friction cost differential, higher fees for remote transactions, and timeline delays that generate leverage). The constraint is not a pure coordination problem because the friction itself generates revenue for intermediaries \u2014 their business model depends on transaction complexity. It is not pure extraction because legitimate fraud prevention and consumer protection functions genuinely exist. Over the interval from 2015 to 2025, theater ratio increased from 0.35 to 0.58 as digital transaction methods became available yet closing procedures remained largely in-person, exposing performative elements. Extractiveness increased from 0.38 to 0.52 as remote transaction volume grew but friction costs (both time and fees) remained fixed or increased. This trajectory is classic Goodhart drift: the correlation between in-person presence and fraud prevention broke, but the ritual persisted.",
+    "key_agents": [
+      "Remote Buyers: Primary victim (powerless/trapped) \u2014 geographic separation creates inescapable friction; no alternative closing pathway available in most jurisdictions",
+      "Remote Sellers: Secondary victim (moderate/constrained) \u2014 constrained by property sale urgency; can exit only by traveling in-person or accepting extended timelines and higher costs",
+      "Title Companies and Escrow Agents: Primary beneficiary (institutional/arbitrage) \u2014 extract value through friction fees and complexity charges; can arbitrage between jurisdictions and adjust fee structures",
+      "State Real Estate Regulators: Institutional actor (institutional/constrained) \u2014 constrained by statutory requirements; benefit from regulatory authority maintenance but also from consumer protection obligations",
+      "Remote Closing Technology Coalition: Organized agent (organized/constrained) \u2014 building alternative pathways; see sunset mechanism in regulatory harmonization and technology standardization",
+      "Traditional Closing Ritual: Institutional pattern (institutional/arbitrage) \u2014 persists through inertia; maintains symbolic function even where practical function has declined",
+      "Analytical Observer: Civilizational position (analytical/analytical) \u2014 risks naturalizing contingent regulatory structures as inherent to property law"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts meaningful value from remote parties through: (1) higher closing costs (remote notarization markup, coordination fees), (2) extended timelines (additional escrow review cycles, compliance documentation), (3) friction-dependent service demand (title insurance companies have no incentive to reduce closing friction as it justifies their services). The extraction is not maximal because some legitimate coordination benefits exist (fraud prevention, funds security, legal certainty). The measurement trajectory from 0.38 to 0.52 reflects extraction growth as remote transaction volume increased but friction costs remained fixed. Suppression (0.48): Moderate. Barriers to remote closing include: state licensing requirements for notaries, legal requirements for in-person witnessing (varying by state), title company liability concerns, industry resistance through lobbying. But suppression is not total \u2014 some states have enabled remote closing, technology alternatives exist, and regulatory momentum is shifting. Theater ratio (0.58): Moderate-high. Many closing elements are performative: parties signing documents already digitally signed, notary witnessing video call when authentication verification would suffice, in-person closing meeting when asynchronous workflow could complete transaction. The increase from 0.35 to 0.58 reflects the growing gap between what closing procedures actually verify versus what they claim to verify.",
+    "perspectival_gap": "The remote buyer and remote seller perceive snare/tangled rope (trapped/constrained with extraction), while title companies perceive rope (coordination that enables their business). Regulators perceive tangled rope (mixing fraud prevention with regulation maintenance), while the technology coalition perceives scaffold (temporary problem with a clear sunset). The traditional closing ritual appears as piton (performative inertia) to those aware of digital alternatives, but as mountain (inherent to property law) to those who haven't questioned it. The analytical observer risks the false summit: naturalizing regulatory friction as inherent to real estate law when it is actually a contingent institutional arrangement. The perspectival gap between remote buyer (powerless/trapped) and title company (institutional/arbitrage) reveals the extraction mechanism: the constraint's friction generates revenue that flows toward the intermediary.",
+    "directionality_logic": "Title companies and escrow agents are beneficiaries: they profit from closing friction through higher fees and increased service demand. Their exit is arbitrage (ability to shift to other markets or service models). Remote buyers and sellers are victims: they pay higher costs and face timeline delays. Their exit is trapped or constrained (cannot avoid the transaction, limited alternatives). State regulators are constrained beneficiaries: they benefit from regulatory authority but are also constrained by statutory requirements they administer. The remote closing technology coalition has constrained but organized exit: they can build alternatives but face regulatory barriers. The directionality computation yields d \u2248 0.55 for remote parties (trapped/constrained victim + moderate power = high d, high f(d)), and d \u2248 0.15 for title companies (beneficiary + arbitrage = low d, negative f(d)). This explains why the constraint appears as snare to remote parties and rope to intermediaries.",
+    "mandatrophy_analysis": "RESOLVED: This constraint demonstrates genuine tangled rope structure through the presence of both coordination and extraction. Coordination function: escrow prevents fraud, notarization ensures signature authenticity, title insurance protects legal clarity. Extraction function: title companies profit from friction they could reduce but don't; closing costs increase with transaction complexity independent of fraud risk; timeline delays create leverage for refinancing and renegotiation. The mandatrophy resolves by confirming that both functions are structurally necessary. A constraint with only coordination would be rope; one with only extraction would be snare. This constraint has both: it genuinely coordinates (funds security, signature verification) while genuinely extracting (friction-dependent profit model). The false summit risk is classifying it as mountain (inherent to property law). The structural data proves it's institutional (regulatory requirement), not physical law \u2014 the constraint exists because states have not harmonized remote closing standards, not because remote transaction physics is impossible."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "mortgage_origination_complexity",
+      "escrow_transparency"
+    ],
+    "dual_formulation_note": "Remote closing friction is downstream of state real estate licensing requirements and upstream of specific transaction delays. Can be decomposed into separate constraints: (1) notarization requirement friction (\u03b5\u22480.35, regulatory coordination), (2) escrow fee extraction (\u03b5\u22480.62, financial extraction), (3) timeline delay leverage (\u03b5\u22480.48, asymmetric information). This story treats all three as unified constraint; decomposition justified if omega resolution requires independent analysis of each component."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

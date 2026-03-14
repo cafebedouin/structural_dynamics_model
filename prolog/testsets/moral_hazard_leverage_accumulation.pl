@@ -1,0 +1,304 @@
+% ============================================================================
+% CONSTRAINT STORY: moral_hazard_leverage_accumulation
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_moral_hazard_leverage_accumulation, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: moral_hazard_leverage_accumulation
+ *   human_readable: Moral Hazard Leverage Accumulation in Financial Markets
+ *   domain: financial_systems/macroeconomic_stability
+ *
+ * SUMMARY:
+ *   Moral hazard leverage accumulation is a constraint that distributes
+ *   extraction from non-systemically-important creditors and the broader
+ *   taxpaying public to systemically-important financial institutions. The
+ *   constraint operates through an implicit government guarantee:
+ *   institutions that are 'too big to fail' can borrow at lower cost because
+ *   creditors rationally expect bailout if the institution fails. This
+ *   creates a perverse incentive for leverage accumulation beyond socially
+ *   optimal levels. As leverage accumulates, extractiveness increases because
+ *   spreads compress (creditors demand less risk premium, trusting the
+ *   guarantee), capital allocation becomes increasingly distorted
+ *   (leverage-based returns outcompete productive investment), and systemic
+ *   fragility builds. The constraint exhibits all six DR types from different
+ *   structural positions, making it diagnostic for how institutional moral
+ *   hazard operates across power asymmetries. The theater ratio (0.58)
+ *   reflects that regulatory responses (capital requirements, stress tests,
+ *   bail-in frameworks) are substantively crafted but often ineffectual: the
+ *   underlying guarantee structure persists despite regulatory rhetoric
+ *   denying it, creating a gap between stated regulatory intent and actual
+ *   market expectations.
+ *
+ * KEY AGENTS:
+ *   - Systemically-Important Financial Institution: Primary beneficiary (institutional/arbitrage) — captures spread compression, favorable credit terms, and implicit bailout guarantee. Drives leverage accumulation.
+ *   - Non-Systemically-Important Creditor: Primary victim (moderate/constrained) — faces credit rationing, higher borrowing costs, and ultimate losses during deleveraging cycles.
+ *   - Retail Depositor: Victim (powerless/trapped) — trapped in financial system by currency denomination and deposit insurance structure; bears losses when leverage collapses exceed deposit insurance limits.
+ *   - Non-Systemically-Important Firm: Victim (moderate/constrained) — faces competitive disadvantage against levered systemically-important competitors; constrained by credit availability.
+ *   - Macro-Prudential Regulator: Organized actor (organized/mobile) — has theoretical exit conditions (leverage below thresholds) but weak enforcement and capture reduce credibility.
+ *   - Taxpaying Public: Victim (powerless/trapped) — absorbs bailout costs and recessionary externalities from systemic deleveraging; no exit from currency system or political obligation.
+ *   - Analytical Observer: Civilizational position (analytical/analytical) — sees the constraint as systemic risk redistribution: financial sector captures upside, broader economy bears downside.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(moral_hazard_leverage_accumulation, 0.68).
+domain_priors:suppression_score(moral_hazard_leverage_accumulation, 0.72).
+domain_priors:theater_ratio(moral_hazard_leverage_accumulation, 0.58).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(moral_hazard_leverage_accumulation, extractiveness, 0.68).
+narrative_ontology:constraint_metric(moral_hazard_leverage_accumulation, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(moral_hazard_leverage_accumulation, theater_ratio, 0.58).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(moral_hazard_leverage_accumulation, snare).
+narrative_ontology:human_readable(moral_hazard_leverage_accumulation, "Moral Hazard Leverage Accumulation in Financial Markets").
+narrative_ontology:topic_domain(moral_hazard_leverage_accumulation, "financial_systems/macroeconomic_stability").
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(moral_hazard_leverage_accumulation, systemically_important_financial_institutions).
+narrative_ontology:constraint_beneficiary(moral_hazard_leverage_accumulation, large_leverage_holders).
+narrative_ontology:constraint_victim(moral_hazard_leverage_accumulation, non_systemically_important_creditors).
+narrative_ontology:constraint_victim(moral_hazard_leverage_accumulation, taxpayers).
+narrative_ontology:constraint_victim(moral_hazard_leverage_accumulation, systemic_stability).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: RETAIL DEPOSITOR / SMALL CREDITOR (SNARE) — Trapped by asymmetric information and systemic interconnection. Cannot exit the constraint because deposits are denominated in the currency system itself. Bears full extraction risk during leverage collapse: loses deposits, sees savings evaporate, and has no recourse when systemic institutions fail. Maximum experienced extraction — no alternatives to participating in the financial system.
+constraint_indexing:constraint_classification(moral_hazard_leverage_accumulation, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: NON-SYSTEMICALLY-IMPORTANT FIRM (SNARE) — Constrained by credit market availability and counterparty risk. Cannot access leverage at systemically-important institutions' rates because credit is rationed away from non-systemic borrowers during accumulation phases. Bears extraction through credit scarcity and higher borrowing costs. Can theoretically exit by raising capital non-leverage (equity, retained earnings), but in practice faces significant cost disadvantage compared to levered competitors.
+constraint_indexing:constraint_classification(moral_hazard_leverage_accumulation, snare,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: SYSTEMICALLY-IMPORTANT FINANCIAL INSTITUTION (ROPE) — Experiences the constraint as pure coordination: leverage is the mechanism by which capital is deployed and returns are maximized. Implicit government guarantee creates arbitrage opportunity — can borrow at favorable rates on assumption of bailout if needed. The constraint appears as a coordination mechanism from this perspective because it genuinely solves the institutional capital allocation problem. Net beneficiary during accumulation phase.
+constraint_indexing:constraint_classification(moral_hazard_leverage_accumulation, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: LARGE NON-BANK LEVERAGE HOLDER (TANGLED ROPE) — Hedge funds, private equity firms, and large investors experience mixed extraction and benefit. Beneficiary: can extract returns through leverage arbitrage when credit is cheap. Victim: when credit dries up or counterparty risk spikes, faces forced liquidation and margin calls. Experience both coordination benefits (cheap capital access) and significant extraction (forced selling, value destruction). Constrained exit because leverage is built into capital structure and cannot be unwound without realizing losses.
+constraint_indexing:constraint_classification(moral_hazard_leverage_accumulation, tangled_rope,
+    context(agent_power(powerful),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: MACRO-PRUDENTIAL REGULATOR (SCAFFOLD) — Sees the constraint as a temporary coordination problem with a theoretical sunset: capital requirements, leverage limits, and dynamic provisioning rules are designed to create exit pathways. The regulator has agency and a clear exit condition (leverage below sustainable thresholds). However, enforcement is weak and capture is common, making the scaffold's sunset clause largely aspirational rather than structural. Theater is moderate because regulatory responses appear substantive (stress tests, capital rules) but often lack enforcement teeth.
+constraint_indexing:constraint_classification(moral_hazard_leverage_accumulation, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: IMPLICIT GOVERNMENT GUARANTEE FRAMEWORK (PITON) — The government's implicit guarantee that systemically-important institutions will be bailed out persists through institutional inertia despite repeated crises and stated regulatory intent to eliminate it. The 'too big to fail' framework is largely performative: regulators enact resolution authority legislation (Dodd-Frank orderly liquidation authority, EU resolution regimes) that is widely understood to be subordinate to systemic stability concerns. Theater ratio high because regulatory frameworks claim to have eliminated moral hazard while the underlying guarantee structure remains. Bailout practice contradicts resolution rhetoric.
+constraint_indexing:constraint_classification(moral_hazard_leverage_accumulation, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER (SYSTEMIC RISK VIEW) (SNARE) — From a civilizational perspective analyzing systemic stability, moral hazard leverage accumulation is pure extraction of stability for short-term financial sector gains. The constraint forces an asymmetric trade: financial sector captures upside (profits from leverage), while the broader economic system bears downside (contagion, recession, wealth destruction). No exit pathway exists at the civilizational level — finance is embedded in economic coordination. The constraint redistributes systemic fragility from financial institutions to the broader economy.
+constraint_indexing:constraint_classification(moral_hazard_leverage_accumulation, snare,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(moral_hazard_leverage_accumulation_tests).
+
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(moral_hazard_leverage_accumulation, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(moral_hazard_leverage_accumulation, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(moral_hazard_leverage_accumulation, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(moral_hazard_leverage_accumulation, TR),
+    TR >= 0.70.
+
+:- end_tests(moral_hazard_leverage_accumulation_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness (0.68): High. The constraint transfers material value from non-systemically-important creditors and taxpayers to systemically-important institutions through multiple mechanisms: (1) spread compression (creditors accept lower risk premiums due to implicit guarantee), (2) credit rationing (credit flows to systemically-important institutions at favorable terms while others face scarcity), (3) pro-cyclical deleveraging (when leverage needs to unwind, non-systemically-important actors bear first losses), (4) bailout costs (taxpayers absorb losses when systemic institutions become insolvent). The measurements show extractiveness rising from 0.35 to 0.72 as leverage accumulates — the accumulation phase directly drives increased extraction. Suppression (0.72): High. Multiple mechanisms suppress alternatives and exit pathways: (1) credit system architecture — all lending is ultimately dependent on central bank liquidity and banking infrastructure, (2) regulatory capture — systemically-important institutions have disproportionate influence over leverage regulation, (3) implicit guarantee credibility — creditors believe bailout is certain for large institutions, making it impossible to price leverage risk accurately, (4) information asymmetry — systemically-important institutions have better information about their leverage and counterparty exposures than regulators or external creditors, (5) coordinated leverage incentives — during accumulation phases, institutional competition drives leverage increases across competitors simultaneously, creating collective action problems. Theater ratio (0.58): Moderate-high. Regulatory responses (capital requirements, stress tests, bail-in frameworks) are substantively designed but their enforcement is weak and contested. The gap between regulatory rhetoric (we have eliminated moral hazard through resolution frameworks) and market practice (systemically-important institutions borrow at favorable rates on implicit guarantee assumptions) reflects theater. Regulations perform the appearance of constraint while the underlying guarantee structure remains.
+ *
+ * PERSPECTIVAL GAP:
+ *   This constraint demonstrates sharp perspectival divergence despite a single set of base properties. The systemically-important institution sees rope (pure coordination) — leverage is the mechanism by which capital is deployed and returns are maximized; the implicit guarantee enables capital allocation that solves their institutional problem. The retail depositor sees snare (pure extraction with no exit) — they cannot avoid the financial system and bear downside risk they cannot measure or control. The non-systemically-important firm sees snare (extraction through credit rationing and competitive disadvantage) — they face worse credit terms and are outcompeted by levered rivals. The regulator sees scaffold (a temporary problem with a regulatory sunset) — leverage limits are designed to converge toward sustainable levels, creating an exit condition. The analytical observer at global/civilizational scope sees snare (systemic risk redistribution) — the constraint transfers stability from the financial sector to the broader economy, creating fragility that will eventually collapse. The piton perspective (implicit guarantee framework) views the constraint as degraded theater — regulations announce constraint while the underlying guarantee remains, and bailout practice contradicts resolution rhetoric. This perspectival range reflects the constraint's core mechanism: the same implicit guarantee that appears as beneficial coordination to beneficiaries appears as extractive suppression to victims.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Directionality derives from beneficiary/victim status and exit options through the sigmoid function. Systemically-important institutions have low d (near 0.0) — they are beneficiaries with arbitrage exit options, producing negative or near-zero f(d), meaning they experience the constraint as coordination benefit rather than extraction. Non-systemically-important creditors have high d (near 0.85) — they are victims with constrained exit, producing f(d) ≈ 1.15, multiplying the base extractiveness (0.68 × 1.15 ≈ 0.78 effective extraction). Powerless depositors have maximum d (near 0.95) — they are victims with trapped exit, producing f(d) ≈ 1.42, creating extremely high effective extraction (0.68 × 1.42 ≈ 0.96 experienced extraction). The analytical observer at civilizational scope has d near 0.72 (neither beneficiary nor victim at that scale, but viewing the systemic redistribution), producing moderate amplification (0.68 × 1.15 ≈ 0.78). The perspectival gap (snare vs rope vs scaffold) reflects this directionality variation: from the beneficiary's position, the constraint is functional (rope); from the victim's position, it is extractive (snare); from the regulator's position, it is temporary and fixable (scaffold).
+ *
+ * MANDATROPHY ANALYSIS:
+ *   Moral hazard leverage accumulation resolves the mandatrophy through structural asymmetry: different observers genuinely experience structurally different constraints. This is not a case of multiple readings of the same constraint but of multiple structural layers in a single system. The rope perspective is real for systemically-important institutions — they do experience leverage as a coordination mechanism that solves capital allocation problems. The snare perspective is real for non-systemically-important creditors and taxpayers — they do experience extraction with no viable exit. The scaffold perspective is real for regulators — they do have theoretical exit conditions (leverage below thresholds) and theoretical enforcement mechanisms. The piton perspective is real — regulatory frameworks do announce constraint while the underlying guarantee persists. These are not competing interpretations; they are accurate descriptions of different structural positions within the same system. The mandatrophy resolves by showing that the constraint simultaneously functions as coordination (for systemically-important actors), extraction (for non-systemically-important actors), and theater (for regulators). The system is designed to appear as coordination while delivering extraction — this is the core mechanism, not a misinterpretation.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    bailout_inevitability_threshold,
+    'At what aggregate leverage level does systemic contagion become mathematically inevitable, triggering automatic government intervention?',
+    'Network modeling of counterparty exposures; simulation of cascade failures under stress scenarios; historical analysis of bailout triggers (2008 thresholds vs subsequent crises)',
+    'If threshold is low (~2x leverage): moral hazard constraint is weak (exit is real threat). If threshold is high (>4x leverage): moral hazard is severe (bailout is near-certain for systemically important actors). Determines whether regulatory threats are credible.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(bailout_inevitability_threshold, empirical, 'Leverage threshold at which government bailout becomes structurally inevitable').
+
+omega_variable(
+    non_bank_leverage_amplification,
+    'Does non-bank leverage (hedge funds, private equity, derivatives markets) create systemic fragility equivalent to bank leverage, or is the risk genuinely compartmentalized?',
+    'Stress testing of non-bank leverage exposures; measurement of fire-sale amplification from non-bank deleveraging; historical analysis of contagion mechanisms from non-bank leverage shocks (LTCM, 2015 August flash crash, Archegos effect)',
+    'If equivalent systemic risk: moral hazard extends to all leverage, not just regulated banking. Regulatory boundaries fail to contain extraction. If compartmentalized: non-bank leverage is extractive but not systemic — the snare is narrower than apparent.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(non_bank_leverage_amplification, empirical, 'Whether non-bank leverage creates systemic fragility equivalent to bank leverage').
+
+omega_variable(
+    macroprudential_enforcement_credibility,
+    'Are macro-prudential leverage limits (capital requirements, leverage caps, dynamic provisioning) actually enforced, or do they function primarily as theater while true leverage migrates to unregulated sectors?',
+    'Tracking of actual leverage ratios during regulatory tightening; measurement of regulatory arbitrage (deleveraging in regulated sectors paired with leverage increase in shadow banking); enforcement action frequency vs violations detected',
+    'If actually enforced: scaffold perspective is correct — leverage limits create real exit conditions. If theater: piton classification dominates — regulations announce constraint while underlying guarantee structure remains. Determines whether regulatory sunset is real or aspirational.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(macroprudential_enforcement_credibility, empirical, 'Whether leverage limits are actually enforced or function as theater').
+
+omega_variable(
+    crisis_frequency_extraction_rate,
+    'What is the optimal crisis frequency (and magnitude) that maximizes total extraction from the non-systemically-important sector to the systemically-important sector?',
+    'Financial econometrics: fitting crisis frequency and severity to extraction flows (spread compression during accumulation, wealth transfer during deleveraging); historical comparison across regulatory regimes and countries',
+    'If crisis frequency is optimized by system design: moral hazard is not a bug but a feature — the constraint is extracting exactly the amount it''s designed to extract. This would elevate the snare classification from ''accident'' to ''mechanism.'' If crises are random: extraction is uncontrolled and occasionally catastrophic.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(crisis_frequency_extraction_rate, empirical, 'Whether crisis frequency is optimized for extraction').
+
+omega_variable(
+    international_regulatory_coordination,
+    'Do international leverage standards (Basel III, leverage ratio rules) function as coordination mechanisms that constrain arbitrage, or as theater that permits regulatory evasion through jurisdictional shopping?',
+    'Comparative leverage analysis across jurisdictions; tracking of regulatory arbitrage flows; measurement of synchronization in leverage cycles across countries',
+    'If coordination works: moral hazard is constrained at global scope. If arbitrage permits evasion: leverage migrates to low-regulation jurisdictions, and global aggregate leverage continues rising despite local regulations. Determines scope of the constraint''s effectiveness.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(international_regulatory_coordination, empirical, 'Whether international leverage standards coordinate or enable arbitrage').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(moral_hazard_leverage_accumulation, 0, 9).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(mhla_tr_t0, moral_hazard_leverage_accumulation, theater_ratio, 0, 0.42).
+narrative_ontology:measurement(mhla_tr_t3, moral_hazard_leverage_accumulation, theater_ratio, 3, 0.5).
+narrative_ontology:measurement(mhla_tr_t6, moral_hazard_leverage_accumulation, theater_ratio, 6, 0.58).
+narrative_ontology:measurement(mhla_tr_t9, moral_hazard_leverage_accumulation, theater_ratio, 9, 0.62).
+
+% Extraction over time
+narrative_ontology:measurement(mhla_be_t0, moral_hazard_leverage_accumulation, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(mhla_be_t3, moral_hazard_leverage_accumulation, base_extractiveness, 3, 0.52).
+narrative_ontology:measurement(mhla_be_t6, moral_hazard_leverage_accumulation, base_extractiveness, 6, 0.68).
+narrative_ontology:measurement(mhla_be_t9, moral_hazard_leverage_accumulation, base_extractiveness, 9, 0.72).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(moral_hazard_leverage_accumulation, resource_allocation).
+narrative_ontology:affects_constraint(moral_hazard_leverage_accumulation, financial_regulatory_capture).
+narrative_ontology:affects_constraint(moral_hazard_leverage_accumulation, procyclical_deleveraging).
+narrative_ontology:affects_constraint(moral_hazard_leverage_accumulation, implicit_guarantee_pricing).
+
+% DUAL FORMULATION NOTE:
+% Moral hazard leverage accumulation is structurally linked to regulatory capture (captured regulators enforce weaker leverage limits) and procyclical deleveraging (accumulated leverage forces synchronized unwinding, amplifying extraction during crisis phases). Each story has its own extractiveness value reflecting domain-specific mechanisms, but the network captures how moral hazard in financial markets propagates to regulatory systems and macroeconomic instability.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

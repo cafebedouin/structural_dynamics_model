@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "labor_deskilling_dynamics",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "deskill"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Labor Deskilling Dynamics in Industrial and Knowledge Work",
+    "topic_domain": "labor_economics/organizational_control",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "capital_owners_managers",
+      "standardization_process_architects"
+    ],
+    "victims": [
+      "skilled_workers",
+      "craft_knowledge_bearers",
+      "worker_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Deskilled Worker",
+      "comment": "PERSPECTIVE 1: DESKILLED WORKER (SNARE) \u2014 Once skilled workers lose their specialized knowledge to standardization, they face high barriers to exit. They cannot return to craft-based work; specialized roles are shrinking; lateral movement requires accepting lower wages. Trapped by credential obsolescence and labor market segmentation. The constraint extracts their autonomy and discretion, replacing it with monitoring and procedure compliance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Skilled Craft Worker (Mid-Transition)",
+      "comment": "PERSPECTIVE 2: SKILLED CRAFT WORKER MID-TRANSITION (TANGLED ROPE) \u2014 Still possesses valuable tacit knowledge but faces real constraints: deskilling threatens the value of their expertise; regulatory standardization forces adoption of new procedures; wage pressure from cheaper deskilled labor. Yet they also benefit from some coordination: standardization protocols enable communication across sites, equipment manufacturers standardize tools, professional associations retain some gatekeeping power. Moderate extraction with genuine hybrid character."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Capital Owner / Management",
+      "comment": "PERSPECTIVE 3: CAPITAL OWNER / MANAGEMENT (ROPE) \u2014 Experiences deskilling as pure coordination benefit. Standardization reduces wage bills, enables work interchangeability, reduces dependency on particular workers, and improves quality control. Management exits any single labor relationship at will; they benefit from reduced negotiation power of workers. The constraint solves their coordination problem (stable, controllable labor) while extracting from workers."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Labor Union / Worker Coalition",
+      "comment": "PERSPECTIVE 4: LABOR UNION / WORKER COALITION (SCAFFOLD) \u2014 Organized labor sees deskilling as a temporary extractive phase, not permanent. Unions can negotiate retraining, wage floors, and work rule protections that offset deskilling pressure. Union presence creates an exit path: collective bargaining raises the cost of arbitrary deskilling. Where unions are strong, deskilling proceeds more slowly or is negotiated. Sunset logic applies: as worker organization grows, deskilling's extraction mechanism weakens. Temporary high suppression with declining extraction as organization builds."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Taylorist Efficiency Narrative",
+      "comment": "PERSPECTIVE 5: TAYLORIST EFFICIENCY NARRATIVE (PITON) \u2014 The legitimating narrative ('scientific management improves efficiency') persists long after its functional justification. Modern manufacturing uses kaizen, lean methods, and data analytics that often contradict Taylor's 1911 prescriptions. Yet the theater of 'rational scientific organization' continues. The narrative is maintained through management schools, consulting firms, and performance metrics that assume task decomposition is inherently rational. Theater_ratio high because the performative claim ('we are being scientific') substitutes for actual skill development investment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Educational System (Institutional Capture)",
+      "comment": "PERSPECTIVE 6: EDUCATIONAL SYSTEM (INSTITUTIONAL CAPTURE / TANGLED ROPE) \u2014 Educational institutions both enable and enforce deskilling. Curricula shift toward standardized competencies rather than deep craft knowledge; vocational education emphasizes job readiness for deskilled positions. Yet education also theoretically builds human capital. Educational institutions face real constraints: labor market demand for deskilled workers is high; employers lobby for standardized curricula; funding pressures favor quick job placement over long craft training. They benefit from deskilling (efficiency gains, employer alignment) while trapped in it (constrained by labor market signals). Genuine hybrid: coordination function exists (matching workers to jobs) but extraction is embedded (reinforcing the deskilling regime)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Technological Determinism View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / TECHNOLOGICAL DETERMINISM (MOUNTAIN) \u2014 From a civilizational view, deskilling can appear as an inevitable consequence of mechanization and automation: any technology that can standardize a task will eventually do so; workers cannot resist technological progress; deskilling is a natural law of industrial development. However, this perspective naturalizes contingent institutional choices (wage setting, training investment, union suppression) as technological inevitabilities. The mountain classification is vulnerable to false summit detection \u2014 historical variation (German apprenticeship systems, Japanese quality circles, Scandinavian worker councils) shows deskilling is not inherent to technology but to specific management strategies."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "skill_definition_boundary",
+      "question": "Is deskilling a loss of skill or a redefinition of what counts as skill in the labor market?",
+      "resolution_mechanism": "Comparative analysis of cognitive/motor task demands before and after standardization; measurement of actual problem-solving required in 'deskilled' roles vs official job descriptions",
+      "impact": "If actual skill persists but market devalues it: extraction is primarily through wage suppression, not genuine skill loss. If actual skill requirements decline: deskilling is real but may reflect genuine efficiency gains rather than pure extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether deskilling represents genuine skill loss or market devaluation of existing skills"
+    },
+    {
+      "id": "worker_autonomy_substitution",
+      "question": "Can standardization procedures that reduce worker autonomy be offset by other forms of autonomy (schedule flexibility, remote work, participatory process improvement)?",
+      "resolution_mechanism": "Longitudinal worker satisfaction surveys; measurement of autonomy domains (task discretion, schedule flexibility, decision participation); comparison of total autonomy across standardized vs craft-based roles",
+      "impact": "If autonomy can be redistributed: the extraction mechanism weakens (workers tolerate less discretion in exchange for other benefits). If autonomy loss is not compensated: snare classification confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether autonomy can be redistributed across different domains"
+    },
+    {
+      "id": "wage_floor_offsetting",
+      "question": "Do union wage floors and protections in heavily standardized sectors (retail, hospitality, manufacturing) actually offset deskilling-driven wage suppression, or does standardization eventually break union power?",
+      "resolution_mechanism": "Comparative wage analysis across unionized and non-unionized sectors with similar deskilling levels over 50-year periods; causal inference from union organizing success/failure timing relative to deskilling waves",
+      "impact": "If unions successfully offset: scaffold classification confirmed \u2014 deskilling is temporary extraction with a real sunset. If unions fail: deskilling becomes permanent snare even with organizing attempts.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether union protections offset deskilling-driven wage suppression"
+    },
+    {
+      "id": "reskilling_possibility",
+      "question": "Is deskilling reversible through deliberate reskilling investment, or does it create path-dependent lock-in where skills once lost cannot be recovered?",
+      "resolution_mechanism": "Historical case studies of sectors attempting reskilling after deskilling (postwar German manufacturing, post-2008 US manufacturing); measurement of time and cost to restore craft knowledge vs initial deskilling cycle",
+      "impact": "If reversible: constraint is tangled rope with possible exit. If irreversible: constraint is snare with permanent lock-in.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether deskilling can be reversed through reskilling investment"
+    },
+    {
+      "id": "standardization_benefit_distribution",
+      "question": "Do consumers benefit from standardized product quality and lower prices from deskilling, or is standardization primarily a management control mechanism with minimal consumer benefit?",
+      "resolution_mechanism": "Product quality comparison (defect rates, durability, customizability) across handmade vs mass-produced goods at equivalent price points; consumer surplus analysis; measurement of actual quality improvement attributable to deskilling vs other factors",
+      "impact": "If consumers benefit significantly: deskilling is partial coordination benefit (not pure extraction). If consumers don't benefit: deskilling is pure extraction masked as efficiency.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether consumers benefit from standardized products from deskilled labor"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "Labor deskilling dynamics represent the systematic transformation of skilled work into standardized, interchangeable labor through the decomposition of tasks, formalization of procedures, and mechanization of decision-making. Beginning with Taylor's scientific management in the early 1900s and accelerating through industrial manufacturing, computerization, and now algorithm-driven task allocation, deskilling creates a hybrid coordination-extraction constraint. Management benefits from reduced wage bills, labor interchangeability, and control over production processes. Workers lose autonomy, discretion, and the market value of their expertise. The constraint exhibits genuine coordination function (standardization enables quality control, communication across sites, and scalability) alongside asymmetric extraction (wage suppression, autonomy loss, skill devaluation). The theater ratio has risen over time as the legitimating narrative ('scientific efficiency') persists despite contradictions from modern management methods (lean, kaizen, continuous improvement) that often require worker discretion and tacit knowledge.",
+    "key_agents": [
+      "Capital Owners / Managers: Primary beneficiary (institutional/arbitrage) \u2014 reduce wage costs, improve labor control, achieve predictability and interchangeability",
+      "Skilled Workers / Craft Knowledge Bearers: Primary victim (powerless/trapped) \u2014 lose autonomy, face credential obsolescence, trapped in deskilled labor market",
+      "Deskilled Workers: Secondary victim (powerless/trapped) \u2014 structurally vulnerable to wage suppression, easily replaced, minimal bargaining power",
+      "Labor Unions / Worker Coalitions: Organized agents (organized/mobile) \u2014 can negotiate retraining, wage floors, and work protections; represent exit path for workers",
+      "Educational Institutions: Institutional (institutional/constrained) \u2014 shape labor supply toward standardized competencies; captured by employer demands but theoretically build human capital",
+      "Consumers: Analytical agents with mixed position \u2014 benefit from lower prices and standardized quality, but also bear externalized costs (job precarity, reduced income growth, community dislocation)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent management strategies as technological inevitability"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, increasing over interval. Initial deskilling in manufacturing (1900-1960) was partially offset by strong unions and rising real wages despite skill loss. Contemporary deskilling (1980-present) in services and knowledge work shows higher extraction: service sector workers face deskilling with weak union presence, gig economy workers have minimal protections, and algorithmic management (food delivery, warehouse work) removes human discretion entirely. The upward trajectory reflects weakening countervailing power, not intensification of the underlying mechanism. Suppression (0.68): High and structural. Barriers to exit include: labor market segmentation (deskilled credentials not recognized in other sectors), wage dependence (workers cannot sustain themselves through retraining), cognitive capture (internalized belief that standardized work is 'modern progress'), geographic lock-in (limited opportunities in some regions), and direct union suppression in some sectors. Theater ratio (0.64): Moderate-high, increasing. Taylorist rationality narrative persists in management education despite contradictions from kaizen, lean, and quality circles\u2014all of which actually require worker discretion and tacit knowledge. Corporate culture emphasizes 'empowerment' while implementing algorithmic control. Metrics obsession (time-motion studies reborn as productivity dashboards) maintains the performance of rationality. The theater has increased because the legitimating narrative must work harder to justify extraction as work has become more cognitively complex.",
+    "perspectival_gap": "This constraint's perspectival range spans from snare to rope, with tangled rope as the equilibrium classification. The gap between manager perception (pure beneficial coordination) and worker perception (pure extraction) is maximal. The skilled worker's tangled rope perspective reveals the constraint's hybrid nature: standardization does solve some real coordination problems (task communication, quality control) while simultaneously enabling extraction (wage suppression, autonomy loss). The scaffold perspective from organized labor is structural reality in union sectors and aspirational in non-union sectors, revealing a geographic and sectoral split: where unions are strong, deskilling is temporary; where unions are weak, deskilling becomes permanent snare. The piton perspective on Taylorist narrative reveals the cognitive maintenance burden: the 'scientific efficiency' story must constantly be re-told and re-legitimated because modern manufacturing (lean, kaizen, six sigma, AI) actually contradicts Taylor's prescriptions. The false mountain risk is high: deskilling is easily naturalized as 'inevitable progress' or 'technological necessity' when it is actually a contingent strategic choice by capital to increase control and reduce labor costs.",
+    "directionality_logic": "Directionality values are derived from beneficiary/victim status and exit options. Capital owners/managers as beneficiaries with arbitrage-level exit options (they can replace any worker, relocate production, or invest in automation) derive low d values, producing negative f(d) and negative chi \u2014 they experience the constraint as beneficial coordination. Deskilled workers as victims with trapped exit options (credential obsolescence, labor market segmentation, wage dependence) derive high d values, producing high f(d) and high chi \u2014 they experience maximum extraction. Skilled workers in transition derive moderate d values through mixed beneficiary/victim status: they benefit from some standardization protocols but suffer knowledge devaluation. The organizational power atom matters: workers with individual power but no collective organization experience high extraction (powerless/trapped); organized workers experience moderate extraction (organized/constrained or organized/mobile) because unions raise the cost of arbitrary deskilling. Union presence differentiates d values: same worker at same skill level experiences different chi depending on whether union protections exist.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: Deskilling dynamics resolve the mandatrophy by showing that the constraint contains genuine coordination function alongside real extraction. The tangled rope classification is correct, not a failure to pick a 'real' type. The coordination function is: standardization enables communication across distributed production sites, provides quality control through procedure specification, and allows scaling without reproducing skilled workers. The extraction function is: wage suppression through labor interchangeability, autonomy loss through procedure enforcement, skill devaluation through market saturation. Both are structural, not artifacts of measurement. The perspectival variation (snare from victims, rope from beneficiaries, tangled rope from analysts, scaffold from organized workers) reveals that the classification itself is observer-relative: what appears as pure coordination to management appears as pure extraction to workers. The constraint's temporal evolution shows increasing theater_ratio and extractiveness, indicating that as worker power has declined (union density fallen, global labor supply increased, algorithmic control intensified), the pure coordination interpretation has become less plausible. The coordination function persists (standardization still does improve quality communication) but the extraction function has grown relative to it."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "wage_stagnation_structural",
+      "union_power_decline",
+      "algorithmic_management_systems"
+    ],
+    "dual_formulation_note": "Labor deskilling is structurally upstream of wage stagnation (deskilling enables wage suppression) and algorithmic management (standardization enables algorithmic replacement of human judgment). It is structurally downstream of union power decline (weakened unions cannot resist deskilling). The three constraints form a causal chain: union decline \u2192 deskilling enabled \u2192 wage stagnation accelerated \u2192 algorithmic control normalized."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ]
+}

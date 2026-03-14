@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "first_mover_network_effects",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fmne"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "First Mover Network Effects Lock-In",
+    "topic_domain": "economic/technology/market_structure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "first_mover_incumbent",
+      "early_adopter_coalition"
+    ],
+    "victims": [
+      "latecomer_competitors",
+      "consumer_welfare"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Excluded Latecomer",
+      "comment": "PERSPECTIVE 1: EXCLUDED LATECOMER (SNARE) \u2014 New entrants face insurmountable coordination barriers: switching costs, established ecosystem lock-in, critical mass thresholds, and winner-take-most dynamics. No viable exit path. Cannot catch up through superior product alone; must overcome installed base inertia. Maximum extraction and suppression experienced by firms entering after critical mass achieved."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Secondary Entrant",
+      "comment": "PERSPECTIVE 2: SECONDARY ENTRANT (TANGLED ROPE) \u2014 Can achieve market share in adjacent segments or through niche differentiation, but main market access is constrained. Genuine coordination benefits exist (ecosystem interoperability, standardization) but asymmetrically distributed. Can exit through acquisition, niche dominance, or geographic expansion, but at significant cost. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The First Mover Incumbent",
+      "comment": "PERSPECTIVE 3: FIRST MOVER INCUMBENT (ROPE) \u2014 Experiences the constraint as pure coordination: network effects create genuine value through standardization, ecosystem development, and scale economies. Can arbitrage between markets or technologies if network position erodes. Extraction flows toward this agent, but they perceive the mechanism as solving legitimate coordination problems. Zero coercion experienced by the beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Open Standards Coalition",
+      "comment": "PERSPECTIVE 4: OPEN STANDARDS COALITION (SCAFFOLD) \u2014 Organized agents (regulators, standards bodies, interoperability advocacy) recognize network lock-in as a temporary coordination failure with a sunset: mandatory interoperability requirements, open API standards, and interoperable data portability protocols create alternative pathways. High agency and clear exit mechanism. Scaffold classification reflects the sunset logic built into antitrust remedies and open standards mandates."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Technological Disruption Frame",
+      "comment": "PERSPECTIVE 5: TECHNOLOGICAL DISRUPTION FRAME (PITON) \u2014 Market narrative claims that disruption and creative destruction solve network lock-in: new technologies (cloud, mobile, blockchain) allegedly create reset moments where incumbents lose advantage. This frame persists theatrically despite evidence that network effects transfer to new platforms (iOS/Android duopoly, cloud platform consolidation, blockchain exchange dominance). Theater ratio reflects the gap between disruption-as-narrative and disruption-as-rare-outcome. The institutional expectation of renewal maintains the frame despite degraded functional performance."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, network effects are presented as immutable features of technology economics: positive feedback, lock-in, and winner-take-most outcomes are depicted as laws of nature rather than contingent institutional arrangements. This perspective risks naturalizing what is actually a policy-dependent outcome \u2014 the strength of network effects depends on interoperability mandates, portability requirements, data ownership rules, and switching cost regulation. The engine's false summit detector should identify this as a naturalization of contingent institutional design."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "network_effect_strength_measurement",
+      "question": "What observable data distinguishes genuine network effects from switching cost artificial lock-in?",
+      "resolution_mechanism": "Empirical separation: measure value increase from ecosystem size vs. switching cost barriers independently. Conduct hypothetical portability experiments or policy interventions mandating interoperability.",
+      "impact": "If network effects dominate switching costs: coordination mechanism is genuine (Rope from beneficiary perspective). If switching costs dominate: extraction mechanism is extractive (Snare from latecomer perspective). Classifies as Tangled Rope only if both are substantial and genuine.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Separating genuine network effects from artificial switching costs"
+    },
+    {
+      "id": "interoperability_feasibility",
+      "question": "How technically feasible is forced interoperability or data portability for this platform architecture without destroying the coordination function?",
+      "resolution_mechanism": "Engineering analysis of API design requirements; case studies of interoperability retrofits (Windows domain interoperability, payment system clearing houses); cost estimates for achieving portability at scale.",
+      "impact": "If technically feasible: scaffold sunset is real and mandates can succeed (Scaffold classification confirmed). If infeasible: remedies become theater, and lock-in persists (Piton classification for intervention frame).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical feasibility of forced interoperability without destroying function"
+    },
+    {
+      "id": "platform_lifecycle_disruption_frequency",
+      "question": "How often do dominant networks actually get displaced by technological disruption, and how often do network effects transfer to the new platform?",
+      "resolution_mechanism": "Historical analysis: Mainframe\u2192Personal Computer\u2192Mobile\u2192Cloud. Did network effects reset? (No: concentration increased with each transition.) Analysis of blockchain/Web3 claims vs. actual exchange consolidation dynamics.",
+      "impact": "If disruption genuinely resets lock-in: technological disruption frame is predictive (theater ratio < 0.40). If network effects transfer consistently: frame is narrative rather than structural (theater ratio > 0.60, Piton classification confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether technological disruption resets or transfers network effects"
+    },
+    {
+      "id": "extraction_flow_directionality_ambiguity",
+      "question": "Does the first mover extract rent through superior service, or through installed base lock-in preventing exit even when competitor quality is higher?",
+      "resolution_mechanism": "Comparative analysis: latecomer entrant quality metrics vs. market share; survey data on switching cost perception vs. feature preference; natural experiments from interoperability mandates (EU Digital Markets Act, etc.).",
+      "impact": "If first mover wins on quality: extraction is coordinate value distribution (Rope). If latecomer wins on quality but lacks market share: extraction is rent-seeking (Snare). Tangled Rope classification requires both genuine coordination benefit AND evidence of extraction despite latecomer superiority.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether extraction is from value creation or lock-in premium"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "First mover network effects create a constraint that exhibits the full six-type range depending on the observer's structural position. When a platform or technology achieves critical mass, positive feedback (more users increase value for all users, creating incentive for additional users to join) creates self-reinforcing dominance. This coordination mechanism is genuine \u2014 standardization, ecosystem development, and scale economies produce real value. However, this same mechanism creates lock-in that suppresses competition and can trap latecomers in an inferior position even when their product quality is superior. The constraint operates at the boundary between coordination and extraction: beneficiaries experience coordination value; victims experience suppression and trapped alternatives. The extractiveness trajectory (0.35\u21920.58) reflects increasing rent extraction as network position strengthens and switching costs accumulate. Theater ratio (0.25\u21920.35) indicates that the coordination function is real and functional (low theater), not performative \u2014 the contrast with verification_bottleneck's theater ratio (0.72) is diagnostically important. Network effects work; they just also extract.",
+    "key_agents": [
+      "First Mover Incumbent: Primary beneficiary (institutional/arbitrage) \u2014 captures network value and switching cost premium; exits available through platform evolution or adjacent markets",
+      "Early Adopter Coalition: Secondary beneficiary (organized/mobile) \u2014 locked in but benefits from ecosystem maturity; can arbitrage between platform vendors if ecosystem fragments",
+      "Excluded Latecomer: Primary victim (powerless/trapped) \u2014 cannot overcome critical mass threshold or switching cost barrier; structurally trapped in secondary market segments",
+      "Secondary Entrant: Secondary victim (moderate/constrained) \u2014 can achieve niche market share but blocked from main market dominance; constrained by coordination barriers but mobile within segments",
+      "Open Standards Coalition: Organized agents (organized/mobile) \u2014 regulators, standards bodies, interoperability advocates building alternative pathways with policy sunset mechanisms (interoperability mandates, data portability rules)",
+      "Technological Disruption Frame: Institutional narrative (institutional/arbitrage) \u2014 market ideology that assumes creative destruction and disruptive innovation reset lock-in, persists as theater despite evidence that network effects transfer to new platforms",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing network effects as immutable laws rather than policy-contingent outcomes"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The first mover captures genuine network value (coordination benefit), but also rent extraction through switching cost lock-in and installer base advantage. The trajectory from 0.35\u21920.58 reflects that early-stage network effects are coordination-heavy (genuine value creation) but mature network effects become extraction-heavy (latecomers face lock-in). At t=10, 58% represents real extraction not justified by quality or efficiency differences. Suppression (0.48): Moderate. Barriers to entry and exit are substantial (switching costs, ecosystem requirements, critical mass thresholds) but not absolute. Latecomers can enter adjacent segments, and regulatory intervention can lower switching costs. The barrier is binding but not insurmountable. Theater ratio (0.25\u21920.35): Low, remaining low. The coordination function is genuine and functional \u2014 standardization and ecosystem value are not performative. Theater creeps upward as the narrative of disruption and disruption becomes more prominent relative to actual evidence of platform reset, but the constraint itself is low-theater because the coordination actually works.",
+    "perspectival_gap": "Six distinct classifications from the same constraint structure: (1) Snare from the trapped latecomer's view \u2014 pure extraction, no coordination benefit perceived because they're locked out. (2) Tangled Rope from the secondary entrant's moderate view \u2014 genuine ecosystem benefits (coordination) mixed with extraction barriers and asymmetric position. (3) Rope from the first mover's institutional view \u2014 coordination mechanism solving genuine collective action problem; extraction experienced as fair beneficiary reward. (4) Scaffold from the organized coalition's generational view \u2014 sunset mechanism real and structural (interoperability mandates, data portability, regulation can lower switching costs), so high agency to escape. (5) Piton from the disruption narrative frame \u2014 technological reset supposedly solves network lock-in (creative destruction), but the frame persists theatrically despite evidence that network effects transfer (iOS/Android duopoly, cloud platform consolidation, blockchain exchange dominance). (6) Mountain from the analytical view at civilizational scope \u2014 network effects presented as immutable laws of technology, but the structural data reveals contingency on policy design (interoperability rules, switching cost regulation, data ownership architecture).",
+    "directionality_logic": "Directionality (d) varies by agent. First mover incumbent: d\u22480.10 (net beneficiary, arbitrage options, low f(d), experiences low/negative chi). Early adopter coalition: d\u22480.30 (mixed beneficiary, mobile options, moderate f(d)). Secondary entrant: d\u22480.70 (victim status, constrained exit, high f(d), high chi). Excluded latecomer: d\u22480.95 (full target, trapped status, maximum f(d), maximum chi). The directionality spread (0.10 to 0.95) is large because exit options and structural relationship are highly differentiated. Beneficiaries with arbitrage have low d; victims with trapping have high d. Suppression (0.48) is unscaled \u2014 it applies uniformly to all agents regardless of their directionality. Extractiveness (0.58) scales by f(d): the incumbent experiences \u03c7 \u2248 0.58 \u00d7 f(0.10) \u00d7 1.0 \u2248 0.25 (low effective extraction, high benefit). The latecomer experiences \u03c7 \u2248 0.58 \u00d7 f(0.95) \u00d7 1.2 \u2248 0.99 (high effective extraction, maximum vulnerability).",
+    "mandatrophy_analysis": "This constraint demonstrates mandatrophy resolution through perspectival completeness. The constraint is NOT exclusively Rope (pure coordination) \u2014 that would misclassify the extraction latecomers experience. It is NOT exclusively Snare (pure extraction) \u2014 that would misclassify the genuine ecosystem coordination benefits. Tangled Rope classification correctly captures both mechanisms simultaneously: genuine coordination function (ecosystem, standardization, value creation) AND asymmetric extraction (lock-in, switching costs, installed base advantage). The mandatrophy is resolved by showing that the constraint embodies both Rope dynamics (solving coordination problems) and Snare dynamics (creating barriers to entry). The full perspectival range (Mountain\u2192Piton\u2192Scaffold\u2192Rope\u2192Tangled Rope\u2192Snare) shows that the constraint is structurally complex: a coordination mechanism that works AND an extraction mechanism that locks in winners. The false summit (Mountain) is rejected by the structural data showing policy-contingency: network effects are not immutable laws but policy-dependent outcomes (interoperability mandates can weaken them, data portability requirements can lower switching costs, regulatory intervention can reset timing). The analytics shows that mandatrophy is resolved not by choosing one type but by recognizing the constraint's multi-faceted structure across positions."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_switching_costs",
+      "ecosystem_lock_in",
+      "interoperability_bottleneck"
+    ],
+    "dual_formulation_note": "First mover network effects decompose into three structurally distinct constraints: (1) resource_allocation coordination (genuine network value from scale and standardization), (2) switching_cost extraction (cost barriers to exit), (3) ecosystem lock-in (critical mass threshold preventing entry). Each has different \u03b5, different beneficiaries/victims, different sunset mechanisms. This story models the aggregate constraint; related stories model the constituent mechanisms separately."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

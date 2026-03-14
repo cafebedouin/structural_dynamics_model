@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "riot_gear_procurement_militarization",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "riot"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Riot Gear Procurement and Police Militarization",
+    "topic_domain": "political/law_enforcement/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "police_departments",
+      "protective_equipment_manufacturers",
+      "federal_grant_administrators"
+    ],
+    "victims": [
+      "marginalized_communities",
+      "protest_participants",
+      "civil_liberties"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Marginalized Communities Under Militarized Policing",
+      "comment": "PERSPECTIVE 1: MARGINALIZED COMMUNITIES (SNARE) \u2014 Residents of heavily policed neighborhoods face escalated enforcement equipment with no exit option. The constraint operates through geographic entrapment and structural inequity: residents cannot move freely, cannot influence procurement decisions, and cannot opt out of militarized police presence. Maximum extraction experienced."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Protest Participants and Civil Society",
+      "comment": "PERSPECTIVE 2: PROTEST PARTICIPANTS (TANGLED ROPE) \u2014 Face extraction through escalated force capacity during demonstrations, but also benefit from the coordination function riot gear provides to police (crowd management that prevents total chaos). Exit options are constrained by the right to protest and fear of retaliation. Moderate extraction with genuine coordination component."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Police Departments",
+      "comment": "PERSPECTIVE 3: POLICE DEPARTMENTS (ROPE) \u2014 Experience the constraint as coordination: riot gear enables coordinated response to civil unrest, mass protests, and emergency situations. Departments have arbitrage options (can choose equipment levels, can reallocate budgets). Net beneficiary position. The constraint solves their collective action problem of managing large-scale disorder."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Protective Equipment Manufacturers",
+      "comment": "PERSPECTIVE 4: MANUFACTURERS (ROPE) \u2014 Pure coordination for equipment suppliers. Federal grant programs (1033 Program, COPS grants) standardize demand and reduce market uncertainty. Manufacturers see this as market-enabling coordination, not extraction. Arbitrage options are robust \u2014 can exit by producing for other sectors."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Federal Grant Administration System",
+      "comment": "PERSPECTIVE 5: FEDERAL GRANT ADMINISTRATION (PITON) \u2014 The grant apparatus (1033 Program, COPS Office) persists largely through institutional inertia despite contested effectiveness. Theater ratio is high: grant language emphasizes public safety coordination, but primary function is now supply channel for military-grade equipment. The system maintains performative oversight while equipment escalation continues. Constrained by Congressional intent and procurement law; doesn't fully function anymore but persists."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Civil Rights Organizations and Police Reform Coalitions",
+      "comment": "PERSPECTIVE 6: CIVIL RIGHTS COALITIONS (TANGLED ROPE) \u2014 Organized agents see both genuine coordination problem (police do need response capacity for genuine emergencies) and clear extraction mechanism (equipment procurement drives culture shift toward militarization independent of threat level). Coalition participants face constraints from legal precedent, institutional resistance, and competing reform priorities, but have organized capacity and exit paths (legislative advocacy, litigation). Moderate extraction with real coordination component."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Community-Based Accountability Initiatives",
+      "comment": "PERSPECTIVE 7: COMMUNITY ACCOUNTABILITY INITIATIVES (SCAFFOLD) \u2014 Some jurisdictions are experimenting with alternative mechanisms: community oversight boards, civilian review authority, equipment audits, and transparency requirements. These create a sunset pathway for the traditional unconstrained procurement model. Low theater because accountability mechanisms are substantive rather than performative. This perspective shows the constraint as temporary, with genuine exit path emerging from local organizing."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (False Summit Risk)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / FALSE SUMMIT VIEW (MOUNTAIN) \u2014 From analytical distance, one might classify riot gear procurement as an immutable natural law of policing: 'Police forces always maximize available capacity; escalation spirals are inherent to security competition.' This naturalizes what is actually a contingent policy choice. The engine's false summit detector will flag this perspective as a naturalization of institutional arrangements that remain contestable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "threat_level_counterfactual",
+      "question": "Does riot gear procurement causally drive militarization culture, or does it respond to genuine threat escalation?",
+      "resolution_mechanism": "Comparative historical analysis: jurisdictions with equipment availability vs matched controls without equipment access; correlation between procurement timeline and actual civil unrest frequency; measurement of force escalation timing relative to equipment acquisition",
+      "impact": "If causal (procurement drives culture): extractiveness increases to 0.68+ (pure rent-seeking by police/manufacturers). If responsive: extractiveness decreases to 0.35 (legitimate coordination mechanism). Current 0.58 assumes bidirectional causality \u2014 equipment availability influences police readiness posture, which influences likelihood of escalated response.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal direction between equipment availability and militarization culture"
+    },
+    {
+      "id": "legitimate_coordination_quantity",
+      "question": "What fraction of riot gear procurement serves genuine emergency response vs excess capacity maintained for intimidation or revenue cycling?",
+      "resolution_mechanism": "Equipment usage tracking: ratio of actual deployment to stored inventory; comparative analysis of equipment utilization rates across jurisdictions; accountability audit of equipment age and service life vs procurement rates",
+      "impact": "If >60% utilization in genuine emergencies: rope classification more accurate, suppression decreases to 0.40. If <30% utilization: snare classification more accurate from police perspective, extractiveness increases to 0.75.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fraction of procurement serving legitimate vs excess capacity"
+    },
+    {
+      "id": "community_alternative_viability",
+      "question": "Can civilian oversight boards and community-based accountability mechanisms functionally replace top-down procurement controls?",
+      "resolution_mechanism": "Longitudinal tracking of jurisdictions with accountability mechanisms: changes in procurement patterns, force escalation rates, community complaint resolution; comparison of public safety outcomes vs militarization metrics",
+      "impact": "If viable: scaffold perspective confirmed, sunset is real, theater ratio decreases to <0.50. If ineffective: scaffold is aspirational rather than structural, theater ratio increases and constraint hardens.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Viability of community-based alternatives to procurement controls"
+    },
+    {
+      "id": "federal_grant_intent_vs_function_gap",
+      "question": "How large is the gap between stated grant purposes (public safety coordination) and actual function (equipment supply channel for militarization)?",
+      "resolution_mechanism": "Grant utilization audit: comparison of funded equipment against stated public safety objectives; congressional testimony vs actual deployment patterns; analysis of competitive disadvantage for non-militarized departments",
+      "impact": "If gap is large: piton classification confirmed, theater_ratio justified at 0.68. If grant functions as designed: rope classification applies, theater drops to 0.35.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Gap between federal grant stated purpose and actual function"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Riot gear procurement represents a hybrid constraint combining genuine police coordination (managing large-scale civil unrest requires equipment standardization and training) with rent-seeking extraction (equipment manufacturers benefit from sustained demand; police departments accumulate capacity beyond documented threat levels; federal grants create path dependencies that lock in procurement). The constraint's theater has increased over the 20-year interval: early procurement rhetoric emphasized emergency response to specific threat events; contemporary procurement rhetoric emphasizes 'preparedness' decoupled from demonstrated need. The constraint operates across four structural levels: the immediate level (police equipment choices), the organizational level (department budgeting and federal grant administration), the political level (legislative framework enabling procurement), and the ideological level (naturalization of militarization as inherent to modern policing). Marginalized communities experiencing militarized policing in their neighborhoods bear extraction costs with no exit option; police departments experience the constraint as coordination enabling their core public safety function; equipment manufacturers benefit from steady demand; civil rights coalitions see both coordination requirement and extraction mechanism. The rising theater_ratio indicates Goodhart drift: grant language originally emphasized public safety coordination, but the metric (equipment acquisition, training hours, operational readiness) has become decoupled from actual public safety outcomes.",
+    "key_agents": [
+      "Marginalized Communities: Primary victims (powerless/trapped) \u2014 residents in heavily policed neighborhoods; geographic entrapment creates permanent exposure to militarized enforcement without exit option",
+      "Protest Participants: Secondary victims (moderate/constrained) \u2014 face escalated force capacity during demonstrations; constrained by right to protest and fear of surveillance/retaliation",
+      "Police Departments: Primary beneficiaries (institutional/arbitrage) \u2014 experience constraint as coordination mechanism enabling response capacity; have budgetary flexibility and exit options",
+      "Protective Equipment Manufacturers: Secondary beneficiaries (institutional/arbitrage) \u2014 stable demand channel through federal grants; low market risk; true arbitrage options available",
+      "Federal Grant Administration System: Institutional intermediary (institutional/constrained) \u2014 maintains procurement apparatus through inertia; constrained by Congressional intent and existing contracts; degraded piton function",
+      "Civil Rights Organizations: Organized opposition (organized/constrained) \u2014 coalition capacity for advocacy and litigation; constrained by legal precedent and resource limitations; achieving incremental policy changes",
+      "Community Accountability Initiatives: Emergent alternative (organized/constrained) \u2014 local experiments with civilian oversight and equipment audits; showing alternative coordination pathways with sunset potential",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risk of naturalizing contingent institutional arrangements as inherent to policing"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint coordinates genuine police coordination (emergency response requires equipment standardization and training) while simultaneously extracting from marginalized communities through capacity deployment and intimidation. The base_extractiveness trajectory shows clear drift: starting at 0.32 (early 1990s, justified emergency response focus) to 0.58 (2010s+, disconnected from documented threat level). The risen value reflects the growing gap between stated public safety rationale and actual deployment patterns emphasizing preparedness divorced from specific threats. Suppression (0.62): High. Multiple suppression mechanisms operate: (1) geographic entrapment \u2014 marginalized communities cannot exit highly policed neighborhoods; (2) informational asymmetry \u2014 procurement and deployment decisions opaque to communities most affected; (3) legal precedent \u2014 courts have repeatedly upheld police equipment acquisition as administrative discretion; (4) retaliation risk \u2014 community advocacy against militarization faces surveillance and legal harassment. Suppression is structural and sustained. Theater ratio (0.68): High and rising. Grant administration and police department statements emphasize public safety coordination and emergency preparedness. Actual metrics (equipment stockpiles, training hours, equipment age) show maintenance of excess capacity disconnected from incident frequency. The gap has widened over the interval \u2014 public rhetoric has remained constant while functional deployment has shifted toward intimidation/capacity building over genuine emergency response. Theater is performative justification for path-dependent acquisition.",
+    "perspectival_gap": "The core perspectival gap: marginalized communities see snare (pure extraction, no exit, no coordination benefit), while police departments see rope (pure coordination, arbitrage options, enabling their core function). Both perceptions are structurally accurate from their respective positions. The gap is not a disagreement about facts but a difference in structural relationship \u2014 one group is the target, one is the beneficiary. The piton perspective (federal grants) bridges this gap by revealing that the constraint persists through inertia rather than functional need: equipment procurement continues because budget cycles and grant availability drive it, not because documented threats require escalated capacity. This suggests that the police/manufacturer rope perspective is partially supported by genuine coordination need, partially by institutional path-dependency. Community accountability experiments show scaffold perspective \u2014 civilians can shift procurement logic toward documentation and justification, creating sunset pathway. The analytical mountain perspective is a false summit: it naturalizes what is contingent institutional arrangement.",
+    "directionality_logic": "Directionality (d) values are derived from beneficiary/victim status and exit options per the signed derivation chain. Marginalized communities occupy d \u2248 0.92 (powerless/trapped/victim): full target status. They experience f(d) \u2248 1.35, producing high chi at police perspective. Police departments occupy d \u2248 0.12 (institutional/arbitrage/beneficiary): full beneficiary status. They experience f(d) \u2248 -0.02, producing negative/zero chi at their own perspective. The f(d) sigmoid reflects that beneficiaries with exit options experience the constraint as low-extraction coordination; victims with no exit experience maximum extraction. Organized civil rights coalitions occupy intermediate d \u2248 0.50 (organized/constrained) derived from mixed victim/observer status with constrained exit: they experience f(d) \u2248 0.70, producing moderate chi. The piton perspective has institutional power but constrained exit (path-dependent federal grants), yielding d \u2248 0.45 and f(d) \u2248 0.55. These derivations explain why the constraint maps to Snare for powerless agents, Tangled Rope for moderate agents with mixed beneficiary/victim position, and Rope for institutional beneficiaries.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint is classified as Tangled Rope at the analytical level, which correctly captures both genuine coordination function (police emergency response capacity) and asymmetric extraction (equipment deployment concentrated on marginalized communities with no exit option). The mandatrophy is resolved by measuring the beneficiary/victim asymmetry: police departments benefit from coordination; marginalized communities bear extraction costs. The constraint is not pure coordination (rope) because marginalized communities experience snare \u2014 no coordination benefit, no exit option. The constraint is not pure extraction (snare) because police departments genuinely use equipment for emergency response (coordination function exists). Tangled Rope is the correct classification because (1) coordination function is present and necessary (emergency response), (2) asymmetric extraction is present and significant (equipment deployment driven by power asymmetry not threat level), (3) active enforcement is required (grant administration, departmental procurement decisions), and (4) the two functions are coupled \u2014 the coordination function is the legitimizing frame for the extraction. Theater_ratio rising from 0.42 to 0.68 indicates Goodhart drift: the stated metric (emergency preparedness) has decoupled from actual outcome metrics (public safety incident frequency). The gap between stated rationale and actual deployment is precisely the mandatrophy signal \u2014 the constraint naturalizes extraction as inherent coordination need."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "police_accountability_gap",
+      "military_equipment_domestic_deployment",
+      "protest_suppression_infrastructure"
+    ],
+    "dual_formulation_note": "Riot gear procurement is downstream of federal grant programs (1033 Program, COPS Office) and upstream of specific police department militarization patterns. The constraint family includes: (1) federal grant structure (\u03b5\u22480.30, Rope), (2) riot gear procurement (\u03b5\u22480.58, Tangled Rope, this story), (3) police militarization culture (\u03b5\u22480.72, Snare). Each has distinct extractiveness and beneficiary/victim profiles. Network links show causal dependency: grants enable procurement, procurement drives culture shift."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ]
+}

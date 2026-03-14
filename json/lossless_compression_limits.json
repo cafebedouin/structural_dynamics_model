@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "lossless_compression_limits",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "losscomp"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Lossless Compression Limits (Information-Theoretic Bound)",
+    "topic_domain": "information_theory/mathematics",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Data Stream",
+      "comment": "PERSPECTIVE 1: DATA STREAM (MOUNTAIN) \u2014 All possible bitstrings of length n exist in equal proportion in the asymptotic limit. A fraction 2^(-k) of them cannot be compressed below n-k bits. The data stream confronts an immutable barrier: some information patterns have nowhere to compress. This barrier is invariant across all compression algorithms and all observational frames."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "universal",
+      "label": "The Algorithm Designer",
+      "comment": "PERSPECTIVE 2: ALGORITHM DESIGNER (MOUNTAIN) \u2014 No matter how clever the compression algorithm, the pigeonhole principle enforces an absolute bound. By the counting argument: there are 2^n possible n-bit strings but only 2^(n-1) + 2^(n-2) + ... + 2^(n-k) possible compressed representations of length < n-k. For k >= 1, this is always < 2^n. The bound is invariant to computational power, domain knowledge, or optimization ingenuity. The designer cannot exit this constraint through algorithm innovation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "label": "The Compression Industry",
+      "comment": "PERSPECTIVE 3: COMPRESSION INDUSTRY (MOUNTAIN) \u2014 Practical compression algorithms (DEFLATE, Huffman, LZ77, arithmetic coding) all approach but never exceed the Shannon entropy bound. The bound is structural: it emerges from the definition of information itself, not from market constraints or technical limitations. Even with perfect market efficiency and unlimited R&D investment, the bound persists. Organizations can arbitrage lossy vs. lossless (choosing different data types), but cannot arbitrage the mathematical limit itself."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a universal, civilizational frame, lossless compression limits are a theorem of mathematics, not an empirical discovery. The Kraft inequality, the pigeonhole principle, and the definition of entropy make the bound logically necessary. No observation can refute it; no conceivable technology can circumvent it. The constraint is a natural law in the strongest sense: it is true by definition."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kolmogorov_vs_shannon",
+      "question": "Does the constraint apply to Kolmogorov complexity (incomputable, per-string) or Shannon entropy (computable, asymptotic)?",
+      "resolution_mechanism": "Philosophical clarification: Kolmogorov complexity is the true per-string limit but is uncomputable by the halting problem. Shannon entropy is the asymptotic average over an ensemble. The practical constraint is Shannon; the fundamental constraint is Kolmogorov. Both are natural laws.",
+      "impact": "If focusing on Kolmogorov: the constraint is even more severe (no algorithm can identify the shortest description). If focusing on Shannon: the practical implementations have access to statistical structure. Neither resolves the fundamental limit.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kolmogorov vs. Shannon framing of compression limits"
+    },
+    {
+      "id": "domain_specific_compression",
+      "question": "Can domain-specific priors (e.g., natural language structure, image statistics) effectively bypass the information-theoretic limit for constrained data classes?",
+      "resolution_mechanism": "Analysis of domain-specific compression (English text at ~1 bit/character, natural images at ~0.5-2 bits/pixel) vs. theoretical limits for those domains. Distinguish between: (a) using prior knowledge to reduce effective entropy, vs. (b) circumventing the limit for that class.",
+      "impact": "If (a): the constraint remains; domain-specific algorithms achieve better compression by reducing the effective information content. If (b): no such cases exist \u2014 the limit still applies, just applied to the reduced ensemble. The constraint persists in all frames.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether domain-specific compression bypasses information-theoretic limits"
+    },
+    {
+      "id": "quantum_compression",
+      "question": "Do quantum algorithms or quantum information theory circumvent lossless compression limits?",
+      "resolution_mechanism": "Analysis of quantum data compression (e.g., Schumacher's theorem): quantum analogues of Shannon compression show the same bounds, just applied to quantum entropy. No enhancement over classical limits for lossless compression.",
+      "impact": "If quantum algorithms offer no advantage: the constraint is truly universal, not artifact of classical computation. The mountain classification holds across all computational paradigms.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Quantum algorithms and compression limits"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "Lossless compression limits are a natural law of information theory, emerging from the pigeonhole principle and the definition of entropy. The constraint states: for any lossless compression algorithm and any set of n-bit strings, there exists a fraction 2^(-k) of strings that cannot be compressed below n-k bits without increasing the representation of other strings. This bound is invariant across all observational frames, computational paradigms, and technological advances. The theater ratio is minimal (0.15) because the constraint requires no ritual or enforcement \u2014 it is a logical truth. The extractiveness is minimal (0.12) because there is no extraction mechanism at play \u2014 the bound is not a social arrangement or institutional artifact, but a mathematical necessity. All perspectives uniformly classify this as a mountain, indicating the constraint's logical immutability.",
+    "key_agents": [
+      "Data streams: the collection of all possible bitstrings subject to the compression bound \u2014 universally constrained by the limit",
+      "Algorithm designers and compression engineers: seeking to approach but never exceed the Shannon entropy bound",
+      "The compression industry: commercial implementations of compression technology that asymptotically approach the theoretical limit",
+      "Information theorists: analytical observers who recognize the bound as a theorem, not an empirical discovery"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Minimal. There is no extraction mechanism. The constraint does not transfer resources from one agent to another; it describes a logical limit on what is possible. The slight non-zero value reflects that 'extractiveness' is not the right metric for natural laws \u2014 the engine requires a numeric value in [0.0, 1.0], so minimal values (0.08-0.12) are assigned to pure logical constraints. Suppression (0.02): Minimal. There is no suppression in the sense of coercion or restricted alternatives. The bound constrains all agents equally; there is no mechanism of selective limitation. Theater ratio (0.15): Minimal. The constraint requires no performative maintenance. Its truth is self-evident from first principles; no ritual or enforcement apparatus is needed to sustain it. The slight non-zero value reflects minor pedagogical theater \u2014 compression textbooks often present the limit through worked examples and proof sketches, but this is educational scaffolding, not foundational enforcement.",
+    "perspectival_gap": "Minimal perspectival gap. All four perspectives classify this as a mountain from different contexts, confirming the constraint's logical immutability. The powerless agent (data stream) and the powerful agent (algorithm designer) agree: the bound is unchangeable. The organized agent (compression industry) and analytical observer (information theorist) agree: the limit emerges from logical necessity, not institutional artifact. This uniform classification is the hallmark of a true natural law \u2014 the constraint's type does not vary with observer position because the constraint is observer-independent.",
+    "directionality_logic": "No directionality computation needed for mountains. The constraint is not extractive; it does not transfer resources from one agent to another. No beneficiaries or victims. All agents face the same logical bound. The analytical observer does not discover a perspectival gap because there is none to discover \u2014 the constraint's truth is universal and invariant."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "shannon_entropy_bound",
+      "channel_capacity_limit"
+    ],
+    "dual_formulation_note": "Lossless compression limits are upstream of practical compression algorithms (DEFLATE, LZ77, Huffman coding). The mathematical bound affects the theoretical achievability of all practical systems. Network edges point to constraints that depend on or extend this bound into specific application domains."
+  },
+  "directionality_overrides": []
+}

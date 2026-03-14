@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "intergenerational_wealth_transfer",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "igwt"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Intergenerational Wealth Transfer Constraint",
+    "topic_domain": "economic/social/institutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "wealthy_dynasties",
+      "estate_planning_professionals",
+      "financial_institutions"
+    ],
+    "victims": [
+      "non_inheriting_populations",
+      "wage_dependent_workers",
+      "economically_mobile_youth"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Non-Inheriting Worker",
+      "comment": "PERSPECTIVE 1: NON-INHERITING WORKER (SNARE) \u2014 Trapped in the constraint through economic dependency. Birth into a family without inheritable wealth means lifetime structural disadvantage in wealth accumulation. Exit from the constraint requires generational timescale and is blocked by suppression mechanisms: wage stagnation, housing cost inflation, student debt, and unequal access to capital. The constraint extracts lifetime labor value through asymmetric opportunity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Aspiring Wealth Accumulator",
+      "comment": "PERSPECTIVE 2: ASPIRING WEALTH ACCUMULATOR (TANGLED ROPE) \u2014 Constrained but not trapped. Faces real barriers to wealth accumulation (high debt service, limited access to investment capital, real estate gatekeeping) but some exit exists through entrepreneurship, professional mobility, or savings discipline. The constraint coordinates legitimate intergenerational incentives (parents supporting children) alongside asymmetric extraction (inherited wealth compounds exponentially while earned wealth stagnates). Experiences both coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Estate Planning and Financial Industry",
+      "comment": "PERSPECTIVE 3: FINANCIAL INSTITUTIONS & ESTATE PLANNING (ROPE) \u2014 Net beneficiaries experiencing the constraint as pure coordination. Tax optimization structures, trust arrangements, and wealth management services solve the collective action problem of intergenerational capital preservation. The industry benefits from the constraint but also enables genuine coordination: helping families preserve and transfer assets according to their intentions. Experiences low extraction because they have full arbitrage \u2014 can exit, restructure, or pivot their services."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory and Tax Authority",
+      "comment": "PERSPECTIVE 4: REGULATORY/TAX AUTHORITY (TANGLED ROPE) \u2014 Organized institutional actor constrained by enforcement capacity and political economy. The constraint coordinates legitimate intergenerational incentives (families want to support heirs) alongside extraction (wealth preservation under the constraint reduces tax revenue and prevents wealth redistribution). The authority benefits from compliance and legitimacy but also bears costs \u2014 managing sophisticated tax avoidance, enforcing estate taxation, and negotiating political pressure from wealthy constituencies. Constrained by the need to maintain both system legitimacy and enforcement capacity."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Inheritance Law Framework",
+      "comment": "PERSPECTIVE 5: INHERITANCE LAW FRAMEWORK (PITON) \u2014 Institutional structure that persists through inertia despite functional degradation. Traditional inheritance law (fee simple property, testamentary freedom, trust instruments) was designed for agrarian land-based wealth but now coordinates mostly financial and intangible assets where the framework's assumptions break down. The constraint is maintained through legal institutionalization and legitimacy theater (inheritance portrayed as 'natural family right') rather than functional necessity. Theater ratio high because the performative aspects (will ceremonies, probate rituals) persist despite digitization making them obsolete."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law View (Biological Reproduction)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 From a civilizational perspective, some form of intergenerational resource transfer is inherent to any species with parental investment and prolonged offspring dependency. Parents naturally allocate resources to their children; this is immutable biology + basic reciprocity. From this view, wealth transfer constraints are simply the economic manifestation of a universal pattern. However, the structural data reveals this as a false summit: the natural law of parental provisioning (low extraction) is distinct from the institutional constraint of inheritable wealth inequality (high extraction). Confusing them naturalizes what is actually contingent architecture."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "inheritance_vs_earned_wealth_boundary",
+      "question": "What portion of observed wealth concentration derives from inheritance privileges versus from differential earning capacity?",
+      "resolution_mechanism": "Longitudinal wealth tracking of family dynasties versus high-earning individuals without family wealth; generational mobility analysis; counterfactual scenarios with equal starting capital",
+      "impact": "If inheritance > 60% of concentration: snare classification confirmed; constraint is primarily extractive. If inheritance < 30% of concentration: rope classification more accurate; constraint primarily enables coordination.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of wealth concentration due to inheritance versus earning"
+    },
+    {
+      "id": "exit_mechanisms_authenticity",
+      "question": "Are the exit paths for non-inheriting populations (entrepreneurship, professional advancement, savings) structurally genuine or theatrically available but practically blocked?",
+      "resolution_mechanism": "Success rate analysis for self-made wealth in each income decile; comparison of mobility rates across countries with different inheritance tax regimes; identification of suppression mechanisms that block apparent exit paths",
+      "impact": "If exits are authentic: constrained classification more accurate; multiple paths exist. If exits are theatrical: trapped classification more accurate; apparent mobility is illusion.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether exit mechanisms for non-inheritors are structurally genuine"
+    },
+    {
+      "id": "tax_avoidance_sophistication_gap",
+      "question": "Does the sophistication gap between wealthy family tax optimization and regulatory enforcement create a de facto dual system with systematically different effective tax rates by wealth level?",
+      "resolution_mechanism": "Effective tax rate analysis by wealth decile; audit rate disparity; complexity of avoidance strategies available only to high-wealth households; comparison of statutory versus realized tax burdens",
+      "impact": "If gap is large: extraction mechanism confirmed; constraint enforces different rules by wealth level. If gap is small: equal enforcement confirmed; constraint is more transparent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effective tax rate gap between wealthy families and others"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "To what degree is the suppression of non-inheriting populations' wealth accumulation structural (external barriers like asset inflation, wage stagnation) versus internalized (learned helplessness, identity as non-owner, cultural narratives of inevitability)?",
+      "resolution_mechanism": "Post-barrier removal trajectory analysis; comparison of mobility between jurisdictions with different suppression levels; psychological assessment of wealth-building self-efficacy among income groups",
+      "impact": "If suppression is primarily structural: removing barriers would enable exit. If suppression is primarily internalized: psychological intervention and cultural reframing would be necessary alongside barrier removal.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of structural versus internalized suppression"
+    },
+    {
+      "id": "global_wealth_migration_arbitrage",
+      "question": "Does the option to migrate to jurisdictions with lower inheritance taxation or less-enforced wealth transfer restrictions constitute genuine arbitrage for wealthy families, creating a race-to-the-bottom dynamic that weakens all regulatory frameworks?",
+      "resolution_mechanism": "Tracking of wealth migration patterns; correlation between inheritance tax rates and capital flight; effectiveness of international wealth taxation agreements",
+      "impact": "If arbitrage is strong: institutional actors effectively mobile; tangled rope classification accurate. If arbitrage is weak: institutional actors constrained; regulatory authority's snare classification accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of global arbitrage reducing domestic wealth transfer regulation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Intergenerational wealth transfer is a structural constraint that exhibits simultaneous coordination and extraction functions. At the biological level, parental investment in children is universal and functional. At the economic level, the institutional constraint of heritable wealth creates asymmetric accumulation advantages that compound across generations. The constraint operates through multiple mechanisms: legal frameworks (wills, trusts, property rights), economic structures (asset inflation, wage stagnation, capital access barriers), and cultural narratives (inherited wealth as natural, earned prosperity as reward for virtue). The system coordinates legitimate intergenerational provision while extracting from non-inheriting populations through suppressed mobility and wealth concentration. The increasing theater ratio (0.48 at endpoint) reflects growing performative elements: inheritance portrayed as earned despite growing recognition of luck and privilege in wealth outcomes.",
+    "key_agents": [
+      "Wealthy Dynasties: Primary beneficiary (institutional/arbitrage) \u2014 capture exponential wealth compounding; experience the constraint as legitimate family coordination",
+      "Non-Inheriting Workers: Primary victim (powerless/trapped) \u2014 trapped in lifetime wage dependency; bear cost of suppressed alternative accumulation pathways",
+      "Estate Planning & Financial Professionals: Secondary beneficiary (institutional/arbitrage) \u2014 profit from wealth preservation and optimization services; experience constraint as pure coordination opportunity",
+      "Aspiring Wealth Accumulators: Secondary victim (moderate/constrained) \u2014 face real barriers but some exit paths exist; experience mixed coordination and extraction",
+      "Regulatory and Tax Authorities: Organized institutional actor (organized/constrained) \u2014 constrained by enforcement limits and political economy; experience both coordination role and extraction suppression",
+      "Legal/Inheritance Framework: Institutional structure (institutional/mobile) \u2014 persists through inertia; experiences own degradation as theater increases"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts from non-inheriting populations through several mechanisms: (1) suppressed wealth accumulation pathways due to capital access barriers, (2) wage stagnation relative to asset inflation, (3) inheritance-dependent housing and education access. But extractiveness is not maximal (< 0.70) because some legitimate coordination genuinely occurs \u2014 parental provision for children is functional and not entirely extractive. The rising trajectory (0.35 \u2192 0.58 over 50 years) reflects increasing wealth concentration as inherited wealth compounds while wage-dependent accumulation stagnates. Suppression (0.65): Moderate-high. Multiple mechanisms suppress non-inheritor exit: student debt loads, real estate price inflation, equity market access barriers, professional credentialing costs, unequal access to capital. But suppression is not total \u2014 entrepreneurship and professional advancement remain possible, though increasingly costly. Theater ratio (0.48): Moderate. The constraint increasingly exhibits performative elements as its actual function becomes visible: inheritance law portrayed as natural family right despite growing recognition of luck and privilege; meritocratic narratives (earned wealth) contradicted by inheritance data; mobility rhetoric unsupported by actual intergenerational mobility rates.",
+    "perspectival_gap": "The gap between beneficiary and victim perspectives is stark. A wealthy family experiences intergenerational wealth transfer as natural family coordination, personal responsibility, and earned asset preservation \u2014 classification: rope. A non-inheriting worker experiences the same institutional system as structural barrier to wealth accumulation, generational disadvantage, and compounding inequality \u2014 classification: snare. Both are evaluating identical legal/economic structures but from opposite positions on the extraction flow. The gap reveals that the constraint's coordination function (legitimate parental provision) and extraction function (compounding inequality) are structurally entangled and cannot be separated by tweaking legal language or tax codes alone.",
+    "directionality_logic": "Directionality varies by agent's structural position. Wealthy dynasties with inherited capital enjoy arbitrage exit options and beneficiary status (d \u2248 0.05-0.15), experiencing low or negative effective extraction. Non-inheritors trapped in wage dependency without inherited capital face high d (0.85-0.95), experiencing maximum extraction. Aspiring accumulators with some capital but significant barriers face moderate d (0.50-0.65). Financial professionals with full arbitrage and beneficiary status face low d. The regulatory authority constrained by enforcement capacity and political economy faces moderate-high d (0.45-0.55). The analytical observer faces highest d from the false summit perspective (0.75), being deceived into naturalizing contingent architecture. The suppression mechanisms that block exit paths (debt, housing inflation, capital barriers) all increase experienced d by reducing actual exit options.",
+    "mandatrophy_analysis": "Intergenerational wealth transfer resolves the mandatrophy by decomposing into structurally distinct constraints: (1) PARENTAL PROVISION (\u03b5 \u2248 0.05, Mountain or Rope) \u2014 the natural biological/economic reality of parents provisioning children, low extraction, high legitimacy; (2) INHERITABLE WEALTH ACCUMULATION (\u03b5 \u2248 0.58, Tangled Rope) \u2014 the institutional architecture enabling wealth compounding across generations, moderate-high extraction, mixed legitimacy; (3) WEALTH CONCENTRATION MECHANISM (\u03b5 \u2248 0.72, Snare) \u2014 the emergent effect of compound inheritance plus suppressed alternative accumulation for non-inheritors, high extraction from systemic perspective. The tangled rope classification at the system level is correct: genuine coordination (families providing for heirs) is inseparable from asymmetric extraction (non-inheritors trapped in wage dependency). The theater ratio tracks how much the system's narrative (meritocracy, earned prosperity) diverges from its actual function (inheritance-driven compounding), indicating Goodhart drift and increasing performative maintenance of legitimacy as the actual extraction becomes visible."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wealth_concentration",
+      "intergenerational_mobility",
+      "estate_tax_enforcement",
+      "real_estate_access_barriers"
+    ],
+    "dual_formulation_note": "Intergenerational wealth transfer decomposes into three structurally distinct constraints with different \u03b5 values. The parental provision coordination (\u03b5 \u2248 0.05) is natural and low-extraction. The institutional wealth inheritance architecture (\u03b5 \u2248 0.58) is contingent and moderate-extraction. The emergent wealth concentration outcome (\u03b5 \u2248 0.72) is highly extractive from systemic perspective. This story addresses the institutional constraint (0.58); separate stories address parental provision and concentration mechanics."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.48
+    }
+  ]
+}

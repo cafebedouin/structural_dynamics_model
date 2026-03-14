@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "distributed_trust_verification",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dtv"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Distributed Trust Verification Constraint",
+    "topic_domain": "social/economic/institutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "verification_infrastructure_operators",
+      "early_adopters"
+    ],
+    "victims": [
+      "excluded_participants",
+      "trust_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Excluded Participant",
+      "comment": "PERSPECTIVE 1: EXCLUDED PARTICIPANT (SNARE) \u2014 Cannot participate in distributed trust systems without meeting verification requirements they cannot afford or satisfy. Trapped by economic barriers, technical knowledge requirements, and lack of alternative trust infrastructure. Bears full cost of exclusion with no exit option."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Struggling Verifier",
+      "comment": "PERSPECTIVE 2: STRUGGLING VERIFIER (TANGLED ROPE) \u2014 Must maintain verification credentials to participate in trust networks but faces rising compliance costs and operational burdens. Constrained by resource requirements and competitive pressure, but also benefits from network effects and access to distributed trust mechanisms. Mixed extraction and coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Verification Infrastructure Operator",
+      "comment": "PERSPECTIVE 3: VERIFICATION INFRASTRUCTURE OPERATOR (ROPE) \u2014 Benefits from network effects and switching costs once dominant verification systems are established. Experiences constraint as coordination: their infrastructure enables trust-based transactions. Net beneficiary with high arbitrage options if verification standards become commodified."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Decentralization Coalition",
+      "comment": "PERSPECTIVE 4: DECENTRALIZATION COALITION (SCAFFOLD) \u2014 Organized technical communities working toward peer-to-peer verification systems that reduce infrastructure dependence and lower entry barriers. See current centralized verification as temporary; building alternative verification substrates (blockchain, cryptographic proofs, reputation systems) with intended sunset logic for legacy verification infrastructure."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Trust Apparatus",
+      "comment": "PERSPECTIVE 5: LEGACY TRUST APPARATUS (PITON) \u2014 Formal verification institutions (certification bodies, accreditation systems, regulatory compliance frameworks) persist through institutional inertia despite recognition that distributed alternatives are emerging. Theater-heavy: much of the institutional verification process is performative ritual maintained because the authority structure expects it, not because it produces verification outcomes better than distributed mechanisms."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Epistemological View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / EPISTEMOLOGICAL VIEW (MOUNTAIN) \u2014 From a universal perspective, some verification gap is inherent to trust establishment: claims always require verification, and the problem of creating trust without prior trust is a foundational epistemic limit. This perspective sees distributed trust verification as an immutable feature of knowledge and social coordination. However, this naturalization obscures contingent institutional choices about verification distribution, cost allocation, and participation barriers."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "verification_cost_absorption",
+      "question": "Who ultimately bears the real economic cost of verification infrastructure, and does cost absorption determine actual vs nominal participation?",
+      "resolution_mechanism": "Audit of verification cost distribution: direct fees, implicit time costs, competitive disadvantage, exclusion barriers. Comparison between stated participation rates and actual cost-bearing capacity across demographic groups.",
+      "impact": "If costs concentrate on powerless agents: snare classification strengthens and extraction accelerates. If costs are distributed: tangled rope with moderate extraction. If costs are subsidized by infrastructure operators: rope classification for majority.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Cost absorption patterns in distributed trust verification"
+    },
+    {
+      "id": "decentralization_feasibility_boundary",
+      "question": "At what scale or complexity does distributed peer verification become technically infeasible or economically irrational compared to delegated verification?",
+      "resolution_mechanism": "Historical analysis of decentralization attempts; identification of threshold complexity where consensus mechanisms fail, verification time exceeds transaction value, or Byzantine-fault-tolerance overhead becomes prohibitive.",
+      "impact": "If feasible at all scales: scaffold perspective is correct and sunset is real. If infeasible beyond small scales: decentralization is aspirational; centralized verification is inevitable (affects piton and mountain classification).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical and economic feasibility of distributed verification at scale"
+    },
+    {
+      "id": "identity_verification_substitutability",
+      "question": "Can cryptographic verification (proofs, signatures, consensus) fully substitute for identity-based verification (credentials, reputation, institutional endorsement), or do different domains require different bases?",
+      "resolution_mechanism": "Domain analysis: which trust contexts require identity continuity (interpersonal credit, professional licensing, governance) vs which can operate on anonymous cryptographic proof (monetary transactions, attestation validity).",
+      "impact": "If substitutable: distributed mechanisms can replace institutional verification across domains (scaffold and decentralization succeed broadly). If domain-dependent: some sectors remain locked into institutional verification; extraction persists in identity-based domains.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Substitutability of cryptographic for identity-based verification"
+    },
+    {
+      "id": "network_effect_permanence",
+      "question": "Are network effects in verification systems self-reinforcing (winner-take-most, permanent lock-in) or subject to disruption by new verification substrates?",
+      "resolution_mechanism": "Historical case analysis: did new verification technologies (SSL certificates, blockchain, decentralized identifiers) disrupt or complement existing verification networks? What disruption patterns predict successful new entrants?",
+      "impact": "If self-reinforcing: infrastructure operators experience permanent rent extraction (institutional beneficiary dominance, piton classification for legacy systems). If disruption-prone: scaffold perspective is validated and sunset is inevitable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Permanence of network effects in verification systems"
+    },
+    {
+      "id": "verification_commons_degradation",
+      "question": "Does extraction by infrastructure operators actively degrade the verification commons, or are they separable phenomena?",
+      "resolution_mechanism": "Measurement of commons health indicators: ease of entry, cost barriers, innovation rate, fraud detection effectiveness. Correlation with operator rent extraction: do periods of high operator extraction correlate with commons degradation?",
+      "impact": "If coupled: the constraint qualifies as snare (commons is victim). If decoupled: extraction is isolated to individual agents (tangled rope). If operators actively maintain commons: coordination function is real and verified.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Coupling between operator extraction and verification commons degradation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Distributed trust verification systems create a structural tension between the need for trust establishment (genuine coordination problem) and the revenue incentives of infrastructure operators, cost externalization to participants, and the formal legitimacy claims of legacy institutional verification. This constraint exhibits five distinct DR classifications, with the analytical mountain perspective representing a naturalization that the structural data contradicts. Early adoption of distributed trust systems (blockchain, decentralized identifiers, cryptographic proofs) promised to lower verification barriers and distribute trust costs more equitably. However, as these systems mature, they increasingly replicate the extraction patterns of legacy verification: operators capture rents, participation requires costly compliance, and excluded agents find alternatives unavailable. Theater has increased as both legacy institutions and new distributed platforms deploy elaborate verification rituals (compliance audits, smart contract audits, credential vetting) whose correspondence to actual trust outcomes is unclear.",
+    "key_agents": [
+      "Verification Infrastructure Operators: Primary beneficiary (institutional/arbitrage) \u2014 capture network effects, switching costs, and rent from verification protocols",
+      "Excluded Participants: Primary victim (powerless/trapped) \u2014 cannot meet verification requirements; lack technical capacity or capital; no alternative trust infrastructure",
+      "Struggling Verifiers: Secondary victim (moderate/constrained) \u2014 face rising compliance costs, competitive pressure, operational burden while depending on verification participation",
+      "Decentralization Coalition: Organized agents (organized/mobile) \u2014 technical communities building alternative verification substrates; see current systems as temporary",
+      "Legacy Trust Apparatus: Institutional actor (institutional/arbitrage) \u2014 formal verification institutions (accreditation, certification) maintain performative processes; see themselves as degraded",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent choices about verification structure as epistemological necessities"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high and rising. Base extraction is the rent captured by infrastructure operators through network effects and participation requirements. Initial extractiveness (0.28) reflects genuine coordination value \u2014 early distributed trust systems provided real alternatives to institutional verification and lowered barriers. Current extractiveness (0.52) reflects that mature systems have replicated legacy extraction patterns: operators impose qualification requirements, charge participation fees, create compliance burdens. The trajectory shows extraction accumulation over time. Suppression (0.58): Moderate-high. Barriers include technical knowledge requirements, capital investment in compliance infrastructure, switching costs once locked into a verification system, and educational gaps. But suppression is not total \u2014 some agents can and do participate, and open-source verification alternatives exist. Theater ratio (0.68): High and rising. Both legacy institutions and new distributed platforms deploy elaborate verification processes whose actual relationship to trust outcomes is ambiguous. The trajectory from 0.35 to 0.68 reflects Goodhart drift: as operators standardize verification, the measurement (compliance checklist, audit trail) increasingly substitutes for the target (actual verification of trustworthiness). This is the characteristic signature of piton degradation in institutional verification systems.",
+    "directionality_logic": "Directionality varies by agent's structural position within the constraint. Infrastructure operators benefit from network effects and can arbitrage between different verification substrates, giving them low d (beneficiary). Excluded participants face insurmountable barriers and cannot exit, giving them high d (trapped, full target). Struggling verifiers must participate but pay compliance costs; they have some exit (mobile to alternative systems) but face retaliation, giving them moderate-high d. Decentralization coalition agents have built alternative pathways and high exit (mobile) from current systems, giving them low-moderate d despite not being direct beneficiaries \u2014 their power comes from agency, not from extraction flow. The legacy institutional apparatus captures d based on whether they are maintaining extraction (high d as operators) or performing ritual (low-moderate d as theater, piton classification).",
+    "perspectival_gap": "This constraint demonstrates perspectival divergence across the same institutional domain. The infrastructure operator sees rope \u2014 coordination enabling value-creating transactions. The decentralization coalition sees scaffold \u2014 a temporary verification structure being replaced by decentralized alternatives with planned sunset. The legacy apparatus sees piton \u2014 their own process recognized as degraded but maintained through institutional gravity. Struggling verifiers see tangled rope \u2014 the system both enables their participation and extracts from them through rising compliance costs. Excluded participants see snare \u2014 no exit from non-participation, mounting barriers to entry. The analytical observer risks seeing mountain \u2014 the epistemological necessity of verification \u2014 but this naturalizes a contingent institutional arrangement. The perspectival gap reveals that what one agent experiences as coordination (operator), another experiences as extraction (excluded participant), and a third experiences as degradation (legacy institution). All five readings are structurally justified.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that distributed trust verification coordinates genuine information (the actual trustworthiness of claims) while extracting rents (participation fees, compliance costs, switching costs). The coordination is real \u2014 trust networks do solve collective action problems. The extraction is real \u2014 operators and participants who impose requirements on others capture asymmetric benefits. The constraint is not 'is this coordination or extraction?' but 'which agents experience which, and why?' The infrastructure operator genuinely coordinates (rope). The excluded participant genuinely experiences extraction (snare). The analytical observer's mountain classification is a false summit: the epistemological argument that 'verification requires verification' naturalizes a specific institutional choice about who performs verification, who bears costs, and who gains benefits. The scaffold perspective (sunset logic for current systems via decentralization) is the critical check on whether extraction will persist or be displaced."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "credential_inflation",
+      "regulatory_compliance_burden",
+      "access_to_digital_identity"
+    ],
+    "dual_formulation_note": "Distributed trust verification decomposes into at least two structurally distinct constraints: (1) Information coordination (genuine need for trust establishment signals) with \u03b5~0.15 (rope), and (2) Infrastructure rent extraction (operator benefits from network lock-in) with \u03b5~0.65 (snare). This story models the hybrid observed in practice (\u03b5=0.52) where both functions operate simultaneously. Upstream constraints (credential_inflation, regulatory_compliance_burden) feed extraction accumulation; downstream constraint (access_to_digital_identity) is affected by verification barriers this constraint creates."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.22
+    }
+  ]
+}

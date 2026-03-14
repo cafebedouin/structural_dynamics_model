@@ -1,0 +1,179 @@
+{
+  "header": {
+    "constraint_id": "collective_action_problem",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cap"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.42,
+    "theater_ratio": 0.38,
+    "claimed_type": "rope",
+    "human_readable": "Collective Action Problem",
+    "topic_domain": "game_theory/coordination",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "cooperating_agents"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Individual Agent (Immediate Local)",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL AGENT (ROPE) \u2014 At immediate/local scale, the agent can move to different groups. The constraint is perceived as a coordination mechanism: cooperate with others to achieve mutual benefit. Low suppression because agents retain mobility; extractiveness moderate because coordination creates genuine shared gains."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Organized Coalition (Regional Generational)",
+      "comment": "PERSPECTIVE 2: ORGANIZED COALITION (ROPE) \u2014 Organized groups view the collective action constraint as a pure coordination problem. Over generations, institutionalization of cooperation reduces free-rider barriers. No extraction \u2014 beneficiaries and participants are the same set. The constraint solves a genuine collective problem with minimal coercive overhead."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Focal Enforcer (Powerful Actor)",
+      "comment": "PERSPECTIVE 3: FOCAL ENFORCER (TANGLED ROPE) \u2014 Powerful actors (states, platforms, large firms) that centralize enforcement of collective agreements experience this as a hybrid. Genuine coordination function (everyone benefits from the public good) mixed with asymmetric extraction: the enforcer gains disproportionate influence and control over collective decisions. Constrained exit because enforcement role is now identity-fused with institutional position."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Free-Rider Victim (Trapped Global)",
+      "comment": "PERSPECTIVE 4: FREE-RIDER VICTIM (SNARE) \u2014 Non-cooperating agents that benefit from collective output but do not contribute are trapped. Other agents bear disproportionate costs to exclude them. The free-rider state is extractive \u2014 it captures benefits without paying costs, sustained by suppression (exclusion costs, monitoring, punishment threats). From this perspective, the constraint is pure extraction without coordination benefit."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "label": "The Institutional Coordinator (Universal Civilizational)",
+      "comment": "PERSPECTIVE 5: INSTITUTIONAL COORDINATOR (PITON) \u2014 Formal institutions (parliaments, trade organizations, international bodies) that nominally solve collective problems often become performative. Theater ratio high: committees meet, resolutions pass, but actual coordination relies on informal mechanisms. The institution persists through bureaucratic inertia rather than functional necessity. Institutional actors have arbitrage options (they can redefine their role or dissolve the body) but do not exercise them."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Universal View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (ROPE) \u2014 From the civilizational/universal perspective, collective action problems are instances of a general coordination mechanism. Game theory shows that repeated interaction, communication, reputation, and graduated sanctions enable pure coordination solutions without extraction. The constraint is fundamentally about overcoming information asymmetries and trust barriers \u2014 a coordination problem, not a natural law or an extractive mechanism."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "threshold_for_free_riding",
+      "question": "At what proportion of non-cooperators does a collective action solution become unsustainable?",
+      "resolution_mechanism": "Empirical analysis across domains: public goods experiments, real-world commons management, climate mitigation pledges. Measure cooperation threshold and relate to group size, incentive structure, and monitoring cost.",
+      "impact": "If threshold is high (>30% free-riders tolerated): collective action is robust, classification remains Rope. If threshold is low (<10%): suppression mechanism is fragile, snare perspective becomes dominant.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold proportion of non-cooperators sustainable in collective action"
+    },
+    {
+      "id": "coordination_vs_extraction_in_enforcement",
+      "question": "Is centralized enforcement of collective agreements a genuine coordination mechanism or a cover for asymmetric power consolidation?",
+      "resolution_mechanism": "Comparative analysis: decentralized consensus vs centralized hierarchies. Measure outcome variance, benefit distribution, and enforcer power accumulation over time. Historical case studies (commons management, trade unions, international treaties).",
+      "impact": "If enforcement is neutral: tangled rope classification confirmed, extractiveness moderate. If enforcement concentrates power: more snare characteristics emerge, extractiveness rises, suppression increases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether centralized enforcement is coordination or extraction"
+    },
+    {
+      "id": "information_architecture_dependency",
+      "question": "How much of the collective action problem is inherent to coordination vs artifact of information access and communication barriers?",
+      "resolution_mechanism": "Interventions that reduce information asymmetry: transparent monitoring, real-time reputation feedback, low-cost communication. Measure effect size on cooperation rates. Compare high-transparency vs low-transparency variants of same collective problem.",
+      "impact": "If information access resolves the problem: extractiveness decreases, classification stays Rope. If problem persists despite transparency: suppression mechanism is structural, not informational.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Information architecture dependency of collective action barriers"
+    },
+    {
+      "id": "scale_dependency_of_mechanism",
+      "question": "Does the collective action constraint change type as group size scales?",
+      "resolution_mechanism": "Game-theoretic analysis and empirical data: small-group dynamics vs large-group dynamics. Measure free-rider proportion, enforcement cost, and coordination overhead as functions of scale. Identify inflection points where classification changes.",
+      "impact": "If mechanism is scale-invariant: Rope across all contexts. If mechanism degrades at large scale: classification transitions from Rope to Tangled Rope to Snare as size increases. This would indicate that 'collective action problem' is actually a family of constraints with different \u03b5 values at different scales.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Scale dependency of collective action mechanism type"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The collective action problem is a fundamental constraint in coordination theory and social science: rational individual agents, acting in their own interest, produce outcomes that are Pareto-suboptimal for the group. The constraint operates across domains \u2014 public goods provision, climate change mitigation, labor organizing, open-source software, international treaties, resource commons management. This story models the collective action problem as a pure coordination mechanism (Rope) that exhibits Tangled Rope and Snare properties when enforcement becomes centralized or when free-riders escape suppression. The key insight is that collective action problems have multiple structurally distinct aspects: the genuine coordination barrier (information and trust), the enforcement mechanism (which can become extractive), and the free-rider equilibrium (which is itself an extractive solution from the perspective of non-cooperators). The indexical classification reveals these layers by showing how different agents experience the same constraint differently.",
+    "key_agents": [
+      "Cooperating Agents: Primary beneficiaries (organized/mobile) \u2014 solve coordination problem, achieve mutual gains",
+      "Individual Agent: Participant (powerless/mobile) \u2014 experiences constraint as solvable coordination problem at local scale",
+      "Focal Enforcer: Powerful institutional actor (powerful/constrained) \u2014 centralizes enforcement, gains asymmetric control and information",
+      "Free-Rider: Non-cooperator (powerless/trapped) \u2014 trapped in extractive equilibrium where others bear cooperation costs",
+      "Institutional Coordinator: Formal body (institutional/arbitrage) \u2014 maintains performative coordination ritual with theater_ratio drift",
+      "Analytical Observer: Universal perspective (analytical/analytical) \u2014 sees collective action as solvable game-theoretic problem"
+    ],
+    "logic_rationale": "Extractiveness (0.35): Moderate, reflecting that collective action problems have a genuine coordination component but also exhibit extractive dynamics when enforcement and free-riding are present. At the Rope level, extractiveness should be \u22640.45. The value of 0.35 indicates that coordination benefits outweigh extraction costs for most perspectives, but the tangled_rope and snare perspectives see higher extractiveness relative to their exit options. Suppression (0.42): Moderate. Collective action problems require some suppression to overcome free-rider incentives, but pure Rope requires suppression \u22640.35. The value 0.42 indicates that suppression is present but not dominant \u2014 there are multiple pathways to cooperation (not just coercion), and agents retain meaningful agency through mobility and organizing. Theater ratio (0.38): Moderate-low. Actual coordination achieves real functional outcomes in most domains, but institutional coordination mechanisms layer performative ritual on top of informal mechanisms. The measurement shows theater_ratio increasing over the interval (0.20 \u2192 0.38) as institutional solutions accumulate bureaucratic overhead. This drift is characteristic of constraints where coordination function is genuine but institutional capture is incomplete.",
+    "directionality_logic": "Directionality varies sharply across perspectives because agents occupy structurally different positions. Cooperating agents have low d (beneficiaries who contribute little extraction) \u2014 they derive benefit from coordination itself. Individual agents with mobile exit options have low d \u2014 they can join or leave groups freely. Focal enforcers have d \u22480.40-0.50 (both benefit and bear enforcement cost, structurally centered) \u2014 but their institutional exit is constrained, moving them toward victim territory. Free-riders have d \u22481.0 (pure targets of collective suppression) \u2014 they are extracted from by other agents bearing cooperation costs. The piton perspective's d is low because institutional actors have arbitrage options \u2014 they are not structurally trapped, so even though the institution is performative, it is not extractive in the sense of trapping actors. The analytical perspective has canonical d \u22480.72 (observer position) \u2014 sufficiently detached to see the structure but not involved enough to see institutional capture.",
+    "perspectival_gap": "The perspectival gap between Rope and Snare perspectives is extreme. The cooperating agent sees pure coordination \u2014 the constraint is the solution, not the problem. The free-rider sees pure extraction \u2014 they are trapped in a state where others extract cooperation costs from them. Both are accurate: cooperation is voluntary for the agent who benefits, extractive for the agent who does not. The tangled_rope perspective (focal enforcer) bridges these: genuine coordination function mixed with asymmetric power accumulation. The piton perspective (institutional) reveals that coordination mechanisms degrade over time as ritual accumulates and informal mechanisms persist. The analytical observer sees the whole structure as a solved game-theoretic problem \u2014 the gap between Rope and Snare is not inherent but a function of entry conditions, information architecture, and group size.",
+    "mandatrophy_analysis": "The collective action problem resolves mandatrophy by decomposing into a family of structurally distinct constraints. Naive classification risks claiming this is 'just coordination' (Rope everywhere) or 'just extraction' (Snare everywhere). The indexical analysis shows: (1) Pure coordination layer: establishing communication and trust (Rope, low extractiveness). (2) Enforcement layer: monitoring and sanctioning non-cooperators (Tangled Rope when centralized, because it concentrates power). (3) Free-rider layer: non-cooperators trapped in extractive equilibrium (Snare from their perspective, because suppression is asymmetric). (4) Institutional layer: formal coordination bodies accumulate theater without functional gain (Piton, because theater_ratio rises and real function declines). These are NOT separate constraints \u2014 they are layers of the same phenomenon. The \u03b5 value (0.35) is the blended average. Individual analyses at different scales or focus domains would show different \u03b5 values: small-group cooperation (\u03b5 \u22480.10, pure Rope), large-scale institutional coordination (\u03b5 \u22480.50, Tangled Rope), climate mitigation failures (\u03b5 \u22480.65, Snare). The framework prevents false unification by requiring separate stories for structurally distinct observables. This story should link via network.affects_constraints to domain-specific constraint stories (climate_mitigation_free_rider, open_source_free_riding, commons_tragedy) where \u03b5 varies and classification diverges."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "tragedy_of_the_commons",
+      "prisoner_dilemma",
+      "free_rider_equilibrium",
+      "coordination_game"
+    ],
+    "dual_formulation_note": "The collective action problem is a theoretical constraint family that decomposes into domain-specific instantiations. Each domain (climate mitigation, labor organizing, open-source contribution, public health vaccination, resource commons) has its own \u03b5 value reflecting the specific balance of coordination benefits and extraction mechanisms. This generic story models the abstract problem; domain-specific stories should override \u03b5 and perspectives based on empirical data from their domains."
+  },
+  "directionality_overrides": []
+}

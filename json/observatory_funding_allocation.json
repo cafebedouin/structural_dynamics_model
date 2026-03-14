@@ -1,0 +1,183 @@
+{
+  "header": {
+    "constraint_id": "observatory_funding_allocation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "obsfund"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Observatory Funding Allocation Constraint",
+    "topic_domain": "scientific_resource_allocation/astronomy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_research_institutions",
+      "established_observatories"
+    ],
+    "victims": [
+      "early_career_astronomers",
+      "small_observatories",
+      "emerging_research_programs"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Early-Career Astronomer",
+      "comment": "PERSPECTIVE 1: EARLY-CAREER ASTRONOMER (SNARE) \u2014 Trapped by funding constraints that require affiliation with well-established institutions to access major observatories. Cannot build independent research program or exit the constraint without career abandonment. Bears full cost of allocation system asymmetry."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regional Observatory Director",
+      "comment": "PERSPECTIVE 2: REGIONAL OBSERVATORY DIRECTOR (TANGLED ROPE) \u2014 Experiences both coordination (shared instrumentation, collaborative access protocols) and extraction (funding bias toward large institutions reduces their facility's competitiveness). High cost to exit through independent funding; some benefit from coordinated research networks."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Large Research Institution",
+      "comment": "PERSPECTIVE 3: LARGE RESEARCH INSTITUTION (ROPE) \u2014 Experiences the constraint as coordination mechanism. Established infrastructure enables efficient allocation; institutional prestige and track record generate preferential access. Net beneficiary with exit options through alternative funding and international partnerships."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Open-Access Observatory Movement",
+      "comment": "PERSPECTIVE 4: OPEN-ACCESS OBSERVATORY MOVEMENT (SCAFFOLD) \u2014 Organized coalition building alternative funding models (crowdfunding, tiered access, distributed observation networks) with explicit sunset clause. Low effective extraction because organized agents see genuine exit pathway. Constraint classification reflects temporary nature of centralized funding bottleneck."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Peer Review Allocation Committee",
+      "comment": "PERSPECTIVE 5: PEER REVIEW ALLOCATION COMMITTEE (PITON) \u2014 Review process for allocating observatory time is substantially performative. Committee members recognize that allocation decisions are driven by institutional prestige and track record rather than scientific merit alone. The review ritual persists through institutional inertia despite degraded functional verification capacity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 Civilizational perspective frames observatory funding allocation as an immutable consequence of resource scarcity and institutional efficiency: large observatories require economies of scale, and concentrating resources maximizes scientific output. However, this naturalization masks contingent institutional arrangements that preserve existing power structures."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "merit_versus_prestige_circularity",
+      "question": "Are allocation decisions based on scientific merit or on institutional prestige that reinforces itself through preferential access?",
+      "resolution_mechanism": "Analysis of approved proposals grouped by institution type; tracking citation impact and significance of research from elite vs non-elite institutions; blind review trials comparing allocation outcomes",
+      "impact": "If merit-driven: constraint is legitimate coordination (Rope from all perspectives). If prestige-driven: constraint is extractive asymmetry (Snare from early-career perspective). If circular: institution's past success generates preferential access that ensures future success (reinforcement loop).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether allocation reflects scientific merit or self-reinforcing institutional prestige"
+    },
+    {
+      "id": "alternative_funding_sufficiency",
+      "question": "Do alternative funding models (crowdfunding, distributed networks, citizen science) provide adequate resolution, or is large observatory access functionally irreplaceable for certain research domains?",
+      "resolution_mechanism": "Comparative analysis of research domains: identification of questions that require large observatory access vs those solvable through alternatives; cost-effectiveness metrics for alternative approaches",
+      "impact": "If alternatives sufficient: scaffold sunset is realistic and constraint is temporary. If irreplaceable: alternatives address only subset of research, maintaining extraction for excluded domains.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative funding models can replace large observatory access"
+    },
+    {
+      "id": "suppression_mechanism_structural_versus_cognitive",
+      "question": "Is suppression of alternative access primarily structural (no competing funding sources) or partially internalized (researchers accept prestige hierarchy as natural)?",
+      "resolution_mechanism": "Post-allocation interviews; tracking of funding applications to non-elite institutions; analysis of researcher narratives about resource constraints vs hierarchical acceptance",
+      "impact": "If structural: high-cost exit (constrained) but mechanistically clear. If internalized: lower nominal suppression but higher effective binding because agents carry hierarchy internalization.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or partly internalized"
+    },
+    {
+      "id": "geographic_versus_institutional_bottleneck",
+      "question": "Is the primary bottleneck geographic (few large observatories exist) or institutional (allocation processes favor certain institutions)?",
+      "resolution_mechanism": "Comparison of access patterns at geographically distributed observatories of equal capability; analysis of whether institutional prestige or location determines allocation",
+      "impact": "If geographic: constraint is closer to Mountain (physical limit). If institutional: constraint is closer to Snare (engineered extraction). Affects long-term classification stability.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether bottleneck is geographic scarcity or institutional allocation bias"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Observatory funding allocation creates a structural constraint that couples resource scarcity with institutional prestige hierarchies. Large observatories require enormous capital investment and operational costs, making centralization economically rational. However, the allocation process for observing time systematizes preferences for established institutions, creating barriers for early-career astronomers and non-elite research groups. This constraint exhibits the tangled rope structure: genuine coordination functions (shared instrumentation, coordinated observation campaigns, multi-institutional collaboration) coexist with asymmetric extraction (preferential access, funding bias, career gatekeeping). The theater ratio has risen over the interval as peer review committees increasingly recognize that allocation decisions reflect prestige more than merit, yet the ritual persists through institutional momentum. Meanwhile, open-access observatory movements are building alternative models (distributed networks, tiered access, crowdfunded observations) with explicit sunset clauses, creating a scaffold perspective on the same structural data.",
+    "key_agents": [
+      "Early-Career Astronomers: Primary victims (powerless/trapped) \u2014 require established affiliation to access major observatories; cannot exit without career abandonment",
+      "Small and Regional Observatories: Secondary victims (moderate/constrained) \u2014 face funding competition bias; benefit from coordinated networks but constrained by prestige hierarchies",
+      "Large Research Institutions: Primary beneficiaries (institutional/arbitrage) \u2014 capture preferential access; can leverage prestige for additional resources; exit options through international partnerships",
+      "Allocation Review Committees: Institutional enforcement (institutional/arbitrage) \u2014 recognize degraded merit assessment but maintain ritual through inertia; see performative review as necessary evil",
+      "Open-Access Observatory Coalition: Organized agents (organized/constrained) \u2014 developing alternative funding models and distributed access networks with realistic sunset timeline",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing economic scarcity as justification for prestige-based allocation"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The allocation system extracts preferential access for established institutions, creating career barriers for early-career researchers and smaller observatories. The extraction is not total because some mechanisms for alternative access exist (proposal competitions, director's discretionary time, international partnerships), and the system does coordinate legitimate multi-institutional research. The rising trend (0.42 \u2192 0.58 over 20 years) reflects increasing concentration of observing time at flagship facilities as funding pressure grows. Suppression (0.62): High. Barriers include: requirement for institutional affiliation, lack of alternative large-observatory funding, publication bias favoring research from elite institutions, career risk of pursuing independent funding, and information asymmetry about allocation criteria. These barriers are substantial but not total \u2014 some early-career researchers do secure access through persistence, collaboration, or innovative funding. Theater ratio (0.68): Moderate-high. Peer review committees must assess scientific merit, but allocation decisions are visibly influenced by institutional prestige, track record, and reviewer familiarity with proposing institutions. The performative content has increased as committees recognize that blind review alone cannot overcome prestige bias, yet maintain review rituals as legitimating theater.",
+    "directionality_logic": "Directionality d derives from each agent's structural position within the extraction flow. Large institutions occupy beneficiary positions with arbitrage exits (they can secure observing time through multiple channels), generating low d values and negative f(d) \u2014 they experience the constraint as coordination benefit. Early-career astronomers are trapped victims with no exit alternatives, generating high d values and maximum f(d) \u2014 they experience the constraint as pure extraction (snare perspective). Regional observatories are constrained victims with some exit options (alternative telescopes, distributed collaboration), generating moderate d values. The open-access coalition occupies an organized position with constrained exits but with visibility of upcoming pathways (sunset clause logic), moderating their experienced extraction. The review committee, though institutional, has some capture by the system they administer, affecting their directionality compared to a fully independent institutional observer.",
+    "perspectival_gap": "The perspectival gap reflects power asymmetries across the observation site. Large institutions and review committees see the constraint as legitimate coordination (Rope) \u2014 efficiently allocating scarce resources and enabling collaborative science. Early-career astronomers see pure extraction (Snare) \u2014 being locked out of career advancement without institutional backing. Regional observatories see mixed coordination and extraction (Tangled Rope) \u2014 their equipment and expertise support collaborative research while their institutions lose competitive advantage. The open-access coalition sees a temporary problem (Scaffold) \u2014 existing funding models are being replaced by distributed alternatives. The review committees see their own process as degraded (Piton) \u2014 they recognize the merit-assessment ritual is performative but maintain it for legitimacy. The civilizational analytical observer risks seeing immutable scarcity (Mountain) \u2014 observatories are expensive and rare, so concentration is inevitable \u2014 but this naturalizes what is partly a contingent institutional choice about how to allocate fixed resources.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint simultaneously coordinates legitimate scientific collaboration and extracts preferential access through institutional prestige. The coordination function is real: shared observatories enable research impossible for individual institutions, and centralized review prevents duplication and optimizes observation schedules. The extraction is also real: the same processes that enable coordination create asymmetric access. The classification (Tangled Rope) reflects both mechanisms. Attempting to classify as pure coordination (Rope) ignores career gatekeeping effects; attempting to classify as pure extraction (Snare) ignores genuine scientific coordination benefits. The mandatrophy is resolved not by choosing one type but by recognizing the perspectival structure: beneficiaries perceive coordination; victims perceive extraction; observers at intermediate positions perceive both."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "peer_review_prestige_bias",
+      "scientific_career_stratification"
+    ],
+    "dual_formulation_note": "Observatory funding allocation is upstream of specific proposal decisions but represents a distinct structural constraint. Downstream constraints (peer review bias in allocation, career stratification in astronomy) inherit extractiveness patterns from this parent constraint."
+  },
+  "directionality_overrides": []
+}

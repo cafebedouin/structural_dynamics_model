@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "iud_market_capture_mechanism",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "iud"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "IUD Market Capture Mechanism",
+    "topic_domain": "healthcare/contraception/reproductive_medicine",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharmaceutical_manufacturers",
+      "medical_device_companies",
+      "obstetricians_gynecologists"
+    ],
+    "victims": [
+      "low_income_women",
+      "uninsured_women",
+      "women_of_color",
+      "reproductive_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Low-Income Women Without Insurance",
+      "comment": "PERSPECTIVE 1: LOW-INCOME UNINSURED WOMEN (SNARE) \u2014 Face maximum extraction with no exit. IUD insertion requires upfront capital cost ($500-1200) and specialist access despite superior long-term efficacy and lower total cost of ownership. Cannot exit contraception entirely (biological reality), cannot afford upfront cost, cannot access credit. No alternatives available at comparable efficacy levels they can afford. Pure extraction mechanism: market capture prevents price competition and alternative access pathways."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Insured Women with Deductibles",
+      "comment": "PERSPECTIVE 2: INSURED WOMEN WITH HIGH DEDUCTIBLES (TANGLED ROPE) \u2014 Experience mixed coordination and extraction. IUDs do coordinate genuine family planning benefits (efficacy, low maintenance, hormonal control options), but upfront deductible costs create artificial barriers even for insured women. Extraction operates through cost-sharing design, not through unavailability. Exit options exist (can use other contraceptives, can plan differently) but are constrained by cost structure and medical preference asymmetry."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Pharmaceutical Manufacturers",
+      "comment": "PERSPECTIVE 3: PHARMACEUTICAL MANUFACTURERS (ROPE) \u2014 Benefit from market consolidation (now 2 major manufacturers globally: Bayer Mirena/Kyleena/Skyla, Cooper Paragard) and insurance reimbursement standardization. Experience the constraint as a coordination mechanism: regulatory compliance, insurance formulary management, physician education are coordination problems they solve. Net beneficiary with arbitrage capacity \u2014 can adjust pricing, shift product lines, exit specific market segments. No extraction runs toward them; extraction runs away from them."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "OB-GYN Professional Organization",
+      "comment": "PERSPECTIVE 4: OB-GYN PROFESSIONAL ORGANIZATIONS (TANGLED ROPE) \u2014 Professional societies (ACOG) provide genuine coordination: evidence-based guidelines, training standards, liability protection through consensus. But the constraint also includes extraction: gate-keeping power over IUD insertion (requiring specialist certification), resistance to non-physician insertion pathways, maintenance of high skill-premium for insertion despite evidence that nurse-midwives and trained nurses can insert safely. Extraction operates through credential capture and scope-of-practice regulation."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Community Health Worker Movement",
+      "comment": "PERSPECTIVE 5: COMMUNITY HEALTH WORKER MOVEMENT (SCAFFOLD) \u2014 Organized non-physician insertion programs (increasingly common in reproductive justice initiatives) represent a sunset pathway for the specialist gate-keeping constraint. As training and safety data accumulate for community health worker insertion, the physician monopoly loses functional justification. The constraint experiences organized resistance with a structural exit path: task-shifting to trained non-specialists reduces insertion costs and increases access. Theater is moderate \u2014 professional resistance is real but declining as evidence accumulates."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Menstrual Mythology Defense",
+      "comment": "PERSPECTIVE 6: MENSTRUAL MYTHOLOGY DEFENSE (PITON) \u2014 Residual cultural resistance to IUDs (historically associated with higher infection risk; current evidence contradicts this) persists through institutional inertia and cultural narratives rather than medical evidence. Medical institutions maintain cautious positioning toward IUDs despite superior efficacy profiles, partly because the risk mythology is embedded in institutional training and patient education materials. Theater_ratio is high for this component \u2014 much of the institutional resistance is performative risk aversion disconnected from current evidence."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Natural Law View: Biological Reproduction Constraints",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some contraceptive constraint is inherent to human biology: pregnancy requires access to prevention mechanisms, reproductive autonomy requires reliable methods. This perspective risks naturalizing the contingent market capture as an immutable feature of reproductive medicine. However, structural data reveals this as a false summit: the capital cost barrier, specialist requirement, and insurance design choices are all contingent institutional arrangements, not biological necessities. The engine's false summit detector should flag this naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "insertion_skill_requirement_necessity",
+      "question": "Is specialist-level training actually necessary for safe IUD insertion, or does the skill requirement reflect professional gate-keeping?",
+      "resolution_mechanism": "Comparative effectiveness study: infection/perforation/expulsion rates for insertion by physicians vs trained nurses vs community health workers; meta-analysis of international evidence from systems with non-physician insertion",
+      "impact": "If genuine necessity: specialist requirement is coordination. If gate-keeping: constraint shifts from Tangled Rope to higher extraction (snare characteristics intensify). Affects whether scope-of-practice restrictions are functional or extractive.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether specialist training requirement reflects genuine safety needs or professional capture"
+    },
+    {
+      "id": "upfront_cost_necessity",
+      "question": "Does the upfront capital requirement for IUD insertion reflect genuine production costs or insurance/reimbursement design choices?",
+      "resolution_mechanism": "Cost accounting analysis: device manufacture cost, insertion facility cost, labor cost, comparison with countries with subsidized insertion; evidence on whether price reductions increase access",
+      "impact": "If production necessity: high upfront cost is unavoidable coordination cost. If reimbursement choice: cost barrier is pure extraction mechanism (snare from victim perspective becomes even more severe). Affects whether market capture is structural or policy-contingent.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether upfront costs reflect production necessity or reimbursement design"
+    },
+    {
+      "id": "menstrual_risk_mythology_persistence",
+      "question": "What portion of IUD resistance in medical institutions reflects actual medical evidence vs residual cultural/historical mythology about infection risk?",
+      "resolution_mechanism": "Textual analysis of medical training materials and patient education across time; survey of physician knowledge accuracy on IUD safety profile; comparison with objective safety data",
+      "impact": "If predominantly evidence-based caution: constraint is medical coordination. If predominantly mythology: constraint is piton with high theater. Affects whether professional resistance is functional or performative.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent to which medical resistance reflects evidence vs historical mythology"
+    },
+    {
+      "id": "market_consolidation_necessity",
+      "question": "Does the dominance of two manufacturers (Bayer and Cooper) reflect legitimate economies of scale or regulatory capture that restricts new market entrants?",
+      "resolution_mechanism": "Regulatory barrier analysis: FDA approval timelines and costs; comparison with generic contraceptive availability; investigation of whether new manufacturers can enter market",
+      "impact": "If economies of scale: duopoly is coordination outcome. If regulatory barriers: market structure is extractive constraint (snare characteristics for low-income users intensify). Affects whether market capture is structural or policy-contingent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether market duopoly reflects scale economies or regulatory capture"
+    },
+    {
+      "id": "insurance_deductible_design_intent",
+      "question": "Do high deductible structures for IUD insertion reflect actuarial necessity or deliberate cost-shifting to reduce insurer liability?",
+      "resolution_mechanism": "Actuarial analysis of IUD cost-effectiveness vs claims reduction; comparison of deductible structures across insurance types; analysis of whether deductibles were changed as IUD popularity increased",
+      "impact": "If actuarial necessity: deductible structure is coordination mechanism. If cost-shifting: deductible design is extraction mechanism targeting insured women. Affects whether constraint manifests as Tangled Rope or higher-extraction snare for insured victims.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether insurance deductible design reflects actuarial necessity or cost-shifting"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The IUD market capture mechanism operates through a multi-layered constraint structure that combines pharmaceutical market consolidation, professional gate-keeping through specialist certification requirements, insurance reimbursement design that imposes upfront cost barriers, and residual cultural resistance based on outdated medical mythology. The constraint systematically extracts value from low-income and uninsured women while providing genuine coordination benefits (efficacy guarantees, safety standardization, professional liability protection) that justify the coordination function to beneficiaries. The extractiveness has increased over the measurement interval (0.38\u21920.58) as market consolidation deepened and insurance-based cost-shifting became more prevalent. Theater ratio remains moderate (0.55) because the professional resistance (menstrual mythology, specialist certification requirements) is partially performative, but the market capture and cost barriers are structurally real. From different structural positions, the same constraint appears as pure extraction (snare for trapped uninsured women), mixed coordination-extraction (tangled rope for insured women with deductibles and for professional organizations), pure coordination (rope for manufacturers), and a sunset problem (scaffold for community health worker insertion movements). The analytical observer risks naturalizing market capture as inherent to reproductive medicine (false summit mountain), when the constraint is actually a contingent institutional arrangement built from reimbursement design, regulatory gate-keeping, and professional scope-of-practice restrictions.",
+    "key_agents": [
+      "Low-income uninsured women: Primary victim (powerless/trapped) \u2014 face maximum extraction through upfront cost barriers and specialist access requirements with no exit options",
+      "Insured women with high deductibles: Secondary victim (moderate/constrained) \u2014 experience cost barriers despite insurance coverage; constrained by deductible design and professional monopoly",
+      "Reproductive autonomy (collective good): Tertiary victim (powerless/trapped) \u2014 abstract good that cannot organize; systemic underutilization of superior contraceptive method reduces population reproductive autonomy",
+      "Pharmaceutical manufacturers (Bayer, Cooper): Primary beneficiary (institutional/arbitrage) \u2014 capture market consolidation benefits and reimbursement premiums; can exit or adjust pricing strategies",
+      "OB-GYN professional organizations: Beneficiary-victim hybrid (organized/constrained) \u2014 benefit from gate-keeping and scope-of-practice restrictions but are also constrained by litigation risk and evidence pressure",
+      "Community health worker movement: Organized resistance (organized/constrained) \u2014 see sunset pathway through task-shifting and evidence accumulation",
+      "Insurance companies: Indirect beneficiary (institutional/arbitrage) \u2014 benefit from cost-shifting via high deductibles despite long-term savings from IUD efficacy"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint operates through multiple overlapping extraction mechanisms: pharmaceutical market duopoly (limits price competition), specialist certification requirement (creates artificial access barrier despite evidence that trained nurses can insert safely), upfront capital cost imposed through insurance design (creates poverty trap despite superior cost-effectiveness over 5+ years), and cultural mythology (maintains resistance despite evidence). The extractiveness is not as severe as pure monopolistic extraction (0.72+) because IUDs remain available and efficacy genuinely delivers value. The extraction is systematic and intentional (particularly market consolidation and insurance design) rather than incidental. Suppression (0.68): High. Multiple reinforcing suppression mechanisms operate simultaneously: structural barriers (upfront cost, specialist access, limited availability in low-income areas), informational barriers (medical training perpetuates outdated risk mythology despite current evidence), institutional barriers (scope-of-practice restrictions, insurance gatekeeping), and social barriers (cultural resistance, insufficient patient education). Suppression would be lower if only one mechanism operated; the stack creates multiple redundant barriers that persist even when individual barriers are addressed. Theater ratio (0.55): Moderate. Professional resistance is partially performative \u2014 menstrual mythology persists in medical education despite contradictory current evidence, making it a piton-like component of the overall constraint. However, the market capture and cost barriers are substantively real (not merely theatrical), distinguishing this from pure piton degradation. The theater component has increased slightly over the interval as clinical evidence has mounted against historical cautions, yet institutional positioning remains cautious.",
+    "perspectival_gap": "This constraint demonstrates how the same structural mechanism produces radically different classifications depending on the observer's structural position and exit options. Low-income uninsured women (trapped, powerless) experience pure extraction (snare) \u2014 they face a capital cost barrier for the most effective option, with no alternatives available at comparable efficacy they can afford. Insured women with deductibles (constrained, moderate) experience mixed coordination-extraction (tangled rope) \u2014 the coordination function is real (IUDs do solve family planning problems), but cost-sharing design creates artificial extraction layers. Pharmaceutical manufacturers (arbitrage, institutional) experience pure coordination (rope) \u2014 the constraint solves their distribution and reimbursement problems with minimal burden. Professional organizations experience both coordination benefits (liability protection, evidence standardization) and extraction benefits (scope restriction, credential capture). Community health workers see a sunset pathway (scaffold) \u2014 evidence of safety in non-physician hands is accumulating, making the specialist requirement increasingly unjustifiable. The analytical observer risks seeing immutable biological necessity (mountain) when the actual constraints are policy and institutional choices. The perspectival gap reveals how market capture can appear as coordination from the beneficiary position and as pure extraction from the victim position, even though both are measuring the same structural fact: the barrier exists, someone benefits, someone pays, and alternatives have been systematically suppressed.",
+    "directionality_logic": "Directionality (d) is computed from each agent's structural position relative to the constraint's extraction flow. Uninsured low-income women have d \u2248 0.92 (very close to 1.0, full target): they are victims in the base properties declaration, they have trapped exit options, and the constraint's primary function is extracting reproductive autonomy and healthcare resources from them. The sigmoid f(d) at d\u22480.92 produces maximum f(d) \u22481.40, amplifying their experienced extractiveness. Insured women with deductibles have d \u22480.60 (moderate-high target position): they are declared victims in reproductive autonomy, but have constrained (not trapped) exit options and some benefit from the coordination function, moving d downward from the trapped baseline. OB-GYN organizations have d \u22480.25 (beneficiary position): they are declared beneficiaries through professional gate-keeping, have arbitrage options (can modify training/scope), moving them toward the beneficiary end of the d scale. Pharmaceutical manufacturers have d \u22480.05 (strong beneficiary): declared primary beneficiary, high arbitrage capacity, capture monopoly rents. The gap between trapped victims (d\u22480.92) and institutional beneficiaries (d\u22480.05) is approximately 1.87 orders of magnitude in experienced directionality, creating the dramatic perspectival gap where the same constraint is snare for one group and rope for another.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating that the 'pure extraction vs coordination' distinction is structural rather than normative. The constraint has genuine coordination function (standardization of safety, evidence-based practice, professional liability protection, supply chain coordination) AND genuine extraction function (market consolidation, cost barriers, specialist gate-keeping, cultural mythology maintenance). The question is not 'which one is real?' but 'how much of each, and distributed to whom?' The beneficiaries (manufacturers, professionals, insurance companies) perceive primarily coordination. The victims (uninsured women, women of color) perceive primarily extraction. Both perceptions are accurate from their structural positions. The mandatrophy resolves by showing that a single structure can simultaneously coordinate for one group and extract from another \u2014 tangled rope is the accurate classification because both functions are genuinely present and actively enforced (manufacturers must maintain quality; women must pay upfront costs). The false-summit mountain perspective (natural biological necessity) is revealed as false because every component (cost barrier, specialist requirement, market duopoly, mythology maintenance) is a policy choice, not a biological fact."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "maternal_mortality_access",
+      "reproductive_autonomy_policy",
+      "healthcare_financing_structural_inequality"
+    ],
+    "dual_formulation_note": "The IUD market capture mechanism decomposes into three structurally distinct constraints: (1) pharmaceutical_market_consolidation (\u03b5\u22480.45, snare dynamics for low-income access), (2) professional_scope_gatekeeping (\u03b5\u22480.35, tangled rope with genuine training coordination + extraction through credential capture), (3) insurance_cost_shifting (\u03b5\u22480.50, snare for uninsured, tangled rope for insured). The unified story presents the integrated mechanism; decomposition reveals distinct \u03b5 values and failure modes. Each component has different resolution pathways: market consolidation requires antitrust intervention, scope gatekeeping requires evidence-based regulation change, cost-shifting requires insurance policy reform."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.3
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "victim_participation_in_justice_proceedings",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "vpjp"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Victim Participation in Justice Proceedings",
+    "topic_domain": "legal/criminal_justice/victim_rights",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_legal_apparatus",
+      "victim_advocacy_organizations"
+    ],
+    "victims": [
+      "crime_victims",
+      "justice_system_legitimacy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Crime Victim",
+      "comment": "PERSPECTIVE 1: THE CRIME VICTIM (SNARE) \u2014 Trapped by legal obligation to participate, emotional investment in case outcome, and lack of alternative justice mechanisms. Bears full cost of participation (retraumatization during testimony, schedule disruption, witness preparation burden) while retaining minimal control over prosecution strategy or outcome. Cannot exit: testimony is often compulsory, victim impact statements are procedurally constrained, and alternative restorative justice mechanisms remain marginal. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Victim Advocate",
+      "comment": "PERSPECTIVE 2: THE VICTIM ADVOCATE (TANGLED ROPE) \u2014 Constrained by resource limitations, professional licensing, and reliance on prosecution infrastructure, but also coordinates genuine support services and exercises meaningful advocacy within the system. Benefits from victim participation structures (advocacy role legitimacy, funding dependent on victim case volume) while also bearing costs (secondary trauma, inadequate resources for full victim support). Significant extraction alongside real coordination function."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State Prosecution",
+      "comment": "PERSPECTIVE 3: THE STATE PROSECUTION (ROPE) \u2014 Benefits substantially from victim participation: credible witnesses increase conviction rates, victim testimony satisfies public legitimacy demands, victim impact statements influence sentencing (expanding prosecution leverage). Experiences the constraint as coordination: victim participation solves the legitimate problem of ensuring witness testimony and establishing harm narrative. Net beneficiary with low friction \u2014 can arbitrage between victim narratives and prosecution objectives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Defense Counsel",
+      "comment": "PERSPECTIVE 4: THE DEFENSE COUNSEL (TANGLED ROPE) \u2014 Constrained by evidentiary rules and cross-examination requirements that limit interaction with victim-witnesses, but also benefits from victim testimony (evidentiary material for defensive strategy, opportunity for credibility challenges). Coordination function: adversarial testing of victim narrative ensures trial reliability. Extraction component: victim testimony can be retraumatizing during cross-examination without sufficient procedural protection. Mixed experience."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Victim Rights Movement",
+      "comment": "PERSPECTIVE 5: THE VICTIM RIGHTS MOVEMENT (PITON) \u2014 Once a genuine reform movement (1980s\u20132000s) creating victim advocacy services and rebalancing courtroom participation, now substantially degraded into theater: 'victim participation' rituals (impact statements, status updates) that provide symbolic inclusion without material change in prosecution strategy or outcome. Victim rights are maintained through institutional inertia and public legitimacy performance rather than functional transformation of the justice system. Theater ratio high because the participatory rights do not translate to decisional power."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Adversarial Natural Law)",
+      "comment": "PERSPECTIVE 6: THE ANALYTICAL OBSERVER / ADVERSARIAL SYSTEM VIEW (MOUNTAIN) \u2014 From a civilizational analytical position, victim participation tension with adversarial due process is inherent to the structure of criminal justice: the right to cross-examine witnesses (necessary for defendant protection) necessarily creates retraumatization risk for victim-witnesses; the state's monopoly on prosecution (necessary to prevent private revenge) necessarily displaces victim agency. The constraint appears as an immutable feature of adversarial systems. However, comparative systems (inquisitorial, restorative justice models) demonstrate that the tension is contingent, not universal. The engine will flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "victim_agency_vs_witness_function",
+      "question": "Can victim participation serve both as witness testimony (extraction mechanism) and as genuine agency in prosecution decisions, or are these structurally incompatible?",
+      "resolution_mechanism": "Comparative analysis of jurisdictions with victim veto power, victim prosecution authority, and victim impact weighting in plea negotiations. Measurement of case outcomes where victim preferences diverged from prosecution strategy.",
+      "impact": "If incompatible: victim participation is inherently tangled_rope/snare with extraction unavoidable. If compatible: the constraint could shift toward pure coordination (rope). Current evidence suggests incompatible due to state monopoly on prosecution.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether victim agency and witness function can coexist or are structurally incompatible"
+    },
+    {
+      "id": "retraumatization_necessity",
+      "question": "Is retraumatization from cross-examination a necessary cost of adversarial due process protection, or could procedural reforms (victim advocates in examination, protective screens, remote testimony) reduce retraumatization without compromising defendant rights?",
+      "resolution_mechanism": "Longitudinal trauma assessment of victims in jurisdictions with vs without protective procedures. International comparison of conviction rates and defendant appeal success in systems with varying victim protection measures.",
+      "impact": "If necessary: suppression (0.68) is justified as coordination overhead. If avoidable: suppression reflects institutional choice rather than structural necessity, shifting classification toward snare (higher \u03c7). Current evidence suggests substantial reduction possible with procedural reform.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether retraumatization is necessary to adversarial due process or procedurally avoidable"
+    },
+    {
+      "id": "victim_rights_functionality_degradation",
+      "question": "Has victim rights legislation created substantive change in prosecution decision-making and case outcomes, or has it degraded into symbolic participation theater while prosecution strategy remains victim-indifferent?",
+      "resolution_mechanism": "Quantitative analysis: correlate victim impact statements with sentencing variation, measure frequency of victim preferences affecting plea negotiations, track prosecution policy changes attributable to victim rights statutes over 20+ years.",
+      "impact": "If substantive: theater_ratio should be lower (0.35\u20130.45), classification shifts toward tangled_rope with real coordination. If degraded: theater_ratio confirmed (0.58+), piton perspective valid, victim rights movement is institutional inertia.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether victim rights legislation created substantive change or degraded to theater"
+    },
+    {
+      "id": "restorative_justice_scalability",
+      "question": "Can restorative justice mechanisms (victim-offender dialogues, community healing circles) scale beyond marginal practice to become primary alternative pathways, or are they structurally limited by victim/offender willingness and community capacity?",
+      "resolution_mechanism": "Analysis of jurisdictions with restorative-first policies (New Zealand, parts of Canada). Measurement of victim satisfaction, recidivism, and system capacity. Assessment of which offense types and victim populations restorative processes serve.",
+      "impact": "If scalable: the scaffold perspective becomes viable (restorative sunset for traditional adversarial participation theater). If structurally limited: victim participation in adversarial proceedings remains the binding constraint, extraction mechanism persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether restorative justice can scale to primary alternative or remains marginal"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Victim participation in justice proceedings sits at the intersection of victim rights advocacy, due process protection, prosecution incentives, and institutional legitimacy. Over the past 40 years (interval 0\u201320), victim participation has evolved from marginal procedural accommodation (victim rights movement begins, 1980s) toward formal statutory rights (victim impact statements, notification procedures, participation consultation) while remaining substantively limited in decision-making authority. The constraint exhibits extraction (prosecution monopoly over victim narratives, retraumatization costs borne by victims) alongside genuine coordination (victim testimony provides evidentiary reliability, victim input can influence sentencing outcomes, advocacy organizations provide support services). The theater ratio has risen over the interval (0.32\u21920.58) reflecting that victim participation structures have become increasingly performative: victims have more 'voice' in procedural stages but less agency in strategic prosecution decisions. The extractiveness has risen (0.28\u21920.52) as prosecution-side benefits (credible witnesses, legitimacy performance, sentencing leverage) have been institutionalized without corresponding victim agency expansion. This pattern is diagnostic of Tangled Rope degrading toward Snare: genuine coordination (victim testimony) becoming asymmetric extraction (victim narrative captured by state apparatus).",
+    "key_agents": [
+      "Crime Victims: Primary victims (powerless/trapped) \u2014 bear participation costs (retraumatization, schedule burden, narrative displacement) with minimal control over case strategy or outcome",
+      "State Prosecution: Primary beneficiary (institutional/arbitrage) \u2014 captures evidentiary material, legitimacy performance, and sentencing leverage from victim participation; low friction",
+      "Defense Counsel: Secondary institutional actor (institutional/constrained) \u2014 both benefits from victim testimony as evidentiary material and faces constraint from victim protection procedures; mixed position",
+      "Victim Advocacy Organizations: Secondary beneficiary (moderate/constrained) \u2014 coordinate support services and exercise advocacy within the system; funding and legitimacy depend on victim case volume",
+      "Victim Rights Movement: Organized reform movement now degraded (organized/constrained) \u2014 maintains procedural rights through inertia; original transformative vision (victim agency in prosecution) largely unrealized",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing adversarial system tensions as immutable when comparative systems demonstrate contingency"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, rising over interval. The constraint extracts victim agency (prosecution strategy determined without victim input), victim emotional labor (retraumatization during cross-examination), and victim narrative control (state frames victim's story for legitimacy purposes). The extraction is not maximal because victim testimony provides genuine evidentiary value and some victim input (impact statements) does influence outcomes. The rise from 0.28 to 0.52 reflects accumulation of procedural rights that lack material decision-making power \u2014 theater grows while coordination mechanisms stagnate. Suppression (0.68): High. Victims are legally obligated to participate (compulsory testimony), face significant retraumatization costs, have no viable exit alternative (alternative justice mechanisms remain marginal), and operate within prosecution-controlled procedural structure. Suppression includes both structural barriers (legal obligation, alternative inadequacy) and internalized factors (victim identity fusion with case outcome, belief that participation is necessary for justice). Theater Ratio (0.58): Moderate-high. Victim rights procedures (impact statements, notification, participation consultation) are substantially performative: they provide symbolic voice without substantive decision-making power. The original reform vision (victim agency in prosecution) has degraded into ritual participation confirming legitimacy. Claimed Type: Tangled Rope. The constraint coordinates genuine functions (victim testimony ensures evidentiary reliability, victim advocacy provides support services) alongside asymmetric extraction (prosecution captures narrative and agency, victims bear retraumatization cost). Requires enforcement (compulsory testimony) and has both beneficiaries (prosecution, advocacy orgs) and victims (crime victims, justice legitimacy).",
+    "directionality_logic": "Crime victims as powerless/trapped agents experience maximum directionality (d\u22480.95), producing high effective extraction \u03c7. Their structural position yields low f(d)\u2192high \u03c7 because they cannot exit and bear full participation costs. State prosecution as institutional/arbitrage agents experience low directionality (d\u22480.10), producing low or negative \u03c7 \u2014 they are net beneficiaries with high exit flexibility. Victim advocates as moderate/constrained agents occupy an intermediate position (d\u22480.55) reflecting mixed beneficiary/victim status \u2014 they benefit from victim case volume but also bear secondary trauma and resource constraints. The perspectival gap between prosecution (rope experience, d\u22480.10, \u03c7 negative) and victim (snare experience, d\u22480.95, \u03c7 high) is maximal, revealing the asymmetric extraction. The piton perspective (organized/constrained) reflects institutional inertia where the victim rights movement has lost transformative function but persists through legitimacy performance.",
+    "perspectival_gap": "Crime victims perceive snare (trapped, high extraction, no exit) while state prosecution perceives rope (coordination problem solved, low friction, beneficiary position). This gap is the constraint's diagnostic signature. Victim advocates perceive tangled_rope (genuine services alongside resource constraints and secondary trauma). The victim rights movement perceives piton (original reform function degraded to theater, maintained by institutional inertia and public legitimacy performance). Defense counsel perceive tangled_rope with the extraction vector reversed \u2014 they benefit from victim testimony (evidentiary material) while also constrained by victim protection procedures. The analytical observer risks perceiving mountain (adversarial tension inherent to justice systems) but comparative analysis reveals contingency: inquisitorial and restorative systems show different victim participation structures with different extraction profiles. The false summit reveals that 'inherent to adversarial systems' naturalizes institutional choices.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that victim participation cannot be reduced to a single type. The state prosecution's rope perspective (coordination function: witness testimony reliability) is structurally real but incomplete \u2014 it describes only the prosecution's structural position. The victim's snare perspective (high extraction, no exit) is also structurally real, describing what the same constraint looks like from below. The tangled_rope classification is the analytical resolution: the constraint does coordinate (victim testimony improves evidentiary reliability) while also extracting (prosecution controls victim narrative, victims bear retraumatization cost). The theater ratio rising over time (0.32\u21920.58) while extractiveness also rises (0.28\u21920.52) indicates Goodhart drift: procedural rights (victim notifications, impact statements) have become proxy measures of victim participation without reflecting actual agency expansion. This pattern distinguishes a genuine tangled_rope (where coordination and extraction remain in structural tension) from a degraded institutional ritual (piton) where procedural form persists while functional participation has atrophied."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "prosecutorial_discretion",
+      "victim_compensation_systems",
+      "restorative_justice_scaling"
+    ],
+    "dual_formulation_note": "Victim participation in adversarial proceedings is upstream of specific prosecution outcomes but represents a distinct structural constraint. Related constraints: prosecutorial discretion (whether state uses victim input in charging decisions), victim compensation systems (parallel extraction mechanism addressing victim financial harm), restorative justice alternatives (downstream constraint representing potential sunset mechanism if scaled). The victim participation constraint operates at the interface between the state's prosecution monopoly and victims' agency demands."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

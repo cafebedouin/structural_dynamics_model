@@ -1,0 +1,216 @@
+{
+  "header": {
+    "constraint_id": "circuit_breaker_theater",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cbt"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.76,
+    "claimed_type": "piton",
+    "human_readable": "Circuit Breaker Theater in Financial Markets",
+    "topic_domain": "financial_markets/regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_frequency_traders",
+      "market_makers",
+      "index_funds"
+    ],
+    "victims": [
+      "retail_investors",
+      "price_discovery_mechanism",
+      "market_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Retail Investor",
+      "comment": "PERSPECTIVE 1: RETAIL INVESTOR (SNARE) \u2014 Circuit breakers create false security while maintaining structural vulnerability. Retail investors cannot exit the market or organize collective action. During circuit breaker halts, they are locked into positions with no ability to rebalance. The mechanism extracts through liquidity withdrawal and information asymmetry that persists through the halt. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Market Maker",
+      "comment": "PERSPECTIVE 2: MARKET MAKER (ROPE) \u2014 Benefits from circuit breaker pauses. HFT and market makers use halt periods to reposition, recalibrate algorithms, and prepare for resumed trading at advantageous quotes. The mechanism coordinates their participation while subsidizing their position. Experiences the constraint as beneficial coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulator (SEC/FINRA)",
+      "comment": "PERSPECTIVE 3: REGULATOR (TANGLED ROPE) \u2014 Faces genuine coordination problem (preventing cascade failures) alongside asymmetric extraction (regulators sacrifice price discovery and liquidity to contain volatility). Circuit breakers enforce market closure, enabling coordination of systemic risk management, but this enforcement extracts from continuous market function and retail access. Active enforcement required; both beneficiary and victim of the mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Automated Trading Complex",
+      "comment": "PERSPECTIVE 4: AUTOMATED TRADING COMPLEX (TANGLED ROPE) \u2014 Benefits from coordinated halt periods (time to recalibrate) and suffers from restrictions on algorithmic behavior. Organized enough to exit by moving to alternative venues (crypto, international markets, dark pools) but constrained by regulatory geography. Experiences mixed extraction and coordination benefit."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Market Surveillance Infrastructure",
+      "comment": "PERSPECTIVE 5: MARKET SURVEILLANCE INFRASTRUCTURE (PITON) \u2014 Circuit breaker halts are largely theatrical risk management. Surveillance systems that trigger halts persist through institutional inertia despite low functional effectiveness. Modern market stress (algorithmic cascade, liquidity evaporation) operates faster than circuit breaker response times. The mechanism is maintained because it signals regulatory competence, not because it prevents systemic failures. Theater ratio >= 0.70 flags piton classification."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Circuit Breaker Sunset Vision",
+      "comment": "PERSPECTIVE 6: CIRCUIT BREAKER SUNSET VISION (SCAFFOLD) \u2014 Alternative market design (decentralized exchanges, continuous price-setting mechanisms, retail-protective protocols) could replace circuit breaker theater with genuine liquidity preservation. Powerful actors (large funds, central banks) see a path to sunset the mechanism. However, the mechanism persists because institutional momentum and regulatory fear of 'do nothing' preserve the status quo. Has suppression but declining credibility as alternatives mature."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (FALSE SUMMIT) \u2014 From a civilizational timescale, volatility spikes appear inherent to market function. But the structural data reveals this as naturalization: circuit breakers are a contingent regulatory choice, not a law of markets. Alternative designs (maker-taker fee elimination, tick-size standardization, volatility derivatives) address cascade risk differently. The mountain classification is a false summit that should trigger oracle gap detection."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "halt_effectiveness_empirical",
+      "question": "Do circuit breaker halts actually prevent cascade failures or merely delay/redistribute them?",
+      "resolution_mechanism": "Comparative analysis of market stress events with vs. without halts; measurement of price discovery loss during halt periods; tracking of volatility resumption immediately after restart",
+      "impact": "If halts prevent cascades: snare classification weakens, rope strengthens. If halts delay/redistribute: snare classification confirmed, piton theater rationale confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether circuit breaker halts prevent or merely delay cascade failures"
+    },
+    {
+      "id": "information_asymmetry_preservation",
+      "question": "Do circuit breaker halts increase or decrease information asymmetry between retail and HFT participants?",
+      "resolution_mechanism": "Bid-ask spread analysis before, during (theoretical), and after halts; comparison of position-building by HFTs during rumored vs. actual halts; retail order flow patterns around halt events",
+      "impact": "If asymmetry increases: extraction mechanism confirmed. If asymmetry decreases: coordination mechanism justified. If neutral: theater mechanism (no real effect) confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Effect of halts on retail-HFT information asymmetry"
+    },
+    {
+      "id": "alternative_mechanism_feasibility",
+      "question": "Are price-floor mechanisms (minimum spreads, tick-size rules, maker-taker fee restructuring) technically and politically feasible as circuit breaker replacements?",
+      "resolution_mechanism": "Pilot programs with alternative mechanisms; regulatory impact analysis; international comparison of markets with different halt policies",
+      "impact": "If feasible and superior: scaffold sunset is real, piton classification confirmed (theater persists despite better alternatives). If infeasible: circuit breaker theater is rational default, snare classification weakens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of alternative market design mechanisms"
+    },
+    {
+      "id": "cascade_speed_vs_halt_latency",
+      "question": "Do algorithmic cascades develop faster than circuit breaker halt mechanisms can respond?",
+      "resolution_mechanism": "Time-series analysis of market microstructure during stress events; latency measurement of halt trigger to market closure; comparison with documented flash crash timelines",
+      "impact": "If cascades are faster: circuit breakers miss most cascades, theater classification confirmed. If latency is comparable: mechanism has functional role, piton classification weakens.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Relative speed of algorithmic cascades vs. circuit breaker response"
+    },
+    {
+      "id": "regulatory_fear_as_substitution",
+      "question": "Is circuit breaker persistence driven by genuine risk management or by regulatory fear of being seen to 'do nothing'?",
+      "resolution_mechanism": "Qualitative analysis of regulatory decisions during market stress; comparison of halt frequency with market severity; interviews with SEC/FINRA risk management officials",
+      "impact": "If fear-driven: piton classification confirmed, extractiveness can be revised downward (theater mechanism, not extraction). If risk-driven: snare mechanism justified, extractiveness confirmed.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether circuit breaker persistence is driven by regulatory fear or genuine risk management"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Circuit breaker mechanisms are automatic market halts triggered by price movements beyond defined thresholds. Implemented globally following the 1987 crash and refined after subsequent stress events (2010 flash crash, 2020 March volatility), they exemplify theater in financial regulation: performative risk management that signals regulatory competence while leaving underlying vulnerabilities unaddressed. The mechanism creates a two-tier market structure where high-frequency traders and market makers benefit from halt periods to reposition while retail investors are locked into vulnerable positions. The constraint's theater ratio has increased from 0.58 to 0.76 over the interval as algorithmic trading has accelerated past circuit breaker response times, making the mechanism increasingly performative. The base extractiveness has risen correspondingly as the gap between the mechanism's stated purpose (preventing cascades) and its actual function (redistributing volatility) has widened.",
+    "key_agents": [
+      "Retail Investors: Primary victims (powerless/trapped) \u2014 locked into positions during halts with no rebalancing ability; experience maximum extraction",
+      "High-Frequency Traders: Primary beneficiaries (institutional/arbitrage) \u2014 use halt periods to reposition and recalibrate algorithms at advantageous quotes",
+      "Market Makers: Secondary beneficiaries (institutional/arbitrage) \u2014 benefit from coordinated liquidity withdrawal and position-building during halts",
+      "SEC/FINRA Regulators: Hybrid actors (moderate/constrained) \u2014 face genuine coordination problem (systemic risk) alongside extraction mechanism (price discovery loss)",
+      "Automated Trading Complex: Organized victims (organized/mobile) \u2014 constrained by regulatory restrictions but mobile enough to exit to alternative venues",
+      "Market Surveillance Infrastructure: Institutional piton (institutional/arbitrage) \u2014 maintains performative halt mechanism through regulatory inertia despite low functional effectiveness",
+      "Alternative Market Designers: Powerful actors pushing sunset (powerful/constrained) \u2014 see decentralized exchanges and continuous mechanisms as superior but constrained by regulatory geography"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The mechanism creates sustained information asymmetry and liquidity withdrawal that extracts from retail participants, but extraction is not maximal (0.75+) because some coordination function exists \u2014 regulators genuinely face cascade risk and halts do provide pause time for systemic stabilization. However, the extraction has increased over time as algorithmic cascade speed has exceeded halt response latency. Suppression (0.65): High. Retail investors face substantial barriers to exiting this dynamic: market participation is necessary for long-term wealth building, alternative venues (crypto, international markets) have their own risks, collective action against the mechanism is infeasible. Regulators cannot exit without facing political cost. Theater ratio (0.76): Very high and rising. Circuit breaker halts operate faster than algorithmic cascades that dominate modern market stress. The 2020 March volatility event showed that circuit breakers trigger but markets repriced within minutes of restart \u2014 the halt provided no stabilization benefit beyond the perception of control. Modern surveillance would better prevent cascades through intra-day circuit-breaker-free mechanisms (volatility derivatives, maker-taker fee restructuring, tick-size adjustments). The theater component reflects regulatory signaling (we have risk management in place) rather than functional risk mitigation.",
+    "perspectival_gap": "This constraint demonstrates the theater mechanism clearly. Retail investors see pure extraction (Snare) \u2014 they bear costs with no benefits. Market makers see pure coordination (Rope) \u2014 the halt periods provide strategic advantage within a system they help stabilize. Regulators see a necessary evil (Tangled Rope) \u2014 genuine coordination problem alongside extraction from price discovery. The surveillance infrastructure sees a degraded mechanism (Piton) \u2014 maintained through inertia despite alternatives. The analytical observer risks naturalizing regulatory choice as market law (Mountain), missing the contingent institutional design choices (halt thresholds, trigger frequencies, halt durations) that could be redesigned. The perspectival gap reveals that circuit breaker theater serves regulatory legitimacy more than market stability.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from structural position. Retail investors (powerless + trapped) experience d \u2248 0.95 \u2014 maximum target position. HFT/market makers (institutional + arbitrage) experience d \u2248 0.05 \u2014 full beneficiary position. Regulators (moderate + constrained) experience d \u2248 0.55 \u2014 symmetric cost-benefit. The surveillance infrastructure (institutional + arbitrage) has d \u2248 0.10 \u2014 benefits from institutional legitimacy. These d values produce the perspectival gap: beneficiaries experience low \u03c7 (rope), targets experience high \u03c7 (snare), regulators experience moderate \u03c7 (tangled rope). The piton classification derives from theater_ratio >= 0.70 rather than from high experienced extraction.",
+    "mandatrophy_analysis": "PITON AS RESOLVED MANDATROPHY: This constraint demonstrates how a mechanism can be simultaneously a functional coordination tool (regulators preventing cascade) and a theater mechanism (retail extraction without risk mitigation). The mandatrophy resolves through the piton classification: circuit breaker halts provide genuine but modest coordination benefit (preventing instant cascade) while operating primarily as institutional ritual (signaling regulatory control). The theater ratio (0.76) indicates that most of the mechanism's value is performative rather than functional. The rising theater ratio over time (0.58 \u2192 0.76) shows that the mechanism's functional component has declined as algorithmic speed has exceeded response latency. The mechanism persists because regulators cannot exit without appearing to 'do nothing' and because retail participants cannot organize collective exit. The constraint is not a pure snare (some coordination exists) nor a pure rope (substantial extraction and theater occur), but a piton \u2014 a former coordination tool (post-1987 crisis, functional halt mechanism) that has degraded into theater as market structure has evolved faster than regulatory response."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "high_frequency_trading_information_asymmetry",
+      "volatility_clustering_measurement"
+    ],
+    "dual_formulation_note": "Circuit breaker theater is downstream of HFT infrastructure development (which created the cascade risk that breakers attempt to manage) and upstream of market-wide volatility dynamics. The constraint family includes: (1) algorithmic cascade risk (\u03b5 \u2248 0.72, mountain), (2) circuit breaker theater (\u03b5 \u2248 0.58, piton), and (3) alternative market design feasibility (\u03b5 \u2248 0.35, scaffold). Each has distinct \u03b5 values reflecting different observables: cascade risk is about phase-space structure; breaker theater is about regulatory response timing; alternative design is about political-technical feasibility."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.48
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "moderate-high",
+    "hypothesis": "piton",
+    "downstream_of": [
+      "algorithmic_cascade_risk"
+    ]
+  }
+}

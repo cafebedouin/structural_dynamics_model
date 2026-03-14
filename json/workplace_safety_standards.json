@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "workplace_safety_standards",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ws"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Workplace Safety Standards as Coordination and Extraction",
+    "topic_domain": "occupational_health_and_safety/labor_regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_employers",
+      "regulatory_agencies",
+      "safety_compliance_vendors"
+    ],
+    "victims": [
+      "worker_injury_prevention",
+      "small_employers",
+      "precarious_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Precarious Worker",
+      "comment": "PERSPECTIVE 1: PRECARIOUS WORKER (SNARE) \u2014 Trapped by economic dependency and immigration status; cannot exit workplace despite safety violations. Suppression is structural: deportation threat, poverty, lack of alternative employment. Cannot report injuries without risking termination. Bears full extraction cost with no exit option."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Small Employer",
+      "comment": "PERSPECTIVE 2: SMALL EMPLOYER (TANGLED ROPE) \u2014 Constrained by compliance costs, but also benefits from safety standards that protect against liability and worker turnover. Standards coordinate safety information (genuine benefit) while imposing asymmetric costs on smaller firms compared to large ones. Partial agency but significant extraction through regulatory burden."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Large Multinational Employer",
+      "comment": "PERSPECTIVE 3: LARGE MULTINATIONAL EMPLOYER (ROPE) \u2014 Can arbitrage across jurisdictions; compliance costs are negligible relative to operational scale. Standards serve coordination function: establish baseline norms, reduce liability exposure, level competitive playing field against smaller firms with worse practices. Net beneficiary from standardization."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Workers' Union",
+      "comment": "PERSPECTIVE 4: WORKERS' UNION (TANGLED ROPE) \u2014 Organized agents with constrained but not zero exit options. Standards provide genuine coordination function (shared safety norms, injury reporting mechanisms) and extraction function (unions capture enforcement legitimacy but lack resources to monitor all workplaces). Perspectival gap: union sees standards as incomplete protection; management sees them as sufficient regulation."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Occupational Health Movement",
+      "comment": "PERSPECTIVE 5: OCCUPATIONAL HEALTH MOVEMENT (SCAFFOLD) \u2014 Organized agents (worker advocates, epidemiologists, injury prevention researchers) view safety standards as a temporary institutional form. Sunset logic: if worker power, inspection capacity, and injury prevention science matured, mandatory standards could transition to industry self-regulation or worker-controlled monitoring. Current theatrical compliance (audits, certifications) would be replaced by direct outcome measurement (injury rates, worker satisfaction). Low effective extraction because the movement has agency and sees exit path."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Safety Compliance Industry",
+      "comment": "PERSPECTIVE 6: SAFETY COMPLIANCE INDUSTRY (PITON) \u2014 Regulatory consultants, certification bodies, safety audit firms, compliance software vendors. Theater ratio is high (0.58): much of the compliance apparatus is performative \u2014 checkboxes on audits, certifications renewed annually without measurable injury reduction, training videos watched but not retained. The industry benefits from theatrical maintenance: expanding regulatory complexity sustains demand for compliance services. Degraded from genuine safety function to bureaucratic ritual."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational perspective, workplace injury is inherent to industrial production; prevention lag is a natural constraint on human capacity. Some injury rate is 'inevitable' given current technology and human performance limits. This view naturalizes what is actually an institutional allocation of risk. The engine's false summit detector will flag this as misclassification \u2014 the constraint is not immutable law but a contingent distributional choice about who bears safety costs."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "injury_causation_attribution",
+      "question": "Are workplace injuries caused by worker negligence (making standards a coordination aid) or by employer cost-cutting (making standards an extraction defense)?",
+      "resolution_mechanism": "Longitudinal injury analysis by firm size, compliance investment, and worker training; correlation between injury rates and worker agency/autonomy measures; comparison of preventable vs inherent injury types",
+      "impact": "If negligence-driven: standards are primarily coordination (Rope from more perspectives). If cost-cutting-driven: standards are primarily a cover for extraction (Snare from more perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether injuries result from worker behavior vs employer choices"
+    },
+    {
+      "id": "compliance_theater_effectiveness",
+      "question": "Do compliance audits, certifications, and training programs actually reduce injury rates, or do they create the appearance of safety while injuries persist unchanged?",
+      "resolution_mechanism": "Meta-analysis of workplace safety interventions; comparison of injury trends in industries with different compliance theater levels; worker experience surveys about training effectiveness and safety culture",
+      "impact": "If effective: compliance apparatus has genuine function (theater_ratio should be lower, ~0.35). If ineffective: theater_ratio of 0.58 understates performativity, suggesting Piton may underestimate institutional degradation.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether compliance apparatus reduces injuries or merely appears to"
+    },
+    {
+      "id": "worker_power_as_exit_option",
+      "question": "Can workers realistically exercise voice (reporting hazards, union organization) as an exit-equivalent option, or are voice mechanisms themselves suppressed?",
+      "resolution_mechanism": "Retaliation rates for injury reporting and union activity; union density and density trends in high-hazard sectors; comparative analysis of injury rates in unionized vs non-unionized workplaces; worker surveys about perceived safety reporting options",
+      "impact": "If workers have voice: exit_options for precarious workers might upgrade from trapped to constrained. If voice is suppressed: trapped classification confirmed, and suppression value may be understated at 0.52.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether workers can use voice as functional alternative to exit"
+    },
+    {
+      "id": "regulatory_capture_by_industry",
+      "question": "Do large employers capture the regulatory process to set standards that benefit themselves while disadvantaging smaller competitors and precarious workers?",
+      "resolution_mechanism": "Analysis of standard-setting participation by firm size; cost-benefit analysis of standards by firm size and worker category; correlation between regulatory complexity and small firm market exit rates; lobbying expenditure and standard language influence",
+      "impact": "If captured: large employer perspective (rope, arbitrage) reveals extractive directionality masked as coordination. Would shift directionality_overrides for large employers toward higher d values, reducing their effective extraction below beneficiary baseline.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether standards reflect industry capture masking extraction as coordination"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "Workplace safety standards represent a constraint that simultaneously coordinates worker protection and extracts value from smaller employers and precarious workers. The constraint operates across institutional, organizational, and individual scales: it establishes baseline safety norms (genuine coordination function), but it also concentrates compliance burden on smaller firms while large multinational employers can easily absorb costs and arbitrage across jurisdictions. The theater ratio has increased from 0.32 to 0.58 over the interval, indicating that the apparatus of compliance (audits, certifications, training programs) has become progressively more performative relative to actual injury prevention. Extractiveness has risen from 0.18 to 0.38, reflecting accumulating compliance costs and regulatory complexity layered onto the original safety function. Precarious workers \u2014 those with trapped exit options \u2014 experience the constraint as pure extraction with no coordination benefit: they cannot negotiate safety improvements, cannot exit unsafe workplaces without economic catastrophe, and cannot report hazards without risking deportation or termination. In contrast, large employers experience the same standards as coordination: they establish shared baseline norms, reduce liability exposure, and level competitive dynamics against smaller competitors with worse safety practices. The constraint is thus an exemplar of how the same institutional structure produces radically different classifications depending on structural position.",
+    "key_agents": [
+      "Precarious Workers: Primary victims (powerless/trapped) \u2014 economic dependency and immigration status prevent exit; cannot use voice (reporting) without retaliation risk; bear injury costs with no control over workplace conditions",
+      "Small Employers: Secondary victims (moderate/constrained) \u2014 face significant compliance costs relative to revenue; cannot arbitrage across jurisdictions; benefit modestly from coordination function but extraction load exceeds benefit",
+      "Large Multinational Employers: Primary beneficiaries (institutional/arbitrage) \u2014 compliance costs negligible at scale; can arbitrage across regulatory jurisdictions; benefit from standards that establish competitive baselines and reduce liability; see constraint primarily as coordination",
+      "Workers' Unions: Organized victims-turned-advocates (organized/constrained) \u2014 capture enforcement legitimacy but lack resources to monitor compliance; benefit from standards as coordination mechanism but constrained by union density decline and retaliation against organizing",
+      "Occupational Health Movement: Organized advocates (organized/constrained) \u2014 see standards as temporary institutional form with sunset logic toward worker-controlled monitoring and outcome-based measurement; have exit vision but constrained by political power",
+      "Safety Compliance Industry: Beneficiaries-as-theater-maintainers (institutional/arbitrage) \u2014 vendors, consultants, certification bodies benefit from regulatory complexity; maintain theater through expanding compliance apparatus; degraded function (piton classification)",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks false summit classification (naturalizing institutional distribution of risk as inherent to industrial production)"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint extracts from smaller employers and precarious workers through compliance costs and risk concentration, but it is not as severe as a snare would be (\u03b5 \u2265 0.46). The extractiveness has increased over the interval as regulatory complexity accumulated and as small employers' capacity to comply has been tested by recession cycles. The rise from 0.18 to 0.38 reflects three mechanisms: (1) baseline standard proliferation (OSHA standards have expanded from ~50 in 1970 to >600), (2) compliance infrastructure growth (auditing, certification, consulting), and (3) consolidation of employer market power (large firms can absorb costs, small firms exit). Suppression (0.52): Moderate-high. Precarious workers face structural barriers to exit (economic dependency, immigration status, lack of alternative employment) and voice barriers (retaliation risk for injury reporting, union organizing suppression). Small employers face regulatory barriers (compliance cost, inspection burden). However, suppression is not total \u2014 some voice mechanisms exist (OSHA complaints, union organizing, regulatory appeal), some workers have geographic or occupational mobility, and some small employers succeed by specializing in safety-differentiated markets. Theater ratio (0.58): Moderate-high. The apparatus of workplace safety standards has become increasingly performative: safety training often does not reduce injury rates significantly; certification audits are checkboxes that employers hire consultants to pass; injuries are undercounted and underreported due to employer incentives to hide incidents. But theater is not complete \u2014 some standards (lockout/tagout procedures, hard-hat requirements) have direct mechanical safety benefits; some injury prevention is real. The theater_ratio rise from 0.32 to 0.58 reflects the accumulation of compliance ritual without corresponding injury rate improvements in many sectors.",
+    "directionality_logic": "Directionality (d) is determined by the agent's relationship to the extraction flow and their exit options. Precarious workers have high d (~0.95): full targets of extraction, trapped exit, victim status. Small employers have moderate d (~0.65): constrained exit, some victim status (compliance burden) but also some beneficiary status (standards reduce liability). Large employers have low d (~0.15): beneficiary status, arbitrage exit, institutional power. The sigmoid f(d) amplifies the extraction experienced by trapped agents (f(0.95) \u2248 1.42) and dampens it for beneficiaries (f(0.15) \u2248 -0.01). The organizational perspective shows how the same regulatory constraint produces opposing directionalities: the large employer sees it flowing toward them as coordination benefit, the small employer sees it flowing away from them as compliance burden. This directionality gap is the diagnostic signature of a tangled rope \u2014 real coordination function (standards do coordinate safety norms and liability) combined with asymmetric extraction (burden falls disproportionately on smaller and more vulnerable agents).",
+    "perspectival_gap": "The precarious worker sees a snare: economic trap + safety hazard + suppression of voice = pure extraction. The small employer sees tangled rope: coordination benefit (liability reduction, competitive leveling) mixed with extraction burden (compliance costs). The large employer sees rope: coordination function, modest cost, net benefit from competitive advantage. The union sees tangled rope: genuine coordination (shared norms, injury reporting channels) but incomplete enforcement (under-resourcing, density decline, retaliation). The compliance industry sees piton: degraded function (audits are largely theatrical) but maintained through regulatory expansion. The occupational health movement sees scaffold: current standards are temporary institutional form that will sunset as worker power, inspection capacity, and injury prevention science mature. The civilizational observer risks false summit (naturalizing institutional risk allocation as inherent to production). Each perspective is structurally legitimate given the agent's position; the perspectival gap reveals the constraint's mixed nature.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The mandatrophy is resolved by recognizing that workplace safety standards have BOTH a genuine coordination function AND asymmetric extraction. Coordination function: standards establish shared safety baselines, enable communication about hazards, reduce liability exposure, and level competitive dynamics among employers. This is real and valuable \u2014 it solves a coordination problem that employers, workers, and regulators all face. Asymmetric extraction: the compliance burden falls disproportionately on smaller employers and precarious workers who have fewer resources to absorb costs and fewer options to exit. Large employers can arbitrage across jurisdictions and amortize compliance costs; precarious workers cannot exit and cannot voice concerns. The theater ratio indicates that the apparatus of compliance has become partially performative (audits, training, certifications that don't correlate with injury reduction), which suggests the coordination function is degrading while extraction persists. This is the classic Tangled Rope trajectory: as institutions age, coordination mechanisms degrade but extraction mechanisms persist through inertia and regulatory capture. The mandatrophy reveals that calling this 'safety standards' (coordination framing) or 'regulatory burden' (extraction framing) are both partial truths. The full structure is coordination with an extraction overlay that concentrates costs on the least-resourced agents."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "labor_market_stratification",
+      "immigrant_worker_precarity",
+      "union_density_decline"
+    ],
+    "dual_formulation_note": "Workplace safety standards are upstream of labor market stratification (standards contribute to stratification by concentrating compliance burden on small employers and precarious workers) and immigrant worker precarity (standards become enforcement mechanism for immigration status when injury reporting is coupled with workplace documentation checks). The union density decline constraint shares causality \u2014 retaliation against union organizing is often framed as safety compliance issue."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

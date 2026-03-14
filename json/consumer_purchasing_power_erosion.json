@@ -1,0 +1,223 @@
+{
+  "header": {
+    "constraint_id": "consumer_purchasing_power_erosion",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "powe"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Consumer Purchasing Power Erosion Through Inflation and Wage Lag",
+    "topic_domain": "economic/labor/monetary_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "asset_holders",
+      "financial_institutions",
+      "fixed_rate_debt_issuers"
+    ],
+    "victims": [
+      "wage_earners",
+      "savers",
+      "fixed_income_recipients"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Wage Earner",
+      "comment": "PERSPECTIVE 1: WAGE EARNER (SNARE) \u2014 Trapped in labor market with nominal wages rising slower than inflation. No exit from the constraint: must participate in economy at depreciating purchasing power. Real wages decline structurally; cannot arbitrage or escape through mobility. Suppression mechanisms include: labor market slack, wage stickiness, organized labor decline, gig economy casualization. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Fixed-Income Retiree",
+      "comment": "PERSPECTIVE 2: FIXED-INCOME RETIREE (SNARE) \u2014 Purchasing power erodes on fixed pensions and fixed savings with no labor income buffer. Cannot re-enter labor market for cost reasons. Trapped by biological constraints (age, health) and contractual constraints (fixed pension formulas). Inflation directly subtracts from livable standard. Maximum suppression and extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Service Worker",
+      "comment": "PERSPECTIVE 3: SERVICE WORKER (TANGLED ROPE) \u2014 Constrained but not trapped. Can shift between employers, negotiate raises, or move to different sectors \u2014 but at significant cost (job search, retraining, relocation). Experiences both coordination (labor market enables income generation) and extraction (nominal wage growth lags inflation). Some agency but substantial barriers. Real purchasing power declines modestly despite nominal mobility."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Commercial Banks and Financial Institutions",
+      "comment": "PERSPECTIVE 4: FINANCIAL INSTITUTIONS (ROPE) \u2014 Benefit from controlled inflation via: debt issuance at fixed rates that erode in real terms, higher spreads on lending, and portfolio rebalancing into equities. The constraint is coordination (monetary policy, inflation targeting) that shifts wealth toward financial sector. Institutions can arbitrage between inflation expectations and actual rates. Net beneficiary experiencing the constraint as enabling mechanism."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Asset Holders and Equity Investors",
+      "comment": "PERSPECTIVE 5: ASSET HOLDERS (ROPE) \u2014 Purchasing power erosion in currency drives demand for real assets: equities, real estate, commodities. Asset holders benefit from inflation through: nominal appreciation of holdings, leverage on borrowed money (debt erodes), and portfolio rebalancing. Can arbitrage between inflation and returns. Experience the constraint as pure coordination mechanism enabling wealth transfer. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Labor Unions and Organized Labor",
+      "comment": "PERSPECTIVE 6: ORGANIZED LABOR (TANGLED ROPE) \u2014 Has some agency through collective negotiation (cost of exit: strikes, credible threat power) but faces structural constraints: automation, globalization, deunionization, gig economy shift. Can achieve some wage coordination but cannot prevent overall trend. Experiences both coordination (collective bargaining) and extraction (structural real wage lag). Suppression through legal/political barriers to unionization."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Central Banking Authority",
+      "comment": "PERSPECTIVE 7: CENTRAL BANKING AUTHORITY (PITON) \u2014 Maintains inflation targeting regime nominally as price stability mechanism, but institutional function has degraded. Theater: inflation framed as exogenous or temporary; actual extractive function (wealth redistribution toward asset holders) treated as side effect. Central bank sees itself as solving coordination problem (price stability) when structural role is enabling extraction. Institutional inertia maintains framework despite functional degradation. Theater ratio high."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Skilled Knowledge Workers",
+      "comment": "PERSPECTIVE 8: SKILLED KNOWLEDGE WORKERS (TANGLED ROPE) \u2014 Mobile labor with exit options: international relocation, career switching, equity compensation. Nominal wage growth closer to inflation for top earners. But still experience modest real wage lag and asset inflation squeeze (housing costs, education costs). Some coordination benefit from knowledge economy participation, but extraction through asset price inflation outpacing wage inflation. Moderate experienced extraction."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 9: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From universal perspective, some erosion of purchasing power is inevitable consequence of fiat currency systems: if currency is not commodity-backed, nominal expansion must occur, and real purchasing power cannot be preserved for all agents simultaneously. This perspective sees the constraint as immutable law of monetary systems. However, structural data contradicts mountain classification \u2014 the analytical observer risks naturalizing a policy choice (inflation targeting, unequal distribution of newly created currency) as inherent to currency itself."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "inflation_measurement_ambiguity",
+      "question": "Does official inflation measurement (CPI basket) accurately capture consumption patterns of wage earners versus asset holders?",
+      "resolution_mechanism": "Comparison of inflation impact across income deciles using granular expenditure data; differential inflation indices by consumption category",
+      "impact": "If official CPI understates inflation for wage earners: actual extractiveness is higher than measured (\u03b5 should increase 0.05-0.10). If CPI is accurate: the constraint's extraction rate is measured correctly.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "CPI measurement bias across income groups"
+    },
+    {
+      "id": "wage_lag_structural_versus_cyclical",
+      "question": "Is wage lag relative to inflation a structural feature of labor market power imbalance or a cyclical consequence of demand shocks and central bank policy?",
+      "resolution_mechanism": "Time-series decomposition of wage-inflation gap; comparison of wage dynamics across tight vs slack labor markets; policy counterfactual analysis",
+      "impact": "If structural: wage earners cannot escape extraction even at full employment (suppression \u2265 0.65). If cyclical: constraint would classify as rope during full-employment periods (suppression drops, extraction shifts to coordination).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether wage lag is structural or cyclical"
+    },
+    {
+      "id": "asset_appreciation_substitutability",
+      "question": "Can wage earners realistically substitute equity/real asset appreciation for wage income to maintain purchasing power, or does asset appreciation primarily benefit existing asset holders?",
+      "resolution_mechanism": "Wealth distribution dynamics; comparison of asset returns across income deciles; analysis of who captures asset appreciation gains",
+      "impact": "If substitutable: rope classification for wage earners widens (they can arbitrage into assets). If not: snare classification confirmed (trapped in nominal wages while wealth redistribution occurs through assets).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether wage earners can access asset appreciation as substitute"
+    },
+    {
+      "id": "monetary_policy_causal_attribution",
+      "question": "What proportion of purchasing power erosion is attributable to central bank monetary expansion versus supply shocks, globalization, productivity growth mismatch, or labor market deunionization?",
+      "resolution_mechanism": "VAR decomposition of inflation; international comparison of wage dynamics in different monetary regimes; historical analysis of inflation periods with different causal drivers",
+      "impact": "If monetary expansion dominates (>50%): central bank authority's piton classification is accurate (institutional function is maintaining extractive framework). If supply shocks dominate: constraint is less institutional, more exogenous (partial mountain classification warranted).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal attribution of purchasing power erosion"
+    },
+    {
+      "id": "policy_transmission_mechanism_opacity",
+      "question": "Do wage earners understand that inflation erodes their purchasing power intentionally through monetary policy, or is the mechanism treated as exogenous market force?",
+      "resolution_mechanism": "Survey analysis of public understanding of monetary transmission; media discourse analysis on inflation attribution; comparison of wage negotiations in periods of recognized vs unrecognized monetary expansion",
+      "impact": "If mechanism is opaque: suppression is higher (agents cannot organize resistance) and theater ratio is higher (institutional narrative obscures causal structure). If transparent: agents can coordinate for cost-of-living adjustments, reducing suppression.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Public understanding of monetary transmission to inflation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Consumer purchasing power erosion represents a structural extraction mechanism embedded in modern monetary policy. When inflation outpaces nominal wage growth, real purchasing power declines for wage earners while asset holders benefit from nominal appreciation and inflation-induced demand for real assets. The constraint operates through: (1) monetary expansion creating new currency that enters the economy unequally (asset markets and financial institutions first, wage earners last if at all), (2) suppression of wage growth through labor market slack, unionization decline, and structural unemployment, and (3) theater that frames inflation as exogenous or temporary rather than as policy-driven wealth redistribution. The constraint exhibits all six DR types depending on the observer's structural position. The wage earner trapped without exit sees a snare. The central bank authority sees its inflation-targeting framework as coordination mechanism for price stability, but the engine's false summit detector reveals this as naturalization of a policy choice. Asset holders experience pure coordination and benefit extraction. Organized labor experiences mixed coordination (collective wage setting) and extraction (structural lag). The extractiveness trend (0.35 \u2192 0.58) reflects that inflation acceleration over the measurement interval outpaced wage acceleration, progressively tightening the trap for powerless agents.",
+    "key_agents": [
+      "Wage Earners: Primary victim (powerless/trapped) \u2014 nominal wages lag inflation; no exit from labor market participation",
+      "Fixed-Income Retirees: Primary victim (powerless/trapped) \u2014 pension erosion; cannot re-enter labor market",
+      "Asset Holders and Equity Investors: Primary beneficiary (institutional/arbitrage) \u2014 inflation drives real asset appreciation and nominal leverage benefits",
+      "Commercial Banks and Financial Institutions: Primary beneficiary (institutional/arbitrage) \u2014 fixed-rate debt erodes, spreads widen, portfolio rebalancing opportunities",
+      "Labor Unions and Organized Labor: Secondary actor (organized/constrained) \u2014 can negotiate collective wage adjustments but face structural deunionization and automation pressures",
+      "Skilled Knowledge Workers: Secondary beneficiary (powerful/mobile) \u2014 wages closer to inflation; can arbitrage internationally; still face asset price inflation squeeze",
+      "Central Banking Authority: Institutional actor (institutional/arbitrage) \u2014 maintains inflation-targeting framework that operationally enables wealth redistribution",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing fiat currency monetary expansion as inevitable rather than policy choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts from wage earners and fixed-income recipients through purchasing power loss while benefiting asset holders. The mechanism is not coercive monopoly (like snares typically are) but rather asymmetric distribution of newly created currency and structural labor market power imbalance. Extractiveness increased over the measurement interval as inflation accelerated (2021-2024 period), outpacing nominal wage growth even in tight labor markets. Suppression (0.62): Moderate-high. Multiple barriers prevent wage earners from escaping the constraint: (1) structural, must participate in economy; (2) labor market slack or automation reducing alternative job options; (3) organized labor decline reducing collective wage-setting power; (4) gig economy casualization; (5) international wage arbitrage limiting developed-market wage growth. Suppression is not total (some agents can negotiate or relocate) but substantial. Theater ratio (0.55): Moderate. Inflation targeting is presented as technical monetary policy for price stability, obscuring its wealth redistribution function. Central bank communications emphasize 'transitory' inflation or 'supply shocks' rather than endogenous monetary expansion effects. However, the theater is incomplete \u2014 economists, some policymakers, and segments of the public increasingly recognize the mechanism. Theater has increased over the interval as alternative explanations became less credible (2022-2024).",
+    "perspectival_gap": "This constraint demonstrates how a single structural phenomenon (nominal wage lag relative to inflation) classifies as snare for the trapped, rope for the beneficiary, piton for the institution maintaining the framework, and mountain for the analytical observer. The gap reveals that purchasing power erosion is not an exogenous market outcome but a policy-embedded extraction mechanism. The mountain perspective is a false summit: inflation targeting is presented as technical necessity but is actually a policy choice. Different monetary frameworks (NGDP targeting, price-level targeting, or institutionalized wage-indexation) would produce different constraint structures. The snare classification for wage earners is robust across alternative policy regimes \u2014 the trap is structural (labor market participation required, nominal wages sticky downward, exit suppressed). The rope classification for asset holders is robust \u2014 they benefit from inflation regardless of policy details. The piton classification for central banks reflects that the inflation-targeting framework persists through institutional inertia despite alternative frameworks being technically feasible.",
+    "directionality_logic": "The directionality computation follows beneficiary/victim declarations through the sigmoid function. Wage earners and retirees are victims of purchasing power loss; asset holders and financial institutions are beneficiaries of inflation-driven asset appreciation and debt erosion. Organized labor occupies an intermediate position: victims of structural wage lag but beneficiaries of coordination mechanisms. Central banks are institutional beneficiaries insofar as inflation targeting centralizes monetary control and enables financial system stability through controlled inflation. The scope modifier \u03c3(S) is high (national scope, \u03c3=1.0) because purchasing power erosion is systemically enforced across the economy. The effective extraction \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) ranges from near-zero for asset holders (beneficiary d, negative f(d)) to maximum for trapped wage earners (victim d=0.95, high f(d)\u22481.42, scope \u03c3=1.0).",
+    "mandatrophy_analysis": "MANDATORY CONSTRAINT DEFINITION: The constraint must be classified as tangled_rope (not snare) because it exhibits genuine coordination function alongside extraction. Inflation targeting serves an actual coordination role: prevents deflationary spirals, enables financial system stability, and provides a nominal anchor. Agencies (workers, savers, retirees) that benefit from monetary stability are also victims of purchasing power erosion \u2014 the constraint is hybrid. This mandates tangled_rope classification. Misclassifying as pure snare would ignore: (1) that some coordination value is genuinely delivered, (2) that beneficiaries include financial institutions that provide capital allocation services, and (3) that alternative regimes (hyperinflation, deflation) would be worse for many agents. The tangled_rope classification correctly captures the asymmetry: coordination value is broadly distributed, but extraction is concentrated (benefits asset holders and financial institutions, harms wage earners and savers). Mandatrophy is resolved by the perspectival framework: different agents experience the constraint differently because they occupy different structural positions relative to the inflation-driven wealth redistribution."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "labor_market_deunionization",
+      "asset_price_inflation_housing_unaffordability",
+      "retirement_security_pension_erosion"
+    ],
+    "dual_formulation_note": "Consumer purchasing power erosion is decomposed into three downstream constraints: labor market dynamics (wage suppression), asset market dynamics (housing/real estate price inflation), and retirement system dynamics (pension real value decline). Each constraint has distinct structural features but all are driven by upstream monetary policy expansion and inflation. The unified story captures the coordination/extraction hybrid; the downstream stories capture domain-specific mechanisms."
+  },
+  "directionality_overrides": []
+}

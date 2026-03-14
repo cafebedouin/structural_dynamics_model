@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "senate_legislative_capture",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "senatecap"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.81,
+    "claimed_type": "snare",
+    "human_readable": "Senate Legislative Capture by Concentrated Corporate Interests",
+    "topic_domain": "political_economy/governance",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "concentrated_corporate_interests",
+      "wealthy_campaign_donors"
+    ],
+    "victims": [
+      "general_public",
+      "unrepresented_constituencies",
+      "diffuse_stakeholders"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Unrepresented Voter",
+      "comment": "PERSPECTIVE 1: UNREPRESENTED VOTER (SNARE) \u2014 Bears full extraction cost through legislation favoring corporate interests over constituent welfare. No viable exit from the political system; voice mechanisms (voting, organizing) produce negligible legislative response when interests conflict with donor preferences. Maximum extraction experienced."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "The Civic Idealist",
+      "comment": "PERSPECTIVE 2: CIVIC IDEALIST (SNARE) \u2014 Structurally mobile (can exit politics, migrate, opt out of civic participation) but identity-fused with democratic participation and belief in democratic responsiveness. The identity lock prevents recognizing the constraint as changeable \u2014 perceives legislative capture as immutable feature of democracy itself rather than as contingent institutional capture. High extracted value but locked in place by internalized civic identity."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Corporate Beneficiary",
+      "comment": "PERSPECTIVE 3: CORPORATE BENEFICIARY (ROPE) \u2014 Experiences the constraint as coordination: organizing concurrent campaign contributions creates a collective action mechanism that achieves favorable legislation. No coercion required from the corporate perspective \u2014 the mechanism works through aligned incentives. Access and legislative advantage appear earned through normal political participation."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Captured Senator",
+      "comment": "PERSPECTIVE 4: CAPTURED SENATOR (PITON) \u2014 Senator maintains formal independence and participates in committee deliberations but votes predictably align with donor preferences when interests align. The constraint persists through institutional inertia: the senator's career depends on campaign funding sources, but the formal structures (committee process, floor votes, constituent services) continue as though independent judgment is being exercised. Theater ratio high \u2014 performative deliberation masking predetermined outcomes."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Reform Coalition",
+      "comment": "PERSPECTIVE 5: REFORM COALITION (TANGLED ROPE) \u2014 Organized agents (campaign finance reformers, voting rights organizations, transparency advocates) see the constraint as having both extraction and coordination components. The constraint must be actively enforced (through lobbying for advantageous legislation, campaign financing tactics), but also accomplishes genuine coordination of dispersed corporate interests. Reformers face high barriers to exit (career/resource constraints) but retain some agency through political organizing."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Political Economy Theorist",
+      "comment": "PERSPECTIVE 6: POLITICAL ECONOMY THEORIST (MOUNTAIN) \u2014 Civilizational view risks naturalizing legislative capture as an immutable feature of representative democracy: concentrated corporate interests will always outbid dispersed public interests; campaign finance advantage is inherent to electoral mathematics. However, this mountain classification is a false summit \u2014 comparative institutional analysis reveals that other democracies achieve lower capture through parliamentary structures, campaign finance restrictions, and party discipline. The constraint is contingent, not natural."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "donor_intent_vs_implicit_alignment",
+      "question": "Does legislative capture require explicit quid pro quo coordination between donors and senators, or does implicit alignment of incentives produce equivalent outcomes without conscious coordination?",
+      "resolution_mechanism": "Investigation of campaign finance records, senator voting patterns, and testimony from donors and staffers; analysis of whether donor intent and legislative outcome require coordinated planning or emerge from aligned incentives",
+      "impact": "If explicit coordination required: captures as snare or tangled_rope requiring active collusion. If implicit alignment sufficient: could classify as piton (institutional inertia maintaining coordination). Legal and political consequences differ accordingly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether legislative capture requires explicit coordination or emerges from implicit incentive alignment"
+    },
+    {
+      "id": "diffuse_vs_concentrated_interest_asymmetry",
+      "question": "Is the power asymmetry between concentrated corporate interests and diffuse public interests a structural feature of democracy or a contingent artifact of campaign finance rules?",
+      "resolution_mechanism": "Comparative analysis of democracies with different campaign finance restrictions, party systems, and legislative structures; correlation between institutional design and degree of legislative capture",
+      "impact": "If structural: legislative capture is mountain-like (inherent to democracy). If contingent: capture is snare or tangled_rope that could be reformed through institutional design. Determines whether mandatrophy resolves as 'this is how systems work' or 'this is how we chose to structure it.'",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether diffuse-vs-concentrated asymmetry is structural or contingent"
+    },
+    {
+      "id": "constituent_voice_suppression_mechanism",
+      "question": "Are constituents suppressed from legislative influence by structural barriers (money, access, institutional design) or by internalized expectations that their voices don't matter (cognitive/identity suppression)?",
+      "resolution_mechanism": "Analysis of constituent contact attempts, response rates, legislative responsiveness to constituent pressure; intervention studies testing whether constituent organizing increases responsiveness when donor interests align vs conflict",
+      "impact": "If structural: classified as trapped exit. If internalized: classified as identity_locked. Determines whether reform requires changing institutions (structural) or changing constituent perception of voice efficacy (cognitive).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether constituent suppression is structural or internalized"
+    },
+    {
+      "id": "reform_reform_capture",
+      "question": "Do campaign finance reforms themselves become captured by the same concentrated interests they were designed to constrain?",
+      "resolution_mechanism": "Historical analysis of campaign finance reform outcomes; tracking of how lobbying industries adapt to new regulations; measurement of legislative capture rates pre- vs post-reform",
+      "impact": "If reforms are repeatedly captured: suggests snare is immutable via structural barriers (true high-extraction). If reforms produce temporary but sustainable reductions: suggests piton with institutional memory of non-captured periods.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether campaign finance reforms become captured"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.73
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Senate legislative capture represents the structural extraction of legislative authority from the general public and diffuse constituencies toward concentrated corporate and wealthy interests. The constraint operates through the asymmetry between campaign finance requirements (concentrated, coordinated funding from corporate donors) and constituent voice mechanisms (dispersed, individualized voting and communication). Over the 50-year interval (roughly 1975-2025), both the theater ratio and extractiveness have increased steadily as campaign finance costs have escalated, lobbying infrastructure has professionalized, and constituent organizing capacity has relatively declined. The theater ratio's rise to 0.81 reflects that legislative deliberation (committee hearings, floor debate, constituent services) increasingly performs the ritual of representative democracy while predetermined donor-aligned outcomes dominate actual legislative results. The extractiveness rise to 0.68 reflects that the benefits to concentrated corporate interests have grown through targeted legislation, while diffuse public costs have accumulated in areas where concentrated interests profit (healthcare, finance, energy, pharma, telecom). This constraint exemplifies how snare classification emerges from multiple perspectives while false summit risks appear in civilizational views that naturalize capture as inherent to democracy.",
+    "key_agents": [
+      "General Public / Unrepresented Constituencies: Primary victim (powerless/trapped) \u2014 diffuse stakeholders whose aggregate interests are structurally outweighed by concentrated interests; experience maximum extraction",
+      "Civic Idealists: Secondary victim (powerless/identity_locked) \u2014 constituents and activists whose identity is fused with democratic participation; structurally mobile but locked by internalized belief in democratic responsiveness",
+      "Corporate Beneficiaries / Wealthy Donors: Primary beneficiary (institutional/arbitrage) \u2014 concentrated interests that coordinate campaign funding to achieve legislative advantage; experience constraint as coordination mechanism (Rope perspective)",
+      "Captured Senators: Institutional intermediaries (institutional/constrained) \u2014 oscillate between constituent responsiveness and donor dependency; maintain formal deliberation rituals while voting patterns align with funding sources",
+      "Reform Coalition: Organized opposition (organized/constrained) \u2014 campaign finance reformers, voting rights organizations, transparency advocates attempting to reduce capture through political organizing and institutional change",
+      "Political Economy Analysts: Civilizational observers (analytical/analytical) \u2014 risk naturalizing capture as immutable feature of democracy, producing false mountain classification"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. Concentrated corporate interests extract significant legislative advantage through campaign finance mechanisms. The extraction grows over time as campaign costs escalate and corporate political spending increases. This is not trivial coordination cost \u2014 it represents measurable redistribution of legislative outcomes toward corporate beneficiaries. Suppression (0.72): High. Constituents face multiple suppression mechanisms: (1) Structural barriers to political access (fundraising requirements, lobby infrastructure); (2) Cognitive barriers (internalized belief that individual voice doesn't matter in large-scale politics); (3) Institutional design (gerrymandering, voter suppression, campaign contribution deductibility reducing transparency). The combination produces high total suppression. Theater ratio (0.81): Very high. Senate deliberation maintains extensive performative elements (committee hearings, constituent services, floor speeches) that follow proper democratic ritual while legislative outcomes are increasingly predetermined by donor preferences. The rise in theater over 50 years reflects that formal procedures have been preserved (maintaining legitimacy) while actual decision-making has shifted to donor-aligned informal channels. This is the signature of piton degradation \u2014 the machine still runs but the primary function has atrophied.",
+    "perspectival_gap": "The gap between beneficiary (Rope) and victim (Snare) classifications reveals the mechanism of capture: what appears to the corporate beneficiary as natural coordination of aligned interests appears to the powerless voter as extraction with no escape. No single perspective is 'wrong' \u2014 they are measuring the same constraint from structurally different positions. The critical insight is that the constraint can only sustain itself if these perspectives remain incommensurable. The moment voters perceive the structure (shift from identity_locked to analyzing the mechanism), or the moment reformers successfully reorganize (shift from constrained to organized opposition), the classification at those indices changes and the constraint's sustainability is threatened.",
+    "directionality_logic": "Directionality values are determined by structural position relative to the extraction flow. Corporate beneficiaries have low d (approximately 0.10-0.20) \u2014 they benefit from the constraint and have arbitrage options (can exit to other political systems, other business strategies). Trapped voters have high d (approximately 0.90-0.95) \u2014 they bear extraction and cannot exit the political system without fundamental life reorganization (migration). Civic idealists have identity-locked exit (d approximately 0.88) \u2014 structurally mobile but cognitively captured by internalized democratic ideology. Captured senators have constrained exit (d approximately 0.65) \u2014 dependent on donor funding for career continuation but retaining some discretionary votes. Reform coalitions have organized exit (d approximately 0.50) \u2014 they experience extraction but also have some agency through political organizing and can constrain senator behavior through threat of primary challenges. The sigmoid function f(d) maps these d values to effective power multipliers, which when combined with \u03b5 and scope \u03c3(S) produce the experienced \u03c7 for each perspective.",
+    "mandatrophy_analysis": "Mandatrophy is resolved by rejecting the false mountain classification and accepting that legislative capture is a Snare. The mountain view ('concentrated interests always beat dispersed interests; this is inherent to democracy') is a false summit that naturalizes contingent institutional arrangements. Comparative evidence shows democracies with different campaign finance structures, party discipline, and proportional representation systems achieve significantly lower capture rates. Legislative capture is therefore not a natural law but a structural outcome of specific institutional choices. The mandatrophy resolves as: SNARE is the correct classification from the victim and analytical perspectives. The Rope perspective from corporate beneficiaries is legitimate but narrow \u2014 it elides the extraction visible from other vantage points. The Piton perspective reveals important degradation (theater rising, actual deliberation declining) but misses the active enforcement mechanisms maintaining the snare. The mountain false summit must be rejected. Resolving the mandatrophy requires accepting that all six types are analytically coherent from their respective indices but that the democratic legitimacy frame requires centering the victim and analytical perspectives, which both classify as Snare."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "campaign_finance_asymmetry",
+      "regulatory_capture",
+      "lobbying_access_inequality"
+    ],
+    "dual_formulation_note": "Senate legislative capture is downstream of campaign finance structural inequalities and upstream of specific regulatory capture instances. Each constituent regulation (pharmaceutical pricing, financial sector rules, energy policy) represents a specific instantiation of the general legislative capture constraint. The family of constraints includes the general structural capture mechanism and its domain-specific manifestations."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

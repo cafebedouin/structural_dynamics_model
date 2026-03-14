@@ -1,0 +1,227 @@
+{
+  "header": {
+    "constraint_id": "somatic_gene_therapy_approval",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sgt"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Somatic Gene Therapy Regulatory Approval Bottleneck",
+    "topic_domain": "biomedical_regulation/drug_approval",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_pharma_firms",
+      "regulatory_agencies"
+    ],
+    "victims": [
+      "rare_disease_patients",
+      "innovation_capacity",
+      "gene_therapy_startups"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Rare Disease Patient",
+      "comment": "PERSPECTIVE 1: RARE DISEASE PATIENT (SNARE) \u2014 Faces life-limiting condition with no approved therapeutic option. Cannot exit the disease. Regulatory bottleneck extends suffering by 5-15 years beyond technical readiness. Zero alternatives; zero negotiating power. Maximum extraction: the regulatory apparatus extracts years of life."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Gene Therapy Startup",
+      "comment": "PERSPECTIVE 2: GENE THERAPY STARTUP (TANGLED ROPE) \u2014 Experiences both coordination and extraction. Regulatory process ensures safety verification (genuine coordination benefit). But approval timeline, capital requirements, and incumbent firm gatekeeping create asymmetric extraction: startups expend 10+ years and $500M+ in runway while incumbent firms face 5-7 year timelines with lower per-unit costs due to scale. Constrained by funding and survival pressure, but some exit optionality through acquisition or international markets."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Incumbent Pharmaceutical Firm",
+      "comment": "PERSPECTIVE 3: INCUMBENT PHARMA FIRM (ROPE) \u2014 Net beneficiary of regulatory bottleneck. Approval delay protects existing therapeutic market. High regulatory barriers create coordination benefit: safety-verified pipeline commands premium pricing and market protection. Effective arbitrage options through portfolio diversification, international markets, and regulatory capture. Experiences the constraint as legitimate coordination of pharmaceutical risk management."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regulatory Agency",
+      "comment": "PERSPECTIVE 4: REGULATORY AGENCY (TANGLED ROPE) \u2014 Genuinely coordinates patient safety through rigorous preclinical and clinical review. But also extracts organizational legitimacy from visible gatekeeping: more stringent requirements signal competence and reduce accountability for post-approval harms (publication bias toward null safety findings). Constrained by political pressure and liability exposure. Experiences tension between safety mandate (coordination) and institutional self-preservation (extraction)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Patient Advocacy Coalition",
+      "comment": "PERSPECTIVE 5: PATIENT ADVOCACY COALITION (SCAFFOLD) \u2014 Organized agents (patient groups, compassionate-use networks) see regulatory bottleneck as a temporary problem with a sunset: Right-to-Try laws, expanded access programs, and international regulatory harmonization are building parallel approval pathways. Coalition has agency to push for regulatory reform and can point to technical precedent (accelerated approval, breakthrough designation). Exit path is clear: distributed verification through real-world evidence and adaptive licensing. Sunset clause: 10-15 years as real-world data replaces randomized trials."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Traditional Clinical Trial Paradigm",
+      "comment": "PERSPECTIVE 6: TRADITIONAL CLINICAL TRIAL PARADIGM (PITON) \u2014 Randomized controlled trial as gold standard for drug approval is substantially performative in rare disease contexts. For diseases with N<1000 globally, powered RCTs are empirically infeasible, yet the paradigm persists. Theater ratio reflects: expensive trial infrastructure maintained despite known inadequacy for rare disease; regulatory guidance written to RCT assumptions even when alternatives exist; agency staff trained in RCT interpretation. The paradigm persists through institutional inertia (career incentives aligned with RCT expertise) not because it works for somatic gene therapy. Alternatives (adaptive trials, real-world evidence, n-of-1 designs) exist but face adoption barriers."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational perspective, some regulatory caution is inherent to novel therapies: irreversible gene modifications require verification for long-term safety, and the gap between proof-of-concept and population safety is a structural feature of biomedical governance. This view naturalizes the bottleneck as an immutable constraint. But the structural data contradicts this: approval timelines vary 3-5x across jurisdictions for identical therapies (FDA vs EMA vs Japan), regulatory standards have changed repeatedly, and real-world evidence is technically sufficient for safety monitoring. The mountain classification is a false summit \u2014 it naturalizes a contingent institutional choice as inherent scientific constraint."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "safety_verification_plateau",
+      "question": "Does additional regulatory delay beyond Year 5 of Phase III trials actually reduce long-term adverse event risk, or does it plateau?",
+      "resolution_mechanism": "Post-market surveillance data: comparison of adverse event profiles for early-approved therapies vs delayed-approval equivalents; meta-analysis of safety curves across Phase III extension, Phase IV, and 5-year post-market periods",
+      "impact": "If plateau occurs before Year 7: regulatory extraction is substantially overhead (recommend 3-5 year timeline). If delay continues reducing risk: extraction is coordinating genuine safety discovery (recommend current 7-10 year timeline).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether additional delay beyond Year 5 Phase III reduces long-term safety risk"
+    },
+    {
+      "id": "rare_disease_patient_population_evolution",
+      "question": "What proportion of rare disease patients die or become terminally dependent during the approval window (5-10 years) due to disease progression?",
+      "resolution_mechanism": "Natural history studies; retrospective cohort analysis of patients who died or reached end-stage disease while awaiting approval; comparison to comparable non-gene-therapy rare diseases with historical mortality curves",
+      "impact": "If >30% die/reach irreversibility during window: extraction is catastrophic (snare classification confirmed, argue for compassionate use sunset). If <10%: extraction is real but not immediately life-threatening (tangled rope confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Mortality/irreversibility during regulatory approval window"
+    },
+    {
+      "id": "incumbent_firm_approval_asymmetry",
+      "question": "Do incumbent firms face systematically faster approval timelines than startups for comparable somatic gene therapies, controlling for technical complexity?",
+      "resolution_mechanism": "Comparative analysis of FDA approval timelines by applicant type (large pharma vs biotech startup) for 2015-2025 gene therapy and advanced therapy cohorts; regression analysis controlling for indication complexity, mechanism novelty, and trial design",
+      "impact": "If timeline difference >2 years: confirms incumbent advantage and validates startup extraction perspective (justify higher tangled_rope classification for startups). If <6 months: suggests approval bottleneck is uniform and barriers are technical, not institutional.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Approval timeline asymmetry by applicant firm size"
+    },
+    {
+      "id": "regulatory_agency_approval_standard_drift",
+      "question": "Have FDA and EMA somatic gene therapy approval standards drifted over time (2010-2026) in ways that extend approval timelines independent of scientific need?",
+      "resolution_mechanism": "Historical analysis of regulatory guidance documents; content analysis of FDA advisory committee transcripts; comparison of approval standards applied to early approvals vs recent approvals for functionally equivalent mechanisms",
+      "impact": "If standards have tightened beyond technical justification: supports piton and regulatory extraction perspective (recommend standardization/harmonization). If standards reflect accumulating safety knowledge: supports mountain and rope perspectives (recommend current timelines).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Historical drift in somatic gene therapy approval standards"
+    },
+    {
+      "id": "real_world_evidence_adequacy",
+      "question": "Can long-term safety of somatic gene therapies be monitored with equal statistical power through real-world evidence (patient registries, electronic health records) vs traditional Phase IV post-market surveillance?",
+      "resolution_mechanism": "Simulation study comparing statistical power of rare-disease registries with active follow-up vs Phase IV trials with 90% attrition; prospective validation using early-approved gene therapies with both traditional Phase IV and real-world evidence monitoring",
+      "impact": "If real-world evidence is adequate: supports scaffold sunset clause (recommend adaptive licensing that gates approval on registry enrollment, not trial completion). If inadequate: supports piton perspective (traditional paradigm justified despite limitations).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether real-world evidence provides adequate safety monitoring"
+    },
+    {
+      "id": "irreversibility_justification_threshold",
+      "question": "What degree of mechanism irreversibility actually justifies the observed approval timeline extension, and do somatic gene therapies exceed that threshold?",
+      "resolution_mechanism": "Comparative analysis across therapeutic irreversibility levels (surgical correction vs pharmaceuticals vs permanently integrated gene therapy); Bayesian decision analysis of approval timeline vs irreversibility; expert consensus on justified caution per mechanism type",
+      "impact": "If somatic gene therapies fall within justified irreversibility threshold: current timelines are proportionate (mountain/rope perspective justified). If they exceed threshold by >2x: extraction is disproportionate to actual risk (snare/tangled rope confirmed).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Proportionality of approval timeline to therapy irreversibility"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Somatic gene therapy regulatory approval constitutes a structural bottleneck that exhibits genuine coordination benefits (safety verification) alongside asymmetric extraction (approval delay that extends patient suffering, concentrates market power, and suppresses startup innovation). The constraint's extractiveness has grown from 0.38 to 0.58 over 15 years as approval standards have tightened, trial requirements have expanded, and manufacturing requirements have become more stringent. Theater ratio has risen from 0.52 to 0.71, indicating that traditional randomized controlled trial paradigms \u2014 designed for large-population studies \u2014 are increasingly performative when applied to rare diseases with N<1000 globally. This constraint demonstrates a core mandatrophy challenge: the same regulatory apparatus that prevents dangerous premature approvals also extracts years of life from patients with fatal diseases. The constraint is not a pure snare (extraction with no coordination benefit) \u2014 genuine safety verification occurs. Nor is it pure rope (coordination with no extraction) \u2014 approval timelines are substantially padded with theater and institutional delay beyond technical necessity. The constraint is tangled rope: authentic coordination objectives (safety) are entangled with institutional extraction (market protection, organizational legitimacy, career incentives around trial expertise). A patient advocacy coalition is building parallel pathways (Right-to-Try, expanded access, international harmonization) that offer a sunset clause: real-world evidence and adaptive licensing could replace traditional timelines within 10-15 years if policy reform succeeds. The traditional clinical trial paradigm (piton perspective) persists through inertia despite acknowledged inadequacy for rare diseases, maintained by regulatory agency staff incentives, pharma industry adaptation, and absent countervailing pressure until recently.",
+    "key_agents": [
+      "Rare Disease Patient: Primary victim (powerless/trapped) \u2014 faces life-limiting condition with no exit from disease; regulatory bottleneck extends suffering by 5-15 years beyond technical readiness",
+      "Gene Therapy Startup: Secondary victim (moderate/constrained) \u2014 expends 10+ years and $500M+ runway while facing incumbent firm scale advantage; some exit optionality through acquisition or international markets",
+      "Incumbent Pharmaceutical Firm: Primary beneficiary (institutional/arbitrage) \u2014 approval delay protects existing therapeutic market; high regulatory barriers enable premium pricing; arbitrage options through portfolio diversification",
+      "Regulatory Agency (FDA/EMA): Secondary beneficiary with mixed motive (institutional/constrained) \u2014 coordinates genuine safety verification but also extracts legitimacy from visible gatekeeping; constrained by liability exposure",
+      "Patient Advocacy Coalition: Organized agent (organized/mobile) \u2014 building alternative approval pathways (Right-to-Try, expanded access, real-world evidence); sees regulatory bottleneck as temporary with clear sunset trajectory",
+      "Traditional Clinical Trial Paradigm: Institutional inertia (institutional/arbitrage) \u2014 randomized controlled trials maintained as gold standard despite empirical infeasibility for rare diseases; persists through career incentives and regulatory guidance alignment"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The regulatory bottleneck creates substantial extraction through approval delay: rare disease patients wait 5-10 years beyond proof-of-concept; startups expend 10+ years and >$500M while incumbent firms move faster due to scale; market protection accrues to existing therapeutics. But extractiveness is not at snare level (>0.66) because genuine safety verification occurs, trials do detect safety signals, and post-market harm from premature approvals would be severe. The extraction is coordination-entangled. Suppression (0.65): High. Multiple barriers prevent exit: patients cannot exit disease; startups cannot exit regulatory process without approval; alternative approval pathways (Right-to-Try, expanded access) exist but are constrained by regulatory discretion. Theater ratio (0.68): High. Traditional RCT paradigm applied to rare diseases (N<1000 globally) is substantially performative: expensive trial infrastructure maintained despite known inadequacy; regulatory guidance written to RCT assumptions even when alternatives exist; agency staff trained in RCT interpretation create path dependency. Rising trend (0.52\u21920.71) reflects increasing theater as trial requirements expand beyond technical necessity for rare disease contexts. The measurement trajectory shows extraction growing over time as theater increases\u2014this is Goodhart drift: regulatory standards tighten to signal competence, creating padding independent of safety gain.",
+    "directionality_logic": "Each agent's directionality (d) derives from power level, exit options, and structural relationship. Powerless/trapped patients experience maximum d (~0.95): they bear full extraction with zero exit options. Moderate/constrained startups experience high d (~0.75): they face substantial costs (time, capital) with some arbitrage optionality through acquisition. Institutional/arbitrage incumbent firms experience low d (~0.20): they benefit from the constraint and can exit by investing in gene therapy portfolios or licensing approved therapies. Regulatory agencies experience moderate-high d (~0.55): constrained by liability and political pressure, unable to fully exit despite seeing institutional costs. The sigma scope modifier (\u03c3(S)) scales extractiveness: national scope (\u03c3=1.0) for most actors, but global scope (\u03c3=1.2) for incumbent pharma benefits and patient harm (global therapeutic markets, global disease burden). The f(d) sigmoid converts these d values to power modifiers ranging from -0.12 (institutional beneficiaries) to 1.42 (powerless victims), determining who experiences the constraint as coordination vs extraction.",
+    "perspectival_gap": "This constraint exhibits maximum perspectival disagreement. The rare disease patient sees pure snare (extraction, no escape, no benefit). The incumbent pharma firm sees rope (coordination that ensures safety-verified premium pricing). The regulatory agency sees rope from institutional perspective but acknowledges tangled rope from patient welfare perspective. The startup sees tangled rope (mixed coordination/extraction with scale disadvantage). The patient advocacy coalition sees scaffold (temporary problem with clear sunset). The traditional RCT paradigm perspective (piton) sees its own obsolescence yet persists through inertia. The civilizational analytical view risks naturalizing the bottleneck as inherent scientific constraint, but the structural data reveals this as institutional choice: approval timelines vary 3-5x across jurisdictions for identical therapies (FDA vs EMA vs Japan), proving contingency not inevitability. The perspectival gap arises from power asymmetry: beneficiaries experience coordination; victims experience extraction; observers see institutional theater. The gap is the constraint's structure, not noise.",
+    "mandatrophy_analysis": "TANGLED ROPE CONFIRMATION: This constraint resolves the mandatrophy by showing why it cannot be classified as pure rope (coordination only) despite genuine safety verification function. The presence of systematic extraction is not eliminated by the presence of coordination. The beneficiary (incumbent pharma) captures market protection value from approval delay. The victim (patient) bears cost from approval delay. Both effects are real and structural. A pure rope classification (coordination with \u03c7 \u2264 0.35) would miss that the regulatory apparatus is actively extracting organizational legitimacy through theater (rising theater ratio) and suppressing startup competitors through approval timeline asymmetry. Conversely, snare classification (extraction with no coordination benefit, \u03c7 \u2265 0.66) would overstate the case: regulatory delay does prevent approval of genuinely unsafe therapies, does catch safety signals in trials, and does generate patient-protective information. The mandatrophy is resolved by recognizing that extraction and coordination can be structurally intertwined (tangled) rather than existing in separate constraints. The agency that coordinates safety also benefits from institutional gatekeeping. The delay that prevents harm also extracts years of life. Both mechanisms operate simultaneously, not as alternatives. Mandatrophy resolved: the classification is structurally precise because it identifies the hybrid mechanism, not because it chooses between impossible alternatives."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "germline_gene_therapy_prohibition",
+      "rare_disease_pharmaceutical_pricing",
+      "clinical_trial_phase_duration"
+    ],
+    "dual_formulation_note": "Somatic gene therapy approval is upstream of germline therapy prohibition (regulatory precedent) and rare disease pricing constraints (market dynamics after approval). The approval bottleneck influences but does not cause rare disease pricing extraction\u2014these are structurally distinct constraints linked by causal sequence."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

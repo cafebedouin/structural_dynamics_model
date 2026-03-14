@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "sensor_modality_lock_in",
+    "version": "1.0",
+    "generated_date": "2025-01-02",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sensor_lock"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Camera-Only Autonomy Architecture Lock-In",
+    "topic_domain": "technology_governance/autonomous_vehicles/platform_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "tesla_margin_structure",
+      "camera_supply_chain",
+      "software_first_narrative"
+    ],
+    "victims": [
+      "operational_reliability",
+      "fleet_customers",
+      "edge_case_safety"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Fleet Customer",
+      "comment": "PERSPECTIVE 1: FLEET CUSTOMER (SNARE) \u2014 Purchased vehicles based on autonomy promises; cannot exit without total capital loss. Operational design domain restrictions (no snow/fog/heavy rain capability) discovered post-purchase. Vehicle depreciation accelerates as competitors demonstrate superior capabilities. Maximum extraction: paid premium for capability that cannot be delivered within chosen architecture."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Safety Regulator",
+      "comment": "PERSPECTIVE 2: SAFETY REGULATOR (TANGLED ROPE) \u2014 Constrained by need to balance innovation incentives against public safety. Benefits from standardization pressure (camera-only creates regulatory precedent) but bears cost of edge-case failures that camera-only architecture cannot handle. Mixed extraction: coordination function exists (establishing sensor requirements) but asymmetric risk (regulator blamed for both over-regulation and under-regulation)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Architect",
+      "comment": "PERSPECTIVE 3: PLATFORM ARCHITECT (ROPE) \u2014 Tesla's margin structure benefits from $400 camera-only vs $12k lidar sensor fusion. Architectural commitment enables vertical integration, data moat (vision-only training pipeline), and narrative control (software will solve it). Net beneficiary: extraction flows toward this agent through cost differential capture and competitive moat construction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Lidar Industry Coalition",
+      "comment": "PERSPECTIVE 4: LIDAR INDUSTRY COALITION (SCAFFOLD) \u2014 Organized suppliers (Luminar, Innoviz, Velodyne) see camera-only as temporary market distortion with sunset logic: as lidar costs decline ($500 projected by 2028) and camera-only operational limits become undeniable, sensor fusion becomes economically viable. Coalition has exit options (pivot to ADAS, industrial automation) and sees architectural lock-in dissolving as cost curves converge."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Competing Automaker",
+      "comment": "PERSPECTIVE 5: COMPETING AUTOMAKER (TANGLED ROPE) \u2014 Constrained by need to match Tesla's price point while maintaining sensor fusion architecture. Benefits from coordination (industry converges on sensor requirements, supply chain matures) but bears extraction (Tesla's cost advantage forces margin compression or feature reduction). Mixed position: coordination function real but asymmetric cost structure creates competitive disadvantage."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Autonomy Milestone Narrative",
+      "comment": "PERSPECTIVE 6: AUTONOMY MILESTONE NARRATIVE (PITON) \u2014 Public demonstrations and capability claims (Full Self-Driving Beta, Autopilot) are substantially theatrical: operational design domain restrictions mean claimed autonomy level cannot be achieved within camera-only architecture, but narrative persists through marketing and incremental feature releases. Theater ratio high: performance claims exceed deliverable capability, maintained through definitional flexibility (what counts as 'self-driving') and temporal deferral (next software update will fix it)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Camera-only architecture represents genuine coordination function (cost reduction enables mass-market autonomy) coupled with asymmetric extraction (operational reliability sacrificed for margin structure). The constraint is not a false summit (physics permits camera-only autonomy in constrained domains) but also not pure coordination (architectural commitment creates lock-in that prevents adaptation as operational limits become clear). Tangled rope: both functions coexist and neither dominates."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "vision_sufficiency_threshold",
+      "question": "Is camera-only perception fundamentally sufficient for L4/L5 autonomy, or does it hit an architectural ceiling below full autonomy?",
+      "resolution_mechanism": "Longitudinal tracking of operational design domain expansion: if camera-only systems achieve unrestricted operation within 10 years, architecture is sufficient; if ODD restrictions persist or widen, architectural ceiling confirmed.",
+      "impact": "If sufficient: lock-in is temporary coordination problem (Scaffold from more perspectives). If insufficient: lock-in is extraction mechanism preventing architectural pivot (Snare from more perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether camera-only perception can achieve unrestricted autonomy"
+    },
+    {
+      "id": "lidar_cost_trajectory",
+      "question": "Will lidar costs decline to camera-competitive levels ($500-1000/vehicle) within the architectural lock-in window (5-7 years)?",
+      "resolution_mechanism": "Lidar manufacturing cost curves; solid-state lidar adoption rates; automotive-grade qualification timelines.",
+      "impact": "If costs converge rapidly: sensor fusion becomes economically viable and camera-only lock-in dissolves (Scaffold confirmed). If costs remain high: camera-only maintains cost advantage and lock-in persists (Snare from fleet customer perspective intensifies).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Lidar cost decline timeline relative to architectural commitment window"
+    },
+    {
+      "id": "regulatory_sensor_mandate",
+      "question": "Will regulators mandate sensor redundancy (lidar or radar) for L4/L5 certification, or accept camera-only with ODD restrictions?",
+      "resolution_mechanism": "NHTSA, UNECE, and EU regulatory framework evolution; precedent from aviation (redundant sensor requirements) vs consumer electronics (performance-based standards).",
+      "impact": "If mandate: camera-only architecture cannot achieve full autonomy certification regardless of software advances (Snare confirmed for fleet customers). If ODD-restricted certification allowed: camera-only remains viable in constrained domains (Tangled Rope maintained).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether regulators will require sensor redundancy for autonomy certification"
+    },
+    {
+      "id": "fleet_depreciation_acceleration",
+      "question": "Does camera-only architectural limitation cause accelerated depreciation relative to sensor-fusion vehicles as operational limits become market-visible?",
+      "resolution_mechanism": "Used vehicle market pricing; fleet resale values; insurance actuarial data on operational design domain restriction impact.",
+      "impact": "If depreciation accelerates: extraction from fleet customers intensifies as capital loss compounds operational restrictions (Snare perspective strengthens). If depreciation matches sensor-fusion vehicles: market does not price architectural risk (extraction less severe than structural analysis suggests).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether architectural lock-in causes measurable depreciation acceleration"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "sensor_lock_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48,
+      "id_override": "sensor_lock_theater_t3"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58,
+      "id_override": "sensor_lock_theater_t6"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32,
+      "id_override": "sensor_lock_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.41,
+      "id_override": "sensor_lock_extract_t3"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48,
+      "id_override": "sensor_lock_extract_t6"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The camera-only autonomy architecture represents a structural commitment with asymmetric consequences: Tesla captures $11,600 cost differential per vehicle (enabling mass-market pricing and superior margins) while fleet customers and operational reliability bear the cost of operational design domain restrictions. The constraint exhibits genuine coordination function (cost reduction enables broader autonomy deployment) coupled with asymmetric extraction (architectural lock-in prevents adaptation as operational limits become clear). Camera-only systems cannot operate in snow, fog, or heavy rain \u2014 conditions where lidar-based sensor fusion maintains capability. This is not a temporary software problem but an architectural ceiling: cameras lack depth perception and fail in low-visibility conditions that lidar penetrates. The $400 vs $12k cost differential creates a coordination incentive (standardize on cheaper sensors) that becomes extractive when the architectural commitment prevents pivoting as operational constraints become undeniable. Theater ratio (0.58) reflects that autonomy capability claims (Full Self-Driving, Autopilot) systematically exceed deliverable performance within camera-only architecture, maintained through definitional flexibility and temporal deferral.",
+    "key_agents": [
+      "Fleet Customer: Primary victim (powerless/trapped) \u2014 purchased vehicles based on autonomy promises; cannot exit without total capital loss; operational design domain restrictions discovered post-purchase",
+      "Tesla Margin Structure: Primary beneficiary (institutional/arbitrage) \u2014 captures $11,600 cost differential per vehicle; architectural commitment enables vertical integration and data moat",
+      "Safety Regulator: Mixed position (moderate/constrained) \u2014 benefits from standardization pressure but bears cost of edge-case failures that camera-only cannot handle",
+      "Lidar Industry Coalition: Organized agents (organized/mobile) \u2014 see camera-only as temporary market distortion with sunset as lidar costs decline to $500 by 2028",
+      "Competing Automaker: Secondary victim (moderate/constrained) \u2014 forced to match Tesla price point while maintaining sensor fusion, creating margin compression",
+      "Autonomy Milestone Narrative: Institutional actor (institutional/arbitrage) \u2014 maintains theatrical capability claims that exceed camera-only deliverable performance"
+    ],
+    "logic_rationale": "Extractiveness (0.48): Moderate-high. The $11,600 cost differential per vehicle flows to Tesla's margin structure while operational reliability degradation (no snow/fog/rain capability) flows to fleet customers. Extraction is substantial but not maximal because coordination function is real: camera-only does enable mass-market autonomy in constrained operational design domains (highway, clear weather, well-marked roads). The architectural commitment becomes extractive when it prevents adaptation \u2014 fleet customers cannot retrofit lidar, and Tesla's vertical integration (vision-only training pipeline, data moat) creates switching costs that lock in the architecture even as operational limits become clear. Suppression (0.62): Moderate-high. Fleet customers face capital loss (vehicle depreciation), sunk cost (paid premium for autonomy capability), and switching cost (no retrofit path). Competing automakers face margin compression (must match Tesla price or lose market share). Safety regulators face political cost (blamed for both over-regulation if they mandate sensors and under-regulation if edge cases cause fatalities). Suppression is not total \u2014 some agents can exit (lidar coalition pivots to other markets, customers can sell vehicles) \u2014 but barriers are significant. Theater ratio (0.58): Moderate-high. Autonomy capability claims systematically exceed camera-only deliverable performance. Full Self-Driving Beta operates only in constrained ODD; Autopilot requires constant supervision; marketing materials imply unrestricted autonomy while fine print specifies restrictions. Theater has increased over interval as gap between claimed capability and architectural ceiling becomes more apparent, requiring more definitional flexibility to maintain narrative.",
+    "directionality_logic": "Tesla's margin structure is the primary beneficiary: institutional power with arbitrage exit options (can pivot architecture in future vehicle generations) yields low directionality value and negative effective extraction \u2014 the constraint subsidizes this agent. Fleet customers are primary victims: powerless with trapped exit options (cannot exit without capital loss) yields high directionality value and maximum effective extraction. Safety regulators occupy mixed position: moderate power with constrained exit (cannot ignore autonomy regulation but face political cost either way) yields mid-range directionality and moderate extraction. Lidar coalition has organized power with mobile exit options (can pivot to other markets) yielding low-moderate directionality \u2014 they experience the constraint as temporary market distortion rather than permanent extraction. Competing automakers have moderate power with constrained exit (must compete in autonomy market but architectural choice creates cost disadvantage) yielding moderate directionality and mixed extraction-coordination experience. The analytical observer sees both functions coexist: genuine cost-reduction coordination coupled with asymmetric architectural lock-in extraction.",
+    "perspectival_gap": "The platform architect (Tesla) sees pure coordination (Rope) \u2014 camera-only solves the legitimate problem of making autonomy economically viable at mass-market scale. The lidar industry coalition sees temporary market distortion with sunset (Scaffold) \u2014 as lidar costs decline, sensor fusion becomes viable and camera-only lock-in dissolves. The autonomy narrative sees degraded capability claims (Piton) \u2014 marketing maintains promises that architecture cannot deliver. Fleet customers see pure extraction (Snare) \u2014 paid premium for capability that cannot be achieved within chosen architecture, cannot exit without capital loss. Safety regulators and competing automakers see mixed coordination-extraction (Tangled Rope) \u2014 standardization benefits exist but asymmetric costs create extraction. The analytical observer sees tangled rope as the structural reality: both coordination function (cost reduction) and extraction mechanism (architectural lock-in preventing adaptation) coexist, and neither dominates. The perspectival gap reveals that 'camera-only vs sensor fusion' is not a technical question with a single answer but a structural position question: your classification depends on whether you capture the cost differential or bear the operational restrictions.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating that tangled rope classification requires BOTH genuine coordination function AND asymmetric extraction, and that both must be structurally persistent rather than transitional. Camera-only architecture provides real coordination: $11,600 cost reduction per vehicle enables mass-market autonomy deployment that would be economically unviable with $12k lidar systems. This is not theatrical \u2014 the cost differential is real and the coordination function (making autonomy accessible) is genuine. Simultaneously, the architectural commitment creates asymmetric extraction: fleet customers bear operational design domain restrictions (no snow/fog/rain capability) that they cannot escape without capital loss, while Tesla captures margin advantage and competitive moat. The extraction is not incidental to coordination but structurally coupled: the same architectural choice that enables cost reduction also creates operational ceiling and lock-in. Neither function is transitional: coordination persists (cost advantage remains) and extraction persists (architectural lock-in prevents retrofit). The constraint is not 'coordination that will become extraction' (scaffold degrading) or 'extraction disguised as coordination' (snare with FNL cover story) but both simultaneously. Tangled rope is the only type that captures this structural duality."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "hardware_software_inversion"
+    ],
+    "dual_formulation_note": "Sensor modality lock-in is downstream of hardware-software inversion (the broader architectural commitment to solve autonomy in software rather than hardware). The upstream constraint (hardware_software_inversion, claimed_type: snare) represents the strategic choice to minimize hardware cost and maximize software leverage. Sensor modality lock-in is the specific instantiation of that choice in the perception stack: camera-only is the hardware-minimization strategy applied to sensing. The two constraints have different epsilon values because they operate at different architectural layers: hardware-software inversion affects the entire vehicle platform (compute, sensors, actuators, update mechanism), while sensor modality lock-in affects only the perception subsystem. Both are part of the same architectural family and should be analyzed together for contamination propagation: if hardware-software inversion's purity degrades (software-first strategy fails to deliver promised capability), sensor modality lock-in's extraction intensifies (architectural lock-in becomes more costly as pivot becomes necessary but impossible)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "mod",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "hardware_software_inversion"
+    ]
+  }
+}

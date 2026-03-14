@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "critical_infrastructure_interdependence",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cii"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Critical Infrastructure Interdependence and Systemic Fragility",
+    "topic_domain": "infrastructure/systemic_risk/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "centralized_operators",
+      "system_integrators"
+    ],
+    "victims": [
+      "distributed_communities",
+      "regional_resilience_capacity",
+      "system_reliability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Dependent Community",
+      "comment": "PERSPECTIVE 1: DEPENDENT COMMUNITY (SNARE) \u2014 Trapped in reliance on externally-controlled infrastructure with no exit option. Cannot generate local power, water, communications without system access. Bears full extraction: cost of outages, no control over service quality, mandatory participation in risk cascade."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regional Grid Operator",
+      "comment": "PERSPECTIVE 2: REGIONAL GRID OPERATOR (TANGLED ROPE) \u2014 Constrained by interconnection requirements and capital lock-in. Benefits from economies of scale in grid coordination; bears costs of cascading failure liability and demand for 24/7 reliability. Mixed function: genuine coordination of distributed generation with transmission, but also asymmetric extraction of operational burden onto communities with no control."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "System Integrator",
+      "comment": "PERSPECTIVE 3: SYSTEM INTEGRATOR (ROPE) \u2014 Benefits from interconnection requirement; extracts value by positioning as indispensable hub. Experiences constraint as coordination: managing interdependencies creates stable revenue stream. Low suppression of this agent; exit option exists (serve different grid or market)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Distributed Resilience Movement",
+      "comment": "PERSPECTIVE 4: DISTRIBUTED RESILIENCE MOVEMENT (SCAFFOLD) \u2014 Organized groups (microgrids, community cooperatives, renewable clusters) building alternative infrastructure pathways. Low effective extraction because movement sees sunset: distributed generation, battery storage, and local control norms are building exit mechanisms. Sunset clause: 15-25 years for decentralized alternatives to reach parity with centralized grids in cost and reliability."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Regulatory Framework",
+      "comment": "PERSPECTIVE 5: LEGACY REGULATORY FRAMEWORK (PITON) \u2014 Historical regulatory structures assumed centralized generation and one-way transmission. Modern grid has distributed generation, bidirectional flows, and decentralized control, but regulation persists in theater form: tariff structures, interconnection standards, and reliability metrics still assume mid-20th-century architecture. Theater ratio 0.48 reflects that some real function remains (frequency stability, congestion management) but much is performative artifact of outdated assumptions."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Physical Systems View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, interdependence of large-scale energy systems is inherent to physics and thermodynamics: managing power flows across a continent requires real-time coordination that cannot be fully decentralized. Baseload generation requires transmission. Demand variability requires buffering. This perspective risks naturalizing what is actually a design choice: the current architecture maximizes scale efficiency at the cost of fragility. The engine's false summit detector should flag this \u2014 centralized grids are contingent institutional arrangements, not laws of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cascade_failure_mechanism",
+      "question": "Is cascading failure a structural property of interdependence or an artifact of specific control architectures and underinvestment in redundancy?",
+      "resolution_mechanism": "Comparative analysis of grid designs with different redundancy levels; simulation of failure propagation under varying topology and control assumptions; historical data on cascade events before/after automation and centralization.",
+      "impact": "If structural: interdependence is inherently fragile (mountain view partially correct). If architectural: fragility is contingent on design choices that can be changed (scaffold view confirmed; decentralized alternatives viable).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether cascading failure is structural or architectural"
+    },
+    {
+      "id": "decentralization_feasibility",
+      "question": "Can distributed generation and local microgrids provide baseload reliability comparable to centralized grids without sacrificing cost efficiency or introducing new fragilities?",
+      "resolution_mechanism": "Cost analysis of distributed vs centralized generation with storage; reliability metrics (SAIFI, SAIDI) comparison across hybrid architectures; scale analysis of battery storage technology curves.",
+      "impact": "If viable: scaffold sunset is real, distributed resilience movement will succeed. If infeasible: communities remain trapped, suppression persists indefinitely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical and economic feasibility of distributed generation alternatives"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression (0.65) due to technical barriers to local generation (material constraints) or to regulatory/market structures that favor centralization (institutional extraction)?",
+      "resolution_mechanism": "Compare technical barriers to local generation (solar irradiance, storage density, local baseload capacity) against regulatory barriers (interconnection standards, tariff structures, capital requirements). Jurisdictional comparison: where regulatory barriers are lower, what proportion of generation is local vs centralized?",
+      "impact": "If technical: reducing suppression requires technological breakthrough. If institutional: regulatory reform can dramatically reduce suppression within years.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether suppression is technical or institutional"
+    },
+    {
+      "id": "system_integrator_necessity",
+      "question": "Is the system integrator's role (managing interdependencies, ensuring stability) genuinely necessary for grid function, or could distributed agents with local control achieve equivalent stability at lower cost?",
+      "resolution_mechanism": "Historical analysis of grid stability before/after centralized control systems; simulation of stability under distributed agents with no central coordinator; pilot projects comparing performance.",
+      "impact": "If necessary: system integrator extraction is justified (justified extraction, Rope classification correct). If contingent: the integrator is a beneficiary capturing surplus from a coordination problem that could be solved otherwise (Snare view from integrator's perspective becomes valid).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether centralized system integration is necessary or contingent"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Critical infrastructure interdependence creates a structural tension between the coordination benefits of integrated systems and the fragility costs of cascading failure. As power grids, water systems, telecommunications, and transportation networks have become increasingly interconnected, they have achieved remarkable efficiency and scale \u2014 but at the cost of creating systemic fragility where localized failures propagate globally. This constraint exemplifies how genuine coordination functions (managing power flows, ensuring stability) coexist with asymmetric extraction (concentrating control, distributing risk) in a single structural arrangement. The same interdependence that enables economies of scale also traps communities in dependence on external operators, concentrates decision-making authority, and creates system-wide fragility. The extractiveness value (0.58) reflects moderate extraction: system integrators capture significant surplus from their coordination role, but much of the interdependence is genuinely functional rather than extractive overhead. Theater ratio (0.48) indicates that roughly half the regulatory and operational apparatus is performative \u2014 legacy standards that assume centralized generation but persist despite distributed generation, tariff structures that assume one-way power flow but persist despite bidirectional flow, reliability metrics that measure system stability but ignore community resilience.",
+    "key_agents": [
+      "Dependent Communities: Primary victim (powerless/trapped) \u2014 reliant on external infrastructure with no exit option; bear full cost of outages and fragility without control over design or operation",
+      "Regional Grid Operators: Secondary victim/mixed (moderate/constrained) \u2014 benefit from scale efficiencies but bear operational and liability burden; constrained by interconnection requirements and capital lock-in",
+      "System Integrators: Primary beneficiary (institutional/arbitrage) \u2014 capture surplus by positioning as indispensable coordination hub; can arbitrage between grids and markets",
+      "Distributed Resilience Movement: Organized agents (organized/constrained) \u2014 building alternative pathways (microgrids, renewable clusters, community cooperatives) with decentralization sunset trajectory",
+      "Legacy Regulatory Framework: Institutional artifact (institutional/arbitrage) \u2014 maintains mid-20th-century assumptions (centralized generation, one-way transmission) through performative standards and tariff structures",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing design choices (centralized grids maximize scale efficiency) as physical necessity (interdependence is inherently fragile)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. System integrators capture significant surplus by positioning as indispensable coordinators of interdependent flows. This is extraction, but not maximal \u2014 much of the surplus is genuine payment for real coordination function (frequency stability, congestion management, demand response). The 20-year trajectory from 0.35 to 0.58 reflects increasing extraction as system integrators have consolidated control: early deregulation allowed competitive entry and reduced extraction; later recentralization and financialization increased it. Suppression (0.65): Moderate-high. Communities face significant barriers to exit: no local alternative for baseload generation (technical barrier), regulatory barriers to interconnection (institutional), high capital requirements for local generation (economic). Suppression is not total because some communities can build microgrids, solar arrays, or storage systems \u2014 barriers are high but not insurmountable. Theater ratio (0.48): Moderate. Regulatory and operational theater has increased over time. Early grid operation was purely functional (balance supply and demand). Modern operation includes significant performative elements: tariff structures that assume centralized generation (obsolete), reliability metrics that measure system stability but not community resilience (misaligned), interconnection standards that slow distributed generation (institutional friction). But some theater remains functional \u2014 frequency stability, congestion management, and cascading failure prevention require real coordination.",
+    "perspectival_gap": "This constraint demonstrates divergent classification across positions. System integrators see Rope \u2014 they are solving legitimate coordination problems and experience genuine benefit. Dependent communities see Snare \u2014 they are trapped in reliance with extraction and no exit. Regional operators see Tangled Rope \u2014 they coordinate flows but bear liability for cascade failures. Distributed resilience groups see Scaffold \u2014 they have agency and see an exit path (decentralized generation). Legacy regulators see Piton \u2014 they maintain outdated standards through theater. The analytical observer risks Mountain \u2014 seeing interdependence as inherent to physics rather than a contingent design choice. The perspectival gap reveals that the same structural arrangement (interdependent grids) appears fundamentally different depending on whether you benefit from coordination (Rope), suffer from fragility (Snare), carry operational burden (Tangled Rope), or have agency to build alternatives (Scaffold).",
+    "directionality_logic": "Directionality varies by agent's position relative to extraction flow. System integrators (beneficiary + arbitrage) have low d \u2014 they extract surplus but can arbitrage between markets, keeping them mobile. Dependent communities (victim + trapped) have high d \u2014 they bear costs with no exit option. Regional operators (victim + constrained) have moderate d \u2014 they bear operational burden but can exit by serving different grid. Distributed groups (victim + constrained + organized) have lower effective d because organization and agency reduce experienced extraction. The analytical observer (analytical + analytical) has d ~0.72 \u2014 sees the full structure but risks naturalizing contingent arrangements.",
+    "mandatrophy_analysis": "RESOLVES MANDATROPHY: The constraint avoids mislabeling by decomposing the coordination function from the extraction function. The genuine coordination (managing power flows in real time across scale) is necessary and generates the benefits that system integrators capture. The extraction (concentrating control, trapping communities in dependence, creating systemic fragility) is contingent on architectural choices that are not inherent to coordination. The Tangled Rope classification captures this: real coordination function (\u03b5_coordination ~ 0.20, Rope baseline) + asymmetric extraction (\u03b5_extraction ~ 0.38, Snare overhead) = \u03b5_net 0.58. The scaffold perspective shows that the extraction can be removed (distributed generation eliminates need for centralized coordination) without eliminating the coordination function (local microgrids coordinate power flows at smaller scale). Decentralized grids lose some efficiency (higher per-unit cost, lower reliability in immediate sense) but eliminate fragility and extraction. The constraint is not 'interdependence is evil' (false \u2014 real coordination benefit) but 'this specific centralized architecture concentrates extraction alongside coordination, and alternative architectures can provide coordination with less extraction at the cost of efficiency.'"
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "grid_cascading_failure",
+      "water_system_interdependence",
+      "telecom_backbone_concentration"
+    ],
+    "dual_formulation_note": "Critical infrastructure interdependence is the upstream structural constraint. Specific failure events (power outages, water main breaks, internet backbone outages) are downstream manifestations of the fundamental architecture choice (centralized vs distributed). Grid cascading failure, water system interdependence, and telecom backbone concentration are structurally similar constraints with the same \u03b5-decomposition: genuine coordination function + contingent extraction architecture."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.45
+    }
+  ]
+}

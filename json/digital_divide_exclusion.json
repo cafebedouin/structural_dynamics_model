@@ -1,0 +1,186 @@
+{
+  "header": {
+    "constraint_id": "digital_divide_exclusion",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dde"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Digital Divide Exclusion from Economic and Social Participation",
+    "topic_domain": "economic/social/technological",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "digital_infrastructure_owners",
+      "high_connectivity_populations"
+    ],
+    "victims": [
+      "unconnected_populations",
+      "low_bandwidth_regions",
+      "digital_skill_underinvestment_groups"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Digitally Excluded Household",
+      "comment": "PERSPECTIVE 1: UNCONNECTED HOUSEHOLD (SNARE) \u2014 No meaningful access to broadband; cannot participate in employment markets, educational opportunities, or government services that assume digital access. Trapped by cost, geography, and infrastructure absence. Full extraction without coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Intermittently Connected Population",
+      "comment": "PERSPECTIVE 2: INTERMITTENTLY CONNECTED (TANGLED ROPE) \u2014 Mobile phone data provides some access but at high cost relative to income; patchy coverage; data caps create effective exclusion. Genuinely benefits from digital coordination (remote work, social connection) but extraction occurs through high per-byte costs and service tier segregation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Digital Infrastructure Operators",
+      "comment": "PERSPECTIVE 3: INFRASTRUCTURE OPERATORS (ROPE) \u2014 Experience digital divide as a coordination mechanism: building shared infrastructure enables network effects that benefit all participants. Arbitrage options: operate profitably in connected markets, defer investment in low-density regions. Net beneficiary but coordination is genuine."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Digital Equity Advocates and Policy Coalitions",
+      "comment": "PERSPECTIVE 4: EQUITY ADVOCATES (SCAFFOLD) \u2014 See the divide as a temporary policy failure being solved through universal broadband initiatives, subsidized access programs, and digital literacy investments. High suppression today (political resistance, budget constraints) but declining sunset clause: infrastructure rollout, device subsidies, and skill programs target elimination within 15-20 years."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Analog Institutions",
+      "comment": "PERSPECTIVE 5: LEGACY INSTITUTIONS (PITON) \u2014 Government agencies, banks, and utilities maintain digital-first operations and have largely abandoned analog channels. This performs institutional modernization but functionally excludes those without connectivity. Theater_ratio reflects that the theatrical performance of 'digital transformation' masks the infrastructure they inherited and did not replace. The constraint persists through inertia despite better alternatives."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Technologically Determinist View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / TECH DETERMINISM (MOUNTAIN) \u2014 From civilizational scale, sees digital divide as structurally inevitable: technology adoption always generates temporary inequality, and catching-up is a natural feature of technological diffusion. Geography and infrastructure are unchangeable constraints. However, the false summit detector identifies this as naturalization: the divide is not immutable \u2014 it reflects contingent policy choices (infrastructure investment, subsidy allocation, service regulation) that could be different."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "infrastructure_investment_threshold",
+      "question": "What level of public infrastructure investment would transition digital divide from snare to rope or scaffold across different regions?",
+      "resolution_mechanism": "Comparative analysis of broadband rollout programs (US rural, EU, India, Africa); correlation between public investment levels and adoption trajectories; cost-per-household modeling for full coverage",
+      "impact": "If threshold is achievable (< 5% of GDP): divide is a policy problem solvable within current state capacity (scaffold perspective confirmed). If threshold exceeds capacity (> 10% of GDP): divide reflects structural inequality beyond near-term remedy (snare classification maintained).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Infrastructure investment level needed to transition divide from snare to scaffold"
+    },
+    {
+      "id": "skill_underinvestment_causality",
+      "question": "Does digital skill deficit cause exclusion or result from it? Is the causal arrow infrastructure\u2192skills or skills\u2192infrastructure investment allocation?",
+      "resolution_mechanism": "Longitudinal analysis of skill development timing relative to access; comparison of skill adoption rates when infrastructure precedes vs follows skill training; natural experiments with rapid deployment to previously excluded regions",
+      "impact": "If infrastructure-first: skills respond to access (snare classification focuses on infrastructure barrier). If skills-first: access remains low because demand is not generated (snare classification reflects cognitive/aspirational barrier, not material). Different mechanisms require different interventions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causality between digital skills and access barriers"
+    },
+    {
+      "id": "digital_necessity_threshold",
+      "question": "Has digital access crossed the threshold from optional convenience to mandatory for survival-level services (banking, government, employment, healthcare)?",
+      "resolution_mechanism": "Audit of which critical services have eliminated non-digital access pathways; documentation of analog channel retention vs closure over time; impact assessment of closure on excluded populations",
+      "impact": "If mandatory: suppression is high and rising (snare classification strengthened). If still optional: exclusion reflects disadvantage but not total deprivation (tangled rope from broader perspective). Threshold crossing represents shift in the constraint's mechanism.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether digital access has become mandatory for essential services"
+    },
+    {
+      "id": "network_effects_beneficiary_mismatch",
+      "question": "Do trapped populations experience any network benefits from others' connectivity, or does the constraint fully prevent benefit realization?",
+      "resolution_mechanism": "Ethnographic documentation of excluded household connection mechanisms (borrowed access, communal connectivity, family mediation); quantification of indirect benefit flows from digital economy to excluded communities",
+      "impact": "If benefits flow: constraint is mixed extraction-coordination (tangled rope classification possible). If benefits do not flow: pure extraction (snare confirmed). Determines whether excluded populations are parasites on the system or completely separated.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether trapped populations receive indirect benefits from others' connectivity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The digital divide represents a structural constraint that excludes billions of people from full economic and social participation due to lack of broadband access, device affordability, and digital skills. Unlike many market failures that self-correct, the digital divide exhibits properties of a snare: it creates a locked-out population with no meaningful exit option, suppresses alternatives (analog services are being eliminated), and concentrates benefits among infrastructure owners and high-connectivity populations. The constraint is neither purely technological nor purely economic \u2014 it reflects policy choices about infrastructure investment, service regulation, and the pace of digitization of essential services. The extractiveness has increased over the interval as governments and institutions have accelerated digital-first service delivery without ensuring universal access, turning the divide from inconvenience to systemic exclusion. The theater ratio reflects the performative character of 'digital transformation' mandates that declare victory while excluding populations from the transformation.",
+    "key_agents": [
+      "Unconnected Populations: Primary victims (powerless/trapped) \u2014 no broadband access, cannot access employment markets, educational services, government functions, financial services, healthcare coordination. Full extraction without coordination benefit.",
+      "Intermittently Connected Populations: Secondary victims (moderate/constrained) \u2014 mobile data provides patchy access at high cost; data caps and service tier segmentation create functional exclusion despite technical connectivity.",
+      "Digital Infrastructure Owners: Primary beneficiaries (institutional/arbitrage) \u2014 ISPs, telecommunications companies, equipment manufacturers benefit from service monopolies, high pricing in captive markets, and minimal infrastructure investment in low-density regions. Arbitrage options enable selective deployment.",
+      "High-Connectivity Populations: Secondary beneficiaries (powerful/mobile) \u2014 benefit from network effects, employment opportunities, educational access, social services. Their access reinforces status and opportunities.",
+      "Digital Equity Advocates: Organized agents (organized/mobile) \u2014 public sector broadband initiatives, non-profit digital literacy programs, universal access advocates. See the divide as solvable through policy but face political and budget constraints.",
+      "Legacy Institutions: Institutional actors (institutional/arbitrage) \u2014 governments, banks, utilities that have transitioned to digital-first operations without maintaining parallel analog channels. Theater ratio reflects the institutional performance of 'modernization' that actually excludes.",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent policy choices as technological inevitability or structural limitation."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The digital divide extracts through multiple mechanisms: (1) Infrastructure owners capture monopoly rents from captive populations, (2) excluded populations cannot access employment and services available to connected populations, (3) skill investment in connectivity-dependent domains is inaccessible to the excluded. The extractiveness has increased from 0.42 to 0.58 over the interval as digital-first service adoption has accelerated without ensuring universal access. This is not a pure technology adoption curve \u2014 it reflects policy choices to digitize services faster than infrastructure reaches excluded regions. Suppression (0.68): High. Multiple barriers prevent exit: (1) infrastructure costs are beyond individual household reach ($100-300/month in developed regions, prohibitive for households earning $1-3/day globally), (2) geographic barriers (rural/remote areas lack providers), (3) device costs, (4) cognitive barriers (skills, language, digital literacy), (5) service barriers (many institutions have eliminated analog access channels). The suppression is not insurmountable in principle \u2014 public investment could eliminate it \u2014 but structural suppression is high and rising. Theater ratio (0.55): Moderate. Institutions performing digital transformation declare success while excluding populations; governments announce universal broadband goals while underfunding deployment; equity advocates propose solutions while facing budget constraints. The theater is not as high as a fully performative constraint (which would show 0.7+) because genuine digital access does exist for connected populations and some real coordination occurs. But the gap between announced commitments and actual coverage represents performative theater.",
+    "perspectival_gap": "Original analysis shows snare classification from excluded perspective but rope from beneficiary perspective. The gap is not small \u2014 snare implies pure extraction while rope implies genuine coordination. This divergence reveals that the constraint mechanisms operate differently depending on connection status. For connected populations, digital infrastructure genuinely coordinates activity and produces network effects (rope). For excluded populations, the same infrastructure provides no coordination benefit and functions as pure exclusion (snare). The constraint is not uniform \u2014 it is a snare for some and rope for others. The perspectival gap is not a measurement problem but a structural feature: the constraint's mechanism depends on whether you have access.",
+    "directionality_logic": "Directionality values are derived from beneficiary/victim status and exit options. Infrastructure owners (beneficiary + arbitrage) experience low d (approximately 0.10-0.15), producing negative effective extraction \u2014 they benefit from the constraint. Excluded populations (victim + trapped) experience high d (approximately 0.92-0.98), producing maximum experienced extraction chi via the sigmoid. Intermittently connected populations (both beneficiary and victim + constrained) experience moderate d (approximately 0.50-0.60), producing moderate chi. The piton perspective derives from high theater ratio rather than from high experienced extraction \u2014 institutions maintain digital-first operations as performative modernization despite alternatives. The mountain perspective is prospectively flagged as a false summit: directionality data shows the constraint is distributive (benefits concentrate upward) rather than structural (inherent to technology). This pattern \u2014 beneficiary directionality near 0.0, victim directionality near 1.0, victim d rising despite technological advancement \u2014 signals that the constraint's mechanism is political, not technological.",
+    "mandatrophy_analysis": "This constraint demonstrates how mandatrophy is resolved through perspectival decomposition. The snare classification (pure extraction for excluded) is not contradicted by rope/scaffold classifications for other perspectives \u2014 they are measuring different populations' experiences of the same constraint. The analytical observer's mountain (technological inevitability) is resolved as a false summit via directionality analysis: if the divide were inherent to technology, d values would cluster around 0.50 (symmetric), but instead they polarize (high d for victims, low d for beneficiaries). The polarization indicates a distributive mechanism, not a structural/technological one. Mandatrophy is avoided by recognizing that 'is digital divide a mountain or snare?' is a false dichotomy \u2014 it is a snare for excluded populations, a rope for infrastructure owners, and potentially a scaffold if policy choices change. The constraint's type depends on the observer's position within the divide itself."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "labor_market_access",
+      "educational_credential_verification",
+      "financial_services_access",
+      "government_service_delivery"
+    ],
+    "dual_formulation_note": "Digital divide exclusion is downstream of infrastructure investment policy choices and service digitization decisions. Upstream constraints include broadband deployment policy, telecommunications regulation, and government digital-first mandates. The divide is a meta-constraint that emerges from the intersection of multiple sectoral digitization choices."
+  },
+  "directionality_overrides": []
+}

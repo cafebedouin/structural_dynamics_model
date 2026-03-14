@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "occupational_health_inequality",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "occhealth"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Occupational Health Inequality",
+    "topic_domain": "labor/health/economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "capital_owners",
+      "regulatory_agencies"
+    ],
+    "victims": [
+      "precarious_workers",
+      "low_wage_workers",
+      "worker_health_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Precarious Worker",
+      "comment": "PERSPECTIVE 1: PRECARIOUS WORKER (SNARE) \u2014 Trapped by economic dependency, skill specificity, and geographic constraints. No affordable exit from hazardous work. Bears full health costs of occupational exposure. Suppression is structural: job availability concentrated in high-hazard sectors, medical costs consume earnings, skills not transferable to safer work."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Wage Worker",
+      "comment": "PERSPECTIVE 2: WAGE WORKER (TANGLED ROPE) \u2014 Constrained by need for continuous income and family obligations. Experiences both coordination (workplace safety norms, collective bargaining when available) and extraction (unequal health exposure, inadequate hazard pay, speed-up pressure). Has some agency through unionization or job mobility within constrained set of options."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Labor Union",
+      "comment": "PERSPECTIVE 3: LABOR UNION (ROPE) \u2014 Organized agents can arbitrage between jurisdictions, collective bargaining, and regulatory capture. Benefits from occupational health as coordination mechanism: safety standards reduce turnover, health costs are diffused across collective, regulatory framework provides stable negotiating ground. Can exit regulatory regime through lobbying or jurisdictional arbitrage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Firm",
+      "comment": "PERSPECTIVE 4: FIRM (TANGLED ROPE) \u2014 Coordinates production and labor supply while extracting from workers through wage suppression and externalized health costs. Genuine coordination function: production requires safe-enough conditions (absenteeism, turnover, product defects from fatigue). Asymmetric extraction: workers bear health risks, firm captures productivity surplus and can offshore hazardous processes to lower-regulation zones."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Regulatory Agency",
+      "comment": "PERSPECTIVE 5: REGULATORY AGENCY (ROPE) \u2014 Coordinates occupational health standards across firms. Experiences constraint as pure coordination problem: setting hazard exposure limits, enforcement standards, certification requirements. Benefits from institutional legitimacy and budget stability. Can arbitrage regulatory capture and regulatory stringency."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Occupational Health Bureaucracy",
+      "comment": "PERSPECTIVE 6: OCCUPATIONAL HEALTH BUREAUCRACY (PITON) \u2014 Institutional theater: occupational health enforcement is substantially performative. Inspections are infrequent, penalties are minor relative to compliance costs, worker reporting mechanisms are weak. Bureaucracy persists through institutional inertia (ILO conventions, national labor codes) despite low functional verification. Workers receive theater of protection while bearing actual risks."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational/global perspective, occupational health inequality is a genuine hybrid. Coordination function: work organization requires some baseline health standards to prevent catastrophic worker loss. Extraction function: capitalist production externalizes health costs onto workers because wages do not reflect health risk, and regulatory capture allows firms to suppress hazard disclosure. The constraint is held in place by both coordination necessity and extractive advantage."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "externalization_threshold",
+      "question": "At what wage premium does occupational health risk become fairly compensated hazard pay rather than extraction?",
+      "resolution_mechanism": "Comparative wage analysis: compensating differential methodology applied across hazard levels; worker willingness-to-pay for safety vs offered wage premiums",
+      "impact": "If threshold < 10% premium: most occupational risk is uncompensated extraction. If threshold > 30%: risk premium may justify some inequality as legitimate market signal.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for fair hazard pay vs extractive wage suppression"
+    },
+    {
+      "id": "substitutability_of_hazard_labor",
+      "question": "How much of occupational health inequality reflects economic necessity (hazardous work requires this worker type) vs extractive structuring (firms deliberately concentrate hazards among powerless groups)?",
+      "resolution_mechanism": "Technology feasibility analysis: identification of engineering solutions that could reduce hazards but are not adopted due to cost; comparison of hazard exposure across worker demographics in same job categories",
+      "impact": "If substitutability high: extraction is significant (same work could be made safer). If substitutability low: some inequality reflects task necessity.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether hazard concentration reflects necessity or deliberate extraction structuring"
+    },
+    {
+      "id": "enforcement_capture_mechanism",
+      "question": "Does occupational health enforcement failure stem from insufficient inspection capacity (underfunding) or from regulatory capture (inspectors shield firms)?",
+      "resolution_mechanism": "Comparative analysis of enforcement resources vs caseload; inspector career paths and post-agency employment; correlation between inspection frequency and firm profitability",
+      "impact": "If underfunding: scaffold perspective valid (increased resources could improve function). If capture: snare perspective valid (enforcement theater is intentional).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether enforcement failure is resource-driven or capture-driven"
+    },
+    {
+      "id": "health_commons_recovery",
+      "question": "To what extent can worker health damage from occupational exposure be recovered through medical intervention vs permanent loss?",
+      "resolution_mechanism": "Longitudinal health outcome studies: recovery rates for occupational illnesses; comparison of pre-exposure to post-treatment health status; irreversibility analysis by hazard type",
+      "impact": "If recovery low: extraction is irreversible (worker bears permanent cost). If recovery high: extraction is mitigated (health can be restored).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Reversibility of occupational health damage through medical intervention"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Occupational health inequality represents a structural tension between the coordination necessity of work organization and the extractive asymmetry of health risk distribution. Workers in hazardous sectors (construction, mining, agriculture, food processing, caregiving) systematically experience higher exposure to physical, chemical, and biological hazards than workers in office environments. This exposure is neither random nor technically necessary \u2014 it reflects deliberate firm decisions to concentrate hazards among workers with the least exit capacity (lowest wage workers, precarious workers, undocumented workers, workers in low-income regions). The constraint functions as both a genuine coordination mechanism (production requires some baseline safety to prevent catastrophic worker loss) and a pure extraction mechanism (firms suppress hazard disclosure, externalize health costs, and prevent worker organization). The theater ratio (0.55) reflects that occupational health enforcement is substantially performative: inspections are infrequent (often 0.2\u20130.5 inspections per firm per year), penalties are minor (often less than 1% of firm revenue), worker reporting mechanisms are weak (retaliation risks outweigh disclosure benefits), and occupational illness is routinely misclassified as personal health failure rather than workplace injury.",
+    "key_agents": [
+      "Precarious Workers: Primary victims (powerless/trapped) \u2014 lack skills, savings, and geographic mobility to exit hazardous work; bear full health costs; lack access to medical care through workplace insurance",
+      "Low-Wage Workers: Primary victims (moderate/constrained) \u2014 have some exit options but face substantial costs (skill retraining time, wage loss, relocation); experience both coordination benefits and extraction",
+      "Capital Owners/Firms: Primary beneficiaries (institutional/arbitrage) \u2014 capture productivity surplus while externalizing health costs; can offshore hazardous production to lower-regulation zones; can suppress hazard disclosure through information asymmetry",
+      "Labor Unions: Secondary institutional actors (organized/arbitrage) \u2014 coordinate safety standards and collective bargaining but benefit from occupational health as coordination mechanism; captured in some jurisdictions",
+      "Regulatory Agencies: Institutional actors (institutional/arbitrage) \u2014 maintain occupational health standards but experience capture and underfunding; can arbitrage regulatory stringency across jurisdictions",
+      "Occupational Health Bureaucracy: Institutional actor (institutional/constrained) \u2014 performs enforcement ritual but lacks resources and political power to challenge firm interests",
+      "Worker Health Commons: Victim collective (powerless/trapped) \u2014 abstract good whose degradation is externalized and uncompensated; cannot organize or exit"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Firms extract from workers by concentrating hazards among powerless groups, suppressing hazard disclosure, preventing collective organization, and externalizing health costs. The extraction is not maximal (0.9+) because genuine coordination functions exist \u2014 production requires some baseline worker health to prevent catastrophic turnover \u2014 and some regulatory standards and collective bargaining do reduce hazards. The measurement shows extractiveness increasing over 40 years as automation and globalization have allowed firms to concentrate hazards in low-wage sectors and offshore hazardous work to lower-regulation zones. Suppression (0.68): High. Substantial barriers prevent workers from exiting hazardous work: job availability concentrated in high-hazard sectors, retraining costs and wage loss during transition, geographic immobility, dependence on employer-linked health insurance (in US context), legal restrictions on undocumented workers, and weak worker-to-worker information about hazards (firms suppress hazard disclosure). Theater ratio (0.55): Moderate. Occupational health enforcement is substantially performative \u2014 regulatory inspections are infrequent, penalties are minor, worker reporting is suppressed by retaliation risk. But not maximal (0.8+) because some genuine safety improvements occur through collective bargaining and regulation (e.g., asbestos bans, chemical controls). The theater has increased over time as enforcement underfunding has reduced inspection frequency.",
+    "perspectival_gap": "The primary perspectival gap is between the precarious worker (sees snare: pure extraction with no benefit and no exit) and the firm (sees rope: coordination mechanism where safety enables production). This gap is diagnostic of asymmetric extraction: one party bears costs while the other captures benefits. The secondary gap is between the analytical observer (sees tangled rope: both genuine coordination and genuine extraction) and the regulatory agency (sees rope: pure coordination). This gap reveals that regulatory capture has made enforcement performative \u2014 the agency experiences pure coordination while workers experience mixed extraction + coordination.",
+    "directionality_logic": "Precarious workers with trapped exit options are full targets (d \u2248 0.95) \u2192 f(d) \u2248 1.42 \u2192 high experienced chi. Capital owners with arbitrage options are full beneficiaries (d \u2248 0.05) \u2192 f(d) \u2248 -0.12 \u2192 negative experienced chi (they benefit). Regulated firms have intermediate d (0.4\u20130.6) depending on whether enforcement is credible or captured. The measurement trend (extractiveness rising while theater rises) suggests that as enforcement becomes more performative, firms experience lower d (enforcement becomes less costly) while workers experience higher d (they cannot exit easier even if they perceive the constraint as pure extraction).",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by distinguishing genuine coordination (baseline worker health necessary for production) from pure extraction (concentration of hazards among powerless groups, wage suppression, hazard suppression). The classification is tangled rope because BOTH functions exist and are structurally essential: firms genuinely need workers alive and conscious enough to work, AND firms genuinely benefit from concentrating hazards where they can suppress information about them. The mandatrophy is avoided because the constraint's primary function is not pure extraction disguised as coordination \u2014 it IS a genuine coordination mechanism that IS simultaneously extractive. The theater (0.55) prevents this from being classified as rope: occupational health enforcement is substantially performative, suggesting that some firms use regulatory theater to create the appearance of hazard control while extracting from worker health. The measurements showing theater_ratio increasing from 0.38 to 0.55 suggest that enforcement has become MORE performative over time even as extractiveness has increased \u2014 a pattern consistent with Goodhart degradation (metrics are gamed to show compliance while underlying function deteriorates)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wage_suppression_by_precarity",
+      "worker_organizing_suppression",
+      "occupational_illness_externalization"
+    ],
+    "dual_formulation_note": "Occupational health inequality is upstream of specific injury/illness constraints. The health inequality constraint has its own \u03b5 reflecting the structural concentration of hazards; downstream constraints reflect specific mechanisms (wage suppression, organizing suppression, medical cost externalization) through which the inequality is maintained. All three are linked because addressing any one requires addressing the others."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "foundry_process_node_fragmentation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fpnf"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Foundry Process Node Fragmentation",
+    "topic_domain": "semiconductor_manufacturing/supply_chain",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "foundry_operators",
+      "process_node_incumbents"
+    ],
+    "victims": [
+      "semiconductor_design_ecosystem",
+      "emerging_fabs"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Semiconductor Design Ecosystem",
+      "comment": "PERSPECTIVE 1: DESIGN ECOSYSTEM (SNARE) \u2014 Designers cannot exit the foundry process node landscape without abandoning product development entirely. Locked into compatibility with existing nodes through design tools, IP libraries, and customer specifications. No alternative verification pathway; extraction is maximum experienced from this position."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Emerging Foundries and Fabs",
+      "comment": "PERSPECTIVE 2: EMERGING FABS (SNARE) \u2014 New foundries face prohibitive capital and technical barriers to entry. Process node fragmentation means they must support multiple incompatible nodes simultaneously, multiplying development costs and time-to-market. Trapped by sunk costs and supply chain dependencies; no exit without massive resource commitment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Mid-Tier Design Companies",
+      "comment": "PERSPECTIVE 3: MID-TIER DESIGNERS (TANGLED ROPE) \u2014 These agents experience both coordination benefit (access to cutting-edge process nodes) and extraction (forced to maintain compatibility across fragmented nodes, increasing design complexity and time-to-market). Constrained by resource limitations but possess some negotiating power through volume commitments. Mixed cost-benefit experience."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Leading Foundry Operators",
+      "comment": "PERSPECTIVE 4: LEADING FOUNDRIES (ROPE) \u2014 Dominant foundries benefit from node fragmentation as a coordination mechanism that locks in customer relationships. Multiple proprietary nodes create switching costs that protect market share. Experience the constraint as beneficial coordination \u2014 ecosystem standardizes on their platform."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Process Node Standardization Bodies",
+      "comment": "PERSPECTIVE 5: STANDARDIZATION BODIES (PITON) \u2014 Industry consortia (SEMI, JEITA) maintain nominal standardization efforts that are largely performative. Published standards lag actual manufacturing by 2-3 years; compliance is theater while real process differentiation remains proprietary. The bodies persist through institutional inertia despite low functional value."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a systemic view, process node fragmentation simultaneously solves genuine coordination problems (competing nodes drive innovation) and enables extraction (entrenched foundries leverage lock-in to raise prices). The constraint contains both functions structurally \u2014 coordination via competitive differentiation, extraction via switching costs."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fragmentation_necessity_threshold",
+      "question": "How much process node diversity is necessary for competitive innovation versus how much represents extractive fragmentation?",
+      "resolution_mechanism": "Historical analysis of process node development cycles; correlation between node proliferation rate and R&D productivity gains; comparison of innovation metrics under consolidated vs fragmented markets",
+      "impact": "If threshold < 4 active nodes per generation: most fragmentation is extractive (snare classification dominates). If threshold > 8 nodes: significant fragmentation is justified by competitive necessity (rope classification valid).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold distinguishing necessary innovation diversity from extractive fragmentation"
+    },
+    {
+      "id": "design_tool_portability_feasibility",
+      "question": "Can design tools and IP libraries be made genuinely portable across foundry nodes, or do node-specific optimizations require tool customization?",
+      "resolution_mechanism": "Engineering assessment of tool abstraction layers; measurement of design rework required when porting designs between nodes; cost-benefit analysis of portability investments vs lock-in switching costs",
+      "impact": "If portable: fragmentation becomes a coordination problem (rope/scaffold), not extraction (snare/tangled_rope). If fundamentally node-specific: lock-in is structural and justified, shifting classification toward rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Feasibility of design tool portability across process nodes"
+    },
+    {
+      "id": "emerging_fab_viability_curve",
+      "question": "What minimum process node portfolio size enables an emerging fab to achieve market viability against incumbents?",
+      "resolution_mechanism": "Capital requirement analysis for new entrants; market share trajectories of recent foundry entrants; correlation between node portfolio breadth and time-to-profitability",
+      "impact": "If viability threshold is low (1-2 nodes): emerging fabs can compete despite fragmentation (snare classification weakens). If high (6+ nodes): fragmentation creates insurmountable barriers (snare classification strengthened, victim status confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Minimum process node portfolio for emerging fab viability"
+    },
+    {
+      "id": "standardization_capture_risk",
+      "question": "Are process standardization efforts genuinely neutral coordination mechanisms, or have they been captured by incumbent foundries to lock in proprietary advantages as pseudo-standards?",
+      "resolution_mechanism": "Historical analysis of standardization proposal origins; tracking of deviations between published standards and actual manufacturing implementations by different foundries; comparison of standard revision cycles with competitive dynamics",
+      "impact": "If captured: standardization is piton theater masking extractive lock-in (snare classification becomes more accurate). If neutral: standardization is rope coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether standardization efforts are captured by incumbents"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Process node fragmentation in semiconductor foundries creates a structural tension between necessary technological diversity and extractive lock-in mechanisms. As process nodes become increasingly specialized and proprietary, foundries differentiate through node-specific optimizations while designers face escalating costs to support multiple incompatible nodes. This constraint exhibits tangled rope characteristics: genuine coordination benefits from competitive innovation (multiple nodes drive R&D acceleration) coexist with significant extraction mechanisms (switching costs, proprietary design tools, incompatible IP libraries lock designs to specific foundries). The theater ratio (0.48) reflects moderate performative content in standardization efforts \u2014 published standards maintain industry-wide visibility while actual competitive differentiation remains proprietary. The extractiveness trajectory shows accumulation over the measurement interval as node proliferation outpaces design tool standardization, increasing the switching cost burden on designers.",
+    "key_agents": [
+      "Semiconductor Design Ecosystem: Primary victim (powerless/trapped) \u2014 must support fragmented nodes to access cutting-edge technology; cannot exit without abandoning product development",
+      "Emerging Foundries and Fabs: Primary victim (powerless/trapped) \u2014 face prohibitive barriers to entry due to requirement to support multiple incompatible process nodes",
+      "Mid-Tier Design Companies: Secondary victim (moderate/constrained) \u2014 experience mixed extraction and benefit; constrained by resource limitations but possess some negotiating leverage",
+      "Leading Foundry Operators: Primary beneficiary (institutional/arbitrage) \u2014 leverage node fragmentation as lock-in mechanism; benefit from switching costs and platform dominance",
+      "Process Node Incumbents: Beneficiary (institutional/arbitrage) \u2014 proprietary nodes protect market position and command premium pricing",
+      "Standardization Bodies: Institutional theater (institutional/arbitrage) \u2014 maintain nominal coordination role while real differentiation remains proprietary; piton perspective",
+      "Analytical Observer: Systemic view (analytical/analytical) \u2014 recognizes both genuine coordination function (innovation via competition) and extractive lock-in mechanism"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The foundry operators and process node incumbents extract measurable value through lock-in mechanisms, but the extraction is not as severe as pure rent-seeking because genuine technological differentiation justifies some of the node proliferation. The coordinate of 0.58 reflects that roughly half the node fragmentation arises from legitimate competitive innovation and half from extractive switching costs. Suppression (0.62): Moderate-high. Significant barriers include capital requirements for new node development, specialized design tool ecosystems, proprietary IP library dependencies, and network effects from existing design communities. These are not primarily coercive barriers but structural incumbency advantages. Theater ratio (0.48): Moderate. Standardization bodies publish specifications and compatibility frameworks that create appearance of coordination, but actual manufacturing remains proprietary and node-differentiated. The theater has grown as standardization efforts lag actual manufacturing complexity.",
+    "directionality_logic": "Leading foundries experience low d (near 0.1-0.2) as beneficiaries with arbitrage options \u2014 they can costlessly switch between maintaining different nodes and have full exit from any specific constraint. Designers experience high d (near 0.8-0.9) as trapped victims dependent on foundry node access with no exit. Mid-tier companies experience moderate d (near 0.5-0.6) as constrained actors with limited negotiating power but some resource flexibility. The gap between beneficiary and victim directionality is the engine that powers the extraction \u2014 the foundry has low cost, high benefit; the designer has high cost, low benefit relative to the foundry's gain.",
+    "perspectival_gap": "Leading foundries see a pure coordination mechanism (Rope) that drives innovation through competitive differentiation. Emerging fabs see an extractive barrier (Snare) that prevents competitive entry. Designers see a tangled constraint combining genuine benefit (access to advanced nodes) with extraction (design tool lock-in and multi-node compatibility burden). Standardization bodies maintain a piton perspective \u2014 they perform the coordination ritual while real differentiation remains outside their authority. The analytical observer recognizes both the rope function (competition drives innovation) and the snare effects (lock-in prevents contestation), making tangled rope the most accurate classification.",
+    "mandatrophy_analysis": "RESOLUTION: Fragmentation contains both genuine coordination function and extractive mechanism. The coordination function is real: competing foundries developing distinct process nodes drives innovation in chip design, manufacturing efficiency, and performance optimization. The extraction is also real: once designers and fabs commit to a node, switching costs (tool retraining, IP library conversion, yield learning curves) create lock-in that foundries exploit through premium pricing and restrictive licensing. The constraint resolves mandatrophy by acknowledging both functions structurally. Tangled rope classification is correct: beneficiaries include both the innovation acceleration from competitive nodes (genuine coordination) and the premium extraction from switching costs (asymmetric extraction). Neither function dominates \u2014 the tension between them is the constraint's core structure."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "semiconductor_supply_chain_resilience",
+      "fab_capacity_allocation",
+      "design_tool_ecosystem_lock_in"
+    ],
+    "dual_formulation_note": "Process node fragmentation is downstream of foundry competitive dynamics but represents a distinct structural constraint. The foundry competition constraint (how many fabs can maintain profitability) has its own extractiveness reflecting market economics; process node fragmentation has its own extractiveness reflecting design ecosystem lock-in and emerging fab barriers."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

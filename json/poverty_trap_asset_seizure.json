@@ -1,0 +1,193 @@
+{
+  "header": {
+    "constraint_id": "poverty_trap_asset_seizure",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ptas"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Poverty Trap Asset Seizure via Debt and Fines",
+    "topic_domain": "economic/legal/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "enforcement_agencies",
+      "debt_collectors",
+      "creditors"
+    ],
+    "victims": [
+      "low_income_households",
+      "unbanked_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Indebted Household",
+      "comment": "PERSPECTIVE 1: INDEBTED HOUSEHOLD (SNARE) \u2014 Trapped by structural barriers: seizing vehicles eliminates transportation to work; seizing homes eliminates shelter; seizing wages creates debt spiral. No exit options; maximum suppression via legal enforcement. Experienced extraction is maximal \u2014 every asset that could enable escape is targeted."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Children in Seized-Asset Households",
+      "comment": "PERSPECTIVE 2: CHILDREN IN SEIZED HOUSEHOLDS (SNARE) \u2014 Inherited poverty trap. Parent's seized assets (housing, transportation, educational goods) directly impair child's opportunity set. Generational extraction \u2014 the constraint passes down through asset deprivation and diminished mobility."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Enforcement Agencies and Creditors",
+      "comment": "PERSPECTIVE 3: ENFORCEMENT AGENCIES & CREDITORS (ROPE) \u2014 Perceive the mechanism as debt recovery coordination: legal framework ensures debtors cannot arbitrage (hide assets, flee jurisdiction). Net beneficiary with high structural power and exit arbitrage (can modify terms, forgive debt, or restructure obligations). Experiences the constraint as coordination that protects their interests."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Small-Scale Creditors and Employer-Deductors",
+      "comment": "PERSPECTIVE 4: SMALL CREDITORS (TANGLED ROPE) \u2014 Face genuine coordination problem (ensuring debt repayment requires mechanism to prevent debtor exit), but also contribute to extraction through debt-trap interest rates and wage garnishment fees. Constrained by larger debt-collection infrastructure; benefits from enforcement but also harmed by borrower insolvency cycles that reduce repayment capacity."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Asset Exemption and Debtor Protection Movements",
+      "comment": "PERSPECTIVE 5: DEBTOR PROTECTION MOVEMENTS (SCAFFOLD) \u2014 Organized agents (legal aid societies, bankruptcy reform advocates, homestead exemption proponents) see asset seizure as a temporary enforcement regime with a sunset: alternative mechanisms (income-based repayment, asset exemptions, bankruptcy discharge) create pathways to exit that reduce suppression over time. Constraint is enforceable but transitional."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Debtor Prison Legacy Institutional Forms",
+      "comment": "PERSPECTIVE 6: DEBTOR PRISON LEGACY (PITON) \u2014 Asset seizure persists as a formal mechanism through institutional inertia despite widespread recognition that it deepens poverty and reduces repayment capacity. The constraint maintains itself theatrically through legal ritual (court orders, foreclosure procedures, wage garnishment documents) while functional repayment actually declines as borrowers lose income-earning assets. Theater ratio reflects the gap between enforcement activity and actual debt recovery."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Naturalized Necessity View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FALSE NATURALIZATION (MOUNTAIN) \u2014 From a global civilizational view, asset seizure appears as an immutable requirement of credit systems: 'without enforcement, credit cannot exist; without seizure threat, debtors cannot be deterred.' This perspective naturalizes what is actually a contingent institutional choice (seizure vs. alternative mechanisms like income-based repayment, bankruptcy discharge, or precautionary lending). The analytical view risks treating institutional arrangement as law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "seizure_proportionality_threshold",
+      "question": "At what ratio of seized assets to outstanding debt does seizure cease to maximize repayment and instead trigger default cycles?",
+      "resolution_mechanism": "Longitudinal tracking of post-seizure repayment rates by asset type; comparison of recovery outcomes under seizure vs. alternative enforcement (income garnishment, debt restructuring)",
+      "impact": "If threshold is low (20-30% of debt value): current seizure practices are counterproductive to stated recovery goal. If threshold is high (80%+): seizure is functional enforcement mechanism, not pure extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Threshold at which asset seizure becomes counterproductive to debt recovery"
+    },
+    {
+      "id": "asset_exemption_sufficiency",
+      "question": "Do homestead exemptions and vehicle exemptions in bankruptcy actually prevent the poverty trap, or do they merely delay it while allowing interest and fees to accumulate?",
+      "resolution_mechanism": "Post-bankruptcy asset recovery tracking; measurement of exemption usage rates vs. actual poverty exit within 5 years",
+      "impact": "If effective: exemptions represent functional sunset mechanism (Scaffold validates). If ineffective: exemptions are theatrical compliance without structural change (Piton validates).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether asset exemptions functionally prevent poverty traps or merely delay them"
+    },
+    {
+      "id": "wage_garnishment_debt_spiral_causality",
+      "question": "Does wage garnishment cause job loss (through employer response, commute failure, or child care disruption) or does job loss cause garnishment defaults?",
+      "resolution_mechanism": "Propensity score matching on garnishment timing relative to employment status; survey of employers on garnishment-driven termination practices",
+      "impact": "If causality is garnishment \u2192 job loss: extraction is active mechanism that deepens poverty trap. If causality is job loss \u2192 garnishment: seizure is reactive, not constitutive of trap.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal direction between wage garnishment and job loss"
+    },
+    {
+      "id": "alternative_credit_access_substitutability",
+      "question": "If asset seizure were eliminated, would alternative credit mechanisms (unsecured lending, income-based repayment, payday loans) emerge that replicate the poverty trap through different enforcement means?",
+      "resolution_mechanism": "Cross-national comparison of credit markets in jurisdictions with and without seizure enforcement; analysis of substitution effects in payday lending and informal credit markets",
+      "impact": "If substitution is high: constraint is structurally persistent despite regulatory form changes (true Snare). If substitution is low: constraint-specific design choices matter and Scaffold sunset is possible.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether eliminating asset seizure would be substituted by alternative poverty-trap mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Asset seizure for debt and fines operates as a pure extraction mechanism targeting economically trapped populations. The constraint works by converting the last resources that could enable exit \u2014 housing, transportation, income \u2014 into debt collection payments. This creates a self-reinforcing trap: seizing a vehicle eliminates transportation to employment; seizing wages reduces the income available for living expenses, forcing additional borrowing; legal fines for failure to pay compound the debt spiral. The mechanism persists through formal institutional structures (courts, collection agencies) that treat it as coordination (debt recovery) when the structural outcome is pure extraction (poverty deepening). Theater ratio is relatively low (0.35) because the enforcement is genuine and consequential \u2014 unlike vestigial Piton constraints, asset seizure actually accomplishes its nominal purpose of transferring wealth. The constraint is therefore Snare, not Piton. But the analytical observer risks naturalizing this as an immutable feature of credit systems, when cross-national comparison reveals it as a contingent institutional choice with alternatives.",
+    "key_agents": [
+      "Low-Income Households: Primary victims (powerless/trapped) \u2014 face seizure of vehicles, homes, and wages with no legal exit options; suppression is structural (forced seizure via court order)",
+      "Children in Seized-Asset Households: Secondary victims (powerless/trapped) \u2014 inherit poverty trap through parental asset loss; educational and mobility opportunities directly reduced",
+      "Enforcement Agencies & Creditors: Primary beneficiaries (institutional/arbitrage) \u2014 capture wealth transfer with legal authority; can modify terms, forgive, or restructure at will; minimal suppression",
+      "Small-Scale Creditors: Mixed actor (moderate/constrained) \u2014 benefit from enforcement coordination but also harmed by borrower insolvency cycles that reduce repayment capacity",
+      "Asset Exemption Advocates: Organized challengers (organized/constrained) \u2014 building alternative pathways (homestead exemptions, bankruptcy discharge) that would sunset the current seizure regime",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 at risk of naturalizing asset seizure as inherent to credit, missing that it is a design choice"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The mechanism directly extracts wealth from trapped populations through forced asset transfer. The trajectory over time shows extractiveness rising (0.52 \u2192 0.68) as enforcement intensifies and debt spirals deepen borrowers' vulnerability. Suppression (0.78): Very high. Structural barriers to exit are severe: court orders are legally enforceable; wage garnishment leaves minimal income for subsistence; asset seizure removes the tools for escaping poverty. Alternatives (informal economy, migration) are themselves illegal or prohibitively costly. Theater ratio (0.35): Low. This is not theatrical constraint \u2014 it is functional extraction. Enforcement proceedings are real; asset transfers are real; wealth redistribution occurs. The low theater distinguishes Snare from Piton. Claimed type: Snare. The constraint has a victim (low-income borrowers), high extraction (0.68), high suppression (0.78), and low alternative provision. It is pure extraction with minimal coordination function beyond 'enabling debt collection.' Beneficiaries (enforcement agencies, creditors) experience it as coordination/rope. The gap is maximal.",
+    "perspectival_gap": "The central perspectival gap is between the beneficiary's experience (Rope: 'we need enforcement to recover debts') and the victim's experience (Snare: 'seizure traps me in poverty'). The small-scale creditor occupies the middle position (Tangled Rope: genuine coordination problem combined with extraction through fees and interest). The organized debtor-protection movement sees a Scaffold \u2014 alternative mechanisms (exemptions, bankruptcy discharge, income-based repayment) are being built, and the current seizure regime has a sunset. The institutional view from enforcement agencies sees Rope (coordination mechanism). The piton perspective emerges if you track the constraint over centuries \u2014 historical debtor prisons are gone, but asset seizure persists with reduced functional effectiveness (high theater, low recovery rates), maintained through institutional inertia. The analytical observer risks Mountain (false naturalization), treating credit enforcement as immutable law rather than institutional design. The constraint resolves mandatrophy by showing that all types are legitimate perspectives: Snare for victims, Rope for beneficiaries, Tangled Rope for mixed-position actors, Scaffold for organized alternatives, Piton for the historical trajectory, and Mountain only if you mistake institutional choice for natural law.",
+    "directionality_logic": "Directionality is determined by each agent's structural position. Powerless trapped victims have d \u2248 0.95 (full target of extraction): no exit options, no power to modify terms, no escape from seizure. Institutional beneficiaries with arbitrage options have d \u2248 0.05 (full beneficiary): they can restructure debt, forgive, or decline to seize at will. Moderate constrained creditors have d \u2248 0.55 (symmetric): they face genuine coordination problem (need enforcement to recover debt) but also contribute to extraction (fees, interest rates that deepened borrowers' insolvency). The engine derives these d values from the beneficiary/victim declarations and exit options, producing \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S). For powerless trapped agents at national scope, f(d) \u2248 1.42 (maximum power modifier), producing \u03c7 \u2248 0.68 \u00d7 1.42 \u00d7 1.0 = 0.96 (extreme extraction). For institutional arbitrage beneficiaries, f(d) \u2248 -0.12 (negative modifier), producing \u03c7 \u2248 0.68 \u00d7 (-0.12) \u00d7 1.0 \u2248 -0.08 (they perceive the constraint as beneficial, not extractive).",
+    "mandatrophy_analysis": "CRITICAL CASE: Asset seizure for poverty-trap debt resolves mandatrophy by showing that Snare and alternative types are structurally valid from different positions. The false move is to ask 'which type is correct?' when the answer is 'all are correct from their respective positions.' The Snare classification is correct for victims: high extraction, high suppression, no coordination benefit to the target. The Rope classification is correct for beneficiaries: they experience the constraint as coordination that protects their interests. The Tangled Rope is correct for mixed-position agents: genuine coordination problem (debt repayment) combined with asymmetric extraction (fees, interest, bankruptcy outcomes). The Scaffold perspective is valid because alternative mechanisms (bankruptcy discharge, homestead exemptions, income-based repayment) are structurally real alternatives with sunset potential. The Piton perspective is valid historically: asset seizure evolved from debtor prisons through institutional transformation toward alternative mechanisms. The Mountain perspective is a false summit: treating institutional enforcement design as natural law. The mandatrophy is resolved by indexical classification \u2014 different observers see different types because they occupy different structural positions, and all perspectives are valid from their positions. The policy challenge is not 'what type is it really?' but 'whose position do we privilege in institutional design?'"
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "payday_lending_cycle",
+      "wage_garnishment_employment_loss",
+      "child_poverty_inheritance"
+    ],
+    "dual_formulation_note": "Asset seizure via debt and fines decomposes into structurally distinct mechanisms: (1) wage garnishment (ongoing income extraction), (2) asset seizure (one-time capital extraction), (3) fines and court costs (enforcement overhead extraction). Each has different \u03b5 values and trajectories. This story focuses on the unified constraint as experienced by trapped households; decomposed stories track each mechanism separately."
+  },
+  "directionality_overrides": []
+}

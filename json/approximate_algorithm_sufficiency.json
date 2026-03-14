@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "approximate_algorithm_sufficiency",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "approx_algo"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Approximate Algorithm Sufficiency in Computational Practice",
+    "topic_domain": "computer_science/algorithms/applied_computation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "algorithm_implementers",
+      "performance_optimizers",
+      "deployment_stakeholders"
+    ],
+    "victims": [
+      "correctness_verification_practitioners",
+      "safety_critical_system_users",
+      "mathematical_rigor_standards"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Safety-Critical System User",
+      "comment": "PERSPECTIVE 1: SAFETY-CRITICAL SYSTEM USER (SNARE) \u2014 Cannot exit reliance on approximate algorithms in deployed systems. Trapped by dependence on infrastructure they did not choose; bears the cost of approximation errors (medical devices, autonomous vehicles, financial systems) with no verification transparency. Maximum experienced extraction \u2014 no agency, no exit, full exposure to approximation failure modes."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Correctness Verification Practitioner",
+      "comment": "PERSPECTIVE 2: CORRECTNESS VERIFICATION PRACTITIONER (SNARE) \u2014 Trapped between cargo-cult acceptance of 'approximate is good enough' and the disciplinary requirement for rigorous proof. Faces career pressure to certify algorithms as 'sufficiently accurate' without adequate mathematical tools. Cannot exit the constraint without losing professional standing in fields that still value proof. High extraction \u2014 labor diverted from real verification to producing acceptable documentation of approximation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Hardware-Constrained Embedded Systems Developer",
+      "comment": "PERSPECTIVE 3: HARDWARE-CONSTRAINED EMBEDDED SYSTEMS DEVELOPER (TANGLED ROPE) \u2014 Genuinely coordinates resource scarcity (CPU, memory, power) with functional requirements through approximate algorithms. Also extracts value by pushing approximation boundaries beyond safety margins to meet performance specs. Significant agency but constrained by hardware platform lock-in and vendor ecosystem decisions. Benefits from approximation enabling feasible deployment; bears some cost of verification labor and liability risk."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Algorithm Optimizer / Implementer",
+      "comment": "PERSPECTIVE 4: ALGORITHM OPTIMIZER / IMPLEMENTER (ROPE) \u2014 Primary beneficiary. Experiences approximate algorithms as pure coordination mechanism: trading computational cost for acceptable accuracy enables solving previously intractable problems. Benefits from publication record, performance improvements, and deployment success. Has arbitrage options across vendors, platforms, and optimization frameworks. Low experienced extraction \u2014 the constraint enables their core function."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Formal Verification Movement",
+      "comment": "PERSPECTIVE 5: FORMAL VERIFICATION MOVEMENT (SCAFFOLD) \u2014 Organized agents (universities, tool vendors, standardization bodies) developing rigorous frameworks for approximation error bounds, convergence proofs, and tolerance certification. View approximate algorithm sufficiency as a temporary coordination gap being solved by better mathematical tools (formal verification, certified approximation, provable bounds). Sunset clause: as formal verification tools mature and computational capacity grows, the 'approximate is good enough' framing becomes less necessary \u2014 direct computation with proof becomes feasible for larger problem classes. Estimated sunset: 15-25 years for mature tools in most domains."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Numerical Analysis Academic Discipline",
+      "comment": "PERSPECTIVE 6: NUMERICAL ANALYSIS DISCIPLINE (PITON) \u2014 Formal theory of approximation error, convergence rates, and stability analysis exists but is performatively invoked in industry contexts where actual application falls far below the theoretical rigor. The discipline maintains its own standards (peer review of numerical methods, error bound publication) but industrial approximation operates in a parallel theater where 'approximate is good enough' serves as substitute for the analytical rigor the discipline ostensibly requires. Theater ratio reflects this gap: the mathematical framework for rigorous approximation analysis persists; the actual use case typically ignores it."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, approximate algorithms represent a genuine coordination solution to resource constraints (Rope component) layered with institutional extraction (Snare component). The coordination function is real: approximation enables feasible computation. The extraction is also real: the burden of approximation error is externalized to users and verification practitioners who did not consent to the trade-off. The constraint is not inevitable (better tools and hardware reduce the need for crude approximation) nor freely chosen (institutions extract value by pushing approximation beyond safety margins). Analytical classification captures the hybrid: coordination + enforcement + asymmetric cost distribution."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "approximation_vs_truncation",
+      "question": "Is the measured approximation error genuinely inherent to the algorithm, or does it represent truncation/precision limits that would vanish with higher computational resources?",
+      "resolution_mechanism": "Scaling analysis: increase computational budget (CPU, precision, iterations) and measure error trajectory. If error plateaus at non-zero value independent of resources, approximation is inherent. If error decreases monotonically with resource increase, truncation was the binding constraint, not approximation.",
+      "impact": "If inherent approximation: constraint is structural to algorithm design (Rope/Tangled Rope depending on asymmetry). If truncation: constraint dissolves with resource growth (suggests Scaffold with real sunset).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether measured error is algorithmic approximation or resource truncation"
+    },
+    {
+      "id": "extraction_boundary_location",
+      "question": "Where exactly is the boundary between 'legitimate approximation for resource constraints' and 'pushing approximation beyond defensible safety margins to extract performance'?",
+      "resolution_mechanism": "Comparative analysis of approximation parameters across domains: medical devices vs gaming graphics vs financial models. Identify correlation between approximation tolerance and vendor margin extraction, liability concentration, and end-user consent mechanisms.",
+      "impact": "If boundary is clear and enforced: constraint is primarily coordination (Rope). If boundary is consistently violated without consequence: constraint functions as extraction mechanism (Snare). If boundary varies by domain and power asymmetry: Tangled Rope with domain-specific beneficiaries/victims.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Where approximation exceeds legitimate resource necessity"
+    },
+    {
+      "id": "verification_tool_sufficiency",
+      "question": "Can formal verification tools (bounded model checking, abstract interpretation, certified approximation) actually scale to real-world algorithm complexity, or do they themselves rely on approximation at a higher level?",
+      "resolution_mechanism": "Empirical measurement of formal verification tool scalability across algorithm classes; identification of tool approximations (state-space reduction, abstraction soundness) and their error bounds; cost-benefit analysis vs direct testing.",
+      "impact": "If tools can achieve full rigor: scaffold sunset is real, constraint can be solved. If tools also approximate: constraint recurses to higher level (meta-approximation), potentially making it a piton (ritualistic invocation of rigor that ultimately also approximates).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether formal verification tools can achieve computational rigor"
+    },
+    {
+      "id": "institutional_convergence_incentive",
+      "question": "Do institutional incentives actually favor approximate algorithm sufficiency, or does the constraint persist despite institutional pressure toward rigor?",
+      "resolution_mechanism": "Historical analysis of algorithm deployment decisions: when did institutions adopt 'approximate is good enough' policies? What triggered adoption? Has adoption increased or decreased over time? Correlation with liability concentration, vendor lock-in, and regulatory environment.",
+      "impact": "If institutional incentives drive approximation: extraction is structural and enforced (Snare/Tangled Rope). If constraint persists despite institutional resistance: approximation may be unavoidable (Rope) or represents disciplinary inertia (Piton).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether institutional incentives drive or resist approximate algorithm adoption"
+    },
+    {
+      "id": "end_user_knowledge_asymmetry",
+      "question": "To what degree are end-users of systems employing approximate algorithms aware of and able to consent to the approximation-error trade-off?",
+      "resolution_mechanism": "Survey of user awareness: medical device users, autonomous vehicle operators, financial system participants. Documentation of disclosure mechanisms (warning labels, opt-out provisions, alternative precise options). Analysis of consent genuineness: is 'take it or leave it' actual consent or manufactured acceptance?",
+      "impact": "If awareness and consent are high: constraint is coordination (Rope). If awareness is low and consent is manufactured: constraint functions as extraction mechanism (Snare). If consent varies by user power: Tangled Rope with differentiated exit options.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether end-users genuinely consent to approximation trade-offs"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Approximate algorithm sufficiency represents a structural constraint on computational practice where resource limitations (CPU, memory, power, development time) make exact solutions intractable, forcing the use of algorithms that trade guaranteed correctness for computational feasibility. The constraint exhibits the full range of DR classification types depending on the observer's structural position. From the safety-critical system user's perspective, approximation is a snare \u2014 they are trapped in dependence on systems they do not control and do not understand, bearing the cost of approximation errors (incorrect medical diagnoses, autonomous vehicle failures, financial miscalculations) with no transparent verification mechanism. From the algorithm optimizer's perspective, approximation is pure coordination \u2014 it solves the legitimate problem of computing answers to intractable problems within available resources. From the institutional formal verification movement's perspective, it is a temporary scaffold being solved by emerging tools for certified approximation bounds and rigorous error analysis. From the numerical analysis discipline's perspective, it is a piton \u2014 the mathematical machinery for rigorous approximation analysis exists and is invoked performatively, but actual industrial practice diverges sharply from the theoretical standards, maintained through inertia. The constraint has strengthened over time (extractiveness increased from 0.28 to 0.52 across a 30-year interval) as computational demands have grown faster than hardware capacity, and as institutions have reduced investment in exact solvers, pushing approximation deeper into safety-critical systems.",
+    "key_agents": [
+      "Algorithm Implementers/Optimizers: Primary beneficiary (institutional/arbitrage) \u2014 capture publication record, performance reputation, deployment success; experience approximation as pure coordination enabling previously intractable computation",
+      "Safety-Critical System Users: Primary victim (powerless/trapped) \u2014 depend on systems using approximate algorithms without understanding approximation properties; bear cost of approximation errors in medical, automotive, financial domains",
+      "Correctness Verification Practitioners: Secondary victim (moderate/constrained) \u2014 face career pressure to certify approximate algorithms as 'sufficiently accurate' despite inadequate mathematical tools; labor extracted to produce acceptable documentation",
+      "Hardware-Constrained Embedded Systems Developers: Mixed (moderate/constrained) \u2014 genuinely coordinate resource scarcity through approximation; also extract value by pushing approximation beyond safety margins",
+      "Formal Verification Movement: Organized agents (organized/constrained) \u2014 developing rigorous frameworks for approximation error bounds; see current state as temporary coordination gap with sunset as tools mature",
+      "Numerical Analysis Discipline: Institutional actor (institutional/arbitrage) \u2014 maintains rigorous theory of approximation; observes large gap between theory and industrial practice; supplies mathematical legitimacy for approximation choices made for non-mathematical reasons",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees genuine coordination function (resource constraints are real) layered with extraction (burden externalized to powerless users)"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high and increasing. Initial value (0.28) reflects that approximation was genuinely necessary for tractability in the 1990s-2000s. Growth trajectory to 0.52 indicates that institutions are increasingly pushing approximation beyond the legitimate resource necessity boundary \u2014 using approximation to extract margin even where exact computation is feasible with sufficient investment. The trend suggests institutions are optimizing for profit/performance rather than for genuine resource constraints. Suppression (0.48): Moderate. Barriers to alternatives include: (1) institutional lock-in to approximate methods, (2) lack of transparent error reporting mechanisms, (3) complexity of formal verification tools creating barriers to verification practitioners, (4) career incentives favoring published approximate solutions over unglamorous exact computation. Suppression is not maximal because alternatives exist and are improving (formal verification, higher-capacity hardware) \u2014 the constraint could be broken but is not. Theater ratio (0.58): Moderate-high. Reflects the gap between the rigorous mathematical theory of approximation (error bounds, convergence proofs, stability analysis) and the actual deployment practice where 'approximate is good enough' functions as a substitution for rigorous analysis. The numerical analysis discipline supplies legitimacy for choices made on institutional, not mathematical, grounds. Theater increased over the interval as approximation moved into safety-critical domains where theoretical standards would be more stringent if applied.",
+    "perspectival_gap": "This constraint demonstrates stark perspectival divergence. The algorithm optimizer sees pure coordination (Rope) \u2014 approximation enables solving real problems. The safety-critical system user sees pure extraction (Snare) \u2014 approximation is imposed on them without consent or understanding. The formal verification movement sees a temporary gap (Scaffold) \u2014 better tools will enable rigorous analysis. The numerical analysis discipline sees degraded rigor (Piton) \u2014 mathematical standards exist but are invoked performatively in industrial contexts. The hardware-constrained developer sees hybrid (Tangled Rope) \u2014 genuine resource coordination with added extraction as approximation margins are pushed. The analytical observer sees tangled hybrid (Tangled Rope) \u2014 coordination function is real, extraction is real, enforcement is real (liability concentrated on users not optimizers). The perspectival gaps reveal that 'approximation is necessary' (Rope) conflates with 'approximation enables extraction' (Snare). The constraint's true nature depends on whether approximation is driven by genuine resource constraints or by institutional preference for approximation over investment in exact computation.",
+    "directionality_logic": "Directionality varies sharply across perspectives. Algorithm optimizers are beneficiaries with arbitrage options (multiple platforms, vendors, publication venues) \u2014 their d is low (0.15-0.25), producing negative or near-zero chi. Safety-critical system users are victims with trapped exit (they cannot choose to use exact algorithms; the choice was made upstream) \u2014 their d is high (0.90-0.95), producing maximum chi. Verification practitioners are victims with constrained exit (they could push for rigor but face career costs) \u2014 their d is moderate-high (0.65-0.75). Hardware developers benefit from approximation enabling deployment (beneficiary aspect) but are also constrained by platform lock-in (victim aspect) \u2014 their d is symmetric (0.45-0.55). Formal verification organizers are constrained but have agency and see a sunset \u2014 their d reflects moderate victimhood of current rigor deficits but strategic position (0.40-0.50). The numerical analysis discipline is institutional beneficiary (supplies legitimacy) but experiences institutional pressure to bridge theory-practice gap (constrained) \u2014 their d is low-moderate (0.25-0.35). The analytical observer's d is derived from the fact that the constraint concentrates extraction on powerless agents while concentrating benefits on institutional agents \u2014 structural asymmetry produces high d (0.72) for the analytical observer, classifying the constraint as Tangled Rope rather than pure Rope.",
+    "mandatrophy_analysis": "Approximate algorithm sufficiency resolves the mandatrophy by disaggregating 'approximation as necessity' (Rope) from 'approximation as extraction mechanism' (Snare/Tangled Rope). The constraint is genuinely a coordination solution when resource scarcity is real and options are binary (approximate or nothing). It becomes an extraction mechanism when institutions choose approximation despite having the resources for exactness, simply to extract performance margin or avoid investment in rigorous verification. The measurement trajectory (extractiveness 0.28 \u2192 0.52) suggests the constraint has evolved from necessity (Rope) toward extraction (Tangled Rope/Snare). Formal verification tools provide a real sunset mechanism \u2014 as tools mature and hardware capacity grows, the 'approximate is good enough' framing becomes less defensible, and institutions that have externalized verification burden onto powerless users will face pressure to internalize rigor. The mandatrophy resolution: this is a coordination mechanism that has been repurposed as an extraction mechanism, with institutional enforcement and cost externalization to agents with no exit options. The classification is Tangled Rope because it retains genuine coordination function (resource constraints are real) while operating simultaneously as an asymmetric extraction mechanism (burden externalized to powerless users). The piton classification for numerical analysis reflects that the discipline supplies mathematical legitimacy for non-mathematical institutional choices."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "formal_verification_scalability",
+      "hardware_design_power_limits",
+      "liability_externalization_mechanisms"
+    ],
+    "dual_formulation_note": "Approximate algorithm sufficiency decomposes into two structurally distinct constraints: (1) Fundamental Approximation (\u03b5\u22480.15, Rope) \u2014 inherent to resource-constrained computation, solves real coordination problem; (2) Institutional Approximation Extraction (\u03b5\u22480.65, Snare) \u2014 institutions choosing approximation despite resources for exactness, externalizing verification burden. These stories should be decomposed and linked. Current story represents the institutional blending of both, which masks the extraction mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.3
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "port_strike_cascades",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "portstr"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Port Strike Cascades and Global Supply Chain Extraction",
+    "topic_domain": "economic/labor/logistics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "port_operators",
+      "shipping_lines",
+      "capital_holding_firms"
+    ],
+    "victims": [
+      "port_workers",
+      "global_consumers",
+      "upstream_suppliers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Port Worker (Trapped)",
+      "comment": "PERSPECTIVE 1: PORT WORKER (SNARE) \u2014 Trapped by geographic location, skill specificity, union structure, and lack of alternative employment. Cannot exit strike participation without union penalty; cannot exit port labor without severe economic loss. Strike is weaponized cooperation enforced by collective coercion. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Global Consumer (Supply Shock)",
+      "comment": "PERSPECTIVE 2: GLOBAL CONSUMER (SNARE) \u2014 Constrained by dependence on port-reliant goods (electronics, clothing, food, fuel). Cannot exit the supply chain; can only absorb costs through price inflation, scarcity, or delays. Strike extraction flows backward through the supply chain; consumers bear the cost without having participated in wage negotiation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Port Operator / Shipping Line (Capital)",
+      "comment": "PERSPECTIVE 3: PORT OPERATOR & SHIPPING LINES (ROPE) \u2014 Arbitrage options available (reroute through other ports, speed up turnaround, reduce wages through automation). Experience the strike as temporary coordination problem. Rents captured during disruption and reinvested in port infrastructure/automation reduce long-term wage pressures. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Upstream Supply Chain Partner (Manufacturer)",
+      "comment": "PERSPECTIVE 4: UPSTREAM SUPPLIER (TANGLED ROPE) \u2014 Constrained by inventory costs, production scheduling, and buyer concentration. Port strike creates genuine coordination problem (when will goods ship?) but also extracts from suppliers through forced inventory carrying costs and penalty clauses. Both coordination function and asymmetric extraction present."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Port Workers (Organized Coalition)",
+      "comment": "PERSPECTIVE 5: PORT WORKERS AS ORGANIZED COALITION (TANGLED ROPE) \u2014 At generational horizon and organized power level, port workers see both coordination function (collective wage negotiation prevents race-to-bottom) and extraction mechanism (strike imposes costs on non-participating workers, consumers, suppliers). The constraint requires active enforcement (union discipline) to maintain solidarity and prevent free-riding. Extraction runs FROM the broader supply chain INTO union wage floors."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Port Strike Theater (Degraded Function)",
+      "comment": "PERSPECTIVE 6: PORT STRIKE INSTITUTIONAL THEATER (PITON) \u2014 Strike ritual persists through inertia despite containerization, automation, and port diversification reducing strike leverage. Modern port strikes are largely performative \u2014 the disruption threat carries weight through institutional habit rather than structural necessity. Theater ratio (0.48) reflects that disruption is still materially costly but increasingly optional. Automation trajectories are making the strike mechanism less functionally relevant while maintaining ritual enforcement."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Economic Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a civilizational perspective, port concentration and supply chain interdependence are treated as immutable economic laws \u2014 'just-in-time logistics requires continuous flow' and 'globalization is inevitable.' This naturalizes the constraint rather than recognizing it as a contingent institutional arrangement (port monopolies, union structures, global trade agreements). The engine flags this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "strike_leverage_trajectory",
+      "question": "Is port strike leverage increasing or decreasing as port automation, diversification, and supply chain resilience measures mature?",
+      "resolution_mechanism": "Historical analysis of strike duration, economic impact, and wage gains across 1990-2030; correlation with automation investment and port diversification rates",
+      "impact": "If decreasing: piton classification becomes primary (ritual replacement of function). If increasing: snare extraction mechanism is strengthening. If stable: tangled_rope classification is stable.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Port strike leverage trend over supply chain transformation"
+    },
+    {
+      "id": "supply_chain_relocation_feasibility",
+      "question": "Can supply chains genuinely relocate to non-union or automated ports, or are geographic, infrastructure, and customer-proximity factors immutable constraints?",
+      "resolution_mechanism": "Case studies of relocation attempts (China to Vietnam, LA to Long Beach to Oakland); cost-benefit analysis including infrastructure development, customer distance, and tariff impacts",
+      "impact": "If feasible: port operators have genuine arbitrage options and rope classification holds. If infeasible: port operators are constrained and extraction distribution shifts (less rope, more snare)",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Port relocation feasibility and arbitrage optionality"
+    },
+    {
+      "id": "consumer_vs_worker_extraction_ratio",
+      "question": "What fraction of port strike economic costs are borne by workers (wage/employment loss during strike) vs consumers (price inflation, scarcity) vs capital (reduced margins)?",
+      "resolution_mechanism": "Post-strike economic analysis: wage losses to workers, price impact on consumer baskets, capital loss calculations; international comparison of strike cost distribution",
+      "impact": "If workers bear majority: snare dominates (workers extract from consumers but lose to capital). If capital bears majority: tangled_rope confirmed (capital subsidizes worker gains). If consumers bear majority: snare extraction flows through supply chain.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distribution of port strike economic costs across stakeholders"
+    },
+    {
+      "id": "automation_substitute_adequacy",
+      "question": "Can automated port handling and autonomous cargo systems genuinely substitute for human labor at equivalent cost and reliability, or are there irreducible coordination/flexibility constraints that require human judgment?",
+      "resolution_mechanism": "Technical analysis of current and projected automation (port robotics, autonomous vehicles, AI scheduling); cost comparison including maintenance, software licensing, and flexibility loss",
+      "impact": "If substitutable: suppression increases (workers face automation threat) and piton mechanism accelerates. If non-substitutable: workers maintain leverage and snare extraction persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Automation adequacy and labor substitutability in ports"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Port strike cascades represent a structural extraction mechanism embedded in global supply chain dependencies. When port workers strike, extraction flows backward through the entire supply chain \u2014 from capital operators, through upstream suppliers, to end consumers \u2014 while workers themselves face dual pressure: union solidarity enforces strike participation, but the strike itself redistributes costs unevenly. Capital operators experience strikes as temporary coordination problems with arbitrage options (port diversification, automation, rerouting); workers experience them as trapped participation in a collective action enforced by institutional coercion; consumers experience them as passive cost absorption through inflation and scarcity. The constraint exhibits genuine coordination function (port strikes are the primary mechanism by which workers can negotiate collective wages against capital concentration), but this coordination is inseparable from asymmetric extraction \u2014 the supply chain bears costs that neither workers nor capital bear in full proportion. Theater ratio (0.48) reflects that modern port strikes increasingly rely on threat and institutional ritual rather than direct economic disruption, as automation and port diversification reduce structural leverage.",
+    "key_agents": [
+      "Port Workers (Union): Primary beneficiary from wage perspective (trapped/organized) \u2014 captures rents during strike window; also primary loser from strike costs and automation threat",
+      "Port Operators & Shipping Lines: Primary institutional beneficiary (institutional/arbitrage) \u2014 rents captured through margins during disruption; can arbitrage to other ports or automation",
+      "Global Consumers: Primary victim (powerless/constrained) \u2014 absorb supply shock costs through price inflation, scarcity, delayed goods",
+      "Upstream Suppliers & Manufacturers: Secondary victim (moderate/constrained) \u2014 face inventory costs, production disruption, penalty clauses; some coordinate through supply agreements",
+      "Capital Holding Firms: Institutional beneficiary (institutional/arbitrage) \u2014 profit from supply chain disruption and reinvest in automation to reduce future labor leverage",
+      "Regulatory & Port Authority: Weak institutional actors (institutional/constrained) \u2014 can mediate but lack power to impose settlement; trapped between public interest and stakeholder pressure"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Port strikes create genuine economic extraction through supply chain cascades. Workers extract wage concessions from capital, but capital extracts losses from consumers and suppliers, creating a cascade where the largest costs are borne by powerless agents (consumers) not party to the wage negotiation. The value increased from 0.45 to 0.58 over the interval as automation and port concentration increased worker leverage asymmetry. Suppression (0.62): Moderate-high. Workers are suppressed by union structure (mandatory participation), geographic immobility, and skill specificity. Consumers are suppressed by supply chain dependence and lack of alternatives. Capital is NOT suppressed \u2014 has arbitrage options. Asymmetric suppression is the key feature. Theater ratio (0.48): Moderate. Port strikes retain material disruptive capacity (blockade real goods) but increasingly rely on threat and ritual as automation spreads. The increase from 0.38 to 0.48 reflects growing gap between strike narrative (existential threat to supply chains) and structural reality (port diversification, automation, and rerouting options make strikes less universally disruptive).",
+    "perspectival_gap": "Port workers at biographical/trapped level see a snare (coercive participation). Port workers at generational/organized level see a rope/tangled_rope (genuine coordination mechanism for wages). Capital sees rope (arbitrage options). Consumers see snare (extraction without participation). The gap reveals that the constraint's function depends critically on time horizon: at biographical scale, strikes are experienced as coercive extraction; at generational scale, they are experienced as necessary coordination mechanism. The piton perspective flags that strike leverage is eroding (theater increasing) as automation and port diversification mature \u2014 the ritual is increasingly performative. The mountain perspective naturalizes supply chain interdependence as inevitable, but this obscures how port monopolies, union structures, and trade agreements are institutional contingencies, not natural laws.",
+    "directionality_logic": "Worker directionality (d) is high (\u22480.85 at trapped level) because they are nominal beneficiaries (capture wage concessions) but actual victims (absorbed into coercive collective action with uncertain personal payoff). Union structure requires strike participation (suppression gate), but individual workers may lose income during strike. Capital directionality (d) is low (\u22480.15) because arbitrage options are available \u2014 they can reroute, automate, or wait. Consumer directionality is very high (d \u22480.95) because they bear cascade costs with no participation or exit option. Supplier directionality is moderate (d \u22480.60) because they have some coordination benefit (supply timing) but face extraction through inventory and penalty mechanisms. The asymmetry is structural: the wage negotiation is between workers and capital, but the cost distribution extends to third parties (consumers, suppliers) who have no bargaining power.",
+    "mandatrophy_analysis": "STRUCTURE: Port strikes resolve the mandatrophy by showing that the tangled_rope classification is precise \u2014 there is genuine coordination function (workers can only negotiate collectively; capital needs organized labor flow) AND asymmetric extraction (costs cascade backward to powerless consumers and suppliers). The constraint cannot be reduced to pure extraction (snare) because the coordination mechanism is real; it cannot be reduced to pure coordination (rope) because the extraction through supply chain cascades is real and asymmetric. IDENTITY DYNAMICS: There is incipient identity_locked dynamics \u2014 port workers' identity is increasingly fused with union membership and strike participation, creating psychological suppression beyond the material suppression of geographic immobility. As automation threatens the port labor profession itself, workers face identity collapse (no longer a 'port worker' if ports are automated). This intensifies the snare experience at biographical scale even as the generational rope perspective remains valid. PITON TRAJECTORY: Theater ratio rising to 0.48 suggests the constraint is degrading toward piton \u2014 strike threat carries weight through institutional habit (unions can still mobilize) rather than structural necessity (automation makes port disruption more avoidable). Within 10-15 years, the constraint may shift from tangled_rope (genuine coordination with asymmetric extraction) to piton (degraded ritual of union strike with minimal functional verification)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "global_supply_chain_concentration",
+      "union_labor_leverage_erosion",
+      "port_automation_trajectory",
+      "shipping_line_consolidation"
+    ],
+    "dual_formulation_note": "Port strike cascades is downstream of supply chain concentration and union structure but represents a distinct constraint. The upstream constraints (shipping line consolidation, port monopoly) have their own extractiveness values reflecting market power; port strike cascades has its own extractiveness reflecting wage-setting asymmetry and cost cascade."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

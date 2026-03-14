@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "creator_labor_classification_ambiguity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "creator"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Creator Labor Classification Ambiguity",
+    "topic_domain": "economic/labor/digital_platforms",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "content_aggregators"
+    ],
+    "victims": [
+      "content_creators",
+      "labor_protections"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Precarious Creator",
+      "comment": "PERSPECTIVE 1: PRECARIOUS CREATOR (SNARE) \u2014 Classified as independent contractor to evade labor law protections. Cannot exit without abandoning audience, income stream, and algorithmic visibility. Algorithmic dependency creates material capture despite formal independence status. Suppression is structural: no collective bargaining, no wage floors, no benefits, no dispute resolution. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Organized Creator Coalition",
+      "comment": "PERSPECTIVE 2: ORGANIZED CREATOR COALITION (TANGLED ROPE) \u2014 Coalition of moderately successful creators with some bargaining power (audience capture, portfolio leverage). Constrained by multi-platform dependency and audience fragmentation. Genuine coordination benefit (platform reaches audience efficiently) coexists with asymmetric extraction (revenue share, algorithm opacity, data collection). Some agency to negotiate but not equivalent to employee-level protections."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATOR (ROPE) \u2014 Experiences the constraint as coordination: connecting creators to audiences solves a genuine matching problem. Arbitrage exit (can switch creator bases, shift revenue models, reshape classification). Net beneficiary \u2014 classification ambiguity is functional feature enabling flexible labor cost management. Sees constraint as necessary coordination infrastructure."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Reform Coalition",
+      "comment": "PERSPECTIVE 4: REGULATORY REFORM COALITION (SCAFFOLD) \u2014 Labor boards, courts, and gig-economy reform advocates. Sunset clause: classification clarification through regulation (workers classification tests, portable benefits, collective bargaining rights). Theater ratio declining as regulatory frameworks (e.g., AB5 in California, pending EU DSA provisions) reduce classification ambiguity. Constraint seen as temporary until legal clarity solidifies."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Labor Law System",
+      "comment": "PERSPECTIVE 5: LABOR LAW SYSTEM (PITON) \u2014 Traditional employment law categories (employee vs. contractor) are increasingly performative when applied to platform creators. The legal framework persists through institutional inertia despite structural mismatch with algorithmic labor. Courts engage in theatrical application of outdated categories rather than genuine classification work. The constraint's function (protecting labor) has atrophied; the formal process continues."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Sees genuine coordination function (platforms efficiently match creators to audiences) coexisting with structural extraction (algorithmic control, data capture, revenue asymmetry, suppression of worker organizing). Classification ambiguity is not accidental \u2014 it is actively maintained because it enables asymmetric extraction while preserving platform-as-neutral-infrastructure framing. Constraint exhibits both real coordination and active extraction asymmetry."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "algorithm_control_threshold",
+      "question": "At what level of algorithmic control does a platform cease being a neutral distribution channel and become an employer for labor law purposes?",
+      "resolution_mechanism": "Comparative analysis of platform algorithmic control (recommendation systems, demonetization criteria, account suspension triggers, content moderation automation) vs. traditional employer control mechanisms (supervision, scheduling, task assignment, performance metrics). Legal precedent analysis across jurisdictions (AB5 control test, UK worker tests, EU DSA provisions).",
+      "impact": "If control threshold is crossed: reclassify as Snare from creator perspective and Tangled Rope as institutional constraint. If threshold is not crossed: reclassifies as Rope (pure coordination) and suppression drops to 0.35. This determines whether platforms have labor law obligations.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Algorithmic control threshold for labor classification"
+    },
+    {
+      "id": "exit_option_optionality",
+      "question": "Are alternative platforms and income streams genuinely available to creators, or is the 'arbitrage' exit option illusory due to network effects and algorithmic lock-in?",
+      "resolution_mechanism": "Empirical measurement of creator multi-platform dependency, switching costs, audience portability, algorithm opacity preventing creator migration. Survey of creators attempting platform switching and measuring audience/income loss.",
+      "impact": "If exit is genuine (true arbitrage): creators move from 'trapped' to 'constrained' \u2192 snare shifts toward tangled rope, suppression drops to 0.45. If exit is illusory: suppression rises to 0.75+ \u2192 stronger snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether creator exit options are genuinely available"
+    },
+    {
+      "id": "revenue_share_coordination_or_extraction",
+      "question": "Is the platform's revenue share (typically 30-50%) a market-clearing coordination fee or extractive rent enabled by information asymmetry and network effects?",
+      "resolution_mechanism": "Comparative analysis of platform revenue share vs. transaction costs (payment processing, fraud prevention, hosting, moderation labor). Comparison across platforms and jurisdictions with different competitive structures. Empirical test: does creator revenue share decline when platform faces labor supply shortage or regulatory pressure?",
+      "impact": "If fee is coordination cost: extractiveness drops to 0.35, classification shifts toward Rope. If fee is rent: extractiveness rises to 0.65+, snare classification strengthens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether revenue share reflects coordination or extraction"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is creator suppression (lack of collective voice, algorithmic opacity, limited dispute resolution) structural (platform-enforced) or substantially internalized (creators self-censor, accept opacity, internalize platform's framing of independence)?",
+      "resolution_mechanism": "Ethnographic analysis of creator perception of platform control. Historical comparison of creator behavior before/after platform policy changes. Measurement of creator organizing attempts and platform response. Post-exit suppression persistence: do creators who leave platforms retain internalized self-suppression?",
+      "impact": "If largely structural: suppression value of 0.62 is accurate measure of exit cost. If substantially internalized: effective suppression is higher than structural measure suggests; creator remains locked even after platform exit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized"
+    },
+    {
+      "id": "regulatory_sunset_viability",
+      "question": "Will legal classification clarification (via regulation or court precedent) actually reduce platform extraction, or will platforms shift to new ambiguous categories (automation, algorithmic assignment, new platform models)?",
+      "resolution_mechanism": "Historical analysis of how platforms responded to prior labor regulation (contractor vs. employee classification in ride-sharing, gig work). Observation of whether platform model innovation follows regulatory constraint or circumvents it. Monitoring of emerging platform categories (DAO-based, blockchain-based, AI-agent-mediated) and whether they reintroduce classification ambiguity.",
+      "impact": "If regulation is durable: scaffold sunset is real and theater_ratio declines. If platforms circumvent: scaffold is aspirational; constraint persists in new forms; theater_ratio rises.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether regulatory clarification will enduringly reduce extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The classification of creator labor on digital platforms exists in structural ambiguity: creators are formally independent contractors, yet platforms exercise algorithmic control over task assignment, earnings, content moderation, and account suspension. This ambiguity is not accidental \u2014 it is actively maintained because it enables platforms to access labor cost reductions (no benefits, no wage floors, no collective bargaining) while avoiding labor law obligations. The constraint creates asymmetric extraction coexisting with genuine coordination: platforms solve the real problem of connecting creators to audiences efficiently, yet simultaneously extract value through information asymmetry, network effects, and suppression of creator collective organizing. The extractiveness has risen over the measurement interval as platforms have tightened algorithmic control while maintaining the independent contractor classification. The theater ratio has also risen as platforms engage in increasingly elaborate framing narratives ('creators are entrepreneurs,' 'the algorithm is neutral,' 'flexibility is the creator benefit') to justify the classification and suppress regulatory intervention.",
+    "key_agents": [
+      "Content Creators: Primary victim (powerless/trapped) \u2014 classified as independent contractors to evade labor protections; algorithmic dependency creates material lock-in despite formal independence",
+      "Creator Coalitions: Secondary victim (moderate/constrained) \u2014 organized groups with some bargaining power but multi-platform dependency and audience fragmentation limit leverage",
+      "Platform Operators: Primary beneficiary (institutional/arbitrage) \u2014 benefit from classification ambiguity enabling flexible labor cost management; can exit to new classification schemes",
+      "Regulatory Reform Coalition: Secondary actor (organized/constrained) \u2014 labor boards, courts, and reform advocates pushing toward classification clarity; see constraint as temporary scaffold",
+      "Labor Law System: Institutional observer (institutional/arbitrage) \u2014 traditional employment law increasingly performative when applied to algorithmic labor relationships",
+      "Analytical Observer: Cross-position analysis (analytical/analytical) \u2014 identifies simultaneous coordination function and extraction asymmetry"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. Platforms extract through revenue share (30-50%), data collection, algorithmic control enabling selective demonetization, and ability to alter creator terms unilaterally. However, extraction is not maximal because some creators do generate substantial income and genuine audience reach. The rise from 0.35 to 0.58 over the interval reflects increasing platform control: early platforms offered genuine optionality and audience reach; current platforms have tightened algorithmic control while maintaining contractor classification. Suppression (0.62): Moderately high. Structural barriers include algorithmic opacity (creators cannot understand demonetization), limited dispute resolution (no appeals process), platform terms-of-service unilateralism, suppression of organizing (platforms ban creator unions, demonetize unionizing accounts). Suppression is substantial but not total \u2014 creators can exit (though at high cost) and have organized in some jurisdictions. Theater ratio (0.68): High. Platform rhetoric about 'creator empowerment,' 'algorithm neutrality,' and 'entrepreneur flexibility' is increasingly performative as algorithmic control has tightened. The theater serves to naturalize the classification ambiguity and frame it as benefit rather than extraction mechanism.",
+    "perspectival_gap": "The precarious creator experience (snare) versus platform operator experience (rope) represents the fundamental perspectival gap. The platform honestly experiences the constraint as coordination \u2014 they are solving a real matching problem and the constraint enables this coordination to happen. The precarious creator honestly experiences the constraint as extraction \u2014 they cannot exit and bear the extraction cost. Both perceptions are structurally correct. The gap is not one of perception error but of genuine structural asymmetry: the coordination benefit accrues differentially, and the extraction burden falls entirely on powerless agents. The organized coalition and regulatory observers see the ambiguity itself as the mechanism \u2014 maintaining classification opacity is what enables simultaneous coordination and extraction claims. The labor law system's piton perspective reveals that traditional legal categories have become ornamental: the system continues to process employment classification questions but does so performatively, unable to capture the specificity of algorithmic labor relationships.",
+    "directionality_logic": "Directionality (d) values vary sharply across perspectives based on beneficiary/victim status and exit options. Precarious creators (powerless/trapped) derive d \u2248 0.95 from victim status + trapped exit \u2192 high f(d) \u2192 high chi. Organized coalitions (moderate/constrained) derive d \u2248 0.55 from victim status + constrained exit \u2192 moderate f(d). Platform operators (institutional/arbitrage) derive d \u2248 0.10 from beneficiary status + arbitrage exit \u2192 low f(d) \u2192 negative or near-zero chi. The regulatory coalition (organized/constrained) derives d \u2248 0.45 from victim status (defending labor law) + constrained exit (regulatory process is slow). The analytical observer (analytical/analytical) derives d \u2248 0.72 from structural analyst position revealing asymmetry. Each perspective's experienced extraction chi reflects these directionality values, producing the full perspectival range from snare (high chi) to rope (low chi).",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the tension between coordination and extraction by distinguishing the levels at which each operates. Platform-as-audience-distribution is a genuine coordination function (solves creator-audience matching with real value generation). Platform-as-labor-controller creates asymmetric extraction (algorithmic control, revenue asymmetry, suppression). These are not contradictory \u2014 they coexist in the same constraint. Classification ambiguity enables both to persist simultaneously: the platform claims the coordination justifies independence status (avoiding labor law), while exercising extraction-enabling control. The tangled rope classification is stable precisely because the coordination is real, not rhetorical. This distinguishes the constraint from a pure snare (where coordination would be absent or purely performative). The Goodhart drift in theater_ratio reflects that platform rhetoric about creator empowerment has become increasingly disconnected from actual algorithmic control patterns \u2014 the coordination narrative is doing more work to justify the extraction as time passes."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_labor_opacity",
+      "platform_data_extraction",
+      "creator_organizing_suppression"
+    ],
+    "dual_formulation_note": "Creator labor classification ambiguity decomposes into three structurally distinct constraints: (1) algorithmic control mechanisms that create functional employment without legal recognition (this story, \u03b5=0.58); (2) data extraction from creator activity enabling surveillance capitalism (\u03b5=0.72, separate story); (3) platform suppression of creator collective organizing (\u03b5=0.68, separate story). Each has different extractiveness because the observables differ: labor classification ambiguity is measured by regulatory status and control mechanisms; data extraction is measured by value of creator behavioral data; organizing suppression is measured by platform enforcement against unionizing activity. All three affect each other: data extraction justifies classification ambiguity (platforms need behavioral data to operate recommendation algorithms); organizing suppression maintains classification ambiguity (organizing could force reclassification). Link all three via network.affects_constraints to enable contamination propagation analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

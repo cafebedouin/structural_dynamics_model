@@ -1,0 +1,185 @@
+{
+  "header": {
+    "constraint_id": "institutional_capture_snare",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "icap"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Institutional Capture Snare: Regulatory Extraction Through Normalization",
+    "topic_domain": "institutional_politics/regulatory_capture",
+    "requires_active_enforcement": false,
+    "victims": [
+      "public_interest_constituency",
+      "regulated_market_entrants",
+      "enforcement_agency_independence"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Public Interest Constituency",
+      "comment": "PERSPECTIVE 1: PUBLIC INTEREST (SNARE) \u2014 The diffuse beneficiary of regulatory oversight (consumers, environmental stakeholders, competitive markets, systemic risk prevention) has no organized presence in the capture mechanism. Cannot exit regulatory system; bears full extraction cost as regulations shift to benefit the regulated industry. Maximal experienced extraction \u2014 abstract collective with zero agency."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Market Entrants and Competitors",
+      "comment": "PERSPECTIVE 2: MARKET ENTRANTS (SNARE) \u2014 New firms face regulatory barriers designed to exclude them, not to protect consumers. Regulatory capture redirects enforcement toward competitive threats rather than systemic risks. High exit cost (must lobby separately, absorb compliance burden) but cannot escape the regulatory frame. Significant extraction \u2014 constrained rather than trapped, but still snare-level."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Regulated Industry",
+      "comment": "PERSPECTIVE 3: REGULATED INDUSTRY (ROPE) \u2014 Primary beneficiary. Experiences the constraint as coordination: regulatory clarity enables long-term investment and reduces uncertainty. Low or negative effective extraction \u2014 the industry perceives genuine benefit from participation in regulatory design. Arbitrage exit (can lobby or relocate) means low structural d. This perspective sees the constraint as collaborative governance, not capture."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Enforcement Agency Independence",
+      "comment": "PERSPECTIVE 4: AGENCY INDEPENDENCE (SNARE) \u2014 The regulatory agency's mandate to enforce public interest becomes inverted toward industry protection. Enforcement discretion is captured through revolving-door hiring, regulatory capture via personnel, and normalization of industry-favorable interpretation. Powerful agents at the institutional level, yet snare-classified because the agency's structural independence (its core function) is extracted away. High suppression through institutional inertia and captured personnel; moderate exit cost (agency could theoretically refuse capture, but would face defunding and political pressure)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Legislative Oversight Body",
+      "comment": "PERSPECTIVE 5: LEGISLATIVE OVERSIGHT (PITON) \u2014 Congress or parliament that theoretically oversees the agency is itself captured, creating a cascade: industry lobbies legislator, legislator defunds or removes agency leadership that resists capture, agency normalizes industry preferences. Theater ratio high (appearances of oversight and regulation persist while substance degrades). The oversight mechanism persists through institutional inertia even as its function has atrophied. Constrained rather than trapped (legislature could theoretically reallocate power, but faces political economy of campaign finance and revolving-door incentives)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, institutional capture represents a genuine coordination function (industry and regulator solving information asymmetry and compliance complexity) overlaid with asymmetric extraction (beneficiary captures the mechanism to exclude competitors and eliminate oversight). The constraint possesses both functions: real coordination benefit to the parties (industry and regulator understand each other) AND extractive redirection of enforcement toward competitive exclusion rather than systemic risk. The analytical observer sees both the rope and the snare simultaneously, classifying the compound structure as tangled rope. However, the base properties and snare-victim declarations suggest that the coordination function is subordinate to extraction, making snare the more accurate label."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_function_primacy",
+      "question": "Is the captured regulator-industry relationship primarily a coordination mechanism that reduces transaction costs, or is coordination merely the justification for asymmetric extraction?",
+      "resolution_mechanism": "Compare regulatory outcomes in captured vs. independent regulatory agencies: do captured agencies produce lower transaction costs for all market participants, or only for the dominant incumbent? Measure: cost of compliance for market entrants; frequency of enforcement actions; ratio of preventive vs. reactive regulation.",
+      "impact": "If coordination is primary: reclassify from Snare to Tangled Rope. If coordination is justificatory: classification as Snare is confirmed. This distinction determines whether the constraint can be reformed through better coordination or requires structural separation.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether capture's coordination function is primary or secondary to extraction"
+    },
+    {
+      "id": "personnel_capture_vs_structural_capture",
+      "question": "Is institutional capture driven by individual agency personnel being compromised (revolving-door effect), or by structural incentive misalignment that would corrupt any personnel?",
+      "resolution_mechanism": "Historical turnover analysis: does replacing captured personnel with public-interest-aligned individuals restore agency independence (personnel problem) or do new personnel become captured within 1-2 years (structural problem)? Empirical case: post-scandal agency leadership replacements; measure duration of independence.",
+      "impact": "If personnel-driven: reform through hiring standards and conflict-of-interest rules. If structural: reform requires legislative realignment of agency mandate, funding, or independence. Misdiagnosis leads to failed reform attempts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether capture is driven by personnel corruption or structural incentives"
+    },
+    {
+      "id": "competitive_vs_systemic_focus_misalignment",
+      "question": "When regulatory enforcement shifts toward competitors rather than systemic risks, is this intentional industry capture or unintended consequence of regulatory expertise concentration?",
+      "resolution_mechanism": "Regulatory authority decision logs and enforcement rationale; survey of enforcement personnel on justification for action selection; comparison of enforcement pattern against stated agency priorities vs. implied priorities from industry preferences.",
+      "impact": "If intentional capture: requires personnel and institutional reform. If unintended expertise bias: can be corrected through randomization of enforcement audits and decentralized authority. If both: systemic reform is necessary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether enforcement misalignment is intentional capture or unintended bias"
+    },
+    {
+      "id": "suppression_mechanism_transparency_paradox",
+      "question": "Why does institutional capture persist despite being widely known and documented? Is suppression maintained through active denial or passive acceptance?",
+      "resolution_mechanism": "Narrative analysis of regulatory discourse: do agency documents acknowledge capture or deny it? Do personnel resist or cooperate? Survey of political economy research visibility: is capture research integrated into regulatory training or ignored? Measure: ratio of academic/journalistic documentation of capture vs. policy action taken.",
+      "impact": "If active denial: suppression maintained through epistemic closure and gaslighting. If passive acceptance: suppression maintained through normalization ('that's just how regulation works'). The mechanism determines the reform pathway.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of capture knowledge is active denial or passive acceptance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Institutional capture represents the transformation of a regulatory agency from an independent arbiter of public interest into a coordinator and protector of the industry it is mandated to regulate. This constraint exemplifies how a snare masquerades as coordination (rope). The regulated industry captures the regulator through multiple reinforcing mechanisms: revolving-door employment (regulators gain industry jobs, industry personnel staff regulatory agencies), information asymmetry (regulators depend on industry for technical expertise), and political economy (industry lobbying influences agency funding and leadership appointments). The result is regulatory enforcement redirected from systemic risk prevention toward competitive exclusion: enforcement actions target new market entrants or potential competitors rather than the incumbent industry's violations. The public interest constituency (the diffuse beneficiary of actual regulation) has no organized presence in the capture mechanism and bears the full extraction cost as protections dissolve. The constraint's theater ratio increases over time as regulatory processes maintain the appearance of rigorous review while the substance shifts toward industry preference. The suppression mechanism operates through normalization ('regulatory expertise requires industry consultation') rather than explicit coercion, making it more difficult to identify and reform than explicit extraction.",
+    "key_agents": [
+      "Regulated Industry: Primary beneficiary (institutional/arbitrage) \u2014 captures regulatory discretion to exclude competitors and eliminate enforcement threat",
+      "Public Interest Constituency: Primary victim (powerless/trapped) \u2014 diffuse group (consumers, environmental stakeholders, new entrants, systemic risk prevention) with no organized presence; cannot exit regulatory system",
+      "Market Entrants/Competitors: Secondary victim (moderate/constrained) \u2014 face regulatory barriers designed by captured agency to exclude them, not to protect consumers",
+      "Regulatory Agency: Victim (powerful/mobile, at institutional level) \u2014 the agency's core function (independence and public-interest enforcement) is extracted away through personnel capture and political economy",
+      "Legislative Oversight: Institutional actor (institutional/constrained) \u2014 itself captured by industry lobbying, creating cascade where oversight atrophies to theater",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees both genuine coordination function AND extractive capture, risking naturalization of the hybrid as 'how regulation necessarily works'"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and rising. The constraint extracts competitive advantage to the incumbent and reduces actual enforcement against that industry. The trajectory shows extractiveness increasing over time (0.35 \u2192 0.68) as capture deepens and alternative regulatory pathways are eliminated. This is not maximum extraction (0.95+) because some residual enforcement and oversight persist, but the trend is toward total capture. Suppression (0.72): Very high. Multiple layers of suppression maintain the capture: (1) structural \u2014 industry controls agency's information sources and expertise; (2) political \u2014 industry lobbying controls agency funding and leadership; (3) epistemic \u2014 regulatory discourse normalizes industry consultation as legitimate expertise, not capture; (4) personnel \u2014 revolving-door incentives prevent agency independence. Theater ratio (0.55): Moderate but rising. The regulatory apparatus maintains appearances of review and enforcement while substance shifts. Regulatory filings, review meetings, and formal processes persist. Theater has increased over the interval (0.35 \u2192 0.55) as the gap between procedure and substance widens. This is not piton-level theater (0.70+) because some real enforcement persists, but the theatrical component is substantial.",
+    "perspectival_gap": "Maximum perspectival divergence across six types. Beneficiary (institutional/arbitrage) \u2192 Rope (sees coordination). Victims (powerless/trapped, moderate/constrained, powerful/mobile at institutional) \u2192 Snare (extraction dominates). Oversight (institutional/constrained) \u2192 Piton (theater persists, function atrophied). Analytical \u2192 Tangled Rope (sees both functions), but snare dominates in base properties. The gap is not due to measurement ambiguity; it is due to genuine structural difference in agent positions. The same regulatory mechanism benefits the incumbent and harms competitors and the public interest simultaneously. This is the defining signature of capture: one agent's rope is another agent's snare.",
+    "directionality_logic": "Directionality (d) varies dramatically by agent. The regulated industry has low d (0.05-0.15 beneficiary range) \u2014 they benefit and have arbitrage exit (can lobby alternatively or relocate). The public interest has high d (0.90-0.95) \u2014 trapped with no exit and bearing full extraction cost. Market entrants have high d (0.75-0.85) \u2014 constrained by regulatory barriers but can theoretically escape through capital mobility or political organization. The regulatory agency has paradoxical d (0.75-0.85 despite powerful status) \u2014 powerful institutions can still be snare victims if their core function (independence) is extracted. The analytical observer has moderate d (0.70-0.75) by default, but the true d depends on which structural position they occupy: if they are inside the regulatory system (higher d), if they are external analysts (lower d). The derivation chain runs: beneficiary/victim declaration \u2192 exit_options \u2192 power_atom \u2192 d \u2192 f(d) \u2192 \u03c7. The snare classification emerges because d > 0.66 for all victim positions, yielding \u03c7 > 0.66 across perspectives.",
+    "mandatrophy_analysis": "Institutional capture resolves the mandatrophy by distinguishing genuine coordination (rope properties shared with beneficiary) from extraction (snare properties imposed on victims). The constraint is NOT pure extraction (snare-only) because the beneficiary actually perceives and values the coordination function. The constraint is NOT pure coordination (rope-only) because the victims experience maximal extraction without coordination benefit. The tangled rope classification (from the analytical observer) is the synthetic view: the constraint possesses both functions, but extraction overwhelms coordination for most agents. The snare base classification reflects that the asymmetry is the fundamental feature \u2014 the constraint exists because extraction is more important to its structure than coordination. Reform would require either (a) redistributing coordination benefits to all parties (converting tangled rope to rope) or (b) eliminating the extraction while preserving coordination (which would likely fail because the coordination benefit exists only for the beneficiary)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "market_entry_barrier_regulatory",
+      "agency_independence_degradation",
+      "competitive_exclusion_through_enforcement"
+    ],
+    "dual_formulation_note": "Institutional capture operates as a family of linked constraints: (1) agency_independence_degradation captures the structural extraction of the agency's core function; (2) market_entry_barrier_regulatory captures the enforcement redirection toward competitive exclusion; (3) competitive_exclusion_through_enforcement captures the downstream market effect. This story (institutional_capture_snare) models the overarching snare structure; downstream constraints model specific mechanism implementations."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.78
+    }
+  ]
+}

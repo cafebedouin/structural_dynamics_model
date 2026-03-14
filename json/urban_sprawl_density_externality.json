@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "urban_sprawl_density_externality",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sprawl"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Urban Sprawl Density Externality",
+    "topic_domain": "urban_planning/environmental_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "peripheral_developers",
+      "suburban_homeowners",
+      "automotive_industry"
+    ],
+    "victims": [
+      "urban_core_residents",
+      "transit_system_viability",
+      "ecosystem_services"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Urban Core Resident",
+      "comment": "PERSPECTIVE 1: URBAN CORE RESIDENT (SNARE) \u2014 Trapped by sunk housing costs, social networks, and employment concentration in declining urban centers. Bears full cost of density loss (reduced tax base, deteriorating transit, service degradation) with no exit. Maximum experienced extraction from perspective of those left behind."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Peripheral Developer",
+      "comment": "PERSPECTIVE 2: PERIPHERAL DEVELOPER (ROPE) \u2014 Captures coordination benefit: sprawl coordination solves the problem of housing demand distribution across space. Also captures extraction: profitable lot development on cheap periphery land, subsidized by infrastructure costs borne elsewhere. Net beneficiary experiencing pure coordination gain during development phase."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Suburban Homeowner",
+      "comment": "PERSPECTIVE 3: SUBURBAN HOMEOWNER (TANGLED ROPE) \u2014 Benefits from low-cost housing, automotive freedom, and private space (coordination function: distributed housing allocation). Also bears costs of car dependency, community fragmentation, and eventual infrastructure maintenance collapse. Constrained by mortgage lock-in and lack of alternative suburban systems."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Transit Authority Coalition",
+      "comment": "PERSPECTIVE 4: TRANSIT AUTHORITY COALITION (SCAFFOLD) \u2014 Sees sprawl as temporary failure correctable through density mandates, mixed-use zoning, and transit investment. Organized agents (planning departments, transit agencies, environmental groups) have agency and exit paths through land-use reform. Sunset logic: New Urbanism, 15-minute cities, and infill development are building alternative coordination mechanisms."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Zoning Establishment",
+      "comment": "PERSPECTIVE 5: ZONING ESTABLISHMENT (PITON) \u2014 Euclidean zoning (residential/commercial/industrial separation) is largely theatrical: it claims to organize land use rationally but primarily preserves property values for incumbent owners while locking in sprawl patterns through regulatory inertia. The zoning ritual persists despite documented dysfunction (traffic congestion, environmental harm, housing unaffordability). Maintained through path dependence, not because it solves the stated coordination problem."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Transportation-Automotive Complex",
+      "comment": "PERSPECTIVE 6: TRANSPORTATION-AUTOMOTIVE COMPLEX (TANGLED ROPE) \u2014 Beneficiary capturing enormous extraction: sprawl creates car dependency, fuel consumption, maintenance, insurance, and parking costs. Coordinates vehicle market expansion (genuine coordination function: distributes vehicles across population growth). Also enforces extraction: political capture of transportation budgets, highway subsidy, parking mandates, and resistance to transit funding. Powerful with exit options, so moderate experienced chi despite high structural extraction."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From an economic physics perspective, sprawl may appear as an immutable consequence of transport cost reduction and land supply elasticity: given cheap transport and abundant land, dispersed settlement is the 'natural' equilibrium. This perspective treats sprawl density externality as a law of settlement economics. However, the structural data (beneficiaries, victims, regulatory enforcement) contradicts the mountain classification \u2014 the engine's false summit detector reveals that 'inevitable market outcome' naturalizes contingent institutional choices (zoning, infrastructure subsidy, parking mandates)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "subsidy_attribution_boundary",
+      "question": "What portion of sprawl results from genuine transport-cost reduction vs. hidden infrastructure subsidies (highway funding, road maintenance, free parking, externality non-pricing)?",
+      "resolution_mechanism": "Lifecycle cost accounting: compare sprawl patterns in jurisdictions with full cost-recovery road pricing vs. subsidized road regimes; cross-national comparison of sprawl density vs. transportation cost structures",
+      "impact": "If subsidies > 40% of transport cost: sprawl is largely extraction mechanism disguised as market efficiency. If subsidies < 20%: sprawl is genuine equilibrium response to real technology and land availability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of sprawl to subsidy vs. genuine transport cost reduction"
+    },
+    {
+      "id": "density_critical_mass_threshold",
+      "question": "What minimum urban core density is required for transit viability, ecosystem service provision, and social infrastructure efficiency?",
+      "resolution_mechanism": "Cross-city analysis of density vs. transit operating cost per capita, ecosystem service provision, municipal service cost per capita, and walkability indices",
+      "impact": "If threshold is high (> 8000 per sq km): sprawl creates permanent structural underperformance in transit and services. If threshold is moderate (3000-6000): sprawl is recoverable through infill; snare classification is too strong.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Minimum density thresholds for service viability"
+    },
+    {
+      "id": "zoning_entrenchment_mechanism",
+      "question": "Is suburban zoning maintained through deliberate political capture, or through genuine homeowner preference for low-density living and property protection?",
+      "resolution_mechanism": "Policy experiment: compare zoning reform adoption rates with homeowner opposition; analyze correlation between zoning restriction strength and property-value protection vs. genuine preference measures",
+      "impact": "If deliberate capture: Piton classification is accurate \u2014 zoning is theatrical enforcement of extraction. If genuine preference: Rope classification is more accurate \u2014 sprawl coordination reflects authentic demand distribution.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether zoning entrenchment is institutional capture or genuine preference"
+    },
+    {
+      "id": "automotive_dependency_lock_in",
+      "question": "Is car dependency in sprawling systems a result of sprawl-induced infrastructure design, or does sprawl result from pre-existing automobile-centric culture?",
+      "resolution_mechanism": "Historical analysis of sprawl timing relative to car adoption; comparison of sprawl patterns in car-centric vs. transit-first cultural contexts; analysis of sprawl reversal when transit infrastructure is added",
+      "impact": "If sprawl induces car dependency: infrastructure lock-in makes Snare classification more accurate for urban core residents. If culture induces sprawl: homeowner agency is higher; Tangled Rope is more accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal direction between sprawl and automotive dependency"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Urban sprawl density externality creates a structural tension between individual household preferences for low-density housing, automotive freedom, and private space on the one hand, and the system-level requirement for density to sustain transit, ecosystems, walkable neighborhoods, and efficient public infrastructure on the other. The constraint exhibits mixed coordination and extraction functions: sprawl coordinates housing distribution across a growing population (genuine coordination benefit) while simultaneously extracting from those left in depopulating urban cores and imposing infrastructure costs that exceed revenues. The extractiveness value (0.58) reflects that the constraint's primary mechanism is not pure coordination but rather the capture of benefits by developers and suburban homeowners while costs are socialized (road maintenance, ecosystem loss, transit system insolvency). The theater ratio (0.48) indicates moderate performative content: zoning claims to rationally separate land uses but primarily locks in sprawl patterns through regulatory inertia; real estate marketing emphasizes 'natural' housing preferences while suppressing visibility of infrastructure externalities.",
+    "key_agents": [
+      "Urban Core Residents: Primary victims (powerless/trapped) \u2014 sunk costs in declining neighborhoods; bear cost of tax base erosion and service degradation",
+      "Peripheral Developers: Primary beneficiaries (institutional/arbitrage) \u2014 capture land appreciation and development profits on cheap periphery; benefit from infrastructure subsidies",
+      "Suburban Homeowners: Mixed beneficiary-victim (moderate/constrained) \u2014 benefit from low-cost housing and space; locked into car dependency and eventual infrastructure maintenance collapse",
+      "Transit Authority Coalition: Organized agent (organized/mobile) \u2014 see sprawl as correctable through density mandates and transit investment; building alternative coordination mechanisms",
+      "Zoning Establishment: Institutional gatekeeper (institutional/arbitrage) \u2014 maintains regulatory structure through path dependence; sees own system as degraded but enforces it anyway",
+      "Transportation-Automotive Complex: Powerful extractor (powerful/arbitrage) \u2014 captures vehicle dependency extraction; coordinates market expansion while enforcing car-required infrastructure",
+      "Ecosystem Services: Victim (powerless/trapped) \u2014 abstract collective good bearing full cost of habitat loss, watershed fragmentation, and pollution; no exit or voice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts substantially through: (1) private developers capturing land appreciation while infrastructure costs are public, (2) suburban homeowners capturing low-cost housing while urban cores bear density loss costs, (3) automotive industry capturing vehicle dependency while road maintenance and pollution costs are socialized. The value reflects that extraction is significant but not absolute \u2014 suburban homeowners do gain genuine housing and space benefits, suggesting genuine coordination function alongside the extraction. The value has increased from 0.35 to 0.58 over the interval as sprawl accumulates and infrastructure maintenance costs come due (cities face declining tax bases, aging road and transit systems, ecosystem service loss). Suppression (0.65): Moderate-high. Significant barriers to exit or reform include: mortgage lock-in for both suburban homeowners and urban residents, zoning regulatory barriers to density and mixed-use development, infrastructure subsidy structures that make sprawl artificially cheap relative to dense infill, car dependency making car-free alternatives difficult, and political capture by development and real estate interests. Theater ratio (0.48): Moderate-low. Zoning regulations are substantially performative (rationalizing what is actually property-value preservation), real estate marketing emphasizes 'natural' preferences while suppressing visibility of infrastructure costs, and density development restrictions claim environmental protection while actually enforcing sprawl. However, the constraint has genuine functional content: sprawl does distribute housing across land, does provide space efficiency trade-offs, and does reflect some authentic homeowner preferences. Theater increases slightly over the interval as zoning becomes more visibly disconnected from stated goals (environmental protection, affordability, walkability) as sprawl's costs become apparent.",
+    "perspectival_gap": "Maximum perspectival divergence reflects the constraint's core function: private actors capture benefits while costs are socialized. The beneficiary (developer, suburban homeowner) sees pure coordination (housing distribution) or mixed coordination-extraction (Tangled Rope). The victim (urban core resident) sees pure extraction (Snare) with no escape. The organized reformer sees a temporary failure with a sunset (Scaffold). The institutional gatekeeper sees its own system as degraded but continues enforcing it (Piton). The extractor (automotive complex) sees coordination of vehicle dependency (Tangled Rope) while capturing extraction. These gaps are not ambiguity \u2014 they are structural: different positions in the extraction flow legitimately experience the same constraint as different types.",
+    "directionality_logic": "Directionality values (d) track how structural position determines experienced extraction. Urban core residents as trapped powerless victims derive d \u2248 0.95 \u2192 high f(d) \u2192 high experienced \u03c7. Suburban homeowners as constrained moderate beneficiary-victims derive d \u2248 0.55 \u2192 moderate f(d) \u2192 moderate experienced \u03c7. Peripheral developers as institutional arbitrage beneficiaries derive d \u2248 0.15 \u2192 low f(d) \u2192 low or negative experienced \u03c7. The transportation-automotive complex as powerful arbitrage beneficiary derives d \u2248 0.35 \u2192 moderate f(d) \u2192 moderate experienced \u03c7 despite high structural extraction, because power and exit options reduce experienced pressure. The analytical observer as analytical observer derives d \u2248 0.72 \u2192 high f(d) \u2192 high visible extraction chi, consistent with the false summit detection (the mountain classification is a naturalization of institutional choices, not a law of nature).",
+    "mandatrophy_analysis": "RESOLVES THROUGH PERSPECTIVAL DIVERGENCE: The mandatrophy \u2014 'is sprawl coordination or extraction?' \u2014 is resolved by noting that it is genuinely both, experienced differently from different structural positions. The classification is not wrong when it varies; the variation IS the diagnostic signal. The beneficiary's Rope classification is accurate: sprawl does solve the coordination problem of distributing housing across growing population. The victim's Snare classification is accurate: sprawl does extract by concentrating costs on those left in declining urban cores. The reformer's Scaffold classification is accurate: sprawl patterns are correctable through zoning reform and transit investment, with a real sunset from New Urbanism policies. No single classification is 'the' answer; the presheaf over the structural positions IS the answer. The false summit (Mountain from analytical context) is specifically flagged by the engine's natural law detector \u2014 the 'inevitable economic outcome' framing naturalizes institutional choices around subsidy structure, zoning, and infrastructure investment."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "automotive_infrastructure_subsidy",
+      "real_estate_speculation_extraction",
+      "transit_system_viability",
+      "ecosystem_fragmentation"
+    ],
+    "dual_formulation_note": "Urban sprawl density externality is the parent constraint affecting downstream infrastructure subsidies (which have their own extraction dynamics), real estate speculation (which has its own extractiveness value), transit system non-viability (which is a structural consequence), and ecosystem fragmentation (which has its own victimology). Each downstream constraint has independent \u03b5 values reflecting their specific structural mechanisms."
+  },
+  "directionality_overrides": []
+}

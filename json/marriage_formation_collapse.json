@@ -1,0 +1,213 @@
+{
+  "header": {
+    "constraint_id": "marriage_formation_collapse",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mfc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Marriage Formation Collapse in Late Modernity",
+    "topic_domain": "social/demographic/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "housing_markets",
+      "consumer_financial_sector",
+      "educational_institutions"
+    ],
+    "victims": [
+      "young_adults_aged_18_35",
+      "reproductive_autonomy",
+      "community_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Young Adult Cohort",
+      "comment": "PERSPECTIVE 1: YOUNG ADULT COHORT (SNARE) \u2014 Trapped by structural economic barriers: housing unaffordability, student debt burden, wage stagnation, childcare costs. Marriage formation requires accumulated capital (down payment, stable income, housing security) that systematic extraction through education loans and housing speculation makes impossible. No exit pathway within the biographical horizon \u2014 deferral of family formation is structural, not chosen."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Middle-Income Aspiring Household",
+      "comment": "PERSPECTIVE 2: MIDDLE-INCOME ASPIRING HOUSEHOLD (TANGLED ROPE) \u2014 Constrained by high costs (housing, education, childcare) but experiences genuine coordination function: marriage pools resources, shares risks, enables both partners' career development. The constraint is simultaneously extractive (forced delay, reduced family size) and coordinative (partnership enables economic mobility that individual cannot achieve). Exit through geographical relocation is possible but costly."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Finance and Real Estate Sector",
+      "comment": "PERSPECTIVE 3: FINANCE AND REAL ESTATE SECTOR (ROPE) \u2014 Benefits from marriage delay through sustained debt servicing and asset inflation. Experiences the constraint as coordination: mortgage debt enables household asset accumulation, which anchors consumer spending and financial system stability. The sector has full exit option (can move capital elsewhere) and captures arbitrage through speculative appreciation and transaction fees."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Social Institution of Marriage",
+      "comment": "PERSPECTIVE 4: SOCIAL INSTITUTION OF MARRIAGE (PITON) \u2014 Marriage as a ceremony and legal status persists through cultural and religious inertia, but its primary coordination function (economic pooling, reproductive stability, social status) has atrophied. Theater_ratio is moderate-high: substantial performative emphasis on 'finding the one' and ceremonial aspects, with declining functional coordination as couples delay formation until late 30s or skip entirely. The institution is maintained by expectation and ritual despite declining structural necessity."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Housing Reform and Childcare Support Coalition",
+      "comment": "PERSPECTIVE 5: HOUSING REFORM AND CHILDCARE COALITION (SCAFFOLD) \u2014 Organized movements (housing advocates, family policy reformers, universal childcare proponents) see marriage formation collapse as a temporary problem with structural sunset clauses: reducing housing costs through zoning reform, subsidizing childcare, and enforcing wage growth would remove the extraction layer without eliminating marriage as a coordination mechanism. These agents have agency and see explicit exit pathways through policy change within generational timescales."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Civilizational Demographic Transition View",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / CIVILIZATIONAL VIEW (MOUNTAIN) \u2014 From a long-view perspective, declining marriage formation rates reflect universal demographic transition: as societies increase female education, reproductive control, and economic participation, marriage shifts from economic necessity to optional social arrangement. This perspective risks naturalizing what are actually contingent policy choices (housing speculation, debt-financed education, childcare privatization) as inevitable civilizational evolution. The engine's false summit detector will identify this as naturalization requiring structural decomposition."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "housing_cost_causal_threshold",
+      "question": "What proportion of marriage formation delay is directly caused by housing unaffordability versus other factors (education duration, female workforce participation, contraceptive access)?",
+      "resolution_mechanism": "Comparative historical analysis (pre-1980 vs post-2000 housing cost-to-income ratios) and cross-national comparison (countries with housing price controls vs speculation-driven markets). Synthetic control matching young adults by income/education, varying housing cost scenarios.",
+      "impact": "If housing is >60% causal: constraint is primarily economic extraction, and policy intervention (zoning reform, speculation taxes) would measurably increase marriage rates. If housing is <30% causal: delay is driven by cultural preference/expanded autonomy, and housing policy alone cannot reverse the trend.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal attribution of marriage delay to housing costs"
+    },
+    {
+      "id": "female_autonomy_preference_decomposition",
+      "question": "To what extent do young women defer marriage due to structural barriers (trapped, constrained) versus expanded preference for education/career/autonomy (mobile, arbitrage)?",
+      "resolution_mechanism": "Survey data on marriage intentions vs actual behavior; qualitative interviews distinguishing 'cannot afford marriage' from 'choosing other life paths'; cross-generational comparison of cohort attitudes toward marriage centrality.",
+      "impact": "If autonomy preference dominates: the constraint is not extractive but rather a mismatch between old institutional forms and new values. Classification would shift from Snare toward Piton (degraded institution) for many perspectives. If barriers dominate: classification remains Snare/Tangled Rope with extraction flowing toward institutional beneficiaries.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Decomposition of preference vs structural barriers in marriage deferral"
+    },
+    {
+      "id": "childcare_coordination_function_vitality",
+      "question": "Does marriage-mediated childcare coordination (two-parent household) remain functionally superior to alternative arrangements (single parenthood, extended family, institutional childcare) given modern labor markets and social support?",
+      "resolution_mechanism": "Longitudinal outcomes comparison: child development, economic stability, parental wellbeing across household structures, controlling for income/education. Analysis of time-use patterns and task-sharing efficiency in two-parent vs other arrangements.",
+      "impact": "If marriage remains coordinatively superior: the constraint is extractive precisely because it blocks a genuinely more efficient arrangement. If alternative arrangements are equivalent: marriage is purely performative/cultural, and the collapse is reclassification from coordination to degradation (Piton intensification).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether marriage provides coordinative advantage for childcare vs alternatives"
+    },
+    {
+      "id": "identity_lock_mechanism_in_family_planning",
+      "question": "Are young adults trapped by material barriers (housing, debt, childcare cost) or identity-locked through internalized narratives (belief they must achieve certain milestones before 'deserving' family, fusion of identity with educational/career achievement)?",
+      "resolution_mechanism": "Qualitative analysis distinguishing expressed barriers from internalized constraints; comparison of self-reported reasons for delay; observation of behavior when constraints are partially removed (housing subsidy experiment, education debt forgiveness) \u2014 do marriage rates recover or remain low due to identity reorientation?",
+      "impact": "If identity-locked dominates: the constraint persists even after material barriers are removed. Agents would need cognitive reframing, not just policy change. Classification from identity-locked perspective becomes Rope (changeable in principle if identity frame shifts) rather than Mountain (unchangeable). This implies therapeutic or cultural intervention is primary solution.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Decomposition of material vs identity-based barriers to marriage formation"
+    },
+    {
+      "id": "institutional_beneficiary_intentionality",
+      "question": "Do housing speculation, student debt finance, and consumer credit expansion constitute deliberate extraction mechanism designed to prevent marriage formation, or are they incidental consequences of other profit-driven policies?",
+      "resolution_mechanism": "Historical analysis of policy intent (housing zoning, education privatization, debt securitization); examination of institutional actors' explicit awareness of marriage formation effects; comparison to scenarios where same profit opportunities existed with policies protecting marriage formation.",
+      "impact": "If intentional: the constraint is a snare sustained by deliberate institutional suppression. If incidental: it is a tangled rope where genuine coordination (mortgage financing, education access) carries extraction as side effect. This affects mandatrophy analysis \u2014 intentional extraction requires different remedies than systems optimization.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether institutional extraction from marriage formation is intentional or incidental"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.36
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Marriage formation in late modernity exhibits structural collapse across developed economies: median age at first marriage has risen from 23 (1980) to 30+ (2023); proportion never-married by age 40 has doubled; fertility rates have fallen below replacement in most OECD nations. This constraint manifests as a tangled rope where genuine coordination function (marriage enables resource pooling, risk sharing, reproductive stability) coexists with systematic extraction that makes marriage economically inaccessible to the young adults who would most benefit from it. The extraction mechanisms operate through three channels: (1) housing speculation that has decoupled shelter from wage-earning capacity, (2) education financialization that burdens cohorts with 15-30 year debt servicing obligations, (3) childcare privatization that locks household income into care costs, reducing capital available for marriage-enabling savings. The constraint is simultaneously a natural consequence of demographic transition (increased female autonomy, reproductive control, delayed maturation of labor-market entry) and an actively enforced institutional arrangement (via finance sector profit models, real estate speculation, and education debt securitization). The middle-income household experiences this as tangled rope \u2014 marriage provides genuine coordination benefits but is systematically deferred until late 30s/early 40s when reproductive windows narrow and family formation becomes high-risk. The young adult trapped in this system experiences it as snare \u2014 structural barriers make marriage formation impossible during biological windows. The theater ratio (0.48) reflects that ceremonial and romantic aspects of marriage persist at high intensity even as the institutional foundation has collapsed \u2014 substantial cultural energy invested in 'finding the one' and weddings, with declining functional coordination of economic life or family formation.",
+    "key_agents": [
+      "Young Adults Aged 18-35: Primary victims (powerless/trapped) \u2014 face cumulative structural barriers (housing unaffordability, student debt, wage stagnation, childcare costs) that make marriage formation economically impossible during reproductive window",
+      "Housing Markets and Real Estate Finance: Primary beneficiaries (institutional/arbitrage) \u2014 capture sustained extraction through speculation-driven price inflation and mortgage debt securitization; benefit from indefinite deferral of first-home purchase",
+      "Consumer Financial Sector (Student Loans, Credit Cards): Secondary beneficiaries (institutional/arbitrage) \u2014 sustain debt service obligations that prevent capital accumulation; profit from refinancing and interest payments",
+      "Middle-Income Aspiring Households: Mixed agent (moderate/constrained) \u2014 experience both genuine coordination function (marriage enables dual-income household) and extraction (forced delay, reduced fertility)",
+      "Educational Institutions: Beneficiaries (institutional/arbitrage) \u2014 capture substantial fees and debt financing; benefit from deferred household formation (students remain longer in credential-seeking mode)",
+      "Childcare Sector and Privatized Caregiving: Beneficiaries (institutional/arbitrage) \u2014 profit from privatized childcare costs that prevent household capital formation",
+      "Housing Reform and Family Policy Coalition: Organized agents (organized/constrained) \u2014 advocate for zoning reform, housing cost reduction, childcare subsidies, and wage policy; see marriage formation collapse as solvable through structural policy change with generational sunset logic",
+      "The Cultural Institution of Marriage: Institutional actor (institutional/arbitrage) \u2014 maintains ceremonial and romantic functions (piton perspective) despite atrophied coordination function; theater persists as institutions invest in wedding industry, romance narratives, relationship counseling",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as inevitable demographic transition; falsely summits as mountain if policy choices are treated as laws of nature"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint has accumulated substantially since 1980 (starting value 0.28, rising to 0.58 by 2023), driven by compounding housing price inflation, education debt expansion, and childcare cost growth. The extractiveness reflects that marriage formation has become impossible for the median young adult without either (a) substantial parental capital transfer, (b) geographic relocation to lower-cost region, or (c) abandonment of other life goals (education, career development, autonomy). However, extractiveness is not maximal (0.70+) because some coordination function remains genuine \u2014 marriage still enables dual-income household formation and risk pooling, and some agents do successfully form marriages despite barriers. Suppression (0.62): High. Structural barriers are substantial: median house price-to-income ratio has doubled since 1980; student debt outstanding is $1.7 trillion; childcare costs consume 15-25% of household income for median families. The suppression is primarily economic (not violent or overtly coercive) but is systematic and near-total for agents without parental wealth. Theater ratio (0.48): Moderate. The institution maintains high cultural and ceremonial energy (weddings, romance narratives, relationship counseling, wedding industry spending), but the functional coordination role (economic pooling, reproductive stability, social status) has substantially degraded because marriage is now deferred until financial conditions are met that rarely occur in the young adult window. The theater has not declined as steeply as the function because romantic and ceremonial aspects operate independently from the economic coordination that makes family formation possible.",
+    "perspectival_gap": "The perspectival gap reveals that young adults and financial institutions experience the same constraint in opposite directions: one as snare (total extraction, no coordination), the other as rope (coordination with arbitrage benefit). This asymmetry is the diagnostic signal for tangled rope \u2014 genuine coordination (marriage enables household formation) is bundled with asymmetric extraction (forced deferral extracts from young adults and transfers reproductive capacity to late 30s/early 40s when fertility is declining and child-rearing window is compressed). The gap between the snare experienced by trapped young adults and the rope experienced by institutional beneficiaries is the widest possible perspectival gap, indicating high structural asymmetry.",
+    "directionality_logic": "Directionality (d) for each perspective is determined by the agent's position relative to the extraction flow. Young adults are pure targets: they bear costs (delayed family formation, reduced fertility, psychological distress) with no benefits from the constraint. Housing markets and financial sector are beneficiaries: they capture sustained extraction through speculation and debt servicing. Middle-income households occupy an intermediate position \u2014 they benefit from coordination (marriage enables household income pooling) but bear extraction costs (forced deferral, reduced family size). The housing reform coalition has organized power and exit pathways (policy advocacy, geographic relocation, alternative living arrangements), so their experienced extraction is moderate. The social institution of marriage has institutional power but no real exit option \u2014 it persists through inertia despite reduced function, producing piton classification. The analytical observer at civilizational scale risks high d (seeing extraction as natural) despite structural position as observer (d_analytical = 0.73). The directionality derives from beneficiary/victim declarations and exit option modulation per the standard chain: trapped young adults with no exit generate high d \u2192 high f(d) \u2192 high \u03c7. Institutional beneficiaries with arbitrage options generate low d \u2192 low/negative \u03c7.",
+    "mandatrophy_analysis": "MANDATROPHY PRESENT BUT RESOLVABLE: The constraint exhibits genuine tensions between coordination and extraction that mandatrophy analysis must address. The coordination function is real: marriage does pool resources, share risks, enable household capital formation, and provide reproductive stability. The extraction is also real: the institutional arrangements (housing speculation, education debt, privatized childcare) systematically prevent young adults from accessing this coordination benefit. The mandatrophy is resolved by recognizing that marriage formation collapse represents a regime shift from one equilibrium (early marriage with lower individual mobility) to another equilibrium (late marriage with higher individual autonomy). The constraint is not a false positive (calling extraction coordination) or a false negative (calling coordination extraction). Rather, it is a state transition: the coordination function of marriage persists, but institutional arrangements have reorganized to extract from those who would access that function. The young adult experiences snare precisely because the extraction mechanisms prevent access to coordination. The housing sector experiences rope precisely because speculation generates both profits and coordination benefits (mortgages do enable household formation for those with sufficient capital). The resolution is that mandatrophy is not an error in classification but an accurate reflection of structural heterogeneity: the same institutional arrangements produce different types (snare, rope, tangled rope) when evaluated from different structural positions. The engine's job is to detect and report this heterogeneity, not to collapse it into a single type."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "housing_speculation_mechanism",
+      "education_debt_financialization",
+      "childcare_cost_privatization",
+      "wage_stagnation_relative_cost_growth"
+    ],
+    "dual_formulation_note": "Marriage formation collapse is downstream of three distinct institutional extraction mechanisms (housing, education, childcare). This constraint story represents the aggregated effect at the social institution level. Upstream stories decompose the specific mechanisms: housing_speculation_mechanism (\u03b5=0.68), education_debt_financialization (\u03b5=0.72), childcare_cost_privatization (\u03b5=0.55). The collapse is the structural result when all three operate simultaneously on the same cohort. Network links establish this family relationship \u2014 all downstream constraints affect this constraint; this constraint affects downstream demographic and fertility outcomes."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

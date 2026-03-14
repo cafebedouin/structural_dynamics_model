@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "information_disclosure_gaming",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "discl"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Information Disclosure Gaming",
+    "topic_domain": "governance/regulatory_capture/epistemic_asymmetry",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "information_controller",
+      "regulatory_beneficiary"
+    ],
+    "victims": [
+      "information_seeker",
+      "epistemic_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Information Seeker",
+      "comment": "PERSPECTIVE 1: THE INFORMATION SEEKER (SNARE) \u2014 Faces legally mandated disclosure that is crafted to obscure rather than illuminate. Cannot exit from the requirement to rely on disclosed information; has no alternative pathway. Bears full extraction cost: time, resources, and epistemic confusion. No meaningful coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Independent Analyst",
+      "comment": "PERSPECTIVE 2: THE INDEPENDENT ANALYST (TANGLED ROPE) \u2014 Constrained by information asymmetry and reputational risk if they expose the gaming, but also benefits from the disclosure framework as a coordination mechanism when gaming is minimal. Can theoretically exit by conducting primary research, but faces high costs (access barriers, resources). Mixed experience of coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Information Controller",
+      "comment": "PERSPECTIVE 3: THE INFORMATION CONTROLLER (ROPE) \u2014 Primary beneficiary. Experiences mandatory disclosure as a coordination mechanism: it solves the problem of communicating findings while maintaining strategic advantage. Can arbitrage between what must be disclosed and what can be withheld. Net extraction flows toward this agent."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Authority",
+      "comment": "PERSPECTIVE 4: THE REGULATORY AUTHORITY (PITON) \u2014 Maintains disclosure requirements that were once functional but now primarily perform compliance theater. Reviewers and auditors check boxes rather than verify content. Theater ratio is high: the disclosure ritual persists because no alternative has fully replaced it, despite degraded functional verification. Suppression is sustained through procedural inertia."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Transparency Coalition",
+      "comment": "PERSPECTIVE 5: THE TRANSPARENCY COALITION (SCAFFOLD) \u2014 Organized alternative disclosure mechanisms (blockchain verification, open-source auditing, third-party certification) are building parallel pathways with sunset logic. These alternatives reduce the gaming advantage by making manipulation more transparent or verifiable. Coalition has agency and perceives an exit path from mandatory disclosure theater."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: THE ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, information asymmetry is inherent to all strategic interaction: the discloser always knows more about their own interests than the seeker. This perspective sees gaming as an immutable consequence of conflicting interests. However, the structural data contradicts this mountain classification \u2014 the engine will detect it as a false summit, revealing that what is actually a contingent institutional choice (mandatory disclosure framework design) is being naturalized as an inevitable feature of information exchange."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "disclosure_sufficiency_threshold",
+      "question": "What constitutes 'adequate' disclosure \u2014 formal compliance with letter of the rule, or substantive comprehensibility to a reasonable seeker?",
+      "resolution_mechanism": "Empirical testing: measure comprehension rates and decision accuracy of information seekers using disclosed vs. alternate formats; correlation between disclosure detail and actual understanding",
+      "impact": "If letter-compliance suffices: disclosure can remain largely gaming-resistant by design. If comprehensibility required: current gaming mechanisms are illegitimate and require stricter enforcement.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Definition of adequate disclosure: letter vs. spirit compliance"
+    },
+    {
+      "id": "gaming_detection_capability",
+      "question": "Can gaming be reliably detected ex-ante by regulators, or is it only identifiable ex-post when harm manifests?",
+      "resolution_mechanism": "Longitudinal audit of disclosures identified as gamed vs. legitimate; development and testing of ex-ante detection algorithms; comparison of false positive/negative rates",
+      "impact": "If ex-ante detection possible: suppression can be reduced via enforcement. If only ex-post identifiable: suppression remains high and extraction persists until harm is revealed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether gaming is detectable before disclosure harm manifests"
+    },
+    {
+      "id": "alternative_verification_scalability",
+      "question": "Do alternative disclosure mechanisms (blockchain, third-party auditing, open-source verification) scale to the volume and complexity of contemporary information flows?",
+      "resolution_mechanism": "Pilot programs testing alternative mechanisms; cost and latency comparison to mandatory disclosure; analysis of adoption barriers and network effects",
+      "impact": "If scalable: scaffold sunset is real \u2014 alternatives can replace mandatory disclosure. If not scalable: scaffold is aspirational, gaming persists as structural feature.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether alternative verification mechanisms scale effectively"
+    },
+    {
+      "id": "disclosure_framework_internalization",
+      "question": "Do information controllers see mandatory disclosure as external constraint (trapped) or as internalized best practice (identity_locked to transparency norm)?",
+      "resolution_mechanism": "Interviews and behavioral analysis of information controllers when disclosure requirements are relaxed or when private vs. public disclosure is possible; measurement of voluntary disclosure rates",
+      "impact": "If internalized: removing mandatory disclosure may not eliminate gaming \u2014 controllers are identity-locked to the gaming frame. If external: removing enforcement reduces suppression.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether disclosure norms are internalized or externally enforced"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Information disclosure gaming describes the structural extraction that emerges when mandatory disclosure requirements are crafted, interpreted, or enforced in ways that preserve informational advantage for controllers while satisfying formal compliance. The constraint operates across domains (financial reporting, environmental impact statements, clinical trials, security reviews, freedom of information responses) wherever asymmetric information creates value and disclosure is legally mandated but not genuinely substantive. The mechanism is a tangled rope: disclosure requirements serve a genuine coordination function (making information available solves a collective action problem), but they also enable extraction (controllers learn to game the requirement, seeker must decode obfuscation, and the controller retains informational monopoly despite compliance). The extractiveness value (0.58) reflects moderate but growing extraction: disclosure has made information legally available, but gaming has reduced its usefulness. The theater ratio (0.68) indicates that disclosure compliance is increasingly performative \u2014 controllers have learned to satisfy letter while evading spirit, regulators check boxes rather than verify substance, and the ritual persists despite degraded epistemic function.",
+    "key_agents": [
+      "Information Controller: Primary beneficiary (institutional/arbitrage) \u2014 retains informational advantage while satisfying compliance requirement; can strategically game disclosure format and timing",
+      "Information Seeker: Primary victim (powerless/trapped) \u2014 legally entitled to disclosed information but cannot exit from reliance on it; bears cost of decoding obfuscation and incomplete disclosure",
+      "Independent Analyst: Secondary actor (moderate/constrained) \u2014 can theoretically conduct primary research but faces access barriers and resource constraints; benefits from disclosure framework when gaming is minimal",
+      "Regulatory Authority: Institutional actor (institutional/constrained) \u2014 maintains disclosure requirements via performative enforcement; sees own compliance checking as degraded ritual",
+      "Transparency Coalition: Organized alternative builders (organized/mobile) \u2014 arXiv preprints for research, blockchain for supply chains, third-party certification for environmental claims; creating sunset pathway",
+      "Epistemic Commons: Victim (powerless/trapped) \u2014 contaminated by gaming; lacks mechanisms to self-correct gamed disclosures before they diffuse"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and increasing. Controllers have learned disclosure gaming techniques (selective emphasis, strategic omission, format obfuscation, timing manipulation, rhetorical framing). The value increased from 0.35 to 0.58 over the measurement interval, indicating that gaming sophistication is growing faster than regulatory response. The increase reflects not a change in the constraint itself but the constraint's evolution under pressure \u2014 controllers optimize disclosure to maximize legal compliance while minimizing transparency. Suppression (0.62): High. Multiple barriers prevent seekers from escaping reliance on gamed disclosures: legal entitlement to disclosed information creates expectation of reliability; alternative verification requires resources and access that most seekers lack; reputational costs to seekers who publicly dismiss disclosed information as gamed; regulatory authority's performative enforcement doesn't reduce actual suppression. Theater ratio (0.68): High and increasing. Disclosure compliance has become substantially performative: regulators perform audits that check documentation quality but not substantive accuracy; controllers perform transparency by formatting disclosures to appear comprehensive while minimizing actionable content; seekers perform due diligence by reading disclosures and building models, despite knowing the disclosures are gamed. The ritual persists because institutional actors are locked into the framework and alternatives haven't achieved critical mass.",
+    "directionality_logic": "The information controller benefits from the constraint (low d \u2248 0.15): they can arbitrage between mandatory disclosure and retained information, using the requirement to build legitimacy without surrendering advantage. The information seeker is trapped in reliance on gamed disclosures (high d \u2248 0.92): no exit, high cost, no coordination benefit. The independent analyst is constrained (moderate d \u2248 0.68): can theoretically exit via primary research but faces high barriers, also benefits from disclosure framework when honest. The regulatory authority is constrained by institutional inertia (d \u2248 0.55): committed to enforcement but enforcement is performative, cannot easily exit from mandatory framework. The transparency coalition is mobile (low d \u2248 0.25): building alternatives, not trapped by existing framework, can exit and create new pathways. The false mountain at civilizational scale derives from overestimating how inherent information asymmetry is versus how contingent gaming strategies are.",
+    "perspectival_gap": "This constraint shows maximum perspectival divergence. The information controller sees a coordination mechanism (rope) \u2014 mandatory disclosure solves the problem of communicating findings while letting them retain advantage. The transparency coalition sees a temporary problem with a sunset (scaffold) \u2014 blockchain verification and third-party certification are building alternatives that make gaming more expensive. The regulatory authority sees a performative ritual (piton) \u2014 compliance checking persists despite degraded function. The independent analyst sees mixed coordination and extraction (tangled rope) \u2014 the disclosure framework enables some knowledge work but also traps them in decoding obfuscation. The information seeker sees pure extraction (snare) \u2014 legally mandated reliance on information they know is gamed, no exit, no coordination benefit. The civilizational analytical observer risks seeing a natural law (mountain) \u2014 information asymmetry is inevitable \u2014 but the structural data reveals this as naturalizing a contingent choice about disclosure framework design.",
+    "mandatrophy_analysis": "Information disclosure gaming resolves the mandatrophy by showing that 'mandatory disclosure' is not a unified constraint but a family of coordinated and extractive mechanisms operating at different scales. At the point of specific disclosure (financial report, environmental impact statement), the constraint is tangled rope: genuine coordination occurs (information becomes available) alongside asymmetric extraction (controllers game it). At the regulatory scale, the constraint is piton: compliance checking performs the disclosure ritual without verifying substance. At the institutional scale, controllers experience rope (legitimate coordination benefit while retaining advantage). At the powerless seeker scale, the constraint is snare (no coordination benefit, pure extraction). At the emerging alternative scale, the constraint is scaffold (organized alternatives are building exits). The mandatrophy is resolved by recognizing that 'disclosure' is shorthand for multiple structurally distinct constraints, each with different extractiveness values and beneficiary/victim patterns. The single base_properties values (extractiveness 0.58, suppression 0.62) represent an average across these multiple mechanisms \u2014 the presheaf of observations at different structural positions reveals that no single type captures the full landscape."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture",
+      "epistemic_commons_contamination",
+      "information_asymmetry_extraction"
+    ],
+    "dual_formulation_note": "Information disclosure gaming is downstream of regulatory framework design decisions (what must be disclosed, in what format, on what timeline) and upstream of epistemic outcomes (trust degradation, decision quality, market efficiency). The constraint family includes: mandatory_disclosure_framework (\u03b5 \u2248 0.35, rope\u2014pure coordination when honest), disclosure_gaming_techniques (\u03b5 \u2248 0.72, snare\u2014pure extraction when sophisticated), compliance_theater (\u03b5 \u2248 0.42, piton\u2014degraded ritual), and transparency_alternatives (\u03b5 \u2248 0.20, scaffold\u2014emerging sunset). All four stories share agents but operate at different scales of analysis. This story aggregates across the family."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

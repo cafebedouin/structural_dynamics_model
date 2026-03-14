@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "pharmaceutical_safety_obfuscation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pharma_safety"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Pharmaceutical Safety Obfuscation Through Regulatory Capture and Data Control",
+    "topic_domain": "pharmaceutical/regulatory/health",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharmaceutical_manufacturers",
+      "regulatory_agencies_captured"
+    ],
+    "victims": [
+      "patients_and_prescribers",
+      "public_health_infrastructure",
+      "independent_researchers"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Patient Consumer",
+      "comment": "PERSPECTIVE 1: PATIENT CONSUMER (SNARE) \u2014 Structurally trapped. Patients face unavoidable dependency on medications vetted by captured regulatory systems. No exit option exists for those requiring specific therapeutic classes. Information asymmetry is maximal: manufacturers control trial data, regulatory summaries are incomprehensible to lay consumers, adverse event reporting is fragmented and inaccessible. Patients bear full extraction cost without agency."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Prescribing Physician",
+      "comment": "PERSPECTIVE 2: PRESCRIBING PHYSICIAN (SNARE) \u2014 Constrained by liability exposure, medical training that emphasizes manufacturer-provided literature, and reliance on pharmaceutical representatives for clinical updates. High-quality independent safety data is expensive and time-consuming to access. Physicians are structurally trapped between manufacturer marketing and patient trust. Exit option is severely constrained: abandoning pharmaceutical treatment is not clinically feasible for most conditions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Pharmaceutical Manufacturer",
+      "comment": "PERSPECTIVE 3: PHARMACEUTICAL MANUFACTURER (TANGLED ROPE) \u2014 Genuine coordination function exists: manufacturers develop complex drugs requiring massive capital investment. The regulatory system must verify safety and efficacy before market entry \u2014 this is legitimate coordination. However, asymmetric extraction layer: manufacturers control clinical trial data, can cherry-pick favorable studies for publication, lobby for regulatory loosening, and capture agency personnel. The manufacturer experiences the constraint as enabling coordination (innovation incentives) while extracting from downstream actors."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Regulatory Agency",
+      "comment": "PERSPECTIVE 4: REGULATORY AGENCY (TANGLED ROPE) \u2014 Faces genuine coordination requirements: must balance innovation incentives with public safety. Captured dynamics introduce asymmetry: funding relationships with industry, revolving-door employment, reliance on manufacturer-submitted safety data, and pressure to approve drugs quickly. The agency experiences the constraint as coordination (drug approval is necessary) while capturing rents through accelerated pathways (priority review fees) and post-approval enforcement leverage."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The Academic Research Community",
+      "comment": "PERSPECTIVE 5: ACADEMIC RESEARCH COMMUNITY (PITON) \u2014 Once an independent verification mechanism, academic pharmacology has degraded into performative compliance. Academic researchers depend on pharmaceutical funding for grants; manufacturers fund medical schools and continuing education; publication bias favors positive findings funded by pharma. Independent safety research persists but is theatrically marginalized. The mechanism is largely inert \u2014 academic independence that once provided real verification has atrophied through financial capture."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (ROPE) \u2014 From a civilizational view, pharmaceutical safety coordination is necessary and solves a real collective action problem: information asymmetries between manufacturers and consumers require institutional gatekeeping. The coordination function is real. However, the analytical perspective cannot resolve whether the observed obfuscation is inherent to coordination or extractive rent-seeking layered on top. The base extraction value (0.58) suggests mixed function rather than pure coordination."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "data_transparency_vs_ip_protection",
+      "question": "How much of pharmaceutical safety obfuscation is necessary IP protection vs. extractive data control?",
+      "resolution_mechanism": "Comparative analysis of pharmaceutical transparency across regulatory regimes with different IP enforcement levels. Meta-analysis of drug safety outcomes in systems with vs. without mandatory trial data registration.",
+      "impact": "If obfuscation is mainly IP protection: constraint should reclassify as lower-extraction Rope. If mainly extractive: remains high-extraction Tangled Rope or Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether safety obfuscation is necessary for IP protection or extractive data control"
+    },
+    {
+      "id": "regulatory_capture_vs_expertise_delegation",
+      "question": "Is regulatory reliance on manufacturer data inherent to technical complexity or evidence of capture?",
+      "resolution_mechanism": "Examination of regulatory agencies with differential manufacturer funding levels; analysis of approval timelines and safety recalls in high vs. low capture jurisdictions; audit of regulator-industry employment flows.",
+      "impact": "If inherent to complexity: moderate Tangled Rope throughout. If capture: manufacturers classify as extractors (higher d), regulators as captured beneficiaries (lower d despite institutional power).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regulatory data reliance reflects technical necessity or institutional capture"
+    },
+    {
+      "id": "patient_harm_attribution_lag",
+      "question": "What lag exists between drug approval and detection of serious adverse events? Is this lag inherent or exploited?",
+      "resolution_mechanism": "Longitudinal analysis of safety event timelines: phase 3 trial detection rates vs. post-market surveillance detection rates. Comparison with efficacy signals detected in the same trials. Analysis of trial design features that minimize adverse event detection.",
+      "impact": "If lag is inherent to statistical power: moderate theater and suppression. If exploited (small trial n, short follow-up, narrow outcome capture): high theater and suppression, stronger case for extraction mechanism.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether safety event detection lag is inherent or exploited"
+    },
+    {
+      "id": "identity_lock_in_medical_training",
+      "question": "To what extent are prescribers identity-locked into reliance on manufacturer-controlled information sources?",
+      "resolution_mechanism": "Survey and interview data on prescriber awareness of alternative information sources and perceived barriers to using them. Analysis of prescriber behavior change when given access to independent safety databases. Examination of medical school curricula and continuing education funding sources.",
+      "impact": "If prescribers are constrained (high cost to switch): moderate extraction from this perspective. If identity-locked (cannot see alternatives as legitimate): higher suppression, different classification outcome.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether prescribers are constrained or identity-locked into manufacturer information"
+    },
+    {
+      "id": "open_pharmacovigilance_feasibility",
+      "question": "Can distributed, crowd-sourced adverse event reporting provide safety verification comparable to or better than centralized regulatory systems?",
+      "resolution_mechanism": "Pilot programs testing decentralized pharmacovigilance; comparison of detection sensitivity and specificity against FDA MedWatch. Analysis of false positive rates and action thresholds in crowd-sourced systems.",
+      "impact": "If feasible and scalable: constraint becomes temporary (Scaffold). If limited by false positives or gaming: remains entrenched (Tangled Rope or Snare).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether decentralized pharmacovigilance can replace centralized safety systems"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.71
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Pharmaceutical safety obfuscation operates as a structural constraint where manufacturers maintain control over safety data, regulatory agencies become captured by industry funding and revolving-door employment, and patients and prescribers face information asymmetries and suppressed exit options. The constraint combines genuine coordination requirements (drug development requires massive capital and regulatory verification) with extractive mechanisms (data control, selective publication, regulatory capture). The theater ratio has increased from 0.48 to 0.68 over the measurement interval, indicating that the performative components of safety verification (journal publications, regulatory committee presentations, marketing claims) have grown faster than functional safety mechanisms (independent verification, adverse event detection, post-market accountability). The extractiveness has increased from 0.35 to 0.58, reflecting both the accumulation of rents through regulatory pathways and the hardening of capture mechanisms as financial dependencies deepen.",
+    "key_agents": [
+      "Patients and Consumers: Primary victims (powerless/trapped) \u2014 depend on medications; structurally locked in by therapeutic necessity; bear full cost of safety failures",
+      "Prescribing Physicians: Secondary victims (moderate/constrained) \u2014 face liability exposure and information asymmetry; constrained by reliance on manufacturer-provided clinical data",
+      "Pharmaceutical Manufacturers: Primary beneficiaries (powerful/arbitrage) \u2014 control trial data, funding streams, and regulatory access; generate extraction through captured approval pathways",
+      "Regulatory Agencies (FDA, EMA, others): Captured beneficiaries (institutional/arbitrage) \u2014 maintain gatekeeping function but rely on manufacturer data and funding; capture rents through accelerated approval fees",
+      "Academic Research Community: Degraded verification actor (institutional/mobile) \u2014 once independent; now theatrically compliant due to pharmaceutical funding of research and education",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 observes both genuine coordination function and extractive layering; cannot resolve from single observable"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Manufacturers extract substantial rents through regulatory leverage, data control, and exclusivity periods. The extraction is not maximal (snare-level 0.70+) because genuine coordination still occurs \u2014 drug development and safety verification are real functions. However, the extraction exceeds coordination by a significant margin. Suppression (0.72): High. Multiple suppression mechanisms operate in parallel: information asymmetry (manufacturers control trial data and design), regulatory capture (agency reliance on industry submissions), liability barriers (physicians face malpractice risk if they question manufacturer claims), and market barriers (patients cannot easily access independent safety information or choose alternatives within therapeutic classes). Theater ratio (0.68): High and rising. Performative elements include: journal publications funded by manufacturers with publication bias, regulatory committee presentations emphasizing approval timelines over safety comprehensiveness, marketing campaigns disguised as patient education, and medical school curricula funded by pharmaceutical companies. Independent functional verification (adverse event tracking, long-term outcome monitoring, comparative effectiveness research) persists but is theatrically marginalized and underfunded. The rising trajectory indicates that performative components are outpacing functional ones.",
+    "perspectival_gap": "The Snare perspective (patients/prescribers) experiences pure extraction because exit is suppressed and information asymmetry is maximal. The Rope perspective (manufacturers) experiences coordination because they control the mechanism and benefit from it. The Tangled Rope perspective (regulators) experiences both coordination (approving drugs is necessary) and extraction (captured by manufacturer preferences). The Piton perspective (academic researchers) experiences their own degradation \u2014 they once provided independent verification but now perform theater. The analytical perspective faces the Oracle Gap: the constraint cannot be classified from a single position because its essence IS the asymmetry between positions. The question 'is this Rope or Snare?' has no single answer \u2014 the constraint IS a Tangled Rope because it produces different classifications from different positions.",
+    "directionality_logic": "Directionality (d) for each agent derives from their structural position relative to the constraint. Patients/prescribers are victims with trapped or constrained exit: structural mobility exists (they could theoretically exit by refusing pharmaceuticals) but is blocked by therapeutic necessity and information barriers \u2014 d \u2248 0.90. Manufacturers are beneficiaries with arbitrage exit: they can choose which markets to enter, which trials to conduct, which data to publish \u2014 they have structural mobility and use it to their advantage \u2014 d \u2248 0.10. Regulatory agencies are nominally beneficiaries (they gate-keep access to markets) but are partially captured: they have some mobility (could strengthen data requirements) but face pressure to approve quickly \u2014 d \u2248 0.35. Academic researchers have mobile exit options (could refuse pharma funding) but are identity-locked into pharmaceutical funding streams (career and institution survival depend on research funding) \u2014 d \u2248 0.65. The directionality distribution \u2014 trapped victims and identity-locked researchers vs. arbitrage-enabled manufacturers \u2014 creates the asymmetric extraction signature that justifies Tangled Rope classification at the moderate and institutional power levels.",
+    "mandatrophy_analysis": "UNRESOLVED MANDATROPHY: The claimed_type is Tangled Rope, but the analytical observer's perspective potentially classifies the constraint as Rope (coordination-only) if viewed through the lens of 'pharmaceutical innovation requires these institutional arrangements.' The mandatrophy is resolvable only by empirical comparison: if independent regulatory systems (e.g., European regulators with less industry capture) produce equivalent safety outcomes with lower extractiveness, then obfuscation is extractive rent-seeking, and Tangled Rope is correct. If independent systems produce worse outcomes (longer approval times, less innovation), then obfuscation may be necessary, and the constraint is higher-order Rope. The measurement trajectory (extractiveness rising from 0.35 to 0.58, theater rising from 0.48 to 0.68) suggests that extraction is accumulating faster than coordination function improves, which supports Tangled Rope over pure Rope. However, the rising trajectory itself could indicate either increasing extraction or increasing analytical visibility into existing extraction. Omega variables are required to disambiguate."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.2
+  },
+  "network": {
+    "affects_constraints": [
+      "clinical_trial_design_bias",
+      "post_market_surveillance_gaps",
+      "regulatory_approval_timelines"
+    ],
+    "dual_formulation_note": "This constraint is upstream of specific trial design biases and post-market surveillance failures. Each downstream constraint has its own \u03b5 reflecting domain-specific obfuscation mechanisms; this story captures the structural architecture that enables and sustains obfuscation across all downstream constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

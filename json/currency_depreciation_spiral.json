@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "currency_depreciation_spiral",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "currdep"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Currency Depreciation Spiral",
+    "topic_domain": "economic/monetary/international",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "external_creditors",
+      "export_corporations",
+      "currency_speculators"
+    ],
+    "victims": [
+      "domestic_wage_earners",
+      "import_dependent_sectors",
+      "foreign_currency_debt_holders_domestic"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Domestic Wage Earner",
+      "comment": "Trapped by currency depreciation with no exit option. Real wages collapse as import prices rise. Cannot switch currencies, cannot access foreign exchange, cannot exit the national monetary zone. Experiences maximum extraction as purchasing power erodes rapidly."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Import-Dependent Manufacturer",
+      "comment": "Constrained by currency depreciation but also participates in coordination. Benefits from access to domestic markets and supply chains during depreciation, but faces rising costs for imported inputs. Partial exit through relocation is costly but possible. Experiences mixed extraction and coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Export-Oriented Manufacturer",
+      "comment": "Benefits from currency depreciation through competitiveness gains. Can arbitrage between depreciated home currency and strong foreign currency. Coordinates export supply chains. Experiences the constraint as pure coordination benefit with minimal extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International Financial Institution",
+      "comment": "Organized actors (IMF, World Bank, foreign creditors) see depreciation as both enforcement mechanism and coordination challenge. They benefit from deflation of real debt burdens in depreciating currency but must coordinate policy responses. Mobile exit through capital flight or lending freezes. Complex extraction-coordination mix."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Central Bank",
+      "comment": "Central bank policy response (raising rates, FX intervention, tightening money supply) is largely performative theater. Structural drivers of depreciation (capital flight, trade deficits, debt dynamics) override policy levers. Theater ratio high because the visible policy actions (reserve management, forward guidance) cannot stop the spiral in many contexts. Piton emerges from degraded monetary policy function."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Macroeconomic Reality)",
+      "comment": "From civilizational/universal perspective, currency depreciation spiral appears as an immutable law of macroeconomics: unsustainable debt dynamics, capital flow imbalances, and inflation differentials create mathematical inevitability. However, the structural data reveals this as false naturalization. Policy choices (debt restructuring, capital controls, import substitution) can interrupt the spiral. The mountain framing obscures contingent institutional arrangements as natural laws."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "debt_denominated_currency_asymmetry",
+      "question": "Is the spiral driven by the mathematical impossibility of servicing foreign-currency debt in a depreciating currency, or by reversible policy and market psychology?",
+      "resolution_mechanism": "Comparative analysis of debt restructuring outcomes; case studies where debt was redenominated or restructured successfully vs cases where depreciation spiraled",
+      "impact": "If mathematical impossibility: mountain constraint. If reversible through restructuring: tangled_rope or snare constraint determined by political will and power asymmetry.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether debt-currency mismatch creates mathematical inevitability"
+    },
+    {
+      "id": "capital_flight_endogeneity",
+      "question": "Does capital flight cause depreciation or does expected depreciation cause capital flight? Which direction is primary?",
+      "resolution_mechanism": "Time-series analysis of capital flow timing relative to exchange rate movements; forward guidance experiments tracking asset outflows",
+      "impact": "If depreciation-causes-flight: positive feedback loop (snare dynamics). If flight-causes-depreciation: policy intervention on capital controls can interrupt the spiral (tangled_rope/scaffold dynamics).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal direction of capital flight and currency depreciation"
+    },
+    {
+      "id": "international_creditor_enforcement_capacity",
+      "question": "Do external creditors actively enforce debt servicing through pressure, or does the constraint emerge autonomously from financial market dynamics?",
+      "resolution_mechanism": "Documentary evidence of IMF/creditor conditionality; comparison of depreciation spirals with vs without formal creditor coordination",
+      "impact": "If active enforcement: snare with institutional targeting (tangled_rope from creditor perspective). If autonomous market: snare is self-organizing extraction without visible enforcer.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether external creditors actively enforce via conditionality or constraint emerges autonomously"
+    },
+    {
+      "id": "alternative_monetary_regime_feasibility",
+      "question": "Could currency boards, dollarization, or other institutional regimes prevent depreciation spirals?",
+      "resolution_mechanism": "Analysis of countries with currency boards or fixed regimes; assessment of whether they face alternative binding constraints instead",
+      "impact": "If feasible: depreciation spiral is contingent institutional choice (tangled_rope, not mountain). If substitutes create equivalent constraints: mountain constraint takes different form.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Feasibility of alternative monetary regimes that prevent depreciation spirals"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "A currency depreciation spiral occurs when a country's exchange rate depreciates, raising import prices, which increases inflation and capital flight expectations, which drives further depreciation, creating a self-reinforcing cycle that traps domestic agents in collapsing purchasing power while benefiting external creditors and export-oriented actors. The spiral represents a structural extraction mechanism where macroeconomic dynamics enforce transfer of real wealth from wage earners and import-dependent sectors to foreign creditors and export-competitive producers. The constraint exhibits genuine coordination functions (managing trade competitiveness, allocating foreign exchange) alongside severe asymmetric extraction, making it a canonical tangled_rope. The theater ratio (0.38) reflects that central bank policy responses (raising interest rates, intervention in FX markets, forward guidance) operate at a meaningful level but cannot override fundamental macroeconomic imbalances \u2014 the performance of monetary control is high relative to actual control capacity.",
+    "key_agents": [
+      "Domestic wage earners: Primary victims (powerless/trapped) \u2014 real wages collapse as import prices rise; no exit from national currency zone",
+      "Import-dependent manufacturers: Secondary victims (moderate/constrained) \u2014 face rising input costs; relocation possible but costly",
+      "Export-oriented corporations: Primary beneficiaries (institutional/arbitrage) \u2014 gain cost competitiveness; can arbitrage between depreciating home and strong foreign currencies",
+      "Foreign-currency debt holders (domestic): Victims when debt is foreign-denominated; beneficiaries when debt can be redenominated or restructured",
+      "International creditors and financial institutions: Secondary beneficiaries (organized/mobile) \u2014 real debt burdens deflate in depreciating currency; can exit through lending freezes",
+      "Currency speculators: Tertiary beneficiaries (institutional/arbitrage) \u2014 profit from timing depreciation; amplify spiral through forward positioning",
+      "Central bank: Institutional actor (institutional/arbitrage) \u2014 manages visible policy responses; theater persists as performative response to constraints it cannot fully control"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Significant and accelerating. The spiral transfers real wealth from domestic agents to external creditors through multiple mechanisms: (1) wage erosion as import prices rise faster than nominal wages; (2) deflation of debt burdens for foreign-currency borrowers who benefit from depreciation; (3) profitability increases for exporters whose revenues are now priced in strong foreign currency. The extractiveness increases over the 6-year interval from 0.22 to 0.58 as the spiral deepens and capital flight accelerates. Suppression (0.72): High. Barriers to escape include: capital controls that may exist but are often porous; debt obligations that trap countries in spiral-intensifying policies (fiscal austerity, high interest rates); inability of wage earners to access foreign exchange; coordination failure among creditors to restructure debt. The psychological component is substantial \u2014 once depreciation expectations form, they become self-fulfilling through capital flight. Theater ratio (0.38): Moderate. Central bank policy is not purely theatrical \u2014 interest rate hikes have real effects on demand and inflation. But policy capacity is fundamentally limited by the underlying macro imbalances (current account deficits, debt dynamics, capital flight pressures). The theater has increased slightly over the interval as policy responses become more desperate and less effective.",
+    "perspectival_gap": "The wage earner sees a snare with no exit and no coordination benefit \u2014 pure extraction of purchasing power. The export manufacturer sees a rope with pure coordination benefit \u2014 exchange rate depreciation solves their competitiveness problem perfectly. The import manufacturer sees a tangled rope with mixed benefit and cost \u2014 they benefit from tariff protection and domestic market access but suffer from input cost increases. The central bank sees a piton \u2014 its policy levers (interest rates, FX intervention) have become ritualized responses that cannot arrest the spiral's structural drivers. The international creditor sees tangled rope with net benefit \u2014 coordinating with other creditors on restructuring terms while capturing currency appreciation arbitrage. The analytical observer at civilizational scope risks seeing a mountain (inevitable mathematical consequence of macro imbalance) but the structural data reveals this as false naturalization \u2014 policy choices (debt restructuring, capital controls, import substitution) can interrupt the spiral, making it a contingent institutional arrangement rather than natural law.",
+    "directionality_logic": "Directionality values (d) are determined by each agent's structural position relative to the depreciation spiral. External creditors and exporters benefit from depreciation, placing them at low d (0.05\u20130.20): their currencies and debt burdens are favorable. Domestic wage earners bear full cost with no countervailing benefit, placing them at high d (0.90\u20130.98): maximum extraction. Import manufacturers are intermediate (d \u2248 0.60), bearing some costs but gaining market protection. Central banks occupy an institutional position with arbitrage options (capital account management, FX reserves) placing them at low-to-moderate d (0.25\u20130.40). The sigmoid function f(d) converts these structural positions into experienced extractiveness values chi, which vary by agent perspective. An export manufacturer's analytical observer (institutional/arbitrage) computes low chi because d is low and their power is high. A wage earner's perspective (powerless/trapped) computes high chi because d is high and their power is low.",
+    "mandatrophy_analysis": "The mandatrophy is resolved through perspectival multiplicity: all six types are legitimate readings of the same macroeconomic data. The snare classification (from powerless wage earners) reflects their genuine structural experience. The rope classification (from beneficiary exporters) reflects their genuine experience of pure coordination benefit. The tangled rope (from moderate import manufacturers) reflects genuine mixed extraction and coordination. The piton classification (from institutional central banks) reflects genuine degradation of policy function. The mountain classification (from analytical observers) is a FALSE SUMMIT \u2014 it naturalizes contingent policy choices (debt structure, capital account openness, exchange rate regime) as inevitable mathematical laws. The constraint's extractiveness has increased from 0.22 to 0.58 over the measurement interval, and this trajectory is not predetermined: policy restructuring (debt reduction, capital controls, import substitution) can interrupt the spiral. The theater ratio's stability (0.28\u21920.38) indicates that central bank performance is not improving despite increased effort, confirming the piton diagnosis of degraded institutional function."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "foreign_debt_trap",
+      "trade_deficit_persistence",
+      "capital_flight_mechanism"
+    ],
+    "dual_formulation_note": "Currency depreciation spiral is downstream of debt denomination and current account imbalances but represents a distinct structural constraint. Upstream constraints (foreign_debt_trap, trade_deficit_persistence) create conditions that trigger the spiral; the spiral itself is the extraction mechanism by which those upstream imbalances are forced onto domestic agents. Decomposition: (1) debt_servicing_constraint \u03b5=0.35 (tangled rope \u2014 coordination of creditor relations + extraction of resources) (2) currency_depreciation_spiral \u03b5=0.58 (tangled rope \u2014 coordination of trade adjustment + extraction of purchasing power) (3) capital_flight_mechanism \u03b5=0.65 (snare \u2014 pure extraction from policy space)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

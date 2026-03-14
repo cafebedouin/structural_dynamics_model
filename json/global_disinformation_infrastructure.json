@@ -1,0 +1,232 @@
+{
+  "header": {
+    "constraint_id": "global_disinformation_infrastructure",
+    "version": "1.0",
+    "generated_date": "2026-02-27",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "disinfo"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Global Disinformation Infrastructure",
+    "topic_domain": "information_systems/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_actors_with_information_warfare_capacity",
+      "private_actors_monetizing_engagement",
+      "political_movements_using_coordinated_amplification"
+    ],
+    "victims": [
+      "public_epistemic_commons",
+      "democratic_deliberation_processes",
+      "targeted_populations",
+      "marginalized_communities"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Targeted Population",
+      "comment": "PERSPECTIVE 1: TARGETED POPULATION (SNARE) \u2014 Individuals within targeted demographics (ethnicity, geography, political affiliation, income level) face coordinated disinformation campaigns with no viable escape. They cannot opt out of the information ecosystem; they cannot collectively dismantle the infrastructure; they cannot verify competing claims without specialized media literacy and computational analysis tools. Suppression operates through epistemic overload \u2014 too many competing narratives, no institutional authority to arbitrate truth, and active poisoning of all information sources. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Epistemic Commons",
+      "comment": "PERSPECTIVE 2: EPISTEMIC COMMONS (SNARE) \u2014 The shared domain of facts, evidence, and reasoning that enables democratic deliberation has no agent to defend it and no exit option. Disinformation infrastructure extracts trust from the commons and replaces it with coordinated falsehood. At generational timescale, the damage is structural \u2014 an entire generation may grow up in epistemic fragments with no coherent shared reality. This perspective bears maximal extraction with zero agency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Fact-Checking Infrastructure",
+      "comment": "PERSPECTIVE 3: FACT-CHECKING INFRASTRUCTURE (TANGLED ROPE) \u2014 Fact-checkers, verification platforms, and epistemic intermediaries coordinate in providing truth-tracking (genuine coordination function) while simultaneously extracting legitimacy from their monopoly on verification authority. They have mobile exit options \u2014 institutional capacity to shift domains or dissolve \u2014 but remain locked in because the coordination function (providing some truth-tracking) genuinely serves targets. Moderate extraction with real coordination benefits."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Governance Coalition",
+      "comment": "PERSPECTIVE 4: PLATFORM GOVERNANCE COALITION (ROPE) \u2014 Meta, Google, Twitter content moderation teams see the constraint as a coordination problem they are solving: establishing shared standards for identifying disinformation, coordinating takedowns, enforcing label policies. They experience the constraint as pure coordination with minimal extraction costs \u2014 the labor is allocated to them, the infrastructure investment is justified by legitimacy gains. Net beneficiary position."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Democratic Resistance Movements",
+      "comment": "PERSPECTIVE 5: DEMOCRATIC RESISTANCE MOVEMENTS (TANGLED ROPE) \u2014 Civil society organizations, anti-disinformation nonprofits, media literacy initiatives coordinate collectively (genuine function: building resistance) while also being extracted from as concentrated funding and visibility flow to well-resourced organizations. They face high costs to exit (defunding, loss of infrastructure) but genuine coordination benefits from shared platforms and evidence databases. Constrained mobility with real coordination benefits and asymmetric extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Epistemic Governance Initiatives",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL EPISTEMIC GOVERNANCE INITIATIVES (SCAFFOLD) \u2014 UN information integrity initiatives, international fact-checking networks, and global media literacy standards represent a temporary coordination layer with a realistic sunset: as computational provenance systems, blockchain verification, and AI-assisted source attribution mature, the epistemic commons can be reconstructed with lower dependence on human-mediated fact-checking. Theater is moderate \u2014 some performative international consensus, but genuine investment in technical alternatives. Sunset clause is real: 15-20 year horizon for distributed verification to mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy News Ecosystem",
+      "comment": "PERSPECTIVE 7: LEGACY NEWS ECOSYSTEM (PITON) \u2014 Traditional journalism and broadcast news maintain institutional authority and gatekeeping power despite decreased functional verification capacity. The constraint (institutional credibility maintaining information order) operates through inertia and theatrical ritual (evening news, byline authority, institutional prestige) rather than through superior truth-tracking. Theater ratio is high \u2014 the legitimacy inheres in form and institutional identity, not in epistemic content. The ecosystem sees itself as degraded and struggles to justify its authority, but persists because alternatives haven't fully displaced it."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Information Asymmetry View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (SNARE from information asymmetry frame) \u2014 From a civilizational/analytical perspective, disinformation infrastructure is a natural consequence of information asymmetry: any actor with superior coordination capacity can inject false narratives into an epistemic commons where truth-tracking costs exceed verification capacity for distributed agents. This perspective risks naturalizing as immutable law what is actually a contingent feature of current communication architecture. The engine's false summit detector should flag this as illegitimate mountain classification \u2014 information systems are redesignable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "state_vs_private_actor_distinction",
+      "question": "Are state-sponsored disinformation campaigns and algorithmic amplification of false content by private platforms functionally equivalent extraction mechanisms, or structurally distinct constraints?",
+      "resolution_mechanism": "Comparative analysis of coordination requirements, beneficiary groups, and suppression mechanisms between state-directed campaigns and private-platform-enabled campaigns. Identify whether they require different interventions.",
+      "impact": "If equivalent: single snare constraint applies globally. If distinct: decompose into state_disinformation_campaigns and algorithmic_amplification_extraction with separate \u03b5 values and network links.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether state and private disinformation mechanisms are structurally equivalent"
+    },
+    {
+      "id": "computational_provenance_maturity_timeline",
+      "question": "What is the realistic timeline for distributed cryptographic source attribution and computational provenance systems to mature sufficiently to enable verification without centralized fact-checking intermediaries?",
+      "resolution_mechanism": "Technical roadmap analysis from cryptography, blockchain, and AI research communities; pilot deployment tracking for provenance systems; timeline comparison across jurisdictions.",
+      "impact": "If 5-10 years: scaffold sunset is realistic, institutional fact-checking becomes transitional. If 20+ years or infeasible: scaffold is aspirational, snare persists longer, alternative mechanisms required.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for computational provenance maturity"
+    },
+    {
+      "id": "collective_action_threshold_for_targeted_populations",
+      "question": "At what point can targeted populations organize sufficient collective capacity to coordinate alternative information sources, or does the targeting mechanism prevent coalition formation?",
+      "resolution_mechanism": "Historical analysis of disinformation-targeted group organizing; network analysis of information source diversity within targeted communities; measurement of resource access for alternative platform building.",
+      "impact": "If coalition formation is feasible: targeted populations move from trapped to constrained, classification shifts toward tangled rope. If targeting prevents coalition: trapped status persists, snare is stable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of coalition formation among targeted populations"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "To what extent is measured suppression (epistemic overload, competing narratives, verification costs) structural versus internalized in target populations as learned helplessness or epistemic nihilism?",
+      "resolution_mechanism": "Post-intervention suppression trajectory tracking: if suppression persists after information access barriers are removed, indicates internalized component. Comparative analysis across populations with different baseline epistemic self-efficacy.",
+      "impact": "If primarily structural: removing infrastructure barriers reduces suppression. If primarily internalized: requires cognitive/identity intervention as well as infrastructure change. Higher internalization means higher effective suppression than measured structural value suggests.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized suppression mechanism"
+    },
+    {
+      "id": "mandatrophy_resolution_snare_vs_tangled_rope",
+      "question": "Does the disinformation infrastructure function purely to extract (snare), or does it provide genuine coordination benefits (tangled rope) that justify some asymmetric extraction?",
+      "resolution_mechanism": "Counterfactual analysis: in a scenario without disinformation infrastructure, what coordination problems remain unsolved? Are content moderation standards, narrative coherence, and information ordering genuine public goods? Or pure extractive mechanisms?",
+      "impact": "If pure extraction (snare): constraint should be dismantled entirely. If genuine coordination exists (tangled rope): constraint requires reform to reduce extraction while preserving coordination. Determines policy intervention type.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether disinformation infrastructure provides coordination benefits or pure extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.74
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.61
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The global disinformation infrastructure represents a coordinated extraction system where state actors, private technology platforms, and political movements deploy false narratives to capture attention, engineer belief systems, and degrade the shared epistemic commons. The constraint extracts legitimacy, cognitive resources, and political agency from targeted populations while providing coordination benefits to platform operators and intelligence services. The infrastructure operates through three interlocking mechanisms: (1) algorithmic amplification that prioritizes engagement over accuracy, (2) state-sponsored narrative campaigns targeting specific demographic vulnerabilities, and (3) coordinated inauthentic behavior (bot networks, astroturf movements, synthetic identity networks). The extractiveness has increased over the decade as computational sophistication, targeting precision, and platform integration have deepened. Theater has remained moderate \u2014 the infrastructure operates largely invisibly to target populations, with minimal performative legitimation. The constraint exhibits all eight indexed perspectives, revealing fundamental tensions between platform governance (who sees coordination), targeted populations (who see extraction), and epistemic intermediaries (who see mixed benefit and cost).",
+    "key_agents": [
+      "Targeted Populations: Primary victims (powerless/trapped) \u2014 demographic groups selected for coordinated false narratives (ethnic minorities, political opposition, low-media-literacy regions, elderly users); bear extraction costs without viable exit",
+      "Epistemic Commons: Primary victim (powerless/trapped) \u2014 abstract collective good of shared factual reality; degraded by false narratives, poisoned sources, and lost trust",
+      "State Actors with Information Warfare Capacity: Primary beneficiary (powerful/mobile) \u2014 Russia, China, Iran, other state intelligence services that weaponize disinformation for political interference and cognitive dominance; capture geopolitical advantage during verification windows",
+      "Private Technology Platforms: Secondary beneficiary (institutional/arbitrage) \u2014 Meta, Google, Twitter, TikTok extract advertising value and user engagement from amplified disinformation; coordinate content moderation as governance function",
+      "Political Movements and Partisan Organizations: Secondary beneficiary (organized/arbitrage) \u2014 domestic political actors using disinformation to mobilize supporters and degrade opponent credibility; capture electoral advantage through coordinated amplification",
+      "Fact-Checking Infrastructure: Secondary actor (powerful/mobile) \u2014 Truth-checking services, verification platforms, epistemic intermediaries that coordinate truth-tracking while extracting authority from monopoly over verification",
+      "Democratic Resistance Movements: Tertiary actor (organized/constrained) \u2014 Civil society, media literacy nonprofits, anti-disinformation coalitions coordinating resistance while constrained by resource inequality and platform dependence",
+      "Legacy News Ecosystem: Institutional actor (institutional/arbitrage) \u2014 Traditional journalism maintaining vestigial gatekeeping authority through institutional prestige (piton perspective); sees itself as degraded but persists through inertia"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. State actors and platforms capture significant value from disinformation infrastructure \u2014 geopolitical advantage, engagement metrics, user data, political power. The trajectory shows accelerating extraction as computational targeting and algorithmic amplification have matured (0.35 \u2192 0.74 over interval). The 0.68 current value reflects that extraction is severe but not total \u2014 some verification capacity exists (fact-checking, cross-platform comparison, international oversight), preventing total information collapse. Suppression (0.72): High. Epistemic overload (competing false narratives), institutional degradation (trust collapse in media, fact-checkers, science institutions), asymmetric information access, and platform lock-in create substantial barriers to collective action or individual exit. Targeted populations face coordinated suppression that activates multiple mechanisms simultaneously: information scarcity (alternative sources blocked), information excess (false narratives amplified), cognitive capture (identity-congruent falsehoods), and resource asymmetry (verification costs exceed individual capacity). Theater ratio (0.58): Moderate. The infrastructure operates with low performative content \u2014 it functions invisibly, with minimal need for theatrical legitimation. Victims do not perceive the mechanism as institutional ritual; they experience it as 'just how information is.' Beneficiaries (platforms, states) do perform governance theater (content moderation updates, fact-check partnerships) but the core extraction mechanism requires minimal theatrical maintenance.",
+    "perspectival_gap": "State actors experience the constraint as rope (pure coordination of information dominance). Platforms experience it as rope (governance and engagement coordination). Targeted populations experience it as snare (extraction with zero alternatives). Fact-checkers experience it as tangled rope (coordinate truth-seeking while monopolizing verification authority). Resistance movements experience it as scaffold (temporary constraint being solved by media literacy). Legacy news experiences it as piton (degraded ritual persisting through inertia). The analytical observer at global scale risks false mountain (naturalizing as inevitable). This is a diagnostic exemplar of how power position determines classification: those who benefit see coordination, those who bear costs see extraction, and the same structural feature (algorithmic amplification of engaging content) appears as either or both depending on position.",
+    "directionality_logic": "State actors with information warfare capacity (d \u2248 0.05): Beneficiaries with arbitrage options. They can deploy disinformation or shift to other influence mechanisms. f(d) \u2248 -0.12. Platforms (d \u2248 0.08): Beneficiaries with arbitrage options for content moderation strategy. f(d) \u2248 -0.01. Targeted populations (d \u2248 0.92): Victims with trapped exit options. They cannot exit the epistemic ecosystem or verify competing claims. f(d) \u2248 1.38. Fact-checkers (d \u2248 0.45): Mixed \u2014 they coordinate verification (beneficiary function) while monopolizing authority (extraction function). f(d) \u2248 0.58. Resistance movements (d \u2248 0.60): Victims with constrained exit options. They fight the infrastructure but face resource asymmetry. f(d) \u2248 0.85. The chi formula scales extractiveness by these f(d) values plus scope: at global scope \u03c3(S) = 1.2, state actor extraction chi becomes negative (they receive subsidies), platform chi becomes slightly negative, victim chi approaches maximum (1.38 \u00d7 0.68 \u00d7 1.2 \u2248 1.13). The scope modifier reveals why global disinformation is a higher-order snare than local false information: scale amplifies both the coordinator's capacity and the target's helplessness.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: This constraint resolves the mandatrophy by identifying the snare classification as primary and the tangled_rope and scaffold classifications as either reform-oriented perspectives or structural illusions. The snare is the analytical ground truth: disinformation infrastructure functions primarily to extract (political advantage, engagement value, epistemic power) from targeted populations with minimal coordination benefit that could not be achieved through transparent mechanisms. The tangled rope perspective (fact-checkers coordinating truth-seeking) conflates necessary defensive response with inherent constraint function \u2014 fact-checking does not prove the infrastructure provides genuine coordination; it proves the infrastructure requires active counter-extraction to maintain the epistemic commons. The scaffold perspective (media literacy and computational provenance as sunset mechanisms) is structural and real \u2014 epistemic reconstruction via distributed verification systems is technically feasible \u2014 but it does not change the current classification: the constraint is presently a snare, with a realistic if distant exit path. The piton perspective (legacy news as degraded ritual) correctly identifies institutional inertia but misclassifies it as a separate phenomenon: the news degradation is caused by the snare, not independent of it. The analytical false mountain (information asymmetry as natural law) is illegitimate: information systems are redesignable. The mandatrophy resolves to: (1) snare is primary, (2) reform via fact-checking and media literacy provides partial suppression reduction without eliminating extraction, (3) structural exit exists via computational provenance and distributed epistemic reconstruction at 15-20 year horizon, (4) current policy should prioritize (a) transparency requirements in algorithmic amplification, (b) state accountability for information warfare, (c) investment in decentralized verification infrastructure, (d) media literacy in targeted populations, and (5) false mountains that naturalize current architecture should be explicitly rejected in policy discourse."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_amplification_engagement_optimization",
+      "state_information_warfare_capability_development",
+      "platform_advertising_revenue_concentration",
+      "democratic_deliberation_infrastructure_degradation"
+    ],
+    "dual_formulation_note": "Global disinformation infrastructure decomposes into multiple structurally distinct constraints: (1) algorithmic amplification (\u03b5 \u2248 0.55, tangled rope \u2014 genuine engagement coordination with asymmetric extraction), (2) state information warfare (\u03b5 \u2248 0.72, snare \u2014 pure extraction), (3) platform monopoly on verification (\u03b5 \u2248 0.48, tangled rope \u2014 coordination + authority extraction), and (4) epistemic commons degradation (\u03b5 \u2248 0.80, snare \u2014 pure extraction from abstract collective). This story treats the integrated system; downstream stories address component mechanisms separately."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

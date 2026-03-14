@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "roman_imperial_succession_instability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ris"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Roman Imperial Succession Instability",
+    "topic_domain": "political_history/institutional_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [],
+    "victims": [
+      "military_hierarchy",
+      "senate_institutional_continuity",
+      "provincial_governance",
+      "civilian_population",
+      "imperial_treasury"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "label": "The Provincial Population",
+      "comment": "PERSPECTIVE 1: PROVINCIAL POPULATION (SNARE) \u2014 Powerless, trapped populations in provinces face extractive succession instability with no exit: conscription into rival legions, tax surges during civil wars, loss of property in territorial disputes between claimants. High suppression with no alternatives. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Military Hierarchy",
+      "comment": "PERSPECTIVE 2: MILITARY HIERARCHY (SNARE) \u2014 Officers and legionaries face forced choices: commit to a succession claimant (risking execution if their choice loses) or refuse (risking mutiny charges). High extraction with constrained exit: relocation within empire is possible but abandoning military career carries massive status loss."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The Provincial Elite and Governors",
+      "comment": "PERSPECTIVE 3: PROVINCIAL ELITE (SNARE WITH MOBILITY) \u2014 Provincial governors and elites have some mobility and power but still experience severe extraction: their capital and provincial bases are threatened by different claimants, requiring allegiance pledges that constrain future autonomy. Powerful but not sovereign; extraction remains high despite some exit options through alliance-switching."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Senate and Republican Traditionalists",
+      "comment": "PERSPECTIVE 4: SENATE (TANGLED ROPE) \u2014 The Senate experiences succession instability as both coordination mechanism and extraction: succession ceremonies and legitimation through Senate acclamation coordinate leadership transitions, yet the Senate itself is increasingly extracted from as emperors bypass it, reducing its institutional power over time. Organized resistance but constrained by institutional precedent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Imperial Court and Dynastic Apparatus",
+      "comment": "PERSPECTIVE 5: IMPERIAL COURT (TANGLED ROPE) \u2014 The imperial court benefits from succession instability: court factions gain leverage during transitions, and succession crises elevate courtier influence. Active enforcement of loyalty mechanisms and adoption of heirs coordinates succession, but also enables extraction of concessions from other power centers. Net beneficiary with arbitrage options."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Imperial Legitimation Ritual",
+      "comment": "PERSPECTIVE 6: IMPERIAL LEGITIMATION RITUAL (PITON) \u2014 The theater of imperial succession (purple birth, Senate acclamation, military acclamation, deification of predecessors) persists through institutional inertia but increasingly fails to prevent succession crises. By the 3rd century, the ritual is substantially performative \u2014 acclamation ceremonies happen, yet civil wars follow regardless. Theater ratio high because the legitimation apparatus is maintained ceremonially while functionally degraded."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Structural Inevitability View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / STRUCTURAL INEVITABILITY (MOUNTAIN) \u2014 From a civilizational perspective, succession instability in a non-hereditary elective system with no constitutional mechanism appears as a natural law of political structure: without fixed heredity or clear electoral procedure, power concentration creates incentive structures that make succession crises inevitable. However, this naturalizes what is actually a contingent institutional choice \u2014 the constraints were different under the Julio-Claudian and Antonine dynasties."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "heredity_versus_merit_tradeoff",
+      "question": "Was the instability inherent to meritocratic succession selection, or was it a failure of institutional mechanism for legitimating chosen heirs?",
+      "resolution_mechanism": "Comparative analysis of succession outcomes under explicit heredity (Julio-Claudian, Constantinian dynasties) vs explicit adoption (Antonine dynasty) vs chaotic selection (3rd century crisis); measurement of civil war frequency and duration under each regime",
+      "impact": "If inherent: succession instability is a structural limit of non-hereditary systems (mountain classification justified). If institutional failure: the constraint is a tangled_rope or snare reflecting poor legitimation design (false summit detection).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether succession instability was inherent to meritocratic selection or institutional design failure"
+    },
+    {
+      "id": "legitimation_versus_power_concentration",
+      "question": "Did succession crises drive power concentration (military strongmen replacing Senate authority), or did prior power concentration make succession crises inevitable?",
+      "resolution_mechanism": "Chronological correlation between institutional changes (Senate authority reduction, military autonomy increase, provincial fiscal independence) and succession crisis frequency; causal analysis of which preceded which",
+      "impact": "If concentration caused instability: snare classification is correct \u2014 the mechanism extracts from all but those holding concentrated power. If instability caused concentration: the constraint evolved over time from tangled_rope to snare, and measurement trajectory shows this transition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal direction between power concentration and succession instability"
+    },
+    {
+      "id": "military_versus_civilian_extraction_mechanism",
+      "question": "Was the primary extraction mechanism the military's ability to impose claimants (extraction from civilians and Senate), or the instability itself (civil war destruction affecting all)?",
+      "resolution_mechanism": "Analysis of extraction flows: military conscription rates during succession crises vs stability; tax increases on provinces; destruction of civilian property; institutional authority changes affecting different classes",
+      "impact": "If military extraction: snare with organized agents as primary extractors (military factions). If instability-based harm: more generalized snare affecting all powerless agents equally.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether military organization or general instability was primary extraction mechanism"
+    },
+    {
+      "id": "third_century_structural_break",
+      "question": "Does the 3rd century crisis represent a continuation of earlier succession instability or a categorical structural change requiring separate constraint story?",
+      "resolution_mechanism": "Comparative metrics: succession interval variance, civil war frequency, provincial autonomy increase, institutional authority distribution before and after 235 CE; analysis of whether 3rd century mechanisms are continuous with earlier dynamics",
+      "impact": "If continuous: single constraint story valid across period. If categorical break: separate stories for early/mid empire (tangled_rope/snare hybrid) and 3rd century crisis (pure snare) with network links.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether 3rd century crisis is structural continuity or categorical change"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 300
+  },
+  "commentary": {
+    "narrative_context": "The Roman Imperial succession system, absent fixed constitutional mechanisms for determining the next emperor, created structural instability that deepened over centuries from the Julio-Claudian period through the 3rd century crisis. No formal electoral procedure existed; emperors could adopt heirs, the military could acclaim claimants, the Senate could legitimize choices, or war could settle succession disputes. This absence of clear mechanism created extractive dynamics: claimants competed for military loyalty through promises of donative payments (extracted from the treasury and provinces); provincial governors faced extraction through threats to their power bases; civilians were conscripted or taxed to support rival campaigns; and institutional authorities (Senate, provincial structures) lost autonomy as emperors consolidated power. The constraint exhibits a Snare classification: high extraction (0.68), high suppression (0.75 \u2014 subjects have no peaceful exit from the succession system), and multiple victim groups with no coordination benefit. The theater ratio (0.65) reflects that imperial legitimation rituals (acclamation ceremonies, purple birth, Senate recognition) persist ceremonially but fail functionally to prevent succession crises, especially visible in the 3rd century when multiple emperors were declared and deposed in rapid succession. By the 3rd century crisis, the legitimation apparatus had become substantially performative \u2014 the ritual forms remained while institutional control fragmented.",
+    "key_agents": [
+      "Provincial Populations: Primary victims (powerless/trapped) \u2014 conscripted into armies, taxed heavily, lose property in territorial disputes between claimants",
+      "Military Hierarchy: Organized victims (moderate/constrained) \u2014 forced to choose loyalty to claimants; execution risk if choice loses; career dependency traps them",
+      "Provincial Elite and Governors: Powerful but vulnerable (powerful/mobile) \u2014 threatened by different claimants; must pledge allegiance that constrains autonomy; can switch allegiances but at political cost",
+      "Senate and Republican Institutions: Organized actors (organized/constrained) \u2014 provide ceremonial legitimation but lose real authority over time; constrained by precedent and military pressure",
+      "Imperial Court and Court Factions: Primary beneficiaries (institutional/arbitrage) \u2014 succession crises elevate courtier influence; factions gain leverage during transitions; can arbitrage between claimants",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks seeing succession instability as inherent structural law rather than contingent institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and rising. Early period shows lower extractiveness (0.35) because Julio-Claudian and early imperial succession operated under relatively stable dynasties with clearer expectations. Extractiveness increases to 0.52 by the Antonine period as adoption-based succession creates ambiguity and civil wars become more frequent. By 235 CE (time_point 100), extractiveness reaches 0.68 as the 3rd century crisis produces rapid succession changes, constant military claims, provincial fragmentation, and maximum economic extraction through conscription and taxation. The trajectory shows accumulating institutional degradation and extraction intensification over 300 years. Suppression (0.75): Very high and stable. Imperial subjects have no legitimate exit from the succession system \u2014 they cannot opt out of military service demands, cannot refuse tax obligations, cannot protect their property from claimants' armies, and cannot change the emperor through peaceful political participation. The only exits are escape to barbarian territories (rarely feasible), private withdrawal (rare and punished), or violent resistance (suicidal). Suppression remains near-constant because the structural barriers (military monopoly on force, centralized fiscal extraction, territorial control) persist across the period. Theater ratio (0.65): Moderate-high and rising. The imperial legitimation apparatus (acclamation ceremonies, Senate recognition, purple birth, deification of predecessors) persists throughout the period as theater. In the early period, this theater has some coordination function \u2014 it helps legitimize succession choices and provides ceremony that binds the empire together. By the 3rd century, the theater is substantially disconnected from function: acclamation ceremonies are performed while civil wars rage; Senate recognition is ceremonial while military strongmen impose claimants; the ritual forms are maintained but their power to prevent succession crises has collapsed. Theater rises from 0.45 to 0.65 as institutional forms ossify while institutional function degrades.",
+    "perspectival_gap": "The perspectival gap between the court (rope/tangled_rope experience) and the province (snare experience) reveals the constraint's core asymmetry. The court genuinely benefits from succession competition \u2014 it coordinates elite politics through succession mechanism. But this coordination is built on top of extraction from populations without political voice. The constraint is not pure coordination (rope) because it produces measurable harm (conscription, taxation, property loss); it is not pure extraction (mountain) because it genuinely coordinates something (elite succession). It is a snare disguised as coordination when viewed from the institutional perspective. The piton perspective (legitimation ritual) shows institutional degradation \u2014 the theater persists while function fails. The mountain perspective (structural inevitability) naturalizes what is actually a choice: the Julio-Claudian dynasty and Antonine dynasty operated with much lower instability through different institutional arrangements (heredity, explicit adoption). The naturalizing move is a false summit.",
+    "directionality_logic": "Directionality flows from the beneficiary-victim structure. The imperial court and closely-related institutional actors are beneficiaries of succession instability \u2014 succession crises elevate their political leverage, create opportunities for faction advancement, and enable extraction of concessions from other power centers. Their directionality (d) is low because they benefit from and actively participate in the extraction flow. All other positions are victims: military hierarchy, provincial populations, provincial elite, Senate, and the imperial treasury all bear costs without equivalent benefits. Their directionality (d) is high, indicating they experience the constraint as extractive. The magnitude of effective extraction (\u03c7) is particularly high for powerless and trapped agents (provincial population) whose f(d) modifier is high due to their complete lack of exit options. For constrained or mobile agents (military, provincial elite), f(d) is somewhat lower, but still substantial, because the constraint's suppression mechanisms are strong despite some exit capacity.",
+    "mandatrophy_analysis": "RESOLUTION: The mandatrophy is resolved by recognizing the snare classification across victim perspectives while acknowledging partial coordination at the institutional elite level. The constraint is not 'coordination masquerading as extraction' but rather 'coordination that requires extraction as its implementation mechanism.' The imperial court needs succession crises to maintain leverage; military strongmen need ambiguity to justify their political role; provincial populations must bear costs to enable elite succession competition. This is not a false positive (a snare wrongly labeled as rope) but a genuine snare where coordination benefits accrue asymmetrically to institutional elites while extraction costs are distributed across powerless agents. The measurement trajectory (extractiveness rising from 0.35 to 0.68, theater rising from 0.45 to 0.65) confirms degradation: early imperial period showed lower extractiveness because institutional arrangements (dynastic precedent, clearer succession expectations) created some stability that benefited everyone. As those arrangements degraded, extraction intensified. By the 3rd century, the constraint had become a pure snare with minimal coordination benefit. Mandatrophy is resolved: the constraint is correctly classified as snare because extraction dominates coordination across the full time horizon, and the beneficiary group (imperial court factions) is institutional/arbitrage (not powerless), making their experience of coordination a secondary effect rather than the primary coordination function."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "roman_military_loyalty_extraction",
+      "provincial_fiscal_pressure",
+      "senate_institutional_authority_loss"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "institutional_compliance_theater",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "compli"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.78,
+    "claimed_type": "piton",
+    "human_readable": "Institutional Compliance Theater",
+    "topic_domain": "organizational/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "compliance_industry",
+      "institutional_leadership"
+    ],
+    "victims": [
+      "operational_efficiency",
+      "actual_risk_management"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "piton",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Compliance Officer",
+      "comment": "PERSPECTIVE 1: COMPLIANCE OFFICER (PITON) \u2014 Trapped within the constraint by employment dependence and regulatory mandate. Sees the compliance system as largely performative: box-checking rituals, documentation theater, and procedural compliance that may not meaningfully reduce actual risk. Cannot exit without career damage. The constraint persists through institutional inertia and the need to defend against audit failure, not because it effectively manages risk. Experiences extraction through mandatory participation in a degraded system."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Operational Unit",
+      "comment": "PERSPECTIVE 2: OPERATIONAL UNIT (SNARE) \u2014 Constrained by compliance requirements that divert resources from core mission. Faces high suppression: regulatory mandates, audit expectations, and penalty risk limit practical alternatives. Compliance theater creates asymmetric burden \u2014 operational units bear compliance costs while leadership benefits from defensibility. Theater ratio masks low actual risk reduction behind extensive documentation and procedural investment."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Regulatory Agency",
+      "comment": "PERSPECTIVE 3: REGULATORY AGENCY (ROPE) \u2014 Coordinates institutional behavior through compliance frameworks. From the agency's perspective, the constraint functions as pure coordination: standardizing compliance procedures enables oversight and reduces information asymmetry. The agency experiences the framework as working (organizations comply, audit trails exist) and does not perceive extraction because enforcement cost is built into the institutional structure. Arbitrage exit enables the agency to pivot compliance focus as risk landscapes change."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Compliance Industry",
+      "comment": "PERSPECTIVE 4: COMPLIANCE INDUSTRY (TANGLED ROPE) \u2014 Consulting firms, software vendors, training providers. Genuine coordination function: provides expertise on complex regulatory requirements, standardizes practice across organizations. Asymmetric extraction: compliance industry captures revenue stream that grows with regulatory complexity regardless of actual risk reduction. Requires active enforcement: compliance mandates create demand; tightening regulations increase consulting revenue. Mixed function and extraction in one institutional actor."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Risk-Based Compliance Reform Movement",
+      "comment": "PERSPECTIVE 5: RISK-BASED COMPLIANCE REFORM (SCAFFOLD) \u2014 Organized advocates (auditors, academics, some regulators) see institutional compliance theater as a temporary coordination failure being solved by risk-based approaches: focusing compliance investment on high-risk areas rather than uniform procedural compliance. This perspective has mobility and agency \u2014 can point to examples of successful risk-based frameworks. Has sunset logic: as risk-based methods mature and regulatory appetite for them grows, the theater-driven compliance regime becomes optional. Estimated sunset: 10-15 years for risk-based frameworks to displace procedure-driven compliance in most sectors."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (FALSE MOUNTAIN) \u2014 From a civilizational perspective, one might argue that institutional compliance theater is an immutable natural law: all large organizations require formal risk governance; the gap between formal procedure and actual risk reduction is inherent to bureaucracy; coordination cost always exceeds the apparent extraction. This perspective risks naturalizing what is actually a contingent institutional arrangement. The false summit emerges because the observer conflates 'institutional complexity is real' (true) with 'current compliance theater is inevitable' (false). The engine's false summit detector will identify this as misclassification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "theater_vs_real_compliance_distinction",
+      "question": "What fraction of institutional compliance activity represents actual risk reduction versus performative compliance theater?",
+      "resolution_mechanism": "Comparative analysis: institutions with high compliance theater vs. low theater; correlation between compliance investment and actual incident reduction; audit outcomes vs. real-world risk materialization rates",
+      "impact": "If actual risk reduction < 20%: extraction component is significantly higher, piton classification becomes snare. If actual risk reduction > 50%: coordination function is genuine, classification shifts toward tangled_rope or rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ratio of actual risk reduction to performative compliance activity"
+    },
+    {
+      "id": "regulatory_capture_in_compliance_framework",
+      "question": "Is the compliance industry captured by the regulatory agencies that create compliance mandates, or do independent interests shape framework evolution?",
+      "resolution_mechanism": "Analysis of regulatory rulemaking: whose input shapes compliance requirements; correlation between industry lobbying and regulatory complexity; exit options for non-captured regulatory agencies",
+      "impact": "If captured: compliance industry perspective shifts from tangled_rope to snare (pure extraction). If independent: tangled_rope classification holds. Regulatory agency perspective may shift from rope to constrained institutional if agency autonomy is compromised.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of compliance industry capture in regulatory framework evolution"
+    },
+    {
+      "id": "risk_based_compliance_scalability",
+      "question": "Can risk-based compliance frameworks scale to complex multi-sector organizations, or does complexity force reversion to procedural theater?",
+      "resolution_mechanism": "Implementation outcomes: organizations that adopted risk-based frameworks; measurement of compliance effectiveness under risk-based vs. procedure-based regimes; failure rate analysis during framework transitions",
+      "impact": "If scalable: scaffold perspective is structural (sunset is real), theater_ratio expected to decline. If not scalable: risk-based approaches remain aspirational, scaffold is theater itself, and institutional_compliance_theater persists indefinitely at piton or snare classification.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether risk-based compliance frameworks can scale across complex institutional landscapes"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is suppression of alternative compliance approaches structural (regulatory prohibition) or internalized (organizations believe procedural compliance is necessary)?",
+      "resolution_mechanism": "Comparative institutional analysis: organizations operating under weak/no compliance mandates vs. strong mandates; measurement of voluntary procedural compliance; exit behavior when regulatory pressure relaxes",
+      "impact": "If structural: suppression = 0.65 is accurate (external barriers are the binding constraint). If internalized: effective suppression is higher (organizations carry compliance theater internalization even when external mandate weakens), and identity_locked exit options may be present in compliance officer perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of alternative compliance approaches is structural or internalized"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Institutional compliance theater describes the pervasive phenomenon where organizations invest in elaborate compliance procedures, documentation systems, and audit processes that provide defensibility and institutional legitimacy but contribute minimally to actual risk reduction. The constraint exhibits piton characteristics: the primary function (demonstrating compliance to regulators) has largely decoupled from the original purpose (reducing actual risk), yet the constraint persists through institutional inertia, fear of audit failure, and the regulatory obligation to maintain compliance infrastructure. The theater ratio (0.78) reflects that the majority of compliance activity \u2014 training sessions, policy documentation, audit trails, attestations, committee meetings \u2014 serves performative purposes: creating evidence of compliance effort rather than identifying and mitigating actual risks. The constraint simultaneously extracts resources from operational units (suppression = 0.65: organizational mandate, regulatory penalty risk, audit expectations) while enriching the compliance industry through consulting fees, software licensing, and training contracts. This creates a mixed extraction-coordination structure: genuine coordination problem (how to standardize and communicate risk governance across complex organizations) layered with asymmetric extraction (compliance costs borne by operational units, compliance benefits captured by leadership and compliance industry).",
+    "key_agents": [
+      "Compliance Officer: Primary victim (powerless/trapped) \u2014 mandatory participant in degraded system; cannot exit without career damage",
+      "Operational Unit: Secondary victim (moderate/constrained) \u2014 bears resource costs of compliance theater; constrained by regulatory mandate and audit expectations",
+      "Regulatory Agency: Beneficiary (institutional/arbitrage) \u2014 experiences compliance framework as coordination mechanism; can pivot focus as risks change",
+      "Compliance Industry: Beneficiary (institutional/constrained) \u2014 captures revenue stream from compliance mandates; trapped by organizational dependence on continued regulatory complexity",
+      "Risk-Based Reform Advocates: Organized actors (organized/mobile) \u2014 building alternative pathways; see sunset opportunity in risk-based compliance frameworks",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangement as immutable bureaucratic necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The compliance system extracts substantial resources from operational units (personnel time, system costs, process friction) that do not proportionally reduce actual risk. However, extraction is not total (0.72+) because: (a) some compliance procedures do address real risks, (b) organizations have some agency in how they implement compliance (they can focus on high-risk areas even within procedural frameworks), and (c) regulatory agencies are not wholly captured by the compliance industry. The trajectory from 0.48 to 0.62 over 15 years reflects that compliance theater is increasing: regulatory complexity grows faster than organizations can integrate it meaningfully; compliance procedures accumulate without removing obsolete procedures; the compliance industry grows, increasing pressure for more complex frameworks. Suppression (0.65): Moderate-high. Organizations face significant barriers to exiting compliance theater: regulatory mandate creates legal obligation; audit failure carries financial and reputational penalty; competitors engage in equal-or-greater compliance investment (competitive suppression through expectation matching). However, suppression is not total (0.85+) because: (a) organizations retain discretion in implementation approaches, (b) some regulatory agencies accept risk-based alternatives, (c) external pressure for compliance framework reform is building. Theater ratio (0.78): Very high. The majority of compliance work is documenting compliance rather than managing risk. Audit trails, policy libraries, training records, and committee attestations demonstrate compliance effort but do not directly reduce risk. The theater has increased over the interval as organizations have invested in compliance technology and processes that create sophisticated appearance of control while actual risk reduction per unit of compliance investment has declined. This is classic piton degradation: the original coordination function (establishing risk governance norms) has decoupled from the mechanism maintaining it (ever-more-elaborate theater).",
+    "directionality_logic": "Directionality (d) values are derived from each agent's structural relationship to the constraint. Compliance officers and operational units are victims with limited exit: trapped/constrained exit produces high d values, yielding high experienced extraction (\u03c7). They bear compliance costs with minimal direct benefit. The regulatory agency benefits from the coordination function (standardized risk governance frameworks enable oversight) and has arbitrage exit (can shift compliance focus): low d yields low or negative \u03c7. The compliance industry benefits from growing regulatory complexity: positive d but with institutional power and constrained (not mobile) exit, producing moderate extraction experience. The reform coalition has mobile exit and organized power, so they can choose to build alternatives: their d is driven by power (organized) and exit options (mobile), producing low experienced extraction despite high nominal extractiveness. The piton classification emerges from high theater_ratio, not from high \u03c7: the engine's piton gate fires when theater_ratio \u2265 0.70 regardless of experienced extraction. This correctly identifies that the constraint's binding mechanism is institutional inertia (the procedure persists because it exists and feels necessary) rather than active extraction pressure.",
+    "perspectival_gap": "The compliance officer sees piton degradation: the system asks for meaningful risk assessment but then requires box-checked procedures regardless of risk level. The operational unit sees snare: trapped by mandate, burdened with disproportionate cost, offered no exit. The regulatory agency sees rope: coordination is working, organizations are reporting risks, oversight is enabled. The compliance industry sees tangled_rope: genuine value provided (expertise, standards, tools) but with asymmetric extraction (revenue grows independent of risk reduction effectiveness). The reform coalition sees scaffold: temporary problem being solved by risk-based methods; sunset is visible if adoption accelerates. The civilizational observer risks mountain: bureaucratic necessity, inherent to all large organizations, natural law of institutional life. The perspectival gap reveals that the analytical mountain is a false summit \u2014 the constraint is contingent, not inevitable.",
+    "mandatrophy_analysis": "RESOLUTION: This constraint exhibits mandatrophy in the gap between the compliance industry's genuine coordination function (standardizing risk governance practice) and its asymmetric extraction (revenue that grows with regulatory complexity independent of risk reduction). The tangled_rope classification for the compliance industry resolves the apparent contradiction by acknowledging both functions simultaneously. The compliance officer's piton perspective reveals that the original coordination function (establishing risk governance) has degraded into theater, yet the institutional obligation persists. The constraint does not falsely label coordination as extraction or vice versa \u2014 it clarifies that institutional compliance systems can simultaneously coordinate (from the regulatory agency's perspective), extract (from the operational unit's perspective), and degrade (from the compliance officer's perspective). The reform coalition's scaffold perspective provides the temporal resolution: risk-based compliance frameworks represent a genuine alternative pathway that could reduce theater_ratio and lower suppression. The mandatrophy is fully resolved by the perspectival array: all six readings are structurally valid; none is 'the' correct classification. The constraint is a presheaf over the observation site."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture_dynamics",
+      "organizational_process_complexity_accumulation"
+    ],
+    "dual_formulation_note": "Institutional compliance theater is distinct from the underlying regulatory mandate it implements. The regulatory framework itself is a separate constraint (regulatory_capture_dynamics) with different \u03b5; compliance theater emerges as a secondary constraint when organizations respond to regulatory obligation by layering procedural infrastructure. The two constraints are linked: escalating regulatory complexity drives increased theater ratio in institutional compliance response."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.28
+    }
+  ]
+}

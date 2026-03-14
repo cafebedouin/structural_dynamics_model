@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "provincial_tax_collection",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "prov_tax"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Provincial Tax Collection System",
+    "topic_domain": "fiscal_governance/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "provincial_government",
+      "bureaucratic_apparatus"
+    ],
+    "victims": [
+      "taxpaying_population",
+      "marginal_economic_agents"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Wage Earner",
+      "comment": "PERSPECTIVE 1: WAGE EARNER (SNARE) \u2014 Trapped in geographic jurisdiction with mandatory tax withholding at source. Cannot exit taxation without exiting employment or jurisdiction. Suppression high: withholding removes agency; legal penalties prevent evasion; financial dependence prevents relocation. No coordination benefit perceived \u2014 taxation appears as pure extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Small Business Owner",
+      "comment": "PERSPECTIVE 2: SMALL BUSINESS OWNER (TANGLED ROPE) \u2014 Constrained by jurisdiction-specific licensing, customer base, and relocation costs. Experiences genuine coordination: tax-funded infrastructure (roads, courts, utilities) enables commerce. Also experiences asymmetric extraction: compliance burden disproportionate to business size; audit risk; quarterly filing requirements. Both benefits and costs are real."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Provincial Government",
+      "comment": "PERSPECTIVE 3: PROVINCIAL GOVERNMENT (ROPE) \u2014 Experiences tax collection as coordination mechanism. Funding public goods (education, healthcare, infrastructure) is the solving of a collective action problem. Can arbitrage: fiscal federalism allows inter-provincial tax rate variation. Net beneficiary position: extraction flows toward government through legitimate institutional authority."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Mobile Capital Sector",
+      "comment": "PERSPECTIVE 4: MOBILE CAPITAL SECTOR (TANGLED ROPE) \u2014 Organized corporate actors with exit capacity (can relocate, arbitrage between jurisdictions). Benefit from public infrastructure and rule of law. Also extract value: can demand tax breaks, subsidies, preferential treatment. Both coordination and extraction present. Mobile exit options reduce suppression but increase agency-based extraction mechanisms."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Tax Administration Bureaucracy",
+      "comment": "PERSPECTIVE 5: TAX ADMINISTRATION BUREAUCRACY (PITON) \u2014 Maintains elaborate compliance theater (forms, filings, audits, notices) that persists through institutional inertia. Much of the apparatus is performative rather than functionally necessary: digital systems could replace paper processes; pre-filled returns could replace manual filing. Theater ratio high because the bureaucracy itself perpetuates complexity as justification for its existence. Degraded function maintained by inertia, not necessity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Wealth Holder",
+      "comment": "PERSPECTIVE 6: WEALTH HOLDER (TANGLED ROPE) \u2014 Powerful agents with truly mobile exit (can relocate, hold assets offshore, arbitrage jurisdictions). Benefit from property-rights protection and rule of law that provincial government provides. Also possess extraction capacity: can demand special treatment, exploit tax planning strategies, transfer liability to wage earners through corporate structures. Both genuine coordination function and asymmetric extraction coexist."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational scope, taxation is inherent to any state: collective governance requires revenue sources; taxation is the irreducible mechanism. State formation and taxation are coextensive. However, this perspective naturalizes what is a contingent institutional choice \u2014 the form, rate, and mechanism of taxation are highly variable and contestable. The engine will identify this as a false summit: the natural law framing conceals political economy."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "public_goods_coordination_magnitude",
+      "question": "What proportion of collected tax revenue actually funds genuine public goods coordination versus extraction, rent-seeking, and administrative overhead?",
+      "resolution_mechanism": "Comparative public finance analysis: decompose provincial budgets into genuine coordination functions (core infrastructure, courts, defense), redistributive functions (healthcare, education), and rent-seeking (subsidies, preferential contracts, bureaucratic expansion)",
+      "impact": "If coordination > 60%: classification shifts toward Rope for more perspectives, suppression decreases. If coordination < 40%: classification shifts toward Snare/pure extraction, suppression increases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of revenue genuinely coordinating public goods"
+    },
+    {
+      "id": "suppression_structural_vs_perceived",
+      "question": "Is high suppression (0.68) structural (legal barriers, physical coercion, economic dependency) or perceptual (internalized compliance, normalized authority)?",
+      "resolution_mechanism": "Post-exit analysis: measure suppression persistence after agents relocate to lower-tax jurisdictions; survey data on compliance motivation (fear vs legitimacy vs identity with state); historical comparison with periods of perceived legitimacy vs delegitimization",
+      "impact": "If primarily structural: suppression remains stable across contexts. If primarily perceptual: suppression drops sharply when legitimacy erodes, revealing identity_locked mechanism rather than trapped mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized"
+    },
+    {
+      "id": "exit_capacity_heterogeneity",
+      "question": "How binary is the exit-options spectrum? Do most taxpayers occupy discrete categories (trapped vs mobile) or a continuous gradient?",
+      "resolution_mechanism": "Population segmentation analysis: measure relocation costs, asset mobility, jurisdiction arbitrage feasibility for decile-distributed income levels; identify tipping points where exit becomes materially feasible",
+      "impact": "If binary: perspectives are correctly classified as trapped/mobile/arbitrage. If continuous: single perspectives may conceal heterogeneous experiences within power atoms; some 'powerless' agents may have constrained-level exit that isn't captured.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether exit capacity is distributed continuously or discretely"
+    },
+    {
+      "id": "legitimacy_base_identity_fusion",
+      "question": "To what degree do taxpayers internalize provincial authority as identity-constituting versus perceiving it as an external constraint?",
+      "resolution_mechanism": "Identity-frame analysis: survey and ethnographic data on self-concept alignment with state/province; measure willingness to relocate after legitimacy shocks (policy reversals, scandal, institutional failure); compare identity fusion between natural-born residents vs recent migrants",
+      "impact": "If high identity fusion: identity_locked perspective is appropriate for some agents even with constrained-level exit. If low fusion: trapped/constrained distinction captures exit options accurately without identity lock.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of identity fusion with provincial authority"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.53
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Provincial tax collection systems exhibit the structural tension between genuine public-goods coordination and extraction/rent-seeking. All populations require some mechanism to fund collective infrastructure (roads, courts, education, healthcare), creating a coordination problem that taxation solves. Simultaneously, the taxing authority has structural advantages that enable extraction: power to set rates, power to audit, power to penalize non-compliance, and monopoly on legitimate coercion. The extractiveness value (0.52) reflects a moderate system that includes real coordination (public goods provision) alongside real extraction (asymmetric burden distribution, bureaucratic overhead, preferential treatment for organized actors). The temporal trajectory shows increasing extractiveness and theater ratio, indicating that as systems mature, rent-seeking and compliance theater accumulate faster than genuine public goods provision. The constraint exhibits all six classification types depending on observer position: wage earners perceive snare (trapped with no coordination benefit), small business experiences tangled rope (mixed benefits and costs), governments experience rope (coordination mechanism), mobile capital experiences tangled rope (both coordination and extraction), bureaucracy appears as piton (degraded ritual), and wealth holders extract while also benefiting from coordination (tangled rope). The analytical observer's mountain perspective risks naturalizing what is a contingent political arrangement.",
+    "key_agents": [
+      "Wage Earner: Primary victim (powerless/trapped) \u2014 mandatory withholding, cannot exit jurisdiction without exiting employment, bears disproportionate compliance burden",
+      "Small Business Owner: Secondary victim (moderate/constrained) \u2014 faces relocation costs, licensing barriers, dependent customer base; also benefits from tax-funded infrastructure",
+      "Provincial Government: Primary beneficiary (institutional/arbitrage) \u2014 captures revenue authority; can arbitrage fiscal federalism; uses taxation to solve public-goods collective action problem",
+      "Mobile Capital Sector: Secondary beneficiary-victim (organized/mobile) \u2014 can exit to favorable jurisdictions; extracts through tax competition and special deals; benefits from rule of law and infrastructure",
+      "Wealth Holder: Tertiary beneficiary-victim (powerful/mobile) \u2014 highest exit capacity; can arbitrage globally; extracts through tax planning while relying on property-rights protection",
+      "Tax Administration Bureaucracy: Institutional actor (institutional/arbitrage) \u2014 maintains compliance theater; perpetuates complexity as justification; benefits from system continuation",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent political arrangement as inherent to statecraft"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The value reflects that provincial tax systems genuinely solve public-goods coordination problems (roads, courts, defense, education) while simultaneously extracting through asymmetric burden distribution. Progressive vs regressive rate structures, compliance complexity, audit targeting, and preferential treatment for organized actors all contribute extraction mechanisms. The value is not higher (snare territory) because coordination functions are genuinely provided \u2014 citizens receive services for their taxes, not zero-sum extraction. The value is not lower (rope territory) because extraction mechanisms are substantial: burden distribution is asymmetric, compliance theater adds deadweight loss, and organized actors obtain preferential treatment. Suppression (0.68): Moderate-high. Structural suppression includes withholding at source (removes agency from wage earners), legal penalties for non-compliance (deters exit through evasion), territorial residence (penalizes relocation), and information asymmetry (government has superior audit capacity). Perceptual suppression includes legitimacy (many agents internalize authority as natural), identity fusion (provincial identity may constitute self-concept), and normalized extraction (long institutional history makes extraction invisible). Theater ratio (0.55): Moderate. Tax administration includes genuine functions (revenue collection, audit) and performative functions (elaborate forms, compliance theater, procedural complexity). Digital systems could reduce theater substantially, but bureaucratic inertia and employment maintenance incentives perpetuate complexity. The theater ratio has increased over the measurement interval as compliance procedures have elaborated while actual collection efficiency has not improved proportionally.",
+    "perspectival_gap": "Wage earner \u2192 Snare: trapped exit + victim status = maximum experienced extraction. Small business \u2192 Tangled Rope: constrained exit + mixed (beneficiary of infrastructure, victim of burden) = moderate extraction with coordination benefit. Government \u2192 Rope: arbitrage exit + beneficiary status = net-negative extraction (they are the receiver). Organized capital \u2192 Tangled Rope: mobile exit + extraction capacity + coordination benefits = moderate chi, organized agent power. This gap is structural: the same tax revenue that the government experiences as legitimately collected public funding, the wage earner experiences as extraction with no coordination benefit. Neither is wrong; they occupy opposite positions in the value flow.",
+    "directionality_logic": "Directionality values (d) are derived from beneficiary/victim status combined with exit options. Wage earners: d \u2248 0.95 (trapped victim) \u2192 high f(d) \u2248 1.42 \u2192 high experienced extraction. Small business: d \u2248 0.55 (constrained, mixed) \u2192 moderate f(d) \u2248 0.75 \u2192 moderate extraction. Government: d \u2248 0.05 (beneficiary with arbitrage) \u2192 low f(d) \u2248 -0.12 \u2192 negative/institutional extraction (receiver). Organized capital: d \u2248 0.50 (mobile, mixed) \u2192 moderate f(d) \u2248 0.65 \u2192 moderate extraction. Wealth holder: d \u2248 0.30 (beneficiary with mobile exit) \u2192 low f(d) \u2248 0.15 \u2192 low extraction despite power. Bureaucracy: d \u2248 0.08 (beneficiary with arbitrage) \u2192 low f(d) \u2248 -0.10 \u2192 institutional position. The spatial scope modifier \u03c3(S) = 1.0 for regional scope in most perspectives; shifts to 1.1 continental or 1.2 global for analysis of inter-jurisdictional arbitrage. No directionality overrides are needed \u2014 the structural data produces accurate d values through the derivation chain.",
+    "mandatrophy_analysis": "Mandatrophy is resolved by recognizing that extractiveness > 0.46 is compatible with genuine coordination (tangled rope, not pure snare) BECAUSE the system genuinely provides public goods. The tension is not 'is this coordination or extraction?' but 'what is the proportion and distribution?' A snare would be taxation with no public goods provision (extraction pure and simple). A rope would be coordination with symmetric benefit distribution. Provincial tax collection is tangled: real coordination + asymmetric distribution + extraction mechanisms. The mandatrophy dissolves when the analytical observer recognizes that moderate extractiveness is consistent with genuine public-goods coordination and does not require either denying the coordination function or denying the extraction mechanisms. Both are present. The classification as tangled_rope (not snare) is justified by the presence of coordinated public goods; the high suppression (0.68) reflects the asymmetric burden. The false summit in the mountain perspective is the claim that taxation is inherent and immutable to statecraft \u2014 the form, rate, and mechanism are highly contestable political choices."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "fiscal_federalism",
+      "tax_competition_between_jurisdictions",
+      "welfare_state_sustainability"
+    ]
+  },
+  "directionality_overrides": []
+}

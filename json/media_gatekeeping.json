@@ -1,0 +1,211 @@
+{
+  "header": {
+    "constraint_id": "media_gatekeeping",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "media_gk"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Media Gatekeeping and Access to Public Discourse",
+    "topic_domain": "media/communication/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "established_media_institutions",
+      "advertiser_networks",
+      "incumbent_political_actors"
+    ],
+    "victims": [
+      "excluded_voices",
+      "alternative_publishers",
+      "information_asymmetry_bearers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Excluded Voice",
+      "comment": "PERSPECTIVE 1: EXCLUDED VOICE (SNARE) \u2014 An individual or group without access to established media platforms faces nearly insurmountable barriers to reaching large audiences. Exit options are minimal: social media offers some workaround but carries algorithmic gatekeeping and verification barriers. The constraint is experienced as pure extraction \u2014 bearing the cost of information asymmetry with no coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Independent Publisher",
+      "comment": "PERSPECTIVE 2: INDEPENDENT PUBLISHER (TANGLED ROPE) \u2014 Local news outlets, niche publications, and independent journalists experience both coordination benefits (shared standards of journalistic practice, editorial review systems, audience trust from professional gatekeeping) and extraction (dependence on advertising networks, fragile business models, vulnerability to platform algorithm changes). Exit is constrained by capital requirements and platform dependencies."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Established Media Institution",
+      "comment": "PERSPECTIVE 3: ESTABLISHED MEDIA INSTITUTION (ROPE) \u2014 Major news organizations benefit from the gatekeeping constraint while experiencing it as coordination mechanism. The constraint enables them to monetize attention, maintains their franchise value through scarcity, and provides stable business model through advertiser relationships. They have high arbitrage exit options \u2014 they can shift between distribution platforms, audience models, and advertiser networks."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Open Information Movement",
+      "comment": "PERSPECTIVE 4: OPEN INFORMATION MOVEMENT (SCAFFOLD) \u2014 Organized actors (Wikipedia, open-access journalism projects, decentralized platforms, citizen journalism networks) perceive gatekeeping as a temporary structural problem being solved through technological and institutional innovation. The constraint exhibits genuine sunset logic: distributed publishing platforms, blockchain-based verification, and crowdsourced credibility systems are building alternative access pathways. Sunset horizon: 15-25 years as decentralized information infrastructure matures."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Professional Journalism Ritual",
+      "comment": "PERSPECTIVE 5: PROFESSIONAL JOURNALISM RITUAL (PITON) \u2014 The professional gatekeeping function (editorial standards, fact-checking, source verification) has partially degraded while institutional inertia maintains its authority. Many established outlets practice theater journalism: headlines designed for engagement rather than accuracy, clickbait verification, opinion-section dominance. Yet the professional ritual persists as the primary legitimacy source for 'real news' versus 'information.' Theater ratio indicates that gatekeeping increasingly performs legitimacy rather than ensuring accuracy."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 From a civilizational/universal perspective, information scarcity and attention bottlenecks are inherent to human cognition: no individual can process all available information, and filtering mechanisms (gatekeeping) are inevitably necessary. The constraint appears as natural law \u2014 there must be some mechanism to select which claims reach public attention. However, structural data contradicts this classification: gatekeeping is a contingent institutional choice (profit-driven editorial selection) rather than a cognitive inevitability (neutral filtering). The engine will identify this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "platform_gatekeeping_displacement",
+      "question": "Has traditional media gatekeeping been displaced by platform algorithmic gatekeeping, or merely supplemented?",
+      "resolution_mechanism": "Comparative analysis of information reach: studies of news diffusion patterns pre- and post-social-media dominance; measurement of alternative-source visibility on algorithmic platforms vs traditional media",
+      "impact": "If displaced: constraint type remains tangled_rope but with different beneficiary (platform operators instead of editors). If supplemented: dual gatekeeping system creates compounding extraction. If neither: gatekeeping evolves but extraction mechanisms persist.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether platform algorithms replace or supplement traditional media gatekeeping"
+    },
+    {
+      "id": "credibility_verification_necessity",
+      "question": "How much of the gatekeeping constraint's suppression derives from legitimate credibility verification vs artificial scarcity maintenance?",
+      "resolution_mechanism": "Comparative credential analysis: fact-check accuracy of gated sources vs crowdsourced/decentralized alternatives; correlation between gatekeeping and information quality metrics",
+      "impact": "If mostly legitimate: gatekeeping classification shifts toward rope (pure coordination). If mostly artificial scarcity: classification shifts toward snare (pure extraction). If mixed: tangled_rope classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ratio of credibility verification to artificial scarcity in gatekeeping suppression"
+    },
+    {
+      "id": "decentralized_platform_maturity",
+      "question": "Are decentralized information platforms (blockchain news, distributed publishing, community fact-checking) approaching functional parity with centralized media for rapid high-quality information distribution?",
+      "resolution_mechanism": "Timeline analysis of platform adoption curves; measurement of information latency, verification speed, and audience reach for decentralized platforms; tracking of institutional blockchain journalism projects",
+      "impact": "If approaching parity within 10 years: scaffold sunset logic is real and timeline is accurate. If stalling: scaffold is aspirational and sunset is indefinite. If exceeded: gatekeeping constraint dissolves faster than modeled.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Timeline to functional decentralized platform parity"
+    },
+    {
+      "id": "economic_sustainability_alternative_models",
+      "question": "Can alternative publishing models (direct reader support, public funding, cooperative ownership) achieve economic sustainability competitive with advertising-subsidized gatekeeping?",
+      "resolution_mechanism": "Longitudinal financial analysis of subscription-funded, public-funded, and cooperative news outlets; correlation between funding model and editorial independence metrics",
+      "impact": "If yes: scaffold sunset accelerates \u2014 direct-support models remove advertiser gatekeeping. If no: economic constraint becomes independent binding mechanism, lifting extractiveness. Classification may shift toward snare if economic barriers become insurmountable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of alternative publishing economic models"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Media gatekeeping is the structural constraint that controls which voices reach large audiences through established information infrastructure. This constraint combines genuine coordination (editorial verification, quality standards, audience trust) with systematic extraction (exclusion of dissident voices, advertising-driven attention distortion, incumbent political protection). The gatekeeping function exhibits a perspectival gap of remarkable breadth: from the powerless excluded voice, it appears as pure extraction (snare); from established media, as pure coordination (rope); from organized alternative movements, as a temporary problem with a sunset (scaffold). The theater ratio indicates increasing performativity in professional journalism: clickbait headlines, opinion-driven selection, verification theater (fact-checks designed for reassurance rather than accuracy). The extractiveness trajectory shows accumulation of extraction mechanisms over the 20-year interval as platform economics intensified while traditional credibility checks weakened. Extraction increased from 0.42 (2005-era professional gatekeeping with some genuine verification function) to 0.58 (contemporary state with advertiser influence, algorithm dominance, and editorial theater).",
+    "key_agents": [
+      "Excluded Voices: Primary victim (powerless/trapped) \u2014 individuals, movements, and alternative perspectives without access to established platforms; bear information asymmetry cost",
+      "Alternative Publishers: Secondary victim (moderate/constrained) \u2014 independent outlets, niche publications, local news struggling against platform dependencies and advertising fragmentation",
+      "Established Media Institutions: Primary beneficiary (institutional/arbitrage) \u2014 major news organizations that monetize gatekeeping function; have high exit mobility across distribution channels and advertiser networks",
+      "Advertiser Networks: Secondary beneficiary (powerful/mobile) \u2014 benefit from concentrated audience attention and premium placement control; can switch between media outlets and platforms",
+      "Open Information Movement: Organized resistance (organized/constrained) \u2014 Wikipedia, open-access journalism, blockchain media, citizen networks building alternative distribution and credibility pathways",
+      "Professional Journalism System: Institutional actor (institutional/arbitrage) \u2014 maintains gatekeeping ritual through professional licensing and credentialing; sees own practice as degraded (piton perspective)",
+      "Platform Algorithm Operators: Emerging beneficiary (institutional/arbitrage) \u2014 Facebook, YouTube, TikTok now perform secondary gatekeeping; extract through attention concentration and advertiser placement"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Media gatekeeping extracts by excluding voices, concentrating advertiser subsidy, and channeling political access. However, extraction is not maximal (would be 0.70+) because some gatekeeping function is genuinely coordinative \u2014 editorial standards, fact-checking, and professional norms do provide value. The extractiveness trajectory (0.42 \u2192 0.58) reflects that coordination value has declined as platforms intensified audience concentration and advertising became the dominant business model. Suppression (0.68): High. Excluded voices face multiple barriers: capital requirements for media ownership, platform algorithmic filtering, lack of professional credentialing, and network effects favoring established outlets. Suppression is not total (social media and low-cost publishing offer some workaround) but substantial. Theater ratio (0.62): Moderate-high. Professional journalism ritual persists (fact-checking sections, editorial review, byline credentialing) but increasingly performs legitimacy rather than ensures accuracy. Clickbait headlines, opinion-driven section placement, verification theater (fact-checks as reassurance mechanism) indicate significant theatrical component. Trend is rising (0.35 \u2192 0.62) as engagement metrics drive editorial selection.",
+    "perspectival_gap": "This constraint demonstrates an extreme perspectival gap. The established media institution experiences gatekeeping as a rope (coordination mechanism that solves audience trust and quality assurance problems). The excluded voice experiences it as a snare (pure extraction with no offsetting coordination benefit). The independent publisher experiences a tangled rope (genuine coordination value in quality standards and audience trust, but also genuine extraction through advertising dependency and algorithm vulnerability). The open information movement sees a scaffold (temporary structural problem being solved by distributed platforms and decentralized credibility systems with a realistic sunset). The professional journalism system sees itself as maintaining a degraded ritual (piton \u2014 theater persisting through institutional inertia despite declining functional value). The analytical observer risks treating gatekeeping as a natural law (inevitable consequence of attention scarcity) when it is actually a contingent institutional arrangement (profit-driven, advertiser-controlled, technology-dependent). The perspectival gap reveals that no single type captures the full structure \u2014 tangled_rope is the only classification that accommodates the simultaneous presence of genuine coordination and real extraction.",
+    "directionality_logic": "Beneficiaries (established media, advertisers) have high-mobility exit options (arbitrage) \u2014 they can shift between distribution platforms, audience models, and monetization strategies. Their directionality value is low (d \u2248 0.15-0.25), producing negative or low-positive effective extractiveness: they experience the constraint as enabling rather than constraining. Victims (excluded voices) have trapped or constrained exit options. Excluded voices cannot afford media ownership or platform dominance and lack professional credentialing pathways \u2014 directionality high (d \u2248 0.85-0.95). Independent publishers have constrained exit (capital requirements, platform dependency limits mobility) \u2014 directionality moderate-high (d \u2248 0.60-0.70). The open information movement has organized power and constrained-but-meaningful exit options (can build alternative platforms) \u2014 directionality moderate (d \u2248 0.50-0.60). The professional journalism system sees itself as beneficiary-turned-victim (institutional identity is tied to the gatekeeping role, but the role is degrading) \u2014 requires override.",
+    "mandatrophy_analysis": "DIAGNOSTIC CASE: Media gatekeeping resolves the mandatrophy by demonstrating that classification type is perspectival rather than universal. The constraint is genuinely tangled_rope at the system level (both coordination and extraction present simultaneously), but this classification dissolves when viewing from specific positions. From the beneficiary's position, it's rope (pure coordination). From the powerless position, it's snare (pure extraction). The mandatrophy is resolved by recognizing that the tangled_rope classification is the presheaf over all perspectives \u2014 it describes how the constraint appears when you integrate the views of all structural positions, accounting for the fact that beneficiaries and victims experience opposite directions of the same mechanism. The false mountain classification (gatekeeping as natural law of attention) is caught by structural data: the constraint requires active enforcement (requires_active_enforcement: true), has clear beneficiaries and victims, and exhibits theater ratio growth over time. Mountains do not require enforcement or beneficiary protection \u2014 they persist regardless. The analytical false summit reveals that 'attention scarcity makes gatekeeping inevitable' naturalizes what is actually a policy choice (profit-driven business model, advertiser subsidy, professional credentialing requirements)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_platform_attention",
+      "political_information_asymmetry",
+      "professional_credentialing_exclusion"
+    ],
+    "dual_formulation_note": "Media gatekeeping decomposes into multiple structurally distinct constraints: (1) editorial gatekeeping (filtering by professional judgment), (2) platform algorithmic gatekeeping (filtering by engagement maximization), (3) economic gatekeeping (access requires capital for media ownership or advertising budget). Each has different \u03b5 values and should be modeled as separate stories with cross-constraint dependencies. This story represents the integrated system perspective."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.65
+    }
+  ]
+}

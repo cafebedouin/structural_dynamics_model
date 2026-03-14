@@ -313,6 +313,7 @@ def _prolog_giant_comp():
     result = run_prolog(
         ["stack.pl", "giant_component_analysis.pl"],
         "run_giant_component_analysis",
+        timeout=900,
     )
     (OUTPUTS_DIR / "giant_component_analysis.md").write_text(result.stdout, encoding="utf-8")
 

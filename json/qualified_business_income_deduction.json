@@ -1,0 +1,183 @@
+{
+  "header": {
+    "constraint_id": "qualified_business_income_deduction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "qbid"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Qualified Business Income Deduction (Section 199A)",
+    "topic_domain": "tax_policy/economic_inequality",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pass_through_business_owners",
+      "high_income_self_employed"
+    ],
+    "victims": [
+      "w2_wage_earners",
+      "low_income_business_operators"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The W2 Wage Earner",
+      "comment": "PERSPECTIVE 1: W2 WAGE EARNER (SNARE) \u2014 Cannot exit wage employment without massive career disruption. Bears full cost of QBI deduction through higher effective tax rates and reduced public revenue. No coordination benefit. Maximum extraction from a structural position of immobility."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Low-Income Self-Employed",
+      "comment": "PERSPECTIVE 2: LOW-INCOME SELF-EMPLOYED (TANGLED ROPE) \u2014 Can theoretically access QBI deduction but faces high compliance costs, audit risk, and contingent access (income phase-outs and W2 wage/asset limitations). Benefits from some coordination (simplified business taxation framework) alongside extraction through asymmetric deduction access. Constrained by tax complexity and resource barriers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The High-Income Pass-Through Business Owner",
+      "comment": "PERSPECTIVE 3: HIGH-INCOME PASS-THROUGH OWNER (ROPE) \u2014 Primary beneficiary. Experiences QBI deduction as coordination mechanism: enables business taxation simplification while providing substantial tax relief. Can exit through incorporation or other strategies if needed. Arbitrage access to multiple tax structures. Extraction runs toward this agent."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Tax Reform Coalition",
+      "comment": "PERSPECTIVE 4: TAX REFORM COALITION (SCAFFOLD) \u2014 Organized agents (tax reform advocates, progressive policy organizations) see QBI deduction as temporary artifact of 2017 Tax Cuts and Jobs Act with sunset provision (expires 2025 without extension). Constraint has built-in termination mechanism. Coalition perceives window for reform before permanent tax code restructuring."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Tax Code Administration",
+      "comment": "PERSPECTIVE 5: TAX CODE ADMINISTRATION (PITON) \u2014 The deduction persists through institutional inertia and political incumbency despite high compliance theater. IRS guidance has proliferated (substantial theater in Treasury regulations, Notice 2018-40, Rev. Proc. 2019-11). The administrative function (calculating and validating qualified business income) has largely been outsourced to private tax preparation industry. Theater ratio (0.58) reflects that substantial administrative effort is devoted to determining eligibility rather than producing revenue optimization."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Sees coordination function (simplification of pass-through taxation) coupled with significant asymmetric extraction (wealth concentration, revenue loss disproportionately borne by wage earners). Classification is not mountain (contingent on policy design) or pure snare (some legitimate business coordination benefit exists). Pure rope classification fails because extraction mechanism is robust and structural, not marginal."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "wage_limit_compliance",
+      "question": "Are the W2 wage and business asset limitations effectively preventing high-income pass-through owners from extracting full deduction benefit, or do sophisticated structures routinely circumvent these limits?",
+      "resolution_mechanism": "IRS audit data on W2 wage limitation disallowances; empirical frequency of S-corp vs LLC election patterns among high-income self-employed; analysis of employed family members and wage allocation structures",
+      "impact": "If limitations are effective: extraction is moderate, classification remains Tangled Rope. If routinely circumvented: extraction increases to 0.65+, reclassify as Snare for high-income earners; suppression becomes irrelevant (no real barrier exists).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Effectiveness of W2 wage limitations in preventing deduction extraction"
+    },
+    {
+      "id": "substitution_vs_income_effect",
+      "question": "Does the QBI deduction expand pass-through business formation (income effect, creating coordination) or primarily reduce tax collection from existing businesses that would have organized regardless (pure extraction)?",
+      "resolution_mechanism": "Time-series analysis of pass-through business formation rates pre/post 2017 TCJA; comparison to W2 employment trends; causal identification via difference-in-differences across states or industry cohorts",
+      "impact": "If significant expansion: coordination component is real, Tangled Rope confirmed. If minimal expansion: deduction is pure transfer to existing businesses, reclassify as Snare; extraction rises to 0.70+.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether QBI deduction expands business formation or transfers to existing businesses"
+    },
+    {
+      "id": "sunset_credibility",
+      "question": "Is the 2025 sunset of the individual QBI deduction (while corporate rate remains 21%) politically credible, or is permanent extension highly probable?",
+      "resolution_mechanism": "Legislative history; polling on tax reform sentiment; structural political economy of pass-through vs corporate lobbying; budget impact analysis",
+      "impact": "If sunset enforced: Scaffold perspective gains force, constraint has real termination date. If sunset becomes permanent through political pressure: Piton classification strengthens (institutional inertia overcomes sunset mechanism), extraction becomes institutionalized long-term.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Political credibility of QBI deduction sunset in 2025"
+    },
+    {
+      "id": "incidence_distribution",
+      "question": "What fraction of QBI deduction benefit flows to top 1% vs top 10% vs middle-income pass-through owners? Does distribution justify asymmetric extraction classification?",
+      "resolution_mechanism": "IRS tax statistics by income bracket; Treasury analysis of QBI deduction utilization; cross-tabulation of deduction amount against filing income percentiles",
+      "impact": "If >70% flows to top 1%: extraction mechanism is clearly concentrated, Snare perspective valid for vast majority. If more evenly distributed: some middle-income benefit exists, Tangled Rope better describes average experience.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Income distribution of QBI deduction benefits"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 8
+  },
+  "commentary": {
+    "narrative_context": "The Qualified Business Income (QBI) Deduction, enacted as Section 199A of the Tax Cuts and Jobs Act of 2017, permits eligible taxpayers to deduct up to 20% of qualified business income from pass-through entities (S-corporations, partnerships, sole proprietorships, LLCs). The deduction is scheduled to expire December 31, 2025, creating a built-in sunset. The constraint exhibits hybrid coordination-extraction dynamics: it simplifies taxation of pass-through businesses (genuine coordination function) while creating asymmetric tax relief concentrated among high-income owners, funded through reduced revenue borne disproportionately by W2 wage earners. The deduction's interaction with W2 wage and business asset limitations, combined with high compliance complexity and IRS guidance theater, creates differential access and effective extraction rates across income levels.",
+    "key_agents": [
+      "W2 Wage Earners: Primary victims (powerless/trapped) \u2014 bear tax burden from reduced QBI revenue without access to deduction",
+      "Low-Income Self-Employed: Secondary victims (moderate/constrained) \u2014 theoretically eligible but face compliance barriers and phase-out restrictions; also receive minimal benefit",
+      "High-Income Pass-Through Owners: Primary beneficiaries (institutional/arbitrage) \u2014 capture bulk of deduction benefit; can structure business form to optimize access",
+      "Tax Preparation Industry: Institutional beneficiary (institutional/arbitrage) \u2014 captures compliance costs through premium consulting and tax filing services",
+      "Tax Reform Coalition: Organized opposition (organized/constrained) \u2014 progressive policy organizations advocating for deduction elimination or modification before sunset",
+      "IRS and Treasury: Institutional administrator (institutional/arbitrage) \u2014 issues complex guidance; maintains theater of compliance and validation",
+      "Analytical Observer: Cross-position analysis (analytical/analytical) \u2014 identifies coordination function coupled with asymmetric extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.52): The deduction generates substantial revenue cost (~$1.5 trillion over ten years) concentrated among high-income pass-through owners, reducing average tax rates on business income while W2 rates remain unchanged. Base extraction value reflects that this is legitimate coordination (pass-through business simplification) embedded in significant wealth transfer. The value increased from 0.35 (2017) to 0.52 (2025) as utilization stabilized and high-income owners optimized structures. Not higher (0.66+) because W2 wage limitations and income phase-outs provide partial constraints on unbounded extraction. Suppression (0.48): Moderate. Barriers to access include: (1) compliance complexity requiring professional tax advice, (2) W2 wage limitations that reduce deduction for service businesses, (3) income phase-outs starting at $182.9K (2023), (4) business asset limitations ($220K threshold), (5) audit risk. These are real barriers but not absolute \u2014 high-income owners can and do access deduction through structure optimization. Theater ratio (0.58): Moderate-high. Reflects proliferation of IRS guidance (Notice 2018-40, Treasury Regulations 1.199A, multiple revenue procedures) that creates appearance of rigorous validation but largely documents boundaries rather than enforcing them. Professional tax preparation industry captures premium for navigating this theater. Theater has grown as guidance accumulated over interval.",
+    "perspectival_gap": "The gap between W2 earners' Snare (no benefit, bears cost, trapped) and high-income owners' Rope (coordination benefit, benefits from deduction, arbitrage access) is the core analytical insight. Both groups experience the same constraint structure, but their structural positions invert the directionality: what the beneficiary experiences as legitimate simplification, the trapped agent experiences as extraction. The Scaffold perspective (organized coalition sees sunset) contrasts with Piton perspective (administrative system perpetuates through inertia). The analytical observer's Tangled Rope classification unifies these perspectives by recognizing both genuine coordination and genuine asymmetric extraction are structurally real \u2014 the constraint is not pure Rope (misleading the coordination) or pure Snare (ignoring the coordination function). The perspectival gap reveals that tax policy designed as 'simplification' becomes mechanism for wealth concentration when combined with asymmetric access.",
+    "directionality_logic": "Directionality is determined by beneficiary/victim status and exit capacity. High-income pass-through owners (beneficiary + arbitrage exit) have d \u2248 0.15, producing negative or minimal f(d). W2 earners (victim + trapped exit) have d \u2248 0.90, producing maximum f(d) \u2248 1.42. Low-income self-employed (ambiguous: theoretically beneficiary but victim in practice via phase-outs and compliance barriers) have d \u2248 0.55-0.65, constrained exit. The analytical observer (victim of revenue loss to public goods, analytical exit) has d \u2248 0.72. Directionality overrides are not needed \u2014 the derivation chain accurately reflects structural relationships. Beneficiary/victim declarations directly drive the perspectival gap.",
+    "mandatrophy_analysis": "RESOLUTION: The mandatrophy is resolved by distinguishing coordination function (pass-through simplification) from extraction mechanism (wealth concentration via tax relief concentrated on high-income owners). The Tangled Rope classification captures both: \u03c7 \u2248 0.52 \u00d7 0.40 \u00d7 1.0 \u2248 0.21 for high-income owners (low extraction experienced), but \u03c7 \u2248 0.52 \u00d7 1.42 \u00d7 1.0 \u2248 0.74 for trapped W2 earners (high extraction experienced). The constraint is not mislabeled as pure Rope (which would ignore extraction) or pure Snare (which would ignore coordination). The 2025 sunset creates genuine scaffold element that distinguishes this from permanent extraction mechanisms. The false summit risk (mountain classification naturalizing as 'inevitable business taxation complexity') is rejected because the policy design is contingent: alternative structures (reducing pass-through rates, eliminating W2 wage limits, means-testing) could reduce extraction while preserving coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "pass_through_entity_taxation",
+      "wage_income_tax_equity",
+      "tax_compliance_burden"
+    ]
+  },
+  "directionality_overrides": []
+}

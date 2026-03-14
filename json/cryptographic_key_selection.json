@@ -1,0 +1,139 @@
+{
+  "header": {
+    "constraint_id": "cryptographic_key_selection",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "crypto_key"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Cryptographic Key Selection and Mathematical Irreducibility",
+    "topic_domain": "cryptography/mathematics/information_theory",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Adversary Without Computational Resources",
+      "comment": "PERSPECTIVE 1: ADVERSARY WITHOUT RESOURCES (MOUNTAIN) \u2014 Any agent attempting to break cryptographic security through exhaustive key search faces an irreducible computational barrier. The constraint emerges from mathematical properties of the key space itself, not from enforcement. No exit option exists \u2014 the adversary cannot sidestep the mathematics of computational complexity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "universal",
+      "label": "The Well-Resourced Adversary",
+      "comment": "PERSPECTIVE 2: WELL-RESOURCED ADVERSARY (MOUNTAIN) \u2014 Even an agent with vast computational resources faces the same mathematical constraint. While they can reduce the search time through parallelization and optimization, they cannot escape the fundamental barrier set by key length. The constraint is invariant across all computational architectures and resource levels."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 The constraint derives from Shannon entropy and computational complexity theory. A secure key selection mechanism requires entropy sufficient to make the key space unexplorable within any practical time horizon. This is a mathematical law, not a convention or design choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "quantum_computing_threat",
+      "question": "Does the emergence of quantum computers with sufficient qubits for Shor's algorithm eliminate the mountain classification?",
+      "resolution_mechanism": "Development of cryptographically-relevant quantum computers (>2000 logical qubits); empirical testing of Shor's algorithm against actual RSA/ECC implementations",
+      "impact": "If quantum computers achieve cryptographic scale: the constraint transitions from mountain (classical irreducibility) to rope or tangled_rope (requiring migration to post-quantum algorithms). The mathematical barrier is displaced, not eliminated \u2014 replaced by the coordination problem of global cryptographic migration.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Quantum computing threat to classical key space irreducibility"
+    },
+    {
+      "id": "key_derivation_vulnerabilities",
+      "question": "Can practical key derivation mechanisms (PRNGs, key stretching) introduce structural extractiveness through implementation flaws that undermine mathematical guarantees?",
+      "resolution_mechanism": "Analysis of real-world key generation implementations; empirical testing of PRNG weakness and side-channel attacks in cryptographic libraries; correlation between mathematical key space properties and achieved security in deployed systems",
+      "impact": "If implementation vulnerabilities are systematic and significant: the practical constraint becomes tangled_rope (mathematical coordination with implementation extraction). The mathematical mountain remains but the realized constraint is hybrid.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Implementation gap between mathematical key space and realized security"
+    },
+    {
+      "id": "anthropic_key_selection",
+      "question": "Does human key selection behavior (passphrases, mnemonic seeds) violate the mathematical uniformity assumption that anchors the mountain classification?",
+      "resolution_mechanism": "Entropy analysis of human-generated keys; dictionary attack success rates against user-chosen passphrases; comparison of achieved security (bits of entropy) vs theoretical security (bits of key length)",
+      "impact": "If human selection systematically produces low-entropy keys: the constraint is not mountain but snare \u2014 humans are locked into key selection mechanisms that preserve mathematical form while eliminating practical security. The constraint would then be the extraction of false confidence (the appearance of security without the substance).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Human behavioral deviations from mathematical key space uniformity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Cryptographic key selection represents a mathematical constraint that emerges directly from information theory and computational complexity, not from institutional design or enforcement. A secure cryptographic system requires a key space large enough that exhaustive search is computationally infeasible within any meaningful time horizon. This constraint appears identical across all observer positions because it is grounded in mathematical properties, not in asymmetric power relationships. The adversary cannot negotiate with the mathematics; the defender cannot be exempted from it. No agent benefits and no agent bears cost \u2014 the constraint is simply the irreducible minimum that any secure cryptographic system must satisfy. The extractiveness metric is near-zero (0.08) because there is no extraction mechanism \u2014 the constraint is purely structural. Theater ratio is similarly low (0.15) because key selection mechanisms involve minimal performative activity; the security either exists or it does not. This constraint serves as a diagnostic exemplar for mountain classification: what distinguishes a natural law from a snare with performative cover is precisely this invariance. When all observers, across all power levels and time horizons, perceive the same constraint as immutable and non-negotiable, the mountain classification is appropriate.",
+    "key_agents": [
+      "Cryptographic System Users: All agents (regardless of power) \u2014 subject to the constraint equally",
+      "Adversaries: All potential attackers (powerless to powerful) \u2014 face the same mathematical barrier",
+      "Cryptographic Designers: Institutional actors (analytical/arbitrary) \u2014 must work within the constraint, not against it",
+      "Mathematical Observers: Theoretical analysts (analytical/analytical) \u2014 recognize the constraint as derived from first principles"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Minimal. The constraint does not extract from any agent; it simply defines the minimum security requirement. The small value reflects measurement noise and the theoretical possibility of oracle-based attacks or side-channel leakage that violates the clean mathematical assumption. Suppression (0.02): Negligible. The constraint does not suppress alternatives in the sense of preventing exit \u2014 there are no alternatives within classical mathematics. Actors cannot exit the constraint any more than they can exit multiplication. Theater ratio (0.15): Low. Key selection processes involve minimal performative activity. Cryptographic systems either achieve their security properties or they do not; there is no room for theater because the mathematics is not subject to interpretation or negotiation. The small non-zero value reflects the reality that key management practices can include procedural elements (hardware security module certification, key escrow protocols) that may have theatrical components, but these are secondary to the mathematical constraint itself.",
+    "perspectival_gap": "There is no perspectival gap in this constraint. All observer positions, from the most powerless adversary to the most analytically sophisticated observer, perceive the same irreducible mathematical barrier. This uniformity is the diagnostic signature of a mountain constraint. The absence of gap indicates that extraction is not the operative mechanism; the constraint is purely structural.",
+    "directionality_logic": "Standard directionality derivation does not apply to mountain constraints because there are no beneficiaries or victims. The constraint is not asymmetric. All agents experience it as a mathematical law, not as extraction. The 'd' parameter remains undefined because there is no extraction flow to model. This is by design \u2014 mountain constraints are invariant across power, time, exit options, and scope precisely because they are not relational.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: No mandatrophy to resolve. This constraint does not risk misclassification as pure extraction masquerading as coordination. The mathematical irreducibility is genuine and documented. There is no hidden beneficiary, no asymmetric advantage, no extracted rent disguised as coordination cost. The constraint is structurally pure \u2014 all agents face the same barrier, and no agent benefits from the constraint's persistence. The mountain classification is diagnostically sound."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "cryptographic_algorithm_selection",
+      "key_management_protocols",
+      "post_quantum_cryptography_transition"
+    ],
+    "dual_formulation_note": "This constraint is the mathematical foundation for cryptographic security. Downstream constraints (algorithm selection, key management, post-quantum migration) all inherit from and depend upon the irreducibility of key space exploration. The mathematical mountain is upstream; institutional and coordination problems are downstream."
+  },
+  "directionality_overrides": []
+}

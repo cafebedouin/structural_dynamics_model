@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "early_medieval_kinship_law",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "emkl"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Early Medieval Kinship Law as Coordination and Extraction",
+    "topic_domain": "social/legal/institutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "male_household_heads",
+      "aristocratic_lineages"
+    ],
+    "victims": [
+      "women_under_guardianship",
+      "younger_sons",
+      "illegitimate_heirs"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Woman Under Guardianship",
+      "comment": "PERSPECTIVE 1: WOMAN UNDER GUARDIANSHIP (SNARE) \u2014 Complete legal incapacity. Cannot own property, cannot testify, cannot initiate divorce, cannot select marriage partner. No appeal mechanism exists; guardianship extends through marriage to the husband. Theater is low (enforcement is blunt and material), but suppression is maximal and extraction is severe. Exit is impossible without abandoning family protection and social identity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Younger Son",
+      "comment": "PERSPECTIVE 2: YOUNGER SON (TANGLED ROPE) \u2014 Constrained by primogeniture rules that concentrate inheritance but also enjoys genuine coordination benefits: clear succession prevents civil war, kinship law provides structural claims on elder brother's support in distress, monastic placement offers alternative status pathway. Extraction is real (elder captures disproportionate wealth) but not total \u2014 younger sons occupy defined social positions and have some recourse claims."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Male Household Head",
+      "comment": "PERSPECTIVE 3: MALE HOUSEHOLD HEAD (ROPE) \u2014 Primary beneficiary. Controls property, manages marriage alliances, makes inheritance decisions. Experiences kinship law as a coordination mechanism that clarifies his authority and protects his lineage integrity. Benefits from clear rules governing wives' property devolution and children's status. Net beneficiary with high exit optionality (can relocate, can exploit ambiguities in law, can negotiate with other households)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Church as Institutional Reformer",
+      "comment": "PERSPECTIVE 4: CHURCH AS INSTITUTIONAL REFORMER (SCAFFOLD) \u2014 Organized agents (bishops, councils, monastic scholars) gradually introduced consent requirements for marriage, expanded women's property rights through dower law, and created alternative status pathways (convent entrance). These reforms show sunset logic: they build parallel institutions (ecclesiastical courts, monastic communities) that partially bypass the traditional household authority. Theater is moderate (doctrinal authority has performative content) but the constraint is genuinely being reformed, not just reified."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Barbarian Law Code as Ritual",
+      "comment": "PERSPECTIVE 5: BARBARIAN LAW CODE AS RITUAL (PITON) \u2014 By the 10th century, written kinship codes (Lex Salica, Lex Burgundionum) are increasingly ceremonial rather than functional. Actual social practice diverges from written law; enforcement depends on ad-hoc negotiation among lords rather than genuine application of codified rules. Theater is high (public recitation, symbolic authority) but functional constraint is degrading as feudal relationships supersede lineal kinship rules. The code persists through institutional inertia."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal civilizational perspective, paternal control of kinship rules appears as an inevitable feature of pre-literate societies lacking centralized enforcement: without written records and state capacity, kinship authority must reside in household heads to guarantee lineage clarity and property transmission. This perspective naturalizes the constraint as inherent to agricultural societies. However, the structural data contradicts the mountain classification \u2014 the church's reforms and the variance across Germanic codes reveal kinship law as contingent institutional arrangements, not natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "consent_threshold_ambiguity",
+      "question": "Did early medieval consent requirements for marriage (introduced by the Church from the 6th century onward) represent genuine reform or performative legitimation of existing patriarchal practice?",
+      "resolution_mechanism": "Historical analysis of marriage contracts, trial records, and annulment petitions; identification of cases where consent was actually invoked to dissolve unwanted marriages vs cases where consent requirement was merely ceremonial.",
+      "impact": "If genuine: the church's reforms are real scaffolding reducing women's extraction; constraint should show declining suppression over time. If performative: consent is a theater gate without material impact; constraint remains snare from women's perspective throughout the period.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether marriage consent requirements reduced patriarchal extraction or remained performative"
+    },
+    {
+      "id": "property_control_boundary",
+      "question": "To what degree did dower rights and widow succession create genuine property control opportunities for women vs remaining purely formal titles that husbands could effectively override?",
+      "resolution_mechanism": "Charting actual property transactions, inheritance disputes, and widow autonomy across documented cases; distinguishing between nominal and effectual property control.",
+      "impact": "If dower rights were genuine: women's exit options improve from trapped to constrained; classification shifts from snare to tangled rope. If dower was formal cover: women remain trapped despite legal text.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Actual vs formal property control for women in early medieval law"
+    },
+    {
+      "id": "legitimacy_status_fluidity",
+      "question": "Were illegitimate heirs' legal disabilities immutable or could they be overcome through Church recognition, aristocratic negotiation, or normalization within lineages?",
+      "resolution_mechanism": "Genealogical and documentary evidence of illegitimate lineage members' actual social standing, property control, and inheritance outcomes across generations.",
+      "impact": "If rigid: illegitimate sons face permanent snare from property exclusion. If fluid: status is constrained rather than trapped; extraction is moderate not severe.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Fluidity vs rigidity of illegitimacy status in medieval kinship law"
+    },
+    {
+      "id": "regional_legal_variance",
+      "question": "Do regional variations in kinship codes (Salian law, Burgundian law, Ostrogothic edicts) represent structurally distinct constraints or surface variations on a uniform underlying mechanism?",
+      "resolution_mechanism": "Comparative legal analysis of kinship provisions; identification of codes that genuinely reduce women's suppression or expand younger sons' exit options vs codes that merely reword the same restrictions.",
+      "impact": "If structurally distinct: multiple constraint stories should be written (one per legal tradition). If uniform mechanism: single story adequately models the constraint across the region.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regional legal codes represent distinct or uniform constraints"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 250,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 250,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 500
+  },
+  "commentary": {
+    "narrative_context": "Early medieval kinship law (6th\u201310th centuries) across Germanic successor kingdoms combines genuine coordination functions with asymmetric extraction. The constraint solved legitimate collective action problems \u2014 property inheritance clarity, lineage stability, prevention of civil war over succession \u2014 while simultaneously concentrating control over women, wealth, and inheritance in male household heads. The law exhibits all six DR types depending on observer position. Women under guardianship see a snare (complete incapacity, no exit). Younger sons see tangled rope (clear succession rules prevent chaos but concentrate property asymmetrically). Male household heads see rope (coordinating property and authority). The Church sees a scaffold emerging gradually through reform (consent requirements, dower rights, convent alternatives). By the 10th century, written law codes appear increasingly ceremonial (piton). A civilizational observer risks naturalizing the constraint as inherent to agricultural societies. The declining extractiveness over the interval reflects the gradual introduction of Church-backed reforms that improved women's and younger sons' exit options, although suppression remains high throughout (guardianship rules persist in modified form through the entire period).",
+    "key_agents": [
+      "Male Household Heads: Primary beneficiary (institutional/arbitrage) \u2014 control property, inheritance, marriage alliances; flexible interpretation of law; high exit optionality",
+      "Women Under Guardianship: Primary victim (powerless/trapped) \u2014 complete legal incapacity; identity fused with household role; exit requires abandoning social protection",
+      "Younger Sons: Secondary victim (moderate/constrained) \u2014 constrained by primogeniture but have defined status pathways (military, ecclesiastical, negotiated support claims)",
+      "Aristocratic Lineages: Beneficiary collective (institutional/arbitrage) \u2014 kinship law protects lineage integrity and property consolidation against fragmentation",
+      "Church Institutional Reformers: Organized agents (organized/constrained) \u2014 gradually introduce consent, dower, and convent pathways; building parallel institutions with sunset logic",
+      "Barbarian Law Codifiers: Institutional actors (institutional/arbitrage) \u2014 maintain written codes; codes become increasingly performative by 10th century (piton perspective)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as inherent features of pre-state societies"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts from women and younger sons in favor of male household heads and aristocratic lineages. The core extraction mechanisms are property concentration (women cannot own or inherit independently; primogeniture concentrates land in eldest sons) and authority asymmetry (women have no legal personality; younger sons have no inheritance claims). However, extraction is not maximal because genuine coordination functions exist: clear succession rules prevent civil war and lineage fragmentation, which would harm all parties including the constrained groups. The value declines from 0.65 to 0.52 across the interval as Church reforms expand women's property control and create alternative status pathways. Suppression (0.68): High. Material barriers to exit are severe: women cannot leave marriages or guardianship without abandoning all social support and becoming destitute; younger sons cannot claim inheritance or property without violating lineage rules; illegitimate heirs have no recourse. Enforcement is through household authority (blunt, material) and social exclusion (identity-level). However, suppression is not absolute because convent entrance and military service offer limited alternative pathways, and informal negotiation sometimes overrides written rules. Theater ratio (0.58): Moderate. Early codes (6th\u20137th century) have low theater: enforcement is direct and material. But by the 9th\u201310th century, theater rises as written law becomes increasingly disconnected from feudal practice \u2014 codes are ritually recited but enforcement depends on aristocratic negotiation rather than legal principle. The interval captures this transition.",
+    "perspectival_gap": "The woman under guardianship sees a snare (complete extraction, no coordination benefit, no exit). The male household head sees a rope (coordination benefit, authority clarity, property security). The younger son sees tangled rope (mixed coordination and extraction). The Church sees a scaffold (temporary constraint with sunset through gradual reform). The analytical natural law observer sees a mountain (inherent to societies without state capacity) \u2014 but this is a false summit contradicted by evidence of contingency and reform.",
+    "directionality_logic": "Beneficiaries (male household heads, aristocratic lineages) experience low directionality (d \u2248 0.1\u20130.2) because they benefit and have arbitrage exit options. Victims (women, younger sons) experience high directionality (d \u2248 0.75\u20130.95) because they bear costs and have trapped/constrained exit options. The Church as organized reform agents experience moderate directionality (d \u2248 0.45) because they are constrained by existing authority but can intentionally lower extraction through institutional change. The synthetic directionality drives chi: beneficiaries experience negative or near-zero chi; victims experience high chi; reformers experience moderate chi.",
+    "mandatrophy_analysis": "RESOLUTION VIA CONSTRAINT DECOMPOSITION: The constraint decomposes into two structurally distinct stories: (1) kinship_law_property_coordination \u2014 genuine coordination function managing property transmission and succession (\u03b5 \u2248 0.25, Rope), and (2) kinship_law_patriarchal_extraction \u2014 asymmetric control over women and inheritance (\u03b5 \u2248 0.65, Snare). The tangled rope classification at moderate-high \u03b5 (0.52) reflects these two mechanisms operating together. The mandatrophy is resolved by showing that the classification is robust: the constraint exhibits both genuine coordination (prevents lineage fragmentation, clarifies succession) and asymmetric extraction (concentrates property in male hands, removes women's legal personality) from the same structural data. The perspectival variance arises from different agents' structural positions, not from measurement ambiguity. Women see pure extraction (snare) because they receive zero coordination benefit while bearing full extraction cost. Male household heads see pure coordination (rope) because they receive both coordination benefit and extraction benefit. The Church's scaffold perspective is empirically supported \u2014 Church reforms (consent requirements, dower rights, convent pathways) are demonstrably creating alternative structures that reduce women's suppression over time."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "feudal_succession_hierarchy",
+      "ecclesiastical_reform_pressure",
+      "women_property_rights_medieval"
+    ],
+    "dual_formulation_note": "Early medieval kinship law decomposes into property coordination (\u03b5 \u2248 0.25, Rope) and patriarchal extraction (\u03b5 \u2248 0.65, Snare). The tangled rope classification emerges from genuine coordination of inheritance alongside asymmetric concentration of control. The two mechanisms are structurally distinct but institutionally entangled \u2014 separating them would require counterfactual analysis of succession systems that managed property transmission without gendered control asymmetries."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "moderate_to_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "feudal_succession_hierarchy",
+      "ecclesiastical_reform_pressure"
+    ]
+  }
+}

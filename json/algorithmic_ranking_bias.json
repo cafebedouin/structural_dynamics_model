@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "algorithmic_ranking_bias",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "arb"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Algorithmic Ranking Bias in Digital Platforms",
+    "topic_domain": "platform_economics/computational_fairness",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "privileged_content_producers"
+    ],
+    "victims": [
+      "marginalized_creators",
+      "search_result_consumers",
+      "algorithmic_transparency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Marginalized Content Producers",
+      "comment": "PERSPECTIVE 1: MARGINALIZED CREATORS (SNARE) \u2014 Trapped by platform dependency. Cannot exit to alternative distribution channels with comparable reach. Algorithmic ranking bias systematically deprioritizes their content while they have no recourse, no transparency into ranking criteria, and no alternative platforms at scale. Maximum extraction experienced."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Search Result Consumers",
+      "comment": "PERSPECTIVE 2: SEARCH RESULT CONSUMERS (TANGLED ROPE) \u2014 Constrained by information dependency and lack of algorithmic literacy. Experience both coordination benefit (relevance ranking provides functional filtering) and extraction (ranking amplifies engagement metrics over accuracy, burying important information). High suppression due to opacity of ranking criteria and limited alternative search interfaces."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Platform Operators",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATORS (ROPE) \u2014 Experience ranking constraint as pure coordination. Algorithms solve the genuine problem of filtering content at scale. Can arbitrage between ranking schemes (ad-revenue optimization vs fairness) with low exit cost. Net beneficiary through engagement-driven ranking that serves advertising revenue."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Algorithmic Fairness Researchers",
+      "comment": "PERSPECTIVE 4: ALGORITHMIC FAIRNESS RESEARCHERS (TANGLED ROPE) \u2014 Organized but constrained by limited access to actual platform algorithms and training data. Derive benefits from problem framing and research funding, but constrained by platform opacity. Effective extraction stems from reliance on proprietary data and inability to implement findings at scale."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regulatory Bodies and Civil Society",
+      "comment": "PERSPECTIVE 5: REGULATORS AND CIVIL SOCIETY (SCAFFOLD) \u2014 Building alternative architectures through regulation (algorithmic impact assessments, ranking transparency mandates, algorithmic auditing), with sunset trajectory. EU Digital Services Act and similar regulations force disclosure and external auditing, creating temporary coordination burden (enforcement) that phases down as transparency becomes standard. Extraction is temporary and declining."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Fairness Theater",
+      "comment": "PERSPECTIVE 6: FAIRNESS THEATER (PITON) \u2014 Diversity statements, bias audits, and fairness certifications on platforms are largely performative. The theater persists (high theater_ratio) due to regulatory and reputational pressure, but the primary function \u2014 algorithmically fair ranking \u2014 remains unachieved. The constraint is maintained through inertia: platforms conduct audits without changing core ranking logic, and external certifiers lack enforcement power."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Natural Law (Inevitable Bias)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL/NATURAL LAW VIEW (MOUNTAIN) \u2014 From a computational perspective, ranking systems fundamentally embed the values of their designers and optimize against specified metrics. Some form of ranking bias is inherent to any large-scale filtering mechanism. However, this naturalizes what is actually a choice: *which* values are embedded, *which* metrics are optimized, and whether the bias benefits privileged or marginalized agents. The structural data reveals this as false summit \u2014 the bias is not immutable but contingent on design choices."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fairness_metric_incompleteness",
+      "question": "Which fairness metric adequately captures algorithmic ranking bias without creating new extraction opportunities?",
+      "resolution_mechanism": "Comparative analysis of fairness metrics (demographic parity, equalized odds, calibration) across real platforms; measurement of unintended consequences (e.g., demographic parity causing representation collapse in niche categories)",
+      "impact": "If one metric dominates: bias shifts to unconstrained dimensions. If no metric is complete: impossibility theorem prevents global optimization, enabling platform discretion and continued extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Incompleteness of fairness metrics under platform gaming"
+    },
+    {
+      "id": "transparency_paradox",
+      "question": "Does transparency of ranking criteria reduce or amplify algorithmic bias by enabling gaming of disclosed criteria?",
+      "resolution_mechanism": "Comparative study of platform ranking bias before and after transparency mandates; analysis of optimization against transparent vs opaque algorithms; detection of adversarial adaptation",
+      "impact": "If transparency increases gaming: regulatory mandates backfire, and the extraction mechanism shifts from algorithmic opacity to deliberate manipulation. If gaming is controllable: transparency is genuinely beneficial.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether transparency enables algorithmic gaming and bias amplification"
+    },
+    {
+      "id": "pluralistic_ranking_feasibility",
+      "question": "Can platforms operationally support multiple ranking algorithms optimizing different fairness criteria simultaneously, or does multi-objective ranking collapse to single-metric dominance?",
+      "resolution_mechanism": "Technical analysis of multi-objective ranking systems; user studies on ranking diversity; measurement of platform willingness to sacrifice engagement metrics for fairness",
+      "impact": "If feasible: scaffold perspective strengthened (alternatives exist). If infeasible: tangled rope or snare classification confirmed (no real exit for disadvantaged creators).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical and economic feasibility of pluralistic ranking systems"
+    },
+    {
+      "id": "suppression_mechanism_source",
+      "question": "Is algorithmic ranking bias primarily structural (inherent to optimization under engagement metrics) or maintained through deliberate suppression (platform choice to preserve engagement)?",
+      "resolution_mechanism": "Analysis of platform design decisions; examination of algorithmic changes under regulatory pressure; comparison of bias patterns across platforms with different explicit values",
+      "impact": "If structural: constraint is harder to disrupt (requires fundamental redesign). If deliberate: extraction is intentional, snare classification is correct.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural vs deliberate suppression in algorithmic ranking bias"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Algorithmic ranking bias in digital platforms creates a structural asymmetry between platform operators and content creators/consumers. Ranking algorithms optimize for engagement metrics that measurably favor certain content categories (sensational, emotionally charged, high-engagement content) while systematically deprioritizing other categories (niche communities, marginalized creators, factual reporting). This bias operates through three mechanisms: (1) Technical \u2014 optimization functions embed designer values and are blind to equity dimensions; (2) Structural \u2014 platforms benefit from engagement-driven ranking regardless of its distributional consequences; (3) Institutional \u2014 transparency theater (bias audits, fairness statements) creates regulatory compliance appearance while core ranking logic remains unchanged. The constraint exhibits all six DR types, revealing that what appears as an inevitable computational property (mountain) is actually a contingent institutional choice maintaining asymmetric extraction (tangled rope to snare, depending on perspective).",
+    "key_agents": [
+      "Platform Operators: Primary beneficiary (institutional/arbitrage) \u2014 capture advertising revenue and user engagement through ranking algorithms that prioritize engagement signals over equity or accuracy",
+      "Marginalized Content Creators: Primary victim (powerless/trapped) \u2014 systematically deprioritized by algorithmic ranking with no exit to alternative platforms at comparable scale",
+      "Search/Content Consumers: Secondary victim (moderate/constrained) \u2014 face information quality degradation from ranking bias; constrained by limited algorithmic literacy and platform dependency",
+      "Algorithmic Fairness Researchers: Organized actor (organized/constrained) \u2014 constrained by platform opacity and data access limitations; derive research benefit but cannot implement solutions at scale",
+      "Regulatory Bodies: Organized actor (organized/constrained) \u2014 building transparency and auditing requirements that create temporary enforcement burden with sunset trajectory",
+      "Fairness Theater: Institutional maintenance (institutional/arbitrage) \u2014 bias audits, diversity statements, fairness certifications persist through regulatory/reputational pressure despite minimal functional impact",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks treating algorithmic bias as natural law rather than institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Platform operators extract significant value through ranking that prioritizes engagement over equity. The extraction is not maximal (0.70+) because some coordination function exists \u2014 ranking does solve the problem of filtering content at scale \u2014 and because regulatory pressure is beginning to constrain the mechanism. Measurement trajectory shows increasing extractiveness from 0.38 to 0.58 over the interval as platforms scale and optimize more aggressively against engagement metrics. Suppression (0.65): High. Multiple barriers prevent exit and reduce alternatives: (1) platform-dependency creates switching costs for creators and consumers; (2) algorithmic opacity prevents informed critique or adaptation; (3) network effects concentrate reach in few platforms; (4) alternative ranking models lack capital for scaled deployment. Creators face suppression through limited visibility; consumers face suppression through information opacity. Theater ratio (0.68): High. The bias audit and fairness certification ecosystem is substantially performative. Platforms conduct algorithmic impact assessments and diversity studies while maintaining core engagement-optimization logic. The theater increased from 0.45 to 0.68 over the interval as regulatory pressure mounted, creating compliance theater without functional change. Regulators and civil society are beginning to penetrate the theater through transparency mandates (EU DSA, algorithmic auditing requirements), creating conditions for scaffold exit.",
+    "directionality_logic": "Directionality (d) measures each agent's structural position relative to the extraction flow. Platform operators as beneficiaries with arbitrage options derive low d (\u22480.10-0.15) \u2014 they can switch ranking schemes with minimal cost and benefit from multiple ranking models. Marginalized creators as victims with no exit options derive maximum d (\u22480.95) \u2014 trapped by platform dependency, zero arbitrage options. Consumers constrained by information dependency derive moderate-high d (\u22480.65-0.75) \u2014 they can theoretically switch platforms but face high cognitive and network switching costs. Regulatory bodies with constrained but organized exit options (building alternatives through mandated transparency) derive moderate d (\u22480.45-0.55). The application of f(d) sigmoid to these values shows how structured position generates experienced extractiveness: powerless + trapped agents experience chi at ~1.4x baseline; organized + constrained agents experience chi at ~0.65x baseline; institutional + arbitrage agents experience near-zero or negative chi.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival divergence. Platform operators perceive ranking as pure coordination (Rope) \u2014 they are solving a real filtering problem at scale. Marginalized creators perceive snare \u2014 trapped in a system designed to prioritize high-engagement content they cannot produce competitively. Consumers perceive tangled rope \u2014 the ranking system both filters content usefully and distorts their information access. Fairness researchers perceive partial organization (organized/constrained) building toward scaffold \u2014 regulatory mandates creating temporary enforcement burden (auditing, disclosure) with sunset trajectory as transparency becomes standard. The natural law perspective (mountain) naturalizes what is actually a design choice: that ranking should optimize engagement rather than equity, reach rather than accuracy. The structural data reveals this as false summit.",
+    "mandatrophy_analysis": "CLASSIFICATION RESOLUTION: The mandatrophy is resolved by recognizing that the 'inevitable' ranking bias framing (mountain) conflates two distinct claims: (1) that any ranking system embeds designer values (true, but trivial \u2014 applies to all ranking), and (2) that engagement-metric optimization is the only economically viable ranking choice (false \u2014 alternatives exist but require regulatory pressure to deploy). The constraint is Tangled Rope from the analytical perspective because ranking simultaneously solves a genuine coordination problem (filtering at scale) while enabling extraction (deprioritizing marginalized creators, distorting information access). The extraction is not intrinsic to ranking but contingent on metric choice. Regulatory intervention (transparency, external auditing, algorithmic impact assessment) shifts this toward Scaffold by creating temporary enforcement costs that decline as transparency norms mature. The piton classification (fairness theater) captures how compliance mechanisms proliferate without functional change, a diagnostic of false summit naturalization \u2014 the appearance of fairness work without algorithmic modification."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_algorithmic_opacity",
+      "creator_economic_dependence",
+      "information_ecosystem_fragmentation"
+    ],
+    "dual_formulation_note": "Algorithmic ranking bias is downstream of platform profit incentives and upstream of information quality degradation. Separate constraint stories exist for platform opacity (epistemic constraint) and creator economic dependence (labor constraint). This story models the coordination/extraction hybrid that emerges when ranking algorithms optimize against engagement metrics regardless of distributional consequences."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.72
+    }
+  ]
+}

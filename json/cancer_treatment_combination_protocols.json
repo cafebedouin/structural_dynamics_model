@@ -1,0 +1,221 @@
+{
+  "header": {
+    "constraint_id": "cancer_treatment_combination_protocols",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "canc_combo"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Cancer Treatment Combination Protocols",
+    "topic_domain": "healthcare/oncology/medical_regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharmaceutical_manufacturers",
+      "established_treatment_protocols",
+      "oncology_specialists_with_practice_licenses"
+    ],
+    "victims": [
+      "cancer_patients_seeking_alternatives",
+      "treatment_efficacy_research",
+      "personalized_medicine_development"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Terminal Patient Without Protocol Match",
+      "comment": "PERSPECTIVE 1: TERMINAL PATIENT WITHOUT PROTOCOL MATCH (SNARE) \u2014 Patient diagnosed with cancer type or stage not covered by approved combination protocols faces stark choice: follow standard protocol with known poor outcomes or face legal/medical barriers to alternative combinations. No exit. Maximum extraction \u2014 patient's desperation is the extraction mechanism. Suppression is maximal: medical licensing boards, insurance coverage decisions, and FDA status create multiple barriers to exit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Informed Patient Seeking Experimental Combination",
+      "comment": "PERSPECTIVE 2: INFORMED PATIENT SEEKING EXPERIMENTAL COMBINATION (TANGLED ROPE) \u2014 Patient with access to oncologist and resources faces constrained exit. Some genuine coordination exists (combination protocols do prevent harmful drug interactions and reduce wasteful trial-and-error). But extraction is embedded: off-protocol combinations require private pay, international travel, or access to clinical trials with their own gatekeeping. Moderate extraction with constrained mobility."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Pharmaceutical Manufacturer with Approved Combination",
+      "comment": "PERSPECTIVE 3: PHARMACEUTICAL MANUFACTURER WITH APPROVED COMBINATION (ROPE) \u2014 Sees combination protocols as coordination mechanism that protects market position and ensures predictable demand for their approved drugs. Benefits from standard protocols through insurance coverage, treatment guidelines, and reduced liability. Arbitrage exit available (can lobby for broader approval, can license competitors, can invest in alternative formulations). Net beneficiary \u2014 experiences constraint as enabling coordination of market demand."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Oncology Specialist Practicing Under Protocol Constraints",
+      "comment": "PERSPECTIVE 4: ONCOLOGY SPECIALIST UNDER PROTOCOL CONSTRAINTS (TANGLED ROPE) \u2014 Experienced oncologist with established practice sees protocols as both coordination (preventing harmful interactions, ensuring liability protection) and extraction (limiting clinical judgment, creating liability risk for deviations, requiring compliance documentation). Professional license depends on following approved protocols; deviating requires justifying to board, risking sanctions. Constrained mobility \u2014 can deviate but at career cost. Organized status reflects professional guild membership and collective licensing authority."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "FDA Approval and Guideline Enforcement Apparatus",
+      "comment": "PERSPECTIVE 5: FDA APPROVAL APPARATUS (PITON) \u2014 The regulatory machinery that certifies combination protocols has become substantially performative. Theater includes lengthy approval timelines, byzantine trial design requirements, and documentation burden that grows independent of actual safety/efficacy gains. The apparatus persists through institutional inertia \u2014 it is the recognized authority structure for protocol legitimacy \u2014 but its functional verification capacity has degraded as combination complexity exceeds human review capacity. Theater ratio 0.68 reflects that much FDA evaluation activity is ritual compliance rather than substantive efficacy assessment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Cancer Research Community Constrained by Protocol Standardization",
+      "comment": "PERSPECTIVE 6: CANCER RESEARCH COMMUNITY (TANGLED ROPE) \u2014 Academic and independent researchers benefit from standardized protocols (reproducible data, comparable outcomes, baseline for novel combinations) while being constrained by them (funding concentrated on approved protocols, publication bias against off-protocol research, difficulty recruiting patients for non-standard arms). Powerful institutional position but mobile exit (can publish internationally, can conduct trials in other jurisdictions). Moderate extraction with genuine coordination function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Institutional Structure Perspective)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Constraint exhibits genuine coordination (preventing harmful drug interactions, ensuring reproducible outcomes, enabling comparative research) layered with asymmetric extraction (pharmaceutical revenue protection, specialist credential protection, regulatory capture). Classification requires both beneficiary/victim analysis and enforcement mechanisms to be present \u2014 all three are structurally evident. Theater component (0.68) indicates performative elements but not sufficient for piton (which requires theater >= 0.70 and degraded primary function). Primary function remains coordination, not pure performance."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "efficacy_innovation_tradeoff",
+      "question": "Do standardized combination protocols genuinely improve patient outcomes on average, or do they primarily protect established market positions while suppressing higher-efficacy alternatives?",
+      "resolution_mechanism": "Longitudinal outcome comparison: patients on approved standard protocols vs patients on non-standard combinations (matched for cancer type/stage/demographics). Analysis of time lag between novel combinations showing efficacy and FDA approval for standard protocols.",
+      "impact": "If standard protocols improve outcomes: constraint is primarily coordination (Rope emphasis). If outcomes are equivalent or worse: constraint is primarily extraction (Snare emphasis). If mixed: Tangled Rope confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether standardized protocols improve outcomes or suppress innovation"
+    },
+    {
+      "id": "personalized_medicine_obsolescence",
+      "question": "As genomic profiling and AI-driven drug selection mature, do fixed combination protocols become structurally obsolete, making the suppression mechanism a vestigial protection of outdated institutional arrangements?",
+      "resolution_mechanism": "Tracking adoption of personalized treatment selection vs protocol-driven selection; comparison of outcomes between protocol-selected and genomically-selected combinations; timeline of institutional resistance to protocol replacement.",
+      "impact": "If genomic selection demonstrably superior: constraint is degrading toward piton status. If institutional barriers prevent adoption despite superiority: constraint has become pure extraction mechanism protecting obsolete institutions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether genomic profiling and AI rendering protocols obsolete"
+    },
+    {
+      "id": "international_variation_in_protocol_rigor",
+      "question": "Do countries with less rigid protocol enforcement show meaningfully different patient outcomes (better or worse) than those with strict FDA-equivalent governance?",
+      "resolution_mechanism": "Comparative outcome analysis between jurisdictions with different protocol enforcement strictness; analysis of protocol-deviation frequency and associated outcome variance in high-variance vs low-variance enforcement regimes.",
+      "impact": "If less-rigid enforcement produces better outcomes: protocols are extractive constraints. If worse outcomes: protocols provide genuine safety function despite theater. If equivalent: theater dominates safety contribution.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "International variation in protocol enforcement and outcomes"
+    },
+    {
+      "id": "commercial_bias_in_combination_selection",
+      "question": "To what extent do approved combination protocols reflect pharmaceutical company commercial interests (which combinations are patented/profitable) vs pure efficacy optimization?",
+      "resolution_mechanism": "Analysis of approved protocol composition: are combinations preferentially selected from same-company drug portfolios? Are superior single-agent or competing-company combinations excluded? Comparison of approval timeline for profitable vs non-profitable combinations.",
+      "impact": "High commercial bias indicates primary extraction mechanism. Low bias indicates genuine coordination. Evidence of exclusion of superior alternatives indicates constraint is suppressing innovation.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Commercial bias in protocol combination selection"
+    },
+    {
+      "id": "informed_consent_paradox",
+      "question": "Can patients genuinely consent to standard protocol when alternatives are legally/medically inaccessible, or does the constraint make consent theater?",
+      "resolution_mechanism": "Analysis of informed consent disclosures: are alternative combinations mentioned and their unavailability explained? Patient surveys on perceived choice and understanding of alternatives. Legal analysis of whether informed consent can be genuine when alternatives are systematically unavailable.",
+      "impact": "If alternatives are disclosed and accessible: consent is genuine (coordination). If alternatives are hidden or presented as 'not options': consent is theater (extraction). If legally/medically inaccessible but disclosed: consent is informed but not free (suppression mechanism evident).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether informed consent can be genuine when alternatives are inaccessible"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Standardized cancer treatment combination protocols represent a constraint that exhibits simultaneous coordination and extraction across different patient and institutional positions. These protocols (chemotherapy combination regimens, targeted therapy combinations, immunotherapy protocols) were initially developed to prevent harmful drug-drug interactions and optimize sequential treatment efficacy. However, the constraint has evolved to embed significant asymmetric extraction: pharmaceutical manufacturers maintain protected market positions through approved combinations, oncology specialists maintain practice authority through protocol compliance, and regulatory apparatus maintains institutional relevance through approval gatekeeping. Simultaneously, the coordination function remains genuine \u2014 protocols do prevent some harmful interactions and enable comparative research. The extractiveness has increased over the 30-year measurement interval (0.35 \u2192 0.61) primarily through intensification of pharmacoeconomic barriers, while theater ratio has increased (0.52 \u2192 0.72) as regulatory approval processes have become increasingly formalized and documentation-heavy. The constraint is neither pure coordination (rope) nor pure extraction (snare) but a hybrid where both mechanisms operate structurally.",
+    "key_agents": [
+      "Terminal patients without protocol match: Powerless/trapped victims (maximum extraction) \u2014 face binary choice between standard protocol with poor prognosis or access barriers to alternatives",
+      "Informed patients seeking experimental combinations: Moderate/constrained victims and partial beneficiaries \u2014 benefit from some safety coordination but face cost barriers and medical/legal constraints on options",
+      "Pharmaceutical manufacturers with approved combinations: Institutional/arbitrage beneficiaries \u2014 capture market protection, pricing power, and reduced liability through protocol standardization",
+      "Oncology specialists: Organized/constrained actors \u2014 benefit from protocol standardization (liability protection, practice authority) but constrained by clinical judgment limitations and licensing compliance requirements",
+      "FDA and regulatory apparatus: Institutional/arbitrage beneficiaries \u2014 maintain institutional relevance and gatekeeping authority; increasingly performative in verification function",
+      "Cancer research community: Powerful/mobile actors with mixed benefits and constraints \u2014 benefit from standardization (reproducible data) but constrained by funding concentration and publication bias",
+      "Analytical observer: Views constraint as hybrid coordination-extraction with increasing theater component indicating potential piton degradation"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts significantly through four mechanisms: (1) pharmaceutical market protection enabling premium pricing for approved combinations, (2) oncology specialist gatekeeping of off-protocol combinations, (3) insurance coverage decisions enforcing protocol adherence, (4) psychological extraction from trapped patients' desperation. However, the extraction is not maximal (0.70+) because genuine coordination function exists \u2014 drug-drug interaction prevention, outcome reproducibility, adverse event monitoring \u2014 these are real services with real value. The measurement trajectory (0.35 \u2192 0.61) shows extraction intensifying as pharmacoeconomic barriers strengthen. Suppression (0.62): High. Multiple mechanisms suppress alternatives: legal barriers (prescribing restrictions), economic barriers (off-protocol treatment costs), institutional barriers (licensing sanctions for deviation), information barriers (publication bias against off-protocol research), and psychological barriers (learned helplessness from trapped patients). Theater ratio (0.68): Moderate-high. FDA approval processes, guideline committees, and outcome documentation have become increasingly ritualized. Much of the activity involves compliance with documentation requirements, committee review procedures, and approval timelines that grow independent of actual safety/efficacy gains. Reviewers cannot directly verify combination efficacy in every cancer subtype; instead, they verify adherence to trial design protocols, statistical thresholds, and precedent. The theater is not yet sufficient for piton classification (would require >= 0.70 and degraded primary function) because the coordination function remains functional, but trajectory suggests piton risk if theater continues rising.",
+    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon (standardized combination protocols) is experienced as snare (trapped patient), rope (pharma manufacturer), tangled rope (specialist, researcher), and piton (regulatory apparatus) depending on structural position. The gap reflects genuine structural differences in extraction mechanisms and exit options, not mere disagreement. The trapped patient literally cannot exit and bears maximum extraction cost. The pharma manufacturer can arbitrage (lobby for broader approval, license to competitors, invest in alternatives) and benefits from coordination. The specialist can deviate but at professional cost (constrained not trapped). The regulatory apparatus maintains institutional position through performative approval processes. These are not different opinions about the same constraint \u2014 they are different structural relationships to the extraction and coordination mechanisms.",
+    "directionality_logic": "Directionality values (d, where 0.0 = full beneficiary, 1.0 = full target) are derived from structural position: Pharmaceutical manufacturers with approved combinations occupy beneficiary + arbitrage position (low d \u2248 0.10, institutional canonical), producing negative effective extraction (they benefit from the constraint). Trapped terminal patients occupy victim + trapped position (high d \u2248 0.95, powerless canonical), producing maximal effective extraction (they bear full cost). Specialists occupy mixed position: beneficiary (through credential protection + liability management) + constrained exit (can deviate but at career cost), producing intermediate d \u2248 0.35, moderate-institutional hybrid. Research community occupies victim + mobile position (high d but mobile exit reduces experienced extraction through publishing options), d \u2248 0.65. The engine's sigmoid f(d) transforms these d values into experienced chi scalars that vary by time horizon and scope. Powerless/trapped position produces f(d) \u2248 1.42, institutional/arbitrage produces f(d) \u2248 -0.12. This structural diversity in d values across perspectives is what generates the perspectival gap.",
+    "mandatrophy_analysis": "HYBRID COORDINATION-EXTRACTION: This constraint resolves potential mandatrophy by demonstrating genuine structural evidence of both coordination and extraction. Coordination function is real: preventing harmful drug-drug interactions, enabling comparative outcome research, standardizing adverse event monitoring, reducing wasteful trial-and-error. Extraction function is also real: pharmaceutical revenue protection, specialist credential gatekeeping, regulatory apparatus institutional protection, and most importantly, systematic suppression of alternatives available to trapped patients. The classification as tangled rope (not rope or snare) reflects that both mechanisms are structurally essential \u2014 removing the coordination would risk patient harm from interactions, but removing the extraction would require enabling access to non-approved combinations. The measurement trajectory (theater rising from 0.52 to 0.72 while extractiveness rises from 0.35 to 0.61) shows that the constraint is drifting toward piton: the theater component is intensifying while the coordination function's necessity is being questioned by genomic medicine advances. The mandate is neither purely that protocols are good (which would justify treating as rope) nor purely that they extract (which would justify snare) but that institutional structures have embedded extraction into what began as genuine coordination, and that embedding is becoming increasingly difficult to justify as scientific alternatives mature."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "pharmaceutical_market_pricing_power",
+      "cancer_patient_informed_consent_framework",
+      "personalized_medicine_genomic_profiling",
+      "medical_licensing_and_specialist_gatekeeping"
+    ],
+    "dual_formulation_note": "Cancer treatment combination protocols coordinate multiple functions simultaneously: drug interaction prevention (information_standard type), resource allocation (hospital/insurance coverage decisions), and identity coordination (specialist licensing and professional authority). This story treats the constraint holistically. Decomposed analysis would separate: (1) pharmacological safety constraints (coordination-dominant, lower extractiveness), (2) pharmaceutical market protection (extraction-dominant), (3) regulatory gatekeeping (increasingly performative/piton-like). Current story emphasizes integrated tangled rope classification; decomposition would show coordination floor at 0.30-0.40 (safety), extraction component at 0.55-0.70 (market/regulatory), theater component at 0.65-0.75 (regulatory ritual)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "supply_chain_concentration",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "scc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Supply Chain Concentration and Extraction",
+    "topic_domain": "economic/logistics/manufacturing",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dominant_logistics_firms",
+      "consolidated_manufacturers"
+    ],
+    "victims": [
+      "small_suppliers",
+      "dependent_nations",
+      "consumer_price_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Small Supplier",
+      "comment": "PERSPECTIVE 1: SMALL SUPPLIER (SNARE) \u2014 Trapped by capital requirements, contractual lock-in, and switching costs. Single large customer dependency creates maximum extraction. No viable alternative supply chains. Bears full cost of logistics monopoly."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Tier Manufacturer",
+      "comment": "PERSPECTIVE 2: MID-TIER MANUFACTURER (TANGLED ROPE) \u2014 Constrained by scale requirements and logistics integration costs. Benefits from access to consolidated supply networks (genuine coordination function) but bears asymmetric extraction through margin compression and just-in-time inventory risk transfer."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Logistics Incumbent",
+      "comment": "PERSPECTIVE 3: LOGISTICS INCUMBENT (ROPE) \u2014 Experiences supply chain concentration as pure coordination: routing optimization, economies of scale, network effects. Can arbitrage between suppliers and customers. Net beneficiary with exit options."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Supply-Dependent Nation",
+      "comment": "PERSPECTIVE 4: SUPPLY-DEPENDENT NATION (TANGLED ROPE) \u2014 Organized agents (nation-states) experience supply concentration as both coordination and extraction. Infrastructure integration benefits exist alongside vulnerability to supply shocks, price spikes, and geopolitical leverage. Genuine coordination function (integrated supply reduces costs) combined with asymmetric extraction (supply denial as weapon)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Apparatus",
+      "comment": "PERSPECTIVE 5: REGULATORY APPARATUS (PITON) \u2014 Antitrust frameworks and supply chain resilience mandates persist but show degraded function. Regulatory authority has arbitrage (can select enforcement targets) but enforcement capacity has atrophied relative to supply chain complexity. Theater ratio (0.48) reflects genuine regulation mixed with performative compliance rituals."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Efficiency Inevitability View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / EFFICIENCY VIEW (MOUNTAIN) \u2014 From a civilizational perspective, supply chain concentration appears as an immutable consequence of capital efficiency, transportation physics, and economies of scale. The observer risks naturalizing what is a contingent institutional arrangement (legal frameworks enabling consolidation, regulatory choices about merger review, investment capital concentration) as inherent economic law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "concentration_versus_resilience_tradeoff",
+      "question": "Is supply chain concentration a necessary tradeoff for efficiency, or could resilient networks achieve comparable efficiency with distributed redundancy?",
+      "resolution_mechanism": "Comparative analysis of supply chain cost structures pre/post concentration; simulation of resilient network architectures; pandemic supply data showing concentration failure costs",
+      "impact": "If concentration necessary: extraction is legitimate coordination cost (Rope from more perspectives). If resilient alternatives exist: concentration is extractive choice (Snare from more perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether supply concentration is inevitable or chosen for extraction"
+    },
+    {
+      "id": "regulatory_capture_depth",
+      "question": "To what extent does the logistics industry capture regulatory standards for supply chain 'efficiency' that entrench concentration?",
+      "resolution_mechanism": "Analysis of regulatory comment periods; comparison of proposed vs final supply chain standards; personnel flow between industry and regulatory bodies",
+      "impact": "If high capture: regulatory framework is inertial (Piton classification confirmed, not mountain). If low: regulation represents genuine public interest (Rope classification strengthened).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Depth of industry capture in supply chain regulation"
+    },
+    {
+      "id": "small_supplier_coalition_formation",
+      "question": "Can small suppliers overcome collective action barriers to form alternative supply networks, or are the coordination costs prohibitive?",
+      "resolution_mechanism": "Historical analysis of supplier cooperatives; cost analysis of alternative logistics platforms; game-theoretic modeling of coalition formation under extraction pressure",
+      "impact": "If coalition formation viable: powerless agents can exit (Snare shifts toward Tangled Rope). If coordination costs prohibitive: trap is structural (Snare classification sustained).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Viability of small supplier coalitions as escape from concentration"
+    },
+    {
+      "id": "geopolitical_fragmentation_risk",
+      "question": "Will geopolitical fragmentation (trade wars, sanctions, regionalism) force deliberate supply chain decentralization, or will concentration increase as security mechanism?",
+      "resolution_mechanism": "Scenario modeling; historical analysis of supply chain response to geopolitical shocks; investment flows into reshoring/decentralization vs consolidation",
+      "impact": "If fragmentation forces decentralization: concentration extraction window is time-bounded. If concentration intensifies under threat: extractive mechanism strengthens.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Geopolitical direction of future supply chain organization"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Supply chain concentration represents the structural consolidation of logistics, manufacturing, and distribution into a small number of dominant firms and platforms. This constraint exhibits a genuine hybrid structure: it solves real coordination problems (routing optimization, inventory management, economies of scale, risk pooling) while simultaneously enabling asymmetric extraction through market concentration, margin compression, and dependency lock-in. The constraint's evolution shows extractiveness rising from 0.35 to 0.58 as consolidation has accelerated, while theater ratio remains moderate (0.48) because the coordination function is genuinely valuable \u2014 manufacturers do get lower costs through concentrated logistics \u2014 even as extraction mechanisms intensify. The perspectival gap reveals why supply chain concentration persists despite its extractive character: beneficiaries (logistics firms, large manufacturers) experience it as pure coordination; trapped suppliers experience it as pure extraction; organized nation-states experience it as hybrid with geopolitical vulnerability; the analytical observer risks naturalizing it as an immutable economic law when it is actually contingent on legal frameworks enabling consolidation.",
+    "key_agents": [
+      "Small Suppliers: Primary victims (powerless/trapped) \u2014 locked into single-customer relationships with no exit; contractual lock-in and capital requirements prevent alternative paths",
+      "Mid-Tier Manufacturers: Secondary victims (moderate/constrained) \u2014 benefit from access to concentrated supply networks but bear margin compression and just-in-time risk transfer",
+      "Logistics Incumbents: Primary beneficiaries (institutional/arbitrage) \u2014 capture economies of scale and network effects; can arbitrage between suppliers and customers",
+      "Dominant Manufacturers: Secondary beneficiaries (institutional/arbitrage) \u2014 access to consolidated logistics reduces supply chain costs; can pass extraction costs to smaller suppliers",
+      "Supply-Dependent Nations: Organized agents (organized/constrained) \u2014 benefit from integrated global supply but vulnerable to supply shocks and geopolitical leverage",
+      "Regulatory Bodies: Institutional observers (institutional/arbitrage) \u2014 antitrust frameworks persist but show degraded enforcement capacity relative to supply chain complexity",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing consolidation as inevitable economic law rather than contingent institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint exhibits strong extraction mechanisms (margin compression, dependency lock-in, price-setting power) but the extraction is bundled with genuine coordination value. Suppliers get access to integrated logistics that reduce their costs; manufacturers get supply reliability. The extraction is real (small suppliers pay a rent-seeking margin to logistics firms) but not maximal because the coordination function is authentic. The rise from 0.35 to 0.58 over the interval reflects increasing consolidation and declining small-supplier alternatives. Suppression (0.65): High. Barriers to exit include capital requirements for alternative supply networks, switching costs (supplier qualification, integration), contractual lock-in through long-term agreements, and information asymmetry (logistics firms control routing and pricing algorithms). Regulatory barriers (compliance with consolidated logistics standards) also suppress alternatives. Theater ratio (0.48): Moderate. The logistics industry uses both genuine optimization and performative efficiency language. Regulatory compliance and 'supply chain resilience' narratives add theater without proportional functional benefit. The moderate value reflects that the coordination function is real \u2014 improved routing and inventory management do reduce costs \u2014 but significant portions of the operational overhead are theatrical compliance with consolidated platforms.",
+    "perspectival_gap": "The perspectival gap is fundamental. The logistics incumbent sees a Rope constraint \u2014 they are solving the coordination problem of routing goods efficiently. The small supplier sees a Snare \u2014 they are locked into dependency with no exit. The mid-tier manufacturer sees a Tangled Rope \u2014 they benefit from consolidated logistics but pay extraction margins. The organized nation-state sees a Tangled Rope with geopolitical risk \u2014 genuine supply integration benefits alongside vulnerability to supply denial. The regulatory body sees a Piton \u2014 the antitrust framework persists but enforcement capacity has atrophied. The civilizational analytical observer risks seeing a Mountain \u2014 supply concentration appears as an immutable efficiency law \u2014 but the structural data reveals this as naturalization of contingent legal and institutional choices (merger regulations, investment capital concentration, intellectual property frameworks enabling platform lock-in).",
+    "directionality_logic": "Directionality values differ sharply across power atoms due to structural position relative to extraction flow. Logistics firms (institutional/arbitrage) have d \u2248 0.10 \u2014 they are net beneficiaries with high exit optionality and capture positive extracted rents. Small suppliers (powerless/trapped) have d \u2248 0.95 \u2014 they bear full extraction and have no exit. The engine derives d from beneficiary/victim declarations: logistics firms listed as beneficiaries receive low d \u2192 low/negative f(d); small suppliers listed as victims receive high d \u2192 high f(d). Mid-tier manufacturers (moderate/constrained) have d \u2248 0.60 \u2014 they experience both costs (margin compression) and benefits (access), producing moderate directionality. Organized nation-states (organized/constrained) have d \u2248 0.55 \u2014 they have some policy agency but face genuine supply vulnerability. The piton classification derives not from high directionality chi but from the theater gate: regulatory frameworks persist with moderate functional value (theater ratio 0.48) despite atrophied enforcement capacity.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy between pure coordination and pure extraction by showing that both functions genuinely exist and are not resolvable into a single type. The coordination function is real: consolidated supply chains do reduce logistics costs, improve inventory efficiency, and enable economies of scale that benefit consumers through lower prices. The extraction function is also real: logistics incumbents capture rents through market concentration, small suppliers bear margin compression and dependency risk, and geopolitical vulnerability is weaponized (supply denial). The Tangled Rope classification accurately captures this hybrid. The false summit (mountain perspective) naturalizes consolidation as inevitable efficiency, when it is actually contingent on regulatory choices about merger review, antitrust enforcement, investment concentration, and platform lock-in mechanisms. The perspectival gap reveals that the constraint is not 'really' one type viewed from different angles \u2014 it genuinely instantiates different extraction/coordination ratios for different observers. For the logistics firm it is mostly coordination (Rope). For the small supplier it is mostly extraction (Snare). For organized nation-states it is hybrid with geopolitical amplification (Tangled Rope). The mandatrophy is resolved by accepting that supply chain concentration is a structurally legitimate tangled rope (both coordination and extraction) whose proportions vary across perspectives and whose legal/institutional contingency makes future decomposition possible."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "semiconductor_supply_dependency",
+      "rare_earth_concentration",
+      "just_in_time_fragility"
+    ],
+    "dual_formulation_note": "Supply chain concentration is upstream of specific commodity dependencies (semiconductors, rare earths) and just-in-time vulnerability. Each commodity constraint has its own \u03b5 reflecting the empirical concentration in that sector; the general supply chain concentration story models the structural mechanism enabling all sector-specific extractions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.62
+    }
+  ]
+}

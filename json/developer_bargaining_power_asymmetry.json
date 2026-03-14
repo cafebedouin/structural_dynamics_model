@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "developer_bargaining_power_asymmetry",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "devbargain"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Developer Bargaining Power Asymmetry in Platform Ecosystems",
+    "topic_domain": "economic/technology/labor",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "incumbent_developers"
+    ],
+    "victims": [
+      "independent_developers",
+      "emerging_developer_cohorts"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Independent Developer",
+      "comment": "PERSPECTIVE 1: INDEPENDENT DEVELOPER (SNARE) \u2014 Structurally trapped. Network effects create single dominant platform; switching costs are prohibitive (customer base, reputation, ecosystem dependencies). Developer cannot exit without abandoning accumulated capital. Platform enforces terms through dominance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Tier Developer Team",
+      "comment": "PERSPECTIVE 2: MID-TIER DEVELOPER TEAM (TANGLED ROPE) \u2014 Constrained by switching friction and customer lock-in, but capable of platform migration or diversification. Benefits from platform coordination (distribution, payment processing, security infrastructure) while bearing asymmetric extraction through revenue sharing, policy changes, algorithm shifts, and forced feature adoption."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATOR (ROPE) \u2014 Experiences constraint as coordination mechanism: providing developer tools, ecosystem management, and growth infrastructure solves the distribution problem for both parties. Net beneficiary through commission structure, ecosystem control, and data access. High exit options (can modify terms unilaterally)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Developer Collective",
+      "comment": "PERSPECTIVE 4: DEVELOPER COLLECTIVE (TANGLED ROPE) \u2014 Organized agents (developer unions, advocacy coalitions, open-source communities) are building alternative distribution pathways and negotiating collectively. Experience real coordination benefits from platforms while mounting opposition to asymmetric extraction. Mobile through coalition formation and alternative infrastructure deployment (decentralized platforms, open app stores)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Regulatory Framework",
+      "comment": "PERSPECTIVE 5: REGULATORY FRAMEWORK (PITON) \u2014 App store review policies and developer agreements show high theater ratio (0.48): extensive documentation, community guidelines, appeals processes that appear to provide developer protection but function largely performatively. Many policies are unenforced, selectively applied, or reversed without warning. The regulatory theater persists through institutional inertia despite low verification of actual fairness outcomes."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Network Effects View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NETWORK EFFECTS VIEW (MOUNTAIN) \u2014 From a universal perspective, network effects and winner-take-most dynamics in platform markets create a structural inevitability: one dominant platform emerges, and developers must bargain from structural weakness. This perspective sees asymmetric bargaining as an immutable feature of network economics. However, structural data reveals this as a false summit \u2014 regulatory intervention, platform competition, and decentralized alternatives are structurally possible."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "network_effects_necessity",
+      "question": "Are network effects and winner-take-most outcomes structurally inevitable in app platforms, or are they contingent on regulatory and competitive choices?",
+      "resolution_mechanism": "Comparative analysis of platform markets with strong vs weak antitrust enforcement; emergence of multi-platform equilibria in jurisdictions with platform interoperability mandates; success of alternative platforms (decentralized app stores, web3 ecosystems) in specific verticals",
+      "impact": "If structurally inevitable: mountain classification confirmed, bargaining asymmetry is natural law. If contingent: tangled_rope/snare classification confirmed, asymmetry is enforced institutional arrangement.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether network effects in app platforms are structurally inevitable"
+    },
+    {
+      "id": "switching_cost_reduction_trajectory",
+      "question": "Are switching costs (customer migration, reputation transfer, ecosystem replication) declining faster than platform dependency increases?",
+      "resolution_mechanism": "Time series of switching cost proxies (developer migration rates, alternative app store adoption, decentralized platform growth); correlation with platform policy changes and regulatory action",
+      "impact": "If costs declining faster: constrained exit becomes mobile, shifting classification from snare toward rope. If costs increasing faster: trapped exit persists, snare classification stable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Switching cost trajectory relative to platform dependency"
+    },
+    {
+      "id": "collective_bargaining_viability",
+      "question": "Can developer coalitions actually exercise countervailing power through collective action, or are collective efforts systematically neutralized through selective punishment and fragmentation?",
+      "resolution_mechanism": "Outcome tracking of developer union organizing efforts, collective negotiation attempts, and antitrust lawsuits; analysis of platform retaliation patterns; measurement of extracted concessions per unit of collective pressure",
+      "impact": "If viable: organized power atom produces meaningful leverage, classification shifts toward rope or scaffold. If neutralized: powerless classification stable, bargaining asymmetry persists despite organization.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether collective developer action can exercise countervailing power"
+    },
+    {
+      "id": "theater_ratio_authenticity",
+      "question": "Do app store review policies and developer agreements materially protect developers from arbitrary policy changes and discriminatory enforcement, or are they primarily performative?",
+      "resolution_mechanism": "Audit of policy enforcement consistency across developers; tracking of policy changes that retroactively penalize existing developers; analysis of appeals success rates and appeal transparency; comparison of stated vs actual developer protections",
+      "impact": "If authentic: theater_ratio should be lower (~0.25), classification shifts away from piton. If performative: theater_ratio remains high, piton classification confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether developer protection policies are authentic or performative"
+    },
+    {
+      "id": "alternative_platform_viability",
+      "question": "Can alternative distribution channels (decentralized app stores, web3 marketplaces, open app markets) achieve sufficient developer and user adoption to create genuine platform competition?",
+      "resolution_mechanism": "Growth trajectories of alternative platforms; developer churn rates toward alternatives; user retention on alternatives; correlation with mainstream platform policy tightening",
+      "impact": "If viable: exit options shift from trapped toward mobile for significant developer cohorts, classification shifts from snare toward tangled_rope. If not viable: platforms remain natural monopolies, asymmetry persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of alternative distribution platforms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The developer bargaining power asymmetry in platform ecosystems represents a structural extraction mechanism where platforms simultaneously provide essential coordination infrastructure (payment processing, distribution, security, user acquisition) and enforce extractive terms through network dominance. Independent developers face a structural constraint: they need platform access to reach users at scale, but the platform operator controls all terms unilaterally, can modify them with minimal notice, and can enforce them through algorithm changes or policy enforcement. The constraint exhibits high extractiveness (0.58) because platform operators extract through revenue sharing (15-30%), unpredictable policy changes, algorithm suppression of non-compliant developers, forced feature adoption, and data access asymmetry. Suppression is high (0.65) because switching costs are severe: customer bases are locked into platform ecosystems, developer reputation and ratings are platform-specific, integration costs are substantial, and network effects create a functional single-platform market in most categories. Theater ratio (0.48) reflects that app store review policies and developer agreements appear to provide protection but function largely performatively \u2014 policies are selectively enforced, frequently changed retroactively, and appeals processes are opaque. The constraint exhibits real coordination functions (platforms genuinely solve distribution and discovery problems) alongside asymmetric extraction, making it a canonical tangled_rope. The bifurcated victim/beneficiary relationship (platform operators and incumbent developers benefit; emerging developers and non-aligned cohorts pay costs) creates perspectival divergence: established developers with historical data and customer bases see rope-like coordination; new developers see snare-like entrapment.",
+    "key_agents": [
+      "Platform Operators (Apple, Google, Meta): Primary beneficiary (institutional/arbitrage) \u2014 control ecosystem, extract commission, capture data, enforce unilateral terms",
+      "Independent Developers: Primary victim (powerless/trapped) \u2014 structurally dependent on single platform, locked-in customer bases, face extraction through commission, policy changes, algorithm suppression",
+      "Mid-Tier Developer Teams: Secondary victim (moderate/constrained) \u2014 can migrate but face switching friction; experience mixed coordination benefits and extraction costs",
+      "Incumbent Developers: Secondary beneficiary (institutional/arbitrage) \u2014 established position, customer lock-in works in their favor, can influence policy through scale and historical data",
+      "Developer Collectives: Organized opposition (organized/mobile) \u2014 unions, advocacy coalitions, open-source communities building alternative pathways and collective bargaining",
+      "Regulatory Frameworks: Institutional theater (institutional/mobile) \u2014 policy facades with selective enforcement; antitrust scrutiny and interoperability mandates shifting dynamics",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent network effects as immutable economic law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Platform operators extract through multiple channels: commission structures (15-30%), unpredictable policy enforcement that penalizes non-preferred developers, algorithm changes that suppress visibility of competing applications, forced integration of new platform features, and control over payment flows. The value reflects that extraction is substantial but not total \u2014 platforms do provide genuine value (distribution, discovery, payment processing) that justifies some commission. The extraction has increased from 0.38 to 0.58 over the interval as platforms have consolidated market power and tightened developer restrictions. Suppression (0.65): High. Multiple barriers prevent developer exit: (1) network effects lock customers into single platform; (2) developer reputation and rating history are platform-specific and non-transferable; (3) rebuilding customer bases on alternative platforms requires redundant development effort; (4) alternative platforms lack sufficient user populations to sustain most developers; (5) dominance of app stores means developers cannot bypass platform payment systems. However, suppression is not absolute (0.85+) because some developers successfully migrate, open-source alternatives are emerging, and regulatory pressure is creating interoperability options. Theater ratio (0.48): Moderate. App store review policies, developer agreements, and appeals processes create an appearance of fair governance: extensive guidelines, published standards, appeals mechanisms. However, enforcement is opaque and selective: controversial policy changes are retroactively applied, appeals success rates vary by developer profile, policy interpretations shift without notice, and enforcement actions are inconsistently applied across similar violations. Theater has increased from 0.35 to 0.48 as platforms have deployed more sophisticated policy documentation to manage regulatory scrutiny \u2014 the performative apparatus has expanded.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival divergence based on structural position. The platform operator sees coordination (Rope) \u2014 they are solving the legitimate distribution and discovery problem for developers and users. Incumbent developers with historical data advantage see rope-like coordination \u2014 the platform amplifies their reach and handles complexity they couldn't manage independently. Mid-tier developers see tangled rope \u2014 genuine coordination benefits alongside extractive terms. Independent new developers see snare \u2014 they face steep barriers to exit and extraction with minimal benefit. Developer collectives see a temporary problem being solved through regulatory and competitive pressure (Scaffold/Tangled Rope with sunset) \u2014 antitrust action, interoperability mandates, and emerging alternatives are building alternative pathways. The regulatory framework appears as performative piton \u2014 extensive policy apparatus with selective enforcement. The civilizational analytical observer risks seeing network effects as immutable (Mountain) \u2014 but structural alternatives (regulatory mandates, decentralized platforms, interoperability standards) reveal this as a false summit. The perspectival gap reveals the actual conflict: platform operators and incumbent developers experience net benefit and low extraction; new and independent developers experience net extraction with minimal coordination benefit.",
+    "directionality_logic": "Each perspective's directionality value (d) is derived from the agent's structural position relative to extraction flow. Platform operators are net beneficiaries with high arbitrage options (can set terms, enforce unilaterally, exit any developer relationship costlessly) \u2014 produces low d \u2192 low/negative \u03c7. Independent developers are net targets with trapped exit (cannot exit without losing customer base, reputation, access to payments) \u2014 produces high d \u2192 high \u03c7. Mid-tier developers occupy intermediate position: face switching costs (constrained exit) but have some negotiating power through scale \u2014 produces moderate d. Incumbent developers are hybrid: face formal platform policies but have negotiating power through established position and historical data \u2014 produces lower d than expected from institutional power alone because their position is contingent on platform terms. Developer collectives shift from powerless/trapped to organized/mobile through coalition formation \u2014 produces lower d because collective exit options (switching, regulatory action, alternative platforms) are more available than individual exit. The platform's piton classification derives from theater gates: performative policy apparatus with selective enforcement, not from high experienced extraction per se.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by disambiguating between genuine coordination and enforced extraction. Tangled rope classification requires: (1) genuine coordination function (platforms solve distribution/discovery/payment problems that developers couldn't solve independently \u2014 TRUE); (2) asymmetric extraction (platform operators extract value beyond coordination costs through dominance \u2014 TRUE); (3) active enforcement (unilateral policy changes, algorithm enforcement, selective term modification \u2014 TRUE). All three gates pass. The mandatrophy is avoided because the constraint admits the extraction candidly: platforms provide coordination AND extract. The false summit (mountain classification from network effects view) is diagnostic \u2014 it represents the narrative cover that 'network effects make this inevitable' rather than contingent institutional choice. Regulatory interventions (interoperability mandates in EU Digital Markets Act, Epic v Apple litigation outcomes) reveal the inevitability framing as contingent on prior regulatory choice, not economic law. The constraint does not collapse into pure snare because developers genuinely benefit from platform coordination; does not collapse into pure rope because extraction is substantial and unilateral."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "app_store_review_opacity",
+      "platform_algorithm_suppression",
+      "commission_structure_opacity"
+    ],
+    "dual_formulation_note": "The developer bargaining power asymmetry is a macro-constraint that encompasses multiple sub-constraints: review opacity, algorithm enforcement, commission extraction, and policy unilaterality. Each sub-constraint has distinct \u03b5 values reflecting specific mechanisms. The bargaining asymmetry represents the aggregate structural condition; individual mechanisms are decomposed into separate stories."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

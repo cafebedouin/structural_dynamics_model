@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "decision_quality_degradation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dqd"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Decision Quality Degradation in Complex Systems",
+    "topic_domain": "organizational_governance/information_asymmetry",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "decision_gatekeepers",
+      "information_intermediaries"
+    ],
+    "victims": [
+      "stakeholders_bearing_consequences",
+      "epistemic_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Stakeholder Bearing Consequences",
+      "comment": "PERSPECTIVE 1: STAKEHOLDER BEARING CONSEQUENCES (SNARE) \u2014 Lacks access to decision-relevant information; cannot exit or influence decisions that affect them. Bears full cost of degraded decisions through implementation consequences. No alternative mechanism to challenge or correct degradation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Organizational Analyst",
+      "comment": "PERSPECTIVE 2: ORGANIZATIONAL ANALYST (TANGLED ROPE) \u2014 Constrained by information access, career incentives, and institutional hierarchy. Benefits from the degraded system insofar as analysis appears neutral and valued; bears costs when poor decisions create downstream problems affecting their domain. Mixed extraction and coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Decision Gatekeeper",
+      "comment": "PERSPECTIVE 3: DECISION GATEKEEPER (ROPE) \u2014 Controls information flow and framing. Benefits from concentrated authority; experiences constraint as coordination mechanism enabling centralised control. Low effective extraction because this agent has both power and mobility \u2014 they can leave the system, change its rules, or delegate differently."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Decentralization Movement",
+      "comment": "PERSPECTIVE 4: DECENTRALIZATION MOVEMENT (SCAFFOLD) \u2014 Organized actors (transparency advocates, open-data initiatives, participatory governance models) see decision quality degradation as a temporary failure of centralized architecture with a sunset: distributed decision-making, transparent criteria, and stakeholder input channels offer alternative pathways. Sunset clause inherent in the logic \u2014 as decentralization matures, the gatekeeper's control mechanism loses force."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Bureaucratic Process",
+      "comment": "PERSPECTIVE 5: BUREAUCRATIC PROCESS (PITON) \u2014 Formal decision-making procedures (committee reviews, approval workflows, documentation requirements) persist through institutional inertia. Theater ratio (0.64) reflects that much of the process is performative: procedures appear to ensure quality but information degradation is already embedded upstream. Process persists because alternatives have not fully replaced it, not because it functions effectively."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law View",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, information degradation in complex systems may appear immutable: organizational size, complexity, and bounded rationality inherently limit decision quality. However, this perspective naturalizes what is actually a contingent institutional arrangement \u2014 choice of information architecture, incentive structures, and governance processes shape whether degradation accelerates or is arrested."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "deliberate_versus_systemic_degradation",
+      "question": "Is decision quality degradation primarily driven by deliberate suppression of information by gatekeepers, or by systemic features (cognitive limits, organizational complexity, information overload)?",
+      "resolution_mechanism": "Longitudinal analysis of information availability vs. decision quality correlation; comparison of organizations with different governance transparency levels; measurement of gatekeeper incentive alignment with stakeholder outcomes",
+      "impact": "If deliberate: snare classification dominates (pure extraction). If systemic: tangled_rope or scaffold more accurate (mixed coordination and extraction). Changes remediation strategy fundamentally.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether degradation stems from deliberate suppression or systemic complexity"
+    },
+    {
+      "id": "decentralization_viability_threshold",
+      "question": "At what organizational scale or complexity level does decentralized decision-making become infeasible, making centralization with quality degradation inevitable?",
+      "resolution_mechanism": "Cross-organizational study of decision quality vs. decentralization level at different scales; identification of coordination cost threshold where centralization becomes necessary",
+      "impact": "If threshold exists at organization's current scale: scaffold sunset is theoretical (cannot be achieved). If threshold higher: decentralization is genuinely possible and sunset is structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility threshold for decentralized decision-making at scale"
+    },
+    {
+      "id": "procedural_theater_measurement",
+      "question": "What proportion of formal decision procedures actually improve decision quality versus merely creating legitimacy and accountability appearance?",
+      "resolution_mechanism": "Randomized comparison of decisions made with vs. without formal procedure oversight; correlation between procedure adherence and outcome quality; post-decision analysis of whether procedure prevented or merely documented poor choices",
+      "impact": "If procedures improve quality: theater_ratio should be lower (< 0.50), constraint is more rope than tangled_rope. If primarily theatrical: theater_ratio justified, piton classification accurate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of decision procedures that improve quality versus create appearance"
+    },
+    {
+      "id": "information_asymmetry_persistence",
+      "question": "Does stakeholder access to decision-relevant information increase when transparency mechanisms are implemented, or do gatekeepers find alternative suppression methods?",
+      "resolution_mechanism": "Before-after analysis of transparency initiatives; tracking of information flow and stakeholder comprehension post-implementation; identification of displacement effects where suppression moves from information availability to interpretation/framing",
+      "impact": "If access increases: suppression metric overstated, constraint is less severe than measured. If displacement occurs: suppression persists through alternative mechanisms, constraint is more entrenched.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether transparency actually increases stakeholder access or enables suppression displacement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Decision quality degradation is a constraint that emerges when information asymmetries, organizational hierarchy, and incentive misalignment interact to produce systematic gaps between the quality of decisions made and the quality that would result from full stakeholder access to relevant information. The constraint operates across public institutions, corporations, non-profits, and international organizations. Gatekeepers (executives, elected officials, technical experts) occupy positions that grant them control over what information stakeholders receive, how it is framed, and which decision criteria are privileged. This structural position generates incentives to suppress, filter, or reframe information in ways that sustain gatekeeper authority, even when such filtering reduces decision quality for the larger system. The constraint exhibits elements of all six DR types: pure extraction (snare) from the perspective of stakeholders with no exit; coordination and extraction (tangled rope) from analysts whose roles are partially constituted through the degraded system; coordination (rope) from gatekeepers whose authority depends on information control; a temporary architecture with sunset pathways (scaffold) from decentralization advocates; degraded ritual (piton) in formal procedures that appear to ensure quality but operate downstream of information suppression; and false natural law (mountain) in the analytical view that information asymmetry is inevitable at scale.",
+    "key_agents": [
+      "Decision Gatekeepers: Primary beneficiaries (institutional/arbitrage) \u2014 capture authority, reputation, and control through concentrated information access; can exit or restructure rules at low cost",
+      "Stakeholders Bearing Consequences: Primary victims (powerless/trapped) \u2014 lack access to decision-relevant information; cannot exit decisions that affect them; bear implementation costs of poor choices",
+      "Organizational Analysts: Secondary actors (moderate/constrained) \u2014 constrained by information access and hierarchy; benefit from appearing neutral and valuable; bear costs when degraded decisions create downstream problems",
+      "Decentralization Movement: Organized agents (organized/mobile) \u2014 transparency advocates, open-data initiatives, participatory governance models building alternative decision pathways",
+      "Bureaucratic Process: Institutional mechanism (institutional/arbitrage) \u2014 formal procedures maintain appearance of quality control but operate downstream of information suppression; persist through inertia",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional choices as immutable consequences of scale"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. The constraint extracts significant value for gatekeepers through sustained authority and reduced accountability. The extraction is measurable in decision outcomes that favor gatekeeper preferences over stakeholder interests, in reduced transparency of decision rationale, and in suppressed feedback mechanisms. However, extraction is not maximal because some information does flow (reducing from 0.70+ snare range), and some organizations have introduced transparency mechanisms that partially arrest degradation. The measured value reflects steady increase over the observation interval (0.32 \u2192 0.58), indicating that as organizational complexity grows, the extraction mechanism becomes more effective. Suppression (0.62): High. Barriers to exit from the constraint are substantial: stakeholders cannot easily obtain decision-relevant information, cannot participate in decision-making, and face career or practical costs if they attempt to circumvent gatekeeping structures. However, suppression is not absolute (otherwise it would be mountain-level, \u2265 0.85) \u2014 some information flows, some stakeholders have partial access, and some organizations have implemented disclosure requirements. Theater ratio (0.64): Moderately high. Formal decision procedures (committee reviews, regulatory approvals, stakeholder consultations) create appearance of quality oversight, but much of the process occurs after information has already been filtered or reframed by gatekeepers. The theater increases as organizations grow and add more procedures without addressing the upstream information asymmetry. Claimed type (tangled_rope): Justified. The constraint exhibits both genuine coordination function (information centralization enables faster decisions, reduces redundancy) and asymmetric extraction (gatekeepers benefit disproportionately, stakeholders bear costs). Both features are structurally necessary \u2014 it is not a snare masquerading as rope, but a hybrid mechanism where coordination and extraction are genuinely entangled.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival divergence from identical base metrics. The gatekeeper sees rope (coordination enabling efficient decisions) while the stakeholder sees snare (pure extraction with no exit). The analyst sees tangled rope (mixed coordination and extraction) because their position is structurally intermediate \u2014 they benefit from appearing neutral but depend on information access gatekeepers control. The decentralization advocate sees scaffold because they have agency and a structural exit path (alternative governance models that are becoming viable). The bureaucrat sees piton (ritual persisting through inertia despite low function). The analytical observer risks false mountain (naturalizing hierarchy as inherent to complexity). The perspectival gap reveals that 'decision quality degradation' is not a single phenomenon viewed from different angles \u2014 it is a different constraint for each positioned agent. The shared base metrics (extractiveness, suppression, theater) allow the engine to measure these gap widths and detect when gatekeeper rhetoric (rope) and stakeholder experience (snare) are describing fundamentally different structural realities.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from the agent's relationship to information flow and decision authority. Gatekeepers with arbitrage exit options (can exit role, restructure authority, delegate) experience low d (~0.15) \u2014 they are beneficiaries of the constraint and have structural mobility. Stakeholders with trapped status (cannot exit decisions affecting them, cannot access information) experience high d (~0.95) \u2014 they are targets of extraction with no alternatives. Analysts with constrained exit (can exit role but face career costs, have partial information access) experience moderate d (~0.65). Decentralization advocates with mobile exit and organized power experience lower d (~0.45) because they have agency and alternatives. The engine applies the sigmoid f(d) to convert d to effective power modifier \u2014 high d values produce high f(d) values that amplify experienced extraction for trapped agents; low d values produce negative f(d) values that reduce effective extraction for beneficiaries. This arithmetic is not repeated here (per v1.2 guidance) but is the mechanism by which structurally similar extractiveness (0.58) produces divergent \u03c7 values across perspectives.",
+    "mandatrophy_analysis": "DIAGNOSTIC: This constraint resolves potential mandatrophy (confusion between coordination and extraction) by clearly declaring structural functions: information centralization IS a genuine coordination mechanism (it enables faster decisions, reduces redundancy, allows expert judgment); simultaneously, the authority concentration that enables this coordination IS being extracted by gatekeepers for their own benefit. Both are structurally real. The constraint is neither 'really' rope (coordination) nor 'really' snare (extraction) \u2014 it is tangled_rope where coordination and extraction are genuinely entangled. The perspectival gap (gatekeeper sees rope, stakeholder sees snare) is not a measurement problem \u2014 it is a real feature of the constraint's structure. The analytical observer's mountain classification is a false summit: the framing 'information asymmetry is inherent to scale' naturalizes what is actually a choice of governance architecture. Organizations at similar scale with different information policies show measurably different decision quality, proving the mountain is not natural law."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "organizational_accountability_erosion",
+      "stakeholder_epistemic_exclusion"
+    ],
+    "dual_formulation_note": "Decision quality degradation is upstream of specific accountability failures and epistemic exclusions in organizations. It represents a distinct structural constraint on information flows and decision authority that affects downstream mechanisms. The three constraints form a causal family: degradation in decision quality \u2192 erosion of accountability mechanisms \u2192 systematic exclusion of stakeholders from epistemic participation."
+  },
+  "directionality_overrides": []
+}

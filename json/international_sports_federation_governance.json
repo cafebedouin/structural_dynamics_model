@@ -1,0 +1,231 @@
+{
+  "header": {
+    "constraint_id": "international_sports_federation_governance",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "isf"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "International Sports Federation Governance Structure",
+    "topic_domain": "sports/governance/international_regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "federation_leadership",
+      "wealthy_national_federations",
+      "major_commercial_broadcasters"
+    ],
+    "victims": [
+      "athlete_autonomy",
+      "smaller_national_federations",
+      "developing_nation_participation"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Individual Athlete",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL ATHLETE (SNARE) \u2014 Athletes are bound by federation rules, doping protocols, eligibility requirements, and competition structures with no meaningful exit option. Career depends entirely on federation recognition. Rules are opaque, enforcement is asymmetric (harsh for athletes, lenient for federations), and appeal mechanisms are controlled by the federation itself. Maximum extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Developing Nation Federation",
+      "comment": "PERSPECTIVE 2: DEVELOPING NATION FEDERATION (SNARE) \u2014 Smaller federations pay membership fees and comply with technical standards but have no voice in governance. Competition infrastructure is structured to advantage wealthy nations with training facilities and travel budgets. Exit is theoretically possible but means losing international competition access and athlete development pathways. High extraction, significant suppression through resource asymmetry."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Federation Leadership",
+      "comment": "PERSPECTIVE 3: FEDERATION LEADERSHIP (ROPE) \u2014 Senior administrators experience the governance structure as pure coordination: standardizing competition rules across nations, managing technical requirements, organizing global tournaments. Benefits accrue to leadership through salaries, influence, and institutional prestige. Can exit through resignation but institutional positions are valuable. Sees extraction as legitimate administrative cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Wealthy National Federation",
+      "comment": "PERSPECTIVE 4: WEALTHY NATIONAL FEDERATION (TANGLED ROPE) \u2014 Rich nations benefit from hosting rights, television revenues, and having influence over rule-setting (through larger delegate counts). But they also fund infrastructure costs, athlete development programs, and training subsidies \u2014 genuine coordination functions. They experience the system as both beneficiary and moderate burden-bearer, with enough power to shape rules in their favor."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Commercial Broadcaster",
+      "comment": "PERSPECTIVE 5: COMMERCIAL BROADCASTER (TANGLED ROPE) \u2014 Broadcasters pay substantial rights fees and benefit enormously from event exclusivity and federation-controlled intellectual property. They coordinate global scheduling and logistics with federations. But they also extract viewer attention and advertising revenue while paying broadcast costs. The arrangement combines genuine coordination (scheduling, technical standards, audience development) with asymmetric value capture."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Athletes' Rights Coalition",
+      "comment": "PERSPECTIVE 6: ATHLETES' RIGHTS COALITION (SCAFFOLD) \u2014 International athlete advocacy groups, players' unions, and transparency advocates are building alternative governance models (athlete representation on boards, open rule-making processes, independent arbitration). These represent sunset pathways for the current opaque system. The coalition experiences the current structure as temporary \u2014 replaceable by democratic governance with institutional inertia being the only barrier. High suppression but with visible exit path."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Sports Regulatory Ritual",
+      "comment": "PERSPECTIVE 7: SPORTS REGULATORY RITUAL (PITON) \u2014 Anti-doping protocols, eligibility verification, and competition rule enforcement contain significant performative elements. Testing procedures are standardized but enforcement is inconsistent across nations. Rule books are vast and complex primarily for legitimacy theater rather than functional necessity. The system persists through institutional inertia and athlete acceptance of the ritual, not because the mechanisms reliably achieve their stated goals."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal perspective, some hierarchy and coordination costs are inherent to global sport: you cannot manage competition at planetary scale without some centralized rule-setting, some verification of athlete eligibility, some scheduling coordination. This perspective risks naturalizing what are actually contingent institutional choices (which actors get voice, how revenue is distributed, who enforces rules) as immutable requirements of international sport. The engine's false summit detector will flag this as naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "athlete_voice_measurement",
+      "question": "What constitutes meaningful athlete representation in federation governance \u2014 formal board seats, consultative committees, binding arbitration, or veto power over rule changes?",
+      "resolution_mechanism": "Comparative analysis of federation governance structures with athlete representation; tracking of rule changes proposed vs implemented by athlete representatives; measurement of outcome alignment with athlete interests",
+      "impact": "If representation is formal but non-binding: athlete voice is performative theater (Piton classification strengthens). If representation is binding and leads to rule changes: scaffold classification is confirmed (governance reform is real pathway).",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "Threshold for meaningful athlete representation in governance"
+    },
+    {
+      "id": "revenue_distribution_fairness",
+      "question": "Is the current broadcasting revenue distribution model (concentrating income to wealthy federations and international bodies) justified by coordination costs or is it pure extraction?",
+      "resolution_mechanism": "Cost accounting of federation operational expenses vs revenue distribution; comparison to alternative distribution models (equal per-capita splits, sliding scale by development index); analysis of whether concentrated distribution incentivizes better coordination",
+      "impact": "If justified by coordination costs: tangled rope classification is confirmed. If costs don't explain distribution: snare/extraction classification strengthens for developing nation federations.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether revenue distribution reflects coordination costs or extraction"
+    },
+    {
+      "id": "doping_enforcement_asymmetry",
+      "question": "Are inconsistent anti-doping enforcement outcomes across nations products of genuine technical difficulty or institutional neglect of smaller federation violations?",
+      "resolution_mechanism": "Comparative analysis of testing frequency, sample analysis quality, disciplinary timelines across federations by wealth and regional influence; detection of correlation between federation wealth and case dismissal rates; investigation of testing access disparities",
+      "impact": "If technical difficulty: suppression is structural and unavoidable (mountain-like property). If institutional neglect: suppression is enforcement choice and extractive mechanism (snare classification strengthens).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Root causes of anti-doping enforcement asymmetry"
+    },
+    {
+      "id": "governance_reform_feasibility",
+      "question": "Can federation governance be reformed toward democratic accountability without fragmenting into competing international bodies?",
+      "resolution_mechanism": "Case studies of federations that implemented governance reforms and subsequent athlete satisfaction/exit rates; analysis of counterfactual scenarios where athletes could create alternative sanctioning bodies; study of what organizational changes would induce major national federations to accept reduced dominance",
+      "impact": "If reform is feasible: scaffold classification is legitimate (sunset pathway exists). If reform causes fragmentation: current system is sticky and landscape may shift to multiple competing systems rather than single reformed federation.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Feasibility of democratic governance reform in international sports federations"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "International sports federations operate as self-regulating governance bodies with centralized control over athlete eligibility, competition rules, doping verification, and tournament scheduling. This constraint manifests differently depending on the observer's structural position: individual athletes are trapped in an opaque system with no meaningful exit; smaller nations experience resource-driven exclusion; federation leadership sees pure coordination; wealthy nations and broadcasters extract net benefits while funding infrastructure; athletes' rights advocates are building democratic alternatives. The governance structure combines genuine coordination functions (standardizing rules, scheduling global events, managing athlete verification) with significant extractive elements (asymmetric revenue distribution, concentrated decision-making, opaque enforcement). Over the past 20 years, extractiveness has increased (from 0.35 to 0.58) as commercial broadcasting revenues have concentrated, while theater ratio has risen (from 0.52 to 0.68) as regulatory complexity has expanded without corresponding transparency increases.",
+    "key_agents": [
+      "Individual Athletes: Primary victim (powerless/trapped) \u2014 bound by federation rules with no exit option; face opaque enforcement and appeal systems",
+      "Developing Nation Federations: Secondary victim (moderate/constrained) \u2014 pay fees and comply with standards but have no governance voice; resource asymmetry suppresses participation",
+      "Federation Leadership: Primary beneficiary (institutional/arbitrage) \u2014 experiences structure as legitimate coordination; benefits from administrative positions and influence",
+      "Wealthy National Federations: Secondary beneficiary (powerful/mobile) \u2014 benefit from hosting rights and rule influence; also contribute infrastructure funding (tangled rope)",
+      "Commercial Broadcasters: Secondary beneficiary (powerful/arbitrage) \u2014 extract substantial viewer and advertising value while paying rights fees; coordinate scheduling and technical standards",
+      "Athletes' Rights Advocates: Organized reformers (organized/constrained) \u2014 building democratic governance alternatives as sunset pathway",
+      "Anti-Doping Administration: Institutional enforcement actor (institutional/constrained) \u2014 enforces rules with asymmetric resource distribution across federations",
+      "Analytical Observer: Sees system as potentially immutable (analytical/analytical) \u2014 risks treating coordination costs as natural law rather than institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, rising over 20 years. The system extracts value from smaller federations and athletes through membership fees, competition restrictions, and governance exclusion. The extraction has increased as broadcasting revenues have concentrated in the hands of federation leadership and wealthy nations. Initial extractiveness (0.35) reflected genuine coordination functions; current level (0.58) reflects layered extraction on top of coordination. Suppression (0.65): High. Barriers to athlete autonomy and smaller federation exit include: cartel control of international competition access, lack of alternative sanctioning bodies, athlete mobility restrictions (representing nation requires federation approval), opaque governance processes, and career dependence. Developing nations face resource suppression (infrastructure costs exceed revenue share). Theater ratio (0.68): Moderate-high. Anti-doping testing and rule enforcement contain significant performative content: massive rulebooks establish legitimacy rather than functional necessity; testing inconsistency suggests ritual rather than consistent verification; competition eligibility criteria have grown complex partly for legitimacy signaling. Open rule-making processes are theatrical \u2014 decisions are made in closed sessions and announced as fait accompli.",
+    "perspectival_gap": "The core perspectival gap lies between beneficiary and victim positions. Federation leadership and wealthy nations see the system as elegant coordination (Rope/Tangled Rope) \u2014 you need someone to manage global schedules, standardize rules, verify athlete eligibility. Individual athletes and smaller federations see extraction and suppression (Snare) \u2014 the same rules are experienced as barriers to participation and autonomy. The athletes' rights coalition sees a temporary system with a democratic alternative (Scaffold) \u2014 representation, transparency, independent arbitration can replace secretive governance. The analytical observer risks seeing the system as naturally immutable (Mountain) \u2014 'you can't coordinate global sport without hierarchy' \u2014 but this naturalizes choices (who decides, how revenue flows, whether participation is equal) that could be different. The piton perspective (institutional ritual) reveals that much of the enforcement complexity is performative \u2014 the system persists through habit and acceptance, not because the mechanisms reliably achieve stated goals.",
+    "directionality_logic": "Directionality values (d) flow from structural position: athletes (trapped, powerless) have d \u2248 0.95 (maximum target); federation leadership (institutional, arbitrage) have d \u2248 0.05 (beneficiary); developing nation federations (constrained, moderate) have d \u2248 0.65; wealthy nations (mobile, powerful) have d \u2248 0.40. The sigmoid f(d) converts these to effective extraction experience: powerless athletes with d=0.95 experience f(d) \u2248 1.42, amplifying the base extractiveness to \u03c7 \u2248 0.82 (full snare). Federation leadership with d=0.05 experience f(d) \u2248 -0.12, resulting in negative \u03c7 (they experience the constraint as subsidizing their position). Developing nation federations experience moderate \u03c7 through constrained exit options. The perspectival gap reflects genuine structural differences in how the constraint operates across positions, not disagreement about a single objective fact.",
+    "mandatrophy_analysis": "This constraint demonstrates the mandatrophy through perspectival multiplicity: the same governance structure is Snare for trapped athletes, Rope for federation leadership, Tangled Rope for wealthy nations funding infrastructure, Scaffold for advocates building alternatives, and Piton for the ceremonial aspect of enforcement. The mandatrophy is not 'which type is correct?' but 'what is the structural multiplicity?' The falsity manifests in the Mountain perspective (natural law view) \u2014 claiming governance hierarchy is inherent to international sport naturalizes what are contingent institutional choices. The extractiveness trajectory (rising from 0.35 to 0.58) indicates the constraint is transitioning from coordination-heavy to extraction-heavy: as broadcasting revenues increased, federation leadership concentrated benefits; as rule complexity increased, governance opacity deepened. This drift is the warning signal that the coordinate-extraction hybrid is becoming extraction-dominant. If extractiveness reaches 0.70+, mandate resolution requires either democratic reform (scaffold pathway) or athlete exodus to alternative bodies (federation fragmentation)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "olympic_host_city_extraction",
+      "athlete_intellectual_property_appropriation",
+      "doping_detection_asymmetry"
+    ],
+    "dual_formulation_note": "International sports federation governance is upstream of specific competition constraints (Olympic hosting, broadcasting rights, doping enforcement). This story models the structural governance arrangement; downstream stories model specific extractive mechanisms operating within this governance framework."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

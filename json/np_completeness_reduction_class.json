@@ -1,0 +1,138 @@
+{
+  "header": {
+    "constraint_id": "np_completeness_reduction_class",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "npc"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.08,
+    "claimed_type": "mountain",
+    "human_readable": "NP-Completeness Reduction Class",
+    "topic_domain": "theoretical_computer_science/complexity_theory",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Algorithm Designer",
+      "comment": "PERSPECTIVE 1: ALGORITHM DESIGNER (MOUNTAIN) \u2014 Attempting to find a polynomial-time solution to an NP-complete problem faces an immutable structural barrier. If P \u2260 NP, no algorithm of any sophistication can overcome this limit. The constraint is invariant across all problem instances, all algorithmic approaches, and all computational substrates."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "universal",
+      "label": "The Computational Resource Allocator",
+      "comment": "PERSPECTIVE 2: COMPUTATIONAL RESOURCE ALLOCATOR (MOUNTAIN) \u2014 Throwing more computational power at NP-complete problems does not overcome the polynomial-time barrier. The constraint is structural to the problem class, not to available resources. A nation-state allocating unlimited computing infrastructure still faces the same barrier."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Theoretical Computer Scientist",
+      "comment": "PERSPECTIVE 3: THEORETICAL COMPUTER SCIENTIST (MOUNTAIN) \u2014 From the analytical standpoint, NP-completeness is a logical consequence of the definitions of NP, polynomial time, and reduction. The barrier is not contingent on physical law or social arrangement \u2014 it is a pure mathematical structure. The constraint is invariant across all measurement approaches and observables."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "p_vs_np_independence",
+      "question": "Is P \u2260 NP provably true, or is the statement independent of standard axiomatic systems (Zermelo-Fraenkel set theory)?",
+      "resolution_mechanism": "Logical independence proofs in the style of Cohen forcing; construction of models where P = NP or P \u2260 NP both hold",
+      "impact": "If independent: NP-completeness is a structural feature of some mathematical universes but not others \u2014 the mountain becomes contingent on axiomatic choice. If provably true: the mountain is absolute.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether P \u2260 NP is logically independent of ZFC"
+    },
+    {
+      "id": "oracle_separation_universality",
+      "question": "Do oracle separations proving P^A \u2260 NP^A (for some oracle A) transfer to the standard non-relativized world, or do relativized results reflect only the structure of the oracle, not computational reality?",
+      "resolution_mechanism": "Meta-analysis of which oracle results have led to breakthroughs in non-relativized complexity; examination of complexity-theoretic results that hold relative to all oracles but fail without oracles",
+      "impact": "If oracle results are predictive: the mountain classification is slightly weakened \u2014 some barriers are oracle-dependent. If oracle results are artifacts of relativization: the mountain is confirmed as universal.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Transferability of oracle separations to non-relativized complexity"
+    },
+    {
+      "id": "natural_proofs_barrier_absoluteness",
+      "question": "Does the Natural Proofs barrier (Razborov-Rudich) reveal a fundamental limitation of our proof techniques or a genuine structural limitation of circuit complexity?",
+      "resolution_mechanism": "Discovery of proof techniques that circumvent the Natural Proofs barrier; construction of circuits breaking the barrier; identification of the barrier's scope boundaries",
+      "impact": "If barrier is proof-technical: NP-completeness may be provable with new techniques, downgrading mountain to scaffold. If barrier is structural: the mountain is confirmed.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether Natural Proofs barrier reflects fundamental limitation or proof technique limitation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "NP-completeness reduction class defines the set of decision problems that are (1) in NP \u2014 solutions are verifiable in polynomial time, and (2) NP-hard \u2014 any NP problem can be reduced to them in polynomial time. This constraint is a natural law of theoretical computation. The core structure: if P \u2260 NP (conjectured true but unproven), then no NP-complete problem admits a polynomial-time algorithm despite the verifiability of solutions. The constraint exhibits zero degrees of freedom. It is invariant across all problem instances, all algorithmic strategies, all computational substrates, and all time horizons. The reduction class emerges naturally from the definitions of polynomial-time Turing reduction and the decision problem framework. No agent benefits from the constraint; no agent can exit it; no agent experiences extraction. The constraint is a pure logical/mathematical mountain.",
+    "key_agents": [
+      "Algorithm Designers: Structural position \u2014 attempt to solve NP-complete problems; face immutable polynomial-time barrier",
+      "Complexity Theorists: Analytical position \u2014 study the barrier; use it as a lens to understand computational limits",
+      "Cryptographers: Applied stakeholders \u2014 exploit NP-completeness for security; benefit from the barrier's existence",
+      "Computational Resource Allocators: Infrastructure position \u2014 cannot overcome the barrier through increased compute"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Minimal. The NP-completeness reduction class imposes a computational limit on algorithm design, but this limit is not 'extraction' in the Deferential Realism sense \u2014 no agent is extracting value from other agents through the constraint. The value 0.12 reflects the minimal friction of acknowledging the barrier (research effort spent on lower bounds instead of solution search) \u2014 this is not extraction overhead, merely the coordination cost of working within the constraint. Suppression (0.03): Minimal. The barrier suppresses specific algorithmic approaches (exhaustive search cannot solve NP-complete problems in polynomial time), but suppression in DR terminology means removal of alternatives to a constraint. Here, the barrier itself IS the fundamental structure; there are no suppressed alternatives. Resistance (0.08): Minimal. The barrier has resisted proof attempts for five decades, but 'resistance' in the mountain context means resistance of the barrier to violation or circumvention, not difficulty of proof. Theater ratio (0.08): Minimal. The definition is transparent; the barrier is not performative or theatrical. The research program around P vs NP includes genuine mathematical work, not ritual maintenance.",
+    "perspectival_gap": "This is a uniform-type constraint \u2014 NP-completeness classifies as mountain from all perspectives. The algorithm designer sees an immutable barrier (mountain). The computational resource allocator with arbitrary power sees the same barrier (mountain). The theoretical computer scientist analyzing from above sees a logical necessity (mountain). There is no perspectival gap because the constraint has no directionality \u2014 it does not differentiate agents or create asymmetric relationships. This uniformity is diagnostic: NP-completeness is one of the few constraints that legitimately appears as a pure natural law.",
+    "mandatrophy_analysis": "NATURAL LAW EXEMPLAR: NP-completeness reduction class is among the clearest examples of a mountain constraint in the corpus. There is no mandatrophy risk because the constraint exhibits no coordination function that could be mislabeled as pure extraction, and no extraction that could be mislabeled as coordination. The constraint simply IS \u2014 a logical structure with no beneficiaries, no victims, and no alternative arrangements."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "halting_problem_undecidability",
+      "pnp_conjecture_empirical_validation",
+      "cryptographic_key_hardness_assumption"
+    ],
+    "dual_formulation_note": "NP-completeness reduction class is upstream of specific computational hardness assumptions in cryptography and complexity theory. The constraint family includes: (1) Halting Problem undecidability (\u03b5=0.08, Mountain, information-theoretic limit), (2) P vs NP conjecture empirical validation (\u03b5=0.35, Tangled Rope, contingent-yet-structural, empirically unmeasured), (3) Specific NP-complete problem hardness (variable \u03b5, depends on application domain and reduction details)."
+  },
+  "directionality_overrides": []
+}

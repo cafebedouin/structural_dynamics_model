@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "venezuela_regime_survival",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "vrs"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "Venezuela Regime Survival Constraint",
+    "topic_domain": "political_economy/state_capacity",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "regime_inner_circle",
+      "military_command_structure"
+    ],
+    "victims": [
+      "civilian_population",
+      "political_opposition",
+      "economic_institutions"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Civilian Population",
+      "comment": "PERSPECTIVE 1: CIVILIAN POPULATION (SNARE) \u2014 Trapped by hyperinflation, border restrictions, and economic collapse. Exit requires international relocation or defection which most lack resources for. Bears extraction through currency debasement, price controls that create shortages, and forced labor participation in state enterprises. No coordination benefit \u2014 extraction is pure."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Political Opposition",
+      "comment": "PERSPECTIVE 2: POLITICAL OPPOSITION (SNARE) \u2014 Constrained by imprisonment, harassment, exile risk, and assassination. Can attempt mobilization but faces military suppression and electoral fraud mechanisms. Extraction is severe \u2014 opposition leaders imprisoned or exiled without trial. Minimal coordination function \u2014 the regime permits no genuine political process."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Military Command Structure",
+      "comment": "PERSPECTIVE 3: MILITARY COMMAND STRUCTURE (ROPE) \u2014 Benefits from control of food distribution, fuel allocation, and currency arbitrage. Extraction runs toward this group. Experiences the regime as coordination mechanism: military hierarchy distributes resources, maintains order (for beneficiaries), and sustains institutional stability. Low experienced extraction \u2014 clear alignment with regime interests."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regime Inner Circle",
+      "comment": "PERSPECTIVE 4: REGIME INNER CIRCLE (TANGLED ROPE) \u2014 Coordinates state security apparatus and loyalty networks (genuine coordination function) while extracting through monopoly control of state enterprises, international sanctions circumvention, and gold/oil revenue capture. Experiences both coordination benefit (survival through unified command) and extraction vulnerability (cannot exit without losing power). Extraction is moderate relative to military \u2014 constrained by internal power competition and international pressure."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Electoral and Judicial Theater",
+      "comment": "PERSPECTIVE 5: ELECTORAL AND JUDICIAL THEATER (PITON) \u2014 Elections and courts exist but are purely performative. Electoral fraud, gerrymandering, and disqualification of opposition candidates are systematic. Courts impose sentences on political prisoners without legitimate judicial process. Theater ratio (0.68) reflects that these institutions are maintained through inertia \u2014 they provide legitimacy theater rather than functional governance. The regime could abandon them entirely but maintains the ritual for international and domestic psychological effect."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Regional Opposition Coalition",
+      "comment": "PERSPECTIVE 6: REGIONAL OPPOSITION COALITION (SNARE) \u2014 Organized neighbors (Colombia, Brazil) and diaspora provide coordination on sanctions, asylum, and information but face extraction through refugee flows, cross-border violence, and resource competition. Exit constrained by geopolitical stability concerns. Extraction significant but not total \u2014 coalition members retain independent action capacity."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (PITON) \u2014 From civilizational scope, regime survival via coercion appears inevitable: autocracies always extract through military control and suppress opposition. This perspective naturalizes contingent institutional arrangements (specific policies, command structures, resource allocation mechanisms) as immutable features of authoritarian governance. Theater ratio high \u2014 much of the observation is projection of theoretical inevitability rather than structural analysis."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "military_defection_threshold",
+      "question": "At what point does military extraction become so constraining that defection becomes rational for mid-level commanders?",
+      "resolution_mechanism": "Historical analysis of military loyalty in late-stage autocracies (Nicaragua 1989, Philippines 1986, Tunisia 2011); correlation between officer compensation compression and regime change.",
+      "impact": "If threshold < current extraction level: regime vulnerable to military coup or mass defection. If threshold > current level: military loyalty sustainable despite economic deterioration.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Military defection threshold under extraction pressure"
+    },
+    {
+      "id": "external_intervention_trigger",
+      "question": "Would sustained international military intervention (blockade, air support for opposition) shift the constraint from Snare to Tangled Rope by creating genuine negotiation space?",
+      "resolution_mechanism": "Comparison with cases of external intervention: Syria (Russia intervention stabilized), Libya (NATO intervention destabilized), Nicaragua (Cold War pressure varied), Yemen (Saudi intervention prolonged conflict).",
+      "impact": "If intervention degrades regime extraction: Snare weakens toward Tangled Rope with negotiation function. If intervention strengthens regime resistance: Snare deepens and extractiveness rises.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether external intervention enables regime negotiation"
+    },
+    {
+      "id": "economic_collapse_bifurcation",
+      "question": "Does economic collapse trigger regime rigidity (increased suppression, tighter coercion) or regime fragmentation (factional breakdown in inner circle)?",
+      "resolution_mechanism": "Longitudinal tracking of suppression metrics vs fragmentation indicators (purges, military leadership turnover, coordination failures). Comparison with Soviet Union late stages (fragmentation) vs North Korea (rigidity).",
+      "impact": "If rigidity: extractiveness increases, suppression approaches 1.0, regime becomes less sustainable. If fragmentation: inner circle becomes victim of extraction, Tangled Rope perspective becomes dominant, negotiation pathways emerge.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether economic collapse produces regime rigidity or fragmentation"
+    },
+    {
+      "id": "diaspora_coordination_effectiveness",
+      "question": "Can diaspora networks and remittance control become alternative power structures that create competing extraction mechanisms?",
+      "resolution_mechanism": "Analysis of diaspora communication channels, remittance flow restrictions, and underground economy scaling. Tracking of informal institutions created by diaspora (shadow banking, information networks).",
+      "impact": "If effective: creates second-order constraint (regime vs diaspora) that fragments the primary Snare. If ineffective: regime maintains monopoly on extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether diaspora networks can establish competing extraction structures"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Venezuelan regime survival constraint operates as a pure extraction mechanism enforced through military coercion, state monopolies, and systematic suppression of alternative power centers. The Maduro regime (2013-present) maintains control through monopoly control of food distribution, currency arbitrage, gold exports, and military command loyalty. The constraint exhibits the structural characteristics of a Snare: high extractiveness (0.68), high suppression (0.75), and systematic elimination of exit options for civilian and opposition populations. The extractiveness has accumulated over time (rising from 0.42 to 0.68 over the decade) as the regime has intensified resource concentration. The theater ratio (0.68) reflects that elections, courts, and legislative bodies persist as purely performative institutions \u2014 they provide international legitimacy theater while all real power resides in military command and inner circle coordination. The constraint is sustained through coercive capacity (military loyalty maintained by resource distribution) rather than coordination benefit \u2014 there is no genuine coordination function for victims, only coordinated suppression.",
+    "key_agents": [
+      "Regime Inner Circle (institutional/constrained): Primary beneficiary \u2014 controls state resource flows, international arbitrage, and accumulates wealth through monopoly position. Benefits from constraint but constrained by international pressure and internal factional dynamics.",
+      "Military Command Structure (institutional/arbitrage): Primary beneficiary \u2014 receives privileged access to food, fuel, currency arbitrage, and command authority. Arbitrage position allows defection if compensation drops below threshold.",
+      "Civilian Population (powerless/trapped): Primary victim \u2014 faces hyperinflation (currency debasement extraction), price controls (goods unavailability extraction), and forced labor in state enterprises. No exit capacity \u2014 international relocation requires resources most lack.",
+      "Political Opposition (moderate/constrained): Secondary victim \u2014 imprisoned, exiled, assassinated, and excluded from electoral competition. Faces extraction through imprisonment costs and political representation denial.",
+      "Economic Institutions (institutional/constrained): Victim of systematic extraction through state seizure, currency controls, and forced resource allocation. Cannot exit national economy.",
+      "Regional Coalition (organized/constrained): Organized neighbors and diaspora face extraction through refugee flows, cross-border violence, and pressure to maintain sanctions. Constrained by geopolitical stability concerns."
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and rising over the interval. The regime captures resources through multiple mechanisms: (1) currency debasement \u2014 printing bolivares to fund regime operations extracts purchasing power from civilians; (2) state enterprise monopolies \u2014 oil, gold, food distribution controlled by regime loyalists extract rents through monopoly pricing and diversion; (3) international sanctions circumvention \u2014 regime captures arbitrage spreads through black market currency exchange and contraband food imports. The measurement trajectory (0.42 \u2192 0.55 \u2192 0.68) reflects acceleration of extraction as economic collapse has forced tighter regime control. Suppression (0.75): High and stable. Barriers to exit include: (1) border restrictions \u2014 civilians cannot leave without regime permission and military checkpoints; (2) military enforcement \u2014 opposition mobilization met with imprisonment, torture, and assassination; (3) information control \u2014 censorship, internet restrictions, and state media monopoly prevent coordination; (4) economic trap \u2014 hyperinflation makes international relocation unaffordable for most. Theater ratio (0.68): High. Elections (gerrymandered, fraudulent), courts (regime-controlled), and parliament (opposition disqualified) are maintained as legitimacy rituals but exercise no real governance function. The theater has increased over time as economic collapse has made real governance capacity impossible \u2014 the regime substitutes theatrical institutions for functional ones.",
+    "perspectival_gap": "The constraint exhibits dramatic perspectival divergence. For the inner circle and military command, the regime appears as Rope or Tangled Rope \u2014 a coordination mechanism that aligns incentives and distributes benefits. For the civilian population, it appears as pure Snare \u2014 coercive extraction with no coordination benefit. For the regional opposition, it appears as constrained Snare \u2014 organized but unable to act decisively. For the analytical observer, there is strong temptation to see this as an inevitable feature of late-stage authoritarianism (Piton perspective naturalized as natural law). The perspectival gap reveals that classification depends entirely on structural position: beneficiaries see coordination, victims see extraction, observers risk naturalizing contingent arrangements.",
+    "directionality_logic": "The directionality (d) for each perspective is derived from their structural relationship to extraction flow. Beneficiaries (military, inner circle) with exit options to arbitrage experience low d (extraction runs toward them). Victims (civilians, opposition) with exit options of trapped or constrained experience high d (extraction runs away from them). The regime's institutional power is constrained by international pressure and military loyalty thresholds, but within the national boundary, extracted resources concentrate toward military command and inner circle. The civilian population has no arbitrage exit \u2014 cannot reallocate resources or reorganize production. The opposition has constrained exit \u2014 imprisonment and assassination are permanent extraction forms that prevent exit. Directionality overrides are not necessary \u2014 the structural derivation captures the reality that the military command structure benefits and the civilian population bears costs.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating why Snare dominates from most perspectives. The snare gate requires: extractiveness \u2265 0.46 (\u2713 0.68), suppression \u2265 0.60 (\u2713 0.75), \u03c7 \u2265 0.66 (compute: \u03b5=0.68 \u00d7 f(d) for powerless/trapped agent \u2248 0.68 \u00d7 1.42 \u2248 0.96, scope \u03c3(national)=1.0, so \u03c7 \u2248 0.96 \u2713). The snare classification prevents mislabeling this as coordination (Rope) or mixed governance (Tangled Rope) from the civilian perspective \u2014 the suppression level (0.75) and trapped exit (no arbitrage, no mobility, no analytical distance) combine to produce maximum experienced extraction. The beneficiary perspectives (Rope for military, Tangled Rope for inner circle) show why snare extraction is possible \u2014 the beneficiaries genuinely experience coordination benefit and stable extraction flows. The false mountain perspective (analytical/natural law) is exposed by the theater gate: if this were an immutable feature of governance, the theater ratio would be low (performative activity approaches zero when something is truly necessary). High theater (0.68) indicates that elections, courts, and legislatures are maintained for appearance, not function \u2014 a diagnostic signal that the regime is contingent, not natural law."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "latin_american_state_capacity",
+      "oil_curse_resource_extraction"
+    ],
+    "dual_formulation_note": "The regime survival constraint is downstream of oil-revenue dependence (which creates resource-curse extraction) and upstream of Latin American regional stability (which propagates to migration, drug trafficking, and geopolitical competition). The three constraints form a family: oil_curse \u2192 venezuela_regime_survival \u2192 regional_destabilization. Each has distinct \u03b5 values reflecting empirical status: oil curse (\u03b5=0.55, Tangled Rope), regime survival (\u03b5=0.68, Snare), regional instability (\u03b5=0.52, Tangled Rope)."
+  },
+  "directionality_overrides": []
+}

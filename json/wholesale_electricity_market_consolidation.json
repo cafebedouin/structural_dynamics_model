@@ -1,0 +1,207 @@
+{
+  "header": {
+    "constraint_id": "wholesale_electricity_market_consolidation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "wemc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Wholesale Electricity Market Consolidation and Regional Monopoly Power",
+    "topic_domain": "energy_economics/industrial_organization",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_incumbent_generators",
+      "utility_holding_companies"
+    ],
+    "victims": [
+      "independent_generators",
+      "retail_consumers",
+      "grid_reliability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Independent Generator",
+      "comment": "PERSPECTIVE 1: INDEPENDENT GENERATOR (SNARE) \u2014 Small natural gas or renewable generators face consolidation-driven market exit barriers. Cannot compete with vertically integrated utilities on dispatch pricing; cannot exit without abandoning capital investment. Bears extraction cost through suppressed dispatch economics and forced buyouts at depressed valuations."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Retail Consumer",
+      "comment": "PERSPECTIVE 2: RETAIL CONSUMER (SNARE) \u2014 Faces structural reduction in wholesale competition as independent generators exit market. Trapped in consolidated utility service territory; cannot switch providers or negotiate directly with generators. Bears extraction cost through reduced downward price pressure and higher retail rates."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Authority",
+      "comment": "PERSPECTIVE 3: REGULATORY AUTHORITY (TANGLED ROPE) \u2014 Constrained by FERC jurisdiction limits, state-level regulatory fragmentation, and complexity of monitoring real-time dispatch. Faces genuine coordination problem (maintaining reliable grid dispatch across consolidated utilities) alongside extraction mechanism (utilities suppressing independent competition to raise barriers to entry). High suppression despite moderate power because regulatory tools are asymmetrical \u2014 can monitor prices but cannot mandate competitive entry."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Consolidated Utility",
+      "comment": "PERSPECTIVE 4: CONSOLIDATED UTILITY (ROPE) \u2014 Experiences the constraint as coordination mechanism: consolidated dispatch, unified transmission planning, and economies of scale in generation portfolio. Net beneficiary with significant arbitrage options (can expand geographically, diversify fuel mix, exit unprofitable segments). Extraction mechanism is obscured by efficiency gains \u2014 utilities claim consolidation reduces costs, capturing the efficiency gains while suppressing independent generator access."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Competitive Market Model",
+      "comment": "PERSPECTIVE 5: COMPETITIVE MARKET MODEL (PITON) \u2014 The deregulated wholesale market structure (RTO/ISOs, locational marginal pricing, competitive dispatch auctions) persists as institutional framework despite degrading function as consolidation reduces effective competition. Theater ratio (0.48) reflects that auction mechanisms maintain formal competitive appearances while market structure concentrates power. Competitive model is maintained through inertia \u2014 network effects and sunk infrastructure make alternative governance costly to replace."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Grid Reliability System",
+      "comment": "PERSPECTIVE 6: GRID RELIABILITY SYSTEM (TANGLED ROPE) \u2014 Genuine coordination function (consolidated utilities improve transmission planning and reserve margin coordination) mixed with asymmetric extraction (consolidation reduces competition \u2192 reduced pressure for efficiency \u2192 higher reliability costs passed to consumers). Organized but constrained by interdependencies with consolidating utilities."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, electricity systems display natural monopoly characteristics in transmission and distribution, and some degree of consolidation may be inevitable given network effects. This perspective risks naturalizing what is actually a policy choice: markets for generation capacity could remain competitive even with consolidated transmission/distribution ownership. False summit detection will identify this as naturalization of contingent institutional arrangements."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "consolidation_efficiency_vs_extraction",
+      "question": "Do consolidation-driven efficiency gains (reduced transmission losses, better dispatch coordination, economies of scale) materialize as cost reductions for consumers, or are they captured by utilities through margin expansion?",
+      "resolution_mechanism": "Time series analysis of average generation costs vs retail electricity prices in consolidated vs competitive markets; comparison of transmission loss rates and reserve margin efficiency pre- and post-consolidation",
+      "impact": "If efficiency gains are passed through: tangled rope classification confirmed, suppression underestimated. If captured by utilities: snare classification strengthened, extraction understated.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether consolidation efficiency gains flow to consumers or are captured by utilities"
+    },
+    {
+      "id": "regulatory_capture_depth",
+      "question": "To what extent have consolidated utilities captured FERC and state regulatory processes, constraining regulator power below its nominal authority level?",
+      "resolution_mechanism": "Analysis of FERC enforcement patterns, abandoned investigations, regulatory agency staffing and revolving door patterns, utility lobbying expenditure correlation with regulatory outcomes",
+      "impact": "If capture is substantial: regulatory authority's exit_options should be downgraded from constrained to trapped, elevating suppression. Effective d for regulatory agents increases significantly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Depth of regulatory capture by consolidated utilities"
+    },
+    {
+      "id": "independent_generator_coalition_potential",
+      "question": "Can independent generators and retail consumers form effective political coalition to resist consolidation, or are they too fragmented for coordinated advocacy?",
+      "resolution_mechanism": "Analysis of independent generator association capacity, consumer advocacy organization funding and efficacy, historical coalition-building patterns in electricity market politics",
+      "impact": "If coalition capacity is high: powerless agents could upgrade to organized power level in near future, changing classification outcomes. If coalition capacity is low: snare classification solidifies.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether independent generators can form effective political coalition"
+    },
+    {
+      "id": "technological_bypass_possibility",
+      "question": "Do distributed renewable generation and storage technologies create genuine bypass pathways for retail consumers, reducing their structural trapedness?",
+      "resolution_mechanism": "Analysis of DER adoption rates in consolidated vs competitive markets, economics of behind-the-meter battery storage, grid-defection cost trajectories, technical feasibility of microgrids in different geographic contexts",
+      "impact": "If bypass is technically feasible and economically viable: consumer exit_options upgrade from trapped to constrained or mobile. If blocked by regulatory barriers or economics: trapedness confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether DER and storage enable consumer bypass of consolidated utilities"
+    },
+    {
+      "id": "transmission_natural_monopoly_irreducibility",
+      "question": "Is transmission system consolidation technically necessary for reliability and coordination, or can competitive generation coexist with consolidated transmission (standard industry model)?",
+      "resolution_mechanism": "Engineering analysis of operational requirements; comparative study of markets with unbundled generation/transmission (Texas ERCOT, PJM) vs fully vertically integrated systems; identification of dispatch coordination tasks that absolutely require consolidation vs those achievable with contractual coordination",
+      "impact": "If transmission consolidation alone suffices: generation consolidation is not technically necessary, extracting classification is confirmed. If generation consolidation is technically necessary: coordination function is overstated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical necessity of generation consolidation given transmission integration"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "commentary": {
+    "narrative_context": "The consolidation of wholesale electricity markets in North America over the past 15 years has produced a structural transformation in how power is generated, dispatched, and priced. Mergers of utilities, acquisitions of independent generators by holding companies, and the rise of vertically integrated megafirms have reduced the number of competitive participants while increasing the scale and geographic scope of consolidated operators. This constraint exhibits the characteristic signature of tangled rope: genuine coordination gains (unified dispatch, transmission planning, reserve margin optimization) coexist with asymmetric extraction (reduced competition suppresses independent generator margins and retail price pressure). The constraint cannot be classified as pure coordination (rope) because consolidation actively suppresses alternative market structures. It cannot be classified as pure extraction (snare) because the operational coordination benefits are real and material. Extractiveness has increased from 0.32 (early consolidation phase, relatively competitive remaining independents) to 0.58 (modern phase with few viable alternatives to consolidated utility service). Theater ratio remains relatively low (0.48) because wholesale market auctions maintain genuinely competitive appearances even as structural consolidation narrows the competitive set.",
+    "key_agents": [
+      "Large Incumbent Generators: Primary beneficiary (institutional/arbitrage) \u2014 consolidation expands their market power, captures efficiency gains, reduces competitive pricing pressure",
+      "Independent Generators: Primary victim (powerless/trapped) \u2014 faces consolidation-driven exit barriers, suppressed dispatch economics, forced acquisitions at unfavorable terms",
+      "Retail Consumers: Secondary victim (powerless/trapped) \u2014 faces higher retail rates as wholesale competition declines and utilities expand margins",
+      "Regulatory Authority (FERC/State PUCs): Institutional actor (moderate/constrained) \u2014 oversees market while facing genuine coordination problems (grid reliability, renewable integration) that consolidation partially solves but also captures for extraction",
+      "Grid Reliability System: Organized actor (organized/constrained) \u2014 benefits from consolidated coordination but trapped by dependence on consolidating utilities for execution",
+      "Competitive Market Model: Institutional actor (institutional/arbitrage) \u2014 maintains formal competitive structure through RTO/ISO auctions despite consolidation reducing substantive competition"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, reflecting a genuine mix of coordination and extraction. Early consolidation (T=0, \u03b5=0.32) offered meaningful efficiency gains \u2014 united dispatch reduced transmission losses, improved reserve coordination, achieved economies of scale in generation portfolio management. Modern consolidation (T=14, \u03b5=0.58) has extracted more of these gains into utility margins rather than passing them through to consumers. The upward trajectory reflects mounting evidence that consolidation is being used to suppress independent generation rather than to achieve unavoidable technical coordination. Suppression (0.65): High. Barriers to independent generator entry and operation include: (1) consolidated utilities controlling dispatch priority favoring their own generation, (2) long-term capacity contracts that lock out competitors, (3) transmission access and pricing opacity that favors integrated carriers, (4) reserve margin requirements that incentivize utilities to overbuild rather than purchase from independents, (5) regulatory complexity that favors well-resourced incumbents. Theater ratio (0.48): Moderate. RTO/ISO wholesale auctions maintain formal competitive mechanisms (locational marginal pricing, security-constrained economic dispatch, capacity auctions) that create the appearance of robust competition. However, the structural consolidation narrows the competitive set \u2014 many auction participants are subsidiaries of the same holding company, reducing substantive diversity. The theater has increased over the interval as the gap between formal mechanisms and substantive market concentration has widened.",
+    "directionality_logic": "Directionality computation flows from the beneficiary/victim structure and exit option constraints. Large utilities as beneficiaries with arbitrage options (can expand, diversify, exit segments) experience low effective extraction \u2014 d \u2248 0.15-0.20 \u2014 because they can navigate around market constraints. Independent generators as victims with trapped options (cannot exit investment sunk in generation assets, cannot relocate physical infrastructure) experience high extraction \u2014 d \u2248 0.85-0.95 \u2014 because consolidation directly suppresses their economic viability. The regulatory authority as a constrained institutional actor faces moderate d (\u2248 0.50-0.65) because it has nominal power but faces genuine technical coordination problems (grid reliability, renewable integration) that consolidation partly solves, creating moral hazard in oversight. Retail consumers as trapped powerless agents in regional monopolies experience high d (\u2248 0.80) despite being structurally smaller actors because they have no exit options and no direct participation in wholesale market decisions that determine their rate base.",
+    "perspectival_gap": "The independent generator sees pure snare \u2014 they face a consolidation machine designed to buy them out or drive them bankrupt, with no escape and no coordination benefit. The retail consumer sees snare from the distribution monopoly layer but also sees the wholesale consolidation effect transmitted through higher utility procurement costs. The consolidated utility sees rope \u2014 consolidation genuinely solves their dispatch and planning problems, enabling efficiency gains and operational resilience. The regulatory authority sees tangled rope with high uncertainty about whether the coordination benefits justify the extraction costs. The piton perspective reveals the competitive market model as increasingly performative \u2014 auctions continue but consolidation has narrowed the substantive competitive set, theater has risen as the gap between form and substance expands. The analytical observer risks the false summit of seeing consolidation as inevitable (natural monopoly) when it actually reflects policy choices about market structure.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by establishing that consolidation exhibits genuine tangled rope structure: (1) Real coordination function \u2014 unified dispatch and transmission planning produce measurable operational efficiency gains, validated by engineering analysis and industry data. (2) Asymmetric extraction \u2014 these coordination benefits are captured primarily by consolidated utilities through margin expansion rather than passed to consumers or paid to independent generators. (3) Active enforcement requirement \u2014 consolidation is maintained through regulatory approval processes (merger reviews, rate base treatment) that could be reformed to prevent it. The constraint is NOT pure extraction (snare) because the coordination benefits are material. The constraint is NOT pure coordination (rope) because consolidation actively suppresses competitive alternatives that could achieve coordination at lower extraction cost. The structure satisfies all three tangled rope gates: beneficiaries (utilities), victims (independent generators, consumers), requires_active_enforcement (merger approval, FERC oversight)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "renewable_integration_grid_stability",
+      "utility_rate_base_cost_of_capital",
+      "transmission_access_independent_generation"
+    ],
+    "dual_formulation_note": "Wholesale consolidation is downstream of individual utility mergers but represents a distinct structural constraint on market organization. Individual merger stories (utility_A_acquisition_utility_B) have higher \u03b5 values reflecting more transparent extraction; this meta-constraint story captures the system-level extractiveness emerging from accumulated individual consolidations."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

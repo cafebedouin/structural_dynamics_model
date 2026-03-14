@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "equilibrium_selection_problem",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "eqsel"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Equilibrium Selection Problem",
+    "topic_domain": "game_theory/institutional_coordination",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "convention_lock_beneficiaries"
+    ],
+    "victims": [
+      "coordination_agents",
+      "welfare_suboptimal_groups"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Trapped Coordinator",
+      "comment": "PERSPECTIVE 1: TRAPPED COORDINATOR (SNARE) \u2014 Agents bound by convention with no exit capacity. The selected equilibrium may be Pareto-dominated by an alternative, but switching requires coordinated defection. No single agent can escape without collective action. Maximum extraction experienced through convention lock."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Reform Coalition",
+      "comment": "PERSPECTIVE 2: REFORM COALITION (TANGLED ROPE) \u2014 Organized agents capable of coordinating transition to superior equilibrium. Experience both coordination benefit (shared interest in moving to better outcome) and extraction cost (transition requires concentrated effort and assumes information burden). Can exit but at high organizational cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Convention Beneficiary",
+      "comment": "PERSPECTIVE 3: CONVENTION BENEFICIARY (ROPE) \u2014 Institutional actors positioned favorably by the current equilibrium selection. Experience the constraint as pure coordination mechanism \u2014 maintaining the convention enables predictable interaction and locks in their advantage. Low experienced extraction; benefits from status quo clarity."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "universal",
+      "label": "The Academic Theorist",
+      "comment": "PERSPECTIVE 4: ACADEMIC THEORIST (PITON) \u2014 Game theorists studying equilibrium selection as pure mathematical problem. The literature performs sophistication (refinement concepts, focal points, epistemic conditions) while the actual mechanism of real-world equilibrium locking persists unchanged. Theater ratio high: proof of existence \u2260 analysis of why specific equilibria persist."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Defector Anticipator",
+      "comment": "PERSPECTIVE 5: DEFECTOR ANTICIPATOR (TANGLED ROPE) \u2014 Individual agents who recognize superior alternative equilibrium but face payoff reduction if others don't switch simultaneously. Coordination benefit (mutual switching improves all payoffs) and extraction cost (vulnerability to defection if switching fails). Exit requires mass coordination."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law Framing",
+      "comment": "PERSPECTIVE 6: NATURAL LAW FRAMING (MOUNTAIN) \u2014 Frames equilibrium selection as inherent to strategic interaction. Multiple equilibria and selection problem appear as fundamental features of game structure, like mathematical underdetermination. However, this naturalizes what is a contingent institutional fact: societies successfully coordinate on equilibrium transitions when power distributions and information asymmetries permit it."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "focal_point_mechanism",
+      "question": "What determines which equilibrium becomes focal in real-world coordination problems \u2014 Schelling salience, power asymmetry, path dependence, or institutional design?",
+      "resolution_mechanism": "Comparative case analysis of successful vs failed equilibrium transitions; identification of common factors predicting which equilibrium agents converge on",
+      "impact": "If salience/convention dominates: equilibrium selection is primarily coordination problem (Rope). If power asymmetry dominates: equilibrium selection is primarily extraction mechanism (Snare). If institutional design dominates: constraint is reconstructible (Scaffold).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determinants of focal equilibrium selection"
+    },
+    {
+      "id": "payoff_dominance_vs_risk_dominance",
+      "question": "When payoff-dominant and risk-dominant equilibria diverge, which one do actual agents converge on, and why?",
+      "resolution_mechanism": "Experimental game theory evidence; longitudinal observation of real-world coordination failures where payoff-superior equilibrium exists but agents remain locked in risk-dominant alternative",
+      "impact": "If payoff-dominant prevails: agents rationally recognize superior outcome and organize transition. If risk-dominant prevails: information asymmetry and defection fear prevent transition despite recognized superiority \u2014 extraction mechanism strengthens.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Payoff-dominance vs risk-dominance in equilibrium selection"
+    },
+    {
+      "id": "transition_cost_distribution",
+      "question": "Who bears the costs of transitioning from one equilibrium to a superior alternative \u2014 are costs distributed or concentrated on vulnerable agents?",
+      "resolution_mechanism": "Analysis of historical equilibrium transitions (monetary standards, technical standards, organizational forms); measurement of who gains/loses in transition window",
+      "impact": "If costs distributed: constraint is scaffolding problem with sunset. If costs concentrated on powerless: constraint is snare masquerading as coordination. Determines whether reform coalition can form.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Distribution of transition costs across agent populations"
+    },
+    {
+      "id": "information_asymmetry_persistence",
+      "question": "Do agents locked in suboptimal equilibrium lack information about superior alternative, or do they have information but face defection risk that prevents switching?",
+      "resolution_mechanism": "Qualitative analysis of agent beliefs and expectations; measurement of information availability vs behavioral switching; controlled experiments testing information provision",
+      "impact": "If information constraint: providing information enables transition (low suppression, Rope predominates). If defection-risk constraint: information alone insufficient \u2014 requires institutional guarantee or power asymmetry to enforce (high suppression, Snare/Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Information availability vs defection-risk in equilibrium lock"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "The equilibrium selection problem arises when multiple Nash equilibria exist in a coordination game and agents must converge on one without explicit communication or centralized authority. This constraint exhibits the full spectrum of DR types from different structural positions. A suboptimal but stable equilibrium locks in through convention, fear of unilateral defection, and information asymmetries about whether alternatives exist or whether others will switch. The same structural phenomenon \u2014 the inability to coordinate on a Pareto-superior outcome \u2014 appears as pure coordination (Rope), temporary coordination failure with transition pathways (Scaffold), mixed coordination with extraction (Tangled Rope), pure extraction (Snare), or immutable mathematical property (Mountain), depending on the observer's power level and exit capacity. The constraint's theater ratio (0.68) reflects that academic game theory literature performs high sophistication in analyzing refinement concepts and focal point selection, while the actual mechanism by which real-world equilibrium locks in and persists remains structurally unchanged. The extractiveness trajectory (0.35 \u2192 0.52) shows accumulating welfare loss as suboptimal equilibrium persists and agents internalize convention-lock as inevitable.",
+    "key_agents": [
+      "Trapped Coordinators: Powerless agents (powerless/trapped) \u2014 individual players bound by convention with no capacity for unilateral exit or coordination",
+      "Reform Coalition: Organized agents (organized/constrained) \u2014 groups capable of organizing equilibrium transition but facing concentrated costs and defection risk",
+      "Convention Beneficiary: Institutional winners (institutional/arbitrage) \u2014 actors positioned favorably by current equilibrium, benefit from status quo clarity and stability",
+      "Academic Theorist: Sophisticated observers (powerful/mobile) \u2014 game theorists analyzing equilibrium selection as mathematical problem; theater-high perspective treats proof as mechanism explanation",
+      "Defector Anticipator: Individual optimizers (moderate/constrained) \u2014 agents recognizing superior equilibrium but unable to switch without simultaneous mass coordination",
+      "Analytical Observer: Universal perspective (analytical/analytical) \u2014 risks naturalizing contingent convention-lock as inherent mathematical property"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The equilibrium selection problem generates welfare loss through coordination failure, but the loss is not maximally extractive because no agent deliberately designed the lock \u2014 it emerges from decentralized strategic interaction. The beneficiary gains advantage but through convention-lock rather than active rent-seeking. The trajectory shows accumulation over time as agents internalize the equilibrium as inevitable. Suppression (0.58): Moderate-high. Significant barriers to equilibrium transition include defection risk (collective action problem), information asymmetry about alternatives, coordination costs, and institutional embedding of the current equilibrium. But suppression is not total \u2014 historical examples show equilibrium transitions when power asymmetries favor it or institutional design enables it. Theater ratio (0.68): High. Game theory literature demonstrates substantial sophistication in equilibrium analysis (refinement concepts, epistemic foundations, focal point theory) while the actual real-world selection mechanism remains opaque. Proving multiple equilibria exist \u2260 explaining why specific equilibria persist. The performative content is in the mathematical models' elegance masking institutional contingency.",
+    "directionality_logic": "Directionality derives from the agent's structural position in the coordination problem. Trapped coordinators with no exit (exit_options=trapped, power=powerless) experience maximum extraction (d\u22480.95, f(d)\u22481.42). Convention beneficiaries with arbitrage exits experience minimum extraction (d\u22480.05, f(d)\u2248-0.12) \u2014 the constraint is pure coordination from their perspective. Organized defectors with constrained exits occupy middle ground (d\u22480.55, f(d)\u22480.75) \u2014 they perceive both coordination benefit and extraction cost. The powerful academic theorist with mobile exits (d\u22480.48, f(d)\u22480.60) experiences the constraint as sophistication opportunity, not extraction. The analytical observer (d\u22480.73, f(d)\u22481.15) sees the full structure but risks naturalizing contingency.",
+    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon produces opposing classifications based on observational position. Trapped agents see Snare (no exit, maximum extraction). Beneficiaries see Rope (coordination mechanism, arbitrage advantage). Organized defectors see Tangled Rope (mixed coordination benefit and extraction cost, but capacity to exit at high organizational cost). Theorists see Piton (performative analysis, theater-high mechanism). Analytical observer risks seeing Mountain (immutable mathematical property) but structural data reveals false summit: equilibrium lock is reconstructible through institutional intervention. The perspectival gap is not measurement ambiguity \u2014 it reflects real differences in how agents experience the same constraint based on their power and exit capacity.",
+    "mandatrophy_analysis": "Equilibrium selection resolves the mandatrophy by revealing that all six types are legitimate perspectival readings. The mandatrophy question 'Is this coordination or extraction?' has a two-part answer: (1) it is genuine coordination (multiple agents benefit from convergence on common equilibrium) AND (2) it functions as extraction mechanism (the specific equilibrium selected benefits some agents asymmetrically, and powerless agents cannot escape). The constraint is not misclassified by any perspective \u2014 each perspective describes a real structural feature. The analytical observer's mountain classification is a false summit: the underdetermination of equilibria is mathematical, but the selection of which equilibrium persists is institutional. Institutional design can enable transition (Scaffold), organized power can force transition (Tangled Rope), or powerlessness can lock agents in Snare. The constraint is not naturally determined."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "coordination_failure",
+      "convention_lock",
+      "institutional_path_dependence"
+    ],
+    "dual_formulation_note": "Equilibrium selection problem decomposes into three structurally distinct constraints: (1) multiple equilibria existence (mathematical fact, \u03b5\u22480.08, Mountain); (2) coordination failure to superior equilibrium (behavioral/institutional fact, \u03b5\u22480.52, this story); (3) path dependence preventing transition (institutional entrenchment, \u03b5\u22480.65, Snare-dominant). Each has different epsilon and different resolution mechanisms. This story focuses on the behavioral coordination aspect."
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "welfare_eligibility_verification",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "welfare"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Welfare Eligibility Verification Systems",
+    "topic_domain": "social_policy/administrative_burden",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_budget_gatekeepers",
+      "program_administrators"
+    ],
+    "victims": [
+      "low_income_applicants",
+      "program_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Low-Income Applicant",
+      "comment": "PERSPECTIVE 1: LOW-INCOME APPLICANT (SNARE) \u2014 Trapped by material dependency on benefits and unable to exit verification demands without losing access. Bears full weight of administrative burden: document collection, appointment scheduling, compliance deadlines. No alternative pathway; suppression is structural and complete."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Community Service Provider",
+      "comment": "PERSPECTIVE 2: COMMUNITY SERVICE PROVIDER (TANGLED ROPE) \u2014 Constrained by funding dependency on government contracts tied to program compliance metrics. Provides genuine coordination function (verifying eligibility prevents fraud and maintains program legitimacy) but absorbs extraction: verification costs borne disproportionately by staff time, administrative overhead, and blame for access delays. Can exit but at high cost to organizational mission."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Welfare Bureaucracy",
+      "comment": "PERSPECTIVE 3: WELFARE BUREAUCRACY (ROPE) \u2014 Benefits from verification systems as pure coordination mechanism: sorting eligible from ineligible applicants, preventing duplicate enrollment, maintaining audit trail. Experiences the constraint as legitimate gatekeeping, not extraction. Net beneficiary \u2014 system preserves their institutional authority and compliance function."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Welfare Reform Coalition",
+      "comment": "PERSPECTIVE 4: WELFARE REFORM COALITION (SCAFFOLD) \u2014 Organized advocates (poverty organizations, digital access nonprofits) are building alternative pathways: simplified income verification, data-sharing between agencies, presumptive eligibility for known-poor households. These represent temporary scaffolding toward a sunset where algorithmic pre-screening eliminates manual application burdens. High suppression is tolerated because the coalition sees a visible exit path."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Fraud Prevention Theater",
+      "comment": "PERSPECTIVE 5: FRAUD PREVENTION THEATER (PITON) \u2014 Welfare verification systems maintain high theater ratio: burdensome document requirements, recertification cycles, and eligibility reviews persist despite evidence that applicant fraud is rare (typically 1-3% of claims) and administrator error is more common. The ritual persists through institutional inertia \u2014 politicians maintain tough eligibility scrutiny to signal fiscal responsibility, even though verification costs exceed fraud prevented. The system is maintained because alternatives haven't replaced the symbolic function."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universalizing perspective, some verification is inherent to any transfer program: distinguishing eligible from ineligible recipients is a logical requirement, not a policy choice. From this view, welfare eligibility verification is an immutable structural feature of resource distribution. However, the empirical data contradicts this \u2014 verification burden is highly contingent on policy design choices (digital vs paper, real-time vs periodic, presumptive vs application-based). The mountain classification naturalizes what are actually design decisions."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fraud_detection_vs_access_barrier_tradeoff",
+      "question": "What proportion of current verification burden is justified by fraud prevention versus representing unnecessary access barriers?",
+      "resolution_mechanism": "Comparative analysis of fraud rates across jurisdictions with varying verification stringency; cost-benefit analysis of prevented fraud vs applicant burden",
+      "impact": "If fraud prevention justifies current burden: classify as legitimate mountain. If burden exceeds fraud prevention value by 3x+: classification shifts toward snare for powerless agents.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of verification burden justified by fraud prevention"
+    },
+    {
+      "id": "administrative_burden_extraction_mechanism",
+      "question": "Is administrative burden (long application forms, document collection, appointment scheduling) an intentional extraction mechanism or an unintended side effect of verification design?",
+      "resolution_mechanism": "Policy analysis of jurisdictions that simplified application processes without reducing fraud detection; interviews with policy designers regarding burden intentionality",
+      "impact": "If intentional: snare classification accurate \u2014 burden is extraction mechanism. If unintended: tangled rope classification more appropriate \u2014 extraction is side effect, not primary function.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether administrative burden is intentional extraction or unintended design effect"
+    },
+    {
+      "id": "data_sharing_integration_technical_feasibility",
+      "question": "Are the technical barriers to integrated multi-agency eligibility verification (IRS, Social Security, state unemployment) genuinely insurmountable or primarily organizational/political?",
+      "resolution_mechanism": "Technical feasibility audits of data-sharing integration; comparison with other countries that have implemented integrated systems; cost estimation for full integration",
+      "impact": "If genuinely technical: verification burden is structural necessity, mountain classification justified. If primarily organizational: scaffold sunset is real \u2014 simplified verification is achievable, making reform coalition's vision structural rather than aspirational.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Technical feasibility of integrated multi-agency eligibility verification"
+    },
+    {
+      "id": "identity_locked_compliance_cycle",
+      "question": "To what extent do low-income applicants internalize verification burden as legitimate cost of receiving benefits (identity lock to compliance identity) versus viewing it as external barrier?",
+      "resolution_mechanism": "Qualitative research on applicant framing of verification requirements; comparison of exit capacity with actual exit attempts; analysis of appeal rates and dispute engagement",
+      "impact": "If identity locked: change applicants' exit_options from trapped to identity_locked, potentially changing classification for some perspectives. If purely trapped: current classification stands.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of identity lock versus material trapping in welfare verification burden"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Welfare eligibility verification systems create a structural constraint between the legitimate policy need to prevent fraud and misuse of public funds against the administrative burden imposed on low-income applicants seeking benefits. The constraint exhibits characteristics of tangled rope: genuine coordination function (sorting eligible from ineligible recipients, preventing duplicate enrollment, maintaining program integrity) coexists with asymmetric extraction (administrative burden concentrated on applicants with fewest resources to bear it). The theater ratio (0.64) reflects that verification requirements have expanded beyond fraud prevention needs \u2014 recertification cycles, document requirements, and appointment-based processing persist despite evidence that fraud is rare (1-3% of claims) and administrative errors are more common. The constraint's suppression (0.68) reflects structural barriers: applicants lack time, transportation, documentation, and literacy resources required for verification. The trajectory shows increasing theater and extractiveness over the 20-year interval, indicating institutional drift toward more burdensome verification practices despite stable or declining fraud rates.",
+    "key_agents": [
+      "Low-income Applicants: Primary victims (powerless/trapped) \u2014 bear full administrative burden; material dependency prevents exit",
+      "State Budget Gatekeepers: Primary beneficiaries (institutional/arbitrage) \u2014 control fund access; use verification as extraction mechanism to suppress applications",
+      "Program Administrators: Secondary beneficiary (institutional/arbitrage) \u2014 justify institutional authority through compliance strictness",
+      "Community Service Providers: Secondary victim (moderate/constrained) \u2014 absorb verification costs through staff time and administrative overhead; constrained by funding dependency",
+      "Welfare Bureaucracy: Institutional actor (institutional/arbitrage) \u2014 experiences verification as pure coordination; maintains gatekeeping authority",
+      "Welfare Reform Coalition: Organized agents (organized/constrained) \u2014 poverty organizations, digital access nonprofits building simplified verification pathways",
+      "Fraud Prevention Theater: Institutional practice (institutional/arbitrage) \u2014 symbolic verification maintains political legitimacy despite low actual fraud"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The system extracts through administrative burden (time, transportation, documentation costs) that is borne by those least able to afford it. However, extraction is not maximal (snare-level) because some applicants do complete verification and access benefits, and some advocates are successfully reducing burden. The value reflects that extraction is built into design but not absolute. Suppression (0.68): Moderately high. Structural barriers include: lack of transportation to offices, work schedules incompatible with appointment availability, missing documents (ID, address proof) that are costly to obtain, literacy barriers for complex forms, language barriers, technology access gaps, and temporal burden of recertification. Suppression is not total because some groups (organized advocates, community providers) can reduce barriers for specific populations. Theater ratio (0.64): Moderately high and increasing. Evidence: fraud rates in welfare programs are consistently 1-3%, yet verification procedures have intensified over time; recertification cycles persist even when applicant status hasn't materially changed; document requirements duplicate information agencies already possess; appointment-based processing creates artificial scarcity that delays access. Digital simplification efforts (online applications, data-sharing) would reduce theater without reducing actual fraud detection, yet these remain incomplete.",
+    "perspectival_gap": "The low-income applicant experiences snare-level effective extraction through the combination of base extractiveness (0.58), high d from victim status (0.95), and national scope (1.0). The reform coalition experiences lower effective extraction through the combination of same base extractiveness, lower d from organized status (0.55), and constrained exit that partially offsets power disadvantage through collective action. The welfare bureaucracy experiences rope (pure coordination) because d is low (0.10) and they benefit from the system. This perspectival gap \u2014 snare vs rope at the same time and place \u2014 is the diagnostic signature of tangled rope: the constraint functions as coordination for some agents (budget control, program integrity) and as pure extraction for others (access barriers for powerless agents). No single classification captures both truths; tangled rope captures both.",
+    "directionality_logic": "Directionality d is derived from each agent's structural position relative to the extraction flow. Low-income applicants are victims with trapped exit options: high d (\u22480.95) yielding high f(d) (\u22481.42) and high experienced extractiveness chi. State budget gatekeepers are beneficiaries with arbitrage options: low d (\u22480.05) yielding negative f(d) (\u2248-0.12) and negative experienced extractiveness. Community providers are victims with constrained exit: moderate-high d (\u22480.70) yielding moderate f(d) (\u22481.00) and moderate chi. Welfare bureaucracy is beneficiary with arbitrage: low d (\u22480.10) yielding f(d) \u22480.00, rope classification. The reform coalition is organized with constrained exit: moderate d (\u22480.55) yielding f(d) \u22480.75 \u2014 they experience extraction but have organizational power to contest it. The directionality pipeline is the mechanism by which the same constraint (0.58 base extractiveness) produces different effective extraction (\u03c7) for different agents.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that verification systems are genuinely hybrid: they solve legitimate coordination problems (preventing fraud, avoiding duplicate enrollment, maintaining audit trails) while simultaneously extracting through administrative burden. The mandatrophy is NOT 'is this coordination or extraction?' but 'whose experience dominates the classification?' From the analytical perspective (civilizational scope), the constraint appears as mountain \u2014 verification is inherent to transfers. But from the powerless perspective (biographical scope), it appears as snare \u2014 verification is an extraction mechanism. The tangled rope classification reflects that both are true: the constraint has real coordination function (snare-only classification would be false natural law) AND real asymmetric extraction (rope-only classification would ignore the burden). The resolution is that the constraint IS tangled rope at the institutional level but appears as snare to those it most affects. This gap is not an error in classification \u2014 it is the core structural phenomenon the constraint story must capture."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "means_tested_benefit_access",
+      "administrative_burden_poverty_trap",
+      "algorithmic_welfare_allocation"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

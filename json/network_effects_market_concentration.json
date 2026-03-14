@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "network_effects_market_concentration",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "neteff"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Network Effects Market Concentration",
+    "topic_domain": "economic/technology/competition",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_platform_operator"
+    ],
+    "victims": [
+      "new_entrants",
+      "consumer_switching_capacity",
+      "competitive_market_structure"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Excluded Competitor",
+      "comment": "PERSPECTIVE 1: NEW ENTRANT / EXCLUDED COMPETITOR (SNARE) \u2014 A potential competitor with superior technology cannot enter the market. Network effects create a trap: the incumbent's value grows with each user, making the barrier to entry insurmountable regardless of product quality. Exit is impossible \u2014 the competitor either accepts market exclusion or abandons the entire sector. Maximum extraction experienced by those locked out of participation."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Locked-In User",
+      "comment": "PERSPECTIVE 2: LOCKED-IN USER (SNARE) \u2014 A user on the dominant platform pays prices or accepts terms that would not survive competition. Switching costs are prohibitive: losing the network externality (all social connections, established workflows, data history) is equivalent to losing the primary value of the service. High suppression: exit exists in formal law but is crushing in practice. Sustained extraction without compensating coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Niche Competitor",
+      "comment": "PERSPECTIVE 3: NICHE COMPETITOR (TANGLED ROPE) \u2014 A competitor can survive in an underserved segment (vertical-specific, regional, or demographic niche) where network effects have not yet dominated. This agent experiences genuine coordination benefit from the dominant platform's ecosystem (APIs, standards, developer community) alongside extraction: locked out of mainstream growth by network moat. Mixed extraction and coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Platform",
+      "comment": "PERSPECTIVE 4: INCUMBENT PLATFORM OPERATOR (ROPE) \u2014 Experiences the constraint as pure coordination: connecting users to users is the core value proposition. Network effects are the mechanism that solves the coordination problem (getting the critical mass for the service to be useful). The incumbent benefits from this coordination and experiences it as legitimate. Suppression and extraction are low from this perspective \u2014 the constraint is the solution, not the problem."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulatory Coalition",
+      "comment": "PERSPECTIVE 5: REGULATORY / COMPETITION AUTHORITY (TANGLED ROPE) \u2014 Organized state actors see both coordination benefit (network effects solve real user-matching problems) and extraction (market concentration undermines competitive discipline). Regulatory action creates its own extraction: compliance costs, innovation slowdown, friction in the system. Medium effective extraction because organized agents have exit paths and agency \u2014 regulation can modify the constraint even if completely eliminating network effects is infeasible."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW CLAIM (MOUNTAIN) \u2014 From a civilizational perspective, network effects are sometimes presented as an immutable law: services with positive externalities naturally consolidate to monopoly because of mathematics, not because of extractive institutional design. However, the structural data contradicts the mountain classification \u2014 historical counter-examples (MySpace to Facebook, Friendster's obsolescence, protocol-level platforms like email and HTTP that resist consolidation) show that network effects are contingent on specific design choices, not laws of physics. The 'inevitable monopoly' framing naturalizes what is actually a contingent institutional arrangement subject to regulatory and technological intervention."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "endogenous_vs_exogenous_network_effects",
+      "question": "Are network effects in this market endogenous (requiring genuine coordination of users) or exogenous (artificially locked in via proprietary data formats, API restrictions, or switching-cost engineering)?",
+      "resolution_mechanism": "Empirical analysis: Can a competitor offer the same utility without the network? Can users export their data and social graphs? Are interoperability APIs exposed or proprietary? Historical analysis: Did the network effect arise organically or was it engineered post-hoc?",
+      "impact": "If endogenous: true coordination problem, extraction is moderate, constraint is structurally robust (Rope from most perspectives). If exogenous: artificial lock-in, extraction is severe, constraint is regulatory target (Snare/Tangled Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether network effects arise from genuine user coordination or artificial lock-in"
+    },
+    {
+      "id": "interoperability_feasibility",
+      "question": "Is technical interoperability (allowing users to bring their social graph and data to competitors) structurally feasible for this service category?",
+      "resolution_mechanism": "Technical feasibility analysis: Can user accounts, social connections, and content be ported to alternative platforms? Are there standardized protocols or data formats that would enable this? Precedent analysis: email and HTTP support multiple competing providers without losing network value \u2014 what makes this service different?",
+      "impact": "If feasible: regulatory intervention via interoperability mandates converts the constraint from Snare (for users) to Rope (network effects remain but extraction decouples from monopoly). If infeasible: natural monopoly claim has more merit, but structural data suggests infeasibility is often engineered rather than inherent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical feasibility of interoperability standards"
+    },
+    {
+      "id": "two_sided_market_asymmetry",
+      "question": "Are network effects symmetric across user groups (all users benefit equally from scale) or asymmetric (one side \u2014 advertisers, sellers, creators \u2014 extracts value from the other side's network lock-in)?",
+      "resolution_mechanism": "Economic analysis: Consumer welfare vs advertiser/merchant surplus over time. Pricing asymmetry: are users charged while the other side is subsidized to lock users in? Regulatory data: are competition authorities treating this as monopoly leverage on one side using network lock-in on the other?",
+      "impact": "If symmetric: genuine coordination, Rope classification more defensible from both sides. If asymmetric: one side (typically users/consumers) is trapped via network effects to extract from the other side (advertisers/merchants) \u2014 converts Rope to Snare for the locked-in side.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Symmetry of network effects across different user groups"
+    },
+    {
+      "id": "winner_take_most_inevitability",
+      "question": "Is the market's concentration into a single dominant platform inevitable (given network effects) or contingent on specific institutional decisions (regulation, platform governance, technical design)?",
+      "resolution_mechanism": "Counterfactual analysis: What would the market look like under different regulatory regimes (e.g., forced interoperability, data portability, non-discriminatory API access)? Historical analysis: Did markets with similar network-effect fundamentals (email, web browsers, instant messaging) consolidate to monopoly or remain fragmented? Technological analysis: What design choices (closed vs open protocols, proprietary vs standardized data) drive consolidation?",
+      "impact": "If inevitable: mountain classification has merit, but violates empirical contradiction test (email, HTTP). If contingent: constraint is structural choice, regulatory target, and Tangled Rope or Snare classification is correct. This omega resolves the false summit.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether market concentration is inevitable or contingent on institutional design"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Network effects create a structural tension between genuine coordination benefits (connecting users solves a real matching problem) and market concentration with extractive outcomes (monopoly incumbent raises prices and reduces innovation discipline because competitors cannot enter). The constraint exhibits classically hybrid properties: real coordination function coupled with asymmetric extraction. The incumbent platform experiences the constraint as pure coordination \u2014 network effects are how the service creates value. New entrants experience it as a trap with no exit. Users experience it as forced loyalty: switching costs are prohibitive, but the alternative (not participating) is worse. Regulators experience it as a coordination problem that creates a second-order extraction problem: monopoly pricing and reduced choice. The theater ratio reflects that platform incumbents invest heavily in maintaining perceived network dominance (network effects narrative, brand moat messaging, social proof signaling) alongside genuine network externalities. The measurement trajectory shows extractiveness increasing as markets mature \u2014 early markets have real competition; as one player achieves critical mass, new entrants face exponentially rising switching costs and users face exponentially rising lock-in.",
+    "key_agents": [
+      "Incumbent Platform Operator: Primary beneficiary (institutional/arbitrage) \u2014 captures monopoly rents enabled by network lock-in; experiences constraint as coordination mechanism",
+      "New Entrant Competitor: Primary victim (powerless/trapped) \u2014 cannot overcome network barrier regardless of product quality; functionally excluded from market",
+      "Locked-In User: Primary victim (powerless/constrained) \u2014 bears extraction in the form of monopoly pricing, reduced service quality, privacy extraction; switching costs are prohibitive",
+      "Consumer Switching Capacity: Structural victim (systemic) \u2014 network effects convert what should be a contestable market into a durable monopoly; competitive discipline is eliminated",
+      "Niche Competitor: Secondary actor (moderate/constrained) \u2014 can survive in underserved segments but cannot compete for mainstream market",
+      "Regulatory Coalition: Organized actor (organized/constrained) \u2014 sees both coordination benefit and extraction; interventions create their own friction costs",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as immutable market laws"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. Network effects create genuine value for users, but as markets mature, incumbent operators extract rents via pricing power, reduced service quality, privacy extraction, and leverage on complementary markets. The 0.58 reflects that the constraint solves a real coordination problem (value ~0.35 at market entry) but has degraded into rent extraction (value ~0.58 at market maturity). Suppression (0.62): High. Barriers to exit for users are severe: social connections, data history, established workflows, and ecosystem integration create switching costs that are only partially surmountable. Regulatory barriers (data portability requirements are often weak or absent) and technical barriers (proprietary data formats, closed APIs) compound user lock-in. Niche competitors face product-market suppression (network effects disadvantage smaller services) and resource suppression (cannot compete with incumbent's scale economies). Theater ratio (0.45): Moderate. Platform operators invest significantly in maintaining perceived network dominance through brand narratives, social proof mechanisms, and 'platform moat' messaging. However, this is paired with genuine network coordination mechanisms. The theater reflects communicative effort to reinforce lock-in narrative, distinct from the actual network effects. The measurement trajectory shows theater increasing as markets mature \u2014 proportionally more effort goes into maintaining the narrative that the network is dominant (and therefore switching is futile) versus actual coordination improvements.",
+    "directionality_logic": "The directionality chain produces different effective extraction values (\u03c7) for the same base extractiveness (0.58) depending on the agent's structural position. Beneficiaries with arbitrage exit (incumbent) experience low or negative \u03c7. Victims with trapped exit (new entrants) experience maximum \u03c7. Constrained agents (users, niche competitors) experience medium-to-high \u03c7. Organized agents (regulators) experience moderate \u03c7 because they have agency and alternative interventions. This range (from negative to 0.78 effective extraction) is the perspectival gap: the same constraint is experienced as a solution by one agent and as a trap by another. The gap is structural, not perspectival in the weak sense \u2014 it reflects real differences in power, exit options, and relationship to the constraint flow.",
+    "perspectival_gap": "This constraint demonstrates the fundamental gap between beneficiary and victim perspectives. The incumbent platform (rope) experiences network effects as the core coordination mechanism that solved the matching problem and created immense social value. New entrants (snare) experience network effects as an insurmountable barrier that excludes them regardless of product merit. Users (snare) experience network effects as lock-in: they depend on the service because of critical mass, not because of inherent superiority. Regulators (tangled rope) see both sides: real coordination value but also real extraction via monopoly rent. The perspectival gap reveals that 'network effects' is not a single constraint but a framing that obscures two structurally distinct mechanisms: (1) genuine coordination of many agents (rope function) and (2) market concentration and lock-in (snare function). Whether network effects consolidate to monopoly or remain fragmented depends on institutional choices (interoperability, data portability, regulatory oversight) not on mathematics.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The constraint qualifies as tangled rope because it exhibits (1) genuine coordination function (network effects solve the user-matching problem), (2) asymmetric extraction (incumbents extract rents from locked-in users and excluded competitors), and (3) active enforcement (platforms invest in maintaining API restrictions, proprietary data formats, and switching-cost engineering to sustain lock-in). The mandatrophy is resolved by recognizing that network effects are NOT pure coordination (rope) despite the incumbent's framing \u2014 they are coordination coupled with extractive lock-in mechanism. The measurement trajectory confirms this: extractiveness increases over the market lifecycle as coordination becomes durable and the incumbent converts coordination value into extraction value. At market entry (t=0), \u03b5 \u2248 0.35 (mostly coordination, minimal extraction). At market maturity (t=10), \u03b5 \u2248 0.58 (coordination still present, but extraction dominant). The false summit (analytical mountain) is ruled out by empirical contradiction: email and HTTP are network-effect industries that did not consolidate to monopoly because institutional choices (open protocols, non-discriminatory access, standardization) prevented lock-in conversion. The constraint is not immutable."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_data_portability",
+      "api_interoperability_standards",
+      "two_sided_market_leverage"
+    ],
+    "dual_formulation_note": "Network effects market concentration decomposes into three structurally distinct constraints: (1) genuine network externality (users benefit from matching, coordination value), (2) lock-in mechanism (switching costs, data lock-in, proprietary formats), and (3) monopoly leverage (pricing power, reduced innovation, cross-market extraction). Each has distinct \u03b5 values and structural mechanisms. A single story captures the hybrid, but downstream constraints examine each mechanism separately."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

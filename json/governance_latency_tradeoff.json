@@ -1,0 +1,194 @@
+{
+  "header": {
+    "constraint_id": "governance_latency_tradeoff",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "govlat"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Governance Latency Tradeoff: Speed vs. Legitimacy",
+    "topic_domain": "political_economy/institutional_design",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "executive_authority",
+      "crisis_response_apparatus"
+    ],
+    "victims": [
+      "deliberative_legitimacy",
+      "minority_stakeholder_voice"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Excluded Stakeholder",
+      "comment": "PERSPECTIVE 1: EXCLUDED STAKEHOLDER (SNARE) \u2014 Stakeholders without seat at decision table face latency extraction: rapid executive action to resolve crisis excludes deliberative input. No exit option from policies that affect them. Experience maximum extraction \u2014 coercive imposition under time pressure justifies bypassing consent mechanisms. Suppression maintained through emergency framing."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Affected Public",
+      "comment": "PERSPECTIVE 2: AFFECTED PUBLIC (TANGLED ROPE) \u2014 Constrained by the governance process itself but benefits from crisis resolution. Faces costs (exclusion, imposed policies) alongside benefits (stability, functional response). Medium extraction with genuine coordination requirement \u2014 the speed constraint solves real coordination problems but at asymmetric cost. Biographical horizon shows higher extraction; generational view accommodates longer-term benefits."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Executive Authority",
+      "comment": "PERSPECTIVE 3: EXECUTIVE AUTHORITY (ROPE) \u2014 Beneficiary. Experiences latency tradeoff as pure coordination solution: rapid decision-making enables response to crisis. Can arbitrage between faster executive action and slower deliberative consensus. Faces no meaningful constraints on exit \u2014 authority to bypass consensus is the mechanism's core function. Low experienced extraction \u2014 extraction runs toward this agent."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Procedural Reform Coalition",
+      "comment": "PERSPECTIVE 4: PROCEDURAL REFORM COALITION (SCAFFOLD) \u2014 Organized actors (civil society groups, legal advocates, legislative reformers) see the latency tradeoff as a temporary institutional design failure with a sunset: emergency procedures can be time-limited, deliberative mechanisms can be accelerated without full abandonment, and post-crisis review processes can restore legitimacy deficit. This perspective requires has_sunset_clause: true \u2014 the emergency authorization must include explicit expiration and review triggers."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Perpetual Emergency Apparatus",
+      "comment": "PERSPECTIVE 5: PERPETUAL EMERGENCY APPARATUS (PITON) \u2014 Institutional mechanisms designed as temporary (emergency powers, executive orders, crisis protocols) persist beyond their original crisis due to inertia, recurring threats, or political convenience. Theater ratio high: much procedural activity around 'managing' emergency legitimacy (oversight hearings, impact statements, review processes) performs legitimacy without changing underlying speed prioritization. The apparatus has become degraded \u2014 maintained because permanent replacement structures haven't emerged, not because it functions as designed."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, governance faces an apparent mathematical tradeoff: the time required for democratic deliberation cannot be compressed below some threshold without degrading legitimacy or stakeholder input capacity. This appears as an immutable constraint of collective decision-making \u2014 a natural law of politics. However, the structural data reveals this as a false summit: the tradeoff is contingent on institutional design choices (voting procedures, information access, representation rules) and crisis framing authority, not on any fundamental law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "crisis_legitimacy_threshold",
+      "question": "What response time is necessary for a governance action to qualify as 'crisis response' vs. political opportunism disguised as urgency?",
+      "resolution_mechanism": "Comparative analysis of crisis definitions across jurisdictions; post-crisis assessment of whether speed was empirically necessary or politically convenient; tracking false urgency claims in historical retrospectives",
+      "impact": "If threshold is low (hours): legitimate emergency powers expand dramatically, enabling extraction via false urgency. If threshold is high (weeks): genuine crises may be mishandled by deliberative delays. Classification shifts from Snare toward Tangled Rope as legitimacy criteria tighten.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Crisis legitimacy threshold for urgency claims"
+    },
+    {
+      "id": "deliberative_acceleration_feasibility",
+      "question": "Can deliberative procedures be materially accelerated (parallel input streams, pre-drafted alternatives, standing advisory bodies) without degrading legitimacy or stakeholder capacity to participate meaningfully?",
+      "resolution_mechanism": "Case studies of accelerated procedures (expedited legislation, emergency consultation processes); measurement of stakeholder comprehension and participation rates; comparison of legitimacy deficits between accelerated and bypassed procedures",
+      "impact": "If feasible: latency tradeoff is not fundamental but a choice to privilege speed over legitimacy. Scaffold perspective confirmed. If infeasible: speed-legitimacy tradeoff is structural. Snare classification stands.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Feasibility of accelerating deliberative procedures without legitimacy loss"
+    },
+    {
+      "id": "crisis_recurrence_pattern",
+      "question": "Are invoked 'emergency' powers actually used only for unprecedented threats, or do they accumulate around recurring, foreseeable problems that could be solved through normal governance?",
+      "resolution_mechanism": "Longitudinal tracking of emergency declarations; categorization by crisis type (novel threat vs recurring pattern); measurement of time gap between crisis resolution and sunset clause activation",
+      "impact": "If mostly novel threats: Piton classification is incorrect \u2014 temporary powers remain truly temporary. If mostly recurring: Piton classification confirmed \u2014 emergency authorization persists due to institutional inertia around foreseeable problems. Reveals whether apparatus is degraded or functioning as extended tool.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Pattern of emergency power use: novel threats vs recurring problems"
+    },
+    {
+      "id": "stakeholder_substitution_mechanism",
+      "question": "In deliberative exclusions, are affected stakeholders' interests represented by proxy (elected officials, administrative bodies, advocacy groups) or are they genuinely absent from decision-making?",
+      "resolution_mechanism": "Analysis of proxy representation structures; measurement of correlation between proxy positions and excluded stakeholder preferences (surveys, retrospective assessment); evidence of proxy capture by other interests",
+      "impact": "If proxy representation is accurate: extraction is reduced \u2014 Tangled Rope classification holds. If proxy capture occurs: victims' interests diverge from proxy positions \u2014 Snare classification strengthened. Determines whether constraint is hybrid coordination-extraction or pure extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Accuracy of proxy representation for excluded stakeholders"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.57
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.71
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The governance latency tradeoff represents a fundamental structural tension in institutional design: decision-making speed and stakeholder legitimacy appear to vary inversely. Rapid crisis response requires concentrated authority and accelerated procedures, which exclude deliberative input. Inclusive deliberation requires time for multiple stakeholders to participate, which delays response. This constraint exhibits all six classification types depending on structural position, and reveals how the same governance mechanism appears as natural law to one observer, coordination solution to another, and pure extraction to a third. The extractiveness value has risen over the interval (0.35 \u2192 0.58) as crisis declarations have become more frequent and less temporally bounded, while theater ratio has increased (0.48 \u2192 0.71) as procedural justifications have multiplied to cover increasingly routine uses of emergency authority. The constraint is a tangled rope: genuine coordination function (crisis response requires speed) exists alongside genuine extraction (stakeholders bear costs of exclusion with no exit option). The scaffold perspective identifies a structural sunset: deliberative procedures can be materially accelerated, emergency powers can be explicitly time-limited, and post-crisis review can restore legitimacy. The piton perspective identifies degradation: emergency procedures designed for exceptional threats have become permanent institutional features, maintained through recurring invocation of new crises.",
+    "key_agents": [
+      "Executive Authority: Primary beneficiary (institutional/arbitrage) \u2014 captures decision authority and speed advantage during latency window; can arbitrage between rapid action and deliberative consensus",
+      "Crisis Response Apparatus: Secondary beneficiary (organized/mobile) \u2014 justifies existence and budget through emergency framework; benefits from expanded authority scope",
+      "Excluded Stakeholders: Primary victim (powerless/trapped) \u2014 face coercive imposition of policies designed without their input; no exit from governance decisions affecting them",
+      "Deliberative Legitimacy: Secondary victim (powerless/trapped) \u2014 abstract institutional value that cannot organize; systematically degraded by speed-prioritizing design",
+      "Procedural Reform Coalition: Organized agents (organized/constrained) \u2014 civil society, legal advocates, legislative reformers building alternative procedures with real acceleration capacity and explicit sunset logic",
+      "Institutional Apparatus for Perpetual Emergency: Institutional actor (institutional/arbitrage) \u2014 sees emergency procedures as normalization; maintains theatrical justifications to cover routine uses of exceptional authority",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing a contingent institutional choice as immutable tradeoff"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The speed-legitimacy tradeoff enables executive authority to bypass deliberative consensus, capturing benefits of rapid response. But the extraction is not maximal (0.70+) because genuine coordination problems exist \u2014 crises do require faster response than standard procedures allow, and the constraint solves this real problem. The rise over the interval reflects not increased legitimacy of the tradeoff but increased scope creep: emergency procedures invoked for recurring, foreseeable problems that don't justify speed-legitimacy tradeoff. Suppression (0.58): Moderate-high. Stakeholders face significant barriers to exit from governance decisions. Barriers include lack of representation in emergency procedures, legal prohibition on refusing imposed policies, institutional unavailability of alternative governance structures, and information asymmetry (executives control crisis framing). Suppression is not total because some stakeholders can organize resistance (civil society, legislative action), and procedural workarounds exist (emergency review hearings, appeal processes). Theater ratio (0.64): Moderate-high. Significant procedural activity performs legitimacy without changing underlying speed prioritization. Review hearings, impact assessments, stakeholder notification procedures, and post-crisis inquiries create appearance of inclusion while decisions remain executive-driven. Theater has increased as the apparatus has normalized \u2014 more justification required to cover routine invocation of exception status.",
+    "perspectival_gap": "This constraint demonstrates how identical structural data produces divergent classifications from different positions. The executive authority sees pure coordination \u2014 latency is a real problem that deliberation cannot solve, speed is a necessary tool. The excluded stakeholder sees pure extraction \u2014 they bear costs of exclusion with no benefit and no voice. The affected public sees tangled rope \u2014 they benefit from crisis resolution but also bear legitimacy costs from exclusion. The reform coalition sees a temporary problem with fixable institutional design \u2014 latency is a choice, not a law. The perpetual emergency apparatus sees its own degradation \u2014 the procedures persist through inertia and routine crisis invocation, not because they work as designed. The analytical observer sees an immutable natural law \u2014 governance speed and legitimacy cannot be simultaneously maximized \u2014 but the structural data reveals this as false summit: actual constraints are institutional design choices (voting procedures, representation structures, crisis definition authority), not laws of nature.",
+    "directionality_logic": "Directionality for each perspective flows from structural position relative to extraction. Executive authority benefits during latency window (d \u2248 0.10, low d, arbitrage exit produces negative effective extraction). Excluded stakeholders bear all costs with no exit (d \u2248 0.95, high d, trapped exit produces maximum experienced extraction). Affected public caught in middle \u2014 benefits from crisis response but excluded from deliberation (d \u2248 0.65, moderate d, constrained exit produces moderate experienced extraction). Reform coalition has agency and exit paths through procedural change (d \u2248 0.50, neutral d, constrained but organized exit produces moderate extraction). Perpetual emergency apparatus benefits from perpetuation (d \u2248 0.15, low d, arbitrage exit through continued crisis invocation produces low extraction). Analytical observer occupies measurement position, not structural position (d \u2248 0.72 by canonical value). The engine derives these d values from beneficiary/victim declarations plus exit options; commentary confirms structural logic.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by revealing that the 'latency tradeoff' is not an immutable law but a contingent institutional choice with real alternatives. The mountain perspective (natural law of politics) is a false summit, naturalized by language ('you cannot do both speed and legitimacy'). The tangled rope classification is structurally correct \u2014 genuine coordination function (speed solves crisis problems) coexists with genuine extraction (stakeholders bear costs of exclusion). The scaffold perspective identifies the structural exit: accelerated deliberative procedures, explicit emergency sunset clauses, and standing crisis consultation bodies can materially reduce the apparent tradeoff. The piton perspective identifies degradation: emergency procedures designed for exceptional circumstances have become normalized, maintained through recurring invocation of new crises rather than through justifiable emergency need. The snare perspective (powerless excluded stakeholder) identifies the asymmetric extraction that makes this tangled rope rather than pure rope. Mandatrophy is resolved by mapping the false law (immutable speed-legitimacy tradeoff) to its institutional contingencies (crisis definition authority, representation structure, sunset clause design), revealing it as a choice that could be redesigned."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "democratic_legitimacy_deficit",
+      "executive_power_expansion",
+      "stakeholder_representation_access"
+    ],
+    "dual_formulation_note": "The governance latency tradeoff is analytically decomposable into three structurally distinct constraints: (1) crisis response speed requirement (coordination problem, \u03b5 \u2248 0.20, Rope), (2) deliberative exclusion extraction (asymmetric cost imposition, \u03b5 \u2248 0.60, Snare), and (3) emergency procedure normalization (institutional degradation, \u03b5 \u2248 0.35, Piton). This story treats the integrated phenomenon; decomposed stories model each mechanism separately. The network links show downstream constraints that inherit the latency tradeoff's structural tensions."
+  },
+  "directionality_overrides": []
+}

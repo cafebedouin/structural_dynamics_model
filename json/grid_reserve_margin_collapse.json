@@ -1,0 +1,220 @@
+{
+  "header": {
+    "constraint_id": "grid_reserve_margin_collapse",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "grmc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Grid Reserve Margin Collapse and Capacity Market Extraction",
+    "topic_domain": "energy_economics/grid_operations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_generators",
+      "capacity_market_operators"
+    ],
+    "victims": [
+      "grid_stability_commons",
+      "retail_consumers",
+      "renewable_generators"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Grid Stability Commons",
+      "comment": "PERSPECTIVE 1: GRID STABILITY COMMONS (SNARE) \u2014 The abstract collective good of grid stability cannot exit or organize. As reserve margins compress, the cost of maintaining reliability (increasingly expensive capacity payments, demand-response mandates, blackout risk) falls on the commons with no mechanism for collective action. Trapped in dependency on whatever capacity mechanism incumbent operators control."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Retail Consumers and Small Operators",
+      "comment": "PERSPECTIVE 2: RETAIL CONSUMERS AND SMALL OPERATORS (TANGLED ROPE) \u2014 Face both coordination benefits (the capacity market ensures supply) and extraction (rising reliability charges embedded in electricity prices). Exit options are severely constrained: cannot unilaterally source power, cannot opt out of grid participation, but retain some agency through demand response or distributed generation. Mixed experience of benefit and burden."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Incumbent Coal and Nuclear Generators",
+      "comment": "PERSPECTIVE 3: INCUMBENT COAL AND NUCLEAR GENERATORS (ROPE) \u2014 Primary beneficiaries. Experience the constraint as coordination (capacity markets guarantee payments for maintaining reserve margin). High arbitrage options: can bid strategically, mothball assets temporarily, or switch fuels. Net beneficiary \u2014 extraction runs toward this agent through guaranteed capacity revenues and revenue floors."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Renewable Generators and Distributed Resources",
+      "comment": "PERSPECTIVE 4: RENEWABLE GENERATORS AND DISTRIBUTED RESOURCES (SNARE) \u2014 Structurally mobile (can exit grid or markets) but face high extraction through capacity market design that excludes or penalizes variable resources. Reserve margin collapse is instrumentalized to justify capacity rules that favor slow-ramp generators. Powerful agents but captured in a snare because market rules extract via technical discrimination despite mobility."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Grid Modernization Coalition",
+      "comment": "PERSPECTIVE 5: GRID MODERNIZATION COALITION (SCAFFOLD) \u2014 Organized actors (regulators, technology firms, demand-response aggregators) perceive the reserve margin collapse as a temporary coordination failure solvable through grid modernization: fast-ramp resources, storage, advanced forecasting, and demand flexibility. See clear sunset: as these technologies mature and regulatory frameworks evolve, the dependence on large synchronous generators declines. Suppression is declining as alternatives mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "Legacy Capacity Market Structure",
+      "comment": "PERSPECTIVE 6: LEGACY CAPACITY MARKET STRUCTURE (PITON) \u2014 The original capacity market mechanism (designed in 2003-2007 for a coal-dominated grid) persists through institutional inertia despite declining relevance. Theater ratio (0.55) reflects that elaborate bidding and clearing processes now largely determine allocation of revenue to incumbents rather than ensuring genuine reliability. The mechanism's primary function has atrophied, but regulatory inertia maintains it."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Physical Constraint View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL CONSTRAINT VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, reserve margins are a physical necessity: grids must maintain spare capacity to respond to unexpected failures and demand spikes. This perspective treats reserve margin maintenance as an immutable law of grid physics. However, the structural data reveals this as a false summit: the 'collapse' is not physical but institutional \u2014 it reflects market design choices (capacity markets favoring incumbents) and regulatory path dependence, not laws of physics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "reserve_margin_adequacy_threshold",
+      "question": "What reserve margin percentage is physically necessary vs. what margin percentage is institutionally/economically constructed by incumbent capacity rules?",
+      "resolution_mechanism": "Historical analysis of grid reliability: correlation between reserve margin levels and actual blackout/failure rates across regions with different capacity market designs; engineering studies of minimum spinning reserve requirements",
+      "impact": "If physical minimum is 15%: current rules (22%+) are extractive premium. If minimum is 25%: current rules are insufficient and collapse is genuine. If minimum varies by technology mix: the problem is not reserve margin collapse but misclassification of resource types.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Physical vs. institutional reserve margin threshold"
+    },
+    {
+      "id": "fast_ramp_sufficiency",
+      "question": "Can fast-ramp resources (batteries, demand response, solar+storage) provide grid stability functions previously monopolized by synchronous generators, or are slow-ramp generators still physically irreplaceable?",
+      "resolution_mechanism": "Engineering studies of frequency response, voltage stability, and inertial support requirements; empirical testing in grids with high variable renewable penetration (Texas, California, Ireland); simulation of stability margins with 70%+ renewable penetration",
+      "impact": "If fast-ramp sufficient: the sunset perspective is correct and extraction is temporary. If slow-ramp irreplaceable: the snare perspective is correct and collapse is structural. This determination drives the classification between Scaffold and Snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether fast-ramp resources can replace synchronous generator functions"
+    },
+    {
+      "id": "capacity_market_design_intentionality",
+      "question": "Do incumbent generators consciously exploit capacity market design to extract rent, or is the extraction a side effect of well-intentioned but maladapted regulatory structures?",
+      "resolution_mechanism": "Analysis of capacity market design proposals and lobbying positions; comparison of outcomes under different bidding rules; examination of generator behavior when rules were neutral vs. favorable",
+      "impact": "If conscious exploitation: pure snare. If unintended side effect: tangled rope. If externally mandated: rope. This affects whether classification should emphasize intentional extraction or institutional coupling.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether capacity market extraction is intentional or structural"
+    },
+    {
+      "id": "transmission_constraints_vs_generation_constraints",
+      "question": "Are reserve margins actually driven by generation adequacy or by transmission bottlenecks that prevent moving cheap power from one region to another?",
+      "resolution_mechanism": "Network analysis of actual failure modes; comparison of reserve margin requirements in well-connected vs. isolated grids; simulation of requirements if transmission capacity were unlimited",
+      "impact": "If transmission-constrained: the extraction vector is different (transmission operators vs consumers). If generation-constrained: current analysis is correct. The constraint identity itself may be misidentified.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether reserve margins are driven by generation or transmission limits"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.5
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Grid reserve margin collapse emerges at the intersection of two structural forces: (1) the rise of variable renewable generation, which reduces the dispatchable capacity available for balancing, and (2) incumbent generator capacity market designs that extract rent through artificially maintained reserve margin requirements. The constraint operates as tangled rope \u2014 it contains a genuine coordination problem (grids do require spare capacity) alongside asymmetric extraction (capacity market revenues flow disproportionately to incumbents while costs are socialized). The theater ratio (0.55) reflects that capacity market clearing processes, while elaborate, increasingly determine allocation of revenue to incumbents rather than serving genuine reliability functions. Reserve margins have risen from 15% (adequate for coal-dominated grids) to 22-25% in some regions, driven more by market rules than by physical requirements. Retail consumers bear the cost through reliability charges in their electricity bills; renewable generators face discriminatory resource qualification rules; the commons bears the risk of inadequate alternative pathways if incumbents exit. The grid modernization coalition perceives a sunset: distributed storage, demand response, and fast-ramp resources are maturing. Within 10-15 years, the dependence on slow-ramp synchronous generators as the primary reserve mechanism will decline, making current capacity market extraction unsustainable.",
+    "key_agents": [
+      "Incumbent Coal and Nuclear Generators: Primary beneficiary (institutional/arbitrage) \u2014 receive guaranteed capacity revenues and revenue floors; highest bargaining power in market design",
+      "Grid Stability Commons: Primary victim (powerless/trapped) \u2014 abstract collective good bearing full cost of margin compression and extraction",
+      "Retail Consumers and Small Operators: Secondary victim (moderate/constrained) \u2014 pay reliability charges and face demand-response mandates; cannot exit grid",
+      "Renewable Generators and Distributed Resources: Secondary victim (powerful/mobile) \u2014 structurally mobile but face extraction through technical discrimination and reserve margin rules designed for synchronous generators",
+      "Grid Modernization Coalition: Organized agents (organized/constrained) \u2014 regulators, battery storage firms, demand-response aggregators building alternative pathways with 10-15 year sunset",
+      "Legacy Capacity Market Operators: Institutional actor (institutional/arbitrage) \u2014 maintain revenue-allocation mechanisms that serve incumbents more than grid stability",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing a contingent institutional arrangement (capacity markets) as physical necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, rising. The constraint combines legitimate coordination costs (maintaining reserve capacity) with extractive premium (capacity market rules that set reserve margins above physical necessity and that discriminate against renewable resources). The trajectory shows extractiveness rising from 0.28 to 0.58 over the interval, reflecting that incumbent generators have successfully lobbied for tighter reserve margin definitions and stricter qualification rules, while alternative capacity sources have been systematically excluded. The rise is institutional, not physical. Suppression (0.68): High. Multiple barriers prevent exit: grid participation is unavoidable; capacity market rules create high switching costs; regulatory uncertainty deters investment in alternatives; incumbent generators have incumbent advantage in regulatory proceedings. Suppression is declining as storage technology matures and regulatory frameworks shift, but currently remains high. Theater ratio (0.55): Moderate. Capacity market auctions and clearing processes are elaborate and appear technical, but increasingly serve revenue allocation to incumbents rather than genuine reliability verification. The theater has risen from 0.35 (early years when capacity markets were novel) to 0.55 (current state where outcomes are increasingly predictable) as the mechanism has aged and incumbent dominance has solidified. Claimed type (tangled_rope): Required because the constraint contains both genuine coordination (reserve margins are necessary) and asymmetric extraction (market rules favor incumbents). The coordination function is real but instrumentalized.",
+    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon \u2014 the need for spare grid capacity \u2014 appears as a natural law (mountain), a pure extraction mechanism (snare), a coordination problem with alternatives (scaffold), a degraded ritual (piton), a mixed mechanism (tangled rope), a coordination system (rope), and a mixed burden (tangled rope from consumer perspective). The gaps are sharpest between the incumbent beneficiary (rope \u2014 they experience genuine coordination and revenue certainty) and the trapped commons (snare \u2014 abstract collective good bearing costs with no exit). The renewable generators occupy an intermediate position (snare from a powerful perspective \u2014 they could exit but market rules extract through discrimination). The grid modernization coalition disagrees with the analytical observer's mountain view: the coalition sees institutions changing, while the observer risks naturalizing those institutions as immutable. The critical gap is between perspectives that see reserve margin requirements as physical law (mountain, piton) versus those that see them as institutional and changeable (scaffold, tangled rope).",
+    "directionality_logic": "Incumbents with arbitrage options (can delay retirements, mothball assets, participate in multiple markets) experience low effective extraction d \u2248 0.15-0.25. Their exit options are high, their beneficiary status is clear, and they face no suppression \u2014 they drive the rules. Consumers with trapped/constrained options (cannot exit grid, cannot coordinate collective negotiation, face regulatory capture) experience high extraction d \u2248 0.85-0.95. Renewable generators with mobile options (can build outside the grid or in other regions) but facing market discrimination experience intermediate extraction d \u2248 0.65-0.75: structurally mobile but extraction vectors target them specifically. The commons has no agent to hold d \u2014 it is represented through the snare perspective where the powerless/trapped agent absorbs all costs. The piton perspective's institutional actor has low suppression (operators face no barriers to changing rules) but maintains the status quo through inertia, yielding moderate d. The scaffold coalition's organized/constrained position (have exit paths but face regulatory inertia) yields d \u2248 0.45-0.55.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint avoids mislabeling through the tangled_rope classification, which requires BOTH beneficiaries (coordinate the reserve margin function) AND victims (bear extraction costs through market rules). Pure extraction (snare) would understate the genuine coordination value of reserve margins. Pure coordination (rope) would understate the extractive premium capacity markets impose. Tangled rope correctly identifies that the grid has real coordination needs (spare capacity is necessary) but that incumbent generators exploit this need through market design that forces higher margins, discriminates against alternatives, and socializes costs while privatizing benefits. The mandatrophy is resolved by showing that the classification type depends on whether the observer focuses on the coordination problem (legitimate) or the market design solution (extractive): from the beneficiary's view (rope), the mechanism coordinates supply. From the victim's view (snare), it extracts. From the analytical view (tangled rope), it does both, and the institutional design problem is that the extraction exceeds the coordination necessity."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "renewable_integration_cost_shifting",
+      "frequency_stability_degradation",
+      "capacity_payment_rent_seeking"
+    ],
+    "dual_formulation_note": "Grid reserve margin collapse decomposes into three linked structural constraints: (1) the physics of grid stability (reserve margins are necessary \u2014 low \u03b5), (2) the market design choice to maintain high margins (extractive \u2014 high \u03b5), (3) the discrimination against renewable resources in capacity qualification (extractive \u2014 high \u03b5). This story addresses the middle level (market design extraction). The upstream physics constraint and downstream renewable discrimination constraint are separate stories in the family."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.22
+    }
+  ]
+}

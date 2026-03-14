@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "regulatory_capture_in_aviation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "regcap_aviation"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Regulatory Capture in Aviation Safety Standards",
+    "topic_domain": "economic_policy/transportation_regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "aircraft_manufacturers",
+      "incumbent_airlines"
+    ],
+    "victims": [
+      "flying_public",
+      "new_entrant_carriers",
+      "aviation_safety_standards"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Flying Public",
+      "comment": "PERSPECTIVE 1: THE FLYING PUBLIC (SNARE) \u2014 Passengers and crews cannot exit the regulatory regime; they bear safety risk from weakened standards while having no voice in their formation. No exit option exists \u2014 flying within regulated airspace is mandatory for most long-distance travel. Maximum experienced extraction: regulatory capture transfers certification burden from manufacturers to regulators, who substitute political accommodation for technical rigor."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "New Entrant Carriers",
+      "comment": "PERSPECTIVE 2: NEW ENTRANT CARRIERS (SNARE) \u2014 Cannot exit the regulatory system; face asymmetric certification requirements designed to favor incumbents. Incumbent airlines have established relationships with regulators and benefit from grandfathered certifications; new entrants must navigate full modern certification regimes. Trapped by the regulatory monopoly on airworthiness standards."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Aircraft Manufacturers",
+      "comment": "PERSPECTIVE 3: AIRCRAFT MANUFACTURERS (ROPE) \u2014 Primary beneficiary of regulatory capture. Manufactures perceive the constraint as coordination: regulatory standards ensure market stability, establish barriers to competition, and allow manufacturers to influence certification timelines and technical requirements. Net beneficiary position \u2014 extraction flows toward this agent. Arbitrage exit option reflects ability to relocate production, influence policy through trade agreements, and access alternative markets."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Incumbent Airlines",
+      "comment": "PERSPECTIVE 4: INCUMBENT AIRLINES (ROPE) \u2014 Beneficiary of regulatory capture through grandfathering, favorable certification timelines, and resistance to fuel-efficiency standards that would require fleet modernization. Perceive the constraint as coordination: they coordinate with regulators on safety standards that protect their competitive position. Arbitrage exit option reflects ability to lobby for policy changes, access alternative markets, and offshore operations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regulatory Agencies",
+      "comment": "PERSPECTIVE 5: REGULATORY AGENCIES (TANGLED ROPE) \u2014 FAA and equivalent bodies face genuine coordination requirements: they must establish uniform standards, certify aircraft safety, and manage airspace efficiently. But they are constrained by industry capture \u2014 their technical staff are trained by manufacturers, their leadership rotates through industry positions, and their funding depends on manufacturer cooperation. Extraction and coordination coexist: genuine safety coordination is overlaid with asymmetric policy influence flowing toward manufacturers."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Aviation Standards Bodies",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL STANDARDS BODIES (PITON) \u2014 ICAO and equivalent bodies maintain performative coordination of international aviation standards. Theater ratio is high (0.65) \u2014 the formal standards-setting process creates elaborate technical committees, consensus procedures, and documentation, but the actual policy outcomes are largely captured by major manufacturers and incumbent carriers before the formal process begins. The formal procedure is inertially maintained despite low functional efficacy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational view, aviation regulation coordinates a genuine collective action problem: heterogeneous actors (manufacturers, airlines, regulators, public) must establish uniform safety standards to enable safe commercial aviation at scale. This coordination function is real. But the extraction mechanism is equally real: manufacturers and incumbent carriers have systematically captured the regulatory process to shift compliance costs onto competitors and the public, weaken fuel-efficiency and environmental standards, and slow innovation by new entrants. The constraint exhibits both genuine coordination (safety standards) and systematic extraction (distributional asymmetry)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "manufacturer_safety_expertise_monopoly",
+      "question": "Does regulatory reliance on manufacturer expertise constitute unavoidable information asymmetry or manufactured epistemic capture?",
+      "resolution_mechanism": "Historical analysis of certification decisions that deviated from manufacturer recommendations; comparison of safety outcomes when regulators developed independent technical capacity vs periods of reliance on manufacturer expertise",
+      "impact": "If unavoidable: capture is coordination cost, not extraction. If manufactured: capture is systematic extraction mechanism that could be dismantled by investing in independent regulatory expertise.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether manufacturer expertise monopoly is inevitable or artificially constructed"
+    },
+    {
+      "id": "safety_standard_effectiveness_measurement",
+      "question": "Do captured regulations (relaxed design standards, extended certification timelines) actually produce lower accident rates for manufacturing economy, or do they merely reduce manufacturer costs while shifting risk elsewhere?",
+      "resolution_mechanism": "Longitudinal accident rate analysis by aircraft type and certification era; correlation between regulatory stringency and operational safety; decomposition of accidents by root cause (design defect vs operational error vs maintenance failure)",
+      "impact": "If captured standards improve safety outcomes: extraction is justified as efficient regulation. If captured standards reduce safety: extraction is pure rent-seeking with negative externality.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether captured regulations achieve their stated safety objective"
+    },
+    {
+      "id": "new_entrant_exit_barrier_causation",
+      "question": "Do asymmetric certification requirements for new entrants reflect legitimate regulatory conservatism toward unproven manufacturers or deliberate capture-driven protectionism?",
+      "resolution_mechanism": "Analysis of certification timelines and technical requirements by manufacturer incumbency status; comparison of accident rates for new-entrant aircraft vs incumbent aircraft at equivalent technology levels; historical cases of successful market entry despite capture",
+      "impact": "If legitimate conservatism: new entrant barriers are coordination cost. If deliberate protectionism: barriers are pure extraction that transfers consumer surplus to incumbents.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether new entrant certification barriers serve safety or protectionism"
+    },
+    {
+      "id": "regulatory_funding_dependency_mechanism",
+      "question": "Does manufacturer-funded testing and FAA reliance on manufacturer-submitted data create a financial incentive structure that systematically biases regulatory decisions toward manufacturers?",
+      "resolution_mechanism": "Institutional analysis of FAA funding sources; comparison of certification outcomes for internally-developed standards vs manufacturer-funded research; tracking of regulatory staff career trajectories through industry positions",
+      "impact": "If financial dependency exists: it is a structural mechanism that maintains capture regardless of personnel intentions. If dependency is minimal: capture relies on weaker mechanisms (expertise monopoly, political pressure).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regulatory funding dependency creates systematic bias"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.7
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 45
+  },
+  "commentary": {
+    "narrative_context": "Regulatory capture in aviation occurs when aircraft manufacturers and incumbent airlines systematically influence the regulatory agencies tasked with setting safety and competitive standards. The constraint exhibits the full structure of capture: manufacturers have superior technical expertise, regulators depend on manufacturer-provided testing and certification data, regulatory staff rotate through industry positions, and incumbent carriers have established relationships with regulators spanning decades. The public and new entrants face trapped positions \u2014 they cannot exit the regulated airspace, cannot influence standards, and bear asymmetric costs of relaxed standards or protectionist regulations. The constraint functions as both genuine coordination (aviation safety requires uniform standards) and systematic extraction (standards are written to favor incumbents and manufacturers). Theater ratio (0.65) reflects that formal international standards-setting processes, technical committees, and consensus procedures are largely performative \u2014 the actual policy outcomes are determined by industry capture before the formal process begins.",
+    "key_agents": [
+      "Aircraft Manufacturers (Boeing, Airbus): Institutional beneficiaries (institutional/arbitrage) \u2014 capture enables cost externalization, extended certification timelines, influence over competitive standards",
+      "Incumbent Airlines (Legacy carriers): Institutional beneficiaries (institutional/arbitrage) \u2014 benefit from grandfathering, asymmetric new entrant requirements, resistance to fuel-efficiency mandates",
+      "Flying Public: Primary victim (powerless/trapped) \u2014 cannot exit regulated airspace, bear safety risk from weakened standards, have no voice in standard formation",
+      "New Entrant Carriers: Secondary victim (powerless/trapped) \u2014 face asymmetric certification barriers, cannot compete on equal terms despite equivalent safety records",
+      "FAA/Regulatory Agencies: Institutional actor with mixed position (institutional/constrained) \u2014 genuine coordination function overlaid with capture; constrained by manufacturer expertise monopoly and funding dependency",
+      "Aviation Safety Standards: Abstract victim (powerless/trapped) \u2014 standards are degraded when capture prioritizes manufacturer convenience over technical rigor; no mechanism for self-correction",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees both genuine coordination requirement and systematic extraction mechanism"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Manufacturers and incumbent carriers extract substantial value through relaxed certification standards, extended timelines, reduced compliance costs, and protection from competition. The extraction is significant but not total \u2014 genuine safety coordination remains, and catastrophic safety failures (which would trigger public/political response) still trigger regulatory response. The rising trajectory over the 45-year interval reflects accumulating capture: initially (t=0, \u03b5=0.35) capture was limited by stronger regulatory capacity and closer public scrutiny post-Challenger. By t=30, manufacturing consolidation and regulatory budget constraints increased dependence on manufacturer expertise (\u03b5=0.48). By t=45, institutional inertia and revolving-door employment have deepened capture (\u03b5=0.62). Suppression (0.68): High. Barriers to exit and alternative pathways include: (1) regulatory monopoly on airworthiness certification \u2014 no private alternatives exist; (2) information asymmetry \u2014 manufacturers have superior technical knowledge; (3) political barriers \u2014 capture is sustained by congressional relationships and lobbying; (4) coordination costs \u2014 establishing alternative standards-setting processes would require international agreement; (5) career barriers \u2014 regulatory staff depend on industry employment. Theater ratio (0.65): Moderate-high. International standards bodies (ICAO), FAA advisory committees, and formal certification procedures create elaborate procedural machinery. But the actual decisions are captured before the formal process \u2014 manufacturer positions are pre-negotiated, regulatory staff are trained by manufacturers, and consensus procedures rubber-stamp outcomes determined by power asymmetries.",
+    "perspectival_gap": "The gap between manufacturer (Rope) and public (Snare) perspectives is the clearest indicator of capture. If the constraint were pure coordination, all perspectives would produce the same type. The fact that beneficiaries see coordination (Rope) while victims see pure extraction (Snare) is diagnostic of systematic capture. The regulatory agency's Tangled Rope position is ambiguous \u2014 they have genuine coordination function (safety standards) overlaid with extraction mechanism (capture). This ambiguity is the signature of regulatory capture: the institution contains both legitimate function and systematic bias, making it difficult for internal reform (the regulatory agency cannot unilaterally escape capture without external pressure).",
+    "directionality_logic": "Directionality derivation follows the beneficiary/victim structure and exit options. Aircraft manufacturers are institutional agents with arbitrage options (can relocate production, access alternative markets, influence policy through trade leverage) who are identified as beneficiaries \u2014 they benefit from capture. The derivation pipeline assigns them low d (beneficiary + arbitrage \u2192 d \u2248 0.15). Incumbent airlines have similar institutional position with arbitrage options and benefit from grandfathering and competitive protection \u2014 low d. The flying public are powerless agents with trapped exit (no alternative to regulated airspace) and are victims \u2014 they bear costs. High d (victim + trapped \u2192 d \u2248 0.95). New entrant carriers are powerless/moderate agents with constrained exit (high regulatory barriers but not impossible) and are victims \u2014 they face asymmetric requirements (d \u2248 0.80). The directional pattern reveals why chi (effective extractiveness) differs across perspectives: beneficiaries have low or negative f(d), experiencing the constraint as coordination; victims have high f(d), experiencing it as extraction.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the mandatrophy by decomposing capture into its component mechanisms. (1) Genuine Coordination Function: Aviation safety requires uniform standards \u2014 heterogeneous manufacturers, airlines, and regulators cannot each maintain independent safety protocols. This coordination function is real and justifies some regulatory overhead. (2) Extraction Mechanism: Capture manifests as manufacturers and incumbents using regulatory authority to shift compliance costs onto competitors, the public, and future safety. This extraction is quantifiable: relaxed certification timelines (manufacturer benefit), asymmetric new-entrant requirements (incumbent benefit), reduced fuel-efficiency standards (manufacturer cost reduction), and information monopolies (manufacturer expertise barrier). (3) The Synthesis: The constraint is Tangled Rope because it genuinely coordinates safety AND systematically extracts value through captured standards. The mandatrophy is NOT 'is this capture or coordination?' but 'how much of the regulatory overhead is legitimate coordination cost vs systematic extraction?'. The theater ratio (0.65) reflects that the formal process is substantially performative \u2014 the real decisions happen in closed meetings and industry-regulator relationships. The extractiveness (0.58) reflects that extraction is substantial but not total \u2014 catastrophic safety failures still trigger regulatory response, constraining the degree of capture."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "aviation_fuel_efficiency_standards",
+      "aircraft_certification_timelines",
+      "airline_merger_approval_process"
+    ],
+    "dual_formulation_note": "Regulatory capture in aviation is upstream of specific regulatory outcomes (fuel standards, merger approvals, certification timelines). Each downstream constraint has its own extractiveness reflecting specific policy domain; the capture constraint represents the structural mechanism that biases all downstream outcomes toward manufacturer and incumbent preference."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

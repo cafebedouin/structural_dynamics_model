@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "german_equal_opportunity_law",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "geol"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "German Equal Opportunity Law (Allgemeines Gleichbehandlungsgesetz)",
+    "topic_domain": "labor_law/social_policy/institutional_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "marginalized_workers",
+      "civil_rights_advocates",
+      "legal_enforcement_institutions"
+    ],
+    "victims": [
+      "employer_compliance_costs",
+      "employment_market_flexibility",
+      "small_business_administrative_burden"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Discriminated Worker",
+      "comment": "PERSPECTIVE 1: DISCRIMINATED WORKER (SNARE) \u2014 Trapped within German labor market without credible exit. Despite legal protection, verification barriers are high: proving discrimination requires documenting employer intent, withstanding career retaliation risk, and navigating lengthy judicial process. The constraint (the law) nominally protects but structures verification such that enforcement remains difficult. Theater ratio reflects that many discrimination complaints are formally processed but result in inadequate remedies. The trapped worker bears the psychological and material cost of harassment while seeking justice."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Small Employer",
+      "comment": "PERSPECTIVE 2: SMALL EMPLOYER (TANGLED ROPE) \u2014 Constrained by compliance costs (legal training, documentation systems, HR infrastructure) but also benefits from reduced litigation risk and broader talent pool access. The law coordinates labor market standards (preventing wage competition via discrimination) while extracting administrative overhead and legal liability exposure. Moderate power with constrained exit \u2014 compliance is mandatory, but partial exemptions exist for very small firms. Mixed extraction and coordination function."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Anti-Discrimination Enforcement Institution",
+      "comment": "PERSPECTIVE 3: ANTI-DISCRIMINATION ENFORCEMENT (ROPE) \u2014 The Bundesagentur f\u00fcr Arbeit (Federal Employment Agency) and regional labor courts experience the law as pure coordination: it provides legal basis, funding, and mandate. Arbitrage-capable \u2014 they can adjust enforcement intensity, interpret ambiguous clauses, and prioritize cases. The constraint enables their institutional function. Experiences the law as coordination mechanism rather than extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Large Corporation",
+      "comment": "PERSPECTIVE 4: LARGE CORPORATION (TANGLED ROPE) \u2014 Mobile exit option (can relocate to other EU jurisdictions or restructure workforce) but also genuinely benefits from standardized non-discrimination norms (reduces internal conflict, enables broad talent recruitment, aligns with corporate ESG positioning). High extractiveness experienced but genuine coordination function exists. The law prevents internal discrimination-based competition among divisions while requiring investment in compliance infrastructure. Powerful actor with exit option but sufficient benefit to remain engaged."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Trade Union Coalition",
+      "comment": "PERSPECTIVE 5: TRADE UNION COALITION (SCAFFOLD) \u2014 Organized agents (IG Metall, Verdi, etc.) view the law as a transitional support structure toward broader labor power consolidation. Low effective extraction because unions have agency, can contest enforcement, and see the legal framework as scaffolding toward stronger worker protections. Suppression is structured by union membership dues and internal discipline, not by the law itself. Time horizon spans generational \u2014 unions see the law as temporary stepping stone to stronger sectoral bargaining or sectoral minimum wages."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The EU Compliance Theater",
+      "comment": "PERSPECTIVE 6: EU COMPLIANCE THEATER (PITON) \u2014 The German law's original function (implementing EU Directive 2000/78/EC on equal treatment in employment) has atrophied into performative compliance as the EU labor standards regime has become increasingly ritualistic without corresponding enforcement strengthening. Germany maintains the law to satisfy EU reporting requirements and domestic legitimacy, but enforcement ratios (complaints to convictions) suggest degraded function. High theater ratio \u2014 compliance meetings, anti-discrimination training, diversity metrics \u2014 with modest actual behavior change. The law persists through institutional inertia rather than active need."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Immutability View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / IMMUTABILITY VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some employment discrimination is inherent to human cognition and in-group bias \u2014 no law can eliminate the underlying tendency to prefer similar agents. The constraint appears as an immutable sociological limit: legislation can only redirect discrimination to harder-to-detect forms (statistical discrimination, preference signaling through proxies). However, this perspective risks naturalizing contingent institutional design as immutable law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "verification_burden_asymmetry",
+      "question": "Does the law's evidential standard (requiring proof of discrimination intent or statistical pattern) adequately enable workers to verify violations, or does it systematically advantage employers in litigation?",
+      "resolution_mechanism": "Longitudinal analysis of case outcomes: proportion of complaints resulting in favorable judgment vs settlement vs dismissal; comparison with other EU jurisdictions with different evidentiary standards",
+      "impact": "If standard is too high: snare classification confirmed (workers trapped without effective recourse). If standard is appropriate: tangled_rope classification confirmed (genuine coordination with asymmetric extraction).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether evidential standards enable or obstruct worker verification of discrimination"
+    },
+    {
+      "id": "small_firm_exemption_effectiveness",
+      "question": "Do exemptions for firms with fewer than 10 employees (\u00a7 1 Abs. 1a AGG) substantially reduce compliance burden or create a loophole that perpetuates discrimination in small enterprises?",
+      "resolution_mechanism": "Comparative discrimination rates: small firms (exempt) vs medium firms (not exempt); worker complaint rates pre/post exemption thresholds; economic data on compliance costs avoided",
+      "impact": "If substantial reduction: small employer perspective shifts toward rope (low extraction). If loophole: reinforces snare for workers in small firms.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of small firm exemptions in reducing burden vs enabling discrimination"
+    },
+    {
+      "id": "enforcement_intensity_variation",
+      "question": "Does enforcement intensity vary systematically by jurisdiction, industry, or protected class in ways that suggest selective application or institutional capture?",
+      "resolution_mechanism": "Federal Employment Agency data on investigation rates, penalty distributions, and case prioritization across L\u00e4nder and sectors; correlation analysis between complaint density and enforcement outcomes",
+      "impact": "If variation is random: law functions as intended. If variation correlates with industry lobbying or political preference: suggests institutional capture, piton classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether enforcement intensity varies systematically across jurisdictions or industries"
+    },
+    {
+      "id": "discrimination_form_shifting",
+      "question": "As overt discrimination becomes legally risky, do employers shift to harder-to-detect forms (statistical discrimination, proxy signaling, informal networks) that the law cannot effectively address?",
+      "resolution_mechanism": "Longitudinal tracking of complaint composition and case-law evolution; economic analysis of hiring patterns before/after enforcement intensification; qualitative interviews with HR professionals",
+      "impact": "If form-shifting is substantial: law achieves theater (behavior appears compliant) without reducing actual discrimination, supporting piton classification. If form-shifting is limited: law achieves genuine behavioral change.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether employers shift to harder-to-detect discrimination forms when overt forms become legally risky"
+    },
+    {
+      "id": "union_mobilization_dependency",
+      "question": "To what extent does the law's effectiveness depend on union capacity to identify violations and support worker litigation, vs. individual worker initiative?",
+      "resolution_mechanism": "Complaint source analysis: union-filed vs individual-initiated complaints; correlation between union membership and successful case outcomes; geographic variation in enforcement correlated with union density",
+      "impact": "If highly union-dependent: law functions as coalition protection mechanism, supporting scaffold classification. If independent of union capacity: law functions more symmetrically, supporting tangled_rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Dependency of law's effectiveness on union mobilization vs individual worker initiative"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4,
+      "id_override": "geol_theater_baseline"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.5,
+      "id_override": "geol_theater_mid"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.55,
+      "id_override": "geol_theater_current"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28,
+      "id_override": "geol_extract_baseline"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.33,
+      "id_override": "geol_extract_mid"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.38,
+      "id_override": "geol_extract_current"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "commentary": {
+    "narrative_context": "The Allgemeines Gleichbehandlungsgesetz (AGG), enacted in 2006 to implement EU equal treatment directives, creates a structural constraint that coordinates labor market standards while extracting compliance costs. The law prohibits discrimination based on race, ethnicity, gender, religion, disability, age, and sexual orientation in employment. It exhibits tangled_rope characteristics: genuine coordination function (prevents wage competition via discrimination, establishes baseline worker protections) alongside asymmetric extraction (administrative burden on employers, verification barriers on workers, theater production in compliance infrastructure). The constraint demonstrates perspectival plurality because different institutional positions experience fundamentally different relationships to the same legal rule. An employer sees compliance infrastructure; a discriminated worker sees verification barriers; a trade union sees scaffolding toward stronger protections; a large corporation sees portable standards enabling talent markets; the EU compliance regime sees degraded function masked by theater.",
+    "key_agents": [
+      "Discriminated Workers: Primary victim (powerless/trapped) \u2014 nominally protected but face high verification costs and retaliation risk",
+      "Small Employers (10-50 employees): Secondary victim (moderate/constrained) \u2014 bear disproportionate compliance burden relative to firm size; medium employers face full compliance costs",
+      "Large Corporations: Moderate beneficiary (powerful/mobile) \u2014 experience compliance as standardization enabling talent recruitment; have exit option via relocation",
+      "Federal Employment Agency (Bundesagentur f\u00fcr Arbeit): Primary beneficiary/enforcer (institutional/arbitrage) \u2014 law provides mandate and enforcement authority",
+      "Trade Unions (IG Metall, Verdi, others): Organized agents (organized/constrained) \u2014 use law as scaffolding for broader labor protections; mobilize worker litigation",
+      "EU Compliance Regime: Institutional actor (institutional/arbitrage) \u2014 maintains law for regulatory alignment despite degraded enforcement function",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing institutional enforcement limits as immutable sociological facts"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The law produces genuine coordination benefits (prevents discrimination-based wage competition, establishes shared labor standards) alongside genuine extraction costs (HR compliance infrastructure, legal liability exposure, verification burden). The intermediate value reflects that both functions are substantial and neither dominates. The initial baseline (0.28) reflects the immediate post-enactment period when compliance infrastructure was minimal; the current value (0.38) reflects mature compliance regime with established HR practices and case law. Suppression (0.42): Moderate. Barriers to effective discrimination verification are real (evidentiary standards require proving intent or statistical pattern, employers control internal documentation, retaliation risk is credible), but suppression is not total (union support is available, works councils provide internal advocates, case law has developed plaintiff-favorable interpretations). Theater ratio (0.55): Moderate-high. Compliance infrastructure (mandatory training, diversity metrics, anti-discrimination policies) is substantial but produces only partial behavior change. Many complaints result in formal processing without adequate remedies. The theater has increased over time (0.40 \u2192 0.55) as compliance became institutionalized while enforcement effectiveness plateaued.",
+    "directionality_logic": "Beneficiary/victim declarations drive the directionality derivation. Workers discriminated against (victim + trapped) generate d \u2248 0.92, producing high f(d) \u2248 1.38 and high experienced extraction. Small employers bearing compliance costs (victim + constrained) generate d \u2248 0.65, producing f(d) \u2248 1.00. Large corporations benefiting from standardization (beneficiary + mobile) generate d \u2248 0.40, producing f(d) \u2248 0.40. Enforcement institutions (beneficiary + arbitrage) generate d \u2248 0.05, producing f(d) \u2248 -0.12. The computational flow from beneficiary/victim to d to f(d) to \u03c7 produces the observed perspectival gaps without additional machinery.",
+    "perspectival_gap": "The constraint exhibits a pronounced perspectival gap. The discriminated worker sees a snare: legal protection that is difficult to verify and enforce, with high retaliation risk. The small employer sees partial rope: the law coordinates standards but extracts compliance costs. The large corporation sees rope: the law enables orderly talent markets and provides legitimacy. The enforcement institution sees pure rope: the law constitutes their function. The trade union sees scaffold: the law is temporary support toward stronger worker power. The EU regime sees piton: the law is performed compliance with degraded actual enforcement. The civilizational observer risks seeing mountain: discrimination appears immutable to law. This full perspectival range from a single constraint indicates strong classification plurality and diagnostic value.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that all six types are legitimate perspectival readings. The trapped worker's snare is not wrong \u2014 verification is genuinely difficult. The employer's tangled rope is not wrong \u2014 genuine coordination benefits coexist with real extraction costs. The institutional beneficiary's rope is not wrong \u2014 the law does constitute a coordination mechanism. The scaffold perspective is not wrong \u2014 organized actors do see sunset potential. The piton perspective is not wrong \u2014 theater has increased while enforcement effectiveness plateaued. The mountain perspective is not wrong as a description of sociological limits but IS wrong as a natural law claim \u2014 the law's limits are contingent institutional design, not immutable facts. The resolution is perspectival pluralism: no single type is 'correct,' but the presheaf over all perspectives reveals the constraint's structure."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_equal_treatment_directive_2000_78",
+      "german_sectoral_minimum_wage_law",
+      "german_works_council_codetermination"
+    ],
+    "dual_formulation_note": "The German equal opportunity law is downstream of EU Directive 2000/78/EC (equal treatment in employment) but represents a distinct institutional constraint with its own extractiveness profile reflecting German implementation choices (small firm exemption, evidentiary standards, enforcement funding). The law also affects sectoral labor coordination mechanisms: sectoral minimum wages and works council codetermination are coordination mechanisms that the equal opportunity law either complements (if discrimination prevention enables sectoral coordination) or interferes with (if compliance costs undermine sectoral participation)."
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "chemical_regulatory_capture",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "chem_reg"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Chemical Industry Regulatory Capture",
+    "topic_domain": "industrial_regulation/environmental_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "chemical_manufacturers",
+      "agrochemical_producers"
+    ],
+    "victims": [
+      "public_health",
+      "environmental_commons",
+      "regulatory_independence"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Exposed Communities",
+      "comment": "PERSPECTIVE 1: EXPOSED COMMUNITIES (SNARE) \u2014 Communities near manufacturing facilities or agricultural regions have no exit option. They bear full health and environmental costs with no meaningful participation in regulatory decisions. Regulatory capture ensures their exposure persists despite available safer alternatives. Maximum extraction with zero agency."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Persistent Bioaccumulator Victims",
+      "comment": "PERSPECTIVE 2: PERSISTENT BIOACCUMULATIVE TOXINS VICTIMS (SNARE) \u2014 Communities exposed to legacy chemicals (PCBs, DDT, PFOA/PFOS) face generational health consequences. Regulatory capture delayed restrictions for decades. Even after formal bans, environmental persistence means continued exposure. Trapped across biological and temporal scales."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Environmental Agencies",
+      "comment": "PERSPECTIVE 3: ENVIRONMENTAL REGULATORY AGENCIES (TANGLED ROPE) \u2014 Agencies must coordinate complex hazard assessment (genuine coordination function) while being constrained by captured decision processes, political pressure, and resource dependency on regulated industry for technical data. Asymmetric extraction: agencies bear accountability for health outcomes while lacking effective enforcement authority."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Chemical Manufacturers",
+      "comment": "PERSPECTIVE 4: CHEMICAL MANUFACTURERS (ROPE) \u2014 Primary beneficiaries experience the constraint as efficient coordination: industry participation in standard-setting, tiered testing requirements, and regulatory flexibility create profitable pathways. Arbitrage options allow manufacturers to relocate production to less-regulated jurisdictions if constraints tighten. Net beneficiary position."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Safer Alternative Producers",
+      "comment": "PERSPECTIVE 5: SAFER ALTERNATIVE PRODUCERS (TANGLED ROPE) \u2014 Firms developing safer chemical substitutes are constrained by regulatory timelines that favor incumbent products. They have some agency (market entry, licensing) but face extraction: regulatory approval requires expensive safety studies while incumbents operate under grandfathered exemptions. Mixed coordination-extraction: market coordination exists but rules are asymmetrically applied."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Risk Assessment Bureaucracy",
+      "comment": "PERSPECTIVE 6: RISK ASSESSMENT BUREAUCRACY (PITON) \u2014 Formal risk assessment procedures (hazard characterization, dose-response, exposure quantification) are heavily performative. Industry-funded studies dominate the evidence base; endpoints are chosen to minimize detected harm; uncertainty factors are systematically reduced. The bureaucratic theater persists through institutional inertia despite systematic bias toward industry interests. Theater_ratio high because the assessment ritual appears rigorous but operationalizes a captured frame."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Regulation as Natural Law)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal/civilizational view, regulatory capture can appear as an inevitable law of political economy: industries will always seek favorable regulation, and large corporate entities will always have advantages in regulatory processes. This perspective naturalizes what is actually a contingent institutional outcome. The engine's false summit detector will flag this as naturalization of a structural arrangement that could be reformed."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "industry_data_dominance",
+      "question": "Does industry funding and generation of safety study data constitute necessary technical expertise or systematic bias in the evidence base?",
+      "resolution_mechanism": "Comparison of health outcomes and environmental persistence in jurisdictions with industry-generated vs independent testing data; analysis of publication bias in industry-funded vs independent studies; detection of selective endpoint reporting.",
+      "impact": "If industry data is biased: regulatory capture is structural and severe (\u03b5 upward toward 0.70). If industry data is necessary and reliable: extraction mechanism is weaker (\u03b5 downward toward 0.40).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether industry-funded safety data introduces systematic bias"
+    },
+    {
+      "id": "precautionary_principle_applicability",
+      "question": "Should regulatory approval require proof of safety (precautionary) or proof of harm (incumbent default)? Does this choice constitute regulatory policy or a natural constraint?",
+      "resolution_mechanism": "Historical analysis of jurisdictions with precautionary vs incumbent-burden standards; correlation with detected adverse health outcomes; economic analysis of innovation costs under each regime.",
+      "impact": "If precautionary is feasible and reduces harm: current system is a policy choice favoring incumbents (confirms tangled_rope extraction). If precautionary stifles beneficial innovation: current system reflects unavoidable tradeoff (weakens extraction narrative).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Feasibility and consequences of shifting burden of proof in chemical approval"
+    },
+    {
+      "id": "regulatory_independence_restoration",
+      "question": "Can regulatory agencies regain independence through structural reforms (funding separation, conflict-of-interest rules, independent testing requirements, stakeholder representation)?",
+      "resolution_mechanism": "Case studies of regulatory reforms (EU REACH directive, California Prop 65, restrictions on per- and polyfluoroalkyl substances); measurement of health outcome improvements post-reform; tracking of industry influence metrics pre/post reform.",
+      "impact": "If reforms restore independence: capture is not inherent; sunset clauses could apply. If industry influence persists despite reforms: capture is deeply structural (supports snare classification for victims, suggests lower likelihood of scaffold pathway).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether structural reforms can interrupt regulatory capture mechanisms"
+    },
+    {
+      "id": "international_regulatory_arbitrage",
+      "question": "Do multinational chemical firms routinely relocate production and sales to lower-regulation jurisdictions, and does this arbitrage actually constrain regulatory tightening?",
+      "resolution_mechanism": "Analysis of production location decisions correlating with regulatory stringency; measurement of chemical availability across jurisdictions; tracking of manufacturer lobbying against harmonized standards.",
+      "impact": "If arbitrage is effective: it is a genuine structural constraint on regulation (supports manufacturer arbitrage exit classification). If manufacturers stay despite tighter regulation: constraints can be tightened without capital flight (weakens arbitrage justification, suggests higher regulatory capture severity).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Effectiveness of regulatory arbitrage as constraint on tightening rules"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Chemical regulatory capture represents a structural constraint in which the regulated industry systematically influences the regulatory agencies ostensibly designed to constrain it. The mechanism operates through multiple channels: industry funding of safety studies, participation in standard-setting committees, technical complexity that creates information asymmetries favoring incumbent firms, political access and lobbying, and the threat of regulatory arbitrage (relocation to less-regulated jurisdictions). The constraint exhibits tangled_rope structure: genuine coordination functions exist (complex hazard assessment requires technical expertise, international harmonization prevents regulatory fragmentation), yet these functions are asymmetrically captured to benefit incumbent manufacturers while extracting costs from exposed communities and regulatory agencies. Theater_ratio increases over time as risk assessment procedures become more elaborate and technically sophisticated while remaining operationally biased toward incumbent interests. Extractiveness increases as regulatory agency capture deepens and safer alternative pathways are systematically disadvantaged. The constraint is not a pure snare because coordination functions are real, but it is not a rope because the coordination benefits are asymmetrically distributed.",
+    "key_agents": [
+      "Chemical Manufacturers: Primary beneficiaries (institutional/arbitrage) \u2014 capture regulatory processes to maintain market position and delay substitution; can relocate production to less-regulated jurisdictions",
+      "Exposed Communities: Primary victims (powerless/trapped) \u2014 face health and environmental costs with no exit option or meaningful regulatory participation; generational consequences from bioaccumulative toxins",
+      "Environmental Regulatory Agencies: Secondary victim (moderate/constrained) \u2014 must coordinate hazard assessment while being captured; bear accountability without enforcement authority",
+      "Safer Alternative Producers: Organized secondary victim (organized/constrained) \u2014 face asymmetric regulatory burdens; market entry constrained by incumbent regulatory advantages",
+      "Risk Assessment Bureaucracy: Institutional performer (institutional/arbitrage) \u2014 maintains elaborate procedures with operationalized bias toward industry; theater persists through institutional inertia",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing regulatory capture as inevitable feature of political economy rather than contingent institutional outcome"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts significant value from exposed communities and alternative producers while also capturing regulatory agency resources and attention. The extraction is substantial but not as severe as a pure snare because manufacturers must still meet minimum safety standards and face some regulatory constraints. Suppression (0.65): High. Barriers to exit are significant: exposed communities cannot relocate; regulatory agencies cannot abandon their mandate; safer alternatives face long approval timelines; public awareness is systematically limited by industry PR and regulatory framing. Theater ratio (0.68): High and increasing. Risk assessment procedures are elaborate and appear rigorous but operationalize captured assumptions about what counts as evidence, what endpoints matter, what uncertainty factors apply. As procedures become more complex, their performative character increases \u2014 the appearance of rigor obscures systematic bias. The trajectory reflects Goodhart's Law: as metrics become targets, they lose their value. Risk assessment was designed to assess risk; now it is used to certify predetermined industry-favorable conclusions.",
+    "perspectival_gap": "The constraint demonstrates sharp perspectival divergence. Manufacturers see coordination (Rope) \u2014 industry participation in regulatory design efficiently incorporates technical expertise. Safer alternatives see asymmetric extraction (Tangled Rope) \u2014 the system coordinates benefits for incumbents while constraining challengers. Exposed communities see irreversible harm (Snare) \u2014 trapped with no exit option and no effective regulatory protection. Regulatory agencies see capture and degradation (Tangled Rope at moderate power, Piton at institutional view of the system itself). The analytical observer risks seeing a natural law (Mountain) \u2014 'industries always influence their regulators' \u2014 but structural data shows this is a contingent outcome: jurisdictions with stronger conflict-of-interest rules, independent testing requirements, and stakeholder representation show measurably different outcomes. The divergence is not just about different time horizons or power levels \u2014 it reflects fundamentally different structural relationships to the extraction flow.",
+    "directionality_logic": "Manufacturers occupy the extracted-from position in this constraint despite their beneficiary status because they experience the regulatory process as coordination: they participate in design, provide technical input, and shape outcomes. Their d value is low (derived from institutional power + arbitrage exit + beneficiary status), yielding low or negative f(d). Exposed communities occupy the extraction-target position: trapped exit + victim status yields high d (~0.95), high f(d) (~1.42), maximum experienced extractiveness. Safer alternative producers occupy an intermediate position: organized power but constrained exit + victim status yields moderate d (~0.55), moderate f(d) (~0.75). Regulatory agencies experience capture and constraint: moderate power, constrained exit, but victim status of the regulatory system's independence yields d (~0.60), f(d) (~0.88). The directionality gradient explains why the same structural constraint produces snare classification (high d targets), tangled_rope (moderate d agents), and rope classification (low d beneficiaries) from different perspectives.",
+    "mandatrophy_analysis": "RESOLUTION: Regulatory capture resolves mandatrophy by showing that the constraint genuinely coordinates technical assessment (satisfying rope requirements) while simultaneously extracting from powerless agents and degrading regulatory independence (satisfying snare requirements). The tangled_rope classification is not a compromise between two types \u2014 it is the structural reality. The coordination function (hazard assessment, standard-setting) is real and necessary; the asymmetric distribution of benefits and costs is also real and structural. Neither function can be removed without destroying the other. What can change is the degree of capture: stronger agency independence, mandatory independent testing, stakeholder representation, and international regulatory harmonization can reduce extraction while preserving coordination. The mandatrophy is resolved by recognizing that 'pure' rope-like coordination at this scale has never existed \u2014 the institutional structure of chemical regulation has always involved some degree of industry influence. The question is not whether to coordinate but how to coordinate in a way that protects powerless agents from bearing the full cost of uncertainty. The analytical observer's mountain (regulation as inevitably captured) is a false summit: alternative institutional designs exist and produce measurably different outcomes."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.25
+  },
+  "network": {
+    "affects_constraints": [
+      "petrochemical_subsidization",
+      "agriculture_pesticide_monoculture",
+      "drinking_water_contamination"
+    ],
+    "dual_formulation_note": "Chemical regulatory capture is downstream of industry influence mechanisms (lobbying, funding, revolving door employment) and upstream of specific chemical harms (pesticide exposure, water contamination, worker health). The \u03b5 value reflects the degree to which the regulatory apparatus systematically favors incumbent manufacturers. Related constraints with distinct \u03b5 values: petrochemical price support (higher \u03b5, pure extraction), agricultural pesticide lock-in (moderate \u03b5, coordination-dependent), drinking water PFAS contamination (higher \u03b5, victim concentration)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.3
+    }
+  ]
+}

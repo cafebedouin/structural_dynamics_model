@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "agricultural_land_use_boundary",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "agland"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Agricultural Land Use Boundary Constraint",
+    "topic_domain": "environmental_policy/resource_allocation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "industrial_agriculture_operators",
+      "commodity_traders"
+    ],
+    "victims": [
+      "smallhold_farmers",
+      "ecosystem_services",
+      "water_resource_users"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Smallhold Farmer",
+      "comment": "PERSPECTIVE 1: SMALLHOLD FARMER (SNARE) \u2014 Faces legal prohibitions on land conversion, economic pressure to intensify existing plots, and inability to access capital for alternative livelihoods. No meaningful exit from agricultural dependency; extraction is maximal and coercive. Suppression is structural: land rights frameworks prevent expansion, credit systems lock them into commodity chains."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Ecosystem Services (Absorbed Cost)",
+      "comment": "PERSPECTIVE 2: ECOSYSTEM SERVICES AS POWERLESS AGENT (SNARE) \u2014 Watershed services, soil carbon, pollinator habitat, and climate regulation are external to market valuation. The constraint extracts these services at no compensation. Abstract collective good with no exit, no voice, no standing in enforcement mechanisms. Pure extraction target."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Water Resource Users (Downstream Communities)",
+      "comment": "PERSPECTIVE 3: WATER RESOURCE USERS (TANGLED ROPE) \u2014 Agricultural intensification in upland zones degrades downstream water quality and reliability. These users have some agency (they can organize, lobby, invest in filtration) but face high costs to exit dependency on agricultural-zone water sources. Genuine coordination problem (shared watershed management) overlaps with extraction (water cost externalization)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Industrial Agriculture Operators",
+      "comment": "PERSPECTIVE 4: INDUSTRIAL AGRICULTURE OPERATORS (ROPE) \u2014 Experience the land boundary as coordination mechanism: zoning rules enable predictable input supply and labor markets, create property certainty for investment, and allow standardization of production systems. Net beneficiaries with exit options (can relocate operations, arbitrage across jurisdictions). The constraint subsidizes them through externality absorption."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Commodity Traders and Input Suppliers",
+      "comment": "PERSPECTIVE 5: COMMODITY TRADERS AND INPUT SUPPLIERS (ROPE) \u2014 Benefit from standardized agricultural zones with predictable output volumes and geographic concentration. Lower transaction costs than dispersed smallhold systems. Exit options through arbitrage (can trade alternative commodities, relocate supply chains)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Environmental and Food Sovereignty Movements",
+      "comment": "PERSPECTIVE 6: ENVIRONMENTAL AND FOOD SOVEREIGNTY MOVEMENTS (TANGLED ROPE) \u2014 Organized agents advocating for boundary reform (agroecology, conservation agriculture, land redistribution). They have agency (coalitions, policy influence) but face structural constraints (agricultural lobby power, land ownership concentration, trade agreements locking in industrial models). The constraint both coordinates a value system they oppose AND extracts from them by blocking policy exits."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some land use concentration may appear inevitable: agriculture has increasing returns to scale in mechanization, infrastructure (roads, storage, processing plants), and knowledge diffusion. Productivity per hectare is highest in consolidated operations. This perspective risks naturalizing what is actually a contingent institutional arrangement (property law, trade policy, credit systems, commodity markets) as an immutable law of resource efficiency. Engine will flag as false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "smallhold_productivity_assumption",
+      "question": "Are smallhold systems genuinely less productive per hectare than industrial systems, or does standard productivity measurement (commodity yield) exclude nutrient cycling, biodiversity, and resilience outputs?",
+      "resolution_mechanism": "Full-cost analysis comparing commodity yield vs total ecosystem service provision; longitudinal comparison of smallhold vs industrial systems under equivalent input conditions; measurement of non-commodity outputs (soil organic matter, water infiltration, pest control).",
+      "impact": "If smallhold = productive: the boundary constraint is pure extraction (Snare for smallholders). If smallhold < productive: the boundary reflects genuine coordination gains (Rope for society, justified asymmetry). Current evidence suggests partial smallhold advantage when ecosystem services are costed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Productivity comparison when ecosystem services are costed"
+    },
+    {
+      "id": "land_tenure_collapse_mechanism",
+      "question": "Is the constraint structurally enforced through property law and credit exclusion, or primarily through market-scale asymmetries and technology access?",
+      "resolution_mechanism": "Legal analysis of tenure systems; statistical comparison of constraint persistence in jurisdictions with communal vs individual property rights; measurement of smallhold access to credit, inputs, and technology under equivalent legal frameworks.",
+      "impact": "If legal enforcement is primary: the constraint is a snare relying on state coercion (suppression gate high). If market-scale is primary: it is a snare relying on capital barriers (suppression gate medium). This affects classification stability across political transitions.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether constraint is enforced through property law or market-scale mechanisms"
+    },
+    {
+      "id": "agroecology_scale_feasibility",
+      "question": "Can agroecological systems (intercropping, crop-livestock integration, natural pest management) scale to feed current global population without consolidation?",
+      "resolution_mechanism": "Modeling studies comparing total caloric output of agroecological vs industrial systems at global scale; cost analysis of labor inputs and knowledge coordination; comparison with dietary shift scenarios (reduced meat consumption, reduced food waste).",
+      "impact": "If yes: the boundary is unnecessary coordination overhead (Snare classification stable). If no: boundary reflects genuine coordination constraint for population scale (Rope from civilizational perspective).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether agroecological systems can scale globally"
+    },
+    {
+      "id": "water_externality_internalization",
+      "question": "If water pollution from agricultural runoff were fully costed and charged to agricultural operators, would the boundary remain economically viable for industrial operations?",
+      "resolution_mechanism": "Cost accounting: water treatment, agricultural runoff cleanup, water-borne disease, ecosystem restoration; market simulation with full externality pricing; comparison with agroecological system costs.",
+      "impact": "If industrial becomes uneconomic: the boundary is an extraction mechanism hiding behind externalities (Snare confirmed). If industrial remains viable: costs are distributed but the system persists rationally (Tangled Rope confirmed).",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether industrial agriculture is viable with internalized externalities"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "The agricultural land use boundary constraint structures the division between designated agricultural zones and protected/non-agricultural land, creating asymmetric extraction between industrial agricultural operators (beneficiaries) and smallhold farmers, ecosystem services, and water-dependent communities (victims). This constraint exhibits the core Tangled Rope signature: a genuine coordination function (reducing transaction costs, enabling infrastructure concentration, standardizing supply chains) overlaps with asymmetric extraction (externalized water pollution, absorbed ecosystem costs, smallhold displacement). The extractiveness has increased from 0.35 to 0.52 over a 40-year interval as industrial intensification has deepened and climate variability has increased water stress, shifting from a more balanced coordination arrangement toward higher asymmetric extraction.",
+    "key_agents": [
+      "Smallhold Farmers: Primary victims (powerless/trapped) \u2014 cannot exit agricultural dependency; face legal restrictions on land conversion and economic pressure to intensify existing plots",
+      "Industrial Agriculture Operators: Primary beneficiaries (institutional/arbitrage) \u2014 capture coordination gains from standardized zones, infrastructure concentration, and labor market pooling; can relocate or arbitrage across jurisdictions",
+      "Ecosystem Services (Abstract Collective): Victim (powerless/trapped) \u2014 watershed services, soil carbon, pollinator habitat absorbed as externality with no compensation or voice",
+      "Water Resource Users (Downstream Communities): Secondary victims (moderate/constrained) \u2014 face water quality degradation and flow unpredictability; can organize but at high coordination cost",
+      "Commodity Traders and Input Suppliers: Beneficiaries (institutional/arbitrage) \u2014 profit from standardized systems and predictable output concentration",
+      "Environmental and Food Sovereignty Movements: Organized challengers (organized/constrained) \u2014 have policy voice but face structural barriers from land ownership concentration and trade agreements",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing scale economies as immutable law rather than contingent institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.52): The boundary transfers ecosystem service values to industrial operators without compensation. Smallhold farmers are forced into commodity chains or landlessness. Water pollution costs are externalized. However, the extractiveness is not maximal (0.70+) because: (1) genuine coordination gains exist (standardized supply chains, infrastructure economies, knowledge diffusion); (2) enforcement is partly market-based rather than purely coercive; (3) some smallholders benefit through access to commodity markets and technology spillovers. Suppression (0.58): Significant structural barriers include property law frameworks that favor consolidation, credit systems that require collateral and scale, trade agreements that privilege industrial production, and knowledge systems that promote chemical-mechanical agriculture. But suppression is not total \u2014 smallholders do persist, agroecological alternatives exist, and policy change is possible. Theater ratio (0.48): Moderate-low. The constraint operates partly through material market forces (genuine scale economies) and partly through institutional theater (land policy, agricultural subsidies, extension systems promoting industrial models). The theater has increased from 0.32 as ecological contradictions have accumulated and required increasingly elaborate justifications.",
+    "perspectival_gap": "This constraint demonstrates the danger of the mountain perspective in policy contexts. The naturalizing framing ('agriculture requires consolidation for efficiency') obscures the extractive redistributive choice embedded in the constraint. The gap between the beneficiary's rope (genuine coordination gains) and the smallholder's snare (structural entrapment) reveals that the same constraint can be functionally coordination for agents with exit options and functionally extraction for agents without them. The water users' tangled rope perspective correctly identifies the mixed nature \u2014 the constraint does solve genuine coordination problems but does so in a way that extracts from some groups and concentrates benefits in others. The organized movements' perspective shows that the constraint is not immutable \u2014 alternative arrangements (agroecological, land redistribution, water cost internalization) are technically feasible but blocked by power asymmetries, not physical limits.",
+    "directionality_logic": "Directionality values derive from each agent's structural position. Smallhold farmers: victim status + trapped exit \u2192 high d (0.92) \u2192 high f(d) \u2248 1.35 \u2192 high experienced extraction. Industrial operators: beneficiary status + arbitrage exit \u2192 low d (0.08) \u2192 f(d) \u2248 -0.10 \u2192 negative/subsidizing extraction. Ecosystem services: victim status + trapped exit \u2192 high d (0.95) \u2192 f(d) \u2248 1.42 \u2192 maximum experienced extraction. Water users: victim-adjacent + constrained exit \u2192 moderate-high d (0.68) \u2192 f(d) \u2248 1.00 \u2192 proportional extraction. Organized movements: mixed beneficiary/victim + constrained exit \u2192 moderate d (0.52) \u2192 f(d) \u2248 0.68 \u2192 moderate extraction below aggregate. Scope modifier \u03c3(national) = 1.0 preserves \u03c7 without dampening or amplification.",
+    "mandatrophy_analysis": "The mandatrophy in the agricultural boundary is that 'efficiency' (the mountain justification) and 'extraction' (the snare reality) are not contradictory \u2014 they are the same institutional choice. Industrial consolidation does generate genuine coordination gains and productivity increases in commodity yield per hectare. It simultaneously extracts ecosystem services, displaces smallholders, and externalizes water pollution. The constraint resolves the mandatrophy by showing that Tangled Rope is the correct classification: the coordination gains are real AND the extraction is real, not a trade-off between them but a single institutional arrangement that produces both. The false summit (mountain perspective) mistakes one component (coordination gain) for the whole, ignoring the asymmetric distribution. Policy debate should not be 'efficiency vs sustainability' but 'how should coordination gains be distributed, and should externalities be internalized?' \u2014 reframing that shifts from mountain naturalization to rope/snare choice."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "water_resource_allocation",
+      "soil_carbon_pricing",
+      "smallhold_credit_access",
+      "trade_commodity_pricing"
+    ],
+    "dual_formulation_note": "The agricultural boundary decomposes into multiple structurally distinct constraints when measured by different observables. Commodity productivity analysis yields one \u03b5 (high efficiency, low extraction). Ecosystem service analysis yields different \u03b5 (high extraction, coordination secondary). Water impact analysis yields third \u03b5 (asymmetric externality). These are linked by affecting_constraints network \u2014 the boundary constraint influences all three downstream claims and would require negotiating all three to reform."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

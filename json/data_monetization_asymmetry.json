@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "data_monetization_asymmetry",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "datamon"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Data Monetization Asymmetry in Platform Ecosystems",
+    "topic_domain": "digital_economy/information_asymmetry",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "data_aggregators",
+      "algorithmic_decision_makers"
+    ],
+    "victims": [
+      "data_subjects",
+      "information_commons",
+      "competitive_newcomers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Data Subject",
+      "comment": "PERSPECTIVE 1: DATA SUBJECT (SNARE) \u2014 Cannot exit participation in platform ecosystems without foregoing essential services (communications, commerce, employment search, financial inclusion). Data extraction flows relentlessly; suppression is structural (no practical alternative platforms with equivalent network effects). Maximum experienced extraction. The subject is trapped by network effects and service dependency, not by explicit barriers but by absence of functional alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Data-Generating Worker",
+      "comment": "PERSPECTIVE 2: DATA-GENERATING WORKER (TANGLED ROPE) \u2014 Platform gig workers, content creators, and service providers generate data while accessing the coordination platform. They benefit from reach and audience access (genuine coordination function) while bearing asymmetric extraction through profile monetization, algorithmic suppression of earnings, and inability to port reputation signals. Constrained exit due to platform-specific reputation lock and income dependency. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATOR (ROPE) \u2014 Experiences the constraint as a coordination mechanism: aggregating, structuring, and monetizing data enables matching and efficiency gains. Network effects create value that couldn't exist without centralized data collection and analysis. The operator has arbitrage options (can shift monetization strategies, sell to competitors, license data selectively). Data collection is framed as essential coordination infrastructure rather than extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Regulatory Coalition",
+      "comment": "PERSPECTIVE 4: REGULATORY COALITION (SCAFFOLD) \u2014 Data protection regulations (GDPR, CCPA, emerging AI governance) establish sunset mechanisms: data portability rights, algorithmic transparency requirements, consent revocation, and data minimization principles are building alternative governance pathways. The coalition has agency (legislative power) but faces resistance from entrenched platform interests. Effective extraction is moderate because the coalition perceives and is building a transition mechanism, even if implementation lags far behind the ideal."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Competing Platform Operator",
+      "comment": "PERSPECTIVE 5: COMPETING PLATFORM OPERATOR (TANGLED ROPE) \u2014 New entrants benefit from data monetization norms (expect to extract value from their users) but face crushing disadvantage: existing platforms have accumulated vast datasets and can cross-subsidize services with existing revenue streams. The constraint both enables and constrains: data monetization creates a revenue model for the newcomer (coordination benefit) while simultaneously trapping them in an extraction race they cannot win (asymmetric extraction). High suppression due to data lock-in."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Privacy Theatre Regime",
+      "comment": "PERSPECTIVE 6: PRIVACY THEATRE REGIME (PITON) \u2014 Privacy policies, data use disclosures, and opt-out mechanisms are substantially performative: notices are written to satisfy legal requirement rather than to communicate meaningfully; opt-out paths are deliberately obscured; consent is often pre-checked or bundled with service terms. The theatrical compliance persists through institutional inertia \u2014 platforms maintain privacy theater because abandoning it entirely would trigger regulatory intervention, but the functional value of the theater in protecting data subjects is minimal."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational standpoint, data monetization simultaneously solves a coordination problem (how to fund global digital infrastructure) and creates an extraction mechanism (asymmetric capture of value generated by data subjects). The constraint exhibits genuine coordination function (platforms do solve matching, discovery, and efficiency problems) alongside genuine extraction (data subjects receive no compensation proportional to their data's economic value, and barriers to exit are structural). Classification as tangled rope reflects this dual structure \u2014 neither pure coordination nor pure extraction, but hybrid."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_value_decomposition",
+      "question": "What fraction of platform value derives from coordination function (matching, efficiency, network effects) versus from data monetization (behavioral targeting, algorithmic leverage, information asymmetry)?",
+      "resolution_mechanism": "Counterfactual analysis: construct platform services with minimal data monetization (data minimization, no algorithmic targeting, no third-party data sales) and measure user willingness-to-pay or engagement relative to baseline platforms. A/B testing on privacy settings and transparency.",
+      "impact": "If coordination > 60%: snare classification weakens \u2014 genuine value creation justifies some extraction. If monetization > 60%: snare dominates \u2014 the coordination frame is primarily cover story. Affects beneficiary/victim assignment at institutional level.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Decomposition of platform value into coordination vs monetization components"
+    },
+    {
+      "id": "data_subject_identity_lock",
+      "question": "Is the data subject's inability to exit primarily due to material barriers (network effects, service dependency, switching costs) or to identity fusion (the subject's online identity and social graph are constituted through the platform)?",
+      "resolution_mechanism": "Longitudinal tracking of users post-exit: do subjects who leave platforms abandon their online identities (supporting identity_locked diagnosis) or do they actively recreate identities on alternatives (supporting trapped/constrained diagnosis based on switching costs)? Survey data on reasons for non-exit.",
+      "impact": "If identity_locked: the binding mechanism is cognitive; classification from subject perspective remains snare (trapped) because structural mobility cannot be exercised. If trapped/constrained: exit is materially infeasible; different remediation strategies (interoperability, data portability) target structural barriers. Affects exit_options classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether data subject lock-in is structural or identity-based"
+    },
+    {
+      "id": "regulatory_arbitrage_sustainability",
+      "question": "Can regulatory coalitions enforce data protection standards globally, or do network effects ensure that compliant platforms lose competitiveness to less-compliant alternatives operating in permissive jurisdictions?",
+      "resolution_mechanism": "Comparative analysis of platform behavior in high-regulation (EU, California) vs low-regulation jurisdictions; measurement of regulatory compliance cost; market share trends for compliant vs non-compliant platforms; enforcement gap analysis for cross-border data flows.",
+      "impact": "If arbitrage persists: scaffold sunset is aspirational \u2014 platforms can remain extracted by operating in permissive zones. Regulatory perspective fails to deliver real constraints on monetization. If enforcement effective: scaffold transforms into rope (coordination mechanism of data governance becomes stable). Affects sustainability of sunset clause.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regulatory standards can be enforced globally or are subject to arbitrage"
+    },
+    {
+      "id": "alternative_governance_viability",
+      "question": "Can decentralized, user-owned, or cooperative data governance models (blockchain platforms, cooperative social networks, user-controlled data vaults) achieve functional equivalence to centralized platforms at scale?",
+      "resolution_mechanism": "Technical analysis of decentralized architecture requirements; economic analysis of cost structures for decentralized vs centralized platforms; user behavior comparison on decentralized vs centralized services; adoption trajectories for decentralized alternatives.",
+      "impact": "If viable: competing platform perspective strengthens \u2014 network effects are not permanently lock-in. If unviable: lock-in is structural \u2014 tangled rope classification for competitors is correct, and data subject's exit options remain trapped regardless of regulatory intervention.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether decentralized data governance can compete with centralized platforms"
+    },
+    {
+      "id": "suppression_mechanism_layers",
+      "question": "Is suppression of data subject exit primarily structural (absence of alternatives, switching costs, network effects) or institutional (deliberate obfuscation, dark patterns, contractual lock-in)?",
+      "resolution_mechanism": "Design intervention testing: create transparent, frictionless data export and portability tools; measure actual exit rates and switching behavior. Audit privacy policy language for obfuscation. Analyze UI/UX patterns for dark patterns (choice architecture deliberately making exit costly).",
+      "impact": "If structural: even perfect transparency won't enable meaningful exit; suppression=0.68 is accurate. If institutional: reducing obfuscation and enabling portability could lower suppression to 0.40\u20130.50. Affects Tangled Rope vs Snare boundary for data subjects.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Decomposition of suppression into structural vs institutional components"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Data monetization asymmetry is a structural constraint that emerges from the economic fundamentals of digital platforms: user attention and behavioral data are valuable; users generate data as a byproduct of participation; platforms capture and monetize this data without compensating users; regulatory and competitive barriers prevent users from capturing the value they generate. The constraint exhibits genuine coordination function (platforms do solve discovery, matching, and efficiency problems that would be difficult to solve otherwise) alongside genuine extraction (data subjects receive no compensation and face high barriers to exit). This dual structure \u2014 coordination + asymmetric extraction \u2014 defines the tangled rope classification. The constraint's theater ratio (0.55) reflects the performative character of privacy governance: privacy policies, consent mechanisms, and data protection disclosures satisfy legal requirements while minimizing actual constraints on data monetization. The extractiveness trajectory (0.35 \u2192 0.58 over 10 years) reflects the accumulating asymmetry as platforms consolidate market power, expand data collection, and refine monetization techniques. The suppression (0.68) reflects both structural barriers (network effects, switching costs, absence of functional alternatives) and institutional barriers (dark patterns, obscured opt-out paths, contractual lock-in).",
+    "key_agents": [
+      "Data Subject: Primary victim (powerless/trapped) \u2014 generates data through participation; receives no compensation; trapped by network effects and service dependency",
+      "Platform Operator: Primary beneficiary (institutional/arbitrage) \u2014 owns data collection infrastructure; monetizes data through targeted advertising, algorithmic leverage, and data sales; can shift monetization strategies and operate across jurisdictions",
+      "Data-Generating Worker: Secondary victim (moderate/constrained) \u2014 benefits from platform access and reach while bearing extraction through profile monetization and algorithmic suppression",
+      "Competing Platform Operator: Secondary victim (institutional/constrained) \u2014 faces crushing disadvantage due to data lock-in despite benefiting from the data monetization revenue model",
+      "Regulatory Coalition: Organized agent (organized/constrained) \u2014 governments, data protection authorities, consumer advocates building alternative governance pathways (data portability, algorithmic transparency, consent rights)",
+      "Privacy Theatre Regime: Institutional theater (institutional/arbitrage) \u2014 privacy policies, consent mechanisms, and compliance disclosures maintain legitimacy while minimizing functional constraints on monetization",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks misclassifying the constraint as either pure coordination (rope) or pure extraction (snare) without recognizing the tangled hybrid"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, rising over time. Platform data monetization is not total extraction (users do receive valuable services \u2014 coordination benefit exists) but the value capture asymmetry is severe. Users generate data worth billions in advertising and trading value while receiving services valued at approximately zero in nominal terms (though perhaps higher in subjective utility). The trajectory from 0.35 to 0.58 reflects platform consolidation and refinement of monetization techniques (algorithmic targeting, predictive analytics, federated data sales) that increase extraction relative to service value. Suppression (0.68): High, reflecting both structural and institutional barriers. Structural: network effects mean alternatives cannot achieve functional equivalence without massive user adoption; switching costs are real (reputation, social graphs, habit). Institutional: privacy dark patterns, deliberately obscured data export tools, and contractual language designed to maximize lock-in add institutional suppression on top of structural barriers. Theater ratio (0.55): Moderate, reflecting that privacy governance is partly theatrical but not entirely. Privacy impact assessments, data minimization principles, and some genuine consent mechanisms exist but are offset by performative compliance, pre-checked consent, and bundled terms. The trajectory from 0.30 to 0.55 reflects that platforms have become more sophisticated in theatrical compliance as regulatory scrutiny has increased.",
+    "perspectival_gap": "This constraint demonstrates how the same structural mechanism appears as coordination (rope) to beneficiaries and as extraction (snare) to victims. The platform operator truthfully observes that data collection enables valuable services \u2014 matching, discovery, personalization, efficiency. The data subject truthfully observes that they are extracting value without compensation and have no alternative. Both observations are correct; the classification depends on the observer's structural position. The scaffold perspective reveals that regulatory coalitions perceive a sunset mechanism (data portability, algorithmic transparency, federated data models) that could restructure the constraint. The piton perspective reveals that privacy theatre maintains the constraint's legitimacy without protecting data subjects functionally \u2014 the regulatory ritual is degraded but persists through institutional inertia. The analytical observer must recognize that the constraint is genuinely hybrid (coordination + extraction) rather than choosing between rope and snare.",
+    "directionality_logic": "Directionality for each perspective is derived from structural position within the constraint. Platform operators are beneficiaries with arbitrage options (exit to alternative business models, jurisdictions, or acquisition is possible) \u2014 low d, low experienced extraction. Data subjects are victims with trapped exit options (no functional alternatives due to network effects and service dependency) \u2014 high d, high experienced extraction. Data-generating workers are mixed: they benefit from platform access (partial beneficiary) but face extraction through asymmetric value capture (partial victim); constrained exit options (can exit but face significant costs) produce moderate d and moderate experienced extraction. Competing platform operators are victims (face disadvantage relative to incumbents) with constrained exit (cannot build competing platforms without accepting data disadvantage) \u2014 moderate-high d, moderate-high experienced extraction. Regulatory coalition is organized (has legislative power) with constrained exit (cannot abandon jurisdiction but can shift enforcement priorities) \u2014 moderate d, moderate experienced extraction.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that tangled rope is the accurate classification: the constraint genuinely coordinates (platforms solve real matching and efficiency problems) AND genuinely extracts (data subjects receive no compensation for their data and face high barriers to exit). Neither rope nor snare alone captures the structure. The mandatrophy would occur if we tried to classify this as pure rope (ignoring asymmetric extraction) or pure snare (ignoring genuine coordination function). The beneficiary/victim declarations make the hybrid structure explicit: beneficiaries include platform operators and data aggregators (they capture monetization value); victims include data subjects and information commons (they bear the extraction cost while contributing the data generating the value). The enforcement requirement (`requires_active_enforcement: true`) reflects that the constraint's asymmetry would not persist without active mechanisms (contractual lock-in, dark patterns, regulatory arbitrage) that maintain beneficiary advantage. The scaffold perspective provides the sunset mechanism: data governance reforms, data portability standards, and algorithmic transparency requirements are structurally modifying the constraint, though implementation lags significantly behind the regulatory intent."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_opacity_barrier",
+      "network_effect_lock_in",
+      "privacy_governance_capture",
+      "attention_economy_extraction"
+    ],
+    "dual_formulation_note": "Data monetization asymmetry is a constraint family with multiple decomposable claims: (1) data_value_capture_gap \u2014 economic asymmetry in who captures value from data (\u03b5\u22480.50, snare from user perspective); (2) data_access_barrier \u2014 technological barrier to data portability and competitive parity (\u03b5\u22480.35, rope from technical perspective); (3) algorithmic_suppression_mechanism \u2014 extraction through opaque algorithmic decision-making that advantages platforms (\u03b5\u22480.62, tangled rope). These stories are linked because data monetization relies on all three mechanisms working together. The primary story treats data monetization as a unified tangled rope; upstream stories decompose specific failure modes."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    }
+  ]
+}

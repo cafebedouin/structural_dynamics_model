@@ -1,0 +1,217 @@
+{
+  "header": {
+    "constraint_id": "hiring_discrimination_automation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hda"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "Hiring Discrimination Automation",
+    "topic_domain": "labor_economics/algorithmic_governance",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "hiring_organizations",
+      "algorithm_vendors"
+    ],
+    "victims": [
+      "discriminated_job_applicants",
+      "labor_market_equity"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Discriminated Applicant",
+      "comment": "PERSPECTIVE 1: DISCRIMINATED APPLICANT (SNARE) \u2014 Faces systematic algorithmic exclusion with no recourse, appeal mechanism, or knowledge of the filtering criteria. Trapped by labor market dependency and algorithm opacity. Zero degrees of freedom: cannot see what disqualified them, cannot contest the decision, cannot exit the job market. Maximum extraction \u2014 bears full cost of biased training data and hidden proxies."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Labor Market Equity (Systemic View)",
+      "comment": "PERSPECTIVE 2: LABOR MARKET EQUITY (SNARE) \u2014 Systemic capacity for fair opportunity degrades as automation scales. Constrained by institutional lock-in and path dependence; cannot exit algorithmic hiring once embedded in recruiter workflows. Experiences extraction as cumulative bias-stacking: multiple algorithmic filters compound discriminatory effects. High extraction, moderate suppression \u2014 some regulatory pushback exists but insufficient to halt embedding."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Civil Rights Organizations",
+      "comment": "PERSPECTIVE 3: CIVIL RIGHTS ORGANIZATIONS (TANGLED ROPE) \u2014 Both constrained and partially equipped to challenge the constraint. Genuine coordination function exists (advocacy organizations coordinate legal action, demand transparency, establish audit standards). But also extraction: organizations are resource-limited, funding-dependent, and systematically outlawyered by hiring firms. Asymmetric enforcement: legal victories are narrow and slow, while algorithmic deployment accelerates."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Hiring Organizations",
+      "comment": "PERSPECTIVE 4: HIRING ORGANIZATIONS (ROPE) \u2014 Experiences the constraint as coordination: algorithms reduce hiring friction, standardize screening, and provide plausible deniability ('we didn't discriminate, the algorithm did'). Benefits from efficiency gains and legal liability diffusion. Arbitrage exit available: can switch vendors, adjust algorithms, or revert to human screening without existential cost. Net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Algorithm Vendors",
+      "comment": "PERSPECTIVE 5: ALGORITHM VENDORS (ROPE) \u2014 Primary technical beneficiary. Experiences constraint as coordination mechanism: algorithms 'solve' hiring inefficiency. Arbitrage exit is perfect: can change algorithms, deploy new models, or exit market segment with minimal cost. High power, high exit option, low extraction. Vendors have the most agency in the system."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regulatory Agencies",
+      "comment": "PERSPECTIVE 6: REGULATORY AGENCIES (TANGLED ROPE) \u2014 Genuinely trying to coordinate fair hiring norms (coordination function: establish audit standards, demand transparency, create legal liability). But constrained by technical capacity gaps, jurisdictional limits, and vendor opacity. Coordination function is real; extraction asymmetry is real \u2014 vendors can hide discriminatory features, agencies lack expertise to audit them. Active enforcement required but under-resourced."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Equal Employment Opportunity Commission",
+      "comment": "PERSPECTIVE 7: EEOC (PITON) \u2014 Formal mandate to enforce non-discrimination, but functional capacity has degraded as hiring has automated. Theater-heavy: conducts audits, issues guidance, brings cases \u2014 but enforcement is slow, settlements are small relative to vendor profits, and firms adjust algorithms minimally after enforcement action. The EEOC's ritual persists (formal agency structure, legal authority) but the real constraint-stopping power has atrophied. Piton classification derives from high theater ratio: formal enforcement mechanism that performs legitimacy rather than producing substantial behavioral change."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (False Summit)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (APPARENT MOUNTAIN) \u2014 Risk of naturalizing as inherent: 'algorithms must encode training data; bias in training data is inevitable; therefore biased hiring is an inherent feature of algorithmic systems.' This perspective appears mountain-like (unchangeable law of machine learning). But the structural data reveals this as false naturalization: algorithmic bias is not an immutable property \u2014 it is the contingent result of vendor choices (what data to use, what proxies to exclude, what fairness definition to optimize for), organizational choices (whether to audit, whether to build fairness constraints), and regulatory choices (whether to mandate transparency, whether to impose liability). A false summit that naturalizes what is actually a contingent institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "proxy_discriminativeness_threshold",
+      "question": "At what degree of statistical correlation with protected class does a feature become an unacceptable proxy for discrimination?",
+      "resolution_mechanism": "Legal precedent analysis (disparate impact doctrine), empirical correlation studies, audit results showing feature removal impact on protected-class outcomes",
+      "impact": "If threshold is strict (correlation > 0.3): many seemingly-innocent features must be removed, reducing model accuracy. If threshold is loose (correlation > 0.7): proxies can hide in apparently neutral features. Different thresholds yield different suppression values.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Statistical threshold for identifying unacceptable proxy discrimination"
+    },
+    {
+      "id": "vendor_knowledge_of_bias",
+      "question": "How much do algorithm vendors know ex ante about the discriminatory effects of their systems? Is bias baked in intentionally, negligently, or discovered post-deployment?",
+      "resolution_mechanism": "Deposition discovery, vendor code review, internal communication analysis, expert witness testimony on industry standard practices",
+      "impact": "If intentional: extractiveness stays high (Snare confirmed, vendors are knowing beneficiaries). If negligent: extractiveness may drop (Tangled Rope \u2014 vendors have some defense). If discovered post-deployment: vendors have minimal liability (extraction mechanism is ignorance, not willful exploitation).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Degree of vendor knowledge regarding discriminatory effects"
+    },
+    {
+      "id": "audit_frequency_and_access",
+      "question": "Can civil rights organizations and regulatory agencies audit deployed hiring algorithms with sufficient frequency and access to catch and report bias?",
+      "resolution_mechanism": "Empirical audit studies (undercover testing with demographically different resumes), FOIA requests for algorithm documentation, vendor disclosure mandates and compliance rates",
+      "impact": "If audit access is high: suppression drops (discriminated applicants have some recourse). If audit access is low: suppression stays high (Snare persists because discrimination is invisible). Theater ratio also varies \u2014 high-transparency systems may have higher theater (performative auditing) but lower actual suppression.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Feasibility and frequency of algorithm auditing"
+    },
+    {
+      "id": "algorithmic_switching_costs",
+      "question": "How costly is it for hiring organizations to switch algorithm vendors or revert to human screening if discovered discrimination becomes a liability threat?",
+      "resolution_mechanism": "Cost-benefit analysis of vendor switching, retraining of recruiters, retooling of hiring workflows, regulatory compliance cost estimates",
+      "impact": "If switching costs are low: hiring orgs have high arbitrage exit, constraint is Rope from their perspective. If switching costs are high: hiring orgs are constrained, constraint is Tangled Rope from their perspective. This affects directionality and effective extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cost barriers for hiring organizations to exit algorithmic hiring"
+    },
+    {
+      "id": "market_concentration_vendor_power",
+      "question": "Is the algorithm vendor market concentrated enough to exercise monopoly power, or competitive enough that hiring organizations can threaten to switch?",
+      "resolution_mechanism": "Market share analysis, vendor count in hiring-algorithm segment, customer switching rates, contract lock-in terms",
+      "impact": "If concentrated: vendors have high power and low exit cost, confirm Rope. If competitive: hiring organizations have exit leverage, potentially elevating constraint from Snare to Tangled Rope. Market structure directly affects directionality.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Market concentration in hiring algorithm vendor segment"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Hiring discrimination automation encodes historical bias into algorithmic decision-making systems while obscuring the discrimination mechanism behind technical complexity and plausible deniability. Organizations deploy screening algorithms ostensibly to reduce hiring friction and standardize candidate evaluation, but the systems systematically exclude protected classes through mechanisms including biased training data, proxy discrimination (penalizing r\u00e9sum\u00e9 gaps, non-traditional education, non-English names), and opacity that prevents both applicants and regulators from identifying the discrimination. The constraint exhibits a multi-agent extraction structure: discriminated applicants are trapped with no appeal or recourse; hiring organizations benefit from efficiency gains and legal liability diffusion; algorithm vendors benefit from scale and reduced accountability; regulators and civil rights organizations are constrained by technical complexity and vendor opacity. The theater ratio (0.68) reflects that formal compliance mechanisms (EEOC audits, fairness certifications, diversity initiatives) persist while actual algorithmic behavior diverges from stated non-discrimination intent.",
+    "key_agents": [
+      "Discriminated Applicants: Primary victims (powerless/trapped) \u2014 face systematic algorithmic exclusion with no knowledge of criteria, no appeal mechanism, no exit from labor market dependency",
+      "Hiring Organizations: Primary beneficiaries (institutional/arbitrage) \u2014 capture efficiency gains, standardization benefits, and liability diffusion; can switch vendors or revert to human screening without existential cost",
+      "Algorithm Vendors: Secondary beneficiaries (powerful/arbitrage) \u2014 profit from scale, have perfect exit option (deploy new models), minimal liability exposure",
+      "Labor Market Equity (Systemic): Tertiary victim (moderate/constrained) \u2014 cumulative bias-stacking degrades fair opportunity capacity; constrained by institutional lock-in and path dependence",
+      "Civil Rights Organizations: Organized challengers (organized/constrained) \u2014 coordinate legal action and advocacy, but systematically outlawyered and under-resourced; constrained by funding and slow legal processes",
+      "Regulatory Agencies (EEOC, state labor departments): Institutional enforcers (institutional/constrained) \u2014 mandate transparency and liability, but lack technical expertise and resources to audit effectively; enforcement is slow relative to vendor deployment speed",
+      "Analytical Observer: Risk of false naturalization (analytical/analytical) \u2014 can misidentify contingent institutional arrangement as inherent property of machine learning"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High. The constraint transfers significant economic and opportunity value from discriminated applicants to hiring organizations. Training data bias, proxy discrimination, and vendor design choices that prioritize efficiency over fairness all represent extraction mechanisms. The value is measured in lost job opportunities, wage suppression for excluded groups, and reduced labor market participation. The rising trajectory (0.25\u21920.42\u21920.58) reflects that algorithmic hiring adoption is accelerating: extractiveness was moderate when adoption was low; as more organizations deploy algorithms, the extraction scales. Suppression (0.65): High. Multiple mechanisms prevent exit or mitigation: (1) Applicants cannot see algorithmic filtering criteria or contest decisions; (2) Hiring organizations have low switching costs (arbitrage available) so no pressure to change; (3) Algorithm vendors hide discriminatory features behind technical complexity and proprietary code; (4) Regulatory agencies lack auditing capacity; (5) Racial and socioeconomic gaps in access to 'resume-optimized' credentials entrench discrimination. Theater Ratio (0.68): High. Formal compliance mechanisms abound (EEOC enforcement, fairness certifications, 'diversity hiring' initiatives, vendor fairness statements) but deliver minimal actual behavior change. Organizations can claim non-discrimination while deploying biased algorithms because the bias is algorithmically encoded and technically obscure. Hiring algorithms provide plausible deniability ('the algorithm decided, not us'). Theater ratio rising (0.35\u21920.52\u21920.68) reflects increasing professionalization of fairness theater: fairness audits, certified algorithms, diversity compliance reports accumulate without proportional reduction in discriminatory outcomes.",
+    "perspectival_gap": "This constraint exemplifies how the same structural mechanism produces dramatically different classifications depending on observer position. The discriminated applicant sees Snare (pure extraction, no coordination, no exit). The hiring organization sees Rope (coordination, efficiency, no felt extraction). The vendor sees Rope (coordination of hiring efficiency, massive arbitrage exit). The regulator sees Tangled Rope (coordination function exists but constrained by vendor opacity and low enforcement leverage). Labor market equity sees Snare (cumulative degradation, no exit, no coordination benefit). The EEOC sees its own function as Piton (formal authority persists, actual impact degrades, high theater). The analytical observer risks seeing Mountain (inevitability of algorithmic bias) but this is a false summit \u2014 the extractive design choices and vendor opacity are contingent, not inherent.",
+    "directionality_logic": "Each agent's experienced extraction (chi) is determined by: (1) base extractiveness (structural mechanism: historical bias in training data, proxy discrimination, opacity); (2) their directionality (d) derived from power atom + exit options + beneficiary/victim status; (3) scope modifier (national scope = \u03c3=1.0). The engine derives d automatically from structural declarations. Discriminated applicants (powerless/trapped/victim) get high d \u2192 high f(d) \u2192 high chi experienced extraction. Hiring organizations (institutional/arbitrage/beneficiary) get low d \u2192 negative/minimal f(d) \u2192 negative chi (they experience benefit, not extraction). Algorithm vendors (powerful/arbitrage/beneficiary) get very low d \u2192 minimal f(d) \u2192 massive net benefit. The perspectival gap (applicant sees 0.95, organization sees -0.10) reveals the extraction mechanism: it transfers value from applicants to organizations through algorithmic mediation.",
+    "mandatrophy_analysis": "This constraint does not resolve the mandatrophy question ('is it coordination or extraction?') \u2014 it exemplifies why the mandatrophy is index-relative. From the hiring organization's perspective, the constraint is pure coordination (Rope): it solves the hiring efficiency problem. From the discriminated applicant's perspective, it is pure extraction (Snare): they bear costs with zero benefit. From the regulator's perspective, it is mixed (Tangled Rope): coordination function (developing fairness standards) plus extraction asymmetry (enforcement is slow, vendors have exit, applicants are trapped). The constraint's true nature is that it IS both coordination and extraction simultaneously, depending on your structural position. The system coordinates hiring efficiency (genuine coordination function) while extracting opportunity from protected classes (genuine extraction mechanism). No single classification is correct; the presheaf over the observation site IS the answer. The mandatrophy is resolved by recognizing that 'is it coordination or extraction?' is the wrong question \u2014 the right question is 'from whose perspective, and why?'"
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_wage_discrimination",
+      "opaque_algorithmic_decision_making",
+      "vendor_liability_diffusion"
+    ],
+    "dual_formulation_note": "Hiring discrimination automation decomposes into distinct constraints: (1) Historical bias encoding in training data (\u03b5=0.15, Mountain-like); (2) Proxy discrimination through seemingly-neutral features (\u03b5=0.48, Tangled Rope); (3) Opacity preventing audit and appeal (\u03b5=0.62, Snare). This story aggregates the integrated system-level constraint (\u03b5=0.58, Snare). Each decomposed constraint has different \u03b5 values reflecting different measurement bases (statistical bias vs structural opacity vs extractive design)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

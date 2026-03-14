@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "generational_wealth_concentration_korea",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gwck"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Generational Wealth Concentration in South Korea",
+    "topic_domain": "economic/institutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "chaebol_owning_families",
+      "large_real_estate_holders",
+      "existing_capital_holders"
+    ],
+    "victims": [
+      "younger_generation_wealth_builders",
+      "non_chaebol_small_business_owners",
+      "wage_earning_households"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Young Wage Earner",
+      "comment": "PERSPECTIVE 1: YOUNG WAGE EARNER (SNARE) \u2014 Faces compounding structural barriers: housing prices disconnected from income growth, inheritance tax structures that preserve wealth concentration, and limited access to entrepreneurial capital. Cannot exit the constraint without generational wealth transfer or extraordinary luck. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Small Business Owner",
+      "comment": "PERSPECTIVE 2: SMALL BUSINESS OWNER (TANGLED ROPE) \u2014 Faces real coordination benefits (access to skilled workforce, infrastructure, legal systems) alongside asymmetric extraction (chaebol gatekeeping, capital access barriers, regulatory favoritism toward large firms). Constrained by high exit costs (relocation, market access loss) but retains some agency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Chaebol Ownership Family",
+      "comment": "PERSPECTIVE 3: CHAEBOL OWNERSHIP FAMILY (ROPE) \u2014 Experiences the constraint as pure coordination: inheritance structures, capital allocation mechanisms, and business succession protocols solve genuine collective action problems within the family empire. Net beneficiary with multiple arbitrage options (diversification, asset transfer, political leverage)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Reform Coalition",
+      "comment": "PERSPECTIVE 4: REGULATORY REFORM COALITION (SCAFFOLD) \u2014 Organized civil society and progressive political actors frame wealth concentration as a temporary policy failure addressable through inheritance tax increases, capital gains taxation, real estate price controls, and startup capital democratization. See constraint as having sunset logic: improved policy could redistribute constraint burden over generational timescale. Suppression remains high (political capture, property rights frames) but coalition perceives exit pathway."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Confucian Social Order Frame",
+      "comment": "PERSPECTIVE 5: CONFUCIAN SOCIAL ORDER FRAME (PITON) \u2014 Deep cultural narrative that family-based wealth transmission and hierarchical economic organization reflect natural order and filial duty. This frame persists through institutional inertia and cultural narrative rather than through actual coordination function. Modern Korean economy operates through legal structures and market mechanisms, not Confucian principles, yet the cultural legitimacy frame maintains the constraint's social acceptance. Theater ratio reflects the gap between framing and actual mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Government Regulator",
+      "comment": "PERSPECTIVE 6: GOVERNMENT REGULATOR (TANGLED ROPE) \u2014 Experiences mixed coordination and extraction. Genuine coordination: tax collection, infrastructure investment, social stability require wealth accumulation and capital formation in some concentrated form. Asymmetric extraction: regulations structurally favor chaebol (tax breaks, infrastructure priority, regulatory leniency) while constraining redistribution mechanisms. Constrained by political capture and capital flight risk."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 Risks naturalizing wealth concentration as immutable economic law: capital accumulation follows power law distributions, inheritance preserves accumulated advantage, and competitive markets concentrate over time. But the structural data contradicts the mountain classification \u2014 the Korea constraint exhibits high suppression (policy-mediated), political choice (inheritance tax levels, capital gains taxation, real estate regulation), and contingent institutional design. Engine will detect as false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "inheritance_tax_enforcement_capacity",
+      "question": "Does Korea's inheritance tax system enforce wealth redistribution or primarily extract administrative costs while allowing wealth circumvention?",
+      "resolution_mechanism": "Comparative analysis: measured wealth concentration change post-inheritance vs alternative redistribution mechanisms; tracking of tax avoidance patterns (corporate restructuring, gift tax arbitrage, asset hiding)",
+      "impact": "If enforcement effective: inheritance tax could reduce chi significantly (policy intervention works). If enforcement fails: tax becomes theater masking continued concentration (chi remains high, theater increases).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether inheritance tax actually redistributes or becomes administrative theater"
+    },
+    {
+      "id": "chaebol_reform_political_viability",
+      "question": "Are structural reforms to chaebol gatekeeping (breakup, restrictions on cross-shareholding, separation of ownership-management) politically viable or permanently captured by wealth-holding interests?",
+      "resolution_mechanism": "Historical tracking of reform attempts, success rates, and political cost; analysis of campaign finance flows from chaebol to political actors; measurement of reform persistence vs regulatory capture cycles",
+      "impact": "If viable: scaffold perspective is accurate (sunset possible through reform). If captured: constraint is entrenched (snare/piton perspectives dominate, mountain risk increases).",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether chaebol structural reform is politically achievable"
+    },
+    {
+      "id": "housing_price_mechanism_causality",
+      "question": "Does housing price inflation drive wealth concentration or reflect it? Are inflated prices a constraint mechanism or a symptom of underlying capital accumulation disparities?",
+      "resolution_mechanism": "Decomposition analysis: separating speculative demand (wealth-driven) from supply constraints (policy-driven); cross-regional analysis of housing inflation correlation with inheritance patterns; counterfactual: housing price controls without wealth redistribution",
+      "impact": "If housing drives concentration: policy intervention on housing prices could reduce chi. If housing reflects pre-existing concentration: housing controls become theater unless underlying capital distribution changes.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether housing prices drive or reflect wealth concentration"
+    },
+    {
+      "id": "generational_mobility_measurement_baseline",
+      "question": "What baseline generational wealth mobility would constitute 'normal' capitalism vs extractive constraint? How much intergenerational persistence is institutional design choice vs structural necessity?",
+      "resolution_mechanism": "Cross-national comparison (Denmark, Japan, US, Korea) of intergenerational mobility correlation coefficients; analysis of policy variation (inheritance tax rates, startup capital access, education financing) vs outcomes; synthetic counterfactuals",
+      "impact": "If Korea's persistence is policy-chosen: the constraint is policy-enforced snare. If Korea's persistence matches structural baseline: constraint is reduced to coordination cost (rope-range).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Baseline intergenerational wealth mobility as reference"
+    },
+    {
+      "id": "startup_capital_access_alternative_mechanisms",
+      "question": "Would venture capital democratization, microfinance, or government startup funding significantly alter the constraint, or do wealth-based barriers operate through non-capital mechanisms (networks, mentorship, opportunity access)?",
+      "resolution_mechanism": "Comparative analysis: startup success rates by founder wealth tier; tracking of non-capital barriers (network access, internship gatekeeping, venture capital founder preferences); pilot programs testing capital-only interventions",
+      "impact": "If capital is primary barrier: startup funding redistribution reduces chi. If barriers are relational/network: capital redistribution becomes theater, constraint remains snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether capital access barriers can be addressed independently from network/relational barriers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "South Korea's generational wealth concentration represents a structural constraint that produces radically different classifications depending on observer position. The constraint operates through multiple reinforcing mechanisms: inherited capital accumulation, chaebol gatekeeping of entrepreneurial opportunity, housing price inflation disconnected from wage growth, inheritance and capital gains tax structures that preserve wealth concentration, and cultural narratives (Confucian filial duty, family-centered business organization) that legitimize dynastic succession. The constraint exhibits high extractiveness (0.68) because the distribution of lifetime economic opportunity is increasingly predetermined by parental wealth rather than individual effort or merit. Suppression is very high (0.72) because exit mechanisms are structurally limited: young wage earners cannot accumulate capital at rates sufficient to overcome initial disadvantage; small business owners face chaebol gatekeeping and credit access barriers; non-chaebol families experience housing prices that consume 8-12 years of median household income for down payment alone. The theater ratio (0.58) reflects the gap between official meritocratic/market framing (anyone can succeed through hard work) and the institutional reality (parental wealth predicts adult wealth with correlation ~0.50 and rising).",
+    "key_agents": [
+      "Chaebol Owning Families: Primary beneficiary (institutional/arbitrage) \u2014 capture disproportionate capital allocation, regulatory favoritism, and intergenerational wealth transfer mechanisms; multiple exit options including asset diversification and political leverage",
+      "Young Wage Earner: Primary victim (powerless/trapped) \u2014 faces housing costs consuming 40-50% of income, limited capital accumulation capacity, and inheritance-disadvantaged position; minimal exit options",
+      "Small Business Owner (non-chaebol): Secondary victim (moderate/constrained) \u2014 constrained by chaebol gatekeeping, limited access to startup capital and credit, and unfavorable regulatory environment; retains some agency through small-scale operation but faces high barriers to scaling",
+      "Government Regulator: Mixed actor (institutional/constrained) \u2014 experiences both coordination (tax revenue for infrastructure, capital formation for economic growth) and extraction (regulatory capture favoring chaebol); captured by political donations from wealth-holding interests",
+      "Regulatory Reform Coalition: Organized agent (organized/constrained) \u2014 civil society and progressive political actors attempting to increase inheritance taxation, implement real estate price controls, and democratize startup capital access; constrained by political capture but perceives exit pathway through generational policy shifts",
+      "Confucian Cultural Frame: Institutional narrative (institutional/arbitrage) \u2014 legitimizes family-based wealth transmission as natural and dutiful; benefits wealth-holders by providing non-extractive framing but operates primarily through narrative inertia (piton mechanism)"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High, reflecting that lifetime economic opportunity is increasingly predetermined by parental wealth. The measurement trajectory shows steady increase from 0.52 (30 years ago, when more mobility existed) to 0.68 (present), indicating constraint has tightened. The extraction is not maximal (0.68 vs 0.95) because some mobility pathways remain open (education, corporate advancement, small business success), and enforcement is not totalizing. Suppression (0.72): Very high. Multiple reinforcing mechanisms constrain exit: housing prices create 8-12 year downpayment barriers; chaebol control 40% of economic output and gatekeep major industries; inheritance tax rates have declined from 70% (1990s) to 40-50% (2010s) while wealth concentration accelerated; credit access for non-chaebol founders remains 3-5x harder; social networks for business opportunity access correlate strongly with parental wealth. Theater ratio (0.58): Moderate-high, indicating 58% of activity is performative. Meritocratic framing (anyone can succeed through effort) masks inheritance-driven outcomes; government 'startup initiatives' often direct capital to connected entrepreneurs; educational institutions claim to provide mobility while correlating outcome with parental wealth (98% of Seoul National University students come from top 20% income tier); cultural narratives emphasize individual responsibility while institutions systematically advantage inherited capital. Theater has increased over the interval as policy theater (tax cuts marketed as growth, startup programs that de facto benefit connected founders) has expanded.",
+    "perspectival_gap": "The gap between chaebol rope and young-earner snare reveals the constraint's extraction mechanism: it is simultaneously experienced as pure coordination by beneficiaries (family succession, capital allocation) and pure extraction by victims (trapped in disadvantage, predetermined outcomes). This gap is diagnostic of snare classification. The tangled rope perspectives (small business, government) occupy the middle \u2014 experiencing both coordination benefits and asymmetric extraction. The piton and mountain perspectives attempt to naturalize the constraint through cultural/economic framing, but the structural data reveals these framings as institutional choice rather than natural law.",
+    "directionality_logic": "Directionality values derive from each agent's structural position: beneficiary status vs victim status, and exit capacity within the constraint. Chaebol families (beneficiary + arbitrage) experience very low or negative d (extraction flows toward them). Young wage earners (victim + trapped) experience maximum d (extraction flows away from them, all costs borne). Small business owners (victim + constrained) experience high d (significant costs but some exit options). Government regulators (mixed beneficiary-victim + constrained) experience moderate d reflecting political capture. Reform coalition (organized + constrained) experiences moderate d (high costs but organizational agency reduces experienced extraction). The analytical observer (analytical/analytical) experiences d derived from universalizing the constraint across all positions, averaging to moderate d. The f(d) sigmoid then scales these into experienced extractiveness chi values that explain why the same structural phenomenon feels like coordination (rope) to beneficiaries and pure extraction (snare) to powerless victims.",
+    "mandatrophy_analysis": "Mandatrophy is resolved through the perspectival structure. The analytical observer's natural law view (mountain) is revealed as false by the data: Korea's wealth concentration has measurably increased over 30 years through policy choices (declining inheritance tax rates, regulatory favoritism toward chaebol, housing speculation enabled by credit policy). The constraint is not immutable \u2014 it is enforced through contingent institutional design. The piton view (Confucian cultural frame) is legitimate but secondary \u2014 the cultural narrative provides legitimacy for institutional arrangements that are primarily maintained through economic gatekeeping and regulatory capture, not through genuine cultural adherence. The snare view (powerless wage earner) is the structural ground truth: the constraint functions through trapped exit mechanisms and high suppression. The rope, tangled rope, and scaffold views are all legitimate perspectival readings but do not negate the snare dynamics at the powerless level. The reformability (scaffold) is real \u2014 policy changes could reduce extractiveness \u2014 but requires overcoming political capture (a secondary constraint). The snare classification captures the empirical situation: the constraint persists because it benefits concentrated interests who control policy levers, suppression is high and structural, and exit mechanisms for trapped agents are minimal."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "korean_housing_market_speculation",
+      "chaebol_regulatory_capture",
+      "education_access_inequality_korea",
+      "intergenerational_social_mobility_korea"
+    ],
+    "dual_formulation_note": "Generational wealth concentration is decomposed from its constituent mechanisms: housing market gatekeeping (separate story with higher theater, lower extractiveness), chaebol regulatory capture (separate story with institutional focus), education-based sorting (separate story with identity_coordination type), and intergenerational mobility barriers (synthetic construct measuring multiple constraints). Each story has its own \u03b5 value and perspectives. The wealth concentration story aggregates these at the national level."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

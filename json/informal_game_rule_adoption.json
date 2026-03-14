@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "informal_game_rule_adoption",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "igra"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.45,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Informal Game Rule Adoption and Coordination Drift",
+    "topic_domain": "social_coordination/game_dynamics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "rule_innovators",
+      "early_adopters"
+    ],
+    "victims": [
+      "game_coherence",
+      "late_joiners"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Late Joiner",
+      "comment": "PERSPECTIVE 1: LATE JOINER (SNARE) \u2014 Arrives after informal rules have crystallized. Cannot exit without abandoning the game entirely; faces enforced compliance to unstandardized, evolving rules created without their input. Rules change in favor of established players. Full extraction with no coordination benefit experienced from their position."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Casual Player Community",
+      "comment": "PERSPECTIVE 2: CASUAL PLAYER COMMUNITY (TANGLED ROPE) \u2014 Experiences genuine coordination benefit (shared rules enable play) alongside asymmetric extraction (rule changes favor original circle, require continuous renegotiation). Constrained by social bonds and investment in learning existing rules, but can organize collectively to propose counter-rules. Mixed extraction and coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Official Game Authority",
+      "comment": "PERSPECTIVE 3: OFFICIAL GAME AUTHORITY (ROPE) \u2014 Benefits from informal rule ecosystem reducing official governance burden. Can arbitrage between house rules and official rules, choosing enforcement when convenient. Experiences constraint as pure coordination mechanism with asymmetric gain through reduced administrative overhead."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Rule Documentation Initiative",
+      "comment": "PERSPECTIVE 4: RULE DOCUMENTATION INITIATIVE (SCAFFOLD) \u2014 Organized effort to formalize and document informal rules, creating sunset logic: as rules become explicit and standardized, the informal adoption constraint dissolves. Documentation replaces oral tradition; transparency replaces favor-based rule interpretation. Has clear exit pathway and sunset timeline."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Nostalgic House Rules Committee",
+      "comment": "PERSPECTIVE 5: NOSTALGIC HOUSE RULES COMMITTEE (PITON) \u2014 Original rule innovators whose influence has degraded as the game's social base shifted. Rules persist through nostalgia and group identity ('this is how we've always played') rather than functional necessity. Theater ratio high: elaborate rule rituals performed to maintain coherence despite the rules having been superseded by official rulesets. Low extraction because the original innovators have lost institutional power."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a long-term perspective, informal rule adoption emerges naturally from coordination problems: any multiplayer game with gaps in official rules will generate local conventions. This perspective sees the constraint as a universal structural feature of decentralized game evolution. However, structural data contradicts this naturalization \u2014 the extractive elements (rule favoritism, suppression of alternatives) are not inherent to coordination but contingent on power asymmetries."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "explicit_vs_emergent_rules",
+      "question": "What proportion of adopted informal rules are consciously explicit innovations versus emergent behavioral conventions?",
+      "resolution_mechanism": "Historical reconstruction of rule origins; interviewing original adopters about intentionality; tracing rule diffusion patterns through community networks",
+      "impact": "If mostly explicit: constraint is a mechanism for favoring known innovators (higher extraction). If mostly emergent: constraint reflects coordination discovery process (lower extraction, higher coordination function).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Explicit innovation vs emergent convention in rule adoption"
+    },
+    {
+      "id": "rule_reversal_barriers",
+      "question": "What structural barriers prevent reverting to official rules or adopting alternative informal rules once a set crystallizes?",
+      "resolution_mechanism": "Case studies of attempted rule reversals; measurement of social cost to proposing deviation; analysis of voting or consensus mechanisms for rule changes",
+      "impact": "If barriers are low: constraint is primarily coordination with low suppression (Rope). If barriers are high and asymmetric: constraint is extraction mechanism (Snare or Tangled Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Barriers to rule reversion or alternative rule adoption"
+    },
+    {
+      "id": "documentation_displacement_timeline",
+      "question": "When informal rules are documented and standardized, do they remain functionally equivalent or does formalization alter them?",
+      "resolution_mechanism": "Comparison of informal rule practice before and after documentation; measurement of continued informal deviation from documented versions; assessment of whether documentation sunset is real or merely shifts extraction mechanism",
+      "impact": "If documentation preserves function: scaffold sunset is real, constraint dissolves. If documentation changes meaning or enforcement: constraint may degrade to piton rather than sunset.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether documentation preserves functional equivalence of informal rules"
+    },
+    {
+      "id": "power_concentration_mechanism",
+      "question": "Do rule innovators systematically engineer rules favoring themselves, or does power concentration emerge passively from first-mover advantage?",
+      "resolution_mechanism": "Comparative rule analysis: measure symmetry of rule benefits across players; interview rule innovators about intentionality; analyze whether rules change when innovators change player pool vs remain fixed",
+      "impact": "If systematic engineering: constraint is extraction mechanism (Snare). If passive first-mover: constraint is coordination with asymmetric gain (Rope/Tangled Rope). Affects whether extraction is feature or artifact.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Intentional vs passive power concentration in rule innovation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.32
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "Informal game rule adoption occurs when players in a multiplayer game introduce and enforce new rules outside the official ruleset, usually to address perceived gaps, unfairness, or novel strategic situations. The constraint exhibits a dual character: genuine coordination function (solving rule gaps, enabling new play styles) and asymmetric extraction (the rule innovators gain advantage, late joiners face enforced compliance to rules they didn't negotiate). As rules crystallize, the theater ratio increases \u2014 elaborate ritual explanations and justifications become necessary to enforce rules whose origins may have become obscure or contentious. The constraint exhibits all six types from different perspectives, revealing how a coordination mechanism can calcify into an extraction apparatus through power asymmetry and information lag.",
+    "key_agents": [
+      "Rule Innovators: Primary beneficiaries (institutional/arbitrage) \u2014 gain strategic advantage during adoption window, can revise rules in their favor, experience coordination as low-friction governance",
+      "Game Coherence: Primary victim (powerless/trapped) \u2014 abstract collective good threatened by rule fragmentation; cannot organize or exit without abandoning all games",
+      "Late Joiners: Secondary victims (powerless/trapped) \u2014 must learn unstandardized rules, face enforced compliance to rules created without their input, cannot exit without leaving the game",
+      "Casual Player Community: Secondary actors (moderate/constrained) \u2014 experience genuine coordination benefit but also extraction as rules change in favor of original circle",
+      "Official Game Authority: Institutional observer (institutional/arbitrage) \u2014 benefits from informal rule ecosystem reducing governance burden; can selectively enforce rules",
+      "Rule Documentation Initiative: Organized agents (organized/mobile) \u2014 working toward sunset by standardizing and documenting rules, creating pathway to formalization"
+    ],
+    "logic_rationale": "Extractiveness (0.32): Moderate. Informal rule adoption provides genuine coordination benefit (solves rule gaps, enables expanded play) alongside measurable extraction (first movers gain strategic advantage, late joiners face enforced compliance). The extraction is not maximal because the coordination function is real and significant \u2014 rules genuinely solve problems. However, the extraction is not negligible because rule innovators systematically benefit from rule design and can revise rules when they lose advantage. Suppression (0.45): Moderate. Barriers to alternative rules include social cohesion (deviating is disruptive), sunk learning costs (must relearn official rules or negotiate new informal rules), and collective action problems (proposing rule changes is costly). But suppression is not total \u2014 organized groups can successfully propose and adopt alternative rules; exit via official ruleset is always available at cost of game experience. Theater ratio (0.38): Low-moderate, increasing over time. Early informal rules are justified by pragmatic necessity ('we need a rule for this situation'). As rules crystallize and memory of origins fades, theater increases \u2014 elaborate ritual justifications ('this is how we've always done it') substitute for functional necessity. Documentation initiatives work to reduce theater by making rules explicit and grounded in function rather than tradition.",
+    "directionality_logic": "Each agent's directionality value d is determined by their structural relationship to the extraction flow. Rule innovators (beneficiaries with arbitrage exit) experience low d \u2014 they benefit from the constraint and can exit to official rules if needed, so the constraint extracts toward them. Late joiners (trapped with no exit option) experience high d \u2014 they must comply with rules they didn't negotiate. Casual players (moderate power, constrained exit) experience mid-range d \u2014 they benefit from coordination but face costs of rule renegotiation. The official authority (institutional, arbitrage) experiences negative d \u2014 the constraint reduces their governance burden. The documentation initiative (organized, mobile) experiences declining d over time as the constraint's extraction mechanism weakens through formalization.",
+    "perspectival_gap": "This constraint shows maximal perspectival divergence. Rule innovators see coordination (Rope) \u2014 they are solving genuine problems. Late joiners see extraction (Snare) \u2014 they face enforced compliance to rules they didn't choose. Casual communities see hybrid coordination-extraction (Tangled Rope) \u2014 benefits exist but asymmetric. The official authority sees institutional benefit (Rope) \u2014 reduced governance overhead. Documentation efforts see a temporary problem with exit pathway (Scaffold) \u2014 formalization will sunset the constraint. Original innovators whose influence has degraded see a nostalgic ritual (Piton) \u2014 rules persist through tradition rather than function. The analytical observer risks seeing natural law (Mountain) \u2014 informal coordination naturally emerges \u2014 but structural data reveals this as false naturalization: the extraction elements are contingent on power asymmetries, not inherent to coordination.",
+    "mandatrophy_analysis": "COORDINATION-EXTRACTION BOUNDARY CASE: This constraint tests whether a genuine coordination mechanism can simultaneously be an extraction apparatus. The mandatrophy resolves by recognizing that all six types are structurally valid from different observer positions. The constraint is Rope from the beneficiary perspective (pure coordination gain). It is Snare from the powerless perspective (pure extraction). It is Tangled Rope from the moderate perspective (mixed). The analytical observer's 'natural law' framing that informal rules always emerge naturally is diagnostically important because it naturalizes what is actually a contingent power asymmetry: yes, informal rules emerge, but their distribution of benefit is not naturally balanced \u2014 it concentrates advantage on first movers. The scaffold view (documentation will sunset) is empirically testable: if documented rules reduce extraction and theater, the sunset is real. If extraction merely shifts (documented rules now favor whoever controls documentation), the constraint has not dissolved but transformed."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "house_rule_legitimacy",
+      "game_coherence_fragmentation"
+    ],
+    "dual_formulation_note": "Informal rule adoption constrains two distinct structural problems: (1) Solving rule gaps in incomplete official rulesets (coordination function, low extraction). (2) Establishing power asymmetry through rule design (extraction function). These could be decomposed as separate constraint stories (informal_rule_coordination vs informal_rule_extraction) with different epsilon values, but they are presented as tangled_rope because they co-occur structurally \u2014 solving the coordination problem necessarily creates the extraction opportunity."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "inequality_amplification_mechanisms",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ineq_amp"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Inequality Amplification Mechanisms",
+    "topic_domain": "economic/social/systemic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "wealth_concentrators",
+      "institutional_gatekeepers"
+    ],
+    "victims": [
+      "low_income_cohorts",
+      "intergenerational_mobility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Locked-Out Cohort",
+      "comment": "PERSPECTIVE 1: LOCKED-OUT COHORT (SNARE) \u2014 Trapped by cumulative disadvantage: lack initial capital, face educational barriers, encounter discriminatory lending, bear healthcare costs that erode savings, and face structural obstacles to wealth accumulation. Exit options are severely constrained \u2014 the mechanisms that amplify inequality for others are extractive for this agent. Maximum experienced extraction with no meaningful coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Middle-Income Climber",
+      "comment": "PERSPECTIVE 2: MIDDLE-INCOME CLIMBER (TANGLED ROPE) \u2014 Moderate extractiveness with partial coordination function. Educational access and social mobility are real but conditional: requires sustained effort, benefits from network effects, but also faces credential inflation and competition intensification. The constraint both enables (coordination through credentials) and extracts (raising barriers for those without access). Constrained by time, capital, and information asymmetries."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Accumulator",
+      "comment": "PERSPECTIVE 3: INSTITUTIONAL ACCUMULATOR (ROPE) \u2014 Benefits from mechanisms that concentrate wealth: asset appreciation, tax arbitrage, institutional lending advantages, and preferential access to investment vehicles. Experiences the constraint as pure coordination: the system enables them to coordinate capital, leverage, and institutional access. Net beneficiary with genuine arbitrage options \u2014 can diversify, relocate, or exit specific mechanisms while maintaining wealth."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Reform Coalition",
+      "comment": "PERSPECTIVE 4: REFORM COALITION (TANGLED ROPE) \u2014 Labor unions, community organizations, and advocacy groups perceive both the coordination function (collective action to set wage floors, bargaining standards) and the extraction (capital's structural advantage). They benefit from coordination (collective power) but bear costs through suppression (anti-union legislation, legal barriers to organizing). Extractiveness is moderate because they have agency and partial institutional power."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legitimizing Narrative",
+      "comment": "PERSPECTIVE 5: LEGITIMIZING NARRATIVE (PITON) \u2014 Meritocratic framing ('inequality reflects effort and talent') persists despite contradicting evidence. Theater ratio is high: institutional actors maintain the performance that the system is fundamentally fair while structural mechanisms visibly amplify inequality. The narrative function has largely atrophied; it persists through institutional inertia and because elites benefit from its maintenance. Theater_ratio (0.48 base) understates the performative content of the meritocratic narrative itself \u2014 the narrative is nearly pure theater."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a comprehensive analytical position, inequality amplification mechanisms exhibit genuine coordination functions (capital allocation, productivity incentives, specialization efficiency) AND asymmetric extraction (barrier elevation, rent capture, intergenerational lock-in). Both functions are real and structural, not one masking the other. The effective extractiveness reflects the empirically measured gap between claimed and actual mobility rates."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_vs_extraction_boundary",
+      "question": "How much of measured inequality amplification reflects legitimate coordination incentives (rewarding productivity, allocating capital efficiently) versus asymmetric extraction (barrier elevation, rent capture)?",
+      "resolution_mechanism": "Counterfactual analysis: compare mobility rates under alternative institutional arrangements (Nordic model vs US model vs pure redistribution); identify which mechanisms are necessary for coordination function and which serve extraction only",
+      "impact": "If coordination-heavy (>60%): reclassify as Rope with higher beneficiary weighting. If extraction-heavy (>70%): reclassify as Snare from more perspectives. Current classification assumes 50/50 split.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of inequality amplification driven by coordination vs extraction"
+    },
+    {
+      "id": "intergenerational_lock_mechanism",
+      "question": "Is intergenerational wealth concentration primarily driven by inherited capital accumulation (linear) or by barrier elevation and credential inflation (nonlinear amplification)?",
+      "resolution_mechanism": "Longitudinal data: track wealth and mobility across generational cohorts; decompose inequality growth by inheritance vs earned income vs asset appreciation vs credential premium; cross-national comparison of lineage-dependent trajectories",
+      "impact": "If inheritance-dominated: suppression metric should be higher (trapped agents lack initial capital with no recovery path). If barrier-dominated: theater ratio should be higher (credentialism masks capital-driven selection). Current split: 40% inheritance, 60% barrier elevation.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether intergenerational lock-in is driven by inherited capital or barrier elevation"
+    },
+    {
+      "id": "identity_lock_vs_structural_constraint",
+      "question": "To what extent do trapped agents perceive inequality as structurally immutable (trapped exit) versus self-perpetuating through internalized narratives (identity_locked exit)?",
+      "resolution_mechanism": "Qualitative analysis: interviews and narrative analysis of how low-mobility agents frame their opportunities; measurement of belief in mobility vs belief in structural barriers; analysis of effort-outcome correlation in subjective experience",
+      "impact": "If primarily identity_locked: reclassify powerless perspective's exit_options as 'identity_locked'; theater ratio increases (internalized constraint theater); perspectives shift from Mountain (immutable) to Rope (changeable in principle) at biographical horizon. If primarily trapped: current classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether powerless agents are trapped by structure or identity-locked by internalized framing"
+    },
+    {
+      "id": "amplification_mechanism_specificity",
+      "question": "Are the primary amplification mechanisms domain-general (capital accumulation, network effects, institutional gatekeeping) or domain-specific (housing, healthcare, education, finance)?",
+      "resolution_mechanism": "Comparative analysis across domains: measure extractiveness and suppression for inequality in housing access vs healthcare vs education vs financial services; identify which mechanisms are universal and which domain-dependent",
+      "impact": "If domain-specific: decompose into separate constraint stories (housing_inequality_amplification, education_inequality_amplification, etc.), each with its own \u03b5 and perspectives. If domain-general: current monolithic story is appropriate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether inequality amplification is domain-general or requires decomposition"
+    },
+    {
+      "id": "policy_ceiling_effect",
+      "question": "Do redistributive policies (taxes, transfers, social programs) function as genuine corrections to inequality amplification or as performative theater that legitimizes the underlying mechanisms?",
+      "resolution_mechanism": "Time-series analysis: measure redistribution policy intensity vs actual post-tax inequality; compare policy impact pre- and post-regulatory capture; identify whether policy tightening/loosening correlates with underlying structural changes or is orthogonal",
+      "impact": "If genuine correction: theater ratio should be lower than 0.48 (policies actually reduce amplification). If performative: theater ratio understates the performative content; should be >0.60. If ceiling effect (policies hit decreasing returns): constraints affecting low-income cohorts should increase over time even as policy intensity increases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether redistributive policies genuinely correct inequality or perform legitimacy"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 45
+  },
+  "commentary": {
+    "narrative_context": "Inequality amplification mechanisms are systemic arrangements that convert initial advantage into compounding disadvantage for those without early capital, networks, or institutional access. These mechanisms operate across multiple domains (education, housing, finance, healthcare) and reinforce through feedback: initial wealth enables access to credentialing, which enables earning power, which enables asset accumulation, which enables intergenerational transfer. Simultaneously, lack of initial resources triggers a degrading cascade: educational barriers, credit constraints, limited network access, concentrated exposure to extractive financial products, and reduced ability to navigate bureaucratic systems. The constraint exhibits genuine coordination functions (capital allocation, specialization incentives, productivity rewards) AND asymmetric extraction (barrier elevation, rent capture, intergenerational lock-in). It is fundamentally a Tangled Rope: both functions are real and simultaneously structural. The perspectival gap reveals how the same mechanisms appear as coordination to beneficiaries, pure extraction to the locked-out, mixed extraction/coordination to moderate agents, and legitimate (if incomplete) incentive structures to analytical observers.",
+    "key_agents": [
+      "Low-Income Cohorts: Primary victim (powerless/trapped) \u2014 trapped by cumulative disadvantage with no viable exit path; bear maximum extraction through limited access, higher costs, and barrier elevation",
+      "Intergenerational Mobility: Structural victim (powerless/trapped) \u2014 abstract collective good; mobility rates decline as amplification mechanisms intensify",
+      "Middle-Income Climber: Secondary actor (moderate/constrained) \u2014 structurally mobile but constrained by credential inflation, time requirements, and information asymmetries; partially benefits from coordination while partially bearing extraction",
+      "Wealth Concentrators: Primary beneficiary (institutional/arbitrage) \u2014 institutional actors with capital access, asset appreciation, and preferential institutional treatment; arbitrage options allow them to avoid or escape specific mechanisms while maintaining wealth",
+      "Reform Coalition: Organized agent (organized/constrained) \u2014 labor unions, community organizations, advocacy groups that benefit from collective coordination but face suppression through legal and institutional barriers",
+      "Meritocratic Narrative System: Institutional actor (institutional/arbitrage) \u2014 maintains legitimizing performance of fairness; the narrative function has degraded (pure theater) while institutional actors continue to enforce its observance",
+      "Analytical Observer: Civilizational position (analytical/analytical) \u2014 sees both coordination and extraction functions; recognizes the constraint as tangled rather than pure"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate, reflecting both real coordination functions and substantial asymmetric extraction. The measurement trajectory shows extraction intensification over the 45-year interval (0.35\u21920.58), indicating that amplification mechanisms are strengthening faster than countervailing policies. This is not pure extraction (which would be >0.66 in snare range) because coordination functions are genuine \u2014 capital allocation mechanisms do work, and productivity incentives are real. But extraction is substantial because barrier elevation, credential inflation, and rent capture are also real structural features. Suppression (0.65): High. Multiple barriers to exit: lack of initial capital (not a choice), educational gatekeeping (credentialism), discriminatory lending (structural), healthcare costs (burden-bearing), time constraints (exploitation), and limited political voice (disenfranchisement). Trapped agents face severe suppression from multiple orthogonal mechanisms \u2014 no single barrier is insurmountable, but their combination creates effective lock-in. Theater ratio (0.48): Moderate. The measured theater reflects meritocratic narratives that legitimize the constraint while masking structural mechanisms. Theater is lower than might be expected because extraction mechanisms are somewhat visible (wealth gaps are undeniable) \u2014 the theater is in the *framing* (meritocratic story) rather than in hiding the extraction itself. However, the narrative's theater function has substantially increased over the interval as evidence of immobility has accumulated, requiring more performative work to maintain the meritocratic framing.",
+    "perspectival_gap": "Beneficiaries see coordination and low extraction (Rope). Trapped agents see maximum extraction (Snare). Moderate agents see mixed extraction/coordination (Tangled Rope). Organized reform agents see partial extraction with coalition power (Tangled Rope with constrained exit). The meritocratic narrative sees its own function as degraded (Piton: theater without coordination benefit). The analytical observer sees both functions genuine and simultaneously structural (Tangled Rope), recognizing that the constraint is not fundamentally a story of hidden extraction masked by narrative, but rather a hybrid system with both real coordination and real extraction, with asymmetric distribution of each.",
+    "directionality_logic": "Wealth concentrators: beneficiary + arbitrage exit \u2192 d \u2248 0.08 \u2192 f(d) \u2248 -0.10 \u2192 experienced as pure benefit. Low-income cohorts: victim + trapped exit \u2192 d \u2248 0.92 \u2192 f(d) \u2248 1.36 \u2192 experienced as pure extraction. Middle-income: both (moderate benefit from mobility coordination, moderate cost from credential inflation) + constrained exit \u2192 d \u2248 0.60 \u2192 f(d) \u2248 0.75 \u2192 experienced as mixed with slight target bias. Reform coalition: organized agent with constrained exit (legal/institutional suppression) + some beneficiary function (collective power) + some victim function (facing suppression) \u2192 d \u2248 0.68 \u2192 f(d) \u2248 1.05 \u2192 experienced as moderate-high extraction with partial agency.",
+    "mandatrophy_analysis": "Inequality amplification mechanisms resolve mandatrophy by clarifying that the system is genuinely Tangled Rope, not pure Snare disguised as Rope. The mandatrophy danger was: 'Are we looking at coordination mechanisms that happen to disadvantage some groups (Rope with unequal distribution), or are we looking at extraction mechanisms that use coordination narrative as cover (Snare with legitimation)?' The structural analysis shows both are present and simultaneously real. The coordination functions (capital allocation, productivity incentives, institutional specialization) exist and work. The extraction functions (barrier elevation, rent capture, intergenerational lock-in) also exist and work. Neither is the 'real' mechanism masking the other \u2014 they are orthogonal features of the same institutional arrangement. This is precisely what Tangled Rope classification captures: genuine coordination AND asymmetric extraction, both structural, both necessary to understand the constraint. The perspectival gap (beneficiaries see Rope, trapped see Snare, analytical see Tangled Rope) is not a failure to identify the 'true' type but a demonstration that all three are correct relative to the observer's structural position. The constraint is not one type viewed from different angles \u2014 it genuinely exhibits different extraction/coordination ratios for different agents, which the framework models through chi formula differentiation."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "intergenerational_wealth_transfer",
+      "credentialism_barrier_elevation",
+      "financial_access_gatekeeping",
+      "network_effect_concentration"
+    ],
+    "dual_formulation_note": "Inequality amplification mechanisms decompose into domain-specific constraints: housing_inequality_amplification (\u03b5=0.62, tangled_rope), education_inequality_amplification (\u03b5=0.55, tangled_rope), healthcare_access_inequality (\u03b5=0.52, tangled_rope), and financial_discrimination (\u03b5=0.60, tangled_rope). Each domain has distinct \u03b5 values reflecting different amplification mechanism intensities. The monolithic story captures the generic mechanisms; domain stories capture specific institutional dynamics. All are linked through network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.58
+    }
+  ]
+}

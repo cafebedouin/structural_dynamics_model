@@ -1,0 +1,230 @@
+{
+  "header": {
+    "constraint_id": "algorithmic_content_control",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "algo_cc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Algorithmic Content Control in Digital Platforms",
+    "topic_domain": "digital_platforms/information_control",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "advertisers"
+    ],
+    "victims": [
+      "content_creators",
+      "information_ecosystem",
+      "user_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Content Creator Dependent on Platform",
+      "comment": "PERSPECTIVE 1: CONTENT CREATOR (SNARE) \u2014 Dependent on algorithmic reach for audience and income; cannot exit without losing accumulated reputation and audience. Algorithm changes directly control creator revenue. No alternative distribution mechanism offers comparable reach. Maximum experienced extraction with suppression of alternatives."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "User Information Autonomy",
+      "comment": "PERSPECTIVE 2: USER INFORMATION AUTONOMY (SNARE) \u2014 Users face opacity in what content reaches them and why. Algorithmic ranking determines epistemic access without consent or transparency. Users cannot exit without losing social connectivity and information access. Suppression of awareness about the filtering mechanism itself."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Alternative Platform Operator",
+      "comment": "PERSPECTIVE 3: ALTERNATIVE PLATFORM OPERATOR (TANGLED ROPE) \u2014 Faces high barriers to entry (network effects, data disadvantage) but also benefits from algorithmic coordination principles. Could build alternatives but constrained by scale requirements. Mixed experience: genuine coordination function (recommendation systems do solve information overload) paired with extractive network lock-in."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Dominant Platform Operator",
+      "comment": "PERSPECTIVE 4: DOMINANT PLATFORM OPERATOR (ROPE) \u2014 Experiences algorithmic control as pure coordination: solving the technical problem of content ranking and user engagement. High beneficiary status with arbitrage exits (data portability, algorithm modifications, diversification). Net positive flow of value extraction and attention."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regulatory Coalition",
+      "comment": "PERSPECTIVE 5: REGULATORY COALITION (TANGLED ROPE) \u2014 Organized agents (EU, regulators, civil society) see algorithmic control as a constraint requiring active governance: transparency mandates, algorithmic auditing, content moderation standards. Regulation solves coordination problems (preventing speech pollution) while imposing extraction (compliance costs, reduced platform flexibility). Constrained by platform power and technical complexity."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Content Moderation Theater",
+      "comment": "PERSPECTIVE 6: CONTENT MODERATION SYSTEM (PITON) \u2014 Community guidelines and moderation appeal processes are largely performative. Policies exist but enforcement is opaque, inconsistent across regions, and driven by algorithmic automation with minimal human judgment. The moderation theater persists through institutional inertia \u2014 platforms cannot abandon moderation systems without legal/reputational crisis, but the systems often fail to achieve stated content quality goals. Theater ratio reflects the gap between stated policy and actual enforcement mechanism."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Emergent Complexity View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / EMERGENT COMPLEXITY (MOUNTAIN) \u2014 At civilizational scale, some algorithmic filtering is inherent to any information system: computational resources are finite, human attention is finite, ranking mechanisms are necessary. From this view, algorithmic control appears as a natural law \u2014 any large-scale information system must implement ranking and filtering. However, this naturalizes the specific design choices (maximizing engagement, training on user behavior data, opacity) as inevitable rather than contingent institutional arrangements. Engine will flag this as false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "engagement_maximization_necessity",
+      "question": "Is algorithmic ranking driven by engagement maximization an inherent technical requirement or a design choice optimizing for advertiser value?",
+      "resolution_mechanism": "Comparative analysis of ranking algorithms across different incentive structures: platforms with subscription revenue vs advertising revenue show different ranking patterns; comparison of internal metrics (engagement, time-on-platform, click-through rate) against user satisfaction and information quality metrics",
+      "impact": "If technical requirement: suppression is inherent to scale (raises mountain likelihood). If design choice: extractiveness is deliberate (raises snare likelihood). Classification hinges on whether algorithmic control is necessary or contingent.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether engagement maximization is technical necessity or design choice"
+    },
+    {
+      "id": "algorithmic_transparency_sufficiency",
+      "question": "Would full algorithmic transparency and user control over ranking parameters eliminate the snare mechanism or merely shift it to a meta-level (users unable to understand the revealed algorithm)?",
+      "resolution_mechanism": "Field studies with algorithmic transparency implementations (Mastodon, Bluesky algorithms exposed); measurement of user comprehension rates and actual algorithm modification patterns; comparison of content diversity and user satisfaction before/after transparency",
+      "impact": "If transparency sufficient: classification drops to rope/scaffold. If insufficient (users cannot act on revealed information): snare persists at meta-level, classification remains snare/tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether algorithmic transparency provides user exit or merely creates illusion of control"
+    },
+    {
+      "id": "network_effect_irreversibility",
+      "question": "Are network effects that lock users into dominant platforms technically irreversible or artificially maintained through interoperability barriers?",
+      "resolution_mechanism": "Analysis of data portability and federation potential; historical case studies of platform migration (Slack \u2192 alternatives, email fragmentation); measurement of actual switching costs when bridging infrastructure is present",
+      "impact": "If reversible: trapped\u2192constrained, exit options upgrade, snare\u2192tangled_rope. If irreversible: trapped status confirmed, snare classification stabilized.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether network lock-in is technical or institutional"
+    },
+    {
+      "id": "regulation_asymmetric_burden",
+      "question": "Do transparency and content moderation regulations impose proportionally different compliance costs on dominant vs alternative platforms, thereby entrenching the constraint?",
+      "resolution_mechanism": "Comparative analysis of compliance costs (compliance legal staff, auditing infrastructure, technical implementation) as percentage of revenue for large vs small platforms; measurement of market concentration changes post-regulation in different jurisdictions",
+      "impact": "If asymmetric burden confirmed: regulation becomes entrenching mechanism (scaffold with hidden extraction), classification shifts upward in extractiveness. If burden proportional: regulation is genuine coordination mechanism, scaffold classification sustained.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regulations entrench platform dominance through asymmetric compliance costs"
+    },
+    {
+      "id": "creator_income_stability_alternatives",
+      "question": "Do alternative revenue models (subscription, direct patronage, cooperative platforms) actually provide income stability comparable to algorithmic reach-based models, or do they require different user bases and skills?",
+      "resolution_mechanism": "Longitudinal income tracking for creators on Patreon, Substack, and cooperative platforms vs algorithmic platforms; correlation with content type, creator experience level, and initial audience size",
+      "impact": "If alternatives viable: trapped\u2192constrained for creators, exit option availability confirmed. If alternatives require different skill/audience: trapped status confirmed, snare classification sustained.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether non-algorithmic revenue models provide viable creator exit"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Algorithmic content control in digital platforms creates a multi-agent extraction mechanism disguised as coordination. At its core, the constraint operates through three integrated mechanisms: (1) algorithmic ranking that determines visibility and audience reach, (2) opacity that prevents users and creators from understanding or modifying the ranking process, and (3) network lock-in that makes exit economically or socially costly. Platform operators frame algorithmic control as a solution to information overload and content discovery \u2014 a genuine coordination problem. But the algorithms are optimized not for user understanding or information quality, but for engagement metrics that directly translate to advertising value. This creates a tangled rope: real coordination function (ranking does solve the problem of content abundance) paired with asymmetric extraction (platform captures value from creator labor and user attention). The constraint's extractiveness has grown from 0.35 to 0.58 over the decade as algorithmic sophistication has increased, as network effects have strengthened platform dominance, and as regulatory pressure has driven platforms toward opaque algorithmic enforcement to avoid direct liability. The theater ratio (0.68) reflects that content moderation systems, transparency reports, and algorithmic explanation features are largely performative \u2014 they satisfy regulatory requirements and public relations needs while the actual ranking and visibility decisions remain opaque and optimization-driven. Creators face suppression through algorithmic silence (content that does not optimize for engagement metrics receives no distribution); users face suppression through ranking opacity (they cannot see why certain content reaches them); regulators face suppression through technical complexity (they cannot audit or modify algorithms without requiring platform cooperation). The constraint exhibits all six classification types from different structural positions, making it a diagnostic exemplar for how institutional power asymmetries create perspectival divergence in identical institutional arrangements.",
+    "key_agents": [
+      "Content Creators: Primary victim (powerless/trapped) \u2014 dependent on algorithmic reach for audience and income; cannot exit without losing accumulated reputation and audience; subject to algorithm changes outside their control",
+      "Users: Primary victim (powerless/trapped) \u2014 lack transparency and control over content ranking; cannot exit without losing social connectivity and information access; suppressed awareness of algorithmic filtering",
+      "Information Ecosystem: Primary victim (powerless/trapped) \u2014 collectively bears cost of engagement-maximizing algorithms that amplify divisive content and misinformation",
+      "Platform Operators: Primary beneficiary (institutional/arbitrage) \u2014 capture value from creator labor through attention extraction; control visibility and reach; capture advertising value from user engagement data",
+      "Advertisers: Secondary beneficiary (powerful/arbitrage) \u2014 gain access to finely-targeted audiences through algorithmic ranking optimization",
+      "Alternative Platforms: Secondary victim/constrained actor (moderate/constrained) \u2014 benefit from algorithmic coordination principles but face network lock-in barriers",
+      "Regulatory Authorities: Organized actor (organized/constrained) \u2014 see constraint as requiring governance (transparency, auditing, content standards) but constrained by platform technical complexity and market power",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing algorithmic control as inherent to any large-scale information system"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Platform operators extract significant value through (1) attention capture that generates advertising revenue, (2) control over creator reach that captures labor value through asymmetric ranking, and (3) data aggregation that creates switching costs. The extraction is not maximal (0.66+) because genuine coordination problems are solved (content discovery, spam filtering, recommendation quality) and because some creators and users derive real benefits. The extractiveness trajectory (0.35\u21920.58) shows accumulation of extraction over time: early platforms competed on recommendation quality; mature platforms optimize for engagement metrics at the expense of quality. Suppression (0.72): High. Multiple suppression mechanisms operate: (1) opacity of ranking algorithms prevents users and creators from understanding or modifying them, (2) algorithmic silencing (content that does not optimize for engagement metrics receives no distribution), (3) lock-in through network effects (users cannot easily switch to alternatives), (4) dependence (creators have no income alternative), (5) technical complexity (regulators and users cannot audit the actual optimization mechanisms). Theater ratio (0.68): High. Content moderation policies, algorithmic explanation features, and transparency reports are substantially performative. The actual content ranking is driven by proprietary optimization metrics (engagement, time-on-platform, click-through rate) that are not disclosed; moderation decisions are often made by automated systems with minimal human oversight; appeals are processed through opaque bureaucratic procedures. The theater has increased over time as regulatory pressure has forced platforms to create appearance of governance while maintaining actual algorithmic optimization.",
+    "perspectival_gap": "This constraint demonstrates why a single classification type fails to capture the institutional reality. The platform operator sees rope (coordination: we solve the content discovery problem). The creator sees snare (extraction: algorithmic changes directly control my income with no recourse). The user sees snare with elements of piton (extraction: I cannot control what reaches me; the moderation system is theater). The alternative platform sees tangled rope (mixed: algorithmic coordination is genuine but network effects extract the most valuable data/users from alternatives). The regulator sees tangled rope (mixed: platforms provide coordination service but extract through opaque ranking that harms information quality). The analytical observer risks seeing mountain (information filtering is inherent to any large system) but this naturalizes design choices as inevitable. The perspectival gap is not driven by disagreement about facts but by genuine structural difference: the platform's optimization function (engagement) is not aligned with creator income stability, user autonomy, or information ecosystem health. Each agent experiences a different reality because they have a different position in the extraction flow.",
+    "directionality_logic": "Directionality derives from each agent's structural position: platform operators are beneficiaries with arbitrage exits (can modify algorithms, diversify revenue sources) \u2014 low d, low experienced extraction chi. Creators are victims with trapped exit options (dependent on algorithmic reach, no alternative income source) \u2014 high d, high chi. Users are victims with trapped exit options (cannot access social networks or information without algorithmic mediation) \u2014 high d, high chi. Alternative platforms are ambiguous (benefit from coordination function but victim of lock-in) \u2014 moderate d, moderate chi. Regulators are organized with constrained exits (can impose rules but constrained by platform compliance and technical complexity) \u2014 moderate d, moderate chi. The aggregate directionality shows extraction flowing from powerless agents (creators, users, ecosystem health) toward institutional actors (platform operators, advertisers). The suppression mechanism (opacity, algorithmic silencing, lock-in) is what enables this directional asymmetry \u2014 if users could understand and modify ranking algorithms, or if creators had alternative platforms with equivalent reach, extraction would diminish significantly.",
+    "mandatrophy_analysis": "The mandatrophy is resolved through the tangled rope classification, which captures both genuine coordination (algorithmic ranking does solve the problem of content abundance and content discovery) and asymmetric extraction (the ranking optimization serves platform and advertiser interests at the expense of creator income stability and user autonomy). The classification prevents two complementary misdiagnoses: (1) treating algorithmic control as pure coordination (rope) would ignore the extraction of creator labor value, user attention value, and data value; (2) treating it as pure extraction (snare) would ignore that the ranking systems genuinely solve technical and coordination problems. The tangled rope admits that both functions are real and structurally inseparable \u2014 the same algorithmic systems that solve content discovery also enable extraction through engagement optimization. The mandatrophy is further resolved through the perspectival multiplicity: the platform operator's rope perspective is legitimate (from their structural position, the system is coordination), but it is not the system's true type because it ignores the distributional consequences. The constraint's true type (tangled rope) is visible only from perspectives that include both beneficiaries and victims. Single-perspective analysis (platform operator only, or user only) produces misclassification. The full presheaf of perspectives reveals the actual structure: a hybrid coordination-extraction system whose classification depends on who measures it but whose extractiveness is distributed and real."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "content_creator_labor_asymmetry",
+      "platform_network_lock_in",
+      "algorithmic_opacity_regulatory_capture"
+    ],
+    "dual_formulation_note": "Algorithmic content control decomposes into structurally distinct constraints: (1) engagement optimization mechanism (\u03b5\u22480.58, tangled rope) \u2014 mixing genuine coordination with extraction; (2) opacity and auditability gap (\u03b5\u22480.65, snare) \u2014 pure extraction through information asymmetry; (3) network lock-in (\u03b5\u22480.72, snare) \u2014 pure extraction through switching costs. This story focuses on the dominant integrated mechanism. The downstream constraints represent specific extractive functions that could be addressed independently through transparency, interoperability, or algorithmic redesign."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

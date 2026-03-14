@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "unclos_dispute_resolution",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "unclos"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UNCLOS Dispute Resolution Mechanism",
+    "topic_domain": "international_law/maritime_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "powerful_maritime_states",
+      "international_tribunal"
+    ],
+    "victims": [
+      "small_island_states",
+      "developing_coastal_nations",
+      "ocean_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Small Island States",
+      "comment": "PERSPECTIVE 1: SMALL ISLAND STATES (SNARE) \u2014 Trapped within UNCLOS dispute mechanisms with no realistic exit. Cannot exit the treaty (existential dependence on ocean access). Cannot afford legal representation or extended litigation. Dispute resolution extracts sovereignty (forced arbitration outcomes) with minimal coordination benefit. High suppression \u2014 limited financial resources, no asymmetric power in proceedings, minimal voice in outcomes."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Developing Coastal Nations",
+      "comment": "PERSPECTIVE 2: DEVELOPING COASTAL NATIONS (TANGLED ROPE) \u2014 Constrained by costs of litigation and technical capacity gaps, but benefit from dispute resolution mechanism's existence (prevents resource-rich nations from unilateral appropriation). Mixed extraction: procedure is biased toward wealthy litigants, yet mechanism provides some protection against total expropriation. Active enforcement required to maintain the procedural system."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Wealthy Maritime Nations",
+      "comment": "PERSPECTIVE 3: WEALTHY MARITIME NATIONS (ROPE) \u2014 Can afford specialized maritime law expertise, can extend litigation timelines, can exit to bilateral negotiation if unfavorable trend emerges. Benefit from the dispute mechanism as coordination: legitimizes their resource claims through legal procedure rather than military force. Extraction minimal \u2014 the constraint enables their preferred outcome while appearing neutral."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Tribunal for the Law of the Sea",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL TRIBUNAL (ROPE) \u2014 Institutional beneficiary. Dispute volume sustains tribunal budget and institutional relevance. Experiences mechanism as pure coordination \u2014 dispute processing is the tribunal's function. High arbitrage: can redirect non-payment or non-compliance cases to other forums, can adjust interpretations to maintain institutional authority."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Ocean Commons / Environmental Advocates",
+      "comment": "PERSPECTIVE 5: OCEAN COMMONS (PITON) \u2014 The dispute mechanism performs environmental representation while lacking actual enforcement power. Environmental impact assessments are written into proceedings but rarely bind outcomes. Theater ratio is high \u2014 extensive ecological documentation is generated, but final allocation decisions typically favor established fisheries and resource extraction over conservation. Mechanism persists through international norm adherence despite low functional protection of ocean resources."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regional Coalitions / NGO Networks",
+      "comment": "PERSPECTIVE 6: REGIONAL COALITIONS (SCAFFOLD) \u2014 Organized entities working to build capacity (legal training, technical expertise) to enable smaller states to participate effectively in dispute resolution. See the mechanism as temporary coordination failure solvable by capacity building. Sunset rationale: as legal capacity and technical expertise distribute more broadly (through NGO networks, regional organizations), smaller states' constraint loosens and the extractive asymmetry declines."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational view, UNCLOS dispute resolution genuinely coordinates maritime access without overt warfare (the coordination function is real \u2014 prevents resource conflicts from becoming military conflicts). Yet the mechanism extracts disproportionately from weaker states through litigation costs and expertise asymmetry. Effective extraction increases with power inequality. Theater ratio reflects that procedure appears neutral while outcomes track wealth and naval capacity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "litigation_cost_barrier_measurement",
+      "question": "What threshold of litigation cost distinguishes fair procedural burden from extractive barrier?",
+      "resolution_mechanism": "Comparative analysis of case success rates, settlement patterns, and tribunal outcomes correlated with litigant GDP and maritime resource value; longitudinal tracking of participation by nation income level",
+      "impact": "If barrier is systematic: constraint is snare for poorest nations, tangled rope for moderate nations. If threshold is merely procedurally uniform: constraint is rope for all participants (disputes are genuinely arbitrated).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Threshold distinguishing procedural cost from extractive barrier"
+    },
+    {
+      "id": "environmental_enforcement_power",
+      "question": "Do environmental impact findings in UNCLOS disputes actually constrain resource allocation outcomes, or are they performed documentation?",
+      "resolution_mechanism": "Longitudinal analysis of tribunal rulings; correlation between environmental impact assessments and allocation decisions; comparison of stated environmental protections vs actual enforcement",
+      "impact": "If findings constrain outcomes: ocean commons is beneficiary (rope perspective valid). If purely performative: ocean commons is victim (piton perspective confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether environmental findings constrain allocation outcomes"
+    },
+    {
+      "id": "capacity_building_sunset_timeline",
+      "question": "At what capacity threshold would the litigation cost barrier cease to function as extraction mechanism?",
+      "resolution_mechanism": "Simulation of distributed legal capacity; tracking of NGO training networks and regional legal expertise; correlation of capacity increases with litigation cost ratios; empirical test of whether capability parity reduces outcome gaps",
+      "impact": "If achievable < 20 years: scaffold sunset is structural. If > 50 years: sunset is aspirational, not real constraint property.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for capacity building to eliminate extraction via litigation cost"
+    },
+    {
+      "id": "exit_option_reality",
+      "question": "For small island states, is bilateral negotiation a realistic exit from UNCLOS dispute resolution, or is it structurally unavailable?",
+      "resolution_mechanism": "Case analysis of bilateral negotiations vs tribunal cases; outcome comparison; tracking of power imbalance in bilateral vs multilateral dispute resolution",
+      "impact": "If bilateral negotiation is unavailable: exit_options is 'trapped' (not 'constrained'). If available but disadvantageous: trapped is correct.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether small states have realistic exit to bilateral negotiation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 1982,
+    "end": 2012
+  },
+  "commentary": {
+    "narrative_context": "The United Nations Convention on the Law of the Sea (UNCLOS) established an international dispute resolution mechanism to arbitrate maritime boundary disputes, resource allocation conflicts, and maritime rights claims without recourse to military force. The mechanism appears neutral \u2014 a formal procedure applying established law. However, the dispute resolution process structurally extracts from weaker states through litigation costs, technical expertise requirements, and procedural complexity that favor well-resourced nations. Small island states and developing coastal nations are trapped within UNCLOS (cannot exit dependence on ocean access and international maritime law) yet cannot afford effective participation in disputes. Wealthy maritime nations can extend litigation, hire specialized counsel, and exit to bilateral negotiation if outcomes trend unfavorably. The mechanism coordinates by preventing resource conflicts from escalating to military confrontation, yet distributes outcomes asymmetrically. Theater ratio has increased over the interval (0.42 to 0.58) as environmental impact documentation has become more elaborate while enforcement of environmental protections has remained weak, reflecting Goodhart drift where procedural complexity substitutes for actual constraint.",
+    "key_agents": [
+      "Small Island States: Primary victims (powerless/trapped) \u2014 existential dependence on ocean access; cannot afford litigation; subject to tribunal outcomes without meaningful voice",
+      "Developing Coastal Nations: Secondary victims (moderate/constrained) \u2014 face significant litigation costs; benefit somewhat from tribunal protection against unilateral appropriation; constrained by resource and expertise gaps",
+      "Wealthy Maritime Nations: Primary beneficiaries (powerful/arbitrage) \u2014 can afford extended litigation; can exit to bilateral negotiation; benefit from legal legitimization of resource claims",
+      "International Tribunal for the Law of the Sea: Institutional beneficiary (institutional/arbitrage) \u2014 case volume sustains institutional relevance and budget; can adjust interpretations to maintain authority",
+      "Ocean Commons / Environmental Advocates: Victims (organized/constrained) \u2014 environmental impact documentation is theater; enforcement of environmental protections is minimal",
+      "Regional Coalitions / NGO Networks: Reform agents (organized/constrained) \u2014 building capacity to reduce extraction asymmetry; sunset logic through distributed legal expertise",
+      "Analytical Observer: Systemic view (analytical/analytical) \u2014 sees coordination function (prevents warfare) and extraction mechanism (cost asymmetry) as dual features"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The dispute mechanism extracts from weaker states through litigation costs, technical expertise barriers, and procedural complexity. However, extraction is not maximal because the mechanism does provide genuine coordination value \u2014 it prevents maritime resource conflicts from escalating to military confrontation and offers some protection against unilateral appropriation. Wealthy nations benefit from legitimization of their claims; developing nations benefit from constraint on wealthy nations' unilateral action, but asymmetrically. Suppression (0.65): Moderate-high. Financial barriers to litigation (specialized counsel, extended proceedings, technical expert witnesses) are substantial. Procedural complexity favors technically sophisticated participants. Power asymmetry in negotiating strength within formal procedures is significant. However, suppression is not total because UNCLOS provides a formal procedure with stated neutrality and some smaller states do successfully litigate. Theater ratio (0.58): Moderate. Environmental impact assessments, scientific documentation, and procedural formality create performative elements. However, the mechanism also produces genuine legal outcomes affecting resource allocation. The theater has increased over the measurement interval as environmental documentation requirements have expanded while actual environmental enforcement has remained weak (Goodhart drift: procedure substitutes for outcome).",
+    "perspectival_gap": "The constraint exhibits maximum perspectival gap between beneficiaries and victims. Wealthy maritime nations (powerful/arbitrage) see pure coordination (Rope) \u2014 the mechanism enables their preferred outcomes through legal legitimacy rather than military force. Small island states (powerless/trapped) see pure extraction (Snare) \u2014 forced participation in a procedure they cannot afford and cannot exit. The ITLOS (institutional/arbitrage) sees its own function as coordination (Rope) \u2014 case processing sustains institutional relevance. The analytical observer sees the true structure: genuine coordination coupled with asymmetric extraction (Tangled Rope). The perspectival gap between the beneficiary's rope and the victim's snare reveals the mechanism's dual function. The piton perspective (ocean commons) notes that environmental documentation is elaborate and performative while actual environmental protection is weak \u2014 the mechanism has shifted from substantive protection toward procedural theater.",
+    "directionality_logic": "Directionality values (d) are derived from structural position within the dispute mechanism. Wealthy maritime nations (beneficiaries with arbitrage options) derive d \u2248 0.15: they benefit from the mechanism's legitimacy while maintaining exit options to bilateral negotiation. This produces negative effective extraction \u2014 the mechanism subsidizes their preferred outcomes. Small island states (victims trapped in UNCLOS dependency) derive d \u2248 0.95: they cannot exit, bear full cost of litigation participation, and experience outcomes as imposed. This produces high effective extraction. Developing coastal nations (victims but with some constrained options) derive d \u2248 0.70: they cannot afford extended litigation but benefit somewhat from procedural protection. The ITLOS (institutional beneficiary) derives d \u2248 0.05: case volume sustains institutional function; the mechanism is their core activity. The analytical observer uses canonical d \u2248 0.73 (analytical power atom) to capture civilizational-scale assessment: the mechanism genuinely coordinates maritime peace while extracting from weaker states.",
+    "mandatrophy_analysis": "RESOLVED: The constraint is structurally Tangled Rope. It possesses both genuine coordination function (prevents maritime conflicts from becoming military confrontations) and asymmetric extraction (weaker states bear disproportionate litigation costs relative to benefits). The mandatrophy is resolved by recognizing that the beneficiary perspectives (wealthy nations, ITLOS) genuinely experience the mechanism as pure coordination (Rope) because they benefit and have exit options. The victim perspectives (small island states, developing nations) genuinely experience the mechanism as extraction (Snare or Tangled Rope at best) because costs are asymmetric and exit is unavailable. The analytical observer's Tangled Rope classification integrates both realities: the constraint coordinated action while extracting from weaker participants. The mechanism appears neutral (theater ratio 0.58) but produces outcomes correlated with power and wealth rather than legal merit alone."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "maritime_boundary_disputes",
+      "ocean_resource_allocation",
+      "small_state_maritime_vulnerability"
+    ],
+    "dual_formulation_note": "UNCLOS dispute resolution is an institutional mechanism that coordinates maritime access while extracting from weaker states through procedural barriers. This constraint is upstream of specific maritime disputes (boundary conflicts, resource allocation) which it shapes through the litigation cost asymmetry. The mechanism's theater ratio (0.58) reflects that environmental documentation has become increasingly elaborate while enforcement power has stagnated \u2014 a Goodhart drift where process complexity substitutes for substantive constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    }
+  ]
+}

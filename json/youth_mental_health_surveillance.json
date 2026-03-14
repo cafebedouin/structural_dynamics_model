@@ -1,0 +1,220 @@
+{
+  "header": {
+    "constraint_id": "youth_mental_health_surveillance",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ymhs"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Youth Mental Health Surveillance Systems",
+    "topic_domain": "social/health/technology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mental_health_providers",
+      "institutional_monitors",
+      "data_aggregators"
+    ],
+    "victims": [
+      "surveilled_youth",
+      "peer_trust_networks",
+      "developmental_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Surveilled Youth",
+      "comment": "PERSPECTIVE 1: SURVEILLED YOUTH (SNARE) \u2014 Minors cannot legally or practically exit surveillance systems embedded in schools, apps, and family monitoring. Trapped by age, legal status, and geographic dependence on caregivers. Maximum extraction: behavioral conformity extraction (self-censorship), psychological overhead (knowing they are watched), and data extraction (psychological profiles sold or retained). No meaningful exit option."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Peer Trust Network",
+      "comment": "PERSPECTIVE 2: PEER TRUST NETWORK (TANGLED ROPE) \u2014 Peers benefit from genuine coordination function (detecting serious suicide risk, substance abuse networks) but bear extraction costs (loss of privacy in friendships, social control through reporting obligations, chilling effect on peer support). Constrained exit: can partially opt out by avoiding institutional channels but cannot escape social pressure to report concerning behavior. Mixed coordination-extraction dynamic."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Mental Health Provider System",
+      "comment": "PERSPECTIVE 3: MENTAL HEALTH PROVIDER SYSTEM (ROPE) \u2014 Genuine coordination benefit: surveillance systems enable early identification of at-risk youth, data consolidation improves diagnostic accuracy, treatment coordination across schools and clinics. Providers experience the constraint as net-beneficial coordination. Arbitrage exit: can switch between surveillance platforms, adapt protocols, or disengage from specific systems if alternatives emerge. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The School Institution",
+      "comment": "PERSPECTIVE 4: SCHOOL INSTITUTION (TANGLED ROPE) \u2014 Schools coordinate genuine mental health support (early intervention, peer counseling training) but also extract administrative control, liability management (documenting that risk was identified), and student behavioral conformity. Constrained exit: schools cannot fully exit without legal/liability exposure; they must maintain some surveillance to meet duty-of-care obligations. Active enforcement of reporting requirements. Mixed function."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Youth Privacy Movement",
+      "comment": "PERSPECTIVE 5: YOUTH PRIVACY MOVEMENT (SCAFFOLD) \u2014 Organized agents (privacy advocates, digital rights organizations, youth networks) see surveillance as a temporary coordination failure being solved by alternative architectures: peer-led mental health support without institutional reporting, encrypted messaging, federated data systems with individual control. Mobile exit: these agents can build competing systems that reduce surveillance extraction. Sunset logic: privacy-respecting alternatives (e.g., consent-based data access, individual data ownership, peer-led crisis networks) create pathway to diminish the extractive constraint. High suppression tolerance acceptable because sunset is real."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Clinical Risk Assessment Ritual",
+      "comment": "PERSPECTIVE 6: CLINICAL RISK ASSESSMENT RITUAL (PITON) \u2014 The actuarial risk assessment tools (PHQ-9 screening, Columbia-Suicide Severity Rating Scale, algorithmic flagging) have largely become performative: they document that risk was assessed (liability theater) rather than meaningfully predicting which youth will attempt suicide. Predictive validity is weak; false-positive rates are high. The surveillance ritual persists through institutional inertia and liability fear, not because it works. Theater ratio high: the assessment machinery is maintained despite degraded function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Data Aggregation Platform",
+      "comment": "PERSPECTIVE 7: DATA AGGREGATION PLATFORM (TANGLED ROPE) \u2014 Tech platforms coordinating mental health data consolidation (school systems, therapy apps, health records) enjoy genuine coordination benefits but also extract significant value: behavioral data for algorithmic profiling, psychological profiles sold to advertisers/educators, surveillance moats that lock in institutions. Arbitrage exit: platforms can switch data aggregators, negotiate terms, or migrate to alternatives. High extractiveness but with agency \u2014 net beneficiary position."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalized View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURALIZED VIEW (MOUNTAIN) \u2014 From a civilizational perspective, the framing naturalizes surveillance as inherent to responsible caregiving: 'parents have always monitored youth behavior; surveillance is just the modern form.' The constraint appears immutable \u2014 unavoidable cost of duty of care in a dangerous world. However, the structural data contradicts mountain classification. The engine identifies this as a false summit: the naturalization disguises contingent institutional arrangements (liability law, therapeutic models centered on risk, digital infrastructure) as inevitable features of how care works."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "genuine_harm_prevention_efficacy",
+      "question": "Do youth mental health surveillance systems actually prevent suicide attempts and self-harm, or do they primarily document risk while generating false positives and iatrogenic harms?",
+      "resolution_mechanism": "RCT or natural experiment comparing surveilled vs unsurveilled cohorts on suicide attempt/self-harm rates; adjustment for confounders (access to treatment, socioeconomic status). Analysis of false-positive rates and downstream consequences of unnecessary intervention.",
+      "impact": "If efficacy > 15% reduction in attempts: Rope/Scaffold from health perspectives gains validation. If efficacy < 5% or shows negative effects: Snare/Piton classification strengthened; constraints shift toward pure extraction. If effects conditional (works for high-risk, harms low-risk): decompose into separate constraints.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether surveillance prevents harm or primarily generates false positives"
+    },
+    {
+      "id": "peer_support_chilling_effect",
+      "question": "Does knowledge of institutional surveillance reduce peer-to-peer mental health support (friends talking friends through crises) by creating reporting obligations that chill trust?",
+      "resolution_mechanism": "Longitudinal surveys of youth trust in peer relationships before/after surveillance implementation; analysis of peer support help-seeking behavior changes; qualitative interviews on how surveillance affects friendship disclosure.",
+      "impact": "If chilling effect > 25%: Snare perspective strengthened; extraction mechanism is destruction of informal support networks. If chilling effect < 5%: Rope perspective gains traction; coordination benefits outweigh suppression. If heterogeneous (some youth increase disclosure, some decrease): identity_locked mechanism; some youth internalize surveillance as protective.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether surveillance reduces informal peer mental health support"
+    },
+    {
+      "id": "developmental_autonomy_cost",
+      "question": "What is the long-term impact of continuous surveillance on youth developmental autonomy \u2014 the capacity to make decisions, take risks, and form independent identity?",
+      "resolution_mechanism": "Longitudinal comparison of psychological autonomy, locus of control, and identity development in surveilled vs unsurveilled cohorts into adulthood. Analysis of decision-making patterns, risk assessment behavior, and vulnerability to anxiety/obsessive behaviors.",
+      "impact": "If autonomy costs are severe (persistent external locus of control, decision paralysis, hypervigilance to perceived risks): Snare classification strengthened; extraction includes psychological development. If negligible: Rope classification gains validation. If heterogeneous by identity-locked group (some internalize surveillance as protective, some as oppressive): requires decomposition and identity_locked exit analysis.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Long-term impact of surveillance on developmental autonomy"
+    },
+    {
+      "id": "alternative_support_architecture_viability",
+      "question": "Do peer-led mental health models (crisis text lines, peer support groups, encrypted peer networks) achieve comparable early-detection and support outcomes without institutional surveillance?",
+      "resolution_mechanism": "Comparative analysis of outcomes (access rates, help-seeking behavior, emotional support quality, crisis prevention) between surveillance-based vs peer-led systems. Barrier analysis: what prevents peer-led models from scaling? Investment/policy constraints vs structural limitations?",
+      "impact": "If peer-led models achieve parity: Scaffold perspective confirmed; sunset is technically feasible. If peer-led underperform: constraint may be necessary. If peer-led perform better on some metrics (trust, autonomy) but worse on others (early detection): decompose into multiple constraints per domain.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether peer-led support models provide comparable mental health outcomes"
+    },
+    {
+      "id": "data_retention_purpose_creep",
+      "question": "Are youth mental health surveillance data retained primarily for clinical purposes or are they increasingly used for behavioral control, academic/employment screening, or risk-profiling beyond the original clinical scope?",
+      "resolution_mechanism": "Data access audit: track how mental health surveillance data are used across time; identify cases of scope expansion (clinical data used for discipline, academic placement, college admission screening). Policy analysis of data governance changes.",
+      "impact": "If scope creep is documented: Snare/Tangled Rope perspectives strengthened; extraction mechanism expands from health coordination to behavioral control. If data retention is strictly clinical: Rope/Scaffold perspectives gain credibility. If purpose creep is accelerating: urgency of sunset mechanisms increases.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether youth mental health surveillance data are repurposed beyond clinical use"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Youth mental health surveillance systems create a structural tension between the institutional goal of early risk identification and the developmental need for youth autonomy, peer trust, and privacy. Schools, health systems, and tech platforms have implemented increasingly comprehensive monitoring through questionnaires, behavioral tracking, app-based mental health assessment, and algorithmic flagging. The constraint exhibits a mixed coordination-extraction dynamic: genuine mental health coordination function (identifying at-risk youth, enabling peer support training, consolidating fragmented health data) coexists with significant extraction mechanisms (behavioral conformity pressure, data collection and repurposing, suppression of peer-to-peer support networks, psychological overhead of being monitored). The surveillance apparatus is presented as scientifically necessary (actuarial risk assessment) and legally mandatory (duty of care, mandated reporting), but the empirical validity of risk prediction tools is weak and false-positive rates are high. The constraint's theater ratio (0.55) reflects that while coordination function is genuine, a substantial portion of the surveillance machinery is performative \u2014 documenting risk rather than meaningfully preventing harm. The extractiveness trajectory (0.35 \u2192 0.58 over 6 years) shows accumulation as platforms expand data retention, institutions tighten reporting requirements, and algorithms become more intrusive.",
+    "key_agents": [
+      "Surveilled Youth: Primary victim (powerless/trapped) \u2014 cannot exit surveillance; experience behavioral conformity pressure, psychological overhead, loss of developmentally necessary autonomy",
+      "Peer Trust Networks: Secondary victim (moderate/constrained) \u2014 benefit from collective mental health awareness but face chilling effect on honest peer support due to reporting obligations",
+      "Mental Health Provider System: Primary beneficiary (institutional/arbitrage) \u2014 gains data consolidation, early identification capabilities, treatment coordination",
+      "School Institution: Mixed actor (institutional/constrained) \u2014 provides genuine mental health support but also extracts behavioral control and liability documentation",
+      "Data Aggregation Platform: Secondary beneficiary (powerful/arbitrage) \u2014 consolidates youth psychological data; can extract value through profiling, algorithmic targeting, behavioral manipulation",
+      "Youth Privacy Movement: Organized alternative (organized/mobile) \u2014 building peer-led support systems, privacy-respecting architectures; represents exit pathway",
+      "Clinical Risk Assessment Ritual: Institutional performance (institutional/arbitrage) \u2014 maintains actuarial risk assessment tools; increasingly divorced from predictive utility; persists through liability theater",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as inherent features of responsible caregiving"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The surveillance apparatus extracts behavioral conformity (youth self-censor to avoid detection), psychological overhead (cost of knowing one is watched), and valuable data (psychological profiles, behavioral patterns, vulnerability indicators). However, this is not maximal extraction because mental health providers genuinely coordinate improved outcomes, and some youth benefit from early intervention. The extractiveness trajectory rises from 0.35 to 0.58 as data aggregation platforms expand beyond clinical use and institutional scope creep occurs (behavioral control through mental health data). Suppression (0.68): High. Significant barriers to exit include legal age requirements, mandatory reporting obligations, school-embedded surveillance (unavoidable for students), app-based monitoring that family members control, and the framing of surveillance as 'care.' Youth cannot organize collective resistance without facing escalated intervention. Suppression operates through both structural barriers (legal/institutional) and internalization (youth internalize surveillance as protective, become identity_locked). Theater ratio (0.55): Moderate-high. Clinical risk assessment tools (PHQ-9, Columbia Scale, algorithmic flagging) are the performative core. These tools have weak predictive validity for suicide attempts (<10% sensitivity for actual attempts), generate high false-positive rates, and function primarily to document that risk was assessed (institutional liability theater) rather than to meaningfully prevent harm. However, the broader coordination function (peer mental health literacy, early access to treatment, data consolidation) is genuine, not purely performative.",
+    "perspectival_gap": "The gap between the surveilled youth's Snare perception and the mental health provider's Rope perception is maximal. The youth see continuous extraction and no exit; the provider sees coordination benefit and multiple institutional alternatives. This gap reveals that the constraint is experienced as different phenomena depending on structural position: for the provider, it is a beneficial coordination tool; for the youth, it is a control mechanism. The school's Tangled Rope perception splits the difference \u2014 genuine coordination function (mental health support) yoked to extraction (behavior management, liability documentation). The youth privacy movement's Scaffold perception introduces an exit pathway that other perspectives cannot see \u2014 peer-led architectures that bypass institutional surveillance entirely. This perspectival family (Snare\u2192Tangled Rope\u2192Rope\u2192Scaffold) shows the constraint's lifecycle: it begins as pure extraction (snare for early surveillance deployments), mixes with coordination as mental health functions integrate (tangled rope), appears beneficial to providers (rope), and faces organized alternatives seeking to sunset it (scaffold).",
+    "directionality_logic": "The pipeline derives directionality from beneficiary/victim declarations and exit options. Surveilled youth are declared victims with trapped exit, producing d \u2248 0.95 (full target). Mental health providers are declared beneficiaries with arbitrage exit, producing d \u2248 0.15 (near-full beneficiary). The peer network is both \u2014 they report peers (beneficiary position relative to risk management) but lose privacy in friendships (victim position relative to peer trust). This dual declaration produces d \u2248 0.60. Schools are both \u2014 they enforce surveillance (beneficiary) but are constrained by liability law (victim), producing d \u2248 0.50. The data platform is a beneficiary (aggregation value) with arbitrage exit (can switch platforms), producing d \u2248 0.25. These d values, multiplied by f(d) from the sigmoid and scaled by spatial scope \u03c3(S=national=1.0), yield the effective extractiveness \u03c7 each agent perceives. The youth experience high \u03c7 (d \u2248 0.95 \u2192 f(d) \u2248 1.42 \u2192 \u03c7 \u2248 0.82 after scope scaling), confirming their Snare perception. Providers experience low \u03c7 (d \u2248 0.15 \u2192 f(d) \u2248 -0.01 \u2192 \u03c7 \u2248 -0.01), confirming their Rope perception. No directionality overrides are needed; the structural derivation produces perspectival divergence naturally.",
+    "mandatrophy_analysis": "The Tangled Rope classification at moderate agent power (peer networks, schools) and powerful agent power (data platforms) resolves the mandatrophy by acknowledging genuine coordination alongside genuine extraction. The constraint cannot be dismissed as pure coordination (Rope) because clear victims (youth, peer trust networks) face suppression and extraction. It cannot be labeled pure extraction (Snare) because mental health providers and peers genuinely benefit from early risk identification and support coordination. The classification shows that hybrid mechanisms \u2014 where beneficiaries organize surveillance that targets victims but genuinely prevents some harms \u2014 are structurally possible and empirically common in health and safety domains. The Scaffold perspective (organized privacy movements with exit pathways) prevents the classification from becoming a tragic inevitability: technological and architectural alternatives (peer-led support, privacy-preserving data systems, consent-based monitoring) represent genuine sunset possibilities if institutional will materializes. The Piton classification of the risk assessment ritual warns against assuming that surveillance machinery that feels legitimate (clinical tools, assessment protocols) is actually functional. The false summit (mountain from the analytical perspective) prevents naturalization of contingent institutional arrangements as immutable laws of care."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_mental_health_profiling",
+      "school_discipline_surveillance",
+      "family_monitoring_tech"
+    ],
+    "dual_formulation_note": "Youth mental health surveillance decomposes into three distinct constraints along functional lines: (1) school-based screening and reporting (\u03b5\u22480.45, local scope, focuses on identification), (2) therapeutic app data collection and algorithmic risk profiling (\u03b5\u22480.62, global scope, focuses on commercial extraction), (3) family monitoring technology (\u03b5\u22480.52, household scope, focuses on parental control). This constraint story represents the aggregate system. See network.affects_constraints for decomposed stories."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.6
+    }
+  ]
+}

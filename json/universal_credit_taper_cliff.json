@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "universal_credit_taper_cliff",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "uctc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Universal Credit Taper Cliff: Work Incentive Vs. Welfare Extraction",
+    "topic_domain": "economic_policy/social_welfare",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "treasury_fiscal_control",
+      "high_earners_relative_safety"
+    ],
+    "victims": [
+      "low_income_workers",
+      "benefit_claimants_in_taper_zone"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Trapped Low-Income Worker",
+      "comment": "PERSPECTIVE 1: TRAPPED LOW-INCOME WORKER (SNARE) \u2014 Faces effective marginal tax rate of 65% in the taper zone (standard taper rate). Each additional pound earned results in 65 pence deducted from benefits. No meaningful exit: childcare, transport, and skill constraints prevent jumping above the taper threshold. Suppression is structural and economic \u2014 the worker is trapped between benefit dependency and unaffordable cost-of-living if employment increases. Pure extraction with minimal coordination function. Maximum experienced chi."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Constrained Partial Worker",
+      "comment": "PERSPECTIVE 2: CONSTRAINED PARTIAL WORKER (TANGLED ROPE) \u2014 Some benefits from part-time work coordination (income + benefits combined provides subsistence). But asymmetric extraction: the taper mechanism extracts earnings as benefits phase out. Exit is possible (take full-time work above taper threshold, or accept zero benefits), but at high cost (transport, childcare arrangements, loss of safety net during transition). Genuine coordination (benefits + work = survival) but with embedded extraction (taper regime)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Treasury / Fiscal Authority",
+      "comment": "PERSPECTIVE 3: TREASURY / FISCAL AUTHORITY (ROPE) \u2014 Experiences the taper cliff as a coordination mechanism: benefits administration + work incentives = poverty control without unlimited spending. The 65% taper is a calibrated coordination tool. Treasury benefits from: (a) reduced gross welfare payouts, (b) maintained work incentive (though weakened), (c) fiscal constraint satisfaction. Net beneficiary. Arbitrage exit available (change the taper rate or abolish UC). Effective extraction runs toward this agent \u2014 benefits extraction from workers toward state coffers."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Welfare Reform Coalition",
+      "comment": "PERSPECTIVE 4: WELFARE REFORM COALITION (TANGLED ROPE) \u2014 Organized actors (labor unions, poverty advocacy groups) see genuine coordination function (unified welfare system replacing means-tested fragmentation) alongside extraction (taper cliff creates perverse work disincentives). Coalition has agency (lobbying power, alternative proposal capacity) but faces institutional constraints. Advocates point to 20% phase-in rates in other systems (Germany, Nordic models) as evidence that coordination doesn't require 65% extraction. Constrained but not powerless."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Welfare Bureaucracy",
+      "comment": "PERSPECTIVE 5: WELFARE BUREAUCRACY (PITON) \u2014 Universal Credit administration maintains substantial performative overhead: complex taper calculations, frequent reassessment cycles, compliance monitoring, sanctions regime. Much of the administrative apparatus persists from legacy means-tested systems (Tax Credits). Theater ratio reflects that enforcement and verification costs are high relative to actual welfare distribution. Original function (coordinate welfare access) has been substantially replaced by function (enforce work incentive compliance). Piton: degraded coordination mechanism maintained through institutional inertia."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The High-Income Non-Recipient",
+      "comment": "PERSPECTIVE 6: HIGH-INCOME NON-RECIPIENT (SCAFFOLD) \u2014 Well-above taper threshold; experiences UC as temporary coordination infrastructure for poverty management. Marginal tax rate (20%) is substantially lower than taper zone rate (65%). Receives no direct extraction because income is above UC eligibility. Sees welfare system as time-limited problem to be solved (reduce dependency, encourage work). This perspective is *temporary support* relative to powerless agent \u2014 scaffold classification reflects that UC is conceived as transitional poverty management, not permanent extraction from the high-income perspective."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Integrating all positions: UC clearly coordinates welfare access and work incentives (coordination function is real, \u03b5 baseline ~0.30 for pure coordination). But the 65% taper cliff generates asymmetric extraction: the mechanism extracts earnings from workers to reduce fiscal burden on the state. This is not a flaw in coordination \u2014 it's a designed feature. The taper IS the extraction lever. Effective \u03b5 \u2248 0.58 when empirically measured across affected populations. Classification: Tangled Rope (coordination + designed extraction hybrid)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "behavioral_response_magnitude",
+      "question": "What is the empirical elasticity of labor supply response to the 65% taper rate? Does the suppression of work behavior actually reduce overall employment, or do most workers continue working at constrained hours?",
+      "resolution_mechanism": "Randomized controlled trial comparing labor supply in 65% taper regime vs. 20% phase-in regimes (Germany, Nordic models). Administrative data on hours worked pre/post taper rate changes (e.g., 2024 reduction from 63% to 55%).",
+      "impact": "If elasticity is high (workers exit labor force): extraction mechanism is working as designed, and classification remains Tangled Rope. If elasticity is low (workers tolerate suppression): behavior is not actually suppressed, and suppression metric should be downgraded, potentially reclassifying as Rope. This determines whether suppression is structural or performative.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical labor supply elasticity response to taper rate"
+    },
+    {
+      "id": "coordination_function_necessity",
+      "question": "Is the 65% taper rate necessary for the coordination function (unified benefits administration + work incentive maintenance), or is it an extractive layer added on top of functioning coordination?",
+      "resolution_mechanism": "Comparative policy analysis: do systems with lower taper rates (15-25%) achieve similar poverty reduction and work incentive maintenance? Evidence: Germany (12% withdrawal rate), Switzerland (15%), Nordic countries (15-20% typical). If lower rates work, the 65% UK rate is extraction, not coordination cost.",
+      "impact": "If lower rates are sufficient: extraction is 0.30+ \u03b5 points of pure rent-seeking, potentially reclassifying UK UC as Snare rather than Tangled Rope. If lower rates fail: 65% is coordination floor, and classification as Tangled Rope is correct.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether lower taper rates maintain coordination function"
+    },
+    {
+      "id": "suppression_internalization",
+      "question": "Is the suppression of work behavior structural (external barriers: childcare, transport, skills gap) or internalized (cognitive capture: recipients believe they 'should not' work, or deserve poverty, or are incapable)?",
+      "resolution_mechanism": "Post-exit analysis: recipients who move above taper threshold (either through increased earnings or benefits removal) \u2014 do they maintain reduced work attachment, or do hours recover? If recovery occurs, suppression was structural; if it persists, suppression is partially internalized.",
+      "impact": "If internalized: effective suppression is higher than the metric (0.65) suggests \u2014 the constraint carries forward even after mechanism removal. If structural: suppression is accurate, and removal of taper would yield immediate work behavior recovery.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether suppression of work behavior is structural or internalized"
+    },
+    {
+      "id": "false_summit_natural_law",
+      "question": "Is the 65% taper rate presented as a natural law of welfare economics ('incentive compatibility requires high phase-in'; 'work incentives require high marginal rates') when it is actually a contingent policy choice?",
+      "resolution_mechanism": "Institutional history: trace rhetoric in policy documents and academic defense of UC design. Compare to historical policy rationales (similar language used to defend other welfare regimes that are now recognized as extractive). Evidence: if other systems achieve similar poverty control with 20% taper rates, the 65% 'natural law' framing is false naturalization.",
+      "impact": "If confirmed: the mountain perspective (welfare taper is immutable physics of incentive compatibility) is a false summit, revealing that the constraint's persistence relies on naturalizing contingent choices.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether taper rate is naturalized as immutable law"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The Universal Credit taper cliff is a structural mechanism in UK welfare policy where benefits phase out at 65 pence per pound of additional earnings (as of 2024; previously 63%). This creates a de facto marginal tax rate of 65% for workers in the taper zone \u2014 substantially higher than the standard income tax rate of 20%. The constraint operates as a hybrid: it coordinates unified benefit administration and work incentive maintenance (genuine coordination function) while simultaneously extracting earnings from low-income workers through the aggressive phase-out rate (extraction mechanism). The taper cliff is not incidental to UC \u2014 it is a designed feature intended to balance fiscal control with work incentives. This makes it a canonical Tangled Rope: coordination + designed extraction. The constraint's theater ratio (0.35) is low because the mechanism is transparent (no performative obscuring), but the extractiveness (0.58) is elevated relative to pure coordination systems (e.g., Nordic welfare models with 15-20% taper rates) because the UK rate appears to extract beyond what coordination requires.",
+    "key_agents": [
+      "Low-Income Workers in Taper Zone: Primary victims (powerless/trapped) \u2014 earn incrementally but lose 65 pence per pound to benefit phase-out; constrained by childcare, transport, skills barriers; no realistic exit from taper zone without major life restructuring",
+      "Treasury/Fiscal Authority: Primary beneficiary (institutional/arbitrage) \u2014 captures reduced welfare spending and maintains fiscal control narrative; can change taper rate unilaterally",
+      "Welfare Reform Coalition: Organized agents (organized/constrained) \u2014 advocacy groups, unions push for lower taper rates; have institutional voice but limited veto power over policy",
+      "Welfare Bureaucracy: Institutional maintainer (institutional/arbitrage) \u2014 administers taper calculations, reassessments, sanctions; maintains performative compliance infrastructure",
+      "High-Income Non-Recipients: Structural beneficiaries (powerful/mobile) \u2014 experience UC as temporary poverty management infrastructure, receive no extraction because above eligibility threshold",
+      "Analytical Observer: Civilizational position (analytical/analytical) \u2014 integrates all perspectives; detects both genuine coordination and designed extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The UC system coordinates benefits + work, which is genuine coordination (\u03b5 baseline ~0.30). But the 65% taper rate adds extraction beyond what coordination requires. Comparative evidence (Germany 12%, Nordic 15-20%) suggests coordination is achievable at 20-30% \u03b5. The UK's 58% \u03b5 represents 0.28+ \u03b5 points of pure extraction relative to lower-taper-rate systems. This extraction is deliberate \u2014 calibrated by Treasury to reduce fiscal burden while nominally maintaining work incentives. Suppression (0.65): High. Workers in the taper zone face multiple barriers: childcare costs, transport, skills gaps, and crucially, the disincentive of earning and losing 65 pence per pound. Suppression is structural (external barriers) + behavioral (work disincentive). Theater ratio (0.35): Low. UC administration is relatively transparent \u2014 the taper rate is explicit policy, not hidden through administrative opacity. Complex bureaucracy exists (reassessments, sanctions, compliance monitoring), but the extraction mechanism itself is legible. Low theater reflects that this is not a hidden or obscured constraint \u2014 it is explicit policy defended on work-incentive grounds.",
+    "perspectival_gap": "Trapped workers and Treasury have opposite experienced extractiveness. The trapped worker's snare classification (maximum chi) reflects that they perceive the 65% taper as inescapable economic punishment for earning. The Treasury's rope classification reflects that they perceive the taper as a calibrated coordination mechanism. Both are partially correct: the coordination is real (unified system is better than fragmented), but so is the extraction (65% is higher than comparative systems require). The Tangled Rope classification from the analytical perspective resolves this gap by accepting both as structurally real.",
+    "directionality_logic": "Directionality (d) for each perspective derives from the agent's structural position. Trapped workers: high d (0.92+) \u2014 full victims, no exit options, experience maximum extraction via f(d). Treasury/institutional: low d (0.08-0.15) \u2014 beneficiary position with arbitrage exit, experiences negative effective extraction (extraction flows toward them). Organized reform coalition: moderate d (0.55) \u2014 victim of the constraint's design (advocating for change) but with some agency, experience moderate extraction. The analytical observer at institutional power with analytical exit: d \u2248 0.73 (observer position, structured asymmetry is visible). Directionality overrides not needed \u2014 derived d values accurately reflect structural relationships.",
+    "mandatrophy_analysis": "Mandatrophy resolution: This constraint demonstrates the distinction between coordination function and extraction mechanism. Pure Rope would be: unified benefits administration + work incentives without excessive phase-out (e.g., 20% taper like Germany). Pure Snare would be: extraction mechanism with no coordination function. UK UC is Tangled Rope because both exist. The 65% taper rate is *designed extraction* \u2014 not incidental overhead or enforcement cost, but an intentional fiscal lever. This distinguishes it from Rope (where extraction is minimal spillover) and from Snare (where coordination is minimal cover). The constraint resolves mandatrophy by showing that high \u03b5 and suppression are compatible with genuine coordination function when the extraction is designed rather than emergent. The false summit risk is whether policymakers/economists defend 65% as 'necessary for incentives' when comparative evidence suggests 20-25% would suffice \u2014 if so, the natural-law framing is false, and the constraint is contingent policy, not immutable."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.25
+  },
+  "network": {
+    "affects_constraints": [
+      "in_work_poverty_trap",
+      "childcare_cost_barrier",
+      "regional_wage_variation"
+    ],
+    "dual_formulation_note": "UC taper cliff is downstream of the broader welfare state restructuring (shift from means-tested Tax Credits to unified Universal Credit). Upstream constraint: welfare_consolidation_transition (\u03b5 ~0.35, Tangled Rope). The taper cliff represents extraction embedded within the coordination mechanism of UC itself. Separate from UC, lower-taper-rate systems (Germany resource_allocation_welfare, \u03b5 ~0.28, Rope) represent alternative coordination with less extraction."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ]
+}

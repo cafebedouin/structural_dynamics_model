@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "market_selection_efficiency",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mse"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Market Selection Efficiency and Coordination",
+    "topic_domain": "economics/market_structure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "capital_allocators",
+      "information_arbitrageurs"
+    ],
+    "victims": [
+      "non_information_advantaged_competitors",
+      "market_transparency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Non-Advantaged Competitor",
+      "comment": "PERSPECTIVE 1: NON-ADVANTAGED COMPETITOR (SNARE) \u2014 Trapped in asymmetric information environment. Cannot access real-time pricing signals, proprietary data, or algorithmic insights available to large capital allocators. Bears full extraction cost through persistent disadvantage in capital allocation and market timing. No meaningful exit \u2014 exit would mean leaving markets entirely."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Capital Allocator",
+      "comment": "PERSPECTIVE 2: CAPITAL ALLOCATOR (ROPE) \u2014 Benefits from information asymmetry and can arbitrage across markets. Experiences market selection as enabling coordination: price discovery and capital flow toward productive uses. Has arbitrage exit \u2014 can redeploy capital, adjust strategy, exploit pricing gaps. Net beneficiary with low suppression relative to position."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Retail Participant",
+      "comment": "PERSPECTIVE 3: RETAIL PARTICIPANT (TANGLED ROPE) \u2014 Experiences market selection as both coordination mechanism (price signals guide allocation decisions) and extraction mechanism (information lag and transaction costs consume returns). Constrained by limited capital, information access, and time \u2014 can exit retail markets but at cost of foregone participation. Mixed experience: some benefit, substantial extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Regulatory Framework",
+      "comment": "PERSPECTIVE 4: REGULATORY FRAMEWORK (PITON) \u2014 Market transparency regulations, disclosure requirements, and fair trading rules once enforced genuine market function. Now largely theatrical: high-frequency trading front-runs disclosed information, dark pools bypass transparency, regulatory arbitrage allows evasion. The framework persists through institutional inertia \u2014 regulators maintain the apparatus despite degraded function. Theater ratio high (0.65+) because compliance activity exceeds actual market integrity contribution."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Alternative Market Structure Coalition",
+      "comment": "PERSPECTIVE 5: ALTERNATIVE MARKET STRUCTURE COALITION (SCAFFOLD) \u2014 Decentralized finance, blockchain markets, direct peer-to-peer platforms represent temporary scaffolding that circumvents traditional market selection. These alternatives have genuine sunset clauses: they either mature into stable infrastructure (becoming rope or tangled rope themselves) or collapse when real-world constraints (custody, custody, regulatory pressure) make them unviable. Current extraction is suppressed by alternative pathway availability, but sunset is uncertain."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational perspective, market selection efficiency is an immutable consequence of dispersed knowledge: no agent can process all relevant information, so some information asymmetry is inherent to coordination via prices. Emergence of selection mechanisms is a law of economic organization. However, structural data reveals this naturalizes contingent institutional features \u2014 information access barriers are policy-constructed, not physical laws."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "information_asymmetry_scope",
+      "question": "What portion of observed market return differential is due to inherent information lags versus policy-constructed barriers to information access?",
+      "resolution_mechanism": "Comparative analysis of markets with different regulatory transparency regimes; measurement of return patterns before/after disclosure reforms; cross-jurisdiction correlation of information access costs with alpha capture",
+      "impact": "If inherent (>70%): mountain classification is supported, extraction is coordination cost. If policy-constructed (<30%): snare classification is supported, extraction is institutional choice. Intermediate cases reveal tangled rope with variable suppression.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Inherent vs policy-constructed information asymmetry in market selection"
+    },
+    {
+      "id": "alternative_allocation_efficiency",
+      "question": "Do alternative market structures (DeFi, direct peer matching, non-price-based allocation) achieve competitive capital allocation efficiency despite lower theater?",
+      "resolution_mechanism": "Comparison of capital allocation outcomes across market types; measurement of deadweight loss and misallocation rates; correlation between transparency level and allocation accuracy",
+      "impact": "If alternative structures equally efficient: current market selection is tangled rope with extractive overlay (suppression policy-driven). If alternative structures less efficient: current selection contains genuine coordination value beyond extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative allocation mechanisms achieve comparable efficiency"
+    },
+    {
+      "id": "information_access_threshold",
+      "question": "What level of information access threshold distinguishes effective market selection from insider trading?",
+      "resolution_mechanism": "Analysis of enforcement data; correlation between information access delay and trading advantage; examination of legal boundaries between arbitrage and manipulation",
+      "impact": "If threshold low (<100ms): most information arbitrage is legally sanctioned extraction. If threshold high (>10s): most advantage is legitimate faster execution. Threshold location determines whether suppression is inherent or constructed.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Information access threshold between arbitrage and manipulation"
+    },
+    {
+      "id": "market_selection_counterfactual",
+      "question": "In the absence of information-based selection, would alternative coordination mechanisms (planning, matching, randomization) produce superior capital allocation outcomes?",
+      "resolution_mechanism": "Theoretical analysis of allocation efficiency under different institutional arrangements; comparison with planned economies, mutual funds, and controlled matching experiments",
+      "impact": "If alternatives superior: market selection is snare naturalizing contingent choice. If market selection superior: constraint is genuine rope or tangled rope with necessary extraction component.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether alternative allocation mechanisms would outperform market selection"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Market selection efficiency describes the mechanism by which capital flows toward productive uses through price signals and information-driven competition. This constraint exhibits the central tension of capitalist coordination: markets excel at aggregating dispersed information through competition, yet this same competitive pressure creates incentives to extract information asymmetries. The constraint demonstrates genuine coordination function (price discovery, capital allocation) layered with extraction mechanisms (information advantage, front-running, regulatory arbitrage). Over the measurement interval (0-30 years), extractiveness has risen from 0.28 to 0.58 as high-frequency trading, algorithmic advantage, and information technology have increased information access barriers. Theater ratio has risen from 0.18 to 0.35 as regulatory frameworks (disclosure requirements, fair trading rules) have become increasingly theatrical \u2014 compliance activity persists despite high-frequency trading circumventing the intent of transparency rules.",
+    "key_agents": [
+      "Capital Allocators: Primary beneficiaries (institutional/arbitrage) \u2014 extract information advantages and deploy capital with superior timing; can arbitrage across pricing regimes",
+      "Non-Advantaged Competitors: Primary victims (powerless/trapped) \u2014 face persistent information disadvantage in capital allocation; cannot exit market participation without abandoning economic participation",
+      "Retail Participants: Secondary victims (moderate/constrained) \u2014 benefit from price signals but bear extraction through information lag and transaction costs; constrained by limited capital and access",
+      "Regulatory Frameworks: Institutional actor (institutional/mobile) \u2014 maintain transparency theater despite degradation; see own function as weakened by financial innovation",
+      "Alternative Market Structure Coalition: Organized agents (organized/constrained) \u2014 DeFi, blockchain, direct matching platforms represent temporary scaffold that may bypass traditional market selection",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing information asymmetry as inherent economic law rather than policy-constructed barrier"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Market selection creates genuine coordination value through price discovery and capital allocation toward productive uses, but this coordination is layered with extraction mechanisms. Information-advantaged agents capture return premiums that reflect not superior insight but information access barriers. Over the measurement interval, extractiveness has risen as technology has enabled finer information asymmetries (high-frequency trading, dark pools, proprietary data access). The rising trajectory indicates that institutional innovations increasingly permit extraction beyond coordination cost. Suppression (0.48): Moderate. Barriers to exit include the requirement of capital participation for economic security, information access costs that constrain independent verification, and regulatory frameworks that enforce particular market structures. But suppression is not maximal \u2014 traders can exit specific markets, switch brokers, or access alternative platforms. Behavioral patterns show adaptation (passive indexing, algorithmic trading by smaller actors) indicating partial, not total, suppression. Theater ratio (0.35): Moderate. Market transparency regulations (disclosure requirements, fair trading rules) have meaningful function in preventing egregious manipulation, but much regulatory activity is theatrical \u2014 compliance with transparency rules proves ineffective against front-running and algorithmic predation. Theater ratio has risen from 0.18 as alternatives (dark pools, high-frequency trading) have outpaced regulatory enforcement.",
+    "perspectival_gap": "Capital allocators perceive market selection as pure coordination (Rope) \u2014 they see price signals guiding efficient capital deployment. The organized coalition perceives it as temporary scaffolding with a sunset path (Scaffold) \u2014 alternative platforms can replace traditional markets. Regulatory frameworks perceive it as degraded ritual (Piton) \u2014 transparency rules persist but are increasingly circumvented. Retail participants perceive mixed coordination and extraction (Tangled Rope) \u2014 they benefit from price signals but bear information lag costs. Non-advantaged competitors perceive pure extraction (Snare) \u2014 they face unavoidable information disadvantage with no exit. The civilizational analytical perspective risks perceiving immutable natural law (Mountain) \u2014 information asymmetry seems inherent to any coordination system \u2014 but structural data reveals this as false naturalization: much of the asymmetry is policy-constructed (market access rules, data ownership, algorithmic trading regulation).",
+    "directionality_logic": "Each agent's directionality (d) reflects their structural position in the information flow. Capital allocators with arbitrage options derive low d \u2014 they are net beneficiaries receiving the extraction flow, experiencing low or negative chi. Non-advantaged competitors with trapped exit derive high d \u2014 they cannot avoid information disadvantage, experiencing maximum chi from their perspective. Retail participants with constrained exit derive moderate d \u2014 they can reduce exposure but at cost (passive funds have lower returns, avoiding markets eliminates wealth-building mechanism). The derivation chain confirms that beneficiary status (capital allocators) reduces d while victim status (non-advantaged competitors) increases d. This structural differentiation is the mechanism through which market selection extracts asymmetric returns.",
+    "mandatrophy_analysis": "The mandatrophy resolves by recognizing that market selection efficiency contains BOTH genuine coordination (price discovery, capital allocation toward productivity) and extraction (information-based advantage, suppression of alternative mechanisms). The constraint is not 'is market selection good or bad' but 'which institutional choices determine the balance between coordination and extraction?' The tangled rope classification is correct and non-degraded: the constraint manifestly requires active enforcement (regulatory frameworks, market structure rules), has beneficiaries (capital allocators) and victims (non-advantaged competitors), and contains measurable coordination function alongside measurable extraction. The rising extractiveness over the measurement interval reflects policy choices (allowing high-frequency trading, permitting dark pools, enabling algorithmic predation) not inherent economic law. The false summit (mountain perspective) is identified by noting that alternative allocation mechanisms (planning, matching, mutual funds) achieve comparable efficiency without comparable extraction, proving the current asymmetry is constructed, not inherent."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "information_asymmetry_in_financial_markets",
+      "regulatory_capture_finance_sector"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

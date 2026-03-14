@@ -1,0 +1,220 @@
+{
+  "header": {
+    "constraint_id": "off_road_mineral_extraction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "offroad"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Off-Road Mineral Extraction Constraint System",
+    "topic_domain": "environmental/economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mining_corporations",
+      "industrial_supply_chains"
+    ],
+    "victims": [
+      "indigenous_land_communities",
+      "ecosystem_integrity",
+      "future_generations"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Indigenous Land Communities",
+      "comment": "PERSPECTIVE 1: INDIGENOUS LAND COMMUNITIES (SNARE) \u2014 Structurally trapped. Face extraction through resource depletion, environmental degradation, and dispossession. Cannot exit because land rights are securitized by colonial and post-colonial legal frameworks. No meaningful participation in extraction decisions. Bear full cost of ecological collapse and livelihood destruction. Maximum suppression through legal exclusion and economic dependency."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Ecosystem Integrity (Abstract Collective)",
+      "comment": "PERSPECTIVE 2: ECOSYSTEM INTEGRITY (SNARE) \u2014 Cannot organize, cannot advocate, cannot exit. Bears extraction through habitat loss, pollution, species extinction, and carbon release. Trapped by the asymmetry between extraction speed and ecosystem recovery timescales. Suppression through naturalization: extraction portrayed as inevitable cost of development."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "label": "Future Generations",
+      "comment": "PERSPECTIVE 3: FUTURE GENERATIONS (SNARE) \u2014 Structurally mobile (could theoretically organize now if temporally connected) but identity-locked: their identity is not yet constituted, their voice cannot speak, their exit options are literally nonexistent in present decision-making. Trapped by temporal displacement and the irreversibility of mineral extraction. Suppression through discount rates and present-bias framing that renders future costs invisible."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Mining Corporations",
+      "comment": "PERSPECTIVE 4: MINING CORPORATIONS (ROPE) \u2014 Institutional beneficiary with full arbitrage options. Experience the constraint as pure coordination: permits structure access, supply chains integrate extraction, markets price minerals. No perceived extraction \u2014 the system coordinates their interests perfectly. Can exit individual projects but not the institutional role of extraction. Sees constraint as mutually beneficial coordination mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Mining-Dependent National Governments",
+      "comment": "PERSPECTIVE 5: MINING-DEPENDENT NATIONAL GOVERNMENTS (TANGLED ROPE) \u2014 Constrained by revenue dependency and global capital mobility. Genuinely coordinate resource governance (permit allocation, infrastructure development) but also extract rents through taxation and labor agreements. Face career/sovereignty risk of restricting extraction. Mixed experience: benefit from coordination function but also trapped by the extraction leverage that global corporations hold."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Environmental Regulation Systems",
+      "comment": "PERSPECTIVE 6: ENVIRONMENTAL REGULATION SYSTEMS (PITON) \u2014 Degraded institutional mechanism. Environmental impact assessments, permitting processes, and monitoring are largely performative theater masking continued extraction. Regulatory capture by industry. High theater ratio (0.58) reflects gap between regulatory rhetoric (environmental protection) and actual function (permitting extraction). Regulations persist through institutional inertia despite failure to prevent ecosystem degradation."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Systemic Extraction View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational scale, the constraint is pure extraction of nonrenewable resources with suppression of alternatives. The suppression operates through: (1) technological lock-in (industrial supply chains optimized around mineral-intensive production), (2) institutional capture (regulatory agencies aligned with industry), (3) epistemic suppression (internalized belief that extraction is inevitable for development), (4) future suppression (irreversibility of ore extraction makes alternatives unthinkable after extraction occurs). Mandatrophy resolved: the system exhibits all snare signatures despite attempts to frame it as responsible development."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "ecosystem_recovery_velocity",
+      "question": "Can ecosystem recovery timescales match or exceed mineral extraction timescales at global scale?",
+      "resolution_mechanism": "Bioaccumulation studies, soil remediation duration measurements, species recolonization timelines, hydrological restoration data from closed mines",
+      "impact": "If recovery << extraction speed: constraint is permanent Snare (irreversible extraction asymmetry). If recovery \u2248 extraction speed: constraint could be Tangled Rope with long regeneration cycle. If recovery >> extraction speed: frame collapses entirely.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Comparative timescales of ecosystem recovery vs mineral extraction"
+    },
+    {
+      "id": "technological_substitution_feasibility",
+      "question": "What proportion of mineral-intensive industrial supply chains could transition to circular/alternative material pathways without catastrophic efficiency loss?",
+      "resolution_mechanism": "Material science analysis of substitutes (graphene vs rare earths, bio-based polymers vs mineral plastics), economic modeling of transition costs, historical analogues (lead phase-out, CFC replacement)",
+      "impact": "If < 20% substitutable: extraction is structurally necessary (Snare justified by developmental necessity). If > 60% substitutable: suppression is artificial choice (Snare becomes policy rather than structural). If > 80% substitutable: the Snare is revealed as manufactured scarcity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of material substitution and circular economy transitions"
+    },
+    {
+      "id": "indigenous_land_rights_enforcement",
+      "question": "Under what legal/institutional conditions do indigenous land claims actually prevent extraction (vs performative consultation)?",
+      "resolution_mechanism": "Comparative analysis of cases with binding consent requirements vs advisory consultation; correlation between legal recognition level and extraction prevention; international court decisions on land sovereignty",
+      "impact": "If no legal condition prevents extraction: indigenous communities are fully trapped (Snare confirmed). If binding consent mechanisms exist: exit options upgrade from trapped to constrained or mobile (Snare potentially becomes Tangled Rope or Rope). If full sovereignty recognized: constraint becomes bilateral (two separate institutional perspectives, not one power asymmetry).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether indigenous land rights can structurally prevent extraction"
+    },
+    {
+      "id": "regulatory_capture_mechanism",
+      "question": "Is environmental regulation capture a contingent institutional failure or a structural feature of extractive industries?",
+      "resolution_mechanism": "Historical analysis of regulatory drift post-capture; cross-sector comparison (mining vs oil vs forestry); analysis of whether industry funding of regulators is necessary or contingent",
+      "impact": "If structural: Piton perspective is permanent degradation (constraint morphs to Snare as regulation fails). If contingent: regulatory reform could upgrade Piton to functional constraint type. If institutional design flaw: new governance models (indigenous co-management, third-party monitoring) could shift classification entirely.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether regulatory capture is inherent to extractive industries"
+    },
+    {
+      "id": "global_supply_chain_decoupling",
+      "question": "What happens to extraction demand if global supply chains decouple (localization, deglobalization, consumption reduction)?",
+      "resolution_mechanism": "Scenario analysis of demand reduction (5%, 25%, 50%); measurement of actual decoupling trends; economic modeling of circular economy adoption rates",
+      "impact": "If demand inelastic to decoupling: extraction is driven by fundamental needs (Snare structural). If demand elastic: extraction volume is contingent on supply chain choice (Snare becomes Tangled Rope with policy exit). If demand collapsible: the entire constraint can be unwound through economic reorganization (Snare dissolves into Rope or Scaffold).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Elasticity of extraction demand to global supply chain reorganization"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "commentary": {
+    "narrative_context": "Off-road mineral extraction represents a structural constraint that asymmetrically distributes extraction costs to powerless agents (indigenous communities, ecosystems, future generations) while concentrating benefits to institutional actors (mining corporations, industrial supply chains). The constraint operates through multiple suppression mechanisms: legal frameworks that deny land sovereignty, technological lock-in that makes mineral intensity appear inevitable, epistemic suppression that naturalizes extraction as development cost, and temporal suppression that discounts future harms. The theater ratio (0.58) reflects the performative nature of environmental regulation \u2014 impact assessments and monitoring create appearance of control while extraction proceeds unchanged. The extractiveness trajectory (0.42\u21920.68 over 60 years) shows accumulation of extraction as open-access frontier depletion accelerates extraction speed. This constraint exhibits all snare signatures: high base extractiveness (0.68), high suppression (0.72), asymmetric coercion (powerless agents cannot exit), and minimal coordination function (the system does not solve a collective action problem; it imposes a unilateral distribution).",
+    "key_agents": [
+      "Indigenous Land Communities: Primary victims (powerless/trapped) \u2014 structurally excluded from land rights; bear environmental and livelihood costs; no exit options",
+      "Mining Corporations: Primary beneficiaries (institutional/arbitrage) \u2014 capture resource rents and supply chain integration; full exit options through arbitrage between jurisdictions",
+      "Ecosystem Integrity: Structural victim (powerless/trapped) \u2014 abstract collective good; cannot organize or advocate; bears extraction through habitat loss and pollution",
+      "Future Generations: Temporal victims (powerless/identity_locked) \u2014 not yet constituted as agents; trapped by irreversibility of mineral extraction; discount rates render their interests invisible",
+      "Mining-Dependent Governments: Secondary institutional actor (moderate/constrained) \u2014 benefit from tax revenue; constrained by capital mobility threat; face sovereignty erosion through extraction leverage",
+      "Environmental Regulators: Degraded institutional mechanism (organized/constrained) \u2014 maintain performative assessment and monitoring; captured by industry proximity; constrain through theater rather than enforcement",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 identifies the constraint as systemic extraction with manufactured inevitability framing"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High but not maximal. Mining corporations extract substantial economic value, but not all value; indigenous communities and ecosystems lose total value. The 0.68 reflects that extraction concentrates enough value to drive the system despite obvious alternatives. Suppression (0.72): High. Legal exclusion of indigenous land claims, technological lock-in of mineral-intensive supply chains, epistemic suppression (internalized belief that extraction is necessary for development), and temporal suppression (future costs discounted) create multiple, reinforcing barriers to exit. No single suppression mechanism is total, but together they are nearly insurmountable. Theater ratio (0.58): Moderate-high. Environmental impact assessments, community consultation processes, and monitoring systems create performative appearance of control and responsible extraction while actual ecosystem degradation continues unchecked. The theater has increased over the 60-year interval as environmental movements have forced more elaborate compliance theater. The extractiveness trajectory shows accumulation: early extraction (0.42) was contained by frontier abundance and weak global demand; current extraction (0.68) reflects saturation of accessible deposits and acceleration of open-access extraction rates.",
+    "directionality_logic": "The directionality derivation chain prioritizes the structural relationship (beneficiary/victim) and exit options to compute experienced extractiveness. Indigenous communities are declared victims with trapped exit \u2192 d \u2248 0.95 \u2192 f(d) \u2248 1.42 \u2192 high experienced chi. Ecosystems are abstract victims with no exit \u2192 d = 1.0 \u2192 maximum f(d). Mining corporations are beneficiaries with arbitrage exit \u2192 d \u2248 0.05 \u2192 f(d) \u2248 -0.12 \u2192 negative experienced extraction. Mining-dependent governments are mixed: partially beneficiary (tax revenue) and partially victim (sovereignty erosion); they are constrained (not fully mobile) \u2192 d \u2248 0.50 \u2192 f(d) \u2248 0.65 \u2192 moderate experienced extraction. Scope modifier \u03c3(S) = 1.1 for continental-scale extraction amplifies extractiveness further. The perspectival gap reveals itself: beneficiaries see coordination (Rope from corporate perspective), while victims see pure extraction (Snare from powerless perspective). This gap is diagnostic \u2014 if all perspectives produced the same classification, the directionality derivation would be suspect.",
+    "perspectival_gap": "The constraint demonstrates the full spectrum from Rope (beneficiary) to Snare (victim) to Piton (degraded regulator). Mining corporations experience the constraint as Rope \u2014 it purely coordinates their access and supply chains. Mining-dependent governments experience Tangled Rope \u2014 they benefit from tax revenue but are constrained by extraction dependency and capital flight threats. Environmental regulators experience Piton \u2014 their assessment and monitoring processes are performative theater masking continued extraction. Indigenous communities and ecosystems experience Snare \u2014 pure extraction with no coordination benefit and no exit options. Future generations experience Snare from an identity-locked position \u2014 they cannot yet speak but will bear irreversible consequences. The analytical observer sees Snare at civilizational scale \u2014 the system exhibits all signatures of extractive constraint with suppression of alternatives. This perspectival diversity (Rope\u2192Tangled Rope\u2192Piton\u2192Snare\u2192Snare) is the diagnostic signature of a genuinely asymmetric constraint, not a perspective-dependent phenomenon.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The constraint classifies as Snare despite attempts to frame it as responsible development. The mandatrophy resolution required showing: (1) HIGH BASE EXTRACTIVENESS (0.68) \u2014 economic value flows asymmetrically to mining corporations, not to affected communities or future ecosystem users. (2) HIGH SUPPRESSION (0.72) \u2014 exit barriers (legal exclusion, technological lock-in, epistemic suppression, temporal discounting) are structural, not contingent. (3) MINIMAL COORDINATION FUNCTION \u2014 the constraint does not solve a shared collective action problem; it imposes a unilateral extraction distribution. (4) MULTIPLE SNARE PERSPECTIVES \u2014 not just one victim perceives extraction, but multiple independent victims (indigenous communities, ecosystems, future generations) experience the same asymmetry. The performative theater (environmental assessment, consultation processes, monitoring) initially suggested Piton (degraded function), but the underlying extractiveness and suppression metrics confirm Snare: the theater masks ongoing extraction rather than failing to achieve a genuine coordination goal. Extractiveness > 0.70 triggers mandatrophy requirement; resolution confirms that suppression is structural (not contingent on jurisdiction or corporate choice) and that alternative paths (circular economy, substitution, localization) are artificially suppressed rather than genuinely infeasible."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "indigenous_land_sovereignty",
+      "supply_chain_mineral_dependency",
+      "ecosystem_remediation_failure"
+    ],
+    "dual_formulation_note": "Off-road mineral extraction decomposes into three structurally linked constraints: (1) indigenous_land_sovereignty (\u03b5\u22480.45, Tangled Rope) \u2014 genuine coordination of land use with embedded extraction of sovereignty rights; (2) supply_chain_mineral_dependency (\u03b5\u22480.55, Tangled Rope) \u2014 supply chains coordinate production with embedded technological lock-in; (3) ecosystem_remediation_failure (\u03b5\u22480.72, Snare) \u2014 environmental systems extractively consume without regeneration. The present story represents the unified system constraint at the institutional level (mining corporations + governments + regulators). Upstream constraints have lower \u03b5 (focused on specific mechanisms); this story integrates all mechanisms and shows how they reinforce extraction."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

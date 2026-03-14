@@ -1,0 +1,178 @@
+{
+  "header": {
+    "constraint_id": "lunar_rover_autonomy",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lunar_rover"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Lunar Rover Autonomy Constraints",
+    "topic_domain": "aerospace_engineering/space_operations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mission_operators",
+      "space_agencies",
+      "lunar_base_planners"
+    ],
+    "victims": [
+      "rover_operational_flexibility",
+      "mission_timeline_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Rover's Operational Flexibility",
+      "comment": "The rover itself (as operational system) cannot exit the autonomy constraints imposed by Earth-Moon communication delay and pre-programmed command sets. Trapped by fundamental physics (8-second round-trip latency) and design decisions that limit real-time responsiveness. The rover bears the full cost of conservative autonomy bounds."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Field Science Teams",
+      "comment": "Science teams are constrained by pre-uploaded command sequences and limited autonomous decision capacity, yet genuinely benefit from the rover's existence and coordination with Earth-based planning. They have some agency (can plan 24-48 hour sequences) but face high friction and lost efficiency from communication delays and rigid autonomy bounds."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Mission Control and Space Agencies",
+      "comment": "Mission operators experience the autonomy constraint as a legitimate coordination mechanism. Command protocols ensure safety, reduce collision risk, and maintain accountability. They benefit from controlled operations and can arbitrage by updating autonomy parameters or adopting new rover designs. Extraction runs toward this institutional actor."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Autonomous Capability Development",
+      "comment": "Organized efforts (machine vision, terrain classification algorithms, obstacle avoidance systems) see autonomy constraints as a temporary problem with a sunset clause. Advanced rovers with onboard AI are being designed to replace Earth-dependent command sequences. The scaffold has a clear exit path: as autonomous systems mature over the next 10-15 years, real-time human control becomes optional rather than mandatory."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Traditional Teleoperation Protocols",
+      "comment": "Legacy teleoperation command protocols persist through institutional inertia despite advanced autonomous systems being technically feasible. The ritual of daily command uploads and real-time supervision is maintained because alternatives haven't fully displaced it, not because it's optimal. Theater ratio reflects the performative nature of human oversight when humans cannot actually react in real-time to rover conditions."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Physics Perspective)",
+      "comment": "From a civilizational/universal perspective, the 8-second communication delay is an immutable physical constraint (speed of light over 380,000 km). Some degree of autonomous rover operation is theoretically inevitable. However, the structural data (high suppression, moderate extractiveness, institutional beneficiary control) contradicts a pure mountain classification. This perspective risks naturalizing social choices (limited autonomy budgets, conservative command protocols) as if they were physics. The engine should flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "communication_delay_primacy",
+      "question": "Is the autonomy constraint primarily driven by the 8-second light-speed delay, or by institutional risk aversion and control preferences?",
+      "resolution_mechanism": "Comparative analysis: measure autonomy grants in rovers with identical communication delays but different institutional governance structures (NASA, ESA, China, private operators). If delay is primary, autonomy levels should correlate only with delay. If institutional preferences dominate, similar delays with different operators should show variance.",
+      "impact": "If delay-primary: constraint is mountain-adjacent (physics-driven). If institutional-primary: constraint is tangled_rope (extractive control mechanisms using physics as justification).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether autonomy constraints are physics-driven or governance-driven"
+    },
+    {
+      "id": "autonomous_capability_readiness",
+      "question": "Are onboard autonomous systems (vision, terrain classification, obstacle avoidance) technically ready to replace Earth-dependent command protocols, or do fundamental sensor/compute limitations persist?",
+      "resolution_mechanism": "Field testing of autonomous navigation in Earth terrain analog (lava tubes, regolith simulant) with metrics: time-to-goal, obstacle detection accuracy, terrain classification success rate, without Earth communication.",
+      "impact": "If ready: scaffold sunset is real \u2014 expect extraction to decrease as autonomous systems are adopted. If not ready: institutional control persists by necessity, not just preference \u2014 extraction floor rises.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Technical readiness of autonomous systems to replace teleoperation"
+    },
+    {
+      "id": "liability_and_institutional_risk",
+      "question": "To what extent do liability structures and institutional risk frameworks drive conservative autonomy bounds, independent of technical capability?",
+      "resolution_mechanism": "Legal/policy analysis: compare rover autonomy levels with mission insurance costs, liability frameworks, and agency oversight requirements across different space agencies and private operators. Analyze whether institutional reorganization (clearer liability assignment) correlates with autonomy expansion.",
+      "impact": "If liability is high driver: removing institutional barriers could expand autonomy without technical change. If low driver: technical limitations are the real constraint. Affects whether mandate is institutional reform (lowering suppression) or technology development (raising capability).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Institutional risk aversion as driver of autonomy constraints"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Lunar rover autonomy constraints emerge from the intersection of physics (8-second round-trip communication delay), institutional governance (mission control authority), and technical capability (onboard autonomous systems). The constraint exhibits the classical pattern of a hybrid mechanism: genuine coordination value (rovers must navigate safely in unknown terrain; Earth-based operators cannot react in real time to hazards) layered with asymmetric extraction (institutional actors maintain control and decision authority far beyond what communication physics requires). The theater ratio is relatively low (0.35) because rover teleoperation maintains genuine functional content \u2014 command sequences do prevent collisions and mission failures. However, extractiveness has risen steadily over a decade as institutional autonomy budgets have remained conservative despite rapid advancement in machine vision and terrain classification algorithms. The scaffold perspective is now active: multiple space agencies and private operators are developing rovers with genuine onboard autonomous capabilities that could reduce Earth-dependency within a 10-15 year horizon. The constraint is transitional.",
+    "key_agents": [
+      "The Rover (Operational Flexibility): Primary victim (powerless/trapped) \u2014 constrained by physics and design choices; cannot negotiate autonomy bounds in real time",
+      "Field Science Teams: Secondary victim (moderate/constrained) \u2014 face 24-48 hour planning cycles and rigid command sequences; limited real-time adaptation capacity",
+      "Mission Control Operators: Primary beneficiary (institutional/arbitrage) \u2014 maintain decision authority and oversight control; can upgrade autonomy parameters or adopt new rover designs",
+      "Space Agencies: Institutional beneficiary (institutional/arbitrage) \u2014 govern autonomy policies, control mission resources, capture scientific and political benefits of rover exploration",
+      "Autonomous Capability Development: Organized coalition (organized/mobile) \u2014 machine learning engineers, roboticists, autonomous systems researchers building alternative technical pathways",
+      "Legacy Teleoperation Protocols: Institutional system (institutional/arbitrage) \u2014 command upload rituals, daily supervision schedules persist through organizational inertia"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, rising trend. The base value reflects institutional actors' ability to maintain control over rover operations far beyond what communication delay would require. Physics requires *some* autonomy (rovers must avoid obvious hazards in real time), but institutional governance constrains autonomy to minimal safe baseline rather than expanding it toward rovers' technical capability. The 0.28\u21920.52 trajectory shows accumulating control restrictions: each new operational constraint (thermal management, power budget optimization, scientific prioritization) is implemented as a centralized Earth-based decision rather than delegated to onboard systems. Suppression (0.48): Moderate. Barriers to expanded autonomy include: regulatory liability frameworks (space agencies assume full accountability for rover actions), institutional risk aversion (failure modes at scale 380,000 km create political costs), technical conservatism (proven teleoperation protocols outweigh untested autonomous systems in institutional decision-making). Suppression is not total because technical alternatives are feasible and some operators (private firms, younger agencies) are willing to experiment. Theater ratio (0.35, rising slowly): Relatively low because the coordination function (preventing collisions, maintaining power/thermal budgets, ensuring scientific data quality) is genuinely performed by Earth-based oversight. However, the theater increases over time as human oversight becomes increasingly asymmetric \u2014 operators supervising rovers they cannot actually intervene in real time to correct, creating illusion of control without reality.",
+    "directionality_logic": "Mission control operators are institutional actors with arbitrage exit options \u2014 they can change rover designs, update autonomy parameters, or shift to different operational protocols without exiting the space exploration domain. They derive low-to-negative directionality (beneficiaries experiencing minimal extraction). The rover's operational flexibility is powerless and trapped \u2014 it cannot negotiate its constraints in real time and cannot exit to an alternative operational model without external intervention. It derives high directionality (victim experiencing maximum extraction). Field science teams are moderate-power agents with constrained exit options \u2014 they can design alternative mission profiles or work with multiple rovers, but face career risk and resource constraints in doing so. The institutional beneficiary's arbitrage options (updating autonomy policies, adopting new rovers, shifting to private operators with different governance) mean they can exit extraction mechanisms without leaving the functional domain. This asymmetry drives the tangled_rope classification: genuine coordination layered with extraction mechanisms that concentrate decision authority upward.",
+    "perspectival_gap": "The primary gap is between mission control's experience (rope \u2014 coordination mechanism preventing costly failures) and the rover's experience (snare \u2014 rigid operational constraints with no adaptation pathway). A secondary gap exists between institutional beneficiaries' immediate experience (rope, coordination logic) and the scaffold perspective's generational view (temporary problem, sunset approaching). The mountain perspective risks collapsing these gaps by attributing all constraints to physics, naturalizing what are actually institutional choices. The analytical observer must distinguish between: (1) immutable physical constraints (light-speed delay exists), (2) necessary operational constraints (some Earth-based oversight prevents catastrophic failures), and (3) institutional extraction mechanisms (autonomous budgets artificially restricted, control authority maintained beyond necessity).",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that extractiveness (0.52) lies in the tangled_rope range precisely because genuine coordination (rover safety, mission success) is coupled with asymmetric extraction (institutional control authority maintained beyond communication-delay necessity). The constraint is not misclassified as pure coordination (rope) because suppression (0.48) and the institutional beneficiary structure prevent this. It is not a pure snare because the coordination function is genuine \u2014 rovers genuinely benefit from Earth-based supervision and pre-programmed safety bounds reduce mission risk. The scaffold perspective is crucial: autonomous systems development is creating an alternative coordination mechanism that could eventually replace teleoperation, which would lower extractiveness by removing the institutional asymmetry. The mandatrophy analysis shows: (1) the coordination problem is real, (2) the extraction mechanism is institutional (control authority beyond necessity), (3) technical alternatives exist (autonomous systems), and (4) the sunset clause is plausible (10-15 year timeline for mature autonomous rovers). This prevents mislabeling the constraint as either pure coordination (missing the extraction) or pure control (missing the genuine coordination value)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "lunar_mission_planning_timescale",
+      "autonomous_system_development_pace"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

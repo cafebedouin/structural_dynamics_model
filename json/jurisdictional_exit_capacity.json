@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "jurisdictional_exit_capacity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "jec"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Jurisdictional Exit Capacity Constraint",
+    "topic_domain": "political_economy/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_state_apparatus",
+      "capital_immobilized_within_jurisdiction"
+    ],
+    "victims": [
+      "mobile_agents_seeking_exit",
+      "exit_destination_states"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Immobilized Resident",
+      "comment": "PERSPECTIVE 1: IMMOBILIZED RESIDENT (SNARE) \u2014 Residents without liquid capital or portable credentials face material barriers: passport denial, visa restrictions, wealth confiscation threats, family separation penalties, restrictions on skill transfer recognition. Exit is materially blocked. The constraint appears as an absolute immutability from this perspective \u2014 the resident cannot leave without catastrophic loss."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Mobile Professional",
+      "comment": "PERSPECTIVE 2: MOBILE PROFESSIONAL (TANGLED ROPE) \u2014 Professionals with portable credentials (doctors, engineers, technologists) face high but surmountable exit costs: credential recognition delays, licensing friction, relocation expenses, reputation rebuilding in new market. They benefit from the jurisdiction's professional infrastructure and network effects while losing those benefits upon exit. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Exit Destination State",
+      "comment": "PERSPECTIVE 3: EXIT DESTINATION STATE (ROPE) \u2014 Destination jurisdictions benefit from selective immigration (cream-skimming high-value agents) while maintaining lower-cost coordination through credential reciprocity agreements and bilateral trade. The constraint appears as a coordination mechanism: exit capacity enables labor market equilibration and specialization."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The High-Net-Worth Individual",
+      "comment": "PERSPECTIVE 4: HIGH-NET-WORTH INDIVIDUAL (TANGLED ROPE) \u2014 Wealthy agents with liquid capital can arbitrage exit capacity: purchasing residence permits, establishing offshore holdings, maintaining multiple jurisdictions. They benefit from the incumbent state's infrastructure and stability while paying exit costs below those of less-capitalized agents. Asymmetric extraction: they extract arbitrage value from others' immobility."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Incumbent State Apparatus",
+      "comment": "PERSPECTIVE 5: INCUMBENT STATE APPARATUS (PITON) \u2014 The state maintains exit restrictions through citizenship revocation threats, exit taxation, capital controls, and passport denial \u2014 mechanisms that persist through institutional inertia long after their functional justification has eroded. Theater_ratio is high: the apparatus performs demographic control but actual exit prevention relies on coordination failures and information asymmetries rather than force."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal perspective, some minimum exit friction is inherent: moving across jurisdictions requires processing identity claims, verifying credentials, and establishing residency. Transaction costs are unavoidable. However, the structural data (suppression 0.72, extractiveness 0.58) reveals that the observed constraint vastly exceeds what friction alone produces \u2014 the engine will detect this as false naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "exit_cost_allocation",
+      "question": "Are measured exit barriers (credential delays, visa costs, relocation expenses) coordination costs or extractive overhead?",
+      "resolution_mechanism": "Comparative analysis: jurisdictions with efficient credential reciprocity (Canada-UK, EU internal market) vs high-friction regimes (non-reciprocal licensing, visa queues). Measure: exit cost as percentage of average income and relationship to legitimate processing requirements.",
+      "impact": "If reciprocal-market exit costs represent true minimum: constraint is Rope with elevated theater. If non-reciprocal costs exceed processing requirements by >50%: constraint is Snare with intentional friction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether exit costs are legitimate coordination expenses or extractive padding"
+    },
+    {
+      "id": "immobility_mechanism_ambiguity",
+      "question": "Is measured suppression structural (legal barriers) or internalized (cognitive lock, identity fusion with jurisdiction)?",
+      "resolution_mechanism": "Post-exit trajectory analysis: do constraints on agents' behavior, identity claims, and risk perception persist after legal barriers are removed? Comparison of emigrants' behavior immediately post-exit vs post-acculturation.",
+      "impact": "If structural: suppression should be rated by barrier severity alone. If internalized: effective suppression is higher than formal restrictions suggest; identity-locked exit option may apply to some residents.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs internalized suppression mechanism in exit barriers"
+    },
+    {
+      "id": "jurisdictional_stratification",
+      "question": "Does exit capacity variation by wealth level (wealthy exit freely, poor exit is trapped) constitute asymmetric extraction or inevitable economics of mobility?",
+      "resolution_mechanism": "Policy counterfactual: jurisdictions that subsidize exit costs for lower-income groups (e.g., credential recognition programs, relocation assistance) show measurability of exit-cost reduction. Comparison of exit rates before/after subsidy.",
+      "impact": "If subsidy-responsive: constraint is partially extractive and remediable. If exit rates unchanged despite subsidy: constraint is structural/inevitable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether exit stratification by wealth is asymmetric extraction or structural economics"
+    },
+    {
+      "id": "network_effects_necessity",
+      "question": "To what extent is the 'cost' of exit (leaving behind professional networks, social capital, credentials) a genuine coordination loss vs a negotiated scarcity that the incumbent state manufactures?",
+      "resolution_mechanism": "Historical analysis: states that maintained high exit capacity (Switzerland, Singapore) show how rapid credential transfers and network integration reduce network-loss costs. Measurement: speed of professional integration for similar-skill emigrants.",
+      "impact": "If network losses are inevitable: exit barriers reflect genuine coordination value. If network losses can be engineered away: what appears as 'loss' is extractive gatekeeping by destination states and incumbent state collusion.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether network-loss costs reflect genuine coordination or manufactured scarcity"
+    },
+    {
+      "id": "capital_immobility_intentionality",
+      "question": "Is capital immobilization within jurisdictions a side effect of financial infrastructure, or is it deliberately maintained extraction mechanism?",
+      "resolution_mechanism": "Policy analysis: jurisdictions with high capital mobility (capital gains tax harmonization, treaty networks, transparent beneficial ownership) show whether restrictions are choice or constraint. Measurement: actual capital flow vs legal restrictions.",
+      "impact": "If restrictions bind: capital immobility is extraction mechanism and contributes to suppression score. If capital flows despite restrictions: theater_ratio should increase (rules are performed but circumvented).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether capital immobility is incidental or deliberately maintained"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Jurisdictional exit capacity is the structural ability of agents to relocate, transfer assets, and credential across political boundaries. The constraint operates through legal mechanisms (passport denial, visa restriction, citizenship revocation, exit taxation), economic mechanisms (credential non-recognition, professional licensing friction, capital controls, wealth confiscation), and social mechanisms (family separation penalties, social network loss, identity dissolution). The constraint exhibits different classification types depending on the observer's structural position: trapped residents without exit options see it as a Snare; mobile professionals with high-cost but possible exit see it as Tangled Rope; destination states seeking selective immigration see coordination benefits (Rope); wealthy agents with arbitrage options extract value from others' immobility (Tangled Rope from above); the incumbent state apparatus sees its own degraded control mechanism (Piton); and analytical observers risk naturalizing jurisdictional boundaries as immutable (false Mountain). The extractiveness score (0.58) reflects that exit capacity is asymmetrically distributed by wealth, credentials, and power, creating a stratified constraint where the burden falls on immobile agents while mobile agents arbitrage the difference. The suppression score (0.72) reflects multiple binding mechanisms: legal restrictions, credential friction, capital controls, and internalized identity-lock preventing even mobile agents from exercising exit options. Theater_ratio (0.48) is moderate because many exit barriers are performative rather than actually binding \u2014 visa queues, licensing bureaucracy, and residence permitting are often circumvented through corruption, credential recognition fraud, or capital smuggling, yet the apparatus maintains the theatrical machinery.",
+    "key_agents": [
+      "Immobilized Residents: Primary victims (powerless/trapped) \u2014 lack liquid capital, portable credentials, or political connections; cannot exit without catastrophic loss. Bear full extraction cost.",
+      "Mobile Professionals: Secondary victims (moderate/constrained) \u2014 possess portable credentials but face high exit costs; benefit from jurisdiction's professional infrastructure; lose benefits upon exit.",
+      "High-Net-Worth Individuals: Secondary beneficiaries (powerful/arbitrage) \u2014 can arbitrage exit capacity through capital, multiple residencies, credential-agnostic opportunities; extract value from lower-income residents' immobility.",
+      "Incumbent State Apparatus: Primary beneficiary (institutional/constrained) \u2014 extracts taxation, labor supply, capital retention through exit restriction; maintains control mechanisms through inertia.",
+      "Exit Destination States: Institutional actors (institutional/arbitrage) \u2014 benefit from selective immigration (cream-skimming high-value agents); coordinate labor market equilibration through credential reciprocity.",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent political arrangements as immutable laws of geography/sovereignty."
+    ],
+    "logic_rationale": "Extractiveness (0.58): The incumbent state captures labor supply (preventing exit during productivity peak), capital retention (through capital controls and wealth taxation), and fiscal revenue (exit taxation, credential licensing fees). Beneficiaries of exit restriction include the incumbent apparatus and immobilized capital interests. The extraction is substantial because exit barriers compound: a resident must overcome legal, economic, and social barriers simultaneously. However, extractiveness is not maximal (snare-level 0.66+) because some exit is possible for all agents at varying costs \u2014 the constraint is not a total prohibition. Suppression (0.72): Multiple binding mechanisms operate: legal passport control, visa restrictions, credential non-recognition by destination markets, capital controls, family-separation penalties, and internalized identity-lock. The suppression is high because the apparatus maintains machinery at multiple layers and agents often face coordination failures (other jurisdictions' unwillingness to reciprocate credential transfers, destination labor market barriers). Theater_ratio (0.48): Moderate. Exit restrictions are partially theatrical (visa queues, residence permitting bureaucracies can be circumvented through corruption, credential fraud, capital smuggling) but also partially functional (some residents genuinely cannot overcome barriers, and state does maintain deportation machinery). The theater has remained stable because the apparatus does not need to make restrictions actually binding \u2014 the perception of restriction plus coordination barriers produces adequate immobilization.",
+    "perspectival_gap": "This constraint demonstrates perspectival inversion: the constraint that traps some agents enriches others. Trapped residents see pure extraction (Snare). Wealthy arbitrageurs see pure coordination (Rope or Rope-adjacent). Destination states see labor-market coordination gains. The incumbent apparatus sees its own degradation. The analytical observer sees immutable law. No single type captures the constraint because the constraint's function is to sort agents by exit capacity \u2014 those with high capacity experience it as minor friction (Rope); those with low capacity experience it as total entrapment (Snare). The constraint IS the mechanism that makes exit stratified.",
+    "directionality_logic": "Directionality (d) values derive from beneficiary/victim declarations and power atoms. Immobilized residents (powerless/trapped) have d \u2248 0.95, experiencing maximum extraction. Mobile professionals (moderate/constrained) have d \u2248 0.70, experiencing high but not maximal extraction due to exit options. High-net-worth individuals (powerful/arbitrage) have d \u2248 0.20, experiencing low extraction or arbitrage value extraction from others. Incumbent apparatus (institutional/constrained exit from enforcement machinery) has d \u2248 0.35, benefiting from control but constrained by coordination failures and circumvention. Exit destination states (institutional/arbitrage) have d \u2248 0.10, net beneficiary from selective immigration. The analytical observer (analytical/analytical) has d \u2248 0.72, experiencing constraint through cognitive difficulty of distinguishing inherent limits from contingent institutions. The sigmoid f(d) transforms these d values into experienced chi, showing why trapped agents experience maximum effective extraction while arbitrage agents experience negative effective extraction (they benefit from the constraint).",
+    "mandatrophy_analysis": "Mandatrophy is RESOLVED by recognizing that the constraint's coordination function (sorting agents by exit capacity, equilibrating labor markets across jurisdictions) exists simultaneously with its extraction function (immobilizing low-capacity agents, capturing their productivity, retaining capital). The Tangled Rope classification captures this: beneficiaries include destination states (who coordinate labor markets), incumbent states (who retain capital), and wealthy agents (who arbitrage exit capacity). Victims include immobilized residents (who cannot exit) and exit-destination states (who absorb fiscal costs of integration). The constraint is neither pure coordination nor pure extraction \u2014 it is hybrid, and the tangled rope classification prevents mislabeling asymmetric stratification as either natural law (false mountain) or pure market coordination (false rope). The machinery that enables beneficial exit for some agents is the exact machinery that prevents it for others."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "capital_flight_restriction",
+      "credential_recognition_friction",
+      "citizenship_revocation",
+      "exit_taxation"
+    ],
+    "dual_formulation_note": "Jurisdictional exit capacity is the upstream constraint affecting all downstream constraints on capital immobility, credential transfer, and citizenship mechanics. This story treats exit capacity as a unified structural phenomenon; downstream stories decompose specific mechanisms (capital controls, licensing friction, revocation thresholds) with their own \u03b5 values."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

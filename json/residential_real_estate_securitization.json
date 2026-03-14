@@ -1,0 +1,232 @@
+{
+  "header": {
+    "constraint_id": "residential_real_estate_securitization",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rres"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Residential Real Estate Securitization as Extractive Constraint",
+    "topic_domain": "financial_systems/housing_markets",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mortgage_originators",
+      "investment_banks",
+      "rating_agencies",
+      "institutional_investors"
+    ],
+    "victims": [
+      "subprime_borrowers",
+      "working_class_homebuyers",
+      "neighborhoods_subject_to_predatory_lending",
+      "financial_system_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Subprime Borrower",
+      "comment": "PERSPECTIVE 1: SUBPRIME BORROWER (SNARE) \u2014 Trapped by information asymmetry, predatory loan terms, and the absence of alternative financing pathways. Bears full extraction cost through high interest rates, balloon payments, and hidden fees. No material exit option exists; defaulting means homelessness. Maximum experienced extraction with high suppression."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Working-Class Homebuyer",
+      "comment": "PERSPECTIVE 2: WORKING-CLASS HOMEBUYER (TANGLED ROPE) \u2014 Experiences genuine coordination benefit (access to homeownership, wealth accumulation potential) alongside asymmetric extraction (higher interest rates than prime borrowers, aggressive servicing practices). Constrained exit: can walk away through foreclosure, but at catastrophic cost to credit and family stability. Suppression operates through debt dependency and social pressure to maintain homeownership."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Mortgage Originator/Investment Bank",
+      "comment": "PERSPECTIVE 3: MORTGAGE ORIGINATOR AND INVESTMENT BANK (ROPE) \u2014 Experiences the securitization system as pure coordination: originating loans, bundling them into securities, selling to institutional investors, and distributing risk through the financial system. Net beneficiary through origination fees, underwriting spreads, and trading profits. The system coordinates capital flow toward housing; the beneficiary captures asymmetric returns. From their perspective, suppression is minimal \u2014 they have full agency and clear exit options through market arbitrage."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Neighborhood-Level Community Capital",
+      "comment": "PERSPECTIVE 4: NEIGHBORHOOD COMMUNITY CAPITAL (SNARE) \u2014 Concentrated subprime lending in specific neighborhoods creates systematic extraction: predatory origination -> default -> foreclosure -> neighborhood destabilization -> depressed property values -> accelerated disinvestment. The community bears extraction costs (lost tax base, school funding collapse, social capital erosion) without benefit. No exit mechanism; neighborhoods cannot relocate."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Institutional Investors/Asset Managers",
+      "comment": "PERSPECTIVE 5: INSTITUTIONAL INVESTORS / ASSET MANAGERS (TANGLED ROPE) \u2014 Benefit from securitization (portfolio diversification, yield pickup over Treasuries, access to illiquid residential mortgages). But also trapped in information asymmetry: cannot verify loan quality, must rely on rating agencies and originators' representations. High suppression through rating agency capture and opaque securitization documentation. Mobile exit in principle (can move to other asset classes), but constrained by client mandates and yield pressure. Experienced extraction arises from rating agency conflicts of interest and information opacity."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Framework (Post-Dodd-Frank)",
+      "comment": "PERSPECTIVE 6: REGULATORY FRAMEWORK (PITON) \u2014 Post-2010 regulations (Dodd-Frank, qualified mortgages, skin-in-the-game requirements) are largely performative theater: originators have adapted to compliance requirements while maintaining extractive practices through alternative channels (private label securitization, non-QM lending, rate-and-term refinancing traps). The regulatory apparatus persists through institutional inertia despite degraded function. Theater ratio high because compliance metrics (standardized documentation, loan-to-value ratios, debt-to-income caps) substitute for substantive verification of borrower capacity or fraud prevention. Theater_ratio = 0.65 reflects this: regulatory bodies maintain the appearance of oversight while extractive mechanisms persist."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "False Natural Law: Information Asymmetry as Immutable",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FALSE NATURAL LAW \u2014 From a civilizational view, information asymmetry in housing markets might appear immutable: lenders always know more than borrowers, valuation is inherently subjective, default risk cannot be fully modeled. This perspective risks naturalizing what are contingent institutional choices: the choice to allow non-recourse mortgages, the choice to permit securitization without originator liability, the choice to delegate underwriting standards to rating agencies. The engine's false summit detector will flag this as naturalization of contingent institutional arrangements."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "originator_liability_mechanism",
+      "question": "If originators retained full securitization risk (no put-back rights cap), would subprime lending volumes collapse or merely shift to different borrower segments?",
+      "resolution_mechanism": "Counterfactual simulation of origination volumes under full liability; historical analysis of pre-2007 recourse mortgage markets; comparison with international markets with originator liability",
+      "impact": "If collapse: securitization is extraction mechanism dependent on liability shields. If shift: extraction persists through different mechanisms. Classification likely remains snare in both cases, but intensity moderates if volumes crash.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether originator liability would eliminate or relocate the extractive mechanism"
+    },
+    {
+      "id": "rating_agency_independence_sufficiency",
+      "question": "Can rating agency incentive reforms (investor-pay model, liability exposure, algorithmic transparency) eliminate information asymmetry, or is the asymmetry structural to mortgage complexity?",
+      "resolution_mechanism": "Comparison of rating accuracy post-Dodd-Frank reforms vs pre-2008; analysis of whether rating errors are driven by misaligned incentives or fundamental valuation difficulty; stress-test performance across rating agencies with different fee structures",
+      "impact": "If incentive-driven: reforms could shift classification toward rope (coordination with transparent pricing). If structural: classification remains snare despite regulatory reform.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether rating agency reform can eliminate information asymmetry"
+    },
+    {
+      "id": "subprime_expansion_coordination_vs_predation",
+      "question": "Did securitization enable access to credit for previously excluded populations (coordination benefit) or primarily concentrate predatory lending on vulnerable borrowers (extraction)?",
+      "resolution_mechanism": "Historical comparison of subprime borrower outcomes with and without securitization; analysis of borrower sophistication and loan terms by origination period; counterfactual: what credit access would exist without securitization infrastructure",
+      "impact": "If coordination-dominant: classification shifts toward tangled rope across more perspectives. If predation-dominant: confirms snare classification and implies benefits were concentrated among beneficiaries, not borrowers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether securitization expansion primarily enabled access or enabled predation"
+    },
+    {
+      "id": "systemic_risk_externality_internalization",
+      "question": "Are systemic risk costs (financial crisis, recession spillovers, government bailouts) properly internalized in pricing and risk allocation, or do they represent unpriced externalities captured by borrowers and taxpayers?",
+      "resolution_mechanism": "Cost accounting of 2008 financial crisis (foreclosures, unemployment, government transfers); comparison of securitization benefits to originators vs systemic costs; analysis of whether risk concentration in mortgage securities was reflected in pricing",
+      "impact": "If externalized: validates snare classification at macro scale \u2014 system operates profitably for beneficiaries while costs are socialized. If internalized: suggests more efficient market pricing, though distributional extraction remains.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether systemic risk costs are internalized in securitization pricing"
+    },
+    {
+      "id": "borrower_sophistication_heterogeneity",
+      "question": "Are subprime borrowers behaviorally incapable of comprehending mortgage terms (true information asymmetry trap) or making rational decisions despite comprehension?",
+      "resolution_mechanism": "Analysis of loan shopping behavior, refinancing decisions, complaint patterns; comparison of borrower outcomes for identical loan types across cognitive ability proxies; behavioral testing of financial literacy vs actual decision quality",
+      "impact": "If incapable: suppression mechanism is cognitive; exit requires education/transparency. If rational despite information gaps: suppression is structural (no alternatives exist); exit requires market design changes. Both scenarios sustain snare classification but point to different interventions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether borrower suppression is cognitive or structural"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "rres_extractiveness_2000"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55,
+      "id_override": "rres_extractiveness_2005"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.68,
+      "id_override": "rres_extractiveness_2008"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62,
+      "id_override": "rres_extractiveness_2015"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4,
+      "id_override": "rres_theater_2000"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5,
+      "id_override": "rres_theater_2005"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.55,
+      "id_override": "rres_theater_2008"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.65,
+      "id_override": "rres_theater_2015"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Residential real estate securitization emerged in the 1980s as a coordination mechanism to distribute housing finance risk across capital markets, enabling portfolio diversification for institutional investors and expanding credit access for homebuyers. By the 2000s, it had transformed into a pure extraction mechanism targeting subprime borrowers through predatory origination, opaque risk transfer, and information asymmetry between borrowers and investors. The 2008 financial crisis revealed the system's extractive core: originators had no skin in the game, rating agencies had misaligned incentives, investors had no transparency, and borrowers had no exit. Post-Dodd-Frank regulations imposed compliance theater (standardized documentation, qualified mortgage rules, skin-in-the-game requirements) without addressing the structural extractive mechanisms, which adapted into private-label securitization and alternative lending channels. The constraint exhibits all six classification types from different structural positions: powerless subprime borrowers experience it as a snare; working-class homebuyers experience tangled rope (coordination benefit + extraction); originators and investment banks experience rope (pure coordination benefit); institutional investors experience tangled rope (benefit + information trap); the regulatory system has become a piton (performative theater); and the analytical observer risks false natural law (treating information asymmetry as immutable rather than contingent).",
+    "key_agents": [
+      "Subprime Borrowers: Primary victims (powerless/trapped) \u2014 bear full extraction through predatory loan terms, hidden fees, and absence of alternatives",
+      "Working-Class Homebuyers: Secondary victims (moderate/constrained) \u2014 benefit from homeownership access but face extraction through higher rates and aggressive servicing",
+      "Mortgage Originators: Primary beneficiaries (institutional/arbitrage) \u2014 capture origination fees, underwriting spreads, and trading profits; minimal risk exposure",
+      "Investment Banks: Primary beneficiaries (institutional/arbitrage) \u2014 profit from structuring, distributing, and trading securitized mortgages; insulated from default risk",
+      "Institutional Investors: Moderate beneficiaries with information trap (powerful/mobile) \u2014 capture yield pickup but trapped in information asymmetry; suppressed by rating agency conflicts",
+      "Rating Agencies: Beneficiary accomplices (institutional/arbitrage) \u2014 profit from rating fees; incentives misaligned with investor interests; enforce information opacity",
+      "Neighborhoods: Collective victims (powerless/trapped) \u2014 concentrated subprime lending causes systematic extraction through default cascades and disinvestment",
+      "Regulatory Agencies: Institutional theater (institutional/arbitrage) \u2014 maintain performative oversight while extractive mechanisms persist through regulatory arbitrage"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts substantial value from borrowers through above-market interest rates, hidden fees, and loan terms optimized for default rather than performance. Originators extract 2-3% origination fees plus servicing rights; investment banks extract structuring and trading spreads; rating agencies extract rating fees. The trajectory shows extractiveness rising from 0.35 (2000) to 0.68 (2008) as origination standards degraded and high-risk lending concentrated in securitized vehicles. Post-2008 regulations reduced extractiveness slightly to 0.62 (2015) through loan-level transparency and originator liability, but private-label securitization and alternative lending channels have enabled extraction to persist. Suppression (0.72): High. Barriers to exit include: information asymmetry (borrowers cannot evaluate loan terms; investors cannot verify loan quality), debt dependency (default means homelessness), credit market concentration (few alternative lenders), regulatory complexity (understands loan documentation requires expert counsel), and social pressure (homeownership is culturally mandated). Refinancing is suppressed by prepayment penalties and rate lock-in. Theater ratio (0.65): Moderate-high. Post-Dodd-Frank compliance metrics (QM standards, debt-to-income caps, documentation requirements) create the appearance of prudent underwriting while extractive mechanisms persist. Private-label securitization and non-QM lending operate outside the compliance theater. Rating agencies maintain the theatrical apparatus of credit analysis despite well-documented misalignment of incentives. The theater has increased over time as regulatory complexity has deepened without reducing extractive outcomes.",
+    "perspectival_gap": "The most severe perspectival gap exists between the subprime borrower (snare: trapped, powerless, maximum extraction) and the mortgage originator (rope: beneficiary, institutional, arbitrage). The originator experiences the system as coordination \u2014 solving the problem of matching borrowers with lenders \u2014 and capturing legitimate first-mover returns. The borrower experiences the same system as pure extraction: predatory underwriting, hidden risk transfer, and absence of alternatives. The institutional investor occupies the tangled rope middle: they benefit from yield pickup (coordination function) but are trapped in information asymmetry created by rating agency conflicts and securitization opacity. The working-class homebuyer also experiences tangled rope: genuine benefit (access to homeownership) alongside extraction (higher rates, aggressive servicing). The neighborhood-level perspective reveals a fourth manifestation: distributed extraction concentrated on specific geographic areas through predatory origination targeting low-income communities. The regulatory perspective (piton) shows that post-2008 reforms created an apparatus of compliance theater without eliminating the extraction mechanism. The analytical observer risks naturalizing the information asymmetry as inherent to housing markets rather than recognizing it as a contingent institutional choice to privatize gains and socialize losses.",
+    "directionality_logic": "Directionality values (d) flow from structural position: who benefits and who bears costs. Subprime borrowers have d \u2248 0.95 (full target): they receive predatory loans at above-market rates and bear default risk. Originating institutions have d \u2248 0.10 (near-full beneficiary): they capture origination fees, underwriting spreads, and servicing rights with minimal risk. Institutional investors have d \u2248 0.60 (moderate target): they benefit from yield but are trapped in information asymmetry. The engine's sigmoid function f(d) amplifies the experienced extraction for high-d agents (powerless borrowers with d=0.95 experience f(d)\u22481.42x base extraction). Low-d agents (institutional beneficiaries with d=0.10 experience f(d)\u2248-0.01x, meaning they experience negative effective extraction \u2014 benefit flows toward them). The scope modifier \u03c3(S) for national scope (\u03c3=1.0) does not scale the effective extraction, but the base extractiveness of 0.68 already reflects the system's severity. Geographic concentration in specific neighborhoods would justify a local scope modifier (\u03c3=0.8) at the neighborhood level, which would reduce apparent but increase actual extraction (the suppression mechanism is localized), but the national-scope perspective captures the systemic view.",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION VALIDATES: Base extraction \u03b5=0.68 > 0.46 threshold (snare minimum). Suppression \u03c3=0.72 > 0.60 threshold. Effective extraction \u03c7 calculated from powerless/trapped perspective: \u03c7 = 0.68 \u00d7 f(0.95) \u00d7 \u03c3(national) \u2248 0.68 \u00d7 1.42 \u00d7 1.0 \u2248 0.96 (well above \u03c7 \u2265 0.66 snare threshold). The mandatrophy is resolved by the perspectival diversity: from the beneficiary perspective, the system appears as rope (coordination benefit with asymmetric returns). From the victim perspective, it appears as snare (pure extraction with high suppression). The tangled rope perspectives (working-class homebuyers, institutional investors) reveal the hybrid: genuine coordination benefits (access to capital, risk distribution) co-existing with extraction mechanisms. The piton perspective (regulatory apparatus) shows how post-crisis reforms created theater without eliminating extraction. The false natural law perspective risks treating information asymmetry as inevitable rather than institutional. The mandatrophy is resolved by recognizing that securitization DOES coordinate capital flow (rope benefit) AND DOES extract from subprime borrowers (snare harm) in the same transaction \u2014 the constraint is genuinely tangled rope at the system level, but appears as snare from the borrower's trapped perspective and rope from the beneficiary's institutional perspective. The extractiveness gradient (0.35 \u2192 0.68 \u2192 0.62) shows the system was designed for coordination, corrupted into extraction, and partially reformed but not cured."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "subprime_credit_expansion",
+      "rating_agency_capture",
+      "housing_market_destabilization",
+      "financial_system_systemic_risk"
+    ],
+    "dual_formulation_note": "Residential real estate securitization decomposes into multiple constraint stories: (1) securitization_as_coordination (\u03b5\u22480.15, Rope) \u2014 the legitimate capital-distribution mechanism; (2) securitization_predatory_origination (\u03b5\u22480.72, Snare) \u2014 targeting subprime borrowers; (3) rating_agency_information_opacity (\u03b5\u22480.58, Tangled Rope) \u2014 misaligned incentives creating investor information trap; (4) regulatory_compliance_theater (\u03b5\u22480.42, Piton) \u2014 post-Dodd-Frank performative oversight. The present story integrates these into a single snare classification at the system level, reflecting the dominant structural outcome post-2000. Each sub-story can be authored separately with different \u03b5 values and beneficiary/victim declarations."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.55
+    }
+  ]
+}

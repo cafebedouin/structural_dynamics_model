@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "biosignature_interpretation_reliability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "biosig"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Biosignature Interpretation Reliability in Exoplanet Characterization",
+    "topic_domain": "astrobiology/planetary_science",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "early_detection_researchers",
+      "mission_funding_agencies"
+    ],
+    "victims": [
+      "false_positive_hypothesis_integrity",
+      "competing_research_programs"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The False Positive Detection Standard",
+      "comment": "PERSPECTIVE 1: FALSE POSITIVE DETECTION STANDARD (SNARE) \u2014 Cannot exit the interpretation framework; bears full cost of premature biosignature claims. The epistemic standard for 'biosignature' has no external oversight and no corrective mechanism. Maximum extraction from hypothesis integrity \u2014 false positives accumulate in the literature with no mandatory reversion."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Confirmation-Seeking Research Team",
+      "comment": "PERSPECTIVE 2: CONFIRMATION-SEEKING RESEARCH TEAM (TANGLED ROPE) \u2014 Constrained by funding cycles and publication pressure, but also benefits from the biosignature interpretation framework through access to high-impact publication venues. Extracts reputational advantage by rapid claims; also gains genuine scientific coordination through shared biosignature definitions."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Space Agency Mandate Fulfillment",
+      "comment": "PERSPECTIVE 3: SPACE AGENCY MANDATE FULFILLMENT (ROPE) \u2014 Benefits from biosignature detection frameworks that justify continued mission funding. Experiences the constraint as coordination: defining biosignature criteria enables mission design and public engagement. Net beneficiary \u2014 extraction runs toward this agent."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Astrobiology Standards Consortium",
+      "comment": "PERSPECTIVE 4: ASTROBIOLOGY STANDARDS CONSORTIUM (SCAFFOLD) \u2014 Organized agents (NRC biosignature working groups, ISSOL committees, exoplanet characterization consortia) see interpretation reliability as a temporary coordination problem with a sunset: machine learning-based false positive filtering, spectroscopic benchmark libraries, and multi-wavelength confirmation protocols are building alternative verification pathways. Theater_ratio declining as confirmation requirements formalize."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Exoplanet Characterization Template",
+      "comment": "PERSPECTIVE 5: EXOPLANET CHARACTERIZATION TEMPLATE (PITON) \u2014 Traditional biosignature interpretation frameworks (atmospheric oxygen + methane at disequilibrium, phosphine detection, 'technosignatures') persist through institutional adoption despite degraded verification pathways. The characterization ritual maintains a high theater ratio \u2014 most papers claiming biosignature detections undergo peer review that cannot actually verify the interpretation against ground truth (no accessible exoplanet samples)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, biosignature interpretation is always subject to false positive risk: complex chemistry, abiotic pathways, and instrumental artifact are inherent to remote detection. The ambiguity between biological and non-biological origins is structurally irreducible. This perspective risks naturalizing what is actually a contingent limitation of current observational methods \u2014 confusing technological constraint with immutable physical law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "phosphine_detection_artifact_ambiguity",
+      "question": "Does atmospheric phosphine detection represent a genuine biosignature candidate or is it predominantly instrumental artifact and sulfur chemistry misattribution?",
+      "resolution_mechanism": "Independent multi-wavelength reobservation with different instruments and spectral analysis methods; laboratory simulation of sulfur compound spectral profiles at Venus-like conditions",
+      "impact": "If genuine biosignature: biosignature_interpretation_reliability classification remains Tangled Rope. If artifact: the phosphine detections exemplify maximum extraction from false positives, pushing classification toward Snare; reveals institutional failure of peer review to catch systematic errors.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether phosphine detections represent biosignature or instrumental artifact"
+    },
+    {
+      "id": "oxygen_disequilibrium_abiotic_pathway_sufficiency",
+      "question": "Can abiotic photochemistry and hydrogen escape produce oxygen disequilibrium signatures that mimic biological oxygen production at detectable levels?",
+      "resolution_mechanism": "Updated photochemical modeling with constraints from Venus, early Earth, and extrasolar analog simulations; measurement of hydrogen escape rates for rocky exoplanets in habitable zone",
+      "impact": "If abiotic pathways sufficient: oxygen disequilibrium loses discriminatory power, pushing oxygen biosignature from Rope (reliable coordination marker) to Tangled Rope (unreliable extraction mechanism). If pathways insufficient: oxygen remains a high-confidence biosignature.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether abiotic pathways can mimic biological oxygen production"
+    },
+    {
+      "id": "publication_bias_correction_mechanism",
+      "question": "What fraction of claimed biosignature detections are retracted or substantially revised post-publication, and is the retraction rate captured by the published literature?",
+      "resolution_mechanism": "Longitudinal analysis of all exoplanet biosignature claims (2010-2026); follow-up citation tracking; identification of retracted papers and substantial revisions; comparison of retraction rate to physics/geology baseline",
+      "impact": "If retraction rate < 5%: peer review is functioning adequately and extractiveness is moderate (current 0.48). If retraction rate 15-30%: extraction is severe and suppression of alternative hypotheses is strong, pushing toward Snare (extractiveness \u2192 0.60+). If retraction rate > 30%: the constraint is a verification catastrophe masquerading as science.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Publication bias and post-publication correction rate for biosignature claims"
+    },
+    {
+      "id": "observation_confirmation_protocol_adoption",
+      "question": "Are multi-wavelength confirmation protocols and machine learning false positive filtering being adopted at rates sufficient to justify the Scaffold sunset timeline?",
+      "resolution_mechanism": "Survey of exoplanet characterization programs; measurement of confirmation requirement adoption rates in proposal review and publication standards; timeline to maturity of automated false positive filtering",
+      "impact": "If adoption > 60% within 5 years: Scaffold perspective is empirically grounded. If adoption < 30%: sunset timeline is aspirational rather than structural, and the constraint remains Tangled Rope indefinitely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Adoption rate of multi-wavelength confirmation protocols"
+    },
+    {
+      "id": "identity_lock_in_early_detection_narrative",
+      "question": "To what extent are biosignature researchers identity-locked to the 'imminent detection' narrative, making post-detection alternatives (null results, weak candidates, abiotic explanations) structurally unthinkable?",
+      "resolution_mechanism": "Qualitative interview analysis with exoplanet characterization researchers; measurement of citation patterns favoring detection-oriented papers vs null-result papers; career trajectory analysis for researchers who shift from detection to skepticism",
+      "impact": "If identity_lock is high: the constraint has cognitive capture dimension beyond material extraction. Removing funding incentives alone will not change behavior \u2014 researchers must rebuild their professional identity. Suppression value rises from 0.62 to 0.75+.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Identity fusion with 'imminent biosignature detection' narrative"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 8
+  },
+  "commentary": {
+    "narrative_context": "The biosignature interpretation reliability constraint governs how exoplanet research teams evaluate whether spectroscopic features detected in distant atmospheres constitute evidence of life. This constraint exhibits all six DR types from different perspectives, making it a diagnostic exemplar for extractive institutional arrangements disguised as scientific method. The same structural phenomenon \u2014 the gap between spectroscopic observation and biological confirmation in exoplanet atmospheres \u2014 appears as an immutable scientific reality (mountain), a coordination mechanism for shared detection standards (rope), a mixed coordination-extraction hybrid that rewards early claims over confirmation (tangled rope), a degraded peer review ritual (piton), a temporary coordination problem being solved by formalized confirmation protocols (scaffold), or pure extraction from hypothesis integrity (snare), depending on the observer's structural position. Theater ratio has increased from 0.45 to 0.68 over the 8-year interval, reflecting the growing gap between performative confirmation (literature consensus around preliminary detections) and actual verification (ability to rule out abiotic explanations). The constraint's suppression (0.62) reflects substantial barriers to alternative hypotheses: funding pressure toward detection narratives, publication bias against null results, career risk for researchers who contradict early biosignature claims, and absence of ground truth for exoplanet verification.",
+    "key_agents": [
+      "Early Detection Researchers: Primary beneficiary (institutional/arbitrage) \u2014 captures high-impact publications, funding priority, mission involvement during detection window",
+      "False Positive Hypothesis Integrity: Primary victim (powerless/trapped) \u2014 cannot exit the interpretation framework; bears full cost of confirmation errors without corrective mechanism",
+      "Mission Funding Agencies: Secondary beneficiary (institutional/arbitrage) \u2014 benefits from biosignature frameworks that justify continued funding and public engagement",
+      "Competing Research Programs: Secondary victim (moderate/constrained) \u2014 face funding disadvantage if they pursue skeptical or abiotic-explanation research; constrained by publication pressure to adopt detection-favorable narratives",
+      "Astrobiology Standards Consortium: Organized agents (organized/constrained) \u2014 NRC working groups, ISSOL committees, exoplanet consortia building formalized confirmation protocols with sunset logic",
+      "Peer Review Institutional Structure: Institutional actor (institutional/arbitrage) \u2014 maintains performative review ritual; cannot verify exoplanet biosignature claims against ground truth",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing technological limitation (current detection methods cannot distinguish biological from abiotic chemistry) as immutable scientific law"
+    ],
+    "logic_rationale": "Extractiveness (0.48): Moderate-high, reflecting genuine incentive asymmetry. Early detection researchers gain reputational advantage, publication prestige, and mission involvement through rapid claims during the years-long confirmation window. The extraction is not as severe as atmospheric verification constraints (which would push this to 0.65+) because some biosignature claims do eventually receive independent confirmation. The 0.48 value reflects that extraction is substantial but not total \u2014 about one claim in three survives strengthened scrutiny. Suppression (0.62): High. Substantial barriers prevent alternative hypotheses from being heard: (1) publication bias toward detection narratives (null results and abiotic explanations receive fewer citations), (2) career risk for researchers who contradict preliminary biosignature claims (seen as 'not team players'), (3) funding concentration toward missions designed to find biosignatures (JWST biosignature characterization programs), (4) absence of ground truth \u2014 exoplanet atmospheres cannot be sampled, so no researcher can definitively prove an alternative hypothesis. Theater ratio (0.68): Elevated and rising. Most biosignature papers undergo peer review that cannot actually verify the spectroscopic interpretation \u2014 reviewers assess plausibility, novelty, instrumental quality, and whether conclusions follow from data, but they cannot access exoplanet samples to test whether the inferred biological explanation is correct. The ritual persists because it provides institutional legitimacy, but its verification capacity is degraded. The theater has increased over the interval as biosignature detection claims have accumulated faster than confirmation capability.",
+    "directionality_logic": "Each perspective's directionality is determined by structural position. Early detection researchers with arbitrage exit options experience low effective extraction (d \u2248 0.15) \u2014 they benefit from the framework and can move to other high-impact domains if needed. The institutional funding agencies also have arbitrage (d \u2248 0.10) \u2014 biosignature narratives serve their mission mandate, but they could pivot to other exoplanet science. Competing research programs face constrained exit (d \u2248 0.60) \u2014 they must operate within the same biosignature framework even if they want to pursue skepticism, because publication and funding gatekeepers favor detection narratives. The false positive hypothesis integrity is trapped (d \u2248 0.95) \u2014 it cannot exit or self-correct; bears extraction with no agency. The sigma scope function applies here: global scope (\u03c3=1.2) amplifies the extraction \u2014 because biosignature interpretation standards are globally enforced through international journal consensus and mission review boards, the asymmetry cannot be arbitraged away by geographic movement.",
+    "perspectival_gap": "This constraint demonstrates the full six-type spectrum. Early detection researchers see pure coordination (Rope) \u2014 they are legitimately solving the problem of establishing shared biosignature standards. The astrobiology standards consortium sees a temporary coordination problem with formalized sunset (Scaffold) \u2014 machine learning false positive filters, multi-wavelength confirmation requirements, and spectroscopic benchmark libraries are moving adoption at measurable rates. The peer review institutional structure sees its own degraded ritual (Piton) \u2014 biosignature interpretation review persists through institutional adoption despite zero verification capacity for exoplanet atmospheres. Competing research programs see mixed coordination and extraction (Tangled Rope) \u2014 the system coordinates shared standards but rewards detection claims over skepticism. Hypothesis integrity sees pure extraction (Snare) \u2014 false positives accumulate without self-correction. The civilizational analytical observer risks seeing an immutable natural law (Mountain) \u2014 spectroscopic ambiguity and false positive risk are inherent to remote detection \u2014 but the structural data reveals this as a false summit: the contingent institutional arrangements (publication bias, funding concentration, absence of verification mechanisms) are not laws of nature.",
+    "mandatrophy_analysis": "DIAGNOSTIC EXEMPLAR: This constraint resolves the mandatrophy by showing how indexical classification captures different structural realities of the same phenomenon. The mandatrophy is not 'which type is correct?' but 'which perspective are you measuring from?'. The early detection researcher's Rope is their genuine experience \u2014 they are solving coordination problems. The astrobiology consortium's Scaffold is real \u2014 formalized confirmation protocols are being adopted. The peer review structure's Piton is real \u2014 the ritual persists through inertia. The competing program's Tangled Rope is real \u2014 they face both coordination benefits and extraction costs. Hypothesis integrity's Snare is real \u2014 false positives accumulate. The mountain perspective is a false summit \u2014 confusing technological constraint with immutable law. The presheaf over the observation site is the complete answer. The key diagnostic: if the mountain classification were correct, changing the funding structure or review mechanisms would not change the verification rate (it would be immutable). But the constraint's structural mechanisms (publication bias, funding concentration, career risk for skeptics) ARE changeable. This proves the mountain is a false summit and the constraint is institutionally contingent, not physically necessary."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.05
+  },
+  "network": {
+    "affects_constraints": [
+      "exoplanet_atmospheric_characterization_precision",
+      "spectroscopic_abiotic_pathway_detection"
+    ],
+    "dual_formulation_note": "Biosignature interpretation reliability is downstream of both spectroscopic characterization precision and abiotic pathway chemistry. The upstream constraints determine what signals can be detected; this constraint determines how those signals are interpreted and whether false positives are suppressed or allowed to accumulate."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

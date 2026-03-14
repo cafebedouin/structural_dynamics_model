@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "supplement_industry_regulatory_capture",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "supp"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Supplement Industry Regulatory Capture",
+    "topic_domain": "healthcare_policy/regulatory_affairs",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "supplement_manufacturers",
+      "industry_trade_associations"
+    ],
+    "victims": [
+      "consumer_health_safety",
+      "regulatory_agency_independence",
+      "evidence_based_medicine"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Consumer",
+      "comment": "PERSPECTIVE 1: CONSUMER (SNARE) \u2014 Consumers face maximal extraction with no exit. Marketing claims routinely exceed evidence; adverse event reporting is fragmented; ingredient quality/dosing is unverified. The consumer cannot evaluate supplement safety or efficacy \u2014 the constraint extracts confidence and money with minimal transparency. Trapped by information asymmetry and lack of accessible verification."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Healthcare Practitioners Outside Supplement Industry",
+      "comment": "PERSPECTIVE 2: HEALTHCARE PRACTITIONERS (SNARE) \u2014 Physicians, nurses, and evidence-based practitioners face extraction through undermined authority. Patients arrive with unverified supplement claims and resist clinical guidance. The constraint extracts credibility from the medical profession while insulating supplements from clinical accountability. Trapped by regulatory asymmetry \u2014 medicines face rigorous evaluation, supplements do not."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "FDA as Regulator",
+      "comment": "PERSPECTIVE 3: FDA REGULATOR (TANGLED ROPE) \u2014 The FDA experiences genuine coordination needs (industry does want some standardization to avoid catastrophic liability; unsafe products damage the entire market) alongside asymmetric extraction (industry has captured the agency's authority structure and definition of oversight scope). The agency experiences suppression through litigation risk, resource constraints, and political pressure. Constrained by career incentives and institutional dependencies \u2014 regulators who aggressively challenge industry face retaliation through congressional defunding or legal action."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Supplement Manufacturers",
+      "comment": "PERSPECTIVE 4: SUPPLEMENT MANUFACTURERS (ROPE) \u2014 Experience the constraint as genuine coordination: industry standardization, liability protection, and market legitimacy are real benefits. Manufacturers also benefit from extraction \u2014 weak enforcement of substantiation requirements and liberal marketing rules allow efficient cost-cutting and differentiation without evidence investment. Maximum beneficiary position."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Congressional Dietary Supplement Caucus",
+      "comment": "PERSPECTIVE 5: CONGRESSIONAL DIETARY SUPPLEMENT CAUCUS (PITON) \u2014 Maintains the Dietary Supplement Health and Education Act (DSHEA) framework through institutional inertia despite degraded functional legitimacy. The caucus is explicitly captured (funded by industry, staffed by former industry lawyers) and now serves primarily to block FDA action. The arrangement persists through legislative theater \u2014 routine reauthorizations, performative hearings with sympathetic witnesses \u2014 rather than through active problem-solving. Suppression is high but declining as the dysfunctionality becomes visible."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Consumer Advocacy Organizations",
+      "comment": "PERSPECTIVE 6: CONSUMER ADVOCACY ORGANIZATIONS (TANGLED ROPE) \u2014 Organized agents (Consumers Union, Public Citizen, medical societies) coordinate on safety standards and transparency while experiencing extraction through legal/political barriers to reform. These organizations provide genuine coordination (pressure for standardized labeling, adverse event tracking) but face suppression via litigation costs and industry counter-messaging. Constrained by resource asymmetry \u2014 industry can outspend advocacy groups in legislative and litigation arenas."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (False Natural Law)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (FALSE MOUNTAIN) \u2014 From a universal perspective, one might perceive supplement efficacy claims as inherently difficult to verify (cognitive science, placebo effect, individual variation are all 'natural' barriers). This perspective naturalizes the contingent regulatory capture as an immutable feature of how supplements 'work.' However, the structural data contradicts the mountain classification \u2014 the false summit reveals that the regulatory framework is not a law of nature but a captured institution."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "efficacy_vs_marketing_boundary",
+      "question": "Where is the legitimate boundary between marketing communication and efficacy claim? Can a supplement claim to 'support bone health' without clinical trial evidence?",
+      "resolution_mechanism": "Comparative regulatory analysis: FDA drug standards (efficacy must be proven before marketing) vs DSHEA supplement standards (structure-function claims are permitted pre-evidence). Meta-analysis of whether permissive structure-function claims systematically exceed the evidence base.",
+      "impact": "If boundary is at marketing only: much current supplement labeling is compliant, extraction is overstated. If boundary requires substantiation: most supplement manufacturers violate standards, extraction is worse than measured.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Boundary between legitimate structure-function claims and unsupported efficacy claims"
+    },
+    {
+      "id": "adverse_event_detection_adequacy",
+      "question": "Is the current adverse event reporting system (VAERS-equivalent for supplements) sufficient to detect safety problems, or does it systemically undercount?",
+      "resolution_mechanism": "Comparison of adverse event reports for supplements vs pharmaceuticals in same therapeutic class. Analysis of cases where supplements had delayed safety actions despite available adverse event signals. Audit of consumer knowledge of and participation in adverse event reporting.",
+      "impact": "If adequate: suppression is overstated; consumers have some exit path through safety reporting. If inadequate: extraction is worse than measured; safety signals are systematically hidden.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Adequacy of adverse event detection for supplement safety"
+    },
+    {
+      "id": "industry_capture_timeline",
+      "question": "At what point did the supplement industry shift from advocacy for market access to active regulatory capture? When did industry funding of science and policy become dominant over independent verification?",
+      "resolution_mechanism": "Historical analysis of DSHEA legislative history (1994) vs contemporary oversight mechanisms. Tracking of industry funding of supplement efficacy research. Analysis of FDA staffing and revolving-door patterns.",
+      "impact": "If capture is recent (post-2010): the scaffold perspective (sunset through reform) may be realistic. If capture is structural since DSHEA (1994): the snare and piton perspectives are more accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline and mechanisms of industry capture of supplement regulation"
+    },
+    {
+      "id": "consumer_identity_lock",
+      "question": "To what extent do consumers self-identify as 'natural product users' in ways that prevent evaluating individual supplements on merit? Is the binding mechanism structural (cost to exit) or identity-based (cannot imagine self outside this category)?",
+      "resolution_mechanism": "Survey and ethnographic analysis of supplement users' stated reasons for continued use post-adverse event or efficacy doubt. Analysis of switching costs (do users try alternatives easily?) vs identity fusion (do users explicitly frame supplements as core to their health identity?).",
+      "impact": "If structural barriers dominate: suppression is primarily external (cost, availability); identity_locked exit is not applicable. If identity fusion dominates: suppression is internalized; the constraint is stronger than structural measures suggest.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether consumer binding is structural cost or identity fusion"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The supplement industry regulatory capture operates at the intersection of public health, economic interest, and institutional legitimacy. The Dietary Supplement Health and Education Act (DSHEA, 1994) created a permissive regulatory framework where supplements can make 'structure-function claims' without pre-market efficacy evidence, unlike pharmaceuticals. Over the subsequent 30 years, the supplement industry (a ~$40 billion US market) has captured the FDA's definitional authority, congressional attention, and scientific discourse through revolving-door staffing, industry-funded research, and litigation threats. The constraint exhibits classic regulatory capture: the regulated industry (supplement manufacturers) has captured the regulator (FDA), extracted the agency's authority, and converted it into a tool for legitimizing permissive marketing while suppressing independent verification. However, the structure is not pure extraction (Snare) because the industry genuinely needs some coordination (standardization, liability frameworks, market legitimacy) that DSHEA provides. This hybrid character \u2014 real coordination function embedded within asymmetric extraction \u2014 defines the Tangled Rope classification. The theater ratio has increased over the interval as DSHEA enforcement has become increasingly performative: the FDA conducts warning letters and enforcement actions at rates far below what the universe of violators suggests, creating theatrical compliance theater that legitimizes the framework without enforcing it.",
+    "key_agents": [
+      "Supplement Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 capture weak oversight; extract authority from FDA; access market without efficacy evidence cost",
+      "Consumer Health & Safety: Primary victim (powerless/trapped) \u2014 face unverified claims; cannot exit information asymmetry; bear risk of adulterated products and ineffective treatments",
+      "Healthcare Practitioners: Secondary victim (powerless/trapped) \u2014 undermined authority; patients resist clinical guidance; professional credibility extracted by unregulated competitors",
+      "FDA Regulators: Mixed victim-beneficiary (moderate/constrained) \u2014 genuinely need industry coordination but are captured; career advancement incentives favor non-confrontation; suppressed by resource constraints and political pressure",
+      "Congressional Dietary Supplement Caucus: Institutional actor (institutional/constrained) \u2014 explicitly captured by industry funding and staffing; maintains performative legitimacy of DSHEA",
+      "Consumer Advocacy Organizations: Organized victims (organized/constrained) \u2014 coordinate on safety standards but suppressed by litigation costs and resource asymmetry",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing regulatory dysfunction as inherent to supplement 'complexity'"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High but not maximum. The constraint extracts significant value from consumers (unverified claims, adulterated products, ineffectiveness) and from practitioners (authority degradation). The value is not higher because some regulation exists (adverse event reporting, some enforcement) and industry does coordinate on basic standards that prevent catastrophic failures. The trajectory from 0.35 to 0.58 reflects increasing capture over time \u2014 early DSHEA had more genuine balance; current regime is heavily skewed toward industry. Suppression (0.65): High. Consumers face structural barriers to verification (no accessible safety data, marketing dominance, cost of independent testing). Practitioners face professional isolation (patients distrust clinical guidance). Regulators face political pressure and resource starvation. The suppression is primarily structural (external barriers) rather than identity-based, though some consumers may experience identity lock as 'natural supplement users.' Theater ratio (0.68): Moderate-high. DSHEA compliance appears to be enforcement (warning letters, recalls) but is actually performed theater \u2014 enforcement is rare relative to the scale of potential violations. Congressional hearings on supplement safety are performative \u2014 industry-friendly witnesses dominate, and legislation never tightens standards despite evidence of problems.",
+    "perspectival_gap": "The original research group sees coordination (Rope) in DSHEA's standardization function. Consumers and practitioners see pure extraction (Snare) in unverified claims and authority undermining. The FDA sees mixed coordination and capture (Tangled Rope). The congressional caucus sees performative legitimacy (Piton). The analytical observer risks seeing a natural law (Mountain) about supplement complexity; the structural data reveals the capture as contingent institutional arrangement.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from the agent's structural position relative to the extraction flow. Manufacturers are beneficiaries with arbitrage-level exit capacity (can shift products across regulatory regimes, can engage in litigation) \u2192 low d. Consumers are victims with trapped-level exit capacity (information asymmetry, cost barriers, no regulatory appeal mechanism) \u2192 high d. FDA regulators are mixed (some beneficiary functions through career advancement in captured institutions; some victim functions through suppressed agency) \u2192 moderate d, constrained by institutional dependency rather than trapped or arbitrage mobility. The directionality overrides are needed for the congressional caucus: nominally institutional power but functionally captured (d should be ~0.15 to reflect captured beneficiary status, not 0.00 for pure beneficiary).",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the classification ambiguity by recognizing that regulatory capture is inherently a Tangled Rope \u2014 it requires genuine coordination (industry-regulator alignment, standardization, market legitimacy) to function as an extraction mechanism. If the industry and FDA were purely opposed, extraction would fail. The coordination function (industry gets market access; FDA gets institutional stability) is the glue that holds the extraction apparatus together. The Snare perspectives (consumers, practitioners) are accurate assessments of their structural experience, but the system-level classification is Tangled Rope because the beneficiary (industry) and the regulator (FDA) are coordinating on the framework that enables extraction. The Piton classification (congressional caucus) reflects the degradation of legislative function \u2014 the caucus has become purely performative theater maintaining institutional inertia."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "pharmaceutical_efficacy_standards",
+      "consumer_information_asymmetry",
+      "healthcare_practitioner_authority"
+    ],
+    "dual_formulation_note": "The supplement industry regulatory capture can be decomposed into multiple structurally distinct constraints: (1) DSHEA structure-function claim permissiveness (\u03b5~0.42, policy capture), (2) adverse event reporting inadequacy (\u03b5~0.55, information asymmetry), (3) manufacturer quality control opacity (\u03b5~0.52, verification bottleneck). This story treats the capture mechanism holistically; decomposition into separate \u03b5 values per claim would enable more precise analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

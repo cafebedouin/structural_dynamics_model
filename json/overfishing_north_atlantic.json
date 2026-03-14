@@ -1,0 +1,229 @@
+{
+  "header": {
+    "constraint_id": "overfishing_north_atlantic",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "overfish"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Overfishing in the North Atlantic",
+    "topic_domain": "environmental/economic/regulatory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_industrial_fishing_fleets",
+      "seafood_processing_corporations"
+    ],
+    "victims": [
+      "small_scale_fishing_communities",
+      "marine_ecosystem_health",
+      "future_fish_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Coastal Fishing Community",
+      "comment": "PERSPECTIVE 1: COASTAL FISHING COMMUNITY (SNARE) \u2014 Trapped by economic dependency on fishing, geographic isolation, and lack of alternative livelihoods. Faces maximum extraction as fleet capacity expands, catches decline, and subsidized industrial competition eliminates their margins. No meaningful exit option; bears full cost of resource collapse while beneficiaries capture rents during depletion phase."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Marine Ecosystem",
+      "comment": "PERSPECTIVE 2: MARINE ECOSYSTEM (SNARE) \u2014 Cannot exit the extraction mechanism. Fish stocks, breeding grounds, and ecological stability bear the full cost of fleet capacity exceeding sustainable yield. Suppression operates through regulatory capture and knowledge asymmetry \u2014 ecosystem data is dispersed and slow; extraction happens in real time."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Scale Fleet Operator",
+      "comment": "PERSPECTIVE 3: MID-SCALE FLEET OPERATOR (TANGLED ROPE) \u2014 Faces high costs to exit (capital equipment, crew livelihoods, debt obligations) but also benefits from fishery coordination: management systems allocate quota, technology enables catch efficiency, market access is secured. Extraction is asymmetric \u2014 must pay fuel and compliance costs while industrial competitors receive fuel subsidies \u2014 but genuine coordination function exists."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Industrial Fishing Corporation",
+      "comment": "PERSPECTIVE 4: INDUSTRIAL FISHING CORPORATION (ROPE) \u2014 Experiences the constraint as coordination: quota systems allocate fishing rights, processing infrastructure is shared, market access is coordinated. Net beneficiary through arbitrage \u2014 can relocate to different fisheries, substitute species, and use political influence to secure favorable quota allocation. Extraction runs toward this agent."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Regulatory Regime (NAFO/EU CFP)",
+      "comment": "PERSPECTIVE 5: REGULATORY REGIME (PITON) \u2014 Quota-based management systems are largely performative: quota levels are set above sustainable yield due to political pressure; 'fishing down the food web' strategies circumvent species-specific limits; discard rates are unreported; and compliance monitoring is underfunded. The regulatory apparatus persists through institutional inertia (NAFO meetings, EU Common Fisheries Policy cycles) despite low functional effectiveness. Theater ratio reflects gap between announced conservation targets and realized extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Environmental NGO Coalition",
+      "comment": "PERSPECTIVE 6: ENVIRONMENTAL NGO COALITION (TANGLED ROPE) \u2014 Organized agents (Greenpeace, Oceanic Foundation, etc.) can exit the extraction mechanism through litigation, market campaigns, and policy advocacy. They have agency and coordination function \u2014 they work to restore ecosystem health \u2014 but face suppression through regulatory delays, industry lobbying, and limited enforcement resources. Constrained exit reflects that policy change is difficult but not impossible."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Marine Stewardship Council and Eco-Labeling",
+      "comment": "PERSPECTIVE 7: MSC AND ECO-LABELING (SCAFFOLD) \u2014 Market-based certification and eco-labeling represent a temporary scaffolding mechanism: higher prices for certified sustainable catch incentivize managed practices, but certification is expensive (excludes small-scale operators), verifiable only post-hoc, and subject to regulatory capture (standards are weakened to maintain industry participation). Sunset logic: as consumer demand for certified sustainable seafood matures, and as blockchain traceability reduces certification cost, the scaffold can transition to genuine market discipline. Suppression is moderate because market mechanisms can escape regulatory capture."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational view, some degree of fishing mortality is inherent to marine resource extraction: yields must be managed, depletion is a thermodynamic consequence of unregulated harvest, and catch limits are immutable biological constraints. This perspective risks naturalizing what is actually a political choice \u2014 the magnitude of suppression and extraction are consequences of governance structures, not laws of physics. The engine will identify this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "sustainable_yield_ambiguity",
+      "question": "What constitutes sustainable yield for multi-species fisheries with complex ecological interactions?",
+      "resolution_mechanism": "Long-term ecosystem modeling; comparison of single-species vs ecosystem-based management outcomes; historical analysis of fishery collapses and recovery trajectories",
+      "impact": "If sustainable yield is determinate and knowable: snare classification holds (extraction is a deliberate choice to exceed known limits). If unknowable: some extraction is necessary precaution (reclassifies as tangled_rope with coordination function).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determinacy of sustainable yield in complex marine ecosystems"
+    },
+    {
+      "id": "regulatory_capture_extent",
+      "question": "To what extent do catch quotas reflect biological science vs political-economic pressure from fishing interests?",
+      "resolution_mechanism": "Comparison of scientifically recommended vs politically set quotas; analysis of lobbying expenditure correlation with quota decisions; longitudinal tracking of species status vs policy change",
+      "impact": "If quotas are scientifically grounded: suppression is moderate (limits constrain but don't eliminate extraction). If quotas are systematically inflated: suppression is primarily political theater (classification shifts to piton from regulatory perspective).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree of regulatory capture in quota-setting processes"
+    },
+    {
+      "id": "iuu_fishing_quantification",
+      "question": "What is the actual volume of illegal, unreported, unrestricted (IUU) fishing, and how does it compare to reported catch?",
+      "resolution_mechanism": "Satellite vessel monitoring; port inspection data; genetic analysis of seafood in retail markets; landings data cross-validation",
+      "impact": "If IUU fishing represents <10% of total catch: regulatory suppression accounts for observed stock declines (snare classification holds). If IUU represents >30%: suppression is insufficient to explain decline, indicating ecosystem-driven degradation independent of regulation (reclassifies as mountain from ecosystem perspective).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude of illegal fishing relative to reported landings"
+    },
+    {
+      "id": "ecosystem_tipping_point_proximity",
+      "question": "How close are North Atlantic fish stocks to ecosystem tipping points (regime shifts, food web collapse)?",
+      "resolution_mechanism": "Stock assessment modeling with ecosystem feedback; paleoceanographic data on historical regime shifts; current biodiversity and trophic structure metrics",
+      "impact": "If tipping points are distant: snare classification captures political choice to extract. If tipping points are imminent (<5 years): constraint reclassifies toward mountain (extraction becomes physically irreversible, shifting from political to thermodynamic immutability).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proximity to critical ecosystem collapse thresholds"
+    },
+    {
+      "id": "alternative_livelihood_feasibility",
+      "question": "Can displaced fishing communities transition to alternative economic activities at current scale without income loss?",
+      "resolution_mechanism": "Cost-benefit analysis of retraining programs; regional economic capacity assessments; successful transition case studies; comparative wage analysis",
+      "impact": "If transition is feasible and affordable: exit_options for coastal communities upgrade from trapped to constrained (snare classification softens). If transition is infeasible: trap is structural and inescapable (snare classification hardens).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Feasibility of alternative livelihoods for fishing-dependent communities"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 45
+  },
+  "commentary": {
+    "narrative_context": "Overfishing in the North Atlantic represents a classic extraction constraint masked by regulatory theater. For decades, industrial fishing fleets have harvested fish stocks at rates exceeding biological sustainability, concentrating wealth and employment in large corporations while externalizing ecosystem costs onto coastal communities, marine life, and future generations. The constraint operates through three mechanisms: (1) regulatory capture \u2014 quota-setting bodies are dominated by fishing interests, and quotas are routinely set above scientifically recommended levels; (2) suppression of alternatives \u2014 fuel subsidies make industrial fleet operations artificially cheap, and small-scale fishing is squeezed out through capital competition; (3) temporal asymmetry \u2014 extraction happens in real-time while ecosystem recovery is measured in generational timescales. The regulatory regime (NAFO for international waters, EU Common Fisheries Policy for EU waters) creates the appearance of conservation while enabling accelerated depletion. Stock assessments are published, quota meetings are held, compliance is monitored \u2014 the theater is substantial \u2014 but functional outcomes are grim: Atlantic cod stocks collapsed in the 1990s and remain depleted; megafauna (sharks, rays, large groundfish) are functionally extinct across much of the region; and the fishing industry itself now threatens collapse as catch-per-unit-effort approaches zero. The constraint exhibits snare dynamics from the powerless perspective (coastal communities trapped by economic dependency), tangled rope from moderate-scale operators (genuine coordination function shadowed by asymmetric extraction), rope from industrial corporations (arbitrage options abundant), and performative piton from the regulatory regime (conservation theater with minimal functional effect).",
+    "key_agents": [
+      "Industrial Fishing Corporations: Primary beneficiary (institutional/arbitrage) \u2014 capture rents during depletion phase; can relocate to new fisheries or substitute species when stocks collapse",
+      "Coastal Fishing Communities: Primary victim (powerless/trapped) \u2014 economically dependent on fishing; lack alternative livelihoods; face income collapse as stocks decline",
+      "Marine Ecosystem: Secondary victim (powerless/trapped) \u2014 cannot exit; fish populations, breeding grounds, and trophic structure bear extraction cost; ecosystem recovery requires generational timescales",
+      "Mid-Scale Fleet Operators: Mixed (moderate/constrained) \u2014 benefit from coordination (quota allocation, technology, market access) while bearing asymmetric extraction (fuel costs, compliance burden, industrial competition)",
+      "NAFO/EU CFP Regulatory Regime: Institutional actor (institutional/arbitrage) \u2014 maintains performative conservation apparatus; sets quotas above sustainable levels due to political pressure",
+      "Environmental NGO Coalition: Organized victim (organized/constrained) \u2014 can exit through policy advocacy and market campaigns; faces suppression through regulatory delays and limited enforcement",
+      "Eco-Labeling and Certification Bodies: Organized coordinator (organized/constrained) \u2014 building scaffolding mechanisms (MSC certification) to transition from regulatory to market-based discipline",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing political choice to extract as immutable biological constraint"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint concentrates benefits (corporate profits, employment in processing and retail) among large fishing entities while externalizing costs (stock collapse, community economic devastation, ecosystem degradation) onto powerless agents over long timescales. The extractiveness value reflects that the magnitude of rent captured by industrial operators exceeds the coordination services they provide \u2014 overfishing for short-term profit rather than sustainable yield management. Suppression (0.72): Very high. Multiple suppression mechanisms operate: (1) regulatory capture prevents quota reduction despite scientific evidence; (2) fuel subsidies artificially lower industrial fleet operating costs, preventing small-scale competitors from earning viable income; (3) alternative livelihood options are absent or require massive retraining investment; (4) knowledge asymmetry \u2014 ecosystem data is dispersed and slow while extraction happens in real-time; (5) enforcement is underfunded (patrol vessels are rare; port inspections are sporadic). Theater ratio (0.55): Moderate-high. The regulatory regime creates substantial performative activity \u2014 annual NAFO meetings, stock assessments, quota announcements, compliance monitoring frameworks \u2014 but the theater is not overwhelming because actual enforcement mechanisms (vessel tracking, landing inspections, scientific monitoring) do exist and generate some real constraint on extraction. The theater has increased over the interval as the gap between announced conservation goals and achieved outcomes has widened.",
+    "directionality_logic": "The directionality flow is clear: extraction runs from powerless coastal communities and marine ecosystems toward institutional industrial corporations. The suppression mechanisms (lack of alternatives, regulatory capture, information asymmetry) trap victims in place while beneficiaries maintain arbitrage options. The beneficiary (industrial corporation) experiences low effective extraction because the constraint serves their interests; the victim (coastal community) experiences maximum effective extraction because the constraint has no exit option and extracts all rents available. The moderate operator (mid-scale fleet) experiences medium extraction because they benefit from coordination but bear asymmetric costs. The extraction accumulates over time (measuring extractiveness rising from 0.42 to 0.68) because quota levels remain above sustainable yield and fish populations decline, forcing higher effort (fuel, labor) to achieve the same catch, shifting rents steadily toward industrial operators with capital to absorb rising costs.",
+    "perspectival_gap": "This constraint demonstrates how power structures generate divergent classifications. Same factual situation \u2014 declining fish stocks, industrial-scale harvesting, regulatory quotas \u2014 appears as snare (trapped victim), rope (beneficiary coordinator), piton (regulatory theater), tangled rope (moderate operator), scaffold (emerging alternatives), and false mountain (analytical naturalization) depending on structural position. The gap reveals the extraction mechanism: the beneficiary experiences coordination because they benefit from the constraint; the victim experiences extraction because they bear the cost; the analyst risks seeing inevitability because the extraction is dressed in conservation theater and biological language.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by mapping perspectives to power structures rather than seeking a single 'true' type. The snare classification is correct from the powerless perspective (coastal communities trapped by extraction). The rope classification is correct from the institutional beneficiary perspective (industrial corporations experiencing coordination). The piton classification is correct from the regulatory regime perspective (theater without function). The tangled rope is correct from the moderate perspective (mixed benefit and burden). The scaffold is correct from the organized coalition perspective (building alternatives). The mountain is a false summit from the analytical perspective \u2014 the analysis reveals that what appears as immutable biological law (we must fish or starve; fish stocks naturally decline) is actually a contingent outcome of regulatory capture and suppression mechanisms. The mandatrophy is fully resolved: each type is legitimate from its own structural context; no single type is 'the truth.' The framework's job is to make visible which structural contexts enable which classifications."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "coastal_community_economic_collapse",
+      "marine_biodiversity_loss_north_atlantic",
+      "regulatory_capture_fisheries_management"
+    ],
+    "dual_formulation_note": "Overfishing North Atlantic decomposes into three related constraints: (1) the extraction mechanism (quota-setting above sustainable yield), (2) the economic collapse of coastal communities (geographic isolation + dependency), and (3) the ecosystem degradation (stock depletion + food web restructuring). Each has different \u03b5 values and different beneficiary/victim mappings. This story focuses on the extraction constraint; downstream stories address community and ecosystem impacts."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "food_contact_material_standards",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fcm"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Food Contact Material Standards and Regulatory Compliance",
+    "topic_domain": "food_safety/regulatory_standards",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "major_material_manufacturers",
+      "regulatory_agencies"
+    ],
+    "victims": [
+      "small_scale_producers",
+      "developing_country_manufacturers",
+      "consumer_health_assurance"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Small-Scale Producers in Developing Nations",
+      "comment": "PERSPECTIVE 1: SMALL-SCALE PRODUCERS (SNARE) \u2014 Face insurmountable compliance barriers: testing laboratories are concentrated in wealthy nations, certification costs exceed annual revenue for many micro-enterprises, and technical documentation requirements exclude producers without English-language capacity. Exit is prohibited \u2014 market access requires standards compliance with no practical pathway for resource-poor producers. Maximum extraction experienced."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Mid-Tier Domestic Manufacturers",
+      "comment": "PERSPECTIVE 2: MID-TIER MANUFACTURERS (TANGLED ROPE) \u2014 Standards provide genuine coordination: unified testing protocols reduce market fragmentation and enable economies of scale. But compliance creates asymmetric extraction: larger competitors can amortize testing costs across higher volumes, and standards favor incumbent material types (polycarbonate, PET) over novel alternatives. High suppression due to capital requirements, but not total \u2014 some agency exists to seek exemptions or invest in compliance."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Major Material Manufacturers",
+      "comment": "PERSPECTIVE 3: MAJOR MANUFACTURERS (ROPE) \u2014 Experience standards as coordination mechanism enabling global trade. Economies of scale make compliance cost negligible as percentage of revenue; pre-existing laboratory infrastructure and technical expertise reduce barriers. Standards create market access for compliant producers and protect market share from non-compliant competitors. Net beneficiary position \u2014 extraction runs toward this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regulatory Agencies and Standards Bodies",
+      "comment": "PERSPECTIVE 4: REGULATORY AGENCIES (TANGLED ROPE) \u2014 Standards provide genuine coordination function: unified testing protocols enable information sharing and reduce verification burden on individual agencies. But enforcement creates asymmetric extraction: regulatory capacity concentrates in wealthy nations (EU, US FDA, Canada), creating dependency for smaller nations. Many developing-country regulators must adopt standards wholesale without capacity to customize or validate. Agency exists through negotiation but constrained by technical and political dependencies."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Testing Protocols and Material Specifications",
+      "comment": "PERSPECTIVE 5: LEGACY SPECIFICATIONS (PITON) \u2014 Many standards (e.g., specific temperature migration limits, test conditions) persist through institutional inertia despite limited empirical validation for modern polymers and additives. Theater ratio (0.65) reflects that compliance verification is increasingly performative: laboratories test against specifications that do not capture all migration pathways or novel contamination vectors. The rituals persist because alternatives haven't fully replaced them and because incumbents benefit from specifications that lock in established materials."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Harmonization Initiatives",
+      "comment": "PERSPECTIVE 6: HARMONIZATION INITIATIVES (SCAFFOLD) \u2014 International coalitions (Codex Alimentarius, regional trade agreements) are building parallel verification pathways with sunset logic: mutual recognition agreements are gradually replacing prescriptive standards with performance-based criteria. As harmonization matures, regulatory burden on developing-nation producers declines \u2014 testing can be conducted locally against performance objectives rather than imported specifications. Estimated sunset: 15-25 years as capacity builds and mutual recognition becomes normative."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Chemical Safety as Natural Law)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal perspective, some standardization of food contact materials is inherent to food safety: migration of chemical residues from packaging into food is a physical/chemical process that requires threshold values. The engine will compute this as a false summit \u2014 standardization itself is a contingent institutional choice, not an immutable property. The specific standards (migration limits, test temperatures, material restrictions) are deeply contingent on regulatory philosophy and industrial influence, not chemical necessity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "migration_threshold_scientific_consensus",
+      "question": "Are current migration limits based on robust toxicological evidence or regulatory convenience?",
+      "resolution_mechanism": "Systematic review of underlying toxicology studies for each limit; comparison of regulatory philosophies (precautionary vs risk-based) across jurisdictions; re-analysis of historical decisions",
+      "impact": "If evidence-based: standards are coordination mechanism (lower extraction). If convenience-based: standards are regulatory capture mechanism (higher extraction and suppression)",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scientific basis of migration limits"
+    },
+    {
+      "id": "capacity_building_timeline_realism",
+      "question": "Can developing-nation laboratories realistically build testing capacity to meet harmonized standards within 20 years?",
+      "resolution_mechanism": "Analysis of historical laboratory infrastructure development; comparison of technical assistance funding to actual capacity requirements; institutional sustainability analysis of capacity-building programs",
+      "impact": "If achievable: scaffold sunset is real structural feature. If not: 'harmonization' is aspirational, and suppression of developing-nation producers remains permanent",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Realism of capacity-building for harmonization"
+    },
+    {
+      "id": "novel_polymer_innovation_suppression",
+      "question": "How many potentially safer food-contact polymers fail to reach market because they cannot meet legacy specifications designed for incumbent materials?",
+      "resolution_mechanism": "Patent analysis of failed formulations; interview data from polymer chemists on regulatory barriers; comparison of innovation rates pre- and post-regulatory tightening",
+      "impact": "If significant suppression: standards lock in existing materials and extract from innovation. Tangled rope classification understates extraction component",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Innovation suppression by legacy specifications"
+    },
+    {
+      "id": "informal_sector_contamination_risk",
+      "question": "Does enforcement of formal standards, combined with suppression of informal-sector producers, increase net consumer risk by forcing populations into unregulated supply chains?",
+      "resolution_mechanism": "Epidemiological data on foodborne chemical contamination by supply chain formality; market shift analysis post-enforcement; health outcome correlation with regulatory tightening",
+      "impact": "If yes: standards create perverse incentive structure where consumer health is worsened. Snare classification for developing-country consumers is understated; mandatrophy may be unresolvable",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Net health impact of standards on informal sectors"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Food contact material standards create a global regulatory structure intended to protect consumer health from chemical migration during food storage and preparation. The standards appear as a unifying coordination mechanism enabling international trade and ensuring safety parity across markets. However, the implementation creates structural asymmetries: compliance costs are fixed or proportional to output, creating economies of scale that advantage large manufacturers; testing infrastructure concentrates in wealthy nations, creating gatekeeping by geography and language; specification design favors incumbent materials (polycarbonate, PET, metal coatings) over alternatives; and informal-sector producers face binary choice: costly compliance or market exclusion. The constraint exhibits both genuine coordination (unified standards enable economies of scale and information sharing) and asymmetric extraction (compliance barriers and specification lock-in). The theater_ratio (0.65) reflects increasing performativity in verification: testing laboratories increasingly certify against legacy specifications that do not capture modern contamination vectors (e.g., non-intentionally added substances from recycled content, migration of additives not explicitly regulated). The trajectory shows extractiveness rising over time as regulatory tightening creates higher barriers and as informal sectors are progressively excluded from markets, concentrating the supply chain in compliant producers. Simultaneously, theater increases as specifications become more procedural and less empirically validated for novel materials and contamination risks.",
+    "key_agents": [
+      "Small-scale Producers in Developing Nations: Primary victims (powerless/trapped) \u2014 face insurmountable compliance barriers; market access requires standards adherence with no pathway to compliance",
+      "Mid-tier Domestic Manufacturers: Secondary victims (moderate/constrained) \u2014 benefit from coordination but face asymmetric extraction through economies of scale and incumbent material favoritism",
+      "Major Material Manufacturers: Primary beneficiaries (institutional/arbitrage) \u2014 economies of scale make compliance negligible; standards protect market share and create barriers for competitors",
+      "Regulatory Agencies and Standards Bodies: Institutional actors (organized/constrained) \u2014 provide coordination function but constrained by technical dependencies; capacity concentrates in wealthy nations",
+      "Informal-Sector Producers: Structural victims outside the framework (powerless/trapped) \u2014 excluded entirely by formal standards; force consumers into unregulated supply chains",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent regulatory choices as chemical safety necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The primary extraction mechanism is compliance cost asymmetry \u2014 fixed testing costs create economies of scale favoring large producers and wealthy jurisdictions. Secondary extraction mechanisms include specification lock-in (standards favor incumbent materials) and information gatekeeping (technical documentation concentrated in wealthy-nation languages). However, extraction is not maximal (0.66+) because genuine coordination benefits exist \u2014 unified standards reduce market fragmentation and enable trade. Suppression (0.48): Moderate. Developing-nation producers face high but not total barriers: testing labs exist outside wealthy nations (though at lower capacity and higher cost), some exemptions exist through regional trade agreements, and capacity-building programs (though underfunded) provide pathways. But suppression is asymmetrically distributed \u2014 small producers in wealthy nations face lower barriers than their counterparts in developing nations. Theater ratio (0.65): Moderate-high. Testing protocols are increasingly performative because legacy specifications do not capture emerging risks (non-intentionally added substances, endocrine-disrupting additives, recycled content contamination). Laboratories verify conformance to historical migration limits while novel contamination vectors remain untested. The theater has increased over the interval as regulatory complexity outpaces empirical validation.",
+    "perspectival_gap": "The constraint demonstrates high perspectival divergence. Major manufacturers see a coordination mechanism (Rope) that protects their market position and enables global trade. Mid-tier manufacturers see mixed benefits and costs (Tangled Rope) \u2014 standards enable coordination but create asymmetric extraction. Small-scale producers in developing nations see pure extraction (Snare) with no pathway to compliance. Regulatory agencies see themselves as providing coordination (Tangled Rope) but constrained by technical dependencies concentrated in wealthy nations. International harmonization initiatives see a temporary problem with a sunset (Scaffold) \u2014 as capacity builds and mutual recognition spreads, the extraction mechanism can be dismantled. Legacy specifications persist through inertia despite reduced empirical validation (Piton). The analytical observer risks seeing standardization as a natural law of chemistry (Mountain) when it is actually a contingent regulatory architecture that privileges certain producers over others. The perspectival gap reveals that the constraint's classification depends entirely on the observer's position in the supply chain and regulatory access hierarchy.",
+    "directionality_logic": "Directionality (d) is derived from each agent's structural position: their power level, exit options, and relationship to the extraction flow. Major manufacturers with institutional power and arbitrage options (can shift materials, testing locations, manufacturing regions) experience low d \u2014 they benefit from standards enforcement. Mid-tier manufacturers with moderate power and constrained options face high d \u2014 they incur significant costs without equivalent benefit. Small-scale producers with powerless position and trapped options face maximum d \u2014 they cannot comply or exit. Regulatory agencies derive d from their constrained institutional position \u2014 they enforce standards designed elsewhere, with limited capacity to customize. International harmonization coalitions derive d from their capacity to create alternative pathways (mutual recognition, performance-based criteria), lowering the experienced extraction for agents who can access these new routes. The engine derives d automatically from these structural declarations; the perspectival gap emerges from the different d values experienced by different agents.",
+    "mandatrophy_analysis": "This constraint demonstrates mandatrophy resolution through perspectival decomposition. The apparent contradiction between 'standards protect consumers' (mountain view) and 'standards extract from producers' (snare view) dissolves when properly indexed: both statements are true from their respective positions. Wealthy-nation manufacturers experience standards as protective coordination; developing-nation producers experience them as extractive gatekeeping. The mandatrophy resolves by recognizing that the constraint is not one type but a multivalent structure that presents differently depending on structural position. The analytical observer's false summit (natural law view) is the key diagnostic: if standards were truly chemical necessity rather than regulatory choice, there would be no extraction component. The presence of extraction (asymmetric compliance costs, specification favoritism) reveals that standards are regulatory architecture, not chemical law. The constraint satisfies the Tangled Rope canonical classifier: it has genuine coordination function (unified standards enable trade and information sharing), asymmetric extraction (compliance costs favor large producers), and requires active enforcement (regulatory agencies must monitor and certify compliance)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "informal_food_supply_chain_viability",
+      "polymer_innovation_bottleneck",
+      "developing_nation_regulatory_capacity"
+    ],
+    "dual_formulation_note": "Food contact material standards decompose into three structurally distinct constraints: (1) the coordination mechanism (\u03b5 \u2248 0.20, Rope) \u2014 unified testing protocols enabling trade; (2) the compliance cost asymmetry (\u03b5 \u2248 0.55, Snare) \u2014 small producers trapped by fixed testing costs; (3) the specification lock-in (\u03b5 \u2248 0.45, Piton) \u2014 legacy protocols persist despite reduced empirical validation. These three are linked through network dependencies: the coordination function depends on specification design, which depends on testing capacity, which is asymmetrically distributed. The combined story (this constraint story) represents the integrated effect across all three decomposed constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

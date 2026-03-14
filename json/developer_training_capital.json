@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "developer_training_capital",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "devtrain"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Developer Training Capital Lock",
+    "topic_domain": "labor_economics/technology_sector",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "employer_firms",
+      "incumbent_platforms"
+    ],
+    "victims": [
+      "junior_developers",
+      "skill_transferability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Junior Developer",
+      "comment": "PERSPECTIVE 1: JUNIOR DEVELOPER (SNARE) \u2014 Trapped by firm-specific skill accumulation. Departure requires abandoning months/years of accumulated domain knowledge in proprietary systems, codebases, and internal frameworks. Career progression depends on staying; exit costs are maximal. Zero arbitrage \u2014 the skills do not transfer to alternative employers."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Career Engineer",
+      "comment": "PERSPECTIVE 2: MID-CAREER ENGINEER (TANGLED ROPE) \u2014 Faces high exit costs (lost seniority, relocation, rebuilding reputation) but has developed sufficient transferable skills to eventually switch firms. The constraint genuinely coordinates knowledge transfer and mentorship while extracting disproportionate loyalty and below-market compensation during the lock-in period. Mixed function and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Employer Firm",
+      "comment": "PERSPECTIVE 3: EMPLOYER FIRM (ROPE) \u2014 Experiences training capital constraint as pure coordination: the firm invests in developer training, creating shared knowledge that increases collective productivity. The firm captures ROI through developer retention and performance. Net beneficiary with multiple exit options (recruit differently, outsource, acquire expertise)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Open-Source Community",
+      "comment": "PERSPECTIVE 4: OPEN-SOURCE COMMUNITY (SCAFFOLD) \u2014 Creates alternative skill pathways that reduce firm-specific lock-in. As open-source contribution becomes a recognized credential (GitHub profiles, portfolio projects), developers gain portable capital that bypasses the firm-specific accumulation trap. Temporary support with sunset: once portfolio-driven hiring replaces credential-based hiring, firm-specific training becomes less extractive."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Corporate Training Program",
+      "comment": "PERSPECTIVE 5: CORPORATE TRAINING PROGRAM (PITON) \u2014 Many formal corporate training programs (onboarding, internal certifications, mentorship cycles) are substantially performative: they signal investment in developer growth while reinforcing proprietary lock-in. The theater persists through institutional inertia \u2014 replaced partially by informal knowledge transfer and YouTube tutorials that deliver equivalent learning at lower cost."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some firm-specific skill accumulation is inherent to complex software engineering: domain knowledge in large codebases takes time to build, and early-career developers necessarily depend on firms to provide that training. This framing naturalizes the lock-in as an immutable feature of how expertise develops. However, the structural data contradicts this \u2014 the extractiveness value indicates contingent institutional choice (platform lock-in, non-compete agreements, credential gatekeeping), not natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "portability_threshold_ambiguity",
+      "question": "What percentage of a junior developer's training capital is genuinely firm-specific (non-transferable) versus platform-general (transferable to competitors)?",
+      "resolution_mechanism": "Empirical measurement: tracking developer job transitions and success rates; correlating hiring manager evaluations of prior-firm experience across different firms; analyzing GitHub skill signaling against prior employment",
+      "impact": "If < 30% is truly firm-specific: constraint should reclassify to Rope (coordination dominates). If > 60% is firm-specific: constraint approaches pure Snare (extraction dominates). Current estimate ~50% drives Tangled Rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Firm-specific vs transferable skill composition in developer training"
+    },
+    {
+      "id": "non_compete_enforceability_variance",
+      "question": "How much of the suppression (0.62) derives from legally enforceable non-compete clauses versus informal reputation/network effects that deter departure?",
+      "resolution_mechanism": "Jurisdictional analysis of non-compete enforceability (varies dramatically: California void, other states strict); cross-border hiring surveys; measurement of developer departure rates pre/post non-compete enforcement changes",
+      "impact": "If legal enforcement is weak: structural suppression is lower than measured; constraint moves toward Rope. If network effects dominate: even without legal enforcement, suppression persists through informal mechanisms (reputational damage, network exclusion).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Legal vs informal suppression mechanisms in non-compete enforcement"
+    },
+    {
+      "id": "remote_work_exit_option_shift",
+      "question": "Has the rise of remote work created arbitrage opportunities that convert trapped developers to constrained or mobile developers?",
+      "resolution_mechanism": "Longitudinal developer job transition data: mobility rates pre-2019 vs post-2021; geographic salary arbitrage analysis; non-compete enforcement success rates in remote contexts where enforcement is geographically weak",
+      "impact": "If remote work significantly increased arbitrage: exit_options shift from trapped \u2192 constrained for many developers; perspectival classification of junior developers moves from Snare toward Tangled Rope. If remote work had minimal impact: suppression persists despite geographic mobility.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether remote work enables exit arbitrage for trapped developers"
+    },
+    {
+      "id": "open_source_credentialing_effectiveness",
+      "question": "Do GitHub portfolios and open-source contributions actually reduce hiring preference for firm-specific credentials, or do they supplement rather than replace firm-based training capital?",
+      "resolution_mechanism": "Hiring decision analysis: comparing interview outcomes and job offers for candidates with strong GitHub profiles but weak firm credentials vs those with strong firm credentials but weak GitHub; longitudinal tracking of hiring standards across tech firms",
+      "impact": "If GitHub strongly replaces firm credentials: scaffold sunset is real \u2014 open-source pathways genuinely reduce firm-specific lock-in, validating generational timescale. If GitHub supplements: scaffold is aspirational, not structural; lock-in persists and sunset is delayed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether open-source portfolios substitute for firm training credentials"
+    },
+    {
+      "id": "training_capital_vs_relationship_lock",
+      "question": "Is the primary binding mechanism the accumulated technical capital (hard to transfer) or the relational/identity lock (developer sees self as member of firm culture)?",
+      "resolution_mechanism": "Qualitative analysis of departure narratives; measurement of whether developers leaving for external opportunity cite skill transferability concerns vs cultural/relational concerns; analysis of internal mobility (transfer to different team/project within firm) as substitute for external departure",
+      "impact": "If primarily technical: constraint is structural (Snare/Tangled Rope). If primarily relational: constraint exhibits identity_locked exit pattern; some developers are structurally mobile but identity-fused; perspectival gap widens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether binding mechanism is technical capital or relational lock"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Developer training capital creates a structural asymmetry in the labor market between employers who invest in junior developer onboarding and the junior developers themselves who accumulate firm-specific knowledge. The constraint exhibits tension between genuine coordination (firms must invest in training; developers must invest time to learn complex systems) and extractive lock-in (accumulated capital is non-transferable; departure resets career progression). The extractiveness trajectory (0.35 \u2192 0.58 over 10 years) reflects increasing lock-in as junior developers accumulate domain-specific knowledge in proprietary codebases, internal frameworks, and firm-specific architectural patterns. Theater ratio growth (0.42 \u2192 0.55) indicates that formal training programs and credential systems have become increasingly performative \u2014 many onboarding rituals signal investment in developer growth while reinforcing non-compete enforcement and proprietary lock-in. Open-source pathways (GitHub, public portfolios, community projects) represent a structurally distinct exit mechanism with sunset logic: as hiring standards shift from firm-specific credentials to demonstrable portfolio skills, firm-specific training capital becomes less binding.",
+    "key_agents": [
+      "Junior Developers: Primary victims (powerless/trapped) \u2014 accumulate firm-specific capital with no alternative labor market; departure resets career progression",
+      "Mid-Career Engineers: Secondary victims (moderate/constrained) \u2014 face high exit costs but develop transferable skills; some agency and alternative options",
+      "Employer Firms: Primary beneficiaries (institutional/arbitrage) \u2014 capture ROI through retention; coordinate knowledge transfer; have multiple alternative talent strategies",
+      "Open-Source Community: Organized agents (organized/mobile) \u2014 create alternative skill pathways that reduce firm-specific lock-in; sunset mechanism through portfolio-driven hiring",
+      "Corporate Training Programs: Institutional actor (institutional/arbitrage) \u2014 maintain performative onboarding and credentialing systems; see own function as degraded (piton perspective)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent lock-in mechanisms as inherent to software engineering expertise development"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts from junior developers through firm-specific skill lock-in, but the extraction is not maximal (would be 0.70+) because some training is genuinely valuable and transferable. Career progression asymmetry is real \u2014 junior developers in high-extraction firms experience depressed wage growth relative to open-market alternatives during lock-in period, typically 2-4 years. The trajectory increase (0.35 \u2192 0.58) reflects accumulation of lock-in mechanisms over time: non-compete agreements, internal credential systems, and relational bonds deepen. Suppression (0.62): High. Multiple barriers reduce exit: (1) Legal/contractual \u2014 non-compete clauses (jurisdictionally variant), non-solicitation agreements, restricted stock vesting. (2) Structural \u2014 firm-specific skills have limited external market value; retraining elsewhere requires months of ramping. (3) Reputational \u2014 internal networks and mentor relationships are firm-specific; departure risks damaging relationships that contribute to career trajectory. (4) Psychological \u2014 many junior developers internalize firm culture and see departure as disloyalty. Suppression remains high even in jurisdictions with weak non-compete enforcement (like California) because structural and psychological barriers persist. Theater ratio (0.55): Moderate-high. Corporate training programs (formal onboarding, internal certifications, mentorship frameworks) are substantially performative: they signal firm investment while creating lock-in. Many onboarding processes could be replaced by well-documented open-source codebases and YouTube tutorials at lower cost. The rise of theater is driven by firms' need to justify internal lock-in as 'investment in growth' rather than 'extraction through mobility barriers.' However, theater is not dominant (would be 0.70+) because some genuine knowledge transfer occurs through mentorship and project experience.",
+    "perspectival_gap": "The constraint demonstrates significant perspectival divergence. The employer firm sees Rope \u2014 pure coordination of training and knowledge transfer with clear ROI. The junior developer sees Snare \u2014 irreversible capital accumulation with no exit. The mid-career engineer sees Tangled Rope \u2014 genuine learning benefits mixed with extraction through suppressed mobility. Open-source community sees Scaffold \u2014 a temporary coordination failure with sunset mechanisms. The corporate training program sees itself as Piton \u2014 performative ritual that persists through inertia as alternatives (self-taught, online learning, GitHub portfolios) provide equivalent value at lower lock-in cost. The civilizational analytical observer risks seeing Mountain \u2014 expertise development in complex systems naturally requires firm-based apprenticeship \u2014 but the structural data reveals this as a false summit naturalizing contingent institutional arrangements (non-competes, credential gatekeeping, mentor relationship tying).",
+    "directionality_logic": "Directionality values differ sharply across perspectives based on structural relationship to the extraction flow. Junior developers (powerless/trapped) experience maximum directionality toward being targets (d \u2248 0.95): they are structurally dependent on the firm for capital accumulation with no alternative labor market. Employer firms (institutional/arbitrage) experience minimum directionality as targets (d \u2248 0.05): they are beneficiaries with multiple exit options (recruit differently, promote from within, outsource, acquire). Mid-career engineers (moderate/constrained) experience intermediate directionality (d \u2248 0.65): they have developed some transferable capital and face surmountable (though costly) exit barriers. Open-source community (organized/mobile) experiences d \u2248 0.35 because they have genuine exit options (skill development outside firm context) and are creating coordination benefits (reducing lock-in for future developers). The constraint's effective extractiveness (\u03c7) scales asymmetrically across these perspectives due to f(d) \u2014 the same underlying constraint produces high experienced extraction for trapped junior developers and negative experienced extraction (subsidy) for beneficiary firms.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The classification as Tangled Rope resolves the mandatrophy by demonstrating that developer training capital genuinely contains both coordination and extraction. The coordination function is real: (1) Firms must invest in training because complex systems require apprenticeship; (2) Junior developers must invest time in domain-specific learning; (3) Mentorship and knowledge transfer are genuine collective goods that increase overall productivity. The extraction function is equally real: (1) Accumulated capital is disproportionately firm-specific, reducing external labor market value; (2) This lock-in depresses wages for trapped junior developers (comparative disadvantage relative to what they could earn if fully mobile); (3) Non-compete enforcement, internal credentialing, and relational bonds create active suppression. The constraint is NOT reducible to pure coordination (Rope) because the extractive mechanisms are not incidental \u2014 they are actively maintained (non-compete clauses, credential gatekeeping, mentor relationship tying) to prevent alternatives. The constraint is NOT reducible to pure extraction (Snare) because genuine training and knowledge transfer occur, creating real productivity gains that all parties benefit from. The Tangled Rope classification forces explicit recognition that beneficial coordination is being weaponized to extract loyalty and mobility costs from junior developers. The scaffold perspective's sunset mechanism (open-source portfolios reducing firm-specific credential value) is consistent with Tangled Rope \u2014 it identifies a pathway to reduce extraction while maintaining coordination benefits."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "geographic_wage_arbitrage",
+      "tech_worker_visa_gatekeeping"
+    ],
+    "dual_formulation_note": "Developer training capital is part of a broader constraint family around labor mobility in technology sector. Upstream constraints include geographic wage arbitrage (causes firm competition for junior talent) and tech worker visa gatekeeping (creates external supply constraints). Downstream constraints include tech worker burnout cycles (high extraction compounds over career arc) and knowledge silos in critical infrastructure (firm-specific lock-in creates systemic risk when experienced developers leave)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

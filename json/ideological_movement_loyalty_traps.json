@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "ideological_movement_loyalty_traps",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ideol"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Ideological Movement Loyalty Traps",
+    "topic_domain": "social/ideological/organizational",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "movement_leadership"
+    ],
+    "victims": [
+      "rank_and_file_adherents",
+      "dissenting_members",
+      "intellectual_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "label": "The Faithful Adherent",
+      "comment": "PERSPECTIVE 1: FAITHFUL ADHERENT (SNARE) \u2014 The rank-and-file member experiences the movement as structurally inescapable because their identity is constituted through ideological commitment. Structural mobility exists (they have economic resources, legal rights, geographic freedom) but identity-lock prevents exercise of exit capacity. Questioning the movement means abandoning the self-narrative that gives life coherence. Maximum experienced extraction because the binding is internal \u2014 the agent carries the suppression with them even if they physically depart."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Moderate Dissident Within",
+      "comment": "PERSPECTIVE 2: MODERATE DISSIDENT (SNARE) \u2014 Members with doubts face high costs to exit: social isolation, loss of community, career damage within movement-aligned institutions, potential ostracism by family members still in the movement. Exit is materially possible but so expensive that suppression remains near-maximum. This agent perceives the constraint as extraction masquerading as communion."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Heretical Intellectual",
+      "comment": "PERSPECTIVE 3: HERETICAL INTELLECTUAL (SNARE) \u2014 Intellectually talented members who develop critiques of core ideology face the most severe trap. They are valuable to the movement (ideological sophistication, publication capacity, institutional credibility) so leadership has maximum incentive to suppress dissent. They are trapped by both material dependencies (career within movement institutions, social network) and epistemic closure (all frameworks for understanding criticism are provided by the movement itself). The constraint appears as pure extraction from this vantage \u2014 their intellectual labor is harvested and their critique is suppressed."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Movement Leadership",
+      "comment": "PERSPECTIVE 4: MOVEMENT LEADERSHIP (ROPE) \u2014 Leadership experiences the constraint as pure coordination: maintaining member loyalty enables the movement's collective action, fund-raising, institutional growth, and cultural influence. From this perspective, loyalty mechanisms are not extraction but the necessary social technology for sustaining group identity and mission. Leadership benefits from arbitrage options \u2014 they can exit the movement, start new ventures, or shift ideological positioning without bearing the identity costs that bind adherents."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Post-Movement Organization",
+      "comment": "PERSPECTIVE 5: POST-MOVEMENT ORGANIZATION (PITON) \u2014 Institutional structures that survive the movement's decline (universities, think tanks, publishing platforms, political parties founded during the movement's ascendancy) maintain the movement's loyalty mechanisms long after their functional justification erodes. These institutions enforce ideological conformity through administrative structures, peer review gatekeeping, and credentialing systems, but the mechanisms have become largely performative \u2014 the original coordinating function is gone, replaced by institutional inertia and theater. Theater ratio (0.55) is moderate because some genuine coordination persists (shared research agenda, institutional stability) alongside degraded extraction (ideological gatekeeping with minimal function)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Captured Within)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER - IDENTITY_LOCKED (SNARE) \u2014 The analyst who has themselves undergone socialization within the movement and whose analytical tools were partly shaped by movement epistemology faces an oracle gap: their capacity to see the constraint is limited by the frame that the constraint itself installs. They possess analytical power (can apply frameworks, conduct scholarship) but are identity-locked through professional identity fusion with movement intellectual traditions. They see the trap from the inside but cannot fully step outside it to measure from elsewhere. This perspective instantiates Theorem 4 (Classical Oracle Gap) \u2014 the native instruments cannot detect the structure that cross-position analysis reveals."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "identity_lock_vs_material_trap",
+      "question": "Is the binding mechanism primarily identity-based (agent believes they cannot be themselves outside the movement) or primarily material (agent faces genuine economic/social/legal barriers to exit)?",
+      "resolution_mechanism": "Post-exit longitudinal tracking: Do members who physically leave report persistent suppression (suggesting internalized identity lock) or relief/freedom (suggesting primary barrier was external)? Comparison of exit barriers for different agent types.",
+      "impact": "If primarily identity-lock: constraint persists even after external barriers are removed; reclassify as identity_locked throughout. If primarily material: removing barriers (alternative communities, economic opportunities, information access) would reduce suppression; reclassify toward constrained.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative weight of identity-based vs material binding mechanisms"
+    },
+    {
+      "id": "extraction_vs_coordination_function",
+      "question": "Does the loyalty mechanism genuinely coordinate collective action (authentic coordination function) or primarily extract conformity and suppress dissent (extraction masquerading as coordination)?",
+      "resolution_mechanism": "Comparative analysis: Do movements with reduced loyalty enforcement (more permissive dissent, lower suppression) lose coordination effectiveness or maintain it? Do post-movement organizations that retain loyalty enforcement (Piton perspective) show functional deterioration?",
+      "impact": "If primarily coordination: reclassify from Snare toward Tangled Rope (mixed function). If primarily extraction: Snare classification confirmed; leadership's Rope perspective reflects ideological capture, not objective coordination.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether loyalty enforcement serves genuine coordination or extraction"
+    },
+    {
+      "id": "movement_lifecycle_stage_sensitivity",
+      "question": "Does the extractiveness of loyalty mechanisms vary systematically with movement lifecycle (ascending/established/declining), and is the variation driven by functional necessity or by leadership entrenchment?",
+      "resolution_mechanism": "Comparative case analysis across movements at different lifecycle stages. Measurement of suppression, theater_ratio, and member satisfaction during each phase. Analysis of whether suppression increases during decline (suggesting extraction persistence) or decreases (suggesting functional erosion).",
+      "impact": "If suppression persists during decline: extractive mechanism confirmed (Piton with degraded function). If suppression decreases: loyalty mechanism may be genuinely functional during ascendancy but becomes vestigial (supporting Piton classification).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Correlation between movement lifecycle stage and loyalty mechanism extractiveness"
+    },
+    {
+      "id": "intellectual_capture_depth",
+      "question": "To what extent are movement members' critical faculties genuinely captured (unable to conceive critiques within their existing frameworks) versus strategically suppressed (able to conceive critiques but unwilling to voice them)?",
+      "resolution_mechanism": "Cognitive anthropology: interviews with exited members about when/how they developed critiques. Did critique emerge suddenly upon exit (genuine capture) or gradually accumulate as suppressed doubt? Analysis of intellectual work produced by members \u2014 does complexity and nuance increase upon exit?",
+      "impact": "If genuinely captured: suppression and trap depth are higher than material barriers suggest; reclassify toward maximum Snare. If strategically suppressed: members retain intellectual capacity but fear exit costs; reclassify toward Snare but with lower internal binding strength.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Depth of cognitive capture vs strategic suppression in movement members"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Ideological movements create powerful loyalty traps by fusing members' identities with movement ideology, creating suppression mechanisms that operate at multiple levels simultaneously: material (career, community, social status), psychological (internalized shame, epistemic closure, cognitive dissonance management), and structural (institutional gatekeeping, information control, boundary enforcement). The constraint exhibits a systematic extractiveness increase over its lifecycle: during ascending phase (t=0-10), the movement genuinely coordinates collective action and member satisfaction is high despite emerging suppression; during established phase (t=10-20), extractiveness accelerates as leadership consolidates power and dissent becomes taboo; during decline phase (t=20-30), extractiveness plateaus as the movement faces external pressures and members begin exit, but leadership intensifies enforcement to maintain dwindling membership. The theater_ratio increases across the interval, indicating that performative loyalty signaling (public declarations, ritual participation, ideological purity testing) gradually replaces genuine coordination as the movement's core function. The constraint satisfies the Snare classification from the victim perspectives (trapped, identity_locked, constrained adherents all experience \u03c7 \u2265 0.66) while leadership's Rope perspective represents genuine coordination benefits from their vantage point. Post-movement institutions (universities, think tanks, political parties) inherit and perpetuate loyalty enforcement mechanisms long after their functional necessity erodes, creating the Piton perspective: degraded extraction through institutional inertia and theater.",
+    "key_agents": [
+      "Rank-and-File Adherents (Faithful): Primary victims (powerless/identity_locked) \u2014 identity fused with movement; experience maximum suppression because exit means self-annihilation",
+      "Moderate Dissident Members: Secondary victims (moderate/constrained) \u2014 developing doubts but facing high social/economic costs to exit; constrained by community embeddedness and career dependencies",
+      "Heretical Intellectuals: Tertiary victims (powerful/trapped) \u2014 intellectually skilled members whose critiques are suppressed through institutional mechanisms; doubly trapped by material dependencies and epistemic closure",
+      "Movement Leadership: Primary beneficiary (institutional/arbitrage) \u2014 experiences loyalty mechanism as coordination function enabling collective action; benefits from member conformity without bearing identity costs",
+      "Post-Movement Institutions: Institutional actors (organized/constrained) \u2014 inherit loyalty enforcement structures from movement's declining phase; maintain gatekeeping and ideological conformity through administrative means",
+      "Analytical Observers (Identity-Locked): Meta-victims (analytical/identity_locked) \u2014 scholars socialized in movement traditions whose analytical tools are partly shaped by movement epistemology; face oracle gap in detecting structural constraints"
+    ],
+    "logic_rationale": "Extractiveness (0.62): High and increasing. The movement extracts conformity, intellectual labor (coded as ideological development), social surplus (community building with movement benefits), and temporal investment. The extractiveness increases during established phase (t=10-20) as leadership consolidates power and suppression intensifies. The moderate initial extractiveness (0.35) reflects that during ascending phase, the movement provides genuine coordination benefits (shared purpose, community, institutional advancement) that partially compensate for extraction. By established phase (0.50), benefits degrade as hierarchy crystallizes. By decline phase (0.62), extraction outweighs coordination but leadership intensifies mechanisms rather than relaxing them. Suppression (0.68): High and structural. Multiple overlapping suppression mechanisms: material (loss of career, community, status upon exit); psychological (identity fusion makes exit unthinkable); informational (movement epistemology limits available critiques); social (public dissent triggers ostracism). The suppression operates at multiple temporal scales: immediate (public criticism triggers immediate social penalty), biographical (long-term career/community losses), generational (second-generation members socialized entirely within movement epistemology). Theater ratio (0.55): Moderate and increasing. During ascending phase, loyalty mechanisms genuinely serve coordination (rallies build momentum, ideological education creates shared understanding). By established phase, loyalty mechanisms become increasingly performative: public rituals of ideological conformity, purity testing, symbolic gestures replace substantive collective action. The theater increase from 0.25 to 0.55 reflects Goodhart drift \u2014 loyalty metrics (participation rate, public declarations, ideological purity) become goals in themselves, replacing the original coordinating function.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival gap because it appears as pure coordination (Rope) from leadership and as pure extraction (Snare) from adherents. Leadership genuinely benefits from loyalty mechanisms and experiences them as necessary coordination technology. Adherents genuinely suffer from the same mechanisms and experience them as extraction. This is not a disagreement about facts but a structural disagreement about the constraint's function \u2014 both parties are correct about their experience. The Piton perspective (post-movement institutions) reveals how loyalty mechanisms persist through institutional inertia long after their coordinating function erodes. The identity_locked Analytical Observer perspective reveals the oracle gap: analysts who were socialized in movement epistemology may be unable to detect the extractive structure of the very mechanisms they are studying, because the framework for critique has itself been shaped by those mechanisms. The emergence of the heretical intellectual perspective (powerful/trapped) is diagnostic: movement elites who develop capacity for criticism discover that their structural position makes suppression most severe, not least severe. This inverts the typical power hierarchy and reveals that the trap is structural, not merely institutional.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from the agent's structural position relative to the extraction flow. Powerless adherents with identity_locked exit face maximum d (0.92-0.98): their identity constitutes the constraint, their exit means self-dissolution, their options are none. Moderate members with constrained exit face high d (0.80-0.88): material barriers are real and external, but cognitive/psychological barriers are internalized. Powerful intellectuals with trapped exit face high d (0.85-0.95) despite their power: material dependencies and epistemic closure cancel power advantage. Leadership with institutional power and arbitrage options faces low d (0.08-0.20): they can exit, they benefit from the constraint, they experience it as coordination. The directionality derivation chain follows: victim status + identity_locked or trapped or constrained exit \u2192 high d \u2192 high f(d) \u2192 high experienced extractiveness (\u03c7). Beneficiary status + arbitrage exit \u2192 low d \u2192 low/negative f(d) \u2192 low/negative experienced extractiveness (\u03c7). Post-movement institutional actors with constrained exit but ambiguous victim/beneficiary status derive d \u2248 0.45-0.55 reflecting their institutional position outside the original extraction flow but still enforcing its mechanisms. The analytical observer with identity_locked exit derives d \u2248 0.72: analytical power does not escape the bind imposed by identity-lock, so experienced extractiveness remains high despite cognitive capacity to map the structure.",
+    "mandatrophy_analysis": "RESOLVED: The mandatrophy is resolved by recognizing that ideological movement loyalty traps are genuine Snare constraints (not misclassified coordination mechanisms) whose extraction persists through identity-lock and institutionalization long after their coordinating function erodes or becomes secondary. Leadership's Rope classification is not a competing claim about the constraint's 'true' nature but a legitimate perspectival reading from the beneficiary position. The constraint is simultaneously Snare (from victim perspectives), Rope (from leadership), and Piton (from post-movement institutions). The analytical observer's risk is not false classification but oracle gap: socialization within movement epistemology prevents the analyst from fully stepping outside the frame needed to measure the constraint from multiple positions. The measurement data supports Snare classification: extractiveness increases faster than theater_ratio during middle phase, suggesting that extraction outpaces performative activity (ruling out pure theater/Piton classification). Suppression remains high and structural across all phases, supporting Snare over Rope. The heretical intellectual perspective clinches the classification: the agent with maximum power to resist (intellectual capacity, institutional credibility) discovers maximum suppression (epistemic closure plus material dependency), indicating that extraction is structural rather than contingent on agent power."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "epistemic_closure_mechanisms",
+      "organizational_cult_dynamics",
+      "ideological_capture_in_institutions"
+    ],
+    "dual_formulation_note": "Ideological movement loyalty traps decompose into three structurally distinct constraints: (1) identity_coordination at movement level (low \u03b5 during ascendancy, high \u03b5 during decline); (2) epistemic_closure at individual cognitive level (\u03b5 \u2248 0.55, moderate but persistent); (3) institutional gatekeeping in post-movement organizations (\u03b5 \u2248 0.45, Piton). Each constraint has its own measurement trajectory and benefits from separate story. This story covers the primary loyalty trap constraint at movement scale; linked stories address cognitive and institutional mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.88
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "header": {
+    "constraint_id": "platform_data_portability_mandate",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pdpm"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Platform Data Portability Mandate (GDPR, DMA, Digital Markets Act)",
+    "topic_domain": "digital_economy/regulatory_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "data_subject_individuals",
+      "competitive_entrants"
+    ],
+    "victims": [
+      "platform_switching_friction",
+      "regulatory_compliance_burden"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Individual User",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL USER (SNARE) \u2014 Despite the mandate's promise of data freedom, the user remains trapped in the platform ecosystem through switching costs (data fragmentation, network effects, habit), identity lock (social graph, reputation), and information asymmetry about how to actually exercise portability rights. The mandate extracts promise of freedom without delivering substantive exit capacity. Maximum extraction from a powerless, trapped agent with no realistic alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Large Platform (Incumbent)",
+      "comment": "PERSPECTIVE 2: LARGE PLATFORM INCUMBENT (TANGLED ROPE) \u2014 Genuine coordination function: the mandate forces data standards, API contracts, and interoperability definitions that enable ecosystem coordination at scale. But these coordination benefits are asymmetrically distributed \u2014 the incumbent retains algorithmic lock-in, network effects, and user habit lock while forced to open data export. Active enforcement required; benefits flow to the platform through coordination while costs concentrate on competitors and powerless users."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Competitive Entrant",
+      "comment": "PERSPECTIVE 3: COMPETITIVE ENTRANT (ROPE) \u2014 Organized challengers (well-funded startups, regional platforms, regulated financial institutions) experience the mandate as pure coordination \u2014 data portability removes the lock-in barrier that prevented competitive entry. This is coordination with benefit-cost symmetry from the entrant's perspective: lower switching costs enable genuine competition. No extraction experienced; the entrant perceives legitimate access to the playing field."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulatory Authority",
+      "comment": "PERSPECTIVE 4: REGULATORY AUTHORITY (SCAFFOLD) \u2014 The mandate is explicitly temporary architecture for transitioning from platform moat-based competition to API-based competition. Sunset mechanism: as competitive entrants build alternative ecosystems (financial data aggregators, social media federations, messaging interoperability), the regulatory mandate's coercive force becomes unnecessary \u2014 markets self-coordinate through open standards. The authority enforces actively now (high suppression) but intends suppression to decline over the compliance window as competitive alternatives mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Compliance Theater",
+      "comment": "PERSPECTIVE 5: COMPLIANCE THEATER (PITON) \u2014 Platforms implement technically correct data export formats (JSON, CSV) and APIs that nominally satisfy the mandate but often export data in forms unusable without the platform's ecosystem. The ritual of 'data portability' persists while the actual function (enabling user choice) remains limited. Theater ratio high because compliance is performative \u2014 formal adherence to the letter while circumventing the spirit through technical choices (data fragmentation, proprietary schemas, export delays). This is degraded regulation maintained through institutional inertia and ambiguous metrics."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Market Platform",
+      "comment": "PERSPECTIVE 6: MID-MARKET PLATFORM (TANGLED ROPE) \u2014 Regional and smaller platforms (financial data aggregators, job boards, niche social networks) face genuine coordination gain from standardized data formats but also face compliance burden that erodes margins. They can exit the regulated market (constrained cost is real) but do not because the aggregator's business model depends on data inflow. Mixed coordination and extraction \u2014 they benefit from user lock-in prevented by competitors' data export, but suffer compliance costs not borne equally by incumbents with integrated infrastructure."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal perspective, the mandate appears to reflect an immutable property of digital information: data cannot be both portably extracted and asymmetrically locked \u2014 there is no technical solution to prevent duplicative access once export is enabled. The observer mistakes a contingent policy choice (mandatory export) for a law of information physics. However, the structural data reveals this is a false summit: the implementation details (export timing, schema standardization, API stability) are entirely contingent regulatory choices, not immutable properties. The appearance of natural law masks the selection of which incompatibility gets regularized versus which gets permitted."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "portability_vs_privacy_tension",
+      "question": "Does mandatory data export inherently conflict with privacy protection, or can privacy be maintained through technical separation and consent workflows?",
+      "resolution_mechanism": "Analysis of data breach correlation post-export mandates; identification of whether portability export formats reduce ability to prevent unauthorized access; testing of consent mechanisms as genuine privacy controls vs performative consent.",
+      "impact": "If inherent conflict: mandate trades privacy for competition (snare severity increases). If separable: privacy framework can co-exist with portability (tangled rope severity decreases, coordination function strengthens).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether mandatory data export and privacy protection are technically compatible"
+    },
+    {
+      "id": "usable_portability_threshold",
+      "question": "What percentage of users must successfully use portability to constitutively shift from snare (trapped users) to rope (mobile users)?",
+      "resolution_mechanism": "Population surveys of actual data export behavior; tracking of users who download data vs users who successfully switch platforms; comparison of export completion rates across demographic groups.",
+      "impact": "If < 5% users switch: mandate remains snare despite formal rights (theater without function). If > 25% users switch: mandate becomes genuine rope (competitive friction reduced). Threshold drives classification sensitivity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Portability usage rate threshold for classification change"
+    },
+    {
+      "id": "incumbent_accommodation_strategy",
+      "question": "Do large platforms accommodate portability through integrated alternatives (single-sign-on, federated identity) that preserve their network effects while formally complying, or do they resist portability through technical friction?",
+      "resolution_mechanism": "Comparative analysis of platform data export infrastructure; tracking of how many entrants successfully use exported data vs how many build on incumbent federation APIs; measurement of switching cost change over time for users exporting vs users not exporting.",
+      "impact": "If incumbent accommodates: tangled rope is stable (coordination + controlled extraction). If incumbent resists: snare severity increases and mandate's enforcement costs rise (regulatory war).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether incumbent platforms accommodate or resist portability"
+    },
+    {
+      "id": "competitive_entrant_data_lock",
+      "question": "Once entrants acquire user data via portability, do they create their own lock-in (preventing further switching), making the mandate a one-time friction reduction rather than enabling genuine competition?",
+      "resolution_mechanism": "Longitudinal tracking of switching costs from entrant platforms; measurement of data export friction in entrant platforms; analysis of whether regulatory scope expands to entrants over time.",
+      "impact": "If entrants lock-in equivalently: mandate is temporary scaffold (friction shifts but recurs at new entrant). If entrants remain interoperable: mandate enables genuine competitive transformation (rope at scale). This distinction drives network-level classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether entrant platforms create equivalent lock-in"
+    },
+    {
+      "id": "compliance_cost_concentration",
+      "question": "Do compliance costs concentrate on small platforms (making mandate a form of regulatory burden extraction) or distribute proportionally (making it a legitimate coordination investment)?",
+      "resolution_mechanism": "Cost accounting across platform size tiers; measurement of engineering effort and infrastructure required per user; analysis of whether small platforms absorb percentage-wise higher costs than incumbents.",
+      "impact": "If concentrated: mid-market platforms experience snare-like extraction masked as coordination (tangled rope severity increases). If proportional: tangled rope is genuinely hybrid (lower extractiveness, higher coordination).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether compliance costs concentrate on small platforms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "The platform data portability mandate (GDPR Article 20, DMA Article 6, equivalent national laws) represents an attempt to reduce lock-in and enable competition by requiring platforms to export user data in portable, machine-readable formats. The mandate operates through seven distinct structural perspectives, revealing tensions between its stated coordination goal (reducing switching costs) and its actual effects (preserving asymmetric network effects while adding compliance burden). The constraint exhibits increasing theater ratio over time (0.42 \u2192 0.62), indicating growing divergence between formal compliance and functional portability \u2014 platforms export data while simultaneously making that data difficult to operationalize outside their ecosystem. Extractiveness has risen from 0.35 to 0.56 as implementation has revealed that exportable data without accompanying algorithmic, reputational, and social graph access remains largely non-portable. The mandate is thus neither pure coordination (Rope) nor pure extraction (Snare), but rather a hybrid that redistributes who bears which costs.",
+    "key_agents": [
+      "Individual Users: Primary victims (powerless/trapped) \u2014 promised portability but face identity lock, social graph lock, and information asymmetry about exercise of rights",
+      "Large Incumbent Platforms: Primary beneficiaries (powerful/arbitrage) \u2014 forced to open data exports but retain algorithmic, network effect, and reputation lock-in; experience mandate as coordination with controlled extraction",
+      "Competitive Entrants: Secondary beneficiary (organized/mobile) \u2014 experience mandate as pure coordination; reduced switching costs enable market entry",
+      "Regulatory Authority: Institutional enforcer (institutional/constrained) \u2014 implements mandate with explicit sunset logic; intends suppression to decline as competitive alternatives mature",
+      "Mid-Market Platforms: Secondary victim (moderate/constrained) \u2014 face genuine coordination benefits from standardized data formats but absorb disproportionate compliance burden",
+      "Compliance Infrastructure: Performative ritual (institutional/arbitrage) \u2014 data export implementations satisfy letter of law while circumventing spirit through technical choices"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high and rising. The mandate initially had lower extractiveness (0.35) when viewed as a regulatory intervention against lock-in. But implementation has revealed that exportable data without algorithmic, social, and reputational infrastructure is minimally useful \u2014 users who download their data largely cannot operationalize it on alternative platforms. The rising trajectory (0.35 \u2192 0.56) reflects Goodhart drift: as platforms optimize compliance to the letter (format standards, export speed) rather than the spirit (enabling actual switching), the mandate's extractive character becomes visible. The extraction is not from the typical sense of value theft, but from the promise of freedom \u2014 users are promised portability they cannot practically use. Suppression (0.65): High. Barriers to using exported data include: (1) lack of receiving platform infrastructure to accept and integrate the data, (2) loss of algorithmic curation and recommendations upon export, (3) social graph incompleteness (can export contacts but not network effects), (4) procedural friction in the export process itself, (5) information asymmetry about how to exercise rights. Theater ratio (0.58, rising to 0.62): Moderate-high and rising. The mandate creates performative compliance \u2014 platforms implement correct formats and APIs while designing around functional portability through technical choices (export delays, schema ambiguity, lack of data completeness guarantees). The theater has increased over time as compliance infrastructure has matured but switching costs have not declined accordingly.",
+    "directionality_logic": "Beneficiaries (incumbent platforms, regulatory authority) benefit from mandate's coordination aspects: standardized formats, API contracts, and interoperability definitions enable efficient ecosystem scaling. The incumbent's arbitrage exit option and powerful status derive low d \u2248 0.15 \u2192 negative \u03c7 contribution. Victims (users, mid-market platforms) bear costs: users face switching cost persistence and procedural friction; mid-market platforms face compliance burden. Users' trapped status with powerless power derives maximum d \u2192 maximum \u03c7. Mid-market platforms' constrained exit (market dependency) derives moderate-high d \u2192 moderate-high \u03c7. The regulatory authority's role as enforcer gives it institutional power with constrained exit relative to the market (it must maintain the mandate but cannot force compliance without resource), deriving lower d than the regulated parties. The compliance theater perspective receives institutional power with arbitrage exit because compliance infrastructure (consulting, auditing, export-as-a-service) is a market opportunity.",
+    "perspectival_gap": "This constraint demonstrates how the same regulatory intervention produces radically different classification outcomes from different structural positions. The individual user sees a Snare \u2014 promised freedom that proves non-functional due to switching costs. The incumbent platform sees a Tangled Rope \u2014 genuine coordination benefit (standardized data formats enable ecosystem coordination) combined with controlled extraction through preserved lock-ins. The entrant sees a Rope \u2014 pure coordination solving the barrier to entry. The regulator sees a Scaffold \u2014 explicitly temporary coercion with sunset logic as competitive alternatives mature. The mid-market platform sees a Tangled Rope from a different angle \u2014 coordination benefits plus disproportionate compliance burden. The analytical observer risks seeing a Mountain \u2014 that digital platforms inherently create lock-in and portability cannot overcome this. But the structural data reveals this as a false summit: the lock-in mechanisms are contingent policy choices (algorithmic curation, social graph integration, reputation portability), not laws of information physics. The mandate's failure to reduce switching costs derives from incomplete scope (exporting data is not exporting algorithms, relationships, or recommendations), not from natural law.",
+    "mandatrophy_analysis": "The mandate resolves the mandatrophy by distinguishing coordination function from extraction mechanism. The genuine coordination function exists: standardized data formats, API contracts, and interoperability definitions enable ecosystem coordination and reduce friction for competitive entrants. But this coordination benefit concentrates on powerful platforms and organized entrants, while the extraction (compliance burden, false promise of portability) concentrates on powerless users and mid-market platforms. The mandate is neither purely extractive (it does enable some genuine competition) nor purely coordinative (it preserves asymmetric lock-ins). The rising theater ratio reveals Goodhart drift: platforms optimize compliance metrics (export format standards, export speed) rather than mandate intent (actual user switching). The tangled rope classification is diagnostically correct \u2014 the constraint is structurally hybrid with asymmetric benefit distribution. The false natural law perspective (Mountain) is the tempting but incorrect frame: 'lock-in is inherent to platforms.' The mandate's limited success derives not from the inevitability of digital networks but from the regulatory scope covering data export while leaving algorithmic, social, and reputational lock-in mechanisms untouched."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_transparency_mandate",
+      "social_graph_interoperability",
+      "platform_network_effects"
+    ],
+    "dual_formulation_note": "The data portability mandate decomposes into distinct constraints: (1) data export technical standard (lower \u03b5, pure coordination when implemented correctly), (2) user interface friction for exercising rights (higher \u03b5, snare-like extraction through procedural obscurity), (3) downstream platform lock-in (independent \u03b5, separate constraint). This story focuses on the mandate's aggregate effect across all three. The upstream constraints are the technical and legal requirements; the downstream constraints are the network effects that portability fails to overcome."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.28
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "platform_lock_in",
+      "network_effects_asymmetry"
+    ]
+  }
+}

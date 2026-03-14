@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "credit_channel_procyclicality",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ccproc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Credit Channel Procyclicality",
+    "topic_domain": "macroeconomic_finance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_financial_institutions",
+      "institutional_investors"
+    ],
+    "victims": [
+      "small_medium_enterprises",
+      "household_borrowers",
+      "real_economy_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Small Borrower in Downturns",
+      "comment": "PERSPECTIVE 1: SMALL BORROWER (SNARE) \u2014 During economic downturns, credit availability collapses precisely when borrowers most need it. Access to credit is essential to business continuity, yet the mechanism withdraws it systematically. No exit option exists: firms cannot manufacture their own credit, and alternative funding sources (equity, trade credit) are equally procyclical. Bears full extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Household Borrower Across Cycles",
+      "comment": "PERSPECTIVE 2: HOUSEHOLD BORROWER (TANGLED ROPE) \u2014 Benefits from credit access during expansions (enables consumption smoothing, housing purchases). But faces severe constraints during contractions: tightened lending standards, higher rates, reduced access to refinancing. Coordination function (credit enables consumption) is real; asymmetric extraction is real (forced deleveraging during downturns damages household welfare disproportionately)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Large Financial Institution",
+      "comment": "PERSPECTIVE 3: LARGE FINANCIAL INSTITUTION (ROPE) \u2014 Experiences credit procyclicality as a risk coordination mechanism: reducing exposure during downturns protects bank capital and profitability. The constraint aligns bank incentives with prudent risk management. Access to central bank backstop (discount window, emergency lending) provides arbitrage exit \u2014 banks can offload risk during crises. Net beneficiary with exit option."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Regulatory Authority",
+      "comment": "PERSPECTIVE 4: REGULATORY AUTHORITY (TANGLED ROPE) \u2014 Coordinates financial stability through capital requirements and stress testing (genuine coordination function). But enforcement creates procyclicality: binding capital constraints force deleveraging during downturns, amplifying credit collapse. Regulators lack perfect information about tail risks and face political pressure during crises. Constrained by institutional constraints to their own mandate."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Macroprudential Stabilizer",
+      "comment": "PERSPECTIVE 5: MACROPRUDENTIAL POLICY (SCAFFOLD) \u2014 Countercyclical capital buffers (Basel III framework, dynamic provisioning rules) represent temporary institutional scaffolding designed to suppress procyclicality. Sunset clause is embedded: as capital requirements become sufficiently countercyclical, traditional procyclicality should decline. Exit path exists through policy coordination (build sufficient buffers in expansions, release them in downturns)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Theoretical Natural Feedback",
+      "comment": "PERSPECTIVE 6: NATURAL FEEDBACK NARRATIVE (PITON) \u2014 The claim that credit procyclicality is a natural, inherent feedback mechanism in credit markets (credit conditions reflect fundamentals; fundamentals worsen in downturns; credit tightens naturally) is largely performative. The narrative obscures institutional amplification: regulatory constraints, risk-weighting, mark-to-market accounting, and funding pressures create amplification far beyond what fundamentals alone would predict. Persists as a neutral description of market mechanics despite being substantially a contingent institutional artifact."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Asymmetric Information View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational view, some credit procyclicality may be inherent to information asymmetry: lenders cannot fully verify borrower quality, so they rely on collateral values and backward-looking default rates. In downturns, collateral values fall and default rates spike, making lending rationally riskier. However, this perspective risks naturalizing institutional structures (collateral-based lending, regulatory constraints, mark-to-market) as immutable laws. The engine's false summit detector identifies this risk."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "inherent_vs_institutional_amplification",
+      "question": "What fraction of observed credit procyclicality is inherent to information asymmetry versus amplified by regulatory, accounting, and funding structure constraints?",
+      "resolution_mechanism": "Comparative analysis of credit cycles across regulatory regimes with different capital requirements, provisioning rules, and mark-to-market accounting; decomposition of credit supply shocks into information-driven vs constraint-driven components using high-frequency bank lending data",
+      "impact": "If inherent fraction > 70%: mountain classification is justified; procyclicality is fundamental to credit markets. If < 40%: snare classification is justified; procyclicality is primarily an institutional extraction mechanism. Intermediate values support tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Inherent versus institutional amplification of credit procyclicality"
+    },
+    {
+      "id": "countercyclical_policy_effectiveness",
+      "question": "Can macroprudential policy (countercyclical buffers, dynamic provisioning) actually suppress credit procyclicality without creating new distortions or shifting risk to unregulated sectors?",
+      "resolution_mechanism": "Empirical evaluation of Basel III implementation across jurisdictions; measurement of credit cycle amplitude pre- and post-countercyclical framework adoption; tracking of regulatory arbitrage and shadow banking growth in response to tighter regulation",
+      "impact": "If effective: scaffold perspective validated \u2014 policy provides genuine exit path with sunset. If ineffective or generates risk shifting: procyclicality persists under new mechanism; tangled_rope classification persists. If generates catastrophic unintended consequences: snare classification from policy-maker perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of macroprudential countercyclical policy"
+    },
+    {
+      "id": "large_institution_arbitrage_availability",
+      "question": "Are central bank backstops (discount window, emergency lending facilities) genuinely available to all financial institutions, or only to systemically important large banks?",
+      "resolution_mechanism": "Historical analysis of emergency lending facility access during crises (2008 financial crisis, COVID-19 shock); comparison of central bank lending facility terms across institution sizes; measurement of de facto access barriers vs formal eligibility rules",
+      "impact": "If accessible to all: rope classification for all institutional perspectives holds. If restricted to large institutions: snare/tangled_rope classification from smaller institution perspective; institutionalizes size-based extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Central bank backstop access across institution sizes"
+    },
+    {
+      "id": "fiscal_stabilization_substitutability",
+      "question": "Can fiscal policy (automatic stabilizers, transfer programs) substitute for credit availability during downturns, or does credit channel procyclicality persist regardless of fiscal accommodation?",
+      "resolution_mechanism": "Comparative analysis of credit cycles in economies with strong automatic stabilizers vs weak ones; measurement of household consumption smoothing capability via fiscal transfers vs credit access; decomposition of employment/output losses in credit crunches with and without fiscal offset",
+      "impact": "If fiscal can substitute: procyclicality becomes a coordination problem solvable through policy coordination (scaffold/rope). If fiscal cannot substitute: procyclicality remains a structural constraint even with active stabilization (snare persists from borrower perspective).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fiscal versus credit channel in cycle mitigation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Credit channel procyclicality describes the mechanism by which credit supply systematically contracts during economic downturns and expands during upturns, amplifying business cycle fluctuations. Banks reduce lending precisely when borrowers most need credit, and increase lending when growth is already strong. This constraint exhibits all six DR classification types depending on observational position. For small borrowers trapped without access to alternative funding, the constraint appears as pure extraction (Snare) \u2014 they bear all costs of credit withdrawal. For large institutions with central bank backstops, it appears as coordination (Rope) \u2014 they manage risk rationally. For regulators, it appears as an institutional amplification mechanism they are simultaneously enforcing and trying to suppress (Tangled Rope). For macroprudential policy frameworks, it appears as a temporary problem being solved through countercyclical buffers (Scaffold). For the view that credit procyclicality is a natural market feedback, it appears as institutional inertia wearing the mask of neutrality (Piton). For the analytical observer, it risks appearing as an immutable natural law (Mountain) when it is actually contingent on specific institutional structures.",
+    "key_agents": [
+      "Small and Medium Enterprises (SMEs): Primary victims (powerless/trapped) \u2014 depend on credit access; face collapsing availability during downturns; no alternative funding sources available at scale",
+      "Household Borrowers: Secondary victims (moderate/constrained) \u2014 benefit from credit expansion but forced into deleveraging during contractions; face higher rates, tighter standards, refinancing barriers",
+      "Large Financial Institutions: Primary beneficiaries (institutional/arbitrage) \u2014 reduce exposure during downturns to protect capital; access central bank backstops; experience procyclicality as risk management",
+      "Regulatory Authorities: Institutional actor (organized/constrained) \u2014 enforce capital requirements and stress tests that mechanically amplify procyclicality; constrained by mandate and information limits",
+      "Macroprudential Policy Framework: Organized agents (organized/mobile) \u2014 countercyclical capital buffers designed to suppress procyclicality; represents exit path through policy coordination",
+      "Real Economy Stability: Abstract victim (powerless/trapped) \u2014 aggregate output volatility is amplified by credit procyclicality; bears long-term cost of suppressed potential output during downturns"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint systematically channels credit away from borrowers with highest need (during downturns) and toward those with lowest need (during upturns). This represents significant misallocation. However, extractiveness is not maximal (0.85+) because: (1) some of the procyclicality reflects rational response to real risk increases, and (2) regulatory interventions are beginning to offset the mechanism. The 0.58 value reflects net extraction after accounting for these mitigation mechanisms. Suppression (0.62): High. Borrowers facing credit crunches have limited exit options: they cannot manufacture credit, equity raising is procyclical (stock markets crash in downturns), trade credit from suppliers tightens, and informal credit markets may be unavailable or at usurious rates. Large institutions have arbitrage exit (central bank lending facilities); small borrowers do not. Suppression reflects this asymmetry. Theater ratio (0.45): Moderate-low. Unlike some constraints, procyclicality has genuine functional content \u2014 banks genuinely do need to adjust lending based on changing risk conditions. The theater comes from the narrative that procyclicality is purely a natural market feedback when it is actually substantially amplified by regulatory, accounting, and funding structure constraints. The constraint is not primarily performative but its naturalization in policy discourse is.",
+    "directionality_logic": "Each agent's experienced extractiveness (chi) is derived from base extractiveness (\u03b5=0.58), their directionality value (d), the scope modifier, and their power level. Small borrowers with trapped exit experience high d (0.92-0.95) and high f(d); large institutions with arbitrage exit experience low d (0.08-0.15) and negative f(d). The scope modifier \u03c3(S) is 1.0 (national scope of credit regulation) to 1.1-1.2 (global financial markets). For trapped agents at global scope, effective extraction \u03c7 reaches 0.85-0.90 (snare territory). For institutional beneficiaries, \u03c7 stays in rope territory through the arbitrage exit reducing d. The gap between 0.90 (snare) and 0.15 (rope) from the same base \u03b5=0.58 demonstrates how exit options determine experienced constraint intensity.",
+    "perspectival_gap": "The original research group sees coordination (Rope) \u2014 they are solving the legitimate problem of communicating findings. The open science coalition sees a temporary problem with a sunset (Scaffold) \u2014 arXiv and registered reports are building alternative pathways. The journal editorial system sees its own degraded ritual (Piton) \u2014 peer review persists through inertia, not function. Replication groups see mixed coordination and extraction (Tangled Rope) \u2014 the system both enables and constrains their work. The field's epistemic reliability sees pure extraction (Snare) \u2014 premature claims contaminate the literature with no self-correction mechanism. The civilizational analytical observer risks seeing an immutable natural law (Mountain) \u2014 verification lag is inherent to science \u2014 but the structural data reveals this as a false summit: the contingent institutional arrangements (career incentives, funding concentration, publication bias) are not laws of nature.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: Credit procyclicality is a genuine tangled rope, not a snare masquerading as rope. The genuine coordination function is credit allocation according to perceived risk \u2014 banks need to adjust loan portfolios when risk conditions change. The genuine extraction is the asymmetry in who bears the cyclical adjustment costs: large institutions buffer through capital and central bank access; small borrowers buffer through output contraction. The mandatrophy is resolved by recognizing that procyclicality simultaneously solves a real coordination problem (risk-adjusted lending) and creates real asymmetric extraction (cyclical amplification of borrower distress). Policy solutions (countercyclical buffers, automatic stabilizers, broader credit access) can reduce extraction without eliminating coordination. The constraint is not inherently a snare that should be eliminated, but a tangled rope that should be rebalanced to reduce extraction while preserving coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "financial_accelerator_mechanism",
+      "collateral_feedback_loop"
+    ],
+    "dual_formulation_note": "Credit procyclicality is downstream of financial accelerator dynamics and collateral feedback loops, but represents a distinct structural constraint. The financial accelerator (net worth \u2192 credit access \u2192 investment \u2192 output \u2192 net worth) has its own extractiveness reflecting the amplification mechanism; credit procyclicality captures the distributional asymmetry of who bears cyclical adjustment costs."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.22
+    }
+  ]
+}

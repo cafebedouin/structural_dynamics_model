@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "founder_equity_dilution_dynamics",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Founder Equity Dilution Dynamics in Venture-Backed Startups",
+    "topic_domain": "venture_capital/corporate_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "venture_capital_firms",
+      "later_stage_investors"
+    ],
+    "victims": [
+      "founder_wealth_claims",
+      "founder_decision_control"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Bootstrapped Founder",
+      "comment": "PERSPECTIVE 1: BOOTSTRAPPED FOUNDER (SNARE) \u2014 Founder who has no alternative capital sources faces dilution as coercive extraction with no meaningful exit. Each funding round is presented as necessary for survival, suppressing perceived alternatives. Trapped both by capital dependence and by the temporal pressure of competitive markets. No arbitrage available \u2014 refusal of dilution results in failure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Optioned Founder",
+      "comment": "PERSPECTIVE 2: OPTIONED FOUNDER (TANGLED ROPE) \u2014 Founder with options to dilute (strategic partnership, alternative investors, slower growth) experiences the dilution constraint as mixed. Coordination function exists: venture funding genuinely accelerates reach, hiring, and market validation. But asymmetric extraction remains: founder's percentage ownership decreases while investor leverage increases. Constrained by realistic exit costs (switching investors carries risk, slower growth may fail to achieve market opportunity), not trapped."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Venture Capital Firm",
+      "comment": "PERSPECTIVE 3: VENTURE CAPITAL FIRM (ROPE) \u2014 For institutional investors with arbitrage (deploy capital to multiple startups, exit via IPO/acquisition, govern through board seats), the dilution constraint is pure coordination. Founder dilution aligns incentives across capital rounds, ensures follow-on investment commitment, and triggers replacement of underperforming founders. The VC experiences this as governance coordination, not extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Serial Founder",
+      "comment": "PERSPECTIVE 4: SERIAL FOUNDER (TANGLED ROPE) \u2014 Founder with track record and network can negotiate better terms, bring co-investors to reduce dilution per round, and switch between projects. More mobile than bootstrapped founder, but still subject to asymmetric information (VC knows the dilution playbook better), asymmetric bargaining power (VC controls capital flow in their geographic market), and structural lock-in (dilution has already happened in previous rounds, sunk cost). Some agency, significant extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The Regulatory Reform Coalition",
+      "comment": "PERSPECTIVE 5: REGULATORY REFORM COALITION (SCAFFOLD) \u2014 Organized founders (founder associations, pro-equity reform advocates) see the dilution constraint as a temporary institutional design problem with a sunset clause. SAFE notes, equity-lite funding models, revenue-share agreements, and secondary markets (allowing early-stage liquidity without dilution) represent exit pathways from the VC dilution paradigm. These mechanisms are building alternatives to traditional Series A dilution. The coalition has agency and perceives a maturation timeline (10-15 years) over which the constraint's function becomes optional."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Standard Venture Term Sheet",
+      "comment": "PERSPECTIVE 6: STANDARD VENTURE TERM SHEET (PITON) \u2014 The mechanical dilution formula in venture (1x liquidation preference, cumulative dividends, participating preferred, anti-dilution clauses) persists largely through institutional habit despite continuous critique. Fund managers know the terms are suboptimal for founder incentives but use them because (a) they protect VC downside, (b) competitors use them, (c) departing from norms creates due-diligence friction. The constraint is maintained by theatrical standardization: 'this is market standard' becomes a self-fulfilling prophecy. Theater ratio reflects that much of the dilution justification is post-hoc rationalization rather than optimal governance."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Capital Constraint View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / CAPITAL CONSTRAINT VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, some dilution is inherent to capital formation: new money must claim some claim on future value, and founder ownership percentages necessarily decrease when capital is raised. This perspective sees the dilution constraint as immutable law of capital markets. However, the structural data reveals this as a false summit: the dilution magnitude, structure (participating preferred vs non-), and use of anti-dilution clauses are all contingent institutional choices, not inevitable consequences of capital formation."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "founder_alternative_capital_availability",
+      "question": "How much of founder suppression derives from genuine unavailability of alternative capital sources versus institutional habit/information asymmetry about alternatives?",
+      "resolution_mechanism": "Comparison of founder outcomes across regulatory regimes with different restrictions on VC dilution structures; analysis of founder choice distribution when alternative capital sources (angel networks, corporate VC, revenue-based financing) are equally visible and accessible",
+      "impact": "If primarily genuine scarcity: suppression value (0.65) is structurally accurate. If primarily information asymmetry: true suppression is lower and the constraint is more purely extractive (snare) than mixed (tangled rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether founder suppression is from actual capital scarcity or information asymmetry"
+    },
+    {
+      "id": "dilution_alignment_vs_extraction",
+      "question": "Do ownership dilution mechanisms in venture actually align founder incentives with investor returns, or do they primarily enable investor leverage and founder replacement?",
+      "resolution_mechanism": "Longitudinal analysis of founder retention rates, company performance, and investor returns by dilution structure (founder-friendly vs investor-friendly terms); isolation of incentive alignment effect from selection effect (better founders raise better terms)",
+      "impact": "If alignment dominant: dilution is coordination mechanism (Rope from VC perspective, Tangled Rope from founder perspective). If leverage/replacement dominant: dilution is extraction mechanism (Snare from founder perspective).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether dilution aligns incentives or enables investor leverage"
+    },
+    {
+      "id": "secondary_market_viability_timeline",
+      "question": "How quickly will secondary markets and equity-lite funding models (SAFE, revenue-share, employee liquidity platforms) eliminate the necessity of massive single-round dilution?",
+      "resolution_mechanism": "Tracking adoption rates of alternative funding structures; measurement of founder outcomes on SAFE-only vs Series A paths; analysis of secondary market liquidity development for early-stage founders",
+      "impact": "If viable sunset by 2030: scaffold perspective is accurate and the constraint has a real exit path. If secondary markets remain marginal: scaffold is aspirational and the constraint persists as tangled rope / snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for alternative capital structures to replace Series A dilution"
+    },
+    {
+      "id": "anti_dilution_clause_necessity",
+      "question": "Are anti-dilution clauses genuinely necessary to protect investor downside, or do they primarily amplify founder dilution and create down-round extraction spirals?",
+      "resolution_mechanism": "Comparative analysis of down-round outcomes and founder ownership trajectories in funds that use vs restrict anti-dilution provisions; measurement of company performance correlation with anti-dilution clause presence",
+      "impact": "If necessary: clause structure is reasonable governance. If primarily amplifying: anti-dilution is a secondary extraction mechanism (piton theater) maintaining the constraint's suppression.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether anti-dilution clauses are necessary governance or primary extraction mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Founder equity dilution in venture-backed startups creates a structural tension between the coordination benefit of capital (acceleration, validation, hiring) and the extraction dynamic embedded in venture's ownership models. This constraint exhibits a perspectival spectrum spanning pure coordination (VC beneficiary view), mixed coordination-extraction (founder perspective), pure extraction (trapped founder view), degraded institutional ritual (term sheet theater), and an aspirational exit pathway (alternative capital structures). The dilution dynamics have intensified over the interval (2020-2026) as competition for market share has increased capital pressure and as venture firms have consolidated power through standard terms, increasing theater ratio from founder-negotiated variation toward mechanical standardization. Base extractiveness has grown from 0.35 (when founders had more leverage) to 0.58 (current) as information asymmetry about alternatives has increased and founder bargaining power has decreased relative to capital availability pressure.",
+    "key_agents": [
+      "Bootstrapped Founder: Primary victim (powerless/trapped) \u2014 dependent on VC capital with no alternative, faces dilution as coercive necessity",
+      "Optioned Founder: Secondary victim (moderate/constrained) \u2014 has some alternatives but faces realistic exit costs; bears dilution burden alongside coordination benefits",
+      "Serial Founder: Organized victim with agency (powerful/mobile) \u2014 can negotiate better terms but still subject to structural asymmetries and sunk dilution costs",
+      "Venture Capital Firm: Primary beneficiary (institutional/arbitrage) \u2014 controls capital flow and uses dilution as governance and alignment mechanism; experiences constraint as coordination",
+      "Later-Stage Investors: Secondary beneficiary (institutional/arbitrage) \u2014 benefit from earlier founder dilution which enables their entry and governance participation",
+      "Regulatory Reform Coalition: Organized agents (organized/mobile) \u2014 building alternative capital structures (SAFE, revenue-share, secondary markets) to bypass traditional dilution",
+      "Standard Term Sheet: Institutional actor (institutional/arbitrage) \u2014 maintains mechanical dilution formulas through standardization theater and path dependence"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Founder dilution captures a real economic value transfer (founder ownership percentage decreases while investor control increases) but the magnitude is contested. The 0.58 value reflects that the transfer is substantial but not total \u2014 founders retain negotiation options (terms vary by founder quality and market conditions), and dilution is accompanied by genuine capital benefits (growth capital, validation, hiring). The growth trajectory (0.35 \u2192 0.58 over 6 years) reflects increased standardization: earlier periods had more variation in founder-VC bargaining power; current period sees more mechanical application of standard terms. Suppression (0.65): High. Founders face significant barriers to exit: capital is necessary for growth, alternative sources are not equally visible or accessible (information asymmetry), refusing dilution often means slower growth that still results in eventual acquisition at lower valuation (sunk cost suppression), and competitive pressure creates temporal urgency that overrides careful negotiation. Suppression is not absolute \u2014 some founders do negotiate better terms, some do bootstrap successfully, some do use alternative capital \u2014 but the default path is heavily suppressed toward accepting standard dilution. Theater ratio (0.48): Moderate. The justification for dilution focuses on alignment narrative ('we both win if we grow fast'), governance narrative ('I need board seats to protect my capital'), and market standard narrative ('this is what everyone does'). These narratives contain truth but also obscure the extraction: the founder's ownership percentage goes down regardless of company performance, the VC's control increases regardless of contribution, and term sheets show high variation by founder quality suggesting that 'market standard' is partly post-hoc justification.",
+    "perspectival_gap": "This constraint demonstrates full perspectival spread across six classification types. The bootstrapped founder sees trapped extraction (Snare, chi \u2248 0.92). The optioned founder sees mixed coordination-extraction (Tangled Rope, chi \u2248 0.60). The serial founder sees constrained extraction with agency (Tangled Rope, chi \u2248 0.45). The VC sees pure coordination (Rope, chi \u2248 -0.05). The term sheet sees degraded ritual (Piton, theater = 0.48). The reform coalition sees temporary problem with sunset (Scaffold, chi \u2248 0.25). The analytical observer sees an immutable law (Mountain) but this is a false summit \u2014 the observed dilution is institutional choice, not capital physics.",
+    "directionality_logic": "Directionality (d) is derived from the agent's structural position relative to the dilution flow. Beneficiaries (VC firms) with arbitrage exit options have low d (0.05-0.20) \u2014 the constraint is a tool in their favor, extraction flows toward them. Victims (founders) with trapped exit options have high d (0.85-0.95) \u2014 the constraint extracts from them with minimal options. Optioned founders with constrained exit have moderate d (0.55-0.70) \u2014 some extraction but also some alternatives. Serial founders with mobile exit options have lower d (0.40-0.55) \u2014 more bargaining power reduces experienced extraction. The sigmoid f(d) maps these d values to experienced extractiveness chi, which varies by founder position. The piton perspective uses institutional d (0.40) because the term sheet itself is not an extracting agent but a degraded ritual maintained by institutional inertia.",
+    "mandatrophy_analysis": "Mandatrophy is resolved by recognizing that the constraint is genuinely Tangled Rope at the analytical level: (1) coordination function is real \u2014 capital enables growth, hiring, market validation that founders cannot achieve bootstrapped; (2) asymmetric extraction is real \u2014 founder ownership percentage decreases, VC control increases, and the allocation of these benefits is not proportional to contribution; (3) active enforcement is real \u2014 term sheets are negotiated and updated; (4) the beneficiaries (VCs) and victims (founders) are clearly distinct groups. This is NOT a mislabeled Rope (if it were pure coordination, founders would not experience extraction suppression). This is NOT a mislabeled Snare (if it were pure extraction, the capital benefits would not be real and material). The constraint resolves mandatrophy by confirming the mixed nature: genuine coordination + asymmetric extraction = Tangled Rope."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "employee_equity_compensation",
+      "founder_replacement_dynamics",
+      "venture_fund_returns_asymmetry"
+    ],
+    "dual_formulation_note": "The founder equity dilution constraint is downstream of capital formation constraints but represents its own distinct structural claim. Upstream: founders need capital (capital scarcity). This story: dilution mechanics are used to allocate capital (resource allocation constraint). Downstream: these mechanics affect employee compensation structures and founder retention/replacement dynamics. Each story has different epsilon and different perspectives; all are linked by resource allocation coupling."
+  },
+  "directionality_overrides": []
+}

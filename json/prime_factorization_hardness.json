@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "prime_factorization_hardness",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pfh"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.08,
+    "claimed_type": "mountain",
+    "human_readable": "Computational Hardness of Prime Factorization",
+    "topic_domain": "mathematics/computational_complexity/cryptography",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Observer",
+      "comment": "PERSPECTIVE 1: MATHEMATICAL OBSERVER (MOUNTAIN) \u2014 From the universal mathematical perspective, prime factorization hardness is a consequence of the multiplicative structure of integers. No agent can exit this constraint; it emerges necessarily from the definition of multiplication and primality. Zero degrees of freedom across all indices."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The RSA Protocol Agent",
+      "comment": "PERSPECTIVE 2: RSA PROTOCOL AGENT (MOUNTAIN) \u2014 From the perspective of any cryptographic system relying on factorization hardness, the constraint is immutable. The agent cannot escape the computational structure that makes large composite numbers difficult to factor. This is not a policy choice or enforcement mechanism \u2014 it is a structural property of arithmetic."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "label": "The Cryptographic Industry",
+      "comment": "PERSPECTIVE 3: CRYPTOGRAPHIC INDUSTRY (MOUNTAIN) \u2014 Even institutions with maximal exit options cannot circumvent the hardness of factorization. They can adopt alternative cryptographic primitives (elliptic curves, lattice-based schemes), but they cannot make factorization easier \u2014 only discover faster algorithms that still leave the problem computationally hard. The constraint is invariant across all institutional framings."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "immediate",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Algorithm Designer",
+      "comment": "PERSPECTIVE 4: ALGORITHM DESIGNER (MOUNTAIN) \u2014 Even from the immediate time horizon, factorization hardness appears as a mathematical constant. Shor's algorithm proves that quantum computers could solve this in polynomial time, but that is an existence proof of a different constraint, not an escape from the classical hardness. The classical computational barrier remains invariant."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "quantum_collapse_boundary",
+      "question": "Does Shor's algorithm constitute a resolution of prime factorization hardness or merely a shift to a different computational substrate (classical \u2192 quantum)?",
+      "resolution_mechanism": "Definitional: factorization hardness applies to the classical Turing machine model. Shor's algorithm operates on quantum computers \u2014 a different computational substrate with different assumptions. If the constraint is redefined as 'hardness relative to a computational model,' it becomes conditional (rope or snare from relevant perspectival indices), not a mountain. If it remains 'inherent difficulty of the mathematical problem,' quantum algorithms are orthogonal.",
+      "impact": "If Shor's algorithm counts as 'solving' the constraint: the mountain classification is conditional on the computational substrate. Reclassify as rope from quantum-capable institutional perspectives. If it does not count: factorization hardness remains a mountain, and quantum algorithms represent a parallel constraint in the network.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether Shor's algorithm resolves or sidesteps the hardness constraint"
+    },
+    {
+      "id": "average_case_vs_worst_case",
+      "question": "Is the constraint 'worst-case hardness of factorization' (mathematical mountain) or 'expected-case hardness for random composites used in RSA' (empirical and potentially weaker)?",
+      "resolution_mechanism": "Theoretical analysis of average-case hardness; empirical study of whether RSA-size composites (products of two large primes) exhibit the same hardness distribution as the mathematical worst case; historical records of algorithmic improvements (general number field sieve, elliptic curve factorization) and their impact on practical security.",
+      "impact": "If average-case hardness is strictly weaker than worst-case: RSA security is an assumption, not a mathematical necessity \u2014 reclassify to rope or snare from cryptographic institutional perspective. If equivalent: factorization hardness remains a mountain for all practical RSA agents.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether hardness holds for average-case or only worst-case factorization instances"
+    },
+    {
+      "id": "p_vs_np_undecidability",
+      "question": "Is the fundamental hardness of factorization dependent on the truth or falsity of P \u2260 NP, or is it an autonomous mathematical fact?",
+      "resolution_mechanism": "Meta-mathematical: if P = NP is true, factorization is in P and can be solved in polynomial time (mountain dissolves). If P \u2260 NP is true, hardness remains but may still be conditional on the gap between NP and P. Definitional clarity: factorization is known to be in NP and widely believed to be NP-hard, but this remains unproven. The constraint's necessity depends on an open conjecture.",
+      "impact": "If P = NP: factorization hardness is false \u2014 reclassify to rope (problem becomes tractable). If P \u2260 NP and factorization is NP-complete: hardness is a mountain. If P \u2260 NP but factorization is not NP-hard: hardness exists but is weaker than the worst-case barrier.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Dependency of factorization hardness on the P vs NP conjecture"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "Prime factorization hardness is a constraint on integer arithmetic: given a composite number that is the product of two large primes, determining the prime factors requires computational work that grows exponentially in the bit-length of the number. This constraint is a paradigmatic example of a mountain \u2014 it emerges necessarily from the structure of multiplication and primality, appears invariant across all computational contexts, and admits no agent perspective that can circumvent it. The constraint is the mathematical foundation of RSA cryptography and underlies most public-key infrastructure. It is not a policy, not an enforcement mechanism, and not subject to institutional variation. The only substantive uncertainty concerns whether the classical hardness remains a mountain when quantum computers are introduced, and whether the constraint's necessity depends on unproven conjectures (P \u2260 NP) rather than mathematical axioms.",
+    "key_agents": [
+      "Mathematical Community: Analytical observers (analytical/analytical) \u2014 establishes the constraint as necessary consequence of integer arithmetic",
+      "Cryptographic Systems: Agents relying on factorization hardness (powerless/trapped) \u2014 cannot escape the computational barrier; security depends on the hardness assumption",
+      "Cryptographic Industry: Institutional actors (institutional/arbitrage) \u2014 cannot make factorization easier; can only substitute alternative cryptographic primitives",
+      "Algorithm Designers: Agents searching for faster factorization algorithms (powerless/trapped) \u2014 any success would prove the constraint weaker than assumed, but the constraint itself cannot be eliminated"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Minimal. The constraint does not extract value from agents \u2014 it is a structural property of arithmetic that all agents confront equally. No agent benefits at the expense of another; all agents face the same mathematical barrier. Suppression (0.03): Minimal. There are no alternatives suppressed; factorization hardness is not preventing agents from accessing a better option. The constraint simply defines the computational difficulty of a specific problem. Theater ratio (0.08): Minimal. The constraint has essentially no performative component. Its existence and properties are mathematically verifiable, not socially maintained. Accessibility collapse (0.92): Very high. There is no accessible alternative to factorization hardness within integer arithmetic \u2014 the constraint is physically and logically unavoidable. The only accessible alternatives require changing the computational substrate (quantum computing) or switching to entirely different cryptographic foundations (elliptic curves, lattice-based schemes), neither of which escape the constraint but rather sidestep it. Resistance (0.08): Very low. The constraint faces minimal resistance because it is not imposed by agents \u2014 it emerges from the definition of multiplication. Agents accept it as a given rather than resisting it.",
+    "perspectival_gap": "Remarkably, there is NO perspectival gap in this constraint. All perspectives \u2014 analytical/civilizational, powerless/trapped, institutional/arbitrage, algorithm designer/immediate \u2014 classify the constraint as mountain. This uniformity is diagnostically significant: it indicates a genuine natural law, not a contingent institutional arrangement naturalized as necessity. A constraint that appears mountain from all perspectives is either a true NL or has been stripped of its structural complexity through insufficient decomposition. In this case, decomposition confirms the mountain: factorization hardness is independent of cryptographic protocol choice, computational substrate (classically), time horizon, agent power, or exit options. The uniformity is not a flaw but a feature \u2014 it demonstrates that the constraint is genuinely invariant.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy through uniformity: all perspectives produce the same classification (mountain) because the constraint is genuinely invariant across all observation contexts. There is no tension between 'is this coordination or extraction?' \u2014 the question does not apply. Factorization hardness is neither; it is a structural fact about arithmetic. The potential mandatrophy arises only at the meta-level: is the constraint truly necessary or is its necessity conditional on unproven assumptions (P \u2260 NP, classical computation model)? The omega variables address this: if P = NP, the mountain dissolves to rope; if quantum computers are scalable, the classical mountain shifts to a different topography. But within the classical, deterministic Turing machine model with P \u2260 NP, the constraint is resolved as a genuine mountain \u2014 not a false summit naturalizing contingency."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "rsa_security_assumption",
+      "elliptic_curve_discrete_log",
+      "quantum_shor_algorithm"
+    ],
+    "dual_formulation_note": "Prime factorization hardness is upstream of multiple cryptographic constraints. RSA security assumes factorization hardness; elliptic curve systems assume discrete logarithm hardness (a structurally similar but distinct constraint); Shor's algorithm proves that quantum computers would collapse this mountain to a different computational regime. The network links document the structural dependency: failure of any of these downstream constraints implies revisiting the hardness assumption itself."
+  },
+  "directionality_overrides": []
+}

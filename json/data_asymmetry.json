@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "data_asymmetry",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "data_asym"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Data Asymmetry: Information Advantage and Structural Extraction",
+    "topic_domain": "information_economics/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "data_collectors",
+      "algorithmic_gatekeepers"
+    ],
+    "victims": [
+      "data_subjects",
+      "excluded_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Data Subject",
+      "comment": "PERSPECTIVE 1: DATA SUBJECT (SNARE) \u2014 Individual cannot exit digital systems without forfeiting access to essential services. Extraction through behavioral data harvesting, predictive profiling, and opaque decision-making produces high experienced chi. The subject bears costs (privacy loss, price discrimination, surveillance) while benefiting minimally from coordination mechanisms."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Excluded Populations",
+      "comment": "PERSPECTIVE 2: EXCLUDED POPULATIONS (SNARE) \u2014 Communities with limited data representation (geographic, demographic, behavioral) are locked out of systems built on aggregate training data. The asymmetry becomes epistemic: their absence from datasets ensures algorithms perform worse for their needs, and the performance gaps then justify continued exclusion. Maximal extraction with no coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regulated Enterprise",
+      "comment": "PERSPECTIVE 3: REGULATED ENTERPRISE (TANGLED ROPE) \u2014 Organizations subject to data governance rules (GDPR, CCPA) face compliance costs but benefit from data collection within regulatory boundaries. The constraint coordinates legitimate data use while enabling selective extraction through technicalities (consent dark patterns, purpose creep, data brokers). Mixed mechanism: coordination of privacy protection + asymmetric extraction through regulatory arbitrage."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Data Collection Infrastructure",
+      "comment": "PERSPECTIVE 4: DATA COLLECTION INFRASTRUCTURE (ROPE) \u2014 Platforms, devices, and data brokers experience data asymmetry as a coordination mechanism. They collect data to improve services, recommend content, and optimize resource allocation. The infrastructure sees genuine coordination benefits (personalization, efficiency) alongside extraction. Net beneficiary position with low exit costs \u2014 can rotate between data markets and regulatory domains."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Data Governance Coalition",
+      "comment": "PERSPECTIVE 5: DATA GOVERNANCE COALITION (SCAFFOLD) \u2014 Organized actors (privacy advocates, data trusts, decentralized systems, cooperative platforms) are building alternative data architectures with sunset logic: data minimization, federated learning, differential privacy, and data cooperatives reduce asymmetric extraction over time. The coalition perceives the bottleneck as temporary \u2014 technological and regulatory changes enabling data reciprocity. Theater ratio low because technical alternatives are functional, not performative."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Consent Ritual",
+      "comment": "PERSPECTIVE 6: CONSENT RITUAL (PITON) \u2014 The legal fiction of informed consent for data use is substantially performative. Users cannot meaningfully comprehend terms-of-service documents, have no realistic exit option to withheld consent, and the consent process exists primarily to provide legal cover rather than to enable genuine choice. The ritual persists through institutional inertia \u2014 companies maintain performative consent procedures because legal precedent requires them, not because consent mechanisms actually work. Theater ratio high; extraction remains uncontrolled."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Natural Law View (Information Asymmetry)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, information asymmetry is inherent to systems with differential access to knowledge. Data asymmetry appears as a natural limit of human cognition and organizational capacity: those who control data flows will always have informational advantage. However, structural data reveals this as a false summit \u2014 the asymmetry is contingent on technical architecture (centralized data collection), legal frameworks (property rights over data), and institutional choices (opacity), not physical law. The naturalization obscures that reciprocal data architectures are technically feasible."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "consent_fiction_boundary",
+      "question": "Is the consent ritual (terms-of-service, cookie notices) a coordination mechanism with broken feedback loops, or pure extraction theater with no coordinating function?",
+      "resolution_mechanism": "User comprehension studies; analysis of behavioral changes post-consent requests; comparison of compliance between enforced vs optional consent mechanisms",
+      "impact": "If coordination with broken feedback: tangled_rope classification holds. If pure theater: snare classification extends to regulatory enterprises; extraction increases with suppression of alternatives.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether consent mechanisms coordinate data use or are performative cover"
+    },
+    {
+      "id": "algorithmic_recourse_feasibility",
+      "question": "Can data subjects realistically contest algorithmic decisions informed by asymmetric data, or do disclosure requirements remain theoretical?",
+      "resolution_mechanism": "Case study analysis of GDPR right-to-explanation requests; measurement of algorithmic recourse success rates; time and cost burden on subjects attempting contestation",
+      "impact": "If feasible: exit options upgrade from trapped to constrained; classification shifts from snare toward tangled_rope. If theoretical: suppression holds at 0.62; subjects remain trapped.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of algorithmic contestation and recourse mechanisms"
+    },
+    {
+      "id": "data_minimization_scalability",
+      "question": "Do federated learning, differential privacy, and data minimization techniques enable equivalent service quality and personalization with asymmetry reduction, or do they require unacceptable performance tradeoffs?",
+      "resolution_mechanism": "Technical benchmarking of federated vs centralized systems; user satisfaction studies on personalization quality with minimized data; adoption rates of privacy-preserving architectures",
+      "impact": "If scalable: scaffold sunset is real; organizational incentives shift toward data minimization over 10-20 year horizon. If not scalable: asymmetry persists because coordination genuinely requires centralized data; classification stabilizes as tangled_rope rather than declining.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical feasibility of data-minimization approaches at scale"
+    },
+    {
+      "id": "power_asymmetry_amplification",
+      "question": "Does data asymmetry amplify or dampen existing power differentials between institutional actors and individuals?",
+      "resolution_mechanism": "Network analysis of data flow direction; measurement of decision velocity differentials (how fast institutions act on individuals vs vice versa); institutional accountability response times",
+      "impact": "If amplification: extraction mechanism is autocatalytic \u2014 data asymmetry feeds back into power asymmetry, raising chi over time. If dampening: some corrective feedback exists; suppression may decline.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether data asymmetry amplifies or corrects power imbalances"
+    },
+    {
+      "id": "identity_lock_data_profiling",
+      "question": "Do data subjects internalize algorithmic profiling narratives as self-truth (identity fusion with the profile), or do they perceive profiling as external observation?",
+      "resolution_mechanism": "Qualitative interviews on algorithmic identity; analysis of self-concept shifts post-exposure to personal data profiles; behavioral changes following algorithmic recommendation revelation",
+      "impact": "If internalized: exit_options for data subjects should be reclassified from trapped to identity_locked; perspectival classification shifts from snare toward rope (perceivable as changeable). If external: trapped classification holds.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether data subjects experience profiling as identity-constitutive or external"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.51
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Data asymmetry \u2014 the structural gap between those who collect, control, and analyze data and those whose data is collected \u2014 has become a foundational constraint in the digital economy. Unlike earlier information economics where asymmetry was geographically or temporally bound, digital data asymmetry is systematic, continuous, and architecturally embedded. This constraint exhibits the full range of DR classifications: data subjects trapped in systems (snare), excluded populations locked into underrepresentation (snare), regulated enterprises balancing coordination and extraction (tangled rope), data infrastructure reaping coordination benefits (rope), coalitions building technical alternatives (scaffold), consent rituals performing legal cover (piton), and naturalizing frameworks suggesting asymmetry is inherent (false mountain). The constraint's extractiveness has increased from 0.35 to 0.58 over the interval, driven by deepening algorithmic decision-making in credit, employment, healthcare, and social services. Theater ratio has slightly decreased (0.55 to 0.48) as technical alternatives reduce the performative compliance burden, but extraction has simultaneously increased as data collection extends into more intimate domains. The asymmetry is not primarily about the existence of data flows \u2014 coordination genuinely benefits from data \u2014 but about the *directionality* of those flows and who controls interpretation.",
+    "key_agents": [
+      "Data Subjects: Primary victim (powerless/trapped) \u2014 individuals whose behavioral, financial, health, and relational data is continuously collected; trapped by dependence on digital services",
+      "Excluded Populations: Primary victim (powerless/trapped) \u2014 communities underrepresented in training data; locked into algorithmic discrimination through absence",
+      "Data Collectors: Primary beneficiary (institutional/arbitrage) \u2014 platforms, ISPs, device manufacturers, data brokers; extract value through data monetization and service optimization",
+      "Algorithmic Gatekeepers: Primary beneficiary (institutional/arbitrage) \u2014 ML researchers, data scientists, algorithm designers; control interpretation and application of collected data",
+      "Regulated Enterprises: Secondary beneficiary (moderate/constrained) \u2014 companies subject to data governance regulations; benefit from data within compliance boundaries while exploiting regulatory gaps",
+      "Data Governance Coalition: Organized agent (organized/constrained) \u2014 privacy advocates, data trusts, decentralized protocol developers, cooperative platforms; building alternative architectures",
+      "Legal/Consent Infrastructure: Institutional actor (institutional/analytical) \u2014 maintains performative consent rituals; benefits from liability protection without enabling genuine choice",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent architectural choices (centralization, opacity, property rights) as inherent limits"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Data collection generates legitimate coordination benefits \u2014 personalization, efficiency, fraud detection, resource optimization. But extraction far exceeds coordination cost: behavioral surplus is captured without meaningful return; price discrimination and exclusion extract further; algorithmic decisions are made without transparency or recourse. The 0.58 reflects that extraction is substantial but not maximal \u2014 some genuine service improvement occurs. The trajectory from 0.35 to 0.58 shows accumulation: data collection expands into more intimate domains (health, location, biometric, psychological), deepening extraction while coordination benefits plateau. Suppression (0.62): Moderate-high. Barriers to exit include technical dependence (digital services are essential infrastructure), legal barriers (terms-of-service), cognitive barriers (complexity of data flows), and power asymmetry (individuals cannot negotiate). But suppression is not total \u2014 some population segments maintain low-digital footprints; alternative platforms exist at smaller scale; technical tools (VPNs, ad blockers) provide partial relief. Theater ratio (0.48): Moderate-low. Consent and privacy disclosures are substantially performative (users cannot reasonably comprehend terms-of-service; withdrawal of consent often blocks service). But the ratio is not high because some genuine technical alternatives exist (encrypted messaging, federated systems, data minimization) that replace theater with function. The slight decline suggests data governance coalitions are building real alternatives rather than regulatory theater.",
+    "perspectival_gap": "Data subjects experience snare; infrastructure experiences rope; governance sees temporary problem with exit path. The gap is maximal because data asymmetry has no symmetric form \u2014 if data subjects had equivalent access to institutional data, they would use it for contestation and recourse, destabilizing the extraction mechanism. The constraint persists precisely because reciprocity is architecturally prevented, not because coordination is impossible.",
+    "directionality_logic": "Beneficiaries (data collectors, algorithmic gatekeepers) have arbitrage exit \u2014 they can pivot between regulatory domains, business models, or markets. This low-d position produces negative chi: they experience the constraint as enabling, not extractive. Victims (data subjects, excluded populations) have trapped or identity-locked exit \u2014 they cannot realistically opt out without forfeiting essential services, and their internalized relationship to algorithmic profiles may prevent them from recognizing exit as conceptually possible. This high-d position produces high chi: they experience maximum extraction. The constraint is tangled rope (not pure snare) because coordination benefits are real \u2014 algorithmic personalization does improve user experience, and fraud detection prevents harms. But those benefits are captured asymmetrically: infrastructure reaps most surplus while subjects get the externalized costs (surveillance, discrimination, manipulation). The tangled rope classification depends on beneficiaries genuinely benefiting from coordination (which they do) while victims bear asymmetric costs (which they do). If data collection had no coordination function \u2014 if it was pure extraction with no service improvement \u2014 the constraint would be snare for all perspectives, not tangled rope.",
+    "mandatrophy_analysis": "Data asymmetry is a canonical tangled rope: genuine coordination mechanism (service improvement through data) coexisting with systematic extraction (behavioral surplus capture, discrimination, opacity). The mandatrophy is resolved by decomposing the benefits and costs separately. Coordination benefits: personalization (genuine), fraud detection (genuine), resource optimization (genuine), infrastructure maintenance (genuine). Extraction mechanisms: price discrimination, behavioral manipulation, exclusion of underrepresented groups, algorithmic decisions without recourse, terms-of-service scope creep, data broker monetization. The constraint is not misclassified as pure extraction (snare) because subjects genuinely benefit from some coordination. The constraint is not misclassified as pure coordination (rope) because systematic extraction is the dominant mechanism from victims' perspective. Tangled rope captures exactly this hybrid: the existence of coordination benefit does not prevent or excuse asymmetric extraction. The governance coalition's scaffold perspective (sunset through technical alternatives) is structurally coherent \u2014 federated learning, differential privacy, and data trusts reduce asymmetry without eliminating coordination. If those alternatives scale, the constraint transitions from tangled rope toward rope as extraction declines relative to coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_opacity",
+      "behavioral_manipulation",
+      "regulatory_arbitrage_digital"
+    ],
+    "dual_formulation_note": "Data asymmetry is upstream of specific extractive mechanisms: algorithmic opacity (how decisions are made), behavioral manipulation (how asymmetry is leveraged), and regulatory arbitrage (how firms navigate governance). The base constraint has \u03b5=0.58 reflecting genuine mixed mechanism; downstream constraints show how asymmetry enables specific extractions. All three are linked: removing data asymmetry would degrade the other constraints' extraction mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "organizational_hierarchy_legitimacy",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "orgh"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Organizational Hierarchy Legitimacy",
+    "topic_domain": "organizational_theory/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "senior_leadership",
+      "information_controllers"
+    ],
+    "victims": [
+      "rank_and_file_workers",
+      "organizational_adaptability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Rank-and-File Worker",
+      "comment": "PERSPECTIVE 1: RANK-AND-FILE WORKER (SNARE) \u2014 Trapped within hierarchy by economic dependency, lack of alternative employment in their local context, and normalized power asymmetry. Hierarchy legitimacy constraint extracts compliance and deference; worker bears suppression through limited voice, surveillance, and conformity demands. No exit without severe cost (relocation, retraining, income loss). Maximum experienced extraction \u2014 the worker's structural position offers no arbitrage or mobility within the constraint."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Mid-Level Manager",
+      "comment": "PERSPECTIVE 2: MID-LEVEL MANAGER (TANGLED ROPE) \u2014 Constrained by career path dependence and skill specialization within the organization, but benefits from hierarchy as a coordination mechanism that enables delegated authority and advancement opportunity. Genuine coordination function (clear reporting lines, task distribution) coexists with asymmetric extraction (forced alignment with upper management, selective information access, limited autonomous decision-making). Moderate power and constrained exit produce perspectival gap between snare and rope."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Senior Leadership",
+      "comment": "PERSPECTIVE 3: SENIOR LEADERSHIP (ROPE) \u2014 Experiences hierarchy legitimacy as a pure coordination mechanism that enables scale, delegation, and organizational function. Leadership benefits from the extracted deference and information asymmetry (arbitrage option: can move to peer organizations with transferred authority). Perceives hierarchy as rational coordination necessity, not extraction. Net beneficiary with high exit optionality transforms the constraint into genuine rope from this perspective."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Technical Specialist",
+      "comment": "PERSPECTIVE 4: TECHNICAL SPECIALIST (TANGLED ROPE) \u2014 Mobile exit option (can transfer specialized skills across organizations) but constrained by organizational knowledge lock-in and project continuity. Benefits from hierarchy's task coordination (clear reporting for specialized work) but bears extraction through salary suppression (hierarchy justifies lower pay for non-management roles) and excluded decision-making on projects they shape. Powerful within narrow domain but hierarchy limits domain expansion. Mobile exit reduces experienced extraction relative to rank-and-file."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Employees Organized for Reform",
+      "comment": "PERSPECTIVE 5: EMPLOYEES ORGANIZED FOR REFORM (SCAFFOLD) \u2014 Organized agents (unions, worker committees, peer review boards) see hierarchy legitimacy as a temporary coordination problem with a sunset. Flat-structure experiments, consensus governance, and peer evaluation protocols represent alternative legitimacy pathways. Extraction is constrained by the organization's capacity to resist these alternatives \u2014 the constraint weakens as organizational norms shift toward distributed authority. Theater remains high (performance of 'consultation' replaces actual voice), but sunset logic applies if structural change occurs within organizational lifespan (10-30 years)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Bureaucratic Legitimacy Ritual",
+      "comment": "PERSPECTIVE 6: BUREAUCRATIC LEGITIMACY RITUAL (PITON) \u2014 Traditional hierarchy legitimacy persists through institutional inertia despite declining functional necessity (remote work, collaborative tools, flat-structure startups demonstrate alternatives). The legitimacy ritual is substantially performative: org charts, chain-of-command protocols, and deference ceremonies persist because 'this is how organizations work' rather than because alternatives have been tried and failed. Theater ratio (0.68) reflects the growing gap between ritual maintenance and actual coordination function. The constraint has become a vestigial institutional form."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational/global perspective, hierarchy legitimacy solves a genuine coordination problem (how to organize humans for collective action at scale) while simultaneously extracting asymmetric benefits toward leadership. The constraint is neither a mountain (immutable natural law \u2014 flat organizations exist and function) nor a rope (pure coordination \u2014 extraction is clearly asymmetric). The analytical view identifies this as a hybrid: hierarchy coordinates large-scale work AND extracts deference, compliance, and decision-making authority. Mandatrophy is resolved by accepting both functions as structural."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legitimacy_internalization_depth",
+      "question": "Is suppression of voice and dissent structural (external barriers like firing/ostracism) or internalized (workers believe hierarchy is legitimate/necessary)?",
+      "resolution_mechanism": "Post-hierarchy organization studies: workers in flat-structure orgs compared to hierarchical orgs on dissent behavior, voice-use confidence, and reported legitimacy beliefs. Exit behavior analysis: do workers who leave hierarchical orgs maintain suppression patterns in non-hierarchical contexts?",
+      "impact": "If primarily structural: suppression score reflects external coercion (current 0.62 is accurate). If primarily internalized: actual suppression is higher (workers carry the constraint internally), and identity_locked exit option becomes more appropriate for many workers. Classification may shift toward snare if internalization is dominant.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which hierarchy suppression is externalized coercion vs. internalized legitimacy belief"
+    },
+    {
+      "id": "coordination_function_necessity",
+      "question": "How much of the hierarchy's coordination function is essential to organizational function vs. performative status maintenance?",
+      "resolution_mechanism": "Comparative analysis of flat-structure, matrix, and peer-governed organizations; correlation between hierarchy depth and operational efficiency; measurement of information flow and decision quality in hierarchical vs alternative structures.",
+      "impact": "If hierarchy is 70%+ functionally necessary: classification shifts toward rope (coordination dominates). If hierarchy is 40% or less functionally necessary: classification shifts toward piton (theater dominates). Theater ratio (0.68) suggests 32% functional, 68% performative \u2014 if analysis confirms, the constraint is properly classified as tangled_rope with strong piton signal.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of hierarchy's coordination function that is essential vs. performative"
+    },
+    {
+      "id": "alternative_legitimacy_credibility",
+      "question": "Are emerging legitimacy models (meritocratic peer review, distributed authority, consensus governance) genuinely functional alternatives or aspirational myths?",
+      "resolution_mechanism": "Longitudinal study of organizations that adopted alternative models; measurement of burnout, retention, innovation, and decision quality; correlation between legitimacy model and organizational lifespan.",
+      "impact": "If alternatives are genuinely credible: scaffold perspective is accurate, and extractiveness may decline over time as organizations shift. If alternatives are myths: scaffold perspective overstates the sunset, and hierarchy legitimacy may be structurally stable. Organizational history shows both patterns.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether emerging organizational legitimacy models are functionally viable alternatives"
+    },
+    {
+      "id": "identity_fusion_in_hierarchy",
+      "question": "How many workers experience their professional identity as fused with their hierarchical role, making exit unthinkable even when materially possible?",
+      "resolution_mechanism": "Qualitative analysis of identity narratives in exit interviews and career-change studies. Measurement of identity shift: do workers who exit hierarchical organizations report identity reconstitution or identity loss? Comparison of identity fusion across professional domains (academics in universities vs contractors in tech).",
+      "impact": "If identity fusion is prevalent: many trapped agents are actually identity_locked (structurally mobile but cognitively captured). This elevates the measured suppression score and suggests the rope classification from leadership perspective conceals extraction that depends on identity lock-in for workers who might otherwise exit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of professional identity fusion with hierarchical role"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Organizational hierarchy legitimacy is a foundational constraint that enables scale-based coordination while simultaneously extracting deference, information asymmetry, and decision-making authority toward leadership. The constraint exhibits the full spectrum of DR classification depending on structural position: rank-and-file workers trapped in the system experience it as a snare; mid-level managers benefit from advancement opportunity while bearing excluded voice (tangled rope); senior leaders experience pure coordination and arbitrage (rope); technical specialists experience mixed coordination and suppression (tangled rope); organized reform movements see a temporary problem with a sunset (scaffold); institutional bureaucracy maintains hierarchy through ritual despite declining functional necessity (piton); the analytical observer sees the hybrid nature across all scales (tangled rope). Theater ratio has increased from 0.35 to 0.68 over the interval as remote work, collaborative tools, and flat-structure alternatives have made hierarchy's coordination function less essential while its legitimacy maintenance has become more performative. The constraint is neither purely functional nor purely extractive \u2014 it is a structural hybrid that solves real coordination problems while distributing benefits asymmetrically.",
+    "key_agents": [
+      "Rank-and-File Workers: Primary victims (powerless/trapped) \u2014 bear suppression through limited voice, surveillance, normalized deference; economic dependency creates exit barrier",
+      "Senior Leadership: Primary beneficiaries (institutional/arbitrage) \u2014 capture asymmetric decision authority, information control, status premium; arbitrage exit means can transfer authority across organizations",
+      "Mid-Level Managers: Secondary victims and partial beneficiaries (moderate/constrained) \u2014 benefit from career advancement through hierarchy, bear suppression through forced alignment and selective information access",
+      "Technical Specialists: Secondary victims with mobility (powerful/mobile) \u2014 benefit from task coordination, bear salary suppression justified by hierarchy, can exit but project lock-in constrains mobility",
+      "Organized Reform Movements: Organized agents (organized/constrained) \u2014 see hierarchy legitimacy as solvable problem; building alternative legitimacy models (peer governance, flat structures, consensus decision-making)",
+      "Bureaucratic Institutions: Institutional actors (institutional/arbitrage) \u2014 maintain hierarchy through ritual despite declining functional necessity; theater ratio measures growing gap between performance and function",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees both genuine coordination function and real asymmetric extraction; mandatrophy resolved by accepting hybrid nature"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate-high. Hierarchy does extract asymmetric benefits toward leadership (information control, decision authority, status premium), but the extraction is not maximized \u2014 some reward for leadership is legitimate coordination incentive. The value reflects that senior roles genuinely require broader information access and authority for organizational function. The increase from 0.42 to 0.55 over the 40-year interval indicates that traditional coordination functions (task distribution, reporting clarity) have become more substitutable (remote work, collaborative tools, project management systems), exposing the extraction component more visibly. Suppression (0.62): Moderate-high. Workers face real barriers to voice (retaliation risk, normalization of deference, information asymmetry), but suppression is not totalizing \u2014 dissent is possible and occurs (unions, worker committees, resignations). The suppression reflects both structural barriers (firing risk) and internalized legitimacy beliefs (the constraint's own propaganda). Theater ratio (0.68): High and rising. As technical alternatives to hierarchy have emerged (flat organizations function, remote teams coordinate without chain-of-command), the maintenance of hierarchy has become increasingly ritualistic. Org charts, deference ceremonies, chain-of-command protocols persist because 'this is how organizations are structured' rather than because alternatives have failed. The 33-point increase in theater over the interval reflects this growing gap.",
+    "perspectival_gap": "Why does the analytical observer classify this as tangled rope rather than accepting the mountain classification that might emerge from naturalizing hierarchy as inevitable? The mountain perspective would argue: 'Organizations above a certain size require hierarchy; this is a law of organization theory.' But this is a false summit. Flat organizations exist and function (GitHub, Zappos, open-source projects). The mountain classification naturalizes what is actually a contingent institutional arrangement. The tangled rope classification correctly identifies that hierarchy solves real coordination problems (genuine rope function) while extracting asymmetric benefits (genuine snare function). The analytical observer's role is to reject naturalizing framings and identify the hybrid structure.",
+    "directionality_logic": "The senior leadership's beneficiary status derives from their control of information and decision-making authority. They capture asymmetric rewards (salary premium, status, autonomy) justified partly as coordination incentive but partly as pure extraction. The rank-and-file worker's victim status derives from suppressed voice and limited autonomy \u2014 they bear the compliance costs of hierarchy while bearing none of the coordination benefits (they do not decide on tasks, only execute them). Mid-level managers are both: they benefit from career advancement pathway (partial beneficiary) but bear suppressed voice and forced alignment (partial victim). The mid-level status creates the perspectival gap where they see tangled rope (both coordination and extraction) while workers see pure snare (extraction only). Directionality overrides are not needed because the structural derivation captures the relationships: beneficiaries have lower d (less extracted), victims have higher d (more extracted), and the classification follows from the base properties (extractiveness 0.55, suppression 0.62, coordination function present, asymmetric extraction present = tangled rope).",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that organizational hierarchy legitimacy genuinely performs both coordination and extraction functions simultaneously. It is not 'should we classify this as rope or snare?' but 'hierarchy is both.' The constraint coordinates work at scale (leadership cannot function without delegation; workers cannot coordinate without task assignment) and extracts asymmetric benefits (authority, information, status flow to leadership disproportionately). The false summit (mountain perspective naturalizing hierarchy as inevitable) is rejected by evidence of viable alternatives (flat organizations, consensus governance, peer-based authority). The classification as tangled rope is mandatroph-resolved: the constraint is neither a hidden snare mislabeled as coordination nor hidden coordination mislabeled as extraction. It is transparently both. The increase in theater ratio from 0.35 to 0.68 reveals that as technical alternatives have become viable, the coordination function has become more substitute-able while the extraction function has become more exposed and defended ritualistically. Organizations are choosing to maintain hierarchy less for functional necessity and more for legitimacy maintenance \u2014 this is the measurable drift from rope toward piton over civilizational timescales. At the current 40-year mark, the constraint is properly classified as tangled rope with strong piton signals emerging (theater at 0.68, rising)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "information_asymmetry_in_organizations",
+      "career_path_dependency",
+      "distributed_decision_making"
+    ],
+    "dual_formulation_note": "Organizational hierarchy legitimacy is a parent constraint affecting three downstream constraints: information asymmetry (the hierarchy's asymmetric information access), career path dependency (the hierarchy's advancement pathway mechanism), and distributed decision-making (alternative legitimacy models attempting to bypass the hierarchy). Each downstream constraint has its own \u03b5 value reflecting different measurement domains. Hierarchy legitimacy is upstream and more general."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

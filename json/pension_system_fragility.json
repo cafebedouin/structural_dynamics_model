@@ -1,0 +1,206 @@
+{
+  "header": {
+    "constraint_id": "pension_system_fragility",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "psf"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Pension System Fragility and Intergenerational Extraction",
+    "topic_domain": "economic/social/financial",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "current_retirees",
+      "financial_intermediaries"
+    ],
+    "victims": [
+      "future_workers",
+      "future_retirees",
+      "pension_fund_integrity"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Future Workers (Trapped Generation)",
+      "comment": "PERSPECTIVE 1: FUTURE WORKERS (SNARE) \u2014 Legally mandated participation in pension systems with underfunded liabilities. Cannot exit; bear actuarial deficits through higher contribution rates and later retirement. Trapped by demographic structure and legal obligation. Maximum experienced extraction from perspective of those who will pay taxes to cover shortfalls."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Current Retirees",
+      "comment": "PERSPECTIVE 2: CURRENT RETIREES (ROPE) \u2014 Receive promised benefits funded by current workers. Experience constraint as coordination mechanism: political consensus maintains system integrity. Net beneficiaries with low exit friction. System appears as stable commitment rather than extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Current Workers (Mid-Career)",
+      "comment": "PERSPECTIVE 3: CURRENT WORKERS (TANGLED ROPE) \u2014 Face mandatory contributions with uncertain future benefits. System provides some coordination function (pooled longevity risk, forced savings) while extracting through underfunded liability transfer. Constrained by legal obligation and limited alternatives. Mixed experience of coordination and extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Financial Intermediaries",
+      "comment": "PERSPECTIVE 4: FINANCIAL INTERMEDIARIES (TANGLED ROPE) \u2014 Extract fees from pension fund management while providing coordination service (asset allocation, risk management). Constrained by regulatory oversight but benefit from mandatory flow of capital. Active enforcement required to maintain fee structures despite performance questions."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Pension Reform Advocates",
+      "comment": "PERSPECTIVE 5: PENSION REFORM ADVOCATES (SCAFFOLD) \u2014 Organized actors promoting transition to sustainable models (increased retirement age, means-testing, hybrid public-private). See system fragility as a temporary problem requiring sunset clause on current structure. Constrained by political inertia but possess agency. Theater ratio declining as reform debate becomes technical."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Pension System Administration",
+      "comment": "PERSPECTIVE 6: PENSION SYSTEM ADMINISTRATION (PITON) \u2014 Maintains the bureaucratic apparatus of benefit calculation, contribution collection, and payment processing. Primary function (risk pooling, longevity insurance) has largely atrophied; system persists through institutional inertia and political pressure. High theater ratio reflects extensive actuarial projections and regulatory reporting that sustain legitimacy despite structural unsustainability."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Sees genuine coordination function (pooled longevity risk, forced savings discipline, income smoothing across generations) coupled with asymmetric extraction (current generation subsidized by future demographic structure). System requires active enforcement to function; collapse without intervention. Global scope reveals pattern across OECD nations with similar demographic-fiscal misalignment."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "demographic_window_closure",
+      "question": "At what point does adverse demographic transition make the system mathematically unsustainable regardless of policy intervention?",
+      "resolution_mechanism": "Actuarial modeling of contribution-to-benefit ratio under various reform scenarios; identification of irreversible threshold in dependency ratio",
+      "impact": "If threshold already passed: system is snare for all future participants. If threshold 10+ years away: scaffold perspective remains viable. If threshold depends on unrealistic assumptions: naturalizes contingent political choices as demographic inevitability.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Point of mathematical unsustainability in demographic structure"
+    },
+    {
+      "id": "moral_hazard_legitimacy_gap",
+      "question": "Is the extraction mechanism justified as intergenerational risk-sharing (legitimate coordination cost) or illegitimate free-riding by current cohorts?",
+      "resolution_mechanism": "Historical analysis of initial actuarial assumptions vs realized demographics; comparative study of fairness perception across generations in different pension regimes",
+      "impact": "If risk-sharing narrative: tangled rope classification defensible. If free-riding narrative: snare classification more accurate. If gap itself drives institutional instability: affects theater_ratio and piton classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Legitimacy of extraction as intergenerational risk-sharing vs free-riding"
+    },
+    {
+      "id": "reform_reversibility_trap",
+      "question": "Do benefit reductions or contribution increases become politically locked-in once implemented, even if economic conditions improve?",
+      "resolution_mechanism": "Historical tracking of pension reforms that were reversed or relaxed post-implementation; political economy analysis of constituency coalitions supporting locked-in changes",
+      "impact": "If reforms easily reversed: scaffold sunset clause is credible. If reforms create new constituencies defending new baseline: system locks into extraction mechanism and snare classification strengthens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether pension reforms create reversible or locked-in extraction"
+    },
+    {
+      "id": "alternative_coordination_sufficiency",
+      "question": "Can private savings, portfolio diversification, and voluntary pooling mechanisms replace public pension coordination at equivalent cost and reliability?",
+      "resolution_mechanism": "Comparative analysis of transaction costs, longevity risk pricing, administrative overhead between public and private systems; behavioral economics evidence on savings discipline",
+      "impact": "If alternatives effective: current system appears extractive (forcing suboptimal coordination). If alternatives insufficient: system represents genuine coordination need, tangled_rope classification more robust.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether private mechanisms can replace public pension coordination"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Pension system fragility emerges from a structural mismatch between demographic assumptions embedded at system inception and realized demographic trajectories. In most OECD nations, post-WWII pension systems were designed with fertility rates of 2.1+ children per woman and life expectancy at retirement of 15-20 years. Contemporary conditions show fertility at 1.3-1.8 and life expectancy at retirement of 25-30 years. This creates a cascading extraction mechanism where current cohorts (retirees and near-retirees) receive benefits calculated on old assumptions, funded by declining numbers of workers facing higher contribution rates or delayed retirement. The constraint exhibits genuine coordination function (pooled longevity risk, forced savings discipline, income smoothing) coupled with asymmetric extraction (older cohorts subsidized by younger). Active enforcement through tax policy and legal mandates keeps the system functional despite inherent unsustainability. The theater ratio reflects extensive actuarial legitimation and regulatory reporting that sustains political consensus despite mounting technical evidence of structural deficiency.",
+    "key_agents": [
+      "Current Retirees: Primary beneficiary (institutional/arbitrage) \u2014 receive benefits based on historical formulae; have low exit friction from system",
+      "Future Workers: Primary victim (powerless/trapped) \u2014 legally mandated participation with underfunded liabilities; cannot opt out",
+      "Current Workers: Secondary actor (moderate/constrained) \u2014 face contribution rate increases and retirement age increases; mixed coordination-extraction experience",
+      "Financial Intermediaries: Beneficiary (institutional/constrained) \u2014 extract fees while system remains operational; constrained by regulatory oversight",
+      "Pension Reform Advocates: Organized actor (organized/constrained) \u2014 seeking to build sunset clauses and structural transition pathways",
+      "Pension System Administration: Institutional actor (institutional/arbitrage) \u2014 maintains apparatus through inertia; benefits from continued operation",
+      "Analytical Observer: System-level perspective (analytical/analytical) \u2014 detects tangled rope structure across multiple dimensions"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The system transfers actuarial risk from current retirees to future workers through demographic asymmetry. Current workers see 35% at t=0 (before crisis awareness) rising to 58% at t=20 as dependency ratios worsen. This is neither pure extraction nor pure coordination \u2014 the system provides genuine longevity insurance and forced savings benefit alongside the transfer. The increase over time reflects mounting unfunded liabilities rather than new extraction mechanism. Suppression (0.65): High. Barriers to exit include legal mandate (participation required), political lock-in (difficult to modify benefit promises), demographic inevitability (cannot change birth rates retroactively), and cognitive framing (system presented as solidarity rather than extraction). Suppression is not absolute \u2014 reform advocates possess agency \u2014 but structural barriers are substantial. Theater ratio (0.68): Moderately high and increasing. System maintenance requires actuarial projections, regulatory compliance reports, and legitimation narratives emphasizing solidarity and intergenerational contracts. These serve genuine administrative functions but also mask the extraction mechanism \u2014 political consensus rests partly on theater rather than on transparent acknowledgment of who benefits and who bears costs.",
+    "perspectival_gap": "The primary gap separates current beneficiaries (retirees, financial intermediaries) who experience rope or piton classifications from future victims (workers, future retirees) who experience snare or tangled rope. Current retirees see the system as a earned-right coordination mechanism because their contribution history aligns with the original design assumptions. Future workers see legal mandate to fund obligations they did not create. This perspectival gap is not bridgeable by information alone \u2014 it reflects genuine structural asymmetry in who benefits and who bears cost. The organized reformers (scaffold perspective) are attempting to reframe the constraint from inevitable-extraction to fixable-problem, but their agency is constrained by political lock-in and the power of current beneficiary coalitions.",
+    "directionality_logic": "Directionality values are derived from beneficiary/victim structural relationships. Current retirees as beneficiaries with arbitrage options (can shift to private systems or simply enjoy earned benefits without exposure to future changes) get low d values. Future workers as victims with trapped exit (mandatory participation, no demographic escape) get high d values near 1.0. Current workers as both partial beneficiaries (will receive some pension) and partial victims (contributions rising, benefits uncertain) occupy mid-range d values around 0.55-0.70. Financial intermediaries as partial beneficiaries (fees from asset management) with constrained exit (must operate within regulatory framework) get d values around 0.35-0.45. The engine's sigmoid f(d) maps these to experienced extractiveness values that explain why younger cohorts perceive higher chi than older cohorts perceiving the same system.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that pension system fragility is a genuine tangled rope \u2014 not pure extraction masquerading as coordination, nor pure coordination falsely labeled as extraction. The system possesses both: (1) authentic coordination function addressing real market failures (inability to contract longevity risk, forced savings discipline for myopic agents, risk pooling economies) and (2) authentic extraction mechanism (demographic asymmetry transferring cost to future cohorts). The tangled rope classification is robust across multiple observables: whether measured by unfunded liability growth, contribution rate increases, retirement age changes, or intergenerational fairness surveys, the same structure appears \u2014 genuine coordination plus asymmetric extraction. The mandatrophy becomes apparent when comparing snare vs scaffold perspectives: both agree on the extraction; they disagree on reversibility. Scaffold advocates argue demographic transition has a finite window and that timely reform creates exit pathways (sunset clause). Snare perspective argues that political lock-in on benefit promises makes demographic transition irreversible (no actual sunset). The empirical question \u2014 is reform actually feasible or has political lock-in created a permanent snare? \u2014 is precisely what the mandatrophy framework enables systematic investigation of."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "intergenerational_implicit_contract",
+      "demographic_transition_lock",
+      "financial_intermediary_capture"
+    ],
+    "dual_formulation_note": "Pension system fragility decomposes into three structurally distinct constraints: (1) the intergenerational implicit contract (\u03b5=0.42, Tangled Rope) \u2014 the original coordination mechanism, (2) demographic transition lock (\u03b5=0.72, Snare) \u2014 the extraction mechanism created by realized demographic change, and (3) financial intermediary capture (\u03b5=0.51, Tangled Rope) \u2014 fee extraction layered onto the system. This story focuses on the composite system-level constraint. Each component story has its own \u03b5 value and perspectives."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.38
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  }
+}

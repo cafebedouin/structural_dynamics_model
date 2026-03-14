@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "biotechnology_designer_liability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "biotech"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Biotechnology Designer Liability and Dual-Use Risk Asymmetry",
+    "topic_domain": "biotechnology/governance/legal_liability",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "research_institutions",
+      "biotech_corporations"
+    ],
+    "victims": [
+      "public_health_commons",
+      "biosafety_oversight_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Public Health Commons and Biosafety Oversight",
+      "comment": "PERSPECTIVE 1: PUBLIC HEALTH COMMONS (SNARE) \u2014 Cannot exit the dual-use risk exposure; bears full cost of accidents and malicious misuse. Biosafety oversight capacity lacks enforcement mechanisms, funding, or organizational coherence to challenge the constraint. Maximum extraction with no alternative pathways."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "National Biosafety Regulators",
+      "comment": "PERSPECTIVE 2: NATIONAL BIOSAFETY REGULATORS (TANGLED ROPE) \u2014 Constrained by resource limitations, jurisdictional fragmentation, and lack of technical capacity to review complex designs. Also benefit from research institution collaboration on threat assessment and legitimate research access. Face asymmetric extraction but retain some coordination function."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Research Institutions and Biotech Corporations",
+      "comment": "PERSPECTIVE 3: RESEARCH INSTITUTIONS AND BIOTECH CORPORATIONS (ROPE) \u2014 Primary beneficiaries. Experience the constraint as coordination: liability structures that permit rapid innovation while maintaining plausible deniability for harmful applications. Access to genetic design tools and publishing networks without bearing full responsibility for downstream misuse. Net extraction flows toward these agents."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Biosafety Standard Builders",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL BIOSAFETY STANDARD BUILDERS (SCAFFOLD) \u2014 Organized agents (WHO, synthetic biology societies, open-source monitoring initiatives) are building alternative accountability pathways: distributed screening of DNA synthesis orders, community-maintained pathogen databases, and federated biosafety assessment. These represent a sunset mechanism \u2014 as distributed oversight matures, centralized designer liability becomes less necessary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Academic Freedom and Innovation Narrative",
+      "comment": "PERSPECTIVE 5: ACADEMIC FREEDOM NARRATIVE (PITON) \u2014 The framing that genetic design must remain unrestricted for scientific progress persists through institutional inertia despite degrading verification. Synthetic biology reviews cite academic freedom as justification for minimal liability, but the functional coordination (vetting dangerous designs) has atrophied. The narrative maintains the structure even as its real function decays."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal perspective, biological knowledge asymmetry appears as an inherent feature of science itself: the same information that enables medical research enables pathogen engineering. This perspective risks naturalizing a contingent institutional arrangement (designer liability regimes that accept dual-use risk) as an immutable law of knowledge."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "designer_intent_verification",
+      "question": "Can the intent and expected use of a genetic design be verified from sequence information alone, or is intent verification inherently incomplete?",
+      "resolution_mechanism": "Analysis of known dual-use cases: how many misuse incidents involved sequences that passed initial review? Correlation between design intent statements and actual downstream deployment.",
+      "impact": "If intent is verifiable: liability regimes can function through design-phase review. If intent is opaque: designer liability is largely theater, and the constraint is fundamentally snare-like.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether designer intent can be verified from sequence data"
+    },
+    {
+      "id": "distributed_screening_sufficiency",
+      "question": "Do distributed DNA synthesis screening systems (order-level pathogen detection) actually prevent dual-use sequences from reaching users, or do they create false security through complexity?",
+      "resolution_mechanism": "Evaluation of synthesis screening efficacy: evasion attempt success rates, false negative rates on known pathogenic sequences, time lag between new threat identification and screening update.",
+      "impact": "If screening is effective: scaffold perspective is justified, sunset mechanism is real. If screening is theater: alternative safety model must address fundamental information asymmetry, and constraint remains snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether synthesis order screening prevents dual-use misuse"
+    },
+    {
+      "id": "liability_allocation_incentive_alignment",
+      "question": "Does designer liability create incentive alignment for safety, or does it primarily insulate institutions from accountability while concentrating responsibility on individual researchers?",
+      "resolution_mechanism": "Comparative analysis: do institutions with strong designer liability regimes show lower dual-use incident rates? Do liability frameworks increase or decrease researcher-level safety attention vs shifting focus to plausible deniability?",
+      "impact": "If liability aligns incentives: tangled rope classification is appropriate. If liability is primarily cover for institutional extraction: constraint becomes snare with institutional beneficiaries and public health victims.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether designer liability creates or obscures safety incentives"
+    },
+    {
+      "id": "foundational_versus_applied_research_boundary",
+      "question": "Is the distinction between foundational genetic research and applied pathogen engineering defensible at the design phase, or is it fundamentally blurred?",
+      "resolution_mechanism": "Historical analysis of dual-use incidents: what fraction involved sequences that were legitimately defensible as foundational research? Where was the boundary actually crossed?",
+      "impact": "If boundary is defensible: designer liability can function as coordination. If boundary is inherently blurred: constraint structure is predicated on a false distinction, and liability becomes a cover story rather than a functional mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether foundational-applied research boundary is defensible"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Biotechnology designer liability structures create a fundamental asymmetry: researchers and institutions gain access to powerful genetic design capabilities while distributing risk exposure to public health commons and biosafety oversight capacity. The constraint exhibits characteristics of both coordination (legitimate research coordination requires shared safety norms) and extraction (researchers benefit from innovation access while institutional liability remains ambiguous, and oversight capacity lacks resources to enforce meaningful vetting). The theater ratio has increased over the measurement interval as synthetic biology review processes have become more elaborate in ritual while their functional capacity to prevent dual-use misuse has not grown commensurately. The constraint can be understood as pure extraction (snare) from the public health perspective, mixed coordination-extraction (tangled rope) from the regulatory perspective, or coordination (rope) from the research institution perspective. Distributed DNA synthesis screening and international biosafety standards represent an emerging scaffold structure that could provide a sunset mechanism by creating alternative accountability pathways.",
+    "key_agents": [
+      "Research Institutions and Biotech Corporations: Primary beneficiaries (institutional/arbitrage) \u2014 capture innovation benefits with distributed liability; access to cutting-edge genetic design without bearing full downstream responsibility",
+      "Public Health Commons: Primary victim (powerless/trapped) \u2014 exposed to dual-use risk with no exit mechanism; bears cost of accidents and malicious misuse without corresponding benefit",
+      "National Biosafety Regulators: Secondary victim and moderate agent (moderate/constrained) \u2014 face resource constraints and technical capacity gaps but also benefit from research collaboration; caught between enabling innovation and preventing misuse",
+      "International Biosafety Standard Bodies: Organized coalition (organized/constrained) \u2014 WHO, synthetic biology standards committees, DNA synthesis screening networks building alternative verification pathways",
+      "Academic Freedom Institutional Narrative: Theater maintainer (institutional/arbitrage) \u2014 perpetuates unrestricted access framing through inertia despite degraded functional capacity",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent dual-use risk allocation as inherent to biological knowledge"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Research institutions and corporations capture significant benefits (publication priority, market access, innovation prestige) during design and deployment phases while distributed liability through designer frameworks creates plausible deniability for harmful applications. The extraction is not maximal because some genuine coordination occurs (biosafety review processes, institutional safety committees) and researchers do internalize some responsibility. However, the asymmetry is substantial: institutions retain benefits regardless of downstream misuse, while oversight systems bear all structural costs. Suppression (0.65): High. Suppression mechanisms are multifaceted: lack of funding and technical capacity for meaningful biosafety review, jurisdictional fragmentation across national systems, information asymmetry (designers have superior knowledge of sequence function), academic freedom narrative that frames safety review as obstruction, and international coordination failures due to competitive advantage seeking. However, suppression is not total \u2014 some vetted research does occur, distributed screening systems are emerging, and institutional safety committees represent alternative oversight. Theater ratio (0.58): Moderate-high. Designer liability review processes have become increasingly elaborate in ritual: institutional biosafety committees, ethics boards, publication review \u2014 but functional capacity to identify and prevent dual-use misuse has not kept pace with synthetic biology capability advancement. Theater has increased over the measurement interval as the gap between review complexity and actual detection/prevention capacity has widened.",
+    "directionality_logic": "Directionality values are derived from beneficiary/victim status and exit options. Research institutions as beneficiaries with arbitrage-level exit (can publish globally, access design tools across jurisdictions, move research programs internationally) experience low directionality values, producing negative effective extraction from their perspective. Public health commons as victims with trapped-level exit (cannot exit exposure to dual-use risk; no alternative biosafety infrastructure to switch to) experience high directionality values, producing maximum effective extraction from their perspective. National regulators as moderate agents with constrained exit (can slow approval processes but face pressure from competitive advantage concerns, cannot fully exit international research network) experience medium directionality values. The institutional beneficiaries with arbitrage options are incentivized toward rope (coordination) classification; the trapped public health commons toward snare (extraction) classification. The gap between these perspectives reveals the extraction structure.",
+    "perspectival_gap": "The core perspectival gap is between research institutions and public health commons. From the institutional perspective, designer liability is coordination: legitimate research requires shared safety norms, liability frameworks enable innovation by clarifying responsibilities, and distributed screening represents consensus-building. From the public health perspective, designer liability is extraction: researchers benefit from access to tools and publications while the commons bears dual-use risk exposure with no veto or alternative pathway. The regulatory perspective shows tangled rope \u2014 moderate agents experience both coordination (biosafety review does prevent some dangerous sequences) and extraction (review resources are inadequate, competitive pressures undermine enforcement, and responsibility ultimately defaults to regulators when institutions claim research continuity exemptions). The scaffold perspective reveals an emerging sunset mechanism: distributed synthesis screening, community pathogen databases, and international standards are building alternative verification pathways that could reduce dependence on designer liability once mature.",
+    "mandatrophy_analysis": "TANGLED ROPE CLASSIFICATION RESOLVES MANDATROPHY: The constraint exhibits genuine coordination function (biosafety review processes do prevent some dangerous designs, shared safety norms do constrain some researchers, international standards do exist) AND asymmetric extraction (researchers benefit disproportionately, oversight capacity is underfunded relative to risk, institutions avoid accountability for downstream misuse through liability diffusion). The mandatrophy is resolved by recognizing that both elements are structurally present. The false choice is between 'designer liability is pure safety coordination' (rope) and 'designer liability is pure institutional extraction' (snare). The tangled rope classification captures the real hybrid: genuine safety coordination that is simultaneously asymmetrically exploited. The theater ratio increase signals Goodhart drift \u2014 designer liability review has become more elaborate in ritual as its functional capacity to prevent misuse has degraded relative to advancing synthetic biology capability. The constraint remains snare-like from the public health perspective precisely because the tangled rope's coordination function is insufficiently strong to constrain institutional extraction behavior."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "synthetic_biology_publication_norms",
+      "international_biosafety_coordination",
+      "gain_of_function_research_governance"
+    ],
+    "dual_formulation_note": "Designer liability is downstream of dual-use research governance and upstream of specific institutional safety policies. The liability framework has its own extraction asymmetry (institution vs commons) distinct from but coupled with specific research governance constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    }
+  ]
+}

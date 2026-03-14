@@ -1,0 +1,191 @@
+{
+  "header": {
+    "constraint_id": "imperial_tax_collection_mechanism",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "imperial_tax"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Imperial Tax Collection Mechanism",
+    "topic_domain": "political_economy/state_extraction",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "imperial_treasury",
+      "imperial_military",
+      "imperial_bureaucracy"
+    ],
+    "victims": [
+      "subject_peasantry",
+      "merchant_classes",
+      "local_autonomy"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Subject Peasant",
+      "comment": "PERSPECTIVE 1: SUBJECT PEASANT (SNARE) \u2014 Trapped by land tenure, legal disability, and geographic immobility. Bears extraction via corv\u00e9e labor obligations, in-kind taxation, and confiscatory conscription. No exit option; maximum experienced extraction. The peasant's labor surplus is directly captured by the imperial machinery with minimal coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Merchant Class",
+      "comment": "PERSPECTIVE 2: MERCHANT CLASS (TANGLED ROPE) \u2014 Constrained by monopoly grants and licensing requirements, but also benefits from imperial peace, standardized weights/measures, and infrastructure. Faces high extraction via customs duties and arbitrary assessments, but genuine coordination function exists (market stability, contract enforcement). Exit requires abandoning commercial networks built over generations."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Imperial Treasury",
+      "comment": "PERSPECTIVE 3: IMPERIAL TREASURY (ROPE) \u2014 Primary beneficiary. Experiences tax collection as a pure coordination mechanism: aggregating dispersed resources into centralized stores. Zero experienced extraction \u2014 benefits flow entirely to this agent. Can arbitrage by redirecting collection mechanisms or adjusting tax rates."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Local Tax Assessor",
+      "comment": "PERSPECTIVE 4: LOCAL TAX ASSESSOR (PITON) \u2014 Caught between imperial quota demands and local capacity. The assessment ritual (inspection tours, negotiation councils, written declarations) has become substantially performative \u2014 maintaining the fiction of accurate valuations while actual collections rest on power relations. Theater ratio high because formal procedures mask coercive extraction. Assessor is trapped by institutional inertia, not by functional necessity."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Administrative Reform Movement",
+      "comment": "PERSPECTIVE 5: ADMINISTRATIVE REFORM MOVEMENT (SCAFFOLD) \u2014 Organized agents (reform edicts, cadastral surveys, centralized accounting) see tax extraction as a temporary coordination failure solvable through bureaucratic rationalization. The sunset clause operates via tax farming replacement or standardized assessment \u2014 moving from coercive extraction to transparent, predictable collection. Organized agents have agency and a visible exit path."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some taxation is logically necessary for statecraft: armies require funding, bureaucracies require resources, infrastructure requires maintenance. From this frame, imperial tax collection appears as an immutable law of political organization. However, the structural data contradicts this \u2014 the extractiveness and suppression values are contingent on specific institutional arrangements (land tenure, conscription, corv\u00e9e), not inherent to taxation itself. The engine will identify this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "functional_necessity_vs_extractive_surplus",
+      "question": "What portion of imperial tax extraction is functionally necessary for legitimate state activity (defense, infrastructure, administration) versus extractive surplus captured by the imperial center and elites?",
+      "resolution_mechanism": "Comparative analysis of tax rates across empires with varying defensive and infrastructural burdens; measurement of actual expenditure on public goods vs. imperial/elite consumption; examination of tax revenue levels required for functional statecraft vs. actual collection rates",
+      "impact": "If functional necessity dominates (< 40% surplus): constraint might reclassify as Tangled Rope from powerless perspective. If surplus dominates (> 60%): classification as Snare is confirmed; suppression might increase.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Functional necessity versus extractive surplus ratio"
+    },
+    {
+      "id": "local_elite_complicity",
+      "question": "To what extent do local elites (landed gentry, merchant princes, village headmen) benefit from imperial tax extraction and thus become co-enforcers rather than fellow victims?",
+      "resolution_mechanism": "Historical record of tax collector privileges, kickback arrangements, and local elite participation in assessment; correlation between local elite enrichment and imperial tax burden on peasantry; analysis of whether tax collection mechanisms distribute extraction rewards to local enforcers",
+      "impact": "If local elite capture is significant: the constraint is more properly modeled as a network of nested extractions (local elite extracting on behalf of imperial center), requiring decomposition into separate constraint stories. If minimal: the clear beneficiary/victim distinction holds.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree of local elite complicity and benefit-sharing in tax extraction"
+    },
+    {
+      "id": "resistance_and_underground_economy_escape",
+      "question": "How much of the economic surplus escapes formal taxation through underground markets, barter, smuggling, and undeclared production? What portion of the subject population effectively exits the constraint?",
+      "resolution_mechanism": "Demographic and economic analysis of reported vs actual productive capacity; reconstruction of underground market scale from period records (smuggling records, bandit activity, black market prices); comparison of formal tax base to estimated total wealth",
+      "impact": "If escape is substantial (> 50%): effective suppression is lower than claimed (many agents have partial exit), and experienced extractiveness for some victims is lower. If escape is minimal (< 20%): suppression and extractiveness values are confirmed; trapping is near-total.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scale of underground economy and tax avoidance escape routes"
+    },
+    {
+      "id": "public_goods_provision_sufficiency",
+      "question": "Do the public goods provided by imperial taxation (road networks, postal system, military protection, legal framework) actually benefit the subject population sufficiently to constitute a legitimate coordination function, or are they primarily infrastructure for continued extraction?",
+      "resolution_mechanism": "Reconstruction of public goods distribution across regions and social classes; analysis of whether infrastructure (roads, ports) primarily serves imperial interests or enables broader economic activity; measurement of security provision and banditry rates; comparison with alternative governance systems of similar scale",
+      "impact": "If public goods are broadly beneficial: more perspectives would classify as Rope or Tangled Rope rather than Snare. If concentrated on elite infrastructure: Snare classification is reinforced; the constraint is pure extraction disguised as coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether public goods provision justifies extraction claims"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The imperial tax collection mechanism represents a foundational extraction constraint in state formation. Operating across subject populations through land tenure systems, conscription obligations, and corv\u00e9e labor requirements, it creates a structural separation between those who benefit from aggregated resources (imperial treasury, military apparatus, central bureaucracy) and those who bear the cost (peasants, merchants, local communities). The constraint exhibits the full range of DR classifications depending on perspective: the subject peasant trapped in the system sees pure extraction (Snare); the merchant class sees mixed coordination and extraction (Tangled Rope); the imperial treasury experiences it as pure coordination (Rope); the local tax assessor operates within an increasingly performative ritual (Piton); administrative reformers see a temporary problem solvable through bureaucratic rationalization (Scaffold); the civilizational observer risks naturalizing contingent institutional arrangements as inevitable (Mountain). The mechanism's extractiveness has increased over the measurement interval as imperial demands expand and local capacity becomes saturated, while the theater ratio has increased as formal assessment procedures become more elaborate relative to their actual role in determining collections.",
+    "key_agents": [
+      "Subject Peasantry: Primary victim (powerless/trapped) \u2014 bears extraction via land taxation, corv\u00e9e labor, and conscription; lacks exit options due to land tenure and legal disability",
+      "Merchant Classes: Secondary victim (moderate/constrained) \u2014 constrained by monopoly grants and licensing; face extraction via customs and arbitrary assessments; also benefit from imperial peace",
+      "Imperial Treasury and Central State: Primary beneficiary (institutional/arbitrage) \u2014 captures tax surplus for military, bureaucracy, and elite consumption; experiences taxation as pure coordination",
+      "Local Tax Assessors and Collectors: Institutional actor (institutional/constrained) \u2014 trapped between imperial quotas and local capacity; maintain increasingly performative assessment rituals",
+      "Administrative Reformers: Organized agents (organized/constrained) \u2014 see tax collection as improvable through standardization and cadastral surveys; building exit pathways via bureaucratic rationalization",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks treating contingent institutional arrangements as natural laws of statecraft"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and increasing. The imperial treasury captures a substantial and growing portion of subject productive surplus via multiple mechanisms (land tax, corv\u00e9e, conscription, customs duties, monopoly levies). The measurement trajectory shows increasing extractiveness as imperial demands expand and the constraint becomes more comprehensive. Initial value (0.45) reflects early-stage empire where collection mechanisms were less developed; terminal value (0.68) reflects mature empire where extraction is systematized and comprehensive. Suppression (0.72): High. Multiple structural barriers prevent exit: land tenure systems lock peasants to specific territories; legal disability prevents merchant competition; conscription is compulsory; corv\u00e9e obligations are enforceable by military force. Escape routes (underground economy, banditry, geographic migration) are costly and risky. Theater ratio (0.55): Moderate and increasing. Early imperial tax collection relied on direct coercion and negotiation; as the system matured, elaborate assessment procedures (tax commissions, valuations, appeals processes) developed. These procedures create the appearance of systematic, legible taxation while actual collections rest primarily on power relations and coercive capacity. Increasing theater ratio reflects the growing gap between formal assessment processes and the extraction mechanism's actual operation.",
+    "perspectival_gap": "The gap between peasant/merchant experience (Snare/Tangled Rope) and imperial treasury experience (Rope) is maximal, revealing the constraint's purely extractive character. The reformer's Scaffold perspective offers a genuine exit path through administrative rationalization, but the current mechanism's classification as Snare from the powerless perspective is structurally confirmed. The piton classification of the assessor reveals institutional degradation \u2014 the formal procedures mask rather than enable collection. The false mountain from the civilizational observer reveals the risk of naturalizing oppressive institutional arrangements as inevitable features of statecraft.",
+    "directionality_logic": "The directionality value (d) for each agent is derived from their structural position relative to extraction flows. The peasant faces d \u2248 0.95 (trapped victim) producing maximum f(d) \u2248 1.42 effective extraction multiplier. The merchant faces d \u2248 0.65 (constrained victim with some coordination benefits) producing f(d) \u2248 1.00. The imperial treasury faces d \u2248 0.05 (institutional beneficiary with arbitrage options) producing f(d) \u2248 -0.12 (negative effective extraction \u2014 benefits flow to this agent). The local assessor faces d \u2248 0.55 (institutional actor with constrained exit) producing f(d) \u2248 0.75. These directionality values flow from the beneficiary/victim declarations: the treasury is the primary beneficiary (d low); peasants and merchants are primary victims (d high); the assessor occupies an intermediate institutional position with genuine constraints despite moderate power level.",
+    "mandatrophy_analysis": "SNARE CONFIRMATION: The imperial tax collection mechanism satisfies all snare gates. Extractiveness (0.68) \u2265 0.46. Suppression (0.72) \u2265 0.60. The primary perspective (subject peasant: powerless/trapped) classifies as Snare with maximum experienced extraction. No coordination function serves the primary victim \u2014 the extraction is asymmetric and irreducible. The constraint exists because it serves extraction, not because it solves a coordination problem that could not be solved otherwise. The apparent public goods (roads, military, administration) primarily serve the imperial center; they are secondary to the primary function of extraction. Mandatrophy is resolved by demonstrating that the snare classification is not mislabeling a coordination mechanism but correctly identifying pure extraction wrapped in institutional procedures. The theater ratio (increasing from 0.35 to 0.55) reflects the growing gap between formal legibility (assessment procedures, cadastral records, written law) and actual mechanism (coercive extraction). High theater in a snare context indicates degradation \u2014 the formal procedures are becoming increasingly performative as the constraint matures."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "imperial_bureaucratic_expansion",
+      "peasant_servitude_lock_in",
+      "merchant_monopoly_gatekeeping"
+    ],
+    "dual_formulation_note": "The imperial tax collection mechanism is upstream of several institutional constraints that it enables and reinforces: bureaucratic expansion requires funding (captured by taxation); peasant servitude is locked in by land tenure systems that also enable tax collection; merchant monopolies are created and maintained through imperial licensing requirements that also generate customs revenue. Each downstream constraint has its own extractiveness value but depends structurally on the tax mechanism's existence."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

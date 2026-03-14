@@ -1,0 +1,205 @@
+{
+  "header": {
+    "constraint_id": "serfdom_legal_reinforcement",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "serf"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Serfdom Legal Reinforcement",
+    "topic_domain": "political_economy/feudal_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "landed_nobility"
+    ],
+    "victims": [
+      "bound_peasantry"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Bound Peasant",
+      "comment": "PERSPECTIVE 1: BOUND PEASANT (SNARE) \u2014 Trapped by law, custom, and economic dependency. Peasant is legally bound to land, cannot leave without lord's permission, cannot marry without consent, cannot choose occupation. No structural exit pathway; escape requires violation of law with severe penalty (mutilation, execution, enslavement). Maximum experienced extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Landed Nobility",
+      "comment": "PERSPECTIVE 2: LANDED NOBILITY (ROPE) \u2014 Experiences serfdom as coordination mechanism for agricultural labor and feudal obligation fulfillment. The legal framework solves the problem of securing reliable labor supply and maintaining social hierarchy. Nobility has full exit option (can emigrate, change domains, sell estates). Net beneficiary with arbitrage optionality \u2014 extraction flows toward them."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Minor Gentry",
+      "comment": "PERSPECTIVE 3: MINOR GENTRY (TANGLED ROPE) \u2014 Intermediate position. Benefits from access to bound labor and feudal privilege but also faces constraints: bound by reciprocal feudal obligations to higher nobility, limited military options, dependent on tenant peasant productivity. Experiences genuine coordination (social stability, predictable labor) alongside asymmetric extraction (can extract from peasants but must yield to nobility)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "label": "The Serf Internalized (Identity-Locked)",
+      "comment": "PERSPECTIVE 4: SERF WITH INTERNALIZED CONSTRAINT (IDENTITY_LOCKED) \u2014 At generational time horizon, the bound peasant's identity becomes fused with serf status. The peasant's self-concept, social role, and worldview are constituted through the binding constraint: 'I am a serf,' 'this is my place,' 'the lord owns me.' Legal constraints remain in place, but the binding mechanism is now partially cognitive. The serf could theoretically flee (constrained exit) but cannot imagine doing so because their identity is constituted through servitude. Escaping would require becoming a different person \u2014 abandoning inherited social identity, severing kinship and community bonds, adopting a persona of lawlessness or vagabondage with no legitimate social place."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Abolitionist Movement",
+      "comment": "PERSPECTIVE 5: ABOLITIONIST MOVEMENT (SCAFFOLD) \u2014 Organized agents (monarchical centralization, emerging merchant class, church reform movements) begin dismantling serfdom through legal reforms. The constraint is perceived as temporary and dysfunctional for emerging economic systems. The sunset is real: over 300-500 years, serfdom is legally abolished across Europe. Suppression remains high during transition (former serfs face economic coercion and discrimination) but declines as alternatives emerge. Low effective extraction because organized agents have agency and see a clear exit pathway."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Remnant Legal Apparatus",
+      "comment": "PERSPECTIVE 6: REMNANT LEGAL APPARATUS (PITON) \u2014 After formal abolition, traces of serfdom persist through sharecropping, debt-bondage, and quasi-feudal land tenure. The legal mechanisms are degraded \u2014 serfdom is nominally illegal but functionally reinstated through debt traps and agricultural contracts. Theater ratio is high (formal legal equality coexists with structural slavery). The apparatus persists through institutional inertia: land-ownership structures, debt relationships, and agricultural contracts preserve the binding mechanism even after the legal label is removed."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational/global perspective, serfdom is a pure extraction mechanism with minimal coordination function. The legal framework's claimed purpose (social stability, orderly land management) is secondary to its actual function (capturing peasant labor and preventing exit). The constraint persists not because coordination fails without it but because the extractive surplus justifies enforcing it. The analytical observer sees the full causal chain: property law + legal bonding + suppression of alternatives = snare."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "identity_internalization_threshold",
+      "question": "At what generational point does legal constraint become internalized identity constraint? What fraction of serfdom's binding is legal vs cognitive?",
+      "resolution_mechanism": "Historical analysis of serf flight patterns; records of escape attempts and reasons for return; ethnographic data on serf self-reporting; comparison of serf behavior before vs after legal abolition",
+      "impact": "If primarily legal (70%+): serfdom is pure snare with trapped exit. If substantially internalized (50%+): serfdom involves identity_locked agents whose classification shifts at biographical timescale. Affects projections for post-abolition social mobility.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of serfdom binding that is legal vs internalized"
+    },
+    {
+      "id": "alternative_labor_adequacy",
+      "question": "Could feudal agricultural systems function without serfdom using free-wage labor or cooperative tenant arrangements?",
+      "resolution_mechanism": "Economic analysis of alternative arrangements historically available; comparison with regions that abolished serfdom earlier; counterfactual modeling of wage-based feudal agriculture",
+      "impact": "If viable: serfdom is pure extraction (snare). If necessary: serfdom provides real coordination function and should reclassify toward tangled_rope. Changes evaluation of abolitionist movement's feasibility.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Viability of feudal systems without legal serfdom"
+    },
+    {
+      "id": "post_abolition_substitution",
+      "question": "After legal abolition of serfdom, what fraction of extraction is preserved through sharecropping, debt-bondage, and discriminatory laws? Does the total suppression and extractiveness persist?",
+      "resolution_mechanism": "Quantitative comparison of serf labor obligations pre-abolition vs sharecropper obligations post-abolition; measurement of income/autonomy changes; documentation of legal substitution mechanisms",
+      "impact": "If high substitution (80%+): serfdom merely changed legal form, becomes piton classification. If low substitution (20%-): abolition genuinely freed peasants, scaffold perspective confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Substitution of serfdom extraction through post-abolition mechanisms"
+    },
+    {
+      "id": "peasant_organization_constraint",
+      "question": "Why did serfdom's extraction capacity remain stable despite peasant numerical majority? Could serfs have coordinated to overturn the system absent external reform?",
+      "resolution_mechanism": "Analysis of peasant revolts and their outcomes; comparison of regions with vs without serf-led insurrections; study of organizational barriers; examination of counter-evidence cases",
+      "impact": "If coordination impossible: suppression is high enough that trapped exit correctly describes serfs. If coordination was prevented: highlights that extraction specifically targets organizing capacity (higher suppression than base extraction alone would suggest).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural capacity for serf-coordinated resistance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 250,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 250,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 750,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 750,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 750
+  },
+  "commentary": {
+    "narrative_context": "Serfdom legal reinforcement represents a canonical extraction constraint enforced through property law, bonding obligations, and deliberate suppression of exit alternatives. A serf is legally bound to a lord's land, cannot leave without permission, cannot marry without consent, cannot choose occupation or inheritance path. The legal framework combines explicit binding (formal ownership of peasant labor) with suppression mechanisms (flight penalties including mutilation, death, or re-enslavement) and identity-fusing cultural norms that make exit unthinkable across generations. The constraint exhibits all six DR types from different structural positions: pure snare for the bound peasant; rope (coordination) for nobility; tangled rope for intermediate gentry; identity-locked snare at generational timescale; temporary problem with sunset clause for abolitionists; degraded remnant for post-abolition legal systems; and snare at civilizational analytical view. The constraint's extractiveness increases slightly over its early period as feudalism systematizes, peaks mid-period, then declines as legal abolition spreads across Europe. Theater ratio increases over time as the legal fiction of 'natural order' grows more elaborate even as the actual extraction persists.",
+    "key_agents": [
+      "Bound Peasantry: Primary victim (powerless/trapped at biographical scale, identity_locked at generational scale) \u2014 bears extraction through labor obligations, restricted autonomy, legal penalties for exit",
+      "Landed Nobility: Primary beneficiary (institutional/arbitrage) \u2014 captures labor surplus and feudal tribute; has full exit optionality through emigration or estate transfer",
+      "Minor Gentry: Secondary institutional actor (moderate/constrained) \u2014 benefits from serf labor but constrained by reciprocal feudal obligations to higher nobility; experiences mixed coordination and extraction",
+      "Abolitionist Movement: Organized reform actor (organized/constrained) \u2014 centralizing monarchies, merchant classes, church reformers perceive serfdom as dysfunctional and work to abolish it; see sunset clause and organized exit pathway",
+      "Legal and Church Apparatus: Institutional maintainers (institutional/arbitrage) \u2014 codify and legitimize binding through law and theology; see serfdom as natural order; persist through inertia after abolition through substitute mechanisms",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees the full causal structure of extraction and recognizes that abolition did not fully eliminate the mechanism but merely transformed its legal form"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The bound peasant transfers a substantial portion of agricultural surplus to the lord through labor obligations (typically 3-4 days per week corv\u00e9e labor), tribute payments, and inherited restrictions on economic mobility. The extraction is direct and unambiguous \u2014 the legal system explicitly allocates peasant labor to the lord. The value reflects core extraction without secondary rent-seeking layering (which would push it toward 0.75+). Suppression (0.75): Very high. Structural barriers to exit include: (1) legal prohibition with severe penalties, (2) economic dependency (landlessness), (3) cultural/identity lock (serf identity internalized across generations), (4) kinship/community bonds to land, (5) absence of alternative social roles or legitimate refuge. Flight is possible (some serfs did flee to towns or forests) but carries execution risk, mutilation, enslavement, and permanent status degradation. Theater ratio (0.55): Moderate. The legal system produces significant performative content \u2014 elaborate justifications via natural law, divine order, social hierarchy necessity \u2014 but the core extraction mechanism is relatively transparent. Serfs understand what they owe and why; the theater is not about hiding the extraction but about legitimizing it as necessary. Theater increases over time as the ideology elaborates while abolition pressure grows.",
+    "perspectival_gap": "The constraint demonstrates complete perspectival inversion: the beneficiary (nobility) sees rope/coordination, the victim (peasant) sees snare/extraction, and the analytical observer sees snare/pure extraction. The identity-locked perspective reveals a critical mechanism: at biographical timescale the peasant might escape (constrained exit, not trapped), but internalization of serf identity prevents any escape imagining. The generational identity-locked classification exposes that serfdom's binding is not purely structural (legal + economic) but partially cognitive (identity-fused). The abolitionist scaffold perspective shows the constraint is not immutable \u2014 organized action can dissolve it. The piton perspective (post-abolition remnants) shows that legal abolition does not automatically eliminate the extraction mechanism \u2014 it persists through substitution (sharecropping, debt-bondage, discriminatory law). The perspectival gaps reveal the full anatomy of extraction.",
+    "directionality_logic": "Directionality (d) for each perspective derives from the agent's power level, exit options, and structural relationship to extraction flow. Bound peasants with trapped exit and victim status: d \u2248 0.95 (maximum target), f(d) \u2248 1.42 (maximum experienced extraction). Landed nobility with institutional power, arbitrage exit, and beneficiary status: d \u2248 0.05 (maximum beneficiary), f(d) \u2248 -0.12 (negative experienced extraction \u2014 they are subsidized). Minor gentry with moderate power, constrained exit, and mixed status: d \u2248 0.50-0.60 (slightly toward target), f(d) \u2248 0.65-0.85 (moderate experienced extraction). Abolitionists with organized power and constrained exit: d \u2248 0.55 (slight target but with agency), f(d) \u2248 0.75 (moderate experienced extraction). The directionality chain shows why powerless trapped serfs experience maximum extraction while beneficiary nobility experience minimum or negative extraction from the same constraint.",
+    "mandatrophy_analysis": "CANONICAL SNARE EXEMPLAR: This constraint resolves the mandatrophy by demonstrating that snare classification is not arbitrary \u2014 it has structural justification (trapped exit + high suppression + asymmetric extraction) that is stable across multiple independent perspectives. The peasant sees snare. The analytical observer sees snare. The abolitionists see a snare that can be dismantled (scaffold is the organized reform pathway). The only perspective that sees rope (coordination) is the beneficiary (nobility), which is precisely the position that would rationalize extraction as coordination. The mandatrophy is resolved by noting that snare is the correct classification from all positions EXCEPT the beneficiary's, and the beneficiary's perspective is the least reliable guide to the constraint's true function. Post-abolition piton classification confirms that the extraction persists even after legal form changes \u2014 serfdom was never about coordination; it was pure extraction using legal form as theater."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "feudal_obligation_reciprocity",
+      "peasant_revolt_suppression",
+      "post_abolition_sharecropping"
+    ],
+    "dual_formulation_note": "Serfdom legal reinforcement is the primary extraction mechanism. It structurally enables and depends on feudal_obligation_reciprocity (the reciprocal duties between nobility and monarchy) and peasant_revolt_suppression (the legal/military apparatus preventing organized resistance). Post-abolition sharecropping represents the constraint's transformation into substitute form after legal abolition \u2014 not a separate constraint but a downstream manifestation of the same extraction mechanism operating through different legal cover."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

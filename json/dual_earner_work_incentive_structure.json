@@ -1,0 +1,194 @@
+{
+  "header": {
+    "constraint_id": "dual_earner_work_incentive_structure",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dual_earner"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dual Earner Work Incentive Structure",
+    "topic_domain": "labor/economic_policy/gender",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "employers",
+      "dual_income_households_upper_bracket",
+      "childcare_industry",
+      "consumer_spending_economy"
+    ],
+    "victims": [
+      "secondary_earner_time_poverty",
+      "childcare_burden_asymmetry",
+      "lower_income_dual_earner_households",
+      "unpaid_domestic_labor_displacement"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Secondary Earner (Economic Entrapment)",
+      "comment": "PERSPECTIVE 1: SECONDARY EARNER WITH DEPENDENT CHILDREN (SNARE) \u2014 Structurally trapped by childcare costs, healthcare dependency, and financial obligations. Both partners working is required for household survival, yet the second income is partially consumed by childcare, eldercare, and work-related expenses. Exit from employment brings immediate financial crisis; exit from unpaid domestic labor is socially penalized. The trapped secondary earner experiences pure extraction: generates income while bearing disproportionate time poverty and care work. No genuine coordination benefit is perceived \u2014 the constraint exists because employers have indexed wages to assume dual earners."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Lower-Income Dual Earner Household",
+      "comment": "PERSPECTIVE 2: LOWER-INCOME DUAL-EARNER HOUSEHOLD (TANGLED ROPE) \u2014 Both earners constrained by childcare costs that consume 20-35% of second earner's income. Genuine coordination problem: without both incomes, household drops below subsistence threshold. But asymmetric extraction: wages have been indexed to assume two earners, shifting childcare burden onto families rather than employers or the state. Perceives mixed benefit (economic survival requires dual income) and mixed extraction (childcare costs, time poverty, service sector degradation). Some exit options exist (relocation, career change) but at high cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Employers (Labor Market Beneficiaries)",
+      "comment": "PERSPECTIVE 3: EMPLOYERS (ROPE) \u2014 Experience the dual-earner assumption as pure coordination: the constraint solves their collective action problem of downward wage pressure. Single-earner household wages were politically unsustainable (breadwinner norm); dual-earner indexing allows lower real wages per capita while maintaining household income. No meaningful extraction experienced from employer perspective \u2014 the constraint is perceived as efficient labor market coordination. Employers have arbitrage options (retool pay structures, adopt flexible work) but don't exercise them because current structure maximizes their surplus."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Childcare Industry and Service Sector Workers",
+      "comment": "PERSPECTIVE 4: CHILDCARE AND SERVICE SECTOR WORKERS (TANGLED ROPE) \u2014 Organized around meeting dual-earner household demand, but caught in extraction dynamic: childcare work is low-wage, precarious, and highly gendered. The constraint creates massive coordination problem (who watches the children?) but routes extraction through service workers \u2014 expanding childcare industry doesn't improve conditions for childcare workers, because the industry expands to absorb the secondary earner's income as cost, not improve childcare quality. Organized exit options (unionization, wage demands) exist but are suppressed by the same cost structure that makes childcare expensive."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "State Social Policy Framework",
+      "comment": "PERSPECTIVE 5: STATE SOCIAL POLICY FRAMEWORK (PITON) \u2014 The formal policy structure treats dual earning as individual choice, not structural fact. State provides minimal childcare subsidy, tax structures assume single earner (though increasingly outdated), and labor law does not mandate flexible work or parental accommodation. The institutional apparatus is performing its historical function (supporting male breadwinner model) despite structural conditions having completely changed. Theater is high: work-life balance initiatives, gender equity rhetoric, childcare 'access' programs \u2014 but real policy (wage floors, childcare infrastructure, parental leave) has not kept pace. The state sees its own role as degraded (institutional inertia)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Naturalizing Economics)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER AT CIVILIZATIONAL SCALE (MOUNTAIN FALSE SUMMIT) \u2014 The constraint risks appearing as natural law: 'Dual earning is an economic necessity in modern capitalism; childcare costs are inevitable friction of market efficiency.' This naturalizes what is actually a contingent institutional arrangement \u2014 the indexing of wages to dual-earner assumption is a policy choice (made in the 1980s-90s across OECD), not a law of economics. The analytical observer at this scale mistakes normalization for immutability. The engine's false summit detector will flag this: the structural data shows this is contingent (suppression 0.62 = high, indicating enforcement required), not natural (would require suppression \u22640.05)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "childcare_cost_structural_vs_artificial",
+      "question": "Are childcare costs structurally inevitable (reflecting genuine resource scarcity and labor intensity) or artificially elevated by market power concentration and undersupply of public provision?",
+      "resolution_mechanism": "International comparison: childcare costs as % of household income in countries with public childcare provision (France, Nordic countries, ~5-8%) vs countries with market-based provision (US, UK, ~15-35%); cost trajectory analysis controlling for wage levels and real resource constraints",
+      "impact": "If structural: childcare burden is unavoidable friction, secondary earner extraction is moderate. If artificial: the constraint is rent-extraction by childcare providers and employers both, and extraction value is higher. Classification shifts from Tangled Rope toward Snare for secondary earners.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether childcare costs reflect structural scarcity or market concentration"
+    },
+    {
+      "id": "wage_indexing_counterfactual",
+      "question": "Would single-earner household wages be politically sustainable at 2024 levels if dual-earner assumption had not been normalized, or is the dual-earner indexing genuinely necessary for labor market clearing?",
+      "resolution_mechanism": "Historical wage analysis: real single-earner wage trajectory 1970-present vs dual-earner household income trajectory; cross-country comparison with different wage-setting norms; employer labor cost accounting under alternative assumptions",
+      "impact": "If sustainable: employers are extracting via normalization rather than necessity, and the rope perspective is partially false. If necessary: the rope perspective is accurate \u2014 dual earning solves genuine coordination problem for employers and households both. Classification of employer perspective may shift toward legitimacy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether wage indexing reflects necessity or extraction opportunity"
+    },
+    {
+      "id": "secondary_earner_identity_lock",
+      "question": "How much of the secondary earner's remaining in employment despite negative net income reflects structural entrapment vs. internalized identity/role expectations (identity_locked)?",
+      "resolution_mechanism": "Post-exit trajectory analysis: if a secondary earner exits employment and income is replaced by household income or policy transfer, do they report reduced stress/time poverty, or do they experience identity crisis and attempt re-entry despite financial loss? Qualitative research on identity dimensions of 'breadwinner' role for both earners.",
+      "impact": "If primarily structural entrapment: trapped exit option is correct. If significantly identity-locked: the exit_options should include identity_locked for some secondary earners, indicating cognitive/identity binding on top of material barriers. This would elevate the snare classification's binding strength.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of identity-lock vs. material entrapment in secondary earner role"
+    },
+    {
+      "id": "gender_role_naturalization",
+      "question": "Is the disproportionate domestic labor burden on secondary earners an accidental economic consequence or an intentional enforcement mechanism that benefits from gender role naturalization?",
+      "resolution_mechanism": "Analysis of workplace flexibility policy adoption: do employers offer flexible work equally to all workers, or do they route flexibility offers toward women (thereby encoding secondary-earner assumption into policy)? Comparison of actual flexibility usage rates and advancement penalties by gender; examination of promotional pathways for reduced-hours workers.",
+      "impact": "If accidental: the constraint is a coordination failure that could be solved by childcare infrastructure and wage restructuring. If intentional: the constraint is embedded in institutional practices that reproduce gender roles, and the suppression value should be higher (closer to 0.70, indicating enforcement mechanism rather than economic inevitability).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether gender role naturalization enforces the dual-earner structure"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The dual-earner work incentive structure emerged across OECD economies from the 1980s onward as women's labor force participation increased and breadwinner-wage model became politically untenable. Rather than maintaining household purchasing power through single-earner wages, employers and policymakers normalized the assumption that households would have two earners. This created a structural constraint where both partners must work to maintain pre-dual-earner household income levels, yet childcare costs, time poverty, and unpaid domestic labor intensified rather than decreased. The constraint exhibits asymmetric benefits (employers, upper-income households, childcare industry) and asymmetric costs (secondary earners, time-poverty burden, lower-income households, childcare workers). Unlike a pure coordination mechanism (rope), the dual-earner structure solves coordination problems (who works if not both?) but does so by extracting from secondary earners and displacing unpaid domestic labor onto families rather than onto employers or the state. The constraint is maintained by policy silence (lack of childcare subsidy, inflexible work norms, tax structures), workplace practice (flexibility offered unequally), and gender role naturalization (secondary earners disproportionately absorb care work). Theater has increased as work-life balance rhetoric and gender equity initiatives expand without corresponding institutional change to wage levels, childcare infrastructure, or parental accommodation.",
+    "key_agents": [
+      "Secondary Earner with Dependent Children: Primary victim (powerless/trapped) \u2014 economic necessity combined with childcare cost and care work burden creates trapped exit. Both employment and domestic labor required; cannot exit either without crisis.",
+      "Lower-Income Dual-Earner Household: Secondary victim (moderate/constrained) \u2014 constrained by childcare costs consuming 20-35% of second earner income; genuine coordination problem (need both incomes) but extraction through wage indexing.",
+      "Childcare Industry and Service Sector Workers: Tertiary victim (organized/constrained) \u2014 expanded demand creates sector growth but not wage growth; extraction routed through low-wage work; organized exit options exist but constrained by cost structure.",
+      "Employers: Primary beneficiary (institutional/arbitrage) \u2014 perceive constraint as coordination solution; can retool pay structures but don't, maintaining surplus.",
+      "Upper-Income Dual-Earner Households: Secondary beneficiary (powerful/mobile) \u2014 have exit options (reduced hours, outsourced childcare, career flexibility) that lower-income households lack; benefit from dual-income norm without equivalent extraction burden.",
+      "State Policy Framework: Institutional actor (institutional/arbitrage) \u2014 maintains outdated policy structure; has arbitrage options (public childcare, wage adjustment, parental leave) but doesn't exercise them.",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent policy as inevitable economic law."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts from secondary earners and lower-income households in the form of time poverty, displaced unpaid labor, and reduced real wages per capita. However, extraction is not total (upper-income households have exit options; some flexibility exists) and some genuine coordination value exists (dual earning does enable household income in wage-constrained environment). The value reflects the mixed nature of tangled rope: asymmetric extraction layered over genuine coordination problem. Extractiveness has increased from 0.35 to 0.58 over the 30-year interval as childcare costs rose faster than wages and work-life balance rhetoric expanded without institutional change (theater increasing). Suppression (0.62): Moderate-high. Multiple suppression mechanisms: childcare costs create economic barrier; inflexible work norms restrict exit options; gender role naturalization makes the secondary-earner role seem inevitable; policy silence (lack of childcare infrastructure, inadequate parental leave) enforces the structure. Not total suppression (some employers offer flexibility, some households achieve reduced hours) but significant and multifaceted. Theater ratio (0.48): Moderate. Work-life balance initiatives, gender equity rhetoric, and childcare 'access' programs are performative without corresponding wage or infrastructure change. Theater has increased over time as gap widened between policy rhetoric and institutional reality. The constraint is not yet piton-level theater (which would suggest pure institutional inertia), but theater is substantial enough to flag degradation in the state policy perspective.",
+    "perspectival_gap": "This constraint shows stark perspectival divergence. The secondary earner (trapped/powerless) experiences snare \u2014 pure extraction masked as economic necessity. The lower-income household (constrained/moderate) experiences tangled rope \u2014 genuine need for dual income but extraction through wage indexing and childcare costs. The employer (arbitrage/institutional) experiences rope \u2014 coordination solution that happens to benefit them. The upper-income household (mobile/powerful) experiences rope or near-positive \u2014 they have genuine flexibility and can arbitrage childcare (outsourcing, career flexibility). The childcare worker (organized/constrained) experiences tangled rope in a different form \u2014 benefits from industry expansion but extraction through low wages. The state policy framework (arbitrage/institutional) experiences piton \u2014 performing outdated functions (male breadwinner support) despite changed conditions. The analytical observer at civilizational scale risks mountain \u2014 naturalizing what is contingent policy. The perspectival gaps reveal the constraint's true structure: it solves coordination problems for some agents (employers, upper-income households) while extracting from others (secondary earners, childcare workers, lower-income households).",
+    "directionality_logic": "Directionality (d) is derived from structural position and benefit/cost relationship. Secondary earners and childcare workers are victims with trapped/constrained exit \u2014 high d (0.85-0.95), experiencing maximum extraction. Lower-income households are victims with mixed benefits \u2014 moderate d (0.55-0.65), experiencing tangled rope. Employers are beneficiaries with arbitrage options \u2014 low d (0.15-0.25), experiencing coordination benefit with no extraction cost perceived. Upper-income households are partial beneficiaries with mobile exit options \u2014 moderate d (0.30-0.50), experiencing mixed benefit and extraction. The state policy framework has declared no victims (by policy silence) and no enforcement (appears neutral) \u2014 but the analytical view reveals it is an institutional beneficiary of the arrangement (lower wage floors, reduced public expenditure), giving it d (0.10-0.20). The analytical observer has no structural position in the extraction flow \u2014 d remains near canonical (0.72-0.73).",
+    "mandatrophy_analysis": "RESOLUTION: The mandatrophy is resolved by recognizing that this constraint simultaneously solves a real coordination problem (how to maintain household income as single-earner wages became politically unsustainable) and extracts through that solution (by indexing wages to assume dual earners, shifting childcare burden to families, and maintaining lower real wages per capita). This is the canonical tangled rope case: genuine coordination function cannot be removed without creating a different problem, but the coordination is achieved through asymmetric extraction. The snare perspective from the secondary earner is not wrong \u2014 from their position, the extraction is severe and unilateral. The rope perspective from the employer is not wrong either \u2014 from their position, the constraint solves their coordination problem and appears as pure coordination. The mandatrophy resolution is to recognize both perspectives as structurally accurate but observationally different. Removing the constraint would require addressing both the coordination problem (household income) and the extraction mechanism (wage indexing, childcare costs) simultaneously. A pure coordination solution would look like: maintaining household income through wage levels that assume single earner, with public childcare provision, flexible work options equally available, and equalized domestic labor. The current structure achieves coordination by extracting; a non-extractive solution would require a different set of institutions (public childcare, higher wages, flexible work, equal domestic labor distribution)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "gender_wage_gap",
+      "childcare_affordability_crisis",
+      "work_life_balance_theater",
+      "unpaid_domestic_labor_displacement"
+    ],
+    "dual_formulation_note": "The dual-earner work incentive structure is upstream of multiple derivative constraints. Gender wage gap reflects the extraction mechanism's gendering. Childcare affordability crisis is the primary extraction vector. Work-life balance theater measures the performative response. Unpaid domestic labor displacement measures the constraint's secondary effect. All are downstream of this structural constraint \u2014 removing the dual-earner assumption would require addressing all of them simultaneously."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

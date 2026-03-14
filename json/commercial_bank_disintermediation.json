@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "commercial_bank_disintermediation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "disbk"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Commercial Bank Disintermediation Constraint",
+    "topic_domain": "financial_economics/banking_structure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_corporations",
+      "institutional_investors",
+      "fintech_platforms"
+    ],
+    "victims": [
+      "retail_depositors",
+      "small_business_borrowers",
+      "banking_system_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Retail Depositor Seeking Returns",
+      "comment": "PERSPECTIVE 1: RETAIL DEPOSITOR (SNARE) \u2014 Trapped in low-yield deposit environment as banks redirect profitable lending to large corporations via capital markets. Cannot exit to direct lending markets (requires credit expertise, regulatory licensing, capital reserves). Faces forced subsidy of bank operations through below-market deposit rates while banks extract via disintermediation spread."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Small Business Borrower",
+      "comment": "PERSPECTIVE 2: SMALL BUSINESS BORROWER (TANGLED ROPE) \u2014 Benefits from bank-provided coordination of credit assessment and capital access. Simultaneously bears extraction through rising spreads and rationing as banks prioritize large corporate clients. High switching costs to alternative lenders; constrained by creditworthiness requirements and lack of direct capital market access. Coordination function real but increasingly asymmetric."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Large Corporation / Institutional Investor",
+      "comment": "PERSPECTIVE 3: LARGE CORPORATION / INSTITUTIONAL INVESTOR (ROPE) \u2014 Experiences constraint as pure coordination: banks facilitate efficient capital sourcing from institutional investors, matching maturity profiles and risk preferences. Net beneficiary with multiple exit options (commercial paper, bond markets, direct lending platforms). Effective extraction runs toward this agent."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regulatory Authority and Central Bank",
+      "comment": "PERSPECTIVE 4: REGULATORY AUTHORITY / CENTRAL BANK (SCAFFOLD) \u2014 Views disintermediation as a temporary challenge with structural sunset. Basel capital requirements, deposit insurance mandates, and Fed emergency facilities coordinate an exit path: as fintech and alternative lenders scale, traditional bank intermediation transitions to niche activity. Sunset rationale: digitization and regulatory competition will mature alternative credit markets within 15-25 years, eliminating the coordination problem that banks solve."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Banking Institution",
+      "comment": "PERSPECTIVE 5: LEGACY BANKING INSTITUTION (PITON) \u2014 Traditional commercial bank sees its core function (credit intermediation between depositors and borrowers) as atrophied. Maintains presence through regulatory protection, deposit insurance guarantees, and incumbent relationships despite declining functional value. Theater ratio (0.35) reflects genuine operational content \u2014 interest rate risk management, credit assessment infrastructure, liquidity provision \u2014 but this function is increasingly separable and provided by specialized firms. Bank persists through institutional inertia."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Banking System Stability (Collective)",
+      "comment": "PERSPECTIVE 6: BANKING SYSTEM STABILITY (TANGLED ROPE) \u2014 Disintermediation creates genuine coordination function (capital formation, risk distribution) alongside extraction mechanism (concentration risk, procyclicality amplification, fragile market-based credit supply). System stability bears asymmetric cost when funding markets seize (2008, 2020, 2023 banking episodes). Constrained by interconnectedness and policy lock-in despite agency to redesign system structure. Analytical classification shows hybrid extraction-coordination character."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN \u2014 FALSE SUMMIT) \u2014 Risks naturalizing disintermediation as an inherent consequence of financial market development. Information asymmetry between lenders and borrowers creates 'natural' need for intermediaries; information technology reduces that asymmetry and thus disintermediates. This reads as a natural law view. However, structural data reveals regulatory choices (deposit insurance, capital requirements, monetary policy transmission mechanisms) actively maintain banking-centered intermediation against technological and market forces. False summit: contingent policy that appears inevitable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "regulatory_moral_hazard_vs_stability",
+      "question": "Does deposit insurance create the disintermediation dynamic by distorting risk pricing, or does it prevent systemic collapse that would otherwise result from unregulated disintermediation?",
+      "resolution_mechanism": "Counterfactual analysis: compare deposit insurance regimes with uninsured systems; measure bank risk-taking behavior and system stability outcomes",
+      "impact": "If insurance is primary driver: disintermediation is policy artifact, easily reversible. If insurance prevents worse collapse: disintermediation reflects genuine preference for market-based allocation despite risks.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether deposit insurance drives or prevents disintermediation dynamic"
+    },
+    {
+      "id": "credit_assessment_separability",
+      "question": "Can credit assessment be effectively separated from capital provision, or does bank relationship lending provide value that market-based assessment cannot match?",
+      "resolution_mechanism": "Performance comparison: default rates and recovery on bank-originated vs market-assessed credit; longitudinal tracking of loan quality across intermediation models",
+      "impact": "If separable: disintermediation reduces real friction; constraint is pure extraction. If inseparable: disintermediation creates adverse selection; snare classification underestimates systemic risk.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether credit assessment can be separated from intermediation"
+    },
+    {
+      "id": "systemic_funding_cliff_risk",
+      "question": "Does market-based intermediation provide materially higher fragility during funding stress compared to bank-based intermediation?",
+      "resolution_mechanism": "Cross-sectional comparison of funding cost and availability during stress periods (2008, 2020, 2023 banking crises); measure market-based funding vs bank lending cost volatility",
+      "impact": "If significantly higher fragility: systemic cost of disintermediation is real; suppression value underestimates structural constraint. If comparable: disintermediation is functionally equivalent intermediation.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether market-based funding shows higher fragility during stress"
+    },
+    {
+      "id": "fintech_regulatory_arbitrage_sustainability",
+      "question": "Do fintech platforms and non-bank lenders persistently enjoy regulatory arbitrage advantages, or does regulatory convergence eventually equalize cost structures?",
+      "resolution_mechanism": "Historical analysis of regulatory arbitrage duration in prior financial innovations; current trajectory of fintech capital requirements and compliance costs vs bank equivalents",
+      "impact": "If arbitrage is persistent: disintermediation is structural regulatory capture. If convergence occurs: disintermediation is temporary competitive advantage, scaffold sunset logic holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sustainability of fintech regulatory arbitrage advantages"
+    },
+    {
+      "id": "small_business_credit_substitution",
+      "question": "Can alternative lenders (fintech, community banks, credit unions) provide small business credit at quality and cost comparable to pre-disintermediation commercial banks, or is this market segment permanently underserved?",
+      "resolution_mechanism": "Longitudinal tracking of small business credit availability, cost, and default rates across lending models; assessment of alternative lender capacity growth vs historical bank share loss",
+      "impact": "If substitution occurs: small business victim status is temporary (scaffold logic). If market fails: small business snare classification is persistent; policy intervention required.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative lenders can replace bank credit for small business"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Commercial bank disintermediation \u2014 the process by which large corporations and institutional investors access capital directly through financial markets rather than via bank lending \u2014 creates a structural constraint that exhibits simultaneous coordination and extraction. Banks coordinate the matching of depositors and borrowers, assess credit risk, manage liquidity, and distribute systemic risk. As information technology and regulatory changes reduce these coordination barriers, disintermediation extracts value from retail depositors (who face declining returns on deposits) and small businesses (who lose access to relationship lending). The constraint is neither pure coordination nor pure extraction: it coordinates capital formation for institutional actors while extracting from retail actors, sustained by regulatory structures (deposit insurance, capital requirements, Fed backstop) that maintain bank viability despite declining functional necessity. Extractiveness has increased from 0.28 to 0.52 over the 20-year interval, while theater ratio has declined from 0.42 to 0.35, indicating that the real coordination function has diminished while extraction has increased \u2014 consistent with Goodhart-drift dynamics and regulatory capture.",
+    "key_agents": [
+      "Retail Depositors: Primary victim (powerless/trapped) \u2014 earn below-market returns in constrained deposit market while banks shift profitable lending to capital markets",
+      "Small Business Borrowers: Secondary victim (moderate/constrained) \u2014 lose access to relationship lending as banks disintermediate; face rising spreads and rationing",
+      "Large Corporations and Institutional Investors: Primary beneficiary (institutional/arbitrage) \u2014 access efficient capital markets, bypass intermediation spread, obtain competitive pricing",
+      "Commercial Banks: Institutional actor (institutional/arbitrage) \u2014 maintain presence through regulatory protection and deposit insurance; core function atrophied",
+      "Fintech and Alternative Lenders: Organized actors (organized/constrained) \u2014 capture market share and growth but face mounting regulatory harmonization pressures",
+      "Regulatory Authority / Central Bank: Organized actor (organized/constrained) \u2014 maintains system through mandated coordination; views disintermediation as temporary challenge",
+      "Banking System Stability: Collective victim (institutional/constrained) \u2014 bears systemic cost through procyclicality amplification and funding fragility during stress"
+    ],
+    "logic_rationale": "Extractiveness (0.52): The constraint extracts from retail depositors through deposit rate suppression and from small business borrowers through credit rationing and spread widening. Large corporations and institutional investors capture the extracted value through direct capital market access. The 0.52 value reflects genuine extraction asymmetry: deposit rate suppression alone produces 15-40 basis points annual transfer from retail to wholesale functions; small business lending withdrawal reduces credit availability by 20-30% in some sectors. Suppression (0.48): Moderate-high. Retail depositors cannot exit to direct lending markets (regulatory barriers, expertise requirements, capital minimums). Small businesses cannot access capital markets directly (credit rating requirements, issuance costs, scale minimums). But suppression is not total \u2014 some retail alternatives exist (money market funds, Treasury bonds, high-yield savings accounts), though with reduced convenience and yield. Theater ratio (0.35): Relatively low. The constraint retains genuine coordination function \u2014 bank credit assessment, liquidity management, settlement infrastructure \u2014 despite declining necessity. Theater is higher than it would be in pure market-based system (0.15-0.25) but lower than pre-disintermediation banking (0.50-0.60).",
+    "perspectival_gap": "The constraint simultaneously appears as snare, tangled rope, rope, scaffold, and piton depending on structural position. The gap between powerless/trapped (snare) and institutional/arbitrage (rope) perspectives is maximum (~0.90 classification distance). This reflects that the same structural mechanism \u2014 capital market development and information technology \u2014 extracts value from retail actors while benefiting institutional actors. The regulatory and central bank scaffold perspective is structurally real but aspirational: it assumes that fintech and alternative lenders will mature sufficiently to provide small business credit and retail savings options at comparable cost and quality. If this assumption fails, the scaffold collapses into snare or persistent tangled rope. The analytical observer's mountain is a false summit: disintermediation appears inevitable only if we naturalize regulatory and institutional constraints as immutable.",
+    "directionality_logic": "Directionality derives from who benefits and who bears costs. Retail depositors (beneficiaries of traditional banking, now victims of disintermediation): d \u2248 0.95 (full target). Small business borrowers (mixed): d \u2248 0.75 (heavy target, some benefits from credit access). Large corporations (beneficiaries): d \u2248 0.10 (full beneficiary with arbitrage). Commercial banks (captured beneficiaries, losing function): d \u2248 0.38 (override from canonical ~0.15 to reflect regulatory capture and constrained agency). Regulatory authority (constrained institutional actor maintaining system stability): d \u2248 0.45. Banking system stability (collective victim of procyclical risk concentration): d \u2248 0.72 (target with organized agency). The directionality override for commercial banks reflects their status as captured institutional actors: they appear to be beneficiaries of their own disintermediation, but regulatory dependence and functional loss mean they are actually constrained victims of their own extraction mechanism.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by distinguishing between coordination function and extraction mechanism. Banks genuinely coordinate depositor-borrower matching, credit assessment, and liquidity management. This coordination function persists at \u03b5 \u2248 0.28 (baseline). But disintermediation adds extraction layer (asymmetric benefit to large actors, cost to retail actors, regulatory protection of declining function) that increases visible extractiveness to 0.52. The tangled rope classification correctly captures this hybrid: 0.40 \u2264 \u03c7 \u2264 0.90, with genuine coordination function (beneficiaries in base_properties) and asymmetric extraction (victims in base_properties and suppression \u2265 0.40) coexisting. The snare perspective (from powerless/trapped retail depositors) represents the extraction component maximized: they see no coordination benefit, only extraction. The rope perspective (from institutional beneficiaries) represents the coordination component: they see pure coordination of capital supply. The mandatrophy is resolved by recognizing that both readings are correct \u2014 the constraint is genuinely hybrid, and the perspectival gap between them is the diagnostic signal of the tangled rope class."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "systemic_procyclicality",
+      "retail_financial_exclusion",
+      "small_business_credit_rationing"
+    ],
+    "dual_formulation_note": "Disintermediation is downstream of information technology and regulatory policy changes (deposit insurance, capital requirements, monetary policy framework). It is upstream of systemic fragility outcomes (funding market seizures, credit rationing during stress). The constraint family includes: technology-driven intermediation substitutability (Mountain), regulatory structure maintenance (Piton), retail market exit (Snare), and systemic stability trade-offs (Tangled Rope). Each story has distinct \u03b5: technology substitutability \u03b5 \u2248 0.08 (near-inevitable), regulatory maintenance \u03b5 \u2248 0.70 (extractive institutional inertia), retail exit \u03b5 \u2248 0.85 (snare), systemic trade-off \u03b5 \u2248 0.52 (this story)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.38
+    }
+  ]
+}

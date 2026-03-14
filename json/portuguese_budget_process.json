@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "portuguese_budget_process",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pb"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Portuguese Constitutional Budget Process Constraint",
+    "topic_domain": "political_economy/fiscal_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "executive_branch",
+      "incumbent_government"
+    ],
+    "victims": [
+      "minority_parliament_representatives",
+      "fiscal_transparency",
+      "long_term_budgetary_reform"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Minority Parliamentary Opposition",
+      "comment": "PERSPECTIVE 1: MINORITY PARLIAMENTARY OPPOSITION (SNARE) \u2014 Trapped within constitutional constraints that heavily favor executive budgetary authority. Cannot exit the budget process; bound by constitutional requirement to vote. No effective veto power despite formal participation. Maximum extraction: forced acceptance of executive-authored budgets or face constitutional dissolution and electoral loss."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Supermajority Coalition Partners",
+      "comment": "PERSPECTIVE 2: SUPERMAJORITY COALITION PARTNERS (TANGLED ROPE) \u2014 Organized political groups with formal coalition arrangements. Experience coordination function (need to align fiscal priorities with governing coalition) alongside asymmetric extraction (executive retains final authority and controls agenda). Constrained by coalition dissolution risk and electoral dependency. Mixed relationship: genuine coordination necessity paired with extractive agenda control by executive."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Executive Executive Branch",
+      "comment": "PERSPECTIVE 3: EXECUTIVE EXECUTIVE BRANCH (ROPE) \u2014 Institutional beneficiary that designs and enforces the budget process itself. Experiences the constraint as coordination mechanism: drafting, presenting, and defending budgets is their core function. Exit options are maximal (can rewrite process within constitutional bounds, can negotiate coalition terms). Net beneficiary from the budget architecture."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "Constitutional Reform Advocates",
+      "comment": "PERSPECTIVE 4: CONSTITUTIONAL REFORM ADVOCATES (SCAFFOLD) \u2014 Analytical observers and reform-oriented institutional actors see the budget process as a temporary institutional arrangement with a built-in sunset: constitutional amendments expanding parliamentary budgetary authority, EU fiscal integration requirements, and shifting democratic norms create pressure for structural reform. Theater is high (performative votes, symbolic parliamentary debate) but the constraint is seen as having finite duration and clear exit pathways through formal amendment."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Technical Budget Administration",
+      "comment": "PERSPECTIVE 5: TECHNICAL BUDGET ADMINISTRATION (PITON) \u2014 Career civil servants and budget technicians maintain formal budget review processes that are largely performative. Constitutional requirements for parliamentary committee review and budgetary debate persist, but the real budget decisions have been made by executive and coalition partners before parliamentary consideration. The technical apparatus continues through institutional inertia despite low functional control."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Constitutional Realist View",
+      "comment": "PERSPECTIVE 6: CONSTITUTIONAL REALIST VIEW (MOUNTAIN) \u2014 From a civilizational perspective, parliamentary budget authority requires stable supermajorities to overcome executive veto and proposal power. This is presented as an immutable constitutional law: single-chamber legislatures with executive budgetary proposal monopoly cannot control spending without supermajority coalition. However, the mountain classification is a false summit \u2014 many parliamentary democracies achieve tighter budget control with similar constitutional structures through different norms and procedural design."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coalition_stability_versus_extraction",
+      "question": "Is executive budgetary dominance primarily an extraction mechanism or a necessary coordination cost of coalition governance?",
+      "resolution_mechanism": "Comparative analysis of budget outcomes across different coalition structures; measurement of fiscal divergence between executive proposal and final enacted budget; assessment of whether coalition partners exercise substantive modification power",
+      "impact": "If extraction-dominant: tangled rope classification holds with high \u03c7. If coordination-necessary: classification should shift toward rope with lower \u03c7, indicating that executive authority is a legitimate coordination mechanism rather than asymmetric extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether executive dominance is extractive or coordinatively necessary"
+    },
+    {
+      "id": "parliamentary_veto_capacity",
+      "question": "Can parliamentary opposition meaningfully modify budgets through procedural obstruction or do constitutional provisions make executive proposals effectively veto-proof?",
+      "resolution_mechanism": "Historical analysis of budget amendments during minority government periods; measurement of modification rates and amendment adoption rates; assessment of whether opposition amendments reach committee or floor votes",
+      "impact": "If opposition has veto capacity: snare classification is incorrect; minority status becomes constrained rather than trapped. If veto-proof: snare classification confirmed; suppression metric reflects genuine inability to block executive proposals.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether parliamentary opposition holds meaningful veto power"
+    },
+    {
+      "id": "eu_fiscal_integration_timeline",
+      "question": "How quickly will EU fiscal integration requirements force substantive changes to national budget processes, and will such requirements weaken or strengthen executive dominance?",
+      "resolution_mechanism": "Monitoring of EU fiscal governance evolution (NextGenerationEU, European Fiscal Board proposals); assessment of whether EU constraints redistribute budgetary authority toward parliament or toward technocratic institutions",
+      "impact": "If EU integration accelerates parliament's role: scaffold sunset is real and accelerating. If EU integration strengthens executive technocratic authority: constraint may shift from tangled rope toward snare as both parliament and executive lose control to EU requirements.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Timeline and direction of EU fiscal governance impact on Portuguese budget process"
+    },
+    {
+      "id": "minority_government_frequency",
+      "question": "Is the Portuguese political system structurally converging toward majority coalitions or minority governments? How does this frequency distribution affect the average extractiveness experienced by parliament?",
+      "resolution_mechanism": "Long-term analysis of coalition formation patterns (1987\u20132026); measurement of minority government duration and frequency; correlation of government type with budgetary modifications and constitutional amendments",
+      "impact": "If converging toward coalitions: tangled rope classification reflects the typical case. If converging toward minority governments: snare classification becomes the modal case, and the average extractiveness increases across the interval.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural frequency of minority vs. majority governments in Portuguese politics"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Portuguese budget process embodies a constitutional constraint that distributes fiscal authority asymmetrically between the executive and parliament. The Portuguese Constitution (Article 108) grants the government monopoly over budget proposal and amendment, while parliament retains formal voting authority but cannot initiate fiscal measures. This creates a structural hybrid: genuine coordination necessity during coalition periods (supermajorities are required to pass budgets, forcing coalition negotiation) alongside extractive executive dominance (the executive controls both initial design and amendment scope). The constraint exhibits different classifications across observer positions: opposition parties experience it as a snare (trapped in binary choice: accept executive budget or force constitutional dissolution), coalition partners experience tangled rope (coordinating with government while accepting subordinate amendment authority), the executive experiences rope (budget design is their core coordination function), and reform advocates see a scaffold (constitutional amendments and EU integration creating pressure for structural change). Theater has increased over the measurement interval as parliamentary debate has become more performative relative to genuine fiscal deliberation, reflecting the constraint's degradation toward a piton structure.",
+    "key_agents": [
+      "Executive Branch (Government): Primary beneficiary (institutional/arbitrage) \u2014 monopoly over budget proposal, amendment authority, veto power over parliamentary modifications",
+      "Minority Parliamentary Opposition: Primary victim (powerless/trapped) \u2014 constitutionally unable to initiate alternative budgets; forced choice between accepting executive proposal or triggering dissolution",
+      "Supermajority Coalition Partners: Secondary beneficiary/victim (organized/constrained) \u2014 genuine power to reject budgets but constrained by coalition dissolution risk and electoral dependency; negotiate modifications within executive-designed scope",
+      "Fiscal Transparency Advocates: Victim (moderate/constrained) \u2014 executive proposal monopoly reduces parliamentary scrutiny capacity and limits public deliberation on fiscal alternatives",
+      "Constitutional Reform Coalition: Analytical observer (organized/constrained) \u2014 EU requirements and democratic norms pressure toward expanded parliamentary budgetary authority",
+      "Budget Administration Technical Apparatus: Institutional actor (institutional/arbitrage) \u2014 maintains formal parliamentary review process that is largely performative"
+    ],
+    "logic_rationale": "Extractiveness (0.52): The government's monopoly over budget proposal and amendment authority creates asymmetric extraction, but the necessity of coalition agreement in most periods (2015\u20132019, 2019\u20132022) provides real negotiating leverage for coalition partners. This moderates pure extraction. The value has increased over the interval (0.38\u21920.52) reflecting the 2022\u20132026 supermajority government's ability to exclude coalition negotiation entirely, increasing extractive capacity. Suppression (0.58): Significant but not maximal. Opposition parties face constitutional constraints (cannot initiate budgets) and procedural barriers (limited amendment window, executive control of agenda), but retain formal voting authority and can force public debate. Coalition partners can reject budgets at the cost of dissolution. The suppression reflects structural constraints rather than coercive enforcement. Theater (0.65): Moderate-high and rising. Parliamentary budget committees conduct formal review, but real decisions occur in government and coalition negotiations before parliamentary consideration. The increase from 0.58 to 0.65 reflects growing disconnect between formal parliamentary procedure and actual budget determination. Claimed type (Tangled Rope): The constraint exhibits both coordination function (coalition budgeting requires government proposal and parliamentary approval) and asymmetric extraction (executive controls proposal scope and amendment authority). Both mechanisms are structurally present.",
+    "perspectival_gap": "The perspectival gap reveals the constraint's hybrid nature. The executive sees pure coordination \u2014 drafting and defending budgets is legitimate governance. The opposition sees snare \u2014 constitutionally unable to propose alternatives. Coalition partners see tangled rope \u2014 they coordinate with government but operate within executive-designed scope. The analytical observer sees either a scaffold (constitutional amendments weakening executive dominance) or a mountain (false summit claiming that executive proposal monopoly is an immutable feature of parliamentary democracies). The gap between snare and rope perspectives is particularly diagnostic: it shows that political power matters more than formal constitutional authority. Coalition partners' ability to reject budgets gives them exit options that opposition lacks, shifting them from trapped to constrained, and from snare to tangled rope. This perspectival gap is identical to regulatory capture: the institutional actors (coalition partners, government) experience coordination and negotiation; the powerless actors (opposition, fiscal transparency) experience extraction.",
+    "directionality_logic": "Directionality values reflect each agent's structural position relative to the budget constraint. The executive derives d\u22480.10 (beneficiary with arbitrage options \u2014 can redesign budget authority rules within constitutional bounds). Coalition partners derive d\u22480.45 (both benefits and costs \u2014 access to fiscal authority paired with subordinate amendment power). Opposition derives d\u22480.92 (victim with trapped exit \u2014 cannot initiate budgets, cannot exit parliamentary system, cannot reject without triggering dissolution and electoral loss). Fiscal transparency derives d\u22480.85 (victim of reduced public deliberation capacity, constrained exit options). These directionality values feed into the chi formula \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S), where the sigmoid f(d) amplifies extraction experienced by trapped agents (opposition) and dampens extraction for beneficiaries (government).",
+    "mandatrophy_analysis": "The mandatrophy resolves by distinguishing coordination from extraction across observer positions. The government's perspective (rope) legitimately describes budget design as coordination \u2014 the process of drafting, defending, and implementing fiscal policy is genuinely coordinative. The opposition's perspective (snare) equally legitimately describes the same constraint as pure extraction \u2014 they have no say in design and cannot reject. The tangled rope classification at the coalition partner level is the diagnostic signal: both mechanisms are present in a single structural arrangement. The constitutional realist mountain view ('executive proposal monopoly is inherent to parliamentary systems') is a false summit \u2014 many parliaments achieve tighter budget control with similar or stronger executive proposal powers through different procedural norms. The scaffold view is not aspirational: EU fiscal integration and constitutional amendment pressure are real structural forces. The theater ratio's increase (0.58\u21920.65) signals that the constraint is degrading toward piton: the formal parliamentary process persists but controls less actual fiscal outcome. The mandatrophy is thus resolved by showing that all six types are valid perspectival readings, but the movement toward piton and the existence of real scaffold dynamics distinguish this from a pure snare that would be mischaracterized as coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_fiscal_governance_compliance",
+      "portuguese_coalition_formation_dynamics"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.48
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "acquisition_overpayment_trap",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "acqover"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Acquisition Overpayment Trap",
+    "topic_domain": "corporate_finance/mergers_acquisitions",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "target_company_shareholders",
+      "investment_banks_advisors",
+      "executive_compensation_tied_to_deal_completion"
+    ],
+    "victims": [
+      "acquirer_shareholders",
+      "acquirer_debt_holders",
+      "future_synergy_realization"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Acquirer Shareholder",
+      "comment": "PERSPECTIVE 1: ACQUIRER SHAREHOLDER (SNARE) \u2014 Locked in by ownership structure. Bears the full cost of overpayment through diluted returns and balance sheet deterioration. No exit without selling shares at depressed prices post-announcement. Maximum extraction experienced."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Target Company Shareholders",
+      "comment": "PERSPECTIVE 2: TARGET COMPANY SHAREHOLDERS (ROPE) \u2014 Beneficiaries of the premium. Experience the constraint as pure coordination: achieving sale is the mutual problem being solved. Exit easily through accepting the offer. Net benefit \u2014 extraction flows toward this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Investment Banks and M&A Advisors",
+      "comment": "PERSPECTIVE 3: INVESTMENT BANKS & ADVISORS (TANGLED ROPE) \u2014 Dual role: coordination function (structuring deal, due diligence, facilitating negotiation) AND extraction (fee structure creates incentive to maximize announced deal value, not synergy realization). Can exit by declining representation, but constrained by market competition and reputation damage. Benefits from deal completion regardless of long-term acquirer performance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Acquiring Company Executive Management",
+      "comment": "PERSPECTIVE 4: ACQUIRING EXECUTIVE MANAGEMENT (TANGLED ROPE) \u2014 Compensation often includes deal-completion bonuses and stock grants that vest post-close. Genuine coordination function (identifying strategic fit, negotiating terms) paired with extraction (incentive to complete deal at any price to trigger bonuses; limited accountability for synergy shortfalls). Constrained by board oversight and shareholder liability, but compensation structure creates misaligned incentives."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Institutional Investors and Proxy Advisors",
+      "comment": "PERSPECTIVE 5: INSTITUTIONAL INVESTORS & PROXY ADVISORS (PITON) \u2014 Theoretically provide governance check on overpayment through voting and engagement. Functionally degraded: proxy advisors offer standardized recommendations (theater); many institutional investors use index-tracking (passive ownership, minimal engagement); anti-takeover defenses limit shareholder ability to reject deals. The governance mechanism persists through institutional inertia but provides minimal actual constraint on deal pricing."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer - Natural Law View",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (NATURAL LAW VIEW) \u2014 From civilizational perspective, overpayment is seen as inherent to M&A: information asymmetry, winner's curse, and synergy overoptimism are structural features of acquisitions. This perspective risks naturalizing what is actually a contingent outcome of deal-specific incentive misalignment and institutional constraints on price discovery. The false summit detector will reveal whether 'structural information problems' are really descriptions of extractive institutional arrangements."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "synergy_estimation_methodology",
+      "question": "Are synergy overestimates a structural feature of how humans estimate uncertain benefits, or a predictable artifact of deal-specific incentive misalignment?",
+      "resolution_mechanism": "Longitudinal comparison of pre-deal synergy forecasts vs post-acquisition realized synergies across 50+ deals. Correlation analysis between deal pricing premium and forecast revision magnitude. Test for systematicity (consistent overestimation) vs noise.",
+      "impact": "If structural feature: overpayment is inherent, mountain classification justified. If artifact of incentive misalignment: overpayment is extractive design, snare/tangled_rope classification justified.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether synergy overestimation is structural or incentive-driven"
+    },
+    {
+      "id": "board_veto_threshold",
+      "question": "What fraction of proposed acquisitions would be rejected by boards if compensation incentives were removed and synergy forecasts were independently audited?",
+      "resolution_mechanism": "Randomized audit of synergy forecasts for completed deals by neutral third parties. Estimation of board rejection probability under counterfactual independence. Comparison across acquirer types with different governance structures.",
+      "impact": "If > 30% rejection probability: board voting is theater, and the suppression of alternative deal structures is real. If < 10%: most deals would survive independent scrutiny, and overpayment is pricing differential rather than extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "What fraction of deals would fail board scrutiny under independent audit"
+    },
+    {
+      "id": "reputational_exit_cost",
+      "question": "What is the actual career cost to a CEO who walks away from an acquisition they've publicly committed to, versus the market reward for walking away from a deal that would destroy shareholder value?",
+      "resolution_mechanism": "Historical case studies of deal withdrawals: CEO tenure post-withdrawal, stock price reaction, future compensation. Comparison with completion: long-term CEO tenure, stock price trajectory, reputational outcomes.",
+      "impact": "If exit cost is very high (CEO departures, reputational damage): exit_options is trapped, not constrained. If markets reward deal withdrawal with higher future valuation and CEO mobility is unchanged: exit cost is low, revealing that continuation is preference misalignment rather than structural lock.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Career cost of walking away from publicly committed acquisitions"
+    },
+    {
+      "id": "information_asymmetry_scope",
+      "question": "How much of the overpayment premium reflects genuine information asymmetry (target knows its prospects better than market), versus asymmetric incentive alignment (acquirer's agents profit from completion regardless of outcome)?",
+      "resolution_mechanism": "Analysis of public vs private information gaps: compare target company analyst coverage with information available to acquirer's advisory team. Test whether premium correlates with information gaps or with deal advisor compensation structure.",
+      "impact": "If information-driven: overpayment is pricing mechanism, less extractive. If incentive-driven: overpayment is pure extraction mechanism, more snare-like.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Information asymmetry vs incentive misalignment in overpayment"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "acqover_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.48,
+      "id_override": "acqover_extract_t2"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.58,
+      "id_override": "acqover_extract_t4"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52,
+      "id_override": "acqover_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.62,
+      "id_override": "acqover_theater_t2"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.68,
+      "id_override": "acqover_theater_t4"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "The acquisition overpayment trap is a structural constraint where multiple institutional actors benefit from deal completion at inflated prices, while the acquirer's shareholders bear the cost of value destruction. The constraint exhibits genuine coordination functions (price discovery, deal structuring, due diligence) paired with extractive mechanisms (fee structures that reward deal completion over synergy realization, compensation that locks executives into overpayment incentives, governance theater that permits pricing without rigorous scrutiny). The constraint is not a natural law of M&A \u2014 it is a contingent institutional arrangement where the alignment of incentives between deal agents and deal completion overwhelms the alignment between shareholders and shareholder value. The theater ratio (0.68) reflects that governance mechanisms (board oversight, proxy advisors, independent directors) provide procedural legitimacy to pricing decisions without effectively constraining maximum prices paid. Investment banks present synergy analyses and fairness opinions; proxy advisors issue buy/sell recommendations; boards vote approval. The rituals execute, but the outcomes (systematic overpayment measured post-acquisition) reveal that the theater is not substantially reducing information asymmetry or price discovery failure.",
+    "key_agents": [
+      "Acquirer Shareholders: Primary victim (powerless/trapped) \u2014 locked in by ownership, bear full cost of overpayment through diluted returns",
+      "Target Company Shareholders: Primary beneficiary (institutional/arbitrage) \u2014 receive premium, exit via deal acceptance",
+      "Investment Banks & M&A Advisors: Institutional secondary beneficiary (institutional/constrained) \u2014 profit from deal fees regardless of long-term acquirer performance",
+      "Acquiring Company Executives: Institutional secondary beneficiary (powerful/constrained) \u2014 compensation incentives reward deal completion, career upside from bold acquisitions, downside from withdrawal",
+      "Institutional Investors & Proxy Advisors: Governance actors (organized/constrained) \u2014 theoretically provide checks but function as theater through standardized processes",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional outcomes as structural information problems"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The primary extraction mechanism is the premium paid above fair value for the target company, flowing from acquirer shareholders to target shareholders. The magnitude varies (10-50% in typical deals) and reflects both genuine uncertainty resolution (justified premium for information asymmetry) and unjustified overpayment (cost of executive compensation incentives, advisory fee alignment, pressure to deploy capital). The measurement at 0.58 reflects that overpayment is systematic (documented in academic literature) but not total \u2014 some component of acquisition premiums reflects rational pricing of synergies and growth optionality. Suppression (0.65): Moderate-high. Barriers to alternative deal structures and price discovery include: board authority to commit without shareholder vote in many jurisdictions, information asymmetry favoring target's advisors, career incentives that reward bold/large acquisitions over prudence, momentum effects and competitive pressure to not lose targets to other bidders, limited ability for individual shareholders to exit without accepting depressed valuations. These are not absolute barriers, but they create significant friction for resistance. Theater ratio (0.68): High. Deal governance (due diligence, fairness opinions, board votes, proxy proxy recommendations) executes complex procedures that appear rigorous but have limited demonstrated impact on preventing overpayment. The theater increases over time as deals become more complex and advisory ecosystems grow more elaborate.",
+    "perspectival_gap": "The acquiring shareholder and target shareholder occupy opposite extraction positions and experience fundamentally different classifications. The target sees rope (achieving sale is the coordination problem), while the acquirer sees snare (locked in by board decision, bearing the cost). Investment banks see tangled rope (they provide genuine advisory services alongside fee incentives for completion). Executives see tangled rope through the lens of compensation misalignment. Institutional investors see a piton \u2014 their governance role is procedurally intact but functionally degraded. The civilizational observer risks a false summit by treating information asymmetry and synergy overestimation as natural laws rather than artifacts of specific institutional designs. The perspectival gap reveals that overpayment is not about knowledge deficits (more analysis would not fix it) but about incentive misalignment.",
+    "directionality_logic": "Target shareholders benefit from the deal (d \u2248 0.15, arbitrage exit), so they experience negative \u03c7 (the constraint benefits them \u2014 rope perspective). Acquirer shareholders bear the cost (d \u2248 0.95, trapped exit), experiencing maximum \u03c7 (snare perspective). Investment banks and executives occupy intermediate positions with constrained exit and mixed incentives (d \u2248 0.50-0.60, tangled rope perspectives). The derivation from beneficiary/victim status + exit options produces differentiated perspectives without requiring overrides \u2014 the structural relationships (who profits, who pays, what exit costs) determine the perspectival gap organically.",
+    "mandatrophy_analysis": "This constraint demonstrates the mandatrophy by showing that all six types can be legitimate readings of the same base properties depending on perspective. The acquiring shareholder's snare (extraction with no exit) is not contradicted by the target's rope (coordination problem solved) \u2014 both are true simultaneously. The investment bank's tangled rope (genuine advisory service + fee incentive) is not contradicted by the exec's tangled rope (genuine strategic role + compensation lock) \u2014 they are different manifestations of the same hybrid mechanism. The institutional investor's piton (governance theater) is not contradicted by the analytical observer's mountain (information-theoretic inevitability) \u2014 one reveals contingency, the other risks naturalizing it. The mandatrophy resolves by recognizing that the constraint type depends on which agent's perspective you measure from, and all six perspectives are simultaneously true. The false summit detector should flag the mountain classification as a naturalization risk \u2014 the 'inevitable information problem' framing masks contingent institutional choices about how to structure incentives and governance."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "executive_compensation_misalignment",
+      "investment_bank_fee_structure_incentives",
+      "board_governance_adequacy"
+    ]
+  },
+  "directionality_overrides": []
+}

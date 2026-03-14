@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "cryptographic_key_management_scaling",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ckms"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Cryptographic Key Management Scaling",
+    "topic_domain": "cybersecurity/cryptography/infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "centralized_key_custodians",
+      "hardware_security_module_vendors"
+    ],
+    "victims": [
+      "distributed_system_operators",
+      "small_organization_security_teams",
+      "end_user_privacy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Distributed System Operator",
+      "comment": "PERSPECTIVE 1: DISTRIBUTED SYSTEM OPERATOR (SNARE) \u2014 Cannot implement decentralized cryptographic infrastructure without centralized key management intermediaries. Trapped by lack of economically viable alternatives and the network effects that lock in incumbent custodians. Bears full cost of key management complexity while beneficiaries capture coordination rent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Small Organization Security Team",
+      "comment": "PERSPECTIVE 2: SMALL ORGANIZATION SECURITY TEAM (TANGLED ROPE) \u2014 Constrained by cost barriers to building in-house HSM infrastructure and the overhead of key rotation protocols. Also benefits from coordinated key management standards and tooling that reduce implementation burden. Moderate extraction with genuine coordination function."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Hardware Security Module Vendor",
+      "comment": "PERSPECTIVE 3: HARDWARE SECURITY MODULE VENDOR (ROPE) \u2014 Net beneficiary from the constraint. Benefits from market demand for HSM products and licensing models. Experiences the constraint as coordination: managing key material securely is a collective action problem that their products solve. Can exit to alternative cryptographic architectures but chooses not to."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Centralized Key Custodian",
+      "comment": "PERSPECTIVE 4: CENTRALIZED KEY CUSTODIAN (TANGLED ROPE) \u2014 Institutional beneficiary that also faces constraints: operational burden of secure key storage, regulatory compliance, and liability for key compromise. Benefits from market position and switching costs but also carries extraction costs \u2014 must invest heavily in security infrastructure to maintain trust."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Legacy PKI Infrastructure",
+      "comment": "PERSPECTIVE 5: LEGACY PKI INFRASTRUCTURE (PITON) \u2014 Centralized key hierarchy persists through institutional inertia despite emergence of decentralized alternatives (blockchain-based PKI, threshold cryptography, distributed key generation). Theater ratio reflects performative key rotation ceremonies and compliance audits that are largely symbolic \u2014 actual key compromise risk is not substantially reduced. Maintained because alternatives haven't fully displaced it."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a cryptographic complexity perspective, key management fundamentally requires custodianship of some form: the mathematical properties of asymmetric cryptography mean that private keys must be stored somewhere secure. Some centralization or trusted third-party involvement appears mathematically necessary. However, this perspective risks naturalizing a contingent institutional choice as a cryptographic law. Distributed key generation and threshold schemes offer alternative mathematical structures that reduce single-point-of-failure risk."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "mathematical_necessity_vs_institutional_choice",
+      "question": "Is centralized key custodianship a mathematical necessity of asymmetric cryptography or a contingent institutional choice?",
+      "resolution_mechanism": "Analysis of threshold cryptography, distributed key generation (DKG), and multi-party computation schemes showing whether private key custodianship can be mathematically distributed. Compare cryptographic properties of centralized vs distributed key storage architectures.",
+      "impact": "If mathematical necessity: mountain classification confirmed; key management scaling is an inherent limit. If institutional choice: constraint is tangled_rope; scaling barriers are extractive mechanisms that could be redesigned.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether centralization is cryptographically necessary or institutionally contingent"
+    },
+    {
+      "id": "decentralized_infrastructure_adoption_threshold",
+      "question": "At what operational maturity do distributed key management systems (blockchain PKI, threshold cryptography, DKG protocols) become economically competitive with centralized HSM infrastructure?",
+      "resolution_mechanism": "Cost-benefit analysis of decentralized vs centralized approaches controlling for security level, compliance requirements, and operational overhead. Temporal tracking of adoption rates in high-security domains (financial institutions, government, critical infrastructure).",
+      "impact": "If adoption threshold is near: scaffold perspective confirmed \u2014 current centralization has sunset clause. If threshold is far or unreachable: snare perspective confirmed \u2014 distributed operators are locked in for decades.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Adoption threshold for decentralized key management systems"
+    },
+    {
+      "id": "key_compromise_causation",
+      "question": "What proportion of real-world cryptographic breaches result from key management failures vs other attack vectors (implementation bugs, quantum threats, side-channel attacks)?",
+      "resolution_mechanism": "Forensic analysis of disclosed breaches categorized by root cause. Longitudinal tracking of breach attribution across financial, government, and critical infrastructure sectors.",
+      "impact": "If key management is dominant cause: justifies high suppression and centralized custodianship overhead. If key management is minority cause: suggests theater ratio is inflated \u2014 compliance theater around key rotation obscures that actual breach risk comes from elsewhere.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "What fraction of breaches result from key management failures"
+    },
+    {
+      "id": "vendor_lock_in_mechanism",
+      "question": "Is the constraint's extraction mechanism primarily technical (incompatible key formats), contractual (licensing terms), or network-effect-based (no competing standards)?",
+      "resolution_mechanism": "Analysis of HSM vendor ecosystems; investigation of key portability between vendors; examination of licensing agreements for switching costs; assessment of whether competing standards exist but lack adoption.",
+      "impact": "If technical: constraint may be mountain-like (cryptographic incompatibility is hard to overcome). If contractual: snare-like (artificial lock-in that could be reformed). If network-effect: tangled_rope (genuine coordination value but extractive secondary effects).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether vendor lock-in is technical, contractual, or network-based"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Cryptographic key management scaling represents a constraint on distributed security infrastructure where the coordination problem \u2014 securing private keys against compromise \u2014 has become increasingly dominated by centralized custodianship and hardware security module vendors. As organizations scale cryptographic operations across distributed systems, they face a structural choice: build decentralized key management infrastructure (high operational overhead, novel security assumptions) or rely on centralized key custodians (lower operational complexity but concentrated extraction risk and vendor dependence). The constraint exhibits tangled_rope structure: genuine coordination value in managing key material securely coexists with extractive mechanisms (vendor lock-in, licensing models, operational overhead multiplication). The theater ratio (0.58) reflects that compliance-driven key rotation ceremonies and audit procedures consume significant operational effort while the actual reduction in breach risk remains unclear. Extractiveness has increased over 15 years as distributed systems have scaled and vendor consolidation has reduced alternatives.",
+    "key_agents": [
+      "Distributed System Operators: Primary victims (powerless/trapped) \u2014 dependent on key management infrastructure; face high barriers to building alternatives",
+      "Small Organization Security Teams: Secondary victims (moderate/constrained) \u2014 constrained by cost barriers to HSM infrastructure; also benefit from standardized tooling",
+      "Hardware Security Module Vendors: Primary beneficiaries (institutional/arbitrage) \u2014 capture licensing revenue and switching costs; benefit from market consolidation",
+      "Centralized Key Custodians: Secondary beneficiary (institutional/constrained) \u2014 benefit from market position but also bear security and compliance burden",
+      "Legacy PKI Infrastructure: Institutional actor (institutional/constrained) \u2014 persists through inertia; performative compliance processes maintain theater without proportional security gain",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing institutional custodianship as cryptographic necessity when distributed alternatives exist"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts from distributed system operators and small organizations through licensing costs, operational overhead multiplication, and vendor switching costs. The extraction is not maximal (0.66+) because genuine coordination value exists \u2014 secure key management is a real collective action problem. The extractiveness trend (0.38\u21920.52 over 15 years) reflects vendor consolidation and increased complexity as systems scale. Suppression (0.65): Moderate-high. Significant barriers to exit include: lack of economically viable decentralized alternatives at scale, network effects favoring incumbent vendors, regulatory compliance requirements that mandate specific HSM models, and technical complexity of implementing alternative key management architectures. Theater ratio (0.58): Moderate-high. Key rotation ceremonies, compliance audits, and HSM certifications consume operational effort while actual reduction in cryptographic breach risk is unclear. Many organizations perform these rituals to satisfy compliance requirements rather than for direct security gain. The theater has increased (0.42\u21920.58) as regulatory pressure has grown.",
+    "perspectival_gap": "The constraint demonstrates divergent classifications from structurally different positions. The distributed operator sees a snare \u2014 they are locked into vendor ecosystems with high switching costs and no viable exit. The small organization sees tangled rope \u2014 real coordination benefits from standardized tools coexist with extraction via licensing and operational overhead. The HSM vendor sees rope \u2014 they solve a genuine collective action problem (secure key storage) and experience the market as coordination. The centralized custodian sees tangled rope from the opposite side \u2014 they benefit but must invest heavily in security infrastructure and liability management. The legacy PKI sees itself as degraded (piton) \u2014 performing key rotation ceremonies largely for compliance theater, not primary function. The analytical observer risks the false summit of seeing centralized custodianship as cryptographically necessary when distributed key generation and threshold schemes offer mathematical alternatives.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from structural position: beneficiaries with arbitrage options (HSM vendors, custodians) have low d despite extraction; trapped victims have high d; constrained actors occupy middle ground. The HSM vendor's arbitrage exit option derives from their ability to shift to alternative markets (cloud security, identity management) if key management demand declines, placing them as net beneficiary despite extraction. The distributed operator's trapped status reflects lack of viable alternatives at the scale required for modern infrastructure. The centralized custodian's constrained exit reflects that they bear significant liability for security failures even as they benefit from market position. The piton's theater ratio (0.65) derives from operational rituals that persist despite uncertain security benefit.",
+    "mandatrophy_analysis": "The constraint resolves the mandatrophy through the distinction between mathematical coordination requirements and institutional extraction mechanisms. Secure key storage IS a genuine collective action problem \u2014 some custodianship is necessary. However, the institutional choice to concentrate custodianship in vendor-controlled HSMs creates secondary extraction mechanisms (licensing, lock-in, compliance overhead multiplication). The perspective structure reveals this decomposition: rope-level genuine coordination exists (mathematical necessity), but tangled_rope extraction is layered on top (institutional choice). The piton's performative key rotation reflects Goodhart drift \u2014 the measurable compliance metric (rotation frequency) has decoupled from the security outcome (actual breach prevention). Decentralized alternatives (DKG, threshold cryptography) prove that custodianship concentration is not mathematically necessary, making the vendor lock-in mechanism a tangled_rope rather than a mountain."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "post_quantum_cryptography_migration",
+      "cloud_infrastructure_trust_assumptions",
+      "zero_trust_architecture_implementation"
+    ],
+    "dual_formulation_note": "Cryptographic key management scaling decomposes into three structurally distinct constraints: (1) mathematical key custodianship requirement (near-mountain, \u03b5\u22480.12), (2) vendor consolidation and lock-in mechanism (snare, \u03b5\u22480.68), (3) compliance-driven operational overhead (piton, \u03b5\u22480.35, theater\u22480.75). This story represents the tangled_rope hybrid \u2014 the coordination function plus the institutional extraction that has accumulated. Upstream: post-quantum migration will force key management redesign. Downstream: zero-trust architecture assumes distributed key verification."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.38
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "standards_proliferation_trap",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "stdprol"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Standards Proliferation Trap",
+    "topic_domain": "industrial_coordination/technology_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "standard_setting_bodies",
+      "incumbent_vendors"
+    ],
+    "victims": [
+      "market_entrants",
+      "interoperability_seekers",
+      "downstream_industries"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Market Entrant",
+      "comment": "PERSPECTIVE 1: MARKET ENTRANT (SNARE) \u2014 New firms entering a fragmented standards landscape face irreducible compliance burden. Must support multiple incompatible standards simultaneously to reach any market segment. No alternative exists; standards compliance is mandatory. Exit is blocked by the proliferation itself \u2014 cannot innovate around standards when dozens exist in parallel. Experiences maximum extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Systems Integrator",
+      "comment": "PERSPECTIVE 2: SYSTEMS INTEGRATOR (TANGLED ROPE) \u2014 Derives genuine value from standards coordination (enables modular assembly of components) but bears disproportionate integration labor costs when standards proliferate. Can switch suppliers partially, but ecosystem lock-in constrains mobility. Experiences mixed coordination benefit and asymmetric extraction cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Vendor",
+      "comment": "PERSPECTIVE 3: INCUMBENT VENDOR (ROPE) \u2014 Benefits from standards ecosystem for customer communication and interoperability. Can choose which standards to support and maintain vendor-specific extensions. Experiences constraint as pure coordination with optional enforcement cost. Net beneficiary with exit options."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Standard-Setting Body",
+      "comment": "PERSPECTIVE 4: STANDARD-SETTING BODY (ROPE) \u2014 Experiences standards proliferation as a coordination success: its standard participates in the ecosystem and generates institutional prestige. Can maintain relevance by periodically updating. Minimal suppression on its own decisions. Effective extraction from downstream agents is not its direct responsibility \u2014 sees itself as enabling coordination."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Consolidation Coalition",
+      "comment": "PERSPECTIVE 5: CONSOLIDATION COALITION (SCAFFOLD) \u2014 Industry consortia (O3DE, RISC-V unified spec pushes, JSON standardization initiatives) are organized agents building alternative pathways through unified recommendation and lifecycle management. See proliferation as temporary \u2014 expect winners to emerge via competitive standardization. Sunset clause: as consolidation progresses (5-15 years), dominant standards absorb minor variants, reducing effective proliferation. Coalition has agency and exit pathway."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Compliance Bureaucracy",
+      "comment": "PERSPECTIVE 6: LEGACY COMPLIANCE BUREAUCRACY (PITON) \u2014 Government standards bodies (NIST, ISO working groups) maintain formal standard procedures despite knowing that de facto market standards have already won. The formal process persists through institutional inertia. High theater ratio: formal standards committees publish documents that are largely ignored in favor of industry consortium outputs. Actual verification work is done by industry, not standards bodies. Piton: degraded function maintained by procedural habit."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal perspective, standards proliferation follows from the irreducible heterogeneity of use cases and the distributed authority of standard-setting. No global coordinator exists to enforce monopoly. This perspective sees proliferation as an inherent property of decentralized coordination systems \u2014 impossible to eliminate without central authority. However, the structural data contradicts this \u2014 empirical history shows standards monopolies and clear winners emerging (TCP/IP dominated networking, HTML/CSS dominated web markup). The mountain classification is a false summit: naturalization of a contingent institutional choice (distributed standard-setting) as an immutable law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "network_effects_threshold",
+      "question": "What adoption threshold causes a standard to become so dominant that alternatives face insurmountable barriers?",
+      "resolution_mechanism": "Historical analysis of standards competition (VHS vs Betamax, Wi-Fi vs WiMAX, HTML vs XHTML): identify critical adoption point where switching costs exceed value of switching",
+      "impact": "If threshold is low (< 30% adoption): proliferation is self-healing via rapid consolidation. If threshold is high (> 60%): proliferation persists longer because switching costs are high even for dominant standards.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Adoption threshold for standard dominance and consolidation"
+    },
+    {
+      "id": "coordination_vs_extraction_boundary",
+      "question": "When does managing multiple standards shift from a legitimate coordination cost to extractive overhead?",
+      "resolution_mechanism": "Cost analysis: measure actual integration labor hours for systems supporting N standards; compare to theoretical minimum for single standard; establish ratio threshold where marginal cost exceeds coordination benefit",
+      "impact": "If ratio < 1.5x: proliferation classified as Rope (coordination dominates). If ratio > 2.5x: proliferation classified as Snare (extraction dominates). Mid-range suggests Tangled Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Coordination cost to extraction boundary for multiple standards"
+    },
+    {
+      "id": "incumbent_gatekeeping_mechanism",
+      "question": "Do incumbent vendors actively maintain multiple standards to block entrant market access, or does proliferation arise from decentralized competitive innovation?",
+      "resolution_mechanism": "Patent analysis, vendor standard participation data, and historical record: identify whether dominant vendors chair competing standards bodies or whether different firms champion different standards",
+      "impact": "If incumbent-driven gatekeeping: constraint classified as Snare from entrant perspective is intentional extraction. If decentralized innovation: constraint is unintended side effect of coordination fragmentation. Changes mandatrophy analysis.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether standards proliferation is incumbent gatekeeping or decentralized innovation"
+    },
+    {
+      "id": "consolidation_timeline_realism",
+      "question": "Do industry consolidation coalitions actually achieve significant standards unification, or do they merely add new standards to the proliferation landscape?",
+      "resolution_mechanism": "10-year retrospective: measure whether unified standard initiatives (RISC-V, O3DE, JSON-LD) reduced total active standards in their domains or merely created new forks",
+      "impact": "If consolidation succeeds: scaffold perspective is validated \u2014 proliferation has real sunset clause. If consolidation fails: scaffold is aspirational \u2014 proliferation trap persists indefinitely.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether consolidation initiatives reduce or extend standards proliferation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Standards proliferation creates a structural trap where the effort to coordinate activity via open standards becomes extractive overhead for some actors while preserving market control for others. The constraint exhibits the dual nature of tangled rope: genuine coordination benefits (standards enable modular design, vendor independence, and customer communication) coexist with asymmetric extraction costs (market entrants must support dozens of incompatible standards; systems integrators absorb compliance labor; downstream industries face opacity and vendor lock-in). The proliferation arises partly from decentralized standard-setting authority (no global coordinator can enforce monopoly) and partly from incumbent gatekeeping (vendors maintain incompatible extensions and proprietary standards to prevent entrant competition). The constraint's theater ratio (0.68) reflects that formal standards bodies publish specifications that are often ignored in favor of de facto industry consortium standards, while legacy compliance bureaucracies maintain obsolete formal procedures. The trap is 'standards proliferation' only from the market entrant's perspective; from incumbent and standard-setting body perspectives, it appears as natural ecosystem diversity and successful coordination.",
+    "key_agents": [
+      "Market Entrants: Primary victim (powerless/trapped) \u2014 must support multiple incompatible standards simultaneously; no exit option; blocked by proliferation itself",
+      "Systems Integrators: Secondary victim (moderate/constrained) \u2014 bear integration labor costs; some supplier switching possible but ecosystem lock-in limits mobility",
+      "Interoperability Seekers: Victim (moderate/constrained) \u2014 seek unified interface but face fragmented landscape; costs of adapter layers and compatibility layers",
+      "Downstream Industries: Victim (moderate/constrained) \u2014 depend on upstream standards but face opacity and vendor-specific variations",
+      "Incumbent Vendors: Primary beneficiary (institutional/arbitrage) \u2014 can choose which standards to support and maintain proprietary extensions; net beneficiary",
+      "Standard-Setting Bodies: Secondary beneficiary (institutional/arbitrage) \u2014 institutional prestige and relevance from maintaining standards; minimal suppression on decisions",
+      "Consolidation Coalition: Organized agents (organized/constrained) \u2014 building alternative unified standards pathways; have agency and exit option",
+      "Legacy Compliance Bureaucracy: Institutional observer (institutional/arbitrage) \u2014 maintains formal standards procedures through inertia despite market realities"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, reflecting the growing burden of multiple standards over time. Initial value (0.30) represents early-stage standards ecosystem where fewer standards existed; as new standards proliferate to address new use cases, the burden rises. Final value (0.52) reflects current state where automotive, industrial IoT, web, and emerging domains have incompatible standards that entrants must support. Suppression (0.58): Moderate-high. Barriers to exit include mandatory compliance (standards are contractual requirements), switching costs (retraining staff on new standards), and network effects (customers expect specific standards). But suppression is not total \u2014 some entrants can survive by specializing in niche compliance. Theater ratio (0.68): High and rising. Formal standards committees publish extensively while industry consortia (RISC-V, OpenFOAM, Kubernetes) define de facto standards outside formal bodies. The formal process persists through procedure and prestige even as actual coordination work has migrated to industry groups.",
+    "perspectival_gap": "This constraint shows how the same structural phenomenon (multiple incompatible standards) is experienced as coordination success (incumbent vendor view), institutional prestige (standard-setting body view), unintended side effect (analytical view), temporary coordination problem with sunset (consolidation coalition view), and irreducible extraction trap (market entrant view). The perspectival gap reveals that 'standards proliferation' is not a single phenomenon but a label covering different structural realities: genuine coordination (standards enable modular design), incumbent gatekeeping (vendors maintain incompatible extensions), and decentralized innovation fragmentation (different firms solve different problems with different standards). The power differential is stark: an incumbent can say 'standards enable flexibility' while an entrant experiences mandatory compliance with 20+ standards. The analytical observer's mountain (natural law of decentralization) is a false summit \u2014 empirical history shows standards consolidation and monopolies emerge when one standard achieves critical adoption mass.",
+    "directionality_logic": "Directionality is determined by each agent's structural position relative to extraction flow. Market entrants are full victims (d \u2248 0.95): trapped with no exit option, bearing full compliance burden. Systems integrators are partial victims (d \u2248 0.60): constrained by ecosystem lock-in but with some switching capacity. Incumbent vendors are beneficiaries (d \u2248 0.15): arbitrage exit options allow them to choose standards strategically; extraction flows toward them. Standard-setting bodies are beneficiaries (d \u2248 0.10): institutional prestige and influence; minimal suppression on their decisions. The consolidation coalition has moderate d (\u2248 0.45): organized agents with constrained but not arbitrage-level exit; can build alternatives but face incumbent resistance. Legacy bureaucracies are beneficiaries (d \u2248 0.05): institutional position maintained regardless of functional relevance; arbitrage in proceeding with formal standards.",
+    "mandatrophy_analysis": "RESOLUTION: This constraint avoids mandatrophy by showing that the measured extractiveness (0.52) is genuinely intermediate \u2014 neither pure coordination (rope, \u03c7 \u2264 0.35) nor pure extraction (snare, \u03c7 \u2265 0.66). The tangled rope classification correctly identifies that standards provide coordination function (systems integrators value modularity, customers need interoperability clarity) AND asymmetric extraction (entrants bear compliance costs that incumbents avoid, downstream industries face vendor lock-in). The rising theater ratio (0.45 \u2192 0.68) indicates that formal standards bodies are increasingly performative while actual coordination happens in industry consortia \u2014 a real drift toward degradation that could ultimately reclassify the constraint as Piton if the theater continues rising. The consolidation coalition's scaffold perspective suggests a plausible exit path: as unified standards (RISC-V, O3DE) achieve adoption, they reduce effective proliferation by providing dominant standards that other standards cluster around. The entire perspectival gap is diagnostically healthy: market entrants see snare because they are trapped; incumbents see rope because they have exit options; organized consolidators see scaffold because they have agency. The mountain view is appropriately flagged as a false summit \u2014 naturalization of a contingent institutional choice."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "vendor_lock_in",
+      "interoperability_debt",
+      "market_entry_barriers"
+    ],
+    "dual_formulation_note": "Standards proliferation is upstream of vendor lock-in (each incompatible standard creates switching costs and dependency) and market entry barriers (compliance burden for new competitors). The three constraints form a causal family: proliferation \u2192 lock-in \u2192 barriers. Each has distinct \u03b5 based on observable (compliance burden \u2260 switching cost \u2260 competitive barrier), but they are structurally linked."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "monarch_institutional_legitimacy",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Monarch Institutional Legitimacy",
+    "topic_domain": "political/institutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "monarch_institution",
+      "hereditary_elite"
+    ],
+    "victims": [
+      "democratic_participation",
+      "resource_allocation_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Excluded Citizen",
+      "comment": "PERSPECTIVE 1: EXCLUDED CITIZEN (SNARE) \u2014 Citizens born without hereditary claim face insurmountable barriers to institutional voice within the monarchical structure. No exit option; must bear the constraint of monarchical authority as immutable fact of political life. Maximum extraction relative to structural position \u2014 power is claimed as birthright rather than earned or delegated."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Aspiring Reformer",
+      "comment": "PERSPECTIVE 2: ASPIRING REFORMER (TANGLED ROPE) \u2014 Constrained by legal prohibition against constitutional change and social costs of republican advocacy, yet also participates in the stability the monarchy provides. The reformer benefits from national continuity and international legitimacy while bearing costs of excluded voice. Exit through emigration is possible but costly."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Governmental Bureaucracy",
+      "comment": "PERSPECTIVE 3: GOVERNMENTAL BUREAUCRACY (ROPE) \u2014 State apparatus coordinates through the monarch as legitimating center. Bureaucrats experience the monarchy as a coordination mechanism: it provides focal point for institutional continuity, neutral arbiter role, and ceremonial legitimacy without requiring their direct participation in governance. Low experienced extraction; they benefit from having a pre-existing legitimacy structure."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Regional Power Center",
+      "comment": "PERSPECTIVE 4: REGIONAL POWER CENTER (ROPE) \u2014 Regional actors (local lords, business magnates, provincial leaders) can negotiate with the monarch or with democratic structures. Mobile exit options allow arbitrage between systems. The monarchy provides coordination benefit: a hierarchy with predictable succession and conflict resolution reduces uncertainty relative to purely competitive alternatives."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Ceremonial Apparatus",
+      "comment": "PERSPECTIVE 5: CEREMONIAL APPARATUS (PITON) \u2014 Coronations, pageantry, hereditary honors, and constitutional formalism constitute an increasingly theatrical legitimation ritual. The actual governance function has migrated to elected bodies or bureaucratic institutions in many contexts, yet the monarchical ceremonial persists through institutional inertia. Theater ratio (0.68) reflects that performance of monarchical authority often exceeds its functional decision-making role."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Monarchy Itself",
+      "comment": "PERSPECTIVE 6: MONARCHY INSTITUTION (TANGLED ROPE) \u2014 The institution benefits from coordination loyalty (subjects unite around the symbol) while bearing suppression costs of maintaining the illusion of naturalness and inevitability. Constrained by the need to justify its existence through increasingly complex legitimacy narratives. Must enforce the extraction mechanism (hereditary succession) while claiming it serves coordination (national unity). Cannot exit into a purely democratic system without dissolution."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalization View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURALIZATION VIEW (MOUNTAIN) \u2014 From a civilizational view, some form of institutional hierarchy may appear inherent to human social organization \u2014 the monarch as natural apex of authority, succession as inevitable, hereditary principle as immutable law. This perspective risks naturalizing what is actually a contingent political choice. The engine's false summit detector will identify this as misclassification if the structural data shows enforceability requirements and beneficiary declarations."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legitimacy_consent_circularity",
+      "question": "Does the monarch's legitimacy derive from genuine consent or from successful suppression of exit alternatives?",
+      "resolution_mechanism": "Historical analysis of constitutional moments: did subjects choose monarchy in deliberative settings or was it imposed/inherited? Comparison of societies with and without republican alternatives available.",
+      "impact": "If derived from genuine consent: reclassify as Rope from powerless perspective. If derived from suppression of alternatives: Snare classification confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether monarchical legitimacy rests on consent or suppression of alternatives"
+    },
+    {
+      "id": "functional_vs_ceremonial_boundary",
+      "question": "What proportion of monarchical authority is functional governance versus ceremonial performance in contemporary contexts?",
+      "resolution_mechanism": "Institutional analysis of decision-making loci: which decisions does the monarch actually make versus which does the sovereign only formally approve? Comparison across democracies with and without monarchs.",
+      "impact": "If mostly ceremonial (theater > 0.75): piton classification strengthens. If substantial governance remains (theater < 0.40): tangled_rope or snare classification applies more directly.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Functional governance role versus ceremonial function split"
+    },
+    {
+      "id": "alternative_legitimacy_sufficiency",
+      "question": "Would democratic or meritocratic legitimacy structures provide equivalent coordination benefits to hereditary monarchy?",
+      "resolution_mechanism": "Comparative institutional analysis of legitimacy stability in democracies vs monarchies; measurement of institutional resilience under constitutional stress.",
+      "impact": "If alternatives provide equivalent coordination: monarchy is pure extraction (Snare). If monarchy provides unique coordination: tangled_rope or rope classification confirmed.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether democratic alternatives provide equivalent coordination function"
+    },
+    {
+      "id": "hereditary_mechanism_naturalness",
+      "question": "Is the appearance of hereditary succession as 'natural law' the result of explicit suppression mechanisms or internalized cultural frames?",
+      "resolution_mechanism": "Genealogical and historical analysis of succession moments: were alternatives actively suppressed (laws against female succession, bastard exclusion, contested claims) or passively accepted through cultural naturalization?",
+      "impact": "If actively suppressed: high explicit suppression score confirmed. If internalized: suppression is cognitive rather than structural (omega for identity_locked dynamics).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Active suppression versus cultural naturalization of hereditary succession"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Monarchical institutional legitimacy represents a structural constraint on political participation and resource allocation that combines genuine coordination functions (focal point for institutional stability, neutral ceremonial arbiter) with substantial extraction mechanisms (exclusion from decision-making based on birth, resource concentration in hereditary elite, suppression of alternative legitimacy claims). The constraint exhibits the full six-type spectrum depending on observer position: excluded citizens experience a snare; reformers experience tangled rope with constrained exit; bureaucratic institutions experience coordination benefits; regional power centers experience arbitrage mobility; ceremonial apparatus has degraded into piton; the monarchy itself navigates tangled rope contradictions; analytical observers risk naturalizing it as immutable law. The theater ratio has drifted upward from 0.35 to 0.68 over the measurement interval, indicating increasing proportion of performative legitimacy work relative to functional governance. Extractiveness has drifted upward from 0.42 to 0.52, showing modest accumulation of exclusion mechanisms even as formal powers have diminished in many constitutional monarchies.",
+    "key_agents": [
+      "Excluded Citizens: Primary victims (powerless/trapped) \u2014 born without hereditary claim; no structural exit from monarchical authority",
+      "Aspiring Reformers: Secondary victims (moderate/constrained) \u2014 face legal barriers and social costs to advocating democratic alternatives; constrained exit through possible emigration",
+      "Governmental Bureaucracy: Beneficiary institution (institutional/arbitrage) \u2014 benefits from monarchy as legitimacy focal point and conflict resolution structure",
+      "Regional Power Centers: Beneficiary actors (powerful/mobile) \u2014 can arbitrage between monarchical hierarchy and democratic or competitive structures; mobility provides exit option",
+      "Democratic Participation Capacity: Abstract victim (powerless/trapped) \u2014 institutional mechanism for collective voice is structurally subordinated to hereditary authority",
+      "Resource Allocation Efficiency: Abstract victim (powerless/trapped) \u2014 hereditary principle distributes resources by birth rather than by capability or need",
+      "Ceremonial Apparatus: Institutional mechanism (institutional/arbitrage) \u2014 maintains theatrical legitimacy through pageantry as core function degrades",
+      "Monarchy as Institution: Structural actor (institutional/constrained) \u2014 must justify extraction mechanism (hereditary succession) through coordination narrative (national unity)"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The monarch/hereditary elite extract through exclusive decision-making authority, resource concentration, and exclusion of non-hereditary voices from institutional power. However, the extraction is not maximal \u2014 many constitutional monarchies have delegated governance to elected bodies while retaining ceremonial role. The 0.52 reflects real but limited extraction in contemporary contexts. Historical value (0.42) shows accumulation over time as democratic norms globally have increased the perceived unfairness of hereditary authority. Suppression (0.58): Moderate-high. Multiple suppression mechanisms exist: legal prohibition of certain succession paths (female exclusion, bastard lines \u2014 historically), social costs to republicanism, internalized cultural frames treating monarchy as natural/inevitable, educational systems naturalizing hereditary hierarchy, information control through court privilege. Suppression is not total \u2014 critique exists \u2014 but substantial barriers prevent exit from the constraint. Theater ratio (0.68): High and increasing. Coronations, state ceremonies, constitutional formalism, hereditary honors, and pageantry constitute increasingly performative legitimacy work. Actual governance has migrated to elected bodies or bureaucratic institutions in many monarchies, yet ceremonial functions persist and expand. The upward drift reflects Goodhart decay: as functional governance role diminishes, performative legitimacy work must expand to compensate.",
+    "perspectival_gap": "The monarch's institutional legitimacy generates maximum perspectival divergence because the constraint simultaneously provides coordination benefits (focal point for state continuity, ceremonial arbiter role) and enforces extraction (hereditary exclusion from power). Excluded citizens perceive a snare \u2014 they cannot exit and bear the cost of excluded voice. Reformers perceive tangled rope \u2014 they benefit from stability while bearing suppression costs. Bureaucrats perceive rope \u2014 they benefit from the coordination focal point. Regional power centers perceive rope \u2014 they have mobility and can arbitrage systems. The ceremonial apparatus perceives itself as piton \u2014 theatrical work persisting through institutional inertia. The monarchy perceives itself as tangled rope \u2014 it must enforce hereditary extraction while claiming coordination benefits. The analytical observer risks mountain classification \u2014 seeing hereditary authority as inherent to human social organization \u2014 which the false summit detector should flag as naturalization of contingent institutional choice.",
+    "directionality_logic": "Directionality values range from beneficiary institutions experiencing low extraction (d \u2248 0.15-0.25 for institutional beneficiaries with arbitrage mobility) to excluded citizens experiencing maximum extraction (d \u2248 0.95 for powerless/trapped). The monarchy institution itself occupies middle ground (d \u2248 0.55) \u2014 it is both beneficiary (extracts authority and resources) and constrained actor (must justify extraction through coordination narrative). Regional power centers with mobile exit options derive lower effective extraction despite bearing some suppression costs (d \u2248 0.35-0.45). Reformers constrained by legal prohibition but with emigration as exit derive moderate directionality (d \u2248 0.65). The critical distinction: beneficiaries with arbitrage mobility experience negative or near-zero effective extraction; constrained victims with no mobility experience high extraction. The sigmoid f(d) amplifies this differentiation \u2014 d=0.15 yields f(d)\u2248-0.01 (near institutional subsidy), while d=0.95 yields f(d)\u22481.42 (near maximal powerless experience).",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The constraint resolves by showing that the same structural setup (hereditary authority with centralized decision-making) provides genuine coordination benefits AND enforces asymmetric extraction simultaneously. This is not paradox but the definition of tangled_rope. The coordination function is real \u2014 without a focal institutional center, competing power centers require greater transaction costs for conflict resolution. The extraction is also real \u2014 hereditary principle excludes non-hereditary agents from voice and concentrates resources. Both are simultaneously true. The mandatrophy is resolved by recognizing that coordination and extraction are not mutually exclusive categories but structural dimensions that can co-exist. The constraint's classification as tangled_rope from institutional and moderate perspectives, snare from powerless perspective, and rope from beneficiary perspective is not inconsistency but the correct perspectival reading of a hybrid mechanism. The false summit at the analytical/civilizational level (mountain classification) should be flagged as naturalization \u2014 the constraint's 'appearance' of inevitability is performatively maintained through the very theater ratio (0.68) that indicates functional degradation."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "hereditary_elite_resource_concentration",
+      "democratic_participation_bottleneck",
+      "succession_legitimacy_crisis"
+    ],
+    "dual_formulation_note": "Monarchical institutional legitimacy is upstream of specific extraction mechanisms (resource concentration, succession disputes, democratic exclusion). This story captures the general constraint structure; domain-specific stories capture how the constraint instantiates in different contexts (succession crisis, elite concentration, participation bottleneck)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

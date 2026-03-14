@@ -1,0 +1,211 @@
+{
+  "header": {
+    "constraint_id": "methane_emissions_deregulation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "meth"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Methane Emissions Deregulation and Climate Extraction",
+    "topic_domain": "environmental_policy/climate/energy",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "fossil_fuel_producers",
+      "natural_gas_companies"
+    ],
+    "victims": [
+      "climate_stability",
+      "future_generations",
+      "climate_vulnerable_populations"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Climate-Vulnerable Populations",
+      "comment": "PERSPECTIVE 1: CLIMATE-VULNERABLE POPULATIONS (SNARE) \u2014 Trapped in geography and economic dependency. Cannot exit the constraint. Bears full cost of deregulation through increased atmospheric methane, accelerated warming, extreme weather, crop failure, and resource scarcity. Zero alternatives, zero agency. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Future Generations",
+      "comment": "PERSPECTIVE 2: FUTURE GENERATIONS (SNARE) \u2014 Structurally unable to participate in current policy decisions. Inherit a constraint (atmospheric composition) they did not choose and cannot modify. Maximum suppression and extraction across civilizational time. The quintessential intergenerational snare."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Fossil Fuel Producers",
+      "comment": "PERSPECTIVE 3: FOSSIL FUEL PRODUCERS (ROPE) \u2014 Experience deregulation as pure coordination benefit. Reduced compliance costs, streamlined permitting, immediate profit growth. Net beneficiary with arbitrage options (can relocate production, shift to other jurisdictions). Sees the constraint as efficient governance that solves their coordination problem (getting permits faster)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Natural Gas Industry Lobbyists",
+      "comment": "PERSPECTIVE 4: NATURAL GAS INDUSTRY LOBBYISTS (ROPE) \u2014 Direct beneficiaries of deregulation. Frame the constraint as solving the real coordination problem of regulatory burden. Have exit options (can shift to renewable lobbying, though career costly). Experience the constraint as genuine efficiency improvement for their constituents."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Local Air Quality Regulators",
+      "comment": "PERSPECTIVE 5: LOCAL AIR QUALITY REGULATORS (TANGLED ROPE) \u2014 Constrained by federal preemption but also coordinate with industry on implementation. Experience mixed extraction and coordination: lose regulatory authority (extraction) but gain operational simplification for facilities (coordination). Career risk if they resist federal mandate; cost to localities if methane leaks increase. Moderate agency with real constraints."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "EPA Environmental Compliance Division",
+      "comment": "PERSPECTIVE 6: EPA ENVIRONMENTAL COMPLIANCE DIVISION (PITON) \u2014 Once-functional regulatory body whose primary function (emissions monitoring and enforcement) has atrophied through deregulation. Maintains organizational structure and theater (continues to publish guidance documents, hold meetings, produce reports) despite reduced actual enforcement capacity. Theater ratio high because the division continues performing environmental compliance operations on constraints it no longer has authority to enforce."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational/global scope, deregulation is a pure extraction mechanism: it transfers present-generation energy/profit benefits to future generations in the form of accumulated atmospheric methane, which cannot be rapidly removed. The constraint persists because regulated entities have political power, climate-vulnerable agents have none. High extractiveness, high suppression, moderate theater (deregulation is presented as 'efficient' and 'science-based' despite known climate impact)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "methane_leakage_attribution",
+      "question": "What proportion of measured atmospheric methane increase is attributable to deregulation vs. production volume growth independent of regulatory status?",
+      "resolution_mechanism": "Comparison of methane emissions trajectories in jurisdictions with deregulation vs. maintained regulation; isotopic analysis of atmospheric methane to distinguish fossil vs. biogenic sources; correlation with production volumes and leak detection frequency",
+      "impact": "If deregulation accounts for > 30% of increased emissions: extraction mechanism is clear and snare classification strengthened. If < 10%: extraction is marginal and constraint reclassifies toward tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Methane attribution to deregulation vs. production growth"
+    },
+    {
+      "id": "regulatory_capture_mechanism",
+      "question": "Did deregulation represent legitimate efficiency improvement requested by regulated entities, or regulatory capture where industry framing became policy without substantive cost-benefit analysis?",
+      "resolution_mechanism": "Document analysis: regulatory impact statements, cost-benefit analyses, stakeholder consultation records; comparison with pre-deregulation risk assessments; tracking of actual compliance cost reductions vs. projected environmental cost increases",
+      "impact": "If genuine efficiency: constraint reclassifies as tangled_rope (mixed coordination and extraction). If capture: snare classification confirmed and extraction flows become visible.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether deregulation was efficiency improvement or capture"
+    },
+    {
+      "id": "intergenerational_discount_rate",
+      "question": "What discount rate converts future methane costs (climate damage, adaptation costs, resource depletion) into present value? Does any standard discount rate justify present extraction for future payment?",
+      "resolution_mechanism": "Climate damage function estimation; cost-benefit analysis with alternative discount rates (0%, 2%, 7%); comparison with revealed preferences in other intergenerational policy domains",
+      "impact": "If any defensible rate justifies the tradeoff: constraint reclassifies as tangled_rope with large benefit to present generation and large cost to future (still mixed, still possibly snare from future perspective). If no defensible rate: intergenerational extraction is indefensible and snare classification holds.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Intergenerational discount rate and cost-benefit justification"
+    },
+    {
+      "id": "alternative_energy_substitutability",
+      "question": "Are methane emissions from deregulated sources functionally necessary for current economic activity, or are they substitutable with renewable alternatives at acceptable cost and timescale?",
+      "resolution_mechanism": "Techno-economic analysis of natural gas substitution rates; cost curves for renewable + storage alternatives; grid modeling of alternative energy scenarios; historical data on energy transition timescales",
+      "impact": "If substitutable without major disruption: deregulation is pure extraction (snare confirmed). If functionally necessary: constraint reclassifies toward tangled_rope (extraction paired with genuine coordination of energy supply).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Substitutability of natural gas with renewables"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Methane emissions deregulation represents a structural extraction mechanism where present-generation energy producers capture regulatory relief while distributing climate costs to future generations and climate-vulnerable populations who cannot exit or negotiate. The constraint exhibits strong snare properties: high suppression (climate-vulnerable agents cannot relocate; future generations have zero voice in current policy), high extractiveness (deregulation directly transfers environmental liabilities to powerless agents), and a growing theater ratio (regulatory justifications increasingly rely on discounted climate models and contested cost-benefit analyses rather than direct risk mitigation). The deregulation occurred through regulatory capture: industry successfully reframed emissions standards as 'compliance burdens' rather than 'climate safeguards,' shifting the cognitive frame from environmental protection to regulatory efficiency. This reframing enabled extraction to persist under the appearance of coordination.",
+    "key_agents": [
+      "Climate-Vulnerable Populations: Primary victims (powerless/trapped) \u2014 geographically and economically locked into exposure to methane-driven climate impacts",
+      "Future Generations: Primary victims (powerless/trapped/civilizational) \u2014 structurally unable to participate in deregulation decisions; inherit accumulated atmospheric methane",
+      "Fossil Fuel Producers: Primary beneficiary (institutional/arbitrage) \u2014 capture immediate profit from compliance cost reduction and production acceleration",
+      "Natural Gas Industry Lobbyists: Secondary beneficiary (institutional/arbitrage) \u2014 directly engineered deregulation through political influence",
+      "Local Air Quality Regulators: Mixed actor (moderate/constrained) \u2014 lose authority but gain simplification; structurally constrained by federal preemption",
+      "EPA Compliance Division: Institutional observer (institutional/constrained) \u2014 primary enforcement function degraded; maintains performative compliance activities",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees clear intergenerational extraction mechanism"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and rising. At t=0, extractiveness was moderate (0.38) because deregulation had not yet driven measurable production increases or atmospheric methane accumulation. As deregulation took effect, compliance costs for producers dropped immediately (beneficiary extraction), while methane emissions rose with a lag (victim cost accumulation). The measurement trajectory shows extractiveness increasing to 0.68 by t=6 as atmospheric impacts became quantifiable. Suppression (0.72): High. Climate-vulnerable populations have extreme barriers to exit \u2014 geographic dependency, economic dependency, zero political voice in deregulation decisions. Future generations have absolute suppression (cannot participate). Regulatory suppression of alternatives (continued fossil fuel subsidies, infrastructure lock-in favoring gas) is also high. Theater ratio (0.58): Moderate-high. Deregulation is justified through efficiency narratives ('reducing regulatory burden,' 'streamlining permitting') that obscure the core extraction mechanism. Climate modeling is presented as uncertain justification for maintaining regulations, which in turn justifies their removal. The performative element increases over time as deregulation impacts become visible and are met with more elaborate justifications.",
+    "directionality_logic": "Directionality is determined by each agent's position relative to the extraction flow. Fossil fuel producers have d \u2248 0.05 (beneficiary + arbitrage \u2192 low d \u2192 negative experienced extraction). Climate-vulnerable populations have d \u2248 0.95 (victim + trapped \u2192 high d \u2192 maximum experienced extraction). Future generations have d \u2248 1.0 (pure victim, zero voice). Local regulators have d \u2248 0.60 (mixed role, constrained exit). The EPA compliance division has d \u2248 0.45 (institutional actor losing functional authority but maintaining procedural participation). The analytical observer has d \u2248 0.85 (structural analyst seeing the full extraction mechanism). These directionality values feed the sigmoid f(d) to produce experienced extractiveness chi for each perspective.",
+    "perspectival_gap": "The gap between beneficiaries and victims is stark. Fossil fuel producers see rope (coordination of efficient permitting, efficient energy delivery). Climate-vulnerable populations see snare (maximum extraction, zero alternatives). Local regulators see tangled_rope (loss of authority paired with operational simplification). The EPA sees piton (their own function degraded, but organizational structure persists). The analytical observer sees snare from civilizational scope, but might be tempted to see rope from immediate/national scope ('energy is necessary, deregulation enables efficient supply') \u2014 this is the false summit risk. The structural test: does deregulation solve a real coordination problem (rope) or does it merely extract regulatory rents while externalizing climate costs (snare)? The measurement trajectory answers this: extractiveness rising correlates with methane emissions rising, not with any improvement in energy coordination. The constraint persists not because it solves coordination but because regulated entities have political power.",
+    "mandatrophy_analysis": "SNARE DIAGNOSIS CONFIRMED: The constraint resolves as pure snare from the analytical civilizational perspective. No beneficiary-victim balance exists that would justify tangled_rope \u2014 the benefits to producers are private and immediate, the costs to climate-vulnerable agents and future generations are diffuse and deferred but absolute. The key mandatrophy test: Is there a genuinely coordination function that extraction serves? Producers claim deregulation improves energy supply coordination (faster permits \u2192 more gas available \u2192 lower prices). But: (1) energy supply in developed economies is not constrained by permitting speed \u2014 it is constrained by infrastructure and demand; (2) deregulation does not serve coordination for future generations or climate-vulnerable populations \u2014 it actively prevents coordination (climate mitigation) and imposes extraction; (3) the beneficiary group (fossil fuel producers) and victim groups (climate-vulnerable, future generations) cannot negotiate or reach mutual benefit \u2014 this is not a cooperation problem, it is a power asymmetry. The constraint persists because fossil fuel producers have political power, not because deregulation solves a coordination problem. Snare classification holds."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_stability_threshold",
+      "intergenerational_justice_framework",
+      "fossil_fuel_subsidy_lock_in"
+    ],
+    "dual_formulation_note": "Methane deregulation is downstream of fossil fuel industry power concentration and upstream of climate instability feedback loops. The constraint links to broader fossil fuel extraction regimes but represents a distinct structural mechanism: the regulatory capture specifically enabling emissions acceleration."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

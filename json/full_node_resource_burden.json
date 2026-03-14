@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "full_node_resource_burden",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fnrb"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Full Node Resource Burden in Blockchain Networks",
+    "topic_domain": "distributed_systems/blockchain_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "protocol_maintainers",
+      "exchange_operators",
+      "large_stakeholders"
+    ],
+    "victims": [
+      "individual_node_operators",
+      "network_decentralization",
+      "accessibility_to_participation"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Individual Node Operator",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL NODE OPERATOR (SNARE) \u2014 Small operators face escalating hardware, bandwidth, and storage requirements with no exit path short of abandoning network participation entirely. Hardware depreciation, electricity costs, and storage capacity compound. The constraint extracts resource wealth from individuals with no meaningful coordination benefit. Trapped by desire to contribute to network decentralization but structurally unable to afford continued participation as requirements climb."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Mining/Validation Coalition",
+      "comment": "PERSPECTIVE 2: MINING/VALIDATION COALITION (TANGLED ROPE) \u2014 Organized operators (mining pools, staking services, institutional validators) experience the constraint as both coordination mechanism and extraction source. The resource burden creates coordination necessity (pooling, delegation, specialization) while simultaneously extracting from smaller operators through economies of scale. These agents benefit from centralization but also depend on protocol legitimacy requiring perceived decentralization."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Protocol Maintainers",
+      "comment": "PERSPECTIVE 3: PROTOCOL MAINTAINERS (ROPE) \u2014 Benefit from resource burden through increased dependency on their expertise, maintenance services, and protocol governance decisions. Experience the constraint as a coordination mechanism that structures network participation. Can arbitrage between different protocol versions or alternative designs. Net beneficiary from status quo \u2014 extraction flows toward this institutional agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Home/Mid-Tier Operator",
+      "comment": "PERSPECTIVE 4: HOME/MID-TIER OPERATOR (TANGLED ROPE) \u2014 Faces constrained choices: upgrade hardware at regular intervals (extraction) or lose capacity (exit option costs are high). Also benefits from network security and decentralization benefits (coordination). Some exit optionality exists (switching to light clients, custodial solutions) but at cost of security/sovereignty. Moderate experienced extraction \u2014 not powerless, but options are costly."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Full Node Verification Ritual",
+      "comment": "PERSPECTIVE 5: FULL NODE VERIFICATION RITUAL (PITON) \u2014 Theatrical compliance: the narrative of 'run a full node to validate the network' persists as institutional performance despite the structural reality that most nodes validate nothing (they follow consensus mechanically). The ritual maintains decentralization theater while actual verification is concentrated in mining/staking pools. Theater ratio high (0.55) because the coordinating function (distributed verification) has largely degraded while the resource burden remains."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Light Client / Prover Architecture Pathway",
+      "comment": "PERSPECTIVE 6: LIGHT CLIENT/PROVER PATHWAY (SCAFFOLD) \u2014 Emerging technologies (light clients, stateless nodes, proof-of-validity systems) offer a sunset mechanism for the full node burden. These architectures reduce resource requirements by 2-3 orders of magnitude while maintaining security guarantees. Organized efforts (Ethereum's Verkle trees, zero-knowledge proofs, data availability layers) are building alternative participation pathways. Suppression will decline as these alternatives mature \u2014 estimated 5-10 year sunset for widespread adoption."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Storage/Verification Natural Law)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal perspective, some verification redundancy is necessary for Byzantine fault tolerance \u2014 the Fundamental Trade-off (storage cost vs security against N/2 attacks) appears as a natural law of distributed consensus. This perspective risks naturalizing what is actually a protocol design choice (block size, state pruning, data availability strategy). The engine's false summit detector will identify this as contingent institutional arrangement, not immutable law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "storage_compression_frontier",
+      "question": "Can state storage requirements be compressed below current levels without compromising security guarantees?",
+      "resolution_mechanism": "Empirical testing of stateless node architectures, Verkle trees, and zero-knowledge proof systems; analysis of security assumptions when full historical state is unavailable",
+      "impact": "If yes: resource burden is reducible through protocol changes (extraction mechanism strengthens, classification potentially shifts to pure Snare). If no: burden is near-necessary cost (supports Mountain perspective claim). If partially: supports Scaffold sunset thesis.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Feasibility of reducing state storage below current levels"
+    },
+    {
+      "id": "light_client_security_parity",
+      "question": "Do light clients with sufficient verification proofs provide cryptographic security parity with full nodes, or do they rely on social consensus (trusting the majority)?",
+      "resolution_mechanism": "Formal security analysis of light client threat models; comparison of liveness and safety guarantees; empirical measurement of light client vulnerability to consensus forks",
+      "impact": "If parity: light clients are true alternative (Scaffold sunset is real). If not parity: light clients trade security for convenience (true exit option requires accepting risk), Snare classification strengthened. If unclear: omega remains core uncertainty.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether light clients achieve security parity with full nodes"
+    },
+    {
+      "id": "decentralization_measurement_validity",
+      "question": "Does node count metric capture actual decentralization, or does it measure theater? How many nodes are required to represent genuine distributed consensus vs performative participation?",
+      "resolution_mechanism": "Network analysis of node autonomy (percentage running outdated code, percentage following hard forks, percentage owned by single entities); correlation between node count and actual consensus diversity",
+      "impact": "If node count correlates weakly with consensus autonomy: full node resource burden is primarily extractive theater (Snare classification strengthened). If strongly correlated: burden has genuine security function (Mountain or Rope perspectives supported).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether node count measures decentralization or theater"
+    },
+    {
+      "id": "hardware_cost_trajectory",
+      "question": "Will hardware resources (storage, bandwidth, computation) decrease faster than blockchain state growth, or will the burden remain structurally increasing?",
+      "resolution_mechanism": "Trend analysis of SSD/HDD cost-per-GB, network bandwidth pricing, computational efficiency gains vs actual historical state growth rates across major blockchains",
+      "impact": "If hardware cheaper faster: burden is temporary (Scaffold sunset is automatic). If state grows faster: burden is structurally increasing (extraction worsens over time, Snare classification strengthened).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative trajectory of hardware costs vs state growth"
+    },
+    {
+      "id": "solo_validator_viability_threshold",
+      "question": "What is the minimum wealth threshold below which solo staking/validation becomes economically irrational? Is this threshold stable or increasing?",
+      "resolution_mechanism": "Economic analysis of minimum capital requirements, amortized hardware costs, electricity costs, and forgone yields; historical tracking of minimum efficient scale for solo validators vs pooled validators",
+      "impact": "If threshold is stable: extraction is bounded (Tangled Rope classification supported). If threshold is increasing: extraction is accumulating over time, classification shifts toward Snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Stability of minimum viable solo validator capital"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 8
+  },
+  "commentary": {
+    "narrative_context": "The full node resource burden represents a structural tension in blockchain networks between the ideological commitment to decentralization (requiring distributed verification nodes) and the practical reality that network state growth and hardware requirements create barriers to entry that concentrate validation power in organized operators. The constraint exhibits characteristics of both genuine coordination (Byzantine fault tolerance requires some verification redundancy) and extractive layering (economies of scale concentrate benefits and shift costs to individual operators). The theater ratio (0.55) reflects the gap between the narrative of 'run a full node to validate the network' and the structural reality that most nodes perform mechanical consensus-following rather than independent verification. Over the measurement interval, extractiveness increased from 0.28 to 0.52, driven by state growth outpacing hardware affordability improvements, while theater ratio rose from 0.38 to 0.55 as the functional verification component degraded relative to performative participation.",
+    "key_agents": [
+      "Individual Node Operators: Primary victims (powerless/trapped) \u2014 face compounding hardware, bandwidth, and storage costs with no exit path except abandoning participation",
+      "Mining/Staking Pools: Primary beneficiaries and organized coordinators (organized/constrained) \u2014 extract from small operators through economies of scale while experiencing the constraint as genuine coordination necessity",
+      "Protocol Maintainers: Secondary beneficiaries (institutional/arbitrage) \u2014 benefit from increased dependency on expertise and governance authority; can arbitrage across protocol versions",
+      "Home/Mid-Tier Operators: Secondary victims (moderate/constrained) \u2014 experience mixed extraction and coordination; maintain some optionality through light client alternatives but at security/sovereignty cost",
+      "Light Client / Prover Architecture Developers: Organized agents with sunset pathway (organized/mobile) \u2014 building alternative participation mechanisms that reduce resource requirements by orders of magnitude",
+      "Blockchain State Growth: Structural driver (non-agent) \u2014 historical transactions and smart contract state accumulate; compression is constrained by cryptographic verification requirements"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts resource wealth from individual operators through escalating hardware requirements, creating a time-limited asset (equipment with finite useful life before obsolescence). The extraction is not total because legitimate coordination benefits exist (Byzantine fault tolerance requires some redundancy), but the asymmetric sharing of these benefits (concentrated in pools/institutions) shifts the net balance toward extraction. The trajectory from 0.28 to 0.52 over the measurement interval reflects state growth outpacing hardware affordability, indicating the extraction mechanism is accumulating. Suppression (0.68): High. Barriers to exit are substantial: upgrading hardware is costly, switching to light clients sacrifices security guarantees, and the narrative legitimacy of 'run a full node' creates social pressure. Smaller operators face few middle-ground options. Theater ratio (0.55): Moderate. The functional verification component (checking transactions against consensus rules) is mechanically performed by most nodes without genuine autonomy \u2014 they follow the hash chain. But the ritual narration ('you are validating the network') persists, and some nodes do perform independent validation. Theater has increased as the coordination value of individual node participation has declined relative to the resource cost.",
+    "perspectival_gap": "The constraint demonstrates clear polarization: beneficiaries and victims occupy structurally opposite positions. Individual operators see a Snare (extraction with no coordination benefit); organized operators see Tangled Rope (legitimate coordination plus extraction); institutions see Rope (pure coordination). The analytical observer's Mountain is a false summit that naturalizes a policy choice as physical law. The key perspectival gap is between powerless/trapped (Snare) and institutional/arbitrage (Rope) \u2014 the same constraint structure produces opposite classifications because exit options and power levels diverge sharply.",
+    "directionality_logic": "Directionality values flow from structural position. Individual node operators bear costs (high d: ~0.85-0.95) with no offsetting benefits in their perspective; they experience maximum f(d) \u2192 maximum \u03c7. Organized pools benefit from coordination necessity and scale (low d: ~0.20-0.35); they see Rope or low-extraction Tangled Rope. Protocol maintainers benefit institutionally (d: ~0.15); arbitrage exit keeps f(d) low and \u03c7 near zero or negative. Mid-tier operators split the difference (d: ~0.60) \u2014 they bear some cost but also capture some security benefits. The piton perspective derives from theater gate (high theater_ratio) rather than from experienced extraction magnitude. The scaffold perspective's mobile exit option reduces felt suppression despite the structural barrier remaining.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the mandatrophy by showing that the tension between 'this is necessary for decentralization' (supporting Mountain/Rope) and 'this extracts from small operators' (supporting Snare) reflects genuine structural ambiguity, not mislabeling. The Scaffold perspective (light client pathway) dissolves the dilemma: if emergence of security-equivalent alternatives (stateless nodes, zero-knowledge proofs, data availability committees) can reduce requirements below current levels without sacrificing Byzantine fault tolerance, then the current burden is revealed as a contingent institutional arrangement (Tangled Rope + Scaffold sunset), not a natural law or necessary extraction. The mandatrophy is resolved by the omega variables: if light client security parity is achieved (omega 2) and state storage can be compressed (omega 1), the constraint transforms from persistent extraction (Snare) into a temporary coordination failure with a predictable sunset (Scaffold). The false summit (Mountain) is detected by noting that the 'necessary for consensus' framing omits the protocol design choices (block size, state pruning, proof systems) that could shift the burden entirely."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "validator_centralization",
+      "blockchain_scalability_trilemma",
+      "mining_pool_consolidation"
+    ],
+    "dual_formulation_note": "The full node resource burden is upstream of validator centralization (resource barriers force delegation to pools) and connected to the scalability trilemma (state growth is a choice variable, not a law). Separate constraint stories model the economic incentives for pool formation and the protocol-level state management choices that drive growth."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

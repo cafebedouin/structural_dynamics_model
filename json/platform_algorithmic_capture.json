@@ -1,0 +1,212 @@
+{
+  "header": {
+    "constraint_id": "platform_algorithmic_capture",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "plac"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Platform Algorithmic Capture",
+    "topic_domain": "digital_economics/platform_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "algorithmic_service_providers"
+    ],
+    "victims": [
+      "content_creators",
+      "end_users",
+      "algorithmic_accountability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Content Creator",
+      "comment": "Content creators depend on platform distribution for income and audience. Algorithm visibility is non-transparent; creators cannot understand why content reaches or fails to reach audiences. Trapped by economic dependency and algorithmic opacity \u2014 no alternative distribution channels at comparable scale. Maximum extraction experienced: algorithmic changes can eliminate livelihood overnight with no recourse."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The End User (Algorithmic Victim)",
+      "comment": "End users cannot exit the algorithmic filtering without losing platform access entirely. Trapped within filter bubbles, algorithmic polarization, and attention manipulation. Algorithm operates on behavioral data the user cannot inspect or revoke without discontinuing service. No alternative social infrastructure at comparable network scale. Experiences maximum suppression through lock-in and network effects."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Content Moderation Workforce",
+      "comment": "Moderators depend on platform contracts for income but face high burnout, trauma, and precarity. Genuinely coordinate content governance with platform (essential function). Also experience extraction: low pay, poor working conditions, algorithmic task assignment without transparency. Mixed: the moderation function is real and necessary; the exploitation is also real. Constrained by labor market options and nondisclosure agreements."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "Platform experiences algorithmic governance as coordination mechanism \u2014 algorithms enable serving billions of users, matching content to attention, mediating interactions at scale. This is genuinely functional coordination. Platform has arbitrage options: can adjust algorithms, switch vendors, or invest in alternative ranking systems. Benefits from first-mover network effects and algorithmic lock-in of users. Experiences the constraint as enabling rather than extractive."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Regulatory Authority",
+      "comment": "Regulators see genuine coordination (algorithmic ranking is necessary to manage scale) but also see systematic asymmetry: platforms use algorithmic opacity to resist accountability, manipulate user behavior, and consolidate market power. Regulators are mobile in theory (can impose standards, interoperability, transparency requirements) but constrained in practice by lobbying, regulatory capture, and jurisdictional limits. Medium power with some exit options but facing significant structural resistance."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Algorithmic Recommendation Ritual",
+      "comment": "The performance of algorithmic objectivity ('the algorithm is neutral,' 'we don't editorialize') has become purely theatrical. Algorithmic choices are value-laden (ranking by engagement rather than veracity, optimizing for watch time). The ritual of algorithmic neutrality persists through institutional inertia \u2014 platforms claim algorithms are objective, researchers cite algorithmic fairy tales, regulators seek algorithmic transparency that would be expensive and disruptive. The constraint persists not because the theater works functionally but because dismantling it would expose the fundamentally political character of ranking choices. Theater ratio is high because the entire accountability structure rests on a performance that everyone partially disbelieves."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "From a civilizational analytical perspective, algorithmic capture involves both genuine coordination (ranking at scale) and systematic extraction (behavioral manipulation, market power consolidation, regulatory capture). The constraint exhibits all hallmarks of tangled rope: significant coordination function without which scale is impossible; significant extraction asymmetry that benefits platform operators at expense of users and creators; active enforcement through algorithmic opacity and legal/contractual barriers; and suppression mechanisms that prevent alternatives from scaling. The analytical frame resolves the mandatrophy by showing the coordination and extraction are intrinsically coupled \u2014 cannot have algorithmic scale without opacity, cannot have algorithmic governance without behavioral capture."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "algorithmic_opacity_necessity",
+      "question": "Is algorithmic opacity a necessary consequence of scale or a chosen mechanism of control?",
+      "resolution_mechanism": "Comparative analysis: platforms that invested in algorithmic explainability vs those that did not; measure user manipulation effectiveness across transparency levels; test whether optimization performance degrades with transparency",
+      "impact": "If necessary: extractiveness is partially justified as coordination cost (\u03b5 \u2192 0.42). If chosen: extractiveness is primarily rent-seeking via information asymmetry (\u03b5 \u2192 0.68). Changes classification from tangled_rope to snare depending on power of agent analyzing.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether algorithmic opacity is structurally necessary or strategically chosen"
+    },
+    {
+      "id": "network_effect_inevitability",
+      "question": "Are network effects that lock users into platform algorithms inevitable or created by design choices (interoperability prevention, proprietary data, algorithmic lock-in)?",
+      "resolution_mechanism": "Historical analysis of interoperability standards in digital platforms; comparative study of jurisdictions with interoperability mandates; measurement of switching costs with vs without algorithmic portability",
+      "impact": "If inevitable: suppression is structural (physical network dynamics). If designed: suppression is institutional extraction (could be reduced through technical/regulatory choices). Changes suppression interpretation from 0.68 to potentially 0.35-0.50 if redesigned.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether network lock-in is inevitable or deliberately constructed"
+    },
+    {
+      "id": "content_creator_coalition_threshold",
+      "question": "At what scale of creator departure or collective action would platform algorithms lose function? Can creators organize exit?",
+      "resolution_mechanism": "Network analysis of creator dependency: measure minimum viable creator population for platform viability; identify critical creator segments; track coordination attempts and counter-measures",
+      "impact": "If critical mass is achievable: powerless creators could become organized (coalition power upgrade, classification changes to rope or scaffold from some perspectives). If prevented: suppression includes coordination prevention (raises suppression from 0.68 to 0.78+). Reveals whether trap is inherent or maintained.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether content creators can organize coalition power to renegotiate algorithmic terms"
+    },
+    {
+      "id": "user_behavioral_lock_in_malleability",
+      "question": "How much of user lock-in is due to genuine network benefits vs algorithmic manipulation? Can users perceive or escape behavioral capture?",
+      "resolution_mechanism": "Controlled intervention: provide users with transparency about algorithmic ranking decisions; measure if awareness changes engagement; comparative study of platforms with high vs low algorithmic manipulation; identity_locked persistence testing",
+      "impact": "If primarily genuine network effects: exit_options could be upgraded from trapped to constrained for end users. If primarily manipulation: users are identity_locked (captured identity fused with platform community) rather than trapped. This distinction is critical for understanding whether users could exercise agency if constraints changed. Changes interpretation of suppression mechanism from structural to behavioral.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Degree to which user lock-in reflects genuine network effects vs algorithmic behavioral capture"
+    },
+    {
+      "id": "regulatory_capture_circularity",
+      "question": "Is regulatory capture of algorithmic policy self-reinforcing? Do platforms use algorithmic opacity to prevent accountability, which prevents effective regulation, which allows platforms to continue opacity?",
+      "resolution_mechanism": "Trace regulatory action: identify cases where algorithmic transparency was mandated; measure compliance costs vs evasion costs; identify regulatory agencies captured by platform funding/employment pipelines; test whether algorithmic auditing can survive platform resistance",
+      "impact": "If self-reinforcing: the constraint may be strengthening over time (theater_ratio and extractiveness both increasing). If breakable: regulatory action could reduce extractiveness to 0.40-0.45 range (Rope or weak Tangled Rope). Affects trajectory predictions and intervention effectiveness.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether algorithmic capture prevents its own regulation (self-reinforcing cycle)"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 8
+  },
+  "commentary": {
+    "narrative_context": "Platform algorithmic capture describes the structural entrapment of content creators and end users within opaque algorithmic systems that systematically extract value and behavioral data while presenting themselves as neutral coordination mechanisms. The constraint operates at the intersection of technical infrastructure, economic incentives, and information asymmetry. Platforms experience algorithms as essential coordination tools enabling scale; creators and users experience them as traps from which exit is economically or technically impossible. The constraint exhibits genuine coordination function (ranking billions of items requires algorithmic filtering) coupled with systematic extraction (behavioral manipulation, market consolidation, suppression of alternatives). Suppression mechanisms include: network effects that trap users, economic dependency that traps creators, algorithmic opacity that prevents accountability, and regulatory capture that prevents intervention. The theater ratio reflects the pervasive performance of algorithmic neutrality \u2014 the claim that algorithms are objective, unbiased, and merely technical \u2014 which obscures the fundamentally political character of ranking choices and serves as cover for rent-seeking and behavioral manipulation.",
+    "key_agents": [
+      "Content Creators: Primary victim (powerless/trapped) \u2014 economically dependent on platform visibility; cannot understand algorithmic ranking; face livelihoods threatened by opaque algorithm changes",
+      "End Users: Primary victim (powerless/trapped) \u2014 trapped within filter bubbles and attention manipulation; cannot inspect or revoke algorithmic data collection; no alternative social infrastructure at comparable scale",
+      "Platform Operators: Primary beneficiary (institutional/arbitrage) \u2014 benefits from algorithmic lock-in of users and creators; controls algorithmic ranking decisions; has arbitrage options for algorithmic systems but maintains opacity for competitive advantage",
+      "Content Moderation Workforce: Secondary victim (moderate/constrained) \u2014 coordinates genuine governance function but experiences low pay, high trauma, precarity; constrained by labor market options and NDAs",
+      "Regulatory Authorities: Constrained powerful agent (powerful/mobile) \u2014 can theoretically impose algorithmic transparency and interoperability standards but face lobbying, regulatory capture, and jurisdictional limits; see genuine coordination but also systematic asymmetry",
+      "Algorithmic Accountability Community: Analytical observer \u2014 researchers, auditors, civil society tracking algorithmic harms; positioned to see full structure but constrained by platforms' information withholding and legal threats",
+      "Analytical Observer: Civilizational context (analytical/analytical) \u2014 sees integrated structure of coordination + extraction + suppression + theater; resolves mandatrophy by showing coordination and extraction are coupled through design choices"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Platforms extract through: (1) behavioral data harvesting (used for targeting advertisers), (2) attention extraction (optimizing engagement over veracity), (3) market consolidation (algorithmic opacity prevents competitive alternatives), (4) labor extraction (creator monetization skewed toward platform). The 0.58 value reflects that extraction is significant but not absolute \u2014 creators and users do receive real value (distribution, community, income), and platforms do solve genuine coordination problems. Extraction is coupled to coordination. Suppression (0.68): High. Multiple barriers to exit: (1) network effects (switching users away from dominant platform is economically irrational), (2) economic lock-in (creators have no alternative income source at comparable scale), (3) informational opacity (users cannot understand or object to algorithmic choices), (4) regulatory capture (prevents intervention). Notably, suppression includes prevention of collective action \u2014 platforms can identify and neutralize creator organizing through algorithmic demotion or policy enforcement. Theater ratio (0.64): Moderate-high. The performance of algorithmic neutrality ('we don't editorialize, the algorithm is objective') has become institutionalized. Platforms use algorithmic language to deflect responsibility ('the algorithm decided'), researchers cite algorithmic explanations while ignoring value choices in ranking systems, regulators seek algorithmic transparency that would require expensive redesign. The theater increases as platforms face accountability pressure \u2014 they invest more heavily in algorithmic legitimacy claims rather than addressing underlying extraction.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from structural position within the extraction flow. Content creators appear as victims with trapped exit (d \u2248 0.95 \u2192 high f(d)) \u2014 they bear maximum extraction. End users similarly trapped and victimized (d \u2248 0.95). Platform operators are beneficiaries with arbitrage exit (d \u2248 0.15 \u2192 low/negative f(d)) \u2014 they capture extraction. Moderators are both victims and coordinate function (d \u2248 0.70 \u2192 high f(d)). Regulators see the asymmetry but have organizational mobility (d \u2248 0.55 \u2192 moderate f(d)). The analytical observer sees the full structure including the coupling between genuine coordination and systematic extraction (d \u2248 0.72). The directionality computation reveals that platforms' arbitrage options (they can change algorithms, invest in alternatives, migrate away from behavioral targeting) are decoupled from creators' and users' exit options (no viable alternatives at comparable scale). This structural asymmetry is the core of the extraction mechanism.",
+    "perspectival_gap": "The constraint shows maximum perspectival divergence between platform operators and trapped victims. Platforms see Rope (pure coordination) \u2014 algorithms enable matching content to attention, reducing friction. Trapped creators see Snare (pure extraction) \u2014 algorithmic invisibility eliminates income. Trapped users see Snare (pure extraction) \u2014 algorithmic manipulation and filter bubbles. Moderators see Tangled Rope (mixed coordination and exploitation) \u2014 they coordinate content governance while being exploited. Regulators see Tangled Rope with power asymmetry (powerful but constrained). Analytical observer sees Tangled Rope with clear mandatrophy resolution \u2014 the coordination and extraction are intrinsically coupled through design choices (opacity enables both scale and lock-in, behavioral targeting enables both personalization and manipulation). The gap between platform perspective (Rope) and user perspective (Snare) is the diagnostic signal that the constraint is not genuine coordination but extraction masked by coordination language. If platforms genuinely experienced only coordination with no extraction benefit, they would not resist transparency and interoperability so vigorously.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: This constraint resolves the coordination/extraction dilemma by showing that the coupling is not accidental but designed. Platforms could reduce extractiveness by: (1) providing algorithmic transparency, (2) enabling creator and user data portability, (3) supporting algorithmic interoperability. That they resist all three reveals that the apparent coordination function is intertwined with extraction mechanisms. The suppression (network effects + regulatory capture) exists precisely to prevent the decoupling that would allow pure coordination. The theater (algorithmic neutrality performance) justifies maintaining opacity. The mandatrophy is resolved not by choosing between 'algorithms are coordination' and 'algorithms are extraction' but by recognizing that *the current implementation* couples coordination with extraction through design. A redesigned system (interoperable algorithms, transparent ranking, user data rights) could reduce extractiveness to 0.25-0.35 range (Rope or Scaffold). The current system maintains high extractiveness because platforms benefit from the coupling. This is the key insight: the constraint is a tangled_rope by design, not accident. Unwinding it requires both technical change (algorithmic transparency, data portability) and institutional change (regulatory standards, interoperability mandates, antitrust enforcement)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "attention_economy_extraction",
+      "algorithmic_polarization_feedback",
+      "platform_regulatory_capture"
+    ],
+    "dual_formulation_note": "Algorithmic capture decomposes into three structurally distinct constraints with different \u03b5 values: (1) algorithmic_resource_allocation (\u03b5\u22480.30, Rope) \u2014 ranking algorithm coordinating attention/content matching; (2) algorithmic_behavioral_manipulation (\u03b5\u22480.62, Snare) \u2014 behavioral targeting and filter bubbles with pure extraction function; (3) algorithmic_opacity_enforcement (\u03b5\u22480.55, Tangled Rope) \u2014 maintaining opacity as active mechanism coupling coordination benefits with extraction lock-in. Platform_algorithmic_capture is the umbrella story integrating all three; the decomposition reveals which aspects have genuine coordination function and which are pure extraction."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    }
+  ]
+}

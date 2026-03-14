@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "earth_mars_coordination_overhead",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "emco"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Earth-Mars Coordination Overhead in Interplanetary Operations",
+    "topic_domain": "space_exploration/interplanetary_logistics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "earth_mission_planners",
+      "terrestrial_infrastructure_providers"
+    ],
+    "victims": [
+      "mars_mission_autonomy",
+      "operational_responsiveness",
+      "mars_surface_agents"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Mars Surface Operations",
+      "comment": "PERSPECTIVE 1: MARS SURFACE OPERATIONS (SNARE) \u2014 Trapped by 6-24 minute signal delay. Cannot execute real-time responses to emergencies or unexpected conditions. Bears full extraction cost: delayed decisions, constrained autonomy, dependency on earth-based risk assessment. Cannot exit: the constraint is structural to the orbital geometry. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Mars Field Robotics Teams",
+      "comment": "PERSPECTIVE 2: MARS FIELD ROBOTICS TEAMS (TANGLED ROPE) \u2014 Constrained by communication lag but also benefit from earth-based computational resources, mission planning expertise, and trajectory correction capabilities. Genuine coordination function (rovers + earth planners solve problems jointly) exists alongside asymmetric extraction (earth retains decision authority). Moderately experienced extraction \u2014 significant agency but not full autonomy."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Earth Mission Control",
+      "comment": "PERSPECTIVE 3: EARTH MISSION CONTROL (ROPE) \u2014 Experiences coordination overhead as the infrastructure they operate and control. Can redirect resources, adjust mission parameters, reallocate personnel. Net beneficiary \u2014 the overhead consolidates decision authority at their location, enabling centralized optimization. Extraction flows toward this agent."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Distributed Autonomy Development Programs",
+      "comment": "PERSPECTIVE 4: DISTRIBUTED AUTONOMY ADVOCATES (SCAFFOLD) \u2014 Organized researchers and engineers developing on-Mars decision systems (autonomous science triage, local hazard response) see the communication lag as a temporary institutional constraint with a clear sunset. Constraints on local autonomy are expected to decline as AI capabilities mature and autonomous systems prove reliable. Theater is declining as proof-of-concept demonstrations replace theoretical debates about autonomy safety."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Traditional Mission Architecture",
+      "comment": "PERSPECTIVE 5: TRADITIONAL EARTH-CENTRIC ARCHITECTURE (PITON) \u2014 The centralized earth-control model persists through institutional inertia despite technological alternatives (autonomous rovers, distributed decision systems) becoming feasible. Mission planning rituals, safety verification processes, and organizational hierarchies are optimized around earth-based authority. The architecture sees itself as degraded \u2014 recognized as suboptimal but maintained because replacing it entails organizational restructuring and risk acceptance. High theater ratio reflects performative aspects of redundant verification and command approval chains."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Physical Constraint (Speed of Light)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (NATURAL LAW VIEW) \u2014 From a universal/civilizational perspective, the communication delay is a straightforward consequence of relativistic physics: electromagnetic signals travel at c, and Mars orbital distances produce deterministic delay. This perspective sees the constraint as immutable \u2014 a law of nature, not an institutional arrangement. However, the structural data reveal this as a false summit: the constraint's extractiveness, suppression, and theatrical elements are not properties of physics but of organizational choices about how to respond to the delay."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "autonomous_reliability_threshold",
+      "question": "At what demonstrated reliability level does autonomous on-mars decision-making become institutionally acceptable as a substitute for earth-based control?",
+      "resolution_mechanism": "Longitudinal comparison of autonomous rover performance vs. earth-controlled rover performance across mission-critical tasks; institutional safety standards review; incident analysis comparing autonomous vs. controlled outcomes",
+      "impact": "If threshold is low (85-90% success rate): scaffold sunset becomes near-term (5-10 years), extraction overhead converts to coordination benefit. If threshold is high (99%+): scaffold timeline extends indefinitely, earth-control extraction persists. If threshold is asymmetrically applied (stricter for autonomous than earth-control): reveals institutional bias toward centralized authority.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Reliability threshold for autonomous mars decision-making acceptance"
+    },
+    {
+      "id": "communication_redundancy_function",
+      "question": "Does multi-channel communication redundancy (relay satellites, backup pathways) represent genuine coordination function or primarily performative safety theater?",
+      "resolution_mechanism": "Analysis of failure rates with vs. without redundancy; examination of mission success probability improvements from redundancy; comparison of redundancy costs vs. actual reliability gains",
+      "impact": "If genuine coordination: suppression value should be lower (alternatives exist). If primarily theater: suppression is structural despite redundancy presence, and theater_ratio increases. Determines whether communication lag is pure constraint or mixed coordination-extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether redundancy represents functional coordination or safety theater"
+    },
+    {
+      "id": "orbital_geometry_immutability",
+      "question": "Is the 6-24 minute delay truly immutable, or do alternative mission architectures (permanent relay networks, in-transit communication nodes) effectively compress the operational delay below critical thresholds?",
+      "resolution_mechanism": "Technical feasibility studies of relay constellation concepts; cost-benefit analysis of compression approaches; timeline estimates for deployment of alternative architectures",
+      "impact": "If delay is immutable: mountain classification contains validity (though the institutional response remains contingent). If delay can be compressed technologically: mountain classification is false summit; the constraint is institutional choice about investment in alternatives, not physics.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether communication delay is immutable or can be compressed via alternative architectures"
+    },
+    {
+      "id": "earth_control_necessity",
+      "question": "Does earth-based mission control solve problems that autonomous systems demonstrably cannot solve, or does it primarily enforce centralized decision authority for organizational/political reasons?",
+      "resolution_mechanism": "Catalog of earth-control interventions; classification by necessity (actual problem-solving) vs. authority (policy enforcement); comparison with autonomous system capabilities in analogous domains (underwater robotics, deep-space probes with communication lag)",
+      "impact": "If primarily problem-solving: benign coordination overhead, extraction value justified by genuine benefit. If primarily authority enforcement: reveals extraction as institutional choice, not technical necessity. Clarifies whether tangled_rope classification accurately captures mixed coordination-extraction or over-privileges coordination narrative.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether earth control provides essential problem-solving or enforces organizational authority"
+    },
+    {
+      "id": "risk_acceptance_asymmetry",
+      "question": "Why do earth-based mission architectures accept risk from communication delay (e.g., scientific opportunity loss, slow hazard response) while simultaneously rejecting risk from autonomous systems (despite autonomous systems operating elsewhere with acceptable safety profiles)?",
+      "resolution_mechanism": "Comparative risk analysis: quantified failure modes and consequences for earth-control vs. autonomous approaches; institutional risk acceptance standards review; analysis of decision-making processes that approve earth-control delays but reject autonomous systems at equivalent risk levels",
+      "impact": "If risk standards are genuinely comparable: institutional choices are rational and extraction overhead is justified cost. If risk standards asymmetrically penalize autonomy: reveals institutional bias protecting centralized control, indicating extraction mechanism. Directs suppression interpretation: is it structural necessity or institutional preference?",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Asymmetry in risk acceptance between earth-control and autonomous approaches"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Earth-Mars coordination overhead creates a structural tension between the immutable constraint of signal propagation (6-24 minute round-trip delay depending on orbital configuration) and the institutional response to that constraint (centralized earth-based mission control that consolidates decision authority and delays autonomous response). The constraint exemplifies how a physical limit becomes entangled with organizational extraction: the communication delay itself is immutable, but the institutional arrangements that treat the delay as justifying centralized control are contingent choices. This story decomposes into multiple structurally distinct constraints related to Mars operations: the communication delay (this constraint), the cognitive load of distributed decision-making (separate), and the cargo transport logistics (separate). This story focuses on the overhead imposed by the earth-mars synchronous coordination requirement and how it enables organizational extraction of autonomy from mars-based agents. The extractiveness value (0.38) reflects moderate extraction: genuine coordination benefits exist (earth-based computational resources, trajectory optimization expertise) alongside asymmetric decision authority (earth retains final say despite mars bearing consequences). Theater ratio (0.65) reflects that mission control processes include significant performative elements: redundant safety checks, command approval chains, and risk reviews that provide organizational legitimacy rather than direct functional improvement. The measurement trajectory shows increasing theater as more oversight processes are layered onto the core coordination problem, and extractiveness growing as earth-based mission control consolidates broader decision authority during the interval.",
+    "key_agents": [
+      "Mars Surface Operations: Primary victim (powerless/trapped) \u2014 robots and habitats entirely dependent on earth-based decisions with 6-24 minute delay; cannot exit or negotiate",
+      "Mars Field Robotics Teams: Secondary victim (moderate/constrained) \u2014 field scientists and engineers operate rovers under earth control; can advocate for autonomy but ultimate authority remains at earth",
+      "Earth Mission Control: Primary beneficiary (institutional/arbitrage) \u2014 consolidates decision authority, operates optimized resource allocation, directs mission priorities; can reallocate resources and personnel",
+      "Distributed Autonomy Programs: Organized challengers (organized/constrained) \u2014 researchers developing autonomous systems and local decision-making; see earth-control overhead as temporary institutional constraint with sunset path",
+      "Traditional Mission Architecture: Institutional incumbent (institutional/arbitrage) \u2014 earth-centric control model persists through organizational inertia; recognizes degradation but maintains ritual structures",
+      "Analytical Observer: Universal perspective (analytical/analytical) \u2014 risks conflating immutable physics (light speed) with contingent institutional arrangements (earth-based authority structure)"
+    ],
+    "logic_rationale": "Extractiveness (0.38): The constraint imposes moderate extraction. Mars surface agents lose autonomy and bear delayed-response costs. Earth mission control gains decision authority and resource optimization capability. The extraction is not maximal because genuine coordination benefits exist \u2014 earth-based computation and planning expertise genuinely improve mission outcomes. However, the coordination benefits are asymmetrically distributed: earth captures planning advantage; mars bears response delay costs. Suppression (0.52): Moderate-high. Mars surface agents face structural barriers to autonomous decision-making: organizational policies enforcing earth approval, safety standards designed around earth-control, institutional risk acceptance that penalizes autonomous failure but accepts earth-control delay costs. However, suppression is not total \u2014 increasing autonomous capabilities and growing technical evidence of autonomy safety are creating exit pathways. Theater ratio (0.65): High and growing. Mission control includes performative elements: safety approval chains that add delay without reducing risk, redundant verification processes that mirror earth-based standards regardless of mars conditions, organizational rituals around earth-based authority. The theater ratio has increased from 0.40 to 0.65 over the interval as more oversight processes have been layered onto the core coordination problem, not because the coordination problem has grown more complex.",
+    "perspectival_gap": "The mountain perspective (speed of light as immutable law) is a false summit. The constraint's extractiveness, suppression, and theater are not properties of physics but of institutional response to physics. The signal delay is immutable; the organizational arrangements are contingent. The analytical observer who sees the constraint as natural law is naturalizing institutional choices. The real perspectival gap exists between earth-control beneficiaries (who see rope-style coordination) and mars-surface victims (who see snare-style extraction).",
+    "directionality_logic": "Directionality values are derived from beneficiary/victim status and exit options. Mars surface operations (trapped, victim) derive high d (~0.95), experiencing maximum extraction through f(d). Earth mission control (arbitrage, beneficiary) derives low d (~0.05), experiencing negative extraction (extraction flows toward them). Field robotics teams (constrained, mixed) derive moderate d (~0.55), experiencing moderate extraction as they have some agency but significant structural barriers. The scaffold perspective uses organized/constrained, deriving d ~0.40, reflecting their organized agency against a constraint they perceive as temporary. The piton perspective uses institutional/arbitrage, deriving low d and showing why the architecture persists despite low functional extraction \u2014 the architecture benefits earth-based institutional actors through consolidation of authority, not through dramatic extraction values.",
+    "mandatrophy_analysis": "DIAGNOSTIC: This constraint resolves mandatrophy through perspectival decomposition. The mountain perspective identifies a false summit \u2014 the constraint appears immutable because the analytical observer conflates physics (delay) with institutions (earth-based control). The scaffold perspective identifies a real institutional sunset \u2014 autonomous systems are maturing, and organizational barriers to their deployment are weakening. The tangled rope classification correctly identifies the mixed coordination-extraction: earth-based mission control does provide genuine coordination benefits (computational expertise, trajectory optimization) while also consolidating decision authority that mars-based agents cannot escape. The piton perspective reveals that the traditional earth-control architecture is maintained through organizational inertia despite recognized suboptimality. The snare perspective from mars surface operations is the key diagnostic: if autonomous systems can achieve comparable or superior outcomes, the snare classification reveals extraction where institutional framing treats it as inevitable coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "mars_autonomous_decision_authority",
+      "interplanetary_mission_logistics",
+      "earth_mars_resource_allocation"
+    ],
+    "dual_formulation_note": "The earth-mars coordination overhead decomposes into three structurally distinct constraints: (1) this story focuses on the decision authority overhead and institutional extraction from communication delay, (2) a separate story addresses autonomous decision-making capability and the institutional barriers to deployment, (3) a third addresses logistics and resource transport constraints. The three constraints are linked by network edges representing organizational coupling and technical dependency."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

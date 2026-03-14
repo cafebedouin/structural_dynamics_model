@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "family_caregiving_outsourcing",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fco"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Family Caregiving Outsourcing: Coordination and Extraction in Household Labor Markets",
+    "topic_domain": "social/economic/gender",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dual_income_households",
+      "employers_of_primary_earners",
+      "care_service_providers_as_class"
+    ],
+    "victims": [
+      "care_workers",
+      "dependent_care_quality",
+      "family_relational_continuity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Migrant Care Worker",
+      "comment": "PERSPECTIVE 1: MIGRANT CARE WORKER (SNARE) \u2014 Trapped in the outsourcing system by visa restrictions, debt bondage, remittance obligations, and geographic distance from family. Bears full extraction: low wages, long hours, no labor protections, emotional labor uncompensated. Exit is materially blocked (visa status) and structurally impossible (family depends on remittances). Maximum suppression \u2014 legal status, language barriers, social isolation prevent organizing or negotiating. No coordination benefit flows to this agent."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Child in Outsourced Care",
+      "comment": "PERSPECTIVE 2: CHILD IN OUTSOURCED CARE (SNARE) \u2014 Trapped in contingent, unstable relationships with care workers who rotate due to low wages and burnout. Bears relational extraction: interrupted attachment, inconsistent discipline and norms, transactional rather than kin-based care. No exit option and no coordination function from the child's perspective. The constraint trades relational continuity for parental labor liberation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Primary Earner (Dual-Income Household)",
+      "comment": "PERSPECTIVE 3: PRIMARY EARNER / DUAL-INCOME HOUSEHOLD (TANGLED ROPE) \u2014 Constrained by career demands and childcare market pricing, but also benefits from the system. Genuine coordination function: outsourcing enables both parents' labor force participation and economic household stability. Asymmetric extraction: benefits from suppressed care-worker wages (lower costs) and social invisibility of care labor. Suppression of alternatives (e.g., reduced work weeks, subsidized public childcare) maintains dependence on outsourced care."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Employers of Primary Earners",
+      "comment": "PERSPECTIVE 4: EMPLOYERS OF PRIMARY EARNERS (ROPE) \u2014 Net beneficiary. The outsourcing system enables full-time work at competitive wages without employers bearing care costs. Experiences the constraint as pure coordination: enables workforce stability and productivity. No extraction from this agent's perspective \u2014 the constraint solves their coordination problem (maintaining a full-time workforce) without visible cost to them."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Care Work Organizing Movement",
+      "comment": "PERSPECTIVE 5: CARE WORK ORGANIZING MOVEMENT (TANGLED ROPE) \u2014 Organized agents attempting to shift the constraint from snare toward balanced coordination. Pushing for labor standards, collective bargaining, and professionalization of care work. Constrained by the structural power imbalance (millions of care workers, diffuse employers, high employer arbitrage to other labor markets). See genuine coordination function (care work needs infrastructure) alongside active enforcement of extraction (wage suppression, regulatory capture by placement agencies). Current trajectory: slowly improving labor conditions in unionized sectors; backsliding in gig care platforms."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Family as 'Natural' Care Unit",
+      "comment": "PERSPECTIVE 6: FAMILY AS NATURAL CARE UNIT (PITON) \u2014 The normative framing that family (especially mothers) 'naturally' provide childcare persists despite its function having been outsourced. Theater ratio high: family structures and norms remain organized around caregiving even as care is externalized. The constraint maintains ideological extraction \u2014 the cultural prestige and relational identity benefits of motherhood persist while the labor is outsourced. This perspective sees the theatrical maintenance of family-based care ideology even as economic reality is extraction via outsourcing."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer: Biological Dependency Natural Law",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / BIOLOGICAL NATURAL LAW (MOUNTAIN) \u2014 From a civilizational/universal perspective, human children require care from some agent, and the constraints of human biology (gestational dependence, biological imprinting, developmental time windows) are immutable. The mountain view sees the outsourcing question as merely shifting WHO provides the care, not eliminating care requirements. However, structural data contradicts the mountain classification \u2014 the extractive asymmetry, the suppression mechanisms, and the institutional engineering of care labor markets are contingent, not laws of nature. This is a false summit: biological dependence is immutable, but the economic extraction structure around it is not."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "relational_harm_quantification",
+      "question": "What portion of negative developmental outcomes in outsourced childcare are attributable to care worker rotation versus parental work demands versus poverty/stress?",
+      "resolution_mechanism": "Longitudinal studies comparing developmental trajectories by care stability (same provider >2 years vs rotating), parental work schedule intensity, and household income/stress; controlling for baseline factors",
+      "impact": "If rotation is primary driver: constraint is fundamentally extractive (trading child welfare for parental labor). If work intensity is primary: constraint appears as coordination problem with poorly-managed side effects (could be mitigated). If poverty/stress is primary: constraint is artifact of insufficient household resources, not outsourcing per se.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of developmental harm to care worker rotation vs other factors"
+    },
+    {
+      "id": "counterfactual_household_alternative",
+      "question": "What portion of dual-income households could sustain themselves on one income plus reduced-hour work arrangements if childcare costs were not so high and work was structured more flexibly?",
+      "resolution_mechanism": "Economic modeling: household budgets under scenarios of subsidized childcare vs wage requirement for two full-time jobs; labor market analysis of part-time and reduced-hour work availability",
+      "impact": "If high percentage could switch (>40%): outsourcing is partially an engineered necessity (suppressed public childcare, inflexible work structures) rather than inevitable. If low percentage (<20%): outsourcing reflects genuine household economic requirements.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of single-income or reduced-work household arrangements"
+    },
+    {
+      "id": "care_worker_voice_capture",
+      "question": "To what extent do care worker advocacy organizations represent care workers' actual preferences vs advocates' (often Western, middle-class) framings of what care work should be?",
+      "resolution_mechanism": "Survey and interview data from care workers themselves about: (a) whether they want professionalization/credentialing vs flexibility, (b) whether wages vs scheduling/autonomy is primary concern, (c) what exit options they actually see as viable",
+      "impact": "If advocates capture worker voice: policy responses may impose solutions workers don't want (e.g., professionalization barriers that price out informal care). If worker voice is authentic: policy responses are more aligned with actual needs and constraints.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether care worker advocacy captures authentic worker preferences or advocate framings"
+    },
+    {
+      "id": "cultural_identity_lock",
+      "question": "For primary earners, especially women, to what extent is the choice to outsource care driven by actual economic necessity versus internalized identity-lock binding them to paid work identity and away from caregiving identity?",
+      "resolution_mechanism": "Qualitative research: interviews with primary earners about counterfactuals (what if childcare were free? what if work were 4-day weeks?); analysis of subjective sense of choice and identity coherence",
+      "impact": "If high identity-lock: the constraint appears as economic necessity but functions partly through cognitive capture (the constraint's suppression is internalized). If low identity-lock: economic structuring alone drives the system.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Degree of identity-lock in paid work identity vs caregiving choice"
+    },
+    {
+      "id": "suppression_mechanism_composition",
+      "question": "What proportion of suppression of care-worker alternatives (subsidized public childcare, employer-sponsored on-site care, flexible scheduling) is structural (policy/regulation) versus internalized (care workers' own belief that private market provision is inevitable)?",
+      "resolution_mechanism": "Policy analysis of childcare funding mechanisms in comparable countries; care worker interviews about perceived viability of public/cooperative models; historical analysis of policy windows when public childcare expanded or contracted",
+      "impact": "If structural: policy lever exists (public investment). If internalized: suppression persists even after regulatory barriers are removed (care workers internalize market logic).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Composition of suppression between structural and internalized mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Family caregiving outsourcing is the structural arrangement by which paid care workers (predominantly women, often migrants) provide childcare, elder care, and household services that were historically provided by unpaid family members (predominantly women). This constraint represents a complex decomposition problem \u2014 the natural-language concept 'family outsourcing' conflates at least three structurally distinct mechanisms: (1) the coordination problem of allocating care labor in dual-income households, (2) the extraction of labor value through wage suppression and legal precarity of care workers, and (3) the degradation of relational continuity in dependent care. The story focuses on the primary constraint: the tangled_rope mechanism by which household economic coordination depends on and perpetuates the extraction of care-worker labor. The constraint exhibits different classification from seven distinct perspectives spanning the care worker, the dependent child, the employing household, the institutional employer, care-work organizing movements, cultural ideology of family, and the analytical observer's natural law view. The extractiveness has increased over the 30-year interval as dual-income household dependence on outsourced care has become economicallly mandatory (suppression of alternatives), while care-worker wages have stagnated and precarity has increased (wages stagnated 1990-2020, then slight gains 2020-2025 from organizing pressure). Theater ratio has remained moderate \u2014 the constraint is primarily economic rather than performative, though cultural ideology of family maintains some performative function (the narrative that mothers 'naturally' provide care persists even as care is outsourced).",
+    "key_agents": [
+      "Migrant Care Workers: Primary victims (powerless/trapped) \u2014 bearers of suppressed wages, precarious legal status, emotional labor, geographic separation from own families",
+      "Children in Outsourced Care: Secondary victims (powerless/trapped) \u2014 bear relational extraction (disrupted attachment due to care-worker rotation)",
+      "Dual-Income Households: Primary beneficiaries + mixed agents (moderate/constrained) \u2014 benefit from enabled labor force participation; bear costs of relational compromise and care-market pricing constraints",
+      "Employers of Primary Earners: Institutional beneficiaries (institutional/arbitrage) \u2014 benefit from enabled full-time workforce; bear no visible care costs",
+      "Care Work Organizing (Unions, Advocacy): Organized agents (organized/constrained) \u2014 attempting to reframe constraint from snare toward balanced coordination; currently constrained by power imbalance",
+      "Family Ideology as Cultural Institution: Institutional performer (institutional/arbitrage) \u2014 maintains normative framing of family-based care even as function is outsourced; derives prestige/identity benefits from ideological maintenance",
+      "Analytical Observer (Natural Law view): Civilizational analyst (analytical/analytical) \u2014 risks naturalizing engineered extraction as biological necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts care-worker labor through wage suppression (care workers earn 30-40% below comparable skill-level occupations), legal precarity (visa restrictions, lack of labor protections), and emotional labor uncompensated. However, the extraction is not maximal (0.72+) because organizing pressure (especially post-2020) has created wage floors in some jurisdictions, and some care work is shifting toward cooperative/unionized models. The extractiveness has increased over the interval due to gig-platform care (TaskRabbit, Care.com) reconstructing precarity. Suppression (0.65): Moderate-high. Significant barriers to care-worker exit include visa restrictions for migrant workers, remittance obligations to families in origin countries, language barriers, lack of credential portability, and social isolation. Also, suppression of alternative care arrangements (public childcare, employer-sponsored care, flexible scheduling) channels households toward outsourcing. Suppression has remained steady over the interval \u2014 it's structural rather than deteriorating or improving. Theater ratio (0.48): Moderate. The constraint is primarily economic (labor cost and availability) rather than performative. Performative elements include: cultural ideology of family-based care (families talk as if mothers 'naturally' provide care even while outsourcing it), performative professionalization (care certifications that don't meaningfully improve care quality), and therapeutic narratives (framing outsourcing as 'healthy work-life balance' rather than structural labor market extraction). Theater has slightly increased as cultural ideology work has intensified (motherhood marketing, 'quality time' narratives) to maintain legitimacy of outsourcing.",
+    "perspectival_gap": "The perspectival gap is extreme across all dimensions. The beneficiary (dual-income household) experiences Tangled Rope (meaningful coordination function, some extraction). The victims (care worker, child) experience Snare (maximum extraction, minimal coordination). The institutional beneficiary (employer) experiences Rope (pure coordination). The organizing agents experience Tangled Rope with agency (can push back; constraint classification may shift to Rope with sufficient organizing power). This gap reflects a deep structural reality: the same constraint genuinely does coordinate household labor participation AND genuinely does extract care-worker labor. The classification difference is not observational bias \u2014 it's reflecting different structural relationships to the constraint's function.",
+    "directionality_logic": "Beneficiary/victim declarations drive the directionality computation. Dual-income households are declared beneficiaries because they gain labor-force participation and household stability. Care workers, children, and dependent-care quality are declared victims because they bear suppression and extraction. Employers benefit indirectly through enabled workforce. The pipeline computes d from these declarations plus exit options: migrant care workers' trapped status \u2192 d \u2248 0.95 (maximum). Dual-income households' constrained status + beneficiary status \u2192 d \u2248 0.45-0.55 (moderate). Employers' arbitrage status + beneficiary status \u2192 d \u2248 0.05 (minimal). These d values feed f(d), which feeds \u03c7. The resultant \u03c7 values differ by a factor of 10+ across perspectives, even though base extractiveness \u03b5 is held constant. This demonstrates the power of the directionality derivation chain to reveal perspectival asymmetry.",
+    "mandatrophy_analysis": "MANDATE ANALYSIS \u2014 How does the classification prevent mislabeling coordination as pure extraction (or vice versa)? The Tangled Rope classification captures what neither pure Rope (which would ignore the asymmetric extraction of care-worker labor) nor pure Snare (which would ignore the genuine coordination function enabling household labor participation) could explain. The constraint exhibits both mechanisms simultaneously because it operates on different agents with asymmetric power. The Rope perspective (employers) sees pure coordination. The Snare perspective (care workers) sees pure extraction. The Tangled Rope perspective (dual-income households and organizing agents) sees both. Mandatrophy is resolved not by choosing one classification but by recognizing that the constraint's true structure is asymmetrically distributed across perspectives. Claiming this as a Rope (pure coordination) would miss the extraction. Claiming it as a Snare would miss the coordination. Tangled Rope is the only type that captures the hybrid structural reality."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "dual_income_household_stability",
+      "care_worker_wage_suppression",
+      "gender_labor_segregation",
+      "migration_and_remittance_systems"
+    ],
+    "dual_formulation_note": "Family caregiving outsourcing is downstream of several structural constraints: (1) dual-income economic necessity (household requires two full incomes to reach middle-class stability), (2) inflexible work scheduling (employers expect full-time presence), (3) public childcare underfunding (no subsidized alternative), (4) gender norms around motherhood and caregiving. This story focuses on the primary constraint structure (the tangled rope of coordination + extraction); sibling stories address the upstream constraints that make outsourcing the default option."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ]
+}

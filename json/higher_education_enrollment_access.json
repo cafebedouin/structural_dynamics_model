@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "higher_education_enrollment_access",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "heea"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Higher Education Enrollment Access Constraint",
+    "topic_domain": "education/economic_mobility",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "elite_institutions",
+      "credential_gatekeepers",
+      "student_debt_processors"
+    ],
+    "victims": [
+      "low_income_students",
+      "first_generation_applicants",
+      "geographic_periphery_applicants"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Low-Income Student",
+      "comment": "PERSPECTIVE 1: LOW-INCOME STUDENT (SNARE) \u2014 Structurally trapped by cost barriers (tuition, housing, opportunity cost of not working), information asymmetries (first-generation students lack family knowledge of application processes), and geographic disadvantage (limited quality secondary schools in low-income areas). No genuine exit option; bears full extraction. The constraint appears as immutable: 'higher education costs what it costs; if you can't afford it, you're not college material.'"
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Regional Public University",
+      "comment": "PERSPECTIVE 2: REGIONAL PUBLIC UNIVERSITY (TANGLED ROPE) \u2014 Provides genuine coordination function (access to higher education, workforce development, social mobility channel) but simultaneously extracts through tuition cost-shifting, performance metrics that incentivize selectivity over access, and reliance on contingent labor that prevents genuine student support. Can exit state control through privatization but faces reputational and regulatory costs. Mixed beneficiary-victim status: genuinely serves students but increasingly treats enrollment as revenue extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Elite Research University",
+      "comment": "PERSPECTIVE 3: ELITE RESEARCH UNIVERSITY (ROPE) \u2014 Experiences enrollment access constraint as pure coordination problem: they solve it (accept qualified students, provide scholarships) while capturing benefits (prestige, tuition revenue, research funding tied to enrolled cohorts). Low perceived extraction because benefits flow toward them; they see themselves as solving the access problem, not creating barriers. High arbitrage capability: can shift between enrollment models, funding sources, international student ratios without structural consequence."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Student Debt Reform Coalition",
+      "comment": "PERSPECTIVE 4: STUDENT DEBT REFORM COALITION (SCAFFOLD) \u2014 Organized advocates (NAACP, CUNY students, progressive legislators) see enrollment access as a solvable coordination problem with a sunset: debt cancellation, tuition-free public higher education, and income-based repayment create alternative pathways that bypass the extraction mechanism. Temporary suppression is tolerated because the coalition has agency and perceives an exit date through policy change. Sunset logic: if federal policy shifts toward free public higher education (generational timescale), the debt-based extraction mechanism loses force."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Standardized Testing Apparatus",
+      "comment": "PERSPECTIVE 5: STANDARDIZED TESTING APPARATUS (PITON) \u2014 SAT/ACT testing creates performative gatekeeping function with degraded utility: test scores correlate primarily with family income and test prep access, not with college success. The apparatus persists through institutional inertia (universities anchor hiring/admissions on scores; test companies lobby; guidance counselors default to it) despite low functional validity. Theater ratio high because the ritual of taking standardized tests feels consequential but actually measures wealth proxy, not academic readiness. Many institutions have moved test-optional, indicating recognition that the function has atrophied."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational scope, some selectivity in higher education access appears immutable: capacity constraints (universities have finite seats), quality variation (not all institutions are equivalent), and effort requirements (completing degrees requires sustained work). This view naturalizes the current constraint as an inherent property of educational scarcity. However, structural data contradicts the mountain classification: the specific barriers (cost, information asymmetry, standardized test gatekeeping) are institutional choices, not natural laws. The constraint is contingent, not immutable \u2014 revealed as false summit by the tangled rope classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cost_barrier_vs_selectivity_mechanism",
+      "question": "Does the enrollment constraint operate primarily through cost barriers or through selectivity gatekeeping?",
+      "resolution_mechanism": "Comparative analysis: tuition-free public higher education systems (Germany, Scandinavia) with equivalent selectivity vs cost-gated systems; measurement of enrollment patterns when cost barriers are removed but selectivity maintained",
+      "impact": "If cost-primary: constraint is extractive (snare). If selectivity-primary: constraint is coordination (rope/mountain). Current mixed operation suggests tangled rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether cost or selectivity is the dominant barrier mechanism"
+    },
+    {
+      "id": "information_asymmetry_persistence",
+      "question": "Do information asymmetries (first-generation students lack application knowledge) persist or dissolve with improved counseling and transparency?",
+      "resolution_mechanism": "Measurement of enrollment rates for first-generation students before/after intervention programs (GEAR UP, College Advising Corps); statistical control for family income",
+      "impact": "If persistent after information provision: barrier is structural (cost + selection). If dissolves: barrier is information-asymmetry-driven and solvable through transparency.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether information asymmetries are the binding constraint"
+    },
+    {
+      "id": "debt_mechanism_sustainability",
+      "question": "Is student debt a necessary financing mechanism or a revenue extraction layer that could be replaced by public funding?",
+      "resolution_mechanism": "International comparison of higher education funding models; historical analysis of U.S. shift from public to private cost-bearing (1970s-present); fiscal modeling of tuition-free scenarios",
+      "impact": "If necessary: constraint reflects real resource scarcity (mountain/rope). If replaceable: current debt mechanism is institutional choice enabling extraction (snare/tangled rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether student debt financing is structurally necessary"
+    },
+    {
+      "id": "identity_lock_in_meritocratic_framing",
+      "question": "Do low-income and first-generation students internalize the 'not college material' framing, making exit psychologically impossible despite structural mobility?",
+      "resolution_mechanism": "Longitudinal psychometric study tracking self-efficacy beliefs, educational aspirations, and internalized stigma among control vs treatment groups (enhanced support/visibility of pathways)",
+      "impact": "If identity-locked: suppression mechanism is partially internalized; constraint persists even after cost barriers fall. If not identity-locked: suppression is purely structural (cost + gatekeeping).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether exclusion is internalized as identity or experienced as external barrier"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Higher education enrollment access operates as a mixed coordination-extraction mechanism spanning 50+ years (1970s-present). Universities coordinate access to credential and social mobility (genuine function) while simultaneously extracting through tuition cost-shifting, selectivity gatekeeping, and debt-financed financing. The constraint exhibits all six DR types because different agents experience fundamentally different structural relationships to it: low-income students experience it as immutable extraction (snare); regional public universities experience it as mixed coordination-extraction with institutional incentives misaligned (tangled rope); elite institutions experience it as pure coordination (rope); organized advocates experience it as a temporary problem with policy solutions (scaffold); standardized testing sees itself as degraded gatekeeping ritual (piton); and the analytical observer risks naturalizing institutional barriers as immutable educational scarcity (false mountain). The extractiveness has risen from 0.35 to 0.58 over 50 years, driven by cost-shifting from public to students (rising tuition, declining state funding) and increasing role of student debt as a financing mechanism. Theater ratio rising (0.40 to 0.55) reflects growing performative elements: standardized tests, rankings-driven selectivity, and credentialing inflation that decouples from labor market needs.",
+    "key_agents": [
+      "Low-income students: Primary victims (powerless/trapped) \u2014 structurally excluded or debt-loaded; no exit options",
+      "First-generation applicants: Primary victims (powerless/identity_locked) \u2014 face information asymmetries, may internalize exclusion as personal inadequacy",
+      "Regional public universities: Mixed status (moderate/constrained) \u2014 genuinely provide access but increasingly incentivized toward selectivity and revenue extraction",
+      "Elite research universities: Primary beneficiaries (institutional/arbitrage) \u2014 capture prestige and funding through selective enrollment; experience constraint as coordination",
+      "Student debt processors (lenders, servicers): Secondary beneficiaries (institutional/arbitrage) \u2014 extract through debt servicing fees, interest, and loan origination",
+      "Credential gatekeepers (employers, professional licensing): Beneficiaries (institutional/arbitrage) \u2014 benefit from degree scarcity signaling and exclusivity maintenance",
+      "Student debt reform coalition: Organized agents (organized/mobile) \u2014 see sunset through policy change; building alternative pathways (debt cancellation, free public higher ed)",
+      "Standardized testing industry: Institutional (institutional/arbitrage) \u2014 maintains gatekeeping function despite degraded validity; beneficiary from enrollment filtering"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, rising over interval. The constraint exhibits asymmetric extraction: low-income students bear costs (tuition, debt, opportunity cost) while elite institutions and debt processors capture benefits (tuition revenue, prestige, interest revenue). The value reflects that extraction is substantial but not total \u2014 genuine access exists through debt financing (extractive but functional), and some scholarship funding creates mobility paths. Rising trajectory (0.35 \u2192 0.58) reflects 50-year cost-shift from public to students via declining state support and rising tuition. Suppression (0.62): High. Multiple barriers operate simultaneously: cost barriers (tuition + living expenses), information asymmetries (first-generation students lack application knowledge), geographic barriers (unequal secondary school quality by region/income), and potentially internalized identity barriers ('not college material'). Suppression is not total because some pathways exist (community college transfers, second-chance admissions), but barriers are significant. Theater ratio (0.55): Moderate-high and rising (0.40 \u2192 0.55). The constraint has increasingly performative elements: standardized testing correlates with family income more than college success; university rankings drive selectivity that doesn't correlate with learning outcomes; credential inflation where bachelor's degree is now baseline despite unchanged job skill requirements. Core coordination function (access to higher education, workforce development) remains genuine, but theater has grown as selectivity and branding have become institutional priorities.",
+    "perspectival_gap": "The perspectival gap is extreme and reveals the constraint's hybrid nature. Low-income students experience immutable extraction (snare) \u2014 barriers feel absolute from inside trapped position. Regional public universities experience genuine mixed function (tangled rope) \u2014 they provide access while simultaneously being incentivized toward cost-shifting and selectivity that reduces access. Elite institutions experience pure coordination (rope) \u2014 they solve 'how to select and educate the best students' while capturing all the benefits of that solution. Open-science coalition of advocates experiences solvable temporary problem (scaffold) \u2014 policy can redirect funding, cancel debt, and create tuition-free pathways. The analytical observer at civilizational scale risks seeing natural scarcity (false mountain) \u2014 'only so many elite slots available' \u2014 that naturalizes institutional choices as inevitable. The standardized testing apparatus experiences itself as degraded ritual (piton) \u2014 admissions staff often admit it doesn't predict success but default to it due to inertia. No single perspective is wrong; the perspectival presheaf IS the full description of the constraint.",
+    "directionality_logic": "Directionality is determined by structural position: power level, exit options, and relationship to extraction flow. Low-income students have d \u2248 0.95 (full target, trapped, powerless) \u2192 maximum experienced extraction. First-generation applicants may have d \u2248 0.88-0.95 depending on whether barriers are purely structural (trapped) or partially internalized (identity_locked) \u2014 identity_locked agents can theoretically perceive barrier mutability but cannot exercise exit from within their framing. Regional public universities have d \u2248 0.50-0.55 (mixed: constrained exit, both beneficiary and victim status) \u2192 moderate experienced extraction. Elite institutions have d \u2248 0.10-0.20 (beneficiary, institutional power, arbitrage exit) \u2192 low or negative experienced extraction. Reform coalition has d \u2248 0.35-0.45 (organized agents, mobile exit through policy change) \u2192 moderate experienced extraction. The derived directionality explains why elite universities don't perceive the constraint as problematic (low d \u2192 low \u03c7) while low-income students perceive it as crushing (high d \u2192 high \u03c7) despite identical base extractiveness (0.58).",
+    "mandatrophy_analysis": "RESOLUTION: The constraint avoids mandatrophy by recognizing that all six types are legitimate perspectival readings. The apparent contradiction ('is this tangled rope or snare?') is resolved by observing that it IS both\u2014it is snare from the powerless agent's structural position and tangled rope from the institutional perspective. The false mountain perspective (analytical observer naturalizing barriers as scarcity) is flagged as pseudo-classification: the engine's false summit detector identifies it as unfounded because the structural data shows institutional choices (cost-shifting, selectivity incentives) rather than immutable scarcity. The coordination function (enabling higher education access) is genuine and persists across all perspectives. The extraction layer (cost-shifting, debt financing, credential gatekeeping) is also genuine and asymmetric. They coexist in a hybrid that is structurally snare for trapped agents, tangled rope for constrained institutional actors, and rope for beneficiaries. The mandatrophy is resolved by the indexical tuple: power + exit + time + scope fully determine what the constraint IS from each position."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "student_debt_accumulation",
+      "credential_inflation_wage_premium",
+      "labor_market_screening_signaling"
+    ],
+    "dual_formulation_note": "Higher education enrollment access decomposes into three structurally distinct constraints: (1) enrollment_access_coordination (\u03b5 \u2248 0.25, Rope) \u2014 the genuine function of providing educational access; (2) cost_barrier_extraction (\u03b5 \u2248 0.65, Snare) \u2014 tuition and financing mechanisms; (3) selectivity_gatekeeping (\u03b5 \u2248 0.40, Tangled Rope) \u2014 institutional ranking competition driving exclusivity. The unified story uses tangled_rope to capture the hybrid, but decomposition into three stories would allow separate analysis of each mechanism's extractiveness."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.52
+    }
+  ]
+}

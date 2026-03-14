@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "small_farm_market_access",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sfma"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Market Access Constraints for Small-Scale Farmers",
+    "topic_domain": "agricultural/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_distributors",
+      "retail_consolidation"
+    ],
+    "victims": [
+      "small_farm_operators",
+      "rural_economic_viability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Small Farm Operator",
+      "comment": "PERSPECTIVE 1: SMALL FARM OPERATOR (SNARE) \u2014 Trapped by infrastructure requirements, certification costs, and minimum order quantities that function as de facto barriers to direct market access. Cannot exit to alternative sales channels without catastrophic income loss. Experiences extraction as total: must sell through consolidators at predetermined prices or face crop spoilage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Farming Community",
+      "comment": "PERSPECTIVE 2: FARMING COMMUNITY (TANGLED ROPE) \u2014 Constrained by capital requirements and technical barriers but benefits from cooperative marketing structures, shared certification, and aggregation platforms. Some coordination function exists (bulk certification, shared cold storage) alongside asymmetric extraction (consolidators capture margin). Generational horizon captures intergenerational farm succession barriers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Consolidator-Distributor Network",
+      "comment": "PERSPECTIVE 3: CONSOLIDATOR-DISTRIBUTOR NETWORK (ROPE) \u2014 Benefits from coordination of supply (aggregating small producers into retail-ready volumes) and coordination of information (managing quality standards, food safety compliance). Experiences the constraint as enabling: without it, small-farm supplies would be fragmented. Net beneficiary with arbitrage options (can source from alternative regions)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Direct-to-Consumer and Cooperative Initiatives",
+      "comment": "PERSPECTIVE 4: DIRECT-TO-CONSUMER & COOPERATIVE INITIATIVES (SCAFFOLD) \u2014 Organized agents (farmers markets, CSA networks, producer cooperatives) see market fragmentation as a temporary problem with a sunset: digital platforms (local food aggregators, blockchain traceability, direct-order infrastructure) are building alternative sales pathways. Extraction is low because these initiatives have agency and visible exit paths. Generational horizon reflects that a full generation of farmers can exit via these platforms."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Agricultural Policy Apparatus",
+      "comment": "PERSPECTIVE 5: AGRICULTURAL POLICY APPARATUS (PITON) \u2014 Food safety regulations, grading standards, and commodity pricing frameworks persist through institutional inertia despite being partially obsolete. Regulatory theater (repeated audits, redundant certifications, compliance theater for small farms) is high while functional verification of actual safety is moderate. The policy system sees its own processes as degraded \u2014 maintained because alternatives haven't fully replaced them, not because they optimize outcomes."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some market consolidation is inherent to scale efficiency: moving food from millions of small producers to billions of consumers requires aggregation, standardization, and logistics. This perspective sees market consolidation as an immutable feature of industrial agriculture. However, structural data contradicts the mountain classification \u2014 the engine will compute this as a false summit, revealing that 'efficiency requires consolidation' naturalizes what is actually a policy-contingent institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "certification_barrier_necessity",
+      "question": "Are current food safety certification requirements genuinely necessary for small-farm market access, or have they become redundant theater?",
+      "resolution_mechanism": "Comparative analysis of food safety outcomes across certification levels; correlation between certification cost and actual risk reduction; international comparison of certification regimes",
+      "impact": "If genuinely necessary: suppression is justified coordination cost, reducing effective extraction. If redundant: certification is a barrier mechanism, increasing extractiveness from 0.58 to 0.72+.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether food safety certifications are functionally necessary or theater"
+    },
+    {
+      "id": "consolidation_efficiency_gains",
+      "question": "What proportion of supply-chain cost differences between direct sales and consolidated distribution represents genuine efficiency gains versus extractive consolidator margins?",
+      "resolution_mechanism": "Price data decomposition: storage costs, logistics, quality loss, administrative overhead, consolidator profit margin. Comparison with full-cost models for direct-to-consumer distribution.",
+      "impact": "If >70% efficiency: market consolidation is substantive coordination (Rope from consolidator perspective justified). If <50% efficiency: consolidation is primarily extractive (Snare from farm perspective confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Efficiency gains versus consolidator extraction in distribution"
+    },
+    {
+      "id": "direct_channel_scalability",
+      "question": "Can direct-to-consumer and cooperative channels scale to capture meaningful market share (>20% farm revenue) within a generation, or are they structurally limited to niche markets?",
+      "resolution_mechanism": "Growth trajectory analysis of CSA networks, farmers markets, producer cooperatives, digital aggregation platforms. Infrastructure requirements for 20% market penetration.",
+      "impact": "If scalable: scaffold classification and sunset logic are structural. If niche-limited: direct channels remain alternative to consolidation, not replacement \u2014 snare persists for majority of small farms.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scalability of direct-to-consumer and cooperative channels"
+    },
+    {
+      "id": "policy_intent_consolidation",
+      "question": "Do agricultural policies (certifications, grading standards, commodity subsidies) intentionally favor consolidation, or is consolidation-favorability an unintended side effect?",
+      "resolution_mechanism": "Policy design analysis: explicit vs implicit incentive structures; comparative case studies of consolidation-neutral policy regimes; stakeholder testimony on policy intent",
+      "impact": "If intentional: extractive architecture is engineered (high mandatrophy risk). If unintended: extractive outcome emerges from layered coordination purposes (lower mandatrophy risk).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether policy consolidation-favoring is intentional"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Market access constraints for small-scale farmers create a structural tension between the genuine need to aggregate distributed supply into retail-scale volumes and the asymmetric extraction of value that consolidation enables. Small farms face multiple interlocking barriers: certification costs that are fixed regardless of farm size (disproportionately heavy for small operators), minimum order quantities that exclude producers below a threshold volume, quality grading standards designed for industrial-scale homogeneity, and supply-chain infrastructure controlled by consolidators who set prices unilaterally. The constraint exhibits mixed coordination and extraction characteristics. Genuine coordination functions exist: consolidators do solve the problem of moving food from millions of small producers to billions of consumers. But this coordination function is entangled with asymmetric extraction: the beneficiary (consolidator) controls the essential infrastructure and can extract surplus through information asymmetry (farmers do not know alternative prices), switching costs (exiting consolidation networks is costly), and structural dependence (no viable alternative sales channels for most small farms). Theater content has increased as regulatory complexity has grown: food safety certifications are layered, sometimes redundant, and function partly as compliance theater rather than functional verification. Direct-to-consumer and cooperative alternatives are emerging but remain niche, unable to absorb the production of most small farms. The constraint is temporally dynamic: extractiveness has risen as consolidation has intensified, theater has increased as regulatory frameworks have accumulated.",
+    "key_agents": [
+      "Small Farm Operators: Primary victims (powerless/trapped) \u2014 face certification costs, minimum orders, and infrastructure barriers with no viable exit",
+      "Consolidator-Distributor Networks: Primary beneficiaries (institutional/arbitrage) \u2014 capture coordination margin and control essential infrastructure; can source from alternative regions if a supplier exits",
+      "Farming Communities: Secondary victim (moderate/constrained) \u2014 face capital barriers to equipment and certification but benefit from cooperative aggregation mechanisms",
+      "Direct-to-Consumer and Cooperative Initiatives: Organized agents (organized/mobile) \u2014 building alternative sales pathways with generational timeline for full substitution",
+      "Agricultural Policy Apparatus: Institutional actor (institutional/constrained) \u2014 maintains layered regulatory framework partly through institutional inertia; sees own processes as degraded",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing policy-contingent consolidation as inevitable efficiency requirement"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, rising over interval. The constraint extracts meaningful value from small farms through consolidator margin capture, but extraction is not total because some coordination value is genuine. The 20-year trend shows extractiveness rising from 0.35 to 0.58 as consolidation has intensified and as direct-to-consumer alternatives have failed to scale fast enough to provide structural pressure. Suppression (0.62): Moderate-high. Significant barriers include fixed-cost certifications (food safety compliance, organic certification, quality grading), capital requirements for equipment that meets consolidator specifications, and information asymmetry (farmers cannot easily compare consolidator prices across regions). Exit is not impossible (some farms do establish direct sales) but carries substantial cost \u2014 lost consolidator volumes, lost crop insurance through consolidator networks, social costs of leaving farming community relationships. Theater ratio (0.48): Moderate. Certification regimes have accumulated layers of redundancy (USDA grading, state-level certifications, third-party food safety audits, retailer-specific requirements). The functional proportion is genuine: baseline food safety verification is necessary. But the layer of repeated audits, documentation, and compliance theater is non-functional for small farms specifically \u2014 consolidators can afford centralized compliance, small farms cannot. Theater has risen from 0.28 to 0.48 over the interval as regulatory complexity has increased without corresponding functional increase in food safety outcomes.",
+    "directionality_logic": "Small farm operators (powerless/trapped) derive high d \u2248 0.92 from their structural position: they are primary victims, have no exit options, and face maximum suppression. The sigmoid maps this to f(d) \u2248 1.35 \u2014 experienced extractiveness is amplified. Consolidator-distributors (institutional/arbitrage) derive low d \u2248 0.08 from beneficiary status and arbitrage exit options \u2014 they can source from alternative regions if a supplier exits. The sigmoid maps to f(d) \u2248 -0.11 \u2014 experienced extractiveness is reversed (they experience net benefit). Farming communities (moderate/constrained) derive mid-range d \u2248 0.65 from being partial victims with constrained (not trapped) exit. The sigmoid maps to f(d) \u2248 1.00 \u2014 experienced extraction is neutral before scope scaling. Scope modifier \u03c3(regional=0.9) then scales chi: \u03c7_farming = 0.58 \u00d7 1.00 \u00d7 0.9 \u2248 0.52. The regional scope (not national) reflects that market consolidation operates at regional aggregation points, not purely at national commodity levels.",
+    "perspectival_gap": "This constraint demonstrates strong perspectival disagreement. The small farm operator sees a snare: no exit, no benefit, pure extraction. The consolidator sees a rope: they are solving a genuine coordination problem (aggregating supply). The farming community sees tangled rope: mixed coordination benefit (aggregation platforms that enable cooperative marketing) and extraction (consolidator margin capture). The scaffold perspective (direct-to-consumer initiatives) sees a temporary problem with visible sunset: farmers markets, CSA networks, and digital platforms are building alternative pathways. The piton perspective sees a degraded regulatory apparatus maintained through inertia. The analytical observer risks seeing an inevitable law of efficiency (mountain) but structural data reveals this as naturalization: consolidation-favoring policies are contingent choices, not physical laws. The perspectival gap is wide precisely because the constraint genuinely contains both coordination and extraction \u2014 it is not a false snare or a hidden rope. The tangled rope classification resolves the gap by acknowledging that the constraint simultaneously coordinates supply and extracts from small producers.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The mandatrophy is resolved by recognizing that small-farm market access contains both genuine coordination (aggregation solves a real supply problem) and genuine asymmetric extraction (consolidators capture surplus through infrastructure control and information asymmetry). The extracted value is not merely the cost of coordination \u2014 consolidators earn economic rent above their functional contribution. The snare perspective (small farm's lived experience) is structurally valid: they are trapped. The rope perspective (consolidator's lived experience) is also structurally valid: they are solving a problem that would otherwise make small-farm sales impossible. The tangled rope classification prevents mislabeling this as either pure extraction (erasing genuine coordination value) or pure coordination (erasing genuine asymmetric extraction). The scaffold sunset clause is real: direct-to-consumer channels are growing, blockchain traceability is reducing information asymmetry, and aggregation platforms are lowering minimum order quantities. But the sunset is multi-generational (20-30 years), not immediate \u2014 most small farms remain trapped in consolidation during the transition. The piton perspective (regulatory theater) is real: food safety certification has accumulated redundant layers. Reducing theater (simplifying certification for small farms) would reduce suppression from 0.62 to ~0.40-0.45, shifting classification from snare toward constrained tangled rope for the powerless perspective."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "rural_economic_decline",
+      "agricultural_commodity_pricing",
+      "food_system_supply_chain_resilience"
+    ],
+    "dual_formulation_note": "Small-farm market access decomposes into two structurally distinct constraints: (1) certification and compliance barriers (\u03b5 \u2248 0.25, primarily regulatory theater with real but surmountable coordination costs \u2014 scaffold/piton), and (2) consolidator margin extraction enabled by infrastructure control and information asymmetry (\u03b5 \u2248 0.65, genuine asymmetric extraction \u2014 snare/tangled rope). This story weights the extraction component (0.58 average) because small farms experience the combined effect. Decomposition would require separate analysis of certification rationalization (policy lever: simplify for scale-adjusted compliance) versus consolidator margin reduction (policy lever: reduce switching costs through cooperative infrastructure investment). See network linkages for downstream constraint impacts on rural viability."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.68
+    }
+  ]
+}

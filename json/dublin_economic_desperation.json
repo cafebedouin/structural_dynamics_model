@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "dublin_economic_desperation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dublin"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Dublin Economic Desperation and Survival Extraction",
+    "topic_domain": "urban_economics/labor_exploitation",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "landlords",
+      "service_sector_employers",
+      "property_developers"
+    ],
+    "victims": [
+      "precarious_workers",
+      "low_income_residents",
+      "service_sector_employees"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Precarious Worker",
+      "comment": "PERSPECTIVE 1: PRECARIOUS WORKER (SNARE) \u2014 Structurally trapped by housing costs consuming 50-70% of income, forcing acceptance of exploitative wage terms. Relocation out of Dublin is blocked by geographic job concentration and lack of affordable alternatives. Cannot exit without destroying economic viability. Experiences maximum extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Mobile but Constrained Worker",
+      "comment": "PERSPECTIVE 2: MOBILE BUT CONSTRAINED WORKER (TANGLED ROPE) \u2014 Can physically relocate to secondary Irish cities or EU destinations, but faces significant costs: career interruption, social network dissolution, language/credential transfer friction. Constrained exit means accepting both housing extraction in Dublin and lower wages elsewhere. Mixed experience: some coordination (skill matching through job market), substantial extraction (forced cost arbitrage)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Multinational Employer",
+      "comment": "PERSPECTIVE 3: MULTINATIONAL EMPLOYER (ROPE) \u2014 Experiences Dublin desperation as coordination mechanism: geographic wage arbitrage allows cost-controlled operations, Dublin's international connectivity provides talent pool, housing crisis concentrates labor supply. High exit optionality (can relocate to Berlin, Austin, or Singapore); experiences constraint as coordination benefit with low personal extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Landlord-Property Investor",
+      "comment": "PERSPECTIVE 4: LANDLORD/PROPERTY INVESTOR (ROPE) \u2014 Pure beneficiary. Housing desperation is coordination mechanism for rent extraction. No enforcement cost \u2014 market mechanisms (desperation itself) enforce compliance. Zero suppression cost because desperation volunteers labor and compliance. Constraint appears as frictionless wealth transfer."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Union",
+      "comment": "PERSPECTIVE 5: LABOR UNION (TANGLED ROPE) \u2014 Organized but constrained. Can negotiate coordinated wage standards (coordination function: preventing race-to-bottom) but simultaneously blocked from addressing root extraction mechanism (housing supply). Union power proves partially illusory \u2014 wage gains are consumed by desperation-driven rent increases. Mixed: genuine coordination activity alongside ineffectual struggle against extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Housing Policy Framework",
+      "comment": "PERSPECTIVE 6: HOUSING POLICY FRAMEWORK (PITON) \u2014 Zoning restrictions, planning delays, and property tax design exist as vestigial mechanisms originally designed to protect residential neighborhoods and local control. The original functions (controlling sprawl, preserving green space) have atrophied while the extraction mechanisms persist. Theater ratio high: policy documents invoke liveability and community while constraining supply that would relieve desperation. Bureaucratic ritual maintains restrictions despite acknowledged housing crisis."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Naturalization Risk)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER \u2014 NATURALIZATION RISK (FALSE SUMMIT) \u2014 From civilizational/global scope, Dublin desperation can be naturalized as inevitable consequence of successful city attracting in-migration faster than housing supply can scale. 'Cities are expensive' becomes framed as natural law. However, the structural data reveals contingent policy choices (zoning, planning delays, property tax regime) that actively constrain supply. The mountain classification is a false summit \u2014 it naturalizes what is demonstrably a choice-dependent institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "housing_supply_elasticity_threshold",
+      "question": "What rate of housing supply growth would deactivate the desperation extraction mechanism?",
+      "resolution_mechanism": "Cross-country analysis: compare Dublin (restricted supply) to Vienna (regulated affordable stock), Singapore (public housing dominance), and US sunbelt (deregulated supply). Measure desperation-proxy metrics (rent-to-income, precarity indicators) against supply elasticity.",
+      "impact": "If threshold < 5% annual growth: desperation mechanism is structural (entrenchment). If threshold > 15%: desperation is policy-dependent (reversible). If 5-15%: mixed institutional and market factors.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Housing supply growth rate at which desperation extraction mechanism breaks"
+    },
+    {
+      "id": "multinational_concentration_counterfactual",
+      "question": "Would multinational wage levels remain competitive without Dublin geographic concentration and desperation-driven cost arbitrage?",
+      "resolution_mechanism": "Analysis of wage differentials between Dublin multinationals and EU peer firms in cities with lower desperation (Lisbon, Prague, Berlin). Control for productivity, skill level, and role scope.",
+      "impact": "If wages require desperation context: extraction is fundamental to business model sustainability. If wages are competitive independently: desperation accelerates profits but is not essential mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether multinationals depend on desperation for wage competitiveness"
+    },
+    {
+      "id": "policy_reform_reversibility",
+      "question": "Could rapid zoning reform and planning acceleration reverse the desperation mechanism within 10 years?",
+      "resolution_mechanism": "Pilot analysis of accelerated planning districts (if any emerge); comparison to historical precedents (Tokyo post-1960s regulatory liberalization, South Korea rapid zoning changes). Model supply response to policy shock.",
+      "impact": "If reversible within 10 years: piton classification is accurate \u2014 institutional inertia maintains constraint despite policy levers existing. If reversal requires 20+ years: desperation has locked in structural dependencies.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for desperation reversal through policy reform"
+    },
+    {
+      "id": "identity_locked_vs_constrained_worker_distinction",
+      "question": "For Dublin workers, is exit blockage primarily material (constrained) or identity-based (identity_locked to Dublin as career/social location)?",
+      "resolution_mechanism": "Comparative exit analysis: measure actual relocation rates post-layoff vs post-promotion. Survey ex-Dublin workers on reasons for departure. Identify whether non-relocated workers cite material barriers vs identity/relationship attachment.",
+      "impact": "If primarily material/constrained: housing reform directly addresses mechanism. If significantly identity_locked: workers carry Dublin lock even if material barriers removed \u2014 psychological entrenchment complicates policy solutions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether worker exit blockage is material or identity-based"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Dublin's economic desperation constraint emerges from a collision between success (tech sector concentration attracting global investment and talent) and institutional failure (housing supply cannot scale due to zoning restrictions, planning delays, and property tax regime designed for different purposes). The constraint operates as a snare from the perspective of trapped workers: housing costs consume 50-70% of precarious incomes, forcing acceptance of exploitative wages, below-market benefits, and degraded working conditions. Desperation itself becomes the enforcement mechanism \u2014 no coercion is required when housing costs exceed income unless workers accept precarious terms. This is extraction machinery that runs on human necessity rather than institutional force. The constraint exhibits high suppression (0.72) because exit routes are structurally blocked: geographic job concentration in Dublin (multinationals cluster for ecosystem effects), lack of affordable alternatives in secondary Irish cities, and EU relocation friction (language, credential transfer, social networks) create a trapped population. Theater ratio (0.58) reflects policy discourse that invokes housing crisis language while maintaining zoning/planning mechanisms that perpetuate scarcity. The institutional actors (landlords, employers, property developers) each experience the constraint as a coordination mechanism (Rope) with high personal benefit and low enforcement cost \u2014 desperation provides voluntary compliance at scale.",
+    "key_agents": [
+      "Precarious Workers: Primary victims (powerless/trapped) \u2014 service sector, gig workers, low-income earners forced into exploitative terms by housing desperation",
+      "Constrained Workers: Secondary victims (moderate/constrained) \u2014 skilled professionals with relocation capacity but face significant costs, partial exit available at high price",
+      "Landlords and Property Investors: Primary beneficiaries (institutional/arbitrage) \u2014 capture rent extraction powered by desperation; experience zero enforcement cost",
+      "Multinational Tech Employers: Secondary beneficiaries (institutional/arbitrage) \u2014 geographic wage arbitrage enabled by desperation; global exit optionality",
+      "Labor Unions: Organized but partially captured (organized/constrained) \u2014 can coordinate wages but blocked from addressing housing supply root cause",
+      "Housing Policy Framework: Institutional structure (institutional/arbitrage) \u2014 piton: zoning/planning mechanisms persist through inertia while extraction mechanisms remain active",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing policy-contingent desperation as inevitable city dynamics"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and rising. The metric captures income diversion to housing at rates that exceed coordination cost. Base value of 0.48 at interval start reflects Dublin's attractiveness providing some genuine benefit (job access, infrastructure, networks). Rising to 0.68 by interval end reflects acceleration of housing costs outpacing wage growth, rendering benefit increasingly illusory. Suppression (0.72): Very high. Exit barriers are structural (geographic job concentration, lack of secondary-city alternatives, EU relocation friction, social network costs). Desperation functions as self-enforcing suppression \u2014 no external coercion needed. Theater ratio (0.58): Moderate-high and rising. Policy documents invoke 'housing crisis' language and 'affordability targets' while maintaining zoning restrictions that prevent supply scaling. The policy theater grows as the gap widens between stated goals (affordable housing) and maintained mechanisms (constrained supply). Economic desperation is real; policy response is substantially performative.",
+    "perspectival_gap": "The snare classification is not universal. From the landlord/employer perspective, this is coordination (Rope) \u2014 geographic concentration solves matching problems, desperation provides voluntary compliance. From the trapped worker perspective, this is pure extraction (Snare) \u2014 no alternative, no benefit, only forced acceptance. The piton perspective on policy recognizes that housing supply constraints are maintained by vestigial institutional mechanisms (zoning designed for neighborhood control, planning delays designed for public consultation) that persist despite acknowledged crisis. Theater rises as policy documents invoke affordability while mechanisms remain unchanged. The analytical observer risks naturalizing this as 'inevitable city dynamics' (mountain) when it is demonstrably policy-contingent (can be reversed by zoning reform, planning acceleration, property tax redesign).",
+    "directionality_logic": "Directionality values (d) are derived from each agent's structural position relative to extraction flow. Trapped workers with no exit (trapped exit) are full targets: d \u2248 0.95, f(d) \u2248 1.42 (powerless agent maximum extraction). Landlords and employers with full arbitrage (arbitrage exit) are full beneficiaries: d \u2248 0.05, f(d) \u2248 -0.12 (institutional beneficiary). Constrained workers with high-cost exit (constrained exit) occupy middle ground: d \u2248 0.68, f(d) \u2248 1.00 (moderate power, facing extraction but with potential exit). The chi formula \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) produces: for trapped workers at national scope, \u03c7 \u2248 0.68 \u00d7 1.42 \u00d7 1.0 = 0.96 (near-total effective extraction); for landlords, \u03c7 \u2248 0.68 \u00d7 (-0.12) \u00d7 1.0 \u2248 -0.08 (negative extraction \u2014 pure benefit). The directionality derivation explains why the same structural constraint produces opposite experienced extractiveness across agent positions.",
+    "mandatrophy_analysis": "RESOLUTION: The constraint is correctly classified as snare from the primary target (trapped worker) perspective. The mandatrophy is resolved by recognizing that snare classification does not require all perspectives to see extraction as primary. The snare gate requires (a) victims to exist (yes \u2014 precarious workers), (b) base extractiveness \u2265 0.46 (yes \u2014 0.68), (c) suppression \u2265 0.60 (yes \u2014 0.72), and (d) effective extraction \u03c7 \u2265 0.66 for trapped agents (yes \u2014 0.96). The constraint simultaneously appears as rope from beneficiary perspectives (landlords, multinationals) \u2014 this is not a contradiction but a diagnostic feature: snares are experienced very differently by target and beneficiary. The high theater ratio (0.58) and rising trajectory suggest incipient pitonization \u2014 as policy response becomes performative while mechanisms persist, the constraint risks degrading into a maintained ritual rather than functional extraction. The false summit risk (mountain perspective) is real: 'Dublin is expensive because it's successful' naturalizes policy choices as natural laws."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "irish_housing_supply_restriction",
+      "multinational_geographic_clustering",
+      "precarious_labor_market_dynamics"
+    ],
+    "dual_formulation_note": "Dublin economic desperation is downstream of housing supply policy (zoning, planning) and upstream of precarious labor market dynamics. The housing supply constraint (piton: performative policy) feeds desperation extraction (snare: trapped workers), which in turn enables wage suppression in service and tech sectors. Decomposition: separate stories for housing policy as piton, labor extraction as snare, and multinational wage arbitrage as tangled rope with geographic locking."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ]
+}

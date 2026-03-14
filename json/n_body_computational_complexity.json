@@ -1,0 +1,152 @@
+{
+  "header": {
+    "constraint_id": "n_body_computational_complexity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nbody"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.03,
+    "theater_ratio": 0.12,
+    "claimed_type": "mountain",
+    "human_readable": "N-Body Computational Complexity",
+    "topic_domain": "physics/mathematics/computational_science",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Computational Agent Facing Brute Force",
+      "comment": "PERSPECTIVE 1: COMPUTATIONAL AGENT (MOUNTAIN) \u2014 Any system attempting to compute positions and forces for N particles with pairwise interactions faces an inherent O(N\u00b2) minimum cost. No escape: the constraint is a consequence of the combinatorial structure itself, not an institutional choice or policy decision. Scaling alternatives (Barnes-Hut approximation, FMM, tree codes) reduce the constant but do not change the fundamental limit for exact computation. Trapped at universal/civilizational timescale."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 2: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From the full structural view, N-body complexity is a consequence of the problem definition itself: pairwise interactions create a combinatorial explosion in degrees of freedom. This is not enforced by any agent or institution. It emerges from the logical/mathematical structure of many-particle systems. Resistance to this constraint (building exact solvers) consistently fails \u2014 not because enforcement is strong, but because the constraint is prior to any possible enforcement mechanism. No institution could change this without changing what 'N-body problem' means."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Organized Research Community",
+      "comment": "PERSPECTIVE 3: ORGANIZED RESEARCH COMMUNITY (MOUNTAIN) \u2014 Despite substantial resources (funding, talent, computational infrastructure), the community has not and cannot eliminate the O(N\u00b2) scaling for exact N-body computation. The community is organized and has options (approximate methods, parallel computing, hardware acceleration) but these are alternatives TO exact solution, not solutions of it. Even with mobile exit options, the mountain persists: it is not an external constraint the community faces, but a mathematical fact."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Computational Physics Institution",
+      "comment": "PERSPECTIVE 4: COMPUTATIONAL PHYSICS INSTITUTION (MOUNTAIN) \u2014 Despite institutional capacity (supercomputing centers, algorithm development labs, funding), the institution cannot change the fundamental O(N\u00b2) cost of exact pairwise computation. The institution benefits from approximate methods and algorithmic improvements, but arbitrage does not dissolve the constraint. The constraint is prior to institutional leverage."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "approximate_vs_exact_boundary",
+      "question": "Is the O(N\u00b2) constraint on exact pairwise computation equivalent to the problem definition, or could a future mathematical insight discover an alternative formulation?",
+      "resolution_mechanism": "Proof-theoretic analysis: does every formulation of the N-body problem with full pairwise interactions require O(N\u00b2) lower-bound queries? Mathematical literature on hardness lower bounds.",
+      "impact": "If proven inherent: mountain classification confirmed. If reformulation exists: constraint might be contingent on representation choice, downgrading to rope (algorithmic coordination problem).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether O(N\u00b2) is inherent or representation-dependent"
+    },
+    {
+      "id": "approximation_adequacy_domain_specificity",
+      "question": "For which physical/scientific domains are O(N log N) approximations (Barnes-Hut, FMM) genuinely adequate, and for which do they introduce unacceptable error?",
+      "resolution_mechanism": "Domain survey: compare results from exact vs approximate methods across astrophysics, molecular dynamics, plasma physics, and machine learning applications. Establish error thresholds per domain.",
+      "impact": "If broad adequacy: O(N\u00b2) is a mountain only for rare edge cases (high-precision regime). If narrow adequacy: many users are constrained by the O(N\u00b2) exact cost despite approximation availability. Classification remains mountain but with domain-specific severity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Domain-specific adequacy of approximation methods"
+    },
+    {
+      "id": "hardware_acceleration_scaling_limits",
+      "question": "Does GPU/specialized hardware acceleration provide a structural escape from O(N\u00b2) computational complexity, or merely a constant-factor speedup?",
+      "resolution_mechanism": "Benchmarking: measure wall-clock time for exact N-body solvers on GPU/TPU/specialized hardware as N grows. Does exponent decrease (true escape) or only coefficient?",
+      "impact": "If exponent unchanged (only coefficient speedup): hardware does not change the mountain. If exponent reduces: constraint may degrade to rope (engineering coordination problem rather than mathematical impossibility).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether hardware acceleration is constant-factor or exponent-reducing"
+    },
+    {
+      "id": "quantum_computation_relevance",
+      "question": "Can quantum algorithms (e.g., quantum simulation protocols) solve the general N-body problem faster than O(N\u00b2) classical computation?",
+      "resolution_mechanism": "Quantum algorithm literature review; complexity class analysis for N-body problem under quantum models (gate model, adiabatic, analog simulation).",
+      "impact": "If quantum approach is fundamentally faster: the classical mountain dissolves when quantum hardware becomes practical. Constraint then becomes temporally contingent (mountain now, rope in post-quantum future).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether quantum algorithms provide fundamental speedup for N-body computation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.18
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The N-body computational complexity constraint is a natural law of mathematical/computational structure. Given N particles with pairwise interactions (gravitational, electrostatic, or general force), computing exact positions and forces requires evaluating O(N\u00b2) pairwise interactions. This constraint arises not from institutional choice, policy enforcement, or agent coordination failure, but from the combinatorial structure of the problem itself. Every particle must interact with every other particle; there are N(N-1)/2 \u2248 N\u00b2 pairs. No algorithm can reduce this count without making approximations. The constraint is universal across all computational models (classical, digital, analog) except quantum simulation protocols, where speedup remains theoretical. The accessibility collapse (0.92) reflects that every agent attempting N-body computation immediately encounters this limit; the resistance (0.08) reflects that despite centuries of effort, no mathematical breakthrough has changed the fundamental scaling. Theater ratio (0.12) is low: the constraint has minimal performative content. Claims of 'solving' N-body faster than O(N\u00b2) are quickly falsified by implementation.",
+    "key_agents": [
+      "Computational Agent: Any system (person, algorithm, hardware) attempting exact N-body solution \u2014 faces the universal O(N\u00b2) cost",
+      "Research Community: Organized but cannot escape the constraint \u2014 approximation and hardware acceleration are alternatives, not solutions",
+      "Institutional Supercomputing: Has arbitrage options (approximation, parallelization) but cannot eliminate the constraint",
+      "Mathematical/Physical Theory: Defines the problem; the constraint is prior to any institution or agent"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Minimal, reflecting that this is a constraint of problem structure, not agent extraction. The O(N\u00b2) cost is not extracted by anyone \u2014 it is intrinsic to the computation. Suppression (0.03): Near-zero, reflecting that there is no coercive mechanism preventing alternatives (approximation, reduced dimensionality, problem reformulation). Agents are free to use approximate methods. Suppression is low because the constraint operates through mathematical inevitability, not enforcement. Theater ratio (0.12): Low, reflecting that the constraint's structure is transparent. Measurements show stable theater ratio over time because the mathematical truth of O(N\u00b2) scaling does not depend on how it is presented or performed. Claimed type (mountain) requires: emerges_naturally = true (yes: from problem definition), accessibility_collapse \u2265 0.85 (0.92: every computational agent encounters this), resistance \u2264 0.15 (0.08: sustained effort has not overcome it). All gates pass.",
+    "perspectival_gap": "All four perspectives classify as mountain because the constraint is structurally invariant: mathematical truths do not change based on observer position, time horizon, or exit options. The powerless agent, organized community, analytical observer, and institutional actor all face the same O(N\u00b2) reality. There is no perspectival gap because there is nothing contingent to perceive differently. This is a diagnostic signature of a true mountain: uniformity across all indices.",
+    "directionality_logic": "Standard directionality mechanics do not apply to this constraint because it has no beneficiary or victim \u2014 no agent extracts value from the O(N\u00b2) cost, and no agent bears it as asymmetric burden. The cost is universal and symmetric. Every agent attempting exact N-body computation encounters the same constraint. Directionality d is undefined (or d=0.5 by convention: cost and benefit are symmetric nulls). The constraint is prior to beneficiary/victim structure; it is a fact about the problem, not about agents.",
+    "mandatrophy_analysis": "This constraint demonstrates that the mandatrophy resolution is simple for mountains: there is no mandatrophy to resolve. The constraint does not masquerade as coordination (rope) or hide extraction (snare) \u2014 it is transparently a mathematical limit. No perspective attempts to frame the O(N\u00b2) cost as beneficial coordination or hidden extraction. All perspectives acknowledge the constraint as inherent and unchangeable."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "epistemic_commons_contamination",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ecc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Epistemic Commons Contamination",
+    "topic_domain": "epistemology/scientific_governance/information_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "false_claim_originators",
+      "misinformation_amplifiers",
+      "attention_capture_actors"
+    ],
+    "victims": [
+      "epistemic_commons_integrity",
+      "truth_seeking_agents",
+      "long_term_knowledge_accumulation"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Epistemic Commons (Powerless/Trapped)",
+      "comment": "PERSPECTIVE 1: EPISTEMIC COMMONS AS ABSTRACT COLLECTIVE (SNARE) \u2014 The commons has no agents, no voice, no exit option. Bears full cost of contamination through degraded information environment. Cannot be restored once sufficient noise is introduced. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Truth-Seeking Agent (Moderate/Constrained)",
+      "comment": "PERSPECTIVE 2: TRUTH-SEEKING AGENT (SNARE) \u2014 Must navigate an epistemic environment where false claims have equal or greater visibility than true ones. Exit options are extremely costly: moving to isolated information niches (constrained, not trapped, due to technical feasibility) but this costs access to broader knowledge ecosystem. High extraction in the form of attention tax and epistemic labor overhead."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Institutional Truth-Keeper (Powerful/Mobile)",
+      "comment": "PERSPECTIVE 3: INSTITUTIONAL TRUTH-KEEPER (TANGLED ROPE) \u2014 Peer review systems, scientific societies, epistemic gatekeepers benefit from their monopoly on credibility-assignment (coordination function: they coordinate which claims are trustworthy). But this monopoly is rent-seeking: they also extract through exclusion and barrier-raising. Mobile exit option because resources and alternative institutions exist, but powerful actors prefer status quo."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The False Claim Originator (Institutional/Arbitrage)",
+      "comment": "PERSPECTIVE 4: FALSE CLAIM ORIGINATOR / MISINFORMATION AMPLIFIER (ROPE) \u2014 Primary beneficiary experiencing the constraint as pure coordination: the commons provides vehicles for amplification with minimal cost. Arbitrage option means they can exit this epistemic space entirely or leverage contamination in another domain. Net beneficiary \u2014 constraint channels resources and attention toward them."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Fact-Checking / Verification Coalition (Organized/Constrained)",
+      "comment": "PERSPECTIVE 5: FACT-CHECKING COALITION (SCAFFOLD) \u2014 Organized agents (fact-checkers, verification platforms, media literacy initiatives, decentralized verification systems) view contamination as a temporary coordination failure with a sunset: distributed verification, cryptographic proofs, and epistemic reputation systems are building alternative pathways that reduce contamination through structural robustness. Constrained exit option because they depend on platform infrastructure and institutional partnerships, but see a path forward."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Editorial / Journalistic Institution (Institutional/Arbitrage)",
+      "comment": "PERSPECTIVE 6: EDITORIAL INSTITUTION (PITON) \u2014 Traditional journalism and editorial review maintain credibility-assignment rituals (byline, masthead, editorial oversight) but these are largely performative in a world where misinformation spreads faster than corrections. The institution persists through inertia and brand equity despite reduced functional capacity to prevent contamination. Sees its own gatekeeping as degraded but cannot abandon it without losing status."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Analytical/Analytical)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational/universal perspective, contamination is partly coordination problem (mechanisms for knowledge sharing inevitably create channels for misinformation) and partly extraction (asymmetric incentives favor contamination over correction). The constraint exhibits both genuine coordination function and asymmetric extraction, with the balance shifting over time as information technology changes the geometry of the problem."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intentionality_threshold",
+      "question": "What distinguishes honest error from extractive misinformation? Is intent or outcome the relevant measure?",
+      "resolution_mechanism": "Structural analysis of claim-maker incentives and correction-responsiveness. Examine whether false claims persist despite correction feedback.",
+      "impact": "If outcome-based: honest errors count as contamination (raises epistemic suppression). If intent-based: only willful misinformation counts (lowers suppression estimate).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether contamination requires intentional deception or includes honest error"
+    },
+    {
+      "id": "correction_efficacy",
+      "question": "Do corrections actually reduce contamination or does the 'backfire effect' amplify false beliefs through repetition?",
+      "resolution_mechanism": "Longitudinal tracking of belief persistence after correction; comparison of contamination levels in communities with active fact-checking vs passive acceptance.",
+      "impact": "If corrections work: suppression is lower than measured (agents have agency to exit contamination). If backfire dominates: suppression is higher (correction mechanisms amplify the problem).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether corrections reduce or amplify contamination"
+    },
+    {
+      "id": "architectural_inevitability",
+      "question": "Is epistemic commons contamination an inherent property of information networks or a contingent feature of current platform design?",
+      "resolution_mechanism": "Comparison of contamination rates across different information architectures: chronological feeds vs curator-selected, decentralized vs centralized, cryptographically verified vs reputation-based.",
+      "impact": "If inevitable: natural law component (mountain perspective more justified). If contingent: pure extraction through design choice (snare classification more appropriate).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether contamination is architecturally inevitable or design-contingent"
+    },
+    {
+      "id": "scale_dependent_mechanism",
+      "question": "Does contamination operate through the same mechanism at interpersonal, institutional, and global scales or do different mechanisms emerge at different scales?",
+      "resolution_mechanism": "Cross-scale comparison of contamination rates, correction mechanisms, and agent behavior; identify whether scaling laws are linear or nonlinear.",
+      "impact": "If mechanisms diverge at scale: require separate constraint stories per scale (\u03b5-invariance principle). If uniform: single story adequate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether contamination mechanism is scale-invariant"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Epistemic commons contamination describes the structural constraint imposed by the asymmetric incentives and architectural properties of information systems that make false claims easier to propagate, amplify, and retain than true ones. This constraint operates at the intersection of epistemology, institutional governance, and information technology. It exhibits properties of both genuine coordination (any system for sharing knowledge must solve routing, filtering, and attribution problems) and extractive exploitation (actors benefit from contaminating the commons while bearing minimal cost of the degradation they cause). The constraint's extractiveness has increased from 0.35 to 0.58 over the measurement interval as information technologies have enabled faster propagation and lower origination costs for false claims. The theater ratio has similarly increased from 0.48 to 0.64, reflecting the rise of performative credibility-assignment mechanisms (fact-checking rituals, content moderation theater, algorithmic curation displays) that claim to solve the contamination problem while primarily managing its visibility rather than its underlying structure.",
+    "key_agents": [
+      "Epistemic Commons: Primary victim (powerless/trapped) \u2014 abstract collective good; bears full cost of contamination with no voice or exit option",
+      "Truth-Seeking Agents: Primary victims (moderate/constrained) \u2014 face increased epistemic labor and attention taxation; can exit but at high cost (informational isolation)",
+      "False Claim Originators / Misinformation Amplifiers: Primary beneficiaries (institutional/arbitrage) \u2014 capture attention, funding, and credibility through contamination; can exit this epistemic space entirely",
+      "Institutional Truth-Keepers (Peer Review, Scientific Societies): Secondary beneficiaries (powerful/mobile) \u2014 maintain monopoly on credibility-assignment; benefit from gatekeeping function but could exit through institutional reform",
+      "Editorial / Journalistic Institutions: Secondary actors (institutional/arbitrage) \u2014 maintain performative credibility-assignment through brand and byline; see own gatekeeping as degraded (piton perspective)",
+      "Fact-Checking / Verification Coalition: Organized agents (organized/constrained) \u2014 building alternative verification pathways; view contamination as temporary problem with sunset",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees both genuine coordination problem and extractive asymmetry"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint exhibits significant extraction because false claims originate at lower cost, spread faster, and require more labor to correct than true claims to establish. Originators capture attention benefits while bearing minimal correction cost. But extractiveness is not extreme (0.70+) because some coordination function exists: information sharing mechanisms do serve truth-seeking agents, and corrections can reduce contamination. The measurable trajectory from 0.35 to 0.58 reflects technological acceleration (algorithmic amplification, social media propagation) that has made the extraction mechanism more efficient without fundamentally changing its structure. Suppression (0.68): High. Barriers to clean epistemic commons include: (1) architectural \u2014 algorithmic prioritization of engagement over accuracy, (2) cognitive \u2014 humans process misinformation through confirmatory heuristics, (3) institutional \u2014 fact-checking and peer review are expensive and slow, (4) incentive \u2014 spreading false claims is cheaper than establishing truth. Agents can technically exit (constrained rather than trapped) through information isolation or epistemic niche-seeking, but this carries severe cost (lost access to broader knowledge ecosystem). Theater ratio (0.64): High-moderate. Fact-checking infrastructure, content moderation systems, and journalistic gatekeeping are substantially performative: they manage the visibility and perceived credibility of contamination without addressing the underlying incentive structures that produce it. As contamination has increased, the performative aspects (corrections that amplify original claims, moderation that increases conspiratorial salience) have become more visible.",
+    "perspectival_gap": "The gap between beneficiary and victim perspectives is extreme. Misinformation amplifiers see rope (low-friction coordination mechanism for their goals). Truth-seeking agents see snare (high-friction epistemic environment they cannot escape without extreme cost). Institutional actors see tangled rope or piton depending on their relationship to gatekeeping. The gap reveals that the constraint's classification depends entirely on structural position \u2014 same mechanism, radically different experienced extractiveness.",
+    "directionality_logic": "False claim originators: beneficiary status + arbitrage exit \u2192 d \u2248 0.10 \u2192 low chi experienced. Truth-seeking agents: victim status + constrained exit \u2192 d \u2248 0.75 \u2192 high chi experienced. Institutional truth-keepers: complex positioning \u2014 beneficiary through monopoly but also partly responsible for enforcing suppression \u2192 d \u2248 0.45-0.55 \u2192 moderate chi. The pipeline computes these directionally and applies scope modifiers: global scope amplifies extraction visibility (\u03c3=1.2), making the chi asymmetry more apparent.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: Epistemic commons contamination demonstrates why pure 'deplatforming extraction' framing fails. The constraint is genuinely a coordination problem (information must flow) AND an extraction mechanism (incentives asymmetrically favor contamination). Attempting to classify it as pure extraction (snare) ignores the coordination function that makes the commons valuable. Attempting to classify it as pure coordination (rope) ignores the asymmetric extraction that degrades the commons. The tangled rope classification captures both: there is a real coordination function (knowledge-sharing) that carries significant value, AND there is asymmetric extraction (originators benefit more than victims pay in the short term). The constraint cannot be resolved by eliminating information flow (eliminating rope function) \u2014 it must be resolved by restructuring incentives so that truth-establishment is asymmetrically rewarded and false-claim amplification bears asymmetric cost. This is what the fact-checking coalition (scaffold perspective) and cryptographic verification systems are attempting: not to eliminate information sharing, but to invert the extraction asymmetry so that truth costs less to establish than falsehood costs to originate."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_amplification_bias",
+      "scientific_replicability_crisis",
+      "institutional_credibility_collapse",
+      "attention_capture_extraction"
+    ],
+    "dual_formulation_note": "Epistemic commons contamination is the upstream constraint that enables and is enabled by specific domain-level contamination mechanisms (scientific replication crisis, institutional credibility collapse, algorithmic bias). Each downstream constraint has its own extractiveness values reflecting domain-specific structural features. This story models the general coordination-extraction hybrid; downstream stories model how contamination manifests in specific epistemic domains."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.48
+    }
+  ]
+}

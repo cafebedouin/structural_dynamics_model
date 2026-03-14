@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "technology_deployment_velocity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tdv"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Technology Deployment Velocity Constraint",
+    "topic_domain": "technology/organizational/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "technology_vendors",
+      "capital_holders",
+      "incumbent_firms"
+    ],
+    "victims": [
+      "labor_force",
+      "displaced_workers",
+      "regulatory_compliance_capacity",
+      "safety_margins"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Displaced Worker",
+      "comment": "PERSPECTIVE 1: DISPLACED WORKER (SNARE) \u2014 Faces rapid skill obsolescence without retraining support; geographic and economic barriers to exit; identity often fused with previous occupation. Bears extraction of job security and wage stability with minimal coordination benefit. No alternative paths visible within biographical timeframe."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Regulatory Agency",
+      "comment": "PERSPECTIVE 2: REGULATORY AGENCY (TANGLED ROPE) \u2014 Coordinates legitimate public safety oversight (airport automation, medical device deployment) but faces pressure to accelerate approval timelines. Extraction: capacity underinvestment forces agencies to rubber-stamp deployments. Coordination: genuine need to integrate new technologies into frameworks. High suppression through political pressure and resource constraints."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Technology Vendor",
+      "comment": "PERSPECTIVE 3: TECHNOLOGY VENDOR (ROPE) \u2014 Experiences deployment velocity as pure coordination: bringing products to market efficiently solves collective action problems of technology adoption. First-mover advantage and network effects create arbitrage opportunities. Minimal perceived extraction \u2014 the constraint aligns vendor incentives with market participation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Labor Union",
+      "comment": "PERSPECTIVE 4: LABOR UNION (TANGLED ROPE) \u2014 Organized actors negotiate transition terms (retraining, wage floors, gradual deployment) but remain constrained by global competitive dynamics. Both coordinate workforce transition AND extract concessions from employers. Have agency to slow deployment through collective action, but exit is constrained by capital mobility."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Safety Standard",
+      "comment": "PERSPECTIVE 5: LEGACY SAFETY STANDARD (PITON) \u2014 Historical safety protocols and testing frameworks persist despite rapid obsolescence. Theater ratio reflects that compliance documentation (safety certifications, testing reports) becomes largely performative when deployment cycles outpace verification. The standard persists through inertia and liability protection rather than functional verification."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Inherent Tension View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 Sees technology deployment velocity as reflecting an immutable tension: the innovation speed of technology development versus the slower timescales of human adaptation, social integration, and institutional adjustment. Risks naturalizing what may be contingent economic structures (venture capital, quarterly earnings pressure) as inherent constraints."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "safety_margin_degradation_mechanism",
+      "question": "Is the reduction in safety margins driven by genuine technological complexity outpacing human capacity, or by economic incentive structures that ignore externalized risk?",
+      "resolution_mechanism": "Comparative analysis of deployment timelines in regulated vs unregulated domains; measurement of incident rates correlated with deployment velocity; post-incident analysis of whether failures were detectable with adequate testing budgets",
+      "impact": "If complexity-driven: mountain or rope classification. If incentive-driven: snare or tangled rope confirmed. Critical for distinguishing inherent constraints from extractive institutional arrangements.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether safety margin reduction is driven by technical complexity or economic incentives"
+    },
+    {
+      "id": "retraining_effectiveness_threshold",
+      "question": "What retraining investment level makes worker transition viable within biographical timescales, and what proportion of displaced workers actually achieve equivalent wage replacement?",
+      "resolution_mechanism": "Longitudinal tracking of displaced workers post-retraining; comparison of wage trajectories with and without intervention; measurement of actual vs promised reskilling outcomes",
+      "impact": "If < 30% achieve equivalent wages: constraint is primarily snare (exit is illusory). If > 70%: constraint shifts toward tangled rope with functioning coordination component.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether retraining enables viable worker transition"
+    },
+    {
+      "id": "competitive_pressure_inevitability",
+      "question": "Is the pressure to accelerate deployment globally unavoidable competition (all firms must adopt or fail), or is it maintained by concentrated capital and venture funding models?",
+      "resolution_mechanism": "Analysis of alternative governance models: cooperative deployment timelines, stakeholder-governed technology adoption, regulatory-paced innovation in peer economies",
+      "impact": "If unavoidable: constraint approaches mountain; transcending requires fundamental economic restructuring. If model-dependent: constraint is tangled rope amenable to governance change.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether deployment velocity pressure is inherent to competition or model-dependent"
+    },
+    {
+      "id": "identity_lock_mechanism_workers",
+      "question": "Is worker resistance to rapid technological displacement primarily driven by material concerns (job loss, income) or by identity fusion with their craft/profession?",
+      "resolution_mechanism": "Qualitative analysis of worker narratives; measurement of retraining acceptance rates when guaranteed income replacement is offered; behavioral tracking post-displacement",
+      "impact": "If primarily identity-locked: exit options should be classified as identity_locked rather than trapped; shifts perspectival classification and reveals cognitive barriers alongside material barriers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether worker resistance involves identity fusion alongside material concerns"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Technology deployment velocity represents a structural constraint where the economic incentives driving rapid technology adoption create asymmetric extraction from workers and regulatory systems while benefiting technology vendors and capital holders. The constraint exhibits a genuine coordination function (enabling technology integration into economic and social systems) alongside asymmetric extraction (accelerated timelines bypass adequate safety testing, worker transition support, and institutional adaptation). The extractiveness has risen from 0.28 to 0.52 over the interval as deployment cycles have accelerated (Moore's Law, mobile device release cycles, cloud infrastructure updates) while human and institutional adaptation timescales remain relatively fixed. The theater ratio rising from 0.32 to 0.58 reflects that safety certifications, regulatory reviews, and worker retraining programs increasingly function as performative compliance rather than substantive verification \u2014 the timescales for actually testing safety or achieving genuine reskilling have been compressed into bureaucratic speedruns.",
+    "key_agents": [
+      "Technology Vendors: Primary beneficiary (institutional/arbitrage) \u2014 capture market share and capital gains from rapid deployment; experience constraint as coordination mechanism",
+      "Displaced Workers: Primary victim (powerless/trapped) \u2014 face skill obsolescence, wage loss, geographic lock-in; minimal coordination benefit",
+      "Capital Holders: Secondary beneficiary (powerful/arbitrage) \u2014 extract returns from productivity gains without bearing transition costs",
+      "Regulatory Agencies: Mixed (moderate/constrained) \u2014 coordinate legitimate safety oversight but are suppressed by political/economic pressure; see tangled rope structure",
+      "Labor Unions: Organized victims (organized/constrained) \u2014 negotiate transition terms but remain constrained by capital mobility and global competition",
+      "Legacy Safety Standards: Institutional actor (institutional/arbitrage) \u2014 persist through inertia as theater while substantive verification becomes degraded (piton perspective)"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts from displaced workers (job security, wage stability, identity confirmation) and from regulatory systems (verification capacity). But it is not maximal extraction because technology adoption does produce genuine productivity gains and coordination benefits \u2014 workers eventually transition, safety does improve over longer cycles, and beneficial technologies do reach markets. The moderate-high value reflects that extraction is real but partially offset by genuine coordination functions. Suppression (0.48): Moderate. Barriers to exit include: labor market immobility (geographic, skill-specific), lack of retraining access, reliance on employer-provided healthcare, identity fusion with previous work. But suppression is not total \u2014 some workers do successfully transition, some regulatory agencies do enforce delays, some consumer demand for safety-tested products constrains purely reckless deployment. Theater ratio (0.58): Moderate-high. Safety certifications, regulatory reviews, and worker retraining programs increasingly function as theater: they are required for legitimacy but happen too quickly to be substantive. Testing frameworks designed for slower cycles are compressed into rubber-stamp approvals. Retraining programs promise reskilling but lack time, funding, and outcome guarantees. The theater has increased as deployment cycles have accelerated.",
+    "perspectival_gap": "This constraint demonstrates the range of DR classification across power levels and exit options. The technology vendor sees coordination (Rope) \u2014 they are solving the legitimate problem of technology diffusion. The regulatory agency sees mixed coordination and extraction (Tangled Rope) \u2014 genuine safety oversight alongside pressure-driven cap-cutting. The displaced worker sees pure extraction (Snare) \u2014 no coordination benefit, no exit path. The union sees tangled rope with more agency (Tangled Rope) \u2014 can negotiate transition terms but remains constrained by global capital mobility. The legacy safety standard sees its own degraded ritual (Piton) \u2014 persists through liability protection, not function. The civilizational observer risks seeing immutable tension (Mountain) \u2014 technology innovation is faster than human adaptation \u2014 but the structural data reveals this as partial naturalization: the economic structures driving velocity (venture capital, quarterly earnings pressure, competitive lock-in) are contingent, not inevitable.",
+    "directionality_logic": "Each perspective's directionality derives from the agent's structural position relative to the extraction flow. Technology vendors and capital holders experience low d (beneficiaries with arbitrage) \u2192 negative or low f(d) \u2192 low chi. Displaced workers experience high d (victims with trapped exit) \u2192 high f(d) \u2192 high chi. Regulatory agencies experience intermediate d (victims with constrained exit + coordination function) \u2192 intermediate f(d) \u2192 intermediate chi. Labor unions experience intermediate-to-high d (victims with organized exit capacity) \u2192 produces moderate chi. The piton classification arises from theater gate (theater_ratio = 0.58) rather than from high chi. The mountain classification at the analytical level is perspectival \u2014 the engine's false summit detector identifies it as partial naturalization of contingent economic arrangements.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by acknowledging that all classification types capture real structural dynamics. The snare is the worker's lived reality (extraction without coordination benefit). The tangled rope is the regulatory agency's structural position (genuine coordination function alongside suppression and extraction). The rope is the vendor's experience (coordination with arbitrage). The piton reflects institutional degradation (safety standards becoming theater). The scaffold would emerge only if structural sunset were visible (e.g., a coordinated global agreement to decelerate timelines), which is not present in the current measurement interval. The mountain risks false summit (naturalizing economic pressure as immutable constraint). No single type is 'correct' \u2014 the presheaf over the observation site reveals that the constraint's effect depends entirely on the observer's power level and exit capacity."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "labor_market_dislocation",
+      "regulatory_capture_velocification",
+      "safety_testing_efficacy"
+    ],
+    "dual_formulation_note": "Technology deployment velocity is upstream of domain-specific constraints (labor displacement, regulatory degradation, safety failures). Distinct stories should model the specific mechanisms in each domain while linking back to this general constraint as a forcing function."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.58
+    }
+  ]
+}

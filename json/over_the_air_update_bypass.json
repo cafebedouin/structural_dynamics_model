@@ -1,0 +1,227 @@
+{
+  "header": {
+    "constraint_id": "over_the_air_update_bypass",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "otabypass"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Over-The-Air Update Bypass in Connected Devices",
+    "topic_domain": "technology/security/device_control",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "device_manufacturers",
+      "network_service_providers"
+    ],
+    "victims": [
+      "device_users",
+      "security_researchers",
+      "software_integrity"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Device Owner",
+      "comment": "PERSPECTIVE 1: DEVICE OWNER (SNARE) \u2014 User owns the hardware but cannot refuse updates, delay them, or opt out without losing device functionality. Suppression is structural: attempting to block updates triggers remote lockdown, service suspension, or warranty revocation. No exit option exists within the device ecosystem. Maximum experienced extraction \u2014 user bears security risk of forced updates while manufacturer captures control over firmware stack."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Security Researcher",
+      "comment": "PERSPECTIVE 2: SECURITY RESEARCHER (SNARE) \u2014 Faces high barriers to independent analysis: encrypted firmware, proprietary chipsets, legal threats under DMCA Section 1201 if reverse-engineering attempted, and manufacturer refusal to publish update change logs. Constrained exit \u2014 can exit by abandoning the device, but at career cost (loses access to dominant platform for analysis and publication). Asymmetric extraction: security vulnerabilities discoverable through update bypass are captured by manufacturers and suppressed from public disclosure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Device Manufacturer",
+      "comment": "PERSPECTIVE 3: DEVICE MANUFACTURER (TANGLED ROPE) \u2014 Genuine coordination function: mandatory updates do solve the shared problem of device security and prevent massive liability cascades from unpatched vulnerabilities. BUT the update mechanism is also a primary extraction channel: manufacturers use update authority to enforce software licensing, prevent repair, lock users into ecosystems, and suppress competitive analysis. Extraction and coordination coexist. Manufacturer can arbitrage out (exit to different device architecture) but chooses not to, because extraction is the point."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Open-Source Device Coalition",
+      "comment": "PERSPECTIVE 4: OPEN-SOURCE DEVICE COALITION (ROPE) \u2014 Organizations building Linux-based and open-firmware alternatives (Lineage OS, Coreboot, open embedded systems) experience the OTA bypass constraint as a pure coordination problem to solve, not as extraction. These agents can exit the proprietary ecosystem (they do); they benefit from transparent update mechanisms; they face minimal suppression within their own coalition. The constraint exists in their world as a Rope \u2014 coordination of distributed firmware updates without extraction. However, they occupy regional/niche scope relative to mainstream devices."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Network Service Provider",
+      "comment": "PERSPECTIVE 5: NETWORK SERVICE PROVIDER (TANGLED ROPE) \u2014 Genuine coordination: pushing security updates protects network infrastructure from botnet recruitment and reduces provider liability for user device compromise. But NSPs also use OTA authority to enforce data plans, block competing services, and monitor user behavior via update mechanisms. Powerful agents with mobile exit options (can migrate customers to different technologies) but choose not to because extraction is profitable. Mixed coordination and extraction with agency \u2014 classified as tangled rope, not snare."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Regulatory Oversight Framework",
+      "comment": "PERSPECTIVE 6: REGULATORY OVERSIGHT FRAMEWORK (PITON) \u2014 FCC, EU regulatory bodies, and right-to-repair legislation create a performative framework around update transparency. Regulations technically require disclosure of what is being updated and why, but enforcement is weak, definitions are vague, and manufacturers routinely comply with the letter while violating the spirit. The regulatory theater persists (compliance filing, transparency reports) but its functional verification capacity has atrophied \u2014 inspectors lack technical depth to audit update mechanisms. Theater ratio (0.55) reflects this partial degradation of oversight function."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From a systemic perspective, the OTA update bypass constraint extracts value from device owners while suppressing their ability to understand or modify their own hardware. The constraint persists because it benefits device manufacturers and service providers while costs are diffuse (security fragmentation, loss of user agency, elimination of right-to-repair, accelerated device obsolescence). No natural law justifies mandatory OTA authority \u2014 it is a pure institutional extraction mechanism sustained by network effects and regulatory capture."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "security_necessity_vs_control",
+      "question": "What portion of mandatory OTA authority is genuinely necessary for security (addressing zero-days, maintaining baseline protection) versus what is control mechanism (enforcing vendor lock-in, preventing repair, suppressing analysis)?",
+      "resolution_mechanism": "Historical security impact analysis: measurement of (critical zero-days addressed via emergency OTA) vs (non-security firmware changes: licensing updates, feature restrictions, obsolescence signals); comparison with security outcomes on open-source devices with user-controlled updates",
+      "impact": "If security necessity dominates: constraint shifts toward Tangled Rope across all perspectives. If control mechanism dominates: classification remains Snare. If roughly equal: Tangled Rope is accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Security necessity vs control mechanism in mandatory OTA"
+    },
+    {
+      "id": "user_agent_recovery_path",
+      "question": "Is there a feasible technical pathway for device owners to regain agency over firmware (bootloader unlock, OEM key revocation, signed custom ROM support, slow-roll opt-out) without total device replacement?",
+      "resolution_mechanism": "Technical audit of device architecture; analysis of which device classes support user firmware modification; measurement of percentage of global device installed base that permits OTA bypass. Comparison with historical device controls (2010-2015) when bootloader unlock was common.",
+      "impact": "If pathway exists for >50% of devices: exit_options could shift from 'trapped' to 'constrained' for user perspective, lowering d and chi. If pathway exists but legally blocked (DMCA): exit remains trapped (legal suppression \u2265 structural). If pathway was eliminated by architecture choice: trapped status confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Feasibility of user firmware agency recovery"
+    },
+    {
+      "id": "open_firmware_competitive_viability",
+      "question": "Can open-firmware devices (custom ROM, open bootloader, transparent update mechanisms) achieve sufficient market penetration and user experience parity to reduce network effects binding powerless agents to proprietary OTA constraints?",
+      "resolution_mechanism": "Market share tracking for Lineage OS, Ubuntu Touch, PostmarketOS, Coreboot-enabled systems; user satisfaction and security update responsiveness comparison; identification of which device classes support realistic open-firmware transitions",
+      "impact": "If yes: Rope classification for mainstream (not niche) becomes possible \u2014 escape from extraction becomes structurally real, not just theoretically possible. If no: Snare classification is permanent for trapped users.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Open-firmware device market viability as exit mechanism"
+    },
+    {
+      "id": "manufacturer_collective_action",
+      "question": "Do manufacturers maintain OTA bypass suppression through genuine collective action agreement, or through unilateral architectural lock-in decisions that happen to align?",
+      "resolution_mechanism": "Antitrust discovery analysis; identification of communications, standards bodies (3GPP, OMA), or industry associations that coordinate OTA policy; measurement of whether any manufacturer has ever publicly committed to user-controlled update rollback and been forced to abandon it",
+      "impact": "If collective action: Snare could be reshaped via antitrust intervention (trust-busting architecture choice). If unilateral alignment: Snare is more durable (no conspiracy to prosecute), but easier to break with individual defector (one manufacturer supporting bootloader unlock changes incentive landscape).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Collective action vs unilateral alignment in OTA suppression"
+    },
+    {
+      "id": "regulatory_enforcement_capacity",
+      "question": "Do regulatory bodies (FCC, EU DMA, right-to-repair coalitions) have sufficient technical depth and enforcement authority to mandate OTA transparency, audit mechanisms, or user control without being captured by manufacturer expertise asymmetry?",
+      "resolution_mechanism": "Analysis of EU Digital Markets Act enforcement against Apple (right-to-repair); FCC device security rules and enforcement outcomes; measurement of regulatory audit frequency and technical depth; identification of regulatory turnover and capture vulnerabilities",
+      "impact": "If enforcement capacity strengthens: Piton could shift toward Scaffold (temporary regulatory control with sunset as oversight capacity matures) or even Tangled Rope (coordination with extraction). If captured: Piton theater persists indefinitely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Regulatory enforcement capacity for OTA transparency"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The over-the-air update bypass constraint governs the relationship between device owners and manufacturers over firmware control. Connected devices (smartphones, IoT, automotive, medical implants) have shifted from user-controlled software stacks to manufacturer-controlled, remotely-pushable firmware updates with no user abort, delay, or inspection mechanism. This constraint demonstrates classic Snare structure: device owners cannot exit without losing service, cannot inspect what is being pushed, face suppression (remote lockdown, warranty revocation, service suspension) if they attempt to regain control, and bear asymmetric costs (security vulnerabilities, forced obsolescence, loss of privacy). The constraint simultaneously shows Tangled Rope from manufacturer perspectives \u2014 genuine coordination function exists (security patching prevents botnet recruitment and liability cascades) layered onto extraction (vendor lock-in, suppression of repair, obsolescence acceleration). The extractiveness has increased over 15 years (2010-2025) as device complexity has increased and manufacturers have tightened firmware control, closing escape hatches like bootloader unlock that existed in earlier device generations. Theater ratio reflects increasing performative content: regulatory frameworks (FCC, EU) create transparency requirements, but enforcement is weak and manufacturers routinely hide update content behind vague descriptions.",
+    "key_agents": [
+      "Device Owner: Primary victim (powerless/trapped) \u2014 structurally unable to refuse, inspect, or delay updates; bears full cost of forced firmware changes",
+      "Security Researcher: Secondary victim (moderate/constrained) \u2014 blocked by legal suppression (DMCA), technical opacity, and career risk from losing platform access",
+      "Device Manufacturer: Primary beneficiary (institutional/arbitrage) \u2014 uses OTA authority for control and extraction while claiming security necessity",
+      "Network Service Provider: Secondary beneficiary (powerful/mobile) \u2014 uses OTA mechanism to enforce service bundling and monitor user behavior",
+      "Open-Source Device Coalition: Organized alternative (organized/mobile) \u2014 experiences the constraint as Rope (coordination without extraction); niche market position",
+      "Regulatory Framework: Performative gate (institutional/arbitrage) \u2014 creates theater of oversight without functional verification capacity",
+      "Analytical Observer: Systemic view (analytical/analytical) \u2014 identifies constraint as pure extraction mechanism sustained by network effects and regulatory capture"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and increasing. Manufacturers extract control, lock-in, forced upgrade costs, and suppression of independent analysis. The extraction is not total (some coordination function genuinely exists) but substantial and asymmetric \u2014 user cannot negotiate or opt out. The measurement trajectory shows extractiveness rising from 0.42 to 0.72 over 15 years, driven by architectural decisions (closed bootloaders, encrypted firmware, DRM enforcement) that progressively eliminated user escape hatches. Suppression (0.75): High. Structural barriers (device architecture) + legal barriers (DMCA, TOS terms) + economic barriers (loss of warranty, service suspension, forced replacement). Users cannot easily inspect, understand, or modify OTA content. Attempted bypass triggers remote lockdown. Theater ratio (0.55): Moderate-high and increasing. Regulatory frameworks (FCC device security rules, EU transparency requirements, right-to-repair legislation) create performative compliance (manufacturers file transparency reports, publish vague security advisories). But functional verification capacity has eroded \u2014 regulators lack technical depth to audit firmware changes, inspect update mechanisms, or validate claimed security benefits. The theater ratio increase from 0.35 to 0.62 reflects manufacturers investing more in compliance theater while suppression mechanisms have simultaneously strengthened.",
+    "directionality_logic": "Device owners experience d \u2248 0.95 (full victim): trapped exit options, no structural benefits from OTA authority, maximum suppression. Manufacturers experience d \u2248 0.05 (full beneficiary): arbitrage exit options, direct benefits from OTA control, capability to suppress alternatives. Security researchers experience d \u2248 0.85: constrained exit (career risk of losing platform access), victim status (blocked from analysis), but some mobility (can study open devices). Open-source coalition experiences d \u2248 0.30: mobile exit options, some benefits (transparent updates), reduced suppression within their subset. Each agent's \u03c7 (effective extraction) is computed from \u03b5 \u00d7 f(d) \u00d7 \u03c3(S), where S = global scope (\u03c3=1.2). Device owners: \u03c7 \u2248 0.68 \u00d7 1.42 \u00d7 1.2 \u2248 1.16 (capped at 1.0). Manufacturers: \u03c7 \u2248 0.68 \u00d7 (-0.12) \u00d7 1.2 \u2248 -0.10 (negative extraction: they are net extractors, not targets). The directionality gap is maximum \u2014 device owners and manufacturers occupy opposite poles of the d spectrum relative to this constraint.",
+    "perspectival_gap": "Device owners see pure extraction (Snare) \u2014 they cannot understand what is being installed, cannot refuse it, and face maximum suppression. Manufacturers see mixed coordination and extraction (Tangled Rope) \u2014 they frame OTA as security necessity while deploying it for control and lock-in. Security researchers see extraction with legal suppression (Snare) \u2014 they want to audit what manufacturers are pushing, but legal frameworks (DMCA) and technical barriers (encrypted firmware, proprietary chipsets) prevent independent analysis. Open-source coalitions see pure coordination (Rope) \u2014 they solve the OTA problem (distributing updates across heterogeneous devices) without extraction. Regulatory frameworks see a problem they can manage (Piton theater) \u2014 they create transparency rules, but enforcement mechanisms are weak and manufacturers have captured the standards bodies. Analytically, the constraint is a Snare: it extracts value and agency from powerless agents while suppressing transparency and alternatives. The perspectival gap reveals that manufacturers have successfully reframed extraction (control, lock-in) as coordination (security) \u2014 the Tangled Rope classification from their perspective is parasitic on this reframing. Were the reframing stripped away, the constraint would appear as pure Snare from all perspectives.",
+    "mandatrophy_analysis": "RESOLVED: The constraint exhibits genuine mixed coordination and extraction (Tangled Rope from manufacturer perspective) but the coordination function is NOT the driver of the constraint's existence or design. Manufacturers could solve the security coordination problem (distributing patches, maintaining baseline protection) through transparent update mechanisms with user oversight, rollback capacity, and audit capability. That they choose not to \u2014 closing bootloaders, encrypting firmware, suppressing third-party analysis \u2014 reveals that extraction (control, lock-in, obsolescence acceleration) is the primary motivation. The Tangled Rope is real but not explanatory. The Snare classification from powerless agent perspective is more structurally accurate: the constraint persists because it extracts from those who cannot exit. Manufacturers would abandon OTA bypass immediately if they faced credible competition on update transparency. The extractiveness level (0.68) is justified: not pure extraction (some coordination exists), but substantial asymmetric extraction (user bears all costs, manufacturers capture all benefits)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "device_right_to_repair",
+      "firmware_transparency_regulation",
+      "vendor_lock_in_smartphone_markets"
+    ],
+    "dual_formulation_note": "The OTA bypass constraint is downstream of device architecture design (closed bootloaders, encrypted firmware) but represents a distinct structural constraint. The upstream architecture choices are system design decisions; the OTA bypass is the enforcement mechanism that makes those choices stick. Regulatory attempts to mandate transparency operate on the OTA constraint (requiring disclosure, audit trails) rather than on the architecture (bootloader unlock, custom ROM support). Decomposition: device_architecture_lock_in (\u03b5 \u2248 0.45) feeds into over_the_air_update_bypass (\u03b5 \u2248 0.68). Device owners trapped by architecture choice; manufacturers enforce trap via OTA mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "device_architecture_lock_in"
+    ]
+  }
+}

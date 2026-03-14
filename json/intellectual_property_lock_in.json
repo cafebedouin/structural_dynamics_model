@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "intellectual_property_lock_in",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ipl"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Intellectual Property Lock-In and Ecosystem Dependency",
+    "topic_domain": "economic/legal/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ip_holder",
+      "ecosystem_gatekeeper"
+    ],
+    "victims": [
+      "dependent_developers",
+      "downstream_innovation",
+      "user_choice"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dependent Developer",
+      "comment": "PERSPECTIVE 1: DEPENDENT DEVELOPER (SNARE) \u2014 Developer whose products, tools, or infrastructure depend on proprietary IP. Cannot exit without complete rebuild of technical stack; migration costs are prohibitive. High suppression through lock-in: switching requires rewriting code, retraining teams, losing network effects. No meaningful alternatives exist when IP holder controls critical infrastructure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Open Source Community",
+      "comment": "PERSPECTIVE 2: OPEN SOURCE COMMUNITY (TANGLED ROPE) \u2014 Benefits from access to proprietary APIs and platforms that enable rapid development and market reach. Also constrained by IP licensing restrictions, patent threats, and vendor control over platform evolution. Mixed coordination (API standardization, ecosystem tools) and extraction (restrictive licensing, patent enforcement). Exit is possible but costly \u2014 replicating proprietary functionality requires substantial coordination effort."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The IP Holder",
+      "comment": "PERSPECTIVE 3: IP HOLDER (ROPE) \u2014 Experiences the constraint as pure coordination mechanism. IP protection enables network effects, ecosystem development, and platform stability. Licensing arrangements appear as mutual benefit: IP holder gains revenue and platform control; licensees gain access to valuable IP. From the holder's perspective, the system solves the coordination problem of incentivizing creation. Arbitrage options available (licensing, sublicensing, strategic partnerships)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Interoperability Movement",
+      "comment": "PERSPECTIVE 4: INTEROPERABILITY MOVEMENT (SCAFFOLD) \u2014 Organized actors (regulatory bodies, standards organizations, open-source foundations) working to create alternative pathways through interoperability mandates, compulsory licensing, and open standards. The constraint appears as temporary because technical/legal alternatives are being systematized. Sunset clause is real: Digital Markets Act (EU), proposed interoperability legislation (US), and open standards development create declining enforcement pathways. However, this assumes continued regulatory pressure and technical progress."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Patent System",
+      "comment": "PERSPECTIVE 5: LEGACY PATENT SYSTEM (PITON) \u2014 Patent protection for software and business methods has largely become performative theater. Patents rarely prevent determined competitors; enforcement is expensive and slow; the actual lock-in mechanism is network effects and switching costs, not patent infringement. The patent system persists through institutional inertia (USPTO continues issuing patents, lawyers continue filing) but does little of its intended work \u2014 incentivizing innovation. The core extraction mechanism is now platform control and network lock-in, which the patent theater obscures."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, some IP lock-in appears inherent to innovation: the creator faces a fundamental choice between disclosure (enabling imitation, reducing incentive) and secrecy (enabling extraction but preventing knowledge diffusion). This dilemma is presented as naturally unchangeable \u2014 a law of information economics. However, the structural data reveals contingency: alternative incentive structures (prize systems, grant-based research, knowledge commons) exist and work. The 'mountain' framing naturalizes a particular institutional choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "switching_cost_measurement",
+      "question": "What proportion of measured exit costs are pure switching costs vs. genuine IP incompatibility?",
+      "resolution_mechanism": "Direct measurement: cost of switching to open-source alternative + cost of genuine IP reimplementation (patent-blocking functions vs. non-IP-protected features)",
+      "impact": "If high IP proportion: lock-in is authentically IP-based (patent/copyright enforcement). If low IP proportion: lock-in is primarily network effects and switching costs; IP is theatrical. This determines whether patent reform affects the constraint significantly.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of exit cost driven by IP vs. other switching factors"
+    },
+    {
+      "id": "ecosystem_coordination_necessity",
+      "question": "How much of the ecosystem benefit attributable to IP holders is genuine coordination (enabling interoperation, standardization) vs. extraction rent?",
+      "resolution_mechanism": "Comparative analysis: open-source ecosystem equivalent features vs. proprietary ecosystem; measurement of innovation rates in walled vs. open sections; user welfare metrics under different IP regimes",
+      "impact": "If coordination dominates: constraint is Rope from most perspectives; IP protection is genuine incentive. If extraction dominates: constraint is Snare/Tangled Rope; IP is cover story for rent extraction. Changes classification distribution significantly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ecosystem value derives from IP coordination or rent extraction"
+    },
+    {
+      "id": "regulatory_transition_speed",
+      "question": "Can interoperability mandates (Digital Markets Act, compulsory licensing, open standards) actually override technical lock-in faster than IP holders can rebuild proprietary advantages?",
+      "resolution_mechanism": "Real-time monitoring: timeline from regulatory mandate \u2192 actual implementation \u2192 developer exit vs. IP holder adaptation speed. Case study: GDPR compliance costs vs. data portability impact.",
+      "impact": "If regulators are faster: scaffold sunset is real (15-20 year transition). If IP holders faster: scaffold is aspirational, constraint persists. Determines whether temporal classification holds.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Speed of regulatory interoperability mandates vs. IP holder technical adaptation"
+    },
+    {
+      "id": "patent_enforcement_vs_network_lock",
+      "question": "In cases where developers leave (exit occurs despite lock-in claims), is it because patents stop being enforced or because network effects have weakened?",
+      "resolution_mechanism": "Historical case analysis: Linux vs. proprietary Unix, Android vs. iOS restrictiveness, open-source alternatives to enterprise software. What actually triggered exodus \u2014 patent fatigue or network effect decay?",
+      "impact": "If patents: IP reform directly affects constraint severity. If network effects: IP reform is decorative; constraint persists through switching costs alone. Informs which omega variable is actually binding.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether patent enforcement or network effects drive actual lock-in"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Intellectual property lock-in creates a structural extraction mechanism where creators benefit from temporary monopolies, users and developers pay switching costs, and the entire innovation ecosystem is constrained by control over proprietary infrastructure. The constraint operates across multiple levels: legal (patent/copyright enforcement), technical (API incompatibility, proprietary formats), economic (network effects, switching costs), and institutional (licensing restrictions, strategic gatekeeping). This constraint exemplifies how a coordination mechanism (IP protection as innovation incentive) has been layered with extraction (lock-in as control mechanism), creating a hybrid Tangled Rope from multiple perspectives while appearing to dependent developers as a pure Snare. The theater_ratio (0.52) reflects that patent enforcement for software and business methods has become increasingly performative \u2014 the actual lock-in operates through network effects and technical switching costs, while patent litigation provides a ritual justification.",
+    "key_agents": [
+      "IP Holder: Primary beneficiary (institutional/arbitrage) \u2014 captures monopoly rents, controls platform evolution, benefits from network effects and switching costs",
+      "Dependent Developers: Primary victim (powerless/trapped) \u2014 locked into proprietary ecosystems; exit requires complete technical rebuild; bear suppression costs through licensing restrictions and forced upgrades",
+      "Open Source Community: Secondary victim (moderate/constrained) \u2014 can theoretically exit but face resource and coordination barriers; benefit from ecosystem access but constrained by IP licensing and patent threats",
+      "Downstream Innovation: Victim (powerless/trapped) \u2014 constrained by IP holder's control over foundational infrastructure; feature velocity controlled by rent extraction rather than genuine coordination needs",
+      "Interoperability Movement: Organized agents (organized/constrained) \u2014 regulators, standards bodies, open-source foundations building alternative pathways; see constraint as temporary if regulatory momentum sustains",
+      "Legacy Patent System: Institutional actor (institutional/arbitrage) \u2014 maintains performative patent enforcement while real lock-in operates through network effects; persists through institutional inertia"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. IP lock-in extracts substantial value from dependent developers through forced upgrade cycles, licensing costs, and switching costs. However, the extraction is not as severe as pure platform monopolies (0.75+) because alternative ecosystems exist, open-source substitutes reduce leverage, and regulatory pressure is increasing. The trajectory shows extraction increasing over 30 years as network effects strengthen and switching costs compound. Suppression (0.65): High. Substantial barriers to exit include technical lock-in (proprietary APIs, formats), economic lock-in (switching costs, network effects), legal lock-in (licensing restrictions, patent enforcement), and psychological lock-in (ecosystem lock-in makes alternatives invisible). However, suppression is not total \u2014 some developers successfully exit, open-source alternatives exist, and regulatory pressure is weakening IP holder control. Theater ratio (0.52): Moderate. Patent enforcement for software provides ritual justification for lock-in, but the actual extraction mechanism is technical and economic, not legal. The theater has increased over time as patent enforcement becomes more litigious while genuine lock-in operates through network effects and switching costs.",
+    "directionality_logic": "Each perspective's directionality derives from the agent's structural position relative to the extraction flow. IP holders are beneficiaries with arbitrage options (exit via licensing, partnerships, acquisitions) \u2014 they experience low or negative d, producing negative effective extraction (net benefit from the constraint). Dependent developers are trapped victims with no meaningful exit \u2014 they experience high d, producing high f(d) and high experienced extraction chi. Open source communities and interoperability movements are organized but constrained \u2014 they have some agency and some benefit from ecosystem access, so they experience moderate d and mixed chi signatures. The piton perspective derives from the theater gate: patent protection persists despite providing little verification of lock-in's actual mechanism (network effects). The mountain perspective risks naturalizing a contingent institutional choice (IP-based innovation incentives vs. alternative systems like prizes, grants, or knowledge commons).",
+    "perspectival_gap": "This constraint shows stark perspectival divergence. The IP holder sees coordination (Rope) \u2014 incentive alignment, ecosystem stability, innovation rewards. Dependent developers see extraction (Snare) \u2014 forced upgrades, licensing costs, inability to migrate. The interoperability movement sees temporary constraint with sunset (Scaffold) \u2014 regulatory mandates and open standards creating alternative pathways. The patent system sees its own degradation (Piton) \u2014 patents as performative theater, real lock-in through network effects. Open source communities see mixed value and constraint (Tangled Rope) \u2014 ecosystem benefits alongside extraction. The analytical observer risks seeing inherent limits (Mountain) \u2014 information economics as natural law \u2014 but the structural data reveals contingency: alternative incentive systems exist and work. The perspectival gap reveals that IP lock-in is not a neutral coordination mechanism but an institutionally contingent extraction arrangement.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: This constraint resolves by demonstrating that IP lock-in combines genuine coordination (incentivizing creation, enabling ecosystem development) with genuine extraction (monopoly rents, switching costs, gatekeeper control). The Tangled Rope classification is not a failure to decide but a correct structural assessment: the constraint does both functions simultaneously. The mandatrophy resolves by rejecting the false binary \u2014 'Is IP protection good or bad?' \u2014 and instead identifying which constituencies experience which function. IP holders experience coordination (Rope from their perspective). Dependent developers experience pure extraction (Snare from their perspective). The analytical observer needs to analyze from multiple positions to see the hybrid structure. The mandatrophy analysis also reveals that the patent system's performative theater (piton perspective) enables the extraction to persist even as patent enforcement becomes increasingly ineffective \u2014 the ritual of patent protection justifies lock-in that is actually maintained through network effects and technical switching costs. This explains why patent reform alone cannot resolve IP lock-in: the real mechanism is technical and economic, not legal. True resolution would require addressing network effects (interoperability mandates, platform decentralization) and switching costs (open standards, data portability), not just patent reform."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "software_vendor_lock_in",
+      "cloud_platform_dependency",
+      "data_portability_barriers",
+      "open_standards_fragmentation"
+    ],
+    "dual_formulation_note": "IP lock-in exists in tension with multiple related constraints: vendor lock-in (which involves lock-in through contractual and technical means even without IP protection), platform dependency (which adds ecosystem network effects on top of IP), and data portability barriers (which create lock-in through data format and API incompatibility). These form a constraint family where IP lock-in is upstream \u2014 IP protection justifies and enables technical lock-in mechanisms that would otherwise face interoperability pressure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ]
+}

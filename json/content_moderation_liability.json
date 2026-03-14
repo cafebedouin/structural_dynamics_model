@@ -1,0 +1,217 @@
+{
+  "header": {
+    "constraint_id": "content_moderation_liability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cml"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Content Moderation Liability Constraint",
+    "topic_domain": "internet_governance/legal_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_platforms",
+      "legal_compliance_infrastructure"
+    ],
+    "victims": [
+      "content_creators",
+      "civil_society_organizations",
+      "small_platforms"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Content Creator (Individual Voice)",
+      "comment": "PERSPECTIVE 1: CONTENT CREATOR (SNARE) \u2014 Trapped by liability exposure and platform Terms of Service. Cannot exit the constraint without abandoning online speech platforms entirely. Faces suppression through both legal liability and platform enforcement mechanisms. No meaningful appeal process or due process. Maximum extraction from perspective of individual creator."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Civil Society Organization",
+      "comment": "PERSPECTIVE 2: CIVIL SOCIETY (SNARE) \u2014 NGOs and advocacy groups face dual extraction: liability for platform hosting their content AND extraction via platform control over content distribution. Trapped by legal exposure in jurisdictions where they operate. Cannot build independent infrastructure at scale without massive resources. Suppression mechanisms prevent effective coordination or contestation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Small/Independent Platform",
+      "comment": "PERSPECTIVE 3: SMALL PLATFORM (TANGLED ROPE) \u2014 Faces significant liability exposure and compliance costs, but also benefits from coordination around moderation standards and legal frameworks. Constrained by resource limitations and legal uncertainty. Some exit available (geographic arbitrage, niche focus) but costly. Mixed experience of coordination (learning from industry standards) and extraction (disproportionate liability relative to resources)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Large Platform (Meta, Google, X)",
+      "comment": "PERSPECTIVE 4: LARGE PLATFORM (ROPE) \u2014 Net beneficiary of liability framework through scale economics and legal resources. Experiences moderation as coordination mechanism: standardized policies, community guidelines, and legal compliance enable growth and market position. Regulatory arbitrage available through legal teams and compliance infrastructure. Extraction flows toward this agent."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Regulatory/Compliance Theater",
+      "comment": "PERSPECTIVE 5: REGULATORY COMPLIANCE THEATER (PITON) \u2014 Section 230 (US) and similar frameworks create performative compliance rituals: notice-and-takedown procedures, content moderation reports, transparency statements, regulatory submissions. Theater has risen over time as regulations multiply (DSA, Online Safety Bill, regulatory patchwork). The actual functional verification that content removal serves legitimate purposes is minimal. Regulatory inertia maintains the constraint despite degraded function."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Decentralized/Alternative Infrastructure Coalition",
+      "comment": "PERSPECTIVE 6: DECENTRALIZED INFRASTRUCTURE COALITION (SCAFFOLD) \u2014 Organized actors (ActivityPub networks, blockchain platforms, community-owned servers, open-protocol projects) are building alternative content distribution systems with different liability models. Sees moderation liability as a temporary coordination problem being solved by architectural redesign. Low effective extraction because this coalition has genuine exit pathways and momentum. Sunset clause: as federated and decentralized systems mature, traditional platform liability becomes less relevant. Estimated timeline: 10-15 years for meaningful adoption."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FALSE NATURAL LAW (MOUNTAIN) \u2014 From a civilizational view, this perspective risks naturalizing the liability framework as an inevitable feature of internet governance: 'online platforms must moderate content; platforms must be liable for user speech; this tension is inherent to digital communication.' However, this naturalizes contingent legal and regulatory choices (US Section 230, EU DSA structure, platform liability regimes). The structural data contradicts the mountain classification \u2014 architectural alternatives exist and are being deployed. This is a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "liability_vs_free_speech",
+      "question": "Is content moderation liability a necessary protection mechanism against harmful content or an extraction mechanism that suppresses legitimate speech?",
+      "resolution_mechanism": "Longitudinal analysis of false positive rates (legitimate content removed), civil society impact, diversity of speech pre/post regulation, and jurisdictional comparison of speech outcomes under different liability regimes",
+      "impact": "If primarily protective: constraint may reclassify toward Rope (coordination benefit dominates). If primarily extractive: classification as Snare/Tangled Rope sustained. Impact determines whether civil society classification as victim is justified.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether liability functions as speech protection or suppression mechanism"
+    },
+    {
+      "id": "scale_economics_inevitability",
+      "question": "Does the extractiveness of the constraint derive from inherent scalability limitations of decentralized platforms or from regulatory/legal choices that favor centralized architectures?",
+      "resolution_mechanism": "Comparative analysis of compliance costs (absolute and per-user) across platform scales; technical capacity analysis of decentralized moderation; regulatory barrier analysis for alternative architectures",
+      "impact": "If extractiveness is architecturally inevitable: mountain classification has merit. If extractiveness is policy-contingent: scaffold and rope classifications are more accurate, and policy redesign could reduce extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether constraint extractiveness is technical or policy-determined"
+    },
+    {
+      "id": "notice_takedown_effectiveness",
+      "question": "Does the notice-and-takedown procedure (performative compliance theater) actually prevent harmful content proliferation or primarily serve evidentiary purposes in liability defense?",
+      "resolution_mechanism": "Comparison of content removal timing relative to harm (child safety, election interference, violence incitement); analysis of appeals granted vs denied; tracking of re-upload rates post-removal; regulator enforcement records",
+      "impact": "If genuinely protective: theater ratio should be lower (~0.40-0.50). If primarily evidentiary: piton classification confirmed with theater ratio ~0.70. Changes assessment of whether compliance infrastructure serves victims or benefits platforms.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether notice-and-takedown serves harm prevention or liability defense"
+    },
+    {
+      "id": "jurisdictional_arbitrage",
+      "question": "Can platforms meaningfully practice jurisdictional arbitrage in moderation policy (apply different standards by region) or does global content flow force uniform high-suppression policy?",
+      "resolution_mechanism": "Audit of platform moderation policies across jurisdictions; analysis of whether region-specific moderation actually functions; tracking of policy divergence and convergence over time",
+      "impact": "If meaningful arbitrage exists: institutional actors have more exit options than analysis assumes, reducing d and chi. If global policy convergence dominates: extraction is more concentrated, supporting higher extractiveness estimate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of platform jurisdictional arbitrage in moderation"
+    },
+    {
+      "id": "decentralization_viability",
+      "question": "Can ActivityPub, blockchain platforms, and federated systems actually achieve the content moderation outcomes that make them viable alternatives (i.e., reduce harmful content without central extraction)?",
+      "resolution_mechanism": "Empirical deployment analysis of existing decentralized platforms; measurement of harmful content rates, user experience, and sustainability; comparison of moderation burden vs centralized platforms",
+      "impact": "If decentralized moderation is viable: scaffold sunset is real and timeline accelerates. If decentralized systems struggle with moderation at scale: scaffold classification is aspirational, timeline extends, and large platform position strengthens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of decentralized content moderation at scale"
+    },
+    {
+      "id": "suppression_mechanism_attribution",
+      "question": "Is measured suppression (0.62) primarily driven by legal/regulatory liability exposure, platform Terms of Service enforcement, or the technical impossibility of contesting algorithmic decisions?",
+      "resolution_mechanism": "Decomposition analysis: measure suppression under different legal regimes (jurisdictions with high platform liability vs safe harbor); measure suppression for human-reviewed vs algorithmic takedowns; measure effectiveness of appeals processes",
+      "impact": "If legal liability dominates: policy change reduces suppression. If ToS enforcement dominates: structural redesign required. If technical impossibility dominates: architectural change (transparency, appeals) required. Affects which interventions could reduce the constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Primary driver of suppression mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The content moderation liability constraint arises from the legal and regulatory tension between platform responsibility for user-generated content and the practical impossibility of comprehensive moderation. Platforms face dual pressure: regulatory mandates to remove harmful content (child safety, terrorism, election interference) and liability exposure for speech they fail to moderate. This creates asymmetric extraction: large platforms absorb compliance costs through scale economics and legal resources, while content creators, small platforms, and civil society organizations bear suppression through both legal uncertainty and de facto platform enforcement. The constraint exhibits all six DR types depending on perspective. Theater ratio (0.68) reflects that much of the moderation infrastructure is performative: notice-and-takedown procedures provide legal defensibility rather than demonstrable harm prevention; transparency reports serve regulatory ritual rather than enabling accountability; appeals processes are often opaque. Extractiveness (0.58) indicates moderate-high extraction that has grown over the interval as regulatory pressure increased (DSA, Online Safety Bill, regulatory fragmentation). The rise from 0.32 to 0.58 over six years tracks the shift from permissive early internet governance to comprehensive liability regimes. Alternative architectures (decentralized networks, federated systems, community-governed platforms) are emerging with different moderation and liability models, supporting the scaffold perspective's claim of an eventual sunset clause.",
+    "key_agents": [
+      "Individual Content Creators: Primary victims (powerless/trapped) \u2014 face legal liability and platform suppression with no meaningful due process or appeal mechanisms",
+      "Civil Society Organizations (NGOs, advocacy groups): Primary victims (powerless/trapped) \u2014 face dual extraction through platform liability and distribution control; cannot build independent infrastructure at scale",
+      "Small/Independent Platforms: Secondary victims (moderate/constrained) \u2014 bear compliance costs disproportionate to resources; limited legal resources to contest liability",
+      "Large Platforms (Meta, Google, X, TikTok): Primary beneficiaries (institutional/arbitrage) \u2014 scale economics in compliance, legal resources, and market dominance enable them to use liability framework as competitive moat",
+      "Regulatory Bodies (governments, legislators): Institutional actors (institutional/arbitrage) \u2014 benefit from liability framework through enforcement legitimacy and policy coordination; perform regulatory theater",
+      "Decentralized/Alternative Infrastructure Coalition: Organized actors (organized/mobile) \u2014 building federated and community-governed alternatives with different moderation models; have genuine exit pathways",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent legal choices as inevitable features of internet governance"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts significant value for large platforms through competitive advantage (smaller competitors bear higher relative compliance costs) and through the capture of content governance authority. However, extractiveness is not at snare levels (\u22650.66) because genuine coordination benefits exist: platforms do moderate genuinely harmful content (child exploitation, terrorism, extreme violence), and this serves a real public function. The constraint is hybrid \u2014 it coordinates around harm prevention while simultaneously enabling extraction through scale economics. Suppression (0.62): Moderate-high. Significant barriers to contestation include: legal liability uncertainty (creators cannot know ex-ante which content is actionable), platform Terms of Service as unilateral constraints (no negotiation), algorithmic opacity (decisions are often unexplainable), and appeal processes that are opaque or non-existent. Suppression is not total because some jurisdiction-specific escape routes exist (jurisdictional arbitrage, regulatory safe harbors in some regions). Theater ratio (0.68): High. Notice-and-takedown procedures provide legal defensibility rather than demonstrable harm prevention. Transparency reports are ritual compliance documents. Appeals processes are largely performative. The rise from 0.35 to 0.68 over the interval reflects multiplication of regulatory requirements (GDPR, DSA, Online Safety Bill, platform-specific policies) without proportional increase in functional capacity. Theater increased faster than legitimate moderation function.",
+    "perspectival_gap": "The piton perspective identifies that moderation compliance infrastructure has become substantially performative. The gap between regulatory requirement complexity and actual harm prevention effectiveness has widened. Notice-and-takedown procedures, transparency reports, and appeals processes provide legal defensibility for platforms but do not demonstrably prevent harmful content at scale. The snare perspective (content creator) captures the asymmetry: creators face legal liability and suppression mechanisms with no due process or meaningful contestation. The rope perspective (large platform) captures that the same liability framework functions as a coordination mechanism for market control. The scaffold perspective captures that architectural alternatives (ActivityPub, Bluesky federation, blockchain platforms) are being deployed to bypass the entire liability constraint. The mountain perspective (false summit) risks naturalizing what is actually a policy choice: different jurisdictions have different liability regimes, and the empirical outcomes vary. This reveals that the 'inevitability' frame is ideological, not structural.",
+    "directionality_logic": "The engine derives directionality from beneficiary/victim declarations and exit options. Beneficiaries (large_platforms, legal_compliance_infrastructure) with arbitrage exit receive low d values (~0.15-0.20), producing negative or minimal chi. Victims (content_creators) with trapped exit receive high d values (~0.90), producing amplified chi through f(d). This asymmetry is the core extraction mechanism: the same moderation regime protects large platforms and extracts from small actors. No directionality override is necessary \u2014 the structural data (beneficiary/victim + exit options) accurately produces the perspectival gap.",
+    "mandatrophy_analysis": "The constraint resolves the mandatrophy by acknowledging that the liability framework serves BOTH coordination and extraction functions: (1) it genuinely coordinates around preventing harmful content (child exploitation, terrorism); (2) it simultaneously enables large platforms to extract competitive advantage through compliance cost scale economies. The tangled_rope classification is correct because both functions are real and non-decomposable. The perspectival gap shows that beneficiaries (large platforms) perceive coordination while victims (small platforms, creators) perceive extraction. The piton perspective shows that the coordination function is degrading (theater ratio rising faster than effectiveness). The scaffold perspective shows that architectural alternatives are emerging that could separate coordination function from extraction mechanism \u2014 the constraint is not inevitable but policy-contingent. The false mountain perspective reveals that naturalizing the liability framework ('this is how internet moderation must work') is ideology, not necessity. Regulatory regimes in different jurisdictions prove that alternatives are structurally possible."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_algorithmic_transparency",
+      "digital_services_act_compliance",
+      "section_230_safe_harbor"
+    ],
+    "dual_formulation_note": "Content moderation liability is the parent constraint affecting three downstream constraints: algorithmic transparency (more transparency required as liability exposure increases), DSA compliance (EU instantiation of the liability regime), and Section 230 safe harbor erosion (US legal contestation of the liability framework). The upstream constraint derives from the general tension between platform responsibility and content moderation impossibility at scale; downstream constraints instantiate this tension in specific jurisdictional and technical contexts."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "header": {
+    "constraint_id": "regional_military_balance_stability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rmbs"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Regional Military Balance Stability Constraint",
+    "topic_domain": "geopolitical/security/military",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dominant_regional_power",
+      "status_quo_preserving_states",
+      "arms_manufacturers"
+    ],
+    "victims": [
+      "rising_regional_powers",
+      "non_aligned_states",
+      "civilian_populations_in_volatile_zones"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Subordinate State",
+      "comment": "PERSPECTIVE 1: SUBORDINATE REGIONAL STATE (SNARE) \u2014 Trapped within the balance mechanism. Cannot credibly exit the arms competition without severe security vulnerability. Bears extraction costs (fiscal burden of military spending, opportunity costs, security dilemma acceleration) with minimal exit capacity or coordination benefit. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Regional Peer Competitor",
+      "comment": "PERSPECTIVE 2: REGIONAL PEER COMPETITOR (TANGLED ROPE) \u2014 Experiences genuine coordination function (mutual deterrence, predictability through balance) alongside extraction (arms race spirals, resource diversion, permanent security mobilization). Constrained by security interdependence but retains some agency through alliance formation and military capability development. Mixed experience of coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Dominant Regional Hegemon",
+      "comment": "PERSPECTIVE 3: DOMINANT REGIONAL HEGEMON (ROPE) \u2014 Primary beneficiary (institutional/arbitrage). Experiences the balance as coordination mechanism: maintains status quo, legitimizes military presence, enables arms sales and strategic partnerships. High exit capacity through alternative regional arrangements. Net beneficiary \u2014 extraction flows toward this agent through security premiums, alliance commitments, and technology transfer dependencies."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Defense Industry Ecosystem",
+      "comment": "PERSPECTIVE 4: DEFENSE INDUSTRY ECOSYSTEM (TANGLED ROPE) \u2014 Genuine coordination function: provides military platforms that enable deterrence and reduce likelihood of miscalculation. Simultaneously benefits from extraction mechanism: arms race dynamics generate demand for advanced systems, upgrade cycles, and inventory replenishment. Constrained by regulatory requirements and export controls but benefits from the balance's perpetuation. Active enforcement required to maintain supply agreements and technology control regimes."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Regional Multilateral Institutions",
+      "comment": "PERSPECTIVE 5: REGIONAL MULTILATERAL INSTITUTIONS (PITON) \u2014 ASEAN, GCC, African Union, and similar bodies claim to coordinate regional stability but exercise minimal functional constraint on military buildups. Their confidence-building measures, dialogues, and transparency initiatives are largely performative \u2014 actual military decisions remain unilateral or alliance-based. Theater ratio high (diplomatic rituals masking continued arms competition). Institutional inertia maintains these mechanisms despite degraded function. Organized agents with constrained exit (regional legitimacy depends on continued participation)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Arms Control Architecture (Analytical Observer)",
+      "comment": "PERSPECTIVE 6: ARMS CONTROL ARCHITECTURE (SCAFFOLD) \u2014 International treaty frameworks (NPT, CTBT, missile technology control regimes) represent temporary scaffolding: they reduce transparency barriers and raise compliance costs for escalation, but contain explicit sunset logic. Verification requirements increase over time; inspection regimes degrade when compliance costs rise; frameworks dissolve when hegemonic state withdraws from them. Theater ratio moderate (treaties have genuine verification functions but also symbolic value for prestige). High suppression reflects enforcement through sanctions and export controls. Temporary support structure with declining effectiveness as weaponization technologies proliferate and diversify."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Security Dilemma (Natural Law View)",
+      "comment": "PERSPECTIVE 7: SECURITY DILEMMA / NATURAL LAW VIEW (MOUNTAIN) \u2014 From the civilizational analytical perspective, the balance of power is a structural feature of anarchic international systems: without a sovereign authority, states rationally arm themselves in response to perceived threats, creating a self-perpetuating cycle. This perspective sees the constraint as an immutable consequence of structural anarchy \u2014 no agent can credibly disarm without inviting predation. However, the structural data (active enforcement required, beneficiaries/victims present, theater_ratio high) contradicts pure mountain classification and reveals this as naturalization of contingent institutional arrangements (alliance structures, technology control regimes, transparency asymmetries) rather than immutable natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "transparency_commitment_credibility",
+      "question": "Do regional transparency agreements (military budgets, force deployments, exercise notifications) represent genuine coordination or performative compliance masking continued arms escalation?",
+      "resolution_mechanism": "Cross-verification of declared vs observed military capabilities; analysis of verification regime compliance rates; correlation between transparency measures and actual de-escalation outcomes",
+      "impact": "If genuine coordination: classification shifts toward Rope for more perspectives. If performative: theater_ratio increases and classification shifts toward Snare/Piton.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether transparency agreements reduce actual security competition"
+    },
+    {
+      "id": "arms_race_inherency",
+      "question": "Is the arms race dynamic inherent to regional multipolarity or contingent on specific institutional arrangements (technology transfer policies, alliance structures, intelligence asymmetries)?",
+      "resolution_mechanism": "Comparative analysis of different regional security systems; historical cases of arms race pause/reversal; modeling of alternative institutional arrangements with same baseline capabilities",
+      "impact": "If inherent: mountain classification warranted. If contingent: classification shifts to Tangled Rope/Snare; policy interventions in institutional arrangements could reduce extraction.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether arms dynamics are structural or institutional"
+    },
+    {
+      "id": "coalition_formation_threshold",
+      "question": "At what capability ratio do subordinate states achieve sufficient coalition power to renegotiate extraction terms or exit the balance mechanism entirely?",
+      "resolution_mechanism": "Historical analysis of successful/failed coalition reversals; game-theoretic modeling of coalition stability; longitudinal analysis of power transition dynamics",
+      "impact": "If threshold is low and achievable: powerless perspective classification may upgrade to organized; snare may shift toward tangled_rope. If threshold is high/inaccessible: mountain-like immutability confirmed.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Capability threshold for coalition renegotiation"
+    },
+    {
+      "id": "substitution_technology_disruption",
+      "question": "Do emerging military technologies (hypersonics, autonomous systems, space-based systems) disrupt the balance mechanism by rendering traditional deterrence models obsolete or by creating new extraction mechanisms?",
+      "resolution_mechanism": "Analysis of technology adoption rates; modeling of stability outcomes under alternative capability distributions; longitudinal tracking of doctrinal responses to new technologies",
+      "impact": "If disruption is destabilizing: classification may shift toward Snare (increased suppression, breakdown of coordination). If new equilibrium forms: classification may shift toward new Rope or Tangled Rope with different beneficiaries.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact of emerging technologies on balance stability"
+    },
+    {
+      "id": "hegemon_withdrawal_scenario",
+      "question": "What are the structural consequences if the dominant regional power withdraws commitment to the balance architecture (shifts focus away from region, reduces military presence, exits alliance frameworks)?",
+      "resolution_mechanism": "Scenario modeling; historical precedent analysis (US withdrawal from regions, Soviet collapse, British decline); game-theoretic equilibrium analysis without hegemon stabilizer",
+      "impact": "If withdrawal triggers arms escalation: confirms that hegemon extraction is coercive (snare). If new equilibrium forms: suggests balance mechanism is more distributed (rope). If collapse occurs: reveals mountain-like structural fragility.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Stability consequences of hegemon withdrawal"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Regional military balance stability represents a foundational constraint in multipolar geopolitical systems. It exhibits the full taxonomy of DR classification types from different structural positions: the security dilemma appears as an immutable natural law to the civilizational observer (mountain), but reveals itself as a contingent institutional arrangement when examined through the perspectives of subordinate states (snare), competing powers (tangled rope), hegemons (rope), and regional institutions (piton). The constraint coordinates genuine security objectives \u2014 reducing the likelihood of miscalculation through transparency, deterrence, and predictability \u2014 while simultaneously extracting resources (military spending, opportunity costs), suppressing alternatives (non-aligned pathways, regional autonomy), and concentrating benefits (hegemon status premiums, arms industry profits). The theater_ratio trajectory (rising from 0.52 to 0.68) reflects degradation of regional institutions: multilateral confidence-building measures persist as performative rituals while actual military decisions remain unilateral or alliance-controlled. This is classic piton dynamics \u2014 institutional inertia maintaining mechanisms despite declining functional constraint.",
+    "key_agents": [
+      "Dominant Regional Hegemon: Primary beneficiary (institutional/arbitrage) \u2014 maintains status quo, legitimizes military presence, captures security premiums and alliance rents",
+      "Regional Peer Competitors: Secondary beneficiary and victim (moderate/constrained) \u2014 benefit from deterrence coordination but trapped in arms race dynamics with constrained exit options",
+      "Subordinate Regional States: Primary victims (powerless/trapped) \u2014 bear fiscal and security costs of arms competition with minimal exit capacity or coordination benefit",
+      "Defense Industry Ecosystem: Beneficiary (institutional/constrained) \u2014 profits from arms race perpetuation; constrained by regulatory frameworks and technology transfer controls",
+      "Regional Multilateral Institutions: Degraded facilitators (organized/constrained) \u2014 claim coordination function but exercise minimal constraint; theater-high; participate due to legitimacy requirements not functional capacity",
+      "Arms Control Architecture: Temporary scaffolding (analytical/analytical) \u2014 provides verification and compliance mechanisms but contains sunset logic; effectiveness degrades as proliferation expands",
+      "Civilian Populations in Volatile Zones: Diffuse victims (powerless/trapped) \u2014 bear externalities of arms competition (proxy conflicts, arms smuggling, insecurity spirals) with no voice in balance mechanisms"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts fiscal resources (military budgets divert from civilian spending), opportunity costs (research and talent dedicated to military applications), and security costs (arms race acceleration increases miscalculation risk). The trajectory from 0.38 to 0.58 reflects increasing sophistication and cost of military systems, plus diffusion of advanced capabilities to more regional actors, raising the minimum credible deterrent floor. Suppression (0.72): High. States face severe constraints on exit: unilateral disarmament invites predation; non-participation in alliances forfeits security guarantees; civilian resistance to military spending faces nationalist backlash. Transparency agreements and confidence-building measures nominally reduce suppression but remain largely performative. Theater ratio (0.68): High. Regional multilateral institutions conduct extensive diplomatic rituals, transparency negotiations, and dialogue mechanisms that claim to coordinate stability but exercise minimal functional constraint. Traditional deterrence doctrine itself is increasingly theatrical \u2014 nuclear stability through 'mutually assured destruction' is a narrative maintained through continuous enactment (exercises, alerts, doctrine updates) with limited real functional verification. The rise from 0.52 to 0.68 reflects institutional degradation: as actual military decisions diverge from diplomatic forums, the theater required to maintain legitimacy increases.",
+    "perspectival_gap": "This constraint demonstrates how indexical classification reveals the political economy hidden within claims of natural law. The 'security dilemma' is hegemonic framing that naturalizes a particular institutional arrangement. From the subordinate state's perspective, the constraint is clearly extractive and coercive (snare). From the hegemon's perspective, it is coordination and rule maintenance (rope). From the arms control architecture's perspective, it is a degraded and declining scaffolding (piton becoming increasingly theater as verification regimes fail to constrain proliferation). The perspectival gap itself is diagnostic: if the constraint were a genuine natural law (mountain), all perspectives would converge on the same classification. The divergence reveals that 'stability' benefits are asymmetrically distributed and actively enforced, not naturally emergent.",
+    "directionality_logic": "The constraint's directionality distribution follows institutional power: the hegemon (d \u2248 0.05, beneficiary + arbitrage) experiences negative effective extraction \u2014 the system extracts toward them. The peer competitor (d \u2248 0.55, mixed victim/beneficiary + constrained) experiences moderate extraction. The subordinate state (d \u2248 0.92, victim + trapped) experiences maximum extraction. The defense industry (d \u2248 0.20, beneficiary + constrained) experiences low extraction, profiting from the mechanism. The regional institution (d \u2248 0.60, nominal coordinator + constrained) experiences moderate extraction through enforcement costs. This distribution is NOT natural \u2014 it reflects institutional choices: the treaty structures that advantage some suppliers, the alliance frameworks that concentrate security guarantees, the intelligence asymmetries that disadvantage rising powers, the arms control regimes that lock in technological advantages of established powers.",
+    "mandatrophy_analysis": "The mandatrophy is resolved through perspectival decomposition: the regional military balance is simultaneously genuine coordination (subordinate states benefit from reduced miscalculation risk) and coercive extraction (they bear disproportionate costs and have no exit). The constraint is tangled rope, not pure rope and not pure snare. The key mandatrophy trap: calling it 'natural law' (mountain) obscures that the benefits flow to specific institutional actors (hegemon, arms industry) through specific institutional mechanisms (alliances, technology transfer controls, intelligence asymmetries) that could be reformed. Acknowledging the tangled rope classification (genuine coordination + asymmetric extraction + active enforcement) enables identification of which institutions are doing the extraction and thus which institutional reforms might rebalance the constraint."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "arms_proliferation_dynamics",
+      "hegemon_credibility_commitment",
+      "proxy_conflict_escalation",
+      "alliance_credibility_mechanics"
+    ],
+    "dual_formulation_note": "Regional military balance is downstream of several distinct constraints: the security dilemma (immutability question), arms technology proliferation (capability distribution), and hegemon credibility (alliance reliability). These interact: if hegemon credibility declines, the balance mechanism weakens and subordinate states face increased extraction (must strengthen independent deterrents). Decomposed as separate stories and linked through network edges."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    }
+  ]
+}

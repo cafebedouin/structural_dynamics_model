@@ -1,0 +1,221 @@
+{
+  "header": {
+    "constraint_id": "voting_system_integrity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "vsi"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Voting System Integrity as Institutional Constraint",
+    "topic_domain": "political/democratic_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "electoral_administration",
+      "incumbent_political_parties",
+      "centralized_vote_counting_systems"
+    ],
+    "victims": [
+      "voter_confidence",
+      "election_accessibility",
+      "electoral_contestability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Disenfranchised Voter",
+      "comment": "PERSPECTIVE 1: DISENFRANCHISED VOTER (SNARE) \u2014 Trapped by identification requirements, registration deadlines, provisional ballot uncertainty, and poll closures. Cannot exit the voting system; bears full suppression cost through barriers to participation and inability to verify ballot integrity independently. No alternative mechanism to ensure their vote counts."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Marginalized Community",
+      "comment": "PERSPECTIVE 2: MARGINALIZED COMMUNITY (SNARE) \u2014 Structurally trapped by geographic isolation, transportation barriers, language access failures, and targeted voter suppression. Suppression mechanisms (voter purges, polling place reduction, ID requirements) concentrate on this group. No credible exit option; no alternative mechanism for political representation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Election Observer/Poll Watcher",
+      "comment": "PERSPECTIVE 3: ELECTION OBSERVER (TANGLED ROPE) \u2014 Constrained by access restrictions, observation-only mandates, and lack of enforcement authority, but also benefits from coordination function: observers enable distributed verification and reduce unilateral manipulation. Mixed experience \u2014 genuine coordination value alongside significant constraints on agency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Election Administration Authority",
+      "comment": "PERSPECTIVE 4: ELECTION ADMINISTRATION AUTHORITY (ROPE) \u2014 Benefits from centralized authority and standardized procedures. Experiences the integrity constraint as coordination: ballot design, voter registration, poll worker training all serve legitimate coordination functions. Net beneficiary with significant arbitrage options (can modify procedures, change technology, adjust timelines). Low experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Voting Rights Organizations",
+      "comment": "PERSPECTIVE 5: VOTING RIGHTS ORGANIZATIONS (TANGLED ROPE) \u2014 Organized actors (ACLU, League of Women Voters, election integrity advocates) provide coordination function through monitoring, litigation, and norm-building. But constrained by legal barriers, funding limitations, and slow institutional change. Genuine coordination benefit alongside extraction through captured/incremental reform pathways."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Legacy Voting Infrastructure",
+      "comment": "PERSPECTIVE 6: LEGACY VOTING INFRASTRUCTURE (PITON) \u2014 Outdated mechanical and electronic systems persist through institutional inertia despite known vulnerabilities. Theater ratio high: security audits, chain-of-custody procedures, machine certification, and post-election audits are largely performative \u2014 they generate confidence signals rather than genuine technical verification. Systems maintained because alternatives haven't fully replaced them, not because they function optimally."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some verification gap between voting and outcome certification is inherent to distributed systems: the gap between individual ballot casting and aggregate result announcement is a structural feature of any vote-counting process. This perspective risks naturalizing contingent institutional arrangements (centralized counting, closed-source systems, delayed audits) as immutable properties of electoral systems themselves."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "verification_tradeoff_threshold",
+      "question": "What level of voting accessibility must be sacrificed to achieve optimal vote verification and ballot secrecy?",
+      "resolution_mechanism": "Comparative analysis of electoral systems: mail voting + post-election audits (high accessibility, delayed verification) vs in-person voting with real-time verification (lower accessibility, faster verification). Empirical comparison of fraud rates vs disenfranchisement rates across regimes.",
+      "impact": "If threshold favors accessibility: identification requirements and provisional ballot rules constitute extractive suppression (Snare classification confirmed). If threshold favors verification: high suppression is necessary coordination cost (Rope classification). Current empirical data suggests accessibility is sacrificed without corresponding security gain (extraction hypothesis).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Accessibility vs verification tradeoff threshold"
+    },
+    {
+      "id": "voter_confidence_mechanism",
+      "question": "Does the integrity constraint serve voter confidence (coordination) or incumbent electoral control (extraction)?",
+      "resolution_mechanism": "Temporal analysis: do voter confidence measures increase with integrity mechanisms (audits, observer access, transparency)? Or does confidence depend only on outcome alignment with polling? Comparison across jurisdictions with high vs low transparency.",
+      "impact": "If confidence depends on transparency: integrity mechanisms are genuine coordination. If confidence depends on outcome: integrity mechanisms are theater masking extraction. If confidence decreases with transparency (as voters learn about vulnerability): system is actively extractive through confidence management.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether integrity mechanisms drive or mask voter confidence"
+    },
+    {
+      "id": "suppression_structural_vs_intentional",
+      "question": "Are voter suppression mechanisms (ID requirements, registration deadlines, provisional ballots) structural byproducts of integrity needs or intentional extraction tools?",
+      "resolution_mechanism": "Comparative institutional analysis: do jurisdictions with higher verification standards also have higher disenfranchisement? Or do high-access systems (mail voting) achieve equal verification through post-election audits? Historical analysis of policy adoption: when were suppression mechanisms introduced relative to integrity claims?",
+      "impact": "If structural byproduct: suppression is necessary cost (reduces extraction value). If intentional: suppression is the extraction mechanism (increases extraction value, classification remains Snare). Current data: suppression mechanisms concentrate on demographic groups unlikely to support incumbents, suggesting intentionality.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural byproduct or intentional extraction"
+    },
+    {
+      "id": "decentralized_verification_feasibility",
+      "question": "Can voter-verifiable paper ballots combined with post-election audits provide equivalent security to centralized machine counting with proprietary systems?",
+      "resolution_mechanism": "Technical security analysis: cryptographic auditing, chain-of-custody requirements, auditable random samples. Operational feasibility study: cost, training requirements, timeline constraints.",
+      "impact": "If feasible: current reliance on centralized systems is contingent institutional choice, not structural necessity (undermines mountain perspective, supports tangled_rope/scaffold). If infeasible: some centralization is structural requirement (supports rope/mountain perspective).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Feasibility of decentralized verification alternatives"
+    },
+    {
+      "id": "partisan_capture_extent",
+      "question": "To what extent does electoral administration enforcement capture serve incumbent party interests vs genuine integrity maintenance?",
+      "resolution_mechanism": "Pattern analysis: do enforcement actions (purges, ID challenges, provisional ballot invalidation) correlate with electoral margins and demographic targeting? Comparison of enforcement intensity across party control jurisdictions. Analysis of appeals and litigation outcomes.",
+      "impact": "If capture is high: the constraint functions as a Snare for opposition voters (extraction mechanism). If capture is low: the constraint functions as Rope (genuine coordination). If capture varies by jurisdiction: network structure becomes apparent (different institutional effectiveness).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of partisan capture in electoral administration"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.43
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Voting system integrity presents as a coordination mechanism for democratic governance but functions simultaneously as an extraction and suppression apparatus. The constraint exhibits structural tension between legitimate verification needs and incumbent political advantage through voter suppression, registration barriers, and proprietary election technology. From the perspective of election administration authorities and technology vendors, the integrity constraint is a pure coordination mechanism enabling distributed voting and centralized result aggregation. From the perspective of marginalized voters, disenfranchised groups, and excluded communities, the same constraint operates as a snare: identification requirements, registration deadlines, provisional ballot uncertainty, and strategic polling place closures create systematic barriers to participation. Voting rights organizations perceive a tangled hybrid: genuine coordination function (enabling mass democratic participation) alongside extractive enforcement mechanisms (voter purges, provisional ballot disqualification, ID requirements concentrating on specific demographics). The legacy voting infrastructure exhibits high theater \u2014 security audits, chain-of-custody procedures, machine certification, and post-election audits generate confidence signals rather than technical verification. The analytical observer risks naturalizing contingent institutional choices (centralized proprietary systems, closed-source counting software) as immutable features of electoral systems, when alternative architectures (voter-verifiable ballots, open-source systems, distributed audit mechanisms) exist.",
+    "key_agents": [
+      "Disenfranchised Voters: Primary victims (powerless/trapped) \u2014 bear full suppression cost through identification barriers, registration deadlines, provisional ballot uncertainty, and poll closures",
+      "Marginalized Communities: Primary victims (powerless/trapped) \u2014 systematically targeted by voter purges, polling place reduction, language access failures, and demographic-targeted ID requirements",
+      "Election Administration Authorities: Primary beneficiaries (institutional/arbitrage) \u2014 control voting procedures, technology selection, enforcement, and timing; benefit from centralized authority and standardized systems",
+      "Incumbent Political Parties: Secondary beneficiaries (institutional/arbitrage) \u2014 benefit from suppression mechanisms that concentrate on opposing demographics; use administrative authority to enforce partisan advantage",
+      "Voting Technology Vendors: Secondary beneficiaries (institutional/arbitrage) \u2014 profit from proprietary systems, create vendor lock-in, benefit from security theater requiring regular system upgrades",
+      "Election Observers/Poll Watchers: Constrained coordinators (moderate/constrained) \u2014 enable distributed verification but face access restrictions and lack enforcement authority",
+      "Voting Rights Organizations: Organized victims (organized/constrained) \u2014 provide genuine coordination and monitoring function but constrained by litigation barriers and slow institutional reform",
+      "Legacy Voting Infrastructure: Institutional actor (institutional/arbitrage) \u2014 persists through inertia despite vulnerabilities; generates theater through procedural compliance rather than technical security"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint generates significant asymmetric benefits for electoral administrations and incumbent parties through voter suppression mechanisms, provisional ballot disqualification, voter purges, and proprietary system control. However, the extraction is not maximal because substantial coordination function exists (organizing distributed voting requires genuine infrastructure) and some jurisdictions implement relatively open systems. The measured value reflects that extraction mechanisms are real and systematic but not total. Suppression (0.65): High. Structural barriers to voting participation are substantial: identification requirements, registration deadlines, provisional ballot processes, polling place closures, language access failures, voter purge mechanisms, and transportation barriers all concentrate on marginalized populations. Suppression is enforced through bureaucratic rather than explicit coercive mechanisms, but effects are equivalent to legal barriers. Theater ratio (0.68): High. Post-election audits, chain-of-custody procedures, machine certification, and observer access are largely performative: they generate confidence signals without providing independent verification of actual ballot integrity or counting accuracy. Proprietary systems prevent meaningful audit. Security procedures exist to satisfy appearance standards rather than achieve technical verification.",
+    "perspectival_gap": "The constraint demonstrates maximum perspectival divergence. Election administration sees Rope (coordination). Incumbent parties see Rope (benefit). Disenfranchised voters see Snare (extraction without benefit). Marginalized communities see Snare (systematic targeting). Voting rights organizations see Tangled Rope (mixed). Legacy infrastructure sees Piton (theater). The analytical observer risks Mountain (naturalization). This gap is diagnostic: the 'integrity' framing successfully obscures extraction by making suppression mechanisms appear as technical requirements rather than political tools. The gap reveals how beneficiaries (administrations, incumbents) perceive the same structure as neutral coordination while victims perceive it as oppression.",
+    "directionality_logic": "Directionality is derived from the asymmetric structural relationship to the constraint. Election administration authorities and incumbent parties occupy beneficiary positions with high exit options (they can modify procedures, change technology, adjust timelines) \u2014 low d values producing negative effective extraction (they experience the constraint as coordination, not burden). Disenfranchised voters and marginalized communities occupy victim positions with zero exit options (they cannot avoid the voting system and cannot escape barriers) \u2014 high d values (0.95+) producing maximum f(d) and maximum experienced extraction. Voting rights organizations occupy constrained positions with some exit options (litigation, advocacy, organizing) but significant barriers to enforcement \u2014 moderate d values (0.55-0.65) producing moderate-high experienced extraction. The pipeline computes d from these context parameters; beneficiaries experience coordination, victims experience extraction.",
+    "mandatrophy_analysis": "MANDATROPHY STRUCTURE: The constraint avoids mandatrophy by exhibiting genuine coordinate coordination function \u2014 organizing distributed voting IS difficult and requires standardization. However, the classification depends entirely on whether we measure pure coordination (Rope) or measure coordination + suppression (Tangled Rope). The engine resolves this by including both beneficiary (coordination function) and victim (suppression mechanism) perspectives. The tangled_rope classification is justified because both coordination AND asymmetric extraction are present: beneficiaries genuinely gain coordination value; victims genuinely experience extraction without coordination benefit. The constraint is not pure extraction (Snare) because administrations benefit from genuine procedural requirements. The constraint is not pure coordination (Rope) because suppression mechanisms concentrate on opposition demographics, proving intentional extraction. The mandatrophy is resolved: the constraint is Tangled Rope from the analytical perspective, with perspectival variation for different agents."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "voter_registration_databases",
+      "provisional_ballot_invalidation",
+      "voter_purge_mechanisms",
+      "voter_identification_requirements"
+    ],
+    "dual_formulation_note": "Voting system integrity decomposes into multiple structurally distinct constraints with different \u03b5 values: voter_registration_databases (\u03b5\u22480.42, coordination database), provisional_ballot_invalidation (\u03b5\u22480.68, extractive suppression), voter_purge_mechanisms (\u03b5\u22480.72, targeted extraction), voter_identification_requirements (\u03b5\u22480.55, mixed barrier/coordination). The parent constraint aggregates these mechanisms and their cumulative extraction effect."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

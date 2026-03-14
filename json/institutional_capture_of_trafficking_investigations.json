@@ -1,0 +1,205 @@
+{
+  "header": {
+    "constraint_id": "institutional_capture_of_trafficking_investigations",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "icti"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Institutional Capture of Trafficking Investigations",
+    "topic_domain": "law_enforcement/organized_crime/institutional_capture",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "corrupt_law_enforcement_actors",
+      "trafficking_networks",
+      "political_interests_protecting_traffickers"
+    ],
+    "victims": [
+      "trafficking_survivors",
+      "genuine_investigators",
+      "law_enforcement_institutional_integrity",
+      "investigative_independence"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Trafficking Survivor",
+      "comment": "PERSPECTIVE 1: TRAFFICKING SURVIVOR (SNARE) \u2014 Trapped within the investigative system designed to help them. Cannot exit without abandoning hope of justice. Suppressed by institutional indifference, corruption, and the threat of re-trafficking. Maximum experienced extraction \u2014 the system extracts compliance and abandons protection."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Genuine Investigator",
+      "comment": "PERSPECTIVE 2: GENUINE INVESTIGATOR (SNARE) \u2014 Career trapped within captured institutions. Cannot exit without professional destruction. Suppressed by institutional retaliation, case reassignment, and career sabotage. High extraction \u2014 institutional capture redirects investigative effort away from high-value targets and toward political scapegoats."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Corrupt Law Enforcement Actor",
+      "comment": "PERSPECTIVE 3: CORRUPT LAW ENFORCEMENT ACTOR (ROPE) \u2014 Experiences the constraint as coordination among colluding parties. Benefits from institutional protection mechanisms (case file access, investigative immunity, priority information). Low effective extraction \u2014 the system actively protects and subsidizes this actor."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Trafficking Network Operator",
+      "comment": "PERSPECTIVE 4: TRAFFICKING NETWORK OPERATOR (SNARE) \u2014 Benefits from institutional capture with constrained risk. Can exit through relocation or network dissolution, but institutional protection reduces pressure to do so. Suppression of competing networks and genuine investigators enables market consolidation. High extraction \u2014 the network captures state investigative capacity for competitive advantage."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Anti-Trafficking Bureau (Institutional View)",
+      "comment": "PERSPECTIVE 5: ANTI-TRAFFICKING BUREAU (PITON) \u2014 Performs victim support and investigation theater while institutional capture degrades actual function. The bureau sees itself as tackling trafficking but is systematically prevented from investigating high-value targets. Theater ratio is high because statistics, victim testimonies, and press releases substitute for actual case resolution. Maintains appearance of institutional function through performative metrics while core function is captured."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Anti-Trafficking Coalition (Organized Agents)",
+      "comment": "PERSPECTIVE 6: ANTI-TRAFFICKING COALITION (TANGLED ROPE) \u2014 NGOs, survivor advocates, and human rights organizations perceive both genuine coordination (information sharing, victim support infrastructure) and institutional extraction (cases closed without resolution, resources diverted from high-impact investigations, evidence suppression). Coalition has exit options (publicizing corruption, international escalation) but faces substantial retaliation costs. Partial agency through alternative reporting channels and media pressure, but constrained by institutional gatekeeping of evidence and legal remedies."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (False Summit Risk)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN \u2014 FALSE SUMMIT RISK) \u2014 Risk of naturalizing institutional capture as an immutable structural property of trafficking investigations in nation-states. The analytical view might frame institutional corruption as inherent to the problem (trafficking networks' scale and power) rather than as a contingent failure of institutional design and accountability. The engine's false summit detector identifies whether this mountain classification reflects genuine structural limits or naturalization of captured institutional arrangements."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "extent_of_institutional_capture",
+      "question": "Is the institutional capture systemic (affecting the entire investigative hierarchy and case selection process) or localized (corrupting specific actors within otherwise functional institutions)?",
+      "resolution_mechanism": "Audit of case dismissal rates, case reassignment patterns, and investigator turnover in anti-trafficking units; comparison with jurisdictions with independent oversight; analysis of case selection bias toward low-value targets",
+      "impact": "If systemic: classification shifts toward snare with low exit options for all agents except beneficiaries. If localized: alternative pathways exist (transferring cases to non-captured units, external investigation), shifting some perspectives toward tangled_rope with constrained exit. Theater ratio interpretation changes accordingly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of institutional capture across anti-trafficking system"
+    },
+    {
+      "id": "corruption_mechanism_structural_vs_individual",
+      "question": "Is corruption driven by individual bad actors in positions of power, or by structural incentives that make corruption the rational choice within the institutional framework?",
+      "resolution_mechanism": "Analysis of corruption patterns across personnel transitions; study of career incentives and promotion criteria; comparison of corruption rates when individual corrupt actors are removed vs when institutional incentive structures remain unchanged",
+      "impact": "If individual: removing bad actors might restore function (high sensitivity to personnel change). If structural: corruption persists despite personnel turnover, requiring institutional redesign. Affects projections of whether genuine investigators can eventually regain control.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether corruption is driven by structural incentives or individual actors"
+    },
+    {
+      "id": "survivor_exit_options_alternative_pathways",
+      "question": "Do survivors have genuine alternative pathways to justice outside captured institutional systems (international investigation, civil remedies, NGO-led documentation), or does institutional capture foreclose all effective options?",
+      "resolution_mechanism": "Documentation of alternative pathways survivors have accessed; comparison of case resolution rates through institutional vs alternative channels; analysis of whether captured institutions actively suppress alternative pathways",
+      "impact": "If alternatives exist: survivor exit_options shift from fully 'trapped' to 'constrained' (high cost but possible). If alternatives are suppressed: trapped classification confirmed. Affects whether the survivor perspective remains snare or shifts toward tangled_rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Availability of survivor exit options outside institutional systems"
+    },
+    {
+      "id": "genuine_investigator_coalition_capacity",
+      "question": "Can genuine investigators within captured institutions organize collectively to expose or circumvent capture, or does institutional fragmentation and retaliation prevent coalition formation?",
+      "resolution_mechanism": "Historical analysis of investigator whistleblowing attempts, internal reform movements, and leaked evidence from genuine investigators; study of institutional barriers to collective action (geographic separation, information compartmentalization, retaliation mechanisms)",
+      "impact": "If coalition capacity exists: organized agents within institutions can create pressure from inside, potentially shifting to tangled_rope perspective for genuine investigators. If prevented: genuine investigators remain isolated, maintaining snare perspective. Affects feasibility of endogenous institutional reform.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Capacity of genuine investigators to organize collectively"
+    },
+    {
+      "id": "political_incentives_protecting_trafficking",
+      "question": "Are political interests protecting trafficking networks rooted in campaign finance, criminal syndicates with state-level influence, or other structural sources? Can these incentives be shifted through political change?",
+      "resolution_mechanism": "Analysis of campaign finance and trafficking-linked organizations; documentation of political protection mechanisms; comparison of trafficking enforcement across political regimes and administrations",
+      "impact": "If rooted in elections/politics: institutional capture might be temporary and reversible with political change (scaffold perspective becomes viable). If rooted in criminal syndicates with deep state penetration: capture is more structural and durable (snare perspective confirmed). Affects timeline and feasibility of resolution.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Sources of political protection for trafficking networks"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Institutional capture of trafficking investigations creates a structural trap where law enforcement systems designed to protect trafficking survivors instead protect trafficking networks from investigation. Corrupt officials, politically-connected traffickers, and institutional gatekeepers extract benefits from investigations redirected toward low-value targets while high-value networks operate with state-level protection. Genuine investigators are career-trapped within corrupted institutions; survivors are trapped within investigations that serve capture rather than justice. The constraint exhibits high extractiveness (0.68) and high suppression (0.72), reflecting that victims have no exit from the system designed to help them, while beneficiaries are institutionally protected. Theater ratio (0.65) reflects that anti-trafficking institutions perform victim support, statistical reporting, and case prosecution theater while actual trafficking networks remain protected through case dismissal, evidence suppression, and investigator reassignment. This is a mature snare constraint with limited endogenous reform capacity unless genuine investigators can organize collectively or political incentives shift.",
+    "key_agents": [
+      "Trafficking Survivors: Primary victims (powerless/trapped) \u2014 no exit from system designed to help them; suppressed by institutional indifference and corruption",
+      "Genuine Investigators: Secondary victims (powerless/trapped) \u2014 career-trapped within captured institutions; suppressed by retaliation and case reassignment",
+      "Corrupt Law Enforcement Actors: Primary beneficiaries (institutional/arbitrage) \u2014 enjoy institutional protection and access to investigative resources; low effective extraction because system protects them",
+      "Trafficking Networks: Secondary beneficiaries (moderate/constrained) \u2014 benefit from state-level protection and investigative immunity; suppressed competition allows consolidation",
+      "Anti-Trafficking Bureau: Institutional performer (institutional/constrained) \u2014 maintains appearance of function through theater (victim statistics, case prosecutions) while core investigative function is captured",
+      "Anti-Trafficking Coalition: Organized advocates (organized/constrained) \u2014 perceive mixed coordination (victim support infrastructure) and extraction (cases diverted, evidence suppressed); some exit capacity through media and international escalation but face retaliation costs",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing institutional capture as structural property of trafficking investigation rather than contingent institutional failure"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint systematically diverts investigative resources away from high-value trafficking networks toward prosecuting lower-level operatives, survivors (via victim testimony coercion), and other political targets. Corrupt officials capture case file access and investigative priority for personal benefit and network protection. The trajectory from 0.45 to 0.68 over the measurement interval reflects accumulation of extraction as institutional capture deepens and alternative investigative pathways are progressively foreclosed. Suppression (0.72): Very high. Victims face multiple suppression mechanisms: institutional gatekeeping of access to justice, threat of re-trafficking if they refuse cooperation with captured system, evidence suppression through case reassignment and dismissal, career destruction for genuine investigators who resist, and elimination of alternative reporting pathways. Survivors cannot exit without abandoning justice claims; genuine investigators cannot exit without professional destruction. Theater ratio (0.65): Moderate-high. Anti-trafficking institutions produce victim testimonies, statistical metrics (cases prosecuted, survivors assisted), awareness campaigns, and public case prosecutions while allowing high-value networks to operate with state protection. The theater has increased over the interval as institutional capture has deepened and performance metrics have substituted for actual investigative outcomes. Extractiveness has increased faster than theater, indicating that the system is becoming simultaneously more performative and more extractive \u2014 a sign of maturation toward pure snare (\u03b8 \u2192 0).",
+    "perspectival_gap": "The perspectival gap between beneficiary (rope) and victim (snare) perspectives is diagnostic of institutional capture. In a functional system, beneficiaries might also see rope (mutual coordination) while victims might see constrained or mobile exit. In capture, beneficiaries and victims experience completely different constraint types from the same institutional structure. This gap is the fingerprint of extraction masquerading as coordination. The piton perspective (theater substituting for function) is the mechanism by which capture disguises snare as rope \u2014 institutional performance metrics create the illusion of coordination while actual extraction accelerates.",
+    "directionality_logic": "Directional flow is from powerless victims (survivors, genuine investigators) toward institutional beneficiaries (corrupt officials, protected networks) and political interests. Exit options differentiate the groups: beneficiaries have exit through relocation or organizational change; victims have no exit without abandoning their core interests. Corrupt law enforcement benefits from investigative access and institutional protection (arbitrage exit available for them if conviction pressure increases). Genuine investigators cannot transfer out without career destruction (trapped exit). Survivors cannot access alternative systems while institutional pathways are captured (trapped exit). The high suppression (0.72) reflects that institutional arrangements actively prevent exit \u2014 survivors are threatened with re-trafficking if uncooperative; investigators face retaliation for pursuing true leads; alternative reporting channels are suppressed.",
+    "mandatrophy_analysis": "RESOLUTION: This constraint avoids mandatrophy through clear victim/beneficiary differentiation and absence of genuine coordination claims. The tangled rope perspective (coalition view) acknowledges real coordination infrastructure (victim support networks, information sharing) alongside systematic extraction (case diversion). This is not mandatrophy \u2014 it is honest structural complexity: some coordination components exist within a broader snare mechanism. The key mandate gate: does the constraint serve its stated function (protecting trafficking survivors) or does it systematically prevent that function? The evidence suggests systematic prevention, confirming snare classification. The theater ratio (0.65) is high but not dominant (\u22650.70), placing this as snare-with-performative-components rather than piton (pure theatrical degradation). The constraint could become piton only if genuine investigation capacity fully decayed and institutions performed only victim statistics and political theater \u2014 it is currently in the snare category because extraction (beneficiary capture, network protection) is still the primary mechanism, not yet replaced by pure performance."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "trafficking_network_expansion",
+      "survivor_retraumatization_by_state",
+      "investigator_brain_drain"
+    ],
+    "dual_formulation_note": "Institutional capture of trafficking investigations is upstream of specific network trafficking operations and downstream of political-level decisions to protect trafficking-linked actors. The constraint has its own extractiveness (0.68) reflecting the institutional mechanism; individual trafficking networks have their own extractiveness values reflecting their operational scope. The separation enables analysis of whether addressing political corruption would restore investigative function or whether structural incentives maintain capture across political cycles."
+  },
+  "directionality_overrides": []
+}

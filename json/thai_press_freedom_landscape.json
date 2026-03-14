@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "thai_press_freedom_landscape",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "thai_press"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Thai Press Freedom Constraint",
+    "topic_domain": "political/media/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_security_apparatus",
+      "incumbent_power_holders"
+    ],
+    "victims": [
+      "independent_journalists",
+      "critical_media_outlets",
+      "democratic_discourse"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Independent Journalist",
+      "comment": "PERSPECTIVE 1: INDEPENDENT JOURNALIST (SNARE) \u2014 Trapped by legal restrictions (Computer Crimes Act, l\u00e8se-majest\u00e9 laws), economic dependency on state-controlled advertising revenue, and physical risk. Cannot exit journalism without abandoning professional identity; cannot practice journalism without accepting surveillance and legal vulnerability. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Critical Media Outlet",
+      "comment": "PERSPECTIVE 2: CRITICAL MEDIA OUTLET (SNARE) \u2014 Constrained by advertising monopolies, broadcast licensing control, and periodic legal threats. Can operate at reduced capacity (online-only, self-censored content) but faces high costs to exit (loss of audience, market irrelevance). No genuine coordination function exists \u2014 the constraint exists to suppress alternatives."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State Security Apparatus",
+      "comment": "PERSPECTIVE 3: STATE SECURITY APPARATUS (ROPE) \u2014 Perceives the constraint as a coordination mechanism for national stability. Benefits from information control; experiences the constraint as solving a collective action problem (preventing destabilizing speech). The apparatus has exit options (can relax controls) but does not exercise them because the constraint aligns with institutional interests. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Compliant Media Conglomerate",
+      "comment": "PERSPECTIVE 4: COMPLIANT MEDIA CONGLOMERATE (TANGLED ROPE) \u2014 Structurally powerful (ownership of major outlets) but accepts state guidance through regulatory negotiation. Benefits from stability and preferential advertising access; bears costs of editorial control and audience skepticism. Coordination function (protecting oligopolistic market structure) is genuine; extraction is asymmetric (profitable for the conglomerate, constraining for public discourse)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The International Press Freedom Coalition",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL PRESS FREEDOM COALITION (SCAFFOLD) \u2014 Organized actors (UNESCO, CPJ, international news agencies) experience the constraint as temporary through the lens of generational normative change and external pressure. See sunset mechanism: digital technologies, regional integration (ASEAN), and demographic shifts creating younger generations with access to information via VPN and encrypted messaging. Sunset estimated at 15-30 years as digital natives become political majority."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "The Analytical Observer (Institutional Inertia View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (PITON) \u2014 From civilizational timescale, the press freedom constraint persists through institutional inertia. The mechanics that justified information control during Cold War and communist insurgency threat (1950s-1980s) continue in performative form despite threat reduction. Theater ratio high (0.65) \u2014 media freedom is discussed in official rhetoric, independent outlets exist as symbolic exceptions, constitutional guarantees nominally protect press, yet actual extraction mechanisms persist unchanged. The constraint is maintained not because it solves the original coordination problem but because dismantling it would require institutional reform and power redistribution."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "computer_crimes_act_scope_ambiguity",
+      "question": "Is the Computer Crimes Act a proportionate response to genuine cybersecurity threats or a pretext for suppressing political speech?",
+      "resolution_mechanism": "Comparative analysis of enforcement: ratio of prosecutions targeting actual cybercrime vs political speech; jurisdiction correlation between security incidents and prosecution patterns",
+      "impact": "If genuine cybersecurity tool: classification shifts toward tangled_rope (coordination function is real). If pretext: classification reinforces snare (pure extraction mechanism).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Computer Crimes Act functions as security tool or speech suppression mechanism"
+    },
+    {
+      "id": "lese_majeste_enforcement_discretion",
+      "question": "Does l\u00e8se-majest\u00e9 law enforcement reflect genuine protection of royal institution or provide discretionary tool for political suppression?",
+      "resolution_mechanism": "Analysis of prosecution patterns: correlation between enforcement waves and political transitions; distribution of defendants across class/power levels; judicial consistency in sentencing",
+      "impact": "If institutional protection: snare classification stands (asymmetric extraction justified by state security). If political tool: snare deepens into pure extraction mechanism with no coordination rationale.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "L\u00e8se-majest\u00e9 enforcement pattern and discretionary scope"
+    },
+    {
+      "id": "digital_substitution_timeline",
+      "question": "How quickly will encrypted messaging, VPN access, and digital-native cohorts make centralized press control technically or politically obsolete?",
+      "resolution_mechanism": "Tracking of digital-media adoption rates, VPN penetration, encrypted messaging platform usage; demographic analysis of news consumption by age cohort; generational attitude shifts toward information access",
+      "impact": "If timeline < 10 years: scaffold perspective accelerates \u2014 sunset is imminent. If timeline > 30 years: scaffold is aspirational; state control mechanism is more durable than international optimism suggests.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Digital technology and demographic substitution timeline for press control"
+    },
+    {
+      "id": "military_coup_risk_and_constraint_duration",
+      "question": "How much of the current press freedom constraint is justified by actual coup/destabilization risk vs. how much reflects historical threat perception that is no longer proportionate?",
+      "resolution_mechanism": "Risk assessment: comparative stability data (coup frequency 2000-2025 vs 1960-2000); analysis of insurgency/separatist threat reduction; expert panel assessment of current vs historical threat magnitude",
+      "impact": "If actual risk is high: snare classification justified as security necessity (though still extraction). If risk is low and threat perception is historical: piton classification strengthens \u2014 constraint persists through obsolete institutional logic rather than current security needs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Actual coup and destabilization risk versus historical threat perception"
+    },
+    {
+      "id": "identity_lock_mechanism_for_journalists",
+      "question": "Are Thai journalists constrained by material barriers (legal, economic, physical) or by identity fusion with particular editorial lines that make independent practice feel impossible?",
+      "resolution_mechanism": "Qualitative research: interviewer data on journalists' sense of agency; trajectory analysis of journalists who exit to regional/international outlets (do they rediscover agency?); comparison of self-reported barriers to actual prosecutions",
+      "impact": "If primarily material barriers: trapped exit option is correct; snare classification stands. If identity fusion dominates: identity_locked exit option better captures the mechanism; classification may shift to rope from identity-locked perspective at biographical timescale.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether journalist constraint is material or identity-based"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.67
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Thai press freedom operates as a complex constraint system in which state security apparatus, incumbent power holders, and institutional actors coordinate information control through overlapping legal mechanisms (Computer Crimes Act, l\u00e8se-majest\u00e9 laws, broadcast licensing), economic leverage (advertising monopolies, market access), and periodic enforcement escalation. The constraint exhibits asymmetric extraction: state security apparatus experiences it as coordination (national stability mechanism), while independent journalists and critical outlets experience it as pure extraction (snare) with material barriers to exit and no independent function. The constraint's theater ratio (0.65) reflects that formal press freedoms are enshrined constitutionally and discussed rhetorically, while actual enforcement creates a gap between nominal rights and operational reality. The extractiveness value (0.68) has increased over the measurement interval (from 0.52 to 0.68 over 10-20 years), indicating accumulation of enforcement mechanisms and tightening of state control rather than liberalization. The constraint appears durable through institutional inertia (piton perspective) while simultaneously facing long-term digital and demographic pressures that may erode state control capacity (scaffold perspective with generational sunset logic).",
+    "key_agents": [
+      "Independent Journalists: Primary victim (powerless/trapped) \u2014 face legal vulnerability, economic dependence, and physical risk; no meaningful exit option",
+      "Critical Media Outlets: Primary victim (moderate/constrained) \u2014 constrained by advertising monopolies, licensing control, and legal threats; can reduce operations but cannot exit profitably",
+      "State Security Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 experiences constraint as coordination mechanism for national stability; has exit options but does not exercise them",
+      "Incumbent Power Holders: Secondary beneficiary (institutional/arbitrage) \u2014 benefit from suppressed opposition narratives; aligned with state security apparatus interests",
+      "Compliant Media Conglomerate: Mixed actor (powerful/mobile) \u2014 genuinely powerful but structurally embedded in state-coordinated information ecosystem; benefits from market protection while constrained by editorial guidance",
+      "International Press Freedom Coalition: Organized external actor (organized/constrained) \u2014 perceive constraint as temporary and see sunset mechanism through digital/demographic change",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risk naturalizing threat perception from outdated historical periods as current security necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High, reflecting significant asymmetric extraction from journalists and critical outlets. The value is not 0.85+ because some coordination function exists (state perception of stability benefit is genuine, even if not universally accepted), and some outlets maintain operational capacity through self-adjustment rather than total suppression. The upward trajectory (0.52\u21920.68 over measurement interval) indicates compression of press freedom over time, not liberalization. Suppression (0.72): High. Multiple structural barriers exist: legal restrictions (Computer Crimes Act \u00a7\u0e22\u0e0714.2, l\u00e8se-majest\u00e9 law \u00a7\u0e22\u0e07112), economic dependency on state-controlled advertising and market access, physical risk from enforcement, and surveillance capacity. These are not trivial costs \u2014 they represent structural immobility for many journalists. However, suppression is not 0.95 because some outlets do operate openly, some journalists do practice critical reporting (with elevated risk), and escape routes exist (international bureaus, digital platforms, private investigation). Theater ratio (0.65): Moderate-high. Thailand has constitutional press guarantees, independent outlets are nominally permitted, media pluralism is discussed in official discourse, and occasional prosecutions create the appearance of rule-of-law enforcement. Yet the enforcement pattern is selective (political speech suppressed more than financial crime exposure), and the gap between nominal freedoms and operational reality is substantial. The theater ratio increased over the interval as state control mechanisms became more sophisticated and legalized.",
+    "directionality_logic": "The journalist perspective (powerless/trapped) derives d \u2248 0.95 from the victim position and trapped exit options. No arbitrage escape exists; structural mobility is minimal (cannot practice journalism without vulnerability). The apparatus perspective (institutional/arbitrage) derives d \u2248 0.10 from the beneficiary position and arbitrage exit options (can relax controls if desired). The compliant conglomerate (powerful/mobile) derives d \u2248 0.40 from the mixed position: benefits from market protection but not as much as apparatus, and has higher exit capacity (could break with state guidance but chooses not to). These directionality values feed into the sigmoid f(d) to produce experienced extractiveness chi. Journalists experience near-maximal chi; apparatus experiences near-zero or negative chi (coordination benefit); conglomerate experiences moderate chi.",
+    "perspectival_gap": "The primary perspectival gap is between the victim (independent journalist) and beneficiary (state apparatus) positions. The journalist sees a snare \u2014 pure extraction with no coordination function from their position. The apparatus sees a rope \u2014 a coordination mechanism for collective stability. The compliant conglomerate sees a tangled rope \u2014 genuine market protection and stability coordination mixed with editorial constraints that reduce content quality and audience reach. The international coalition sees a scaffold with sunset \u2014 viewing the constraint as temporary and overcome by digital/demographic forces. The piton perspective reveals that much of the enforcement theater (courtroom procedures, written law) persists despite reduced threat justification, suggesting institutional inertia rather than current security necessity. The analytical observer risks the false summit of naturalizing this as inherent to governance, when it is actually a contingent institutional choice.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint avoids mislabeling by correctly identifying the asymmetric extraction (snare from victim perspective) while acknowledging the genuine coordination function for state security apparatus (rope from apparatus perspective). The mandatrophy is resolved by accepting that the constraint IS both snare and rope, depending on structural position. The error would be to collapse this to a single type: calling it 'just a rope' naturalizes extraction, while calling it 'just a snare' erases the genuine stability coordination function. The tangled rope classification (for the compliant conglomerate) captures the mixed position precisely. The piton classification reveals that theater ratio is increasing while the underlying justification (coup/destabilization risk) may be decreasing, suggesting the constraint's lifetime is bounded by institutional reform pressure and demographic change."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "thai_lese_majeste_law_enforcement",
+      "thai_computer_crimes_act_scope",
+      "thai_broadcast_licensing_control",
+      "thai_digital_information_access"
+    ],
+    "dual_formulation_note": "Thai press freedom decomposes into four structurally distinct constraints: the general landscape (this story, \u03b5=0.68, snare from victim perspective), the specific l\u00e8se-majest\u00e9 enforcement mechanism (higher \u03b5, pure extraction), the Computer Crimes Act discretionary application (lower \u03b5 initially, higher \u03b5 recently), and the broadcast licensing system (moderate \u03b5, more coordination-like). Each has different empirical bases and different beneficiary/victim profiles. The landscape story covers the aggregate effect; decomposition enables analysis of specific mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

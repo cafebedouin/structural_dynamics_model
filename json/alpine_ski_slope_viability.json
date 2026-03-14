@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "alpine_ski_slope_viability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "alpine"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Alpine Ski Slope Viability Under Climate Constraints",
+    "topic_domain": "environmental/economic/tourism",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ski_resort_operators",
+      "mountain_equipment_manufacturers"
+    ],
+    "victims": [
+      "alpine_snowpack_integrity",
+      "local_water_systems",
+      "mountain_ecosystem_services"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Alpine Snowpack and Mountain Ecology",
+      "comment": "PERSPECTIVE 1: ALPINE SNOWPACK AND MOUNTAIN ECOLOGY (SNARE) \u2014 Cannot exit or reorganize in response to extraction. Faces declining water availability, permafrost degradation, and habitat loss driven by both warming climate and intensive ski slope infrastructure. Bears extraction costs with zero benefit and zero exit capacity. Maximum suppression \u2014 the constraint operates through physical environmental degradation with no alternative mechanism available."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Local Mountain Communities",
+      "comment": "PERSPECTIVE 2: LOCAL MOUNTAIN COMMUNITIES (TANGLED ROPE) \u2014 Constrained by economic dependency on ski tourism (limited alternative income sources, property values tied to resort viability) but also benefit from the coordination function: ski resorts provide infrastructure, employment, and access to mountain recreation. High suppression due to economic lock-in, but not maximum \u2014 some communities have begun economic diversification. The constraint coordinates tourism access while extracting from local environmental commons."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Ski Resort Operating Companies",
+      "comment": "PERSPECTIVE 3: SKI RESORT OPERATING COMPANIES (ROPE) \u2014 Primary beneficiaries with arbitrage options (can relocate operations, transition to summer recreation, shift investment to other regions). Experience the constraint as a coordination mechanism: slope maintenance, lift infrastructure, and snowmaking systems enable their core service. Effective extraction runs toward them \u2014 they capture economic surplus from tourism while distributing environmental costs elsewhere. Low experienced suppression from their position."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Climate Adaptation and Certification Bodies",
+      "comment": "PERSPECTIVE 4: CLIMATE ADAPTATION AND CERTIFICATION BODIES (SCAFFOLD) \u2014 Organized actors (climate adaptation committees, sustainable tourism certification programs, alpine watershed management authorities) see ski slope viability as a temporary coordination problem with a sunset clause. Investments in lower-altitude winter sports alternatives, summer-focused recreation infrastructure, and watershed restoration represent the exit pathway. Theater ratio low because adaptation infrastructure is functionally oriented. Sunset horizon: 20-40 years as lower-altitude resorts become unviable and communities transition."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International Tourism Industry Capital",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL TOURISM INDUSTRY CAPITAL (TANGLED ROPE) \u2014 Powerful actors with high mobility (multinational resort operators, investment funds, equipment manufacturers) experience the constraint as coordinating access to premium winter tourism while extracting from environmental commons and redistributing climate adaptation costs to local communities. Mobile exit options (shift capital to other markets) but also benefit from coordination of alpine destination branding. Asymmetric extraction: capital captures returns while externalizing climate impacts."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Thermodynamic/Climatological Constraint (False Summit)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / THERMODYNAMIC VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some ski slope viability constraints reflect physical/thermodynamic limits: if regional temperature rises above critical thresholds, natural snow accumulation becomes impossible regardless of human choice. This perspective classifies the constraint as an immutable mountain. However, structural data reveals significant extractive choice-space: artificial snowmaking technology, slope aspect optimization, and elevation migration represent agency within thermodynamic bounds. The engine will flag this as a false summit \u2014 naturalizing contingent infrastructure choices (when to stop snowmaking, which slopes to maintain, how much water to extract) as physical necessity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "temperature_threshold_ambiguity",
+      "question": "What regional temperature threshold renders ski slope viability genuinely impossible versus merely economically marginal?",
+      "resolution_mechanism": "Historical data from resorts at climate boundaries; comparison of natural snow yield vs elevation and latitude; snowmaking cost-benefit analysis at different temperature regimes",
+      "impact": "If threshold is -2\u00b0C average January temperature: many resorts remain viable through adaptation. If threshold is -1\u00b0C: viability becomes severely constrained within 20 years. Determines whether the constraint is mountain (threshold imminent/crossed) or tangled_rope (adaptation strategies remain viable).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Regional temperature threshold for ski slope viability limits"
+    },
+    {
+      "id": "snowmaking_groundwater_dependency",
+      "question": "Does intensive snowmaking create structural dependency on alpine groundwater reserves that degrades faster than they recharge?",
+      "resolution_mechanism": "Hydrogeological assessment of aquifer recharge rates vs snowmaking extraction; long-term monitoring of spring flows and stream baseflow in regions with high-intensity snowmaking",
+      "impact": "If degradation rate exceeds recharge: groundwater extraction becomes the binding constraint, not temperature. Suppression shifts from climate to water scarcity \u2014 constraint intensifies. If recharge is sufficient: adaptation through technology (reclaimed water, treated wastewater) remains viable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether snowmaking creates unsustainable groundwater dependency"
+    },
+    {
+      "id": "ecosystem_service_collapse_lag",
+      "question": "What is the lag time between intensive ski slope infrastructure and detectable alpine ecosystem service degradation (pollination, water cycling, carbon storage)?",
+      "resolution_mechanism": "Paired bioregional assessment comparing managed alpine slopes with protected reference slopes; long-term monitoring of pollinator abundance, soil carbon, and hydrological function",
+      "impact": "If lag is < 10 years: ecosystem costs manifest quickly, suppression increases, alternative economic pathways become visible. If lag is > 30 years: extraction appears costless in the medium term, suppression remains low, adaptive transition windows close. Affects whether scaffold perspective's sunset timeline is realistic.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Time lag between ski infrastructure and detectable ecosystem degradation"
+    },
+    {
+      "id": "lower_altitude_viability_threshold",
+      "question": "Below what elevation (or in what latitude zones) does ski tourism become structurally unviable even with full adaptation infrastructure?",
+      "resolution_mechanism": "Historical analysis of closure data; cost-benefit modeling of snowmaking and season length at different elevations; comparison of operating margins across elevation bands",
+      "impact": "If viability threshold is >2000m elevation: majority of current resorts remain viable through adaptation. If threshold is >2500m: significant operational losses force consolidation and capital reallocation. Determines whether scaffold perspective's economic transition is feasible or if collapse dynamics dominate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Elevation threshold below which ski tourism becomes unviable"
+    },
+    {
+      "id": "local_community_capture_resilience",
+      "question": "Can local mountain communities maintain economic resilience through diversification, or are they locked into ski dependency by infrastructure sunk costs and identity?",
+      "resolution_mechanism": "Case studies of communities undergoing transition away from ski dependency; analysis of property value cascades, employment retraining success, and cultural identity shifts",
+      "impact": "If communities can diversify: suppression decreases over time, scaffold exit pathway becomes real. If lock-in is strong: communities become increasingly trapped even as ski viability declines, extending the snare period. Affects whether tangled_rope classification persists or collapses toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Local community economic resilience and diversification capacity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.47
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Alpine ski slope viability represents a structural constraint that combines physical climate limits with economic extraction and institutional lock-in. The constraint is not simply a mountain (immutable thermodynamic limit) but rather a tangled hybrid: genuine coordination function (ski resorts organize access to winter recreation and maintain alpine infrastructure) overlaid with asymmetric extraction (environmental costs distributed to alpine ecosystems and local communities while financial benefits concentrate among resort operators and tourism capital). The constraint exhibits different classifications from different structural positions: the alpine snowpack sees pure extraction (snare), local communities see mixed coordination-extraction (tangled rope), resort operators see coordination benefits (rope), and organized climate adaptation actors see a temporary problem with a sunset clause (scaffold). The constraint's evolution over the interval shows increasing extractiveness (from 0.35 to 0.65) as snowmaking intensity increases and climate margins narrow, while theater ratio remains relatively stable and low \u2014 indicating that the constraint's mechanism is functionally oriented rather than performatively maintained.",
+    "key_agents": [
+      "Alpine Snowpack and Mountain Ecosystems: Primary victim (powerless/trapped) \u2014 bears full extraction cost from reduced water availability, permafrost degradation, and habitat disruption with zero exit capacity or benefit",
+      "Local Mountain Communities: Secondary victim and partial beneficiary (moderate/constrained) \u2014 economically dependent on ski tourism with limited diversification options; benefit from employment and infrastructure but bear environmental externalities",
+      "Ski Resort Operating Companies: Primary beneficiary (institutional/arbitrage) \u2014 capture tourism revenue and can relocate operations or diversify; experience the constraint as enabling their core service",
+      "International Tourism Capital: Secondary beneficiary (powerful/mobile) \u2014 multinational operators and investment funds extract returns globally with high exit options and low constraint exposure",
+      "Climate Adaptation and Watershed Authorities: Organized transition actors (organized/constrained) \u2014 developing alternative economic pathways and ecosystem restoration strategies with generational timeline",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks confusing thermodynamic limits with contingent infrastructure choices regarding when adaptation stops being viable"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, increasing. The constraint shows significant extraction: resort operators externalize climate adaptation costs onto alpine ecosystems and communities while capturing tourism surplus. Extractiveness increases over the interval (0.35\u21920.65) as climate pressure forces intensification of snowmaking and infrastructure, pushing more costs onto environmental commons. Suppression (0.62): Moderate-high. Significant barriers include: (1) economic lock-in of communities through employment and property values; (2) infrastructure sunk costs making mid-stream transitions costly; (3) technological path dependency on snowmaking systems; (4) limited alternative income sources in alpine regions. Suppression is not total because adaptation pathways exist (lower-altitude summer tourism, watershed services, conservation payments). Theater ratio (0.45): Moderate-low. The constraint operates primarily through functional mechanisms (slope maintenance, lift operations, snowmaking coordination) rather than performative ones. However, some theater exists in the 'sustainable tourism' branding and climate adaptation narratives that mask underlying ecosystem degradation.",
+    "directionality_logic": "Directionality derives from each agent's structural position relative to extraction flow. Alpine ecosystems and snowpack (trapped, powerless) experience maximum extraction \u2014 high d \u2192 high f(d). Local communities (constrained, moderate) bear costs but also benefit from employment \u2014 intermediate d. Resort operators (arbitrage, institutional) benefit from the constraint \u2014 low d \u2192 negative/low \u03c7. Powerful international tourism capital (mobile, powerful) experiences the lowest effective constraint \u2014 lowest d. The organizing principle: extractiveness flows from powerless trapped agents toward powerful mobile agents, mediated through institutional coordination mechanisms.",
+    "perspectival_gap": "The constraint demonstrates classic extraction masquerading as coordination. Resort operators and tourism capital perceive rope (coordination that enables their service) because they occupy beneficiary positions with arbitrage exit. Local communities perceive tangled rope because they gain employment while losing environmental commons and carrying adaptation costs. Alpine ecosystems perceive pure snare because they have no exit, no benefit, and no voice. Organized climate adaptation actors perceive scaffold because they have agency (planning capacity, institutional authority) and see a realistic sunset (economic transition to non-ski alpine tourism over 20-40 years). The civilizational observer risks falsely classifying the constraint as mountain by attributing to thermodynamic inevitability what is actually a choice about infrastructure intensity and economic model persistence.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by revealing that the classification depends entirely on the structural position of the observer. The question 'is ski slope viability coordinating or extracting?' has no single answer \u2014 it is both simultaneously. The rope classification from the operator's perspective is not wrong; it reflects their genuine experience of coordination. The snare classification from the ecosystem's perspective is not wrong; it reflects genuine asymmetric extraction with no compensation or exit. The constraint's identity lies in the presheaf over all perspectives: the same structural phenomenon enables coordination for some agents while extracting from others. The mandatrophy is resolved by accepting that tangled_rope is the analytically correct classification because it captures both functions explicitly \u2014 the constraint both solves a coordination problem (alpine tourism access) and generates asymmetric extraction (environmental costs borne by ecosystems and communities, profits captured by operators). False summit detection: the mountain classification naturalizes the constraint as a limit of physics when it is actually a contingent choice about snowmaking intensity, slope expansion, and when adaptation ceases. The thermodynamic foundation exists but leaves substantial choice-space for human institutions."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "alpine_water_cycle_disruption",
+      "mountain_biodiversity_decline",
+      "local_economic_dependency_lock"
+    ],
+    "dual_formulation_note": "Alpine ski slope viability decomposes into three structurally distinct constraints: (1) snowmaking resource allocation (coordination-focused, \u03b5\u22480.40); (2) ecosystem service degradation (extraction-focused, \u03b5\u22480.72); (3) community economic lock-in (identity-fusion focused, \u03b5\u22480.55). Each has different \u03b5 values and different beneficiary/victim configurations. This story captures the integrated constraint; upstream stories capture domain-specific mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

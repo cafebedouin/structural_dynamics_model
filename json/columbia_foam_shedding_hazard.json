@@ -1,0 +1,172 @@
+{
+  "header": {
+    "constraint_id": "columbia_foam_shedding_hazard",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cfsh"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.82,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Columbia Foam Shedding Hazard: Institutional Suppression of Known Launch Risk",
+    "topic_domain": "aerospace_safety/institutional_failure",
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
+    "victims": [
+      "crew_members",
+      "mission_safety",
+      "institutional_accountability"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Astronaut Crew",
+      "comment": "PERSPECTIVE 1: ASTRONAUT CREW (SNARE) \u2014 Trapped by institutional hierarchy and mission assignment protocols. Cannot refuse launch despite documented foam shedding hazard without career-ending consequences. Bears maximum existential risk with zero exit option. Suppression enforced through chain-of-command authority and the impossibility of unilateral mission abort without organizational permission."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Field Engineers and Safety Advocates",
+      "comment": "PERSPECTIVE 2: FIELD ENGINEERS AND SAFETY ADVOCATES (TANGLED ROPE) \u2014 Face career risk for dissent but possess some institutional voice through engineering channels. Benefit from the mission's existence (employment, research opportunities) while bearing costs of suppressed safety concerns. Constrained exit: whistleblowing carries career damage; internal escalation is partially effective but inefficient and career-costly."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "NASA Management and Program Administration",
+      "comment": "PERSPECTIVE 3: NASA MANAGEMENT (ROPE) \u2014 Experiences the constraint as coordination: maintaining launch schedules requires managing safety assessments, cost pressures, and institutional reputations. Arbitrage available through regulatory capture, cost-benefit framing, and risk acceptance procedures. Net beneficiary from the constraint's enforcement \u2014 extraction runs toward this agent."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Institutional Review and Certification Apparatus",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL REVIEW APPARATUS (PITON) \u2014 Flight Readiness Review, Safety Assessment documents, and sign-off procedures perform certification without genuine verification. The process maintains legitimacy through ritual (checklists, formal meetings, documented concurrences) rather than functional oversight. Theater ratio elevated by the gap between procedural rigor and actual risk management. Institutional inertia: the certification apparatus persists because alternatives would require organizational restructuring."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Naturalized Organizational Constraint (False Summit)",
+      "comment": "PERSPECTIVE 5: NATURALIZED ORGANIZATIONAL CONSTRAINT (FALSE SUMMIT) \u2014 From a distance, the foam shedding hazard might appear as an immutable law of engineering ('thermal protection systems inherently shed material') or organizational necessity ('spaceflight requires accepting calculated risks'). This perspective naturalizes what is structurally a contingent institutional choice: the decision to launch despite known hazard, enforced through hierarchy and information suppression. The engine's false summit detector will identify this as naturalization."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Structural Reality)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (STRUCTURAL REALITY) \u2014 From the structural data, the foam hazard is pure extraction: known risk imposed on powerless agents by institutional actors with exit options. High suppression (82%) reflects the enforcement of silence through hierarchy, information compartmentalization, and career risk. High extractiveness (78%) reflects the asymmetry: crew bears existential risk, management captures mission success benefits. The constraint persists not because the hazard is inevitable but because the institutional enforcement of launch-readiness overrides crew safety."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "acceptable_risk_framing",
+      "question": "Was the foam shedding risk genuinely 'acceptable' by engineering standards, or was it reclassified as acceptable to preserve schedule?",
+      "resolution_mechanism": "Historical analysis of risk assessments pre-launch vs post-accident; comparison with hazard severity thresholds applied to other shuttle flights; deposition analysis of decision-making rationale",
+      "impact": "If genuinely acceptable: constraint reclassifies toward Rope (risk coordination). If reclassified for schedule: constraint remains Snare (institutional extraction of risk onto crew).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether foam risk acceptance was genuine engineering judgment or schedule-driven rationalization"
+    },
+    {
+      "id": "information_compartmentalization",
+      "question": "Was crew awareness of foam hazard suppression deliberate institutional policy or emergent organizational silence?",
+      "resolution_mechanism": "Analysis of communication logs, meeting transcripts, and pre-flight briefing documentation; interviews with mission planners and flight directors regarding explicit suppression orders vs implicit information barriers",
+      "impact": "If deliberate: suppression mechanism is enforcement (high institutional intentionality). If emergent: suppression is systemic (high institutional inertia). Both yield the same classification but different remediation strategies.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether information suppression was deliberate policy or systemic organizational failure"
+    },
+    {
+      "id": "counterfactual_mission_cancellation",
+      "question": "What institutional costs prevented mission cancellation as a response to the foam hazard?",
+      "resolution_mechanism": "Cost-benefit analysis reconstruction: funding commitments, political timeline pressures, reputational factors, workforce continuity; comparison with other shuttle missions that were delayed or cancelled for hazard concerns",
+      "impact": "If costs are primarily financial/political: the constraint is structurally choice-enabled (could have been rejected). If costs are systemic/irreversible: constraint may reflect genuine organizational lock-in. Either way, it remains high-extraction from crew perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Institutional costs that locked in the launch decision despite foam hazard"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The Columbia Space Shuttle foam shedding hazard represents a structural constraint where institutional actors (NASA management) imposed existential risk on powerless agents (crew) while suppressing awareness of the hazard through information compartmentalization and authority enforcement. The constraint operated across multiple launch cycles; foam shedding was documented in previous flights (STS-112 in 2002), observed in foam impacts during ascent, and addressed through risk acceptance procedures rather than hazard mitigation. The decision to launch despite known foam shedding represents pure extraction: crew members bore the catastrophic risk (65% probability of undetected tile damage leading to structural failure) while management captured the mission success benefit. The constraint's suppression mechanism operated through institutional hierarchy (crew cannot unilaterally refuse launch), information compartmentalization (hazard data not clearly communicated to decision-makers in a unified risk narrative), and the theater of formal Flight Readiness Reviews that documented 'acceptable risk' without functional hazard mitigation. This is a paradigmatic Snare: high extraction (78%), high suppression (82%), asymmetric power, and no crew exit option. The theater ratio (65%) reflects that certification procedures and risk acceptance documents performed legitimacy without corresponding hazard control.",
+    "key_agents": [
+      "Columbia Crew: Primary victims (powerless/trapped) \u2014 bore existential risk with zero exit option; had no authority to unilaterally cancel mission despite hazard awareness",
+      "Structural Engineers and Safety Personnel: Secondary victims (moderate/constrained) \u2014 possessed hazard data and safety concerns but faced career risk for escalation; internal dissent was suppressed through organizational hierarchy",
+      "NASA Flight Readiness Review Authority: Primary beneficiary (institutional/arbitrage) \u2014 captured mission success benefits; possessed decision authority to cancel or delay; used formal procedures to rationalize risk acceptance",
+      "Thermal Protection System Program Management: Primary beneficiary (institutional/arbitrage) \u2014 benefits from launch completion without full hazard mitigation investment; possessed knowledge of previous foam shedding incidents",
+      "Institutional Safety Certification Apparatus: Performer of theater (institutional/arbitrage) \u2014 maintains legitimacy through procedures (Flight Readiness Reviews, hazard assessments) without functional oversight; creates the appearance of rigorous hazard control",
+      "Analytical Observer: Structural gap revealer \u2014 identifies the extraction mechanism that institutional procedures conceal"
+    ],
+    "logic_rationale": "Extractiveness (0.78): Very high. Asymmetric distribution of costs and benefits: crew bears 65% catastrophic risk; management bears only reputational/career risk of mission failure or accident. The extraction is not negotiated \u2014 it is imposed through authority and information control. The measurement trajectory (0.55 \u2192 0.68 \u2192 0.75) reflects accumulation: as launch date approached, hazard signals intensified (impact damage observed on cameras), but the risk acceptance framework was reinforced rather than abandoned, indicating active enforcement of the extraction mechanism. Suppression (0.82): Very high. Multiple suppression mechanisms: (1) Authority-based \u2014 crew cannot refuse launch without organizational permission; (2) Information-based \u2014 hazard data compartmentalized; crew not briefed on previous foam shedding incidents or their severity; (3) Organizational norms \u2014 expressing safety dissent carries career costs; escalation through safety channels is slow and unreliable. Theater ratio (0.65): Moderate-high. Flight Readiness Reviews, formal risk assessments, and sign-off procedures create institutional appearance of rigorous hazard evaluation. However, the procedures do not include functional hazard mitigation (no design change to reduce foam shedding, no contingency plan for tile damage, no real-time inspection capability post-launch). The theater masks the underlying constraint: launch readiness was declared acceptable despite persistent hazard.",
+    "perspectival_gap": "The constraint exhibits stark perspectival divergence. NASA Management (rope perspective) sees the constraint as coordination: managing mission scheduling, cost efficiency, and risk acceptance procedures is a complex coordination problem requiring institutional judgment. Flight crews and safety personnel (tangled_rope and snare perspectives) see the same constraint as pure extraction: hazard-bearing responsibilities are non-negotiable, and disagreement carries career consequences. The institutional review apparatus (piton perspective) performs certification without genuine verification \u2014 the rituals maintain legitimacy despite functional hazard gaps. The analytical observer identifies a false summit in the mountain perspective: naturalizing the foam hazard as 'inherent to thermal protection' masks the institutional choice to launch with known defect. The perspectival gap is maximal here: one agent's coordination problem is another agent's existential hazard.",
+    "directionality_logic": "Directionality (d) for crew: 0.95 (trapped, victim of asymmetric extraction). D for management: 0.10 (institutional, beneficiary with arbitrage). The sigmoid f(d) produces: f(0.95) \u2248 1.42 for crew (maximum experienced extractiveness), f(0.10) \u2248 -0.05 for management (negative experienced extraction \u2014 they benefit). Scope modifier \u03c3(global) = 1.2 applies to institutional scope of space program. Final chi: crew experience ~1.35 (normalized), management experience ~0.0 (negative). This is the maximum perspectival divergence in the chi calculation \u2014 one agent experiences the constraint as catastrophic; the other experiences it as manageable coordination.",
+    "mandatrophy_analysis": "RESOLVED MANDATROPHY: This constraint resolves through the recognition that the foam hazard was NOT a genuine coordination problem (which would classify as Rope or Tangled Rope) but pure extraction enforced through institutional authority. The mandatrophy risk \u2014 mislabeling extraction as coordination \u2014 is defeated by the structural evidence: (1) No genuine coordination benefit to crew. The hazard imposes risk; crew gain nothing except the privilege of remaining employed. (2) Suppression mechanism explicitly prevents crew from exercising consent. True coordination requires voluntary participation; forced participation is extraction. (3) Information asymmetry. Management possessed hazard data unavailable to crew; they used this asymmetry to enforce acceptance. (4) Alternative exists. The mission could have been delayed or cancelled without technical impossibility \u2014 only institutional cost prevented this. The snare classification is confirmed: extraction enforced through suppression, not voluntary participation. The extraction persisted because institutional authority made the alternative (mission cancellation) organizationally costly, not because the hazard was genuinely unavoidable."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "institutional_safety_theater",
+      "aerospace_schedule_pressure"
+    ],
+    "dual_formulation_note": "The foam shedding hazard itself is a physical/engineering constraint (material degradation during ascent); this story concerns the institutional constraint of suppressing awareness and enforcement of that hazard. The two constraints have different epsilon values: the physical hazard is a technical property (\u03b5 \u2248 0.30, rope/tangled_rope depending on mitigation); the suppression constraint is institutional extraction (\u03b5 \u2248 0.78, snare)."
+  },
+  "directionality_overrides": []
+}

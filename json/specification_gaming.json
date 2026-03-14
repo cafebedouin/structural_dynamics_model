@@ -1,0 +1,183 @@
+{
+  "header": {
+    "constraint_id": "specification_gaming",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "specgame"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "Specification Gaming in Goal-Oriented Systems",
+    "topic_domain": "general/systems_design/principal_agent",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "spec_gamers",
+      "specification_authors"
+    ],
+    "victims": [
+      "system_users",
+      "stakeholder_intent",
+      "downstream_ecosystems"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The End User / Stakeholder",
+      "comment": "PERSPECTIVE 1: END USER / STAKEHOLDER (SNARE) \u2014 Trapped in a system where official metrics diverge from actual goals. Cannot exit without abandoning the system; cannot modify specification to close the loophole. Experiences pure extraction: the system optimizes for measurable proxies while sacrificing the user's actual interests. No coordination benefit \u2014 the specification gaming mechanism extracts user value without reciprocal service."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Specification Author / Principal",
+      "comment": "PERSPECTIVE 2: SPECIFICATION AUTHOR / PRINCIPAL (ROPE) \u2014 Can rewrite the specification to close loopholes, has enforcement authority, experiences immediate metric achievement. Sees specification gaming as a coordination mechanism: the spec defines acceptable behavior, and agents optimizing it are solving the principal's stated problem correctly. Net beneficiary from the institutional perspective \u2014 the specification author's authority and control are validated by agent compliance with the spec, even when that compliance diverges from intent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Agent / Optimizer",
+      "comment": "PERSPECTIVE 3: AGENT / OPTIMIZER (TANGLED ROPE) \u2014 Constrained by resource costs of trying multiple interpretations and by career/survival pressure to meet targets. Benefits from the specification: clear success criteria provide guidance and justification for resource allocation. But also bears costs: if the loophole closes, the optimization becomes harder; if the stakeholder retaliates against loophole exploitation, the agent faces reputational or legal consequences. Mixed experience \u2014 genuine coordination (clear goals, measurable success) with embedded extraction (incentive to exploit loopholes for efficiency)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Downstream Ecosystem",
+      "comment": "PERSPECTIVE 4: DOWNSTREAM ECOSYSTEM (SNARE) \u2014 Over time, specification gaming accumulates externalities: shortened product lifespans, degraded system reliability, ecosystem damage (from misaligned optimization). The downstream actors have no exit option and cannot participate in rewriting specifications. Pure extraction at long timescale: the specification gaming mechanism transfers value from long-term ecosystem health to short-term metric achievement."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Metric Enforcement Apparatus",
+      "comment": "PERSPECTIVE 5: METRIC ENFORCEMENT APPARATUS (PITON) \u2014 The ritual of measuring, auditing, and reporting on specification compliance persists through institutional inertia. The measurement system was designed to monitor real-world performance but now mostly validates that agents are gaming the spec correctly. Theater ratio high: much of the enforcement apparatus is performative ritual that certifies fake compliance without detecting real misalignment. The apparatus has degraded from functional monitoring to theater."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, specification gaming appears to be an immutable constraint on goal-oriented systems: any system with measurable proxies for unmeasurable goals will face incentive pressure to optimize proxies. This is a fundamental problem of incentive design \u2014 a structural limit on principal-agent relationships. However, this perspective risks naturalizing what is actually a contingent design choice (the use of narrow proxies rather than richer feedback systems). The engine's false summit detector will flag this as naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "proxy_vs_intent_disambiguation",
+      "question": "Is a specification gaming instance a failure of the metric (the proxy is wrong) or a failure of the agent (the agent chose to exploit a known loophole instead of pursuing true intent)?",
+      "resolution_mechanism": "Post-incident analysis: did the specification author recognize the loophole beforehand, and did the agent have reason to believe the exploitation violated unstated intent? Counterfactual: would the agent have pursued the same action if the specification were tighter?",
+      "impact": "If metric failure: the snare classification is correct \u2014 the victim is trapped by misaligned incentives. If agent failure: the classification downshifts toward rope or tangled rope \u2014 the victim had a defense (better specification) that wasn't used.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether gaming reveals metric failure or agent opportunism"
+    },
+    {
+      "id": "intentionality_threshold",
+      "question": "At what level of obviousness does specification compliance cross from 'optimization' to 'gaming'? Is there an intentionality threshold?",
+      "resolution_mechanism": "Analysis of the agent's knowledge state: did the agent explicitly consider that the spec diverges from intent? Did the agent model the principal's likely reaction? Comparison across similar specs: do agents consistently exploit the same loophole, suggesting obviousness?",
+      "impact": "If intentionality threshold is low: even accidentally discovered loopholes count as gaming, and extraction persists regardless of agent motivation. If threshold is high: only deliberate exploitation counts, reducing the scope of the snare.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Intentionality threshold for specification gaming classification"
+    },
+    {
+      "id": "metric_substitution_depth",
+      "question": "How many layers of specification-writing and re-specification occur before the system reaches stable alignment, and does the system ever reach stable alignment or merely chase Goodhart's law indefinitely?",
+      "resolution_mechanism": "Historical tracking of specification versions and metric changes; identification of repeated loophole discovery-closure cycles; analysis of whether closure ever produces tighter specification or just slower gaming.",
+      "impact": "If system reaches stable alignment: specification gaming is a temporary snare with sunset logic. If system chases indefinitely: specification gaming is an inherent structural feature of misaligned principal-agent systems, and the snare persists until the relationship itself ends.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether specification refinement converges to alignment or cycles indefinitely"
+    },
+    {
+      "id": "stakeholder_exit_feasibility",
+      "question": "Do stakeholders have genuine exit options (switching to alternative systems, opting out, demanding renegotiation) or are they truly trapped by lock-in and dependency?",
+      "resolution_mechanism": "Cost analysis of alternatives; case studies of stakeholders who attempted exit; measurement of switching barriers (switching costs, learning curves, contractual penalties).",
+      "impact": "If exit is feasible: victims' exit_options upgrade from trapped to constrained, and classification shifts from snare toward tangled rope. If exit is infeasible: the snare classification is confirmed, and suppression increases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether trapped agents have genuine exit options"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Specification gaming is a structural constraint that emerges whenever a principal creates a measurable metric to incentivize agent behavior, but the metric diverges from the principal's true goal. The agent, facing clear success criteria, optimizes the metric through exploitation of specification loopholes rather than pursuing the unstated intent. This constraint operates across domains: AI systems gaming training metrics, organizations gaming performance KPIs, regulatory systems gamed through compliance theater, and markets gaming pricing signals. The constraint is extractive because the loophole exploitation transfers value from the stakeholder (whose actual goals are unmet) to the agent (who achieves nominal success and its rewards) and the spec author (whose authority is validated by apparent compliance). The game persists because detecting and closing loopholes is costly, and each closure creates pressure to find new loopholes \u2014 the system exhibits Goodhart's law dynamics. The theater ratio (0.68) reflects that specification enforcement mechanisms are substantially performative: audits validate that agents are gaming the spec correctly, not that the spec aligns with intent.",
+    "key_agents": [
+      "End User / Stakeholder: Primary victim (powerless/trapped) \u2014 faces system with misaligned incentives; cannot exit or modify spec",
+      "Specification Author / Principal: Primary beneficiary (institutional/arbitrage) \u2014 maintains authority and control; experiences agent compliance with spec as success",
+      "Agent / Optimizer: Secondary agent (moderate/constrained) \u2014 faces resource constraints and career pressure; benefits from clear success criteria; harmed if spec closes",
+      "Downstream Ecosystem: Secondary victim (powerless/trapped) \u2014 accumulates externalities and ecosystem damage over time",
+      "Metric Enforcement Apparatus: Institutional actor (institutional/arbitrage) \u2014 maintains performative compliance rituals; preserves theater",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent design choices as inevitable constraint on all systems"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The specification gaming mechanism extracts value from stakeholders by achieving nominal success on metrics while leaving true goals unmet. The value is not catastrophic at first (when loopholes are small and rare) but increases over time as agents learn the space and exploit larger loopholes, and as the specification gaming cycle accelerates (more metrics \u2192 more loopholes \u2192 more gaming). Suppression (0.65): Moderate-high. Multiple barriers prevent stakeholders and honest agents from escaping the gaming dynamic: contractual lock-in, switching costs to alternative systems, regulatory requirements to use the spec, and career penalties for refusing to optimize the metric even when doing so contradicts intent. Theater ratio (0.68): High and rising. The metric enforcement and specification-writing apparatus becomes increasingly performative as it struggles to detect gaming. Audits certify spec compliance without detecting real misalignment; specification revisions close old loopholes but are systematized by agents until new loopholes emerge. The ritual persists through institutional inertia even as its function degrades.",
+    "perspectival_gap": "The principal-agent disagreement on classification type is the diagnostic signal. Spec authors see rope (clean goal-setting, agent compliance) while victims see snare (trapped in misaligned system). Agents see tangled rope (some benefits from clarity, some costs from loopholes). This multi-type signature emerges because the constraint's extractiveness depends entirely on the observer's structural position relative to the metric. From the author's view, the agent's optimization is successful \u2014 the spec is being followed. From the victim's view, the optimization is a failure \u2014 the metric diverges from intent. Neither view is wrong; they are perspectival readings of the same structural fact: the specification author's success (agents comply with spec) is the victim's failure (metric diverges from intent). The snare classification is correct for the victim because they are trapped and cannot escape.",
+    "directionality_logic": "The directionality value (d) for each agent derives from their position in the extraction flow. Beneficiaries (spec authors, agents who game successfully) have low d because the constraint flows toward them \u2014 they receive the rewards of nominal success. Victims (end users, downstream ecosystem) have high d because they bear costs without benefits. The agent-optimizer has intermediate d because they face both benefits (clarity of goals) and costs (risk of closure, complexity of gaming). The trapped agents (end user, ecosystem) have very high d approaching 1.0 because they are structurally unable to escape or negotiate. This produces high f(d) for victims, amplifying experienced extraction chi. The beneficiaries' arbitrage options allow them to exit (rewrite the spec, switch to better metrics), reducing their experienced extraction. The specification author's institutional power is not threatened by gaming (their authority is validated by agent compliance with their spec) \u2014 this is the key structural asymmetry that makes this a snare rather than a rope.",
+    "mandatrophy_analysis": "The specification gaming constraint resolves the mandatrophy by showing that it is NOT pure coordination (rope) despite appearing so to the beneficiary. It is extraction (snare) disguised as coordination. The principal's perspective that 'agents are following the spec I wrote' mistakes nominal compliance for coordination \u2014 the victim's perspective reveals that the spec itself is misaligned. The constraint exists to solve the principal's goal-setting problem (coordination: write a metric) while simultaneously creating the victim's extraction problem (misaligned incentives). This is the definition of tangled rope for the agent and snare for the victim \u2014 mixed experience at one level, pure extraction at another. The mandatrophy dissolves when we recognize that the single-perspective view (institutional/immediate) that sees rope is incomplete; the fuller analysis requires the powerless/biographical victim perspective that sees snare. The high theater ratio (0.68) further supports the snare classification: much of the spec compliance is performative validation that the spec is being followed correctly, not evidence that the goals are being achieved."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "goodharts_law",
+      "principal_agent_misalignment"
+    ],
+    "dual_formulation_note": "Specification gaming is downstream of principal-agent misalignment (the structural inability to write perfect contracts) and Goodhart's law (any metric becomes a poor measure once optimized). The three constraints form a causal chain: misalignment creates the need for metrics, metrics enable gaming, and gaming escalates into Goodhart dynamics. Each has its own epsilon reflecting different structural levels: misalignment is fundamental, Goodhart's law is a mathematical fact, specification gaming is the behavioral manifestation."
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,212 @@
+{
+  "header": {
+    "constraint_id": "labor_export_dependency",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "labexp"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Labor Export Dependency Constraint",
+    "topic_domain": "economic/labor/migration",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "destination_countries",
+      "labor_importing_employers",
+      "remittance_financial_intermediaries"
+    ],
+    "victims": [
+      "source_country_workers",
+      "source_country_economies",
+      "domestic_labor_markets_destination"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Migrant Worker",
+      "comment": "PERSPECTIVE 1: MIGRANT WORKER (SNARE) \u2014 Trapped by debt bondage, visa sponsorship tied to single employer, lack of local labor alternatives, and family financial dependence on remittances. Maximum experienced extraction through wage suppression, unsafe conditions, forced savings schemes, and inability to change employers or return home without catastrophic family impact. No exit option."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Source Country Domestic Economy",
+      "comment": "PERSPECTIVE 2: SOURCE COUNTRY DOMESTIC ECONOMY (SNARE) \u2014 Trapped by remittance dependency: government revenues come from taxes on remittances, foreign exchange reserves rely on migrant inflows, domestic employment has atrophied due to brain drain and wage-pull dynamics. Cannot exit without immediate fiscal collapse. Experiences extraction through loss of productive labor, reduced domestic investment, and institutional weakening as decision-makers emigrate."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Destination Country Employer",
+      "comment": "PERSPECTIVE 3: DESTINATION COUNTRY EMPLOYER (ROPE) \u2014 Benefits from coordinated labor supply at below-market wages, flexible workforce with limited legal recourse, reduced training and retention costs. Experiences the constraint as pure coordination mechanism \u2014 solving the labor shortage problem without requiring wage increases or working condition improvements. Arbitrage exit: can shift recruitment to other source countries if labor becomes unavailable."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Destination Country Labor Market",
+      "comment": "PERSPECTIVE 4: DESTINATION COUNTRY LABOR MARKET (TANGLED ROPE) \u2014 Experiences mixed coordination and extraction. Genuine coordination benefit: migrant labor fills genuine labor shortages and enables economic sectors (agriculture, healthcare, construction) to function. But also experiences wage suppression across lower-skill jobs, reduced bargaining power for domestic workers, and skill mismatch in STEM sectors. Constrained exit: cannot easily shift to domestic labor without sector restructuring; cannot easily block migration without political blowback and labor shortage crises."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Source Country Government",
+      "comment": "PERSPECTIVE 5: SOURCE COUNTRY GOVERNMENT (TANGLED ROPE) \u2014 Genuine coordination function: labor export generates foreign exchange, reduces domestic unemployment pressure, and brings in tax revenue through remittance channels and emigrant tax obligations. But also experiences active extraction: brain drain of skilled workers, loss of tax base from emigrants, political pressure to enable emigration as solution to joblessness rather than investing in domestic employment. Constrained exit: cannot block emigration without political instability; cannot reduce emigration incentives without addressing root economic dysfunction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The International Labor Standards Regime",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL LABOR STANDARDS REGIME (PITON) \u2014 The International Labour Organization conventions on migrant worker protections (C97, C143, C189) exist largely as theater. Ratification without enforcement, reporting without verification, and sanctionless non-compliance characterize the regime. The constraint persists through institutional inertia \u2014 maintaining the symbolic framework of worker protection while the actual extraction mechanism operates unimpeded. High theater_ratio reflects the gap between proclaimed standards and structural reality."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From the perspective that labor migration is an immutable economic law driven by wage differentials and demographic imbalances across regions, the constraint appears inevitable and unchangeable. Wage gaps between regions will always drive migration; aging populations will always require younger workers; development disparities will always create incentives to relocate. This perspective risks naturalizing what is actually a contingent institutional arrangement (visa sponsorship systems, debt bondage, remittance taxation, brain-drain acceptance) as inherent economic necessity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "institutional_vs_structural_suppression",
+      "question": "Is the suppression primarily institutional (visa sponsorship, contract binding, legal barriers) or structural (wage differentials, lack of domestic alternatives, family dependency)?",
+      "resolution_mechanism": "Comparative analysis of migrant mobility in systems with vs without visa sponsorship; measurement of exit costs when institutional barriers are removed but structural barriers remain",
+      "impact": "If institutional: removal of visa sponsorship and debt bondage would substantially increase worker agency (move classification from snare toward constrained). If structural: workers remain trapped even without legal barriers due to economic necessity and family obligations (suppression persists).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether suppression is institutional or structural"
+    },
+    {
+      "id": "remittance_efficacy_paradox",
+      "question": "Do remittances represent genuine economic benefit to source countries or do they substitute for domestic investment and create dependency traps?",
+      "resolution_mechanism": "Longitudinal economic analysis comparing remittance-dependent vs export-manufacturing-dependent economies; correlation between remittance concentration and domestic capital formation; measurement of multiplier effects",
+      "impact": "If beneficial: source country experiences rope perspective (genuine coordination). If trap: source country experiences snare perspective (extraction). Current evidence suggests bifurcation by sector and timing \u2014 short-term benefit, long-term dependency.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether remittances create economic benefit or dependency"
+    },
+    {
+      "id": "demographic_necessity_claim",
+      "question": "Is destination country labor shortage genuinely structural (aging population, fertility decline) or are wage/working condition improvements sufficient to enable domestic recruitment?",
+      "resolution_mechanism": "Experimental policy analysis: regional wage increases in care/agricultural sectors and measurement of domestic labor supply elasticity; comparison of countries that restricted migration vs those that expanded it",
+      "impact": "If structural necessity: mountain classification is partially justified (constraints are immutable). If wage-elastic: the constraint is contingent institutional design (destination country could increase wages but chooses extraction instead).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether labor shortage is demographically necessary or wage-responsive"
+    },
+    {
+      "id": "circular_vs_permanent_migration_dynamics",
+      "question": "Does the constraint enable circular migration (temporary, reversible) or does it lock workers into permanent emigration trajectories?",
+      "resolution_mechanism": "Longitudinal tracking of worker migration patterns; measurement of return rates, settlement rates, and intergenerational lock-in; comparison across source countries with different return-migration policies",
+      "impact": "If circular: workers maintain home-country ties and can exit (constrained rather than trapped). If permanent: workers become locked out of source country labor markets and cannot return (trapped). Current evidence shows extreme variation by sector and country policy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether migration is circular or permanent lock-in"
+    },
+    {
+      "id": "destination_labor_market_identity_lock",
+      "question": "Have destination country workers internalized the narrative that migrant labor is necessary and natural, making them identity-locked rather than constrained advocates for immigration restrictions?",
+      "resolution_mechanism": "Survey data on stated attitudes about wage bargaining; measurement of correlation between labor market position and immigration stance; analysis of whether opposition persists when actual wage/employment data is presented",
+      "impact": "If identity-locked: destination country working class opposes their own economic interest not from rational constraint but from identity commitment to nationalist or meritocratic frames. This makes political resistance to the constraint asymmetric and difficult to organize.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether destination workers are identity-locked to labor export framing"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Labor export dependency is a structural constraint operating across source and destination countries, binding migrant workers, source country economies, destination country employers, and international labor standards regimes into a coordinated but asymmetric extraction system. The constraint exhibits genuine coordination functions \u2014 it solves real labor market mismatches and enables economic sectors in destination countries while providing foreign exchange and employment relief in source countries \u2014 but layers extractive mechanisms onto these coordination functions: wage suppression, debt bondage, visa sponsorship, suppression of alternatives, and brain drain. The constraint is sustained by institutional arrangements (visa sponsorship, contract binding, remittance systems) and structural factors (wage differentials, demographic imbalances, lack of domestic alternatives), making it simultaneously easier to reform (institutional barriers can be removed) and harder to escape (structural factors persist). The theater_ratio (0.48) reflects moderate performative content: international labor standards are widely proclaimed but unenforced; source countries celebrate emigration as a development strategy while experiencing dependency; destination countries frame migration as economic necessity while suppressing wages through migrant access.",
+    "key_agents": [
+      "Migrant Workers: Primary victims (powerless/trapped) \u2014 experience maximum extraction through wage suppression, debt bondage, visa sponsorship, unsafe conditions, and forced family separation",
+      "Source Country Economies: Secondary victims (powerless/trapped) \u2014 trapped by remittance dependency and foreign exchange reliance; experience brain drain and reduced domestic investment incentives",
+      "Destination Country Employers: Primary beneficiaries (institutional/arbitrage) \u2014 capture wage arbitrage and flexible workforce; solve labor shortage without wage increases; can switch source countries if labor becomes unavailable",
+      "Destination Country Labor Markets: Mixed agent (powerful/constrained) \u2014 benefit from labor supply filling sectors (care, agriculture, construction) but experience wage suppression and reduced bargaining power; cannot easily restructure to use only domestic labor",
+      "Source Country Governments: Mixed institutional actor (organized/constrained) \u2014 benefit from foreign exchange and unemployment reduction; experience extraction through brain drain and loss of tax base; constrained from blocking emigration without political instability",
+      "International Labor Standards Regime: Institutional observer (institutional/constrained) \u2014 maintains symbolic commitment to worker protection while the actual constraint persists unimpeded; trapped in performative rather than functional enforcement",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as immutable economic laws"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts significantly through wage suppression, asymmetric access to legal protections, and debt mechanisms, but not as severely as pure labor coercion (slavery, 0.80+) because workers retain some choice (exit is possible at high cost, not prohibited). The extractiveness has increased over the measurement interval (0.38 \u2192 0.58) as visa sponsorship systems have tightened, debt bondage has formalized (contract binding), and destination country wage stagnation has widened wage differentials. Suppression (0.72): High. Structural barriers (wage differentials, lack of domestic alternatives) combine with institutional barriers (visa sponsorship, contract binding, debt, travel document confiscation) to severely limit worker alternatives. Workers cannot easily exit the constraint without catastrophic family impact (remittance dependency) or legal complications (visa status). Theater ratio (0.48): Moderate. International labor standards (ILO conventions) are widely announced but minimally enforced; source countries celebrate emigration as development strategy while experiencing dependency; destination countries frame migration as economic necessity while suppressing wages. The moderate theater reflects that some accountability mechanisms exist (ILO reporting, some national labor inspections) but enforcement is weak.",
+    "directionality_logic": "The beneficiary/victim declarations and exit options create directional asymmetry. Destination employers benefit without constraint (arbitrage exit); source workers suffer with no exit (trapped). This asymmetry is crystallized in the visa sponsorship system: the worker's legal status is tied to a single employer, making exit legally impossible without becoming undocumented. The institutional embedding of this asymmetry (contract binding, debt, travel document confiscation) is what distinguishes this from a pure wage-differential flow. If workers could freely exit and seek alternate employment, the constraint would weaken toward rope (pure coordination in a functioning labor market). The fact that wages remain suppressed despite stated labor shortages suggests that institutional barriers (suppression mechanisms) are doing work \u2014 preventing workers from exercising market power even when labor is scarce.",
+    "perspectival_gap": "The constraint produces radically different classifications depending on the observer's structural position. Migrant workers see a snare (trapped, high extraction, no escape). Source country economies see a snare (trapped by remittance dependency, brain drain, no exit without fiscal crisis). Destination employers see a rope (pure coordination solving labor shortage without institutional cost). Destination labor markets see tangled_rope (genuine labor shortage solved, but wages suppressed). Source governments see tangled_rope (foreign exchange benefit, employment relief, but brain drain and reduced investment). International standards regime sees piton (symbolically committed but functionally degraded). The analytical observer risks seeing a mountain (wage differentials and demographic imbalances make the constraint appear immutable), but structural analysis reveals this as false naturalization \u2014 the extraction mechanisms are contingent institutional designs (visa sponsorship, debt bondage, suppression of domestic alternatives).",
+    "mandatrophy_analysis": "The mandatrophy is present but not fully resolved. The constraint appears as tangled_rope (claiming both coordination and extraction), but the evidence for genuine coordination is mixed. Is the constraint genuinely coordinating labor supply for sectors that would otherwise malfunction, or is it simply enabling wage suppression? The answer differs by sector: healthcare and care work may have genuine coordination functions (domestic workers won't accept these wages/conditions at any price); agriculture and construction may be pure extraction (employers could pay higher wages and recruit domestically). The constraint family should decompose into separate stories per sector, each with its own \u03b5 and coordination assessment. Until this decomposition occurs, the mandatrophy remains: the claim that both coordination and extraction occur at the same structural level is asserted but not fully justified. Recommended resolution: write separate constraint stories for migrant workers in healthcare/care (likely rope or tangled_rope with genuine coordination function) vs construction/agriculture (likely snare with minimal genuine coordination)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "wage_suppression_mechanisms",
+      "remittance_financial_extraction",
+      "brain_drain_structural_dependency",
+      "visa_sponsorship_debt_bondage"
+    ],
+    "dual_formulation_note": "Labor export dependency decomposes into four structurally distinct constraints: (1) wage suppression mechanisms in destination labor markets (economic extraction, direct impact on wages); (2) remittance financial extraction (financial services extracting from worker savings); (3) brain drain dependency (institutional extraction from source countries); (4) visa sponsorship debt bondage (legal/contractual extraction from individual workers). Each constraint has a different \u03b5, different beneficiary/victim declarations, and different measurement trajectory. The labor_export_dependency story is the aggregate or family story; the four decomposed stories are the atomic constraints. This story should be understood as the coordinating frame for the family rather than the final analytical unit."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.62
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "biosecurity_norm_formation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "biosec"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Biosecurity Norm Formation as Coordination and Extraction",
+    "topic_domain": "biosecurity/governance/institutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_biosecurity_leadership",
+      "developed_nation_governments"
+    ],
+    "victims": [
+      "biological_research_autonomy",
+      "developing_nation_researchers",
+      "dual_use_fields"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Constrained Researcher in Low-Resource Settings",
+      "comment": "PERSPECTIVE 1: CONSTRAINED RESEARCHER (SNARE) \u2014 Lacks political voice to negotiate biosecurity norms. Faces complete dependency on norm-setting countries for research funding, publication access, and training partnerships. Exit is impossible: not participating means research isolation and career exclusion. Maximum extraction experienced through asymmetric access, compliance burdens, and capacity constraints."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Dual-Use Researcher",
+      "comment": "PERSPECTIVE 2: DUAL-USE RESEARCHER (TANGLED ROPE) \u2014 Benefits from biosecurity norms that reduce pandemic risk and enhance research credibility. Also bears costs: compliance overhead, publication delays, access restrictions to materials and data. Mixed experience \u2014 genuine coordination function (shared risk reduction) alongside asymmetric extraction (compliance burden concentrated on individual researchers)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Developed Nation Biosecurity Institutions",
+      "comment": "PERSPECTIVE 3: DEVELOPED NATION INSTITUTIONS (ROPE) \u2014 Set and enforce norms; experience pure coordination benefit. Can arbitrage by implementing stricter standards domestically while advocating looser international rules. Low extraction cost relative to benefit \u2014 control the norm-setting process itself. Net beneficiary from institutional position."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Biosecurity Capacity-Building Coalition",
+      "comment": "PERSPECTIVE 4: CAPACITY-BUILDING COALITION (SCAFFOLD) \u2014 NGOs and international bodies (ABSA, CDC, Wellcome Trust) building biosecurity infrastructure globally. See current norm asymmetry as temporary \u2014 generational investment in research infrastructure, training, and funding in developing nations will create symmetric access and reduce extractive dynamics. Sunset logic: as global research capacity equalizes, asymmetric norm enforcement becomes less tenable. Organized agents with exit paths (can shift funding and partnership focus) and explicit sunset (capacity targets, timeline-bound initiatives)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Academic Publishing Gatekeeping System",
+      "comment": "PERSPECTIVE 5: ACADEMIC PUBLISHING (PITON) \u2014 Biosecurity review in journals is largely performative theater. Editors and reviewers assess manuscript novelty and risk framing but lack domain expertise to verify actual dual-use hazard levels. The review ritual persists through institutional inertia \u2014 journals maintain biosecurity assessment procedures despite low functional verification capacity. Theater ratio high because actual risk evaluation happens in security agencies offline, not in peer review. Publishing system sees its own biosecurity role as degraded (necessary appearance but limited real function)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 From civilizational scope, biological research knowledge asymmetries appear natural and unchangeable: some nations will always have superior research capacity, equipment access, and security infrastructure. Dual-use hazards are inherent to biology as a field \u2014 cannot be negotiated away. This perspective risks naturalizing contingent institutional inequalities (unequal research infrastructure, historical capacity gaps) as immutable features of the scientific landscape. Engine flags as false summit: the apparent 'naturalness' is actually institutional and historically contingent."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "norm_legitimacy_asymmetry",
+      "question": "Are biosecurity norms perceived as legitimate global commons governance or as hegemonic control by developed nations?",
+      "resolution_mechanism": "Survey analysis of norm acceptance across national research communities; comparison of stated norm rationale vs. experienced norm burden by nation and research field",
+      "impact": "If legitimacy high: norms function as rope (coordination). If legitimacy low: norms function as snare (extraction masquerading as governance). Legitimacy gap correlates with extraction rate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether biosecurity norms are perceived as legitimate governance or hegemonic extraction"
+    },
+    {
+      "id": "dual_use_definition_divergence",
+      "question": "Which research areas are classified as dual-use: narrow (gain-of-function variants), moderate (pathogen characterization), or expansive (all microbiology)?",
+      "resolution_mechanism": "Textual analysis of biosecurity guidance documents from different nations; identification of classification boundaries and their justifications",
+      "impact": "If definition expands: more researchers constrained, suppression increases, more snare dynamics. If definition stable: permits more rope-like coordination on clear boundaries. Definition divergence itself is an extraction mechanism (targets cannot coordinate when rules are unclear).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Variability in dual-use research definition across nations and institutions"
+    },
+    {
+      "id": "capacity_building_effectiveness",
+      "question": "Do international biosecurity capacity-building programs actually increase research autonomy in developing nations, or do they deepen institutional dependency on developed-nation standards and oversight?",
+      "resolution_mechanism": "Longitudinal analysis of research independence, funding diversification, and norm-setting voice in developed-vs-developing nations over 20-year span",
+      "impact": "If effective: scaffold sunset is real \u2014 temporary constraint on path to symmetry. If ineffective: capacity building is performative; developing nations remain trapped despite infrastructure investment. Theater itself may be the extraction mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether capacity-building programs increase or deepen research dependency"
+    },
+    {
+      "id": "publication_gatekeeping_asymmetry",
+      "question": "Do biosecurity review processes delay or reject research publications disproportionately from researchers in developing nations, non-English-speaking researchers, or non-Western institutional affiliations?",
+      "resolution_mechanism": "Analysis of publication timelines, rejection rates, and required revisions by author geography and institution type; comparison of security review stringency across journals and regions",
+      "impact": "If yes: biosecurity review is an extraction and surveillance mechanism targeting specific populations. If neutral: review functions as genuine coordination. Asymmetry correlates with piton dynamics (gatekeeping theater masquerading as security).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether biosecurity publication review exhibits geographic or institutional bias"
+    },
+    {
+      "id": "norm_enforcement_divergence",
+      "question": "Are biosecurity norms enforced symmetrically across nations, or do developed nations maintain enforcement discretion for their own researchers while imposing strict enforcement on others?",
+      "resolution_mechanism": "Case analysis of sanctioned dual-use research publications, institutional penalties, and access restrictions across developed vs developing nations",
+      "impact": "If enforcement symmetric: norms are legitimate coordination constraints. If divergent: norms are extractive machinery where enforcement targets powerless agents selectively. Divergence reveals snare underlying the rope framing.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Symmetry of biosecurity norm enforcement across developed and developing nations"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Biosecurity norm formation emerged post-2001 and accelerated post-COVID-19 as a global governance mechanism to reduce pandemic and bioweapon risks. The structural constraint appears as legitimate coordination (reducing shared biological hazards) from institutional perspectives but as extraction and surveillance from powerless researcher perspectives. The constraint exhibits tangled rope dynamics: genuine coordination function (shared interest in pandemic risk reduction) combined with asymmetric enforcement where developed nations set norms and developing nation researchers bear compliance costs. Theater ratio has increased as academic publishing institutions maintain performative biosecurity review processes (journals assessing dual-use risk despite lacking security expertise) while actual risk evaluation occurs offline in security agencies. The constraint's tension reflects an underlying legitimacy gap: developing nations experience biosecurity norms as hegemonic control; developed nations experience them as necessary commons governance. Norm enforcement divergence \u2014 discretionary enforcement for developed-nation research, strict enforcement elsewhere \u2014 reveals extractive machinery beneath coordination framing.",
+    "key_agents": [
+      "Developed Nation Biosecurity Institutions: Primary beneficiaries (institutional/arbitrage) \u2014 set norms, control enforcement discretion, maintain research autonomy",
+      "Developing Nation Researchers: Primary victims (powerless/trapped) \u2014 dependent on developed-nation approval for publications, funding, partnerships; asymmetric compliance burden",
+      "Dual-Use Field Researchers: Secondary victims (moderate/constrained) \u2014 benefit from reduced pandemic risk but bear publication delays, material access restrictions, compliance overhead",
+      "Biosecurity Capacity-Building Coalition: Organized agents (organized/mobile) \u2014 NGOs and international bodies building research infrastructure with sunset logic (capacity targets)",
+      "Academic Publishing System: Institutional gatekeeper (institutional/arbitrage) \u2014 maintains performative biosecurity review ritual with low functional security capacity",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional inequalities as inherent research capacity differences"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint captures genuine value asymmetry: developing nation researchers lose publication opportunities, face longer review timelines, and absorb compliance costs. Developed-nation researchers retain discretionary enforcement exemptions. The extraction is real but not total \u2014 some dual-use knowledge is genuinely restricted (gain-of-function variants, weaponizable pathogens), justifying some coordination costs. The intermediate value reflects that much of the extraction is channeled through institutional dependency rather than direct coercion. Suppression (0.65): High. Developing nation researchers face multiple exit barriers: no alternative publication venues with equivalent prestige, research funding concentrated in developed nations, training partnerships requiring normative compliance, career advancement dependent on international visibility. Exit costs are severe but not total \u2014 some regional research networks exist. Theater ratio (0.68): High. Academic publishing biosecurity review is substantially performative. Journal editors and peer reviewers assess dual-use risk primarily through narrative risk framing (does the paper 'sound dangerous'?) rather than through substantive security evaluation. Actual security assessment happens offline in government agencies and classified channels. The theatrical nature has increased as dual-use definitions have expanded \u2014 more publications require biosecurity review despite reviewers' limited capacity to evaluate actual hazards. Academic publishing maintains the theater because the alternative (removing biosecurity assessment) appears riskier from a liability perspective, even though it serves limited security function.",
+    "directionality_logic": "Directionality (d) for each perspective is determined by the agent's structural relationship to norm enforcement. Developed-nation institutions are beneficiaries with arbitrage options (d \u2248 0.10) \u2014 they control norm-setting and can exempt their own research. Developing-nation researchers are victims with trapped exit (d \u2248 0.92) \u2014 they cannot exit norm compliance without career exclusion. Dual-use researchers are mixed (d \u2248 0.60) \u2014 they experience coordination benefits (reduced pandemic risk) and extraction costs (compliance burden) roughly equally. The capacity-building coalition (d \u2248 0.40) experiences constrained exit with mobile options (can shift funding allocation). The publishing system (d \u2248 0.15) benefits from norm maintenance through institutional necessity (must appear to assess security risk). The analytical observer (d \u2248 0.72) is attempting to observe the system from outside but risks naturalizing the extraction as inherent research asymmetry.",
+    "perspectival_gap": "This constraint demonstrates stark perspectival divergence based on structural position. Developed-nation institutions see rope (coordination solving genuine collective action problem of pandemic risk). Capacity-building coalitions see scaffold with sunset (temporary asymmetry being rectified through infrastructure investment). Publishing systems see piton (maintaining degraded ritual for institutional legitimacy). Dual-use researchers see tangled rope (genuine coordination benefit mixed with significant extraction costs). Developing-nation researchers see snare (trapped in compliance with no exit, bearing costs of asymmetric norm enforcement). The analytical observer at civilizational scope risks seeing mountain (natural research capacity inequality) but the structural data reveals this as false summit \u2014 the inequality is institutional and historically contingent, not natural. The perspectival gap is largest between the beneficiary (institutional/arbitrage) and the victim (powerless/trapped) positions: the same norm enforcement appears as legitimate governance to one and as coercive control to the other.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by revealing how coordination and extraction are empirically inseparable in norm formation. The genuinely coordinated element (pandemic risk reduction) cannot be disaggregated from the asymmetric enforcement (which nations can exempt their research). The mandatrophy appears as a false choice between 'this is pure coordination' and 'this is pure extraction' \u2014 the constraint is structurally tangled rope because both functions are real and both emerge from the same enforcement mechanism. The classification prevents mislabeling the constraint as rope (which would hide the extraction) or as snare (which would deny the genuine coordination function). The resolution is to measure from multiple perspectives and note that the constraint's classification type IS sensitive to observer position in ways that mandate the indexed tuple. The theater ratio increase (0.42\u21920.68) over the interval indicates Goodhart drift: as compliance burden increased, performative theater increased as a substitute for genuine security function, suggesting the constraint may be trending toward snare rather than remaining tangled rope."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "gain_of_function_research_governance",
+      "international_research_funding_asymmetry",
+      "pathogen_surveillance_access"
+    ],
+    "dual_formulation_note": "Biosecurity norm formation is downstream of specific dual-use research domains (gain-of-function, pathogen characterization) but represents a distinct structural constraint at the governance level. Upstream constraints have extractiveness values reflecting specific research risks; this constraint has extractiveness reflecting the institutional inequality in norm-setting power."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

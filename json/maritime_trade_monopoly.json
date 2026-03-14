@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "maritime_trade_monopoly",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mtm"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Maritime Trade Monopoly: Extraction Through Shipping Control",
+    "topic_domain": "economic/trade/logistics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "monopoly_shipping_consortium"
+    ],
+    "victims": [
+      "dependent_trading_nations",
+      "small_merchant_operators",
+      "consumer_economies"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dependent Trading Nation",
+      "comment": "PERSPECTIVE 1: DEPENDENT TRADING NATION (SNARE) \u2014 Trapped by geographic isolation and reliance on maritime routes. Cannot build parallel shipping infrastructure. Bears maximum extraction through inflated freight costs, supply chain delays, and dependence on monopoly-controlled schedules. No exit option."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Small Merchant Operator",
+      "comment": "PERSPECTIVE 2: SMALL MERCHANT OPERATOR (SNARE) \u2014 Constrained by high capital barriers to fleet ownership and monopoly control of port access. Extraction through freight rate manipulation, priority queuing, and forced use of subsidiary services. Can theoretically exit but at prohibitive cost \u2014 effectively trapped."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Monopoly Shipping Consortium",
+      "comment": "PERSPECTIVE 3: MONOPOLY SHIPPING CONSORTIUM (ROPE) \u2014 Benefits from coordination of global shipping routes and standardized logistics. Experiences the constraint as pure coordination: managing fleet utilization, port scheduling, and route optimization. Net beneficiary with exit through regulatory arbitrage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Merchant Coalition",
+      "comment": "PERSPECTIVE 4: MERCHANT COALITION (TANGLED ROPE) \u2014 Organized agent (collective shipping agreements, port authority committees) sees the monopoly as both enabling coordination and extracting through rate-setting. Coordination benefits exist (standardized shipping lanes, port infrastructure) alongside asymmetric extraction (artificially inflated rates). Constrained exit through regulatory and contractual lock-in."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Regulation Framework",
+      "comment": "PERSPECTIVE 5: LEGACY REGULATION FRAMEWORK (PITON) \u2014 Historical maritime regulations (cabotage laws, flag-state monopolies, colonial trade routes) persist through institutional inertia despite reduced functional necessity. Alternative shipping technologies (containerization, autonomous vessels, regional logistics networks) are eroding the rationale for monopoly control. Theater ratio reflects performative compliance with outdated regulatory architecture."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational scope, the monopoly appears as systematic extraction with suppression mechanisms embedded in maritime law, port infrastructure control, and regulatory capture of shipping standards. The constraint persists because suppression mechanisms (legal barriers, capital concentration, information asymmetry) make alternatives structurally unavailable at scale."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_extraction_boundary",
+      "question": "What portion of the monopoly's rate-setting reflects legitimate coordination costs versus extractive overhead?",
+      "resolution_mechanism": "Comparative analysis of shipping rates in competitive markets (feeder routes, regional corridors) versus monopoly-controlled routes; cost accounting by tonnage and distance; margin analysis across commodity types",
+      "impact": "If coordination costs > 40% of rate premium: reclassify as Tangled Rope from more perspectives. If < 15%: confirm Snare classification. Current estimate splits the difference, supporting Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Boundary between coordination costs and extractive overhead in freight rates"
+    },
+    {
+      "id": "suppression_mechanism_externality",
+      "question": "Is suppression maintained through active enforcement (legal, violent, contractual) or through structural immobility (no alternatives exist)?",
+      "resolution_mechanism": "Historical analysis of resistance attempts; identification of cases where merchants successfully built alternatives or switched providers; assessment of legal barriers versus economic barriers",
+      "impact": "If active enforcement dominates: snare classification confirmed by coercive mechanism. If structural immobility dominates: suppression is economic (high transaction costs to exit) rather than legal; reclassify exit_options to mobile for certain high-capital actors.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression operates through active enforcement or structural immobility"
+    },
+    {
+      "id": "alternative_shipping_viability",
+      "question": "Could autonomous vessels, drone shipping, or regional containerization networks at scale reduce the monopoly's control within a generation?",
+      "resolution_mechanism": "Technology readiness assessment; cost comparison of alternative logistics pathways; pilot program outcomes in competitive markets; regulatory barriers to alternative technologies",
+      "impact": "If viable within 15-20 years: the piton perspective is accurate \u2014 monopoly is degraded ritual. If viable within 5 years: scaffold classification applies (sunset visible in near term). If not viable: snare classification persists indefinitely.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Viability of alternative shipping technologies to break monopoly control"
+    },
+    {
+      "id": "flag_state_capture_degree",
+      "question": "To what extent is monopoly control maintained through capture of flag-state regulations versus genuine market dominance?",
+      "resolution_mechanism": "Comparative analysis of shipping rates under different flag-state regulatory regimes; assessment of whether open-registry flags reduce monopoly extractiveness; historical correlation between regulatory capture and rate setting",
+      "impact": "If capture > 60%: suppression classification is primarily regulatory (legal barriers) rather than market-structural. Reclassify from Snare to institutional capture dynamic (Tangled Rope with institutional identity_locked perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which flag-state regulatory capture enables monopoly extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.59
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The maritime trade monopoly represents a pure extraction constraint where a shipping consortium controls access to global trade routes through combination of capital concentration, regulatory capture, and port infrastructure control. Dependent trading nations, small merchants, and consumer economies bear extraction costs through inflated freight rates, supply chain delays, and compelled use of monopoly-adjacent services. The monopoly maintains suppression through legal barriers (cabotage laws, flag-state regulations, port access restrictions) and structural immobility (prohibitive capital costs for alternative shipping infrastructure). The constraint exhibits accumulated extractiveness (rising from 0.48 to 0.68 over the 100-year interval) and rising theater ratio (0.38 to 0.55), indicating growing reliance on performative compliance with outdated regulatory frameworks rather than genuine coordination functions. Alternative shipping technologies (containerization, autonomous vessels, regional logistics networks) are eroding the structural necessity for monopoly control but have not yet achieved scale sufficient to break the constraint.",
+    "key_agents": [
+      "Monopoly Shipping Consortium: Primary beneficiary (institutional/arbitrage) \u2014 captures monopoly rents through rate-setting, port priority, and forced auxiliary service use",
+      "Dependent Trading Nations: Primary victim (powerless/trapped) \u2014 bear maximum extraction through freight cost multiplication and supply chain dependence; no geographic exit available",
+      "Small Merchant Operators: Secondary victim (moderate/constrained) \u2014 face high capital barriers to fleet ownership and forced use of monopoly services; cannot exit without catastrophic cost",
+      "Consumer Economies: Tertiary victim (moderate/constrained) \u2014 experience extraction through elevated import costs and supply volatility",
+      "Merchant Coalition: Organized agent (organized/constrained) \u2014 benefits from some coordination (standardized routes, port infrastructure) while bearing asymmetric extraction through artificial rate ceilings",
+      "Legacy Regulation Framework: Institutional system (institutional/arbitrage) \u2014 maintains monopoly control through flag-state capture and cabotage laws; sees own function as degraded (piton perspective)",
+      "Analytical Observer: Civilizational context (analytical/analytical) \u2014 identifies systematic extraction masked as natural consequence of geographic necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High, reflecting significant rent extraction from dependent actors. The monopoly captures disproportionate value from freight rate-setting, port access control, and forced auxiliary service use. The value is not maximal (0.90+) because some genuine coordination functions persist (route standardization, port infrastructure, logistics optimization) and because competitive margins exist in certain commodity segments where alternatives are viable. Suppression (0.72): High, indicating substantial barriers to exit through combination of legal mechanisms (cabotage laws, flag-state regulations) and economic barriers (capital concentration, port infrastructure control, information asymmetry). Small merchants and dependent nations cannot realistically build alternative shipping infrastructure. Theater ratio (0.55): Moderate-high, reflecting significant performative content in regulatory compliance. Cabotage laws and flag-state requirements persist despite reduced technological necessity \u2014 they maintain monopoly control while appearing to serve national maritime interests. Rising theater ratio over time (0.38 \u2192 0.55) indicates increasing gap between formal regulatory justification and actual coordination function.",
+    "directionality_logic": "Beneficiaries (monopoly consortium) have institutional power and arbitrage exit options, yielding low directionality (d \u2248 0.10-0.20) and negative or near-zero effective extraction from their perspective. Victims (dependent nations, small merchants) have powerless/moderate power and trapped/constrained exit options, yielding high directionality (d \u2248 0.85-0.95) and maximum or near-maximum effective extraction. The organized merchant coalition has constrained exit and mixed benefit/burden relationship, yielding moderate directionality (d \u2248 0.50-0.60) and moderate effective extraction. The legacy regulation framework benefits from status quo through institutional inertia, yielding low directionality from the regulatory perspective. The analytical observer, standing outside the constraint, derives d from the structural dominance of extraction over coordination (d \u2248 0.75-0.85), confirming snare classification.",
+    "perspectival_gap": "Maximal gap between beneficiary and victim perspectives. The monopoly consortium sees coordination (Rope) \u2014 managing global shipping is a genuine coordination problem. Dependent nations see pure extraction (Snare) \u2014 they cannot exit and bear full cost of inflated rates. The merchant coalition sees hybrid (Tangled Rope) \u2014 some coordination benefits (standardized routes, infrastructure) alongside significant extraction (rate manipulation). The legacy regulation framework sees its own degradation (Piton) \u2014 cabotage laws persist through inertia as alternative technologies (containerization, autonomous vessels) erode their functional necessity. The analytical observer sees systematic extraction (Snare) \u2014 the constraint persists because suppression mechanisms prevent alternative shipping infrastructure from achieving scale. The perspectival gap reflects the fundamental asymmetry: coordination benefits flow to the monopoly operator and some large merchants; extraction costs flow to dependent nations and small operators.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that Snare classification is robust across multiple victim perspectives despite the monopoly operator's honest experience of coordination problems. The mandatrophy question 'Is this coordination or extraction?' is answered: it is extraction enabled by coordination mechanisms. The monopoly genuinely solves routing, scheduling, and port logistics problems (coordination function), but it captures the rent from solving those problems by preventing alternatives (extraction mechanism). The piton perspective reveals that performative regulatory compliance (theater ratio 0.55) increasingly masks reduced functional necessity \u2014 maritime regulations originally justified by genuine collective action problems are now used to maintain monopoly control. The analytical observer's snare classification confirms: suppression mechanisms (legal + economic barriers) and high extraction (0.68) override the coordination function. The constraint persists not because coordination is impossible without monopoly control but because suppression prevents the emergence of competitive alternatives."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "colonial_trade_dependency",
+      "port_infrastructure_lock_in",
+      "containerization_standard_adoption"
+    ],
+    "dual_formulation_note": "Maritime monopoly control operates through multiple linked constraints: legal/regulatory capture (flag-state monopoly), infrastructure control (port gatekeeping), and rate-setting power (freight cartel). Each component has distinct epsilon and operates through different suppression mechanisms. The unified story treats the monopoly as a single constraint because the extraction mechanism is unified across all components. Decomposition would be warranted if one component (e.g., containerization standards) showed structural independence with distinct epsilon."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

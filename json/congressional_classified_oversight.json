@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "congressional_classified_oversight",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cco"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Congressional Classified Oversight Constraint",
+    "topic_domain": "political/institutional_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "executive_branch",
+      "intelligence_agencies"
+    ],
+    "victims": [
+      "congressional_representatives",
+      "democratic_accountability",
+      "public_oversight"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Non-Cleared Representative",
+      "comment": "PERSPECTIVE 1: NON-CLEARED CONGRESSIONAL REPRESENTATIVE (SNARE) \u2014 Congress member without security clearance cannot access classified information needed for effective oversight. Trapped within the institution but structurally excluded from the information required to exercise constitutional duties. Bears full extraction cost: responsibility without power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Cleared Committee Member",
+      "comment": "PERSPECTIVE 2: CLEARED COMMITTEE MEMBER (TANGLED ROPE) \u2014 Possesses access but faces severe constraints: compartmentation restricts discussion, NDA penalties for disclosure, career risk for raising concerns, institutional pressure to defer to executive interpretation. Genuine coordination function exists (legitimate information control for national security) alongside asymmetric extraction (executive controls what is shown, when, and in what framing)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Intelligence Agency",
+      "comment": "PERSPECTIVE 3: INTELLIGENCE AGENCY (ROPE) \u2014 Experiences constraint as functional coordination mechanism: classification enables compartmentation necessary for operational security while allowing selective briefings to maintain congressional relationships. Beneficiary position \u2014 controls information flow, sets agenda for what Congress discusses. Exit option is arbitrage: can shift information provision to executive branch alternative channels if congressional resistance emerges."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Reform Movement",
+      "comment": "PERSPECTIVE 4: CONGRESSIONAL REFORM MOVEMENT (SCAFFOLD) \u2014 Organized reform advocates (select committee leadership, transparency advocates, civil liberties groups) see the bottleneck as solvable through expanded clearance programs, improved briefing materials, and sunset review mechanisms. Some agency and some success in creating alternative pathways (inspector general reports, declassification reviews). Low effective extraction because the movement has resources and perceives an exit path through institutional change."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Classification System Itself",
+      "comment": "PERSPECTIVE 5: CLASSIFICATION SYSTEM AS INSTITUTION (PITON) \u2014 The formal oversight apparatus (committee hearings, classified briefings, inspector general mechanisms) has become largely performative. The rituals of oversight persist (briefings occur, questions are asked in secure settings, reports are filed) but the actual power to condition executive action has atrophied. Theater ratio high: the system maintains the appearance of congressional control while effective control resides in executive discretion about what to disclose and how."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Constitutional Tension View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / CONSTITUTIONAL TENSION VIEW (MOUNTAIN) \u2014 From a civilizational view, the conflict between operational security and democratic accountability is constitutive of the intelligence state itself \u2014 no resolution is possible without eliminating either classification or congressional oversight. Some aspects of this tension are structural (information monopoly is necessary for covert action; transparency is necessary for democracy). However, the mountain classification risks naturalizing what is historically contingent \u2014 the specific form of the intelligence state emerged post-WWII and has expanded through choices about classification scope, compartmentation, and briefing protocols that are not immutable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "classification_scope_boundary",
+      "question": "What constitutes legitimately classifiable information versus information Congress must have to exercise constitutional oversight?",
+      "resolution_mechanism": "Comparative analysis of classification decisions across administrations; assessment of disclosed information that turned out non-sensitive; cost-benefit analysis of withheld vs compromised operations",
+      "impact": "If scope can be narrowed: extraction mechanism weakens substantially. If scope is inherent to operational security: extraction is unavoidable and constraint becomes more mountain-like.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Boundary between legitimate classification and congressional right-to-know"
+    },
+    {
+      "id": "clearance_as_coercion",
+      "question": "Does the security clearance requirement function primarily as information control or as mechanism to coerce congressional silence through career/reputation risk?",
+      "resolution_mechanism": "Analysis of instances where cleared officials faced repercussions for disclosing classified information to Congress vs to executive; comparison of information flow before/after clearance requirement was implemented",
+      "impact": "If clearance is primarily coercive: suppression metric rises, classification becomes snare-like. If clearance is primarily functional: suppression metric was inflated, constraint becomes more rope-like.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether clearance functions as information control or coercion mechanism"
+    },
+    {
+      "id": "compartmentation_effectiveness",
+      "question": "Does compartmentation (the practice of limiting access to subsets of classified information) serve legitimate operational security or primarily function to prevent Congress from assembling a comprehensive picture?",
+      "resolution_mechanism": "Analysis of information crosswalking: whether Congress could reconstruct broader strategic picture if individual compartments were shared; assessment of compartmentation decisions that appear designed to prevent comprehensive oversight",
+      "impact": "If compartmentation is operationally necessary: theater ratio is lower, constraint is more functional. If compartmentation is primarily about control: theater ratio is higher, constraint is more extractive.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether compartmentation serves operational security or prevents comprehensive oversight"
+    },
+    {
+      "id": "executive_good_faith",
+      "question": "Does the executive branch interpret Congress's need-to-know requirement in good faith as a delegation of oversight power or as a tool to minimize information sharing?",
+      "resolution_mechanism": "Longitudinal analysis of classification and declassification patterns; comparison of what executive chooses to brief Congress on vs what Congress specifically requests; assessment of post-hoc declassification revealing information was witheld without legitimate operational reason",
+      "impact": "If interpreted in good faith: constraint functions as rope or scaffold. If interpreted as control tool: constraint functions as tangled rope or snare.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Executive good faith in interpreting congressional need-to-know"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Congressional classified oversight represents a structural constraint where the constitutional authority of Congress to oversee executive activity conflicts with the operational necessity of protecting classified information from disclosure. The constraint exhibits properties of a tangled rope: it contains a genuine coordination function (legitimate need to protect sources, methods, and ongoing operations from foreign adversaries) alongside asymmetric extraction (the executive branch's control over what Congress can see enables the executive to limit effective oversight). The constraint has intensified over recent decades as the volume of classified information has expanded, compartmentation practices have become more restrictive, and congressional staffing for technical oversight has declined. The theater ratio has increased over the interval, indicating that formal oversight mechanisms (committee hearings, briefing protocols, inspector general reviews) maintain the appearance of congressional power while substantive control has migrated toward the executive.",
+    "key_agents": [
+      "Non-Cleared Congress Members: Primary victims (powerless/trapped) \u2014 excluded from classified information necessary to exercise constitutional oversight authority",
+      "Cleared Committee Members: Secondary victims (organized/constrained) \u2014 possess access but face compartmentation, NDA penalties, career risk, and institutional pressure; also benefit from access privilege",
+      "Intelligence Agencies: Primary beneficiaries (institutional/arbitrage) \u2014 control information flow, set briefing agendas, determine what Congress can discuss; can shift information provision to alternative executive channels",
+      "Executive Branch: Co-beneficiary (institutional/arbitrage) \u2014 maintains sole discretion over classification decisions and can unilaterally restrict congressional access",
+      "Reform Movement: Organized challengers (powerful/mobile) \u2014 advocates for expanded clearance programs, improved briefing materials, declassification reviews",
+      "Classification System Institution: Maintains performative oversight rituals (piton perspective)",
+      "Democratic Accountability: Abstract victim (powerless/trapped) \u2014 the public interest in knowing whether executive actions comply with law and constitutional values"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. The executive branch captures significant benefit from information asymmetry: it can represent its own actions to Congress in a curated way, withhold embarrassing information without congressional remedy, and maintain operational freedom from legislative constraints. The extraction is not at maximum (0.72+) because Congress retains some power \u2014 appropriations authority, confirmation authority, subpoena power \u2014 and has occasionally forced disclosure. The value reflects the average extraction rate accounting for cases where Congress successfully extracts concessions and cases where it fails. Suppression (0.68): High. Multiple barriers prevent Congress from exercising meaningful oversight: security clearance requirements exclude many representatives, compartmentation prevents full information assembly, classification itself conceals information, NDA penalties deter disclosure to colleagues or constituents, and career/reputational risk (committee assignment, future appointments) deters raising concerns. However, suppression is not absolute (0.85+) because some classified information does reach Congress through briefing protocols, and some Congress members with security clearances have successfully influenced executive decisions. Theater ratio (0.64): Moderately high. Formal oversight mechanisms (Intelligence Committee hearings, classified briefings, inspector general reports, Gang of Eight notifications) create the appearance of congressional power to condition executive action. However, the actual power of these mechanisms has declined as the executive has increasingly shielded decisions behind classification and compartmentation. The theater has increased because the formal apparatus persists but its functional capacity has atrophied.",
+    "perspectival_gap": "Why does the intelligence agency see Rope while Congress sees Snare or Tangled Rope? The agency experiences the classification system as enabling their core function (operational security) while maintaining the legitimacy of having Congress participate in oversight decisions. Congress experiences the same system as constraining their core function (effective oversight) while maintaining the fiction that they have power. This gap is not perceptual \u2014 both parties are correct about their own structural experience. The constraint genuinely coordinates (prevents information leaks that would harm operations) AND genuinely extracts (enables executive discretion beyond congressional check). The perspective gap is the signature of tangled rope.",
+    "directionality_logic": "The directionality derivation for this constraint maps structural positions to d values. Non-cleared Congress members are pure victims with no exit: d \u2248 0.95, producing high f(d). Cleared committee members are victims with constrained exit (can resign from committee but remain in Congress; can speak publicly but face career cost): d \u2248 0.65, producing moderate f(d). Intelligence agencies are beneficiaries with arbitrage exit (can threaten to withhold briefings or shift to executive alternatives): d \u2248 0.10, producing low/negative f(d). The executive branch benefits from the same arbitrage position. Reform movements have some power and mobility, so d \u2248 0.45, producing moderate f(d). The disparity in directionality values between beneficiaries and victims is the core mechanism of the tangled rope classification \u2014 coordination function exists (Congress and executive do coordinate on classified matters) but extraction is asymmetric (Congress cannot threaten exit effectively because Congress members cannot simply abandon constitutional oversight authority).",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint serves a genuine coordination function (preventing information leaks that would compromise operations) alongside asymmetric extraction (enabling executive discretion). The classification system is not pure coordination (which would appear as Rope from all perspectives) because Congress cannot exit without abandoning constitutional duty \u2014 Congress is locked into participation on terms set by the executive. Nor is it pure extraction (Snare) because legitimate security concerns do require some information control and Congress does retain some power through appropriations and confirmation. The tangled rope classification captures the hybrid: coordination goal + asymmetric extraction mechanism. The false natural law risk is the mountain perspective, which naturalizes this as inherent constitutional tension. But the constraint's form (what gets classified, compartmentation depth, briefing protocols) reflects policy choices, not constitutional necessity. Intelligence oversight could function with narrower classification, less compartmentation, and clearer congressional right-to-know thresholds \u2014 not by eliminating security classification entirely but by narrowing its scope and limiting its use as a tool to prevent congressional oversight."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "foreign_intelligence_surveillance",
+      "executive_privilege_claim",
+      "intelligence_community_autonomy"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

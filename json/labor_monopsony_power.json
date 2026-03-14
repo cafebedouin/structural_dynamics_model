@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "labor_monopsony_power",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lmp"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Labor Monopsony Power and Wage Extraction",
+    "topic_domain": "labor_economics/employment",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "monopsony_employer",
+      "firm_shareholders",
+      "consumer_base"
+    ],
+    "victims": [
+      "worker_mobility",
+      "wage_formation_process"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Immobile Worker",
+      "comment": "PERSPECTIVE 1: IMMOBILE WORKER (SNARE) \u2014 In single-employer labor markets (rural regions, company towns, specialized skill locales), workers face material barriers to exit: relocation costs, housing ties, family considerations, lack of alternative employment. High suppression from geographic/economic immobility. Employer wage-setting is experienced as extraction with minimal coordination benefit. No exit option; maximum experienced chi."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Constrained Urban Worker",
+      "comment": "PERSPECTIVE 2: CONSTRAINED URBAN WORKER (TANGLED ROPE) \u2014 In metropolitan labor markets with multiple employers but high job-search costs, skill-specificity, credential barriers, or industry concentration, workers face significant but surmountable exit costs. The employer-worker relationship coordinates production (genuine coordination benefit) while extracting wage surplus. Suppression high but not total; organized labor can exert countervailing power."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Monopsony Employer",
+      "comment": "PERSPECTIVE 3: MONOPSONY EMPLOYER (ROPE) \u2014 From the firm's perspective, labor monopsony power is a coordination mechanism: the firm structures compensation and working conditions, workers coordinate their labor supply in response. The firm experiences the relationship as coordination that solves a collective action problem (assembling a workforce). Arbitrage options available: shift production, automate, relocate, or hire from alternative labor pools. Net beneficiary; experienced extraction runs toward the firm."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Union",
+      "comment": "PERSPECTIVE 4: LABOR UNION (TANGLED ROPE) \u2014 Organized labor represents a coordination mechanism (wage-setting through collective bargaining) that simultaneously extracts from the monopsony firm's surplus. Union extraction depends on institutional power: strength in organizing, legal protections, and industry density. Suppression runs in both directions \u2014 union faces employer pressure to decertify or relocate; firm faces labor action and wage pressure. Experienced extraction is moderate because both parties can organize and exercise countervailing power."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Framework",
+      "comment": "PERSPECTIVE 5: REGULATORY FRAMEWORK (PITON) \u2014 Minimum wage laws, labor standards, antitrust enforcement, and labor organizing protections are institutional mechanisms intended to constrain monopsony extraction. In practice, regulatory enforcement is often weak and theatrical: minimum wages set below prevailing market rates, labor law violations routinely ignored, antitrust cases rare. The regulatory framework persists as a formality (theater_ratio high) despite degraded enforcement capacity. Real monopsony extraction bypasses or absorbs these constraints through compliance theater."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational view, labor monopsony power represents a genuine structural tension: firms must coordinate labor supply (coordination function requires wage flexibility) while labor markets concentrate power (extraction flows from power imbalance). This perspective sees both the coordination and extraction mechanisms as intrinsic to how modern labor markets operate under capital concentration."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "monopsony_definition_boundary",
+      "question": "What concentration threshold (HHI, wage elasticity of labor supply) defines monopsony vs oligopsony vs competitive labor market?",
+      "resolution_mechanism": "Empirical measurement of wage-setting power: compare wage offers to alternative opportunities; estimate labor supply elasticity to individual firms; measure HHI in local labor markets",
+      "impact": "If threshold high (strict definition): fewer markets classified as monopsony, constraint appears less severe. If threshold low (loose definition): constraint appears endemic to modern labor markets.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Threshold defining monopsony market concentration"
+    },
+    {
+      "id": "wage_suppression_attribution",
+      "question": "How much wage suppression is attributable to monopsony power vs productivity differences, skill mismatch, or labor quality variation?",
+      "resolution_mechanism": "Regression analysis controlling for worker human capital; comparison of identical workers' wages across different local labor markets; before/after studies of mergers that increase labor market concentration",
+      "impact": "If monopsony explains >30% of wage variance: extractiveness estimate (0.58) is conservative. If <10%: extractiveness should be lower (0.35-0.40 range).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of wage suppression to monopsony power"
+    },
+    {
+      "id": "countervailing_power_efficacy",
+      "question": "Do unions, professional associations, or worker collectives successfully constrain monopsony extraction, or does monopsony power persistently exceed countervailing force?",
+      "resolution_mechanism": "Historical analysis of union wage premiums in concentrated vs competitive markets; measurement of union density erosion over time; comparison of monopsony wage suppression in unionized vs non-unionized sectors",
+      "impact": "If countervailing power effective: constraint should be classified as Tangled Rope from most perspectives. If ineffective: constraint should be Snare or Scaffold (temporary union countervailing power being eroded).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether countervailing labor power constrains monopsony extraction"
+    },
+    {
+      "id": "geographic_mobility_trend",
+      "question": "Is worker geographic mobility increasing (due to remote work, digital job markets) or decreasing (due to housing costs, credential geography, climate constraints)?",
+      "resolution_mechanism": "Longitudinal measurement of interstate migration rates; comparison of job search radius pre/post-pandemic; analysis of remote work adoption in concentrated labor markets",
+      "impact": "If mobility increasing: monopsony power should decline over interval; measurements show decreasing extractiveness. If mobility decreasing: monopsony deepens; measurements show increasing extractiveness.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Trend in worker geographic mobility"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Labor monopsony power emerges when a single employer or a small number of employers dominate the labor supply in a geographic region or skill domain, enabling below-competitive wage-setting. This constraint exhibits genuine coordination between employer and workers (they must coordinate production) alongside asymmetric extraction (employers capture wage surplus due to power imbalance). The constraint is not pure extraction (Snare) because the employer-worker relationship genuinely solves a collective action problem \u2014 assembling a workforce, organizing production, negotiating terms. But coordination is not pure (Rope) because the employer's power generates suppression: workers have few exit options, creating wage formation asymmetry. The measurement trajectory shows increasing extractiveness over the 20-year interval (0.42 \u2192 0.58) driven by: labor union density erosion, geographic housing cost concentration, increasing credential requirements reducing cross-industry mobility, and supply-chain consolidation increasing employer concentration. Theater ratio remains low (0.35) because monopsony wage-setting is direct and functional, not performative \u2014 the firm genuinely needs to set wages to attract labor; the constraint doesn't operate through ritual.",
+    "key_agents": [
+      "Monopsony Employer: Primary beneficiary (institutional/arbitrage) \u2014 captures wage surplus; can relocate, automate, or shift labor sourcing; net beneficiary with low exit costs",
+      "Worker (geographically immobile): Primary victim (powerless/trapped) \u2014 few employment alternatives; faces relocation barriers; bears full extraction burden",
+      "Constrained Urban Worker: Secondary victim (moderate/constrained) \u2014 faces job-search costs, credential specificity, skill switching barriers; organized labor can represent",
+      "Labor Union: Organized victim/competitor (organized/constrained) \u2014 exerts countervailing power through collective bargaining; can strike, mobilize, or organize workers",
+      "Consumer Base: Secondary beneficiary (institutional/arbitrage) \u2014 benefits from monopsony wage suppression passed through to lower prices; diffuse, unorganized",
+      "Regulatory Framework: Institutional mechanism (institutional/arbitrage) \u2014 intended to constrain monopsony but often degraded through weak enforcement"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Monopsony wage suppression is documented empirically at 10-25% of competitive wage rates in concentrated labor markets. The extractiveness value (0.58) reflects that the extraction is real and substantial but not total \u2014 some firms do offer competitive wages even in concentrated markets, and union wage premiums (15-25%) show workers can capture back part of surplus with organized power. The value is lower than pure extraction (Snare at 0.70+) because the coordination function is genuine and creates value both sides benefit from (employment itself). Suppression (0.68): High. Multiple barriers constrain worker exit options: geographic immobility from housing costs and family ties, credential specificity limiting cross-industry mobility, search costs and information asymmetries, and declining union coverage reducing countervailing power. However, suppression is not total (0.90+) \u2014 some workers can move, some can switch industries, and some can organize. Theater ratio (0.35): Low. Monopsony extraction operates through direct wage-setting, not performative mechanisms. Employers genuinely must set wages to attract labor; the constraint doesn't hide behind ritual or justificatory theater.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from power atom, exit options, and structural relationship to extraction flow. Powerless trapped workers experience maximum d (0.95), producing high f(d) and high experienced \u03c7. The monopsony employer experiences low d (0.05-0.15) because they benefit from the extraction and have arbitrage exit options. Organized labor experiences moderate d (0.50-0.65) because they are organized enough to exert countervailing force but not enough to fully eliminate extraction. The analytical observer at civilizational scope experiences moderate-high d (0.72) because the structural tension between coordination and concentration is irreducible at that time scale. The regulatory framework experiences low d from a formal perspective (intended beneficiary of workers) but the actual enforcement weakness means the real d is higher \u2014 a directionality override would move this from 0.15 to 0.35-0.40 to reflect regulatory capture.",
+    "perspectival_gap": "This constraint demonstrates maximal perspectival divergence. The immobile worker sees a snare: no exit, high suppression, pure extraction. The constrained urban worker sees tangled rope: both coordination and extraction, some organized power. The monopsony firm sees rope: coordination mechanism that solves labor assembly. The union sees tangled rope from the opposite direction: they are extracting countervailing power from the firm while coordinating worker interests. The regulatory framework sees piton: intended to constrain but degraded in practice. The analytical observer at civilizational scope sees tangled rope as the irreducible structural tension between modern labor market coordination and capital concentration. The gap reveals that 'monopsony power' is not a single constraint but a perspectival function: identical structural conditions produce six different classification types depending on observer position.",
+    "mandatrophy_analysis": "MONOPSONY RESOLVES MANDATROPHY BY INSTITUTIONAL DECOMPOSITION: The constraint avoids the false summit trap (mountain) by having genuine coordination content (benef iciaries, production requirement) and genuine extraction asymmetry (victims, power imbalance). The beneficiary (employer) experiences rope because they genuinely coordinate labor supply. The victim (worker) experiences snare because they genuinely face extraction. The organized agent (union) experiences tangled rope from both sides \u2014 coordination through collective bargaining + extraction of surplus back from the firm. The analytical observer sees tangled rope because the structural irreducibility (must coordinate + power concentrated) is real. No perspective naturalizes the constraint as an immutable law. The regulatory framework perspective (piton) is significant: it represents the institutional response to monopsony that is intended to resolve the extraction but operates with degraded enforcement. This is exactly where Scaffold analysis becomes relevant \u2014 if regulatory enforcement strengthens or alternative labor market mechanisms (remote work, skill standardization, union revitalization) emerge, the constraint's time horizon shortens and it should reclassify toward Scaffold."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "union_decline_institutional_erosion",
+      "geographic_wage_disparities",
+      "automation_labor_replacement"
+    ],
+    "dual_formulation_note": "Labor monopsony power is upstream of multiple downstream constraints: union decline is an institutional response to concentrated employer power, geographic wage disparities are a symptom of regional labor market concentration, and automation is an employer strategy enabled by monopsony conditions (low wage pressure reduces automation cost-benefit). Each downstream constraint has its own extractiveness value and perspectives."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

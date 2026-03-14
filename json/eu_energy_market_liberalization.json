@@ -1,0 +1,240 @@
+{
+  "header": {
+    "constraint_id": "eu_energy_market_liberalization",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "eueml"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.52,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Energy Market Liberalization and Grid Coordination",
+    "topic_domain": "energy/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_industrial_consumers",
+      "energy_traders",
+      "renewable_energy_producers"
+    ],
+    "victims": [
+      "small_household_consumers",
+      "grid_stability_maintenance",
+      "fossil_fuel_dependent_regions"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Household Consumer",
+      "comment": "PERSPECTIVE 1: HOUSEHOLD CONSUMER (SNARE) \u2014 Small residential users face deregulated prices without switching ability. Supplier concentration, lock-in contracts, and lack of technical knowledge prevent exit. Market liberalization's alleged benefits (choice, competition) exist only on paper. Trapped in high-cost extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Coal-Dependent Region",
+      "comment": "PERSPECTIVE 2: COAL-DEPENDENT REGION (TANGLED ROPE) \u2014 Benefits from energy market stability and job preservation through transition funding. Simultaneously extracted through commodity price exposure and loss of guaranteed coal plant revenue. Constrained by dependence on transitional subsidies; cannot exit without terminal regional economic collapse."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Large Industrial Consumer",
+      "comment": "PERSPECTIVE 3: LARGE INDUSTRIAL CONSUMER (ROPE) \u2014 Benefits from competitive wholesale pricing, demand-side bidding, and direct grid contracts. High exit capacity (can hedge, relocate, self-generate). Liberalization creates genuine coordination function: transparent price signals improve allocation across Europe. Net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Energy Trader",
+      "comment": "PERSPECTIVE 4: ENERGY TRADER (ROPE) \u2014 Benefits from price volatility and market liquidity. Coordinates supply and demand across borders through arbitrage. Full exit capacity (can trade any commodity). Liberalization solves their coordination problem: transparent markets enable profitable inter-regional flows."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Transmission System Operator",
+      "comment": "PERSPECTIVE 5: TRANSMISSION SYSTEM OPERATOR (TANGLED ROPE) \u2014 Benefits from increased throughput revenues and reduced stranded costs from legacy contracts. Simultaneously extracted by non-dispatchable renewable injections that increase grid management costs without corresponding revenue. Constrained by regulatory mandate to accept all renewable generation; cannot exit coordination function."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Regulatory Apparatus",
+      "comment": "PERSPECTIVE 6: REGULATORY APPARATUS (PITON) \u2014 Maintains extensive compliance theater (market monitoring, balancing mechanisms, capacity markets) that substitutes for genuine competitive pressure. Regulations proliferate faster than enforcement capacity. The theater persists through institutional inertia \u2014 original coordination function (preventing monopoly abuse) degraded as market structure evolved. Regulators retain arbitrage capacity (can reshape rules) but lack political will."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The Renewable Energy Coalition",
+      "comment": "PERSPECTIVE 7: RENEWABLE ENERGY COALITION (SCAFFOLD) \u2014 Benefits from market access and subsidies during transition. Experiences extraction through grid integration costs and balancing charges. Organized agents (cooperatives, grid operators) see this as temporary coordination problem with sunset: grid modernization and storage deployment are building alternative integration pathways. Expects extraction to decline as flexibility mechanisms mature. Sunset: 15-20 years for grid integration costs to decline to baseload parity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From universal/civilizational perspective, the tension between commodity price efficiency and grid stability is immutable. Competitive markets optimize short-term allocation; physical grids require long-term coordination. This fundamental tension cannot be eliminated, only managed. However, structural data contradicts this naturalization \u2014 the tension is exacerbated by specific institutional choices (real-time pricing without demand-side flexibility, scarcity pricing during crises) rather than inherent to market economics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "extraction_vs_transition_cost",
+      "question": "How much of household price increases represents extractive profit-taking vs legitimate transition costs (grid modernization, renewable integration, stranded asset write-downs)?",
+      "resolution_mechanism": "Decompose bill components: wholesale commodity cost, transmission and distribution margin, renewable support charges, system balancing costs, retail margin. Compare retail margins across EU countries; identify outliers. Track wholesale cost correlation with retail price changes.",
+      "impact": "If extraction accounts for >30% of price increase: snare classification confirmed for households. If extraction <15%: reclassify as legitimate coordination problem (rope or scaffold). Mid-range (~20-25%): tangled rope confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of household price increases from extraction vs legitimate transition costs"
+    },
+    {
+      "id": "coal_region_exit_scenario",
+      "question": "Can coal-dependent regions transition to energy sector employment without regional economic collapse, or is current extraction (low coal prices, job losses) inescapable regardless of liberalization reversal?",
+      "resolution_mechanism": "Comparative analysis of region-exit scenarios: early-adopting transition regions (Germany Ruhr Valley, Poland Silesia) tracking employment, wage replacement, housing prices, out-migration over 10-year transition windows. Counterfactual: what happens if EU reverses liberalization and guarantees coal demand?",
+      "impact": "If regions can transition successfully: classification shifts to scaffold with genuine sunset. If transitions are failing: classification shifts to snare (trapped by structural deindustrialization, not by liberalization per se). Engine must distinguish policy-driven extraction from structural obsolescence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether coal regions can transition economically without regional collapse"
+    },
+    {
+      "id": "grid_stability_cost_attribution",
+      "question": "Are increased balancing and ancillary service costs driven by renewable integration (structural cost) or by market fragmentation and under-investment in flexibility (extractive inefficiency)?",
+      "resolution_mechanism": "Compare TSO balancing costs across high-renewable vs fossil-heavy grids, controlling for grid topology and interconnection. Track historical trends: did balancing costs rise before or after renewable penetration? Comparison with countries that integrated renewables under different market structures (Denmark cooperative model vs German wholesale model).",
+      "impact": "If structural cost dominates: scaffold perspective confirmed \u2014 costs decline as flexibility matures. If extractive inefficiency dominates: tangled rope perspective confirmed \u2014 grid operators capture balancing premiums while claiming technical necessity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether grid balancing cost increases are structural or extractive"
+    },
+    {
+      "id": "regulatory_theater_vs_effectiveness",
+      "question": "Do EU energy market regulations (capacity mechanisms, balancing rules, cross-border auction procedures) actually prevent monopoly abuse and ensure efficiency, or are they performative overhead that substitutes for competitive market pressure?",
+      "resolution_mechanism": "Compare jurisdictions with heavy vs light regulatory burden (Spain/France heavy regulation vs Nordic light regulation) on key metrics: price volatility, consumer bill impacts, market concentration, grid reliability. Track compliance cost vs measured prevention benefit.",
+      "impact": "If regulations effective: piton classification rejected \u2014 regulatory apparatus is rope. If regulations performative: piton classification confirmed \u2014 theater ratio >0.70 justified.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether market regulations deliver functional benefit or are performative"
+    },
+    {
+      "id": "household_switching_barriers",
+      "question": "Are household switching barriers (information costs, lock-in contracts, supplier concentration) remediable through policy intervention (mandatory information standards, contract standardization) or are they structural (rational suppliers will recreate barriers)?",
+      "resolution_mechanism": "Natural experiments: track household switching rates and bill savings after policy interventions (contract standardization in Netherlands, switching cost caps in UK). Correlation analysis: do barriers scale with supplier concentration? Can barriers be lowered without suppliers offsetting through other mechanisms (higher base tariff)?",
+      "impact": "If barriers remediable: snare classification may shift to tangled rope with active policy enforcement. If barriers structural and recreated: snare classification confirmed \u2014 extraction is market-structural, not policy-fixable.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether household switching barriers are policy-remediable or structurally persistent"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 16
+  },
+  "commentary": {
+    "narrative_context": "EU energy market liberalization (initiated 1996-2009 through successive directives) created a dual structure: competitive wholesale markets overlaid on regulated transmission networks. The constraint reveals fundamental tension between short-term price efficiency (competitive markets' strength) and long-term grid stability coordination (markets' weakness). The architecture generates extraction from household consumers and coal-dependent regions while creating genuine coordination benefits for large industrialists, traders, and renewable generators. Theater has accumulated through regulatory proliferation \u2014 balancing mechanisms, capacity markets, cross-border auction procedures \u2014 that claim to prevent extraction but largely perform visibility while extraction mechanisms persist. The constraint exhibits lifecycle drift: initial extractiveness (0.32, Year 0) reflected genuine coordination problem; extractiveness has risen to 0.58 as rent-seeking layers (capacity payments, balancing charges, ancillary service premiums) accumulate faster than grid modernization reduces actual costs. Theater ratio drifted from 0.42 to 0.65 as regulatory response to crises produced compliance overhead without reducing extraction mechanisms.",
+    "key_agents": [
+      "Household Consumers: Primary victims (powerless/trapped) \u2014 experience price increases without ability to switch or exit; benefit largely illusory except in high-competition urban markets",
+      "Coal-Dependent Regions: Secondary victims (moderate/constrained) \u2014 trapped by regional economic structure; benefit from transition subsidies but face commodity price exposure and job losses",
+      "Large Industrial Consumers: Primary beneficiaries (powerful/arbitrage) \u2014 capture competitive pricing, demand-side revenues, and relocation arbitrage across price zones",
+      "Energy Traders: Beneficiaries (institutional/arbitrage) \u2014 profit from price volatility and cross-border arbitrage enabled by market transparency",
+      "Transmission System Operators: Mixed agents (powerful/constrained) \u2014 benefit from increased throughput but constrained by mandatory renewable acceptance and balancing obligations",
+      "Renewable Energy Producers: Secondary beneficiaries (powerful/mobile) \u2014 benefit from market access but face grid integration extraction through balancing charges",
+      "Regulatory Apparatus: Institutional inertia (institutional/arbitrage) \u2014 maintains performative rules that substitute for competitive pressure; retains arbitrage capacity but lacks political will to reshape",
+      "Analytical Observer: Sees false natural law (analytical/analytical) \u2014 risks naturalizing market-structural extraction as immutable physics of grid coordination"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The household consumer experiences extraction through supplier consolidation (retail margins concentrated among few suppliers), lock-in contracts, and information asymmetries that liberalization's transparency promises never remedied. Large industrial consumers experience the opposite \u2014 they gained from market opening. Regional concentration of extraction (high in countries with weak regulatory enforcement: Hungary, Poland) vs low extraction (Denmark, Netherlands with strong consumer protections) shows extraction is not inherent to liberalization but depends on enforcement choices. Suppression (0.52): Moderate. Household consumers face real barriers to exit \u2014 switching costs, contract lock-in, supplier concentration \u2014 but barriers are not total. Some households can switch; some can self-generate or shift consumption. The suppression reflects rational supplier strategies to recreate barriers that regulation attempts to remove. Theater ratio (0.65): Moderate-high. EU energy regulations (balancing market rules, capacity mechanisms, cross-border auction procedures, renewables integration targets) perform extensive ritual of market design without necessarily preventing extraction. Balancing charges claimed as technical necessity; capacity payments claimed as investment incentive; auction procedures claimed as transparency \u2014 all true, but overlay is theater because the underlying extraction mechanisms (supplier consolidation, information asymmetry, stranded costs imposed on households) persist.",
+    "directionality_logic": "Directionality derives from structural position in the extraction flow. Large industrial consumers and traders have high exit capacity (arbitrage \u2014 can hedge, relocate, trade alternatives) and appear as beneficiaries (they gained from market opening), so d \u2248 0.15-0.20, producing low or negative effective extraction chi from their perspective. Household consumers have low exit capacity (trapped \u2014 cannot switch without cost, cannot relocate, cannot self-generate economically) and appear as victims (they lost from market opening as retail competition collapsed), so d \u2248 0.90-0.95, producing high chi from their perspective. Coal regions have constrained exit (medium cost to relocate, cannot stay economically viable in deindustrialization) and are both beneficiaries (transition subsidies) and victims (commodity price exposure), so d \u2248 0.55-0.65, producing moderate chi reflecting the mixed position. TSOs are powerful (institutional) but constrained by regulatory mandate, so d \u2248 0.45-0.55, producing moderate chi. Regulatory apparatus is institutional with arbitrage capacity, so d \u2248 0.10-0.15, producing low chi from its perspective (it captures compliance overhead revenues).",
+    "perspectival_gap": "The original research expectation was that liberalization would reduce extraction to rope (pure coordination). The empirical outcome shows tangled rope: genuine coordination benefits exist (traders improve allocation, large consumers get competitive pricing) but are paired with severe extraction (household consumers trapped, coal regions destabilized). The perspectival gap is stark: large industrials see rope (competitive markets solving allocation problems); households see snare (price traps with no exit). The coal region sees tangled rope (benefits from transition support but trapped by commodity exposure). The regulatory apparatus increasingly sees piton (its own rules performative rather than functional). The analytical observer at civilizational scale risks seeing mountain (grid stability vs market efficiency is immutable tension), but structural evidence shows this is naturalization \u2014 the tension is exacerbated by specific institutional choices, not inherent to physics. The gap reveals that 'market liberalization' as a single constraint is actually four distinct constraints with different \u03b5 values: wholesale market coordination (\u03b5 \u2248 0.15, pure rope), retail consumer market (\u03b5 \u2248 0.68, snare), grid stability coordination (\u03b5 \u2248 0.55, tangled rope), and regulatory theater (\u03b5 \u2248 0.62, piton). The decomposition would separate these.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The tangled rope classification resolves the mandatrophy by showing that liberalization succeeded at creating one genuine coordination mechanism (wholesale market enabling cross-border trade) while failing to create another (retail market delivering consumer choice). The constraint is not 'is liberalization extractive or coordinative' but 'which parts are which, and at what stage of lifecycle?' Year 0 extractiveness (0.32) reflects genuine coordination dominance \u2014 early liberalization did improve wholesale efficiency. Year 16 extractiveness (0.58) reflects extraction accumulation as rent-seeking layers (supplier consolidation, balancing charges, capacity payments) outpaced efficiency gains. Theater ratio drift (0.42 \u2192 0.65) reveals that regulatory response to extraction crises produced compliance overhead rather than extraction reduction. The tangled rope classification holds because: (1) genuine coordination function exists (wholesale markets, cross-border trade), (2) asymmetric extraction coexists (household traps, coal region destabilization), (3) active enforcement required (regulatory oversight of retail markets, balancing mechanisms, capacity payments), (4) extraction does not depend solely on beneficiary/victim relationship but on whether enforcement mechanisms actually constrain extraction or perform constraint. The scaffold perspective (7 years until grid modernization reduces balancing costs) provides exit pathway for some victims (renewables coalitions, regions with storage deployment) but not for others (households in supplier-concentrated markets, coal regions in structural deindustrialization). The false mountain perspective (grid stability vs efficiency immutable) reveals exactly the authorial trap: naturalizing what is actually a contingent regulatory choice (real-time pricing without demand flexibility, scarcity pricing during crises, balancing charges on renewable injection)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_coal_region_transition",
+      "household_energy_poverty",
+      "grid_stability_renewable_integration"
+    ],
+    "dual_formulation_note": "EU energy market liberalization decomposes into four structurally distinct constraints: eu_energy_wholesale_market_coordination (\u03b5\u22480.15, rope), eu_retail_energy_market (\u03b5\u22480.68, snare), eu_grid_stability_renewable_coordination (\u03b5\u22480.55, tangled rope), and eu_energy_regulatory_theater (\u03b5\u22480.62, piton). This story represents the aggregate constraint across all four. The wholesale market coordination is upstream (enables the others); retail extraction is downstream (depends on wholesale structure); grid stability is parallel (affects all); regulatory theater overlays all three. The network links capture cross-constraint effects: household energy poverty is a victim-side manifestation of retail extraction; coal region transition is exacerbated by commodity price exposure in liberalized wholesale markets; grid stability coordination is complicated by renewable injections created by market incentives."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.48
+    }
+  ]
+}

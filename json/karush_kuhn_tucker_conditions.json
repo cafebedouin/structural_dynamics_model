@@ -1,0 +1,149 @@
+{
+  "header": {
+    "constraint_id": "karush_kuhn_tucker_conditions",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "kkt"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Karush-Kuhn-Tucker (KKT) Optimality Conditions",
+    "topic_domain": "mathematics/optimization_theory",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "beneficiaries": [],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Constrained Optimizer",
+      "comment": "PERSPECTIVE 1: CONSTRAINED OPTIMIZER (MOUNTAIN) \u2014 Any agent attempting to solve a constrained optimization problem encounters KKT conditions as an irreducible logical requirement. There is no exit, no alternative formulation, no workaround. The conditions are invariant across all optimization domains: economic resource allocation, machine learning, engineering design, finance. The structural constraint is enforced by mathematical law, not institutional choice."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "universal",
+      "label": "The Algorithm Designer",
+      "comment": "PERSPECTIVE 2: ALGORITHM DESIGNER (MOUNTAIN) \u2014 Even the most powerful computational agent with full mobility and resources cannot bypass KKT conditions. Attempting to solve constrained optimization without satisfying them yields provably suboptimal or infeasible solutions. The conditions are an immutable target regardless of computational power or algorithmic sophistication. This is true of all known optimization frameworks: Lagrangian relaxation, interior-point methods, augmented Lagrangian, proximal algorithms. The mathematical structure cannot be escaped."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a universal and civilizational perspective, KKT conditions represent a fundamental structural principle: the necessary conditions for optimality under constraints. They are derived from first principles (Lagrangian theory, convex analysis) and hold across all measurement bases, all observational contexts, and all domains of application. The conditions are self-evident from the mathematical definition of constrained optimality \u2014 they cannot be false or contingent."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "label": "The Institutional Practitioner",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL PRACTITIONER (MOUNTAIN) \u2014 Institutions (financial firms, tech companies, engineering firms, research labs) implementing optimization systems cannot ignore KKT conditions without incurring losses. Whether verifying AI training convergence, portfolio optimization, supply chain design, or operational efficiency, KKT provides the invariant check. No institution can arbitrage away the mathematical requirement \u2014 arbitrage solutions that violate KKT are provably suboptimal."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "constraint_qualification_boundary",
+      "question": "Are KKT conditions necessary for optimality under all constraint structures, or only under constraint qualifications (CQ)?",
+      "resolution_mechanism": "Formal analysis of constraint qualification conditions: LICQ, MFCQ, CPLD, and recent weakened CQ variants. Examination of counterexamples (e.g., cusp constraints without LICQ where KKT fails to hold).",
+      "impact": "If KKT always holds: pure mountain across all constraint structures. If CQ required: classification remains mountain (CQ is mathematically generic), but with a technical boundary condition.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether KKT necessity depends on constraint qualifications"
+    },
+    {
+      "id": "nonsmooth_extension_completeness",
+      "question": "Do generalizations of KKT to nonsmooth optimization (Clarke subdifferentials, limiting subdifferentials) capture the full structure of the original conditions, or do they represent fundamentally different constraints?",
+      "resolution_mechanism": "Formal comparison: KKT for smooth convex problems vs. Clarke-KKT vs. Mordukhovich subdifferential conditions. Empirical testing on benchmark nonsmooth problems.",
+      "impact": "If generalizations preserve mountain status: KKT is invariant across smoothness assumptions. If they diverge: the original KKT and its nonsmooth variants may be distinct constraints.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether nonsmooth KKT generalizations preserve the constraint structure"
+    },
+    {
+      "id": "infinite_dimensional_transfer",
+      "question": "Do KKT conditions transfer without modification to infinite-dimensional spaces (function spaces, optimal control), or do they require substantive reformulation?",
+      "resolution_mechanism": "Comparison of finite-dimensional KKT (Lagrange multipliers, complementary slackness) with infinite-dimensional analogues (adjoint equations, Pontryagin maximum principle in optimal control). Analysis of functional analytic assumptions required.",
+      "impact": "If conditions transfer cleanly: mountain status holds universally. If reformulation is required: KKT may be a property of finite-dimensional discrete optimization, distinct from its infinite-dimensional analogues.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether KKT transfers to infinite-dimensional optimization"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The Karush-Kuhn-Tucker (KKT) conditions form a cornerstone of constrained optimization theory and practice. Derived independently by Karush (1939) and Kuhn-Tucker (1951), these conditions specify the necessary and (under convexity) sufficient conditions for a point to be a local minimum of a constrained optimization problem. The KKT conditions state that at an optimal point, the gradient of the objective function must lie in the cone generated by the gradients of active constraints, and complementary slackness must hold (the Lagrange multiplier for an inactive constraint is zero). The constraint exhibits zero degrees of freedom across all observational contexts and agent positions. It is a pure natural law constraint: mathematical, self-evident, invariant.",
+    "key_agents": [
+      "Constrained Optimizer: Any agent solving constrained optimization problems (economists, engineers, data scientists, financial analysts). Structurally powerless with respect to KKT \u2014 must satisfy conditions or accept suboptimality.",
+      "Algorithm Designer: Computational researchers and implementers creating optimization algorithms. Powerful but cannot escape KKT; all successful algorithms implicitly or explicitly enforce these conditions.",
+      "Institutional Practitioner: Organizations (financial firms, tech companies, supply chain operations) implementing optimization systems at scale. Arbitrage-capable but cannot arbitrage away mathematical requirements.",
+      "Analytical Observer: Mathematician, theorist, or systems analyst viewing KKT from the perspective of pure mathematical structure. Sees the conditions as logically necessary."
+    ],
+    "logic_rationale": "Extractiveness (0.08): Minimal. The conditions impose no arbitrary extraction \u2014 they are dictated by mathematical logic. The small nonzero value reflects the minimal 'cost' of correctly implementing them (computational overhead to verify KKT satisfaction is negligible compared to solving the optimization itself). Suppression (0.03): Minimal. There are no barriers to exit because there is no 'staying in' \u2014 KKT is not an institution or mechanism one belongs to, but a mathematical truth one either satisfies or violates. The 0.03 reflects only that understanding KKT requires mathematical literacy; practical application is transparent. Theater ratio (0.15): Very low. The conditions are stated precisely, verified mechanically, and admit no performative component. The small nonzero value reflects that exposition of KKT (in textbooks, courses) may emphasize historical narrative or intuition rather than the pure mathematical statement, but the core conditions are devoid of theater.",
+    "perspectival_gap": "All four perspectives converge on the mountain classification. There is no perspectival gap because the constraint is truly invariant. The powerless agent, the powerful agent, the analyst, and the institution all encounter the same immutable mathematical requirement. This uniformity is diagnostic: it confirms the mountain status. If different perspectives produced different types, the constraint would not be a pure mathematical law.",
+    "directionality_logic": "Directionality is undefined for KKT because there is no beneficiary or victim. The conditions do not extract from one agent to benefit another \u2014 they are a structural property of mathematical space itself. All agents are symmetrically constrained. The chi formula becomes inapplicable because there is no power asymmetry, no directionality flow, and no extraction mechanism. This is a key feature of mountain-only constraints: directionality does not apply because the constraint is invariant across all (P, T, E, S) tuples.",
+    "mandatrophy_analysis": "KKT conditions pose no mandatrophy risk because they are uniformly classified as mountain from all perspectives. There is no temptation to misread them as coordination (rope) or extraction (snare) because the mathematical structure prevents such misreading. The conditions are self-enforcing and falsifiable: a point either satisfies KKT or it does not. The mandatrophy resolution is trivial \u2014 the conditions resolve to mountain with probability 1.0."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "convex_optimization_feasibility",
+      "lagrangian_duality_principle"
+    ],
+    "dual_formulation_note": "KKT conditions are upstream of all constrained optimization constraints. Any specific optimization problem (portfolio optimization, machine learning regularization, engineering design under material constraints) instantiates KKT as a necessary subconstraint. The network links KKT to domain-specific optimization constraints that depend on it."
+  },
+  "directionality_overrides": []
+}

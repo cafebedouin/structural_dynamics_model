@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "algorithmic_front_running",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "algofr"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Algorithmic Front Running in Financial Markets",
+    "topic_domain": "financial_markets/technology",
+    "requires_active_enforcement": true,
+    "mandatrophy_resolved": true,
+    "beneficiaries": [
+      "high_frequency_traders",
+      "exchange_operators"
+    ],
+    "victims": [
+      "retail_investors",
+      "institutional_order_flow",
+      "market_price_discovery"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Retail Investor",
+      "comment": "PERSPECTIVE 1: RETAIL INVESTOR (SNARE) \u2014 Trapped in electronic markets with no realistic exit. Market participation is necessary for retirement savings, but algorithmic front running extracts value from every trade. Suppression is complete: retail traders cannot detect the extraction, cannot organize collective defense, and face information asymmetry that prevents exit timing optimization. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Institutional Order Flow",
+      "comment": "PERSPECTIVE 2: INSTITUTIONAL ORDER FLOW (SNARE) \u2014 Large asset managers can partially exit through dark pools and algorithmic execution, but this exit is expensive and incomplete. Information leakage to fast traders occurs through market microstructure (order splitting detection, queue position inference). The constraint extracts measurably from pension funds and index trackers. Suppression is high but not total \u2014 some institutional actors have developed counter-strategies."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The High Frequency Trader",
+      "comment": "PERSPECTIVE 3: HIGH FREQUENCY TRADER (TANGLED ROPE) \u2014 Experiences genuine coordination function: market liquidity and price discovery mechanisms require rapid repricing and order fulfillment. Front running generates extraction asymmetrically while simultaneously providing real liquidity services. Able to exit or adjust strategies with millisecond timing. The constraint coordinates price discovery while enabling extractive rent capture."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Exchange Operator",
+      "comment": "PERSPECTIVE 4: EXCHANGE OPERATOR (ROPE) \u2014 Captures network effects and liquidity aggregation benefits from high-frequency trading activity. Extraction toward the exchange is minimal; the exchange experiences the constraint as pure coordination gain. Benefits from higher trading volumes, greater price efficiency, and fee revenue. Has arbitrage options (regulatory compliance choices, market rules design)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulatory Framework",
+      "comment": "PERSPECTIVE 5: REGULATORY FRAMEWORK (PITON) \u2014 Market regulations (Reg SHO, Regulation SCI, MiFID II) maintain performative enforcement of market fairness without structural constraint on millisecond-scale front running. Regulators cannot inspect algorithmic decision-making in real time. Compliance theater (audit trails, disclosure rules) persists while the core extraction mechanism remains untouched. Theater ratio elevated due to measurement latency and inspector knowledge gaps."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Market Price Discovery Mechanism",
+      "comment": "PERSPECTIVE 6: PRICE DISCOVERY (SNARE) \u2014 Abstract collective good. Information efficiency and fair price signals are polluted by strategic front running that separates order flow information from actual supply/demand fundamentals. The mechanism cannot organize, exit, or defend itself. Trapped under the extraction's weight across all asset classes globally. This is the epistemic commons perspective."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational view, front running coordinates liquidity provision (genuine function) while extracting through information asymmetry exploitation (measurable asymmetry). The constraint both enables and violates fair market price discovery. Neither pure coordination nor pure extraction \u2014 genuinely hybrid. Regulatory arbitrage and latency arms races are active enforcement mechanisms. The system's complexity makes detection and prevention technically difficult but not theoretically impossible."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "latency_detection_threshold",
+      "question": "At what order-to-execution latency does front running transition from legitimate liquidity provision to predatory extraction?",
+      "resolution_mechanism": "Empirical measurement: statistical comparison of fill prices for identical order profiles executed with vs without algorithmic latency advantages; correlation with market-wide price impact studies",
+      "impact": "If threshold < 100 microseconds: most high-frequency trading qualifies as front running (pure snare). If threshold > 10 milliseconds: little extraction is detected (constraint appears as rope). Current regulatory ambiguity sits near threshold boundary.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Order latency threshold distinguishing liquidity provision from predatory front running"
+    },
+    {
+      "id": "information_leakage_necessity",
+      "question": "Is order flow information leakage a necessary byproduct of market microstructure, or an avoidable design choice?",
+      "resolution_mechanism": "Comparative analysis of market designs: encrypted order books vs transparent queues; dark pool execution vs lit market execution; latency-parity mandates vs unlimited speed asymmetry",
+      "impact": "If necessary byproduct: constraint is coordination cost (coordination_type=resource_allocation floor elevation justified). If design choice: front running is avoidable extraction (snare reclassifies with lower theater_ratio).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether order information leakage is necessary or avoidable in market design"
+    },
+    {
+      "id": "retail_exit_capacity",
+      "question": "Can retail investors realistically access alternative trading venues (decentralized exchanges, direct indexing) with sufficient scale to constitute a genuine exit option?",
+      "resolution_mechanism": "Market adoption tracking: volume migration to DEXs and alternative protocols; retail participation surveys; transaction cost comparison across venues",
+      "impact": "If exit capacity grows: trapped exit_options downgrade to constrained or mobile (snare classification softens to tangled_rope). If stalled: trapped status confirmed, snare classification hardens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Retail investor capacity to exit to alternative trading venues"
+    },
+    {
+      "id": "price_discovery_degradation_magnitude",
+      "question": "How much of observed market inefficiency and volatility is attributable to front running noise vs fundamental information processing?",
+      "resolution_mechanism": "Decomposition analysis: vector autoregression models isolating algorithmic contribution to price impact; comparison of price discovery efficiency pre-HFT vs post-HFT eras",
+      "impact": "If front running dominates: price discovery snare classification confirmed, extractiveness at 0.68+ justified. If minor component: most price discovery inefficiency has other roots, and price discovery constraint's victimhood is overstated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of price discovery degradation to algorithmic front running vs other sources"
+    },
+    {
+      "id": "suppression_internalization",
+      "question": "Is the high suppression metric (0.72) structural (regulatory gaps, technical barriers to detection) or internalized (retail traders have accepted market unfairness as normal)?",
+      "resolution_mechanism": "Behavioral tracking: retail market participation trends and sentiment surveys; political mobilization for market regulation; knowledge surveys measuring awareness of front running mechanisms",
+      "impact": "If structural: suppression persists regardless of awareness; constraint remains snare. If internalized: awareness campaigns and retail organizing could reduce suppression rapidly (reclassify to tangled_rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether high suppression is structural or internalized in retail market participation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.43
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Algorithmic front running in electronic financial markets represents a structural constraint where high-frequency trading algorithms extract value from retail and institutional order flow by detecting, predicting, and positioning ahead of incoming trades microseconds before execution. The constraint exhibits hybrid character: front running provides genuine liquidity provision and price discovery coordination while simultaneously enabling extractive rent capture through information asymmetry exploitation. The extractiveness value (0.68) reflects that extraction has intensified over the 20-year interval as algorithmic sophistication and market fragmentation have increased detection and positioning accuracy. The suppression metric (0.72) captures both structural barriers (technical opacity of algorithmic decision-making, information asymmetry, regulatory latency, geographic fragmentation across venues) and the powerlessness of retail participants to organize collective defense. The theater ratio (0.58) indicates moderate performative content in regulatory compliance (audit trails, disclosure mandates, market-conduct rules) that enforce a fairness narrative while millisecond-scale extraction mechanisms remain largely undetected and unconstrained.",
+    "key_agents": [
+      "Retail Investors: Primary victims (powerless/trapped) \u2014 must participate in electronic markets for savings/retirement; face systematic extraction they cannot detect or avoid",
+      "Institutional Order Flow: Secondary victims (moderate/constrained) \u2014 large pension funds and asset managers can partially exit through dark pools but face incomplete information barriers",
+      "High-Frequency Trading Firms: Primary beneficiaries (powerful/mobile) \u2014 extract rent through latency arbitrage and information leakage detection; genuinely provide liquidity coordination",
+      "Exchange Operators: Secondary beneficiaries (institutional/arbitrage) \u2014 capture network effects and fee revenue from high-volume algorithmic trading; have arbitrage options in rule design",
+      "Regulatory Frameworks: Institutional enforcer (institutional/constrained) \u2014 attempt fairness maintenance through performative compliance theater (audit trails, disclosure) with limited real-time detection capacity",
+      "Price Discovery Mechanism: Tertiary victim (powerless/trapped) \u2014 abstract collective good polluted by strategic order flow information; no organizing capacity or exit path",
+      "Analytical Observer: Civilizational context (analytical/analytical) \u2014 sees genuine hybrid structure where liquidity coordination and extractive rent capture are structurally entangled"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High, increasing over interval. Base extraction reflects asymmetric capture of value from order flow information leakage. The value increased from 0.42 to 0.68 over 20 years as market fragmentation, algorithmic sophistication, and colocation arms races amplified extraction mechanisms. Institutional measures (dark pools, algorithmic execution) have partially contained extraction for large actors but worsened it for retail participants. Suppression (0.72): High. Structural barriers include: (1) millisecond-scale detection latency exceeds human and regulatory inspection timescales; (2) algorithmic decision-making opacity prevents direct observation of causal chain; (3) information asymmetry makes it impossible for victims to know if they are being extracted from; (4) regulatory arbitrage across fragmented venues prevents unified detection; (5) retail organization is technically and economically infeasible. Theater ratio (0.58): Moderate. Regulatory theater includes SEC/FINRA enforcement (audit trails, order-routing rules), MiFID II transparency mandates, and best-execution requirements \u2014 performative measures that create fairness appearance without constraining millisecond-scale extraction. The theater has grown as regulatory awareness increased but detection capacity remained latency-bound.",
+    "perspectival_gap": "The constraint generates a stark perspectival divide. Retail investors and the price discovery mechanism perceive pure extraction (Snare) \u2014 they are trapped, unable to exit, bearing full extraction cost with no coordination benefit. Institutional traders perceive mixed extraction and benefit (Tangled Rope) \u2014 they benefit from the liquidity coordination that HFT provides while suffering information leakage extraction; they can partially exit through dark pools and algorithmic execution. High-frequency traders perceive genuine coordination (Tangled Rope or Rope, depending on emphasis) \u2014 they are solving the real problem of providing liquidity and repricing when order flow arrives; the extraction they capture appears to them as legitimate value capture for risk-bearing and rapid execution. Exchange operators perceive pure coordination (Rope) \u2014 they are the beneficiaries of network effects and fee capture without bearing extraction cost. Regulators perceive a partially controlled extraction (Piton) \u2014 they have constructed compliance frameworks that give the appearance of fairness maintenance while the extraction mechanism persists largely unchecked at timescales below regulatory detection. The analytical observer sees the true hybrid structure (Tangled Rope) \u2014 genuine liquidity provision is structurally entangled with extraction, and the two cannot be easily separated without redesigning market microstructure.",
+    "directionality_logic": "Directionality values (d) are derived from structural position relative to extraction flow. Retail investors with no exit options (trapped) and victim status yield high d \u2248 0.95, producing maximum f(d) \u2248 1.42 and high \u03c7. Institutional traders with constrained but available exits (dark pools) and mixed victim-beneficiary status yield moderate d \u2248 0.60, producing moderate f(d) \u2248 0.75 and moderate \u03c7. High-frequency traders with mobile exits (algorithm adjustment, venue switching) and primary beneficiary status yield low d \u2248 0.25, producing low f(d) \u2248 0.18 and negative or near-zero \u03c7. Exchange operators with arbitrage options (regulatory choice, fee structure design) and pure beneficiary status yield very low d \u2248 0.05, producing negative f(d) \u2248 -0.12 and negative \u03c7. The price discovery mechanism, as an abstract collective good with powerless status and trapped exit, yields d \u2248 0.95 and maximum extraction experience. Regulatory frameworks with constrained exit (political pressure, treaty obligations) and split victim-beneficiary status (capturing some fees while bearing fairness obligations) yield moderate d \u2248 0.50, producing moderate f(d) \u2248 0.65.",
+    "mandatrophy_analysis": "RESOLVED: Front running is demonstrably extractive (\u03b5 > 0.46, \u03c7 > 0.66, high suppression) yet simultaneously provides genuine coordination benefit (liquidity provision, price repricing). The mandatrophy is resolved by recognizing the constraint as Snare from powerless victims' perspectives (retail, price discovery) and Tangled Rope from powerful actors' perspectives (HFT firms, institutional traders). No single classification is 'correct' \u2014 the perspectival presheaf is the answer. The constraint demonstrates why mandatrophy exists: extraction and coordination are structurally entangled in market microstructure. Attempts to eliminate front running without destroying liquidity provision fail because the liquidity IS the extraction mechanism \u2014 same actors, same information asymmetry, same millisecond timing. Resolution requires either (1) accepting the extraction as the price of liquidity, (2) redesigning market structure to separate liquidity provision from information-advantage extraction (encrypted order books, latency parity), or (3) recognizing that 'coordination' is a cover story for extraction in this domain. The constraint is not a coordination failure waiting for solution \u2014 it is coordination-entangled extraction by design."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.2
+  },
+  "network": {
+    "affects_constraints": [
+      "market_information_asymmetry",
+      "regulatory_latency_arbitrage"
+    ],
+    "dual_formulation_note": "Algorithmic front running decomposes into two structurally distinct constraints: (1) order flow information leakage (\u03b5 \u2248 0.55, resource allocation coordination with asymmetric extraction) and (2) latency arbitrage enforcement (\u03b5 \u2248 0.68, pure extraction enabled by detection opacity). Both stories are linked as family members; this story represents the unified view. Upstream constraint: market microstructure design. Downstream constraints: retail market participation rates, institutional execution cost inflation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

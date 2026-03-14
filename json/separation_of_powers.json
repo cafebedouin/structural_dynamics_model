@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "separation_of_powers",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sep_pow"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Separation of Powers in Constitutional Governance",
+    "topic_domain": "political/constitutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "legislative_branch",
+      "executive_branch",
+      "judicial_branch",
+      "institutional_checks"
+    ],
+    "victims": [
+      "direct_popular_sovereignty",
+      "executive_efficiency",
+      "political_minorities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Marginalized Constituency",
+      "comment": "PERSPECTIVE 1: MARGINALIZED CONSTITUENCY (SNARE) \u2014 Political minorities locked into a system where power is distributed among branches that collectively ignore their interests. Cannot exit the jurisdiction without extreme cost. The separation of powers diffuses accountability: each branch blames the others for inaction. No single authority can be held responsible for the marginalization."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Organized Interest Group",
+      "comment": "PERSPECTIVE 2: ORGANIZED INTEREST GROUP (TANGLED ROPE) \u2014 Has capacity to lobby multiple branches, creating genuine coordination across institutions. Also benefits from structural diffusion: can shop claims across branches, delay unwanted regulation through divided government, leverage branch-against-branch dynamics. Some extraction cost (lobbying burden, uncertainty), some coordination benefit (voice in multiple channels)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Individual Branch (Executive)",
+      "comment": "PERSPECTIVE 3: EXECUTIVE BRANCH (ROPE) \u2014 Experiences separation of powers as coordination mechanism enabling governance. Can exercise power within enumerated domain without seizure by other branches. Transactions costs rise, but predictability and durability increase. The constraint solves the executive's problem of controlling its own agents through oversight from other branches."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Democratic Reform Movement",
+      "comment": "PERSPECTIVE 4: DEMOCRATIC REFORM MOVEMENT (SCAFFOLD) \u2014 Sees separation of powers as a temporary solution to the problem of monarchical absolutism, but recognizes its sunset: as democratic legitimacy increases, direct representation and proportional accountability become more viable. The constraint has declining necessity \u2014 it was built for distrust of demos, but democratic maturity enables more direct delegation. Reform movements envision participatory alternatives where power diffusion is unnecessary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Ceremonial Constitutional Order",
+      "comment": "PERSPECTIVE 5: CEREMONIAL CONSTITUTIONAL ORDER (PITON) \u2014 The formal separation of powers persists as theatrical ritual while actual power concentrates: executive orders, emergency powers, administrative agencies, party discipline, and informal networks bypass the formal tripartite structure. The branches perform separation; actual governance happens in hidden channels. Theater ratio is high because the visible constraint (three co-equal branches) masks informal power centralization."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a structural analysis perspective, separation of powers appears as an immutable consequence of concentrating coercive authority: any concentration of power sufficient to enforce law becomes itself a threat requiring containment. The constraint is inevitable given the premise that governmental power must exist but must not concentrate. However, the base properties contradict mountain classification \u2014 the empirical evidence of power reconcentration through informal mechanisms, emergency powers, and administrative expansion reveals this as a false summit. The 'inevitability' naturalizes what is actually a fragile institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "formal_vs_actual_power_distribution",
+      "question": "Does the formal tripartite separation of powers accurately describe how authority actually flows, or do informal mechanisms (party discipline, administrative agencies, executive orders, lobby networks) constitute the real governance structure?",
+      "resolution_mechanism": "Empirical mapping of decision-making authority across formal institutions vs informal networks; analysis of which entities actually determine policy outcomes vs which entities ratify predetermined decisions",
+      "impact": "If formal structure accurately represents authority flow: separation of powers is functioning as designed (Rope or Scaffold). If actual power reconcentrates through informal channels: the constraint is largely theatrical (Piton), and its extractiveness should be reclassified downward (the extraction that appears to flow from SOP is actually concentrated outside it).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether formal separation maps to actual authority distribution"
+    },
+    {
+      "id": "emergency_power_permanence",
+      "question": "Are executive emergency powers genuinely exceptional and temporary, or have they become permanent fixtures that constitute a second, shadow constitution?",
+      "resolution_mechanism": "Historical analysis of emergency declarations: frequency, duration, scope creep, whether they revert or become standard. Comparison of peacetime vs wartime executive authority expansion.",
+      "impact": "If genuinely temporary: SOP retains enforceability (Rope/Tangled Rope). If emergency powers are normalized and permanent: SOP's constraint on executive authority is effectively void, and the system should reclassify as pure executive dominance (Snare from powerless perspective), requiring different governance analysis.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether emergency powers are temporary or have become permanent"
+    },
+    {
+      "id": "administrative_state_location",
+      "question": "In which branch of the formal tripartite system do the administrative agencies (EPA, FDA, SEC, etc.) actually reside, and where does their decision-making authority come from?",
+      "resolution_mechanism": "Legal analysis of agency authority sources (statute, executive order, delegated rulemaking); empirical analysis of which branch successfully controls agency decisions; historical tracking of agency independence from formal branch oversight",
+      "impact": "If agencies are truly subordinate to one branch: they fit within SOP structure (Rope). If agencies are genuinely independent, accountable to none of the three branches: SOP is violated at its foundation, and the system has a fourth power that the constraint does not address (requires decomposition into separate constraint stories).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Which branch controls the administrative state"
+    },
+    {
+      "id": "democratic_alternative_sufficiency",
+      "question": "Could direct democratic mechanisms (referendum, recall, proportional representation, participatory budgeting) replace the separation-of-powers model as a check on concentrated authority while reducing the transaction costs and diffusion of accountability?",
+      "resolution_mechanism": "Comparative analysis of jurisdictions with high direct democracy (Switzerland, some US states) vs pure representative systems; measurement of accountability, responsiveness, minority protection, and governance efficiency across models",
+      "impact": "If direct democracy provides adequate checks without SOP: the Scaffold perspective is correct, and SOP's necessity is declining. If direct democracy fails or produces different failure modes: SOP remains necessary, and the Scaffold sunset is aspirational rather than structural.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether direct democracy can replace separation of powers"
+    },
+    {
+      "id": "minority_protection_mechanism",
+      "question": "Does separation of powers actually protect political minorities, or does it protect institutional minorities (branches) while minority factions within the electorate face majoritarian tyranny?",
+      "resolution_mechanism": "Historical analysis of minority rights protection: correlation between SOP and civil rights expansion vs suppression; measurement of whether minorities with institutional allies (courts, federal legislators) gain protection vs minorities lacking institutional champions",
+      "impact": "If SOP protects political minorities: the snare classification is wrong, and the marginalized constituency should see rope or tangled rope. If SOP protects only institutionalized minorities: the snare perspective is correct, and the constraint structure requires disaggregation of 'minority' by institutional embeddedness.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether SOP protects political minorities"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "Separation of powers is a foundational constraint in constitutional governance: the principle that legislative, executive, and judicial authority must be distributed across distinct institutions with mutual checks and balances. This constraint exhibits a rich perspectival structure because it simultaneously performs coordination functions (enabling stable governance across multiple power centers) and extraction functions (diffusing accountability, enabling institutional capture, protecting organized interests at the expense of marginalized constituencies). The theater ratio has increased over the interval as the gap between formal separation and actual power concentration has widened through emergency powers, administrative agencies, and party discipline mechanisms. The constraint classifies as Tangled Rope from the analytical perspective: it coordinates genuine governance functions across branches while also enabling asymmetric extraction through diffused accountability and organized lobby capture.",
+    "key_agents": [
+      "Marginalized Constituencies: Primary victims (powerless/trapped) \u2014 politically minorities locked into jurisdictions where distributed power diffuses accountability for their interests",
+      "Organized Interest Groups: Secondary beneficiary (moderate/constrained) \u2014 can lobby multiple branches and benefit from divided government dynamics creating uncertainty and delay",
+      "Executive Branch: Primary institutional beneficiary (institutional/arbitrage) \u2014 exercises power within enumerated domain; coordination through other branches' oversight enables predictable constraint enforcement",
+      "Legislative and Judicial Branches: Institutional beneficiaries (institutional/arbitrage) \u2014 maintain domain authority; constrained by other branches but receive institutional recognition and stable power-sharing",
+      "Direct Popular Sovereignty: Primary victim (powerless/trapped) \u2014 diffusion of authority means no single institution can be held accountable to majoritarian will; checks can block majorities indefinitely",
+      "Democratic Reform Movements: Organized agents seeking sunset (organized/constrained) \u2014 view SOP as temporary solution to monarchical absolutism, believe democratic maturity enables more direct delegation without tripartite diffusion",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as inevitable checks on power concentration"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The separation of powers does enable genuine coordination across institutions \u2014 each branch can operate within its domain knowing other branches will check extreme overreach. This coordination benefit reduces the pure extractiveness score. However, the constraint also enables extraction through diffused accountability: organized interests can lobby multiple branches simultaneously, creating uncertainty and delay that benefits those with resources to navigate the complexity. The moderate value reflects the genuine tension between coordination and extraction. Suppression (0.42): Moderate. Barriers to political participation and voice are substantial but not total. Citizens cannot easily exit a national jurisdiction; political minorities can be locked out of all three branches. However, organized interests have access to institutional channels; formal democratic participation mechanisms (voting, petition, protest) exist even if unequally effective. Theater ratio (0.55): Moderate-to-high. The formal separation of powers persists as explicit constitutional principle and institutional structure, but actual governance increasingly happens through informal channels: executive orders and emergency powers concentrate executive authority; administrative agencies operate with autonomy from formal branch oversight; party discipline and unified government bypass checks-and-balances mechanisms. The theater has increased because the visible constraint (three co-equal branches) increasingly masks actual power distribution.",
+    "directionality_logic": "The separation of powers constraint distributes directionality values asymmetrically across stakeholders. Institutional branches (executive, legislative, judicial) experience low directionality (d \u2248 0.15-0.25) because they benefit from the constraint's coordination function \u2014 they have recognized domain authority, stable rules of engagement, and institutional resources to navigate the system. They derive d values from institutional power + arbitrage exit options + beneficiary status. Organized interest groups experience moderate directionality (d \u2248 0.45-0.55) because they face high coordination costs (lobbying multiple branches) but also gain opportunities for strategic leverage (shopping claims, exploiting divided government). They derive d values from moderate power + constrained exit + mixed beneficiary/victim status. Marginalized constituencies experience high directionality (d \u2248 0.80-0.95) because they cannot effectively navigate the system's complexity, have minimal lobbying resources, and experience diffused accountability as extraction. They derive d values from powerless status + trapped exit + victim status. The canonical fallback for 'powerless' produces d \u2248 1.00, which correctly reflects that trapped agents with no resources to navigate institutional complexity experience the constraint as pure extraction.",
+    "perspectival_gap": "The perspectival gap between institutional beneficiaries and powerless victims is maximal. The executive branch sees separation of powers as a coordination mechanism enabling stable governance (Rope classification from immediate time horizon). The marginalized constituency sees it as a mechanism that diffuses accountability and locks them out of all decision-making channels (Snare classification from trapped/biographical perspective). The organized interest group occupies a middle position: they benefit from institutional access but face coordination costs and uncertainty (Tangled Rope). The democratic reform movement sees the constraint as addressing a temporary problem (monarchical absolutism) whose necessity declines as democratic legitimacy increases (Scaffold). The piton perspective reveals that formal separation increasingly masks actual power concentration (theater ratio rising). The analytical observer risks naturalizing this as inevitable ('power concentration is inherent to governance') when it is actually a contingent institutional arrangement that could be restructured.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The separation of powers constraint resolves the mandatrophy by exhibiting genuine coordination function (enabling stable multi-branch governance) alongside genuine extraction (diffusing accountability, enabling lobby capture). The Tangled Rope classification is warranted because both functions are present: (1) beneficiaries exist (institutional branches that derive stable authority from the constraint), (2) victims exist (marginalized constituencies locked out by diffused accountability), (3) active enforcement is required (constitutional interpretation, judicial review, legislative-executive negotiation must constantly maintain the separation). The constraint is not a false summit (mountain misclassification) because the base properties (extractiveness 0.38, suppression 0.42) and structural data (genuine coordination, genuine asymmetric extraction) support tangled rope. The piton perspective correctly identifies that theater_ratio has increased, suggesting drift toward degradation: if administrative agencies and emergency powers continue to accumulate outside formal tripartite structure, the constraint's coordination function will atrophy while its theatrical performance increases, potentially causing reclassification to piton. Current status: functional Tangled Rope with increasing piton risk."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "judicial_review",
+      "legislative_gridlock",
+      "executive_emergency_powers",
+      "administrative_state_delegation"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    }
+  ]
+}

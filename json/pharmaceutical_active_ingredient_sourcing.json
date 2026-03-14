@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "pharmaceutical_active_ingredient_sourcing",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pharma_api"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Pharmaceutical Active Ingredient Sourcing and Supply Chain Coordination",
+    "topic_domain": "pharmaceutical_economics/supply_chain",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "active_ingredient_manufacturers",
+      "pharmaceutical_companies"
+    ],
+    "victims": [
+      "developing_nations",
+      "generic_manufacturers",
+      "patient_access"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Patients in Resource-Constrained Regions",
+      "comment": "PERSPECTIVE 1: PATIENTS IN RESOURCE-CONSTRAINED REGIONS (SNARE) \u2014 No ability to exit or relocate; dependent on supply chains controlled by distant manufacturers. Bear full cost of sourcing disruptions, price volatility, and supply unavailability. No coordination benefit, maximum extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Generic Drug Manufacturers in Developing Nations",
+      "comment": "PERSPECTIVE 2: GENERIC DRUG MANUFACTURERS IN DEVELOPING NATIONS (SNARE) \u2014 Trapped by API dependencies, manufacturing capacity constraints, and regulatory barriers. Cannot source alternative inputs at viable cost. No exit option when API suppliers collude or restrict capacity. Experience maximum extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Mid-Tier Pharmaceutical Manufacturers",
+      "comment": "PERSPECTIVE 3: MID-TIER PHARMACEUTICAL MANUFACTURERS (TANGLED ROPE) \u2014 Benefit from coordinated supply chain standards and quality assurance (coordination), but constrained by limited supplier alternatives and dependence on major API manufacturers. Can exit through vertical integration or alternative sourcing but at significant cost. Mixed extraction and coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Major Pharmaceutical Companies",
+      "comment": "PERSPECTIVE 4: MAJOR PHARMACEUTICAL COMPANIES (ROPE) \u2014 Primary beneficiaries with arbitrage options (can integrate vertically, diversify suppliers, or relocate sourcing). Experience the constraint as pure coordination: formalized API quality standards, supply chain transparency, and regulatory harmonization reduce transaction costs. Net beneficiaries."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "Active Ingredient Manufacturers in Asia",
+      "comment": "PERSPECTIVE 5: ACTIVE INGREDIENT MANUFACTURERS IN ASIA (TANGLED ROPE) \u2014 Organized, mobile actors who coordinate global supply chains while extracting through capacity control, price-setting, and regulatory leverage. Can exit by shifting geographic sourcing but choose not to. Genuine coordination function (supply network efficiency) paired with asymmetric extraction power."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Regulatory Oversight Bodies",
+      "comment": "PERSPECTIVE 6: REGULATORY OVERSIGHT BODIES (PITON) \u2014 FDA, EMA, and national regulators maintain approvals, quality standards, and manufacturing facility certifications that appear to serve a coordination function (ensuring drug quality). However, regulatory gatekeeping has become largely performative\u2014complex GMP requirements and facility approval processes primarily entrench incumbent manufacturers and create barriers for new entrants. Theater ratio (0.55) reflects moderate performativity: genuine quality oversight exists but is layered with protectionist barriers maintained through inertia."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From the civilizational/universal scale, pharmaceutical API sourcing exhibits genuine coordination (global supply reliability, quality standards, regulatory harmonization) simultaneously with asymmetric extraction (geographic concentration in Asia, IP barriers, capacity control). The constraint persists because it generates real coordination value while systematically extracting from powerless populations and smaller competitors."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "geographic_consolidation_inevitability",
+      "question": "Is API manufacturing consolidation in Asia an inevitable outcome of comparative advantage and economies of scale, or a contingent institutional arrangement maintained by regulatory and IP barriers?",
+      "resolution_mechanism": "Counterfactual analysis: model what API manufacturing landscape would exist under alternative regulatory regimes (e.g., subsidized local manufacturing in developing nations, relaxed GMP equivalence standards, compulsory licensing for public health emergencies)",
+      "impact": "If inevitable: constraint appears as natural economic law, reducing classification to Mountain. If contingent: constraint is revealed as Tangled Rope maintained by enforcement \u2014 regulatory barriers and IP frameworks are the extraction mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether geographic consolidation is inevitable or institutionally maintained"
+    },
+    {
+      "id": "regulatory_gatekeeping_function",
+      "question": "Do GMP standards and facility approvals primarily serve quality assurance or primarily serve as barriers to entry for new manufacturers?",
+      "resolution_mechanism": "Analysis of rejection rates by manufacturer origin, approval timeline variation, and correlation between regulatory stringency and market consolidation. Comparison with alternative quality-assurance mechanisms (e.g., third-party testing, process validation without facility pre-approval).",
+      "impact": "If primarily quality: theater_ratio should be lower (0.25-0.35), and regulatory constraint is genuine coordination. If primarily gatekeeping: theater_ratio is accurate (0.55+), and regulatory constraint is enforcement mechanism for market exclusion.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether GMP regulation serves quality assurance or entry barriers"
+    },
+    {
+      "id": "patient_vs_manufacturer_exit_symmetry",
+      "question": "Can patients and generic manufacturers realistically exercise exit options (use alternative drugs, establish local manufacturing) equivalent to those available to major pharmaceutical companies?",
+      "resolution_mechanism": "Mapping of real exit costs: therapy switching costs vs supplier switching costs, regulatory pathway timelines for new manufacturers vs approval delays, price differentials between local and imported APIs.",
+      "impact": "If symmetric: constraint may reduce to Rope (coordination with symmetric participant agency). If asymmetric: asymmetry justifies snare and tangled_rope classifications for victims; validates suppression score \u22650.60.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Symmetry of exit option costs across agent types"
+    },
+    {
+      "id": "supply_disruption_causation",
+      "question": "Are API supply disruptions (COVID shortages, geopolitical tensions, environmental regulations) caused by structural scarcity or by the concentration of manufacturing capacity in politically/environmentally fragile regions?",
+      "resolution_mechanism": "Historical analysis of disruption events: distinguish supply shocks from capacity choice. Modeling of what disruption frequency would be under alternative geographic distribution of manufacturing.",
+      "impact": "If structural scarcity: suppression is inherent to pharmaceuticals (landscape shift toward Mountain). If capacity choice: suppression is maintained extractively \u2014 the constraint exists precisely to keep manufacturing concentrated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether supply disruptions are structural or capacity-choice driven"
+    },
+    {
+      "id": "intellectual_property_necessity",
+      "question": "Are global API sourcing patents (process patents, formulation patents) necessary incentives for innovation, or do they primarily entrench incumbent manufacturers and restrict competitive entry?",
+      "resolution_mechanism": "Comparative analysis of innovation rates pre/post-patent in specific API classes. Identification of patents that prevent process innovation vs those that protect truly novel chemistry.",
+      "impact": "If necessary incentives: IP barriers are legitimate coordination cost (lower extraction perception). If entrenchment: IP frameworks are extraction mechanism via regulatory lock-in.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether IP frameworks serve innovation or entrenchment"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Pharmaceutical active ingredient (API) sourcing represents a global coordination challenge masked as a natural economic necessity. The constraint involves coordinating quality standards, supply reliability, and manufacturing capacity across geographically dispersed actors with asymmetric power and exit options. Over the past two decades (interval 0-20), extractiveness has risen from 0.35 to 0.62 as manufacturing has concentrated in Asia (primarily India and China) and as regulatory frameworks have become more complex. Theater has also risen from 0.35 to 0.55, reflecting increasing performativity in regulatory oversight\u2014GMP compliance has become more bureaucratic without corresponding quality improvements, serving primarily as a barrier to new entrants. The constraint is genuinely Tangled Rope: it solves the real coordination problem of global drug supply while simultaneously extracting through geographic concentration, IP barriers, regulatory gatekeeping, and capacity control. Patients in resource-poor regions and generic manufacturers in developing nations bear the costs while major pharmaceutical companies and Asian API manufacturers capture benefits.",
+    "key_agents": [
+      "Patients in Developing Nations: Primary victims (powerless/trapped) \u2014 no exit options; dependent on supply chains; bear cost of price volatility and shortages",
+      "Generic Drug Manufacturers in Developing Nations: Primary victims (powerless/trapped) \u2014 trapped by API dependencies and regulatory barriers; cannot source alternatives at viable cost",
+      "Major Pharmaceutical Companies: Primary beneficiaries (institutional/arbitrage) \u2014 can integrate vertically, diversify suppliers, or relocate sourcing; experience constraint as coordination",
+      "Active Ingredient Manufacturers in Asia: Primary extractors (organized/mobile) \u2014 control capacity and pricing; coordinate supply networks while extracting through market power",
+      "Mid-Tier Pharmaceutical Manufacturers: Secondary actors (moderate/constrained) \u2014 experience mixed coordination and extraction; face barriers but have some exit options",
+      "Regulatory Bodies (FDA, EMA, national regulators): Institutional gatekeepers (institutional/arbitrage) \u2014 maintain approval frameworks that appear to serve quality but function as entry barriers",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees constraint as structurally Tangled Rope, not natural market outcome"
+    ],
+    "logic_rationale": "Extractiveness (0.62): High and rising. The baseline measurement shows extraction growing from 0.35 to 0.62 over 20 years as API manufacturing consolidated geographically. This reflects real structural changes: increased dependency of developing-nation generic manufacturers on Asian suppliers, rising relative pricing of APIs vs finished drugs, and regulatory barriers that entrench incumbent suppliers. At 0.62, the constraint exceeds the tangled_rope lower bound (0.40) but remains below pure-snare territory (0.66+), reflecting that genuine coordination functions exist (supply reliability, quality standards) alongside extraction. Suppression (0.68): High and structural. Barriers to exit include regulatory gatekeeping (GMP facility approvals take 2-5 years), IP frameworks (process patents restrict alternative manufacturing routes), geographic constraints (API production requires specialized infrastructure), and political barriers (geopolitical tensions affect supply). These barriers are material and external \u2014 not just cognitive. Theater ratio (0.55): Moderate-high, reflecting that regulatory oversight has become increasingly performative. GMP compliance generates substantial administrative burden but provides diminishing marginal quality improvement; the primary effect is barrier maintenance. Theater has risen with regulatory complexity, suggesting that bureaucratic cover-story activity is increasing relative to functional verification. Claimed type (tangled_rope): Justified by the combination of genuine coordination function (global supply chain reliability, quality assurance, regulatory harmonization) AND asymmetric extraction (pricing power concentrated with API manufacturers, geographic bottleneck, regulatory barriers protecting incumbents). Mandatrophy resolved: At extractiveness 0.62, the constraint requires mandatrophy resolution. The resolution is: the constraint is legitimately both a coordination mechanism AND an extraction mechanism. The coordination is real (global supply networks are genuinely hard); the extraction is real (the power asymmetry is maintained by barriers that could theoretically be relaxed).",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. Patient perspectives classify as Snare (\u03c7 ~ 0.85 at global scope); beneficiary perspectives classify as Rope (\u03c7 ~ -0.05 at global scope); observer perspective classifies as Tangled Rope (structural reality: both coordination and extraction coexist). The gap is not measurement error\u2014it reflects that the constraint genuinely delivers coordination value to some agents while extracting from others. The analytical resolution: the constraint exists precisely because it solves a coordination problem that cannot be solved without creating extraction. Global supply chains ARE hard to coordinate. BUT the current coordination mechanism (geographic concentration, IP barriers, regulatory gatekeeping) is not the only possible one. Alternative mechanisms (distributed manufacturing, process patent exemptions, regulatory equivalence recognition) would reduce extraction while potentially degrading some coordination benefits. The constraint's persistence reveals path dependence: the current arrangement emerged from historical institutional choices, not from inevitability.",
+    "directionality_logic": "Structural relationships determine d values independent of power level. Beneficiaries (major pharma, API manufacturers) have low d (~0.15-0.40) because the extraction flow runs toward them. Victims (patients, generic manufacturers) have high d (~0.85-0.95) because the extraction flow runs away from them. Exit options modulate d around these base values: arbitrage exits lower d further (beneficiaries become even more entrenched); trapped exits raise d further (victims become more completely victimized). The sigmoid converts d to f(d), which then scales base extractiveness \u03b5. A powerless patient with trapped exit experiences \u03c7 = 0.62 \u00d7 1.42 \u00d7 1.2 \u2248 1.06 (effective extraction exceeds \u03b5 because their structural position amplifies it). A major pharmaceutical company with arbitrage exit experiences \u03c7 = 0.62 \u00d7 (-0.12) \u00d7 1.2 \u2248 -0.09 (negative effective extraction, i.e., they benefit). This directionality logic is not arbitrary\u2014it flows from the structural data: who benefits, who bears costs, who can exit, and at what cost.",
+    "mandatrophy_analysis": "Mandatrophy is resolved at \u03b5 = 0.62 by recognizing that the constraint is legitimately both coordination and extraction. The coordination function is real: global pharmaceutical supply chains ARE difficult to coordinate. Reliable, quality-assured API sourcing for 8 billion people requires standardized manufacturing, quality oversight, and supply reliability mechanisms. These are not trivial. The extraction mechanism is also real: the current coordination mechanism concentrates benefits (pricing power, capacity control, regulatory leverage) with specific actors (Asian manufacturers, major pharmaceutical companies) while concentrating costs (price volatility, supply uncertainty, regulatory barriers to entry) with others (patients, generic manufacturers). The constraint would not persist if it only extracted\u2014it solves a genuine coordination problem. But it would not have this particular structure (geographic consolidation, IP protection, regulatory gatekeeping) if extraction were not also being generated and maintained. The mandatrophy resolution is: classify as Tangled Rope because both functions are present. The extraction is not incidental to coordination; it is structural to this particular coordination mechanism. Alternative mechanisms (e.g., decentralized API manufacturing with open-source process standards, regulatory equivalence recognition, compulsory licensing for generics) might solve coordination while reducing extraction, but they would have their own tradeoffs (potentially reduced quality oversight, reduced innovation incentives, geographic fragmentation risks)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "generic_drug_affordability",
+      "antimicrobial_resistance_externalities",
+      "pharmaceutical_supply_chain_resilience"
+    ],
+    "dual_formulation_note": "Pharmaceutical API sourcing decomposes into three structurally distinct constraints with different \u03b5 values: (1) API manufacturing consolidation (\u03b5\u22480.62, Tangled Rope\u2014this story), driven by economies of scale and geographic comparative advantage; (2) Generic drug affordability (downstream, \u03b5\u22480.70, Snare\u2014extractive pricing by API suppliers), driven by capacity control; (3) Supply chain resilience (downstream, \u03b5\u22480.50, Tangled Rope\u2014genuine coordination need paired with geopolitical fragility). The API sourcing story affects both downstream constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.3
+    }
+  ]
+}

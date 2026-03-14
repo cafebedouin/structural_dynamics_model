@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "housing_supply_constraint",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Housing Supply Constraint in Urban Markets",
+    "topic_domain": "economic/urban_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_property_owners",
+      "real_estate_development_firms",
+      "local_government_revenue_departments"
+    ],
+    "victims": [
+      "first_time_homebuyers",
+      "renters",
+      "low_income_households"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Renter Without Capital",
+      "comment": "PERSPECTIVE 1: RENTER WITHOUT CAPITAL (SNARE) \u2014 Faces insurmountable barriers: down payment requirements, credit barriers, competitive bidding wars, zoning restrictions that limit supply. No exit from rental dependency. Maximum suppression and extraction. Experienced chi approaches 1.0 despite moderate base extractiveness \u2014 the trapped exit status and victim classification amplify the effective extraction significantly through f(d)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The First-Time Homebuyer",
+      "comment": "PERSPECTIVE 2: FIRST-TIME HOMEBUYER (TANGLED ROPE) \u2014 Constrained by high entry costs and competitive bidding, but also participates in coordination: housing markets coordinate allocation of scarce housing units. Some agency exists (can shop in adjacent regions, save longer, accept lower quality). Experiences both the coordination function (price signals allocate units) and asymmetric extraction (favors those with existing wealth)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Incumbent Property Owner",
+      "comment": "PERSPECTIVE 3: INCUMBENT PROPERTY OWNER (ROPE) \u2014 Benefits from artificial scarcity; experiences constraint as pure coordination with net-positive benefit. Has arbitrage options (can relocate, rent out, convert to higher-value use). Constraint preserves their asset value through supply restrictions. Derives beneficiary status, low directionality d, low chi."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Supply-Side Reform Coalition",
+      "comment": "PERSPECTIVE 4: SUPPLY-SIDE REFORM COALITION (SCAFFOLD) \u2014 Organized advocacy (YIMBY movements, housing nonprofits, developer associations seeking reduced friction) pushing zoning reform, density permits, streamlined approval. Sees the constraint as temporary and addressable through policy change. Theater ratio is moderate because policy reform genuinely changes underlying supply dynamics, unlike performative coordination. Sunset logic: as zoning restrictions ease and supply grows, the scarcity extraction mechanism weakens."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Local Zoning Board",
+      "comment": "PERSPECTIVE 5: LOCAL ZONING BOARD (PITON) \u2014 Maintains restrictive zoning patterns through institutional inertia and historical precedent. Boards acknowledge that restrictions create affordability problems but claim they protect neighborhood character and infrastructure capacity. The rationale persists despite evidence of theater: many zoning restrictions predate modern conditions, are not consistently enforced, and don't correlate with stated neighborhood protection goals. Theater ratio is elevated because the board's justifications are largely performative \u2014 the real function is to maintain political coalition stability and incumbent property values."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational view, housing supply constraints reflect irreducible tradeoffs between density, environmental impact, infrastructure capacity, and community stability. Some restriction of housing supply is inherent to settled societies: communities must resolve collective action problems (infrastructure investment, environmental externalities, neighborhood cohesion). This perspective naturalizes the constraint as an immutable limit on urban coordination. However, the structural data contradicts this reading: supply restrictions vary dramatically by jurisdiction (Tokyo, Houston, Singapore have higher density with lower restrictions), indicating contingency rather than natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "natural_scarcity_vs_artificial_restriction",
+      "question": "Is the housing supply shortage driven by genuine scarcity (land, capital, labor) or by artificial institutional restrictions (zoning, permitting, land use regulations)?",
+      "resolution_mechanism": "Cross-jurisdictional analysis: compare extractiveness and suppression metrics across cities with identical natural constraints (climate, geography, density) but different zoning regimes. High variance across jurisdictions indicates institutional, not natural, drivers.",
+      "impact": "If natural scarcity dominates: constraint approaches mountain; extraction is inherent coordination cost. If institutional restrictions dominate: constraint is tangled_rope or snare; extraction is rent-seeking layered onto coordination.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether housing shortage is natural scarcity or artificial restriction"
+    },
+    {
+      "id": "incumbent_owner_consciousness_and_extraction",
+      "question": "Do incumbent property owners deliberately enforce scarcity-preservation tactics (opposing new construction, lobbying against zoning reform) as a conscious extraction mechanism, or do they rationalize opposition as community protection without recognizing the beneficiary status?",
+      "resolution_mechanism": "Discourse analysis of public statements vs. revealed preferences; mapping of property owner political donations and zoning testimony against benefits received from restriction-driven appreciation; experimental vignettes testing whether framing benefits changes justification rhetoric.",
+      "impact": "If conscious exploitation: constraint is clearly snare from incumbent perspective, with organized opposition to reform. If unconscious rationalization: constraint may appear rope-like to beneficiaries (they see only coordination benefits) while remaining snare/tangled_rope to victims.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether supply scarcity is consciously exploited or rationalized"
+    },
+    {
+      "id": "supply_elasticity_and_price_response",
+      "question": "What is the price elasticity of new housing supply in constrained markets? Will reducing institutional restrictions (zoning, permitting) actually increase supply substantially, or are natural constraints (labor, land cost, construction capital) the binding factor?",
+      "resolution_mechanism": "Econometric analysis of supply response to zoning changes; panel data from jurisdictions undergoing zoning reform; time-series analysis of permits granted vs. units built vs. price changes.",
+      "impact": "If zoning is binding constraint: easing restrictions will increase supply and reduce prices, validating the scaffold sunset logic. If natural constraints dominate: supply will remain restricted regardless of zoning changes, and the constraint persists, suggesting piton trajectory (theater of reform without effect).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Price elasticity of housing supply to zoning changes"
+    },
+    {
+      "id": "identity_lock_in_homeowner_identity",
+      "question": "For incumbent property owners and politically active residents, is opposition to housing supply expansion rooted in material interests (property value preservation) or in identity fusion (the neighborhood as constitutive of self-concept, resistance to supply increase as defense of 'who we are')?",
+      "resolution_mechanism": "Qualitative analysis of public statements and testimony for identity language vs. economic language; tracking whether opposition persists if property values were protected by alternative policy (e.g., real estate tax credits) that didn't rely on scarcity; comparison of opposition strength between owners with high leverage (debt) vs. low leverage.",
+      "impact": "If material interests dominate: reform is possible through policy design (protect property values through alternative mechanisms). If identity fusion dominates: reform faces deeper cognitive barriers; opposition persists despite material incentive removal, suggesting constraint has identity_coordination boltzmann type.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether opposition is material interest or identity fusion"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Housing supply constraints in urban markets create structural extraction from renters and first-time buyers toward incumbent property owners and local governments dependent on property tax revenue. The constraint exhibits characteristics of a tangled_rope: genuine coordination function exists (markets allocate scarce units), but alongside asymmetric extraction favoring those with existing capital. Zoning restrictions, permitting delays, and land-use regulations form the enforcement mechanism. The constraint's evolution shows increasing extractiveness (0.35\u21920.58 over 50 years) as property values accumulate and incumbent benefit compounds, while theater ratio remains moderate because policy interventions (zoning reform, density bonuses) do produce material supply changes, distinguishing this from pure performance theater. The perspectival gap is stark: incumbent owners experience rope-like coordination with personal benefit; renters experience snare-like entrapment; the reform coalition experiences a temporary constraint amenable to policy change (scaffold); the zoning board experiences institutionalized routine (piton); the civilizational view risks naturalizing what is actually contingent institutional arrangement (false mountain).",
+    "key_agents": [
+      "Incumbent Property Owners: Primary beneficiary (institutional/arbitrage) \u2014 benefit from artificial scarcity driving appreciation; have options to relocate or invest elsewhere",
+      "Real Estate Development Firms: Secondary beneficiary (powerful/arbitrage) \u2014 benefit from restricted supply creating monopoly-like conditions and higher profit margins",
+      "Local Government: Secondary beneficiary (institutional/arbitrage) \u2014 property tax revenue tied to valuations; gains from scarcity-driven appreciation",
+      "Renters: Primary victim (powerless/trapped) \u2014 structurally immobile; face rising rents, bidding wars, credit barriers; cannot exit without major life disruption",
+      "First-Time Homebuyers: Secondary victim (moderate/constrained) \u2014 face high barriers but retain some agency; can relocate, extend timeline, or downgrade expectations",
+      "Supply-Side Reform Coalition: Organized agent (organized/constrained) \u2014 YIMBY advocates, housing nonprofits seeking zoning reform; see constraint as addressable through policy",
+      "Zoning and Planning Boards: Institutional actor (institutional/arbitrage) \u2014 maintain restrictive patterns; face political constraints from incumbent resident coalitions"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Supply restrictions create measurable extraction: price premiums on land and housing, rent increases, shifted savings burden. The value reflects that extraction is real and growing (0.35\u21920.58 over interval) but not total \u2014 rents remain below theoretical replacement-cost-plus-normal-profit in most markets, indicating some competitive pricing persists. Suppression (0.65): High. Multiple barriers prevent exit or mitigation: down payment requirements eliminate low-wealth renters from ownership; geographic mobility is limited by employment concentration; credit barriers locked out by prior debt; zoning prevents alternative housing types. Suppression is not total because some exit options exist (cohabitation to pool resources, migration to low-restriction jurisdictions, informal housing arrangements). Theater ratio (0.48): Moderate. Unlike pure extraction mechanisms that rely entirely on narrative framing, housing policy discussions involve real supply/demand tradeoffs and genuine technical considerations (infrastructure capacity, environmental externalities). However, theater has increased over the interval as justifications become more formulaic ('protecting neighborhood character') despite evidence that character preservation correlates poorly with specific restrictions. The rising theater ratio (0.32\u21920.48) reflects increasing gap between stated (community protection) and revealed (value preservation) goals.",
+    "perspectival_gap": "The renter (snare) and incumbent owner (rope) experiences are inversely related through the beneficiary/victim declarations. The constraint that benefits owners must hurt renters \u2014 it is zero-sum at the core. The reform coalition's scaffold perspective is genuinely different: they see a third exit path (policy change) that neither renters nor owners perceive clearly. The piton perspective (zoning board) sees institutional obligation without functional necessity \u2014 the board performs its role despite recognizing it doesn't achieve stated goals.",
+    "directionality_logic": "Each perspective's directionality value (d) derives from the agent's structural relationship to the supply constraint. Renters (trapped exit, victim status) experience d \u2248 0.92, producing f(d) \u2248 1.35, amplifying base extractiveness 0.58 to effective chi ~0.78. Incumbent owners (arbitrage exit, beneficiary status) experience d \u2248 0.12, producing f(d) \u2248 -0.01, reducing base extractiveness to negative chi (they experience subsidy). First-time buyers (constrained exit, victim status) experience d \u2248 0.68, producing f(d) \u2248 1.00, keeping chi near base value ~0.58. Reform coalition (constrained exit, neither beneficiary nor victim in economic sense, but organized) experiences d \u2248 0.45, producing f(d) \u2248 0.50, reducing perceived extraction. Scope modifier \u03c3(regional) = 0.9 applies uniformly, slightly dampening all chi values relative to national or global scope.",
+    "mandatrophy_analysis": "The housing supply constraint resolves mandatrophy through decomposition by power level and exit options. No single type is correct; instead, the constraint exhibits all five types (mountain view is likely false summit) across different structural positions. RENTER: Snare classification is robust. High suppression (0.65), victim status, trapped exit, and extractiveness >0.46 all align. OWNER: Rope classification is robust. Beneficiary status, arbitrage exit, low suppression experienced (they benefit), coordination function apparent (supply allocation). FIRST-TIME BUYER: Tangled rope is correct intermediate. Hybrid experience reflects partially constrained exit (can save, relocate, wait) and dual relationship (victim via high costs, participant via market allocation). REFORM COALITION: Scaffold is correct because their classification depends on time horizon. At immediate (T=0): tangled_rope or snare (we face high costs today). At generational (T=30): scaffold (we see zoning reform pathway with realistic sunset). The temporal dependence is not an error \u2014 it is a feature of scaffold classification. ZONING BOARD: Piton classification reflects theater_ratio (0.48\u21920.55) and functional atrophy. Boards claim to protect community but restrictions pre-date modern conditions, are not consistently applied, and don't correlate with stated protection goals. The institutional role persists through inertia. The constraint thus demonstrates how DR classification works: not as a category label, but as a description of structural experience from specific indexed positions. The mandatrophy is resolved by recognizing that the constraint IS a tangled_rope from the system view (exhibiting both coordination and extraction), while agents at different positions within it experience pure snare, rope, scaffold, or piton depending on their power, exit options, time horizon, and scope."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "residential_wealth_gap",
+      "urban_migration_pressure",
+      "municipal_fiscal_dependency"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

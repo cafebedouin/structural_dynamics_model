@@ -1,0 +1,184 @@
+{
+  "header": {
+    "constraint_id": "jury_selection_polarization",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "jury"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Jury Selection Polarization in Political Trials",
+    "topic_domain": "legal/political/institutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "prosecutorial_state",
+      "partisan_political_actors"
+    ],
+    "victims": [
+      "defendants_from_opposing_political_faction",
+      "trial_legitimacy",
+      "jury_impartiality_norm"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Politically Disfavored Defendant",
+      "comment": "PERSPECTIVE 1: POLITICALLY DISFAVORED DEFENDANT (SNARE) \u2014 Trapped by venue selection and juror polarization. Faces systematically higher conviction probability based on juror political alignment rather than evidence. Cannot exit the trial mechanism without abandoning legal defense. Bears full extraction cost: unfair verdict risk, reputational damage, and imprisonment despite reasonable doubt. Maximum experienced suppression \u2014 state controls venue, prosecution controls narrative framing, jury composition reflects partisan geography."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Opposing Faction's Population",
+      "comment": "PERSPECTIVE 2: OPPOSING FACTION'S POPULATION (TANGLED ROPE) \u2014 Constrained by jury duty obligation and geographic residence. Faces pressure to vote conviction/acquittal along partisan lines regardless of evidence. Extraction exists (coerced participation in biased verdict), but coordination function persists (jury system does provide trial-by-peer structure and requires some evidence presentation). Some exit costs (contempt risk, relocation burden) but not absolute trapping. Mixed experience: civic obligation meets political capture."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Prosecutorial State",
+      "comment": "PERSPECTIVE 3: PROSECUTORIAL STATE (ROPE) \u2014 Benefits from juror polarization without formal responsibility. Experiences jury selection as coordination mechanism: identifying jurors aligned with state position and removing opposing jurors through challenges is efficient resource allocation. Net beneficiary through conviction leverage. High arbitrage capacity: state controls timing, venue, charges, and prosecution strategy. Extraction runs toward this actor."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Partisan Political Actors",
+      "comment": "PERSPECTIVE 4: PARTISAN POLITICAL ACTORS (TANGLED ROPE) \u2014 Powerful actors using politicized trials as coordination mechanism for faction messaging and identity reinforcement. Genuine coordination function (rallying base around trials as political narratives) coexists with extraction from defendants and jury integrity. Mobile exit options (political activities, media focus, legislative action), but sustained investment in trial narratives suggests significant benefit flow. Moderate to high experienced extraction relative to their power level."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Impartiality Norm",
+      "comment": "PERSPECTIVE 5: JURY IMPARTIALITY NORM (PITON) \u2014 The foundational norm of jury impartiality persists as performative theater: voir dire questions about bias are ritualistic rather than effective at detecting or removing polarized jurors. Jury instructions to set aside partisan preferences are theater \u2014 they cannot rewire tribal identity or partisan epistemology. The norm is maintained through institutional inertia despite systematic degradation. Theater ratio reflects that jury selection rituals (questions, challenges, instructions) perform impartiality without achieving it."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (CIVILIZATIONAL VIEW) \u2014 From a system-level perspective, jury selection polarization is a hybrid constraint: the jury system genuinely coordinates trial participation and evidence presentation (coordination function), but that coordination mechanism has been captured by partisan epistemology such that verdict distribution tracks political affiliation rather than evidence quality. The constraint requires active enforcement (jury selection rituals, instructions) to function at all, and enforcement is systematically biased. This is the canonical tangled rope: genuine coordination infrastructure overlaid with asymmetric extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "polarization_causation_direction",
+      "question": "Does political polarization cause juror bias, or does the jury system's structural need for local venue and peer composition inevitably channel existing community polarization into verdict disparities?",
+      "resolution_mechanism": "Comparative analysis of verdict distributions across high-polarization and low-polarization communities for identical case types; isolation of venue effects from juror ideology effects",
+      "impact": "If polarization causes bias: problem is remediable through jury education or jury composition reforms. If system structure channels polarization: problem is structural and requires venue/composition rules changes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether polarization causes bias or system structure channels it"
+    },
+    {
+      "id": "juror_awareness_suppression_gap",
+      "question": "Are jurors conscious that they are voting along partisan lines, or has tribal epistemology become sufficiently naturalized that partisan filtering of evidence appears neutral to the juror?",
+      "resolution_mechanism": "Post-trial juror interviews; comparison of self-reported reasoning vs verdict alignment with juror political affiliation; analysis of juror comments on evidence quality",
+      "impact": "If conscious: suppression is high but potentially addressable through transparency. If naturalized: suppression is near-total \u2014 jurors cannot perceive their own bias, making intervention much harder.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether juror bias is conscious or naturalized"
+    },
+    {
+      "id": "venue_reform_feasibility",
+      "question": "Can venue changes (federal venue rules, cross-state jury pools, or professional jurors) meaningfully reduce verdict polarization, or does partisan epistemology persist across geographic scales?",
+      "resolution_mechanism": "Comparative verdict analysis pre/post-venue rule changes; analysis of federal vs state trial outcomes for identical case types; international comparison to professional jury systems",
+      "impact": "If feasible: scaffold perspective is accurate \u2014 structural reforms can build alternative pathways with sunset to polarization dominance. If infeasible: constraint is more fundamental than institutional reform can address.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether venue reform can reduce verdict polarization"
+    },
+    {
+      "id": "extraction_mechanism_intentionality",
+      "question": "Is the prosecutorial state deliberately gaming jury polarization, or is polarization an unintended side effect of venue rules and jury composition that state prosecutors are exploiting post-facto?",
+      "resolution_mechanism": "Analysis of prosecution strategy memos, venue selection patterns, juror challenge usage, and correlation with defendant political affiliation; comparison to non-political trials in same venues",
+      "impact": "If deliberate: extraction is intentional and systemic. If side effect: constraint is Piton-like degradation of system that was never designed for polarized electorate. Mandatrophy implications differ significantly.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether prosecution deliberately exploits polarization or benefits incidentally"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Jury selection polarization in politically charged trials creates a structural tension between the jury system's coordination function (trial-by-peer, evidence presentation, community legitimacy) and the capture of that coordination by partisan epistemology. Political polarization has systematized the biasing mechanisms of jury selection: prosecution uses peremptory challenges and questioning to identify politically aligned jurors; venue selection concentrates defendants from opposing factions into politically hostile communities; juror identity fusion with political tribes transforms evidence evaluation into identity confirmation. The constraint shows increasing extractiveness over the measurement interval (0.35 \u2192 0.58), reflecting both the rising salience of political trials and the optimization of partisan jury capture strategies. Theater ratio has risen (0.52 \u2192 0.68), indicating that jury selection rituals (voir dire questions, jury instructions on impartiality) have become increasingly performative \u2014 they maintain the appearance of impartiality while systematically failing to detect or remove polarized jurors.",
+    "key_agents": [
+      "Politically Disfavored Defendants: Primary victims (powerless/trapped) \u2014 systematically higher conviction risk due to juror polarization; no exit from venue or jury composition",
+      "Trial Legitimacy: Primary victim (institutional/trapped) \u2014 verdicts lose credibility when perceived as politically predetermined; abstract collective good that cannot organize",
+      "Jury Impartiality Norm: Primary victim (institutional/trapped) \u2014 foundational norm degraded to theatrical performance; cannot exit or adapt to polarized electorate",
+      "Prosecutorial State: Primary beneficiary (institutional/arbitrage) \u2014 captures conviction leverage through jury polarization; controls venue and juror challenge strategy; high arbitrage capacity",
+      "Partisan Political Actors: Secondary beneficiary (powerful/mobile) \u2014 use politicized trials for faction messaging and identity reinforcement; benefit from narrative control",
+      "Opposing Faction's Population: Secondary victim (moderate/constrained) \u2014 coerced jury participation; pressure to vote partisan lines; constrained by duty obligation",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees tangled rope: genuine coordination infrastructure captured by partisan extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The prosecution captures significant conviction leverage through systematic jury composition, but extraction is not maximal because: (1) evidence quality still influences outcomes (juries are not entirely partisan), (2) some cross-partisan conviction occurs, and (3) defense strategies can partially mitigate venue effects. The upward trajectory (0.35 \u2192 0.58) reflects increasing sophistication of partisan jury capture over the past decade as political trial frequency has increased and prosecution strategies have optimized. Suppression (0.62): High. Multiple suppression mechanisms operate: venue concentration, juror identification bias (tribal epistemology makes partisan jurors invisible to themselves), jury duty obligation traps unwilling participants, peremptory challenge asymmetry, and public polarization that invades jury deliberation. Jurors cannot easily exit polarized identity frames; defendants cannot easily change venue or jury composition. Theater ratio (0.68): High and rising. Jury selection rituals (voir dire questioning, jury instructions on setting aside bias, peremptory challenges) perform impartiality without achieving it. The performance has increased as the system has become more visibly polarized \u2014 more extensive jury instructions and more careful questioning signal to observers that impartiality is being pursued, even as verdict distributions diverge sharply from evidence quality.",
+    "perspectival_gap": "The maximum perspectival gap exists between the prosecutorial state's Rope classification and the disfavored defendant's Snare classification. This gap reveals the asymmetric extraction captured by the tangled rope: the same jury selection mechanism that coordinates efficient trial participation also extracts systematically biased verdicts. The piton perspective on jury impartiality reveals that the system's legitimacy depends on theatrical maintenance of a norm that has ceased to function. The scaffold perspective would require venue reform (cross-state jury pools, professional jurors, or algorithmic jury composition) that depolarizes juries, but current structural data shows no such alternative pathway developing.",
+    "directionality_logic": "Directionality values track the agent's structural relationship to the verdict-outcome distribution and their capacity to shape it. The prosecutorial state has d \u2248 0.10 (beneficiary with arbitrage exit) \u2014 they control venue, jury challenges, and charging decisions; they benefit from polarized convictions; they can pivot to different cases or prosecutorial strategies. Their derived d feeds into f(d) yielding negative or near-zero effective extraction chi \u2014 the constraint runs *toward* them. The disfavored defendant has d \u2248 0.95 (victim with trapped exit) \u2014 they bear the conviction risk, cannot change venue or jury composition meaningfully, and cannot exit the trial mechanism. Their derived d feeds into f(d) yielding maximum effective extraction chi. The partisan political actors have d \u2248 0.40 (beneficiary with mobile exit) \u2014 they benefit from trial narratives but can shift focus to other political activities; moderate experience of extraction benefit. The jury impartiality norm occupies an unusual position: it is a rule/principle, not an agent, but it is treated as a victim (d \u2248 0.90) because it is systematically violated. The opposing faction's population has d \u2248 0.72 (victim with constrained exit) \u2014 they bear jury duty costs and partisan pressure; significant extraction but with some agency through defense participation.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by distinguishing the jury system's genuine coordination function from its capture by partisan extraction. The jury system coordinates trial participation, evidence presentation, and peer verdict \u2014 these are real coordination services that the constraint provides. But that coordination infrastructure has been systematically captured: venue rules concentrate defendants with hostile jurors; peremptory challenges remove jurors from opposing factions; tribal epistemology ensures partisan voting regardless of evidence; jury instructions to 'set aside bias' are theater because bias is now identity, not conscious prejudice. The tangled rope classification captures this hybrid: real coordination overlaid with real extraction. The mandatrophy risk would be misclassifying this as pure Rope (claiming coordination is sufficient) or pure Snare (claiming coordination function is lost entirely). The data supports Tangled Rope: both functions persist, both are measurable, and both require the active enforcement mechanisms (jury selection, instructions, challenges) to sustain."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "political_trial_venue_selection",
+      "prosecutorial_discretion_asymmetry"
+    ],
+    "dual_formulation_note": "Jury selection polarization is downstream of systemic political polarization but represents a distinct structural constraint in the judicial system. Upstream constraints include venue rules and peremptory challenge doctrine; downstream constraints include verdict credibility and trial legitimacy. Each has its own extractiveness reflecting its specific structural position."
+  },
+  "directionality_overrides": []
+}

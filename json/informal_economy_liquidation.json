@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "informal_economy_liquidation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Informal Economy Liquidation through Formalization Policy",
+    "topic_domain": "economic_policy/labor/development",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "formal_sector_employers",
+      "tax_collecting_authorities",
+      "regulatory_agencies"
+    ],
+    "victims": [
+      "informal_sector_workers",
+      "street_vendors",
+      "domestic_workers",
+      "micro_entrepreneurs"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Informal Vendor",
+      "comment": "PERSPECTIVE 1: INFORMAL VENDOR (SNARE) \u2014 Trapped without viable exit. Formalization requires capital for licensing, equipment, compliance infrastructure, and continuous regulatory payments. Non-compliance triggers confiscation, fines, and exclusion from formal markets. The vendor cannot afford formalization costs, cannot maintain informal status without penalty risk, and cannot escape geographic jurisdiction. Maximum experienced extraction with suppression of alternatives."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Domestic Worker Without Legal Status",
+      "comment": "PERSPECTIVE 2: DOMESTIC WORKER (SNARE) \u2014 Trapped in informal employment with no labor protections, no ability to negotiate wages or conditions, no recourse for wage theft. Formalization requires employer cooperation (which dissolves the wage advantage employers seek) and documentation often unavailable to migrants or undocumented workers. Suppression operates through legal status barriers and lack of organizing capacity."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Tax Authority / Regulatory Agency",
+      "comment": "PERSPECTIVE 3: TAX AUTHORITY (ROPE) \u2014 Experiences formalization policy as solving a genuine coordination problem: bringing informal workers into the tax/regulatory system increases revenue and extends social safety net coverage. The authority benefits from captured workers and expanded tax base. Sees the constraint as legitimate coordination mechanism, not extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Informal Worker Coalition / Union",
+      "comment": "PERSPECTIVE 4: INFORMAL WORKER COALITION (TANGLED ROPE) \u2014 Organized groups (unions, cooperatives, NGOs) perceive both genuine coordination benefits (formalization creates labor protections, enforces minimum wages) and asymmetric extraction (formalization costs are passed entirely to workers; regulatory capture ensures enforcement targets workers, not employers). Coalition has some agency and can negotiate, but faces structural constraints in enforcement asymmetry."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Formal Sector Employer",
+      "comment": "PERSPECTIVE 5: FORMAL SECTOR EMPLOYER (TANGLED ROPE) \u2014 Benefits from formalization policy by eliminating informal competition and ensuring labor supply moves into regulated employment. Perceives formalization as coordinating labor market. But also subject to regulation, wage floors, and labor law enforcement. Experiences mixed coordination and extraction \u2014 genuine coordination gains tempered by enforcement asymmetry favoring workers when politically salient."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Development Policy Framework",
+      "comment": "PERSPECTIVE 6: DEVELOPMENT POLICY FRAMEWORK (PITON) \u2014 International development institutions (World Bank, IMF, bilateral donors) have promoted formalization policy for decades as best practice. The policy persists through institutional inertia and donor requirement despite limited evidence of success and documented harm to vulnerable workers. Theater ratio reflects that formalization rhetoric ('bringing workers into the system,' 'expanding tax base') persists even as implementation concentrates harm on powerless agents."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Economic Necessity)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / ECONOMIC NECESSITY VIEW (MOUNTAIN) \u2014 From the analytical/civilizational perspective, some formalization is necessary for modern economies: tax collection, labor protections, and infrastructure provision require identifying workers and employers. This perspective sees the extraction as an immutable feature of economic organization \u2014 the cost of civilization. However, the structural data reveals this as naturalization: the extraction concentrates on the most vulnerable; formalization could occur with subsidy or gradual transition rather than immediate enforcement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "formalization_feasibility_threshold",
+      "question": "Below what income level does formalization cost exceed the worker's ability to absorb without reducing consumption below subsistence?",
+      "resolution_mechanism": "Empirical household budget analysis correlating formalization compliance costs to worker income distribution; tracking of exit from informal employment following formalization campaigns",
+      "impact": "If threshold is high (common finding): formalization is economically impossible for majority of informal workers, converting the policy from coordination to pure extraction. If threshold is low: formalization may be feasible with targeted support, suggesting tangled_rope classification is accurate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Feasibility threshold for informal worker formalization"
+    },
+    {
+      "id": "enforcement_asymmetry_mechanism",
+      "question": "Do regulatory agencies enforce formalization requirements against employers and informal workers equally, or do enforcement costs and political barriers result in targeting workers preferentially?",
+      "resolution_mechanism": "Audit of enforcement actions: ratio of employer penalties to worker penalties; tracking of confiscation vs wage recovery cases; political economy analysis of which violations trigger response",
+      "impact": "If enforcement is symmetric: coordination mechanism is genuine. If asymmetric toward worker targeting: snare classification is accurate and suppression floor should increase.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Enforcement asymmetry in formalization policy implementation"
+    },
+    {
+      "id": "alternative_formalization_pathways",
+      "question": "Are there feasible subsidized, gradual, or delegated formalization pathways that preserve informal worker agency and income levels while achieving fiscal/regulatory objectives?",
+      "resolution_mechanism": "Comparative policy analysis across countries; pilot programs testing subsidized compliance, employer-side enforcement, or cooperative formalization; measurement of worker welfare outcomes under alternative designs",
+      "impact": "If alternatives exist: policy choice to use coercive rather than supportive formalization reveals intentional extraction. If no alternatives work: snare classification is structural rather than contingent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Existence of feasible alternative formalization pathways"
+    },
+    {
+      "id": "formal_sector_competition_spillover",
+      "question": "Does formalization policy primarily benefit formal sector employers through elimination of informal competition, or does labor protectionvalue offset this competitive capture?",
+      "resolution_mechanism": "Economic analysis of formal sector profit margins, labor cost changes, and competitive displacement following formalization campaigns; measurement of worker wage and condition changes in formal sector post-formalization",
+      "impact": "If formal sector dominates benefit: formalization is primarily an extraction mechanism enabling formal sector rent capture. If workers benefit through protected wages: tangled_rope classification is accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Formal sector capture vs. worker protection spillover from formalization"
+    },
+    {
+      "id": "identity_lock_versus_constraint",
+      "question": "To what extent do informal workers accept formalization constraints as legitimate (identity-locked, internalizing policy's framing as natural/necessary) versus perceiving them as external barriers to evade?",
+      "resolution_mechanism": "Qualitative research (interviews, focus groups) on worker perceptions of formalization legitimacy; measurement of compliance behavior (evasion rates, bribing officials, exit from markets) vs. internalized acceptance; tracking of narrative framing shifts over time",
+      "impact": "If primarily identity_locked: suppression is higher (internalized), worker organizing is weaker, and exit becomes even more difficult psychologically. If primarily perceived as external constraint: suppression is lower, organizing potential is higher, and reclassify toward lower suppression.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Identity lock vs. external constraint perception in formalization acceptance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Informal economy liquidation through formalization policy represents a systematic extraction mechanism disguised as development coordination. Workers in informal sectors \u2014 street vendors, domestic workers, day laborers, micro-entrepreneurs \u2014 comprise 50-90% of employment in many developing economies and represent the primary income source for the global poor. Formalization policy, promoted by multilateral development institutions and adopted by national governments, mandates registration, licensing, tax payment, and regulatory compliance for informal workers. The stated coordination objective is genuine: bringing workers into the tax system, extending labor protections, and formalizing the economy. The extraction mechanism is equally real: formalization costs (licensing fees, equipment, compliance infrastructure, continuous regulatory payments) are unaffordable for workers earning $2-5 per day. Non-compliance triggers confiscation of goods, fines, market exclusion, and detention. Enforcement is asymmetric \u2014 targeting workers rather than employers or tax evasion by formal sector \u2014 creating suppression that prevents exit or organizing. The constraint exhibits dramatic perspectival divergence: the vendor sees pure extraction (Snare), the tax authority sees coordination (Rope), the organized coalition sees mixed coordination-extraction (Tangled Rope), and the international development framework sees this as an immutable feature of economic modernization (Piton + false Mountain).",
+    "key_agents": [
+      "Informal Sector Workers: Primary victims (powerless/trapped) \u2014 street vendors, domestic workers, day laborers, micro-entrepreneurs in informal employment with no labor protections",
+      "Tax Authority / Regulatory Agencies: Primary beneficiary (institutional/arbitrage) \u2014 captures expanded tax base, achieves regulatory coverage, solves coordination problem of bringing workers into formal system",
+      "Formal Sector Employers: Secondary beneficiary (powerful/mobile) \u2014 eliminates informal competition, secures labor supply from formalization-displaced workers",
+      "Informal Worker Coalition: Secondary victim/organized agent (organized/constrained) \u2014 unions, cooperatives, NGOs attempting to negotiate and organize; perceive both coordination benefits and extraction asymmetry",
+      "International Development Institutions: Institutional actor (institutional/arbitrage) \u2014 World Bank, IMF, bilateral donors promoting formalization as development best practice; capture through policy framework rather than direct enforcement",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing policy-contingent extraction as immutable feature of economic development"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and increasing. The constraint exhibits accelerating extraction over the interval. Initial value (0.35) reflects modest formalization pressure and widespread informal evasion capacity. As implementation intensifies (through technological surveillance, digital payment tracking, agency coordination), extraction increases to 0.55 at midpoint and 0.68 at final measurement. The trajectory shows policy deepening rather than stabilization. Suppression (0.75): Very high. Multiple mechanisms suppress alternatives: (1) Legal status \u2014 informal workers cannot legally operate; (2) Capital barriers \u2014 formalization costs are prohibitive; (3) Enforcement asymmetry \u2014 authorities target workers, not employers or formal sector tax evasion; (4) Organizing barriers \u2014 informal workers lack stable workplaces, union infrastructure, and legal protection for collective action; (5) Geographic barriers \u2014 informal workers are dispersed, making coordination difficult; (6) Migration status \u2014 many informal workers lack legal residency, creating additional vulnerability. Theater ratio (0.55): Moderate-high. The rhetoric of formalization emphasizes development goals ('expanding tax base,' 'extending labor protections,' 'bringing workers into the system') while implementation concentrates on extraction. Theater has been increasing as policy rhetoric intensifies (development success narratives) while actual worker harm has become more apparent, creating a gap between stated and actual function.",
+    "perspectival_gap": "The perspectival gap between vendor and authority is maximal. The vendor (powerless/trapped) perceives extraction with zero exit options; the authority (institutional/arbitrage) perceives coordination with pure benefit. This gap is the engine detecting structure: the constraint's function is entirely reversed depending on whether you are the beneficiary or the victim. The authority sees 'bringing informal workers into the system' as coordination success; the vendor sees 'being forced into unaffordable compliance' as extraction. Both perceptions are accurate \u2014 they perceive different aspects of the same mechanism. The gap reveals that the constraint is not truly coordination (which would benefit both parties) but rather redistribution of power and resources. The authority's Rope classification is correct from their structural position; the vendor's Snare classification is correct from theirs. The contradiction is not a measurement error \u2014 it is a signal that the constraint's function is fundamentally asymmetric.",
+    "directionality_logic": "Directionality for each perspective is computed from beneficiary/victim status and exit options. Informal workers are victims (classified in base_properties.victims) with trapped exit options \u2014 they experience high d (\u22480.95) and high f(d) \u22481.42, producing severe \u03c7. Tax authorities are beneficiaries with arbitrage options \u2014 they experience low d (\u22480.05) and negative f(d) \u2248-0.12, producing negative \u03c7 (the policy subsidizes them). This computation reveals the asymmetry: the policy extracts from those who cannot exit and benefits those with maximum flexibility. The scope modifier \u03c3(S)=1.0 for national scope does not change the directionality computation but reflects that the constraint operates across the full national economy (not local, not global). The suppression metric (0.75) is unscaled \u2014 it applies equally to all perspectives, reflecting that the structural barriers (legal status, capital, enforcement risk) are binding for all informal workers regardless of power level.",
+    "mandatrophy_analysis": "Informal economy liquidation resolves mandatrophy through clarity about what coordination problem formalization actually solves and for whom. The stated problem is economic modernization \u2014 formalizing the economy, expanding the tax base, extending labor protections. This is genuine coordination. But formalization achieves these goals through extraction from informal workers (who bear all costs) rather than through subsidized transition or employer-side enforcement (which would be true coordination). The extractive design reveals that the constraint serves not the stated coordination goal but rather the distributional goal of transferring workers from informal (low-tax, low-cost) to formal (high-tax, higher-cost) employment while capturing the captured workers for formal sector labor supply. This is mandatrophy resolution: the constraint is Snare (not Tangled Rope) because the coordination benefit is incidental \u2014 the primary function is extraction. A genuine Tangled Rope would involve burden-sharing (subsidized formalization, gradual enforcement, employer accountability), not worker-targeted enforcement. The piton perspective on development policy reveals how institutional inertia sustains a policy with documented harm \u2014 formalization has been promoted for 40+ years with limited success and clear negative outcomes for vulnerable workers, yet donor requirements perpetuate it. The false Mountain perspective naturalizes policy as inevitable economic law, preventing recognition that alternative designs are possible."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "labor_market_segmentation",
+      "tax_evasion_incentive_structure",
+      "subsistence_income_constraint"
+    ],
+    "dual_formulation_note": "Informal economy liquidation is downstream of labor market segmentation (which creates informal employment as rational response to formal sector barriers) but represents a distinct structural constraint with its own extractiveness trajectory. The constraint family includes: (1) labor_market_segmentation (\u03b5=0.15, Rope) \u2014 the initial coordination/segmentation mechanism; (2) informal_economy_liquidation (\u03b5=0.68, Snare) \u2014 the policy response that turns workers into extraction targets; (3) post_formalization_precarity (\u03b5=0.55, Tangled Rope) \u2014 the outcome for workers who formalize and face new extraction mechanisms through formal sector labor conditions. Each story has distinct base properties, perspectives, and policy implications."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "us_family_sponsored_visa_backlog",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fsvb"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "U.S. Family-Sponsored Visa Backlog",
+    "topic_domain": "immigration_policy/family_separation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_labor_market_protected_workers",
+      "immigration_enforcement_apparatus"
+    ],
+    "victims": [
+      "separated_family_members",
+      "visa_applicants_in_queue"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Separated Family Member Abroad",
+      "comment": "PERSPECTIVE 1: SEPARATED FAMILY MEMBER (SNARE) \u2014 Trapped in indefinite separation. No alternative visa pathways for most family relationships. Cannot exit by switching to employment-based visa (sponsorship requires employer, not family). Faces maximum suppression: legal barriers (visa category caps), economic barriers (cannot work in US during wait), and emotional costs of separation. Experiences pure extraction \u2014 the US captures labor market protection benefit while the family member bears the separation cost. Zero coordination benefit perceived \u2014 the delay serves no purpose for the separated party. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The U.S. Family Sponsor (Petitioner)",
+      "comment": "PERSPECTIVE 2: US FAMILY SPONSOR (TANGLED ROPE) \u2014 Benefits from the constraint (labor market protection through delayed visa issuance) and bears costs (separation from family, emotional burden, legal fees). Has constrained exit options: can sponsor but cannot accelerate process; cannot switch to different family member without restarting. Experiences genuine coordination function (the visa system does coordinate family reunification, even if slowly) alongside extraction (the system delays reunification to protect labor market, extracting emotional cost). Mixed experience \u2014 partial benefit from US labor market stability, significant cost from separation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Protected Labor Market Sector",
+      "comment": "PERSPECTIVE 3: PROTECTED LABOR MARKET SECTOR (ROPE) \u2014 Benefits from the backlog as coordination mechanism that reduces labor supply pressure. The delay functions as a coordination tool: it prevents wage depression in protected sectors by slowing family reunification of lower-skilled workers. Experiences the constraint as pure coordination with minimal coercion \u2014 the sector does not need to actively suppress the visa queue; the system naturally produces the protective effect. Low experienced extraction because the benefit is passive coordination, not active rent-seeking."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Immigration Enforcement Apparatus",
+      "comment": "PERSPECTIVE 4: IMMIGRATION ENFORCEMENT APPARATUS (TANGLED ROPE) \u2014 Powerful institutional actor with mixed interests. Benefits from the backlog as justification for budget, personnel, and enforcement infrastructure (prevents argument that visa processing could be fully automated or eliminated). Bears costs of managing queue (administrative burden), political pressure from advocates (emotional leverage from separated families), and legal challenges. Has mobile exit options (could restructure entirely, though politically costly). Experiences genuine coordination function (manages the visa system) alongside extraction (maintains backlog as institutional preservation mechanism). The apparatus is both solution provider and beneficiary of the problem's persistence."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Immigration Reform Coalition",
+      "comment": "PERSPECTIVE 5: IMMIGRATION REFORM COALITION (SCAFFOLD) \u2014 Organized agents (advocacy groups, family separation organizations, some legislators) perceive the backlog as a temporary policy failure with a sunset. The coalition sees clear exit pathway: legislative reform (increase visa cap numbers, streamline processing, eliminate per-country caps). Experiences the constraint as coordination problem (matching family members across borders) with artificially created extraction (policy-driven delays). Has constrained exit options but perceives a structural solution. Theater ratio is moderate for this perspective: the coalition's advocacy work is partially performative (generating political pressure) but also functional (building coalition, drafting reform proposals). Classifies as scaffold because the sunset is perceived as achievable within a generational timeframe (10-20 years of advocacy pressure) and the suppression would decline once processing accelerates."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Family Reunification Norm (Vestigial)",
+      "comment": "PERSPECTIVE 6: FAMILY REUNIFICATION NORM (PITON) \u2014 The US legal framework enshrines family reunification as a principle (INA foundation, constitutional family liberty interests). But the principle is substantially performative: stated in law yet systematically undermined by visa caps and allocation mechanisms. The norm persists through institutional inertia and rhetorical invocation ('family is the cornerstone of immigration') despite low functional compliance. Theater ratio is high: the system claims to honor family reunification while structurally preventing it. The norm is degraded \u2014 maintained because it provides political legitimacy, not because it operates effectively."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (False Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FALSE NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal analytical perspective, one might naturalize the backlog as an immutable feature of border control: 'managing immigration inevitably produces delays; this is inherent to sovereignty.' This perspective treats the backlog as emerging naturally from the structural requirement to verify identities and screen applicants. However, the empirical data contradicts this: processing times and backlogs vary dramatically across countries and visa categories, revealing that the delay is policy-driven, not inherent. The engine will flag this as a false summit \u2014 the naturalization disguises contingent institutional choices (per-country caps, visa category allocations, staffing decisions) as immutable laws of state sovereignty."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "labor_market_protection_threshold",
+      "question": "At what visa issuance rate does meaningful labor market protection occur, and at what rate does it disappear?",
+      "resolution_mechanism": "Econometric analysis of wage pressure correlation with visa processing speed; controlled comparison across countries and time periods with different visa caps and processing rates",
+      "impact": "If threshold is low (achieved at high visa issuance rates): backlog provides minimal actual protection, and the snare classification dominates. If threshold is high (requires sustained low issuance): the tangled rope classification with genuine extraction is confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Labor market protection effectiveness threshold"
+    },
+    {
+      "id": "legislative_reform_feasibility",
+      "question": "Is legislative reform to increase visa caps and accelerate processing politically achievable within 10-20 years, or is the backlog structurally permanent?",
+      "resolution_mechanism": "Political capacity analysis; historical precedent for major immigration law reform; coalition strength tracking; measurement of legislative window dynamics",
+      "impact": "If reform is achievable: scaffold classification is justified, and the constraint has a real sunset. If reform is politically frozen: the constraint is more like a snare or piton than a scaffold, and the extraction has permanence.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Political feasibility of legislative reform"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "To what degree have separated families internalized the backlog as inevitable, versus maintaining active resistance and hope for change?",
+      "resolution_mechanism": "Qualitative research on family member narratives; measurement of advocacy participation rates; longitudinal tracking of psychological adaptation vs active organizing",
+      "impact": "If internalized: suppression acts as a structural lock even if legal barriers hypothetically weakened. If resistance remains active: the suppression is structural but not internalized, and reform pressure persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Internalization of backlog as inevitable versus active resistance"
+    },
+    {
+      "id": "enforcement_apparatus_institutional_dependence",
+      "question": "How deeply is the immigration enforcement apparatus's organizational structure dependent on maintaining the backlog for budgetary and personnel justification?",
+      "resolution_mechanism": "Organizational analysis of USCIS/NVC staffing models, budget allocation tied to queue size, automation-resistance mechanisms, political testimony dependencies",
+      "impact": "If highly dependent: the apparatus has strong extractive incentive to maintain the backlog, suggesting snare or tangled rope. If loosely dependent: apparatus could transition to processed-case metrics without resistance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Institutional dependence of enforcement apparatus on backlog"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The U.S. family-sponsored visa backlog creates a structural constraint on family reunification that operates through policy-driven delays rather than inherent coordination costs. As of 2024, millions of family-sponsored visa applicants wait 5-15+ years for processing, creating indefinite family separation. The constraint exhibits characteristics of tangled rope (genuine coordination function \u2014 the visa system does attempt to match family members \u2014 combined with extraction function \u2014 the delays protect labor market interests and justify enforcement infrastructure) while appearing as snare to powerless separated agents and rope to protected labor market sectors. The backlog is not a natural law of immigration; countries like Canada process family visas in 1-3 years, revealing that the US delay is policy-driven through per-country visa caps, visa category allocations, and staffing decisions. The theater ratio reflects that the system invokes family reunification as a principle while systematically preventing it \u2014 the gap between stated norm and actual performance has widened over the measurement interval.",
+    "key_agents": [
+      "Separated Family Members Abroad: Primary victims (powerless/trapped) \u2014 bear separation costs with no exit options; cannot work in US during indefinite wait",
+      "U.S. Family Sponsors (Petitioners): Mixed position (moderate/constrained) \u2014 benefit from US stability but bear separation and legal costs; experience both coordination and extraction",
+      "Protected Labor Market Sectors: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from labor supply reduction via delayed family visas; experience pure coordination benefit",
+      "Immigration Enforcement Apparatus: Secondary beneficiary (powerful/mobile) \u2014 justifies budget and personnel through queue management; maintains extraction mechanism",
+      "Immigration Reform Coalition: Organized opposition (organized/constrained) \u2014 perceives scaffold with sunset; advocates for legislative reform to process acceleration",
+      "U.S. Government (State/Labor/DHS): Institutional enforcer (institutional/arbitrage) \u2014 maintains policy-driven delays as tool for labor market protection and border sovereignty",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent policy choices as immutable features of state sovereignty"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The backlog transfers costs (separation, delay, legal fees) from protected labor market to separated families. However, the extraction is not as severe as a pure snare (0.70+) because the US also provides a genuine coordination service \u2014 the visa system does eventually reunify families, even if slowly. The 0.58 reflects that the primary function (family coordination) exists alongside significant extraction (delay as labor market protection). The value has increased from 0.42 to 0.58 across the interval, indicating that visa processing has slowed relative to application growth, and the extraction mechanism has deepened. Suppression (0.68): High. Separated families face legal barriers (visa category caps, per-country limits), economic barriers (cannot work in US during wait, costs of maintaining two households), and emotional barriers (separation duration normalizes as permanent). Suppression has remained relatively stable across the interval \u2014 the structural barriers are systemic, not declining. Theater ratio (0.55): Moderate. The system invokes family reunification as foundational principle ('family is the cornerstone of US immigration policy') while systematically delaying it. The gap between rhetoric and practice is substantial but not total \u2014 some families are reunified, and the system does process cases, just very slowly. Theater has slightly increased as the gap between stated commitment and actual processing times has widened.",
+    "directionality_logic": "The beneficiary/victim declarations map to real structural relationships: labor market sectors benefit through reduced wage pressure (arbitrage exit, low d); separated families bear costs with no exit (trapped exit, high d); enforcement apparatus benefits through queue-justified budgets and personnel (arbitrage exit, moderate-low d); family sponsors occupy mixed position (constrained exit, moderate d). These directionality values feed into f(d) sigmoid, which scales effective extraction. Trapped agents with high d experience maximum multiplier; arbitrage beneficiaries with low d experience subsidy effect (negative extraction). No directionality overrides needed \u2014 the derivation chain from structural positions produces accurate d values.",
+    "perspectival_gap": "The gap between snare and rope perspectives reveals the extraction mechanism: the separated family member sees pure extraction because the delays serve no purpose for them (family coordination is the stated purpose but delayed) and all costs fall on them (separation). The protected sector sees pure coordination because they benefit from the side effect of delay (wage protection) without experiencing coercion (the benefit flows to them passively). Both perspectives are empirically accurate from their positions \u2014 the gap itself is the diagnostic signal that this is tangled rope, not rope or snare alone.",
+    "mandatrophy_analysis": "RESOLVES MANDATROPHY: The constraint avoids mislabeling pure coordination as extraction by explicitly declaring both coordination function (visa system does reunify families, though slowly) and extraction function (delays protect labor market, justify apparatus budgets). The tangled rope classification captures both mechanisms simultaneously. The snare perspective shows what pure extraction looks like from the separated family's view; the rope perspective shows what pure coordination looks like from the protected sector's view. The mandatrophy is resolved by accepting that the constraint has BOTH genuine coordination (family matching) and genuine extraction (labor protection), not one disguised as the other. The challenge is that rhetoric naturalizes this mix: policy-makers present labor protection as incidental to family coordination, when structural analysis reveals the labor protection is the primary function and family coordination is the constraint being extracted from."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "us_employment_based_visa_specialization",
+      "family_separation_psychological_impact"
+    ],
+    "dual_formulation_note": "The family visa backlog is distinct from individual visa category constraints but affects those constraints through resource allocation (visa number pools are zero-sum across categories). The resource allocation coordination type applies \u2014 the constraint coordinates allocation of limited visa slots across multiple categories and countries."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ]
+}

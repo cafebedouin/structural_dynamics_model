@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "cabmen_guild_economic_decline",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cabmen"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Cabmen Guild Economic Decline and Regulatory Lock-In",
+    "topic_domain": "labor_economics/transportation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "licensed_cab_operators",
+      "municipal_regulators"
+    ],
+    "victims": [
+      "non_licensed_drivers",
+      "rider_affordability",
+      "market_entry_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Prospective Cab Driver",
+      "comment": "PERSPECTIVE 1: PROSPECTIVE CAB DRIVER (SNARE) \u2014 Faces insurmountable barriers to entry: municipal medallion systems create artificial scarcity with costs ($100K-$300K in major cities) that lock out workers without existing capital. No alternative transportation employment pathway exists with similar income potential for workers with limited formal credentials. Trapped by cost and regulatory prohibition \u2014 extraction is near-total."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Incumbent Cab Driver",
+      "comment": "PERSPECTIVE 2: INCUMBENT CAB DRIVER (TANGLED ROPE) \u2014 Experiences both coordination benefit (guild protects against predatory dispatch and wages through collective bargaining) and asymmetric extraction (guild leadership captures rents, medallion value extraction constrains actual wage growth, shift costs push to driver). Exit is possible (switch to rideshare, trucking, delivery) but carries high social cost (decades of taxi-specific capital become worthless). Moderate power through organization, but constrained by identity lock to taxi work."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "Municipal Regulator",
+      "comment": "PERSPECTIVE 3: MUNICIPAL REGULATOR (ROPE) \u2014 Benefits from medallion system coordination: stable tax base, predictable service standards, administrative simplicity. Experiences the constraint as solving the coordination problem of preventing taxi wars and ensuring service coverage. Can exit entirely (deregulate) or maintain arbitrage (regulatory licensing fee extraction). Low experienced extraction \u2014 sees the system as functional coordination."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Rideshare Disruptors and Labor Reorganization",
+      "comment": "PERSPECTIVE 4: RIDESHARE DISRUPTORS (SCAFFOLD) \u2014 See the medallion system as a temporary, doomed coordination mechanism being replaced by platform-based dispatch and dynamic pricing. The constraint has a sunset: regulatory capture by incumbents delays but cannot prevent the eventual shift to app-based models with driver-platform arbitrage replacing medallion-guild models. Organized agents (rideshare platforms, labor activists) are explicitly building alternative pathways with lower entry cost and decentralized dispatch. Suppression is declining as the alternative system matures."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Guild Institution Itself",
+      "comment": "PERSPECTIVE 5: THE GUILD INSTITUTION (PITON) \u2014 The formal guild structure persists through institutional inertia despite declining functional purpose. Historic guild functions (wage negotiation, training standards, apprenticeship pathways) have atrophied. What remains is theater: licensing exams that don't correlate with driver quality, union meetings that don't influence dispatch economics, apprenticeship requirements that are nominally honored but functionally irrelevant. Theater ratio is high (0.65) \u2014 much guild activity is performative maintenance of legitimacy rather than coordination function. The institution persists because no one has formally disbanded it, not because it delivers coordination benefits."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Consumer and Labor Market (Structural View)",
+      "comment": "PERSPECTIVE 6: CONSUMER AND LABOR MARKET (TANGLED ROPE) \u2014 The medallion system coordinates service availability while extracting supernormal rents through artificial scarcity. Riders pay higher fares than competitive markets would produce; workers are excluded from entry. The system provides genuine coordination value (predictable service availability, dispatch efficiency) alongside significant extraction (medallion scarcity premium, suppressed wage competition). From this perspective, the system is a genuine hybrid \u2014 neither pure extraction nor pure coordination, but a durable entanglement of both."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Competitive Market View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / COMPETITIVE MARKET VIEW (MOUNTAIN) \u2014 From an analytical economics lens, perfect competition requires free entry and exit. The medallion system is a structural prohibition on entry \u2014 mathematically, this produces supernormal rents that cannot be competed away. This perspective sees the constraint as immutable under market logic: absent regulatory intervention, scarcity-based licensing will persist indefinitely because it is profitable for holders. However, empirical data contradicts the mountain classification \u2014 rideshare disruption is actively dismantling the medallion system, revealing it as a contingent institutional arrangement protected by regulatory capture, not an immutable market law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "regulatory_capture_durability",
+      "question": "How durable is the regulatory capture protecting the medallion system against rideshare competition?",
+      "resolution_mechanism": "Historical tracking of regulatory exemptions granted to rideshare platforms; analysis of lobbying expenditure trajectories; comparison of medallion values and driver earnings over time as rideshare penetration increases",
+      "impact": "If capture is durable: the piton classification is correct \u2014 the system persists through inertia indefinitely, theater increases. If capture is fragile: the scaffold perspective is correct \u2014 rideshare represents a real sunset mechanism, suppression declines, system transitions within 15-20 years.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Durability of regulatory capture protecting medallion system"
+    },
+    {
+      "id": "medallion_holder_identity_lock",
+      "question": "To what extent is the incumbent cab driver's commitment to the medallion system driven by identity fusion (decades invested, occupational identity) versus rational economic calculation?",
+      "resolution_mechanism": "Post-exit trajectory analysis: do drivers who leave medallion systems to join rideshare platforms experience satisfaction/earnings improvements? Do those who stay in medallion systems view remaining as choice or necessity? Identity-lock prediction: drivers with high years-of-service show higher resistance to platform switching despite earnings advantage.",
+      "impact": "If high identity lock: suppression is partially internalized \u2014 drivers carry the constraint with them after medallion system collapse, limiting labor market adaptability. If low identity lock: barriers are primarily structural-economic; policy changes rapidly unlock labor mobility.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Identity fusion in incumbent cab driver commitment to medallion"
+    },
+    {
+      "id": "alternative_dispatch_coordination_sufficiency",
+      "question": "Do rideshare platforms provide equivalent coordination and service reliability compared to medallion-based taxi dispatch?",
+      "resolution_mechanism": "Empirical comparison of service metrics: wait times, pickup reliability, coverage of underserved areas (financial district vs residential suburbs), surge pricing dynamics, driver scheduling stability. Historical case studies from deregulated cities.",
+      "impact": "If rideshare is equivalent: the medallion system is pure extraction with theater \u2014 rope classification does not hold for regulator. If rideshare is inferior for some use cases: medallion system coordination value is real, tangled rope classifications are stronger.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Service quality equivalence between rideshare and medallion-based dispatch"
+    },
+    {
+      "id": "entry_cost_barrier_mechanism",
+      "question": "Is the medallion entry cost primarily a regulatory artificial scarcity or a genuine coordination cost (service standardization, insurance, infrastructure)?",
+      "resolution_mechanism": "Decomposition analysis: what portion of medallion cost is regulatory scarcity premium vs. genuine coordination cost (insurance, dispatch infrastructure, training). Compare medallion costs to rideshare onboarding costs across jurisdictions.",
+      "impact": "If primarily artificial scarcity: snare classification is correct \u2014 extraction is maximal for prospective drivers. If partially genuine coordination cost: prospective driver experiences moderate extraction, and lower entry cost under rideshare does not imply equivalent service quality.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Medallion cost as artificial scarcity versus coordination cost"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.61
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The cabmen's guild medallion licensing system represents a classic case of regulatory capture evolved into institutional inertia. Historically, the medallion system coordinated taxi service provision, preventing destructive price wars and ensuring service coverage. Over decades, it transformed into a rent-extraction mechanism: medallion owners benefited from artificial scarcity while incumbent drivers experienced both collective bargaining protection and asymmetric extraction through medallion costs and regulatory rents. The system's economic decline reflects the rise of rideshare platforms that bypass medallion regulation entirely, creating an alternative coordination mechanism with lower entry barriers but different risk distributions. The constraint exhibits all structural features of a tangled rope: genuine coordination value (service dispatch), asymmetric extraction (medallion rents), active enforcement (municipal licensing), and increasing theater as the system's functionality decays and incumbents invest more effort in maintaining the appearance of legitimacy. The rising theater ratio (0.40 \u2192 0.65 over the interval) reflects the transition from a coordination mechanism defending incumbents' interests to a performative institutional shell maintained through regulatory capture.",
+    "key_agents": [
+      "Prospective Cab Drivers: Primary victims (powerless/trapped) \u2014 face $100K-$300K medallion barriers; no alternative high-income pathway; structurally excluded from entry",
+      "Incumbent Cab Drivers: Primary beneficiaries (moderate/constrained) \u2014 benefit from collective bargaining and service coordination; also bear extraction through medallion value ownership, shift costs, and declining market share as rideshare grows",
+      "Municipal Regulators: Beneficiaries (institutional/arbitrage) \u2014 capture licensing fees and tax revenue; maintain coordination role; can exit through deregulation",
+      "Rideshare Platforms: Disruptors (organized/constrained) \u2014 building alternative dispatch coordination with lower entry barriers; sunset mechanism for medallion system",
+      "Guild Institution: Institutional actor (institutional/arbitrage) \u2014 maintains licensing, training, union structure; increasingly performative as economic base declines",
+      "Riders and Labor Market: Victims and consumers (moderate/mobile) \u2014 pay medallion scarcity premiums; experience constrained labor market entry"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The medallion system creates artificial scarcity that generates supernormal rents extracted from entrants and riders. Entry barriers ($100K+) are primarily regulatory rather than coordination cost. Incumbent drivers benefit from service coordination but bear costs through medallion value ownership and declining wages as rideshare competition grows. The system's extractiveness has increased over the interval (0.45 \u2192 0.58) as medallion values have climbed despite declining ridership \u2014 a classic sign of pure rent extraction masquerading as coordination. Suppression (0.68): High. Regulatory prohibition on entry without a medallion, combined with high cost, creates near-total barriers for prospective drivers. Alternative occupations (rideshare) are technically available but carry identity costs for taxi-identified workers. Incumbent drivers face suppression through locked-in medallion investment. Theater ratio (0.65): Moderately high and rising. Guild licensing exams, union meetings, and apprenticeship requirements persist despite declining functional role. The system's coordination function (dispatch, service standards) is increasingly performative \u2014 rideshare platforms provide equivalent or superior coordination with fewer formal structures. The rising theater ratio reflects institutional inertia: as the medallion system loses market share, incumbents invest more effort in maintaining regulatory legitimacy rather than improving actual service.",
+    "perspectival_gap": "The most significant gap exists between the prospective driver (snare \u2014 sees maximal, unchangeable extraction) and the municipal regulator (rope \u2014 sees functional coordination). This gap reveals the constraint's hybrid nature: what functions as coordination for the regulator (stable service provision, tax base) simultaneously functions as pure extraction for the prospective driver (prohibited entry, supernormal rents). The incumbent driver's perception (tangled rope) occupies the middle ground, seeing both coordination benefits and asymmetric extraction. The guild institution's piton classification reveals institutional inertia: the organization maintains formal legitimacy through theater (licensing, union structure) while its actual coordination function is captured by rideshare platforms. The analytical observer's mountain classification is a false summit: treating competitive entry barriers as immutable laws of markets naturalizes what is actually regulatory capture. The rideshare scaffold perspective reveals the constraint's structural vulnerability: if regulatory barriers fall, the entire extraction mechanism collapses because the coordination function is portable to alternative platforms.",
+    "directionality_logic": "The critical directionality insight: the same regulatory mechanism (medallion licensing) produces opposite directionality values for different agents. Prospective drivers have d \u2248 0.95 (pure targets of extraction). Incumbent drivers have d \u2248 0.72 (identity-locked beneficiaries experiencing identity lock + constrained exit, derived from declaring them as beneficiaries of coordination but victims of extraction). Municipal regulators have d \u2248 0.15 (net beneficiaries \u2014 extraction runs toward them). The regulatory mechanism's directionality is observer-relative: it extracts from entrants and riders while benefiting incumbents and regulators. This is precisely the structure of a tangled rope: genuine coordination value (dispatch, service standards) coexists with asymmetric extraction (rents, entry barriers, suppressed competition). The incumbent driver's identity lock is key: decades of medallion-specific capital (hack license knowledge, dispatch relationships, taxi industry identity) makes exit psychologically difficult despite improving economic alternatives (rideshare platforms often offer superior earnings and flexibility). The identity lock derives from structural mobility (drivers could join rideshare) but identity frame makes exit unthinkable (taxi work is 'who they are,' not just 'what they do').",
+    "mandatrophy_analysis": "TANGLED ROPE MANDATROPHY RESOLVED: The constraint exhibits genuine tangled rope structure. Coordination function: the medallion system (historically and currently) solves the multi-agent coordination problem of dispatch, service standards, and preventing destructive price wars. This coordination value is real and appreciated by both regulators and incumbent drivers. Asymmetric extraction: the system simultaneously creates supernormal rents through artificial scarcity, extracting from prospective entrants ($100K+ barrier) and riders (higher fares than competitive markets). Enforcement: the system requires active municipal enforcement of licensing restrictions, regulatory capture by incumbent interests, and regulatory gatekeeping. The key mandatrophy resolution: the constraint cannot be classified as either pure rope (coordination-only) or pure snare (extraction-only) because both functions are genuinely present and both are structural to the system. The rising theater ratio and measured extractiveness suggest the system is drifting toward pure snare as rideshare competition erodes the coordination function \u2014 what was previously a necessary scarcity mechanism becomes pure rent-seeking. However, the constraint remains a true tangled rope in its current form because the coordination mechanism is still functioning (dispatch works, service standards are enforced) even as extraction increases. The scaffold perspective (rideshare sunset) and piton perspective (increasing theater) are not contradictions but complementary observations: the constraint is a tangled rope becoming a piton (functionality degraded to theater) while simultaneously being actively replaced by a scaffold (rideshare as a competing coordination mechanism with a sunset for the medallion system)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "rideshare_labor_precarization",
+      "urban_transportation_regulation"
+    ],
+    "dual_formulation_note": "The medallion system decomposes into two structurally distinct constraints: (1) medallion_coordination_mechanism (\u03b5\u22480.15, Rope) \u2014 the dispatch and service standard coordination function; and (2) medallion_entry_barrier (\u03b5\u22480.78, Snare) \u2014 the artificial scarcity and rent extraction mechanism. These are presented as a unified tangled_rope story because they operate through the same institutional mechanism (municipal licensing), but they have different \u03b5 values and different failure modes. Rideshare platforms are attacking the entry_barrier component while partially preserving coordination through alternative dispatch mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.72
+    }
+  ]
+}

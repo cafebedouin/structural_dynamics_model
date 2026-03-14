@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "exoplanet_observation_bias_correction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "exoplanet"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Exoplanet Observation Bias Correction and Detection Threshold Control",
+    "topic_domain": "astronomy/observational_bias/exoplanet_detection",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "major_survey_institutions",
+      "well_resourced_research_groups"
+    ],
+    "victims": [
+      "field_statistical_reliability",
+      "low_resource_research_groups",
+      "small_telescope_networks"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Field's Statistical Integrity",
+      "comment": "PERSPECTIVE 1: FIELD STATISTICAL INTEGRITY (SNARE) \u2014 The collective epistemic reliability of exoplanet catalogs cannot exit the bias correction regime. As detection techniques proliferate with heterogeneous bias profiles, no single correction standard captures the full space of observational systematics. Smaller surveys face asymmetric pressure to conform to correction standards designed by major institutions, or risk exclusion from meta-analyses. The field bears the cost of accumulated methodological drift."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Low-Resource Research Groups",
+      "comment": "PERSPECTIVE 2: LOW-RESOURCE RESEARCH GROUPS (SNARE) \u2014 Face structural barriers to participating in bias correction standards: limited computational infrastructure for Bayesian hierarchical models, no access to large training datasets for machine learning corrections, insufficient staff for detailed systematic uncertainty characterization. Correction protocols developed by well-resourced institutions become de facto entrance requirements. Groups cannot exit without abandoning exoplanet research entirely."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Mid-Tier National Survey Programs",
+      "comment": "PERSPECTIVE 3: MID-TIER NATIONAL SURVEY (TANGLED ROPE) \u2014 Constrained by the need to maintain catalog compatibility with international standards, but also benefits from access to correction methodologies and collaborative validation networks. Genuine coordination function exists (shared calibration, cross-survey validation), but asymmetric extraction occurs: major institutions control correction standard definition, determining which detection thresholds mid-tier programs must adopt."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Major Survey Institutions",
+      "comment": "PERSPECTIVE 4: MAJOR SURVEY INSTITUTIONS (ROPE) \u2014 Institutional beneficiaries with full arbitrage capacity. Control detection thresholds, define bias correction standards, and benefit from first-mover advantage in catalog releases. Experience the constraint as coordination: establishing systematic correction protocols enables follow-on science and international collaboration. Net benefit flows toward these institutions through citation priority and mission justification."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Open Exoplanet Initiative Advocates",
+      "comment": "PERSPECTIVE 5: OPEN EXOPLANET INITIATIVE (SCAFFOLD) \u2014 Organized coalition (arXiv preprints of corrected catalogs, open-source bias correction software, transparent parameter documentation) building alternative verification pathways independent of institutional gatekeeping. Low effective extraction because the coalition has agency and sees a sunset: open-source machine learning libraries, standardized Bayesian correction pipelines, and decentralized validation networks are making proprietary correction standards less valuable. Estimated sunset: 8-15 years as tooling matures."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Photometric Correction Protocols",
+      "comment": "PERSPECTIVE 6: LEGACY PHOTOMETRIC PROTOCOLS (PITON) \u2014 Earlier-generation bias correction methods (fixed polynomial systematics, magnitude-dependent calibration) persist through institutional inertia despite known limitations. Newer techniques (Gaussian process systematics, hierarchical Bayesian models) handle complex detector behavior better, but legacy protocols remain in use because computational barriers and cultural inertia slow adoption. The ritual of 'bias correction' is maintained performatively through published uncertainty budgets that don't reflect actual systematic residuals."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal analytical perspective, observation bias in exoplanet detection is an immutable consequence of instrumental physics: photon counting has intrinsic Poisson noise, detector response functions are device-specific, and atmospheric turbulence introduces correlated systematics. These are structural limits to measurement precision. However, the base properties contradict the mountain classification \u2014 the suppression (0.48) and theater (0.58) suggest that much of the 'bias' is institutionally contingent, not physically immutable. The engine will flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "bias_correction_standard_convergence",
+      "question": "Will heterogeneous bias correction protocols converge on a single dominant standard, or will the field fragment into incompatible correction regimes?",
+      "resolution_mechanism": "Longitudinal tracking of correction method adoption across surveys; analysis of cross-survey catalog compatibility metrics over 10-year intervals",
+      "impact": "If convergence: extraction mechanism strengthens (single standard concentrates power). If fragmentation: extraction weakens but field reliability degrades. Current trajectory unclear.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Convergence vs. fragmentation of bias correction standards"
+    },
+    {
+      "id": "computational_barrier_persistence",
+      "question": "Are resource barriers to implementing modern bias correction (Bayesian hierarchical models, neural network systematics) temporary infrastructure gaps or structural inequalities?",
+      "resolution_mechanism": "Cost analysis of correction software deployment; tracking of adoption curves as computational tools become commoditized; comparison of correction quality across institution sizes",
+      "impact": "If temporary: suppression decreases as tools democratize. If structural: suppression persists and asymmetric extraction remains stable across decades.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Persistence of computational barriers to bias correction"
+    },
+    {
+      "id": "statistical_verification_sufficiency",
+      "question": "Do published uncertainty budgets in exoplanet catalogs actually capture residual systematic errors, or do they underestimate true systematic variance?",
+      "resolution_mechanism": "Blind validation: re-observe subsets of published exoplanet detections with independent instruments and compare statistical properties; systematic residual analysis across catalog versions",
+      "impact": "If underestimated: false summit (mountain) is confirmed \u2014 systematic bias is uncontrolled and inherent. If captured: bias correction works as designed and extraction mechanism is weaker.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether published uncertainty budgets capture true systematic error"
+    },
+    {
+      "id": "open_source_correction_effectiveness",
+      "question": "Can open-source bias correction pipelines (developed outside major survey institutions) achieve comparable accuracy to proprietary institutional methods?",
+      "resolution_mechanism": "Benchmark validation: apply open-source and institutional correction methods to identical datasets; compare false positive rates, sensitivity, and catalog contamination",
+      "impact": "If comparable: scaffold sunset is real \u2014 institutional gatekeeping loses force. If inferior: open-source solutions remain aspirational and suppression persists.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Effectiveness of open-source bias correction pipelines"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Exoplanet detection combines systematic instrumental effects with statistical inference under heterogeneous observational conditions. Major surveys (Kepler, TESS, ground-based radial velocity programs) employ different bias correction protocols \u2014 some detector-specific, some model-based, some empirical. This creates a structural tension: coordinating across surveys requires standardized bias correction, but standardization advantages well-resourced institutions that can absorb methodological switching costs. Low-resource groups face asymmetric pressure to adopt correction standards they did not design. The constraint exhibits tangled rope properties: genuine coordination function (surveys must be compatible) paired with asymmetric extraction (power concentrates in standard-setting institutions). Theater ratio has increased over 15 years as computational complexity of corrections has grown, creating a performative layer where uncertainty budgets multiply without proportionate gains in actual systematic control.",
+    "key_agents": [
+      "Major Survey Institutions (Kepler, TESS, ESA missions): Institutional beneficiaries (institutional/arbitrage) \u2014 control detection threshold definitions and bias correction standard adoption; first-mover advantage in catalog releases",
+      "Low-Resource Research Groups: Primary victims (powerless/trapped) \u2014 lack computational infrastructure and training datasets for modern corrections; face exclusion pressure from international catalogs",
+      "Field Statistical Reliability: Abstract victim (powerless/trapped) \u2014 bears cost of accumulated methodological drift; cannot organize or exit",
+      "Mid-Tier National Survey Programs: Moderate victims (moderate/constrained) \u2014 gain access to correction methodologies but constrained by need to maintain standard compatibility",
+      "Open Exoplanet Initiative Advocates: Organized agents (organized/mobile) \u2014 building open-source correction pipelines and decentralized validation; see sunset pathway",
+      "Analytical Observer: Civilizational context (analytical/analytical) \u2014 risks naturalizing institutional gatekeeping as inherent measurement physics"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The original research group (major survey institutions) captures career and funding benefits through priority access to detection data and authority over standard definitions. The extraction is less severe than a pure snare because the correction protocols do serve a genuine coordination function \u2014 surveys genuinely must be compatible. Theater ratio (0.58): Moderate-high. Bias correction in exoplanet detection has grown increasingly performative: published uncertainty budgets reflect institutional methodology rather than validated systematic residuals. As detector complexity (CCDs, fiber positioning errors, atmospheric effects) has escalated faster than correction sophistication, the theater of presenting numerical error budgets has decoupled from actual systematic control. Suppression (0.48): Moderate. Significant barriers exist to independent verification: access to training datasets, computational infrastructure for Bayesian methods, and publication bias against negative results (non-detections). However, suppression is not total \u2014 some validation occurs through cross-survey overlap regions and blind re-observations. Open-source tools are reducing some barriers.",
+    "directionality_logic": "Each perspective's directionality flows from the agent's structural position relative to extraction and coordination. Major survey institutions (institutional/arbitrage) benefit from standard-setting authority \u2014 they derive low d values from their beneficiary status and arbitrage exit capacity, experiencing negative effective extraction (net benefit). Low-resource groups (powerless/trapped) face high d values from victim status and lack of exit options, experiencing maximum extraction. Mid-tier programs (moderate/constrained) occupy intermediate positions \u2014 they benefit from access to correction methodologies but constrained by standard compatibility requirements. The open science coalition (organized/mobile) derives moderate d because they have clear exit pathways through open-source alternatives. The false summit at the analytical level suggests that 'immutable measurement physics' framing masks contingent institutional arrangements (control over standard definition, resource concentration, training dataset access).",
+    "perspectival_gap": "This constraint demonstrates how indexical classification reveals institutional power asymmetries hidden by technical language. Major institutions experience rope (coordination), low-resource groups experience snare (extraction), and the field's statistical integrity experiences snare with no voice. The organized coalition sees a scaffold with a sunset \u2014 open-source tools are building exits. The analytical observer risks seeing a mountain (measurement physics), but the theater and suppression metrics reveal institutional contingency. The perspectival gap is: who defines what counts as 'bias' and what counts as 'correction'? Institutions with large training datasets and computational resources define the standard. Institutions without those resources are told their measurements are 'biased' until they adopt the standard. This is not a matter of physics \u2014 it is a matter of institutional power.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that the six types emerge from different structural positions in a genuine hybrid system. The major institution's rope experience is real (they do coordinate). The low-resource group's snare experience is real (they have no exit). The scaffold is a real structural feature (open-source alternatives exist and are maturing). The piton is a real observation (legacy protocols persist through inertia). The false summit at the analytical level diagnoses the risk: naturalizing institutional gatekeeping as inevitable measurement physics. The tangled rope classification at the moderate/constrained level captures the hybrid: coordination benefit paired with asymmetric extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "detection_threshold_multiplicity",
+      "instrument_calibration_coupling",
+      "exoplanet_population_statistical_bias"
+    ],
+    "dual_formulation_note": "Exoplanet observation bias correction is downstream of specific instrumental systematics but represents a distinct structural constraint at the meta-analysis level. Upstream constraints have their own extractiveness values reflecting specific bias sources; this constraint has extractiveness reflecting institutional gatekeeping over bias correction standards."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ]
+}

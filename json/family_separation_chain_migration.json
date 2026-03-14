@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "family_separation_chain_migration",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fsm"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.61,
+    "claimed_type": "snare",
+    "human_readable": "Family Separation Chain Migration Constraint",
+    "topic_domain": "immigration/migration_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "enforcement_bureaucracy",
+      "detention_operators",
+      "nativist_political_movements"
+    ],
+    "victims": [
+      "separated_children",
+      "detained_migrants",
+      "family_reunification_seekers"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Separated Child",
+      "comment": "PERSPECTIVE 1: SEPARATED CHILD (SNARE) \u2014 Powerless agent with no exit. Physical confinement, legal prohibitions on family contact, dependence on state care, and complete absence of alternatives. Maximally trapped. The extraction is existential: childhood, family bonds, psychological development, identity formation. Suppression is total \u2014 no mechanism exists for the child to contest or escape the separation."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Migrant in Detention",
+      "comment": "PERSPECTIVE 2: MIGRANT IN DETENTION (SNARE) \u2014 Physically confined, legally prohibited from exit, economically dependent on state provision, geographically isolated. The constraint extracts labor (work details), time (waiting cycles), hope (family separation threat), and dignity. Suppression is structural: detention itself is the suppression mechanism. Exit exists only through compliance with deportation or through judicial intervention that rarely succeeds."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Family Reunification Seeker",
+      "comment": "PERSPECTIVE 3: FAMILY REUNIFICATION SEEKER (TANGLED ROPE) \u2014 Can theoretically exit through legal immigration pathways, but faces immense costs: years of processing, legal fees, income loss during separation, documentation barriers, and the threat that seeking family unity through legal channels triggers deportation investigation. The constraint coordinates family reunification (legitimate state function) while extracting through bureaucratic processing delays and documentation requirements. Both genuine coordination (we do process family petitions) and asymmetric extraction (the process is deliberately slow and costly)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Border Enforcement Agency",
+      "comment": "PERSPECTIVE 4: BORDER ENFORCEMENT AGENCY (ROPE) \u2014 Experiences the constraint as coordination of immigration control. The family separation mechanism coordinates deterrence (potential migrants see the cost) and enforcement (removes 'anchoring' family members from the pool). The agency has arbitrage capacity: it can vary enforcement intensity, processing times, and family separation protocols based on political winds. Net beneficiary of the constraint \u2014 resources, authority, and legitimacy flow to this agent."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Immigration Court System",
+      "comment": "PERSPECTIVE 5: IMMIGRATION COURT SYSTEM (PITON) \u2014 Maintains performative legitimacy while actual functional judicial review of family separation cases is severely degraded. Court appearances are scheduled theater with minimal real deliberation; case backlogs exceed five years; judges acknowledge the system is broken while perpetuating its procedures. The constraint persists through institutional inertia \u2014 the court system maintains separation authority despite acknowledging it should not use it. Theater ratio is high because the judicial form (due process appearance) masks the extraction content (systematic separation)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Humanitarian Coalition",
+      "comment": "PERSPECTIVE 6: HUMANITARIAN COALITION (SCAFFOLD) \u2014 Organized agents (nonprofits, legal aid, advocacy groups) see the constraint as a temporary policy arrangement with a sunset: family reunification executive orders, legislative changes to immigration law, and international pressure are gradually building alternative pathways. The coalition has agency through litigation, political advocacy, and direct services. Exit path is visible but constrained by political opposition. Theater is moderate because legal challenges have produced some actual policy shifts, indicating the mechanism is not purely performative."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, all nation-states inherently separate families at borders; enforcement of territorial sovereignty requires some family separation; the constraint is an inescapable feature of statecraft. However, the structural data contradicts this naturalization: family separation is not an inherent feature of immigration enforcement. Many states maintain family unity while enforcing borders. The engine will flag this as a false summit \u2014 naturalizing a contingent policy choice as immutable law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "deterrence_vs_extraction_intent",
+      "question": "Is family separation primarily a deterrence mechanism (legitimate enforcement tool) or primarily an extraction mechanism (punishment of migration)?",
+      "resolution_mechanism": "Policy document analysis; correlation between stated enforcement priorities and actual separation rates; comparison of separation rates across administrations with different stated deterrence vs extraction intent",
+      "impact": "If primarily deterrence: classification shifts toward tangled_rope (coordination + extraction). If primarily extraction: classification confirmed as snare. Intent ambiguity is precisely what allows the constraint to persist \u2014 both framings are partially defensible.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether family separation is deterrent policy or punitive extraction"
+    },
+    {
+      "id": "suppression_internalization_trajectory",
+      "question": "Do separated families internalize the suppression (believe family reunification is impossible, abandon legal pathways) or maintain resistance (continue seeking reunification, build political pressure)?",
+      "resolution_mechanism": "Longitudinal tracking of separated families post-reunification: employment outcomes, political participation, documented mental health recovery vs persistence; migration intention surveys of families with separated members",
+      "impact": "If internalized: suppression value is understated (effective suppression exceeds structural measure because it persists after release). If resisted: suppression is structural only, not cognitive, and could be dismantled by policy change. Distinguishes structural snare from cognitively captured snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether separated families internalize suppression or maintain resistance"
+    },
+    {
+      "id": "alternative_enforcement_sufficiency",
+      "question": "Can immigration enforcement achieve equivalent deterrence and control without family separation (e.g., through expedited deportation, electronic monitoring, documentation requirements alone)?",
+      "resolution_mechanism": "Comparative policy analysis: deterrence rates and enforcement outcomes in jurisdictions without family separation vs those with; experimental variation in enforcement methods; cost-benefit analysis of separation vs alternatives",
+      "impact": "If alternatives are sufficient: family separation is pure extraction (snare confirmed), not necessity. If alternatives are insufficient: classification shifts toward tangled_rope (deterrence coordination with extraction overhead). This omega directly tests whether the constraint is defensible.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether alternative enforcement methods achieve equivalent outcomes without separation"
+    },
+    {
+      "id": "identity_locked_caregiver_role",
+      "question": "Are separated parents identity-locked to the caregiver role such that family reunification would require identity transformation, not just policy change?",
+      "resolution_mechanism": "Qualitative analysis of separated parent narratives; assessment of whether parents who achieve reunification report identity reformation as a requirement; comparison of reunification success rates between parents who maintain caregiver identity vs those who transform identity",
+      "impact": "If identity-locked: exit_options should shift from 'trapped' to 'identity_locked' for some agents, changing biographical time classification from mountain to rope. This reveals whether the constraint's power is structural (physical separation) or cognitive (identity fusion). High prevalence of identity locking would indicate the constraint is partially self-sustaining through psychological capture.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether separated parents are identity-locked to caregiver role"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.61
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Family separation in chain migration enforcement creates a structural trap where migration-seeking families are deliberately separated at border enforcement points to deter continued migration attempts and to fracture social networks that facilitate chain migration. The constraint operates through three mechanisms: (1) physical separation (detention facilities for children, deportation of parents), (2) bureaucratic obscuration (family tracking systems that lose data, processing delays that extend separation indefinitely), and (3) psychological conditioning (the threat of separation is used to deter migration attempts and to extract compliance with deportation). The separation persists because it concentrates extraction on the most vulnerable agents (children, separated parents) while diffusing responsibility across multiple institutions (ICE, detention operators, immigration courts). The constraint exhibits both snare properties (high suppression, high extraction, minimal coordination) and tangled rope properties (some legitimate deterrence function exists alongside systematic extraction). The theater ratio reflects that immigration courts maintain performative due process while actual case review is severely degraded by backlog and expedited proceedings.",
+    "key_agents": [
+      "Separated Children: Primary victims (powerless/trapped) \u2014 no exit, no agency, maximum extraction (childhood, family bonds, development)",
+      "Detained Migrants: Primary victims (powerless/trapped) \u2014 physically confined, legally prohibited exit, extracted labor and hope",
+      "Family Reunification Seekers: Secondary victims (moderate/constrained) \u2014 face high costs and delays in legal pathways; coordinated through bureaucracy while extracted through processing",
+      "Enforcement Bureaucracy (ICE, CBP): Primary beneficiary (institutional/arbitrage) \u2014 gains authority, resources, and political legitimacy from separation mechanism; can adjust enforcement intensity based on political winds",
+      "Detention Operators: Secondary beneficiary (institutional/arbitrage) \u2014 private and public detention facilities derive revenue and capacity from separated migrant population",
+      "Nativist Political Movements: Tertiary beneficiary (organized/constrained) \u2014 leverage family separation threat as deterrence narrative and political mobilization tool; constrained by humanitarian opposition and occasional court reversals",
+      "Immigration Court System: Institutional observer (institutional/arbitrage) \u2014 maintains formal judicial legitimacy while actual case review is degraded; piton classification reflects performative function",
+      "Humanitarian Coalition: Organized opposition (organized/constrained) \u2014 legal aid, nonprofits, advocacy groups building alternative pathways; constrained by political opposition and judicial capacity limits"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts childhood, family stability, and psychological well-being from separated children and parents. The measurement trajectory (0.42 \u2192 0.58 over interval) reflects that enforcement intensity and processing delays have increased over time, raising effective extraction. However, extractiveness is not at the snare maximum (0.70+) because some separated families eventually achieve reunification through legal channels, and political opposition has produced temporary policy reversals. Suppression (0.72): High. Structural barriers are total: physical confinement for children, legal prohibitions on family contact during detention, deportation threat for parents, documentation barriers for family reunification petitions, and processing delays that extend separation for years. Suppression mechanisms operate across multiple registers (physical, legal, bureaucratic, psychological). Theater ratio (0.61): Moderate-high. Immigration court proceedings maintain the appearance of judicial review (case filing, hearings, appeals) while actual due process is degraded by case backlog, limited time per hearing, and expedited proceedings. The performative element has increased (0.48 \u2192 0.61) as political pressure has mounted, requiring the system to maintain appearance of legitimacy while perpetuating separation. The theater reflects that formal procedures are followed (theater presence) while meaningful review is absent (theater content).",
+    "perspectival_gap": "Maximum perspectival divergence appears across all dimensions. The powerless victims (separated children, detained migrants) perceive snare at biographical horizon with trapped exit \u2014 the constraint appears unchangeable within their lifespan. The moderate family reunification seekers perceive tangled rope \u2014 they see both genuine state functions (processing) and extraction (delay and cost). The institutional enforcement agency perceives rope \u2014 they see the mechanism as serving coordination functions (deterrence, enforcement). The immigration court perceives piton \u2014 the formal procedures exist but are largely performative. The humanitarian coalition perceives scaffold \u2014 they see the constraint as temporary, with viable alternative pathways emerging. The civilizational observer risks perceiving mountain \u2014 embedding the constraint in the nature of statecraft itself. The perspectival structure reveals that the constraint's legitimacy depends on this divergence: different observers can defend different readings simultaneously.",
+    "directionality_logic": "Directionality values are derived from each agent's structural position relative to the extraction flow. Separated children and detained migrants are full targets (d \u2248 0.95): powerless agents, trapped exit, victims of extraction, experience maximum f(d) \u2248 1.42. Family reunification seekers are partial targets (d \u2248 0.65): moderate power, constrained exit, mixed beneficiary/victim status (they benefit from family reunification processes but are extracted through delays and costs), experience f(d) \u2248 1.00. The enforcement bureaucracy is a beneficiary (d \u2248 0.05): institutional power, arbitrage exit, primary beneficiary status, experience f(d) \u2248 -0.12 (negative effective extraction \u2014 the constraint subsidizes this agent). Nativist political movements have mixed directionality (d \u2248 0.40): organized power, constrained exit (political opponents can reverse their policies), secondary beneficiary status through deterrence narrative, experience f(d) \u2248 0.40. Directionality overrides are unnecessary \u2014 the automatic derivation captures the structural relationships accurately.",
+    "mandatrophy_analysis": "The mandatrophy is NOT RESOLVED. The constraint exhibits both genuine coordination functions (family separation does deter migration chain, does enforce border control) and systematic extraction (extraction from the most vulnerable agents in ways that exceed what enforcement coordination requires). The classification should be tangled_rope, not snare, IF we accept that deterrence is a legitimate state function and that some extraction overhead is acceptable. However, the omega variables reveal that alternative enforcement methods may achieve equivalent deterrence without family separation, which would confirm snare classification and invalidate the tangled_rope defense. The mandatrophy resolution depends on empirically resolving whether family separation is a necessary enforcement tool or whether it is pure extraction masquerading as deterrence. Current analysis: mandatrophy_resolved: false. The snare classification is defensible (high extraction, high suppression, minimal genuine coordination), but it is not settled."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "immigration_detention_regime",
+      "asylum_processing_bottleneck",
+      "documentation_access_trap"
+    ],
+    "dual_formulation_note": "Family separation chain migration is downstream of broader immigration enforcement architecture. The upstream constraint is immigration detention regime (which creates the physical separation mechanism); the sideways constraints are asylum processing bottleneck (which creates delays that extend separation) and documentation access trap (which creates barriers to family reunification petitions). Each downstream constraint has its own extractiveness values reflecting its specific structural properties."
+  },
+  "directionality_overrides": []
+}

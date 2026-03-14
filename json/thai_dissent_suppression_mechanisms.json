@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "thai_dissent_suppression_mechanisms",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.61,
+    "claimed_type": "snare",
+    "human_readable": "Thai Dissent Suppression Mechanisms",
+    "topic_domain": "political/state_control",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "military_institutional_power",
+      "palace_protection_apparatus"
+    ],
+    "victims": [
+      "dissenting_citizens",
+      "political_opposition",
+      "civil_society_organizations",
+      "press_freedom"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Dissenting Citizen",
+      "comment": "PERSPECTIVE 1: DISSENTING CITIZEN (SNARE) \u2014 Faces criminal prosecution, imprisonment, and social ostracism for protected speech. The l\u00e8se-majest\u00e9 law (Article 112 of Criminal Code) and cybercrime provisions create severe punishment for criticism of monarchy/military. Exit options do not exist within Thailand; emigration is costly and incomplete escape from threat (family remains, assets at risk). Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Political Opposition",
+      "comment": "PERSPECTIVE 2: POLITICAL OPPOSITION (SNARE) \u2014 Constrained by arrest threats, party dissolution powers (Emergency Decree), arbitrary detention, and exclusion from electoral systems. Multiple coup d'\u00e9tats have dissolved elected governments; political leaders face imprisonment. Exit is theoretically possible (exile) but economically and socially costly. High extraction with some agency."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International Observer",
+      "comment": "PERSPECTIVE 3: INTERNATIONAL OBSERVER (SNARE) \u2014 Can exit the constraint through international relocation but faces significant career, cultural, and family costs. From outside, the mechanism is visible as pure coercion with minimal coordination function. Observer has geographic mobility that Thai citizens lack."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Military Leadership",
+      "comment": "PERSPECTIVE 4: MILITARY LEADERSHIP (ROPE) \u2014 Primary beneficiary. Experiences the suppression apparatus as a coordination mechanism for maintaining institutional cohesion and preventing political threats to organizational power. Can arbitrage exit \u2014 military leadership can dissolve or reform the constraint through policy change. Net beneficiary \u2014 extraction flows toward this institution."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Judiciary and Law Enforcement",
+      "comment": "PERSPECTIVE 5: JUDICIARY AND LAW ENFORCEMENT (TANGLED ROPE) \u2014 Constrained institutional actors who benefit from the constraint structure (resources, institutional autonomy, authority) while also bearing costs (reputational damage, international isolation, institutional capture by military/palace). They coordinate the suppression apparatus but are also extracted from through it \u2014 lack independent exit power."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Thai Civil Society",
+      "comment": "PERSPECTIVE 6: THAI CIVIL SOCIETY (SNARE) \u2014 Constrained at civilizational scale. Despite some powerful actors (NGOs, educational institutions, religious organizations), the cumulative suppression of assembly rights, association rights, and free expression creates structural extraction. Exit requires leaving the nation or accepting subordination to state authority. Mixed power but high suppression creates snare classification."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Formal Democratic Institutions",
+      "comment": "PERSPECTIVE 7: FORMAL DEMOCRATIC INSTITUTIONS (PITON) \u2014 Constitutionally mandated democratic processes (elections, parliament, judicial review) persist but are substantially performative. Multiple constitutions and elected governments have been dissolved by coup d'\u00e9tat. The institutions exist as theater maintaining the fiction of democratic order while real power concentrates in military/palace. Theater ratio elevated by the gap between constitutional provisions and actual political power distribution."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (SNARE) \u2014 From a global, civilizational view, the Thai suppression apparatus is a structurally pure extraction mechanism. The constraint has minimal coordination function (unlike a legitimate security apparatus that coordinates genuine threats and collective safety). Its primary function is maintaining power concentration. No inherent naturalization: the constraint is explicitly political, not claimed as natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "palace_versus_military_domination",
+      "question": "Is primary beneficiary the Thai monarchy (palace protection apparatus) or the military institution itself?",
+      "resolution_mechanism": "Historical analysis of coup justifications, constitutional provisions, military autonomy in policy, and succession dynamics. Track which institution makes suppression policy vs which institution benefits most.",
+      "impact": "If palace-dominant: constraint is monarchical protection mechanism (extractiveness may be slightly lower due to broader institutional buy-in for palace legitimacy). If military-dominant: constraint is institutional coup-protection mechanism (extractiveness consistent with current analysis). Classification remains snare either way, but beneficiary structure differs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether palace or military is primary beneficiary of suppression"
+    },
+    {
+      "id": "identity_lock_versus_coercion",
+      "question": "To what degree is dissent suppression internalized through nationalist/loyalist identity vs externally coerced through legal threats?",
+      "resolution_mechanism": "Survey data on self-censorship motivations; analysis of spontaneous vs coerced compliance; comparison of suppression effectiveness in pre-coup vs post-coup periods; social media sentiment analysis.",
+      "impact": "If primarily identity-locked: some perspectives might shift to identity_locked exit option, changing biographical/generational classifications from snare toward rope. If primarily coercive: snare classification is robust across time horizons.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Proportion of suppression that is internalized identity vs external coercion"
+    },
+    {
+      "id": "emergency_decree_termination_credibility",
+      "question": "Are emergency decree provisions (in place since 2014 coup) genuinely temporary scaffolding or permanent suppression mechanism misclassified as provisional?",
+      "resolution_mechanism": "Examine pattern of emergency decree renewals, stated sunset dates vs actual termination history, constitutional amendments that entrench emergency powers, and military statements about permanence vs temporality.",
+      "impact": "If genuinely temporary: significant portions of suppression apparatus could be reclassified as scaffold (\u03c7 \u2264 0.30, sunset clause). If permanent: scaffolding narrative is theater covering snare structure. Current analysis assumes permanent; evidence of credible sunset would require decomposition into multiple stories.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether emergency decree suppression measures are genuinely temporary or permanently entrenched"
+    },
+    {
+      "id": "lese_majeste_enforcement_consistency",
+      "question": "Is l\u00e8se-majest\u00e9 law (Article 112) applied consistently as legal norm or selectively as political weapon?",
+      "resolution_mechanism": "Prosecution statistics: distribution of cases across time, political affiliation of defendants, severity of alleged offense vs sentence received, cases dismissed vs convicted. Comparison of enforcement rigor before vs after political events.",
+      "impact": "If consistently applied: law operates as constitutional constraint (suppression rate ~0.60). If selectively applied: mechanism is purely extractive (suppression rate ~0.85). Current analysis assumes selective application; consistent application would lower both extractiveness and suppression values.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether l\u00e8se-majest\u00e9 prosecution is consistent legal norm or selective political weaponization"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.61
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Thailand's dissent suppression mechanisms represent a structurally pure extraction apparatus maintained through legal formalism, military power, and palace protection doctrine. The constraint combines explicit legal instruments (l\u00e8se-majest\u00e9 law Article 112, Emergency Decree powers, Cybercrime Act provisions) with institutional coercion (military autonomy, coup authority, arbitrary detention) and internalized loyalty norms (Buddhist reverence framing, national-security legitimation). Multiple coup d'\u00e9tats (1997, 2006, 2014) have dissolved elected governments and constitutions, establishing that democratic processes are subordinate to military/palace interests. The mechanism's theater ratio has increased as successive governments have enacted increasingly sophisticated legal frameworks to justify suppression while maintaining constitutional appearance. Extractiveness has accumulated as broader categories of speech and assembly have been criminalized. The suppression apparatus benefits military institutional power and palace protection apparatus while extracting from dissenting citizens, political opposition, civil society, and press freedom.",
+    "key_agents": [
+      "Dissenting Citizens: Primary victims (powerless/trapped) \u2014 face imprisonment, criminal prosecution, social ostracism, asset seizure for protected speech under l\u00e8se-majest\u00e9 law",
+      "Political Opposition: Secondary victims (moderate/constrained) \u2014 face arrest threats, party dissolution, electoral exclusion, coup-driven government dissolution",
+      "Military Leadership: Primary beneficiary (institutional/arbitrage) \u2014 maintains institutional autonomy, coup authority, budgetary independence, political veto power",
+      "Palace Protection Apparatus: Co-beneficiary (institutional/arbitrage) \u2014 enforces l\u00e8se-majest\u00e9 law, maintains monarch's legal inviolability, controls succession security",
+      "Judiciary and Law Enforcement: Mixed-position institutional actors (institutional/constrained) \u2014 coordinate suppression apparatus, depend on it for authority, captured by it",
+      "Civil Society Organizations: Collective victims (powerful/constrained) \u2014 operate under restrictions on assembly, association, and speech; risk organizational dissolution",
+      "Press Freedom: Systemic victim (moderate/trapped) \u2014 self-censorship enforced through legal liability, arrest threats, newspaper closures, online speech prosecution"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and increasing. The constraint systematically extracts political autonomy and speech rights from Thai citizens and opposition groups to concentrate power in military/palace institutions. Base extraction has increased from 0.42 (2004-2006 period) to 0.68 (post-2014 coup) as legal frameworks have broadened and enforcement has intensified. The measurement trajectory shows accumulating extraction through successive coup cycles \u2014 each transition creates new legal justifications for suppression. Suppression (0.78): Very high. Multiple barriers prevent exit: geographical (Thailand is geographically bounded; emigration is costly), legal (criminal penalties for speech and association), social (family and community ties), and economic (asset seizure, employment discrimination). Suppression combines structural barriers (law enforcement apparatus, court system) and internalized loyalty mechanisms (nationalist identity, Buddhist reverence framing). Theater ratio (0.61): Moderate-high and increasing. The constraint maintains constitutional form (parliamentary system, judicial review, electoral processes) while these institutions remain subordinate to coup-capable military. The gap between constitutional promise and actual power distribution creates significant performative content. Increasing theater reflects successive constitutions that attempt to legitimize what is structurally contingent on military acquiescence.",
+    "perspectival_gap": "This constraint demonstrates how pure extraction structures appear as rope to beneficiaries but snare to victims. Military leadership perceive the mechanism as solving a genuine coordination problem (preventing political instability, maintaining institutional cohesion). Dissenting citizens perceive it as pure coercion with no coordination benefit. The perspectival gap reveals that coordination-language benefits the beneficiary even when the constraint's primary function is extraction. The piton perspective is diagnostically important: formal democratic institutions persist (constitutions, elections, courts) despite coup authority, suggesting that democratic form serves as theater legitimizing the suppression apparatus. This is not unique to Thailand \u2014 the mechanism appears in many post-coup regimes that maintain constitutional facade while military retains veto power.",
+    "directionality_logic": "Each perspective's directionality flows from beneficiary/victim status and exit options. Dissenting citizens are victims with no exit (trapped) \u2014 d approaches 1.0 (full target). Military leadership are beneficiaries with arbitrage exit (can dissolve constraint through policy change) \u2014 d approaches 0.0 (full beneficiary). Opposition groups are victims with constrained exit (can partially escape through exile, but at high cost) \u2014 d intermediate (0.75-0.85). International observers are outside the primary extraction flow but witness the mechanism (analytical perspective at d~0.72). The judiciary are constrained institutional actors simultaneously benefiting from (institutional authority, resources) and subordinated by (legal capture, reputational damage) the apparatus \u2014 intermediate d value (0.45-0.55). The consistent pattern: those with exit power or arbitrage options show low d (beneficiaries); those with constrained or trapped exit show high d (victims). No perspective shows near-zero d (full beneficiary protection), indicating the constraint has minimal net coordination function.",
+    "mandatrophy_analysis": "RESOLVED: The constraint's classification as snare is robust across victim perspectives and unambiguous in the analytical view. No mandatrophy exists because the claimed type matches all non-beneficiary perspectives. The constraint does not risk mislabeling coordination as extraction (or vice versa) \u2014 the extraction is explicit and acknowledged. The theater ratio (0.61) reflects the gap between constitutional democracy and actual military power concentration, but this does not change the snare classification because the victims correctly perceive snare even while formal institutions maintain democratic theater. The mandatrophy would arise only if beneficiaries falsely claimed rope classification while victims perceived snare \u2014 here, beneficiaries' rope claim is accurate to their perspective, and victims' snare claim is accurate to theirs. The perspectival gap is properly classified."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "thai_electoral_system_subordination",
+      "thai_royal_insult_legal_instrument",
+      "thai_military_institutional_autonomy"
+    ],
+    "dual_formulation_note": "Thai dissent suppression decomposes into three structurally distinct constraints: (1) l\u00e8se-majest\u00e9 law enforcement (\u03b5~0.72, snare), (2) military coup authority and electoral system subordination (\u03b5~0.65, snare), (3) emergency decree and arrest powers (\u03b5~0.60, snare \u2192 scaffold if genuinely temporary). Current story integrates all three; decomposition into separate constraint family is recommended if omega_emergency_decree resolution yields temporality evidence."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.48
+    }
+  ]
+}

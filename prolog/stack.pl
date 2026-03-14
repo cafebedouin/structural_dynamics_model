@@ -44,6 +44,7 @@
 
 % 4. Load Diagnostic & UI
 :- use_module(bifurcation_export, []).
+:- use_module(persistence_export, []).
 :- use_module(constraint_bridge, []).
 :- use_module(uke_dr_bridge, []).
 :- use_module(report_generator, []).

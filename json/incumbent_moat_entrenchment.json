@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "incumbent_moat_entrenchment",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "moat"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Incumbent Moat Entrenchment",
+    "topic_domain": "economic_structure/competition_dynamics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_firm"
+    ],
+    "victims": [
+      "potential_entrants",
+      "consumer_welfare"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Potential Entrant",
+      "comment": "PERSPECTIVE 1: POTENTIAL ENTRANT (SNARE) \u2014 New firms face insurmountable barriers: incumbent's brand loyalty, switching costs, network effects, exclusive supplier contracts, regulatory capture, and capital requirements. The entrant cannot exit \u2014 entering the market IS the goal, but the moat makes entry prohibitively costly or impossible. Maximum extraction experienced: all upfront investment bears no return."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Niche Competitor",
+      "comment": "PERSPECTIVE 2: NICHE COMPETITOR (TANGLED ROPE) \u2014 Mid-market or specialized entrant can survive by serving underserved segments, but faces extraction: incumbent threatens to drop price, replicate features, or use predatory tactics against niche segments. Coordination function exists (both firms benefit from market maturation, innovation ecosystems), but extraction is embedded: the niche competitor must constantly innovate to avoid head-to-head competition where the moat is impenetrable."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Firm",
+      "comment": "PERSPECTIVE 3: INCUMBENT FIRM (ROPE) \u2014 Experiences the moat as coordination: it enables long-term investment in brand, infrastructure, and ecosystem partnerships. The moat coordinates intertemporal incentives (firms can invest in quality knowing they won't be immediately undercut). The incumbent benefits from the structure but also sees itself as solving a market problem: without moats, firms would under-invest in quality or customer service."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Downstream Ecosystem",
+      "comment": "PERSPECTIVE 4: DOWNSTREAM ECOSYSTEM (TANGLED ROPE) \u2014 Suppliers, complementors, and customers organize around the incumbent. Genuine coordination function: the ecosystem benefits from the incumbent's stability and platform investment. Extraction embedded: the incumbent extracts rents from suppliers through bargaining power, from complementors through platform control, and from consumers through reduced competition. Organized agents (trade associations, supplier networks) push back, creating hybrid dynamics."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Intervention",
+      "comment": "PERSPECTIVE 5: REGULATORY INTERVENTION (SCAFFOLD) \u2014 Antitrust enforcement, open-access mandates, or interoperability requirements temporarily reduce the moat's effectiveness. These interventions are scaffolds with sunset clauses (often 5-10 years): patents expire, standards mature, new technologies disrupt the moat. The scaffold perspective sees moat entrenchment as a temporary problem solvable through time-limited enforcement. High suppression is tolerated because the intervention is designed to fade once structural conditions change."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Competitive Advantage",
+      "comment": "PERSPECTIVE 6: LEGACY COMPETITIVE ADVANTAGE (PITON) \u2014 Entrenchment mechanisms that once provided genuine competitive advantage (proprietary technology, brand trust, supply chain integration) become vestigial as industries mature or technology shifts. The moat persists through institutional inertia, marketing theater, and lock-in from installed base \u2014 but the functional advantage has degraded. A legacy moat in a disrupted industry is piton: maintained through theater and habit, not function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational analytical view, moat entrenchment is a genuine hybrid: it serves legitimate coordination functions (incentivizing quality investment, enabling ecosystem stability) while simultaneously extracting rents through reduced competition. Neither pure extraction nor pure coordination \u2014 the structure is intrinsically tangled. The analytical perspective identifies mandatrophy: the tension between moat-as-coordination and moat-as-extraction is the actual structure of capitalist competition."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "moat_legitimacy_threshold",
+      "question": "At what point does a competitive advantage cease being legitimate (rewards quality/efficiency) and become illegitimate (pure rent extraction)?",
+      "resolution_mechanism": "Empirical test: pricing relative to marginal cost; rate of innovation; consumer surplus loss; historical counterfactual (what would prices/innovation be in competitive market?)",
+      "impact": "If threshold is near moat formation: most entrenchment is illegitimate extraction (classification shifts toward Snare). If threshold is far: most entrenchment provides genuine coordination benefit (classification shifts toward Rope).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Threshold for distinguishing legitimate advantage from pure rent extraction"
+    },
+    {
+      "id": "technological_disruption_inevitability",
+      "question": "Is the moat's sunset guaranteed by technological change, or can entrenched incumbents adapt to maintain moats across generations?",
+      "resolution_mechanism": "Historical case studies: telecommunications (Bell System \u2192 post-divestiture \u2192 mobile), retail (Sears \u2192 Walmart \u2192 Amazon), search (AltaVista \u2192 Google \u2192 ?). Measure moat persistence across major technological transitions.",
+      "impact": "If disruption is inevitable: moat entrenchment is temporary (Scaffold from most perspectives). If incumbents can maintain moats across transitions: entrenchment is structural (Snare or Tangled Rope persist).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether technological change guarantees moat disruption"
+    },
+    {
+      "id": "regulation_capture_feedback",
+      "question": "Does regulatory intervention to reduce moats strengthen or weaken the incumbent's incentive to capture the regulator?",
+      "resolution_mechanism": "Historical analysis of post-intervention incumbent behavior; measurement of regulatory capture intensity after antitrust enforcement; correlation between enforcement stringency and lobbying intensity",
+      "impact": "If enforcement strengthens capture incentives: intervention creates meta-extraction (the moat shifts from economic to regulatory). If enforcement weakens capture: scaffold perspective is validated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulation strengthens incumbent's capture incentives"
+    },
+    {
+      "id": "multi_sided_platform_moat_ambiguity",
+      "question": "In multi-sided platforms (network effects on both sides), is the moat a genuine coordination mechanism for both sides or extraction by the platform from one side or both?",
+      "resolution_mechanism": "Price elasticity analysis by side; comparison of pricing to marginal cost by side; measurement of cross-subsidies; counterfactual analysis of what would happen without network effects",
+      "impact": "If network effects genuinely benefit both sides: moat provides Rope-level coordination (both sides better off than without network). If one side bears the extraction: Tangled Rope or Snare depending on that side's power and exit options.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether multi-sided platform moats coordinate or extract"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Incumbent moat entrenchment represents a fundamental tension in market capitalism: the same mechanisms that incentivize long-term investment and quality provision also enable rent extraction through reduced competition. A moat is a structural advantage that makes it costly or impossible for competitors to enter or gain market share. These can be economic (brand loyalty, switching costs, network effects, scale advantages, proprietary technology), regulatory (licenses, patents, exclusive contracts), or institutional (supplier relationships, ecosystem lock-in). The constraint is tangled because all durable moats serve both a coordination function (they enable firms to invest in quality, infrastructure, and long-term relationships) and an extraction function (they allow incumbent to charge prices above competitive levels and prevent better alternatives from entering). Extractiveness has increased over the measurement interval as digital platforms have enabled network effects and data advantages to create nearly impenetrable moats. Theater ratio remains moderate because moat entrenchment is structurally evident (entry barriers are visible), though firms engage in substantial narrative work ('innovation advantage,' 'customer preference') to legitimize what are often regulatory or network-effect barriers.",
+    "key_agents": [
+      "Incumbent Firm: Primary beneficiary (institutional/arbitrage) \u2014 captures monopoly rents, long-term investment security, and ecosystem control",
+      "Potential Entrants: Primary victims (powerless/trapped) \u2014 face insurmountable barriers; entry is blocked or prohibitively costly",
+      "Niche Competitors: Secondary victims (moderate/constrained) \u2014 can survive in underserved segments but face constant extraction pressure and threat of predatory incumbent response",
+      "Downstream Ecosystem: Organized agents (organized/constrained) \u2014 suppliers, complementors, and customers benefit from ecosystem stability but experience extraction through bargaining power asymmetries",
+      "Consumers: Implicit victims (powerless/trapped in some markets) \u2014 reduced choice, higher prices, slower innovation than competitive counterfactual",
+      "Regulatory Authorities: Organized interveners (organized/constrained) \u2014 attempt to enforce competition through antitrust, interoperability requirements, and license conditions with sunset logic",
+      "Analytical Observer: Meta-perspective (analytical/analytical) \u2014 sees the tangled structure: moats are simultaneously legitimate (incentive alignment) and illegitimate (rent extraction)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. Incumbent captures monopoly rents and prevents entry, but the extraction is not total \u2014 potential entrants retain the option to enter at high cost (they are constrained, not trapped in the ultimate sense), and ecosystem partners benefit from some coordination. The value reflects the hybrid nature: genuine competitive advantage provides value, but incumbent extracts significantly more than would be possible in a competitive market. Suppression (0.62): High. Barriers to entry include capital requirements, switching costs, network effects, regulatory licensing, exclusive contracts, and customer lock-in. These are substantial but not absolute \u2014 the suppression is engineered, not immutable. Theater ratio (0.48): Moderate. Moat entrenchment is structurally visible (entry barriers are manifest), but firms conduct substantial narrative work presenting moats as innovations or customer preferences rather than regulatory/network barriers. Measurement trajectory shows entrenchment increasing over time as digital platforms amplify network effects and data advantages.",
+    "perspectival_gap": "The potential entrant sees a Snare \u2014 they face an impossible choice between not entering and entering at prohibitive cost with minimal return. The niche competitor sees Tangled Rope \u2014 they can survive by specializing but must innovate constantly to avoid head-to-head competition where the moat is impenetrable. The incumbent sees Rope \u2014 moats enable investment and ecosystem coordination. The organized ecosystem sees Tangled Rope \u2014 they benefit from platform stability but experience extraction through bargaining power. Regulatory intervention sees a Scaffold \u2014 antitrust and interoperability requirements are temporary fixes designed to fade as technology evolves. Legacy moats see a Piton \u2014 formerly functional advantages (proprietary tech, trusted brand) persist through inertia and marketing theater as the underlying functional advantage erodes. The analytical perspective identifies the true structure: Tangled Rope. Mandatrophy resolution: the tension between moat-as-coordination and moat-as-extraction IS the structure. Neither pure type is correct \u2014 the presheaf over different agent perspectives reveals that moat entrenchment intrinsically contains both functions.",
+    "directionality_logic": "Directionality derives from structural position relative to extraction flow. The incumbent (institutional/arbitrage) experiences low d because they are the beneficiary with exit options (they can exit by selling, diversifying, or adapting). Potential entrants (powerless/trapped) experience high d because they are victims with no exit (entry is the goal, but the moat blocks it). Niche competitors (moderate/constrained) experience moderate d \u2014 they are victims but have partial exit (specialize further, serve different geography, accept lower margins). The ecosystem (organized/constrained) experiences moderate d \u2014 they benefit from coordination but experience extraction through bargaining power asymmetries. Regulatory intervention (organized/constrained) experiences moderate d from the incumbent's perspective (enforcement constrains the incumbent but doesn't eliminate the moat). The analytical observer (analytical/analytical) experiences moderate d because they see both costs and benefits.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: This constraint resolves mandatrophy by identifying the genuine hybrid structure. The incumbent's perspective (Rope) is not wrong \u2014 moats do enable quality investment and ecosystem coordination. The potential entrant's perspective (Snare) is not wrong \u2014 entry is structurally blocked. The scaffold perspective is not wrong \u2014 regulation can temporarily reduce moat effectiveness. The piton perspective is not wrong \u2014 legacy moats often persist through theater after functional advantage erodes. All are correct from their structural positions. The constraint is NOT 'which type is really correct?' but 'what structure generates these different perspectives?' Answer: Tangled Rope. The moat serves legitimate coordination (intertemporal incentives, ecosystem stability) while enabling extraction (monopoly rents, blocked entry). The analytical perspective should classify as Tangled Rope, not attempt to collapse into a single type. The mandatrophy is resolved by recognizing that the tension between coordination and extraction is the actual constraint structure, not a problem to be solved by choosing one side."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "network_effects_lock_in",
+      "switching_cost_accumulation",
+      "regulatory_capture_dynamics"
+    ],
+    "dual_formulation_note": "Incumbent moat entrenchment is upstream of several specific manifestations: network effects (digital platforms), switching cost dynamics (customer lock-in), and regulatory capture (barriers defended through regulation rather than economics). Each downstream constraint has its own \u03b5 value reflecting the specific mechanism; the parent constraint represents the general structural phenomenon. Decomposition: moat entrenchment (this story, \u03b5=0.58) \u2192 network_effects_lock_in (\u03b5=0.68, Snare for non-platforms) \u2192 switching_cost_accumulation (\u03b5=0.52, Tangled Rope for mature markets)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.58
+    }
+  ]
+}

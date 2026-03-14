@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "labor_market_skill_arbitrage",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lmsa"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Labor Market Skill Arbitrage",
+    "topic_domain": "economic/labor",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "credentialing_institutions",
+      "employer_gatekeepers",
+      "information_asymmetry_exploiters"
+    ],
+    "victims": [
+      "skill_abundant_workers",
+      "credential_constrained_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Credential-Constrained Worker",
+      "comment": "PERSPECTIVE 1: CREDENTIAL-CONSTRAINED WORKER (SNARE) \u2014 Trapped by institutional requirements for formal credentials despite possessing requisite skills. No exit option: skills alone are insufficient; credentials are legally or de facto required. Bears maximum extraction through wage suppression, employment discrimination, and forced credential accumulation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Self-Taught Skilled Worker",
+      "comment": "PERSPECTIVE 2: SELF-TAUGHT SKILLED WORKER (TANGLED ROPE) \u2014 Possesses demonstrable skills but faces high barriers to credential attainment (time, cost, opportunity cost). Experiences mixed benefits (access to opportunities through skill development) and costs (credential tax, employment discrimination for non-credentialed roles). Constrained exit: can develop skills informally but credential bypass remains partial."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Professional Association",
+      "comment": "PERSPECTIVE 3: PROFESSIONAL ASSOCIATION (ROPE) \u2014 Organized credentialing bodies experience the constraint as pure coordination: establishing professional standards, maintaining quality signals, and enabling labor market matching. Genuinely serves coordination function (employers need reliable signals; workers benefit from quality thresholds). Mobile exit: associations can evolve standards without collapsing."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Credentialing Institution",
+      "comment": "PERSPECTIVE 4: CREDENTIALING INSTITUTION (TANGLED ROPE) \u2014 Benefits from credential scarcity (tuition revenue, prestige, enrollment stability). Coordination function exists (delivers genuine skill development) but coexists with extraction (maintains credential premium through supply restriction). Active enforcement: accreditation gatekeeping, curriculum control, degree exclusivity. Arbitrage exit: can adjust standards but benefits from existing scarcity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Employer Gatekeeper",
+      "comment": "PERSPECTIVE 5: EMPLOYER GATEKEEPER (TANGLED ROPE) \u2014 Uses credentials as a signal of reliability and quality even when skills alone would suffice (coordination benefit: reduces hiring risk). But enforcement of credential requirements beyond skill thresholds extracts value through wage depression and labor market screening costs. Constrained exit: cannot unilaterally drop credential requirements without competitive disadvantage (signaling collapse)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Skills-Based Hiring Coalition",
+      "comment": "PERSPECTIVE 6: SKILLS-BASED HIRING COALITION (SCAFFOLD) \u2014 Tech companies, forward-thinking employers, and competency assessment platforms are building alternative verification mechanisms (skills tests, portfolio reviews, work samples, apprenticeships). These create sunset logic: as skills-based hiring matures, the credential premium declines. Low extraction experienced by this coalition because they have agency and visible exit pathway through alternative verification."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Legacy Degree",
+      "comment": "PERSPECTIVE 7: LEGACY DEGREE (PITON) \u2014 Four-year degree requirements persist in many sectors (finance, law, management) despite degraded functional requirement: job tasks could be performed with 18-month certification or apprenticeship. Theater ratio high (0.65): hiring processes maintain degree filters as ritual quality control even when actual job performance shows weak correlation with degree attainment. Maintained through institutional inertia and coordinated signaling equilibrium."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Information Asymmetry View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / INFORMATION ASYMMETRY VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some credential premium is inherent to labor markets: employers cannot perfectly observe worker productivity before hiring, so signals are necessary. Information asymmetry is an immutable structural feature of the employment relationship. However, the base extractiveness (0.52) contradicts the mountain classification\u2014revealing that much of the 'necessary' credential premium is institutional rather than inherent."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "credential_skill_correlation_magnitude",
+      "question": "What proportion of wage differences between credentialed and non-credentialed workers reflects true skill differences versus institutional credential premium (rent)?",
+      "resolution_mechanism": "Longitudinal studies comparing job performance of credentialed vs. skills-verified non-credentialed workers; within-job wage analysis controlling for actual task performance; sector-specific studies (tech, skilled trades, healthcare)",
+      "impact": "High correlation (> 0.7): credential requirement is primarily coordination function, snare classification overstated. Low correlation (< 0.4): credential requirement is primarily extraction mechanism, snare and tangled rope classifications confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude of credential premium attributable to pure skill signaling vs. institutional gatekeeping"
+    },
+    {
+      "id": "alternative_verification_effectiveness",
+      "question": "Do skills-based hiring mechanisms (work samples, portfolio reviews, apprenticeships, competency assessments) successfully replace credential signals without quality degradation?",
+      "resolution_mechanism": "Comparison of hiring quality metrics (retention, performance, promotion) between credential-filtered and skills-filtered hires; long-term employment outcomes; error rate differential",
+      "impact": "If effective: scaffold sunset is real, extraction mechanism will decline. If ineffective: skills-based hiring remains marginal, credential requirement persists, snare classification remains primary.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether skills-based hiring provides equivalent quality signal to credentials"
+    },
+    {
+      "id": "credential_atrophy_in_fields",
+      "question": "In fields where credential requirements have been relaxed or eliminated (e.g., tech, skilled trades), does labor quality decline, remain stable, or improve?",
+      "resolution_mechanism": "Sector-level analysis of fields that dropped degree requirements; comparison of work quality metrics before/after; wage trajectories and mobility",
+      "impact": "Quality decline or wages crash: credential requirement was functional, mountain perspective gains strength. Quality stability or improvement: credential requirement was primarily extractive, snare/tangled rope confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Quality and wage effects of credential requirement relaxation"
+    },
+    {
+      "id": "suppression_structural_vs_internalized",
+      "question": "Is the measured suppression (0.65) primarily structural (legal requirements, hiring system barriers) or internalized (workers believe credentials are necessary even when gatekeeping does not)?",
+      "resolution_mechanism": "Post-exit trajectory analysis: when workers acquire alternative credentials or switch to skills-based employers, does suppression persist? Survey analysis of worker beliefs about credential necessity vs. actual gating outcomes",
+      "impact": "If structural: suppression declines post-exit. If internalized: suppression persists in belief even after barrier removal\u2014constraint is psychologically self-enforcing. Informs whether escape from credential system genuinely liberates or requires identity reframing.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in credential gatekeeping"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Labor market skill arbitrage is the structural extraction mechanism by which credentialing institutions and employer gatekeepers capture rents through the control of formal credentials, despite the existence of alternative verification mechanisms that would efficiently signal worker competence. The constraint exhibits mixed coordination (credentials do provide genuine quality signals) and extraction (credential requirements exceed true skill thresholds and are actively maintained despite declining functional necessity). Over the 30-year interval (roughly 1995\u20132025), the extractiveness has increased from 0.35 to 0.52 as credential inflation accelerated, while simultaneously the theater component (performative aspects of credentialing) has remained relatively stable at 0.35\u20130.48, indicating that the constraint operates as a hybrid coordination-extraction mechanism rather than pure performance theater. The suppression level (0.65) reflects significant structural barriers: legal licensing requirements in regulated professions, employer hiring system entrenchment, educational pathway costs, and opportunity costs of credential accumulation. The constraint decomposition reveals six distinct institutional perspectives and two asymptotic perspectives (scaffold/piton, mountain), each with measurable directionality and empirical markers for resolution.",
+    "key_agents": [
+      "Credential-Constrained Workers: Primary victims (powerless/trapped) \u2014 face wage suppression and employment discrimination; cannot exit without credential acquisition",
+      "Self-Taught Skilled Workers: Secondary victims (moderate/constrained) \u2014 possess demonstrable skills but face high barriers to formal credential pathways; experience constrained exit options",
+      "Professional Associations: Coordination actors (organized/mobile) \u2014 establish standards and maintain quality signals; genuinely serve coordination but benefit from credential scarcity",
+      "Credentialing Institutions: Primary beneficiaries (institutional/arbitrage) \u2014 capture tuition revenue and prestige from credential scarcity; actively enforce credential requirements",
+      "Employer Gatekeepers: Secondary beneficiaries (institutional/constrained) \u2014 use credentials as risk-reduction signal even when skills alone would suffice; cannot unilaterally drop requirements without competitive disadvantage",
+      "Skills-Based Hiring Coalition: Emerging alternative (organized/mobile) \u2014 tech companies and forward-thinking employers building alternative verification mechanisms with sunset logic",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing institutional credential premium as inevitable information asymmetry"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, reflecting significant but not maximal extraction. The credential premium is real\u2014workers with formal credentials earn 20\u201340% wage premiums in most fields\u2014but much of this reflects legitimate skill development rather than pure rent. The increase from 0.35 to 0.52 over the interval reflects credential inflation: degree requirements have expanded into fields (management, data analysis, skilled trades) where alternative verification would suffice. Suppression (0.65): High. Barriers to credential-free labor market entry include legal requirements (law, medicine, accounting), employer hiring system entrenchment (degree filters automated into resume screening), cost barriers (tuition averaging $100k for four-year degrees), and opportunity cost (4 years forgone wages). These are substantial but not total\u2014skilled trades and tech have shown partial escape routes. Theater ratio (0.48): Moderate. Unlike pure performance rituals, credentialing does deliver genuine educational content and quality screening. But the theater component has grown: employers increasingly use degree credentials as a proxy signal in hiring even when job tasks could be learned through 6\u201312 month apprenticeships, and educational institutions have incentivized credential breadth (MBA requirement for middle management) beyond marginal productivity contribution.",
+    "perspectival_gap": "The credential-constrained worker sees pure extraction (snare: no coordination benefit, maximum extraction). The professional association sees pure coordination (rope: quality maintenance, labor market matching). The credentialing institution sees tangled rope: genuine educational function mixed with credential premium capture. The employer gatekeeper also sees tangled rope: real signaling need mixed with credential filtering that exceeds necessity. The skills-based hiring coalition sees scaffold: a temporary constraint with visible sunset as alternatives mature. The piton perspective reveals theater accumulation: degree requirements persist through signaling equilibrium and hiring ritual despite declining functional correlation with job performance.",
+    "directionality_logic": "Directionality values are derived from agents' structural position relative to the extraction flow. Credentialed workers (beneficiaries with arbitrage/mobile exit) experience low or negative d\u2014they have mobility and benefit from the system. Credential-constrained workers (victims with trapped exit) experience high d close to 1.0\u2014they bear extraction costs with minimal escape. Employers face moderate d around 0.55: they are partial extractors (use credentials for gatekeeping beyond necessity) but also partial victims (credential filtering imposes hiring cost and reduces talent pool). Professional associations face d around 0.40: genuinely provide coordination but also benefit from credential scarcity. The engine's derivation computes chi from d via the sigmoid f(d), producing experienced extractiveness that varies by perspective while keeping base \u03b5 constant at 0.52. This perspectival variance is the diagnostic signature of tangled rope: the same constraint produces snare from the trapped perspective but rope from the coordination actor's perspective.",
+    "mandatrophy_analysis": "RESOLVED TANGLED ROPE: The constraint exhibits genuine dual function (coordination and extraction) that prevents collapse into either pure rope (coordination only) or pure snare (extraction only). The empirical markers are: (1) beneficiaries exist with genuine coordination interest (professional associations maintain standards, employers need signals), (2) victims exist experiencing genuine extraction costs (wage suppression, employment discrimination), (3) enforcer exists (credentialing institutions actively police credential requirements and suppress alternatives), and (4) measurable asymmetry (beneficiaries capture 60\u201370% of credential premium while victims bear 100% of credential acquisition cost). The mandatrophy is resolved by showing that all six perspectives are legitimate readings of the same structural data. The snare classification from the trapped worker perspective is empirically accurate\u2014that agent experiences maximum extraction with no exit. The rope classification from the professional association perspective is also accurate\u2014that actor genuinely solves a coordination problem. Neither is 'the' answer; both are correct descriptions of different positions in the extraction architecture. The scaffold and piton perspectives show temporal dynamics: the skills-based hiring coalition is building an exit path (sunset), while legacy degree requirements persist through institutional inertia (degradation)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "occupational_licensing_gatekeeping",
+      "degree_inflation_educational_cost",
+      "employer_hiring_discrimination"
+    ],
+    "dual_formulation_note": "Labor market skill arbitrage decomposes into three structurally distinct constraints: (1) occupational_licensing_gatekeeping (legal credential requirements, \u03b5 \u2248 0.68, snare), (2) degree_inflation_educational_cost (unnecessary credential proliferation, \u03b5 \u2248 0.45, tangled rope), and (3) employer_hiring_discrimination (credential filters in hiring systems, \u03b5 \u2248 0.48, tangled rope). The current story aggregates these three constraints. For finer analysis, separate stories per constraint would enable tracking which sector contributes most to overall extractiveness and which intervention (licensing reform, degree unbundling, hiring system redesign) has highest impact on extraction reduction."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.48
+    }
+  ]
+}

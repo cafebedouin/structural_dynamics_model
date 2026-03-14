@@ -1,0 +1,211 @@
+{
+  "header": {
+    "constraint_id": "semiconductor_fabrication_bottleneck",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "semfab"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Semiconductor Fabrication Bottleneck",
+    "topic_domain": "industrial/economic/technical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_foundries",
+      "fab_owners",
+      "equipment_suppliers"
+    ],
+    "victims": [
+      "chip_designers",
+      "device_manufacturers",
+      "emerging_nations",
+      "supply_chain_resilience"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Chip Designer",
+      "comment": "PERSPECTIVE 1: CHIP DESIGNER (SNARE) \u2014 Cannot exit the fabrication queue. Design capability is decoupled from production access. Faces arbitrary allocation delays, yield variability used as extraction mechanism, and forced acceptance of unfavorable terms during shortage cycles. Maximum experienced extraction \u2014 no alternatives for advanced node access."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Device Manufacturer",
+      "comment": "PERSPECTIVE 2: DEVICE MANUFACTURER (TANGLED ROPE) \u2014 Constrained by technical switching costs and multi-year qualification cycles, but also benefits from fab ecosystem (yield improvements, process nodes, collaborative development). Significant extraction (priority allocation, price premiums) but genuine coordination function exists (joint process development, quality standards). Constrained exit \u2014 cannot freely switch fabs without massive sunk cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Foundry",
+      "comment": "PERSPECTIVE 3: INCUMBENT FOUNDRY (ROPE) \u2014 Primary beneficiary. Experiences constraint as coordination: managing scarce capacity, setting priority rules, and extracting rents during shortage. Net beneficiary with maximum flexibility \u2014 can arbitrage between customers, redirect capacity to highest-margin designs, and maintain pricing power. Extraction flows toward this agent."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Geopolitical Diversification Coalition",
+      "comment": "PERSPECTIVE 4: GEOPOLITICAL DIVERSIFICATION COALITION (SCAFFOLD) \u2014 Organized agents (governments, major OEMs, consortia) funding new fabs in Taiwan, South Korea, US, EU to distribute production. Sees the bottleneck as temporary coordination failure with sunset clause: CHIPS Act funding, Intel foundry expansion, Samsung GIDC, and TSMC capacity additions are building redundancy. Low effective extraction because organized coalition has agency and clear exit pathway. Theater is moderate \u2014 actual fab capacity is being built, not merely promised."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Multi-Patterning Ritual",
+      "comment": "PERSPECTIVE 5: MULTI-PATTERNING RITUAL (PITON) \u2014 Sub-7nm manufacturing relies on extreme ultraviolet (EUV) and multi-patterning techniques whose primary function (enabling advanced nodes) has been partially achieved, but the extraction mechanism persists through technological lock-in. Fab qualification, equipment specifications, and process IP create switching barriers that persist even when alternatives theoretically exist. The ritual is maintained by institutional inertia: massive sunk costs in tool development, operator expertise, and customer relationships. Theater ratio reflects the gap between claimed process capability and actual utilization efficiency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Equipment Supplier",
+      "comment": "PERSPECTIVE 6: EQUIPMENT SUPPLIER (TANGLED ROPE) \u2014 Benefits from bottleneck through sustained capital equipment demand (fabs must continuously upgrade tools to maintain competitiveness). Also genuinely coordinates production expansion (ASML, Applied Materials, Lam Research directly enable fab capacity scaling). Exit options are mobile \u2014 can pivot tool designs to different nodes/markets \u2014 but switching away from advanced nodes to mature node suppliers would mean abandoning highest-margin market segments. Experienced extraction is moderate: high revenue but also genuine coordination value."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Physics Limit View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / PHYSICS LIMIT VIEW (MOUNTAIN) \u2014 From a civilizational view, quantum tunneling effects and manufacturing precision limits create inherent physical constraints on sub-7nm scaling. Some experts argue the bottleneck is ultimately a law of physics, not policy \u2014 that we are approaching fundamental limits of silicon-based lithography. However, the structural data contradicts this: the extraction is socially organized (fab access, price setting, priority allocation), suppression is institutional (switching costs, qualification barriers), and theater is moderate (actual productive activity occurs). The engine will identify this as a false summit \u2014 the 'physics limit' framing naturalizes what is actually a contingent industrial arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fab_capacity_shortage_causality",
+      "question": "Is the shortage structural (genuine capacity limit relative to demand) or artificial (capacity withheld through monopolistic pricing/allocation)?",
+      "resolution_mechanism": "Inventory tracking of unsold fab capacity; comparison of actual wafer production rates vs nameplate capacity; analysis of fab utilization rates and idle capacity duration",
+      "impact": "If structural: constraint is primarily coordination failure (Rope/Scaffold). If artificial: constraint is primarily extraction mechanism (Snare/Tangled Rope). If mixed: current tangled_rope classification is correct.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether fab shortage is structural capacity limit or artificial withholding"
+    },
+    {
+      "id": "node_transition_necessity",
+      "question": "Is continuous advancement to smaller nodes economically necessary or driven by investor expectations and vendor marketing?",
+      "resolution_mechanism": "Cost-benefit analysis of sub-7nm adoption; correlation between actual performance gains and application requirements; longitudinal adoption rates at each node; market segment analysis showing where sub-7nm is mandatory vs optional",
+      "impact": "If necessary: bottleneck drives genuine coordination (higher Rope/Scaffold classification). If unnecessary: bottleneck is artificial rent extraction (higher Snare classification).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether continuous node shrinkage is economically necessary"
+    },
+    {
+      "id": "geopolitical_diversification_feasibility",
+      "question": "Can new fab facilities in non-Taiwan locations achieve equivalent performance and cost at scale, or is Taiwan's geopolitical concentration a structural necessity given knowledge lock-in?",
+      "resolution_mechanism": "Performance benchmarking of Intel, Samsung, SMIC fabs against TSMC equivalents; analysis of yield rates, quality metrics, time-to-production for equivalent nodes; identification of tacit knowledge/expertise barriers vs pure capital requirements",
+      "impact": "If feasible: scaffold sunset is real \u2014 geopolitical diversification will reduce bottleneck. If locked-in: bottleneck persists despite diversification attempts, suggesting deeper structural constraints.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether geopolitical fab diversification can achieve parity with Taiwan"
+    },
+    {
+      "id": "euvmask_complexity_saturation",
+      "question": "Has EUV lithography reached saturation complexity, making further nodes increasingly difficult despite nominal capability?",
+      "resolution_mechanism": "Analysis of EUV tool throughput trends; mask cost escalation data; defect rate trajectories; correlation between process complexity and yield losses in actual production; comparison of design rules vs physical capability",
+      "impact": "If saturated: bottleneck is partially a natural physics/engineering limit (higher Mountain classification). If unsaturated: bottleneck is primarily organizational/economic (lower Snare/Tangled Rope classification).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether EUV lithography has reached functional saturation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The semiconductor fabrication bottleneck represents a structural constraint on global chip supply where access to advanced manufacturing nodes (sub-7nm) is concentrated in a handful of facilities (primarily TSMC in Taiwan, Samsung in South Korea, Intel globally, with SMIC in mainland China). This concentration creates extraction mechanisms across multiple dimensions: pricing power during shortage cycles, arbitrary priority allocation, forced acceptance of unfavorable contract terms, and sunk costs that lock customers into incumbent relationships. The constraint exhibits genuine coordination functions (process development, yield optimization, capacity planning) alongside asymmetric extraction, making it a diagnostic tangled rope from multiple perspectives. The bottleneck emerged sharply during 2020-2022 due to pandemic supply shocks but persists through underlying structural factors: capital intensity of fab construction ($10-20B per facility), long time-to-profitability (5-10 years), specialized knowledge and expertise, and geopolitical concentration of both supply and demand.",
+    "key_agents": [
+      "Chip Designers: Primary victims (powerless/trapped) \u2014 cannot exit the queue, face arbitrary delays and yield variability during shortage cycles",
+      "Device Manufacturers: Secondary victims (moderate/constrained) \u2014 face high switching costs, forced into long-term contracts at unfavorable terms during shortage cycles",
+      "Incumbent Foundries (TSMC, Samsung, Intel): Primary beneficiaries (institutional/arbitrage) \u2014 capture pricing power, priority allocation, and rents during shortage cycles",
+      "Equipment Suppliers (ASML, Applied Materials, Lam Research): Secondary beneficiaries (organized/mobile) \u2014 benefit from sustained capital equipment demand and capacity expansion investments",
+      "Geopolitical Diversification Coalition: Organized agents (organized/constrained) \u2014 governments and consortia funding new fabs (CHIPS Act, EU Chips Act, Samsung GIDC) to distribute production and reduce Taiwan concentration",
+      "Supply Chain Resilience: Victim aggregate (powerless/trapped) \u2014 global economic exposure to Taiwan-concentrated production; systemic fragility from single-point failure risk",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing institutional constraints as physics limits"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Incumbent foundries extract significant rents during shortage cycles through price premiums, priority allocation, and forced long-term contracts. However, the extraction is not total (0.70+) because genuine coordination functions exist: yield optimization, process development, and capacity scaling require real collaboration. The value reflects that extraction is substantive but not the constraint's only function. Trajectory shows increasing extractiveness (0.42\u21920.58 over interval) as geopolitical tensions tighten Taiwan supply concentration and new fabs have not yet matured to full capacity. Suppression (0.65): High. Significant barriers to exit include fab qualification cycles (18-36 months), process IP lock-in, switching costs from established supply relationships, and limited alternative nodes in the short term (5-year horizon for new fabs to reach full production). Theater ratio (0.48): Moderate. The constraint involves genuine productive activity \u2014 actual wafer manufacturing, process development, equipment engineering \u2014 but also performance theater: promised node roadmaps, capability claims, and capacity announcements often exceed near-term delivery. Theater increased from 0.32 to 0.48 as geopolitical diversification funding accelerated far ahead of actual facility construction completion (2020s announcements vs 2025+ production targets). The partial theater reflects gap between announced capacity additions and actual production timelines.",
+    "directionality_logic": "Each agent's directionality (d) value flows from their structural relationship: beneficiary status, exit cost, and power to negotiate terms. Beneficiaries (incumbent foundries) derive d from arbitrage exit capability and net benefit position \u2192 d~0.05 \u2192 f(d) negative \u2192 extraction runs toward them, subsidizing their position. Trapped agents (chip designers) derive d from trapped exit and victim status \u2192 d~0.95 \u2192 f(d) maximum \u2192 they experience maximum effective extraction. Constrained agents (device manufacturers) derive d from high but surmountable switching costs + victim status \u2192 d~0.70 \u2192 f(d) moderate-high. The scope modifier amplifies this at global scale: a local fab bottleneck affects only regional designers, but Taiwan-concentrated production affects global designer population. Scope (global) \u03c3=1.2 scales all \u03c7 values upward, making the bottleneck's effective extraction more severe as its geographic reach widens.",
+    "perspectival_gap": "The largest perspectival gap opens between the beneficiary's Rope classification and the trapped agent's Snare classification. From the incumbent foundry perspective, the bottleneck is a coordination mechanism \u2014 managing scarce capacity, setting allocation rules, and extracting legitimate value from scarcity. From the chip designer perspective, the same mechanism is pure extraction \u2014 they cannot exit the queue, have no coordination role in foundry decisions, and experience only the extraction side (delays, yield risk, price premiums). The tangled_rope classification at moderate/constrained represents the middle agent experiencing both coordination benefit (access to cutting-edge process) and extraction cost (high switching costs, forced contracts). The scaffold perspective resolves the gap by declaring the bottleneck temporary \u2014 new fab facilities in multiple geographies will mature, reducing concentration and extraction by 2027-2030. The analytical observer's mountain classification is revealed as false summit by structural data: the constraint is socially organized (beneficiary/victim structure), not inherent to physics.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The constraint classifies as tangled rope because it simultaneously exhibits (a) genuine coordination function \u2014 yield optimization, process development, capacity planning require real technical collaboration between foundry and customer, and (b) asymmetric extraction \u2014 foundry captures pricing power, priority allocation, and rents disproportionate to customer benefit. Both functions are structural, not optional. The beneficiary (incumbent foundry) genuinely needs customers for volume and feedback; the victim (chip designer) genuinely needs the foundry's process capability. But extraction mechanism (priority allocation, pricing power during shortage) persists alongside coordination. Snare classification from the powerless perspective is consistent with tangled rope classification at the analytical level: the Snare represents the victim's experienced reality (pure extraction from their viewpoint), while Tangled Rope represents the full structural picture (extraction + coordination). The mandatrophy is resolved by showing why both are correct at their respective positions: the trapped agent experiences snare because they cannot see or benefit from the coordination function; the analytical observer sees tangled rope because it documents both functions in structural detail."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "chip_design_cycle_delays",
+      "device_manufacturer_supply_chain_fragility",
+      "geopolitical_semiconductor_dependency"
+    ],
+    "dual_formulation_note": "The fabrication bottleneck is upstream of multiple dependent constraints in semiconductor supply chain. Chip design cycle delays are downstream consequences of fab allocation failures. Device manufacturer supply fragility derives from single-point failure risk in Taiwan-concentrated production. Geopolitical semiconductor dependency reflects the bottleneck's concentration in allied nations' territories. All three downstream constraints share the same root structure: uneven access to advanced manufacturing capacity."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    }
+  ]
+}

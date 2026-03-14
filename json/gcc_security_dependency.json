@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "gcc_security_dependency",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gcc"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "GCC Security Dependency Lock-In",
+    "topic_domain": "software_infrastructure/compiler_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "gcc_maintainer_ecosystem",
+      "gcc_dependent_vendors"
+    ],
+    "victims": [
+      "downstream_software_projects",
+      "open_source_ecosystem_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Embedded Systems Developer",
+      "comment": "PERSPECTIVE 1: EMBEDDED SYSTEMS DEVELOPER (SNARE) \u2014 Trapped by critical security vulnerabilities in GCC that cannot be patched without adopting newer versions with breaking changes or proprietary toolchains. Cannot exit: legacy systems require specific GCC versions for compliance/certification; newer versions break binary compatibility or introduce license restrictions. Bears full extraction cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Sized Software Company",
+      "comment": "PERSPECTIVE 2: MID-SIZED SOFTWARE COMPANY (TANGLED ROPE) \u2014 Constrained by the coordination function (GCC enables product development and security updates) but also faces extraction: upgrade timelines are controlled upstream; security patches often require full toolchain replacements; relocation to LLVM requires months of testing. Benefits from standardization; bears asymmetric update costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Linux Distribution Maintainer",
+      "comment": "PERSPECTIVE 3: LINUX DISTRIBUTION MAINTAINER (ROPE) \u2014 Benefits from GCC standardization and security updates (institutional arbitrage: can cherry-pick patches, maintain multiple versions, control rollout timing). Experiences the constraint as pure coordination: GCC provides the platform for all distribution features. Minimal extraction experienced."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The LLVM/Clang Coalition",
+      "comment": "PERSPECTIVE 4: LLVM/CLANG COALITION (SCAFFOLD) \u2014 Organized alternative toolchain with sunset logic: LLVM/Clang is progressively replacing GCC across domains (CUDA, Apple platforms, modern C++ standards). The GCC dependency is being solved systematically through competitive alternatives. High agency; clear exit pathway over 5-10 year horizon. Low experienced extraction because the constraint has visible sunset."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The GCC Volunteer Maintenance Community",
+      "comment": "PERSPECTIVE 5: GCC VOLUNTEER MAINTENANCE COMMUNITY (PITON) \u2014 Maintains the constraint through institutional inertia and volunteer labor. GCC's functional primacy (for kernel compilation, embedded systems standards certification) is real, but the maintenance burden is substantially theatrical: volunteers sustain a complex historical codebase primarily because replacing it is harder than patching it. Theater ratio reflects performative backward-compatibility maintenance that could be eliminated with coordinated ecosystem transition."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Natural Law)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (FALSE MOUNTAIN) \u2014 At civilizational scope, one might naturalize the GCC constraint as inherent to software infrastructure: 'compiler standardization is an immutable necessity.' This analysis risks false summitry \u2014 the constraint's persistence is institutional/economic (path dependence, switching costs, volunteer burnout) not inherent to compilation. The engine will flag this as naturalization of contingency."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "security_patch_supply_lag",
+      "question": "Is the observed security patch lag in maintained GCC versions due to technical complexity or coordinated suppression of alternative toolchain adoption?",
+      "resolution_mechanism": "Comparison of patch delivery timelines for GCC vs LLVM/Clang for identical vulnerability classes; analysis of release cadence shifts following major ecosystem shifts (e.g., post-Rust adoption, post-C++20)",
+      "impact": "If technical: constraint is lower-extractiveness coordination problem (Rope from more perspectives). If suppression: constraint is higher-extractiveness extraction with coordination cover (Snare from more perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether patch lag reflects technical or organizational factors"
+    },
+    {
+      "id": "volunteer_labor_sustainability",
+      "question": "How much of GCC's continued maintenance burden is sustainable volunteer labor vs performative institutional obligation?",
+      "resolution_mechanism": "Longitudinal contributor burnout analysis; correlation between feature complexity and volunteer retention; cost analysis comparing GCC maintenance to hypothetical LLVM/Clang fork costs",
+      "impact": "If sustainable: piton classification overstates theater (GCC is degraded but functional). If unsustainable: piton is accurate and ecosystem migration timeline is constrained by volunteer availability, not technical factors.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sustainability of GCC volunteer maintenance"
+    },
+    {
+      "id": "kernel_ecosystem_locked_to_gcc",
+      "question": "Is Linux kernel exclusive reliance on GCC a technical requirement or institutional norm maintained by subsystem maintainers?",
+      "resolution_mechanism": "Analysis of Clang kernel compilation efforts (LLVM kernel project status); comparison of technical barriers vs organizational/political resistance to diversification",
+      "impact": "If technical: GCC dependency for kernel is genuinely immutable (Mountain-like at kernel scope). If institutional: dependency is contingent and could be dissolved with coordinated migration (Scaffold with real sunset).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether kernel reliance on GCC is technical or institutional"
+    },
+    {
+      "id": "embedded_system_certification_lock",
+      "question": "Do embedded systems standards (DO-178C, IEC-61508) genuinely require specific GCC versions or are they locked through legacy certification requirements rather than technical necessity?",
+      "resolution_mechanism": "Audit of certification bodies' actual GCC version specifications vs minimum security requirements; cost-benefit analysis of recertification with newer toolchains vs security patch maintenance burden",
+      "impact": "If genuine technical requirement: trapped agents (embedded developers) are truly immobilized (high d \u2192 high extraction). If certification lock: constraint is artificially maintained through institutional inertia (reclassifies toward Scaffold with reachable sunset).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether certification lock reflects technical or institutional factors"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The GCC compiler has become an infrastructure lock-in point for large segments of the software ecosystem. While GCC was once the dominant free/open-source compiler by technical merit, the constraint now operates primarily through path dependency, institutional inertia, and switching costs rather than technical superiority. Modern alternatives (LLVM/Clang, proprietary toolchains) have comparable or superior capabilities, yet migration is suppressed by certification requirements, binary compatibility constraints, and the volunteer maintenance burden that makes replacement appear impossible. The constraint exhibits all six classification types from different perspectives: pure extraction for trapped embedded developers; hybrid coordination-extraction for mid-sized software companies; pure coordination for distribution maintainers with migration agency; scaffold properties for organized LLVM coalitions with visible exit pathways; degraded inertia (piton) for the volunteer community sustaining an increasingly complex codebase; and false natural law (mountain) at the analytical civilizational level. The extractiveness has increased from 0.32 to 0.52 over the interval as security vulnerabilities have accumulated faster than volunteer patches, while theater ratio has risen (0.35\u21920.55) as GCC maintenance increasingly consists of backward-compatibility theater rather than functional security improvements.",
+    "key_agents": [
+      "Embedded Systems Developers: Primary victims (powerless/trapped) \u2014 cannot exit due to certification and binary compatibility locks; bear security vulnerability costs indefinitely",
+      "Mid-Sized Software Companies: Secondary victims (moderate/constrained) \u2014 face extraction in the form of forced upgrade cycles and toolchain replacement costs; also benefit from standardization",
+      "Linux Distribution Maintainers: Primary beneficiaries (institutional/arbitrage) \u2014 control patch selection and rollout timing; can arbitrage across GCC versions and cherry-pick upstream patches",
+      "LLVM/Clang Coalition: Organized alternative (organized/mobile) \u2014 competitive threat that provides sunset mechanism; growing adoption in modern domains (Rust, modern C++, CUDA)",
+      "GCC Volunteer Maintenance Community: Institutional actor (institutional/arbitrage) \u2014 sustains constraint through unpaid labor; experiences their own work as increasingly performative",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing a contingent institutional arrangement as immutable infrastructure"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, increasing. The constraint extracts from downstream projects primarily through forced upgrade cycles, security patch delays, and switching costs. Extractiveness rose from 0.32 to 0.52 because security vulnerabilities have accumulated faster than volunteer patches, increasing the pressure on dependent projects. However, it has not reached the 0.66 threshold for pure snare classification because significant coordination benefits remain (GCC is still the standard for kernel compilation, embedded systems, and legacy systems). Suppression (0.68): High. Significant barriers to exit include: (1) certification locks (embedded systems standards require specific GCC versions), (2) binary compatibility constraints (downstream systems certified against specific GCC ABIs), (3) switching costs (full toolchain replacement requires months of testing), (4) volunteer burnout (perception that 'there is no alternative' due to maintenance burden), (5) downstream dependency chains (libraries compiled with GCC require GCC-compatible interfaces). Theater ratio (0.55): Moderate. GCC maintenance increasingly consists of performative activity: backward-compatibility testing for systems that are not meaningfully used, maintenance of ancient subsystems, and documentation updates that do not address current security issues. However, some portion (45%) is genuinely functional \u2014 security patches, standards compliance, and performance optimization. The ratio has increased from 0.35 to 0.55 because volunteer effort is increasingly concentrated on maintaining the constraint (supporting legacy configurations) rather than improving it (adding modern features).",
+    "perspectival_gap": "The perspectival gaps reveal the constraint's hybrid nature. The embedded systems developer (trapped, powerless) experiences pure extraction (snare) because they cannot move to alternatives \u2014 certification locks and binary compatibility constraints are insurmountable within their operational constraints. The Linux distribution maintainer (institutional, arbitrage) experiences pure coordination (rope) because they have full agency: can fork, cherry-pick, or migrate at organizational discretion. The mid-sized company (moderate, constrained) experiences the constraint as tangled rope \u2014 real coordination benefits (standardization, ecosystem stability) coexist with extraction (forced upgrade cycles, switching costs). The LLVM coalition (organized, mobile) experiences the constraint as temporary (scaffold) because alternative toolchains are progressively replacing GCC across domains. The volunteer community (institutional, arbitrage) experiences the constraint as degraded (piton) \u2014 their maintenance work is increasingly performative, sustained by institutional obligation rather than functional necessity. The analytical observer at civilizational scope risks falsely naturalizing the constraint as inherent ('compiler standardization is immutable'), but the structural data reveals it as a contingent institutional arrangement with visible exit pathways.",
+    "directionality_logic": "Directionality values are derived from the agent's position in the extraction pipeline and their exit capacity. Trapped embedded developers experience high d (0.90+) because they bear costs without exit options \u2014 certification locks and binary compatibility constraints are structural and cannot be overcome through migration. Mid-sized companies experience moderate d (0.55-0.65) because they face high but surmountable switching costs; they benefit from standardization but are extracted from through forced cycles. Distribution maintainers experience low d (0.10-0.20) because they have arbitrage options and control rollout timing; GCC subsidizes their platform rather than extracting from it. The LLVM coalition experiences very low d (0.05-0.15) because they are external beneficiaries (alternative toolchain adoption reduces GCC's market power) and have mobile exit options. The volunteer community's d is ambiguous (0.40-0.50) \u2014 they are nominally beneficiaries (GCC is 'their project') but functionally victims (unpaid labor maintaining an increasingly difficult constraint).",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint is structurally hybrid (tangled rope) but appears differently from each position in the ecosystem. The beneficiary side (distribution maintainers, GCC vendors) sees coordination (rope) and experiences low extraction. The victim side (embedded developers, software companies) sees extraction with coordination cover (tangled rope or snare depending on exit options). The constraint resolves mandatrophy by acknowledging that both the coordination function and the extraction function are real \u2014 GCC genuinely standardizes compilation, and it also genuinely locks downstream projects into upgrade cycles and certification constraints. The false mountain perspective (civilizational analytical observer) would naturalize this as 'inherent to infrastructure,' but the structural data shows it is institutional/economic: alternative toolchains with comparable capabilities exist, and migration is constrained by path dependency, switching costs, and volunteer burnout rather than technical necessity. Mandatrophy is resolved: the classification is tangled_rope because both genuine coordination (kernel compilation standardization, embedded systems toolchain stability) and asymmetric extraction (forced security-patch cycles, certification locks, vendor lock-in) are present."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "linux_kernel_compilation_monoculture",
+      "embedded_systems_certification_lock",
+      "software_vendor_toolchain_dependency"
+    ],
+    "dual_formulation_note": "The GCC security dependency is upstream of specific vendor lock-in constraints (e.g., Linux kernel exclusive reliance on GCC, embedded systems standards tied to specific GCC versions). Each downstream constraint has its own extractiveness reflecting the specific institutional lock (certification, binary compatibility), but all are enabled by the upstream GCC dependency. The constraint family should model GCC as the primary lock and specific domain locks as secondary constraints linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ]
+}

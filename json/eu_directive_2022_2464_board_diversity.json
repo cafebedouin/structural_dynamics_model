@@ -1,0 +1,191 @@
+{
+  "header": {
+    "constraint_id": "eu_directive_2022_2464_board_diversity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.45,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Directive 2022/2464 Board Diversity Quota",
+    "topic_domain": "corporate_governance/regulatory_policy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "underrepresented_women_directors",
+      "eu_regulatory_institutions",
+      "workplace_equity_advocates"
+    ],
+    "victims": [
+      "corporate_board_selection_autonomy",
+      "candidate_pool_quality_concerns",
+      "implementation_resource_costs"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "label": "The Excluded Candidate Pool",
+      "comment": "PERSPECTIVE 1: EXCLUDED CANDIDATE POOL (SNARE) \u2014 Structurally trapped outside board selection despite qualification. The quota creates appearance of inclusion while actual gatekeeping mechanisms (network effects, informal sponsorship, credential stacking) persist. Suppression is high: the pool has no enforcement mechanism to challenge substantive exclusion. The quota is performative relative to the barrier structure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Qualified Woman Director",
+      "comment": "PERSPECTIVE 2: QUALIFIED WOMAN DIRECTOR (TANGLED ROPE) \u2014 Genuine coordination function: the directive solves the collective action problem of boardroom homogeneity and increases candidate visibility. But also bears costs: tokenism risk, heightened scrutiny, expectation to represent all women, potential credential-signaling ambiguity (selected for quota or for merit?). Moderate extraction through normative expectations and representation burden."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The EU Regulatory Institution",
+      "comment": "PERSPECTIVE 3: EU REGULATORY INSTITUTION (ROPE) \u2014 Pure coordination function: solves the collective action problem of coordinating corporate governance diversity across 27 member states. Experiences the constraint as enabling coordination and market harmonization. Benefits from enforcement authority and policy lever. No extraction \u2014 the regulatory body gains from the coordination mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Multinational Corporation",
+      "comment": "PERSPECTIVE 4: MULTINATIONAL CORPORATION (TANGLED ROPE) \u2014 Coordination benefit: clearer governance standards reduce uncertainty in compliance. But extraction through implementation costs, candidate pipeline development, potential talent loss if forced choices between qualified men and quota-driven women selections create perceived internal inequity. Mobile exit via non-EU operations reduces effective extraction, but EU market importance constrains exit. Mixed experience of coordination and extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Corporate Compliance Infrastructure",
+      "comment": "PERSPECTIVE 5: CORPORATE COMPLIANCE INFRASTRUCTURE (PITON) \u2014 The directive has catalyzed reporting mechanisms and monitoring systems that persist through institutional inertia. Theater ratio is moderate-high: much of the infrastructure is procedural reporting rather than substantive board function change. The actual impact on board decision-making is contested. Compliance persists because regulatory oversight is real and penalties exist, not because the mechanism optimally serves board effectiveness."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Statistical Parity View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / STATISTICAL PARITY VIEW (MOUNTAIN) \u2014 From a civilizational perspective, the constraint may be treated as reflecting immutable demographic realities: if women represent X% of qualified candidates, board composition should reflect X%. This perspective naturalizes statistical representation as a law. However, this risks confusing correlation (current representation) with causal constraint (qualification availability). The engine's false summit detector identifies this as naturalization of a contingent institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "candidate_pipeline_constraint",
+      "question": "Is the low representation of women directors caused by insufficient qualified candidates or by gatekeeping mechanisms in recruitment and selection?",
+      "resolution_mechanism": "Longitudinal study of candidate pipeline across educational, professional, and board-adjacent roles; comparison of woman vs man advancement rates within qualified cohorts; analysis of sponsorship patterns and informal network effects",
+      "impact": "If pipeline constraint: quota may be premature or require simultaneous pipeline-building; classification remains Tangled Rope but extraction value decreases as genuine coordination addressing bottleneck. If gatekeeping: quota directly targets the extraction mechanism; classification remains Snare/Tangled Rope and extraction values are accurate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether representation gap reflects candidate availability or selection gatekeeping"
+    },
+    {
+      "id": "tokenism_mechanism_strength",
+      "question": "Does the quota generate substantive board inclusion or primarily performative representation through tokenism?",
+      "resolution_mechanism": "Analysis of board committee placement for women directors; study of decision-making influence and voice pattern changes; measurement of women director retention and advancement rates post-appointment; comparison of board diversity metrics vs. substantive governance outcomes",
+      "impact": "If tokenism dominant: extraction value increases (theater ratio rises as quota becomes cover for unchanged power dynamics). Classification drifts toward Piton. If substantive inclusion: extraction value decreases and classification drifts toward pure Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which quota produces tokenism vs substantive inclusion"
+    },
+    {
+      "id": "international_regulatory_arbitrage",
+      "question": "Do corporations subject to the directive migrate operations or board locations to avoid compliance, thereby reducing effective suppression and extraction?",
+      "resolution_mechanism": "Tracking of corporate board relocations, subsidiary redomiciliation, and governance structure changes post-directive; analysis of board composition for companies with multiple listing venues (EU vs non-EU)",
+      "impact": "If significant arbitrage: suppression and extraction values should decrease; exit_options upgrade from trapped/constrained to mobile for mobile corporations; perspectival gap narrows as regulatory reach diminishes. If minimal arbitrage: values remain stable and regulatory enforcement is effective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of regulatory arbitrage via board relocation"
+    },
+    {
+      "id": "merit_signal_ambiguity",
+      "question": "Does the quota create credential-signaling ambiguity that reduces the signal value of women board member appointments?",
+      "resolution_mechanism": "Labor market analysis: tracking of post-board career outcomes for women directors appointed before vs after quota; salary/option compensation differential relative to male counterparts; market reaction to women director appointments (stock price changes); third-party credibility assessments of board diversity vs board performance correlations",
+      "impact": "If ambiguity high: extraction value increases through reduced career signal value; psychological cost to beneficiary group increases. If ambiguity low: quota is pure coordination and extraction decreases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether quota creates merit-signaling ambiguity for appointed women"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.29
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "EU Directive 2022/2464 mandates that publicly listed companies achieve 40% women on supervisory boards (or 33% on combined management and supervisory boards) by June 2026. The constraint exhibits structural tension between a genuine coordination function (solving collective action problems in governance diversity) and asymmetric extraction through compliance costs, tokenism risks, and credential-signaling ambiguity. Different actors experience the same regulatory mandate as pure coordination (the EU institution), mixed coordination-extraction (the qualified woman director), snare mechanics (the excluded candidate pool), strategic constraint (the multinational corporation), performative bureaucracy (the compliance infrastructure), or immutable demographic law (the false-summit analytical view). Base extractiveness (0.38) reflects moderate asymmetry: the directive creates real benefits for represented women and solving governance heterogeneity but imposes costs through implementation and potential tokenism. Suppression (0.45) captures significant barriers to substantive inclusion despite the quota: gatekeeping mechanisms in informal networks, credential stacking expectations, and sponsorship asymmetries persist beneath the numerical mandate. Theater ratio (0.55) indicates moderate performative content: the directive generates substantial reporting and compliance infrastructure that may not translate to substantive board influence changes.",
+    "key_agents": [
+      "Qualified Woman Directors: Primary beneficiary (moderate/constrained) \u2014 gain visibility and formal access; bear tokenism and credential-signaling costs. Representation increased 10-15% annually post-directive in many jurisdictions.",
+      "Excluded Candidate Pool: Primary victim (powerless/trapped) \u2014 women not yet in professional/board pipeline remain excluded despite quota; structural gatekeeping persists beneath quota mandate.",
+      "EU Regulatory Institutions: Secondary beneficiary (institutional/arbitrage) \u2014 gain policy coordination lever and enforcement authority across member states; no material extraction cost.",
+      "Multinational Corporations: Mixed position (powerful/mobile) \u2014 benefit from governance clarity and reduced internal coordination ambiguity; bear implementation costs and candidate-identification burden. Exit via non-EU operations provides constraint relief.",
+      "Corporate Compliance Infrastructure: Institutional actor (organized/constrained) \u2014 develops reporting and monitoring systems; sustains through regulatory oversight; theater content increases as procedural burden grows.",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks treating demographic representation as an immutable natural law rather than the contingent outcome of institutional selection mechanisms."
+    ],
+    "logic_rationale": "Extractiveness (0.38): The directive creates measurable benefits (formal pathway to board access, visibility for qualified women) but also measurable costs (implementation burden for corporations, potential credential-signaling ambiguity, tokenism risk). The value reflects that this is a genuine Tangled Rope \u2014 not pure coordination (no extraction) and not pure extraction (significant coordination value). The trajectory shows increasing extractiveness over the implementation period as corporations realize compliance costs and potential talent-management complications. Suppression (0.45): Moderate-high. The directive creates formal pathways, reducing legal/regulatory suppression, but structural suppression persists: informal networks, sponsorship asymmetries, credential-stacking norms, and cultural gatekeeping remain largely unaddressed by the quota. The quota removes one suppression mechanism but cannot eliminate all gatekeeping. Theater ratio (0.55): Moderate and increasing. The directive catalyzes substantial reporting infrastructure (board composition metrics, compliance documentation) that is procedurally mandated but may not correlate with substantive board influence changes. As corporations develop compliance systems, theater content increases relative to functional change.",
+    "perspectival_gap": "The six perspectives reveal that the same regulatory mandate is experienced as pure coordination (EU institution), mixed coordination-extraction (qualified woman director, multinational corporation), snare mechanics (excluded candidate pool), performative bureaucracy (compliance infrastructure), or immutable law (false-summit analytical view). The perspectival gap is largest between the EU institution (perceives pure coordination) and the excluded candidate pool (perceives snare extraction). The qualified woman director's Tangled Rope classification is the equilibrium perspective \u2014 neither pure coordination nor pure extraction, acknowledging genuine benefits alongside genuine costs.",
+    "directionality_logic": "Each perspective's directionality is derived from power level, exit options, and beneficiary/victim status. The qualified woman director (moderate/constrained) has moderately high d: constrained exit (career damage from quota rejection, but options exist) combined with victim status (tokenism burden, credential ambiguity). The EU institution (institutional/arbitrage) has low d: beneficiary status with exit options (arbitrage at the policy level via discretionary enforcement). The multinational corporation (powerful/mobile) has moderate d: beneficiary from governance clarity but victim to implementation costs; mobile exit (non-EU operations) reduces d. The excluded candidate pool (powerless/trapped) has maximum d: trapped exit with victim status. The suppression metric is unscaled and reflects actual structural barriers: gatekeeping mechanisms, informal networks, credential stacking that exist regardless of power context.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by disambiguating the quota's structural function from its social framing. The framing narrative is 'solving exclusion through equal representation,' which could support either pure Rope (if the quota substantively solves inclusion) or pure Snare (if it creates tokenistic cover for unchanged gatekeeping). The structural data \u2014 beneficiary/victim declarations, suppression persistence, theater ratio increase, implementation costs \u2014 clarifies that the constraint is Tangled Rope: genuine coordination value (solving homogeneity and visibility problems) mixed with asymmetric extraction (implementation costs, credential-signaling ambiguity, tokenism burden). The mandatrophy is resolved not by choosing between pure coordination and pure extraction, but by recognizing that regulatory quotas can simultaneously solve coordination problems AND create extraction mechanisms through implementation asymmetry and symbolic cover for persistent gatekeeping."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "executive_pay_ratio_regulation",
+      "corporate_governance_transparency_standards"
+    ],
+    "dual_formulation_note": "The board diversity constraint is distinct from underlying candidate pipeline constraints. If the pipeline constraint (availability of qualified women in board-adjacent professional roles) is decomposed into a separate story, it would show higher extractiveness (\u03b5 > 0.50) reflecting the gatekeeping mechanisms that the quota addresses. This story focuses on the regulatory mandate itself; pipeline decomposition would show upstream extraction mechanisms that the directive targets but does not eliminate."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.52
+    }
+  ]
+}

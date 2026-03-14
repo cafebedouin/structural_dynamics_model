@@ -1,0 +1,217 @@
+{
+  "header": {
+    "constraint_id": "cross_border_manufacturing_coupling",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cbmc"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Cross-Border Manufacturing Supply Chain Coupling",
+    "topic_domain": "economic/geopolitical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "lead_manufacturing_hubs",
+      "consumer_markets"
+    ],
+    "victims": [
+      "peripheral_suppliers",
+      "labor_forces_in_dependent_regions"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Peripheral Supplier Network",
+      "comment": "PERSPECTIVE 1: PERIPHERAL SUPPLIERS (SNARE) \u2014 Locked into dependency through capital investment requirements, technology specifications, and contractual obligations. Cannot exit without catastrophic loss. Extraction is maximal: low wages, limited negotiating power, vulnerability to sudden contract termination, coercive quality demands, and price pressure that leaves no margin."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Labor Forces in Dependent Regions",
+      "comment": "PERSPECTIVE 2: LABOR FORCES (SNARE) \u2014 Trapped by geographic and economic constraints; manufacturing jobs are the primary income source with no alternative employment. Extraction through wage suppression, unsafe working conditions, and lack of regulatory protection. Suppression mechanisms include geographic isolation, poverty traps, and absence of enforcement."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Intermediate Tier Suppliers",
+      "comment": "PERSPECTIVE 3: INTERMEDIATE SUPPLIERS (TANGLED ROPE) \u2014 Mid-tier manufacturers benefit from access to supply chains and technical knowledge transfer; coordinated value-addition is genuine. But extraction occurs through enforced standardization, intellectual property constraints, technology lock-in, and forced vertical integration. High suppression but real coordination function."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Lead Manufacturing Hubs",
+      "comment": "PERSPECTIVE 4: LEAD MANUFACTURING HUBS (ROPE) \u2014 Primary beneficiaries. Experience the constraint as pure coordination: assembling components across borders, managing logistics, synchronizing production. Can arbitrage between suppliers, relocate operations, or reshape supply chains. Low experienced extraction \u2014 constraint subsidizes their operations."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Consumer Markets",
+      "comment": "PERSPECTIVE 5: CONSUMER MARKETS (ROPE) \u2014 Benefit from low prices enabled by extraction elsewhere in the chain. Have arbitrage options (alternative suppliers, shifting demand). No suppression from their perspective; they experience only coordination benefits."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Trade Governance Institutions",
+      "comment": "PERSPECTIVE 6: TRADE GOVERNANCE & LABOR STANDARDS COALITIONS (SCAFFOLD) \u2014 International labor standards enforcement, supply chain transparency initiatives, and trade bloc labor requirements create an exit pathway from pure extraction. The constraint has a sunset: as labor standards harmonization, nearshoring, and automation reduce peripheral labor dependency, the extraction mechanism loses force. High suppression now but declining over generational horizon as norms mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "National Trade Barriers",
+      "comment": "PERSPECTIVE 7: NATIONAL TRADE BARRIERS (PITON) \u2014 Tariffs, quotas, and regulatory requirements that enforce the coupling are increasingly performative. Global supply chains route around them; regulations become theatrical compliance (impact audits, certifications) while extraction continues. Theater ratio high because enforcement cannot keep pace with supply chain complexity. Barrier structures persist through institutional inertia even as their functional effect degrades."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a global/civilizational vantage, cross-border manufacturing coupling genuinely coordinates value-chain efficiency and enables specialization across comparative advantage. But it simultaneously extracts through wage suppression, labor arbitrage, and regulatory capture that concentrate gains upstream. Both functions are structural, not contingent. The constraint cannot collapse to pure Rope without losing its coordination efficiency; cannot collapse to pure Snare without losing the supply-chain logic that justifies it."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_vs_extraction_proportionality",
+      "question": "What fraction of the measured extractiveness (0.52) is necessary coordination cost vs. pure rental extraction?",
+      "resolution_mechanism": "Counter-factual analysis: compare labor costs in coupled supply chains vs. labor costs in equivalent manufacturing where suppliers had negotiating parity. Identify extractiveness that persists even under fair-wage scenarios.",
+      "impact": "If necessary coordination > 0.40: constraint may downgrade to Rope. If necessary coordination < 0.20: constraint may upgrade to Snare. Current 0.52 implies ~0.25 necessary coordination cost, ~0.27 pure extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of extractiveness attributable to coordination necessity vs. pure extraction"
+    },
+    {
+      "id": "exit_possibility_for_periphery",
+      "question": "Are peripheral suppliers genuinely trapped, or do constrained alternatives exist (domestic supply chains, unionization, geographic relocation)?",
+      "resolution_mechanism": "Case studies of supplier defection; analysis of successful supplier transitions to independent status or new supply chains; labor mobility data for regions with manufacturing dominance.",
+      "impact": "If genuine exit options exist: reclassify powerless victims as moderate agents (constrained rather than trapped). Snare perspectives degrade toward Tangled Rope. If exit requires organized coalition action: reclassify to organized power + constrained exit.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether peripheral suppliers have genuine exit options beyond the coupling"
+    },
+    {
+      "id": "labor_standards_sunset_realism",
+      "question": "Are trade-linked labor standards and nearshoring genuinely creating a sunset mechanism, or are they performative cover for persistent coupling?",
+      "resolution_mechanism": "Tracking of wage convergence between developed and developing manufacturing hubs; measurement of actual nearshoring investment vs. rhetorical commitment; compliance enforcement rates for labor standards provisions in trade agreements.",
+      "impact": "If sunset real: Scaffold classification holds. If performative: scaffold is false hope, and constraint is more durable Snare/Tangled Rope than horizonal optimism suggests.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether labor standards harmonization and nearshoring represent genuine sunset mechanism"
+    },
+    {
+      "id": "automation_impact_trajectory",
+      "question": "Does automation in peripheral manufacturing regions reduce extraction (by eliminating low-wage labor arbitrage) or intensify it (by concentrating gains further upstream)?",
+      "resolution_mechanism": "Historical analysis of automation deployment in prior dependent-region manufacturing; measurement of wage/employment effects; tracking of automation investment sources (lead hubs vs. peripheral regions).",
+      "impact": "If automation benefits peripheral regions: extraction mechanism decays over time, supporting Scaffold sunset logic. If automation concentrates gains: extraction intensifies even as labor dependency shrinks \u2014 constraint becomes more Snare-like despite lower suppression.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether automation reduces or intensifies extraction in dependent manufacturing regions"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Cross-border manufacturing supply chains represent one of the most complex global coordination mechanisms: they distribute production across multiple countries, align just-in-time logistics, coordinate quality standards, and synchronize complex product assembly. Yet they simultaneously create structural extraction through dependency locks, wage suppression, regulatory arbitrage, and power asymmetries between lead manufacturers and peripheral suppliers. The constraint exhibits a dual nature: genuine coordination value coexists with genuine extraction. Lead manufacturing hubs (institutional beneficiaries with arbitrage options) experience it as pure Rope \u2014 a coordination mechanism that enables specialization and lowers consumer prices. Peripheral suppliers and labor forces (powerless agents with trapped exit) experience it as Snare \u2014 dependency that extracts through wage suppression, technology lock-in, and coercive contracting. Intermediate suppliers experience Tangled Rope \u2014 real knowledge transfer and value-addition alongside enforced standards and extraction. The constraint's extractiveness has increased from 0.38 to 0.52 over the interval as manufacturing complexity has grown, wage gaps have widened despite globalization, and peripheral regions have deepened their dependency. Theater ratio has also risen, reflecting increasing performative compliance (labor audits, sustainability certifications) that persist regardless of actual conditions. Trade governance institutions and labor standards coalitions are creating a sunset pathway, but its realism depends on whether automation benefits peripheral regions or further concentrates gains.",
+    "key_agents": [
+      "Lead Manufacturing Hubs: Primary beneficiaries (institutional/arbitrage) \u2014 orchestrate supply chains, set specifications, control final products, capture largest margin. Can relocate, shift suppliers, or reshape chains at will.",
+      "Peripheral Suppliers: Primary victims (powerless/trapped) \u2014 locked into specifications, pricing, technology requirements set by lead hubs. Capital investments are sunk; alternative markets are unavailable or substantially lower-margin.",
+      "Labor Forces in Dependent Regions: Primary victims (powerless/trapped) \u2014 dependent on manufacturing employment with no alternative income sources. Wage suppression, unsafe conditions, lack of regulatory protection. Extraction through geographic and economic constraints.",
+      "Intermediate Tier Suppliers: Secondary victims (organized/constrained) \u2014 benefit from supply chain access and technical knowledge but face enforced standardization, IP constraints, and vertical integration pressure. Higher power than peripheral suppliers but still constrained.",
+      "Consumer Markets: Beneficiaries (institutional/arbitrage) \u2014 benefit from low prices enabled by extraction elsewhere in chain. Have switching options and no suppression.",
+      "Trade Governance Institutions: Organized actors (organized/constrained) \u2014 labor standards enforcement, transparency initiatives, and trade bloc labor requirements creating alternative pathways. See the constraint as having a sunset.",
+      "National Trade Barriers & Regulatory Apparatus: Institutional actors maintaining performative enforcement (institutional/arbitrage) \u2014 tariffs and regulations persist through inertia even as their functional effect degrades and supply chains route around them."
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, reflecting real value extraction through wage suppression, dependency lock-in, and regulatory arbitrage. The value is elevated (vs. 0.38 historically) because peripheral regions have deepened manufacturing specialization, increasing exit costs. The increase from 0.38 to 0.52 over the interval tracks rising wage gaps and supply-chain complexity that magnify asymmetries. Suppression (0.48): Moderate, reflecting significant but not total barriers to exit. Peripheral suppliers face high costs (sunk capital, technical dependence, contract lock-in) but some alternatives exist (unionization, regionalization, supplier defection, domestic supply chains). Labor forces face higher suppression (geographic isolation, poverty traps, lack of alternatives) but some mobility exists. Theater ratio (0.55): Moderate, reflecting performative compliance mechanisms (labor audits, sustainability certifications, impact reporting) that proliferate while actual extraction continues. The increase from 0.35 to 0.55 reflects growth in theatrical certification requirements alongside persistent wage suppression and poor conditions. Theater is not dominant (0.55 < 0.70) because the constraint does have real coordination content \u2014 supply chains genuinely function, logistics genuinely synchronize, quality standards genuinely enforce.",
+    "directionality_logic": "Lead manufacturing hubs (institutional/arbitrage) derive low d values: they benefit from the constraint and can exit at will. The beneficiary status + arbitrage exit option yields d \u2248 0.10, producing negative \u03c7 values (constraint subsidizes them). Peripheral suppliers (powerless/trapped) derive high d values: they bear costs and cannot exit. Victim status + trapped exit option yields d \u2248 0.95, producing high f(d) \u2248 1.42 (maximum experienced extraction). Intermediate suppliers (organized/constrained) occupy middle ground: they have some coordination benefits and some agency, but face real costs and constrained exit. Victim status + constrained exit yields d \u2248 0.55, producing moderate f(d) \u2248 0.75. The analytical observer at civilizational scope derives d \u2248 0.72 (balanced perception of coordination and extraction). Scope amplification (global \u03c3 = 1.2) means the constraint's extractiveness is magnified at larger scales: local supplier networks might show \u03c7 = 0.30 (tangled rope), but global coupling amplifies this to \u03c7 \u2248 0.62 (snare threshold).",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. The lead manufacturing hub sees Rope (pure coordination enabling specialization and efficiency). The peripheral supplier sees Snare (pure extraction through locked dependency). The intermediate supplier sees Tangled Rope (genuine value-addition alongside enforced asymmetry). The labor force sees Snare (trapped extraction with minimal coordination benefit). The consumer market sees Rope (low prices through coordination). The trade governance coalition sees Scaffold (sunset via labor standards and nearshoring). The national trade barrier apparatus sees Piton (performative enforcement of rules that routes around enforcement). The analytical observer sees Tangled Rope (both functions genuinely structural). All perspectives derive from the same base metrics but produce divergent classifications because their exit options and structural relationships differ fundamentally. No perspective is 'wrong' \u2014 each is a legitimate reading from its position.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED BY PERSPECTIVAL PLURALISM: The constraint cannot be collapsed to a single type without erasure. A pure Rope classification would require ignoring the powerless agents' actual experience of extraction and trap. A pure Snare classification would require denying the genuine coordination value that enables global specialization and efficiency. The Tangled Rope classification from the analytical perspective captures the structural dual nature: the constraint genuinely coordinates value-chain efficiency AND genuinely extracts through asymmetric dependencies. The perspectives collectively resolve the mandatrophy by showing that all six types are legitimate readings from different structural positions. The key mandatrophy insight: the constraint does not collapse to a single type because its functions are genuinely dual \u2014 the coordination and extraction are not a ratio but two simultaneous structural effects. The sunset mechanism (labor standards, nearshoring, automation) is real but slow \u2014 decades timescale \u2014 and its outcome depends on whether automation in peripheral regions reduces extraction (supporting Scaffold) or concentrates gains (supporting persistent Snare)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "supply_chain_vulnerability",
+      "labor_standard_harmonization",
+      "regional_manufacturing_dependence"
+    ],
+    "dual_formulation_note": "Cross-border manufacturing coupling decomposes into three related constraints: (1) supply chain vulnerability (geopolitical risk), (2) labor standard harmonization (extraction mechanism), and (3) regional manufacturing dependence (structural entrenchment). This story captures the coupling constraint itself \u2014 the structural lock-in mechanism. The three downstream constraints reflect different perspectives on how the coupling manifests."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.58
+    }
+  ]
+}

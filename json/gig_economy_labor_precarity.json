@@ -1,0 +1,227 @@
+{
+  "header": {
+    "constraint_id": "gig_economy_labor_precarity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gig"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Gig Economy Labor Precarity",
+    "topic_domain": "labor/economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_corporations",
+      "consumer_base"
+    ],
+    "victims": [
+      "gig_workers",
+      "labor_market_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Precarious Gig Worker",
+      "comment": "PERSPECTIVE 1: GIG WORKER (SNARE) \u2014 Faces minimal ability to exit: economic dependency, lack of alternative employment options in their region, no access to benefits if they leave. The constraint extracts through wage suppression, forced acceptance of arbitrary deactivation, and externalization of all business risk. Bears maximum extraction with no genuine coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Organized Worker Coalition",
+      "comment": "PERSPECTIVE 2: ORGANIZED WORKER COALITION (TANGLED ROPE) \u2014 Faces high but surmountable exit costs (organizing campaigns, union drives, regulatory advocacy). Experiences both coordination benefits (collective bargaining potential, mutual aid networks) and significant extraction (platform wage suppression, algorithmic management, risk externalization). Significant agency through collective action, though constrained by legal and political barriers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Corporation",
+      "comment": "PERSPECTIVE 3: PLATFORM CORPORATION (ROPE) \u2014 Experiences the constraint as pure coordination: efficiently matching supply and demand, reducing friction in labor allocation, creating network benefits for consumers. Extraction flows toward this agent; they perceive only coordination functions. High exit optionality (capital mobility, multi-market presence) and benefits from wage suppression through labor supply atomization."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Consumer Beneficiary",
+      "comment": "PERSPECTIVE 4: CONSUMER (ROPE) \u2014 Benefits from low prices and on-demand access enabled by suppressed worker compensation. Perceives the constraint as efficient coordination between supply and demand. Extraction is hidden in reduced consumer prices; genuine coordination function exists (efficient matching). Exit optionality is high (can use competing platforms or traditional services)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Market as Systemic Actor",
+      "comment": "PERSPECTIVE 5: LABOR MARKET STABILITY (TANGLED ROPE) \u2014 Gig economy expands labor supply while degrading protections and benefits. The constraint coordinates matching of workers to tasks while extracting through wage suppression and benefit externalization. Long-term labor market stability is compromised \u2014 birth of a precariat class with reduced human capital investment, reduced consumer demand, reduced intergenerational mobility. Coordinating function exists (task matching) alongside asymmetric extraction (cost socialization)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Regulatory Reform Coalition",
+      "comment": "PERSPECTIVE 6: REGULATORY REFORM COALITION (SCAFFOLD) \u2014 Organized labor advocates, regulators, and political movements see the gig economy constraint as a temporary institutional failure with a sunset clause. Potential exit paths include: reclassification of workers as employees (EU model), portable benefits systems (sectoral bargaining), algorithmic transparency requirements. Organizing power exists, and a transition pathway is visible. The constraint is temporary if policy intervention succeeds \u2014 hence scaffold classification. Suppression is high during the interval, but the coalition perceives it as declining."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Automated Dispatch Ritual",
+      "comment": "PERSPECTIVE 7: ALGORITHMIC DISPATCH SYSTEM (PITON) \u2014 The algorithmic management system (job assignment, performance ratings, deactivation) is largely performative. The system's stated purpose is efficient matching and quality control, but its actual function is behavioral control and wage suppression through opaque metrics. Workers experience it as degraded \u2014 ritual rather than genuine quality feedback. The system persists through institutional inertia (regulatory capture, technical opacity, difficulty of alternatives) rather than functional necessity. Theater ratio high; genuine coordination function low."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (MOUNTAIN \u2014 FALSE SUMMIT) \u2014 From a civilizational/universal perspective, the gig economy risk is that observers naturalize precarity as an immutable feature of labor market evolution: 'Technology has made traditional employment obsolete' or 'Worker flexibility requires accepting precarity.' This perspective risks treating a contingent institutional arrangement (regulatory capture, platform dominance, deliberate benefit externalization) as a law of nature. The engine's false summit detector should flag this: the structural data reveals precarity is engineered through policy choice and platform design, not natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "worker_exit_optionality_ambiguity",
+      "question": "Are gig workers genuinely trapped (no alternatives) or identity_locked (internalized precarity as normal/inevitable)?",
+      "resolution_mechanism": "Longitudinal surveys tracking workers who exit gig platforms: do they report reduced suppression post-exit? Can they name alternative employment? Has internalized precarity persisted after structural exit?",
+      "impact": "If trapped: maximum f(d) value, snare classification stable. If identity_locked: perspectival gap between trapped and analytical observers; workers perceive immutability from identity frame rather than structural barriers. Diagnostic for whether suppression is structural or internalized.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether gig workers are structurally trapped or identity-locked in precarity"
+    },
+    {
+      "id": "coordination_function_genuineness",
+      "question": "Does the gig economy coordinate labor allocation with minimal friction, or is the 'efficiency' primarily achieved through wage suppression and benefit externalization?",
+      "resolution_mechanism": "Comparative cost analysis: gig economy matching efficiency vs traditional employment/temp agencies when full worker costs (benefits, safety, training) are included. Counterfactual: what would matching efficiency be if all costs were internalized?",
+      "impact": "If genuine coordination: tangled rope classification confirmed \u2014 extraction layered onto real efficiency gains. If false efficiency: snare classification strengthens \u2014 perceived coordination benefit is primarily artifact of cost externalization. Impacts classification across all non-mountain perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether gig economy efficiency is genuine or externality-driven"
+    },
+    {
+      "id": "platform_revenue_dependence_distribution",
+      "question": "How much of gig platform revenue comes from wage suppression vs genuine technological efficiency? What proportion of consumer surplus comes from suppressed worker compensation vs eliminated intermediaries?",
+      "resolution_mechanism": "Platform financial analysis; counterfactual modeling with platform-absorbed worker costs; regional comparison of wage levels in gig vs traditional sectors controlling for task complexity.",
+      "impact": "High suppression proportion: strengthens snare. Low proportion: tangled rope model holds. Affects interpretation of whether constraint is primarily extractive or has genuine coordination function.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Revenue attribution between suppression and efficiency"
+    },
+    {
+      "id": "regulatory_sunset_viability",
+      "question": "Is the scaffold perspective's sunset (regulatory reclassification, portable benefits, algorithmic transparency) actually achievable or aspirational/contingent on political conditions?",
+      "resolution_mechanism": "Policy analysis of existing regulatory attempts (EU worker reclassification, sectoral bargaining proposals); barriers to implementation; political economy of platform opposition.",
+      "impact": "If achievable: scaffold classification robust, temporal horizon for extraction decline is measurable. If aspirational: scaffold is perceptual rather than structural; constraint may be long-term snare/tangled rope. Affects generational and civilizational time horizon classifications.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory sunset for gig economy precarity is structurally viable"
+    },
+    {
+      "id": "algorithmic_opacity_as_suppression_mechanism",
+      "question": "Is the opacity of algorithmic job assignment and performance metrics a necessary feature of efficient dispatch or a deliberate mechanism for wage suppression and behavioral control?",
+      "resolution_mechanism": "Comparative analysis of platform algorithms that use transparent vs opaque metrics; worker productivity/satisfaction under transparent algorithms; platform reluctance to adopt transparency; hidden algorithm experiments (A/B tests designed to suppress wages).",
+      "impact": "If necessary: piton classification holds (performative but necessary). If deliberate: piton classification strengthens (theater serving suppression function); snare perspective strengthened. Diagnostic for whether algorithmic management coordinates or extracts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether algorithmic opacity is functional necessity or suppression mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.61
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The gig economy labor precarity constraint represents a hybrid extraction-coordination mechanism that has evolved over the past 15 years as ride-sharing, delivery, and task platforms have expanded. The constraint exhibits tension between genuine labor market coordination (matching workers to tasks with minimal friction) and systematic worker benefit externalization (shifting costs for benefits, safety, training, and stability to workers themselves). The structural gap between platform claims (efficient coordination, worker flexibility) and worker experience (wage suppression, arbitrary deactivation, precarity) generates multiple classification types from different perspectives. Theater ratio (0.55) reflects that algorithmic management systems present themselves as neutral, efficient tools while actually functioning as behavioral control mechanisms disguised as performance metrics. The measurement trajectory shows increasing extractiveness and theater ratio over the interval, indicating that platforms have progressively layered extraction mechanisms onto their coordinate functions while making these mechanisms less visible (higher theater).",
+    "key_agents": [
+      "Gig Workers: Primary victims (powerless/trapped) \u2014 face wage suppression, benefit exclusion, algorithmic control, arbitrary deactivation, economic dependency",
+      "Organized Worker Coalitions: Secondary actors (moderate/constrained) \u2014 building collective power through unions, regulatory advocacy, mutual aid networks; face barriers but have exit pathways",
+      "Platform Corporations: Primary beneficiaries (institutional/arbitrage) \u2014 capture value through labor supply atomization, wage suppression, benefit externalization, regulatory arbitrage; high exit optionality",
+      "Consumer Base: Secondary beneficiaries (powerful/arbitrage) \u2014 benefit from suppressed prices enabled by externalized worker costs; perceive efficient coordination",
+      "Labor Market Stability: Systemic victim (powerful/constrained) \u2014 faces degradation through precariat expansion, reduced intergenerational mobility, reduced consumer demand, reduced human capital investment",
+      "Regulatory Reform Coalition: Organized agents (organized/mobile) \u2014 labor advocates, progressive regulators, political movements pursuing reclassification and portable benefits as exit pathways",
+      "Algorithmic Dispatch System: Institutional actor (institutional/constrained) \u2014 maintains performative management ritual; theater serves suppression function",
+      "Analytical Observer: Civilizational context (analytical/analytical) \u2014 risks naturalizing contingent policy choices as immutable technological/economic laws"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Platforms suppress wages systematically (20-40% below comparable employment when benefits are included), externalize all risk and costs, and maintain atomized labor supply preventing collective bargaining. However, genuine efficiency gains exist (reduced matching friction, lower transaction costs) that provide some non-extractive value. The intermediate value reflects hybrid coordination-extraction structure. Suppression (0.68): High. Workers face multiple barriers: no alternative employment in regions without platform ubiquity, economic dependency (minimum income requirements), regulatory exclusion from worker protections, algorithmic control systems that constrain behavior, arbitrary deactivation risks. Barriers are enforced through platform policies, regulatory capture, and labor market concentration. Theater ratio (0.55): Moderate-high. Algorithmic management systems claim to be neutral performance metrics but function as behavioral control and wage suppression tools. Algorithmic assignment opacity is justified as efficiency but serves suppression. The ritual of transparent metrics (ratings, acceptance rates) provides the appearance of meritocratic feedback while actual criteria remain hidden. The trajectory shows increasing theater over the interval as platforms have invested in opacity and mystification of algorithmic systems.",
+    "directionality_logic": "Directionality is derived from structural position within the extraction flow. Workers (trapped exit) + victim status derive d \u2248 0.95, producing high f(d) and experienced \u03c7. Organized coalitions (constrained exit) + mixed beneficiary/victim derive d \u2248 0.55, moderate \u03c7. Platform corporations (arbitrage exit) + beneficiary status derive d \u2248 0.10, low/negative \u03c7. Consumers (arbitrage exit) + beneficiary status derive d \u2248 0.15, low \u03c7. Labor market (constrained exit) + victim status derive d \u2248 0.70, high \u03c7. The directed flow is clearly upward toward platforms and consumers, outward to workers. Exit optionality is the critical differentiator: trapped workers cannot escape the extraction; organized coalitions can build power; platforms have capital mobility and multi-market options.",
+    "perspectival_gap": "The constraint demonstrates maximum perspectival divergence. Platform corporations and consumers see rope (efficient coordination, matching, reduced friction). Organized coalitions see tangled rope (mixed coordination benefit with high extraction). Individual workers see snare (pure extraction with no exit). Labor market sees systemic degradation (tangled rope at civilizational scale). The regulatory coalition sees a temporary problem with a sunset (scaffold). The algorithmic system sees its own ritual as performative (piton). The civilizational analytical observer risks seeing immutable natural law (false mountain) \u2014 that 'gig economy is inevitable' or 'flexibility requires precarity.' The gap reveals that classification depends entirely on structural position: beneficiaries perceive coordination; targets perceive extraction; observers perceive law.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint shows that tangled rope is the correct classificatory anchor. The base properties show genuine coordination function (labor matching efficiency, reduced friction) layered with systematic extraction (wage suppression, benefit externalization, algorithmic control). The mandatrophy is resolved by showing that: (1) the coordination function is real but not the primary extraction driver; (2) the extraction mechanism is not accidental but designed (platform investment in algorithmic opacity, benefit exclusion, labor supply atomization); (3) perspectives diverge based on position in the extraction flow, not perception disagreement. The false mountain perspective (analytical observer naturalizing precarity) is correctly flagged by the structural data \u2014 extractiveness (0.58) exceeds mountain threshold, beneficiary/victim structure exists, and active enforcement is required. The organizational coalition's scaffold perspective is conditional on policy implementation (regulatory reclassification, portable benefits) \u2014 if sunset mechanisms fail, the constraint becomes long-term snare. The piton perspective reveals that algorithmic management's performative function serves the extraction goal, not genuine coordination. CRITICAL: the mandatrophy is NOT resolved by choosing one type. Instead, it is resolved by showing that the perspectival structure itself IS the constraint \u2014 the ability of beneficiaries to perceive rope while victims perceive snare, while observers naturalize the arrangement as law, is what sustains the extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wage_suppression_labor_markets",
+      "benefit_externalization_welfare_systems",
+      "algorithmic_management_behavioral_control"
+    ],
+    "dual_formulation_note": "Gig economy labor precarity decomposes into three structurally distinct constraints: (1) wage suppression in task-based labor markets (\u03b5 \u2248 0.50, snare from worker perspective), (2) benefit externalization shifting costs to public welfare systems (\u03b5 \u2248 0.45, tangled rope), (3) algorithmic management as behavioral control (\u03b5 \u2248 0.40, piton with suppression function). Each has different measurement trajectories and different policy exit pathways. This story represents the aggregate constraint; decomposed stories should track each mechanism separately."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

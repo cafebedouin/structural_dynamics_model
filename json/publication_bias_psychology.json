@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "publication_bias_psychology",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pubbias"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Publication Bias in Psychology Research",
+    "topic_domain": "psychology/research_methodology/epistemology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "researchers_with_positive_results",
+      "journals_with_impact_metrics",
+      "funding_agencies_rewarding_novelty"
+    ],
+    "victims": [
+      "field_empirical_reliability",
+      "unsuccessful_replication_researchers",
+      "evidence_accumulation"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Failed Replicator",
+      "comment": "PERSPECTIVE 1: FAILED REPLICATOR (SNARE) \u2014 Graduate student or early-career researcher who invested months conducting a careful replication study, found null results, and faces publication barriers due to bias against negative findings. Trapped by career dependency on publication record; has no alternative outlet for rigorous null results. Suppression is structural: journals reject null results at 5-10x higher rates than positive results, and career committees weight accepted publications, not attempts. Maximum experienced extraction \u2014 the researcher's labor has scientific value but the constraint renders it invisible."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Psychology Subfield",
+      "comment": "PERSPECTIVE 2: PSYCHOLOGY SUBFIELD (TANGLED ROPE) \u2014 Benefits from the coordination function: publication bias creates incentive structure that drives ambitious hypothesis testing and methodological innovation. Genuine coordination problem exists \u2014 journals need a way to distinguish groundbreaking results from noise, and positive findings get more scrutiny than null results. BUT this coordination is coupled with asymmetric extraction: the subfield accumulates biased literature, failed replications go unpublished, meta-analyses must correct for selection bias, and the cumulative knowledge base reflects publication venue incentives more than empirical reality. High suppression (replication researchers face barriers) but not total (meta-science now publishes negative results). Significant active enforcement of the bias through editorial decisions and peer review framing."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Prolific Lab",
+      "comment": "PERSPECTIVE 3: PROLIFIC LAB (ROPE) \u2014 Institutional beneficiary (experienced high-impact researchers with ability to generate positive findings through multiple studies or exploratory hypothesis testing). Experiences publication bias as coordination: the system rewards novel positive findings with visibility and citations, enabling their continued funding and recruitment. Exit option arbitrage available \u2014 they can publish null results in secondary venues, can pre-register studies to reduce researcher degrees of freedom, or can shift to meta-science. But they face weak incentive to do so because the current system amplifies their success. Experiences constraint as coordination mechanism, not extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Science Movement",
+      "comment": "PERSPECTIVE 4: OPEN SCIENCE MOVEMENT (SCAFFOLD) \u2014 Organized agents (Open Science Framework, PLoS ONE, preprint servers, registered reports initiatives) see publication bias as a temporary coordination failure being resolved through structural reforms. Pre-registration reduces researcher degrees of freedom and justifies null results. Registered reports shift editorial decisions before data collection, removing selective outcome reporting. arXiv and PsyArXiv enable null findings to reach audiences without journal gatekeeping. These mechanisms build alternative pathways that bypass traditional journal bias. Theater ratio lower here (pre-registration is functional, not performative) and sunset clause real: as preregistration norms mature and open-science venues accumulate impact, traditional journal bias becomes less extractive. Estimated sunset: 15-25 years for norms to fully mature in academic hiring and funding decisions."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Impact Factor System",
+      "comment": "PERSPECTIVE 5: IMPACT FACTOR SYSTEM (PITON) \u2014 The journal impact factor metric was designed to measure journal quality and has mutated into a proxy for individual researcher quality and institutional prestige. Journals use it to justify selection bias toward novel, positive, high-impact-seeming results. But the metric itself has degraded: it measures venue citation frequency, not individual paper reliability, and is easily gamed through self-citations and special issues. The entire institutional apparatus \u2014 impact factors, journal tiers, prestige ranking \u2014 persists through inertia (university hiring committees use it, funding agencies use it) despite documented failure to predict individual paper reliability or reproducibility. Theater ratio high (0.68): the institutional enforcement of impact-factor-driven selection is substantially performative ritual masking outdated quality metrics."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / FALSE SUMMIT VIEW (MOUNTAIN) \u2014 From a civilizational perspective, it is tempting to treat publication bias as an immutable feature of how scientific publishing works: signal-to-noise filtering is inherent to any journal system, positive findings are more publishable than null results by nature of information content, and some degree of bias is inevitable. This perspective naturalizes the constraint as a mountain. However, the structural data reveals this as a false summit: publication bias is not a law of nature but a contingent institutional arrangement driven by journal business models, citation metrics, career incentive structures, and lack of infrastructure for null results. These are all changeable \u2014 and the open science movement demonstrates they are already changing."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "true_effect_size_detectability",
+      "question": "How much of the apparent 'bias toward positive results' reflects genuine lower statistical power for null studies vs. actual editorial/reviewer bias against null findings?",
+      "resolution_mechanism": "Comparison of effect sizes across published vs unpublished studies; analysis of publication bias in preregistered studies where outcomes cannot be cherry-picked; meta-analytic correction for selection effects",
+      "impact": "If primarily power issue: suppression metric should be lower (0.40), classification may shift to Rope from some perspectives. If primarily editorial bias: suppression confirmed near 0.62, tangled rope classification stable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether publication bias is driven by statistical power or editorial gatekeeping"
+    },
+    {
+      "id": "preregistration_adoption_barrier",
+      "question": "Does preregistration adoption face fundamental barriers (cost, complexity, discipline heterogeneity) that prevent it from replacing traditional journal submission?",
+      "resolution_mechanism": "Longitudinal tracking of preregistration rates across psychology subdisciplines; analysis of adoption barriers in low-power research groups; comparison of preregistered vs traditional publication timelines",
+      "impact": "If barriers are surmountable: open science scaffold is real and sunset is achievable within 15-25 years. If barriers are fundamental: scaffold perspective is aspirational, publication bias remains structural long-term.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether preregistration can scale as alternative to traditional publishing"
+    },
+    {
+      "id": "incentive_alignment_in_institutions",
+      "question": "Can academic institutions shift hiring/promotion criteria away from impact-factor-weighted publication counts while maintaining quality gatekeeping?",
+      "resolution_mechanism": "Survey of institutional hiring policies; longitudinal analysis of researcher quality metrics in institutions that have de-emphasized impact factors; economic modeling of institutional incentive structures",
+      "impact": "If institutions can shift: open science sunset becomes credible, scaffold and piton perspectives confirmed. If institutional lock-in persists: publication bias becomes harder to disrupt at individual researcher level even as norms change.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether institutions can restructure hiring incentives away from publication proxies"
+    },
+    {
+      "id": "null_result_quality_heterogeneity",
+      "question": "Are null results systematically lower in research quality than positive results, or is the quality distribution identical across publication bias outcomes?",
+      "resolution_mechanism": "Comparison of preregistered null vs positive results using standardized quality metrics (sample size, effect size precision, methodology rigor); longitudinal tracking of null result replicability",
+      "impact": "If null results are systematically lower quality: some degree of publication bias may serve legitimate gatekeeping function. If quality distribution is identical: bias is purely extractive, no gatekeeping benefit exists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether null results differ systematically in research quality"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Publication bias in psychology represents a structural extraction mechanism disguised as quality gatekeeping. Researchers reporting positive findings receive disproportionate publication access, visibility, and career rewards compared to those reporting null or negative findings, even when the research quality is identical. This creates a systematic bias toward false positives in the accumulated literature and suppresses replication attempts. The constraint exhibits genuine coordination functions (journals need mechanisms to prioritize limited publication space; positive findings do carry more information than null results) but couples these with asymmetric extraction (replication researchers are penalized; the field accumulates distorted empirical knowledge; career advancement depends on publication venue rather than finding validity). The tea leaves reading: extractiveness increased from 0.35 to 0.58 over the interval as competitive pressures intensified and impact factors became more weaponized for career assessment. Theater ratio increased from 0.52 to 0.68 as the performative elements of impact-factor-driven selection became more visible. Recent reforms (preregistration, registered reports, open-science venues) have begun pushing back against the extractiveness, creating a slight reduction at T=30, but the constraint remains firmly entrenched in institutional structures.",
+    "key_agents": [
+      "Failed Replicator: Primary victim (powerless/trapped) \u2014 researcher conducting null replication faces publication barriers and career consequences; no exit option",
+      "Prolific Lab: Primary beneficiary (institutional/arbitrage) \u2014 generates positive findings; experiences publication bias as coordination incentive; can exit by publishing null results or preregistering but weak incentive to do so",
+      "Psychology Subfield: Secondary actor (moderate/constrained) \u2014 accumulates biased literature; benefits from incentive structure for ambitious hypothesis testing but pays cost in false positives and wasted replication attempts",
+      "Journal Editorial System: Institutional gatekeeper (institutional/arbitrage) \u2014 enforces publication bias through selection mechanisms; experiences constraint as solving coordination problem of prioritizing scarce publication slots",
+      "Open Science Movement: Organized coalition (organized/constrained) \u2014 building alternative venues (preprint servers, registered reports, OSF) with lower bias; face barrier of institutional inertia in hiring/funding decisions but have agency to shift outcomes",
+      "Impact Factor Metric: Institutional artifact (institutional/arbitrage) \u2014 measures journal citation frequency but has become proxy for individual researcher quality and paper reliability; persists through inertia; reinforces publication bias at institutional level"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts from unsuccessful replication researchers (lost opportunity for publication and career advancement) and from the field (distorted empirical base). But the extraction is not maximal (0.70+) because publication bias is not purely extractive \u2014 there is a genuine coordination problem (journals cannot publish all submissions) and positive findings do carry more information content. The extractiveness reflects primarily the asymmetry in how journal decisions treat positive vs null results, the lack of alternatives for null result publication, and the career penalty structure. Suppression (0.62): Moderate-high. Structural barriers to publishing null results exist: journal editors and reviewers preferentially accept positive findings at 5-10x higher rates; negative results are 0.5-2% of academic publishing despite representing a large fraction of actual research; career advancement metrics weight acceptance rather than research validity. But suppression is not total (0.70+) because some venues now publish null results (PLoS ONE, meta-science journals, preprint servers). Theater ratio (0.68): High-moderate. Impact factors, journal tiers, and impact metrics function partly as quality signals but have become substantially performative \u2014 universities and funding agencies use them as proxies for individual researcher quality despite documented poor correlation with individual paper reliability or reproducibility. The ritual of journal-based gatekeeping through prestige metrics is more theater than function.",
+    "perspectival_gap": "The prospectival structure is diagnostically clear: those who benefit (prolific researchers, high-impact journals, funding agencies rewarding novelty) classify the constraint as coordination (Rope). Those who are harmed (failed replicators, the empirical literature, early-career researchers outside elite labs) classify it as extraction (Snare). Those with agency to change it (open science coalition, forward-thinking institutions) see it as a temporary problem in transition (Scaffold). The field as a whole experiences it as mixed \u2014 gaining coordination benefits (incentive to do rigorous work, prioritization of surprising findings) but paying extraction costs (false positives, suppressed replications, degraded evidence base). The analytical observer's temptation to call it Mountain (inherent to how peer review works) is revealed as naturalization \u2014 publication bias is not inherent to peer review, it is a specific feature of journal-based publishing coupled with impact-factor-driven career incentives. Alternative structures (preregistration, registered reports, preprint servers) demonstrably reduce the bias, proving it is contingent, not natural.",
+    "directionality_logic": "Each perspective's experienced extractiveness (chi) is derived from the base extractiveness (0.58) scaled by the agent's directionality factor f(d). Beneficiaries with arbitrage exit experience negative or minimal chi \u2014 the constraint subsidizes them. Victims with trapped exit experience maximum chi \u2014 the constraint extracts from them. The modulation reflects that the same structural constraint (publication bias) is experienced as helpful coordination by some agents and as impossible barrier by others. The open science coalition's lower experienced extraction reflects their organized power and real exit options (building alternative venues), even though the base constraint remains severe for individual researchers still within traditional publishing systems.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating that publication bias is a genuine Tangled Rope \u2014 it combines coordination function (prioritizing scarce publication slots, incentivizing rigorous work) with asymmetric extraction (penalizing null results, biasing the literature). The temptation to classify it as pure Snare (extraction only) ignores the coordination benefits journals and researchers genuinely receive. The temptation to classify it as pure Rope (coordination only) ignores the suppression and asymmetry. The Tangled Rope classification is correct because both functions are structurally present: the journal system does coordinate research dissemination AND does extract disproportionately from unsuccessful replication researchers. The open science reforms (preregistration, registered reports, open venues) are beginning to reduce the asymmetry by lowering barriers to null result publication and removing researcher degrees of freedom, gradually shifting the constraint from Tangled Rope toward Rope. This shift is measurable in the mild extraction decline at T=30 (0.58 down from 0.62 peak), reflecting early reform impact. The mandatrophy is resolved by acknowledging that both classification tensions (coordination vs extraction, institutional necessity vs arbitrary extraction) are real, and that the movement toward open science is not removing the coordination function but is removing the asymmetric extraction \u2014 shifting the constraint closer to pure coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "replication_crisis_psychology",
+      "researcher_incentive_misalignment",
+      "false_positive_accumulation"
+    ],
+    "dual_formulation_note": "Publication bias in psychology is a constraint family with three distinct stories: (1) journal gatekeeping mechanism (publication_bias_psychology, this file, \u03b5\u22480.58, Tangled Rope), (2) individual researcher career incentive structure (researcher_incentive_misalignment, \u03b5\u22480.65, Snare), (3) false positive literature accumulation (false_positive_accumulation, \u03b5\u22480.72, Snare). Each story has distinct \u03b5 values because they measure the constraint through different observables: journal-level coordination, individual-level extraction, and field-level epistemic cost. Decomposition required because \u03b5 differs by 0.14 between lowest and highest stories. Linked via network.affects_constraints to enable contamination propagation analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "labor_market_signaling_asymmetry",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lmsa"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Labor Market Signaling Asymmetry",
+    "topic_domain": "labor_economics/institutional_coordination",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "credentialed_workers",
+      "educational_institutions"
+    ],
+    "victims": [
+      "unschooled_competent_workers",
+      "lower_income_job_seekers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Unschooled Competent Worker",
+      "comment": "PERSPECTIVE 1: UNSCHOOLED COMPETENT WORKER (SNARE) \u2014 Trapped by credential requirements regardless of actual job-relevant competence. Cannot signal capability without formal qualification. Faces structural barriers: credential costs are prohibitive, employer screening is credential-based, alternative pathways are blocked by institutional design. Maximum extraction relative to agent's structural position \u2014 cannot exercise exit despite possessing actual skills."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Lower-Income Job Seeker",
+      "comment": "PERSPECTIVE 2: LOWER-INCOME JOB SEEKER (TANGLED ROPE) \u2014 Faces high credential costs relative to income. Some coordination benefit exists: formal credentials do enable job access and earnings mobility, creating genuine value. However, extraction exists: must pay signal costs (tuition, time) that wealthier competitors can absorb more easily, creating earnings asymmetry independent of competence. Exit is possible but costly \u2014 retrain, migrate, network-build \u2014 hence constrained rather than trapped."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Credentialed Worker Cohort",
+      "comment": "PERSPECTIVE 3: CREDENTIALED WORKER COHORT (ROPE) \u2014 Experiences constraint as pure coordination mechanism: their credentials efficiently signal competence to employers, solving the information asymmetry problem. Earns wage premium from signaling capacity. Can arbitrage across labor markets due to portable credentials. The coordination function creates genuine value; extraction runs toward this agent, not away."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Alternative Credentialing Coalition",
+      "comment": "PERSPECTIVE 4: ALTERNATIVE CREDENTIALING COALITION (SCAFFOLD) \u2014 Organized agents (bootcamps, apprenticeships, competency-based hiring) see the credential barrier as a temporary coordination failure with addressable sunset logic. Apprenticeship systems, skills-based hiring, and project portfolios create alternative signaling mechanisms. As these mature and gain employer acceptance, the traditional educational credential's extraction mechanism weakens. The sunset clause is conditional: if alternative signals gain sufficient institutional legitimacy (5-10 year horizon), wage asymmetry decouples from credential status."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Educational Credentialing System",
+      "comment": "PERSPECTIVE 5: EDUCATIONAL CREDENTIALING SYSTEM (PITON) \u2014 The institutional system maintains credential gates through inertia despite degraded signaling function. Credentials signal educational attainment more reliably than job readiness; employers use them as screening proxies anyway. The system persists through path dependence (employers trust what they trust) and institutional coupling (HR departments built around credential-based screening). Theater ratio (0.64) reflects that credential validation is substantially performative: diploma ownership is verified, but actual competence matching to job requirements is often poor."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational analytical position, information asymmetry between employers and job seekers is inherent to labor markets: employers cannot directly observe competence before hiring, necessitating some signaling mechanism. This perspective sees credential barriers as natural, immutable, and functional. However, the structural data reveals this as false naturalization: the credential requirement is contingent on institutional design choices (licensing, hiring norms, wage-setting conventions), not inherent to the information problem. Alternative signaling mechanisms (apprenticeships, portfolios, competency assessment) solve the same information problem with different distributional consequences."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "signal_reliability_vs_cost_tradeoff",
+      "question": "What portion of the credential wage premium reflects genuine signal reliability (employer information reduction) versus rent extraction (artificial scarcity)?",
+      "resolution_mechanism": "Comparative wage analysis: credential holders with low job-relevant skills vs non-credentialed workers with demonstrated high competence; employer hiring data showing credential-competence mismatch; earnings correlations with task-specific assessment scores vs educational attainment",
+      "impact": "If signal reliability dominates (>70% of premium): constraint is primarily coordination (Rope dominates). If extraction dominates (>40% of premium is credential rent): constraint is primarily extraction (Snare/Tangled Rope dominates). Current estimates suggest 35-50% extraction component.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Wage premium decomposition: signal reliability vs rent extraction"
+    },
+    {
+      "id": "alternative_signal_adoption_rate",
+      "question": "Are alternative signaling mechanisms (bootcamps, portfolios, apprenticeships) achieving genuine employer acceptance at rates that would justify scaffold classification?",
+      "resolution_mechanism": "Hiring data: proportion of new hires from alternative pathways; wage parity studies comparing alternative-credentialed workers to traditional degree holders controlling for task performance; employer survey data on signal trust.",
+      "impact": "If adoption rates exceed 30% in key sectors and wage gaps close to <10% controlled for performance: scaffold sunset is real and timeline is 5-10 years. If adoption stalls <15%: scaffold is aspirational, not structural \u2014 constraint persists as Tangled Rope/Snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Market adoption rate of alternative signaling mechanisms"
+    },
+    {
+      "id": "credential_inflation_dynamics",
+      "question": "Is the extractiveness of the credential system increasing over time due to credential inflation (degree requirements rising faster than job demands)?",
+      "resolution_mechanism": "Historical analysis: degree requirements for job categories over 20-year periods; skill-level requirements vs education-level requirements in job postings; comparison of credential attainment vs task complexity growth.",
+      "impact": "If credential inflation is documented: extractiveness is increasing (measurements should show rising base_extractiveness over time). If task complexity is rising faster than credential requirements: extractiveness is constant or declining. Inflation suggests Snare dominates for newer labor market entrants (biographical horizon) while older workers see Rope (locked in with outdated credentials accepted).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether credential requirements are inflating faster than job skill demands"
+    },
+    {
+      "id": "identity_locked_credentialism",
+      "question": "To what degree are employers and educational institutions bound by identity-fused credentialism (their institutional identity constituted through credential-based hiring/granting) versus external structural barriers?",
+      "resolution_mechanism": "Case studies of credential-abandoning organizations; analysis of hiring changes when credential requirements are explicitly removed; survey data on employer beliefs about credential necessity vs empirical hiring outcomes.",
+      "impact": "If identity-locked dominates: institutional actors could shift to alternative signals if their identity frames shifted, even without external incentives. If structural barriers dominate: changing requires systemic coordination (network effects, liability structures, HR infrastructure redesign). Identity-locked suggests faster policy change; structural barriers suggest longer timelines.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether credential system persistence is identity-locked or structurally constrained"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "The labor market signaling asymmetry represents a structural mechanism where formal educational credentials function as gateways to employment and earnings, creating a coordination mechanism for employers to assess worker competence while simultaneously enabling extraction from workers lacking credentials. The constraint exhibits tension between genuine information coordination (reducing employer uncertainty about job fit) and rent extraction (credential holders capturing wage premiums partly due to artificial scarcity rather than competence). Over the 40-year interval, both extractiveness and theater ratio have increased, suggesting credential inflation and growing performativity. Base extractiveness rose from 0.35 to 0.52, indicating that the rent component has grown relative to the coordination component. Theater ratio increased from 0.52 to 0.64, reflecting that credential validation has become more performative (degree ownership verified) while actual job-readiness assessment has become less reliable (skills mismatch persists despite widespread credential holding). The constraint's six perspectives reveal fundamentally different structural experiences: powerless unschooled workers see pure extraction (Snare), lower-income seekers see mixed coordination-extraction (Tangled Rope), credentialed workers see pure coordination benefit (Rope), organized alternative-pathway advocates see a temporary problem with addressable sunset (Scaffold), the educational system itself sees its own degraded ritual (Piton), and the analytical observer risks naturalizing a contingent institutional arrangement as a law of markets (Mountain).",
+    "key_agents": [
+      "Unschooled Competent Workers: Primary victims (powerless/trapped) \u2014 possess job-relevant skills but cannot signal without formal credentials; face insurmountable barriers to credential acquisition",
+      "Lower-Income Job Seekers: Secondary victims (moderate/constrained) \u2014 can acquire credentials but at high cost relative to income; face earnings extraction during school-to-work transition",
+      "Credentialed Workers: Primary beneficiaries (institutional/arbitrage) \u2014 capture wage premiums from signaling capacity; can arbitrage credentials across markets and career transitions",
+      "Educational Institutions: Secondary beneficiaries (institutional/arbitrage) \u2014 capture tuition revenue; maintain institutional legitimacy through credential-granting monopoly",
+      "Alternative Credentialing Coalition: Organized agents (organized/constrained) \u2014 bootcamps, apprenticeships, skills-based hiring initiatives creating parallel signaling mechanisms",
+      "Employers: Institutional actors (institutional/arbitrage) \u2014 benefit from credential screening reducing hiring uncertainty; locked into path-dependent hiring practices",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing credential requirements as market necessity rather than institutional design"
+    ],
+    "logic_rationale": "Extractiveness (0.52): High-moderate. The credential system exhibits genuine coordination value (reduces employer information asymmetry, enables job-fit matching) AND significant extraction (credential holders capture wage premiums ~40% larger than non-credentialed peers controlling for task performance; credential acquisition costs fall disproportionately on lower-income workers). The measurement trajectory shows extractiveness rising from 0.35 to 0.52 over 40 years, indicating credential inflation \u2014 degree requirements increasing faster than job skill demands, suggesting growing rent component relative to coordination component. Suppression (0.58): Moderate-high. Barriers to credential alternative include: (1) employer path-dependence \u2014 hiring screens locked into credential verification, (2) network effects \u2014 credentials' value depends on others accepting them, (3) legal/liability structures \u2014 some professions legally require credentials, (4) opportunity costs \u2014 time-to-credential delays labor market entry and compounded earnings. Suppression is not total because alternatives exist (apprenticeships, portfolio-based hiring, skills certification) and can be adopted with effort. Theater ratio (0.64): Moderate-high. Credential screening is substantially performative: employers verify degree ownership as a proxy for competence but this proxy has weakened as credential attainment has increased. Diploma ownership is objectively verifiable; actual job-readiness matching is poor (skills mismatch persists even among credentialed workers). The performative component has increased as credential proliferation has made degrees less reliable signals.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence across institutional contexts. The credentialed worker and the unschooled competent worker perceive the same institutional structure as fundamentally opposite: one sees pure coordination (Rope), the other sees pure extraction (Snare). The lower-income seeker occupies the middle ground, experiencing both coordination value (credentials do enable job access) and extraction (relative cost is higher). The educational system's self-perception (Piton) \u2014 that its credential function is degraded but persistent \u2014 is structurally accurate; employers continue credential-based screening not because it works reliably but because alternatives haven't fully displaced it. The scaffold perspective (alternative credentialing) is real and growing but currently captures <20% of labor market transitions in most sectors, making its sunset timeline uncertain. The mountain perspective (natural law of markets) is a false summit: information asymmetry between employers and workers is real and requires some signaling mechanism, but the specific form (formal educational credentials) is contingent, not necessary.",
+    "directionality_logic": "Each agent's directionality value (d) derives from their structural relationship to the extraction flow. Credentialed workers and educational institutions are beneficiaries with arbitrage-level exit capacity: they can switch between labor markets, credential types, and educational providers with relatively low cost (institutional and powerful agents with high mobility). Their d values are low (~0.15-0.25), producing negative effective extraction from their perspective \u2014 they benefit from the constraint. Unschooled competent workers are victims with trapped exit: they possess job skills but cannot credibly signal them without credentials, and credential acquisition is prohibitively costly or time-consuming. Their d value is high (~0.90-0.95), producing maximum effective extraction. Lower-income seekers are victims with constrained exit: they can acquire credentials but at significant financial and opportunity cost. Their d value is moderate-high (~0.70), producing high effective extraction but not maximum. The alternative credentialing coalition consists of organized agents with constrained exit (they can build alternative pathways but face network-effect barriers and institutional friction). Their d value is moderate (~0.55), producing moderate effective extraction appropriate to their mixed agency and real but surmountable obstacles.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by revealing that all six types are legitimate perspectival readings arising from the same base properties. The resolved question is not 'is this coordination or extraction?' but 'from which agent's structural position?' The extractiveness (0.52) is high enough to trigger Snare classification from powerless trapped agents and Tangled Rope from moderate constrained agents, while the same base properties produce Rope classification from institutional beneficiaries. The theater ratio (0.64) justifies the Piton classification from the educational system's perspective: credential screening persists through inertia despite its degraded function. The scaffold perspective is empirically real (alternative credentialing is growing) but not yet dominant (sunset timeline is uncertain, adoption <20%). The mountain perspective is a false summit that the structural data reveals: credential requirements are not inherent to labor market coordination but rather a specific institutional choice that naturalizes itself through employer path-dependence and educational legitimacy narratives."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "earnings_inequality_structural",
+      "social_mobility_constraints",
+      "educational_system_gatekeeping"
+    ],
+    "dual_formulation_note": "Labor market signaling asymmetry is upstream of earnings inequality and social mobility constraints but represents a distinct structural mechanism. The credential system coordinates information matching AND extracts value through artificial scarcity. Decomposition into separate constraint stories is not required by \u03b5-invariance (all reading the same physical phenomenon) but \u03b5-invariance DOES require recognizing that alternative signaling mechanisms (apprenticeships, portfolios) would have different \u03b5 values and should be modeled as separate constraints if their empirical frequency grows sufficiently (threshold ~20% market adoption)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    }
+  ]
+}

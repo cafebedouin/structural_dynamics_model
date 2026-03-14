@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "algorithm_selection_in_institutional_design",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "algo_inst"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Algorithm Selection in Institutional Design",
+    "topic_domain": "institutional_design/governance/technology_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "algorithm_designers",
+      "institutional_incumbents",
+      "centralized_administrators"
+    ],
+    "victims": [
+      "algorithmic_subjects",
+      "institutional_transparency",
+      "decentralized_alternatives"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Algorithmic Subject",
+      "comment": "PERSPECTIVE 1: ALGORITHMIC SUBJECT (SNARE) \u2014 Individuals subject to algorithmic decisions in institutional contexts (loan denial, job screening, benefit allocation, policing) cannot exit the system or appeal the mechanism. Trapped by territorial jurisdiction and legal dependency. The algorithmic constraint operates with maximal extraction: asymmetric information, no transparency, no recourse, and no alternatives. Subject experiences the full force of suppression."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Advocacy Coalition",
+      "comment": "PERSPECTIVE 2: ADVOCACY COALITION (TANGLED ROPE) \u2014 Civil rights organizations, algorithmic justice advocates, and community groups see a constraint with mixed dynamics. Genuine coordination function: algorithmic institutions do coordinate resource allocation and decision-making at scale. But active extraction embedded: the algorithms are designed in ways that obscure bias and concentrate power. Coalition is constrained by resource barriers and institutional access; benefits from having participation venues (if available) and research access. Mixed extraction and coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Algorithm Designer",
+      "comment": "PERSPECTIVE 3: ALGORITHM DESIGNER (ROPE) \u2014 Designers/vendors experience the constraint as pure coordination. The algorithm solves the scaling problem: without it, institutional decisions would require manual case-by-case review, which is infeasible for large systems. Designers have arbitrage options (sell to different institutions, choose different design parameters). Net beneficiary; experiences minimal extraction. The constraint is genuinely functional for this perspective."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Institutional Administrator",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL ADMINISTRATOR (TANGLED ROPE) \u2014 Administrators in institutions deploying algorithms (schools, courts, credit bureaus) benefit from scalability and delegation of decisions. But also constrained: regulatory requirements, liability for algorithmic errors, public pressure to explain opaque decisions, cost of maintaining systems. Coordination function (scaling decisions) genuine; extraction embedded (cost externalized to algorithmic subjects, opacity delegated upward to boards). Moderate extraction, some agency."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulatory Reform Movement",
+      "comment": "PERSPECTIVE 5: REGULATORY REFORM MOVEMENT (SCAFFOLD) \u2014 Organized actors (AI transparency advocates, regulators, standards bodies) see the algorithmic constraint as a temporary institutional failure with a regulatory sunset. EU AI Act, algorithmic audit mandates, transparency requirements, and explainability standards represent active efforts to decompose the constraint: extractive opacity replaced by mandatory disclosure, human review requirements, impact assessments. Suppression declining as standards mature. Organized agents see exit path."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Decision Infrastructure",
+      "comment": "PERSPECTIVE 6: LEGACY DECISION INFRASTRUCTURE (PITON) \u2014 The ritual of 'algorithmic justification' persists in many institutions not because algorithms actually improve decisions but because the performance of algorithmic authority maintains institutional legitimacy. Rule-of-three hiring committees have been replaced by ATS (applicant tracking systems) not primarily because ATS screens better but because it performs automation and impartiality. Theater ratio high (0.68): the algorithmic ritual persists through inertia, institutional prestige, and litigation liability management. Actual functional verification low."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational analytical view, algorithm selection exhibits the hybrid character of institutional design itself: all scaling mechanisms embed asymmetric power. Genuine coordination function (scaling decisions) coexists with genuine extraction (concentration of authority, information asymmetry, compliance cost offloaded to subjects). No perspectival collapse \u2014 this is not a false summit. The constraint is structurally tangled: you cannot have scaled decision-making without some asymmetry, and you cannot eliminate asymmetry without accepting the costs of distributed review."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "algorithmic_inevitability_vs_contingency",
+      "question": "Is algorithmic decision-making an inevitable consequence of institutional scale, or a contingent institutional choice that other scaling mechanisms could replace?",
+      "resolution_mechanism": "Comparative institutional analysis: examples of large-scale institutions that scale decisions without algorithmic delegation (jury systems, community councils, multi-tier review). Feasibility assessment of alternative scaling architectures (distributed review, human-in-the-loop with transparency, federated decision-making).",
+      "impact": "If inevitable: the constraint is partly mountain-like (immutable scaling structure). If contingent: the constraint is purely extractive choice (snare). Classification changes from tangled_rope to snare or mountain depending on resolution.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether algorithmic scaling is inevitable or contingent"
+    },
+    {
+      "id": "algorithmic_bias_structural_vs_intentional",
+      "question": "Do algorithmic biases emerge from structural properties of the optimization task (proxy measurement problems, training data imbalance) or from intentional designer choices to optimize for institutional efficiency over fairness?",
+      "resolution_mechanism": "Algorithmic audits comparing designer stated objectives vs actual optimization constraints; analysis of design alternatives not pursued; comparison across institutions with different design priorities (profit-maximizing vs mission-driven).",
+      "impact": "If structural: suppression is lower (bias is technical problem with technical solutions). If intentional: suppression is higher (bias is embedded extraction mechanism). Suppression range: 0.35\u20130.75 depending on resolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Source of algorithmic bias: structural or intentional"
+    },
+    {
+      "id": "transparency_solution_effectiveness",
+      "question": "Does algorithmic transparency (explainability, audit reports, disclosure) actually reduce extraction, or does it create performance theater that obscures opaque decisions behind a fa\u00e7ade of accountability?",
+      "resolution_mechanism": "Tracking outcomes: transparency mandates vs actual decision reversal rates, appeals success rates, demographic outcome changes. Comparison of institutions with transparency requirements vs those without. Analysis of whether transparency reports lead to material algorithm changes or merely compliance documentation.",
+      "impact": "If effective: regulatory scaffold perspective is real \u2014 sunset mechanism works. Theater ratio declines from 0.68 to 0.3\u20130.4. If theater: transparency mandates become new suppression mechanism (compliance costs, information that doesn't inform). Theater ratio stays high or increases.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether transparency mandates reduce extraction or create accountability theater"
+    },
+    {
+      "id": "alternative_scaling_mechanisms_feasibility",
+      "question": "What is the actual feasibility-at-scale of alternative institutional decision architectures: human review + algorithmic recommendation (non-binding), federated decision-making, weighted jury systems, staged review with appeals?",
+      "resolution_mechanism": "Cost-benefit analysis comparing algorithmic delegation to alternatives across different institutional scales. Implementation pilots. Comparison of error rates, appeal rates, demographic outcomes, and administrative overhead.",
+      "impact": "If alternatives are feasible at reasonable cost: the constraint is contingent (not mountain). If alternatives are infeasible or prohibitively expensive: partial inevitability (constraint may be partly mountain-like). Determines whether scaffold sunset is achievable or aspirational.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of alternative institutional scaling mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.61
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Algorithm selection in institutional design creates a structural constraint where the scaling function (algorithms enable institutions to make decisions at scale) is genuine coordination, yet the selection and deployment of specific algorithms embeds asymmetric extraction of power and information. An institution deploying a hiring algorithm coordinates the scaling problem: evaluating thousands of candidates manually would be infeasible. But the specific algorithm chosen \u2014 the objectives it optimizes, the data it uses, the decisions it delegates vs flags for human review \u2014 concentrates authority, obscures decisions, and externalizes compliance costs onto the subjects of algorithmic decisions. The constraint exhibits a dual character: it solves a real coordination problem while simultaneously serving as an extraction mechanism. Extractiveness increased from 0.35 to 0.58 over the measurement interval as algorithmic complexity outpaced institutional transparency capacity and as systems accumulated proprietary components resistant to external audit. Theater ratio increased from 0.42 to 0.68, indicating that the justification for algorithmic deployment increasingly relies on performance theater (legitimacy through automation, implied objectivity) rather than demonstrated decision quality.",
+    "key_agents": [
+      "Algorithmic Subjects: Primary victims (powerless/trapped) \u2014 individuals subject to algorithmic decisions in hiring, lending, benefit allocation, policing, with no exit, no transparency, no recourse",
+      "Algorithm Designers and Vendors: Primary beneficiaries (institutional/arbitrage) \u2014 firms selling algorithmic systems; benefit from first-mover advantage, regulatory capture potential, scaling revenue; have exit options (sell to different institutions, different markets)",
+      "Institutional Administrators: Secondary beneficiary/victim (institutional/constrained) \u2014 schools, courts, lenders deploying algorithms; benefit from scalability and delegation; constrained by regulatory requirements, liability for errors, public pressure",
+      "Advocacy Coalition: Secondary victim (moderate/constrained) \u2014 civil rights organizations, algorithmic justice advocates; have research access and participation opportunities; constrained by resource barriers and institutional access; benefit from accountability venues",
+      "Regulatory Reform Movement: Organized reformer (organized/constrained) \u2014 EU regulators, standards bodies, transparency advocates building alternative pathways with sunset mechanism; have agency and political power; constrained by industry resistance and implementation complexity",
+      "Legacy Decision Infrastructure: Institutional actor (institutional/arbitrage) \u2014 existing decision-making systems (hiring committees, credit review boards) that have been replaced by algorithmic versions; maintain algorithmic legitimacy through theater; see alternative decision pathways as inferior",
+      "Analytical Observer: Civilizational analyst (analytical/analytical) \u2014 sees the constraint's dual nature: genuine coordination coexisting with genuine extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The base extractiveness reflects genuine asymmetries in algorithm selection: designers optimize for institutional efficiency and vendor profit, not algorithmic subject welfare. Information asymmetry is extreme (subjects don't know what data is used, what rules trigger decisions, whether decisions are even algorithmic or human). Subjects have no appeal mechanism, no transparency, no exit. However, extractiveness is not 0.80+ (snare-level) because many institutions do face regulatory pressure and some do invest in bias audits and transparency. The increasing trend (0.35\u21920.58) reflects accumulation of proprietary components, growing complexity outpacing human review capacity, and increasing financial stakes. Suppression (0.62): High. Subjects face material barriers to exit (territorial jurisdiction, legal dependency), information barriers (opaque decision criteria), and structural barriers (no alternative decision system). But suppression is not total (some institutions do appeal, some regulators do audit, regulatory mandates are emerging). Theater ratio (0.68): High-moderate. Algorithms are presented as objective, impartial, and efficient \u2014 performance theater that legitimizes concentration of authority. Yet institutional administrators often maintain human review processes that reduce theater; EU AI Act mandates push toward lower theater through explainability requirements. The measurement trajectory shows theater increasing as algorithmic complexity outpaced institutional transparency, then declining as regulatory requirements emerged. Current value (0.68) reflects the mixed state: high theater in proprietary systems, lower theater in regulated systems with transparency mandates.",
+    "directionality_logic": "Directionality values are derived from structural positions: algorithm designers benefit from the constraint and have arbitrage options (d \u2248 0.10, low), producing negative effective extraction and rope classification. Algorithmic subjects bear costs and are trapped (d \u2248 0.95, maximum), producing high effective extraction and snare classification. Institutional administrators have mixed positions: they benefit from scalability but are constrained by compliance costs (d \u2248 0.55, moderate), producing tangled_rope. The advocacy coalition is pushed by extraction but has advocacy channels and research access (d \u2248 0.60), producing tangled_rope. The reform movement is organized and has regulatory power (d \u2248 0.40, moderate-low), producing scaffold when a sunset mechanism is visible. The analytical observer at civilizational scope sees both coordination (scaling function) and extraction (asymmetric authority) coexisting structurally, producing tangled_rope without perspective collapse. The legacy infrastructure maintains the constraint through arbitrage (institutional prestige, litigation liability management), producing piton through theater ratio gate rather than high extraction chi.",
+    "perspectival_gap": "This constraint demonstrates maximal perspectival divergence. The algorithmic subject sees pure extraction (snare) \u2014 no coordination benefit, only constraint. The algorithm designer sees pure coordination (rope) \u2014 solving a real scaling problem. The institutional administrator sees both (tangled rope) \u2014 genuine scaling benefit with embedded extraction cost. The advocacy coalition sees extraction with advocacy channels (tangled rope) \u2014 mixed but with agency. The regulatory reformer sees a temporary failure being fixed by standards (scaffold) \u2014 sunset mechanism visible. The legacy infrastructure sees degraded but persistent authority (piton) \u2014 maintained through theater. The analytical observer sees the gap itself as the diagnosis: the constraint is genuinely tangled at the structural level, not merely perspectival. All seven readings are accurate for their positions; no single type captures the whole.",
+    "mandatrophy_analysis": "CONSTRAINT FAMILY RESOLUTION: This constraint's mandatrophy is resolved by decomposing into three related stories with different \u03b5 values: (1) algorithmic_scaling_coordination (\u03b5=0.22, Rope) \u2014 the genuine scaling function, undisputed coordination benefit, low extraction, low suppression; (2) algorithmic_transparency_asymmetry (\u03b5=0.71, Snare) \u2014 the information asymmetry and decision opacity embedded in specific algorithmic choices, high extraction, high suppression, high theater; (3) algorithmic_regulation_transition (\u03b5=0.40, Scaffold) \u2014 the regulatory reform process (AI Act, transparency mandates, audit requirements) building alternative institutional paths with sunset logic. These three stories are linked via network.affects_constraints: the scaling function enables the transparency asymmetry, and the regulatory movement targets the asymmetry. The unified story presented here (\u03b5=0.58, Tangled Rope) is a perspectival collapse of the family that privileges the analytical position. The agency-specific decomposition would show snare for powerless subjects and rope for designers; the unified story shows tangled_rope for the institutional level. This is correct \u2014 the constraint is tangled at the institutional design level, but manifests as pure extraction or pure coordination depending on agent position."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_transparency_asymmetry",
+      "algorithmic_scaling_coordination",
+      "algorithmic_regulation_transition"
+    ],
+    "dual_formulation_note": "The algorithm selection constraint decomposes into a constraint family reflecting different structural levels: scaling coordination (\u03b5\u22480.22, rope-type), transparency asymmetry (\u03b5\u22480.71, snare-type), and regulatory transition (\u03b5\u22480.40, scaffold-type). The unified story (\u03b5=0.58, tangled_rope) represents the institutional-level perspectival collapse. Each family member has its own metrics, omega variables, and temporal measurements. Upstream: scaling coordination enables transparency asymmetry (information asymmetry is only possible when algorithms can scale beyond human review). Downstream: regulatory reform targets transparency asymmetry while preserving scaling coordination."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.4
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "reversible_computing_limits",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "revcomp"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Physical Limits of Reversible Computing",
+    "topic_domain": "physics/computation",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.89,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Landauer Principle)",
+      "comment": "PERSPECTIVE 1: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a universal/civilizational frame, reversible computing is constrained by fundamental thermodynamics. Landauer's principle (1961) establishes that logically irreversible operations must dissipate minimum energy kT ln(2) per bit erased. This is not a law of any particular engineering paradigm but a consequence of the second law of thermodynamics and information theory. The constraint is invariant across all proposed computing substrates and measurement methodologies."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Semiconductor Industry",
+      "comment": "PERSPECTIVE 2: SEMICONDUCTOR INDUSTRY (MOUNTAIN) \u2014 Even from the perspective of well-resourced actors, reversible computing limits appear as fixed physical law. Industry can engineer around specific implementation barriers (heat dissipation, timing synchronization) but cannot escape the fundamental entropy cost of logical irreversibility. The constraint is non-negotiable regardless of capital investment or technological maturity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Energy-Constrained Device",
+      "comment": "PERSPECTIVE 3: ENERGY-CONSTRAINED DEVICE (MOUNTAIN) \u2014 From the perspective of a mobile phone, IoT sensor, or spacecraft constrained by power budget, reversible computing limits are immutable. The device cannot escape Landauer's principle through any available action. The constraint appears with maximum structural rigidity: no power means no computation, regardless of the device's structural position."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Research Institution",
+      "comment": "PERSPECTIVE 4: RESEARCH INSTITUTION (MOUNTAIN) \u2014 Physics research groups studying reversible computing may benefit from grant funding and publication prestige, but they cannot arbitrage away the fundamental constraint. The thermodynamic law applies identically to their research as to industrial applications. Their 'exit' \u2014 choosing to study a different problem \u2014 sidesteps the constraint rather than falsifying it."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "quantum_vs_classical_boundary",
+      "question": "Does Landauer's principle apply identically to quantum and classical reversible computation, or do quantum systems exhibit loopholes via entanglement and coherence?",
+      "resolution_mechanism": "Rigorous derivation of information-theoretic bounds in quantum phase space; experimental demonstration of quantum reversible gates with heat dissipation below Landauer floor",
+      "impact": "If quantum loopholes exist: reversible quantum computing might achieve lower-energy operation than classical bound predicts. If principle holds: quantum systems face identical thermodynamic floor.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Applicability of Landauer principle to quantum reversible computation"
+    },
+    {
+      "id": "implementation_vs_fundamental_limit",
+      "question": "Is the measured heat dissipation in reversible computing experiments limited by fundamental Landauer principle or by engineering inefficiency (adiabatic switching overhead, parasitic heat channels)?",
+      "resolution_mechanism": "Comparison of measured dissipation vs theoretical Landauer floor across multiple implementation technologies (photonic, superconducting, trapped-ion); isolation of implementation losses via precision calorimetry",
+      "impact": "If gap is engineering: improvements in switching speed and coupling efficiency can approach the floor. If gap is fundamental: Landauer bound is even tighter than measured.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether dissipation gap reflects implementation losses or fundamental limits"
+    },
+    {
+      "id": "information_erasure_definition",
+      "question": "Can information be 'practically irreversible' (logically one-way but thermodynamically recoverable via work input) without triggering Landauer dissipation?",
+      "resolution_mechanism": "Analysis of hybrid reversible-irreversible architectures; measurement of energy cost to reverse 'lossy' operations; theoretical bounds on work extraction from partial information recovery",
+      "impact": "If practical irreversibility bypasses Landauer: the constraint is narrower than classical theory suggests. If all irreversibility has identical cost: constraint is fundamental.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether practical irreversibility can avoid Landauer dissipation requirement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Reversible computing is the theoretical and practical project of designing computational systems in which no logical information is irreversibly discarded during the computation. Landauer's principle (1961) establishes a fundamental thermodynamic limit: any computation that logically erases information must dissipate at least kT ln(2) joules of heat per bit erased, where k is Boltzmann's constant and T is temperature. This constraint is not an engineering limitation of current technology but a consequence of the second law of thermodynamics. The constraint's extractiveness is minimal (\u03b5=0.12) because it is a boundary condition on what is physically possible, not an imposed extraction mechanism. No agent benefits from the constraint, and no agent bears extraction \u2014 it simply defines the physical namespace within which reversible computing must operate. All perspectives classify as Mountain because the constraint is invariant: it applies equally regardless of observer position, time horizon, exit options, or spatial scope.",
+    "key_agents": [
+      "Computational physicists: Analyze the theoretical limits; cannot exit the constraint but can choose to study other problems",
+      "Semiconductor manufacturers: Constrained by physical principles; can engineer around specific barriers but not fundamentally evade thermodynamic law",
+      "Energy-constrained systems (mobile, IoT, space): Experience the constraint as immutable boundary on operational efficiency",
+      "Quantum computing researchers: Explore whether quantum coherence provides loopholes; still bound by universal thermodynamic principles",
+      "The theoretical physics community: Maintains and extends the foundational derivations from which the constraint follows"
+    ],
+    "logic_rationale": "Extractiveness (\u03b5=0.12): Minimal. The constraint does not extract from any agent \u2014 it is a boundary condition on physical possibility. The non-zero value reflects the minimal epistemic labor required to understand and work within the constraint, not any asymmetric cost distribution. Suppression (0.03): Negligible. There are no suppression mechanisms because there are no alternatives to escape. The constraint is not suppressive; it is simply physics. Theater ratio (0.15): Low. Reversible computing research does not perform or simulate the constraint \u2014 it works directly within it. The small theatrical component reflects pedagogical exposition and theoretical justification, not functional masking. Accessibility collapse (0.89): Very high. The only way to 'access an alternative' to Landauer's principle would be to discover that the second law of thermodynamics is not universal \u2014 a collapse so total that accessibility is functionally zero. Resistance (0.08): Very low. There is no institutional, economic, or technical resistance preventing the constraint from operating \u2014 it operates necessarily. The small non-zero value reflects the lag between theoretical prediction and empirical verification, now largely closed by 60+ years of experimental physics.",
+    "perspectival_gap": "All perspectives converge on Mountain classification because the constraint is truly invariant. There is no perspectival gap \u2014 this is the defining property of a natural law constraint. An agent with vast resources (powerful + arbitrage) sees the same boundary as a powerless trapped agent. A research institution studying reversible computing sees the same thermodynamic floor as a smartphone manufacturer. A civilizational/universal observer sees exactly what a biographical/immediate observer sees. The absence of perspectival divergence is the diagnostic signal that the classification is correct.",
+    "directionality_logic": "Directionality (d) does not apply meaningfully to Mountain constraints because there is no beneficiary-victim asymmetry. The constraint is not imposed by one agent on another; it is a property of physical law. No derivative d value exists for Mountain classification. The constraint affects all agents symmetrically: they all face the same thermodynamic floor, and none can arbitrage around it.",
+    "mandatrophy_analysis": "NO MANDATROPHY PRESENT. Reversible computing limits does not exhibit the classification ambiguity that mandatrophy addresses. The constraint is not misclassified as a higher-order coordination mechanism when it is actually extraction, or vice versa. It is not an extractive mechanism masquerading as coordination. It is simply a boundary condition, and all perspectives recognize it as such. This is the canonical structure of a genuine Mountain constraint."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "thermodynamic_computation_efficiency",
+      "quantum_coherence_overhead"
+    ]
+  },
+  "directionality_overrides": []
+}

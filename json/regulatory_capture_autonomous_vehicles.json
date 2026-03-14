@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "regulatory_capture_autonomous_vehicles",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rcav"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Regulatory Capture in Autonomous Vehicle Governance",
+    "topic_domain": "transportation/regulation/technology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "autonomous_vehicle_manufacturers",
+      "wealthy_early_adopters"
+    ],
+    "victims": [
+      "public_safety_oversight",
+      "liability_bearers",
+      "low_income_commuters"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Public Safety Oversight",
+      "comment": "PERSPECTIVE 1: PUBLIC SAFETY OVERSIGHT (SNARE) \u2014 Cannot exit verification requirements; bears full cost of regulatory capture. Public agencies lack resources to conduct independent testing at scale required for autonomous vehicle certification. Suppression is structural: manufacturers control testing data, employ regulators' technical talent, and fund the academic expertise on which agencies depend. No alternatives exist for certifying vehicle safety at scale."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Accident Victims and Liability Bearers",
+      "comment": "PERSPECTIVE 2: ACCIDENT VICTIMS AND LIABILITY BEARERS (SNARE) \u2014 Cannot opt out of exposure to autonomous vehicles. Trapped by geography, income, and lack of alternatives. Bear the cost of under-regulation through injury, death, and insurance premium increases. Suppression is total: no choice of exposure, no choice of vehicle, no voice in certification standards. Effective extraction through externalized safety costs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Low-Income Commuters and Mobility-Dependent Populations",
+      "comment": "PERSPECTIVE 3: LOW-INCOME COMMUTERS (TANGLED ROPE) \u2014 Constrained by transportation costs and availability. Benefit from potential autonomous vehicle deployment through lower-cost shared mobility. But also victimized by under-regulation that concentrates early benefits on wealthy adopters while distributing safety risk broadly. Mixed experience: genuine coordination function (solving transportation access) alongside asymmetric extraction (safety risk distributed to those who cannot afford to opt out)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Autonomous Vehicle Manufacturers",
+      "comment": "PERSPECTIVE 4: AUTONOMOUS VEHICLE MANUFACTURERS (ROPE) \u2014 Experience constraint as pure coordination problem: need regulatory clarity to operate, build products to standards, and scale deployments. Extract significant value through regulatory arbitrage (capturing definition of 'safe enough') but frame this as solving a coordination problem. Beneficiary with maximum exit optionality: can relocate to permissive jurisdictions, can influence standards through technical expertise and lobbying, can exit through market dominance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Safety Advocacy Groups and Insurance Industry",
+      "comment": "PERSPECTIVE 5: SAFETY ADVOCACY AND INSURANCE INDUSTRY (TANGLED ROPE) \u2014 Organized agents with constrained exit. Insurance companies benefit from autonomous vehicles (potential reduction in human-error accidents) while bearing liability risk from under-regulation. Safety advocates benefit from clarity and reduced uncertainty but are constrained by resource limits and manufacturer dominance of technical expertise. Both have agency but face significant barriers to enforcing higher standards."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Legacy Transportation Safety Regulations",
+      "comment": "PERSPECTIVE 6: LEGACY SAFETY REGULATORY REGIME (PITON) \u2014 Existing safety testing frameworks (NHTSA crash testing, pedestrian protection standards) persist as theater despite being designed for human-operated vehicles. Autonomous vehicle manufacturers initially comply nominally then lobby for exemptions. The regulatory apparatus maintains the theater of safety certification while actual gatekeeping power has shifted to manufacturers' internal testing. Performance of regulation persists longer than function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Full structural view reveals genuine coordination function (autonomous vehicles require clear safety standards to deploy) coexisting with asymmetric extraction (manufacturers capture standard-setting while distributing safety risk to public). Extracted value flows from public safety oversight and liability bearers to manufacturers and early adopters. Suppression mechanism is structural and internalized: regulators accept manufacturers' safety claims partly from resource dependence, partly from cognitive capture (absorbing industry's framing of 'safe enough')."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "safety_metric_sufficiency",
+      "question": "Do manufacturer-provided safety metrics (miles driven without incident, scenario-based test results, simulation outcomes) actually predict real-world safety performance, or do they constitute theater that creates false confidence?",
+      "resolution_mechanism": "Longitudinal tracking of autonomous vehicle accident rates and safety outcomes against pre-deployment claimed metrics; analysis of failure modes that metrics failed to capture; comparison with safety predictions from manufacturer testing",
+      "impact": "If metrics predictive: extraction is lower than measured (safety oversight has real coordination function). If metrics are theater: extraction is higher (captured regulators validate unproven safety claims for manufacturers' benefit).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether manufacturer safety metrics predict real-world safety outcomes"
+    },
+    {
+      "id": "regulatory_recapture_timeline",
+      "question": "Can meaningful independent oversight be re-established once regulatory capture is complete, or does the constraint become path-dependent and locked in?",
+      "resolution_mechanism": "Historical analysis of regulatory recapture in other transportation domains (aviation, maritime, autonomous rail); examination of institutional friction costs to shifting governance back toward public oversight; assessment of manufacturer technical lock-in and political capital",
+      "impact": "If recapture possible: constraint is temporary extraction (scaffold framing). If locked in: constraint is structural snare for powerless agents (public oversight permanently degraded).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether regulatory capture can be reversed after establishment"
+    },
+    {
+      "id": "safety_improvement_direction",
+      "question": "Are autonomous vehicles actually safer than human drivers, such that capture-driven regulatory laxity is offset by genuine safety gains? Or is the technology fundamentally unsafe and captured regulation conceals this?",
+      "resolution_mechanism": "Long-term comparative accident rate analysis across deployment jurisdictions with varying regulatory stringency; analysis of accident types where autonomous vehicles fail vs succeed; assessment of whether safety gains come from technology or from biased sample (wealthy areas, favorable weather, known routes)",
+      "impact": "If autonomous vehicles are net-safer: extraction is justified as coordination cost. If net-unsafe or technology-dependent: extraction is unjustified predation on public safety.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether autonomous vehicles are actually safer than human drivers"
+    },
+    {
+      "id": "captured_regulator_identity_lock",
+      "question": "Have regulators internalized the manufacturers' framing of 'safe enough' through cognitive capture, such that meaningful oversight would require identity-breaking recalibration?",
+      "resolution_mechanism": "Analysis of regulator communications, internal deliberations, and career trajectories; interview data on how regulators rationalize capture; examination of whether regulators can envision alternative safety frameworks or have fused identity with manufacturer-friendly standards",
+      "impact": "If identity-locked: regulatory recapture requires institutional redesign and personnel change (higher path dependence). If merely constrained: recapture is possible with resource and political realignment.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether regulators have identity-fused with captured standards"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "Regulatory capture in autonomous vehicle governance creates a structural extraction mechanism where technology companies have systematized their influence over the regulatory agencies tasked with overseeing their safety. The constraint exhibits the classic features of institutional capture: manufacturers employ or fund the technical experts regulators depend on, control access to testing data and simulation results, and have moved standard-setting into private domains (internal testing, industry consortiums) while maintaining nominal compliance with public regulatory theater. Public safety oversight has become trapped: agencies lack independent testing capacity, lack technical personnel who are not trained by or indebted to manufacturers, and have internalized the industry's framing of 'safe enough' as the proper regulatory standard. The constraint is not a temporary coordination problem solved by clearer standards, but a systematic extraction that concentrates early benefits (market access, profit, venture returns) on manufacturers while distributing safety risk to the public, with particular burden on low-income populations who cannot opt out of autonomous vehicle exposure and liability bearers who bear legal costs of accidents. The theater_ratio rising from 0.35 to 0.75 reflects degradation: as regulatory capture deepens, the performative aspects of safety testing increase while genuine independent oversight decreases.",
+    "key_agents": [
+      "Autonomous Vehicle Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 capture standard-setting, accelerate deployment, extract market value during regulatory uncertainty phase",
+      "Public Safety Oversight Agencies: Primary victim (powerless/trapped) \u2014 lack independent testing capacity, depend on manufacturer-provided data, personnel flow between agencies and companies, internalize captured standards as natural",
+      "Accident Victims and Liability Bearers: Primary victim (powerless/trapped) \u2014 distributed exposure to under-tested technology, bear medical and insurance costs, cannot opt out geographically or financially",
+      "Low-Income Commuters: Secondary victim (moderate/constrained) \u2014 benefit from potential autonomous ride-sharing but exposed to safety risk they cannot afford to avoid, concentrated in areas where manufacturers deploy cheapest solutions",
+      "Safety Advocacy Groups and Insurance Industry: Organized opposition (organized/constrained) \u2014 have resources to push back but lack technical expertise to challenge manufacturer claims, constrained by manufacturer dominance of research and talent",
+      "Regulators (as individual institutional actors): Captured institution (institutional/arbitrage-constrained duality) \u2014 experience regulatory capture as mixture of resource constraint (budget, staffing) and cognitive capture (absorbing manufacturer framing of safety adequacy) that blurs into identity fusion",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 reveals the constraint as not inevitable coordination problem but systematic extraction enabled by information asymmetry and institutional capture"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, increasing over measurement interval. Initial value (0.25) reflects a genuine coordination function: manufacturers and regulators need to cooperate to establish safety standards for a novel technology. Current value (0.58) reflects captured regulatory standard-setting where manufacturers' preferred safety thresholds are accepted as objective requirements rather than negotiated points. The increase reflects accumulation of capture mechanisms: manufacturer influence over research funding, personnel flow between industry and agencies, normalization of manufacturer testing as sufficiency standard. Suppression (0.62): High. Structural suppression includes: public agencies lack independent testing capacity (expensive, specialized equipment); manufacturers control primary data and internal testing results; technical talent flows preferentially toward companies (better salaries, more interesting problems); regulatory agencies are chronically under-resourced relative to manufacturer engineering capacity. Internalized suppression: regulators have absorbed manufacturer framing that 'perfect is the enemy of good' and that 'safe enough for deployment' is a reasonable standard. Theater ratio (0.68): High and increasing. NHTSA crash testing standards were designed for human-operated vehicles; autonomous vehicle testing requires fundamentally different frameworks (scenario-based testing, simulation validation, edge-case performance). Instead of redesigning standards, agencies maintain nominal compliance theater (manufacturers run legacy tests) while actual gatekeeping has shifted into manufacturer internal testing and private consortium standards. The theater allows regulators to claim they are 'doing their job' while lacking capacity to verify actual safety.",
+    "perspectival_gap": "Maximum perspectival gap between manufacturer (Rope) and powerless agent (Snare) perspectives. Manufacturers see coordination: 'Standards enable deployment.' Powerless agents see extraction: 'Standards are set by extractors, enforcement is theater, risk is distributed to me.' The gap reveals the capture: if this were pure coordination, standards would be neutral and publicly defensible. The gap's existence indicates extraction.",
+    "directionality_logic": "Directionality (d) is derived from each agent's structural position. Manufacturers with arbitrage exit options (can relocate, can influence standards, can operate with minimal overhead) get low d \u2192 beneficiary experience. Public safety agencies with trapped exit (must certify, cannot refuse to regulate, cannot build independent capacity) get high d \u2192 victim experience. The captured regulator is the critical case: nominally they are institutional actors with arbitrage, but capture has partially converted their exit options from arbitrage to constrained. They retain some agency (can theoretically demand higher standards) but face material barriers (budget, technical capacity) and cognitive barriers (identity fusion with captured standards). Directionality override is not needed here because the derivation captures the duality: regulators appear to have arbitrage (they set standards) but actually face constrained exit (captured by resource and cognitive dependence). Low-income commuters are constrained by geography and income \u2014 cannot avoid autonomous vehicle exposure even if desired.",
+    "mandatrophy_analysis": "UNRESOLVED MANDATROPHY: This constraint cannot yet be classified as pure Snare (would require proving manufacturers deliberately hide unsafe technology and regulators knowingly allow it) or pure Rope (would require proving autonomous vehicles are genuinely safe and standards are adequately enforced). The constraint is tangled because: (1) genuine coordination function exists (autonomous vehicles do require safety standards); (2) genuine extraction mechanism exists (manufacturers capture standard definition and shift risk); (3) empirical ambiguity about whether autonomous vehicles are actually safer than human drivers remains unresolved (omega variable: safety_metric_sufficiency). Mandatrophy resolution requires: (a) empirical clarity on safety outcomes (are autonomous vehicles net-safer?), (b) clarity on whether regulators are merely constrained by resources or cognitively captured (identity-locked), and (c) clarity on whether capture is reversible (path-dependent lock-in or temporary imbalance). Current status: Tangled Rope pending empirical resolution of core safety claims. If autonomous vehicles prove net-safer: extraction mechanism is justified as coordination cost. If net-unsafe or safety claims prove theater: constraint becomes Snare. If regulators are identity-locked: constraint becomes more path-dependent and harder to reverse."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "autonomous_vehicle_liability_distribution",
+      "insurance_system_asymmetric_risk"
+    ],
+    "dual_formulation_note": "Regulatory capture in autonomous vehicles is upstream of liability distribution constraints and insurance system risk asymmetries. The capture determines what safety standards manufacturers must meet; downstream constraints are shaped by the captured regulatory framework. The constraint family has three members: (1) regulatory_capture_autonomous_vehicles (\u03b5\u22480.58, Tangled Rope) \u2014 the capture mechanism itself; (2) autonomous_vehicle_liability_distribution (\u03b5\u22480.65, Snare) \u2014 how liability flows given under-regulation; (3) insurance_system_asymmetric_risk (\u03b5\u22480.55, Tangled Rope) \u2014 how insurance markets respond to regulatory ambiguity. All three are linked by affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.58
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "organ_scarcity_allocation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "organ"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Organ Scarcity Allocation System",
+    "topic_domain": "healthcare/institutional_allocation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "transplant_centers_with_waiting_power",
+      "high_socioeconomic_status_patients"
+    ],
+    "victims": [
+      "patients_on_waiting_lists",
+      "low_socioeconomic_status_patients",
+      "geographically_isolated_patients"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Dying Patient Without Access",
+      "comment": "PERSPECTIVE 1: DYING PATIENT (SNARE) \u2014 Trapped on waiting lists with no exit option. Bears full cost of organ scarcity through mortality. Cannot negotiate, cannot arbitrage, cannot exit the system without death. The constraint extracts the ultimate cost: life itself. No coordination benefit perceived \u2014 only the extraction of time, hope, and eventually life."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Transplant-Eligible Patient with Resources",
+      "comment": "PERSPECTIVE 2: RESOURCED PATIENT (TANGLED ROPE) \u2014 Constrained by medical eligibility and geography, but with financial means to relocate or access multiple waiting lists. Experiences both coordination (access to organs through systematic matching) and extraction (waiting time, medical risk during wait, unequal access based on wealth). Can theoretically exit through private markets or relocation but faces high costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Transplant Center",
+      "comment": "PERSPECTIVE 3: TRANSPLANT CENTER (ROPE) \u2014 Institutional actor with arbitrage capacity. Benefits from organ allocation system through patient volume, surgical revenue, transplant center prestige, and research opportunities. Experiences the constraint as coordination: the allocation system directs organs to their facility. Net beneficiary with full agency \u2014 can negotiate allocation protocols, accept or reject organs, influence waiting list prioritization."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Opt-Out and Living Donor Coalition",
+      "comment": "PERSPECTIVE 4: OPT-OUT/LIVING DONOR COALITION (SCAFFOLD) \u2014 Organized agents (living donor programs, opt-out donation countries, paired kidney exchanges) see organ scarcity as a temporary coordination problem with architectural solutions. Opt-out systems (Spain, France, Belgium) achieve donation rates 5-10x higher than opt-in systems, suggesting the bottleneck is institutional design, not biological inevitability. Living donation and paired exchanges increase supply without coercion. Sunset logic: as opt-out norms spread and paired exchanges scale, the scarcity bottleneck weakens. Theater moderate but declining as evidence accumulates."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Traditional Procurement Model",
+      "comment": "PERSPECTIVE 5: TRADITIONAL PROCUREMENT MODEL (PITON) \u2014 Deceased-donor organ procurement through hospital death certification and family consent is substantially performative. Medical determination of death is ritualized; family conversations are often theater-heavy with decision frames predetermined by local transplant center capacity and urgency. The procurement system persists through institutional inertia despite evidence that opt-out systems and living donation yield higher supply. Theater ratio reflects that much family consultation involves social influence rather than genuine choice \u2014 family autonomy is framed as a ritual gift rather than a structural decision point."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Government/Health Authority",
+      "comment": "PERSPECTIVE 6: GOVERNMENT/HEALTH AUTHORITY (TANGLED ROPE) \u2014 Institutional actor facing constraints on its own power. Genuinely benefits from current allocation system (organs distributed, transplant outcomes reported, political stability maintained, no coercive procurement costs). But also constrained by international organ trafficking norms, ethical frameworks limiting commodification, and domestic political pressure from waiting list mortality. Cannot freely extract through live coercive procurement or corpse commodification without violating international treaties. Mixed coordination-extraction: the system coordinates organ supply and demand, but also extracts political legitimacy from maintaining ethical theater while tolerating high death rates."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Biological Scarcity View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / BIOLOGICAL SCARCITY VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, organ scarcity appears to be a natural limit: biological bodies have finite organs, transplant compatibility is restricted, mortality produces unpredictable supply. This perspective naturalizes the constraint as immutable. However, structural evidence contradicts the mountain classification: opt-out donation rates show scarcity is institutional design-dependent, not absolute. The 'natural scarcity' framing naturalizes extractive allocation mechanisms as inevitable, when the evidence suggests redesign could dramatically increase supply without coercion."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "biological_versus_institutional_scarcity",
+      "question": "How much of measured organ scarcity is biological inevitability versus institutional design choices (procurement, allocation rules, living donation barriers)?",
+      "resolution_mechanism": "Comparative analysis of donation rates across procurement systems (opt-out vs opt-in countries); paired kidney exchange scaling data; xenotransplantation and artificial organ pipeline progress",
+      "impact": "If institutional factors dominate: scarcity is contingent and the allocation system extracts through artificially maintained shortage. If biological factors dominate: scarcity is inevitable and the system optimizes distribution of unavoidable shortage.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Decomposition of biological versus institutional scarcity factors"
+    },
+    {
+      "id": "allocation_criteria_capture",
+      "question": "Do allocation criteria (waitlist time, medical urgency, HLA match, geography) reflect genuine medical optimization or capture by transplant centers and wealthy regions?",
+      "resolution_mechanism": "Outcome analysis: do center-favorable allocation rules correlate with transplant success rates or with center volume/revenue? Geographic equity audit; comparison of outcomes under different allocation rule sets",
+      "impact": "If criteria are medically justified: tangled rope classification stands. If criteria are captured: classification should shift toward snare for powerless agents and beneficiary groups should be narrowed to capturing centers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether allocation criteria reflect medical optimization or institutional capture"
+    },
+    {
+      "id": "ethical_theater_in_family_consent",
+      "question": "How much of family organ donation consent genuinely reflects family autonomy versus institutional framing and time pressure?",
+      "resolution_mechanism": "Studies of family decision-making in donation contexts; comparison of framing effects on consent rates; analysis of refusal follow-up and reframing attempts",
+      "impact": "High theater suggests procurement system uses social engineering to maintain donation rates despite scarcity and suppression. Changes theater ratio and piton classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of family autonomy in organ donation consent"
+    },
+    {
+      "id": "paired_exchange_scaling_limits",
+      "question": "What are the true scaling limits for paired kidney exchange networks and living donation programs? Are they biological or organizational?",
+      "resolution_mechanism": "Network matching algorithms and capacity analysis; international paired exchange data; organizational barriers to living donation scaling",
+      "impact": "If limits are organizational: scaffold sunset is realistic and theatrical. If limits are biological: scaffold is aspirational and scarcity remains fundamental.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Biological versus organizational limits to paired exchange scaling"
+    },
+    {
+      "id": "commodification_boundary",
+      "question": "Where is the boundary between ethical organ exchange (living donation, altruistic paired exchange) and commodification (direct sale, broking)?",
+      "resolution_mechanism": "Ethical frameworks and international law analysis; empirical outcomes from countries permitting different levels of compensation; behavioral economics of donation motivation",
+      "impact": "If ethical-commodification boundary is arbitrary: government suppression is political theater masking artificial scarcity. If boundary reflects real risk: constraints on commodification are justified harm-reduction.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Ethical and practical boundary of acceptable organ exchange mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The organ scarcity allocation system presents a foundational constraint in modern medicine: how to distribute organs that cannot be created on demand to patients who will die without them. The constraint exhibits all six DR types from different structural positions, revealing how the same institutional system appears as natural law (to those who naturalize scarcity), as pure extraction (to those dying on waiting lists), as coordination (to those managing the system), and as an architectural problem with solutions (to those studying alternatives like opt-out procurement and paired exchange). The system's extractiveness has increased over the measurement interval as medical knowledge has improved organ preservation and matching, expanding what is technically possible \u2014 yet allocation mechanisms have not kept pace, creating artificial scarcity. The theater ratio reflects that family organ donation consent conversations often embed institutional frames and time pressure that constrain genuine autonomy, and that allocation criteria include elements justified by historical precedent rather than current medical evidence.",
+    "key_agents": [
+      "Patients on waiting lists (especially low-SES, geographically isolated): Primary victims (powerless/trapped) \u2014 mortality is the ultimate extraction cost; no exit options",
+      "Transplant centers: Primary beneficiaries (institutional/arbitrage) \u2014 receive organ allocation, surgical revenue, prestige; full agency in negotiating allocation protocols",
+      "Living donors and altruistic participants: Secondary victims (moderate/constrained) \u2014 face medical risk, altruistic motivation exploitation, limited information about outcomes",
+      "Opt-out donation countries and paired exchange coalitions: Organized reformers (organized/constrained) \u2014 see architectural solutions; face resistance from entrenched procurement systems",
+      "Government health authorities: Dual role (institutional/constrained) \u2014 benefits from system stability and ethical legitimacy; constrained by international norms and domestic mortality pressure",
+      "Analytical observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional scarcity as biological inevitability"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The system extracts through artificial scarcity maintenance: 17 people die daily in the US waiting for organs while viable organs are not procured. Opt-out countries achieve donation rates 5-10x higher, indicating scarcity is partly institutional. Extractiveness is not maximal (would be >0.70) because genuine medical coordination needs exist \u2014 organ matching, preservation, surgical timing \u2014 and because some allocation rules reflect medical necessity rather than pure rent-seeking. Suppression (0.72): High. Waiting list patients face insurmountable barriers: medical eligibility, geographic location, wealth for relocation, and time availability (must be reachable within hours for transplant). Barriers combine external (system design, equipment scarcity) and structural (biological facts). But suppression is not absolute \u2014 some patients do receive organs and some geographic/wealth barriers can theoretically be overcome. Theater ratio (0.65): Moderate-high. Family organ donation consent conversations embed institutional framing and time pressure. Allocation criteria include historical precedent and center preferences alongside medical factors. But transplantation itself has genuine technical requirements that justify some procedural theater.",
+    "perspectival_gap": "Powerless/trapped patients perceive a snare (extraction without coordination benefit, no exit). Resourced patients perceive tangled rope (mixed coordination and extraction, constrained exit). Transplant centers perceive rope (coordination with beneficiary status, full arbitrage). Opt-out coalitions perceive scaffold (solvable architectural problem with sunset). Traditional procurement perceives itself as piton (degraded ritual maintained by inertia). Government perceives tangled rope (mixed coordination and constraint). Analytical observer risks mountain (biological inevitability). The gap reveals that the constraint is experienced entirely differently depending on structural position. No single type describes all experiences because the structural asymmetry is the constraint itself.",
+    "directionality_logic": "Directionality values (d) flow from structural positions in the extraction pipeline. Patients on waiting lists are powerless and trapped: high d toward 1.0 (they are pure targets). Transplant centers are institutional with arbitrage options: low d toward 0.0 (they are beneficiaries). Governments face constraints (international norms, ethical frameworks) preventing free commodification: moderate d around 0.40-0.50 (they benefit but face external limits on extractive power). Living donors have constrained options and face altruistic motivation framing: moderate-high d around 0.60-0.70 (they are partly victims, partly willing). The derived d values feed into chi computation: powerless patients experience high chi from the constraint; institutional centers experience low chi; governments experience moderate chi modified by their constrained exit options.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that classification type varies legitimately with observer position. The same system is a snare for the powerless (high extraction, no coordination benefit, no exit), a rope for the centers (coordination with beneficiary status), and a scaffold for reformers (temporary problem with architectural solution). The false summit (mountain) naturalizes contingent institutional choices as biological inevitability. The piton (performative procurement rituals maintained by inertia) reveals that theater has increased as alternatives became known but not adopted. The mandatrophy is resolved not by finding the 'true' type but by recognizing that the presheaf over observation positions IS the constraint model. Each position sees a legitimate but partial view. The analytical meta-view (that scarcity is institutional-design-dependent, not absolute) integrates without flattening the perspectival diversity."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "living_organ_donation_incentives",
+      "xenotransplantation_accessibility",
+      "artificial_organ_development_funding"
+    ],
+    "dual_formulation_note": "The organ scarcity allocation system is upstream of specific clinical outcomes (waiting list mortality, transplant success, access equity) and downstream of procurement policy design (opt-out versus opt-in systems, living donation barriers, paired exchange regulation). Separate constraint stories should model procurement design as its own constraint, with different \u03b5 reflecting institutional design-dependency rather than biological scarcity."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "header": {
+    "constraint_id": "us_manufacturing_reshoring",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "usm"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "US Manufacturing Reshoring Policy Constraint",
+    "topic_domain": "economic_policy/industrial_production",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_domestic_manufacturers",
+      "politically_connected_corporations",
+      "domestic_labor_unions"
+    ],
+    "victims": [
+      "consumers_via_price_increases",
+      "overseas_production_workers",
+      "non_connected_manufacturing_firms",
+      "global_supply_chain_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Overseas Production Workers",
+      "comment": "PERSPECTIVE 1: OVERSEAS PRODUCTION WORKERS (SNARE) \u2014 Trapped by capital flight and policy-driven supply chain disruption. Cannot organize across borders or exit the constraint. Bears full extraction cost through unemployment and wage suppression as manufacturing exits."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "US Consumers",
+      "comment": "PERSPECTIVE 2: US CONSUMERS (SNARE) \u2014 Constrained by market structures and tariff regimes. Experiences extraction through higher prices for consumer goods, reduced product variety, and slower innovation. Exit would require international relocation or accepting supply-side scarcity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Non-Connected Domestic Manufacturers",
+      "comment": "PERSPECTIVE 3: NON-CONNECTED DOMESTIC MANUFACTURERS (TANGLED ROPE) \u2014 Constrained by policy barriers (tariffs, local content requirements). Experience mixed coordination (access to domestic supply chains, labor availability improvements) and extraction (forced higher input costs, regulatory burden). Cannot easily relocate or exit US regulatory framework."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Politically Connected Corporations",
+      "comment": "PERSPECTIVE 4: POLITICALLY CONNECTED CORPORATIONS (ROPE) \u2014 Experience the constraint as pure coordination benefit. Benefit from protectionist policies, subsidies, tax incentives, and preferential access to reshoring funds. High exit options (can lobby for alternative policies, relocate subsidiaries across jurisdictions). Extraction runs toward this agent."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Domestic Labor Unions",
+      "comment": "PERSPECTIVE 5: DOMESTIC LABOR UNIONS (ROPE) \u2014 Organized actors experiencing coordination benefits through policy-driven employment restoration and wage floor agreements. Mobile in exit options (can negotiate with management or shift political support). Primary beneficiary of reshoring rhetoric, though benefits are often concentrated in unionized sectors and geographies."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Multinational Supply Chain Operators",
+      "comment": "PERSPECTIVE 6: MULTINATIONAL SUPPLY CHAIN OPERATORS (TANGLED ROPE) \u2014 Experience mixed coordination (access to reshored production, domestic supply clustering) and extraction (forced geographic concentration, higher logistics costs, reduced flexibility). Mobile enough to arbitrage across policies, but constrained by sunk capital in existing networks."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Green Technology Coalition",
+      "comment": "PERSPECTIVE 7: GREEN TECHNOLOGY COALITION (SCAFFOLD) \u2014 See reshoring as temporary support mechanism for climate-oriented manufacturing transition. Frame domestic production as coordination (environmental monitoring, labor standards, supply chain transparency) with built-in sunset as global carbon pricing and trade rules mature. Extraction is tolerated as transitional cost, not permanent structure."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Industrial Policy Bureaucracy",
+      "comment": "PERSPECTIVE 8: INDUSTRIAL POLICY BUREAUCRACY (PITON) \u2014 Maintains reshoring administration (CHIPS Act implementation, investment reviews, subsidy distribution) as performative ritual despite declining actual reshoring impact. Theater ratio high: extensive planning and monitoring activity produces limited manufacturing movement. Persists through institutional inertia and career structures within the policy apparatus."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Comparative Advantage View)",
+      "comment": "PERSPECTIVE 9: ANALYTICAL OBSERVER / COMPARATIVE ADVANTAGE VIEW (MOUNTAIN) \u2014 From a civilizational economic view, factor-cost arbitrage and capital mobility are immutable features of markets: manufacturing will flow to lowest-cost, highest-skill locations regardless of policy. Reshoring efforts appear to violate fundamental economic laws. However, structural data contradicts the mountain classification \u2014 this naturalizes what are contingent institutional choices (trade rules, capital controls, labor mobility regimes)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "reshoring_authenticity_threshold",
+      "question": "What constitutes genuine reshoring versus policy theater masquerading as manufacturing return?",
+      "resolution_mechanism": "Tracking actual jobs created vs capital invested; distinguishing assembly operations (low value-add, vulnerable to subsequent offshoring) from design and production capacity (higher value-add); measuring job quality and duration stability",
+      "impact": "If reshoring is primarily assembly and temporary: extractiveness rises above 0.58 (pure extraction with minimal genuine coordination benefit). If reshoring establishes durable production capacity: extractiveness falls below 0.50 (genuine coordination function validated).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Authenticity of reshoring versus policy theater"
+    },
+    {
+      "id": "subsidy_incidence_distribution",
+      "question": "Do reshoring subsidies actually reach manufacturing workers and small suppliers, or do they concentrate in politically connected corporate hands?",
+      "resolution_mechanism": "Audit of subsidy distribution patterns; tracking job creation per dollar of subsidy; mapping capital investment to wage growth in beneficiary regions",
+      "impact": "If concentrated in corporate/political hands: suppression and extraction metrics rise; constraint degrades toward pure snare. If distributed to workers and small suppliers: coordination function validated; constraint remains tangled_rope or improves toward rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Subsidy distribution between corporate and worker beneficiaries"
+    },
+    {
+      "id": "global_supply_chain_efficiency_cost",
+      "question": "How much total economic value is lost due to forced geographic concentration and supply chain inefficiency in the reshoring regime?",
+      "resolution_mechanism": "Input-output analysis comparing optimal global supply chains to policy-constrained domestic chains; measurement of logistics costs, inventory carrying costs, and innovation lag",
+      "impact": "If efficiency loss exceeds 3% of manufacturing GDP: cost to consumers and non-connected firms is severe; snare perspective dominates. If efficiency loss < 1%: coordination benefits more plausibly outweigh extraction costs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Economic efficiency losses from geographic concentration"
+    },
+    {
+      "id": "alternative_industrial_policy_pathways",
+      "question": "Could the coordination goals (stable manufacturing capacity, supply chain resilience, worker income) be achieved through less extractive mechanisms (R&D investment, education, infrastructure) rather than protectionist reshoring?",
+      "resolution_mechanism": "Comparison with peer economies using different industrial policy instruments; historical analysis of manufacturing regions that built durable capacity without protectionism",
+      "impact": "If alternatives exist and are comparable/superior: reshoring constraint is choice-contingent (could be replaced), not structural necessity. Reclassifies toward snare (exposure mechanism shifts from market failure to policy choice).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether less extractive industrial policy alternatives exist"
+    },
+    {
+      "id": "identity_lock_in_manufacturing_politics",
+      "question": "How much of reshoring support is driven by genuine economic analysis versus identity fusion with 'American manufacturing' as national identity?",
+      "resolution_mechanism": "Political rhetoric analysis; voter preference studies separating cost-benefit reasoning from identity markers; behavioral experiments on reshoring support with/without national framing",
+      "impact": "If identity-driven: organized beneficiaries (unions, politicians) experience constraint differently (see rope/scaffold) than materially-motivated agents; identity_locked exit option becomes relevant for policy-capture analysis.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Identity-driven versus materially-driven support for reshoring"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "US manufacturing reshoring policy represents a structural constraint combining genuine coordination needs (supply chain resilience, regional employment stability, critical capacity security) with asymmetric extraction (price increases for consumers, barriers for non-connected firms, externalized costs to overseas workers). The constraint exhibits tangled_rope structure: active enforcement (tariffs, subsidies, local content requirements, investment reviews) maintains a coordination function (domestic production capacity, labor market support) while simultaneously extracting from multiple victim groups. The theater_ratio (0.68) reflects substantial performative activity: extensive policy administration, subsidy bureaucracy, and reshoring announcements that produce limited actual manufacturing capacity relative to policy intensity. Extractiveness has risen from 0.42 to 0.58 over the interval as policies have accumulated and enforcement has intensified without corresponding manufacturing growth, suggesting accumulation of rent-seeking layered onto the original coordination rationale.",
+    "key_agents": [
+      "Overseas Production Workers: Primary victim (powerless/trapped) \u2014 face employment collapse and wage suppression from policy-driven capital exit",
+      "US Consumers: Primary victim (powerless/constrained) \u2014 bear extraction through tariff-driven price increases and reduced product variety",
+      "Politically Connected Corporations: Primary beneficiary (institutional/arbitrage) \u2014 capture subsidies, tax incentives, and protected market access; can arbitrage across policy regimes",
+      "Domestic Labor Unions: Organized beneficiary (organized/mobile) \u2014 win wage floor agreements and employment restoration in unionized sectors; mobile in political alliance",
+      "Non-Connected Domestic Manufacturers: Secondary victim (moderate/constrained) \u2014 face input cost inflation and regulatory burden despite lack of subsidy access",
+      "Multinational Supply Chain Operators: Complex actor (powerful/mobile) \u2014 experience mixed coordination (domestic clustering benefits) and extraction (forced geographic concentration, logistics cost increases)",
+      "Green Technology Coalition: Organized reformer (organized/constrained) \u2014 frame reshoring as temporary scaffold supporting climate transition; see sunset in global carbon pricing regime",
+      "Industrial Policy Bureaucracy: Institutional actor (institutional/arbitrage) \u2014 maintains reshoring administration as performative ritual; benefits from continued policy complexity",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing policy choice (reshoring) as economic law (comparative advantage immutability)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The reshoring regime creates genuine coordination benefits (supply chain diversification, critical capacity maintenance, labor market support in specific regions) but these are substantially outweighed by extraction mechanisms: consumer price increases from tariffs, barriers facing non-politically-connected firms, inefficiency from forced geographic concentration, and externalized costs to overseas workers. The rising trajectory (0.42\u21920.58) indicates that accumulating policies and enforcement intensity are increasing extraction faster than coordination benefits are materializing. Suppression (0.65): High. Multiple barriers limit agent exit: tariffs and quotas constrain consumer choice and firm input access; investment reviews restrict capital allocation; overseas workers have no voice in reshoring decisions; non-connected firms face regulatory barriers. Suppression is structural rather than temporary. Theater ratio (0.68): Moderately high. Extensive policy administration (CHIPS Act implementation, Committee on Foreign Investment reviews, subsidy distribution machinery) produces disproportionate planning activity relative to actual manufacturing capacity gains. Policy announcements of reshoring often precede actual investment by years or prove ephemeral.",
+    "perspectival_gap": "The maximum perspectival gap appears between politically connected corporations (Rope: benefits flow to them) and overseas production workers (Snare: pure extraction). Both face the same policy constraint, but their structural relationships are opposite. Consumers see snare; beneficiaries see rope. The tangled_rope consensus (from moderate and some organizational perspectives) represents the true structural mixed function: genuine coordination (supply chain resilience, labor market transition support) layered with asymmetric extraction (corporate subsidy capture, consumer cost increases, overseas worker displacement). The piton perspective (institutional policy bureaucracy maintaining performative review processes) captures the degradation pathway \u2014 as subsidy capture concentrates and actual manufacturing gains stagnate, the policy apparatus persists through institutional inertia rather than functional necessity.",
+    "directionality_logic": "Structural data for directionality derivation: (1) Primary beneficiaries are politically connected corporations and unions \u2014 these declare benefits flowing toward them, constraining d toward 0.0\u20130.25 range for institutional/organized agents with arbitrage/mobile exit options. (2) Primary victims are consumers, non-connected firms, and overseas workers \u2014 these declare costs flowing toward them, expanding d toward 0.75\u20130.95 range depending on exit mobility. (3) Secondary ambiguity: are unions beneficiaries or manipulated victims? Analysis shows they are genuine beneficiaries in unionized sectors with negotiating power, though non-unionized workers bear more of the extraction burden. Union directionality: institutional/organized + arbitrage/mobile + genuine benefit flow \u2192 d \u2248 0.45\u20130.55. No overrides needed \u2014 the natural derivation captures the structural asymmetry. The high variance in d across agent groups (0.15 to 0.95) confirms mixed extraction mechanisms operating simultaneously.",
+    "mandatrophy_analysis": "RESOLUTION: The constraint resolves mandatrophy by demonstrating that tangled_rope is structurally accurate and stable. The tension is real: genuine coordination function (supply chain diversification, critical capacity) coexists with asymmetric extraction (corporate subsidy concentration, consumer cost increases, worker displacement). The classification avoids false naturalization (the mountain perspective) by showing that reshoring is policy-contingent, not economic-law-contingent. It avoids false symmetry (rope or pure coordination) by documenting the victim groups and asymmetric benefit distribution. The rising extractiveness trajectory (0.42\u21920.58) indicates a degradation pathway where extraction mechanisms are accumulating faster than coordination benefits materialize \u2014 this suggests a potential reclassification toward snare if the trajectory continues, but current structure supports tangled_rope with active enforcement and documented beneficiaries."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "global_supply_chain_vulnerability",
+      "semiconductor_production_capacity",
+      "labor_market_geographic_concentration"
+    ],
+    "dual_formulation_note": "Reshoring policy is downstream of global trade regime and comparative advantage dynamics, but represents a distinct structural constraint with its own extractiveness and beneficiary/victim structure. The upstream constraints (semiconductor supply, supply chain vulnerability) have their own \u03b5 values reflecting empirical scarcity; reshoring has its own \u03b5 reflecting policy-induced extraction. Decomposition note: if empirical analysis reveals that actual reshoring is primarily assembly (low value-add, theater) rather than durable production capacity, a separate story would model the distinction with higher theater_ratio and potentially reclassify toward piton."
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "blockchain_scalability_trilemma",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bst"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Blockchain Scalability Trilemma",
+    "topic_domain": "distributed_systems/cryptoeconomics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "consensus_preservers",
+      "decentralization_advocates"
+    ],
+    "victims": [
+      "transaction_throughput_seekers",
+      "excluded_participants"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Excluded Network Participant",
+      "comment": "PERSPECTIVE 1: EXCLUDED PARTICIPANT (SNARE) \u2014 Cannot participate at scale due to transaction costs and network congestion. Trapped between blockchain participation and traditional systems. Maximum extraction experienced: cannot scale operations, cannot exit cleanly to alternative coordination mechanisms without abandoning blockchain guarantees."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The L2 Protocol Developer",
+      "comment": "PERSPECTIVE 2: L2 PROTOCOL DEVELOPER (TANGLED ROPE) \u2014 Constrained by the fundamental trilemma: developing scalability solutions requires accepting either centralization or security trade-offs. Benefits from the constraint's existence (creates a problem they can monetize through sequencers, bridges, governance tokens) while bearing costs of technical complexity and user friction. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Base Layer Validator Network",
+      "comment": "PERSPECTIVE 3: BASE LAYER VALIDATOR NETWORK (ROPE) \u2014 Benefits from the trilemma's enforcement: scalability constraints preserve their role as essential validators. Experiences the constraint as coordination mechanism that maintains their structural importance. Can arbitrage between different consensus parameters."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Scalability Research Community",
+      "comment": "PERSPECTIVE 4: SCALABILITY RESEARCH COMMUNITY (SCAFFOLD) \u2014 Organized actors (protocol researchers, cryptographers, implementation teams) see the trilemma as a temporary coordination failure with identified exit pathways: ZK-rollups, sharding schemes, and alternative consensus mechanisms represent structured solutions with sunset logic. Sunset horizon: 5-10 years as new protocols mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Proof-of-Work Orthodoxy",
+      "comment": "PERSPECTIVE 5: PROOF-OF-WORK ORTHODOXY (PITON) \u2014 Traditional PoW security model persists through institutional inertia despite acknowledged scalability costs. The foundational design choice remains enforced (theatrical commitment to immutability narratives) despite alternatives (PoS, hybrid consensus) offering genuine functional improvements. Theater ratio reflects the performative commitment to PoW maximalism despite protocol drift toward hybrid systems."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, some version of the CAP theorem (consistency, availability, partition tolerance) or the blockchain trilemma is mathematically inherent to distributed systems without trusted intermediaries. The constraint appears as a law of nature. However, this perspective risks naturalizing what may be contingent architectural choices. The engine's false summit detector should identify this as potential naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "mathematical_versus_architectural_constraint",
+      "question": "Is the scalability trilemma a mathematical law or an architectural consequence of specific design choices?",
+      "resolution_mechanism": "Analysis of alternative consensus models and settlement layer designs; comparison of trilemma severity across different blockchain architectures; identification of which components are mathematically necessary versus chosen",
+      "impact": "If mathematical law: constraint is mountain-grade, unsolvable by design. If architectural: constraint is tangled_rope, solvable through engineering. Changes classification from mountain to snare/scaffold.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the trilemma is fundamental or architectural"
+    },
+    {
+      "id": "centralization_quantification_ambiguity",
+      "question": "How is 'decentralization' measured for purposes of the trilemma? What threshold distinguishes acceptable decentralization from extractive centralization?",
+      "resolution_mechanism": "Operational definition of decentralization metrics (number of validators, Nakamoto coefficient, geographic distribution); empirical measurement across existing protocols; agreement on threshold values from protocol governance",
+      "impact": "If threshold is high (many independent validators required): few solutions exist, trilemma remains binding. If threshold is pragmatic (sufficient validation diversity): many existing L2s and sidechains solve it.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Operational definition and threshold for acceptable decentralization"
+    },
+    {
+      "id": "security_model_dependency",
+      "question": "Do different security models (probabilistic finality, economic security, cryptographic proof) shift the trilemma's constraint boundaries differently for different applications?",
+      "resolution_mechanism": "Classification of use cases by security requirements; mapping of which security models suffice for each; measurement of trilemma severity under each security assumption",
+      "impact": "If security requirement varies by use case: constraint is relative (different for different applications), enabling segmented solutions. If uniform security is required: constraint binds all applications equally.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the trilemma differs across security models and use cases"
+    },
+    {
+      "id": "layer_separation_effectiveness",
+      "question": "Do L2 solutions genuinely solve the trilemma or merely defer it to the settlement layer, creating a new trilemma for the L2 protocol itself?",
+      "resolution_mechanism": "Analysis of L2 consensus mechanisms and scalability limits; measurement of whether L2 protocols face the same trilemma constraints; assessment of whether deferring to L1 settlement is a genuine solution or recursive problem-shifting",
+      "impact": "If genuine solution: scaffold perspective confirmed, extractiveness should decrease as L2 ecosystem matures. If recursive: constraint shifts but does not dissipate, remaining as tangled_rope indefinitely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether L2 solutions genuinely resolve or defer the trilemma"
+    },
+    {
+      "id": "extraction_mechanism_clarity",
+      "question": "Who specifically benefits from the trilemma's enforcement, and through what mechanism? Is the constraint maintained intentionally by beneficiaries or emergent from technical limits?",
+      "resolution_mechanism": "Institutional analysis of validator incentives, mining pool concentration, protocol governance voting patterns; economic analysis of L2 sequencer profits; comparison of claimed technical necessity versus observed institutional behavior",
+      "impact": "If intentional maintenance by beneficiaries: snare or pure tangled_rope (extractive). If emergent technical constraint: rope or mountain. Affects whether the constraint serves genuine coordination or extractive rent-seeking.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the trilemma is maintained intentionally by beneficiaries"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The blockchain scalability trilemma posits that distributed ledgers cannot simultaneously maximize three properties: decentralization, security, and scalability (throughput). Any protocol must sacrifice one dimension to achieve the other two. This constraint operates as both a natural law (the mathematical consequence of distributed consensus) and an enforcement mechanism (the institutional benefit to validators who preserve the constraint). The trilemma creates differential extraction across agents: excluded participants bear costs (cannot transact at scale), L2 developers and sequencers benefit (monetize scalability solutions), and base layer validators benefit (remain essential). The constraint exhibits characteristics of all six DR types depending on perspective, making it a diagnostic exemplar for distinguishing mathematical constraints from extractive institutional arrangements.",
+    "key_agents": [
+      "Excluded Network Participants: Primary victims (powerless/trapped) \u2014 cannot achieve scale at base layer; face transaction costs prohibitive for micropayments, developing-world use cases, IoT applications",
+      "L2 Protocol Developers and Sequencers: Primary beneficiaries (moderate/constrained) \u2014 create scalability solutions that solve the trilemma for specific applications but extract value through sequencer fees, token inflation, governance capture",
+      "Base Layer Validators: Secondary beneficiaries (institutional/arbitrage) \u2014 benefit from trilemma enforcement that preserves their structural necessity and economic value",
+      "Scalability Research Community: Organized agents (organized/mobile) \u2014 see the trilemma as a technical problem with identified solutions; working toward exit pathways through cryptographic and consensus innovations",
+      "Proof-of-Work Orthodox Community: Institutional defenders (institutional/arbitrage) \u2014 maintain performance/centralization trade-off through ideological commitment despite protocol alternatives",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent architectural choices as immutable mathematical laws"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The trilemma creates measurable extraction: L2 sequencers capture MEV (maximal extractable value), users pay bridging and rollup fees, validator economic advantages are preserved. However, the extraction is not maximal because genuine coordination functions exist (consensus provides real security guarantees) and alternative solutions are available (L2s do offer real scaling). The value increased from 0.35 to 0.52 over the interval as the L2 ecosystem matured, extractiveness accumulated through sequencer economics, and the original claim that 'scalability without trade-offs is coming' proved false. Suppression (0.65): High. Barriers to exit or alternative choices are substantial: switching blockchains entails liquidity fragmentation, bridge risks, and loss of network effects. Developing-world users cannot afford base-layer transactions regardless of their need for services. Users cannot easily exit to alternative protocols without losing composability. Suppression reflects both technical barriers (fundamental physics of distributed consensus) and institutional barriers (network effects, installed base). Theater ratio (0.58): Moderate-high. The constraint contains genuine technical content (proof-of-work security, consensus finality, data availability) but also significant theater: narrative commitment to 'immutability' and 'decentralization' as foundational values despite pragmatic acceptance of L2 centralization, validation consolidation around major exchanges, and governance concentration. Performative language about 'censorship resistance' persists even as many applications accept practical centralization via L2 sequencers.",
+    "perspectival_gap": "The gap between validators' rope and excluded participants' snare is maximal. Validators experience the trilemma as a coordination mechanism that preserves the security guarantees they enforce and the economic value they capture. Excluded participants experience it as pure extraction: they cannot transact at scale, cannot escape the constraint, and bear all costs. L2 developers bridge this gap by offering scalability solutions, but this bridges to tangled_rope (mixed coordination and extraction) rather than rope, because sequencer fees remain extractive. The piton perspective (PoW orthodoxy) naturalizes the constraint through narrative commitment to 'immutability' and 'decentralization maximalism' despite observing that these values are increasingly honored in form rather than substance (L2 centralization, validation consolidation, governance capture).",
+    "directionality_logic": "Directionality (d) for each perspective is determined by structural position relative to the trilemma. Base layer validators benefit from the constraint (d \u2248 0.15, low) because their validation role remains essential. Excluded participants are pure targets (d \u2248 0.95, high) because they bear transaction costs with no benefit. L2 developers have mixed positioning (d \u2248 0.55, moderate) because they solve scaling problems (beneficiary function) while capturing sequencer rents (extractive function). The analytical observer (d \u2248 0.72) derives from the assumption that cryptographic constraints are neutral facts, but the structural data reveals that institutional actors benefit from treating contingent constraints as immutable. Directionality computation: beneficiary status \u2192 lower d; trapped/constrained exit \u2192 higher d; arbitrage exit \u2192 lower d. The resulting \u03c7 values explain why different agents perceive the same constraint as rope versus snare.",
+    "mandatrophy_analysis": "DIAGNOSTIC EXEMPLAR: This constraint demonstrates mandatrophy resolution through perspectival decomposition. The mandatrophy arises because 'the blockchain scalability trilemma' conflates two distinct claims: (1) a mathematical law (distributed consensus without trusted parties requires trade-offs), and (2) an institutional enforcement (base layer validators benefit from preserving scalability constraints). The mathematical law appears as mountain from the analytical perspective; the institutional enforcement appears as snare from the excluded participant perspective and tangled_rope from the L2 developer perspective. The constraint is not a single type \u2014 it is a presheaf over the observation site, with each perspective yielding a different classification from identical base metrics. The engine's false summit detector should flag the mountain perspective as naturalization. The mandatrophy is resolved by recognizing that (1) is genuinely mountain-grade (immutable consequence of cryptographic protocols), while (2) is genuinely snare-grade (institutional extraction that persists as long as base layer validators benefit). L2 solutions address the mathematical constraint but not the extraction constraint \u2014 they create a new tangled_rope at the application layer (sequencer extraction) while leaving base layer validator extraction intact. True resolution requires not solving the mathematical trilemma but removing the institutional extraction \u2014 which requires breaking base layer validator monopoly on settlement through alternative consensus models or genuine permissionless sequencing."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "layer2_sequencer_extraction",
+      "validator_economic_centralization",
+      "cross_chain_bridging_risk"
+    ],
+    "dual_formulation_note": "The scalability trilemma decomposes into multiple structurally distinct constraints. The mathematical constraint (proof-of-work finality requirements) is downstream of fundamental cryptographic limits. The institutional enforcement constraint (validator benefit from scalability limits) is a separate story with different \u03b5. L2 sequencer extraction is downstream of both \u2014 sequencers exist to solve the mathematical constraint but extract value in doing so. Each story has its own \u03b5 and classification; they are linked via network relationships showing dependency structure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

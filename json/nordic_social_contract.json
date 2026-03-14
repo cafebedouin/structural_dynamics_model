@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "nordic_social_contract",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nsc"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.32,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Nordic Social Contract",
+    "topic_domain": "political_economy/labor_relations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "labor_unions",
+      "public_sector_employees",
+      "welfare_recipients"
+    ],
+    "victims": [
+      "capital_owners",
+      "low_wage_service_workers",
+      "non_union_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Non-Union Low-Wage Worker",
+      "comment": "PERSPECTIVE 1: NON-UNION LOW-WAGE WORKER (SNARE) \u2014 Trapped by labor market structure and immigration restrictions; excluded from union protections and collective bargaining. High suppression from limited exit options. Wage floors and working conditions are set through union-employer negotiations that exclude them. Maximum extraction experienced."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Union Worker",
+      "comment": "PERSPECTIVE 2: UNION WORKER (ROPE) \u2014 Core beneficiary of the contract. Experiences strong coordination: wage bargaining, workplace safety standards, and job security are achieved through institutional arrangement. High extractiveness for capital but coordination benefit is genuine and substantial. Constrained exit because union membership and collective wage-setting create career path dependencies, but these are experienced as protective rather than coercive."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Large Employer in Union Sector",
+      "comment": "PERSPECTIVE 3: LARGE EMPLOYER IN UNION SECTOR (TANGLED ROPE) \u2014 Coordination benefit is genuine: centralized wage bargaining reduces uncertainty, enables long-term investment in labor-intensive production, and provides labor peace. But extraction is significant: wages are higher than global competitive rates, profit margins are constrained, and employers cannot freely adjust labor inputs. Arbitrage exit option because multinational firms can relocate production. This perspective shows both genuine coordination and asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "State as Welfare Provider",
+      "comment": "PERSPECTIVE 4: STATE AS WELFARE PROVIDER (ROPE) \u2014 Experiences the social contract as coordination mechanism for risk pooling, unemployment insurance, healthcare, and education. The universal benefit design is genuinely coordinated \u2014 broad base enables low per-capita cost and high coverage. Exit option (arbitrage) through shifting welfare model, but path dependence is real. Not experiencing extraction as primary dynamic."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Global Competitiveness Coalition",
+      "comment": "PERSPECTIVE 5: GLOBAL COMPETITIVENESS COALITION (SCAFFOLD) \u2014 Neo-liberal organized opposition (business councils, economic think tanks, some policy makers) sees the social contract as a temporary high-cost institutional arrangement that will sunset as globalization forces wage convergence and capital mobility. This perspective treats the constraint as having a sunset clause \u2014 elevated labor costs and rigid labor markets are unsustainable in a global economy. Theater ratio lower from this perspective because the argument is forward-looking rather than performative."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer - Natural Law View",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal scope, the Nordic contract is treated as an immutable institutional expression of Scandinavian culture, homogeneity, and social trust \u2014 a natural law of Nordic societies. This perspective risks naturalizing what is actually a contingent institutional arrangement shaped by post-WWII labor politics, resource wealth, and specific historical coalitions. The engine's false summit detector will flag this naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "demographic_homogeneity_mechanism",
+      "question": "Is the Nordic social contract causally dependent on ethnic/cultural homogeneity, or is causality running the opposite direction?",
+      "resolution_mechanism": "Time-series analysis of contract stability versus immigration rates and demographic change; comparative analysis of contract erosion in cities vs rural areas with different demographic composition; mechanism experiments in synthetic policy contexts",
+      "impact": "If contract is dependent on homogeneity: it is a vulnerability (sunset when demographics shift). If causality runs backward (contract enables tolerance and integration): it is more robust. If bidirectional (reinforcing loop): moderate stability with policy lock-in risk.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Causal relationship between social contract and demographic homogeneity"
+    },
+    {
+      "id": "capital_mobility_exit_viability",
+      "question": "How viable is capital exit (relocation) from the Nordic high-cost model, and does constraint-induced exit actually occur at scale?",
+      "resolution_mechanism": "Historical data on firm relocations, investment patterns by industry; comparison of countries where employers exited (UK manufacturing) vs countries where they remained (Sweden); multinational FDI location choices; wage-cost elasticity of location decisions",
+      "impact": "If exit is highly viable and occurring: constraint is unstable (snare for capital). If exit costs are high or competitive advantages offset wage costs: constraint is more stable (rope even for capital). This directly affects the 'arbitrage' exit characterization.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Capital exit viability and actual relocation patterns"
+    },
+    {
+      "id": "asymmetric_distributional_impact",
+      "question": "How much of the extractiveness is actually paid by low-wage workers excluded from bargaining versus capital owners?",
+      "resolution_mechanism": "Wage floor analysis: non-union vs union wage premiums; cost-of-living data for low-wage workers; profit margin compression analysis by industry; unemployment rate and duration for non-union workers",
+      "impact": "If most extraction falls on capital: Tangled Rope is stable. If extraction is borne by excluded low-wage workers (through lower wages, higher unemployment, precarity): constraint is actually a Snare for them and a Rope + Arbitrage for insiders (bifurcated labor market). The claimed_type would need decomposition into separate stories.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distribution of constraint costs across capital vs excluded workers"
+    },
+    {
+      "id": "welfare_universalism_mechanism",
+      "question": "Does universal welfare design actually produce lower per-capita costs through risk pooling, or does it produce higher costs through inclusion of low-productivity beneficiaries?",
+      "resolution_mechanism": "Cost-benefit analysis of universal vs means-tested systems; comparison of healthcare/education/unemployment costs per capita across welfare regimes; administrative overhead comparisons; long-term productivity and intergenerational mobility effects",
+      "impact": "If universalism is cost-efficient: welfare component is pure rope (coordination). If it is cost-inefficient but politically durable: welfare component is piton (degraded coordination, maintained by political inertia). This affects the analytical observer's classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cost-efficiency of universal versus means-tested welfare"
+    },
+    {
+      "id": "institutional_capture_by_insiders",
+      "question": "To what extent is the social contract maintained through insider institutional capture (union and employer organizations defending their negotiating power) versus genuine coordination benefits?",
+      "resolution_mechanism": "Historical analysis of contract renegotiations; cases where contract was challenged or modified; comparative institutional analysis of countries that abandoned similar contracts; wage-growth analysis relative to productivity; union decline in countries with similar institutions",
+      "impact": "If capture is high: constraint appears as Snare (for outsiders) and institutional preservation (for insiders). If coordination benefits are genuine: Tangled Rope classification is correct. If mixed: the perspectival gap is larger than currently characterized.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of insider institutional capture versus genuine coordination"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "The Nordic social contract represents a post-WWII institutional arrangement coordinating capital-labor relations through centralized wage bargaining, strong unions, comprehensive welfare provision, and active labor market policies. From institutional perspectives it appears as a genuine coordination mechanism solving collective action problems and enabling long-term production planning. From the perspective of capital holders facing constrained profits and non-union workers facing exclusion and wage suppression, it appears as extraction. The constraint exhibits all six types depending on structural position: pure extraction for non-unionized low-wage workers (Snare); coordination for union members and state providers (Rope); mixed coordination-extraction for large employers (Tangled Rope); a sunset institutional arrangement challenged by globalization (Scaffold); and a naturalized cultural law (Mountain) from civilizational perspectives that risk obscuring its contingent institutional origins. The theater ratio (0.45) reflects moderate performative content: the negotiation rituals, governance structures, and consensus-building procedures are substantive rather than purely ceremonial, but some theater has increased as the contract has faced pressure from global competition and demographic change.",
+    "key_agents": [
+      "Labor Unions: Organized beneficiary (organized/constrained) \u2014 core institutional force defending contract; experience it as protection and coordination",
+      "Union Workers: Primary beneficiary (organized/constrained) \u2014 capture wage premiums and job security; also identify with union institution",
+      "Non-Union Low-Wage Workers: Primary victim (powerless/trapped) \u2014 excluded from bargaining; experience wage suppression and precarity",
+      "Large Employers in Union Sector: Mixed actor (powerful/arbitrage) \u2014 benefit from labor peace and long-term planning but face constrained profits; can exit through relocation",
+      "Capital Owners / Shareholders: Secondary victim (powerful/arbitrage) \u2014 constrained profit margins; arbitrage option through capital relocation or divesting from high-cost Nordic production",
+      "State Welfare Institutions: Beneficiary coordinator (institutional/arbitrage) \u2014 manage universal welfare provision; experience genuine coordination benefits",
+      "Global Competitiveness Coalition: Organized opposition (organized/constrained) \u2014 business councils and policy organizations treating contract as temporary, unsustainable constraint"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint extracts from capital owners through higher wages and profit constraints, but the extraction is not as severe as a pure snare \u2014 employers benefit from labor peace, reduced uncertainty, and long-term productivity gains from skilled, stable workforce. The contract enables high per-worker output that offsets wage costs in some sectors. The extractiveness has increased from 0.22 (1960s post-WWII) to 0.38 (present) as globalization has increased capital mobility and alternative production sites, making the constraint less sustainable. Suppression (0.32): Moderate. Barriers to exit include: capital relocation costs, union political power making unilateral wage cuts difficult, cultural/political consequences for employers breaking contract, path dependence in labor market institutions. But suppression is not total \u2014 employers have demonstrably relocated (particularly in manufacturing), and the constraint is contested (scaffold perspective). Theater ratio (0.45): Moderate. The institutional machinery (wage councils, negotiating procedures, consensus bodies) performs real coordination work but also includes some ceremonial elements: multi-stakeholder consensus meetings are sometimes cover stories for pre-negotiated settlements; the 'Swedish model' is sometimes performed for international audiences. Theater has risen from 0.35 to 0.45 as the contract has faced pressure \u2014 more of the negotiation process is now about maintaining the appearance of consensus as actual agreement has become harder to achieve.",
+    "perspectival_gap": "The core perspectival gap lies between the beneficiary institutions (unions, state welfare, large employers with long-term planning horizons) who experience coordination benefits, and the excluded populations (non-union low-wage workers) who experience pure extraction. A secondary gap exists between the institutional beneficiaries (unions, employers, state) who experience Rope or Tangled Rope, and the global competitiveness coalition + capital holders who see the contract as a temporary constraint with a sunset. The largest gap is between the mountain perspective (naturalizing the contract as Scandinavian cultural law) and the scaffold perspective (treating it as a temporary institutional arrangement unsustainable in global markets). The analytical observer risks the false summit \u2014 mistaking a contingent institutional arrangement for an immutable natural law.",
+    "directionality_logic": "Directionality (d) is derived from each actor's structural position: who benefits, who bears costs, what are their exit options. Non-union workers: they are victims with trapped exit (no alternative labor market access) \u2192 high d \u2192 high experienced extraction \u2192 Snare. Union workers: they are beneficiaries with constrained exit (membership is identity and career) \u2192 low d but not arbitrage \u2192 Rope. Large employers: they are victims of wage constraints but with arbitrage exit (can relocate) \u2192 moderate d \u2192 moderate experienced extraction \u2192 Tangled Rope. Capital holders: they are victims with arbitrage \u2192 moderate-high d. The state: they are beneficiary coordinator with arbitrage (policy choices) \u2192 low d \u2192 Rope. The global coalition: they are organized opposition with constrained exit (political/institutional barriers to dismantling contract) \u2192 moderate d \u2192 Scaffold. The analytical observer: structural position is universal/civilizational, at maximum remove from any specific extraction dynamic \u2192 d \u2248 0.72 canonical \u2192 baseline for mountain assessment.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: This constraint demonstrates mandatrophy through the perspectival gap between institutional beneficiaries and excluded populations. The contract is genuinely a Rope for union members and welfare recipients \u2014 it solves authentic collective action problems in wage setting and risk pooling. It is genuinely a Snare for non-union low-wage workers \u2014 they bear constraints without benefits. The Tangled Rope classification at the primary beneficiary level (large employers) is correct because the constraint does provide real coordination (labor peace, productivity, long-term planning) AND real extraction (profit constraints). The false summit (mountain perspective) naturalization is exposed by historical contingency: the contract emerged from specific post-WWII political conditions (labor strength, social democratic governing coalitions, capital-labor cooperation against communism) and is now contested as globalization changes the cost-benefit for capital. The mandatrophy resolves by recognizing that all classifications are structurally legitimate from their respective positions \u2014 the question is not 'which type is correct' but 'whose structural position are we measuring from and what are the implications for stability and justice?'"
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wage_rigidity_and_employment",
+      "capital_relocation_and_deindustrialization",
+      "immigrant_labor_market_access"
+    ],
+    "dual_formulation_note": "The Nordic social contract can be decomposed into three structurally distinct constraints: (1) centralized wage bargaining (\u03b5\u22480.25, Rope), (2) welfare universalism (\u03b5\u22480.20, Rope), (3) labor market closure and non-union worker exclusion (\u03b5\u22480.65, Snare). These are linked through the union-employer-state triad but have distinct extractiveness and mechanisms. The claimed_type 'tangled_rope' represents the mixed position of large employers who experience both coordination and extraction."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.62
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "information_asymmetry_extraction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "infoasym"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Information Asymmetry Extraction",
+    "topic_domain": "economic/social/epistemic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "information_monopolist",
+      "asymmetric_advantage_holder"
+    ],
+    "victims": [
+      "uninformed_party",
+      "epistemic_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Uninformed Party",
+      "comment": "PERSPECTIVE 1: UNINFORMED PARTY (SNARE) \u2014 Structurally trapped by information deficit. Cannot exit without acquiring costly information or abandoning participation. Bears full extraction cost through asymmetric pricing, adverse selection, or systematic disadvantage. Maximum experienced extraction with minimal perceived alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Partially Informed Agent",
+      "comment": "PERSPECTIVE 2: PARTIALLY INFORMED AGENT (TANGLED ROPE) \u2014 Faces high information acquisition costs but perceives some exit options through costly learning or market switching. Benefits from coordination (matching with information holder avoids complete breakdown) while bearing asymmetric extraction costs. Constrained by resource barriers but not structurally trapped."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Information Monopolist",
+      "comment": "PERSPECTIVE 3: INFORMATION MONOPOLIST (ROPE) \u2014 Experiences the constraint as pure coordination mechanism: information disclosure enables market function and transaction completion. Can arbitrage between information states. Net beneficiary. The monopolist's framing emphasizes market-making function and transaction efficiency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Regulatory Authority",
+      "comment": "PERSPECTIVE 4: REGULATORY AUTHORITY (TANGLED ROPE) \u2014 Organized agent with enforcement power and exit options (regulatory redesign). Sees genuine coordination function (mandatory disclosure reduces adverse selection) alongside active enforcement of information extraction prevention. Both coordination and asymmetric control present. Mobile exit through policy revision enables sunset pathways."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Disclosure Ritual",
+      "comment": "PERSPECTIVE 5: DISCLOSURE RITUAL SYSTEM (PITON) \u2014 Mandatory disclosure requirements persist through institutional inertia despite sophistication of information concealment techniques. Theater ratio elevated because complex disclosure documents are often unread or incomprehensible to target parties. The ritual maintains appearance of transparency while substantive asymmetry persists through complexity and obfuscation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Recognizes information asymmetry as both fundamental coordination problem and inherent extraction mechanism. Some asymmetry is necessary for specialization and efficient markets (coordination function). But asymmetry is also active mechanism for rent extraction (enforced through suppression of counter-information and barriers to information acquisition). The observer detects both genuine coordination and strategic extraction amplification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_vs_extraction_threshold",
+      "question": "What magnitude of information asymmetry constitutes necessary market coordination versus extractive rent-seeking?",
+      "resolution_mechanism": "Comparative analysis of market efficiency metrics and distributional outcomes; identification of asymmetry magnitude where transaction completion enables welfare gains vs where asymmetry purely redistributes existing surplus to informed party",
+      "impact": "If threshold is low: most information asymmetry is classified as extraction (higher snare prevalence). If threshold is high: significant extraction is rationalized as coordination cost.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Threshold distinguishing coordination-necessary asymmetry from extractive rent-seeking"
+    },
+    {
+      "id": "information_acquisition_cost_structure",
+      "question": "Are barriers to information acquisition structural (inherent complexity, genuine expertise requirements) or maintained (strategic obfuscation, gatekeeping, regulatory capture of disclosure standards)?",
+      "resolution_mechanism": "Historical analysis of information accessibility improvements and disclosure simplification; comparison of effort required to extract information before and after regulatory intervention; measurement of disclosure comprehensibility vs stated regulatory goals",
+      "impact": "If barriers are structural: suppression score reflects genuine limits on information availability (justified). If barriers are maintained: suppression is enforcement mechanism (amplifies extraction classification).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether information barriers are structural or actively maintained"
+    },
+    {
+      "id": "exit_option_availability_variation",
+      "question": "Does information asymmetry severity vary systematically with agent exit capacity (do less informed agents with fewer alternatives face greater asymmetry)?",
+      "resolution_mechanism": "Empirical comparison of asymmetry magnitude across demographic groups with different market exit options (wealthy vs poor, educated vs less educated, institutional vs individual); temporal analysis of asymmetry changes as exit barriers change",
+      "impact": "If covariation strong: asymmetry is systematically targeted at trapped agents (extraction mechanism amplified). If asymmetry is random across exit capacity: it may be coordination byproduct.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether asymmetry severity correlates with agent exit capacity"
+    },
+    {
+      "id": "revelation_paradox",
+      "question": "Would information disclosure sufficient to eliminate asymmetry destroy the market mechanism that the asymmetry supposedly coordinates?",
+      "resolution_mechanism": "Game-theoretic analysis of incentive compatibility; empirical testing through disclosure experiments in controlled settings; historical observation of market response to regulatory transparency increases",
+      "impact": "If revelation destroys function: asymmetry is necessary for coordination (revise classification toward rope). If markets function under high transparency: asymmetry is extraction mechanism without coordination justification (revise classification toward snare).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether full disclosure would destroy the coordination function"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Information asymmetry extraction is a foundational constraint across markets, relationships, and institutions. The structural dynamic is deceptively simple: one party possesses information the other lacks, creating opportunity for asymmetric advantage. But the constraint exhibits all six DR types depending on perspective, revealing that the distinction between coordination mechanism and extraction depends entirely on the observer's structural position and the specifics of enforcement and suppression. From the uninformed party's perspective, the asymmetry appears as an inescapable snare \u2014 they cannot exit without bearing information acquisition costs they cannot afford. From the information monopolist's perspective, the asymmetry appears as pure coordination \u2014 information brokerage enables mutually beneficial transactions. From the regulatory perspective, the asymmetry appears as a genuine tangled rope \u2014 disclosure requirements coordinate markets while enforcement mechanisms suppress information-hiding tactics. The extractiveness measurement over time (0.38 \u2192 0.58) reflects increasing sophistication in information obfuscation techniques and growing complexity of disclosure requirements, creating a theater ratio that rises (0.32 \u2192 0.48) as compliance becomes more about appearing transparent than being transparent.",
+    "key_agents": [
+      "Uninformed Party: Primary victim (powerless/trapped) \u2014 lacks information necessary to evaluate transaction; bears asymmetric pricing or outcome disadvantage",
+      "Information Monopolist: Primary beneficiary (institutional/arbitrage) \u2014 controls access to critical information; captures extraction advantage through selective disclosure",
+      "Partially Informed Agent: Secondary victim (moderate/constrained) \u2014 faces high cost to acquire information but has some resources for learning and market exit",
+      "Regulatory Authority: Organized actor (organized/mobile) \u2014 mandates disclosure standards; enforces information access requirements; sees both coordination and control functions",
+      "Disclosure Ritual System: Institutional mechanism (institutional/arbitrage) \u2014 maintains theater of transparency through required documents; persists through institutional inertia",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 recognizes necessity of some asymmetry for specialization while identifying active extraction mechanisms beyond coordination requirements"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Information asymmetry enables systematic extraction through multiple mechanisms: adverse selection (informed party exits unfavorable transactions), price discrimination (informed party extracts surplus), and strategic complexity (informed party benefits from uninformed party's inability to navigate options). The value reflects that significant extraction occurs but that some asymmetry serves genuine coordination function. Suppression (0.65): High. Multiple mechanisms suppress information access: intentional obfuscation (complex terms, small print, jargon), gatekeeping (requiring credentials or affiliations to access information), strategic selective disclosure (revealing information that benefits informed party while concealing information that benefits uninformed party), and information overload (flooding with data that obscures critical information). Theater ratio (0.48): Moderate. Mandatory disclosure creates appearance of information access (regulatory theater) while substantive asymmetry persists through complexity, technical barriers, and strategic obfuscation. Theater has increased over the measurement interval as disclosure requirements became more elaborate but not more comprehensible.",
+    "directionality_logic": "The uninformed party with trapped exit options bears maximum extraction (d \u2248 0.95) because they have no choice but to transact despite information deficit. The information monopolist with arbitrage options benefits from the constraint (d \u2248 0.10) because they can exploit asymmetry while choosing whether and when to disclose. The partially informed party with constrained exit options bears moderate extraction (d \u2248 0.60) because they can invest in information acquisition but at significant cost. The regulatory authority with enforcement power and mobile exit options occupies a mixed position (d \u2248 0.50) because they coordinate information access while managing asymmetric control. The analytical observer (d \u2248 0.70) recognizes both the necessity of some asymmetry for markets to function and the active extraction mechanisms that extend beyond coordination requirements.",
+    "perspectival_gap": "This constraint demonstrates fundamental tension between perspectives. The uninformed party perceives pure extraction (snare) \u2014 the information gap is immutable from their position and extraction is the only outcome they can identify. The information monopolist perceives pure coordination (rope) \u2014 information brokerage solves the mutual problem of finding counterparties and facilitating transactions. The regulatory authority perceives tangled rope \u2014 disclosure coordination serves genuine market function while enforcement mechanisms suppress extraction expansion. The disclosure ritual appears as piton \u2014 the elaborate compliance infrastructure persists through inertia while substantive information access barriers remain unchanged. The analytical observer detects both: genuine coordination function (some asymmetry enables specialization and matching) and active extraction mechanism (asymmetry is actively maintained through suppression and complexity beyond coordination necessity). The perspectival gap reveals that whether a given level of asymmetry is 'coordination' or 'extraction' depends on whether the asymmetry is minimal necessary (coordination) or deliberately amplified (extraction).",
+    "mandatrophy_analysis": "RESOLUTION: The constraint's mandatrophy resolves through recognizing that information asymmetry necessarily contains both coordination and extraction components. Pure rope (information brokerage with no extraction) would require information to be freely available \u2014 which defeats the coordinator's role (no value added to providing freely available information). Pure snare (extraction with no coordination) would require all information to be privately known \u2014 which eliminates all gains from information exchange. The constraint is inherently mixed. The analytical observer's tangled rope classification reflects that both components are structural, not that one is mislabeled coordination or hidden extraction. The key empirical question is whether the observed asymmetry magnitude is (a) minimal necessary for coordination function (justify as rope), (b) surplus extraction beyond coordination requirement (classify as snare components within the tangled rope), or (c) actively amplified through suppression (revise toward snare). The omegas address these empirical distinctions."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "adverse_selection_trap",
+      "regulatory_capture_via_information",
+      "market_efficiency_suppression"
+    ],
+    "dual_formulation_note": "Information asymmetry extraction is upstream of market-specific constraints. Adverse selection (insurance, used car markets) and regulatory capture (information control via capture of disclosure standards) are downstream instantiations of this general constraint with their own specific \u03b5 values. The general constraint provides the coordination function; domain-specific constraints model extraction amplification in particular markets."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

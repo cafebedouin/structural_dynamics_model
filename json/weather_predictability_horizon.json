@@ -1,0 +1,151 @@
+{
+  "header": {
+    "constraint_id": "weather_predictability_horizon",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "weather"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Weather Predictability Horizon",
+    "topic_domain": "atmospheric_physics/meteorology",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Agricultural Agent (Two-Week Farmer)",
+      "comment": "PERSPECTIVE 1: AGRICULTURAL AGENT (MOUNTAIN) \u2014 A farmer planning crop irrigation faces absolute unpredictability beyond 10-14 days. No amount of capital, political power, or technological investment can overcome the Lyapunov exponent. The constraint is experienced as natural law: the atmosphere has finite predictability horizon, period."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Weather Service Meteorologist",
+      "comment": "PERSPECTIVE 2: METEOROLOGIST (MOUNTAIN) \u2014 Professional meteorologists with access to global satellite data, supercomputers, and decades of model development confirm daily: predictability decays exponentially. A meteorologist can improve forecasts through better models and observations, but cannot push the horizon meaningfully beyond 10-14 days. This is a constraint on the domain itself, not on access or resources."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Global Meteorological Community",
+      "comment": "PERSPECTIVE 3: GLOBAL METEOROLOGICAL COMMUNITY (MOUNTAIN) \u2014 Across 193 countries, national weather services, academic research groups, and private forecast companies have invested trillions in observation networks (satellites, radiosondes, surface stations, radar), computational capacity, and model development. Despite all this infrastructure and decades of Moore's Law improvements, the 10-14 day predictability barrier has not moved. This is not a resource or coordination problem \u2014 it is structural."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Chaos Theory)",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From first principles: atmospheric dynamics are governed by the Navier-Stokes equations with chaotic behavior characterized by positive Lyapunov exponents (\u03bb \u2248 0.2 day^-1). This means prediction error doubles every ~3-5 days; after 10-14 days, uncertainty saturates at climatological noise floor. This is not a technological horizon but a mathematical one. No finite observation precision or computational power can overcome deterministic chaos."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "observation_precision_limit",
+      "question": "Could improved observational density (e.g., high-density drone networks, quantum sensors) reduce the Lyapunov exponent and extend predictability beyond 14 days?",
+      "resolution_mechanism": "Ensemble sensitivity studies isolating observation error growth; comparison of skill gain vs observation density; theoretical analysis of attractor dimension vs sensor resolution",
+      "impact": "If yes: predictability horizon is contingent on technology (Rope, not Mountain). If no: chaos-driven unpredictability is truly structural (Mountain confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether observation precision could extend predictability horizon"
+    },
+    {
+      "id": "model_parameterization_sufficiency",
+      "question": "Is the 10-14 day barrier due to inadequate model physics (parameterization of clouds, convection, land-surface interaction) or irreducible chaos?",
+      "resolution_mechanism": "Systematic improvement in sub-grid-scale physics (cloud microphysics, mesoscale convection) with skill tracking; comparison of highest-resolution deterministic forecasts vs ensemble spread; theoretical predictability studies isolating physical vs chaotic components",
+      "impact": "If inadequate physics: barrier is technological (Rope). If chaos-dominated: barrier is Mountain.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether barrier is due to model physics or deterministic chaos"
+    },
+    {
+      "id": "predictability_regime_transition",
+      "question": "Is there a qualitative transition in predictability at the 10-14 day mark, or is it a gradual decay?",
+      "resolution_mechanism": "Skill metric analysis (RMSE, correlation, anomaly correlation) across all timescales; identification of critical timescale where ensemble spread exceeds signal; phase-space analysis of attractor saturation",
+      "impact": "If sharp transition: suggests a physical threshold (Mountain). If gradual: suggests technological ceiling (Rope/Scaffold).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether predictability decline is sharp or gradual"
+    },
+    {
+      "id": "regional_variation_structure",
+      "question": "Do different atmospheric regimes (tropical vs midlatitude, stable vs convective) have genuinely different predictability horizons, or is the 10-14 day limit universal?",
+      "resolution_mechanism": "Skill analysis stratified by atmospheric pattern, latitude, season; identification of regimes with extended predictability; comparison of dynamical vs empirical predictability limits",
+      "impact": "If universal: supports Mountain (immutable law). If regime-dependent: suggests structural variation (Multiple Mountains with different limits, or Rope with context-dependent horizon).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether predictability horizon varies by atmospheric regime"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Weather predictability horizon represents a fundamental constraint on atmospheric forecasting arising from the chaotic dynamics of the atmosphere. The Lyapunov exponent of ~0.2 day^-1 implies that small perturbations (observation errors, model biases) grow exponentially, saturating prediction skill at approximately 10-14 days. This constraint is uniform across all institutional contexts, technological levels, and resource expenditures. The weather service with access to global satellite networks and petaflop supercomputers cannot significantly extend predictability beyond the same 10-14 day horizon as a service with regional radar and workstation computing. This uniformity across technological contexts is the diagnostic signature of a Mountain: the constraint emerges from the intrinsic properties of the system (chaos) rather than from institutional, economic, or coordinative arrangements. Theater ratio is low (0.15) because weather forecasting is functionally effective within the predictable window and its failure modes are obvious to users \u2014 there is little performative content. The constraint exhibits zero degrees of freedom: no agent can negotiate with the Lyapunov exponent.",
+    "key_agents": [
+      "Agricultural Planners: Immediate users (powerless/trapped) \u2014 dependent on forecasts beyond the predictable window for decisions that cannot be delayed",
+      "National Meteorological Services: Professional forecasters (institutional/arbitrage) \u2014 benefit from access to global observation networks; cannot overcome the structural limit even with this advantage",
+      "Global Meteorological Infrastructure: Institutional collective (institutional/arbitrage) \u2014 all global observing systems and supercomputers face the same barrier",
+      "Analytical Observer: Theoretical physicist/mathematician (analytical/analytical) \u2014 recognizes the constraint as a consequence of Navier-Stokes chaos"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Very low. This constraint imposes no extraction \u2014 it is not differential across agents. All agents (powerless farmers, powerful meteorological agencies, wealthy insurance companies) face the identical 10-14 day horizon. There is no asymmetric benefit or cost; the constraint is uniformly binding. The 0.12 value reflects the minimal descriptive extractiveness of any immutable physical law \u2014 measurement of the constraint itself requires some empirical work, but the work is not extraction. Suppression (0.03): Negligible. Agents do not experience suppression because there is no alternative being suppressed. A farmer cannot be 'suppressed' in choosing whether to attempt 30-day forecasts; the horizon is simply not available to anyone. Resistance (0.08): Very low. Attempts to extend predictability (higher resolution models, better observations, longer integration times) fail not from institutional resistance but from fundamental physical law. Theater ratio (0.15): Low. Weather forecasting institutions do engage in some performance \u2014 confidence framing, model blend selection, communication styling \u2014 but the core function (predicting weather accurately within 10-14 days) is transparently effective or ineffective. Failure is obvious. This low theater distinguishes weather forecasting from many institutions that maintain high theater despite degraded function.",
+    "perspectival_gap": "This constraint exhibits NO perspectival gap \u2014 all perspectives converge on Mountain classification. The farmer experiences immutable unpredictability; the meteorologist confirms it professionally; the global meteorological community encounters it universally; the analytical observer derives it from first principles. This uniformity is itself a Mountain diagnostic: the constraint transcends observer position. If perspectives diverged (some seeing Rope, others seeing Mountain), the constraint would not be a true Mountain but a contingent institutional arrangement masquerading as natural law.",
+    "directionality_logic": "Standard directionality derivation does not apply \u2014 this is a Mountain constraint with no beneficiaries or victims in the extractive sense. The constraint affects all agents identically. There is no d value to compute because there is no asymmetry in how the constraint operates. This is the defining feature of Mountains: zero degrees of freedom for all indices means zero variation across agent positions."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "directionality_overrides": []
+}

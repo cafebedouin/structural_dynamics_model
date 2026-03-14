@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "inflation_targeting_regime",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "infl"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Inflation Targeting Regime",
+    "topic_domain": "macroeconomic_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "central_banks",
+      "asset_holders",
+      "creditors"
+    ],
+    "victims": [
+      "wage_earners",
+      "debtors",
+      "working_poor",
+      "price_stability_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Wage Earner Under Nominal Rigidity",
+      "comment": "PERSPECTIVE 1: WAGE EARNER (SNARE) \u2014 Trapped within labor contracts and wage-setting institutions that adjust slowly to inflation targets. Cannot exit employment market without severe cost (unemployment, relocation, skill loss). Bears full extraction: real wages decline when inflation runs at target while nominal wage growth lags. Maximum suppression through labor market frictions and information asymmetry about long-term inflation expectations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Small Debtor (Mortgages, Small Business)",
+      "comment": "PERSPECTIVE 2: SMALL DEBTOR (TANGLED ROPE) \u2014 Constrained by debt obligations denominated in nominal terms. Benefits from inflation reducing real debt burden, but also suffers from interest rate volatility required to defend the inflation target. The regime coordinates debt-servicing across the economy (genuine function) while extracting through real asset devaluation and rate risk. Significant but not maximum extraction \u2014 some agency through debt refinancing and real asset appreciation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Central Bank Authority",
+      "comment": "PERSPECTIVE 3: CENTRAL BANK (ROPE) \u2014 Experiences inflation targeting as pure coordination mechanism: stabilizing inflation expectations enables predictable monetary policy and coordinates private sector expectations. The regime concentrates institutional power and credibility in the central bank (beneficiary position) but this is justified through the coordination function. Maximum arbitrage \u2014 can exit the regime by simply changing the target or framework without material cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Asset Holder and Financial Creditor",
+      "comment": "PERSPECTIVE 4: ASSET HOLDER / CREDITOR (ROPE) \u2014 Benefits from predictable inflation within a bounded range, which enables real asset valuation and reduces default risk on loans. Experiences the regime as coordination (stable nominal returns) with asymmetric benefit (creditor receives fixed nominal payments in an environment where inflation is controlled). Maximum exit optionality \u2014 can move assets across currencies, asset classes, and jurisdictions."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Fiscal Authority and Political Coalition",
+      "comment": "PERSPECTIVE 5: FISCAL AUTHORITY / POLITICAL COALITION (SCAFFOLD) \u2014 The inflation targeting regime constrains fiscal policy through the implicit 'monetary dominance' doctrine: central banks are delegated sole authority over inflation while fiscal authorities are constrained by inflation-fighting credibility. This is a temporary arrangement with a generational sunset: as central banks integrate climate policy, financial stability, and employment mandates into their framework, the rigid separation between monetary and fiscal authority erodes. Suppression is moderate \u2014 fiscal authorities can challenge the regime through political pressure, but costs are real (loss of central bank independence, capital flight)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Price Stability as Abstract Commons",
+      "comment": "PERSPECTIVE 6: PRICE STABILITY COMMONS (PITON) \u2014 The regime claims to coordinate around a shared good (stable prices), but the actual mechanism is increasingly performative. Central banks measure inflation through indices (CPI, PCE) that abstract from heterogeneous price experiences; the 'stability' is statistical, not experiential. Theater ratio rises as the gap widens between headline inflation targets (2%) and lived price experiences (housing, healthcare, food). The commons is nominally a beneficiary but receives degraded coordination as the measurement diverges from reality."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational view, inflation targeting represents a genuine coordination achievement (expectations stabilization) layered with asymmetric extraction (wage suppression, creditor prioritization, fiscal constraint). The regime is necessary for modern monetary systems but not neutral \u2014 it systematically redistributes from debtors to creditors, from wage earners to asset holders, from fiscal authority to monetary authority. The extraction is structural to the regime's design, not an accident. The effective extractiveness depends on the directionality of the observer."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "inflation_measurement_divergence",
+      "question": "Does the inflation target (typically 2% measured by CPI/PCE) represent actual price stability across consumption baskets and time horizons?",
+      "resolution_mechanism": "Cross-household inflation measurement; disaggregated price tracking by income quintile, age cohort, and region; comparison of objective inflation (what actually happened to prices) vs subjective inflation (what people experienced)",
+      "impact": "If significant divergence: the regime is performatively stable while experientially volatile for wage earners. If convergence: the regime genuinely coordinates price stability. This determines whether the piton classification (theater ratio ~0.58) is conservative or optimistic.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Gap between inflation measurement and heterogeneous price experience"
+    },
+    {
+      "id": "wage_adjustment_speed_vs_target",
+      "question": "Do nominal wage contracts systematically adjust to the inflation target, or do wages lag, creating systematic real wage loss for employees?",
+      "resolution_mechanism": "Longitudinal wage data controlling for productivity, industry, and tenure; comparison of real wage growth before and after inflation targeting adoption; wage adjustment frequency across labor market segments",
+      "impact": "If wages track inflation target: snare classification overstates extraction (should be rope). If wages lag: snare classification is conservative. This determines whether powerless agents' d value (~0.95) correctly represents structural extraction or whether nominal wage rigidity is coordination cost.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Lag between nominal wage adjustment and inflation target"
+    },
+    {
+      "id": "fiscal_constraint_credibility",
+      "question": "Is the constraint on fiscal policy authority a real structural feature of the inflation targeting regime, or a political convention that can be overridden by governments?",
+      "resolution_mechanism": "Comparative analysis of fiscal space across central banking regimes; testing whether countries with explicit inflation targets face stricter fiscal constraints than countries with flexible mandates; identification of countries that have successfully overridden monetary dominance (Japan, US post-2008)",
+      "impact": "If real structural constraint: scaffold sunset is long (50+ years). If political convention: fiscal authorities can exit at political cost alone (short sunset). This determines the confidence in the scaffold classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether monetary dominance is structural or political convention"
+    },
+    {
+      "id": "distributional_asymmetry_necessity",
+      "question": "Is the redistributive asymmetry (toward creditors, asset holders, away from wage earners) a necessary feature of inflation targeting or a policy design choice?",
+      "resolution_mechanism": "Counterfactual comparison: could inflation targeting be implemented with automatic wage indexation, distributional stabilizers, or wealth-inclusive inflation measures? Analysis of central banks that have adopted alternative designs (e.g., employment-inclusive mandates in some countries)",
+      "impact": "If necessary: the extraction in the tangled_rope classification is unavoidable. If design choice: the regime could be reformed to reduce extraction without losing coordination benefits. This determines whether extractiveness (0.52) could be lowered through policy redesign.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether distributional asymmetry is necessary or chosen"
+    },
+    {
+      "id": "monetary_dominance_vs_fiscal_coordination",
+      "question": "Does the inflation targeting regime improve overall macroeconomic coordination relative to alternative frameworks (fiscal targeting, employment targeting, dual mandates), or does it create coordination failures by constraining fiscal policy?",
+      "resolution_mechanism": "Comparison of macroeconomic volatility, employment stability, and distributional outcomes across countries with different frameworks; analysis of crisis periods (2008, 2020) when the regime was tested; modeling of coordination failures from fiscal-monetary conflict",
+      "impact": "If improves coordination: the rope classification is stronger, extraction is justified cost. If creates failures: the tangled_rope with high suppression is more accurate. This determines the entire classification at institutional and analytical levels.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether inflation targeting improves overall macroeconomic coordination"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 1990,
+    "end": 2010
+  },
+  "commentary": {
+    "narrative_context": "Inflation targeting emerged in the 1990s as the dominant framework for monetary policy in developed economies, with central banks delegated sole authority to maintain inflation within a narrow band (typically 2%). The regime coordinates private sector inflation expectations around a credible nominal anchor, enabling price stability and predictable monetary policy. However, it simultaneously extracts from wage earners through nominal wage rigidity, suppresses fiscal policy authority through 'monetary dominance,' and systematically benefits asset holders and creditors through the credibility premium. The constraint exhibits tangled rope characteristics: genuine coordination function (expectations stabilization) combined with asymmetric extraction (redistributive effects). The theater ratio has risen over the 20-year interval as the regime's actual mechanisms diverge from its legitimating narratives \u2014 central banks measure inflation through indices that increasingly diverge from lived price experience, particularly for working-class households facing rapid price growth in housing, healthcare, and education. The regime's extractiveness has increased as nominal wage growth consistently lags the inflation target, creating systematic real wage losses for wage earners despite the official coordination goal.",
+    "key_agents": [
+      "Central Banks: Primary beneficiary (institutional/arbitrage) \u2014 gains institutional authority and credibility; experiences regime as pure coordination mechanism",
+      "Wage Earners: Primary victim (powerless/trapped) \u2014 face nominal wage rigidity and systematic real wage loss; cannot exit labor markets without severe cost",
+      "Asset Holders and Creditors: Secondary beneficiary (powerful/arbitrage) \u2014 benefit from predictable real returns and controlled inflation environment; maximum exit optionality",
+      "Small Debtors: Secondary victim (moderate/constrained) \u2014 benefit from inflation-eroding debt in long run but suffer from interest rate volatility; constrained by debt obligations",
+      "Fiscal Authorities: Constrained actor (organized/constrained) \u2014 suppressed by monetary dominance doctrine; face political cost of challenging central bank independence",
+      "Price Stability Commons: Abstract victim (powerless/trapped) \u2014 nominally the regime's target but receives degraded coordination as measurement diverges from experience",
+      "Analytical Observer: Civilizational perspective \u2014 recognizes genuine coordination layered with asymmetric extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.52): The regime is moderately extractive. The primary extraction mechanism is systematic real wage loss for wage earners whose nominal contracts adjust slowly relative to the inflation target. Secondary extraction flows from asset holders capturing the inflation premium and creditors receiving predictable real returns. The extractiveness value reflects that the regime is not pure coordination (which would require \u03b5 \u2264 0.45) but also not high extraction (which would require \u03b5 \u2265 0.66). The measurement trajectory shows extractiveness increasing from 0.28 (early adoption, 1990) to 0.52 (mature regime, 2010) as nominal wage rigidity persists and real wage growth decouples from productivity. Suppression (0.48): Moderate. Wage earners face barriers to adjustment (labor market friction, information costs, union weakness in many countries) but are not completely trapped \u2014 some can relocate, reskill, or push for union contracts. Fiscal authorities face high suppression (political cost of challenging central bank, capital flight) but can override through political pressure. Creditors and asset holders face minimal suppression. Theater ratio (0.58): Moderate-high. The regime's legitimating narrative (stable prices through technical monetary policy) masks the redistribution mechanism (systematic favor to creditors and asset holders). The inflation target (typically 2%) is presented as scientifically optimal, obscuring that alternative targets (1% or 3%) would produce different distributional outcomes. Central bank communications increasingly emphasize the technical competence and independence of the institution, with less acknowledgment of the distributional consequences. The theater has increased over the interval as measured inflation diverges from experienced inflation for wage-earning households.",
+    "perspectival_gap": "The regime demonstrates how the same constraint produces opposite classifications depending on observer position. Central banks and creditors see rope (coordination). Wage earners see snare (extraction). The gap is not a measurement problem but structural: the regime genuinely coordinates expectations while simultaneously extracting from wage earners. The tangled rope classification at the analytical level acknowledges both functions. The false summit risk: the regime's legitimating narrative ('price stability is good for all') naturalizes what is actually a contingent institutional choice. Alternative regimes (employment targeting, distributional stability, fiscal dominance) would produce different classifications from the same base structure.",
+    "directionality_logic": "Directionality (d) varies by agent's structural position. Wage earners are trapped with high d (~0.95) \u2014 they bear extraction and have no exit. Central banks have low d (~0.05-0.15) \u2014 they are net beneficiaries with arbitrage options. Asset holders have low-to-moderate d (~0.10-0.30) \u2014 beneficiaries with exit options. The regime derives d from beneficiary/victim declarations: beneficiaries (central banks, asset holders, creditors) get low d yielding negative or minimal \u03c7; victims (wage earners, debtors) get high d yielding high \u03c7. The institutional analytical perspective derives d from the asymmetry between coordination benefit (real, significant) and extraction cost (real, borne by specific groups). The effective extractiveness \u03c7 is scaled by spatial scope (global regime scope \u03c3=1.2 amplifies extraction) and agent power (powerless agents with high d experience maximum \u03c7).",
+    "mandatrophy_analysis": "The inflation targeting regime resolves mandatrophy by acknowledging that 'price stability' is not a neutral good but a policy choice with distributional consequences. The genuine coordination function (expectations stabilization) justifies calling this a hybrid rather than pure extraction. But the tangled rope classification requires demonstrating both the coordination function AND the asymmetric extraction \u2014 which the regime exhibits. The central question: could the coordination benefits be achieved with lower extraction? Alternative designs (automatic wage indexation, wealth-inclusive inflation measures, dual monetary-fiscal mandates) might reduce extraction while preserving coordination. The current regime is not the only possible inflation-targeting arrangement; it is one design choice among others."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "labor_market_wage_rigidity",
+      "monetary_fiscal_dominance",
+      "creditor_debtor_asymmetry"
+    ],
+    "dual_formulation_note": "Inflation targeting is downstream of multiple structural constraints: labor market institutions that create nominal wage rigidity (upstream), the delegation of central bank independence (upstream), and the creditor-debtor balance sheet distribution (upstream). The three downstream constraints represent the empirical manifestations of the regime: wage earners' real income loss, fiscal policy constraint, and asset holder advantage. Each downstream constraint can be analyzed separately with its own extractiveness value."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

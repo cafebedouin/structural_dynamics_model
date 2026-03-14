@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "cross_border_data_flow_restrictions",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cbdf"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Cross-Border Data Flow Restrictions",
+    "topic_domain": "digital_governance/data_regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "domestic_tech_incumbents",
+      "state_surveillance_apparatus",
+      "local_data_storage_providers"
+    ],
+    "victims": [
+      "multinational_data_platforms",
+      "cross_border_commerce",
+      "data_subjects_in_restricted_jurisdictions"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Data Subject in a Restricted Jurisdiction",
+      "comment": "PERSPECTIVE 1: DATA SUBJECT (SNARE) \u2014 Individual users cannot exit national borders to access cloud services; cannot transfer personal data across borders; cannot choose platforms operating globally. Maximum suppression: legal prohibition, no alternatives, no meaningful consent in rule-making. Pure extraction from their perspective \u2014 restriction imposed without coordination benefit to them."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Cross-Border Business (SME)",
+      "comment": "PERSPECTIVE 2: CROSS-BORDER SME (TANGLED ROPE) \u2014 Experiences genuine coordination (data localization enables state-aligned operations, reduces cross-border disputes) alongside extraction (compliance costs, redundant infrastructure, reduced market access). Constrained exit: expensive to relocate, but possible. Benefits from some regulatory clarity while bearing costs of fragmentation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Domestic Tech Incumbent",
+      "comment": "PERSPECTIVE 3: DOMESTIC TECH INCUMBENT (ROPE) \u2014 Experiences the constraint as pure coordination: data localization requirements protect market share, eliminate foreign competition, and capture regulatory arbitrage opportunities. No exit costs \u2014 benefits from enforcement. Sees coordination benefit (domestic market protection) with minimal extraction overhead."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Multinational Data Platform",
+      "comment": "PERSPECTIVE 4: MULTINATIONAL PLATFORM (TANGLED ROPE) \u2014 Constrained by requirement to maintain regional data centers while losing global economies of scale. Experiences extraction (compliance costs, infrastructure redundancy, market fragmentation) alongside genuine coordination benefit (reduced cross-border dispute liability, clearer regulatory status within each jurisdiction). Cannot simply exit without abandoning regional markets."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Data Sovereignty Norm",
+      "comment": "PERSPECTIVE 5: DATA SOVEREIGNTY NORM (PITON) \u2014 The underlying norm (states have right to control data within borders) was originally coordination-driven: protecting citizens from foreign surveillance, maintaining network autonomy. Theater ratio (0.58) reflects that modern enforcement is substantially performative \u2014 sophisticated actors route around restrictions (VPNs, cloud proxies, jurisdictional arbitrage), while restrictions fall heaviest on the powerless who cannot bypass them. Original coordination function (state autonomy, citizen protection) persists as rationale despite atrophied functional role."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Multilateral Governance Coalition",
+      "comment": "PERSPECTIVE 6: MULTILATERAL COALITION (SCAFFOLD) \u2014 Organized efforts (DEPA frameworks, cross-border data agreements, GDPR adequacy mechanisms) represent temporary scaffolding to coordinate divergent national restrictions toward convergence. Low effective extraction because this coalition has explicit sunset logic: mutual recognition agreements are designed to eventually enable flows. Constrained but strategic \u2014 building toward interoperability rather than permanent fragmentation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN HYPOTHESIS) \u2014 From a civilizational frame, data localization appears as an immutable constraint: sovereign states cannot be prevented from controlling information flows within their borders \u2014 it is a fundamental property of state sovereignty and territorial jurisdiction. However, structural data contradicts this: restriction is enforced (requires_active_enforcement: true), suppression is high (0.62), and beneficiaries exist (domestic incumbents). These indicate contingent institutional arrangement, not natural law. The mountain classification signals a false summit \u2014 naturalization of what is actually a policy choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "sovereignty_vs_coordination",
+      "question": "Is data localization a sovereign right or an extractive trade barrier?",
+      "resolution_mechanism": "Analysis of justifications: security/privacy (sovereignty signal) vs market protection (extraction signal). Cross-national consistency of restrictions \u2014 do they follow security logic or protectionist pattern?",
+      "impact": "If sovereignty-driven: constraints are legitimate mountain/rope classifications. If protectionist: constraints are snare/tangled_rope. Current evidence suggests mixed: 40% sovereignty logic, 60% market protection.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether data localization reflects sovereign right or extractive protectionism"
+    },
+    {
+      "id": "technical_workaround_effectiveness",
+      "question": "How effectively do VPNs, cloud proxies, and jurisdictional arbitrage bypass data localization restrictions?",
+      "resolution_mechanism": "Empirical measurement: percentage of cross-border data flows using workarounds vs official pathways; detection rates and enforcement action severity against workarounds",
+      "impact": "If workarounds are highly effective: suppression overstated (sophisticated actors have mobile exit), classification shifts toward rope for organized agents. If rarely effective: suppression understated, shifts toward snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Effectiveness of technical workarounds to bypass restrictions"
+    },
+    {
+      "id": "data_localization_enforcement_variance",
+      "question": "Do states enforce data localization equally across domestic incumbents, foreign platforms, and ordinary users?",
+      "resolution_mechanism": "Audit of enforcement patterns: compliance rates, penalty severity, exemptions granted across actor types. Analysis of enforcement selective application.",
+      "impact": "If enforcement is selective (strict on foreign platforms, loose on domestic/state actors): classification confirms tangled_rope with institutional beneficiaries and ordinary victims. If uniform: may shift toward rope (pure coordination) or piton (ritually maintained).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Variance in enforcement across different actor types"
+    },
+    {
+      "id": "legitimate_security_content",
+      "question": "What fraction of data localization restrictions are genuinely addressing legitimate security threats vs using security as cover for market protection?",
+      "resolution_mechanism": "Analysis of threat models cited in policy documents; comparison with actual threat assessments from security researchers; correlation between stated threats and actual enforcement patterns",
+      "impact": "If security fraction is < 30%: constraints are primarily extractive (snare/tangled_rope). If > 60%: legitimate coordination function is substantial (rope/scaffold). Current corpus suggests ~40% security content.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fraction of restrictions addressing legitimate security vs market protection"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Cross-border data flow restrictions emerged in the 2010s as states sought to assert control over digital flows within national borders. The constraint exhibits features of both coordination (protecting citizen privacy, reducing foreign surveillance, maintaining network sovereignty) and extraction (protecting domestic tech incumbents, creating compliance cost barriers, fragmenting global markets). The tension between these functions produces a tangled_rope classification from institutional perspectives: genuine coordination benefits coexist with asymmetric extraction costs borne by cross-border commerce and ordinary users. The constraint's extractiveness has risen from 0.35 to 0.58 over the interval, reflecting accumulation of data localization requirements (India, Russia, Vietnam, Indonesia, Thailand, Nigeria, Pakistan) that initially targeted security but increasingly serve incumbent protection. Theater ratio (0.58) reflects that sophisticated actors routinely bypass restrictions via technical workarounds while ordinary users and SMEs bear full compliance burden \u2014 the restriction is enforced selectively and incompletely, suggesting performative maintenance of sovereignty claims rather than functional security mechanisms.",
+    "key_agents": [
+      "Data Subjects in Restricted Jurisdictions: Primary victims (powerless/trapped) \u2014 cannot access global platforms or transfer personal data across borders; no meaningful choice in rule-making",
+      "Cross-Border SMEs: Secondary victims (moderate/constrained) \u2014 face high compliance costs, infrastructure redundancy requirements, reduced market access; can relocate but at significant cost",
+      "Multinational Data Platforms: Institutional actor (institutional/constrained) \u2014 must maintain regional data centers, lose global economies of scale, face market fragmentation; constrained but can absorb costs",
+      "Domestic Tech Incumbents: Primary beneficiaries (institutional/arbitrage) \u2014 gain protected market share, regulatory arbitrage, competitive advantage; no exit costs",
+      "State Surveillance Apparatus: Institutional beneficiary (institutional/arbitrage) \u2014 gains expanded ability to monitor domestic data flows, access centralized data repositories; enforcement mechanism sustains power",
+      "Multilateral Governance Coalition: Organized agents (organized/constrained) \u2014 building cross-border data agreements (DEPA, adequacy decisions) with explicit sunset logic toward convergence",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing state sovereignty as immutable law rather than examining policy mechanics"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The constraint extracts value from cross-border commerce and data subjects through compliance costs, infrastructure redundancy, market fragmentation, and reduced access. Initial extractiveness (0.35) reflected genuine security coordination; current value (0.58) reflects accumulated layers of protectionist restrictions beyond security justification. Suppression (0.62): High. Barriers to exiting the constraint include legal prohibition (enforcement + criminal liability), technical barriers (architecture changes required), economic barriers (relocation/compliance costs), and political barriers (state sovereignty makes negotiation difficult). Sophisticated actors have workarounds (VPNs, cloud proxies) but ordinary users and SMEs do not. Theater ratio (0.58): Moderate-high and rising. Modern enforcement is substantially performative \u2014 the rationale (security, sovereignty) persists in policy documents while selective enforcement targets foreign platforms (restricting them) while allowing domestic actors and state apparatus to route around restrictions. The restriction ritual (mandatory data centers, compliance audits) performs sovereignty claim without preventing actual data flows, as evidenced by widespread workarounds among those with technical capacity.",
+    "perspectival_gap": "The perspectival gap between beneficiaries and victims is maximal. Domestic incumbents experience low-cost market protection (Rope); multinational platforms experience constrained adaptation with compliance overhead (Tangled Rope); data subjects experience prohibition with no alternatives (Snare). The gap reflects genuine structural differences: some agents (domestic, within-state) face minimal cost from enforcement, while others (cross-border, ordinary users) face near-total prohibition. This gap is the diagnostic signature of the constraint's extraction function \u2014 if all perspectives classified identically, the constraint would be pure coordination (Rope) rather than hybrid.",
+    "directionality_logic": "Directionality values are derived from each agent's structural position within the constraint. Beneficiaries (domestic incumbents, state apparatus) have low d values (~0.10-0.20) because they benefit from enforcement with minimal cost. Victims (data subjects, cross-border commerce) have high d values (~0.80-0.95) because they bear costs with minimal benefit. Institutional actors with constrained exit (multinationals) have intermediate d values (~0.55-0.65) because they experience mixed costs and benefits. The piton classification derives from the theater gate (0.58 \u2265 0.50 threshold), not from high chi \u2014 the constraint maintains performance despite atrophied function. The mountain classification at the analytical context is a false summit: state sovereignty is not immutable law but a policy choice enforced through institutional arrangements that could be different.",
+    "mandatrophy_analysis": "RESOLVED CLASSIFICATION: This constraint resolves mandatrophy through explicit beneficiary/victim declarations and inter-institutional perspective differentiation. The tangled_rope classification (claimed_type) is supported by structural data: genuine coordination exists (state sovereignty over data flows, reduced foreign surveillance, regulatory clarity) AND asymmetric extraction exists (market fragmentation, compliance costs, access restrictions). The Snare classification from the data subject perspective is not contradicted but contextualized \u2014 it reflects a powerless agent experiencing an extractive constraint that simultaneously functions as coordination for institutional beneficiaries. The Rope classification from the domestic incumbent perspective reflects their genuine experience: the constraint coordinates their interests without extraction. The classification diversity is not ambiguity but precision \u2014 the same constraint structure produces different classifications for different agents because they occupy different structural positions."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "tech_platform_market_concentration",
+      "digital_sovereignty_fragmentation",
+      "global_surveillance_coordination"
+    ],
+    "dual_formulation_note": "Cross-border data flow restrictions can be decomposed into two structurally distinct constraints: (1) security-based localization (data subject protection, state autonomy, surveillance prevention) with lower extractiveness (~0.30), and (2) protectionist localization (incumbent protection, market fragmentation, compliance barriers) with higher extractiveness (~0.65). The two are empirically entangled in modern policies but have different justifications, different beneficiaries, and different measurement sensitivities. A constraint family decomposition would separate these with distinct \u03b5 values."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

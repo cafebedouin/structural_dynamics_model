@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "normalization_error_propagation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "normerr"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Normalization Error Propagation in Data Processing Systems",
+    "topic_domain": "computational/epistemology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "initial_data_controller",
+      "downstream_analysts_with_normalization_authority"
+    ],
+    "victims": [
+      "end_users_of_derived_metrics",
+      "statistical_integrity_of_datasets"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Data Consumer",
+      "comment": "PERSPECTIVE 1: DATA CONSUMER (SNARE) \u2014 End users of normalized datasets cannot detect propagated errors; they must trust downstream processing. No capacity to verify normalization choices or audit error accumulation. Trapped in the epistemic chain with no exit mechanism. Bears full cost of uncorrected errors."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Field Epistemology",
+      "comment": "PERSPECTIVE 2: FIELD EPISTEMOLOGY (TANGLED ROPE) \u2014 The statistical integrity of a research domain depends on transparent normalization protocols, but normalization choices also enable coordination across incompatible datasets. Genuine coordination function (comparing across data sources) paired with asymmetric extraction (error costs borne by the field, benefits captured by those controlling normalization choices). Constrained by the necessity of standardized pipelines but capable of demanding protocol transparency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Normalization Authority",
+      "comment": "PERSPECTIVE 3: NORMALIZATION AUTHORITY (ROPE) \u2014 Data controller or processing center that establishes normalization standards. Benefits from coordination: standardized pipelines enable data integration and comparative analysis. Experiences the constraint as solving a collective action problem. Low extraction from this perspective \u2014 the coordination function is genuine."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Transparency Coalition",
+      "comment": "PERSPECTIVE 4: TRANSPARENCY COALITION (SCAFFOLD) \u2014 Open science, data-sharing mandates, and error-audit requirements create alternative verification pathways (error margin disclosure, uncertainty quantification standards, reproducibility checks). These mechanisms have a sunset logic: as error-awareness and validation practices mature, the constraint's extractive force declines. Mobile exit exists via distributed verification."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Normalization Protocol",
+      "comment": "PERSPECTIVE 5: LEGACY PROTOCOL (PITON) \u2014 Standardized normalization procedures (z-score centering, min-max scaling, etc.) persist through institutional inertia despite known limitations. The protocols function less effectively than their ritualistic invocation suggests; many analysts apply normalization without understanding error accumulation. Theater ratio high because the ritual of normalization appears to solve the problem, but error propagation remains untracked."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a mathematical perspective, normalization error propagation appears as an immutable property of finite-precision arithmetic and stochastic processes. Any transformation of data introduces accumulated rounding errors and uncertainty quantification drift that cannot be eliminated, only bounded. This perspective risks naturalizing what is actually a contingent institutional arrangement (the choice to propagate untracked errors rather than maintain error bounds through the pipeline)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "error_tracking_feasibility",
+      "question": "Is continuous error-bound propagation through complex data pipelines computationally and organizationally feasible at scale, or does the cost of tracking exceed the benefit?",
+      "resolution_mechanism": "Empirical comparison of error-tracking overhead in production systems; cost-benefit analysis of interval arithmetic vs legacy normalization; organizational adoption rates of error quantification standards",
+      "impact": "If feasible: constraint can shift to Scaffold with real sunset logic. If infeasible: suppression metric should rise to 0.75+ as error-tracking becomes structurally impossible, strengthening Snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether error tracking through pipelines is feasible at scale"
+    },
+    {
+      "id": "normalization_necessity_vs_choice",
+      "question": "Is normalization a necessary step in data processing (imposed by mathematical properties) or a contingent choice driven by institutional convenience?",
+      "resolution_mechanism": "Historical analysis of when normalization became standard practice; identification of domains that process unnormalized data successfully; comparison of problem-solving approaches in different eras",
+      "impact": "If necessary: mountain classification is correct; constraint is inherent to data processing. If contingent: normalization is a Snare whose error costs are obscured by treating it as natural law.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether normalization is inherent or contingent"
+    },
+    {
+      "id": "error_attribution_ambiguity",
+      "question": "When a downstream analysis produces incorrect results, how much of the error is attributable to normalization choices vs. other factors (model selection, measurement noise, confounds)?",
+      "resolution_mechanism": "Sensitivity analysis decomposing error sources; ablation studies isolating normalization contribution; meta-analysis of error-attribution practices in the field",
+      "impact": "If normalization errors are < 10% of total variance: suppression and extractiveness metrics should be lower. If > 40%: both metrics should rise and Snare classification strengthens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of errors attributable to normalization"
+    },
+    {
+      "id": "institutional_incentive_asymmetry",
+      "question": "Do institutional incentives (publication speed, data access convenience, model performance metrics) systematically favor normalizing and propagating errors over slower error-tracking?",
+      "resolution_mechanism": "Analysis of publication timelines and data access speeds with vs. without error-tracking; career advancement outcomes for researchers implementing transparency vs. institutional convenience; pressure from funding agencies on normalization standards",
+      "impact": "If asymmetry exists: beneficiary (normalization authority) has structural advantage; constraint is Snare/Tangled Rope. If no asymmetry: constraint is Rope (coordination without extraction).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether institutional incentives favor error propagation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Normalization error propagation represents a structural asymmetry in data processing systems where errors introduced during normalization (standardization, transformation, rescaling) accumulate through downstream analyses without transparent tracking or accountability. The constraint operates through institutional arrangements that treat normalization as a solved problem rather than a source of epistemic debt. Data controllers and analysts benefit from the speed and convenience of normalized pipelines; end users and research communities bear the cost of propagated errors. The constraint exhibits characteristics of both pure extraction (Snare) and mixed coordination-extraction (Tangled Rope) depending on the observer's structural position: normalization genuinely solves coordination problems across incompatible datasets, but the solution concentrates error opacity in the hands of those with normalization authority. Theater ratio (0.64) reflects that normalization procedures are ritualized as solving the problem\u2014standardizing to mean-zero unit variance appears to control for dataset differences\u2014when in fact the error accumulation remains invisible to downstream users.",
+    "key_agents": [
+      "Data Consumer/End User: Primary victim (powerless/trapped) \u2014 cannot detect or audit error propagation; must trust downstream processing",
+      "Research Field/Statistical Integrity: Primary victim (moderate/constrained) \u2014 abstract collective good; bears cost of degraded signal fidelity; capacity exists to demand transparency but constrained by necessity of standardized pipelines",
+      "Data Controller/Normalization Authority: Primary beneficiary (institutional/arbitrage) \u2014 controls normalization choices; benefits from simplified data processing; can optimize for speed over error tracking",
+      "Transparency Coalition: Organized agents (organized/mobile) \u2014 advocates for error-tracking standards, reproducibility checks, uncertainty quantification; building alternative pathways with sunset logic",
+      "Legacy Normalization Ritual: Institutional system (institutional/arbitrage) \u2014 standardized procedures persist through inertia; theater persists because normalization appears to solve the problem",
+      "Mathematical Analysis: Civilizational view (analytical/analytical) \u2014 risks treating error propagation as natural law when it is actually a contingent institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Normalization choices introduce bias and error accumulation that benefit the data controller (faster processing, simplified pipelines, authority over data interpretation) while imposing costs on end users (degraded signal fidelity, invisible error bounds, inability to assess result reliability). The extraction is not maximal (\u22650.66) because genuine coordination benefits exist\u2014normalization does enable comparison across incompatible datasets. The intermediate value reflects mixed function. Suppression (0.68): High. Multiple barriers prevent users from detecting or escaping normalization error: error bounds are not routinely computed or disclosed, alternatives to normalization are rarely available in standardized pipelines, technical knowledge to audit error propagation is concentrated in specialized roles, institutional convenience incentivizes opacity over transparency. Suppression is sufficient that even mobile agents (replication groups, independent analysts) find it hard to avoid propagated errors\u2014the normalized data is what is available. Theater ratio (0.64): Moderate-high and increasing. Normalization appears to solve the problem of dataset comparability through standardization ritual. Analysts invoke normalization procedures without understanding error accumulation mechanisms. The ritual has increased in theater over time (0.45 \u2192 0.64) as normalization has become more institutionalized and less questioned. Error-tracking alternatives reduce theater by making error propagation explicit.",
+    "directionality_logic": "Directionality (d) encodes each agent's structural position relative to the extraction flow. Data consumers and the field's statistical integrity are victims (d \u2248 0.90, high f(d)) with trapped/constrained exits\u2014they experience maximum extraction through propagated errors they cannot audit or escape. The normalization authority is a beneficiary (d \u2248 0.10, low f(d)) with arbitrage options\u2014they can choose whether to implement error-tracking, bearing minimal costs. The transparency coalition has mobile exit options (d \u2248 0.55, moderate f(d)) because they can demand protocol changes and have some capacity to implement alternatives. The mathematical perspective risks low d (0.05, assuming it as a beneficiary of 'natural law' framing) when actually it should be higher\u2014the natural law framing itself is an extraction mechanism. The constraint's effective extraction (chi) is suppressed-but-real from the victim perspective (high d + high f(d) + scope scaling) and appears minimal from the beneficiary perspective (low d + low f(d)).",
+    "perspectival_gap": "The primary perspectival gap separates users and field epistemology (who see Snare/Tangled Rope) from normalization authorities and legacy systems (who see Rope/Piton). The data consumer sees pure extraction\u2014errors they cannot detect or escape. The normalization authority sees pure coordination\u2014solving the problem of comparing datasets. The field sees mixed function\u2014genuine coordination benefit paired with asymmetric error costs. The transparency coalition sees a solvable temporary problem (Scaffold)\u2014error-tracking standards can create alternative pathways with sunset logic. The legacy ritual sees itself as degraded (Piton)\u2014performing normalization without understanding its error mechanisms. The analytical observer risks seeing immutable natural law (Mountain) when the constraint is actually maintained by institutional choice to favor speed over error transparency. This perspectival range demonstrates how the same structural mechanism (error accumulation during normalization) appears differently depending on the agent's power level, exit options, and structural position in the extraction flow.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by clarifying that normalization serves genuine coordination (comparing across datasets) while simultaneously enabling extraction (error opacity favoring those with normalization authority). This is the canonical Tangled Rope structure: a legitimate coordination function paired with asymmetric extraction. The false summit risk appears in the analytical/natural law perspective\u2014treating error propagation as an immutable mathematical property rather than as a contingent institutional choice to propagate errors without tracking bounds. The mountain classification would be justified if error accumulation were inherent to any data transformation and impossible to bound; it is actually preventable through error-tracking techniques that are computationally available but institutionally suppressed by convenience incentives. The scaffolding potential is real\u2014error quantification standards, uncertainty propagation protocols, and reproducibility requirements can create alternative pathways. The piton classification is accurate\u2014legacy normalization procedures persist through ritual and institutional inertia despite degraded function."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "data_pipeline_opacity",
+      "statistical_reproducibility_crisis"
+    ],
+    "dual_formulation_note": "Normalization error propagation is downstream of data quality and measurement noise but structurally distinct. Measurement error (upstream constraint) produces raw data; normalization choices (this constraint) introduce additional systematic error; downstream use (affected constraints) amplifies propagated errors. The decomposition reflects \u03b5-invariance: measuring via 'error accumulation rate' yields \u03b5\u22480.52; measuring via 'user-perceived opacity' yields \u03b5\u22480.65; these are the same constraint. The intermediate value (0.52) reflects mixed coordination-extraction function."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.3
+    }
+  ]
+}

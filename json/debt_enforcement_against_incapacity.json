@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "debt_enforcement_against_incapacity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "debt_enf"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.38,
+    "claimed_type": "snare",
+    "human_readable": "Debt Enforcement Against Incapacity",
+    "topic_domain": "economic/legal/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "creditor_institutions"
+    ],
+    "victims": [
+      "incapacitated_debtors",
+      "household_economic_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Incapacitated Debtor",
+      "comment": "PERSPECTIVE 1: INCAPACITATED DEBTOR (SNARE) \u2014 Faces structural inability to service debt due to illness, disability, unemployment, or age-related income loss. Legal mechanisms (wage garnishment, asset seizure, court proceedings) enforce extraction despite the debtor's demonstrated inability to pay. Exit is impossible: cannot declare bankruptcy without losing home or critical assets; cannot escape obligations through relocation due to credit system integration; cannot negotiate terms because creditor has no incentive to modify debt structure. The debtor perceives this as pure extraction with maximum coercion and zero coordination benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Creditor Institution",
+      "comment": "PERSPECTIVE 2: CREDITOR INSTITUTION (ROPE) \u2014 Experiences debt enforcement as a coordination mechanism: the legal framework establishes predictable recovery pathways that enable lending markets to function. Institutional actors have arbitrage options (securitization, sale of debt, portfolio rebalancing) and perceive the constraint as a legitimate coordination tool. From this perspective, enforcement mechanisms solve the collective action problem of maintaining loan performance incentives. Net beneficiary position with high exit optionality."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Household Economy",
+      "comment": "PERSPECTIVE 3: HOUSEHOLD ECONOMY (TANGLED ROPE) \u2014 Mixed coordination and extraction. Debt enforcement coordinates household financial planning and incentivizes productive activity (work, asset accumulation). But enforcement against incapacitated debtors creates asymmetric extraction: household budgets are permanently constrained; essentials (food, medicine, housing) are subordinated to debt service; intergenerational mobility is blocked. Constrained exit: moving to no-enforcement jurisdictions is economically infeasible; renegotiation requires proving hardship through invasive means."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Bankruptcy System",
+      "comment": "PERSPECTIVE 4: BANKRUPTCY SYSTEM (PITON) \u2014 Designed as a temporary relief mechanism for incapacitated debtors (sunset clause: discharge after 7-10 years). But the system has become largely performative. Bankruptcy filing requires expensive legal representation, trustee fees, and asset seizure, making it inaccessible to debtors with minimal assets. Most incapacitated debtors cannot exit through the intended mechanism. The theater ratio (0.38) reflects that bankruptcy processes maintain procedural legitimacy while substantively failing to provide relief. The coordination function (fresh start after hardship) has atrophied; institutional inertia maintains the constraint despite degraded purpose."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Debt Relief Coalition",
+      "comment": "PERSPECTIVE 5: DEBT RELIEF COALITION (SCAFFOLD) \u2014 Community organizations, policy advocates, and mutual aid networks (organized agents with constrained exit) are building alternative exit pathways: debt jubilees, income-based repayment, debt cancellation programs. These interventions have sunset logic \u2014 they are positioned as temporary responses to specific hardships (medical debt, student loan crises, pandemic disruption). As these programs mature and normalize, the enforcement constraint's extractive force declines. The coalition sees enforcement against incapacity as a temporary coordination failure that can be resolved through policy intervention."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational view, debt enforcement against incapacity reveals a fundamental structural conflict: no agent perceives genuine mutual coordination benefit. The creditor benefits from extraction; the debtor bears costs; the household economy is stratified into payers (constrained) and extractors (beneficiary). The constraint persists not because it solves a collective action problem but because enforcement mechanisms have been institutionalized and naturalized as 'how credit markets work.' The analytical observer classifies this as snare across all contexts except the creditor's immediate institutional view (where it appears as rope)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "incapacity_definition_boundary",
+      "question": "What constitutes demonstrated incapacity that should trigger enforcement suspension?",
+      "resolution_mechanism": "Comparative legal analysis of disability standards across jurisdictions; empirical assessment of debtor income trajectories post-enforcement action; medical certification protocols.",
+      "impact": "If incapacity is defined narrowly (severe disability only): most debtors classified as capable despite genuine inability to pay; extraction rates remain high. If defined broadly (any income < debt service): system becomes welfare mechanism rather than debt recovery tool; lender incentives collapse.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Definition boundary for incapacity that justifies enforcement suspension"
+    },
+    {
+      "id": "extraction_versus_coordination_fungibility",
+      "question": "Are debt enforcement mechanisms primarily extractive (serving creditor interests) or coordinative (establishing predictable incentives for both parties)?",
+      "resolution_mechanism": "Comparative institutional analysis: jurisdictions with strong incapacity exemptions vs strict enforcement; measurement of debt recovery rates, lending volume, and default costs under each regime; debtor mobility patterns.",
+      "impact": "If coordinative dominates: classification shifts toward Tangled Rope across all perspectives; enforcement is justified by mutual benefit. If extractive dominates: classification is Snare; enforcement persists to transfer wealth from incapacitated to creditors.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether enforcement serves coordination or extraction function"
+    },
+    {
+      "id": "identity_lock_in_debt_obligation",
+      "question": "Do incapacitated debtors accept enforcement as legitimate (identity-locked) or perceive it as unjust extraction but face material barriers to exit?",
+      "resolution_mechanism": "Qualitative research: debtor self-narratives, acceptance vs resentment of debt obligations post-incapacity; psychological assessment of internalized shame vs external constraint; comparative study of debtors in jurisdictions with and without enforcement-against-incapacity mechanisms.",
+      "impact": "If identity-locked dominates: the binding mechanism is cognitive (debtor has internalized obligation as moral debt despite incapacity); exit would require identity reconstruction. If material barriers dominate: debtors recognize extraction but cannot escape due to structural constraints; different intervention logic applies.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression operates through identity lock or material barriers"
+    },
+    {
+      "id": "debt_jubilee_sustainability",
+      "question": "Can alternative exit mechanisms (debt jubilee, income-based repayment, debt cancellation) permanently replace enforcement against incapacity, or do they require periodic reinvention?",
+      "resolution_mechanism": "Longitudinal tracking of debt relief programs (medical bankruptcy, student loan forgiveness, jubilee programs); measurement of re-accumulation of unsustainable debt; analysis of whether debtors re-enter enforcement cycles.",
+      "impact": "If sustainable replacement: scaffold perspective is correct; sunset is real; enforcement constraint can be permanently decomposed. If cyclical: relief programs are temporary pressure valves; underlying extraction mechanism persists; scaffold is aspirational rather than structural.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether alternative mechanisms can sustainably replace enforcement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Debt enforcement against incapacity represents a structural constraint where creditor institutions extract value from debtors who lack income or capacity to service debt. The constraint operates across multiple domains: medical debt, consumer credit, mortgages, and student loans. It exhibits snare characteristics \u2014 high extraction (\u03c7 \u2248 0.68), high suppression (0.72), and minimal coordination benefit for the target population. The constraint persists through legal mechanisms (wage garnishment, asset seizure, credit reporting, eviction) that are activated despite demonstrated debtor incapacity. The extractiveness value (0.68) reflects that enforcement mechanisms transfer wealth from incapacitated debtors to creditors with high coercive force and minimal due process for hardship claims. The low theater ratio (0.38) indicates that enforcement mechanisms function operationally \u2014 they do extract value efficiently \u2014 but lack coordinative legitimacy; the extraction is naked rather than clothed in procedural theater. The measurement trajectory shows rising extractiveness over the 30-year interval as enforcement mechanisms have been strengthened (garnishment laws expanded, credit reporting systemized, asset seizure made automatic) while incapacity exemptions have been restricted. The rising theater ratio suggests recent attempts to justify enforcement through procedural legitimacy (hardship hearings, payment plans) \u2014 adding theater to an inherently extractive mechanism.",
+    "key_agents": [
+      "Incapacitated Debtors: Primary victims (powerless/trapped) \u2014 bear full extraction; cannot exit through bankruptcy (inaccessible), cannot renegotiate terms (creditor has no incentive), cannot escape obligations (credit system integration). Trapped exit = maximum experienced extraction.",
+      "Creditor Institutions: Primary beneficiaries (institutional/arbitrage) \u2014 access enforcement mechanisms with minimal cost; have multiple arbitrage options (securitization, portfolio rebalancing, debt sale); perceive enforcement as legitimate coordination tool. Arbitrage exit = low/negative experienced extraction.",
+      "Household Economy: Secondary victim (moderate/constrained) \u2014 coordination function (incentives for productive activity) exists alongside asymmetric extraction (budget constraints, reduced intergenerational mobility). Constrained exit = moderate experienced extraction.",
+      "Bankruptcy System: Institutional actor (organized/constrained) \u2014 designed as temporary relief (sunset logic) but has become inaccessible to target population; persists through inertia (piton). Constrained exit = moderate experienced extraction, high theater (procedural legitimacy masking failure).",
+      "Debt Relief Coalition: Organized agents (organized/constrained) \u2014 building alternative pathways (jubilees, income-based repayment, cancellation); positioned as temporary interventions with eventual sunset. Constrained exit = perception of solvability; scaffold logic.",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 identifies snare structure across all perspectives except creditor institutional context; recognizes that constraint persists through institutional naturalization rather than coordinative necessity."
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint transfers substantial value from debtors to creditors. Empirical measures: (1) income diverted to debt service despite incapacity (average 30-40% of household income in incapacity cases); (2) asset seizure and forced liquidation at below-market rates; (3) creditor recovery rates remain high (70-85%) despite debtor incapacity claims. The value reflects sustained, non-consensual value extraction. Suppression (0.72): High. Multiple mechanisms prevent exit: (a) legal barriers (bankruptcy inaccessible due to filing costs and asset seizure requirements); (b) economic barriers (debt consolidation or relocation infeasible); (c) social barriers (credit system integration makes default detection inevitable); (d) informational barriers (debtors lack knowledge of potential defenses). Suppression is structural, not performative. Theater ratio (0.38): Low-moderate. Enforcement mechanisms function operationally \u2014 they extract value efficiently \u2014 but lack extensive procedural theater. Courts do not typically adjudicate hardship; enforcement is largely automatic (wage garnishment, credit reporting, asset seizure by rule). Recent trends show rising theater (hardship hearings, payment plan negotiations) as legitimacy challenges mount. The measurement trajectory reflects this: theater rises from 0.28 to 0.42 as enforcement systems add procedural elements to justify continued extraction.",
+    "perspectival_gap": "This constraint exhibits a stark perspectival gap between the creditor institutional view (Rope \u2014 sees enforcement as legitimate coordination mechanism) and all other perspectives (Snare or Tangled Rope). The incapacitated debtor perceives pure extraction with maximum coercion; the household economy perceives mixed coordination-extraction; the analytical observer perceives snare across civilizational time. The creditor's rope classification rests on the assumption that enforcement enables lending markets to function \u2014 that is, it solves a coordination problem. But this assumes the creditor's perspective IS a genuine coordination solution. From the debtor's perspective, enforcement is not coordinating anything; it is extracting despite incapacity. The perspectival gap reveals that 'coordination' and 'extraction' are not observer-independent properties \u2014 they depend on who benefits and who bears costs. The engine's mandatrophy resolution identifies this: the creditor's rope and the debtor's snare are both structurally accurate from their respective positions. The constraint is snare when measured from the target's perspective and rope when measured from the beneficiary's perspective. No single type is 'correct' \u2014 the presheaf over the indexical space contains the full picture.",
+    "directionality_logic": "Directionality values (d) are derived from beneficiary/victim declarations and exit options. Incapacitated debtors: full victim status + trapped exit \u2192 d \u2248 0.95 \u2192 f(d) \u2248 1.42 \u2192 experienced \u03c7 \u2248 0.97 (maximum extraction). Creditor institutions: full beneficiary status + arbitrage exit \u2192 d \u2248 0.05 \u2192 f(d) \u2248 -0.12 \u2192 experienced \u03c7 \u2248 -0.08 (negative extraction, i.e., benefit). Household economy: mixed victim status + constrained exit \u2192 d \u2248 0.65 \u2192 f(d) \u2248 1.00 \u2192 experienced \u03c7 \u2248 0.68 (high extraction). Bankruptcy system: institutional beneficiary with constrained exit + mixed victim/beneficiary status \u2192 d \u2248 0.40 \u2192 f(d) \u2248 0.40 \u2192 experienced \u03c7 \u2248 0.27 (moderate extraction). Debt relief coalition: organized agent perceiving solvability \u2192 d \u2248 0.35 \u2192 f(d) \u2248 0.28 \u2192 perceived \u03c7 \u2248 0.19 (low extraction because exit path is perceived as real). Scope modifier \u03c3(S) = 1.0 (national scope). The directionality logic shows why extraction is experienced radically differently across perspectives: the creditor's arbitrage options (securitization, portfolio rebalancing, default pricing) de-couple them from the incapacitated debtor's specific default; the debtor has no such options and experiences the full weight of enforcement.",
+    "mandatrophy_analysis": "RESOLVED. The mandatrophy is resolved by recognizing that the constraint is snare from the debtor's structural perspective but rope from the creditor's structural perspective. The classification difference is not a measurement error or perspective bias \u2014 it reflects genuine structural differences: (1) The creditor has multiple exit options (arbitrage); the debtor has none (trapped). (2) The creditor experiences enforcement as enabling market function; the debtor experiences it as pure extraction. (3) The coordination function (predictable recovery mechanisms) serves the creditor's interest in lending markets; it does not serve the debtor's interest in avoiding bankruptcy. The mandatrophy resolves by accepting that 'this is a snare when measured from the debtor's perspective' and 'this is a rope when measured from the creditor's perspective' are both true. The constraint is not secretly one or the other \u2014 it is genuinely both, and the difference reveals the asymmetry. The analytical observer's snare classification (from the civilizational/analytical perspective) correctly identifies that the underlying extraction mechanism serves only creditor interests, not mutual coordination. The creditor's rope is a truth about their experience; the debtor's snare is a truth about the constraint's structural function. No mislabeling occurs when both truths are preserved in the perspectival analysis."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "medical_debt_accumulation",
+      "wage_stagnation_trap",
+      "eviction_risk_cascade"
+    ]
+  },
+  "directionality_overrides": []
+}

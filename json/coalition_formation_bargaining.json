@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "coalition_formation_bargaining",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cfb"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Coalition Formation Bargaining Constraint",
+    "topic_domain": "political_economy/collective_action",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pivotal_median_actor",
+      "coalition_broker"
+    ],
+    "victims": [
+      "excluded_minority_factions",
+      "rank_and_file_members"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Excluded Minority Faction",
+      "comment": "PERSPECTIVE 1: EXCLUDED MINORITY FACTION (SNARE) \u2014 Structurally trapped in the coalition formation process. Cannot credibly threaten exit; lacks resources to form alternative coalition. Bears full weight of bargaining extraction \u2014 forced to accept unfavorable terms or face coalition dissolution and worse outcomes. No genuine alternatives; maximum suppression."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Rank-and-File Members",
+      "comment": "PERSPECTIVE 2: RANK-AND-FILE MEMBERS (TANGLED ROPE) \u2014 Experience genuine coordination benefit (access to power-sharing, policy influence they would lack alone) alongside asymmetric extraction (leadership captures disproportionate gains, imposes party discipline). Can exit at significant cost (loss of access, reputational damage, career penalties in party structure). Mixed mechanism: coordination solves their collective action problem but extraction persists within the coalition."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Pivotal Median Actor",
+      "comment": "PERSPECTIVE 3: PIVOTAL MEDIAN ACTOR (ROPE) \u2014 Experiences coalition formation as pure coordination. This actor's support is arithmetically necessary; can arbitrage between competing coalitions. Extracts gains through bargaining but these are genuine coordination rent \u2014 necessary to incentivize participation from a critical actor. Theater minimal; function clear."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Coalition Broker / Leadership Council",
+      "comment": "PERSPECTIVE 4: COALITION BROKER / LEADERSHIP COUNCIL (TANGLED ROPE) \u2014 Organized institutional actors who coordinate the coalition AND extract rents through control of agenda, resource distribution, and enforcement. Genuine coordination function (solving multi-party bargaining problem) coexists with asymmetric extraction (disproportionate power concentration, veto authority, selective enforcement of coalition terms). Active enforcement required to maintain both the coordination and the extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Coalition Architecture",
+      "comment": "PERSPECTIVE 5: INSTITUTIONAL COALITION ARCHITECTURE (PITON) \u2014 Coalition rules, protocols, and norms have become largely performative. Formal coalition agreements exist (theater) but actual power flow is determined by extra-institutional bargaining. The written coalition document persists through institutional inertia and provides legitimacy theater despite low functional role. Actors navigate around formal rules through informal side agreements."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 From a universal game-theoretic perspective, coalition formation involves irreducible mathematical constraints: any coalition must satisfy feasibility conditions (winning threshold), and any internal division must satisfy stability conditions (no sub-coalition prefers defection). These constraints are inherent to multi-party bargaining and cannot be removed by institutional design. However, the structural data contradicts the mountain classification \u2014 the engine will flag this as a false summit, revealing naturalization of contingent institutional choices (coalition rules, veto structures, enforcement mechanisms) as inherent mathematical necessities."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "extraction_vs_pivotal_rent",
+      "question": "Is the compensation paid to pivotal actors genuine coordination rent or extractive overhead?",
+      "resolution_mechanism": "Counterfactual analysis: compare pivotal actor compensation to the difference between coalition value with and without that actor; test whether other actors benefit from coalition despite paying the pivotal actor",
+      "impact": "If genuine rent: classification remains Tangled Rope with mixed function. If pure extraction: reclassify as Snare for excluded factions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether pivotal actor compensation represents coordination rent or extraction"
+    },
+    {
+      "id": "threshold_credibility",
+      "question": "Do excluded factions genuinely lack capacity to form competing coalitions or is their exclusion a function of institutional barriers?",
+      "resolution_mechanism": "Historical analysis of coalition formation attempts; measurement of resource asymmetry; comparison to counterfactual institutional designs with lower barriers",
+      "impact": "If genuine capacity lacks: trapped classification accurate. If barriers are institutional: reclassify trapped\u2192constrained; extraction partially institutional rather than structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether exclusion reflects genuine incapacity or institutional barriers"
+    },
+    {
+      "id": "informal_enforcement_mechanism",
+      "question": "How much of the coalition extraction is actively enforced through visible sanctions vs passively maintained through exit costs and uncertainty?",
+      "resolution_mechanism": "Ethnographic analysis of coalition discipline mechanisms; measurement of sanction frequency and severity; comparison of enforcement patterns across different coalition types",
+      "impact": "If heavily active: requires_active_enforcement justified, Tangled Rope confirmed. If passive: theater_ratio may be understated; suppression may be overestimated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of active vs passive enforcement of coalition discipline"
+    },
+    {
+      "id": "information_asymmetry_binding",
+      "question": "To what extent does coalition extraction persist because excluded factions lack information about alternative coalition possibilities vs structural unavailability of alternatives?",
+      "resolution_mechanism": "Comparison of coalition outcomes when information is symmetric vs asymmetric; analysis of counterfactual coalition structures if all actors had complete information",
+      "impact": "If information-dependent: suppression value overstated; with better information, trapped\u2192constrained or constrained\u2192mobile. If structural: classification robust.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether extraction depends on information asymmetry or structural constraints"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Coalition formation in multi-party systems creates a structured bargaining problem where actors must coordinate to form winning coalitions while simultaneously extracting maximum gains from that coordination process. The constraint is the tension between the genuine coordination requirement (no single actor can govern alone) and the rent-seeking behavior that emerges in coalition assembly. This creates a hybrid mechanism: coalitions provide real coordination benefit to their members (they gain power and policy influence they would lack in opposition) while simultaneously concentrating extraction in the hands of pivotal or brokering actors who control the bargaining process. The same institutional structure that solves the collective action problem enables asymmetric distribution of its benefits. Theater ratio remains low (0.35) because coalition negotiations are substantive \u2014 the real distributional conflict is clearly visible and not masked by performative ritual. However, theater has increased over the measurement interval (0.28\u21920.35) as formal coalition documents have become more elaborate while informal side agreements determine actual power flow, indicating incipient piton dynamics.",
+    "key_agents": [
+      "Pivotal Median Actor: Primary beneficiary (institutional/arbitrage) \u2014 controls decisive vote in coalition formation; extracts coordination rent through superior bargaining position",
+      "Coalition Broker / Leadership Council: Primary beneficiary (organized/constrained) \u2014 institutional actors who solve multi-party coordination problem and extract disproportionate gains through agenda control and selective enforcement",
+      "Excluded Minority Faction: Primary victim (powerless/trapped) \u2014 lacks resources or credibility to form alternative coalition; forced to accept unfavorable coalition terms or face isolation and worse outcomes",
+      "Rank-and-File Members: Secondary victim (moderate/constrained) \u2014 experience mixed coordination benefit and extraction; party discipline enforces inequality within coalition",
+      "Institutional Coalition Architecture: Degrading institutional mechanism (institutional/arbitrage) \u2014 formal rules increasingly performative; actual power determined by informal bargaining"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Coalition formation does extract value from some parties (excluded factions, rank-and-file), but the extraction is not total or uniform. Pivotal actors and brokers extract substantial gains, but these partly reflect genuine coordination rent \u2014 the cost of incentivizing critical actors to participate. Excluded factions bear concentrated extraction (inability to access coalition benefits) but the overall system extractiveness is tempered by the fact that included members do gain real policy and power benefits. Suppression (0.48): Moderate. Multiple suppression mechanisms operate: excluded factions cannot credibly threaten competing coalitions (structural), rank-and-file face party discipline and exit costs (institutional), and information about alternative possibilities is often controlled by brokers (epistemic). However, suppression is not total \u2014 actors retain some bargaining agency, and coalition terms can be renegotiated when circumstances change. Theater ratio (0.35): Low-moderate. Coalition bargaining is relatively substantive \u2014 the distributional conflict is clearly visible. However, formal coalition documents (theater) have increased while informal bargaining determines actual allocation, creating incipient piton dynamics. The constraint requires active enforcement: coalition terms must be maintained through continuous renegotiation, selective incentives for compliance, and sanctions for defection.",
+    "perspectival_gap": "This constraint exhibits a seven-way perspectival gap. The pivotal actor sees coordination (Rope). The brokers see mixed function (Tangled Rope). Rank-and-file see mixed function (Tangled Rope). Excluded factions see pure extraction (Snare). The institutional form appears degraded (Piton). The civilizational analytical observer risks naturalizing contingent institutional choices as mathematical necessity (Mountain). The gap is irreducible: each perspective captures a real structural feature. The constraint cannot be accurately described by a single type \u2014 the presheaf of perspectives IS the complete picture.",
+    "directionality_logic": "Directionality (d) for each perspective is computed from the agent's structural position. The pivotal median actor: beneficiary status + arbitrage exit \u2192 d \u2248 0.15 \u2192 f(d) \u2248 -0.01, producing negative/minimal experienced extraction (benefits from constraint). The coalition broker: beneficiary status + constrained exit (cannot abandon brokerage role) + organized power \u2192 d \u2248 0.35 \u2192 f(d) \u2248 0.35, producing moderate-high experienced extraction despite being beneficiary (they extract but are also bound to the system). The rank-and-file: mixed victim/beneficiary + constrained exit \u2192 d \u2248 0.55 \u2192 f(d) \u2248 0.75, producing moderate-high experienced extraction. The excluded faction: victim status + trapped exit \u2192 d \u2248 0.92 \u2192 f(d) \u2248 1.38, producing maximum experienced extraction. Scope modifier \u03c3(S) = 1.0 for national scope. Effective extraction \u03c7 = 0.52 \u00d7 f(d) \u00d7 1.0 varies by perspective from -0.01 to 1.38, explaining the perspectival gap. The constraint's effective extractiveness is high for excluded factions and moderate for included members, but averaged across the system, the mixed benefit-cost profile produces moderate base extractiveness.",
+    "mandatrophy_analysis": "Coalition formation bargaining resolves potential mandatrophy by distinguishing coordination (legitimate coalition assembly) from extraction (disproportionate distribution of coalition benefits). The constraint is genuinely a hybrid: the coordination component is real (excluded actors would be worse off without any coalition system) but extraction is also real (pivotal and brokering actors capture disproportionate gains). The Tangled Rope classification is appropriate for the beneficiary and moderate perspectives because both the coordination and extraction mechanisms are observable and necessary to explain the constraint's persistence. The Snare classification for excluded factions is not a mischaracterization \u2014 from their perspective, there is no coordination benefit, only extraction. The Rope classification for pivotal actors correctly identifies genuine coordination rent. The Piton classification at civilizational scale correctly identifies that formal coalition structures are increasingly performative while informal bargaining determines outcomes. The Mountain classification at analytical scale is a false summit \u2014 it naturalizes institutional choices (coalition rules, broker authority, veto structures) as mathematical necessity. The mandatrophy is resolved not by choosing one type but by recognizing that all six types are legitimate perspectival readings reflecting different structural positions relative to the same constraint mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "veto_player_power",
+      "coalition_stability_mechanisms",
+      "party_discipline_enforcement"
+    ],
+    "dual_formulation_note": "Coalition formation bargaining is a family constraint decomposable into three distinct structural problems: the game-theoretic coalition assembly problem (mathematical constraint), the institutional rules governing coalition formation (policy choice), and the informal bargaining process determining actual distribution (political economy). Each has different \u03b5 and classification. This story models the hybrid (institutional + political economy) constraint. The pure mathematical constraint would constitute a separate mountain-type story; the formal rules would constitute a separate piton-type story."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

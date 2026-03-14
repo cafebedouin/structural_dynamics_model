@@ -1,0 +1,203 @@
+{
+  "header": {
+    "constraint_id": "venture_capital_maturity_mismatch",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "vcmm"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Venture Capital Maturity Mismatch: Growth-Stage Extraction Under Early-Stage Structures",
+    "topic_domain": "finance/venture_capital/corporate_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "early_stage_investors",
+      "founders_with_exit_options"
+    ],
+    "victims": [
+      "growth_stage_employees",
+      "late_stage_minority_shareholders"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Growth-Stage Employees",
+      "comment": "PERSPECTIVE 1: GROWTH-STAGE EMPLOYEES (SNARE) \u2014 Trapped by vesting schedules, illiquidity, and the collective action problem of organizing against founders. Cannot exit without losing equity. Founder-controlled governance means employees have no mechanism to challenge extraction or demand board representation. Maximum suppression: founders control information flow, compensation decisions, and exit timing. Zero degrees of freedom."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Late-Stage Minority Shareholders",
+      "comment": "PERSPECTIVE 2: LATE-STAGE MINORITY SHAREHOLDERS (SNARE) \u2014 Trapped by illiquidity, asymmetric information, and voting structures that preserve founder control across capital raises. Cannot exit without accepting pennies-on-the-dollar secondary sales. Dragged into increasingly extractive structures (preferred stock features, anti-dilution protections) that protect early investors at their expense. No exit mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Mid-Stage Founders (Non-Exit-Ready)",
+      "comment": "PERSPECTIVE 3: MID-STAGE FOUNDERS WITHOUT NEAR-TERM EXITS (TANGLED ROPE) \u2014 Experience the constraint as genuine coordination: capital infusion enables team expansion, product development, and market penetration. But increasingly constrained by founder-friendly but growth-hostile governance (founder voting blocs, liquidation preferences, anti-dilution protections) that make future raises harder and suppress external accountability. Mixed experience: genuine benefit from capital + growing extraction from governance lock-in. High cost to exit (must abandon company)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Early-Stage VCs and Seed Investors",
+      "comment": "PERSPECTIVE 4: EARLY-STAGE INVESTORS (ROPE) \u2014 Pure beneficiary. Experience the constraint as optimal coordination: founder control preserves alignment during execution phase, multi-stage capital raises maintain ongoing incentives, and anti-dilution protections guarantee their position. Can exit via secondary sales, recapitalizations, or M&A. Extraction flows toward this group; they see the governance structure as coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Late-Stage Growth VCs",
+      "comment": "PERSPECTIVE 5: LATE-STAGE GROWTH INVESTORS (TANGLED ROPE) \u2014 Benefit from access to high-growth companies but increasingly constrained by founder control structures inherited from early stages. Receive privileged information (board seats) that creates coordination function (strategic input), but extraction mechanisms (founder voting, anti-dilution clauses) limit their ability to shape outcomes or exit cleanly. Trapped between needing founder execution and needing governance change. Moderate extraction but real coordination benefit."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Series A Standard Documents (YC/SAFE Theater)",
+      "comment": "PERSPECTIVE 6: SERIES A GOVERNANCE TEMPLATES (PITON) \u2014 The standardized documents (YC documents, SAFE, Series A preferred stock terms) are largely performative: they codify founder control while appearing to create investor protections. Theater ratio high because the documents' stated purpose (investor protection, governance clarity) is subordinate to their actual function (founder control preservation). These templates persist through institutional inertia despite their obsolescence for growth-stage companies. Viewed from within the startup ecosystem, the documents are degraded \u2014 everyone knows they don't protect growth-stage investors or employees, but alternatives haven't fully displaced them."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal perspective, some degree of founder control and early-investor protection is inherent to venture capital: founders must have sufficient autonomy to execute, and early investors must have sufficient security to commit capital at high risk. This perspective sees the constraint as an immutable property of venture finance. However, the structural data contradicts the mountain classification \u2014 the engine identifies this as a false summit: the maturity mismatch is not inherent to venture capital but contingent on institutional failure to upgrade governance structures as companies scale."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "founder_control_necessity",
+      "question": "Is founder control structurally necessary for execution in early-stage ventures, or has it become a rent-extraction mechanism maintained by institutional inertia?",
+      "resolution_mechanism": "Comparative analysis: outcomes in jurisdictions with mandatory governance upgrades at Series C+ vs US standard practices; founder retention and startup success rates under shared governance models",
+      "impact": "If necessary: constraint reclassifies as Rope (coordination benefit justifies restrictions). If contingent: remains Snare/Tangled Rope \u2014 extraction mechanism masquerading as alignment incentive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether founder control is structurally necessary or institutionally contingent"
+    },
+    {
+      "id": "growth_stage_maturity_threshold",
+      "question": "At what company maturity threshold should governance structures mandatory transition from founder-controlled to distributed (board majority, employee representation, minority shareholder rights)?",
+      "resolution_mechanism": "Time-series analysis of company failures, acquisitions, and public exits; correlation between governance structure and growth trajectory; stakeholder exit satisfaction surveys",
+      "impact": "If threshold < $50M ARR: many high-growth companies face premature governance conflict. If threshold > $100M ARR: extraction mechanisms persist through growth phase unchecked.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Optimal governance transition maturity threshold"
+    },
+    {
+      "id": "anti_dilution_moral_hazard",
+      "question": "Do anti-dilution clauses (protecting early investors from down rounds) reduce or amplify founder rent-extraction in down-round scenarios?",
+      "resolution_mechanism": "Case study analysis: down-round negotiations with/without anti-dilution; founder behavior and employee outcome comparison; secondary market pricing of anti-dilution-protected vs unprotected positions",
+      "impact": "If anti-dilution amplifies extraction: reclassify anti-dilution structure as Snare component. If protective: reclassifies as legitimate governance safeguard.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether anti-dilution clauses increase or decrease founder extraction incentives"
+    },
+    {
+      "id": "employee_coordination_alternative",
+      "question": "Could employee ownership stakes (equity grants with governance rights) substitute for founder voting blocs while maintaining execution coordination?",
+      "resolution_mechanism": "Pilot programs in growth-stage startups with employee board representation; governance efficiency and execution speed comparison; employee exit satisfaction surveys",
+      "impact": "If substitution works: constraint reclassifies as Scaffold with sunset (current founder control gives way to distributed governance). If substitution fails: founders have legitimate need for enhanced control.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether employee ownership can replace founder voting concentrations"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Venture capital maturity mismatch describes a structural constraint where early-stage governance mechanisms (founder control, investor anti-dilution, liquidation preferences) persist unchanged as companies scale into growth and late stages, creating systematic extraction from growth-stage employees and minority shareholders. The constraint operates through multiple interlocking mechanisms: (1) vesting schedules that trap employees in illiquid positions, (2) founder voting blocs that prevent governance evolution despite company maturity, (3) anti-dilution protections that shift down-round costs to employees and minority holders, (4) preferential liquidation cascades that treat early investors as creditors while treating employees as residual claimants. The constraint exhibits different classification types from different observer positions: pure extraction (Snare) for trapped employees, mixed coordination-extraction (Tangled Rope) for growth-stage founders, pure coordination (Rope) for early investors, institutional theater (Piton) for standardized Series A documents, and apparent natural law (Mountain) when viewed from a universal perspective that mistakenly treats venture governance as immutable. The theater ratio has increased over the measurement interval (0.35 to 0.65) reflecting growing performance of governance legitimacy despite degraded actual function\u2014Series A standard documents are increasingly presented as 'investor protections' despite primarily protecting founders.",
+    "key_agents": [
+      "Early-Stage Investors (Seed/Series A/B): Primary beneficiary (institutional/arbitrage) \u2014 capture anti-dilution protections, board control, and exit liquidity while founders remain locked in and employees remain trapped",
+      "Founders with Near-Term Exit Options: Secondary beneficiary (institutional/arbitrage) \u2014 maintain operational control, capture founder preference shares, can exit via acquisition or secondary sales while employees cannot",
+      "Growth-Stage Employees: Primary victim (powerless/trapped) \u2014 vest into illiquid equity, cannot exit without forfeiting unvested grants, have no governance voice or board representation, bear dilution costs of follow-on rounds",
+      "Late-Stage Minority Shareholders: Primary victim (powerless/trapped) \u2014 acquired via later-stage funding rounds, systematically subordinated to founder voting and early-investor preferences, face illiquidity and adverse selection in secondary markets",
+      "Mid-Stage Founders Without Near-Term Exits: Constrained actor (moderate/constrained) \u2014 benefit from capital but increasingly constrained by governance lock-in, can neither change control structure nor exit cleanly",
+      "Late-Stage Growth Investors (Series C/D/E): Constrained institutional actor (organized/constrained) \u2014 have board seats but limited voting power; see governance failures but cannot force change without triggering founder departure",
+      "Series A Document Templates (YC/SAFE): Institutional theater (institutional/arbitrage) \u2014 standardized legal documents that codify founder control while appearing neutral, persist through ecosystem inertia"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. Begins at 0.22 during pure seed/Series A phase when founder control genuinely enables execution with minimal extraction. Rises to 0.38 by Series C (growth stage) as founders maintain operational control despite company maturity requiring distributed decision-making. Reaches 0.58 by series E/F (late growth) as anti-dilution clauses, founder voting blocs, and liquidation preferences systematically subordinate growth-stage stakeholders. The rising trajectory reflects accumulation of extraction mechanisms rather than change in founder intent\u2014governance structures designed for $2M seed rounds remain operative at $500M valuations. Suppression (0.62): High. Multiple suppression mechanisms: (1) vesting schedules create information asymmetry and exit barriers, (2) founder control of board prevents employee voice, (3) lack of mandatory employee board representation, (4) illiquidity prevents secondary market exit, (5) anti-dilution terms suppress minority shareholder exit options, (6) collective action problem prevents employee organizing. Theater ratio (0.65): Moderate-high and rising. Series A documents present themselves as 'investor protections' and 'governance clarity' despite their primary function being founder control preservation. Board meetings perform legitimacy (quarterly updates, strategic input) despite limited actual governance change when founders hold voting control. Anti-dilution clauses are presented as 'investor risk management' despite primarily enabling founder extraction in down rounds.",
+    "perspectival_gap": "This constraint's perspectival gap reveals how institutional vocabulary ('investor protections,' 'founder alignment') masks extraction mechanisms. The early investor's Rope classification (genuine coordination) is structurally correct\u2014they benefit from founder autonomy and can exit. The employee's Snare classification (pure extraction) is structurally correct\u2014they are trapped and have no exit. The gap is not analytical error but genuine difference in how the constraint operates: the same governance structure (founder voting, anti-dilution) is a coordination mechanism from the beneficiary's perspective and an extraction mechanism from the victim's perspective. The constraint itself forces these perspectives to diverge.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from structural position: Early investors (beneficiary + arbitrage exit) derive d \u2248 0.05, producing negative f(d) \u2248 -0.12\u2014extraction flows toward them. Growth-stage employees (victim + trapped exit) derive d \u2248 0.95, producing high f(d) \u2248 1.42\u2014maximum experienced extraction. Mid-stage founders without exits (mixed + constrained) derive d \u2248 0.50, producing f(d) \u2248 0.65\u2014moderate experienced extraction. Late-stage growth investors (organized + constrained exit) derive d \u2248 0.55, producing f(d) \u2248 0.75\u2014above-average experienced extraction. The pipeline correctly identifies early investors as net beneficiaries despite explicit anti-dilution 'protections', and correctly identifies employees as trapped victims despite explicit equity grants. The directionality overrides are not needed\u2014structural derivation captures the true relationships.",
+    "mandatrophy_analysis": "DIAGNOSTIC: The constraint resolves the mandatrophy by demonstrating that Tangled Rope (not pure Rope or pure Snare) is the correct classification at the structural level because the constraint genuinely coordinates capital deployment AND systematically extracts from growth-stage stakeholders. The classification prevents mislabeling: (1) Pure Rope would ignore the suppression and extraction mechanisms targeting employees and minority shareholders. (2) Pure Snare would overstate founder intent\u2014early-stage founder control genuinely enables execution and is not parasitic. (3) Tangled Rope correctly captures that the constraint serves both a coordination function (getting capital to founders) and an extraction function (keeping early investors and founders rich at growth-stage stakeholders' expense). The false summit (Mountain) occurs when observers naturalize the governance structure as 'how venture capital works' rather than seeing it as contingent institutional choice. Mandate resolution: the constraint is not inherent to venture capital\u2014alternative structures (mandatory governance evolution at Series C, employee board representation, pro-rata anti-dilution) exist and are used in other jurisdictions. The persistence of current structures reflects beneficiary power and institutional path dependence, not natural law."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "founder_vesting_lock_in",
+      "employee_liquidity_event_dependency",
+      "anti_dilution_down_round_extraction"
+    ],
+    "dual_formulation_note": "The venture capital maturity mismatch is a parent constraint affecting three domain-specific manifestations: (1) founder vesting lock-in (affects founder behavior in down rounds and exit decisions), (2) employee liquidity event dependency (affects employee retention and negotiation power), (3) anti-dilution down-round extraction (affects minority shareholder outcomes during funding crises). Each downstream constraint has different \u03b5 values reflecting the specific mechanisms, but all inherit the maturity mismatch as structural precondition."
+  },
+  "directionality_overrides": []
+}

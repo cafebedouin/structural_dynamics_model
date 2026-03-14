@@ -1,0 +1,203 @@
+{
+  "header": {
+    "constraint_id": "cultural_legitimacy_gatekeeping",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cultleg"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Cultural Legitimacy Gatekeeping",
+    "topic_domain": "cultural/institutional/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "established_cultural_institutions",
+      "credentialed_arbiters"
+    ],
+    "victims": [
+      "marginal_creators",
+      "alternative_cultural_producers",
+      "subaltern_narratives"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Marginal Creator",
+      "comment": "PERSPECTIVE 1: MARGINAL CREATOR (SNARE) \u2014 Trapped by lack of access to legitimacy channels. Cannot exit without abandoning cultural production. Experiences maximum extraction: their labor and innovation circulate without attribution or compensation while gatekeepers extract prestige and authority. No alternative verification pathway available."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Alternative Producer",
+      "comment": "PERSPECTIVE 2: ALTERNATIVE PRODUCER (TANGLED ROPE) \u2014 Constrained by institutional barriers (festivals, grant bodies, critical review infrastructure) but benefits from emerging alternative platforms (social media, independent publishing, digital distribution). Extraction is real but surmountable with high cost. Mixed coordination-extraction relationship: benefits from some legitimacy frameworks while being excluded from others."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Established Institution",
+      "comment": "PERSPECTIVE 3: ESTABLISHED INSTITUTION (ROPE) \u2014 Experiences the constraint as pure coordination mechanism: museums, universities, publishing houses, and award bodies solve the collective action problem of deciding which cultural artifacts merit preservation and attention. Arbitrage exit available \u2014 can shift criteria and discover new domains. Net beneficiary, but experiences constraint as legitimate curatorship function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Credentialed Arbiter",
+      "comment": "PERSPECTIVE 4: CREDENTIALED ARBITER (TANGLED ROPE) \u2014 Holds power through perceived expertise and access to distribution channels. Experiences constraint as legitimate professional practice but also as inertial institutional role. Can exit (move to new domains, adopt new criteria) but faces professional cost. Benefits from the gatekeeping function while often genuinely coordinating taste selection."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Tradition-Bound Canon",
+      "comment": "PERSPECTIVE 5: TRADITION-BOUND CANON (PITON) \u2014 The explicit written criteria for legitimacy (literary canon, museum acquisition standards, critical frameworks) persist through institutional inertia even as they demonstrably fail to identify emerging high-value cultural work. Theater is high because legitimacy assessment is largely performative (expert authority) rather than predictive. The mechanism (textual analysis, historical precedent, peer consensus) requires constant activation but produces diminishing coherence."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Emerging Alternative Legitimacy Network",
+      "comment": "PERSPECTIVE 6: EMERGING ALTERNATIVE LEGITIMACY NETWORK (SCAFFOLD) \u2014 Distributed digital platforms, community-based curation, algorithmic recommendation, and decentralized credentialing (social media following, open-source reputation, collaborative feedback) are building parallel legitimacy mechanisms with lower institutional overhead. Constrained by network effects (the old system still captures prestige) but with visible sunset trajectory. Extraction declines as alternative verification pathways mature."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some form of legitimacy gatekeeping may be inherent to complex societies: distinguishing signal from noise in cultural production requires aggregating judgments, and aggregation requires some actors to occupy arbiter roles. This perspective risks naturalizing what is actually a contingent institutional arrangement. The false summit detector identifies this as misclassification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "gatekeeping_vs_curation",
+      "question": "Is cultural legitimacy gatekeeping a coordination mechanism (curating signal from noise) or an extraction mechanism (controlling access for rent-seeking)?",
+      "resolution_mechanism": "Measure correlation between arbiter selections and actual adoption/value in retrospective analysis. Do gatekeepers identify work that becomes canonical? Or do they exclude work that later proves valuable? Track false positives (gatekept work that disappears) and false negatives (excluded work that succeeds outside the system).",
+      "impact": "If primarily coordination: classification shifts to Rope from most perspectives. If primarily extraction: Snare from victim perspectives is reinforced. Current evidence mixed \u2014 some gatekeepers have good predictive validity; others are strongly biased toward their own networks.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Gatekeeping as coordination vs extraction function"
+    },
+    {
+      "id": "suppression_structural_vs_cultural",
+      "question": "Is the measured suppression (0.65) primarily structural (legal barriers, economic dependency, lack of distribution channels) or cultural (internalized beliefs that marginal work is less worthy)?",
+      "resolution_mechanism": "Compare suppression trajectory post-exit from gatekeeping system. Do barriers persist after alternative distribution is available? If internalized: marginal creators maintain suppression beliefs even after access to alternative platforms. If structural: suppression drops sharply when barriers are removed.",
+      "impact": "If internalized: constraint includes identity_locked component \u2014 creators have internalized the gatekeeping apparatus's evaluation. If structural: identity_locked is inappropriate; exit is theoretically possible but economically costly.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Suppression mechanism: structural vs internalized cultural belief"
+    },
+    {
+      "id": "alternative_platform_sustainability",
+      "question": "Can distributed digital legitimacy mechanisms (algorithmic recommendation, community curation, social media following) sustain cultural evaluation at scale, or do they degrade into noise?",
+      "resolution_mechanism": "Longitudinal analysis of alternative platform adoption and quality metrics. Track: (a) whether works successful on alternative platforms achieve lasting cultural value, (b) whether alternative mechanisms develop their own gatekeeping functions, (c) whether network effects allow alternatives to compete with traditional institutions.",
+      "impact": "If sustainable: scaffold sunset is real \u2014 alternative legitimacy pathways are genuinely replacing gatekeeping. If degraded: many-eyes logic fails for cultural work, gatekeeping remains extractive necessity, and scaffold perspective is aspirational rather than structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sustainability of alternative legitimacy mechanisms"
+    },
+    {
+      "id": "identity_lock_cultural_internalization",
+      "question": "To what extent do marginal creators internalize gatekeeping institutions' legitimacy criteria, making exit psychologically rather than structurally difficult?",
+      "resolution_mechanism": "Qualitative analysis of marginal creator self-perception. Do creators who exit gatekeeping systems maintain belief that traditional institutional validation is more 'real' or 'legitimate'? Track: (a) creator statements about their own work's value when outside institutional frameworks, (b) whether successful alternative-platform creators seek traditional institutional validation afterward, (c) whether cultural workers accept lower material reward to maintain institutional legitimacy.",
+      "impact": "If strong identity lock: constraint includes cognitive capture component. Exit options should be reclassified as identity_locked rather than constrained for some agents. Creates second-order extraction: gatekeeping extracts both material reward and identity validation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Identity internalization of gatekeeping legitimacy criteria"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Cultural legitimacy gatekeeping is the institutional system through which societies determine which creative works, artistic contributions, intellectual claims, and cultural narratives merit preservation, distribution, and canonical status. This constraint operates through established institutions (museums, universities, publishing houses, award bodies, critical review infrastructure) that control access to prestige, distribution channels, and material rewards. The constraint exhibits extraction (gatekeepers capture prestige and authority while marginal creators labor without compensation or attribution) alongside coordination (the institutions do solve the real problem of aggregating judgment about cultural value). The theater ratio (0.68) reflects that legitimacy assessment is substantially performative: expert authority, textual analysis, historical precedent, and peer consensus are the mechanisms, but their predictive validity is contested. The extractiveness has increased over the interval (0.42 \u2192 0.58) as digital platforms have proliferated but gatekeeping institutions have concentrated their cultural authority in response. The constraint is currently a Tangled Rope globally: genuine coordination function paired with asymmetric extraction. However, alternative legitimacy mechanisms (social media followings, algorithmic recommendation, decentralized community curation, independent publishing) are building scaffolding that could reduce or replace gatekeeping extraction within a generational timescale.",
+    "key_agents": [
+      "Marginal Creators: Primary victims (powerless/trapped) \u2014 excluded from traditional legitimacy channels; labor circulates without attribution; structurally blocked from canonical status",
+      "Alternative Producers: Secondary victims (moderate/constrained) \u2014 face high institutional barriers but can access alternative distribution; bear cost of excluded status while building alternatives",
+      "Established Cultural Institutions: Primary beneficiaries (institutional/arbitrage) \u2014 museums, universities, publishing houses, festivals capture prestige authority; can shift criteria to maintain cultural centrality",
+      "Credentialed Arbiters: Secondary beneficiaries (powerful/mobile) \u2014 critics, curators, professors, editors hold gatekeeping power; experience constraint as legitimate professional practice",
+      "Tradition-Bound Canon: Institutional actor (institutional/arbitrage) \u2014 explicit written criteria for legitimacy persist through inertia; increasingly disconnected from actual cultural value production",
+      "Emerging Alternative Networks: Organized agents (organized/constrained) \u2014 social media platforms, independent publishers, algorithmic curators, open-source communities building legitimacy mechanisms outside traditional institutions",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing gatekeeping as inherent to complex societies"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, and increasing. The original research group (established institutions) captures prestige, authority, and material rewards (grants, donations, institutional power) during the period when they control cultural legitimacy. The extraction is not total because some coordination value is real: institutions do identify culturally valuable work and facilitate its preservation. But extractiveness has grown (0.42 \u2192 0.58 over 20 years) as digital platforms have proliferated without displacing institutional authority \u2014 gatekeeping has responded by concentrating rather than opening, making the extraction mechanism more visible. Suppression (0.65): High. Barriers to alternative legitimacy include: lack of access to distribution infrastructure (publishing houses, museum exhibition space, grant funding), absence of critical review infrastructure for marginal work, publication bias against work outside institutional frameworks, and the network effect that canonical status still matters for material outcomes. However, suppression is not complete \u2014 digital platforms and independent publishing have created partial workarounds, making suppression high but not total. Theater ratio (0.68): High and increasing. Legitimacy assessment relies on expert authority, textual close reading, historical precedent, and peer consensus \u2014 all performative mechanisms whose validity cannot be empirically tested until long after the judgment is made. A critic cannot prove that a work is 'important' \u2014 they can only perform the authority that names it so. The theater has increased as the gap between gatekeeping criteria (literary tradition, historical precedent, institutional prestige) and actual cultural adoption (social media, streaming algorithms, grassroots fandom) has widened. This gap produces the piton perspective: the explicit canon persists through inertia even as real cultural value increasingly circulates outside it.",
+    "perspectival_gap": "Seven distinct readings of the same structural data. The constraint is simultaneously Snare (victim view), Tangled Rope (alternative view), Rope (beneficiary view), Piton (tradition view), Scaffold (emerging alternative view), and falsely Mountain (civilizational naturalization view). The perspectival gap reveals that all six types are legitimate; none is 'the' answer. The gap also diagnoses the constraint's evolution: extractiveness is increasing (0.42 \u2192 0.58) because the traditional gatekeeping system is concentrating rather than opening in response to digital disruption. If the scaffold sunset actually fires \u2014 if alternative legitimacy mechanisms mature and displace institutional gatekeeping \u2014 the constraint will shift from Tangled Rope to Scaffold globally, and then gradually toward Rope or even dissolution as the coordination function moves to distributed platforms. If institutional gatekeeping successfully resists displacement (concentrating authority to maintain relevance), the constraint will remain Tangled Rope or shift toward Snare as suppression increases and exit pathways close.",
+    "directionality_logic": "Each perspective's directionality derives from the agent's structural position. Marginal creators (powerless/trapped) have high d (~0.95): they bear extraction, have no exit, and experience maximum suppression. Alternative producers (moderate/constrained) have moderate-high d (~0.70): they face significant barriers but can exit at cost. Established institutions (institutional/arbitrage) have very low d (~0.05 to 0.15): they benefit from the constraint, have arbitrage options, and drive extraction toward others. Credentialed arbiters (powerful/mobile) have low-to-moderate d (~0.30 to 0.45): they benefit professionally but face some career constraint from the role. The analytical observer (analytical/analytical) has canonical d (~0.72): sees structure from outside, positioned as critical but not embedded in the extraction flow. The directionality derivation feeds into the sigmoid f(d) to produce experienced extractiveness chi. Marginal creators experience chi amplified by high f(d); institutions experience chi suppressed by low f(d). The scope modifier \u03c3(S) further scales chi by spatial extent: global reach (\u03c3=1.2) means the extraction mechanism operates at planetary scale, amplifying effective extractiveness for both beneficiaries and victims.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating why all six types are not equally valid: the established institution's Rope perspective is real (they do coordinate cultural value) but reflects only their structural position. The marginal creator's Snare perspective is equally real and reflects their structural position. The constraint is fundamentally hybrid (Tangled Rope) \u2014 it has both a genuine coordination function (aggregating judgment about cultural value) and asymmetric extraction (gatekeepers capture prestige while marginal creators labor without compensation). The mandatrophy resolution: acknowledge that both functions are real, that the ratio of coordination to extraction varies by perspective, and that the constraint is sustainably Tangled Rope only if extraction does not exceed coordination value. The measurements show extractiveness increasing without corresponding coordination gain, which signals mandatrophy drift: the constraint is trending toward Snare (pure extraction with minimal coordination function) unless alternative legitimacy mechanisms reduce institutional extraction. The piton perspective (degraded ritual) is diagnostically important: it shows that the explicit coordination mechanism (peer review, critical standards, canonical criteria) is increasingly performative, which compounds mandatrophy risk. If the coordination function is already theater-driven, any increase in extraction without coordination increase makes the constraint indefensible. The scaffold perspective provides a positive mandatrophy resolution path: if distributed alternative legitimacy mechanisms actually work (if the open-source hypothesis that 'many eyes make quality visible' succeeds for cultural work), then extractive gatekeeping becomes unnecessary, and the constraint sunsets into Rope (pure coordination) or dissolves entirely."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "academic_publishing_gatekeeping",
+      "museum_acquisition_standards",
+      "literary_canon_formation"
+    ],
+    "dual_formulation_note": "Cultural legitimacy gatekeeping decomposes into domain-specific constraints (academic publishing, museum acquisition, literary canon formation) each with its own epsilon value and institutional specificity. This story represents the general institutional pattern; domain stories capture sector-specific extraction mechanisms and alternative legitimacy pathways. All are linked: changes in one domain (e.g., successful alternative academic publishing) affect others through institutional isomorphism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    }
+  ]
+}

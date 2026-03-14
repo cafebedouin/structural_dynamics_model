@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "evolutionary_computation_landscape",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "evolc"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Evolutionary Computation Landscape Constraint",
+    "topic_domain": "computational_theory/optimization/artificial_intelligence",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dominant_algorithm_developers",
+      "benchmark_publishing_institutions"
+    ],
+    "victims": [
+      "alternative_algorithm_researchers",
+      "field_exploration_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Alternative Algorithm Researcher",
+      "comment": "PERSPECTIVE 1: ALTERNATIVE ALGORITHM RESEARCHER (SNARE) \u2014 Early-career researchers proposing novel evolutionary approaches face publication barriers, benchmark discrimination, and funding scarcity. Trapped within the dominant paradigm's infrastructure; cannot access computational resources or benchmark datasets without conforming to established metrics. Maximum extraction: their ideas are filtered by gatekeepers controlling evaluation standards."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Incremental Improviser",
+      "comment": "PERSPECTIVE 2: INCREMENTAL IMPROVISER (TANGLED ROPE) \u2014 Mid-career researchers working within dominant frameworks (genetic algorithms, particle swarm optimization) benefit from established benchmarks, citation networks, and computational infrastructure. Also constrained by the same benchmarks that define success; must optimize for measurable performance on canonical problems rather than exploring genuinely novel design spaces. Mixed experience: genuine coordination benefits (shared evaluation frameworks) layered with asymmetric extraction (innovation channeled toward dominant paradigms)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Dominant Framework Developer",
+      "comment": "PERSPECTIVE 3: DOMINANT FRAMEWORK DEVELOPER (ROPE) \u2014 Institutions and research groups that pioneered mainstream evolutionary algorithms (genetic algorithms, differential evolution, particle swarm optimization) benefit from the canonical benchmark ecosystem. Experiences the constraint as pure coordination: standardized benchmarks enable reproducibility and cumulative research. Net beneficiary \u2014 the framework accumulates citations and research gravity around its design choices. Low extraction experienced because exit is frictionless; they can shift to new paradigms if advantageous."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Canonical Benchmark Suite",
+      "comment": "PERSPECTIVE 4: CANONICAL BENCHMARK SUITE (PITON) \u2014 Standard test problems (CEC competition benchmarks, BBOB functions, traveling salesman problem variants) persist despite acknowledged limitations. Researchers continue evaluating against them not because they represent important real-world problems but because universality of comparison requires universality of targets. Theater ratio high: much research energy goes into micro-optimizations on arbitrary canonical problems rather than addressing problem structure diversity. The benchmark suite has atrophied from its original function (measuring genuine algorithmic progress) into a maintenance ritual."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Algorithm Initiative",
+      "comment": "PERSPECTIVE 5: OPEN ALGORITHM INITIATIVE (SCAFFOLD) \u2014 Organized efforts (AutoML frameworks, algorithm portfolios, Bayesian optimization services) create alternative evaluation pathways by decoupling algorithm selection from human-specified benchmarks. These systems automatically match algorithms to problem structure, reducing dependence on canonical test suites. Sunset logic: as problem-aware algorithm selection matures, the need to defend performance on fixed benchmarks diminishes. Low extraction because these organized agents have agency and a clear exit path (problem-adaptive evaluation replacing benchmark-centric evaluation)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (No Free Lunch View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NO FREE LUNCH VIEW (MOUNTAIN) \u2014 From the civilizational analytical perspective, some canonical test suite is mathematically inevitable: without fixed evaluation criteria, comparison is meaningless. The No Free Lunch theorem (all algorithms equivalent averaged over all problems) creates an apparent logical necessity for standardized benchmarks. However, the structural data reveals this as false summit: the constraint is not the mathematical necessity of comparison but the institutional lock-in to specific canonical problems with specific metrics. Problem-adaptive evaluation is theoretically coherent and practically viable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "benchmark_diversity_threshold",
+      "question": "How much benchmark diversity is sufficient to prevent benchmark-driven design bias without losing comparability?",
+      "resolution_mechanism": "Meta-analysis of algorithm performance correlation across diverse benchmark families; measurement of generalization from canonical to real-world problems",
+      "impact": "If threshold is low (few diverse benchmarks): modest extraction, most agents can work around canonical bias. If threshold is high (many diverse benchmarks): severe extraction, resources exhausted on benchmark compliance without real innovation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sufficient diversity in benchmarks to prevent design bias"
+    },
+    {
+      "id": "problem_structure_representation",
+      "question": "Do canonical benchmark suites represent the distribution of real-world optimization problems?",
+      "resolution_mechanism": "Comparative analysis of problem characteristics (modality, separability, dimensionality distribution) in canonical suites vs industrial/scientific application portfolios",
+      "impact": "If canonical suites are representative: benchmark constraint is coordination mechanism (more Rope-like across perspectives). If canonical suites are skewed: benchmark constraint is extraction mechanism concentrating innovation on artificial problems.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether benchmarks match real-world problem distribution"
+    },
+    {
+      "id": "algorithm_landscape_exploration_cost",
+      "question": "What fraction of evolutionary computation research effort goes toward exploring fundamentally novel algorithmic principles vs optimizing within established paradigms?",
+      "resolution_mechanism": "Citation analysis and research direction classification; survey of researchers on constraint perceived from their work",
+      "impact": "If exploration fraction is low (<20%): constraint is high-extraction Snare for alternative researchers. If exploration fraction is high (>40%): constraint is lower-extraction Tangled Rope or Scaffold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of research directed toward algorithmic exploration"
+    },
+    {
+      "id": "computational_resource_concentration",
+      "question": "Are computational resources for evolutionary algorithm research concentrated in dominant-paradigm research groups?",
+      "resolution_mechanism": "Analysis of funding distribution, GPU/cluster allocation to research groups by algorithmic focus; measurement of computation costs for canonical benchmark runs",
+      "impact": "If concentration is high: suppression mechanism is resource scarcity (trapped exit for alternative researchers). If distributed: suppression mechanism is primarily institutional bias rather than resource constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Resource concentration in dominant algorithm research groups"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The evolutionary computation landscape constraint encodes a structural tension between the need for standardized evaluation (enabling reproducibility and cumulative comparison) and the pressure toward innovation lock-in created by benchmark-centric research incentives. Canonical test problems (CEC benchmarks, BBOB functions) serve legitimate coordination functions but simultaneously suppress alternative algorithmic approaches by making published comparison difficult for researchers outside dominant paradigms. Early evolutionary algorithms (genetic algorithms, evolution strategies) benefited from benchmark standardization as validation infrastructure. Over time, as research matured, the benchmarks shifted from enabling-infrastructure to constraining-lock-in: publications require performance on canonical problems; funding agencies request improvements on standard metrics; new algorithm proposals must prove superiority on established test suites. This creates a ratchet mechanism: each new dominant algorithm becomes embedded in benchmarks, making it harder for alternative approaches to gain visibility. The constraint exhibits genuine coordination function (benchmarks do enable comparison) layered with asymmetric extraction (the choice of which benchmarks to canonicalize concentrates research attention on certain problem classes and away from others). Theater ratio (0.65) reflects that much published evolutionary computation work optimizes for benchmark performance rather than addressing real problem structure; researchers invest effort in micro-optimizations on canonical problems with known solutions rather than exploring genuinely novel algorithmic principles or applying algorithms to diverse real-world problems.",
+    "key_agents": [
+      "Dominant Algorithm Developers: Primary beneficiary (institutional/arbitrage) \u2014 canonical benchmarks enable citation accumulation and paradigm gravity. Easy exit: if new paradigm emerges, can switch or incorporate into dominant framework.",
+      "Alternative Algorithm Researchers: Primary victim (powerless/trapped) \u2014 cannot publish results without canonical benchmarks; cannot access benchmarks without conforming to dominant evaluation frame. Trapped: lack institutional affiliation, funding, computational resources.",
+      "Benchmark Publishing Institutions: Secondary beneficiary (institutional/arbitrage) \u2014 CEC competitions, BBOB standardization committees control which problems are canonical. Authority and resource concentration.",
+      "Field Exploration Capacity: Primary victim (analytical/trapped) \u2014 abstract collective good. The fraction of computational resources devoted to exploring novel algorithmic space diminishes as benchmark optimization consumes research time and funding.",
+      "Incremental Improvers: Moderate agent (moderate/constrained) \u2014 can work within dominant frameworks, benefit from infrastructure and citations, but constrained to incremental innovation within established paradigms.",
+      "Open Algorithm Initiative: Organized agents (organized/constrained) \u2014 AutoML and algorithm portfolio systems create alternative evaluation pathways (problem-adaptive selection) that bypass benchmark-centric evaluation. Have exit path via problem-aware optimization."
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint does extract from alternative researchers and from the field's exploration capacity, but the extraction is not severe as snare-level constraints because: (1) alternative algorithms can still be published in specialized venues, (2) some researchers do pursue novel approaches despite benchmark bias, (3) the coordination function of benchmarks is genuine and valuable. The value reflects a real but limited extraction. Suppression (0.48): Moderate-high. Significant barriers include: publication bias toward canonical benchmarks (most journals require standard comparisons), funding scarcity for alternative approaches, computational resource concentration, and institutional prestige tied to canonical benchmark leaderboards. However, suppression is not total \u2014 open-source implementations, pre-prints, and specialist conferences provide partial alternatives. Theater ratio (0.65): Moderate-high. A significant fraction of published work involves minor variations on canonical benchmark optimization rather than addressing problem-class diversity or real-world application. Researchers invest effort in tuning parameters for CEC competition functions that have known solutions and known problem structure, rather than exploring why certain algorithm classes work on certain problem structures or applying algorithms to diverse industrial/scientific problems with unknown structure. The theater has increased over time as benchmarks have become more established and expectations for canonical comparison more standardized.",
+    "directionality_logic": "Beneficiaries (dominant algorithm developers, benchmark institutions) have arbitrage-level exit \u2014 they can abandon the constraint if it becomes disadvantageous and retain institutional standing. Their directionality d is low (0.05-0.15), yielding negative f(d) and low or negative experienced extraction. Victims (alternative researchers) have trapped exit \u2014 no computational resources, no publication venues outside canonicalized benchmarks, institutional barriers to accessing competition infrastructure. Their directionality d is high (0.90+), yielding f(d) \u2248 1.3-1.4 and maximum experienced extraction. The institutional victim (field exploration capacity) is collective and powerless, d \u2248 0.95. Incremental improvers have constrained exit \u2014 can publish, can access resources, but at cost of constraining innovation to within-paradigm space. Their d is moderate (0.50-0.60). Open algorithm initiatives have organized status and constrained exit but also agency and exit paths; their d is moderate (0.40-0.55) but reflects that they are building alternatives rather than trapped within the constraint.",
+    "perspectival_gap": "This constraint demonstrates six distinct classifications from a single structural reality. The alternative researcher sees a snare (trapped, no exit, high extraction). The incremental improviser sees tangled rope (genuine coordination function of benchmarks, but also genuine constraint on innovation direction). The dominant developer sees rope (benchmarks enable reproducibility and cumulative work; low experienced extraction). The benchmark suite itself appears as piton from civilizational perspective (performative function, atrophied from original enabling role into maintenance ritual). The open algorithm initiative sees scaffold (alternative evaluation pathways creating a sunset trajectory for benchmark-centric research). The analytical observer risks false summit (mathematical necessity of comparison) but the structural data reveals contingency (problem-adaptive evaluation is theoretically coherent). The perspectival gap exposes how 'standard' infrastructure can function as both enabling (for agents aligned with the standard) and constraining (for agents proposing alternatives).",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by showing that benchmark infrastructure is simultaneously coordination mechanism and extraction mechanism, and that which aspects dominate depends entirely on the agent's structural position. Dominant developers genuinely experience benchmarks as enabling coordination (Rope). Alternative researchers genuinely experience benchmarks as extraction mechanism (Snare). Both experiences are structural, not misperceptions. The constraint is not 'really' one type viewed from multiple angles \u2014 it is genuinely different constraint-experiences for different agents because the mechanisms benefiting one class (benchmark standardization for validation) are the same mechanisms trapping another class (benchmark standardization prevents alternative approaches from being comparable). The analytical observer's false summit (No Free Lunch mathematical necessity) reveals the naturalization move: claiming that benchmarks are inevitable because comparison requires criteria obscures the institutional choice of which criteria to canonicalize. Problem-adaptive evaluation is theoretically viable and practically emerging; the 'inevitability' of current benchmarks is institutional, not mathematical."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "hyperparameter_optimization_lock",
+      "algorithmic_monoculture_risk",
+      "applied_problem_algorithm_mismatch"
+    ],
+    "dual_formulation_note": "The evolutionary computation landscape constraint decomposes into separable concerns: (1) benchmark selection bias (which problems are canonical) constrains exploration of alternative algorithms; (2) performance metrics (which objective functions matter) favor certain algorithm classes over others; (3) computational resource allocation concentrates on dominant paradigms. Each has different \u03b5 and different extraction mechanisms. The current story focuses on benchmark-driven constraint; see companion stories for metric bias and resource concentration."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

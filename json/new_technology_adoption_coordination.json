@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "new_technology_adoption_coordination",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ntac"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.42,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "New Technology Adoption Coordination",
+    "topic_domain": "technology_adoption/economic_coordination",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "technology_vendors",
+      "early_adopters",
+      "standardization_bodies"
+    ],
+    "victims": [
+      "late_adopters",
+      "locked_in_workers",
+      "small_competitors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Legacy Workforce",
+      "comment": "PERSPECTIVE 1: LEGACY WORKFORCE (SNARE) \u2014 Workers in declining technology sectors face retraining costs, wage penalties, and geographic immobility. No alternative exit; adaptation is mandatory. Trapped in mandatory technology transitions with extraction running full force."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Small Business Operators",
+      "comment": "PERSPECTIVE 2: SMALL BUSINESS OPERATORS (TANGLED ROPE) \u2014 Face mandatory adoption pressures (supply chain requirements, customer demand) but benefit from network effects and efficiency gains once adopted. Constrained by switching costs and coordination requirements, yet genuine efficiency coordination exists. Mixed extraction and benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Technology Vendors",
+      "comment": "PERSPECTIVE 3: TECHNOLOGY VENDORS (ROPE) \u2014 Primary beneficiary with full arbitrage exit (can pivot to different markets, customers, technologies). Benefits from adoption coordination; experiences constraint as solution to collective action problem. Net beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Government Digital Transition Programs",
+      "comment": "PERSPECTIVE 4: GOVERNMENT DIGITAL TRANSITION PROGRAMS (SCAFFOLD) \u2014 Organized transitional support (retraining subsidies, adoption tax credits, migration assistance) with explicit sunset: programs designed to decrease as adoption reaches critical mass. Active enforcement through mandates, but with built-in sunset logic as market matures. Legitimate coordination with declining coercion."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Large Incumbent Firms",
+      "comment": "PERSPECTIVE 5: LARGE INCUMBENT FIRMS (TANGLED ROPE) \u2014 Powerful actors can choose adoption timing strategately (mobile exit). Genuine coordination function (supply chain integration, compatibility standards) alongside asymmetric extraction through early-mover control of compatibility layers. Significant agency reduces experienced extraction; some beneficiary dynamics present."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Efficiency Coordination)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (ROPE) \u2014 From civilizational/analytical view, technology adoption is fundamentally a coordination problem: network effects require critical mass, compatibility standards require mutual commitment, collective risk-taking is necessary. The constraint solves real coordination failures. Pure coordination reading with low base extractiveness. Theater minimal."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "disruption_vs_coordination_tradeoff",
+      "question": "Is adoption acceleration primarily coordination (solving collective action problems) or primarily disruption (concentrating rents through forced obsolescence)?",
+      "resolution_mechanism": "Longitudinal analysis of wage trajectories, firm profitability distributions, and network effects before/after adoption windows; comparison of forced vs voluntary adoption regimes",
+      "impact": "If primarily coordination: extractiveness should be 0.20-0.30 (rope-dominant). If primarily disruption: extractiveness should be 0.50-0.70 (snare-dominant). Current assessment (0.35) assumes mixed mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether adoption constraints solve coordination or concentrate extraction"
+    },
+    {
+      "id": "retraining_efficacy_and_timing",
+      "question": "Do retraining programs close the wage gap before workers are locked out of labor markets, or does the temporal mismatch create permanent extraction?",
+      "resolution_mechanism": "Cohort analysis of displaced workers: wage recovery timelines, employment rates 2/5/10 years post-displacement, program completion rates correlated with re-entry success",
+      "impact": "If retraining closes gap within 2-3 years: scaffold sunset is real and justified. If gap persists beyond 5 years: suppression mechanism is structural, not temporary \u2014 reclassify toward snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether retraining programs effectively mitigate adoption disruption"
+    },
+    {
+      "id": "compatibility_standard_lock_in",
+      "question": "Do early-mover technology choices create path-dependent lock-in that extracts from later adopters, or do open standards prevent monopolistic compatibility extraction?",
+      "resolution_mechanism": "Historical analysis of compatibility decisions, switching cost estimates, antitrust cases involving lock-in, comparison of open-standard vs proprietary adoption regimes",
+      "impact": "If lock-in dominant: extractiveness rises toward 0.50+ and classification shifts toward snare from powerful/mobile perspective. If standards prevent lock-in: rope classification is appropriate and extraction is primarily transaction cost.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether adoption coordination enables lock-in extraction"
+    },
+    {
+      "id": "adoption_rate_natural_vs_mandated",
+      "question": "Would the observed adoption rate occur without coordinating constraints, or do mandates/supply-chain pressures impose extraction beyond natural adoption economics?",
+      "resolution_mechanism": "Comparison of adoption trajectories in regulated vs unregulated sectors, voluntary vs mandatory adoption programs, historical technology adoption S-curves with and without policy intervention",
+      "impact": "If natural adoption rate would be similar: constraint is low-extraction coordination (rope). If mandates accelerate adoption significantly beyond natural curve: extraction is real (tangled_rope to snare depending on who bears transition costs).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether adoption constraints accelerate beyond natural rates"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "New technology adoption creates a structural coordination problem: network effects require critical mass participation, compatibility standards require mutual commitment, early adopters bear disproportionate risk, and late adopters face pressure to abandon legacy systems. This constraint exhibits mixed coordination and extraction dynamics. Vendors and early adopters benefit from momentum and market control. Legacy workers face mandatory obsolescence with uncertain retraining success. Small businesses are caught between supply-chain mandates and switching costs. Government transition programs provide scaffolding with explicit sunset logic. The constraint's extractiveness (0.35) reflects that genuine coordination benefits coexist with asymmetric burden distribution \u2014 solving the collective action problem of critical-mass adoption requires some agents to bear disruption costs. The theater ratio (0.38) is moderate: adoption has real efficiency gains but also includes performative compliance theater (vendor lock-in marketing as 'inevitable progress,' adoption certificates, compliance theater).",
+    "key_agents": [
+      "Technology Vendors: Primary beneficiary (institutional/arbitrage) \u2014 capture market position, lock-in advantages, and timing control; can exit into adjacent markets",
+      "Legacy Workforce: Primary victim (powerless/trapped) \u2014 face mandatory retraining or workforce exit with no alternative paths; trapped in disruption they did not choose",
+      "Small Business Operators: Secondary victim (moderate/constrained) \u2014 face supply-chain adoption pressures and switching costs; benefit from efficiency gains but bear disproportionate transition burden",
+      "Early Adopters: Secondary beneficiary (powerful/mobile) \u2014 bear initial risk but capture first-mover advantages and influence standard-setting",
+      "Government Transition Programs: Organized third party (organized/constrained) \u2014 provide scaffolding through retraining, tax credits, adoption support with sunset as market matures",
+      "Large Incumbent Firms: Secondary actor (powerful/mobile) \u2014 navigate adoption timing strategically; can leverage position in legacy systems to control compatibility layers",
+      "Standardization Bodies: Institutional actor (institutional/arbitrage) \u2014 benefit from adoption through increased relevance and market influence; set compatibility standards that advantage early movers"
+    ],
+    "logic_rationale": "Extractiveness (0.35): Moderate. The constraint solves a genuine coordination problem \u2014 technology adoption requires critical mass, and solving this problem requires some agents to bear transition costs. However, the distribution of costs is asymmetric: vendors and early adopters capture benefits while legacy workers bear disruption. The extractiveness is not low (not pure rope) because the transition is mandatory rather than voluntary, and transition support is insufficient to close wage gaps. Suppression (0.42): Moderate-high. Multiple barriers constrain alternatives: supply-chain dependencies force adoption, legacy skills depreciate rapidly, geographic immobility limits retraining access, and career switching penalties penalize late adaptation. Yet suppression is not total \u2014 some workers successfully transition, some firms maintain legacy systems, and some sectors resist adoption. Theater ratio (0.38): Low-moderate. Adoption has real efficiency gains but includes performative elements: vendor marketing framing adoption as inevitable progress, compliance certification theater, and adoption narratives that naturalize what are actually contestable technical choices. The theater has increased over time as vendors escalate marketing pressure.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence. Legacy workers see a snare: mandatory disruption with inadequate support and no exit. Small business operators see tangled rope: genuine efficiency benefits mixed with adoption mandates and switching costs. Technology vendors see rope: solving a coordination problem they benefit from. Government sees scaffold: transitional coordination with sunset logic. Large firms see tangled rope with more agency: they coordinate supply chains while controlling compatibility advantage. The analytical observer risks seeing pure rope (efficiency coordination) but the structural data reveals extraction: mandatory adoption, asymmetric burden distribution, and insufficient transition support transform coordination into mixed extraction. The perspectival gap reveals how institutional power reshapes coordination into rent-extraction.",
+    "directionality_logic": "Vendors and early adopters have low directionality values (beneficiary + mobile/arbitrage exit) producing negative or minimal experienced extraction. Legacy workers have high directionality values (victim + trapped exit) producing maximum extraction. Small business operators occupy middle ground: they are victims of mandatory adoption but have constrained mobility, producing moderate extraction. Powerful incumbents have lower d values despite being partly victims because they retain significant exit options (strategic timing, leverage over standards). Suppression is structurally unscaled: it operates identically whether measuring from a local workforce or global technology market. Extractiveness scales with scope: a local adoption mandate (\u03c3=0.8) has lower effective extraction than a global supply-chain requirement (\u03c3=1.2) because global scope makes alternative exit paths more difficult.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by separating coordination function from extraction mechanism. The coordination function is real: technology adoption does solve genuine problems of network effects and standards compatibility. The extraction mechanism is also real: vendors and early adopters capture asymmetric benefits while late adopters and legacy workers bear disruption costs. The constraint is not 'coordination disguised as extraction' (false rope that is actually snare) \u2014 it is genuine tangled rope with both functions coexisting. The government scaffold perspective reveals the intended resolution: transition support with sunset logic. If retraining programs successfully close wage gaps before workers are locked out (omega variable 2), the scaffold assumption holds and extraction is temporary. If retraining fails (workers remain permanently displaced), the constraint degrades toward pure snare, and the scaffold sunset is aspirational rather than structural. The mandatrophy asks: is this extraction justified by coordination benefit? The answer depends on whether transition support is adequate \u2014 if yes, mixed classification holds; if no, extraction dominates."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "skill_obsolescence_trap",
+      "vendor_lock_in_extraction"
+    ],
+    "dual_formulation_note": "New technology adoption coordination is upstream of skill-specific constraints (skilled worker dependency on legacy systems) and vendor lock-in mechanisms (compatibility extraction). Adoption acceleration feeds downstream extraction through these mechanisms. Separate stories capture adoption-driven skill obsolescence (interaction of labor markets + technology disruption) and vendor lock-in (technical architecture + market power)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

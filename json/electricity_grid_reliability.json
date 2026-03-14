@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "electricity_grid_reliability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "grid_rel"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Electricity Grid Reliability as Extraction and Coordination",
+    "topic_domain": "infrastructure/energy_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "utility_companies",
+      "large_industrial_consumers",
+      "grid_operators"
+    ],
+    "victims": [
+      "residential_consumers",
+      "small_businesses",
+      "grid_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Residential Consumer",
+      "comment": "PERSPECTIVE 1: RESIDENTIAL CONSUMER (SNARE) \u2014 Trapped within the grid with no exit option. Dependent on continuous electricity supply for basic needs (heating, refrigeration, medical devices). Bears cost of reliability infrastructure through rates while having no influence over grid management or investment decisions. Grid failures impose sudden, severe costs; cannot substitute or escape."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Small Business",
+      "comment": "PERSPECTIVE 2: SMALL BUSINESS (TANGLED ROPE) \u2014 Constrained by high cost of distributed generation (solar, batteries, backup generators) but experiences coordination benefit from grid stability. Outages create catastrophic losses (spoilage, equipment damage, lost sales); grid investment reduces these risks. High suppression (exit cost via off-grid systems is prohibitive) combined with genuine coordination function (reliable supply enables commerce)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Utility Company",
+      "comment": "PERSPECTIVE 3: UTILITY COMPANY (ROPE) \u2014 Experiences the constraint as coordination mechanism. Grid reliability enables their core business; investment in redundancy and monitoring is a coordination function that they benefit from directly. Rate structures allow cost recovery; regulatory arbitrage options exist (shifting costs to consumers, jurisdictional variation). Net beneficiary with flexible exit capacity."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Large Industrial Consumer",
+      "comment": "PERSPECTIVE 4: LARGE INDUSTRIAL CONSUMER (ROPE) \u2014 Can negotiate preferential grid access and reliability guarantees. May invest in on-site generation or microgrids as backup. Experiences grid as coordination mechanism for baseline power; invests in alternatives for peak/backup needs. Powerful exit options and arbitrage capacity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Renewable Energy Sector",
+      "comment": "PERSPECTIVE 5: RENEWABLE ENERGY SECTOR (TANGLED ROPE) \u2014 Experiences dual constraint: grid reliability standards create coordination requirements (synchronization, frequency regulation) that benefit system stability, but also create barrier-to-entry requirements (interconnection standards, reliability certifications) that concentrate power with incumbent utilities. Coordinating on renewable integration while being extracted through regulatory gatekeeping."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Framework",
+      "comment": "PERSPECTIVE 6: REGULATORY FRAMEWORK (PITON) \u2014 Traditional reliability standards (n-1 contingency, spinning reserve requirements) are increasingly performative as generation becomes distributed and demand more dynamic. Regulations persist through institutional inertia despite unclear effectiveness in modern grid contexts. Theater ratio reflects that reliability metrics are maintained ceremonially while actual grid failure modes have shifted."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Physical Limits View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / PHYSICAL LIMITS VIEW (MOUNTAIN) \u2014 From civilizational/universal view, some grid reliability constraint is immutable: power must flow; demand and supply must balance instantaneously; physics imposes hard limits on transmission capacity and response speed. However, the base properties contradict mountain classification \u2014 the high extractiveness (0.52) and suppression (0.68) reveal that observed 'limits' are largely institutional choices rather than physical necessities."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "distributed_generation_threshold",
+      "question": "At what penetration level does distributed renewable generation eliminate the extractive monopoly structure of centralized grid control?",
+      "resolution_mechanism": "Time-series analysis of grid architecture transitions; comparison of extraction metrics (residential rates vs system costs) at 20%, 50%, 80% renewable penetration thresholds",
+      "impact": "If threshold < 40%: current grid structure's extraction is contingent and could dissolve soon. If threshold > 70%: extraction may persist even with high renewable penetration due to entrenched control mechanisms.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distributed generation penetration level that disrupts centralized grid extraction"
+    },
+    {
+      "id": "reliability_vs_resilience_ambiguity",
+      "question": "Is 'grid reliability' primarily about preventing rare catastrophic failures (n-1 contingency logic) or about rapid recovery from frequent minor disruptions (resilience)?",
+      "resolution_mechanism": "Historical failure data analysis; comparison of cost-benefit for hardening (preventing failures) vs. adaptability (managing failures); survey of residential consumer preferences for reliability vs. cost",
+      "impact": "If primarily prevention: current centralized architecture is efficient (mountain perspective). If primarily resilience: distributed generation with local storage is superior (snare becomes rope for consumers, extraction mechanism dissolves).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Conceptual ambiguity between preventing failures vs. managing recovery"
+    },
+    {
+      "id": "regulatory_gatekeeping_necessity",
+      "question": "Are interconnection standards and reliability certifications necessary for grid stability or are they extractive barriers protecting utility monopolies?",
+      "resolution_mechanism": "Comparative analysis of grid stability metrics in deregulated vs. regulated jurisdictions; empirical testing of grid stability with simplified interconnection rules; case studies of successful peer-to-peer microgrids without utility gatekeeping",
+      "impact": "If necessary: regulatory framework is genuine coordination (rope classification confirmed). If extractive: regulations are piton/snare (consumers experience extraction through artificial barriers).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory gatekeeping is necessary for grid stability or purely extractive"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Electricity grid reliability represents a constraint that generates genuine coordination benefits (preventing cascading blackouts, optimizing load distribution) while simultaneously enabling extractive rent-seeking by utility monopolies. The constraint exhibits tangled rope structure: utilities coordinate on grid stability while extracting consumer surplus through rate structures, regulatory capture, and barriers to distributed generation. The extractiveness value (0.52) reflects the accumulation of small extraction mechanisms (rate markups, interconnection delays, demand response penalties, stranded cost recovery) rather than a single coercive mechanism. Suppression (0.68) stems from residential consumers' trapped dependency on the grid with no practical exit option. The theater ratio (0.55) indicates moderate performative content \u2014 reliability metrics are maintained but increasingly disconnected from actual failure modes in modern grids with high renewable penetration. The constraint is downstream of technological change (declining solar/battery costs, smart metering) that creates genuine alternatives but is architecturally entrenched through regulatory and contractual mechanisms.",
+    "key_agents": [
+      "Residential Consumers: Primary victims (powerless/trapped) \u2014 dependent on grid with no exit; bear extraction through rates and service degradation",
+      "Utility Companies: Primary beneficiaries (institutional/arbitrage) \u2014 capture monopoly rents; design standards that entrench their control",
+      "Grid Operators: Secondary beneficiary (institutional/arbitrage) \u2014 coordinate grid operations; benefit from current architectural assumptions",
+      "Small Businesses: Secondary victim (moderate/constrained) \u2014 face high barrier to off-grid alternatives; experience extraction through reliability premiums",
+      "Large Industrial Consumers: Powerful player (powerful/arbitrage) \u2014 can negotiate preferential terms and alternative arrangements; not typical beneficiary of consumer-facing extraction",
+      "Renewable Energy Sector: Emerging actor (organized/constrained) \u2014 experiencing extraction through regulatory gatekeeping while contributing to coordination through grid services",
+      "Regulatory Agencies: Institutional actor (institutional/arbitrage) \u2014 maintain reliability standards that may be increasingly performative; enable utility rate recovery mechanisms"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint embodies multiple extraction mechanisms: (1) monopoly rate structures with limited consumer price elasticity (~0.15 of extractiveness); (2) regulatory cost-recovery allowing utilities to pass infrastructure costs to consumers while capturing returns (~0.20); (3) barriers to distributed generation and microgrids that preserve utility dependency (~0.12); (4) demand response penalties that extract behavioral compliance (~0.05). The value reflects that this is not maximal extraction \u2014 consumers receive reliable service and utilities genuinely invest in grid maintenance. However, the extracted surplus flows primarily to utility shareholders rather than being retained as consumer benefit or reinvested in grid modernization. Suppression (0.68): High. Residential consumers face multiple barriers to exit: (1) no practical off-grid alternative for urban/suburban populations (cost, zoning, weather dependency); (2) regulatory prohibition on certain distributed generation configurations; (3) grid dependency is existential (heating, refrigeration, medical devices \u2014 no substitute exists). Small businesses face somewhat lower suppression (constrained rather than trapped) because solar + battery systems are technically viable but economically prohibitive. Theater ratio (0.55): Moderate. Traditional reliability standards (n-1 contingency, 99.99% uptime) are maintained through regulatory requirement, but their relevance is declining. Modern grid challenges (renewable ramp rates, demand volatility) are not addressed by traditional metrics. Smart grid investments are partly genuine coordination (enabling distributed generation management) and partly theater (IoT deployments that enable utility data extraction without improving consumer visibility). The theater has increased over the interval as utilities adopt smart grid language without fundamentally changing customer relationship or control architecture.",
+    "perspectival_gap": "The constraint demonstrates how the same underlying mechanism (centralized grid control with monopoly rate structures) produces opposite experienced extractiveness for different agents. A utility company describing 'grid reliability' emphasizes the coordination problem (synchronization, frequency regulation, cascade prevention) and the solution (their technical expertise and capital investment). A residential consumer experiencing 'grid reliability' emphasizes their trapped dependency and the extract revenue through rates. Both descriptions are structurally accurate \u2014 the same constraint is genuinely a coordination mechanism for utilities and genuinely an extraction mechanism for consumers. The perspectival gap is not bridged by better description; it reveals structural asymmetry: the utility benefits from coordination while consumers bear the cost of maintaining the coordination infrastructure without having voted on its design or profiting from it.",
+    "directionality_logic": "Directionality values (d) are derived from beneficiary/victim status and exit options. Utility companies benefit from the constraint (low d, ~0.10-0.15) with arbitrage options (can shift costs, access regulatory mechanisms, invest in alternatives). They experience the constraint as coordination (rope). Residential consumers are victims (high d, ~0.85-0.95) with trapped exit options. They experience maximum extraction given their powerless status. Small businesses are secondary victims (d ~0.70) with constrained exit \u2014 they can theoretically exit through distributed generation but at prohibitive cost. Large industrial consumers are structurally on the beneficiary side (d ~0.35) despite powerful status \u2014 they can negotiate preferential rates and have genuine alternatives, making their relationship more one of leverage than extraction. Renewable energy sector appears as victim (d ~0.60) through regulatory gatekeeping but as partial beneficiary through grid service compensation \u2014 the high extractiveness reflects this ambiguity. Grid operators derive d from institutional status with beneficiary positioning (~0.15). The pipeline's sigmoid f(d) amplifies the gap: powerless trapped consumers get f(d) \u2248 1.42, creating maximum effective extraction; institutional beneficiaries get f(d) \u2248 -0.12, experiencing negative extraction (they are subsidized by the constraint structure).",
+    "mandatrophy_analysis": "STRUCTURAL DECOMPOSITION NEEDED: The constraint exhibits high theater ratio (0.55) combined with genuine coordination function (synchronization, cascade prevention) and genuine extraction (monopoly rents, rate structures). This is tangled rope by definition, but the theater component is rising and the composition is shifting. The omega variables suggest that if distributed generation penetration exceeds ~40%, the constraint may decompose: (1) physical grid coordination remains (mountain: synchronization requires coordination) but becomes peer-to-peer rather than centralized; (2) monopoly extraction mechanism disappears (utilities lose gatekeeping power); (3) new coordination mechanisms emerge (local balancing, frequency support from distributed resources). The mandatrophy is resolved by recognizing that the current classification is time-dependent: the constraint is tangled rope NOW because utilities retain gatekeeping power, but is transitioning toward EITHER (a) rope (if utilities successfully rebrand as coordination platform providers for distributed generation) or (b) multiple constraints (if the system decomposes into local microgrids with peer-to-peer coordination, each with its own reliability constraint at lower \u03b5). The high theater and rising extractiveness suggest the constraint is approaching a bifurcation point where the classification must be re-evaluated."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure",
+    "boltzmann_floor_override": 0.22
+  },
+  "network": {
+    "affects_constraints": [
+      "electricity_market_concentration",
+      "distributed_generation_gatekeeping",
+      "demand_response_pricing"
+    ],
+    "dual_formulation_note": "Grid reliability as a constraint decomposes into three structurally distinct components: (1) physical synchronization requirement (mountain-like, \u03b5 \u2264 0.10); (2) utility monopoly structure enabling extraction (tangled rope, \u03b5 \u2248 0.52); (3) regulatory gatekeeping of distributed generation (snare for renewables sector, \u03b5 \u2248 0.65). The current JSON story treats these as a single tangled rope by aggregating the mechanisms. Alternative decomposition into three separate stories with network links would enable more precise classification of each component."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

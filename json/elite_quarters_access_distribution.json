@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "elite_quarters_access_distribution",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "elite_qtrs"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "snare",
+    "human_readable": "Elite Quarters Access Distribution in Institutional Hierarchies",
+    "topic_domain": "organizational/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_leadership"
+    ],
+    "victims": [
+      "non_elite_members",
+      "excluded_classes"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Excluded Worker",
+      "comment": "PERSPECTIVE 1: EXCLUDED WORKER (SNARE) \u2014 Faces material and status barriers to elite quarters access. Cannot exit the organization without losing livelihood. Bears full psychological and material extraction through visible spatial subordination. No alternative coordination function perceived \u2014 pure coercion through spatial hierarchy."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Aspiring Climber",
+      "comment": "PERSPECTIVE 2: ASPIRING CLIMBER (SNARE) \u2014 Constrained by high cost of exit (career disruption, loss of advancement opportunity). Perceives elite quarters as carrot dangling just beyond reach \u2014 extraction mechanism uses hope and status anxiety. Significant suppression from competitive pressure and internalized status ordering."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Middle Manager",
+      "comment": "PERSPECTIVE 3: MIDDLE MANAGER (TANGLED ROPE) \u2014 Moderately benefits from tiered access (better quarters than non-elite, but not full elite status). Experiences both coordination (status signaling enables organizational hierarchy) and extraction (still constrained from top tier). Mobile exit option reduces perceived extraction but hierarchy binds through identity fusion \u2014 career and self-concept intertwined with rank."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Executive Leadership",
+      "comment": "PERSPECTIVE 4: EXECUTIVE LEADERSHIP (ROPE) \u2014 Primary beneficiary. Perceives elite quarters access as coordination mechanism for organizational cohesion and motivation. High arbitrage options (can negotiate, relocate, redesign). Extraction runs toward this agent \u2014 they experience the constraint as pure coordination benefit without meaningful extraction cost."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Labor Coalition",
+      "comment": "PERSPECTIVE 5: LABOR COALITION (SNARE) \u2014 Organized but structurally disadvantaged. Recognizes extraction mechanism but collective action faces coordination failure and employer retaliation risk. Mobile exit (union switching, industry change) available but high organized suppression from employer power concentration. Coalition prevents pure snare classification at organizational level but snare applies at coalition-individual linkage."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Vestigial Status System",
+      "comment": "PERSPECTIVE 6: VESTIGIAL STATUS SYSTEM (PITON) \u2014 Civilizational view reveals that elite quarters access is largely performative in post-industrial knowledge work. Physical proximity matters less than decades past; status signals are maintained through ritual (reserved parking, office size, commissary access) despite reduced functional necessity. Theater ratio high because the constraint persists through institutional inertia despite diminished real coordination function. Digital work and remote options are eroding the constraint's necessity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Cross-positional analysis reveals genuine coordination function (status hierarchy enables role clarity and motivation) hybridized with asymmetric extraction (spatial subordination embodies and enforces class subordination). The constraint serves both functions simultaneously, making it genuinely tangled rather than purely extractive. Global analytical scope recognizes the constraint as specific to hierarchical organizations with spatial concentration, not universal."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "status_signaling_necessity",
+      "question": "Does spatial access hierarchy provide genuine coordination function or purely performative status signaling?",
+      "resolution_mechanism": "Empirical organizational comparison: measure productivity and retention in organizations with eliminated elite quarters access vs. matched controls; longitudinal tracking of motivation changes post-policy",
+      "impact": "If genuinely functional: constraint classifies as tangled_rope from more perspectives. If purely performative: constraint reclassifies toward snare from organizational perspectives. Affects whether suppression is justified as coordination cost or pure extraction overhead.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether spatial hierarchy provides coordination function or is performative"
+    },
+    {
+      "id": "alternative_status_mechanisms",
+      "question": "Can organizational status and role clarity be achieved through non-spatial mechanisms (salary transparency, title clarity, symbolic recognition) that do not require spatial subordination?",
+      "resolution_mechanism": "Case studies of flat-hierarchy organizations and remote-first companies; measurement of role clarity and internal status perception with and without spatial differentiation",
+      "impact": "If feasible alternatives exist: suppression is purely extractive (constraint reclassifies as snare from analytical perspective). If spatial access is uniquely effective: constraint retains tangled_rope classification \u2014 spatial coordination is harder to replace than alternatives suggest.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether spatial mechanisms are necessary for status coordination"
+    },
+    {
+      "id": "psychological_internalization",
+      "question": "Do non-elite workers internalize spatial subordination as deserved (identity_locked) or experience it as externally imposed suppression (trapped/constrained)?",
+      "resolution_mechanism": "Qualitative interviews pre- and post-policy elimination; measurement of agency perception before and after access restrictions removed; comparison of exit ideation in workers still under restriction vs. those in post-constraint environments",
+      "impact": "If identity_locked dominates: suppression persists internally even if external barriers removed \u2014 constraint is more entrenched. If externally imposed: policy changes should produce rapid suppression reduction and classification shift toward rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether subordination is internalized or externally imposed"
+    },
+    {
+      "id": "multi_organization_transfer",
+      "question": "Do workers transferring between organizations with different elite access policies experience suppression reduction when moving to egalitarian environments?",
+      "resolution_mechanism": "Longitudinal survey of workers moving from hierarchical to flat organizations; measurement of stress, motivation, and status anxiety pre- and post-transfer",
+      "impact": "If suppression reduces significantly: constraint is contingent institutional choice, not inherent to coordination. If suppression persists: indicates deep internalization or alternative suppression mechanisms operating.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Suppression persistence across organizational boundary changes"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Elite quarters access distribution is a spatial constraint that allocates organizational resources \u2014 office quality, location, amenities, physical proximity to power centers \u2014 based on formal rank or informal status. The constraint operates across institutional hierarchies: corporate offices, academic campuses, military installations, government buildings, and luxury hotels. It serves ostensible coordination functions (status clarity, role signaling, motivation through advancement incentive) while simultaneously extracting through spatial subordination that embodies and reinforces class hierarchy. The constraint's evolution shows increasing performativity (theater_ratio rising from 0.35 to 0.48) as remote work, digital communication, and flat organizational trends reduce the functional necessity of physical proximity. Simultaneously, extractiveness has increased (0.32 to 0.58) as organizations have responded to egalitarian pressures by intensifying symbolic extraction \u2014 elite quarters become smaller and more exclusive rather than being eliminated, using scarcity and differentiation to maintain status hierarchy despite declining functional justification. This dual trajectory (declining function, increasing extraction) is diagnostic of constraint degradation toward piton, though the labor perspectives still experience it as snare due to suppression and trapped exit options.",
+    "key_agents": [
+      "Non-elite workers: Primary victims (powerless/trapped) \u2014 bear visibility of subordination, access barriers, psychological extraction of status denial",
+      "Institutional leadership/executives: Primary beneficiaries (institutional/arbitrage) \u2014 secure highest-quality quarters, control access rules, experience constraint as pure coordination benefit",
+      "Middle managers: Secondary beneficiary-victims (powerful/mobile) \u2014 benefit from status above base workers but constrained from top tier; experience tangled rope due to identity fusion with hierarchy",
+      "Labor coalitions and unions: Organized victims (organized/mobile) \u2014 recognize extraction but face coordination failure and retaliation risk in collective response",
+      "Aspiring climbers: Constrained victims (moderate/constrained) \u2014 held by hope and advancement possibility; high status anxiety drives suppression",
+      "Analytical observer: Civilizational perspective (analytical/analytical) \u2014 reveals dual trajectory of declining function and increasing symbolic extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts through spatial subordination and status denial, but extraction is partially legitimated by real coordination functions (role clarity, motivation through advancement). The upward trajectory (0.32\u21920.58) reflects organizations intensifying symbolic extraction as physical proximity becomes less functionally necessary \u2014 scarcity and visibility replace genuine coordination as the extraction mechanism. Suppression (0.65): High. Material barriers (physical access denial, facilities segregation) combine with psychological suppression (status anxiety, internalized subordination, visibility of inequality). Exit barriers are substantial: leaving the organization requires job change; internal exit (quitting rank struggle) carries career cost. Suppression is not absolute \u2014 some workers have mobile exits and capacity to organize \u2014 but barriers are significant enough to sustain the constraint. Theater ratio (0.48): Moderate. The constraint retains some genuine coordination function (status clarity does help organizational role-setting), but theater has increased over the interval as the functional necessity declined. Elite quarters remain valuable primarily because they signal status, not because physical proximity creates unique coordination benefits that couldn't be achieved through other mechanisms.",
+    "perspectival_gap": "Executive leadership (rope) \u2192 powerless non-elite worker (snare) produces maximum perspectival gap: same constraint is perceived as pure benefit vs. pure extraction. This gap is diagnostic of extraction mechanisms that hide behind coordination language. Middle manager perspective (tangled rope) bridges the gap, showing that agents with mixed beneficiary-victim status experience the hybrid classification. The piton perspective reveals that the constraint's coordination function is declining (theater_ratio rising, functional necessity eroding) while extraction is intensifying (extractiveness rising) \u2014 the constraint is being sustained through institutional inertia and symbolic performance rather than real coordination necessity. This dual trajectory is a strong signal that the constraint is degrading toward piton classification at civilizational time horizon.",
+    "directionality_logic": "Directionality values (d) range from low for beneficiaries (d\u22480.1-0.2) to high for trapped victims (d\u22480.9). Executive leadership derives d\u22480.05 (beneficiary + arbitrage exit) \u2192 f(d) \u2248 -0.12 \u2192 negative \u03c7 (experiences as pure benefit). Non-elite workers derive d\u22480.92 (victim + trapped exit) \u2192 f(d) \u2248 1.40 \u2192 high \u03c7 (experiences as pure extraction). Middle managers derive d\u22480.55 (mixed beneficiary-victim + mobile exit) \u2192 f(d) \u2248 0.67 \u2192 moderate \u03c7. The beneficiary/victim declarations are asymmetric: institutional leadership is the sole declared beneficiary; non-elite members and excluded classes are declared victims. This asymmetry drives the perspectival gap and reveals the extraction flow direction.",
+    "mandatrophy_analysis": "The constraint resolves the mandatrophy by demonstrating that genuine coordination function (status clarity) coexists with asymmetric extraction (spatial subordination). The executive leadership experiences pure coordination (rope); the non-elite worker experiences pure extraction (snare); the middle manager experiences the hybrid (tangled rope). The constraint is not purely extractive (it does coordinate status hierarchies) nor purely coordinating (it embeds and enforces class subordination). The dual trajectory (declining function, increasing extraction) indicates that the organization is pivoting the constraint's mechanism: as functional necessity declines, the organization intensifies symbolic extraction to maintain the status hierarchy. This is the signature of a constraint transitioning toward piton \u2014 sustained through inertia and performance of coordination rather than actual coordination. The labor coalition's snare classification (despite organized power) reflects that even collective action faces employer retaliation risk and coordination failure, making the powerless perspective dominant from a structural standpoint."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "status_hierarchy_enforcement",
+      "organizational_exit_barriers"
+    ],
+    "dual_formulation_note": "Elite quarters access is downstream of organizational status hierarchy design but represents a distinct structural constraint. The parent constraint (status_hierarchy_enforcement) establishes the hierarchical structure; elite quarters access is one spatial mechanism for enforcing and embedding that hierarchy."
+  },
+  "directionality_overrides": []
+}

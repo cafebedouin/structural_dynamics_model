@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "first_past_the_post_lock_in",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fptp"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "First Past the Post Electoral System Lock-In",
+    "topic_domain": "political_economy/institutional_design",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "major_parties",
+      "incumbent_winners",
+      "agenda_gatekeepers"
+    ],
+    "victims": [
+      "third_parties",
+      "policy_minorities",
+      "voter_preference_precision"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Disenfranchised Third-Party Voter",
+      "comment": "PERSPECTIVE 1: DISENFRANCHISED THIRD-PARTY VOTER (SNARE) \u2014 Structurally unable to exit the two-party equilibrium without losing all bargaining power. Voting for preferred candidate yields zero legislative representation; strategic voting for least-bad major party is extraction camouflaged as choice. Suppression is maximal: wasted vote penalty, spoiler stigma, and vote-splitting dynamics lock voters into binary choice despite multiparty preference landscape."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Policy Minority Movement",
+      "comment": "PERSPECTIVE 2: POLICY MINORITY MOVEMENT (TANGLED ROPE) \u2014 Movements aligned with policies unpopular to either major coalition (e.g., strict drug legalization, radical land-value taxation, non-interventionist foreign policy) experience both coordination function and extraction. FPTP aggregates them into major platforms (coordination), but minority positions are diluted or inverted to serve majority coalition logic (extraction). Exit cost is high: building alternative party requires decades of organizing and faces structural barriers (ballot access, debate thresholds, ranked-choice transitions)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Incumbent Major Party",
+      "comment": "PERSPECTIVE 3: INCUMBENT MAJOR PARTY (ROPE) \u2014 Experiences FPTP as pure coordination mechanism. The system organizes dispersed voter preferences into governing coalitions and enforces single-party control, which solves the collective action problem of legislation. Party leadership has arbitrage options (adjust platform, realign coalition, run different candidates) without exiting the institutional structure. The system's suppression of alternatives benefits incumbent parties directly."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Electoral Reform Coalition",
+      "comment": "PERSPECTIVE 4: ELECTORAL REFORM COALITION (SCAFFOLD) \u2014 Organized agents (ranked-choice advocates, proportional representation movements, open-list reformers) see FPTP as a temporary institutional form with documented alternative pathways and sunset potential. Mobile exit: jurisdictions in Canada, New Zealand, parts of Australia have transitioned away from FPTP. Suppression is moderate because coalition has visibility and institutional allies. Theater is moderate \u2014 reform feels technically possible even though path dependency is high."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Captured Opposition Party",
+      "comment": "PERSPECTIVE 5: CAPTURED OPPOSITION PARTY (TANGLED ROPE) \u2014 Opposition parties coordinate voters against incumbents (genuine coordination function) but are structurally trapped by the same two-party equilibrium that benefits majority coalitions. They benefit from FPTP when in power and suffer when out of power, but cannot exit the binary structure without losing all leverage. Constrained exit: reforming to proportional representation would mean ceding current opposition status to multiple microparties. They are both victims and beneficiaries, making extraction asymmetric but coordination genuine."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Electoral Commission Apparatus",
+      "comment": "PERSPECTIVE 6: ELECTORAL COMMISSION APPARATUS (PITON) \u2014 Administrative infrastructure of FPTP (ballot design, vote counting, constituency delimitation) is substantially performative. The machinery performs legitimacy-conferring functions (auditable counting, procedural fairness) while enforcing structural outcomes (two-party concentration) that are independent of the voting mechanism itself. Theater ratio is high because electoral administrators see their process as degraded \u2014 the real outcome (party concentration) is determined by system incentives, not by administrative quality. Maintains itself through institutional inertia rather than functional necessity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, binary coalition formation is inherent to plurality voting systems: any voting mechanism that selects a single outcome from voter preferences necessarily induces binary clustering around the two largest preference modes. Arrow's Impossibility Theorem and Condorcet Paradox frame this as a natural law of democratic aggregation. However, this perspective risks naturalizing what is a contingent institutional choice \u2014 proportional and ranked-choice systems demonstrate that alternative mathematical structures are feasible."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "duvergers_law_necessity",
+      "question": "Is Duverger's Law (mechanical+psychological effects driving two-party equilibrium) an invariant feature of plurality voting or a contingent path-dependent outcome that could be reversed?",
+      "resolution_mechanism": "Controlled natural experiments comparing jurisdictions that switched voting systems (New Zealand 1993, Canada referendums) and tracking reversion behavior; empirical measurement of mechanical vs psychological effect magnitudes",
+      "impact": "If invariant: FPTP lock-in is nearly immutable (mountain properties increase). If contingent: alternative voting systems can durably maintain multiparty competition (scaffold properties confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Duverger's Law effects are invariant or contingent"
+    },
+    {
+      "id": "coordination_vs_extraction_boundary",
+      "question": "What portion of the two-party system's stability represents genuine coordination (efficient legislative coalescence) vs pure extraction (suppression of minority representation)?",
+      "resolution_mechanism": "Comparative measurement of legislative efficiency (bill passage rate, legislative cycles) and minority representation satisfaction (policy congruence surveys) across FPTP vs proportional systems with similar electoral composition",
+      "impact": "If coordination >> extraction: FPTP is a high-efficiency rope with unfortunate side effects. If extraction >> coordination: FPTP is a snare disguised as necessity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of outcomes due to coordination vs extraction"
+    },
+    {
+      "id": "reform_path_dependency",
+      "question": "Is FPTP lock-in mechanical (any alternative system must overcome voting paradoxes) or institutional (party incentives prevent reform even when alternatives are technically superior)?",
+      "resolution_mechanism": "Analysis of reform attempts: costs, obstacles, party positioning; comparison with success cases (New Zealand, Ireland); modeling of reform barrier composition",
+      "impact": "If mechanical: reform requires decades and external shock (landscape change in electoral mathematics). If institutional: reform could occur with coordinated party strategy shift.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether lock-in is mathematical or institutional"
+    },
+    {
+      "id": "strategic_voting_prevalence",
+      "question": "What percentage of voters in FPTP systems cast strategic (least-bad major party) votes vs sincere (preferred candidate) votes, and how does this ratio change during crisis periods?",
+      "resolution_mechanism": "Exit polls, preference surveys, ranked-choice simulation; tracking of strategic voting estimates over electoral cycles and during institutional legitimacy crises",
+      "impact": "If strategic voting < 20%: extraction is modest, coordination is dominant (rope classification supported). If strategic voting > 50%: extraction is severe, snare classification supported.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Prevalence of strategic voting behavior"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.54
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 80
+  },
+  "commentary": {
+    "narrative_context": "First-past-the-post (FPTP) electoral systems create a structural lock-in that functions simultaneously as a coordination mechanism and an extraction regime. The system solves the collective action problem of aggregating dispersed voter preferences into governing coalitions (rope function), but simultaneously suppresses minority party representation and enforces strategic voting that constrains voter preference expression (snare function). The constraint exhibits high theater (0.64) because much of the system's legitimacy derives from procedural fairness narratives\u2014auditable vote counting, transparent constituency rules, equal ballots\u2014that obscure the structural outcome: binary coalition formation. Over the past 80 years, extractiveness has increased from 0.35 to 0.58 as third-party movements have proliferated while the mechanical barriers to their viability have remained constant, forcing ever-larger portions of the electorate into strategic voting. The lock-in persists through path dependency: major parties benefit from the status quo during their time in power, creating symmetric incentives against reform despite rotating majority positions. Alternative voting systems (ranked-choice, proportional representation) have demonstrated feasibility in multiple jurisdictions, yet institutional inertia and incumbent advantage maintain FPTP in large democracies.",
+    "key_agents": [
+      "Disenfranchised Third-Party Voters: Primary victims (powerless/trapped) \u2014 face wasted-vote penalty and spoiler stigma; cannot exit binary choice structure",
+      "Policy Minority Movements: Secondary victims (moderate/constrained) \u2014 experience dilution of platform positions within major coalitions; high exit costs prevent independent party building",
+      "Incumbent Major Parties: Primary beneficiaries (institutional/arbitrage) \u2014 use system to maintain single-party control and suppress competition; can realign coalition strategy without exiting structure",
+      "Opposition Parties: Ambiguous (institutional/constrained) \u2014 both beneficiaries when in power and victims when out of power; trapped by binary equilibrium that benefits majority but not minority status",
+      "Electoral Reform Coalition: Organized agents (organized/mobile) \u2014 see alternative pathways (ranked-choice, proportional) as feasible and demonstrate exit potential; provide countervailing pressure to lock-in",
+      "Electoral Commission Apparatus: Institutional administrators (institutional/arbitrage) \u2014 maintain performative legitimacy infrastructure while system outcomes are determined by structural incentives rather than procedural quality",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing binary equilibrium as mathematical necessity (Duverger's Law, Arrow's Impossibility) rather than contingent institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The system concentrates parliamentary representation into two major parties while voter preference landscape is more dispersed. This concentration benefits winners substantially (single-party government) while suppressing minority representation. The acceleration from 0.35 to 0.58 over 80 years reflects increasing polarization of voter preferences without proportional increases in party competition\u2014extractiveness has grown because the gap between preference distribution and representational output has widened. Suppression (0.68): High. Multiple mechanisms enforce binary choice: wasted vote penalty (votes for third parties yield zero seats), spoiler stigma (voting third party blames you for majority defeat), and strategic voting necessity (voting your preference risks worst outcome). These are not trivial barriers\u2014they function as structural suppression of preference expression. Theater ratio (0.64): Moderate-high. Procedural legitimacy narratives (fair counting, transparent rules, equal ballots) obscure mechanical outcomes. The system's legitimacy claims rest on procedural fairness, yet procedural quality is orthogonal to representational outcomes. Electoral administrators perform legitimacy-conferring functions while system structure determines outcomes independently of administrative quality.",
+    "perspectival_gap": "This constraint demonstrates extreme perspectival divergence driven by power asymmetry and exit options. The beneficiary (major party with institutional power and arbitrage exits) experiences coordination. The victim (powerless voter with trapped exit) experiences extraction. The intermediate actors (policy movements with constrained exits, reform coalitions with mobile exits) experience hybrid forms. The analytical observer risks naturalizing institutional choices (binary representation) as mathematical limits (voting paradoxes).",
+    "directionality_logic": "Directionality (d) is determined by structural position: who benefits, who bears costs, and what exit options exist. Beneficiary major parties have d \u2248 0.10 (full beneficiary status with arbitrage exits)\u2014they experience low or negative effective extraction because the system's suppression benefits them directly. Disenfranchised voters have d \u2248 0.95 (full target status with trapped exits)\u2014they experience maximum effective extraction because they cannot exit without forfeiting all bargaining power. Policy minority movements have d \u2248 0.70 (partial victim status with constrained exits)\u2014high but not maximal extraction because they have some voice within major platforms and some (costly) exit options through third-party organizing. Reform coalitions have d \u2248 0.45 (mixed position with mobile exits)\u2014moderate extraction because they have demonstrated alternative pathways and exit is theoretically available even if costly. The sigmoid f(d) converts these d values into effective power modifiers that produce the perspectival gap: beneficiaries see rope (low \u03c7), victims see snare (high \u03c7), intermediates see tangled rope (moderate \u03c7).",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by revealing that both rope and snare classifications are structurally accurate from different perspectives. The mandatrophy arises from the system's dual nature: it is simultaneously a high-efficiency coordination mechanism (major parties organized into governing coalitions) and an extraction regime (suppression of minority representation and strategic voting compulsion). The coordination function is real\u2014FPTP does aggregate dispersed preferences and solve the problem of government formation\u2014but it does so through an extractive mechanism that concentrates representation asymmetrically. The analytical observer's natural law perspective (Mountain) is a false summit: binary equilibrium is attributed to mathematical necessity (Duverger's Law, Arrow's Theorem) when it is actually a contingent institutional choice that alternative voting systems have demonstrated can be altered. The resolution: FPTP is genuinely a Tangled Rope with dominant extraction properties (snare-like experience for many agents) but real coordination function (rope-like function for institutional actors). The system's theater ratio (0.64) indicates that much of its legitimacy derives from procedural fairness narratives that obscure this dual nature."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "gerrymandering_lock_in",
+      "two_party_duopoly",
+      "strategic_voting_equilibrium"
+    ],
+    "dual_formulation_note": "FPTP lock-in is upstream of gerrymandering effects (which exploit FPTP's single-seat-per-district structure) and two-party duopoly (which emerges from FPTP's mechanical and psychological effects). Strategic voting equilibrium is a downstream behavioral consequence of FPTP's structural incentives. All three related constraints share the coordination_vs_extraction ambiguity (omega_id: coordination_vs_extraction_boundary)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.45
+    }
+  ]
+}

@@ -163,10 +163,10 @@ PIPELINE_FIELDS = [
     ("requires_active_enforcement", bool,         False),
     ("classifications",             list,         False),
     ("domain",                      str,          False),
-    ("maxent_probs",                dict,         False),
-    ("raw_maxent_probs",            dict,         False),
-    ("maxent_entropy",              (int, float), False),
-    ("maxent_top_type",             str,          False),
+    ("maxent_probs",                dict,         True),   # null for constraints without MaxEnt data
+    ("raw_maxent_probs",            dict,         True),   # null for constraints without MaxEnt data
+    ("maxent_entropy",              (int, float), True),   # null for constraints without MaxEnt data
+    ("maxent_top_type",             str,          True),   # null for constraints without MaxEnt data
     ("maxent_indexed",              dict,         True),   # null when indexed run unavailable
     ("maxent_divergence",           dict,         True),   # null when either mode missing
     ("h1_band",                     int,          False),

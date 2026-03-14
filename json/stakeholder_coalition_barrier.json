@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "stakeholder_coalition_barrier",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "scb"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Stakeholder Coalition Barrier",
+    "topic_domain": "institutional/governance/collective_action",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_coalition_gatekeepers",
+      "privileged_interests"
+    ],
+    "victims": [
+      "excluded_stakeholders",
+      "broader_public_interest"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Excluded Stakeholder",
+      "comment": "PERSPECTIVE 1: EXCLUDED STAKEHOLDER (SNARE) \u2014 Structurally barred from participation in coalition formation. Faces prohibitive access costs, information asymmetries, and gatekeeping mechanisms that prevent meaningful entry. No exit option except abandoning the domain entirely. Bears extraction without benefit or voice."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Aspiring Coalition Member",
+      "comment": "PERSPECTIVE 2: ASPIRING COALITION MEMBER (TANGLED ROPE) \u2014 Faces high costs to coalition entry (credentialing requirements, relationship building, resource commitments) but genuine coordination benefits exist if admitted. The constraint both enables governance coordination AND enforces asymmetric extraction through membership barriers. Constrained exit \u2014 leaving costs career position and future influence."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Established Coalition Member",
+      "comment": "PERSPECTIVE 3: ESTABLISHED COALITION MEMBER (ROPE) \u2014 Experiences the barrier as pure coordination mechanism: maintains coalition cohesion, prevents defection, enables collective action. Net beneficiary through insider access and decision-making power. Arbitrage exit available \u2014 can leverage coalition membership across domains."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Reform Coalition",
+      "comment": "PERSPECTIVE 4: REFORM COALITION (SCAFFOLD) \u2014 Organized agents working to democratize stakeholder access through transparency mandates, participatory design, and coalition expansion protocols. See the barrier as temporary institutional friction with a sunset: as norms shift toward inclusive governance, the exclusionary mechanism loses legitimacy and enforcement capacity. Has agency and pathway to structural change."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Coalition Apparatus",
+      "comment": "PERSPECTIVE 5: COALITION APPARATUS (PITON) \u2014 The formal governance structures and membership procedures persist through bureaucratic inertia despite original functional rationale eroding. Theater ratio high: extensive consultation processes and stakeholder engagement theater obscure that real decisions occur in closed coalition meetings. Apparatus maintains itself through performative inclusivity rituals while preserving substantive gatekeeping."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From universalist perspective, coalition formation requires boundary maintenance, and boundaries require some form of entry criteria. This perspective risks naturalizing the specific exclusionary mechanisms as immutable features of governance itself. However, structural data reveals this as false summit: the barrier's height and enforcement intensity are contingent institutional choices, not natural laws of collective action."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "entry_cost_threshold_legitimacy",
+      "question": "What level of entry cost is legitimate coordination burden vs extractive gatekeeping?",
+      "resolution_mechanism": "Comparative analysis of entry costs across peer governance domains; correlation between entry cost magnitude and downstream participation quality; measurement of sunk cost recovery vs genuine barrier function",
+      "impact": "If threshold < perceived entry cost: barrier is extractive (Snare). If threshold > perceived entry cost: barrier is coordination (Rope).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Legitimacy threshold for coalition entry costs"
+    },
+    {
+      "id": "gatekeeper_capture_severity",
+      "question": "Are gatekeepers capturing coalition decisions for private benefit or stewarding collective interest?",
+      "resolution_mechanism": "Decision outcome analysis: correlation between gatekeeper interests and coalition policy decisions; comparison of gatekeeper benefit vs constituent stakeholder benefit over time; structural audit of decision-making transparency",
+      "impact": "If capture confirmed: extractiveness increases to 0.72+ (Snare from most perspectives). If stewardship confirmed: extractiveness decreases to 0.35 (Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree of gatekeeper capture of coalition decisions"
+    },
+    {
+      "id": "alternative_coalition_viability",
+      "question": "Can excluded stakeholders form parallel coalitions with sufficient structural power to challenge incumbent coalition?",
+      "resolution_mechanism": "Network analysis of coalition fragmentation patterns; measurement of parallel coalition resource bases and decision-making authority; historical analysis of coalition formation dynamics in peer domains",
+      "impact": "If viable alternatives exist: excluded stakeholder power upgrades from powerless to organized (classification shifts toward Tangled Rope from more perspectives). If alternatives blocked: suppression confirmed at observed level.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of parallel coalition formation"
+    },
+    {
+      "id": "sunset_clause_credibility",
+      "question": "Are inclusion protocols backed by genuine institutional commitment or performative inclusion theater?",
+      "resolution_mechanism": "Implementation tracking of inclusion mandates; measurement of barrier erosion over time; comparison of stated sunset timeline with actual timeline for barrier reduction; qualitative assessment of gatekeeper buy-in for inclusion protocols",
+      "impact": "If credible: scaffold classification holds. If performative: reclassify to Piton (inclusion theater replaces substantive change) or Snare (inclusion promises absent institutional backing).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Credibility of inclusion protocols and sunset mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Stakeholder coalitions are governance mechanisms that coordinate collective decision-making across multiple constituencies. When access barriers exist \u2014 whether formal credentialing requirements, relationship-based gatekeeping, resource commitments, or informational asymmetries \u2014 the coalition produces both genuine coordination benefits for members AND extractive asymmetry that excludes non-members from decision power. This constraint exhibits structural ambiguity: is the barrier a necessary boundary-maintenance mechanism (coordination cost) or a gatekeeping device (extraction mechanism)? The answer depends on whose perspective dominates. The incumbent coalition experiences the barrier as pure coordination. Excluded stakeholders experience pure extraction. Reform coalitions see temporary institutional friction with a sunset. The coalition apparatus itself has degraded from functional governance to performative inclusion theater. The analytical observer risks naturalizing contingent institutional choices as immutable features of collective action itself.",
+    "key_agents": [
+      "Incumbent Coalition Gatekeepers: Primary beneficiary (institutional/arbitrage) \u2014 control coalition agenda and decision-making authority; extract through privileged access and outcome capture",
+      "Excluded Stakeholders: Primary victim (powerless/trapped) \u2014 barred from participation through formal or informal mechanisms; bear extraction without voice or benefit",
+      "Aspiring Coalition Members: Secondary victim (moderate/constrained) \u2014 face high entry costs and relationship barriers; if admitted, become beneficiaries but face ongoing conformity pressure",
+      "Broader Public Interest: Passive victim (powerless/trapped) \u2014 affected by coalition decisions but structurally absent from coalition; contaminated by outcome externalities",
+      "Reform Coalition: Organized agents (organized/constrained) \u2014 working to democratize access through transparency, participatory design, and formal inclusion protocols",
+      "Coalition Apparatus: Institutional actor (institutional/mobile) \u2014 formal governance structures and procedures; increasingly performative as original functional rationale erodes"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The barrier creates asymmetric benefit distribution \u2014 insiders gain decision power and agenda control while outsiders bear policy costs without voice. The extraction is substantial but not maximal because: (1) coordination benefits for insiders are real (not purely extracted), and (2) excluded stakeholders can sometimes influence decisions through lobbying or outside pressure, creating partial remediation pathways. The measurement shows extractiveness increasing over time (0.42 \u2192 0.58), indicating growing gatekeeper capture as coalition matures. Suppression (0.62): High. Multiple barriers suppress alternative coalition formation and outsider participation: formal credentialing requirements, capital and resource requirements, informational asymmetries about coalition governance, social/professional network gatekeeping, and career risk for those who challenge coalition hegemony. Suppression is not total \u2014 some outsiders successfully organize countervailing coalitions, and some insiders defect \u2014 but barriers are substantial. Theater ratio (0.68): Moderately high. Coalition governance includes significant performative elements: stakeholder consultation processes that have little impact on decisions, inclusivity statements that are not backed by structural change, and formal meeting procedures that obscure actual decision-making in informal caucuses. Theater has increased over time (0.55 \u2192 0.68) as reform pressure forces governance apparatus to appear more inclusive while maintaining substantive gatekeeping.",
+    "directionality_logic": "Directionality (d) is computed from each agent's structural position. Gatekeepers with arbitrage options and beneficiary status have low d (~0.10-0.20), experiencing negative effective extraction (chi < 0). Aspiring members with constrained exit and mixed victim/beneficiary status have moderate d (~0.50-0.60), experiencing moderate extraction. Excluded stakeholders with trapped exit and victim status have high d (~0.85-0.95), experiencing high extraction. The analytical observer has d~0.72 (standard analytical position). Scope modifier \u03c3(regional=0.9) dampens the calculated chi slightly compared to national scope, reflecting that regional gatekeeping has somewhat less extractive reach than national-level coalition barriers.",
+    "perspectival_gap": "This constraint demonstrates systematic perspectival variation from a single set of structural data. Gatekeepers see Rope (coordination mechanism for governance). Aspirants see Tangled Rope (mixed coordination benefit + extraction cost). Excluded see Snare (pure extraction with no benefit). Reform coalition sees Scaffold (temporary friction with sunset). Apparatus sees Piton (performative inclusion theater). Analytical observer risks Mountain (naturalizing contingent gatekeeping as necessary boundary maintenance). The perspectival gaps are driven by: (1) differential exit options (arbitrage vs trapped), (2) differential beneficiary/victim status, and (3) temporal horizons (immediate benefit for insiders vs biographical timeframe for aspirants vs generational horizon for reform). The theater ratio increase (0.55 \u2192 0.68) reveals growing performativity as the gap between stated inclusivity and actual gatekeeping widens.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that 'stakeholder coalition' conflates two structurally distinct functions: (1) boundary maintenance (coordination cost, legitimate) and (2) outcome capture (extraction mechanism, contingent). The mandatrophy question is not 'which type is right?' but 'what proportion of the barrier serves each function?' Historical analysis shows: early coalition formation phase (t=0) is dominated by legitimate coordination function (extractiveness 0.42, classification: Rope from most perspectives). As coalition matures, gatekeepers extract increasing rents from privileged access (t=6, extractiveness 0.58, classification: Tangled Rope / Snare depending on perspective). The theater ratio increase (0.55 \u2192 0.68) indicates that as extraction increases, the apparatus compensates with performative inclusion to maintain legitimacy \u2014 the coordination framing persists even as the functional balance shifts toward extraction. The scaffold perspective (reform coalition view) predicts that explicit inclusion protocols and sunset mechanisms can reverse this drift, resetting extractiveness toward coordination-dominated values. This is testable: if inclusion reforms are implemented, extractiveness should decline and theater_ratio should decline (genuine change, not substitution). If theater_ratio stays high while extractiveness stays high, the reforms are performative (Piton classification confirmed)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture_asymmetry",
+      "interest_group_gatekeeping"
+    ],
+    "dual_formulation_note": "Stakeholder coalition barrier is downstream of specific policy domains (regulation, development, resource allocation) where coalitions form. Each domain instance exhibits similar extractiveness signature but with domain-specific beneficiary/victim groups. This story models the generic barrier mechanism; domain-specific instances should link via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.55
+    }
+  ]
+}

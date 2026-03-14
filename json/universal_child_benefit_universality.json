@@ -1,0 +1,212 @@
+{
+  "header": {
+    "constraint_id": "universal_child_benefit_universality",
+    "version": "1.0",
+    "generated_date": "2026-02-27",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ucb"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Universal Child Benefit Universality Constraint",
+    "topic_domain": "social_policy/welfare_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_income_households",
+      "government_budgetary_balance"
+    ],
+    "victims": [
+      "low_income_families",
+      "program_equity"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Low-Income Family",
+      "comment": "PERSPECTIVE 1: LOW-INCOME FAMILY (SNARE) \u2014 Trapped by economic necessity. A truly universal program promises equal access, but means-testing or clawback mechanisms create invisible extraction barriers. Low-income families bear the suppression of administrative complexity and stigma while high-income families extract the full benefit. No exit option; maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Working-Class Parent",
+      "comment": "PERSPECTIVE 2: WORKING-CLASS PARENT (TANGLED ROPE) \u2014 Constrained by wage levels and employment stability. Experiences both genuine coordination (the program provides essential child-rearing support) and extraction (means-testing reduces benefit as income rises, creating perverse work disincentives). Moderate agency but significant structural asymmetry."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Government Administration",
+      "comment": "PERSPECTIVE 3: GOVERNMENT ADMINISTRATION (ROPE) \u2014 Experiences the constraint as pure coordination. The benefit structure solves a collective action problem (ensuring child welfare without individualizing shame) and enables administrative arbitrage through means-testing design. The government can adjust universality parameters without bearing costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The High-Income Household",
+      "comment": "PERSPECTIVE 4: HIGH-INCOME HOUSEHOLD (ROPE) \u2014 Sees the constraint as pure coordination benefit. Receives the full universal benefit (or near-full if means-testing exempts higher brackets) while extracting value from the program's efficiency and simplicity. No suppression experienced; maximum benefit capture."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Welfare Reform Coalition",
+      "comment": "PERSPECTIVE 5: WELFARE REFORM COALITION (SCAFFOLD) \u2014 Organized actors (poverty advocacy groups, progressive economists) see universality as a temporary coordination bridge with a sunset: full decommodification of child welfare through public childcare, education, and healthcare would make the benefit redundant. The constraint is temporary support pending systemic reform. Has exit pathway and organized agency."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Means-Testing Apparatus",
+      "comment": "PERSPECTIVE 6: MEANS-TESTING APPARATUS (PITON) \u2014 The administrative machinery for income verification, clawback calculation, and benefit adjustment has become substantially theatrical. The means-testing process often costs more to administer than the targeted savings it achieves. The apparatus persists through institutional inertia despite low functional efficiency \u2014 maintained because political consensus hasn't fully shifted to pure universality, not because targeting works."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a global comparative perspective, the constraint reveals a hybrid: genuine coordination function (child welfare support solves collective action around child rearing) coupled with asymmetric extraction (targeting mechanisms concentrate benefits among high-income households while imposing administrative burden on low-income recipients). The tension is structural, not resolvable through design tweaks to means-testing thresholds."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "universality_definition_ambiguity",
+      "question": "Does 'universal child benefit' mean equal flat payment to all families, or equal access with income-adjusted claiming?",
+      "resolution_mechanism": "Policy document analysis and implementation audit. Cross-national comparison of claimed vs actual universality (e.g., comparing UK Child Benefit to means-tested programs in other countries).",
+      "impact": "If defined as flat payment: extraction is lower (truly universal). If defined as needs-based access: extraction is higher (means-testing imposes suppression). Classification shifts between Rope (flat) and Snare (means-tested).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Definition of universality: flat payment vs needs-based access"
+    },
+    {
+      "id": "administrative_cost_extraction",
+      "question": "Do means-testing administrative costs genuinely reduce program efficiency or do they constitute secondary extraction disguised as targeting?",
+      "resolution_mechanism": "Cost-benefit analysis: total administrative spend vs targeted savings. Comparison with flat universal payment administrative costs. Audit of clawback mechanism overhead.",
+      "impact": "If administrative costs exceed savings: means-testing is pure extraction mechanism. If savings exceed costs: means-testing is legitimate targeting. Confidence in Tangled Rope classification depends on this resolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether means-testing administrative cost exceeds targeted savings"
+    },
+    {
+      "id": "work_disincentive_suppression",
+      "question": "Does the means-testing clawback (benefit reduction as income rises) constitute structural suppression of work effort or rational economic response to changing family resources?",
+      "resolution_mechanism": "Behavioral analysis: earnings trajectories of families near clawback thresholds. Econometric estimation of labor supply elasticity with respect to benefit phase-out rate.",
+      "impact": "If suppression mechanism: trapped/constrained agents experience involuntary earnings caps. If rational response: experienced extraction is lower. Determines experienced suppression value for low-income perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether clawback creates structural work disincentive"
+    },
+    {
+      "id": "political_universality_commitment",
+      "question": "Is the constraint's structure determined by economic necessity or by political choice to preserve means-testing as a fairness principle?",
+      "resolution_mechanism": "Policy history analysis. Comparison of fiscal cost of pure universality vs current means-tested system. Interviews with policy designers and political coalition builders.",
+      "impact": "If economic necessity: universality is constrained by budgetary reality (Tangled Rope). If political choice: universality is an identity/ideological stance (Snare for those locked into fairness framing).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether means-testing structure reflects budgetary or political choice"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The universal child benefit universality constraint captures a fundamental structural tension in welfare state design: the gap between the nominal promise of universal coverage and the actual implementation that targets benefits through means-testing. This constraint demonstrates how the same policy mechanism appears radically different depending on the observer's structural position. To high-income households, the program is pure coordination \u2014 a simple mechanism ensuring child welfare. To low-income families, the same program becomes a snare: means-testing creates administrative burden, clawback mechanisms suppress work incentives, and the extraction of targeting eligibility determination falls disproportionately on those with least capacity to navigate bureaucratic complexity. The constraint has strengthened over the 15-year interval as means-testing thresholds have contracted, benefit levels have stagnated relative to costs of child-rearing, and administrative complexity has increased. Theater ratio has risen (0.42 to 0.58) as the means-testing machinery has become increasingly elaborate relative to actual savings achieved. Extractiveness has increased (0.38 to 0.52) as the gap between universal promise and targeted delivery has widened.",
+    "key_agents": [
+      "Low-Income Families: Primary victim (powerless/trapped) \u2014 bear full suppression of administrative complexity, clawback disincentives, and stigma; cannot exit",
+      "Working-Class Parents: Secondary victim (moderate/constrained) \u2014 experience both program support and work disincentives; constrained by employment options and wage dynamics",
+      "Government Administration: Primary beneficiary (institutional/arbitrage) \u2014 captures budgetary arbitrage through means-testing design; can adjust parameters without bearing costs",
+      "High-Income Households: Secondary beneficiary (powerful/arbitrage) \u2014 receive full or near-full benefits with minimal administrative burden; extract pure coordination benefit",
+      "Welfare Reform Coalition: Organized agent (organized/constrained) \u2014 seeks systemic reform path through expanded public services; sees current benefit as temporary scaffold",
+      "Means-Testing Apparatus: Institutional actor (institutional/arbitrage) \u2014 maintains performative administrative machinery; benefits from continued complexity",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees hybrid coordination-extraction structure; identifies false universality claims"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The policy nominally provides coordination (ensuring child welfare without stigma) but actual implementation extracts through targeting: means-testing creates compliance costs disproportionately borne by low-income families, clawback mechanisms create work disincentives, and the gap between flat nominal rates and inflation-adjusted purchasing power has widened. The 0.52 value reflects that the coordination function (50% of program delivery) is genuine but increasingly subordinate to the extraction function (benefit concentration among higher-income brackets through exemption thresholds and inflation decay). Suppression (0.48): Moderate. Significant structural barriers include means-testing complexity, clawback work disincentives, and stigma. But suppression is not total \u2014 families can and do claim benefits, and organizational advocates provide navigation support. The value reflects real but partially surmountable barriers. Theater ratio (0.58): Moderate-high. Means-testing administration involves substantial performative activity (income verification, threshold checking, eligibility reassessment) that often costs more to implement than the targeting savings achieved. The ratio has risen over time as administrative complexity has increased relative to actual program targeting efficiency.",
+    "perspectival_gap": "The universal child benefit illustrates how the same policy can be perceived as pure coordination (Rope) by beneficiaries with exit options and pure extraction (Snare) by those locked into dependency. The gap reflects not disagreement about facts but genuine structural asymmetry: the program's design concentrates administrative burden on low-income recipients while concentrating benefit concentration among higher-income households. The high-income family has little reason to question the program's fairness (they receive full benefit). The low-income family experiences the program's fairness claims as false \u2014 the nominally universal benefit becomes means-tested extraction once administrative complexity is factored in.",
+    "directionality_logic": "Directionality (d) is determined by each agent's position relative to the extraction flow. High-income beneficiaries with arbitrage options experience low d (0.10-0.20), producing negative or near-zero effective extraction chi. Government administrators similarly experience low d (arbitrage, no direct cost bearing). Low-income families trapped by economic necessity experience high d (0.85-0.95), producing maximum experienced extraction chi. Working-class parents constrained by employment options experience medium-high d (0.60-0.70). The coalition with organized exit pathways experiences medium d (0.40-0.50). The means-testing apparatus maintains institutional arbitrage, thus low d. The analytical observer at civilizational scope derives d = 0.72 (observer position), revealing the structural asymmetry that individuals in the system cannot perceive from their trapped or constrained positions.",
+    "mandatrophy_analysis": "The mandatrophy here is resolved through recognizing that 'universal' has been semantically captured. Policy calls the program 'universal child benefit' but implements targeted means-testing. The nominal universality (all families eligible in principle) is contradicted by actual universality (equal benefit to all regardless of income). The program cannot simultaneously be both: either it is truly universal (flat payment, no means-testing) or it is targeted. The current design extracts the coordination legitimacy of universalism while implementing the extraction efficiency of targeting. The Tangled Rope classification acknowledges this hybrid: genuine coordination function (child welfare support) coupled with asymmetric extraction (benefit concentration through targeting). Resolution requires choosing: move toward true universality (flat payment, sunset means-testing apparatus) or acknowledge the program as targeted extraction and defend targeting on efficiency grounds rather than falsely claiming universality."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "means_testing_stigma_spiral",
+      "wage_substitution_effect"
+    ],
+    "dual_formulation_note": "Universal child benefit universality is downstream of broader welfare state design tension (universalism vs targeting). It can be decomposed into: (1) nominal universality (policy promise: all families eligible) vs actual universality (implementation: means-tested delivery), and (2) coordination function (child welfare support) vs extraction function (benefit concentration). These are distinct constraints with different epsilon values. The current story captures the hybrid."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.88
+    }
+  ]
+}

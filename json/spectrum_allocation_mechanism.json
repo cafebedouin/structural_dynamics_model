@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "spectrum_allocation_mechanism",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "spectrum"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Electromagnetic Spectrum Allocation Mechanism",
+    "topic_domain": "telecommunications/regulatory_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_spectrum_holders",
+      "telecommunications_regulators"
+    ],
+    "victims": [
+      "new_market_entrants",
+      "spectrum_dependent_innovation",
+      "public_spectrum_access"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "New Market Entrant",
+      "comment": "PERSPECTIVE 1: NEW MARKET ENTRANT (SNARE) \u2014 Locked out by high auction costs, spectrum unavailability, and regulatory barriers. Cannot access spectrum without massive capital expenditure or regulatory favor. No exit except to abandon telecommunications ambitions entirely. Bears full cost of scarcity-rent extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Secondary Spectrum User (Licensed Tier)",
+      "comment": "PERSPECTIVE 2: SECONDARY SPECTRUM USER (TANGLED ROPE) \u2014 Licensed secondary users benefit from spectrum access coordination (exclusive frequency bands prevent mutual interference) but face extraction through licensing fees, renewal costs, and restrictions on use. Genuine coordination function coexists with asymmetric extraction toward regulator and primary incumbent."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Incumbent Spectrum Holder",
+      "comment": "PERSPECTIVE 3: INCUMBENT SPECTRUM HOLDER (ROPE) \u2014 Primary beneficiary experiencing allocation mechanism as coordination: exclusive frequency bands enable stable business planning and network investment. Minimal extraction cost; high coordination benefit. Arbitrage option: can defend frequencies internationally or shift to new technologies."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Technology Innovation Coalition",
+      "comment": "PERSPECTIVE 4: TECHNOLOGY INNOVATION COALITION (SCAFFOLD) \u2014 Organized agents (WiFi standards bodies, unlicensed spectrum advocates, dynamic spectrum access researchers) see the allocation mechanism as a temporary coordination problem with sunset. Unlicensed bands (WiFi, Bluetooth) and emerging dynamic spectrum sharing protocols provide alternative pathways. Sunset clause: spectrum sharing and software-defined radio technologies are building replacement mechanisms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Telecommunications Regulator",
+      "comment": "PERSPECTIVE 5: TELECOMMUNICATIONS REGULATOR (TANGLED ROPE) \u2014 Manages genuine coordination function (preventing interference, establishing exclusive bands) while extracting through licensing fees, auction proceeds, and regulatory control. Constrained by legal mandate to allocate spectrum but also benefits from auction revenue and political influence over telecommunications sector. Enforces the mechanism but also depends on it for legitimacy and funding."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Radio Spectrum Governance",
+      "comment": "PERSPECTIVE 6: LEGACY RADIO SPECTRUM GOVERNANCE (PITON) \u2014 International Radio Regulations (ITU framework) persist through institutional inertia despite degraded function. Original purpose (preventing radio interference in 1920s-1970s) remains partially valid, but mechanism is optimized for static allocation in increasingly dynamic environments. Theater ratio reflects that much regulatory activity is performative compliance with legacy frameworks rather than functional interference prevention. Sunset appears only when fundamentally new technologies (cognitive radio, software-defined spectrum) mature."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Physics Constraint View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / PHYSICS VIEW (MOUNTAIN) \u2014 From universal/civilizational perspective, electromagnetic spectrum scarcity is presented as a natural physical law: finite spectrum, multiple users, interference-prevention requirement. This perspective sees allocation mechanisms as technically necessary, not contingent. However, structural data contradicts pure mountain classification \u2014 the engine's false summit detector reveals that spectrum is a managed scarcity, not inherent scarcity. Interference prevention is real, but allocation mechanism design (licensing vs commons vs dynamic access) is contingent policy choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technical_vs_policy_scarcity",
+      "question": "Is spectrum scarcity a fundamental physics property or an artifact of allocation policy choices?",
+      "resolution_mechanism": "Comparison of utilized bandwidth vs available spectrum; analysis of spectrum efficiency gains from dynamic allocation vs static licensing; technological feasibility assessment of cognitive radio and spectrum sharing",
+      "impact": "If scarcity is technical (unavoidable): mountain classification gains credibility. If scarcity is policy (allocation design choice): allocation mechanism is pure tangled_rope, and alternative designs (commons, dynamic sharing) are technically viable.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether spectrum scarcity is intrinsic or policy-dependent"
+    },
+    {
+      "id": "interference_prevention_necessity",
+      "question": "Can interference prevention be achieved without exclusive licensing? Do spectrum sharing and cognitive radio technologies actually work at scale?",
+      "resolution_mechanism": "Empirical evaluation of unlicensed band performance (WiFi, Bluetooth interference patterns); pilot deployments of dynamic spectrum access; cognitive radio system failure analysis",
+      "impact": "If sharing works: allocation mechanism is not the only coordination solution (rope becomes tangled_rope or scaffold). If sharing fails reliably: exclusive licensing is structurally necessary (maintains mountain credibility).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether spectrum sharing can replace exclusive licensing"
+    },
+    {
+      "id": "auction_revenue_legitimacy",
+      "question": "Does auction revenue for spectrum licenses serve public benefit, or is it primarily a wealth transfer to incumbents and government?",
+      "resolution_mechanism": "Analysis of auction revenue allocation (infrastructure investment vs general revenue); comparison of public benefit delivered by licensed operators vs unlicensed commons operators; assessment of whether auction prices reflect genuine scarcity or regulatory capture",
+      "impact": "If public benefit is high: licensing is coordination mechanism with fair extraction cost (rope or balanced tangled_rope). If revenue is pure rent extraction: allocation mechanism is snare or pure extraction (high chi).",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether spectrum auction revenue serves genuine public interest"
+    },
+    {
+      "id": "incumbent_lock_in_durability",
+      "question": "Are incumbent spectrum holdings durable competitive moats or temporary positions subject to technology disruption?",
+      "resolution_mechanism": "Historical analysis of spectrum technology transitions (analog to digital, 2G to 4G to 5G); assessment of whether new entrants can compete via unlicensed spectrum or emerging technologies; technology roadmap for next-generation wireless",
+      "impact": "If durable: incumbent lock-in is permanent (high extraction). If subject to disruption: sunset logic applies and scaffold classification gains validity.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether incumbent spectrum positions are disruption-resistant"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Spectrum allocation is a canonical coordination mechanism that solves a real problem (interference prevention) while simultaneously extracting value from new entrants and constraining innovation. The constraint exhibits the full diagnostic range of DR classification depending on observer position. From the incumbent's perspective, the allocation mechanism is pure coordination (Rope) \u2014 exclusive bands enable stable business planning. From the new entrant's perspective, it is pure extraction (Snare) \u2014 high auction costs and spectrum unavailability create insurmountable barriers. From the regulator's perspective, it is hybrid (Tangled Rope) \u2014 genuine coordination function coexists with revenue extraction. From the technology innovation coalition's perspective, it is temporary (Scaffold) \u2014 dynamic spectrum sharing and unlicensed band technologies are building replacement pathways with a 10-20 year sunset horizon. The constraint's extractiveness has increased from 0.35 to 0.52 over the measurement interval, reflecting accumulation of licensing costs and regulatory complexity. Theater ratio has increased from 0.32 to 0.48, indicating growing performative compliance with legacy ITU frameworks that no longer match technological reality.",
+    "key_agents": [
+      "Incumbent Spectrum Holders: Primary beneficiary (institutional/arbitrage) \u2014 captured early low-cost spectrum licenses, now protected by regulatory barriers; benefit from scarcity rent during technology transitions",
+      "New Market Entrants: Primary victim (powerless/trapped) \u2014 face auction costs of $10B+ per spectrum band, creating insurmountable capital barriers to entry in many markets",
+      "Telecommunications Regulators: Institutional actor (institutional/constrained) \u2014 manage interference prevention (genuine coordination) while extracting licensing fees and auction revenue; constrained by legal mandate and political pressure",
+      "Secondary Spectrum Users: Moderate victim (moderate/constrained) \u2014 licensed users benefit from exclusive bands but pay ongoing licensing and compliance costs",
+      "Technology Innovation Coalition: Organized actors (organized/mobile) \u2014 WiFi standards bodies, dynamic spectrum access researchers, unlicensed spectrum advocates building alternative pathways",
+      "Public Spectrum Access: Victim (powerless/trapped) \u2014 spectrum-dependent innovations (emergency communications, public WiFi, scientific research) starved for spectrum by allocation to commercial licensees"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The allocation mechanism extracts from new entrants through auction costs and from innovation through spectrum scarcity, but extraction is not total \u2014 unlicensed bands (WiFi) provide partial relief, and some spectrum access exists through secondary licensing. The increase from 0.35 to 0.52 over the interval reflects accumulation of extraction: auction prices have risen exponentially, licensing requirements have become more complex, and spectrum scarcity has deepened. Suppression (0.65): High. Barriers to spectrum access include high capital costs (auctions), regulatory expertise requirements, exclusive frequency allocation, and long licensing periods. But suppression is not complete \u2014 technically feasible alternatives (unlicensed bands, spectrum sharing) exist and are gradually displacing the licensing mechanism. Theater ratio (0.48): Moderate. Much spectrum regulatory activity is genuinely functional (interference prevention, coordination of global frequency standards), but significant theater exists: complex licensing compliance procedures, lengthy FCC approval processes, and ITU framework adherence that address legacy problems rather than current technological needs. The increase from 0.32 to 0.48 reflects growing misalignment between static allocation frameworks and dynamic technology landscape.",
+    "perspectival_gap": "The allocator (incumbent) and the excluded (new entrant) experience structurally opposite positions. The incumbent designed the allocation system; the new entrant is locked out by it. Both descriptions are accurate from their structural positions. The regulator is captured in the sense that it depends on the extraction mechanism for revenue and legitimacy, yet genuinely performs coordination function. The scaffold perspective (organized coalition building alternatives) is analytically distinct from the snare perspective (individual powerless agent) \u2014 organization creates exit paths that powerlessness lacks.",
+    "directionality_logic": "Each perspective's directionality value is determined by the agent's structural relationship to the allocation mechanism. Incumbents with arbitrage options (can defend frequencies internationally, invest in multiple bands, use alternative technologies) experience low effective extraction \u2014 d \u2248 0.10. New entrants with no exit (must acquire spectrum or exit telecommunications entirely) experience maximum extraction \u2014 d \u2248 0.95. Regulators constrained by legal mandate but benefiting from auction revenue occupy middle position \u2014 d \u2248 0.55. The analyst's position is external (d \u2248 0.73 for analytical atom canonical fallback). The derivation chain produces chi values that reflect this: beneficiaries experience negative or near-zero chi; victims experience chi > 1.0.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by recognizing that allocation mechanisms are not monolithic. The same base properties yield different classifications depending on the observer's structural position because the observer's position determines their relationship to both the coordination function (interference prevention) and the extraction flow (scarcity rent). The incumbent benefits from coordination at low cost. The new entrant bears extraction cost without accessing coordination benefit. The regulator performs coordination and extracts simultaneously. The innovator coalition has the option to build alternatives (scaffold). The false summit (mountain) is precisely the rhetorical move that naturalizes allocation mechanism design as inherent physics constraint. The Tangled Rope is the accurate baseline: genuine coordination coexists with asymmetric extraction. The sundary types (Rope from beneficiary, Snare from victim) are legitimate perspectival readings that follow from their structural positions."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "telecommunications_market_entry_barriers",
+      "innovation_funding_constraints",
+      "emergency_services_spectrum_access"
+    ],
+    "dual_formulation_note": "Spectrum allocation mechanism decomposes into three structurally distinct constraint families: (1) interference prevention coordination (\u03b5\u22480.05, Mountain), (2) incumbent lock-in extraction (\u03b5\u22480.65, Snare), and (3) regulatory capture of allocation process (\u03b5\u22480.52, Tangled Rope). The single story abstracts across all three but linked stories would track each separately."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

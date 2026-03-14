@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "job_market_search_friction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "jobsearch"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Job Market Search Friction and Asymmetric Information Extraction",
+    "topic_domain": "economic/labor_markets",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "employers",
+      "recruitment_intermediaries",
+      "credentialing_institutions"
+    ],
+    "victims": [
+      "job_seekers",
+      "early_career_workers",
+      "underrepresented_groups"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Early Career Job Seeker",
+      "comment": "PERSPECTIVE 1: EARLY CAREER JOB SEEKER (SNARE) \u2014 Trapped by information asymmetry, resume screening bottlenecks, and credential requirements they cannot readily escape. Must invest thousands of hours in applications, certifications, and networking with no guarantee of advancement. High suppression: switching costs (relocation, credential debt, time investment) are immense. No meaningful exit path short of leaving the labor market entirely."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Established Worker Seeking Transition",
+      "comment": "PERSPECTIVE 2: ESTABLISHED WORKER (TANGLED ROPE) \u2014 Constrained by switching costs (credential debt, loss of seniority, relocation burden, age discrimination signals) but also benefits from network effects and institutional reputation that job search frictions paradoxically protect. Some agency through referral networks, but high friction discourages career exploration. Mixed extraction and coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Employer",
+      "comment": "PERSPECTIVE 3: EMPLOYER (ROPE) \u2014 Experiences job market friction as pure coordination problem. High search costs incentivize standardized credential signals, network hiring (which reduces screening burden), and retention mechanisms. Benefits from friction: it raises switching costs for employees, creating non-portable rents. But the primary function is solving the information asymmetry problem \u2014 employers need reliable signals of competence, and the friction provides those signals."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Recruitment Intermediary",
+      "comment": "PERSPECTIVE 4: RECRUITMENT INTERMEDIARY (ROPE) \u2014 Pure beneficiary with arbitrage options. Extracts rent by sitting between employers and workers: charging placement fees, resume-screening services, credentialing programs. But also genuinely coordinates matching \u2014 reduces job seeker time investment and helps employers filter candidates. Low suppression from intermediary perspective (they can exit by switching to different markets or sectors)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Credentialing Institution",
+      "comment": "PERSPECTIVE 5: CREDENTIALING INSTITUTION (PITON) \u2014 University degree requirements, professional certifications, and licensing boards maintain their gatekeeping role largely through institutional inertia and employer coordination. The credential's signaling function (filtering for reliability) is genuine coordination. But theater is high (0.61): much of the credential's value is positional/signaling rather than functional skill. Many employers require degrees not because they use degree-specific knowledge but because degrees are coordination devices that all other employers require. The credential system is partially degraded \u2014 employers know it's imperfect screening, but switching to alternative signals requires collective coordination, so the system persists."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Organized Job Seeker Coalition",
+      "comment": "PERSPECTIVE 6: ORGANIZED JOB SEEKER COALITION (SCAFFOLD) \u2014 Skills bootcamps, online platforms (LinkedIn, AngelList), and alternative credential systems (skills-based hiring, portfolio assessment) are creating bypass pathways around traditional friction. These have a sunset logic: as employers increasingly verify skills directly rather than relying on degrees/credentials, the traditional friction-based gatekeeping loses force. Organized actors have agency and see an exit path. Theater is rising in this space but extraction is declining as verification becomes more direct."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Sees the job market as exhibiting both genuine coordination (matching workers to jobs, signaling competence) and extractive mechanisms (credential gatekeeping, rent extraction by intermediaries, information advantage for established networks). The friction is not inevitable \u2014 it's a contingent institutional arrangement that locks in beneficiaries. This perspective drives the tangled rope classification: \u03b5=0.52 reflects that extraction and coordination coexist structurally."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "signal_quality_vs_gatekeeping_ratio",
+      "question": "What proportion of job market friction is legitimate information asymmetry reduction vs. pure gatekeeping rent extraction?",
+      "resolution_mechanism": "Empirical measurement: correlation between credential requirements and actual job performance; analysis of hiring outcomes with vs. without credential screening; cross-country comparison of credential dependence and labor market efficiency",
+      "impact": "If primarily signal quality (>70%): constraint is closer to Rope. If primarily gatekeeping (<30%): constraint is closer to Snare. Current evidence suggests 40-50% split, supporting Tangled Rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of friction serving information reduction vs. gatekeeping"
+    },
+    {
+      "id": "skills_based_hiring_viability",
+      "question": "Can alternative verification mechanisms (portfolio assessment, skills tests, apprenticeships, work trials) replace credential-based screening at scale without new forms of gatekeeping?",
+      "resolution_mechanism": "Pilot outcomes from skills-based hiring programs; comparative analysis of hiring reliability and diversity outcomes; long-term follow of alternative credentialing systems (bootcamp graduates, portfolio-screened workers)",
+      "impact": "If viable: scaffold sunset is real and friction extraction will decline. If new gatekeeping emerges (platform algorithms, certification costs): friction persists in different form. Constraint would shift to Piton (degraded ritual persists).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether alternative hiring mechanisms can replace credentials at scale"
+    },
+    {
+      "id": "network_effect_irreversibility",
+      "question": "Is the value of established professional networks (LinkedIn, alumni connections, referral hiring) structurally irreversible, or would it collapse if hiring protocols switched to decentralized skills verification?",
+      "resolution_mechanism": "Analysis of network switching costs: labor flow studies comparing cohorts that switch to alternative hiring vs. those staying in credential-based networks; measurement of portable vs. network-embedded wage premiums",
+      "impact": "If irreversible: workers cannot exit friction even with new alternatives (lock-in to network investment). If reversible: new entrants avoid friction costs, creating generational delta in extraction. Affects sustainability of scaffold classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether professional network value is irreversibly locked in"
+    },
+    {
+      "id": "identity_lock_mechanism_in_credential_commitment",
+      "question": "Are job seekers identity-locked to credential pathways (self-concept as 'degree-seeking' or 'professional'), or are they simply facing high material switching costs?",
+      "resolution_mechanism": "Qualitative analysis of career-changer narratives; measurement of cognitive frames in bootstrap and non-traditional entrant cohorts; comparison of exit patterns when material barriers are removed (e.g., bootcamp completion vs. traditional degree)",
+      "impact": "If identity-locked: credential constraint persists even when material barriers fall. If purely constrained: alternative pathways with lower switching costs will attract participants. Affects classification stability under policy intervention.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether credential pathways lock in identity or material cost"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.57
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Job market search friction emerges from information asymmetry between employers and workers: employers cannot directly observe worker competence, and workers cannot efficiently signal capability. The constraint solves a coordination problem (matching) while simultaneously enabling extraction (credential gatekeeping, intermediary rents, network lock-in). The friction's growth trajectory (theater rising from 0.48 to 0.61, extractiveness rising from 0.38 to 0.52) reflects increasing reliance on credentials and gatekeeping relative to genuine skill verification. Early-career workers and underrepresented groups bear disproportionate costs\u2014they lack inherited networks and must invest in credentials despite uncertain returns. Employers and recruitment intermediaries benefit from the friction through non-portable wage advantages and placement fees. The constraint exhibits all the hallmarks of Tangled Rope: genuine coordination function (matching), active enforcement (credential requirements, hiring screening), multiple beneficiaries, clear victims, and substantial extraction alongside coordination.",
+    "key_agents": [
+      "Early Career Job Seekers: Primary victims (powerless/trapped) \u2014 face information disadvantage, credential barriers, high search costs with no exit",
+      "Established Workers Seeking Transition: Secondary victims (moderate/constrained) \u2014 face switching costs from credential debt and network lock-in",
+      "Employers: Primary beneficiaries (institutional/arbitrage) \u2014 use friction as coordination signal; benefit from non-portable wage rents",
+      "Recruitment Intermediaries: Extractors (institutional/arbitrage) \u2014 extract rent through placement fees and screening services; also coordinate matching",
+      "Credentialing Institutions: Gatekeepers (institutional/arbitrage) \u2014 maintain credential requirements through institutional inertia; benefit from positional value",
+      "Organized Job Seeker Coalition: Reformers (organized/constrained) \u2014 building alternative pathways (bootcamps, skills platforms) with sunset logic",
+      "Analytical Observer: Sees mixed coordination-extraction (analytical/analytical) \u2014 recognizes both genuine matching function and contingent gatekeeping"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, reflecting that friction provides genuine coordination (employers need reliable signals, workers need to communicate competence) alongside extraction (credential gatekeeping, intermediate rents, network advantages). The 0.52 value is justified by the balance: credential requirements do screen for reliability, but they also lock in benefits for incumbents and intermediaries. Suppression (0.58): Moderate-high. Job seekers face substantial barriers to exit: credential debt (average student loan debt ~$37k in US), time investment (4-year degrees, 6-12 month job search cycles), geographic immobility (relocation costs), and age discrimination signals. But suppression is not total\u2014some alternative pathways exist (bootcamps, referral hiring), and suppression is lowest for workers with inherited advantages (networks, family support). Theater ratio (0.61): Moderate-high and rising. Credential requirements and screening processes include substantial performative elements: resume optimization, cover letters, interview preparation are largely about signaling rather than revealing true competence. Degree requirements in many roles reflect positional value (everyone else requires it) rather than job-specific skills. The rising trajectory reflects increasing credential inflation\u2014employers raising requirements as labor supply increases, not because task requirements changed.",
+    "perspectival_gap": "The gap between powerless (Snare) and institutional (Rope) perspectives reveals that friction is experienced radically differently depending on structural position. An early-career worker sees pure extraction\u2014they bear costs, face barriers, and gain no offsetting benefit beyond eventual (maybe) employment. An employer sees pure coordination\u2014they are solving the problem of identifying reliable workers. A credentialing institution sees partial degradation (Piton)\u2014they know their screening is imperfect and increasingly theater, but they can't unilaterally switch without coordinating with other employers. The analytical observer (Tangled Rope) is the only perspective that integrates both functions: yes, friction does coordinate; yes, it also extracts. The constraint is Tangled Rope because both must be true simultaneously from a structural standpoint.",
+    "directionality_logic": "Beneficiaries are employers, recruitment intermediaries, and credentialing institutions. Victims are job seekers (especially early-career and underrepresented groups) who face information disadvantage and high search costs. The beneficiary-victim distinction is sharp: employers set hiring requirements and benefit from the resulting screening; workers face requirements and bear search costs. Recruitment intermediaries explicitly extract by charging placement fees and screening services, but they also coordinate matching. Credentialing institutions extract by maintaining positional value (degree requirement regardless of job-specific relevance) while providing genuine but imperfect signaling. The directionality derivation will compute high d for trapped early-career workers (powerless + trapped + victim) and low d for employers (institutional + arbitrage + beneficiary), producing the perspectival gap between Snare and Rope.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint is genuinely both coordination (matching workers to jobs) and extraction (rent extraction through gatekeeping). The false dichotomy is whether the friction is 'necessary' (pure coordination) vs. 'exploitative' (pure extraction). The Tangled Rope classification shows it is both. The extraction exists *because* the coordination problem exists\u2014the solution (credentials, hiring standards) is what enables the extraction (gatekeeping, lock-in). Critically, the rising trajectory of theater (0.48 \u2192 0.61) reveals that the coordination function is being degraded over time: credentials are increasingly positional (required because everyone else requires them) rather than informative (predicting actual job performance). The analytics path out is: (1) separate the genuine matching function from the gatekeeping rent; (2) design alternative matching mechanisms (skills-based hiring, portfolio assessment) that provide the coordination benefit without the extraction; (3) the Scaffold perspective (organized agents building alternatives) represents this path. The constraint can remain Tangled Rope only if both coordination and extraction remain significant. If alternatives succeed, the classification shifts toward Rope (coordination only) or Piton (degraded theater persists) depending on whether the old friction is eliminated or just supplemented."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "credential_inflation",
+      "network_gatekeeping",
+      "student_debt_lock_in"
+    ],
+    "dual_formulation_note": "Job market search friction decomposes into at least three structurally distinct constraints: (1) information asymmetry in hiring (genuine coordination problem, low \u03b5); (2) credential gatekeeping and positional value extraction (higher \u03b5); (3) network lock-in and inherited advantage mechanisms (high \u03b5, identity_coordination type). This story covers the aggregate phenomenon. Downstream constraints address the specific mechanisms with independent \u03b5 values and measurement data."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.55
+    }
+  ]
+}

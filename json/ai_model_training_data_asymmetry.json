@@ -1,0 +1,221 @@
+{
+  "header": {
+    "constraint_id": "ai_model_training_data_asymmetry",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aitda"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AI Model Training Data Asymmetry",
+    "topic_domain": "artificial_intelligence/data_governance/labor",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "model_developers",
+      "ai_companies",
+      "downstream_application_users"
+    ],
+    "victims": [
+      "data_creators",
+      "training_data_sources",
+      "displaced_workers",
+      "epistemic_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Unlicensed Data Creator",
+      "comment": "PERSPECTIVE 1: DATA CREATORS (SNARE) \u2014 Writers, artists, photographers whose work trains models without attribution or compensation. Trapped by platform terms of service, copyright asymmetry, and information scarcity about how data is used. High suppression: cannot opt out of web scraping, cannot negotiate data licensing, cannot learn what their work trained. Pure extraction \u2014 minimal coordination benefit, maximum coercion."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Affected Content Industry",
+      "comment": "PERSPECTIVE 2: CONTENT CREATORS WITH INDUSTRY BACKING (TANGLED ROPE) \u2014 Publishers, studios, music labels experience genuine coordination benefits (broader distribution, new tools) alongside extraction (training data licensing fees, market cannibalization risks, devaluation of human-created content). Constrained by market power of AI developers but not fully trapped \u2014 can pursue licensing agreements, litigation, industry standards. Moderate extraction with real asymmetry."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Displaced Workforce",
+      "comment": "PERSPECTIVE 3: DISPLACED WORKERS & LABOR ADVOCATES (TANGLED ROPE) \u2014 Labor organizing groups recognize both coordination benefit (efficiency gains) and extraction (job displacement, skill obsolescence, wage suppression). Organized power (unions, advocacy coalitions) provides constrained exit options: collective bargaining, political mobilization. But coordination asymmetry is real \u2014 benefits accrue to capital, costs to labor. Requires active enforcement of worker protections."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The AI Company",
+      "comment": "PERSPECTIVE 4: AI COMPANIES (ROPE) \u2014 Primary beneficiaries experiencing the constraint as pure coordination: aggregating data sources, scaling models, capturing value. Institutional power and arbitrage options (can source data globally, can relocate operations, can set licensing terms) mean they experience low effective extraction. The constraint solves their core problem: scaling training data at low cost. Net beneficiary position."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The End-User Beneficiary",
+      "comment": "PERSPECTIVE 5: END-USERS & DOWNSTREAM APPLICATIONS (ROPE) \u2014 Benefit from more capable models trained on broad datasets without direct coordination costs. Mobile exit options (can choose which AI services to use, can build alternatives) but currently enjoying significant consumer surplus from free or low-cost AI tools. Experiences the constraint as coordination mechanism enabling value delivery."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Intellectual Property Regime",
+      "comment": "PERSPECTIVE 6: COPYRIGHT & IP INSTITUTIONS (PITON) \u2014 The legal regime governing training data licensing has substantially atrophied. Fair use doctrine (original function: enable transformative use) now largely enables uncompensated data extraction. DMCA takedown mechanisms (function: copyright protection) rarely enforce data removal from training pipelines. The IP framework persists through institutional inertia (courts, lawmakers) but has lost functional capacity to regulate training data flows. High theater: enforcement actions and policy discussions create appearance of governance without effective mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational scope, the constraint exhibits genuine coordination (aggregating global knowledge into capable models) that produces widespread value. But coordination is structurally asymmetric: creators bear cost (labor extraction, attribution loss), developers and users capture benefit (capability, economic value). Active enforcement asymmetry (data scrapers move faster than legal remedies) perpetuates extraction. Mandatrophy requires recognizing both genuine coordination function and genuine extraction mechanism."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fair_use_scope_ambiguity",
+      "question": "Does training on unlicensed data constitute transformative fair use or derivative infringement?",
+      "resolution_mechanism": "Test case law progression in major jurisdictions; correlation between legal outcomes and computational transformation metrics (token overlap, attribution precision); analysis of whether models memorize vs. transform training data",
+      "impact": "If fair use applies: constraint is coordination (Rope) with residual extraction. If infringement applies: constraint is extraction (Snare/Tangled Rope) requiring compensation mechanisms. Classification shifts significantly based on legal resolution.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Fair use status of model training on unlicensed data"
+    },
+    {
+      "id": "model_capability_attribution",
+      "question": "What fraction of model performance improvement comes from training data scale vs. algorithmic innovation?",
+      "resolution_mechanism": "Ablation studies comparing models trained on identical algorithms with varying data quantity and diversity; analysis of performance gains from scale vs. architecture changes; measurement of data attribution per test benchmark",
+      "impact": "If data dominates (>70%): extraction framing strengthens \u2014 data creators should capture majority of value. If algorithms dominate (>60%): coordination framing strengthens \u2014 developer innovation deserves primary share. If mixed: both perspectives have empirical support.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative contribution of training data vs. algorithmic innovation to model performance"
+    },
+    {
+      "id": "worker_displacement_mechanism",
+      "question": "Is job displacement primarily from task automation or from devaluation of human-created training data?",
+      "resolution_mechanism": "Longitudinal analysis of wage/employment trends in writing, art, music, code; correlation with AI model capabilities in each domain; survey data on employment impact attribution; measurement of output devaluation rates in creator markets",
+      "impact": "If displacement mechanism is automation: technological substitution (structural). If devaluation mechanism is data reuse: extraction mechanism (policy-addressable). Different mechanisms suggest different remedies.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether worker displacement is from automation or data value extraction"
+    },
+    {
+      "id": "epistemic_commons_degradation",
+      "question": "Does AI training on internet data degrade the epistemic commons through feedback loops (AI outputs train next models) or preserve it through amplification?",
+      "resolution_mechanism": "Longitudinal study of information diversity metrics on the internet; measurement of AI-generated content prevalence in training datasets over time; analysis of feedback loop stability (does epistemic quality degrade monotonically or oscillate); comparison with pre-AI baseline information diversity",
+      "impact": "If degradation occurs: epistemic commons is genuine victim, suppression is structural (victims cannot exit the information environment). If amplification occurs: constraint provides public good despite extraction. Classification of epistemic commons as victim vs. neutral beneficiary shifts.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether training data feedback loops degrade or preserve epistemic commons"
+    },
+    {
+      "id": "global_data_sovereignty_asymmetry",
+      "question": "Does asymmetric access to training data (Global North AI companies accessing Global South web content) constitute structural extraction or legitimate knowledge sharing?",
+      "resolution_mechanism": "Analysis of data source geographic distribution vs. model capability distribution; measurement of economic value capture by geography; comparison with historical knowledge extraction patterns (colonialism, IP regimes); interview analysis of researcher agency in data contribution decisions",
+      "impact": "If structural extraction: constraint is neo-colonial (Snare from Global South perspective, Rope from Global North perspective). If knowledge sharing: constraint is cooperative (Rope globally). Geography-dependent classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether asymmetric training data access constitutes global extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "The AI model training data asymmetry represents a structural extraction mechanism where the creators of training data (writers, artists, photographers, journalists, code contributors) surrender intellectual property and commercial rights to AI developers through terms of service, web scraping, and regulatory ambiguity, while AI companies capture disproportionate economic value from models trained on this data. The constraint exhibits both genuine coordination (aggregating diverse knowledge enables more capable models that benefit users globally) and genuine extraction (creators bear costs without compensation while developers and users capture benefits). Extractiveness has increased from 0.35 to 0.62 over the interval as models became more valuable and training on unlicensed data normalized. Theater ratio (0.48) reflects mixed governance: some real enforcement mechanisms exist (lawsuits, licensing negotiations, copyright claims) but are consistently outpaced by technical capability to scrape, fine-tune, and redistribute models. The constraint is a tangled rope because it cannot be classified as pure extraction (genuine coordination function exists) or pure coordination (genuine asymmetric extraction exists). Active enforcement is required to balance the asymmetry.",
+    "key_agents": [
+      "Data Creators (powerless/trapped): Writers, artists, photographers whose copyrighted work trains models without attribution or compensation. No exit options. Primary victims.",
+      "AI Companies (institutional/arbitrage): OpenAI, Anthropic, Meta, Google capturing economic value from trained models. Primary beneficiaries with institutional power and global arbitrage options.",
+      "Content Industries (moderate/constrained): Publishers, studios, music labels with some power to negotiate licensing and pursue litigation. Secondary victims with organized but constrained exit options.",
+      "Displaced Workers (organized/constrained): Labor advocates, unions representing creators and workers whose skills are devalued or jobs automated. Organized agents with constrained exit through collective action.",
+      "End Users (powerful/mobile): Consumers and downstream applications benefiting from capable models at low cost. Beneficiaries with exit options (choice of services) but currently enjoying consumer surplus.",
+      "Intellectual Property Institutions (institutional/arbitrage): Courts, legislatures, copyright offices nominally governing data licensing. Degraded function (piton perspective) \u2014 persist through inertia without effective capacity.",
+      "Analytical Observer (analytical/analytical): Civilizational perspective recognizing both coordination function and extraction mechanism simultaneously."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. AI companies extract significant value from unlicensed training data \u2014 economic value of models trained on this data likely exceeds compensation paid to creators by orders of magnitude. However, genuine coordination value exists (models enable capabilities that would not emerge from isolated individual datasets). The 0.58 value reflects that extraction is substantial but not maximal \u2014 some legitimate developer value (algorithmic innovation, infrastructure, compute) justifies some asymmetry. The rising trajectory (0.35 \u2192 0.62) shows that as model value increases and licensing remains ambiguous, effective extraction grows. Suppression (0.65): High. Barriers to creator exit and negotiation include: (1) Terms of service that make opt-out unilateral for companies, not creators. (2) Information asymmetry \u2014 most creators don't know their data was used. (3) Technical barriers \u2014 once training begins, data removal is difficult/impossible. (4) Regulatory gaps \u2014 fair use doctrine provides no clear protections for creators. (5) Power asymmetry \u2014 individual creators cannot negotiate with companies; collective action is nascent. Theater ratio (0.48): Moderate. Some genuine governance mechanisms exist (copyright lawsuits, licensing negotiations, policy discussions) but are consistently outpaced by technical capability. The appearance of enforcement (high-profile lawsuits, policy proposals) exceeds the functional capacity to regulate. Theater is lower than in pure pitons because enforcement is real, not purely theatrical, but consistent asymmetry in pacing (law moves slower than technology) produces theater effect.",
+    "directionality_logic": "Directionality values (d) are derived from each agent's structural position: Who benefits? Who bears costs? What exit options do they have? Data creators are victims (high d) with trapped exit options (cannot refuse participation once online) \u2192 highest experienced extraction. AI companies are beneficiaries (low d) with arbitrage exit options \u2192 low/negative experienced extraction (they experience this as pure coordination). Content industries are mixed victims with constrained exit (can negotiate but at cost) \u2192 moderate d. Organized workers have exit options through collective action (constrained, not trapped) \u2192 lower d than individual creators. End users are beneficiaries with mobile exit \u2192 low d. The analytical observer with analytical exit sees the full structure (medium d \u2248 0.72, produces poweful f(d) modifier). Suppression scaling is NOT applied to the directionality formula \u2014 suppression is structural and remains 0.65 regardless of perspective. Effective extractiveness chi = 0.58 \u00d7 f(d) \u00d7 \u03c3(global=1.2) produces different chi values for each agent based on their f(d), but suppression provides the baseline coercive cost that all agents navigate.",
+    "perspectival_gap": "The foundational gap is between beneficiaries and victims. AI companies (institutional/arbitrage) see a coordination mechanism (Rope) \u2014 they are solving the legitimate problem of scaling training data globally. End users see coordination (Rope) \u2014 they benefit from capable models. Data creators (powerless/trapped) see pure extraction (Snare) \u2014 they cannot exit, receive no compensation, cannot learn how their data was used. Content industries (moderate/constrained) see mixed extraction with coordination (Tangled Rope) \u2014 they benefit from broader distribution but bear real costs from data devaluation. Workers (organized/constrained) see mixed extraction (Tangled Rope) \u2014 efficiency gains alongside job displacement risk. The piton perspective on IP institutions reveals that the constraint persists through institutional inertia: copyright mechanisms that were designed to protect creators now function to protect AI developers (fair use doctrine), and enforcement mechanisms are too slow to regulate the pace of AI capability growth. The analytical observer sees all these perspectives simultaneously and recognizes that the constraint is genuinely both coordination and extraction \u2014 not a disagreement about facts, but a structural asymmetry that makes the same mechanism appear beneficial from one position and extractive from another.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint exhibits genuine coordination (aggregating diverse training data enables models with capabilities that wouldn't emerge from isolated datasets) and genuine extraction (creators bear costs, developers capture disproportionate benefits, suppression prevents creator exit and negotiation). The classification as Tangled Rope resolves the mandatrophy by recognizing that both functions are structurally necessary. The coordination function is not a cover story for extraction \u2014 removing the constraint would reduce model capability. The extraction is not a side effect of coordination \u2014 it persists because of active enforcement asymmetry (data scrapers move faster than legal remedies) and beneficiary incentive (companies benefit from low-cost data). Neither function can be eliminated without restructuring the constraint entirely. The Tangled Rope classification stands because: (1) Beneficiaries declared (AI companies, end users) with real coordination benefit. (2) Victims declared (data creators, displaced workers) with real extraction cost. (3) Active enforcement required (data licensing, copyright protection, labor standards) to balance asymmetry. If extractiveness exceeded 0.70, additional mandatrophy resolution (separation into extraction-only and coordination-only mechanisms) would be required. At 0.58, the tangled rope classification is stable \u2014 the constraint is genuinely hybrid, not misclassified coordination or disguised extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "copyright_fair_use_doctrine",
+      "labor_market_skill_devaluation",
+      "content_creator_licensing_markets",
+      "epistemically_reflective_ai_training"
+    ],
+    "dual_formulation_note": "Training data asymmetry decomposes into distinct constraints: (1) COPYRIGHT INFRINGEMENT vs FAIR USE TRANSFORMATION (\u03b5\u22480.42, contested, legal ambiguity). (2) LABOR MARKET DEVALUATION (\u03b5\u22480.65, clear extraction, skill obsolescence). (3) CONTENT LICENSING (\u03b5\u22480.48, mixed coordination and extraction, bilateral negotiation). (4) EPISTEMIC COMMONS DEGRADATION (\u03b5\u2248uncertain, feedback loop effects). This story focuses on the asymmetry mechanism that connects these; see linked stories for domain-specific analyses."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

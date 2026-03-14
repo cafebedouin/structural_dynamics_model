@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "semiconductor_supply_chain_consolidation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "semicon"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.68,
+    "theater_ratio": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "Semiconductor Supply Chain Consolidation",
+    "topic_domain": "industrial/economic/geopolitical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "advanced_node_manufacturers",
+      "integrated_device_makers"
+    ],
+    "victims": [
+      "specialty_semiconductor_firms",
+      "fabless_design_houses",
+      "developing_nation_manufacturers",
+      "supply_chain_competition"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Specialty Semiconductor Firm",
+      "comment": "PERSPECTIVE 1: SPECIALTY SEMICONDUCTOR FIRM (SNARE) \u2014 Small independent chipmakers cannot exit consolidated supply chains. Material barriers: high capital requirements for equipment, inability to source rare materials, dependence on consolidated foundries. No alternative procurement pathways. Bears full extraction cost through supplier lock-in and price discrimination. Zero degrees of freedom."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Developing Nation Manufacturer",
+      "comment": "PERSPECTIVE 2: DEVELOPING NATION MANUFACTURER (SNARE) \u2014 Structurally locked into consolidated chain as lower-tier producer. Cannot access advanced node technology without consolidated vendor permission. Capital barriers to independent foundry. Geopolitical lock-in (export controls, technology transfer restrictions). Faces maximum extraction through pricing and technology withholding."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Fabless Design House",
+      "comment": "PERSPECTIVE 3: FABLESS DESIGN HOUSE (TANGLED ROPE) \u2014 Medium-sized design firms experience genuine coordination benefit (access to advanced nodes, managed supply) alongside asymmetric extraction (high foundry fees, capacity allocation priority favoring large customers, technology access restrictions). Can theoretically exit through alternative foundries but face significant switching costs and reduced advanced-node access. Mixed experience: some agency, some extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Advanced Node Manufacturer",
+      "comment": "PERSPECTIVE 4: ADVANCED NODE MANUFACTURER (ROPE) \u2014 Benefits from supply chain consolidation. Experiences constraint as pure coordination: standardization enables predictable demand, long-term contracts, and capital planning certainty. Can arbitrage between suppliers and customers. Captures significant economic rent but also genuinely solves coordination problem of matching rare materials to few capable fabs. Net beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Diversification Initiative (Government/Industry Coalition)",
+      "comment": "PERSPECTIVE 5: DIVERSIFICATION INITIATIVE (SCAFFOLD) \u2014 Organized effort by governments and industry to build alternative capacity (CHIPS Act, European Chips Act, Taiwan subsidies). Sees consolidation as temporary coordination failure with sunset. Building parallel foundry capacity in allied nations, investing in mature-node alternatives, developing supply diversification protocols. High suppression tolerance acceptable only if it declines as alternative capacity comes online. Estimated sunset: 10-15 years as geographically dispersed capacity becomes available."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "label": "The Integrated Device Maker (Identity-Locked)",
+      "comment": "PERSPECTIVE 6: INTEGRATED DEVICE MAKER / IDENTITY-LOCKED (TANGLED ROPE) \u2014 Large corporations (Samsung, Intel, TSMC) benefit from consolidated supply position and simultaneously depend on it for corporate identity and market strategy. Structurally mobile (could theoretically build redundant supply chains or source from alternatives) but identity-fused with consolidated-supply dominance model. Internal pressure to maintain exclusivity and resist diversification. This perspective's identity lock reveals institutional capture: the company has internalized the constraint's framing as 'competitive necessity' rather than contingent institutional arrangement."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational/global scope, the consolidation constraint is a pure extraction mechanism with suppression through geopolitical control, capital barriers, technology gatekeeping, and lock-in. No coordination benefit emerges at global scale \u2014 the constraint optimizes for beneficiary profit, not system-wide semiconductor production efficiency. The supposed 'coordination' is asymmetric: benefits concentrate at the top; suppression distributes downward. The canonical analytical perspective sees this as snare with high \u03c7."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_vs_extraction_boundary",
+      "question": "Does advanced node consolidation genuinely solve a coordination problem or merely create extraction opportunity by concentrating scarce capacity?",
+      "resolution_mechanism": "Counterfactual analysis: compare costs of decentralized mature-node production + modest advanced-node capacity vs current consolidated model. If decentralized model's total social cost is lower, the 'coordination' framing is cover story for extraction.",
+      "impact": "If coordination genuine: Rope/Tangled Rope classification strengthened. If extraction cover: Snare classification confirmed. Directional impact on policy response (market vs regulation).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether consolidation solves coordination or enables extraction"
+    },
+    {
+      "id": "geopolitical_lock_in_mechanism",
+      "question": "To what extent is suppression structural (capital/technology barriers) vs geopolitical (export controls, sanctioning, technology transfer restrictions)?",
+      "resolution_mechanism": "Decompose suppression into component mechanisms. Measure which actors face export-control-based lock-in vs capital-based barriers. Compare exit difficulty in geopolitically allied vs non-allied nations.",
+      "impact": "If primarily capital barriers: market-based solutions (capital availability, technology transfer) could reduce suppression. If geopolitical: structural decoupling and multi-polar supply chains are required. Shapes whether problem is economic or strategic.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Extent of geopolitical vs capital-based suppression mechanisms"
+    },
+    {
+      "id": "mature_node_sufficiency_threshold",
+      "question": "What fraction of global semiconductor demand can be met by mature-node capacity in a diversified supply chain?",
+      "resolution_mechanism": "Computational demand analysis by application class (automotive, IoT, legacy systems, advanced computing). Map to technical requirements (nm node required). Quantify unmet demand if concentrated capacity shifted to distributed capacity.",
+      "impact": "If >85% of demand is mature-node serviceable: diversification is economically sufficient and consolidation is pure rent-seeking. If <70%: genuine bottleneck exists for advanced computing. Determines whether diversification sunsets the constraint or merely shifts extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fraction of semiconductor demand serviceable by mature nodes"
+    },
+    {
+      "id": "identity_lock_permeability",
+      "question": "Can incumbent manufacturers genuinely transition toward supply chain diversification and redundancy, or is their corporate identity fused with consolidation dominance?",
+      "resolution_mechanism": "Longitudinal analysis of capital allocation: does investment flow toward diversification or toward deepening consolidation moats? Interview executives on strategic rationale for supply decisions. Test whether diversification proposals encounter institutional resistance.",
+      "impact": "If manufacturers can credibly commit to diversification: identity lock dissolves and policy incentives can align interests. If identity-locked: policy must work around institutional resistance through regulatory mandate rather than market incentives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether incumbent manufacturers can overcome identity lock toward consolidation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The semiconductor supply chain has undergone radical consolidation over the past 20 years, concentrating advanced-node manufacturing capacity in a handful of firms (TSMC, Samsung, Intel) and geographic regions (Taiwan, South Korea, US). This consolidation is justified as necessary for coordinating scarce materials, manufacturing expertise, and capital requirements across global demand. However, the structure functions as a snare for most supply-chain participants: specialty semiconductor firms, developing-nation manufacturers, and fabless design houses face material barriers to exit, supplier lock-in through long-term contracts, and technology access restrictions. The constraint exhibits mixed classifications from different perspectives: pure extraction for trapped participants, genuine coordination for beneficiaries, temporary coordination failure for organized diversification initiatives, and pure extraction from global analytical scope. The increase in extractiveness over the 20-year interval reflects deepening consolidation and tightening supply (especially post-2020 pandemic, post-2022 geopolitical fragmentation). The theater ratio increase reflects growing performative framing of consolidation as 'inevitable' or 'necessary to maintain innovation' despite evidence that mature-node capacity could serve the majority of applications in decentralized networks.",
+    "key_agents": [
+      "Specialty Semiconductor Firms: Primary victim (powerless/trapped) \u2014 small independent chipmakers locked into consolidated supply chains with no alternative procurement pathways",
+      "Developing Nation Manufacturers: Primary victim (powerless/trapped) \u2014 structurally locked as lower-tier producers, unable to access advanced nodes or capital for independent foundries",
+      "Fabless Design Houses: Secondary victim (moderate/constrained) \u2014 medium-sized firms experience both coordination benefits and asymmetric extraction through foundry fees and capacity allocation",
+      "Advanced Node Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 TSMC, Samsung, Intel capture significant economic rent and maintain dominance through technology and capital barriers",
+      "Integrated Device Makers: Beneficiary with identity lock (institutional/identity_locked) \u2014 large corporations like Intel, Samsung internally capture supply-chain value; resistant to diversification despite structural mobility",
+      "Diversification Initiative: Organized response (organized/constrained) \u2014 government and industry-led efforts building alternative capacity; see consolidation as temporary coordination failure with sunset pathway"
+    ],
+    "logic_rationale": "Extractiveness (0.62): High. The constraint has shifted from coordination problem (managing scarce materials to few capable producers circa 2000) to extraction mechanism (consolidation creates artificial scarcity to maintain pricing power and market control). The 20-year trajectory shows rising extractiveness: from 0.35 (genuine coordination) to 0.62 (pure extraction). This reflects the phase shift from 'coordination of materials and expertise' to 'consolidation-based rent extraction.' Suppression (0.68): High. Trapped participants face insurmountable barriers: capital requirements for foundry construction (>$10B), specialized equipment with multi-year procurement, proprietary manufacturing processes, export controls on advanced equipment, geopolitical restrictions on technology transfer, and lock-in through long-term exclusive contracts. No legitimate exit pathway exists for developing-nation manufacturers or specialty firms. Theater ratio (0.45): Moderate. The framing of consolidation as 'inevitable for innovation' or 'necessary for global competition' is performative but not complete cover. Real technical and capital barriers exist, but the barrier heights are artificially maintained through exclusive licensing, equipment distribution restrictions, and political alliance (CHIPS Act investment flows to allied nations, not globally distributed). The theater has increased over time as the genuinely coordination-like aspects have attenuated.",
+    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon (consolidated supply chain) appears as rope to beneficiaries, snare to victims, and scaffold to organized counter-movements. The gap reveals that the 'coordination' framing is a beneficiary narrative. Actual coordination benefits exist but are asymmetric: consolidated capacity did solve real technical problems in the 1990s-2000s (coordinating rare materials, manufacturing expertise, capital). But these coordination functions have been abstracted and replaced with rent extraction. The theater ratio increase reflects the shift: early consolidation was justified by genuine technical necessity; current consolidation is justified by 'competitive necessity' and 'geopolitical reality,' which are performative framings masking rent-seeking. The identity-lock perspective reveals institutional capture: manufacturers have internalized the consolidation model as their identity, making diversification psychologically difficult even when structurally mobile.",
+    "directionality_logic": "Each perspective's experienced extractiveness (\u03c7) is computed from structural position (d) mediated through the sigmoid. Trapped victims apply maximum coercive pressure (d \u2248 0.95, f(d) \u2248 1.42, \u03c3(global)=1.2) \u2192 \u03c7 \u2248 0.62 \u00d7 1.42 \u00d7 1.2 \u2248 1.05 (capped). Constrained moderate actors apply moderate pressure (d \u2248 0.55, f(d) \u2248 0.75, \u03c3(global)=1.2) \u2192 \u03c7 \u2248 0.62 \u00d7 0.75 \u00d7 1.2 \u2248 0.56. Beneficiary arbitrage actors apply negative pressure (d \u2248 0.15, f(d) \u2248 -0.01, \u03c3(global)=1.2) \u2192 \u03c7 \u2248 0.62 \u00d7 (-0.01) \u00d7 1.2 \u2248 -0.01 (effectively zero). The analytic observer applies observer pressure (d \u2248 0.72, f(d) \u2248 1.15, \u03c3(global)=1.2) \u2192 \u03c7 \u2248 0.62 \u00d7 1.15 \u00d7 1.2 \u2248 0.85. Suppression (0.68) is unchanged across perspectives \u2014 it represents the raw barrier height that applies uniformly to potential exitors.",
+    "mandatrophy_analysis": "The constraint avoids mandatrophy by demonstrating legitimate perspectival divergence grounded in structural position. The beneficiary (TSMC) genuinely experiences rope: consolidation solves their capital and expertise coordination problem. The victim (specialty firm) genuinely experiences snare: consolidation traps them with no exit. Neither classification is false \u2014 both are true from their respective structural positions. The mandatrophy would arise if a single perspective produced mixed classification (appearing both as snare and rope to the same observer). Instead, the six perspectives produce consistent classification within their respective (P,T,E,S) tuples, and the perspectival gap correctly identifies the constraint as extractive (the beneficiary's rope derives from extracting from the victim's snare). The identity-locked perspective reveals institutional capture without creating mandatrophy: the identity-locked actor (Intel, Samsung) classifies as tangled_rope because they genuinely benefit from and enforce the consolidation, even though they are partly captured by it."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "rare_earth_supply_dependency",
+      "advanced_node_technology_concentration",
+      "geopolitical_technology_decoupling"
+    ],
+    "dual_formulation_note": "Semiconductor supply chain consolidation is upstream of rare earth dependency and advanced node technology concentration. Each downstream constraint inherits suppression from the supply chain lock-in. The constellation represents a constraint family where material scarcity (rare earth) is amplified through consolidation (supply chain) and crystallized into geopolitical fragmentation (technology decoupling). Decomposing consolidation into its sub-mechanisms (materials, capital, expertise, geopolitics) reveals multiple \u03b5 values; the 0.62 value captures the aggregate constraint at the supply-chain integration level."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "header": {
+    "constraint_id": "renewable_grid_intermittency",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rgi"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.52,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Renewable Grid Intermittency and Grid Coordination",
+    "topic_domain": "energy/infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "renewable_energy_producers",
+      "coal_and_natural_gas_operators",
+      "grid_operators"
+    ],
+    "victims": [
+      "grid_reliability",
+      "distributed_prosumers",
+      "low_income_electricity_consumers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Grid Reliability Commons",
+      "comment": "PERSPECTIVE 1: GRID RELIABILITY (SNARE) \u2014 The abstract collective good of grid stability cannot exit the intermittency problem and bears full cost of blackout risk, frequency instability, and cascading failures. Grid reliability is powerless, trapped in the physical constraint, with no self-advocacy mechanism. Maximum experienced extraction \u2014 the commons is sacrificed to manage the coordination problem."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Low-Income Electricity Consumers",
+      "comment": "PERSPECTIVE 2: LOW-INCOME CONSUMERS (SNARE) \u2014 Trapped by infrastructure dependency and inability to self-generate or switch providers. Bear disproportionate share of grid instability costs (blackouts, voltage fluctuations damaging appliances) and ancillary service fees passed through bills. No exit capacity; extraction concentrated on powerless agents."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Distributed Prosumers and Microgrids",
+      "comment": "PERSPECTIVE 3: DISTRIBUTED PROSUMERS (TANGLED ROPE) \u2014 Constrained by technical requirements for grid interconnection, regulatory barriers, and capital costs. But also benefit from coordination mechanisms: utility interconnection enables retail electricity sales, net metering provides income, and grid access provides stability buffer. Significant extraction (curtailment requirements, grid service fees) but also genuine coordination benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Grid Operators and Transmission Companies",
+      "comment": "PERSPECTIVE 4: GRID OPERATORS (ROPE) \u2014 Institutional beneficiaries with arbitrage options (demand response contracts, frequency ancillary markets, renewable curtailment payments). Experience the constraint as a coordination problem they solve via real-time balancing, reserve margins, and dispatch algorithms. Net beneficiaries \u2014 extract rents through ancillary service pricing while solving the technical problem. Low effective extraction from their perspective because they have agency and profitable exit routes."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "Renewable Energy Producers",
+      "comment": "PERSPECTIVE 5: RENEWABLE PRODUCERS (TANGLED ROPE) \u2014 Organized collective with mobile options (geographic arbitrage via transmission corridors, subsidy/tax credit pursuit across jurisdictions, storage investment). But constrained by intermittency forecasting requirements, curtailment orders, and grid service charges. Mixed experience: coordination function (variable renewable supply is valuable) alongside asymmetric extraction (bearing real-time balancing costs)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "Natural Gas and Coal Operators",
+      "comment": "PERSPECTIVE 6: FOSSIL FUEL OPERATORS (ROPE) \u2014 Powerful institutional actors with strong arbitrage: renewable intermittency creates guaranteed demand for dispatchable backup generation. Extract rents through peaking-plant operation, capacity payments, and fast-ramping services. Experience constraint as coordination mechanism securing their market position. Effectively negative extraction from their perspective \u2014 the intermittency enriches them."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Storage and Demand Response Coalition",
+      "comment": "PERSPECTIVE 7: STORAGE/DEMAND RESPONSE (SCAFFOLD) \u2014 Organized agents (battery manufacturers, demand response aggregators, EV charging networks, industrial load flexibility) see intermittency as a temporary coordination challenge with structural sunset: battery costs are declining, EV penetration is rising, smart grid technologies are scaling, and industrial demand-side flexibility is improving. Constrained by current technology and regulatory frameworks, but with clear exit path as storage and flexibility scale. Extraction is temporary \u2014 expected to decline sharply within 10-15 years as storage dominates balancing function."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "Legacy Dispatch and Reserve Margin Protocols",
+      "comment": "PERSPECTIVE 8: LEGACY DISPATCH PROTOCOLS (PITON) \u2014 Traditional grid planning and dispatch rules (N-1 contingency analysis, fixed reserve margins, synchronous generator inertia requirements) are increasingly performative as renewable penetration rises. The protocols persist through regulatory inertia and system operator familiarity despite being neither optimally functional for renewable-heavy systems nor replaced by newer approaches. Theater ratio near 0.5 (traditional reserve calculations are becoming decoupled from actual grid stress)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Physics View)",
+      "comment": "PERSPECTIVE 9: ANALYTICAL OBSERVER / PHYSICS VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, intermittency is a structural feature of weather-dependent generation: solar output varies by cloud cover and solar angle, wind output varies by wind speed, both have diurnal/seasonal patterns. These are immutable physical constraints on the renewable energy source itself. However, the structural data shows that intermittency is NOT a mountain \u2014 it is a tangled_rope coordination problem with extractive layering. The 'inherent to renewables' framing naturalizes what is actually a contingent grid architecture and market design choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "storage_cost_trajectory_threshold",
+      "question": "At what battery cost ($/kWh) does storage-dominant balancing become economically superior to dispatchable fossil fuel backup, triggering the scaffold sunset?",
+      "resolution_mechanism": "Technology trajectory analysis; comparative levelized cost of storage vs natural gas peaking plants at 2030, 2040, 2050 time points",
+      "impact": "If storage costs fall below threshold before 2035: scaffold sunset is real and extraction timeline collapses. If not until post-2045: temporary extraction persists through mid-century as legacy dispatchable generation locks in.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Battery cost threshold for dispatchable generation replacement"
+    },
+    {
+      "id": "transmission_network_bottleneck",
+      "question": "Is renewable intermittency primarily a local balancing problem or a transmission infrastructure problem? Do high-capacity transmission corridors connecting geographically distributed renewable sites reduce intermittency sufficiently to change the constraint classification?",
+      "resolution_mechanism": "System simulation analysis: compare grid stability metrics with current transmission capacity vs. scenarios with 2x or 3x transmission capacity and geographic smoothing",
+      "impact": "If transmission-solvable: intermittency reclassifies from snare/tangled_rope to rope for most agents (coordination problem only, no extraction). If not: intermittency is irreducible, and storage becomes mandatory.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether transmission expansion can resolve intermittency"
+    },
+    {
+      "id": "dispatchable_extraction_asymmetry",
+      "question": "Are fossil fuel operators genuinely capturing rents from intermittency-driven backup demand, or are capacity payment regulations and competitive wholesale markets reducing those rents to approximate competitive levels?",
+      "resolution_mechanism": "Financial analysis of fossil fuel operator returns on capacity during high-renewable penetration periods; comparison of actual revenue streams vs. competitive margin benchmarks",
+      "impact": "If capturing significant rents: rope perspective confirmed (net beneficiaries). If rents are competed away: fossil operators are also constrained, reclassifying to constrained rather than arbitrage exit, and their perspective becomes tangled_rope rather than rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether dispatchable operators capture intermittency rents"
+    },
+    {
+      "id": "demand_response_participation_ceiling",
+      "question": "What fraction of total grid load can realistically be made flexible via demand response, dynamic pricing, and load shifting without exceeding consumer willingness-to-pay or industrial competitiveness constraints?",
+      "resolution_mechanism": "Empirical pilot program data from demand response aggregators; economic modeling of price-elasticity of demand at different end-use categories",
+      "impact": "If ceiling is high (>40% of load): demand-side flexibility + storage can largely solve intermittency, confirming scaffold sunset. If ceiling is low (<15%): demand-side flexibility is supplementary, and other solutions (storage, transmission, curtailment) are mandatory.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Realistic fraction of grid load that can become flexible"
+    },
+    {
+      "id": "cascading_failure_risk_metrics",
+      "question": "How has grid cascading failure risk (probability and impact of multi-state blackouts) actually changed as renewable penetration has increased? Is risk increasing, stable, or declining?",
+      "resolution_mechanism": "Historical grid stability data; probabilistic risk assessment of major interconnects; correlation analysis between renewable penetration and NERC/regional blackout incident frequency",
+      "impact": "If risk is rising: suppression metric may be understated, constraint may reclassify upward (higher snare proportion). If risk is stable or declining: suppression is overstated, extraction is lower, constraint reclassifies downward.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Actual cascading failure risk trend with renewable penetration"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.25
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Renewable grid intermittency creates a structural tension between the technical variability of weather-dependent generation and the requirement for real-time grid balance. This is not primarily a physics problem (renewable sources cannot be made to generate on demand) but a coordination and market design problem: how to distribute the costs of balancing variable supply across agents, which agents bear the balancing burden, and who captures the rents from providing balancing services. The constraint exhibits tangled rope structure: there is genuine coordination function (variable renewable supply is valuable for decarbonization) and asymmetric extraction (balancing costs are concentrated on powerless agents like grid operators and low-income consumers, while benefits accrue to organized actors like fossil fuel operators and renewable producers). The extractiveness trajectory (0.32 \u2192 0.58 over 15 years) reflects increasing renewable penetration and deepening imbalance between variable supply and balancing infrastructure. The theater ratio trajectory (0.22 \u2192 0.38) reflects that legacy dispatch protocols and reserve margin calculations are becoming decoupled from actual grid physics as renewable penetration exceeds the design assumptions of traditional grid planning. The constraint has a clear sunset logic: battery storage cost declines, demand-side flexibility technologies mature, and transmission capacity expands, all reducing the structural need for dispatchable fossil fuel backup. The scaffold perspective shows a path where organized agents are building alternative balancing mechanisms (distributed storage, demand response, smart grids) that will render the current intermittency constraint much less extractive within 10-20 years.",
+    "key_agents": [
+      "Grid Reliability: Primary victim (powerless/trapped) \u2014 abstract collective good bearing full cost of intermittency-driven instability; no self-advocacy mechanism",
+      "Low-Income Electricity Consumers: Primary victim (powerless/trapped) \u2014 disproportionately bear blackout costs and ancillary service fees; unable to self-generate or switch providers",
+      "Distributed Prosumers and Microgrids: Secondary victim (moderate/constrained) \u2014 face interconnection barriers and curtailment requirements; also benefit from grid coordination function",
+      "Renewable Energy Producers: Organized beneficiary (organized/mobile) \u2014 capture renewable-generated electricity sales while extracting grid balancing costs; have geographic and policy arbitrage options",
+      "Natural Gas and Coal Operators: Powerful beneficiary (powerful/arbitrage) \u2014 capture rents from guaranteed backup demand; experience intermittency as market-enriching",
+      "Grid Operators and Transmission Companies: Institutional beneficiary (institutional/arbitrage) \u2014 extract ancillary service rents while solving technical balancing problem; have strong agency",
+      "Storage and Demand Response Coalition: Organized solver (organized/constrained) \u2014 building alternative balancing mechanisms with near-term upward constraints but generational sunset trajectory",
+      "Legacy Dispatch Protocols: Institutional artifact (institutional/arbitrage) \u2014 performative regulatory framework persisting through inertia despite being sub-optimal for renewable-heavy grids"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The intermittency constraint generates real balancing costs (reserve margins, fast-ramping capacity, frequency regulation services) that are not inherent to the renewable energy source itself but to the grid architecture and market design. Fossil fuel operators capture rents from providing balancing services (capacity payments, energy market scarcity pricing during high-demand/low-wind periods), while the costs of balancing variability are spread across powerless agents (grid reliability, low-income consumers, distributed prosumers). The extractiveness is not as extreme as a pure snare (0.72+) because the coordination function is genuine \u2014 renewables are valuable for decarbonization \u2014 and because organized actors (renewable producers, storage developers) are building alternative solutions. The trajectory from 0.32 to 0.58 reflects deepening imbalance as renewable penetration increases without commensurate expansion of balancing infrastructure, creating temporary extraction layering. Suppression (0.52): Moderate-high. Barriers to exit from the grid dependency include physical infrastructure lock-in, regulatory interconnection requirements, and capital cost barriers to distributed generation. But suppression is not extreme (\u22650.60) because some exit options exist: distributed prosumers can partially self-generate, demand response can reduce peak load exposure, and transmission can partially smooth geographic variability. Theater ratio (0.38): Moderate-low. Legacy reserve margin calculations and dispatch protocols have some performative content (traditional N-1 contingency analysis becomes harder to apply with variable renewable supply), but the grid balancing function itself is genuine and necessary. The theater reflects outdated regulatory frameworks (capacity auction design, ancillary service definitions) that persist despite misalignment with renewable-dominant systems.",
+    "perspectival_gap": "The perspectival gap between the powerless victim (snare: 'we are trapped in blackout risk') and the fossil fuel operator (rope: 'this is a lucrative coordination problem') is acute. The beneficiary sees coordination; the victim sees extraction. The grid operator sees technical challenge (rope); the low-income consumer sees cost burden (snare). The renewable producer sees mixed opportunity (tangled rope \u2014 they capture sales but bear balancing penalties); the storage developer sees temporary challenge with sunset (scaffold \u2014 their technology will replace the old constraint). This multiperspectival structure is diagnostic: if all perspectives produced the same classification, the constraint would be misspecified. The perspectival gaps reveal the real structural tensions: powerless agents bearing costs that organized actors profit from, temporary institutional arrangements (legacy protocols) persisting alongside emerging alternatives (storage, demand response), and false naturalization of contingent constraints as immutable laws.",
+    "directionality_logic": "Directionality (d) derives from the agent's structural position relative to the extraction flow. Powerless victims (grid reliability, low-income consumers) trapped with no exit options have d \u2248 0.95 \u2192 f(d) \u2248 1.42, experiencing maximum effective extraction chi. Distributed prosumers constrained with partial exit options have d \u2248 0.65 \u2192 f(d) \u2248 1.00, experiencing moderate extraction. Renewable producers organized with geographic/policy mobility have d \u2248 0.40 \u2192 f(d) \u2248 0.40, experiencing moderate extraction despite being partial victims (they bear grid service costs). Natural gas operators with arbitrage options and beneficiary status have d \u2248 0.05 \u2192 f(d) \u2248 -0.12, experiencing negative effective extraction (the constraint enriches them). Grid operators with institutional power and arbitrage have d \u2248 0.10 \u2192 f(d) \u2248 -0.02, experiencing minimal or negative extraction. The scope modifier \u03c3(S) scales regional constraints (\u03c3=0.9) slightly less than national (\u03c3=1.0), reflecting that intermittency is partially smoothable through geographic diversification of renewable sources. At continental scope (\u03c3=1.1), intermittency extraction amplifies \u2014 larger systems have harder timing mismatches between supply and demand.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that intermittency is NOT a natural law (mountain) but a contingent coordination problem with extractive layering (tangled rope). The false summit appears when observers naturalize the constraint as 'renewables are inherently intermittent, so intermittency is immutable.' This is true as physics but false as economics: the constraint is not the intermittency of the renewable source but the choice to use grid architecture and market design that concentrates balancing costs on powerless agents. Alternative architectures (distributed storage, demand response, geographic smoothing via transmission) are technically feasible and becoming economically viable. The structure is tangled rope, not mountain: genuine coordination function (renewables are valuable) alongside asymmetric extraction (balancing costs concentrated on powerless agents). The scaffold perspective confirms the sunset: battery costs are declining exponentially, storage will become the primary balancing mechanism, and the current extraction mechanism will collapse as alternatives scale. The piton perspective reveals that legacy protocols are becoming decoupled from actual grid physics, indicating institutional inertia rather than functional necessity. The snare perspective from powerless agents is the most diagnostically important: it shows who actually bears the costs and has no voice in the constraint design."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "fossil_fuel_lock_in",
+      "grid_capacity_investment_cycles",
+      "electricity_affordability_regressive_impact"
+    ],
+    "dual_formulation_note": "Renewable grid intermittency is a cluster constraint with multiple decomposable sub-constraints: (1) solar/wind variability (physics-level, \u03b5 \u2248 0.08, mountain) vs. (2) grid balancing market design (institutional, \u03b5 \u2248 0.58, tangled_rope) vs. (3) fossil fuel backup economics (rent extraction, \u03b5 \u2248 0.45, rope from beneficiary perspective). This story focuses on the market design and extraction mechanism (#2). Upstream physics constraint is inert; downstream impacts on fossil lock-in and consumer affordability are separate stories."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

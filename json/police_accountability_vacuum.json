@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "police_accountability_vacuum",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "policeacct"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Police Accountability Vacuum",
+    "topic_domain": "governance/law_enforcement/criminal_justice",
+    "requires_active_enforcement": true,
+    "beneficiaries": [],
+    "victims": [
+      "civilian_targets_of_abuse",
+      "community_trust",
+      "rule_of_law_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Abuse Victim",
+      "comment": "PERSPECTIVE 1: ABUSE VICTIM (SNARE) \u2014 Civilian target of police misconduct has no structural exit. Cannot leave the jurisdiction without abandoning livelihood/family. Reporting mechanisms are controlled by the enforcement apparatus itself. Face retaliation risk, credibility deficits in court, and minimal remedy. Maximum experienced extraction \u2014 trapped by jurisdiction and by control of accountability mechanisms."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Community Trust (Structural Victim)",
+      "comment": "PERSPECTIVE 2: COMMUNITY TRUST (SNARE, GENERATIONAL) \u2014 The civic commitment to rule of law and police legitimacy is progressively degraded by unaccountable misconduct. Communities cannot exit the relationship with law enforcement. The trust relationship deteriorates across generations \u2014 generational time horizon reveals the extraction of institutional legitimacy itself. Suppression maintained through reframing accountability gaps as individual officer failures rather than structural constraints."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Law Enforcement Administration",
+      "comment": "PERSPECTIVE 3: LAW ENFORCEMENT ADMINISTRATION (ROPE) \u2014 Experiences the constraint as coordination mechanism for internal order and operational autonomy. Accountability vacuum enables rapid decision-making, officer morale maintenance, and protection of institutional reputation. Sees the constraint as solving a coordination problem: how to maintain unit cohesion and public confidence while preserving officer discretion. Net beneficiary through arbitrage \u2014 can exit regulatory capture by reforming, but opts not to."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Police Reform Advocates",
+      "comment": "PERSPECTIVE 4: POLICE REFORM ADVOCATES (TANGLED ROPE) \u2014 Constrained by political power of law enforcement unions, media framing, and fear of 'soft on crime' backlash. Also benefit from accountability mechanisms as a framework for career advancement (civil rights law, policy work, advocacy platforms). Mixed experience: genuine coordination function (fixing real problems) coupled with asymmetric extraction from police institutions that resist reform while activists bear reputational cost."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Civilian Oversight Bodies",
+      "comment": "PERSPECTIVE 5: CIVILIAN OVERSIGHT BODIES (PITON) \u2014 Nominally independent review boards, internal affairs divisions, and civilian complaint mechanisms exist but have degraded function. Review processes are performative: limited investigative authority, access to records controlled by police, no power to compel discipline, and minimal teeth in recommended penalties. Theater ratio (0.65) reflects that accountability theater persists through institutional inertia rather than functional capacity. The constraint maintains itself through the existence of oversight structures that generate appearance of accountability without structural power."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (False Summit)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN, FALSE SUMMIT) \u2014 Risk of naturalizing the accountability vacuum as inherent to law enforcement: 'Police need operational discretion.' 'Accountability mechanisms always lag enforcement action.' 'Institutional loyalty is necessary for unit cohesion.' These framings appear as natural constraints on police governance but are actually contingent institutional choices. The mountain classification here is a false summit \u2014 the engine's structural analysis reveals this perspective naturalizes extractive arrangements."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "qualified_immunity_necessity",
+      "question": "Does qualified immunity represent a structurally necessary protection for discretionary law enforcement or a mechanism enabling extraction through suppression of accountability?",
+      "resolution_mechanism": "Comparative analysis of jurisdictions with vs without qualified immunity analogs; empirical correlation between immunity doctrine and misconduct rates; cross-national data on officer safety vs accountability",
+      "impact": "If necessary: extractiveness drops to 0.35, classification becomes Tangled Rope. If extraction mechanism: extractiveness confirmed at 0.68, Snare classification holds. Impact determines whether the constraint is fundamental to law enforcement or contingent to U.S. legal architecture.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether qualified immunity is structurally necessary or extractively enabling"
+    },
+    {
+      "id": "union_power_countervailing",
+      "question": "Does police union power represent a countervailing force against civilian authority erosion or a structural mechanism protecting the accountability vacuum?",
+      "resolution_mechanism": "Analysis of disciplinary outcomes in union vs non-union jurisdictions; cases where union grievance procedures reversed sustained misconduct findings; comparative institutional analysis of union veto power over reform",
+      "impact": "If countervailing: moderate beneficiary benefit (unions provide job security for falsely accused officers), suppression moderates. If protective mechanism: suppression and extraction are reinforced by union power. Determines whether union participation in reform is viable or contradictory.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether police unions counteract or enable accountability vacuum"
+    },
+    {
+      "id": "community_exit_capacity",
+      "question": "Can communities with high police misconduct rates actually exit or form alternative enforcement mechanisms, or is the exit capacity sufficiently constrained that trapped status is appropriate for generational time horizons?",
+      "resolution_mechanism": "Case studies of communities attempting alternative security models (community patrols, unarmed responders, mutual aid); analysis of jurisdictional mobility barriers (housing markets, family ties, economic opportunity); cost-benefit analysis of relocation vs enduring misconduct",
+      "impact": "If exit is possible: exit_options for community may upgrade from trapped to constrained, altering classification and experienced extraction. If exit is illusory: trapped status confirmed, snare classification solidified across generational horizon.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether communities can exit accountability vacuum or are structurally trapped"
+    },
+    {
+      "id": "reform_authenticity_erosion",
+      "question": "Do police reform measures actually reduce misconduct and accountability gaps or do they primarily function as theater that sustains the vacuum by providing appearance of change?",
+      "resolution_mechanism": "Longitudinal analysis of misconduct rates before/after major reform initiatives; comparison of rhetoric vs outcomes in use-of-force policy, de-escalation training, and discipline procedures; measurement of civilian complaint resolution rates and remedy adequacy",
+      "impact": "If reforms are authentic: theater_ratio should decline to 0.35 over time, constraint degrades toward Rope or Scaffold. If reforms are theater: theater_ratio increases or plateaus, constraint hardens into Piton or Snare. Determines whether reform movements are structural or captured.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether police reforms reduce misconduct or constitute institutional theater"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The police accountability vacuum represents a structural constraint where mechanisms ostensibly designed to address misconduct\u2014internal affairs, civilian complaint review boards, qualified immunity doctrine, union grievance procedures\u2014function primarily to suppress alternatives to police authority rather than to coordinate legitimate enforcement with civilian oversight. The constraint exhibits the full DR typology across observer positions: abuse victims experience pure extraction (Snare); police administration experiences coordination solving (Rope); reform advocates experience mixed coordination-extraction (Tangled Rope); oversight bodies exhibit degraded function (Piton); and the analytical observer risks naturalizing the vacancy as inherent to policing (false Mountain). Base extractiveness has risen from 0.45 to 0.68 across the interval, while theater ratio has increased from 0.35 to 0.65, indicating that reform gestures are accumulating as performative overlay without corresponding reduction in the accountability gap itself\u2014a classic Goodhart pattern where the metric (number of oversight bodies, complaint procedures, reform initiatives) substitutes for the actual function (holding misconduct to account). Suppression (0.72) reflects both material barriers to remedy (qualified immunity, union protections, discovery limitations) and epistemic suppression (reframing systemic problems as isolated officer failures, delegitimizing victims through credibility deficits, controlling the narrative through police media relations).",
+    "key_agents": [
+      "Civilian Targets of Police Abuse: Primary victims (powerless/trapped/national scope) \u2014 face retaliation risk, credibility deficits, civil remedies that are inadequate, and jurisdictional confinement. Trapped at multiple levels: cannot safely report, cannot exit jurisdiction, cannot obtain meaningful remedy.",
+      "Community Trust (Civic Legitimacy): Structural victim (powerless/trapped/generational) \u2014 the legitimacy of law enforcement as a civic institution erodes across generations when misconduct is unaccountable. Communities cannot exit the enforcement relationship. Progressive degradation of rule-of-law perception represents extraction of institutional trust itself.",
+      "Law Enforcement Administration: Net beneficiary (institutional/arbitrage/national) \u2014 accountability vacuum enables operational autonomy, officer protection, institutional reputation management, and discretionary resource allocation. Can exit by reforming but opts to maintain the constraint because it serves internal coordination and external protection simultaneously.",
+      "Police Union Leadership: Secondary beneficiary (organized/arbitrage/national) \u2014 grievance procedures that overturn misconduct findings, contract protections that shield officers from discipline, collective power to resist external accountability. Uses accountability mechanisms as adversarial process rather than truth-seeking.",
+      "Police Reform Advocates: Secondary victim/constrained beneficiary (moderate/constrained/regional) \u2014 faces political opposition, media framing, union resistance, and fear of 'soft on crime' backlash. Also benefits from reform as career/advocacy platform. Mixed extraction: genuine coordination function (identifying real problems) coupled with asymmetric extraction from institutional resistance.",
+      "Civilian Oversight Bodies: Institutional actor exhibiting piton dynamics (institutional/arbitrage/national) \u2014 exist as theater: review procedures, complaint mechanisms, investigation protocols that generate appearance of accountability without structural power. Limited authority, access to records controlled by police, no enforcement mechanism.",
+      "Analytical Observer: Civilizational perspective at risk of false summit (analytical/analytical/universal) \u2014 naturalizes accountability vacuum as necessary to police function rather than recognizing it as contingent institutional choice."
+    ],
+    "logic_rationale": "Base extractiveness (0.68): High, reflecting that the accountability vacuum enables systematic extraction from abuse victims and communities through multiple mechanisms: (1) immunity from civil liability (qualified immunity), (2) union protection from discipline, (3) control of investigation process by police institutions, (4) retaliation risk, (5) credibility deficits assigned to civilian complainants. The rise from 0.45 to 0.68 across the interval reflects not the closure of the vacuum but its deepening through accumulating institutional protections and narrative capture. Suppression (0.72): High. Multiple mechanisms suppress accountability: qualified immunity doctrine, union grievance procedures that reverse findings, limited investigative authority of civilian boards, discovery limitations, media control, retaliation risk, and epistemic suppression (reframing systemic problems as isolated officer misconduct). Theater ratio (0.65): Substantial and rising. The interval shows accumulating reform measures\u2014new oversight boards, de-escalation training, use-of-force policies, complaint procedures\u2014that generate appearance of accountability while misconduct rates remain stable or rising. This is diagnostic of theater accumulation: institutional theater substitutes for actual accountability, creating Goodhart drift where the metric (number of policies) diverges from the outcome (actual reduction of misconduct and victim remedy).",
+    "perspectival_gap": "The constraint produces maximum perspectival divergence. Abuse victims see Snare: pure extraction with no coordination benefit and no exit. Police administration sees Rope: coordination mechanism solving legitimate problems of internal order and discretion protection. Reform advocates see Tangled Rope: genuine coordination function (identifying and addressing real misconduct) coupled with asymmetric extraction from institutional resistance. Oversight bodies exhibit Piton: degraded function, performative processes, maintained through inertia. Communities experience Snare at generational scale: the institutional legitimacy necessary for rule of law is progressively extracted through unaccountable misconduct. The analytical observer risks Mountain by naturalizing the vacancy as inherent to police authority. The perspectival gap reveals that 'accountability mechanisms' mean opposite things to different observers: to victims, they mean suppression (controlled processes that never produce remedy); to police, they mean coordination (structures that enable discretion); to reform advocates, they mean genuine but asymmetric function (real coordination coupled with real resistance).",
+    "directionality_logic": "Directionality derives from structural position relative to the extraction flow. Abuse victims are trapped at high d (~0.95): no exit options, full cost-bearing, no arbitrage available. Experienced extractiveness is maximum. Police administration is at low d (~0.10): institution controls the constraint, benefits from arbitrage (can exit by reforming but opts not to), experiences negative extractiveness (coordination benefit). Reform advocates are at moderate-high d (~0.68): constrained by institutional opposition, bear reputational cost, but also benefit from advocacy platform. Communities are at high d (~0.90) at generational horizon: cannot exit the enforcement relationship, bear costs of eroded legitimacy across generations. The piton perspective (institutional/arbitrage) derives low d (~0.15) for oversight bodies that nominally benefit from the appearance of oversight authority, though their actual function is degraded. The mountain perspective (analytical/analytical) lacks meaningful d because it naturalizes the constraint, treating it as a feature of policing rather than a structural extraction mechanism\u2014this is precisely where false summit detection fires.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint produces structural extraction that persists despite reform theater accumulation. The classical mandatrophy error would be: 'We have civilian oversight boards and complaint procedures\u2014therefore accountability is functioning\u2014therefore the constraint is Rope (coordination), not Snare (extraction).' The false resolution naturalizes institutional theater as institutional function. The actual mandatrophy resolution shows that: (1) the rising theater_ratio (0.35 \u2192 0.65) indicates metric substitution (number of procedures substitutes for actual accountability), (2) the rising base_extractiveness (0.45 \u2192 0.68) despite reform measures indicates that extraction and theater are moving together (more oversight appearance correlates with worse outcomes), (3) the perspectival gap is not a measurement problem but a structural reality\u2014the same processes that appear as coordination to police appear as extraction suppression to victims, (4) the snare classification holds because the constraint's existence relies on suppressing the alternative (independent civilian authority with enforcement power), and (5) the institutional theater (piton perspective) is the mechanism that sustains the snare by providing appearance of accountability without substance. The mandatrophy is dissolved by recognizing that theater accumulation is itself part of the extraction mechanism\u2014each new oversight procedure that lacks enforcement power sustains the vacuum by making the victim's plea that 'the system is responding' false but durable."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "qualified_immunity_doctrine",
+      "police_union_grievance_procedures",
+      "civilian_complaint_suppression"
+    ],
+    "dual_formulation_note": "The police accountability vacuum is a constraint family decomposing into: (1) qualified_immunity_doctrine (\u03b5=0.62, provides liability shield), (2) police_union_grievance_procedures (\u03b5=0.55, reverses sustained findings), (3) civilian_complaint_suppression (\u03b5=0.48, controls investigation). The vacuum story represents the integrated constraint; disaggregation enables analysis of which components drive the extractiveness."
+  },
+  "directionality_overrides": []
+}

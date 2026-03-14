@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "organizational_omerta",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "omerta"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Organizational Omerta: The Code of Silence",
+    "topic_domain": "organizational_dynamics/institutional_culture",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "senior_leadership",
+      "institutional_reputation_managers"
+    ],
+    "victims": [
+      "truth_seeking_employees",
+      "organizational_accountability",
+      "external_stakeholders"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Whistleblower",
+      "comment": "PERSPECTIVE 1: THE WHISTLEBLOWER (SNARE) \u2014 Employee who discovers wrongdoing is trapped between organizational survival and ethical obligation. Material barriers to exit (financial dependency, employment history locked to organization, legal liability retaliation) combine with identity lock (professional identity constituted through organizational role). Cannot speak without destroying livelihood; cannot stay silent without complicity. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "label": "The Institutionalized Insider",
+      "comment": "PERSPECTIVE 2: THE INSTITUTIONALIZED INSIDER (SNARE) \u2014 Long-tenured employee whose professional identity is fused with the organization. Has structural mobility (could seek external employment) but cannot exercise it because their identity frame is constituted through organizational membership. Breaking the code means becoming a different person \u2014 abandoning 20+ years of identity investment. The identity lock is the primary binding mechanism, more powerful than material barriers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Senior Leadership (Official View)",
+      "comment": "PERSPECTIVE 3: SENIOR LEADERSHIP (ROPE) \u2014 Leadership perceives omerta as a coordination mechanism: unified messaging prevents external panic, preserves organizational trust, enables internal problem-solving without public interference. From leadership's position, the constraint solves a genuine coordination problem (preventing stakeholder overreaction). They have exit options through arbitrage (can shift to different organizations with reputation intact). They experience the constraint as enabling rather than extractive."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Complicit Middle Manager",
+      "comment": "PERSPECTIVE 4: THE COMPLICIT MIDDLE MANAGER (TANGLED ROPE) \u2014 Intermediate managers face genuine coordination problem (implementing leadership directives while managing team morale) alongside asymmetric extraction (enforcing silence, suppressing dissent, bearing the load of internal moral compromise). They benefit from organizational stability and career advancement enabled by coordinated silence. They are constrained by career costs of defection but not trapped \u2014 exit is possible at significant but surmountable cost. Mixed experience of coordination and extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Compliance and Ethics Functions",
+      "comment": "PERSPECTIVE 5: COMPLIANCE AND ETHICS FUNCTIONS (PITON) \u2014 Formal ethics and compliance mechanisms exist (hotlines, policies, investigation procedures) but are largely theatrical. They perform the function of appearing to investigate internally while protecting the organization from external liability. The formal mechanism persists through institutional inertia and legal requirement, not because it genuinely enables accountability. Whistleblower hotlines funnel reports back to leadership who suppress them. Theater ratio high \u2014 performative appearance of investigation without teeth."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: THE ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational perspective, organizational omerta is a pure extraction mechanism with minimal coordination function. The coordination rationale (unified messaging, stakeholder confidence) is post-hoc legitimation for a system that primarily extracts compliance through fear and identity lock. The constraint is self-perpetuating: each generation of insiders becomes trapped by the constraint they were forced to accept, then enforces it on the next generation. No time-limited sunset, no coordination benefit that couldn't be achieved through transparency."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "identity_lock_vs_material_trap",
+      "question": "For any given trapped employee, is the binding mechanism identity lock (cognitive/internal) or material dependency (structural/external), or both?",
+      "resolution_mechanism": "Post-exit trajectory analysis: if suppression persists after the employee leaves the organization, identity lock was primary. If suppression drops immediately, material dependency was primary. Survey of ex-employees on barriers that prevented earlier exit.",
+      "impact": "If identity-locked agents predominate: the constraint is self-perpetuating through cognitive capture and will persist even as material incentives weaken. If materially trapped agents predominate: organizational restructuring (separation of reputation management from truth-seeking) could break the constraint. If both: the constraint is highly stable and requires both cognitive frame-breaking and material restructuring.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Primary mechanism of employee entrapment: identity lock vs material dependency"
+    },
+    {
+      "id": "coordination_function_magnitude",
+      "question": "How much of the organizational stability attributed to unified messaging actually derives from omerta, versus from other structural factors (competent operations, market position, leadership quality)?",
+      "resolution_mechanism": "Natural experiment: organizations that dissolve omerta (post-scandal transparency, leadership change to transparency norms) and measure subsequent operational stability, stakeholder confidence, employee retention. Counterfactual: what organizational failures would have surfaced earlier under transparency?",
+      "impact": "If coordination function is substantial (>0.40): classification shifts from Snare toward Tangled Rope; sunset logic becomes viable (transparency can be adopted if coupled with crisis management infrastructure). If coordination function is minimal (<0.15): omerta is pure extraction theater; classification remains Snare; sunset requires organizational dissolution or leadership replacement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude of genuine coordination function provided by organizational omerta"
+    },
+    {
+      "id": "intergenerational_perpetuation_mechanism",
+      "question": "How does each cohort of insiders enforce omerta on the next cohort? Is it through active indoctrination, selective hiring for cultural fit, or emergence from the trapped position itself?",
+      "resolution_mechanism": "Organizational ethnography: interview multiple generations of employees about when they learned the code, who taught it, what happened to those who violated it. Track which cohort members became enforcement agents and what their stated rationale was.",
+      "impact": "If active indoctrination: omerta is deliberately perpetuated and can be disrupted by leadership change. If cultural fit selection: the constraint self-selects and is harder to disrupt (would require hiring from outside the cultural type). If emergence from trapped position: the constraint is self-perpetuating through the cognitive and material lock that creates future enforcers from current victims.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "How organizational omerta perpetuates across employee cohorts"
+    },
+    {
+      "id": "extractiveness_scope_variability",
+      "question": "Does the extractiveness (and suppression) of omerta vary significantly across organizational levels, departments, or geographic regions, or is it uniformly high?",
+      "resolution_mechanism": "Comparative analysis of incident reporting rates, whistleblower outcomes, and employee exit rates across organizational strata. Qualitative interviews on how the code is enforced in different contexts (C-suite vs frontline, technical teams vs sales, headquarters vs field operations).",
+      "impact": "If uniformly high: the constraint is a monolithic institutional property. If variable: the constraint may be decomposable into separate stories per organizational level, each with different extractiveness values. Leadership teams might experience it as low-extraction rope while frontline workers experience snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Variation in omerta extractiveness across organizational levels"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.7
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Organizational omerta \u2014 the enforced code of silence that protects leadership from accountability for wrongdoing \u2014 is a structural constraint operating in nearly all hierarchical organizations. It functions as a pure extraction mechanism that concentrates power upward while suppressing truth-seeking and dissent. The constraint operates through both material barriers (employment dependency, retaliation risk, legal liability) and identity lock (employees whose professional identity is constituted through organizational membership cannot imagine exit without becoming different people). Omerta extracts compliance, silence, and complicity from trapped employees while benefiting senior leadership and institutional reputation managers. The extractiveness has increased over the 15-year measurement interval as digital monitoring, career atomization, and organizational control mechanisms have strengthened. Theater has also increased as organizations have deployed formal compliance mechanisms (hotlines, ethics training, investigation procedures) that are largely performative \u2014 they satisfy legal requirements and create appearance of accountability while actually funneling dissent back to the leadership they are meant to check. The constraint is self-perpetuating: each generation of insiders becomes trapped by omerta, and once trapped, many become enforcers of the code for the next generation, either out of investment in organizational legitimacy or because they internalize the suppression as normal.",
+    "key_agents": [
+      "Whistleblower/Truth-Seeking Employee: Primary victim (powerless/trapped or identity_locked) \u2014 discovers wrongdoing but faces entrapment through material dependency or identity lock. Experiences maximum extraction.",
+      "Senior Leadership: Primary beneficiary (institutional/arbitrage) \u2014 controls the code, suppresses external accountability, maintains reputation. Experiences the constraint as coordination mechanism.",
+      "Complicit Middle Manager: Secondary actor (moderate/constrained) \u2014 enforces silence while managing team morale. Experiences mixed coordination and extraction.",
+      "Institutionalized Insider: Secondary victim (powerless/identity_locked) \u2014 long-tenured employee whose identity is fused with organization. Identity lock is the binding mechanism.",
+      "Compliance and Ethics Functions: Institutional theater (institutional/arbitrage) \u2014 formal investigative mechanisms that are largely performative. Maintain appearance of accountability without substance.",
+      "Analytical Observer: Observer (analytical/analytical) \u2014 sees omerta as pure extraction with minimal coordination function. Recognizes perpetuation cycle."
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts compliance, silence, and moral compromise from those it governs. Over the 15-year interval, extractiveness has increased as organizational surveillance and control mechanisms have strengthened (0.45 \u2192 0.68), and as digital communication has reduced plausible deniability for wrongdoing. Suppression (0.75): Very high. Trapped employees face multiple barriers to exit and dissent: financial dependency on employment, career consequences of whistleblowing (blacklisting across industry), legal liability for disclosure (NDAs, intellectual property claims), and in some cases direct retaliation. Identity-locked employees face psychological barriers to exit that can be as effective as material barriers. Theater ratio (0.65): Moderate-high. Formal compliance mechanisms (hotlines, investigation procedures, ethics training) are substantially theatrical \u2014 they create appearance of accountability without providing meaningful channels for dissent or investigation. Over the interval, theater has increased as organizations have deployed these mechanisms while ensuring they funnel reports back to leadership (0.38 \u2192 0.65).",
+    "perspectival_gap": "The widest perspectival gap is between the beneficiary perspective (leadership seeing rope/coordination) and the victim perspective (trapped employee seeing snare/extraction). Leadership genuinely solves a coordination problem through unified messaging and internal problem containment. But this legitimate coordination function does not require suppressing dissent to the degree that omerta achieves. The constraint extracts more than coordination requires. The identity-locked insider perspective reveals a gap within the victim class: some employees are materially trapped (would lose livelihood if they left), while others are identity-locked (have mobility but cannot exercise it). This gap is diagnostically important because it implies different intervention strategies \u2014 material constraints require structural changes (separation, external employment options), while identity locks require cognitive reframing (helping employees construct post-organizational identities). The piton perspective (theater ratio = 0.65) shows that formal compliance mechanisms are degraded \u2014 they perform the function of appearing to investigate rather than actually investigating. This suggests the constraint is slowly transitioning from pure extraction toward theatrical extraction as organizations respond to legal risk while preserving the substance of the code.",
+    "directionality_logic": "Directionality is determined by each agent's structural position relative to the constraint. Leadership and reputation managers occupy beneficiary positions with arbitrage exit options (low d \u2192 negative effective extraction). Trapped employees occupy victim positions with no exit (high d \u2192 high effective extraction). Identity-locked employees have moderate-high d because their material mobility is real but cognitive trap prevents exercise of exit options \u2014 they are structurally constrained rather than completely trapped, but the identity lock creates effective immobility. Middle managers occupy mixed positions \u2014 they enforce the code and benefit from organizational stability (partial beneficiary status) but bear moral cost of complicity and face constraints on their own exit options (constrained rather than arbitrage). The analytical observer's directionality is derived from seeing the full structure from a neutral position, which produces high d (observer sees the constraint primarily targeting powerless agents) and analytical exit option.",
+    "mandatrophy_analysis": "Organizational omerta demonstrates the mandatrophy in how institutional contexts naturalize extraction. Leadership genuinely coordinates internal problem-solving through the code of silence \u2014 there is a real coordination function. But the extracted cost (compliance, moral compromise, suppression of dissent) is far higher than coordination requires. The mandatrophy resolution is to distinguish between the minimal coordination function (keeping stakeholders informed through controlled channels without panic) and the maximal extraction function (total suppression of internal dissent). A transparent internal culture with controlled external communication would preserve the coordination benefit while eliminating most of the extraction cost. The persistence of maximum suppression reveals that leadership is extracting beyond what coordination justifies. The piton classification of formal ethics mechanisms shows how organizations deploy theater to maintain the extraction while appearing to address it \u2014 they create the appearance of accountability without the substance. This is the classic mandatrophy move: label extraction as coordination while using formal mechanisms to prevent genuine accountability."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "psychological_safety_erosion",
+      "whistleblower_retaliation_risk",
+      "organizational_scandal_escalation"
+    ],
+    "dual_formulation_note": "Organizational omerta is the upstream constraint that enables and perpetuates downstream constraints (whistleblower retaliation, psychological safety erosion, scandal escalation). The code of silence is the structural glue that binds these phenomena together. Decomposition by organizational level or by type of wrongdoing (financial vs ethical vs safety violations) would produce separate stories with different extractiveness values, but the omerta constraint itself operates uniformly as the suppression mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.62
+    }
+  ]
+}

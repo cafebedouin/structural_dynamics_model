@@ -159,6 +159,13 @@ def normality_tests(values):
     if not HAS_SCIPY or n < 8:
         return results
 
+    # Zero-range data is trivially non-normal; skip statistical tests
+    # to avoid scipy warnings (division by zero in Shapiro-Wilk) and
+    # sklearn ConvergenceWarning (GaussianMixture can't find 2 clusters).
+    if min(values) == max(values):
+        results["zero_range"] = True
+        return results
+
     # Shapiro-Wilk (best for n < 5000)
     if n >= 8:
         try:

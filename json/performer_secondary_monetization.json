@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "performer_secondary_monetization",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "psm"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Performer Secondary Monetization Rights Constraint",
+    "topic_domain": "entertainment/digital_media/labor",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "content_aggregators",
+      "institutional_media_companies"
+    ],
+    "victims": [
+      "performers_and_creators",
+      "independent_artists"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dependent Performer",
+      "comment": "PERSPECTIVE 1: DEPENDENT PERFORMER (SNARE) \u2014 Performers bound to platforms by algorithmic visibility dependency, audience location, and contractual lock-in. No viable exit without losing earned audience. Suppression is total: platform terms shift unilaterally, revenue share models change at will, content gets repurposed into secondary products (compilations, AI training, recommendation feeds) without additional compensation. The performer sees pure extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Career Independent Artist",
+      "comment": "PERSPECTIVE 2: MID-CAREER INDEPENDENT ARTIST (TANGLED ROPE) \u2014 Constrained by high switching costs (audience fragmentation across platforms, rebuild time, discovery algorithms favor incumbents) but also benefits from platform distribution infrastructure and audience access that would be inaccessible otherwise. Experiences mixed extraction: loses control of secondary uses (clips, compilations, recommendation feeds) but gains audience reach. High suppression due to algorithm opacity and unilateral terms, but some agency in content strategy."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATOR (ROPE) \u2014 Experiences the constraint as coordination problem: aggregating performer content, distributing it globally, and monetizing secondary uses (clips, recommendations, compilations) solves the collective distribution problem. Operates with high arbitrage optionality \u2014 can shift terms, renegotiate rates, deploy content in new contexts. Sees minimal extraction cost because the platform functions as genuine infrastructure. Revenue flows to the platform with minimal performer negotiation power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Superstar Performer",
+      "comment": "PERSPECTIVE 4: SUPERSTAR PERFORMER (TANGLED ROPE) \u2014 High-market-value performers maintain limited exit optionality through audience size and leverage. Can negotiate secondary monetization rights, retain creative control over clips and compilations, or move between platforms. But also locked into the attention economy's extraction logic: must continuously perform for algorithm visibility, face suppression of earnings transparency, and experience asymmetric risk (algorithm changes harm them; they cannot change the algorithm)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Creator Coalition / Performer Union",
+      "comment": "PERSPECTIVE 5: CREATOR COALITION (SCAFFOLD) \u2014 Organized efforts (performer unions, creator collectives, collective bargaining agreements) aim to establish mandatory licensing for secondary uses, transparency requirements, and sunset clauses for platform rights grabs. These mechanisms see the constraint as temporary \u2014 buildable alternatives include direct-to-fan platforms, cooperative distribution networks, and legally mandated performer revenue shares. Low effective extraction because the coalition has agency and perceives a regulatory/technological exit path within a defined timeframe."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Licensing Framework",
+      "comment": "PERSPECTIVE 6: LEGACY LICENSING FRAMEWORK (PITON) \u2014 Traditional copyright and performance-rights organizations (ASCAP, BMI, SAG-AFTRA) are largely performative in the digital context. Their licensing frameworks assume intentional distribution (radio, TV, theaters) but fail to capture secondary uses (algorithmic clips, AI training, recommendation feeds). The framework persists through institutional inertia \u2014 it retains nominal authority while actual power flows to platforms operating outside its jurisdiction. Theater ratio is moderate because some real licensing does occur, but the framework is degraded relative to the actual extraction mechanisms."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, secondary monetization appears as an immutable consequence of attention economics: once content is created and distributed, secondary uses (recommendations, clips, compilations) necessarily follow because reusing content is more efficient than creating new content. This perspective risks naturalizing what is actually a contingent contractual and technological architecture. The engine will classify this as a false summit \u2014 the apparent naturalness derives from institutional lock-in and bargaining asymmetry, not from laws of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "secondary_use_definition_boundary",
+      "question": "What constitutes a 'secondary use' requiring separate performer compensation vs. integrated platform service with primary revenue share?",
+      "resolution_mechanism": "Comparative analysis of performer revenue models across platforms; legal definition mapping (EU digital services regulations, performer union contracts); performer earnings transparency data showing revenue attribution per use type",
+      "impact": "If secondary uses are broadly defined: many more extraction mechanisms are captured and suppression appears higher. If narrowly defined: secondary monetization appears as minor coordination issue, not major extraction.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Definition of secondary use vs. integrated service"
+    },
+    {
+      "id": "algorithmic_suppression_mechanism",
+      "question": "Is platform suppression of performer visibility a deliberate revenue extraction mechanism or an incidental effect of recommendation algorithms optimizing for engagement/watch-time?",
+      "resolution_mechanism": "Algorithm transparency audits; internal platform documentation (if available); comparative analysis of visibility decay for performers across tier levels; correlation between suppression patterns and performers' willingness to accept secondary-use extraction",
+      "impact": "If deliberate: suppression score should be 0.75+; mechanism is pure coercion. If incidental: suppression is 0.40-0.55; mechanism is structural bias in optimization targets, not intentional gatekeeping.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether visibility suppression is deliberate extraction or algorithmic artifact"
+    },
+    {
+      "id": "performer_exit_pathway_feasibility",
+      "question": "Can performers realistically build independent income streams (Patreon, direct subscriptions, merchandise, live performance) that reduce platform dependence below the 'trapped' threshold?",
+      "resolution_mechanism": "Longitudinal earnings data for independent creators; comparison of audience retention when performers move off-platform; time-to-viability analysis for creator-owned alternatives; market-share shifts from platform to creator-owned channels",
+      "impact": "If feasible: many performers shift from 'trapped' to 'constrained' classification; effective extraction \u03c7 decreases. If infeasible: platform lock-in persists; powerless perspective remains snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of performer exit to independent income streams"
+    },
+    {
+      "id": "ai_training_compensation_precedent",
+      "question": "Will secondary use of performer content for AI training establish a new compensation category, or will it be absorbed into platform licensing agreements without additional performer payment?",
+      "resolution_mechanism": "Tracking of performer lawsuits (voice actors, visual artists); regulatory guidance on AI training data licensing; platform licensing model evolution; performer union contract negotiations on generative AI",
+      "impact": "If compensation established: extractiveness floor rises to 0.70+ as new use cases expand. If absorbed into existing licensing: extractiveness persists at 0.58-0.65; AI amplifies the problem without changing its structure.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether AI training establishes new compensation category"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.44
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Performer secondary monetization represents a structural constraint in digital media where platform operators systematically extract value from performer-created content by monetizing secondary uses \u2014 algorithmic clips, recommendation feeds, compilations, training data \u2014 without proportional compensation to creators. The constraint operates across all digital platforms (YouTube, TikTok, Twitch, Instagram, Spotify) and affects performers from powerless dependents to institutional superstars differently. The extractiveness has accelerated from 0.35 (2010s, early platform era) to 0.58 (present) as platforms discovered new secondary monetization channels (AI training, recommendation feeds, content aggregation). Suppression is high (0.65) because performers face algorithmic visibility dependency, contractual lock-in, and information asymmetry about how their content is reused. Theater ratio is moderate (0.48) because while some legitimate licensing occurs (royalty payments, content-creator funds), much of the performer-compensation narrative is performative \u2014 creator funds and revenue-share programs provide minimal actual income for most performers while maintaining legitimacy of the platform's claim to 'support creators.' The constraint exhibits all six classification types depending on structural position: pure extraction (snare) for dependent performers, mixed extraction-coordination (tangled rope) for moderates and superstars, pure coordination (rope) for platforms, temporary problem with sunset (scaffold) for organized collectives, degraded licensing (piton) for legacy frameworks, and false natural law (mountain for analytical observer).",
+    "key_agents": [
+      "Dependent Performers: Primary victims (powerless/trapped) \u2014 algorithmic visibility lock-in, no exit options, contractual terms set unilaterally by platform",
+      "Platform Operators: Primary beneficiaries (institutional/arbitrage) \u2014 control distribution infrastructure, monetize secondary uses, shift terms unilaterally, operate with high exit optionality",
+      "Mid-Career Independent Artists: Secondary victims (moderate/constrained) \u2014 benefit from platform reach but lose control of content secondary uses, face discovery algorithm suppression",
+      "Superstar Performers: Complex agents (powerful/mobile) \u2014 maintain limited exit optionality through leverage but locked into attention economy's extraction logic",
+      "Content Aggregators: Institutional beneficiaries (institutional/arbitrage) \u2014 repackage clips and compilations for secondary platforms without performer negotiation",
+      "Creator Coalitions: Organized agents (organized/constrained) \u2014 building alternative pathways (unions, collective licensing, direct-to-fan platforms) with regulatory sunset logic",
+      "Legacy Licensing Orgs: Institutional actors (institutional/arbitrage) \u2014 maintain performative frameworks (ASCAP, BMI, PROs) that fail to capture digital secondary uses"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high, rising over the interval. Secondary uses generate significant platform revenue (estimated 20-30% of total platform value in recommendation/aggregation) with minimal performer compensation. The growth trajectory reflects discovery of new monetization channels (AI training, clips, compilations). However, extractiveness is not 0.75+ (high snare threshold) because platforms do provide legitimate distribution value and some creators do earn meaningful income \u2014 the extraction is real but mixed with genuine coordination benefit. Suppression (0.65): High. Performer visibility is algorithmic (non-transparent), contractual terms unilateral (performers cannot negotiate), and exit costs are total (built-in audience). Transparency about secondary use is minimal; performers often discover their content reused only when fans alert them. Theater ratio (0.48): Moderate. Platform creator-support programs (YouTube Partner Program, TikTok Creator Fund, Twitch revenue-sharing) involve real payouts but are widely recognized as insufficient; this creates a gap between the theatrical claim ('we support creators') and functional reality ('most creators earn <$1000/year'). The ratio is trending downward as performers increasingly recognize the gap.",
+    "perspectival_gap": "Maximum perspectival divergence across six types signals a true hybrid coordination-extraction constraint. The gap exists because different agents have radically different exit options (arbitrage vs trapped), power levels (institutional vs powerless), and structural relationships to the secondary monetization mechanism. Platform operators see low extraction because they control the mechanism and benefit from it. Dependent performers see high extraction because they lack control and lack exit. The perspectival gap is not a measurement error \u2014 it is diagnostic evidence that the constraint simultaneously coordinates (provides global distribution) and extracts (captures secondary value without performer input).",
+    "directionality_logic": "Directionality (d) values vary sharply by agent structural position. Dependent performers have d \u2248 0.90 (full victim: trapped, no exit, maximal extraction) yielding high f(d) \u2248 1.35. Platform operators have d \u2248 0.05 (full beneficiary: arbitrage, control infrastructure, extractive direction) yielding negative f(d) \u2248 -0.12. Mid-career artists have d \u2248 0.65 (mixed: constrained exit, mixed extraction-coordination) yielding f(d) \u2248 1.00. The engine computes \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) for each perspective. For dependent performer (global scope \u03c3=1.2): \u03c7 \u2248 0.58 \u00d7 1.35 \u00d7 1.2 \u2248 0.94 (high effective extraction). For platform (global scope): \u03c7 \u2248 0.58 \u00d7 (-0.12) \u00d7 1.2 \u2248 -0.08 (negative extraction, reflects beneficiary status). For organized coalition (national scope \u03c3=1.0): \u03c7 \u2248 0.58 \u00d7 0.60 \u00d7 1.0 \u2248 0.35 (moderate, reflects exit pathways). These computed \u03c7 values drive classification differences across perspectives without requiring separate \u03b5 values \u2014 one constraint, multiple directionalities.",
+    "mandatrophy_analysis": "The mandatrophy is resolved through perspectival multiplicity and directionality differentiation. The constraint is NOT 'really' a snare or a rope or a scaffold \u2014 it is genuinely all of these from different structural positions. The dependent performer's snare experience is real; the platform's rope experience is real; the coalition's scaffold experience is real. No single type 'is correct.' The false summit (mountain) occurs when the analytical observer naturalizes the constraint as immutable ('platforms must monetize to sustain; secondary uses must follow platform terms; creator dependence is inevitable'). But the structural data shows this is contingent: creator coalitions are building alternatives, regulators are establishing mandatory licensing, and direct-to-fan platforms are reducing algorithmic lock-in. The mountain classification fails the natural law gates (\u03b5 should be \u22640.25, suppression \u22640.05) \u2014 the engine will mark it as a false summit and flag the underlying assumption that platform dominance is natural rather than enforced by bargaining asymmetry and contractual lock-in."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "attention_economy_labor_extraction",
+      "algorithmic_visibility_suppression",
+      "content_ownership_fragmentation"
+    ],
+    "dual_formulation_note": "Performer secondary monetization is downstream of algorithmic visibility systems (visibility suppression enables extraction), upstream of content ownership fragmentation (secondary uses fragment performer rights across platforms). These three constraints form a family: visibility suppression creates performer lock-in; lock-in enables secondary monetization; secondary monetization fragments ownership and control."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "header": {
+    "constraint_id": "blockchain_energy_externality",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bce"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Blockchain Energy Externality Constraint",
+    "topic_domain": "environmental/economic/technology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "blockchain_miners",
+      "cryptocurrency_holders",
+      "exchange_operators"
+    ],
+    "victims": [
+      "climate_system",
+      "electricity_consumers",
+      "energy_grid_operators"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Climate System and Energy Grid Operators",
+      "comment": "PERSPECTIVE 1: CLIMATE AND ENERGY INFRASTRUCTURE (SNARE) \u2014 Cannot exit the system; bears the full cost of blockchain's energy demand. Climate operates at planetary scale with no alternatives; energy grid operators face load management costs from volatile mining demand spikes. No exit option, high suppression, maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Electricity Consumers",
+      "comment": "PERSPECTIVE 2: ELECTRICITY CONSUMERS (TANGLED ROPE) \u2014 Constrained by infrastructure dependency but benefit from broader electricity markets and distributed ledger benefits (if any). Face higher electricity costs during high-mining periods, cannot easily switch suppliers in many jurisdictions. Some coordination benefit from decentralized infrastructure, but extraction through price increases is significant."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Blockchain Miners and Operators",
+      "comment": "PERSPECTIVE 3: MINERS AND OPERATORS (ROPE) \u2014 Primary beneficiaries with arbitrage options (can relocate to lower-cost energy jurisdictions, switch currencies, adapt hardware). Experience the constraint as pure coordination: validating transactions enables the system to function. Net beneficiaries \u2014 extraction runs toward this agent."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Renewable Energy Transition Coalition",
+      "comment": "PERSPECTIVE 4: RENEWABLE ENERGY ADVOCATES (SCAFFOLD) \u2014 Organized agents (grid operators, renewable energy providers, policy advocates) view blockchain energy demand as a temporary coordination failure with sunset potential: renewable energy scaling and proof-of-stake protocols reduce mining energy intensity. Exit path exists through technology transition. Theater ratio moderate \u2014 the 'green crypto' narrative is partly performative, but genuine technical pathways (PoS migration, renewable mining) exist."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Proof-of-Work Ideology",
+      "comment": "PERSPECTIVE 5: POW LEGITIMACY MAINTENANCE (PITON) \u2014 The proof-of-work consensus mechanism persists despite technical alternatives (proof-of-stake, directed acyclic graphs) that achieve similar coordination with orders-of-magnitude lower energy cost. The maintenance of PoW rhetoric ('immutability requires energy sacrifice,' 'energy expenditure is feature not bug') is substantially performative \u2014 institutional inertia and first-mover advantage preserve PoW networks despite known technical degradation. Theater ratio high as legitimacy narrative outpaces functional justification."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Thermodynamic Natural Law View",
+      "comment": "PERSPECTIVE 6: ANALYTICAL / NATURAL LAW (MOUNTAIN) \u2014 From a thermodynamic universalist view, distributed consensus always requires energy expenditure to prevent Sybil attacks; the energy cost is an immutable property of decentralized validation. However, structural data reveals this as naturalization of an engineering choice (PoW mechanism design) rather than a law of physics. Proof-of-stake achieves similar security with proportional energy, not exponential. The false summit detector will flag this perspective."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "proof_of_stake_effectiveness",
+      "question": "Does proof-of-stake achieve cryptographic security equivalent to proof-of-work, or do PoW's energy costs provide non-substitutable security properties?",
+      "resolution_mechanism": "Empirical comparison of attack cost vectors, censorship resistance, and finality guarantees across PoW vs PoS implementations; longitudinal security audit data from Ethereum 2.0 and other PoS networks",
+      "impact": "If PoS equally secure: PoW is purely extractive waste \u2014 classification upgrades to Snare. If PoW provides non-substitutable security: classification confirmed as Tangled Rope with genuine coordination benefit.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether proof-of-stake provides equivalent security to proof-of-work"
+    },
+    {
+      "id": "renewable_mining_feasibility",
+      "question": "Can blockchain mining scale on renewable energy without distorting renewable deployment incentives or destabilizing grids through load inflexibility?",
+      "resolution_mechanism": "Grid simulation data; historical analysis of mining migration to renewable-rich regions; measurement of grid stability impact during demand volatility",
+      "impact": "If feasible: Scaffold sunset is real and extractiveness could decline significantly. If infeasible: mining will remain tied to baseload fossil fuels, converting into pure extraction (Snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether mining can scale on renewable energy without grid destabilization"
+    },
+    {
+      "id": "externality_pricing_mechanism",
+      "question": "Can carbon pricing (tax, cap-and-trade, grid demand pricing) effectively internalize blockchain's energy externality, or do game-theoretic dynamics (mining jurisdiction arbitrage, protocol design against pricing) prevent implementation?",
+      "resolution_mechanism": "Policy implementation tracking across jurisdictions with carbon tax; measurement of mining relocation patterns in response to pricing; protocol-level analysis of potential mechanisms to enforce carbon cost internalization",
+      "impact": "If priceable: Tangled Rope confirmed with partial remedy path. If unpriceable: extraction persists even with policy intent, confirming Snare classification for climate victims.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether blockchain energy externality can be priced and internalized"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Blockchain energy consumption creates a structural constraint where decentralized consensus mechanisms require energy expenditure that generates negative externalities (carbon emissions, grid stress, opportunity cost of renewable energy deployment) borne by agents outside the blockchain system, while benefits accrue to miners, token holders, and exchange operators. The constraint exhibits both genuine coordination function (proof-of-work does solve the Byzantine fault tolerance problem) and asymmetric extraction (energy costs are socialized while coordination benefits are privatized). The core tension: whether the energy cost is an immutable property of distributed consensus (natural law, mountain perspective) or a contingent engineering choice (proof-of-stake alternatives exist at orders-of-magnitude lower energy cost, tangled rope / snare perspective). Theater ratio has increased over the measurement interval as 'green crypto' narratives become more prevalent despite fossil fuel mining dominance, indicating growing gap between performative legitimacy claims and functional reality.",
+    "key_agents": [
+      "Blockchain Miners: Primary beneficiaries (institutional/arbitrage) \u2014 capture transaction fees and block rewards with low-cost energy arbitrage; highly mobile across jurisdictions",
+      "Cryptocurrency Holders: Secondary beneficiaries (powerful/mobile) \u2014 accrue value from network activity; can exit via diversification",
+      "Climate System: Primary victim (powerless/trapped) \u2014 cannot exit; bears full cost of carbon emissions; no organizational capacity",
+      "Energy Grid Operators: Secondary victim (moderate/constrained) \u2014 face load management challenges, infrastructure strain, cost of peak demand management",
+      "Electricity Consumers: Tertiary victim (moderate/constrained) \u2014 face price impacts during high-mining periods; constrained by grid infrastructure dependency",
+      "Renewable Energy Advocates: Organized agents (organized/mobile) \u2014 see technology transition (PoS, DAGs) as exit pathway with generational time horizon",
+      "Proof-of-Work Protocol: Institutional constraint carrier (institutional/constrained) \u2014 legitimacy narrative maintained through inertia and first-mover advantage despite technical alternatives"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The blockchain system captures significant energy resources (~120-140 TWh annually for PoW networks as of 2024) that could be deployed for grid services or other productive uses. However, extractiveness is not maximal (0.70+) because: (1) some genuine coordination benefit exists (decentralized consensus does solve real problems), (2) mining does produce work (validating transactions), and (3) alternative pathways exist (PoS, renewable scaling). Suppression (0.65): High. Energy externalities are difficult to price at point-of-use; miners have jurisdictional arbitrage options to evade carbon pricing; climate victims have no mechanisms to resist or exit. Barriers to alternative consensus mechanisms are high due to network effects and sunk infrastructure. Theater ratio (0.55): Moderate. The 'green crypto' narrative is increasing (environmental claims, renewable mining partnerships) but represents only ~15-20% of actual mining activity. The gap between narrative and reality is growing, hence the rising theater_ratio over the interval. Claimed type Tangled Rope justified by: beneficiaries clearly declared (miners, holders, operators); victims clearly declared (climate, grid operators, electricity consumers); genuine coordination function exists (PoW does solve Byzantine fault tolerance); asymmetric extraction exists (energy costs externalized); active enforcement required (mining difficulty adjustment, network governance). Extractiveness > 0.46 triggers measurement and omega requirements, both satisfied.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence. Miners see Rope (pure coordination \u2014 the system works, they are solving the validation problem). Climate and grid victims see Snare (pure extraction \u2014 they bear costs with no benefit). Renewable energy advocates see Scaffold (temporary problem with sunset \u2014 PoS migration and renewable scaling create exit path). PoW legitimacy maintenance sees Piton (ritual persistence through inertia, theater > function). The analytical observer risks seeing Mountain (thermodynamics requires energy) but structural data reveals this as false summit. The divergence reflects fundamental disagreement about whether energy expenditure is immutable property of consensus or contingent design choice. The engine's task: measure the gap and identify which perspectives are naturalizing versus which are revealing structure.",
+    "directionality_logic": "Directionality derives from beneficiary/victim declarations and exit options. Miners (beneficiaries, institutional power, arbitrage exit) get low d \u2192 low or negative chi. Climate system (victims, powerless, trapped exit) gets high d \u2192 high chi. Electricity consumers (ambiguous \u2014 benefit from electricity access, harmed by mining demand) get moderate d based on constrained exit. The resulting chi values scale effective extraction by scope (global \u2192 \u03c3=1.2 amplification) and by the sigmoid transformation f(d). At global scope with high d values from victim perspectives, effective extraction chi becomes substantial even before applying f(d). Canonical fallback values are overridden by explicit structural data (beneficiary/victim declarations), preventing mis-classification from pure power atom defaults.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by the declaration of both beneficiaries (miners, operators, token holders) and victims (climate, grid operators, consumers), paired with the genuine coordination function (PoW does solve Byzantine fault tolerance, mining does validate transactions). Without both elements, the constraint would collapse to either Rope (if only coordination visible) or Snare (if only extraction visible). The Tangled Rope classification holds if and only if: (1) coordination function is non-trivial (verified: PoW is a working consensus mechanism), (2) extraction is asymmetric (verified: energy costs are socialized, benefits privatized), and (3) active enforcement is required (verified: network protocol actively maintains PoW mechanism). The theatrical elevation (0.55) suggests that the coordination narrative is being overstated relative to function, but does not eliminate the genuine coordination problem. Proof-of-stake alternatives reduce but do not eliminate the mandatrophy \u2014 they demonstrate that the coordination function could be achieved at lower extraction cost, but do not prove that current PoW systems are purely extractive. The resolving insight: PoW is a valid but inefficient solution to a real problem; the constraint's extractiveness reflects inefficiency, not illegitimacy."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "carbon_credit_accounting_protocol",
+      "renewable_energy_infrastructure_competition"
+    ],
+    "dual_formulation_note": "Blockchain energy externality decomposes into two structurally distinct constraints: (1) mining_consensus_energy_requirement (\u03b5~0.20, the computational cost of PoW itself \u2014 near-immutable given PoW mechanism choice), and (2) blockchain_energy_externality (\u03b5~0.58, the socialization of that cost via lack of carbon pricing and jurisdictional arbitrage \u2014 contingent institutional arrangement). This story focuses on the second constraint. The first would be classified as Tangled Rope (genuine computation + externality) if decomposed separately."
+  },
+  "directionality_overrides": []
+}

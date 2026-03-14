@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "land_use_monoculture_lock",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "monocult"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Land Use Monoculture Lock: Agricultural-Industrial Coordination with Ecosystem Extraction",
+    "topic_domain": "agriculture/environmental/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "agribusiness_corporations",
+      "commodity_exporters",
+      "input_suppliers"
+    ],
+    "victims": [
+      "smallholder_farmers",
+      "ecosystem_services",
+      "rural_communities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Smallholder Farmer",
+      "comment": "PERSPECTIVE 1: SMALLHOLDER FARMER (SNARE) \u2014 Trapped by debt cycles, seed patent restrictions, and loss of alternative crop knowledge. Cannot access credit for diversification; monoculture seeds require purchased inputs (fertilizer, pesticides) that create dependency. Exit requires capital, land redistribution, and agronomic retraining \u2014 all blocked. Bears full extraction cost through input debt and market price volatility."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Rural Community",
+      "comment": "PERSPECTIVE 2: RURAL COMMUNITY (TANGLED ROPE) \u2014 Experiences both coordination and extraction. Monoculture provides employment, infrastructure investment, and market access that rural areas lack under diversified systems. Simultaneously, monoculture depletes soil, eliminates non-commodity income sources (foraging, artisanal production), and concentrates land ownership. Exit is constrained by educational pipeline lock-in and lack of alternative economic structures."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Agribusiness Corporation",
+      "comment": "PERSPECTIVE 3: AGRIBUSINESS CORPORATION (ROPE) \u2014 Experiences monoculture as pure coordination mechanism. Single-crop systems enable mechanization, supply chain standardization, and commodity futures trading. Low verification costs, predictable yields, and global market access. Net beneficiary \u2014 the constraint solves their coordination problem of scaling production across regions."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regenerative Agriculture Coalition",
+      "comment": "PERSPECTIVE 4: REGENERATIVE AGRICULTURE COALITION (SCAFFOLD) \u2014 Organized agents (certification bodies, organic movements, permaculture networks) see monoculture as a temporary institutional lock with sunset mechanisms. Soil restoration protocols, agroforestry certification, and carbon credits create economic alternatives to commodity monoculture. As carbon markets mature and consumer premiums for regenerative products increase, the monoculture system loses economic necessity. Theater is moderate (regenerative certification itself has performative elements), but the exit pathway is real and visible."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Agricultural Policy Apparatus",
+      "comment": "PERSPECTIVE 5: AGRICULTURAL POLICY APPARATUS (PITON) \u2014 Government agencies, agricultural extension services, and development banks maintain monoculture promotion through inertia despite degraded primary function. Commodity crop subsidies, crop insurance designed for monoculture, and extension agent training all embed monoculture assumptions. The apparatus persists because it has institutional constituencies (commodity boards, input supplier lobbies) \u2014 not because the original function (feeding growing populations) requires monoculture. Theater ratio is high: agricultural extension agents teach monoculture methods that increase vulnerability to climate shocks, contrary to stated resilience goals."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, monoculture appears to be a necessary law of modern agriculture: economies of scale, mechanization, and population density supposedly require large-scale single-crop systems. This naturalized framing obscures that monoculture is a contingent institutional arrangement optimized for 20th-century commodity markets and fossil fuel inputs. The engine's false summit detector will identify this as naturalization of a policy-contingent system, not a natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "soil_depletion_reversibility",
+      "question": "What is the time horizon for soil ecosystem recovery after monoculture exit, and does it exceed the investment payback period for diversification?",
+      "resolution_mechanism": "Long-term soil quality monitoring in transition farms; quantification of organic matter recovery curves and mycorrhizal network restoration timelines",
+      "impact": "If recovery < 5 years: exit is economically rational despite short-term yield loss. If recovery > 15 years: exit becomes intergenerational sacrifice, raising identity_locked dynamics (farmer identity locked into monoculture via parent expectations and knowledge inheritance).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for soil ecosystem recovery after monoculture exit"
+    },
+    {
+      "id": "market_access_alternative",
+      "question": "Do diversified agricultural systems have genuine market access and price stability comparable to commodity monoculture, or is 'market access' rhetoric substituting for actual supply chain barriers?",
+      "resolution_mechanism": "Comparative analysis of diversified farm profitability vs monoculture across regions; investigation of why organic and diverse-crop premiums persist but do not scale; supply chain audit for non-commodity agricultural products",
+      "impact": "If genuine access exists: farmers are not trapped but constrained (rational economic calculation). If access is illusory: farmers are trapped, and the snare perspective is strengthened. This determines whether exit_options should be 'constrained' or 'trapped' for the smallholder farmer.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether diversified agricultural systems have genuine market access"
+    },
+    {
+      "id": "subsidy_architecture_counterfactual",
+      "question": "If commodity subsidies were removed and replaced with equal funding for regenerative agriculture, would farmer preference shift away from monoculture, or are there structural constraints beyond price signals?",
+      "resolution_mechanism": "Policy counterfactual analysis; examination of subsidy withdrawal cases (EU, India); behavioral studies of farmer crop choice when prices are equal",
+      "impact": "If preference shifts: extraction is mediated through subsidy design (Tangled Rope becomes more visible). If preference persists: identity-lock and knowledge-lock dimensions are structural (identity_locked exit option becomes appropriate; piton classification is strengthened).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Farmer preference for monoculture absent subsidies and price distortions"
+    },
+    {
+      "id": "climate_volatility_threshold",
+      "question": "At what level of weather unpredictability does monoculture's yield stability advantage reverse, and is that threshold being crossed in the interval measurement period?",
+      "resolution_mechanism": "Analysis of yield variance in monoculture vs diversified systems across climate regimes; extrapolation of regional precipitation/temperature volatility trends",
+      "impact": "If threshold is crossed during interval: monoculture's primary economic justification evaporates, and the constraint transitions from Tangled Rope (genuine coordination benefit) to Snare (pure extraction). This omega resolves the mandatrophy: does the coordination function degrade, changing the classification?",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Climate threshold at which monoculture yields become less stable than diversified systems"
+    },
+    {
+      "id": "identity_lock_mechanism_in_agriculture",
+      "question": "Is farmer attachment to monoculture crops primarily structural (economic necessity, lack of alternatives) or identity-locked (internalized belief that monoculture is 'modern farming', tied to social status and family reputation)?",
+      "resolution_mechanism": "Qualitative research on farmer identity narratives; comparison of crop choice when economic constraints are removed (e.g., land gift, debt forgiveness) vs when they persist",
+      "impact": "If identity-locked: exit requires not just capital but identity shift (becoming a 'traditional' or 'organic' farmer carries perceived status loss). This explains why some farmers refuse diversification even when economically advantageous. Classification of farmer perspective shifts from trapped to identity_locked, deepening the extraction narrative.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether farmer attachment to monoculture is structural or identity-locked"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Land use monoculture lock represents a constraint system where agricultural industrialization created genuine coordination benefits in the 20th century but has become an extraction mechanism in the 21st. Large-scale commodity crop production solved the problem of feeding growing urban populations and enabled rural mechanization. However, the institutional structures, subsidy architecture, and knowledge systems that embedded monoculture have persisted even as the structural justifications have weakened due to climate volatility, soil depletion, and market consolidation. The constraint exhibits all six types from different positions: it is snare-like for smallholder farmers trapped in debt cycles; tangled rope for rural communities receiving both employment and ecological cost; rope for agribusiness corporations whose entire coordination system depends on monoculture's supply chain standardization; scaffold for regenerative agriculture coalitions building exit pathways through certification and carbon markets; piton for agricultural policy institutions that maintain monoculture promotion through inertia; and falsely mountain-like when naturalized as an economic law. The extractiveness has increased from 0.35 to 0.58 over the interval as input costs have risen and as market consolidation has increased asymmetries between farmers and agribusiness. Theater ratio has risen from 0.40 to 0.55 as agricultural policy increasingly uses sustainability language while maintaining monoculture-optimized subsidy structures.",
+    "key_agents": [
+      "Smallholder Farmers: Primary victims (powerless/trapped) \u2014 locked into monoculture by debt cycles, seed patents, and loss of diversification knowledge",
+      "Agribusiness Corporations: Primary beneficiaries (institutional/arbitrage) \u2014 capture economies of scale, supply chain standardization, and commodity futures advantages",
+      "Input Suppliers (seeds, fertilizers, pesticides): Secondary beneficiaries (institutional/arbitrage) \u2014 business model depends on monoculture-driven input consumption",
+      "Rural Communities: Secondary victims (moderate/constrained) \u2014 benefit from employment and infrastructure but lose alternative income sources and bear ecological costs",
+      "Regenerative Agriculture Coalition: Organized agents (organized/constrained) \u2014 arXiv of agriculture; building alternative certification and market structures for crop diversity",
+      "Agricultural Policy Apparatus: Institutional actor (institutional/arbitrage) \u2014 maintains monoculture bias through subsidy design, extension agent training, and crop insurance structures; sees own function as degraded (piton)",
+      "Soil Ecosystems & Pollinator Communities: Powerless victims (powerless/trapped) \u2014 bear ecological extraction with no exit; abstractly victim but ecologically concrete"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. At the constraint's origin (1960s-1980s), monoculture provided genuine coordination benefits justifying the extraction it imposed. As of 2026, the primary justification (yield efficiency per hectare) persists, but secondary costs have accumulated: soil organic matter depletion, pollinator loss, input cost escalation, climate volatility amplification. The rising extractiveness reflects that the coordination benefit is degrading while the extraction mechanism persists. Suppression (0.68): High. Barriers to exit include: debt cycles requiring commodity crop income to service; seed patent restrictions preventing farmer seed-saving; agronomic knowledge loss (farmers no longer know how to grow diverse crops); subsidy structures that price commodity monoculture below true cost, making diverse crops appear uneconomical; market access barriers for non-commodity products; land concentration that eliminates options for small-scale diversification; and institutional capture of extension services. Theater ratio (0.55): Moderate and rising. Agricultural institutions increasingly use 'sustainability' rhetoric (precision agriculture, climate-smart agriculture) while maintaining commodity monoculture optimization. The gap between stated goals (resilience, soil health) and optimized systems (single-crop dependency) constitutes theater.",
+    "directionality_logic": "The pipeline computes directionality from beneficiary/victim declarations and power level \u00d7 exit options. Smallholder farmers are declared victims with trapped exit \u2192 high d \u2192 high f(d) \u2192 high experienced extraction (snare perspective). Agribusiness is declared beneficiary with arbitrage exit \u2192 low d \u2192 low/negative f(d) \u2192 negative experienced extraction (rope perspective). Rural communities are victims with constrained exit \u2192 moderate d \u2192 moderate f(d) \u2192 moderate extraction (tangled rope perspective). The regenerative coalition is organized with constrained exit, treating the constraint as temporary \u2192 moderate extraction but visible sunset. The policy apparatus benefits from the institutional status quo but is captured within it \u2192 moderate d for an institutional actor, producing piton classification from theater rather than from chi. The analytical observer risks seeing monoculture as natural law but lacks the structural data to justify this \u2014 the false summit detector flags naturalization.",
+    "perspectival_gap": "The gap between the agribusiness perspective (Rope: monoculture solves coordination, low extraction) and the smallholder farmer perspective (Snare: debt traps, trapped exit, maximum extraction) is the defining asymmetry. Both perspectives measure the same structural system, but from opposite directionalities. The gap reveals that what is genuine coordination for the beneficiary is extraction for the victim. The rural community sees both (Tangled Rope) \u2014 monoculture does provide employment, but also depletes soil and eliminates alternatives. The policy apparatus sees its own degradation (Piton) \u2014 extension services that were designed to increase farmer productivity now increase farmer input dependency. The regenerative coalition sees a temporary system with sunset mechanisms (Scaffold). The civilizational analyst risks naturalizing a contingent 20th-century policy choice.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The constraint satisfies all three gates. (1) Beneficiaries exist: agribusiness, input suppliers, and commodity traders benefit from monoculture's supply chain standardization and market predictability. This is genuine coordination \u2014 these agents could not operate at current scale without monoculture. (2) Victims exist: smallholder farmers, soil ecosystems, and pollinator communities bear extraction costs. (3) Active enforcement exists: subsidy design, seed patents, extension service training, and land-clearing regulations enforce monoculture adoption. The tangled rope type prevents misclassification as pure extraction (Snare) \u2014 monoculture does solve real coordination problems. It also prevents misclassification as pure coordination (Rope) \u2014 the distribution of costs and benefits is asymmetric and maintained through enforcement. As climate volatility increases (omega 4), the coordination benefit may degrade faster than the extraction mechanism, potentially shifting the constraint toward Snare. The theater ratio indicates the policy apparatus increasingly masks extraction with sustainability language while maintaining monoculture-optimized structures \u2014 a Piton signature emerging within the Tangled Rope."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "agricultural_subsidies",
+      "seed_patent_monopoly",
+      "soil_carbon_market_arbitrage"
+    ],
+    "dual_formulation_note": "Monoculture lock decomposes into three structurally distinct constraints: (1) agricultural_subsidies (\u03b5=0.42, Tangled Rope) \u2014 coordinates commodity market access while extracting from small-scale producers through price distortion; (2) seed_patent_monopoly (\u03b5=0.71, Snare) \u2014 pure extraction via intellectual property restriction, no coordination benefit; (3) soil_carbon_market_arbitrage (\u03b5=0.35, Rope) \u2014 emerging coordination mechanism for carbon credit allocation across land use types. Land use monoculture lock is a meta-constraint linking these three. Its classification and extractiveness depend on which sub-constraint dominates the agent's experience."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ]
+}

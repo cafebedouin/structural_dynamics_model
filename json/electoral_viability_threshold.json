@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "electoral_viability_threshold",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "evt"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Electoral Viability Threshold",
+    "topic_domain": "political_economy/electoral_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "major_party_duopoly",
+      "institutional_gatekeepers"
+    ],
+    "victims": [
+      "third_party_candidates",
+      "voter_choice_diversity",
+      "policy_innovation"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Third-Party Candidate",
+      "comment": "PERSPECTIVE 1: THIRD-PARTY CANDIDATE (SNARE) \u2014 Structurally barred from ballot access, media coverage, debate stages, and funding mechanisms. Cannot exit the constraint without abandoning candidacy entirely. Experiences extraction as total exclusion: must win 5% nationally (ballot access) or 15% (debate threshold) despite zero media coverage and donor inaccessibility \u2014 a catch-22 mechanism. Maximum suppression with zero degrees of freedom."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Swing Voter",
+      "comment": "PERSPECTIVE 2: SWING VOTER (TANGLED ROPE) \u2014 Faces genuine coordination problem (two-party system reduces transaction costs for electoral participation and signal clarity) but also faces extraction: viability threshold suppresses visibility of policy alternatives, constraining voter choice set. Can exit through strategic voting or abstention, but at cost of reduced preferred-outcome probability. Moderate extraction with some agency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Major Party Duopoly",
+      "comment": "PERSPECTIVE 3: MAJOR PARTY DUOPOLY (ROPE) \u2014 Benefits from viability threshold as a coordination mechanism: two-party system reduces fragmentation, stabilizes coalition-building, and guarantees turnout incentives. Experiences the constraint as solving a genuine collective action problem. Net beneficiary with full exit option (could support proportional representation but choose not to) and arbitrage access (can shift policy toward center to capture swing voters)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Electoral Apparatus",
+      "comment": "PERSPECTIVE 4: ELECTORAL APPARATUS (PITON) \u2014 The institutional machinery (ballot access rules, debate commissions, polling thresholds, FEC regulations) enforces the viability threshold through legislative inertia rather than active coordination benefit. Theater ratio is high: regulations ostensibly ensure 'serious candidates' (performative criterion), but actually function to exclude dynamic challengers. The apparatus perceives its own rules as arbitrary and sometimes proposes reform, yet enforcement persists through institutional path-dependency and major-party pressure."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Electoral Reform Movement",
+      "comment": "PERSPECTIVE 5: ELECTORAL REFORM MOVEMENT (SCAFFOLD) \u2014 Organized actors (ranked-choice voting campaigns, open primary advocates, ballot-access reformers) see the viability threshold as a temporary institutional structure with a genuine sunset clause. Ranked-choice voting, fusion voting, and open-primary reforms are actively narrowing the threshold by changing the mechanism itself. Low effective extraction because this coalition has agency, resources, and a structural exit pathway. Suppression is declining as reforms spread."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some electoral viability threshold is inherent to any voting system: candidates below a certain vote-getting capacity cannot plausibly form government or influence policy. This perspective treats the threshold as an immutable mathematical property of electoral systems. However, this naturalizes what is actually a contingent institutional parameter (5% for ballot access, 15% for debates, 270 for electoral college) \u2014 different electoral systems produce different thresholds. The engine's false summit detector identifies this as naturalization of design choices."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "threshold_coordination_vs_extraction",
+      "question": "Is the viability threshold a coordination mechanism preventing fragmentation, or primarily an extraction mechanism maintaining duopoly rent-seeking?",
+      "resolution_mechanism": "Cross-national analysis: compare electoral concentration and policy diversity in two-party systems with viability thresholds vs proportional-representation systems with lower thresholds; track outcomes across system reforms (e.g., ranked-choice adoption, open-primary shifts)",
+      "impact": "If primarily coordination: major-party constraint and voter suppression are byproducts of legitimate stability needs; threshold can be marginally optimized but not eliminated. If primarily extraction: threshold is maintaining duopoly power; reform to proportional or ranked-choice voting would reveal suppressed policy demand.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether threshold functions as coordination or extraction mechanism"
+    },
+    {
+      "id": "media_coverage_amplification",
+      "question": "Does media coverage of viability (polling-driven narrative) amplify the threshold effect, or merely reflect underlying structural barriers?",
+      "resolution_mechanism": "Experimental analysis: comparison of third-party performance in media markets with vs without viability-threshold framing; longitudinal tracking of media coverage thresholds vs actual vote-getting capacity; analysis of feedback loops between polling, coverage, and donor access",
+      "impact": "If media-amplified: reducing coverage of viability narrative could materially lower effective threshold; third-party candidates are suppressed by narrative rather than solely by structural rules. If structural: media reflects real barriers and cannot change outcome through coverage alone.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether media viability framing amplifies or reflects threshold effects"
+    },
+    {
+      "id": "swing_voter_preference_aggregation",
+      "question": "To what extent do swing voters prefer the two-party constraint as a simplifying heuristic vs being suppressed by information asymmetry about third-party alternatives?",
+      "resolution_mechanism": "Survey research: assess voter preference for two-party vs multi-party systems under full information about alternatives; behavioral experiments on choice architecture effects; longitudinal tracking of voter preference shifts during electoral-reform campaigns",
+      "impact": "If preference-based: viability threshold reflects genuine voter coordination demand; lowering it without addressing preference-shifting may not increase third-party support. If suppression-based: voters have latent demand for alternatives that threshold currently masks.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether swing voters prefer two-party constraint or are suppressed by it"
+    },
+    {
+      "id": "coalition_viability_of_third_parties",
+      "question": "Can third parties achieve legislative viability (coalition-building capacity) below the current electoral viability threshold, or does threshold reflect genuine coalition-formation mathematics?",
+      "resolution_mechanism": "Institutional analysis: examine coalition-building mechanics in multi-party legislatures; compare governing-coalition formation rates in proportional-representation systems vs two-party systems; simulate coalition outcomes under different viability thresholds",
+      "impact": "If threshold is mathematically necessary: lowering it creates gridlock or unstable governments; extraction may be justified cost of stability. If threshold is political choice: many legislative systems function at lower thresholds; extraction is not inherent.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether electoral viability threshold reflects coalition-formation mathematics"
+    },
+    {
+      "id": "reform_sunset_trajectory",
+      "question": "Are electoral reform movements creating a genuine structural transition (sunset for current viability regime), or do they generate temporary perturbations that reset to equilibrium?",
+      "resolution_mechanism": "Historical analysis of ballot-access, debate, and primary reforms; tracking of policy outcomes post-reform; longitudinal measurement of third-party vote share and institutional presence in reformed vs unreformed jurisdictions",
+      "impact": "If genuine sunset: scaffold classification is correct; viability threshold is temporary institutional form. If oscillatory: reforms generate temporary expansions followed by duopoly consolidation; threshold is structurally stable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether reform movements create structural transition or oscillatory equilibrium"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The electoral viability threshold is a structural constraint that prevents candidates and parties from appearing on ballots, participating in debates, receiving media coverage, and accessing donor networks unless they demonstrate prior electoral success. This creates a catch-22: candidates need resources and visibility to achieve viability, but only achieve resources and visibility after demonstrating viability. The constraint exhibits characteristics of both coordination (two-party systems reduce transaction costs and provide clear signals) and extraction (the same mechanism suppresses policy alternatives and voter choice). The viability threshold operates through multiple enforcement mechanisms: ballot-access signatures and filing fees (40+ states require 5%-15% of prior vote), debate commission polling thresholds (15% to qualify for major debates), media narrative (viability framing in polls and coverage), and donor access (only 'viable' candidates receive institutional funding). These mechanisms are mutually reinforcing: a candidate below the threshold cannot access media to raise their polling numbers, cannot qualify for debates to raise their visibility, and cannot attract donors without demonstrated viability. The constraint's extractiveness has increased over the past 10 years as media concentration (fewer outlets, greater reliance on polling aggregation) has amplified the viability narrative, and as debate commission thresholds have risen. The theater ratio is high because much of the enforcement is performative: the 'serious candidate' criterion is articulated, but actual candidate quality does not correlate with viability thresholds (many major-party nominees fail the actual governance test). Electoral reform movements (ranked-choice voting, open primaries, ballot-access reform) are creating genuine alternative pathways that represent a true sunset clause for the current threshold structure.",
+    "key_agents": [
+      "Third-Party Candidates: Primary victims (powerless/trapped) \u2014 structurally barred from all mechanisms of viability; experience catch-22 suppression",
+      "Swing Voters: Secondary victims (moderate/constrained) \u2014 face reduced choice set and information asymmetry about alternatives; can exit through abstention or strategic voting at cost",
+      "Major Party Duopoly: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from fragmentation prevention and predictable coalition-building; capture policy space between parties",
+      "Institutional Gatekeepers: Secondary beneficiaries (institutional/constrained) \u2014 ballot commissions, debate commissions, FEC; maintain thresholds through regulatory inertia",
+      "Electoral Apparatus: Tertiary actor (institutional/constrained) \u2014 enforces thresholds through ballot-access rules, debate qualification, and coverage norms; perceives own rules as arbitrary",
+      "Electoral Reform Movement: Organized challenger (organized/constrained) \u2014 actively building alternative pathways (ranked-choice, open primary, fusion voting) with structural sunset logic",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional thresholds as inherent electoral mathematics"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. The viability threshold generates asymmetric extraction concentrated on third-party candidates and voters seeking policy alternatives. The original research showed 0.45 at t=0 (when the constraint was primarily structural rule-based) rising to 0.58 at t=10 (as media amplification and debate commission thresholds have tightened the mechanism). This increase reflects not a change in the formal rules but an intensification of their enforcement through narrative and coordination mechanisms. Suppression (0.65): High. Barriers to third-party viability include ballot-access requirements (signatures, filing fees), debate-qualification thresholds (15% polling), media access (viability-driven coverage), donor access (institutional funding flows to 'viable' candidates only), and strategic voting disincentives (voter perception that third-party vote 'wastes' their ballot). Importantly, suppression is not total \u2014 some third-party candidates achieve ballot access and limited visibility, and some voters do support third parties despite viability penalties. Theater ratio (0.68): High. The enforcement of viability is substantially performative: 'serious candidate' criteria (demonstrated capacity, organization, message clarity) are articulated, but actual correlation with governance success is weak. Debate commission thresholds ostensibly identify serious candidates but actually exclude candidates with real policy followings. Media viability framing creates narrative performance independent of actual vote-getting capacity \u2014 a candidate can be 'not viable' in media frames despite having real support.",
+    "directionality_logic": "Directionality derivation for electoral viability constraint: Third-party candidates are victims in a trapped position (d\u21920.95), experiencing full f(d)\u22481.42 extraction amplification. Swing voters are victims in constrained position (d\u21920.70), experiencing f(d)\u22481.00 amplification. Major-party duopoly are beneficiaries with arbitrage exit (d\u21920.10), experiencing f(d)\u2248-0.01 (institutional subsidy). Debate commissions and ballot authorities are institutional actors with constrained exit who enforce but do not benefit (d\u21920.55, f(d)\u22480.65). Electoral reform organizations are organized challengers with constrained exit and moderate targeting (d\u21920.60, f(d)\u22480.75). The scope modifier \u03c3(S) is 1.0 at national scale (the natural enforcement level for electoral thresholds), so \u03c7 = \u03b5 \u00d7 f(d) \u00d7 1.0 for all perspectives.",
+    "perspectival_gap": "The third-party candidate perspective (Snare) directly contradicts the major-party duopoly perspective (Rope). Both perspectives operate from institutional power atoms with different exit options (trapped vs arbitrage), producing opposite directional relationships to the same constraint. The duopoly benefits from the threshold as a coordination mechanism; the third party bears it as pure extraction. This gap is not resolvable into a single 'true' type \u2014 it reveals the hybrid nature of the constraint. The institutional electoral apparatus perceives the constraint as degraded (Piton) \u2014 maintaining performance without function \u2014 while the reform movement sees it as temporary (Scaffold) with real institutional sunset. The swing voter perspective bridges duopoly and third-party: they experience genuine coordination benefits (clarity, coalition stability) alongside real extraction (suppressed choice). This mixed experience places them in Tangled Rope territory. The analytical observer's Mountain classification fails the false summit test: civilizational-scale electoral mathematics does not require a 15% polling threshold; it requires only some threshold, which varies by system design.",
+    "mandatrophy_analysis": "DIAGNOSTIC EXEMPLAR: Electoral viability threshold resolves mandatrophy by showing that all six types are legitimate from different structural positions. The mandatrophy is not 'which type is correct?' but 'from which position are you measuring?' This resolves the ostensible contradiction between 'the threshold is essential coordination' (duopoly view, Rope) and 'the threshold is pure extraction' (third-party view, Snare). Both are true \u2014 they describe different extraction flows through the same constraint. The threshold coordinates major-party coalitions while extracting from third-party competitors and suppressing voter preferences. The high theater ratio (0.68) indicates that enforcement relies significantly on narrative and institutional inertia rather than necessity \u2014 'serious candidate' standards are applied inconsistently, debate thresholds vary by commissions, and media viability framing is contingent on coverage patterns. The Piton classification of the electoral apparatus confirms this: the rules persist through institutional path-dependency, not because they solve the coordination problem better than alternatives. The Scaffold perspective from the reform movement indicates that the constraint is structurally time-limited: ranked-choice voting (Maine, Alaska, Colorado), fusion voting (New York), and open-primary reforms (California) are building genuine alternative pathways. These are not marginal tweaks but structural changes to how viability is determined. The analytical observer's false summit reveals the naturalizing move: framing 'some threshold must exist' as 'this specific 15% threshold is immutable.' It is not. The threshold is a parameter choice, contingent on electoral system design."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "two_party_system_lock",
+      "campaign_finance_duopoly",
+      "media_narrative_gatekeeping"
+    ],
+    "dual_formulation_note": "The electoral viability threshold is downstream of formal ballot-access and debate-commission rules but represents a distinct structural constraint with its own enforcement mechanisms (narrative, media coordination, donor access). The upstream constraints (two-party system, campaign finance rules, media ownership) have their own extractiveness values; the viability threshold has its own (0.58) reflecting the specific coordination-extraction hybrid it instantiates. All three constraints are linked: viability threshold depends on and reinforces campaign finance duopoly and media gatekeeping."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

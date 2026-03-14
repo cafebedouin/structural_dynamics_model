@@ -1,0 +1,191 @@
+{
+  "header": {
+    "constraint_id": "startup_capital_barrier",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "startup"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Startup Capital Barrier and Entrepreneurial Access",
+    "topic_domain": "economic/venture_capital",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "established_venture_capitalists",
+      "institutional_investors",
+      "well_connected_entrepreneurs"
+    ],
+    "victims": [
+      "capital_constrained_founders",
+      "geographically_distant_entrepreneurs",
+      "underrepresented_demographic_founders"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Capital-Starved Founder",
+      "comment": "PERSPECTIVE 1: CAPITAL-STARVED FOUNDER (SNARE) \u2014 Faces structural impossibility of bootstrapping to scale without venture capital access. No alternative funding pathways reach sufficient magnitude. Trapped by minimum viable scale threshold and geographic/network distance from capital sources. High extraction: captures disproportionate dilution, unfavorable terms, and survival dependence on investor requirements. Suppression near total \u2014 cannot exit or negotiate meaningfully."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Well-Connected Founder",
+      "comment": "PERSPECTIVE 2: WELL-CONNECTED FOUNDER (TANGLED ROPE) \u2014 Benefits from insider access to capital networks while also bearing extraction through unfavorable equity distribution and investor control. Constrained by competitive pressure and market timing but has real negotiating power. Experiences genuine coordination: capital providers match with execution teams. Asymmetric extraction exists but is moderate \u2014 the constraint partially solves a real matching problem while extracting rents through information asymmetry and gatekeeping."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Venture Capital Fund",
+      "comment": "PERSPECTIVE 3: VENTURE CAPITAL FUND (ROPE) \u2014 Benefits directly from the capital barrier: restricted supply of viable investment opportunities justifies premium returns. Experiences the constraint as pure coordination: matching capital with founders solves a genuine market problem. Low suppression from this perspective \u2014 can exit by diversifying into other asset classes. Net beneficiary with functional coordination logic underlying the relationship."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Alternative Finance Coalition",
+      "comment": "PERSPECTIVE 4: ALTERNATIVE FINANCE COALITION (TANGLED ROPE) \u2014 Crowdfunding platforms, angel syndicates, and community financing mechanisms coordinate alternative capital pathways while also creating parallel extraction mechanisms (platform fees, syndicate dilution). Organized agents with constrained exit options: building alternatives while simultaneously locked into ecosystem dynamics. Moderate extraction with genuine coordination function \u2014 the constraint is being actively decomposed but remains hybrid."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Banking System",
+      "comment": "PERSPECTIVE 5: LEGACY BANKING SYSTEM (PITON) \u2014 Traditional bank lending to startups has atrophied despite theoretical capacity. Theater persists: small business lending programs exist and are promoted as solutions, but represent minimal actual capital flow to early-stage ventures. The constraint maintains through institutional inertia \u2014 banks retain lending divisions and small business programs for regulatory and optics purposes while capital flows to venture funds. High theater ratio reflects degraded function masked by institutional theater."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, capital scarcity and information asymmetry between funders and founders appear as immutable economic constraints: matching high-risk ventures with capital inevitably requires verification mechanisms, risk aggregation, and return extraction. This perspective naturalizes what is actually a contingent institutional arrangement (venture capital as the primary scaling mechanism) as an inherent feature of entrepreneurship. The engine's false summit detector will flag this as naturalization of a contingent structure."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "alternative_funding_sufficiency",
+      "question": "Can alternative funding mechanisms (grants, revenue-based financing, community capital, public investment) reach sufficient scale and speed to compete with venture capital for funding viable high-growth startups?",
+      "resolution_mechanism": "10-year comparative analysis of capital deployed through alternative mechanisms vs. venture; tracking of founding outcome rates stratified by funding source; assessment of geographic and demographic access parity",
+      "impact": "If alternative mechanisms reach parity: suppression drops significantly, constraint reclassifies toward Rope from multiple perspectives. If they remain marginal: suppression remains high, constraint remains Snare/Tangled Rope across perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative funding mechanisms can achieve scale parity with venture capital"
+    },
+    {
+      "id": "information_asymmetry_mechanism",
+      "question": "Is the primary extraction mechanism information asymmetry (investors have better diligence capacity), network gatekeeping (capital flows through closed networks), or fundamental capital scarcity (insufficient capital for all viable ventures)?",
+      "resolution_mechanism": "Comparative study of outcomes for founders with equivalent access to diligence information vs. those without; analysis of network composition of successful vs. failed capital raises; measurement of actual vs. theoretical capital supply needed for viable ventures",
+      "impact": "If primarily information asymmetry: could be addressed through transparency mechanisms, reducing suppression. If primarily gatekeeping: requires network expansion interventions. If capital scarcity: structure is inherently extractive and difficult to reform without macro change.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Primary mechanism driving capital barrier extraction"
+    },
+    {
+      "id": "geographic_capital_concentration_inevitability",
+      "question": "Is geographic concentration of venture capital (San Francisco, Boston, Beijing) an inevitable feature of capital market efficiency or a contingent institutional arrangement maintained by network effects and regulatory path dependence?",
+      "resolution_mechanism": "Historical analysis of capital concentration over time; comparative study of distributed vs. concentrated capital ecosystems; assessment of whether geographic distribution increases or decreases capital allocation efficiency and startup success rates",
+      "impact": "If inevitable: geographic extraction is a structural feature of the constraint. If contingent: distributed capital mechanisms could reshape the constraint's spatial scope properties and suppress the regional/national level extraction.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether geographic capital concentration is inevitable or contingent"
+    },
+    {
+      "id": "founder_identity_lock_versus_exit_cost",
+      "question": "For capital-constrained founders, is the binding mechanism primarily material (no alternative path to scale) or identity-locked (internalized belief that venture capital is the only legitimate scaling pathway)?",
+      "resolution_mechanism": "Qualitative analysis of founder narratives and aspirations; study of founders who exit startup formation entirely vs. those who pursue alternative models; assessment of whether identity-lock persists post-exit or dissolves when material barriers are removed",
+      "impact": "If primarily material: exit_options classification as 'trapped' is correct. If partially identity-locked: some founders experience the constraint at 'identity_locked' exit level, changing classification from Snare to Rope at biographical time horizon.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether founder barriers are material or identity-based"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "commentary": {
+    "narrative_context": "The startup capital barrier represents a structural constraint on entrepreneurial access where capital scarcity, information asymmetry, and network gatekeeping combine to extract rents from founders seeking to scale ventures beyond bootstrap capacity. This constraint exhibits the full range of DR classification depending on observer position. For capital-starved founders, the barrier functions as a snare \u2014 they face suppression through minimum viable scale thresholds, geographic distance from capital sources, and lack of network access, with no meaningful exit option. For well-connected founders, the constraint functions as tangled rope \u2014 they benefit from coordination (matching capital with execution) while bearing asymmetric extraction through dilution and investor control. For venture capital funds, the constraint is pure rope \u2014 it solves a genuine matching problem while restricting supply and justifying premium returns. The constraint exhibits modest theater (0.35) because the fundamental coordination function (matching capital with ventures) is real, unlike purely extractive systems. However, extractiveness has drifted upward (0.48 to 0.58) over 14 years as information asymmetry has increased and geographic concentration has deepened, suggesting rent-seeking layering onto the coordination function.",
+    "key_agents": [
+      "Capital-Constrained Founders: Primary victims (powerless/trapped) \u2014 face structural impossibility of scaling without venture access; geographically distant or from underrepresented demographics; no alternative funding pathways reach sufficient magnitude",
+      "Well-Connected Founders: Secondary victims/beneficiaries (moderate/constrained) \u2014 access capital networks but negotiate from weaker position than investors; benefit from insider knowledge but extract disproportionate value through network gatekeeping",
+      "Venture Capital Funds: Primary beneficiaries (institutional/arbitrage) \u2014 extract rents from capital scarcity and information asymmetry; capture disproportionate returns through dilution and control mechanisms; have full exit optionality",
+      "Angel Investors and Syndicates: Secondary beneficiaries (powerful/mobile) \u2014 operate within capital networks; some gatekeeping power but less concentrated than institutional funds; moderate extraction",
+      "Alternative Finance Coalition: Organized agents (organized/constrained) \u2014 crowdfunding platforms, community capital, revenue-based financing; building parallel mechanisms but also locked into ecosystem dynamics; moderate extraction with genuine coordination function",
+      "Legacy Banking System: Institutional actor (institutional/arbitrage) \u2014 theoretically could provide capital but has largely exited market; maintains theater through small business programs and lending divisions while capital flows elsewhere; piton classification reflects degraded function masked by institutional inertia",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing venture capital as the inevitable matching mechanism for high-growth ventures rather than seeing it as one contingent institutional arrangement among alternatives"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and increasing. The constraint extracts through three mechanisms: (1) capital scarcity driving dilution and unfavorable terms, (2) information asymmetry enabling investor selection and control, and (3) network gatekeeping limiting access to capital. The increase from 0.48 to 0.58 reflects growing geographic concentration and rise of mega-funds with outsized bargaining power. The value is not higher because genuine coordination function exists \u2014 venture capital does solve the matching problem of connecting capital with execution capability, and some founders do achieve outsized returns. Suppression (0.65): Moderate-high. Barriers to alternative funding pathways, minimum viable scale thresholds, geographic concentration of capital, and demographic gatekeeping create significant but not total suppression. Some founders can bootstrap, pursue alternative funding, or build differently. Bootstrapped companies and revenue-based financing represent suppression reduction mechanisms, though remaining marginal at ecosystem scale. Theater ratio (0.35): Moderate-low. The constraint's coordination function is substantially real \u2014 matching capital with ventures solves a genuine information and risk aggregation problem. Theater exists in investor pitching rituals and due diligence theater, but is lower than purely extractive constraints. The legacy banking system's theater (maintained through small business programs) is higher, but the venture ecosystem's theater is moderate.",
+    "perspectival_gap": "This constraint demonstrates stark perspectival divergence. The venture capital fund sees pure coordination (Rope) \u2014 they are solving the matching problem of connecting capital with founders. The capital-constrained founder sees pure extraction (Snare) \u2014 they have no exit and face maximum extraction through dilution and control. The well-connected founder sees mixed coordination and extraction (Tangled Rope) \u2014 the system enables their growth while extracting through asymmetric terms. The alternative finance coalition sees a problem being solved (Tangled Rope at generational scale) \u2014 new mechanisms are emerging that reduce the constraint but also create parallel extraction. The legacy banking system sees its own degraded function (Piton) \u2014 small business lending persists through institutional inertia despite minimal capital actually flowing to early-stage ventures. The civilizational observer risks seeing natural law (Mountain) \u2014 venture capital as the inevitable matching mechanism \u2014 but the structural data reveals this as naturalization of a contingent institutional arrangement.",
+    "directionality_logic": "Directionality values flow from structural position. Capital-constrained founders with trapped exit options and victim status derive high d (0.92 empirically) \u2014 they experience maximum extraction. Well-connected founders with constrained exit but beneficiary status derive moderate d (0.55) \u2014 they benefit from network access but face extraction through asymmetric terms. Venture capital funds with arbitrage exit and beneficiary status derive low d (0.08) \u2014 extraction flows toward them. The analytical observer at civilizational scope derives d approximately 0.72 \u2014 they see the system but are not embedded in its extraction mechanism. These directional differences explain why the same constraint produces different chi values across perspectives: high chi for trapped agents (f(d) \u2248 1.42), moderate chi for constrained agents (f(d) \u2248 0.90), negative chi for arbitrage beneficiaries (f(d) \u2248 -0.12).",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that venture capital serves both genuine coordination and extractive functions simultaneously. The coordination function is real: matching capital with founders under uncertainty is hard, and institutional structures for aggregating capital and evaluating ventures do provide value. The extraction is real: the barrier restricts supply, enables gatekeeping, and concentrates returns toward investors and well-connected founders. The constraint cannot be classified as pure rope (no genuine coordination, all theater) because scaling ventures beyond bootstrap truly requires capital and evaluation capability. It cannot be classified as pure snare (all extraction, no coordination) because the matching problem is genuine and solutions exist. It is tangled rope \u2014 the same structure that solves the matching problem also enables extraction through gatekeeping. The mandatrophy resolution is that both functions are structural and neither can be eliminated without destroying the other: solving the matching problem requires concentrated capital and evaluation capacity, which naturally creates gatekeeping positions and extraction opportunities."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "geographic_inequality_divergence",
+      "venture_capital_return_concentration",
+      "founder_demographic_representation"
+    ],
+    "dual_formulation_note": "The startup capital barrier decomposes into multiple structurally distinct constraints: capital scarcity (information/matching problem), network gatekeeping (social structure problem), and geographic concentration (spatial distribution problem). Each has different \u03b5 values and different intervention points. This story captures the aggregate constraint; downstream stories address specific mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.35
+    }
+  ]
+}

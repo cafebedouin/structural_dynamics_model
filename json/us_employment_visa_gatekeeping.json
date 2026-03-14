@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "us_employment_visa_gatekeeping",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "visagate"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "US Employment Visa Gatekeeping System",
+    "topic_domain": "labor_migration/economic_regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_workers_protected_sectors",
+      "visa_sponsoring_employers",
+      "regulatory_bureaucracy"
+    ],
+    "victims": [
+      "foreign_skilled_workers",
+      "labor_market_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Foreign Skilled Worker",
+      "comment": "PERSPECTIVE 1: FOREIGN SKILLED WORKER (SNARE) \u2014 Structurally trapped by visa dependency. Cannot work without sponsorship, cannot change employers without restarting immigration process, cannot accumulate residual labor market value. Maximum experienced extraction through employment lock-in, delayed green card pathways (10+ year waits for certain nationals), and employer leverage. No exit options; suppression is structural and comprehensive."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Incumbent Protected-Sector Workers",
+      "comment": "PERSPECTIVE 2: INCUMBENT PROTECTED-SECTOR WORKERS (TANGLED ROPE) \u2014 Genuine coordination benefit: visa restrictions prevent wage competition in certain sectors, protecting employment security and wages. Active enforcement required through labor certification requirements, prevailing wage rules, H-1B lottery caps. But the constraint contains asymmetric extraction: maintains artificial wage floors and employment protections through gatekeeping rather than genuine productivity or skill differentiation. Organized power and constrained exit (retraining costs, geographic dependency) prevent total extraction reversal."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Visa-Sponsoring Employers",
+      "comment": "PERSPECTIVE 3: VISA-SPONSORING EMPLOYERS (ROPE) \u2014 Primary beneficiary through arbitrage. Sponsors can access global talent pools at constrained wages (visa workers cannot negotiate as freely as citizens). The constraint solves coordination problems: establishing sponsorship channels, creating predictable hiring pathways, enabling retention through green card linkage. Pure coordination benefit with minimal extraction cost \u2014 employers experience the constraint as enabling rather than restrictive."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Non-Sponsoring Employers (Domestic-Only Hiring)",
+      "comment": "PERSPECTIVE 4: NON-SPONSORING EMPLOYERS (TANGLED ROPE) \u2014 Face constrained exit from visa restrictions: cannot access foreign talent to fill skills gaps, but also benefit indirectly from protected labor pools (upstream suppliers may have lower costs). Extraction flows toward sponsors; non-sponsors experience gatekeeping as a coordination failure they cannot exit from (retraining domestic workers is costly, sponsorship bureaucracy is onerous). Mixed experience of extraction and coordination dependency."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Immigration Bureaucratic System (USCIS/DOL)",
+      "comment": "PERSPECTIVE 5: IMMIGRATION BUREAUCRATIC SYSTEM (PITON) \u2014 Theater ratio high (0.64): formal labor certification, prevailing wage audits, skills assessments are substantially performative. Bureaucratic verification cannot detect actual market labor shortage vs. employer preference for constrained labor; prevailing wage rules are ritualized rather than dynamically responsive. System persists through institutional inertia and path-dependent statutory frameworks (INA of 1990). Agencies see their own gatekeeping as degraded (unable to distinguish genuine need from protectionism) but lack authority to reform. Arbitrary caps (H-1B lottery) are admitted as non-merit-based. Theater persists because statutory authority requires it, not because it functions effectively."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Startup/Remote-Work Coalition",
+      "comment": "PERSPECTIVE 6: STARTUP/REMOTE-WORK COALITION (SCAFFOLD) \u2014 Organized agents (tech founders, remote-first companies) see visa gatekeeping as a temporary coordination failure being bypassed through structural change. Remote work from abroad eliminates visa dependency if employment is nominally outside US jurisdiction. Visa alternatives (L-1, O-1 for extraordinary ability) and portable entrepreneurship paths (startup visas, founder visas) represent sunset mechanisms. Constraint experiences low effective extraction because organized agents perceive and are building exit paths. Sunset horizon: 15-20 years as geographic employment arbitrage replaces traditional visa pathways."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Global Labor Allocation)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational/global scope, the visa system coordinates labor flows while maintaining nationalist extraction: protects domestic labor markets (genuine coordination function) but implements this through gatekeeping that artificially constrains global labor allocation efficiency (asymmetric extraction toward native workers and incumbent industries). The constraint is analytically coherent as tangled_rope: both coordination (preventing labor market collapse in protected sectors) and extraction (preventing wage competition and geographic mobility). Not a mountain because the coordination function is genuine but value-laden (protecting locals vs. efficient allocation); not a pure rope because extraction is structural, not incidental."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "genuine_labor_shortage_vs_preference",
+      "question": "How to distinguish genuine skills shortage requiring visa access from employer preference for cheaper constrained labor?",
+      "resolution_mechanism": "Comparative wage analysis: if visa workers earn substantially below native-worker market rates for identical roles, preference mechanism is likely operative. Regional labor-market tightness indices: measure native unemployment vs. job openings by skill level and geography.",
+      "impact": "If genuine shortage: visa restriction is supply-side coordination problem (Rope from analyst perspective). If preference: visa restriction is demand-side extraction mechanism (Snare from analyst perspective). Distinction changes classification from rope-heavy to snare-heavy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether labor shortages are genuine or employer preference-driven"
+    },
+    {
+      "id": "lock_in_mechanism_specificity",
+      "question": "How much of the foreign worker's extraction is due to visa dependency vs. general immigrant labor market disadvantage (language, networks, credential recognition)?",
+      "resolution_mechanism": "Comparative outcome analysis: measure wage growth, mobility, career progression for visa-sponsored workers vs. native workers and vs. immigrants in similarly constrained non-visa visa categories. Control for skill level and field.",
+      "impact": "If primarily visa-specific: snare classification is correct; visa reform would substantially improve outcomes. If general immigrant disadvantage: visa specificity may be overstated; reform might have limited effect on relative extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Visa-specific vs. general immigrant labor disadvantage"
+    },
+    {
+      "id": "downstream_innovation_impact",
+      "question": "Does restricting visa access reduce US innovation and competitiveness, converting the snare into a self-harming constraint?",
+      "resolution_mechanism": "Patent citation analysis: compare innovation output per capita in visa-restrictive vs. visa-permissive sectors. Startup formation rates and founder immigration status. Brain drain to competitors (Canada, Australia, EU).",
+      "impact": "If innovation loss exceeds protectionist gain: constraint satisfies snare criteria structurally but fails on strategic interest (extraction becomes self-defeating). May justify reclassification as piton (theater persists despite loss of function) or justify scaffold sunset mechanisms.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether visa restrictions damage US innovation and competitiveness"
+    },
+    {
+      "id": "green_card_queue_pathology",
+      "question": "Do per-country green card caps and employment-based immigration queues (10+ year waits for certain nationals) represent gatekeeping extraction or backend labor policy design?",
+      "resolution_mechanism": "Historical legislative intent analysis: did caps result from deliberate protectionist intent or from statutory accident (per-country equity provisions designed for family reunification, repurposed for employment)? Compare to competing jurisdictions' green card pathways.",
+      "impact": "If intentional extraction: component of snare mechanism. If accidental: reveals piton dynamics (procedural theater persisting despite acknowledged dysfunction). Affects whether reform requires active protectionist interest removal or regulatory modernization.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Green card queue delays as intentional or accidental policy"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.54
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The US employment visa system (H-1B, EB-3, L-1, O-1, and green card pathways) operates as a labor market coordination mechanism with embedded extraction. Nominally, the system coordinates cross-border labor allocation during skills shortages and protects domestic labor markets from destabilizing competition. Structurally, it functions as a gatekeeping apparatus that binds foreign workers to specific employers, delays permanent settlement through per-country caps, and maintains wage premiums for protected domestic sectors by constraining labor supply. The constraint exhibits tangled_rope characteristics: genuine coordination function (establishing hiring channels, managing integration) coexists with systematic extraction (employer lock-in, geographic immobility, lower bargaining power for visa-dependent workers). The system's theater ratio has increased over 30 years as formal compliance mechanisms (labor certification, prevailing wage audits) have become more elaborate while core gatekeeping logic remains unchanged. Foreign skilled workers experience maximum extraction through structural dependency and multi-year immigration waits; incumbent domestic workers in protected sectors experience genuine wage and employment protection; visa-sponsoring employers experience pure arbitrage benefit through access to constrained global labor pools; and the bureaucracy that operates the system sees its own processes as substantially performative while defending gatekeeping as necessary protection.",
+    "key_agents": [
+      "Foreign Skilled Workers: Primary victims (powerless/trapped) \u2014 structurally dependent on single employer, multi-year green card delays, constrained wage negotiation and geographic mobility",
+      "Incumbent Protected-Sector Workers: Primary beneficiaries (organized/constrained) \u2014 gain wage and employment protection through restricted labor supply; face retraining costs if protections removed",
+      "Visa-Sponsoring Employers (Tech, Finance, Healthcare): Secondary beneficiaries (institutional/arbitrage) \u2014 access global talent at constrained wages; minimal cost for sponsorship channels once established",
+      "Non-Sponsoring Domestic Employers: Tertiary victims (institutional/constrained) \u2014 cannot access foreign talent pools; face skills gaps and constrained competitiveness; experience cost barriers to visa sponsorship",
+      "Immigration Bureaucracy (USCIS, DOL): Institutional actor (institutional/arbitrage) \u2014 maintains gatekeeping authority and regulatory jurisdiction; sees own certification/audit processes as degraded",
+      "Remote-Work and Startup Coalition: Organized agents (organized/constrained) \u2014 building alternative pathways (remote employment, international founder visas, visa-bypass strategies) that represent structural sunset mechanisms"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint imposes measurable costs on visa-dependent workers through employer lock-in, delayed family reunification, reduced bargaining power, and multi-year immigration queues (effective economic extraction). However, the extraction is not total (not a pure snare at 0.72+) because: (1) visa pathways do provide access to US employment that would be otherwise unavailable, (2) green card pathways, while delayed, are genuine rather than perpetual, (3) some visa categories (L-1, O-1) offer more mobility than H-1B. The 0.58 value reflects that the system extracts substantial value from labor supply constraints while retaining a coordination function. Rising from 0.35 to 0.58 over the 30-year interval reflects increased bureaucratic elaboration and decreased actual visa availability per applicant (H-1B caps effective since 2004). Suppression (0.68): High. Structural barriers include: statutory employer sponsorship requirement (cannot switch jobs freely), per-country caps creating multi-year waits (particularly for Indian and Chinese nationals), single-visa-at-a-time constraint (cannot explore alternatives while in queue), family reunification delays, credential recognition barriers, and immigration status uncertainty. These barriers are comprehensive and externally enforced (statutory, not negotiable). Theater ratio (0.64): Moderately high. Labor certification and prevailing wage determinations are substantially performative: officials cannot effectively distinguish genuine labor shortage from employer preference, prevailing wage determinations lag actual market rates, audit rates are low relative to visa volume. The bureaucratic apparatus maintains legitimacy through apparent rigor (formal attestations, wage audits, skills testing) while core gatekeeping logic (per-country caps, lottery systems) is admittedly arbitrary and non-merit-based. Theater has increased as statutory requirements (PERM labor certification) have become more elaborate without improving actual shortage detection.",
+    "directionality_logic": "The extraction flow in this constraint runs from foreign workers \u2192 visa sponsors and protected domestic sectors. Visa sponsors (institutional/arbitrage) have low directionality (d \u2248 0.15) because they control sponsorship as a voluntary mechanism and derive net benefit. Protected domestic workers (organized/constrained) have moderate directionality (d \u2248 0.55) because they benefit from the constraint but face retraining costs if it is removed \u2014 their protection is real but contingent on others remaining constrained. Foreign workers (powerless/trapped) have maximum directionality (d \u2248 0.95) because they bear comprehensive structural constraints with minimal exit options. Immigration bureaucracy (institutional/arbitrage) has low directionality (d \u2248 0.20) because they maintain regulatory authority and extract rents through jurisdiction maintenance. This distribution produces the observed perspectival gap: agents with low d experience the constraint as coordinating or beneficial (rope, scaffold), while agents with high d experience it as extractive (snare).",
+    "perspectival_gap": "The foreign skilled worker sees a snare: employer dependency, delayed green cards, constrained bargaining power, and multi-year immigration queues create a locked-in extraction mechanism with minimal coordination benefit to the worker themselves. Incumbent domestic workers see tangled rope: genuine wage and employment protection (coordination benefit) coexists with knowledge that this protection depends on continuing gatekeeping (asymmetric extraction toward protected workers, away from foreign workers and employers seeking unrestricted access). Visa-sponsoring employers see rope: the system solves the coordination problem of establishing hiring channels, managing integration, and retaining talent through green card linkage \u2014 pure coordination benefit with minimal cost. Immigration bureaucrats see piton: the formal certification and audit machinery is substantially performative (cannot effectively verify labor shortage), yet they maintain authority and jurisdiction through perpetuating the ritual. Remote-work and startup founders see scaffold: visa gatekeeping is being structurally bypassed through geographic employment arbitrage, founder visa categories, and remote work agreements that shift employment nominally outside US borders. This sunset mechanism is real and visible to organized agents but invisible or irrelevant to trapped workers and formal bureaucracy. The analytical observer sees tangled rope at civilizational scale: both coordination (protecting domestic labor stability) and extraction (preventing efficient global labor allocation) are structurally real and value-laden; the observer cannot dissolve this tension within the existing framework.",
+    "mandatrophy_analysis": "The constraint avoids mandatrophy by maintaining a genuine coordination function within a tangled-rope structure. The coordination benefit is real: the system does establish hiring channels, manage labor market integration, and provide some immigration pathway (albeit delayed and constrained). The extraction is also real: the system maintains artificial wage premiums through supply constraints, employer lock-in, and delayed settlement. The tangled-rope classification resolves the potential confusion (is this coordination or extraction?) by declaring it both. The perspectival gap confirms this: powerless trapped agents see extraction (snare); beneficiaries see coordination (rope); organized agents with partial exit see both (tangled rope); the analytical observer sees both as structurally real (tangled rope at civilizational scale). The false summit risk is captured in the bureaucratic perspective: the immigration system's self-understanding as a sophisticated merit-based allocation mechanism (mountain narrative of objective gatekeeping) is contradicted by acknowledged arbitrariness (H-1B lottery, per-country caps that have no relationship to actual labor shortage). The analytical perspective avoids naturalizing the constraint as inherent to international labor mobility (which would be a false mountain) by showing that alternative coordination mechanisms (remote work, international founder visas, portable benefits) are structurally feasible and are being built by organized agents."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "us_startup_founder_visa_pathways",
+      "remote_work_employment_jurisdiction",
+      "brain_drain_to_competing_jurisdictions",
+      "protected_sector_wage_levels"
+    ],
+    "dual_formulation_note": "The US employment visa system decomposes into structurally distinct constraints: (1) green-card-pathway immigration delay (\u03b5 \u2248 0.72, pure snare for employment-based categories), (2) H-1B labor certification and employer lock-in (\u03b5 \u2248 0.58, tangled rope), (3) L-1/O-1 visa flexibility for specialized categories (\u03b5 \u2248 0.25, rope), (4) remote work and geographic arbitrage bypass mechanisms (\u03b5 \u2248 0.15, scaffold with sunset). This story focuses on the integrated system (\u03b5 \u2248 0.58, tangled rope) and links to the downstream constraints that are emerging as the system's limitations become apparent."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ]
+}

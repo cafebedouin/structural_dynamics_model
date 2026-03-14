@@ -1,0 +1,193 @@
+{
+  "header": {
+    "constraint_id": "intergenerational_resource_transfer",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "igrt"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Intergenerational Resource Transfer Asymmetries",
+    "topic_domain": "economic/social/demographic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "wealth_holders",
+      "inheritance_recipients"
+    ],
+    "victims": [
+      "non_inheritors",
+      "future_generations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Non-Inheritor (Biographical Horizon)",
+      "comment": "PERSPECTIVE 1: NON-INHERITOR (SNARE) \u2014 Faces structural barriers to wealth accumulation while peers inherit substantial assets. No exit option from this positioning; generational cohort cannot escape the timing disadvantage. Maximum suppression due to interlocking barriers: lower starting capital, higher cost of borrowing, wage stagnation, and housing market inflation driven by inherited wealth."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Wealth Holder (Immediate Horizon)",
+      "comment": "PERSPECTIVE 2: WEALTH HOLDER (ROPE) \u2014 Experiences intergenerational transfer as pure coordination: legally structuring succession, tax planning, and family governance are coordination problems enabling asset preservation. Extraction runs toward this agent; they perceive no significant suppression. Maximum exit optionality through trusts, structures, and jurisdictional arbitrage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Young Inheritor (Generational Horizon)",
+      "comment": "PERSPECTIVE 3: YOUNG INHERITOR (TANGLED ROPE) \u2014 Experiences both genuine coordination (family resource planning, intergenerational knowledge transfer) and asymmetric extraction (capital gains are tax-advantaged relative to labor income; asset appreciation outpaces wage growth). Constrained by family expectations and identity fusion with family wealth; also benefits from inherited advantages."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Working-Class Cohort (Generational Horizon)",
+      "comment": "PERSPECTIVE 4: WORKING-CLASS COHORT (GENERATIONAL HORIZON) (TANGLED ROPE) \u2014 Organized agents (labor unions, housing advocates, wealth tax coalitions) perceive both genuine coordination (intergenerational pension systems, social security) and extraction (inherited wealth concentrates advantage in assets while wages stagnate). Constrained by political power asymmetry but maintain exit-option through organization and political voice."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Tax and Estate Law System (Civilizational Horizon)",
+      "comment": "PERSPECTIVE 5: TAX AND ESTATE LAW SYSTEM (PITON) \u2014 The institutional infrastructure (estate taxes, inheritance laws, trusts) is theatrically maintained as if regulating wealth transfer but has been progressively degraded through loopholes, stepped-up basis, dynasty trusts, and exemption threshold increases. The system performs regulation while enabling extraction. Theater ratio of 0.55 reflects this degradation: formal law exists but enforcement and intent have hollowed out."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a civilizational/universal perspective, some intergenerational inequality is inherent: parents naturally transfer advantages to children, and this creates unequal starting positions. This perspective sees the constraint as an immutable property of human social reproduction. However, the base properties contradict mountain classification \u2014 the level of extraction and institutional enforcement reveal this as naturalization of a contingent institutional arrangement, not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "inheritance_vs_lifetime_accumulation_ratio",
+      "question": "What fraction of wealth inequality is attributable to inherited wealth versus lifetime accumulation differentials?",
+      "resolution_mechanism": "Longitudinal wealth tracking studies; decomposition of wealth Gini coefficient into inherited and acquired components; cross-generational mobility analysis",
+      "impact": "If inherited wealth > 60% of inequality: constraint is primarily extractive redistribution across generations. If inherited wealth < 30%: much of inequality reflects lifetime earning differentials and constraint is more coordination-like.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of wealth inequality from inheritance versus lifetime accumulation"
+    },
+    {
+      "id": "intergenerational_mobility_causality",
+      "question": "Does low social mobility result from inherited disadvantage (constraint-driven) or from differences in human capital, motivation, and institutional quality?",
+      "resolution_mechanism": "Natural experiments with exogenous wealth shocks (inheritance, lottery, policy changes); instrumental variable analysis of inheritance amounts and outcomes; cross-country comparison controlling for human capital",
+      "impact": "If mobility varies primarily with inheritance amounts: constraint is primary extraction mechanism (Snare from more perspectives). If mobility reflects opportunity structure independent of family wealth: constraint is secondary to other institutions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether low mobility is caused by inheritance inequality or other factors"
+    },
+    {
+      "id": "estate_law_enforcement_gap",
+      "question": "Is the degradation of estate law enforcement intentional policy or unintended consequence of complexity and political capture?",
+      "resolution_mechanism": "Historical analysis of estate tax exemption changes and legislative intent; IRS enforcement resource allocation over time; comparison of tax avoidance rates before and after major legal changes",
+      "impact": "If intentional policy: piton classification confirmed \u2014 system is theatrically maintained. If unintended complexity: constraint may be better classified as Scaffold with imperfect sunset (tax law intended to function but degraded).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether estate law degradation is intentional or unintended consequence"
+    },
+    {
+      "id": "future_generation_discount_rate",
+      "question": "At what discount rate does intergenerational extraction become morally equivalent to intergenerational coordination?",
+      "resolution_mechanism": "Ethical analysis of discounting future welfare; empirical measurement of actual intergenerational tradeoffs (e.g., environmental extraction, debt accumulation, infrastructure investment); cross-temporal welfare comparison",
+      "impact": "If discount rate is zero: current extraction from future generations is equivalent to theft. If positive: some extraction is acceptable as tradeoff for current investment. This determines whether future_generations should be classified as victim.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Moral discount rate for intergenerational resource extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Intergenerational resource transfer operates as a tangled coordination-extraction hybrid that naturalizes wealth inequality as family succession while simultaneously degrading the institutional safeguards (estate taxes, inheritance regulations) intended to mitigate extreme concentration. The constraint exhibits all six classification types from different temporal and power perspectives. For powerless agents without inherited assets, the constraint appears as an inescapable snare locking them into disadvantage across their biographical lifetime. For wealth holders, it appears as pure coordination \u2014 the legitimate problem of planning succession and family governance. For organized working-class cohorts, it appears as tangled rope: pension systems provide genuine intergenerational coordination while capital gains taxes incentivize wealth holders to extract through inheritance rather than wages. The tax and estate law system appears degraded (piton), maintaining theatrical regulation while its enforcement mechanisms have atrophied through exemption threshold increases, stepped-up basis provisions, and dynasty trust proliferation. The analytical observer risks perceiving intergenerational inequality as a law of nature (mountain) \u2014 parents naturally transfer advantages \u2014 but the escalating extractiveness over the 40-year measurement window reveals this as naturalization of contingent institutional design choices.",
+    "key_agents": [
+      "Wealth Holders: Primary beneficiaries (powerful/arbitrage) \u2014 capture tax-advantaged asset appreciation and legal structures for succession planning",
+      "Non-Inheritors: Primary victims (powerless/trapped) \u2014 face compounded disadvantage with no exit from birth cohort timing; higher borrowing costs, lower starting capital",
+      "Young Inheritors: Secondary beneficiary-victim (moderate/constrained) \u2014 experience both genuine intergenerational coordination and identity fusion with family wealth expectations",
+      "Working-Class Cohorts: Organized victims (organized/constrained) \u2014 maintain political voice and organizational capacity but constrained by power asymmetry in wealth concentration",
+      "Tax and Estate Law System: Institutional actor (institutional/constrained) \u2014 maintains formal regulatory structures while enforcement and intent have degraded",
+      "Future Generations: Implicit victims (analytical/trapped) \u2014 bear costs of environmental extraction, debt accumulation, and depleted intergenerational commons"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high and increasing. The constraint extracts through multiple mechanisms: inherited wealth provides compounding advantage unavailable to non-inheritors, capital gains taxation is more favorable than wage income taxation, and asset appreciation outpaces wage growth. The escalation over the 40-year interval from 0.32 to 0.52 reflects regulatory capture of estate law \u2014 exemption thresholds have increased faster than median wealth, dynasty trusts bypass generational restrictions, and stepped-up basis provisions eliminate capital gains tax on appreciation before transfer. Suppression (0.48): Moderate. Barriers to non-inheritor wealth accumulation include lower starting capital, higher borrowing costs, opportunity costs of credential-seeking versus inherited asset ownership, and lifestyle inflation from inherited advantages in peer groups. Not total suppression \u2014 some non-inheritors do accumulate wealth through exceptional earnings or entrepreneurship. Theater ratio (0.55): Moderate-high. Estate tax laws exist and are formally enforced but apply to fewer estates each cycle as exemptions increase; trusts provide structures that appear to regulate wealth while enabling intergenerational concentration. The theater reflects the gap between statutory law and actual enforcement \u2014 for most high-net-worth individuals, estate planning has become routine tax avoidance rather than regulation-constrained succession.",
+    "directionality_logic": "Directionality varies significantly by perspective. Wealth holders (beneficiary status + arbitrage exit) experience d \u2248 0.05-0.15 (near-full beneficiary, maximum extraction flows toward them). Non-inheritors (victim status + trapped exit) experience d \u2248 0.90-0.98 (near-full target, maximum extraction flows away from them). Young inheritors (mixed status + constrained exit) experience d \u2248 0.45-0.55 (bifurcated: they benefit from inherited assets but are constrained by family identity expectations and expectations to preserve/grow wealth). Working-class cohorts (victim status + constrained/organized exit) experience d \u2248 0.65-0.75 (high extraction but with organizational capacity to resist or advocate). The institutional tax system (beneficiary of current regime + constrained exit) experiences d \u2248 0.35-0.45 (benefits from complexity that justifies its existence, but constrained by political pressure for reform). This variation in d across perspectives produces the perspectival gap: beneficiaries perceive coordination (rope or low-extraction tangled rope) while victims perceive extraction (snare or high-extraction tangled rope).",
+    "perspectival_gap": "The core perspectival gap reflects power asymmetry in how intergenerational transfer is experienced and justified. Wealth holders see coordination \u2014 the legitimate problem of family succession planning, tax-efficient asset transfer, and preservation of family enterprises. They point to genuine coordination benefits: estate planning enables smooth intergenerational knowledge transfer, family businesses maintain employment, and testamentary freedom respects autonomous choice. Non-inheritors see extraction \u2014 systematic advantage accumulation by birth into wealthy families, compounding inequality, and degraded opportunities for wealth building. They point to genuine extraction mechanisms: inherited assets provide starting capital that borrowing cannot replicate, capital gains taxation favors appreciation over wages, and peer effects create lifestyle inflation that reduces savings rates for aspirational non-inheritors. The analytical observer sees a natural law (mountain) \u2014 intergenerational transfer is inherent to human kinship. But the escalating extractiveness (0.32 \u2192 0.52 over 40 years) and the theatrical degradation of regulatory safeguards reveal this as naturalization of institutional choices. The mountain classification is a false summit.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by distinguishing genuine intergenerational coordination from extraction enabled by coordination mechanisms. Genuine coordination includes: pension system design (current workers fund current retirees; future workers will fund future retirees), knowledge transfer from elder to younger generation, family business continuity, and testamentary freedom to pass assets to chosen heirs. Extraction mechanisms that have captured the coordination functions include: stepped-up basis (eliminates capital gains tax on appreciated assets), unlimited spousal transfers (enables Dynasty Trust structures), exemption thresholds (allow indefinite wealth accumulation in trusts before taxation), and complexity loopholes (estate planning becomes industry dedicated to tax avoidance). The tangled rope classification holds: the constraint genuinely coordinates intergenerational resource flows AND enables asymmetric extraction of those flows toward high-net-worth beneficiaries. The constraint cannot be resolved into pure rope (genuine coordination) because the extraction mechanisms are baked into the coordination structures \u2014 they are not separable. The theater ratio (0.55) reflects that much of the coordination apparatus has become performative: the formal regulation (estate taxes, inheritance laws) is maintained, but actual extraction is substantially unregulated through legal structures."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wealth_inequality_accumulation",
+      "housing_market_affordability",
+      "educational_opportunity_access",
+      "pension_system_solvency"
+    ],
+    "dual_formulation_note": "Intergenerational resource transfer decomposes into multiple structurally distinct constraints: (1) the coordination problem of succession planning and pension systems (\u03b5 \u2248 0.15, Rope), (2) the extraction mechanism of tax-advantaged wealth transfer (\u03b5 \u2248 0.52, Tangled Rope or Snare depending on power perspective), and (3) the institutional degradation of regulatory safeguards (\u03b5 \u2248 0.55, Piton). These three stories share the same domain but have distinct base properties and measurement dynamics. This story captures the aggregate constraint. Decomposition is possible for domain-specific analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.1
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ]
+}

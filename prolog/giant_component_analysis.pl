@@ -631,17 +631,41 @@ run_phase2 :-
     % Ensure edges are pre-computed
     precompute_all_edges(Cs, Ctx),
     format('## Phase 2: Threshold Sweep (Erdos-Renyi Phase Transition)~n~n'),
-    format('Sweeping `network_coupling_threshold` from 0.10 to 0.90 in steps of 0.05.~n'),
-    format('For each threshold, only `inferred_coupling` edges are filtered; '),
-    format('`explicit` and `shared_agent` edges always survive.~n~n'),
-    % Generate sweep points
-    numlist_float(0.10, 0.05, 0.90, Points),
-    length(Points, NP),
-    format(user_error, '[phase2] Sweeping ~w threshold values for ~w constraints...~n', [NP, NC]),
-    retractall(gc_sweep_result(_, _, _, _, _)),
-    sweep_thresholds(Points, Cs, NC),
-    report_sweep_table(NC),
-    report_phase_transition(NC),
+    % Short-circuit: if no inferred edges exist, the sweep is degenerate —
+    % every threshold yields the same edge set (only explicit/shared survive).
+    aggregate_all(count, gc_inferred_edge(_, _, _), NInferred),
+    (   NInferred =:= 0
+    ->  format('**No inferred coupling edges** in the corpus (0 constraints with gradient data).~n'),
+        format('Threshold sweep is degenerate: all thresholds produce the same edge set '),
+        format('(only `explicit` and `shared_agent` edges survive regardless of threshold).~n~n'),
+        % Record a single sweep result at the default threshold for downstream phases
+        retractall(gc_sweep_result(_, _, _, _, _)),
+        config:param(network_coupling_threshold, CurrThresh),
+        edges_at_threshold(CurrThresh, Edges),
+        length(Edges, NE),
+        build_adjacency_facts(Edges),
+        compute_components(Cs, Components),
+        (   Components = [component(LargestSize, _)|_]
+        ->  LargestFrac is LargestSize / max(1, NC)
+        ;   LargestSize = 0, LargestFrac = 0.0
+        ),
+        length(Components, NComp),
+        assertz(gc_sweep_result(CurrThresh, NE, NComp, LargestSize, LargestFrac)),
+        format('| Threshold | Edges | Components | Largest | Fraction |~n'),
+        format('|-----------|-------|------------|---------|----------|~n'),
+        format('| ~3f (all) | ~w | ~w | ~w | ~3f |~n~n',
+               [CurrThresh, NE, NComp, LargestSize, LargestFrac])
+    ;   format('Sweeping `network_coupling_threshold` from 0.10 to 0.90 in steps of 0.05.~n'),
+        format('For each threshold, only `inferred_coupling` edges are filtered; '),
+        format('`explicit` and `shared_agent` edges always survive.~n~n'),
+        numlist_float(0.10, 0.05, 0.90, Points),
+        length(Points, NP),
+        format(user_error, '[phase2] Sweeping ~w threshold values for ~w constraints...~n', [NP, NC]),
+        retractall(gc_sweep_result(_, _, _, _, _)),
+        sweep_thresholds(Points, Cs, NC),
+        report_sweep_table(NC),
+        report_phase_transition(NC)
+    ),
     format('~n').
 
 %% numlist_float(+Start, +Step, +End, -List)
@@ -910,49 +934,76 @@ report_multihop_contamination(Members, Ctx) :-
     format('Simulating contamination propagation beyond the current one-hop model.~n'),
     format('Attenuation: 0.50 per hop. Stop when attenuation * strength < 0.01.~n~n'),
     % Find significant contamination sources
-    findall(C,
+    findall(scored(C, Pot, Type, IP)-C,
         (   member(C, Members),
             gc_node_type(C, Ctx, Type),
             drl_purity_network:type_contamination_strength(Type, CS),
             CS >= 0.5,
             gc_node_purity(C, IP, _),
-            IP >= 0.0, IP < 0.50
+            IP >= 0.0, IP < 0.50,
+            aggregate_all(count, adj(C, _), Deg),
+            Pot is Deg * CS
         ),
-        Sources),
-    sort(Sources, UniqSources),
+        ScoredPairs),
+    pairs_keys(ScoredPairs, ScoredAll),
+    pairs_values(ScoredPairs, SourcesAll),
+    sort(SourcesAll, UniqSources),
     length(UniqSources, NSrc),
     format('**~w active contamination sources** (type strength >= 0.5, purity < 0.50)~n~n', [NSrc]),
     (   NSrc > 0
-    ->  format('| Source | Type | Purity | 1-hop | 2-hop | 3-hop | Total Reach |~n'),
+    ->  % Report only top 50 by potential to avoid O(sources × nodes) blowup
+        predsort(compare_potential_scored, ScoredAll, SortedScored),
+        length(SortedScored, NAll),
+        ReportN is min(50, NAll),
+        (   NAll > 50
+        ->  format('*Showing top 50 of ~w sources by contamination potential.*~n~n', [NAll])
+        ;   true
+        ),
+        format('| Source | Type | Purity | 1-hop | 2-hop | 3-hop | Total Reach |~n'),
         format('|--------|------|--------|-------|-------|-------|-------------|~n'),
-        forall(member(Src, UniqSources), (
-            gc_node_type(Src, Ctx, SrcType),
-            gc_node_purity(Src, SrcP, _),
-            multihop_reach(Src, Members, 3, ReachByHop),
-            hop_count(ReachByHop, 1, N1),
-            hop_count(ReachByHop, 2, N2),
-            hop_count(ReachByHop, 3, N3),
-            TotalReach is N1 + N2 + N3,
-            format('| ~w | ~w | ~3f | ~w | ~w | ~w | ~w |~n',
-                   [Src, SrcType, SrcP, N1, N2, N3, TotalReach])
-        )),
+        report_multihop_top(SortedScored, Members, ReportN),
         format('~n'),
-        % Aggregate: union of all nodes reachable from any source within 3 hops
-        findall(R,
-            (   member(Src, UniqSources),
-                multihop_reach(Src, Members, 3, ReachByHop),
-                member(hop(_, Nodes), ReachByHop),
-                member(R, Nodes)
-            ),
-            AllReached),
-        sort(AllReached, UniqueReached),
-        length(UniqueReached, NReached),
+        % Aggregate reach: single multi-source BFS from ALL sources at once
+        multihop_reach_multi(UniqSources, Members, 3, ReachByHop),
+        aggregate_hop_counts(ReachByHop, NReached),
         length(Members, GCSize),
         ReachedFrac is NReached / max(1, GCSize),
         format('**Total unique nodes reached** within 3 hops of any source: ~w (~1f% of giant component)~n~n',
                [NReached, ReachedFrac * 100])
     ;   format('No active contamination sources found in the giant component.~n~n')
     ).
+
+compare_potential_scored(Order, scored(_, P1, _, _), scored(_, P2, _, _)) :-
+    (   P1 > P2 -> Order = (<)
+    ;   P1 < P2 -> Order = (>)
+    ;   Order = (=)
+    ).
+
+report_multihop_top(_, _, 0) :- !.
+report_multihop_top([], _, _) :- !.
+report_multihop_top([scored(C, _, Type, IP)|Rest], Members, N) :-
+    multihop_reach(C, Members, 3, ReachByHop),
+    hop_count(ReachByHop, 1, N1),
+    hop_count(ReachByHop, 2, N2),
+    hop_count(ReachByHop, 3, N3),
+    TotalReach is N1 + N2 + N3,
+    format('| ~w | ~w | ~3f | ~w | ~w | ~w | ~w |~n',
+           [C, Type, IP, N1, N2, N3, TotalReach]),
+    N1rem is N - 1,
+    report_multihop_top(Rest, Members, N1rem).
+
+%% multihop_reach_multi(+Sources, +Members, +MaxHops, -ReachByHop)
+%  Multi-source BFS: starts from ALL sources simultaneously.
+%  Returns nodes at each hop distance from the nearest source.
+multihop_reach_multi(Sources, Members, MaxHops, ReachByHop) :-
+    sort(Members, SortedMembers),
+    sort(Sources, SortedSources),
+    multihop_bfs(SortedSources, SortedSources, SortedMembers, 1, MaxHops, [], ReachByHop).
+
+%% aggregate_hop_counts(+ReachByHop, -Total)
+aggregate_hop_counts(ReachByHop, Total) :-
+    findall(N, (member(hop(_, Nodes), ReachByHop), length(Nodes, N)), Counts),
+    sumlist(Counts, Total).
 
 %% multihop_reach(+Source, +Members, +MaxHops, -ReachByHop)
 %  BFS from Source restricted to Members, returns nodes at each hop distance.
@@ -1009,42 +1060,79 @@ report_sound_constraint_exposure(Members, Ctx) :-
         Sources),
     sort(Sources, UniqSources),
     (   UniqSources \= [], SoundCs \= []
-    ->  format('| Sound Constraint | Eff Purity | Nearest Source | Distance | Would Cross Threshold? |~n'),
+    ->  % Single multi-source BFS from all sources to compute distances for all nodes
+        sort(Members, SortedMembers),
+        sort(UniqSources, SortedSources),
+        retractall(gc_source_dist(_, _, _)),
+        bfs_all_distances(SortedSources, SortedSources, SortedMembers, 0, 10),
+        % Report table (capped at 50 rows for readability)
+        length(SoundCs, NSoundTotal),
+        ReportN is min(50, NSoundTotal),
+        (   NSoundTotal > 50
+        ->  format('*Showing first 50 of ~w sound constraints.*~n~n', [NSoundTotal])
+        ;   true
+        ),
+        format('| Sound Constraint | Eff Purity | Nearest Source | Distance | Would Cross Threshold? |~n'),
         format('|------------------|------------|----------------|----------|----------------------|~n'),
-        forall(member(SC, SoundCs), (
-            gc_node_purity(SC, _, EP),
-            find_nearest_source(SC, UniqSources, Members, NearestSrc, Dist),
-            % Would multi-hop contamination push below sound threshold?
-            would_cross_threshold(SC, NearestSrc, Dist, Ctx, CrossResult),
-            format('| ~w | ~3f | ~w | ~w | ~w |~n', [SC, EP, NearestSrc, Dist, CrossResult])
-        )),
+        report_sound_rows(SoundCs, Ctx, ReportN),
         format('~n'),
-        % Summary
-        findall(SC,
-            (   member(SC, SoundCs),
-                find_nearest_source(SC, UniqSources, Members, _, D),
-                D =< 1
-            ),
-            Within1),
-        findall(SC,
-            (   member(SC, SoundCs),
-                find_nearest_source(SC, UniqSources, Members, _, D),
-                D =< 2
-            ),
-            Within2),
-        findall(SC,
-            (   member(SC, SoundCs),
-                find_nearest_source(SC, UniqSources, Members, _, D),
-                D =< 3
-            ),
-            Within3),
-        length(Within1, NW1), length(Within2, NW2), length(Within3, NW3),
+        % Summary using pre-computed distances
+        count_within_distance(SoundCs, 1, NW1),
+        count_within_distance(SoundCs, 2, NW2),
+        count_within_distance(SoundCs, 3, NW3),
         format('**Hop distance summary**:~n'),
         format('- Within 1 hop of a contamination source: ~w/~w sound constraints~n', [NW1, NSound]),
         format('- Within 2 hops: ~w/~w~n', [NW2, NSound]),
-        format('- Within 3 hops: ~w/~w~n~n', [NW3, NSound])
+        format('- Within 3 hops: ~w/~w~n~n', [NW3, NSound]),
+        retractall(gc_source_dist(_, _, _))
     ;   format('No contamination sources or no sound constraints in the giant component.~n~n')
     ).
+
+:- dynamic gc_source_dist/3.   % gc_source_dist(Node, NearestSource, Distance)
+
+%% bfs_all_distances(+Frontier, +Visited, +Members, +Dist, +MaxDist)
+%  Multi-source BFS that records the nearest source distance for every reachable node.
+%  Starts from all sources at distance 0.
+bfs_all_distances([], _, _, _, _) :- !.
+bfs_all_distances(_, _, _, Dist, MaxDist) :- Dist > MaxDist, !.
+bfs_all_distances(Frontier, Visited, Members, Dist, MaxDist) :-
+    % Record distance for all frontier nodes (first visit = shortest distance)
+    forall(member(F, Frontier),
+        (   gc_source_dist(F, _, _) -> true
+        ;   assertz(gc_source_dist(F, source, Dist))
+        )),
+    % Expand frontier
+    findall(N,
+        (   member(F, Frontier),
+            adj(F, N),
+            ord_memberchk(N, Members),
+            \+ ord_memberchk(N, Visited)
+        ),
+        NewRaw),
+    sort(NewRaw, NewNodes),
+    ord_union(Visited, NewNodes, NewVisited),
+    Dist1 is Dist + 1,
+    bfs_all_distances(NewNodes, NewVisited, Members, Dist1, MaxDist).
+
+report_sound_rows(_, _, 0) :- !.
+report_sound_rows([], _, _) :- !.
+report_sound_rows([SC|Rest], Ctx, N) :-
+    gc_node_purity(SC, _, EP),
+    (   gc_source_dist(SC, _, Dist)
+    ->  NearestSrc = nearby_source
+    ;   Dist = 999, NearestSrc = none
+    ),
+    would_cross_threshold(SC, NearestSrc, Dist, Ctx, CrossResult),
+    format('| ~w | ~3f | ~w | ~w | ~w |~n', [SC, EP, NearestSrc, Dist, CrossResult]),
+    N1 is N - 1,
+    report_sound_rows(Rest, Ctx, N1).
+
+count_within_distance(Cs, MaxDist, Count) :-
+    include(within_dist(MaxDist), Cs, Matching),
+    length(Matching, Count).
+
+within_dist(MaxDist, C) :-
+    gc_source_dist(C, _, D), D =< MaxDist.
 
 %% find_nearest_source(+Node, +Sources, +Members, -NearestSrc, -Dist)
 %  BFS from Node to find the closest contamination source.
@@ -1078,6 +1166,7 @@ nearest_source_bfs(Frontier, Visited, Members, Sources, CurrDist, NearestSrc, Di
 %  Target below the sound threshold.
 would_cross_threshold(_, none, _, _, 'N/A') :- !.
 would_cross_threshold(_, _, 999, _, 'N/A') :- !.
+would_cross_threshold(_, nearby_source, _, _, '~') :- !.  % batch BFS, no individual source info
 would_cross_threshold(Target, Source, Dist, Ctx, Result) :-
     gc_node_purity(Target, _, TargetEP),
     gc_node_purity(Source, SrcIP, _),
@@ -1193,17 +1282,26 @@ run_phase4 :-
     format('~n|------|'),
     forall(member(_, Contexts), format('------|')),
     format('~n'),
+    % Pre-compute type for each (Constraint, Context) pair — single dr_type call each.
+    % Skip contexts already cached by earlier phases (e.g., analytical/global from Phase 1).
+    forall(member(ctx(Power, Scope, _), Contexts), (
+        boltzmann_compliance:coupling_test_context(Power, Scope, Ctx),
+        (   gc_node_type(_, Ctx, _)   % already cached for this context
+        ->  true
+        ;   forall(member(C, Cs), (
+                (   catch(drl_core:dr_type(C, Ctx, CType), _, CType = unknown)
+                ->  true
+                ;   CType = unknown
+                ),
+                assertz(gc_node_type(C, Ctx, CType))
+            ))
+        )
+    )),
     forall(member(T, TypeOrder), (
         format('| ~w |', [T]),
         forall(member(ctx(Power, Scope, _), Contexts), (
             boltzmann_compliance:coupling_test_context(Power, Scope, Ctx),
-            findall(C,
-                (   member(C, Cs),
-                    catch(drl_core:dr_type(C, Ctx, ActualType), _, ActualType = error),
-                    ActualType == T
-                ),
-                Matching),
-            length(Matching, NT),
+            aggregate_all(count, gc_node_type(_, Ctx, T), NT),
             format(' ~w |', [NT])
         )),
         format('~n')
@@ -1236,14 +1334,8 @@ run_phase4 :-
     format('This means the effective contamination pressure varies by context '),
     format('even though the network structure does not.~n~n').
 
-count_type_in_context(Cs, Ctx, Type, Count) :-
-    findall(C,
-        (   member(C, Cs),
-            catch(drl_core:dr_type(C, Ctx, ActualType), _, ActualType = error),
-            ActualType == Type
-        ),
-        Matching),
-    length(Matching, Count).
+count_type_in_context(_Cs, Ctx, Type, Count) :-
+    aggregate_all(count, gc_node_type(_, Ctx, Type), Count).
 
 /* ================================================================
    EMBEDDED PROLOG FACTS

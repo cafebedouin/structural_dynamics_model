@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "burnout_accumulation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "burnout"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Burnout Accumulation in High-Effort Occupations",
+    "topic_domain": "labor/organizational_psychology/occupational_health",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "organizational_efficiency_extractors",
+      "productivity_maximizers"
+    ],
+    "victims": [
+      "burned_out_workers",
+      "worker_health_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Burned-Out Worker (Trapped)",
+      "comment": "PERSPECTIVE 1: BURNED-OUT WORKER (SNARE) \u2014 Worker trapped by economic dependency, healthcare linkage to employment, and status investment in the role. Exhaustion accumulates irreversibly; recovery requires exiting the occupational category entirely. Maximum experienced extraction with minimal coordination benefit. The worker perceives the constraint as unchangeable within their biographical horizon."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "The Identity-Locked Professional",
+      "comment": "PERSPECTIVE 2: IDENTITY-LOCKED PROFESSIONAL (TANGLED ROPE) \u2014 Professional whose identity is constituted through the high-effort role: physician, nurse, teacher, social worker. Structurally mobile (could theoretically exit) but functionally trapped because leaving would require abandoning professional identity. Experience significant extraction while maintaining belief that they should 'be able to handle this' \u2014 the role's coordination function (serving patients/students) is genuine, but extraction accumulates through that same channel. Perceives the constraint as changeable in principle but unthinkable in practice."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Organizational Efficiency Extractor",
+      "comment": "PERSPECTIVE 3: ORGANIZATIONAL EFFICIENCY EXTRACTOR (ROPE) \u2014 Institution or management extracting surplus labor capacity views the constraint as coordination: labor is allocated efficiently, maximum utility is extracted from each worker-hour. The organization experiences burnout accumulation as a feature enabling productivity goals, not a bug. Exit option is arbitrage \u2014 if one worker burns out, another can be hired. Benefits from the constraint significantly."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Labor Movement / Regulatory Reform Coalition",
+      "comment": "PERSPECTIVE 4: LABOR MOVEMENT / REGULATORY REFORM (SCAFFOLD) \u2014 Organized agents (unions, labor advocacy, occupational health regulation) see burnout as a temporary institutional failure with sunset logic: work-hour caps, mandatory rest periods, disability protections, and workplace mental health standards are building alternative frameworks. Constrained by political economy (regulatory capture, union weakening) but strategically focused on sunset mechanisms. Low effective extraction because the coalition has agency and a visible exit path."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The 'Self-Care' and 'Wellness' Apparatus",
+      "comment": "PERSPECTIVE 5: SELF-CARE / WELLNESS APPARATUS (PITON) \u2014 Corporate wellness programs, meditation apps, resilience training, and burnout prevention rhetoric are substantially performative. They create the appearance of addressing burnout while leaving the underlying extraction mechanism (unsustainable workload, understaffing, performance metrics) intact. Theater ratio high because the apparatus maintains the framing that individual worker resilience is the problem, not structural overload. The apparatus persists through institutional inertia \u2014 organizations implement wellness initiatives because they appear to address burnout without reducing productive capacity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Privileged Professional (Mobile Exit)",
+      "comment": "PERSPECTIVE 6: PRIVILEGED PROFESSIONAL (TANGLED ROPE) \u2014 High-status professional (academic, consultant, physician with financial cushion) with genuine exit options and mobility. Still experiences the coordination function (research, patient care, expertise deployment) but can negotiate work intensity, sabbaticals, or transition to lower-extraction roles. Asymmetric extraction relative to trapped workers: benefits from the same productivity culture that burns out colleagues, but has escape velocity. Sees constraint as mixed \u2014 genuine value in the role, but extractive overlay that only affects those without exit options."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some worker exhaustion is inherent to human effort: any role has a sustainable capacity threshold, and demanding work always carries fatigue costs. This perspective risks naturalizing what is actually a contingent institutional arrangement \u2014 the burnout accumulation constraint is not inherent to effort but to the specific pairing of (high workload) + (inadequate recovery time) + (economic dependency) + (identity fusion). The engine will flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "structural_vs_individual_suppression",
+      "question": "Is measured suppression (0.65) primarily structural (economic barriers, healthcare linkage, legal contract terms) or internalized (identity fusion, belief that suffering is virtuous, fear of judgment)?",
+      "resolution_mechanism": "Post-exit trajectory analysis: if suppression persists after the worker exits the role (continuing to overwork in lower-stress position, internalized guilt about self-care, identity crisis), reclassify suppression as partially internalized. Longitudinal interviews with burned-out workers who exited vs those still trapped.",
+      "impact": "If primarily structural: constraint is snare for trapped workers, rope for beneficiaries. If partially internalized: constraint's effective suppression is higher than structural measure suggests \u2014 worker carries the suppression even after material barriers are removed. Affects long-term recovery timelines.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized (identity-based)"
+    },
+    {
+      "id": "cyclical_vs_monotonic_extraction",
+      "question": "Does burnout accumulate monotonically over time, or does it cycle (peak exhaustion \u2192 crisis \u2192 recovery \u2192 renewed overcommitment \u2192 peak again)?",
+      "resolution_mechanism": "Longitudinal measurement of worker extractiveness and theater_ratio across multiple work cycles. Tracking of burnout symptom trajectories: does recovery occur during low-demand periods, or does baseline elevation persist?",
+      "impact": "If monotonic: constraint is snare with escalating extraction (no self-correction). If cyclical: constraint exhibits intermittent reinforcement mechanism \u2014 renewal of hope during recovery phase sustains commitment to the extractive role. Affects sunset timeline and exit likelihood.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether burnout accumulation is monotonic or cyclical"
+    },
+    {
+      "id": "occupational_variance_in_extraction",
+      "question": "Does burnout extraction vary significantly across occupational categories (medicine vs teaching vs social work vs tech), or is it a general labor constraint that scales with workload?",
+      "resolution_mechanism": "Comparative analysis of burnout metrics across occupations with controlled for workload hours and compensation. Decompose into separate stories if \u03b5 differs by >0.15 across occupational groups.",
+      "impact": "If variance is high: write separate constraint stories per occupational domain (burnout_in_medicine, burnout_in_teaching, etc.), each with its own \u03b5, beneficiaries, and sunset mechanisms. If variance is low: constraint is general across occupations, suggesting focus on common structural factors (economic dependency, productivity culture, identity fusion).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Occupational variance in burnout extraction mechanisms"
+    },
+    {
+      "id": "recovery_sufficiency_of_interventions",
+      "question": "Do wellness programs, sabbaticals, and rest-period regulations actually reduce burnout accumulation, or do they create the appearance of recovery while underlying extraction mechanisms persist?",
+      "resolution_mechanism": "Comparative outcomes: burnout trajectory in organizations with vs without implemented interventions, controlling for baseline workload. Tracking whether workers return to sustainable capacity after intervention or resume overcommitment within 6 months.",
+      "impact": "If interventions effective: scaffold and labor movement perspectives are correct \u2014 sunset mechanisms are working. If ineffective: wellness apparatus is piton (degraded theater); constraint remains snare for trapped workers despite intervention programs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of burnout interventions and recovery programs"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Burnout accumulation is a constraint that arises from the structural coupling of (1) occupational roles with genuine coordination functions (healthcare, education, social support), (2) productivity cultures that extract maximum effort capacity without adequate recovery, (3) economic dependency that prevents exit, and (4) identity fusion that internalizes the role as the self. The constraint exhibits a distinct perspectival structure: workers trapped by economics and identity see pure extraction (snare); organizations and management see pure coordination (rope); labor movements and regulatory bodies see a temporary problem with available sunset mechanisms (scaffold); wellness initiatives appear as degraded ritual (piton); privileged professionals experience mixed coordination and extraction (tangled_rope); and analytical observers risk naturalizing the constraint as inherent to effort rather than contingent on institutional design. The theater ratio (0.62) reflects that substantial organizational response to burnout is performative \u2014 wellness programs address symptoms rather than root causes, creating the appearance of action while unsustainable workloads persist. Extractiveness (0.58) indicates moderate-to-high, measurable through indicators such as: persistent exhaustion despite time off, emotional depersonalization, reduced efficacy perception, health deterioration, and capacity ceiling effects where productivity gains plateau as workers approach systemic limits.",
+    "key_agents": [
+      "Burned-Out Workers: Primary victim (powerless/trapped) \u2014 economically dependent on occupational role, health insurance linked to employment, identity fused with professional status. Exit is costly and identity-shattering.",
+      "Identity-Locked Professionals: Secondary victim (moderate/identity_locked) \u2014 structurally mobile but identity-fused with high-effort role. Internalized belief that they should 'be able to handle this' sustains commitment despite extraction.",
+      "Organizations and Management: Primary beneficiary (institutional/arbitrage) \u2014 extract productivity surplus without corresponding recovery investment. Exit option is replacement \u2014 if one worker burns out, hire another.",
+      "Labor Movements and Regulatory Bodies: Organized reformers (organized/constrained) \u2014 building alternative frameworks (work-hour caps, mandatory rest, disability protections, mental health standards) with sunset logic. Face political barriers but have strategic exit pathways.",
+      "Wellness Apparatus (Corporate HR, Apps, Training): Institutional theater (institutional/arbitrage) \u2014 maintains the appearance of addressing burnout while leaving extraction mechanisms intact. Persists through inertia.",
+      "Privileged Professionals: Secondary beneficiaries (powerful/mobile) \u2014 benefit from productivity culture and status, but have exit velocity to escape extraction costs. Experience tangled_rope rather than snare.",
+      "Worker Health Commons: Diffuse victim (powerless/trapped) \u2014 abstract collective health good that cannot organize or exit; contaminated by accumulation of burned-out, health-compromised workers leaving the field."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-to-high, rising over the measurement interval from 0.32 to 0.58. The base extractiveness reflects that occupational burnout accumulation represents genuine surplus extraction \u2014 workers provide more capacity than is sustainable, organizations capture the surplus without compensating for recovery costs. The measurement trajectory shows worsening extractiveness over a 6-unit interval, consistent with studies documenting accelerating burnout in healthcare, education, and social work sectors. Suppression (0.65): Moderate-high, reflecting significant barriers to exit including economic dependency, healthcare linkage, status investment, and internalized identity fusion. The suppression is structural (external barriers) for trapped workers and internalized (cognitive capture) for identity-locked professionals \u2014 a dual mechanism tracked in the structural_vs_individual_suppression omega. Theater ratio (0.62): Moderate-high, indicating that organizational responses to burnout (wellness programs, resilience training, mental health apps) perform action without addressing root causes. The rise from 0.40 to 0.62 over the interval reflects increasing divergence between the appearance of burnout response and actual reduction in workload/extraction \u2014 as burnout awareness increased, performative responses increased without structural change.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. The trapped worker and the organization perceive opposite directions of value: the worker experiences pure extraction (snare), while the organization experiences coordination that enables productivity (rope). The identity-locked professional experiences mixed extraction and genuine value through the role itself (tangled_rope), but perceives the mixing as their personal inadequacy rather than structural asymmetry. The labor movement sees a sunset pathway through regulatory reform (scaffold), while the wellness apparatus explicitly avoids regulatory change and instead frames burnout as an individual resilience problem (piton). The privileged professional with exit options sees the same structural constraint but experiences it as surmountable (tangled_rope with negotiation potential), while the trapped worker sees it as absolute (snare with no negotiation). The civilizational observer risks saying 'this is inherent to effort' (mountain), while the structural data shows the constraint is contingent on occupational design choices, productivity culture, economic dependency mechanisms, and identity fusion processes \u2014 all of which are changeable.",
+    "directionality_logic": "Each perspective's directionality is derived from beneficiary/victim status and exit options. Trapped workers (economic dependency + identity fusion) show d = 0.95, maximum extraction target. Identity-locked professionals show d = 0.89 (structurally mobile but cognitively captured). Organizations show d = 0.05 (full beneficiary with arbitrage exit). Labor reformers show d = 0.50-0.55 (organized but constrained). Privileged professionals show d = 0.50-0.55 (mobile exit but complicit in productivity culture). Analytical observer shows d = 0.72 (observer position). The chi formula \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) scales extractiveness by power (f(d)) and scope (\u03c3(S)): for trapped workers at national scope, \u03c7 \u2248 0.58 \u00d7 1.42 \u00d7 1.0 \u2248 0.82 (high extraction). For organizations at national scope with beneficiary status, \u03c7 \u2248 0.58 \u00d7 (-0.12) \u00d7 1.0 \u2248 -0.07 (negative extraction, experienced as coordination benefit). The gap is diagnostic.",
+    "mandatrophy_analysis": "CONSTRAINT FAMILY DECOMPOSITION RECOMMENDED: The natural-language concept 'burnout accumulation' contains multiple structurally distinct constraints with different \u03b5 values that should be separated per the \u03b5-invariance principle. Consider decomposing into: (1) burnout_in_identity_locked_professions (\u03b5 \u2248 0.50) \u2014 coordination function is genuine (patient care, student education), extraction arises through identity fusion and internalized obligation. Different from: (2) burnout_in_economically_trapped_occupations (\u03b5 \u2248 0.65) \u2014 pure extraction with minimal coordination benefit, constraint mechanism is economic dependency. The current story (\u03b5=0.58) averages these, obscuring their distinct sunset mechanisms and omega variables. If decomposed, the identity-locked story would foreground the cognitive capture mechanism and the sunset through identity-reframing interventions; the economically trapped story would foreground the structural exit barriers and sunset through regulatory/economic reform. The constraint as currently written is tangled_rope, correctly, but at average \u03b5 masks important structural differences. Recommendation: keep as-is for single-story submission, but flag for family decomposition in future analysis. The mandatrophy here is not about mislabeling type, but about obscuring structural distinctions through averaging."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "occupational_health_regulation",
+      "labor_market_dependency"
+    ],
+    "dual_formulation_note": "Burnout accumulation is downstream of labor market structures that create economic dependency and occupational identity fusion. Future decomposition should separate burnout_in_identity_locked_professions (coordination function genuine) from burnout_in_trapped_labor_markets (coordination function minimal)."
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "patient_informed_consent_capacity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pic"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Patient Informed Consent Capacity Assessment",
+    "topic_domain": "medical_ethics/healthcare_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "medical_institutions",
+      "treating_physicians"
+    ],
+    "victims": [
+      "cognitively_vulnerable_patients",
+      "patient_autonomy_ideal"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Cognitively Vulnerable Patient",
+      "comment": "PERSPECTIVE 1: COGNITIVELY VULNERABLE PATIENT (SNARE) \u2014 Patients with dementia, severe mental illness, developmental disability, or acute delirium face gatekeeping of their own medical decisions. Cannot exit the assessment regime. Physicianically determines capacity through unilateral evaluation. Suppression is structural: cognitive limitations are real, but the assessment itself lacks transparency, reproducibility, or patient appeal. Patient bears full cost of being deemed incapable while benefiting from neither autonomy nor protection."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Family Advocate",
+      "comment": "PERSPECTIVE 2: FAMILY ADVOCATE (TANGLED ROPE) \u2014 Family members benefit from the consent framework (protects patient from harm, provides structure for decision-making) but also experience extraction: their input may be overridden, they bear emotional labor of navigating the system, they may be excluded from information. Constrained exit: cannot refuse participation without abandoning patient to institutional control. Both genuine coordination function (safety) and asymmetric extraction (disempowerment) present."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Medical Institution",
+      "comment": "PERSPECTIVE 3: MEDICAL INSTITUTION (ROPE) \u2014 Benefits from the consent framework as coordination mechanism: protects against liability, establishes decision-making authority, enables institutional continuity. Experiences the constraint as efficient coordination \u2014 capacity assessment is the mechanism by which institutions solve the collective action problem of balancing patient autonomy with institutional responsibility and legal protection. Arbitrage exit: institutions can navigate between different regulatory jurisdictions and standards."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Treating Physician",
+      "comment": "PERSPECTIVE 4: TREATING PHYSICIAN (TANGLED ROPE) \u2014 Physicians benefit from capacity assessment (resolves decision-making authority, reduces legal liability, provides framework for uncertainty) but also bear extraction in the form of documentation burden, cognitive responsibility for contested judgments, and potential conflict with patient/family preferences. Mobile exit: can transfer patient, change specialties, or practice defensively. Moderate experience of both coordination (clarity of authority) and extraction (burden and liability)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Patient Autonomy Advocacy Coalition",
+      "comment": "PERSPECTIVE 5: PATIENT AUTONOMY ADVOCACY COALITION (SCAFFOLD) \u2014 Organized agents (bioethics committees, patient advocacy groups, legal frameworks like the UN Convention on the Rights of Persons with Disabilities) see the capacity assessment as a temporary coordination failure with sunset: shifting toward supported decision-making, advance directives, presumption of capacity, and least-restrictive alternatives. Low effective extraction because this coalition perceives and is building an exit path. Has sunset clause: norms increasingly favor supported decision-making over capacity gatekeeping."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Capacity Assessment Ritual",
+      "comment": "PERSPECTIVE 6: CAPACITY ASSESSMENT RITUAL (PITON) \u2014 The formal machinery of capacity evaluation (structured interviews, documentation, legal thresholds) persists through institutional inertia despite recognized limitations: assessments are inconsistent across clinicians, lack validation, frequently reflect implicit biases, and do not predict actual treatment adherence or outcomes. Theater ratio (0.68) reflects substantial performative content \u2014 the ritual demonstrates due diligence and institutional compliance but low functional capacity to actually identify which patients can or cannot meaningfully consent. The assessment ritual is maintained because alternatives (pure patient autonomy, pure institutional paternalism) appear worse, not because the ritual works."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some gatekeeper must exist to protect those unable to protect themselves \u2014 this is a logical necessity of any moral system that acknowledges both autonomy and vulnerability. This perspective sees the constraint as an immutable feature: any system that values both individual choice and harm prevention must have some agent authorized to override consent when capacity is absent. However, the structural data (suppression 0.62, extractiveness 0.58, theater 0.68) contradicts pure mountain \u2014 the engine will detect this as a false summit, revealing that the 'logical necessity' framing naturalizes what is actually a contingent institutional arrangement (discretionary physician assessment without transparency or appeal)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "capacity_definition_instability",
+      "question": "Is diminished consent capacity a natural fact or a socially constructed category?",
+      "resolution_mechanism": "Cross-cultural comparison of capacity standards; analysis of how diagnostic thresholds shift with medical context and legal jurisdiction; identification of whether capacity assessments predict actual decision-making quality or merely satisfy institutional requirements",
+      "impact": "If natural fact: mountain classification is correct, and current assessment methods are merely imperfect tools for detecting a real phenomenon. If socially constructed: the constraint is extraction disguised as protection, and alternative frameworks (supported decision-making) are equally valid and less extractive.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether consent capacity is a natural fact or socially constructed category"
+    },
+    {
+      "id": "implicit_bias_in_assessment",
+      "question": "To what degree do capacity assessments reflect clinician implicit bias rather than patient cognitive capacity?",
+      "resolution_mechanism": "Audit studies: same patient vignettes presented to multiple clinicians; comparison of capacity ratings by clinician demographic/specialty; analysis of whether capacity determinations correlate with protected class status (race, age, disability, socioeconomic status, mental health diagnosis)",
+      "impact": "If bias is substantial: suppression value should be higher (assessment weaponizes bias against vulnerable populations). If bias is minimal: suppression value is accurate. Either way, this determines whether the constraint is primarily a protection mechanism or a discrimination mechanism.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Extent of implicit bias in clinical capacity assessments"
+    },
+    {
+      "id": "supported_decision_making_efficacy",
+      "question": "Do supported decision-making frameworks (patient + advocate collaborating on decisions without capacity gatekeeping) produce better outcomes than standard capacity assessment + physician override?",
+      "resolution_mechanism": "RCT comparing traditional capacity assessment to supported decision-making; measurement of decision alignment with patient values, long-term satisfaction, treatment adherence, adverse outcomes, and quality of life",
+      "impact": "If supported decision-making is efficacious: the scaffold sunset is real and accelerating \u2014 the constraint's extraction mechanism becomes optional. If not efficacious: capacity gatekeeping remains necessary, and the tangled rope classification is justified.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether supported decision-making produces better outcomes than traditional capacity gatekeeping"
+    },
+    {
+      "id": "paternalism_extraction_boundary",
+      "question": "Where is the boundary between justified paternalism (protecting incapable patients from serious harm) and extractive paternalism (using incapacity determination to serve institutional convenience)?",
+      "resolution_mechanism": "Analysis of decision override rates by diagnosis, treatment type, and institutional context; comparison of override rates to objective measures of decision consequences; identification of patterns in which patient preferences get overridden vs. respected",
+      "impact": "If boundary is clear: capacity assessment can be reformed (better training, transparency, appeal) without fundamentally changing the constraint type. If boundary is ambiguous or absent: the entire framework is extractive, and the constraint should reclassify as snare rather than tangled rope.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Boundary between justified paternalism and extractive paternalism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Patient informed consent capacity assessment represents a fundamental tension in medical ethics between two non-negotiable values: respect for individual autonomy and protection of vulnerable persons. The constraint exists to resolve this tension by authorizing medical institutions (primarily treating physicians) to gate patient decision-making authority when cognitive capacity is questioned. The mechanism exhibits all six DR types across different observer positions, making it diagnostic of how indexical classification reveals hidden structures in medical governance. From the vulnerable patient's perspective, capacity assessment appears as pure extraction (snare) \u2014 a mechanism that disempowers without transparent standards or appeal rights. From the medical institution's perspective, it appears as coordination (rope) \u2014 a framework that enables decision-making and provides legal protection. From patient autonomy advocates, it appears as a temporary institutional failure being supplanted by supported decision-making frameworks (scaffold). From the perspective of the capacity assessment ritual itself, it appears as degraded institutional theater (piton) \u2014 formal machinery maintained through inertia despite recognized inconsistency and bias. The increasing theater_ratio (0.52 \u2192 0.68 over 30 years) reflects diagnostic drift: as neuroscience and psychiatry advance, our ability to objectively measure capacity has improved minimally, while institutional documentation and risk management requirements have expanded significantly, increasing the performative content of the assessment.",
+    "key_agents": [
+      "Cognitively Vulnerable Patients: Primary victims (powerless/trapped) \u2014 dementia, severe mental illness, developmental disability, acute delirium; face unilateral assessment with no transparency or appeal",
+      "Family Advocates: Secondary actors (moderate/constrained) \u2014 navigate the system, provide information, but lack decision-making power and bear emotional labor",
+      "Treating Physicians: Primary beneficiaries and enforcers (powerful/mobile) \u2014 benefit from capacity framework (liability reduction, decision authority); bear documentation burden and potential conflicts",
+      "Medical Institutions: Institutional beneficiaries (institutional/arbitrage) \u2014 use capacity assessment to coordinate liability, decision authority, and institutional continuity",
+      "Patient Autonomy Advocates: Organized reformers (organized/constrained) \u2014 bioethics committees, legal frameworks, patient advocacy groups building alternatives (supported decision-making, presumption of capacity)",
+      "Capacity Assessment Ritual: Institutional performer (institutional/arbitrage) \u2014 formal machinery persisting through inertia and institutional compliance requirements",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent medical governance as logical necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts autonomy from vulnerable patients to provide institutional clarity and liability protection. This is not maximal extraction because some genuine coordination function exists (protection of incapable patients from serious harm), and because capacity assessment at least nominally aims to respect autonomy where it exists. The increasing trajectory (0.35 \u2192 0.58) reflects rising institutional use of capacity determinations to manage liability rather than protect patients. Suppression (0.62): Moderate-high. Barriers to exit include cognitive limitations (real), but also systemic barriers: lack of transparency in assessment criteria, absent or weak appeal mechanisms, implicit bias in clinician judgment, and institutional control of information flow. Suppression is structural (real barriers) but partially psychological (internalized helplessness and medical authority). Theater_ratio (0.68): High. Capacity assessment involves substantial performative content: structured interviews and documentation that satisfy institutional compliance requirements but have questionable validity in predicting actual decision-making capacity or outcomes. The theater has increased as institutional risk management demands more documentation without corresponding improvement in assessment quality. This is classic piton dynamics: maintaining ritual without functional efficacy.",
+    "perspectival_gap": "Why does capacity assessment appear as snare to patients but rope to physicians? Because directionality is different. Patients have d \u2248 0.95 (trapped targets); physicians have d \u2248 0.20 (beneficiaries with mobile exit). The sigmoid function f(d) produces dramatically different \u03c7 values for the same base \u03b5. A patient with d=0.95 experiences \u03c7 \u2248 \u03b5 \u00d7 1.42 (powerless scaling), while a physician with d=0.20 experiences \u03c7 \u2248 \u03b5 \u00d7 0.02 (beneficiary scaling). The gap is not about disagreement on the facts; it is about different structural positions producing different experienced extractiveness from the same mechanism. Why does the analytical observer risk seeing a mountain (natural law) when the structural data shows tangled rope? Because the mountain argument ('any system must protect the incapable') is appealing but false \u2014 it naturalizes a specific institutional arrangement (unilateral physician assessment) as if it were a logical necessity. The logical necessity is much weaker: some mechanism for protecting incapable patients may be necessary, but the current mechanism (discretionary physician judgment without transparency or appeal) is contingent. Alternative mechanisms (supported decision-making, legal guardianship with due process, family-centered decision-making, patient advocacy) might serve the same protective function with less extraction. The false summit occurs when the mountain perspective conflates 'protection of vulnerable people is necessary' with 'this specific institutional arrangement is necessary.'",
+    "directionality_logic": "Directionality varies dramatically by agent. Vulnerable patients (powerless/trapped) have d \u2248 0.95 \u2014 maximum target status because they have no exit options and bear full cost of assessment. Treating physicians (powerful/mobile) have d \u2248 0.20 \u2014 predominantly beneficiary status because they gain decision authority and liability protection while retaining exit options (can transfer patient, practice defensively). Medical institutions (institutional/arbitrage) have d \u2248 0.05 \u2014 full beneficiary because the capacity framework serves institutional interests and institutions have multiple regulatory jurisdictions to navigate. Family advocates (moderate/constrained) have d \u2248 0.62 \u2014 split between target and beneficiary because they both benefit (patient protection) and lose (decision power, information access). Patient advocacy organizations (organized/constrained) have d \u2248 0.40 \u2014 moderate target status because they are fighting an entrenched institutional mechanism but have some agency and perceive an exit path (supported decision-making). These directionality variations explain why the constraint classifies as snare (powerless view), rope (institutional view), and tangled rope (moderate/organized views) \u2014 the derivation chain correctly captures that different agents experience different effective extraction values from the same structural mechanism.",
+    "mandatrophy_analysis": "DIAGNOSTIC EXEMPLAR: The constraint resolves the mandatrophy by demonstrating that 'informed consent capacity' is not a univocal concept but a bundle of overlapping institutional mechanisms serving different functions for different actors. For the vulnerable patient, capacity assessment is a mechanism of disempowerment (snare). For the institution, it is a mechanism of liability management and decision authority (rope). For the treatment team, it is a mechanism of clinical certainty (tangled rope \u2014 both genuine safety coordination and burden/liability extraction). For reformers, it is a temporary problem being solved by supported decision-making (scaffold). For the assessment ritual itself, it is a performative institutional practice maintained by inertia (piton). For the civilizational observer, it appears as natural law but is actually a false summit \u2014 the specific institutional form is contingent. The mandatrophy is resolved not by choosing one type, but by recognizing that all six types are legitimate perspectival observations of different functional and dysfunctional aspects of the same constraint. The diagnostic value is in the perspectival gaps: where the institution sees coordination, the patient sees extraction. Where reformers see a solvable temporary problem, institutional maintenance mechanisms see a permanent necessity. These gaps reveal the hidden structure that a single-perspective analysis (e.g., medical ethics focused only on physician and institution perspectives) would miss."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "guardianship_and_substitute_decision_making",
+      "advance_directive_enforcement",
+      "medical_paternalism_boundaries"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "header": {
+    "constraint_id": "healthcare_access_policy",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hcap"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Healthcare Access Policy as Mixed Coordination-Extraction",
+    "topic_domain": "healthcare/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "insurance_companies",
+      "pharmaceutical_manufacturers",
+      "hospital_networks"
+    ],
+    "victims": [
+      "uninsured_low_income_populations",
+      "underinsured_middle_income_populations",
+      "public_health_infrastructure"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Uninsured Patient",
+      "comment": "PERSPECTIVE 1: UNINSURED LOW-INCOME PATIENT (SNARE) \u2014 Faces maximal extraction with minimal exit options. Medical bankruptcy, debt traps, and deferral of care are structural features. No arbitrage available; constrained by geography, employment status, and catastrophic cost barriers. High suppression through information asymmetry about billing, prior authorization requirements, and debt collection mechanisms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Underinsured Middle-Income Worker",
+      "comment": "PERSPECTIVE 2: UNDERINSURED MIDDLE-INCOME WORKER (TANGLED ROPE) \u2014 Experiences genuine coordination benefit (preventive care access through employer plans) but also asymmetric extraction through high deductibles, narrow networks, and rising premiums. Has some exit options (employer switching, marketplace plans) but constrained by family coverage dependencies and pre-existing condition locks. Mixed experience of both benefit and burden."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Insurance Company Leadership",
+      "comment": "PERSPECTIVE 3: INSURANCE COMPANY LEADERSHIP (ROPE) \u2014 Experiences healthcare policy as coordination mechanism: risk pooling, pricing mechanisms, network agreements, and regulatory compliance frameworks all coordinate complex resource allocation. Net beneficiary with high arbitrage options (pricing adjustments, service exclusions, market positioning). Low experienced extraction because exit costs are minimal and benefits flow consistently to institutional actors."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Public Health Infrastructure",
+      "comment": "PERSPECTIVE 4: PUBLIC HEALTH INFRASTRUCTURE (TANGLED ROPE) \u2014 Experiences policy as mixed coordination (communicable disease surveillance, emergency preparedness) and extraction (privatization pressure, resource diversion to subsidizing insurance pools, medicalization of public health functions). Constrained by mandate creep and funding volatility. Must coordinate across jurisdictions but bears disproportionate burden for uninsured populations."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Healthcare Reform Coalition",
+      "comment": "PERSPECTIVE 5: HEALTHCARE REFORM COALITION (SCAFFOLD) \u2014 Organized agents (patient advocates, progressive policymakers, labor unions) view healthcare access policy as a temporary arrangement with sunset trajectory toward universal coverage models. See extraction mechanism as contingent on market-based policy choice, not structural necessity. High suppression of alternative models through incumbent lobbying, but organized agents perceive agency and exit path through democratic reform. Theater ratio lower from this perspective because alternative models (single-payer, public option, cooperative models) are documented and achievable."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Employer-Based Insurance System",
+      "comment": "PERSPECTIVE 6: EMPLOYER-BASED INSURANCE SYSTEM (PITON) \u2014 From civilizational perspective, the employer-health insurance link is a historical accident (wage controls during WWII) that has become inertial institutional fact. The system persists through path dependency despite widespread recognition of its dysfunction. Theater is performative: annual coverage discussions, HR benefits consultants, plan comparisons create the appearance of choice within a constrained architecture. The system has lost its original coordination function (during wartime labor scarcity) but remains enforced through tax policy and institutional habit."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 Risk of false summit: some perspectives frame healthcare access inequality as natural or inevitable ('markets efficiently allocate resources,' 'administrative complexity requires gatekeeping'). However, comparative international evidence undermines mountain classification \u2014 many democratic nations maintain universal coverage through public systems with lower administrative overhead and better population health outcomes. The natural law framing naturalizes what is actually contingent policy choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "extraction_versus_coordination_boundary",
+      "question": "What portion of healthcare administrative complexity and cost is inherent to coordination versus artificially imposed to enable extraction?",
+      "resolution_mechanism": "International comparative analysis: administrative costs per capita and complexity metrics in universal coverage systems versus multi-payer systems; randomized policy experiments comparing prior authorization requirements versus provider trust models",
+      "impact": "If minimal inherent complexity (< 5% of cost): administrative burden is primarily extractive theater. If substantial inherent complexity (> 15% of cost): some theater is genuine coordination cost. Classification shifts from Snare toward Tangled Rope for victim perspectives.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Inherent versus extractive portions of administrative burden"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is health outcome inequality primarily structurally suppressed (material barriers: cost, geography, information) or internalized (patients believe unequal access is inevitable or deserved)?",
+      "resolution_mechanism": "Post-policy change analysis: if suppression is structural, removal of barriers increases access; if internalized, access may remain low even after barrier removal due to persistent health-seeking behavior changes; qualitative research on patient framing of healthcare justice",
+      "impact": "If primarily structural: suppression score accurate at 0.65. If partially internalized: effective suppression is higher \u2014 internalized acceptance persists after structural barrier removal, requiring cultural intervention alongside policy change.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized suppression mechanisms"
+    },
+    {
+      "id": "coalition_stability_timeline",
+      "question": "What is the realistic timeline and institutional stability for healthcare reform coalition's sunset clause (transition to universal coverage or public option)?",
+      "resolution_mechanism": "Political feasibility analysis: legislative pathways, incumbent resistance modeling, public opinion trends, international transition timelines from multi-payer to single-payer systems",
+      "impact": "If sunset realistic within 20 years: Scaffold classification accurate. If sunset blocked indefinitely: Scaffold collapses to Tangled Rope or Snare \u2014 constraint becomes permanent rather than transitional.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Feasibility of healthcare reform transition timeline"
+    },
+    {
+      "id": "international_path_dependency",
+      "question": "Does the U.S. employer-based system represent path-locked institutional dependency or politically contingent choice that could be reformed without wholesale system replacement?",
+      "resolution_mechanism": "Comparative institutional analysis: countries that transitioned from employment-based to universal coverage without revolution (Germany, Japan); structural analysis of veto points in U.S. political economy that preserve employer linkage",
+      "impact": "If path-locked: Piton is structural degradation of an inescapable form (mountain-like properties). If contingent: Piton is purely theatrical maintenance of a choice that could be unmade \u2014 enables more aggressive reform modeling.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether employer-insurance link is path-dependent or contingent"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.53
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.51
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Healthcare access policy in the United States exhibits structural hybridity: genuine coordination functions (insurance risk pooling, disease surveillance, emergency preparedness) coexist with asymmetric extraction (medical debt accumulation, network restrictions, profit-driven care denial). The constraint operates through a multi-payer system with employer linkage, regulatory complexity, and information asymmetry that benefits institutional actors (insurers, pharmaceutical manufacturers, hospital networks) while extracting from victims (uninsured and underinsured populations, public health infrastructure). The policy demonstrates the Tangled Rope archetype across the modal observation site: it genuinely coordinates complex resource allocation while systematically extracting wealth and health capacity from powerless agents. Theater ratio (0.55) reflects moderate performativity: insurance choice architecture (annual enrollment periods, plan comparisons) creates appearance of consumer agency within constrained options; prior authorization and utilization review generate administrative ritual with limited clinical justification. Extractiveness has increased over the 20-year interval (0.35 \u2192 0.58) as administrative burden and out-of-pocket costs have grown while public capacity has declined. The constraint is downstream of political-economic choices (tax incentives for employer coverage, pharmaceutical patent regimes, regulatory capture of insurance commissions) rather than natural law, making it subject to reform, but suppression mechanisms (institutional inertia, incumbent lobbying, cultural normalization) create durable barriers to change.",
+    "key_agents": [
+      "Uninsured Low-Income Populations: Primary victim (powerless/trapped) \u2014 face medical bankruptcy, debt collection, care deferral; no arbitrage options; maximum suppression through cost barriers and information asymmetry",
+      "Underinsured Middle-Income Populations: Secondary victim (moderate/constrained) \u2014 experience mixed coordination (preventive access) and extraction (high deductibles, narrow networks); constrained by family coverage dependencies",
+      "Insurance Companies: Primary beneficiary (institutional/arbitrage) \u2014 profit from risk pooling margins, network control, and service restrictions; high arbitrage options for pricing and coverage design",
+      "Pharmaceutical Manufacturers: Secondary beneficiary (institutional/arbitrage) \u2014 benefit from patent protection, pricing power, and insurance coverage leverage; global arbitrage options",
+      "Hospital Networks: Tertiary beneficiary (institutional/constrained) \u2014 coordinate service delivery but also extract rents through market consolidation and network narrowing",
+      "Public Health Infrastructure: Tertiary victim (institutional/constrained) \u2014 loses resources to insurance subsidization and medicalization of public health functions; constrained by mandate creep",
+      "Healthcare Reform Coalition: Organized agent (organized/constrained) \u2014 patient advocates, labor unions, progressive policymakers seeing sunset path toward universal coverage",
+      "Employer-Based Insurance System: Institutional carrier (institutional/arbitrage) \u2014 maintains path-dependent coordination architecture that has lost original function but persists through regulatory support"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Insurance companies, pharmaceutical manufacturers, and consolidating hospital networks extract rents through pricing power, coverage restrictions, and administrative complexity. However, extractiveness is not maximal (\u22650.66 for snare) because genuine coordination occurs: disease risk pooling is functional, emergency care capacity is maintained, and preventive services are provided. The mixed nature justifies Tangled Rope classification. Suppression (0.65): Moderate-high. Structural barriers include medical debt leverage, information asymmetry about billing and coverage, geographic access constraints, and employment linkage. Suppression is not maximum (0.60 for snare) because some alternatives exist: public options in some states, medicaid expansions, charity care programs. But suppression is substantial and has institutional reinforcement through regulatory capture of insurance commissions. Theater ratio (0.55): Moderate. Prior authorization and utilization review generate administrative ritual with modest clinical justification. Insurance plan choice creates appearance of consumer agency within constrained architecture. However, theater is not dominant (\u22650.70 for piton) because underlying coordination functions are real: risk pooling, network arrangements, and claims processing serve coordination purposes, not purely performative ones. The measurement trajectory shows both extractiveness and theater increasing over 20 years: administrative burden has grown from complexity layering (prior auth, step therapy, network verification), and theater has increased from 0.40 to 0.55, indicating Goodhart drift where process metrics replace health outcomes.",
+    "perspectival_gap": "The core perspectival gap is between institutional beneficiaries and powerless victims. Insurance company leaders see healthcare policy as coordination mechanism (risk pooling, resource allocation) and experience it as Rope. Uninsured patients see the same policy as extraction mechanism (cost barriers, care denial) and experience it as Snare. The gap reveals asymmetric experience of the same structural arrangement: one agent's coordination is another agent's suppression. Underinsured middle-income workers occupy the middle: they benefit from preventive care coordination but bear extraction through high deductibles and premium inflation. The reform coalition introduces temporal gap: while incumbent institutions experience the policy as stable coordination (or inertial piton), organized agents perceive a sunset clause \u2014 reform is possible if political will mobilizes. The analytical observer risks naturalizing contingent policy as immutable law \u2014 framing healthcare inequality as inherent to markets rather than policy choice. International comparison data undermines this naturalization: peer democracies maintain universal coverage with lower costs and better outcomes.",
+    "directionality_logic": "Directionality values (d) are derived from the structural beneficiary/victim declarations and exit options for each agent. Uninsured populations (d \u2192 0.95): identified as primary victims with trapped exit options; the sigmoid f(d) amplifies their experience of the \u03b5=0.58 base extraction. Insurance companies (d \u2192 0.05): identified as beneficiaries with arbitrage exit options; f(d) becomes negative, reducing experienced extraction below base. Underinsured workers (d \u2192 0.50): mixture of beneficiary status (coordination access) and victim status (extraction through deductibles); d stays near 0.50 producing moderate f(d). Public health (d \u2192 0.65): victim status with institutional but constrained options; f(d) stays in rope range. Reform coalition (d \u2192 0.40): organized agent with perceived exit path; lower d reduces experienced extraction relative to base. The directionality chain maps structural position to experience: same \u03b5 produces different \u03c7 depending on whether the agent benefits or bears costs from the constraint.",
+    "mandatrophy_analysis": "Healthcare access policy resolves mandatrophy through recognition that institutional beneficiaries (insurers, pharma) legitimately perceive coordination (Rope/Scaffold), while powerless victims perceive extraction (Snare), and the analytical observer must recognize both perceptions as structurally accurate from their positions. No single type is 'correct' \u2014 the constraint is Tangled Rope at the modal site because it genuinely coordinates while systematically extracting. The mandatrophy is resolved by refusing false universality: it is not 'really' a Snare (pure extraction would ignore real coordination functions) nor 'really' a Rope (pure coordination would ignore real asymmetric extraction), but both simultaneously from different structural positions. The false summit danger appears when natural law frames (Mountain perspective: 'healthcare market outcomes are natural') naturalize what is actually policy choice. Comparative international analysis (universal coverage systems with lower costs and better outcomes) directly contradicts the mountain classification and reveals it as false natural law. The constraint's contingency \u2014 it results from tax policy choices, regulatory capture, and political decisions about intellectual property \u2014 makes reform possible and mandatrophy resolvable through institutional restructuring rather than accepting the constraint as immutable."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "pharmaceutical_patent_regime",
+      "employer_tax_incentives",
+      "public_health_capacity_decline"
+    ],
+    "dual_formulation_note": "Healthcare access policy is upstream of specific extraction mechanisms (medical debt, prior authorization gatekeeping) and downstream of structural policy choices (tax incentives for employer coverage, patent regimes enabling price extraction, regulatory capture of insurance commissions). The Tangled Rope classification at \u03b5=0.58 reflects that access policy contains genuine coordination functions alongside asymmetric extraction; decomposition into separate coordination-only and extraction-only stories is not appropriate because the mechanisms are inextricably linked."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.65
+    }
+  ]
+}

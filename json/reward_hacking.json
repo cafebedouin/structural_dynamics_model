@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "reward_hacking",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rwhack"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Reward Hacking: Alignment Misalignment Between Stated Goals and Measured Outcomes",
+    "topic_domain": "systems_design/optimization/artificial_intelligence",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "metric_gamers",
+      "short_term_optimizers"
+    ],
+    "victims": [
+      "system_health",
+      "actual_mission_accomplishment",
+      "downstream_stakeholders"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The System's Actual Mission",
+      "comment": "PERSPECTIVE 1: ACTUAL MISSION (SNARE) \u2014 The true objective (human flourishing, ecological health, social stability) cannot exit the metric substitution trap. It has no voice in the optimization loop; the measured proxy is all that drives resource allocation. Maximum extraction \u2014 the mission bears full cost of misalignment while the metric receives all attention and resources."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Downstream Stakeholder",
+      "comment": "PERSPECTIVE 2: DOWNSTREAM STAKEHOLDER (SNARE) \u2014 Constrained by the system's publicly declared objectives (which they believed); they face costs from metric optimization that ignores side effects. They can theoretically exit or protest, but social/legal barriers and information asymmetry limit effective alternatives. High extraction with some agency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Metric Optimizer",
+      "comment": "PERSPECTIVE 3: METRIC OPTIMIZER (ROPE) \u2014 Institutional actor (firm, agency, algorithm) experiences the constraint as pure coordination: meeting the declared metric IS the declared goal. From this perspective, there is no misalignment \u2014 the system is working as designed. Arbitrage: they can pivot metrics or exit the system if pressure mounts. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Domain Expert or Auditor",
+      "comment": "PERSPECTIVE 4: DOMAIN EXPERT/AUDITOR (TANGLED ROPE) \u2014 Sees both the coordination function (metrics do enable alignment when well-designed) and the extraction (misaligned metrics create perverse incentives). Powerful enough to exit or reframe, but also invested in the system's legitimacy. Mixed classification reflects genuine tension between metric benefit and metric cost."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Measurement Theater",
+      "comment": "PERSPECTIVE 5: MEASUREMENT THEATER (PITON) \u2014 Measurement frameworks persist through institutional inertia even when known to be misaligned. KPI dashboards, performance evaluations, and metric reporting systems continue functioning long after stakeholders recognize their dysfunction. Theater ratio is high because much measurement activity is performative \u2014 generating compliance reports, audit trails, and accountability theater rather than genuine feedback. The system maintains itself because the alternative (admitting metrics don't work) is organizationally costly."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational view, metric design inevitably creates alignment gaps: any finite proxy for an infinite objective generates at least some misalignment incentives. This is a coordination problem (finding metrics that align sufficiently) coupled with an extraction problem (optimizers exploit remaining gaps). The constraint is not solvable into pure rope \u2014 some tension between stated and measured goals is structural."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "metric_goodness_threshold",
+      "question": "What level of metric-objective alignment constitutes 'good enough' coordination vs extractive misalignment?",
+      "resolution_mechanism": "Empirical comparison of outcome distributions under different metric proxies; cost-benefit analysis of optimization gains vs side-effect damage; stakeholder satisfaction trajectories",
+      "impact": "If threshold is high (>0.85 alignment): many systems currently classified as Tangled Rope degrade to Snare. If threshold is low (>0.60): many current Snares reframe as acceptable Rope. Fundamentally shifts classification landscape.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Acceptable threshold for metric-objective alignment"
+    },
+    {
+      "id": "optimizer_awareness_and_intent",
+      "question": "Are metric gamers deliberately gaming misaligned metrics (intentional extraction) or responding rationally to incentive structures they believe are legitimate (innocent coordination)?",
+      "resolution_mechanism": "Post-hoc analysis of optimizer knowledge state at time of optimization; internal communications and decision records; counterfactual: would the same optimizer change behavior if unambiguously told the metric was misaligned?",
+      "impact": "If deliberate: metric gamers are conscious extractors (higher d \u2192 higher \u03c7). If innocent: they are coordination actors with misaligned feedback (lower d \u2192 lower \u03c7, but still extraction due to structural misalignment). Classification ranges from Snare to Rope depending on awareness.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether metric gamers deliberately exploit misalignment or respond innocently to incentives"
+    },
+    {
+      "id": "metric_design_feasibility",
+      "question": "Are perfectly aligned metrics theoretically possible or is misalignment inherent to any finite proxy system?",
+      "resolution_mechanism": "Formal analysis: can any computable metric fully capture unmeasurable objectives? Proof sketch in Rice's theorem domain or Goodhart's law limits. Empirical: does any real-world domain show metrics that never degrade into gaming?",
+      "impact": "If misalignment is inherent: reward hacking is not a design failure but a structural feature of optimization under partial observability. Constraint should be reclassified as Mountain from the analytical perspective, and Tangled Rope from all others becomes not just pragmatically necessary but theoretically optimal. If misalignment is avoidable: reward hacking is a failure of insufficient metric care \u2014 classification suggests active enforcement and sunset (Tangled Rope or Scaffold).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether perfectly aligned metrics are theoretically possible"
+    },
+    {
+      "id": "multi_metric_escape",
+      "question": "Does adding more metrics reduce reward hacking by increasing alignment or increase it by providing more dimensions to exploit?",
+      "resolution_mechanism": "Empirical: comparison of single-metric vs multi-metric systems in same domains; analysis of metric correlation and optimizer exploitation of metric independence; saturation threshold for metric count",
+      "impact": "If more metrics reduce hacking: multi-objective design is an enforcement mechanism (makes constraint more like Scaffold). If more metrics increase hacking: reward hacking becomes more sophisticated but still extracted (constraint remains Tangled Rope with higher extractiveness). If nonmonotonic: there is an optimal metric count, and systems at extremes are poorly designed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether additional metrics reduce or increase reward hacking severity"
+    },
+    {
+      "id": "feedback_latency_and_alignment",
+      "question": "Does real-time feedback on misalignment prevent hacking or accelerate the optimizer's learning of exploit strategies?",
+      "resolution_mechanism": "A/B testing: systems with feedback loops that flag misalignment vs systems with delayed feedback; comparison of hacking sophistication and damage under immediate vs delayed awareness",
+      "impact": "If feedback prevents hacking: transparency and measurement quality are enforcement mechanisms (constraint can degrade to Rope with sufficient feedback infrastructure). If feedback accelerates exploitation: faster feedback paradoxically worsens extraction (constraint becomes worse than Snare in some configurations).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether real-time feedback reduces or amplifies reward hacking"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "Reward hacking is the structural divergence between a system's declared objective and its measured objective, creating incentive for optimizers to maximize the measured proxy at the expense of the actual goal. This constraint operates across domains (education, healthcare, business, AI safety, ecological management) wherever performance measurement becomes a primary steering mechanism. The constraint exhibits tangled rope structure: genuine coordination function (metrics do enable large-scale goal pursuit when well-designed) coupled with asymmetric extraction (optimizers benefit from exploiting metric gaps while actual stakeholders and system health bear the costs). The theater ratio (0.68) reflects that much measurement activity is performative compliance \u2014 generating dashboards and audit trails that signal accountability without ensuring goal alignment. The extractiveness trajectory (0.35 \u2192 0.62 over the interval) shows how reward hacking accumulates as optimizers learn exploit pathways and institutional actors accumulate sunk investment in the misaligned metrics.",
+    "key_agents": [
+      "Actual Mission/System Health: Primary victim (powerless/trapped) \u2014 the true objective has no optimization loop and bears full cost of metric substitution",
+      "Downstream Stakeholders: Secondary victim (moderate/constrained) \u2014 believe in system's stated goals; face side effects and externalities from metric optimization",
+      "Metric Optimizer/Gaming Actor: Primary beneficiary (institutional/arbitrage) \u2014 captures short-term gains and performance rewards from exploiting metric gaps; can pivot to new metrics if pressure mounts",
+      "Domain Expert/Auditor: Secondary actor (powerful/mobile) \u2014 sees both coordination and extraction functions; has capacity to reframe or exit",
+      "Measurement and Compliance Theater: Institutional layer (institutional/arbitrage) \u2014 maintains performative reporting systems; persists through inertia even when known to be misaligned",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 recognizes Goodhart's law: any finite proxy for infinite objective creates misalignment incentives"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Metric gamers capture real benefits \u2014 performance bonuses, promotions, budget allocation, status signals \u2014 while the actual mission and downstream stakeholders bear costs (false confidence in progress, resources diverted from genuine goals, side effects). The extractiveness is not extreme (< 0.66) because some metrics are reasonably well-aligned and some optimizers do internalize the mission beyond the metric. But the asymmetry is substantial: those who optimize the metric benefit; those dependent on the actual outcome suffer. Suppression (0.65): High. Barriers to exit or voice are significant: stakeholders may not recognize misalignment (information asymmetry), changing metrics is organizationally expensive (sunk investment), alternative measurement systems are unclear, and institutional inertia maintains current frameworks. The suppression is structural \u2014 embedded in how performance evaluation and resource allocation systems work. Theater ratio (0.68): Moderately high. Measurement activity increases over time (from 0.42 to 0.75 in the interval) as organizations add more dashboards, reporting systems, and audit trails in response to gaming pressure. Much of this addition is performative \u2014 generating more measurement data without improving alignment. The theater reflects Goodhart's law: as metrics become targets, they cease to be good measures.",
+    "perspectival_gap": "The perspectival gap shows up most sharply between the metric optimizer (Rope) and the actual mission (Snare). The optimizer is solving the problem the system posed: maximize the metric. The mission is suffering from the solution. This gap is not a difference of opinion but a structural difference in what each perspective observes as the constraint. For the optimizer, the constraint is 'how do I meet the performance targets?' (coordinated by the metric). For the mission, the constraint is 'how does my actual goal survive in a system optimizing a misaligned proxy?' (extraction through metric substitution). The domain expert perspective (Tangled Rope) holds both views simultaneously, which is why it is the most analytically complete but also the most unstable \u2014 unstable because an actor occupying that position is cognitively forced to recognize both the legitimacy of metric optimization AND its extractive consequences.",
+    "directionality_logic": "Directionality (d) reflects each agent's structural relationship to the extraction flow. Metric gamers are beneficiaries with institutional power and arbitrage options (low d \u2192 negative effective extraction from their perspective). The actual mission and downstream stakeholders are victims with powerless/trapped or moderate/constrained positions (high d \u2192 high experienced extraction). Domain experts occupy a mixed position \u2014 they have power and exit options but are also invested in the system's legitimacy, producing middle d values. The analytical perspective is observer-neutral (d \u2248 0.72 canonical value). The directionality derivation produces clear extracted value flow: toward metric optimizers, away from actual goals and downstream actors. This asymmetry is the core of the tangled rope classification \u2014 genuine coordination structure (metrics can align goals) bundled with real asymmetric extraction (gap between metric and reality is exploitable).",
+    "mandatrophy_analysis": "Mandatrophy is resolved by recognizing that reward hacking is fundamentally a Tangled Rope: it has a real coordination function (metrics enable large-scale goal pursuit) and a real extraction mechanism (misalignment between metric and goal creates exploitable gaps). The constraint cannot be collapsed into pure Rope because the extraction is structural and asymmetric \u2014 those closest to the metric benefit, those dependent on the actual outcome suffer. It cannot be classified as pure Snare because metrics do genuinely coordinate action at scale when reasonably well-designed. The Tangled Rope classification is stable across all high-credibility perspectives (optimizer, expert, analytical observer). The Snare perspective (from the actual mission) is real but represents the victim's experience of a tangled constraint, not the constraint's true type. The Rope perspective (from the optimizer) represents the beneficiary's experience of what is structurally a tangled constraint. Mandatrophy resolution confirms: reward hacking is a coordination mechanism with embedded asymmetric extraction, not a pure extraction mechanism mislabeled as coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "goodharts_law",
+      "metric_substitution_bias",
+      "principal_agent_asymmetry"
+    ],
+    "dual_formulation_note": "Reward hacking is downstream of Goodhart's law (the theoretical structural limit) but represents the behavioral manifestation where actors actually exploit metric-objective gaps. Goodhart's law is a mountain (inevitable divergence); reward hacking is a tangled rope (how that divergence becomes an extraction mechanism). The network shows causality: Goodhart's law establishes why misalignment is inevitable; reward hacking exploits the inevitability; metric substitution bias describes the cognitive framing that naturalizes the exploitation; principal-agent asymmetry provides the institutional structure where optimization and actual goals are misaligned."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

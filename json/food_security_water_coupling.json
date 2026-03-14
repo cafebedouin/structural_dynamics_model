@@ -1,0 +1,224 @@
+{
+  "header": {
+    "constraint_id": "food_security_water_coupling",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fswc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Food Security-Water Resource Coupling",
+    "topic_domain": "environmental/agricultural/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "industrial_agriculture_operators",
+      "water_extraction_infrastructure_owners",
+      "commodity_export_nations"
+    ],
+    "victims": [
+      "small_holder_farmers",
+      "groundwater_dependent_communities",
+      "downstream_riparian_states",
+      "future_food_security"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Groundwater-Dependent Farmer",
+      "comment": "PERSPECTIVE 1: GROUNDWATER-DEPENDENT FARMER (SNARE) \u2014 Trapped in unsustainable aquifer depletion cycle. No exit options: agriculture is sole livelihood, irrigation is mandatory for competitive yields in water-scarce regions, and groundwater is the only available water source. Suppression is maximum \u2014 externally enforced by commodity market prices and internally by necessity. Experiences pure extraction: bears full depletion cost while benefiting only marginally from global food commodity supply."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Food-Importing Nation",
+      "comment": "PERSPECTIVE 2: FOOD-IMPORTING NATION (TANGLED ROPE) \u2014 Constrained by dependence on water-intensive crop imports but benefits from cheap food security. Genuine coordination function exists (global trade redistributes water-embedded in commodities). Asymmetric extraction embedded: constraint forces reliance on exporting nations' water depletion, creating hidden vulnerability. Can theoretically exit through domestic production but faces high reconfiguration costs. Mixed experience: benefits from cheap food offset by strategic vulnerability and water externalization."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Industrial Agriculture-Export Complex",
+      "comment": "PERSPECTIVE 3: INDUSTRIAL AGRICULTURE-EXPORT COMPLEX (ROPE) \u2014 Primary beneficiary (institutional/arbitrage). Experiences constraint as pure coordination: global water redistribution through commodity trade enables economies of scale and competitive advantage. Can exit costlessly (shift sourcing, arbitrage water-rich vs water-scarce regions). Effective extraction runs toward this agent \u2014 they capture margin on water-embedded commodities while externalizing depletion costs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Upstream Riparian State",
+      "comment": "PERSPECTIVE 4: UPSTREAM RIPARIAN STATE (TANGLED ROPE) \u2014 Organized institutional actor with constrained exit. Coordination function: transboundary water treaties enable shared basin management and mutual security. Asymmetric extraction embedded: upstream state benefits from extraction of shared water for agriculture/energy but cannot fully exit (water rights are embedded in sovereignty claim, hydroelectric infrastructure, agricultural economy). Downstream states absorb flow reduction costs. Both cooperation (treaty framework) and asymmetric extraction (water diversion) are real."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Water-Productivity Innovation Coalition",
+      "comment": "PERSPECTIVE 5: WATER-PRODUCTIVITY INNOVATION COALITION (SCAFFOLD) \u2014 Organized agents (UN FAO, agricultural research institutes, drought-resistant crop programs) see the coupling as a temporary coordination failure with a sunset clause: precision irrigation, crop breeding, alternative proteins, and virtual water trade reallocation are building pathways to decouple food security from unsustainable water extraction. Low effective extraction because the coalition has agency and a clear exit mechanism. Suppression declines over the generational horizon as technologies mature and norms shift."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Agricultural Subsidy System",
+      "comment": "PERSPECTIVE 6: AGRICULTURAL SUBSIDY SYSTEM (PITON) \u2014 Performative institutional mechanism maintaining water-intensive crop production in water-scarce regions through price support and externality masking. Subsidy structure creates illusion of sustainable agriculture while subsidizing aquifer depletion. Theater is high (subsidies presented as food security protection) while functional verification is low (actual outcomes are depletion acceleration). Maintained through political inertia rather than structural necessity. Alternative mechanisms (virtual water trade, precision agriculture, alternative proteins) exist but institutional resistance persists."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some coupling between food production and water is inherent to agriculture: crops require water, drier regions have less water, and the gap between food demand and local water availability is a structural feature of human geography. This perspective sees the constraint as immutable natural law. However, the structural data contradicts the mountain classification \u2014 the engine will detect this as a false summit, revealing that the 'inherent to agriculture' framing naturalizes what is actually a contingent choice between sustainability pathways."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "virtual_water_accounting_validity",
+      "question": "Does virtual water trade genuinely redistribute water stress or merely mask extraction through commodity trade semantics?",
+      "resolution_mechanism": "Hydrological analysis of actual water saved in exporting vs importing regions; accounting for non-tradeable water footprints and local depletion irreversibility",
+      "impact": "If valid: virtual water is real exit pathway for import-dependent nations. If semantic: trade is illusion of water transfer while both exporting and importing regions deplete local groundwater.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether virtual water trade genuinely redistributes hydrological stress"
+    },
+    {
+      "id": "yield_plateau_vs_intensification_logic",
+      "question": "Are agricultural water requirements driven by physics of photosynthesis/transpiration or by intensification choices (monoculture, commodity crop focus, subsidized prices)?",
+      "resolution_mechanism": "Comparison of water efficiency in diverse cropping systems vs industrial monoculture; crop-mix analysis for caloric output per unit water across different agricultural models",
+      "impact": "If physics-driven: coupling is near-immutable. If choice-driven: coupling is a tangled rope held together by agricultural policy architecture, not natural limits.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether water requirements are physics-constrained or policy-driven"
+    },
+    {
+      "id": "alternative_protein_substitution_feasibility",
+      "question": "Can plant-based and cellular agriculture technologies scale to replace water-intensive commodity crop production within a 20-year horizon?",
+      "resolution_mechanism": "Technology readiness assessment; cost trajectory analysis; infrastructure capacity modeling for alternative protein production",
+      "impact": "If feasible: scaffold sunset is real \u2014 constraint will dissolve as production pathways shift. If infeasible: coupling persists as structural constraint independent of innovation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative proteins can replace water-intensive commodity production"
+    },
+    {
+      "id": "aquifer_recovery_reversibility",
+      "question": "Once an aquifer reaches critical depletion threshold, is recharge physically possible or has the extraction created an irreversible state change?",
+      "resolution_mechanism": "Hydrological modeling of specific overexploited aquifers; paleoclimate data on recharge rates under current and future climatic regimes",
+      "impact": "If reversible: constraint can be broken by halting extraction. If irreversible: constraint becomes mountain-like (immutable past extraction embedded in future water availability).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether aquifer depletion is reversible or creates permanent state change"
+    },
+    {
+      "id": "distributional_incidence_obfuscation",
+      "question": "How much of the measured suppression is structural (physical barriers to exit) vs deliberate framing (hiding water costs in commodity prices, masking depletion through subsidy rhetoric)?",
+      "resolution_mechanism": "Audit of agricultural subsidy allocation and depletion externality accounting; comparison of farmer-perceived vs actual long-term cost; policy analysis of alternative framings tested",
+      "impact": "If structural: suppression is immutable without major economic restructuring. If framing-dependent: suppression persists through active narrative maintenance.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Extent to which suppression is structural vs narrative-maintained"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Food security and water availability are locked together through agricultural water demand, creating a tangled rope constraint where coordination (global trade redistributing water-embedded commodities, transboundary water treaties, food security provisioning) coexists with asymmetric extraction (aquifer depletion concentrated on vulnerable farmers, hidden water costs in commodity prices, downstream riparian states absorbing flow reductions). The constraint exhibits all six DR types from different perspectives. Over the 50-year interval, extractiveness has increased from 0.35 to 0.58 as aquifer depletion has accelerated, commodity prices have decoupled from water availability through subsidy architectures, and climate variability has increased suppression (reduced precipitation in food-producing regions). Theater ratio has increased from 0.32 to 0.48, reflecting growing gap between subsidy narratives ('protecting food security') and actual outcomes (accelerating depletion). The constraint is not naturally immutable \u2014 viable exit pathways exist through precision agriculture, alternative proteins, and reallocation of commodity crop subsidies toward drought-resistant crops \u2014 but these pathways remain constrained by institutional inertia and concentrated beneficiary opposition. The scaffold perspective identifies a sunset clause around 20-30 year horizon if innovation coalitions can scale alternative proteins and water-productivity technologies.",
+    "key_agents": [
+      "Small-holder groundwater-dependent farmers: Primary victims (powerless/trapped) \u2014 face aquifer depletion with no exit options; bear full cost of unsustainable extraction",
+      "Groundwater-dependent communities: Victims (powerless/trapped/constrained) \u2014 face water scarcity, health impacts, and livelihood loss as aquifers deplete",
+      "Industrial agriculture-export complex: Primary beneficiaries (institutional/arbitrage) \u2014 capture profit margin on water-intensive commodities while externalizing depletion costs",
+      "Commodity exporters: Beneficiaries (organized/institutional) \u2014 gain economy-of-scale advantages and foreign exchange through water-intensive crop export; absorb internal depletion costs through externalization",
+      "Food-importing nations: Mixed (moderate/constrained) \u2014 benefit from cheap food security but exposed to strategic vulnerability and hidden water externality",
+      "Upstream riparian states: Organized extractors (organized/constrained) \u2014 benefit from upstream water diversion; constrained by transboundary treaties and sovereignty claims embedded in extraction",
+      "Downstream riparian states: Victims (organized/constrained) \u2014 absorb flow reductions from upstream extraction; cannot easily exit without regional political restructuring",
+      "Water-productivity innovation coalition: Organized agents building exit pathways (organized/constrained) \u2014 UN FAO, agricultural research institutes, precision irrigation developers, alternative protein platforms",
+      "Agricultural subsidy system: Institutional theater-maintainer (institutional/arbitrage) \u2014 maintains performative subsidy architecture that masks water costs and subsidizes depletion",
+      "Analytical observer: Risks false summit (analytical/analytical) \u2014 tempted to naturalize contingent institutional coupling as inherent agricultural limit"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and increasing. The constraint extracts through multiple mechanisms: (1) commodity price structure that decouples food cost from water cost, hiding externality in subsidy architecture; (2) temporal asymmetry \u2014 benefits accrue immediately to exporters while depletion costs accumulate over decades; (3) geographic asymmetry \u2014 water-scarce food-producing regions bear depletion while food-consuming regions externalize cost through imports. The value of 0.58 reflects that genuine coordination exists (global trade does solve immediate food availability problem) but extraction is substantial and growing. Starting value of 0.35 reflects lower global water stress 50 years ago; current 0.58 reflects accelerating depletion and climate variability. Suppression (0.65): High and structural. Multiple suppression mechanisms: (1) agricultural commodity structure tied to water-intensive crops (wheat, corn, rice); (2) subsidy architecture that makes water-intensive production more profitable than alternatives; (3) infrastructure lock-in (irrigation systems designed for high-volume extraction); (4) market lock-in (commodity prices driven by lowest-cost producers, forcing water depletion to remain competitive); (5) informational suppression (water costs hidden in agricultural subsidies, not visible in commodity prices); (6) temporal suppression (depletion is gradual, reaching critical thresholds only after decades of committed extraction). Theater ratio (0.48): Moderate and increasing. Subsidy narratives present water-intensive agriculture as 'protecting food security' while actual outcomes accelerate depletion and undermine long-term food security. Agricultural research investment framed as 'productivity' while measuring yield per capita rather than yield per unit water. Water use efficiency improvements framed as sustainability while applied to increase total extraction volume (Jevons paradox effect).",
+    "perspectival_gap": "Largest gaps: (1) Trapped farmer (snare, d\u22480.95) vs industrial exporter (rope, d\u22480.05) \u2014 same constraint yields opposite classification. (2) Agricultural subsidy system (piton, sees own degradation) vs commodity export complex (rope, sees pure benefit). (3) Civilizational observer (mountain, naturalizes coupling) vs scaffold coalition (scaffold, sees contingent sunset). These gaps arise from: (a) asymmetric exit options \u2014 beneficiaries can arbitrage, victims are locked in; (b) temporal framing \u2014 immediate beneficiaries vs long-term vulnerability; (c) information asymmetry \u2014 extraction costs hidden in subsidy architecture; (d) scale mismatch \u2014 local depletion externalized to global commodity price structure.",
+    "directionality_logic": "The pipeline derives d from (beneficiary/victim status, power level, exit options, scope). Beneficiaries with arbitrage \u2192 low d (\u22480.05-0.20). Victims with constrained exit \u2192 high d (\u22480.65-0.95). Mixed agents (food importers, upstream riparians) \u2192 moderate d (\u22480.50-0.70). The piton perspective shows an institutional actor that sees its own mechanism as degraded \u2014 the subsidy system persists not because it functions but because alternatives haven't fully replaced it. This is the diagnostic signature of inertial maintenance.",
+    "mandatrophy_analysis": "STRUCTURAL EXEMPLAR: The coupling constraint resolves mandatrophy by showing that all six types are legitimate structural readings. The snare (trapped farmer) is real \u2014 depletion is happening, suppression is real, extraction is experienced. The rope (exporter) is real \u2014 global trade genuinely provides coordination benefit and low friction. The tangled rope (importer, riparian) is real \u2014 mixed coordination and extraction coexist. The scaffold (innovation coalition) is real \u2014 viable exits exist with 20-30 year horizon. The piton (subsidy system) is real \u2014 institutional theater is measurable (theater_ratio = 0.48) and increasing. The mountain (false summit) is a real misclassification diagnostic \u2014 it reveals where natural-law framing naturalizes contingent institutional architecture. No single type 'wins' \u2014 the perspectival family IS the accurate model."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "aquifer_depletion_irreversibility",
+      "agricultural_subsidy_architecture",
+      "transboundary_water_rights_allocation",
+      "climate_precipitation_variability"
+    ],
+    "dual_formulation_note": "Food security-water coupling decomposes into multiple structurally distinct constraints: (1) aquifer_depletion_irreversibility (\u03b5\u22480.08, mountain \u2014 once certain thresholds are crossed, recovery is physically impossible); (2) agricultural_subsidy_architecture (\u03b5\u22480.72, snare \u2014 subsidy structure actively incentivizes depletion); (3) transboundary_water_rights_allocation (\u03b5\u22480.55, tangled rope \u2014 genuine coordination embedded in asymmetric extraction). The coupling story unifies these at the level of food security provisioning. Each story has different \u03b5 because they answer different questions about the same domain. The network links show how deterioration in one constraint (aquifer irreversibility crossing threshold) would affect others (subsidy effectiveness, rights allocation viability)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.58
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "api_surface_stability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "apis"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "API Surface Stability Constraint in Software Ecosystems",
+    "topic_domain": "software_engineering/platform_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_maintainers",
+      "early_adopters"
+    ],
+    "victims": [
+      "downstream_developers",
+      "ecosystem_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Downstream Developer",
+      "comment": "PERSPECTIVE 1: DOWNSTREAM DEVELOPER (SNARE) \u2014 Trapped by dependency lock-in. Breaking API changes force costly refactoring; migration to alternative platforms incurs switching costs and loses established integrations. No meaningful exit without bearing full burden of deprecation lag and rewrite costs. Experiences pure extraction through forced maintenance labor."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Organized Developer Coalition",
+      "comment": "PERSPECTIVE 2: ORGANIZED DEVELOPER COALITION (TANGLED ROPE) \u2014 Collective action through open-source foundations and standards bodies provides voice in API governance (coordination function). However, constrained exit: switching frameworks incurs ecosystem switching costs; leverage is limited because platform maintainers control versioning. Mixed experience of both coordination benefit and asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Maintainer",
+      "comment": "PERSPECTIVE 3: PLATFORM MAINTAINER (ROPE) \u2014 Benefits from ecosystem coordination: stable APIs attract developers, reducing fragmentation. Has arbitrage options: can version APIs, maintain legacy branches, or deprecate gradually. Experiences the constraint as enabling coordination rather than extractive \u2014 the stability boundary is a collective good that benefits maintainers through ecosystem health."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Commercial Platform Vendor",
+      "comment": "PERSPECTIVE 4: COMMERCIAL PLATFORM VENDOR (TANGLED ROPE) \u2014 Coordinates ecosystem activity (genuine coordination function: ensures interoperability, enables third-party innovation). Also extracts through API versioning: breaking changes force paid upgrades or consulting. Capital requirements create switching costs for enterprise customers. Both coordination and asymmetric extraction present."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Standards Body",
+      "comment": "PERSPECTIVE 5: STANDARDS BODY (SCAFFOLD) \u2014 Coordinating role through protocol standardization and versioning frameworks. Mobile exit options: standards bodies can shift focus to new platforms or retire obsolete standards. Temporary support function with implicit sunset: as protocols mature and stabilize, the standards-setting constraint naturally winds down. Theater ratio reflects the performative aspects of standardization processes."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Compatibility Layer",
+      "comment": "PERSPECTIVE 6: LEGACY COMPATIBILITY LAYER (PITON) \u2014 Maintenance of deprecated API versions is largely performative: minimal new functionality, primarily ritual adherence to backward-compatibility promises. The layer persists through institutional inertia \u2014 enterprises depend on it, but the actual maintenance burden is low and decreasing. Theater derives from the ceremonial nature of long-term compatibility maintenance for obsolete interfaces."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a mathematical/logical perspective, API surface stability reflects an inherent constraint: any interface exposed to external users creates a commitment that limits future implementation freedom. The stability requirement follows from logical necessity: breaking interfaces logically breaks dependent code. This perspective risks naturalizing what is actually a contingent institutional choice \u2014 other design patterns (protocol versioning, interface deprecation, capability-based security) could distribute the stability burden differently."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "breaking_change_severity_threshold",
+      "question": "What constitutes a 'breaking change' vs. a permissible API evolution?",
+      "resolution_mechanism": "Empirical semantic versioning compliance analysis; measurement of actual developer friction from purportedly non-breaking changes; correlation between change classification and downstream migration costs",
+      "impact": "If threshold is strict: many necessary improvements classified as breaking, increasing extraction. If threshold is loose: genuine instability persists, reducing constraint effectiveness.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for classifying breaking changes vs API evolution"
+    },
+    {
+      "id": "exit_cost_distribution_ambiguity",
+      "question": "Are downstream developers trapped or constrained? Do viable alternative platforms exist at comparable cost, or is the platform choice genuinely irreversible for most use cases?",
+      "resolution_mechanism": "Migration feasibility studies: cost analysis of moving production systems to alternative platforms; survey of actual switching attempts and their success rates; measurement of ecosystem complementarity (how many critical third-party libraries would need reimplementation)",
+      "impact": "If truly trapped (irreversible): snare classification dominates; pure extraction drives development. If constrained (high-cost exit): tangled_rope dominates; extraction is hybrid with coordination benefits.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether downstream developers are trapped or constrained"
+    },
+    {
+      "id": "standardization_enforcement_mechanism",
+      "question": "Does API stability arise from genuine technical coordination (protocols require compatibility) or from governance choices (vendors could support multiple breaking versions simultaneously)?",
+      "resolution_mechanism": "Comparative analysis: platforms that support parallel incompatible APIs (e.g., Python 2/3 era, Node.js major versions) vs. those maintaining strict backward compatibility; cost-benefit measurement of multi-version support vs. forced migration",
+      "impact": "If technical necessity: mountain classification is justified. If governance choice: the constraint is contingent (Tangled Rope or Snare), and alternative versioning architectures could distribute stability burden differently.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether API stability is technical necessity or governance choice"
+    },
+    {
+      "id": "ecosystem_lock_in_mechanism",
+      "question": "Is ecosystem lock-in (third-party libraries, integrations, institutional knowledge) the primary mechanism that traps developers, or can platforms establish migration-friendly ecosystems?",
+      "resolution_mechanism": "Case studies of successful platform migrations (Windows\u2192Linux, deprecated-language migrations); measurement of ecosystem library porting costs; analysis of platforms that maintain high switching ease despite ecosystem size",
+      "impact": "If lock-in is inevitable: extraction is inherent to any successful platform. If lock-in is engineered: it reflects design choices that could be unmade through open-source strategies or polyglot ecosystems.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ecosystem lock-in is inevitable or engineered"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "API surface stability in software ecosystems represents a structural tension between the need for ecosystem coordination (stable interfaces enable third-party innovation) and the extraction mechanism embedded in that stability (developers become locked into platform choices and forced to accept breaking changes on the maintainer's schedule). The constraint exhibits the full spectrum of Deferential Realism types: from the downstream developer's perspective, API changes are imposed without consent (Snare); from the maintainer's perspective, stability is a coordination mechanism (Rope); from commercial vendors, the constraint provides both coordination value and extraction opportunity (Tangled Rope); from standards bodies, it is a temporary coordination function with sunset properties (Scaffold); from legacy compatibility layers, it is largely performative (Piton); and from the civilizational analytical view, it risks appearing as a natural law when it is actually an institutional choice. The constraint's extractiveness has increased from 0.35 to 0.58 over the measurement interval, reflecting the accumulation of ecosystem lock-in effects as platforms mature: early-stage platforms have low extraction (many alternatives exist), but successful platforms develop thick ecosystems that make exit costly. Theater ratio has remained moderate (0.35\u20130.48), suggesting that API governance is substantially functional rather than purely performative \u2014 the versioning frameworks, deprecation notices, and compatibility tools serve real coordination functions, not just ritual.",
+    "key_agents": [
+      "Downstream Developers: Primary victims (powerless/trapped) \u2014 locked into platform choices by ecosystem dependencies and switching costs; forced to accept breaking changes on maintainer schedule",
+      "Organized Developer Coalitions: Secondary victims (organized/constrained) \u2014 collective action through foundations and standards provides voice but limited exit leverage",
+      "Platform Maintainers: Primary beneficiaries (institutional/arbitrage) \u2014 control versioning decisions; can choose deprecation timelines and migration burdens; benefit from ecosystem coordination value",
+      "Commercial Platform Vendors: Mixed (institutional/constrained) \u2014 capture extraction through breaking changes and upgrade cycles; also provide genuine coordination; constrained by competitive pressure and customer churn risk",
+      "Standards Bodies: Organized actors (organized/mobile) \u2014 coordinate protocol stability and versioning frameworks; mobile exit options enable sunset clause logic",
+      "Legacy Compatibility Layers: Degraded institutional (institutional/arbitrage) \u2014 maintenance of deprecated versions persists through inertia; increasingly performative as ecosystem evolves",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent design choices as immutable requirements"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-to-high. The platform maintainer captures significant value through version control: breaking changes force labor from downstream developers (refactoring, testing, migration). However, extraction is not as severe as pure monopoly rent (which would justify 0.75+) because: (1) some platforms maintain longer deprecation windows, reducing immediate friction; (2) open-source alternatives create countervailing pressure; (3) some developers have exit options if the platform is not critical to their business. The increase from 0.35 to 0.58 over the measurement interval reflects ecosystem maturation \u2014 as more critical third-party libraries accumulate, lock-in deepens and extraction rises. Suppression (0.65): High. Multiple barriers prevent alternatives: (1) ecosystem complementarity (libraries, integrations, institutional knowledge); (2) switching costs (rewrite effort, risk of new platform immaturity); (3) organizational inertia (training investments, code bases, vendor relationships); (4) network effects (adoption concentrates on platforms with the largest ecosystems). These barriers are real external constraints, not psychological factors. Theater ratio (0.48): Moderate-low. API governance is substantially functional \u2014 semantic versioning, deprecation schedules, and compatibility documentation serve real coordination purposes. However, some performative elements exist: (1) deprecation timelines often exceed actual maintenance burden (ritualized obsolescence); (2) backward-compatibility promises sometimes conflict with technical necessity, creating theater around impossible constraints; (3) version numbering conventions have evolved beyond technical utility into marketing signals. The low-to-moderate theater indicates the constraint is more coordination than degradation, but not purely functional.",
+    "perspectival_gap": "The platform maintainer and downstream developer experience radically different constraints. The maintainer sees Rope \u2014 a coordination mechanism that enables ecosystem growth and third-party innovation. The developer sees Snare \u2014 imposed stability requirements that limit their exit options. The organized coalition sees Tangled Rope \u2014 genuine coordination value (standards prevent fragmentation) mixed with asymmetric extraction (standards codify the status quo and disadvantage challengers). The standards body sees Scaffold \u2014 a temporary coordination function that will sunset as protocols stabilize and new platforms emerge. The legacy compatibility layer sees Piton \u2014 the ritual of maintaining deprecated interfaces persists more from institutional inertia than functional necessity. The civilizational observer risks seeing Mountain \u2014 stability as an immutable law of software engineering \u2014 but the structural data reveals this as a false summit: other design patterns (capability-based versioning, parallel protocol support, gradual migration strategies) could distribute the stability burden differently. The perspectival gaps reveal that API stability is not a naturally emerging coordination problem but an institutional choice that concentrates decision-making power in the maintainer.",
+    "directionality_logic": "Platform maintainers (beneficiaries with arbitrage options) experience low-to-negative effective extraction \u2014 they control versioning and can extract value from lock-in while maintaining ecosystem health. Downstream developers (victims with trapped/constrained exit) experience high effective extraction \u2014 they bear the burden of forced migrations and have limited alternatives. The extraction is amplified by global scope (platform decisions affect worldwide developer populations) and institutional enforcement (maintainers control release schedules and can impose breaking changes unilaterally). Organized coalitions (organized power with constrained exit) experience moderate extraction \u2014 they gain coordination voice through standards bodies but cannot unilaterally choose exit. The directionality spreads across the spectrum: from negative (beneficiaries with full arbitrage) through high-positive (powerless victims) to moderate-positive (organized actors with constrained exit). This distribution is the signature of Tangled Rope: genuine coordination function (standards prevent fragmentation) overlaid on asymmetric extraction (decisions concentrate in maintainer hands, developers bear migration costs).",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that API stability serves genuine coordination functions while enabling extraction. The mandatrophy question \u2014 'Is this pure coordination or pure extraction?' \u2014 has a coherent answer: it is hybrid. The coordination function is real: without stable API surfaces, ecosystem fragmentation would explode, third-party libraries would become unmaintainable, and developers would face incompatibility chaos. The extraction is also real: maintainers use version control to impose labor burdens on downstream developers, lock-in deepens as ecosystems grow, and the cost of migration becomes irreversible for many organizations. The Tangled Rope classification indicates this hybrid structure. The false mountain perspective (Perspective 7) is diagnosed as naturalization: API stability is treated as an immutable law ('interfaces always create stability requirements'), when it is actually a contingent choice about how to distribute burden and power. Other design patterns \u2014 protocol versioning, capability-based security, or intentionally-designed migration pathways \u2014 could reduce extraction while preserving coordination. The mandatrophy is not a paradox; it is a clarification that coordination and extraction are not mutually exclusive. This constraint exhibits both, in measurable proportions."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_lock_in",
+      "semantic_versioning_enforcement",
+      "ecosystem_dependency_management"
+    ],
+    "dual_formulation_note": "API surface stability is upstream of platform lock-in (ecosystems create lock-in through API dependency accumulation) and semantic versioning enforcement (the versioning framework is an institutional mechanism for implementing stability). These constraints are decomposed because lock-in has independent extractiveness (\u03b5 \u2248 0.75, pure snare) while versioning is more hybrid (\u03b5 \u2248 0.58, tangled rope). API surface stability is the parent constraint that structures both downstream phenomena."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

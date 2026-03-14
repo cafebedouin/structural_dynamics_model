@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "non_compete_enforcement",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nce"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Non-Compete Agreement Enforcement",
+    "topic_domain": "labor/employment/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "employer_firm"
+    ],
+    "victims": [
+      "departing_employee",
+      "market_competition"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Departing Specialist",
+      "comment": "PERSPECTIVE 1: DEPARTING SPECIALIST (SNARE) \u2014 Trapped by non-compete covenant. Cannot exit to competing employer without legal liability and financial ruin. Specialized skills make alternative career paths costly. Suppression is structural: enforcement via litigation, injunctive relief, and liquidated damages makes exit materially impossible. Experiences pure extraction \u2014 the constraint prevents the departing employee from exercising their human capital."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Skilled Mid-Career Professional",
+      "comment": "PERSPECTIVE 2: SKILLED MID-CAREER PROFESSIONAL (TANGLED ROPE) \u2014 Faces high but surmountable barriers to exit. Can relocate to different geographic market, retrain into adjacent field, or negotiate covenant buyout. But costs are substantial: relocation burden, career disruption, financial loss. Also benefits from non-compete enforcement elsewhere \u2014 the norm protects their own firm's investments in them. Mixed coordination (protecting firm investment in training) and extraction (blocking lucrative lateral moves)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Employer Firm",
+      "comment": "PERSPECTIVE 3: EMPLOYER FIRM (ROPE) \u2014 Primary beneficiary. Non-compete covenants enable coordination: firms can invest in training specialists without fear of immediate defection to rivals. Experiences the constraint as a coordination mechanism that solves a genuine problem (how to protect firm-specific knowledge and training investment). Can arbitrage by requiring non-competes as a condition of hire; can exit by not requiring them."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Reform Coalition",
+      "comment": "PERSPECTIVE 4: LABOR REFORM COALITION (SCAFFOLD) \u2014 Organized agents (labor unions, state legislatures, worker advocacy groups) perceive non-compete enforcement as a temporary coordination failure with a sunset. State-level non-compete bans (California, North Dakota, and recent reforms in Massachusetts, Virginia) represent alternative coordination pathways: public investment in training, skills certification systems, and competition-as-driver-of-innovation frame replace private firm capture of human capital. Estimated sunset: 15-25 years as regulatory landscape shifts toward non-enforce or severe limitation."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Outdated Legal Doctrine",
+      "comment": "PERSPECTIVE 5: OUTDATED LEGAL DOCTRINE (PITON) \u2014 Reasonable-ness doctrine (geographic scope, duration, legitimate business interest) persists as a performative filter despite weak enforcement and conflicting policy goals. Courts maintain the ritual of balancing while systematically upholding broad covenants in practice. The legal doctrine sees itself as degraded \u2014 recognized as inefficient and inequitable but maintained through institutional inertia and lobbying pressure. Theater ratio reflects the gap between judicial pronouncements of reasonableness and actual enforcement patterns (high theater, moderate function)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some form of employee-employer coordination around knowledge and training investment is inherent to human capital formation: any firm investing heavily in an employee faces risk of immediate defection. This perspective naturalizes non-compete enforcement as an immutable constraint of economic exchange. However, the structural data reveals this as false summit: non-compete doctrine is highly contingent (California ban proves enforceability is policy choice, not natural law), varies by jurisdiction, and is increasingly contested as inefficient."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legitimate_business_interest_scope",
+      "question": "What constitutes a legitimate business interest justifying non-compete restriction? Trade secrets, client relationships, competitive strategy, or general human capital?",
+      "resolution_mechanism": "Comparative analysis of state enforcement standards and empirical outcomes: which definitional boundaries correlate with faster innovation, employee mobility, and firm stability?",
+      "impact": "If narrowly defined (trade secrets only): non-competes reclassify as snare from more perspectives. If broadly defined (general competitive advantage): tangled_rope classification holds but coordination function dominates over extraction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Definition of legitimate business interest"
+    },
+    {
+      "id": "geographic_temporal_reasonableness",
+      "question": "What geographic scope and duration are necessary and sufficient to protect legitimate firm interests? One year or five years? City or continental?",
+      "resolution_mechanism": "Empirical tracking: do covenants with binding temporal/geographic limits (vs. overly broad limits) achieve protection while preserving exit options? Do California-model bans reduce firm investment in training?",
+      "impact": "If narrow bounds are sufficient: suppression metric drops 0.15-0.20 (exit becomes genuinely constrained rather than trapped). If broad bounds necessary: suppression persists, snare classification dominates.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Necessary scope and duration of covenants"
+    },
+    {
+      "id": "training_investment_recovery_mechanism",
+      "question": "Does non-compete enforcement actually recover firm training investment, or does it primarily extract future earning potential from employees?",
+      "resolution_mechanism": "Longitudinal data: correlation between non-compete enforcement intensity and firm spending on employee development; wage premium analysis for employees under covenants vs. without",
+      "impact": "If covenants enable training investment: tangled_rope classification confirmed (genuine coordination). If covenants reduce training but extract future earnings: snare reclassifies from employer perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether non-competes enable or extract from training investment"
+    },
+    {
+      "id": "alternative_coordination_sufficiency",
+      "question": "Do alternative mechanisms (non-solicitation covenants, trade secret law, equity vesting schedules) achieve the same coordination function without suppression?",
+      "resolution_mechanism": "Comparative institutional analysis: tech sector (high non-competes vs. low-enforcement jurisdictions); academic/research sectors (alternative IP mechanisms); geographic comparison across state enforcement regimes",
+      "impact": "If alternatives sufficient: non-compete enforcement reclassifies as redundant extraction (snare). If alternatives inadequate: tangled_rope classification solidified.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Sufficiency of alternative coordination mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Non-compete agreement enforcement creates a structural constraint between employer firms' interest in protecting training investments and human capital, and departing employees' interest in labor market mobility. The constraint exhibits properties of both coordination and extraction: firms genuinely face a problem (how to protect firm-specific knowledge and training investment without permanent binding), and non-competes provide one solution. However, the enforcement mechanism also suppresses employee exit options and restricts labor market competition, generating extraction that benefits firms at the expense of worker mobility and market efficiency. The constraint has intensified over 30 years as enforceability has expanded geographically and temporally (theater ratio rising from 0.35 to 0.55) and extractiveness has increased (0.42 to 0.58) through broader covenant language and more aggressive litigation. Regulatory reform efforts (California ban, Massachusetts restrictions, FTC challenge to non-competes) represent organized attempts to replace the current enforcement regime with alternatives that achieve coordination without maximal suppression.",
+    "key_agents": [
+      "Departing Specialist: Primary victim (powerless/trapped) \u2014 locked into covenant by legal liability; cannot exercise specialized skills in competing firm",
+      "Skilled Professional: Secondary victim (moderate/constrained) \u2014 faces high but surmountable costs to exit; can relocate or retrain but at substantial loss",
+      "Employer Firm: Primary beneficiary (institutional/arbitrage) \u2014 captures benefit of covenant protection; can arbitrage by requiring covenants as hire condition",
+      "Labor Reform Coalition: Organized agents (organized/constrained) \u2014 unions, legislatures, worker advocates; building alternative coordination pathways (state bans, skills certification, public training investment)",
+      "Courts/Legal System: Institutional actor (institutional/arbitrage) \u2014 maintains reasonableness doctrine and enforcement mechanism; sees enforcement as degraded ritual (piton perspective)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing non-compete enforcement as inherent to labor markets and training investment"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Firms capture significant benefit during covenant window (typically 1-3 years but increasingly 5+ years). The benefit is not purely extractive \u2014 some is fair coordination reward for training investment \u2014 but the magnitude has expanded beyond what legitimate business interest justifies. Measurement trajectory (0.42\u21920.58) reflects broadening scope and duration of covenants. Suppression (0.68): High. Significant structural barriers to exit include legal liability (injunctive relief, liquidated damages, attorney fees), specialized skill loss if forced into unrelated field, regional market concentration in some industries (tech, finance), and information asymmetry (employees often don't assess covenant severity until post-hire). Theater ratio (0.55): Moderate-high. Courts apply reasonableness doctrine (geographic scope, temporal duration, legitimate business interest test) that produces appearance of balanced filtering. In practice, enforcement is substantial and broad covenants are regularly upheld, creating theater gap between judicial rhetoric and actual enforcement.",
+    "directionality_logic": "Directionality is driven by structural position and beneficiary/victim status. The employer firm (institutional/arbitrage) experiences low d \u2192 negative chi because it is the beneficiary and has exit capacity (can choose to require or not require covenants). The departing employee (powerless/trapped) experiences high d \u2192 high chi because they are the victim and lack exit capacity (covenant is binding). Mid-career professional (moderate/constrained) experiences moderate d because exit is possible at cost. The labor reform coalition (organized/constrained) experiences lower d because they have organized power and policy exit routes. Courts (institutional/arbitrage) see themselves as beneficiaries of the enforcement mechanism they maintain, despite judicial acknowledgment that the doctrine is imperfectly balanced.",
+    "perspectival_gap": "The departing specialist and employer firm perceive radically different constraints: the employee sees a snare (extraction with no exit), the employer sees a rope (coordination solving a legitimate problem). The organized reform coalition sees a scaffold with a sunset (regulatory alternatives maturing over 15-25 years). The courts see a piton (the reasonableness doctrine performing a ritual they acknowledge is imperfect). The analytical observer risks seeing a mountain (training investment protection inherent to labor markets) but the structural data reveals high policy contingency. The gap between rope (firm perception) and snare (employee perception) is the core diagnostic signal: the same constraint solves coordination for one agent while suppressing exit for another.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: Non-compete enforcement is genuinely tangled because it combines coordination (protecting firm training investment) and extraction (suppressing employee exit options). The coordination function is real: firms face a legitimate collective action problem (if every employee can defect immediately to rivals after training, firms underinvest in development). The extraction is also real: employees lose geographic/sectoral mobility options and often cannot recover the value of their specialized skills. The mandatrophy is resolved by accepting both functions as structural. The constraint is not 'really' a snare masquerading as coordination, nor 'really' pure coordination with unfortunate side effects. It is genuinely hybrid. The tangled_rope classification flags that this constraint requires active enforcement and produces both coordination and asymmetric extraction. Policy choices (narrow vs. broad covenants, geographic/temporal limits, alternative mechanisms) determine the ratio of coordination to extraction, not the fundamental nature of the constraint."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "labor_market_mobility",
+      "trade_secret_protection",
+      "employee_equity_vesting"
+    ],
+    "dual_formulation_note": "Non-compete enforcement decomposes into multiple structurally distinct constraints: (1) trade secret protection (\u03b5\u22480.08, Mountain) \u2014 legitimate business interest in confidential information; (2) employee poaching deterrence (\u03b5\u22480.35, Rope) \u2014 coordination benefit from protecting client relationships; (3) future earnings restriction (\u03b5\u22480.72, Snare) \u2014 extraction from blocking market mobility in low-secret roles. This story models the integrated enforcement mechanism (\u03b5=0.58, Tangled Rope) that combines all three functions. Upstream: trade_secret_protection (lower \u03b5, clearer coordination). Downstream: labor_market_mobility (higher \u03b5, extraction dominates)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.22
+    }
+  ]
+}

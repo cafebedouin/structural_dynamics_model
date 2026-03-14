@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "executive_compensation_incentives",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "exec_comp"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Executive Compensation Incentive Structures",
+    "topic_domain": "corporate_governance/financial_extraction",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "senior_executives",
+      "compensation_committees",
+      "institutional_investors_holding_voting_blocks"
+    ],
+    "victims": [
+      "rank_and_file_employees",
+      "long_term_shareholder_value",
+      "firm_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Mid-Career Employee",
+      "comment": "PERSPECTIVE 1: MID-CAREER EMPLOYEE (SNARE) \u2014 Trapped in organization by health insurance, pension vesting, and career sunk costs. Watches executive compensation rise while their wage stagnates. No exit option that preserves accumulated benefits. Extraction is pure: executive gains are funded by wage suppression and eliminated pension obligations. Maximum experienced chi \u2014 structural immobility combined with visible asymmetry."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Future Stakeholders and Economy",
+      "comment": "PERSPECTIVE 2: FUTURE STAKEHOLDERS / ECONOMY (SNARE) \u2014 Cannot exit because they do not yet exist. Current executive incentive structures (quarterly earnings targets, stock buybacks, risk externalization) are optimized for short-term extraction at the cost of long-term firm stability and systemic risk. The constraint operates intergenerationally: extraction today is deferred cost tomorrow. Powerless because future actors have no vote in current governance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Institutional Investor",
+      "comment": "PERSPECTIVE 3: INSTITUTIONAL INVESTOR (TANGLED ROPE) \u2014 Holds voting shares and participates in compensation committee oversight. Faces asymmetry: executives design their own pay via captured boards and advisory firms; investors face costs of stock dilution and misaligned incentives. But also benefits from coordination function \u2014 compensation structure does coordinate effort allocation, even if asymmetrically extracted. Constrained by index fund obligations and fiduciary duty norms that prevent exit. Mixed extraction and coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Senior Executive",
+      "comment": "PERSPECTIVE 4: SENIOR EXECUTIVE (ROPE) \u2014 Primary beneficiary. Experiences the constraint as pure coordination: compensation committee meetings, board negotiations, and incentive structures align their effort with shareholder and stakeholder interests (the stated rationale). Net flow of resources moves toward this agent. Arbitrage exit: can move to competitor firms with similar structures or to private equity with even higher extraction tolerance. Pure beneficiary perspective."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Mid-Manager Class",
+      "comment": "PERSPECTIVE 5: MID-MANAGER CLASS (TANGLED ROPE) \u2014 Benefits from incentive structures that reward business unit performance and rank-based advancement. Also extracts from below (can demand productivity increases from direct reports). Constrained from above (executive compensation decisions are not transparent; advancement criteria shift with executive strategy changes). Mobile exit: can move to peer organizations or startups. Hybrid experience: partial beneficiary, partial victim. Moderate power allows some navigation of the structure."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Compensation Committee Ritual",
+      "comment": "PERSPECTIVE 6: COMPENSATION COMMITTEE (PITON) \u2014 The formal governance mechanism (compensation committees, independent advisors, peer benchmarking reports) is substantially performative. Committees exist to justify decisions already made by executives in private negotiation with boards. Benchmarking against peer firms creates a ratchet effect \u2014 every firm's executives point to competitors' higher pay to demand raises. The theater persists through institutional inertia: committees are legally required and boards feel obligated to use them, even though their verification function is degraded. Theater ratio is high because the ritual maintains appearance of oversight while actual extraction decisions bypass the formal process."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Agency Cost Naturalization)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FALSE SUMMIT VIEW (MOUNTAIN) \u2014 From a civilizational frame, some executive-employee compensation asymmetry appears inherent to hierarchical organization: executives must be paid premium wages to attract talent and incentivize effort. This perspective naturalizes the constraint as immutable law of organizational economics. However, the structural data contradicts this: compensation asymmetry has grown 10x+ over 40 years while executive productivity has not; the constraint is contingent on specific governance structures (board composition, advisor networks, regulatory capture) that could be reformed. The mountain classification is a false summit \u2014 it naturalizes what comparative evidence shows is a contingent institutional arrangement. Scandinavian firms with mandatory board representation for workers and lower compensation ratios outperform equivalent US firms on long-term stability and innovation metrics, disproving the immutability claim."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "talent_premium_necessity",
+      "question": "What portion of executive compensation growth reflects genuine competitive talent premium versus pure extraction enabled by governance failure?",
+      "resolution_mechanism": "Comparative analysis of firm performance and executive talent retention under different compensation structures (US vs Scandinavian governance models); executive mobility and recruitment success under compressed wage ratios; performance metrics before and after compensation cuts during crises (2008-09, 2020-21)",
+      "impact": "If premium is real (>30% of current gap): partial justification for rope classification. If negligible (<10%): compensation structure is pure snare, suppression of wage competition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of compensation growth due to genuine talent scarcity vs governance failure"
+    },
+    {
+      "id": "incentive_alignment_efficacy",
+      "question": "Do stock-based and performance-based compensation schemes actually align executive behavior with long-term shareholder and stakeholder value, or do they create short-termism and risk externalization incentives?",
+      "resolution_mechanism": "Longitudinal analysis of firm performance metrics (stock price vs operational efficiency, dividend stability, R&D investment, labor productivity, safety records) before and after major compensation structure changes; comparison of executive behavior under variable vs fixed compensation; analysis of executive decision patterns when personal stake aligns vs conflicts with firm stability",
+      "impact": "If alignment is real: compensation is genuine coordination mechanism (Rope). If incentives misalign: compensation structure is extraction mechanism that uses coordination framing as cover (Snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether stock-based compensation aligns executive behavior with firm value"
+    },
+    {
+      "id": "compensation_committee_independence",
+      "question": "Are compensation committees genuinely independent oversight bodies, or are they captured by the executives they are supposed to oversee?",
+      "resolution_mechanism": "Analysis of committee composition, advisor firm conflicts of interest, correlation between committee decisions and executive negotiation outcomes, voting records on compensation proposals, rate of compensation overrides vs committee recommendations, financial ties between advisors and executive candidates",
+      "impact": "If independent: committee provides genuine coordination function, reducing theater ratio and snare classification. If captured: committees are pure performance theater, increasing theater ratio and entrenching snare dynamics.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether compensation committees are functionally independent"
+    },
+    {
+      "id": "systemic_risk_externalization",
+      "question": "Do executive compensation structures that reward short-term stock price increases create systemic financial risk that is externalized to employees, creditors, and the broader economy?",
+      "resolution_mechanism": "Historical analysis of executive compensation vs firm leverage, risk-taking behavior, and bankruptcy rates; correlation between executive compensation structures and financial crisis participation; measurement of employee layoff frequency and wage suppression during executive compensation growth periods",
+      "impact": "If externalization is significant: constraint represents intergenerational snare (future bears costs of current extraction). If minimal: constraint is pure tangled rope coordination with asymmetric benefit distribution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of systemic financial risk externalization via compensation incentives"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Executive compensation incentive structures represent a hybrid constraint that combines genuine coordination (aligning executive effort with organizational outcomes) with systematic extraction (asymmetric transfer of value from employees and long-term stakeholders to senior executives). Over the past 40 years, the ratio of CEO-to-median-worker compensation has grown from approximately 20:1 to 300+:1, while executive productivity metrics have not increased proportionally. The constraint operates through multiple mechanisms: captured compensation committees that lack functional independence, benchmarking processes that create ratchet effects, stock-based incentives that reward short-term price increases at the expense of long-term stability, and governance structures that allow executives to substantially influence their own pay. The theater ratio has increased as the formal governance apparatus (independent directors, compensation advisors, peer benchmarking) has become more elaborate without actually constraining executive compensation growth. The constraint exhibits all perspectives from snare (powerless employees) through rope (senior executives) to false mountain (naturalized as immutable organizational necessity).",
+    "key_agents": [
+      "Senior Executives: Primary beneficiaries (institutional/arbitrage) \u2014 design compensation structures, capture boards, extract upward through stock options and bonuses",
+      "Rank-and-File Employees: Primary victims (powerless/trapped) \u2014 wages stagnate while executives capture productivity gains; locked in by benefits and sunk costs",
+      "Mid-Managers: Secondary actors (powerful/mobile) \u2014 benefit from incentives above, extract from below, maintain hierarchical structure",
+      "Compensation Committees: Governance actors (institutional/arbitrage) \u2014 formally independent but functionally captured; maintain theater of oversight",
+      "Institutional Investors: Secondary beneficiaries (moderate/constrained) \u2014 capture some benefits through stock appreciation but lose returns to executive extraction; constrained by index obligations",
+      "Long-Term Firm Stakeholders: Victims (powerless/trapped) \u2014 bear costs of short-termism and risk externalization; cannot exit or organize",
+      "Future Economy: Intergenerational victims (powerless/trapped) \u2014 will bear costs of systemic instability created by current short-term optimization"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Executive compensation has grown substantially faster than worker compensation or firm productivity, indicating systematic value transfer. However, the constraint is not pure extraction (which would be >0.70) because executives do coordinate effort allocation \u2014 the compensation structure does align some behaviors with firm outcomes, even if captured by executive self-interest. The extractiveness measurement reflects both genuine coordination cost (~0.25) and excess capture (~0.33). Suppression (0.62): High. Multiple mechanisms prevent exit and suppress alternatives: health insurance lock-in, pension cliff effects, geographic immobility costs, non-compete clauses, at-will employment law, and labor market power asymmetry. Employees cannot organize due to union decline and anti-collective-action norms. Suppression operates intergenerationally: workers cannot credibly commit to long-term firm stability because executives' compensation incentives do not align with long-term firm value. Theater ratio (0.58): Moderate-high. Compensation committee processes, peer benchmarking studies, and independent advisor reports maintain appearance of rigorous oversight while actual extraction decisions are made through executive negotiation and board capture. The formal governance apparatus has become more elaborate over time while its verification function has degraded \u2014 classic piton signature. The measurements show theater_ratio and extractiveness both increasing in parallel, indicating that the governance ritual is becoming more elaborate even as extraction becomes more naked.",
+    "perspectival_gap": "This constraint demonstrates how a single structural arrangement produces radically different classifications depending on agent position. The senior executive sees pure coordination (Rope) \u2014 incentives are designed to align effort, and they experience net resource flow as compensation. The powerless employee sees pure extraction (Snare) \u2014 trapped by benefits, watching wages stagnate while executives capture productivity gains. The institutional investor sees tangled rope \u2014 participates in governance, captures some stock appreciation, but faces dilution and misaligned incentives. The compensation committee sees piton \u2014 goes through elaborate formal processes that feel important while actual extraction happens through side channels and board negotiations. The false mountain perspective naturalizes the constraint as immutable law of organizational hierarchy, but the structural data (40-year growth trend, comparative evidence from different governance models, explicit executive design of compensation structures) proves this is a contingent institutional arrangement, not an unchangeable law.",
+    "directionality_logic": "Directionality is driven by structural position within the extraction flow. Senior executives as beneficiaries with arbitrage exit options (can move to any firm with similar compensation structures) derive low directionality (d \u2248 0.15) \u2014 they experience the constraint as beneficial. Powerless employees with trapped exit options (locked by benefits and sunk costs) derive high directionality (d \u2248 0.92) \u2014 they experience the constraint as bearing maximum extraction cost. Mid-managers with mobile exit (can move to peer firms or startups) derive moderate directionality (d \u2248 0.55) \u2014 they benefit from some extraction while being extracted from above. Institutional investors with constrained exit (index fund obligations prevent moving capital) derive moderate-high directionality (d \u2248 0.68) \u2014 they face extraction through dilution despite governance participation. The compensation committee members, though institutional actors with arbitrage options, are partially captured by executives, so their directionality is higher than a purely beneficiary institutional actor would suggest (d \u2248 0.35 instead of 0.15). These directionality values drive the perspectival gap: high-d agents classify as Snare, moderate-d agents as Tangled Rope, low-d beneficiary agents as Rope.",
+    "mandatrophy_analysis": "RESOLUTION: This constraint resolves the mandatrophy by distinguishing the genuine coordination function (aligning executive effort with organizational outcomes) from the pure extraction mechanism (capturing surplus through asymmetric governance). The Tangled Rope classification holds at the claimed level because (1) authentic coordination occurs \u2014 compensation structures do incentivize effort and performance feedback; (2) asymmetric extraction is real \u2014 executives have substantially more influence over pay outcomes than workers; (3) active enforcement is required \u2014 compensation committees, board oversight, and advisory firm networks maintain the structure. The snare perspectives (powerless employees, future stakeholders) reveal that the coordination narrative masks extraction dynamics: the constraint could align incentives much more symmetrically (as Scandinavian models show), but the current design is optimized to maximize executive extraction within the coordination frame. The piton perspective on compensation committees shows that the formal governance apparatus has degraded from verification mechanism to theatrical justification. The false mountain perspective is correctly identified as false: the 10x growth in CEO-to-worker ratios over 40 years while productivity gains have plateaued proves the constraint is contingent on specific governance choices, not an immutable law. The mandatrophy is resolved by mapping the coordinate system: from powerless/trapped perspectives, the constraint appears as snare; from institutional/arbitrage perspectives, as rope; from moderate/constrained perspectives, as tangled rope. The system is not self-contradictory \u2014 it is multi-perspectival. The error is claiming any single perspective is universal."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "labor_wage_suppression",
+      "corporate_short_termism",
+      "shareholder_primacy_doctrine"
+    ],
+    "dual_formulation_note": "Executive compensation incentive structures are downstream of shareholder primacy doctrine and upstream of specific labor extraction mechanisms (wage suppression, benefit elimination, outsourcing). The 0.58 extractiveness value reflects both the coordination function (aligning effort) and the asymmetric capture mechanism (allowing executives to design their own pay). Sister constraints in the family operate at higher extractiveness (shareholder primacy: 0.70+) or lower extractiveness (labor wage suppression viewed as isolated wage dynamics: 0.42), but executive compensation is the coordinating mechanism that transmits extraction from shareholders to workers."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "shareholder_primacy_doctrine"
+    ]
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "civil_rights_litigation_barrier",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "civrights"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Civil Rights Litigation Barrier",
+    "topic_domain": "legal/social_justice",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_defendants",
+      "legal_establishment"
+    ],
+    "victims": [
+      "civil_rights_claimants",
+      "marginalized_communities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Civil Rights Claimant",
+      "comment": "PERSPECTIVE 1: CIVIL RIGHTS CLAIMANT (SNARE) \u2014 Trapped by cost barriers (legal fees $50k-$500k+), time barriers (litigation 3-7 years), and knowledge barriers (legal expertise required). No meaningful exit option from justice system. Bears full extraction cost. Cannot organize collectively without legal resources. Maximum experienced constraint as pure extraction mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Civil Rights Organization",
+      "comment": "PERSPECTIVE 2: CIVIL RIGHTS ORGANIZATION (TANGLED ROPE) \u2014 Constrained by funding limitations and capacity rationing. Must litigate strategically, selecting high-impact cases. Also benefits from litigation precedent ecosystem and donor attention to high-profile cases. Genuine coordination function (precedent-setting benefits all future claimants) alongside asymmetric extraction (organization bears litigation costs that individual claimants cannot). Medium experienced extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Legal Establishment",
+      "comment": "PERSPECTIVE 3: LEGAL ESTABLISHMENT (ROPE) \u2014 Benefits from fee structures, billable hours, and institutional prestige. Experiences constraint as coordination mechanism: litigation rules standardize dispute resolution and create predictable fee structures. Net beneficiary \u2014 extraction flows toward this institution, not away. Low experienced extraction because arbitrage options abundant (can refuse cases, select profitable ones, adjust billing rates)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Institutional Defendant",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL DEFENDANT (TANGLED ROPE) \u2014 Constrained by liability exposure and reputational risk, but also benefits from litigation gatekeeping (high barriers screen out frivolous claims and protect due process). Experiences genuine coordination function (litigation rules prevent arbitrary accusations) alongside asymmetric benefit (barriers disproportionately protect defendants vs plaintiffs). Moderate experienced extraction in their favor."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Reform Coalition",
+      "comment": "PERSPECTIVE 5: REFORM COALITION (SCAFFOLD) \u2014 Organized groups (civil rights coalitions, law school clinics, contingency bar) see litigation barriers as a temporary coordination failure with emerging solutions: legal aid expansion, class action mechanics, contingency fee normalization, and pro bono requirements. These alternatives are building exit pathways. Sunset horizon: 15-25 years as legal aid infrastructure matures and alternative dispute resolution mechanisms scale."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational view, some litigation cost is inherent to adversarial justice: complex claims require expertise, time, and resources to adjudicate fairly. The cost gap between plaintiffs and defendants is seen as a structural feature of due process itself. However, the structural data contradicts this mountain classification \u2014 the engine will identify false summit, revealing that cost barriers are contingent institutional arrangements, not laws of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "litigation_cost_threshold",
+      "question": "What litigation cost level distinguishes fair compensation for lawyer expertise from extractive gatekeeping?",
+      "resolution_mechanism": "Comparative analysis of legal cost structures across jurisdictions; international comparison of civil rights litigation barriers; correlation between legal cost and civil rights outcome prevalence",
+      "impact": "If threshold < $20k: most complex claims gatekept as unaffordable. If threshold > $100k: only wealthy plaintiffs pursue valid claims, creating systematic underenforcement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Litigation cost threshold for distinguishing expertise compensation from gatekeeping"
+    },
+    {
+      "id": "contingency_fee_coverage",
+      "question": "Do contingency fee arrangements adequately substitute for plaintiff cost barriers, or do they create lawyer moral hazard (selecting only high-monetary-damage cases)?",
+      "resolution_mechanism": "Analysis of case selection patterns under contingency vs hourly billing; comparison of civil rights outcomes (injunctive relief, precedent value) vs monetary damages; plaintiff satisfaction surveys",
+      "impact": "If contingency is adequate: many claims can proceed without cost gatekeeping (constraint moves toward Rope). If moral hazard is severe: civil rights claims without monetary damages remain trapped (constraint remains Snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether contingency fees resolve plaintiff cost barriers or create lawyer selection bias"
+    },
+    {
+      "id": "legal_aid_capacity_sufficiency",
+      "question": "Can legal aid systems scale to meet demand, or are funding constraints structural (perpetual underresourcing relative to need)?",
+      "resolution_mechanism": "Time-series analysis of legal aid funding vs civil rights claim volume; international benchmarking of legal aid spending as percentage of GDP; wait time data for legal aid intake",
+      "impact": "If scale is possible: scaffold sunset clause is genuine (constraint will degrade toward Rope/Piton). If structural underresourcing: legal aid is perpetual performance theater (constraint remains Snare/Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether legal aid capacity can meet demand or is structurally underfunded"
+    },
+    {
+      "id": "knowledge_barrier_substitutability",
+      "question": "Can simplified legal procedures or AI-assisted document preparation substitute for expert attorney knowledge, or are complex civil rights claims inherently knowledge-intensive?",
+      "resolution_mechanism": "Analysis of self-represented litigant outcomes in civil rights cases; comparison of success rates with vs without counsel; feasibility studies of simplified procedures for specific claim types",
+      "impact": "If substitution is possible: knowledge barrier can be reduced independent of cost barrier (constraint components decompose). If inherent complexity: knowledge and cost barriers are inseparable (constraint remains tangled).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether knowledge barriers can be decoupled from cost barriers through procedural simplification"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The civil rights litigation barrier creates a structural tension between the right to legal redress and the material capacity to pursue it. This constraint exhibits the full range of DR types from different structural positions. A claimant bearing the full cost of litigation to vindicate a constitutional right experiences pure extraction (Snare). A civil rights organization that must strategically triage limited resources experiences mixed coordination and extraction (Tangled Rope). The legal establishment that profits from fee structures experiences coordination mechanisms that stabilize their revenue (Rope). Institutional defendants experience gatekeeping that protects them disproportionately while screening frivolous claims (Tangled Rope from their position). Organized reform coalitions see emerging exit pathways through legal aid, pro bono, and alternative dispute resolution (Scaffold with sunset). An analytical observer might naturalize cost barriers as inherent to adversarial justice (Mountain), but the structural data reveals this as false summit \u2014 the barriers are contingent institutional arrangements. The constraint shows modest theater (0.45) because litigation rules, while imperfect, provide genuine due process protection. The extractiveness trajectory (0.42\u21920.58 over 30 years) reflects accumulation of cost barriers: rising attorney fees, increasing case complexity, legal aid funding stagnation, and normalization of private funding dependence.",
+    "key_agents": [
+      "Civil Rights Claimants: Primary victim (powerless/trapped) \u2014 face $50k-$500k+ litigation costs over 3-7 year timescale with no alternative dispute resolution path",
+      "Marginalized Communities: Diffuse victim (powerless/trapped) \u2014 systemic underenforcement of civil rights when claims are gatekept by cost",
+      "Civil Rights Organizations: Secondary victim/partial beneficiary (moderate/constrained) \u2014 capacity-constrained, must triage cases; also benefit from precedent and donor attention",
+      "Legal Establishment: Primary beneficiary (institutional/arbitrage) \u2014 profits from fee structures; controls litigation rules; can select profitable cases",
+      "Institutional Defendants: Secondary beneficiary (institutional/constrained) \u2014 protected by gatekeeping; also benefit from due process rules; constrained by liability exposure",
+      "Reform Coalition: Organized counterpower (organized/mobile) \u2014 legal aid advocates, law school clinics, contingency bar building alternative pathways",
+      "Analytical Observer: Civilizational context (analytical/analytical) \u2014 risks naturalizing cost barriers as inherent to justice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Civil rights claimants face documented cost barriers ($50k-$500k litigation expenses, 3-7 year timescale) that systematically exclude low-income plaintiffs. The barrier is not purely extractive \u2014 litigation rules do provide genuine due process protection and prevent frivolous claims. But the barrier's distribution is asymmetric: wealthy defendants can absorb costs; individual claimants cannot. The trajectory shows accumulation (0.42\u21920.58) as attorney fees rise faster than inflation and case complexity increases. Suppression (0.68): High. Multiple reinforcing barriers: (1) Cost barrier (legal fees, discovery expenses), (2) Knowledge barrier (requires expert navigation of complex rules), (3) Time barrier (litigation takes 3-7 years; claimants cannot afford to wait), (4) Institutional bias (judges and court systems often reflect defendant institutional interests), (5) Publication bias (precedent-setting cases get litigated; routine cases settle cheaply or go unpursued). Theater ratio (0.45): Moderate. Litigation procedures provide genuine due process (adversarial testing, discovery rules, written records). But theater elements exist: (a) Discovery disputes become performative cost-escalation games, (b) Summary judgment motions function partly as gatekeeping theater, (c) Judicial opinions are sometimes performative legitimation of predetermined institutional interests. Theater is lower than in peer review (verification_bottleneck = 0.72) because litigation has genuine functional elements; theater is higher than in pure coordination because gatekeeping serves extractive purposes.",
+    "perspectival_gap": "The perspectival gap is stark. Civil rights claimants experience pure extraction (Snare) \u2014 the system blocks redress access. Civil rights organizations experience mixed coordination/extraction (Tangled Rope) \u2014 they solve coordination problems (precedent, norm-setting) while extracting through case selection. Legal establishment experiences coordination (Rope) \u2014 litigation rules create predictable, profitable structures. Institutional defendants experience asymmetric protection (Tangled Rope from their position) \u2014 due process rules protect them while barriers protect them further. Reform coalitions see temporary barriers with exit pathways (Scaffold) \u2014 legal aid, pro bono, contingency fees, and alternative dispute resolution are scaling. The analytical observer's natural law (Mountain) is revealed as false summit: cost barriers are contingent institutional choices (funding legal aid, simplifying procedures, normalizing contingency fees) not inherent features of justice.",
+    "directionality_logic": "Directionality is determined by each agent's structural relationship to the barrier. Civil rights claimants are trapped victims \u2014 they bear maximum extraction cost with no exit options (d \u2248 0.95 \u2192 f(d) \u2248 1.42). Civil rights organizations are constrained but partially benefited \u2014 they navigate cost barriers strategically and benefit from litigation precedent (d \u2248 0.55 \u2192 f(d) \u2248 0.75). Legal establishment are beneficiaries with arbitrage \u2014 they control fee structures and can select profitable cases (d \u2248 0.10 \u2192 f(d) \u2248 -0.01). Institutional defendants are beneficiaries but constrained by liability \u2014 they benefit from gatekeeping but face exposure (d \u2248 0.30 \u2192 f(d) \u2248 0.15). Scope modifier (national \u03c3 = 1.0) applies to all perspectives equally. The beneficiary/victim declarations drive the derivation chain: beneficiaries (legal establishment, institutional defendants) get low d \u2192 low or negative \u03c7; victims (civil rights claimants, marginalized communities) get high d \u2192 high \u03c7. This produces the perspectival gap: the beneficiary sees coordination (Rope), the victim sees extraction (Snare), the organized counterpower sees sunset (Scaffold).",
+    "mandatrophy_analysis": "RESOLVES MANDATROPHY: The constraint distinguishes genuine coordination (due process protection, frivolous claim screening) from pure extraction (cost gatekeeping). The mandatory classification prevents false labeling of pure extraction as coordination. Civil rights litigation barriers have a genuine coordination function \u2014 adversarial testing does improve claim quality, written records do create accountability. But this coordination function does NOT require the current cost barriers. The legal aid, pro bono, and contingency fee alternatives provide the same coordination function with lower extraction. The mandatrophy is resolved by recognizing that extractiveness (0.58) exceeds what coordination function requires (estimated 0.15-0.20). The delta (\u22480.38) is pure extractive rent-seeking. The tangled_rope classification certifies that both components are real: (1) genuine coordination component, (2) genuine extraction component. This prevents mislabeling as pure extraction (Snare) OR pure coordination (Rope)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "criminal_legal_aid_shortage",
+      "employment_discrimination_underenforcement",
+      "housing_discrimination_remedy_gap"
+    ],
+    "dual_formulation_note": "Civil rights litigation barrier is upstream of specific domain-based constraints (employment discrimination, housing discrimination, criminal justice). Each domain has claim-specific extractiveness values; the litigation barrier represents the structural mechanism that prevents enforcement across all domains."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.28
+    }
+  ]
+}

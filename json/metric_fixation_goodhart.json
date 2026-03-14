@@ -1,0 +1,221 @@
+{
+  "header": {
+    "constraint_id": "metric_fixation_goodhart",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "metfix"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.78,
+    "claimed_type": "snare",
+    "human_readable": "Metric Fixation and Goodhart's Law",
+    "topic_domain": "organizational_governance/measurement_systems",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "metric_administrators",
+      "political_actors_controlling_metrics"
+    ],
+    "victims": [
+      "actual_outcome_quality",
+      "local_decision_makers",
+      "end_users_of_systems"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Frontline Worker",
+      "comment": "PERSPECTIVE 1: FRONTLINE WORKER (SNARE) \u2014 Teachers, nurses, police officers, and case managers face metric targets that are externally imposed, structurally misaligned with their actual work, and inescapable. Exit from the role means losing livelihood. Exit from the metric system is not available \u2014 compliance is enforced through performance evaluation and funding allocation. The worker experiences pure extraction: time and cognitive effort diverted from actual client welfare to metric gaming."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The End User / Affected Population",
+      "comment": "PERSPECTIVE 2: END USER / AFFECTED POPULATION (SNARE) \u2014 Patients in hospitals optimizing for wait-time metrics, students in schools optimized for test scores, citizens in cities optimized for crime statistics. The metric distortion directly harms them \u2014 they face worse medical outcomes, weaker learning, or actual crime that metrics claim to have prevented. Exit is constrained: must use the public system; cannot easily switch providers or jurisdictions. Bears the cost of metric gaming without control or visibility into the measurement system."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Metric Administrator",
+      "comment": "PERSPECTIVE 3: METRIC ADMINISTRATOR (ROPE) \u2014 Central authorities (governments, corporate headquarters, accreditation bodies) experience metrics as a coordination mechanism: a way to align distributed agents toward stated objectives. The administrator has arbitrage \u2014 can change the metrics, can exit the measurement system entirely, can introduce new reporting schemes. Extraction runs toward this agent (resources flow upward as compliance overhead), but the mechanism is perceived as coordination because the administrator controls the frame."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Reformist Coalition",
+      "comment": "PERSPECTIVE 4: REFORMIST COALITION (SCAFFOLD) \u2014 Measurement scholars (Muller, Ioannidis, Wilkinson), open-science advocates, and outcome-aligned practitioners see metric fixation as a temporary institutional failure with a visible sunset. The coalition is building alternative accountability mechanisms: thick evaluation, participatory metrics, outcome transparency, and evidence hierarchies that distinguish correlation from causation. The scaffold classification derives from the organized agents having both (a) a real coordination function (learning what actually works) and (b) a sunset clause (better measurement science replaces metric theater within a generation)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Accountability System",
+      "comment": "PERSPECTIVE 5: LEGACY ACCOUNTABILITY SYSTEM (PITON) \u2014 Organizational leaders and institutional authority actors maintain metric-based accountability through inertia despite widespread recognition that the system is broken. They can see the gaming (Goodhart's Law in action) and the harm, but the cost of switching to alternative accountability mechanisms (thick evaluation, outcome tracking, trust-based management) is perceived as high. The system persists because changing it is harder than maintaining it, not because it functions. Theater ratio is high: compliance theater substitutes for actual accountability."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The High-Status Professional",
+      "comment": "PERSPECTIVE 6: HIGH-STATUS PROFESSIONAL (TANGLED ROPE) \u2014 Senior physicians, university faculty, and established practitioners have enough reputational capital and autonomy to opt partially out of metric compliance. They can ignore metrics, game them selectively, or maintain both metric performance and actual quality. They experience the constraint as coordination (metrics provide accountability) with asymmetric extraction they can moderate. Mobile exit options allow them to preserve quality while nominally complying \u2014 a mixed position."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational perspective, the constraint is the fundamental misalignment between measurable and actual outcomes. Metrics select for what can be quantified (speed, volume, binary success/failure) and against what matters (depth, quality, actual impact). The observer sees that Goodhart's Law is not a temporary institutional problem but a structural feature of any system that privileges measurement over meaning. The dynamics are: metrics are introduced to align incentives \u2192 agents optimize the metrics \u2192 metrics become decoupled from outcomes \u2192 system collapses or loses function \u2192 metrics are replaced \u2192 cycle repeats. This is snare because no agent has control over the fundamental measurement-meaning gap."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "outcome_measurability_ceiling",
+      "question": "Are the most important outcomes inherently unmeasurable, or is the failure to measure them a contingent limitation of current methods?",
+      "resolution_mechanism": "Longitudinal case studies comparing metric-optimized and metric-free systems (e.g., Waldorf vs conventional schools, relationship-based medicine vs protocolized care, trust-based vs surveillance-heavy organizations) on long-term outcomes; interviews with practitioners on what they perceive as real vs measured success",
+      "impact": "If inherent: metric fixation is an unsolvable design problem (true snare for all perspectives). If contingent: better measurement science could resolve the constraint into rope (coordination without degradation).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether important outcomes are inherently unmeasurable or contingently hard to measure"
+    },
+    {
+      "id": "incentive_realignment_threshold",
+      "question": "What proportion of a system must actually optimize the metric (vs gaming it) before metric corruption exceeds coordination benefit?",
+      "resolution_mechanism": "Cross-organizational analysis: comparison of gaming rates to actual outcome drift; threshold identification below which metrics still track outcomes, above which metrics diverge from outcomes",
+      "impact": "If threshold is high (>70% compliance): metrics can remain useful even with significant gaming. If threshold is low (<30%): metrics become actively harmful early in the gaming process.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Gaming threshold at which metrics stop tracking outcomes"
+    },
+    {
+      "id": "metric_administrator_capture",
+      "question": "Do metric administrators become captured by the metrics they designed \u2014 losing ability to recognize metric corruption because they have professional and political identity tied to the system?",
+      "resolution_mechanism": "Interviews and decision-history analysis of administrators who changed or abolished metrics; documentation of cognitive resistance to evidence of gaming; tracking of administrator career outcomes tied to metric persistence vs reform",
+      "impact": "If high capture: the metric administrators are themselves trapped/identity_locked despite having arbitrage options structurally. The rope perspective is mislabeled; administrator is actually constrained/identity_locked. If low capture: administrators genuinely choose metrics as coordination tools and can change them rationally.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether metric administrators become captured by the systems they design"
+    },
+    {
+      "id": "outcome_quality_correlation",
+      "question": "In high-metric-fixation systems, is the observed outcome degradation causally driven by metric gaming or explained by other institutional changes (staffing, funding cuts, policy shifts)?",
+      "resolution_mechanism": "Causal analysis using synthetic control methods, difference-in-differences estimation, or controlled rollout experiments where metrics are introduced/removed in matched jurisdictions; separation of metric effects from concurrent institutional changes",
+      "impact": "If gaming is causal: metric fixation is the snare (core problem). If confounded with other changes: outcome degradation may be driven by underlying institutional failure, not metrics. Classification remains snare but etiology changes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal link between metric gaming and outcome degradation"
+    },
+    {
+      "id": "metric_reform_sustainability",
+      "question": "When organizations introduce participatory or outcome-aligned metrics, do they avoid Goodhart's Law drift, or do the new metrics repeat the same corruption cycle?",
+      "resolution_mechanism": "Longitudinal tracking of organizations that have reformed from traditional metrics to alternatives (thick evaluation, balanced scorecards, outcome hierarchies); documentation of whether the new metrics also degrade over time or maintain alignment with outcomes",
+      "impact": "If new metrics avoid degradation: the constraint is solvable via better measurement design (scaffold thesis correct). If new metrics repeat the cycle: metric fixation is a deeper structural problem than measurement choice (snare thesis correct).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether reformed metric systems avoid Goodhart's Law degradation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.36
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Metric fixation \u2014 the subordination of actual outcomes to the metrics designed to measure them \u2014 represents one of the most pervasive and structurally resistant constraints in modern organizations. Goodhart's Law ('When a measure becomes a target, it ceases to be a good measure') describes the mechanism: introducing a metric creates an incentive to optimize it rather than the underlying outcome it was meant to track. This constraint exhibits snare characteristics because the primary victims (frontline workers, end users, systems themselves) have no structural exit, high suppression (compliance is enforced through funding, employment, accreditation), and suffer extraction in the form of diverted effort and degraded outcomes. Yet it also appears as rope (coordination mechanism) from the metric administrator's perspective, scaffold (reformable system) from organized advocates' perspective, and piton (degraded ritual) from legacy institutions. The constraint's theater ratio has increased dramatically over 20 years as metric compliance has become increasingly divorced from actual measurement of what matters. Metric administrators face pressure to introduce accountability mechanisms, metrics provide an illusion of control and comparability, gaming becomes endemic, outcomes degrade, metrics are adjusted or replaced, and the cycle repeats.",
+    "key_agents": [
+      "Metric Administrators: Institutional beneficiaries (institutional/arbitrage) \u2014 control metric design and interpretation; capture coordination authority through metrics; experience metrics as alignment tool",
+      "Frontline Workers: Primary victims (powerless/trapped) \u2014 teachers, physicians, social workers bearing direct extraction cost through compliance overhead and forced gaming",
+      "End Users / Affected Populations: Secondary victims (moderate/constrained) \u2014 patients, students, citizens harmed by metric optimization rather than outcome optimization",
+      "Reformist Coalition: Organized agents (organized/constrained) \u2014 measurement scholars, open-science advocates, outcome-aligned practitioners building alternative accountability mechanisms",
+      "High-Status Professionals: Mobile partial resisters (powerful/mobile) \u2014 sufficient autonomy and reputational capital to opt partially out of metrics while maintaining nominal compliance",
+      "Legacy Institutional Leadership: Piton maintainers (institutional/arbitrage) \u2014 recognize metrics are broken but maintain them through inertia; cannot justify switching cost despite visibility into failure",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees metric fixation as structural feature of any measurable-outcome system, not contingent institutional failure"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High. The constraint extracts significant value: administrator authority, compliance overhead, legitimacy theater, and avoidance of harder accountability methods. Frontline workers spend 20-40% of time on metric compliance (varies by sector). End users experience outcome degradation quantifiable as reduced service quality, longer wait times despite shorter wait-time metrics, worse learning outcomes despite higher test scores, and higher actual crime despite lower reported crime. However, extractiveness is not at the maximum (0.72+) because some metric correlation with outcomes persists, and some agents (high-status professionals) can partially escape. Suppression (0.65): High. Frontline workers cannot opt out without losing employment. End users cannot switch systems easily. Metric requirements are enforced through funding allocation, performance evaluation, and regulatory compliance. Alternatives (outcome-based accountability, trust-based management, thick evaluation) are perceived as risky by administrators and unfamiliar to policymakers. Theater ratio (0.78): High and increasing. Metric compliance becomes increasingly divorced from actual measurement of outcomes. Time spent on metrics does not correlate with outcome improvement. Compliance theater substitutes for real accountability. The measurement ritual persists because stakeholders have become invested in its maintenance, not because it functions.",
+    "directionality_logic": "Metric administrators extract coordination authority and legitimacy from their control over metrics. Their d value is low (beneficiary position with arbitrage exit) \u2014 they perceive the constraint as enabling their work and can change it if they choose. Frontline workers face trapped exit (cannot leave without employment loss) and victim status (metric gaming diverts them from actual work) \u2014 their d value is high (0.90+), producing maximum experienced extractiveness. End users are constrained (cannot easily exit the system) and victimized (outcome degradation harms them directly) \u2014 their d value is moderate-high (0.70-0.80). High-status professionals have mobile exit options (can opt out or selectively game metrics due to reputational capital) and mixed status (both beneficiary and victim depending on the specific metric) \u2014 their d value is moderate (0.45-0.55). Reformists are organized (can mobilize alternative systems) and constrained (building new systems is difficult and slow) \u2014 their d value is moderate-low (0.35-0.45). The analytical observer sees the constraint as universal (applies to all measurable-outcome systems) and participatory (observer is embedded in institutions using metrics) \u2014 d value is moderate (0.70, canonical for analytical).",
+    "perspectival_gap": "The constraint exhibits stark perspectival divergence across power levels and exit options. Metric administrators perceive coordination and legitimacy; frontline workers perceive coercion and distortion. High-status professionals can afford partial evasion; powerless workers cannot. The end-user victim perspective (constrained/moderate) is structurally invisible to administrators (institutional/arbitrage) because user harm is not reported through the metric system \u2014 it appears only in outcome data that contradicts the metrics. Reformists see a solvable problem with sunset mechanisms; legacy institutions see inertial maintenance. The analytical observer risks naturalizing the constraint as inherent to any measurement system, but the structural data reveals that the constraint is not inevitable \u2014 it arises from specific design choices (top-down metric imposition, enforcement through performance evaluation, disconnection from actual outcome tracking) and can be addressed through alternative institutional designs (participatory metrics, transparent outcome data, thick evaluation, outcome-aligned incentives). The perspectival gap is maximal between the powerless/trapped victim and the institutional/arbitrage administrator.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The constraint is classified as snare because the core structural feature is extraction with minimal coordination benefit. While metric administrators perceive coordination (rope), the actual mechanism is coercion and gaming \u2014 agents optimize the metric rather than the outcome. The snare classification is validated by: (1) high suppression (exit is not available to frontline workers and end users), (2) high base extractiveness (20-40% of frontline worker time diverted to compliance), (3) outcome degradation (gaming is causal to actual outcome decline), (4) minimal coordination benefit (metrics diverge from outcomes as gaming accumulates). The rope perspective from administrators is mislabeled due to information asymmetry \u2014 they do not see the gaming and outcome degradation. The scaffold perspective from reformists is aspirational but structurally sound \u2014 alternative measurement systems are being built and have sunset clauses (as new systems mature, metric-based accountability can be phased out). The piton perspective from legacy institutions is accurate \u2014 the system persists through inertia, not function. The snare classification is stable across time horizons and power levels, except for high-status professionals (powerful/mobile) who experience tangled rope due to their ability to partially escape. The mandatrophy is resolved by recognizing that this is a snare from most perspectives, rope only from the beneficiary/administrator perspective due to information asymmetry, and that the reformist coalition's scaffold approach can transform it into genuine coordination if alternative metrics mature."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "teacher_performance_pay",
+      "hospital_readmission_penalties",
+      "police_arrest_quotas",
+      "academic_citation_metrics"
+    ],
+    "dual_formulation_note": "Metric fixation is a meta-constraint that affects specific measurement systems in distinct domains. The upstream constraint is the institutional need for accountability mechanisms (coordination problem). The downstream constraints are domain-specific metric systems (teacher evaluation, hospital performance, etc.) that instantiate metric fixation with different \u03b5 values. This family should be decomposed: accountability_coordination (\u03b5\u22480.15, rope) upstream, with domain-specific metric_fixation variants (\u03b5=0.40-0.65) downstream, linked by network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}
